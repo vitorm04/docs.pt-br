@@ -5,226 +5,223 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 3dfd8b17e4ca01802651087ff20988744a411ed2
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="thread-pool-etw-events"></a>Eventos ETW de pool de threads
-<a name="top"></a> Esses eventos coletam informações sobre a função de trabalho e os threads de E/S.  
+# <a name="thread-pool-etw-events"></a><span data-ttu-id="716a9-102">Eventos ETW de pool de threads</span><span class="sxs-lookup"><span data-stu-id="716a9-102">Thread Pool ETW Events</span></span>
+<span data-ttu-id="716a9-103"><a name="top"></a> Esses eventos coletam informações sobre a função de trabalho e os threads de E/S.</span><span class="sxs-lookup"><span data-stu-id="716a9-103"><a name="top"></a> These events collect information about worker and I/O threads.</span></span>  
   
- Há dois grupos de eventos de pool de threads:  
+ <span data-ttu-id="716a9-104">Há dois grupos de eventos de pool de threads:</span><span class="sxs-lookup"><span data-stu-id="716a9-104">There are two groups of thread pool events:</span></span>  
   
--   [Eventos de pool de threads de trabalho](#worker), que fornecem informações sobre como um aplicativo usa o pool de threads e o efeito das cargas de trabalho no controle de simultaneidade.  
+-   <span data-ttu-id="716a9-105">[Eventos de pool de threads de trabalho](#worker), que fornecem informações sobre como um aplicativo usa o pool de threads e o efeito das cargas de trabalho no controle de simultaneidade.</span><span class="sxs-lookup"><span data-stu-id="716a9-105">[Worker thread pool events](#worker), which provide information about how an application uses the thread pool, and the effect of workloads on concurrency control.</span></span>  
   
--   [Eventos de pool de threads de E/S](#io), que fornecem informações sobre os threads de E/S que são criados, desativados, ativados novamente ou terminados no pool de threads.  
+-   <span data-ttu-id="716a9-106">[Eventos de pool de threads de E/S](#io), que fornecem informações sobre os threads de E/S que são criados, desativados, ativados novamente ou terminados no pool de threads.</span><span class="sxs-lookup"><span data-stu-id="716a9-106">[I/O thread pool events](#io), which provide information about I/O threads that are created, retired, unretired, or terminated in the thread pool.</span></span>  
   
 <a name="worker"></a>   
-## <a name="worker-thread-pool-events"></a>Eventos de pool de threads de trabalho  
- Esses eventos se relacionam ao pool de threads de trabalho do tempo de execução e fornecem notificações de eventos de thread (por exemplo, quando um thread é criado ou interrompido). O pool de threads de trabalho usa um algoritmo adaptável para o controle de simultaneidade, em que o número de threads é calculado com base na taxa de transferência medida. Os eventos de pool de threads de trabalho podem ser usados para entender como um aplicativo está usando o pool de threads, bem como o efeito que determinadas cargas de trabalho podem ter no controle de simultaneidade.  
+## <a name="worker-thread-pool-events"></a><span data-ttu-id="716a9-107">Eventos de pool de threads de trabalho</span><span class="sxs-lookup"><span data-stu-id="716a9-107">Worker Thread Pool Events</span></span>  
+ <span data-ttu-id="716a9-108">Esses eventos se relacionam ao pool de threads de trabalho do tempo de execução e fornecem notificações de eventos de thread (por exemplo, quando um thread é criado ou interrompido).</span><span class="sxs-lookup"><span data-stu-id="716a9-108">These events relate to the runtime's worker thread pool and provide notifications for thread events (for example, when a thread is created or stopped).</span></span> <span data-ttu-id="716a9-109">O pool de threads de trabalho usa um algoritmo adaptável para o controle de simultaneidade, em que o número de threads é calculado com base na taxa de transferência medida.</span><span class="sxs-lookup"><span data-stu-id="716a9-109">The worker thread pool uses an adaptive algorithm for concurrency control, where the number of threads is calculated based on the measured throughput.</span></span> <span data-ttu-id="716a9-110">Os eventos de pool de threads de trabalho podem ser usados para entender como um aplicativo está usando o pool de threads, bem como o efeito que determinadas cargas de trabalho podem ter no controle de simultaneidade.</span><span class="sxs-lookup"><span data-stu-id="716a9-110">Worker thread pool events can be used to understand how an application is using the thread pool, and the effect that certain workloads may have on concurrency control.</span></span>  
   
-### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart e ThreadPoolWorkerThreadStop  
- A tabela a seguir mostra a palavra-chave e o nível desses eventos. (Para obter mais informações, consulte [Palavras-chaves e níveis CLR ETW](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a><span data-ttu-id="716a9-111">ThreadPoolWorkerThreadStart e ThreadPoolWorkerThreadStop</span><span class="sxs-lookup"><span data-stu-id="716a9-111">ThreadPoolWorkerThreadStart and ThreadPoolWorkerThreadStop</span></span>  
+ <span data-ttu-id="716a9-112">A tabela a seguir mostra a palavra-chave e o nível desses eventos.</span><span class="sxs-lookup"><span data-stu-id="716a9-112">The following table shows the keyword and level for these events.</span></span> <span data-ttu-id="716a9-113">(Para obter mais informações, consulte [Palavras-chaves e níveis CLR ETW](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span><span class="sxs-lookup"><span data-stu-id="716a9-113">(For more information, see [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span></span>  
   
-|Palavra-chave para acionar o evento|Nível|  
+|<span data-ttu-id="716a9-114">Palavra-chave para acionar o evento</span><span class="sxs-lookup"><span data-stu-id="716a9-114">Keyword for raising the event</span></span>|<span data-ttu-id="716a9-115">Nível</span><span class="sxs-lookup"><span data-stu-id="716a9-115">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Informativo (4)|  
+|<span data-ttu-id="716a9-116">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="716a9-116">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="716a9-117">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="716a9-117">Informational (4)</span></span>|  
   
- A tabela a seguir mostra as informações do evento.  
+ <span data-ttu-id="716a9-118">A tabela a seguir mostra as informações do evento.</span><span class="sxs-lookup"><span data-stu-id="716a9-118">The following table shows the event information.</span></span>  
   
-|Evento|ID do evento|Acionado quando|  
+|<span data-ttu-id="716a9-119">Evento</span><span class="sxs-lookup"><span data-stu-id="716a9-119">Event</span></span>|<span data-ttu-id="716a9-120">ID do evento</span><span class="sxs-lookup"><span data-stu-id="716a9-120">Event ID</span></span>|<span data-ttu-id="716a9-121">Acionado quando</span><span class="sxs-lookup"><span data-stu-id="716a9-121">Raised when</span></span>|  
 |-|-|-|  
-|`ThreadPoolWorkerThreadStart`|50|Um thread de trabalho é criado.|  
-|`ThreadPoolWorkerThreadStop`|51|Um thread de trabalho é interrompido.|  
-|`ThreadPoolWorkerThreadRetirementStart`|52|Um thread de trabalho é desativado.|  
-|`ThreadPoolWorkerThreadRetirementStop`|53|Um thread de trabalho desativado fica ativo novamente.|  
+|`ThreadPoolWorkerThreadStart`|<span data-ttu-id="716a9-122">50</span><span class="sxs-lookup"><span data-stu-id="716a9-122">50</span></span>|<span data-ttu-id="716a9-123">Um thread de trabalho é criado.</span><span class="sxs-lookup"><span data-stu-id="716a9-123">A worker thread is created.</span></span>|  
+|`ThreadPoolWorkerThreadStop`|<span data-ttu-id="716a9-124">51</span><span class="sxs-lookup"><span data-stu-id="716a9-124">51</span></span>|<span data-ttu-id="716a9-125">Um thread de trabalho é interrompido.</span><span class="sxs-lookup"><span data-stu-id="716a9-125">A worker thread is stopped.</span></span>|  
+|`ThreadPoolWorkerThreadRetirementStart`|<span data-ttu-id="716a9-126">52</span><span class="sxs-lookup"><span data-stu-id="716a9-126">52</span></span>|<span data-ttu-id="716a9-127">Um thread de trabalho é desativado.</span><span class="sxs-lookup"><span data-stu-id="716a9-127">A worker thread retires.</span></span>|  
+|`ThreadPoolWorkerThreadRetirementStop`|<span data-ttu-id="716a9-128">53</span><span class="sxs-lookup"><span data-stu-id="716a9-128">53</span></span>|<span data-ttu-id="716a9-129">Um thread de trabalho desativado fica ativo novamente.</span><span class="sxs-lookup"><span data-stu-id="716a9-129">A retired worker thread becomes active again.</span></span>|  
   
- A tabela a seguir mostra os dados do evento.  
+ <span data-ttu-id="716a9-130">A tabela a seguir mostra os dados do evento.</span><span class="sxs-lookup"><span data-stu-id="716a9-130">The following table shows the event data.</span></span>  
   
-|Nome do campo|Tipo de dados|Descrição|  
+|<span data-ttu-id="716a9-131">Nome do campo</span><span class="sxs-lookup"><span data-stu-id="716a9-131">Field name</span></span>|<span data-ttu-id="716a9-132">Tipo de dados</span><span class="sxs-lookup"><span data-stu-id="716a9-132">Data type</span></span>|<span data-ttu-id="716a9-133">Descrição</span><span class="sxs-lookup"><span data-stu-id="716a9-133">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|ActiveWorkerThreadCount|win:UInt32|Número de threads de trabalho disponíveis para processar o trabalho, incluindo aqueles que já estão processando o trabalho.|  
-|RetiredWorkerThreadCount|win:UInt32|Número de threads de trabalho que não estão disponíveis para processar o trabalho, mas que estão sendo mantidos em reserva, caso mais threads sejam necessários posteriormente.|  
-|ClrInstanceID|Win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
+|<span data-ttu-id="716a9-134">ActiveWorkerThreadCount</span><span class="sxs-lookup"><span data-stu-id="716a9-134">ActiveWorkerThreadCount</span></span>|<span data-ttu-id="716a9-135">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="716a9-135">win:UInt32</span></span>|<span data-ttu-id="716a9-136">Número de threads de trabalho disponíveis para processar o trabalho, incluindo aqueles que já estão processando o trabalho.</span><span class="sxs-lookup"><span data-stu-id="716a9-136">Number of worker threads available to process work, including those that are already processing work.</span></span>|  
+|<span data-ttu-id="716a9-137">RetiredWorkerThreadCount</span><span class="sxs-lookup"><span data-stu-id="716a9-137">RetiredWorkerThreadCount</span></span>|<span data-ttu-id="716a9-138">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="716a9-138">win:UInt32</span></span>|<span data-ttu-id="716a9-139">Número de threads de trabalho que não estão disponíveis para processar o trabalho, mas que estão sendo mantidos em reserva, caso mais threads sejam necessários posteriormente.</span><span class="sxs-lookup"><span data-stu-id="716a9-139">Number of worker threads that are not available to process work, but that are being held in reserve in case more threads are needed later.</span></span>|  
+|<span data-ttu-id="716a9-140">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="716a9-140">ClrInstanceID</span></span>|<span data-ttu-id="716a9-141">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="716a9-141">Win:UInt16</span></span>|<span data-ttu-id="716a9-142">ID exclusiva da instância do CLR ou do CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="716a9-142">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-### <a name="threadpoolworkerthreadadjustment"></a>ThreadPoolWorkerThreadAdjustment  
- Esses eventos de pool de threads fornecem informações para entender e depurar o comportamento do algoritmo de injeção de threads (controle de simultaneidade). As informações são usadas internamente pelo pool de threads de trabalho.  
+### <a name="threadpoolworkerthreadadjustment"></a><span data-ttu-id="716a9-143">ThreadPoolWorkerThreadAdjustment</span><span class="sxs-lookup"><span data-stu-id="716a9-143">ThreadPoolWorkerThreadAdjustment</span></span>  
+ <span data-ttu-id="716a9-144">Esses eventos de pool de threads fornecem informações para entender e depurar o comportamento do algoritmo de injeção de threads (controle de simultaneidade).</span><span class="sxs-lookup"><span data-stu-id="716a9-144">These thread pool events provide information for understanding and debugging the behavior of the thread injection (concurrency control) algorithm.</span></span> <span data-ttu-id="716a9-145">As informações são usadas internamente pelo pool de threads de trabalho.</span><span class="sxs-lookup"><span data-stu-id="716a9-145">The information is used internally by the worker thread pool.</span></span>  
   
-#### <a name="threadpoolworkerthreadadjustmentsample"></a>ThreadPoolWorkerThreadAdjustmentSample  
- A tabela a seguir mostra a palavra-chave e o nível.  
+#### <a name="threadpoolworkerthreadadjustmentsample"></a><span data-ttu-id="716a9-146">ThreadPoolWorkerThreadAdjustmentSample</span><span class="sxs-lookup"><span data-stu-id="716a9-146">ThreadPoolWorkerThreadAdjustmentSample</span></span>  
+ <span data-ttu-id="716a9-147">A tabela a seguir mostra a palavra-chave e o nível.</span><span class="sxs-lookup"><span data-stu-id="716a9-147">The following table shows the keyword and level.</span></span>  
   
-|Palavra-chave para acionar o evento|Nível|  
+|<span data-ttu-id="716a9-148">Palavra-chave para acionar o evento</span><span class="sxs-lookup"><span data-stu-id="716a9-148">Keyword for raising the event</span></span>|<span data-ttu-id="716a9-149">Nível</span><span class="sxs-lookup"><span data-stu-id="716a9-149">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Informativo (4)|  
+|<span data-ttu-id="716a9-150">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="716a9-150">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="716a9-151">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="716a9-151">Informational (4)</span></span>|  
   
- A tabela a seguir mostra as informações do evento.  
+ <span data-ttu-id="716a9-152">A tabela a seguir mostra as informações do evento.</span><span class="sxs-lookup"><span data-stu-id="716a9-152">The following table shows the event information.</span></span>  
   
-|Evento|ID do evento|Descrição|  
+|<span data-ttu-id="716a9-153">Evento</span><span class="sxs-lookup"><span data-stu-id="716a9-153">Event</span></span>|<span data-ttu-id="716a9-154">ID do evento</span><span class="sxs-lookup"><span data-stu-id="716a9-154">Event ID</span></span>|<span data-ttu-id="716a9-155">Descrição</span><span class="sxs-lookup"><span data-stu-id="716a9-155">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`ThreadPoolWorkerThreadAdjustmentSample`|54|Refere-se à coleta de informações para uma amostra; ou seja, uma medida da taxa de transferência com determinado nível de simultaneidade, em um instante.|  
+|`ThreadPoolWorkerThreadAdjustmentSample`|<span data-ttu-id="716a9-156">54</span><span class="sxs-lookup"><span data-stu-id="716a9-156">54</span></span>|<span data-ttu-id="716a9-157">Refere-se à coleta de informações para uma amostra; ou seja, uma medida da taxa de transferência com determinado nível de simultaneidade, em um instante.</span><span class="sxs-lookup"><span data-stu-id="716a9-157">Refers to the collection of information for one sample; that is, a measurement of throughput with a certain concurrency level, in an instant of time.</span></span>|  
   
- A tabela a seguir mostra os dados do evento.  
+ <span data-ttu-id="716a9-158">A tabela a seguir mostra os dados do evento.</span><span class="sxs-lookup"><span data-stu-id="716a9-158">The following table shows the event data.</span></span>  
   
-|Nome do campo|Tipo de dados|Descrição|  
+|<span data-ttu-id="716a9-159">Nome do campo</span><span class="sxs-lookup"><span data-stu-id="716a9-159">Field name</span></span>|<span data-ttu-id="716a9-160">Tipo de dados</span><span class="sxs-lookup"><span data-stu-id="716a9-160">Data type</span></span>|<span data-ttu-id="716a9-161">Descrição</span><span class="sxs-lookup"><span data-stu-id="716a9-161">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|Taxa de transferência|win:Double|Número de conclusões por unidade de tempo.|  
-|ClrInstanceID|Win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
+|<span data-ttu-id="716a9-162">Taxa de transferência</span><span class="sxs-lookup"><span data-stu-id="716a9-162">Throughput</span></span>|<span data-ttu-id="716a9-163">win:Double</span><span class="sxs-lookup"><span data-stu-id="716a9-163">win:Double</span></span>|<span data-ttu-id="716a9-164">Número de conclusões por unidade de tempo.</span><span class="sxs-lookup"><span data-stu-id="716a9-164">Number of completions per unit of time.</span></span>|  
+|<span data-ttu-id="716a9-165">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="716a9-165">ClrInstanceID</span></span>|<span data-ttu-id="716a9-166">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="716a9-166">Win:UInt16</span></span>|<span data-ttu-id="716a9-167">ID exclusiva da instância do CLR ou do CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="716a9-167">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-#### <a name="threadpoolworkerthreadadjustmentadjustment"></a>ThreadPoolWorkerThreadAdjustmentAdjustment  
- A tabela a seguir mostra a palavra-chave e o nível.  
+#### <a name="threadpoolworkerthreadadjustmentadjustment"></a><span data-ttu-id="716a9-168">ThreadPoolWorkerThreadAdjustmentAdjustment</span><span class="sxs-lookup"><span data-stu-id="716a9-168">ThreadPoolWorkerThreadAdjustmentAdjustment</span></span>  
+ <span data-ttu-id="716a9-169">A tabela a seguir mostra a palavra-chave e o nível.</span><span class="sxs-lookup"><span data-stu-id="716a9-169">The following table shows the keyword and level.</span></span>  
   
-|Palavra-chave para acionar o evento|Nível|  
+|<span data-ttu-id="716a9-170">Palavra-chave para acionar o evento</span><span class="sxs-lookup"><span data-stu-id="716a9-170">Keyword for raising the event</span></span>|<span data-ttu-id="716a9-171">Nível</span><span class="sxs-lookup"><span data-stu-id="716a9-171">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Informativo (4)|  
+|<span data-ttu-id="716a9-172">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="716a9-172">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="716a9-173">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="716a9-173">Informational (4)</span></span>|  
   
- A tabela a seguir mostra as informações do evento.  
+ <span data-ttu-id="716a9-174">A tabela a seguir mostra as informações do evento.</span><span class="sxs-lookup"><span data-stu-id="716a9-174">The following table shows the event information.</span></span>  
   
-|Evento|ID do evento|Descrição|  
+|<span data-ttu-id="716a9-175">Evento</span><span class="sxs-lookup"><span data-stu-id="716a9-175">Event</span></span>|<span data-ttu-id="716a9-176">ID do evento</span><span class="sxs-lookup"><span data-stu-id="716a9-176">Event ID</span></span>|<span data-ttu-id="716a9-177">Descrição</span><span class="sxs-lookup"><span data-stu-id="716a9-177">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|Registra uma alteração no controle, quando o algoritmo de injeção de threads (escalada) determina se uma alteração no nível de simultaneidade está em vigor.|  
+|`ThreadPoolWorkerThreadAdjustmentAdjustment`|<span data-ttu-id="716a9-178">55</span><span class="sxs-lookup"><span data-stu-id="716a9-178">55</span></span>|<span data-ttu-id="716a9-179">Registra uma alteração no controle, quando o algoritmo de injeção de threads (escalada) determina se uma alteração no nível de simultaneidade está em vigor.</span><span class="sxs-lookup"><span data-stu-id="716a9-179">Records a change in control, when the thread injection (hill-climbing) algorithm determines that a change in concurrency level is in place.</span></span>|  
   
- A tabela a seguir mostra os dados do evento.  
+ <span data-ttu-id="716a9-180">A tabela a seguir mostra os dados do evento.</span><span class="sxs-lookup"><span data-stu-id="716a9-180">The following table shows the event data.</span></span>  
   
-|Nome do campo|Tipo de dados|Descrição|  
+|<span data-ttu-id="716a9-181">Nome do campo</span><span class="sxs-lookup"><span data-stu-id="716a9-181">Field name</span></span>|<span data-ttu-id="716a9-182">Tipo de dados</span><span class="sxs-lookup"><span data-stu-id="716a9-182">Data type</span></span>|<span data-ttu-id="716a9-183">Descrição</span><span class="sxs-lookup"><span data-stu-id="716a9-183">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|AverageThroughput|win:Double|Taxa de transferência média de uma amostra de medidas.|  
-|NewWorkerThreadCount|win:UInt32|Novo número de threads de trabalho ativos.|  
-|Motivo|win:UInt32|Motivo do ajuste.<br /><br /> 0x00 – Aquecimento.<br /><br /> 0x01 – Inicialização.<br /><br /> 0x02 – Movimentação aleatória.<br /><br /> 0x03 – Movimentação ascendente.<br /><br /> 0x04 – Alteração de ponto.<br /><br /> 0x05 – Estabilização.<br /><br /> 0x06 – Privação.<br /><br /> 0x07 – O thread atingiu o tempo limite.|  
-|ClrInstanceID|Win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
+|<span data-ttu-id="716a9-184">AverageThroughput</span><span class="sxs-lookup"><span data-stu-id="716a9-184">AverageThroughput</span></span>|<span data-ttu-id="716a9-185">win:Double</span><span class="sxs-lookup"><span data-stu-id="716a9-185">win:Double</span></span>|<span data-ttu-id="716a9-186">Taxa de transferência média de uma amostra de medidas.</span><span class="sxs-lookup"><span data-stu-id="716a9-186">Average throughput of a sample of measurements.</span></span>|  
+|<span data-ttu-id="716a9-187">NewWorkerThreadCount</span><span class="sxs-lookup"><span data-stu-id="716a9-187">NewWorkerThreadCount</span></span>|<span data-ttu-id="716a9-188">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="716a9-188">win:UInt32</span></span>|<span data-ttu-id="716a9-189">Novo número de threads de trabalho ativos.</span><span class="sxs-lookup"><span data-stu-id="716a9-189">New number of active worker threads.</span></span>|  
+|<span data-ttu-id="716a9-190">Motivo</span><span class="sxs-lookup"><span data-stu-id="716a9-190">Reason</span></span>|<span data-ttu-id="716a9-191">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="716a9-191">win:UInt32</span></span>|<span data-ttu-id="716a9-192">Motivo do ajuste.</span><span class="sxs-lookup"><span data-stu-id="716a9-192">Reason for the adjustment.</span></span><br /><br /> <span data-ttu-id="716a9-193">0x00 – Aquecimento.</span><span class="sxs-lookup"><span data-stu-id="716a9-193">0x00 - Warmup.</span></span><br /><br /> <span data-ttu-id="716a9-194">0x01 – Inicialização.</span><span class="sxs-lookup"><span data-stu-id="716a9-194">0x01 - Initializing.</span></span><br /><br /> <span data-ttu-id="716a9-195">0x02 – Movimentação aleatória.</span><span class="sxs-lookup"><span data-stu-id="716a9-195">0x02 - Random move.</span></span><br /><br /> <span data-ttu-id="716a9-196">0x03 – Movimentação ascendente.</span><span class="sxs-lookup"><span data-stu-id="716a9-196">0x03 - Climbing move.</span></span><br /><br /> <span data-ttu-id="716a9-197">0x04 – Alteração de ponto.</span><span class="sxs-lookup"><span data-stu-id="716a9-197">0x04 - Change point.</span></span><br /><br /> <span data-ttu-id="716a9-198">0x05 – Estabilização.</span><span class="sxs-lookup"><span data-stu-id="716a9-198">0x05 - Stabilizing.</span></span><br /><br /> <span data-ttu-id="716a9-199">0x06 – Privação.</span><span class="sxs-lookup"><span data-stu-id="716a9-199">0x06 - Starvation.</span></span><br /><br /> <span data-ttu-id="716a9-200">0x07 – O thread atingiu o tempo limite.</span><span class="sxs-lookup"><span data-stu-id="716a9-200">0x07 - Thread timed out.</span></span>|  
+|<span data-ttu-id="716a9-201">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="716a9-201">ClrInstanceID</span></span>|<span data-ttu-id="716a9-202">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="716a9-202">Win:UInt16</span></span>|<span data-ttu-id="716a9-203">ID exclusiva da instância do CLR ou do CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="716a9-203">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-#### <a name="threadpoolworkerthreadadjustmentstats"></a>ThreadPoolWorkerThreadAdjustmentStats  
- A tabela a seguir mostra a palavra-chave e o nível.  
+#### <a name="threadpoolworkerthreadadjustmentstats"></a><span data-ttu-id="716a9-204">ThreadPoolWorkerThreadAdjustmentStats</span><span class="sxs-lookup"><span data-stu-id="716a9-204">ThreadPoolWorkerThreadAdjustmentStats</span></span>  
+ <span data-ttu-id="716a9-205">A tabela a seguir mostra a palavra-chave e o nível.</span><span class="sxs-lookup"><span data-stu-id="716a9-205">The following table shows the keyword and level.</span></span>  
   
-|Palavra-chave para acionar o evento|Nível|  
+|<span data-ttu-id="716a9-206">Palavra-chave para acionar o evento</span><span class="sxs-lookup"><span data-stu-id="716a9-206">Keyword for raising the event</span></span>|<span data-ttu-id="716a9-207">Nível</span><span class="sxs-lookup"><span data-stu-id="716a9-207">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Informativo (4)|  
+|<span data-ttu-id="716a9-208">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="716a9-208">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="716a9-209">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="716a9-209">Informational (4)</span></span>|  
   
- A tabela a seguir mostra as informações do evento.  
+ <span data-ttu-id="716a9-210">A tabela a seguir mostra as informações do evento.</span><span class="sxs-lookup"><span data-stu-id="716a9-210">The following table shows the event information.</span></span>  
   
-|Evento|ID do evento|Descrição|  
+|<span data-ttu-id="716a9-211">Evento</span><span class="sxs-lookup"><span data-stu-id="716a9-211">Event</span></span>|<span data-ttu-id="716a9-212">ID do evento</span><span class="sxs-lookup"><span data-stu-id="716a9-212">Event ID</span></span>|<span data-ttu-id="716a9-213">Descrição</span><span class="sxs-lookup"><span data-stu-id="716a9-213">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`ThreadPoolWorkerThreadAdjustmentStats`|56|Coleta de dados no pool de threads.|  
+|`ThreadPoolWorkerThreadAdjustmentStats`|<span data-ttu-id="716a9-214">56</span><span class="sxs-lookup"><span data-stu-id="716a9-214">56</span></span>|<span data-ttu-id="716a9-215">Coleta de dados no pool de threads.</span><span class="sxs-lookup"><span data-stu-id="716a9-215">Gathers data on the thread pool.</span></span>|  
   
- A tabela a seguir mostra os dados do evento.  
+ <span data-ttu-id="716a9-216">A tabela a seguir mostra os dados do evento.</span><span class="sxs-lookup"><span data-stu-id="716a9-216">The following table shows the event data.</span></span>  
   
-|Nome do campo|Tipo de dados|Descrição|  
+|<span data-ttu-id="716a9-217">Nome do campo</span><span class="sxs-lookup"><span data-stu-id="716a9-217">Field name</span></span>|<span data-ttu-id="716a9-218">Tipo de dados</span><span class="sxs-lookup"><span data-stu-id="716a9-218">Data type</span></span>|<span data-ttu-id="716a9-219">Descrição</span><span class="sxs-lookup"><span data-stu-id="716a9-219">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|Duração|win:Double|Tempo, em segundos, durante o qual essas estatísticas foram coletadas.|  
-|Taxa de transferência|win:Double|Número médio de conclusões por segundo durante esse intervalo.|  
-|ThreadWave|win:Double|Reservado para uso interno.|  
-|ThroughputWave|win:Double|Reservado para uso interno.|  
-|ThroughputErrorEstimate|win:Double|Reservado para uso interno.|  
-|AverageThroughputErrorEstimate|win:Double|Reservado para uso interno.|  
-|ThroughputRatio|win:Double|A melhoria relativa na taxa de transferência causada por variações na contagem de threads de trabalho ativos durante esse intervalo.|  
-|Confiança|win:Double|Uma medida da validade do campo ThroughputRatio.|  
-|NewcontrolSetting|win:Double|O número de threads de trabalho ativos que servirão como a linha de base para variações futuras na contagem de threads ativos.|  
-|NewThreadWaveMagnitude|Win:UInt16|A magnitude das variações futuras na contagem de threads ativos.|  
-|ClrInstanceID|Win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
+|<span data-ttu-id="716a9-220">Duração</span><span class="sxs-lookup"><span data-stu-id="716a9-220">Duration</span></span>|<span data-ttu-id="716a9-221">win:Double</span><span class="sxs-lookup"><span data-stu-id="716a9-221">win:Double</span></span>|<span data-ttu-id="716a9-222">Tempo, em segundos, durante o qual essas estatísticas foram coletadas.</span><span class="sxs-lookup"><span data-stu-id="716a9-222">Amount of time, in seconds, during which these statistics were collected.</span></span>|  
+|<span data-ttu-id="716a9-223">Taxa de transferência</span><span class="sxs-lookup"><span data-stu-id="716a9-223">Throughput</span></span>|<span data-ttu-id="716a9-224">win:Double</span><span class="sxs-lookup"><span data-stu-id="716a9-224">win:Double</span></span>|<span data-ttu-id="716a9-225">Número médio de conclusões por segundo durante esse intervalo.</span><span class="sxs-lookup"><span data-stu-id="716a9-225">Average number of completions per second during this interval.</span></span>|  
+|<span data-ttu-id="716a9-226">ThreadWave</span><span class="sxs-lookup"><span data-stu-id="716a9-226">ThreadWave</span></span>|<span data-ttu-id="716a9-227">win:Double</span><span class="sxs-lookup"><span data-stu-id="716a9-227">win:Double</span></span>|<span data-ttu-id="716a9-228">Reservado para uso interno.</span><span class="sxs-lookup"><span data-stu-id="716a9-228">Reserved for internal use.</span></span>|  
+|<span data-ttu-id="716a9-229">ThroughputWave</span><span class="sxs-lookup"><span data-stu-id="716a9-229">ThroughputWave</span></span>|<span data-ttu-id="716a9-230">win:Double</span><span class="sxs-lookup"><span data-stu-id="716a9-230">win:Double</span></span>|<span data-ttu-id="716a9-231">Reservado para uso interno.</span><span class="sxs-lookup"><span data-stu-id="716a9-231">Reserved for internal use.</span></span>|  
+|<span data-ttu-id="716a9-232">ThroughputErrorEstimate</span><span class="sxs-lookup"><span data-stu-id="716a9-232">ThroughputErrorEstimate</span></span>|<span data-ttu-id="716a9-233">win:Double</span><span class="sxs-lookup"><span data-stu-id="716a9-233">win:Double</span></span>|<span data-ttu-id="716a9-234">Reservado para uso interno.</span><span class="sxs-lookup"><span data-stu-id="716a9-234">Reserved for internal use.</span></span>|  
+|<span data-ttu-id="716a9-235">AverageThroughputErrorEstimate</span><span class="sxs-lookup"><span data-stu-id="716a9-235">AverageThroughputErrorEstimate</span></span>|<span data-ttu-id="716a9-236">win:Double</span><span class="sxs-lookup"><span data-stu-id="716a9-236">win:Double</span></span>|<span data-ttu-id="716a9-237">Reservado para uso interno.</span><span class="sxs-lookup"><span data-stu-id="716a9-237">Reserved for internal use.</span></span>|  
+|<span data-ttu-id="716a9-238">ThroughputRatio</span><span class="sxs-lookup"><span data-stu-id="716a9-238">ThroughputRatio</span></span>|<span data-ttu-id="716a9-239">win:Double</span><span class="sxs-lookup"><span data-stu-id="716a9-239">win:Double</span></span>|<span data-ttu-id="716a9-240">A melhoria relativa na taxa de transferência causada por variações na contagem de threads de trabalho ativos durante esse intervalo.</span><span class="sxs-lookup"><span data-stu-id="716a9-240">The relative improvement in throughput caused by variations in active worker thread count during this interval.</span></span>|  
+|<span data-ttu-id="716a9-241">Confiança</span><span class="sxs-lookup"><span data-stu-id="716a9-241">Confidence</span></span>|<span data-ttu-id="716a9-242">win:Double</span><span class="sxs-lookup"><span data-stu-id="716a9-242">win:Double</span></span>|<span data-ttu-id="716a9-243">Uma medida da validade do campo ThroughputRatio.</span><span class="sxs-lookup"><span data-stu-id="716a9-243">A measure of the validity of the ThroughputRatio field.</span></span>|  
+|<span data-ttu-id="716a9-244">NewcontrolSetting</span><span class="sxs-lookup"><span data-stu-id="716a9-244">NewcontrolSetting</span></span>|<span data-ttu-id="716a9-245">win:Double</span><span class="sxs-lookup"><span data-stu-id="716a9-245">win:Double</span></span>|<span data-ttu-id="716a9-246">O número de threads de trabalho ativos que servirão como a linha de base para variações futuras na contagem de threads ativos.</span><span class="sxs-lookup"><span data-stu-id="716a9-246">The number of active worker threads that will serve as the baseline for future variations in active thread count.</span></span>|  
+|<span data-ttu-id="716a9-247">NewThreadWaveMagnitude</span><span class="sxs-lookup"><span data-stu-id="716a9-247">NewThreadWaveMagnitude</span></span>|<span data-ttu-id="716a9-248">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="716a9-248">Win:UInt16</span></span>|<span data-ttu-id="716a9-249">A magnitude das variações futuras na contagem de threads ativos.</span><span class="sxs-lookup"><span data-stu-id="716a9-249">The magnitude of future variations in active thread count.</span></span>|  
+|<span data-ttu-id="716a9-250">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="716a9-250">ClrInstanceID</span></span>|<span data-ttu-id="716a9-251">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="716a9-251">Win:UInt16</span></span>|<span data-ttu-id="716a9-252">ID exclusiva da instância do CLR ou do CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="716a9-252">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [Voltar ao início](#top)  
+ [<span data-ttu-id="716a9-253">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="716a9-253">Back to top</span></span>](#top)  
   
 <a name="io"></a>   
-## <a name="io-thread-events"></a>Eventos de threads de E/S  
- Esses eventos de pool de threads ocorrem em threads do pool de threads de E/S (portas de conclusão), que é assíncrono.  
+## <a name="io-thread-events"></a><span data-ttu-id="716a9-254">Eventos de threads de E/S</span><span class="sxs-lookup"><span data-stu-id="716a9-254">I/O Thread Events</span></span>  
+ <span data-ttu-id="716a9-255">Esses eventos de pool de threads ocorrem em threads do pool de threads de E/S (portas de conclusão), que é assíncrono.</span><span class="sxs-lookup"><span data-stu-id="716a9-255">These thread pool events occur for threads in the I/O thread pool (completion ports), which is asynchronous.</span></span>  
   
-### <a name="iothreadcreatev1"></a>IOThreadCreate_V1  
- A tabela a seguir mostra a palavra-chave e o nível.  
+### <a name="iothreadcreatev1"></a><span data-ttu-id="716a9-256">IOThreadCreate_V1</span><span class="sxs-lookup"><span data-stu-id="716a9-256">IOThreadCreate_V1</span></span>  
+ <span data-ttu-id="716a9-257">A tabela a seguir mostra a palavra-chave e o nível.</span><span class="sxs-lookup"><span data-stu-id="716a9-257">The following table shows the keyword and level.</span></span>  
   
-|Palavra-chave para acionar o evento|Nível|  
+|<span data-ttu-id="716a9-258">Palavra-chave para acionar o evento</span><span class="sxs-lookup"><span data-stu-id="716a9-258">Keyword for raising the event</span></span>|<span data-ttu-id="716a9-259">Nível</span><span class="sxs-lookup"><span data-stu-id="716a9-259">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Informativo (4)|  
+|<span data-ttu-id="716a9-260">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="716a9-260">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="716a9-261">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="716a9-261">Informational (4)</span></span>|  
   
- A tabela a seguir mostra as informações do evento.  
+ <span data-ttu-id="716a9-262">A tabela a seguir mostra as informações do evento.</span><span class="sxs-lookup"><span data-stu-id="716a9-262">The following table shows the event information.</span></span>  
   
-|Evento|ID do evento|Acionado quando|  
+|<span data-ttu-id="716a9-263">Evento</span><span class="sxs-lookup"><span data-stu-id="716a9-263">Event</span></span>|<span data-ttu-id="716a9-264">ID do evento</span><span class="sxs-lookup"><span data-stu-id="716a9-264">Event ID</span></span>|<span data-ttu-id="716a9-265">Acionado quando</span><span class="sxs-lookup"><span data-stu-id="716a9-265">Raised when</span></span>|  
 |-|-|-|  
-|`IOThreadCreate_V1`|44|Um thread de E/S é criado no pool de threads.|  
+|`IOThreadCreate_V1`|<span data-ttu-id="716a9-266">44</span><span class="sxs-lookup"><span data-stu-id="716a9-266">44</span></span>|<span data-ttu-id="716a9-267">Um thread de E/S é criado no pool de threads.</span><span class="sxs-lookup"><span data-stu-id="716a9-267">An I/O thread is created in the thread pool.</span></span>|  
   
- A tabela a seguir mostra os dados do evento.  
+ <span data-ttu-id="716a9-268">A tabela a seguir mostra os dados do evento.</span><span class="sxs-lookup"><span data-stu-id="716a9-268">The following table shows the event data.</span></span>  
   
-|Nome do campo|Tipo de dados|Descrição|  
+|<span data-ttu-id="716a9-269">Nome do campo</span><span class="sxs-lookup"><span data-stu-id="716a9-269">Field name</span></span>|<span data-ttu-id="716a9-270">Tipo de dados</span><span class="sxs-lookup"><span data-stu-id="716a9-270">Data type</span></span>|<span data-ttu-id="716a9-271">Descrição</span><span class="sxs-lookup"><span data-stu-id="716a9-271">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|Contagem|win:UInt64|Número de threads de E/S, incluindo o thread recém-criado.|  
-|NumRetired|win:UInt64|Número de threads de trabalho desativados.|  
-|ClrInstanceID|Win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
+|<span data-ttu-id="716a9-272">Contagem</span><span class="sxs-lookup"><span data-stu-id="716a9-272">Count</span></span>|<span data-ttu-id="716a9-273">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="716a9-273">win:UInt64</span></span>|<span data-ttu-id="716a9-274">Número de threads de E/S, incluindo o thread recém-criado.</span><span class="sxs-lookup"><span data-stu-id="716a9-274">Number of I/O threads, including the newly created thread.</span></span>|  
+|<span data-ttu-id="716a9-275">NumRetired</span><span class="sxs-lookup"><span data-stu-id="716a9-275">NumRetired</span></span>|<span data-ttu-id="716a9-276">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="716a9-276">win:UInt64</span></span>|<span data-ttu-id="716a9-277">Número de threads de trabalho desativados.</span><span class="sxs-lookup"><span data-stu-id="716a9-277">Number of retired worker threads.</span></span>|  
+|<span data-ttu-id="716a9-278">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="716a9-278">ClrInstanceID</span></span>|<span data-ttu-id="716a9-279">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="716a9-279">Win:UInt16</span></span>|<span data-ttu-id="716a9-280">ID exclusiva da instância do CLR ou do CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="716a9-280">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-### <a name="iothreadretirev1"></a>IOThreadRetire_V1  
- A tabela a seguir mostra a palavra-chave e o nível.  
+### <a name="iothreadretirev1"></a><span data-ttu-id="716a9-281">IOThreadRetire_V1</span><span class="sxs-lookup"><span data-stu-id="716a9-281">IOThreadRetire_V1</span></span>  
+ <span data-ttu-id="716a9-282">A tabela a seguir mostra a palavra-chave e o nível.</span><span class="sxs-lookup"><span data-stu-id="716a9-282">The following table shows the keyword and level.</span></span>  
   
-|Palavra-chave para acionar o evento|Nível|  
+|<span data-ttu-id="716a9-283">Palavra-chave para acionar o evento</span><span class="sxs-lookup"><span data-stu-id="716a9-283">Keyword for raising the event</span></span>|<span data-ttu-id="716a9-284">Nível</span><span class="sxs-lookup"><span data-stu-id="716a9-284">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Informativo (4)|  
+|<span data-ttu-id="716a9-285">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="716a9-285">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="716a9-286">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="716a9-286">Informational (4)</span></span>|  
   
- A tabela a seguir mostra as informações do evento.  
+ <span data-ttu-id="716a9-287">A tabela a seguir mostra as informações do evento.</span><span class="sxs-lookup"><span data-stu-id="716a9-287">The following table shows the event information.</span></span>  
   
-|Evento|ID do evento|Acionado quando|  
+|<span data-ttu-id="716a9-288">Evento</span><span class="sxs-lookup"><span data-stu-id="716a9-288">Event</span></span>|<span data-ttu-id="716a9-289">ID do evento</span><span class="sxs-lookup"><span data-stu-id="716a9-289">Event ID</span></span>|<span data-ttu-id="716a9-290">Acionado quando</span><span class="sxs-lookup"><span data-stu-id="716a9-290">Raised when</span></span>|  
 |-----------|--------------|-----------------|  
-|`IOThreadRetire_V1`|46|Um thread de E/S se torna um candidato para desativação.|  
+|`IOThreadRetire_V1`|<span data-ttu-id="716a9-291">46</span><span class="sxs-lookup"><span data-stu-id="716a9-291">46</span></span>|<span data-ttu-id="716a9-292">Um thread de E/S se torna um candidato para desativação.</span><span class="sxs-lookup"><span data-stu-id="716a9-292">An I/O thread becomes a retirement candidate.</span></span>|  
   
- A tabela a seguir mostra os dados do evento.  
+ <span data-ttu-id="716a9-293">A tabela a seguir mostra os dados do evento.</span><span class="sxs-lookup"><span data-stu-id="716a9-293">The following table shows the event data.</span></span>  
   
-|Nome do campo|Tipo de dados|Descrição|  
+|<span data-ttu-id="716a9-294">Nome do campo</span><span class="sxs-lookup"><span data-stu-id="716a9-294">Field name</span></span>|<span data-ttu-id="716a9-295">Tipo de dados</span><span class="sxs-lookup"><span data-stu-id="716a9-295">Data type</span></span>|<span data-ttu-id="716a9-296">Descrição</span><span class="sxs-lookup"><span data-stu-id="716a9-296">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|Contagem|win:UInt64|Número de threads de E/S restantes no pool de threads.|  
-|NumRetired|win:UInt64|Número de threads de E/S desativados.|  
-|ClrInstanceID|Win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
+|<span data-ttu-id="716a9-297">Contagem</span><span class="sxs-lookup"><span data-stu-id="716a9-297">Count</span></span>|<span data-ttu-id="716a9-298">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="716a9-298">win:UInt64</span></span>|<span data-ttu-id="716a9-299">Número de threads de E/S restantes no pool de threads.</span><span class="sxs-lookup"><span data-stu-id="716a9-299">Number of I/O threads remaining in the thread pool.</span></span>|  
+|<span data-ttu-id="716a9-300">NumRetired</span><span class="sxs-lookup"><span data-stu-id="716a9-300">NumRetired</span></span>|<span data-ttu-id="716a9-301">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="716a9-301">win:UInt64</span></span>|<span data-ttu-id="716a9-302">Número de threads de E/S desativados.</span><span class="sxs-lookup"><span data-stu-id="716a9-302">Number of retired I/O threads.</span></span>|  
+|<span data-ttu-id="716a9-303">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="716a9-303">ClrInstanceID</span></span>|<span data-ttu-id="716a9-304">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="716a9-304">Win:UInt16</span></span>|<span data-ttu-id="716a9-305">ID exclusiva da instância do CLR ou do CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="716a9-305">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-### <a name="iothreadunretirev1"></a>IOThreadUnretire_V1  
- A tabela a seguir mostra a palavra-chave e o nível.  
+### <a name="iothreadunretirev1"></a><span data-ttu-id="716a9-306">IOThreadUnretire_V1</span><span class="sxs-lookup"><span data-stu-id="716a9-306">IOThreadUnretire_V1</span></span>  
+ <span data-ttu-id="716a9-307">A tabela a seguir mostra a palavra-chave e o nível.</span><span class="sxs-lookup"><span data-stu-id="716a9-307">The following table shows the keyword and level.</span></span>  
   
-|Palavra-chave para acionar o evento|Nível|  
+|<span data-ttu-id="716a9-308">Palavra-chave para acionar o evento</span><span class="sxs-lookup"><span data-stu-id="716a9-308">Keyword for raising the event</span></span>|<span data-ttu-id="716a9-309">Nível</span><span class="sxs-lookup"><span data-stu-id="716a9-309">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Informativo (4)|  
+|<span data-ttu-id="716a9-310">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="716a9-310">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="716a9-311">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="716a9-311">Informational (4)</span></span>|  
   
- A tabela a seguir mostra as informações do evento.  
+ <span data-ttu-id="716a9-312">A tabela a seguir mostra as informações do evento.</span><span class="sxs-lookup"><span data-stu-id="716a9-312">The following table shows the event information.</span></span>  
   
-|Evento|ID do evento|Acionado quando|  
+|<span data-ttu-id="716a9-313">Evento</span><span class="sxs-lookup"><span data-stu-id="716a9-313">Event</span></span>|<span data-ttu-id="716a9-314">ID do evento</span><span class="sxs-lookup"><span data-stu-id="716a9-314">Event ID</span></span>|<span data-ttu-id="716a9-315">Acionado quando</span><span class="sxs-lookup"><span data-stu-id="716a9-315">Raised when</span></span>|  
 |-----------|--------------|-----------------|  
-|`IOThreadUnretire_V1`|47|Um thread de E/S é ativado novamente devido à E/S que chega em um período de espera depois que o thread se torna um candidato para desativação.|  
+|`IOThreadUnretire_V1`|<span data-ttu-id="716a9-316">47</span><span class="sxs-lookup"><span data-stu-id="716a9-316">47</span></span>|<span data-ttu-id="716a9-317">Um thread de E/S é ativado novamente devido à E/S que chega em um período de espera depois que o thread se torna um candidato para desativação.</span><span class="sxs-lookup"><span data-stu-id="716a9-317">An I/O thread is unretired because of I/O that arrives within a waiting period after the thread becomes a retirement candidate.</span></span>|  
   
- A tabela a seguir mostra os dados do evento.  
+ <span data-ttu-id="716a9-318">A tabela a seguir mostra os dados do evento.</span><span class="sxs-lookup"><span data-stu-id="716a9-318">The following table shows the event data.</span></span>  
   
-|Nome do campo|Tipo de dados|Descrição|  
+|<span data-ttu-id="716a9-319">Nome do campo</span><span class="sxs-lookup"><span data-stu-id="716a9-319">Field name</span></span>|<span data-ttu-id="716a9-320">Tipo de dados</span><span class="sxs-lookup"><span data-stu-id="716a9-320">Data type</span></span>|<span data-ttu-id="716a9-321">Descrição</span><span class="sxs-lookup"><span data-stu-id="716a9-321">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|Contagem|win:UInt64|Número de threads de E/S no pool de threads, incluindo esse.|  
-|NumRetired|win:UInt64|Número de threads de E/S desativados.|  
-|ClrInstanceID|Win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
+|<span data-ttu-id="716a9-322">Contagem</span><span class="sxs-lookup"><span data-stu-id="716a9-322">Count</span></span>|<span data-ttu-id="716a9-323">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="716a9-323">win:UInt64</span></span>|<span data-ttu-id="716a9-324">Número de threads de E/S no pool de threads, incluindo esse.</span><span class="sxs-lookup"><span data-stu-id="716a9-324">Number of I/O threads in the thread pool, including this one.</span></span>|  
+|<span data-ttu-id="716a9-325">NumRetired</span><span class="sxs-lookup"><span data-stu-id="716a9-325">NumRetired</span></span>|<span data-ttu-id="716a9-326">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="716a9-326">win:UInt64</span></span>|<span data-ttu-id="716a9-327">Número de threads de E/S desativados.</span><span class="sxs-lookup"><span data-stu-id="716a9-327">Number of retired I/O threads.</span></span>|  
+|<span data-ttu-id="716a9-328">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="716a9-328">ClrInstanceID</span></span>|<span data-ttu-id="716a9-329">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="716a9-329">Win:UInt16</span></span>|<span data-ttu-id="716a9-330">ID exclusiva da instância do CLR ou do CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="716a9-330">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-### <a name="iothreadterminate"></a>IOThreadTerminate  
- A tabela a seguir mostra a palavra-chave e o nível.  
+### <a name="iothreadterminate"></a><span data-ttu-id="716a9-331">IOThreadTerminate</span><span class="sxs-lookup"><span data-stu-id="716a9-331">IOThreadTerminate</span></span>  
+ <span data-ttu-id="716a9-332">A tabela a seguir mostra a palavra-chave e o nível.</span><span class="sxs-lookup"><span data-stu-id="716a9-332">The following table shows the keyword and level.</span></span>  
   
-|Palavra-chave para acionar o evento|Nível|  
+|<span data-ttu-id="716a9-333">Palavra-chave para acionar o evento</span><span class="sxs-lookup"><span data-stu-id="716a9-333">Keyword for raising the event</span></span>|<span data-ttu-id="716a9-334">Nível</span><span class="sxs-lookup"><span data-stu-id="716a9-334">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Informativo (4)|  
+|<span data-ttu-id="716a9-335">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="716a9-335">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="716a9-336">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="716a9-336">Informational (4)</span></span>|  
   
- A tabela a seguir mostra as informações do evento.  
+ <span data-ttu-id="716a9-337">A tabela a seguir mostra as informações do evento.</span><span class="sxs-lookup"><span data-stu-id="716a9-337">The following table shows the event information.</span></span>  
   
-|Evento|ID do evento|Acionado quando|  
+|<span data-ttu-id="716a9-338">Evento</span><span class="sxs-lookup"><span data-stu-id="716a9-338">Event</span></span>|<span data-ttu-id="716a9-339">ID do evento</span><span class="sxs-lookup"><span data-stu-id="716a9-339">Event ID</span></span>|<span data-ttu-id="716a9-340">Acionado quando</span><span class="sxs-lookup"><span data-stu-id="716a9-340">Raised when</span></span>|  
 |-----------|--------------|-----------------|  
-|`IOThreadTerminate`|45|Um thread de E/S é criado no pool de threads.|  
+|`IOThreadTerminate`|<span data-ttu-id="716a9-341">45</span><span class="sxs-lookup"><span data-stu-id="716a9-341">45</span></span>|<span data-ttu-id="716a9-342">Um thread de E/S é criado no pool de threads.</span><span class="sxs-lookup"><span data-stu-id="716a9-342">An I/O thread is created in the thread pool.</span></span>|  
   
- A tabela a seguir mostra os dados do evento.  
+ <span data-ttu-id="716a9-343">A tabela a seguir mostra os dados do evento.</span><span class="sxs-lookup"><span data-stu-id="716a9-343">The following table shows the event data.</span></span>  
   
-|Nome do campo|Tipo de dados|Descrição|  
+|<span data-ttu-id="716a9-344">Nome do campo</span><span class="sxs-lookup"><span data-stu-id="716a9-344">Field name</span></span>|<span data-ttu-id="716a9-345">Tipo de dados</span><span class="sxs-lookup"><span data-stu-id="716a9-345">Data type</span></span>|<span data-ttu-id="716a9-346">Descrição</span><span class="sxs-lookup"><span data-stu-id="716a9-346">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|Contagem|win:UInt64|Número de threads de E/S restantes no pool de threads.|  
-|NumRetired|win:UInt64|Número de threads de E/S desativados.|  
-|ClrInstanceID|Win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
+|<span data-ttu-id="716a9-347">Contagem</span><span class="sxs-lookup"><span data-stu-id="716a9-347">Count</span></span>|<span data-ttu-id="716a9-348">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="716a9-348">win:UInt64</span></span>|<span data-ttu-id="716a9-349">Número de threads de E/S restantes no pool de threads.</span><span class="sxs-lookup"><span data-stu-id="716a9-349">Number of I/O threads remaining in the thread pool.</span></span>|  
+|<span data-ttu-id="716a9-350">NumRetired</span><span class="sxs-lookup"><span data-stu-id="716a9-350">NumRetired</span></span>|<span data-ttu-id="716a9-351">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="716a9-351">win:UInt64</span></span>|<span data-ttu-id="716a9-352">Número de threads de E/S desativados.</span><span class="sxs-lookup"><span data-stu-id="716a9-352">Number of retired I/O threads.</span></span>|  
+|<span data-ttu-id="716a9-353">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="716a9-353">ClrInstanceID</span></span>|<span data-ttu-id="716a9-354">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="716a9-354">Win:UInt16</span></span>|<span data-ttu-id="716a9-355">ID exclusiva da instância do CLR ou do CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="716a9-355">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-## <a name="see-also"></a>Consulte também  
- [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
-
+## <a name="see-also"></a><span data-ttu-id="716a9-356">Consulte também</span><span class="sxs-lookup"><span data-stu-id="716a9-356">See Also</span></span>  
+ [<span data-ttu-id="716a9-357">Eventos de CLR ETW</span><span class="sxs-lookup"><span data-stu-id="716a9-357">CLR ETW Events</span></span>](../../../docs/framework/performance/clr-etw-events.md)

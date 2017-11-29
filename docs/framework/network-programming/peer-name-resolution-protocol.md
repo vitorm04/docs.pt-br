@@ -7,75 +7,68 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0deccc8be5616c76f4c447c50f22544fe0fabe47
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 805f6f6ed7990b42065dfe7985a5d81844961897
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# Protocolo PNRP
-Em ambientes de ponto a ponto, pares usam sistemas de resolução de nome específicos para resolver os locais de rede (endereços, protocolos e portas) uns dos outros, com base em nomes ou outros tipos de identificadores. No passado, a resolução de nome de par foi complicada devido à conectividade inerentemente transitória, bem como outras falhas dentro do sistema DNS (Sistema de Nomes de Domínio).  
+# <a name="peer-name-resolution-protocol"></a><span data-ttu-id="bb9a7-102">Protocolo PNRP</span><span class="sxs-lookup"><span data-stu-id="bb9a7-102">Peer Name Resolution Protocol</span></span>
+<span data-ttu-id="bb9a7-103">Em ambientes de ponto a ponto, pares usam sistemas de resolução de nome específicos para resolver os locais de rede (endereços, protocolos e portas) uns dos outros, com base em nomes ou outros tipos de identificadores.</span><span class="sxs-lookup"><span data-stu-id="bb9a7-103">In peer-to-peer environments, peers use specific name resolution systems to resolve each other's network locations (addresses, protocols, and ports) from names or other types of identifiers.</span></span> <span data-ttu-id="bb9a7-104">No passado, a resolução de nome de par foi complicada devido à conectividade inerentemente transitória, bem como outras falhas dentro do sistema DNS (Sistema de Nomes de Domínio).</span><span class="sxs-lookup"><span data-stu-id="bb9a7-104">In the past, peer name resolution has been complicated by the inherently transient connectivity as well as other shortcomings within the Domain Name System (DNS).</span></span>  
   
- A plataforma de rede ponto a ponto do Microsoft® Windows® resolve esse problema com o protocolo PNRP, um protocolo de registro de nomes e de resolução de nomes seguro, escalonável e dinâmico desenvolvido primeiro para o Windows XP e depois atualizado para o Windows Vista™. O PNRP funciona de forma muito diferente dos sistemas de resolução de nome tradicionais, abrindo incríveis novas possibilidades para desenvolvedores de aplicativos.  
+ <span data-ttu-id="bb9a7-105">A plataforma de rede ponto a ponto do Microsoft® Windows® resolve esse problema com o protocolo PNRP, um protocolo de registro de nomes e de resolução de nomes seguro, escalonável e dinâmico desenvolvido primeiro para o Windows XP e depois atualizado para o Windows Vista™.</span><span class="sxs-lookup"><span data-stu-id="bb9a7-105">The Microsoft® Windows® Peer-to-Peer Networking platform solves this problem with the Peer Name Resolution Protocol (PNRP), a secure, scalable, and dynamic name registration and name resolution protocol first developed for Windows XP and then upgraded in Windows Vista™.</span></span> <span data-ttu-id="bb9a7-106">O PNRP funciona de forma muito diferente dos sistemas de resolução de nome tradicionais, abrindo incríveis novas possibilidades para desenvolvedores de aplicativos.</span><span class="sxs-lookup"><span data-stu-id="bb9a7-106">PNRP works very differently from traditional name resolution systems, opening up exciting new possibilities for application developers.</span></span>  
   
- Com o PNRP, nomes de par podem ser aplicados ao computador ou a serviços ou aplicativos individuais no computador. Uma resolução de nome de par inclui um endereço, porta e possivelmente uma carga estendida. Os benefícios do sistema incluem a tolerância a falhas, nenhum afunilamento e também resoluções de nome que nunca retornarão endereços obsoletos, o que torna o protocolo de uma solução excelente para localizar usuários móveis.  
+ <span data-ttu-id="bb9a7-107">Com o PNRP, nomes de par podem ser aplicados ao computador ou a serviços ou aplicativos individuais no computador.</span><span class="sxs-lookup"><span data-stu-id="bb9a7-107">With PNRP, peer names can be applied to the machine, or individual applications or services on the machine.</span></span> <span data-ttu-id="bb9a7-108">Uma resolução de nome de par inclui um endereço, porta e possivelmente uma carga estendida.</span><span class="sxs-lookup"><span data-stu-id="bb9a7-108">A peer name resolution includes an address, port, and possibly an extended payload.</span></span> <span data-ttu-id="bb9a7-109">Os benefícios do sistema incluem a tolerância a falhas, nenhum afunilamento e também resoluções de nome que nunca retornarão endereços obsoletos, o que torna o protocolo de uma solução excelente para localizar usuários móveis.</span><span class="sxs-lookup"><span data-stu-id="bb9a7-109">Benefits of this system include fault tolerance, no bottlenecks, and name resolutions that will never return stale addresses; making the protocol an excellent solution for locating mobile users.</span></span>  
   
- Em termos de segurança, os nomes de par podem ser publicados como seguros (protegidos) ou não seguros (desprotegidos). O PNRP usa criptografia de chave pública para proteger os nomes de par segura contra falsificação; tanto computadores quanto serviços podem ser nomeados com PNRP.  
+ <span data-ttu-id="bb9a7-110">Em termos de segurança, os nomes de par podem ser publicados como seguros (protegidos) ou não seguros (desprotegidos).</span><span class="sxs-lookup"><span data-stu-id="bb9a7-110">In terms of security, peer names can be published as secured (protected) or unsecured (unprotected).</span></span> <span data-ttu-id="bb9a7-111">O PNRP usa criptografia de chave pública para proteger os nomes de par segura contra falsificação; tanto computadores quanto serviços podem ser nomeados com PNRP.</span><span class="sxs-lookup"><span data-stu-id="bb9a7-111">PNRP uses public key cryptography to protect secure peer names against spoofing; both computers and services can be named with PNRP.</span></span>  
   
--   O protocolo PNRP demonstra as seguintes propriedades:  
+-   <span data-ttu-id="bb9a7-112">O protocolo PNRP demonstra as seguintes propriedades:</span><span class="sxs-lookup"><span data-stu-id="bb9a7-112">The Peer Name Resolution Protocol demonstrates the following properties:</span></span>  
   
--   Distribuído e quase que totalmente sem servidor. Servidores só são necessários para o processo de inicialização.  
+-   <span data-ttu-id="bb9a7-113">Distribuído e quase que totalmente sem servidor.</span><span class="sxs-lookup"><span data-stu-id="bb9a7-113">Distributed and almost entirely serverless.</span></span> <span data-ttu-id="bb9a7-114">Servidores só são necessários para o processo de inicialização.</span><span class="sxs-lookup"><span data-stu-id="bb9a7-114">Servers are only required for the bootstrapping process.</span></span>  
   
--   Publicação de nome segura sem o envolvimento de terceiros. Ao contrário da publicação de nome DNS, a publicação de nome PNRP é instantânea e sem custos financeiros.  
+-   <span data-ttu-id="bb9a7-115">Publicação de nome segura sem o envolvimento de terceiros.</span><span class="sxs-lookup"><span data-stu-id="bb9a7-115">Secure name publication without the involvement of third parties.</span></span> <span data-ttu-id="bb9a7-116">Ao contrário da publicação de nome DNS, a publicação de nome PNRP é instantânea e sem custos financeiros.</span><span class="sxs-lookup"><span data-stu-id="bb9a7-116">Unlike DNS name publication, PNRP name publication is instantaneous and without financial cost.</span></span>  
   
--   O PNRP é atualizado em tempo real, o que impede a resolução de endereços obsoletos.  
+-   <span data-ttu-id="bb9a7-117">O PNRP é atualizado em tempo real, o que impede a resolução de endereços obsoletos.</span><span class="sxs-lookup"><span data-stu-id="bb9a7-117">PNRP updates in real-time, which prevents the resolution of stale addresses.</span></span>  
   
--   A resolução de nomes por meio de PNRP vai além de computadores, permitindo também a resolução de nomes de serviços.  
-  
--  
-  
-## O namespace System.Net.PeerToPeer  
-  
--   A funcionalidade do protocolo PNRP é definida pelo namespace <xref:System.Net.PeerToPeer> dentro do .NET Framework versão 3.5. Ele fornece um conjunto de tipos que podem ser usados para registrar e resolver os nomes de ponto a ponto com um serviço PNRP disponível.  
+-   <span data-ttu-id="bb9a7-118">A resolução de nomes por meio de PNRP vai além de computadores, permitindo também a resolução de nomes de serviços.</span><span class="sxs-lookup"><span data-stu-id="bb9a7-118">The resolution of names via PNRP extends beyond computers by also allowing name resolution for services.</span></span>  
   
 -  
   
--   (PNRP e resolvedores de par personalizados podem ser criados e instanciados usando os tipos fornecidos no namespace <xref:System.ServiceModel.PeerResolvers>.)  
+## <a name="the-systemnetpeertopeer-namespace"></a><span data-ttu-id="bb9a7-119">O namespace System.Net.PeerToPeer</span><span class="sxs-lookup"><span data-stu-id="bb9a7-119">The System.Net.PeerToPeer Namespace</span></span>  
+  
+-   <span data-ttu-id="bb9a7-120">A funcionalidade do protocolo PNRP é definida pelo namespace <xref:System.Net.PeerToPeer> dentro do .NET Framework versão 3.5.</span><span class="sxs-lookup"><span data-stu-id="bb9a7-120">PNRP functionality is defined by the <xref:System.Net.PeerToPeer> namespace within the .NET Framework version 3.5.</span></span> <span data-ttu-id="bb9a7-121">Ele fornece um conjunto de tipos que podem ser usados para registrar e resolver os nomes de ponto a ponto com um serviço PNRP disponível.</span><span class="sxs-lookup"><span data-stu-id="bb9a7-121">It provides a set of types that can be used to register and resolve peer names with an available PNRP service.</span></span>  
   
 -  
   
--   Os tipos básicos usados para registrar e resolver os nomes com um serviço PNRP disponível são os seguintes:  
+-   <span data-ttu-id="bb9a7-122">(PNRP e resolvedores de par personalizados podem ser criados e instanciados usando os tipos fornecidos no namespace <xref:System.ServiceModel.PeerResolvers>.)</span><span class="sxs-lookup"><span data-stu-id="bb9a7-122">(PNRP and custom peer resolvers can be created and instantiated using the types provided in the <xref:System.ServiceModel.PeerResolvers> namespace.)</span></span>  
   
 -  
   
--   <xref:System.Net.PeerToPeer.Cloud>: define as informações que descrevem uma nuvem PNRP disponíveis, incluindo o escopo dela.  
+-   <span data-ttu-id="bb9a7-123">Os tipos básicos usados para registrar e resolver os nomes com um serviço PNRP disponível são os seguintes:</span><span class="sxs-lookup"><span data-stu-id="bb9a7-123">The basic types used to register and resolve names with an available PNRP service are as follows:</span></span>  
   
--   <xref:System.Net.PeerToPeer.PeerName>: define um nome de par que pode ser usado para registrar e subsequentemente resolver um par em uma nuvem.  
+-  
   
--   <xref:System.Net.PeerToPeer.PeerNameRecord>: Define o registro na nuvem PNRP que contém as informações de registro para um par, o que inclui os pontos de extremidade de rede em que o par pode ser contatado.  
+-   <span data-ttu-id="bb9a7-124"><xref:System.Net.PeerToPeer.Cloud>: define as informações que descrevem uma nuvem PNRP disponíveis, incluindo o escopo dela.</span><span class="sxs-lookup"><span data-stu-id="bb9a7-124"><xref:System.Net.PeerToPeer.Cloud>: Defines the information describing an available PNRP cloud, including its scope.</span></span>  
   
--   <xref:System.Net.PeerToPeer.PeerNameRegistration>: define o processo de registro para um nome de par, incluindo métodos para iniciar e parar o registro de nome de par.  
+-   <span data-ttu-id="bb9a7-125"><xref:System.Net.PeerToPeer.PeerName>: define um nome de par que pode ser usado para registrar e subsequentemente resolver um par em uma nuvem.</span><span class="sxs-lookup"><span data-stu-id="bb9a7-125"><xref:System.Net.PeerToPeer.PeerName>: Defines a peer name that can be used to register and subsequently resolve a peer within a cloud.</span></span>  
   
--   <xref:System.Net.PeerToPeer.PeerNameResolver>: Define o processo de resolução de um nome de par para o respectivo ponto de extremidade da rede, incluindo métodos síncronos e assíncronos para a resolução.  
+-   <span data-ttu-id="bb9a7-126"><xref:System.Net.PeerToPeer.PeerNameRecord>: Define o registro na nuvem PNRP que contém as informações de registro para um par, o que inclui os pontos de extremidade de rede em que o par pode ser contatado.</span><span class="sxs-lookup"><span data-stu-id="bb9a7-126"><xref:System.Net.PeerToPeer.PeerNameRecord>: Defines the record in PNRP cloud that contains the registration information for a peer, which includes the network endpoints at which the peer can be contacted.</span></span>  
+  
+-   <span data-ttu-id="bb9a7-127"><xref:System.Net.PeerToPeer.PeerNameRegistration>: define o processo de registro para um nome de par, incluindo métodos para iniciar e parar o registro de nome de par.</span><span class="sxs-lookup"><span data-stu-id="bb9a7-127"><xref:System.Net.PeerToPeer.PeerNameRegistration>: Defines the registration process for a peer name, including methods to start and stop peer name registration.</span></span>  
+  
+-   <span data-ttu-id="bb9a7-128"><xref:System.Net.PeerToPeer.PeerNameResolver>: Define o processo de resolução de um nome de par para o respectivo ponto de extremidade da rede, incluindo métodos síncronos e assíncronos para a resolução.</span><span class="sxs-lookup"><span data-stu-id="bb9a7-128"><xref:System.Net.PeerToPeer.PeerNameResolver>: Defines the process for resolving a peer name to its network endpoint(s), including both synchronous and asynchronous methods for resolution.</span></span>  
   
 -  
   
 -  
   
-## Consulte também  
- <xref:System.ServiceModel.PeerResolvers>   
- <xref:System.Net.PeerToPeer>   
- [Amostras de programação de rede](../../../docs/framework/network-programming/network-programming-samples.md)   
- [Amostra de tecnologia PeerToPeer](http://go.microsoft.com/fwlink/?LinkID=179571)
-
+## <a name="see-also"></a><span data-ttu-id="bb9a7-129">Consulte também</span><span class="sxs-lookup"><span data-stu-id="bb9a7-129">See Also</span></span>  
+ <xref:System.ServiceModel.PeerResolvers>  
+ <xref:System.Net.PeerToPeer>  
+ [<span data-ttu-id="bb9a7-130">Amostras de programação de rede</span><span class="sxs-lookup"><span data-stu-id="bb9a7-130">Network Programming Samples</span></span>](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [<span data-ttu-id="bb9a7-131">Amostra de tecnologia PeerToPeer</span><span class="sxs-lookup"><span data-stu-id="bb9a7-131">PeerToPeer Technology Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=179571)

@@ -5,172 +5,169 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ETW, method events (CLR)
 - method events [.NET Framework]
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 353ae034381ab29787aba1c1c362f4c6fc57da7e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="method-etw-events"></a>Eventos ETW de método
-<a name="top"></a> Esses eventos coletam informações que são específicas para métodos. A carga desses eventos é necessária para resolução de símbolos. Além disso, esses eventos fornecem informações úteis, como o número de vezes que um método foi chamado.  
+# <a name="method-etw-events"></a><span data-ttu-id="bab14-102">Eventos ETW de método</span><span class="sxs-lookup"><span data-stu-id="bab14-102">Method ETW Events</span></span>
+<span data-ttu-id="bab14-103"><a name="top"></a> Esses eventos coletam informações que são específicas para métodos.</span><span class="sxs-lookup"><span data-stu-id="bab14-103"><a name="top"></a> These events collect information that is specific to methods.</span></span> <span data-ttu-id="bab14-104">A carga desses eventos é necessária para resolução de símbolos.</span><span class="sxs-lookup"><span data-stu-id="bab14-104">The payload of these events is required for symbol resolution.</span></span> <span data-ttu-id="bab14-105">Além disso, esses eventos fornecem informações úteis, como o número de vezes que um método foi chamado.</span><span class="sxs-lookup"><span data-stu-id="bab14-105">In addition, these events provide helpful information such as the number of times a method was called.</span></span>  
   
- Todos os eventos de método têm um nível de "Informativo (4)". Todos os eventos detalhados do método têm um nível de "Detalhado (5)".  
+ <span data-ttu-id="bab14-106">Todos os eventos de método têm um nível de "Informativo (4)".</span><span class="sxs-lookup"><span data-stu-id="bab14-106">All method events have a level of "Informational (4)".</span></span> <span data-ttu-id="bab14-107">Todos os eventos detalhados do método têm um nível de "Detalhado (5)".</span><span class="sxs-lookup"><span data-stu-id="bab14-107">All method verbose events have a level of "Verbose (5)".</span></span>  
   
- Todos os eventos de método são gerados pela palavra-chave `JITKeyword` (0x10) ou a palavra-chave `NGenKeyword` (0x20) no provedor de tempo de execução ou então `JitRundownKeyword` (0x10) ou `NGENRundownKeyword` (0x20) com o provedor de encerramento.  
+ <span data-ttu-id="bab14-108">Todos os eventos de método são gerados pela palavra-chave `JITKeyword` (0x10) ou a palavra-chave `NGenKeyword` (0x20) no provedor de tempo de execução ou então `JitRundownKeyword` (0x10) ou `NGENRundownKeyword` (0x20) com o provedor de encerramento.</span><span class="sxs-lookup"><span data-stu-id="bab14-108">All method events are raised by the `JITKeyword` (0x10) keyword or the `NGenKeyword` (0x20) keyword under the runtime provider, or `JitRundownKeyword` (0x10) or `NGENRundownKeyword` (0x20) under the rundown provider.</span></span>  
   
- Eventos de método do CLR são mais subdivididos no seguinte:  
+ <span data-ttu-id="bab14-109">Eventos de método do CLR são mais subdivididos no seguinte:</span><span class="sxs-lookup"><span data-stu-id="bab14-109">CLR method events are further subdivided into the following:</span></span>  
   
--   [Eventos de método do CLR](#clr_method_events)  
+-   [<span data-ttu-id="bab14-110">Eventos de método do CLR</span><span class="sxs-lookup"><span data-stu-id="bab14-110">CLR Method Events</span></span>](#clr_method_events)  
   
--   [Eventos de marcador de método do CLR](#clr_method_marker_events)  
+-   [<span data-ttu-id="bab14-111">Eventos de marcador de método do CLR</span><span class="sxs-lookup"><span data-stu-id="bab14-111">CLR Method Marker Events</span></span>](#clr_method_marker_events)  
   
--   [Eventos detalhados de método do CLR](#clr_method_verbose_events)  
+-   [<span data-ttu-id="bab14-112">Eventos detalhados de método do CLR</span><span class="sxs-lookup"><span data-stu-id="bab14-112">CLR Method Verbose Events</span></span>](#clr_method_verbose_events)  
   
--   [Evento MethodJittingStarted](#methodjittingstarted_event)  
+-   [<span data-ttu-id="bab14-113">Evento MethodJittingStarted</span><span class="sxs-lookup"><span data-stu-id="bab14-113">MethodJittingStarted Event</span></span>](#methodjittingstarted_event)  
   
 <a name="clr_method_events"></a>   
-## <a name="clr-method-events"></a>Eventos de método do CLR  
- A tabela a seguir mostra a palavra-chave e o nível. (Para obter mais informações, consulte [Palavras-chaves e níveis CLR ETW](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+## <a name="clr-method-events"></a><span data-ttu-id="bab14-114">Eventos de método do CLR</span><span class="sxs-lookup"><span data-stu-id="bab14-114">CLR Method Events</span></span>  
+ <span data-ttu-id="bab14-115">A tabela a seguir mostra a palavra-chave e o nível.</span><span class="sxs-lookup"><span data-stu-id="bab14-115">The following table shows the keyword and level.</span></span> <span data-ttu-id="bab14-116">(Para obter mais informações, consulte [Palavras-chaves e níveis CLR ETW](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span><span class="sxs-lookup"><span data-stu-id="bab14-116">(For more information, see [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span></span>  
   
-|Palavra-chave para acionar o evento|Nível|  
+|<span data-ttu-id="bab14-117">Palavra-chave para acionar o evento</span><span class="sxs-lookup"><span data-stu-id="bab14-117">Keyword for raising the event</span></span>|<span data-ttu-id="bab14-118">Nível</span><span class="sxs-lookup"><span data-stu-id="bab14-118">Level</span></span>|  
 |-----------------------------------|-----------|  
-|Provedor de tempo de execução `JITKeyword` (0x10)|Informativo (4)|  
-|Provedor de tempo de execução `NGenKeyword` (0x20)|Informativo (4)|  
-|Provedor de encerramento `JitRundownKeyword` (0x10)|Informativo (4)|  
-|Provedor de encerramento `NGENRundownKeyword` (0x20)|Informativo (4)|  
+|<span data-ttu-id="bab14-119">Provedor de tempo de execução `JITKeyword` (0x10)</span><span class="sxs-lookup"><span data-stu-id="bab14-119">`JITKeyword` (0x10) runtime provider</span></span>|<span data-ttu-id="bab14-120">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="bab14-120">Informational (4)</span></span>|  
+|<span data-ttu-id="bab14-121">Provedor de tempo de execução `NGenKeyword` (0x20)</span><span class="sxs-lookup"><span data-stu-id="bab14-121">`NGenKeyword` (0x20) runtime provider</span></span>|<span data-ttu-id="bab14-122">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="bab14-122">Informational (4)</span></span>|  
+|<span data-ttu-id="bab14-123">Provedor de encerramento `JitRundownKeyword` (0x10)</span><span class="sxs-lookup"><span data-stu-id="bab14-123">`JitRundownKeyword` (0x10) rundown provider</span></span>|<span data-ttu-id="bab14-124">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="bab14-124">Informational (4)</span></span>|  
+|<span data-ttu-id="bab14-125">Provedor de encerramento `NGENRundownKeyword` (0x20)</span><span class="sxs-lookup"><span data-stu-id="bab14-125">`NGENRundownKeyword` (0x20) rundown provider</span></span>|<span data-ttu-id="bab14-126">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="bab14-126">Informational (4)</span></span>|  
   
- A tabela a seguir mostra as informações do evento.  
+ <span data-ttu-id="bab14-127">A tabela a seguir mostra as informações do evento.</span><span class="sxs-lookup"><span data-stu-id="bab14-127">The following table shows the event information.</span></span>  
   
-|Evento|ID do evento|Descrição|  
+|<span data-ttu-id="bab14-128">Evento</span><span class="sxs-lookup"><span data-stu-id="bab14-128">Event</span></span>|<span data-ttu-id="bab14-129">ID do evento</span><span class="sxs-lookup"><span data-stu-id="bab14-129">Event ID</span></span>|<span data-ttu-id="bab14-130">Descrição</span><span class="sxs-lookup"><span data-stu-id="bab14-130">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`MethodLoad_V1`|136|Gerado quando um método é carregado Just-In-Time (carregado via JIT) ou uma imagem NGEN é carregada. Métodos dinâmicos e genéricos não usam esta versão para carregamentos de método. Os auxiliares JIT nunca usam esta versão.|  
-|`MethodUnLoad_V1`|137|Gerado quando um módulo é descarregado ou um domínio do aplicativo é destruído. Métodos dinâmicos nunca usam essa versão para os descarregamentos de método.|  
-|`MethodDCStart_V1`|137|Enumera métodos durante um encerramento inicial.|  
-|`MethodDCEnd_V1`|138|Enumera métodos durante um encerramento final.|  
+|`MethodLoad_V1`|<span data-ttu-id="bab14-131">136</span><span class="sxs-lookup"><span data-stu-id="bab14-131">136</span></span>|<span data-ttu-id="bab14-132">Gerado quando um método é carregado Just-In-Time (carregado via JIT) ou uma imagem NGEN é carregada.</span><span class="sxs-lookup"><span data-stu-id="bab14-132">Raised when a method is just-in-time loaded (JIT-loaded) or an NGEN image is loaded.</span></span> <span data-ttu-id="bab14-133">Métodos dinâmicos e genéricos não usam esta versão para carregamentos de método.</span><span class="sxs-lookup"><span data-stu-id="bab14-133">Dynamic and generic methods do not use this version for method loads.</span></span> <span data-ttu-id="bab14-134">Os auxiliares JIT nunca usam esta versão.</span><span class="sxs-lookup"><span data-stu-id="bab14-134">JIT helpers never use this version.</span></span>|  
+|`MethodUnLoad_V1`|<span data-ttu-id="bab14-135">137</span><span class="sxs-lookup"><span data-stu-id="bab14-135">137</span></span>|<span data-ttu-id="bab14-136">Gerado quando um módulo é descarregado ou um domínio do aplicativo é destruído.</span><span class="sxs-lookup"><span data-stu-id="bab14-136">Raised when a module is unloaded, or an application domain is destroyed.</span></span> <span data-ttu-id="bab14-137">Métodos dinâmicos nunca usam essa versão para os descarregamentos de método.</span><span class="sxs-lookup"><span data-stu-id="bab14-137">Dynamic methods never use this version for method unloads.</span></span>|  
+|`MethodDCStart_V1`|<span data-ttu-id="bab14-138">137</span><span class="sxs-lookup"><span data-stu-id="bab14-138">137</span></span>|<span data-ttu-id="bab14-139">Enumera métodos durante um encerramento inicial.</span><span class="sxs-lookup"><span data-stu-id="bab14-139">Enumerates methods during a start rundown.</span></span>|  
+|`MethodDCEnd_V1`|<span data-ttu-id="bab14-140">138</span><span class="sxs-lookup"><span data-stu-id="bab14-140">138</span></span>|<span data-ttu-id="bab14-141">Enumera métodos durante um encerramento final.</span><span class="sxs-lookup"><span data-stu-id="bab14-141">Enumerates methods during an end rundown.</span></span>|  
   
- A tabela a seguir mostra os dados do evento.  
+ <span data-ttu-id="bab14-142">A tabela a seguir mostra os dados do evento.</span><span class="sxs-lookup"><span data-stu-id="bab14-142">The following table shows the event data.</span></span>  
   
-|Nome do campo|Tipo de dados|Descrição|  
+|<span data-ttu-id="bab14-143">Nome do campo</span><span class="sxs-lookup"><span data-stu-id="bab14-143">Field name</span></span>|<span data-ttu-id="bab14-144">Tipo de dados</span><span class="sxs-lookup"><span data-stu-id="bab14-144">Data type</span></span>|<span data-ttu-id="bab14-145">Descrição</span><span class="sxs-lookup"><span data-stu-id="bab14-145">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|MethodID|win:UInt64|Identificador exclusivo de um método. Para métodos auxiliares JIT, isso é definido para o endereço inicial do método.|  
-|ModuleID|win:UInt64|Identificador do módulo ao qual esse método pertence (0 para auxiliares JIT).|  
-|MethodStartAddress|win:UInt64|Endereço inicial do método.|  
-|MethodSize|win:UInt32|Tamanho do método.|  
-|MethodToken|win:UInt32|0 para métodos dinâmicos e auxiliares JIT.|  
-|MethodFlags|win:UInt32|0x1: método dinâmico.<br /><br /> 0x2: método genérico.<br /><br /> 0x4: método de código com compilação JIT (de outro modo, código de imagem nativa NGEN).<br /><br /> 0x8: método auxiliar.|  
-|ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
+|<span data-ttu-id="bab14-146">MethodID</span><span class="sxs-lookup"><span data-stu-id="bab14-146">MethodID</span></span>|<span data-ttu-id="bab14-147">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="bab14-147">win:UInt64</span></span>|<span data-ttu-id="bab14-148">Identificador exclusivo de um método.</span><span class="sxs-lookup"><span data-stu-id="bab14-148">Unique identifier of a method.</span></span> <span data-ttu-id="bab14-149">Para métodos auxiliares JIT, isso é definido para o endereço inicial do método.</span><span class="sxs-lookup"><span data-stu-id="bab14-149">For JIT helper methods, this is set to the start address of the method.</span></span>|  
+|<span data-ttu-id="bab14-150">ModuleID</span><span class="sxs-lookup"><span data-stu-id="bab14-150">ModuleID</span></span>|<span data-ttu-id="bab14-151">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="bab14-151">win:UInt64</span></span>|<span data-ttu-id="bab14-152">Identificador do módulo ao qual esse método pertence (0 para auxiliares JIT).</span><span class="sxs-lookup"><span data-stu-id="bab14-152">Identifier of the module to which this method belongs (0 for JIT helpers).</span></span>|  
+|<span data-ttu-id="bab14-153">MethodStartAddress</span><span class="sxs-lookup"><span data-stu-id="bab14-153">MethodStartAddress</span></span>|<span data-ttu-id="bab14-154">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="bab14-154">win:UInt64</span></span>|<span data-ttu-id="bab14-155">Endereço inicial do método.</span><span class="sxs-lookup"><span data-stu-id="bab14-155">Start address of the method.</span></span>|  
+|<span data-ttu-id="bab14-156">MethodSize</span><span class="sxs-lookup"><span data-stu-id="bab14-156">MethodSize</span></span>|<span data-ttu-id="bab14-157">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="bab14-157">win:UInt32</span></span>|<span data-ttu-id="bab14-158">Tamanho do método.</span><span class="sxs-lookup"><span data-stu-id="bab14-158">Size of the method.</span></span>|  
+|<span data-ttu-id="bab14-159">MethodToken</span><span class="sxs-lookup"><span data-stu-id="bab14-159">MethodToken</span></span>|<span data-ttu-id="bab14-160">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="bab14-160">win:UInt32</span></span>|<span data-ttu-id="bab14-161">0 para métodos dinâmicos e auxiliares JIT.</span><span class="sxs-lookup"><span data-stu-id="bab14-161">0 for dynamic methods and JIT helpers.</span></span>|  
+|<span data-ttu-id="bab14-162">MethodFlags</span><span class="sxs-lookup"><span data-stu-id="bab14-162">MethodFlags</span></span>|<span data-ttu-id="bab14-163">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="bab14-163">win:UInt32</span></span>|<span data-ttu-id="bab14-164">0x1: método dinâmico.</span><span class="sxs-lookup"><span data-stu-id="bab14-164">0x1: Dynamic method.</span></span><br /><br /> <span data-ttu-id="bab14-165">0x2: método genérico.</span><span class="sxs-lookup"><span data-stu-id="bab14-165">0x2: Generic method.</span></span><br /><br /> <span data-ttu-id="bab14-166">0x4: método de código com compilação JIT (de outro modo, código de imagem nativa NGEN).</span><span class="sxs-lookup"><span data-stu-id="bab14-166">0x4: JIT-compiled code method (otherwise NGEN native image code).</span></span><br /><br /> <span data-ttu-id="bab14-167">0x8: método auxiliar.</span><span class="sxs-lookup"><span data-stu-id="bab14-167">0x8: Helper method.</span></span>|  
+|<span data-ttu-id="bab14-168">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="bab14-168">ClrInstanceID</span></span>|<span data-ttu-id="bab14-169">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="bab14-169">win:UInt16</span></span>|<span data-ttu-id="bab14-170">ID exclusiva da instância do CLR ou do CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="bab14-170">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [Voltar ao início](#top)  
+ [<span data-ttu-id="bab14-171">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="bab14-171">Back to top</span></span>](#top)  
   
 <a name="clr_method_marker_events"></a>   
-## <a name="clr-method-marker-events"></a>Eventos de marcador de método do CLR  
- Esses eventos são acionados apenas no provedor de encerramento. Eles significam o final de enumeração de método durante o encerramento inicial ou final. (Ou seja, eles são gerados quando a palavra-chave `NGENRundownKeyword`, `JitRundownKeyword`, `LoaderRundownKeyword` ou `AppDomainResourceManagementRundownKeyword` está habilitada.)  
+## <a name="clr-method-marker-events"></a><span data-ttu-id="bab14-172">Eventos de marcador de método do CLR</span><span class="sxs-lookup"><span data-stu-id="bab14-172">CLR Method Marker Events</span></span>  
+ <span data-ttu-id="bab14-173">Esses eventos são acionados apenas no provedor de encerramento.</span><span class="sxs-lookup"><span data-stu-id="bab14-173">These events are raised only under the rundown provider.</span></span> <span data-ttu-id="bab14-174">Eles significam o final de enumeração de método durante o encerramento inicial ou final.</span><span class="sxs-lookup"><span data-stu-id="bab14-174">They signify the end of method enumeration during a start or end rundown.</span></span> <span data-ttu-id="bab14-175">(Ou seja, eles são gerados quando a palavra-chave `NGENRundownKeyword`, `JitRundownKeyword`, `LoaderRundownKeyword` ou `AppDomainResourceManagementRundownKeyword` está habilitada.)</span><span class="sxs-lookup"><span data-stu-id="bab14-175">(That is, they are raised when the `NGENRundownKeyword`, `JitRundownKeyword`, `LoaderRundownKeyword`, or `AppDomainResourceManagementRundownKeyword` keyword is enabled.)</span></span>  
   
- A tabela a seguir mostra a palavra-chave e o nível.  
+ <span data-ttu-id="bab14-176">A tabela a seguir mostra a palavra-chave e o nível.</span><span class="sxs-lookup"><span data-stu-id="bab14-176">The following table shows the keyword and level.</span></span>  
   
-|Palavra-chave para acionar o evento|Nível|  
+|<span data-ttu-id="bab14-177">Palavra-chave para acionar o evento</span><span class="sxs-lookup"><span data-stu-id="bab14-177">Keyword for raising the event</span></span>|<span data-ttu-id="bab14-178">Nível</span><span class="sxs-lookup"><span data-stu-id="bab14-178">Level</span></span>|  
 |-----------------------------------|-----------|  
-|Provedor de encerramento `AppDomainResourceManagementRundownKeyword` (0x800)|Informativo (4)|  
-|Provedor de encerramento `JitRundownKeyword` (0x10)|Informativo (4)|  
-|Provedor de encerramento `NGENRundownKeyword` (0x20)|Informativo (4)|  
+|<span data-ttu-id="bab14-179">Provedor de encerramento `AppDomainResourceManagementRundownKeyword` (0x800)</span><span class="sxs-lookup"><span data-stu-id="bab14-179">`AppDomainResourceManagementRundownKeyword` (0x800) rundown provider</span></span>|<span data-ttu-id="bab14-180">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="bab14-180">Informational (4)</span></span>|  
+|<span data-ttu-id="bab14-181">Provedor de encerramento `JitRundownKeyword` (0x10)</span><span class="sxs-lookup"><span data-stu-id="bab14-181">`JitRundownKeyword` (0x10) rundown provider</span></span>|<span data-ttu-id="bab14-182">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="bab14-182">Informational (4)</span></span>|  
+|<span data-ttu-id="bab14-183">Provedor de encerramento `NGENRundownKeyword` (0x20)</span><span class="sxs-lookup"><span data-stu-id="bab14-183">`NGENRundownKeyword` (0x20) rundown provider</span></span>|<span data-ttu-id="bab14-184">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="bab14-184">Informational (4)</span></span>|  
   
- A tabela a seguir mostra as informações do evento.  
+ <span data-ttu-id="bab14-185">A tabela a seguir mostra as informações do evento.</span><span class="sxs-lookup"><span data-stu-id="bab14-185">The following table shows the event information.</span></span>  
   
-|Evento|ID do evento|Descrição|  
+|<span data-ttu-id="bab14-186">Evento</span><span class="sxs-lookup"><span data-stu-id="bab14-186">Event</span></span>|<span data-ttu-id="bab14-187">ID do evento</span><span class="sxs-lookup"><span data-stu-id="bab14-187">Event ID</span></span>|<span data-ttu-id="bab14-188">Descrição</span><span class="sxs-lookup"><span data-stu-id="bab14-188">Desciption</span></span>|  
 |-----------|--------------|----------------|  
-|`DCStartInit_V1`|147|Enviado antes do início da enumeração durante um encerramento inicial.|  
-|`DCStartComplete_V1`|145|Enviado antes do término da enumeração durante um encerramento inicial.|  
-|`DCEndInit_V1`|148|Enviado antes do início da enumeração durante um encerramento final.|  
-|`DCEndComplete_V1`|146|Enviado antes do término da enumeração durante um encerramento final.|  
+|`DCStartInit_V1`|<span data-ttu-id="bab14-189">147</span><span class="sxs-lookup"><span data-stu-id="bab14-189">147</span></span>|<span data-ttu-id="bab14-190">Enviado antes do início da enumeração durante um encerramento inicial.</span><span class="sxs-lookup"><span data-stu-id="bab14-190">Sent before the start of the enumeration during a start rundown.</span></span>|  
+|`DCStartComplete_V1`|<span data-ttu-id="bab14-191">145</span><span class="sxs-lookup"><span data-stu-id="bab14-191">145</span></span>|<span data-ttu-id="bab14-192">Enviado antes do término da enumeração durante um encerramento inicial.</span><span class="sxs-lookup"><span data-stu-id="bab14-192">Sent at the end of the enumeration during a start rundown.</span></span>|  
+|`DCEndInit_V1`|<span data-ttu-id="bab14-193">148</span><span class="sxs-lookup"><span data-stu-id="bab14-193">148</span></span>|<span data-ttu-id="bab14-194">Enviado antes do início da enumeração durante um encerramento final.</span><span class="sxs-lookup"><span data-stu-id="bab14-194">Sent before the start of the enumeration during an end rundown.</span></span>|  
+|`DCEndComplete_V1`|<span data-ttu-id="bab14-195">146</span><span class="sxs-lookup"><span data-stu-id="bab14-195">146</span></span>|<span data-ttu-id="bab14-196">Enviado antes do término da enumeração durante um encerramento final.</span><span class="sxs-lookup"><span data-stu-id="bab14-196">Sent at the end of the enumeration during an end rundown.</span></span>|  
   
- A tabela a seguir mostra os dados do evento.  
+ <span data-ttu-id="bab14-197">A tabela a seguir mostra os dados do evento.</span><span class="sxs-lookup"><span data-stu-id="bab14-197">The following table shows the event data.</span></span>  
   
-|Nome do campo|Tipo de dados|Descrição|  
+|<span data-ttu-id="bab14-198">Nome do campo</span><span class="sxs-lookup"><span data-stu-id="bab14-198">Field name</span></span>|<span data-ttu-id="bab14-199">Tipo de dados</span><span class="sxs-lookup"><span data-stu-id="bab14-199">Data type</span></span>|<span data-ttu-id="bab14-200">Descrição</span><span class="sxs-lookup"><span data-stu-id="bab14-200">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
+|<span data-ttu-id="bab14-201">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="bab14-201">ClrInstanceID</span></span>|<span data-ttu-id="bab14-202">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="bab14-202">win:UInt16</span></span>|<span data-ttu-id="bab14-203">ID exclusiva da instância do CLR ou do CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="bab14-203">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [Voltar ao início](#top)  
+ [<span data-ttu-id="bab14-204">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="bab14-204">Back to top</span></span>](#top)  
   
 <a name="clr_method_verbose_events"></a>   
-## <a name="clr-method-verbose-events"></a>Eventos detalhados de método do CLR  
- A tabela a seguir mostra a palavra-chave e o nível.  
+## <a name="clr-method-verbose-events"></a><span data-ttu-id="bab14-205">Eventos detalhados de método do CLR</span><span class="sxs-lookup"><span data-stu-id="bab14-205">CLR Method Verbose Events</span></span>  
+ <span data-ttu-id="bab14-206">A tabela a seguir mostra a palavra-chave e o nível.</span><span class="sxs-lookup"><span data-stu-id="bab14-206">The following table shows the keyword and level.</span></span>  
   
-|Palavra-chave para acionar o evento|Nível|  
+|<span data-ttu-id="bab14-207">Palavra-chave para acionar o evento</span><span class="sxs-lookup"><span data-stu-id="bab14-207">Keyword for raising the event</span></span>|<span data-ttu-id="bab14-208">Nível</span><span class="sxs-lookup"><span data-stu-id="bab14-208">Level</span></span>|  
 |-----------------------------------|-----------|  
-|Provedor de tempo de execução `JITKeyword` (0x10)|Detalhado (5)|  
-|Provedor de tempo de execução `NGenKeyword` (0x20)|Detalhado (5)|  
-|Provedor de encerramento `JitRundownKeyword` (0x10)|Detalhado (5)|  
-|Provedor de encerramento `NGENRundownKeyword` (0x20)|Detalhado (5)|  
+|<span data-ttu-id="bab14-209">Provedor de tempo de execução `JITKeyword` (0x10)</span><span class="sxs-lookup"><span data-stu-id="bab14-209">`JITKeyword` (0x10) runtime provider</span></span>|<span data-ttu-id="bab14-210">Detalhado (5)</span><span class="sxs-lookup"><span data-stu-id="bab14-210">Verbose (5)</span></span>|  
+|<span data-ttu-id="bab14-211">Provedor de tempo de execução `NGenKeyword` (0x20)</span><span class="sxs-lookup"><span data-stu-id="bab14-211">`NGenKeyword` (0x20) runtime provider</span></span>|<span data-ttu-id="bab14-212">Detalhado (5)</span><span class="sxs-lookup"><span data-stu-id="bab14-212">Verbose (5)</span></span>|  
+|<span data-ttu-id="bab14-213">Provedor de encerramento `JitRundownKeyword` (0x10)</span><span class="sxs-lookup"><span data-stu-id="bab14-213">`JitRundownKeyword` (0x10) rundown provider</span></span>|<span data-ttu-id="bab14-214">Detalhado (5)</span><span class="sxs-lookup"><span data-stu-id="bab14-214">Verbose (5)</span></span>|  
+|<span data-ttu-id="bab14-215">Provedor de encerramento `NGENRundownKeyword` (0x20)</span><span class="sxs-lookup"><span data-stu-id="bab14-215">`NGENRundownKeyword` (0x20) rundown provider</span></span>|<span data-ttu-id="bab14-216">Detalhado (5)</span><span class="sxs-lookup"><span data-stu-id="bab14-216">Verbose (5)</span></span>|  
   
- A tabela a seguir mostra as informações do evento.  
+ <span data-ttu-id="bab14-217">A tabela a seguir mostra as informações do evento.</span><span class="sxs-lookup"><span data-stu-id="bab14-217">The following table shows the event information.</span></span>  
   
-|Evento|ID do evento|Descrição|  
+|<span data-ttu-id="bab14-218">Evento</span><span class="sxs-lookup"><span data-stu-id="bab14-218">Event</span></span>|<span data-ttu-id="bab14-219">ID do evento</span><span class="sxs-lookup"><span data-stu-id="bab14-219">Event ID</span></span>|<span data-ttu-id="bab14-220">Descrição</span><span class="sxs-lookup"><span data-stu-id="bab14-220">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`MethodLoadVerbose_V1`|143|Gerado quando um método é carregado via JIT ou uma imagem NGEN é carregada. Métodos dinâmicos e genéricos sempre usam esta versão para carregamentos de método. Os auxiliares JIT sempre usam esta versão.|  
-|`MethodUnLoadVerbose_V1`|144|Gerado quando um método dinâmico é destruído, um módulo é descarregado ou um domínio do aplicativo é destruído. Métodos dinâmicos sempre usam essa versão para os descarregamentos de método.|  
-|`MethodDCStartVerbose_V1`|141|Enumera métodos durante um encerramento inicial.|  
-|`MethodDCEndVerbose_V1`|142|Enumera métodos durante um encerramento final.|  
+|`MethodLoadVerbose_V1`|<span data-ttu-id="bab14-221">143</span><span class="sxs-lookup"><span data-stu-id="bab14-221">143</span></span>|<span data-ttu-id="bab14-222">Gerado quando um método é carregado via JIT ou uma imagem NGEN é carregada.</span><span class="sxs-lookup"><span data-stu-id="bab14-222">Raised when a method is JIT-loaded or an NGEN image is loaded.</span></span> <span data-ttu-id="bab14-223">Métodos dinâmicos e genéricos sempre usam esta versão para carregamentos de método.</span><span class="sxs-lookup"><span data-stu-id="bab14-223">Dynamic and generic methods always use this version for method loads.</span></span> <span data-ttu-id="bab14-224">Os auxiliares JIT sempre usam esta versão.</span><span class="sxs-lookup"><span data-stu-id="bab14-224">JIT helpers always use this version.</span></span>|  
+|`MethodUnLoadVerbose_V1`|<span data-ttu-id="bab14-225">144</span><span class="sxs-lookup"><span data-stu-id="bab14-225">144</span></span>|<span data-ttu-id="bab14-226">Gerado quando um método dinâmico é destruído, um módulo é descarregado ou um domínio do aplicativo é destruído.</span><span class="sxs-lookup"><span data-stu-id="bab14-226">Raised when a dynamic method is destroyed, a module is unloaded, or an application domain is destroyed.</span></span> <span data-ttu-id="bab14-227">Métodos dinâmicos sempre usam essa versão para os descarregamentos de método.</span><span class="sxs-lookup"><span data-stu-id="bab14-227">Dynamic methods always use this version for method unloads.</span></span>|  
+|`MethodDCStartVerbose_V1`|<span data-ttu-id="bab14-228">141</span><span class="sxs-lookup"><span data-stu-id="bab14-228">141</span></span>|<span data-ttu-id="bab14-229">Enumera métodos durante um encerramento inicial.</span><span class="sxs-lookup"><span data-stu-id="bab14-229">Enumerates methods during a start rundown.</span></span>|  
+|`MethodDCEndVerbose_V1`|<span data-ttu-id="bab14-230">142</span><span class="sxs-lookup"><span data-stu-id="bab14-230">142</span></span>|<span data-ttu-id="bab14-231">Enumera métodos durante um encerramento final.</span><span class="sxs-lookup"><span data-stu-id="bab14-231">Enumerates methods during an end rundown.</span></span>|  
   
- A tabela a seguir mostra os dados do evento.  
+ <span data-ttu-id="bab14-232">A tabela a seguir mostra os dados do evento.</span><span class="sxs-lookup"><span data-stu-id="bab14-232">The following table shows the event data.</span></span>  
   
-|Nome do campo|Tipo de dados|Descrição|  
+|<span data-ttu-id="bab14-233">Nome do campo</span><span class="sxs-lookup"><span data-stu-id="bab14-233">Field name</span></span>|<span data-ttu-id="bab14-234">Tipo de dados</span><span class="sxs-lookup"><span data-stu-id="bab14-234">Data type</span></span>|<span data-ttu-id="bab14-235">Descrição</span><span class="sxs-lookup"><span data-stu-id="bab14-235">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|MethodID|win:UInt64|Identificador exclusivo do método. Para métodos auxiliares JIT, defina-o para o endereço inicial do método.|  
-|ModuleID|win:UInt64|Identificador do módulo ao qual esse método pertence (0 para auxiliares JIT).|  
-|MethodStartAddress|win:UInt64|O endereço inicial.|  
-|MethodSize|win:UInt32|O comprimento do método.|  
-|MethodToken|win:UInt32|0 para métodos dinâmicos e auxiliares JIT.|  
-|MethodFlags|win:UInt32|0x1: método dinâmico.<br /><br /> 0x2: método genérico.<br /><br /> 0x4: método com compilação JIT (de outro modo, gerado pelo NGen.exe)<br /><br /> 0x8: método auxiliar.|  
-|MethodNameSpace|win:UnicodeString|O nome completo do namespace associado ao método.|  
-|MethodName|win:UnicodeString|O nome de classe completo associado ao método.|  
-|MethodSignature|win:UnicodeString|Assinatura do método (lista separada por vírgulas de nomes de tipo).|  
-|ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
+|<span data-ttu-id="bab14-236">MethodID</span><span class="sxs-lookup"><span data-stu-id="bab14-236">MethodID</span></span>|<span data-ttu-id="bab14-237">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="bab14-237">win:UInt64</span></span>|<span data-ttu-id="bab14-238">Identificador exclusivo do método.</span><span class="sxs-lookup"><span data-stu-id="bab14-238">Unique identifier of the method.</span></span> <span data-ttu-id="bab14-239">Para métodos auxiliares JIT, defina-o para o endereço inicial do método.</span><span class="sxs-lookup"><span data-stu-id="bab14-239">For JIT helper methods, set to the start address of the method.</span></span>|  
+|<span data-ttu-id="bab14-240">ModuleID</span><span class="sxs-lookup"><span data-stu-id="bab14-240">ModuleID</span></span>|<span data-ttu-id="bab14-241">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="bab14-241">win:UInt64</span></span>|<span data-ttu-id="bab14-242">Identificador do módulo ao qual esse método pertence (0 para auxiliares JIT).</span><span class="sxs-lookup"><span data-stu-id="bab14-242">Identifier of the module to which this method belongs (0 for JIT helpers).</span></span>|  
+|<span data-ttu-id="bab14-243">MethodStartAddress</span><span class="sxs-lookup"><span data-stu-id="bab14-243">MethodStartAddress</span></span>|<span data-ttu-id="bab14-244">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="bab14-244">win:UInt64</span></span>|<span data-ttu-id="bab14-245">O endereço inicial.</span><span class="sxs-lookup"><span data-stu-id="bab14-245">Start address.</span></span>|  
+|<span data-ttu-id="bab14-246">MethodSize</span><span class="sxs-lookup"><span data-stu-id="bab14-246">MethodSize</span></span>|<span data-ttu-id="bab14-247">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="bab14-247">win:UInt32</span></span>|<span data-ttu-id="bab14-248">O comprimento do método.</span><span class="sxs-lookup"><span data-stu-id="bab14-248">Method length.</span></span>|  
+|<span data-ttu-id="bab14-249">MethodToken</span><span class="sxs-lookup"><span data-stu-id="bab14-249">MethodToken</span></span>|<span data-ttu-id="bab14-250">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="bab14-250">win:UInt32</span></span>|<span data-ttu-id="bab14-251">0 para métodos dinâmicos e auxiliares JIT.</span><span class="sxs-lookup"><span data-stu-id="bab14-251">0 for dynamic methods and JIT helpers.</span></span>|  
+|<span data-ttu-id="bab14-252">MethodFlags</span><span class="sxs-lookup"><span data-stu-id="bab14-252">MethodFlags</span></span>|<span data-ttu-id="bab14-253">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="bab14-253">win:UInt32</span></span>|<span data-ttu-id="bab14-254">0x1: método dinâmico.</span><span class="sxs-lookup"><span data-stu-id="bab14-254">0x1: Dynamic method.</span></span><br /><br /> <span data-ttu-id="bab14-255">0x2: método genérico.</span><span class="sxs-lookup"><span data-stu-id="bab14-255">0x2: Generic method.</span></span><br /><br /> <span data-ttu-id="bab14-256">0x4: método com compilação JIT (de outro modo, gerado pelo NGen.exe)</span><span class="sxs-lookup"><span data-stu-id="bab14-256">0x4: JIT-compiled method (otherwise, generated by NGen.exe)</span></span><br /><br /> <span data-ttu-id="bab14-257">0x8: método auxiliar.</span><span class="sxs-lookup"><span data-stu-id="bab14-257">0x8: Helper method.</span></span>|  
+|<span data-ttu-id="bab14-258">MethodNameSpace</span><span class="sxs-lookup"><span data-stu-id="bab14-258">MethodNameSpace</span></span>|<span data-ttu-id="bab14-259">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="bab14-259">win:UnicodeString</span></span>|<span data-ttu-id="bab14-260">O nome completo do namespace associado ao método.</span><span class="sxs-lookup"><span data-stu-id="bab14-260">Full namespace name associated with the method.</span></span>|  
+|<span data-ttu-id="bab14-261">MethodName</span><span class="sxs-lookup"><span data-stu-id="bab14-261">MethodName</span></span>|<span data-ttu-id="bab14-262">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="bab14-262">win:UnicodeString</span></span>|<span data-ttu-id="bab14-263">O nome de classe completo associado ao método.</span><span class="sxs-lookup"><span data-stu-id="bab14-263">Full class name associated with the method.</span></span>|  
+|<span data-ttu-id="bab14-264">MethodSignature</span><span class="sxs-lookup"><span data-stu-id="bab14-264">MethodSignature</span></span>|<span data-ttu-id="bab14-265">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="bab14-265">win:UnicodeString</span></span>|<span data-ttu-id="bab14-266">Assinatura do método (lista separada por vírgulas de nomes de tipo).</span><span class="sxs-lookup"><span data-stu-id="bab14-266">Signature of the method (comma-separated list of type names).</span></span>|  
+|<span data-ttu-id="bab14-267">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="bab14-267">ClrInstanceID</span></span>|<span data-ttu-id="bab14-268">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="bab14-268">win:UInt16</span></span>|<span data-ttu-id="bab14-269">ID exclusiva da instância do CLR ou do CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="bab14-269">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [Voltar ao início](#top)  
+ [<span data-ttu-id="bab14-270">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="bab14-270">Back to top</span></span>](#top)  
   
 <a name="methodjittingstarted_event"></a>   
-## <a name="methodjittingstarted-event"></a>Evento MethodJittingStarted  
- A tabela a seguir mostra a palavra-chave e o nível.  
+## <a name="methodjittingstarted-event"></a><span data-ttu-id="bab14-271">Evento MethodJittingStarted</span><span class="sxs-lookup"><span data-stu-id="bab14-271">MethodJittingStarted Event</span></span>  
+ <span data-ttu-id="bab14-272">A tabela a seguir mostra a palavra-chave e o nível.</span><span class="sxs-lookup"><span data-stu-id="bab14-272">The following table shows the keyword and level.</span></span>  
   
-|Palavra-chave para acionar o evento|Nível|  
+|<span data-ttu-id="bab14-273">Palavra-chave para acionar o evento</span><span class="sxs-lookup"><span data-stu-id="bab14-273">Keyword for raising the event</span></span>|<span data-ttu-id="bab14-274">Nível</span><span class="sxs-lookup"><span data-stu-id="bab14-274">Level</span></span>|  
 |-----------------------------------|-----------|  
-|Provedor de tempo de execução `JITKeyword` (0x10)|Detalhado (5)|  
-|Provedor de tempo de execução `NGenKeyword` (0x20)|Detalhado (5)|  
-|Provedor de encerramento `JitRundownKeyword` (0x10)|Detalhado (5)|  
-|Provedor de encerramento `NGENRundownKeyword` (0x20)|Detalhado (5)|  
+|<span data-ttu-id="bab14-275">Provedor de tempo de execução `JITKeyword` (0x10)</span><span class="sxs-lookup"><span data-stu-id="bab14-275">`JITKeyword` (0x10) runtime provider</span></span>|<span data-ttu-id="bab14-276">Detalhado (5)</span><span class="sxs-lookup"><span data-stu-id="bab14-276">Verbose (5)</span></span>|  
+|<span data-ttu-id="bab14-277">Provedor de tempo de execução `NGenKeyword` (0x20)</span><span class="sxs-lookup"><span data-stu-id="bab14-277">`NGenKeyword` (0x20) runtime provider</span></span>|<span data-ttu-id="bab14-278">Detalhado (5)</span><span class="sxs-lookup"><span data-stu-id="bab14-278">Verbose (5)</span></span>|  
+|<span data-ttu-id="bab14-279">Provedor de encerramento `JitRundownKeyword` (0x10)</span><span class="sxs-lookup"><span data-stu-id="bab14-279">`JitRundownKeyword` (0x10) rundown provider</span></span>|<span data-ttu-id="bab14-280">Detalhado (5)</span><span class="sxs-lookup"><span data-stu-id="bab14-280">Verbose (5)</span></span>|  
+|<span data-ttu-id="bab14-281">Provedor de encerramento `NGENRundownKeyword` (0x20)</span><span class="sxs-lookup"><span data-stu-id="bab14-281">`NGENRundownKeyword` (0x20) rundown provider</span></span>|<span data-ttu-id="bab14-282">Detalhado (5)</span><span class="sxs-lookup"><span data-stu-id="bab14-282">Verbose (5)</span></span>|  
   
- A tabela a seguir mostra as informações do evento.  
+ <span data-ttu-id="bab14-283">A tabela a seguir mostra as informações do evento.</span><span class="sxs-lookup"><span data-stu-id="bab14-283">The following table shows the event information.</span></span>  
   
-|Evento|ID do evento|Descrição|  
+|<span data-ttu-id="bab14-284">Evento</span><span class="sxs-lookup"><span data-stu-id="bab14-284">Event</span></span>|<span data-ttu-id="bab14-285">ID do evento</span><span class="sxs-lookup"><span data-stu-id="bab14-285">Event ID</span></span>|<span data-ttu-id="bab14-286">Descrição</span><span class="sxs-lookup"><span data-stu-id="bab14-286">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`MethodJittingStarted`|145|Gerado quando um método está sendo compilado por JIT.|  
+|`MethodJittingStarted`|<span data-ttu-id="bab14-287">145</span><span class="sxs-lookup"><span data-stu-id="bab14-287">145</span></span>|<span data-ttu-id="bab14-288">Gerado quando um método está sendo compilado por JIT.</span><span class="sxs-lookup"><span data-stu-id="bab14-288">Raised when a method is being JIT-compiled.</span></span>|  
   
- A tabela a seguir mostra os dados do evento.  
+ <span data-ttu-id="bab14-289">A tabela a seguir mostra os dados do evento.</span><span class="sxs-lookup"><span data-stu-id="bab14-289">The following table shows the event data.</span></span>  
   
-|Nome do campo|Tipo de dados|Descrição|  
+|<span data-ttu-id="bab14-290">Nome do campo</span><span class="sxs-lookup"><span data-stu-id="bab14-290">Field name</span></span>|<span data-ttu-id="bab14-291">Tipo de dados</span><span class="sxs-lookup"><span data-stu-id="bab14-291">Data type</span></span>|<span data-ttu-id="bab14-292">Descrição</span><span class="sxs-lookup"><span data-stu-id="bab14-292">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|MethodID|win:UInt64|Identificador exclusivo do método.|  
-|ModuleID|win:UInt64|Identificador do módulo ao qual esse método pertence.|  
-|MethodToken|win:UInt32|0 para métodos dinâmicos e auxiliares JIT.|  
-|MethodILSize|win:UInt32|O tamanho do MSIL (Microsoft Intermediate Language) para o método que está sendo compilado por JIT.|  
-|MethodNameSpace|win:UnicodeString|O nome de classe completo associado ao método.|  
-|MethodName|win:UnicodeString|O nome do método.|  
-|MethodSignature|win:UnicodeString|Assinatura do método (lista separada por vírgulas de nomes de tipo).|  
-|ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
+|<span data-ttu-id="bab14-293">MethodID</span><span class="sxs-lookup"><span data-stu-id="bab14-293">MethodID</span></span>|<span data-ttu-id="bab14-294">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="bab14-294">win:UInt64</span></span>|<span data-ttu-id="bab14-295">Identificador exclusivo do método.</span><span class="sxs-lookup"><span data-stu-id="bab14-295">Unique identifier of the method.</span></span>|  
+|<span data-ttu-id="bab14-296">ModuleID</span><span class="sxs-lookup"><span data-stu-id="bab14-296">ModuleID</span></span>|<span data-ttu-id="bab14-297">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="bab14-297">win:UInt64</span></span>|<span data-ttu-id="bab14-298">Identificador do módulo ao qual esse método pertence.</span><span class="sxs-lookup"><span data-stu-id="bab14-298">Identifier of the module to which this method belongs.</span></span>|  
+|<span data-ttu-id="bab14-299">MethodToken</span><span class="sxs-lookup"><span data-stu-id="bab14-299">MethodToken</span></span>|<span data-ttu-id="bab14-300">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="bab14-300">win:UInt32</span></span>|<span data-ttu-id="bab14-301">0 para métodos dinâmicos e auxiliares JIT.</span><span class="sxs-lookup"><span data-stu-id="bab14-301">0 for dynamic methods and JIT helpers.</span></span>|  
+|<span data-ttu-id="bab14-302">MethodILSize</span><span class="sxs-lookup"><span data-stu-id="bab14-302">MethodILSize</span></span>|<span data-ttu-id="bab14-303">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="bab14-303">win:UInt32</span></span>|<span data-ttu-id="bab14-304">O tamanho do MSIL (Microsoft Intermediate Language) para o método que está sendo compilado por JIT.</span><span class="sxs-lookup"><span data-stu-id="bab14-304">The size of the Microsoft intermediate language (MSIL) for the method that is being JIT-compiled.</span></span>|  
+|<span data-ttu-id="bab14-305">MethodNameSpace</span><span class="sxs-lookup"><span data-stu-id="bab14-305">MethodNameSpace</span></span>|<span data-ttu-id="bab14-306">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="bab14-306">win:UnicodeString</span></span>|<span data-ttu-id="bab14-307">O nome de classe completo associado ao método.</span><span class="sxs-lookup"><span data-stu-id="bab14-307">Full class name associated with the method.</span></span>|  
+|<span data-ttu-id="bab14-308">MethodName</span><span class="sxs-lookup"><span data-stu-id="bab14-308">MethodName</span></span>|<span data-ttu-id="bab14-309">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="bab14-309">win:UnicodeString</span></span>|<span data-ttu-id="bab14-310">O nome do método.</span><span class="sxs-lookup"><span data-stu-id="bab14-310">Name of the method.</span></span>|  
+|<span data-ttu-id="bab14-311">MethodSignature</span><span class="sxs-lookup"><span data-stu-id="bab14-311">MethodSignature</span></span>|<span data-ttu-id="bab14-312">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="bab14-312">win:UnicodeString</span></span>|<span data-ttu-id="bab14-313">Assinatura do método (lista separada por vírgulas de nomes de tipo).</span><span class="sxs-lookup"><span data-stu-id="bab14-313">Signature of the method (comma-separated list of type names).</span></span>|  
+|<span data-ttu-id="bab14-314">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="bab14-314">ClrInstanceID</span></span>|<span data-ttu-id="bab14-315">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="bab14-315">win:UInt16</span></span>|<span data-ttu-id="bab14-316">ID exclusiva da instância do CLR ou do CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="bab14-316">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-## <a name="see-also"></a>Consulte também  
- [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
-
+## <a name="see-also"></a><span data-ttu-id="bab14-317">Consulte também</span><span class="sxs-lookup"><span data-stu-id="bab14-317">See Also</span></span>  
+ [<span data-ttu-id="bab14-318">Eventos de CLR ETW</span><span class="sxs-lookup"><span data-stu-id="bab14-318">CLR ETW Events</span></span>](../../../docs/framework/performance/clr-etw-events.md)

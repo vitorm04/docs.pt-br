@@ -5,86 +5,83 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7eb50bcb-38d8-4afb-86aa-2573586697c2
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 92f070a919363e373cd898682c37ac7a199d2463
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="windows-identity-foundation"></a>Windows Identity Foundation
--   [Novidades no Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md)  
+# <a name="windows-identity-foundation"></a><span data-ttu-id="8a76b-102">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="8a76b-102">Windows Identity Foundation</span></span>
+-   [<span data-ttu-id="8a76b-103">Novidades no Windows Identity Foundation 4.5</span><span class="sxs-lookup"><span data-stu-id="8a76b-103">What's New in Windows Identity Foundation 4.5</span></span>](../../../docs/framework/security/whats-new-in-wif.md)  
   
--   [Visão geral do Windows Identity Foundation 4.5](../../../docs/framework/security/wif-overview.md)  
+-   [<span data-ttu-id="8a76b-104">Visão geral do Windows Identity Foundation 4.5</span><span class="sxs-lookup"><span data-stu-id="8a76b-104">Windows Identity Foundation 4.5 Overview</span></span>](../../../docs/framework/security/wif-overview.md)  
   
-    -   [Modelo de identidade baseado em declarações](../../../docs/framework/security/claims-based-identity-model.md)  
+    -   [<span data-ttu-id="8a76b-105">Modelo de identidade baseado em declarações</span><span class="sxs-lookup"><span data-stu-id="8a76b-105">Claims-Based Identity Model</span></span>](../../../docs/framework/security/claims-based-identity-model.md)  
   
-    -   [Autorização baseada em declarações usando o WIF](../../../docs/framework/security/claims-based-authorization-using-wif.md)  
+    -   [<span data-ttu-id="8a76b-106">Autorização baseada em declarações usando o WIF</span><span class="sxs-lookup"><span data-stu-id="8a76b-106">Claims Based Authorization Using WIF</span></span>](../../../docs/framework/security/claims-based-authorization-using-wif.md)  
   
-    -   [Modelo de programação de declarações do WIF](../../../docs/framework/security/wif-claims-programming-model.md)  
+    -   [<span data-ttu-id="8a76b-107">Modelo de programação de declarações do WIF</span><span class="sxs-lookup"><span data-stu-id="8a76b-107">WIF Claims Programming Model</span></span>](../../../docs/framework/security/wif-claims-programming-model.md)  
   
--   [Introdução ao WIF](../../../docs/framework/security/getting-started-with-wif.md)  
+-   [<span data-ttu-id="8a76b-108">Introdução ao WIF</span><span class="sxs-lookup"><span data-stu-id="8a76b-108">Getting Started With WIF</span></span>](../../../docs/framework/security/getting-started-with-wif.md)  
   
-    -   [Criando meu primeiro aplicativo Web ASP.NET com reconhecimento de declarações](../../../docs/framework/security/building-my-first-claims-aware-aspnet-web-app.md)  
+    -   [<span data-ttu-id="8a76b-109">Criando meu primeiro aplicativo Web ASP.NET com reconhecimento de declarações</span><span class="sxs-lookup"><span data-stu-id="8a76b-109">Building My First Claims-Aware ASP.NET Web Application</span></span>](../../../docs/framework/security/building-my-first-claims-aware-aspnet-web-app.md)  
   
-    -   [Criando meu primeiro serviço WCF com reconhecimento de declarações](../../../docs/framework/security/building-my-first-claims-aware-wcf-service.md)  
+    -   [<span data-ttu-id="8a76b-110">Criando meu primeiro serviço WCF com reconhecimento de declarações</span><span class="sxs-lookup"><span data-stu-id="8a76b-110">Building My First Claims-Aware WCF Service</span></span>](../../../docs/framework/security/building-my-first-claims-aware-wcf-service.md)  
   
--   [Recursos do WIF](../../../docs/framework/security/wif-features.md)  
+-   [<span data-ttu-id="8a76b-111">Recursos do WIF</span><span class="sxs-lookup"><span data-stu-id="8a76b-111">WIF Features</span></span>](../../../docs/framework/security/wif-features.md)  
   
-    -   [Ferramenta de identidade e acesso para o Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md)  
+    -   [<span data-ttu-id="8a76b-112">Ferramenta de identidade e acesso para o Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="8a76b-112">Identity and Access Tool for Visual Studio 2012</span></span>](../../../docs/framework/security/identity-and-access-tool-for-vs.md)  
   
-    -   [Gerenciamento de sessões WIF](../../../docs/framework/security/wif-session-management.md)  
+    -   [<span data-ttu-id="8a76b-113">Gerenciamento de sessões WIF</span><span class="sxs-lookup"><span data-stu-id="8a76b-113">WIF Session Management</span></span>](../../../docs/framework/security/wif-session-management.md)  
   
-    -   [WIF e Web Farms](../../../docs/framework/security/wif-and-web-farms.md)  
+    -   [<span data-ttu-id="8a76b-114">WIF e Web Farms</span><span class="sxs-lookup"><span data-stu-id="8a76b-114">WIF and Web Farms</span></span>](../../../docs/framework/security/wif-and-web-farms.md)  
   
-    -   [Visão geral do módulo de autenticação WSFederation](../../../docs/framework/security/wsfederation-authentication-module-overview.md)  
+    -   [<span data-ttu-id="8a76b-115">Visão geral do módulo de autenticação WSFederation</span><span class="sxs-lookup"><span data-stu-id="8a76b-115">WSFederation Authentication Module Overview</span></span>](../../../docs/framework/security/wsfederation-authentication-module-overview.md)  
   
-    -   [WSTrustChannelFactory e WSTrustChannel](../../../docs/framework/security/wstrustchannelfactory-and-wstrustchannel.md)  
+    -   [<span data-ttu-id="8a76b-116">WSTrustChannelFactory e WSTrustChannel</span><span class="sxs-lookup"><span data-stu-id="8a76b-116">WSTrustChannelFactory and WSTrustChannel</span></span>](../../../docs/framework/security/wstrustchannelfactory-and-wstrustchannel.md)  
   
--   [Índice de instruções do WIF](../../../docs/framework/security/wif-how-tos-index.md)  
+-   [<span data-ttu-id="8a76b-117">Índice de instruções do WIF</span><span class="sxs-lookup"><span data-stu-id="8a76b-117">WIF How-To's Index</span></span>](../../../docs/framework/security/wif-how-tos-index.md)  
   
-    -   [Como criar um aplicativo Web ASP.NET MVC com reconhecimento de declarações usando WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+    -   [<span data-ttu-id="8a76b-118">Como criar um aplicativo Web ASP.NET MVC com reconhecimento de declarações usando WIF</span><span class="sxs-lookup"><span data-stu-id="8a76b-118">How To: Build Claims-Aware ASP.NET MVC Web Application Using WIF</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
-    -   [Como criar um aplicativo Web Forms do ASP.NET com reconhecimento de declarações usando WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+    -   [<span data-ttu-id="8a76b-119">Como criar um aplicativo Web Forms do ASP.NET com reconhecimento de declarações usando WIF</span><span class="sxs-lookup"><span data-stu-id="8a76b-119">How To: Build Claims-Aware ASP.NET Web Forms Application Using WIF</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
-    -   [Como criar um aplicativo ASP.NET com reconhecimento de declarações usando a autenticação baseada em formulários](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+    -   [<span data-ttu-id="8a76b-120">Como criar um aplicativo ASP.NET com reconhecimento de declarações usando a autenticação baseada em formulários</span><span class="sxs-lookup"><span data-stu-id="8a76b-120">How To: Build Claims-Aware ASP.NET Application Using Forms-Based Authentication</span></span>](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
   
-    -   [Como criar um aplicativo ASP.NET com reconhecimento de declarações usando a Autenticação do Windows](../../../docs/framework/security/how-to-build-claims-aware-aspnet-app-using-windows-authentication.md)  
+    -   [<span data-ttu-id="8a76b-121">Como criar um aplicativo ASP.NET com reconhecimento de declarações usando a Autenticação do Windows</span><span class="sxs-lookup"><span data-stu-id="8a76b-121">How To: Build Claims-Aware ASP.NET Application Using Windows Authentication</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-app-using-windows-authentication.md)  
   
-    -   [Como depurar serviços e aplicativos com reconhecimento de declarações usando o rastreamento do WIF](../../../docs/framework/security/how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md)  
+    -   [<span data-ttu-id="8a76b-122">Como depurar serviços e aplicativos com reconhecimento de declarações usando o rastreamento do WIF</span><span class="sxs-lookup"><span data-stu-id="8a76b-122">How To: Debug Claims-Aware Applications And Services Using WIF Tracing</span></span>](../../../docs/framework/security/how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md)  
   
-    -   [Como exibir o status de conexão usando o WIF](../../../docs/framework/security/how-to-display-signed-in-status-using-wif.md)  
+    -   [<span data-ttu-id="8a76b-123">Como exibir o status de conexão usando o WIF</span><span class="sxs-lookup"><span data-stu-id="8a76b-123">How To: Display Signed In Status Using WIF</span></span>](../../../docs/framework/security/how-to-display-signed-in-status-using-wif.md)  
   
-    -   [Como habilitar a detecção de reprodução de tokens](../../../docs/framework/security/how-to-enable-token-replay-detection.md)  
+    -   [<span data-ttu-id="8a76b-124">Como habilitar a detecção de reprodução de tokens</span><span class="sxs-lookup"><span data-stu-id="8a76b-124">How To: Enable Token Replay Detection</span></span>](../../../docs/framework/security/how-to-enable-token-replay-detection.md)  
   
-    -   [Como habilitar o rastreamento do WIF](../../../docs/framework/security/how-to-enable-wif-tracing.md)  
+    -   [<span data-ttu-id="8a76b-125">Como habilitar o rastreamento do WIF</span><span class="sxs-lookup"><span data-stu-id="8a76b-125">How To: Enable WIF Tracing</span></span>](../../../docs/framework/security/how-to-enable-wif-tracing.md)  
   
-    -   [Como habilitar o WIF para um aplicativo de serviço Web WCF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)  
+    -   [<span data-ttu-id="8a76b-126">Como habilitar o WIF para um aplicativo de serviço Web WCF</span><span class="sxs-lookup"><span data-stu-id="8a76b-126">How To: Enable WIF for a WCF Web Service Application</span></span>](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)  
   
-    -   [Como transformar declarações de entrada](../../../docs/framework/security/how-to-transform-incoming-claims.md)  
+    -   [<span data-ttu-id="8a76b-127">Como transformar declarações de entrada</span><span class="sxs-lookup"><span data-stu-id="8a76b-127">How To: Transform Incoming Claims</span></span>](../../../docs/framework/security/how-to-transform-incoming-claims.md)  
   
--   [Diretrizes do WIF](../../../docs/framework/security/wif-guidelines.md)  
+-   [<span data-ttu-id="8a76b-128">Diretrizes do WIF</span><span class="sxs-lookup"><span data-stu-id="8a76b-128">WIF Guidelines</span></span>](../../../docs/framework/security/wif-guidelines.md)  
   
-    -   [Diretrizes para migrar um aplicativo criado usando o WIF 3.5 para o WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  
+    -   [<span data-ttu-id="8a76b-129">Diretrizes para migrar um aplicativo criado usando o WIF 3.5 para o WIF 4.5</span><span class="sxs-lookup"><span data-stu-id="8a76b-129">Guidelines for Migrating an Application Built Using WIF 3.5 to WIF 4.5</span></span>](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  
   
-    -   [Mapeamento de namespace entre o WIF 3.5 e o WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
+    -   [<span data-ttu-id="8a76b-130">Mapeamento de namespace entre o WIF 3.5 e o WIF 4.5</span><span class="sxs-lookup"><span data-stu-id="8a76b-130">Namespace Mapping between WIF 3.5 and WIF 4.5</span></span>](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
   
--   [Índice de exemplo de código do WIF](../../../docs/framework/security/wif-code-sample-index.md)  
+-   [<span data-ttu-id="8a76b-131">Índice de exemplo de código do WIF</span><span class="sxs-lookup"><span data-stu-id="8a76b-131">WIF Code Sample Index</span></span>](../../../docs/framework/security/wif-code-sample-index.md)  
   
--   [Extensões WIF](../../../docs/framework/security/wif-extensions.md)  
+-   [<span data-ttu-id="8a76b-132">Extensões WIF</span><span class="sxs-lookup"><span data-stu-id="8a76b-132">WIF Extensions</span></span>](../../../docs/framework/security/wif-extensions.md)  
   
--   [Referência de API do WIF](../../../docs/framework/security/wif-api-reference.md)  
+-   [<span data-ttu-id="8a76b-133">Referência de API do WIF</span><span class="sxs-lookup"><span data-stu-id="8a76b-133">WIF API Reference</span></span>](../../../docs/framework/security/wif-api-reference.md)  
   
--   [Referência de configuração do WIF](../../../docs/framework/security/wif-configuration-reference.md)  
+-   [<span data-ttu-id="8a76b-134">Referência de configuração do WIF</span><span class="sxs-lookup"><span data-stu-id="8a76b-134">WIF Configuration Reference</span></span>](../../../docs/framework/security/wif-configuration-reference.md)  
   
-    -   [Convenções do esquema de configuração do WIF](../../../docs/framework/security/wif-configuration-schema-conventions.md)
-
+    -   [<span data-ttu-id="8a76b-135">Convenções do esquema de configuração do WIF</span><span class="sxs-lookup"><span data-stu-id="8a76b-135">WIF Configuration Schema Conventions</span></span>](../../../docs/framework/security/wif-configuration-schema-conventions.md)
