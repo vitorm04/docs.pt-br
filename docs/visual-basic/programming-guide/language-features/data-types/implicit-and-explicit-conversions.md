@@ -1,59 +1,42 @@
 ---
-title: "Conversões implícitas e explícitas (Visual Basic) | Documentos do Microsoft"
+title: "Conversões implícitas e explícitas (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- conversions, type
+- conversions [Visual Basic], type
 - variables [Visual Basic], changing data type
 - casting
-- conversions, data type
-- type conversion, implicit conversions
-- CType function, conversions
+- conversions [Visual Basic], data type
+- type conversion [Visual Basic], implicit conversions
+- CType function [Visual Basic], conversions
 - casting, data types
-- data type conversion, explicit
-- type conversion, explicit conversions
+- data type conversion [Visual Basic], explicit
+- type conversion [Visual Basic], explicit conversions
 - data types [Visual Basic], casting
-- conversions, implicit
-- explicit data type conversions
-- conversions
-- changing data types
-- conversions, explicit
-- data type conversion, implicit
-- implicit data type conversions
+- conversions [Visual Basic], implicit
+- explicit data type conversions [Visual Basic]
+- conversions [Visual Basic]
+- changing data types [Visual Basic]
+- conversions [Visual Basic], explicit
+- data type conversion [Visual Basic], implicit
+- implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 24c434df4be480c290b3e4e36bd9f294d12b99ef
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 6e9dd698e1cc84464cd12d33767feec960c511ca
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>Conversões implícitas e explícitas (Visual Basic)
-Um *conversão implícita* não requer nenhuma sintaxe especial no código-fonte. No exemplo a seguir, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] implicitamente converte o valor de `k` para um valor de ponto flutuante de precisão única antes de atribuí-lo para `q`.  
+Um *conversão implícita* não requer nenhuma sintaxe especial no código-fonte. No exemplo a seguir, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] implicitamente converte o valor de `k` para um valor de ponto flutuante de precisão única antes de atribuí-lo para `q`.  
   
 ```  
 Dim k As Integer  
@@ -63,7 +46,7 @@ k = 432
 q = k  
 ```  
   
- Um *conversão explícita* usa uma palavra-chave de conversão de tipo. [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]fornece várias palavras-chave tais, que força uma expressão entre parênteses ao tipo de dados desejado. Essas palavras-chave atuam como funções, mas o compilador gera o código embutido, portanto execução é ligeiramente mais rápida do que com uma chamada de função.  
+ Um *conversão explícita* usa uma palavra-chave de conversão de tipo. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]fornece várias palavras-chave tais, que força uma expressão entre parênteses ao tipo de dados desejado. Essas palavras-chave atuam como funções, mas o compilador gera o código embutido, portanto execução é ligeiramente mais rapidamente do que uma chamada de função.  
   
  Na seguinte extensão do exemplo anterior, o `CInt` palavra-chave converte o valor de `q` para um número inteiro antes de atribuí-lo para `k`.  
   
@@ -92,15 +75,15 @@ k = CInt(q)
 |`CShort`|[Tipo de Dados Short](../../../../visual-basic/language-reference/data-types/short-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `String`,`Object`|  
 |`CSng`|[Tipo de Dados Simples](../../../../visual-basic/language-reference/data-types/single-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `String`,`Object`|  
 |`CStr`|[Tipo de Dados String](../../../../visual-basic/language-reference/data-types/string-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `Char`, `Char` matriz, `Date`,`Object`|  
-|`CType`|Tipo especificado após a vírgula (`,`)|Ao converter para um *tipo de dados elementar* (incluindo uma matriz de um tipo elementar), os mesmos tipos como permitido para a palavra-chave conversão correspondente<br /><br /> Ao converter para um *tipo de dados composto*, as interfaces que ele implementa e as classes do qual ele herda<br /><br /> Ao converter a uma classe ou estrutura na qual você tenha sobrecarregado `CType`, classe ou estrutura|  
+|`CType`|Tipo especificado após a vírgula (`,`)|Ao converter para um *tipo de dados elementares* (incluindo uma matriz de um tipo elementar), os mesmos tipos como permitido para a palavra-chave conversão correspondente<br /><br /> Ao converter para um *tipo de dados composto*, ele implementa as interfaces e as classes da qual ela herda<br /><br /> Ao converter em uma classe ou estrutura na qual você tenha sobrecarregado `CType`, classe ou estrutura|  
 |`CUInt`|[Tipo de Dados UInteger](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `String`,`Object`|  
 |`CULng`|[Tipo de Dados ULong](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `String`,`Object`|  
 |`CUShort`|[Tipo de Dados UShort](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `String`,`Object`|  
   
 ## <a name="the-ctype-function"></a>A função CType  
- O [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md) opera em dois argumentos. A primeira é a expressão a ser convertida e o segundo é a classe de objeto ou tipo de dados do destino. Observe que o primeiro argumento deve ser uma expressão, não um tipo.  
+ O [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md) opera em dois argumentos. A primeira é a expressão a ser convertida e a segunda é a classe de objeto ou tipo de dados do destino. Observe que o primeiro argumento deve ser uma expressão, não é um tipo.  
   
- `CType`é um *função embutida*, que significa que o código compilado faz a conversão, com frequência sem gerar uma função chamada. Isso melhora o desempenho.  
+ `CType`é um *função embutida*, o que significa que o código compilado faz a conversão, frequentemente sem gerar uma função chamada. Isso melhora o desempenho.  
   
  Para obter uma comparação de `CType` com as outras keywords de conversão de tipo, consulte [operador DirectCast](../../../../visual-basic/language-reference/operators/directcast-operator.md) e [operador TryCast](../../../../visual-basic/language-reference/operators/trycast-operator.md).  
   
@@ -114,7 +97,7 @@ f = CType(w, Label)
 ```  
   
 ### <a name="composite-types"></a>Tipos compostos  
- Você pode usar `CType` para converter valores em tipos de dados compostos bem como para tipos elementares. Você também pode usá-lo para forçar uma classe de objeto para o tipo de uma das suas interfaces, como no exemplo a seguir.  
+ Você pode usar `CType` para converter valores em tipos de dados compostos bem como para tipos elementares. Você também pode usar isso para forçar uma classe de objeto para o tipo de uma das suas interfaces, como no exemplo a seguir.  
   
 ```  
 ' Assume class cZone implements interface iZone.  
@@ -145,20 +128,20 @@ End If
  Você pode definir `CType` em uma classe ou estrutura que você definiu. Isso permite que você converter valores de e para o tipo de sua classe ou estrutura. Para obter mais informações e um exemplo, consulte [como: definir um operador de conversão](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
 > [!NOTE]
->  Valores usados com uma palavra-chave de conversão devem ser válidos para o tipo de dados de destino, ou ocorrerá um erro. Por exemplo, se você tentar converter uma `Long` para um `Integer`, o valor da `Long` deve estar dentro do intervalo válido para o `Integer` tipo de dados.  
+>  Valores usados com uma palavra-chave de conversão devem ser válidos para o tipo de dados de destino, ou ocorrerá um erro. Por exemplo, se você tentar converter um `Long` para um `Integer`, o valor da `Long` deve estar dentro do intervalo válido para o `Integer` tipo de dados.  
   
 > [!CAUTION]
->  Especificando `CType` para converter de um tipo de classe para outra falha no tempo de execução se o tipo de origem não é derivado do tipo de destino. Uma falha gera uma <xref:System.InvalidCastException>exceção.</xref:System.InvalidCastException>  
+>  Especificando `CType` para converter de um tipo de classe para outra falha no tempo de execução se o tipo de origem não é derivado do tipo de destino. Uma falha gera um <xref:System.InvalidCastException> exceção.  
   
- No entanto, se um dos tipos é uma estrutura ou classe que você definiu, e se você tiver definido `CType` em que classe ou estrutura, uma conversão pode terá êxito se ele satisfaz os requisitos de seu `CType`. Consulte [como: definir um operador de conversão](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
+ No entanto, se um dos tipos é uma estrutura ou classe que você definiu, e se você tiver definido `CType` nessa classe ou estrutura, uma conversão pode terá êxito se ele satisfaz os requisitos de sua `CType`. Consulte [como: definir um operador de conversão](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
  Executar uma conversão explícita é também conhecido como *conversão* uma expressão a uma classe de objeto ou tipo de dados especificados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Conversões de tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [Conversões entre cadeias de caracteres e outros tipos](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)   
- [Como: converter um objeto em outro tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)   
- [Estruturas](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Tipos de dados](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Funções de conversão de tipo](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
+ [Conversões de tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [Conversões entre Cadeias de Caracteres e Outros Tipos](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
+ [Como: converter um objeto em outro tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ [Estruturas](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [Tipos de Dados](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Funções de Conversão do Tipo](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Solução de problemas de Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

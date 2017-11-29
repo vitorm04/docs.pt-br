@@ -1,51 +1,34 @@
 ---
-title: Estrutura de um programa Visual Basic | Documentos do Microsoft
+title: Estrutura de um programa Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- conditional compilation, Visual Basic
-- program structure, Visual Basic
-- procedures, structure
+- conditional compilation [Visual Basic], Visual Basic
+- program structure [Visual Basic], Visual Basic
+- procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 64aab045538461d86946c870fa428bf8ad4ec15e
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 136be5e2eab3ed0226e0ca471ee1d84cdc7a52d1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Estrutura de um programa Visual Basic
-Um [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] programa for criado partir de blocos de construção padrão. A *solução* consiste em um ou mais projetos. A *projeto* por sua vez, pode conter um ou mais assemblies. Cada *assembly* são compiladas a partir de um ou mais arquivos de origem. A *arquivo de origem* fornece a definição e implementação de classes, estruturas, módulos e interfaces, que, por fim, contenham todo o seu código.  
+Um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programa é criado de blocos de construção padrão. Um *solução* consiste em um ou mais projetos. Um *projeto* por sua vez, pode conter um ou mais assemblies. Cada *assembly* é compilada a partir de um ou mais arquivos de origem. Um *arquivo de origem* fornece a definição e a implementação de classes, estruturas, módulos e interfaces, que contêm, por fim, todo o seu código.  
   
- Para obter mais informações sobre esses blocos de construção de uma [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] de programa, consulte [soluções e projetos](https://docs.microsoft.com/visualstudio/ide/solutions-and-projects-in-visual-studio) e [Assemblies e o Cache de Assembly Global](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).  
+ Para obter mais informações sobre esses blocos de construção de uma [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] de programa, consulte [soluções e projetos](/visualstudio/ide/solutions-and-projects-in-visual-studio) e [Assemblies e Cache de Assembly Global](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).  
   
 ## <a name="file-level-programming-elements"></a>Elementos de programação de nível de arquivo  
- Quando você iniciar um projeto ou arquivo e abra o editor de código, você verá algum código já no local e na ordem correta. Qualquer código que você escreve deve seguir a sequência a seguir:  
+ Quando você iniciar um projeto ou arquivo e abra o editor de código, você verá algum código já em vigor e na ordem correta. Qualquer código que você escreve deve seguir a sequência a seguir:  
   
 1.  `Option`instruções  
   
@@ -58,19 +41,19 @@ Um [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vb
  Um programa também pode conter instruções de compilação condicional. Você pode intercalar no arquivo de origem entre as instruções da sequência anterior.  
   
 ### <a name="option-statements"></a>Instruções de opção  
- `Option`instruções estabelecerem regras básicas para código subsequente, ajudando a evitar erros de sintaxe e lógica. O [instrução Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md) garante que todas as variáveis são declaradas e escritas corretamente, o que reduz o tempo de depuração. O [instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) ajuda a minimizar a perda de dados e erros de lógica que pode ocorrer ao trabalhar entre variáveis de diferentes tipos de dados. O [Option Compare Statement](../../../visual-basic/language-reference/statements/option-compare-statement.md) Especifica as cadeias de caracteres de maneira são comparadas entre si, com base nas suas `Binary` ou `Text` valores.  
+ `Option`instruções estabelecem regras básicas para código subsequente, ajudando a evitar erros de sintaxe e lógica. O [instrução Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md) garante que todas as variáveis são declaradas e escritas corretamente, o que reduz o tempo de depuração. O [instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) ajuda a minimizar a perda de dados e erros de lógica que pode ocorrer quando você trabalha entre variáveis de tipos de dados diferentes. O [Option Compare Statement](../../../visual-basic/language-reference/statements/option-compare-statement.md) Especifica as cadeias de caracteres de forma são comparadas entre si, com base nas suas `Binary` ou `Text` valores.  
   
 ### <a name="imports-statements"></a>Instruções Imports  
- Você pode incluir um [instrução Imports (tipo e Namespace .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para importar os nomes definidos fora do projeto. Um `Imports` instrução permite que seu código fazer referência a classes e outros tipos definidos no namespace importado, sem ter que qualificá-los. Você pode usar tantos `Imports` instruções conforme apropriado. Para obter mais informações, consulte [referências e a instrução Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md).  
+ Você pode incluir um [instrução Imports (tipo e Namespace .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para importar os nomes definidos fora do projeto. Um `Imports` instrução permite que seu código para se referir a classes e outros tipos definidos no namespace importado, sem precisar qualificá-los. Você pode usar como muitos `Imports` instruções conforme apropriado. Para obter mais informações, consulte [referências e a instrução Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md).  
   
 ### <a name="namespace-statements"></a>Declarações de Namespace  
  Namespaces ajuda você a organizar e classificar os elementos de programação para facilidade de agrupamento e acessar. Você usa o [declaração de Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md) para classificar as instruções a seguir em um namespace específico. Para obter mais informações, consulte [Namespaces no Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
   
 ### <a name="conditional-compilation-statements"></a>Instruções de compilação condicional  
- Instruções de compilação condicional podem aparecer em quase qualquer lugar em seu arquivo de origem. Elas causam partes do seu código para serem incluídos ou excluídos no tempo de compilação, dependendo de determinadas condições. Você também pode usá-los para depurar seu aplicativo, como o código condicional é executado no modo somente de depuração. Para obter mais informações, consulte [compilação condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md).  
+ Instruções de compilação condicional podem aparecer em praticamente qualquer lugar no seu arquivo de origem. Eles causar partes do seu código para serem incluídos ou excluídos em tempo de compilação, dependendo de determinadas condições. Você também pode usá-los para depurar seu aplicativo, como código condicional é executado no modo somente de depuração. Para obter mais informações, consulte [compilação condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md).  
   
 ## <a name="namespace-level-programming-elements"></a>Elementos de programação de nível de Namespace  
- Classes, estruturas e módulos contêm todo o código no arquivo de origem. Eles são *nível de namespace* elementos, que podem aparecer dentro de um namespace ou no nível do arquivo de origem. Elas contêm as declarações de todos os outros elementos de programação. Interfaces, que definem assinaturas de elemento, mas não fornecem nenhuma implementação, também aparecem no nível de módulo. Para obter mais informações sobre os elementos de nível de módulo, consulte o seguinte:  
+ Classes, estruturas e módulos contêm todo o código no arquivo de origem. Eles são *nível de namespace* elementos, que podem aparecer dentro de um namespace ou no nível do arquivo de origem. Eles mantêm as declarações de todos os outros elementos de programação. As interfaces, que definem assinaturas de elemento, mas não fornecem nenhuma implementação, também aparecem no nível de módulo. Para obter mais informações sobre os elementos de nível de módulo, consulte o seguinte:  
   
 -   [Instrução Class](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -100,12 +83,12 @@ Um [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vb
  Elementos de dados no nível de módulo são variáveis, constantes, enumerações e delegados.  
   
 ## <a name="procedure-level-programming-elements"></a>Elementos de programação de nível de procedimento  
- A maior parte do conteúdo do *nível de procedimento* elementos são instruções executáveis, que constituem o código de tempo de execução do programa. Todos os códigos executáveis devem estar em algum procedimento (`Function`, `Sub`, `Operator`, `Get`, `Set`, `AddHandler`, `RemoveHandler`, `RaiseEvent`). Para obter mais informações, consulte [instruções](../../../visual-basic/programming-guide/language-features/statements.md).  
+ A maior parte do conteúdo de *nível de procedimento* elementos são instruções executáveis, que constituem o código de tempo de execução do programa. Todo o código executável deve estar em algum procedimento (`Function`, `Sub`, `Operator`, `Get`, `Set`, `AddHandler`, `RemoveHandler`, `RaiseEvent`). Para obter mais informações, consulte [Instruções](../../../visual-basic/programming-guide/language-features/statements.md).  
   
  Elementos de dados no nível de procedimento são limitados a constantes e variáveis locais.  
   
-## <a name="the-main-procedure"></a>Procedimento principal  
- O `Main` procedimento é o primeiro código ao seu aplicativo foi carregado. `Main`serve como ponto de partida e controle geral para seu aplicativo. Existem quatro variedades de `Main`:  
+## <a name="the-main-procedure"></a>O procedimento principal  
+ O `Main` procedimento é o primeiro código ao seu aplicativo tenha sido carregado. `Main`serve como o ponto de partida e controle geral para seu aplicativo. Existem quatro variedades de `Main`:  
   
 -   `Sub Main()`  
   
@@ -118,6 +101,6 @@ Um [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vb
  A variedade mais comum desse procedimento é `Sub Main()`. Para obter mais informações, consulte [procedimento principal no Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Procedimento principal no Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)   
- [Convenções de nomenclatura do Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)   
+ [Procedimento principal no Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)  
+ [Convenções de nomenclatura do Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)  
  [Limitações do Visual Basic](../../../visual-basic/programming-guide/program-structure/limitations.md)

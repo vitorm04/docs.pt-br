@@ -1,0 +1,72 @@
+---
+title: Maximizar desempenho 3D do WPF
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: 3-D graphics [WPF]
+ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 26df55c9658721eb907db5837ac467a5899e84eb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
+---
+# <a name="maximize-wpf-3d-performance"></a>Maximizar desempenho 3D do WPF
+Ao usar o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] para compilar controles 3D e incluir cenas 3D em seus aplicativos, é importante considerar a otimização de desempenho. Este tópico fornece uma lista de classes 3D e propriedades que têm implicações de desempenho para o seu aplicativo, juntamente com recomendações para otimizar o desempenho ao usá-las.  
+  
+ Este tópico pressupõe um conhecimento avançado em recursos 3D [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. As sugestões neste documento se aplicam à "camada de renderização 2" – que pode ser definida como um hardware que dá suporte à versão 2.0 do sombreador de pixel e à versão 2.0 do sombreador de vértice. Para mais detalhes, consulte [Camadas de renderização de gráficos](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
+  
+## <a name="performance-impact-high"></a>Impacto de desempenho: alto  
+  
+|Propriedade|Recomendação|  
+|-|-|  
+|<xref:System.Windows.Media.Brush>|Velocidade do pincel (mais rápida para mais lenta):<br /><br /> <xref:System.Windows.Media.SolidColorBrush><br /><br /> <xref:System.Windows.Media.LinearGradientBrush><br /><br /> <xref:System.Windows.Media.ImageBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush>(em cache)<br /><br /> <xref:System.Windows.Media.VisualBrush>(em cache)<br /><br /> <xref:System.Windows.Media.RadialGradientBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush>(sem cache)<br /><br /> <xref:System.Windows.Media.VisualBrush>(sem cache)|  
+|<xref:System.Windows.UIElement.ClipToBoundsProperty>|Definir `Viewport3D.ClipToBounds` como false sempre que você não precisa ter [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] explicitamente corte o conteúdo de um <xref:System.Windows.Controls.Viewport3D> retângulo do Viewport3D. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]o recorte com antialiasing pode ser muito lento, e `ClipToBounds` é ativado (lento) por padrão em <xref:System.Windows.Controls.Viewport3D>.|  
+|<xref:System.Windows.UIElement.IsHitTestVisible%2A>|Definir `Viewport3D.IsHitTestVisible` como false sempre que você não precisa [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] considere o conteúdo de um <xref:System.Windows.Controls.Viewport3D> quando o mouse executando testes de clique.  O conteúdo em 3D do teste de clique é feito em software e pode ser lento com grandes malhas. <xref:System.Windows.UIElement.IsHitTestVisible%2A>ativado (lento) por padrão no <xref:System.Windows.Controls.Viewport3D>.|  
+|<xref:System.Windows.Media.Media3D.GeometryModel3D>|Crie modelos diferentes somente quando eles exigirem materiais ou transformações diferentes.  Caso contrário, tente agregar muitas <xref:System.Windows.Media.Media3D.GeometryModel3D> instâncias com os mesmos materiais e transformações em algumas maior <xref:System.Windows.Media.Media3D.GeometryModel3D> e <xref:System.Windows.Media.Media3D.MeshGeometry3D> instâncias.|  
+|<xref:System.Windows.Media.Media3D.MeshGeometry3D>|A animação de malha (que altera os vértices individuais de uma malha por quadro) não é sempre eficiente no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  Para minimizar o impacto no desempenho de notificações de alteração quando cada vértice é modificado, desanexe a malha da árvore visual antes de executar a modificação por vértice.  Quando a malha tiver sido modificada, reanexe-a à árvore visual.  Além disso, tente minimizar o tamanho das malhas que serão animadas dessa maneira.|  
+|Suavização 3D|Para aumentar a velocidade de processamento, desabilitar multi-amostras em um <xref:System.Windows.Controls.Viewport3D> , definindo a propriedade anexada <xref:System.Windows.Media.RenderOptions.EdgeMode%2A> para `Aliased`.  Por padrão, a suavização 3D é desabilitada em [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] e habilitada em [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] com quatro amostras por pixel.|  
+|Texto|Live texto em uma cena 3D (live porque ele está em um <xref:System.Windows.Media.DrawingBrush> ou <xref:System.Windows.Media.VisualBrush>) pode ser lenta. Tente usar imagens do texto em vez disso (via <xref:System.Windows.Media.Imaging.RenderTargetBitmap>), a menos que o texto será alterado.|  
+|<xref:System.Windows.Media.TileBrush>|Se você deve usar um <xref:System.Windows.Media.VisualBrush> ou um <xref:System.Windows.Media.DrawingBrush> em uma cena 3D pois o conteúdo do pincel não é estático, tente fazer cache do pincel (Configurando a propriedade anexada <xref:System.Windows.Media.RenderOptions.CachingHint%2A> para `Cache`).  Definir limites de invalidação de escala mínima e máxima (com as propriedades anexadas <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum%2A> e <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A>) para que os pincéis armazenados em cache não sejam regenerados com muita frequência, mantendo ainda o nível desejado de qualidade.  Por padrão, <xref:System.Windows.Media.DrawingBrush> e <xref:System.Windows.Media.VisualBrush> não estão em cache, que significa que sempre que algo pintado com o pincel tem que ser re-renderizado, todo o conteúdo do pincel deve primeiro ser re-renderizado para uma superfície intermediária.|  
+|<xref:System.Windows.Media.Effects.BitmapEffect>|<xref:System.Windows.Media.Effects.BitmapEffect>força todo o conteúdo afetado a ser renderizado sem aceleração de hardware.  Para obter melhor desempenho, não use <xref:System.Windows.Media.Effects.BitmapEffect>.|  
+  
+## <a name="performance-impact-medium"></a>Impacto de desempenho: médio  
+  
+|Propriedade|Recomendação|  
+|-|-|  
+|<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Quando uma malha é definida como triângulos compartilham vértices adjacentes e os vértices têm a mesma posição, normal e as coordenadas de textura, defina cada vértice compartilhado somente uma vez e, em seguida, defina seus triângulos por índice com <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>.|  
+|<xref:System.Windows.Media.ImageBrush>|Tente minimizar os tamanhos de textura, quando você tiver controle explícito sobre o tamanho (quando você estiver usando um <xref:System.Windows.Media.Imaging.RenderTargetBitmap> e/ou um <xref:System.Windows.Media.ImageBrush>).  Observe que texturas de resolução inferior podem diminuir a qualidade visual, então tente determinar o equilíbrio correto entre desempenho e qualidade.|  
+|Opacidade|Durante a renderização 3D transparente conteúdo (como reflexos), use as propriedades de opacidade em pincéis ou materiais (via <xref:System.Windows.Media.Brush.Opacity%2A> ou <xref:System.Windows.Media.Media3D.DiffuseMaterial.Color%2A>) em vez de criar um separado transparente <xref:System.Windows.Controls.Viewport3D> definindo `Viewport3D.Opacity` para um valor menor que 1.|  
+|<xref:System.Windows.Controls.Viewport3D>|Minimize o número de <xref:System.Windows.Controls.Viewport3D> objetos que você está usando em uma cena.  Coloque vários modelos 3D no mesmo Viewport3D em vez de criar instâncias separadas do Viewport3D para cada modelo.|  
+|<xref:System.Windows.Freezable>|Geralmente é útil reutilizar <xref:System.Windows.Media.Media3D.MeshGeometry3D>, <xref:System.Windows.Media.Media3D.GeometryModel3D>, pincéis e materiais.  Todos podem ter vários pais atribuídos já que são derivados de `Freezable`.|  
+|<xref:System.Windows.Freezable>|Chamar o <xref:System.Windows.Freezable.Freeze%2A> método congeláveis quando suas propriedades permanecerão inalteradas no seu aplicativo.  O congelamento pode diminuir o conjunto de trabalho e aumentar a velocidade.|  
+|<xref:System.Windows.Media.Brush>|Use <xref:System.Windows.Media.ImageBrush> em vez de <xref:System.Windows.Media.VisualBrush> ou <xref:System.Windows.Media.DrawingBrush> quando o conteúdo do pincel não será alterado.  Conteúdo 2D pode ser convertido em um <xref:System.Windows.Controls.Image> via <xref:System.Windows.Media.Imaging.RenderTargetBitmap> e, em seguida, usado em um <xref:System.Windows.Media.ImageBrush>.|  
+|<xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A>|Não use <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> , a menos que você realmente precise ver as faces de trás seu <xref:System.Windows.Media.Media3D.GeometryModel3D>.|  
+|<xref:System.Windows.Media.Media3D.Light>|Velocidade da luz (mais rápida para mais lenta):<br /><br /> <xref:System.Windows.Media.Media3D.AmbientLight><br /><br /> <xref:System.Windows.Media.Media3D.DirectionalLight><br /><br /> <xref:System.Windows.Media.Media3D.PointLight><br /><br /> <xref:System.Windows.Media.Media3D.SpotLight>|  
+|<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Tente manter os tamanhos das malhas abaixo desses limites:<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>: 20001 <xref:System.Windows.Media.Media3D.Point3D> instâncias<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>: 60,003 <xref:System.Int32> instâncias|  
+|<xref:System.Windows.Media.Media3D.Material>|Velocidade do material (mais rápida para mais lenta):<br /><br /> <xref:System.Windows.Media.Media3D.EmissiveMaterial><br /><br /> <xref:System.Windows.Media.Media3D.DiffuseMaterial><br /><br /> <xref:System.Windows.Media.Media3D.SpecularMaterial>|  
+|<xref:System.Windows.Media.Brush>|O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3D não descarta pincéis invisíveis (pincéis de ambiente pretos, pincéis de limpeza, etc.) de uma maneira consistente.  Considere omiti-los da sua cena.|  
+|<xref:System.Windows.Media.Media3D.MaterialGroup>|Cada <xref:System.Windows.Media.Media3D.Material> em um <xref:System.Windows.Media.Media3D.MaterialGroup> faz com que o outro passo de renderização, então incluir vários materiais, até mesmo materiais simples, pode aumentar significativamente as demandas de preenchimento na sua GPU.  Minimizar o número de materiais em seu <xref:System.Windows.Media.Media3D.MaterialGroup>.|  
+  
+## <a name="performance-impact-low"></a>Impacto de desempenho: baixo  
+  
+|Propriedade|Recomendação|  
+|-|-|  
+|<xref:System.Windows.Media.Media3D.Transform3DGroup>|Quando você não precisa de animação ou associação de dados, em vez de usar um grupo de transformações que contém várias transformações, usam um único <xref:System.Windows.Media.Media3D.MatrixTransform3D>, definindo-a para o produto de todas as transformações que existirá caso contrário, independentemente do grupo de transformação.|  
+|<xref:System.Windows.Media.Media3D.Light>|Minimize o número de luzes na sua cena. Ter muitas luzes em uma cena forçará [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] a recuar para a renderização de software.  Os limites são aproximadamente 110 <xref:System.Windows.Media.Media3D.DirectionalLight> objetos, 70 <xref:System.Windows.Media.Media3D.PointLight> objetos ou 40 <xref:System.Windows.Media.Media3D.SpotLight> objetos.|  
+|<xref:System.Windows.Media.Media3D.ModelVisual3D>|Separar a movimentação de objetos estáticos colocando-os em separado <xref:System.Windows.Media.Media3D.ModelVisual3D> instâncias.  ModelVisual3D é "mais pesado" que <xref:System.Windows.Media.Media3D.GeometryModel3D> porque ele armazena em cache os limites transformados.  O GeometryModel3D é otimizado para ser um modelo. O ModelVisual3D é otimizado para ser um nó da cena.  Use ModelVisual3D para colocar instâncias compartilhadas de GeometryModel3D na cena.|  
+|<xref:System.Windows.Media.Media3D.Light>|Minimize o número de vezes que você altera o número de luzes na cena.  Cada alteração da contagem de luz força uma regeneração e recompilação do sombreador, a menos que essa configuração tenha existido anteriormente (e, portanto, tenha o sombreador armazenado em cache).|  
+|Claro|As luzes pretas não serão visíveis, mas aumentarão o tempo de renderização. Considere omiti-las.|  
+|<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Para minimizar o tempo de construção de grandes coleções no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], como um MeshGeometry3D <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>, <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>, <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>, e <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>, o tamanho das coleções antes de popular seus valores. Se possível, passe as estruturas de dados pré-preenchidas dos construtores das coleções como matrizes ou listas.|  
+  
+## <a name="see-also"></a>Consulte também  
+ [Visão geral de elementos gráficos 3D](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)

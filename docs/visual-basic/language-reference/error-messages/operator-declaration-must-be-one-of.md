@@ -1,45 +1,27 @@
 ---
-title: "Declaração do operador deve ser um destes: +,-, *,-, -, ^, &amp;, Like, Mod e, Or, Xor, não, &lt; &lt;, &gt; &gt;, =, &lt; &gt;, &lt;, &lt;= &gt;, &gt;=, CType, IsTrue, IsFalse | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Declaração do operador deve ser um dos: +,-, *,-, -, ^, &amp;, Like, Mod e, Or, Xor, não, &lt; &lt;, &gt; &gt;, =, &lt; &gt;, &lt;, &lt;= &gt; , &gt;=, CType, IsTrue, IsFalse"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc33000
 - vbc33000
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC33000
+helpviewer_keywords: BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 197ff9f9509f6ed7d2bc098e529d34294f68df6e
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 80c8358dd13105c18e73e94735a51b02d5bd22c5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not-ltlt-gtgt"></a>Declaração do operador deve ser um destes: +,-, *,\,/, ^, &amp;, Like, Mod e, Or, Xor, não, &lt; &lt;, &gt; &gt;...
-Você pode declarar somente um operador que está qualificado para a sobrecarga. A tabela a seguir lista os operadores que você pode declarar.  
+# <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not-ltlt-gtgt"></a>Declaração do operador deve ser um dos: +,-, *,\,/, ^, &amp;, Like, Mod e, Or, Xor, não, &lt; &lt;, &gt; &gt;...
+Você pode declarar somente um operador que é qualificado para a sobrecarga. A tabela a seguir lista os operadores que você pode declarar.  
   
 |Tipo|Operadores|  
 |----------|---------------|  
@@ -55,11 +37,11 @@ Você pode declarar somente um operador que está qualificado para a sobrecarga.
   
 1.  Selecione um operador de conjunto de operadores que pode ser sobrecarregados.  
   
-2.  Se você precisar da funcionalidade de sobrecarregar um operador que você não pode sobrecarregar diretamente, crie uma `Function` procedimento que usa os parâmetros apropriados e retorna o valor apropriado.  
+2.  Se você precisar da funcionalidade de sobrecarregar um operador que você não pode sobrecarregar diretamente, crie um `Function` procedimento que usa os parâmetros apropriados e retorna o valor apropriado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Instrução Operator](../../../visual-basic/language-reference/statements/operator-statement.md)   
- [Procedimentos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [Como: definir um operador](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)   
- [Como: definir um operador de conversão](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)   
+ [Instrução Operator](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Procedimentos de Operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)  
+ [Como definir um operador](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
+ [Como definir um operador de conversão](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)  
  [Instrução Function](../../../visual-basic/language-reference/statements/function-statement.md)

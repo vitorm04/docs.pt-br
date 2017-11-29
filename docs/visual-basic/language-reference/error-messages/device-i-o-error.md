@@ -1,39 +1,21 @@
 ---
-title: Erro de e/s de dispositivo | Documentos do Microsoft
-ms.date: 2015-07-20
+title: Erro de E/S do dispositivo
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrID57
-dev_langs:
-- VB
+f1_keywords: vbrID57
 ms.assetid: 17d22252-f374-400b-9ddb-be5367dd7278
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 934c10c479d779eeea5e72831dcbe799f10217fa
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 01926b69b2fa3a72158f6fd3c96efe7d71c4aa19
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="device-io-error"></a>Erro de E/S do dispositivo
 Ocorreu um erro de entrada ou saído enquanto o programa estava usando um dispositivo, como uma impressora ou a unidade de disco.  

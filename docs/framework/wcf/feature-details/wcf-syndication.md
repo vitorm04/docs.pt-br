@@ -1,0 +1,54 @@
+---
+title: "Sindicalização do WCF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: syndication [WCF]
+ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 51cf7c6e4db1ee0ff68bcc7fccb46fd643f04bf4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="wcf-syndication"></a>Sindicalização do WCF
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]fornece suporte para trabalhar facilmente com feeds de agregação em Atom, RSS ou outros formatos personalizados, que permite a leitura e criá-los, bem como expô-los em um ponto de extremidade de serviço. Os tópicos nesta seção descrevem este modelo de programação para distribuição em detalhes.  
+  
+## <a name="in-this-section"></a>Nesta seção  
+ [Visão geral de Sindicalização do WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
+ Fornece uma visão geral do suporte a distribuição fornecida pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+  
+ [Arquitetura de distribuição](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
+ Descreve as classes no modelo de objeto e a extensibilidade de distribuição.  
+  
+ [Como o modelo de objeto de Sindicalização do WCF mapeia para Atom e RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)  
+ Descreve como os feeds são representados dentro do modelo de objeto de distribuição do WCF e como eles são convertidos em RSS e feeds Atom.  
+  
+ [Como: criar um RSS Feed básico](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
+ Mostra como criar um serviço que disponibiliza um básico RSS feed.  
+  
+ [Como: criar um Feed Atom básico](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
+ Mostra como criar um serviço que disponibiliza um básica ATOM feed.  
+  
+ [Como: expor um Feed como Atom e RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)  
+ Mostra como criar um serviço que disponibiliza o mesmo feed ATOM e RSS.  
+  
+ [Extensibilidade de sindicalização](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)  
+ Descreve os métodos de adição de elementos personalizados e atributos para um feed de distribuição.  
+  
+## <a name="reference"></a>Referência  
+  
+## <a name="related-sections"></a>Seções relacionadas  
+  
+## <a name="see-also"></a>Consulte também  
+ [Modelo de programação WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [Confiança parcial](../../../../docs/framework/wcf/feature-details/partial-trust.md)

@@ -1,44 +1,40 @@
 ---
-title: "Adicionando elementos, atributos e nós em uma árvore XML (Visual Basic) | Documentos do Microsoft"
+title: "Adicionando elementos, atributos e nós em uma árvore XML (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e243e694-c987-43aa-8b22-1e33dace582c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b8a1644757fb4ce9f1498e79b16d1077e412346b
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 710397e2a2a200dc5129ed42ca34f25617a071c5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a>Adicionando elementos, atributos e nós em uma árvore XML (Visual Basic)
 Você pode adicionar conteúdo (elementos, atributos, comentários, instruções de processamento, texto e CDATA) a uma árvore XML existente.  
   
 ## <a name="methods-for-adding-content"></a>Métodos para adicionar conteúdo  
- Os seguintes métodos adicionam conteúdo filho a um <xref:System.Xml.Linq.XElement>ou <xref:System.Xml.Linq.XDocument>:</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement>  
+ Os seguintes métodos adicionam conteúdo filho a um <xref:System.Xml.Linq.XElement> ou a um <xref:System.Xml.Linq.XDocument>:  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XContainer.Add%2A></xref:System.Xml.Linq.XContainer.Add%2A>|Adiciona conteúdo ao final do conteúdo filho de <xref:System.Xml.Linq.XContainer>.</xref:System.Xml.Linq.XContainer>|  
-|<xref:System.Xml.Linq.XContainer.AddFirst%2A></xref:System.Xml.Linq.XContainer.AddFirst%2A>|Adiciona o conteúdo no início do conteúdo filho de <xref:System.Xml.Linq.XContainer>.</xref:System.Xml.Linq.XContainer>|  
+|<xref:System.Xml.Linq.XContainer.Add%2A>|Adiciona conteúdo ao final do conteúdo filho de <xref:System.Xml.Linq.XContainer>.|  
+|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|Adiciona conteúdo ao início do conteúdo filho de <xref:System.Xml.Linq.XContainer>.|  
   
- Os seguintes métodos adicionam conteúdo como nós irmãos de um <xref:System.Xml.Linq.XNode>.</xref:System.Xml.Linq.XNode> O nó mais comuns para o qual você adiciona conteúdo irmão é <xref:System.Xml.Linq.XElement>, embora você possa adicionar conteúdo irmão válido a outros tipos de nós como <xref:System.Xml.Linq.XText>ou <xref:System.Xml.Linq.XComment>.</xref:System.Xml.Linq.XComment> </xref:System.Xml.Linq.XText> </xref:System.Xml.Linq.XElement>  
+ Os seguintes métodos adicionam o conteúdo como nós irmãos de um <xref:System.Xml.Linq.XNode>. O nó mais comum ao qual você adiciona conteúdo irmão é <xref:System.Xml.Linq.XElement>, embora você possa adicionar conteúdo irmão válido a outros tipos de nós como <xref:System.Xml.Linq.XText> ou <xref:System.Xml.Linq.XComment>.  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A></xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|Adiciona conteúdo após o <xref:System.Xml.Linq.XNode>.</xref:System.Xml.Linq.XNode>|  
-|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A></xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|Adiciona conteúdo antes de <xref:System.Xml.Linq.XNode>.</xref:System.Xml.Linq.XNode>|  
+|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|Adiciona conteúdo depois de <xref:System.Xml.Linq.XNode>.|  
+|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|Adiciona conteúdo antes de <xref:System.Xml.Linq.XNode>.|  
   
 ## <a name="example"></a>Exemplo  
   
@@ -75,7 +71,6 @@ xmlTree.Add( _
 ' will not throw an exception, and nothing will be added to xmlTree.  
 xmlTree.Add(srcTree.Element("Child9"))  
 Console.WriteLine(xmlTree)  
-  
 ```  
   
 ### <a name="comments"></a>Comentários  

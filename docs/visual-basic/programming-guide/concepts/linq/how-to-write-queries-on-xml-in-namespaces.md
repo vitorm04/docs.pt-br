@@ -1,33 +1,25 @@
 ---
-title: 'Como: escrever consultas no XML nos Namespaces (Visual Basic) | Documentos do Microsoft'
+title: 'Como: escrever consultas no XML nos Namespaces (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5af26b7ec0a2ab465917cd0ee62f65a97f5f0e40
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 5708a2a162132262722f390842f59c9c6a6838e4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Como: escrever consultas no XML nos Namespaces (Visual Basic)
-Para escrever uma consulta em XML que está em um namespace, você deve usar <xref:System.Xml.Linq.XName>objetos que têm o namespace correto.</xref:System.Xml.Linq.XName>  
+Para escrever uma consulta em XML que está em um namespace, você deve usar os objetos <xref:System.Xml.Linq.XName> que têm o namespace correto.  
   
  No Visual Basic, a abordagem mais comum é definir um namespace global e, em seguida, usar os literais XML e as propriedades XML que usam o namespace global. Você pode definir um namespace global padrão nesse caso, no qual os elementos nos literais XML estarão no namespace por padrão. Como alternativa, você pode definir um namespace global com um prefixo e, em seguida, usar o prefixo como necessário nos literais XML e nas propriedades XML. Como ocorre com outros formatos de XML, os atributos estão sempre em nenhum namespace por padrão.  
   

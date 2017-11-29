@@ -1,43 +1,25 @@
 ---
-title: No (Visual Basic) | Documentos do Microsoft
-ms.date: 2015-07-20
+title: On (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.on
 - vb.QueryOn
-dev_langs:
-- VB
-helpviewer_keywords:
-- On keyword
+helpviewer_keywords: On keyword [Visual Basic]
 ms.assetid: 8619c328-1637-4f41-b466-cbe693f4fe73
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7ade59c9412a386249dca23772246518d5dece0f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 83d6664a098b06cc669dc1930ff6fe5fa1f78f69
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="on-visual-basic"></a>On (Visual Basic)
-Introduz uma resposta a um erro de tempo de execução ou ativa uma opção do compilador.  
+Apresenta uma resposta a um erro de tempo de execução ou ativa uma opção do compilador.  
   
  Em consultas, identifica chaves para as coleções que estão sendo combinadas.  
   

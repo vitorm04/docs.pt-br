@@ -1,26 +1,22 @@
 ---
-title: "Como: preencher uma árvore XML do sistema de arquivos (Visual Basic) | Documentos do Microsoft"
+title: "Como: preencher uma árvore XML do sistema de arquivos (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 34eec79e-7945-4ba8-9f74-d05bb8ec67f6
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c55210365651c468b75b943dc46e08726e1ec939
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 6046cf5837aa033f2efb72c7b45f9526bedf871c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>Como: preencher uma árvore XML do sistema de arquivos (Visual Basic)
 Um aplicativo comum e útil das árvores XML é como um armazenamento de dados hierárquica de nome/valor. Você pode preencher uma árvore XML com dados hierárquicos, e consultar-la em seguida, transformar-la e, se necessário, serializar-la. Neste cenário de uso, muitas de semântica específica XML, como namespaces e comportamento de espaço em branco, não são importantes. Em vez disso, você estiver usando a árvore XML como um pequeno, na memória, base de dados hierárquica de usuário único.  
@@ -128,4 +124,4 @@ Total File Size:59089
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Técnicas avançadas de consulta (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+ [Técnicas avançadas de consulta (LINQ para XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

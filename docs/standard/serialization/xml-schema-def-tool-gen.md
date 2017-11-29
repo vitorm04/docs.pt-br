@@ -7,27 +7,21 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - generating XML classes using XML Schema Definition tool
 - generating XML Schema Document using XML Schema Definition tool
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 3d0d7a6fa5f8b6108567de02cfaec6f1fea71796
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 0361f3e21b44eeabdbb8e2af5cccd1a59e588314
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Como usar a ferramenta de definição de esquema XML para gerar classes e documentos de esquema XML
 A ferramenta de Definição de Esquema XML (Xsd.exe) permite gerar um esquema XML que descreve uma classe ou gerar a classe definida por um esquema XML. Os seguintes procedimentos mostram como executar essas operações.  
@@ -68,11 +62,10 @@ A ferramenta de Definição de Esquema XML (Xsd.exe) permite gerar um esquema XM
      O esquema (ou esquemas) serão escritos, começando com o nome "schema0.xsd".  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Data.DataSet>   
- [A ferramenta de definição de esquema XML e a serialização XML](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)   
- [Apresentando a serialização XML](../../../docs/standard/serialization/introducing-xml-serialization.md)   
- [Ferramenta de Definição de Esquema XML (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)   
- <xref:System.Xml.Serialization.XmlSerializer>   
- [Como serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
+ <xref:System.Data.DataSet>  
+ [A ferramenta de definição de esquema XML e a serialização XML](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)  
+ [Apresentando a serialização XML](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+ [Ferramenta de Definição de Esquema XML (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)  
+ <xref:System.Xml.Serialization.XmlSerializer>  
+ [Como serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
  [Como desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-

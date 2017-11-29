@@ -8,21 +8,18 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: f09584345d10cece014da9604ffbfe01ad08d10f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b6ef944b9c41d26736f044fff9d40efb5e3ef32f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-control-serialization-of-derived-classes"></a>Como controlar a serialização de classes derivadas
 O uso do atributo **XmlElementAttribute** para alterar o nome de um elemento XML não é a única maneira de personalizar a serialização de objetos. Você também pode personalizar o fluxo XML derivando de uma classe existente e instruindo a instância de <xref:System.Xml.Serialization.XmlSerializer> sobre como serializar a nova classe.  
@@ -245,11 +242,10 @@ public class Run
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Xml.Serialization.XmlSerializer>   
- <xref:System.Xml.Serialization.XmlElementAttribute>   
- <xref:System.Xml.Serialization.XmlAttributes>   
- <xref:System.Xml.Serialization.XmlAttributeOverrides>   
- [Serialização XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)   
- [Como serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
+ <xref:System.Xml.Serialization.XmlSerializer>  
+ <xref:System.Xml.Serialization.XmlElementAttribute>  
+ <xref:System.Xml.Serialization.XmlAttributes>  
+ <xref:System.Xml.Serialization.XmlAttributeOverrides>  
+ [Serialização XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [Como serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
  [Como especificar um nome de elemento alternativo para um fluxo XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-

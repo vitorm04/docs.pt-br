@@ -1,112 +1,57 @@
 ---
-title: "Como criar uma instância de um objeto TimeZoneInfo"
-description: "Como criar uma instância de um objeto TimeZoneInfo"
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 08/15/2016
-ms.topic: article
+title: 'Como: instanciar um objeto TimeZoneInfo'
+ms.custom: 
+ms.date: 04/10/2017
 ms.prod: .net
+ms.reviewer: 
+ms.suite: 
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: bff137e5-d550-44c3-b460-b3f2dabd4035
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: f2584d446c92d2df2f6d74533ef07fe96888d36a
-ms.lasthandoff: 03/02/2017
-
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- instantiating time zone objects
+- time zone objects [.NET Framework], instantiation
+ms.assetid: 8cb620e5-c6a6-4267-a52e-beeb73cd1a34
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: defc8c9981b8476660c9c99d20bc50142ee9dfad
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="how-to-instantiate-a-timezoneinfo-object"></a>Como: instanciar um objeto TimeZoneInfo
 
-# <a name="how-to-instantiate-a-timezoneinfo-object"></a>Como criar uma instância de um objeto TimeZoneInfo
+A maneira mais comum para instanciar um <xref:System.TimeZoneInfo> objeto é para recuperar informações sobre ele no registro. Este tópico aborda como instanciar um <xref:System.TimeZoneInfo> objeto do registro do sistema local.
 
-A maneira mais comum para criar uma instância de um objeto [TimeZoneInfo](xref:System.TimeZoneInfo) é recuperar informações sobre ele do sistema operacional. Este tópico aborda como criar uma instância de um objeto [TimeZoneInfo](xref:System.TimeZoneInfo) do sistema local.
+### <a name="to-instantiate-a-timezoneinfo-object"></a>Para instanciar um objeto TimeZoneInfo
 
-## <a name="to-instantiate-a-timezoneinfo-object"></a>Para criar uma instância de um objeto TimeZoneInfo
+1. Declarar uma <xref:System.TimeZoneInfo> objeto.
 
-1. Declare um objeto [TimeZoneInfo](xref:System.TimeZoneInfo).
+2. Chamar o `static` (`Shared` no Visual Basic) <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A?displayProperty=nameWithType> método.
 
-2. Chame o método `static` (`Shared` no Visual Basic) [TimeZoneInfo.FindSystemTimeZoneById](xref:System.TimeZoneInfo.FindSystemTimeZoneById(System.String)).
-
-3. Solucione eventuais exceções geradas pelo método.
+3. Manipule as exceções geradas pelo método, particularmente o <xref:System.TimeZoneNotFoundException> que é gerada se o fuso horário não está definido no registro.
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir recupera um objeto [TimeZoneInfo](xref:System.TimeZoneInfo) que representa o fuso horário padrão do Leste dos EUA e exibe a hora oficial do Leste dos EUA que corresponde à hora local.
+O código a seguir recupera um <xref:System.TimeZoneInfo> objeto que representa o fuso horário padrão do Leste e exibe a hora padrão que corresponde à hora local.
 
-```csharp
-DateTime timeNow = DateTime.Now;
-try
-{
-   TimeZoneInfo easternZone = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
-   DateTime easternTimeNow = TimeZoneInfo.ConvertTime(timeNow, TimeZoneInfo.Local, 
-                                                   easternZone);
-   Console.WriteLine("{0} {1} corresponds to {2} {3}.",
-                     timeNow, 
-                     TimeZoneInfo.Local.IsDaylightSavingTime(timeNow) ?
-                               TimeZoneInfo.Local.DaylightName : 
-                               TimeZoneInfo.Local.StandardName,
-                     easternTimeNow, 
-                     easternZone.IsDaylightSavingTime(easternTimeNow) ?
-                                 easternZone.DaylightName : 
-                                 easternZone.StandardName);
-}
-// Handle exception
-//
-// As an alternative to simply displaying an error message, an alternate Eastern
-// Standard Time TimeZoneInfo object could be instantiated here either by restoring
-// it from a serialized string or by providing the necessary data to the
-// CreateCustomTimeZone method.
-catch (InvalidTimeZoneException)
-{
-   Console.WriteLine("The Eastern Standard Time Zone contains invalid or missing data.");
-}
-catch (SecurityException)
-{
-   Console.WriteLine("The application lacks permission to read time zone information from the registry.");
-}
-catch (OutOfMemoryException)
-{
-   Console.WriteLine("Not enough memory is available to load information on the Eastern Standard Time zone.");
-}
-// If we weren't passing FindSystemTimeZoneById a literal string, we also 
-// would handle an ArgumentNullException.
-```
+[!code-csharp[System.TimeZone2.Concepts#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#5)]
+[!code-vb[System.TimeZone2.Concepts#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#5)]
 
-```vb
-Dim timeNow As Date = Date.Now
-Try
-   Dim easternZone As TimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time")
-   Dim easternTimeNow As Date = TimeZoneInfo.ConvertTime(timeNow, TimeZoneInfo.Local, easternZone)
-   Console.WriteLine("{0} {1} corresponds to {2} {3}.", _
-                     timeNow, _
-                     IIf(TimeZoneInfo.Local.IsDaylightSavingTime(timeNow), _
-                         TimeZoneInfo.Local.DaylightName, TimeZoneInfo.Local.StandardName), _
-                     easternTimeNow, _
-                     IIf(easternZone.IsDaylightSavingTime(easternTimeNow), _
-                         easternZone.DaylightName, easternZone.StandardName))
-' Handle exception
-'
-' As an alternative to simply displaying an error message, an alternate Eastern
-' Standard Time TimeZoneInfo object could be instantiated here either by restoring
-' it from a serialized string or by providing the necessary data to the
-' CreateCustomTimeZone method.
-Catch e As InvalidTimeZoneException
-   Console.WriteLine("The Eastern Standard Time Zone contains invalid or missing data.")   
-Catch e As SecurityException
-   Console.WriteLine("The application lacks permission to read time zone information from the registry.")
-Catch e As OutOfMemoryException
-   Console.WriteLine("Not enough memory is available to load information on the Eastern Standard Time zone.")
-' If we weren't passing FindSystemTimeZoneById a literal string, we also 
-' would handle an ArgumentNullException.
-End
-``` 
+O <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A?displayProperty=nameWithType> único parâmetro do método é o identificador do fuso horário que você deseja recuperar, que corresponde ao objeto de <xref:System.TimeZoneInfo.Id%2A?displayProperty=nameWithType> propriedade. O identificador do fuso horário é um campo de chave que identifica exclusivamente o fuso horário. Enquanto a maioria das chaves são relativamente curtas, o identificador de fuso horário é comparativamente longo. Na maioria dos casos, seu valor corresponde do <xref:System.TimeZoneInfo.StandardName%2A> propriedade de um <xref:System.TimeZoneInfo> objeto, que é usado para fornecer o nome do padrão de tempo do fuso horário. No entanto, há exceções. A melhor maneira de certificar-se de que você forneça um identificador válido é enumerar os fusos horários disponíveis no sistema e observar os identificadores dos fusos horários presentes nele. Para obter uma ilustração, consulte [como: enumerar os fusos horários presentes em um computador](../../../docs/standard/datetime/enumerate-time-zones.md). O tópico [Encontrando os fusos horários definidos em um sistema local](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md) também contém uma lista de identificadores de fuso horário selecionados.
 
-O único parâmetro do método [TimeZoneInfo.FindSystemTimeZoneById](xref:System.TimeZoneInfo.FindSystemTimeZoneById(System.String)) é o identificador do fuso horário que você deseja recuperar, que corresponde à propriedade [TimeZoneInfo.Id](xref:System.TimeZoneInfo.Id) do objeto. O identificador do fuso horário é um campo de chave que identifica exclusivamente o fuso horário. Enquanto a maioria das chaves são relativamente curtas, o identificador de fuso horário é comparativamente longo. Na maioria dos casos, seu valor corresponde à propriedade [StandardName](xref:System.TimeZoneInfo.StandardName) do objeto [TimeZoneInfo](xref:System.TimeZoneInfo), que é usada para fornecer o nome da hora padrão do fuso horário. No entanto, há exceções. A melhor maneira de certificar-se de que você forneça um identificador válido é enumerar os fusos horários disponíveis no sistema e observar os identificadores dos fusos horários presentes nele. Para obter uma ilustração, veja [Como enumerar os fusos horários presentes em um computador](enumerate-time-zones.md). O tópico [Encontrando os fusos horários definidos em um sistema local](finding-the-time-zones-on-local-system.md) também contém uma lista de identificadores de fuso horário selecionados.
+Se o fuso horário for encontrado, o método retorna seu <xref:System.TimeZoneInfo> objeto. Se o fuso horário não for encontrado, o método gera uma <xref:System.TimeZoneNotFoundException>. Se o fuso horário for encontrado, mas seus dados estão corrompidos ou incompletos, o método gera uma <xref:System.InvalidTimeZoneException>.
 
-Se o fuso horário for encontrado, o método retornará seu objeto [TimeZoneInfo](xref:System.TimeZoneInfo). Se o fuso horário for encontrado mas seus dados estiverem corrompidos ou incompletos, o método gerará uma [InvalidTimeZoneException](xref:System.InvalidTimeZoneException). 
+Se seu aplicativo depende de um fuso horário que deve estar presente, primeiro você deve chamar o <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> método para recuperar as informações de fuso horário do registro. Se a chamada de método falhar, o manipulador de exceção deve, em seguida, criar uma nova instância da zona de tempo ou recriá-la desserializando um serializado <xref:System.TimeZoneInfo> objeto. Consulte [como: restaurar fusos horários de um recurso incorporado](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md) para obter um exemplo.
 
 ## <a name="see-also"></a>Consulte também
 
-[Datas, horas e fusos horários](index.md)
-
-[Encontrando os fusos horários definidos em um sistema local](finding-the-time-zones-on-local-system.md)
+[Datas, horas e fusos horários](../../../docs/standard/datetime/index.md)
+[encontrando os fusos horários definidos em um sistema local](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
+[como: acessar os objetos de zona predefinidos UTC e a hora local](../../../docs/standard/datetime/access-utc-and-local.md)
