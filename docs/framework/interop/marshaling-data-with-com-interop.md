@@ -1,68 +1,61 @@
 ---
 title: Realizando marshaling em dados com interoperabilidade COM
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 09/07/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - COM interop, data marshaling
 - marshaling data, COM interop
-ms.assetid: 0bcdd7bf-5026-43eb-b08b-f03f90db9df9
-caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7e798f41f7c770fb0db0abf4a07e53cbaa6ccb40
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2def27790a1727bda524b8c14a93f7b78127a569
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="marshaling-data-with-com-interop"></a>Realizando marshaling em dados com interoperabilidade COM
-Interoperabilidade COM dá suporte ao uso de objetos COM por código gerenciado e à exposição de objetos gerenciados para COM. O suporte a marshaling dos dados de e para o COM é abrangente e quase sempre proporciona o comportamento de marshaling correto.  
+# <a name="marshaling-data-with-com-interop"></a><span data-ttu-id="3cbfc-102">Realizando marshaling em dados com interoperabilidade COM</span><span class="sxs-lookup"><span data-stu-id="3cbfc-102">Marshaling Data with COM Interop</span></span>
+<span data-ttu-id="3cbfc-103">Interoperabilidade COM dá suporte ao uso de objetos COM por código gerenciado e à exposição de objetos gerenciados para COM.</span><span class="sxs-lookup"><span data-stu-id="3cbfc-103">COM interop provides support for both using COM objects from managed code and exposing managed objects to COM.</span></span> <span data-ttu-id="3cbfc-104">O suporte a marshaling dos dados de e para o COM é abrangente e quase sempre proporciona o comportamento de marshaling correto.</span><span class="sxs-lookup"><span data-stu-id="3cbfc-104">Support for marshaling data to and from COM is extensive and almost always provides the correct marshaling behavior.</span></span>  
   
- O [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] inclui as seguintes ferramentas de interoperabilidade COM:  
+ <span data-ttu-id="3cbfc-105">O [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] inclui as seguintes ferramentas de interoperabilidade COM:</span><span class="sxs-lookup"><span data-stu-id="3cbfc-105">The [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] includes the following COM interop tools:</span></span>  
   
--   [Importador de biblioteca de tipos (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), que converte uma biblioteca de tipos COM para um assembly de interoperabilidade. Desse assembly, o serviço de marshaling de interoperabilidade gera wrappers que realizam marshaling entre memória gerenciada e não gerenciada.  
+-   <span data-ttu-id="3cbfc-106">[Importador de biblioteca de tipos (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), que converte uma biblioteca de tipos COM para um assembly de interoperabilidade.</span><span class="sxs-lookup"><span data-stu-id="3cbfc-106">[Type Library Importer (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), which converts a COM type library to an interop assembly.</span></span> <span data-ttu-id="3cbfc-107">Desse assembly, o serviço de marshaling de interoperabilidade gera wrappers que realizam marshaling entre memória gerenciada e não gerenciada.</span><span class="sxs-lookup"><span data-stu-id="3cbfc-107">From this assembly, the interop marshaling service generates wrappers that perform data marshaling between managed and unmanaged memory.</span></span>  
   
--   [Digite o exportador da biblioteca (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), que produz uma biblioteca de tipos COM de um assembly e gera um wrapper que realiza marshaling durante as chamadas de método.  
+-   <span data-ttu-id="3cbfc-108">[Digite o exportador da biblioteca (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), que produz uma biblioteca de tipos COM de um assembly e gera um wrapper que realiza marshaling durante as chamadas de método.</span><span class="sxs-lookup"><span data-stu-id="3cbfc-108">[Type Library Exporter (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), which produces a COM type library from an assembly and generates a wrapper that performs marshaling during method calls.</span></span>  
   
- Esta seção descreve os processos para personalizar os wrappers de interoperabilidade quando você pode (ou deve) fornecer informações de tipo adicionais ao marshaler.  
+ <span data-ttu-id="3cbfc-109">As seções a seguir links para tópicos que descrevem os processos para personalizar os wrappers de interoperabilidade quando você pode (ou deve) fornece o empacotador com informações de tipo adicionais.</span><span class="sxs-lookup"><span data-stu-id="3cbfc-109">The following sections link to topics that describe the processes for customizing interop wrappers when you can (or must) supply the marshaler with additional type information.</span></span>  
   
-## <a name="in-this-section"></a>Nesta seção  
- [Tipos de dados COM](http://msdn.microsoft.com/en-us/f93ae35d-a416-4218-8700-c8218cc90061)  
- Fornece tipos de dados gerenciados e não gerenciados correspondentes.  
+## <a name="in-this-section"></a><span data-ttu-id="3cbfc-110">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="3cbfc-110">In This Section</span></span>  
+<span data-ttu-id="3cbfc-111">[Como: criar Wrappers manualmente](how-to-create-wrappers-manually.md) </span><span class="sxs-lookup"><span data-stu-id="3cbfc-111">[How to: Create Wrappers Manually](how-to-create-wrappers-manually.md) </span></span>  
+<span data-ttu-id="3cbfc-112">Descreve como criar um wrapper COM manualmente no código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="3cbfc-112">Describes how to create a COM wrapper manually in managed source code.</span></span> 
+ 
+ [<span data-ttu-id="3cbfc-113">Como: migrar código DCOM gerenciado para o WCF</span><span class="sxs-lookup"><span data-stu-id="3cbfc-113">How to: Migrate Managed-Code DCOM to WCF</span></span>](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)  
+ <span data-ttu-id="3cbfc-114">Descreve como migrar o código gerenciado do DCOM para o WCF para a solução mais segura.</span><span class="sxs-lookup"><span data-stu-id="3cbfc-114">Describes how to migrate managed DCOM code to WCF for the most secure solution.</span></span>  
   
- [Personalizando COM Callable Wrappers](http://msdn.microsoft.com/en-us/825177d3-4b2c-4723-82be-ce6ca2c34ace)  
- Descreve como realizar marshaling de tipos de dados explicitamente usando o atributo **MarshalAsAttribute** em tempo de design.  
+## <a name="related-sections"></a><span data-ttu-id="3cbfc-115">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="3cbfc-115">Related Sections</span></span>  
+ <span data-ttu-id="3cbfc-116">[Tipos de dados COM](https://msdn.microsoft.com/en-us/library/sak564ww(v=vs.100).aspx)</span><span class="sxs-lookup"><span data-stu-id="3cbfc-116">[COM Data Types](https://msdn.microsoft.com/en-us/library/sak564ww(v=vs.100).aspx)</span></span>  
+ <span data-ttu-id="3cbfc-117">Fornece tipos de dados gerenciados e não gerenciados correspondentes.</span><span class="sxs-lookup"><span data-stu-id="3cbfc-117">Provides corresponding managed and unmanaged data types.</span></span>  
   
- [Personalizando RCWs (Runtime Callable Wrappers)](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be)  
- Descreve como ajustar o comportamento de marshaling de tipos em um assembly de interoperabilidade e como definir tipos COM manualmente.  
+ <span data-ttu-id="3cbfc-118">[Personalizando COM Callable Wrappers](https://msdn.microsoft.com/en-us/library/3bwc828w(v=vs.100).aspx)</span><span class="sxs-lookup"><span data-stu-id="3cbfc-118">[Customizing COM Callable Wrappers](https://msdn.microsoft.com/en-us/library/3bwc828w(v=vs.100).aspx)</span></span>  
+ <span data-ttu-id="3cbfc-119">Descreve como realizar marshaling explicitamente os tipos de dados usando o <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributo em tempo de design.</span><span class="sxs-lookup"><span data-stu-id="3cbfc-119">Describes how to explicitly marshal data types using the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute at design time.</span></span>  
   
- [Como: migrar código DCOM gerenciado para o WCF](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)  
- Descreve como migrar o código DCOM gerenciado para WCF para a solução mais segura.  
+ <span data-ttu-id="3cbfc-120">[Personalizando RCWs (Runtime Callable Wrappers)](https://msdn.microsoft.com/en-us/library/e753eftz(v=vs.100).aspx)</span><span class="sxs-lookup"><span data-stu-id="3cbfc-120">[Customizing Runtime Callable Wrappers](https://msdn.microsoft.com/en-us/library/e753eftz(v=vs.100).aspx)</span></span>  
+ <span data-ttu-id="3cbfc-121">Descreve como ajustar o comportamento de marshaling de tipos em um assembly de interoperabilidade e como definir tipos COM manualmente.</span><span class="sxs-lookup"><span data-stu-id="3cbfc-121">Describes how to adjust the marshaling behavior of types in an interop assembly and how to define COM types manually.</span></span>  
   
-## <a name="related-sections"></a>Seções relacionadas  
- [Interoperabilidade COM avançada](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
- Fornece links para obter mais informações sobre como incorporar componentes COM no aplicativo do .NET Framework.  
+ <span data-ttu-id="3cbfc-122">[Interoperabilidade COM avançada](https://msdn.microsoft.com/en-us/library/bd9cdfyx(v=vs.100).aspx)</span><span class="sxs-lookup"><span data-stu-id="3cbfc-122">[Advanced COM Interoperability](https://msdn.microsoft.com/en-us/library/bd9cdfyx(v=vs.100).aspx)</span></span>  
+ <span data-ttu-id="3cbfc-123">Fornece links para obter mais informações sobre como incorporar componentes COM no aplicativo do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="3cbfc-123">Provides links to more information about incorporating COM components into your .NET Framework application.</span></span>  
   
- [Resumo da conversão de assemblies em bibliotecas de tipos](http://msdn.microsoft.com/en-us/3a37eefb-a76c-4000-9080-7dbbf66a4896)  
- Descreve o processo de conversão de exportação de assembly em biblioteca de tipos.  
+ <span data-ttu-id="3cbfc-124">[Resumo da conversão de assemblies em bibliotecas de tipos](https://msdn.microsoft.com/en-us/library/xk1120c3(v=vs.100).aspx)</span><span class="sxs-lookup"><span data-stu-id="3cbfc-124">[Assembly to Type Library Conversion Summary](https://msdn.microsoft.com/en-us/library/xk1120c3(v=vs.100).aspx)</span></span>  
+ <span data-ttu-id="3cbfc-125">Descreve o processo de conversão de exportação de assembly em biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="3cbfc-125">Describes the assembly to type library export conversion process.</span></span>  
   
- [Resumo da conversão de bibliotecas de tipos em assemblies](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
- Descreve o processo de conversão de importação de biblioteca de tipos em assembly.  
+ <span data-ttu-id="3cbfc-126">[Resumo da conversão de bibliotecas de tipos em assemblies](https://msdn.microsoft.com/en-us/library/k83zzh38(v=vs.100).aspx)</span><span class="sxs-lookup"><span data-stu-id="3cbfc-126">[Type Library to Assembly Conversion Summary](https://msdn.microsoft.com/en-us/library/k83zzh38(v=vs.100).aspx)</span></span>  
+ <span data-ttu-id="3cbfc-127">Descreve o processo de conversão de importação de biblioteca de tipos em assembly.</span><span class="sxs-lookup"><span data-stu-id="3cbfc-127">Describes the type library to assembly import conversion process.</span></span>  
   
- [Interoperação usando tipos genéricos](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58)  
- Descreve quais ações têm suporte ao usar tipos genéricos para interoperabilidade COM.
-
+ <span data-ttu-id="3cbfc-128">[Interoperação usando tipos genéricos](https://msdn.microsoft.com/en-us/library/ms229590(v=vs.100).aspx)</span><span class="sxs-lookup"><span data-stu-id="3cbfc-128">[Interoperating Using Generic Types](https://msdn.microsoft.com/en-us/library/ms229590(v=vs.100).aspx)</span></span>  
+ <span data-ttu-id="3cbfc-129">Descreve quais ações têm suporte ao usar tipos genéricos para interoperabilidade COM.</span><span class="sxs-lookup"><span data-stu-id="3cbfc-129">Describes which actions are supported when using generic types for COM interoperability.</span></span>

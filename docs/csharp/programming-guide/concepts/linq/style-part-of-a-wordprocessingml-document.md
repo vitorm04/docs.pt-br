@@ -1,41 +1,37 @@
 ---
 title: Parte de estilo de um documento de WordprocessingML1
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 5458bccf-3898-4661-904b-7d280c9239a9
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: c3b2a7d520752612697755996e8bde463ff290fc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2ad635d5e7df887ac079d2a7267a40b762829298
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="style-part-of-a-wordprocessingml-document"></a>Parte de estilo de um documento de WordprocessingML
-Este tópico mostra um exemplo de parte de estilo de documento do Office Open XML WordprocessingML.  
+# <a name="style-part-of-a-wordprocessingml-document"></a><span data-ttu-id="3483a-102">Parte de estilo de um documento de WordprocessingML</span><span class="sxs-lookup"><span data-stu-id="3483a-102">Style Part of a WordprocessingML Document</span></span>
+<span data-ttu-id="3483a-103">Este tópico mostra um exemplo de parte de estilo de documento do Office Open XML WordprocessingML.</span><span class="sxs-lookup"><span data-stu-id="3483a-103">This topic shows an example of the style part of the Office Open XML WordprocessingML document.</span></span>  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir é XML que compõem a parte de estilo de um documento do Office Open XML WordprocessingML.  
+## <a name="example"></a><span data-ttu-id="3483a-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="3483a-104">Example</span></span>  
+ <span data-ttu-id="3483a-105">O exemplo a seguir é XML que compõem a parte de estilo de um documento do Office Open XML WordprocessingML.</span><span class="sxs-lookup"><span data-stu-id="3483a-105">The following example is the XML that makes up the style part of an Office Open XML WordprocessingML document.</span></span>  
   
- O estilo padrão de parágrafo tem um elemento com a seguir marca de abertura:  
+ <span data-ttu-id="3483a-106">O estilo padrão de parágrafo tem um elemento com a seguir marca de abertura:</span><span class="sxs-lookup"><span data-stu-id="3483a-106">The default paragraph style has an element with the following opening tag:</span></span>  
   
 ```  
 <w:style w:type="paragraph" w:default="1" w:styleId="Normal">  
 ```  
   
- Você precisa saber essas informações quando você escreve a consulta para localizar o identificador padrão de estilo, de modo que a consulta pode identificar o estilo dos parágrafos que têm o estilo padrão.  
+ <span data-ttu-id="3483a-107">Você precisa saber essas informações quando você escreve a consulta para localizar o identificador padrão de estilo, de modo que a consulta pode identificar o estilo dos parágrafos que têm o estilo padrão.</span><span class="sxs-lookup"><span data-stu-id="3483a-107">You need to know this information when you write the query to find the default style identifier, so that the query can identify the style of paragraphs that have the default style.</span></span>  
   
- Observe que esses documentos são muito simples quando comparados para documentos típicos que o Microsoft Word gerencia. Em muitos casos, o Word salva muitos informações adicionais, formatação extra e metadados. Além disso, Palavra não formata as linhas para ser facilmente legíveis como neste exemplo; em vez disso, XML é salvo sem recuo. No entanto, todos os documentos de WordprocessingML compartilham a mesma forma básica XML. Devido a isso, consultas apresentadas neste tutorial funcionarão com documentos mais complicados.  
+ <span data-ttu-id="3483a-108">Observe que esses documentos são muito simples quando comparados para documentos típicos que o Microsoft Word gerencia.</span><span class="sxs-lookup"><span data-stu-id="3483a-108">Note that these documents are very simple when compared to typical documents that Microsoft Word generates.</span></span> <span data-ttu-id="3483a-109">Em muitos casos, o Word salva muitos informações adicionais, formatação extra e metadados.</span><span class="sxs-lookup"><span data-stu-id="3483a-109">In many cases, Word saves a great deal of additional information, additional formatting and metadata.</span></span> <span data-ttu-id="3483a-110">Além disso, Palavra não formata as linhas para ser facilmente legíveis como neste exemplo; em vez disso, XML é salvo sem recuo.</span><span class="sxs-lookup"><span data-stu-id="3483a-110">Furthermore, Word does not format the lines to be easily readable as in this example; instead, the XML is saved without indentation.</span></span> <span data-ttu-id="3483a-111">No entanto, todos os documentos de WordprocessingML compartilham a mesma forma básica XML.</span><span class="sxs-lookup"><span data-stu-id="3483a-111">However, all WordprocessingML documents share the same basic XML shape.</span></span> <span data-ttu-id="3483a-112">Devido a isso, consultas apresentadas neste tutorial funcionarão com documentos mais complicados.</span><span class="sxs-lookup"><span data-stu-id="3483a-112">Because of this, the queries presented in this tutorial will work with more complicated documents.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -152,6 +148,5 @@ Este tópico mostra um exemplo de parte de estilo de documento do Office Open XM
 </w:styles>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Detalhes de documentos do Office Open XML WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
-
+## <a name="see-also"></a><span data-ttu-id="3483a-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3483a-113">See Also</span></span>  
+ [<span data-ttu-id="3483a-114">Detalhes de documentos do Office Open XML WordprocessingML (C#)</span><span class="sxs-lookup"><span data-stu-id="3483a-114">Details of Office Open XML WordprocessingML Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

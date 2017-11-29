@@ -1,88 +1,68 @@
 ---
 title: "Construtores (Guia de Programação em C#)"
-ms.date: 2017-05-05
+ms.date: 05/05/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - constructors [C#]
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 65c50311548667ab5fdc685b70b6ab9e88376067
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 400afcda2fe30bf0e3621ee4c4247486e01d3ee4
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="constructors-c-programming-guide"></a>Construtores (Guia de Programação em C#)
-Sempre que uma [classe](../../../csharp/language-reference/keywords/class.md) ou [struct](../../../csharp/language-reference/keywords/struct.md) é criada, o construtor é chamado. Uma classe ou struct pode ter vários construtores que usam argumentos diferentes. Os construtores permitem que o programador defina valores padrão, limite a instanciação e grave códigos flexíveis e fáceis de ler. Para obter mais informações e exemplos, consulte [Usando Construtores](../../../csharp/programming-guide/classes-and-structs/using-constructors.md) e [Construtores de Instância](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
+# <a name="constructors-c-programming-guide"></a><span data-ttu-id="1c51b-102">Construtores (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="1c51b-102">Constructors (C# Programming Guide)</span></span>
+<span data-ttu-id="1c51b-103">Sempre que uma [classe](../../../csharp/language-reference/keywords/class.md) ou [struct](../../../csharp/language-reference/keywords/struct.md) é criada, o construtor é chamado.</span><span class="sxs-lookup"><span data-stu-id="1c51b-103">Whenever a [class](../../../csharp/language-reference/keywords/class.md) or [struct](../../../csharp/language-reference/keywords/struct.md) is created, its constructor is called.</span></span> <span data-ttu-id="1c51b-104">Uma classe ou struct pode ter vários construtores que usam argumentos diferentes.</span><span class="sxs-lookup"><span data-stu-id="1c51b-104">A class or struct may have multiple constructors that take different arguments.</span></span> <span data-ttu-id="1c51b-105">Os construtores permitem que o programador defina valores padrão, limite a instanciação e grave códigos flexíveis e fáceis de ler.</span><span class="sxs-lookup"><span data-stu-id="1c51b-105">Constructors enable the programmer to set default values, limit instantiation, and write code that is flexible and easy to read.</span></span> <span data-ttu-id="1c51b-106">Para obter mais informações e exemplos, consulte [Usando Construtores](../../../csharp/programming-guide/classes-and-structs/using-constructors.md) e [Construtores de Instância](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).</span><span class="sxs-lookup"><span data-stu-id="1c51b-106">For more information and examples, see [Using Constructors](../../../csharp/programming-guide/classes-and-structs/using-constructors.md) and [Instance Constructors](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).</span></span>  
 
-## <a name="default-constructors"></a>Construtores padrão
+## <a name="default-constructors"></a><span data-ttu-id="1c51b-107">Construtores padrão</span><span class="sxs-lookup"><span data-stu-id="1c51b-107">Default constructors</span></span>
   
-Se um construtor não for fornecido para a classe, o C# criará por padrão um construtor que instancia o objeto e define variáveis de membro para os valores padrão, conforme listado na [Tabela de Valores Padrão](../../../csharp/language-reference/keywords/default-values-table.md). Se você não fornecer um construtor para o struct, o C# dependerá de um *construtor padrão implícito* para inicializar automaticamente a cada campo de um tipo de valor para o valor padrão conforme listado na [Tabela de Valores Padrão](../../../csharp/language-reference/keywords/default-values-table.md). Para obter mais informações e exemplos, consulte [Construtores de Instância](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
+<span data-ttu-id="1c51b-108">Se um construtor não for fornecido para a classe, o C# criará por padrão um construtor que instancia o objeto e define variáveis de membro para os valores padrão, conforme listado na [Tabela de Valores Padrão](../../../csharp/language-reference/keywords/default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="1c51b-108">If you don't provide a constructor for your class, C# creates one by default that instantiates the object and sets member variables to the default values as listed in the [Default Values Table](../../../csharp/language-reference/keywords/default-values-table.md).</span></span> <span data-ttu-id="1c51b-109">Se você não fornecer um construtor para o struct, o C# dependerá de um *construtor padrão implícito* para inicializar automaticamente a cada campo de um tipo de valor para o valor padrão conforme listado na [Tabela de Valores Padrão](../../../csharp/language-reference/keywords/default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="1c51b-109">If you don't provide a constructor for your struct, C# relies on an *implicit default constructor* to automatically initialize each field of a value type to its default value as listed in the [Default Values Table](../../../csharp/language-reference/keywords/default-values-table.md).</span></span> <span data-ttu-id="1c51b-110">Para obter mais informações e exemplos, consulte [Construtores de Instância](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).</span><span class="sxs-lookup"><span data-stu-id="1c51b-110">For more information and examples, see [Instance Constructors](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).</span></span>  
 
-## <a name="constructor-syntax"></a>Sintaxe do construtor
+## <a name="constructor-syntax"></a><span data-ttu-id="1c51b-111">Sintaxe do construtor</span><span class="sxs-lookup"><span data-stu-id="1c51b-111">Constructor syntax</span></span>
 
-Um construtor é um método cujo nome é igual ao nome de seu tipo. Sua assinatura do método inclui apenas o nome do método e lista de parâmetros, ele não inclui um tipo de retorno. O exemplo a seguir mostra o construtor para uma classe denominada `Person`.
+<span data-ttu-id="1c51b-112">Um construtor é um método cujo nome é igual ao nome de seu tipo.</span><span class="sxs-lookup"><span data-stu-id="1c51b-112">A constructor is a method whose name is the same as the name of its type.</span></span> <span data-ttu-id="1c51b-113">Sua assinatura do método inclui apenas o nome do método e lista de parâmetros, ele não inclui um tipo de retorno.</span><span class="sxs-lookup"><span data-stu-id="1c51b-113">Its method signature includes only the method name and its parameter list; it does not include a return type.</span></span> <span data-ttu-id="1c51b-114">O exemplo a seguir mostra o construtor para uma classe denominada `Person`.</span><span class="sxs-lookup"><span data-stu-id="1c51b-114">The following example shows the constructor for a class named `Person`.</span></span>
 
-[!code-cs[construtores](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#1)]  
+[!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#1)]  
 
-Se um construtor puder ser implementado como uma única instrução, você poderá usar uma [definição de corpo da expressão](../statements-expressions-operators/expression-bodied-members.md). O exemplo a seguir define uma classe `Location` cujo construtor tem um único parâmetro de cadeia de caracteres chamado *nome*. A definição de corpo da expressão atribui o argumento ao campo `locationName`.
+<span data-ttu-id="1c51b-115">Se um construtor puder ser implementado como uma única instrução, você poderá usar uma [definição de corpo da expressão](../statements-expressions-operators/expression-bodied-members.md).</span><span class="sxs-lookup"><span data-stu-id="1c51b-115">If a constructor can be implemented as a single statement, you can use an [expression body definition](../statements-expressions-operators/expression-bodied-members.md).</span></span> <span data-ttu-id="1c51b-116">O exemplo a seguir define uma classe `Location` cujo construtor tem um único parâmetro de cadeia de caracteres chamado *nome*.</span><span class="sxs-lookup"><span data-stu-id="1c51b-116">The following example defines a `Location` class whose constructor has a single string parameter named *name*.</span></span> <span data-ttu-id="1c51b-117">A definição de corpo da expressão atribui o argumento ao campo `locationName`.</span><span class="sxs-lookup"><span data-stu-id="1c51b-117">The expression body definition assigns the argument to the `locationName` field.</span></span>
 
-[!code-cs[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
+[!code-csharp[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
 
-## <a name="static-constructors"></a>Construtores estáticos
+## <a name="static-constructors"></a><span data-ttu-id="1c51b-118">Construtores estáticos</span><span class="sxs-lookup"><span data-stu-id="1c51b-118">Static constructors</span></span>
 
-Os exemplos anteriores têm todos os construtores de instância mostrado, que criam um novo objeto. Uma classe ou struct também pode ter um construtor estático, que inicializa membros estáticos do tipo.  Construtores estáticos não têm parâmetros. Se você não fornecer um construtor estático para inicializar campos estáticos, o compilador do C# fornecerá um construtor estático padrão que inicializa os campos estáticos com os respectivos valores padrão, conforme listado na [Tabela de Valores Padrão](../../../csharp/language-reference/keywords/default-values-table.md). 
+<span data-ttu-id="1c51b-119">Os exemplos anteriores têm todos os construtores de instância mostrado, que criam um novo objeto.</span><span class="sxs-lookup"><span data-stu-id="1c51b-119">The previous examples have all shown instance constructors, which create a new object.</span></span> <span data-ttu-id="1c51b-120">Uma classe ou struct também pode ter um construtor estático, que inicializa membros estáticos do tipo.</span><span class="sxs-lookup"><span data-stu-id="1c51b-120">A class or struct can also have a static constructor, which initializes static members of the type.</span></span>  <span data-ttu-id="1c51b-121">Construtores estáticos não têm parâmetros.</span><span class="sxs-lookup"><span data-stu-id="1c51b-121">Static constructors are parameterless.</span></span> <span data-ttu-id="1c51b-122">Se você não fornecer um construtor estático para inicializar campos estáticos, o compilador do C# fornecerá um construtor estático padrão que inicializa os campos estáticos com os respectivos valores padrão, conforme listado na [Tabela de Valores Padrão](../../../csharp/language-reference/keywords/default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="1c51b-122">If you don't provide a static constructor to initialize static fields, the C# compiler will supply a default static constructor that initializes static fields to their default value as listed in the [Default Values Table](../../../csharp/language-reference/keywords/default-values-table.md).</span></span> 
 
-O exemplo a seguir usa um construtor estático para inicializar um campo estático.
+<span data-ttu-id="1c51b-123">O exemplo a seguir usa um construtor estático para inicializar um campo estático.</span><span class="sxs-lookup"><span data-stu-id="1c51b-123">The following example uses a static constructor to initialize a static field.</span></span>
 
-[!code-cs[construtores](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#2)]  
+[!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#2)]  
 
-Você também pode definir um construtor estático com uma definição de corpo da expressão, como mostra o exemplo a seguir. 
+<span data-ttu-id="1c51b-124">Você também pode definir um construtor estático com uma definição de corpo da expressão, como mostra o exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="1c51b-124">You can also define a static constructor with an expression body definition, as the following example shows.</span></span> 
 
-[!code-cs[construtores](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#3)]  
+[!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#3)]  
 
-Para obter mais informações e exemplos, consulte [Construtores Estáticos](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
+<span data-ttu-id="1c51b-125">Para obter mais informações e exemplos, consulte [Construtores Estáticos](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).</span><span class="sxs-lookup"><span data-stu-id="1c51b-125">For more information and examples, see [Static Constructors](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).</span></span>  
   
-## <a name="in-this-section"></a>Nesta seção  
- [Usando construtores](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1c51b-126">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="1c51b-126">In This Section</span></span>  
+ [<span data-ttu-id="1c51b-127">Usando construtores</span><span class="sxs-lookup"><span data-stu-id="1c51b-127">Using Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
   
- [Construtores de instância](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)  
+ [<span data-ttu-id="1c51b-128">Construtores de instância</span><span class="sxs-lookup"><span data-stu-id="1c51b-128">Instance Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)  
   
- [Construtores particulares](../../../csharp/programming-guide/classes-and-structs/private-constructors.md)  
+ [<span data-ttu-id="1c51b-129">Construtores particulares</span><span class="sxs-lookup"><span data-stu-id="1c51b-129">Private Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/private-constructors.md)  
   
- [Construtores estáticos](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)  
+ [<span data-ttu-id="1c51b-130">Construtores estáticos</span><span class="sxs-lookup"><span data-stu-id="1c51b-130">Static Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)  
   
- [Como escrever um construtor de cópia](../../../csharp/programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md)  
+ [<span data-ttu-id="1c51b-131">Como escrever um construtor de cópia</span><span class="sxs-lookup"><span data-stu-id="1c51b-131">How to: Write a Copy Constructor</span></span>](../../../csharp/programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Classes e structs](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
- [static](../../../csharp/language-reference/keywords/static.md)   
- [Por que os inicializadores são executados na ordem oposta, como construtores? Parte 1](http://go.microsoft.com/fwlink/?LinkId=112374)
-
+## <a name="see-also"></a><span data-ttu-id="1c51b-132">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1c51b-132">See Also</span></span>  
+ [<span data-ttu-id="1c51b-133">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="1c51b-133">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="1c51b-134">Classes e Structs</span><span class="sxs-lookup"><span data-stu-id="1c51b-134">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [<span data-ttu-id="1c51b-135">Finalizadores</span><span class="sxs-lookup"><span data-stu-id="1c51b-135">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+ [<span data-ttu-id="1c51b-136">static</span><span class="sxs-lookup"><span data-stu-id="1c51b-136">static</span></span>](../../../csharp/language-reference/keywords/static.md)  
+ [<span data-ttu-id="1c51b-137">Por que os inicializadores são executados na ordem oposta, como construtores? Parte 1</span><span class="sxs-lookup"><span data-stu-id="1c51b-137">Why Do Initializers Run In The Opposite Order As Constructors? Part One</span></span>](http://go.microsoft.com/fwlink/?LinkId=112374)

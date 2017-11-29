@@ -1,72 +1,53 @@
 ---
 title: "Usando exceções (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 55c2cc0c6a1f852bd286b98927cc69f81119aeee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 96fc082d135d38f521429de7b4e9a668773982ea
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="using-exceptions-c-programming-guide"></a>Usando exceções (Guia de Programação em C#)
-No C#, os erros no programa em tempo de execução são propagados pelo programa usando um mecanismo chamado exceções. As exceções são geradas pelo código que encontra um erro e capturadas pelo código que pode corrigir o erro. As exceções podem ser geradas pelo CLR (Common Language Runtime) do .NET Framework ou pelo código em um programa. Uma vez que uma exceção é gerada, ela é propagada acima na pilha de chamadas até uma instrução `catch` para a exceção ser encontrada. As exceções não capturadas são tratadas por um manipulador de exceção genérico fornecido pelo sistema que exibe uma caixa de diálogo.  
+# <a name="using-exceptions-c-programming-guide"></a><span data-ttu-id="23b30-102">Usando exceções (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="23b30-102">Using Exceptions (C# Programming Guide)</span></span>
+<span data-ttu-id="23b30-103">No C#, os erros no programa em tempo de execução são propagados pelo programa usando um mecanismo chamado exceções.</span><span class="sxs-lookup"><span data-stu-id="23b30-103">In C#, errors in the program at run time are propagated through the program by using a mechanism called exceptions.</span></span> <span data-ttu-id="23b30-104">As exceções são geradas pelo código que encontra um erro e capturadas pelo código que pode corrigir o erro.</span><span class="sxs-lookup"><span data-stu-id="23b30-104">Exceptions are thrown by code that encounters an error and caught by code that can correct the error.</span></span> <span data-ttu-id="23b30-105">As exceções podem ser geradas pelo CLR (Common Language Runtime) do .NET Framework ou pelo código em um programa.</span><span class="sxs-lookup"><span data-stu-id="23b30-105">Exceptions can be thrown by the .NET Framework common language runtime (CLR) or by code in a program.</span></span> <span data-ttu-id="23b30-106">Uma vez que uma exceção é gerada, ela é propagada acima na pilha de chamadas até uma instrução `catch` para a exceção ser encontrada.</span><span class="sxs-lookup"><span data-stu-id="23b30-106">Once an exception is thrown, it propagates up the call stack until a `catch` statement for the exception is found.</span></span> <span data-ttu-id="23b30-107">As exceções não capturadas são tratadas por um manipulador de exceção genérico fornecido pelo sistema que exibe uma caixa de diálogo.</span><span class="sxs-lookup"><span data-stu-id="23b30-107">Uncaught exceptions are handled by a generic exception handler provided by the system that displays a dialog box.</span></span>  
   
- As exceções são representadas por classes derivadas de <xref:System.Exception>. Essa classe identifica o tipo de exceção e contém propriedades que têm detalhes sobre a exceção. Gerar uma exceção envolve criar uma instância de uma classe derivada de exceção, opcionalmente configurar propriedades da exceção e, em seguida, gerar o objeto usando a palavra-chave `throw`. Por exemplo:  
+ <span data-ttu-id="23b30-108">As exceções são representadas por classes derivadas de <xref:System.Exception>.</span><span class="sxs-lookup"><span data-stu-id="23b30-108">Exceptions are represented by classes derived from <xref:System.Exception>.</span></span> <span data-ttu-id="23b30-109">Essa classe identifica o tipo de exceção e contém propriedades que têm detalhes sobre a exceção.</span><span class="sxs-lookup"><span data-stu-id="23b30-109">This class identifies the type of exception and contains properties that have details about the exception.</span></span> <span data-ttu-id="23b30-110">Gerar uma exceção envolve criar uma instância de uma classe derivada de exceção, opcionalmente configurar propriedades da exceção e, em seguida, gerar o objeto usando a palavra-chave `throw`.</span><span class="sxs-lookup"><span data-stu-id="23b30-110">Throwing an exception involves creating an instance of an exception-derived class, optionally configuring properties of the exception, and then throwing the object by using the `throw` keyword.</span></span> <span data-ttu-id="23b30-111">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="23b30-111">For example:</span></span>  
   
- [!code-cs[csProgGuideExceptions#1](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_1.cs)]  
+ [!code-csharp[csProgGuideExceptions#1](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_1.cs)]  
   
- Depois que uma exceção é gerada, o tempo de execução verifica a instrução atual para ver se ela está dentro de um bloco `try`. Se estiver, todos os blocos `catch` associados ao bloco `try` serão verificados para ver se eles podem capturar a exceção. Os blocos `Catch` normalmente especificam os tipos de exceção. Se o tipo do bloco `catch` for do mesmo tipo que a exceção ou uma classe base da exceção, o bloco `catch` poderá manipular o método. Por exemplo:  
+ <span data-ttu-id="23b30-112">Depois que uma exceção é gerada, o tempo de execução verifica a instrução atual para ver se ela está dentro de um bloco `try`.</span><span class="sxs-lookup"><span data-stu-id="23b30-112">After an exception is thrown, the runtime checks the current statement to see whether it is within a `try` block.</span></span> <span data-ttu-id="23b30-113">Se estiver, todos os blocos `catch` associados ao bloco `try` serão verificados para ver se eles podem capturar a exceção.</span><span class="sxs-lookup"><span data-stu-id="23b30-113">If it is, any `catch` blocks associated with the `try` block are checked to see whether they can catch the exception.</span></span> <span data-ttu-id="23b30-114">Os blocos `Catch` normalmente especificam os tipos de exceção. Se o tipo do bloco `catch` for do mesmo tipo que a exceção ou uma classe base da exceção, o bloco `catch` poderá manipular o método.</span><span class="sxs-lookup"><span data-stu-id="23b30-114">`Catch` blocks typically specify exception types; if the type of the `catch` block is the same type as the exception, or a base class of the exception, the `catch` block can handle the method.</span></span> <span data-ttu-id="23b30-115">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="23b30-115">For example:</span></span>  
   
- [!code-cs[csProgGuideExceptions#2](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_2.cs)]  
+ [!code-csharp[csProgGuideExceptions#2](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_2.cs)]  
   
- Se a instrução que gera uma exceção não estiver dentro de um bloco `try` ou se o bloco `try` que o contém não tiver um bloco `catch` correspondente, o tempo de execução verificará o método de chamada quanto a uma instrução `try` e blocos `catch`. O tempo de execução continuará acima na pilha de chamada, pesquisando um bloco `catch` compatível. Depois que o bloco `catch` for localizado e executado, o controle será passado para a próxima instrução após aquele bloco `catch`.  
+ <span data-ttu-id="23b30-116">Se a instrução que gera uma exceção não estiver dentro de um bloco `try` ou se o bloco `try` que o contém não tiver um bloco `catch` correspondente, o tempo de execução verificará o método de chamada quanto a uma instrução `try` e blocos `catch`.</span><span class="sxs-lookup"><span data-stu-id="23b30-116">If the statement that throws an exception is not within a `try` block or if the `try` block that encloses it has no matching `catch` block, the runtime checks the calling method for a `try` statement and `catch` blocks.</span></span> <span data-ttu-id="23b30-117">O tempo de execução continuará acima na pilha de chamada, pesquisando um bloco `catch` compatível.</span><span class="sxs-lookup"><span data-stu-id="23b30-117">The runtime continues up the calling stack, searching for a compatible `catch` block.</span></span> <span data-ttu-id="23b30-118">Depois que o bloco `catch` for localizado e executado, o controle será passado para a próxima instrução após aquele bloco `catch`.</span><span class="sxs-lookup"><span data-stu-id="23b30-118">After the `catch` block is found and executed, control is passed to the next statement after that `catch` block.</span></span>  
   
- Uma instrução `try` pode conter mais de um bloco `catch`. A primeira instrução `catch` que pode manipular a exceção é executado, todas as instruções `catch` posteriores, mesmo se forem compatíveis, são ignoradas. Portanto, os blocos de captura devem sempre ser ordenados do mais específico (ou mais derivado) para o menos específico. Por exemplo:  
+ <span data-ttu-id="23b30-119">Uma instrução `try` pode conter mais de um bloco `catch`.</span><span class="sxs-lookup"><span data-stu-id="23b30-119">A `try` statement can contain more than one `catch` block.</span></span> <span data-ttu-id="23b30-120">A primeira instrução `catch` que pode manipular a exceção é executado, todas as instruções `catch` posteriores, mesmo se forem compatíveis, são ignoradas.</span><span class="sxs-lookup"><span data-stu-id="23b30-120">The first `catch` statement that can handle the exception is executed; any following `catch` statements, even if they are compatible, are ignored.</span></span> <span data-ttu-id="23b30-121">Portanto, os blocos de captura devem sempre ser ordenados do mais específico (ou mais derivado) para o menos específico.</span><span class="sxs-lookup"><span data-stu-id="23b30-121">Therefore, catch blocks should always be ordered from most specific (or most-derived) to least specific.</span></span> <span data-ttu-id="23b30-122">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="23b30-122">For example:</span></span>  
   
- [!code-cs[csProgGuideExceptions#3](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_3.cs)]  
+ [!code-csharp[csProgGuideExceptions#3](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_3.cs)]  
   
- Antes de o bloco `catch` ser executado, o tempo de execução verifica se há blocos `finally`. Os blocos `Finally` permitem que o programador limpe qualquer estado ambíguo que pode ser deixado de um bloco `try` cancelado ou libere quaisquer recursos externos (como identificadores de gráfico, conexões de banco de dados ou fluxos de arquivo) sem esperar o coletor de lixo no tempo de execução finalizar os objetos. Por exemplo:  
+ <span data-ttu-id="23b30-123">Antes de o bloco `catch` ser executado, o tempo de execução verifica se há blocos `finally`.</span><span class="sxs-lookup"><span data-stu-id="23b30-123">Before the `catch` block is executed, the runtime checks for `finally` blocks.</span></span> <span data-ttu-id="23b30-124">Os blocos `Finally` permitem que o programador limpe qualquer estado ambíguo que pode ser deixado de um bloco `try` cancelado ou libere quaisquer recursos externos (como identificadores de gráfico, conexões de banco de dados ou fluxos de arquivo) sem esperar o coletor de lixo no tempo de execução finalizar os objetos.</span><span class="sxs-lookup"><span data-stu-id="23b30-124">`Finally` blocks enable the programmer to clean up any ambiguous state that could be left over from an aborted `try` block, or to release any external resources (such as graphics handles, database connections or file streams) without waiting for the garbage collector in the runtime to finalize the objects.</span></span> <span data-ttu-id="23b30-125">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="23b30-125">For example:</span></span>  
   
- [!code-cs[csProgGuideExceptions#4](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_4.cs)]  
+ [!code-csharp[csProgGuideExceptions#4](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_4.cs)]  
   
- Se `WriteByte()` gerou uma exceção, o código no segundo bloco `try` que tentar reabrir o arquivo falhará se `file.Close()` não for chamado e o arquivo permanecerá bloqueado. Como os blocos `finally` são executados mesmo se uma exceção for gerada, o bloco `finally` no exemplo anterior permite que o arquivo seja fechado corretamente e ajuda a evitar um erro.  
+ <span data-ttu-id="23b30-126">Se `WriteByte()` gerou uma exceção, o código no segundo bloco `try` que tentar reabrir o arquivo falhará se `file.Close()` não for chamado e o arquivo permanecerá bloqueado.</span><span class="sxs-lookup"><span data-stu-id="23b30-126">If `WriteByte()` threw an exception, the code in the second `try` block that tries to reopen the file would fail if `file.Close()` is not called, and the file would remain locked.</span></span> <span data-ttu-id="23b30-127">Como os blocos `finally` são executados mesmo se uma exceção for gerada, o bloco `finally` no exemplo anterior permite que o arquivo seja fechado corretamente e ajuda a evitar um erro.</span><span class="sxs-lookup"><span data-stu-id="23b30-127">Because `finally` blocks are executed even if an exception is thrown, the `finally` block in the previous example allows for the file to be closed correctly and helps avoid an error.</span></span>  
   
- Se não for encontrado nenhum bloco `catch` compatível na pilha de chamadas após uma exceção ser gerada, ocorrerá uma das três coisas:  
+ <span data-ttu-id="23b30-128">Se não for encontrado nenhum bloco `catch` compatível na pilha de chamadas após uma exceção ser gerada, ocorrerá uma das três coisas:</span><span class="sxs-lookup"><span data-stu-id="23b30-128">If no compatible `catch` block is found on the call stack after an exception is thrown, one of three things occurs:</span></span>  
   
--   Se a exceção estiver em um finalizador, o finalizador será anulado e o finalizador base, se houver, será chamado.  
+-   <span data-ttu-id="23b30-129">Se a exceção estiver em um finalizador, o finalizador será anulado e o finalizador base, se houver, será chamado.</span><span class="sxs-lookup"><span data-stu-id="23b30-129">If the exception is within a finalizer, the finalizer is aborted and the base finalizer, if any, is called.</span></span>  
   
--   Se a pilha de chamadas contiver um construtor estático ou um inicializador de campo estático, uma <xref:System.TypeInitializationException> será gerada, com a exceção original atribuída à propriedade <xref:System.Exception.InnerException%2A> da nova exceção.  
+-   <span data-ttu-id="23b30-130">Se a pilha de chamadas contiver um construtor estático ou um inicializador de campo estático, uma <xref:System.TypeInitializationException> será gerada, com a exceção original atribuída à propriedade <xref:System.Exception.InnerException%2A> da nova exceção.</span><span class="sxs-lookup"><span data-stu-id="23b30-130">If the call stack contains a static constructor, or a static field initializer, a <xref:System.TypeInitializationException> is thrown, with the original exception assigned to the <xref:System.Exception.InnerException%2A> property of the new exception.</span></span>  
   
--   Se o início do thread for atingido, o thread será encerrado.  
+-   <span data-ttu-id="23b30-131">Se o início do thread for atingido, o thread será encerrado.</span><span class="sxs-lookup"><span data-stu-id="23b30-131">If the start of the thread is reached, the thread is terminated.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Exceções e manipulação de exceções](../../../csharp/programming-guide/exceptions/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="23b30-132">Consulte também</span><span class="sxs-lookup"><span data-stu-id="23b30-132">See Also</span></span>  
+ [<span data-ttu-id="23b30-133">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="23b30-133">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="23b30-134">Exceções e manipulação de exceções</span><span class="sxs-lookup"><span data-stu-id="23b30-134">Exceptions and Exception Handling</span></span>](../../../csharp/programming-guide/exceptions/index.md)

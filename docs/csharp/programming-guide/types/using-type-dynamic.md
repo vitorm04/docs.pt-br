@@ -1,95 +1,76 @@
 ---
 title: "Usando o tipo dynamic (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e4eea7cd1bf87ac4c4efb827e6a9ca403e94acc9
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 36e10ef6a63aae2e901be50b9286370caec50e6a
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="using-type-dynamic-c-programming-guide"></a>Usando o tipo dynamic (Guia de Programação em C#)
-O [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] apresenta um novo tipo, `dynamic`. O tipo é um tipo estático, mas um objeto do tipo `dynamic` ignora a verificação de tipo estático. Na maioria dos casos, ele funciona como se tivesse o tipo `object`. Em tempo de compilação, supõem-se que um elemento que tem o tipo `dynamic` dá suporte a qualquer operação. Portanto, você não precisa se preocupar se o objeto obtém seu valor de uma API COM, de uma linguagem dinâmica como o IronPython, do HTML DOM (Modelo de Objeto do Documento), a reflexão ou de algum outro lugar no programa. No entanto, se o código não for válido, os erros serão capturados em tempo de execução.  
+# <a name="using-type-dynamic-c-programming-guide"></a><span data-ttu-id="230a1-102">Usando o tipo dynamic (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="230a1-102">Using Type dynamic (C# Programming Guide)</span></span>
+<span data-ttu-id="230a1-103">O [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] apresenta um novo tipo, `dynamic`.</span><span class="sxs-lookup"><span data-stu-id="230a1-103">[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] introduces a new type, `dynamic`.</span></span> <span data-ttu-id="230a1-104">O tipo é um tipo estático, mas um objeto do tipo `dynamic` ignora a verificação de tipo estático.</span><span class="sxs-lookup"><span data-stu-id="230a1-104">The type is a static type, but an object of type `dynamic` bypasses static type checking.</span></span> <span data-ttu-id="230a1-105">Na maioria dos casos, ele funciona como se tivesse o tipo `object`.</span><span class="sxs-lookup"><span data-stu-id="230a1-105">In most cases, it functions like it has type `object`.</span></span> <span data-ttu-id="230a1-106">Em tempo de compilação, supõem-se que um elemento que tem o tipo `dynamic` dá suporte a qualquer operação.</span><span class="sxs-lookup"><span data-stu-id="230a1-106">At compile time, an element that is typed as `dynamic` is assumed to support any operation.</span></span> <span data-ttu-id="230a1-107">Portanto, você não precisa se preocupar se o objeto obtém seu valor de uma API COM, de uma linguagem dinâmica como o IronPython, do HTML DOM (Modelo de Objeto do Documento), a reflexão ou de algum outro lugar no programa.</span><span class="sxs-lookup"><span data-stu-id="230a1-107">Therefore, you do not have to be concerned about whether the object gets its value from a COM API, from a dynamic language such as IronPython, from the HTML Document Object Model (DOM), from reflection, or from somewhere else in the program.</span></span> <span data-ttu-id="230a1-108">No entanto, se o código não for válido, os erros serão capturados em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="230a1-108">However, if the code is not valid, errors are caught at run time.</span></span>  
   
- Por exemplo, se método de instância `exampleMethod1` no código a seguir tiver apenas um parâmetro, o compilador reconhecerá que a primeira chamada para o método, `ec.exampleMethod1(10, 4)`, não é válido porque ele contém dois argumentos. Essa chamada causa um erro do compilador. A segunda chamada para o método, `dynamic_ec.exampleMethod1(10, 4)`, não é verificada pelo compilador porque o tipo de `dynamic_ec` é `dynamic`. Portanto, nenhum erro de compilador é relatado. No entanto, o erro não escapa o aviso indefinidamente. Ele é detectado em tempo de execução e causa uma exceção de tempo de execução.  
+ <span data-ttu-id="230a1-109">Por exemplo, se método de instância `exampleMethod1` no código a seguir tiver apenas um parâmetro, o compilador reconhecerá que a primeira chamada para o método, `ec.exampleMethod1(10, 4)`, não é válido porque ele contém dois argumentos.</span><span class="sxs-lookup"><span data-stu-id="230a1-109">For example, if instance method `exampleMethod1` in the following code has only one parameter, the compiler recognizes that the first call to the method, `ec.exampleMethod1(10, 4)`, is not valid because it contains two arguments.</span></span> <span data-ttu-id="230a1-110">Essa chamada causa um erro do compilador.</span><span class="sxs-lookup"><span data-stu-id="230a1-110">The call causes a compiler error.</span></span> <span data-ttu-id="230a1-111">A segunda chamada para o método, `dynamic_ec.exampleMethod1(10, 4)`, não é verificada pelo compilador porque o tipo de `dynamic_ec` é `dynamic`.</span><span class="sxs-lookup"><span data-stu-id="230a1-111">The second call to the method, `dynamic_ec.exampleMethod1(10, 4)`, is not checked by the compiler because the type of `dynamic_ec` is `dynamic`.</span></span> <span data-ttu-id="230a1-112">Portanto, nenhum erro de compilador é relatado.</span><span class="sxs-lookup"><span data-stu-id="230a1-112">Therefore, no compiler error is reported.</span></span> <span data-ttu-id="230a1-113">No entanto, o erro não escapa o aviso indefinidamente.</span><span class="sxs-lookup"><span data-stu-id="230a1-113">However, the error does not escape notice indefinitely.</span></span> <span data-ttu-id="230a1-114">Ele é detectado em tempo de execução e causa uma exceção de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="230a1-114">It is caught at run time and causes a run-time exception.</span></span>  
   
- [!code-cs[CsProgGuideTypes#50](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_1.cs)]  
+ [!code-csharp[CsProgGuideTypes#50](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_1.cs)]  
   
- [!code-cs[CsProgGuideTypes#56](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_2.cs)]  
+ [!code-csharp[CsProgGuideTypes#56](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_2.cs)]  
   
- A função do compilador nesses exemplos é reunir informações sobre o que cada instrução está propondo fazer para o objeto ou expressão que tem o tipo `dynamic`. Em tempo de execução, as informações armazenadas são examinadas e qualquer instrução inválida causa uma exceção de tempo de execução.  
+ <span data-ttu-id="230a1-115">A função do compilador nesses exemplos é reunir informações sobre o que cada instrução está propondo fazer para o objeto ou expressão que tem o tipo `dynamic`.</span><span class="sxs-lookup"><span data-stu-id="230a1-115">The role of the compiler in these examples is to package together information about what each statement is proposing to do to the object or expression that is typed as `dynamic`.</span></span> <span data-ttu-id="230a1-116">Em tempo de execução, as informações armazenadas são examinadas e qualquer instrução inválida causa uma exceção de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="230a1-116">At run time, the stored information is examined, and any statement that is not valid causes a run-time exception.</span></span>  
   
- O resultado de operações mais dinâmicas é `dynamic`. Por exemplo, se você passar o ponteiro do mouse sobre o uso de `testSum` no exemplo a seguir, o IntelliSense exibirá o tipo **(variável local) testSum dinâmico**.  
+ <span data-ttu-id="230a1-117">O resultado de operações mais dinâmicas é `dynamic`.</span><span class="sxs-lookup"><span data-stu-id="230a1-117">The result of most dynamic operations is itself `dynamic`.</span></span> <span data-ttu-id="230a1-118">Por exemplo, se você passar o ponteiro do mouse sobre o uso de `testSum` no exemplo a seguir, o IntelliSense exibirá o tipo **(variável local) testSum dinâmico**.</span><span class="sxs-lookup"><span data-stu-id="230a1-118">For example, if you rest the mouse pointer over the use of `testSum` in the following example, IntelliSense displays the type **(local variable) dynamic testSum**.</span></span>  
   
- [!code-cs[CsProgGuideTypes#51](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_3.cs)]  
+ [!code-csharp[CsProgGuideTypes#51](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_3.cs)]  
   
- Operações em que o resultado não é `dynamic` incluem conversões de `dynamic` em outro tipo e chamadas de construtor que incluem argumentos do tipo `dynamic`. Por exemplo, o tipo de `testInstance` na declaração a seguir é `ExampleClass`, não `dynamic`.  
+ <span data-ttu-id="230a1-119">Operações em que o resultado não é `dynamic` incluem conversões de `dynamic` em outro tipo e chamadas de construtor que incluem argumentos do tipo `dynamic`.</span><span class="sxs-lookup"><span data-stu-id="230a1-119">Operations in which the result is not `dynamic` include conversions from `dynamic` to another type, and constructor calls that include arguments of type `dynamic`.</span></span> <span data-ttu-id="230a1-120">Por exemplo, o tipo de `testInstance` na declaração a seguir é `ExampleClass`, não `dynamic`.</span><span class="sxs-lookup"><span data-stu-id="230a1-120">For example, the type of `testInstance` in the following declaration is `ExampleClass`, not `dynamic`.</span></span>  
   
- [!code-cs[CsProgGuideTypes#52](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_4.cs)]  
+ [!code-csharp[CsProgGuideTypes#52](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_4.cs)]  
   
- Exemplos de conversão são mostrados na seção a seguir, "Conversões".  
+ <span data-ttu-id="230a1-121">Exemplos de conversão são mostrados na seção a seguir, "Conversões".</span><span class="sxs-lookup"><span data-stu-id="230a1-121">Conversion examples are shown in the following section, "Conversions."</span></span>  
   
-## <a name="conversions"></a>Conversões  
- As conversões entre objetos dinâmicos e outros tipos são fáceis. Isso permite que o desenvolvedor mude entre o comportamento dinâmico e o não dinâmico.  
+## <a name="conversions"></a><span data-ttu-id="230a1-122">Conversões</span><span class="sxs-lookup"><span data-stu-id="230a1-122">Conversions</span></span>  
+ <span data-ttu-id="230a1-123">As conversões entre objetos dinâmicos e outros tipos são fáceis.</span><span class="sxs-lookup"><span data-stu-id="230a1-123">Conversions between dynamic objects and other types are easy.</span></span> <span data-ttu-id="230a1-124">Isso permite que o desenvolvedor mude entre o comportamento dinâmico e o não dinâmico.</span><span class="sxs-lookup"><span data-stu-id="230a1-124">This enables the developer to switch between dynamic and non-dynamic behavior.</span></span>  
   
- Qualquer objeto pode ser convertido no tipo dinâmico implicitamente, conforme mostrado nos exemplos a seguir.  
+ <span data-ttu-id="230a1-125">Qualquer objeto pode ser convertido no tipo dinâmico implicitamente, conforme mostrado nos exemplos a seguir.</span><span class="sxs-lookup"><span data-stu-id="230a1-125">Any object can be converted to dynamic type implicitly, as shown in the following examples.</span></span>  
   
- [!code-cs[CsProgGuideTypes#53](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_5.cs)]  
+ [!code-csharp[CsProgGuideTypes#53](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_5.cs)]  
   
- Por outro lado, uma conversão implícita pode ser aplicada dinamicamente a qualquer expressão do tipo `dynamic`.  
+ <span data-ttu-id="230a1-126">Por outro lado, uma conversão implícita pode ser aplicada dinamicamente a qualquer expressão do tipo `dynamic`.</span><span class="sxs-lookup"><span data-stu-id="230a1-126">Conversely, an implicit conversion can be dynamically applied to any expression of type `dynamic`.</span></span>  
   
- [!code-cs[CsProgGuideTypes#54](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_6.cs)]  
+ [!code-csharp[CsProgGuideTypes#54](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_6.cs)]  
   
-## <a name="overload-resolution-with-arguments-of-type-dynamic"></a>Resolução de sobrecarga com argumentos de tipo dynamic  
- A resolução de sobrecarga ocorre em tempo de execução em vez de em tempo de compilação se um ou mais dos argumentos em uma chamada de método tem o tipo `dynamic` ou se o receptor da chamada do método é do tipo `dynamic`. No exemplo a seguir, se o único método `exampleMethod2` acessível for definido para obter um argumento de cadeia de caracteres, enviar `d1` como o argumento não causará um erro de compilador, mas causará uma exceção de tempo de execução. A resolução de sobrecarga falha em tempo de execução porque o tipo de tempo de execução de `d1` é `int` e `exampleMethod2` requer uma cadeia de caracteres.  
+## <a name="overload-resolution-with-arguments-of-type-dynamic"></a><span data-ttu-id="230a1-127">Resolução de sobrecarga com argumentos de tipo dynamic</span><span class="sxs-lookup"><span data-stu-id="230a1-127">Overload Resolution with Arguments of Type dynamic</span></span>  
+ <span data-ttu-id="230a1-128">A resolução de sobrecarga ocorre em tempo de execução em vez de em tempo de compilação se um ou mais dos argumentos em uma chamada de método tem o tipo `dynamic` ou se o receptor da chamada do método é do tipo `dynamic`.</span><span class="sxs-lookup"><span data-stu-id="230a1-128">Overload resolution occurs at run time instead of at compile time if one or more of the arguments in a method call have the type `dynamic`, or if the receiver of the method call is of type `dynamic`.</span></span> <span data-ttu-id="230a1-129">No exemplo a seguir, se o único método `exampleMethod2` acessível for definido para obter um argumento de cadeia de caracteres, enviar `d1` como o argumento não causará um erro de compilador, mas causará uma exceção de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="230a1-129">In the following example, if the only accessible `exampleMethod2` method is defined to take a string argument, sending `d1` as the argument does not cause a compiler error, but it does cause a run-time exception.</span></span> <span data-ttu-id="230a1-130">A resolução de sobrecarga falha em tempo de execução porque o tipo de tempo de execução de `d1` é `int` e `exampleMethod2` requer uma cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="230a1-130">Overload resolution fails at run time because the run-time type of `d1` is `int`, and `exampleMethod2` requires a string.</span></span>  
   
- [!code-cs[CsProgGuideTypes#55](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_7.cs)]  
+ [!code-csharp[CsProgGuideTypes#55](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_7.cs)]  
   
-## <a name="dynamic-language-runtime"></a>Dynamic Language Runtime  
- O DLR (Dynamic Language Runtime) é uma nova API no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]. Ele fornece a infraestrutura que dá suporte ao tipo `dynamic` em C# e também à implementação das linguagens de programação dinâmicas como IronPython e IronRuby. Para obter mais informações sobre o DLR, consulte [Visão geral do Dynamic Language Runtime](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md).  
+## <a name="dynamic-language-runtime"></a><span data-ttu-id="230a1-131">Dynamic Language Runtime</span><span class="sxs-lookup"><span data-stu-id="230a1-131">Dynamic Language Runtime</span></span>  
+ <span data-ttu-id="230a1-132">O DLR (Dynamic Language Runtime) é uma nova API no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="230a1-132">The dynamic language runtime (DLR) is a new API in [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</span></span> <span data-ttu-id="230a1-133">Ele fornece a infraestrutura que dá suporte ao tipo `dynamic` em C# e também à implementação das linguagens de programação dinâmicas como IronPython e IronRuby.</span><span class="sxs-lookup"><span data-stu-id="230a1-133">It provides the infrastructure that supports the `dynamic` type in C#, and also the implementation of dynamic programming languages such as IronPython and IronRuby.</span></span> <span data-ttu-id="230a1-134">Para obter mais informações sobre o DLR, consulte [Visão geral do Dynamic Language Runtime](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md).</span><span class="sxs-lookup"><span data-stu-id="230a1-134">For more information about the DLR, see [Dynamic Language Runtime Overview](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md).</span></span>  
   
-## <a name="com-interop"></a>Interoperabilidade COM  
- O [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] inclui vários recursos que aprimoram a experiência de interoperar com APIs COM como as APIs de Automação do Office. Entre os aperfeiçoamentos estão o uso do tipo `dynamic` e de [argumentos nomeados e opcionais](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).  
+## <a name="com-interop"></a><span data-ttu-id="230a1-135">Interoperabilidade COM</span><span class="sxs-lookup"><span data-stu-id="230a1-135">COM Interop</span></span>  
+ <span data-ttu-id="230a1-136">O [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] inclui vários recursos que aprimoram a experiência de interoperar com APIs COM como as APIs de Automação do Office.</span><span class="sxs-lookup"><span data-stu-id="230a1-136">[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] includes several features that improve the experience of interoperating with COM APIs such as the Office Automation APIs.</span></span> <span data-ttu-id="230a1-137">Entre os aperfeiçoamentos estão o uso do tipo `dynamic` e de [argumentos nomeados e opcionais](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).</span><span class="sxs-lookup"><span data-stu-id="230a1-137">Among the improvements are the use of the `dynamic` type, and of [named and optional arguments](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).</span></span>  
   
- Muitos métodos COM permitem variação nos tipos de argumento e tipo de retorno, especificando os tipos como `object`. Isso exigiu a conversão explícita dos valores para coordenar com variáveis fortemente tipadas no C#. Se você compilar usando a opção [/link (opções do compilador C#)](../../../csharp/language-reference/compiler-options/link-compiler-option.md), a introdução do tipo `dynamic` permitirá que você trate as ocorrências de `object` em assinaturas COM como se fossem do tipo `dynamic` e, portanto, evitar muito da conversão. Por exemplo, as seguintes instruções de contrastam como acessar uma célula em uma planilha do Microsoft Office Excel com o tipo `dynamic` e sem o tipo `dynamic`.  
+ <span data-ttu-id="230a1-138">Muitos métodos COM permitem variação nos tipos de argumento e tipo de retorno, especificando os tipos como `object`.</span><span class="sxs-lookup"><span data-stu-id="230a1-138">Many COM methods allow for variation in argument types and return type by designating the types as `object`.</span></span> <span data-ttu-id="230a1-139">Isso exigiu a conversão explícita dos valores para coordenar com variáveis fortemente tipadas no C#.</span><span class="sxs-lookup"><span data-stu-id="230a1-139">This has necessitated explicit casting of the values to coordinate with strongly typed variables in C#.</span></span> <span data-ttu-id="230a1-140">Se você compilar usando a opção [/link (opções do compilador C#)](../../../csharp/language-reference/compiler-options/link-compiler-option.md), a introdução do tipo `dynamic` permitirá que você trate as ocorrências de `object` em assinaturas COM como se fossem do tipo `dynamic` e, portanto, evitar muito da conversão.</span><span class="sxs-lookup"><span data-stu-id="230a1-140">If you compile by using the [/link (C# Compiler Options)](../../../csharp/language-reference/compiler-options/link-compiler-option.md) option, the introduction of the `dynamic` type enables you to treat the occurrences of `object` in COM signatures as if they were of type `dynamic`, and thereby to avoid much of the casting.</span></span> <span data-ttu-id="230a1-141">Por exemplo, as seguintes instruções de contrastam como acessar uma célula em uma planilha do Microsoft Office Excel com o tipo `dynamic` e sem o tipo `dynamic`.</span><span class="sxs-lookup"><span data-stu-id="230a1-141">For example, the following statements contrast how you access a cell in a Microsoft Office Excel spreadsheet with the `dynamic` type and without the `dynamic` type.</span></span>  
   
- [!code-cs[csOfficeWalkthrough#12](../../../csharp/programming-guide/interop/codesnippet/CSharp/using-type-dynamic_8.cs)]  
+ [!code-csharp[csOfficeWalkthrough#12](../../../csharp/programming-guide/interop/codesnippet/CSharp/using-type-dynamic_8.cs)]  
   
- [!code-cs[csOfficeWalkthrough#13](../../../csharp/programming-guide/interop/codesnippet/CSharp/using-type-dynamic_9.cs)]  
+ [!code-csharp[csOfficeWalkthrough#13](../../../csharp/programming-guide/interop/codesnippet/CSharp/using-type-dynamic_9.cs)]  
   
-## <a name="related-topics"></a>Tópicos relacionados  
+## <a name="related-topics"></a><span data-ttu-id="230a1-142">Tópicos relacionados</span><span class="sxs-lookup"><span data-stu-id="230a1-142">Related Topics</span></span>  
   
-|Título|Descrição|  
+|<span data-ttu-id="230a1-143">Título</span><span class="sxs-lookup"><span data-stu-id="230a1-143">Title</span></span>|<span data-ttu-id="230a1-144">Descrição</span><span class="sxs-lookup"><span data-stu-id="230a1-144">Description</span></span>|  
 |-----------|-----------------|  
-|[dynamic](../../../csharp/language-reference/keywords/dynamic.md)|Descreve o uso da palavra-chave `dynamic`.|  
-|[Visão geral do Dynamic Language Runtime](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|Fornece uma visão geral do DLR, que é um ambiente de tempo de execução que adiciona um conjunto de serviços para as linguagens dinâmicas para o CLR (Common Language Runtime).|  
-|[Passo a passo: Criando e usando objetos dinâmicos](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)|Fornece instruções passo a passo para criar um objeto dinâmico personalizado e para criar um projeto que acessa uma biblioteca `IronPython`.|  
-|[Como acessar objetos de interoperabilidade do Office usando recursos do Visual C#](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)|Demonstra como criar um projeto que usa argumentos nomeados e opcionais, o tipo `dynamic` e outros aprimoramentos que simplificam o acesso aos objetos de API do Office.|
-
+|[<span data-ttu-id="230a1-145">dynamic</span><span class="sxs-lookup"><span data-stu-id="230a1-145">dynamic</span></span>](../../../csharp/language-reference/keywords/dynamic.md)|<span data-ttu-id="230a1-146">Descreve o uso da palavra-chave `dynamic`.</span><span class="sxs-lookup"><span data-stu-id="230a1-146">Describes the usage of the `dynamic` keyword.</span></span>|  
+|[<span data-ttu-id="230a1-147">Visão geral do Dynamic Language Runtime</span><span class="sxs-lookup"><span data-stu-id="230a1-147">Dynamic Language Runtime Overview</span></span>](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|<span data-ttu-id="230a1-148">Fornece uma visão geral do DLR, que é um ambiente de tempo de execução que adiciona um conjunto de serviços para as linguagens dinâmicas para o CLR (Common Language Runtime).</span><span class="sxs-lookup"><span data-stu-id="230a1-148">Provides an overview of the DLR, which is a runtime environment that adds a set of services for dynamic languages to the common language runtime (CLR).</span></span>|  
+|[<span data-ttu-id="230a1-149">Passo a passo: Criando e usando objetos dinâmicos</span><span class="sxs-lookup"><span data-stu-id="230a1-149">Walkthrough: Creating and Using Dynamic Objects</span></span>](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)|<span data-ttu-id="230a1-150">Fornece instruções passo a passo para criar um objeto dinâmico personalizado e para criar um projeto que acessa uma biblioteca `IronPython`.</span><span class="sxs-lookup"><span data-stu-id="230a1-150">Provides step-by-step instructions for creating a custom dynamic object and for creating a project that accesses an `IronPython` library.</span></span>|  
+|[<span data-ttu-id="230a1-151">Como acessar objetos de interoperabilidade do Office usando recursos do Visual C#</span><span class="sxs-lookup"><span data-stu-id="230a1-151">How to: Access Office Interop Objects by Using Visual C# Features</span></span>](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)|<span data-ttu-id="230a1-152">Demonstra como criar um projeto que usa argumentos nomeados e opcionais, o tipo `dynamic` e outros aprimoramentos que simplificam o acesso aos objetos de API do Office.</span><span class="sxs-lookup"><span data-stu-id="230a1-152">Demonstrates how to create a project that uses named and optional arguments, the `dynamic` type, and other enhancements that simplify access to Office API objects.</span></span>|

@@ -1,37 +1,28 @@
 ---
 title: "Como unir conteúdo de arquivos diferentes (LINQ) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: ac5c9f2037e3254c6262efe00fcbff31664dcd70
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 95b2ff43ff5f14e2e3be40bee5463ed648c4c940
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Como unir conteúdo de arquivos diferentes (LINQ) (C#)
-Este exemplo mostra como unir dados de dois arquivos delimitados por vírgulas que compartilham um valor comum que é usado como uma chave correspondente. Essa técnica pode ser útil se você precisa combinar dados de duas planilhas ou de uma planilha e um arquivo com outro formato, em um novo arquivo. Você pode modificar o exemplo para funcionar com qualquer tipo de texto estruturado.  
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a><span data-ttu-id="f374c-102">Como unir conteúdo de arquivos diferentes (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="f374c-102">How to: Join Content from Dissimilar Files (LINQ) (C#)</span></span>
+<span data-ttu-id="f374c-103">Este exemplo mostra como unir dados de dois arquivos delimitados por vírgulas que compartilham um valor comum que é usado como uma chave correspondente.</span><span class="sxs-lookup"><span data-stu-id="f374c-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="f374c-104">Essa técnica pode ser útil se você precisa combinar dados de duas planilhas ou de uma planilha e um arquivo com outro formato, em um novo arquivo.</span><span class="sxs-lookup"><span data-stu-id="f374c-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="f374c-105">Você pode modificar o exemplo para funcionar com qualquer tipo de texto estruturado.</span><span class="sxs-lookup"><span data-stu-id="f374c-105">You can modify the example to work with any kind of structured text.</span></span>  
   
-### <a name="to-create-the-data-files"></a>Para criar os arquivos de dados  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="f374c-106">Para criar os arquivos de dados</span><span class="sxs-lookup"><span data-stu-id="f374c-106">To create the data files</span></span>  
   
-1.  Copie as seguintes linhas para um arquivo chamado scores.csv e salve-o na sua pasta do projeto. O arquivo representa dados da planilha. A coluna 1 é a ID do aluno e as colunas 2 a 5 são resultados de testes.  
+1.  <span data-ttu-id="f374c-107">Copie as seguintes linhas para um arquivo chamado scores.csv e salve-o na sua pasta do projeto.</span><span class="sxs-lookup"><span data-stu-id="f374c-107">Copy the following lines into a file that is named scores.csv and save it to your project folder.</span></span> <span data-ttu-id="f374c-108">O arquivo representa dados da planilha.</span><span class="sxs-lookup"><span data-stu-id="f374c-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="f374c-109">A coluna 1 é a ID do aluno e as colunas 2 a 5 são resultados de testes.</span><span class="sxs-lookup"><span data-stu-id="f374c-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
   
     ```  
     111, 97, 92, 81, 60  
@@ -48,7 +39,7 @@ Este exemplo mostra como unir dados de dois arquivos delimitados por vírgulas q
     122, 94, 92, 91, 91  
     ```  
   
-2.  Copie as seguintes linhas para um arquivo chamado names.csv e salve-o na sua pasta do projeto. O arquivo representa uma planilha que contém o sobrenome, o nome e a ID do aluno.  
+2.  <span data-ttu-id="f374c-110">Copie as seguintes linhas para um arquivo chamado names.csv e salve-o na sua pasta do projeto.</span><span class="sxs-lookup"><span data-stu-id="f374c-110">Copy the following lines into a file that is named names.csv and save it to your project folder.</span></span> <span data-ttu-id="f374c-111">O arquivo representa uma planilha que contém o sobrenome, o nome e a ID do aluno.</span><span class="sxs-lookup"><span data-stu-id="f374c-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -65,7 +56,7 @@ Este exemplo mostra como unir dados de dois arquivos delimitados por vírgulas q
     Tucker,Michael,122  
     ```  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a><span data-ttu-id="f374c-112">Exemplo</span><span class="sxs-lookup"><span data-stu-id="f374c-112">Example</span></span>  
   
 ```csharp  
 class JoinStrings  
@@ -136,10 +127,9 @@ Zabokritski, 96, 85, 91, 60
  */  
 ```  
   
-## <a name="compiling-the-code"></a>Compilando o código  
- Crie um projeto que tenha como alvo o .NET Framework versão 3.5 ou posterior, com uma referência a System.Core.dll e diretivas `using` para os namespaces System.Linq e System.IO.  
+## <a name="compiling-the-code"></a><span data-ttu-id="f374c-113">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="f374c-113">Compiling the Code</span></span>  
+ <span data-ttu-id="f374c-114">Crie um projeto que tenha como alvo o .NET Framework versão 3.5 ou posterior, com uma referência a System.Core.dll e diretivas `using` para os namespaces System.Linq e System.IO.</span><span class="sxs-lookup"><span data-stu-id="f374c-114">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [LINQ e cadeias de caracteres (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ e diretórios de arquivos (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
-
+## <a name="see-also"></a><span data-ttu-id="f374c-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f374c-115">See Also</span></span>  
+ [<span data-ttu-id="f374c-116">LINQ e cadeias de caracteres (C#)</span><span class="sxs-lookup"><span data-stu-id="f374c-116">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+ [<span data-ttu-id="f374c-117">LINQ e diretórios de arquivos (C#)</span><span class="sxs-lookup"><span data-stu-id="f374c-117">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

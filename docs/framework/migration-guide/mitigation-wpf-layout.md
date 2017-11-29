@@ -5,49 +5,46 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: d3ba5ac792169cc076f9621025f35444281cec6e
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="mitigation-wpf-layout"></a>Mitigação: layout de WPF
-O layout dos controles do WPF pode ser ligeiramente alterado.  
+# <a name="mitigation-wpf-layout"></a><span data-ttu-id="8e35e-102">Mitigação: layout de WPF</span><span class="sxs-lookup"><span data-stu-id="8e35e-102">Mitigation: WPF Layout</span></span>
+<span data-ttu-id="8e35e-103">O layout dos controles do WPF pode ser ligeiramente alterado.</span><span class="sxs-lookup"><span data-stu-id="8e35e-103">The layout of WPF controls can change slightly.</span></span>  
   
-## <a name="impact"></a>Impacto  
- Como resultado dessa alteração:  
+## <a name="impact"></a><span data-ttu-id="8e35e-104">Impacto</span><span class="sxs-lookup"><span data-stu-id="8e35e-104">Impact</span></span>  
+ <span data-ttu-id="8e35e-105">Como resultado dessa alteração:</span><span class="sxs-lookup"><span data-stu-id="8e35e-105">As a result of this change:</span></span>  
   
--   A largura ou altura dos elementos pode aumentar ou reduzir em um pixel no máximo.  
+-   <span data-ttu-id="8e35e-106">A largura ou altura dos elementos pode aumentar ou reduzir em um pixel no máximo.</span><span class="sxs-lookup"><span data-stu-id="8e35e-106">The width or height of elements may grow or shrink by at most one pixel.</span></span>  
   
--   O posicionamento de um objeto pode ser movido até um pixel, no máximo.  
+-   <span data-ttu-id="8e35e-107">O posicionamento de um objeto pode ser movido até um pixel, no máximo.</span><span class="sxs-lookup"><span data-stu-id="8e35e-107">The placement of an object can move by at most one pixel.</span></span>  
   
--   Os elementos centralizados podem estar vertical ou horizontalmente fora do centro em, no máximo, um pixel.  
+-   <span data-ttu-id="8e35e-108">Os elementos centralizados podem estar vertical ou horizontalmente fora do centro em, no máximo, um pixel.</span><span class="sxs-lookup"><span data-stu-id="8e35e-108">Centered elements can be vertically or horizontally off center by at most one pixel.</span></span>  
   
- Por padrão, esse novo layout é habilitado somente para aplicativos que se destinam ao .NET Framework 4.6.  
+ <span data-ttu-id="8e35e-109">Por padrão, esse novo layout é habilitado somente para aplicativos que se destinam ao .NET Framework 4.6.</span><span class="sxs-lookup"><span data-stu-id="8e35e-109">By default, this new layout is enabled only for apps that target the .NET Framework 4.6.</span></span>  
   
-## <a name="mitigation"></a>Redução  
- Uma vez que essa modificação tende a eliminar a distorção da direita ou da parte inferior dos controles do WPF em DPIs altos, os aplicativos que de destinam a versões anteriores do .NET Framework, mas estão sendo executados no .NET Framework 4.6, podem aderir a esse novo comportamento adicionando a seguinte linha à seção `<runtime>` do arquivo app.config:  
+## <a name="mitigation"></a><span data-ttu-id="8e35e-110">Redução</span><span class="sxs-lookup"><span data-stu-id="8e35e-110">Mitigation</span></span>  
+ <span data-ttu-id="8e35e-111">Uma vez que essa modificação tende a eliminar a distorção da direita ou da parte inferior dos controles do WPF em DPIs altos, os aplicativos que de destinam a versões anteriores do .NET Framework, mas estão sendo executados no .NET Framework 4.6, podem aderir a esse novo comportamento adicionando a seguinte linha à seção `<runtime>` do arquivo app.config:</span><span class="sxs-lookup"><span data-stu-id="8e35e-111">Since this modification tends to eliminate clipping of the right or bottom of WPF controls at high DPIs, apps that target earlier versions of the .NET Framework but are running on the .NET Framework 4.6 can opt into this new behavior by adding the following line to the `<runtime>` section of the app.config file:</span></span>  
   
 ```xml  
 <AppContextSwitchOverrides value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=false" />  
 ```  
   
- Os aplicativos que se destinam ao .NET Framework 4.6, mas querem que os controles do WPF renderizem usando o algoritmo de layout anterior podem fazer isso adicionando a seguinte linha à seção `<runtime>` do arquivo app.config:  
+ <span data-ttu-id="8e35e-112">Os aplicativos que se destinam ao .NET Framework 4.6, mas querem que os controles do WPF renderizem usando o algoritmo de layout anterior podem fazer isso adicionando a seguinte linha à seção `<runtime>` do arquivo app.config:</span><span class="sxs-lookup"><span data-stu-id="8e35e-112">Apps that target the .NET Framework 4.6 but want WPF controls to render using the previous layout algorithm can do so by adding the following line to the  `<runtime>` section of the app.config file:</span></span>  
   
 ```xml  
 <AppContextSwitchOverrides value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=true" />  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Alterações de redirecionamento](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
-
+## <a name="see-also"></a><span data-ttu-id="8e35e-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8e35e-113">See Also</span></span>  
+ [<span data-ttu-id="8e35e-114">Alterações de redirecionamento</span><span class="sxs-lookup"><span data-stu-id="8e35e-114">Retargeting Changes</span></span>](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)

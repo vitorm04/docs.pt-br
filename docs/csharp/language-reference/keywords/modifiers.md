@@ -1,63 +1,44 @@
 ---
 title: "Modificadores (Referência de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - keywords [C#], modifiers
 - modifiers [C#]
 ms.assetid: c96691dd-b357-49ec-b5ae-03ca214fadfb
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 31bdfb74c5803e0108aab5b7733ea7b725f7ef3c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e2e7e5e3907ac9bb66676e749ddd55a8ac4836c
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="modifiers-c-reference"></a>Modificadores (Referência de C#)
-Os modificadores são usados para alterar declarações de tipos e membros de tipos. Esta seção apresenta os modificadores C#.  
+# <a name="modifiers-c-reference"></a><span data-ttu-id="84ed0-102">Modificadores (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="84ed0-102">Modifiers (C# Reference)</span></span>
+<span data-ttu-id="84ed0-103">Os modificadores são usados para alterar declarações de tipos e membros de tipos.</span><span class="sxs-lookup"><span data-stu-id="84ed0-103">Modifiers are used to modify declarations of types and type members.</span></span> <span data-ttu-id="84ed0-104">Esta seção apresenta os modificadores C#.</span><span class="sxs-lookup"><span data-stu-id="84ed0-104">This section introduces the C# modifiers.</span></span>  
   
-|Modificador|Finalidade|  
+|<span data-ttu-id="84ed0-105">Modificador</span><span class="sxs-lookup"><span data-stu-id="84ed0-105">Modifier</span></span>|<span data-ttu-id="84ed0-106">Finalidade</span><span class="sxs-lookup"><span data-stu-id="84ed0-106">Purpose</span></span>|  
 |--------------|-------------|  
-|[Modificadores de acesso](../../../csharp/language-reference/keywords/access-modifiers.md)<br /><br /> -   [public](../../../csharp/language-reference/keywords/public.md)<br />-   [private](../../../csharp/language-reference/keywords/private.md)<br />-   [internal](../../../csharp/language-reference/keywords/internal.md)<br />-   [protected](../../../csharp/language-reference/keywords/protected.md)|Especifica a acessibilidade declarada de tipos e membros de tipos.|  
-|[abstract](../../../csharp/language-reference/keywords/abstract.md)|Indica que uma classe destina-se somente a ser uma classe base de outras classes.|  
-|[async](../../../csharp/language-reference/keywords/async.md)|Indica que o método modificado, expressão lambda ou método anônimo é assíncrono.|  
-|[const](../../../csharp/language-reference/keywords/const.md)|Especifica que o valor do campo ou da variável local não pode ser modificado.|  
-|[event](../../../csharp/language-reference/keywords/event.md)|Declara um evento.|  
-|[extern](../../../csharp/language-reference/keywords/extern.md)|Indica que o método é implementado externamente.|  
-|[new](../../../csharp/language-reference/keywords/new.md)|Oculta explicitamente um membro herdado de uma classe base.|  
-|[override](../../../csharp/language-reference/keywords/override.md)|Fornece uma nova implementação de um membro virtual herdado de uma classe base.|  
-|[partial](../../../csharp/language-reference/keywords/partial-type.md)|Define classes, structs e métodos parciais através de todo o mesmo assembly.|  
-|[readonly](../../../csharp/language-reference/keywords/readonly.md)|Declara um campo ao qual valores podem ser atribuídos como parte da declaração ou em um construtor na mesma classe.|  
-|[sealed](../../../csharp/language-reference/keywords/sealed.md)|Especifica que uma classe não pode ser herdada.|  
-|[static](../../../csharp/language-reference/keywords/static.md)|Declara um membro que pertence ao tipo em si em vez de um objeto específico.|  
-|[unsafe](../../../csharp/language-reference/keywords/unsafe.md)|Declara um contexto inseguro.|  
-|[virtual](../../../csharp/language-reference/keywords/virtual.md)|Declara um método ou um acessador cuja implementação pode ser alterada por um membro substituído em uma classe derivada.|  
-|[volatile](../../../csharp/language-reference/keywords/volatile.md)|Indica que um campo pode ser modificado no programa por algo como o sistema operacional, o hardware ou um thread de execução simultânea.|  
+|[<span data-ttu-id="84ed0-107">Modificadores de acesso</span><span class="sxs-lookup"><span data-stu-id="84ed0-107">Access Modifiers</span></span>](../../../csharp/language-reference/keywords/access-modifiers.md)<br /><br /> <span data-ttu-id="84ed0-108">-   [public](../../../csharp/language-reference/keywords/public.md)</span><span class="sxs-lookup"><span data-stu-id="84ed0-108">-   [public](../../../csharp/language-reference/keywords/public.md)</span></span><br /><span data-ttu-id="84ed0-109">-   [private](../../../csharp/language-reference/keywords/private.md)</span><span class="sxs-lookup"><span data-stu-id="84ed0-109">-   [private](../../../csharp/language-reference/keywords/private.md)</span></span><br /><span data-ttu-id="84ed0-110">-   [internal](../../../csharp/language-reference/keywords/internal.md)</span><span class="sxs-lookup"><span data-stu-id="84ed0-110">-   [internal](../../../csharp/language-reference/keywords/internal.md)</span></span><br /><span data-ttu-id="84ed0-111">-   [protected](../../../csharp/language-reference/keywords/protected.md)</span><span class="sxs-lookup"><span data-stu-id="84ed0-111">-   [protected](../../../csharp/language-reference/keywords/protected.md)</span></span>|<span data-ttu-id="84ed0-112">Especifica a acessibilidade declarada de tipos e membros de tipos.</span><span class="sxs-lookup"><span data-stu-id="84ed0-112">Specifies the declared accessibility of types and type members.</span></span>|  
+|[<span data-ttu-id="84ed0-113">abstract</span><span class="sxs-lookup"><span data-stu-id="84ed0-113">abstract</span></span>](../../../csharp/language-reference/keywords/abstract.md)|<span data-ttu-id="84ed0-114">Indica que uma classe destina-se somente a ser uma classe base de outras classes.</span><span class="sxs-lookup"><span data-stu-id="84ed0-114">Indicates that a class is intended only to be a base class of other classes.</span></span>|  
+|[<span data-ttu-id="84ed0-115">async</span><span class="sxs-lookup"><span data-stu-id="84ed0-115">async</span></span>](../../../csharp/language-reference/keywords/async.md)|<span data-ttu-id="84ed0-116">Indica que o método modificado, expressão lambda ou método anônimo é assíncrono.</span><span class="sxs-lookup"><span data-stu-id="84ed0-116">Indicates that the modified method, lambda expression, or anonymous method is asynchronous.</span></span>|  
+|[<span data-ttu-id="84ed0-117">const</span><span class="sxs-lookup"><span data-stu-id="84ed0-117">const</span></span>](../../../csharp/language-reference/keywords/const.md)|<span data-ttu-id="84ed0-118">Especifica que o valor do campo ou da variável local não pode ser modificado.</span><span class="sxs-lookup"><span data-stu-id="84ed0-118">Specifies that the value of the field or the local variable cannot be modified.</span></span>|  
+|[<span data-ttu-id="84ed0-119">event</span><span class="sxs-lookup"><span data-stu-id="84ed0-119">event</span></span>](../../../csharp/language-reference/keywords/event.md)|<span data-ttu-id="84ed0-120">Declara um evento.</span><span class="sxs-lookup"><span data-stu-id="84ed0-120">Declares an event.</span></span>|  
+|[<span data-ttu-id="84ed0-121">extern</span><span class="sxs-lookup"><span data-stu-id="84ed0-121">extern</span></span>](../../../csharp/language-reference/keywords/extern.md)|<span data-ttu-id="84ed0-122">Indica que o método é implementado externamente.</span><span class="sxs-lookup"><span data-stu-id="84ed0-122">Indicates that the method is implemented externally.</span></span>|  
+|[<span data-ttu-id="84ed0-123">new</span><span class="sxs-lookup"><span data-stu-id="84ed0-123">new</span></span>](../../../csharp/language-reference/keywords/new.md)|<span data-ttu-id="84ed0-124">Oculta explicitamente um membro herdado de uma classe base.</span><span class="sxs-lookup"><span data-stu-id="84ed0-124">Explicitly hides a member inherited from a base class.</span></span>|  
+|[<span data-ttu-id="84ed0-125">override</span><span class="sxs-lookup"><span data-stu-id="84ed0-125">override</span></span>](../../../csharp/language-reference/keywords/override.md)|<span data-ttu-id="84ed0-126">Fornece uma nova implementação de um membro virtual herdado de uma classe base.</span><span class="sxs-lookup"><span data-stu-id="84ed0-126">Provides a new implementation of a virtual member inherited from a base class.</span></span>|  
+|[<span data-ttu-id="84ed0-127">partial</span><span class="sxs-lookup"><span data-stu-id="84ed0-127">partial</span></span>](../../../csharp/language-reference/keywords/partial-type.md)|<span data-ttu-id="84ed0-128">Define classes, structs e métodos parciais através de todo o mesmo assembly.</span><span class="sxs-lookup"><span data-stu-id="84ed0-128">Defines partial classes, structs and methods throughout the same assembly.</span></span>|  
+|[<span data-ttu-id="84ed0-129">readonly</span><span class="sxs-lookup"><span data-stu-id="84ed0-129">readonly</span></span>](../../../csharp/language-reference/keywords/readonly.md)|<span data-ttu-id="84ed0-130">Declara um campo ao qual valores podem ser atribuídos como parte da declaração ou em um construtor na mesma classe.</span><span class="sxs-lookup"><span data-stu-id="84ed0-130">Declares a field that can only be assigned values as part of the declaration or in a constructor in the same class.</span></span>|  
+|[<span data-ttu-id="84ed0-131">sealed</span><span class="sxs-lookup"><span data-stu-id="84ed0-131">sealed</span></span>](../../../csharp/language-reference/keywords/sealed.md)|<span data-ttu-id="84ed0-132">Especifica que uma classe não pode ser herdada.</span><span class="sxs-lookup"><span data-stu-id="84ed0-132">Specifies that a class cannot be inherited.</span></span>|  
+|[<span data-ttu-id="84ed0-133">static</span><span class="sxs-lookup"><span data-stu-id="84ed0-133">static</span></span>](../../../csharp/language-reference/keywords/static.md)|<span data-ttu-id="84ed0-134">Declara um membro que pertence ao tipo em si em vez de um objeto específico.</span><span class="sxs-lookup"><span data-stu-id="84ed0-134">Declares a member that belongs to the type itself instead of to a specific object.</span></span>|  
+|[<span data-ttu-id="84ed0-135">unsafe</span><span class="sxs-lookup"><span data-stu-id="84ed0-135">unsafe</span></span>](../../../csharp/language-reference/keywords/unsafe.md)|<span data-ttu-id="84ed0-136">Declara um contexto inseguro.</span><span class="sxs-lookup"><span data-stu-id="84ed0-136">Declares an unsafe context.</span></span>|  
+|[<span data-ttu-id="84ed0-137">virtual</span><span class="sxs-lookup"><span data-stu-id="84ed0-137">virtual</span></span>](../../../csharp/language-reference/keywords/virtual.md)|<span data-ttu-id="84ed0-138">Declara um método ou um acessador cuja implementação pode ser alterada por um membro substituído em uma classe derivada.</span><span class="sxs-lookup"><span data-stu-id="84ed0-138">Declares a method or an accessor whose implementation can be changed by an overriding member in a derived class.</span></span>|  
+|[<span data-ttu-id="84ed0-139">volatile</span><span class="sxs-lookup"><span data-stu-id="84ed0-139">volatile</span></span>](../../../csharp/language-reference/keywords/volatile.md)|<span data-ttu-id="84ed0-140">Indica que um campo pode ser modificado no programa por algo como o sistema operacional, o hardware ou um thread de execução simultânea.</span><span class="sxs-lookup"><span data-stu-id="84ed0-140">Indicates that a field can be modified in the program by something such as the operating system, the hardware, or a concurrently executing thread.</span></span>|  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="84ed0-141">Consulte também</span><span class="sxs-lookup"><span data-stu-id="84ed0-141">See Also</span></span>  
+ [<span data-ttu-id="84ed0-142">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="84ed0-142">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="84ed0-143">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="84ed0-143">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="84ed0-144">Palavras-chave do C#</span><span class="sxs-lookup"><span data-stu-id="84ed0-144">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)

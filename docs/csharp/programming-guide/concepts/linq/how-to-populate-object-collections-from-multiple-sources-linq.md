@@ -1,43 +1,34 @@
 ---
 title: "Como preencher coleções de objetos de várias fontes (LINQ) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: a3d3f0f9380e13addac38e32d4cc095d60e19bcf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 384449bf8202c707b1c7f5a75445410bc6270907
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Como preencher coleções de objetos de várias fontes (LINQ) (C#)
-Este exemplo mostra como mesclar dados de diferentes fontes em uma sequência de novos tipos.  
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a><span data-ttu-id="eeca0-102">Como preencher coleções de objetos de várias fontes (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="eeca0-102">How to: Populate Object Collections from Multiple Sources (LINQ) (C#)</span></span>
+<span data-ttu-id="eeca0-103">Este exemplo mostra como mesclar dados de diferentes fontes em uma sequência de novos tipos.</span><span class="sxs-lookup"><span data-stu-id="eeca0-103">This example shows how to merge data from different sources into a sequence of new types.</span></span>  
   
 > [!NOTE]
->  Não tente unir dados na memória ou dados no sistema de arquivos com os dados que ainda estão em um banco de dados. Essas junções entre domínios podem gerar resultados indefinidos, devido às diferentes formas em que as operações de junção podem ser definidas para consultas de banco de dados e outros tipos de fontes. Além disso, há um risco de que essa operação possa causar uma exceção de falta de memória, se a quantidade de dados no banco de dados for grande o suficiente. Para unir dados de um banco de dados com os dados na memória, primeiro chame `ToList` ou `ToArray` na consulta de banco de dados e, em seguida, realize a junção na coleção retornada.  
+>  <span data-ttu-id="eeca0-104">Não tente unir dados na memória ou dados no sistema de arquivos com os dados que ainda estão em um banco de dados.</span><span class="sxs-lookup"><span data-stu-id="eeca0-104">Do not try to join in-memory data or data in the file system with data that is still in a database.</span></span> <span data-ttu-id="eeca0-105">Essas junções entre domínios podem gerar resultados indefinidos, devido às diferentes formas em que as operações de junção podem ser definidas para consultas de banco de dados e outros tipos de fontes.</span><span class="sxs-lookup"><span data-stu-id="eeca0-105">Such cross-domain joins can yield undefined results because of different ways in which join operations might be defined for database queries and other types of sources.</span></span> <span data-ttu-id="eeca0-106">Além disso, há um risco de que essa operação possa causar uma exceção de falta de memória, se a quantidade de dados no banco de dados for grande o suficiente.</span><span class="sxs-lookup"><span data-stu-id="eeca0-106">Additionally, there is a risk that such an operation could cause an out-of-memory exception if the amount of data in the database is large enough.</span></span> <span data-ttu-id="eeca0-107">Para unir dados de um banco de dados com os dados na memória, primeiro chame `ToList` ou `ToArray` na consulta de banco de dados e, em seguida, realize a junção na coleção retornada.</span><span class="sxs-lookup"><span data-stu-id="eeca0-107">To join data from a database to in-memory data, first call `ToList` or `ToArray` on the database query, and then perform the join on the returned collection.</span></span>  
   
-### <a name="to-create-the-data-file"></a>Para criar o arquivo de dados  
+### <a name="to-create-the-data-file"></a><span data-ttu-id="eeca0-108">Para criar o arquivo de dados</span><span class="sxs-lookup"><span data-stu-id="eeca0-108">To create the data file</span></span>  
   
--   Copie os arquivos names.csv e scores.csv para a pasta do projeto, conforme descrito em [Como unir conteúdo de arquivos diferentes (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).  
+-   <span data-ttu-id="eeca0-109">Copie os arquivos names.csv e scores.csv para a pasta do projeto, conforme descrito em [Como unir conteúdo de arquivos diferentes (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).</span><span class="sxs-lookup"><span data-stu-id="eeca0-109">Copy the names.csv and scores.csv files into your project folder, as described in [How to: Join Content from Dissimilar Files (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).</span></span>  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar um tipo nomeado `Student` para armazenar dados mesclados, de duas coleções na memória de cadeias de caracteres, que simulam dados de planilha no formato .csv. A primeira coleção de cadeias de caracteres representa os nomes e as IDs dos alunos e a segunda coleção, representa a ID do aluno (na primeira coluna) e quatro pontuações de exames. A ID é usada como a chave estrangeira.  
+## <a name="example"></a><span data-ttu-id="eeca0-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="eeca0-110">Example</span></span>  
+ <span data-ttu-id="eeca0-111">O exemplo a seguir mostra como usar um tipo nomeado `Student` para armazenar dados mesclados, de duas coleções na memória de cadeias de caracteres, que simulam dados de planilha no formato .csv.</span><span class="sxs-lookup"><span data-stu-id="eeca0-111">The following example shows how to use a named type `Student` to store merged data from two in-memory collections of strings that simulate spreadsheet data in .csv format.</span></span> <span data-ttu-id="eeca0-112">A primeira coleção de cadeias de caracteres representa os nomes e as IDs dos alunos e a segunda coleção, representa a ID do aluno (na primeira coluna) e quatro pontuações de exames.</span><span class="sxs-lookup"><span data-stu-id="eeca0-112">The first collection of strings represents the student names and IDs, and the second collection represents the student ID (in the first column) and four exam scores.</span></span> <span data-ttu-id="eeca0-113">A ID é usada como a chave estrangeira.</span><span class="sxs-lookup"><span data-stu-id="eeca0-113">The ID is used as the foreign key.</span></span>  
   
 ```csharp  
 class Student  
@@ -118,9 +109,9 @@ class PopulateCollection
  */  
 ```  
   
- Na cláusula [select](../../../../csharp/language-reference/keywords/select-clause.md), um inicializador de objeto é usado para instanciar cada novo objeto `Student`, usando os dados das duas fontes.  
+ <span data-ttu-id="eeca0-114">Na cláusula [select](../../../../csharp/language-reference/keywords/select-clause.md), um inicializador de objeto é usado para instanciar cada novo objeto `Student`, usando os dados das duas fontes.</span><span class="sxs-lookup"><span data-stu-id="eeca0-114">In the [select](../../../../csharp/language-reference/keywords/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.</span></span>  
   
- Se você não tiver que armazenar os resultados de uma consulta, os tipos anônimos poderão ser mais convenientes que os tipos nomeados. Os tipos nomeados são necessários se você passa os resultados da consulta para fora do método em que a consulta é executada. O exemplo a seguir realiza a mesma tarefa do exemplo anterior, mas usa tipos anônimos em vez de tipos nomeados:  
+ <span data-ttu-id="eeca0-115">Se você não tiver que armazenar os resultados de uma consulta, os tipos anônimos poderão ser mais convenientes que os tipos nomeados.</span><span class="sxs-lookup"><span data-stu-id="eeca0-115">If you do not have to store the results of a query, anonymous types can be more convenient than named types.</span></span> <span data-ttu-id="eeca0-116">Os tipos nomeados são necessários se você passa os resultados da consulta para fora do método em que a consulta é executada.</span><span class="sxs-lookup"><span data-stu-id="eeca0-116">Named types are required if you pass the query results outside the method in which the query is executed.</span></span> <span data-ttu-id="eeca0-117">O exemplo a seguir realiza a mesma tarefa do exemplo anterior, mas usa tipos anônimos em vez de tipos nomeados:</span><span class="sxs-lookup"><span data-stu-id="eeca0-117">The following example performs the same task as the previous example, but uses anonymous types instead of named types:</span></span>  
   
 ```csharp  
 // Merge the data sources by using an anonymous type.  
@@ -150,11 +141,10 @@ foreach (var student in queryNamesScores2)
 }  
 ```  
   
-## <a name="compiling-the-code"></a>Compilando o código  
- Crie um projeto que tenha como alvo o .NET Framework versão 3.5 ou posterior, com uma referência a System.Core.dll e diretivas `using` para os namespaces System.Linq e System.IO.  
+## <a name="compiling-the-code"></a><span data-ttu-id="eeca0-118">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="eeca0-118">Compiling the Code</span></span>  
+ <span data-ttu-id="eeca0-119">Crie um projeto que tenha como alvo o .NET Framework versão 3.5 ou posterior, com uma referência a System.Core.dll e diretivas `using` para os namespaces System.Linq e System.IO.</span><span class="sxs-lookup"><span data-stu-id="eeca0-119">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [LINQ e cadeias de caracteres (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)   
- [Inicializadores de Objeto e Coleção](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)   
- [Tipos Anônimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
-
+## <a name="see-also"></a><span data-ttu-id="eeca0-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="eeca0-120">See Also</span></span>  
+ [<span data-ttu-id="eeca0-121">LINQ e cadeias de caracteres (C#)</span><span class="sxs-lookup"><span data-stu-id="eeca0-121">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+ [<span data-ttu-id="eeca0-122">Inicializadores de objeto e coleção</span><span class="sxs-lookup"><span data-stu-id="eeca0-122">Object and Collection Initializers</span></span>](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+ [<span data-ttu-id="eeca0-123">Tipos Anônimos</span><span class="sxs-lookup"><span data-stu-id="eeca0-123">Anonymous Types</span></span>](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)

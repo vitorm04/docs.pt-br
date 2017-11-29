@@ -5,69 +5,61 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - SecAnnotate.exe
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: f7051e753c324933828e2447752f9c5ea13ed9d7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cdfe635b913f379a031994ad359a7d6ab657c255
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (ferramenta Anotador de Segurança do .NET)
-A ferramenta Anotador de Segurança do .NET (SecAnnotate.exe) é um aplicativo de linha de comando que identifica as partes `SecurityCritical` e `SecuritySafeCritical` de um ou mais assemblies.  
+# <a name="secannotateexe-net-security-annotator-tool"></a><span data-ttu-id="5016a-102">SecAnnotate.exe (ferramenta Anotador de Segurança do .NET)</span><span class="sxs-lookup"><span data-stu-id="5016a-102">SecAnnotate.exe (.NET Security Annotator Tool)</span></span>
+<span data-ttu-id="5016a-103">A ferramenta Anotador de Segurança do .NET (SecAnnotate.exe) é um aplicativo de linha de comando que identifica as partes `SecurityCritical` e `SecuritySafeCritical` de um ou mais assemblies.</span><span class="sxs-lookup"><span data-stu-id="5016a-103">The .NET Security Annotator tool (SecAnnotate.exe) is a command-line application that identifies the `SecurityCritical` and `SecuritySafeCritical` portions of one or more assemblies.</span></span>  
   
- Uma extensão do Visual Studio, [Anotador de Segurança](http://go.microsoft.com/fwlink/?LinkId=198007), fornece uma interface gráfica do usuário para SecAnnotate.exe e permite executar a ferramenta no Visual Studio.  
+ <span data-ttu-id="5016a-104">Uma extensão do Visual Studio, [Anotador de Segurança](http://go.microsoft.com/fwlink/?LinkId=198007), fornece uma interface gráfica do usuário para SecAnnotate.exe e permite executar a ferramenta no Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="5016a-104">A Visual Studio extension, [Security Annotator](http://go.microsoft.com/fwlink/?LinkId=198007), provides a graphical user interface to SecAnnotate.exe and enables you to run the tool from Visual Studio.</span></span>  
   
- Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ <span data-ttu-id="5016a-105">Essa ferramenta é instalada automaticamente com o Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="5016a-105">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="5016a-106">Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor (ou o Prompt de Comando do Visual Studio no Windows 7).</span><span class="sxs-lookup"><span data-stu-id="5016a-106">To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="5016a-107">Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="5016a-107">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
- No prompt de comando, digite o seguinte, em que *parameters* são descritos na seção a seguir e *assemblies* consistem em um ou mais nomes de assembly separados por espaços em branco:  
+ <span data-ttu-id="5016a-108">No prompt de comando, digite o seguinte, em que *parameters* são descritos na seção a seguir e *assemblies* consistem em um ou mais nomes de assembly separados por espaços em branco:</span><span class="sxs-lookup"><span data-stu-id="5016a-108">At the command prompt, type the following, where *parameters* are described in the following section, and *assemblies* consist of one or more assembly names separated by blanks:</span></span>  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a><span data-ttu-id="5016a-109">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="5016a-109">Syntax</span></span>  
   
 ```  
 SecAnnotate.exe [parameters] [assemblies]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a><span data-ttu-id="5016a-110">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="5016a-110">Parameters</span></span>  
   
-|Opção|Descrição|  
+|<span data-ttu-id="5016a-111">Opção</span><span class="sxs-lookup"><span data-stu-id="5016a-111">Option</span></span>|<span data-ttu-id="5016a-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="5016a-112">Description</span></span>|  
 |------------|-----------------|  
-|`/a`<br /><br /> ou<br /><br /> `/showstatistics`|Mostra estatísticas sobre o uso de transparência em assemblies que estão sendo analisados.|  
-|`/d:` *diretório*<br /><br /> ou<br /><br /> `/referencedir:` *diretório*|Especifica um diretório para procura assemblies dependentes durante a anotação.|  
-|`/i`<br /><br /> ou<br /><br /> `/includesignatures`|Inclui informações de assinatura estendidas no arquivo de relatório da anotação.|  
-|`/n`<br /><br /> ou<br /><br /> `/nogac`|Suprime a procura de assemblies referenciados no cache de assembly global.|  
-|`/o:` *output.xml*<br /><br /> ou<br /><br /> `/out:` *output.xml*|Especifica o arquivo de anotação de saída.|  
-|`/p:` *maxpasses*<br /><br /> ou<br /><br /> `/maximumpasses:` *maxpasses*|Especifica o número máximo de passagens de anotação que serão feitas em assemblies antes de parar a geração de novas anotações.|  
-|`/q`<br /><br /> ou<br /><br /> `/quiet`|Especifica o modo silencioso, no qual o anotador não produz mensagens de status; ele produz apenas informações de erro.|  
-|`/r:` *assembly*<br /><br /> ou<br /><br /> `/referenceassembly:` *assembly*|Inclui o assembly especificado durante a resolução de assemblies dependentes durante a anotação. Os assemblies de referência recebem prioridade sobre assemblies encontrados no caminho de referência.|  
-|`/s:` *rulename*<br /><br /> ou<br /><br /> `/suppressrule:` *rulename*|Suprime a execução da regra de transparência especificada em assemblies de entrada.|  
-|`/t`<br /><br /> ou<br /><br /> `/forcetransparent`|Força a ferramenta Anotador a tratar todos os assemblies sem anotações de transparência como se fossem totalmente transparentes.|  
-|`/t`:*assembly*<br /><br /> ou<br /><br /> `/forcetransparent`:*assembly*|Force o assembly indicado para ser transparente, independentemente das anotações no nível de assembly atuais.|  
+|`/a`<br /><br /> <span data-ttu-id="5016a-113">ou</span><span class="sxs-lookup"><span data-stu-id="5016a-113">or</span></span><br /><br /> `/showstatistics`|<span data-ttu-id="5016a-114">Mostra estatísticas sobre o uso de transparência em assemblies que estão sendo analisados.</span><span class="sxs-lookup"><span data-stu-id="5016a-114">Shows statistics about the use of transparency in assemblies that are being analyzed.</span></span>|  
+|<span data-ttu-id="5016a-115">`/d:` *diretório*</span><span class="sxs-lookup"><span data-stu-id="5016a-115">`/d:` *directory*</span></span><br /><br /> <span data-ttu-id="5016a-116">ou</span><span class="sxs-lookup"><span data-stu-id="5016a-116">or</span></span><br /><br /> <span data-ttu-id="5016a-117">`/referencedir:` *diretório*</span><span class="sxs-lookup"><span data-stu-id="5016a-117">`/referencedir:` *directory*</span></span>|<span data-ttu-id="5016a-118">Especifica um diretório para procura assemblies dependentes durante a anotação.</span><span class="sxs-lookup"><span data-stu-id="5016a-118">Specifies a directory to search for dependent assemblies during annotation.</span></span>|  
+|`/i`<br /><br /> <span data-ttu-id="5016a-119">ou</span><span class="sxs-lookup"><span data-stu-id="5016a-119">or</span></span><br /><br /> `/includesignatures`|<span data-ttu-id="5016a-120">Inclui informações de assinatura estendidas no arquivo de relatório da anotação.</span><span class="sxs-lookup"><span data-stu-id="5016a-120">Includes extended signature information in the annotation report file.</span></span>|  
+|`/n`<br /><br /> <span data-ttu-id="5016a-121">ou</span><span class="sxs-lookup"><span data-stu-id="5016a-121">or</span></span><br /><br /> `/nogac`|<span data-ttu-id="5016a-122">Suprime a procura de assemblies referenciados no cache de assembly global.</span><span class="sxs-lookup"><span data-stu-id="5016a-122">Suppresses searching for referenced assemblies in the global assembly cache.</span></span>|  
+|<span data-ttu-id="5016a-123">`/o:` *output.xml*</span><span class="sxs-lookup"><span data-stu-id="5016a-123">`/o:` *output.xml*</span></span><br /><br /> <span data-ttu-id="5016a-124">ou</span><span class="sxs-lookup"><span data-stu-id="5016a-124">or</span></span><br /><br /> <span data-ttu-id="5016a-125">`/out:` *output.xml*</span><span class="sxs-lookup"><span data-stu-id="5016a-125">`/out:` *output.xml*</span></span>|<span data-ttu-id="5016a-126">Especifica o arquivo de anotação de saída.</span><span class="sxs-lookup"><span data-stu-id="5016a-126">Specifies the output annotation file.</span></span>|  
+|<span data-ttu-id="5016a-127">`/p:` *maxpasses*</span><span class="sxs-lookup"><span data-stu-id="5016a-127">`/p:` *maxpasses*</span></span><br /><br /> <span data-ttu-id="5016a-128">ou</span><span class="sxs-lookup"><span data-stu-id="5016a-128">or</span></span><br /><br /> <span data-ttu-id="5016a-129">`/maximumpasses:` *maxpasses*</span><span class="sxs-lookup"><span data-stu-id="5016a-129">`/maximumpasses:` *maxpasses*</span></span>|<span data-ttu-id="5016a-130">Especifica o número máximo de passagens de anotação que serão feitas em assemblies antes de parar a geração de novas anotações.</span><span class="sxs-lookup"><span data-stu-id="5016a-130">Specifies the maximum number of annotation passes to make on assemblies before stopping the generation of new annotations.</span></span>|  
+|`/q`<br /><br /> <span data-ttu-id="5016a-131">ou</span><span class="sxs-lookup"><span data-stu-id="5016a-131">or</span></span><br /><br /> `/quiet`|<span data-ttu-id="5016a-132">Especifica o modo silencioso, no qual o anotador não produz mensagens de status; ele produz apenas informações de erro.</span><span class="sxs-lookup"><span data-stu-id="5016a-132">Specifies quiet mode, in which the annotator does not output status messages; it outputs only error information.</span></span>|  
+|<span data-ttu-id="5016a-133">`/r:` *assembly*</span><span class="sxs-lookup"><span data-stu-id="5016a-133">`/r:` *assembly*</span></span><br /><br /> <span data-ttu-id="5016a-134">ou</span><span class="sxs-lookup"><span data-stu-id="5016a-134">or</span></span><br /><br /> <span data-ttu-id="5016a-135">`/referenceassembly:` *assembly*</span><span class="sxs-lookup"><span data-stu-id="5016a-135">`/referenceassembly:` *assembly*</span></span>|<span data-ttu-id="5016a-136">Inclui o assembly especificado durante a resolução de assemblies dependentes durante a anotação.</span><span class="sxs-lookup"><span data-stu-id="5016a-136">Includes the specified assembly when resolving dependent assemblies during annotation.</span></span> <span data-ttu-id="5016a-137">Os assemblies de referência recebem prioridade sobre assemblies encontrados no caminho de referência.</span><span class="sxs-lookup"><span data-stu-id="5016a-137">Reference assemblies are given priority over assemblies that are found in the reference path.</span></span>|  
+|<span data-ttu-id="5016a-138">`/s:` *rulename*</span><span class="sxs-lookup"><span data-stu-id="5016a-138">`/s:` *rulename*</span></span><br /><br /> <span data-ttu-id="5016a-139">ou</span><span class="sxs-lookup"><span data-stu-id="5016a-139">or</span></span><br /><br /> <span data-ttu-id="5016a-140">`/suppressrule:` *rulename*</span><span class="sxs-lookup"><span data-stu-id="5016a-140">`/suppressrule:` *rulename*</span></span>|<span data-ttu-id="5016a-141">Suprime a execução da regra de transparência especificada em assemblies de entrada.</span><span class="sxs-lookup"><span data-stu-id="5016a-141">Suppresses running the specified transparency rule on the input assemblies.</span></span>|  
+|`/t`<br /><br /> <span data-ttu-id="5016a-142">ou</span><span class="sxs-lookup"><span data-stu-id="5016a-142">or</span></span><br /><br /> `/forcetransparent`|<span data-ttu-id="5016a-143">Força a ferramenta Anotador a tratar todos os assemblies sem anotações de transparência como se fossem totalmente transparentes.</span><span class="sxs-lookup"><span data-stu-id="5016a-143">Forces the Annotator tool to treat all assemblies that do not have any transparency annotations as if they were entirely transparent.</span></span>|  
+|<span data-ttu-id="5016a-144">`/t`:*assembly*</span><span class="sxs-lookup"><span data-stu-id="5016a-144">`/t`:*assembly*</span></span><br /><br /> <span data-ttu-id="5016a-145">ou</span><span class="sxs-lookup"><span data-stu-id="5016a-145">or</span></span><br /><br /> <span data-ttu-id="5016a-146">`/forcetransparent`:*assembly*</span><span class="sxs-lookup"><span data-stu-id="5016a-146">`/forcetransparent`:*assembly*</span></span>|<span data-ttu-id="5016a-147">Force o assembly indicado para ser transparente, independentemente das anotações no nível de assembly atuais.</span><span class="sxs-lookup"><span data-stu-id="5016a-147">Force the given assembly to be transparent, regardless of its current assembly-level annotations.</span></span>|  
 |||  
-|`/v`<br /><br /> ou<br /><br /> `/verify`|Verifica apenas se as anotações de um assembly estão corretas; não tenta fazer várias passagens para encontrar todas as anotações obrigatórias se o assembly não verificar.|  
-|`/x`<br /><br /> ou<br /><br /> `/verbose`|Especifica a saída detalhada durante a anotação.|  
-|`/y:` *diretório*<br /><br /> ou<br /><br /> `/symbolpath:` *diretório*|Inclui o diretório especificado durante a procura de arquivos de símbolo durante a anotação.|  
+|`/v`<br /><br /> <span data-ttu-id="5016a-148">ou</span><span class="sxs-lookup"><span data-stu-id="5016a-148">or</span></span><br /><br /> `/verify`|<span data-ttu-id="5016a-149">Verifica apenas se as anotações de um assembly estão corretas; não tenta fazer várias passagens para encontrar todas as anotações obrigatórias se o assembly não verificar.</span><span class="sxs-lookup"><span data-stu-id="5016a-149">Verifies only that an assembly's annotations are correct; does not attempt to make multiple passes to find all required annotations if the assembly does not verify.</span></span>|  
+|`/x`<br /><br /> <span data-ttu-id="5016a-150">ou</span><span class="sxs-lookup"><span data-stu-id="5016a-150">or</span></span><br /><br /> `/verbose`|<span data-ttu-id="5016a-151">Especifica a saída detalhada durante a anotação.</span><span class="sxs-lookup"><span data-stu-id="5016a-151">Specifies verbose output while annotating.</span></span>|  
+|<span data-ttu-id="5016a-152">`/y:` *diretório*</span><span class="sxs-lookup"><span data-stu-id="5016a-152">`/y:` *directory*</span></span><br /><br /> <span data-ttu-id="5016a-153">ou</span><span class="sxs-lookup"><span data-stu-id="5016a-153">or</span></span><br /><br /> <span data-ttu-id="5016a-154">`/symbolpath:` *diretório*</span><span class="sxs-lookup"><span data-stu-id="5016a-154">`/symbolpath:` *directory*</span></span>|<span data-ttu-id="5016a-155">Inclui o diretório especificado durante a procura de arquivos de símbolo durante a anotação.</span><span class="sxs-lookup"><span data-stu-id="5016a-155">Includes the specified directory when searching for symbol files during annotation.</span></span>|  
   
-## <a name="remarks"></a>Comentários  
- Os parâmetros e os assemblies também podem ser fornecidos em um arquivo de resposta especificado na linha de comando e prefixado com uma arroba (@). Cada linha no arquivo de resposta deve conter um único parâmetro ou nome de assembly.  
+## <a name="remarks"></a><span data-ttu-id="5016a-156">Comentários</span><span class="sxs-lookup"><span data-stu-id="5016a-156">Remarks</span></span>  
+ <span data-ttu-id="5016a-157">Os parâmetros e os assemblies também podem ser fornecidos em um arquivo de resposta especificado na linha de comando e prefixado com uma arroba (@).</span><span class="sxs-lookup"><span data-stu-id="5016a-157">Parameters and assemblies may also be provided in a response file that is specified on the command line and prefixed with an at sign (@).</span></span> <span data-ttu-id="5016a-158">Cada linha no arquivo de resposta deve conter um único parâmetro ou nome de assembly.</span><span class="sxs-lookup"><span data-stu-id="5016a-158">Each line in the response file should contain a single parameter or assembly name.</span></span>  
   
- Para obter mais informações sobre o Anotador de Segurança do .NET, consulte a entrada [Using SecAnnotate to Analyze Your Assemblies for Transparency Violations](http://go.microsoft.com/fwlink/?LinkId=187648) (Usando o SecAnnotate para analisar os assemblies quanto a violações de transparência) no .NET Security Blog.  
+ <span data-ttu-id="5016a-159">Para obter mais informações sobre o Anotador de Segurança do .NET, consulte a entrada [Using SecAnnotate to Analyze Your Assemblies for Transparency Violations](http://go.microsoft.com/fwlink/?LinkId=187648) (Usando o SecAnnotate para analisar os assemblies quanto a violações de transparência) no .NET Security Blog.</span><span class="sxs-lookup"><span data-stu-id="5016a-159">For more information about the .NET Security Annotator, see the entry [Using SecAnnotate to Analyze Your Assemblies for Transparency Violations](http://go.microsoft.com/fwlink/?LinkId=187648) in the .NET Security blog.</span></span>  
   
-## <a name="examples"></a>Exemplos
-
+## <a name="examples"></a><span data-ttu-id="5016a-160">Exemplos</span><span class="sxs-lookup"><span data-stu-id="5016a-160">Examples</span></span>

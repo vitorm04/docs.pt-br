@@ -5,78 +5,70 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- CLR activation, debugging issues
+helpviewer_keywords: CLR activation, debugging issues
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 5d923f97b6c3954f07467f9fbfe40913f427bb99
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f1f1f3393457c783fe8f73d987a287f1afb18f40
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-debug-clr-activation-issues"></a>Como depurar problemas de ativação do CLR
-Se você encontrar problemas em fazer com que seu aplicativo seja executado com a versão correta do CLR (Common Language Runtime), poderá exibir e depurar os logs de ativação do CLR. Esses logs podem ser muito úteis para determinar a causa raiz de um problema de ativação, quando o aplicativo carrega uma versão do CLR diferente da esperada ou não carrega o CLR de forma alguma. O [.NET Framework Initialization Errors: Managing the User Experience](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) (Erros de inicialização do .NET Framework: gerenciando a experiência do usuário) discute a experiência quando nenhum CLR é encontrado para o aplicativo.  
+# <a name="how-to-debug-clr-activation-issues"></a><span data-ttu-id="55104-102">Como depurar problemas de ativação do CLR</span><span class="sxs-lookup"><span data-stu-id="55104-102">How to: Debug CLR Activation Issues</span></span>
+<span data-ttu-id="55104-103">Se você encontrar problemas em fazer com que seu aplicativo seja executado com a versão correta do CLR (Common Language Runtime), poderá exibir e depurar os logs de ativação do CLR.</span><span class="sxs-lookup"><span data-stu-id="55104-103">If you encounter problems in getting your application to run with the correct version of the common language runtime (CLR), you can view and debug CLR activation logs.</span></span> <span data-ttu-id="55104-104">Esses logs podem ser muito úteis para determinar a causa raiz de um problema de ativação, quando o aplicativo carrega uma versão do CLR diferente da esperada ou não carrega o CLR de forma alguma.</span><span class="sxs-lookup"><span data-stu-id="55104-104">These logs can be very useful in determining the root cause of an activation issue, when your application either loads a different CLR version than expected or doesn't load the CLR at all.</span></span> <span data-ttu-id="55104-105">O [.NET Framework Initialization Errors: Managing the User Experience](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) (Erros de inicialização do .NET Framework: gerenciando a experiência do usuário) discute a experiência quando nenhum CLR é encontrado para o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="55104-105">The [.NET Framework Initialization Errors: Managing the User Experience](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) discusses the experience when no CLR is found for an application.</span></span>  
   
- O registro em log de ativação do CLR pode ser habilitado em todo o sistema usando uma chave do Registro HKEY_LOCAL_MACHINE ou uma variável de ambiente do sistema. O log será gerado até que a entrada do Registro ou a variável de ambiente seja removida. Como alternativa, você pode usar uma variável de ambiente local de processo ou usuário para habilitar o registro em log com uma duração e um escopo diferente.  
+ <span data-ttu-id="55104-106">O registro em log de ativação do CLR pode ser habilitado em todo o sistema usando uma chave do Registro HKEY_LOCAL_MACHINE ou uma variável de ambiente do sistema.</span><span class="sxs-lookup"><span data-stu-id="55104-106">CLR activation logging can be enabled system-wide by using an HKEY_LOCAL_MACHINE registry key or a system environment variable.</span></span> <span data-ttu-id="55104-107">O log será gerado até que a entrada do Registro ou a variável de ambiente seja removida.</span><span class="sxs-lookup"><span data-stu-id="55104-107">The log will be generated until the registry entry or the environment variable is removed.</span></span> <span data-ttu-id="55104-108">Como alternativa, você pode usar uma variável de ambiente local de processo ou usuário para habilitar o registro em log com uma duração e um escopo diferente.</span><span class="sxs-lookup"><span data-stu-id="55104-108">Alternatively, you can use a user or process-local environment variable to enable logging with a different scope and duration.</span></span>  
   
- Os logs de ativação do CLR não devem ser confundidos com os [logs de associação de assembly](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), que são totalmente diferentes.  
+ <span data-ttu-id="55104-109">Os logs de ativação do CLR não devem ser confundidos com os [logs de associação de assembly](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), que são totalmente diferentes.</span><span class="sxs-lookup"><span data-stu-id="55104-109">CLR activation logs shouldn't be confused with [assembly binding logs](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), which are entirely different.</span></span>  
   
-## <a name="to-enable-clr-activation-logging"></a>Para habilitar o registro em log de ativação do CLR  
+## <a name="to-enable-clr-activation-logging"></a><span data-ttu-id="55104-110">Para habilitar o registro em log de ativação do CLR</span><span class="sxs-lookup"><span data-stu-id="55104-110">To enable CLR activation logging</span></span>  
   
-#### <a name="using-the-registry"></a>Usando o Registro  
+#### <a name="using-the-registry"></a><span data-ttu-id="55104-111">Usando o Registro</span><span class="sxs-lookup"><span data-stu-id="55104-111">Using the registry</span></span>  
   
-1.  No Editor de Registro, navegue até a pasta HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework (em um computador de 32 bits) ou a HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework (em um computador de 64 bits).  
+1.  <span data-ttu-id="55104-112">No Editor de Registro, navegue até a pasta HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework (em um computador de 32 bits) ou a HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework (em um computador de 64 bits).</span><span class="sxs-lookup"><span data-stu-id="55104-112">In the Registry Editor, navigate to HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework (on a 32-bit computer) or HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework folder (on a 64-bit computer).</span></span>  
   
-2.  Adicione um valor de cadeia de caracteres chamado `CLRLoadLogDir` e defina-o como o caminho completo de um diretório existente no qual você deseja armazenar os logs de ativação do CLR.  
+2.  <span data-ttu-id="55104-113">Adicione um valor de cadeia de caracteres chamado `CLRLoadLogDir` e defina-o como o caminho completo de um diretório existente no qual você deseja armazenar os logs de ativação do CLR.</span><span class="sxs-lookup"><span data-stu-id="55104-113">Add a string value named `CLRLoadLogDir`, and set it to the full path of an existing directory where you'd like to store CLR activation logs.</span></span>  
   
- O registro em log da ativação continua habilitada até que você remova o valor da cadeia de caracteres.  
+ <span data-ttu-id="55104-114">O registro em log da ativação continua habilitada até que você remova o valor da cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="55104-114">Activation logging remains enabled until you remove the string value.</span></span>  
   
-#### <a name="using-an-environment-variable"></a>Usando uma variável de ambiente  
+#### <a name="using-an-environment-variable"></a><span data-ttu-id="55104-115">Usando uma variável de ambiente</span><span class="sxs-lookup"><span data-stu-id="55104-115">Using an environment variable</span></span>  
   
--   Defina a variável de ambiente `COMPLUS_CLRLoadLogDir` para uma cadeia de caracteres que represente o caminho completo de um diretório existente em que você gostaria de armazenar os logs de ativação do CLR.  
+-   <span data-ttu-id="55104-116">Defina a variável de ambiente `COMPLUS_CLRLoadLogDir` para uma cadeia de caracteres que represente o caminho completo de um diretório existente em que você gostaria de armazenar os logs de ativação do CLR.</span><span class="sxs-lookup"><span data-stu-id="55104-116">Set the `COMPLUS_CLRLoadLogDir` environment variable to a string that represents the full path of an existing directory where you'd like to store CLR activation logs.</span></span>  
   
-     Como você define a variável de ambiente determina seu escopo:  
+     <span data-ttu-id="55104-117">Como você define a variável de ambiente determina seu escopo:</span><span class="sxs-lookup"><span data-stu-id="55104-117">How you set the environment variable determines its scope:</span></span>  
   
-    -   Se você a definir no nível do sistema, o registro em log da ativação estará habilitado para todos os aplicativos do .NET Framework nesse computador até a variável de ambiente ser removida.  
+    -   <span data-ttu-id="55104-118">Se você a definir no nível do sistema, o registro em log da ativação estará habilitado para todos os aplicativos do .NET Framework nesse computador até a variável de ambiente ser removida.</span><span class="sxs-lookup"><span data-stu-id="55104-118">If you set it at the system level, activation logging is enabled for all .NET Framework applications on that computer until the environment variable is removed.</span></span>  
   
-    -   Se você a definir no nível do usuário, o registro em log da ativação estará habilitado apenas para a conta de usuário atual. O registro em log continua até a variável de ambiente ser removida.  
+    -   <span data-ttu-id="55104-119">Se você a definir no nível do usuário, o registro em log da ativação estará habilitado apenas para a conta de usuário atual.</span><span class="sxs-lookup"><span data-stu-id="55104-119">If you set it at the user level, activation logging is enabled only for the current user account.</span></span> <span data-ttu-id="55104-120">O registro em log continua até a variável de ambiente ser removida.</span><span class="sxs-lookup"><span data-stu-id="55104-120">Logging continues until the environment variable is removed.</span></span>  
   
-    -   Se você a definir de dentro do processo antes de carregar o CLR, o registro em log da ativação estará habilitado até que o processo seja encerrado.  
+    -   <span data-ttu-id="55104-121">Se você a definir de dentro do processo antes de carregar o CLR, o registro em log da ativação estará habilitado até que o processo seja encerrado.</span><span class="sxs-lookup"><span data-stu-id="55104-121">If you set it from within the process before loading the CLR, activation logging is enabled until the process terminates.</span></span>  
   
-    -   Se você a definir em um prompt de comando antes de executar um aplicativo, o registro em log da ativação estará habilitado para qualquer aplicativo executado desse prompt de comando.  
+    -   <span data-ttu-id="55104-122">Se você a definir em um prompt de comando antes de executar um aplicativo, o registro em log da ativação estará habilitado para qualquer aplicativo executado desse prompt de comando.</span><span class="sxs-lookup"><span data-stu-id="55104-122">If you set it at a command prompt before you run an application, activation logging is enabled for any application that is run from that command prompt.</span></span>  
   
-     Por exemplo, para armazenar logs de ativação no diretório c:\clrloadlogs com escopo do nível de processo, abra uma janela de Prompt de Comando e digite o seguinte antes de executar o aplicativo:  
+     <span data-ttu-id="55104-123">Por exemplo, para armazenar logs de ativação no diretório c:\clrloadlogs com escopo do nível de processo, abra uma janela de Prompt de Comando e digite o seguinte antes de executar o aplicativo:</span><span class="sxs-lookup"><span data-stu-id="55104-123">For example, to store activation logs in the c:\clrloadlogs directory with process-level scope, open a Command Prompt window and type the following before you run the application:</span></span>  
   
     ```  
     set COMPLUS_CLRLoadLogDir=c:\clrloadlogs  
     ```  
   
-## <a name="example"></a>Exemplo  
- Os logs de ativação do CLR fornecem uma grande quantidade de dados sobre a ativação do CLR e o uso das APIs de hospedagem do CLR. A maioria desses dados é usada internamente pela Microsoft, mas alguns dos dados também podem ser úteis para os desenvolvedores, conforme descrito neste artigo.  
+## <a name="example"></a><span data-ttu-id="55104-124">Exemplo</span><span class="sxs-lookup"><span data-stu-id="55104-124">Example</span></span>  
+ <span data-ttu-id="55104-125">Os logs de ativação do CLR fornecem uma grande quantidade de dados sobre a ativação do CLR e o uso das APIs de hospedagem do CLR.</span><span class="sxs-lookup"><span data-stu-id="55104-125">CLR activation logs provide a large amount of data about CLR activation and the use of the CLR hosting APIs.</span></span> <span data-ttu-id="55104-126">A maioria desses dados é usada internamente pela Microsoft, mas alguns dos dados também podem ser úteis para os desenvolvedores, conforme descrito neste artigo.</span><span class="sxs-lookup"><span data-stu-id="55104-126">Most of this data is used internally by Microsoft, but some of the data can also be useful to developers, as described in this article.</span></span>  
   
- O log reflete a ordem na qual as APIs de hospedagem do CLR foram chamadas. Ele também inclui dados úteis sobre o conjunto de tempos de execução instalados detectados no computador. O formato de log de ativação do CLR não está documentado, mas pode ser usado para auxiliar os desenvolvedores que precisam resolver problemas de ativação do CLR.  
-  
-> [!NOTE]
->  Não é possível abrir um log de ativação até que o processo que usa o CLR seja finalizado.  
+ <span data-ttu-id="55104-127">O log reflete a ordem na qual as APIs de hospedagem do CLR foram chamadas.</span><span class="sxs-lookup"><span data-stu-id="55104-127">The log reflects the order in which the CLR hosting APIs were called.</span></span> <span data-ttu-id="55104-128">Ele também inclui dados úteis sobre o conjunto de tempos de execução instalados detectados no computador.</span><span class="sxs-lookup"><span data-stu-id="55104-128">It also includes useful data about the set of installed runtimes detected on the computer.</span></span> <span data-ttu-id="55104-129">O formato de log de ativação do CLR não está documentado, mas pode ser usado para auxiliar os desenvolvedores que precisam resolver problemas de ativação do CLR.</span><span class="sxs-lookup"><span data-stu-id="55104-129">The CLR activation log format is not itself documented, but can be used to aid developers who need to resolve CLR activation issues.</span></span>  
   
 > [!NOTE]
->  Logs de ativação do CLR não são localizados, eles são gerados sempre em inglês.  
+>  <span data-ttu-id="55104-130">Não é possível abrir um log de ativação até que o processo que usa o CLR seja finalizado.</span><span class="sxs-lookup"><span data-stu-id="55104-130">You cannot open an activation log until the process that uses the CLR has terminated.</span></span>  
   
- No exemplo a seguir de um log de ativação, as informações mais úteis são realçadas e descritas após o log.  
+> [!NOTE]
+>  <span data-ttu-id="55104-131">Logs de ativação do CLR não são localizados, eles são gerados sempre em inglês.</span><span class="sxs-lookup"><span data-stu-id="55104-131">CLR activation logs are not localized; they are always generated in the English language.</span></span>  
+  
+ <span data-ttu-id="55104-132">No exemplo a seguir de um log de ativação, as informações mais úteis são realçadas e descritas após o log.</span><span class="sxs-lookup"><span data-stu-id="55104-132">In the following example of an activation log, the most useful information is highlighted and described after the log.</span></span>  
   
 ```  
 532,205950.367,CLR Loading log for C:\Tests\myapp.exe   
@@ -107,31 +99,30 @@ Se você encontrar problemas em fazer com que seu aplicativo seja executado com 
 532,205950.398,FunctionCall: OnShimDllMainCalled. Reason: 0  
 ```  
   
--   **CLR Loading log** fornece o caminho para o executável que iniciou o processo que carregou o código gerenciado. Observe que isso poderia ser um host nativo.  
+-   <span data-ttu-id="55104-133">**CLR Loading log** fornece o caminho para o executável que iniciou o processo que carregou o código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="55104-133">**CLR Loading log** provides the path to the executable that started the process that loaded managed code.</span></span> <span data-ttu-id="55104-134">Observe que isso poderia ser um host nativo.</span><span class="sxs-lookup"><span data-stu-id="55104-134">Note that this could be a native host.</span></span>  
   
     ```  
     532,205950.367,CLR Loading log for C:\Tests\myapp.exe  
     ```  
   
--   **Installed Runtime** é o conjunto das versões do CLR instaladas no computador que são candidatas para a solicitação de ativação.  
+-   <span data-ttu-id="55104-135">**Installed Runtime** é o conjunto das versões do CLR instaladas no computador que são candidatas para a solicitação de ativação.</span><span class="sxs-lookup"><span data-stu-id="55104-135">**Installed Runtime** is the set of CLR versions installed on the computer that are candidates for the activation request.</span></span>  
   
     ```  
     532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0  
     ```  
   
--   **built with version** é a versão do CLR que foi usada para criar o binário que foi fornecido para um método como [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md).  
+-   <span data-ttu-id="55104-136">**built with version** é a versão do CLR que foi usada para criar o binário que foi fornecido para um método como [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md).</span><span class="sxs-lookup"><span data-stu-id="55104-136">**built with version** is the version of the CLR that was used to build the binary that was provided to a method such as [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md).</span></span>  
   
     ```  
     532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727  
     ```  
   
--   **feature-on-demand installation** refere-se a habilitar o .NET Framework 3.5 no Windows 8. Consulte [.NET Framework Initialization Errors: Managing the User Experience](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) (Erros de inicialização do .NET Framework: gerenciando a experiência do usuário) para obter mais informações sobre esse cenário.  
+-   <span data-ttu-id="55104-137">**feature-on-demand installation** refere-se a habilitar o .NET Framework 3.5 no Windows 8.</span><span class="sxs-lookup"><span data-stu-id="55104-137">**feature-on-demand installation** refers to enabling the .NET Framework 3.5 on Windows 8.</span></span> <span data-ttu-id="55104-138">Consulte [.NET Framework Initialization Errors: Managing the User Experience](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) (Erros de inicialização do .NET Framework: gerenciando a experiência do usuário) para obter mais informações sobre esse cenário.</span><span class="sxs-lookup"><span data-stu-id="55104-138">See [.NET Framework Initialization Errors: Managing the User Experience](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) for more information about this scenario.</span></span>  
   
     ```  
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [Implantação](../../../docs/framework/deployment/index.md)   
- [Como configurar um aplicativo para oferecer suporte ao .NET Framework 4 ou 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
-
+## <a name="see-also"></a><span data-ttu-id="55104-139">Consulte também</span><span class="sxs-lookup"><span data-stu-id="55104-139">See Also</span></span>  
+ [<span data-ttu-id="55104-140">Implantação</span><span class="sxs-lookup"><span data-stu-id="55104-140">Deployment</span></span>](../../../docs/framework/deployment/index.md)  
+ [<span data-ttu-id="55104-141">Como configurar um aplicativo para oferecer suporte ao .NET Framework 4 ou 4.5</span><span class="sxs-lookup"><span data-stu-id="55104-141">How to: Configure an App to Support .NET Framework 4 or 4.5</span></span>](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

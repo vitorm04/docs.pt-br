@@ -1,130 +1,111 @@
 ---
 title: "Polimorfismo (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 601c8cf626c846ca6c5d6bc2338e271e6b93544a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c278a6a931154af97cab5b1ff33124dd31a3fa2e
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="polymorphism-c-programming-guide"></a>Polimorfismo (Guia de Programação em C#)
-O polimorfismo costuma ser chamado de o terceiro pilar da programação orientada a objetos, depois do encapsulamento e a herança. O polimorfismo é uma palavra grega que significa "de muitas formas" e tem dois aspectos distintos:  
+# <a name="polymorphism-c-programming-guide"></a><span data-ttu-id="0f401-102">Polimorfismo (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="0f401-102">Polymorphism (C# Programming Guide)</span></span>
+<span data-ttu-id="0f401-103">O polimorfismo costuma ser chamado de o terceiro pilar da programação orientada a objetos, depois do encapsulamento e a herança.</span><span class="sxs-lookup"><span data-stu-id="0f401-103">Polymorphism is often referred to as the third pillar of object-oriented programming, after encapsulation and inheritance.</span></span> <span data-ttu-id="0f401-104">O polimorfismo é uma palavra grega que significa "de muitas formas" e tem dois aspectos distintos:</span><span class="sxs-lookup"><span data-stu-id="0f401-104">Polymorphism is a Greek word that means "many-shaped" and it has two distinct aspects:</span></span>  
   
--   Em tempo de execução, os objetos de uma classe derivada podem ser tratados como objetos de uma classe base, em locais como parâmetros de método, coleções e matrizes. Quando isso ocorre, o tipo declarado do objeto não é mais idêntico ao seu tipo de tempo de execução.  
+-   <span data-ttu-id="0f401-105">Em tempo de execução, os objetos de uma classe derivada podem ser tratados como objetos de uma classe base, em locais como parâmetros de método, coleções e matrizes.</span><span class="sxs-lookup"><span data-stu-id="0f401-105">At run time, objects of a derived class may be treated as objects of a base class in places such as method parameters and collections or arrays.</span></span> <span data-ttu-id="0f401-106">Quando isso ocorre, o tipo declarado do objeto não é mais idêntico ao seu tipo de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="0f401-106">When this occurs, the object's declared type is no longer identical to its run-time type.</span></span>  
   
--   As classes base podem definir e implementar *métodos* [virtuais](../../../csharp/language-reference/keywords/virtual.md) e as classes derivadas podem [substituí-los](../../../csharp/language-reference/keywords/override.md), o que significa que elas fornecem sua própria definição e implementação. Em tempo de execução, quando o código do cliente chama o método, o CLR procura o tipo de tempo de execução do objeto e invoca a substituição do método virtual. Dessa forma, você pode chamar em seu código-fonte um método de uma classe base e fazer com que a versão de uma classe derivada do método seja executada.  
+-   <span data-ttu-id="0f401-107">As classes base podem definir e implementar *métodos* [virtuais](../../../csharp/language-reference/keywords/virtual.md) e as classes derivadas podem [substituí-los](../../../csharp/language-reference/keywords/override.md), o que significa que elas fornecem sua própria definição e implementação.</span><span class="sxs-lookup"><span data-stu-id="0f401-107">Base classes may define and implement [virtual](../../../csharp/language-reference/keywords/virtual.md) *methods*, and derived classes can [override](../../../csharp/language-reference/keywords/override.md) them, which means they provide their own definition and implementation.</span></span> <span data-ttu-id="0f401-108">Em tempo de execução, quando o código do cliente chama o método, o CLR procura o tipo de tempo de execução do objeto e invoca a substituição do método virtual.</span><span class="sxs-lookup"><span data-stu-id="0f401-108">At run-time, when client code calls the method, the CLR looks up the run-time type of the object, and invokes that override of the virtual method.</span></span> <span data-ttu-id="0f401-109">Dessa forma, você pode chamar em seu código-fonte um método de uma classe base e fazer com que a versão de uma classe derivada do método seja executada.</span><span class="sxs-lookup"><span data-stu-id="0f401-109">Thus in your source code you can call a method on a base class, and cause a derived class's version of the method to be executed.</span></span>  
   
- Os métodos virtuais permitem que você trabalhe com grupos de objetos relacionados de maneira uniforme. Por exemplo, suponha que você tem um aplicativo de desenho que permite que um usuário crie vários tipos de formas sobre uma superfície de desenho. Você não sabe em tempo de compilação que tipos específicos de formas que o usuário criará. No entanto, o aplicativo precisa manter controle de todos os diferentes tipos de formas que são criados e atualizá-los em resposta às ações do mouse do usuário. Você pode usar o polimorfismo para resolver esse problema em duas etapas básicas:  
+ <span data-ttu-id="0f401-110">Os métodos virtuais permitem que você trabalhe com grupos de objetos relacionados de maneira uniforme.</span><span class="sxs-lookup"><span data-stu-id="0f401-110">Virtual methods enable you to work with groups of related objects in a uniform way.</span></span> <span data-ttu-id="0f401-111">Por exemplo, suponha que você tem um aplicativo de desenho que permite que um usuário crie vários tipos de formas sobre uma superfície de desenho.</span><span class="sxs-lookup"><span data-stu-id="0f401-111">For example, suppose you have a drawing application that enables a user to create various kinds of shapes on a drawing surface.</span></span> <span data-ttu-id="0f401-112">Você não sabe em tempo de compilação que tipos específicos de formas que o usuário criará.</span><span class="sxs-lookup"><span data-stu-id="0f401-112">You do not know at compile time which specific types of shapes the user will create.</span></span> <span data-ttu-id="0f401-113">No entanto, o aplicativo precisa manter controle de todos os diferentes tipos de formas que são criados e atualizá-los em resposta às ações do mouse do usuário.</span><span class="sxs-lookup"><span data-stu-id="0f401-113">However, the application has to keep track of all the various types of shapes that are created, and it has to update them in response to user mouse actions.</span></span> <span data-ttu-id="0f401-114">Você pode usar o polimorfismo para resolver esse problema em duas etapas básicas:</span><span class="sxs-lookup"><span data-stu-id="0f401-114">You can use polymorphism to solve this problem in two basic steps:</span></span>  
   
-1.  Crie uma hierarquia de classes em que cada classe de forma específica derive de uma classe base comum.  
+1.  <span data-ttu-id="0f401-115">Crie uma hierarquia de classes em que cada classe de forma específica derive de uma classe base comum.</span><span class="sxs-lookup"><span data-stu-id="0f401-115">Create a class hierarchy in which each specific shape class derives from a common base class.</span></span>  
   
-2.  Use um método virtual para invocar o método adequado em qualquer classe derivada por meio de uma única chamada para o método da classe base.  
+2.  <span data-ttu-id="0f401-116">Use um método virtual para invocar o método adequado em qualquer classe derivada por meio de uma única chamada para o método da classe base.</span><span class="sxs-lookup"><span data-stu-id="0f401-116">Use a virtual method to invoke the appropriate method on any derived class through a single call to the base class method.</span></span>  
   
- Primeiro, crie uma classe base chamada `Shape` e as classes derivadas como `Rectangle`, `Circle` e `Triangle`. Atribua à classe `Shape` um método virtual chamado `Draw` e substitua-o em cada classe derivada para desenhar a forma especial que a classe representa. Crie um objeto `List<Shape>` e adicione um círculo, triângulo e retângulo para ele. Para atualizar a superfície de desenho, use um loop [foreach](../../../csharp/language-reference/keywords/foreach-in.md) para iterar na lista e chamar o método `Draw` em cada objeto `Shape` na lista. Mesmo que cada objeto na lista tenha um tipo de declaração de `Shape`, é o tipo de tempo de execução (a versão de substituição do método em cada classe derivada) que será invocado.  
+ <span data-ttu-id="0f401-117">Primeiro, crie uma classe base chamada `Shape` e as classes derivadas como `Rectangle`, `Circle` e `Triangle`.</span><span class="sxs-lookup"><span data-stu-id="0f401-117">First, create a base class called `Shape`, and derived classes such as `Rectangle`, `Circle`, and `Triangle`.</span></span> <span data-ttu-id="0f401-118">Atribua à classe `Shape` um método virtual chamado `Draw` e substitua-o em cada classe derivada para desenhar a forma especial que a classe representa.</span><span class="sxs-lookup"><span data-stu-id="0f401-118">Give the `Shape` class a virtual method called `Draw`, and override it in each derived class to draw the particular shape that the class represents.</span></span> <span data-ttu-id="0f401-119">Crie um objeto `List<Shape>` e adicione um círculo, triângulo e retângulo para ele.</span><span class="sxs-lookup"><span data-stu-id="0f401-119">Create a `List<Shape>` object and add a Circle, Triangle and Rectangle to it.</span></span> <span data-ttu-id="0f401-120">Para atualizar a superfície de desenho, use um loop [foreach](../../../csharp/language-reference/keywords/foreach-in.md) para iterar na lista e chamar o método `Draw` em cada objeto `Shape` na lista.</span><span class="sxs-lookup"><span data-stu-id="0f401-120">To update the drawing surface, use a [foreach](../../../csharp/language-reference/keywords/foreach-in.md) loop to iterate through the list and call the `Draw` method on each `Shape` object in the list.</span></span> <span data-ttu-id="0f401-121">Mesmo que cada objeto na lista tenha um tipo de declaração de `Shape`, é o tipo de tempo de execução (a versão de substituição do método em cada classe derivada) que será invocado.</span><span class="sxs-lookup"><span data-stu-id="0f401-121">Even though each object in the list has a declared type of `Shape`, it is the run-time type (the overridden version of the method in each derived class) that will be invoked.</span></span>  
   
- [!code-cs[csProgGuideInheritance#50](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#50](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_1.cs)]  
   
- Em C#, cada tipo é polimórfico porque todos os tipos, incluindo tipos definidos pelo usuário, herdam de <xref:System.Object>.  
+ <span data-ttu-id="0f401-122">Em C#, cada tipo é polimórfico porque todos os tipos, incluindo tipos definidos pelo usuário, herdam de <xref:System.Object>.</span><span class="sxs-lookup"><span data-stu-id="0f401-122">In C#, every type is polymorphic because all types, including user-defined types, inherit from <xref:System.Object>.</span></span>  
   
-## <a name="polymorphism-overview"></a>Visão Geral sobre o polimorfismo  
+## <a name="polymorphism-overview"></a><span data-ttu-id="0f401-123">Visão Geral sobre o polimorfismo</span><span class="sxs-lookup"><span data-stu-id="0f401-123">Polymorphism Overview</span></span>  
   
-### <a name="virtual-members"></a>Membros virtuais  
- Quando uma classe derivada herda de uma classe base, ela ganha todos os métodos, campos, propriedades e eventos da classe base. O designer da classe derivada pode escolher entre  
+### <a name="virtual-members"></a><span data-ttu-id="0f401-124">Membros virtuais</span><span class="sxs-lookup"><span data-stu-id="0f401-124">Virtual Members</span></span>  
+ <span data-ttu-id="0f401-125">Quando uma classe derivada herda de uma classe base, ela ganha todos os métodos, campos, propriedades e eventos da classe base.</span><span class="sxs-lookup"><span data-stu-id="0f401-125">When a derived class inherits from a base class, it gains all the methods, fields, properties and events of the base class.</span></span> <span data-ttu-id="0f401-126">O designer da classe derivada pode escolher entre</span><span class="sxs-lookup"><span data-stu-id="0f401-126">The designer of the derived class can choose whether to</span></span>  
   
--   substituir os membros virtuais na classe base,  
+-   <span data-ttu-id="0f401-127">substituir os membros virtuais na classe base,</span><span class="sxs-lookup"><span data-stu-id="0f401-127">override virtual members in the base class,</span></span>  
   
--   herdar o método da classe base mais próxima, sem ignorá-lo   
+-   <span data-ttu-id="0f401-128">herdar o método da classe base mais próxima, sem ignorá-lo </span><span class="sxs-lookup"><span data-stu-id="0f401-128">inherit the closest base class method without overriding it</span></span>  
   
--   definir nova implementação não virtual desses membros que ocultam as implementações da classe base  
+-   <span data-ttu-id="0f401-129">definir nova implementação não virtual desses membros que ocultam as implementações da classe base</span><span class="sxs-lookup"><span data-stu-id="0f401-129">define new non-virtual implementation of those members that hide the base class implementations</span></span>  
   
- Uma classe derivada poderá substituir um membro de classe base somente se o membro da classe base tiver sido declarado como [virtual](../../../csharp/language-reference/keywords/virtual.md) ou [abstrato](../../../csharp/language-reference/keywords/abstract.md). O membro derivado deve usar a palavra-chave [override](../../../csharp/language-reference/keywords/override.md) para indicar explicitamente que o método destina-se a participar da invocação virtual. O código a seguir mostra um exemplo:  
+ <span data-ttu-id="0f401-130">Uma classe derivada poderá substituir um membro de classe base somente se o membro da classe base tiver sido declarado como [virtual](../../../csharp/language-reference/keywords/virtual.md) ou [abstrato](../../../csharp/language-reference/keywords/abstract.md).</span><span class="sxs-lookup"><span data-stu-id="0f401-130">A derived class can override a base class member only if the base class member is declared as [virtual](../../../csharp/language-reference/keywords/virtual.md) or [abstract](../../../csharp/language-reference/keywords/abstract.md).</span></span> <span data-ttu-id="0f401-131">O membro derivado deve usar a palavra-chave [override](../../../csharp/language-reference/keywords/override.md) para indicar explicitamente que o método destina-se a participar da invocação virtual.</span><span class="sxs-lookup"><span data-stu-id="0f401-131">The derived member must use the [override](../../../csharp/language-reference/keywords/override.md) keyword to explicitly indicate that the method is intended to participate in virtual invocation.</span></span> <span data-ttu-id="0f401-132">O código a seguir mostra um exemplo:</span><span class="sxs-lookup"><span data-stu-id="0f401-132">The following code provides an example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_2.cs)]  
   
- Os campos não podem ser virtuais, apenas os métodos, propriedades, eventos e indexadores podem ser virtuais. Quando uma classe derivada substitui um membro virtual, esse membro é chamado, mesmo quando uma instância dessa classe está sendo acessada como uma instância da classe base. O código a seguir mostra um exemplo:  
+ <span data-ttu-id="0f401-133">Os campos não podem ser virtuais, apenas os métodos, propriedades, eventos e indexadores podem ser virtuais.</span><span class="sxs-lookup"><span data-stu-id="0f401-133">Fields cannot be virtual; only methods, properties, events and indexers can be virtual.</span></span> <span data-ttu-id="0f401-134">Quando uma classe derivada substitui um membro virtual, esse membro é chamado, mesmo quando uma instância dessa classe está sendo acessada como uma instância da classe base.</span><span class="sxs-lookup"><span data-stu-id="0f401-134">When a derived class overrides a virtual member, that member is called even when an instance of that class is being accessed as an instance of the base class.</span></span> <span data-ttu-id="0f401-135">O código a seguir mostra um exemplo:</span><span class="sxs-lookup"><span data-stu-id="0f401-135">The following code provides an example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_3.cs)]  
+ [!code-csharp[csProgGuideInheritance#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_3.cs)]  
   
- Os métodos e propriedades virtuais permitem que classes derivadas estendam uma classe base sem a necessidade de usar a implementação da classe base de um método. Para obter mais informações, consulte [Controle de versão com as palavras-chave override e new](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md). Uma interface fornece uma outra maneira de definir um método ou conjunto de métodos cuja implementação é deixada para classes derivadas. Para obter mais informações, consulte [Interfaces](../../../csharp/programming-guide/interfaces/index.md).  
+ <span data-ttu-id="0f401-136">Os métodos e propriedades virtuais permitem que classes derivadas estendam uma classe base sem a necessidade de usar a implementação da classe base de um método.</span><span class="sxs-lookup"><span data-stu-id="0f401-136">Virtual methods and properties enable derived classes to extend a base class without needing to use the base class implementation of a method.</span></span> <span data-ttu-id="0f401-137">Para obter mais informações, consulte [Controle de versão com as palavras-chave override e new](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md).</span><span class="sxs-lookup"><span data-stu-id="0f401-137">For more information, see [Versioning with the Override and New Keywords](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md).</span></span> <span data-ttu-id="0f401-138">Uma interface fornece uma outra maneira de definir um método ou conjunto de métodos cuja implementação é deixada para classes derivadas.</span><span class="sxs-lookup"><span data-stu-id="0f401-138">An interface provides another way to define a method or set of methods whose implementation is left to derived classes.</span></span> <span data-ttu-id="0f401-139">Para obter mais informações, consulte [Interfaces](../../../csharp/programming-guide/interfaces/index.md).</span><span class="sxs-lookup"><span data-stu-id="0f401-139">For more information, see [Interfaces](../../../csharp/programming-guide/interfaces/index.md).</span></span>  
   
-### <a name="hiding-base-class-members-with-new-members"></a>Ocultando membros de classe base com novos membros  
- Se você quiser que o seu membro derivado tenha o mesmo nome de um membro de uma classe base, mas não quiser que ele participe da invocação virtual, será possível usar a palavra-chave [new](../../../csharp/language-reference/keywords/new.md). A palavra-chave `new` é colocada antes do tipo de retorno de um membro de classe que está sendo substituído. O código a seguir mostra um exemplo:  
+### <a name="hiding-base-class-members-with-new-members"></a><span data-ttu-id="0f401-140">Ocultando membros de classe base com novos membros</span><span class="sxs-lookup"><span data-stu-id="0f401-140">Hiding Base Class Members with New Members</span></span>  
+ <span data-ttu-id="0f401-141">Se você quiser que o seu membro derivado tenha o mesmo nome de um membro de uma classe base, mas não quiser que ele participe da invocação virtual, será possível usar a palavra-chave [new](../../../csharp/language-reference/keywords/new.md).</span><span class="sxs-lookup"><span data-stu-id="0f401-141">If you want your derived member to have the same name as a member in a base class, but you do not want it to participate in virtual invocation, you can use the [new](../../../csharp/language-reference/keywords/new.md) keyword.</span></span> <span data-ttu-id="0f401-142">A palavra-chave `new` é colocada antes do tipo de retorno de um membro de classe que está sendo substituído.</span><span class="sxs-lookup"><span data-stu-id="0f401-142">The `new` keyword is put before the return type of a class member that is being replaced.</span></span> <span data-ttu-id="0f401-143">O código a seguir mostra um exemplo:</span><span class="sxs-lookup"><span data-stu-id="0f401-143">The following code provides an example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_4.cs)]  
+ [!code-csharp[csProgGuideInheritance#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_4.cs)]  
   
- Você ainda pode acessar os membros da classe base ocultos a partir do código do cliente, convertendo a instância da classe derivada a uma instância da classe base. Por exemplo:  
+ <span data-ttu-id="0f401-144">Você ainda pode acessar os membros da classe base ocultos a partir do código do cliente, convertendo a instância da classe derivada a uma instância da classe base.</span><span class="sxs-lookup"><span data-stu-id="0f401-144">Hidden base class members can still be accessed from client code by casting the instance of the derived class to an instance of the base class.</span></span> <span data-ttu-id="0f401-145">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="0f401-145">For example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_5.cs)]  
+ [!code-csharp[csProgGuideInheritance#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_5.cs)]  
   
-### <a name="preventing-derived-classes-from-overriding-virtual-members"></a>Impedindo que classes derivadas substituam membros virtuais  
- Os membros virtuais permanecem virtuais por tempo indeterminado, independentemente de quantas classes foram declaradas entre o membro virtual e a classe que originalmente o declarou. Se a classe A declara um membro virtual, a classe B deriva de A e a classe C deriva de B, a classe C herda o membro virtual e tem a opção de substituí-lo, independentemente de a classe B ter declarado uma substituição para esse membro. O código a seguir mostra um exemplo:  
+### <a name="preventing-derived-classes-from-overriding-virtual-members"></a><span data-ttu-id="0f401-146">Impedindo que classes derivadas substituam membros virtuais</span><span class="sxs-lookup"><span data-stu-id="0f401-146">Preventing Derived Classes from Overriding Virtual Members</span></span>  
+ <span data-ttu-id="0f401-147">Os membros virtuais permanecem virtuais por tempo indeterminado, independentemente de quantas classes foram declaradas entre o membro virtual e a classe que originalmente o declarou.</span><span class="sxs-lookup"><span data-stu-id="0f401-147">Virtual members remain virtual indefinitely, regardless of how many classes have been declared between the virtual member and the class that originally declared it.</span></span> <span data-ttu-id="0f401-148">Se a classe A declara um membro virtual, a classe B deriva de A e a classe C deriva de B, a classe C herda o membro virtual e tem a opção de substituí-lo, independentemente de a classe B ter declarado uma substituição para esse membro.</span><span class="sxs-lookup"><span data-stu-id="0f401-148">If class A declares a virtual member, and class B derives from A, and class C derives from B, class C inherits the virtual member, and has the option to override it, regardless of whether class B declared an override for that member.</span></span> <span data-ttu-id="0f401-149">O código a seguir mostra um exemplo:</span><span class="sxs-lookup"><span data-stu-id="0f401-149">The following code provides an example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_6.cs)]  
+ [!code-csharp[csProgGuideInheritance#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_6.cs)]  
   
- Uma classe derivada pode interromper a herança virtual, declarando uma substituição como [sealed](../../../csharp/language-reference/keywords/sealed.md). Isso exige a colocação da palavra-chave `sealed` antes da palavra-chave `override` na declaração de membro de classe. O código a seguir mostra um exemplo:  
+ <span data-ttu-id="0f401-150">Uma classe derivada pode interromper a herança virtual, declarando uma substituição como [sealed](../../../csharp/language-reference/keywords/sealed.md).</span><span class="sxs-lookup"><span data-stu-id="0f401-150">A derived class can stop virtual inheritance by declaring an override as [sealed](../../../csharp/language-reference/keywords/sealed.md).</span></span> <span data-ttu-id="0f401-151">Isso exige a colocação da palavra-chave `sealed` antes da palavra-chave `override` na declaração de membro de classe.</span><span class="sxs-lookup"><span data-stu-id="0f401-151">This requires putting the `sealed` keyword before the `override` keyword in the class member declaration.</span></span> <span data-ttu-id="0f401-152">O código a seguir mostra um exemplo:</span><span class="sxs-lookup"><span data-stu-id="0f401-152">The following code provides an example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_7.cs)]  
+ [!code-csharp[csProgGuideInheritance#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_7.cs)]  
   
- No exemplo anterior, o método `DoWork` não será mais virtual para qualquer classe derivada de C. Ele ainda será virtual para instâncias de C, mesmo se elas forem convertidas em métodos tipo B ou tipo A. Métodos lacrados podem ser substituídos por classes derivadas usando a palavra-chave `new`, como mostra o exemplo a seguir:  
+ <span data-ttu-id="0f401-153">No exemplo anterior, o método `DoWork` não será mais virtual para qualquer classe derivada de C. Ele ainda será virtual para instâncias de C, mesmo se elas forem convertidas em métodos tipo B ou tipo A. Métodos lacrados podem ser substituídos por classes derivadas usando a palavra-chave `new`, como mostra o exemplo a seguir:</span><span class="sxs-lookup"><span data-stu-id="0f401-153">In the previous example, the method `DoWork` is no longer virtual to any class derived from C. It is still virtual for instances of C, even if they are cast to type B or type A. Sealed methods can be replaced by derived classes by using the `new` keyword, as the following example shows:</span></span>  
   
- [!code-cs[csProgGuideInheritance#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_8.cs)]  
+ [!code-csharp[csProgGuideInheritance#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_8.cs)]  
   
- Neste caso, se `DoWork` é chamado em D usando uma variável do tipo D, o novo `DoWork` é chamado. Se uma variável do tipo C, B ou A é usada para acessar uma instância de D, uma chamada de `DoWork` seguirá as regras de herança virtual, encaminhando as chamadas para a implementação de `DoWork` na classe C.  
+ <span data-ttu-id="0f401-154">Neste caso, se `DoWork` é chamado em D usando uma variável do tipo D, o novo `DoWork` é chamado.</span><span class="sxs-lookup"><span data-stu-id="0f401-154">In this case, if `DoWork` is called on D using a variable of type D, the new `DoWork` is called.</span></span> <span data-ttu-id="0f401-155">Se uma variável do tipo C, B ou A é usada para acessar uma instância de D, uma chamada de `DoWork` seguirá as regras de herança virtual, encaminhando as chamadas para a implementação de `DoWork` na classe C.</span><span class="sxs-lookup"><span data-stu-id="0f401-155">If a variable of type C, B, or A is used to access an instance of D, a call to `DoWork` will follow the rules of virtual inheritance, routing those calls to the implementation of `DoWork` on class C.</span></span>  
   
-### <a name="accessing-base-class-virtual-members-from-derived-classes"></a>Acessando membros virtuais da classe base das classes derivadas  
- A classe derivada que substituiu um método ou propriedade ainda pode acessar o método ou propriedade na classe base usando a palavra-chave base. O código a seguir mostra um exemplo:  
+### <a name="accessing-base-class-virtual-members-from-derived-classes"></a><span data-ttu-id="0f401-156">Acessando membros virtuais da classe base das classes derivadas</span><span class="sxs-lookup"><span data-stu-id="0f401-156">Accessing Base Class Virtual Members from Derived Classes</span></span>  
+ <span data-ttu-id="0f401-157">A classe derivada que substituiu um método ou propriedade ainda pode acessar o método ou propriedade na classe base usando a palavra-chave base.</span><span class="sxs-lookup"><span data-stu-id="0f401-157">A derived class that has replaced or overridden a method or property can still access the method or property on the base class using the base keyword.</span></span> <span data-ttu-id="0f401-158">O código a seguir mostra um exemplo:</span><span class="sxs-lookup"><span data-stu-id="0f401-158">The following code provides an example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_9.cs)]  
+ [!code-csharp[csProgGuideInheritance#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_9.cs)]  
   
- Para obter mais informações, consulte [base](../../../csharp/language-reference/keywords/base.md).  
+ <span data-ttu-id="0f401-159">Para obter mais informações, consulte [base](../../../csharp/language-reference/keywords/base.md).</span><span class="sxs-lookup"><span data-stu-id="0f401-159">For more information, see [base](../../../csharp/language-reference/keywords/base.md).</span></span>  
   
 > [!NOTE]
->  Recomendamos que os membros virtuais usem `base` para chamar a implementação da classe base do membro em sua própria implementação. Deixar o comportamento da classe base ocorrer permite que a classe derivada se concentre na implementação de comportamento específico para a classe derivada. Se a implementação da classe base não é chamado, cabe à classe derivada tornar seu comportamento compatível com o comportamento da classe base.  
+>  <span data-ttu-id="0f401-160">Recomendamos que os membros virtuais usem `base` para chamar a implementação da classe base do membro em sua própria implementação.</span><span class="sxs-lookup"><span data-stu-id="0f401-160">It is recommended that virtual members use `base` to call the base class implementation of that member in their own implementation.</span></span> <span data-ttu-id="0f401-161">Deixar o comportamento da classe base ocorrer permite que a classe derivada se concentre na implementação de comportamento específico para a classe derivada.</span><span class="sxs-lookup"><span data-stu-id="0f401-161">Letting the base class behavior occur enables the derived class to concentrate on implementing behavior specific to the derived class.</span></span> <span data-ttu-id="0f401-162">Se a implementação da classe base não é chamado, cabe à classe derivada tornar seu comportamento compatível com o comportamento da classe base.</span><span class="sxs-lookup"><span data-stu-id="0f401-162">If the base class implementation is not called, it is up to the derived class to make their behavior compatible with the behavior of the base class.</span></span>  
   
-## <a name="in-this-section"></a>Nesta seção  
+## <a name="in-this-section"></a><span data-ttu-id="0f401-163">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="0f401-163">In This Section</span></span>  
   
--   [Controle de versão com as palavras-chave override e new](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
+-   [<span data-ttu-id="0f401-164">Controle de versão com as palavras-chave override e new</span><span class="sxs-lookup"><span data-stu-id="0f401-164">Versioning with the Override and New Keywords</span></span>](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
   
--   [Quando usar as palavras-chave override e new](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
+-   [<span data-ttu-id="0f401-165">Quando usar as palavras-chave override e new</span><span class="sxs-lookup"><span data-stu-id="0f401-165">Knowing When to Use Override and New Keywords</span></span>](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
   
--   [Como substituir o método ToString)](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
+-   [<span data-ttu-id="0f401-166">Como substituir o método ToString)</span><span class="sxs-lookup"><span data-stu-id="0f401-166">How to: Override the ToString Method</span></span>](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Herança](../../../csharp/programming-guide/classes-and-structs/inheritance.md)   
- [Classes e membros de classes abstratas e lacradas](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)   
- [Eventos](../../../csharp/programming-guide/events/index.md)   
- [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [Indexadores](../../../csharp/programming-guide/indexers/index.md)   
- [Tipos](../../../csharp/programming-guide/types/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="0f401-167">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0f401-167">See Also</span></span>  
+ [<span data-ttu-id="0f401-168">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="0f401-168">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="0f401-169">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="0f401-169">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="0f401-170">Herança</span><span class="sxs-lookup"><span data-stu-id="0f401-170">Inheritance</span></span>](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+ [<span data-ttu-id="0f401-171">Classes e membros de classes abstract e sealed</span><span class="sxs-lookup"><span data-stu-id="0f401-171">Abstract and Sealed Classes and Class Members</span></span>](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
+ [<span data-ttu-id="0f401-172">Métodos</span><span class="sxs-lookup"><span data-stu-id="0f401-172">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [<span data-ttu-id="0f401-173">Eventos</span><span class="sxs-lookup"><span data-stu-id="0f401-173">Events</span></span>](../../../csharp/programming-guide/events/index.md)  
+ [<span data-ttu-id="0f401-174">Propriedades</span><span class="sxs-lookup"><span data-stu-id="0f401-174">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [<span data-ttu-id="0f401-175">Indexadores</span><span class="sxs-lookup"><span data-stu-id="0f401-175">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)  
+ [<span data-ttu-id="0f401-176">Tipos</span><span class="sxs-lookup"><span data-stu-id="0f401-176">Types</span></span>](../../../csharp/programming-guide/types/index.md)

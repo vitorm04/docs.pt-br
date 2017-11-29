@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Storeadm.exe
 - listing stores for current user
@@ -21,62 +15,60 @@ helpviewer_keywords:
 - stores, current user
 - removing stores
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: d9ae6b007fe32dfbef973105311ba929cc247e6b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e2304bd0e2ac9115c9d937e502b960399d793356
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (Ferramenta de Armazenamento Isolado)
-A ferramenta Armazenamento Isolado lista ou remove todos os repositórios existentes para o usuário atual.  
+# <a name="storeadmexe-isolated-storage-tool"></a><span data-ttu-id="eed05-102">Storeadm.exe (Ferramenta de Armazenamento Isolado)</span><span class="sxs-lookup"><span data-stu-id="eed05-102">Storeadm.exe (Isolated Storage Tool)</span></span>
+<span data-ttu-id="eed05-103">A ferramenta Armazenamento Isolado lista ou remove todos os repositórios existentes para o usuário atual.</span><span class="sxs-lookup"><span data-stu-id="eed05-103">The Isolated Storage tool lists or removes all existing stores for the current user.</span></span>  
   
- Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ <span data-ttu-id="eed05-104">Essa ferramenta é instalada automaticamente com o Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="eed05-104">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="eed05-105">Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor (ou o Prompt de Comando do Visual Studio no Windows 7).</span><span class="sxs-lookup"><span data-stu-id="eed05-105">To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="eed05-106">Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="eed05-106">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
- No prompt de comando, digite o seguinte:  
+ <span data-ttu-id="eed05-107">No prompt de comando, digite o seguinte:</span><span class="sxs-lookup"><span data-stu-id="eed05-107">At the command prompt, type the following:</span></span>  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a><span data-ttu-id="eed05-108">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="eed05-108">Syntax</span></span>  
   
 ```  
 storeadm [/list][/machine][/remove][/roaming][/quiet]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a><span data-ttu-id="eed05-109">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="eed05-109">Parameters</span></span>  
   
-|Opção|Descrição|  
+|<span data-ttu-id="eed05-110">Opção</span><span class="sxs-lookup"><span data-stu-id="eed05-110">Option</span></span>|<span data-ttu-id="eed05-111">Descrição</span><span class="sxs-lookup"><span data-stu-id="eed05-111">Description</span></span>|  
 |------------|-----------------|  
-|**/h**[**elp**]|Exibe sintaxe de comando e opções para a ferramenta.|  
-|**/list**|Exibe todos os repositórios existentes para o usuário atual. Isso inclui os repositórios de todos os aplicativos ou assemblies executados por esse usuário.|  
-|**/machine**|Seleciona o repositório do computador. Use essa opção com as opções **/list** ou **/remove** para especificar que a ação deve ser aplicada ao repositório do computador.<br /><br /> Novidades no .NET Framework 2.0|  
-|**/quiet**|Especifica o modo silencioso; suprime a saída informativa de forma que apenas as mensagens de erro sejam exibidas.|  
-|**/remove**|Remove permanentemente todos os repositórios existentes para o usuário atual.|  
-|**/roaming**|Seleciona o repositório móvel. Use essa opção com as opções **/list** ou **/remove** para especificar que a ação deve ser aplicada ao repositório móvel.|  
-|**/?**|Exibe sintaxe de comando e opções para a ferramenta.|  
+|<span data-ttu-id="eed05-112">**/h**[**elp**]</span><span class="sxs-lookup"><span data-stu-id="eed05-112">**/h**[**elp**]</span></span>|<span data-ttu-id="eed05-113">Exibe sintaxe de comando e opções para a ferramenta.</span><span class="sxs-lookup"><span data-stu-id="eed05-113">Displays command syntax and options for the tool.</span></span>|  
+|<span data-ttu-id="eed05-114">**/list**</span><span class="sxs-lookup"><span data-stu-id="eed05-114">**/list**</span></span>|<span data-ttu-id="eed05-115">Exibe todos os repositórios existentes para o usuário atual.</span><span class="sxs-lookup"><span data-stu-id="eed05-115">Displays all existing stores for the current user.</span></span> <span data-ttu-id="eed05-116">Isso inclui os repositórios de todos os aplicativos ou assemblies executados por esse usuário.</span><span class="sxs-lookup"><span data-stu-id="eed05-116">This includes the stores for all applications or assemblies executed by this user.</span></span>|  
+|<span data-ttu-id="eed05-117">**/machine**</span><span class="sxs-lookup"><span data-stu-id="eed05-117">**/machine**</span></span>|<span data-ttu-id="eed05-118">Seleciona o repositório do computador.</span><span class="sxs-lookup"><span data-stu-id="eed05-118">Selects the machine store.</span></span> <span data-ttu-id="eed05-119">Use essa opção com as opções **/list** ou **/remove** para especificar que a ação deve ser aplicada ao repositório do computador.</span><span class="sxs-lookup"><span data-stu-id="eed05-119">Use this option with the **/list** or **/remove** option to specify that the action should apply to the machine store.</span></span><br /><br /> <span data-ttu-id="eed05-120">Novidades no .NET Framework 2.0</span><span class="sxs-lookup"><span data-stu-id="eed05-120">New in the .NET Framework 2.0</span></span>|  
+|<span data-ttu-id="eed05-121">**/quiet**</span><span class="sxs-lookup"><span data-stu-id="eed05-121">**/quiet**</span></span>|<span data-ttu-id="eed05-122">Especifica o modo silencioso; suprime a saída informativa de forma que apenas as mensagens de erro sejam exibidas.</span><span class="sxs-lookup"><span data-stu-id="eed05-122">Specifies quiet mode; suppresses informational output so that only error messages appear.</span></span>|  
+|<span data-ttu-id="eed05-123">**/remove**</span><span class="sxs-lookup"><span data-stu-id="eed05-123">**/remove**</span></span>|<span data-ttu-id="eed05-124">Remove permanentemente todos os repositórios existentes para o usuário atual.</span><span class="sxs-lookup"><span data-stu-id="eed05-124">Permanently removes all existing stores for the current user.</span></span>|  
+|<span data-ttu-id="eed05-125">**/roaming**</span><span class="sxs-lookup"><span data-stu-id="eed05-125">**/roaming**</span></span>|<span data-ttu-id="eed05-126">Seleciona o repositório móvel.</span><span class="sxs-lookup"><span data-stu-id="eed05-126">Selects the roaming store.</span></span> <span data-ttu-id="eed05-127">Use essa opção com as opções **/list** ou **/remove** para especificar que a ação deve ser aplicada ao repositório móvel.</span><span class="sxs-lookup"><span data-stu-id="eed05-127">Use this option with the **/list** or **/remove** options to specify that the action should apply to the roaming store.</span></span>|  
+|<span data-ttu-id="eed05-128">**/?**</span><span class="sxs-lookup"><span data-stu-id="eed05-128">**/?**</span></span>|<span data-ttu-id="eed05-129">Exibe sintaxe de comando e opções para a ferramenta.</span><span class="sxs-lookup"><span data-stu-id="eed05-129">Displays command syntax and options for the tool.</span></span>|  
   
-## <a name="remarks"></a>Comentários  
- A execução de Storeadm.exe na linha de comando sem especificar nenhuma opção exibe a sintaxe e as opções da ferramenta.  
+## <a name="remarks"></a><span data-ttu-id="eed05-130">Comentários</span><span class="sxs-lookup"><span data-stu-id="eed05-130">Remarks</span></span>  
+ <span data-ttu-id="eed05-131">A execução de Storeadm.exe na linha de comando sem especificar nenhuma opção exibe a sintaxe e as opções da ferramenta.</span><span class="sxs-lookup"><span data-stu-id="eed05-131">Running Storeadm.exe from the command line without specifying any options displays the syntax and options for the tool.</span></span>  
   
- As opções **/list** e **/remove** costumam ser usadas uma de cada vez; no entanto, se duas ou mais opções forem especificadas, elas serão realizadas na ordem em que são exibidas na linha de comando.  
+ <span data-ttu-id="eed05-132">As opções **/list** e **/remove** costumam ser usadas uma de cada vez; no entanto, se duas ou mais opções forem especificadas, elas serão realizadas na ordem em que são exibidas na linha de comando.</span><span class="sxs-lookup"><span data-stu-id="eed05-132">The **/list** and **/remove** options are typically used one at a time; however, if two or more options are specified they will be performed in the order in which they appear on the command line.</span></span>  
   
- Os aplicativos têm uma opção de gravação em um dos dois repositórios para um usuário ou no repositório do computador:  
+ <span data-ttu-id="eed05-133">Os aplicativos têm uma opção de gravação em um dos dois repositórios para um usuário ou no repositório do computador:</span><span class="sxs-lookup"><span data-stu-id="eed05-133">Applications have a choice of saving to one of two stores for a user or to the machine store:</span></span>  
   
--   O repositório local existe em um local que tem garantia de não ser compatível com roaming (no Windows 2000 e posteriores), mesmo se o roaming de dados do usuário estiver habilitado para o usuário.  
+-   <span data-ttu-id="eed05-134">O repositório local existe em um local que tem garantia de não ser compatível com roaming (no Windows 2000 e posteriores), mesmo se o roaming de dados do usuário estiver habilitado para o usuário.</span><span class="sxs-lookup"><span data-stu-id="eed05-134">The local store exists in a location that is guaranteed not to roam (on Windows 2000 and later) even if user data roaming is enabled for the user.</span></span>  
   
--   O repositório móvel existe em um local compatível com roaming, mas só poderá fazer isso se o roaming estiver habilitado para o usuário por meio da administração do Windows NT.  
+-   <span data-ttu-id="eed05-135">O repositório móvel existe em um local compatível com roaming, mas só poderá fazer isso se o roaming estiver habilitado para o usuário por meio da administração do Windows NT.</span><span class="sxs-lookup"><span data-stu-id="eed05-135">The roaming store exists in a location that is able to roam, but can only do so if roaming is enabled for the user via Windows NT administration.</span></span>  
   
--   O repositório do computador é comum a todos os usuários em um computador e é armazenado em um diretório comum nesse computador.  
+-   <span data-ttu-id="eed05-136">O repositório do computador é comum a todos os usuários em um computador e é armazenado em um diretório comum nesse computador.</span><span class="sxs-lookup"><span data-stu-id="eed05-136">The machine store is common to all users on a machine and is stored under a common directory on that machine.</span></span>  
   
     > [!NOTE]
-    >  O repositório do computador é novo na versão 2.0 do .NET Framework.  
+    >  <span data-ttu-id="eed05-137">O repositório do computador é novo na versão 2.0 do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="eed05-137">The machine store is new in the .NET Framework version 2.0.</span></span>  
   
- Independentemente do roaming estar efetivamente habilitado para o usuário, isso não afeta a administração de Storeadm.exe. A execução da ferramenta sem opções se aplica a todas as ações no repositório local. A execução da ferramenta com a opção **/roaming** se aplica a todas as ações no repositório compatível com roaming. A execução da ferramenta com a opção **/machine** se aplica a todas as ações no repositório do computador.  
+ <span data-ttu-id="eed05-138">Independentemente do roaming estar efetivamente habilitado para o usuário, isso não afeta a administração de Storeadm.exe.</span><span class="sxs-lookup"><span data-stu-id="eed05-138">Whether roaming is actually enabled for the user does not affect the administration of Storeadm.exe.</span></span> <span data-ttu-id="eed05-139">A execução da ferramenta sem opções se aplica a todas as ações no repositório local.</span><span class="sxs-lookup"><span data-stu-id="eed05-139">Running the tool without any options applies all actions to the local store.</span></span> <span data-ttu-id="eed05-140">A execução da ferramenta com a opção **/roaming** se aplica a todas as ações no repositório compatível com roaming.</span><span class="sxs-lookup"><span data-stu-id="eed05-140">Running the tool with the **/roaming** option applies all actions to the store that is able to roam.</span></span> <span data-ttu-id="eed05-141">A execução da ferramenta com a opção **/machine** se aplica a todas as ações no repositório do computador.</span><span class="sxs-lookup"><span data-stu-id="eed05-141">Running the tool with the **/machine** option applies all actions to the machine store.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Ferramentas](../../../docs/framework/tools/index.md)   
- [Armazenamento isolado](../../../docs/standard/io/isolated-storage.md)   
- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-
+## <a name="see-also"></a><span data-ttu-id="eed05-142">Consulte também</span><span class="sxs-lookup"><span data-stu-id="eed05-142">See Also</span></span>  
+ [<span data-ttu-id="eed05-143">Ferramentas</span><span class="sxs-lookup"><span data-stu-id="eed05-143">Tools</span></span>](../../../docs/framework/tools/index.md)  
+ [<span data-ttu-id="eed05-144">Armazenamentos isolado</span><span class="sxs-lookup"><span data-stu-id="eed05-144">Isolated Storage</span></span>](../../../docs/standard/io/isolated-storage.md)  
+ [<span data-ttu-id="eed05-145">Prompts de Comando</span><span class="sxs-lookup"><span data-stu-id="eed05-145">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

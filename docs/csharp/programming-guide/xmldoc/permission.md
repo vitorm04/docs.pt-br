@@ -1,68 +1,49 @@
 ---
 title: "&lt;permission&gt; (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - permission
 - <permission>
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 37bb37ea14edc1f91225f9b04b18b354d99579b6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4b8f109d7e01f6e630f09939161b6a20c3a13f73
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="ltpermissiongt-c-programming-guide"></a>&lt;permission&gt; (Guia de Programação em C#)
-## <a name="syntax"></a>Sintaxe  
+# <a name="ltpermissiongt-c-programming-guide"></a><span data-ttu-id="ad5c5-102">&lt;permission&gt; (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="ad5c5-102">&lt;permission&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="ad5c5-103">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ad5c5-103">Syntax</span></span>  
   
 ```xml  
 <permission cref="member">description</permission>  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- cref = " `member`"  
- Uma referência a um membro ou campo disponível para ser chamado do ambiente de compilação atual. O compilador verifica se o elemento de código fornecido existe e converte `member` no nome de elemento canônico no XML de saída. *member* deve ser exibido entre aspas duplas (" ").  
+#### <a name="parameters"></a><span data-ttu-id="ad5c5-104">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="ad5c5-104">Parameters</span></span>  
+ <span data-ttu-id="ad5c5-105">cref = " `member`"</span><span class="sxs-lookup"><span data-stu-id="ad5c5-105">cref = " `member`"</span></span>  
+ <span data-ttu-id="ad5c5-106">Uma referência a um membro ou campo disponível para ser chamado do ambiente de compilação atual.</span><span class="sxs-lookup"><span data-stu-id="ad5c5-106">A reference to a member or field that is available to be called from the current compilation environment.</span></span> <span data-ttu-id="ad5c5-107">O compilador verifica se o elemento de código fornecido existe e converte `member` no nome de elemento canônico no XML de saída.</span><span class="sxs-lookup"><span data-stu-id="ad5c5-107">The compiler checks that the given code element exists and translates `member` to the canonical element name in the output XML.</span></span> <span data-ttu-id="ad5c5-108">*member* deve ser exibido entre aspas duplas (" ").</span><span class="sxs-lookup"><span data-stu-id="ad5c5-108">*member* must appear within double quotation marks (" ").</span></span>  
   
- Para obter informações sobre como criar uma referência cref para um tipo genérico, consulte [ \<consulte>](../../../csharp/programming-guide/xmldoc/see.md).  
+ <span data-ttu-id="ad5c5-109">Para obter informações sobre como criar uma referência cref para um tipo genérico, consulte [ \<consulte>](../../../csharp/programming-guide/xmldoc/see.md).</span><span class="sxs-lookup"><span data-stu-id="ad5c5-109">For information on how to create a cref reference to a generic type, see [\<see>](../../../csharp/programming-guide/xmldoc/see.md).</span></span>  
   
  `description`  
- Uma descrição do acesso ao membro.  
+ <span data-ttu-id="ad5c5-110">Uma descrição do acesso ao membro.</span><span class="sxs-lookup"><span data-stu-id="ad5c5-110">A description of the access to the member.</span></span>  
   
-## <a name="remarks"></a>Comentários  
- A marca \<permissão > permite documentar o acesso de um membro. A classe <xref:System.Security.PermissionSet> permite que você especifique o acesso a um membro.  
+## <a name="remarks"></a><span data-ttu-id="ad5c5-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="ad5c5-111">Remarks</span></span>  
+ <span data-ttu-id="ad5c5-112">A marca \<permissão > permite documentar o acesso de um membro.</span><span class="sxs-lookup"><span data-stu-id="ad5c5-112">The \<permission> tag lets you document the access of a member.</span></span> <span data-ttu-id="ad5c5-113">A classe <xref:System.Security.PermissionSet> permite que você especifique o acesso a um membro.</span><span class="sxs-lookup"><span data-stu-id="ad5c5-113">The <xref:System.Security.PermissionSet> class lets you specify access to a member.</span></span>  
   
- Compile com [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.  
+ <span data-ttu-id="ad5c5-114">Compile com [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.</span><span class="sxs-lookup"><span data-stu-id="ad5c5-114">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a>Exemplo  
- [!code-cs[csProgGuideDocComments#8](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/permission_1.cs)]  
+## <a name="example"></a><span data-ttu-id="ad5c5-115">Exemplo</span><span class="sxs-lookup"><span data-stu-id="ad5c5-115">Example</span></span>  
+ [!code-csharp[csProgGuideDocComments#8](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/permission_1.cs)]  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Marcas recomendadas para comentários de documentação](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
-
+## <a name="see-also"></a><span data-ttu-id="ad5c5-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ad5c5-116">See Also</span></span>  
+ [<span data-ttu-id="ad5c5-117">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="ad5c5-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="ad5c5-118">Marcas recomendadas para comentários de documentação</span><span class="sxs-lookup"><span data-stu-id="ad5c5-118">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

@@ -1,52 +1,42 @@
 ---
 title: "Conceitos de programação (C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 9c82430ec58b81f37a33f4c246ea40f6da465af8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8b914c6f820af1cd7de93fadc0d915261497f296
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="programming-concepts-c"></a>Conceitos de programação (C#)
-Esta seção explica conceitos de programação na linguagem C#.  
+# <a name="programming-concepts-c"></a><span data-ttu-id="fe903-102">Conceitos de programação (C#)</span><span class="sxs-lookup"><span data-stu-id="fe903-102">Programming Concepts (C#)</span></span>
+<span data-ttu-id="fe903-103">Esta seção explica conceitos de programação na linguagem C#.</span><span class="sxs-lookup"><span data-stu-id="fe903-103">This section explains programming concepts in the C# language.</span></span>  
   
-## <a name="in-this-section"></a>Nesta seção  
+## <a name="in-this-section"></a><span data-ttu-id="fe903-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="fe903-104">In This Section</span></span>  
   
-|Título|Descrição|  
+|<span data-ttu-id="fe903-105">Título</span><span class="sxs-lookup"><span data-stu-id="fe903-105">Title</span></span>|<span data-ttu-id="fe903-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="fe903-106">Description</span></span>|  
 |-----------|-----------------|  
-|[Assemblies e o cache de assembly global (C#)](../../../csharp/programming-guide/concepts/assemblies-gac/index.md)|Descreve como criar e usar um assemblies.|  
-|[Programação assíncrona com async e await (C#)](../../../csharp/programming-guide/concepts/async/index.md)|Descreve como criar soluções assíncronas usando as palavras-chave [async](../../../csharp/language-reference/keywords/async.md) e [await](../../../csharp/language-reference/keywords/await.md) no C#. Inclui um passo a passo.|  
-|[Atributos (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)|Discute como fornecer informações adicionais sobre como programar elementos como tipos, campos, métodos e propriedades por meio de atributos.|  
-|[Informações do chamador (C#)](../../../csharp/programming-guide/concepts/caller-information.md)|Descreve como obter informações sobre o chamador de um método. Essas informações incluem o caminho do arquivo e o número de linha do código-fonte e o nome do membro do chamador.|  
-|[Coleções (C#)](../../../csharp/programming-guide/concepts/collections.md)|Descreve alguns dos tipos de coleções fornecidos pelo .NET Framework. Demonstra como usar coleções simples e coleções de pares chave/valor.|  
-|[Covariância e contravariância (C#)](../../../csharp/programming-guide/concepts/covariance-contravariance/index.md)|Mostra como habilitar a conversão implícita de parâmetros de tipo genérico em interfaces e delegados.|  
-|[Árvores de expressão (C#)](../../../csharp/programming-guide/concepts/expression-trees/index.md)|Explica como você pode usar árvores de expressão para habilitar a modificação dinâmica de código executável.|  
-|[Iteradores (C#)](../../../csharp/programming-guide/concepts/iterators.md)|Descreve os iteradores, que são usados para percorrer coleções e retornar elementos um por vez.|  
-|[LINQ (consulta integrada à linguagem) (C#)](../../../csharp/programming-guide/concepts/linq/index.md)|Discute os recursos avançados de consulta na sintaxe de linguagem do C# e o modelo para consultar bancos de dados relacionais, documentos XML, conjuntos de dados e coleções na memória.|  
-|[Programação orientada a objeto (C#)](../../../csharp/programming-guide/concepts/object-oriented-programming.md)|Descreve os conceitos comuns orientados a objetos, incluindo encapsulamento, herança e polimorfismo.|  
-|[Reflexão (C#)](../../../csharp/programming-guide/concepts/reflection.md)|Explica como usar a reflexão para criar dinamicamente uma instância de um tipo, associar o tipo a um objeto existente ou obter o tipo de um objeto existente e invocar seus métodos ou acessar suas propriedades e campos.|  
-|[Serialização (C#)](../../../csharp/programming-guide/concepts/serialization/index.md)|Descreve os principais conceitos em binário, XML e serialização SOAP.|  
-|[Threading (C#)](../../../csharp/programming-guide/concepts/threading/index.md)|Fornece uma visão geral do modelo de threading do .NET e mostra como escrever código que executa várias tarefas ao mesmo tempo para melhorar o desempenho e a capacidade de resposta dos aplicativos.|  
+|[<span data-ttu-id="fe903-107">Assemblies e o cache de assembly global (C#)</span><span class="sxs-lookup"><span data-stu-id="fe903-107">Assemblies and the Global Assembly Cache (C#)</span></span>](../../../csharp/programming-guide/concepts/assemblies-gac/index.md)|<span data-ttu-id="fe903-108">Descreve como criar e usar um assemblies.</span><span class="sxs-lookup"><span data-stu-id="fe903-108">Describes how to create and use assemblies.</span></span>|  
+|[<span data-ttu-id="fe903-109">Programação assíncrona com async e await (C#)</span><span class="sxs-lookup"><span data-stu-id="fe903-109">Asynchronous Programming with async and await (C#)</span></span>](../../../csharp/programming-guide/concepts/async/index.md)|<span data-ttu-id="fe903-110">Descreve como criar soluções assíncronas usando as palavras-chave [async](../../../csharp/language-reference/keywords/async.md) e [await](../../../csharp/language-reference/keywords/await.md) no C#.</span><span class="sxs-lookup"><span data-stu-id="fe903-110">Describes how to write asynchronous solutions by using the [async](../../../csharp/language-reference/keywords/async.md) and [await](../../../csharp/language-reference/keywords/await.md) keywords in C#.</span></span> <span data-ttu-id="fe903-111">Inclui um passo a passo.</span><span class="sxs-lookup"><span data-stu-id="fe903-111">Includes a walkthrough.</span></span>|  
+|[<span data-ttu-id="fe903-112">Atributos (C#)</span><span class="sxs-lookup"><span data-stu-id="fe903-112">Attributes (C#)</span></span>](../../../csharp/programming-guide/concepts/attributes/index.md)|<span data-ttu-id="fe903-113">Discute como fornecer informações adicionais sobre como programar elementos como tipos, campos, métodos e propriedades por meio de atributos.</span><span class="sxs-lookup"><span data-stu-id="fe903-113">Discusses how to provide additional information about programming elements such as types, fields, methods, and properties by using attributes.</span></span>|  
+|[<span data-ttu-id="fe903-114">Informações do chamador (C#)</span><span class="sxs-lookup"><span data-stu-id="fe903-114">Caller Information (C#)</span></span>](../../../csharp/programming-guide/concepts/caller-information.md)|<span data-ttu-id="fe903-115">Descreve como obter informações sobre o chamador de um método.</span><span class="sxs-lookup"><span data-stu-id="fe903-115">Describes how to obtain information about the caller of a method.</span></span> <span data-ttu-id="fe903-116">Essas informações incluem o caminho do arquivo e o número de linha do código-fonte e o nome do membro do chamador.</span><span class="sxs-lookup"><span data-stu-id="fe903-116">This information includes the file path and the line number of the source code and the member name of the caller.</span></span>|  
+|[<span data-ttu-id="fe903-117">Coleções (C#)</span><span class="sxs-lookup"><span data-stu-id="fe903-117">Collections (C#)</span></span>](../../../csharp/programming-guide/concepts/collections.md)|<span data-ttu-id="fe903-118">Descreve alguns dos tipos de coleções fornecidos pelo .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="fe903-118">Describes some of the types of collections provided by the .NET Framework.</span></span> <span data-ttu-id="fe903-119">Demonstra como usar coleções simples e coleções de pares chave/valor.</span><span class="sxs-lookup"><span data-stu-id="fe903-119">Demonstrates how to use simple collections and collections of key/value pairs.</span></span>|  
+|[<span data-ttu-id="fe903-120">Covariância e contravariância (C#)</span><span class="sxs-lookup"><span data-stu-id="fe903-120">Covariance and Contravariance (C#)</span></span>](../../../csharp/programming-guide/concepts/covariance-contravariance/index.md)|<span data-ttu-id="fe903-121">Mostra como habilitar a conversão implícita de parâmetros de tipo genérico em interfaces e delegados.</span><span class="sxs-lookup"><span data-stu-id="fe903-121">Shows how to enable implicit conversion of generic type parameters in interfaces and delegates.</span></span>|  
+|[<span data-ttu-id="fe903-122">Árvores de expressão (C#)</span><span class="sxs-lookup"><span data-stu-id="fe903-122">Expression Trees (C#)</span></span>](../../../csharp/programming-guide/concepts/expression-trees/index.md)|<span data-ttu-id="fe903-123">Explica como você pode usar árvores de expressão para habilitar a modificação dinâmica de código executável.</span><span class="sxs-lookup"><span data-stu-id="fe903-123">Explains how you can use expression trees to enable dynamic modification of executable code.</span></span>|  
+|[<span data-ttu-id="fe903-124">Iteradores (C#)</span><span class="sxs-lookup"><span data-stu-id="fe903-124">Iterators (C#)</span></span>](../../../csharp/programming-guide/concepts/iterators.md)|<span data-ttu-id="fe903-125">Descreve os iteradores, que são usados para percorrer coleções e retornar elementos um por vez.</span><span class="sxs-lookup"><span data-stu-id="fe903-125">Describes iterators, which are used to step through collections and return elements one at a time.</span></span>|  
+|[<span data-ttu-id="fe903-126">LINQ (consulta integrada à linguagem) (C#)</span><span class="sxs-lookup"><span data-stu-id="fe903-126">Language-Integrated Query (LINQ) (C#)</span></span>](../../../csharp/programming-guide/concepts/linq/index.md)|<span data-ttu-id="fe903-127">Discute os recursos avançados de consulta na sintaxe de linguagem do C# e o modelo para consultar bancos de dados relacionais, documentos XML, conjuntos de dados e coleções na memória.</span><span class="sxs-lookup"><span data-stu-id="fe903-127">Discusses the powerful query capabilities in the language syntax of C#, and the model for querying relational databases, XML documents, datasets, and in-memory collections.</span></span>|  
+|[<span data-ttu-id="fe903-128">Programação orientada a objeto (C#)</span><span class="sxs-lookup"><span data-stu-id="fe903-128">Object-Oriented Programming (C#)</span></span>](../../../csharp/programming-guide/concepts/object-oriented-programming.md)|<span data-ttu-id="fe903-129">Descreve os conceitos comuns orientados a objetos, incluindo encapsulamento, herança e polimorfismo.</span><span class="sxs-lookup"><span data-stu-id="fe903-129">Describes common object-oriented concepts, including encapsulation, inheritance, and polymorphism.</span></span>|  
+|[<span data-ttu-id="fe903-130">Reflexão (C#)</span><span class="sxs-lookup"><span data-stu-id="fe903-130">Reflection (C#)</span></span>](../../../csharp/programming-guide/concepts/reflection.md)|<span data-ttu-id="fe903-131">Explica como usar a reflexão para criar dinamicamente uma instância de um tipo, associar o tipo a um objeto existente ou obter o tipo de um objeto existente e invocar seus métodos ou acessar suas propriedades e campos.</span><span class="sxs-lookup"><span data-stu-id="fe903-131">Explains how to use reflection to dynamically create an instance of a type, bind the type to an existing object, or get the type from an existing object and invoke its methods or access its fields and properties.</span></span>|  
+|[<span data-ttu-id="fe903-132">Serialização (C#)</span><span class="sxs-lookup"><span data-stu-id="fe903-132">Serialization (C# )</span></span>](../../../csharp/programming-guide/concepts/serialization/index.md)|<span data-ttu-id="fe903-133">Descreve os principais conceitos em binário, XML e serialização SOAP.</span><span class="sxs-lookup"><span data-stu-id="fe903-133">Describes key concepts in binary, XML, and SOAP serialization.</span></span>|  
+|[<span data-ttu-id="fe903-134">Threading (C#)</span><span class="sxs-lookup"><span data-stu-id="fe903-134">Threading (C#)</span></span>](../../../csharp/programming-guide/concepts/threading/index.md)|<span data-ttu-id="fe903-135">Fornece uma visão geral do modelo de threading do .NET e mostra como escrever código que executa várias tarefas ao mesmo tempo para melhorar o desempenho e a capacidade de resposta dos aplicativos.</span><span class="sxs-lookup"><span data-stu-id="fe903-135">Provides an overview of the .NET threading model and shows how to write code that performs multiple tasks at the same time to improve the performance and responsiveness of your applications.</span></span>|  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a><span data-ttu-id="fe903-136">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="fe903-136">Related Sections</span></span>  
   
 |||  
 |---|---|  
-|[Dicas de desempenho](https://msdn.microsoft.com/library/ms173196(VS.110).aspx) | Discute várias regras básicas que podem ajudá-lo a aumentar o desempenho do seu aplicativo.|
-
+|<span data-ttu-id="fe903-137">[Dicas de desempenho](https://msdn.microsoft.com/library/ms173196(VS.110).aspx)</span><span class="sxs-lookup"><span data-stu-id="fe903-137">[Performance Tips](https://msdn.microsoft.com/library/ms173196(VS.110).aspx)</span></span> | <span data-ttu-id="fe903-138">Discute várias regras básicas que podem ajudá-lo a aumentar o desempenho do seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="fe903-138">Discusses several basic rules that may help you increase the performance of your application.</span></span>|
