@@ -1,25 +1,21 @@
 ---
 title: "Consultando árvores XML (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 0913d81b-541a-4fd4-9cbf-7ec89fd817ea
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 66028510b57981879412a1c2a161652adde340bd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4bad11434ed2610492854d5ec4a7a84bceb189f3
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="querying-xml-trees-c"></a>Consultando árvores XML (C#)
 Esta seção fornece exemplos de consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -39,6 +35,5 @@ Esta seção fornece exemplos de consultas [!INCLUDE[sqltecxlinq](~/includes/sql
 |[Transformações funcionais puras de XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)|Apresenta um pequeno tutorial de como criar consultas no estilo de programação funcional.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Guia de Programação (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)   
+ [Guia de Programação (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
  [Introdução a LINQ em C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-

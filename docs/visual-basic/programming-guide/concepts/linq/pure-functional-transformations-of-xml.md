@@ -1,26 +1,22 @@
 ---
-title: "Transformações e puras XML (Visual Basic) | Documentos do Microsoft"
+title: "Transformações e puras XML (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 5e19b74a-7773-4b58-b110-953ffd364c55
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 901585a249ca270d526796e7b1c0a5cfb664240a
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 01ad228d91037de1585d1e66292fddb80c785ada
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="pure-functional-transformations-of-xml-visual-basic"></a>Transformações e puras XML (Visual Basic)
 Esta seção fornece um tutorial funcional de transformação para XML. Isso inclui explicações sobre conceitos e as compilações de idioma que você deve compreender para usar transformações funcionais, e os exemplos chave de usar transformações e para manipular um documento XML. Embora este tutorial fornece exemplos de código LINQ to XML, todos os conceitos fundamentais também se aplicam ao outro LINQ tecnologias.  

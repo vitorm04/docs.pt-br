@@ -1,40 +1,25 @@
 ---
 title: "Passo a passo: Programação do Office (C# e Visual Basic)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 dev_langs:
-- CSharp
+- csharp
+- vb
 helpviewer_keywords:
 - Office, programming in Visual Basic and C#
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 862f445107e0f58e8e00fba1708156c747165def
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: 8c1195289d70e111d5c3551d004708de7722c8e9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Passo a passo: Programação do Office (C# e Visual Basic)
 O Visual Studio oferece funcionalidades no C# e no Visual Basic que melhoram a programação do Microsoft Office. As funcionalidades úteis do C# incluem argumentos nomeados e opcionais e valores retornados do tipo `dynamic`. Na programação COM, você pode omitir a palavra-chave `ref` e obter acesso a propriedades indexadas. As funcionalidades do Visual Basic incluem propriedades autoimplementadas, instruções em expressões lambda e inicializadores de coleção.
@@ -83,7 +68,7 @@ Você deve ter o Microsoft Office Excel e o Microsoft Office Word instalados no 
   
 2.  Adicione as seguintes instruções `Imports` (Visual Basic) ou diretivas `using` (C#) à parte superior do arquivo de código, se elas ainda não estiverem presentes.  
   
-     [!code-cs[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_1.cs)]
+     [!code-csharp[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_1.cs)]
 
      [!code-vb[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_1.vb)]
   
@@ -93,13 +78,13 @@ Você deve ter o Microsoft Office Excel e o Microsoft Office Word instalados no 
   
 2.  Substitua a definição da classe `Account` pelo código a seguir. As definições de classe usam *propriedades autoimplementadas*. Para obter mais informações, consulte [Propriedades autoimplementadas](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).  
   
-     [!code-cs[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_2.cs)]
+     [!code-csharp[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_2.cs)]
 
      [!code-vb[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_2.vb)]  
   
 3.  Para criar uma lista `bankAccounts` que contém duas contas, adicione o seguinte código ao método `ThisAddIn_Startup` em *ThisAddIn.vb* ou *ThisAddIn.cs*. As declarações de lista usam *inicializadores de coleção*. Para obter mais informações, consulte [Inicializadores de coleção](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).  
   
-     [!code-cs[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_3.cs)]
+     [!code-csharp[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_3.cs)]
 
      [!code-vb[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_3.vb)]  
   
@@ -107,7 +92,7 @@ Você deve ter o Microsoft Office Excel e o Microsoft Office Word instalados no 
   
 1.  No mesmo arquivo, adicione o método a seguir para a classe `ThisAddIn`. O método configura uma planilha do Excel e exporta dados para ela.  
   
-     [!code-cs[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_4.cs)]
+     [!code-csharp[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_4.cs)]
 
      [!code-vb[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_4.vb)]  
   
@@ -119,11 +104,11 @@ Você deve ter o Microsoft Office Excel e o Microsoft Office Word instalados no 
   
     -   As propriedades `Range` e `Offset` do objeto [Range](http://go.microsoft.com/fwlink/?LinkId=210911) usam o recurso de *propriedades indexadas*. Este recurso permite consumir essas propriedades de tipos COM usando a sintaxe típica do C# a seguir. Propriedades indexadas também permitem que você use a propriedade `Value` do objeto `Range`, eliminando a necessidade de usar a propriedade `Value2`. A propriedade `Value` é indexada, mas o índice é opcional. Argumentos opcionais e propriedades indexadas trabalham juntos no exemplo a seguir.  
   
-         [!code-cs[csOfficeWalkthrough#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_5.cs)]  
+         [!code-csharp[csOfficeWalkthrough#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_5.cs)]  
   
          Em versões anteriores da linguagem, a sintaxe especial a seguir é obrigatória.  
   
-         [!code-cs[csOfficeWalkthrough#6](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_6.cs)]  
+         [!code-csharp[csOfficeWalkthrough#6](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_6.cs)]  
   
          Não é possível criar propriedades indexadas de sua preferência. O recurso dá suporte apenas ao consumo de propriedades indexadas existentes.  
   
@@ -131,7 +116,7 @@ Você deve ter o Microsoft Office Excel e o Microsoft Office Word instalados no 
   
 2.  Adicione o seguinte código no final de `DisplayInExcel` para ajustar as larguras das colunas para adequar o conteúdo.  
   
-     [!code-cs[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_7.cs)]
+     [!code-csharp[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_7.cs)]
 
      [!code-vb[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_7.vb)]  
   
@@ -139,7 +124,7 @@ Você deve ter o Microsoft Office Excel e o Microsoft Office Word instalados no 
   
      Por exemplo, `excelApp.Columns[1]` retorna um `Object` e `AutoFit` é um método [Range](http://go.microsoft.com/fwlink/?LinkId=210911) do Excel. Sem `dynamic`, você deve converter o objeto retornado em `excelApp.Columns[1]` como uma instância de `Range` antes de chamar o método `AutoFit`.  
   
-     [!code-cs[csOfficeWalkthrough#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_8.cs)]  
+     [!code-csharp[csOfficeWalkthrough#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_8.cs)]  
   
      Para obter mais informações sobre como inserir tipos de interoperabilidade, consulte os procedimentos "Para localizar a referência de PIA" e "Para restaurar a dependência de PIA" posteriormente neste tópico. Para obter mais informações sobre `dynamic`, consulte [dynamic](../../../csharp/language-reference/keywords/dynamic.md) ou [Usando o tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md).  
   
@@ -147,7 +132,7 @@ Você deve ter o Microsoft Office Excel e o Microsoft Office Word instalados no 
   
 1.  Adicione o código a seguir no final do método `ThisAddIn_StartUp`. A chamada para `DisplayInExcel` contém dois argumentos. O primeiro argumento é o nome da lista de contas a ser processada. O segundo argumento é uma expressão lambda com várias linhas que define como os dados deverão ser processados. Os valores `ID` e `balance` de cada conta serão exibidos em células adjacentes e a linha será exibida em vermelho se o equilíbrio for menor do que zero. Para obter mais informações, consulte [Expressões Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
-     [!code-cs[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_9.cs)]
+     [!code-csharp[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_9.cs)]
 
      [!code-vb[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_9.vb)]  
   
@@ -157,7 +142,7 @@ Você deve ter o Microsoft Office Excel e o Microsoft Office Word instalados no 
   
 1.  Adicione o código a seguir ao final do método `ThisAddIn_StartUp` para criar um documento do Word que contém um link para a pasta de trabalho do Excel.  
   
-     [!code-cs[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_10.cs)]
+     [!code-csharp[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_10.cs)]
 
      [!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_10.vb)]  
   
@@ -211,22 +196,21 @@ Você deve ter o Microsoft Office Excel e o Microsoft Office Word instalados no 
 8.  No Visual Studio, clique em **Limpar Solução** no menu **Compilar** para limpar o projeto concluído.  
   
 ## <a name="see-also"></a>Consulte também  
- [Propriedades autoimplementadas](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)   
- [Propriedades autoimplementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)   
- [Inicializadores de Coleção](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)   
- [Inicializadores de Objeto e Coleção](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)   
- [Parâmetros opcionais](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)   
- [Passando argumentos por posição e nome](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)   
- [Argumentos nomeados e opcionais](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)   
- [Associação antecipada e tardia](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)   
- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)   
- [Usando o Tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)   
- [Expressões Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
- [Expressões Lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
- [Como usar propriedades indexadas na programação para interoperabilidade COM](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)   
- [Instruções passo a passo: Inserindo informações de tipo dos Microsoft Office Assemblies](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)   
- [Instruções passo a passo: Inserindo tipos de assemblies gerenciados](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)   
- [Passo a passo: criando o primeiro suplemento do VSTO para Excel](http://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)   
- [Interoperabilidade COM](../../../visual-basic/programming-guide/com-interop/index.md)   
+ [Propriedades Autoimplementadas](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
+ [Propriedades Autoimplementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+ [Inicializadores de Coleção](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
+ [Inicializadores de objeto e coleção](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+ [Parâmetros Opcionais](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
+ [Passando Argumentos por Posição e Nome](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)  
+ [Argumentos nomeados e opcionais](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
+ [Associação Antecipada e Tardia](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
+ [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
+ [Usando o tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+ [Expressões Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
+ [Expressões Lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+ [Como usar propriedades indexadas na programação para interoperabilidade COM](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
+ [Instruções passo a passo: inserindo informações de tipo dos Microsoft Office Assemblies](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)  
+ [Instruções passo a passo: inserindo tipos de assemblies gerenciados](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [Instruções passo a passo: criando o primeiro suplemento do VSTO para Excel](http://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)  
+ [Interoperabilidade COM](../../../visual-basic/programming-guide/com-interop/index.md)  
  [Interoperabilidade](../../../csharp/programming-guide/interop/index.md)
-

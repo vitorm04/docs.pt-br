@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
+ms.openlocfilehash: ac19d4208da4f8ee6dd3e071ab70dbc41a0cd065
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: de8f77e44319731f87f00d227a5373a78bf40e32
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="string-interpolation-in-c"></a>Interpolação de cadeia de caracteres no C# #
 
 A interpolação de cadeia de caracteres é a maneira que os espaços reservados em uma cadeia de caracteres são substituídos pelo valor de uma variável de cadeia de caracteres. Antes do C# 6, a maneira de fazer isso era com `System.String.Format`. Isso funciona, mas como ele usa espaços reservados numerados, pode ser mais difícil de ler e ser mais detalhado.
@@ -46,23 +44,27 @@ dotnet new console
 
 Esse comando criará um projeto do .NET Core barebones com um arquivo de projeto, *interpolated.csproj*, e um arquivo de código-fonte, *Program.cs*. Você precisará executar `dotnet restore` para restaurar as dependências necessárias para compilar esse projeto.
 
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 Para executar o programa, use `dotnet run`. Você deve ver a saída do "Olá, Mundo" no console.
+
+
 
 ## <a name="intro-to-string-interpolation"></a>Introdução à interpolação de cadeia de caracteres
 
 Com `System.String.Format`, especifique "espaços reservados" em uma cadeia de caracteres que são substituídos pelos parâmetros na cadeia de caracteres a seguir. Por exemplo:
 
-[!code-csharp[Exemplo de String.Format](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
+[!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
 
 Isso produzirá "Meu nome é Matt Groves".
 
 No C# 6, em vez de usar `String.Format`, você define uma cadeia de caracteres interpolada acrescentando-a com o símbolo `$` e, em seguida, usando as variáveis diretamente na cadeia de caracteres. Por exemplo:
 
-[!code-csharp[Exemplo de interpolação](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
+[!code-csharp[Interpolation example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
 
 Você não precisa usar apenas variáveis. Você pode usar qualquer expressão entre colchetes. Por exemplo:
 
-[!code-csharp[Exemplo de expressão de interpolação](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
+[!code-csharp[Interpolation expression example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
 
 O que resultaria:
 
@@ -80,7 +82,7 @@ Nos bastidores, essa sintaxe de interpolação de cadeia de caracteres é conver
 
 Por exemplo, você pode adicionar preenchimento e formatação numérica:
 
-[!code-csharp[Exemplo de formatação de interpolação](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
+[!code-csharp[Interpolation formatting example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
 
 O item acima resultaria em:
 
@@ -118,9 +120,8 @@ Por padrão, uma cadeia de caracteres interpolada usa a cultura atual. Para usar
 
 Por exemplo:
 
-[!code-csharp[Exemplo de internacionalização de interpolação](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
+[!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
 
 ## <a name="conclusion"></a>Conclusão 
 
 Neste tutorial, você aprendeu como usar recursos de interpolação de cadeia de caracteres de C# 6. Ele é basicamente uma maneira mais concisa de gravar instruções `String.Format` simples, com algumas restrições para usos mais avançados.
-

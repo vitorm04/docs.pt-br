@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 37a27a86-ac1c-47be-b477-cb4b819459d3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
+ms.openlocfilehash: 989883034b30c3ec67f5441c5512418643546519
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7ac9884766812cd635b5a70c028cf15c19838511
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-the-gamepiece-class"></a>Criando a classe GamePiece
 A classe **GamePiece** encapsula toda a funcionalidade necessária para carregar uma imagem de uma peça do jogo da Microsoft XNA, controlar o estado do mouse em relação à peça do jogo, capturar o mouse, fornecer processamento de inércia e manipulação e fornecer a capacidade de pulo quando a peça do jogo atingir os limites da porta de exibição.  
@@ -110,8 +108,7 @@ A classe **GamePiece** encapsula toda a funcionalidade necessária para carregar
  [!code-csharp[ManipulationXNA#_GamePiece_PrivateProperties](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_privateproperties)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Manipulações e inércia](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)   
- [Usando manipulações e inércia em um aplicativo XNA](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)   
- [Criando a classe GamePieceCollection](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)   
+ [Manipulações e inércia](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)  
+ [Uso de manipulações e inércia em um aplicativo XNA](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)  
+ [Criação da classe GamePieceCollection](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)  
  [Criação da classe Game1](../../../docs/framework/common-client-technologies/creating-the-game1-class.md)
-

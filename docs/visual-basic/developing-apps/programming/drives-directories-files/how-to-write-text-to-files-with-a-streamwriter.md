@@ -1,43 +1,25 @@
 ---
 title: Como gravar texto em arquivos com um StreamWriter no Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- files, writing to
+- files [Visual Basic], writing to
 - text, writing to files
-- writing to files, StreamWriter
+- writing to files [Visual Basic], StreamWriter
 ms.assetid: 99762e57-ef46-4dcc-8959-a8f79c22f067
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 874bb9cb88bbf25cb6208a0a33858855a7b26a49
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ea85d57e9af4fdd640733db5dc2fa8b0ab25325c
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-write-text-to-files-with-a-streamwriter-in-visual-basic"></a>Como gravar texto em arquivos com um StreamWriter no Visual Basic
 Este exemplo abre um objeto <xref:System.IO.StreamWriter> com o método `My.Computer.FileSystem.OpenTextFileWriter` e o usa para gravar uma cadeia de caracteres em um arquivo de texto com o método <xref:System.IO.TextWriter.WriteLine%2A> da classe <xref:System.IO.StreamWriter>.  
@@ -58,8 +40,7 @@ Este exemplo abre um objeto <xref:System.IO.StreamWriter> com o método `My.Comp
  Este exemplo cria um novo arquivo, se o arquivo ainda não existe. Se um aplicativo precisar criar um arquivo, ele precisará de acesso `Create` para a pasta. Se o arquivo já existe, o aplicativo precisa apenas de acesso `Write`, um privilégio menor. Sempre que possível, é mais seguro criar o arquivo durante a implantação e somente conceder acesso `Read` a um único arquivo, em vez de acesso `Create` a uma pasta.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.IO.StreamWriter>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>   
- [Como ler em arquivos de texto](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)   
+ <xref:System.IO.StreamWriter>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>  
+ [Como ler em arquivos de texto](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
  [Gravando em arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
-

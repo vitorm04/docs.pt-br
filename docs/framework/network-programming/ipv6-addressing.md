@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Internet Protocol version 6, addresses in
 - Neighbor Discovery
@@ -37,16 +32,15 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6d810d9fdf6f0e464147e639d9a3acf2ebc148d9
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: be73fe51e6b3a52ccb2717f0216ab82b90dd9841
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ipv6-addressing"></a>Endereçamento IPv6
 No protocolo IP versão 6 (IPv6), os endereços têm tamanho de 128 bits. Um motivo para um espaço de endereço tão grande é subdividir os endereços disponíveis em uma hierarquia de domínios de roteamento que reflitam a topologia da Internet. Outro motivo é mapear os endereços de adaptadores de rede (ou interfaces) que conectam dispositivos à rede. O IPv6 tem uma capacidade inerente de resolver endereços no nível mais baixo deles, que é o nível de adaptador de rede e também tem capacidades de configuração automática.  
@@ -88,6 +82,5 @@ No protocolo IP versão 6 (IPv6), os endereços têm tamanho de 128 bits. Um mot
  Em geral, um nó sempre tem um endereço de link local. Ele pode ter um endereço de site local e um ou mais endereços globais.  
   
 ## <a name="see-also"></a>Consulte também  
- [Protocolo IP versão 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
+ [Protocolo IP versão 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
  [Soquetes](../../../docs/framework/network-programming/sockets.md)
-

@@ -1,0 +1,52 @@
+---
+title: "Como animar uma geometria de retângulo usando quadros-chave"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- key frames [WPF], animating RectangleGeometry objects with
+- RectangleGeometry objects [WPF], animating with key frames
+- animation [WPF], RectangleGeometry objects with key frames
+ms.assetid: a8b45ceb-0e32-4ba1-928f-df6d30db17c6
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b6c23f894b6fa93a3889356416bd95f61fff8beb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="how-to-animate-a-rectangle-geometry-by-using-key-frames"></a>Como animar uma geometria de retângulo usando quadros-chave
+Este exemplo mostra como animar a <xref:System.Windows.Media.RectangleGeometry.Rect%2A> propriedade de um <xref:System.Windows.Media.RectangleGeometry> usando quadros chave.  
+  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir usa o <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames> classe para animar a <xref:System.Windows.Media.RectangleGeometry.Rect%2A> propriedade de um <xref:System.Windows.Media.RectangleGeometry>. Essa animação usa três quadros-chave da seguinte maneira:  
+  
+1.  Durante os primeiros dois segundos, usa uma instância do <xref:System.Windows.Media.Animation.LinearRectKeyFrame> classe para animar uma alteração gradual na posição, largura e altura de um retângulo. Quadros-chave lineares como <xref:System.Windows.Media.Animation.LinearRectKeyFrame> criam uma transição linear suave entre valores.  
+  
+2.  Durante o final do próximo meio segundo, usa uma instância do <xref:System.Windows.Media.Animation.DiscreteRectKeyFrame> classe subitamente diminuir a altura do retângulo. Quadros chave discretos como <xref:System.Windows.Media.Animation.DiscreteRectKeyFrame> criam alterações repentinas entre valores, ou seja, a redução de altura ocorre rapidamente e não é sutil.  
+  
+3.  Durante os últimos dois segundos, usa uma instância do <xref:System.Windows.Media.Animation.SplineRectKeyFrame> classe para alterar o retângulo de volta para sua posição e tamanho original. Quadros-chave spline como <xref:System.Windows.Media.Animation.SplineRectKeyFrame> criar uma transição de variável entre valores de acordo com os valores de <xref:System.Windows.Media.Animation.SplineRectKeyFrame.KeySpline%2A> propriedade. Neste exemplo, a alteração começa lentamente e acelera exponencialmente na direção do final do segmento de tempo.  
+  
+ [!code-csharp[keyframes_snip#RectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/RectAnimationUsingKeyFramesExample.cs#rectanimationusingkeyframeswholepage)]
+ [!code-vb[keyframes_snip#RectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/rectanimationusingkeyframesexample.vb#rectanimationusingkeyframeswholepage)]
+ [!code-xaml[keyframes_snip#RectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/RectAnimationUsingKeyFramesExample.xaml#rectanimationusingkeyframeswholepage)]  
+  
+ Para ver o exemplo completo, consulte [Exemplo de animação de quadro-chave](http://go.microsoft.com/fwlink/?LinkID=160012).  
+  
+## <a name="see-also"></a>Consulte também  
+ <xref:System.Windows.Media.RectangleGeometry>  
+ <xref:System.Windows.Media.RectangleGeometry.Rect%2A>  
+ <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>  
+ [Visão geral das animações de quadro-chave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [Tópicos explicativos sobre quadros-chave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

@@ -1,25 +1,21 @@
 ---
 title: Como modificar um documento do Office Open XML (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 481e0751c45054a9f99b8302ed3c2d12abc052ea
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 21a82e6ff71c9f8c4882eeab266275627e2c2cd0
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-modify-an-office-open-xml-document-c"></a>Como modificar um documento do Office Open XML (C#)
 Este tópico apresenta um exemplo que abre um documento do Office Open XML, modifica-o e salva-o.  
@@ -29,7 +25,7 @@ Este tópico apresenta um exemplo que abre um documento do Office Open XML, modi
 ## <a name="example"></a>Exemplo  
  Este exemplo localiza o primeiro elemento de parágrafo no documento. Ele recupera o texto do parágrafo e, em seguida, exclui todas as execuções do texto no parágrafo. Ele cria uma nova execução de texto que consiste no texto do primeiro parágrafo que foi convertido para maiúsculas. Ele em seguida serializa o XML modificado no pacote Open XML e fecha-o.  
   
- Este exemplo usa as classes encontradas no assembly WindowsBase. Ele usa tipos no namespace <xref:System.IO.Packaging?displayProperty=fullName>.  
+ Este exemplo usa as classes encontradas no assembly WindowsBase. Ele usa tipos no namespace <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -161,4 +157,3 @@ New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<
   
 ## <a name="see-also"></a>Consulte também  
  [Técnicas avançadas de consulta (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
-

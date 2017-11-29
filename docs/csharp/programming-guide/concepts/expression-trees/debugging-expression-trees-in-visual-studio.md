@@ -1,30 +1,21 @@
 ---
 title: "Depurando árvores de expressão no Visual Studio (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: d74df8ba339526e20850cd8b8f1a4b37c20e22ab
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0cf40b38ca9a6f743aca2894506e1d0ea80c9d57
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Depurando árvores de expressão no Visual Studio (C#)
 Ao depurar seus aplicativos, você pode analisar a estrutura e o conteúdo das árvores de expressão. Para obter uma rápida visão geral da estrutura da árvore de expressão, você pode usar a propriedade `DebugView`, que está disponível apenas no modo de depuração. Para obter mais informações sobre depuração, consulte [Depurando no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).  
@@ -121,7 +112,6 @@ Ao depurar seus aplicativos, você pode analisar a estrutura e o conteúdo das �
 |`Expression expr = Expression.ConvertChecked( Expression.Constant(10.0), typeof(int));`|`#(System.Int32)10D`|  
   
 ## <a name="see-also"></a>Consulte também  
- [Árvores de expressão (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)   
- [Depurando no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)   
+ [Árvores de expressão (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
+ [Depurando no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)  
  [Criar visualizadores personalizados](/visualstudio/debugger/create-custom-visualizers-of-data)
-

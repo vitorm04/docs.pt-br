@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - names [.NET Framework], assemblies
 - assemblies [.NET Framework], names
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 624cc6ad264f32b9a43917d9bae751f57b4421a8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7029fb2b436c9ba49f2dfd3da07c5147222fbeaf
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assembly-names"></a>Nomes de assembly
 Um nome de assembly é armazenado em metadados e tem um impacto significativo no escopo e uso do assembly por um aplicativo. Um assembly de nome forte tem um nome totalmente qualificado que inclui o nome, a cultura, a chave pública e o número de versão do assembly. Isso muitas vezes é chamado de nome de exibição, e para os assemblies carregados pode ser obtido usando a propriedade <xref:System.Reflection.Assembly.FullName%2A>.  
@@ -34,7 +32,7 @@ myTypes, Version=1.0.1234.0, Culture=en-US, PublicKeyToken=b77a5c561934e089c, Pr
 ```  
   
 > [!NOTE]
->  A arquitetura do processador é adicionada à identidade do assembly na versão 2.0 do .NET Framework, para permitir versões específicas do processador de assemblies. Crie versões de um assembly cuja identidade varie apenas pela arquitetura do processador, por exemplo, versões específicas de processador 32 bits e 64 bits. A arquitetura do processador não é necessária para nomes fortes. Para obter mais informações, consulte <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=fullName>.  
+>  A arquitetura do processador é adicionada à identidade do assembly na versão 2.0 do .NET Framework, para permitir versões específicas do processador de assemblies. Crie versões de um assembly cuja identidade varie apenas pela arquitetura do processador, por exemplo, versões específicas de processador 32 bits e 64 bits. A arquitetura do processador não é necessária para nomes fortes. Para obter mais informações, consulte <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=nameWithType>.  
   
  Neste exemplo, o nome totalmente qualificado indica que o assembly `myTypes` tem um nome forte com um token de chave pública, tem o valor de cultura para inglês (EUA) e tem um número de versão de 1.0.1234.0. A arquitetura de seu processador é "msil", que significa que ele será compilado no modo JIT (just-in-time) para códigos de 32 bits ou 64 bits dependendo do sistema operacional e do processador.  
   
@@ -60,7 +58,7 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 ## <a name="naming-application-components"></a>Nomenclatura de componentes do aplicativo  
  O tempo de execução não considera o nome do arquivo ao determinar a identidade de um assembly. A identidade do assembly, composta pelo nome, versão, cultura e nome forte do assembly, deve ficar clara para o tempo de execução.  
   
- Por exemplo, se você tiver um assembly denominado myAssembly.exe que faz referência a um assembly denominado myAssembly.dll, a associação ocorrerá corretamente se você executar myAssembly.exe. No entanto, se outro aplicativo executar myAssembly.exe usando o método <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName>, o tempo de execução determinará que "myAssembly" já está carregado quando myAssembly.exe solicitar a associação ao "myAssembly". Nesse caso, myAssembly.dll nunca é carregado. Como myAssembly.exe não contém o tipo solicitado, uma <xref:System.TypeLoadException> ocorrerá.  
+ Por exemplo, se você tiver um assembly denominado myAssembly.exe que faz referência a um assembly denominado myAssembly.dll, a associação ocorrerá corretamente se você executar myAssembly.exe. No entanto, se outro aplicativo executar myAssembly.exe usando o método <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType>, o tempo de execução determinará que "myAssembly" já está carregado quando myAssembly.exe solicitar a associação ao "myAssembly". Nesse caso, myAssembly.dll nunca é carregado. Como myAssembly.exe não contém o tipo solicitado, uma <xref:System.TypeLoadException> ocorrerá.  
   
  Para evitar esse problema, verifique se os assemblies que compõem seu aplicativo não têm o mesmo nome de assembly ou colocam assemblies com o mesmo nome em diretórios diferentes.  
   
@@ -68,10 +66,9 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 >  Se você colocar um assembly de nome forte no cache de assembly global, o nome de arquivo do assembly deverá corresponder ao nome de assembly (não incluindo a extensão de nome de arquivo, como .exe ou .dll). Por exemplo, se o nome do arquivo de um assembly for myAssembly.dll, o nome do assembly deverá ser myAssembly. Assemblies particulares implantados somente no diretório do aplicativo raiz podem ter um nome de assembly diferente do nome do arquivo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Como determinar o nome totalmente qualificado de um assembly](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)   
- [Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)   
- [Assemblies de nomes fortes](../../../docs/framework/app-domains/strong-named-assemblies.md)   
- [Cache de assembly global](../../../docs/framework/app-domains/gac.md)   
- [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
+ [Como determinar o nome totalmente qualificado de um assembly](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
+ [Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)  
+ [Assemblies de nomes fortes](../../../docs/framework/app-domains/strong-named-assemblies.md)  
+ [Cache de assembly global](../../../docs/framework/app-domains/gac.md)  
+ [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)
-

@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - Internet, WebRequest and WebResponse classes exceptions
 - Status property
@@ -39,16 +37,15 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ca755d123589f4ee07ea9caadf8bd420c94adae4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: aad78fb509f98a01b5ca072ad476d901fdd1d4d3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="handling-errors"></a>Manipulando erros
 As classes <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> geram exceções do sistema (como <xref:System.ArgumentException>) e exceções específicas à Web (que são <xref:System.Net.WebException> geradas pelo método <xref:System.Net.WebRequest.GetResponse%2A>).  
@@ -180,6 +177,5 @@ End Try
  Quando uma **SocketException** é gerada, a classe **SocketException** define a propriedade <xref:System.Net.Sockets.SocketException.ErrorCode%2A> com o último erro de soquete do sistema operacional ocorrido. Para obter mais informações sobre códigos de erro de soquete, consulte a documentação de códigos de erro da API do Winsock 2.0 no MSDN.  
   
 ## <a name="see-also"></a>Consulte também  
- [Fundamentos do tratamento de exceção](../../../docs/standard/exceptions/exception-handling-fundamentals.md)   
+ [Fundamentos do tratamento de exceções](../../../docs/standard/exceptions/exception-handling-fundamentals.md)  
  [Solicitando dados](../../../docs/framework/network-programming/requesting-data.md)
-

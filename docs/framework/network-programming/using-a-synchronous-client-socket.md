@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - sending data, sockets
@@ -25,21 +23,20 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8562670aad8a20a28eddcd2ebbe434a0402aff59
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ecd08b708b8725ae7b53bfee26b1d4d8668756cd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-a-synchronous-client-socket"></a>Usando um soquete de cliente síncrono
 Um soquete de cliente síncrona suspende o programa de aplicativo enquanto a operação de rede é concluída. Soquetes síncronos não são adequados para aplicativos que fazem uso intenso da rede para sua operação, mas podem permitir o acesso simples aos serviços de rede para outros aplicativos.  
   
- Para enviar dados, passe uma matriz de bytes para um dos métodos de envio de dados da classe <xref:System.Net.Sockets.Socket> (<xref:System.Net.Sockets.Socket.Send%2A> e <xref:System.Net.Sockets.Socket.SendTo%2A>). O exemplo a seguir codifica uma cadeia de caracteres em um buffer de matriz de bytes usando a propriedade <xref:System.Text.Encoding.ASCII%2A?displayProperty=fullName> e, em seguida, transmite o buffer para o dispositivo de rede usando o método **Send**. O método **Send** retorna o número de bytes enviados para o dispositivo de rede.  
+ Para enviar dados, passe uma matriz de bytes para um dos métodos de envio de dados da classe <xref:System.Net.Sockets.Socket> (<xref:System.Net.Sockets.Socket.Send%2A> e <xref:System.Net.Sockets.Socket.SendTo%2A>). O exemplo a seguir codifica uma cadeia de caracteres em um buffer de matriz de bytes usando a propriedade <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType> e, em seguida, transmite o buffer para o dispositivo de rede usando o método **Send**. O método **Send** retorna o número de bytes enviados para o dispositivo de rede.  
   
 ```vb  
 Dim msg As Byte() = _  
@@ -83,7 +80,6 @@ s.Close();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Usando um soquete de cliente assíncrono](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)   
- [Escutando com soquetes](../../../docs/framework/network-programming/listening-with-sockets.md)   
+ [Usando um soquete do cliente assíncrono](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
+ [Escutando com soquetes](../../../docs/framework/network-programming/listening-with-sockets.md)  
  [Exemplo de soquete de cliente síncrono](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
-

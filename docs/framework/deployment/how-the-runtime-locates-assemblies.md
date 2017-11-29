@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - app.config files, assembly locations
 - deploying applications [.NET Framework], assembly locations
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: f1a4fd55688f03cbd9de2ceb815c49423aff5fad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 75353ad43d76ceecd60bb9edd207c56c759e52c2
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Como o tempo de execução localiza assemblies
 Para implantar seu aplicativo .NET Framework com êxito, você deve entender como o Common Language Runtime localiza e associa aos assemblies que compõem seu aplicativo. Por padrão, o tempo de execução tenta associar com a versão exata de um assembly com o qual o aplicativo foi criado. Esse comportamento padrão pode ser substituído pelas configurações do arquivo de configuração.  
@@ -263,6 +256,5 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Por exemplo, se Assembly1 fizer referência a Assembly2 e Assembly1 tiver sido baixado de http://www.code.microsoft.com/utils, esse local será considerado uma dica sobre onde encontrar o Assembly2.dll. O tempo de execução investiga o assembly em http://www.code.microsoft.com/utils/Assembly2.dll e http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll. Se Assembly2 não for encontrado em um desses locais, o tempo de execução de consultará o Windows Installer.  
   
 ## <a name="see-also"></a>Consulte também  
- [Práticas recomendadas para carregamento de assemblies](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)   
+ [Práticas recomendadas para carregamento de assemblies](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
  [Implantação](../../../docs/framework/deployment/index.md)
-

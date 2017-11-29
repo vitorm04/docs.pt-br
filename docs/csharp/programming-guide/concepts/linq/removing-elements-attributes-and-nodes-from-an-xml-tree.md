@@ -1,22 +1,18 @@
 ---
 title: "Removendo elementos, atributos e nós de uma árvore XML (C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 1745b1ce84b33a67d54f5e752da2ecf9bbfdbc17
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
-ms.openlocfilehash: 40be8959c731746df9392e3cbf29c88fce222b0b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/10/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>Removendo elementos, atributos e nós de uma árvore XML (C#)
 Você pode modificar uma árvore XML, remover elementos, atributos e outros tipos de nós.  
@@ -29,19 +25,19 @@ Você pode modificar uma árvore XML, remover elementos, atributos e outros tipo
   
 |Método|Descrição|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=fullName>|Remove uma classe <xref:System.Xml.Linq.XAttribute> de seu pai.|  
-|<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=fullName>|Remove os nós filho de uma classe <xref:System.Xml.Linq.XContainer>.|  
-|<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=fullName>|Remove o conteúdo e os atributos de uma classe <xref:System.Xml.Linq.XElement>.|  
-|<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=fullName>|Remove os atributos de uma classe <xref:System.Xml.Linq.XElement>.|  
-|<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=fullName>|Se você passar `null` para o valor, esse método removerá o atributo.|  
-|<xref:System.Xml.Linq.XElement.SetElementValue%2A?displayProperty=fullName>|Se você passar `null` para o valor, esse método removerá o elemento filho.|  
-|<xref:System.Xml.Linq.XNode.Remove%2A?displayProperty=fullName>|Remove uma classe <xref:System.Xml.Linq.XNode> de seu pai.|  
-|<xref:System.Xml.Linq.Extensions.Remove%2A?displayProperty=fullName>|Remove cada atributo ou elemento na coleção de origem do respectivo elemento pai.|  
+|<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=nameWithType>|Remove uma classe <xref:System.Xml.Linq.XAttribute> de seu pai.|  
+|<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=nameWithType>|Remove os nós filho de uma classe <xref:System.Xml.Linq.XContainer>.|  
+|<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=nameWithType>|Remove o conteúdo e os atributos de uma classe <xref:System.Xml.Linq.XElement>.|  
+|<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=nameWithType>|Remove os atributos de uma classe <xref:System.Xml.Linq.XElement>.|  
+|<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=nameWithType>|Se você passar `null` para o valor, esse método removerá o atributo.|  
+|<xref:System.Xml.Linq.XElement.SetElementValue%2A?displayProperty=nameWithType>|Se você passar `null` para o valor, esse método removerá o elemento filho.|  
+|<xref:System.Xml.Linq.XNode.Remove%2A?displayProperty=nameWithType>|Remove uma classe <xref:System.Xml.Linq.XNode> de seu pai.|  
+|<xref:System.Xml.Linq.Extensions.Remove%2A?displayProperty=nameWithType>|Remove cada atributo ou elemento na coleção de origem do respectivo elemento pai.|  
   
 ## <a name="example"></a>Exemplo  
   
 ### <a name="description"></a>Descrição  
- Este exemplo demonstra três abordagens para remover elementos. Primeiro, ele remove um único elemento. Segundo, ele recupera uma coleção de elementos, materializa essa coleção usando o operador <xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName> e remove a coleção. Por último, recupera uma coleção de elementos e remove-a usando o método de extensão <xref:System.Xml.Linq.Extensions.Remove%2A>.  
+ Este exemplo demonstra três abordagens para remover elementos. Primeiro, ele remove um único elemento. Segundo, ele recupera uma coleção de elementos, materializa essa coleção usando o operador <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> e remove a coleção. Por último, recupera uma coleção de elementos e remove-a usando o método de extensão <xref:System.Xml.Linq.Extensions.Remove%2A>.  
   
  Para obter mais informações sobre o operador <xref:System.Linq.Enumerable.ToList%2A>, consulte [Convertendo Tipos de Dados (C#)](../../../../csharp/programming-guide/concepts/linq/converting-data-types.md).  
   
@@ -89,4 +85,3 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>Consulte também  
  [Modificando árvores XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
-

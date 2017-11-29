@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - signatures, platform invoke
 - stack depth
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - PInvokeStackImbalance MDA
 - managed debugging assistants (MDAs), platform invoke
 ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c7dcab401da29798365f4cbb5477dd0fb154c830
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b33a3edc5780ecf07e7809ca327a304d748110f1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="pinvokestackimbalance-mda"></a>MDA pInvokeStackImbalance
 O MDA (Assistente de Depuração Gerenciado) de `pInvokeStackImbalance` é ativado quando o CLR detecta que a profundidade da pilha após uma chamada de invocação de plataforma não corresponde à profundidade da pilha esperada, dada a convenção de chamada especificada no atributo <xref:System.Runtime.InteropServices.DllImportAttribute>, bem como a declaração dos parâmetros na assinatura gerenciada.  
@@ -76,7 +69,6 @@ parameters of the PInvoke signature match the target unmanaged signature.
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
+ <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+ [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
  [Marshaling de interoperabilidade](../../../docs/framework/interop/interop-marshaling.md)
-

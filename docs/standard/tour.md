@@ -1,5 +1,5 @@
 ---
-title: Tour do .NET | Microsoft Docs
+title: Tour do .NET
 description: Um tour guiado por alguns dos recursos mais importantes do .NET.
 keywords: ".NET, .NET Core, Tour, Linguagens de Programação, Não Seguro, Gerenciamento de Memória, Segurança de Tipos, Async"
 author: cartermp
@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
+ms.openlocfilehash: 809f0eaddf298b0d6a57e217c2bcf5450675c3e9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
-ms.openlocfilehash: c64a3113cf4e9e9ff203ed2cf449359f67ee9d10
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="tour-of-net"></a>Tour do .NET
 
 O .NET é uma plataforma de desenvolvimento de uso geral. Ele tem vários recursos importantes, como suporte a várias linguagens de programação, modelos de programação assíncronos e simultâneos, além de interoperabilidade nativa, o que possibilita uma ampla variedade de cenários em várias plataformas.
@@ -149,4 +147,3 @@ Se você estiver interessado em um tour pelos recursos do F#, veja o [Tour do F#
 Se você deseja começar a escrever seu próprio código, viste [Introdução](get-started.md).
 
 Para saber mais sobre componentes importantes do .NET, confira [Componentes de Arquitetura do .NET](components.md).
-

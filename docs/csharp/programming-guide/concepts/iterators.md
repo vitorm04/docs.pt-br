@@ -1,27 +1,18 @@
 ---
 title: Iteradores (C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 6d4994ea57d9fd0df8dfca7ffa40c280499caee6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5d5543a48d0c835f5270067d1e5ad514c28842b2
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="iterators-c"></a>Iteradores (C#)
 Um *iterador* pode ser usado para percorrer coleções, como listas e matrizes.  
@@ -366,7 +357,7 @@ public class Stack<T> : IEnumerable<T>
   
  A cada iteração sucessiva do loop `foreach` (ou a chamada direta ao `IEnumerator.MoveNext`), o próximo corpo de código do iterador continua, depois da instrução `yield return` anterior. Em seguida, ele continuará até a próxima instrução `yield return`, até que o final do corpo do iterador seja alcançado ou até que uma instrução `yield break` seja encontrada.  
   
- Iteradores não dão suporte ao método <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=fullName>. Para iterar novamente desde o início, você deve obter um novo iterador.  
+ Iteradores não dão suporte ao método <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType>. Para iterar novamente desde o início, você deve obter um novo iterador.  
   
  Para obter informações adicionais, consulte a [Especificação da linguagem C#](../../../csharp/language-reference/language-specification/index.md).  
   
@@ -380,10 +371,9 @@ public class Stack<T> : IEnumerable<T>
 -   Encapsular a criação da lista no iterador. No método iterador, você pode criar a lista e, em seguida, gerar cada resultado em um loop.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Collections.Generic>   
- <xref:System.Collections.Generic.IEnumerable%601>   
- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)   
- [yield](../../../csharp/language-reference/keywords/yield.md)   
- [Usando foreach com matrizes](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)   
+ <xref:System.Collections.Generic>  
+ <xref:System.Collections.Generic.IEnumerable%601>  
+ [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+ [yield](../../../csharp/language-reference/keywords/yield.md)  
+ [Usando foreach com matrizes](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)  
  [Genéricos](../../../csharp/programming-guide/generics/index.md)
-

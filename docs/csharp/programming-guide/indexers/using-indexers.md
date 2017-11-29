@@ -1,38 +1,19 @@
 ---
 title: "Usando indexadores (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- indexers [C#], about indexers
+helpviewer_keywords: indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d5c727edbbea116d858c6acf6b600f8fd9f43ee2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ac8990fa2efb1a2ea24497a3a5de3649795c7b23
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-indexers-c-programming-guide"></a>Usando indexadores (Guia de Programação em C#)
 Os indexadores são uma conveniência sintática que permitem criar uma [classe](../../../csharp/language-reference/keywords/class.md), [struct](../../../csharp/language-reference/keywords/struct.md) ou [interface](../../../csharp/language-reference/keywords/interface.md) que os aplicativos clientes podem acessar como uma matriz. Os indexadores são implementados em tipos cuja principal finalidade é encapsular uma coleção ou matriz interna. Por exemplo, suponha que você tem uma classe nomeada TempRecord que representa a temperatura em Farenheit conforme registrada 10 vezes diferentes durante um período de 24 horas. A classe contém uma matriz nomeada “temps” de flutuação de tipo para representar as temperaturas e uma <xref:System.DateTime> que representa as datas em que as temperaturas foram registradas. Ao implementar um indexador nessa classe, os clientes podem acessar as temperaturas em uma instância TempRecord como `float temp = tr[4]` em vez de `float temp = tr.temps[4]`. A notação do indexador não simplifica somente a sintaxe para aplicativos clientes; ela também torna a classe e sua finalidade mais intuitivas para que os outros desenvolvedores entendam.  
@@ -74,7 +55,7 @@ public int this [int index]   // Indexer declaration
  Observe que, quando o acesso de um indexador é avaliado, por exemplo, em uma instrução `Console.Write`, o acessador [get](../../../csharp/language-reference/keywords/get.md) é invocado. Portanto, se não existir nenhum acessador `get`, ocorrerá um erro em tempo de compilação.  
   
 ### <a name="code"></a>Código  
- [!code-cs[csProgGuideIndexers#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_1.cs)]  
+ [!code-csharp[csProgGuideIndexers#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_1.cs)]  
   
 ## <a name="indexing-using-other-values"></a>Indexando usando outros valores  
  O C# não limita o tipo de índice ao inteiro. Por exemplo, talvez seja útil usar uma cadeia de caracteres com um indexador. Esse indexador pode ser implementado pesquisando a cadeia de caracteres na coleção e retornando o valor adequado. Como os acessadores podem ser sobrecarregados, as versões do inteiro e da cadeia de caracteres podem coexistir.  
@@ -85,7 +66,7 @@ public int this [int index]   // Indexer declaration
  Neste exemplo, uma classe é declarada que armazena os dias da semana. Um acessador `get` é declarado que aceita uma cadeia de caracteres, o nome de um dia e retorna o inteiro correspondente. Por exemplo, domingo retornará 0, segunda-feira retornará 1 e assim por diante.  
   
 ### <a name="code"></a>Código  
- [!code-cs[csProgGuideIndexers#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_2.cs)]  
+ [!code-csharp[csProgGuideIndexers#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_2.cs)]  
   
 ## <a name="robust-programming"></a>Programação robusta  
  Há duas maneiras principais nas quais a segurança e a confiabilidade de indexadores podem ser melhoradas:  
@@ -95,7 +76,6 @@ public int this [int index]   // Indexer declaration
 -   Defina a acessibilidade dos acessadores `get` e [set](../../../csharp/language-reference/keywords/set.md) para que ela seja o mais restritiva possível. Isso é importante para o acessador `set` em particular. Para obter mais informações, consulte [Restringindo a acessibilidade aos acessadores](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Indexadores](../../../csharp/programming-guide/indexers/index.md)   
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Indexadores](../../../csharp/programming-guide/indexers/index.md)  
  [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)
-

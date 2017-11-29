@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 4e80e053-8022-4987-a8a0-209caec0315d
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: e511b5057cb83119819a1403d56f23f738488a3f
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="delegates--events"></a>Delegados e eventos
 
 Este tópico será abordado nos seguintes artigos:
@@ -54,4 +52,3 @@ Este tópico será abordado nos seguintes artigos:
 
     Este artigo aborda como você pode distinguir entre o uso de delegados e de eventos em seus designs.
  
-

@@ -1,64 +1,46 @@
 ---
-title: Protegido (Visual Basic) | Documentos do Microsoft
-ms.date: 2015-07-20
+title: Protegido (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.Protected
-dev_langs:
-- VB
+f1_keywords: vb.Protected
 helpviewer_keywords:
 - Protected Friend keyword combination
-- Protected keyword, and Friend
-- Protected keyword, syntax
+- Protected keyword [Visual Basic], and Friend
+- Protected keyword [Visual Basic], syntax
 - Protected access modifier
-- Protected keyword
+- Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a063845f7135e993f635d36df1bf460811d04846
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2d0cc7a0cb626a9ec8e2a0e47abc02e5268aed56
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="protected-visual-basic"></a>Protegido (Visual Basic)
-Especifica que um ou mais elementos de programação declarados são acessíveis somente de dentro da sua própria classe ou de uma classe derivada.  
+Especifica que um ou mais elementos de programação declarados são acessíveis somente de dentro de sua própria classe ou de uma classe derivada.  
   
 ## <a name="remarks"></a>Comentários  
- Às vezes, um elemento de programação declarado em uma classe contém dados confidenciais ou código restrito, e você deseja limitar o acesso ao elemento. No entanto, se a classe é herdável e você espera uma hierarquia de classes derivadas, pode ser necessário para essas classes derivadas acessar os dados ou código. Nesse caso, você deseja que o elemento seja acessível tanto da classe base de todas as classes derivadas. Para limitar o acesso a um elemento dessa maneira, você pode declará-lo com `Protected`.  
+ Às vezes, um elemento de programação declarado em uma classe contém dados confidenciais ou código restrito, e você deseja limitar o acesso ao elemento. No entanto, se a classe é herdável e você espera uma hierarquia de classes derivadas, pode ser necessário para essas classes derivadas acessar os dados ou código. Nesse caso, você deseja que o elemento para ser acessível da classe base e de todas as classes derivadas. Para limitar o acesso a um elemento dessa maneira, você pode declará-la com `Protected`.  
   
 ## <a name="rules"></a>Regras  
   
--   **Contexto de declaração.** Você pode usar `Protected` somente no nível de classe. Isso significa que o contexto da declaração para um `Protected` elemento deve ser uma classe e não pode ser um arquivo fonte, namespace, interface, módulo, estrutura ou procedimento.  
+-   **Contexto de declaração.** Você pode usar `Protected` somente no nível de classe. Isso significa que o contexto da declaração para um `Protected` elemento deve ser uma classe e não pode ser um arquivo de origem, namespace, interface, módulo, estrutura ou procedimento.  
   
--   **Modificadores combinados.** Você pode usar o `Protected` modificador junto com o [amigo](../../../visual-basic/language-reference/modifiers/friend.md) modificador na mesma declaração. Essa combinação torna os elementos declarados acessíveis a partir de qualquer lugar no mesmo assembly, de sua própria classe e de classes derivadas. Você pode especificar `Protected Friend` somente em membros de classes.  
+-   **Modificadores combinados.** Você pode usar o `Protected` modificador junto com o [Friend](../../../visual-basic/language-reference/modifiers/friend.md) modificador na mesma declaração. Essa combinação torna os elementos declarados acessíveis de qualquer lugar no mesmo assembly, de sua própria classe e de classes derivadas. Você pode especificar `Protected Friend` somente em membros de classes.  
   
 ## <a name="behavior"></a>Comportamento  
   
--   **Nível de acesso.** Todo o código em uma classe pode acessar seus elementos. Código em qualquer classe que deriva de uma classe base pode acessar todos os `Protected` elementos da classe base. Isso é verdadeiro para todas as gerações de derivação. Isso significa que uma classe pode acessar `Protected` elementos da classe base da classe base e assim por diante.  
+-   **Nível de acesso.** Todo o código em uma classe pode acessar seus elementos. O código em qualquer classe que deriva de uma classe base pode acessar todos os `Protected` elementos da classe base. Isso é verdadeiro para todas as gerações de derivação. Isso significa que uma classe pode acessar `Protected` elementos da classe base da classe base e assim por diante.  
   
-     Acesso protegido não é um superconjunto ou subconjunto de acesso amigo.  
+     Acesso protegido não é um superconjunto ou subconjunto de acesso friend.  
   
--   **Modificadores de acesso.** As palavras-chave que especificam o nível de acesso são chamadas *modificadores de acesso*. Para uma comparação entre os modificadores de acesso, consulte [níveis de acesso no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+-   **Modificadores de acesso.** As palavras-chave que especificam o nível de acesso são chamadas *modificadores de acesso*. Para uma comparação entre os modificadores de acesso, consulte [acessar níveis no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  O `Protected` modificador pode ser usado nesses contextos:  
   
@@ -87,10 +69,10 @@ Especifica que um ou mais elementos de programação declarados são acessíveis
  [Instrução Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Público](../../../visual-basic/language-reference/modifiers/public.md)   
- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)   
- [Privado](../../../visual-basic/language-reference/modifiers/private.md)   
- [Níveis de acesso no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [Procedimentos](../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Estruturas](../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
+ [Público](../../../visual-basic/language-reference/modifiers/public.md)  
+ [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+ [Privado](../../../visual-basic/language-reference/modifiers/private.md)  
+ [Níveis de acesso no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [Procedimentos](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
+ [Estruturas](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
  [Objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

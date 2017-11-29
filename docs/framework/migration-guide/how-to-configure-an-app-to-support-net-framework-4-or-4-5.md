@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,15 @@ helpviewer_keywords:
 - .NET Framework 4, configuring apps
 - .NET Framework 4.5, configuring apps
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 95266f9f28d5054db3ea8552ebb45e5a83aba060
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3fea03fd2b660368b72ad111effffe7a64e381f2
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-45"></a>Como configurar um aplicativo para oferecer suporte ao .NET Framework 4 ou 4.5
 Todos os aplicativos que hospedam o CLR (Common Language Runtime) precisam iniciar ou *ativar* o CLR para executar o código gerenciado. Normalmente, um aplicativo .NET Framework é executado na versão do CLR em que foi criado, mas você pode alterar esse comportamento para aplicativos de área de trabalho usando um arquivo de configuração do aplicativo (às vezes chamado arquivo app.config). No entanto, você não pode alterar o comportamento padrão de ativação para aplicativos da Windows Store ou Windows Phone usando um arquivo de configuração de aplicativo. Este artigo explica como ativar seu aplicativo de área de trabalho para executar em outra versão do .NET Framework e fornece um exemplo de como utilizar a versão 4 ou 4.5.  
@@ -92,6 +90,5 @@ Todos os aplicativos que hospedam o CLR (Common Language Runtime) precisam inici
  \* Para saber mais sobre essa mensagem de erro e como evitá-la, veja [Erros de inicialização do .NET Framework: Gerenciar a experiência do usuário](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Migrar do .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)   
- [Guia de Migração](../../../docs/framework/migration-guide/index.md)
-
+ [Migrando do .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)  
+ [Guia de migração](../../../docs/framework/migration-guide/index.md)

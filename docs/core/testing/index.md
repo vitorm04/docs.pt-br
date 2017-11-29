@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
-ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
 ms.openlocfilehash: 9f6a70598f3a0c0e3f479a25171e1deb6abffa33
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Teste de unidade no .NET Core e .NET Standard
 
 O .NET Core foi projetado com a capacidade de realizar testes em mente, para que a criação de testes de unidade para seus aplicativos seja mais fácil do que nunca. Este artigo apresenta brevemente os testes de unidade (e como eles diferem de outros tipos de testes). Os recursos vinculados demonstram como adicionar um projeto de teste à sua solução e executar testes de unidade usando a linha de comando ou o Visual Studio.
@@ -52,4 +50,3 @@ Você pode ler sobre as combinações nestes artigos passo a passo:
 * Se você estiver usando o Visual Studio, confira apenas [Live Unit Testing in .NET Core](/visualstudio/test/live-unit-testing) (Teste de unidade ao vivo no .NET Core)
 * Para obter informações adicionais e exemplos de como usar a filtragem de teste de unidade, confira [Executando testes de unidade seletivos](selective-unit-tests.md) ou [including and excluding tests with Visual Studio](/visualstudio/test/live-unit-testing#including-and-excluding-test-projects-and-test-methods) (Incluindo e excluindo testes com o Visual Studio).
 * A equipe do XUnit criou um tutorial que mostra [como usar o xUnit com o .NET Core e Visual Studio](http://xunit.github.io/docs/getting-started-dotnet-core.html).
-

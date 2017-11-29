@@ -1,25 +1,21 @@
 ---
 title: Como localizar uma lista dos elementos filho (XPath-LINQ to XML) (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 7c589dd8-f680-4cdb-9d6a-78d57e2555e8
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: ac1516dd9917e6d19e7563c43ec5bee8da3ee963
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fa9a222f7fc32f278968461b30ba7ed8c7f40f9a
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-c"></a>Como localizar uma lista dos elementos filho (XPath-LINQ to XML) (C#)
 Este tópico compara o eixo de elementos filho XPath com o eixo [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A>.  
@@ -64,4 +60,3 @@ Results are identical
   
 ## <a name="see-also"></a>Consulte também  
  [Usuários do LINQ to XML para XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-

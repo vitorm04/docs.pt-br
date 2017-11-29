@@ -1,30 +1,21 @@
 ---
 title: Pooling de threads (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 98ae68c1-ace8-44b9-9317-8920ac9ef2b6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 09dd597e8ac7a6b336f71891ccc89984ea659614
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d2f8e5a2d7a83dc6fef72ef87b4003ae49656d8f
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="thread-pooling-c"></a>Pooling de threads (C#)
 Um *pool de threads* é uma coleção de threads que pode ser usada para executar várias tarefas em segundo plano. (Consulte [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md) para obter informações gerais.) Isso deixa o thread primário livre para executar outras tarefas de forma assíncrona.  
@@ -37,7 +28,7 @@ Um *pool de threads* é uma coleção de threads que pode ser usada para executa
   
  Você pode implementar seu próprio pool de threads, mas é mais fácil de usar o pool de threads fornecido pelo .NET Framework por meio da classe <xref:System.Threading.ThreadPool>.  
   
- Com o pooling de threads, você chama o método <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=fullName> com um delegado para o procedimento que deseja executar e o C# cria o thread e executa o procedimento.  
+ Com o pooling de threads, você chama o método <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> com um delegado para o procedimento que deseja executar e o C# cria o thread e executa o procedimento.  
   
 ## <a name="thread-pooling-example"></a>Exemplo de pooling de threads  
  O exemplo a seguir mostra como você pode usar o pooling de threads para iniciar várias tarefas.  
@@ -76,11 +67,10 @@ private void AnotherLongTask(Object state)
  As estruturas não podem ser usadas para retornar valores dentro de objetos de estado. Como estruturas são tipos de valor, as alterações que o processo assíncrono faz não alteram os membros da estrutura original. Use estruturas para fornecer parâmetros quando valores de retorno não são necessários.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>   
- <xref:System.Threading>   
- <xref:System.Threading.ThreadPool>   
- [Como usar um pool de threads (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)   
- [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
- [Aplicativos com multithread (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
+ <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
+ <xref:System.Threading>  
+ <xref:System.Threading.ThreadPool>  
+ [Como usar um pool de thread (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)  
+ [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)  
+ [Aplicativos com multithread (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)  
  [Sincronização de thread (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)
-

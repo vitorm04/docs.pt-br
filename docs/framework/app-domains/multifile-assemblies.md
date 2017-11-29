@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - code modules
 - multifile assemblies
 ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: fead0a944b464ffd8f72dca6da33fd97404fe2d1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7851375c03f9caacd9c89d33e5a03212581d7937
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="multifile-assemblies"></a>Assemblies de vários arquivos
 Você pode criar assemblies de vários arquivos usando os compiladores de linha de comando ou o [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] com o Visual C++. Um arquivo no assembly deve conter o manifesto do assembly. Um assembly que inicia um aplicativo também deve conter um ponto de entrada, como um método Main ou WinMain.  
@@ -51,6 +49,5 @@ Você pode criar assemblies de vários arquivos usando os compiladores de linha 
  Depois de criar o assembly, você pode assinar o arquivo que contém o manifesto do assembly (e, portanto, o assembly) ou pode dar um nome forte ao arquivo (e ao assembly) e colocá-lo no cache de assembly global.  
   
 ## <a name="see-also"></a>Consulte também  
- [Como compilar um assembly de vários arquivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
+ [Como Compilar um Assembly de Vários Arquivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
  [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)
-

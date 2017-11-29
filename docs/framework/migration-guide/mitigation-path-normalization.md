@@ -11,16 +11,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: e30099e315f88bd051dca2e1f6c83d1bccc49569
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mitigation-path-normalization"></a>Mitigação: normalização do caminho
 Começando com os aplicativos direcionados ao [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], a normalização do caminho no .NET Framework foi alterada.  
@@ -73,4 +72,3 @@ Começando com os aplicativos direcionados ao [!INCLUDE[net_v462](../../../inclu
   
 ## <a name="see-also"></a>Consulte também  
  [Alterações de redirecionamento](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
-

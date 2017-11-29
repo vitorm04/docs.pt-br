@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - resource files, .resources files
 - resource files, .resx files
@@ -28,16 +22,15 @@ helpviewer_keywords:
 - binary resources files
 - embedding files in runtime binary executable
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: c9ece6deab2fa414861bdb7c76a2093464156395
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5dcafccd1046bd47616ae42c6ce8a117f341a83f
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Gerador de Arquivo de Recurso)
 O Gerador de Arquivos de Recurso (Resgen.exe) converte arquivos de texto (.txt ou .restext) e arquivos de recurso com base em XML (.resx) em arquivos binários do Common Language Runtime (.resources) que podem ser inseridos em um executável binário do tempo de execução ou em um assembly satélite. (Consulte [Criando arquivos de recurso](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)  
@@ -345,9 +338,8 @@ resgen StringResources.txt /str:vb,,StringResources
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Ferramentas](../../../docs/framework/tools/index.md)   
- [Recursos em aplicativos de área de trabalho](../../../docs/framework/resources/index.md)   
- [Criando arquivos de recurso](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)   
- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)   
+ [Ferramentas](../../../docs/framework/tools/index.md)  
+ [Recursos em aplicativos de área de trabalho](../../../docs/framework/resources/index.md)  
+ [Criando arquivos de recurso](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
+ [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
  [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

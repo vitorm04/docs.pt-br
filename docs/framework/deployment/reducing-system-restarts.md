@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - .NET Framework, reducing system restarts
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 0019931c0ebe2bfef7ce8db72b768f31ad67f938
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d3f54e3794d1595ed120685a452478791e0ad37c
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Reduzindo reinicializações do sistema durante instalações do .NET Framework 4.5
 O instalador do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usa o [Gerenciador de Reinicialização](http://go.microsoft.com/fwlink/?LinkId=231425) para impedir que o sistema seja reiniciado sempre que possível durante a instalação. Se o programa de instalação do aplicativo instala o .NET Framework, ele pode interagir com o Gerenciador de Reinicialização para aproveitar esse recurso. Para obter mais informações, consulte [Como acompanhar o progresso do instalador do .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
@@ -50,7 +43,6 @@ Prompt para fechar os aplicativos do .NET Framework que estão em uso
  Se você estiver usando um instalador encadeado, mas não quiser fornecer sua própria caixa de mensagem para fechar os aplicativos, você poderá usar as opções `/showrmui` e `/passive` na linha de comando quando encadear o processo de instalação do .NET Framework. Quando você usa essas opções juntas, o instalador mostra a caixa de mensagem para fechar os aplicativos se eles puderem ser fechados para evitar uma reinicialização do sistema. Essa caixa de mensagem se comporta no modo passivo da mesma forma que na interface do usuário completa. Consulte [Guia de implantação para desenvolvedores](../../../docs/framework/deployment/deployment-guide-for-developers.md) para obter o conjunto completo de opções de linha de comando para o .NET Framework redistribuível.  
   
 ## <a name="see-also"></a>Consulte também  
- [Implantação](../../../docs/framework/deployment/index.md)   
- [Guia de implantação para desenvolvedores](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
+ [Implantação](../../../docs/framework/deployment/index.md)  
+ [Guia de implantação para desenvolvedores](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
  [Como acompanhar o progresso do instalador do .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
-

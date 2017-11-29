@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fcc83b5b-fb68-4e48-9132-0882677d8056
-ms.translationtype: HT
-ms.sourcegitcommit: 680f9f83e07d6b5e3ee1031fb1a2f6d04765e18d
 ms.openlocfilehash: 52f6b8a1000a8b8623c36cc1f76671f0a7a764b7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/07/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="c-tutorials"></a>Tutoriais do C#
 
 Os tutoriais a seguir permitem que você compile programas em C# usando [.NET Core](../../core/index.md):
@@ -34,4 +32,3 @@ Os tutoriais a seguir permitem que você compile programas em C# usando [.NET Co
 * [Interpolação de cadeia de caracteres](string-interpolation.md): demonstra muitos usos para a interpolação de cadeia de caracteres `$` em C#.
 
 * [Usando atributos](attributes.md): como criar e usar atributos em C#.
-

@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - strong-named assemblies, about strong-named assemblies
 - assemblies [.NET Framework], strong-named
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 4165d968ff347dd9af3bff755be22484debc23c2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 02a79ff2d198149b51edb3765805f2614adb2483
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="strong-named-assemblies"></a>Assemblies de nomes fortes
 Uma nomeação forte na assembly cria uma única identidade para assembly e pode evitar conflitos de assembly.  
@@ -53,8 +51,7 @@ Uma nomeação forte na assembly cria uma única identidade para assembly e pode
  Se você é um desenvolvedor de código aberto e deseja os benefícios da identidade de um assembly de nome forte, considere inserir na chave privada um assembly no sistema de controle de fonte.  
   
 ## <a name="see-also"></a>Consulte também  
- [Cache de assembly global](../../../docs/framework/app-domains/gac.md)   
- [Como assinar um assembly com um nome forte](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)   
- [Sn.exe (Ferramenta Nome Forte)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
- [Criação e uso de assemblies de nome forte](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-
+ [Cache de assembly global](../../../docs/framework/app-domains/gac.md)  
+ [Como assinar um assembly com um nome forte](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
+ [Sn.exe (Ferramenta Nome Forte)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+ [Criar e usar assemblies de nomes fortes](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

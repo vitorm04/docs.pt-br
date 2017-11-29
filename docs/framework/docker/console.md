@@ -9,14 +9,12 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 2fdce1e131eaa0d6952b2910f73105f097487711
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="running-console-applications-in-windows-containers"></a>Executando aplicativos de console em contêineres do Windows
 
 Aplicativos de console são usados para várias finalidades, desde consultas de status a tarefas de execução longa de processamento de imagens de documentos. Em qualquer caso, a capacidade de inicializar e dimensionar esses aplicativos apresenta limitações de aquisições de hardware, tempos de inicialização ou execução de várias instâncias.
@@ -145,4 +143,3 @@ Para executar, abra o PowerShell e use o seguinte comando:
 
 ## <a name="summary"></a>Resumo
 Apenas adicionando um Dockerfile e publicando o aplicativo, você pode dispor em contêineres seus aplicativos de console do .NET Framework e, então, tirar proveito da execução de várias instâncias, de iniciar e parar de maneira limpa e de mais recursos do Windows Server 2016 sem fazer nenhuma alteração ao código do aplicativo em todos os.
-

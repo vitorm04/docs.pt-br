@@ -1,30 +1,21 @@
 ---
 title: "Tipos de retorno assíncronos (C#)"
 ms.custom: 
-ms.date: 2075-05-29
+ms.date: 05/29/2017
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 7aee1ebdf24a2ac564268e1f36d3aac707dea463
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e7f31d4160d44668f4ddea5e1ca0eaa3037c5a5
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="async-return-types-c"></a>Tipos de retorno assíncronos (C#)
 Métodos assíncronos podem conter os seguintes tipos de retorno:
@@ -35,7 +26,7 @@ Métodos assíncronos podem conter os seguintes tipos de retorno:
 
 - `void`, para um manipulador de eventos. 
 
-- Começando com o C# 7, qualquer tipo que tem um método `GetAwaiter` acessível. O objeto retornado pelo método `GetAwaiter` deve implementar a interface <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=fullName>.
+- Começando com o C# 7, qualquer tipo que tem um método `GetAwaiter` acessível. O objeto retornado pelo método `GetAwaiter` deve implementar a interface <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType>.
   
 Para obter mais informações sobre os métodos assíncronos, consulte [Programação assíncrona com async e await (C#)](../../../../csharp/programming-guide/concepts/async/index.md).  
   
@@ -46,7 +37,7 @@ O tipo de retorno <xref:System.Threading.Tasks.Task%601> é usado para um métod
   
 No exemplo a seguir, o método assíncrono `GetLeisureHours` contém uma instrução `return` que retorna um número inteiro. Portanto, a declaração do método deve especificar um tipo de retorno de `Task<int>`.  O método assíncrono <xref:System.Threading.Tasks.Task.FromResult%2A> é um espaço reservado para uma operação que retorna uma cadeia de caracteres.
   
-[!code-cs[valor retornado](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1.cs)]
+[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1.cs)]
 
 Quando `GetLeisureHours` é chamado de dentro de uma expressão await no método `ShowTodaysInfo`, a expressão await recupera o valor inteiro (o valor de `leisureHours`) que está armazenado na tarefa que é retornada pelo método `GetLeisureHours`. Para obter mais informações sobre expressões await, consulte [await](../../../../csharp/language-reference/keywords/await.md).  
   
@@ -55,14 +46,14 @@ Você pode entender melhor como isso acontece, separando a chamada ao `GetLeisur
 > [!IMPORTANT]
 >  A propriedade <xref:System.Threading.Tasks.Task%601.Result%2A> é uma propriedade de bloqueio. Se você tentar acessá-la antes que sua tarefa seja concluída, o thread que está ativo no momento será bloqueado até que a tarefa seja concluída e o valor esteja disponível. Na maioria dos casos, você deve acessar o valor usando `await` em vez de acessar a propriedade diretamente. <br/> O exemplo anterior recuperou o valor da propriedade <xref:System.Threading.Tasks.Task%601.Result%2A> para bloquear o thread principal, de modo que o método `ShowTodaysInfo` pudesse concluir a execução antes do encerramento do aplicativo.  
 
-[!code-cs[valor retornado](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
+[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
   
 ##  <a name="BKMK_TaskReturnType"></a> Tipo de retorno Task  
 Os métodos assíncronos que não contêm uma instrução `return` ou que contêm uma instrução `return` que não retorna um operando, normalmente têm um tipo de retorno de <xref:System.Threading.Tasks.Task>. Esses métodos retornam `void` se eles são executados de forma síncrona. Se você usar um tipo de retorno <xref:System.Threading.Tasks.Task> para um método assíncrono, um método de chamada poderá usar um operador `await` para suspender a conclusão do chamador até que o método assíncrono chamado seja concluído.  
   
 No exemplo a seguir, o método assíncrono `WaitAndApologize` não contém uma instrução `return`, então o método retorna um objeto <xref:System.Threading.Tasks.Task>. Isso permite que `WaitAndApologize` seja aguardado. Observe que o tipo <xref:System.Threading.Tasks.Task> não inclui uma propriedade `Result` porque ele não tem nenhum valor retornado.  
 
-[!code-cs[valor retornado](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2.cs)]  
+[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2.cs)]  
   
 O `WaitAndApologize` é aguardado, usando uma instrução await, em vez de uma expressão await, semelhante à instrução de chamada a um método síncrono de retorno void. A aplicação de um operador await, nesse caso, não produz um valor.  
   
@@ -70,7 +61,7 @@ Como no exemplo <xref:System.Threading.Tasks.Task%601> anterior, você pode sepa
   
 O código a seguir separa a chamada ao método `WaitAndApologize` da espera pela tarefa que o método retorna.  
  
-[!code-cs[valor retornado](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
+[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
  
 ##  <a name="BKMK_VoidReturnType"></a> Tipo de retorno void  
 O tipo de retorno `void` é usado em manipuladores de eventos assíncronos, que exigem um tipo de retorno `void`. Para métodos diferentes de manipuladores de eventos, não retorne um valor; em vez disso, você deve retornar um <xref:System.Threading.Tasks.Task>, porque não é possível esperar por um método assíncrono que retorna `void`. Qualquer chamador desse método deve ser capaz de continuar até a conclusão, sem aguardar a conclusão do método assíncrono chamado e o chamador deve ser independente de todos os valores ou exceções gerados pelo método assíncrono.  
@@ -81,7 +72,7 @@ Para obter mais informações sobre como capturar exceções nos métodos assín
   
 O exemplo a seguir define um manipulador de eventos assíncrono.  
  
-[!code-cs[valor retornado](../../../../../samples/snippets/csharp/programming-guide/async/async-returns3.cs)]  
+[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns3.cs)]  
  
 ## <a name="generalized-async-return-types-and-valuetaskt"></a>Tipos de retorno assíncronos generalizados e ValueTask<T>
 
@@ -89,9 +80,9 @@ Começando com o c# 7, um método assíncrono pode retornar qualquer tipo que te
  
 Já que <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601> são tipos de referência, a alocação de memória em caminhos críticos para o desempenho, especialmente quando alocações ocorrerem em loops estreitos, podem afetar o desempenho. Suporte para tipos de retorno generalizados significa que você pode retornar um tipo de valor leve em vez de um tipo de referência para evitar as alocações de memória adicionais. 
 
-O .NET fornece a estrutura <xref:System.Threading.Tasks.ValueTask%601?displayProperty=fullName> como uma implementação leve de um valor de retorno de tarefa generalizado. Para usar o tipo <xref:System.Threading.Tasks.ValueTask%601?displayProperty=fullName>, você deve adicionar o pacote NuGet `System.Threading.Tasks.Extensions` ao seu projeto. O exemplo a seguir usa a estrutura <xref:System.Threading.Tasks.ValueTask%601> para recuperar o valor de dois lançamentos de dados. 
+O .NET fornece a estrutura <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> como uma implementação leve de um valor de retorno de tarefa generalizado. Para usar o tipo <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType>, você deve adicionar o pacote NuGet `System.Threading.Tasks.Extensions` ao seu projeto. O exemplo a seguir usa a estrutura <xref:System.Threading.Tasks.ValueTask%601> para recuperar o valor de dois lançamentos de dados. 
   
-[!code-cs[valor retornado](../../../../../samples/snippets/csharp/programming-guide/async/async-valuetask.cs)]
+[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-valuetask.cs)]
 
 ## <a name="see-also"></a>Consulte também  
 <xref:System.Threading.Tasks.Task.FromResult%2A>   
@@ -99,4 +90,3 @@ O .NET fornece a estrutura <xref:System.Threading.Tasks.ValueTask%601?displayPro
 [Fluxo de controle em programas assíncronos (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)   
 [async](../../../../csharp/language-reference/keywords/async.md)   
 [await](../../../../csharp/language-reference/keywords/await.md)
-

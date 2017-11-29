@@ -5,31 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Assembly Registration tool
 - assemblies [.NET Framework], registering
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 21da853d442a86eb42d04ff4f32d9f2798e14477
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 553b7725d2e0fe8fc197805d8e4b444567c33040
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Ferramenta de Registro de Assembly)
 A ferramenta de Registro do Assembly lê os metadados dentro de um assembly e adiciona as entradas necessárias ao Registro, que permite que clientes COM para criar classes do .NET Framework de maneira transparente. Depois de uma classe ser registrada, qualquer cliente COM poderá usá-la, mesmo que a classe seja uma classe COM. A classe é registrada apenas uma vez, quando o assembly é instalado. As instâncias de classes dentro do assembly não poderão ser criadas com base em COM até serem efetivamente registradas.  
@@ -97,9 +90,8 @@ regasm myTest.dll /tlb:myTest.tlb
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Ferramentas](../../../docs/framework/tools/index.md)   
- [Tlbexp.exe (Exportador da Biblioteca de Tipos)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)   
- [Tlbimp.exe (Importador da Biblioteca de Tipos)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)   
- [Registrando assemblies usando COM](../../../docs/framework/interop/registering-assemblies-with-com.md)   
+ [Ferramentas](../../../docs/framework/tools/index.md)  
+ [Tlbexp.exe (Exportador de Biblioteca de Tipos)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
+ [Tlbimp.exe (Importador de Biblioteca de Tipos)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
+ [Registrando assemblies usando COM](../../../docs/framework/interop/registering-assemblies-with-com.md)  
  [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

@@ -15,16 +15,15 @@ helpviewer_keywords:
 - JIT compilation, 64-bit
 - RyuJIT compiler
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 091b83cc0d7829c8ff078e6397aa480895b7a115
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b67c622531321e5cd1efa7db657d62d94c0f73e4
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Mitigação: novo compilador JIT de 64 bits
 A partir do .NET Framework 4.6, o tempo de execução inclui um novo compilador JIT de 64 bits para compilação just-in-time. Essa alteração não afeta a compilação com o compilador JIT de 32 bits.  
@@ -43,7 +42,7 @@ A partir do .NET Framework 4.6, o tempo de execução inclui um novo compilador 
   
 -   Sob determinadas condições, a comparação de valores <xref:System.UInt16> com seu conjunto de bits alto será incorreta se a otimização estiver habilitada.  
   
--   Sob certas condições, especialmente ao inicializar uma matriz de valores, a inicialização da memória pela instrução IL <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=fullName> pode inicializar a memória com um valor incorreto. Isso pode resultar em uma saída incorreta ou uma exceção sem tratamento.  
+-   Sob certas condições, especialmente ao inicializar uma matriz de valores, a inicialização da memória pela instrução IL <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=nameWithType> pode inicializar a memória com um valor incorreto. Isso pode resultar em uma saída incorreta ou uma exceção sem tratamento.  
   
 -   Sob certas condições raras, um teste de bits condicional poderá retornar o valor <xref:System.Boolean> incorreto ou gerar uma exceção se as otimizações do compilador estiverem habilitadas.  
   
@@ -81,6 +80,5 @@ A partir do .NET Framework 4.6, o tempo de execução inclui um novo compilador 
  Avise-nos sobre o problema relatando um bug no [Microsoft Connect](https://connect.microsoft.com/VisualStudio).  
   
 ## <a name="see-also"></a>Consulte também  
- [Alterações no tempo de execução](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)   
+ [Alterações no tempo de execução](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)  
  [Elemento \<useLegacyJit>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)
-

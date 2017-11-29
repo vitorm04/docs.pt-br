@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 25a384fa2465be6f4e523410e69aba6813e5c22d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: de808e333506858d6591dab6c7c06e6a3e9ddabd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Exemplo: solucionando problemas de programação dinâmica
 > [!NOTE]
@@ -60,9 +58,9 @@ AppViewModel.Current.LayoutVM.PageMap
   
  O motivo mais provável da falha é que metadados estão faltando em `App.Core.ViewModels.Layout.LayoutApplicationVM` porque ela está em um namespace diferente.  
   
- Nesse caso, adicionar uma diretiva de tempo de execução para `App.Core.ViewModels` resolveu o problema. A causa raiz foi uma chamada à API ao método <xref:System.Type.GetType%28System.String%29?displayProperty=fullName> que retornou **null** e o aplicativo ignorou silenciosamente o problema até que ocorreu uma falha.  
+ Nesse caso, adicionar uma diretiva de tempo de execução para `App.Core.ViewModels` resolveu o problema. A causa raiz foi uma chamada à API ao método <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> que retornou **null** e o aplicativo ignorou silenciosamente o problema até que ocorreu uma falha.  
   
- Na programação dinâmica, uma boa prática ao usar APIs de reflexão em [!INCLUDE[net_native](../../../includes/net-native-md.md)] é usar as sobrecargas <xref:System.Type.GetType%2A?displayProperty=fullName> que geram uma exceção em caso de falha.  
+ Na programação dinâmica, uma boa prática ao usar APIs de reflexão em [!INCLUDE[net_native](../../../includes/net-native-md.md)] é usar as sobrecargas <xref:System.Type.GetType%2A?displayProperty=nameWithType> que geram uma exceção em caso de falha.  
   
 ## <a name="is-this-an-isolated-case"></a>Esta é uma ocorrência isolada?  
  Outros problemas também podem surgir ao usar `App.Core.ViewModels`.  Você deve decidir se vale a pena identificar e corrigir cada exceção de metadados ausentes, ou economizar tempo e adicionar diretivas para uma classe maior de tipos.  Aqui, adicionar metadados `dynamic` a `App.Core.ViewModels` pode ser a melhor abordagem se o aumento de tamanho resultante do binário de saída não for um problema.  
@@ -71,6 +69,5 @@ AppViewModel.Current.LayoutVM.PageMap
  Se o aplicativo tivesse usado `typeof(LayoutApplicationVM)` em vez de `Type.GetType("LayoutApplicationVM")`, a cadeia de ferramentas poderia ter preservado os metadados `browse`.  No entanto, ele ainda não criaria os metadados de `invoke`, o que levaria a uma exceção [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) ao instanciar o tipo. Para evitar a exceção, ainda seria necessário adicionar uma diretiva de tempo de execução para o namespace ou o tipo que especifica a política `dynamic`. Para obter informações sobre as diretivas de tempo de execução, consulte a [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Introdução](../../../docs/framework/net-native/getting-started-with-net-native.md)   
+ [Introdução](../../../docs/framework/net-native/getting-started-with-net-native.md)  
  [Exemplo: tratando exceções ao associar dados](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
-

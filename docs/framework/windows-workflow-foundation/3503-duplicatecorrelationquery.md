@@ -1,0 +1,42 @@
+---
+title: 3503 - DuplicateCorrelationQuery
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: b857f8e6-ce4d-4da4-bc9d-6cd63fa558a4
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 60367b33e1e57cce8646b4fcde79c7d4fd20a4cc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
+---
+# <a name="3503---duplicatecorrelationquery"></a>3503 - DuplicateCorrelationQuery
+## <a name="properties"></a>Propriedades  
+  
+|||  
+|-|-|  
+|ID|3503|  
+|Palavras-chave|WFServices|  
+|Nível|Aviso|  
+|Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/analítico|  
+  
+## <a name="description"></a>Descrição  
+ Indica que um CorrelationQuery duplicado foi encontrado. A consulta duplicado não será usada para calcular correlação.  
+  
+## <a name="message"></a>Mensagem  
+ Um CorrelationQuery duplicado foi encontrado com Where='%1. Essa consulta duplicada não será usada no cálculo de correlação.  
+  
+## <a name="details"></a>Detalhes  
+  
+|Nome do item de dados|Tipo de item de dados|Descrição|  
+|--------------------|--------------------|-----------------|  
+|Where|xs:string|Onde parte da consulta de correlação.|  
+|AppDomain|xs:string|A cadeia de caracteres retornada por AppDomain.CurrentDomain.FriendlyName.|

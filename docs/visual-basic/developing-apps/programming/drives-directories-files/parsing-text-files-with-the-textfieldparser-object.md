@@ -1,43 +1,25 @@
 ---
 title: Analisando arquivos de texto com o objeto TextFieldParser (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - TextFieldParser object, using
 - I/O [Visual Basic], parsing files
-- files, parsing
+- files [Visual Basic], parsing
 ms.assetid: fc31d6e6-af0c-403f-8a00-d556b2c57567
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 544b65a5197f6a1b68a54f12dbdc0c591bc512e2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ad7407ca1928f9b4a2405bc5831777fbf965b61f
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>Analisando arquivos de texto com o objeto TextFieldParser (Visual Basic)
 O objeto `TextFieldParser` permite analisar e processar arquivos muito grandes estruturados como colunas de texto de largura delimitada, como arquivos de log ou informações de banco de dados herdadas. Analisar um arquivo de texto com `TextFieldParser` é semelhante a iterar em um arquivo de texto, enquanto o método de análise para extrair campos de texto é semelhante a métodos de manipulação de cadeias de caracteres usados para criar tokens para cadeias de caracteres delimitadas.  
@@ -59,19 +41,18 @@ O objeto `TextFieldParser` permite analisar e processar arquivos muito grandes e
  O método `PeekChars` do objeto `TextFieldParser` pode ser usado para verificar cada campo antes da leitura, permitindo definir vários formatos para os campos e reagir adequadamente. Para obter mais informações, consulte [Como ler de arquivos de texto com vários formatos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md).  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A>   
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>   
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.PeekChars%2A>   
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ReadFields%2A>   
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.CommentTokens%2A>   
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.Delimiters%2A>   
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A>   
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLineNumber%2A>   
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.FieldWidths%2A>   
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.HasFieldsEnclosedInQuotes%2A>   
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.LineNumber%2A>   
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.TextFieldType%2A>   
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.TrimWhiteSpace%2A>   
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetDelimiters%2A>   
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A>  
+ <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>  
+ <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.PeekChars%2A>  
+ <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ReadFields%2A>  
+ <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.CommentTokens%2A>  
+ <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.Delimiters%2A>  
+ <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A>  
+ <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLineNumber%2A>  
+ <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.FieldWidths%2A>  
+ <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.HasFieldsEnclosedInQuotes%2A>  
+ <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.LineNumber%2A>  
+ <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.TextFieldType%2A>  
+ <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.TrimWhiteSpace%2A>  
+ <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetDelimiters%2A>  
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A>
-

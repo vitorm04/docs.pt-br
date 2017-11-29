@@ -10,12 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: c849ca26-6a25-4d35-9544-f343af88e0e7
+ms.openlocfilehash: 5806e3e71eabbc1d65ecffed72108ba548b57806
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 3a25c1c3b540bac8ef963a8bbf708b0700c3e9e2
-ms.openlocfilehash: 8b86f8f9cd02484cb91af3206606aced8fed1ecd
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="building-a-class-library-with-c-and-net-core-in-visual-studio-2017"></a>Criar uma biblioteca de classes com C# e .NET Core no Visual Studio 2017
 
@@ -58,7 +57,7 @@ Crie seu projeto de biblioteca de classes:
 
    [!CODE-csharp[ClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/classlib.cs)]
 
-   A biblioteca de classes, `UtilityLibraries.StringLibrary`, contém um método chamado `StartsWithUpper`, que retorna um valor <xref:System.Boolean> indicando se a instância atual da cadeia de caracteres começa com um caractere maiúsculo. O padrão Unicode distingue caracteres maiúsculos de caracteres minúsculos. O método <xref:System.Char.IsUpper(System.Char)?displayProperty=fullName> retornará `true` se um caractere for maiúsculo.
+   A biblioteca de classes, `UtilityLibraries.StringLibrary`, contém um método chamado `StartsWithUpper`, que retorna um valor <xref:System.Boolean> indicando se a instância atual da cadeia de caracteres começa com um caractere maiúsculo. O padrão Unicode distingue caracteres maiúsculos de caracteres minúsculos. O método <xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> retornará `true` se um caractere for maiúsculo.
 
 1. Na barra de menus, selecione **Compilar** > **Compilar Solução**. O projeto deve ser compilado sem erros.
 

@@ -1,42 +1,24 @@
 ---
-title: "Parâmetros opcionais devem especificar um valor padrão | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Parâmetros opcionais devem especificar um valor padrão"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30812
 - bc30812
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC30812
+helpviewer_keywords: BC30812
 ms.assetid: 5091a250-be66-413b-98a3-2a9974c4d600
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c663c0674531b726877b5e8a7daade898f358ca0
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: e9ec6d044ba0a1bb904030ddbb4c4fa406c3ba63
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="optional-parameters-must-specify-a-default-value"></a>Parâmetros opcionais devem especificar um valor padrão
 Parâmetros opcionais devem fornecer valores padrão que podem ser usados se nenhum parâmetro for fornecido por um procedimento de chamada.  

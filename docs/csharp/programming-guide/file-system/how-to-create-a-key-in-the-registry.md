@@ -1,40 +1,22 @@
 ---
 title: Como criar uma chave no Registro (Visual C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - registry, adding keys and values [C#]
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f6cc79a8a914d3ef5b7c496db4dc0d2b3eb17768
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 96d34df3314494fc96ad8b55d7462b67dcc7bd72
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>Como criar uma chave no Registro (Visual C#)
 Este exemplo adiciona o par de valores, "Name" e "Isabella", ao Registro do usuário atual, sob a chave "Names".  
@@ -79,8 +61,7 @@ key.Close();
  Não é seguro armazenar segredos, como senhas, no Registro como texto sem formatação, mesmo se a chave do Registro estiver protegida por ACL (listas de controle de acesso).  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.IO?displayProperty=fullName>   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Sistema de arquivos e o Registro (Guia de Programação em C#)](../../../csharp/programming-guide/file-system/index.md)   
+ <xref:System.IO?displayProperty=nameWithType>  
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Sistema de arquivos e o Registro (Guia de Programação em C#)](../../../csharp/programming-guide/file-system/index.md)  
  [Ler, gravar e excluir do Registro com C#](http://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)
-

@@ -1,38 +1,19 @@
 ---
 title: "Genéricos em tempo de execução (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- generics [C#], at run time
+helpviewer_keywords: generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 5ef0b63b293ec277ebf9331e8f282ce2c1692d31
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 661dff2d8ec2e12ab6a459660a5378f74e93b9c5
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Genéricos em tempo de execução (Guia de Programação em C#)
 Um tipo genérico ou método compilado em Microsoft Intermediate Language (MSIL) conterá metadados que o identificarão como possuidor de parâmetros de tipo. O uso de MSIL em um tipo genérico será diferente de acordo com o parâmetro de tipo fornecido, ou seja, se ele é um tipo de valor ou um tipo de referência.  
@@ -41,11 +22,11 @@ Um tipo genérico ou método compilado em Microsoft Intermediate Language (MSIL)
   
  Por exemplo, caso o código do programa declarar uma pilha construída de inteiros:  
   
- [!code-cs[csProgGuideGenerics#42](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_1.cs)]  
+ [!code-csharp[csProgGuideGenerics#42](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_1.cs)]  
   
  Neste ponto, o tempo de execução gerará uma versão especializada da classe <xref:System.Collections.Generic.Stack%601> com o inteiro substituído corretamente, de acordo com seu parâmetro. Agora, sempre que o código do programa utilizar uma pilha de inteiros, o tempo de execução reutilizará a classe especializada <xref:System.Collections.Generic.Stack%601> gerada. No exemplo a seguir, são criadas duas instâncias de uma pilha de inteiros e eles compartilham uma única instância do código `Stack<int>`:  
   
- [!code-cs[csProgGuideGenerics#43](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_2.cs)]  
+ [!code-csharp[csProgGuideGenerics#43](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_2.cs)]  
   
  No entanto, suponha que outra classe <xref:System.Collections.Generic.Stack%601> com um tipo de valor diferente – como `long` ou uma estrutura definida pelo usuário como parâmetro – foi criada em outro ponto do código. Como resultado, o tempo de execução gerará outra versão do tipo genérico e substituirá um `long` nos locais apropriados no MSIL. Conversões não são mais necessárias, pois cada classe genérica especializada contém o tipo de valor nativamente.  
   
@@ -53,25 +34,24 @@ Um tipo genérico ou método compilado em Microsoft Intermediate Language (MSIL)
   
  Por exemplo, suponha que há dois tipos de referência, uma classe `Customer` e uma classe `Order` e que uma pilha de tipos `Customer` foi criada:  
   
- [!code-cs[csProgGuideGenerics#47](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_3.cs)]  
+ [!code-csharp[csProgGuideGenerics#47](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_3.cs)]  
   
- [!code-cs[csProgGuideGenerics#44](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_4.cs)]  
+ [!code-csharp[csProgGuideGenerics#44](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_4.cs)]  
   
  Neste ponto, o tempo de execução gerará uma versão especializada da classe <xref:System.Collections.Generic.Stack%601> que armazenará referências de objeto que serão preenchidas posteriormente, em vez de armazenar dados. Suponha que a próxima linha de código crie uma pilha de outro tipo de referência, com o nome `Order`:  
   
- [!code-cs[csProgGuideGenerics#45](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_5.cs)]  
+ [!code-csharp[csProgGuideGenerics#45](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_5.cs)]  
   
  Ao contrário dos tipos de valor, outra versão especializada da classe <xref:System.Collections.Generic.Stack%601> não será criada para o tipo `Order`. Em vez disso, uma instância da versão especializada da classe <xref:System.Collections.Generic.Stack%601> será criada e a variável `orders` será definida para referenciá-la. Imagine que uma linha de código foi encontrada para criar uma pilha de um tipo `Customer`:  
   
- [!code-cs[csProgGuideGenerics#46](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_6.cs)]  
+ [!code-csharp[csProgGuideGenerics#46](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_6.cs)]  
   
  Assim como acontece com o uso anterior da classe <xref:System.Collections.Generic.Stack%601> criada usando o tipo `Order`, outra instância da classe especializada <xref:System.Collections.Generic.Stack%601> é criada. Os ponteiros contidos nela são definidos para referenciar uma área de memória do tamanho de um tipo `Customer`. Como a quantidade de tipos de referência pode variar muito entre os programas, a implementação de genéricos no C# reduz significativamente a quantidade de código ao diminuir para um o número de classes especializadas criadas pelo compilador para classes genéricas ou tipos de referência.  
   
  Além disso, quando uma classe genérica do C# for instanciada usando um tipo de valor ou parâmetro de tipo de referência, a reflexão pode consultá-la em tempo de execução e o seu tipo real e parâmetro de tipo podem ser determinados.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Collections.Generic>   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Introdução aos Genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md)   
+ <xref:System.Collections.Generic>  
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Introdução aos genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
  [Genéricos](~/docs/standard/generics/index.md)
-

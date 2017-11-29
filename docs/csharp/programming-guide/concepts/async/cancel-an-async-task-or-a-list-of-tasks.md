@@ -1,30 +1,21 @@
 ---
 title: "Cancelar uma tarefa assíncrona ou uma lista de tarefas (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 78becece40b4b527869c593f8a1fe1eeba1f1f51
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2e34344c9cdf0717291c4c7375bab703679515a7
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>Cancelar uma tarefa assíncrona ou uma lista de tarefas (C#)
 Você pode configurar um botão que pode ser usado para cancelar um aplicativo assíncrono se não desejar aguardar sua conclusão. Seguindo os exemplos neste tópico, você pode adicionar um botão de cancelamento a um aplicativo que baixa o conteúdo de um site ou uma lista de sites.  
@@ -70,7 +61,7 @@ Você pode configurar um botão que pode ser usado para cancelar um aplicativo a
         CancellationTokenSource cts;  
     ```  
   
-2.  Adicione o seguinte manipulador de eventos para o botão **Cancelar**. O manipulador de eventos usa o método <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName> para notificar `cts` quando o usuário solicita o cancelamento.  
+2.  Adicione o seguinte manipulador de eventos para o botão **Cancelar**. O manipulador de eventos usa o método <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> para notificar `cts` quando o usuário solicita o cancelamento.  
   
     ```csharp  
     // ***Add an event handler for the Cancel button.  
@@ -92,7 +83,7 @@ Você pode configurar um botão que pode ser usado para cancelar um aplicativo a
         cts = new CancellationTokenSource();  
         ```  
   
-    -   Na chamada para `AccessTheWebAsync`, que baixa o conteúdo de um site especificado, envie a propriedade <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=fullName> de `cts` como um argumento. A propriedade `Token` propaga a mensagem se o cancelamento é solicitado. Adicione um bloco catch que exibe uma mensagem se o usuário optar por cancelar a operação de download. O código a seguir mostra as alterações.  
+    -   Na chamada para `AccessTheWebAsync`, que baixa o conteúdo de um site especificado, envie a propriedade <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> de `cts` como um argumento. A propriedade `Token` propaga a mensagem se o cancelamento é solicitado. Adicione um bloco catch que exibe uma mensagem se o usuário optar por cancelar a operação de download. O código a seguir mostra as alterações.  
   
         ```csharp  
         try  
@@ -113,7 +104,7 @@ Você pode configurar um botão que pode ser usado para cancelar um aplicativo a
         }  
         ```  
   
-4.  No `AccessTheWebAsync`, use a sobrecarga <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=fullName> do método `GetAsync` no tipo <xref:System.Net.Http.HttpClient> para baixar o conteúdo de um site. Passe `ct`, o parâmetro <xref:System.Threading.CancellationToken> de `AccessTheWebAsync`, como o segundo argumento. O token executa a mensagem se o usuário escolhe o botão **Cancelar**.  
+4.  No `AccessTheWebAsync`, use a sobrecarga <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> do método `GetAsync` no tipo <xref:System.Net.Http.HttpClient> para baixar o conteúdo de um site. Passe `ct`, o parâmetro <xref:System.Threading.CancellationToken> de `AccessTheWebAsync`, como o segundo argumento. O token executa a mensagem se o usuário escolhe o botão **Cancelar**.  
   
      O código a seguir mostra as alterações em `AccessTheWebAsync`.  
   
@@ -530,9 +521,8 @@ namespace CancelAListOfTasks
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Threading.CancellationTokenSource>   
- <xref:System.Threading.CancellationToken>   
- [Programação assíncrona com async e await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
- [Ajuste fino de seu aplicativo assíncrono (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
+ <xref:System.Threading.CancellationTokenSource>  
+ <xref:System.Threading.CancellationToken>  
+ [Programação assíncrona com async e await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
+ [Ajuste fino de seu aplicativo assíncrono (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
  [Exemplo assíncrono: ajuste fino de seu aplicativo](http://go.microsoft.com/fwlink/?LinkId=255046)
-

@@ -1,26 +1,22 @@
 ---
-title: 'Como: Filtrar em um atributo (XPath-LINQ para XML) (Visual Basic) | Documentos do Microsoft'
+title: 'Como: Filtrar em um atributo (XPath-LINQ para XML) (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: ffefb9d6-45ec-4677-a396-dd9c2b36298f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 321fd6aba7b8ab40b29eb0708039cb5c0f8a964d
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: c4bd1482b535035c9cae329c774e952e54d8c681
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>Como: Filtrar em um atributo (XPath-LINQ para XML) (Visual Basic)
 Este tópico mostra como obter os elementos descendentes com um nome especificado e, com um atributo com um valor especificado.  
@@ -32,7 +28,7 @@ Este tópico mostra como obter os elementos descendentes com um nome especificad
 ## <a name="example"></a>Exemplo  
  Este exemplo localiza os elementos dos descendentes com o nome de `Address`, e com um atributo de `Type` com um valor de “enviar”.  
   
- Este exemplo usa o seguinte documento XML: [arquivo XML de exemplo: várias ordens de compra (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  

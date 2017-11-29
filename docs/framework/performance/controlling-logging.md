@@ -5,23 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- CLR ETW events, logging
+helpviewer_keywords: CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: aebeb1bb1257599cc3fb9b8be7bf2595ccca0f13
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f996cf730acc355f3bf13287b79581d23e4e6a5b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="controlling-net-framework-logging"></a>Controlando o registro em log no .NET Framework
 Você pode usar o ETW (Rastreamento de Eventos para Windows) para registrar eventos de CLR (Common Language Runtime). Você pode criar e exibir rastros usando as seguintes ferramentas:  
@@ -119,6 +116,5 @@ Provider                                 GUID
      Este comando faz com que XPerf despeje os eventos na forma de um arquivo de valores separados por vírgula (CSV) que você pode abrir. Porque eventos diferentes possuem campos diferentes, esse arquivo CSV contém mais de uma linha de cabeçalho antes dos dados. O primeiro campo de cada linha é o tipo de evento, que indica qual cabeçalho deve ser usado para determinar o restante dos campos.  
   
 ## <a name="see-also"></a>Consulte também  
- [Windows Performance Toolkit](http://go.microsoft.com/fwlink/?LinkID=161141)   
+ [Ferramentas de desempenho do Windows](http://go.microsoft.com/fwlink/?LinkID=161141)  
  [Eventos ETW no Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
-

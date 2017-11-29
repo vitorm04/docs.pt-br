@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - command-line debugger [.NET Framework]
 - MDbg.exe
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 04a96cfe492add5c0216528dc07efc5f40912412
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f65251d5712f981eaa038cd8fbfe66b5e690b4b6
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (Depurador de Linha de Comando do .NET Framework)
 O Depurador de Linha de Comando do .NET Framework ajuda fornecedores de ferramentas e desenvolvedores de aplicativos na localização e na correção de bugs em programas com o Common Language Runtime do .NET Framework como destino. Essa ferramenta usa a API de depuração do tempo de execução para fornecer serviços de depuração. É possível usar MDbg.exe para depurar apenas o código gerenciado; não há suporte para depurar o código não gerenciado.  
@@ -122,6 +115,5 @@ mdbg>
 ## <a name="examples"></a>Exemplos  
   
 ## <a name="see-also"></a>Consulte também  
- [Ferramentas](../../../docs/framework/tools/index.md)   
+ [Ferramentas](../../../docs/framework/tools/index.md)  
  [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

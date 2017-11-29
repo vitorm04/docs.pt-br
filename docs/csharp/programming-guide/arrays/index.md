@@ -1,39 +1,21 @@
 ---
 title: "Matrizes (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1cdd319ef6bbb296c7afa5195563b92bdd361f0b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1035caae15b64d1311305cfe4c1f1a74c80ed19a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="arrays-c-programming-guide"></a>Matrizes (Guia de Programação em C#)
 Você pode armazenar diversas variáveis do mesmo tipo em uma estrutura de dados de matriz. Você pode declarar uma matriz especificando o tipo de seus elementos.  
@@ -42,7 +24,7 @@ Você pode armazenar diversas variáveis do mesmo tipo em uma estrutura de dados
   
  Os exemplos a seguir criam matrizes unidimensionais, multidimensionais e denteadas:  
   
- [!code-cs[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
   
 ## <a name="array-overview"></a>Visão geral de matriz  
  Uma matriz tem as seguintes propriedades:  
@@ -75,7 +57,6 @@ Você pode armazenar diversas variáveis do mesmo tipo em uma estrutura de dados
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Coleções](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)   
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Coleções](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
  [Tipo de coleção Array](http://msdn.microsoft.com/en-us/8a9964de-8941-47b1-a3cf-a01bc88db9e8)
-

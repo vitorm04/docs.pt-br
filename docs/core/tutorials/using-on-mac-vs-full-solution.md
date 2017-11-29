@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 60179fb0435803c3235b75ba012e588c6f1b35d3
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Compilar uma solução completa do .NET Core no macOS usando o Visual Studio para Mac
 
 O Visual Studio para Mac fornece um IDE (Ambiente de desenvolvimento integrado) completo para desenvolver aplicativos .NET Core. Este tópico explica como compilar uma solução do .NET Core que inclui uma biblioteca reutilizável e testes de unidade.
@@ -199,4 +197,3 @@ As unidade de teste fornecem testes de software automatizados durante o desenvol
 ## <a name="see-also"></a>Consulte também
 
 [Notas de versão do Visual Studio 2017 para Mac](https://www.visualstudio.com/news/releasenotes/vs2017-mac-relnotes)
-

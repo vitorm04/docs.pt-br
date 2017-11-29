@@ -1,43 +1,25 @@
 ---
 title: Como discar modems conectados a portas seriais no Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- modems, dialing
-- serial ports, dialing
+- modems [Visual Basic], dialing
+- serial ports [Visual Basic], dialing
 - My.Computer.Ports object
 ms.assetid: 3834db40-f431-45f1-b671-dc91787164b6
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ea1b2d6152af8919ac1aa272def4ba198b33867c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0daaf35cdebac3d69ddc536124d4c86b96955b11
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>Como discar modems conectados a portas seriais no Visual Basic
 Este tópico descreve como usar o `My.Computer.Ports` para discar um modem no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
@@ -68,7 +50,7 @@ Este tópico descreve como usar o `My.Computer.Ports` para discar um modem no [!
  Este exemplo de código também está disponível como um trecho de código do IntelliSense. No selecionador de trecho de código, ele está localizado em **Conectividade e Redes**. Para obter mais informações, consulte [Trechos de Código](/visualstudio/ide/code-snippets).  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- Este exemplo exige uma referência ao namespace <xref:System?displayProperty=fullName>.  
+ Este exemplo exige uma referência ao namespace <xref:System?displayProperty=nameWithType>.  
   
 ## <a name="robust-programming"></a>Programação robusta  
  Este exemplo supõe que o modem esteja conectado à porta COM1. É recomendável que seu código permita que o usuário selecione a porta serial desejada em uma lista de portas disponíveis. Para obter mais informações, consulte [Como mostrar portas seriais disponíveis](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
@@ -78,9 +60,8 @@ Este tópico descreve como usar o `My.Computer.Ports` para discar um modem no [!
  Neste exemplo, o aplicativo desconecta a porta serial após discar o modem. Na verdade, você desejará transferir dados de/para o modem. Para obter mais informações, consulte [Como receber cadeias de caracteres de portas seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md).  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.Devices.Ports>   
- <xref:System.IO.Ports.SerialPort?displayProperty=fullName>   
- [Como enviar cadeias de caracteres para portas seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)   
- [Como receber cadeias de caracteres de portas seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)   
+ <xref:Microsoft.VisualBasic.Devices.Ports>  
+ <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>  
+ [Como Enviar Cadeias de Caracteres para Portas Seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
+ [Como Receber Cadeias de Caracteres de Portas Seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)  
  [Como Mostrar Portas Seriais Disponíveis](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
-

@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 1feadf3d-3cfc-41dd-abb5-a4fc303a7b53
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 1d972489536e929c8694bd6a4cab31c9f2d624a8
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="migrating-net-core-projects-to-the-csproj-format"></a>Migrando projetos do .NET Core no formato .csproj
 
 Este documento abrange cenários de migração para projetos do .NET Core e examina os três seguintes cenários de migração:
@@ -90,4 +88,3 @@ Para obter exemplos de antes e depois da migração do formato csproj antigo par
 
 ## <a name="see-also"></a>Consulte também
 [Portar, migrar e atualizar projetos do Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)
-

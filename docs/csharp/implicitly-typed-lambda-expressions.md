@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a3851da9-e018-4389-9922-233db7d0f841
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 663613af001f9727c48bd48553540305e47a6bab
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="implicitly-typed-lambda-expressions"></a>Expressões lambda tipadas implicitamente
 
 Eu não estou usando `var` para declarar esta árvore de expressão. Você não pode usar uma declaração de variável tipada implicitamente para declarar uma expressão lambda.
@@ -26,6 +24,5 @@ Isso cria um problema de lógica circular para o compilador. A declaração `var
 Os dois lados da atribuição não podem estar dizendo ao compilador para examinar o objeto do outro lado do operador de atribuição para ver se meu tipo é correspondente.
 
 Você pode obter mais detalhes sobre por quê a linguagem C# especifica esse comportamento lendo [este artigo](http://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/type-inference.pdf) (download do PDF)
-
 
 

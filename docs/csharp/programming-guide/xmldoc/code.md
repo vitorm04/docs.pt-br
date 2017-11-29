@@ -1,42 +1,24 @@
 ---
 title: "&lt;code&gt; (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - code
 - <code>
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - code XML tag
 - <code> C# XML tag
 ms.assetid: f235e3bc-a709-43cf-8a9f-bd57cabdf6da
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ab7136937a47f4941a140b4144996b99992c35a2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ac017791898b8f6ae6b3cc3d0d491da141d2cba3
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltcodegt-c-programming-guide"></a>&lt;code&gt; (Guia de Programação em C#)
 ## <a name="syntax"></a>Sintaxe  
@@ -58,6 +40,5 @@ ms.lasthandoff: 07/28/2017
  Consulte o tópico [\<example>](../../../csharp/programming-guide/xmldoc/example.md) para obter um exemplo de como usar a marca \<code>.  
   
 ## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
  [Marcas recomendadas para comentários de documentação](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
-

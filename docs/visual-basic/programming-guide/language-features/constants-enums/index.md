@@ -1,48 +1,30 @@
 ---
 title: "Constantes e enumerações no Visual Basic"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - enumerations [Visual Basic]
 - Visual Basic code, constants
-- constants
+- constants [Visual Basic]
 - object libraries, Object Browser
 - Visual Basic code, enumerations
-- declaring constants, enumerations
-- naming conventions, constants
+- declaring constants [Visual Basic], enumerations
+- naming conventions [Visual Basic], constants
 - Visual Basic code, improving readability with constants
 ms.assetid: c8aba36e-fa47-4a33-8b68-cb2009218270
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5ef8ade1100bb660af4d968d4b600aba41073fc2
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 5bbba6434d8b0a5c02882d1ac858296fd8eeb346
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Constantes e enumerações no Visual Basic
 Constantes são uma maneira de usar nomes significativos no lugar de um valor que não é alterado. Constantes armazenam valores que, como o nome implica, permanecem constantes durante a execução de um aplicativo. Você pode usar constantes para fornecer nomes significativos, em vez de números, tornando o código mais legível.  
@@ -65,4 +47,3 @@ Constantes são uma maneira de usar nomes significativos no lugar de um valor qu
 |[Instrução Option Explicit](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)|Descreve a instrução `Option Explicit`, que é usada no nível de módulo para forçar a declaração explícita de todas as variáveis nesse módulo.|  
 |[Instrução Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)|Descreve a instrução `Option Infer`, que permite o uso de inferência de tipo de variável local ao declarar variáveis.|  
 |[Instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Descreve a instrução `Option Strict`, que restringe conversões de tipo de dados implícitas para somente conversões de expansão, não permite associação tardia e não permite digitação implícita que resulta em um tipo `Object`.|
-

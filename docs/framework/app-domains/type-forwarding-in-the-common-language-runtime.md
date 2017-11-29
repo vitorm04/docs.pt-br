@@ -5,24 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- cpp
 helpviewer_keywords:
 - assemblies [.NET Framework], type forwarding
 - type forwarding
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 18e580a67d5a983d61ab3c0b71cfc7d294468010
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 113ff6decccc190c6638fa04745af425c55c6c0b
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Encaminhamento de tipo no Common Language Runtime
 O encaminhamento de tipo permite que você mova um tipo para outro assembly sem ter que recompilar os aplicativos que usam o assembly original.  
@@ -54,7 +55,6 @@ O encaminhamento de tipo permite que você mova um tipo para outro assembly sem 
 4.  Recompile o assembly onde o tipo estava localizado, com uma referência ao assembly que agora contém o tipo. Por exemplo, se você estiver compilando um arquivo em C# na linha de comando, use a opção [/reference (opções do compilador em C#)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) para especificar o assembly que contém o tipo. Em C++, use a diretiva [#using](http://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a) no arquivo de origem para especificar o assembly que contém o tipo.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>   
- [Encaminhamento de tipos (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)   
+ <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>  
+ [Encaminhamento de tipo (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)  
  [Diretiva #using](http://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a)
-

@@ -1,52 +1,44 @@
 ---
-title: Eventos LINQ to XML (Visual Basic) | Documentos do Microsoft
+title: Eventos LINQ to XML (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 34923928-b99c-4004-956e-38f6db25e910
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2b7756845f155c4683015d54b41f2ecc09b29333
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b19d8f19f9feb1d385f9900d76d2a7af8e89bbeb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="linq-to-xml-events-visual-basic"></a>Eventos LINQ to XML (Visual Basic)
-[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]eventos permitem que você seja notificado quando uma árvore XML é alterada.  
+Eventos [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permitem que você seja notificado quando uma árvore XML é modificada.  
   
- Você pode adicionar eventos a uma instância de qualquer <xref:System.Xml.Linq.XObject>.</xref:System.Xml.Linq.XObject> O manipulador de eventos em seguida receberá eventos para alterações ao <xref:System.Xml.Linq.XObject>e todos os seus descendentes.</xref:System.Xml.Linq.XObject> Por exemplo, você pode adicionar um manipulador de eventos à raiz da árvore, e trata todas as alterações na árvore do manipulador de eventos.  
+ Você pode adicionar eventos a uma instância de qualquer <xref:System.Xml.Linq.XObject>. O manipulador de eventos em receberá eventos para alterações ao <xref:System.Xml.Linq.XObject> e a qualquer um dos seus descendentes. Por exemplo, você pode adicionar um manipulador de eventos à raiz da árvore, e trata todas as alterações na árvore do manipulador de eventos.  
   
- Para obter exemplos de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] eventos, visualizar <xref:System.Xml.Linq.XObject.Changing>e <xref:System.Xml.Linq.XObject.Changed>.</xref:System.Xml.Linq.XObject.Changed> </xref:System.Xml.Linq.XObject.Changing>  
+ Para exemplos de eventos de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], consulte <xref:System.Xml.Linq.XObject.Changing> e <xref:System.Xml.Linq.XObject.Changed>.  
   
 ## <a name="types-and-events"></a>Tipos e eventos  
  Você usa os seguintes tipos ao trabalhar com eventos:  
   
 |Tipo|Descrição|  
 |----------|-----------------|  
-|<xref:System.Xml.Linq.XObjectChange></xref:System.Xml.Linq.XObjectChange>|Especifica o tipo de evento quando um evento é gerado para <xref:System.Xml.Linq.XObject>.</xref:System.Xml.Linq.XObject>|  
-|<xref:System.Xml.Linq.XObjectChangeEventArgs></xref:System.Xml.Linq.XObjectChangeEventArgs>|Fornece dados para o <xref:System.Xml.Linq.XObject.Changing>e <xref:System.Xml.Linq.XObject.Changed>eventos.</xref:System.Xml.Linq.XObject.Changed> </xref:System.Xml.Linq.XObject.Changing>|  
+|<xref:System.Xml.Linq.XObjectChange>|Especifica o tipo de evento quando um evento é gerado para <xref:System.Xml.Linq.XObject>.|  
+|<xref:System.Xml.Linq.XObjectChangeEventArgs>|Fornece dados para os eventos de <xref:System.Xml.Linq.XObject.Changing> e de <xref:System.Xml.Linq.XObject.Changed> .|  
   
  Os seguintes eventos são gerados quando você altera uma árvore XML:  
   
 |Evento|Descrição|  
 |-----------|-----------------|  
-|<xref:System.Xml.Linq.XObject.Changing></xref:System.Xml.Linq.XObject.Changing>|Ocorre antes deste <xref:System.Xml.Linq.XObject>ou qualquer um de seus descendentes vai mudar.</xref:System.Xml.Linq.XObject>|  
-|<xref:System.Xml.Linq.XObject.Changed></xref:System.Xml.Linq.XObject.Changed>|Ocorre quando um <xref:System.Xml.Linq.XObject>foi alterado ou qualquer um de seus descendentes foram alterados.</xref:System.Xml.Linq.XObject>|  
+|<xref:System.Xml.Linq.XObject.Changing>|Ocorre antes deste <xref:System.Xml.Linq.XObject> ou alguns dos seus descendentes são indo alterar.|  
+|<xref:System.Xml.Linq.XObject.Changed>|Ocorre quando <xref:System.Xml.Linq.XObject> alterar ou alguns dos seus descendentes alterado.|  
   
 ## <a name="example"></a>Exemplo  
   

@@ -1,6 +1,6 @@
 ---
 title: "Referência de símbolos e operadores (F#)"
-description: "Referência de símbolos e operadores (F#)"
+description: "Saiba mais sobre os símbolos e operadores que são usados em F # linguagem de programação."
 keywords: "visual f#, f#, programação funcional"
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ab453800-d4d0-4a11-9d55-2b358d56af27
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: 514dc37dce3df3f40ae99ce55772b0c4e8deb95f
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: d1000e991a6c07693f2e639ee8f0a386d53a2aae
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="symbol-and-operator-reference"></a>Referência de símbolos e operadores
 
 > [!NOTE]
@@ -128,7 +127,7 @@ A tabela a seguir mostra a ordem de precedência de operadores e outras palavras
 |--------|-------------|
 |`as`|Direita|
 |`when`|Direita|
-|<code>&#124;</code> (pipe)|Esquerda|
+|<code>&#124;</code>(barra vertical)|Esquerda|
 |`;`|Direita|
 |`let`|Não associativo|
 |`function`, `fun`, `match`, `try`|Não associativo|
@@ -139,7 +138,7 @@ A tabela a seguir mostra a ordem de precedência de operadores e outras palavras
 |`or`, <code>&#124;&#124;</code>|Esquerda|
 |`&`, `&&`|Esquerda|
 |`:>`, `:?>`|Direita|
-|`!=`*op*, `<`*op*, `>`*op*, `=`, <code>&#124;</code>*op*, `&`*op*, `&`<br /><br />(incluindo `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Esquerda|
+|`!=`*operações*, `<` *op*, `>` *op*, `=`, <code>&#124;</code> *op*, `&`  *operações*,`&`<br /><br />(incluindo `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Esquerda|
 |`^`*op*<br /><br />(incluindo `^^^`)|Direita|
 |`::`|Direita|
 |`:?`|Não associativo|
@@ -147,7 +146,7 @@ A tabela a seguir mostra a ordem de precedência de operadores e outras palavras
 |`*`*op*, `/`*op*, `%`*op*|Esquerda|
 |`**`*op*|Direita|
 |`f x` (aplicativo de função)|Esquerda|
-|<code>&#124;</code> (correspondência padrão)|Direita|
+|<code>&#124;</code>(correspondência de padrão)|Direita|
 |operadores de prefixo (`+`*op*, `-`*op*, `%`, `%%`, `&`, `&&`, `!`*op*, `~`*op*)|Esquerda|
 |`.`|Esquerda |
 |`f(x)`|Esquerda|
@@ -158,4 +157,3 @@ F# oferece suporte à sobrecarga de operador personalizado. Isso significa que v
 [Referência da Linguagem F#](../index.md)
 
 [Sobrecarga de Operador](../operator-overloading.md)
-

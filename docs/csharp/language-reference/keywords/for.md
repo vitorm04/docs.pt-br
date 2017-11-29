@@ -1,41 +1,22 @@
 ---
 title: "for (Referência de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - for
 - for_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- for keyword [C#]
+helpviewer_keywords: for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: cb7e83733fe026658f502b430975a0f8a27e9df3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d65c198b0fd763bddae4832290af038b8992eb48
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="for-c-reference"></a>for (Referência de C#)
 Ao usar um loop `for`, você pode executar uma instrução ou um bloco de instruções repetidamente até que uma expressão especificada seja avaliada como `false`. Esse tipo de loop é útil para a iteração em matrizes e para outras aplicações nas quais você sabe com antecedência quantas vezes deseja que o loop itere.  
@@ -43,7 +24,7 @@ Ao usar um loop `for`, você pode executar uma instrução ou um bloco de instru
 ## <a name="example"></a>Exemplo  
  No exemplo a seguir, o valor de `i` é gravado no console e é incrementado em 1 durante cada iteração do loop.  
   
- [!code-cs[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]  
+ [!code-csharp[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]  
   
  A instrução `for` no exemplo anterior realiza as seguintes ações.  
   
@@ -120,20 +101,19 @@ for (initializer; condition; iterator)
   
  O exemplo a seguir ilustra várias opções menos comuns: atribuir um valor a uma variável de loop externa na seção inicializador, invocar o método `Console.WriteLine` nas seções de inicializador e de iterador e alterar os valores de duas variáveis na seção de iterador.  
   
- [!code-cs[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
+ [!code-csharp[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
   
  Todas as expressões que definem um instrução `for` são opcionais. Por exemplo, a instrução a seguir cria um loop infinito.  
   
- [!code-cs[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
+ [!code-csharp[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md)   
- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)   
- [Instrução for (C++)](/cpp/cpp/for-statement-cpp)   
+ [Referência de C#](../../../csharp/language-reference/index.md)  
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
+ [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+ [Instrução for (C++)](/cpp/cpp/for-statement-cpp)  
  [Instruções de iteração](../../../csharp/language-reference/keywords/iteration-statements.md)
-

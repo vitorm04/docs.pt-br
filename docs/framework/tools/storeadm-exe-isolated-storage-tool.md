@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Storeadm.exe
 - listing stores for current user
@@ -21,16 +15,15 @@ helpviewer_keywords:
 - stores, current user
 - removing stores
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: d9ae6b007fe32dfbef973105311ba929cc247e6b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e2304bd0e2ac9115c9d937e502b960399d793356
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (Ferramenta de Armazenamento Isolado)
 A ferramenta Armazenamento Isolado lista ou remove todos os repositórios existentes para o usuário atual.  
@@ -76,7 +69,6 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
  Independentemente do roaming estar efetivamente habilitado para o usuário, isso não afeta a administração de Storeadm.exe. A execução da ferramenta sem opções se aplica a todas as ações no repositório local. A execução da ferramenta com a opção **/roaming** se aplica a todas as ações no repositório compatível com roaming. A execução da ferramenta com a opção **/machine** se aplica a todas as ações no repositório do computador.  
   
 ## <a name="see-also"></a>Consulte também  
- [Ferramentas](../../../docs/framework/tools/index.md)   
- [Armazenamento isolado](../../../docs/standard/io/isolated-storage.md)   
+ [Ferramentas](../../../docs/framework/tools/index.md)  
+ [Armazenamentos isolado](../../../docs/standard/io/isolated-storage.md)  
  [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

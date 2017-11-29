@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - uninstalling server resources
 - removing server resources
@@ -26,16 +20,15 @@ helpviewer_keywords:
 - progress information for installation
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 611df94890200f442e8e2b0f5d1442eb44f25c70
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8660d2c87936f6fa7a8b9b86872300911c1ae99d
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (Ferramenta de Instalação)
 A ferramenta Instalador é um utilitário de linha de comando que permite instalar e desinstalar recursos de servidor executando-se os componentes do instalador em assemblies especificados. Essa ferramenta funciona com classes no namespace <xref:System.Configuration.Install>.  
@@ -62,7 +55,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 |Opção|Descrição|  
 |------------|-----------------|  
 |`/h[elp]`<br /><br /> -ou-<br /><br /> `/?`|Exibe sintaxe de comando e opções para a ferramenta.|  
-|`/help` *assembly*<br /><br /> -ou-<br /><br /> `/?` *assembly*|Exibe opções adicionais reconhecidas por instaladores individuais dentro do assembly especificado, com a sintaxe do comando e as opções de InstallUtil.exe. Essa opção adiciona o texto retornado pela propriedade <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=fullName> de cada componente do instalador para o texto de ajuda de InstallUtil.exe.|  
+|`/help` *assembly*<br /><br /> -ou-<br /><br /> `/?` *assembly*|Exibe opções adicionais reconhecidas por instaladores individuais dentro do assembly especificado, com a sintaxe do comando e as opções de InstallUtil.exe. Essa opção adiciona o texto retornado pela propriedade <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> de cada componente do instalador para o texto de ajuda de InstallUtil.exe.|  
 |`/AssemblyName` "*assemblyName*<br /><br /> ,Version=*major.minor.build.revision*<br /><br /> ,Culture=*locale*<br /><br /> ,PublicKeyToken=*publicKeyToken*"|Especifica o nome forte de um assembly, que deve ser registrado no cache de assembly global. O nome do assembly deve ser totalmente qualificado com a versão, a cultura e o token de chave pública do assembly. O nome totalmente qualificado deve estar entre aspas.<br /><br /> Por exemplo, "myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0" é um nome de assembly totalmente qualificado.|  
 |`/InstallStateDir=[` *directoryName* `]`|Especifica o diretório do arquivo .InstallState que contém os dados usados para desinstalar o assembly. O padrão é o diretório que contém o assembly.|  
 |`/LogFile=`[*filename*]|Especifica o nome do arquivo de log em que o andamento da instalação é registrado. Por padrão, se a opção `/LogFile` for omitida, um arquivo de log chamado *assemblyname*.InstallLog será criado. Se *filename* for omitido, nenhum arquivo de log será gerado.|  
@@ -75,7 +68,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
  Os instaladores individuais usados em um assembly podem reconhecer opções além das listadas na seção [Opções](#options). Para saber mais sobre essas opções, execute InstallUtil.exe com os caminhos dos assemblies na linha de comando com a opção `/?` ou `/help`. Para especificar essas opções, você as inclui na linha de comando com as opções reconhecidas por InstallUtil.exe.  
   
 > [!NOTE]
->  O texto da ajuda nas opções compatíveis com componentes do instalador individuais é retornado pela propriedade <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=fullName>. As opções individuais que foram inseridas na linha de comando são acessíveis programaticamente com base na propriedade <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=fullName>.  
+>  O texto da ajuda nas opções compatíveis com componentes do instalador individuais é retornado pela propriedade <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType>. As opções individuais que foram inseridas na linha de comando são acessíveis programaticamente com base na propriedade <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType>.  
   
  Todas as opções e os parâmetros de linha de comando são gravados no arquivo de log da instalação. No entanto, se você usar o parâmetro `/Password`, reconhecido por alguns componentes do instalador, as informações da senha serão substituídas por oito asteriscos (*) e não serão exibidas no arquivo de log.  
   
@@ -95,7 +88,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
   
 -   *assemblyname*.InstallState – Contém dados usados para desinstalar o assembly.  
   
- Installutil.exe usa reflexão para inspecionar os assemblies especificados e encontrar todos os tipos de <xref:System.Configuration.Install.Installer> que têm o atributo <xref:System.ComponentModel.RunInstallerAttribute?displayProperty=fullName> definido como `true`. Em seguida, a ferramenta executa o método <xref:System.Configuration.Install.Installer.Install%2A?displayProperty=fullName> ou <xref:System.Configuration.Install.Installer.Uninstall%2A?displayProperty=fullName> em cada instância do tipo de <xref:System.Configuration.Install.Installer>. Installutil.exe realiza a instalação de maneira transacional; ou seja, se um dos assemblies não for instalado, ele reverterá as instalações de todos os outros assemblies. A desinstalação não é transacional.  
+ Installutil.exe usa reflexão para inspecionar os assemblies especificados e encontrar todos os tipos de <xref:System.Configuration.Install.Installer> que têm o atributo <xref:System.ComponentModel.RunInstallerAttribute?displayProperty=nameWithType> definido como `true`. Em seguida, a ferramenta executa o método <xref:System.Configuration.Install.Installer.Install%2A?displayProperty=nameWithType> ou <xref:System.Configuration.Install.Installer.Uninstall%2A?displayProperty=nameWithType> em cada instância do tipo de <xref:System.Configuration.Install.Installer>. Installutil.exe realiza a instalação de maneira transacional; ou seja, se um dos assemblies não for instalado, ele reverterá as instalações de todos os outros assemblies. A desinstalação não é transacional.  
   
  Installutil.exe não pode instalar ou desinstalar assemblies assinados com atraso, mas pode instalar ou desinstalar assemblies de nome forte.  
   
@@ -110,7 +103,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 installutil /?  
 ```  
   
- O comando a seguir exibe uma descrição da sintaxe e das opções de comando para InstallUtil.exe. Ele também exibirá uma descrição e uma lista de opções com suporte pelos componentes do instalador em `myAssembly.exe` se o texto de ajuda tiver sido atribuído à propriedade <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=fullName> do instalador.  
+ O comando a seguir exibe uma descrição da sintaxe e das opções de comando para InstallUtil.exe. Ele também exibirá uma descrição e uma lista de opções com suporte pelos componentes do instalador em `myAssembly.exe` se o texto de ajuda tiver sido atribuído à propriedade <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> do instalador.  
   
 ```  
 installutil /? myAssembly.exe  
@@ -177,7 +170,6 @@ installutil /LogFile=myLog.InstallLog myAssembly.exe /LogFile=myTestLog.InstallL
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Configuration.Install>   
- [Ferramentas](../../../docs/framework/tools/index.md)   
+ <xref:System.Configuration.Install>  
+ [Ferramentas](../../../docs/framework/tools/index.md)  
  [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

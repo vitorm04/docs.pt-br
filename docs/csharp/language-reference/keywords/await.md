@@ -1,41 +1,22 @@
 ---
 title: "await (Referência de C#)"
-ms.date: 2017-05-22
+ms.date: 05/22/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- await_CSharpKeyword
-dev_langs:
-- CSharp
+f1_keywords: await_CSharpKeyword
 helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 69a3a575347a62b298c17af050cb925f7819b552
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 28be25d2f467ea5df4de50516bfa03347c77081e
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="await-c-reference"></a>await (Referência de C#)
 O operador `await` é aplicado a uma tarefa em um método assíncrono para inserir um ponto de suspensão na execução do método até que a tarefa aguardada seja concluída. A tarefa representa um trabalho em andamento.  
@@ -48,12 +29,12 @@ O operador `await` é aplicado a uma tarefa em um método assíncrono para inser
 A tarefa à qual o operador `await` é aplicado, normalmente é retornada por uma chamada a um método que implementa o [Padrão assíncrono baseado em tarefa](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md). Eles incluem métodos que retornam objetos <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> e `System.Threading.Tasks.ValueType<TResult>`.  
 
   
- No exemplo a seguir, o método <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=fullName> retorna um `Task<byte[]>`. A tarefa é uma promessa de produzir a matriz de bytes real quando a tarefa for concluída. O operador `await` suspende a execução até que o trabalho do método <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> esteja concluído. Enquanto isso, o controle é retornado ao chamador de `GetPageSizeAsync`. Quando a tarefa termina a execução, a expressão `await` é avaliada para uma matriz de bytes.  
+ No exemplo a seguir, o método <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> retorna um `Task<byte[]>`. A tarefa é uma promessa de produzir a matriz de bytes real quando a tarefa for concluída. O operador `await` suspende a execução até que o trabalho do método <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> esteja concluído. Enquanto isso, o controle é retornado ao chamador de `GetPageSizeAsync`. Quando a tarefa termina a execução, a expressão `await` é avaliada para uma matriz de bytes.  
 
-[!code-cs[exemplo de espera](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
+[!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
 
 > [!IMPORTANT]
->  Para obter o exemplo completo, consulte [Passo a passo: acessando a Web usando async e await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Você pode baixar o exemplo em [Exemplos de código do desenvolvedor](http://go.microsoft.com/fwlink/?LinkID=255191&clcid=0x409) no site da Microsoft. O exemplo está no projeto AsyncWalkthrough_HttpClient.  
+>  Para obter o exemplo completo, consulte [Passo a passo: acessando a Web usando async e await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Você pode baixar o exemplo em [Exemplos de código do desenvolvedor](http://go.microsoft.com/fwlink/?LinkID=255191) no site da Microsoft. O exemplo está no projeto AsyncWalkthrough_HttpClient.  
   
 Conforme mostrado no exemplo anterior, se `await` for aplicado ao resultado de uma chamada de método que retorna uma `Task<TResult>`, o tipo da expressão `await` será `TResult`. Se `await` for aplicado ao resultado de uma chamada de método que retorna uma `Task`, o tipo da expressão `await` será `void`. O exemplo a seguir ilustra a diferença.  
   
@@ -79,19 +60,18 @@ Se você aguarda um método assíncrono de retorno de tarefa que causou uma exce
   
 Se você aguarda um método assíncrono de retorno de tarefa que está cancelado, o operador `await` relança uma <xref:System.OperationCanceledException>.  
   
-Uma tarefa única que está em um estado com falha pode refletir várias exceções. Por exemplo, a tarefa pode ser o resultado de uma chamada para <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>. Quando você aguarda essa tarefa, a operação de aguardar relança apenas uma das exceções. No entanto, você não pode prever qual das exceções será relançada.  
+Uma tarefa única que está em um estado com falha pode refletir várias exceções. Por exemplo, a tarefa pode ser o resultado de uma chamada para <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Quando você aguarda essa tarefa, a operação de aguardar relança apenas uma das exceções. No entanto, você não pode prever qual das exceções será relançada.  
   
 Para obter exemplos de tratamento de erro em métodos assíncronos, consulte [try-catch](../../../csharp/language-reference/keywords/try-catch.md).  
   
 ## <a name="example"></a>Exemplo  
-O exemplo a seguir retorna o número total de caracteres nas páginas cujas URLs são passadas para ele como argumentos de linha de comando. O exemplo chama o método `GetPageLengthsAsync`, que é marcado com a palavra-chave `async`. O método `GetPageLengthsAsync`, por sua vez, utiliza a palavra-chave `await` para aguardar chamadas para o método <xref:System.Net.Http.HttpClient.GetStringAsync%2A?displayProperty=fullName>.  
+O exemplo a seguir retorna o número total de caracteres nas páginas cujas URLs são passadas para ele como argumentos de linha de comando. O exemplo chama o método `GetPageLengthsAsync`, que é marcado com a palavra-chave `async`. O método `GetPageLengthsAsync`, por sua vez, utiliza a palavra-chave `await` para aguardar chamadas para o método <xref:System.Net.Http.HttpClient.GetStringAsync%2A?displayProperty=nameWithType>.  
 
-[!code-cs[exemplo de espera](../../../../samples/snippets/csharp/language-reference/keywords/await/await2.cs)]  
+[!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await2.cs)]  
 
-Já que não há suporte para o uso de `async` e `await` em um ponto de entrada de aplicativo, não podemos aplicar o atributo `async` ao método `Main`, nem podemos esperar a chamada de método `GetPageLengthsAsync`. Por meio da recuperação do valor da propriedade <xref:System.Threading.Tasks.Task%601.Result?displayProperty=fullName>, podemos assegurar que o método `Main` aguarde a conclusão da operação assíncrona. Para tarefas que não retornam um valor, você pode chamar o método <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=fullName>. 
+Já que não há suporte para o uso de `async` e `await` em um ponto de entrada de aplicativo, não podemos aplicar o atributo `async` ao método `Main`, nem podemos esperar a chamada de método `GetPageLengthsAsync`. Por meio da recuperação do valor da propriedade <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType>, podemos assegurar que o método `Main` aguarde a conclusão da operação assíncrona. Para tarefas que não retornam um valor, você pode chamar o método <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>. 
 
 ## <a name="see-also"></a>Consulte também  
 [Programação assíncrona com async e await](../../../csharp/programming-guide/concepts/async/index.md)   
 [Passo a passo: acessando a Web usando async e await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
 [async](../../../csharp/language-reference/keywords/async.md)
-

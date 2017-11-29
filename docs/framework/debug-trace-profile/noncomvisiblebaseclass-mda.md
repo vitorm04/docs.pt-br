@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - visible classes
 - managed debugging assistants (MDAs), COM visible classes
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - QueryInterface call failures
 - MDAs (managed debugging assistants), COM visible classes
 ms.assetid: 9ec1af27-604b-477e-9ee2-e833eb10d3ce
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7f6da0e4a2046ac80a35894383f732eb266b8459
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b43ad5c039be3ad1c4e57bad12304927a76fb6c2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="noncomvisiblebaseclass-mda"></a>MDA nonComVisibleBaseClass
 O MDA (Assistente de Depuração Gerenciado) de `nonComVisibleBaseClass` é ativado quando uma chamada `QueryInterface` é feita por código não gerenciado ou nativo no CCW (COM Callable Wrapper) de uma classe gerenciada visível em COM derivada de uma classe base que não é visível em COM.  A chamada `QueryInterface` faz com que o MDA seja ativado apenas em casos nos quais a chamada solicita a interface de classe ou o `IDispatch` padrão da classe gerenciada visível em COM.  O MDA não é ativado quando o `QueryInterface` é para uma interface explícita que tem o atributo <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> aplicado e é implementado explicitamente pela classe visível em COM.  
@@ -70,7 +63,6 @@ constrained by the COM versioning rules.
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
+ <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+ [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
  [Marshaling de interoperabilidade](../../../docs/framework/interop/interop-marshaling.md)
-

@@ -1,38 +1,20 @@
 ---
-title: "Ocorreu um erro inesperado porque um recurso do sistema operacional necessário para a inicialização de instância única não pode ser adquirido | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Ocorreu um erro inesperado porque não foi possível adquirir um recurso do sistema operacional obrigatório para a inicialização de instância única"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrAppModel_CantGetMemoryMappedFile
-dev_langs:
-- VB
+f1_keywords: vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 44432a2c393abb01141d09cf5f28c6fd29c5bc43
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 8969303d66e946d5579c6cca592b5701c4ebd632
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>Ocorreu um erro inesperado porque não foi possível adquirir um recurso do sistema operacional obrigatório para a inicialização de instância única
 O aplicativo não pôde adquirir um recurso do sistema operacional necessário. Algumas das causas possíveis para esse problema são:  
@@ -54,6 +36,6 @@ O aplicativo não pôde adquirir um recurso do sistema operacional necessário. 
 4.  Observe as circunstâncias sob as quais ocorreu o erro e chame o Microsoft Product Support Services  
   
 ## <a name="see-also"></a>Consulte também  
- [Página de Aplicativo, Designer de Projeto (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-visual-basic)   
- [Noções básicas do depurador](https://docs.microsoft.com/visualstudio/debugger/debugger-basics)   
- [Fale conosco](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+ [Página de Aplicativo, Designer de Projeto (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)  
+ [Noções básicas do depurador](/visualstudio/debugger/debugger-basics)  
+ [Fale conosco](/visualstudio/ide/talk-to-us)

@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - resolving assembly binding requests
 - versioning, assemblies
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: a956e0c4521e4a1079b331868e811e68af2e710d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 124d53efb8d87a9b002abb4cb8359a1bbf6f479b
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assembly-versioning"></a>Controle de versão de assemblies
 Todo o controle de versão de assemblies que usam o Common Language Runtime é feito no nível do assembly. A versão específica de um assembly e as versões de assemblies dependentes são registradas no manifesto do assembly. A política de versão padrão do tempo de execução diz que aplicativos só são executados com as versões com que foram compilados e testados, a menos que essa política de versão seja substituída pela política de versão explícita em arquivos de configuração (o arquivo de configuração do aplicativo, o arquivo de política do editor e o arquivo de configuração do administrador do computador).  
@@ -78,11 +76,10 @@ Resolvendo uma solicitação de associação de assembly
 > [!NOTE]
 >  Embora você possa especificar qualquer texto, uma mensagem de aviso aparecerá durante a compilação se a cadeia de caracteres não estiver no formato usado pelo número de versão do assembly ou se ela estiver no formato correto, mas contiver curingas. Esse aviso é inofensivo.  
   
- A versão informativa é representada usando-se o atributo personalizado <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=fullName>. Para saber mais sobre o atributo da versão informativa, confira [Configuração de atributos de assembly](../../../docs/framework/app-domains/set-assembly-attributes.md).  
+ A versão informativa é representada usando-se o atributo personalizado <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType>. Para saber mais sobre o atributo da versão informativa, confira [Configuração de atributos de assembly](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
- [Configuração de aplicativos](../../../docs/framework/configure-apps/index.md)   
- [Configuração de atributos de assembly](../../../docs/framework/app-domains/set-assembly-attributes.md)   
+ [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [Configurando aplicativos](../../../docs/framework/configure-apps/index.md)  
+ [Configuração de atributos de assembly](../../../docs/framework/app-domains/set-assembly-attributes.md)  
  [Assemblies no Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
-

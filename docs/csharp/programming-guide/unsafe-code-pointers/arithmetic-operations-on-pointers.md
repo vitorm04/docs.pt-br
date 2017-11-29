@@ -1,38 +1,19 @@
 ---
 title: "Operações aritméticas em ponteiros (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- pointers [C#], arithmetic operations
+helpviewer_keywords: pointers [C#], arithmetic operations
 ms.assetid: d4f0b623-827e-45ce-8649-cfcebc8692aa
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 54c439aab8b6cd34a796db8d31f9eabeefddf9f8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d40d44f8be590a909ff059b0fa84efb598fcf263
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>Operações aritméticas em ponteiros (Guia de Programação em C#)
 Este tópico discute o uso de operadores aritméticos `+` e **-** para manipular ponteiros.  
@@ -51,22 +32,21 @@ Este tópico discute o uso de operadores aritméticos `+` e **-** para manipular
  Nenhuma exceção é gerada quando a operação aritmética estoura o domínio do ponteiro e o resultado depende da implementação.  
   
 ## <a name="example"></a>Exemplo  
- [!code-cs[csProgGuidePointers#14](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/arithmetic-operations-on-pointers_1.cs)]  
+ [!code-csharp[csProgGuidePointers#14](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/arithmetic-operations-on-pointers_1.cs)]  
   
- [!code-cs[csProgGuidePointers#15](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/arithmetic-operations-on-pointers_2.cs)]  
+ [!code-csharp[csProgGuidePointers#15](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/arithmetic-operations-on-pointers_2.cs)]  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Código Não Seguro e Ponteiros](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
- [Expressões de Ponteiro](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)   
- [Operadores do C#](../../../csharp/language-reference/operators/index.md)   
- [Manipulando Ponteiros](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)   
- [Tipos de Ponteiro](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)   
- [Tipos](../../../csharp/language-reference/keywords/types.md)   
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)   
- [Instrução fixed](../../../csharp/language-reference/keywords/fixed-statement.md)   
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Código não seguro e ponteiros](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
+ [Expressões de ponteiro](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
+ [Operadores do C#](../../../csharp/language-reference/operators/index.md)  
+ [Manipulando ponteiros](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
+ [Tipos de ponteiro](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+ [Tipos](../../../csharp/language-reference/keywords/types.md)  
+ [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
+ [Instrução fixed](../../../csharp/language-reference/keywords/fixed-statement.md)  
  [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
-

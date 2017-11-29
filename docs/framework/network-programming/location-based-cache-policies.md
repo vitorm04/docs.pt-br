@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Cache If Available policy
 - reload policy
@@ -26,16 +21,15 @@ helpviewer_keywords:
 - Cache Or Next Cache Only policy
 - Refresh policy
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a5b4bf67db3fcbb70d2a93f35976d8d9b4b3a028
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 7a1be9f377f9b241bf46ac67f4f3f08fc5a43821
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="location-based-cache-policies"></a>Políticas de cache baseadas na localização
 Uma política de cache baseada na localização define a atualização das entradas armazenadas em cache válidas de acordo com o local em que o recurso solicitado pode ser obtido. Um recurso em cache é válido se usá-lo não viola os requisitos de revalidação especificados pelo servidor. Uma política de cache baseada na localização é criada programaticamente usando um construtor de classe <xref:System.Net.Cache.RequestCachePolicy> ou <xref:System.Net.Cache.HttpRequestCachePolicy>. O tipo de política baseada na localização é passado para o construtor usando um valor de enumeração <xref:System.Net.Cache.RequestCacheLevel> ou <xref:System.Net.Cache.HttpRequestCacheLevel>. Para obter exemplos de código que criam políticas de cache baseadas na localização, consulte [Como definir uma política de cache baseada na localização para um aplicativo](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md). As seções a seguir explicam cada tipo de política de cache baseada na localização para recursos de protocolo HTTP (http e https).  
@@ -62,9 +56,8 @@ Uma política de cache baseada na localização define a atualização das entra
  Compara a cópia do recurso no cache com a cópia no servidor. Se a cópia no servidor for mais recente, ela será usada para atender à solicitação e substituirá a cópia em cache. Se a cópia em cache for igual à cópia do servidor, a cópia armazenada em cache será usada. No protocolo de cache HTTP, isso é feito usando uma solicitação condicional.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciamento de cache para aplicativos de rede](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [Política de cache](../../../docs/framework/network-programming/cache-policy.md)   
- [Políticas de cache baseadas em tempo](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [Configurando o cache em aplicativos de rede](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)   
- [\<Elemento requestCaching> (configurações de rede)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
-
+ [Gerenciamento de cache para aplicativos de rede](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [Política de cache](../../../docs/framework/network-programming/cache-policy.md)  
+ [Políticas de cache baseadas em tempo](../../../docs/framework/network-programming/time-based-cache-policies.md)  
+ [Configurando o cache em aplicativos de rede](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
+ [\<requestCaching> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md) [Elemento requestCaching> (configurações de rede)]

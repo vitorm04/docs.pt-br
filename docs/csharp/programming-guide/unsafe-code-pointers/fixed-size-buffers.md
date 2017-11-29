@@ -1,40 +1,22 @@
 ---
 title: "Buffers de tamanho fixo (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
 ms.assetid: 6220d454-947c-4977-ac9d-9308c6ed5051
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3f99c2c6d477fca988fcca77de5ca5c2f8addd4d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e1a3dcf953cb56fc3436fdd5e7ecb60478a12922
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Buffers de tamanho fixo (Guia de Programação em C#)
 No C#, você pode usar a instrução [fixed](../../../csharp/language-reference/keywords/fixed-statement.md) para criar um buffer com uma matriz de tamanho fixo em uma estrutura de dados. Isso é útil quando você está trabalhando com o código existente, como código escrito em outras linguagens, DLLs preexistentes ou projetos COM. A matriz fixa pode usar qualquer atributo ou modificador que for permitido para membros de struct regulares. A única restrição é que o tipo da matriz deve ser `bool`, `byte`, `char`, `short`, `int`, `long`, `sbyte`, `ushort`, `uint`, `ulong`, `float` ou `double`.  
@@ -50,11 +32,11 @@ private fixed char name[30];
   
  Por exemplo, antes do C# 2.0, o seguinte `struct` teria um tamanho de 8 bytes. A matriz `pathName` é uma referência à matriz alocada em heap:  
   
- [!code-cs[csProgGuidePointers#19](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_1.cs)]  
+ [!code-csharp[csProgGuidePointers#19](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_1.cs)]  
   
  A partir do C# 2.0, um `struct` pode conter uma matriz inserida. No exemplo a seguir, a matriz `fixedBuffer` tem tamanho fixo. Para acessar os elementos da matriz, você deve usar uma instrução `fixed` para estabelecer um ponteiro para o primeiro elemento. A instrução `fixed` fixa uma instância de `fixedBuffer` a um local específico na memória.  
   
- [!code-cs[csProgGuidePointers#20](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_2.cs)]  
+ [!code-csharp[csProgGuidePointers#20](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_2.cs)]  
   
  O tamanho da matriz `char` de 128 elementos é 256 bytes. Buffers de [char](../../../csharp/language-reference/keywords/char.md) de tamanho fixo sempre têm dois bytes por caractere, independentemente da codificação. Isso vale mesmo quando os buffers de char passam por marshaling para structs ou métodos de API com `CharSet = CharSet.Auto` ou `CharSet = CharSet.Ansi`. Para obter mais informações, consulte <xref:System.Runtime.InteropServices.CharSet>.  
   
@@ -74,8 +56,7 @@ private fixed char name[30];
 -   Buffers não seguros só podem ser structs ou campos de instância em um contexto não seguro.  
   
 ## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Código Não Seguro e Ponteiros](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
- [Instrução fixed](../../../csharp/language-reference/keywords/fixed-statement.md)   
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Código não seguro e ponteiros](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
+ [Instrução fixed](../../../csharp/language-reference/keywords/fixed-statement.md)  
  [Interoperabilidade](../../../csharp/programming-guide/interop/index.md)
-

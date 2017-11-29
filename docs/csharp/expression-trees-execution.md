@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 4ca87c8410a04e9198e9dd6c379760e7b6596585
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="executing-expression-trees"></a>Executar árvores de expressão
 
 [Anterior – Tipos de estruturas que dão suporte às árvores de expressão](expression-classes.md)
@@ -130,4 +128,3 @@ As árvores de expressão que representam expressões lambda podem ser compilada
 A árvore de expressão representa o código que seria executado para qualquer constructo específico que você criar. Contanto que o ambiente em que você compilar e executar o código corresponda ao ambiente em que você criar a expressão, tudo funcionará conforme o esperado. Quando isso não acontece, os erros são bastante previsíveis e serão capturados em seus primeiros testes de qualquer código usando as árvores de expressão.
 
 [Próximo – Interpretando expressões](expression-trees-interpreting.md)
-

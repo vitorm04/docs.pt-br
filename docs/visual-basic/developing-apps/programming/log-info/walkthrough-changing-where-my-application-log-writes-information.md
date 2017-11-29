@@ -1,43 +1,24 @@
 ---
 title: "Alterar o local em que My.Application.Log grava informações (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: c4cd2e675bf1be4f065ee116795a95dae64d13d9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a02307c55283c359ae069170e8038cd1983d495b
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Instruções passo a passo: alterando onde My.Application.Log grava informações (Visual Basic)
 É possível usar os objetos `My.Application.Log` e `My.Log` para registrar em log as informações sobre eventos que ocorrem em seu aplicativo. Este passo a passo mostra como substituir as configurações padrão e fazer com que o objeto `Log` grave em outros ouvintes de log.  
@@ -180,13 +161,13 @@ ms.lasthandoff: 07/28/2017
   
      Alguns tipos que você pode usar são:  
   
-    -   Um ouvinte <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName>, que grava em um arquivo de log.  
+    -   Um ouvinte <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>, que grava em um arquivo de log.  
   
-    -   O ouvinte <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> que grava informações no log de eventos do computador especificado pelo parâmetro `initializeData`.  
+    -   O ouvinte <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> que grava informações no log de eventos do computador especificado pelo parâmetro `initializeData`.  
   
-    -   Os ouvintes <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> e <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName>, que gravam no arquivo especificado no parâmetro `initializeData`.  
+    -   Os ouvintes <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> e <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>, que gravam no arquivo especificado no parâmetro `initializeData`.  
   
-    -   Um ouvinte <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName>, que grava no console da linha de comando.  
+    -   Um ouvinte <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>, que grava no console da linha de comando.  
   
      Para obter informações sobre onde outros tipos de ouvintes de log gravam informações, consulte a documentação daquele tipo.  
   
@@ -209,10 +190,9 @@ ms.lasthandoff: 07/28/2017
      `Microsoft.VisualBasic.Logging.FileLogTraceListener, Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a`  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
- <xref:System.Diagnostics.TraceListener>   
- <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName>   
- <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>   
- [Como gravar informações de evento em um arquivo de texto](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)   
+ <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
+ <xref:System.Diagnostics.TraceListener>  
+ <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>  
+ <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>  
+ [Como gravar informações de evento em um arquivo de texto](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)  
  [Como gravar em um log de eventos do aplicativo](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)
-

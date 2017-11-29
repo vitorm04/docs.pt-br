@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
+ms.openlocfilehash: 398a73f72a9a31c6b2a19a626f704f65564f4fbd
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: 16c99ec5d1c120f1ab079940459cdb7716471353
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="types-variables-and-values"></a>Tipos, variáveis e valores  
 O C# é uma linguagem fortemente tipada. Todas as variáveis e constantes têm um tipo, assim como cada expressão que é avaliada como um valor. Cada assinatura de método especifica um tipo para cada parâmetro de entrada e para o valor retornado. A biblioteca de classes .NET Framework define um conjunto de tipos numéricos internos, bem como tipos mais complexos que representam uma ampla variedade de constructos lógicos, como o sistema de arquivos, as conexões de rede, as coleções e as matrizes de objetos e as datas. Um programa em C# típico usa tipos da biblioteca de classes, bem como tipos definidos pelo usuário que modelam os conceitos que são específicos para o domínio do problema do programa.  
   
@@ -64,7 +62,7 @@ O C# fornece um conjunto padrão de tipos numéricos internos para representar n
 Você usa os constructos [struct](language-reference/keywords/class.md), [classe](language-reference/keywords/class.md), [interface](language-reference/keywords/interface.md) e [enum](language-reference/keywords/enum.md) para criar seus próprios tipos personalizados. A biblioteca de classes .NET Framework em si é uma coleção de tipos personalizados fornecidos pela Microsoft que você pode usar em seus próprios aplicativos. Por padrão, os tipos usados com mais frequência na biblioteca de classes estão disponíveis em qualquer programa em C#. Outros ficam disponíveis somente quando você adiciona explicitamente uma referência de projeto ao assembly no qual eles estão definidos. Após o compilador ter uma referência ao assembly, você pode declarar variáveis (e constantes) dos tipos declarados no assembly no código-fonte. 
   
 ## <a name="generic-types"></a>Tipos genéricos  
-Um tipo pode ser declarado com um ou mais *parâmetros de tipo* que servem como um espaço reservado para o tipo real (o *tipo concreto*) que o código cliente fornecerá ao criar uma instância do tipo. Esses tipos são chamados de *tipos genéricos*. Por exemplo, o tipo do .NET Framework @System.Collections.Generic.List%601 tem um parâmetro de tipo que, por convenção, recebe o nome *T*. Ao criar uma instância do tipo, você pode especificar o tipo dos objetos que a lista conterá, por exemplo, a cadeia de caracteres:  
+Um tipo pode ser declarado com um ou mais *parâmetros de tipo* que servem como um espaço reservado para o tipo real (o *tipo concreto*) que o código cliente fornecerá ao criar uma instância do tipo. Esses tipos são chamados de *tipos genéricos*. Por exemplo, o tipo do .NET Framework <xref:System.Collections.Generic.List%601> tem um parâmetro de tipo que, por convenção, recebe o nome *T*. Ao criar uma instância do tipo, você pode especificar o tipo dos objetos que a lista conterá, por exemplo, a cadeia de caracteres:  
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)] 
   
@@ -80,7 +78,7 @@ Em alguns casos, é inconveniente criar um tipo nomeado para conjuntos simples d
 ## <a name="the-common-type-system"></a>O Common Type System  
 É importante entender dois pontos fundamentais sobre o sistema de tipo no .NET Framework:  
   
--   Ele dá suporte ao conceito de herança. Os tipos podem derivar de outros tipos, chamados *tipos base*. O tipo derivado herda (com algumas restrições) os métodos, as propriedades e outros membros do tipo base. O tipo base, por sua vez, pode derivar de algum outro tipo, nesse caso, o tipo derivado herda os membros de ambos os tipos base na sua hierarquia de herança. Todos os tipos, incluindo tipos numéricos internos, como o @System.Int32 (palavra-chave do C#: `int`), derivam, em última análise, de um único tipo base, que é o @System.Object (palavra-chave do C#: `object`). Essa hierarquia unificada de tipos é chamada de [CTS](../standard/common-type-system.md) (Common Type System). Para obter mais informações sobre herança em C#, consulte [Herança](programming-guide/classes-and-structs/inheritance.md).  
+-   Ele dá suporte ao conceito de herança. Os tipos podem derivar de outros tipos, chamados *tipos base*. O tipo derivado herda (com algumas restrições) os métodos, as propriedades e outros membros do tipo base. O tipo base, por sua vez, pode derivar de algum outro tipo, nesse caso, o tipo derivado herda os membros de ambos os tipos base na sua hierarquia de herança. Todos os tipos, incluindo tipos numéricos internos, como o <xref:System.Int32> (palavra-chave do C#: `int`), derivam, em última análise, de um único tipo base, que é o <xref:System.Object> (palavra-chave do C#: `object`). Essa hierarquia unificada de tipos é chamada de [CTS](../standard/common-type-system.md) (Common Type System). Para obter mais informações sobre herança em C#, consulte [Herança](programming-guide/classes-and-structs/inheritance.md).  
   
 -   Cada tipo no CTS é definido como um *tipo de valor* ou um *tipo de referência*. Isso inclui todos os tipos personalizados na biblioteca de classes .NET Framework e também seus próprios tipos definidos pelo usuário. Os tipos que você define usando a palavra-chave [struct](language-reference/keywords/struct.md) são tipos de valor. Todos os tipos numéricos internos são **structs**. Para obter mais informações sobre tipos de valor, consulte [Structs](structs.md). Os tipos que você define usando a palavra-chave [class](language-reference/keywords/class.md) são tipos de referência. Para obter mais informações sobre tipos de referência, consulte [Classes](classes.md). Os tipos de referência e os tipos de valor têm diferentes regras de tempo de compilação e comportamento de tempo de execução diferente.
  
@@ -88,4 +86,3 @@ Em alguns casos, é inconveniente criar um tipo nomeado para conjuntos simples d
 ## <a name="see-also"></a>Consulte também
 [Estruturas](structs.md)
 [Classes](classes.md)
-

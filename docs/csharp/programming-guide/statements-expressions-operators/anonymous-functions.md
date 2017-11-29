@@ -1,40 +1,22 @@
 ---
 title: "Funções anônimas (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - lambda expressions [C#], as anonymus functions
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 888743bb1c49df123b57b4d09e0251dbe1e049d3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9f0105ad5ee5a97243e9aeda42c9b1842ec15d0e
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>Funções anônimas (Guia de Programação em C#)
 Uma função anônima é uma instrução ou expressão "embutida" que pode ser usada em qualquer local em que um tipo delegado é esperado. Você pode usá-la para inicializar um delegado nomeado ou passá-la em vez de um tipo delegado nomeado como um parâmetro de método.  
@@ -53,14 +35,13 @@ Uma função anônima é uma instrução ou expressão "embutida" que pode ser u
   
  O exemplo a seguir demonstra a evolução da criação de delegado, desde o C# 1.0 até o C# 3.0:  
   
- [!code-cs[csProgGuideLINQ#65](../../../csharp/programming-guide/arrays/codesnippet/CSharp/anonymous-functions_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#65](../../../csharp/programming-guide/arrays/codesnippet/CSharp/anonymous-functions_1.cs)]  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Instruções, Expressões e Operadores](../../../csharp/programming-guide/statements-expressions-operators/index.md)   
- [Expressões Lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
- [Delegados](../../../csharp/programming-guide/delegates/index.md)   
+ [Instruções, expressões e operadores](../../../csharp/programming-guide/statements-expressions-operators/index.md)  
+ [Expressões Lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+ [Delegados](../../../csharp/programming-guide/delegates/index.md)  
  [Árvores de Expressão](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)
-

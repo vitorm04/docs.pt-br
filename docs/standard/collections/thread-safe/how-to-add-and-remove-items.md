@@ -8,22 +8,23 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- thread-safe collections, concurrent dictionary
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 1c034b656cf7a953ae532c12640b5916001764c0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 40291d424916c2f87a2070a9a8a6e49243ac083a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Como adicionar e remover itens de um ConcurrentDictionary
-Este exemplo mostra como adicionar, recuperar, atualizar e remover itens de um <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName>. Essa classe de coleção é uma implementação thread-safe. É recomendável usá-la sempre que vários threads possam estar tentando acessar os elementos simultaneamente.  
+Este exemplo mostra como adicionar, recuperar, atualizar e remover itens de um <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>. Essa classe de coleção é uma implementação thread-safe. É recomendável usá-la sempre que vários threads possam estar tentando acessar os elementos simultaneamente.  
   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602> fornece vários métodos de conveniência que tornam desnecessário que o código verifique se uma chave existe antes de tentar adicionar ou remover dados. A tabela a seguir lista esses métodos de conveniência e descreve quando usá-los.  
   
@@ -54,6 +55,5 @@ Este exemplo mostra como adicionar, recuperar, atualizar e remover itens de um <
  Portanto, não é garantido que os dados retornados pelo <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> sejam os mesmos que foram criados pelo valueFactory do thread. Uma sequência semelhante de eventos pode ocorrer quando <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> é chamado.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Collections.Concurrent?displayProperty=fullName>   
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
  [Coleções Thread-Safe](../../../../docs/standard/collections/thread-safe/index.md)
-

@@ -1,15 +1,12 @@
 ---
 title: "Transformações de dados com LINQ (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - LINQ [C#], data transformations
 - source elements [LINQ in C#]
@@ -19,30 +16,14 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: f77bd40ea8ec0745dda3d40eee273d9e7338263b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5b48dd495b843f8211a2b6e26df8a4f0618b254a
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="data-transformations-with-linq-c"></a>Transformações de dados com LINQ (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] não se trata apenas de recuperação de dados. Também é uma ferramenta poderosa para transformação de dados. Ao usar uma consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], você pode usar uma sequência de origem como entrada e modificá-la de várias maneiras para criar uma nova sequência de saída. Você pode modificar a própria sequência sem modificar os respectivos elementos, classificando-os e agrupando-os. Mas talvez o recurso mais poderoso das consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] é a capacidade de criar novos tipos. Isso é feito na cláusula [select](../../../../csharp/language-reference/keywords/select-clause.md). Por exemplo, é possível executar as seguintes tarefas:  
@@ -60,11 +41,11 @@ ms.lasthandoff: 07/28/2017
 ## <a name="joining-multiple-inputs-into-one-output-sequence"></a>Ingressando Várias Entradas em uma Única Sequência de Saída  
  Você pode usar uma consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para criar uma sequência de saída que contenha elementos de mais de uma sequência de entrada. O exemplo a seguir mostra como combinar duas estruturas de dados na memória, mas os mesmos princípios podem ser aplicados para combinar dados de origens de XML, SQL ou DataSet. Considere os dois tipos de classe a seguir:  
   
- [!code-cs[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_1.cs)]  
+ [!code-csharp[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_1.cs)]  
   
  O exemplo a seguir mostra a consulta:  
   
- [!code-cs[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_2.cs)]  
+ [!code-csharp[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_2.cs)]  
   
  Para obter mais informações, consulte [cláusula join](../../../../csharp/language-reference/keywords/join-clause.md) e [cláusula select](../../../../csharp/language-reference/keywords/select-clause.md).  
   
@@ -90,7 +71,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="transforming-in-memory-objects-into-xml"></a>Transformando Objetos na Memória em XML  
  As consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] facilitam a transformação de dados entre estruturas de dados na memória, bancos de dados SQL, conjuntos de dados [!INCLUDE[vstecado](~/includes/vstecado-md.md)] e fluxos ou documentos XML. O exemplo a seguir transforma objetos de uma estrutura de dados na memória em elementos XML.  
   
- [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
+ [!code-csharp[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
   
  O código produz a seguinte saída XML:  
   
@@ -122,13 +103,12 @@ ms.lasthandoff: 07/28/2017
 > [!NOTE]
 >  Não há suporte para chamar métodos em expressões de consulta se a consulta será movida para outro domínio. Por exemplo, você não pode chamar um método comum de C# no [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] porque o SQL Server não tem contexto para ele. No entanto, você pode mapear procedimentos armazenados para os métodos e chamá-los. Para obter mais informações, consulte [Procedimentos armazenados](../../../../framework/data/adonet/sql/linq/stored-procedures.md).  
   
- [!code-cs[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
+ [!code-csharp[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
   
 ## <a name="see-also"></a>Consulte também  
- [LINQ (Consulta Integrada à Linguagem) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)   
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)   
- [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)   
- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)   
- [Expressões de Consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)   
+ [LINQ (Consulta Integrada à Linguagem) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
+ [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
+ [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
+ [Expressões de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
  [Cláusula select](../../../../csharp/language-reference/keywords/select-clause.md)
-

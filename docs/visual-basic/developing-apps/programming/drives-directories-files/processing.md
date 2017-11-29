@@ -1,15 +1,12 @@
 ---
 title: "Processando unidades, diretórios e arquivos (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - drives
 - drives, processing
@@ -18,29 +15,14 @@ helpviewer_keywords:
 - files [Visual Basic], accessing
 - directories [Visual Studio], processing
 ms.assetid: f1db14c8-a4fd-4d0b-8323-c7cb29d688c2
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 27a5c3c389860cdc29c4263edbff492738ffe565
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8cb9735b82d381dfb57211bf37ce29dfbb7374aa
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>Processando unidades, diretórios e arquivos (Visual Basic)
 Você pode usar o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] para processar unidades, pastas e arquivos com o objeto `My.Computer.FileSystem`, que fornece um melhor desempenho e é mais fácil de usar que os métodos tradicionais, como as funções `FileOpen` e `Write` (embora elas ainda estejam disponíveis). As seções a seguir discutem esses métodos em detalhes.  
@@ -64,4 +46,3 @@ Você pode usar o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] para processar uni
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  Documentação de referência do objeto `My.Computer.FileSystem` e seus membros.
-

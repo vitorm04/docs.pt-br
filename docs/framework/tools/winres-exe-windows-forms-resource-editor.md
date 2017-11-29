@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Winres.exe
 - Windows Forms Resource Editor
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 8009f832434d6bbad2ad7bee9cbfd62c81d623c7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
-ms.openlocfilehash: e2a2121d97cd1f7de211a72ed95e2fdf24bfac60
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/10/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe (Editor de Recursos do Windows Forms)
 O Editor de Recurso do Windows Forms, Winres.exe, é uma ferramenta de layout visual que ajuda especialistas na localização de recursos de interface do usuário do Windows Forms usados por formulários. Os arquivos .resx ou .resources usados como entrada em Winres.exe podem ser criados usando-se um ambiente de design visual como, por exemplo, Microsoft Visual Studio. Para obter informações sobre como implantar recursos em aplicativos do .NET Framework, consulte [Recursos nos aplicativos de área de trabalho](../../../docs/framework/resources/index.md).  
@@ -149,12 +142,11 @@ winres /?
 5.  Selecione a cultura apropriada e o modo de arquivo e clique em **OK**. A ferramenta salva o arquivo usando a convenção de nomenclatura esperada pelo tempo de execução para arquivos de recurso localizados. Por exemplo, se você localizar `TestApp.resources` para o alemão na Alemanha, a ferramenta salvará o arquivo como `TestApp.de-DE.resources`. Se você localizar `TestApp.resx` para o alemão na Alemanha, a ferramenta salvará o arquivo como `TestApp.de-DE.resx`. Para obter mais informações sobre as convenções de nomenclatura de recurso, consulte [Empacotando e implantando recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Para obter uma lista dos nomes de cultura predefinidos usados pelo tempo de execução, consulte a classe <xref:System.Globalization.CultureInfo>.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.ComponentModel.LocalizableAttribute>   
- <xref:System.Globalization.CultureInfo>   
- <xref:System.Resources.ResourceManager>   
- <xref:System.Resources.ResourceReader>   
- <xref:System.Resources.ResourceWriter>   
- [Ferramentas](../../../docs/framework/tools/index.md)   
- [Recursos em aplicativos de área de trabalho](../../../docs/framework/resources/index.md)   
+ <xref:System.ComponentModel.LocalizableAttribute>  
+ <xref:System.Globalization.CultureInfo>  
+ <xref:System.Resources.ResourceManager>  
+ <xref:System.Resources.ResourceReader>  
+ <xref:System.Resources.ResourceWriter>  
+ [Ferramentas](../../../docs/framework/tools/index.md)  
+ [Recursos em aplicativos de área de trabalho](../../../docs/framework/resources/index.md)  
  [Globalização e localização](../../../docs/standard/globalization-localization/index.md)
-

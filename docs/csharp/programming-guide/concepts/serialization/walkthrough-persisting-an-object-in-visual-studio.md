@@ -1,30 +1,21 @@
 ---
 title: 'Passo a passo: mantendo um objeto no Visual Studio (C#)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: get-started-article
-dev_langs:
-- CSharp
 ms.assetid: a544ce46-ee25-49da-afd4-457a3d59bf63
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: efdf4694c1a1b6df2e9531a2bb4c813b536a330e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4c8dce64c470f01f540a83f68e3861df56913e4c
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-c"></a>Passo a passo: mantendo um objeto no Visual Studio (C#)
 Embora você possa definir as propriedades de um objeto para os valores padrão em tempo de design, qualquer valor inserido em tempo de execução será perdido quando o objeto for destruído. Você pode usar a serialização para manter os dados de um objeto entre instâncias, o que permite armazenar valores e recuperá-los na próxima vez que o objeto for instanciado.  
@@ -230,6 +221,5 @@ Embora você possa definir as propriedades de um objeto para os valores padrão 
  Neste ponto, você pode compilar e executar o aplicativo novamente. Inicialmente, os valores padrão aparecem nas caixas de texto. Tente alterar os valores e digite um nome na quarta caixa de texto. Feche o aplicativo e execute-o novamente. Observe que agora os novos valores aparecem nas caixas de texto.  
   
 ## <a name="see-also"></a>Consulte também  
- [Serialização (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)   
+ [Serialização (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)  
  [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)
-

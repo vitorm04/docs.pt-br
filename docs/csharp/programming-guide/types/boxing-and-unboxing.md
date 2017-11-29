@@ -1,59 +1,39 @@
 ---
 title: "Conversões boxing e unboxing (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.boxing
-dev_langs:
-- CSharp
+f1_keywords: cs.boxing
 helpviewer_keywords:
 - C# language, boxing
 - C# language, unboxing
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 893ef47c5e7522581b5d02489100942e47023a63
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c783ac60735ba25db2736bd9469063c0897be22f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Conversões boxing e unboxing (Guia de Programação em C#)
 Conversão boxing é o processo de conversão de um [tipo de valor](../../../csharp/language-reference/keywords/value-types.md) para o tipo `object` ou para qualquer tipo de interface implementada por esse tipo de valor. Quando o CLR realiza a conversão boxing de um tipo de valor, ele encapsula o valor dentro de System.Object e o armazena no heap gerenciado. A conversão unboxing extrai o tipo de valor do objeto. A conversão boxing é implícita, a conversão unboxing é explícita. O conceito de conversões boxing e unboxing serve como base para a exibição unificada de C# do sistema de tipos em que um valor de qualquer tipo pode ser tratado como um objeto.  
   
  No exemplo a seguir, a variável de inteiro `i` é submetida à *conversão boxing* e atribuída ao objeto `o`.  
   
- [!code-cs[csProgGuideTypes#14](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_1.cs)]  
+ [!code-csharp[csProgGuideTypes#14](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_1.cs)]  
   
  O objeto `o` pode ser submetido à conversão unboxing e atribuído à variável de inteiro `i`:  
   
- [!code-cs[csProgGuideTypes#15](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_2.cs)]  
+ [!code-csharp[csProgGuideTypes#15](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_2.cs)]  
   
  Os exemplos a seguir ilustram como a conversão boxing é usada em C#.  
   
- [!code-cs[csProgGuideTypes#47](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_3.cs)]  
+ [!code-csharp[csProgGuideTypes#47](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_3.cs)]  
   
 ## <a name="performance"></a>Desempenho  
  Em relação às atribuições simples, as conversões boxing e unboxing são processos computacionalmente dispendiosos. Quando um tipo de valor é submetido à conversão boxing, um novo objeto deve ser alocado e construído. A um grau menor, a conversão necessária para a conversão unboxing também é computacionalmente dispendiosa. Para obter mais informações, consulte [Desempenho](https://msdn.microsoft.com/library/ms173196(VS.110).aspx).  
@@ -63,11 +43,11 @@ Conversão boxing é o processo de conversão de um [tipo de valor](../../../csh
   
  Considere a seguinte declaração de uma variável de tipo de valor:  
   
- [!code-cs[csProgGuideTypes#17](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_4.cs)]  
+ [!code-csharp[csProgGuideTypes#17](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_4.cs)]  
   
  A instrução a seguir aplica implicitamente a operação de conversão boxing na variável `i`:  
   
- [!code-cs[csProgGuideTypes#18](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_5.cs)]  
+ [!code-csharp[csProgGuideTypes#18](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_5.cs)]  
   
  O resultado dessa instrução é a criação de uma referência de objeto `o`, na pilha, que faz referência a um valor do tipo `int`, no heap. Esse valor é uma cópia do valor do tipo de valor atribuído à variável `i`. A diferença entre as duas variáveis, `i` e `o`, é ilustrada na figura a seguir.  
   
@@ -76,13 +56,13 @@ Conversão boxing
   
  Também é possível executar a conversão boxing explicitamente como no exemplo a seguir, mas a conversão boxing explícita nunca é necessária:  
   
- [!code-cs[csProgGuideTypes#19](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_6.cs)]  
+ [!code-csharp[csProgGuideTypes#19](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_6.cs)]  
   
 ## <a name="description"></a>Descrição  
  Este exemplo converte uma variável de inteiro `i` em um objeto `o` usando a conversão boxing. Em seguida, o valor armazenado na variável `i` é alterado de `123` para `456`. O exemplo mostra que o tipo do valor original e o objeto submetido à conversão boxing usa locais de memória separados e, portanto, pode armazenar valores diferentes.  
   
 ## <a name="example"></a>Exemplo  
- [!code-cs[csProgGuideTypes#16](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_7.cs)]  
+ [!code-csharp[csProgGuideTypes#16](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_7.cs)]  
   
 ## <a name="unboxing"></a>Unboxing  
  A conversão unboxing é uma conversão explícita do tipo `object` para um [tipo de valor](../../../csharp/language-reference/keywords/value-types.md) ou de um tipo de interface para um tipo de valor que implementa a interface. Uma operação de conversão unboxing consiste em:  
@@ -93,7 +73,7 @@ Conversão boxing
   
  As instruções a seguir demonstram operações conversão boxing e unboxing:  
   
- [!code-cs[csProgGuideTypes#21](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_8.cs)]  
+ [!code-csharp[csProgGuideTypes#21](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_8.cs)]  
   
  A figura a seguir demonstra o resultado das instruções anteriores.  
   
@@ -105,7 +85,7 @@ Conversão unboxing
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra um caso de conversão unboxing inválida e o `InvalidCastException` resultante. Usando `try` e `catch`, uma mensagem de erro é exibida quando o erro ocorre.  
   
- [!code-cs[csProgGuideTypes#20](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_9.cs)]  
+ [!code-csharp[csProgGuideTypes#20](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_9.cs)]  
   
  Este programa produz:  
   
@@ -142,4 +122,3 @@ int j = (int) o;
   
 ## <a name="see-also"></a>Consulte também  
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-

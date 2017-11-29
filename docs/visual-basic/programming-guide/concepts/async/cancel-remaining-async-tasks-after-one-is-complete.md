@@ -1,64 +1,56 @@
 ---
-title: "Cancelar as demais tarefas assíncronas após um completo (Visual Basic) | Documentos do Microsoft"
+title: "Cancelar as demais tarefas assíncronas após um completo (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1b70822edd972ac33614ab49faad6ff50b0e80b7
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 698ccf5901a77438368b9bf768b88ca6f90fdcbe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Cancelar as demais tarefas assíncronas após um completo (Visual Basic)
-Usando o <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName>método junto com um <xref:System.Threading.CancellationToken>, você pode cancelar todas as tarefas restantes quando uma tarefa é concluída.</xref:System.Threading.CancellationToken> </xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName> O `WhenAny` método tem um argumento que é um conjunto de tarefas. O método inicia todas as tarefas e retorna uma única tarefa. A tarefa é concluída quando qualquer tarefa na coleção é concluída.  
+Usando o método <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> juntamente com um <xref:System.Threading.CancellationToken>, você pode cancelar todas as tarefas restantes quando uma tarefa é concluída. O método `WhenAny` leva um argumento que é uma coleção de tarefas. O método inicia todas as tarefas e retorna uma única tarefa. A tarefa única será concluída quando qualquer tarefa na coleção for concluída.  
   
- Este exemplo demonstra como usar um token de cancelamento em conjunto com `WhenAny` para manter a primeira tarefa ao fim da coleção de tarefas e para cancelar as tarefas restantes. Cada tarefa baixa o conteúdo de um site. O exemplo exibe o comprimento do conteúdo do primeiro download para concluir e cancela os outros downloads.  
+ Este exemplo demonstra como usar um token de cancelamento em conjunto com `WhenAny` para aguardar na primeira tarefa que for finalizada na coleção de tarefas e para cancelar as tarefas restantes. Cada tarefa baixa o conteúdo de um site. O exemplo exibe o comprimento do conteúdo do primeiro download que é concluído e cancela os outros downloads.  
   
 > [!NOTE]
->  Para executar os exemplos, você deve ter o Visual Studio 2012 ou mais recente e o .NET Framework 4.5 ou posterior esteja instalado no computador.  
+>  Para executar os exemplos, você precisa ter o Visual Studio 2012 ou uma versão mais recente e o .NET Framework 4.5 ou posterior instalados em seu computador.  
   
 ## <a name="downloading-the-example"></a>Baixando o Exemplo  
- Você pode baixar o projeto completo do Windows Presentation Foundation (WPF) de [exemplo de assincronia: bem ajustando seu aplicativo](http://go.microsoft.com/fwlink/?LinkId=255046) e, em seguida, siga estas etapas.  
+ Você pode baixar o projeto completo do WPF (Windows Presentation Foundation) em [Exemplo assíncrono: ajuste fino de seu aplicativo](http://go.microsoft.com/fwlink/?LinkId=255046) e, em seguida, seguir estas etapas.  
   
 1.  Descompacte o arquivo baixado e, em seguida, inicie o Visual Studio.  
   
-2.  Na barra de menus, escolha **arquivo**, **abrir**, **projeto/solução**.  
+2.  Na barra de menus, escolha **Arquivo**, **Abrir**, **Projeto/Solução**.  
   
-3.  No **Abrir projeto** caixa de diálogo, abra a pasta que contém o código de exemplo é descompactado e, em seguida, abra o arquivo de solução (. sln) para AsyncFineTuningVB.  
+3.  No **Abrir projeto** caixa de diálogo, abra a pasta que contém o código de exemplo é descompactado e, em seguida, abra o arquivo de solução (. sln) AsyncFineTuningVB.  
   
-4.  Em **Solution Explorer**, abra o menu de atalho para o **CancelAfterOneTask** do projeto e escolha **Set as StartUp Project**.  
+4.  No **Gerenciador de Soluções**, abra o menu de atalho do projeto **CancelAfterOneTask** e, em seguida, escolha **Definir como Projeto de Inicialização**.  
   
 5.  Escolha a tecla F5 para executar o projeto.  
   
-     Escolha as teclas Ctrl + F5 para executar o projeto sem depurá-lo.  
+     Escolha as teclas CTRL+F5 para executar o projeto sem depurá-lo.  
   
-6.  Execute o programa várias vezes para verificar que diferentes downloads concluir primeiro.  
+6.  Execute o programa várias vezes para verificar que diferentes downloads são concluídos em primeiro.  
   
  Se você não quiser baixar o projeto, você pode examinar o arquivo MainWindow.xaml.vb no final deste tópico.  
   
 ## <a name="building-the-example"></a>Compilando o Exemplo  
- O exemplo neste tópico adiciona ao projeto que é desenvolvido no [cancelar uma tarefa assíncrona ou uma lista de tarefas](http://msdn.microsoft.com/library/d6e4e801-df64-4705-98fc-df725a577fb0) para cancelar uma lista de tarefas. O exemplo usa a mesma interface de usuário, embora o **Cancelar** botão não é usado explicitamente.  
+ O exemplo neste tópico adiciona ao projeto que é desenvolvido no [cancelar uma tarefa assíncrona ou uma lista de tarefas](http://msdn.microsoft.com/library/d6e4e801-df64-4705-98fc-df725a577fb0) para cancelar uma lista de tarefas. O exemplo usa a mesma interface do usuário, embora o botão **Cancelar** não seja explicitamente usado.  
   
- Para criar o exemplo você mesmo, passo a passo, siga as instruções na seção "Baixar o exemplo", mas escolha **CancelAListOfTasks** como o **projeto de inicialização**. Adicione as alterações neste tópico para o projeto.  
+ Para compilar o exemplo você mesmo, passo a passo, siga as instruções na seção "Baixando o exemplo", mas escolha **CancelAListOfTasks** como o **Projeto de Inicialização**. Adicione as alterações deste tópico ao projeto.  
   
- No arquivo MainWindow.xaml.vb do **CancelAListOfTasks** de projeto, iniciar a transição movendo as etapas de processamento para cada site do loop na `AccessTheWebAsync` para o seguinte método assíncrono.  
+ No arquivo de MainWindow.xaml.vb o **CancelAListOfTasks** projeto, inicie a transição, movendo as etapas de processamento para cada site de loop no `AccessTheWebAsync` para o seguinte método assíncrono.  
   
 ```vb  
 ' ***Bundle the processing steps for a website into one async method.  
@@ -74,19 +66,28 @@ Async Function ProcessURLAsync(url As String, client As HttpClient, ct As Cancel
 End Function  
 ```  
   
- Em `AccessTheWebAsync`, este exemplo usa uma consulta, o <xref:System.Linq.Enumerable.ToArray%2A>método e o `WhenAny` método para criar e iniciar uma matriz de tarefas.</xref:System.Linq.Enumerable.ToArray%2A> O aplicativo de `WhenAny` à matriz retorna uma única tarefa que, quando colocado em espera, é avaliada para a primeira tarefa para alcançar a conclusão da matriz de tarefas.  
+ Em `AccessTheWebAsync`, este exemplo usa uma consulta, o método <xref:System.Linq.Enumerable.ToArray%2A> e o método `WhenAny` para criar e iniciar uma matriz de tarefas. A aplicação de `WhenAny` à matriz retorna uma única tarefa que, quando colocada em espera, resulta na primeira tarefa a alcançar a conclusão na matriz de tarefas.  
   
- Faça as seguintes alterações em `AccessTheWebAsync`. Asteriscos marcam as alterações no arquivo de código.  
+ Faça as seguintes alterações em `AccessTheWebAsync`. Os asteriscos marcam as alterações no arquivo de código.  
   
-1.  Comentar ou excluir o loop.  
+1.  Comente ou exclua o loop.  
   
-2.  Criar uma consulta que, quando executado, produz uma coleção de tarefas genéricas. Cada chamada para `ProcessURLAsync` retorna um <xref:System.Threading.Tasks.Task%601>onde `TResult` é um inteiro.</xref:System.Threading.Tasks.Task%601>  
+2.  Crie uma consulta que, quando executada, produz uma coleção de tarefas genéricas. Cada chamada para `ProcessURLAsync` retorna um <xref:System.Threading.Tasks.Task%601> em que `TResult` é um inteiro.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
-3.  Chamar `ToArray` para executar a consulta e iniciar as tarefas. O aplicativo do `WhenAny` método na próxima etapa seria executar a consulta e iniciar as tarefas sem usar `ToArray`, mas outros métodos não podem. A prática mais segura é forçar a execução da consulta explicitamente.  
+    ```vb  
+    ' ***Create a query that, when executed, returns a collection of tasks.  
+    Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =  
+        From url In urlList Select ProcessURLAsync(url, client, ct)  
+    ```  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
-4.  Chamar `WhenAny` na coleção de tarefas. `WhenAny`Retorna um `Task(Of Task(Of Integer))` ou `Task<Task<int>>`.  Ou seja, `WhenAny` retorna uma tarefa que avalia para um único `Task(Of Integer)` ou `Task<int>` quando é esperado. Essa única tarefa é a primeira tarefa na coleção para concluir. A tarefa que concluiu o primeiro é atribuída a `firstFinishedTask`. O tipo de `firstFinishedTask` é <xref:System.Threading.Tasks.Task%601>onde `TResult` é um inteiro, porque esse é o tipo de retorno de `ProcessURLAsync`.</xref:System.Threading.Tasks.Task%601>  
+3.  Chame `ToArray` para executar a consulta e iniciar as tarefas. A aplicação do método `WhenAny` na próxima etapa executaria a consulta e iniciaria as tarefas sem usar `ToArray`, mas outros métodos podem não fazê-lo. A prática mais segura é forçar a execução da consulta explicitamente.  
+  
+    ```vb  
+    ' ***Use ToArray to execute the query and start the download tasks.   
+    Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
+    ```  
+  
+4.  Chame `WhenAny` na coleção de tarefas. `WhenAny` retorna um `Task(Of Task(Of Integer))` ou `Task<Task<int>>`.  Ou seja, `WhenAny` retorna uma tarefa que resulta em uma única `Task(Of Integer)` ou `Task<int>` quando é esperada. Essa tarefa única é a primeira tarefa na coleção a ser concluída. A tarefa que foi concluída em primeiro é atribuída a `firstFinishedTask`. O tipo de `firstFinishedTask` é <xref:System.Threading.Tasks.Task%601>, em que `TResult` é um inteiro, porque esse é o tipo de retorno de `ProcessURLAsync`.  
   
 ```vb  
 ' ***Call WhenAny and then await the result. The task that finishes   
@@ -94,28 +95,28 @@ End Function
 Dim firstFinishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)  
 ```  
   
-5.  Neste exemplo, você está interessado apenas na tarefa que termina primeiro. Portanto, use <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName>para cancelar as tarefas restantes.</xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName>  
+5.  Neste exemplo, você está interessado apenas na tarefa que termina primeiro. Portanto, use <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> para cancelar as tarefas restantes.  
   
 ```vb  
 ' ***Cancel the rest of the downloads. You just want the first one.  
 cts.Cancel()  
 ```  
   
-6.  Por fim, await `firstFinishedTask` para recuperar o comprimento do conteúdo baixado.  
+6.  Por fim, aguarde que `firstFinishedTask` recupere o comprimento do conteúdo baixado.  
   
 ```vb  
 Dim length = Await firstFinishedTask  
 resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:  {0}" & vbCrLf, length)  
 ```  
   
- Execute o programa várias vezes para verificar que diferentes downloads concluir primeiro.  
+ Execute o programa várias vezes para verificar que diferentes downloads são concluídos em primeiro.  
   
 ## <a name="complete-example"></a>Exemplo completo  
- O código a seguir é o arquivo MainWindow.xaml.vb ou MainWindow.xaml.cs completo para o exemplo. Asteriscos marcam os elementos que foram adicionados para esse exemplo.  
+ O código a seguir é o arquivo MainWindow.xaml.vb ou MainWindow.xaml.cs completo para o exemplo. Os asteriscos marcam os elementos que foram adicionados para esse exemplo.  
   
- Observe que você deve adicionar uma referência para <xref:System.Net.Http>.</xref:System.Net.Http>  
+ Observe que você deve adicionar uma referência para <xref:System.Net.Http>.  
   
- Você pode baixar o projeto de [exemplo de assincronia: bem ajustando seu aplicativo](http://go.microsoft.com/fwlink/?LinkId=255046).  
+ Você pode baixar o projeto de [Exemplo assíncrono: ajuste fino de seu aplicativo](http://go.microsoft.com/fwlink/?LinkId=255046).  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -241,7 +242,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Threading.Tasks.Task.WhenAny%2A></xref:System.Threading.Tasks.Task.WhenAny%2A>   
- [Ajustando seu aplicativo Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
- [Programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)   
- [Exemplo de assincronia: Ajustando seu aplicativo](http://go.microsoft.com/fwlink/?LinkId=255046)
+ <xref:System.Threading.Tasks.Task.WhenAny%2A>  
+ [Ajustando seu aplicativo assíncrono (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
+ [Programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
+ [Exemplo assíncrono: ajuste fino de seu aplicativo](http://go.microsoft.com/fwlink/?LinkId=255046)

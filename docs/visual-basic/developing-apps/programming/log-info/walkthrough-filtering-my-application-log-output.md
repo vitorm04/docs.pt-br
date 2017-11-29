@@ -1,44 +1,25 @@
 ---
 title: "Filtrando a saída de My.Application.Log (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - My.Log object, filtering output
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 90fd445227e0c8290ad63fccf807d6d7bdf43ccd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a19bd71f1346be292dcc7b143a0080ac1cf11ec0
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Instruções passo a passo: filtrando a saída de My.Application.Log (Visual Basic)
 Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `My.Application.Log` para controlar quais informações são passadas do objeto `Log` para os ouvintes e quais informações são gravadas pelos ouvintes. Você pode alterar o comportamento de registro em log mesmo após ter compilado o aplicativo, porque as informações de configuração são armazenadas no arquivo de configuração do aplicativo.  
@@ -162,7 +143,7 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
 9. Altere o valor do atributo `value` de volta para "Information".  
   
     > [!NOTE]
-    >  A configuração da opção `DefaultSwitch` controla apenas `My.Application.Log`. Ele não altera como as classes [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=fullName> e <xref:System.Diagnostics.Debug?displayProperty=fullName> se comportam.  
+    >  A configuração da opção `DefaultSwitch` controla apenas `My.Application.Log`. Ele não altera como as classes [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=nameWithType> e <xref:System.Diagnostics.Debug?displayProperty=nameWithType> se comportam.  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Filtragem individual de ouvintes de My.Application.Log  
  O exemplo anterior mostra como alterar a filtragem para toda a saída `My.Application.Log`. Este exemplo demonstra como filtrar um ouvinte de log individual. Por padrão, um aplicativo tem dois ouvintes que gravam na saída de depuração do aplicativo e no arquivo de log.  
@@ -275,10 +256,9 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
  Para obter mais informações sobre como alterar as configurações de log após a implantação, consulte [Trabalhando com logs de aplicativo](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Instruções passo a passo: determinando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)   
- [Instruções passo a passo: alterando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)   
- [Instruções passo a passo: criando ouvintes de log personalizados](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)   
- [Como Gravar Mensagens de Log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
- [Opções de rastreamento](../../../../framework/debug-trace-profile/trace-switches.md)   
+ [Instruções passo a passo: determinando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
+ [Instruções passo a passo: alterando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
+ [Instruções passo a passo: criando ouvintes de log personalizados](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
+ [Como gravar mensagens de log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
+ [Opções de rastreamento](../../../../framework/debug-trace-profile/trace-switches.md)  
  [Registrando informações em log no aplicativo](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
-

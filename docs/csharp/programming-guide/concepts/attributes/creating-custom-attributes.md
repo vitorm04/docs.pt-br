@@ -1,30 +1,21 @@
 ---
 title: Criando atributos personalizados (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 38bdedb352cc79f7a4cc3d08eb6138e7d994514b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8ae5084501a2dd60ae23c93bbdb52dcd44f3f3f7
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-custom-attributes-c"></a>Criando atributos personalizados (C#)
 Você pode criar seus próprios atributos personalizados definindo uma classe de atributos, uma classe que deriva direta ou indiretamente de <xref:System.Attribute>, o que faz com que a identificação das definições de atributo nos metadados seja rápida e fácil. Suponha que você queira marcar tipos com o nome do programador que escreveu o tipo. Você pode definir uma classe de atributos `Author` personalizada:  
@@ -84,11 +75,10 @@ class SampleClass
 >  Se sua classe de atributos contém uma propriedade, essa propriedade deve ser de leitura/gravação.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Reflection>   
- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)   
- [Escrevendo atributos personalizados](../../../../standard/attributes/writing-custom-attributes.md)   
- [Reflexão (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
- [Atributos (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)   
- [Acessando atributos usando reflexão (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)   
+ <xref:System.Reflection>  
+ [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)  
+ [Escrevendo atributos personalizados](../../../../standard/attributes/writing-custom-attributes.md)  
+ [Reflexão (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+ [Atributos (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
+ [Acessando atributos usando reflexão (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
  [AttributeUsage (C#)](../../../../csharp/programming-guide/concepts/attributes/attributeusage.md)
-

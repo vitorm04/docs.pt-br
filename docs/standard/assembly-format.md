@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
+ms.openlocfilehash: 797bd4a7c160feda69a3190d9e364b166a51c703
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
-ms.openlocfilehash: 47e895274f6d400639878e0bd5c700e04b554ce5
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-assembly-file-format"></a>Formato de arquivo do Assembly .NET
 
 O .NET define um formato de arquivo binário – "assembly" – que é usado para descrever completamente e conter programas .NET. Os assemblies são usados para os programas em si, bem como todas as bibliotecas dependentes. Um programa .NET pode ser executado como um dentre outros assemblies, sem a necessidade de nenhum outro artefato, além da implementação do .NET apropriada. As dependências nativas, incluindo APIs do sistema operacional, são uma preocupação separada e não estão contidas no formato de assembly do .NET, embora, às vezes, sejam descritas com esse formato (por exemplo, WinRT).
@@ -40,5 +38,4 @@ Cabeçalhos de assembly do ECMA 335 II.25.1, Estrutura do formato de arquivo do 
 
 ## <a name="processing-the-assemblies"></a>Processando os assemblies
 
-É possível escrever APIs ou ferramentas para processar assemblies. As informações do assembly permitem tomar decisões de programação no tempo de execução, reescrever os assemblies, fornecer o IntelliSense de API em um editor e gerar a documentação. <xref:System.Reflection?displayProperty=fullName> e [Mono.Cecil](http://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) são bons exemplos de ferramentas que frequentemente são usadas para essa finalidade.
-
+É possível escrever APIs ou ferramentas para processar assemblies. As informações do assembly permitem tomar decisões de programação no tempo de execução, reescrever os assemblies, fornecer o IntelliSense de API em um editor e gerar a documentação. <xref:System.Reflection?displayProperty=nameWithType> e [Mono.Cecil](http://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) são bons exemplos de ferramentas que frequentemente são usadas para essa finalidade.

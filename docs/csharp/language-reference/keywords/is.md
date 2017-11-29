@@ -1,42 +1,23 @@
 ---
 title: "is (Referência de C#)"
 keywords: palavra-chave is (C#), is (C#)
-ms.date: 2017-02-17
+ms.date: 02/17/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - is_CSharpKeyword
 - is
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- is keyword [C#]
+helpviewer_keywords: is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 9f0242439caa21268a6c314409f41587890c4126
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 5aeb29a799ba24b5ab7db3eca62a91035b25b8f6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="is-c-reference"></a>is (Referência de C#) #
 
@@ -54,7 +35,7 @@ em que *expr* é uma expressão que é avaliada como uma instância de algum tip
 
 Por exemplo, o código a seguir determina se `obj` pode ser convertido em uma instância do tipo `Person`:
 
-[!code-cs[is#1](../../../../samples/snippets/csharp/language-reference/keywords/is/is1.cs#1)]
+[!code-csharp[is#1](../../../../samples/snippets/csharp/language-reference/keywords/is/is1.cs#1)]
 
 A instrução `is` será verdadeira se:
 
@@ -68,14 +49,14 @@ A instrução `is` será verdadeira se:
 
 O exemplo a seguir mostra que a expressão `is` é avaliada como `true` para cada uma dessas conversões.
 
-[!code-cs[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]
+[!code-csharp[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]
 
 A palavra-chave `is` gera um aviso de tempo de compilação caso seja conhecido que a expressão sempre é `true` ou `false`. Ela considera somente conversões de referência, conversões boxing e conversões unboxing, e não considera conversões definidas pelo usuário ou conversões definidas pelos operadores [implicit](implicit.md) e [explicit](explicit.md) de um tipo. O exemplo a seguir gera avisos porque o resultado da conversão é conhecido em tempo de compilação. Observe que a expressão `is` para conversões de `int` para `long` e `double` retorna falso, pois essas conversões são tratadas pelo operador [implicit](implicit.md).
 
-[!code-cs[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
+[!code-csharp[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
 
 `expr` pode ser qualquer expressão que retorna um valor, com exceção de métodos anônimos e expressões lambda. O exemplo a seguir usa `is` para avaliar o valor retornado de uma chamada de método.   
-[!code-cs[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
+[!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
 A partir do C# 7, você pode usar a correspondência de padrões com o [padrão de tipo](#type) para escrever códigos mais concisos que usam a instrução `is`.
 
@@ -113,19 +94,19 @@ Se *exp* for `true` e `is` for usado com uma instrução `if`, *varname* será a
 
 O exemplo a seguir usa o padrão de tipo `is` para fornecer a implementação do método <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> de um tipo.
 
-[!code-cs[is#5](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern5.cs#5)]
+[!code-csharp[is#5](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern5.cs#5)]
 
 Sem a correspondência de padrões, esse código pode ser escrito da seguinte maneira. O uso da correspondência de padrões de tipo produz código mais compacto e legível eliminando a necessidade de testar se o resultado de uma conversão é um `null`.  
 
-[!code-cs[is#6](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern6.cs#6)]
+[!code-csharp[is#6](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern6.cs#6)]
 
 O padrão de tipo `is` também produz código mais compacto ao determinar o tipo de um tipo de valor. O exemplo a seguir usa o padrão de tipo `is` para determinar se um objeto é uma instância de `Person` ou `Dog` antes de exibir o valor de uma propriedade adequada. 
 
-[!code-cs[is#9](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern9.cs#9)]
+[!code-csharp[is#9](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern9.cs#9)]
 
 O código equivalente sem correspondência de padrões requer uma atribuição separada que inclui uma conversão explícita.
 
-[!code-cs[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
+[!code-csharp[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
 
 ### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Padrão constante ###
 
@@ -151,7 +132,7 @@ A expressão de constante é avaliada da seguinte forma:
 
 O exemplo a seguir combina os padrões de tipo e constante para testar se um objeto é uma instância de `Dice` e, caso seja, para determinar se o valor de uma distribuição de dados é 6.
 
-[!code-cs[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
+[!code-csharp[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
  
 ### <a name="var" /> Padrão var </a>
 
@@ -163,7 +144,7 @@ Uma correspondência de padrões com o padrão var sempre terá êxito. Sua sint
 
 em que o valor de *expr* sempre é atribuído a uma variável local chamada *varname*. *varname* é uma variável estática do mesmo tipo que *expr*. O exemplo a seguir usa o padrão var para atribuir uma expressão a uma variável chamada `obj`. Em seguida, ele exibe o valor e o tipo de `obj`.
 
-[!code-cs[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
+[!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
 
 Observe que, se *expr* for `null`, a expressão `is` ainda será verdadeira e atribuirá `null` a *varname*. 
 
@@ -172,9 +153,8 @@ Observe que, se *expr* for `null`, a expressão `is` ainda será verdadeira e at
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)   
- [typeof](../../../csharp/language-reference/keywords/typeof.md)   
- [as](../../../csharp/language-reference/keywords/as.md)   
+ [Referência de C#](../../../csharp/language-reference/index.md)  
+ [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
+ [typeof](../../../csharp/language-reference/keywords/typeof.md)  
+ [as](../../../csharp/language-reference/keywords/as.md)  
  [Palavras-chave do operador](../../../csharp/language-reference/keywords/operator-keywords.md)
-

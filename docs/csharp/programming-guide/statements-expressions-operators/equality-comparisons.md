@@ -1,39 +1,19 @@
 ---
 title: "Comparações de igualdade (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- object equality [C#]
+helpviewer_keywords: object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 199257b1fe371dea3e4ee1eedcf11f3bdce02366
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 948bbc1b5b8535cc31ea362497fa69a816b43edc
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Comparações de igualdade (Guia de Programação em C#)
 Às vezes, é necessário comparar dois valores em relação à igualdade. Em alguns casos, testa-se a *igualdade de valor*, também conhecida como *equivalência*, o que significa que os valores contidos pelas duas variáveis são iguais. Em outros casos, é necessário determinar se duas variáveis se referem ao mesmo objeto subjacente na memória. Esse tipo de igualdade é chamado *igualdade de referência* ou *identidade*. Este tópico descreve esses dois tipos de igualdade e fornece links para outros tópicos que fornecem mais informações.  
@@ -41,7 +21,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="reference-equality"></a>Igualdade de Referência  
  Igualdade de referência significa que as duas referências de objeto se referem ao mesmo objeto subjacente. Isso pode ocorrer por meio de uma atribuição simples, conforme mostrado no exemplo a seguir.  
   
- [!code-cs[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/equality-comparisons_1.cs)]  
+ [!code-csharp[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/equality-comparisons_1.cs)]  
   
  Nesse código, dois objetos são criados, mas após a instrução de atribuição, ambas as referências se referem ao mesmo objeto. Portanto, eles têm igualdade de referência. Use o método <xref:System.Object.ReferenceEquals%2A> para determinar se duas referências referenciam o mesmo objeto.  
   
@@ -66,7 +46,7 @@ if( b == a)
  No entanto, não há nenhuma exigência de que a equivalência seja baseada em todos os campos em um tipo. Ela pode ser baseada em um subconjunto. Ao comparar tipos que não são de sua propriedade, certifique-se de que a forma como a equivalência é definida especificamente para esse tipo foi entendida. Para obter mais informações sobre como definir a igualdade de valor em suas próprias classes e structs, consulte [Como Definir a Igualdade de Valor para um Tipo](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md).  
   
 ### <a name="value-equality-for-floating-point-values"></a>Igualdade de Valor para Valores de Ponto Flutuante  
- Comparações de igualdade de valores de ponto flutuante ([double](../../../csharp/language-reference/keywords/double.md) e [float](../../../csharp/language-reference/keywords/float.md)) são problemáticas em razão da imprecisão aritmética do ponto flutuante em computadores binários. Para obter mais informações, consulte os comentários no tópico <xref:System.Double?displayProperty=fullName>.  
+ Comparações de igualdade de valores de ponto flutuante ([double](../../../csharp/language-reference/keywords/double.md) e [float](../../../csharp/language-reference/keywords/float.md)) são problemáticas em razão da imprecisão aritmética do ponto flutuante em computadores binários. Para obter mais informações, consulte os comentários no tópico <xref:System.Double?displayProperty=nameWithType>.  
   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
@@ -79,4 +59,3 @@ if( b == a)
   
 ## <a name="see-also"></a>Consulte também  
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-

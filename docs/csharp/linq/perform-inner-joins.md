@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
+ms.openlocfilehash: fdf75c0b7195742bdce70566ebb3880bb0565f31
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2b73b954dbb090484a320302a3af72509fccd9d3
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="perform-inner-joins"></a>Executar junções internas
 
@@ -37,7 +35,7 @@ Em termos de banco de dados relacionais, uma *junção interna* produz um conjun
 ## <a name="simple-key-join-example"></a>Exemplo de junção de chave simples  
  O exemplo a seguir cria duas coleções que contêm objetos de dois tipos definidos pelo usuário, `Person` e `Pet`. A consulta usa a cláusula `join` em C# para corresponder objetos `Person` com objetos `Pet` cujo `Owner` é `Person`. A cláusula `select` em C# define a aparência dos objetos resultantes. Neste exemplo, os objetos resultantes são tipos anônimos que consistem no nome do proprietário e no nome do animal de estimação.  
   
- [!code-cs[CsLINQProgJoining#1](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_1.cs)]  
+ [!code-csharp[CsLINQProgJoining#1](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_1.cs)]  
   
  Observe que o objeto `Person` cujo `LastName` é "Huff" não aparecerá no conjunto de resultados porque não há nenhum objeto `Pet` que tenha `Pet.Owner` igual a esse `Person`.  
   
@@ -48,7 +46,7 @@ Em termos de banco de dados relacionais, uma *junção interna* produz um conjun
   
  O exemplo a seguir usa uma lista de objetos `Employee` e uma lista de objetos `Student` para determinar quais funcionários também são alunos. Ambos os tipos têm uma propriedade `FirstName` e uma `LastName` do tipo <xref:System.String>. As funções que criam as chaves de junção dos elementos de cada lista retornam um tipo anônimo que consiste nas propriedades `FirstName` e `LastName` de cada elemento. A operação join compara essas chaves compostas quanto à igualdade e retorna pares de objetos de cada lista em que o nome e o sobrenome correspondem.  
   
- [!code-cs[CsLINQProgJoining#2](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_2.cs)]  
+ [!code-csharp[CsLINQProgJoining#2](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_2.cs)]  
   
 ## <a name="example"></a>Exemplo  
   
@@ -61,7 +59,7 @@ Em termos de banco de dados relacionais, uma *junção interna* produz um conjun
   
  A segunda cláusula `join` em C# correlaciona os tipos anônimos retornados pela primeira junção com objetos `Dog` na lista de cães fornecida, com base em uma chave composta que consiste na propriedade `Owner` do tipo `Person` e na primeira letra do nome do animal. Ela retorna uma sequência de tipos anônimos que contêm as propriedades `Cat.Name` e `Dog.Name` de cada par correspondente. Como esta é uma junção interna, apenas os objetos da primeira fonte de dados que têm uma correspondência na segunda fonte de dados são retornados.  
   
- [!code-cs[CsLINQProgJoining#3](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_3.cs)]  
+ [!code-csharp[CsLINQProgJoining#3](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_3.cs)]  
   
 ## <a name="example"></a>Exemplo  
   
@@ -74,13 +72,12 @@ Em termos de banco de dados relacionais, uma *junção interna* produz um conjun
   
  O resultado de `query1` é equivalente ao conjunto de resultados que seria obtido usando a cláusula `join` sem a cláusula `into` para realizar uma junção interna. A variável `query2` demonstra essa consulta equivalente.  
   
- [!code-cs[CsLINQProgJoining#4](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_4.cs)]  
+ [!code-csharp[CsLINQProgJoining#4](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_4.cs)]  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Linq.Enumerable.Join%2A>   
- <xref:System.Linq.Enumerable.GroupJoin%2A>   
- [Executar junções agrupadas](perform-grouped-joins.md)   
- [Executar junções externas esquerdas](perform-left-outer-joins.md)   
- [Tipos anônimos](../programming-guide/classes-and-structs/anonymous-types.md)   
+ <xref:System.Linq.Enumerable.Join%2A>  
+ <xref:System.Linq.Enumerable.GroupJoin%2A>  
+ [Executar junções agrupadas](perform-grouped-joins.md)  
+ [Executar junções externas esquerdas](perform-left-outer-joins.md)  
+ [Tipos anônimos](../programming-guide/classes-and-structs/anonymous-types.md)  
  
-

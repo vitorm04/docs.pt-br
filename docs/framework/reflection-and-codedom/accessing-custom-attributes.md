@@ -5,38 +5,40 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - custom attributes, accessibility
 - attributes [.NET Framework], accessing
 - reflection, custom attributes
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 8ac4bec06f2d5c7f8876c8e4e18a9d5c59f094fb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 393fb3516756438325c9f3fd00941b963b3f2a2e
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="accessing-custom-attributes"></a>Acessando atributos personalizados
 Depois que os atributos tiverem sido associados aos elementos do programa, a reflexão poderá ser usada para consultar sua existência e seus valores. No .NET Framework versão 1.0 e 1.1, os atributos personalizados são examinados no contexto de execução. O .NET Framework versão 2.0 fornece um novo contexto de carregamento, o contexto somente para reflexão, que pode ser usado para examinar o código que não pode ser carregado para execução.  
   
 ## <a name="the-reflection-only-context"></a>O contexto somente para reflexão  
- O código carregado no contexto somente para reflexão não pode ser executado. Isso significa que instâncias de atributos personalizados não podem ser criadas porque isso exigiria a execução de seus construtores. Para carregar e examinar os atributos personalizados no contexto somente para reflexão, use a classe <xref:System.Reflection.CustomAttributeData>. Você pode obter as instâncias dessa classe usando a sobrecarga apropriada do método <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=fullName> estático. Consulte [Como carregar assemblies no contexto de somente para reflexão](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+ O código carregado no contexto somente para reflexão não pode ser executado. Isso significa que instâncias de atributos personalizados não podem ser criadas porque isso exigiria a execução de seus construtores. Para carregar e examinar os atributos personalizados no contexto somente para reflexão, use a classe <xref:System.Reflection.CustomAttributeData>. Você pode obter as instâncias dessa classe usando a sobrecarga apropriada do método <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> estático. Consulte [Como carregar assemblies no contexto de somente para reflexão](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 ## <a name="the-execution-context"></a>O contexto de execução  
- Os principais métodos de reflexão para consultar atributos no contexto de execução são <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=fullName> e <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=fullName>.  
+ Os principais métodos de reflexão para consultar atributos no contexto de execução são <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType> e <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>.  
   
  A acessibilidade de um atributo personalizado é verificada em relação ao assembly no qual ele está anexado. Isso é equivalente a verificar se um método em um tipo no assembly no qual o atributo personalizado está anexado pode chamar o construtor do atributo personalizado.  
   
- Métodos como <xref:System.Reflection.Assembly.GetCustomAttributes%28System.Boolean%29?displayProperty=fullName> verificam a visibilidade e a acessibilidade do argumento de tipo. Somente o código no assembly que contém o tipo definido pelo usuário pode recuperar um atributo personalizado desse tipo usando **GetCustomAttributes**.  
+ Métodos como <xref:System.Reflection.Assembly.GetCustomAttributes%28System.Boolean%29?displayProperty=nameWithType> verificam a visibilidade e a acessibilidade do argumento de tipo. Somente o código no assembly que contém o tipo definido pelo usuário pode recuperar um atributo personalizado desse tipo usando **GetCustomAttributes**.  
   
  O exemplo de C# a seguir é um padrão de design de atributo personalizado típico. Ele ilustra o modelo de reflexão do atributo personalizado em tempo de execução.  
   
@@ -70,15 +72,16 @@ public class LocalizationExtenderProvider
   
 4.  O tempo de execução chama o construtor de **MyDescriptionAttribute** com os parâmetros do atributo personalizado e retorna o novo objeto ao chamador.  
   
- O modelo de reflexão do atributo personalizado pode causar perda de instâncias de tipos definidos pelo usuário fora do assembly no qual o tipo é definido. Isso não é diferente dos membros na biblioteca do sistema do tempo de execução que retornam instâncias de tipos definidos pelo usuário, como <xref:System.Type.GetMethods%2A?displayProperty=fullName> que retorna uma matriz de objetos **RuntimeMethodInfo**. Para impedir que um cliente descubra informações sobre um tipo de atributo personalizado definido pelo usuário, defina os membros do tipo como confidenciais.  
+ O modelo de reflexão do atributo personalizado pode causar perda de instâncias de tipos definidos pelo usuário fora do assembly no qual o tipo é definido. Isso não é diferente dos membros na biblioteca do sistema do tempo de execução que retornam instâncias de tipos definidos pelo usuário, como <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> que retorna uma matriz de objetos **RuntimeMethodInfo**. Para impedir que um cliente descubra informações sobre um tipo de atributo personalizado definido pelo usuário, defina os membros do tipo como confidenciais.  
   
  O exemplo a seguir demonstra a maneira básica de usar a reflexão para obter acesso a atributos personalizados.  
   
- [!code-cpp[CustomAttributeData#2](../../../samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source2.cpp#2)] [!code-csharp[CustomAttributeData#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source2.cs#2)] [!code-vb[CustomAttributeData#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source2.vb#2)]  
+ [!code-cpp[CustomAttributeData#2](../../../samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source2.cpp#2)]
+ [!code-csharp[CustomAttributeData#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source2.cs#2)]
+ [!code-vb[CustomAttributeData#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source2.vb#2)]  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=fullName>   
- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=fullName>   
- [Exibindo informações de tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)   
- [Considerações sobre segurança relacionadas à reflexão](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)
-
+ <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>  
+ <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>  
+ [Exibindo informações de tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
+ [Security Considerations for Reflection](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md) (Considerações sobre segurança relacionadas à reflexão)

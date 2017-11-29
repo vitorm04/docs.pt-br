@@ -2,8 +2,7 @@
 title: Criando e usando assemblies de nomes fortes
 ms.date: 08/01/2017
 ms.prod: .net-framework
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.topic: article
 helpviewer_keywords:
 - strong-name bypass feature
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 0ee5fed355e0d8418500f1ecee53019548d9f7f8
 ms.openlocfilehash: 39fbd38549a791a761c633dca90dbdeeeefce10b
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a>Criando e usando assemblies de nomes fortes
 <a name="top"></a> Um nome forte consiste na identidade do assembly — seu nome de texto simples, número de versão e informações de cultura (se fornecidas) — mais uma chave pública e uma assinatura digital. Ela é gerada de um arquivo do assembly usando a chave privada correspondente. (O arquivo do assembly inclui o manifesto do assembly, que contém os nomes e os hashes de todos os arquivos que compõem o assembly.)  
@@ -93,4 +91,3 @@ ms.lasthandoff: 08/02/2017
 |[Como atrasar a assinatura de um assembly no Visual Studio](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|Explica como assinar um assembly com um nome forte, depois que o assembly foi criado.|  
 |[Sn.exe (Ferramenta Nome Forte)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)|Descreve a ferramenta incluída no .NET Framework que ajuda a criar assemblies com nomes fortes. Esta ferramenta oferece opções para o gerenciamento de chaves, geração de assinaturas e verificação de assinaturas.|  
 |[Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)|Descreve a ferramenta incluída no .NET Framework que gera um arquivo que tem um manifesto do assembly de módulos ou arquivos de recurso.|
-

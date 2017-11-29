@@ -1,44 +1,25 @@
 ---
 title: Trabalhando com logs de aplicativo no Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - logs, application
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: ea5f3699ca5a1b6b0859ac266656deb933839d3d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0f6916571ff978c6558343ff51217b5d342a4d5c
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Trabalhando com logs de aplicativo no Visual Basic
 Os objetos `My.Applicaton.Log` e `My.Log` facilitam a gravação de informações de registro em log e rastreamento em logs.  
@@ -128,6 +109,5 @@ Os objetos `My.Applicaton.Log` e `My.Log` facilitam a gravação de informaçõe
 -   **Evite situações de negação de serviço.** Se seu aplicativo gravar muitas informações no log, ele poderá encher o log ou tornar difícil de encontrar informações importantes.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
+ <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
  [Registrando informações em log no aplicativo](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
-

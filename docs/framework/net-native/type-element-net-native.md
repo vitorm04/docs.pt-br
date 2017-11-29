@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0f483fba5ade9d33588a946984ca914b95cd1f18
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2569ac2ec170e5ac137751d790d41c2ab6cf0262
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lttypegt-element-net-native"></a>Elemento &lt;Type&gt; (.NET Nativo)
 Aplica a política de tempo de execução a um tipo específico, como uma classe ou estrutura.  
@@ -52,9 +50,9 @@ Aplica a política de tempo de execução a um tipo específico, como uma classe
 |`Browse`|Reflexão|Atributo opcional. Controla a consulta para obter informações sobre elementos do programa, mas não permite qualquer acesso de tempo de execução.|  
 |`Dynamic`|Reflexão|Atributo opcional. Controla o acesso a todos os tipos de membro ao tempo de execução, incluindo construtores, métodos, campos, propriedades e eventos, habilitando a programação dinâmica.|  
 |`Serialize`|Serialização|Atributo opcional. Controla o acesso ao tempo de execução para construtores, campos e propriedades para habilitar a serialização e desserialização das instâncias por bibliotecas como o serializador Newtonsoft JSON.|  
-|`DataContractSerializer`|Serialização|Atributo opcional. Controla a política de serialização que usa a classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.|  
-|`DataContractJsonSerializer`|Serialização|Atributo opcional. Controla a política de serialização JSON que usa a classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName>.|  
-|`XmlSerializer`|Serialização|Atributo opcional. Controla a política de serialização XML que usa a classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>.|  
+|`DataContractSerializer`|Serialização|Atributo opcional. Controla a política de serialização que usa a classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.|  
+|`DataContractJsonSerializer`|Serialização|Atributo opcional. Controla a política de serialização JSON que usa a classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType>.|  
+|`XmlSerializer`|Serialização|Atributo opcional. Controla a política de serialização XML que usa a classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.|  
 |`MarshalObject`|Interoperabilidade|Atributo opcional. Política de controles de marshaling de tipos de referência para o Tempo de Execução do Windows e COM.|  
 |`MarshalDelegate`|Interoperabilidade|Atributo opcional. Controla a diretiva de marshaling de tipos delegados como ponteiros de função para código nativo.|  
 |`MarshalStructure`|Interoperabilidade|Atributo opcional. Controla a política de marshaling de tipos de valor para código nativo.|  
@@ -105,10 +103,10 @@ Aplica a política de tempo de execução a um tipo específico, como uma classe
   
  Um elemento `<Type>` de um tipo genérico aplica sua política a todas as instanciações que não possuem sua própria política. A política dos tipos genéricos construídos é definida pelo elemento [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).  
   
- Se o tipo for um tipo genérico, seu nome é decorado por um símbolo de acento grave (\`) seguido pelo número de parâmetros genéricos. Por exemplo, o atributo `Name` de um elemento `<Type>` da classe <xref:System.Collections.Generic.List%601?displayProperty=fullName> aparece como `Name="System.Collections.Generic.List`1"`.  
+ Se o tipo for um tipo genérico, seu nome é decorado por um símbolo de acento grave (\`) seguido pelo número de parâmetros genéricos. Por exemplo, o atributo `Name` de um elemento `<Type>` da classe <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> aparece como `Name="System.Collections.Generic.List`1"`.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa a reflexão para exibir informações sobre os campos, propriedades e métodos da classe <xref:System.Collections.Generic.List%601?displayProperty=fullName>. A variável `b` no exemplo é um controle [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx). Como o exemplo simplesmente recupera informações sobre o tipo, a disponibilidade de metadados é controlada pela configuração da política `Browse`.  
+ O exemplo a seguir usa a reflexão para exibir informações sobre os campos, propriedades e métodos da classe <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. A variável `b` no exemplo é um controle [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx). Como o exemplo simplesmente recupera informações sobre o tipo, a disponibilidade de metadados é controlada pela configuração da política `Browse`.  
   
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]  
   
@@ -126,11 +124,11 @@ Aplica a política de tempo de execução a um tipo específico, como uma classe
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa reflexão para recuperar um objeto <xref:System.Reflection.PropertyInfo> que representa a propriedade <xref:System.String.Chars%2A?displayProperty=fullName>. Ele usa o método <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=fullName> para recuperar o valor do sétimo caractere de uma cadeia de caracteres e exibir todos os caracteres na cadeia de caracteres. A variável `b` no exemplo é um controle [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx).  
+ O exemplo a seguir usa reflexão para recuperar um objeto <xref:System.Reflection.PropertyInfo> que representa a propriedade <xref:System.String.Chars%2A?displayProperty=nameWithType>. Ele usa o método <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> para recuperar o valor do sétimo caractere de uma cadeia de caracteres e exibir todos os caracteres na cadeia de caracteres. A variável `b` no exemplo é um controle [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx).  
   
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]  
   
- Como os metadados do objeto <xref:System.String> não estão disponíveis, a chamada para o método <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=fullName> gera uma exceção <xref:System.NullReferenceException> no tempo de execução quando compilado com a cadeia de ferramentas [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Para eliminar a exceção e fornecer os metadados necessários, adicione o seguinte elemento `<Type>` ao arquivo de diretivas de tempo de execução:  
+ Como os metadados do objeto <xref:System.String> não estão disponíveis, a chamada para o método <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> gera uma exceção <xref:System.NullReferenceException> no tempo de execução quando compilado com a cadeia de ferramentas [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Para eliminar a exceção e fornecer os metadados necessários, adicione o seguinte elemento `<Type>` ao arquivo de diretivas de tempo de execução:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -142,7 +140,6 @@ Aplica a política de tempo de execução a um tipo específico, como uma classe
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)   
+ [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)  
  [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-

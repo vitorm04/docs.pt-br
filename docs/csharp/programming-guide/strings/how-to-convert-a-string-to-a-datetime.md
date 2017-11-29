@@ -1,42 +1,22 @@
 ---
 title: "Como converter uma cadeia de caracteres em um DateTime (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- strings [C#], converting to DateTIme
+helpviewer_keywords: strings [C#], converting to DateTIme
 ms.assetid: 88abef11-3a06-4b49-8dd2-61ed0e876fc3
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: b459f245f0090fff16918bceb12a0082f6944331
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 15ef1ec4debf242cdabc42f26add890bd4b61507
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="how-to-convert-a-string-to-a-datetime-c-programming-guide"></a>Como converter uma cadeia de caracteres em um DateTime (Guia de Programação em C#)
-É comum que programas permitam que os usuários insiram datas como valores de cadeia de caracteres. Para converter uma data com base em cadeia de caracteres em um objeto <xref:System.DateTime?displayProperty=fullName>, você pode usar o método <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName> ou o método estático <xref:System.DateTime.Parse%28System.String%29?displayProperty=fullName>, conforme mostrado no exemplo a seguir.  
+É comum que programas permitam que os usuários insiram datas como valores de cadeia de caracteres. Para converter uma data com base em cadeia de caracteres em um objeto <xref:System.DateTime?displayProperty=nameWithType>, você pode usar o método <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=nameWithType> ou o método estático <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType>, conforme mostrado no exemplo a seguir.  
   
  **Cultura**.  Diferentes culturas do mundo escrevem cadeias de caracteres de data de maneiras diferentes.  Por exemplo, nos EUA 01/20/2008 é de 20 de janeiro de 2008.  Na França, isso gerará uma InvalidFormatException. Isso acontece porque a França lê datas-horas como dia/mês/ano e, nos EUA, é mês/dia/ano.  
   
@@ -46,7 +26,7 @@ ms.lasthandoff: 07/28/2017
   
  Consulte abaixo um exemplo simples de conversão de uma cadeia de caracteres para dateTime.  
   
- Para obter mais exemplos de cadeias de caracteres de data, consulte <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName>.  
+ Para obter mais exemplos de cadeias de caracteres de data, consulte <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=nameWithType>.  
   
 ```csharp  
 string dateTime = "01/08/2008 14:50:50.42";  
@@ -70,8 +50,7 @@ Press any key to continue . . .
 ```  
   
 ## <a name="example"></a>Exemplo  
- [!code-cs[csProgGuideStrings#13](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-convert-a-string-to-a-datetime_1.cs)]  
+ [!code-csharp[csProgGuideStrings#13](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-convert-a-string-to-a-datetime_1.cs)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Cadeias de Caracteres](../../../csharp/programming-guide/strings/index.md)
-

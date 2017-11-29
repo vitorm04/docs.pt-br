@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - stack event [.NET Framework]
 - ETW, stack event (CLR)
 ms.assetid: f612fa5b-4b62-4593-a19e-85c9b1018dce
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 55219fe755f49b6edbd3b53cc686bf4f9087aa08
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="stack-etw-event"></a>Evento ETW de pilha
 O evento de pilha deve ser usado em conjunto com outros eventos para gerar rastreamentos de pilha depois que um evento é acionado. Ele é registrado quando o provedor de tempo de execução está habilitado. Esse é um evento de alta frequência porque é acionado sempre que outro evento de tempo de execução é acionado. Por esse motivo, recomendamos ter cautela ao usar esse evento.  
@@ -51,4 +49,3 @@ O evento de pilha deve ser usado em conjunto com outros eventos para gerar rastr
   
 ## <a name="see-also"></a>Consulte também  
  [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
-

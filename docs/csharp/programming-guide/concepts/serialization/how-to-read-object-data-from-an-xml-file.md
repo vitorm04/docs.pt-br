@@ -1,30 +1,21 @@
 ---
 title: Como ler dados de objeto de um arquivo XML (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 6a3389de2f3272a546a7380ef386f5d88666e6d1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 02ff7a209cd78c70c6e3c443105d27b33c6f0af4
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>Como ler dados de objeto de um arquivo XML (C#)
 Este exemplo lê dados de objeto que foram previamente gravados em um arquivo XML usando a classe <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -79,8 +70,7 @@ public void ReadXML()
  Sempre verifique as entradas e nunca desserialize dados de uma fonte não confiável. O objeto recriado é executado em um computador local com as permissões do código que o desserializou. Verifique todas as entradas antes de usar os dados no seu aplicativo.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.IO.StreamWriter>   
- [Como gravar dados de objeto em um arquivo XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)   
- [Serialização (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)   
+ <xref:System.IO.StreamWriter>  
+ [Como gravar dados de objeto em um arquivo XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
+ [Serialização (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)  
  [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)
-

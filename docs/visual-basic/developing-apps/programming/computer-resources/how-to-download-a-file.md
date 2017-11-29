@@ -1,45 +1,27 @@
 ---
 title: Como baixar um arquivo no Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- downloading Internet resources, files
-- downloading files
-- remote computers, downloading from
-- files, downloading
-- files, transferring
+- downloading Internet resources [Visual Basic], files
+- downloading files [Visual Basic]
+- remote computers [Visual Basic], downloading from
+- files [Visual Basic], downloading
+- files [Visual Basic], transferring
 ms.assetid: ac479f81-c0e2-4b99-af73-217f446b73da
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: dc67d28b870f86c6464e86f7682f71e6e36ea9e7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8988b922df921c2de3e2c4f6d7a8e98887ba7b0a
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-download-a-file-in-visual-basic"></a>Como baixar um arquivo no Visual Basic
 O método <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> pode ser usado para baixar um arquivo remoto e armazená-lo em um local específico. Se o parâmetro `ShowUI` for definido como `True`, uma caixa de diálogo será exibida mostrando o andamento do download e permitindo que os usuários cancelem a operação. Por padrão, os arquivos existentes com o mesmo nome não são sobrescritos. Se você deseja sobrescrever os arquivos existentes, defina o parâmetro `overwrite` como `True`.  
@@ -81,8 +63,7 @@ O método <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> pode ser 
     >  O protocolo FTP usado pelo método `DownLoadFile` envia informações, incluindo senhas, em texto sem formatação e não deve ser usado para transmitir informações confidenciais.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.Devices.Network>   
- <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>   
- [Como carregar um arquivo](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)   
+ <xref:Microsoft.VisualBasic.Devices.Network>  
+ <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>  
+ [Como Carregar um Arquivo](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
  [Como analisar demarcadores de arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
-

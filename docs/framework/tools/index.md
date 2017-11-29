@@ -5,31 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - command line, .NET Framework tools
 - .NET Framework, tools
 - tools [.NET Framework]
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 777c78a1ee296fd92d48547aeb53a083afa95b28
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bee585074a444e8df5d67e035d5e0b65d292f8ac
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="net-framework-tools"></a>Ferramentas do .NET Framework
 A ferramentas do .NET Framework facilitam a criação, a implantação e o gerenciamento de aplicativos e componentes com o .NET Framework como destino.  
@@ -149,4 +142,3 @@ A ferramentas do .NET Framework facilitam a criação, a implantação e o geren
   
  [Ferramentas do Windows Communication Foundation](../../../docs/framework/wcf/tools.md)  
  Inclui ferramentas que facilitam a criação, a implantação e o gerenciamento de aplicativos do WCF (Windows Communication Foundation).
-

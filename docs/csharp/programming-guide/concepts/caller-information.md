@@ -1,32 +1,23 @@
 ---
 title: "Informações do chamador (C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 05c153afd502da1f290b3bc36460ded27789e21c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8c514266b474f6d4cd3f02e6f9008bef053c407a
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="caller-information-c"></a>Informações do chamador (C#)
 Ao usar atributos de informações do chamador, você pode obter informações sobre o chamador de um método. Você pode obter o caminho do arquivo do código-fonte, o número da linha no código-fonte e o nome do membro do chamador. Essas informações são úteis para fins de rastreamento, depuração e criação de ferramentas de diagnóstico.  
   
- Para obter essas informações, você deve usar os atributos que são aplicadas aos parâmetros opcionais, cada qual com um valor padrão. A tabela a seguir lista os atributos de informações do chamador que são definidos no namespace de <xref:System.Runtime.CompilerServices?displayProperty=fullName>:  
+ Para obter essas informações, você deve usar os atributos que são aplicadas aos parâmetros opcionais, cada qual com um valor padrão. A tabela a seguir lista os atributos de informações do chamador que são definidos no namespace de <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:  
   
 |Atributo|Descrição|Tipo|  
 |---|---|---|  
@@ -90,8 +81,7 @@ public void TraceMessage(string message,
 |Nenhum membro contentor (por exemplo, nível de assembly ou atributos que são aplicadas aos tipos)|O valor padrão do parâmetro opcional.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Atributos (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)   
- [Atributos comuns (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)   
- [Argumentos nomeados e opcionais](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)   
+ [Atributos (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)  
+ [Atributos comuns (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)  
+ [Argumentos nomeados e opcionais](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
  [Conceitos de programação (C#)](../../../csharp/programming-guide/concepts/index.md)
-

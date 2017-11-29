@@ -1,39 +1,21 @@
 ---
 title: "Tipos anônimos (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 24ebf1c98e14eaf74572a6143ea6865d89735a6e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 80a0d3c99f7765dba1166fd9c5ecc3e7fbadc7a1
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Tipos anônimos (Guia de Programação em C#)
 Os tipos anônimos fornecem um modo conveniente de encapsular um conjunto de propriedades somente leitura em um único objeto sem a necessidade de primeiro definir explicitamente um tipo. O nome do tipo é gerado pelo compilador e não está disponível no nível do código-fonte. O tipo de cada propriedade é inferido pelo compilador.  
@@ -58,7 +40,7 @@ Console.WriteLine(v.Amount + v.Message);
   
  Quando você não especifica os nomes de membros no tipo anônimo, o compilador dá aos membros de tipo anônimo o mesmo nome da propriedade que está sendo usada para inicializá-los. Forneça um nome para a propriedade que está sendo inicializada com uma expressão, como mostrado no exemplo anterior. No exemplo a seguir, os nomes das propriedades do tipo anônimo são `Color` e `Price` .  
   
- [!code-cs[csRef30Features#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/anonymous-types_1.cs)]  
+ [!code-csharp[csRef30Features#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/anonymous-types_1.cs)]  
   
  Normalmente, ao usar um tipo anônimo para inicializar uma variável, a variável é declarada como uma variável local de tipo implícito usando [var](../../../csharp/language-reference/keywords/var.md). O nome do tipo não pode ser especificado na declaração da variável, porque apenas o compilador tem acesso ao nome subjacente do tipo anônimo. Para obter mais informações sobre `var`, consulte [Variáveis de local digitadas implicitamente](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
@@ -78,8 +60,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
  Como os métodos <xref:System.Object.Equals%2A> e <xref:System.Object.GetHashCode%2A> em tipos anônimos são definidos em termos dos métodos das propriedades `Equals` e `GetHashCode`, duas instâncias do mesmo tipo anônimo são iguais somente se todas as suas propriedades forem iguais.  
   
 ## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Inicializadores de Objeto e Coleção](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)   
- [Introdução ao LINQ em C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)   
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Inicializadores de objeto e coleção](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+ [Introdução a LINQ em C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
  [Expressões de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
-

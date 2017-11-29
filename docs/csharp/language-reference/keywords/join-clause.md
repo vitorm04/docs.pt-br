@@ -1,42 +1,24 @@
 ---
 title: "Cláusula join (Referência de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - join
 - join_CSharpKeyword
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 17c8f7f5ff6d1266421cdb87ae562028c61ae97f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3368ba14101eda38ed8e3ee2bdc81bcab74a9b82
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="join-clause-c-reference"></a>Cláusula join (Referência de C#)
 A cláusula `join` é útil para associar elementos de sequências de origem diferentes que não têm nenhuma relação direta no modelo de objeto. O único requisito é que os elementos em cada fonte compartilhem algum valor que possa ser comparado pela igualdade. Por exemplo, um distribuidor de alimentos pode ter uma lista de fornecedores de um determinado produto e uma lista de compradores. Uma cláusula `join` pode ser usada, por exemplo, para criar uma lista de fornecedores e compradores daquele produto, que estejam na mesma região especificada.  
@@ -52,14 +34,14 @@ A cláusula `join` é útil para associar elementos de sequências de origem dif
 ## <a name="inner-join"></a>Junção Interna  
  O exemplo a seguir mostra uma junção por igualdade interna simples. Essa consulta produz uma sequência simples de pares "nome de produto / categoria". A mesma cadeia de caracteres de categoria aparecerá em vários elementos. Se um elemento de `categories` não tiver `products` correspondente, essa categoria não aparecerá nos resultados.  
   
- [!code-cs[cscsrefQueryKeywords#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_1.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_1.cs)]  
   
  Para obter mais informações, consulte [Como realizar junções internas](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md).  
   
 ## <a name="group-join"></a>Group Join  
  Uma cláusula `join` com um expressão `into` é chamada de junção de grupo.  
   
- [!code-cs[cscsrefQueryKeywords#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_2.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_2.cs)]  
   
  Uma junção de grupo produz uma sequência de resultados hierárquicos, que associa os elementos na sequência de origem à esquerda com um ou mais elementos correspondentes na sequência de origem do lado direito. Uma junção de grupo não tem nenhum equivalente em termos relacionais. Ela é, essencialmente, uma sequência de matrizes de objetos.  
   
@@ -69,14 +51,14 @@ A cláusula `join` é útil para associar elementos de sequências de origem dif
   
  Além disso, é claro que você pode usar o resultado de uma junção de grupo como o gerador de outra subconsulta:  
   
- [!code-cs[cscsrefQueryKeywords#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_3.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_3.cs)]  
   
  Para obter mais informações, consulte [Como realizar junções agrupadas](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md).  
   
 ## <a name="left-outer-join"></a>Junção Externa Esquerda  
  Em uma junção externa esquerda, todos os elementos na sequência de origem à esquerda são retornados, mesmo que não haja elementos correspondentes na sequência à direita. Para executar uma junção externa esquerda em [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], use o método `DefaultIfEmpty` em combinação com uma junção de grupo para especificar um elemento padrão do lado direito, que será produzido caso um elemento do lado esquerdo não tenha correspondência. Você pode usar `null` como o valor padrão para qualquer tipo de referência ou pode especificar um tipo padrão definido pelo usuário. No exemplo a seguir, é mostrado um tipo padrão definido pelo usuário:  
   
- [!code-cs[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_4.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_4.cs)]  
   
  Para obter mais informações, consulte [Como realizar junções externas esquerdas](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md).  
   
@@ -97,20 +79,19 @@ A cláusula `join` é útil para associar elementos de sequências de origem dif
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir compara os resultados de uma junção interna, uma junção de grupo e uma junção externa esquerda nas mesmas fontes de dados, usando as mesmas chaves correspondentes. Foi adicionado algum código extra nesses exemplos a fim de deixar os resultados na tela do console mais claros.  
   
- [!code-cs[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
   
 ## <a name="remarks"></a>Comentários  
  Uma cláusula `join` que não é seguida por `into` é convertida em uma chamada de método <xref:System.Linq.Enumerable.Join%2A>. Uma cláusula `join` que é seguida por `into` é convertida em uma chamada de método <xref:System.Linq.Enumerable.GroupJoin%2A>.  
   
 ## <a name="see-also"></a>Consulte também  
- [Palavras-chave de Consulta (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
- [Expressões de Consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [Operações de junção](http://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107)   
- [Cláusula group](../../../csharp/language-reference/keywords/group-clause.md)   
- [Como realizar junções externas esquerdas](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)   
- [Como realizar junções internas](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)   
- [Como realizar junções agrupadas](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)   
- [Como ordenar os resultados de uma cláusula join](../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)   
- [Como unir usando chaves compostas](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)   
- [Como instalar bancos de dados de exemplo](http://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)
-
+ [Palavras-chave de Consulta (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
+ [Expressões de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+ [Operações join](../../programming-guide/concepts/linq/join-operations.md)  
+ [Cláusula group](../../../csharp/language-reference/keywords/group-clause.md)  
+ [Como executar junções externas esquerdas](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)  
+ [Como executar junções internas](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)  
+ [Como executar junções agrupadas](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)  
+ [Como ordenar os resultados de uma cláusula join](../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
+ [Como unir usando chaves compostas](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)  
+ [Como instalar bancos de dados de exemplo](/visualstudio/data-tools/installing-database-systems-tools-and-samples)

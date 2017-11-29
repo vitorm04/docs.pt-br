@@ -5,31 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - pinning, interop marshaling
 - copying, interop marshaling
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b6f5c54ba65f44e01cc95094f7fa4027c587e8a1
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 8e25d9a7bffdf0a3e8f68639dc0442ccf62a4412
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="copying-and-pinning"></a>Copiando e fixando
 Ao realizar marshaling dos dados, o marshaler de interoperabilidade pode copiar ou fixar os dados com marshaling. A cópia dos dados coloca uma cópia dos dados de um local de memória em outro local de memória. A ilustração a seguir mostra as diferenças entre a cópia de um tipo de valor e a cópia de um tipo passado por referência da memória gerenciada para a não gerenciada.  
@@ -88,13 +81,12 @@ Tipos de referência passados por valor e por referência
 > [!CAUTION]
 >  Quando uma cadeia de caracteres é passada por valor, o receptor nunca deve alterar a referência passada pelo marshaler. Isso pode corromper o heap gerenciado.  
   
- Quando um <xref:System.String?displayProperty=fullName> é passado por referência, o marshaler copia o conteúdo da cadeia de caracteres para um buffer secundário antes de fazer a chamada. Em seguida, ele copia o conteúdo do buffer para uma nova cadeia de caracteres após o retorno da chamada. Essa técnica garante que a cadeia de caracteres gerenciada imutável permaneça inalterada.  
+ Quando um <xref:System.String?displayProperty=nameWithType> é passado por referência, o marshaler copia o conteúdo da cadeia de caracteres para um buffer secundário antes de fazer a chamada. Em seguida, ele copia o conteúdo do buffer para uma nova cadeia de caracteres após o retorno da chamada. Essa técnica garante que a cadeia de caracteres gerenciada imutável permaneça inalterada.  
   
- Quando um <xref:System.Text.StringBuilder?displayProperty=fullName> é passado por valor, o marshaler passa uma referência ao buffer interno do **StringBuilder** diretamente para o chamador. O chamador e o receptor devem concordar com o tamanho do buffer. O chamador é responsável pela criação de um **StringBuilder** de tamanho adequado. O receptor deve tomar as precauções necessárias para garantir que o buffer não tenha estouro. **StringBuilder** é uma exceção à regra em que os tipos de referência passados por valor são passados como parâmetros de Entrada por padrão. Ele é sempre passado como Entrada/Saída.  
+ Quando um <xref:System.Text.StringBuilder?displayProperty=nameWithType> é passado por valor, o marshaler passa uma referência ao buffer interno do **StringBuilder** diretamente para o chamador. O chamador e o receptor devem concordar com o tamanho do buffer. O chamador é responsável pela criação de um **StringBuilder** de tamanho adequado. O receptor deve tomar as precauções necessárias para garantir que o buffer não tenha estouro. **StringBuilder** é uma exceção à regra em que os tipos de referência passados por valor são passados como parâmetros de Entrada por padrão. Ele é sempre passado como Entrada/Saída.  
   
 ## <a name="see-also"></a>Consulte também  
- [Comportamento de marshaling padrão](../../../docs/framework/interop/default-marshaling-behavior.md)   
- [Gerenciamento de memória com o marshaler de interoperabilidade](http://msdn.microsoft.com/en-us/417206ce-ee3e-4619-9529-0c0b686c7bee)   
- [Atributos direcionais](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
+ [Comportamento de marshaling padrão](../../../docs/framework/interop/default-marshaling-behavior.md)  
+ [Gerenciamento de memória com o empacotador de interoperabilidade](http://msdn.microsoft.com/en-us/417206ce-ee3e-4619-9529-0c0b686c7bee)  
+ [Atributos direcionais](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [Marshaling de interoperabilidade](../../../docs/framework/interop/interop-marshaling.md)
-

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: c42d3274fcb03bc523367ba71c857144b2d78b72
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d7f86ddcb86f3361665498ca0e34bf9147338551
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Mitigação: desserialização de objetos em domínios de aplicativos
 Em alguns casos, quando um aplicativo usa dois ou mais domínios de aplicativo com bases de aplicativo diferentes, a tentativa de desserializar objetos no contexto da chamada lógica nos domínios de aplicativo aciona uma exceção.  
@@ -29,7 +27,7 @@ Em alguns casos, quando um aplicativo usa dois ou mais domínios de aplicativo c
   
 1.  Um aplicativo usa dois ou mais domínios de aplicativo com bases de aplicativo diferentes.  
   
-2.  Alguns tipos são adicionados explicitamente a <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> chamando-se um método como <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=fullName> ou <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=fullName>. Esses tipos não são marcados como serializáveis e não são armazenados no cache de assembly global.  
+2.  Alguns tipos são adicionados explicitamente a <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> chamando-se um método como <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=nameWithType> ou <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=nameWithType>. Esses tipos não são marcados como serializáveis e não são armazenados no cache de assembly global.  
   
 3.  Mais tarde, a execução do código no domínio de aplicativo não padrão tenta ler um valor de um arquivo de configuração ou usar XML para desserializar um objeto.  
   
@@ -60,4 +58,3 @@ Em alguns casos, quando um aplicativo usa dois ou mais domínios de aplicativo c
   
 ## <a name="see-also"></a>Consulte também  
  [Alterações no tempo de execução](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)
-

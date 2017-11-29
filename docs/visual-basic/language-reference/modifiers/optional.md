@@ -1,50 +1,33 @@
 ---
-title: Opcional (Visual Basic) | Documentos do Microsoft
-ms.date: 2015-07-20
+title: Opcional (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Optional
 - vb.optional
-dev_langs:
-- VB
 helpviewer_keywords:
-- Optional keyword, contexts
-- Optional keyword
+- Optional keyword [Visual Basic], contexts
+- Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c00f3f386159fa60da9c60cf7857fd62fa3e9b45
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 3aa01c2c1ae731c8fe00fdee24521760db69e624
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="optional-visual-basic"></a>Opcional (Visual Basic)
 Especifica que um argumento de procedimento pode ser omitido quando o procedimento é chamado.  
   
 ## <a name="remarks"></a>Comentários  
- Para cada parâmetro opcional, você deve especificar uma expressão constante como o valor padrão desse parâmetro. Se a expressão for avaliada como [nada](../../../visual-basic/language-reference/nothing.md), o valor padrão do tipo de dados valor é usado como o valor padrão do parâmetro.  
+ Para cada parâmetro opcional, você deve especificar uma expressão constante como o valor padrão desse parâmetro. Se a expressão for avaliada como [nada](../../../visual-basic/language-reference/nothing.md), o valor padrão do tipo de dados de valor é usado como o valor padrão do parâmetro.  
   
- Se a lista de parâmetros contém um parâmetro opcional, cada parâmetro seguinte também deve ser opcional.  
+ Se a lista de parâmetros contém um parâmetro opcional, cada parâmetro que o segue também deve ser opcional.  
   
  O `Optional` modificador pode ser usado nesses contextos:  
   
@@ -63,7 +46,7 @@ Especifica que um argumento de procedimento pode ser omitido quando o procedimen
 >  Você também pode definir um procedimento com parâmetros opcionais usando a sobrecarga. Se você tiver um parâmetro opcional, você pode definir duas versões sobrecarregadas do procedimento, uma que aceita o parâmetro e um que não. Para obter mais informações, consulte [sobrecarga de procedimento](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir define um procedimento com um parâmetro opcional.  
+ O exemplo a seguir define um procedimento que tem um parâmetro opcional.  
   
 ```  
 Public Function FindMatches(ByRef values As List(Of String),  
@@ -85,11 +68,11 @@ End Function
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como chamar um procedimento com os argumentos passados por posição e argumentos passados pelo nome. O procedimento tem dois parâmetros opcionais.  
+ O exemplo a seguir demonstra como chamar um procedimento com os argumentos transmitidos por posição e argumentos passados pelo nome. O procedimento tem dois parâmetros opcionais.  
   
- [!code-vb[VbVbalrKeywords&#21;](../../../visual-basic/language-reference/codesnippet/VisualBasic/optional_1.vb)]  
+ [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/VisualBasic/optional_1.vb)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Lista de parâmetros](../../../visual-basic/language-reference/statements/parameter-list.md)   
- [Parâmetros opcionais](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)   
+ [Lista de Parâmetros](../../../visual-basic/language-reference/statements/parameter-list.md)  
+ [Parâmetros Opcionais](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
  [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)

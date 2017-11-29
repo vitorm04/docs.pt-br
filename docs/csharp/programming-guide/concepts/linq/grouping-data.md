@@ -1,30 +1,21 @@
 ---
 title: Agrupando dados (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4aef8d10eaffb384fe919ffa6a1e742cb837f540
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2cf1b228a5ff4120bdf3b97a7ec9308f11d7b8ee
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="grouping-data-c"></a>Agrupando dados (C#)
 O agrupamento refere-se à operação de colocação de dados em grupos, de modo que os elementos em cada grupo compartilhem um atributo comum.  
@@ -77,12 +68,11 @@ foreach (var group in query)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Linq>   
- [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Cláusula group](../../../../csharp/language-reference/keywords/group-clause.md)   
- [Como Criar um Grupo Aninhado](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)   
- [Como agrupar arquivos por extensão (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)   
- [Como Agrupar Resultados de Consulta](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)   
- [Como executar uma subconsulta em uma operação de agrupamento](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)   
+ <xref:System.Linq>  
+ [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [Cláusula group](../../../../csharp/language-reference/keywords/group-clause.md)  
+ [Como criar um grupo aninhado](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)  
+ [Como agrupar arquivos por extensão (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
+ [Como agrupar resultados de consultas](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)  
+ [Como executar uma subconsulta em uma operação de agrupamento](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)  
  [Como dividir um arquivo em vários arquivos usando grupos (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
-

@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - Networking
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 02b02b2fbc5398d7afda8884a04eafdaee12aef4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 721839e0e27682477f7ba3739d3c666208fae417
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-a-socket"></a>Como criar um soquete
 Antes de poder usar um soquete para se comunicar com dispositivos remotos, o soquete deve ser inicializado com as informações de protocolo e endereço de rede. O construtor da classe <xref:System.Net.Sockets.Socket> tem parâmetros que especificam a família de endereços, o tipo de soquete e o tipo de protocolo usado pelo soquete para fazer conexões.  
@@ -73,6 +70,5 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
  Depois que um **Socket** for criado, ele poderá iniciar uma conexão com um ponto de extremidade remoto ou receber conexões de dispositivos remotos.  
   
 ## <a name="see-also"></a>Consulte também  
- [Usando soquetes de cliente](../../../docs/framework/network-programming/using-client-sockets.md)   
+ [Usando soquetes do cliente](../../../docs/framework/network-programming/using-client-sockets.md)  
  [Escutando com soquetes](../../../docs/framework/network-programming/listening-with-sockets.md)
-

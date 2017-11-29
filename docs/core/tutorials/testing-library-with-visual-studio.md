@@ -10,14 +10,15 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 069ad711-3eaa-45c6-94d7-b40249cc8b99
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: 7c884985873679b25831c15ef5c8b6370ecd6460
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 3a25c1c3b540bac8ef963a8bbf708b0700c3e9e2
-ms.openlocfilehash: 30e46ae97563add2bdf34948349cf2d6214d0de8
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Testar uma biblioteca de classes com .NET Core no Visual Studio 2017
 
 Em [Building a class library with C# and .NET Core in Visual Studio 2017](library-with-visual-studio.md) (Compilar uma biblioteca de classes com C# e com .NET Core no Visual Studio 2017) ou em [Building a class library with Visual Basic and .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md) (Compilar uma biblioteca de classes com o Visual Basic e com o .NET Core no Visual Studio 2017), você criou uma biblioteca de classes simples que adiciona um método de extensão à classe <xref:System.String>. Agora, você criará um teste de unidade para ter certeza de que ela funciona conforme o esperado. Você adicionará seu projeto de teste de unidade para a solução que criou no tópico anterior.
@@ -103,7 +104,7 @@ Também é possível aplicar o atributo [\[ExpectedException\]](https://msdn.mic
 
 Ao testar o método `StringLibrary.StartsWithUpper`, você quer fornecer um número de cadeias de caracteres que comecem com um caractere maiúsculo. Você espera que o método retorne `true` nesses casos, então pode chamar o método [Assert.IsTrue(Boolean, String)](https://msdn.microsoft.com/library/ms243754.aspx). Da mesma forma, você deseja fornecer um número de cadeias de caracteres que comecem com algo diferente de um caractere maiúsculo. Você espera que o método retorne `false` nesses casos, então pode chamar o método [Assert.IsFalse(Boolean, String)](https://msdn.microsoft.com/library/ms243805.aspx).
 
-Como seu método de biblioteca lida com cadeias de caracteres, convém ter certeza de que ele manipulará com êxito uma [cadeia de caracteres vazia (`String.Empty`)](xref:System.String.Empty), uma cadeia de caracteres válida sem caracteres e cujo @System.String.Length é 0 e uma cadeia de caracteres `null` que não foi inicializada. Se `StartsWithUpper` for chamado como um método de extensão em uma instância de @System.String, ele não poderá receber uma cadeia de caracteres `null`. No entanto, você também pode chamá-lo diretamente como um método estático e passa um único argumento @System.String.
+Como seu método de biblioteca lida com cadeias de caracteres, convém ter certeza de que ele manipulará com êxito uma [cadeia de caracteres vazia (`String.Empty`)](xref:System.String.Empty), uma cadeia de caracteres válida sem caracteres e cujo <xref:System.String.Length> é 0 e uma cadeia de caracteres `null` que não foi inicializada. Se `StartsWithUpper` for chamado como um método de extensão em uma instância de <xref:System.String>, ele não poderá receber uma cadeia de caracteres `null`. No entanto, você também pode chamá-lo diretamente como um método estático e passa um único argumento <xref:System.String>.
 
 Você definirá três métodos, cada um deles chamará seu método [Assert](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.assert.aspx) repetidamente para cada elemento em uma matriz de cadeia de caracteres. Como o método de teste falha assim que encontra a primeira falha, você chamará uma sobrecarga de método que permite passar uma cadeia de caracteres que indica o valor da cadeia de caracteres usado na chamada do método.
 
@@ -185,4 +186,3 @@ Para testar a compilação de Lançamento:
 1. Execute os testes de unidade escolhendo **Testar** > **Executar** > **Todos os Testes** na barra de menus. Os testes são aprovados.
 
 Agora que você concluiu o teste de sua biblioteca, a próxima etapa é disponibilizá-la aos chamadores. Você pode agrupá-la com um ou mais aplicativos, ou pode distribuí-la como um pacote do NuGet. Para obter mais informações, consulte [Consumindo uma biblioteca de classes .NET Standard](./consuming-library-with-visual-studio.md).
-

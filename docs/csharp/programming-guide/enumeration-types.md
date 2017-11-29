@@ -2,8 +2,7 @@
 title: "Tipos de enumeração (Guia de Programação em C#)"
 ms.date: 09/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - enumerations [C#]
@@ -11,15 +10,14 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 13ec7d5d2a44cddb2b7f440c8d811c2e4060d432
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 6b58466f8dd70a3eefb73c3d1ac21ec42a370b47
-ms.openlocfilehash: 71ddf47259ce55a6a7c5a9e5f4999ed786154f52
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Tipos de enumeração (Guia de Programação em C#)
 
@@ -68,7 +66,7 @@ Você pode atribuir quaisquer valores aos elementos na lista de enumeradores de 
 
 Você pode usar um tipo de enumeração para definir sinalizadores de bits, que permite que uma instância do tipo de enumeração armazenar qualquer combinação dos valores que são definidos na lista de enumeradores. (Claro, algumas combinações podem não ser significativas ou permitidas em seu código de programa.)
 
-Crie uma enumeração de sinalizadores de bits aplicando o atributo <xref:System.FlagsAttribute?displayProperty=fullName> e definindo os valores apropriadamente para que operações bit a bit `AND`, `OR`, `NOT` e `XOR` possam ser executadas neles. Em uma enumeração de sinalizadores de bits, inclua uma constante nomeada com um valor de zero que significa “nenhum sinalizador está definido”. Não forneça um valor de zero a um sinalizador se isso não significar “nenhum sinalizador está definido”.
+Crie uma enumeração de sinalizadores de bits aplicando o atributo <xref:System.FlagsAttribute?displayProperty=nameWithType> e definindo os valores apropriadamente para que operações bit a bit `AND`, `OR`, `NOT` e `XOR` possam ser executadas neles. Em uma enumeração de sinalizadores de bits, inclua uma constante nomeada com um valor de zero que significa “nenhum sinalizador está definido”. Não forneça um valor de zero a um sinalizador se isso não significar “nenhum sinalizador está definido”.
 
 No exemplo a seguir, outra versão da enumeração `Day`, que é chamada de `Days`, é definida. `Days` tem o atributo `Flags` e a cada valor é atribuída a próxima maior potência de 2. Isso permite que você crie uma variável `Days` cujo valor é `Days.Tuesday | Days.Thursday`.
 
@@ -82,20 +80,19 @@ Para determinar se um sinalizador específico é definido, use uma operação `A
 
 [!code-csharp[csProgGuideEnums#7](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#7)]
 
-Para saber mais sobre o que considerar ao definir tipos de enumeração com o atributo <xref:System.FlagsAttribute?displayProperty=fullName>, veja <xref:System.Enum?displayProperty=fullName>.
+Para saber mais sobre o que considerar ao definir tipos de enumeração com o atributo <xref:System.FlagsAttribute?displayProperty=nameWithType>, veja <xref:System.Enum?displayProperty=nameWithType>.
 
 ## <a name="using-the-systemenum-methods-to-discover-and-manipulate-enum-values"></a>Usando os Métodos System.Enum Methods para Descobrir e Manipular Valores Enum
 
-Todas as enumerações são instâncias do tipo <xref:System.Enum?displayProperty=fullName>. Não é possível derivar novas classes de <xref:System.Enum?displayProperty=fullName>, mas você pode usar seus métodos para descobrir informações sobre e manipular valores em uma instância de enumeração.
+Todas as enumerações são instâncias do tipo <xref:System.Enum?displayProperty=nameWithType>. Não é possível derivar novas classes de <xref:System.Enum?displayProperty=nameWithType>, mas você pode usar seus métodos para descobrir informações sobre e manipular valores em uma instância de enumeração.
 
 [!code-csharp[csProgGuideEnums#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#5)]
 
-Para obter mais informações, consulte <xref:System.Enum?displayProperty=fullName>.
+Para obter mais informações, consulte <xref:System.Enum?displayProperty=nameWithType>.
 
 Você também pode criar um novo método para uma enumeração usando um método de extensão. Para obter mais informações, consulte [Como criar um novo método para uma enumeração](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
 ## <a name="see-also"></a>Consulte também
- <xref:System.Enum?displayProperty=fullName>   
- [Guia de Programação em C#](../../csharp/programming-guide/index.md)   
+ <xref:System.Enum?displayProperty=nameWithType>  
+ [Guia de Programação em C#](../../csharp/programming-guide/index.md)  
  [enum](../../csharp/language-reference/keywords/enum.md)
-

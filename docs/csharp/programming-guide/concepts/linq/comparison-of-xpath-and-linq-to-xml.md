@@ -1,31 +1,27 @@
 ---
 title: "Comparação de XPath e de LINQ to XML2"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 87d361b1-daa9-4fd4-a53a-cbfa40111ad3
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 0890bd7d8edb19a16c864d0b845558d3302d6139
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a0b24eeeb79651f69178fa4e9c2e4a3359434556
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>Comparação XPath e de LINQ to XML
 O XPath e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] fornecer alguma funcionalidade semelhante. Ambos podem ser usados para ver uma árvore XML, retornando resultados como uma coleção de elementos, uma coleção de atributos, uma coleção de nós, ou o valor de um elemento ou de um atributo. No entanto, também há algumas diferenças.  
   
 ## <a name="differences-between-xpath-and-linq-to-xml"></a>Diferenças entre o XPath e o LINQ to XML  
- O XPath não permite a projeção de novos tipos. Só pode retornar coleções de nós de árvore, enquanto [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] pode executar uma consulta e projetar um objeto gráfico ou uma árvore XML em uma nova forma. consultas de[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] abrangem muito mais funcionalidade e são muito mais avançados de expressões XPath.  
+ O XPath não permite a projeção de novos tipos. Só pode retornar coleções de nós de árvore, enquanto [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] pode executar uma consulta e projetar um grafo de objeto ou uma árvore XML em uma nova forma. consultas de[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] abrangem muito mais funcionalidade e são muito mais avançados de expressões XPath.  
   
  As expressões XPath existem no isolamento dentro de uma cadeia de caracteres. O compilador do C# não pode ajudar a analisar em tempo de compilação a expressão XPath. Por outro lado, as consultas de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] são analisadas e compiladas pelo compilador do C#. O compilador pode capturar muitos erros de consulta.  
   
@@ -103,4 +99,3 @@ customers.Element("Customer").Elements("CompanyName");
   
 ## <a name="see-also"></a>Consulte também  
  [Usuários do LINQ to XML para XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-

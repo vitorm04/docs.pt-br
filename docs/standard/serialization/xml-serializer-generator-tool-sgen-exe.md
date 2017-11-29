@@ -8,16 +8,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 8655523db0e90ab3d8c4d4055f876ba3f71d4a8d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 73669fcfd74f9c4948c8ec976ff3271c72f1033a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Ferramenta geradora de serializador de XML (Sgen.exe)
 O Gerador de Serializador de XML cria um assembly de serialização de XML para tipos em um assembly especificado para aprimorar o desempenho de inicialização de um <xref:System.Xml.Serialization.XmlSerializer> quando ele serializa ou desserializa objetos dos tipos especificados.  
@@ -66,7 +65,6 @@ sgen Data.dll
  O assembly Data.XmlSerializers.dll pode ser referenciado do código que precisa serializar e desserializar os tipos no Data.dll.  
   
 ## <a name="see-also"></a>Consulte também  
- [Ferramentas](../../../docs/framework/tools/index.md)   
- [Visão geral dos serviços Web XML](http://msdn.microsoft.com/en-us/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)   
+ [Ferramentas](../../../docs/framework/tools/index.md)  
+ [Visão geral do XML Web Services](http://msdn.microsoft.com/en-us/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
  [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

@@ -1,48 +1,29 @@
 ---
 title: "double (Referência de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - double
 - double_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- double data type [C#]
+helpviewer_keywords: double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 232dd97e152f943137604074f24b5de779168e59
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d5588f8391157fb56a5e5067bb8e11f9269fe733
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="double-c-reference"></a>double (Referência de C#)
 A palavra-chave `double` indica um tipo simples que armazena valores de ponto flutuante de 64 bits. A tabela a seguir mostra a precisão e o intervalo aproximado do tipo `double`.  
   
 |Tipo|Intervalo aproximado|Precisão|Tipo do .NET Framework|  
 |----------|-----------------------|---------------|-------------------------|  
-|`double`|±5.0 × 10<sup>−324</sup> to ±1.7 × 10<sup>308</sup>|15 a 16 dígitos|<xref:System.Double?displayProperty=fullName>|  
+|`double`|±5.0 × 10<sup>−324</sup> to ±1.7 × 10<sup>308</sup>|15 a 16 dígitos|<xref:System.Double?displayProperty=nameWithType>|  
   
 ## <a name="literals"></a>Literais  
  Por padrão, um literal numérico real no lado direito do operador de atribuição é tratado como `double`. No entanto, se você quiser que um número inteiro seja tratado como `double`, use o sufixo d ou D, por exemplo:  
@@ -68,23 +49,22 @@ double x = 3D;
   
 -   O conjunto finito de valores diferentes de zero.  
   
- Para obter mais informações sobre esses valores, consulte o padrão IEEE para Aritmética de ponto flutuante binário, disponível no site do [IEEE](http://go.microsoft.com/fwlink/?LinkId=26269).  
+ Para obter mais informações sobre esses valores, consulte o padrão IEEE para Aritmética de ponto flutuante binário, disponível no site do [IEEE](http://www.ieee.org).  
   
 ## <a name="example"></a>Exemplo  
  No exemplo a seguir, um [int](../../../csharp/language-reference/keywords/int.md), um [short](../../../csharp/language-reference/keywords/short.md), um [float](../../../csharp/language-reference/keywords/float.md) e um `double` são adicionados, levando a um resultado `double`.  
   
- [!code-cs[csrefKeywordsTypes#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/double_1.cs)]  
+ [!code-csharp[csrefKeywordsTypes#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/double_1.cs)]  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Tabela de Valores Padrão](../../../csharp/language-reference/keywords/default-values-table.md)   
- [Tabela de Tipos Internos](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [Tabela de tipos de ponto flutuante](../../../csharp/language-reference/keywords/floating-point-types-table.md)   
- [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
+ [Referência de C#](../../../csharp/language-reference/index.md)  
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
+ [Tabela de valores padrão](../../../csharp/language-reference/keywords/default-values-table.md)  
+ [Tabela de tipos internos](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [Tabela de tipos de ponto flutuante](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
+ [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
  [Tabela de conversões numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-

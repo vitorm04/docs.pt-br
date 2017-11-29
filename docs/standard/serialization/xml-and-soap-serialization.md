@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - SOAP, XML serialization
 - XML serialization, SOAP
@@ -20,16 +15,15 @@ helpviewer_keywords:
 - XML serialization
 - serialization
 ms.assetid: 832ac524-21bc-419a-a27b-ca8bfc45840f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 412468a03c15cedaa77a5e10be41793565039c4d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 809f1418d7ee0939c7e31124fbda7ef5fd8e2e5e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="xml-and-soap-serialization"></a>Serialização XML e SOAP
 A serialização XML converte (serializa) as propriedades e os campos públicos de um objeto (ou os parâmetros e valores de retorno de métodos) em um fluxo XML que esteja de acordo com um documento XSD (linguagem de definição de esquema XML) específico. A serialização XML resulta em classes fortemente tipadas com propriedades e campos públicos que são convertidos em um formato serial (neste caso, em XML) para armazenamento ou transporte.  
@@ -104,4 +98,3 @@ A serialização XML converte (serializa) as propriedades e os campos públicos 
   
 ## <a name="see-also"></a>Consulte também  
  [Serialização binária](../../../docs/standard/serialization/binary-serialization.md)
-

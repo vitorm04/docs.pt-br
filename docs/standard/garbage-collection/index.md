@@ -24,16 +24,15 @@ helpviewer_keywords:
 - runtime, garbage collection
 - garbage collection, about
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 1636bf1cf047e7505be7567f5b5061df25d899c7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: be94a3e0dee4cb27aee4d5c98ebc1d6ef0704ac9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="garbage-collection"></a>Coleta de Lixo
 O coletor de lixo do .NET gerencia a alocação e a liberação de memória para seu aplicativo. Toda vez que você cria um novo objeto, o Common Language Runtime aloca memória para o objeto do heap gerenciado. Desde que exista espaço de endereço disponível no heap gerenciado, o tempo de execução continua alocando espaço para novos objetos. No entanto, a memória não é infinita. No fim das contas, o coletor de lixo deve realizar uma coleta para liberar algum espaço na memória. O mecanismo de otimização do coletor de lixo determina o melhor momento para executar uma coleta com base nas alocações que estão sendo feitas. Quando o coletor de lixo executa uma coleta, ele verifica se há objetos no heap gerenciado que não estão mais sendo usados pelo aplicativo e realiza as operações necessárias para recuperar sua memória.  
@@ -71,4 +70,3 @@ O coletor de lixo do .NET gerencia a alocação e a liberação de memória para
   
 ## <a name="see-also"></a>Consulte também  
  [Limpando recursos não gerenciados](../../../docs/standard/garbage-collection/unmanaged.md)
-

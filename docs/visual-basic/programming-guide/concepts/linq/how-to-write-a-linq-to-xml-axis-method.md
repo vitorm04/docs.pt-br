@@ -1,35 +1,30 @@
 ---
-title: "Como: gravar um LINQ para o método de eixo XML (Visual Basic) | Documentos do Microsoft"
+title: "Como: gravar um LINQ para o método de eixo XML (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b676f025-a24c-4076-8713-aa809b2b8ce0
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6749c2eee72cdc24c5dc3957e00a8bab54ce226b
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: d0c0c61514e6f51b060c3ccd431920c3a9adc418
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>Como: gravar um LINQ para o método de eixo XML (Visual Basic)
 Você pode escrever seus próprios métodos do eixo para recuperar coleções de uma árvore XML. Uma das melhores maneiras de fazer isso é gravar um método de extensão que retorna uma coleção de elementos ou atributos. Você pode escrever seu método de extensão para subconjuntos específicos de retorno de elementos ou atributos, com base nos requisitos do seu aplicativo.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa dois métodos de extensão. O primeiro método de extensão, `GetXPath`, opera em <xref:System.Xml.Linq.XObject>e retorna uma expressão XPath que quando avaliada retorna o nó ou atributo.</xref:System.Xml.Linq.XObject> O segundo método de extensão, `Find`, opera em <xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement> Retorna uma coleção de <xref:System.Xml.Linq.XAttribute>objetos e <xref:System.Xml.Linq.XElement>objetos que contêm o texto especificado.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XAttribute>  
+ O exemplo a seguir usa dois métodos de extensão. O primeiro método de extensão, `GetXPath`, opera em <xref:System.Xml.Linq.XObject>, e retorna uma expressão XPath que quando avaliada retorna o nó ou do atributo. O segundo método de extensão, `Find`, opera em <xref:System.Xml.Linq.XElement>. Retorna uma coleção de objetos <xref:System.Xml.Linq.XAttribute> e objetos de <xref:System.Xml.Linq.XElement> que contêm texto especificado.  
   
- Este exemplo usa o seguinte documento XML: [arquivo XML de exemplo: várias ordens de compra (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -230,5 +225,4 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Técnicas avançadas de consulta (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
-
+ [Técnicas avançadas de consulta (LINQ para XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

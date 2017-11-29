@@ -1,41 +1,22 @@
 ---
 title: "Cláusula where (Referência de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- whereclause_CSharpKeyword
-dev_langs:
-- CSharp
+f1_keywords: whereclause_CSharpKeyword
 helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0324346ee5e214bf467fcb522ef781c91fa1b76f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 97d7c16d6bf8048e621141fff52a47907881fd2f
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="where-clause-c-reference"></a>Cláusula where (Referência de C#)
 A cláusula `where` é usada em uma expressão de consulta para especificar quais elementos da fonte de dados serão retornados na expressão de consulta. Aplica-se uma condição booliana (*predicate*) para cada elemento de origem (referenciado pela variável de intervalo) e retorna aqueles para os quais a condição especificada for verdadeira. Uma única expressão de consulta pode conter várias cláusulas `where` e uma única cláusula pode conter várias subexpressões de predicado.  
@@ -43,17 +24,17 @@ A cláusula `where` é usada em uma expressão de consulta para especificar quai
 ## <a name="example"></a>Exemplo  
  No exemplo a seguir, a cláusula `where` filtra todos os números, exceto aqueles que são menores que cinco. Se você remover a cláusula `where`, todos os números da fonte de dados serão retornados. A expressão `num < 5` é o predicado aplicado a cada elemento.  
   
- [!code-cs[cscsrefQueryKeywords#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_1.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_1.cs)]  
   
 ## <a name="example"></a>Exemplo  
  Dentro de uma única cláusula `where`, você pode especificar tantos predicados quanto necessário usando os operadores [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) e [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md). No exemplo a seguir, a consulta especifica dois predicados para selecionar apenas os números pares que são menores que cinco.  
   
- [!code-cs[cscsrefQueryKeywords#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_2.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_2.cs)]  
   
 ## <a name="example"></a>Exemplo  
  Uma cláusula `where` pode conter um ou mais métodos que retornam valores boolianos. No exemplo a seguir, a cláusula `where` usa um método para determinar se o valor atual da variável de intervalo é par ou ímpar.  
   
- [!code-cs[cscsrefQueryKeywords#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_3.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_3.cs)]  
   
 ## <a name="remarks"></a>Comentários  
  A cláusula `where` é um mecanismo de filtragem. Ela pode ser posicionada em quase qualquer lugar em uma expressão de consulta, exceto que ela não pode ser a primeira ou a última cláusula. A cláusula `where` pode aparecer antes ou depois de uma cláusula [group](../../../csharp/language-reference/keywords/group-clause.md) dependendo se você tiver que filtrar os elementos de origem antes ou depois de eles serem agrupados.  
@@ -63,10 +44,9 @@ A cláusula `where` é usada em uma expressão de consulta para especificar quai
  Em tempo de compilação, a palavra-chave `where` é convertida em uma chamada para o método de operador de consulta padrão <xref:System.Linq.Enumerable.Where%2A>.  
   
 ## <a name="see-also"></a>Consulte também  
- [Palavras-chave de Consulta (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
- [Cláusula from](../../../csharp/language-reference/keywords/from-clause.md)   
- [Cláusula select](../../../csharp/language-reference/keywords/select-clause.md)   
- [Filtrando dados](http://msdn.microsoft.com/library/cee88d0f-31aa-4c60-9452-cc122ed0057d)   
- [Expressões de Consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)   
+ [Palavras-chave de Consulta (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
+ [Cláusula From](../../../csharp/language-reference/keywords/from-clause.md)  
+ [Cláusula select](../../../csharp/language-reference/keywords/select-clause.md)  
+ [Filtrando Dados](../../programming-guide/concepts/linq/filtering-data.md)  
+ [Expressões de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
  [Introdução a LINQ em C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-

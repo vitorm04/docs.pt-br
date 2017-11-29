@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 106e1ae03a39594aab907e130c139b84f579257d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f4e4eebce1779f1b32a74819fea19fb23204b80c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltapplicationgt-element-net-native"></a>Elemento &lt;Application&gt; (.NET Nativo)
 Serve como um contêiner para tipos em todo o aplicativo e membros de tipo cujos metadados estão disponível para reflexão no tempo de execução e aplica-se à política de reflexão no tempo de execução a todos os elementos de programa em um aplicativo.  
@@ -53,9 +51,9 @@ Elemento \<Application> (rd.xml)
 |`Browse`|Reflexão|Atributo opcional. Controla consultas para obter informações sobre os tipos ou para enumerá-los, mas não permite qualquer acesso dinâmico no tempo de execução.|  
 |`Dynamic`|Reflexão|Atributo opcional. Controla o acesso a todos os tipos de membro ao tempo de execução, incluindo construtores, métodos, campos, propriedades e eventos, habilitando a programação dinâmica.|  
 |`Serialize`|Serialização|Atributo opcional. Controla o acesso ao tempo de execução para construtores, campos e propriedades para habilitar a serialização e desserialização das instâncias por bibliotecas como o serializador Newtonsoft JSON.|  
-|`DataContractSerializer`|Serialização|Atributo opcional. Controla a política de serialização que usa a classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.|  
-|`DataContractJsonSerializer`|Serialização|Atributo opcional. Controla a política de serialização JSON que usa a classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName>.|  
-|`XmlSerializer`|Serialização|Atributo opcional. Controla a política de serialização XML que usa a classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>.|  
+|`DataContractSerializer`|Serialização|Atributo opcional. Controla a política de serialização que usa a classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.|  
+|`DataContractJsonSerializer`|Serialização|Atributo opcional. Controla a política de serialização JSON que usa a classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType>.|  
+|`XmlSerializer`|Serialização|Atributo opcional. Controla a política de serialização XML que usa a classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.|  
 |`MarshalObject`|Interoperabilidade|Atributo opcional. Política de controles de marshaling de tipos de referência para o Tempo de Execução do Windows e COM.|  
 |`MarshalDelegate`|Interoperabilidade|Atributo opcional. Controla a diretiva de marshaling de tipos delegados como ponteiros de função para código nativo.|  
 |`MarshalStructure`|Interoperabilidade|Atributo opcional. Controla a política de estruturas de marshaling para código nativo.|  
@@ -96,8 +94,7 @@ Elemento \<Application> (rd.xml)
 -   Como um elemento que define a política de todo o aplicativo para reflexão, serialização e interoperabilidade. Os atributos do elemento `<Application>` definem a política de todo o aplicativo, que pode ser substituída pelos elementos filhos definidos pelo elemento `<Application>` ou [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
   
 ## <a name="see-also"></a>Consulte também  
- Elemento [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)   
- [\<Elemento Directives>](../../../docs/framework/net-native/directives-element-net-native.md)   
- [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)   
+ [\<Biblioteca > elemento](../../../docs/framework/net-native/library-element-net-native.md)  
+ [\<Diretivas > elemento](../../../docs/framework/net-native/directives-element-net-native.md)  
+ [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)  
  [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-

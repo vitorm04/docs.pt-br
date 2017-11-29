@@ -1,40 +1,21 @@
 ---
 title: "Métodos (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: ff6e59f70a5718f6616fa9a585dd84144e1774a0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cf320a26e697943416cd8f1065f1b4ca4afeac07
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="methods-c-programming-guide"></a>Métodos (Guia de Programação em C#)
 Um método é um bloco de código que contém uma série de instruções. Um programa faz com que as instruções sejam executadas chamando o método e especificando os argumentos de método necessários. No C#, todas as instruções executadas são realizadas no contexto de um método. O método Main é o ponto de entrada para todos os aplicativos C# e é chamado pelo CLR (Common Language Runtime) quando o programa é iniciado.  
@@ -50,17 +31,17 @@ Um método é um bloco de código que contém uma série de instruções. Um pro
   
  Os parâmetros de método estão entre parênteses e separados por vírgulas. Parênteses vazios indicam que o método não requer parâmetros. Essa classe contém três métodos:  
   
- [!code-cs[csProgGuideObjects#40](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_1.cs)]  
+ [!code-csharp[csProgGuideObjects#40](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_1.cs)]  
   
 ## <a name="method-access"></a>Acesso a método  
  Chamar um método em um objeto é como acessar um campo. Após o nome do objeto, adicione um ponto final, o nome do método e parênteses. Os argumentos são listados dentro dos parênteses e são separados por vírgulas. Os métodos da classe `Motorcycle` podem, portanto, ser chamados como no exemplo a seguir:  
   
- [!code-cs[csProgGuideObjects#41](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_2.cs)]  
+ [!code-csharp[csProgGuideObjects#41](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_2.cs)]  
   
 ## <a name="method-parameters-vs-arguments"></a>Parâmetros de método versus Arguments  
  A definição do método especifica os nomes e tipos de quaisquer parâmetros obrigatórios. Quando o código de chamada chama o método, ele fornece valores concretos, chamados argumentos, para cada parâmetro. Os argumentos devem ser compatíveis com o tipo de parâmetro, mas o nome do argumento (se houver) usado no código de chamada não precisa ser o mesmo que o parâmetro nomeado definido no método. Por exemplo:  
   
- [!code-cs[csProgGuideObjects#74](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_3.cs)]  
+ [!code-csharp[csProgGuideObjects#74](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_3.cs)]  
   
 ## <a name="passing-by-reference-vs-passing-by-value"></a>Passagem por referência versus passagem por valor  
  Por padrão, quando um tipo de valor é passado para um método, uma cópia é passada em vez do objeto propriamente dito. Portanto, alterações no argumento não têm nenhum efeito sobre a cópia original no método de chamada. Você pode passar um tipo de valor por referência usando a palavra-chave ref. Para obter mais informações, consulte [Passando parâmetros de tipo de valor](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md). Para obter uma lista de tipos de valor internos, consulte [Tabela de tipos de valor](../../../csharp/language-reference/keywords/value-types-table.md).  
@@ -69,11 +50,11 @@ Um método é um bloco de código que contém uma série de instruções. Um pro
   
  Crie um tipo de referência usando a palavra-chave `class`, como mostra o exemplo a seguir.  
   
- [!code-cs[csProgGuideObjects#42](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_4.cs)]  
+ [!code-csharp[csProgGuideObjects#42](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_4.cs)]  
   
  Agora, se você passar um objeto com base nesse tipo para um método, uma referência ao objeto será passada. O exemplo a seguir passa um objeto do tipo `SampleRefType` ao método `ModifyObject`.  
   
- [!code-cs[csProgGuideObjects#75](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_5.cs)]  
+ [!code-csharp[csProgGuideObjects#75](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_5.cs)]  
   
  O exemplo faz essencialmente a mesma coisa que o exemplo anterior, pois ele passa um argumento por valor para um método. No entanto, como um tipo de referência é usado, o resultado é diferente. A modificação feita em `ModifyObject` para o campo `value` do parâmetro, `obj`, também altera o campo `value` do argumento, `rt`, no método `TestRefType`. O método `TestRefType` exibe 33 como a saída.  
   
@@ -93,13 +74,13 @@ public ref double GetEstimatedDistance()
 
 A palavra-chave `return` também interrompe a execução do método. Se o tipo de retorno for `void`, uma instrução `return` sem um valor ainda será útil para interromper a execução do método. Sem a palavra-chave `return`, a execução do método será interrompida quando chegar ao final do bloco de código. Métodos com um tipo de retorno não nulo devem usar a palavra-chave `return` para retornar um valor. Por exemplo, esses dois métodos usam a palavra-chave `return` para retornar inteiros:  
   
- [!code-cs[csProgGuideObjects#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_6.cs)]  
+ [!code-csharp[csProgGuideObjects#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_6.cs)]  
   
  Para usar um valor retornado de um método, o método de chamada pode usar a chamada de método em si em qualquer lugar que um valor do mesmo tipo seria suficiente. Você também pode atribuir o valor retornado a uma variável. Por exemplo, os dois exemplos de código a seguir obtêm a mesma meta:  
   
- [!code-cs[csProgGuideObjects#45](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_7.cs)]  
+ [!code-csharp[csProgGuideObjects#45](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_7.cs)]  
   
- [!code-cs[csProgGuideObjects#46](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_8.cs)]  
+ [!code-csharp[csProgGuideObjects#46](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_8.cs)]  
   
  Usar uma variável local, nesse caso, `result`, para armazenar um valor é opcional. Isso pode ajudar a legibilidade do código ou pode ser necessário se você precisar armazenar o valor original do argumento para todo o escopo do método.  
 
@@ -147,7 +128,7 @@ static void Main(string[] args)
   
  O método `startButton_Click` é um exemplo de método assíncrono que tem um tipo de retorno nulo. Como `DoSomethingAsync` é um método assíncrono, a tarefa para a chamada para `DoSomethingAsync` deve ser colocada em espera, como mostra a seguinte instrução: `await DoSomethingAsync();`. O método `startButton_Click` deve ser definido com o modificador `async` porque o método tem uma expressão `await`.  
   
- [!code-cs[csAsyncMethod#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_9.cs)]  
+ [!code-csharp[csAsyncMethod#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_9.cs)]  
   
  Um método assíncrono não pode declarar nenhum parâmetro [ref](../../../csharp/language-reference/keywords/ref.md) ou [out](../../../csharp/language-reference/keywords/out.md), mas pode chamar métodos com tais parâmetros.  
   
@@ -180,15 +161,14 @@ public Customer this[long id] => store.LookupCustomer(id);
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Classes e structs](index.md)   
- [Modificadores de acesso](access-modifiers.md)   
- [Classes estáticas e membros de classes estáticas](static-classes-and-static-class-members.md)   
- [Herança](inheritance.md)   
- [Classes e membros de classes abstratas e lacradas](abstract-and-sealed-classes-and-class-members.md)   
- [params](../../../csharp/language-reference/keywords/params.md)   
- [return](../../../csharp/language-reference/keywords/return.md)   
- [out](../../../csharp/language-reference/keywords/out.md)   
- [ref](../../../csharp/language-reference/keywords/ref.md)   
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Classes e Structs](index.md)  
+ [Modificadores de acesso](access-modifiers.md)  
+ [Classes static e membros de classes static](static-classes-and-static-class-members.md)  
+ [Herança](inheritance.md)  
+ [Classes e membros de classes abstract e sealed](abstract-and-sealed-classes-and-class-members.md)  
+ [params](../../../csharp/language-reference/keywords/params.md)  
+ [return](../../../csharp/language-reference/keywords/return.md)  
+ [out](../../../csharp/language-reference/keywords/out.md)  
+ [ref](../../../csharp/language-reference/keywords/ref.md)  
  [Passando parâmetros](passing-parameters.md)
-

@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - culture, assembly manifest
 - assemblies [.NET Framework], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 1df64129a0ae15b5bad387a62ca60bb4b1b92f7d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: eb20bfac6717779f5394724617d247a6dc980c7e
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assembly-manifest"></a>Manifesto de um assembly
 Cada assembly, seja estático ou dinâmico, contém uma coleção de dados que descreve como os elementos do assembly se relacionam. O manifesto do assembly contém esses metadados do assembly. O manifesto de um assembly contém todos os metadados necessários para especificar os requisitos de versão e a identidade de segurança, além de todos os metadados necessários para definir o escopo do assembly e resolver referências a recursos e classes. O manifesto do assembly pode ser armazenado em um arquivo PE (.exe ou .dll) com código MSIL (Microsoft Intermediate Language) ou em um arquivo PE autônomo que contém somente informações do manifesto do assembly.  
@@ -65,8 +63,7 @@ Tipos de assemblies
  Você pode adicionar ou alterar informações do manifesto do assembly usando os atributos do assembly em seu código. Você pode alterar informações sobre versão e atributos informativos, incluindo marca comercial, direitos autorais, produto, empresa e versão informativa. Para obter uma lista completa dos atributos do assembly, confira [Configuração de atributos de assembly](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo do assembly](../../../docs/framework/app-domains/assembly-contents.md)   
- [Controle de versão do assembly](../../../docs/framework/app-domains/assembly-versioning.md)   
- [Criação de assemblies satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)   
+ [Conteúdo do assembly](../../../docs/framework/app-domains/assembly-contents.md)  
+ [Controle de versão do assembly](../../../docs/framework/app-domains/assembly-versioning.md)  
+ [Criando assemblies satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
  [Assemblies de nomes fortes](../../../docs/framework/app-domains/strong-named-assemblies.md)
-

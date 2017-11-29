@@ -1,41 +1,22 @@
 ---
 title: "Construtores (Guia de Programação em C#)"
-ms.date: 2017-05-05
+ms.date: 05/05/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - constructors [C#]
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 65c50311548667ab5fdc685b70b6ab9e88376067
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 400afcda2fe30bf0e3621ee4c4247486e01d3ee4
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="constructors-c-programming-guide"></a>Construtores (Guia de Programação em C#)
 Sempre que uma [classe](../../../csharp/language-reference/keywords/class.md) ou [struct](../../../csharp/language-reference/keywords/struct.md) é criada, o construtor é chamado. Uma classe ou struct pode ter vários construtores que usam argumentos diferentes. Os construtores permitem que o programador defina valores padrão, limite a instanciação e grave códigos flexíveis e fáceis de ler. Para obter mais informações e exemplos, consulte [Usando Construtores](../../../csharp/programming-guide/classes-and-structs/using-constructors.md) e [Construtores de Instância](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
@@ -48,11 +29,11 @@ Se um construtor não for fornecido para a classe, o C# criará por padrão um c
 
 Um construtor é um método cujo nome é igual ao nome de seu tipo. Sua assinatura do método inclui apenas o nome do método e lista de parâmetros, ele não inclui um tipo de retorno. O exemplo a seguir mostra o construtor para uma classe denominada `Person`.
 
-[!code-cs[construtores](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#1)]  
+[!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#1)]  
 
 Se um construtor puder ser implementado como uma única instrução, você poderá usar uma [definição de corpo da expressão](../statements-expressions-operators/expression-bodied-members.md). O exemplo a seguir define uma classe `Location` cujo construtor tem um único parâmetro de cadeia de caracteres chamado *nome*. A definição de corpo da expressão atribui o argumento ao campo `locationName`.
 
-[!code-cs[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
+[!code-csharp[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
 
 ## <a name="static-constructors"></a>Construtores estáticos
 
@@ -60,11 +41,11 @@ Os exemplos anteriores têm todos os construtores de instância mostrado, que cr
 
 O exemplo a seguir usa um construtor estático para inicializar um campo estático.
 
-[!code-cs[construtores](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#2)]  
+[!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#2)]  
 
 Você também pode definir um construtor estático com uma definição de corpo da expressão, como mostra o exemplo a seguir. 
 
-[!code-cs[construtores](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#3)]  
+[!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#3)]  
 
 Para obter mais informações e exemplos, consulte [Construtores Estáticos](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
   
@@ -80,9 +61,8 @@ Para obter mais informações e exemplos, consulte [Construtores Estáticos](../
  [Como escrever um construtor de cópia](../../../csharp/programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Classes e structs](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
- [static](../../../csharp/language-reference/keywords/static.md)   
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Classes e Structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+ [static](../../../csharp/language-reference/keywords/static.md)  
  [Por que os inicializadores são executados na ordem oposta, como construtores? Parte 1](http://go.microsoft.com/fwlink/?LinkId=112374)
-

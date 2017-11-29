@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
+ms.openlocfilehash: 7b7e321e6554818924a8a2b68afa4c787807bcba
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 155804dd212d8eda8d81ce7e296a9fe308e9c69b
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="expressions"></a>Expressões
 
 *Expressões* são construídas a partir de *operandos* e *operadores*. Os operadores de uma expressão indicam quais operações devem ser aplicadas aos operandos. Exemplos de operadores incluem `+`, `-`, `*`, `/` e `new`. Exemplos de operandos incluem literais, campos, variáveis locais e expressões.
@@ -45,7 +43,7 @@ O item a seguir resume os operadores do C#, listando as categorias de operador e
     - `new T(...){...}`: criação de objeto com inicializador
     - `new {...}`: inicializador de objeto anônimo
     - `new T[...]`: criação de matriz
-    - `typeof(T)`: obter @System.Type objeto para `T`
+    - `typeof(T)`: obter objeto <xref:System.Type> para `T`
     - `checked(x)`: avaliar expressão no contexto marcado
     - `unchecked(x)`: avaliar expressão no contexto desmarcado
     - `default(T)`: obter valor padrão do tipo `T`
@@ -102,4 +100,3 @@ O item a seguir resume os operadores do C#, listando as categorias de operador e
 >[!div class="step-by-step"]
 [Anterior](types-and-variables.md)
 [Próximo](statements.md)
-

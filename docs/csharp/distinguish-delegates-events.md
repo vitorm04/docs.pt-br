@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 3026a0d853cb17dcf05d3b98d814044d743e48dc
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="distinguishing-delegates-and-events"></a>Distinção entre Delegados e Eventos
 
 [Anterior](modern-events.md)
@@ -55,4 +53,3 @@ Compare isso com vários designs baseados em delegados, em que um delegado é us
 ## <a name="evaluate-carefully"></a>Avalie cuidadosamente
 
 As considerações acima não são regras rígidas e óbvias. Em vez disso, elas são diretrizes que podem ajudá-lo a decidir qual opção é melhor para seu uso específico. Como elas são semelhantes, você pode até mesmo fazer protótipos das suas e considerar com qual seria mais natural trabalhar. Ambas lidam bem com cenários de associação tardia. Use a que comunica melhor o seu design.
-

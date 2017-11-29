@@ -1,12 +1,9 @@
 ---
 title: "Classes static e membros de classes static (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, static members
 - static members [C#]
@@ -14,29 +11,14 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: cf2517dd5989d36341b840ffcb476cbeb14baf54
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 63f46f9ae35b3c699744f7bf61cad3b08b796509
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Classes static e membros de classes static (Guia de Programação em C#)
 Uma classe [static](../../../csharp/language-reference/keywords/static.md) é basicamente o mesmo que uma classe não estática, mas há uma diferença: uma classe estática não pode ser instanciada. Em outras palavras, você não pode usar a palavra-chave [new](../../../csharp/language-reference/keywords/new.md) para criar uma variável do tipo de classe. Como não há nenhuma variável de instância, você acessa os membros de uma classe estática usando o próprio nome de classe. Por exemplo, se você tiver uma classe estática denominada `UtilityClass` que tem um método público chamado `MethodA`, chame o método, conforme mostrado no exemplo a seguir:  
@@ -45,7 +27,7 @@ Uma classe [static](../../../csharp/language-reference/keywords/static.md) é ba
 UtilityClass.MethodA();  
 ```  
   
- Uma classe estática pode ser usada como um contêiner conveniente para conjuntos de métodos que operam apenas em parâmetros de entrada e não precisam obter ou definir campos de instância internos. Por exemplo, na biblioteca de classes .NET Framework, a classe estática <xref:System.Math?displayProperty=fullName> contém métodos que executam operações matemáticas, sem a necessidade de armazenar ou recuperar dados que são exclusivos de uma determinada instância da classe <xref:System.Math>. Ou seja, você aplica os membros da classe especificando o nome de classe e o nome do método, conforme mostrado no exemplo a seguir.  
+ Uma classe estática pode ser usada como um contêiner conveniente para conjuntos de métodos que operam apenas em parâmetros de entrada e não precisam obter ou definir campos de instância internos. Por exemplo, na biblioteca de classes .NET Framework, a classe estática <xref:System.Math?displayProperty=nameWithType> contém métodos que executam operações matemáticas, sem a necessidade de armazenar ou recuperar dados que são exclusivos de uma determinada instância da classe <xref:System.Math>. Ou seja, você aplica os membros da classe especificando o nome de classe e o nome do método, conforme mostrado no exemplo a seguir.  
   
 ```csharp  
 double dub = -3.14;  
@@ -81,10 +63,10 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 ## <a name="example"></a>Exemplo  
  Temos aqui um exemplo de uma classe estática que contém dois métodos que convertem a temperatura de Celsius em Fahrenheit e de Fahrenheit em Celsius:  
   
- [!code-cs[csProgGuideObjects#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_1.cs)]  
+ [!code-csharp[csProgGuideObjects#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_1.cs)]  
   
 ## <a name="static-members"></a>Membros Estáticos  
- Uma classe não estática pode conter métodos, campos, propriedades ou eventos estáticos. O membro estático pode ser chamado em uma classe, mesmo quando nenhuma instância da classe foi criada. O membro estático sempre é acessado pelo nome de classe, não pelo nome da instância. Existe apenas uma cópia de um membro estático, independentemente de quantas instâncias da classe forem criadas. Propriedades e métodos estáticos não podem acessar eventos e campos não estáticos no tipo que os contêm e não podem acessar uma variável de instância de nenhum objeto, a menos que ele seja passado explicitamente em um parâmetro de método.  
+ Uma classe não estática não pode conter métodos, campos, propriedades ou eventos estáticos. O membro estático pode ser chamado em uma classe, mesmo quando nenhuma instância da classe foi criada. O membro estático sempre é acessado pelo nome de classe, não pelo nome da instância. Existe apenas uma cópia de um membro estático, independentemente de quantas instâncias da classe forem criadas. Propriedades e métodos estáticos não podem acessar eventos e campos não estáticos no tipo que os contêm e não podem acessar uma variável de instância de nenhum objeto, a menos que ele seja passado explicitamente em um parâmetro de método.  
   
  É mais comum declarar uma classe não estática com alguns membros estáticos do que declarar uma classe inteira como estática. Dois usos comuns dos campos estáticos são manter uma contagem do número de objetos que foram instanciados ou armazenar um valor que deve ser compartilhado entre todas as instâncias.  
   
@@ -96,11 +78,11 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  Você declara membros de classe estática usando a palavra-chave `static` antes do tipo de retorno do membro, conforme mostrado no exemplo a seguir:  
   
- [!code-cs[csProgGuideObjects#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_2.cs)]  
+ [!code-csharp[csProgGuideObjects#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_2.cs)]  
   
  Membros estáticos são inicializados antes que o membro estático seja acessado pela primeira vez e antes que o construtor estático, se houver, seja chamado. Para acessar um membro de classe estática, use o nome da classe em vez de um nome de variável para especificar o local do membro, conforme mostrado no exemplo a seguir:  
   
- [!code-cs[csProgGuideObjects#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_3.cs)]  
+ [!code-csharp[csProgGuideObjects#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_3.cs)]  
   
  Se sua classe contiver campos estáticos, forneça um construtor estático que os inicializa quando a classe é carregada.  
   
@@ -110,10 +92,9 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [static](../../../csharp/language-reference/keywords/static.md)   
- [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)   
- [class](../../../csharp/language-reference/keywords/class.md)   
- [Construtores estáticos](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)   
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [static](../../../csharp/language-reference/keywords/static.md)  
+ [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
+ [Construtores estáticos](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)  
  [Construtores de instância](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)
-

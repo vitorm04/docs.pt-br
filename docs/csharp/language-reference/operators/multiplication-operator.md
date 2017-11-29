@@ -1,41 +1,22 @@
 ---
 title: "* Operador (Referência de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- '*_CSharpKeyword'
-dev_langs:
-- CSharp
+f1_keywords: '*_CSharpKeyword'
 helpviewer_keywords:
 - multiplication operator (*) [C#]
 - '* operator [C#]'
 ms.assetid: abd9a5f0-9b24-431e-971a-09ee1c45c50e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 64c32def0935f4347f9aaccc2865b9cd33dd8a70
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 165ca8f797eb8d03ae1dec8c0ec5e1f4b31cb050
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="-operator-c-reference"></a>Operador * (Referência de C#)
 O operador de multiplicação (`*`), que calcula o produto dos operandos.  Além disso, o operador de desreferenciamento, que permite a leitura e gravação em um ponteiro.  
@@ -48,14 +29,13 @@ O operador de multiplicação (`*`), que calcula o produto dos operandos.  Além
  Tipos definidos pelo usuário podem sobrecarregar o operador binário `*` (consulte [operador](../../../csharp/language-reference/keywords/operator.md)). Quando um operador binário está sobrecarregado, o operador de atribuição correspondente, se houver, também estará implicitamente sobrecarregado.  
   
 ## <a name="example"></a>Exemplo  
- [!code-cs[csRefOperators#50](../../../csharp/language-reference/operators/codesnippet/CSharp/multiplication-operator_1.cs)]  
+ [!code-csharp[csRefOperators#50](../../../csharp/language-reference/operators/codesnippet/CSharp/multiplication-operator_1.cs)]  
   
 ## <a name="example"></a>Exemplo  
- [!code-cs[csRefOperators#51](../../../csharp/language-reference/operators/codesnippet/CSharp/multiplication-operator_2.cs)]  
+ [!code-csharp[csRefOperators#51](../../../csharp/language-reference/operators/codesnippet/CSharp/multiplication-operator_2.cs)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Código Não Seguro e Ponteiros](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
+ [Referência de C#](../../../csharp/language-reference/index.md)  
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Código não seguro e ponteiros](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
  [Operadores do C#](../../../csharp/language-reference/operators/index.md)
-

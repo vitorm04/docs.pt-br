@@ -5,33 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - platform invoke, attribute fields
 - attribute fields in platform invoke, CharSet
 - CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a1b0e444ef73deac6f6e353c8e1b67d1cf361ab2
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3e97c640472156c1a47ad125bffeaf39b8eb0762
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="specifying-a-character-set"></a>Especificando um conjunto de caracteres
-O campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> controla o marshaling de cadeia de caracteres e determina como a invocação de plataforma localiza os nomes de função em uma DLL. Este tópico descreve os dois comportamentos.  
+O campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> controla o marshaling de cadeia de caracteres e determina como a invocação de plataforma localiza os nomes de função em uma DLL. Este tópico descreve os dois comportamentos.  
   
  Algumas APIs exportam duas versões de funções que usam argumentos de cadeia de caracteres: estreita (ANSI) e larga (Unicode). A API do Win32, por exemplo, inclui os seguintes nomes do ponto de entrada para a função **MessageBox**:  
   
@@ -54,7 +51,7 @@ O campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayP
   
 -   Correspondência de nomes  
   
-     Quando o campo <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=fullName> é **true**, que é o padrão no [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], a invocação de plataforma procura somente o nome especificado. Por exemplo, se você especificar **MessageBox**, a invocação de plataforma procurará **MessageBox** e falhará quando não conseguir localizar a ortografia exata.  
+     Quando o campo <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> é **true**, que é o padrão no [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], a invocação de plataforma procura somente o nome especificado. Por exemplo, se você especificar **MessageBox**, a invocação de plataforma procurará **MessageBox** e falhará quando não conseguir localizar a ortografia exata.  
   
      Quando o campo **ExactSpelling** é **false**, que é o padrão no C++ e no C#, a invocação de plataforma procura o alias não danificado primeiro (**MessageBox**) e, em seguida, o nome danificado (**MessageBoxA**), se o alias não danificado não é encontrado. Observe que o comportamento de correspondência de nomes do ANSI é diferente do comportamento de correspondência de nomes do Unicode.  
   
@@ -77,7 +74,7 @@ O campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayP
 ## <a name="specifying-a-character-set-in-visual-basic"></a>Especificando um conjunto de caracteres no Visual Basic  
  O exemplo a seguir declara a função **MessageBox** três vezes, cada vez com um comportamento diferente do conjunto de caracteres. É possível especificar o comportamento do conjunto de caracteres no Visual Basic adicionando a palavra-chave **Ansi**, **Unicode** ou **Auto** à instrução de declaração.  
   
- Se você omitir a palavra-chave do conjunto de caracteres, como é feito na primeira instrução de declaração, o campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> usará como padrão o conjunto de caracteres ANSI. A segunda e a terceira instruções no exemplo especificam explicitamente um conjunto de caracteres com uma palavra-chave.  
+ Se você omitir a palavra-chave do conjunto de caracteres, como é feito na primeira instrução de declaração, o campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> usará como padrão o conjunto de caracteres ANSI. A segunda e a terceira instruções no exemplo especificam explicitamente um conjunto de caracteres com uma palavra-chave.  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -98,7 +95,7 @@ End Class
 ```  
   
 ## <a name="specifying-a-character-set-in-c-and-c"></a>Especificando um conjunto de caracteres no C# e no C++  
- O campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> identifica o conjunto de caracteres subjacente como ANSI ou Unicode. O conjunto de caracteres controla como deve ser realizado o marshaling dos argumentos de cadeia de caracteres para um método. Use um dos seguintes formatos para indicar o conjunto de caracteres:  
+ O campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> identifica o conjunto de caracteres subjacente como ANSI ou Unicode. O conjunto de caracteres controla como deve ser realizado o marshaling dos argumentos de cadeia de caracteres para um método. Use um dos seguintes formatos para indicar o conjunto de caracteres:  
   
 ```csharp  
 [DllImport("dllname", CharSet=CharSet.Ansi)]  
@@ -152,8 +149,7 @@ extern "C" int MessageBox(HWND hWnd,
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.InteropServices.DllImportAttribute>   
- [Criando protótipos em código gerenciado](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
- [Exemplos de invocação de plataforma](../../../docs/framework/interop/platform-invoke-examples.md)   
+ <xref:System.Runtime.InteropServices.DllImportAttribute>  
+ [Criando protótipos em código gerenciado](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
+ [Exemplos de invocação de plataforma](../../../docs/framework/interop/platform-invoke-examples.md)  
  [Marshaling de dados com a invocação de plataforma](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
-

@@ -1,44 +1,26 @@
 ---
 title: "Como mostrar portas seriais disponíveis no Visual Basic"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - serial ports, availability
 - My.Computer.Ports.SerialPortNames property
 - My.Computer.Ports object
 - ports, serial port availability
 ms.assetid: eaf2ee5a-8103-4e10-a205-ed1d4db120ba
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1dc12d8ad4c27eff346ccb6a7f5fd2ae3bd76701
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bab6177c788a847b46586db19a525c1a1b36476d
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-show-available-serial-ports-in-visual-basic"></a>Como mostrar portas seriais disponíveis no Visual Basic
 Este tópico descreve como usar `My.Computer.Ports` para mostrar as portas seriais disponíveis do computador no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
@@ -70,8 +52,7 @@ Este tópico descreve como usar `My.Computer.Ports` para mostrar as portas seria
 >  Os nomes das portas retornados por `My.Computer.Ports.SerialPortNames` podem estar incorretos quando executados no Windows 98. Para evitar erros de aplicativo, use o tratamento de exceções, como a instrução `Try...Catch...Finally` ou a instrução `Using`, ao usar os nomes de portas para abrir portas.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.Devices.Ports>   
- [Como discar modems conectados às portas seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)   
- [Como enviar cadeias de caracteres para portas seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)   
+ <xref:Microsoft.VisualBasic.Devices.Ports>  
+ [Como Discar Modems Conectados a Portas Seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
+ [Como Enviar Cadeias de Caracteres para Portas Seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
  [Como Receber Cadeias de Caracteres de Portas Seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)
-

@@ -1,42 +1,24 @@
 ---
 title: "&lt;permission&gt; (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - permission
 - <permission>
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 37bb37ea14edc1f91225f9b04b18b354d99579b6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4b8f109d7e01f6e630f09939161b6a20c3a13f73
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltpermissiongt-c-programming-guide"></a>&lt;permission&gt; (Guia de Programação em C#)
 ## <a name="syntax"></a>Sintaxe  
@@ -60,9 +42,8 @@ ms.lasthandoff: 07/28/2017
  Compile com [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.  
   
 ## <a name="example"></a>Exemplo  
- [!code-cs[csProgGuideDocComments#8](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/permission_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#8](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/permission_1.cs)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
  [Marcas recomendadas para comentários de documentação](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
-

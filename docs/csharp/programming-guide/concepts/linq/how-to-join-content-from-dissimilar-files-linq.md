@@ -1,30 +1,21 @@
 ---
 title: "Como unir conteúdo de arquivos diferentes (LINQ) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: ac5c9f2037e3254c6262efe00fcbff31664dcd70
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 95b2ff43ff5f14e2e3be40bee5463ed648c4c940
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Como unir conteúdo de arquivos diferentes (LINQ) (C#)
 Este exemplo mostra como unir dados de dois arquivos delimitados por vírgulas que compartilham um valor comum que é usado como uma chave correspondente. Essa técnica pode ser útil se você precisa combinar dados de duas planilhas ou de uma planilha e um arquivo com outro formato, em um novo arquivo. Você pode modificar o exemplo para funcionar com qualquer tipo de texto estruturado.  
@@ -140,6 +131,5 @@ Zabokritski, 96, 85, 91, 60
  Crie um projeto que tenha como alvo o .NET Framework versão 3.5 ou posterior, com uma referência a System.Core.dll e diretivas `using` para os namespaces System.Linq e System.IO.  
   
 ## <a name="see-also"></a>Consulte também  
- [LINQ e cadeias de caracteres (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)   
+ [LINQ e cadeias de caracteres (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
  [LINQ e diretórios de arquivos (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
-

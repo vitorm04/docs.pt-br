@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 76883fd9702e475bd6afd9629fb4702ca42395d4
-ms.openlocfilehash: 61eaf6ba83b94724555ca3fee53e3a4d538ee11a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 5fa93919bfc6f7f078fd2de4653e8b9e878a84fc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
 Define um elemento de associação que é usado para configurar pontos de extremidade para [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] que responda a solicitações HTTP em vez de mensagens SOAP de serviços da Web.  
@@ -104,11 +102,10 @@ Define um elemento de associação que é usado para configurar pontos de extrem
  Suporte em [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] para distribuição e do ASP. Integração de AJAX são desenvolvidos com base no modelo de programação da Web. Para obter mais informações sobre o modelo, consulte [modelo de programação do WCF Web HTTP](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.WebHttpBinding>   
- <xref:System.ServiceModel.Configuration.WebHttpBindingElement>   
- [Modelo de programação WCF Web HTTP](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)   
- [Associações](../../../../../docs/framework/wcf/bindings.md)   
- [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
+ <xref:System.ServiceModel.WebHttpBinding>  
+ <xref:System.ServiceModel.Configuration.WebHttpBindingElement>  
+ [Modelo de programação WCF Web HTTP](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [Bindings](../../../../../docs/framework/wcf/bindings.md) (Associações)  
+ [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<associação >](../../../../../docs/framework/misc/binding.md)
-

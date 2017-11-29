@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 676a03678cbdf6fe08e628806df2a1853fb71718
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Como criar um aplicativo ASP.NET baseado em declarações usando a Autenticação do Windows
 ## <a name="applies-to"></a>Aplica-se a  
@@ -150,4 +148,3 @@ ms.lasthandoff: 08/21/2017
 #### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Para testar o aplicativo ASP.NET Web Forms para declarações usando a autenticação do Windows  
   
 1.  Pressione **F5** para compilar e executar o aplicativo. Você deverá ver *Default.aspx* e o nome de sua conta do Windows (incluindo o nome de domínio) já deverá ser exibido como o usuário autenticado no canto superior direito da página. O conteúdo da página deverá incluir uma tabela preenchida com as declarações recuperadas de sua conta do Windows.
-

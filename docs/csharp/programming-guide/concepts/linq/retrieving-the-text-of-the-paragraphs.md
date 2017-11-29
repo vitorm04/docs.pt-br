@@ -1,25 +1,21 @@
 ---
 title: "Recuperando o texto dos parágrafos (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 4d43ad0260406edac4920aad5f14c981de210b09
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b0a6e842359ae42be9e00ba35f6878d3a2a4aac4
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>Recuperando o texto dos parágrafos (C#)
 Este exemplo é criado com base no exemplo anterior, [Recuperando os parágrafos e seus estilos (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md). Esse novo exemplo recupera o texto de cada parágrafo como uma cadeia de caracteres.  
@@ -37,7 +33,7 @@ Este exemplo é criado com base no exemplo anterior, [Recuperando os parágrafos
   
  Para obter instruções para criar o documento de origem deste exemplo, consulte [Criando o documento do Office Open XML de origem (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- Este exemplo usa classes do assembly WindowsBase. Ele usa tipos no namespace <xref:System.IO.Packaging?displayProperty=fullName>.  
+ Este exemplo usa classes do assembly WindowsBase. Ele usa tipos no namespace <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -155,6 +151,5 @@ StyleName:Code >Hello World<
 -   [Refatoração usando um método de extensão (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
+ [Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
  [Execução adiada e avaliação lenta em LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
-

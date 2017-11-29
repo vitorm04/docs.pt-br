@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
+ms.openlocfilehash: a7b7b77622ee4305dde3d126cb2e062055aa9df4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f6daa65c15a35bc84d8d7c07a86f42ffd251274d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Ferramenta de Geração e Edição de Manifesto, cliente gráfico)
 MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de comando Mage.exe, mas com uma interface do usuário (UI) com base no Windows. Com essa ferramenta é possível criar, editar e assinar manifestos de implantação e aplicativo. Novos manifestos criados com MageUI.exe têm o [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] como destino. As versões anteriores de MageUI.exe devem ser usadas para segmentar versões do .NET Framework anteriores. Adicionando ou removendo assemblies de um manifesto ou assinando novamente manifestos existente, MageUI.exe não atualiza o manifesto com o [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] como destino. Para obter mais informações, consulte [Mage.exe (Manifest Generation and Editing Tool)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
@@ -207,7 +200,6 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 |**Select Manifest (Selecionar Manifesto)**|Permite que você escolha o manifesto do aplicativo. Todos os outros campos nesta página serão populados quando você escolher um manifesto do aplicativo.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)   
- [Walkthrough: Manually Deploying a ClickOnce Application](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  (Instruções passo a passo: implantando manualmente um aplicativo ClickOnce)  
+ [Segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)  
+ [Passo a passo: implantando um aplicativo ClickOnce manualmente](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
  [Mage.exe (Manifest Generation and Editing Tool)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
-

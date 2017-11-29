@@ -1,40 +1,19 @@
 ---
 title: Visual Basic
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - programming, Visual Basic
 - Visual Basic
-ms.assetid: 5cc578fe-d9e5-4015-937d-b34b83207072
-caps.latest.revision: 37
-author: dotnet-bot
-ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 38ccf61b488a40d100895d0dd2bb4bdecca7eba5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 64a6edc4c58e96132f20848a066542be57e8667f
-ms.openlocfilehash: cae4d2571bc9bde6239e1324dbe4e725ef5e12c7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="visual-basic-guide"></a>Guia do Visual Basic
 
@@ -42,10 +21,10 @@ O Visual Basic foi desenvolvido para compilar aplicativos fortemente tipados e o
   
  Essa geração do Visual Basic dá continuidade à tradição de oferecer a você uma maneira rápida e fácil de criar aplicativos baseados no .NET Framework.  
   
- Se ainda não tem o Visual Basic, você pode adquirir uma versão do Visual Studio que inclui o Visual Basic gratuitamente no site do [Visual Studio](https://www.visualstudio.com/products/free-developer-offers-vs).  
+ Se ainda não tem o Visual Basic, você pode adquirir uma versão do Visual Studio que inclui o Visual Basic gratuitamente no site do [Visual Studio](https://www.visualstudio.com/products/downloads).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Introdução](../visual-basic/getting-started/index.md)   
+ [Introdução](../visual-basic/getting-started/index.md)  
  Ajuda você a começar a trabalhar listando o que há de novo e o que está disponível em várias edições do produto.  
    
  [Conceitos de programação](../visual-basic/programming-guide/concepts/index.md) apresenta os conceitos de linguagem que são mais úteis para programadores de Visual Basic.
@@ -77,4 +56,3 @@ O Visual Basic foi desenvolvido para compilar aplicativos fortemente tipados e o
   
  [Biblioteca de classes .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)  
  Fornece entrada para a biblioteca de classes, interfaces e tipos de valor que estão incluídos no SDK [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] da Microsoft.
-

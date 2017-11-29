@@ -8,6 +8,10 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - generic methods, type inference
 - generics [.NET Framework], collections
@@ -28,16 +32,15 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 510d7f30853496409caccab69e68f55a6638319e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ef0b251add573c7aaed75b866523b5fdcd3d8e5a
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="generics-in-the-net-framework"></a>Genéricos no .NET Framework
 <a name="top"></a> Os genéricos permitem que você personalize um método, uma classe, uma estrutura ou uma interface para o tipo exato de dados no qual ele atua. Por exemplo, em vez de usar a classe <xref:System.Collections.Hashtable>, que permite que as chaves e os valores sejam de qualquer tipo, você pode usar a classe genérica <xref:System.Collections.Generic.Dictionary%602> e especificar o tipo permitido para a chave e o tipo permitido para o valor. Entre os benefícios de genéricos estão maior reutilização de códigos e segurança de tipos.  
@@ -60,19 +63,23 @@ ms.lasthandoff: 09/05/2017
 ## <a name="defining-and-using-generics"></a>Definindo e usando genéricos  
  Genéricos são classes, estruturas, interfaces e métodos que possuem espaços reservados (parâmetros de tipo) para um ou mais dos tipos que eles armazenam ou usam. Uma classe de coleção genérica pode usar um parâmetro de tipo como um espaço reservado para o tipo de objetos que ela armazena; os parâmetros de tipo aparecem como os tipos de seus campos e os tipos de parâmetro de seus métodos. Um método genérico pode usar seu parâmetro de tipo como o tipo de seu valor de retorno ou como o tipo de um de seus parâmetros formais. O código a seguir ilustra uma definição de classe genérica simples.  
   
- [!code-cpp[Conceptual.Generics.Overview#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#2)] [!code-csharp[Conceptual.Generics.Overview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#2)] [!code-vb[Conceptual.Generics.Overview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#2)]  
+ [!code-cpp[Conceptual.Generics.Overview#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#2)]
+ [!code-csharp[Conceptual.Generics.Overview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#2)]
+ [!code-vb[Conceptual.Generics.Overview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#2)]  
   
  Quando você cria uma instância de uma classe genérica, pode especificar os tipos reais para substituir os parâmetros de tipo. Isso estabelece uma nova classe genérica, conhecida como uma classe genérica construída, com seus tipos escolhidos substituídos em todos os locais em que aparecem os parâmetros de tipo. O resultado é uma classe fortemente tipada que é personalizada para sua escolha de tipos, como mostra o código a seguir.  
   
- [!code-cpp[Conceptual.Generics.Overview#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#3)] [!code-csharp[Conceptual.Generics.Overview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#3)] [!code-vb[Conceptual.Generics.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#3)]  
+ [!code-cpp[Conceptual.Generics.Overview#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#3)]
+ [!code-csharp[Conceptual.Generics.Overview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#3)]
+ [!code-vb[Conceptual.Generics.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#3)]  
   
 <a name="generics_terminology"></a>   
 ### <a name="generics-terminology"></a>Terminologia de genéricos  
  Os seguintes termos são usados para discutir genéricos no .NET Framework:  
   
--   A *definição de tipo genérico* é uma classe, estrutura ou declaração de interface que funciona como um modelo, com espaços reservados para os tipos que ela pode conter ou usar. Por exemplo, a classe <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> pode conter dois tipos: chaves e valores. Como uma definição de tipo genérico é apenas um modelo, não é possível criar instâncias de uma classe, estrutura ou interface que seja uma definição de tipo genérico.  
+-   A *definição de tipo genérico* é uma classe, estrutura ou declaração de interface que funciona como um modelo, com espaços reservados para os tipos que ela pode conter ou usar. Por exemplo, a classe <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> pode conter dois tipos: chaves e valores. Como uma definição de tipo genérico é apenas um modelo, não é possível criar instâncias de uma classe, estrutura ou interface que seja uma definição de tipo genérico.  
   
--   *Parâmetros de tipo genérico* ou *parâmetros de tipo* são os espaços reservados em uma definição de método ou de tipo genérico. O tipo genérico <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> tem dois parâmetros de tipo, `TKey` e `TValue`, que representam os tipos de suas chaves e valores.  
+-   *Parâmetros de tipo genérico* ou *parâmetros de tipo* são os espaços reservados em uma definição de método ou de tipo genérico. O tipo genérico <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> tem dois parâmetros de tipo, `TKey` e `TValue`, que representam os tipos de suas chaves e valores.  
   
 -   Um *tipo genérico construído* ou um *tipo construído* é o resultado de especificação de tipos para os parâmetros de tipo genérico de uma definição de tipo genérico.  
   
@@ -82,15 +89,19 @@ ms.lasthandoff: 09/05/2017
   
 -   *Covariância* e *contravariância* de parâmetros de tipo genérico permitem que você use tipos genéricos construídos cujos argumentos de tipo sejam mais derivados (covariância) ou menos derivados (contravariância) de um tipo construído de destino. A covariância e a contravariância são referidas coletivamente como *variância*. Para obter mais informações, consulte [Covariância e contravariância](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
--   *Restrições* são limites colocados em parâmetros de tipo genérico. Por exemplo, você pode limitar um parâmetro de tipo a tipos que implementam a interface genérica <xref:System.Collections.Generic.IComparer%601?displayProperty=fullName>, para garantir que instâncias do tipo possam ser classificadas. Você também pode restringir parâmetros de tipo a tipos que tenham uma determinada classe base, que tenham um construtor padrão ou que sejam tipos de referência ou tipos de valor. Os usuários do tipo genérico não podem substituir argumentos de tipo que não satisfaçam as restrições.  
+-   *Restrições* são limites colocados em parâmetros de tipo genérico. Por exemplo, você pode limitar um parâmetro de tipo a tipos que implementam a interface genérica <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType>, para garantir que instâncias do tipo possam ser classificadas. Você também pode restringir parâmetros de tipo a tipos que tenham uma determinada classe base, que tenham um construtor padrão ou que sejam tipos de referência ou tipos de valor. Os usuários do tipo genérico não podem substituir argumentos de tipo que não satisfaçam as restrições.  
   
 -   A *definição de método genérico* é um método com duas listas de parâmetros: uma lista de parâmetros de tipo genérico e uma lista de parâmetros formais. Os parâmetros de tipo podem aparecer como o tipo de retorno ou como os tipos de parâmetros formais, como mostra o código a seguir.  
   
- [!code-cpp[Conceptual.Generics.Overview#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#4)] [!code-csharp[Conceptual.Generics.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#4)] [!code-vb[Conceptual.Generics.Overview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#4)]  
+ [!code-cpp[Conceptual.Generics.Overview#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#4)]
+ [!code-csharp[Conceptual.Generics.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#4)]
+ [!code-vb[Conceptual.Generics.Overview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#4)]  
   
  Métodos genéricos podem aparecer em tipos genéricos ou não genéricos. É importante observar que um método não é genérico apenas porque ele pertence a um tipo genérico ou até mesmo porque possui parâmetros formais cujos tipos sejam os parâmetros genéricos do tipo de delimitador. Um método é genérico somente se ele tiver sua própria lista de parâmetros de tipo. No código a seguir, somente o método `G` é genérico.  
   
- [!code-cpp[Conceptual.Generics.Overview#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#5)] [!code-csharp[Conceptual.Generics.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#5)] [!code-vb[Conceptual.Generics.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#5)]  
+ [!code-cpp[Conceptual.Generics.Overview#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#5)]
+ [!code-csharp[Conceptual.Generics.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#5)]
+ [!code-vb[Conceptual.Generics.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#5)]  
   
  [Voltar ao início](#top)  
   
@@ -102,7 +113,9 @@ ms.lasthandoff: 09/05/2017
   
 -   Menos código e código que seja reutilizado com mais facilidade. Não é necessário herdar de um tipo base e substituir membros. Por exemplo, o <xref:System.Collections.Generic.LinkedList%601> está pronto para uso imediato. Por exemplo, você pode criar uma lista vinculada de cadeias de caracteres com a seguinte declaração de variável:  
   
-     [!code-cpp[HowToGeneric#24](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/source2.cpp#24)]  [!code-csharp[HowToGeneric#24](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/source2.cs#24)]  [!code-vb[HowToGeneric#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/source2.vb#24)]  
+     [!code-cpp[HowToGeneric#24](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/source2.cpp#24)]
+     [!code-csharp[HowToGeneric#24](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/source2.cs#24)]
+     [!code-vb[HowToGeneric#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/source2.vb#24)]  
   
 -   Melhor desempenho. Tipos de coleções genéricas geralmente executam melhor para armazenar e manipular tipos de valor, pois não é necessário colocar os tipos de valor em caixa.  
   
@@ -173,7 +186,6 @@ ms.lasthandoff: 09/05/2017
   
  <xref:System.Collections.ObjectModel>  
   
- <xref:System.Reflection.Emit.OpCodes?displayProperty=fullName>  
+ <xref:System.Reflection.Emit.OpCodes?displayProperty=nameWithType>  
   
  [Voltar ao início](#top)
-

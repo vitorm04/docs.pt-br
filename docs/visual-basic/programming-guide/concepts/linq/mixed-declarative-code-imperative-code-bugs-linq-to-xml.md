@@ -1,39 +1,30 @@
 ---
-title: "Misto Bugs de código imperativo código declarativo (LINQ to XML) (Visual Basic) | Documentos do Microsoft"
+title: "Misturado código obrigatório apresenta o código declarativo (LINQ para XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: f12b1ab4-bb92-4b92-a648-0525e45b3ce7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 08edcabc3f0238c499f87c713f205ee5a517a1ea
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2d5d50b5444a9aca429eb5ddb682cd23c468a1e3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-visual-basic"></a>Declarativo misturado código/código obrigatórias (LINQ to XML) (Visual Basic)
-[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] contém vários métodos que permitem que você modifique uma árvore XML diretamente. Você pode adicionar elementos, excluir elementos, modifica o conteúdo de um elemento, adiciona atributos, e assim por diante. Essa interface de programação é descrito em [modificando árvores XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Se você estiver Iterando através de um dos eixos, como <xref:System.Xml.Linq.XContainer.Elements%2A>e você está modificando a árvore XML como você itera através do eixo, você pode acabar com alguns erros estranhas.</xref:System.Xml.Linq.XContainer.Elements%2A>  
+# <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-visual-basic"></a>Misturado declarativa código/erro obrigatórias de código (LINQ para XML) (Visual Basic)
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] contém vários métodos que permitem que você modifique uma árvore XML diretamente. Você pode adicionar elementos, excluir elementos, modifica o conteúdo de um elemento, adiciona atributos, e assim por diante. Esta interface de programação é descrito em [modificando árvores XML (LINQ para XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Se você estiver iterando com um dos eixos, como <xref:System.Xml.Linq.XContainer.Elements%2A>, e você está alterando a árvore XML como você itera através do eixo, você pode acabar com alguns erros estranhas.  
   
  Esse problema é às vezes conhecido como “o problema do Dia De Bruxas”.  
   
 ## <a name="definition-of-the-problem"></a>Definição do problema  
- Quando você escrever qualquer código usando LINQ que itera através de uma coleção, você estiver escrevendo código em um estilo declarativo. É mais aparentado a descrever *que* você deseja, em vez que *como* você deseja realizar. Se você escreve o código que 1) obtém o primeiro elemento, 2) testá-la para alguma condição, 3) altera-a, e 4) coloque-a de novo na lista, então este código seria obrigatório. Você está solicitando que o computador *como* para fazer o que você deseja feito.  
+ Quando você escrever qualquer código usando LINQ que itera através de uma coleção, você estiver escrevendo código em um estilo declarativo. É mais próximo a descrever *o que* você deseja, em vez de *como* deseja que isso seja feito. Se você escreve o código que 1) obtém o primeiro elemento, 2) testá-la para alguma condição, 3) altera-a, e 4) coloque-a de novo na lista, então este código seria obrigatório. Você está informando o computador *como* deseja que isso seja feito.  
   
  Misturar esses estilos de código na mesma operação é o que resulta em problemas. Considere o seguinte:  
   
@@ -66,7 +57,7 @@ Next
   
  Esse código entra em um loop infinito. A declaração de `foreach` itera através do eixo de `Elements()` , adicionando novos elementos para o elemento de `doc` . Acaba também iterar através dos elementos que acabou de adicionar. E como atribuir novos objetos com cada iteração do loop, consumirá se houver qualquer memória disponível.  
   
- Você pode corrigir este problema recebendo a coleção na memória usando o <xref:System.Linq.Enumerable.ToList%2A>operador de consulta padrão, da seguinte maneira:</xref:System.Linq.Enumerable.ToList%2A>  
+ Você pode corrigir este problema recebendo a coleção na memória usando o operador padrão de consulta de <xref:System.Linq.Enumerable.ToList%2A> , como segue:  
   
 ```vb  
 Dim root As XElement = _  
@@ -121,7 +112,7 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
- A solução é novamente chamar <xref:System.Linq.Enumerable.ToList%2A>para materializar a coleção, da seguinte maneira:</xref:System.Linq.Enumerable.ToList%2A>  
+ A solução é novamente chamar <xref:System.Linq.Enumerable.ToList%2A> para materializar a coleção, como segue:  
   
 ```vb  
 Dim root As XElement = _  
@@ -142,7 +133,7 @@ Console.WriteLine(root)
 <Root />  
 ```  
   
- Como alternativa, você pode eliminar a iteração completamente chamando <xref:System.Xml.Linq.XElement.RemoveAll%2A>no elemento pai:</xref:System.Xml.Linq.XElement.RemoveAll%2A>  
+ Como alternativa, você pode eliminar a iteração completamente chamando <xref:System.Xml.Linq.XElement.RemoveAll%2A> no elemento pai:  
   
 ```vb  
 Dim root As XElement = _  
@@ -196,4 +187,3 @@ Console.WriteLine(newRoot)
   
 ## <a name="see-also"></a>Consulte também  
  [Avançada LINQ to XML programação (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-

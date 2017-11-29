@@ -1,38 +1,30 @@
 ---
-title: "Usando variação em delegações (Visual Basic) | Documentos do Microsoft"
+title: "Usando variação em delegações (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5bd3e60031eac713cee3dee1399af8c6b83e6656
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 435591d69e67c4fc4be8e781c5f63e025c71a8cf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-variance-in-delegates-visual-basic"></a>Usando variação em delegações (Visual Basic)
-Quando você atribui um método a um delegado, *covariância* e *contravariância* fornecem flexibilidade para corresponder a um tipo de delegado com uma assinatura de método. Covariância permite que um método para ter o tipo de retorno que seja mais derivado daquele definido no delegado. Contravariância permite que um método que possui tipos de parâmetro que são menos derivados no tipo delegado.  
+Quando você atribui um método a um delegado, a *covariância* e a *contravariância* fornece flexibilidade para corresponder um tipo de delegado a uma assinatura de método. A covariância permite que um método tenha o tipo de retorno mais derivado do que o definido no delegado. A contravariância permite que um método que tem tipos de parâmetro menos derivados do que no tipo delegado.  
   
 ## <a name="example-1-covariance"></a>Exemplo 1: covariância  
   
 ### <a name="description"></a>Descrição  
- Este exemplo demonstra como delegados podem ser usados com métodos que têm tipos de retorno que são derivados do tipo de retorno na assinatura do delegado. O tipo de dados retornado por `DogsHandler` é do tipo `Dogs`, que deriva de `Mammals` tipo definido no delegado.  
+ Este exemplo demonstra como delegados podem ser usados com métodos que têm tipos de retorno que são derivados do tipo de retorno na assinatura do delegado. O tipo de dados retornado por `DogsHandler` é do tipo `Dogs`, que deriva do tipo `Mammals` definido no delegado.  
   
 ### <a name="code"></a>Código  
   
@@ -62,7 +54,7 @@ End Class
 ## <a name="example-2-contravariance"></a>Exemplo 2: contravariância  
   
 ### <a name="description"></a>Descrição  
- Este exemplo demonstra como delegados podem ser usados com métodos que têm parâmetros de um tipo que são tipos base do tipo de parâmetro de assinatura do delegado. Com contravariância, você pode usar um manipulador de eventos em vez de manipuladores separados. Por exemplo, você pode criar um manipulador de eventos que aceita um `EventArgs` parâmetro de entrada e usá-la com um `Button.MouseClick` eventos que envia uma `MouseEventArgs` tipo como um parâmetro e também com um `TextBox.KeyDown` eventos que envia um `KeyEventArgs` parâmetro.  
+ Este exemplo demonstra como delegados podem ser usados com métodos que têm parâmetros de um tipo que são tipos base do tipo de parâmetro de assinatura do delegado. Com a contravariância, você pode usar um manipulador de eventos em vez de manipuladores separados. Por exemplo, você pode criar um manipulador de eventos que aceita um parâmetro de entrada `EventArgs` e usá-lo com um evento `Button.MouseClick` que envia um tipo `MouseEventArgs` como um parâmetro e também com um evento `TextBox.KeyDown` que envia um parâmetro `KeyEventArgs`.  
   
 ### <a name="code"></a>Código  
   
@@ -87,5 +79,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Variação em delegações (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)   
- [Usando variação para delegações Func e Action genérica (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+ [Variação em delegados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)  
+ [Usando variação para delegados genéricos Func e Action (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

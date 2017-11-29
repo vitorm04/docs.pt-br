@@ -5,13 +5,13 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.topic: article
+dev_langs: fsharp
 ms.prod: .net-core
+ms.openlocfilehash: b4612b2b1a218f2bd126240db564258e07ba5231
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: 1c0be8818f045a33cc0ee48e335cc05bf37ace92
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>Bibliotecas do F# de teste de unidade no .NET Core usando dotnet test e xUnit
 
@@ -165,4 +165,3 @@ let sumOfSquares xs =
 ```
 
 Você criou uma pequena biblioteca e um conjunto de testes de unidade para essa biblioteca. Você estruturou a solução para que a adição de novos pacotes e testes fizesse parte do fluxo de trabalho normal. Você concentrou grande parte do seu tempo e esforço em resolver as metas do aplicativo.
-

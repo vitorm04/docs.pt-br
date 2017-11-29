@@ -1,27 +1,22 @@
 ---
-title: "Como: nós irmãos de alterações (XPath-LINQ para XML) (Visual Basic) | Documentos do Microsoft"
+title: "Como: nós irmãos de alterações (XPath-LINQ para XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 73082738-2113-4438-8545-98d5df0927cb
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 615842d7b2fb1ae51d3380ecf928c22a59e42516
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 2bb981cf60d8950de2b5484946b5105dbe817ae3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>Como: nós irmãos de alterações (XPath-LINQ para XML) (Visual Basic)
 Você pode desejar localizar todos os seus irmãos de um nó que têm um nome específico. A coleção resultante pode incluir o nó de contexto se o nó de contexto também tem o nome específico.  
@@ -33,7 +28,7 @@ Você pode desejar localizar todos os seus irmãos de um nó que têm um nome es
 ## <a name="example"></a>Exemplo  
  Este exemplo localiza primeiro um elemento de `Book` , e localiza em todos os elementos irmãos nomeados `Book`. A coleção resultante inclui o nó de contexto.  
   
- Este exemplo usa o seguinte documento XML: [arquivo XML de exemplo: livros (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: livros (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
   
 ```vb  
 Dim books As XDocument = XDocument.Load("Books.xml")  
@@ -83,4 +78,3 @@ Results are identical
   
 ## <a name="see-also"></a>Consulte também  
  [LINQ to XML para XPath usuários (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-

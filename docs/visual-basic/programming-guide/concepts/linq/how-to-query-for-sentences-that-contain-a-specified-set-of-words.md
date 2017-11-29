@@ -1,33 +1,25 @@
 ---
-title: "Como: consultar sentenças que contêm um conjunto especificado de palavras (LINQ) (Visual Basic) | Documentos do Microsoft"
+title: "Como: consultar sentenças que contêm um conjunto especificado de palavras (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a5ae8ced-61fe-4c10-bb8a-95630e50f603
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 31561d586c9c05f502002efdfc455acb55159fed
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 523b1e681c97e14f1d0e49b82a426b0e0e54fa1e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a>Como: consultar sentenças que contêm um conjunto especificado de palavras (LINQ) (Visual Basic)
-Este exemplo mostra como localizar as frases em um arquivo de texto que contêm correspondências para cada um de um conjunto especificado de palavras. Embora a matriz de termos de pesquisa é embutida em código neste exemplo, ele poderia também ser preenchido dinamicamente em tempo de execução. Neste exemplo, a consulta retorna as sentenças que contêm as palavras "Historicamente", "dados" e "integrado".  
+Este exemplo mostra como localizar frases em um arquivo de texto que contenham correspondências para cada conjunto de palavras especificado. Embora a matriz de termos de pesquisa esteja embutida em código neste exemplo, ela também poderia ser populada dinamicamente em tempo de execução. Neste exemplo, a consulta retorna as frases que contêm as palavras "Historically", "data" e "integrated".  
   
 ## <a name="example"></a>Exemplo  
   
@@ -75,12 +67,12 @@ End Class
 ' Historically, the world of data and the world of objects have not been well integrated  
 ```  
   
- A consulta funciona primeiro dividindo o texto em sentenças, e, em seguida, dividindo as sentenças em uma matriz de cadeias de caracteres que contêm cada palavra. Para cada um desses conjuntos de <xref:System.Linq.Enumerable.Distinct%2A>método Remove todas as palavras duplicadas e, em seguida, executa a consulta um <xref:System.Linq.Enumerable.Intersect%2A>operação na matriz de word e o `wordsToMatch` array.</xref:System.Linq.Enumerable.Intersect%2A> </xref:System.Linq.Enumerable.Distinct%2A> Se a contagem de interseção é o mesmo que a contagem da `wordsToMatch` matriz, todas as palavras foram encontradas nas palavras e a frase original é retornada.  
+ A consulta funciona primeiro dividindo o texto em frases e, em seguida, dividindo as sentenças em uma matriz de cadeias de caracteres que contêm cada palavra. Para cada uma dessas matrizes, o método <xref:System.Linq.Enumerable.Distinct%2A> remove todas as palavras duplicadas e, em seguida, a consulta executa uma operação <xref:System.Linq.Enumerable.Intersect%2A> na matriz de palavras e na matriz `wordsToMatch`. Se a contagem da interseção for igual à contagem da matriz `wordsToMatch`, todas as palavras foram encontradas nas palavras e a frase original será retornada.  
   
- Na chamada para <xref:System.String.Split%2A>, as marcas de pontuação para removê-los da cadeia de caracteres usadas como separadores.</xref:System.String.Split%2A> Se você não fizer isso, por exemplo, você poderia ter uma cadeia de caracteres "Historicamente", que não corresponde a "Historicamente" no `wordsToMatch` matriz. Você talvez precise usar separadores adicionais, dependendo dos tipos de pontuação encontrado no texto de origem.  
+ Na chamada para <xref:System.String.Split%2A>, as marcas de pontuação são usadas como separadores para removê-las da cadeia de caracteres. Se não fizer isso, por exemplo, você poderia ter uma cadeia de caracteres "Historically" que não corresponderia a "Historically" na matriz `wordsToMatch`. Talvez você precise usar separadores adicionais, dependendo dos tipos de pontuação encontrados no texto de origem.  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- Criar um projeto que tem como alvo o .NET Framework versão 3.5 ou superior com uma referência a System.Core.dll e uma `Imports` declaração para o namespace System. Linq.  
+ Crie um projeto que tenha como alvo o .NET Framework versão 3.5 ou posterior com uma referência a System.Core.dll e uma instrução `Imports` para o namespace System.Linq.  
   
 ## <a name="see-also"></a>Consulte também  
  [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

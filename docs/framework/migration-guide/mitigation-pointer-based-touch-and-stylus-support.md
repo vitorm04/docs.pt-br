@@ -13,16 +13,15 @@ helpviewer_keywords:
 - WPF retargeting changes
 - WPF pointer-based touch and stylus stack
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 053ff4c5fba7b4f2b5a4c29a35c954e888cb095a
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Mitigação: suporte a toque e caneta com base em ponteiro
 
@@ -65,4 +64,3 @@ Remover esta entrada ou definir seu valor como `false` desabilita essa pilha opc
 ## <a name="see-also"></a>Consulte também
 
 [Alterações de redirecionamento no .NET Framework 4.7](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
-

@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,19 +28,18 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 7c2d95bfae212f658945904a647885ebd303cbc7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cf8d583b3e65c80f2c0eef1f6b3e32befe00c3fe
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="reflection-in-the-net-framework"></a>Reflexão no .NET Framework
-As classes no namespace <xref:System.Reflection>, juntamente com <xref:System.Type?displayProperty=fullName> permitem que você obtenha informações sobre os [assemblies](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) carregados e os tipos definidos neles, como [classes](http://msdn.microsoft.com/en-us/ad7d3561-271e-4546-82fc-e00b059f27a9), [interfaces](http://msdn.microsoft.com/en-us/fd9d5975-5363-4bc9-b883-609f887895e5) e [tipos de valor](http://msdn.microsoft.com/en-us/c9c567f8-8ab1-4d88-834d-00f7d92418de). Você também pode usar a reflexão para criar instâncias de tipo em tempo de execução e para invocá-los e acessá-los. Para tópicos sobre aspectos específicos da reflexão, consulte [Tópicos relacionados](#related_topics) no final dessa visão geral.  
+As classes no namespace <xref:System.Reflection>, juntamente com <xref:System.Type?displayProperty=nameWithType> permitem que você obtenha informações sobre os [assemblies](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) carregados e os tipos definidos neles, como [classes](http://msdn.microsoft.com/en-us/ad7d3561-271e-4546-82fc-e00b059f27a9), [interfaces](http://msdn.microsoft.com/en-us/fd9d5975-5363-4bc9-b883-609f887895e5) e [tipos de valor](http://msdn.microsoft.com/en-us/c9c567f8-8ab1-4d88-834d-00f7d92418de). Você também pode usar a reflexão para criar instâncias de tipo em tempo de execução e para invocá-los e acessá-los. Para tópicos sobre aspectos específicos da reflexão, consulte [Tópicos relacionados](#related_topics) no final dessa visão geral.  
   
  O carregador [Common Language Runtime](../../../docs/standard/clr.md) gerencia os [domínios do aplicativo](../../../docs/framework/app-domains/application-domains.md), que constituem limites definidos em torno de objetos que têm o mesmo escopo de aplicativo. Esse gerenciamento inclui carregar cada assembly no domínio do aplicativo apropriado e controlar o layout da memória da hierarquia de tipo em cada assembly.  
   
@@ -94,10 +92,9 @@ As classes no namespace <xref:System.Reflection>, juntamente com <xref:System.Ty
 |[Emissão de métodos e assemblies dinâmicos](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Explica como gerar métodos dinâmicos e assemblies dinâmicos.|  
   
 ## <a name="reference"></a>Referência  
- <xref:System.Type?displayProperty=fullName>  
+ <xref:System.Type?displayProperty=nameWithType>  
   
  <xref:System.Reflection>  
   
  <xref:System.Reflection.Emit>  
   
-

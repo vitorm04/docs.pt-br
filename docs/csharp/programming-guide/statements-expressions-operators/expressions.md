@@ -1,39 +1,21 @@
 ---
 title: "Expressões (Guia de Programação em C#)"
-ms.date: 2017-05-11
+ms.date: 05/11/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 579851b8c72595ffa5b4cf8267fdc73cd2823d0f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9cfefe047805282ea682e127ffb56528fda48c0a
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="expressions-c-programming-guide"></a>Expressões (Guia de Programação em C#)
 Uma *expressão* é uma sequência de um ou mais operandos e zero ou mais operadores que podem ser avaliados como um valor, objeto, método ou namespace único. As expressões podem consistir de um valor literal, uma invocação de método, um operador e seus operandos ou um *nome simples*. Os nomes simples podem ser o nome de uma variável, um membro de tipo, um parâmetro de método, um namespace ou um tipo.  
@@ -47,7 +29,7 @@ System.Convert.ToInt32("35");
 ```  
   
 ## <a name="expression-values"></a>Valores de expressão  
- Na maioria dos contextos em que as expressões são usadas, por exemplo, em instruções ou parâmetros de método, espera-se que a expressão seja avaliada como algum valor. Se x e y são inteiros, a expressão `x + y` será avaliada como um valor numérico. A expressão `new MyClass()` é avaliada como uma referência a uma nova instância de um objeto `MyClass`. A expressão `myClass.ToString()` é avaliada como uma cadeia de caracteres, porque esse é o tipo de retorno do método. No entanto, embora um nome de namespace seja classificado como uma expressão, ele não é avaliado como um valor e, portanto, nunca pode ser o resultado final de qualquer expressão. Não é possível passar um nome de namespace para um parâmetro de método, usá-lo em uma nova expressão ou atribuí-lo a uma variável. Ele poderá ser usado somente como uma subexpressão em uma expressão maior. Isso também se aplica a tipos (diferentes dos objetos <xref:System.Type?displayProperty=fullName>), a nomes de grupos de métodos (diferentes de métodos específicos) e aos acessadores de eventos [add](../../../csharp/language-reference/keywords/add.md) e [remove](../../../csharp/language-reference/keywords/remove.md).  
+ Na maioria dos contextos em que as expressões são usadas, por exemplo, em instruções ou parâmetros de método, espera-se que a expressão seja avaliada como algum valor. Se x e y são inteiros, a expressão `x + y` será avaliada como um valor numérico. A expressão `new MyClass()` é avaliada como uma referência a uma nova instância de um objeto `MyClass`. A expressão `myClass.ToString()` é avaliada como uma cadeia de caracteres, porque esse é o tipo de retorno do método. No entanto, embora um nome de namespace seja classificado como uma expressão, ele não é avaliado como um valor e, portanto, nunca pode ser o resultado final de qualquer expressão. Não é possível passar um nome de namespace para um parâmetro de método, usá-lo em uma nova expressão ou atribuí-lo a uma variável. Ele poderá ser usado somente como uma subexpressão em uma expressão maior. Isso também se aplica a tipos (diferentes dos objetos <xref:System.Type?displayProperty=nameWithType>), a nomes de grupos de métodos (diferentes de métodos específicos) e aos acessadores de eventos [add](../../../csharp/language-reference/keywords/add.md) e [remove](../../../csharp/language-reference/keywords/remove.md).  
   
  Cada valor tem um tipo associado. Por exemplo, se x e y forem variáveis do tipo `int`, o valor da expressão `x + y` também será tipado como `int`. Se o valor for atribuído a uma variável de um tipo diferente ou se x e y forem tipos diferentes, as regras de conversão de tipo serão aplicadas. Para obter mais informações sobre como essas conversões funcionam, consulte [Conversões e Conversões de Tipo](../../../csharp/programming-guide/types/casting-and-type-conversions.md).  
   
@@ -62,13 +44,13 @@ System.Convert.ToInt32("35");
 ## <a name="literals-and-simple-names"></a>Literais e nomes simples  
  Os dois tipos mais simples de expressões são literais e nomes simples. Um literal é um valor constante que não tem nome. Por exemplo, no exemplo de código a seguir, `5` e `"Hello World"` são valores literais:  
   
- [!code-cs[csProgGuideStatements#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_1.cs)]  
+ [!code-csharp[csProgGuideStatements#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_1.cs)]  
   
  Para obter mais informações sobre literais, consulte [Tipos](../../../csharp/language-reference/keywords/types.md).  
   
  No exemplo anterior, `i` e `s` são nomes simples que identificam variáveis locais. Quando essas variáveis são usadas em uma expressão, o nome da variável é avaliado como o valor armazenado atualmente no local da variável na memória. Isso é mostrado no exemplo a seguir:  
   
- [!code-cs[csProgGuideStatements#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_2.cs)]  
+ [!code-csharp[csProgGuideStatements#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_2.cs)]  
 ## <a name="invocation-expressions"></a>Expressões de invocação  
  No exemplo de código a seguir, a chamada para `DoWork` é uma expressão de invocação.  
   
@@ -95,10 +77,9 @@ O C# dá suporte a *membros aptos para expressão*, o que permite que você forn
  Sempre que o acesso a uma variável, propriedade de objeto ou indexador de objeto for identificado de uma expressão, o valor desse item será usado como o valor da expressão. Uma expressão pode ser colocada em qualquer lugar no C# em que um valor ou o objeto for necessário, desde que a expressão seja avaliada como o tipo solicitado.  
 
 ## <a name="see-also"></a>Consulte também  
- [Guia de programação em C#](../../../csharp/programming-guide/index.md)   
- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)   
- [Delegados](../../../csharp/programming-guide/delegates/index.md)   
- [Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)   
- [Tipos](../../../csharp/programming-guide/types/index.md)   
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [Delegados](../../../csharp/programming-guide/delegates/index.md)  
+ [Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+ [Tipos](../../../csharp/programming-guide/types/index.md)  
  [Expressões de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
-

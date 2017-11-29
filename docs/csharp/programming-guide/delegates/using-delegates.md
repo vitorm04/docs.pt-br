@@ -1,59 +1,40 @@
 ---
 title: "Usando delegados (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- delegates [C#], how to use
+helpviewer_keywords: delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: cef62448388299f310fa26ecb632485b6538c032
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4a003ead83e4eba547981b7156f5d33885d40989
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-delegates-c-programming-guide"></a>Usando delegados (Guia de Programação em C#)
 Um [delegado](../../../csharp/language-reference/keywords/delegate.md) é um tipo que encapsula com segurança um método, semelhante a um ponteiro de função em C e C++. No entanto, ao contrário dos ponteiros de função de C, delegados são orientados a objeto, fortemente tipados e seguros. O tipo de um delegado é definido pelo nome do delegado. O exemplo a seguir declara um delegado chamado `Del` que pode encapsular um método que usa uma [cadeia de caracteres](../../../csharp/language-reference/keywords/string.md) como um argumento e retorna [nulo](../../../csharp/language-reference/keywords/void.md):  
   
- [!code-cs[csProgGuideDelegates#21](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_1.cs)]  
+ [!code-csharp[csProgGuideDelegates#21](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_1.cs)]  
   
  Um objeto delegado é normalmente construído fornecendo-se o nome do método que o delegado encapsulará ou com um [método anônimo](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md). Quando um delegado é instanciado, uma chamada de método feita ao delegado será passada pelo delegado para esse método. Os parâmetros passados para o delegado pelo chamador são passados para o método e o valor de retorno, se houver, do método é retornado ao chamador pelo delegado. Isso é conhecido como invocar o delegado. Um delegado instanciado pode ser invocado como se fosse o método encapsulado em si. Por exemplo:  
   
- [!code-cs[csProgGuideDelegates#22](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_2.cs)]  
+ [!code-csharp[csProgGuideDelegates#22](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_2.cs)]  
   
- [!code-cs[csProgGuideDelegates#23](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_3.cs)]  
+ [!code-csharp[csProgGuideDelegates#23](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_3.cs)]  
   
  Tipos de delegado são derivados da classe <xref:System.Delegate> do .NET Framework. Tipos de delegado são [lacrados](../../../csharp/language-reference/keywords/sealed.md) – não podem ser derivados de – e não é possível derivar classes personalizadas de <xref:System.Delegate>. Como o delegado instanciado é um objeto, ele pode ser passado como um parâmetro ou atribuído a uma propriedade. Isso permite que um método aceite um delegado como um parâmetro e chame o delegado posteriormente. Isso é conhecido como um retorno de chamada assíncrono e é um método comum de notificação de um chamador quando um processo longo for concluído. Quando um delegado é usado dessa maneira, o código que usa o delegado não precisa de conhecimento algum da implementação do método que está sendo usado. A funcionalidade é semelhante ao encapsulamento que as interfaces fornecem.  
   
  Outro uso comum de chamadas de retorno é definir um método de comparação personalizada e passar esse delegado para um método de classificação. Ele permite que o código do chamador se torne parte do algoritmo de classificação. O método de exemplo a seguir usa o tipo `Del` como um parâmetro:  
   
- [!code-cs[csProgGuideDelegates#24](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_4.cs)]  
+ [!code-csharp[csProgGuideDelegates#24](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_4.cs)]  
   
  Em seguida, você pode passar o delegado criado acima para esse método:  
   
- [!code-cs[csProgGuideDelegates#25](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_5.cs)]  
+ [!code-csharp[csProgGuideDelegates#25](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_5.cs)]  
   
  e receber a seguinte saída para o console:  
   
@@ -63,21 +44,21 @@ Um [delegado](../../../csharp/language-reference/keywords/delegate.md) é um tip
   
  Quando um delegado é construído para encapsular um método de instância, o delegado faz referência à instância e ao método. Um delegado não tem conhecimento do tipo de instância além do método que ele encapsula, de modo que um delegado pode se referir a qualquer tipo de objeto desde que haja um método nesse objeto que corresponda à assinatura do delegado. Quando um delegado é construído para encapsular um método estático, ele só faz referência ao método. Considere as seguintes declarações:  
   
- [!code-cs[csProgGuideDelegates#26](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_6.cs)]  
+ [!code-csharp[csProgGuideDelegates#26](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_6.cs)]  
   
  Além do `DelegateMethod` estático mostrado anteriormente, agora temos três métodos que podem ser encapsulados por uma instância `Del`.  
   
  Um delegado pode chamar mais de um método quando invocado. Isso é chamado de multicast. Para adicionar um método extra à lista de métodos do delegado — a lista de invocação — basta adicionar dois delegados usando os operadores de adição ou de atribuição de adição ('+' ou '+ ='). Por exemplo:  
   
- [!code-cs[csProgGuideDelegates#27](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_7.cs)]  
+ [!code-csharp[csProgGuideDelegates#27](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_7.cs)]  
   
  Nesse ponto, `allMethodsDelegate` contém três métodos em sua lista de invocação —`Method1`, `Method2` e `DelegateMethod`. Os três delegados originais, `d1`, `d2` e `d3`, permanecem inalterados. Quando `allMethodsDelegate` é invocado, os três métodos são chamados na ordem. Se o delegado usar parâmetros de referência, a referência será passada em sequência para cada um dos três métodos por vez, e quaisquer alterações em um método serão visíveis no próximo método. Quando algum dos métodos gerar uma exceção que não foi detectada dentro do método, essa exceção será passada ao chamador do delegado e nenhum método subsequente na lista de invocação será chamado. Se o delegado tiver um valor de retorno e/ou parâmetros de saída, ele retornará o valor de retorno e os parâmetros do último método invocado. Para remover um método da lista de invocação, use operador a decremento ou de atribuição de decremento ('-' ou ' '-=''). Por exemplo:  
   
- [!code-cs[csProgGuideDelegates#28](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_8.cs)]  
+ [!code-csharp[csProgGuideDelegates#28](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_8.cs)]  
   
  Como os tipos de delegados são derivados de `System.Delegate`, os métodos e as propriedades definidos por essa classe podem ser chamados no delegado. Por exemplo, para localizar o número de métodos na lista de invocação do delegado, é possível escrever:  
   
- [!code-cs[csProgGuideDelegates#29](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_9.cs)]  
+ [!code-csharp[csProgGuideDelegates#29](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_9.cs)]  
   
  Delegados com mais de um método em sua lista de invocação derivam de <xref:System.MulticastDelegate>, que é uma subclasse de `System.Delegate`. O código acima funciona em ambos os casos, pois as classes oferecem suporte à `GetInvocationList`.  
   
@@ -85,13 +66,12 @@ Um [delegado](../../../csharp/language-reference/keywords/delegate.md) é um tip
   
  A comparação de delegados de dois tipos diferentes atribuídos no tempo de compilação resultará em um erro de compilação. Se as instâncias de delegado forem estaticamente do tipo `System.Delegate`, então a comparação será permitida, mas retornará false no tempo de execução. Por exemplo:  
   
- [!code-cs[csProgGuideDelegates#30](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_10.cs)]  
+ [!code-csharp[csProgGuideDelegates#30](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_10.cs)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Delegados](../../../csharp/programming-guide/delegates/index.md)   
- [Usando variação em delegados](http://msdn.microsoft.com/library/e6acad03-93e0-4efb-a158-8696d5eb4ecf)   
- [Variação em delegados](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)   
- [Usando variação para delegados genéricos Func e Action](http://msdn.microsoft.com/library/e69c4f39-09aa-4c6d-a752-08cc767d8290)   
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Delegados](../../../csharp/programming-guide/delegates/index.md)  
+ [Usando Variação em Delegações](http://msdn.microsoft.com/library/e6acad03-93e0-4efb-a158-8696d5eb4ecf)  
+ [Variação em Delegações](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)  
+ [Usando Variação para Delegações Genéricas Func e Action](http://msdn.microsoft.com/library/e69c4f39-09aa-4c6d-a752-08cc767d8290)  
  [Eventos](../../../csharp/programming-guide/events/index.md)
-

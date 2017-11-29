@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 9f1f41a7-2954-49d3-a2c0-62b6ef4d40ab
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: e069c1636004896bfb193fd70a352195ba045865
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3bc0fc4e099540a87832b225aa0a3c262c54e9c3
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assembly-location"></a>Local de um assembly
 O local de um assembly determina se o Common Language Runtime pode localizá-lo quando referenciado, bem como pode determinar se o assembly pode ser compartilhado com outros assemblies. Você pode implantar um assembly nos seguintes locais:  
@@ -40,8 +38,7 @@ O local de um assembly determina se o Common Language Runtime pode localizá-lo 
      Um assembly implantado em um servidor HTTP deve ter um nome forte; você aponta para o assembly na seção de base de código do arquivo de configuração de aplicativo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)   
- [Cache de assembly global](../../../docs/framework/app-domains/gac.md)   
- [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
+ [Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)  
+ [Cache de assembly global](../../../docs/framework/app-domains/gac.md)  
+ [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)
-

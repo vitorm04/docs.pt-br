@@ -1,30 +1,21 @@
 ---
 title: Habilitando uma fonte de dados para consulta LINQ1
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: bbb21c5cc0367e0bdc0dd935a5c91538c18c071b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 86818768e01574bc9a3aebcd09b8e282c92ec18d
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Habilitando uma fonte de dados para consulta LINQ
 Há várias formas de estender o [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para permitir que qualquer fonte de dados seja consultada no padrão [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. A fonte de dados pode ser uma estrutura de dados, um serviço Web, um sistema de arquivos ou um banco de dados, apenas para citar algumas opções. O padrão [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] torna fácil para os clientes consultarem uma fonte de dados para a qual a consulta do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] está habilitada, porque a sintaxe e o padrão de consulta não mudam. As formas nas quais o [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] pode ser estendido para essas fontes de dados incluem as seguintes:  
@@ -57,9 +48,8 @@ Há várias formas de estender o [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md
  Um provedor complexo de `IQueryable`, como o provedor de [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], poderia traduzir consultas completas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para uma linguagem de consultas expressiva, como SQL. Um provedor complexo é mais geral do que um provedor menos complexo porque pode manipular uma variedade mais ampla de perguntas na consulta. Ele também possui um sistema de tipos abertos e, consequentemente, deve conter uma infraestrutura extensiva para mapear tipos definidos pelo usuário. Desenvolver um provedor complexo requer uma quantidade significativa de esforço.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Linq.IQueryable%601>   
- <xref:System.Collections.Generic.IEnumerable%601>   
- <xref:System.Linq.Enumerable>   
- [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
+ <xref:System.Linq.IQueryable%601>  
+ <xref:System.Collections.Generic.IEnumerable%601>  
+ <xref:System.Linq.Enumerable>  
+ [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
  [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-

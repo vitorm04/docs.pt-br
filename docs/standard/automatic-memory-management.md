@@ -18,16 +18,15 @@ helpviewer_keywords:
 - managed heap
 - runtime, automatic memory management
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 7f8ee49861902002e69af96168def5883d73c3a5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8b06d21006b95b385792785cafaf75fa3e8cf4b1
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="automatic-memory-management"></a>Gerenciamento automático de memória
 O gerenciamento automático de memória é um dos serviços que o Common Language Runtime fornece durante a [Execução gerenciada](../../docs/standard/managed-execution-process.md). O coletor de lixo do Common Language Runtime gerencia a alocação e a liberação de memória para um aplicativo. Para desenvolvedores, isso significa que você não tem que escrever código para executar tarefas de gerenciamento de memória quando desenvolver aplicativos gerenciados. O gerenciamento automático de memória pode eliminar problemas comuns, como esquecer de liberar um objeto e causar um vazamento de memória ou tentar acessar a memória de um objeto que já tinha sido liberado. Esta seção descreve como o coletor de lixo aloca e libera memória.  
@@ -41,7 +40,7 @@ O gerenciamento automático de memória é um dos serviços que o Common Languag
 ## <a name="releasing-memory"></a>Liberando memória  
  O mecanismo de otimização do coletor de lixo determina o melhor momento para executar uma coleta com base nas alocações que estão sendo feitas. Quando o coletor de lixo executa uma coleta, ele libera a memória dos objetos que não estão mais sendo usados pelo aplicativo. Ele determina quais objetos não estão mais sendo usados examinando as raízes do aplicativo. Cada aplicativo tem um conjunto de raízes. Cada raiz refere-se a um objeto no heap gerenciado ou é definida como nula. As raízes de um aplicativo incluem campos estáticos, variáveis locais e parâmetros na pilha de um thread, além de registros de CPU. O coletor de lixo tem acesso à lista de raízes ativas mantidas pelo tempo de execução e pelo [compilador JIT (Just-In-Time)](../../docs/standard/managed-execution-process.md). Usando essa lista, ele examina as raízes de um aplicativo e, no processo, cria um gráfico que contém todos os objetos que possam ser alcançados nas raízes.  
   
- Objetos que não estão no gráfico são inacessíveis nas raízes do aplicativo. O coletor de lixo considera lixo os objetos inacessíveis e liberará a memória alocada para eles. Durante uma coleta, o coletor de lixo examina o heap gerenciado, procurando os blocos de espaço de endereço ocupados por objetos inacessíveis. Na medida em que descobre cada objeto inacessível, ele usa uma função de cópia de memória para compactar os objetos acessíveis na memória, liberando os blocos de espaços de endereço alocados para objetos inacessíveis. Uma vez que a memória dos objetos acessíveis tenha sido compactada, o coletor de lixo faz as correções necessárias no ponteiro de forma que as raízes do aplicativo apontem para os objetos em seus novos locais. Ele também posiciona o ponteiro do heap gerenciado após o último objeto acessível. Observe que memória é compactada somente se uma coleta descobre um número significativo de objetos inacessíveis. Se todos os objetos no heap gerenciado sobrevivem a uma coleta, não há necessidade de compactação de memória.  
+ Objetos que não estão no gráfico são inacessíveis a partir das raízes do aplicativo. O coletor de lixo considera lixo os objetos inacessíveis e liberará a memória alocada para eles. Durante uma coleta, o coletor de lixo examina o heap gerenciado, procurando os blocos de espaço de endereço ocupados por objetos inacessíveis. Na medida em que descobre cada objeto inacessível, ele usa uma função de cópia de memória para compactar os objetos acessíveis na memória, liberando os blocos de espaços de endereço alocados para objetos inacessíveis. Uma vez que a memória dos objetos acessíveis tenha sido compactada, o coletor de lixo faz as correções necessárias no ponteiro de forma que as raízes do aplicativo apontem para os objetos em seus novos locais. Ele também posiciona o ponteiro do heap gerenciado após o último objeto acessível. Observe que memória é compactada somente se uma coleta descobre um número significativo de objetos inacessíveis. Se todos os objetos no heap gerenciado sobrevivem a uma coleta, não há necessidade de compactação de memória.  
   
  Para melhorar o desempenho, o tempo de execução aloca memória para objetos grandes em um heap separado. O coletor de lixo automaticamente libera a memória para objetos grandes. No entanto, para evitar mover objetos grandes na memória, essa memória não é compactada.  
   
@@ -60,7 +59,6 @@ O gerenciamento automático de memória é um dos serviços que o Common Languag
  Para a maioria dos objetos que seu aplicativo cria, você pode confiar no coletor de lixo para executar automaticamente as tarefas de gerenciamento de memória necessárias. Entretanto, recursos não gerenciados requerem limpeza explícita. O tipo mais comum de recursos não gerenciados é um objeto que encapsula um recurso do sistema operacional, como um identificador de arquivo, um identificador de janela ou uma conexão de rede. Embora o coletor de lixo seja capaz de acompanhar o tempo de vida de um objeto gerenciado que encapsule um recurso não gerenciado, ele não tem conhecimento específico sobre como limpar o recurso. Quando você cria um objeto que encapsula um recurso não gerenciado, é recomendável fornecer o código necessário para limpar o recurso não gerenciado em um método público **Dispose**. Ao fornecer um método **Dispose**, você permite que usuários do seu objeto liberem, explicitamente, sua memória quando terminarem com o objeto. Quando usa um objeto que encapsula um recurso não gerenciado, você deve estar ciente de **Dispose** e chamá-lo conforme necessário. Para obter mais informações sobre a limpeza de recursos não gerenciados e um exemplo de um padrão de design para implementar **Dispose**, consulte [Coleta de lixo](../../docs/standard/garbage-collection/index.md).  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.GC>   
- [Coleta de lixo](../../docs/standard/garbage-collection/index.md)   
+ <xref:System.GC>  
+ [Coleta de lixo](../../docs/standard/garbage-collection/index.md)  
  [Processo de execução gerenciada](../../docs/standard/managed-execution-process.md)
-

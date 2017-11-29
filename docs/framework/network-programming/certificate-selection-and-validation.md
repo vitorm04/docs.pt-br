@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6c926968b9cc5e5b0bf8db0c6bac88e676f45375
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: db75c3288b8247f0717c4792c57bfb30bb2e4416
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="certificate-selection-and-validation"></a>Seleção e validação de certificado
 As classes <xref:System.Net> dão suporte a várias maneiras de selecionar e validar <xref:System.Security.Cryptography.X509Certificates> para conexões SSL. Um cliente pode selecionar um ou mais certificados para se autenticar em um servidor. Um servidor pode exigir que um certificado do cliente tenha um ou mais atributos específicos para autenticação.  
@@ -68,6 +62,5 @@ As classes <xref:System.Net> dão suporte a várias maneiras de selecionar e val
  Além dessas ferramentas, as classes <xref:System.Security.Cryptography.X509Certificates.X509Certificate> e <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> fornecem métodos para carregar um certificado do sistema de arquivos.  
   
 ## <a name="see-also"></a>Consulte também  
- [Segurança na programação de rede](../../../docs/framework/network-programming/security-in-network-programming.md)   
+ [Segurança na programação de rede](../../../docs/framework/network-programming/security-in-network-programming.md)  
  [Programação de rede no .NET Framework](../../../docs/framework/network-programming/index.md)
-

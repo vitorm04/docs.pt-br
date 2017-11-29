@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - global assembly cache, about
 - access control lists [.NET Framework]
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 9ca51a06e6e7ec89576facf3a70c789325fd893c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bad9e339896b0d62dce75a4044b18f3ae6a69332
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="global-assembly-cache"></a>Cache de assemblies global
 Cada computador onde o Common Language Runtime está instalado tem um cache de código da máquina chamado cache de assembly global. O cache de assembly global armazena assemblies projetados especificamente para serem compartilhados por vários aplicativos no computador.  
@@ -53,7 +51,6 @@ Cada computador onde o Common Language Runtime está instalado tem um cache de c
  Assemblies implantados no cache de assembly global devem ter um nome forte. Quando um assembly é adicionado ao cache de assembly global, são executadas verificações de integridade em todos os arquivos que compõem o assembly. O cache executa essas verificações de integridade para garantir que um assembly não tenha sido adulterado, por exemplo, quando um arquivo é alterado, mas o manifesto não reflete a alteração.  
   
 ## <a name="see-also"></a>Consulte também  
- [Assemblies no Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)   
- [Como trabalhar com assemblies e o cache de assembly global](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)   
+ [Assemblies no Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [Como trabalhar com assemblies e o cache de assembly global](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
  [Assemblies de nomes fortes](../../../docs/framework/app-domains/strong-named-assemblies.md)
-

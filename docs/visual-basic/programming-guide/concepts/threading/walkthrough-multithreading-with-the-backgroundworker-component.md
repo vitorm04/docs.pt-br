@@ -1,71 +1,63 @@
 ---
-title: Multithreading com o componente BackgroundWorker (Visual Basic) | Documentos do Microsoft
+title: Multithreading com o componente BackgroundWorker (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e4cd9b2a-f924-470e-a16e-50274709b40e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3686eb230349876f6cfffd2ad94ed1f547779ab1
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: bb0734b4bbf3f8bf5b27305754829f1a9f29f42a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-visual-basic"></a>Passo a passo: Multithreading com o componente BackgroundWorker (Visual Basic)
-Este passo a passo demonstra como criar um aplicativo Windows Forms com multithread que procura um arquivo de texto por ocorrências de uma palavra. Ele demonstra:  
+Este passo a passo demonstra como criar um aplicativo Windows Forms com multithread que pesquisa um arquivo de texto para ocorrências de uma palavra. Ele demonstra:  
   
--   Definir uma classe com um método que pode ser chamado pelo <xref:System.ComponentModel.BackgroundWorker>componente.</xref:System.ComponentModel.BackgroundWorker>  
+-   Defina uma classe com um método que possa ser chamado pelo componente <xref:System.ComponentModel.BackgroundWorker>.  
   
--   Manipulação de eventos gerados pelo <xref:System.ComponentModel.BackgroundWorker>componente.</xref:System.ComponentModel.BackgroundWorker>  
+-   Manipular eventos gerados pelo componente <xref:System.ComponentModel.BackgroundWorker>.  
   
--   Iniciando um <xref:System.ComponentModel.BackgroundWorker>componentes para executar um método.</xref:System.ComponentModel.BackgroundWorker>  
+-   Iniciar um componente <xref:System.ComponentModel.BackgroundWorker> para executar um método.  
   
--   Implementando um `Cancel` botão que interrompe o <xref:System.ComponentModel.BackgroundWorker>componente.</xref:System.ComponentModel.BackgroundWorker>  
+-   Implementar um botão `Cancel` que interrompe o componente <xref:System.ComponentModel.BackgroundWorker>.  
   
 ### <a name="to-create-the-user-interface"></a>Para criar a interface do usuário  
   
-1.  Abra um novo projeto de aplicativo do Windows Forms do Visual Basic e crie um formulário chamado `Form1`.  
+1.  Abra um novo projeto de aplicativo Windows Forms Visual Basic e crie um formulário denominado `Form1`.  
   
-2.  Adicione dois botões e quatro caixas de texto para `Form1`.  
+2.  Adicione dois botões e quatro caixas de texto a `Form1`.  
   
 3.  Nomeie os objetos como mostrado na tabela a seguir.  
   
     |Objeto|Propriedade|Configuração|  
     |------------|--------------|-------------|  
-    |Primeiro botão|`Name`, `Text`|Iniciar, início|  
-    |Segundo botão|`Name`, `Text`|Cancelar, cancelar|  
-    |Primeira caixa de texto|`Name`, `Text`|Arquivo de origem, ""|  
+    |Primeiro botão|`Name`, `Text`|Iniciar, Iniciar|  
+    |Segundo botão|`Name`, `Text`|Cancelar, Cancelar|  
+    |Primeira caixa de texto|`Name`, `Text`|SourceFile, ""|  
     |Segunda caixa de texto|`Name`, `Text`|CompareString, ""|  
     |Terceira caixa de texto|`Name`, `Text`|WordsCounted, "0"|  
     |Quarta caixa de texto|`Name`, `Text`|LinesCounted, "0"|  
   
-4.  Adicione um rótulo ao lado de cada caixa de texto. Definir o `Text` propriedade para cada rótulo como mostrado na tabela a seguir.  
+4.  Adicione um rótulo ao lado de cada caixa de texto. Defina a propriedade `Text` para cada rótulo conforme mostrado na tabela a seguir.  
   
     |Objeto|Propriedade|Configuração|  
     |------------|--------------|-------------|  
     |Primeiro rótulo|`Text`|Arquivo de Origem|  
-    |Segundo rótulo|`Text`|Comparação de cadeia de caracteres|  
-    |Terceiro rótulo|`Text`|Correspondência de palavras|  
-    |Rótulo|`Text`|Linhas contadas|  
+    |Segundo rótulo|`Text`|Comparar cadeia de caracteres|  
+    |Terceiro rótulo|`Text`|Palavras correspondentes|  
+    |Quarto rótulo|`Text`|Linhas contadas|  
   
 ### <a name="to-create-a-backgroundworker-component-and-subscribe-to-its-events"></a>Para criar um componente BackgroundWorker e assinar seus eventos  
   
-1.  Adicionar um <xref:System.ComponentModel.BackgroundWorker>componente do **componentes** seção o **ToolBox** ao formulário.</xref:System.ComponentModel.BackgroundWorker> Ele será exibido na bandeja de componentes do formulário.  
+1.  Adicionar um componente <xref:System.ComponentModel.BackgroundWorker> da seção **Componentes** da **Caixa de ferramentas** ao formulário. Ele será exibido na bandeja de componentes do formulário.  
   
 2.  Defina as seguintes propriedades para o objeto BackgroundWorker1.  
   
@@ -76,11 +68,11 @@ Este passo a passo demonstra como criar um aplicativo Windows Forms com multithr
   
 ### <a name="to-define-the-method-that-will-run-on-a-separate-thread"></a>Para definir o método que será executado em um thread separado  
   
-1.  Do **projeto** menu, escolha **Adicionar classe** para adicionar uma classe ao projeto. A caixa de diálogo **Adicionar Novo Item** é exibida.  
+1.  No menu **Projeto**, escolha **Adicionar Classe** para adicionar uma classe ao projeto. A caixa de diálogo **Adicionar Novo Item** é exibida.  
   
-2.  Selecione **classe** da janela de modelos e digite `Words.vb` no campo nome.  
+2.  Selecione **Classe** na janela de modelos e insira `Words.vb` no campo de nome.  
   
-3.  Clique em **Adicionar**. O `Words` classe é exibida.  
+3.  Clique em **Adicionar**. A classe `Words` é exibida.  
   
 4.  Adicione o seguinte código à classe `Words`:  
   
@@ -171,7 +163,7 @@ Este passo a passo demonstra como criar um aplicativo Windows Forms com multithr
     End Class  
     ```  
   
-### <a name="to-handle-events-from-the-thread"></a>Para manipular eventos do encadeamento  
+### <a name="to-handle-events-from-the-thread"></a>Para manipular eventos do thread  
   
 -   Adicione os seguintes manipuladores de eventos ao seu formulário principal:  
   
@@ -205,9 +197,9 @@ Este passo a passo demonstra como criar um aplicativo Windows Forms com multithr
     End Sub  
     ```  
   
-### <a name="to-start-and-call-a-new-thread-that-runs-the-wordcount-method"></a>Para iniciar e chamar um novo encadeamento que executa o método WordCount  
+### <a name="to-start-and-call-a-new-thread-that-runs-the-wordcount-method"></a>Para iniciar e chamar um novo thread que executa o método WordCount  
   
-1.  Adicione os seguintes procedimentos para o seu programa:  
+1.  Adicione os procedimentos a seguir ao programa:  
   
     ```vb  
     Private Sub BackgroundWorker1_DoWork(   
@@ -241,7 +233,7 @@ Este passo a passo demonstra como criar um aplicativo Windows Forms com multithr
     End Sub  
     ```  
   
-2.  Chamar o `StartThread` método a partir de `Start` botão no formulário:  
+2.  Chame o método `StartThread` no botão `Start` no formulário:  
   
     ```vb  
     Private Sub Start_Click() Handles Start.Click  
@@ -249,9 +241,9 @@ Este passo a passo demonstra como criar um aplicativo Windows Forms com multithr
     End Sub  
     ```  
   
-### <a name="to-implement-a-cancel-button-that-stops-the-thread"></a>Para implementar um botão Cancelar que para o encadeamento  
+### <a name="to-implement-a-cancel-button-that-stops-the-thread"></a>Para implementar um botão Cancelar que para o thread  
   
--   Chamar o `StopThread` procedimento o `Click` manipulador de eventos para o `Cancel` botão.  
+-   Chame o procedimento `StopThread` do manipulador de eventos `Click` para o botão `Cancel`.  
   
     ```vb  
     Private Sub Cancel_Click() Handles Cancel.Click  
@@ -261,30 +253,30 @@ Este passo a passo demonstra como criar um aplicativo Windows Forms com multithr
     ```  
   
 ## <a name="testing"></a>Testes  
- Agora você pode testar o aplicativo para verificar se que ele funciona corretamente.  
+ Agora você pode testar o aplicativo para verificar se ele funciona corretamente.  
   
 #### <a name="to-test-the-application"></a>Para testar o aplicativo  
   
 1.  Pressione F5 para executar o aplicativo.  
   
-2.  Quando o formulário for exibido, insira o caminho para o arquivo que você deseja testar a `sourceFile` caixa. Por exemplo, supondo que o arquivo de teste é chamado Test. txt, entre c:\test.txt..  
+2.  Quando o formulário for exibido, insira o caminho do arquivo que deseja testar na caixa `sourceFile`. Por exemplo, supondo que o arquivo de teste seja chamado Test.txt, insira C:\Test.txt.  
   
-3.  Na segunda caixa de texto, digite uma palavra ou frase para o aplicativo procurar o arquivo de texto.  
+3.  Na segunda caixa de texto, digite uma palavra ou frase para o aplicativo pesquisar no arquivo de texto.  
   
-4.  Clique o `Start` botão. O `LinesCounted` botão deve começar a incrementar imediatamente. O aplicativo exibirá a mensagem "Finished Counting" quando estiver pronto.  
+4.  Clique no botão `Start`. O botão `LinesCounted` deve começar a incrementar imediatamente. O aplicativo exibirá a mensagem "Contagem Finalizada" quando tiver terminado.  
   
 #### <a name="to-test-the-cancel-button"></a>Para testar o botão Cancelar  
   
-1.  Pressione F5 para iniciar o aplicativo e insira a arquivo nome e procure uma palavra como descrito no procedimento anterior. Certifique-se de que o arquivo escolhido é grande o suficiente para garantir que você tenha tempo para cancelar o procedimento antes de ser concluído.  
+1.  Pressione F5 para iniciar o aplicativo e insira o nome do arquivo e a palavra de pesquisa conforme descrito no procedimento anterior. Certifique-se de que o arquivo escolhido seja grande o suficiente para garantir que você terá tempo para cancelar o procedimento antes de ele ser concluído.  
   
-2.  Clique o `Start` botão para iniciar o aplicativo.  
+2.  Clique no botão `Start` para iniciar o aplicativo.  
   
-3.  Clique o `Cancel` botão. O aplicativo deve parar de contar imediatamente.  
+3.  Clique no botão `Cancel`. O aplicativo deve parar de contar imediatamente.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Este aplicativo contém um tratamento de erros básicos. Ele detecta cadeias de caracteres de pesquisa em branco. Você pode fazer esse programa mais robusto manipulando outros erros, como exceder o número máximo de palavras ou linhas que podem ser contadas.  
+ Este aplicativo contém um tratamento de erro básico. Ele detecta cadeias de caracteres de pesquisa em branco. Você pode tornar esse programa mais robusto tratando outros erros, como exceder o número máximo de palavras ou linhas que podem ser contadas.  
   
 ## <a name="see-also"></a>Consulte também  
- [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)   
- [Passo a passo: Criando um componente Multithreaded simples com o Visual Basic](http://msdn.microsoft.com/library/05693b70-3566-4d91-9f2c-c9bc4ccb3001)   
+ [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)  
+ [Passo a passo: Criação de um componente Multithreaded simples com o Visual Basic](http://msdn.microsoft.com/library/05693b70-3566-4d91-9f2c-c9bc4ccb3001)  
  [Como realizar e cancelar a assinatura de eventos](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)

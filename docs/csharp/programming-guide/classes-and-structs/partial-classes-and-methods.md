@@ -1,40 +1,22 @@
 ---
 title: "Classes e métodos partial (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 662b3308c3baa429ed29adca750cbb9b143b79dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 41b07af83faa6af23695f3719aae29183c35a417
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Classes e métodos partial (Guia de Programação em C#)
 É possível dividir a definição de uma [classe](../../../csharp/language-reference/keywords/class.md) ou [struct](../../../csharp/language-reference/keywords/struct.md), uma [interface](../../../csharp/language-reference/keywords/interface.md) ou um método em dois ou mais arquivos de origem. Cada arquivo de origem contém uma seção da definição de tipo ou método e todas as partes são combinadas quando o aplicativo é compilado.  
@@ -48,7 +30,7 @@ ms.lasthandoff: 09/25/2017
   
 -   Para dividir uma definição de classe, use o modificador de palavra-chave [partial](../../../csharp/language-reference/keywords/partial-type.md), como mostrado aqui:  
   
- [!code-cs[csProgGuideObjects#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_1.cs)]  
+ [!code-csharp[csProgGuideObjects#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_1.cs)]  
   
  A palavra-chave `partial` indica que outras partes da classe, struct ou interface podem ser definidas no namespace. Todas as partes devem usar a palavra-chave `partial`. Todas as partes devem estar disponíveis em tempo de compilação para formar o tipo final. Todas as partes devem ter a mesma acessibilidade, tais como `public`, `private` e assim por diante.  
   
@@ -61,15 +43,15 @@ ms.lasthandoff: 09/25/2017
   
  O exemplo a seguir mostra que tipos aninhados podem ser parciais, mesmo se o tipo no qual eles estão aninhados não for parcial.  
   
- [!code-cs[csProgGuideObjects#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_2.cs)]  
+ [!code-csharp[csProgGuideObjects#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_2.cs)]  
   
  Em tempo de compilação, atributos de definições de tipo parcial são mesclados. Por exemplo, considere as declarações a seguir:  
   
- [!code-cs[csProgGuideObjects#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_3.cs)]  
+ [!code-csharp[csProgGuideObjects#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_3.cs)]  
   
  Elas são equivalentes às seguintes declarações:  
   
- [!code-cs[csProgGuideObjects#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_4.cs)]  
+ [!code-csharp[csProgGuideObjects#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_4.cs)]  
   
  Os itens a seguir são mesclados de todas as definições de tipo parcial:  
   
@@ -85,24 +67,24 @@ ms.lasthandoff: 09/25/2017
   
  Por exemplo, considere as declarações a seguir:  
   
- [!code-cs[csProgGuideObjects#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_5.cs)]  
+ [!code-csharp[csProgGuideObjects#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_5.cs)]  
   
  Elas são equivalentes às seguintes declarações:  
   
- [!code-cs[csProgGuideObjects#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_6.cs)]  
+ [!code-csharp[csProgGuideObjects#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_6.cs)]  
   
 ### <a name="restrictions"></a>Restrições  
  Há várias regras para seguir quando você está trabalhando com definições de classes parciais:  
   
 -   Todas as definições de tipo parcial que devem ser partes do mesmo tipo devem ser modificadas com `partial`. Por exemplo, as seguintes declarações de classe geram um erro:  
   
-     [!code-cs[csProgGuideObjects#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_7.cs)]  
+     [!code-csharp[csProgGuideObjects#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_7.cs)]  
   
 -   O modificador `partial` só pode aparecer imediatamente antes das palavras-chave `class`, `struct` ou `interface`.  
   
 -   Tipos parciais aninhados são permitidos em definições de tipo parcial, conforme ilustrado no exemplo a seguir:  
   
-     [!code-cs[csProgGuideObjects#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_8.cs)]  
+     [!code-csharp[csProgGuideObjects#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_8.cs)]  
   
 -   Todas as definições de tipo parcial que devem ser partes do mesmo tipo devem ser definidas no mesmo assembly e no mesmo módulo (arquivo .dll ou .exe). Definições parciais não podem abranger vários módulos.  
   
@@ -136,7 +118,7 @@ ms.lasthandoff: 09/25/2017
  No exemplo a seguir, os campos e o construtor da classe, `CoOrds`, são declarados em uma definição de classe parcial e o membro, `PrintCoOrds`, é declarado em outra definição de classe parcial.  
   
 ### <a name="code"></a>Código  
- [!code-cs[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_9.cs)]  
+ [!code-csharp[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_9.cs)]  
   
 ## <a name="example-2"></a>Exemplo 2  
   
@@ -144,7 +126,7 @@ ms.lasthandoff: 09/25/2017
  O exemplo a seguir mostra que você também pode desenvolver interfaces e structs parciais.  
   
 ### <a name="code"></a>Código  
- [!code-cs[csProgGuideObjects#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_10.cs)]  
+ [!code-csharp[csProgGuideObjects#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_10.cs)]  
   
 ## <a name="partial-methods"></a>Métodos parciais  
  Uma classe ou struct parcial pode conter um método parcial. Uma parte da classe contém a assinatura do método. Uma implementação opcional pode ser definida na mesma parte ou em outra parte. Se a implementação não for fornecida, o método e todas as chamadas para o método serão removidos em tempo de compilação.  
@@ -184,9 +166,8 @@ partial void onNameChanged()
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)   
- [Structs](../../../csharp/programming-guide/classes-and-structs/structs.md)   
- [Interfaces](../../../csharp/programming-guide/interfaces/index.md)   
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+ [Estruturas](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+ [Interfaces](../../../csharp/programming-guide/interfaces/index.md)  
  [(partial (tipo)](../../../csharp/language-reference/keywords/partial-type.md)
-

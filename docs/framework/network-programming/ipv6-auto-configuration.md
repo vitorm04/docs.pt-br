@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c46d4b8f6b9e3620c313e9737b556a6050da0126
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 0332bca146041aa955ea000cfeee78d3f5287036
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ipv6-auto-configuration"></a>Configuração automática de endereço IPv6
 Uma meta importante para IPv6 é dar suporte a Plug and Play de nó. Ou seja, deve ser possível conectar um nó a uma rede IPv6 de modo que ele seja configurado automaticamente sem intervenção humana.  
@@ -40,6 +34,5 @@ Uma meta importante para IPv6 é dar suporte a Plug and Play de nó. Ou seja, de
  A proliferação de dispositivos móveis introduziu um novo requisito: um dispositivo deve ser capaz de alterar os locais na Internet IPv6 arbitrariamente e ainda manter as conexões existentes. Para fornecer essa funcionalidade, um endereço residencial é atribuído a um nó móvel, endereço no qual ele sempre pode ser alcançado. Quando o nó móvel está no endereço residencial, ele se conecta ao link residencial e usa seu endereço residencial. Quando o nó móvel está longe do endereço residencial, um agente, que geralmente é um roteador, retransmite mensagens entre o nó móvel e os nós com os quais ele está se comunicando.  
   
 ## <a name="see-also"></a>Consulte também  
- [Protocolo IP versão 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
+ [Protocolo IP versão 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
  [Soquetes](../../../docs/framework/network-programming/sockets.md)
-

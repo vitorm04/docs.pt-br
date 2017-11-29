@@ -1,48 +1,30 @@
 ---
 title: 'Como criar uma chave do Registro e definir o valor no Visual Basic:'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - RegistryKey.CreateSubKey
 - RegistryKey.SetValue
-dev_langs:
-- VB
 helpviewer_keywords:
-- registry keys, creating
-- registry, adding values
-- registry, adding keys
-- registry keys, setting values
+- registry keys [Visual Basic], creating
+- registry [Visual Basic], adding values
+- registry [Visual Basic], adding keys
+- registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: b6e71c106592490b92cf6f2dc02e59cddb28b95d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 106a98a1b15c37eb2cac05e1a681bf7dfed3543d
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Como criar uma chave do Registro e definir o valor no Visual Basic:
 O método `CreateSubKey` do objeto `My.Computer.Registry` pode ser usado para criar uma chave do Registro.  
@@ -97,9 +79,8 @@ O método `CreateSubKey` do objeto `My.Computer.Registry` pode ser usado para cr
  Para executar esse processo, seu assembly exige um nível de privilégio concedido pela classe <xref:System.Security.Permissions.RegistryPermission>. Se você estiver executando em um contexto de confiança parcial, o processo poderá gerar uma exceção em razão dos privilégios insuficientes. Da mesma forma, o usuário deve ter as ACLs corretas para criar ou gravar nas configurações. Por exemplo, um aplicativo local que tem a permissão de segurança de acesso do código pode não ter permissão do sistema operacional. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](https://msdn.microsoft.com/library/33tceax8).  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>   
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>   
- <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>   
- [Lendo e Gravando do Registro](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)   
+ <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
+ <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>  
+ <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>  
+ [Lendo e Gravando do Registro](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)  
  [Noções Básicas da Segurança de Acesso do Código](https://msdn.microsoft.com/library/33tceax8)
-

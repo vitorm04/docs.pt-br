@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
+ms.openlocfilehash: 1de856a139ac7a6dee25f1dae54924e33f14a33b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 14673f86d7d228bc1fc17a3154e0337b4c6e5f57
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="expression-trees-explained"></a>Árvores de Expressão Explicadas
 
 [Anterior – Visão geral](expression-trees.md)
@@ -50,7 +48,7 @@ Visualmente, a declaração inteira é uma árvore: você pode começar no nó r
 
 Isso pode parecer complicado, mas é muito eficiente. Seguindo o mesmo processo, você pode decompor expressões muito mais complicadas. Considere esta expressão:
 ```csharp
-var finalAnswer = this.SecretSauceFuncion(
+var finalAnswer = this.SecretSauceFunction(
     currentState.createInterimResult(), currentState.createSecondValue(1, 2),
     decisionServer.considerFinalOptions("hello")) +
     MoreSecretSauce('A', DateTime.Now, true);
@@ -75,4 +73,3 @@ As APIs para árvores de expressão permitem criar árvores que representam quas
 A única coisa que você não pode fazer é modificar uma árvore de expressão.  As árvores de expressão são estruturas de dados imutáveis. Se quiser modificar (alterar) uma árvore de expressão, você deverá criar uma nova árvore, que seja uma cópia da original, com as alterações desejadas. 
 
 [Próximo – Tipos de estruturas que dão suporte às árvores de expressão](expression-classes.md)
-

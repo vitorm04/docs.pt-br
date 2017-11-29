@@ -1,44 +1,26 @@
 ---
-title: "O operando &quot;AddressOf&quot; deve ser o nome de um método (sem parênteses) | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "&#39; AddressOf &#39; operando deve ser o nome de um método (sem parênteses)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30577
 - bc30577
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC30577
+helpviewer_keywords: BC30577
 ms.assetid: c2c55640-5c61-4e66-97a4-4322020c6001
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 04103fe23ee55bb751d9604ef74614edeead8886
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 02c996f1c94250526982e35395288b07db619db7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="39addressof39-operand-must-be-the-name-of-a-method-without-parentheses"></a>O operando 'AddressOf' deve ser o nome de um método (sem parênteses)
-O `AddressOf` operador cria uma instância delegada de procedimento que faz referência a um procedimento específico. A sintaxe é a seguinte.  
+# <a name="39addressof39-operand-must-be-the-name-of-a-method-without-parentheses"></a>&#39; AddressOf &#39; operando deve ser o nome de um método (sem parênteses)
+O `AddressOf` operador cria uma instância de delegado de procedimento que faz referência a um procedimento específico. A sintaxe é a seguinte:  
   
  `AddressOf` `procedurename`  
   
@@ -53,5 +35,5 @@ O `AddressOf` operador cria uma instância delegada de procedimento que faz refe
 2.  Verifique se que o argumento é um nome de método.  
   
 ## <a name="see-also"></a>Consulte também  
- [Operador AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)   
+ [Operador AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)  
  [Delegados](../../../visual-basic/programming-guide/language-features/delegates/index.md)

@@ -1,30 +1,21 @@
 ---
 title: "Operações de elemento (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 283206c9-3246-4c48-b01a-d9de409a7231
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 55081e66419624c2c4930a254d3d464007477766
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: da747e884960c89fabc45d3761da92f913d66362
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="element-operations-c"></a>Operações de elemento (C#)
 Operações de elemento retornam um único elemento específico de uma sequência.  
@@ -45,7 +36,6 @@ Operações de elemento retornam um único elemento específico de uma sequênci
 |SingleOrDefault|Retorna o único elemento de uma coleção ou o único elemento que satisfaz uma condição. Retorna um valor padrão se esse elemento não existir ou se a coleção não contiver exatamente um elemento.|Não aplicável.|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Linq>   
- [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
+ <xref:System.Linq>  
+ [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
  [Como consultar o maior arquivo ou arquivos em uma árvore de diretório (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)
-

@@ -8,19 +8,17 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- .NET Framework development
+helpviewer_keywords: .NET Framework development
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 318bf7a77748dfcee5f28243409d31e8d3e5c9ff
 ms.openlocfilehash: 00bc12a16418038c74a5e8858a77818e66982727
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="net-framework-application-essentials"></a>Fundamentos do aplicativo .NET Framework
 Esta seção da documentação do .NET Framework oferece informações sobre tarefas básicas de desenvolvimento do aplicativo no .NET Framework.  
@@ -77,4 +75,3 @@ Esta seção da documentação do .NET Framework oferece informações sobre tar
   
  [Segurança](../../docs/standard/security/index.md)  
  Oferece informações sobre classes e serviços no Command Language Runtime e no .NET Framework que facilitam um desenvolvimento seguro do aplicativo.
-

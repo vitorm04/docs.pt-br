@@ -4,16 +4,15 @@ ms.date: 08/07/2017
 ms.prod: .net
 ms.topic: article
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
 ms.openlocfilehash: 82349611fe127da46bed8998ac883c10c5164cd3
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="serialization-concepts"></a>Conceitos de serialização
 Por que você deveria usar serialização? As duas razões mais importantes são persistir o estado de um objeto para uma mídia de armazenamento para que uma cópia exata possa ser recriada em uma etapa posterior e enviar o objeto por valor de um domínio de aplicativo para outro. Por exemplo, a serialização é usada para salvar o estado da sessão no ASP.NET e copiar objetos para a área de transferência no Windows Forms. Ela também é usada remotamente para passar objetos por valor de um domínio de aplicativo para outro.
@@ -23,7 +22,7 @@ Por que você deveria usar serialização? As duas razões mais importantes são
 ## <a name="persistent-storage"></a>Armazenamento persistente
 Geralmente é necessário armazenar o valor dos campos de um objeto em disco e, em seguida, posteriormente recuperar esses dados. Embora isso seja fácil de atingir sem depender de serialização, essa abordagem é geralmente trabalhosa e sujeita a erros, e torna-se progressivamente mais complexa quando você precisa rastrear a hierarquia de objetos. Imagine escrever um grande aplicativo comercial, que contém milhares de objetos, e ter que escrever código para salvar e restaurar os campos e as propriedades para e do disco para cada objeto. A serialização fornece um mecanismo conveniente para atingir esse objetivo.
 
-O Common Language Runtime gerencia como os objetos são armazenados na memória e fornece um mecanismo de serialização automatizada usando a [reflexão](../../../docs/framework/reflection-and-codedom/reflection.md). Quando um objeto é serializado, o nome da classe, o assembly e todos os membros de dados da instância de classe são gravados para armazenamento. Os objetos geralmente armazenam referências a outras instâncias em variáveis de membros. Quando a classe é serializada, o mecanismo de serialização rastreia objetos referenciados, já serializados, para garantir que o mesmo objeto não seja serializado mais de uma vez. A arquitetura de serialização fornecida com o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] administra corretamente gráficos de objeto e referências circulares automaticamente. O único requisito colocado em gráficos de objeto é que todos os objetos, referenciados pelo objeto serializado, também devem ser marcados como `Serializable` (para obter mais informações, consulte [Serialização básica](basic-serialization.md)). Se isso não for feito, uma exceção será gerada quando o serializador tentar serializar o objeto não marcado.
+O Common Language Runtime gerencia como os objetos são armazenados na memória e fornece um mecanismo de serialização automatizada usando a [reflexão](../../../docs/framework/reflection-and-codedom/reflection.md). Quando um objeto é serializado, o nome da classe, o assembly e todos os membros de dados da instância de classe são gravados para armazenamento. Os objetos geralmente armazenam referências a outras instâncias em variáveis de membros. Quando a classe é serializada, o mecanismo de serialização rastreia objetos referenciados, já serializados, para garantir que o mesmo objeto não seja serializado mais de uma vez. A arquitetura de serialização fornecida com o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] administra corretamente grafos de objeto e referências circulares automaticamente. O único requisito colocado em gráficos de objeto é que todos os objetos, referenciados pelo objeto serializado, também devem ser marcados como `Serializable` (para obter mais informações, consulte [Serialização básica](basic-serialization.md)). Se isso não for feito, uma exceção será gerada quando o serializador tentar serializar o objeto não marcado.
 
 Quando a classe serializada for desserializada, a classe será recriada e os valores de todos os membros de dados serão automaticamente restaurados.
 
@@ -41,4 +40,3 @@ Quando um objeto deriva de `MarshalByRefObject`, uma referência de objeto é pa
   
  [Serialização XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
  Descreve o mecanismo de serialização de XML e SOAP que está incluído com o Common Language Runtime.
-

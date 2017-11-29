@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 24b23d3fd4d3c318fd2fad36bbbbe0cb065db453
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 95ca72a6da8def7c98a978650c60a27722141527
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="resources-in-desktop-apps"></a>Recursos em aplicativos de área de trabalho
 Quase todos os aplicativos de qualidade de produção precisam usar recursos. Um recurso é qualquer dado não executável que está implantado de modo lógico com um aplicativo. Um recurso pode ser exibido em um aplicativo como mensagens de erro ou como parte da interface do usuário. Os recursos podem conter dados em vários formatos, incluindo cadeias de caracteres, imagens e objetos persistentes. (Para gravar objetos persistentes em um arquivo de recurso, os objetos devem ser serializáveis.) Armazenar dados em um arquivo de recurso permite alterar os dados sem recompilar todo o aplicativo. Também é possível armazenar dados em um único local e eliminar a necessidade de depender de dados embutidos em código que são armazenados em vários locais.  
@@ -51,17 +49,17 @@ Quase todos os aplicativos de qualidade de produção precisam usar recursos. Um
  Para saber mais, confira o artigo [Empacotamento e implantação de recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
   
 ## <a name="retrieving-resources"></a>Recuperando recursos  
- No tempo de execução, um aplicativo carrega os recursos localizados apropriados por thread, com base na cultura especificada pela propriedade <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>. Esse valor da propriedade é derivado da seguinte maneira:  
+ No tempo de execução, um aplicativo carrega os recursos localizados apropriados por thread, com base na cultura especificada pela propriedade <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>. Esse valor da propriedade é derivado da seguinte maneira:  
   
--   Atribuindo diretamente um objeto <xref:System.Globalization.CultureInfo> que representa a cultura localizada para a propriedade <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=fullName>.  
+-   Atribuindo diretamente um objeto <xref:System.Globalization.CultureInfo> que representa a cultura localizada para a propriedade <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>.  
   
--   Se não houver uma cultura explicitamente designada, recuperando a cultura padrão da interface do usuário do thread pela propriedade <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=fullName>.  
+-   Se não houver uma cultura explicitamente designada, recuperando a cultura padrão da interface do usuário do thread pela propriedade <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>.  
   
 -   Se uma cultura de interface do usuário do thread padrão não for explicitamente atribuída, recuperando a cultura para o usuário atual no computador local chamando a função `GetUserDefaultUILanguage` do Windows.  
   
- Para saber mais sobre a configuração da cultura da interface do usuário atual, confira as páginas de referência <xref:System.Globalization.CultureInfo> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>.  
+ Para saber mais sobre a configuração da cultura da interface do usuário atual, confira as páginas de referência <xref:System.Globalization.CultureInfo> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>.  
   
- Você pode recuperar recursos para a cultura da interface do usuário atual ou para uma cultura específica usando a classe <xref:System.Resources.ResourceManager?displayProperty=fullName>. Embora a classe <xref:System.Resources.ResourceManager> seja mais frequentemente usada para recuperar recursos nos aplicativos da área de trabalho, o namespace <xref:System.Resources?displayProperty=fullName> contém tipos adicionais que podem ser usados para recuperar recursos. Elas incluem:  
+ Você pode recuperar recursos para a cultura da interface do usuário atual ou para uma cultura específica usando a classe <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Embora a classe <xref:System.Resources.ResourceManager> seja mais frequentemente usada para recuperar recursos nos aplicativos da área de trabalho, o namespace <xref:System.Resources?displayProperty=nameWithType> contém tipos adicionais que podem ser usados para recuperar recursos. Elas incluem:  
   
 -   A classe <xref:System.Resources.ResourceReader>, que permite enumerar recursos inseridos em um assembly ou armazenados em um arquivo de recurso binário autônomo. Ela é útil quando você desconhece os nomes exatos dos recursos que estão disponíveis no tempo de execução.  
   
@@ -72,11 +70,10 @@ Quase todos os aplicativos de qualidade de produção precisam usar recursos. Um
 -   A classe <xref:System.Resources.ResXResourceSet>, que permite recuperar todos os itens em um arquivo de recurso XML na memória.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Globalization.CultureInfo>   
- <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>   
- [Fundamentos do aplicativo](../../../docs/standard/application-essentials.md)   
- [Criando arquivos de recurso](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)   
- [Empacotar e implantar recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)   
- [Criação de assemblies satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)   
+ <xref:System.Globalization.CultureInfo>  
+ <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>  
+ [Fundamentos do aplicativo](../../../docs/standard/application-essentials.md)  
+ [Criando arquivos de recurso](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
+ [Empacotando e implantando recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
+ [Criando assemblies satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
  [Recuperando recursos](../../../docs/framework/resources/retrieving-resources-in-desktop-apps.md)
-

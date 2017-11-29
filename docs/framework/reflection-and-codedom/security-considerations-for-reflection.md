@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 756873e93d6e13cbb9077d10a52a718932afcedb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 653b91f899da5962132577fba0df6ecfcdfde4ae
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="security-considerations-for-reflection"></a>Considerações sobre segurança relacionadas à reflexão
 A reflexão fornece a capacidade de obter informações sobre tipos e membros e de acessar membros (ou seja, chamar métodos e construtores, obter e definir valores de propriedade, adicionar e remover manipuladores de eventos e assim por diante). O uso da reflexão para obter informações sobre tipos e membros não é restrito. Todo o código pode usar reflexões para realizar as seguintes tarefas:  
@@ -52,9 +50,9 @@ A reflexão fornece a capacidade de obter informações sobre tipos e membros e 
   
  Por exemplo, o código que é executado em um domínio do aplicativo em área restrita é limitado ao acesso descrito nesta lista, a menos que o domínio do aplicativo conceda permissões adicionais.  
   
- A partir do [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], tentar acessar membros não podem ser acessados normalmente gera uma demanda para o conjunto de concessões do objeto de destino mais <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=fullName>. Código que está sendo executado com confiança total (por exemplo, o código em um aplicativo que é iniciado da linha de comando) sempre pode atender a essas permissões. (Isso é sujeito às limitações de acesso a membros de críticos para segurança, conforme descrito mais adiante neste artigo.)  
+ A partir do [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], tentar acessar membros não podem ser acessados normalmente gera uma demanda para o conjunto de concessões do objeto de destino mais <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>. Código que está sendo executado com confiança total (por exemplo, o código em um aplicativo que é iniciado da linha de comando) sempre pode atender a essas permissões. (Isso é sujeito às limitações de acesso a membros de críticos para segurança, conforme descrito mais adiante neste artigo.)  
   
- Como opção, um domínio do aplicativo em área restrita pode conceder <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=fullName>, conforme descrito na seção [Acessando membros que são normalmente inacessíveis](#accessingNormallyInaccessible), mais adiante neste artigo.  
+ Como opção, um domínio do aplicativo em área restrita pode conceder <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>, conforme descrito na seção [Acessando membros que são normalmente inacessíveis](#accessingNormallyInaccessible), mais adiante neste artigo.  
   
 <a name="accessingSecurityCritical"></a>   
 ## <a name="accessing-security-critical-members"></a>Acessando membros críticos para segurança  
@@ -87,21 +85,21 @@ A reflexão fornece a capacidade de obter informações sobre tipos e membros e 
 ## <a name="accessing-members-that-are-normally-inaccessible"></a>Acessando membros que são normalmente inacessíveis  
  Para usar a reflexão para invocar os membros que podem ser acessados de acordo com as regras de acessibilidade do Common Language Runtime, o código deve receber uma das duas permissões:  
   
--   Para permitir que o código invoque qualquer membro não público: seu código deve receber a concessão de <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=fullName>.  
+-   Para permitir que o código invoque qualquer membro não público: seu código deve receber a concessão de <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>.  
   
     > [!NOTE]
     >  Por padrão, a política de segurança nega essa permissão para código originado da Internet. Essa permissão nunca deve ser concedida o código originado da Internet.  
   
--   Para permitir que o código invoque qualquer membro não público, desde que o conjunto de concessões do assembly que contém o membro chamado seja o mesmo ou um subconjunto do conjunto de concessões do assembly que contém a invocação de código: seu código deve receber a concessão de <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName>.  
+-   Para permitir que o código invoque qualquer membro não público, desde que o conjunto de concessões do assembly que contém o membro chamado seja o mesmo ou um subconjunto do conjunto de concessões do assembly que contém a invocação de código: seu código deve receber a concessão de <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
- Por exemplo, suponha que você concedeu permissões da Internet a um domínio do aplicativo mais <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName> e, em seguida, executou um aplicativo da Internet com dois assemblies, A e B.  
+ Por exemplo, suponha que você concedeu permissões da Internet a um domínio do aplicativo mais <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> e, em seguida, executou um aplicativo da Internet com dois assemblies, A e B.  
   
 -   O assembly A pode usar reflexão para acessar membros particulares do assembly B, pois o conjunto de concessões do assembly B não inclui permissões que não foram concedidas a A.  
   
 -   O assembly A não pode usar a reflexão para acessar membros particulares de assemblies [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] como mscorlib.dll, pois mscorlib.dll é totalmente confiável e, portanto, tem permissões que não foram concedidas ao assembly A. Um <xref:System.MemberAccessException> é gerado quando a segurança de acesso do código percorre a pilha no tempo de execução.  
   
 ## <a name="serialization"></a>Serialização  
- Para serialização, <xref:System.Security.Permissions.SecurityPermission> com o sinalizador <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=fullName> fornece a capacidade de obter e definir os membros de tipos serializáveis, independentemente da acessibilidade. Essa permissão permite que o código descubra e altere o estado particular de uma instância. (Além de receber a concessão das permissões apropriadas, o tipo deve ser [marcado](../../../docs/standard/attributes/applying-attributes.md) como serializável nos metadados.)  
+ Para serialização, <xref:System.Security.Permissions.SecurityPermission> com o sinalizador <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> fornece a capacidade de obter e definir os membros de tipos serializáveis, independentemente da acessibilidade. Essa permissão permite que o código descubra e altere o estado particular de uma instância. (Além de receber a concessão das permissões apropriadas, o tipo deve ser [marcado](../../../docs/standard/attributes/applying-attributes.md) como serializável nos metadados.)  
   
 ## <a name="parameters-of-type-methodinfo"></a>Parâmetros do tipo MethodInfo  
  Evite escrever membros públicos que utilizam parâmetros <xref:System.Reflection.MethodInfo>, especialmente para código confiável. Esses membros podem ser mais vulneráveis a códigos mal-intencionados. Por exemplo, considere um membro público no código altamente confiável que utiliza um parâmetro <xref:System.Reflection.MethodInfo>. Suponha que o membro público chama indiretamente o método <xref:System.Reflection.MethodBase.Invoke%2A> no parâmetro fornecido. Se o membro público não executa as verificações de permissão necessária, a chamada para o método <xref:System.Reflection.MethodBase.Invoke%2A> sempre terá êxito, pois o sistema de segurança determina se o chamador é altamente confiável. Mesmo que o código mal-intencionado não tenha permissão para invocar o método indiretamente, ele ainda poderá fazer isso indiretamente chamando o membro público.  
@@ -110,18 +108,17 @@ A reflexão fornece a capacidade de obter informações sobre tipos e membros e 
   
 -   A partir do [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], código transparente não pode usar reflexão para acessar membros críticos para segurança.  
   
--   O sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName> foi introduzido no [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]. Versões anteriores do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] exigem o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=fullName> para o código que usa a reflexão para acessar membros não públicos. Esta é uma permissão que nunca deve ser concedida a código parcialmente confiável.  
+-   O sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> foi introduzido no [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]. Versões anteriores do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] exigem o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> para o código que usa a reflexão para acessar membros não públicos. Esta é uma permissão que nunca deve ser concedida a código parcialmente confiável.  
   
--   A partir do [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], usar reflexão para obter informações sobre tipos e membros não públicos não requer permissões. Em versões anteriores, o <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=fullName> é obrigatório.  
+-   A partir do [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], usar reflexão para obter informações sobre tipos e membros não públicos não requer permissões. Em versões anteriores, o <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> é obrigatório.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Security.Permissions.ReflectionPermissionFlag>   
- <xref:System.Security.Permissions.ReflectionPermission>   
- <xref:System.Security.Permissions.SecurityPermission>   
- [Alterações de segurança](../../../docs/framework/security/security-changes.md)   
- [Segurança de acesso do código](../../../docs/framework/misc/code-access-security.md)   
- [Problemas de segurança na emissão de reflexão](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)   
- [Exibindo informações de tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)   
- [Aplicando atributos](../../../docs/standard/attributes/applying-attributes.md)   
+ <xref:System.Security.Permissions.ReflectionPermissionFlag>  
+ <xref:System.Security.Permissions.ReflectionPermission>  
+ <xref:System.Security.Permissions.SecurityPermission>  
+ [Alterações de segurança](../../../docs/framework/security/security-changes.md)  
+ [Segurança de acesso do código](../../../docs/framework/misc/code-access-security.md)  
+ [Problemas de segurança na emissão de reflexão](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
+ [Exibindo informações de tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
+ [Aplicando atributos](../../../docs/standard/attributes/applying-attributes.md)  
  [Acessando atributos personalizados](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)
-

@@ -1,12 +1,9 @@
 ---
 title: "Tabela de conversões numéricas explícitas (Referência de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - conversions [C#], explicit numeric
 - numeric conversions [C#], explicit
@@ -15,29 +12,14 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e7a366328035b205b93a50ff6d212a06576ee801
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0315810522be319a6bb565c99e1c8f7d1ba4701b
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Tabela de conversões numéricas explícitas (Referência de C#)
 A conversão numérica explícita é usada para converter qualquer tipo numérico para outro tipo numérico para o qual não há conversão implícita, por meio de uma expressão de conversão. A tabela a seguir mostra essas conversões.  
@@ -80,11 +62,10 @@ A conversão numérica explícita é usada para converter qualquer tipo numéric
  Para obter mais informações sobre conversões explícitas, consulte Explícito na Especificação da Linguagem C#. Para obter mais informações sobre como acessar a especificação, consulte [Especificação da Linguagem C#](../../../csharp/language-reference/language-specification/index.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Conversões cast e conversões de tipo](../../../csharp/programming-guide/types/casting-and-type-conversions.md)   
- [Operador ()](../../../csharp/language-reference/operators/invocation-operator.md)   
- [Tabela de Tipos Integrais](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [Tabela de Tipos Internos](../../../csharp/language-reference/keywords/built-in-types-table.md)   
+ [Referência de C#](../../../csharp/language-reference/index.md)  
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Transmissões e conversões de tipo](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+ [Operador ()](../../../csharp/language-reference/operators/invocation-operator.md)  
+ [Tabela de tipos integrais](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [Tabela de tipos internos](../../../csharp/language-reference/keywords/built-in-types-table.md)  
  [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
-

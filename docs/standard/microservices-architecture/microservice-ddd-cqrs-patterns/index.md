@@ -8,12 +8,11 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
+ms.openlocfilehash: be2d8a2fd77d65b82574efde3b9922a1176ad2f2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: d81091bf09d690f5d57ad9a30b5f16de1358ede6
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Lidando com a complexidade de negócios em um microsserviço com padrões DDD e CQRS
 
@@ -75,4 +74,3 @@ Treinamento em DDD
 
 >[!div class="step-by-step"]
 [Previous] (../multi-container-microservice-net-applications/test-aspnet-core-services-web-apps.md) [Next] (apply-simplified-microservice-cqrs-ddd-patterns.md)
-

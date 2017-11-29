@@ -9,12 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 18cf7a4b-29f0-4b14-85b8-80af754aabd8
+ms.openlocfilehash: 1d8fb092b578602b5d4f791a3fd14f47dfae1ba6
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
-ms.openlocfilehash: 3f2ee35db5b77efcce629b6315060a723429b19c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref returns e ref locals
 
@@ -86,15 +85,14 @@ Se `p` não estiver definido como um ref local usando a palavra-chave `ref`, qua
 
 O exemplo a seguir define uma classe `NumberStore` que armazena uma matriz de valores inteiros. O método `FindNumber` retorna por referência o primeiro número maior ou igual ao número passado como um argumento. Se nenhum número for maior ou igual ao argumento, o método retornará o número no índice 0. 
 
-[!CODE-cs[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#1)]
+[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#1)]
 
 A exemplo a seguir chama o método `NumberStore.FindNumber` para recuperar o primeiro valor maior ou igual a 16. O chamador então dobra o valor retornado pelo método. Assim como mostra a saída do exemplo, essa alteração é refletida no valor dos elementos de matriz da instância `NumberStore`.
 
-[!CODE-cs[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#2)]
+[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#2)]
 
 Sem suporte para valores retornados por referência, essa operação normalmente é executada retornando-se o índice do elemento de matriz, juntamente com o respectivo valor. O chamador pode usar esse índice para modificar o valor em uma chamada de método separada. No entanto, o chamador também pode modificar o índice para acessar e possivelmente modificar outros valores de matriz.  
  
 ## <a name="see-also"></a>Consulte também
 
 [ref keyword](../../language-reference/keywords/ref.md)
-

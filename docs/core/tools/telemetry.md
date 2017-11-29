@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 480df976-7568-4df4-9d26-9911357b5a31
+ms.openlocfilehash: 34183792a235391f66fbec211ff00f06f85134fa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: c58ed1b3c09f1e358d0b66f6cf7186821601fd69
-ms.openlocfilehash: 8ea8ee44a58c6aabfd09afbc7ef53239a9029c57
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-core-cli-tools-telemetry"></a>Telemetria de Ferramentas da CLI do .NET Core
 
 O [SDK do .NET Core](index.md) inclui um [recurso de telemetria](https://github.com/dotnet/cli/pull/2145) que coleta informações de uso. É importante que a Equipe do .NET compreenda como as ferramentas são usadas para que possamos melhorá-las. Para obter mais informações, consulte [What we've learned from .NET Core SDK Telemetry](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/) (O que aprendemos com a telemetria do SDK do .NET Core).
@@ -39,6 +37,7 @@ A telemetria *é habilitada* ao usar os [comandos da CLI do .NET Core](index.md)
 - `dotnet pack`
 - `dotnet restore`
 - `dotnet run`
+
 
 ## <a name="behavior"></a>Comportamento
 
@@ -135,4 +134,3 @@ You can read more about .NET Core tools telemetry @ https://aka.ms/dotnet-cli-te
 [O que aprendemos com a telemetria do SDK do .NET Core](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/)  
 [Fonte de referência de telemetria (repositório dotnet/da cli; versão/branch 2.0.0)](https://github.com/dotnet/cli/blob/release/2.0.0/src/dotnet/Telemetry.cs)   
 [Dados de uso do SDK do .NET Core](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)
-

@@ -1,25 +1,21 @@
 ---
 title: "Como recuperar parágrafos de um documento do Office Open XML (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: e6014b7cf4dc02c2818dd4b9bf5fadfcbd82e3d4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 945fc1e2cc3d7ae57239fdc5113e87c0a1512ff8
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>Como recuperar parágrafos de um documento do Office Open XML (C#)
 Este tópico apresenta um exemplo que abre um documento do Office Open XML, e retorna uma coleção de todos os parágrafos no documento.  
@@ -33,7 +29,7 @@ Este tópico apresenta um exemplo que abre um documento do Office Open XML, e re
   
  Para um tutorial detalhado que explica como este exemplo funciona, consulte [Transformações funcionais puras de XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
   
- Este exemplo usa as classes encontradas no assembly WindowsBase. Ele usa tipos no namespace <xref:System.IO.Packaging?displayProperty=fullName>.  
+ Este exemplo usa as classes encontradas no assembly WindowsBase. Ele usa tipos no namespace <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -197,4 +193,3 @@ StyleName:Code >Hello World<
   
 ## <a name="see-also"></a>Consulte também  
  [Técnicas avançadas de consulta (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
-

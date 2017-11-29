@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 20e488b57b0d17e9c6705c32dc4c4b6b8387fabf
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 8eb4d28885308c400c445ae71019373ec92ed27a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltudpbindinggt"></a>&lt;udpBinding&gt;
 Um elemento de configuração usado para configurar o <xref:System.ServiceModel.UdpBinding> associação.  
@@ -114,12 +112,11 @@ Um elemento de configuração usado para configurar o <xref:System.ServiceModel.
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Channels.Binding>   
- <xref:System.ServiceModel.Channels.BindingElement>   
- <xref:System.ServiceModel.BasicHttpBinding>   
- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>   
- [Associações](../../../../../docs/framework/wcf/bindings.md)   
- [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
+ <xref:System.ServiceModel.Channels.Binding>  
+ <xref:System.ServiceModel.Channels.BindingElement>  
+ <xref:System.ServiceModel.BasicHttpBinding>  
+ <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
+ [Bindings](../../../../../docs/framework/wcf/bindings.md) (Associações)  
+ [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<associação >](../../../../../docs/framework/misc/binding.md)
-

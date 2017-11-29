@@ -1,30 +1,21 @@
 ---
 title: "Criando árvores XML (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: bccc3e0a-c08c-468e-9d30-e075670fdace
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 23b19593774b5a010b453e3fe755e21386afd015
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 99b197b86096b803b9732ab2546b23ff59e3e2fe
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="creating-xml-trees-c"></a>Criando árvores XML (C#)
 Uma das tarefas XML mais comuns é construir uma árvore XML. Esta seção descreve várias maneiras de criá-las.  
@@ -43,4 +34,3 @@ Uma das tarefas XML mais comuns é construir uma árvore XML. Esta seção descr
   
 ## <a name="see-also"></a>Consulte também  
  [Guia de Programação (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
-

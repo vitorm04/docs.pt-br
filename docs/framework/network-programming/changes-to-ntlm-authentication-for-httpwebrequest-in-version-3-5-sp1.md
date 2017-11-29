@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 24abe4d2cc9a540f134ea32dbd6a44a630ff5524
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e23ec35b94196d1f8a597d3a74850b5292a4ef09
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Alterações na autenticação NTLM para HttpWebRequest na versão 3.5 SP1
 Foram feitas alterações de segurança no .NET Framework versão 3.5 SP1 que afetam a maneira como a autenticação integrada do Windows é manipulada por <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream> e por classes relacionadas no namespace System.Net. Essas alterações podem afetar os aplicativos que usam essas classes para fazer solicitações da Web e receber respostas em que a autenticação integrada do Windows baseada no NTLM é usada. Essa alteração pode afetar os servidores Web e aplicativos cliente configurados para usar a autenticação integrada do Windows.  
@@ -39,9 +33,9 @@ Foram feitas alterações de segurança no .NET Framework versão 3.5 SP1 que af
   
  Quando configurado para implantações grandes, também é comum que um único nome do servidor virtual seja fornecido à implantação com os nomes de computador subjacentes nunca usados pelos aplicativos cliente e usuários finais. Por exemplo, você pode chamar o servidor www.contoso.com, mas em uma rede interna, basta usar “contoso”. Esse nome é chamado de cabeçalho de Host na solicitação da Web do cliente. Conforme especificado pelo protocolo HTTP, o campo de cabeçalho da solicitação Host especifica o número da porta e o host da Internet do recurso solicitado. Essas informações são obtidas do URI original fornecido pelo usuário ou pelo recurso de referência (geralmente uma URL HTTP). No .NET Framework versão 4, essas informações também podem ser definidas pelo cliente usando a nova propriedade <xref:System.Net.HttpWebRequest.Host%2A>.  
   
- A classe <xref:System.Net.AuthenticationManager> controla os componentes de autenticação gerenciada (“módulos”) que são usados pelas classes derivadas <xref:System.Net.WebRequest> e pela classe <xref:System.Net.WebClient>. A classe <xref:System.Net.AuthenticationManager> fornece uma propriedade que expõe um objeto <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=fullName>, indexado por uma cadeia de caracteres do URI, de aplicativos para fornecer uma cadeia de caracteres do SPN personalizada a ser usada durante a autenticação.  
+ A classe <xref:System.Net.AuthenticationManager> controla os componentes de autenticação gerenciada (“módulos”) que são usados pelas classes derivadas <xref:System.Net.WebRequest> e pela classe <xref:System.Net.WebClient>. A classe <xref:System.Net.AuthenticationManager> fornece uma propriedade que expõe um objeto <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>, indexado por uma cadeia de caracteres do URI, de aplicativos para fornecer uma cadeia de caracteres do SPN personalizada a ser usada durante a autenticação.  
   
- A versão 3.5 SP1 agora usa como padrão a especificação do nome do host usado na URL da solicitação no SPN da troca de autenticação NTLM (NT LAN Manager) quando a propriedade <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A> não está definida. O nome do host usado na URL da solicitação pode ser diferente do cabeçalho de Host especificado na <xref:System.Net.HttpRequestHeader?displayProperty=fullName> na solicitação do cliente. O nome do host usado na URL de solicitação pode ser diferente do nome do host real do servidor, do nome do computador do servidor, do endereço IP do computador ou do endereço de loopback. Nesses casos, o Windows falhará a solicitação de autenticação. Para resolver o problema, é necessário notificar o Windows de que o nome do host usado na URL da solicitação na solicitação do cliente (“contoso”, por exemplo) é realmente um nome alternativo para o computador local.  
+ A versão 3.5 SP1 agora usa como padrão a especificação do nome do host usado na URL da solicitação no SPN da troca de autenticação NTLM (NT LAN Manager) quando a propriedade <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A> não está definida. O nome do host usado na URL da solicitação pode ser diferente do cabeçalho de Host especificado na <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType> na solicitação do cliente. O nome do host usado na URL de solicitação pode ser diferente do nome do host real do servidor, do nome do computador do servidor, do endereço IP do computador ou do endereço de loopback. Nesses casos, o Windows falhará a solicitação de autenticação. Para resolver o problema, é necessário notificar o Windows de que o nome do host usado na URL da solicitação na solicitação do cliente (“contoso”, por exemplo) é realmente um nome alternativo para o computador local.  
   
  Há vários métodos possíveis para que um aplicativo para servidores resolva essa alteração. A abordagem recomendada é mapear o nome do host usado na URL da solicitação para a chave `BackConnectionHostNames` do Registro no servidor. A chave do Registro `BackConnectionHostNames` é normalmente usada para mapear um nome do host para um endereço de loopback. As etapas são listadas abaixo.  
   
@@ -66,7 +60,6 @@ Foram feitas alterações de segurança no .NET Framework versão 3.5 SP1 que af
  Uma solução alternativa menos segura é desabilitar a verificação de loopback, conforme descrito em [http://support.microsoft.com/kb/896861](http://go.microsoft.com/fwlink/?LinkID=179657). Isso desabilita a proteção contra ataques de reflexão. Portanto, é melhor restringir o conjunto de nomes alternativos somente àqueles que você espera que sejam usados pelo computador.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=fullName>   
- <xref:System.Net.HttpRequestHeader?displayProperty=fullName>   
- <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=fullName>
-
+ <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>  
+ <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType>  
+ <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=nameWithType>

@@ -11,16 +11,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92d2de20-79be-4df1-b182-144143a8866a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 8749e2d7b91e611ee153c6f36708fa34a44ecccd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: caaaafaff44f2a679b16fe3f1aae59bcf717388e
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mitigation-pool-blocking-period"></a>Mitigação: período de bloqueio de pool
 O pool de conexão no período de bloqueio foi removido para conexões com bancos de dados SQL do Azure.  
@@ -34,7 +33,7 @@ O pool de conexão no período de bloqueio foi removido para conexões com banco
  Essa alteração permite que a tentativa de abertura da conexão seja repetida imediatamente para bancos de dados SQL do Azure, melhorando, assim, o desempenho dos aplicativos habilitados para a nuvem.  
   
 ## <a name="mitigation"></a>Redução  
- Para aplicativos que são afetados negativamente por essa alteração, o período de bloqueio do pool de conexões pode ser configurado pela definição da nova propriedade <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A>.  O valor da propriedade é membro da enumeração <xref:System.Data.SqlClient.PoolBlockingPeriod?displayProperty=fullName> que pode assumir um dos três valores:  
+ Para aplicativos que são afetados negativamente por essa alteração, o período de bloqueio do pool de conexões pode ser configurado pela definição da nova propriedade <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A>.  O valor da propriedade é membro da enumeração <xref:System.Data.SqlClient.PoolBlockingPeriod?displayProperty=nameWithType> que pode assumir um dos três valores:  
   
 -   `PoolBlockingPeriod.AlwaysBlock` 
   
@@ -46,4 +45,3 @@ O pool de conexão no período de bloqueio foi removido para conexões com banco
   
 ## <a name="see-also"></a>Consulte também  
  [Alterações no tempo de execução](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6-2.md)
-

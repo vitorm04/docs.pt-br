@@ -1,30 +1,26 @@
 ---
 title: "Encadeando operadores de consulta padrão juntos (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 47e936bffd79784b0ee6850bfc29d1d1f5b3224d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 40c65c80c08caa310cb72a194534ad63fcea890a
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>Encadeando operadores de consulta padrão juntos (C#)
 Este é o tópico final no tutorial do [Tutorial: encadear consultas juntas (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md).  
   
- Os operadores de consulta padrão podem também ser encadeados juntos. Por exemplo, você pode interject o operador de <xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName> , e também funciona em uma forma lazy. Resultados intermediária é materializado por ele.  
+ Os operadores de consulta padrão podem também ser encadeados juntos. Por exemplo, você pode interject o operador de <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> , e também funciona em uma forma lazy. Resultados intermediária é materializado por ele.  
   
 ## <a name="example"></a>Exemplo  
  Nesse exemplo, o método de <xref:System.Linq.Enumerable.Where%2A> é chamado antes de chamar `ConvertCollectionToUpperCase`. O método de <xref:System.Linq.Enumerable.Where%2A> opera quase exatamente a mesma maneira que os métodos lentos usados em exemplos anteriores neste tutorial, `ConvertCollectionToUpperCase` e `AppendString`.  
@@ -100,5 +96,3 @@ Main: str >GHI!!!<
   
 ## <a name="see-also"></a>Consulte também  
  [Tutorial: encadear consultas juntas (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
-
-<!--aaa-->

@@ -8,19 +8,20 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- BlockingCollection, overview
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: BlockingCollection, overview
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 6dc6729bf4627164fbcde5980d4fcccd41b67645
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 10e59c246914c17c4a0803de52cf891b2e0d3a3f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="blockingcollection-overview"></a>Visão geral de BlockingCollection
 <xref:System.Collections.Concurrent.BlockingCollection%601> é uma classe de coleção thread-safe que fornece os seguintes recursos:  
@@ -86,7 +87,6 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
  Para cenários em que um consumidor precisa remover itens de várias coleções simultaneamente, é possível criar matrizes de <xref:System.Collections.Concurrent.BlockingCollection%601> e usar os métodos estáticos como <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> e <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A> que adicionarão ou retirarão de qualquer uma das coleções na matriz. Se uma coleção for de bloqueio, o método imediatamente tenta outra até encontrar uma que possa realizar a operação. Para obter mais informações, confira [Como usar matrizes de coleções Blocking em um pipeline](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md).  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Collections.Concurrent?displayProperty=fullName>   
- [Coleções e estruturas de dados](../../../../docs/standard/collections/index.md)   
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+ [Coleções e Estruturas de Dados](../../../../docs/standard/collections/index.md)  
  [Coleções Thread-Safe](../../../../docs/standard/collections/thread-safe/index.md)
-

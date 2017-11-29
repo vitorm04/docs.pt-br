@@ -8,11 +8,12 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: c2b267562f78b359d5ceaa696ff9a9bdcffa5821
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.custom: mvc
+ms.openlocfilehash: ff7cd60619f8583376442c202f27a4309790fff8
+ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="introduction-to-classes"></a>Introdução às classes
 
@@ -149,7 +150,7 @@ Isso introduz o conceito de ***exceções***. A forma padrão de indicar que um 
 
 [!code-csharp[DepositAndWithdrawal](../../../samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal "Make deposits and withdrawals")]
 
-A instrução [`throw`](../language-reference/throw.md) **lança** uma exceção. A execução do método atual termina e será retomada quando encontrar uma correspondência do bloco `catch`. Você adicionará um bloco `catch` para testar esse código um pouco mais tarde.
+A instrução [`throw`](../language-reference/keywords/throw.md) **lança** uma exceção. A execução do método atual termina e será retomada quando encontrar uma correspondência do bloco `catch`. Você adicionará um bloco `catch` para testar esse código um pouco mais tarde.
 
 O construtor deve receber uma alteração para que adicione uma transação inicial, em vez de atualizar o saldo diretamente. Como você já escreveu o método `MakeDeposit`, chame-o de seu construtor. O construtor concluído deve ter esta aparência:
 

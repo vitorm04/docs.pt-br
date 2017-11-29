@@ -1,58 +1,41 @@
 ---
-title: "Cláusula of (Visual Basic) | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Cláusula Of (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - Of
 - vb.Of
 - vb.of
-dev_langs:
-- VB
 helpviewer_keywords:
-- Of keyword
+- Of keyword [Visual Basic]
 - arguments [Visual Basic], data types
 - constraints, Visual Basic generic types
 - generic parameters
 - generics [Visual Basic], constraints
-- parameters, type
+- parameters [Visual Basic], type
 - types [Visual Basic], generic
-- parameters, generic
+- parameters [Visual Basic], generic
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 920b13514566e496adf45fb3db9f08145c5ab4c8
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 5ef3ac4ac88727b1dcae50fa14abde03f29a16fb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="of-clause-visual-basic"></a>Cláusula Of (Visual Basic)
-Apresenta um `Of` cláusula que identifica uma *parâmetro de tipo* em uma *genérico* classe, estrutura, interface, representante ou procedimento. Para obter informações sobre tipos genéricos, consulte [tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
+Apresenta um `Of` cláusula que identifica um *parâmetro de tipo* em uma *genérico* classe, estrutura, interface, delegado ou procedimento. Para obter informações sobre tipos genéricos, consulte [tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
   
 ## <a name="using-the-of-keyword"></a>Usando a palavra-chave Of  
- O seguinte exemplo de código usa o `Of` palavra-chave para definir o contorno de uma classe que leva dois parâmetros de tipo. Ele *restringe* o `keyType` parâmetro pela <xref:System.IComparable>interface, que significa que o código consumido deve fornecer um argumento de tipo que implementa <xref:System.IComparable>.</xref:System.IComparable> </xref:System.IComparable> Isso é necessário para que o `add` procedimento pode chamar o <xref:System.IComparable.CompareTo%2A?displayProperty=fullName>método.</xref:System.IComparable.CompareTo%2A?displayProperty=fullName> Para obter mais informações sobre restrições, consulte [tipo lista](../../../visual-basic/language-reference/statements/type-list.md).  
+ O seguinte exemplo de código usa o `Of` palavra-chave para definir o contorno de uma classe que usa dois parâmetros de tipo. Ele *restringe* o `keyType` parâmetro pelo <xref:System.IComparable> interface, o que significa que o código deve fornecer um argumento de tipo que implementa <xref:System.IComparable>. Isso é necessário para que o `add` procedimento pode chamar o <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> método. Para obter mais informações sobre restrições, consulte [lista tipo](../../../visual-basic/language-reference/statements/type-list.md).  
   
 ```  
 Public Class Dictionary(Of entryType, keyType As IComparable)  
@@ -66,9 +49,9 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class  
 ```  
   
- Se você concluir a definição de classe anterior, você pode construir uma variedade de `dictionary` classes dela. Os tipos que você fornece para `entryType` e `keyType` determinam que tipo de entrada a classe contém e o tipo de chave que ela associa a cada entrada. Por causa da restrição, você deve fornecer a `keyType` um tipo que implementa <xref:System.IComparable>.</xref:System.IComparable>  
+ Se você concluir a definição de classe anterior, você pode construir uma variedade de `dictionary` classes dele. Os tipos que você fornece para `entryType` e `keyType` determinar que tipo de entrada a classe contém e o tipo de chave que ela associa a cada entrada. Por causa da restrição, você deve fornecer a `keyType` um tipo que implementa <xref:System.IComparable>.  
   
- O exemplo de código a seguir cria um objeto que contém `String` entradas e associa um `Integer` chave com cada um deles. `Integer`implementa <xref:System.IComparable>e portanto satisfaz a restrição em `keyType`.</xref:System.IComparable>  
+ O exemplo de código a seguir cria um objeto que contém `String` entradas e associa um `Integer` chave com cada um deles. `Integer`implementa <xref:System.IComparable> e portanto satisfaz a restrição em `keyType`.  
   
 ```  
 Dim d As New dictionary(Of String, Integer)  
@@ -89,8 +72,8 @@ Dim d As New dictionary(Of String, Integer)
  [Instrução Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.IComparable></xref:System.IComparable>   
- [Lista de tipos](../../../visual-basic/language-reference/statements/type-list.md)   
- [Tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [Em](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)   
- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+ <xref:System.IComparable>  
+ [Lista de Tipos](../../../visual-basic/language-reference/statements/type-list.md)  
+ [Tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
+ [Saída](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

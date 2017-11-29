@@ -17,16 +17,15 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 3f6beb720819a1be4e45bf4cefac3d805d7ee5e7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 63832eb1b7c750bb4ef86660304ab883a7c3695f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="globalizing-and-localizing-net-framework-applications"></a>Globalização e localização de aplicativos do .NET Framework
 O desenvolvimento de um [aplicativo pronto para o mundo](http://msdn.microsoft.com/goglobal/bb978433.aspx), incluindo um aplicativo que possa ser localizado em um ou mais idiomas, envolve três etapas: globalização, análise de possibilidade de localização e localização.  
@@ -67,7 +66,7 @@ O desenvolvimento de um [aplicativo pronto para o mundo](http://msdn.microsoft.c
  Descreve as práticas recomendadas a serem seguidas para globalização, localização e desenvolvimento de aplicativos ASP.NET prontos para o mundo.  
   
 ## <a name="reference"></a>Referência  
- Namespace <xref:System.Globalization?displayProperty=fullName>  
+ Namespace <xref:System.Globalization?displayProperty=nameWithType>  
  Contém classes que definem informações relacionadas à cultura, incluindo idioma, país/região, calendários em uso, padrões de formato para datas, moeda, números e ordem de classificação para cadeias de caracteres.  
   
  Namespace <xref:System.Resources>  
@@ -81,4 +80,3 @@ O desenvolvimento de um [aplicativo pronto para o mundo](http://msdn.microsoft.c
   
  [Winres.exe (Editor de Recursos do Windows Forms)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)  
  Descreve como usar Winres.exe para localizar formulários do Windows Forms.
-

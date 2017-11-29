@@ -1,43 +1,24 @@
 ---
 title: "Sintaxe de consulta e sintaxe de método em LINQ (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 0127ee0815c4ba6a697456fe45bd373bcf9ba4e4
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 35ad7e9b086f36ca92974fdea197da4c513c8a51
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Sintaxe de consulta e sintaxe de método em LINQ (C#)
 A maioria das consultas na documentação introdutória da [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] (Consulta Integrada à Linguagem) é escrita usando a sintaxe de consulta declarativa da LINQ. No entanto, a sintaxe de consulta deve ser convertida em chamadas de método para o CLR (Common Language Runtime) do .NET quando o código for compilado. Essas chamadas de método invocam os operadores de consulta padrão, que têm nomes como `Where`, `Select`, `GroupBy`, `Join`, `Max` e `Average`. Você pode chamá-los diretamente usando a sintaxe de método em vez da sintaxe de consulta.  
@@ -47,7 +28,7 @@ A maioria das consultas na documentação introdutória da [!INCLUDE[vbteclinq](
 ## <a name="standard-query-operator-extension-methods"></a>Métodos de Extensão do Operador de Consulta Padrão  
  O exemplo a seguir mostra uma *expressão de consulta* simples e a consulta semanticamente equivalente escrita como uma *consulta baseada em método*.  
   
- [!code-cs[csLINQGettingStarted#22](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/query-syntax-and-method-syntax-in-linq_1.cs)]  
+ [!code-csharp[csLINQGettingStarted#22](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/query-syntax-and-method-syntax-in-linq_1.cs)]  
   
  A saída dos dois exemplos é idêntica. Você pode ver que o tipo da variável de consulta é o mesmo em ambas as formas: <xref:System.Collections.Generic.IEnumerable%601>.  
   
@@ -71,4 +52,3 @@ A maioria das consultas na documentação introdutória da [!INCLUDE[vbteclinq](
   
 ## <a name="see-also"></a>Consulte também  
  [Introdução a LINQ em C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-

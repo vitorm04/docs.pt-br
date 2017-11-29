@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: f1086958a56aadbddf54f20295b91e885adf71c4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autorização baseada em declarações usando o WIF
 Em um aplicativo de terceira parte confiável, a autorização determina quais recursos uma identidade autenticada pode acessar e quais operações ela pode executar nesses recursos. A autorização inadequada ou fraca leva à divulgação de informações e à violação de dados. Este tópico descreve as abordagens disponíveis para implementar a autorização para aplicativos e serviços Web ASP.NET com reconhecimento de declarações usando o Windows Identity Foundation (WIF) e um Serviço de Token de Segurança (STS), por exemplo, o Serviço de Controle de Acesso (ACS) do Microsoft Azure.  
@@ -72,4 +70,3 @@ Em um aplicativo de terceira parte confiável, a autorização determina quais r
 5.  O acesso será concedido se o resultado for true, e negado se for false. Por exemplo, a regra pode ser que o usuário tenha 21 anos ou mais e more no estado de Washington.  
   
  O <xref:System.Security.Claims.ClaimsAuthorizationManager> é útil para exteriorizar a lógica de decisão para autorização baseada em declarações em seus aplicativos. O ClaimsAuthenticationManager é um componente do WIF que envia como parte do .NET 4.5. O ClaimsAuthorizationManager permite interceptar as solicitações recebidas e implementa as lógicas de sua escolha para tomar decisões de autorização com base nas declarações recebidas. Isso é importante quando a lógica de autorização precisa ser modificada. Nesse caso, usar o ClaimsAuthorizationManager não afetará a integridade do aplicativo, reduzindo a probabilidade de um erro do aplicativo em resultado da alteração. Para saber mais sobre como usar ClaimsAuthorizationManager para implementar o controle de acesso baseado em declarações, consulte [Como implementar a autorização de declarações em um aplicativo ASP.NET baseado em declarações usando o WIF e o ACS](http://go.microsoft.com/fwlink/?LinkID=247446).
-

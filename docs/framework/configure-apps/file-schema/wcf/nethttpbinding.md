@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b0d81ca0-87c5-4090-8baa-e390fd3656d2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a6712035c5502d56ac9d67a334fe3e47365027de
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: a7054102af46badc46ee7f987355cfce36860c6b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltnethttpbindinggt"></a>&lt;netHttpBinding&gt;
 Representa uma associação que um [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] serviço pode usar para configurar e expor pontos de extremidade que podem se comunicar por HTTP. Quando usado com um contrato duplex, soquetes da Web será usado, caso contrário, o HTTP será usado.  
@@ -30,12 +28,7 @@ Representa uma associação que um [!INCLUDE[indigo1](../../../../../includes/in
   
 ## <a name="syntax"></a>Sintaxe  
 
-<!-- todo: missing sample  
-```vb  
-```  
--->
-  
-```csharp  
+```xml  
 <netHttpBinding>  
    <binding   
        allowCookies="Boolean"  
@@ -195,12 +188,11 @@ Representa uma associação que um [!INCLUDE[indigo1](../../../../../includes/in
  Para obter mais informações sobre a configuração padrão e associações de nomes e comportamentos, consulte [configuração simplificada](../../../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Channels.Binding>   
- <xref:System.ServiceModel.Channels.BindingElement>   
- <xref:System.ServiceModel.BasicHttpBinding>   
- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>   
- [Associações](../../../../../docs/framework/wcf/bindings.md)   
- [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
+ <xref:System.ServiceModel.Channels.Binding>  
+ <xref:System.ServiceModel.Channels.BindingElement>  
+ <xref:System.ServiceModel.BasicHttpBinding>  
+ <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
+ [Bindings](../../../../../docs/framework/wcf/bindings.md) (Associações)  
+ [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<associação >](../../../../../docs/framework/misc/binding.md)
-

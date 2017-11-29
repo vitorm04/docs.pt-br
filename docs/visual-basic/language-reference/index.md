@@ -1,12 +1,9 @@
 ---
 title: "Referência da linguagem Visual Basic"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic language reference
 - run-time libraries, Visual Basic
@@ -16,29 +13,14 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1ac47bde27397e80993a6bb5d2512715f44acfc1
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 2524df987bfea25b294c6e24abe5a6d8ff548df1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="visual-basic-language-reference"></a>Referência da linguagem Visual Basic
 Esta seção fornece informações de referência para vários aspectos da linguagem [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
@@ -48,7 +30,7 @@ Esta seção fornece informações de referência para vários aspectos da lingu
  Resume como palavras-chave, espaços reservados e outros elementos da linguagem são formatados na documentação do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  [Membros da Biblioteca em Tempo de Execução do Visual Basic](../../visual-basic/language-reference/runtime-library-members.md)  
- Lista as classes e os módulos do namespace <xref:Microsoft.VisualBasic?displayProperty=fullName>, com links para as funções, os métodos, as propriedades, as constantes e as enumerações dos seus membros.  
+ Lista as classes e os módulos do namespace <xref:Microsoft.VisualBasic?displayProperty=nameWithType>, com links para as funções, os métodos, as propriedades, as constantes e as enumerações dos seus membros.  
   
  [Palavras-chave](../../visual-basic/language-reference/keywords/index.md)  
  Lista todas as palavras-chave do Visual Basic e fornece links para mais informações.  
@@ -110,4 +92,3 @@ Esta seção fornece informações de referência para vários aspectos da lingu
   
  [Compilador de linha de comando do Visual Basic](../../visual-basic/reference/command-line-compiler/index.md)  
  Descreve como usar o compilador de linha de comando como alternativa para compilar programas no IDE (ambiente de desenvolvimento integrado) do [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].
-

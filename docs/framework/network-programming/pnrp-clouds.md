@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 17770f43d04916ae55b1b62010c8b43e0e4c95e3
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1b9769d4e3936e127407f68de81f9b5b5da4fbc0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="pnrp-clouds"></a>Nuvens PNRP
 A "nuvem" PNRP representa um conjunto de nós que podem se comunicar entre si através da rede. O termo "nuvem" é sinônimo de "malha ponto a ponto" e "grafo ponto a ponto".  
@@ -47,6 +41,5 @@ A "nuvem" PNRP representa um conjunto de nós que podem se comunicar entre si at
  Depois que uma instância de nuvem é criada ou obtida, nomes de par podem ser registrados com ele para criar uma malha de pares conhecidos.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Net.PeerToPeer.Cloud>   
+ <xref:System.Net.PeerToPeer.Cloud>  
  [Protocolo PNRP](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)
-

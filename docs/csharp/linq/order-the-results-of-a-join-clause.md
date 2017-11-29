@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: a7458901-1201-4c25-b8d9-c04ca52e0eb9
+ms.openlocfilehash: f948c18fb16a4f3ac02945b4a63583f1b01cad40
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6272181647bb200c18231c5fc836e3dd1a2d6d55
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="order-the-results-of-a-join-clause"></a>Ordenar os resultados de uma cláusula join
 Este exemplo mostra como ordenar os resultados de uma operação de junção. Observe que a ordenação é executada após a junção. Embora você possa usar uma cláusula `orderby` com uma ou mais sequências de origem antes da junção, normalmente não é recomendável. Alguns provedores LINQ não podem preservar essa ordem após a junção.  
@@ -24,10 +22,9 @@ Este exemplo mostra como ordenar os resultados de uma operação de junção. Ob
 ## <a name="example"></a>Exemplo  
  Esta consulta cria uma junção de grupos e classifica os grupos com base no elemento de categoria, que ainda está no escopo. Dentro do inicializador de tipo anônimo, uma subconsulta ordena todos os elementos de correspondência da sequência de produtos.  
   
- [!code-cs[csProgGuideLINQ#81](../../../samples/snippets/csharp/concepts/linq/how-to-order-the-results-of-a-join-clause_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#81](../../../samples/snippets/csharp/concepts/linq/how-to-order-the-results-of-a-join-clause_1.cs)]  
  
 ## <a name="see-also"></a>Consulte também  
- [Expressões de consulta LINQ](index.md)   
- [Cláusula orderby](../language-reference/keywords/orderby-clause.md)   
+ [Expressões de consulta LINQ](index.md)  
+ [Cláusula orderby](../language-reference/keywords/orderby-clause.md)  
  [Cláusula join](../language-reference/keywords/join-clause.md) 
-

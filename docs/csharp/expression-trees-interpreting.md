@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: e7c5f7404546c6f3812fc5cc3d0320c77816634d
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="interpreting-expressions"></a>Interpretando Expressões
 
 [Anterior – Executando expressões](expression-trees-execution.md)
@@ -529,4 +527,3 @@ Por fim, a biblioteca usada neste artigo foi desenvolvida para demonstração e 
 Mesmo com essas limitações, você deve estar bem no processo de escrever algoritmos que leem e entendem árvores de expressão.
 
 [Próximo – Compilando expressões](expression-trees-building.md)
-

@@ -1,0 +1,42 @@
+---
+title: "Classes não lacradas"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- classes [.NET Framework], unsealed
+- unsealed classes
+- inheritance, classes
+ms.assetid: 9a3bd505-90f5-4053-9f0d-3cf5fa3d3ebf
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: f950d8de2681868fe28e09e4b51bd8156cd12e94
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="unsealed-classes"></a>Classes não lacradas
+Classes sealed não podem ser herdadas e impedem que extensibilidade. Por outro lado, que podem ser herdadas de classes são chamados de classes sem lacre.  
+  
+ **✓ CONSIDERE** usar classes não lacradas sem nenhum adicionado membros virtuais ou protegidos como uma ótima maneira de fornecer mais barato ainda muito mais valioso extensibilidade para uma estrutura.  
+  
+ Os desenvolvedores geralmente desejam herdar de classes não lacradas para adicionar membros de conveniência como construtores personalizados, novos métodos ou sobrecargas do método. Por exemplo, `System.Messaging.MessageQueue` é sem lacre e, portanto, permite aos usuários criar filas personalizadas esse padrão para um caminho de fila particular ou adicione métodos personalizados que simplificam a API para cenários específicos.  
+  
+ Classes são sem lacre por padrão em linguagens de programação mais e isso também é o padrão recomendado para a maioria das classes em estruturas. A extensibilidade proporcionada pelo tipos não lacrados é muito apreciados por usuários da estrutura e muito baixo custo fornecer devido a custos de teste relativamente baixa associados a tipos não lacrados.  
+  
+ *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
+  
+ *Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
+  
+## <a name="see-also"></a>Consulte também  
+ [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)  
+ [Criação de extensibilidade](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+ [Lacrar](../../../docs/standard/design-guidelines/sealing.md)

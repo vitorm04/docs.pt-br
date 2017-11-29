@@ -1,31 +1,27 @@
 ---
 title: "Como projetar um gráfico de objeto (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 222fa65848d503a6fe5d1eb961b97c5760e5eb6c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3f09d1ab23d027829a8b3ea94fa62455ddb95499
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-project-an-object-graph-c"></a>Como projetar um gráfico de objeto (C#)
-Este tópico ilustra como projeto, ou preencher, um objeto gráfico XML.  
+Este tópico ilustra como projeto, ou preencher, um grafo de objeto XML.  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir preenche um objeto gráfico com as classes `Address`, `PurchaseOrder` e `PurchaseOrderItem` do documento XML de [Arquivo XML de exemplo: pedido de compra típico (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ O código a seguir preenche um grafo de objeto com as classes `Address`, `PurchaseOrder` e `PurchaseOrderItem` do documento XML de [Arquivo XML de exemplo: pedido de compra típico (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 class Address  
@@ -269,7 +265,6 @@ ShipDate: 5/21/1999
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Linq.Enumerable.Select%2A>   
- <xref:System.Linq.Enumerable.ToList%2A>   
+ <xref:System.Linq.Enumerable.Select%2A>  
+ <xref:System.Linq.Enumerable.ToList%2A>  
  [Projeções e transformações (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
-
