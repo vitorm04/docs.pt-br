@@ -1,0 +1,57 @@
+---
+title: Interface ICLRGCManager2
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: ICLRGCManager2
+api_location: mscoree.dll
+api_type: COM
+f1_keywords: ICLRGCManager2
+helpviewer_keywords: ICLRGCManager2 interface [.NET Framework hosting]
+ms.assetid: 4b5ffd7b-9ad7-41cd-9bba-34030ae3da7e
+topic_type: apiref
+caps.latest.revision: "4"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: b025ec31e3797fec3ac184929f1274cb5f68501b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="iclrgcmanager2-interface"></a>Interface ICLRGCManager2
+Fornece métodos que permitem que um host interagir com o sistema de coleta de lixo do common language runtime.  
+  
+## <a name="methods"></a>Métodos  
+  
+|Método|Descrição|  
+|------------|-----------------|  
+|[Método SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md)|Define o tamanho de um segmento de coleta de lixo e o tamanho máximo da geração do sistema de coleta de lixo 0. Habilita a geração 0 e tamanhos de segmento maior do que `DWORD`.|  
+  
+## <a name="remarks"></a>Comentários  
+ Essa interface herda o [ICLRGCManager Interface](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md).  
+  
+ O common language runtime (CLR) implementa seu mecanismo de coleta de lixo com gerenciado <xref:System.GC> tipo. Para obter mais informações sobre o sistema de coleta de lixo, consulte [coleta de lixo](../../../../docs/standard/garbage-collection/index.md).  
+  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+  
+ **Cabeçalho:** MSCorEE.h  
+  
+ **Biblioteca:** incluído como um recurso no MSCOREE  
+  
+ **Versões do .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+  
+## <a name="see-also"></a>Consulte também  
+ [Gerenciamento Automático de Memória](../../../../docs/standard/automatic-memory-management.md)  
+ [Estrutura COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)  
+ [Interface ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
+ [Interfaces de hospedagem CLR adicionadas no .NET Framework 4 e 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
+ [Interfaces de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
+ [Hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md)

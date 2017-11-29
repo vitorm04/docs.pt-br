@@ -1,31 +1,22 @@
 ---
-title: Mantendo um objeto no Visual Studio (Visual Basic) | Documentos da Microsoft
+title: Mantendo um objeto no Visual Studio (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs:
-- VB
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: f4b78654f79913d90667daa9e75c88f45f8efbdc
-ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
-
+ms.openlocfilehash: 838038fd873c3a841fd83d30df1c7b3e27fe697f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Passo a passo: mantendo um objeto no Visual Studio (Visual Basic)
 Embora você possa definir as propriedades de um objeto para os valores padrão em tempo de design, qualquer valor inserido em tempo de execução será perdido quando o objeto for destruído. Você pode usar a serialização para manter os dados de um objeto entre instâncias, o que permite armazenar valores e recuperá-los na próxima vez que o objeto for instanciado.  
@@ -234,5 +225,5 @@ Embora você possa definir as propriedades de um objeto para os valores padrão 
  Neste ponto, você pode compilar e executar o aplicativo novamente. Inicialmente, os valores padrão aparecem nas caixas de texto. Tente alterar os valores e digite um nome na quarta caixa de texto. Feche o aplicativo e execute-o novamente. Observe que agora os novos valores aparecem nas caixas de texto.  
   
 ## <a name="see-also"></a>Consulte também  
- [Serialização (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)   
+ [Serialização (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)  
  [Guia de programação do Visual Basic](../../../../visual-basic/programming-guide/index.md)

@@ -1,44 +1,27 @@
 ---
-title: Comprimento do argumento &quot;&lt;argumentname&gt;&quot; deve ser maior que zero | Documentos do Microsoft
-ms.date: 2015-07-20
+title: Comprimento do argumento &#39; &lt;argumentname&gt;&#39; deve ser maior que zero
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrArgument_LengthGTZero1
+f1_keywords: vbrArgument_LengthGTZero1
 ms.assetid: 709bc232-f8fe-4864-9842-e064795da0f5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 090044409ee06bb2de0e21ce186e245634d009ab
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 64a465e0088ac9905f84d703a9dbe612d32429ec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="length-of-argument-39ltargumentnamegt39-must-be-greater-than-zero"></a>Comprimento do argumento '&lt;argumentname&gt;' deve ser maior que zero
-Um argumento possui um valor que é igual ou menor que zero.  
+# <a name="length-of-argument-39ltargumentnamegt39-must-be-greater-than-zero"></a>Comprimento do argumento &#39; &lt;argumentname&gt;&#39; deve ser maior que zero
+O argumento tem um valor que seja igual ou menor que zero.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
 -   Forneça um argumento que é maior que zero.  
   
 ## <a name="see-also"></a>Consulte também  
- [Passando argumentos por valor e por referência](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)   
+ [Passando Argumentos por Valor e por Referência](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)  
  [Parâmetro de mecanismo de passagem para usuários do Visual Basic 6.0](http://msdn.microsoft.com/en-us/0fa2b0dc-aa1c-4797-bbd6-aa13c611cab2)

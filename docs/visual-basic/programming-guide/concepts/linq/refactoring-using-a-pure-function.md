@@ -1,36 +1,32 @@
 ---
-title: "Refatoração usando uma função pura (Visual Basic) | Documentos do Microsoft"
+title: "Refatoração usando uma função pura (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9a60f55513aa30e4f221c45f4be506d6f0507406
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 7a8114dcfde7adbbdb1016bae4f2916dc28b6854
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a>Refatoração usando uma função pura (Visual Basic)
-O exemplo a seguir refatora o exemplo anterior, [refatoração usando um método de extensão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), para usar uma função pura nesse exemplo, o código para localizar o texto de um parágrafo é movido para o método estático puro `ParagraphText`.  
+O exemplo a seguir refatora no exemplo anterior, [refatoração usando um método de extensão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), para usar uma função pura neste exemplo, o código para localizar o texto de um parágrafo é movido para o método estático puro `ParagraphText`.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo processa um documento de WordprocessingML, recuperando os nós de parágrafo de um documento de WordprocessingML. Também identifica o estilo de cada parágrafo. Este exemplo cria nos exemplos anteriores neste tutorial. O código refactored é chamado nos comentários no código a seguir.  
   
  Para obter instruções para criar o documento de origem para este exemplo, consulte [criando o Office Open XML documento de origem (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- Este exemplo usa classes do assembly WindowsBase. Ele usa tipos no <xref:System.IO.Packaging?displayProperty=fullName>namespace.</xref:System.IO.Packaging?displayProperty=fullName>  
+ Este exemplo usa classes do assembly WindowsBase. Ele usa tipos no namespace <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -183,9 +179,9 @@ StyleName:Code >Hello World<
 ### <a name="next-steps"></a>Próximas etapas  
  O exemplo a seguir mostra como projetar XML em uma forma diferente:  
   
--   [Projetando XML em um formato diferente (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+-   [Projetando XML em uma forma diferente (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
- [Refatoração usando um método de extensão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)   
+ [Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+ [Refatoração usando um método de extensão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
  [Refatoração em funções puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

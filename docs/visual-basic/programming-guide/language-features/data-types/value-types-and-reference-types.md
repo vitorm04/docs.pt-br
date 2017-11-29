@@ -1,86 +1,69 @@
 ---
-title: "Tipos de valor e referência | Documentos do Microsoft"
+title: "Tipos de valor e referência"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- reference data types
-- reference types
-- value types
-- value data types
+- reference data types [Visual Basic]
+- reference types [Visual Basic]
+- value types [Visual Basic]
+- value data types [Visual Basic]
 - types [Visual Basic]
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: de8016b4b2a5550b32373a41c89a484fa996c596
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2b54945d27d186771e8b5353e753afd74c56d71b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="value-types-and-reference-types"></a>Tipos de valor e referência
-No Visual Basic, os tipos de dados são implementados com base em sua classificação. O [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] tipos de dados podem ser classificados de acordo com se uma variável de um determinado tipo armazena seus próprios dados ou um ponteiro para os dados. Se ela armazena seus próprios dados é um *tipo de valor*; se ela contém um ponteiro para os dados em outro lugar da memória é uma *tipo de referência*.  
+No Visual Basic, os tipos de dados são implementados com base em sua classificação. O [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] tipos de dados podem ser classificados de acordo com se uma variável de um determinado tipo armazena seus próprios dados ou um ponteiro para os dados. Se ela armazena seus próprios dados é um *tipo de valor*; se ele contém um ponteiro para dados em outro lugar na memória é um *fazem referência a tipo*.  
   
 ## <a name="value-types"></a>Tipos de valor  
- Um tipo de dados é uma *tipo de valor* se ele mantém os dados dentro sua própria alocação de memória. Tipos de valor incluem o seguinte:  
+ Um tipo de dados é um *tipo de valor* se ele mantém os dados dentro de sua própria alocação de memória. Tipos de valor incluem o seguinte:  
   
 -   Todos os tipos de dados numéricos  
   
 -   `Boolean`, `Char` e `Date`  
   
--   Todas as estruturas, mesmo que seus membros são tipos de referência  
+-   Todas as estruturas, mesmo se seus membros são tipos de referência  
   
 -   Enumerações, pois seu tipo base é sempre `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, ou`ULong`  
   
- Cada estrutura é um tipo de valor, mesmo se ele contiver membros de tipo de referência. Por esse motivo, tipos, como `Char` e `Integer` são implementados por estruturas do .NET Framework.  
+ Cada estrutura é um tipo de valor, mesmo se ele contém membros de tipo de referência. Por esse motivo, tipos, como `Char` e `Integer` são implementados por estruturas do .NET Framework.  
   
- Você pode declarar um tipo de valor usando a palavra-chave reservada, por exemplo, `Decimal`. Você também pode usar o `New` palavra-chave para inicializar um tipo de valor. Isso é especialmente útil se o tipo tem um construtor que aceita parâmetros. Um exemplo disso é o <xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29>construtor, que cria um novo `Decimal` valor a partir das partes fornecidas.</xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29>  
+ Você pode declarar um tipo de valor usando a palavra-chave reservada, por exemplo, `Decimal`. Você também pode usar o `New` palavra-chave para inicializar um tipo de valor. Isso é especialmente útil se o tipo tem um construtor que aceita parâmetros. Um exemplo disso é o <xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29> construtor, que cria um novo `Decimal` valor a partir das partes fornecidas.  
   
 ## <a name="reference-types"></a>Tipos de referência  
- A *tipo de referência* contém um ponteiro para outro local da memória que mantém os dados. Tipos de referência incluem o seguinte:  
+ Um *fazem referência a tipo* contém um ponteiro para outro local de memória que contém os dados. Tipos de referência incluem o seguinte:  
   
 -   `String`  
   
 -   Todas as matrizes, mesmo se seus elementos são tipos de valor  
   
--   Tipos de classe, como<xref:System.Windows.Forms.Form></xref:System.Windows.Forms.Form>  
+-   Tipos de classe, como<xref:System.Windows.Forms.Form>  
   
 -   Delegados  
   
- Uma classe é um *tipo de referência*. Por esse motivo, tipos de referência como `Object` e `String` são suportados pelo [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] classes. Observe que cada matriz é um tipo de referência, mesmo se seus membros são tipos de valor.  
+ Uma classe é um *fazem referência a tipo*. Por esse motivo, tipos de referência, como `Object` e `String` são suportados pelo [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] classes. Observe que cada matriz é um tipo de referência, mesmo se seus membros são tipos de valor.  
   
- Como cada tipo de referência representa uma classe base do .NET Framework, você deve usar o [novo operador](../../../../visual-basic/language-reference/operators/new-operator.md) palavra-chave quando fizer a inicialização. A instrução a seguir inicializa uma matriz.  
+ Como cada tipo de referência representa uma classe base do .NET Framework, você deve usar o [novo operador](../../../../visual-basic/language-reference/operators/new-operator.md) palavra-chave quando você inicializá-lo. A instrução a seguir inicializa uma matriz.  
   
 ```  
 Dim totals() As Single = New Single(8) {}  
 ```  
   
 ## <a name="elements-that-are-not-types"></a>Elementos que não são de tipos  
- Os seguintes elementos de programação não se qualificam como tipos, porque você não pode especificar qualquer um deles como um tipo de dados de um elemento declarado:  
+ Os seguintes elementos de programação não se qualificam como tipos, porque você não pode especificar qualquer um deles como um tipo de dados para um elemento declarado:  
   
 -   Namespaces  
   
@@ -93,14 +76,14 @@ Dim totals() As Single = New Single(8) {}
 -   Variáveis, constantes e campos  
   
 ## <a name="working-with-the-object-data-type"></a>Trabalhando com o tipo de dados de objeto  
- Você pode atribuir um tipo de referência ou um tipo de valor a uma variável do `Object` tipo de dados. Um `Object` variável sempre contém um ponteiro para os dados, nunca os dados propriamente ditos. No entanto, se você atribuir um tipo de valor para um `Object` variável, ele se comporta como se ele contém os seus próprios dados. Para obter mais informações, consulte [tipo de dados do objeto](../../../../visual-basic/language-reference/data-types/object-data-type.md).  
+ Você pode atribuir um tipo de referência ou um tipo de valor a uma variável do `Object` tipo de dados. Um `Object` variável sempre contém um ponteiro para os dados, e nunca os dados em si. No entanto, se você atribuir um tipo de valor para um `Object` variável, ele se comporta como se ele contém seus próprios dados. Para obter mais informações, consulte [tipo de dados do objeto](../../../../visual-basic/language-reference/data-types/object-data-type.md).  
   
- Você pode descobrir se um `Object` variável está atuando como um tipo de referência ou um tipo de valor, passando-o para o <xref:Microsoft.VisualBasic.Information.IsReference%2A>método o <xref:Microsoft.VisualBasic.Information>classe do <xref:Microsoft.VisualBasic?displayProperty=fullName>namespace.</xref:Microsoft.VisualBasic?displayProperty=fullName> </xref:Microsoft.VisualBasic.Information> </xref:Microsoft.VisualBasic.Information.IsReference%2A> <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=fullName>Retorna `True` se o conteúdo de `Object` variável representa um tipo de referência.</xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=fullName>  
+ Você pode descobrir se um `Object` variável está atuando como um tipo de referência ou um tipo de valor, passando-o para o <xref:Microsoft.VisualBasic.Information.IsReference%2A> método o <xref:Microsoft.VisualBasic.Information> classe do <xref:Microsoft.VisualBasic?displayProperty=nameWithType> namespace. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType>Retorna `True` se o conteúdo de `Object` variável representa um tipo de referência.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tipos de valor anulável](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)   
- [Conversões de tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [Instrução Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)   
- [Uso eficiente de tipos de dados](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)   
- [Tipo de dados Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)   
+ [Tipos de Valor Anulável](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
+ [Conversões de tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [Instrução Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Uso Eficiente de Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
+ [Tipo de Dados Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
  [Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

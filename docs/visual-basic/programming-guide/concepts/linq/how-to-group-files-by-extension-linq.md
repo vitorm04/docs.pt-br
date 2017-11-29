@@ -1,36 +1,28 @@
 ---
-title: "Como: agrupar arquivos por extensão (LINQ) (Visual Basic) | Documentos do Microsoft"
+title: "Como: agrupar arquivos por extensão (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f78785b4da3ae3b362603eea34d81207ed48a657
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 1e2d81f88371e63f64567422e87ed5b185e7a633
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Como: agrupar arquivos por extensão (LINQ) (Visual Basic)
-Este exemplo mostra como o LINQ pode ser usado para executar operações em listas de arquivos ou pastas de classificação e agrupamento avançado. Ele também mostra como a página de saída na janela do console usando o <xref:System.Linq.Enumerable.Skip%2A>e <xref:System.Linq.Enumerable.Take%2A>métodos.</xref:System.Linq.Enumerable.Take%2A> </xref:System.Linq.Enumerable.Skip%2A>  
+Este exemplo mostra como o LINQ pode ser usado para realizar operações avançadas de classificação e agrupamento em listas de arquivos ou pastas. Ele também mostra como paginar a saída na janela do console usando os métodos <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Take%2A>.  
   
 ## <a name="example"></a>Exemplo  
- A consulta a seguir mostra como agrupar o conteúdo de uma árvore de diretório especificado pela extensão de nome de arquivo.  
+ A consulta a seguir mostra como agrupar o conteúdo de uma árvore de diretórios especificada, pela extensão de nome de arquivo.  
   
 ```vb  
 Module GroupByExtension  
@@ -108,11 +100,11 @@ Module GroupByExtension
 End Module  
 ```  
   
- A saída do programa pode ser longa, dependendo dos detalhes do sistema de arquivos local e o que o `startFolder` é definido como. Para habilitar a exibição de todos os resultados, este exemplo mostra como percorrer os resultados. As mesmas técnicas podem ser aplicadas a aplicativos Windows e Web. Observe que, como os itens em um grupo aninhado de páginas de código `For Each` loop é necessário. Também há alguma lógica adicional para calcular a posição atual na lista e para permitir que o usuário pare de paginação e sair do programa. Nesse caso específico, a consulta de paginação é executada contra os resultados em cache da consulta original. Em outros contextos, como LINQ to SQL, tais cache não é necessário.  
+ A saída desse programa pode ser longa, dependendo dos detalhes do sistema de arquivos local e o que está definido em `startFolder`. Para habilitar a exibição de todos os resultados, este exemplo mostra como paginá-los. As mesmas técnicas podem ser aplicadas a aplicativos do Windows e aplicativos Web. Observe que, como o código dispõe os itens em um grupo, é necessário um loop `For Each` aninhado. Há também alguma lógica adicional para calcular a posição atual na lista e para permitir que o usuário interrompa a paginação e saia do programa. Nesse caso específico, a consulta de paginação é executada nos resultados da consulta original armazenados em cache. Em outros contextos, como LINQ to SQL, esse cache não é necessário.  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- Criar um projeto que tem como alvo o .NET Framework versão 3.5 ou superior com uma referência a System.Core.dll e uma `Imports` declaração para o namespace System. Linq.  
+ Criar um projeto que tem como alvo o .NET Framework versão 3.5 ou superior com uma referência a System.Core.dll e um `Imports` declaração para o namespace System. Linq.  
   
 ## <a name="see-also"></a>Consulte também  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
+ [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
  [LINQ e diretórios de arquivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
