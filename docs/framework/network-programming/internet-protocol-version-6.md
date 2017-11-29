@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - IPv6, improvements
 - IPv4
@@ -19,61 +14,59 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7901084f38099d74f3bcde086342bd3c90b34348
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e8ac63cae9d70f0249533848fa472da77f04b807
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# Protocolo IP versão 6
-O protocolo IP versão 6 (IPv6) é um novo pacote de protocolos padrão para a camada de rede da Internet. O IPv6 foi projetado para resolver muitos dos problemas da versão atual do pacote de protocolos IP (conhecido como IPv4) relacionados ao o esgotamento de endereços, a segurança, a configuração automática, a necessidade de extensibilidade e outros. O IPv6 expande os recursos da Internet para habilitar novos tipos de aplicativos, inclusive aplicativos móveis e de ponto a ponto. Estes são os principais problemas do protocolo IPv4 atual:  
+# <a name="internet-protocol-version-6"></a><span data-ttu-id="b9567-102">Protocolo IP versão 6</span><span class="sxs-lookup"><span data-stu-id="b9567-102">Internet Protocol Version 6</span></span>
+<span data-ttu-id="b9567-103">O protocolo IP versão 6 (IPv6) é um novo pacote de protocolos padrão para a camada de rede da Internet.</span><span class="sxs-lookup"><span data-stu-id="b9567-103">The Internet Protocol version 6 (IPv6) is a new suite of standard protocols for the network layer of the Internet.</span></span> <span data-ttu-id="b9567-104">O IPv6 foi projetado para resolver muitos dos problemas da versão atual do pacote de protocolos IP (conhecido como IPv4) relacionados ao o esgotamento de endereços, a segurança, a configuração automática, a necessidade de extensibilidade e outros.</span><span class="sxs-lookup"><span data-stu-id="b9567-104">IPv6 is designed to solve many of the problems of the current version of the Internet Protocol suite (known as IPv4) with regard to address depletion, security, auto-configuration, extensibility, and so on.</span></span> <span data-ttu-id="b9567-105">O IPv6 expande os recursos da Internet para habilitar novos tipos de aplicativos, inclusive aplicativos móveis e de ponto a ponto.</span><span class="sxs-lookup"><span data-stu-id="b9567-105">IPv6 expands the capabilities of the Internet to enable new kinds of applications, including peer-to-peer and mobile applications.</span></span> <span data-ttu-id="b9567-106">Estes são os principais problemas do protocolo IPv4 atual:</span><span class="sxs-lookup"><span data-stu-id="b9567-106">The following are the main issues of the current IPv4 protocol:</span></span>  
   
--   Rápido esgotamento do espaço de endereço.  
+-   <span data-ttu-id="b9567-107">Rápido esgotamento do espaço de endereço.</span><span class="sxs-lookup"><span data-stu-id="b9567-107">Rapid depletion of the address space.</span></span>  
   
-     Isso levou ao uso de conversores de endereço de rede (NATs) que mapeiam vários endereços particulares para um único endereço IP público. Os principais problemas criados por esse mecanismo são a sobrecarga de processamento e a falta de conectividade de ponta a ponta.  
+     <span data-ttu-id="b9567-108">Isso levou ao uso de conversores de endereço de rede (NATs) que mapeiam vários endereços particulares para um único endereço IP público.</span><span class="sxs-lookup"><span data-stu-id="b9567-108">This has led to the use of Network Address Translators (NATs) that map multiple private addresses to a single public IP address.</span></span> <span data-ttu-id="b9567-109">Os principais problemas criados por esse mecanismo são a sobrecarga de processamento e a falta de conectividade de ponta a ponta.</span><span class="sxs-lookup"><span data-stu-id="b9567-109">The main problems created by this mechanism are processing overhead and lack of end-to-end connectivity.</span></span>  
   
--   Falta de suporte a hierarquia.  
+-   <span data-ttu-id="b9567-110">Falta de suporte a hierarquia.</span><span class="sxs-lookup"><span data-stu-id="b9567-110">Lack of hierarchy support.</span></span>  
   
-     Por causa de sua organização de classe predefinida inerente, IPv4 não tem um verdadeiro suporte hierárquico. É impossível estruturar os endereços IP de uma forma que realmente mapeie a topologia de rede. Essa falha de design crucial cria a necessidade de grandes tabelas de roteamento para entregar pacotes IPv4 em qualquer local na Internet.  
+     <span data-ttu-id="b9567-111">Por causa de sua organização de classe predefinida inerente, IPv4 não tem um verdadeiro suporte hierárquico.</span><span class="sxs-lookup"><span data-stu-id="b9567-111">Because of its inherent predefined class organization, IPv4 lacks true hierarchical support.</span></span> <span data-ttu-id="b9567-112">É impossível estruturar os endereços IP de uma forma que realmente mapeie a topologia de rede.</span><span class="sxs-lookup"><span data-stu-id="b9567-112">It is impossible to structure the IP addresses in a way that truly maps the network topology.</span></span> <span data-ttu-id="b9567-113">Essa falha de design crucial cria a necessidade de grandes tabelas de roteamento para entregar pacotes IPv4 em qualquer local na Internet.</span><span class="sxs-lookup"><span data-stu-id="b9567-113">This crucial design flaw creates the need for large routing tables to deliver IPv4 packets to any location on the Internet.</span></span>  
   
--   Configuração de rede complexa.  
+-   <span data-ttu-id="b9567-114">Configuração de rede complexa.</span><span class="sxs-lookup"><span data-stu-id="b9567-114">Complex network configuration.</span></span>  
   
-     Com o IPv4, os endereços devem ser atribuídos estaticamente ou usando um protocolo de configuração, como o DHCP. Em uma situação ideal, hosts não precisariam depender da administração de uma infraestrutura DHCP. Em vez disso, eles poderiam configurar a si mesmos com base no segmento de rede no qual estivessem localizados.  
+     <span data-ttu-id="b9567-115">Com o IPv4, os endereços devem ser atribuídos estaticamente ou usando um protocolo de configuração, como o DHCP.</span><span class="sxs-lookup"><span data-stu-id="b9567-115">With IPv4, addresses must be assigned statically or using a configuration protocol such as DHCP.</span></span> <span data-ttu-id="b9567-116">Em uma situação ideal, hosts não precisariam depender da administração de uma infraestrutura DHCP.</span><span class="sxs-lookup"><span data-stu-id="b9567-116">In an ideal situation, hosts would not have to rely on the administration of a DHCP infrastructure.</span></span> <span data-ttu-id="b9567-117">Em vez disso, eles poderiam configurar a si mesmos com base no segmento de rede no qual estivessem localizados.</span><span class="sxs-lookup"><span data-stu-id="b9567-117">Instead, they would be able to configure themselves based on the network segment in which they are located.</span></span>  
   
--   Falta de autenticação interna e de confidencialidade.  
+-   <span data-ttu-id="b9567-118">Falta de autenticação interna e de confidencialidade.</span><span class="sxs-lookup"><span data-stu-id="b9567-118">Lack of built-in authentication and confidentiality.</span></span>  
   
-     O IPv4 não requer suporte para nenhum outro mecanismo que fornece autenticação ou criptografia dos dados transmitidos. Isso muda com o IPv6. O protocolo IPsec é um requisito de suporte a IPv6.  
+     <span data-ttu-id="b9567-119">O IPv4 não requer suporte para nenhum outro mecanismo que fornece autenticação ou criptografia dos dados transmitidos.</span><span class="sxs-lookup"><span data-stu-id="b9567-119">IPv4 does not require the support for any mechanism that provides authentication or encryption of the exchanged data.</span></span> <span data-ttu-id="b9567-120">Isso muda com o IPv6.</span><span class="sxs-lookup"><span data-stu-id="b9567-120">This changes with IPv6.</span></span> <span data-ttu-id="b9567-121">O protocolo IPsec é um requisito de suporte a IPv6.</span><span class="sxs-lookup"><span data-stu-id="b9567-121">Internet Protocol security (IPSec) is an IPv6 support requirement.</span></span>  
   
- Um novo pacote de protocolos deve atender aos seguintes requisitos básicos:  
+ <span data-ttu-id="b9567-122">Um novo pacote de protocolos deve atender aos seguintes requisitos básicos:</span><span class="sxs-lookup"><span data-stu-id="b9567-122">A new protocol suite must satisfy the following basic requirements:</span></span>  
   
--   Roteamento em larga escala e endereçamento com pouca sobrecarga.  
+-   <span data-ttu-id="b9567-123">Roteamento em larga escala e endereçamento com pouca sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="b9567-123">Large-scale routing and addressing with low overhead.</span></span>  
   
--   Configuração automática para situações de conexão diversas.  
+-   <span data-ttu-id="b9567-124">Configuração automática para situações de conexão diversas.</span><span class="sxs-lookup"><span data-stu-id="b9567-124">Auto-configuration for various connecting situations.</span></span>  
   
--   Autenticação interna e confidencialidade.  
+-   <span data-ttu-id="b9567-125">Autenticação interna e confidencialidade.</span><span class="sxs-lookup"><span data-stu-id="b9567-125">Built-in authentication and confidentiality.</span></span>  
   
- Para obter mais informações, consulte [Endereçamento IPv6](../../../docs/framework/network-programming/ipv6-addressing.md), [Roteamento IPv6](../../../docs/framework/network-programming/ipv6-routing.md), [Configuração automática de IPv6](../../../docs/framework/network-programming/ipv6-auto-configuration.md), [Habilitando e desabilitando o IPv6](../../../docs/framework/network-programming/enabling-and-disabling-ipv6.md) e [Como modificar o arquivo de configuração do computador para habilitar o suporte a IPv6](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md).  
+ <span data-ttu-id="b9567-126">Para obter mais informações, consulte [Endereçamento IPv6](../../../docs/framework/network-programming/ipv6-addressing.md), [Roteamento IPv6](../../../docs/framework/network-programming/ipv6-routing.md), [Configuração automática de IPv6](../../../docs/framework/network-programming/ipv6-auto-configuration.md), [Habilitando e desabilitando o IPv6](../../../docs/framework/network-programming/enabling-and-disabling-ipv6.md) e [Como modificar o arquivo de configuração do computador para habilitar o suporte a IPv6](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md).</span><span class="sxs-lookup"><span data-stu-id="b9567-126">For more information, see [IPv6 Addressing](../../../docs/framework/network-programming/ipv6-addressing.md), [IPv6 Routing](../../../docs/framework/network-programming/ipv6-routing.md), [IPv6 Auto-Configuration](../../../docs/framework/network-programming/ipv6-auto-configuration.md), [Enabling and Disabling IPv6](../../../docs/framework/network-programming/enabling-and-disabling-ipv6.md), and [How to: Modify the Computer Configuration File to Enable IPv6 Support](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md).</span></span>  
   
-## Referências  
- A seguir, documentos RFC selecionados que podem ser encontrados no site da Internet Engineering Task Force ([http://www.ietf.org](http://www.ietf.org/)):  
+## <a name="references"></a><span data-ttu-id="b9567-127">Referências</span><span class="sxs-lookup"><span data-stu-id="b9567-127">References</span></span>  
+ <span data-ttu-id="b9567-128">A seguir, documentos RFC selecionados que podem ser encontrados no site da Internet Engineering Task Force ([http://www.ietf.org](http://www.ietf.org/)):</span><span class="sxs-lookup"><span data-stu-id="b9567-128">The following are selected RFC documents that you can find at the Internet Engineering Task Force site ([http://www.ietf.org](http://www.ietf.org/)):</span></span>  
   
--   RFC 1287, voltado a arquitetura de Internet futura.  
+-   <span data-ttu-id="b9567-129">RFC 1287, voltado a arquitetura de Internet futura.</span><span class="sxs-lookup"><span data-stu-id="b9567-129">RFC 1287, Towards the Future Internet Architecture.</span></span>  
   
--   RFC 1454, comparação de propostas para a próxima versão do IP.  
+-   <span data-ttu-id="b9567-130">RFC 1454, comparação de propostas para a próxima versão do IP.</span><span class="sxs-lookup"><span data-stu-id="b9567-130">RFC 1454, Comparison of Proposals for Next Version of IP.</span></span>  
   
--   RFC 2373, arquitetura de endereçamento do IP versão 6.  
+-   <span data-ttu-id="b9567-131">RFC 2373, arquitetura de endereçamento do IP versão 6.</span><span class="sxs-lookup"><span data-stu-id="b9567-131">RFC 2373, IP Version 6 Addressing Architecture.</span></span>  
   
--   RFC 2374, um formato de endereço unicast global agregável IPv6.  
+-   <span data-ttu-id="b9567-132">RFC 2374, um formato de endereço unicast global agregável IPv6.</span><span class="sxs-lookup"><span data-stu-id="b9567-132">RFC 2374, An IPv6 Aggregatable Global Unicast Address Format.</span></span>  
   
- Você também pode encontrar informações relacionadas ao IPv6 na [Área IPv6 na Technet](http://go.microsoft.com/fwlink/?LinkID=179658).  
+ <span data-ttu-id="b9567-133">Você também pode encontrar informações relacionadas ao IPv6 na [Área IPv6 na Technet](http://go.microsoft.com/fwlink/?LinkID=179658).</span><span class="sxs-lookup"><span data-stu-id="b9567-133">You can also find IPv6-related information on the [IPv6 area on Technet](http://go.microsoft.com/fwlink/?LinkID=179658).</span></span>  
   
-## Consulte também  
- [Amostra de soquetes IPv6](http://go.microsoft.com/fwlink/?LinkID=179568)   
- [Amostras de programação de rede](../../../docs/framework/network-programming/network-programming-samples.md)   
- [Soquetes](../../../docs/framework/network-programming/sockets.md)
-
+## <a name="see-also"></a><span data-ttu-id="b9567-134">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b9567-134">See Also</span></span>  
+ [<span data-ttu-id="b9567-135">Amostra de soquetes IPv6</span><span class="sxs-lookup"><span data-stu-id="b9567-135">IPv6 Sockets Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=179568)  
+ [<span data-ttu-id="b9567-136">Amostras de programação de rede</span><span class="sxs-lookup"><span data-stu-id="b9567-136">Network Programming Samples</span></span>](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [<span data-ttu-id="b9567-137">Soquetes</span><span class="sxs-lookup"><span data-stu-id="b9567-137">Sockets</span></span>](../../../docs/framework/network-programming/sockets.md)

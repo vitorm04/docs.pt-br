@@ -5,26 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f92797e9c06762602c30d7c3ed8e6b0d6e579bbf
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 014dc690d034c27f0f004172fb8108249bb5c89b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="ltnamespacegt-element-net-native"></a>Elemento &lt;Namespace&gt; (.NET Nativo)
-Aplica a política de reflexão de tempo de execução a todos os tipos em um namespace especificado.  
+# <a name="ltnamespacegt-element-net-native"></a><span data-ttu-id="ca821-102">Elemento &lt;Namespace&gt; (.NET Nativo)</span><span class="sxs-lookup"><span data-stu-id="ca821-102">&lt;Namespace&gt; Element (.NET Native)</span></span>
+<span data-ttu-id="ca821-103">Aplica a política de reflexão de tempo de execução a todos os tipos em um namespace especificado.</span><span class="sxs-lookup"><span data-stu-id="ca821-103">Applies runtime reflection policy to all the types in a specified namespace.</span></span>  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a><span data-ttu-id="ca821-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ca821-104">Syntax</span></span>  
   
 ```xml  
 <Namespace Name="namespace_name"   
@@ -40,61 +38,60 @@ Aplica a política de reflexão de tempo de execução a todos os tipos em um na
            MarshalStructure="policy_setting" />  
 ```  
   
-## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem atributos, elementos filho e elementos pai.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ca821-105">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="ca821-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="ca821-106">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="ca821-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a>Atributos  
+### <a name="attributes"></a><span data-ttu-id="ca821-107">Atributos</span><span class="sxs-lookup"><span data-stu-id="ca821-107">Attributes</span></span>  
   
-|Atributo|Tipo de atributo|Descrição|  
+|<span data-ttu-id="ca821-108">Atributo</span><span class="sxs-lookup"><span data-stu-id="ca821-108">Attribute</span></span>|<span data-ttu-id="ca821-109">Tipo de atributo</span><span class="sxs-lookup"><span data-stu-id="ca821-109">Attribute type</span></span>|<span data-ttu-id="ca821-110">Descrição</span><span class="sxs-lookup"><span data-stu-id="ca821-110">Description</span></span>|  
 |---------------|--------------------|-----------------|  
-|`Name`|Geral|Atributo obrigatório. Especifica o nome do namespace.|  
-|`Activate`|Reflexão|Atributo opcional. Controla o acesso de tempo de execução a construtores para habilitar a ativação de instâncias.|  
-|`Browse`|Reflexão|Atributo opcional. Controla a consulta para obter informações sobre elementos do programa, mas não permite qualquer acesso de tempo de execução.|  
-|`Dynamic`|Reflexão|Atributo opcional. Controla o acesso a todos os tipos de membro ao tempo de execução, incluindo construtores, métodos, campos, propriedades e eventos, habilitando a programação dinâmica.|  
-|`Serialize`|Serialização|Atributo opcional. Controla o acesso ao tempo de execução para construtores, campos e propriedades para habilitar a serialização e desserialização das instâncias por bibliotecas como o serializador Newtonsoft JSON.|  
-|`DataContractSerializer`|Serialização|Atributo opcional. Controla a política de serialização que usa a classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.|  
-|`DataContractJsonSerializer`|Serialização|Atributo opcional. Controla a política de serialização JSON que usa a classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName>.|  
-|`XmlSerializer`|Serialização|Atributo opcional. Controla a política de serialização XML que usa a classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>.|  
-|`MarshalObject`|Interoperabilidade|Atributo opcional. Política de controles de marshaling de tipos de referência para o Tempo de Execução do Windows e COM.|  
-|`MarshalDelegate`|Interoperabilidade|Atributo opcional. Controla a diretiva de marshaling de tipos delegados como ponteiros de função para código nativo.|  
-|`MarshalStructure`|Interoperabilidade|Atributo opcional. Controla a política de estruturas de marshaling para código nativo.|  
+|`Name`|<span data-ttu-id="ca821-111">Geral</span><span class="sxs-lookup"><span data-stu-id="ca821-111">General</span></span>|<span data-ttu-id="ca821-112">Atributo obrigatório.</span><span class="sxs-lookup"><span data-stu-id="ca821-112">Required attribute.</span></span> <span data-ttu-id="ca821-113">Especifica o nome do namespace.</span><span class="sxs-lookup"><span data-stu-id="ca821-113">Specifies the name of the namespace.</span></span>|  
+|`Activate`|<span data-ttu-id="ca821-114">Reflexão</span><span class="sxs-lookup"><span data-stu-id="ca821-114">Reflection</span></span>|<span data-ttu-id="ca821-115">Atributo opcional.</span><span class="sxs-lookup"><span data-stu-id="ca821-115">Optional attribute.</span></span> <span data-ttu-id="ca821-116">Controla o acesso de tempo de execução a construtores para habilitar a ativação de instâncias.</span><span class="sxs-lookup"><span data-stu-id="ca821-116">Controls runtime access to constructors to enable activation of instances.</span></span>|  
+|`Browse`|<span data-ttu-id="ca821-117">Reflexão</span><span class="sxs-lookup"><span data-stu-id="ca821-117">Reflection</span></span>|<span data-ttu-id="ca821-118">Atributo opcional.</span><span class="sxs-lookup"><span data-stu-id="ca821-118">Optional attribute.</span></span> <span data-ttu-id="ca821-119">Controla a consulta para obter informações sobre elementos do programa, mas não permite qualquer acesso de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="ca821-119">Controls querying for information about program elements, but does not enable any runtime access.</span></span>|  
+|`Dynamic`|<span data-ttu-id="ca821-120">Reflexão</span><span class="sxs-lookup"><span data-stu-id="ca821-120">Reflection</span></span>|<span data-ttu-id="ca821-121">Atributo opcional.</span><span class="sxs-lookup"><span data-stu-id="ca821-121">Optional attribute.</span></span> <span data-ttu-id="ca821-122">Controla o acesso a todos os tipos de membro ao tempo de execução, incluindo construtores, métodos, campos, propriedades e eventos, habilitando a programação dinâmica.</span><span class="sxs-lookup"><span data-stu-id="ca821-122">Controls runtime access to all type members, including constructors, methods, fields, properties, and events, to enable dynamic programming.</span></span>|  
+|`Serialize`|<span data-ttu-id="ca821-123">Serialização</span><span class="sxs-lookup"><span data-stu-id="ca821-123">Serialization</span></span>|<span data-ttu-id="ca821-124">Atributo opcional.</span><span class="sxs-lookup"><span data-stu-id="ca821-124">Optional attribute.</span></span> <span data-ttu-id="ca821-125">Controla o acesso ao tempo de execução para construtores, campos e propriedades para habilitar a serialização e desserialização das instâncias por bibliotecas como o serializador Newtonsoft JSON.</span><span class="sxs-lookup"><span data-stu-id="ca821-125">Controls runtime access to constructors, fields, and properties, to enable type instances to be serialized and deserialized by libraries such as the Newtonsoft JSON serializer.</span></span>|  
+|`DataContractSerializer`|<span data-ttu-id="ca821-126">Serialização</span><span class="sxs-lookup"><span data-stu-id="ca821-126">Serialization</span></span>|<span data-ttu-id="ca821-127">Atributo opcional.</span><span class="sxs-lookup"><span data-stu-id="ca821-127">Optional attribute.</span></span> <span data-ttu-id="ca821-128">Controla a política de serialização que usa a classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="ca821-128">Controls policy for serialization that uses the <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> class.</span></span>|  
+|`DataContractJsonSerializer`|<span data-ttu-id="ca821-129">Serialização</span><span class="sxs-lookup"><span data-stu-id="ca821-129">Serialization</span></span>|<span data-ttu-id="ca821-130">Atributo opcional.</span><span class="sxs-lookup"><span data-stu-id="ca821-130">Optional attribute.</span></span> <span data-ttu-id="ca821-131">Controla a política de serialização JSON que usa a classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="ca821-131">Controls policy for JSON serialization that uses the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> class.</span></span>|  
+|`XmlSerializer`|<span data-ttu-id="ca821-132">Serialização</span><span class="sxs-lookup"><span data-stu-id="ca821-132">Serialization</span></span>|<span data-ttu-id="ca821-133">Atributo opcional.</span><span class="sxs-lookup"><span data-stu-id="ca821-133">Optional attribute.</span></span> <span data-ttu-id="ca821-134">Controla a política de serialização XML que usa a classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="ca821-134">Controls policy for XML serialization that uses the <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> class.</span></span>|  
+|`MarshalObject`|<span data-ttu-id="ca821-135">Interoperabilidade</span><span class="sxs-lookup"><span data-stu-id="ca821-135">Interop</span></span>|<span data-ttu-id="ca821-136">Atributo opcional.</span><span class="sxs-lookup"><span data-stu-id="ca821-136">Optional attribute.</span></span> <span data-ttu-id="ca821-137">Política de controles de marshaling de tipos de referência para o Tempo de Execução do Windows e COM.</span><span class="sxs-lookup"><span data-stu-id="ca821-137">Controls policy for marshaling reference types to Windows Runtime and COM.</span></span>|  
+|`MarshalDelegate`|<span data-ttu-id="ca821-138">Interoperabilidade</span><span class="sxs-lookup"><span data-stu-id="ca821-138">Interop</span></span>|<span data-ttu-id="ca821-139">Atributo opcional.</span><span class="sxs-lookup"><span data-stu-id="ca821-139">Optional attribute.</span></span> <span data-ttu-id="ca821-140">Controla a diretiva de marshaling de tipos delegados como ponteiros de função para código nativo.</span><span class="sxs-lookup"><span data-stu-id="ca821-140">Controls policy for marshaling delegate types as function pointers to native code.</span></span>|  
+|`MarshalStructure`|<span data-ttu-id="ca821-141">Interoperabilidade</span><span class="sxs-lookup"><span data-stu-id="ca821-141">Interop</span></span>|<span data-ttu-id="ca821-142">Atributo opcional.</span><span class="sxs-lookup"><span data-stu-id="ca821-142">Optional attribute.</span></span> <span data-ttu-id="ca821-143">Controla a política de estruturas de marshaling para código nativo.</span><span class="sxs-lookup"><span data-stu-id="ca821-143">Controls policy for marshaling structures to native code.</span></span>|  
   
-## <a name="name-attribute"></a>Atributo de nome  
+## <a name="name-attribute"></a><span data-ttu-id="ca821-144">Atributo de nome</span><span class="sxs-lookup"><span data-stu-id="ca821-144">Name attribute</span></span>  
   
-|Valor|Descrição|  
+|<span data-ttu-id="ca821-145">Valor</span><span class="sxs-lookup"><span data-stu-id="ca821-145">Value</span></span>|<span data-ttu-id="ca821-146">Descrição</span><span class="sxs-lookup"><span data-stu-id="ca821-146">Description</span></span>|  
 |-----------|-----------------|  
-|*namespace_name*|O nome do namespace. Se o elemento \<Namespace> for filho de um elemento [\<Application>](../../../docs/framework/net-native/application-element-net-native.md), [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) ou [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), o *namespace_name* deverá ser um nome de namespace totalmente qualificado. Se o elemento \<Namespace> for filho de outro elemento \<Namespace>, o *namespace_name* deverá ser um nome de namespace relacionado.|  
+|<span data-ttu-id="ca821-147">*namespace_name*</span><span class="sxs-lookup"><span data-stu-id="ca821-147">*namespace_name*</span></span>|<span data-ttu-id="ca821-148">O nome do namespace.</span><span class="sxs-lookup"><span data-stu-id="ca821-148">The namespace name.</span></span> <span data-ttu-id="ca821-149">Se o elemento \<Namespace> for filho de um elemento [\<Application>](../../../docs/framework/net-native/application-element-net-native.md), [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) ou [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), o *namespace_name* deverá ser um nome de namespace totalmente qualificado.</span><span class="sxs-lookup"><span data-stu-id="ca821-149">If the \<Namespace> element is a child of an [\<Application>](../../../docs/framework/net-native/application-element-net-native.md), [\<Library>](../../../docs/framework/net-native/library-element-net-native.md), or [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) element, *namespace_name* must be a fully qualified namespace name.</span></span> <span data-ttu-id="ca821-150">Se o elemento \<Namespace> for filho de outro elemento \<Namespace>, o *namespace_name* deverá ser um nome de namespace relacionado.</span><span class="sxs-lookup"><span data-stu-id="ca821-150">If the \<Namespace> element is a child of another \<Namespace> element, *namespace_name* must be a relative namespace name.</span></span>|  
   
-## <a name="all-other-attributes"></a>Todos os outros atributos  
+## <a name="all-other-attributes"></a><span data-ttu-id="ca821-151">Todos os outros atributos</span><span class="sxs-lookup"><span data-stu-id="ca821-151">All other attributes</span></span>  
   
-|Valor|Descrição|  
+|<span data-ttu-id="ca821-152">Valor</span><span class="sxs-lookup"><span data-stu-id="ca821-152">Value</span></span>|<span data-ttu-id="ca821-153">Descrição</span><span class="sxs-lookup"><span data-stu-id="ca821-153">Description</span></span>|  
 |-----------|-----------------|  
-|*policy_setting*|A configuração a ser aplicada a este tipo de política para todos os tipos no namespace. Os valores possíveis são `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Para obter mais informações, consulte [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|<span data-ttu-id="ca821-154">*policy_setting*</span><span class="sxs-lookup"><span data-stu-id="ca821-154">*policy_setting*</span></span>|<span data-ttu-id="ca821-155">A configuração a ser aplicada a este tipo de política para todos os tipos no namespace.</span><span class="sxs-lookup"><span data-stu-id="ca821-155">The setting to apply to this policy type for all types in the namespace.</span></span> <span data-ttu-id="ca821-156">Os valores possíveis são `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`.</span><span class="sxs-lookup"><span data-stu-id="ca821-156">Possible values are `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal`, and `Required All`.</span></span> <span data-ttu-id="ca821-157">Para obter mais informações, consulte [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md).</span><span class="sxs-lookup"><span data-stu-id="ca821-157">For more information, see [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md).</span></span>|  
   
-### <a name="child-elements"></a>Elementos filho  
+### <a name="child-elements"></a><span data-ttu-id="ca821-158">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="ca821-158">Child Elements</span></span>  
   
-|Elemento|Descrição|  
+|<span data-ttu-id="ca821-159">Elemento</span><span class="sxs-lookup"><span data-stu-id="ca821-159">Element</span></span>|<span data-ttu-id="ca821-160">Descrição</span><span class="sxs-lookup"><span data-stu-id="ca821-160">Description</span></span>|  
 |-------------|-----------------|  
-|`<Namespace>`|Aplica a política de reflexão de tempo de execução a todos os tipos em um namespace pai.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica a política de reflexão a um tipo.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído.|  
+|`<Namespace>`|<span data-ttu-id="ca821-161">Aplica a política de reflexão de tempo de execução a todos os tipos em um namespace pai.</span><span class="sxs-lookup"><span data-stu-id="ca821-161">Applies runtime reflection policy to all types in a parent namespace.</span></span>|  
+|[<span data-ttu-id="ca821-162">\<Type></span><span class="sxs-lookup"><span data-stu-id="ca821-162">\<Type></span></span>](../../../docs/framework/net-native/type-element-net-native.md)|<span data-ttu-id="ca821-163">Aplica a política de reflexão a um tipo.</span><span class="sxs-lookup"><span data-stu-id="ca821-163">Applies reflection policy to a type.</span></span>|  
+|[<span data-ttu-id="ca821-164">\<TypeInstantiation></span><span class="sxs-lookup"><span data-stu-id="ca821-164">\<TypeInstantiation></span></span>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|<span data-ttu-id="ca821-165">Aplica a política de reflexão a um tipo genérico construído.</span><span class="sxs-lookup"><span data-stu-id="ca821-165">Applies reflection policy to a constructed generic type.</span></span>|  
   
-### <a name="parent-elements"></a>Elementos pai  
+### <a name="parent-elements"></a><span data-ttu-id="ca821-166">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="ca821-166">Parent Elements</span></span>  
   
-|Elemento|Descrição|  
+|<span data-ttu-id="ca821-167">Elemento</span><span class="sxs-lookup"><span data-stu-id="ca821-167">Element</span></span>|<span data-ttu-id="ca821-168">Descrição</span><span class="sxs-lookup"><span data-stu-id="ca821-168">Description</span></span>|  
 |-------------|-----------------|  
-|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|Serve como um contêiner para os tipos amplos de aplicativos cujos metadados estão disponíveis para reflexão no tempo de execução. O elemento [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) pode ter zero, um ou mais elementos [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Aplica a política de reflexão de tempo de execução a todos os tipos em um assembly especificado.|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Define o assembly que contém tipos e membros de tipo cujos metadados estão disponíveis para reflexão em tempo de execução. O elemento [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) pode ter zero, um ou mais elementos [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).|  
-|`<Namespace>`|Aplica a política de reflexão de tempo de execução a todos os tipos em um namespace pai.|  
+|[<span data-ttu-id="ca821-169">\<Application></span><span class="sxs-lookup"><span data-stu-id="ca821-169">\<Application></span></span>](../../../docs/framework/net-native/application-element-net-native.md)|<span data-ttu-id="ca821-170">Serve como um contêiner para os tipos amplos de aplicativos cujos metadados estão disponíveis para reflexão no tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="ca821-170">Serves as a container for application-wide types and type members whose metadata is available for reflection at run time.</span></span> <span data-ttu-id="ca821-171">O elemento [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) pode ter zero, um ou mais elementos [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).</span><span class="sxs-lookup"><span data-stu-id="ca821-171">The [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) element can have zero, one, or more [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) elements.</span></span>|  
+|[<span data-ttu-id="ca821-172">\<Assembly></span><span class="sxs-lookup"><span data-stu-id="ca821-172">\<Assembly></span></span>](../../../docs/framework/net-native/assembly-element-net-native.md)|<span data-ttu-id="ca821-173">Aplica a política de reflexão de tempo de execução a todos os tipos em um assembly especificado.</span><span class="sxs-lookup"><span data-stu-id="ca821-173">Applies runtime reflection policy to all the types in a specified assembly.</span></span>|  
+|[<span data-ttu-id="ca821-174">\<Library></span><span class="sxs-lookup"><span data-stu-id="ca821-174">\<Library></span></span>](../../../docs/framework/net-native/library-element-net-native.md)|<span data-ttu-id="ca821-175">Define o assembly que contém tipos e membros de tipo cujos metadados estão disponíveis para reflexão em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="ca821-175">Defines the assembly that contains types and type members whose metadata is available for reflection at run time.</span></span> <span data-ttu-id="ca821-176">O elemento [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) pode ter zero, um ou mais elementos [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).</span><span class="sxs-lookup"><span data-stu-id="ca821-176">The [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) element can have zero or one [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) element.</span></span>|  
+|`<Namespace>`|<span data-ttu-id="ca821-177">Aplica a política de reflexão de tempo de execução a todos os tipos em um namespace pai.</span><span class="sxs-lookup"><span data-stu-id="ca821-177">Applies reflection policy to all types in a parent namespace.</span></span>|  
   
-## <a name="remarks"></a>Comentários  
- Os atributos `Activate`, `Browse`, `Dynamic` e `Serialize` são todos opcionais. Se nenhum estiver presente, o elemento `<Namespace>` serve somente como um contêiner para elementos filho. Se eles estiverem presentes, o elemento `<Namespace>` aplica a política de reflexão de tempo de execução a todos os tipos no namespace especificado.  
+## <a name="remarks"></a><span data-ttu-id="ca821-178">Comentários</span><span class="sxs-lookup"><span data-stu-id="ca821-178">Remarks</span></span>  
+ <span data-ttu-id="ca821-179">Os atributos `Activate`, `Browse`, `Dynamic` e `Serialize` são todos opcionais.</span><span class="sxs-lookup"><span data-stu-id="ca821-179">The `Activate`, `Browse`, `Dynamic`, and `Serialize` attributes are all optional.</span></span> <span data-ttu-id="ca821-180">Se nenhum estiver presente, o elemento `<Namespace>` serve somente como um contêiner para elementos filho.</span><span class="sxs-lookup"><span data-stu-id="ca821-180">If none are present, the `<Namespace>` element serves only as a container for child elements.</span></span> <span data-ttu-id="ca821-181">Se eles estiverem presentes, o elemento `<Namespace>` aplica a política de reflexão de tempo de execução a todos os tipos no namespace especificado.</span><span class="sxs-lookup"><span data-stu-id="ca821-181">If they are present, the `<Namespace>` element applies runtime reflection policy to all the types in the specified namespace.</span></span>  
   
- Quando ele é um filho do elemento [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), o elemento `<Namespace>` substitui a política de reflexão de tempo de execução definida pelo elemento [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).  
+ <span data-ttu-id="ca821-182">Quando ele é um filho do elemento [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), o elemento `<Namespace>` substitui a política de reflexão de tempo de execução definida pelo elemento [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).</span><span class="sxs-lookup"><span data-stu-id="ca821-182">When it is a child of the [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) element, the `<Namespace>` element overrides the runtime reflection policy defined by the  [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) element.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md)   
- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)
-
+## <a name="see-also"></a><span data-ttu-id="ca821-183">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ca821-183">See Also</span></span>  
+ [<span data-ttu-id="ca821-184">Configurações da política da diretiva de tempo de execução</span><span class="sxs-lookup"><span data-stu-id="ca821-184">Runtime Directive Policy Settings</span></span>](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
+ [<span data-ttu-id="ca821-185">Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)</span><span class="sxs-lookup"><span data-stu-id="ca821-185">Runtime Directives (rd.xml) Configuration File Reference</span></span>](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [<span data-ttu-id="ca821-186">Elementos da diretiva de tempo de execução</span><span class="sxs-lookup"><span data-stu-id="ca821-186">Runtime Directive Elements</span></span>](../../../docs/framework/net-native/runtime-directive-elements.md)
