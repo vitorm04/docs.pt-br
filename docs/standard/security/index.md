@@ -8,54 +8,47 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - .NET Framework, security
 - security [.NET Framework], about security
 - application development [.NET Framework], security
 - security [.NET Framework]
 ms.assetid: 9a9621d7-8883-4a4f-a874-65e8e09e20a6
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b2c487c76a6a0b42370b7b70099d5baba58f42db
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 5d6bf5929466d09b70cb74ffdf6c46d21c6f85ca
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="security-in-the-net-framework"></a>Segurança no .NET Framework
-O Common Language Runtime e o .NET Framework fornecem muitos serviços e classes úteis que permitem aos desenvolvedores escrever código seguro com facilidade e que permitem aos administradores de sistema personalizar as permissões concedidas ao código para que ele possa acessar recursos protegidos. Além disso, o tempo de execução e o .NET Framework fornecem classes e serviços úteis que facilitam o uso de criptografia e segurança baseada em função.  
+# <a name="security-in-the-net-framework"></a><span data-ttu-id="b40c2-102">Segurança no .NET Framework</span><span class="sxs-lookup"><span data-stu-id="b40c2-102">Security in the .NET Framework</span></span>
+<span data-ttu-id="b40c2-103">O Common Language Runtime e o .NET Framework fornecem muitos serviços e classes úteis que permitem aos desenvolvedores escrever código seguro com facilidade e que permitem aos administradores de sistema personalizar as permissões concedidas ao código para que ele possa acessar recursos protegidos.</span><span class="sxs-lookup"><span data-stu-id="b40c2-103">The common language runtime and the .NET Framework provide many useful classes and services that enable developers to easily write secure code and enable system administrators to customize the permissions granted to code so that it can access protected resources.</span></span> <span data-ttu-id="b40c2-104">Além disso, o tempo de execução e o .NET Framework fornecem classes e serviços úteis que facilitam o uso de criptografia e segurança baseada em função.</span><span class="sxs-lookup"><span data-stu-id="b40c2-104">In addition, the runtime and the .NET Framework provide useful classes and services that facilitate the use of cryptography and role-based security.</span></span>  
   
-## <a name="in-this-section"></a>Nesta seção  
- [Alterações de segurança](../../../docs/framework/security/security-changes.md)  
- Descreve alterações importantes para o sistema de segurança do .NET Framework.  
+## <a name="in-this-section"></a><span data-ttu-id="b40c2-105">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="b40c2-105">In This Section</span></span>  
+ [<span data-ttu-id="b40c2-106">Alterações de segurança</span><span class="sxs-lookup"><span data-stu-id="b40c2-106">Security Changes</span></span>](../../../docs/framework/security/security-changes.md)  
+ <span data-ttu-id="b40c2-107">Descreve alterações importantes para o sistema de segurança do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="b40c2-107">Describes important changes to the .NET Framework security system.</span></span>  
   
- [Principais conceitos de segurança](../../../docs/standard/security/key-security-concepts.md)  
- Fornece uma visão geral dos recursos de segurança do Common Language Runtime. Esta seção é de interesse dos desenvolvedores e administradores de sistema.  
+ [<span data-ttu-id="b40c2-108">Principais conceitos de segurança</span><span class="sxs-lookup"><span data-stu-id="b40c2-108">Key Security Concepts</span></span>](../../../docs/standard/security/key-security-concepts.md)  
+ <span data-ttu-id="b40c2-109">Fornece uma visão geral dos recursos de segurança do Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="b40c2-109">Provides an overview of common language runtime security features.</span></span> <span data-ttu-id="b40c2-110">Esta seção é de interesse dos desenvolvedores e administradores de sistema.</span><span class="sxs-lookup"><span data-stu-id="b40c2-110">This section is of interest to developers and system administrators.</span></span>  
   
- [Segurança baseada em Função](../../../docs/standard/security/role-based-security.md)  
- Descreve como interagir com a segurança baseada em função no seu código. Esta seção é de interesse dos desenvolvedores.  
+ [<span data-ttu-id="b40c2-111">Segurança baseada em Função</span><span class="sxs-lookup"><span data-stu-id="b40c2-111">Role-Based Security</span></span>](../../../docs/standard/security/role-based-security.md)  
+ <span data-ttu-id="b40c2-112">Descreve como interagir com a segurança baseada em função no seu código.</span><span class="sxs-lookup"><span data-stu-id="b40c2-112">Describes how to interact with role-based security in your code.</span></span> <span data-ttu-id="b40c2-113">Esta seção é de interesse dos desenvolvedores.</span><span class="sxs-lookup"><span data-stu-id="b40c2-113">This section is of interest to developers.</span></span>  
   
- [Modelo de criptografia](../../../docs/standard/security/cryptography-model.md)  
- Fornece uma visão geral dos serviços de criptografia fornecidos pelo .NET Framework. Esta seção é de interesse dos desenvolvedores.  
+ [<span data-ttu-id="b40c2-114">Modelo de criptografia</span><span class="sxs-lookup"><span data-stu-id="b40c2-114">Cryptography Model</span></span>](../../../docs/standard/security/cryptography-model.md)  
+ <span data-ttu-id="b40c2-115">Fornece uma visão geral dos serviços de criptografia fornecidos pelo .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="b40c2-115">Provides an overview of cryptographic services provided by the .NET Framework.</span></span> <span data-ttu-id="b40c2-116">Esta seção é de interesse dos desenvolvedores.</span><span class="sxs-lookup"><span data-stu-id="b40c2-116">This section is of interest to developers.</span></span>  
   
- [Diretrizes de codificação segura](../../../docs/standard/security/secure-coding-guidelines.md)  
- Descreve algumas das práticas recomendadas para a criação de aplicativos confiáveis do .NET Framework. Esta seção é de interesse dos desenvolvedores.  
+ [<span data-ttu-id="b40c2-117">Diretrizes de codificação segura</span><span class="sxs-lookup"><span data-stu-id="b40c2-117">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)  
+ <span data-ttu-id="b40c2-118">Descreve algumas das práticas recomendadas para a criação de aplicativos confiáveis do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="b40c2-118">Describes some of the best practices for creating reliable .NET Framework applications.</span></span> <span data-ttu-id="b40c2-119">Esta seção é de interesse dos desenvolvedores.</span><span class="sxs-lookup"><span data-stu-id="b40c2-119">This section is of interest to developers.</span></span>  
   
- [Diretrizes de codificação segura para código não gerenciado](../../../docs/framework/security/secure-coding-guidelines-for-unmanaged-code.md)  
- Descreve algumas das práticas recomendadas e preocupações com a segurança ao chamar código não gerenciado.  
+ [<span data-ttu-id="b40c2-120">Diretrizes de codificação segura para código não gerenciado</span><span class="sxs-lookup"><span data-stu-id="b40c2-120">Secure Coding Guidelines for Unmanaged Code</span></span>](../../../docs/framework/security/secure-coding-guidelines-for-unmanaged-code.md)  
+ <span data-ttu-id="b40c2-121">Descreve algumas das práticas recomendadas e preocupações com a segurança ao chamar código não gerenciado.</span><span class="sxs-lookup"><span data-stu-id="b40c2-121">Describes some of the best practices and security concerns when calling unmanaged code.</span></span>  
   
- [Windows Identity Foundation](../../../docs/framework/security/index.md)  
- Descreve como você pode implementar identidade baseada em declarações em seus aplicativos.  
+ [<span data-ttu-id="b40c2-122">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="b40c2-122">Windows Identity Foundation</span></span>](../../../docs/framework/security/index.md)  
+ <span data-ttu-id="b40c2-123">Descreve como você pode implementar identidade baseada em declarações em seus aplicativos.</span><span class="sxs-lookup"><span data-stu-id="b40c2-123">Describes how you can implement claims-based identity in your applications.</span></span>  
   
-## <a name="related-sections"></a>Seções relacionadas  
- [Guia de desenvolvimento](../../../docs/framework/development-guide.md)  
- Fornece um guia para todas as principais áreas de tecnologia e tarefas para o desenvolvimento de aplicativos, incluindo a criação, a configuração, a depuração, a proteção e a implantação de seu aplicativo, bem como informações sobre programação dinâmica, interoperabilidade, extensibilidade, gerenciamento de memória e threading.
-
+## <a name="related-sections"></a><span data-ttu-id="b40c2-124">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="b40c2-124">Related Sections</span></span>  
+ [<span data-ttu-id="b40c2-125">Guia de desenvolvimento</span><span class="sxs-lookup"><span data-stu-id="b40c2-125">Development Guide</span></span>](../../../docs/framework/development-guide.md)  
+ <span data-ttu-id="b40c2-126">Fornece um guia para todas as principais áreas de tecnologia e tarefas para o desenvolvimento de aplicativos, incluindo a criação, a configuração, a depuração, a proteção e a implantação de seu aplicativo, bem como informações sobre programação dinâmica, interoperabilidade, extensibilidade, gerenciamento de memória e threading.</span><span class="sxs-lookup"><span data-stu-id="b40c2-126">Provides a guide to all key technology areas and tasks for application development, including creating, configuring, debugging, securing, and deploying your application, and information about dynamic programming, interoperability, extensibility, memory management, and threading.</span></span>
