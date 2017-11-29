@@ -1,45 +1,25 @@
 ---
-title: CS3024 de aviso do compilador | Documentos do Microsoft
-ms.date: 2015-07-20
+title: CS3024 de aviso do compilador
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- CS3024
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- CS3024
+f1_keywords: CS3024
+helpviewer_keywords: CS3024
 ms.assetid: fef9db31-9a7f-42d5-ad37-3e7faf661f95
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 92c533d2fc5b5d9f6add118013a68918a7ad9ef1
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: ffaf8a8b5c52e793e08ab467621c42ec47b1a29c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="compiler-warning-cs3024"></a>CS3024 de aviso do compilador
 Tipo de restrição 'type' não é compatível com CLS.  
   
- O compilador emite esse aviso porque o uso de um tipo não compatível com CLS como uma restrição de tipo genérico pode tornar impossível para código escrito em alguns idiomas para consumir sua classe genérica.  
+ O compilador emite esse aviso porque o uso de um tipo não compatível com CLS, como uma restrição de tipo genérico pode tornar impossível para código escrito em alguns idiomas para consumir sua classe genérica.  
   
 ### <a name="to-eliminate-this-warning"></a>Para eliminar esse aviso  
   
