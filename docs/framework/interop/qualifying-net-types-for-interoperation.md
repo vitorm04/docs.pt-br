@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - exposing .NET Framework components to COM
 - COM interop, qualifying .NET types
@@ -22,50 +16,48 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 68ecd5e4c562f1eecb31ee539adb70d67455a584
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b6487c151f49f6084977deb600e7f93e5eb7acee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="qualifying-net-types-for-interoperation"></a>Qualificando tipos do .NET para interoperação
-Se você pretende expor os tipos em um assembly para aplicativos COM, considere os requisitos de interoperabilidade COM em tempo de design. Tipos gerenciados (classe, interface, estrutura e enumeração) se integram perfeitamente com tipos COM quando você obedece às seguintes diretrizes:  
+# <a name="qualifying-net-types-for-interoperation"></a><span data-ttu-id="97747-102">Qualificando tipos do .NET para interoperação</span><span class="sxs-lookup"><span data-stu-id="97747-102">Qualifying .NET Types for Interoperation</span></span>
+<span data-ttu-id="97747-103">Se você pretende expor os tipos em um assembly para aplicativos COM, considere os requisitos de interoperabilidade COM em tempo de design.</span><span class="sxs-lookup"><span data-stu-id="97747-103">If you intend to expose types in an assembly to COM applications, consider the requirements of COM interop at design time.</span></span> <span data-ttu-id="97747-104">Tipos gerenciados (classe, interface, estrutura e enumeração) se integram perfeitamente com tipos COM quando você obedece às seguintes diretrizes:</span><span class="sxs-lookup"><span data-stu-id="97747-104">Managed types (class, interface, structure, and enumeration) seamlessly integrate with COM types when you adhere to the following guidelines:</span></span>  
   
--   As classes devem implementar interfaces explicitamente.  
+-   <span data-ttu-id="97747-105">As classes devem implementar interfaces explicitamente.</span><span class="sxs-lookup"><span data-stu-id="97747-105">Classes should implement interfaces explicitly.</span></span>  
   
-     Embora a interoperabilidade COM forneça um mecanismo para gerar automaticamente uma interface contendo todos os membros da classe e os membros da respectiva classe base, é muito melhor fornecer interfaces explícitas. A interface gerada automaticamente é chamada de interface de classe. Para obter diretrizes, consulte [Introdução à interface de classe](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
+     <span data-ttu-id="97747-106">Embora a interoperabilidade COM forneça um mecanismo para gerar automaticamente uma interface contendo todos os membros da classe e os membros da respectiva classe base, é muito melhor fornecer interfaces explícitas.</span><span class="sxs-lookup"><span data-stu-id="97747-106">Although COM interop provides a mechanism to automatically generate an interface containing all members of the class and the members of its base class, it is far better to provide explicit interfaces.</span></span> <span data-ttu-id="97747-107">A interface gerada automaticamente é chamada de interface de classe.</span><span class="sxs-lookup"><span data-stu-id="97747-107">The automatically generated interface is called the class interface.</span></span> <span data-ttu-id="97747-108">Para obter diretrizes, consulte [Introdução à interface de classe](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024).</span><span class="sxs-lookup"><span data-stu-id="97747-108">For guidelines, see [Introducing the Class Interface](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024).</span></span>  
   
-     Você pode usar [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# e C++ para incorporar as definições de interface no seu código, em vez de usar a linguagem IDL ou um equivalente dela. Para obter detalhes da sintaxe, consulte a documentação da linguagem.  
+     <span data-ttu-id="97747-109">Você pode usar [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# e C++ para incorporar as definições de interface no seu código, em vez de usar a linguagem IDL ou um equivalente dela.</span><span class="sxs-lookup"><span data-stu-id="97747-109">You can use [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C#, and C++ to incorporate interface definitions in your code, instead of having to use Interface Definition Language (IDL) or its equivalent.</span></span> <span data-ttu-id="97747-110">Para obter detalhes da sintaxe, consulte a documentação da linguagem.</span><span class="sxs-lookup"><span data-stu-id="97747-110">For syntax details, see your language documentation.</span></span>  
   
--   Os tipos gerenciados devem ser públicos.  
+-   <span data-ttu-id="97747-111">Os tipos gerenciados devem ser públicos.</span><span class="sxs-lookup"><span data-stu-id="97747-111">Managed types must be public.</span></span>  
   
-     Somente os tipos públicos em um assembly são registrados e exportados para a biblioteca de tipos. Como resultado, somente os tipos públicos são visíveis para COM.  
+     <span data-ttu-id="97747-112">Somente os tipos públicos em um assembly são registrados e exportados para a biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="97747-112">Only public types in an assembly are registered and exported to the type library.</span></span> <span data-ttu-id="97747-113">Como resultado, somente os tipos públicos são visíveis para COM.</span><span class="sxs-lookup"><span data-stu-id="97747-113">As a result, only public types are visible to COM.</span></span>  
   
-     Tipos gerenciados expõem recursos para outro código gerenciado que pode não ser exposto a COM. Por exemplo, campos de constantes, construtores com parâmetros e métodos estáticos não são expostos a clientes COM. Além disso, como o tempo de execução realiza marshaling de dados dentro e fora de um tipo, os dados podem ser copiados ou transformados.  
+     <span data-ttu-id="97747-114">Tipos gerenciados expõem recursos para outro código gerenciado que pode não ser exposto a COM.</span><span class="sxs-lookup"><span data-stu-id="97747-114">Managed types expose features to other managed code that might not be exposed to COM.</span></span> <span data-ttu-id="97747-115">Por exemplo, campos de constantes, construtores com parâmetros e métodos estáticos não são expostos a clientes COM.</span><span class="sxs-lookup"><span data-stu-id="97747-115">For instance, parameterized constructors, static methods, and constant fields are not exposed to COM clients.</span></span> <span data-ttu-id="97747-116">Além disso, como o tempo de execução realiza marshaling de dados dentro e fora de um tipo, os dados podem ser copiados ou transformados.</span><span class="sxs-lookup"><span data-stu-id="97747-116">Further, as the runtime marshals data in and out of a type, the data might be copied or transformed.</span></span>  
   
--   Propriedades, métodos, campos e eventos devem ser públicos.  
+-   <span data-ttu-id="97747-117">Propriedades, métodos, campos e eventos devem ser públicos.</span><span class="sxs-lookup"><span data-stu-id="97747-117">Methods, properties, fields, and events must be public.</span></span>  
   
-     Membros de tipos públicos também devem ser públicos para ser visíveis para COM. Você pode restringir a visibilidade de um assembly, um tipo público ou membros públicos de um tipo público aplicando o <xref:System.Runtime.InteropServices.ComVisibleAttribute>. Por padrão, todos os membros e tipos públicos são visíveis.  
+     <span data-ttu-id="97747-118">Membros de tipos públicos também devem ser públicos para ser visíveis para COM.</span><span class="sxs-lookup"><span data-stu-id="97747-118">Members of public types must also be public if they are to be visible to COM.</span></span> <span data-ttu-id="97747-119">Você pode restringir a visibilidade de um assembly, um tipo público ou membros públicos de um tipo público aplicando o <xref:System.Runtime.InteropServices.ComVisibleAttribute>.</span><span class="sxs-lookup"><span data-stu-id="97747-119">You can restrict the visibility of an assembly, a public type, or public members of a public type by applying the <xref:System.Runtime.InteropServices.ComVisibleAttribute>.</span></span> <span data-ttu-id="97747-120">Por padrão, todos os membros e tipos públicos são visíveis.</span><span class="sxs-lookup"><span data-stu-id="97747-120">By default, all public types and members are visible.</span></span>  
   
--   Os tipos devem ter um construtor padrão público para serem ativados do COM.  
+-   <span data-ttu-id="97747-121">Os tipos devem ter um construtor padrão público para serem ativados do COM.</span><span class="sxs-lookup"><span data-stu-id="97747-121">Types must have a public default constructor to be activated from COM.</span></span>  
   
-     Tipos públicos gerenciados são visíveis para o COM. No entanto, sem um construtor público padrão (um construtor sem argumentos), clientes COM não podem criar o tipo. Clientes COM ainda podem usar o tipo se ele é ativado por outros meios.  
+     <span data-ttu-id="97747-122">Tipos públicos gerenciados são visíveis para o COM.</span><span class="sxs-lookup"><span data-stu-id="97747-122">Managed, public types are visible to COM.</span></span> <span data-ttu-id="97747-123">No entanto, sem um construtor público padrão (um construtor sem argumentos), clientes COM não podem criar o tipo.</span><span class="sxs-lookup"><span data-stu-id="97747-123">However, without a public default constructor (a constructor with no arguments), COM clients cannot create the type.</span></span> <span data-ttu-id="97747-124">Clientes COM ainda podem usar o tipo se ele é ativado por outros meios.</span><span class="sxs-lookup"><span data-stu-id="97747-124">COM clients can still use the type if it is activated by some other means.</span></span>  
   
--   Os tipos não podem ser abstratos.  
+-   <span data-ttu-id="97747-125">Os tipos não podem ser abstratos.</span><span class="sxs-lookup"><span data-stu-id="97747-125">Types cannot be abstract.</span></span>  
   
-     Nem clientes COM, tampouco clientes .NET podem criar tipos abstratos.  
+     <span data-ttu-id="97747-126">Nem clientes COM, tampouco clientes .NET podem criar tipos abstratos.</span><span class="sxs-lookup"><span data-stu-id="97747-126">Neither COM clients nor .NET clients can create abstract types.</span></span>  
   
- Quando exportados para COM, a hierarquia de herança de um tipo gerenciado é nivelada. O controle de versão também difere entre ambientes gerenciados e não gerenciados. Os tipos expostos ao COM não têm as mesmas características de controle de versão de outros tipos gerenciados.  
+ <span data-ttu-id="97747-127">Quando exportados para COM, a hierarquia de herança de um tipo gerenciado é nivelada.</span><span class="sxs-lookup"><span data-stu-id="97747-127">When exported to COM, the inheritance hierarchy of a managed type is flattened.</span></span> <span data-ttu-id="97747-128">O controle de versão também difere entre ambientes gerenciados e não gerenciados.</span><span class="sxs-lookup"><span data-stu-id="97747-128">Versioning also differs between managed and unmanaged environments.</span></span> <span data-ttu-id="97747-129">Os tipos expostos ao COM não têm as mesmas características de controle de versão de outros tipos gerenciados.</span><span class="sxs-lookup"><span data-stu-id="97747-129">Types exposed to COM do not have the same versioning characteristics as other managed types.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.InteropServices.ComVisibleAttribute>   
- [Expondo componentes do .NET Framework para COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)   
- [Introdução à Interface de Classe](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)   
- [Aplicando atributos de interoperabilidade](../../../docs/framework/interop/applying-interop-attributes.md)   
- [Empacotando um assembly para COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
-
+## <a name="see-also"></a><span data-ttu-id="97747-130">Consulte também</span><span class="sxs-lookup"><span data-stu-id="97747-130">See Also</span></span>  
+ <xref:System.Runtime.InteropServices.ComVisibleAttribute>  
+ [<span data-ttu-id="97747-131">Expondo componentes do .NET Framework ao COM</span><span class="sxs-lookup"><span data-stu-id="97747-131">Exposing .NET Framework Components to COM</span></span>](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [<span data-ttu-id="97747-132">Introduzindo a Interface de classe</span><span class="sxs-lookup"><span data-stu-id="97747-132">Introducing the Class Interface</span></span>](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
+ [<span data-ttu-id="97747-133">Aplicando atributos de interoperabilidade</span><span class="sxs-lookup"><span data-stu-id="97747-133">Applying Interop Attributes</span></span>](../../../docs/framework/interop/applying-interop-attributes.md)  
+ [<span data-ttu-id="97747-134">Empacotando um assembly para COM</span><span class="sxs-lookup"><span data-stu-id="97747-134">Packaging an Assembly for COM</span></span>](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

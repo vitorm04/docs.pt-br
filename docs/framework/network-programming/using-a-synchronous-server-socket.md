@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - synchronous server sockets
@@ -25,23 +23,22 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c4ecba2d6c5026a3b2f7d65540fcf40dd71ba3d7
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ce50fa5cf8664f93753312ee5f1db2b3058c3fd9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="using-a-synchronous-server-socket"></a>Usando um soquete de servidor síncrono
-Os soquetes de servidor síncrono suspendem a execução do aplicativo até que uma solicitação de conexão seja recebida no soquete. Os soquetes de servidor síncrono não são adequados para aplicativos que fazem uso intenso da rede em sua operação, mas podem ser adequados para aplicativos de rede simples.  
+# <a name="using-a-synchronous-server-socket"></a><span data-ttu-id="cbfe0-102">Usando um soquete de servidor síncrono</span><span class="sxs-lookup"><span data-stu-id="cbfe0-102">Using a Synchronous Server Socket</span></span>
+<span data-ttu-id="cbfe0-103">Os soquetes de servidor síncrono suspendem a execução do aplicativo até que uma solicitação de conexão seja recebida no soquete.</span><span class="sxs-lookup"><span data-stu-id="cbfe0-103">Synchronous server sockets suspend the execution of the application until a connection request is received on the socket.</span></span> <span data-ttu-id="cbfe0-104">Os soquetes de servidor síncrono não são adequados para aplicativos que fazem uso intenso da rede em sua operação, mas podem ser adequados para aplicativos de rede simples.</span><span class="sxs-lookup"><span data-stu-id="cbfe0-104">Synchronous server sockets are not suitable for applications that make heavy use of the network in their operation, but they can be suitable for simple network applications.</span></span>  
   
- Depois que um <xref:System.Net.Sockets.Socket> for definido para escutar em um ponto de extremidade usando os métodos <xref:System.Net.Sockets.Socket.Bind%2A> e <xref:System.Net.Sockets.Socket.Listen%2A>, ele estará pronto para aceitar solicitações de conexão de entrada usando o método <xref:System.Net.Sockets.Socket.Accept%2A>. O aplicativo é suspenso até que uma solicitação de conexão seja recebida quando o método **Accept** é chamado.  
+ <span data-ttu-id="cbfe0-105">Depois que um <xref:System.Net.Sockets.Socket> for definido para escutar em um ponto de extremidade usando os métodos <xref:System.Net.Sockets.Socket.Bind%2A> e <xref:System.Net.Sockets.Socket.Listen%2A>, ele estará pronto para aceitar solicitações de conexão de entrada usando o método <xref:System.Net.Sockets.Socket.Accept%2A>.</span><span class="sxs-lookup"><span data-stu-id="cbfe0-105">After a <xref:System.Net.Sockets.Socket> is set to listen on an endpoint using the <xref:System.Net.Sockets.Socket.Bind%2A> and <xref:System.Net.Sockets.Socket.Listen%2A> methods, it is ready to accept incoming connection requests using the <xref:System.Net.Sockets.Socket.Accept%2A> method.</span></span> <span data-ttu-id="cbfe0-106">O aplicativo é suspenso até que uma solicitação de conexão seja recebida quando o método **Accept** é chamado.</span><span class="sxs-lookup"><span data-stu-id="cbfe0-106">The application is suspended until a connection request is received when the **Accept** method is called.</span></span>  
   
- Quando uma solicitação de conexão é recebida, **Accept** retorna uma nova instância de **Socket** associada ao cliente que se conecta. O exemplo a seguir lê os dados do cliente, exibe-os no console e retorna os dados ao cliente. O **Socket** não especifica nenhum protocolo de mensagens e, portanto, a cadeia de caracteres “\<EOF>” marca o fim dos dados da mensagem. Ele supõe que um **Socket** chamado `listener` foi inicializado e associado a um ponto de extremidade.  
+ <span data-ttu-id="cbfe0-107">Quando uma solicitação de conexão é recebida, **Accept** retorna uma nova instância de **Socket** associada ao cliente que se conecta.</span><span class="sxs-lookup"><span data-stu-id="cbfe0-107">When a connection request is received, **Accept** returns a new **Socket** instance that is associated with the connecting client.</span></span> <span data-ttu-id="cbfe0-108">O exemplo a seguir lê os dados do cliente, exibe-os no console e retorna os dados ao cliente.</span><span class="sxs-lookup"><span data-stu-id="cbfe0-108">The following example reads data from the client, displays it on the console, and echoes the data back to the client.</span></span> <span data-ttu-id="cbfe0-109">O **Socket** não especifica nenhum protocolo de mensagens e, portanto, a cadeia de caracteres “\<EOF>” marca o fim dos dados da mensagem.</span><span class="sxs-lookup"><span data-stu-id="cbfe0-109">The **Socket** does not specify any messaging protocol, so the string "\<EOF>" marks the end of the message data.</span></span> <span data-ttu-id="cbfe0-110">Ele supõe que um **Socket** chamado `listener` foi inicializado e associado a um ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="cbfe0-110">It assumes that a **Socket** named `listener` has been initialized and bound to an endpoint.</span></span>  
   
 ```vb  
 Console.WriteLine("Waiting for a connection...")  
@@ -87,8 +84,7 @@ handler.Shutdown(SocketShutdown.Both);
 handler.Close();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Usando um soquete de servidor assíncrono](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)   
- [Exemplo de soquete de servidor síncrono](../../../docs/framework/network-programming/synchronous-server-socket-example.md)   
- [Escutando com soquetes](../../../docs/framework/network-programming/listening-with-sockets.md)
-
+## <a name="see-also"></a><span data-ttu-id="cbfe0-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="cbfe0-111">See Also</span></span>  
+ [<span data-ttu-id="cbfe0-112">Usando um soquete assíncrono de servidor</span><span class="sxs-lookup"><span data-stu-id="cbfe0-112">Using an Asynchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
+ [<span data-ttu-id="cbfe0-113">Exemplo de soquete de servidor síncrono</span><span class="sxs-lookup"><span data-stu-id="cbfe0-113">Synchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
+ [<span data-ttu-id="cbfe0-114">Escutando com soquetes</span><span class="sxs-lookup"><span data-stu-id="cbfe0-114">Listening with Sockets</span></span>](../../../docs/framework/network-programming/listening-with-sockets.md)

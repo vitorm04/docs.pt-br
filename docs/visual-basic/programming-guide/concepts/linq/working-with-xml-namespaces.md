@@ -1,44 +1,36 @@
 ---
-title: Trabalhando com Namespaces XML (Visual Basic) | Documentos do Microsoft
+title: Trabalhando com Namespaces XML (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 428bf4b0-e348-4ffd-986b-d905d5a0e7fa
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 52c248a48a1fa650bb50451cd9d0911ccc4586bb
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: fd38b2421a58fafa807d39506b728b7d3a4645a1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="working-with-xml-namespaces-visual-basic"></a>Trabalhando com Namespaces XML (Visual Basic)
-Os tópicos nesta seção descrevem como [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] oferece suporte a namespaces.  
+# <a name="working-with-xml-namespaces-visual-basic"></a><span data-ttu-id="c7b3b-102">Trabalhando com Namespaces XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c7b3b-102">Working with XML Namespaces (Visual Basic)</span></span>
+<span data-ttu-id="c7b3b-103">Os tópicos nesta seção descrevem como o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dá suporte a namespaces.</span><span class="sxs-lookup"><span data-stu-id="c7b3b-103">The topics in this section describe how [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] supports namespaces.</span></span>  
   
-## <a name="in-this-section"></a>Nesta seção  
+## <a name="in-this-section"></a><span data-ttu-id="c7b3b-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="c7b3b-104">In This Section</span></span>  
   
-|Tópico|Descrição|  
+|<span data-ttu-id="c7b3b-105">Tópico</span><span class="sxs-lookup"><span data-stu-id="c7b3b-105">Topic</span></span>|<span data-ttu-id="c7b3b-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="c7b3b-106">Description</span></span>|  
 |-----------|-----------------|  
-|[Visão geral sobre namespaces (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)|Este tópico apresenta namespaces, a <xref:System.Xml.Linq.XName>classe e a <xref:System.Xml.Linq.XNamespace>classe.</xref:System.Xml.Linq.XNamespace> </xref:System.Xml.Linq.XName>|  
-|[Como: criar um documento com Namespaces (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-document-with-namespaces.md)|Mostra como criar documentos com namespaces.|  
-|[Como: controle prefixos de Namespace (Visual Basic) (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/how-to-control-namespace-prefixes-linq-to-xml.md)|Mostra como controlar prefixos de namespace declarando namespaces globais.|  
-|[Escopo de namespace padrão no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/scope-of-default-namespaces.md)|Demonstra a maneira apropriada de escrever consultas para XML no namespace padrão.|  
-|[Trabalhar com Namespaces globais (Visual Basic) (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/working-with-global-namespaces-linq-to-xml.md)|Explica a semântica de namespaces globais em Visual Basic e motivos para usá-los.|  
-|[Como: escrever consultas no XML nos Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md)|Demonstra como especificar namespaces XML no Visual Basic LINQ para consultas XML.|  
+|[<span data-ttu-id="c7b3b-107">Visão geral sobre namespaces (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="c7b3b-107">Namespaces Overview (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)|<span data-ttu-id="c7b3b-108">Este tópico apresenta namespaces, a classe <xref:System.Xml.Linq.XName> e a classe <xref:System.Xml.Linq.XNamespace>.</span><span class="sxs-lookup"><span data-stu-id="c7b3b-108">This topic introduces namespaces, the <xref:System.Xml.Linq.XName> class, and the <xref:System.Xml.Linq.XNamespace> class.</span></span>|  
+|[<span data-ttu-id="c7b3b-109">Como: criar um documento com Namespaces (LINQ para XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c7b3b-109">How to: Create a Document with Namespaces (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-document-with-namespaces.md)|<span data-ttu-id="c7b3b-110">Mostra como criar documentos com namespaces.</span><span class="sxs-lookup"><span data-stu-id="c7b3b-110">Shows how to create documents with namespaces.</span></span>|  
+|[<span data-ttu-id="c7b3b-111">Como: controle prefixos de Namespace (Visual Basic) (LINQ para XML)</span><span class="sxs-lookup"><span data-stu-id="c7b3b-111">How to: Control Namespace Prefixes (Visual Basic) (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-control-namespace-prefixes-linq-to-xml.md)|<span data-ttu-id="c7b3b-112">Mostra como controlar prefixos de namespace declarando namespaces globais.</span><span class="sxs-lookup"><span data-stu-id="c7b3b-112">Shows how to control namespace prefixes by declaring global namespaces.</span></span>|  
+|[<span data-ttu-id="c7b3b-113">Escopo de namespace padrão no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c7b3b-113">Scope of Default Namespaces in Visual Basic</span></span>](../../../../visual-basic/programming-guide/concepts/linq/scope-of-default-namespaces.md)|<span data-ttu-id="c7b3b-114">Demonstra a maneira apropriada de escrever consultas para XML no namespace padrão.</span><span class="sxs-lookup"><span data-stu-id="c7b3b-114">Demonstrates the appropriate way to write queries for XML in the default namespace.</span></span>|  
+|[<span data-ttu-id="c7b3b-115">Trabalhando com Namespaces globais (Visual Basic) (LINQ para XML)</span><span class="sxs-lookup"><span data-stu-id="c7b3b-115">Working with Global Namespaces (Visual Basic) (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-global-namespaces-linq-to-xml.md)|<span data-ttu-id="c7b3b-116">Explica a semântica de namespaces globais no Visual Basic e os motivos para usá-los.</span><span class="sxs-lookup"><span data-stu-id="c7b3b-116">Explains the semantics of global namespaces in Visual Basic, and reasons for using them.</span></span>|  
+|[<span data-ttu-id="c7b3b-117">Como: escrever consultas no XML nos Namespaces (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c7b3b-117">How to: Write Queries on XML in Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md)|<span data-ttu-id="c7b3b-118">Demonstra como especificar namespaces XML no Visual Basic LINQ para consultas XML.</span><span class="sxs-lookup"><span data-stu-id="c7b3b-118">Demonstrates how to specify XML namespaces in Visual Basic LINQ to XML queries.</span></span>|  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de programação (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="c7b3b-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c7b3b-119">See Also</span></span>  
+ [<span data-ttu-id="c7b3b-120">Guia de programação (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c7b3b-120">Programming Guide (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

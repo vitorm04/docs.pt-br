@@ -1,52 +1,42 @@
 ---
 title: "Conceitos de Programação (Visual Basic)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
-ms.openlocfilehash: 96c9ec0a5bd9f6b0b2a460e8be15b4f936432016
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: c84b26f757ec852c9aefecab58eff9e631b95d15
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="programming-concepts-visual-basic"></a>Conceitos de Programação (Visual Basic)
-Esta seção explica conceitos de programação na linguagem do Visual Basic.  
+# <a name="programming-concepts-visual-basic"></a><span data-ttu-id="bfc3a-102">Conceitos de Programação (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bfc3a-102">Programming Concepts (Visual Basic)</span></span>
+<span data-ttu-id="bfc3a-103">Esta seção explica conceitos de programação na linguagem do Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="bfc3a-103">This section explains programming concepts in the Visual Basic language.</span></span>  
   
-## <a name="in-this-section"></a>Nesta seção  
+## <a name="in-this-section"></a><span data-ttu-id="bfc3a-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="bfc3a-104">In This Section</span></span>  
   
-|Título|Descrição|  
+|<span data-ttu-id="bfc3a-105">Título</span><span class="sxs-lookup"><span data-stu-id="bfc3a-105">Title</span></span>|<span data-ttu-id="bfc3a-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="bfc3a-106">Description</span></span>|  
 |-----------|-----------------|  
-|[Assemblies e o cache de assembly global (Visual Basic)](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)|Descreve como criar e usar um assemblies.|  
-|[Programação assíncrona com Async e Await (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)|Descreve como criar soluções assíncronas usando palavras-chave [Async](../../../visual-basic/language-reference/modifiers/async.md) e [Await](../../../visual-basic/language-reference/operators/await-operator.md). Inclui um passo a passo.|  
-|[Visão geral de atributos (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)|Discute como fornecer informações adicionais sobre como programar elementos como tipos, campos, métodos e propriedades por meio de atributos.|  
-|[Informações do chamador (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md)|Descreve como obter informações sobre o chamador de um método. Essas informações incluem o caminho do arquivo e o número de linha do código-fonte e o nome do membro do chamador.|  
-|[Coleções (Visual Basic)](../../../visual-basic/programming-guide/concepts/collections.md)|Descreve alguns dos tipos de coleções fornecidos pelo .NET Framework. Demonstra como usar coleções simples e coleções de pares chave/valor.|  
-|[Covariância e contravariância (Visual Basic)](../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)|Mostra como habilitar a conversão implícita de parâmetros de tipo genérico em interfaces e delegados.|  
-|[Árvores de expressão (Visual Basic)](../../../visual-basic/programming-guide/concepts/expression-trees/index.md)|Explica como você pode usar árvores de expressão para habilitar a modificação dinâmica de código executável.|  
-|[Iteradores (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md)|Descreve os iteradores, que são usados para percorrer coleções e retornar elementos um por vez.|  
-|[LINQ (consulta integrada à linguagem) (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/index.md)|Discute os recursos avançados de consulta na sintaxe de linguagem do Visual Basic e o modelo para consultar bancos de dados relacionais, documentos XML, conjuntos de dados e coleções na memória.|  
-|[Programação orientada a objeto (Visual Basic)](../../../visual-basic/programming-guide/concepts/object-oriented-programming.md)|Descreve os conceitos comuns orientados a objetos, incluindo encapsulamento, herança e polimorfismo.|  
-|[Reflexão (Visual Basic)](../../../visual-basic/programming-guide/concepts/reflection.md)|Explica como usar a reflexão para criar dinamicamente uma instância de um tipo, associar o tipo a um objeto existente ou obter o tipo de um objeto existente e invocar seus métodos ou acessar suas propriedades e campos.|
-|[Serialização (Visual Basic)](../../../visual-basic/programming-guide/concepts/serialization/index.md)|Descreve os principais conceitos em binário, XML e serialização SOAP.|  
-|[Threading (Visual Basic)](../../../visual-basic/programming-guide/concepts/threading/index.md)|Fornece uma visão geral do modelo de threading do .NET e mostra como escrever código que executa várias tarefas ao mesmo tempo para melhorar o desempenho e a capacidade de resposta dos aplicativos.|  
+|[<span data-ttu-id="bfc3a-107">Assemblies e o cache de assembly global (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bfc3a-107">Assemblies and the Global Assembly Cache (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)|<span data-ttu-id="bfc3a-108">Descreve como criar e usar um assemblies.</span><span class="sxs-lookup"><span data-stu-id="bfc3a-108">Describes how to create and use assemblies.</span></span>|  
+|[<span data-ttu-id="bfc3a-109">Programação assíncrona com Async e Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bfc3a-109">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/async/index.md)|<span data-ttu-id="bfc3a-110">Descreve como criar soluções assíncronas usando palavras-chave [Async](../../../visual-basic/language-reference/modifiers/async.md) e [Await](../../../visual-basic/language-reference/operators/await-operator.md).</span><span class="sxs-lookup"><span data-stu-id="bfc3a-110">Describes how to write asynchronous solutions by using [Async](../../../visual-basic/language-reference/modifiers/async.md) and [Await](../../../visual-basic/language-reference/operators/await-operator.md) keywords.</span></span> <span data-ttu-id="bfc3a-111">Inclui um passo a passo.</span><span class="sxs-lookup"><span data-stu-id="bfc3a-111">Includes a walkthrough.</span></span>|  
+|[<span data-ttu-id="bfc3a-112">Visão geral de atributos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bfc3a-112">Attributes overview (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/attributes/index.md)|<span data-ttu-id="bfc3a-113">Discute como fornecer informações adicionais sobre como programar elementos como tipos, campos, métodos e propriedades por meio de atributos.</span><span class="sxs-lookup"><span data-stu-id="bfc3a-113">Discusses how to provide additional information about programming elements such as types, fields, methods, and properties by using attributes.</span></span>|  
+|[<span data-ttu-id="bfc3a-114">Informações do chamador (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bfc3a-114">Caller Information (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/caller-information.md)|<span data-ttu-id="bfc3a-115">Descreve como obter informações sobre o chamador de um método.</span><span class="sxs-lookup"><span data-stu-id="bfc3a-115">Describes how to obtain information about the caller of a method.</span></span> <span data-ttu-id="bfc3a-116">Essas informações incluem o caminho do arquivo e o número de linha do código-fonte e o nome do membro do chamador.</span><span class="sxs-lookup"><span data-stu-id="bfc3a-116">This information includes the file path and the line number of the source code and the member name of the caller.</span></span>|  
+|[<span data-ttu-id="bfc3a-117">Coleções (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bfc3a-117">Collections (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/collections.md)|<span data-ttu-id="bfc3a-118">Descreve alguns dos tipos de coleções fornecidos pelo .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="bfc3a-118">Describes some of the types of collections provided by the .NET Framework.</span></span> <span data-ttu-id="bfc3a-119">Demonstra como usar coleções simples e coleções de pares chave/valor.</span><span class="sxs-lookup"><span data-stu-id="bfc3a-119">Demonstrates how to use simple collections and collections of key/value pairs.</span></span>|  
+|[<span data-ttu-id="bfc3a-120">Covariância e contravariância (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bfc3a-120">Covariance and Contravariance (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)|<span data-ttu-id="bfc3a-121">Mostra como habilitar a conversão implícita de parâmetros de tipo genérico em interfaces e delegados.</span><span class="sxs-lookup"><span data-stu-id="bfc3a-121">Shows how to enable implicit conversion of generic type parameters in interfaces and delegates.</span></span>|  
+|[<span data-ttu-id="bfc3a-122">Árvores de expressão (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bfc3a-122">Expression Trees (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/expression-trees/index.md)|<span data-ttu-id="bfc3a-123">Explica como você pode usar árvores de expressão para habilitar a modificação dinâmica de código executável.</span><span class="sxs-lookup"><span data-stu-id="bfc3a-123">Explains how you can use expression trees to enable dynamic modification of executable code.</span></span>|  
+|[<span data-ttu-id="bfc3a-124">Iteradores (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bfc3a-124">Iterators (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/iterators.md)|<span data-ttu-id="bfc3a-125">Descreve os iteradores, que são usados para percorrer coleções e retornar elementos um por vez.</span><span class="sxs-lookup"><span data-stu-id="bfc3a-125">Describes iterators, which are used to step through collections and return elements one at a time.</span></span>|  
+|[<span data-ttu-id="bfc3a-126">LINQ (consulta integrada à linguagem) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bfc3a-126">Language-Integrated Query (LINQ) (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/linq/index.md)|<span data-ttu-id="bfc3a-127">Discute os recursos avançados de consulta na sintaxe de linguagem do Visual Basic e o modelo para consultar bancos de dados relacionais, documentos XML, conjuntos de dados e coleções na memória.</span><span class="sxs-lookup"><span data-stu-id="bfc3a-127">Discusses the powerful query capabilities in the language syntax of Visual Basic, and themodel for querying relational databases, XML documents, datasets, and in-memory collections.</span></span>|  
+|[<span data-ttu-id="bfc3a-128">Programação orientada a objeto (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bfc3a-128">Object-Oriented Programming (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/object-oriented-programming.md)|<span data-ttu-id="bfc3a-129">Descreve os conceitos comuns orientados a objetos, incluindo encapsulamento, herança e polimorfismo.</span><span class="sxs-lookup"><span data-stu-id="bfc3a-129">Describes common object-oriented concepts, including encapsulation, inheritance, and polymorphism.</span></span>|  
+|[<span data-ttu-id="bfc3a-130">Reflexão (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bfc3a-130">Reflection (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/reflection.md)|<span data-ttu-id="bfc3a-131">Explica como usar a reflexão para criar dinamicamente uma instância de um tipo, associar o tipo a um objeto existente ou obter o tipo de um objeto existente e invocar seus métodos ou acessar suas propriedades e campos.</span><span class="sxs-lookup"><span data-stu-id="bfc3a-131">Explains how to use reflection to dynamically create an instance of a type, bind the type to an existing object, or get the type from an existing object and invoke its methods or access its fields and properties.</span></span>|
+|[<span data-ttu-id="bfc3a-132">Serialização (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bfc3a-132">Serialization (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/serialization/index.md)|<span data-ttu-id="bfc3a-133">Descreve os principais conceitos em binário, XML e serialização SOAP.</span><span class="sxs-lookup"><span data-stu-id="bfc3a-133">Describes key concepts in binary, XML, and SOAP serialization.</span></span>|  
+|[<span data-ttu-id="bfc3a-134">Threading (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bfc3a-134">Threading (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/threading/index.md)|<span data-ttu-id="bfc3a-135">Fornece uma visão geral do modelo de threading do .NET e mostra como escrever código que executa várias tarefas ao mesmo tempo para melhorar o desempenho e a capacidade de resposta dos aplicativos.</span><span class="sxs-lookup"><span data-stu-id="bfc3a-135">Provides an overview of the .NET threading model and shows how to write code that performs multiple tasks at the same time to improve the performance and responsiveness of your applications.</span></span>|  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a><span data-ttu-id="bfc3a-136">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="bfc3a-136">Related Sections</span></span>  
   
 |||  
 |---|---|  
-|[Dicas de desempenho](../../../framework/performance/performance-tips.md) | Discute várias regras básicas que podem ajudá-lo a aumentar o desempenho do seu aplicativo.|
-
+|[<span data-ttu-id="bfc3a-137">Dicas de desempenho</span><span class="sxs-lookup"><span data-stu-id="bfc3a-137">Performance Tips</span></span>](../../../framework/performance/performance-tips.md) | <span data-ttu-id="bfc3a-138">Discute várias regras básicas que podem ajudá-lo a aumentar o desempenho do seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="bfc3a-138">Discusses several basic rules that may help you increase the performance of your application.</span></span>|

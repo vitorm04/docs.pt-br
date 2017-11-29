@@ -1,37 +1,29 @@
 ---
-title: 'Como: calcular valores de coluna em um arquivo CSV (LINQ) (Visual Basic) | Documentos do Microsoft'
+title: 'Como: computar valores de coluna em um arquivo de texto CSV (LINQ) (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 36fbe64601ab66f7a87669fa4293f2e6d43d95c0
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d57376ca2741801d6aee858688f00cba245a225d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Como: calcular valores de coluna em um arquivo CSV (LINQ) (Visual Basic)
-Este exemplo mostra como executar cálculos de agregação, como soma, média, Min e Max nas colunas de um arquivo. csv. Os princípios de exemplo mostrados aqui podem ser aplicados a outros tipos de texto estruturado.  
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a><span data-ttu-id="f2f92-102">Como: computar valores de coluna em um arquivo de texto CSV (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f2f92-102">How to: Compute Column Values in a CSV Text File (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="f2f92-103">Este exemplo mostra como executar cálculos de agregação, como soma, média, mín. e máx. nas colunas de um arquivo .csv.</span><span class="sxs-lookup"><span data-stu-id="f2f92-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="f2f92-104">Os princípios de exemplo mostrados aqui podem ser aplicados a outros tipos de texto estruturado.</span><span class="sxs-lookup"><span data-stu-id="f2f92-104">The example principles that are shown here can be applied to other types of structured text.</span></span>  
   
-### <a name="to-create-the-source-file"></a>Para criar o arquivo de origem  
+### <a name="to-create-the-source-file"></a><span data-ttu-id="f2f92-105">Para criar o arquivo de origem</span><span class="sxs-lookup"><span data-stu-id="f2f92-105">To create the source file</span></span>  
   
-1.  Copie as seguintes linhas em um arquivo chamado scores.csv e salve-o na pasta do projeto. Suponha que a primeira coluna representa uma ID do aluno e as colunas subsequentes representam pontuações de quatro exames.  
+1.  <span data-ttu-id="f2f92-106">Copie as seguintes linhas para um arquivo chamado scores.csv e salve-o na sua pasta do projeto.</span><span class="sxs-lookup"><span data-stu-id="f2f92-106">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="f2f92-107">Suponha que a primeira coluna representa uma ID do aluno e as colunas subsequentes representam as notas de quatro provas.</span><span class="sxs-lookup"><span data-stu-id="f2f92-107">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>  
   
     ```  
     111, 97, 92, 81, 60  
@@ -48,7 +40,7 @@ Este exemplo mostra como executar cálculos de agregação, como soma, média, M
     122, 94, 92, 91, 91  
     ```  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a><span data-ttu-id="f2f92-108">Exemplo</span><span class="sxs-lookup"><span data-stu-id="f2f92-108">Example</span></span>  
   
 ```vb  
 Class SumColumns  
@@ -157,11 +149,11 @@ End Class
 ' Exam #4 Average: 76.92 High Score: 94 Low Score: 39  
 ```  
   
- A consulta funciona usando o <xref:System.String.Split%2A>método para converter cada linha de texto em uma matriz.</xref:System.String.Split%2A> Cada elemento da matriz representa uma coluna. Por fim, o texto em cada coluna é convertido em sua representação numérica. Se o arquivo for um arquivo separado por tabulações, atualizar apenas o argumento de `Split` método `\t`.  
+ <span data-ttu-id="f2f92-109">A consulta funciona usando o método <xref:System.String.Split%2A> para converter cada linha de texto em uma matriz.</span><span class="sxs-lookup"><span data-stu-id="f2f92-109">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="f2f92-110">Cada elemento da matriz representa uma coluna.</span><span class="sxs-lookup"><span data-stu-id="f2f92-110">Each array element represents a column.</span></span> <span data-ttu-id="f2f92-111">Por fim, o texto em cada coluna é convertido em sua representação numérica.</span><span class="sxs-lookup"><span data-stu-id="f2f92-111">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="f2f92-112">Se o arquivo for um arquivo separado por tabulações, é só atualizar o argumento no método `Split` para `\t`.</span><span class="sxs-lookup"><span data-stu-id="f2f92-112">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>  
   
-## <a name="compiling-the-code"></a>Compilando o código  
- Criar um projeto que tem como alvo o .NET Framework versão 3.5 ou superior com uma referência a System.Core.dll e uma `Imports` declaração para o namespace System. Linq.  
+## <a name="compiling-the-code"></a><span data-ttu-id="f2f92-113">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="f2f92-113">Compiling the Code</span></span>  
+ <span data-ttu-id="f2f92-114">Crie um projeto que tenha como alvo o .NET Framework versão 3.5 ou posterior com uma referência a System.Core.dll e uma instrução `Imports` para o namespace System.Linq.</span><span class="sxs-lookup"><span data-stu-id="f2f92-114">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ e diretórios de arquivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="f2f92-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f2f92-115">See Also</span></span>  
+ [<span data-ttu-id="f2f92-116">LINQ e cadeias de caracteres (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f2f92-116">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [<span data-ttu-id="f2f92-117">LINQ e diretórios de arquivos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f2f92-117">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

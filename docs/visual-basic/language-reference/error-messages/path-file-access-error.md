@@ -1,52 +1,34 @@
 ---
-title: Erro ao acessar arquivo de caminho | Documentos do Microsoft
-ms.date: 2015-07-20
+title: Erro ao acessar arquivo de caminho
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrID75
-dev_langs:
-- VB
+f1_keywords: vbrID75
 ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ac730bac76540331206daebe600445ca54cc15a9
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2c86d46c884617be152a5954426e9ddd6ef61651
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="pathfile-access-error"></a>Erro de acesso ao demarcador/arquivo
-Durante uma operação de acesso a arquivos ou acesso ao disco, o sistema operacional não pôde fazer uma conexão entre o caminho e o nome do arquivo.  
+# <a name="pathfile-access-error"></a><span data-ttu-id="13ced-102">Erro de acesso ao demarcador/arquivo</span><span class="sxs-lookup"><span data-stu-id="13ced-102">Path/File access error</span></span>
+<span data-ttu-id="13ced-103">Durante uma operação de acesso a arquivos ou o acesso ao disco, o sistema operacional não pôde fazer uma conexão entre o caminho e o nome do arquivo.</span><span class="sxs-lookup"><span data-stu-id="13ced-103">During a file-access or disk-access operation, the operating system could not make a connection between the path and the file name.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="13ced-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="13ced-104">To correct this error</span></span>  
   
-1.  Verifique se que a especificação de arquivo está formatada corretamente. Um nome de arquivo pode conter um (absoluto) totalmente qualificado ou relativo ao caminho. Um caminho totalmente qualificado inicia com o nome da unidade (se o caminho estiver em outra unidade) e lista o caminho específico da raiz no arquivo. Qualquer caminho que não é totalmente qualificado é relativo a unidade atual e o diretório.  
+1.  <span data-ttu-id="13ced-105">Verifique se que a especificação de arquivo está formatada corretamente.</span><span class="sxs-lookup"><span data-stu-id="13ced-105">Make sure the file specification is correctly formatted.</span></span> <span data-ttu-id="13ced-106">Um nome de arquivo pode conter um (absoluto) totalmente qualificado ou relativo ao caminho.</span><span class="sxs-lookup"><span data-stu-id="13ced-106">A file name can contain a fully qualified (absolute) or relative path.</span></span> <span data-ttu-id="13ced-107">Um caminho totalmente qualificado inicia com o nome da unidade (se o caminho está em outra unidade) e lista o caminho específico da raiz para o arquivo.</span><span class="sxs-lookup"><span data-stu-id="13ced-107">A fully qualified path starts with the drive name (if the path is on another drive) and lists the explicit path from the root to the file.</span></span> <span data-ttu-id="13ced-108">Qualquer caminho que não é totalmente qualificado é relativo a unidade atual e a pasta.</span><span class="sxs-lookup"><span data-stu-id="13ced-108">Any path that is not fully qualified is relative to the current drive and directory.</span></span>  
   
-2.  Certifique-se de que você não tentou salvar um arquivo que substituiria um arquivo somente leitura existente. Se esse for o caso, altere o atributo somente leitura do arquivo de destino ou salve o arquivo com um nome de arquivo diferente.  
+2.  <span data-ttu-id="13ced-109">Certifique-se de que você não tentou salvar um arquivo que substitua um arquivo existente de somente leitura.</span><span class="sxs-lookup"><span data-stu-id="13ced-109">Make sure that you did not attempt to save a file that would replace an existing read-only file.</span></span> <span data-ttu-id="13ced-110">Se esse for o caso, altere o atributo somente leitura do arquivo de destino ou salve o arquivo com um nome de arquivo diferente.</span><span class="sxs-lookup"><span data-stu-id="13ced-110">If this is the case, change the read-only attribute of the target file, or save the file with a different file name.</span></span>  
   
-3.  Verifique se você não tentou abrir um arquivo somente leitura no sequencial`Output`ou `Append` modo. Se esse for o caso, abra o arquivo no `Input` modo ou alterar o atributo somente leitura do arquivo.  
+3.  <span data-ttu-id="13ced-111">Certifique-se de que não houve tentativa de abrir um arquivo somente leitura em sequencial `Output` ou `Append` modo.</span><span class="sxs-lookup"><span data-stu-id="13ced-111">Make sure you did not attempt to open a read-only file in sequential `Output` or `Append` mode.</span></span> <span data-ttu-id="13ced-112">Se esse for o caso, abra o arquivo no `Input` modo ou alterar o atributo somente leitura do arquivo.</span><span class="sxs-lookup"><span data-stu-id="13ced-112">If this is the case, open the file in `Input` mode or change the read-only attribute of the file.</span></span>  
   
-4.  Verifique se você não tentou alterar uma [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] projeto dentro de um banco de dados ou documento.  
+4.  <span data-ttu-id="13ced-113">Certifique-se de que não houve tentativa de alterar um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] projeto dentro de um banco de dados ou documento.</span><span class="sxs-lookup"><span data-stu-id="13ced-113">Make sure you did not attempt to change a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] project within a database or document.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de Erro](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a><span data-ttu-id="13ced-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="13ced-114">See Also</span></span>  
+ [<span data-ttu-id="13ced-115">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="13ced-115">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)

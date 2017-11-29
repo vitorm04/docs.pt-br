@@ -1,48 +1,31 @@
 ---
-title: "Linha &lt;número&gt; não pode ser analisada usando Delimiters atuais | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Linha &lt;número&gt; não pode ser analisada usando Delimiters atuais"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrTextFieldParser_MalFormedDelimitedLine
+f1_keywords: vbrTextFieldParser_MalFormedDelimitedLine
 ms.assetid: 1f8d4c2d-0334-4da8-acff-5460159835b3
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 19d166f042ff202c352beac675c865159f56a38b
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 9e70c1950d1996b25732bd8908ebc88ac3963e01
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-delimiters"></a>Linha &lt;número&gt; não pode ser analisada usando os delimitadores atuais.
-A linha especificada não pode ser analisada porque ela usa delimitadores diferentes daquelas especificadas.  
+# <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-delimiters"></a><span data-ttu-id="77c3e-102">Linha &lt;número&gt; não pode ser analisada usando Delimiters atuais</span><span class="sxs-lookup"><span data-stu-id="77c3e-102">Line &lt;number&gt; cannot be parsed using the current Delimiters</span></span>
+<span data-ttu-id="77c3e-103">A linha especificada não pode ser analisada porque ele usa delimitadores além daqueles especificados.</span><span class="sxs-lookup"><span data-stu-id="77c3e-103">The specified line cannot be parsed because it uses delimiters other than those specified.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="77c3e-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="77c3e-104">To correct this error</span></span>  
   
--   Ajustar `Delimiters` para que a linha possa ser processada corretamente, ou inserir o código de tratamento de exceções para manipular essa linha.  
+-   <span data-ttu-id="77c3e-105">Ajustar `Delimiters` para que a linha possa ser processada corretamente, ou insira o código de tratamento de exceção para lidar com a linha.</span><span class="sxs-lookup"><span data-stu-id="77c3e-105">Adjust `Delimiters` so the line can be parsed correctly, or insert exception-handling code in order to handle the line.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Como: ler arquivos de texto com vários formatos](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)   
- [Método OpenTextFieldParser](http://msdn.microsoft.com/en-us/e5869f85-c078-485f-8323-8dc716494546)   
- [Analisando arquivos de texto com o objeto TextFieldParser](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)   
- [Objeto TextFieldParser](../../visual-basic/language-reference/objects/textfieldparser-object.md)   
- [Propriedade Delimiters](http://msdn.microsoft.com/en-us/4eb18f4d-3011-40a9-b668-be93eed0444f)   
- [Método TextFieldParser.SetDelimiters](http://msdn.microsoft.com/en-us/21fa40ec-5866-4d0e-9fd9-c708a190dcc9)
+## <a name="see-also"></a><span data-ttu-id="77c3e-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="77c3e-106">See Also</span></span>  
+ [<span data-ttu-id="77c3e-107">Como ler a partir de arquivos de texto com vários formatos</span><span class="sxs-lookup"><span data-stu-id="77c3e-107">How to: Read From Text Files with Multiple Formats</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
+ [<span data-ttu-id="77c3e-108">Método OpenTextFieldParser</span><span class="sxs-lookup"><span data-stu-id="77c3e-108">My.Computer.FileSystem.OpenTextFieldParser Method</span></span>](http://msdn.microsoft.com/en-us/e5869f85-c078-485f-8323-8dc716494546)  
+ [<span data-ttu-id="77c3e-109">Analisando arquivos de texto com o objeto TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="77c3e-109">Parsing Text Files with the TextFieldParser Object</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
+ [<span data-ttu-id="77c3e-110">Objeto TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="77c3e-110">TextFieldParser Object</span></span>](../../visual-basic/language-reference/objects/textfieldparser-object.md)  
+ [<span data-ttu-id="77c3e-111">Propriedade Delimiters</span><span class="sxs-lookup"><span data-stu-id="77c3e-111">TextFieldParser.Delimiters Property</span></span>](http://msdn.microsoft.com/en-us/4eb18f4d-3011-40a9-b668-be93eed0444f)  
+ [<span data-ttu-id="77c3e-112">Método TextFieldParser.SetDelimiters</span><span class="sxs-lookup"><span data-stu-id="77c3e-112">TextFieldParser.SetDelimiters Method</span></span>](http://msdn.microsoft.com/en-us/21fa40ec-5866-4d0e-9fd9-c708a190dcc9)

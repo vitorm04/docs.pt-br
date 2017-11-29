@@ -5,32 +5,29 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- netPeerBinding element
+helpviewer_keywords: netPeerBinding element
 ms.assetid: 2dd77ada-a176-47c7-a740-900b279f1aad
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: db7fcfcd4d86bd3ed2bfc7aff033684a0ea14d74
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: bf978034e25d0d644803eed98fc73a60952d817b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="ltnetpeertcpbindinggt"></a>&lt;netPeerTcpBinding&gt;
-Define uma associação de ponto a ponto canal mensagens TCP específicas.  
+# <a name="ltnetpeertcpbindinggt"></a><span data-ttu-id="43326-102">&lt;netPeerTcpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="43326-102">&lt;netPeerTcpBinding&gt;</span></span>
+<span data-ttu-id="43326-103">Define uma associação de ponto a ponto canal mensagens TCP específicas.</span><span class="sxs-lookup"><span data-stu-id="43326-103">Defines a binding for peer channel specific TCP messaging.</span></span>  
   
- \<sistema. ServiceModel >  
-\<associações >  
-\<netPeerTcpBinding >  
+ <span data-ttu-id="43326-104">\<sistema. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="43326-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="43326-105">\<associações ></span><span class="sxs-lookup"><span data-stu-id="43326-105">\<bindings></span></span>  
+<span data-ttu-id="43326-106">\<netPeerTcpBinding ></span><span class="sxs-lookup"><span data-stu-id="43326-106">\<netPeerTcpBinding></span></span>  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a><span data-ttu-id="43326-107">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="43326-107">Syntax</span></span>  
   
 ```xml  
 <netPeerBinding>  
@@ -50,42 +47,42 @@ Define uma associação de ponto a ponto canal mensagens TCP específicas.
 </netPeerBinding>  
 ```  
   
-## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem os elementos pai de atributos e elementos filho  
+## <a name="attributes-and-elements"></a><span data-ttu-id="43326-108">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="43326-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="43326-109">As seções a seguir descrevem os elementos pai de atributos e elementos filho</span><span class="sxs-lookup"><span data-stu-id="43326-109">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### <a name="attributes"></a>Atributos  
+### <a name="attributes"></a><span data-ttu-id="43326-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="43326-110">Attributes</span></span>  
   
-|Atributo|Descrição|  
+|<span data-ttu-id="43326-111">Atributo</span><span class="sxs-lookup"><span data-stu-id="43326-111">Attribute</span></span>|<span data-ttu-id="43326-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="43326-112">Description</span></span>|  
 |---------------|-----------------|  
-|closeTimeout|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para uma operação de fechamento concluir. Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>. O padrão é 00:01:00.|  
-|listenIPAddress|Uma cadeia de caracteres que especifica um endereço IP no qual o nó par escutará mensagens TCP. O padrão é `null`.|  
-|maxBufferPoolSize|Um inteiro que especifica o tamanho do pool de buffer máximo para esta associação. O padrão é 524.288 bytes (512 * 1024). Muitas partes do Windows Communication Foundation (WCF) usam buffers. Criação e destruição de buffers de cada vez que elas são usadas são caro e coleta de lixo para buffers também é cara. Com os pools de buffer, usar um buffer do pool, usá-lo e retorná-lo ao pool quando terminar. Portanto, a sobrecarga na criação e destruição de buffers é evitada.|  
-|maxReceivedMessageSize|Um inteiro positivo que especifica o tamanho máximo, em bytes, incluindo os cabeçalhos, o que podem ser recebidos em um canal configurado com essa associação. O remetente de uma mensagem exceder esse limite recebem uma falha SOAP. O receptor descartará a mensagem e cria uma entrada do evento no log de rastreamento. O padrão é 65536.|  
-|name|Uma cadeia de caracteres que contém o nome da configuração da associação. Esse valor deve ser exclusivo, porque ele é usado como uma identificação para a associação. Começando com [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], associações e comportamentos não precisam ter um nome. Para obter mais informações sobre a configuração padrão e associações de nomes e comportamentos, consulte [configuração simplificada](../../../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
-|openTimeout|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para uma operação de abertura concluir. Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>. O padrão é 00:01:00.|  
-|porta|Um inteiro que especifica a porta de interface de rede no qual esta associação irá processar mensagens TCP de canal par. Esse valor deve estar entre <xref:System.Net.IPEndPoint.MinPort> e <xref:System.Net.IPEndPoint.MaxPort>. O padrão é 0.|  
-|receiveTimeout|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para uma operação de recebimento concluir. Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>. O padrão é 00:10:00.|  
-|sendTimeout|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para uma operação de envio concluir. Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>. O padrão é 00:01:00.|  
+|<span data-ttu-id="43326-113">closeTimeout</span><span class="sxs-lookup"><span data-stu-id="43326-113">closeTimeout</span></span>|<span data-ttu-id="43326-114">Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para uma operação de fechamento concluir.</span><span class="sxs-lookup"><span data-stu-id="43326-114">A <xref:System.TimeSpan> value that specifies the interval of time provided for a close operation to complete.</span></span> <span data-ttu-id="43326-115">Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>.</span><span class="sxs-lookup"><span data-stu-id="43326-115">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="43326-116">O padrão é 00:01:00.</span><span class="sxs-lookup"><span data-stu-id="43326-116">The default is 00:01:00.</span></span>|  
+|<span data-ttu-id="43326-117">listenIPAddress</span><span class="sxs-lookup"><span data-stu-id="43326-117">listenIPAddress</span></span>|<span data-ttu-id="43326-118">Uma cadeia de caracteres que especifica um endereço IP no qual o nó par escutará mensagens TCP.</span><span class="sxs-lookup"><span data-stu-id="43326-118">A string that specifies an IP address on which the peer node will listen for TCP messages.</span></span> <span data-ttu-id="43326-119">O padrão é `null`.</span><span class="sxs-lookup"><span data-stu-id="43326-119">The default is `null`.</span></span>|  
+|<span data-ttu-id="43326-120">maxBufferPoolSize</span><span class="sxs-lookup"><span data-stu-id="43326-120">maxBufferPoolSize</span></span>|<span data-ttu-id="43326-121">Um inteiro que especifica o tamanho do pool de buffer máximo para esta associação.</span><span class="sxs-lookup"><span data-stu-id="43326-121">An integer that specifies the maximum buffer pool size for this binding.</span></span> <span data-ttu-id="43326-122">O padrão é 524.288 bytes (512 * 1024).</span><span class="sxs-lookup"><span data-stu-id="43326-122">The default is 524,288 bytes (512 * 1024).</span></span> <span data-ttu-id="43326-123">Muitas partes do Windows Communication Foundation (WCF) usam buffers.</span><span class="sxs-lookup"><span data-stu-id="43326-123">Many parts of Windows Communication Foundation (WCF) use buffers.</span></span> <span data-ttu-id="43326-124">Criação e destruição de buffers de cada vez que elas são usadas são caro e coleta de lixo para buffers também é cara.</span><span class="sxs-lookup"><span data-stu-id="43326-124">Creating and destroying buffers each time they are used is expensive, and garbage collection for buffers is also expensive.</span></span> <span data-ttu-id="43326-125">Com os pools de buffer, usar um buffer do pool, usá-lo e retorná-lo ao pool quando terminar.</span><span class="sxs-lookup"><span data-stu-id="43326-125">With buffer pools, you can take a buffer from the pool, use it, and return it to the pool once you are done.</span></span> <span data-ttu-id="43326-126">Portanto, a sobrecarga na criação e destruição de buffers é evitada.</span><span class="sxs-lookup"><span data-stu-id="43326-126">Thus the overhead in creating and destroying buffers is avoided.</span></span>|  
+|<span data-ttu-id="43326-127">maxReceivedMessageSize</span><span class="sxs-lookup"><span data-stu-id="43326-127">maxReceivedMessageSize</span></span>|<span data-ttu-id="43326-128">Um inteiro positivo que especifica o tamanho máximo, em bytes, incluindo os cabeçalhos, o que podem ser recebidos em um canal configurado com essa associação.</span><span class="sxs-lookup"><span data-stu-id="43326-128">A positive integer that specifies the maximum message size, in bytes, including headers, that can be received on a channel configured with this binding.</span></span> <span data-ttu-id="43326-129">O remetente de uma mensagem exceder esse limite recebem uma falha SOAP.</span><span class="sxs-lookup"><span data-stu-id="43326-129">The sender of a message exceeding this limit will receive a SOAP fault.</span></span> <span data-ttu-id="43326-130">O receptor descartará a mensagem e cria uma entrada do evento no log de rastreamento.</span><span class="sxs-lookup"><span data-stu-id="43326-130">The receiver drops the message and creates an entry of the event in the trace log.</span></span> <span data-ttu-id="43326-131">O padrão é 65536.</span><span class="sxs-lookup"><span data-stu-id="43326-131">The default is 65536.</span></span>|  
+|<span data-ttu-id="43326-132">name</span><span class="sxs-lookup"><span data-stu-id="43326-132">name</span></span>|<span data-ttu-id="43326-133">Uma cadeia de caracteres que contém o nome da configuração da associação.</span><span class="sxs-lookup"><span data-stu-id="43326-133">A string that contains the configuration name of the binding.</span></span> <span data-ttu-id="43326-134">Esse valor deve ser exclusivo, porque ele é usado como uma identificação para a associação.</span><span class="sxs-lookup"><span data-stu-id="43326-134">This value should be unique because it is used as an identification for the binding.</span></span> <span data-ttu-id="43326-135">Começando com [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], associações e comportamentos não precisam ter um nome.</span><span class="sxs-lookup"><span data-stu-id="43326-135">Starting with [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bindings and behaviors are not required to have a name.</span></span> <span data-ttu-id="43326-136">Para obter mais informações sobre a configuração padrão e associações de nomes e comportamentos, consulte [configuração simplificada](../../../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="43326-136">For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>|  
+|<span data-ttu-id="43326-137">openTimeout</span><span class="sxs-lookup"><span data-stu-id="43326-137">openTimeout</span></span>|<span data-ttu-id="43326-138">Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para uma operação de abertura concluir.</span><span class="sxs-lookup"><span data-stu-id="43326-138">A <xref:System.TimeSpan> value that specifies the interval of time provided for an open operation to complete.</span></span> <span data-ttu-id="43326-139">Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>.</span><span class="sxs-lookup"><span data-stu-id="43326-139">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="43326-140">O padrão é 00:01:00.</span><span class="sxs-lookup"><span data-stu-id="43326-140">The default is 00:01:00.</span></span>|  
+|<span data-ttu-id="43326-141">porta</span><span class="sxs-lookup"><span data-stu-id="43326-141">port</span></span>|<span data-ttu-id="43326-142">Um inteiro que especifica a porta de interface de rede no qual esta associação irá processar mensagens TCP de canal par.</span><span class="sxs-lookup"><span data-stu-id="43326-142">An integer that specifies the network interface port on which this binding will process peer channel TCP messages.</span></span> <span data-ttu-id="43326-143">Esse valor deve estar entre <xref:System.Net.IPEndPoint.MinPort> e <xref:System.Net.IPEndPoint.MaxPort>.</span><span class="sxs-lookup"><span data-stu-id="43326-143">This value must be between <xref:System.Net.IPEndPoint.MinPort> and <xref:System.Net.IPEndPoint.MaxPort>.</span></span> <span data-ttu-id="43326-144">O padrão é 0.</span><span class="sxs-lookup"><span data-stu-id="43326-144">The default is 0.</span></span>|  
+|<span data-ttu-id="43326-145">receiveTimeout</span><span class="sxs-lookup"><span data-stu-id="43326-145">receiveTimeout</span></span>|<span data-ttu-id="43326-146">Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para uma operação de recebimento concluir.</span><span class="sxs-lookup"><span data-stu-id="43326-146">A <xref:System.TimeSpan> value that specifies the interval of time provided for a receive operation to complete.</span></span> <span data-ttu-id="43326-147">Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>.</span><span class="sxs-lookup"><span data-stu-id="43326-147">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="43326-148">O padrão é 00:10:00.</span><span class="sxs-lookup"><span data-stu-id="43326-148">The default is 00:10:00.</span></span>|  
+|<span data-ttu-id="43326-149">sendTimeout</span><span class="sxs-lookup"><span data-stu-id="43326-149">sendTimeout</span></span>|<span data-ttu-id="43326-150">Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para uma operação de envio concluir.</span><span class="sxs-lookup"><span data-stu-id="43326-150">A <xref:System.TimeSpan> value that specifies the interval of time provided for a send operation to complete.</span></span> <span data-ttu-id="43326-151">Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>.</span><span class="sxs-lookup"><span data-stu-id="43326-151">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="43326-152">O padrão é 00:01:00.</span><span class="sxs-lookup"><span data-stu-id="43326-152">The default is 00:01:00.</span></span>|  
   
-### <a name="child-elements"></a>Elementos filho  
+### <a name="child-elements"></a><span data-ttu-id="43326-153">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="43326-153">Child Elements</span></span>  
   
-|Elemento|Descrição|  
+|<span data-ttu-id="43326-154">Elemento</span><span class="sxs-lookup"><span data-stu-id="43326-154">Element</span></span>|<span data-ttu-id="43326-155">Descrição</span><span class="sxs-lookup"><span data-stu-id="43326-155">Description</span></span>|  
 |-------------|-----------------|  
-|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Define as restrições na complexidade de mensagens SOAP que podem ser processadas por pontos de extremidade configurados com essa associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
-|[\<resolvedor >](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|Especifica a ID de um resolvedor peer usado por esta associação para resolver um par de malha para os endereços IP do ponto de extremidade de nós dentro da malha ponto a ponto.|  
-|[\<segurança >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|Define as configurações de segurança para a mensagem. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.PeerSecurityElement>.|  
+|[<span data-ttu-id="43326-156">\<readerQuotas ></span><span class="sxs-lookup"><span data-stu-id="43326-156">\<readerQuotas></span></span>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|<span data-ttu-id="43326-157">Define as restrições na complexidade de mensagens SOAP que podem ser processadas por pontos de extremidade configurados com essa associação.</span><span class="sxs-lookup"><span data-stu-id="43326-157">Defines the constraints on the complexity of SOAP messages that can be processed by endpoints configured with this binding.</span></span> <span data-ttu-id="43326-158">Esse elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span><span class="sxs-lookup"><span data-stu-id="43326-158">This element is of type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span></span>|  
+|[<span data-ttu-id="43326-159">\<resolvedor ></span><span class="sxs-lookup"><span data-stu-id="43326-159">\<resolver></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|<span data-ttu-id="43326-160">Especifica a ID de um resolvedor peer usado por esta associação para resolver um par de malha para os endereços IP do ponto de extremidade de nós dentro da malha ponto a ponto.</span><span class="sxs-lookup"><span data-stu-id="43326-160">Specifies a peer resolver used by this binding to resolve a peer mesh ID to the endpoint IP addresses of nodes within the peer mesh.</span></span>|  
+|[<span data-ttu-id="43326-161">\<segurança ></span><span class="sxs-lookup"><span data-stu-id="43326-161">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|<span data-ttu-id="43326-162">Define as configurações de segurança para a mensagem.</span><span class="sxs-lookup"><span data-stu-id="43326-162">Defines the security settings for the message.</span></span> <span data-ttu-id="43326-163">Esse elemento é do tipo <xref:System.ServiceModel.Configuration.PeerSecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="43326-163">This element is of type <xref:System.ServiceModel.Configuration.PeerSecurityElement>.</span></span>|  
   
-### <a name="parent-elements"></a>Elementos pai  
+### <a name="parent-elements"></a><span data-ttu-id="43326-164">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="43326-164">Parent Elements</span></span>  
   
-|Elemento|Descrição|  
+|<span data-ttu-id="43326-165">Elemento</span><span class="sxs-lookup"><span data-stu-id="43326-165">Element</span></span>|<span data-ttu-id="43326-166">Descrição</span><span class="sxs-lookup"><span data-stu-id="43326-166">Description</span></span>|  
 |-------------|-----------------|  
-|[\<associações >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
+|[<span data-ttu-id="43326-167">\<associações ></span><span class="sxs-lookup"><span data-stu-id="43326-167">\<bindings></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|<span data-ttu-id="43326-168">Esse elemento contém uma coleção de associações padrão e personalizadas.</span><span class="sxs-lookup"><span data-stu-id="43326-168">This element holds a collection of standard and custom bindings.</span></span>|  
   
-## <a name="remarks"></a>Comentários  
- Essa associação oferece suporte para a criação de aplicativos ponto a ponto ou com vários participantes usando o transporte de par sobre TCP. Cada nó par pode hospedar vários canais par definidos com esse tipo de associação.  
+## <a name="remarks"></a><span data-ttu-id="43326-169">Comentários</span><span class="sxs-lookup"><span data-stu-id="43326-169">Remarks</span></span>  
+ <span data-ttu-id="43326-170">Essa associação oferece suporte para a criação de aplicativos ponto a ponto ou com vários participantes usando o transporte de par sobre TCP.</span><span class="sxs-lookup"><span data-stu-id="43326-170">This binding provides support for the creation of peer-to-peer or multiparty applications using peer transport over TCP.</span></span> <span data-ttu-id="43326-171">Cada nó par pode hospedar vários canais par definidos com esse tipo de associação.</span><span class="sxs-lookup"><span data-stu-id="43326-171">Each peer node can host multiple peer channels defined with this binding type.</span></span>  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como usar a associação NetPeerTcpBinding, que permite a comunicação com vários participantes usando um canal par. Para um cenário detalhado de como usar essa associação, consulte [Net TCP de mesmo nível](http://msdn.microsoft.com/en-us/31f4db66-edb2-40a6-b92a-14098e92acae).  
+## <a name="example"></a><span data-ttu-id="43326-172">Exemplo</span><span class="sxs-lookup"><span data-stu-id="43326-172">Example</span></span>  
+ <span data-ttu-id="43326-173">O exemplo a seguir demonstra como usar a associação NetPeerTcpBinding, que permite a comunicação com vários participantes usando um canal par.</span><span class="sxs-lookup"><span data-stu-id="43326-173">The following example demonstrates using the NetPeerTcpBinding binding, which provides multiparty communication using a peer channel.</span></span> <span data-ttu-id="43326-174">Para um cenário detalhado de como usar essa associação, consulte [Net TCP de mesmo nível](http://msdn.microsoft.com/en-us/31f4db66-edb2-40a6-b92a-14098e92acae).</span><span class="sxs-lookup"><span data-stu-id="43326-174">For a detailed scenario of using this binding, see [Net Peer TCP](http://msdn.microsoft.com/en-us/31f4db66-edb2-40a6-b92a-14098e92acae).</span></span>  
   
 ```xml  
 <configuration>  
@@ -113,13 +110,12 @@ Define uma associação de ponto a ponto canal mensagens TCP específicas.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.NetPeerTcpBinding>   
- <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement>   
- [Associações](../../../../../docs/framework/wcf/bindings.md)   
- [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<associação >](../../../../../docs/framework/misc/binding.md)   
- [Rede ponto a ponto TCP](http://msdn.microsoft.com/en-us/31f4db66-edb2-40a6-b92a-14098e92acae)   
- [Rede ponto a ponto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
-
+## <a name="see-also"></a><span data-ttu-id="43326-175">Consulte também</span><span class="sxs-lookup"><span data-stu-id="43326-175">See Also</span></span>  
+ <xref:System.ServiceModel.NetPeerTcpBinding>  
+ <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement>  
+ <span data-ttu-id="43326-176">[Bindings](../../../../../docs/framework/wcf/bindings.md) (Associações)</span><span class="sxs-lookup"><span data-stu-id="43326-176">[Bindings](../../../../../docs/framework/wcf/bindings.md)</span></span>  
+ [<span data-ttu-id="43326-177">Configurando associações fornecidas pelo sistema</span><span class="sxs-lookup"><span data-stu-id="43326-177">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="43326-178">Usando associações para configurar clientes e serviços do Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="43326-178">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="43326-179">\<associação ></span><span class="sxs-lookup"><span data-stu-id="43326-179">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)  
+ [<span data-ttu-id="43326-180">Rede ponto a ponto TCP</span><span class="sxs-lookup"><span data-stu-id="43326-180">Net Peer TCP</span></span>](http://msdn.microsoft.com/en-us/31f4db66-edb2-40a6-b92a-14098e92acae)  
+ [<span data-ttu-id="43326-181">Rede ponto a ponto</span><span class="sxs-lookup"><span data-stu-id="43326-181">Peer-to-Peer Networking</span></span>](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)

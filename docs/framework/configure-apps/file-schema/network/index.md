@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - elements [.NET Framework], network configuration elements
 - sending data, network configuration elements
@@ -25,39 +19,37 @@ helpviewer_keywords:
 - connections [.NET Framework], network configuration elements
 - network resources, network configuration elements
 ms.assetid: f1de5a0f-76c5-4833-819f-5222b8146340
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a101b3d6ebf1c884bce08077a1138a4ab6376d1f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: ca4a0000d85c8fbac9a723beeda51f9c7886ed8c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="network-settings-schema"></a>Esquema de configurações de rede
-As configurações de rede especificam como o .NET Framework se conecta à Internet. A tabela a seguir descreve a função de cada elemento de configuração filho no [\<system.Net> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) [Elemento system.Net> (configurações de rede)].  
+# <a name="network-settings-schema"></a><span data-ttu-id="461a6-102">Esquema de configurações de rede</span><span class="sxs-lookup"><span data-stu-id="461a6-102">Network Settings Schema</span></span>
+<span data-ttu-id="461a6-103">As configurações de rede especificam como o .NET Framework se conecta à Internet.</span><span class="sxs-lookup"><span data-stu-id="461a6-103">Network settings specify how the .NET Framework connects to the Internet.</span></span> <span data-ttu-id="461a6-104">A tabela a seguir descreve a função de cada elemento de configuração filho no [\<system.Net> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) [Elemento system.Net> (configurações de rede)].</span><span class="sxs-lookup"><span data-stu-id="461a6-104">The following table describes the function of each child configuration element under the [\<system.Net> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md).</span></span>  
   
-|Elemento|Descrição|  
+|<span data-ttu-id="461a6-105">Elemento</span><span class="sxs-lookup"><span data-stu-id="461a6-105">Element</span></span>|<span data-ttu-id="461a6-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="461a6-106">Description</span></span>|  
 |-------------|-----------------|  
-|[\<authenticationModules> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md) [Elemento authenticationModules> (configurações de rede)]|Especifica os módulos usados para autenticar solicitações de Internet.|  
-|[\<connectionManagement> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) [Elemento connectionManagement> (configurações de rede)]|Especifica o número máximo de conexões com host da Internet.|  
-|[\<defaultProxy> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md) [Elemento defaultProxy> (configurações de rede)]|Especifica o servidor proxy usado para solicitações HTTP para a Internet.|  
-|[\<mailSettings> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md) [Elemento mailSettings> (configurações de rede)]|Contém configurações para opções de envio de email.|  
-|[\<requestCaching> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md) [Elemento requestCaching> (configurações de rede)]|Especifica os módulos usados para solicitar informações de hosts da Internet.|  
-|[\<requestCaching> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md) [Elemento requestCaching> (configurações de rede)]|Configura as opções de rede básicaspara o namespace <xref:System.Net?displayProperty=fullName>.|  
-|[\<webRequestModules> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md) [Elemento webRequestModules> (configurações de rede)]|Especifica os módulos usados para solicitar informações de hosts da Internet.|  
+|<span data-ttu-id="461a6-107">[\<authenticationModules> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md) [Elemento authenticationModules> (configurações de rede)]</span><span class="sxs-lookup"><span data-stu-id="461a6-107">[\<authenticationModules> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)</span></span>|<span data-ttu-id="461a6-108">Especifica os módulos usados para autenticar solicitações de Internet.</span><span class="sxs-lookup"><span data-stu-id="461a6-108">Specifies the modules used to authenticate Internet requests.</span></span>|  
+|<span data-ttu-id="461a6-109">[\<connectionManagement> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) [Elemento connectionManagement> (configurações de rede)]</span><span class="sxs-lookup"><span data-stu-id="461a6-109">[\<connectionManagement> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)</span></span>|<span data-ttu-id="461a6-110">Especifica o número máximo de conexões com host da Internet.</span><span class="sxs-lookup"><span data-stu-id="461a6-110">Specifies the maximum number of connections to Internet hosts.</span></span>|  
+|<span data-ttu-id="461a6-111">[\<defaultProxy> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md) [Elemento defaultProxy> (configurações de rede)]</span><span class="sxs-lookup"><span data-stu-id="461a6-111">[\<defaultProxy> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)</span></span>|<span data-ttu-id="461a6-112">Especifica o servidor proxy usado para solicitações HTTP para a Internet.</span><span class="sxs-lookup"><span data-stu-id="461a6-112">Specifies the proxy server used for HTTP requests to the Internet.</span></span>|  
+|<span data-ttu-id="461a6-113">[\<mailSettings> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md) [Elemento mailSettings> (configurações de rede)]</span><span class="sxs-lookup"><span data-stu-id="461a6-113">[\<mailSettings> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)</span></span>|<span data-ttu-id="461a6-114">Contém configurações para opções de envio de email.</span><span class="sxs-lookup"><span data-stu-id="461a6-114">Contains settings for mail sending options.</span></span>|  
+|<span data-ttu-id="461a6-115">[\<requestCaching> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md) [Elemento requestCaching> (configurações de rede)]</span><span class="sxs-lookup"><span data-stu-id="461a6-115">[\<requestCaching> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)</span></span>|<span data-ttu-id="461a6-116">Especifica os módulos usados para solicitar informações de hosts da Internet.</span><span class="sxs-lookup"><span data-stu-id="461a6-116">Specifies the modules used to request information from Internet hosts.</span></span>|  
+|<span data-ttu-id="461a6-117">[\<requestCaching> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md) [Elemento requestCaching> (configurações de rede)]</span><span class="sxs-lookup"><span data-stu-id="461a6-117">[\<requestCaching> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)</span></span>|<span data-ttu-id="461a6-118">Configura as opções de rede básicaspara o namespace <xref:System.Net?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="461a6-118">Configures basic network options for the <xref:System.Net?displayProperty=nameWithType> namespace.</span></span>|  
+|<span data-ttu-id="461a6-119">[\<webRequestModules> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md) [Elemento webRequestModules> (configurações de rede)]</span><span class="sxs-lookup"><span data-stu-id="461a6-119">[\<webRequestModules> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)</span></span>|<span data-ttu-id="461a6-120">Especifica os módulos usados para solicitar informações de hosts da Internet.</span><span class="sxs-lookup"><span data-stu-id="461a6-120">Specifies the modules used to request information from Internet hosts.</span></span>|  
   
- As configurações de URI especificam como o .NET Framework controla endereços da Web expressos usando URIs (Uniform Resource Identifiers). A tabela a seguir descreve a função de cada elemento de configuração filho no [\<Uri> Element (Uri Settings)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md) [Elemento Uri> (configurações de URI)].  
+ <span data-ttu-id="461a6-121">As configurações de URI especificam como o .NET Framework controla endereços da Web expressos usando URIs (Uniform Resource Identifiers).</span><span class="sxs-lookup"><span data-stu-id="461a6-121">Uri settings specify how the .NET Framework handles web addresses expressed using uniform resource identifiers (URIs).</span></span> <span data-ttu-id="461a6-122">A tabela a seguir descreve a função de cada elemento de configuração filho no [\<Uri> Element (Uri Settings)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md) [Elemento Uri> (configurações de URI)].</span><span class="sxs-lookup"><span data-stu-id="461a6-122">The following table describes the function of each child configuration element under the [\<Uri> Element (Uri Settings)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md).</span></span>  
   
-|Elemento|Descrição|  
+|<span data-ttu-id="461a6-123">Elemento</span><span class="sxs-lookup"><span data-stu-id="461a6-123">Element</span></span>|<span data-ttu-id="461a6-124">Descrição</span><span class="sxs-lookup"><span data-stu-id="461a6-124">Description</span></span>|  
 |-------------|-----------------|  
-|[\<idn> Element (Uri Settings)](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md) [Elemento idn> (configurações de URI)]|Especifica se a análise de IDN (Nome de Domínio Internacionalizado) será aplicada aos nomes de domínio.|  
-|[\<iriParsing> Element (Uri Settings)](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md) [Elemento iriParsing> (configurações de URI)]|Especifica se a análise de IRI (Identificador de Recurso Internacional) é aplicada a um <xref:System.Uri> e se as regras de análise de IRI devem ser aplicada.|  
-|[\<schemeSettings> Element (Uri Settings)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md) [Elemento schemeSettings> (configurações de URI)]|Especifica como um <xref:System.Uri> será analisado quanto a esquemas específicos.|  
+|<span data-ttu-id="461a6-125">[\<idn> Element (Uri Settings)](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md) [Elemento idn> (configurações de URI)]</span><span class="sxs-lookup"><span data-stu-id="461a6-125">[\<idn> Element (Uri Settings)](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)</span></span>|<span data-ttu-id="461a6-126">Especifica se a análise de IDN (Nome de Domínio Internacionalizado) será aplicada aos nomes de domínio.</span><span class="sxs-lookup"><span data-stu-id="461a6-126">Specifies if Internationalized Domain Name (IDN) parsing is applied to domain names.</span></span>|  
+|<span data-ttu-id="461a6-127">[\<iriParsing> Element (Uri Settings)](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md) [Elemento iriParsing> (configurações de URI)]</span><span class="sxs-lookup"><span data-stu-id="461a6-127">[\<iriParsing> Element (Uri Settings)](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)</span></span>|<span data-ttu-id="461a6-128">Especifica se a análise de IRI (Identificador de Recurso Internacional) é aplicada a um <xref:System.Uri> e se as regras de análise de IRI devem ser aplicada.</span><span class="sxs-lookup"><span data-stu-id="461a6-128">Specifies if International Resource Identifier (IRI) parsing is applied to a <xref:System.Uri> and whether IRI parsing rules should be applied.</span></span>|  
+|<span data-ttu-id="461a6-129">[\<schemeSettings> Element (Uri Settings)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md) [Elemento schemeSettings> (configurações de URI)]</span><span class="sxs-lookup"><span data-stu-id="461a6-129">[\<schemeSettings> Element (Uri Settings)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)</span></span>|<span data-ttu-id="461a6-130">Especifica como um <xref:System.Uri> será analisado quanto a esquemas específicos.</span><span class="sxs-lookup"><span data-stu-id="461a6-130">Specifies how a <xref:System.Uri> will be parsed for specific schemes.</span></span>|  
   
-## <a name="see-also"></a>Consulte também  
- [Configuring Internet Applications](../../../../../docs/framework/network-programming/configuring-internet-applications.md)  (Configurando aplicativos da Internet)  
- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="461a6-131">Consulte também</span><span class="sxs-lookup"><span data-stu-id="461a6-131">See Also</span></span>  
+ [<span data-ttu-id="461a6-132">Configurando aplicativos da Internet</span><span class="sxs-lookup"><span data-stu-id="461a6-132">Configuring Internet Applications</span></span>](../../../../../docs/framework/network-programming/configuring-internet-applications.md)  
+ [<span data-ttu-id="461a6-133">Esquema de arquivos de configuração</span><span class="sxs-lookup"><span data-stu-id="461a6-133">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

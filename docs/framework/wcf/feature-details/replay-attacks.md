@@ -1,0 +1,55 @@
+---
+title: "Ataques por repetição"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 81bca4572b6c4845674c63284f93c86fe5925bdf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="replay-attacks"></a><span data-ttu-id="c0ab9-102">Ataques por repetição</span><span class="sxs-lookup"><span data-stu-id="c0ab9-102">Replay Attacks</span></span>
+<span data-ttu-id="c0ab9-103">Um *reproduzir ataque* ocorre quando um invasor copia um fluxo de mensagens entre duas partes e repete o fluxo para um ou mais das partes.</span><span class="sxs-lookup"><span data-stu-id="c0ab9-103">A *replay attack* occurs when an attacker copies a stream of messages between two parties and replays the stream to one or more of the parties.</span></span> <span data-ttu-id="c0ab9-104">A menos que atenuado, os computadores sujeitos a ataque processam o fluxo como mensagens legítimas, resultando em um intervalo de consequências incorretas, como pedidos de redundância de um item.</span><span class="sxs-lookup"><span data-stu-id="c0ab9-104">Unless mitigated, the computers subject to the attack process the stream as legitimate messages, resulting in a range of bad consequences, such as redundant orders of an item.</span></span>  
+  
+## <a name="bindings-may-be-subject-to-reflection-attacks"></a><span data-ttu-id="c0ab9-105">Associações podem estar sujeitos a ataques de reflexão</span><span class="sxs-lookup"><span data-stu-id="c0ab9-105">Bindings May Be Subject to Reflection Attacks</span></span>  
+ <span data-ttu-id="c0ab9-106">*Ataques de reflexão* são reproduções de mensagens para um remetente como se eles vieram o destinatário, como a resposta.</span><span class="sxs-lookup"><span data-stu-id="c0ab9-106">*Reflection attacks* are replays of messages back to a sender as if they came from the receiver as the reply.</span></span> <span data-ttu-id="c0ab9-107">O padrão *detecção de repetição* no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mecanismo não controla isso automaticamente.</span><span class="sxs-lookup"><span data-stu-id="c0ab9-107">The standard *replay detection* in the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mechanism does not automatically handle this.</span></span>  
+  
+ <span data-ttu-id="c0ab9-108">Ataques de reflexão sejam atenuados por padrão porque o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] adiciona um ID de mensagem assinada para mensagens de solicitação de modelo de serviço e espera entrou `relates-to` cabeçalho em mensagens de resposta.</span><span class="sxs-lookup"><span data-stu-id="c0ab9-108">Reflection attacks are mitigated by default because the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service model adds a signed message ID to request messages and expects a signed `relates-to` header on response messages.</span></span> <span data-ttu-id="c0ab9-109">Consequentemente, a mensagem de solicitação não pode ser reproduzida como uma resposta.</span><span class="sxs-lookup"><span data-stu-id="c0ab9-109">Consequently, the request message cannot be replayed as a response.</span></span> <span data-ttu-id="c0ab9-110">Em cenários de mensagens confiável e seguro de (RM), ataques de reflexão são reduzidos porque:</span><span class="sxs-lookup"><span data-stu-id="c0ab9-110">In secure reliable message (RM) scenarios, reflection attacks are mitigated because:</span></span>  
+  
+-   <span data-ttu-id="c0ab9-111">A sequência de criação e criar esquemas de mensagem de resposta de sequência são diferentes.</span><span class="sxs-lookup"><span data-stu-id="c0ab9-111">The create sequence and create sequence response message schemas are different.</span></span>  
+  
+-   <span data-ttu-id="c0ab9-112">Para sequências simples, o cliente envia mensagens na sequência não podem ser repetidas-lo porque o cliente não é possível entender essas mensagens.</span><span class="sxs-lookup"><span data-stu-id="c0ab9-112">For simplex sequences, sequence messages the client sends cannot be replayed back to it because the client cannot understand such messages.</span></span>  
+  
+-   <span data-ttu-id="c0ab9-113">Para as sequências de duplex, a sequência de dois IDs deve ser exclusivos.</span><span class="sxs-lookup"><span data-stu-id="c0ab9-113">For duplex sequences, the two sequence IDs must be unique.</span></span> <span data-ttu-id="c0ab9-114">Assim, uma mensagem de sequência de saída não pode ser reproduzida como uma mensagem de sequência de entrada (todos os cabeçalhos de sequência e corpos esteja conectados, muito).</span><span class="sxs-lookup"><span data-stu-id="c0ab9-114">Thus, an outgoing sequence message cannot be replayed back as an incoming sequence message (all sequence headers and bodies are signed, too).</span></span>  
+  
+ <span data-ttu-id="c0ab9-115">As associações só são suscetíveis a ataques de reflexão são aqueles sem WS-Addressing: associações personalizadas que têm o WS-Addressing desabilitado e usam a segurança de baseada em chave simétrica.</span><span class="sxs-lookup"><span data-stu-id="c0ab9-115">The only bindings that are susceptible to reflection attacks are those without WS-Addressing: custom bindings that have WS-Addressing disabled and use the symmetric key-based security.</span></span> <span data-ttu-id="c0ab9-116">O <xref:System.ServiceModel.BasicHttpBinding> não usa WS-Addressing por padrão, mas não usa segurança baseada em chave simétrica de forma que permite que ele ficar vulnerável a esse ataque.</span><span class="sxs-lookup"><span data-stu-id="c0ab9-116">The <xref:System.ServiceModel.BasicHttpBinding> does not use WS-Addressing by default, but it does not use symmetric key-based security in a way that allows it to be vulnerable to this attack.</span></span>  
+  
+ <span data-ttu-id="c0ab9-117">A atenuação para associações personalizadas é para não estabelecer o contexto de segurança ou para solicitar cabeçalhos de WS-Addressing.</span><span class="sxs-lookup"><span data-stu-id="c0ab9-117">The mitigation for custom bindings is to not establish security context or to require WS-Addressing headers.</span></span>  
+  
+## <a name="web-farm-attacker-replays-request-to-multiple-nodes"></a><span data-ttu-id="c0ab9-118">Web Farm: Solicitação de repetições invasor a vários nós</span><span class="sxs-lookup"><span data-stu-id="c0ab9-118">Web Farm: Attacker Replays Request to Multiple Nodes</span></span>  
+ <span data-ttu-id="c0ab9-119">Um cliente usa um serviço que é implementado em um Web farm.</span><span class="sxs-lookup"><span data-stu-id="c0ab9-119">A client uses a service that is implemented on a Web farm.</span></span> <span data-ttu-id="c0ab9-120">Um invasor repete uma solicitação enviada para um nó no farm para outro nó no farm.</span><span class="sxs-lookup"><span data-stu-id="c0ab9-120">An attacker replays a request that was sent to one node in the farm to another node in the farm.</span></span> <span data-ttu-id="c0ab9-121">Além disso, se um serviço for reiniciado, o cache de reprodução é liberado, permitindo que um invasor repetir a solicitação.</span><span class="sxs-lookup"><span data-stu-id="c0ab9-121">In addition, if a service is restarted, the replay cache is flushed, allowing an attacker to replay the request.</span></span> <span data-ttu-id="c0ab9-122">(O cache contém valores de assinatura de mensagem usado, Vista anteriormente e impede a repetição para que as assinaturas podem ser usadas apenas uma vez.</span><span class="sxs-lookup"><span data-stu-id="c0ab9-122">(The cache contains used, previously seen message signature values and prevents replays so those signatures can be used only once.</span></span> <span data-ttu-id="c0ab9-123">Os caches de reprodução não são compartilhados entre uma Web farm.)</span><span class="sxs-lookup"><span data-stu-id="c0ab9-123">Replay caches are not shared across a Web farm.)</span></span>  
+  
+ <span data-ttu-id="c0ab9-124">Atenuantes incluem:</span><span class="sxs-lookup"><span data-stu-id="c0ab9-124">Mitigations include:</span></span>  
+  
+-   <span data-ttu-id="c0ab9-125">Use a segurança de modo de mensagem com tokens de contexto de segurança com monitoração de estado (com ou sem conversa segura habilitada).</span><span class="sxs-lookup"><span data-stu-id="c0ab9-125">Use message mode security with stateful security context tokens (with or without secure conversation enabled).</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="c0ab9-126">[Como: criar um contexto de segurança para uma sessão segura Token](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).</span><span class="sxs-lookup"><span data-stu-id="c0ab9-126"> [How to: Create a Security Context Token for a Secure Session](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).</span></span>  
+  
+-   <span data-ttu-id="c0ab9-127">Configure o serviço para usar a segurança em nível de transporte.</span><span class="sxs-lookup"><span data-stu-id="c0ab9-127">Configure the service to use transport-level security.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="c0ab9-128">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c0ab9-128">See Also</span></span>  
+ [<span data-ttu-id="c0ab9-129">Considerações sobre segurança</span><span class="sxs-lookup"><span data-stu-id="c0ab9-129">Security Considerations</span></span>](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ [<span data-ttu-id="c0ab9-130">Divulgação de informações</span><span class="sxs-lookup"><span data-stu-id="c0ab9-130">Information Disclosure</span></span>](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ [<span data-ttu-id="c0ab9-131">Elevação de privilégio</span><span class="sxs-lookup"><span data-stu-id="c0ab9-131">Elevation of Privilege</span></span>](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [<span data-ttu-id="c0ab9-132">Negação de serviço</span><span class="sxs-lookup"><span data-stu-id="c0ab9-132">Denial of Service</span></span>](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ [<span data-ttu-id="c0ab9-133">Violação</span><span class="sxs-lookup"><span data-stu-id="c0ab9-133">Tampering</span></span>](../../../../docs/framework/wcf/feature-details/tampering.md)  
+ [<span data-ttu-id="c0ab9-134">Cenários sem suporte</span><span class="sxs-lookup"><span data-stu-id="c0ab9-134">Unsupported Scenarios</span></span>](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

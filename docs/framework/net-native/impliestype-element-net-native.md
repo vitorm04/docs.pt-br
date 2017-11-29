@@ -5,28 +5,26 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a4f131be8991b7e907c15aeaec888c418423f461
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 90e079b593ed124da79f5f87b5189d199bc4572a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="ltimpliestypegt-element-net-native"></a>Elemento &lt;ImpliesType&gt; (.NET Nativo)
-Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do método.  
+# <a name="ltimpliestypegt-element-net-native"></a><span data-ttu-id="fe1e4-102">Elemento &lt;ImpliesType&gt; (.NET Nativo)</span><span class="sxs-lookup"><span data-stu-id="fe1e4-102">&lt;ImpliesType&gt; Element (.NET Native)</span></span>
+<span data-ttu-id="fe1e4-103">Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do método.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-103">Applies policy to a type, if that policy has been applied to the containing type or method.</span></span>  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a><span data-ttu-id="fe1e4-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="fe1e4-104">Syntax</span></span>  
   
-```vb  
+```xml
 <ImpliesType Name="type_name"  
              Activate="policy_type"  
              Browse="policy_type"  
@@ -40,58 +38,58 @@ Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do méto
              MarshalStructure="policy_setting" />  
 ```  
   
-## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem atributos, elementos filho e elementos pai.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="fe1e4-105">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="fe1e4-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="fe1e4-106">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a>Atributos  
+### <a name="attributes"></a><span data-ttu-id="fe1e4-107">Atributos</span><span class="sxs-lookup"><span data-stu-id="fe1e4-107">Attributes</span></span>  
   
-|Atributo|Tipo de atributo|Descrição|  
+|<span data-ttu-id="fe1e4-108">Atributo</span><span class="sxs-lookup"><span data-stu-id="fe1e4-108">Attribute</span></span>|<span data-ttu-id="fe1e4-109">Tipo de atributo</span><span class="sxs-lookup"><span data-stu-id="fe1e4-109">Attribute type</span></span>|<span data-ttu-id="fe1e4-110">Descrição</span><span class="sxs-lookup"><span data-stu-id="fe1e4-110">Description</span></span>|  
 |---------------|--------------------|-----------------|  
-|`Name`|Geral|Atributo obrigatório. Especifica o nome do tipo.|  
-|`Activate`|Reflexão|Atributo opcional. Controla o acesso de tempo de execução a construtores para habilitar a ativação de instâncias.|  
-|`Browse`|Reflexão|Atributo opcional. Controla a consulta para obter informações sobre elementos do programa, mas não permite qualquer acesso de tempo de execução.|  
-|`Dynamic`|Reflexão|Atributo opcional. Controla o acesso a todos os tipos de membro ao tempo de execução, incluindo construtores, métodos, campos, propriedades e eventos, habilitando a programação dinâmica.|  
-|`Serialize`|Serialização|Atributo opcional. Controla o acesso ao tempo de execução para construtores, campos e propriedades para habilitar a serialização e desserialização das instâncias por bibliotecas como o serializador Newtonsoft JSON.|  
-|`DataContractSerializer`|Serialização|Atributo opcional. Controla a política de serialização que usa a classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.|  
-|`DataContractJsonSerializer`|Serialização|Atributo opcional. Controla a política de serialização JSON que usa a classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName>.|  
-|`XmlSerializer`|Serialização|Atributo opcional. Controla a política de serialização XML que usa a classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>.|  
-|`MarshalObject`|Interoperabilidade|Atributo opcional. Política de controles de marshaling de tipos de referência para o Tempo de Execução do Windows e COM.|  
-|`MarshalDelegate`|Interoperabilidade|Atributo opcional. Controla a diretiva de marshaling de tipos delegados como ponteiros de função para código nativo.|  
-|`MarshalStructure`|Interoperabilidade|Atributo opcional. Controla a política de marshaling de tipos de valor para código nativo.|  
+|`Name`|<span data-ttu-id="fe1e4-111">Geral</span><span class="sxs-lookup"><span data-stu-id="fe1e4-111">General</span></span>|<span data-ttu-id="fe1e4-112">Atributo obrigatório.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-112">Required attribute.</span></span> <span data-ttu-id="fe1e4-113">Especifica o nome do tipo.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-113">Specifies the type name.</span></span>|  
+|`Activate`|<span data-ttu-id="fe1e4-114">Reflexão</span><span class="sxs-lookup"><span data-stu-id="fe1e4-114">Reflection</span></span>|<span data-ttu-id="fe1e4-115">Atributo opcional.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-115">Optional attribute.</span></span> <span data-ttu-id="fe1e4-116">Controla o acesso de tempo de execução a construtores para habilitar a ativação de instâncias.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-116">Controls runtime access to constructors to enable activation of instances.</span></span>|  
+|`Browse`|<span data-ttu-id="fe1e4-117">Reflexão</span><span class="sxs-lookup"><span data-stu-id="fe1e4-117">Reflection</span></span>|<span data-ttu-id="fe1e4-118">Atributo opcional.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-118">Optional attribute.</span></span> <span data-ttu-id="fe1e4-119">Controla a consulta para obter informações sobre elementos do programa, mas não permite qualquer acesso de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-119">Controls querying for information about program elements, but does not enable any runtime access.</span></span>|  
+|`Dynamic`|<span data-ttu-id="fe1e4-120">Reflexão</span><span class="sxs-lookup"><span data-stu-id="fe1e4-120">Reflection</span></span>|<span data-ttu-id="fe1e4-121">Atributo opcional.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-121">Optional attribute.</span></span> <span data-ttu-id="fe1e4-122">Controla o acesso a todos os tipos de membro ao tempo de execução, incluindo construtores, métodos, campos, propriedades e eventos, habilitando a programação dinâmica.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-122">Controls runtime access to all type members, including constructors, methods, fields, properties, and events, to enable dynamic programming.</span></span>|  
+|`Serialize`|<span data-ttu-id="fe1e4-123">Serialização</span><span class="sxs-lookup"><span data-stu-id="fe1e4-123">Serialization</span></span>|<span data-ttu-id="fe1e4-124">Atributo opcional.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-124">Optional attribute.</span></span> <span data-ttu-id="fe1e4-125">Controla o acesso ao tempo de execução para construtores, campos e propriedades para habilitar a serialização e desserialização das instâncias por bibliotecas como o serializador Newtonsoft JSON.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-125">Controls runtime access to constructors, fields, and properties, to enable type instances to be serialized and deserialized by libraries such as the Newtonsoft JSON serializer.</span></span>|  
+|`DataContractSerializer`|<span data-ttu-id="fe1e4-126">Serialização</span><span class="sxs-lookup"><span data-stu-id="fe1e4-126">Serialization</span></span>|<span data-ttu-id="fe1e4-127">Atributo opcional.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-127">Optional attribute.</span></span> <span data-ttu-id="fe1e4-128">Controla a política de serialização que usa a classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-128">Controls policy for serialization that uses the <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> class.</span></span>|  
+|`DataContractJsonSerializer`|<span data-ttu-id="fe1e4-129">Serialização</span><span class="sxs-lookup"><span data-stu-id="fe1e4-129">Serialization</span></span>|<span data-ttu-id="fe1e4-130">Atributo opcional.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-130">Optional attribute.</span></span> <span data-ttu-id="fe1e4-131">Controla a política de serialização JSON que usa a classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-131">Controls policy for JSON serialization that uses the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> class.</span></span>|  
+|`XmlSerializer`|<span data-ttu-id="fe1e4-132">Serialização</span><span class="sxs-lookup"><span data-stu-id="fe1e4-132">Serialization</span></span>|<span data-ttu-id="fe1e4-133">Atributo opcional.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-133">Optional attribute.</span></span> <span data-ttu-id="fe1e4-134">Controla a política de serialização XML que usa a classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-134">Controls policy for XML serialization that uses the <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> class.</span></span>|  
+|`MarshalObject`|<span data-ttu-id="fe1e4-135">Interoperabilidade</span><span class="sxs-lookup"><span data-stu-id="fe1e4-135">Interop</span></span>|<span data-ttu-id="fe1e4-136">Atributo opcional.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-136">Optional attribute.</span></span> <span data-ttu-id="fe1e4-137">Política de controles de marshaling de tipos de referência para o Tempo de Execução do Windows e COM.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-137">Controls policy for marshaling reference types to Windows Runtime and COM.</span></span>|  
+|`MarshalDelegate`|<span data-ttu-id="fe1e4-138">Interoperabilidade</span><span class="sxs-lookup"><span data-stu-id="fe1e4-138">Interop</span></span>|<span data-ttu-id="fe1e4-139">Atributo opcional.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-139">Optional attribute.</span></span> <span data-ttu-id="fe1e4-140">Controla a diretiva de marshaling de tipos delegados como ponteiros de função para código nativo.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-140">Controls policy for marshaling delegate types as function pointers to native code.</span></span>|  
+|`MarshalStructure`|<span data-ttu-id="fe1e4-141">Interoperabilidade</span><span class="sxs-lookup"><span data-stu-id="fe1e4-141">Interop</span></span>|<span data-ttu-id="fe1e4-142">Atributo opcional.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-142">Optional attribute.</span></span> <span data-ttu-id="fe1e4-143">Controla a política de marshaling de tipos de valor para código nativo.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-143">Controls policy for marshaling value types to native code.</span></span>|  
   
-## <a name="name-attribute"></a>Atributo de nome  
+## <a name="name-attribute"></a><span data-ttu-id="fe1e4-144">Atributo de nome</span><span class="sxs-lookup"><span data-stu-id="fe1e4-144">Name attribute</span></span>  
   
-|Valor|Descrição|  
+|<span data-ttu-id="fe1e4-145">Valor</span><span class="sxs-lookup"><span data-stu-id="fe1e4-145">Value</span></span>|<span data-ttu-id="fe1e4-146">Descrição</span><span class="sxs-lookup"><span data-stu-id="fe1e4-146">Description</span></span>|  
 |-----------|-----------------|  
-|*type_name*|O nome do tipo. Se o tipo representado por este elemento `<ImpliesType>` estiver localizado no mesmo namespace contendo seu elemento `<Type>`, o *type_name* poderá incluir o nome do tipo sem o respectivo namespace. Caso contrário, o *type_name* deverá incluir o nome do tipo totalmente qualificado.|  
+|<span data-ttu-id="fe1e4-147">*type_name*</span><span class="sxs-lookup"><span data-stu-id="fe1e4-147">*type_name*</span></span>|<span data-ttu-id="fe1e4-148">O nome do tipo.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-148">The type name.</span></span> <span data-ttu-id="fe1e4-149">Se o tipo representado por este elemento `<ImpliesType>` estiver localizado no mesmo namespace contendo seu elemento `<Type>`, o *type_name* poderá incluir o nome do tipo sem o respectivo namespace.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-149">If the type represented by this `<ImpliesType>` element is located in the same namespace as its containing `<Type>` element, *type_name* can include the name of the type without its namespace.</span></span> <span data-ttu-id="fe1e4-150">Caso contrário, o *type_name* deverá incluir o nome do tipo totalmente qualificado.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-150">Otherwise, *type_name* must include the fully qualified type name.</span></span>|  
   
-## <a name="all-other-attributes"></a>Todos os outros atributos  
+## <a name="all-other-attributes"></a><span data-ttu-id="fe1e4-151">Todos os outros atributos</span><span class="sxs-lookup"><span data-stu-id="fe1e4-151">All other attributes</span></span>  
   
-|Valor|Descrição|  
+|<span data-ttu-id="fe1e4-152">Valor</span><span class="sxs-lookup"><span data-stu-id="fe1e4-152">Value</span></span>|<span data-ttu-id="fe1e4-153">Descrição</span><span class="sxs-lookup"><span data-stu-id="fe1e4-153">Description</span></span>|  
 |-----------|-----------------|  
-|*policy_setting*|A configuração a ser aplicada a este tipo de política. Os valores possíveis são `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Para obter mais informações, consulte [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|<span data-ttu-id="fe1e4-154">*policy_setting*</span><span class="sxs-lookup"><span data-stu-id="fe1e4-154">*policy_setting*</span></span>|<span data-ttu-id="fe1e4-155">A configuração a ser aplicada a este tipo de política.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-155">The setting to apply to this policy type.</span></span> <span data-ttu-id="fe1e4-156">Os valores possíveis são `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-156">Possible values are `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal`, and `Required All`.</span></span> <span data-ttu-id="fe1e4-157">Para obter mais informações, consulte [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md).</span><span class="sxs-lookup"><span data-stu-id="fe1e4-157">For more information, see [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md).</span></span>|  
   
-### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+### <a name="child-elements"></a><span data-ttu-id="fe1e4-158">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="fe1e4-158">Child Elements</span></span>  
+ <span data-ttu-id="fe1e4-159">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-159">None.</span></span>  
   
-### <a name="parent-elements"></a>Elementos pai  
+### <a name="parent-elements"></a><span data-ttu-id="fe1e4-160">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="fe1e4-160">Parent Elements</span></span>  
   
-|Elemento|Descrição|  
+|<span data-ttu-id="fe1e4-161">Elemento</span><span class="sxs-lookup"><span data-stu-id="fe1e4-161">Element</span></span>|<span data-ttu-id="fe1e4-162">Descrição</span><span class="sxs-lookup"><span data-stu-id="fe1e4-162">Description</span></span>|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído e todos os seus membros.|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Aplica a política de reflexão a um método.|  
+|[<span data-ttu-id="fe1e4-163">\<Type></span><span class="sxs-lookup"><span data-stu-id="fe1e4-163">\<Type></span></span>](../../../docs/framework/net-native/type-element-net-native.md)|<span data-ttu-id="fe1e4-164">Aplica a política de reflexão a um tipo e todos os seus membros.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-164">Applies reflection policy to a type and all its members.</span></span>|  
+|[<span data-ttu-id="fe1e4-165">\<TypeInstantiation></span><span class="sxs-lookup"><span data-stu-id="fe1e4-165">\<TypeInstantiation></span></span>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|<span data-ttu-id="fe1e4-166">Aplica a política de reflexão a um tipo genérico construído e todos os seus membros.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-166">Applies reflection policy to a constructed generic type and all its members.</span></span>|  
+|[<span data-ttu-id="fe1e4-167">\<Method></span><span class="sxs-lookup"><span data-stu-id="fe1e4-167">\<Method></span></span>](../../../docs/framework/net-native/method-element-net-native.md)|<span data-ttu-id="fe1e4-168">Aplica a política de reflexão a um método.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-168">Applies reflection policy to a method.</span></span>|  
   
-## <a name="remarks"></a>Comentários  
- O elemento `<ImpliesType>` destina-se principalmente para uso por bibliotecas. Ele aborda o cenário a seguir:  
+## <a name="remarks"></a><span data-ttu-id="fe1e4-169">Comentários</span><span class="sxs-lookup"><span data-stu-id="fe1e4-169">Remarks</span></span>  
+ <span data-ttu-id="fe1e4-170">O elemento `<ImpliesType>` destina-se principalmente para uso por bibliotecas.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-170">The `<ImpliesType>` element is primarily intended for use by libraries.</span></span> <span data-ttu-id="fe1e4-171">Ele aborda o cenário a seguir:</span><span class="sxs-lookup"><span data-stu-id="fe1e4-171">It addresses the following scenario:</span></span>  
   
--   Se uma rotina precisa refletir em um tipo, ela necessariamente precisa refletir no segundo tipo.  
+-   <span data-ttu-id="fe1e4-172">Se uma rotina precisa refletir em um tipo, ela necessariamente precisa refletir no segundo tipo.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-172">If a routine needs to reflect on one type, it necessarily needs to reflect on a second type.</span></span>  
   
--   Os metadados para a instanciação implícita do segundo tipo não estão disponíveis, pois a análise estática não indica que é necessário.  
+-   <span data-ttu-id="fe1e4-173">Os metadados para a instanciação implícita do segundo tipo não estão disponíveis, pois a análise estática não indica que é necessário.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-173">The metadata for the implied instantiation of the second type is otherwise unavailable, because static analysis doesn't indicate that it's necessary.</span></span>  
   
- Geralmente, os dois tipos são instanciações genéricas com argumentos de tipo compartilhados.  
+ <span data-ttu-id="fe1e4-174">Geralmente, os dois tipos são instanciações genéricas com argumentos de tipo compartilhados.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-174">Most commonly, the two types are generic instantiations with shared type arguments.</span></span>  
   
- O elemento `<ImpliesType>` foi definido presumindo que a necessidade de reflexão no tipo especificado pelo seu elemento pai implica a necessidade de reflexão no tipo especificado pelo elemento `<ImpliesType>`. Por exemplo, as seguintes diretivas de reflexão aplicam-se a dois tipos, `Explicit<T>` e `Implicit<T>`.  
+ <span data-ttu-id="fe1e4-175">O elemento `<ImpliesType>` foi definido presumindo que a necessidade de reflexão no tipo especificado pelo seu elemento pai implica a necessidade de reflexão no tipo especificado pelo elemento `<ImpliesType>`.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-175">The `<ImpliesType>` element was defined with the assumption that a need for reflection on the type specified by its parent element implies a need for reflection on the type specified by the `<ImpliesType>` element.</span></span> <span data-ttu-id="fe1e4-176">Por exemplo, as seguintes diretivas de reflexão aplicam-se a dois tipos, `Explicit<T>` e `Implicit<T>`.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-176">For example, the following reflection directives apply to two types, `Explicit<T>` and `Implicit<T>`.</span></span>  
   
 ```xml  
 <Type Name="Explicit{ET}">  
@@ -99,9 +97,9 @@ Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do méto
 </Type>  
 ```  
   
- Essa diretiva não tem efeito, a menos que uma instanciação de `Explicit` tenha uma configuração de política `Dynamic` definida. Por exemplo, se for o caso de `Explicit<Int32>`, `Implicit<Int32>` é instanciado com seu membros públicos enraizados e seus metadados são disponibilizados por programação dinâmica.  
+ <span data-ttu-id="fe1e4-177">Essa diretiva não tem efeito, a menos que uma instanciação de `Explicit` tenha uma configuração de política `Dynamic` definida.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-177">This directive has no effect unless an instantiation of `Explicit` has a defined `Dynamic` policy setting.</span></span> <span data-ttu-id="fe1e4-178">Por exemplo, se for o caso de `Explicit<Int32>`, `Implicit<Int32>` é instanciado com seu membros públicos enraizados e seus metadados são disponibilizados por programação dinâmica.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-178">For example, if that's the case for `Explicit<Int32>`, `Implicit<Int32>` is instantiated with its public members rooted, and their metadata is made accessible for dynamic programming.</span></span>  
   
- Veja a seguir um exemplo real que se aplica a pelo menos um serializador. As diretivas capturam o requisito de que a reflexão sobre algo digitado como `IList<`*algo*`>` também envolve reflexão sobre o tipo `List<`*algo*`>` correspondente sem exigir nenhuma anotação por aplicativo.  
+ <span data-ttu-id="fe1e4-179">Veja a seguir um exemplo real que se aplica a pelo menos um serializador.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-179">The following is a real-world example that applies to at least one serializer.</span></span> <span data-ttu-id="fe1e4-180">As diretivas capturam o requisito de que a reflexão sobre algo digitado como `IList<`*algo*`>` também envolve reflexão sobre o tipo `List<`*algo*`>` correspondente sem exigir nenhuma anotação por aplicativo.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-180">The directives capture the requirement that reflecting on something typed as `IList<`*something*`>` also involves reflecting on the corresponding `List<`*something*`>` type without requiring any per-application annotation.</span></span>  
   
 ```xml  
 <Type Name="System.Collections.Generic.IList{T}">  
@@ -109,7 +107,7 @@ Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do méto
 </Type>  
 ```  
   
- O elemento `<ImpliesType>` também pode aparecer em um elemento `<Method>`, pois em alguns casos instanciar um método genérico implica refletir em uma instanciação de um tipo. Por exemplo, imagine um método genérico `IEnumerable<T> MakeEnumerable<T>(string` `spelling``, T` `defaultValue``)` que uma determinada biblioteca acessará dinamicamente juntamente com os tipos <xref:System.Collections.Generic.List%601> e <xref:System.Array> associados. Isso pode ser expressado como:  
+ <span data-ttu-id="fe1e4-181">O elemento `<ImpliesType>` também pode aparecer em um elemento `<Method>`, pois em alguns casos instanciar um método genérico implica refletir em uma instanciação de um tipo.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-181">The `<ImpliesType>` element can also appear within a `<Method>` element, because in some cases instantiating a generic method implies reflecting on a type instantiation.</span></span> <span data-ttu-id="fe1e4-182">Por exemplo, imagine um método genérico `IEnumerable<T> MakeEnumerable<T>(string` `spelling``, T` `defaultValue``)` que uma determinada biblioteca acessará dinamicamente juntamente com os tipos <xref:System.Collections.Generic.List%601> e <xref:System.Array> associados.</span><span class="sxs-lookup"><span data-stu-id="fe1e4-182">For example, imagine a generic method `IEnumerable<T> MakeEnumerable<T>(string` `spelling``, T` `defaultValue``)` that a given library will access dynamically along with the associated <xref:System.Collections.Generic.List%601> and <xref:System.Array> types.</span></span> <span data-ttu-id="fe1e4-183">Isso pode ser expressado como:</span><span class="sxs-lookup"><span data-stu-id="fe1e4-183">This can be expressed as:</span></span>  
   
 ```xml  
 <Type Name="MyType">  
@@ -120,8 +118,7 @@ Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do méto
 </Type>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)   
- [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-
+## <a name="see-also"></a><span data-ttu-id="fe1e4-184">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fe1e4-184">See Also</span></span>  
+ [<span data-ttu-id="fe1e4-185">Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)</span><span class="sxs-lookup"><span data-stu-id="fe1e4-185">Runtime Directives (rd.xml) Configuration File Reference</span></span>](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [<span data-ttu-id="fe1e4-186">Elementos da diretiva de tempo de execução</span><span class="sxs-lookup"><span data-stu-id="fe1e4-186">Runtime Directive Elements</span></span>](../../../docs/framework/net-native/runtime-directive-elements.md)  
+ [<span data-ttu-id="fe1e4-187">Configurações da política da diretiva de tempo de execução</span><span class="sxs-lookup"><span data-stu-id="fe1e4-187">Runtime Directive Policy Settings</span></span>](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

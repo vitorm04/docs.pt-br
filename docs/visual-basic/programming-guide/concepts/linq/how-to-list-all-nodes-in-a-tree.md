@@ -1,40 +1,36 @@
 ---
-title: "Como: listar todos os nós em uma árvore (Visual Basic) | Documentos do Microsoft"
+title: "Como: lista todos os nós em uma árvore (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6e3aa8df843b8b601b2724f6de48d66d1a806db4
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 988c531451162560cac99d8b8e1c25861ef82ae5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Como: listar todos os nós em uma árvore (Visual Basic)
-Às vezes é útil listar todos os nós em uma árvore. Isso pode ser útil para saber exatamente como um método ou propriedade afeta a árvore. Uma abordagem para listar todos os nós em um formato textual é gerar uma expressão XPath que identifica exata e especificamente qualquer nó na árvore.  
+# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a><span data-ttu-id="78cd6-102">Como: lista todos os nós em uma árvore (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="78cd6-102">How to: List All Nodes in a Tree (Visual Basic)</span></span>
+<span data-ttu-id="78cd6-103">Às vezes é útil listar todos os nós em uma árvore.</span><span class="sxs-lookup"><span data-stu-id="78cd6-103">Sometimes it is helpful to list all nodes in a tree.</span></span> <span data-ttu-id="78cd6-104">Isso pode ser útil para saber exatamente como um método ou propriedade afeta a árvore.</span><span class="sxs-lookup"><span data-stu-id="78cd6-104">This can be useful when learning exactly how a method or property affects the tree.</span></span> <span data-ttu-id="78cd6-105">Uma abordagem para listar todos os nós em um formato textual é gerar uma expressão XPath que identifica exata e especificamente qualquer nó na árvore.</span><span class="sxs-lookup"><span data-stu-id="78cd6-105">One approach to listing all nodes in a textual form is to generate an XPath expression that exactly and specifically identifies any node in the tree.</span></span>  
   
- Não é particularmente útil executar expressões XPath usando [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. As expressões XPath têm um desempenho pior que consultas [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] e as consultas [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] são muito mais avançadas. No entanto, como uma maneira de identificar nós na árvore XML, o XPath funciona bem.  
+ <span data-ttu-id="78cd6-106">Não é particularmente útil executar expressões XPath usando [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="78cd6-106">It is not particularly helpful to execute XPath expressions using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span> <span data-ttu-id="78cd6-107">As expressões XPath têm um desempenho pior que consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] e as consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] são muito mais avançadas.</span><span class="sxs-lookup"><span data-stu-id="78cd6-107">XPath expressions have poorer performance than [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries, and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries are much more powerful.</span></span> <span data-ttu-id="78cd6-108">No entanto, como uma maneira de identificar nós na árvore XML, o XPath funciona bem.</span><span class="sxs-lookup"><span data-stu-id="78cd6-108">However, as a way to identify nodes in the XML tree, XPath works well.</span></span>  
   
-## <a name="example"></a>Exemplo  
- Este exemplo mostra uma função chamada `GetXPath` que produz uma expressão XPath específica para qualquer nó na árvore XML. Ela gera expressões XPath apropriadas mesmo quando os nós estão em um namespace. As expressões XPath são geradas usando prefixos de namespace.  
+## <a name="example"></a><span data-ttu-id="78cd6-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="78cd6-109">Example</span></span>  
+ <span data-ttu-id="78cd6-110">Este exemplo mostra uma função chamada `GetXPath` que produz uma expressão XPath específica para qualquer nó na árvore XML.</span><span class="sxs-lookup"><span data-stu-id="78cd6-110">This example shows an function named `GetXPath` that generates a specific XPath expression for any node in the XML tree.</span></span> <span data-ttu-id="78cd6-111">Ela gera expressões XPath apropriadas mesmo quando os nós estão em um namespace.</span><span class="sxs-lookup"><span data-stu-id="78cd6-111">It generates appropriate XPath expressions even when nodes are in a namespace.</span></span> <span data-ttu-id="78cd6-112">As expressões XPath são geradas usando prefixos de namespace.</span><span class="sxs-lookup"><span data-stu-id="78cd6-112">The XPath expressions are generated by using namespace prefixes.</span></span>  
   
- O exemplo cria uma árvore XML pequena que contém um exemplo de vários tipos de nós. Ela, em seguida, itera pelos nós descendentes e imprime a expressão XPath para cada nó.  
+ <span data-ttu-id="78cd6-113">O exemplo cria uma árvore XML pequena que contém um exemplo de vários tipos de nós.</span><span class="sxs-lookup"><span data-stu-id="78cd6-113">The example then creates a small XML tree that contains an example of several types of nodes.</span></span> <span data-ttu-id="78cd6-114">Ela, em seguida, itera pelos nós descendentes e imprime a expressão XPath para cada nó.</span><span class="sxs-lookup"><span data-stu-id="78cd6-114">It then iterates through the descendant nodes and prints the XPath expression for each node.</span></span>  
   
- Você observará que a declaração XML não é um nó na árvore.  
+ <span data-ttu-id="78cd6-115">Você observará que a declaração XML não é um nó na árvore.</span><span class="sxs-lookup"><span data-stu-id="78cd6-115">You will notice that the XML declaration is not a node in the tree.</span></span>  
   
- Veja a seguir um arquivo XML que contém vários tipos de nós:  
+ <span data-ttu-id="78cd6-116">Veja a seguir um arquivo XML que contém vários tipos de nós:</span><span class="sxs-lookup"><span data-stu-id="78cd6-116">The following is an XML file that contains several types of nodes:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -50,7 +46,7 @@ ms.lasthandoff: 03/13/2017
 </Root>  
 ```  
   
- Veja a seguir a lista de nós na árvore XML anterior, expressa como expressões XPath:  
+ <span data-ttu-id="78cd6-117">Veja a seguir a lista de nós na árvore XML anterior, expressa como expressões XPath:</span><span class="sxs-lookup"><span data-stu-id="78cd6-117">The following is the list of nodes in the above XML tree, expressed as XPath expressions:</span></span>  
   
 ```  
 /processing-instruction()  
@@ -243,9 +239,9 @@ Module Module1
 End Module  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ <span data-ttu-id="78cd6-118">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="78cd6-118">This example produces the following output:</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <?target data?>  
 <Root AttName="An Attribute" xmlns:aw="http://www.adventure-works.com">  
@@ -276,5 +272,5 @@ End Module
 /Root/aw:ElementInNamespace/aw:ChildInNamespace  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Técnicas avançadas de consulta (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="78cd6-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="78cd6-119">See Also</span></span>  
+ [<span data-ttu-id="78cd6-120">Técnicas avançadas de consulta (LINQ para XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="78cd6-120">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

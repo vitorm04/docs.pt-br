@@ -5,78 +5,74 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 72b9cf51936df7b3b2055823ff33f7561640608f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ab9a72607f5201164f31d9e4cfdf058e9af804ae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="default-marshaling-for-arrays"></a>Marshaling padrão para matrizes
-Em um aplicativo que consiste inteiramente em um código gerenciado, o Common Language Runtime passa tipos de matriz como parâmetros de Entrada/Saída. Por outro lado, o marshaler de interoperabilidade passa uma matriz como parâmetros de Entrada, por padrão.  
+# <a name="default-marshaling-for-arrays"></a><span data-ttu-id="0cbb8-102">Marshaling padrão para matrizes</span><span class="sxs-lookup"><span data-stu-id="0cbb8-102">Default Marshaling for Arrays</span></span>
+<span data-ttu-id="0cbb8-103">Em um aplicativo que consiste inteiramente em um código gerenciado, o Common Language Runtime passa tipos de matriz como parâmetros de Entrada/Saída.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-103">In an application consisting entirely of managed code, the common language runtime passes array types as In/Out parameters.</span></span> <span data-ttu-id="0cbb8-104">Por outro lado, o marshaler de interoperabilidade passa uma matriz como parâmetros de Entrada, por padrão.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-104">In contrast, the interop marshaler passes an array as In parameters by default.</span></span>  
   
- Com a [otimização de anexação](../../../docs/framework/interop/copying-and-pinning.md), uma matriz blittable pode aparecer operar como um parâmetro de Entrada/Saída ao interagir com objetos no mesmo apartment. No entanto, se você exportar o código posteriormente para uma biblioteca de tipos usada para gerar o proxy entre computadores e essa biblioteca for usada para realizar marshaling das chamadas entre apartments, as chamadas poderão reverter como verdadeiro o comportamento do parâmetro de Entrada.  
+ <span data-ttu-id="0cbb8-105">Com a [otimização de anexação](../../../docs/framework/interop/copying-and-pinning.md), uma matriz blittable pode aparecer operar como um parâmetro de Entrada/Saída ao interagir com objetos no mesmo apartment.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-105">With [pinning optimization](../../../docs/framework/interop/copying-and-pinning.md), a blittable array can appear to operate as an In/Out parameter when interacting with objects in the same apartment.</span></span> <span data-ttu-id="0cbb8-106">No entanto, se você exportar o código posteriormente para uma biblioteca de tipos usada para gerar o proxy entre computadores e essa biblioteca for usada para realizar marshaling das chamadas entre apartments, as chamadas poderão reverter como verdadeiro o comportamento do parâmetro de Entrada.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-106">However, if you later export the code to a type library used to generate the cross-machine proxy, and that library is used to marshal your calls across apartments, the calls can revert to true In parameter behavior.</span></span>  
   
- Matrizes são complexas por natureza e as distinções entre matrizes gerenciadas e não gerenciadas garantem mais informações do que outros tipos não blittable. Este tópico fornece as seguintes informações sobre o marshaling de matrizes:  
+ <span data-ttu-id="0cbb8-107">Matrizes são complexas por natureza e as distinções entre matrizes gerenciadas e não gerenciadas garantem mais informações do que outros tipos não blittable.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-107">Arrays are complex by nature, and the distinctions between managed and unmanaged arrays warrant more information than other non-blittable types.</span></span> <span data-ttu-id="0cbb8-108">Este tópico fornece as seguintes informações sobre o marshaling de matrizes:</span><span class="sxs-lookup"><span data-stu-id="0cbb8-108">This topic provides the following information on marshaling arrays:</span></span>  
   
--   [Matrizes gerenciadas](#cpcondefaultmarshalingforarraysanchor1)  
+-   [<span data-ttu-id="0cbb8-109">Matrizes gerenciadas</span><span class="sxs-lookup"><span data-stu-id="0cbb8-109">Managed Arrays</span></span>](#cpcondefaultmarshalingforarraysanchor1)  
   
--   [Matrizes não gerenciadas](#cpcondefaultmarshalingforarraysanchor2)  
+-   [<span data-ttu-id="0cbb8-110">Matrizes não gerenciadas</span><span class="sxs-lookup"><span data-stu-id="0cbb8-110">Unmanaged Arrays</span></span>](#cpcondefaultmarshalingforarraysanchor2)  
   
--   [Passando parâmetros de matriz para um código do .NET](#cpcondefaultmarshalingforarraysanchor3)  
+-   [<span data-ttu-id="0cbb8-111">Passando parâmetros de matriz para um código do .NET</span><span class="sxs-lookup"><span data-stu-id="0cbb8-111">Passing Array Parameters to .NET Code</span></span>](#cpcondefaultmarshalingforarraysanchor3)  
   
--   [Passando matrizes para o COM](#cpcondefaultmarshalingforarraysanchor4)  
+-   [<span data-ttu-id="0cbb8-112">Passando matrizes para o COM</span><span class="sxs-lookup"><span data-stu-id="0cbb8-112">Passing Arrays to COM</span></span>](#cpcondefaultmarshalingforarraysanchor4)  
   
 <a name="cpcondefaultmarshalingforarraysanchor1"></a>   
-## <a name="managed-arrays"></a>Matrizes gerenciadas  
- Os tipos de matriz gerenciada podem variar; no entanto, a classe <xref:System.Array?displayProperty=fullName> é a classe base de todos os tipos de matriz. A classe **System.Array** tem propriedades para determinar a classificação, o tamanho e os limites inferior e superior de uma matriz, bem como métodos para acessar, classificar, pesquisar, copiar e criar matrizes.  
+## <a name="managed-arrays"></a><span data-ttu-id="0cbb8-113">Matrizes gerenciadas</span><span class="sxs-lookup"><span data-stu-id="0cbb8-113">Managed Arrays</span></span>  
+ <span data-ttu-id="0cbb8-114">Os tipos de matriz gerenciada podem variar; no entanto, a classe <xref:System.Array?displayProperty=nameWithType> é a classe base de todos os tipos de matriz.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-114">Managed array types can vary; however, the <xref:System.Array?displayProperty=nameWithType> class is the base class of all array types.</span></span> <span data-ttu-id="0cbb8-115">A classe **System.Array** tem propriedades para determinar a classificação, o tamanho e os limites inferior e superior de uma matriz, bem como métodos para acessar, classificar, pesquisar, copiar e criar matrizes.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-115">The **System.Array** class has properties for determining the rank, length, and lower and upper bounds of an array, as well as methods for accessing, sorting, searching, copying, and creating arrays.</span></span>  
   
- Esses tipos de matriz são dinâmicos e não tem um tipo estático correspondente definido na biblioteca de classes base. É conveniente pensar em cada combinação de tipo de elemento e classificação como um tipo distinto de matriz. Portanto, uma matriz unidimensional de inteiros é de um tipo diferente do que uma matriz unidimensional de tipos double. Da mesma forma, uma matriz bidimensional de inteiros é diferente de uma matriz unidimensional de inteiros. Os limites da matriz não são considerados durante a comparação de tipos.  
+ <span data-ttu-id="0cbb8-116">Esses tipos de matriz são dinâmicos e não tem um tipo estático correspondente definido na biblioteca de classes base.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-116">These array types are dynamic and do not have a corresponding static type defined in the base class library.</span></span> <span data-ttu-id="0cbb8-117">É conveniente pensar em cada combinação de tipo de elemento e classificação como um tipo distinto de matriz.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-117">It is convenient to think of each combination of element type and rank as a distinct type of array.</span></span> <span data-ttu-id="0cbb8-118">Portanto, uma matriz unidimensional de inteiros é de um tipo diferente do que uma matriz unidimensional de tipos double.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-118">Therefore, a one-dimensional array of integers is of a different type than a one-dimensional array of double types.</span></span> <span data-ttu-id="0cbb8-119">Da mesma forma, uma matriz bidimensional de inteiros é diferente de uma matriz unidimensional de inteiros.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-119">Similarly a two-dimensional array of integers is different from a one-dimensional array of integers.</span></span> <span data-ttu-id="0cbb8-120">Os limites da matriz não são considerados durante a comparação de tipos.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-120">The bounds of the array are not considered when comparing types.</span></span>  
   
- Como mostra a tabela a seguir, qualquer instância de uma matriz gerenciada deve ser de um tipo de elemento, classificação e limite inferior específicos.  
+ <span data-ttu-id="0cbb8-121">Como mostra a tabela a seguir, qualquer instância de uma matriz gerenciada deve ser de um tipo de elemento, classificação e limite inferior específicos.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-121">As the following table shows, any instance of a managed array must be of a specific element type, rank, and lower bound.</span></span>  
   
-|Tipo de matriz gerenciada|Tipo de elemento|Classificação|Limite inferior|Notação de assinatura|  
+|<span data-ttu-id="0cbb8-122">Tipo de matriz gerenciada</span><span class="sxs-lookup"><span data-stu-id="0cbb8-122">Managed array type</span></span>|<span data-ttu-id="0cbb8-123">Tipo de elemento</span><span class="sxs-lookup"><span data-stu-id="0cbb8-123">Element type</span></span>|<span data-ttu-id="0cbb8-124">Classificação</span><span class="sxs-lookup"><span data-stu-id="0cbb8-124">Rank</span></span>|<span data-ttu-id="0cbb8-125">Limite inferior</span><span class="sxs-lookup"><span data-stu-id="0cbb8-125">Lower bound</span></span>|<span data-ttu-id="0cbb8-126">Notação de assinatura</span><span class="sxs-lookup"><span data-stu-id="0cbb8-126">Signature notation</span></span>|  
 |------------------------|------------------|----------|-----------------|------------------------|  
-|**ELEMENT_TYPE_ARRAY**|Especificado pelo tipo.|Especificado pela classificação.|Opcionalmente, especificado pelos limites.|*type* **[** *n*,*m* **]**|  
-|**ELEMENT_TYPE_CLASS**|Unknown|Unknown|Unknown|**System.Array**|  
-|**ELEMENT_TYPE_SZARRAY**|Especificado pelo tipo.|1|0|*type* **[** *n* **]**|  
+|<span data-ttu-id="0cbb8-127">**ELEMENT_TYPE_ARRAY**</span><span class="sxs-lookup"><span data-stu-id="0cbb8-127">**ELEMENT_TYPE_ARRAY**</span></span>|<span data-ttu-id="0cbb8-128">Especificado pelo tipo.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-128">Specified by type.</span></span>|<span data-ttu-id="0cbb8-129">Especificado pela classificação.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-129">Specified by rank.</span></span>|<span data-ttu-id="0cbb8-130">Opcionalmente, especificado pelos limites.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-130">Optionally specified by bounds.</span></span>|<span data-ttu-id="0cbb8-131">*type* **[** *n*,*m* **]**</span><span class="sxs-lookup"><span data-stu-id="0cbb8-131">*type* **[** *n*,*m* **]**</span></span>|  
+|<span data-ttu-id="0cbb8-132">**ELEMENT_TYPE_CLASS**</span><span class="sxs-lookup"><span data-stu-id="0cbb8-132">**ELEMENT_TYPE_CLASS**</span></span>|<span data-ttu-id="0cbb8-133">Unknown</span><span class="sxs-lookup"><span data-stu-id="0cbb8-133">Unknown</span></span>|<span data-ttu-id="0cbb8-134">Unknown</span><span class="sxs-lookup"><span data-stu-id="0cbb8-134">Unknown</span></span>|<span data-ttu-id="0cbb8-135">Unknown</span><span class="sxs-lookup"><span data-stu-id="0cbb8-135">Unknown</span></span>|<span data-ttu-id="0cbb8-136">**System.Array**</span><span class="sxs-lookup"><span data-stu-id="0cbb8-136">**System.Array**</span></span>|  
+|<span data-ttu-id="0cbb8-137">**ELEMENT_TYPE_SZARRAY**</span><span class="sxs-lookup"><span data-stu-id="0cbb8-137">**ELEMENT_TYPE_SZARRAY**</span></span>|<span data-ttu-id="0cbb8-138">Especificado pelo tipo.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-138">Specified by type.</span></span>|<span data-ttu-id="0cbb8-139">1</span><span class="sxs-lookup"><span data-stu-id="0cbb8-139">1</span></span>|<span data-ttu-id="0cbb8-140">0</span><span class="sxs-lookup"><span data-stu-id="0cbb8-140">0</span></span>|<span data-ttu-id="0cbb8-141">*type* **[** *n* **]**</span><span class="sxs-lookup"><span data-stu-id="0cbb8-141">*type* **[** *n* **]**</span></span>|  
   
 <a name="cpcondefaultmarshalingforarraysanchor2"></a>   
-## <a name="unmanaged-arrays"></a>Matrizes não gerenciadas  
- Matrizes não gerenciadas são matrizes seguras de estilo COM ou matrizes C-style com comprimento fixo ou variável. Matrizes seguras são matrizes autodescritivas que levam o tipo, a classificação e os limites dos dados da matriz associada. Matrizes C-style são matrizes tipadas unidimensionais com um limite inferior fixo igual a 0. O serviço de marshaling tem suporte limitado para ambos os tipos de matrizes.  
+## <a name="unmanaged-arrays"></a><span data-ttu-id="0cbb8-142">Matrizes não gerenciadas</span><span class="sxs-lookup"><span data-stu-id="0cbb8-142">Unmanaged Arrays</span></span>  
+ <span data-ttu-id="0cbb8-143">Matrizes não gerenciadas são matrizes seguras de estilo COM ou matrizes C-style com comprimento fixo ou variável.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-143">Unmanaged arrays are either COM-style safe arrays or C-style arrays with fixed or variable length.</span></span> <span data-ttu-id="0cbb8-144">Matrizes seguras são matrizes autodescritivas que levam o tipo, a classificação e os limites dos dados da matriz associada.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-144">Safe arrays are self-describing arrays that carry the type, rank, and bounds of the associated array data.</span></span> <span data-ttu-id="0cbb8-145">Matrizes C-style são matrizes tipadas unidimensionais com um limite inferior fixo igual a 0.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-145">C-style arrays are one-dimensional typed arrays with a fixed lower bound of 0.</span></span> <span data-ttu-id="0cbb8-146">O serviço de marshaling tem suporte limitado para ambos os tipos de matrizes.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-146">The marshaling service has limited support for both types of arrays.</span></span>  
   
 <a name="cpcondefaultmarshalingforarraysanchor3"></a>   
-## <a name="passing-array-parameters-to-net-code"></a>Passando parâmetros de matriz para um código do .NET  
- As matrizes C-style e as matrizes seguras podem ser passadas para um código do .NET de um código não gerenciado, como uma matriz segura ou uma matriz C-style. A tabela a seguir mostra o valor de tipo não gerenciado e o tipo importado.  
+## <a name="passing-array-parameters-to-net-code"></a><span data-ttu-id="0cbb8-147">Passando parâmetros de matriz para um código do .NET</span><span class="sxs-lookup"><span data-stu-id="0cbb8-147">Passing Array Parameters to .NET Code</span></span>  
+ <span data-ttu-id="0cbb8-148">As matrizes C-style e as matrizes seguras podem ser passadas para um código do .NET de um código não gerenciado, como uma matriz segura ou uma matriz C-style.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-148">Both C-style arrays and safe arrays can be passed to .NET code from unmanaged code as either a safe array or a C-style array.</span></span> <span data-ttu-id="0cbb8-149">A tabela a seguir mostra o valor de tipo não gerenciado e o tipo importado.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-149">The following table shows the unmanaged type value and the imported type.</span></span>  
   
-|Tipo não gerenciado|Tipo importado|  
+|<span data-ttu-id="0cbb8-150">Tipo não gerenciado</span><span class="sxs-lookup"><span data-stu-id="0cbb8-150">Unmanaged type</span></span>|<span data-ttu-id="0cbb8-151">Tipo importado</span><span class="sxs-lookup"><span data-stu-id="0cbb8-151">Imported type</span></span>|  
 |--------------------|-------------------|  
-|**SafeArray(** *Type* **)**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> Classificação = 1, limite inferior = 0. O tamanho é conhecido apenas se é fornecido na assinatura gerenciada. Matrizes seguras que não têm a classificação = 1 ou o limite inferior = 0 não podem ter o marshaling realizado como **SZARRAY**.|  
-|*Tipo*  **[]**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> Classificação = 1, limite inferior = 0. O tamanho é conhecido apenas se é fornecido na assinatura gerenciada.|  
+|<span data-ttu-id="0cbb8-152">**SafeArray(** *Type* **)**</span><span class="sxs-lookup"><span data-stu-id="0cbb8-152">**SafeArray(** *Type* **)**</span></span>|<span data-ttu-id="0cbb8-153">**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**</span><span class="sxs-lookup"><span data-stu-id="0cbb8-153">**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**</span></span><br /><br /> <span data-ttu-id="0cbb8-154">Classificação = 1, limite inferior = 0.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-154">Rank = 1, lower bound = 0.</span></span> <span data-ttu-id="0cbb8-155">O tamanho é conhecido apenas se é fornecido na assinatura gerenciada.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-155">Size is known only if provided in the managed signature.</span></span> <span data-ttu-id="0cbb8-156">Matrizes seguras que não têm a classificação = 1 ou o limite inferior = 0 não podem ter o marshaling realizado como **SZARRAY**.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-156">Safe arrays that are not rank = 1 or lower bound = 0 cannot be marshaled as **SZARRAY**.</span></span>|  
+|<span data-ttu-id="0cbb8-157">*Tipo*  **[]**</span><span class="sxs-lookup"><span data-stu-id="0cbb8-157">*Type*  **[]**</span></span>|<span data-ttu-id="0cbb8-158">**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**</span><span class="sxs-lookup"><span data-stu-id="0cbb8-158">**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**</span></span><br /><br /> <span data-ttu-id="0cbb8-159">Classificação = 1, limite inferior = 0.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-159">Rank = 1, lower bound = 0.</span></span> <span data-ttu-id="0cbb8-160">O tamanho é conhecido apenas se é fornecido na assinatura gerenciada.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-160">Size is known only if provided in the managed signature.</span></span>|  
   
-### <a name="safe-arrays"></a>Matrizes seguras  
- Quando uma matriz segura é importada de uma biblioteca de tipos para um assembly .NET, a matriz é convertida em uma matriz unidimensional de um tipo conhecido (como **int**). As mesmas regras de conversão de tipo que se aplicam a parâmetros também se aplicam a elementos de matriz. Por exemplo, uma matriz segura de tipos **BSTR** torna-se uma matriz gerenciada de cadeias de caracteres e uma matriz segura de variantes torna-se uma matriz gerenciada de objetos. O tipo de elemento **SAFEARRAY** é capturado na biblioteca de tipos e salvo no valor **SAFEARRAY** da enumeração <xref:System.Runtime.InteropServices.UnmanagedType>.  
+### <a name="safe-arrays"></a><span data-ttu-id="0cbb8-161">Matrizes seguras</span><span class="sxs-lookup"><span data-stu-id="0cbb8-161">Safe Arrays</span></span>  
+ <span data-ttu-id="0cbb8-162">Quando uma matriz segura é importada de uma biblioteca de tipos para um assembly .NET, a matriz é convertida em uma matriz unidimensional de um tipo conhecido (como **int**).</span><span class="sxs-lookup"><span data-stu-id="0cbb8-162">When a safe array is imported from a type library to a .NET assembly, the array is converted to a one-dimensional array of a known type (such as **int**).</span></span> <span data-ttu-id="0cbb8-163">As mesmas regras de conversão de tipo que se aplicam a parâmetros também se aplicam a elementos de matriz.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-163">The same type conversion rules that apply to parameters also apply to array elements.</span></span> <span data-ttu-id="0cbb8-164">Por exemplo, uma matriz segura de tipos **BSTR** torna-se uma matriz gerenciada de cadeias de caracteres e uma matriz segura de variantes torna-se uma matriz gerenciada de objetos.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-164">For example, a safe array of **BSTR** types becomes a managed array of strings and a safe array of variants becomes a managed array of objects.</span></span> <span data-ttu-id="0cbb8-165">O tipo de elemento **SAFEARRAY** é capturado na biblioteca de tipos e salvo no valor **SAFEARRAY** da enumeração <xref:System.Runtime.InteropServices.UnmanagedType>.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-165">The **SAFEARRAY** element type is captured from the type library and saved in the **SAFEARRAY** value of the <xref:System.Runtime.InteropServices.UnmanagedType> enumeration.</span></span>  
   
- Como a classificação e os limites da matriz segura não podem ser determinados na biblioteca de tipos, a classificação é considerada igual a 1 e o limite inferior é considerado igual a 0. A classificação e os limites devem ser definidos na assinatura gerenciada produzida pelo [Importador da Biblioteca de Tipos (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). Se a classificação passada para o método em tempo de execução for diferente, uma <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException> será gerada. Se o tipo da matriz passado em tempo de execução for diferente, uma <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException> será gerada. O exemplo a seguir mostra matrizes seguras em código gerenciado e não gerenciado.  
+ <span data-ttu-id="0cbb8-166">Como a classificação e os limites da matriz segura não podem ser determinados na biblioteca de tipos, a classificação é considerada igual a 1 e o limite inferior é considerado igual a 0.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-166">Because the rank and bounds of the safe array cannot be determined from the type library, the rank is assumed to equal 1 and the lower bound is assumed to equal 0.</span></span> <span data-ttu-id="0cbb8-167">A classificação e os limites devem ser definidos na assinatura gerenciada produzida pelo [Importador da Biblioteca de Tipos (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).</span><span class="sxs-lookup"><span data-stu-id="0cbb8-167">The rank and bounds must be defined in the managed signature produced by the [Type Library Importer (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).</span></span> <span data-ttu-id="0cbb8-168">Se a classificação passada para o método em tempo de execução for diferente, uma <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException> será gerada.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-168">If the rank passed to the method at run time differs, a <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException> is thrown.</span></span> <span data-ttu-id="0cbb8-169">Se o tipo da matriz passado em tempo de execução for diferente, uma <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException> será gerada.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-169">If the type of the array passed at run time differs, a <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException> is thrown.</span></span> <span data-ttu-id="0cbb8-170">O exemplo a seguir mostra matrizes seguras em código gerenciado e não gerenciado.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-170">The following example shows safe arrays in managed and unmanaged code.</span></span>  
   
- **Assinatura não gerenciada**  
+ <span data-ttu-id="0cbb8-171">**Assinatura não gerenciada**</span><span class="sxs-lookup"><span data-stu-id="0cbb8-171">**Unmanaged signature**</span></span>  
   
 ```  
 HRESULT New1([in] SAFEARRAY( int ) ar);  
@@ -84,7 +80,7 @@ HRESULT New2([in] SAFEARRAY( DATE ) ar);
 HRESULT New3([in, out] SAFEARRAY( BSTR ) *ar);  
 ```  
   
- **Assinatura gerenciada**  
+ <span data-ttu-id="0cbb8-172">**Assinatura gerenciada**</span><span class="sxs-lookup"><span data-stu-id="0cbb8-172">**Managed signature**</span></span>  
   
 ```vb  
 Sub New1(<MarshalAs(UnmanagedType.SafeArray, SafeArraySubType:=VT_I4)> _  
@@ -103,20 +99,20 @@ void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
    ref String[] ar);  
 ```  
   
- As matrizes seguras multidimensionais ou com limite diferente de zero, poderão ter o marshaling realizado em código gerenciado se a assinatura do método produzida por Tlbimp.exe for modificada para indicar um tipo de elemento **ELEMENT_TYPE_ARRAY** em vez de **ELEMENT_TYPE_SZARRAY**. Como alternativa, você pode usar a opção **/sysarray** com Tlbimp.exe para importar todas as matrizes como objetos <xref:System.Array?displayProperty=fullName>. Nos casos em que a matriz que está sendo passada é conhecida como multidimensional, é possível editar o código MSIL (Microsoft Intermediate Language) produzido por Tlbimp.exe e, em seguida, recompilá-lo. Para obter detalhes sobre como modificar o código MSIL, consulte [Personalizando RCWs (Runtime Callable Wrappers)](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be).  
+ <span data-ttu-id="0cbb8-173">As matrizes seguras multidimensionais ou com limite diferente de zero, poderão ter o marshaling realizado em código gerenciado se a assinatura do método produzida por Tlbimp.exe for modificada para indicar um tipo de elemento **ELEMENT_TYPE_ARRAY** em vez de **ELEMENT_TYPE_SZARRAY**.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-173">Multidimensional, or nonzero-bound safe arrays, can be marshaled into managed code if the method signature produced by Tlbimp.exe is modified to indicate an element type of **ELEMENT_TYPE_ARRAY** instead of **ELEMENT_TYPE_SZARRAY**.</span></span> <span data-ttu-id="0cbb8-174">Como alternativa, você pode usar a opção **/sysarray** com Tlbimp.exe para importar todas as matrizes como objetos <xref:System.Array?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-174">Alternatively, you can use the **/sysarray** switch with Tlbimp.exe to import all arrays as <xref:System.Array?displayProperty=nameWithType> objects.</span></span> <span data-ttu-id="0cbb8-175">Nos casos em que a matriz que está sendo passada é conhecida como multidimensional, é possível editar o código MSIL (Microsoft Intermediate Language) produzido por Tlbimp.exe e, em seguida, recompilá-lo.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-175">In cases where the array being passed is known to be multidimensional, you can edit the Microsoft intermediate language (MSIL) code produced by Tlbimp.exe and then recompile it.</span></span> <span data-ttu-id="0cbb8-176">Para obter detalhes sobre como modificar o código MSIL, consulte [Personalizando RCWs (Runtime Callable Wrappers)](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be).</span><span class="sxs-lookup"><span data-stu-id="0cbb8-176">For details about how to modify MSIL code, see [Customizing Runtime Callable Wrappers](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be).</span></span>  
   
-### <a name="c-style-arrays"></a>Matrizes C-style  
- Quando uma matriz C-style é importada de uma biblioteca de tipos para um assembly .NET, a matriz é convertida em **ELEMENT_TYPE_SZARRAY**.  
+### <a name="c-style-arrays"></a><span data-ttu-id="0cbb8-177">Matrizes C-style</span><span class="sxs-lookup"><span data-stu-id="0cbb8-177">C-Style Arrays</span></span>  
+ <span data-ttu-id="0cbb8-178">Quando uma matriz C-style é importada de uma biblioteca de tipos para um assembly .NET, a matriz é convertida em **ELEMENT_TYPE_SZARRAY**.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-178">When a C-style array is imported from a type library to a .NET assembly, the array is converted to **ELEMENT_TYPE_SZARRAY**.</span></span>  
   
- O tipo de elemento da matriz é determinado na biblioteca de tipos e preservado durante a importação. As mesmas regras de conversão que se aplicam a parâmetros também se aplicam a elementos de matriz. Por exemplo, uma matriz de tipos **LPStr** torna-se uma matriz de tipos **String**. O Tlbimp.exe captura o tipo de elemento da matriz e aplica o atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> ao parâmetro.  
+ <span data-ttu-id="0cbb8-179">O tipo de elemento da matriz é determinado na biblioteca de tipos e preservado durante a importação.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-179">The array element type is determined from the type library and preserved during the import.</span></span> <span data-ttu-id="0cbb8-180">As mesmas regras de conversão que se aplicam a parâmetros também se aplicam a elementos de matriz.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-180">The same conversion rules that apply to parameters also apply to array elements.</span></span> <span data-ttu-id="0cbb8-181">Por exemplo, uma matriz de tipos **LPStr** torna-se uma matriz de tipos **String**.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-181">For example, an array of **LPStr** types becomes an array of **String** types.</span></span> <span data-ttu-id="0cbb8-182">O Tlbimp.exe captura o tipo de elemento da matriz e aplica o atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> ao parâmetro.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-182">Tlbimp.exe captures the array element type and applies the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute to the parameter.</span></span>  
   
- A classificação da matriz é considerada igual a 1. Se a classificação for maior que 1, a matriz terá o marshaling realizado como uma matriz unidimensional na ordem de coluna principal. O limite inferior é sempre igual a 0.  
+ <span data-ttu-id="0cbb8-183">A classificação da matriz é considerada igual a 1.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-183">The array rank is assumed to equal 1.</span></span> <span data-ttu-id="0cbb8-184">Se a classificação for maior que 1, a matriz terá o marshaling realizado como uma matriz unidimensional na ordem de coluna principal.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-184">If the rank is greater than 1, the array is marshaled as a one-dimensional array in column-major order.</span></span> <span data-ttu-id="0cbb8-185">O limite inferior é sempre igual a 0.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-185">The lower bound always equals 0.</span></span>  
   
- As bibliotecas de tipos podem conter matrizes de comprimento fixo ou variável. O Tlbimp.exe pode importar somente matrizes de comprimento fixo das bibliotecas de tipos porque as bibliotecas de tipos não têm as informações necessárias para realizar marshaling de matrizes de comprimento variável. Com matrizes de comprimento fixo, o tamanho é importado da biblioteca de tipos e capturado no **MarshalAsAttribute** aplicado ao parâmetro.  
+ <span data-ttu-id="0cbb8-186">As bibliotecas de tipos podem conter matrizes de comprimento fixo ou variável.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-186">Type libraries can contain arrays of fixed or variable length.</span></span> <span data-ttu-id="0cbb8-187">O Tlbimp.exe pode importar somente matrizes de comprimento fixo das bibliotecas de tipos porque as bibliotecas de tipos não têm as informações necessárias para realizar marshaling de matrizes de comprimento variável.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-187">Tlbimp.exe can import only fixed-length arrays from type libraries because type libraries lack the information needed to marshal variable-length arrays.</span></span> <span data-ttu-id="0cbb8-188">Com matrizes de comprimento fixo, o tamanho é importado da biblioteca de tipos e capturado no **MarshalAsAttribute** aplicado ao parâmetro.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-188">With fixed-length arrays, the size is imported from the type library and captured in the **MarshalAsAttribute** that is applied to the parameter.</span></span>  
   
- É necessário definir manualmente as bibliotecas de tipos que contêm matrizes de comprimento variável, conforme mostrado no exemplo a seguir.  
+ <span data-ttu-id="0cbb8-189">É necessário definir manualmente as bibliotecas de tipos que contêm matrizes de comprimento variável, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-189">You must manually define type libraries containing variable-length arrays, as shown in the following example.</span></span>  
   
- **Assinatura não gerenciada**  
+ <span data-ttu-id="0cbb8-190">**Assinatura não gerenciada**</span><span class="sxs-lookup"><span data-stu-id="0cbb8-190">**Unmanaged signature**</span></span>  
   
 ```  
 HRESULT New1(int ar[10]);  
@@ -124,7 +120,7 @@ HRESULT New2(double ar[10][20]);
 HRESULT New3(LPWStr ar[10]);  
 ```  
   
- **Assinatura gerenciada**  
+ <span data-ttu-id="0cbb8-191">**Assinatura gerenciada**</span><span class="sxs-lookup"><span data-stu-id="0cbb8-191">**Managed signature**</span></span>  
   
 ```vb  
 Sub New1(<MarshalAs(UnmanagedType.LPArray, SizeConst=10)> _  
@@ -143,9 +139,9 @@ void New2([MarshalAs(UnmanagedType.LPArray,
    ArraySubType=UnmanagedType.LPWStr, SizeConst=10)] String[] ar);  
 ```  
   
- Embora seja possível aplicar os atributos **size_is** ou **length_is** a uma matriz na fonte da linguagem IDL para transmitir o tamanho para um cliente, o compilador da linguagem IDL da Microsoft (MIDL) não propaga essas informações para a biblioteca de tipos. Sem saber o tamanho, o serviço de marshaling de interoperabilidade não pode realizar marshaling dos elementos da matriz. Consequentemente, as matrizes de comprimento variável são importadas como argumentos de referência. Por exemplo:  
+ <span data-ttu-id="0cbb8-192">Embora seja possível aplicar os atributos **size_is** ou **length_is** a uma matriz na fonte da linguagem IDL para transmitir o tamanho para um cliente, o compilador da linguagem IDL da Microsoft (MIDL) não propaga essas informações para a biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-192">Although you can apply the **size_is** or **length_is** attributes to an array in Interface Definition Language (IDL) source to convey the size to a client, the Microsoft Interface Definition Language (MIDL) compiler does not propagate that information to the type library.</span></span> <span data-ttu-id="0cbb8-193">Sem saber o tamanho, o serviço de marshaling de interoperabilidade não pode realizar marshaling dos elementos da matriz.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-193">Without knowing the size, the interop marshaling service cannot marshal the array elements.</span></span> <span data-ttu-id="0cbb8-194">Consequentemente, as matrizes de comprimento variável são importadas como argumentos de referência.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-194">Consequently, variable-length arrays are imported as reference arguments.</span></span> <span data-ttu-id="0cbb8-195">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="0cbb8-195">For example:</span></span>  
   
- **Assinatura não gerenciada**  
+ <span data-ttu-id="0cbb8-196">**Assinatura não gerenciada**</span><span class="sxs-lookup"><span data-stu-id="0cbb8-196">**Unmanaged signature**</span></span>  
   
 ```  
 HRESULT New1(int ar[]);  
@@ -153,7 +149,7 @@ HRESULT New2(int ArSize, [size_is(ArSize)] double ar[]);
 HRESULT New3(int ElemCnt, [length_is(ElemCnt)] LPStr ar[]);  
 ```  
   
- **Assinatura gerenciada**  
+ <span data-ttu-id="0cbb8-197">**Assinatura gerenciada**</span><span class="sxs-lookup"><span data-stu-id="0cbb8-197">**Managed signature**</span></span>  
   
 ```vb  
 Sub New1(ByRef ar As Integer)  
@@ -167,9 +163,9 @@ void New2(ref double ar);
 void New3(ref String ar);   
 ```  
   
- É possível fornecer ao marshaler o tamanho da matriz editando o código MSIL (Microsoft Intermediate Language) produzido pelo Tlbimp.exe e, em seguida, recompilá-lo. Para obter detalhes sobre como modificar o código MSIL, consulte [Personalizando RCWs (Runtime Callable Wrappers)](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be). Para indicar o número de elementos na matriz, aplique o tipo <xref:System.Runtime.InteropServices.MarshalAsAttribute> ao parâmetro de matriz da definição de método gerenciado de uma das seguintes maneiras:  
+ <span data-ttu-id="0cbb8-198">É possível fornecer ao marshaler o tamanho da matriz editando o código MSIL (Microsoft Intermediate Language) produzido pelo Tlbimp.exe e, em seguida, recompilá-lo.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-198">You can provide the marshaler with the array size by editing the Microsoft intermediate language (MSIL) code produced by Tlbimp.exe and then recompiling it.</span></span> <span data-ttu-id="0cbb8-199">Para obter detalhes sobre como modificar o código MSIL, consulte [Personalizando RCWs (Runtime Callable Wrappers)](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be).</span><span class="sxs-lookup"><span data-stu-id="0cbb8-199">For details about how to modify MSIL code, see [Customizing Runtime Callable Wrappers](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be).</span></span> <span data-ttu-id="0cbb8-200">Para indicar o número de elementos na matriz, aplique o tipo <xref:System.Runtime.InteropServices.MarshalAsAttribute> ao parâmetro de matriz da definição de método gerenciado de uma das seguintes maneiras:</span><span class="sxs-lookup"><span data-stu-id="0cbb8-200">To indicate the number of elements in the array, apply the <xref:System.Runtime.InteropServices.MarshalAsAttribute> type to the array parameter of the managed method definition in one of the following ways:</span></span>  
   
--   Identifique outro parâmetro que contém o número de elementos na matriz. Os parâmetros são identificados por posição, começando com o primeiro parâmetro como o número 0.     
+-   <span data-ttu-id="0cbb8-201">Identifique outro parâmetro que contém o número de elementos na matriz.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-201">Identify another parameter that contains the number of elements in the array.</span></span> <span data-ttu-id="0cbb8-202">Os parâmetros são identificados por posição, começando com o primeiro parâmetro como o número 0.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-202">The parameters are identified by position, starting with the first parameter as number 0.</span></span>     
   
     ```vb  
     Sub [New](ElemCnt As Integer, _  
@@ -183,7 +179,7 @@ void New3(ref String ar);
        [MarshalAs(UnmanagedType.LPArray, SizeParamIndex=0)] int[] ar );  
     ```  
   
--   Defina o tamanho da matriz como uma constante. Por exemplo:  
+-   <span data-ttu-id="0cbb8-203">Defina o tamanho da matriz como uma constante.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-203">Define the size of the array as a constant.</span></span> <span data-ttu-id="0cbb8-204">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="0cbb8-204">For example:</span></span>  
   
     ```vb  
     Sub [New](\<MarshalAs(UnmanagedType.LPArray, SizeConst:=128)> _  
@@ -195,29 +191,29 @@ void New3(ref String ar);
        [MarshalAs(UnmanagedType.LPArray, SizeConst=128)] int[] ar );  
     ```  
   
- Ao realizar marshaling de matrizes de código não gerenciado para código gerenciado, o marshaler verifica o **MarshalAsAttribute** associado ao parâmetro para determinar o tamanho da matriz. Se o tamanho da matriz não for especificado, somente um elemento terá o marshaling realizado.  
+ <span data-ttu-id="0cbb8-205">Ao realizar marshaling de matrizes de código não gerenciado para código gerenciado, o marshaler verifica o **MarshalAsAttribute** associado ao parâmetro para determinar o tamanho da matriz.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-205">When marshaling arrays from unmanaged code to managed code, the marshaler checks the **MarshalAsAttribute** associated with the parameter to determine the array size.</span></span> <span data-ttu-id="0cbb8-206">Se o tamanho da matriz não for especificado, somente um elemento terá o marshaling realizado.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-206">If the array size is not specified, only one element is marshaled.</span></span>  
   
 > [!NOTE]
->  O **MarshalAsAttribute** não tem nenhum efeito no marshaling de matrizes gerenciadas para código não gerenciado. Nessa direção, o tamanho da matriz é determinado pelo exame. Não há nenhuma maneira de realizar marshaling de um subconjunto de uma matriz gerenciada.  
+>  <span data-ttu-id="0cbb8-207">O **MarshalAsAttribute** não tem nenhum efeito no marshaling de matrizes gerenciadas para código não gerenciado.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-207">The **MarshalAsAttribute** has no effect on marshaling managed arrays to unmanaged code.</span></span> <span data-ttu-id="0cbb8-208">Nessa direção, o tamanho da matriz é determinado pelo exame.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-208">In that direction, the array size is determined by examination.</span></span> <span data-ttu-id="0cbb8-209">Não há nenhuma maneira de realizar marshaling de um subconjunto de uma matriz gerenciada.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-209">There is no way to marshal a subset of a managed array.</span></span>  
   
- O marshaler de interoperabilidade usa os métodos **CoTaskMemAlloc** e **CoTaskMemFree** para alocar e recuperar a memória. A alocação de memória executada pelo código não gerenciado também deve usar esses métodos.  
+ <span data-ttu-id="0cbb8-210">O marshaler de interoperabilidade usa os métodos **CoTaskMemAlloc** e **CoTaskMemFree** para alocar e recuperar a memória.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-210">The interop marshaler uses the **CoTaskMemAlloc** and **CoTaskMemFree** methods to allocate and retrieve memory.</span></span> <span data-ttu-id="0cbb8-211">A alocação de memória executada pelo código não gerenciado também deve usar esses métodos.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-211">Memory allocation performed by unmanaged code must also use these methods.</span></span>  
   
 <a name="cpcondefaultmarshalingforarraysanchor4"></a>   
-## <a name="passing-arrays-to-com"></a>Passando matrizes para o COM  
- Todos os tipos de matriz gerenciada podem ser passados para um código não gerenciado de um código gerenciado. Dependendo do tipo gerenciado e dos atributos aplicados a ele, a matriz pode ser acessada como uma matriz segura ou uma matriz C-style, conforme mostrado na tabela a seguir.  
+## <a name="passing-arrays-to-com"></a><span data-ttu-id="0cbb8-212">Passando matrizes para o COM</span><span class="sxs-lookup"><span data-stu-id="0cbb8-212">Passing Arrays to COM</span></span>  
+ <span data-ttu-id="0cbb8-213">Todos os tipos de matriz gerenciada podem ser passados para um código não gerenciado de um código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-213">All managed array types can be passed to unmanaged code from managed code.</span></span> <span data-ttu-id="0cbb8-214">Dependendo do tipo gerenciado e dos atributos aplicados a ele, a matriz pode ser acessada como uma matriz segura ou uma matriz C-style, conforme mostrado na tabela a seguir.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-214">Depending on the managed type and the attributes applied to it, the array can be accessed as a safe array or a C-style array, as shown in the following table.</span></span>  
   
-|Tipo de matriz gerenciada|Exportado como|  
+|<span data-ttu-id="0cbb8-215">Tipo de matriz gerenciada</span><span class="sxs-lookup"><span data-stu-id="0cbb8-215">Managed array type</span></span>|<span data-ttu-id="0cbb8-216">Exportado como</span><span class="sxs-lookup"><span data-stu-id="0cbb8-216">Exported as</span></span>|  
 |------------------------|-----------------|  
-|**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> O tipo é fornecido na assinatura. A classificação é sempre 1 e o limite inferior é sempre 0. O tamanho é sempre conhecido em tempo de execução.|  
-|**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>**[**\<** *bounds* **>**]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> O tipo, a classificação e os limites são fornecidos na assinatura. O tamanho é sempre conhecido em tempo de execução.|  
-|**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=fullName>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> O tipo, a classificação, os limites e o tamanho são sempre conhecidos em tempo de execução.|  
+|<span data-ttu-id="0cbb8-217">**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**</span><span class="sxs-lookup"><span data-stu-id="0cbb8-217">**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**</span></span>|<span data-ttu-id="0cbb8-218"><xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**</span><span class="sxs-lookup"><span data-stu-id="0cbb8-218"><xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**</span></span><br /><br /> <span data-ttu-id="0cbb8-219">**UnmanagedType.LPArray**</span><span class="sxs-lookup"><span data-stu-id="0cbb8-219">**UnmanagedType.LPArray**</span></span><br /><br /> <span data-ttu-id="0cbb8-220">O tipo é fornecido na assinatura.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-220">Type is provided in the signature.</span></span> <span data-ttu-id="0cbb8-221">A classificação é sempre 1 e o limite inferior é sempre 0.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-221">Rank is always 1, lower bound is always 0.</span></span> <span data-ttu-id="0cbb8-222">O tamanho é sempre conhecido em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-222">Size is always known at run time.</span></span>|  
+|<span data-ttu-id="0cbb8-223">**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>**[**\<** *bounds* **>**]</span><span class="sxs-lookup"><span data-stu-id="0cbb8-223">**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>**[**\<** *bounds* **>**]</span></span>|<span data-ttu-id="0cbb8-224">**UnmanagedType.SafeArray(** *type* **)**</span><span class="sxs-lookup"><span data-stu-id="0cbb8-224">**UnmanagedType.SafeArray(** *type* **)**</span></span><br /><br /> <span data-ttu-id="0cbb8-225">**UnmanagedType.LPArray**</span><span class="sxs-lookup"><span data-stu-id="0cbb8-225">**UnmanagedType.LPArray**</span></span><br /><br /> <span data-ttu-id="0cbb8-226">O tipo, a classificação e os limites são fornecidos na assinatura.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-226">Type, rank, bounds are provided in the signature.</span></span> <span data-ttu-id="0cbb8-227">O tamanho é sempre conhecido em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-227">Size is always known at run time.</span></span>|  
+|<span data-ttu-id="0cbb8-228">**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=nameWithType>**>**</span><span class="sxs-lookup"><span data-stu-id="0cbb8-228">**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=nameWithType>**>**</span></span>|<span data-ttu-id="0cbb8-229">**UT_Interface**</span><span class="sxs-lookup"><span data-stu-id="0cbb8-229">**UT_Interface**</span></span><br /><br /> <span data-ttu-id="0cbb8-230">**UnmanagedType.SafeArray(** *type* **)**</span><span class="sxs-lookup"><span data-stu-id="0cbb8-230">**UnmanagedType.SafeArray(** *type* **)**</span></span><br /><br /> <span data-ttu-id="0cbb8-231">O tipo, a classificação, os limites e o tamanho são sempre conhecidos em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-231">Type, rank, bounds, and size are always known at run time.</span></span>|  
   
- Há uma limitação na Automação OLE relativa a matrizes de estruturas que contêm LPSTR ou LPWSTR.  Portanto, os campos **String** precisam ter o marshaling realizado como **UnmanagedType.BSTR**. Caso contrário, uma exceção será gerada.  
+ <span data-ttu-id="0cbb8-232">Há uma limitação na Automação OLE relativa a matrizes de estruturas que contêm LPSTR ou LPWSTR.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-232">There is a limitation in OLE Automation relating to arrays of structures that contain LPSTR or LPWSTR.</span></span>  <span data-ttu-id="0cbb8-233">Portanto, os campos **String** precisam ter o marshaling realizado como **UnmanagedType.BSTR**.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-233">Therefore, **String** fields have to be marshaled as **UnmanagedType.BSTR**.</span></span> <span data-ttu-id="0cbb8-234">Caso contrário, uma exceção será gerada.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-234">Otherwise, an exception will be thrown.</span></span>  
   
-### <a name="elementtypeszarray"></a>ELEMENT_TYPE_SZARRAY  
- Quando um método que contém um parâmetro **ELEMENT_TYPE_SZARRAY** (matriz unidimensional) é exportado de um assembly .NET para uma biblioteca de tipos, o parâmetro de matriz é convertido em uma **SAFEARRAY** de determinado tipo. As mesmas regras de conversão se aplicam a tipos de elemento da matriz. O conteúdo da matriz gerenciada é copiado automaticamente da memória gerenciada para a **SAFEARRAY**. Por exemplo:  
+### <a name="elementtypeszarray"></a><span data-ttu-id="0cbb8-235">ELEMENT_TYPE_SZARRAY</span><span class="sxs-lookup"><span data-stu-id="0cbb8-235">ELEMENT_TYPE_SZARRAY</span></span>  
+ <span data-ttu-id="0cbb8-236">Quando um método que contém um parâmetro **ELEMENT_TYPE_SZARRAY** (matriz unidimensional) é exportado de um assembly .NET para uma biblioteca de tipos, o parâmetro de matriz é convertido em uma **SAFEARRAY** de determinado tipo.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-236">When a method containing an **ELEMENT_TYPE_SZARRAY** parameter (one-dimensional array) is exported from a .NET assembly to a type library, the array parameter is converted to a **SAFEARRAY** of a given type.</span></span> <span data-ttu-id="0cbb8-237">As mesmas regras de conversão se aplicam a tipos de elemento da matriz.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-237">The same conversion rules apply to the array element types.</span></span> <span data-ttu-id="0cbb8-238">O conteúdo da matriz gerenciada é copiado automaticamente da memória gerenciada para a **SAFEARRAY**.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-238">The contents of the managed array are automatically copied from managed memory into the **SAFEARRAY**.</span></span> <span data-ttu-id="0cbb8-239">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="0cbb8-239">For example:</span></span>  
   
-#### <a name="managed-signature"></a>Assinatura gerenciada  
+#### <a name="managed-signature"></a><span data-ttu-id="0cbb8-240">Assinatura gerenciada</span><span class="sxs-lookup"><span data-stu-id="0cbb8-240">Managed signature</span></span>  
   
 ```vb  
 Sub [New](ar() As Long)  
@@ -229,18 +225,18 @@ void New(long[] ar );
 void New(String[] ar );  
 ```  
   
-#### <a name="unmanaged-signature"></a>Assinatura não gerenciada  
+#### <a name="unmanaged-signature"></a><span data-ttu-id="0cbb8-241">Assinatura não gerenciada</span><span class="sxs-lookup"><span data-stu-id="0cbb8-241">Unmanaged signature</span></span>  
   
 ```  
 HRESULT New([in] SAFEARRAY( long ) ar);   
 HRESULT New([in] SAFEARRAY( BSTR ) ar);  
 ```  
   
- A classificação de matrizes seguras é sempre 1 e o limite inferior é sempre 0. O tamanho é determinado em tempo de execução pelo tamanho da matriz gerenciada que está sendo passada.  
+ <span data-ttu-id="0cbb8-242">A classificação de matrizes seguras é sempre 1 e o limite inferior é sempre 0.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-242">The rank of the safe arrays is always 1 and the lower bound is always 0.</span></span> <span data-ttu-id="0cbb8-243">O tamanho é determinado em tempo de execução pelo tamanho da matriz gerenciada que está sendo passada.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-243">The size is determined at run time by the size of the managed array being passed.</span></span>  
   
- A matriz também pode ter o marshaling realizado como uma matriz C-style com o uso do atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute>. Por exemplo:  
+ <span data-ttu-id="0cbb8-244">A matriz também pode ter o marshaling realizado como uma matriz C-style com o uso do atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute>.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-244">The array can also be marshaled as a C-style array by using the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute.</span></span> <span data-ttu-id="0cbb8-245">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="0cbb8-245">For example:</span></span>  
   
-#### <a name="managed-signature"></a>Assinatura gerenciada  
+#### <a name="managed-signature"></a><span data-ttu-id="0cbb8-246">Assinatura gerenciada</span><span class="sxs-lookup"><span data-stu-id="0cbb8-246">Managed signature</span></span>  
   
 ```vb  
 Sub [New](<MarshalAs(UnmanagedType.LPArray, SizeParamIndex:=1)> _  
@@ -262,7 +258,7 @@ void New([MarshalAs(UnmanagedType.LPArray, ArraySubType=
    String [] ar, int size );  
 ```  
   
-#### <a name="unmanaged-signature"></a>Assinatura não gerenciada  
+#### <a name="unmanaged-signature"></a><span data-ttu-id="0cbb8-247">Assinatura não gerenciada</span><span class="sxs-lookup"><span data-stu-id="0cbb8-247">Unmanaged signature</span></span>  
   
 ```  
 HRESULT New(long ar[]);   
@@ -270,12 +266,12 @@ HRESULT New(BSTR ar[]);
 HRESULT New(LPStr ar[]);  
 ```  
   
- Embora o marshaler tenha as informações de tamanho necessárias para realizar marshaling da matriz, o tamanho da matriz geralmente é passado como um argumento separado para transmitir o tamanho para o receptor.  
+ <span data-ttu-id="0cbb8-248">Embora o marshaler tenha as informações de tamanho necessárias para realizar marshaling da matriz, o tamanho da matriz geralmente é passado como um argumento separado para transmitir o tamanho para o receptor.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-248">Although the marshaler has the length information needed to marshal the array, the array length is usually passed as a separate argument to convey the length to the callee.</span></span>  
   
-### <a name="elementtypearray"></a>ELEMENT_TYPE_ARRAY  
- Quando um método que contém um parâmetro **ELEMENT_TYPE_ARRAY** é exportado de um assembly .NET para uma biblioteca de tipos, o parâmetro de matriz é convertido em uma **SAFEARRAY** de determinado tipo. O conteúdo da matriz gerenciada é copiado automaticamente da memória gerenciada para a **SAFEARRAY**. Por exemplo:  
+### <a name="elementtypearray"></a><span data-ttu-id="0cbb8-249">ELEMENT_TYPE_ARRAY</span><span class="sxs-lookup"><span data-stu-id="0cbb8-249">ELEMENT_TYPE_ARRAY</span></span>  
+ <span data-ttu-id="0cbb8-250">Quando um método que contém um parâmetro **ELEMENT_TYPE_ARRAY** é exportado de um assembly .NET para uma biblioteca de tipos, o parâmetro de matriz é convertido em uma **SAFEARRAY** de determinado tipo.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-250">When a method containing an **ELEMENT_TYPE_ARRAY** parameter is exported from a .NET assembly to a type library, the array parameter is converted to a **SAFEARRAY** of a given type.</span></span> <span data-ttu-id="0cbb8-251">O conteúdo da matriz gerenciada é copiado automaticamente da memória gerenciada para a **SAFEARRAY**.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-251">The contents of the managed array are automatically copied from managed memory into the **SAFEARRAY**.</span></span> <span data-ttu-id="0cbb8-252">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="0cbb8-252">For example:</span></span>  
   
-#### <a name="managed-signature"></a>Assinatura gerenciada  
+#### <a name="managed-signature"></a><span data-ttu-id="0cbb8-253">Assinatura gerenciada</span><span class="sxs-lookup"><span data-stu-id="0cbb8-253">Managed signature</span></span>  
   
 ```vb  
 Sub [New](ar(,) As Long)  
@@ -287,18 +283,18 @@ void New( long [,] ar );
 void New( String [,] ar );  
 ```  
   
-#### <a name="unmanaged-signature"></a>Assinatura não gerenciada  
+#### <a name="unmanaged-signature"></a><span data-ttu-id="0cbb8-254">Assinatura não gerenciada</span><span class="sxs-lookup"><span data-stu-id="0cbb8-254">Unmanaged signature</span></span>  
   
 ```  
 HRESULT New([in] SAFEARRAY( long ) ar);   
 HRESULT New([in] SAFEARRAY( BSTR ) ar);  
 ```  
   
- A classificação, o tamanho e os limites das matrizes seguras são determinados em tempo de execução pelas características da matriz gerenciada.  
+ <span data-ttu-id="0cbb8-255">A classificação, o tamanho e os limites das matrizes seguras são determinados em tempo de execução pelas características da matriz gerenciada.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-255">The rank, size, and bounds of the safe arrays are determined at run time by the characteristics of the managed array.</span></span>  
   
- A matriz também pode ter o marshaling realizado como uma matriz C-style com a aplicação do atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute>. Por exemplo:  
+ <span data-ttu-id="0cbb8-256">A matriz também pode ter o marshaling realizado como uma matriz C-style com a aplicação do atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute>.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-256">The array can also be marshaled as a C-style array by applying the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute.</span></span> <span data-ttu-id="0cbb8-257">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="0cbb8-257">For example:</span></span>  
   
-#### <a name="managed-signature"></a>Assinatura gerenciada  
+#### <a name="managed-signature"></a><span data-ttu-id="0cbb8-258">Assinatura gerenciada</span><span class="sxs-lookup"><span data-stu-id="0cbb8-258">Managed signature</span></span>  
   
 ```vb  
 Sub [New](<MarshalAs(UnmanagedType.LPARRAY, SizeParamIndex:=1)> _  
@@ -316,16 +312,16 @@ void New([MarshalAs(UnmanagedType.LPARRAY,
    String [,] ar, int size );  
 ```  
   
-#### <a name="unmanaged-signature"></a>Assinatura não gerenciada  
+#### <a name="unmanaged-signature"></a><span data-ttu-id="0cbb8-259">Assinatura não gerenciada</span><span class="sxs-lookup"><span data-stu-id="0cbb8-259">Unmanaged signature</span></span>  
   
 ```  
 HRESULT New(long ar[]);   
 HRESULT New(LPStr ar[]);  
 ```  
   
- Não é possível realizar marshaling de matrizes aninhadas. Por exemplo, a assinatura a seguir gera um erro quando exportada com o [Exportador da Biblioteca de Tipos (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).  
+ <span data-ttu-id="0cbb8-260">Não é possível realizar marshaling de matrizes aninhadas.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-260">Nested arrays cannot be marshaled.</span></span> <span data-ttu-id="0cbb8-261">Por exemplo, a assinatura a seguir gera um erro quando exportada com o [Exportador da Biblioteca de Tipos (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).</span><span class="sxs-lookup"><span data-stu-id="0cbb8-261">For example, the following signature generates an error when exported with the [Type Library Exporter (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).</span></span>  
   
-#### <a name="managed-signature"></a>Assinatura gerenciada  
+#### <a name="managed-signature"></a><span data-ttu-id="0cbb8-262">Assinatura gerenciada</span><span class="sxs-lookup"><span data-stu-id="0cbb8-262">Managed signature</span></span>  
   
 ```vb  
 Sub [New](ar()()() As Long)  
@@ -335,10 +331,10 @@ Sub [New](ar()()() As Long)
 void New(long [][][] ar );  
 ```  
   
-### <a name="elementtypeclass-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
- Quando um método que contém um parâmetro <xref:System.Array?displayProperty=fullName> é exportado de um assembly .NET para uma biblioteca de tipos, o parâmetro da matriz é convertido em uma interface **_Array**. O conteúdo da matriz gerenciada é acessível somente por meio dos métodos e das propriedades da interface **_Array**. **System.Array** também pode ter o marshaling realizado como uma **SAFEARRAY** usando o atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute>. Ao ter o marshaling realizado como uma matriz segura, os elementos da matriz têm o marshaling realizado como variantes. Por exemplo:  
+### <a name="elementtypeclass-systemarray"></a><span data-ttu-id="0cbb8-263">ELEMENT_TYPE_CLASS \<System.Array></span><span class="sxs-lookup"><span data-stu-id="0cbb8-263">ELEMENT_TYPE_CLASS \<System.Array></span></span>  
+ <span data-ttu-id="0cbb8-264">Quando um método que contém um parâmetro <xref:System.Array?displayProperty=nameWithType> é exportado de um assembly .NET para uma biblioteca de tipos, o parâmetro da matriz é convertido em uma interface **_Array**.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-264">When a method containing a <xref:System.Array?displayProperty=nameWithType> parameter is exported from a .NET assembly to a type library, the array parameter is converted to an **_Array** interface.</span></span> <span data-ttu-id="0cbb8-265">O conteúdo da matriz gerenciada é acessível somente por meio dos métodos e das propriedades da interface **_Array**.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-265">The contents of the managed array are accessible only through the methods and properties of the **_Array** interface.</span></span> <span data-ttu-id="0cbb8-266">**System.Array** também pode ter o marshaling realizado como uma **SAFEARRAY** usando o atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute>.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-266">**System.Array** can also be marshaled as a **SAFEARRAY** by using the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute.</span></span> <span data-ttu-id="0cbb8-267">Ao ter o marshaling realizado como uma matriz segura, os elementos da matriz têm o marshaling realizado como variantes.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-267">When marshaled as a safe array, the array elements are marshaled as variants.</span></span> <span data-ttu-id="0cbb8-268">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="0cbb8-268">For example:</span></span>  
   
-#### <a name="managed-signature"></a>Assinatura gerenciada  
+#### <a name="managed-signature"></a><span data-ttu-id="0cbb8-269">Assinatura gerenciada</span><span class="sxs-lookup"><span data-stu-id="0cbb8-269">Managed signature</span></span>  
   
 ```vb  
 Sub New1( ar As System.Array )  
@@ -350,17 +346,17 @@ void New1( System.Array ar );
 void New2( [MarshalAs(UnmanagedType.Safe array)] System.Array ar );  
 ```  
   
-#### <a name="unmanaged-signature"></a>Assinatura não gerenciada  
+#### <a name="unmanaged-signature"></a><span data-ttu-id="0cbb8-270">Assinatura não gerenciada</span><span class="sxs-lookup"><span data-stu-id="0cbb8-270">Unmanaged signature</span></span>  
   
 ```  
 HRESULT New([in] _Array *ar);   
 HRESULT New([in] SAFEARRAY(VARIANT) ar);  
 ```  
   
-### <a name="arrays-within-structures"></a>Matrizes em estruturas  
- Estruturas não gerenciadas podem conter matrizes inseridas. Por padrão, esses campos de matriz inseridos têm o marshaling realizado como uma SAFEARRAY. No exemplo a seguir, `s1` é uma matriz inserida que é alocada diretamente na própria estrutura.  
+### <a name="arrays-within-structures"></a><span data-ttu-id="0cbb8-271">Matrizes em estruturas</span><span class="sxs-lookup"><span data-stu-id="0cbb8-271">Arrays within Structures</span></span>  
+ <span data-ttu-id="0cbb8-272">Estruturas não gerenciadas podem conter matrizes inseridas.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-272">Unmanaged structures can contain embedded arrays.</span></span> <span data-ttu-id="0cbb8-273">Por padrão, esses campos de matriz inseridos têm o marshaling realizado como uma SAFEARRAY.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-273">By default, these embedded array fields are marshaled as a SAFEARRAY.</span></span> <span data-ttu-id="0cbb8-274">No exemplo a seguir, `s1` é uma matriz inserida que é alocada diretamente na própria estrutura.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-274">In the following example, `s1` is an embedded array that is allocated directly within the structure itself.</span></span>  
   
-#### <a name="unmanaged-representation"></a>Representação não gerenciada  
+#### <a name="unmanaged-representation"></a><span data-ttu-id="0cbb8-275">Representação não gerenciada</span><span class="sxs-lookup"><span data-stu-id="0cbb8-275">Unmanaged representation</span></span>  
   
 ```  
 struct MyStruct {  
@@ -368,7 +364,7 @@ struct MyStruct {
 }  
 ```  
   
- Matrizes podem ter o marshaling realizado como <xref:System.Runtime.InteropServices.UnmanagedType>, o que exige a definição do campo <xref:System.Runtime.InteropServices.MarshalAsAttribute>. O tamanho pode ser definido somente como uma constante. O código a seguir mostra a definição gerenciada correspondente de `MyStruct`.  
+ <span data-ttu-id="0cbb8-276">Matrizes podem ter o marshaling realizado como <xref:System.Runtime.InteropServices.UnmanagedType>, o que exige a definição do campo <xref:System.Runtime.InteropServices.MarshalAsAttribute>.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-276">Arrays can be marshaled as <xref:System.Runtime.InteropServices.UnmanagedType>, which requires you to set the <xref:System.Runtime.InteropServices.MarshalAsAttribute> field.</span></span> <span data-ttu-id="0cbb8-277">O tamanho pode ser definido somente como uma constante.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-277">The size can be set only as a constant.</span></span> <span data-ttu-id="0cbb8-278">O código a seguir mostra a definição gerenciada correspondente de `MyStruct`.</span><span class="sxs-lookup"><span data-stu-id="0cbb8-278">The following code shows the corresponding managed definition of `MyStruct`.</span></span>  
   
 ```vb  
 Public Structure <StructLayout(LayoutKind.Sequential)> MyStruct  
@@ -384,9 +380,8 @@ public struct MyStruct {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Comportamento de marshaling padrão](../../../docs/framework/interop/default-marshaling-behavior.md)   
- [Tipos blittable e não blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md)   
- [Atributos direcionais](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
- [Copiando e fixando](../../../docs/framework/interop/copying-and-pinning.md)
-
+## <a name="see-also"></a><span data-ttu-id="0cbb8-279">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0cbb8-279">See Also</span></span>  
+ [<span data-ttu-id="0cbb8-280">Comportamento de marshaling padrão</span><span class="sxs-lookup"><span data-stu-id="0cbb8-280">Default Marshaling Behavior</span></span>](../../../docs/framework/interop/default-marshaling-behavior.md)  
+ [<span data-ttu-id="0cbb8-281">Tipos blittable e não blittable</span><span class="sxs-lookup"><span data-stu-id="0cbb8-281">Blittable and Non-Blittable Types</span></span>](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
+ [<span data-ttu-id="0cbb8-282">Atributos direcionais</span><span class="sxs-lookup"><span data-stu-id="0cbb8-282">Directional Attributes</span></span>](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
+ [<span data-ttu-id="0cbb8-283">Copiando e fixando</span><span class="sxs-lookup"><span data-stu-id="0cbb8-283">Copying and Pinning</span></span>](../../../docs/framework/interop/copying-and-pinning.md)

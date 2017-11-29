@@ -1,0 +1,88 @@
+---
+title: Sintaxe DateTime (XAML)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DateTime XAML syntax [WPF], strings for
+- DateTime XAML syntax [WPF], where used
+- short date format [WPF], DateTime
+- DateTime XAML syntax [WPF]
+- DateTime XAML text [WPF]
+- DateTime XAML syntax [WPF], format strings for
+ms.assetid: 5901710a-609b-40c8-9d65-f0016cd9090b
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 55e261018e6c7b9fea9ad449c5e92a131df40807
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
+---
+# <a name="datetime-xaml-syntax"></a><span data-ttu-id="5e84e-102">Sintaxe DateTime (XAML)</span><span class="sxs-lookup"><span data-stu-id="5e84e-102">DateTime XAML Syntax</span></span>
+<span data-ttu-id="5e84e-103">Alguns controles, como <xref:System.Windows.Controls.Calendar> e <xref:System.Windows.Controls.DatePicker>, têm propriedades que usam o <xref:System.DateTime> tipo.</span><span class="sxs-lookup"><span data-stu-id="5e84e-103">Some controls, such as <xref:System.Windows.Controls.Calendar> and <xref:System.Windows.Controls.DatePicker>, have properties that use the <xref:System.DateTime> type.</span></span> <span data-ttu-id="5e84e-104">Embora você normalmente especifique uma data ou horário inicial para esses controles no code-behind no tempo de execução, você poderá especificar uma data ou horário inicial na linguagem XAML.</span><span class="sxs-lookup"><span data-stu-id="5e84e-104">Although you typically specify an initial date or time for these controls in the code-behind at run time, you can specify an initial date or time in XAML.</span></span> <span data-ttu-id="5e84e-105">O analisador de WPF XAML lida com a análise de <xref:System.DateTime> valores usando uma sintaxe de texto interno do XAML.</span><span class="sxs-lookup"><span data-stu-id="5e84e-105">The WPF XAML parser handles parsing of <xref:System.DateTime> values using a built-in XAML text syntax.</span></span> <span data-ttu-id="5e84e-106">Este tópico descreve as especificações de <xref:System.DateTime> sintaxe de texto XAML.</span><span class="sxs-lookup"><span data-stu-id="5e84e-106">This topic describes the specifics of the <xref:System.DateTime> XAML text syntax.</span></span>  
+  
+  
+<a name="where_datetime_xaml_syntax_is_used"></a>   
+## <a name="when-to-use-datetime-xaml-syntax"></a><span data-ttu-id="5e84e-107">Quando usar a sintaxe DateTime (XAML)</span><span class="sxs-lookup"><span data-stu-id="5e84e-107">When To Use DateTime XAML Syntax</span></span>  
+ <span data-ttu-id="5e84e-108">A configuração das datas na linguagem XAML nem sempre é necessária e pode nem mesmo ser desejável.</span><span class="sxs-lookup"><span data-stu-id="5e84e-108">Setting dates in XAML is not always necessary and may not even be desirable.</span></span> <span data-ttu-id="5e84e-109">Por exemplo, você pode usar o <xref:System.DateTime.Now%2A?displayProperty=nameWithType> propriedade para inicializar uma data no tempo de execução, ou você pode fazer todos os ajustes de data para um calendário no code-behind com base na entrada do usuário.</span><span class="sxs-lookup"><span data-stu-id="5e84e-109">For example, you could use the <xref:System.DateTime.Now%2A?displayProperty=nameWithType> property to initialize a date at run time, or you could do all your date adjustments for a calendar in the code-behind based on user input.</span></span> <span data-ttu-id="5e84e-110">No entanto, há situações em que você pode deseja embutir datas em um <xref:System.Windows.Controls.Calendar> e <xref:System.Windows.Controls.DatePicker> em um modelo de controle.</span><span class="sxs-lookup"><span data-stu-id="5e84e-110">However, there are scenarios where you may want to hard-code dates into a <xref:System.Windows.Controls.Calendar> and <xref:System.Windows.Controls.DatePicker> in a control template.</span></span> <span data-ttu-id="5e84e-111">O <xref:System.DateTime> sintaxe XAML deve ser usada para esses cenários.</span><span class="sxs-lookup"><span data-stu-id="5e84e-111">The <xref:System.DateTime> XAML syntax must be used for these scenarios.</span></span>  
+  
+### <a name="datetime-xaml-syntax-is-a-native-behavior"></a><span data-ttu-id="5e84e-112">A sintaxe DateTime (XAML) é um comportamento nativo</span><span class="sxs-lookup"><span data-stu-id="5e84e-112">DateTime XAML Syntax is a Native Behavior</span></span>  
+ <span data-ttu-id="5e84e-113"><xref:System.DateTime>é uma classe que é definida nas bibliotecas de classe base do CLR.</span><span class="sxs-lookup"><span data-stu-id="5e84e-113"><xref:System.DateTime> is a class that is defined in the base class libraries of the CLR.</span></span> <span data-ttu-id="5e84e-114">Por causa de como as bibliotecas de classes base se relacionam com o restante do CLR, não é possível aplicar <xref:System.ComponentModel.TypeConverterAttribute> para a classe e use um conversor de tipo para processar cadeias de caracteres de XAML e convertê-las para <xref:System.DateTime> no modelo de objeto de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="5e84e-114">Because of how the base class libraries relate to the rest of the CLR, it is not possible to apply <xref:System.ComponentModel.TypeConverterAttribute> to the class and use a type converter to process strings from XAML and convert them to <xref:System.DateTime> in the run time object model.</span></span> <span data-ttu-id="5e84e-115">Não há nenhuma classe `DateTimeConverter` que fornece o comportamento de conversão; o comportamento de conversão descrito neste tópico é nativo para o analisador de XAML do WPF.</span><span class="sxs-lookup"><span data-stu-id="5e84e-115">There is no `DateTimeConverter` class that provides the conversion behavior; the conversion behavior described in this topic is native to the WPF XAML parser.</span></span>  
+  
+<a name="format_strings_for_datetime_xaml_syntax"></a>   
+## <a name="format-strings-for-datetime-xaml-syntax"></a><span data-ttu-id="5e84e-116">Cadeias de caracteres de formato para obter a sintaxe DateTime (XAML)</span><span class="sxs-lookup"><span data-stu-id="5e84e-116">Format Strings for DateTime XAML Syntax</span></span>  
+ <span data-ttu-id="5e84e-117">Você pode especificar o formato de um <xref:System.DateTime> com uma cadeia de caracteres de formato.</span><span class="sxs-lookup"><span data-stu-id="5e84e-117">You can specify the format of a <xref:System.DateTime> with a format string.</span></span> <span data-ttu-id="5e84e-118">As cadeias de caracteres de formato formalizam a sintaxe de texto que pode ser usada para criar um valor.</span><span class="sxs-lookup"><span data-stu-id="5e84e-118">Format strings formalize the text syntax that can be used to create a value.</span></span> <span data-ttu-id="5e84e-119"><xref:System.DateTime>valores para o WPF existente controla o uso geralmente somente os componentes de data do <xref:System.DateTime> e não os componentes de tempo.</span><span class="sxs-lookup"><span data-stu-id="5e84e-119"><xref:System.DateTime> values for the existing WPF controls generally only use the date components of <xref:System.DateTime> and not the time components.</span></span>  
+  
+ <span data-ttu-id="5e84e-120">Ao especificar um <xref:System.DateTime> em XAML, você pode usar qualquer uma das cadeias de caracteres de formato alternadamente.</span><span class="sxs-lookup"><span data-stu-id="5e84e-120">When specifying a <xref:System.DateTime> in XAML, you can use any of the format strings interchangeably.</span></span>  
+  
+ <span data-ttu-id="5e84e-121">Você também pode usar os formatos e as cadeias de caracteres de formato que não são mostradas especificamente neste tópico.</span><span class="sxs-lookup"><span data-stu-id="5e84e-121">You can also use formats and format strings that are not specifically shown in this topic.</span></span> <span data-ttu-id="5e84e-122">Tecnicamente, o XAML para qualquer <xref:System.DateTime> valor que é especificado e, em seguida, analisada pelo analisador WPF XAML usa uma chamada interna para <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>, portanto, você pode usar qualquer cadeia de caracteres aceita pelo <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> para seu XAML de entrada.</span><span class="sxs-lookup"><span data-stu-id="5e84e-122">Technically, the XAML for any <xref:System.DateTime> value that is specified and then parsed by the WPF XAML parser uses an internal  call to <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>, therefore you could use any string accepted by <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> for your XAML input.</span></span> <span data-ttu-id="5e84e-123">Para obter mais informações, consulte <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="5e84e-123">For more information, see <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>.</span></span>  
+  
+> [!IMPORTANT]
+>  <span data-ttu-id="5e84e-124">Sempre usa a sintaxe XAML DateTime `en-us` como o <xref:System.Globalization.CultureInfo> para sua conversão nativo.</span><span class="sxs-lookup"><span data-stu-id="5e84e-124">The DateTime XAML syntax always uses `en-us` as the <xref:System.Globalization.CultureInfo> for its native conversion.</span></span> <span data-ttu-id="5e84e-125">Isso não é influenciado por <xref:System.Windows.FrameworkElement.Language%2A> valor ou `xml:lang` valor em XAML, porque a conversão de tipo de nível de atributo XAML funciona sem contexto.</span><span class="sxs-lookup"><span data-stu-id="5e84e-125">This is not influenced by <xref:System.Windows.FrameworkElement.Language%2A> value or `xml:lang` value in the XAML, because XAML attribute-level type conversion acts without that context.</span></span> <span data-ttu-id="5e84e-126">Não tente interpolar as cadeias de caracteres de formato mostradas aqui devido a variações culturais, como a ordem na qual o dia e o mês aparecem.</span><span class="sxs-lookup"><span data-stu-id="5e84e-126">Do not attempt to interpolate the format strings shown here due to cultural variations, such as the order in which day and month appear.</span></span> <span data-ttu-id="5e84e-127">As cadeias de caracteres de formato mostradas aqui são as cadeias de caracteres de formato exato usadas durante a análise de XAML, independentemente de outras configurações de cultura.</span><span class="sxs-lookup"><span data-stu-id="5e84e-127">The format strings shown here are the exact format strings used when parsing the XAML regardless of other culture settings.</span></span>  
+  
+ <span data-ttu-id="5e84e-128">As seções a seguir descrevem algumas das comuns <xref:System.DateTime> cadeias de caracteres de formato.</span><span class="sxs-lookup"><span data-stu-id="5e84e-128">The following sections describe some of the common <xref:System.DateTime> format strings.</span></span>  
+  
+### <a name="short-date-pattern-d"></a><span data-ttu-id="5e84e-129">Padrão de data abreviada ("d")</span><span class="sxs-lookup"><span data-stu-id="5e84e-129">Short Date Pattern ("d")</span></span>  
+ <span data-ttu-id="5e84e-130">A seguir mostra o formato de data abreviada para um <xref:System.DateTime> em XAML:</span><span class="sxs-lookup"><span data-stu-id="5e84e-130">The following shows the short date format for a <xref:System.DateTime> in XAML:</span></span>  
+  
+ `M/d/YYYY`  
+  
+ <span data-ttu-id="5e84e-131">Essa é a forma mais simples que especifica todas as informações necessárias para usos típicos por controles do WPF e não pode ser influenciada por deslocamentos de fuso horário acidentais em relação a um componente de tempo e, portanto, recomendável em outros formatos.</span><span class="sxs-lookup"><span data-stu-id="5e84e-131">This is the simplest form that specifies all necessary information for typical usages by WPF controls, and cannot be influenced by accidental time zone offsets versus a time component, and is therefore recommended over the other formats.</span></span>  
+  
+ <span data-ttu-id="5e84e-132">Por exemplo, para especificar a data do dia 1 de junho de 2010, use a seguinte cadeia de caracteres:</span><span class="sxs-lookup"><span data-stu-id="5e84e-132">For example, to specify the date of June 1, 2010, use the following string:</span></span>  
+  
+ `3/1/2010`  
+  
+ <span data-ttu-id="5e84e-133">Para obter mais informações, consulte <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="5e84e-133">For more information, see <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType>.</span></span>  
+  
+### <a name="sortable-datetime-pattern-s"></a><span data-ttu-id="5e84e-134">Padrão DateTime classificável ("s")</span><span class="sxs-lookup"><span data-stu-id="5e84e-134">Sortable DateTime Pattern ("s")</span></span>  
+ <span data-ttu-id="5e84e-135">A seguir mostra o classificável <xref:System.DateTime> padrão em XAML:</span><span class="sxs-lookup"><span data-stu-id="5e84e-135">The following shows the sortable <xref:System.DateTime> pattern in XAML:</span></span>  
+  
+ `yyyy'-'MM'-'dd'T'HH':'mm':'ss`  
+  
+ <span data-ttu-id="5e84e-136">Por exemplo, para especificar a data do dia 1 de junho de 2010, use a seguinte cadeia de caracteres (os componentes de tempo são todos inseridos como 0):</span><span class="sxs-lookup"><span data-stu-id="5e84e-136">For example, to specify the date of June 1, 2010, use the following string (time components are all entered as 0):</span></span>  
+  
+ `2010-06-01T000:00:00`  
+  
+### <a name="rfc1123-pattern-r"></a><span data-ttu-id="5e84e-137">Padrão RFC1123 ("r")</span><span class="sxs-lookup"><span data-stu-id="5e84e-137">RFC1123 Pattern ("r")</span></span>  
+ <span data-ttu-id="5e84e-138">O padrão RFC1123 é útil porque ele pode ser uma entrada de cadeia de caracteres de outros geradores de data que também usam o padrão RFC1123 por motivos invariáveis de cultura.</span><span class="sxs-lookup"><span data-stu-id="5e84e-138">The RFC1123 pattern is useful because it could be a string input from other date generators that also use the RFC1123 pattern for culture invariant reasons.</span></span> <span data-ttu-id="5e84e-139">A seguir mostra o RFC1123 <xref:System.DateTime> padrão em XAML:</span><span class="sxs-lookup"><span data-stu-id="5e84e-139">The following shows the RFC1123 <xref:System.DateTime> pattern in XAML:</span></span>  
+  
+ `ddd, dd MMM yyyy HH':'mm':'ss 'UTC'`  
+  
+ <span data-ttu-id="5e84e-140">Por exemplo, para especificar a data do dia 1 de junho de 2010, use a seguinte cadeia de caracteres (os componentes de tempo são todos inseridos como 0):</span><span class="sxs-lookup"><span data-stu-id="5e84e-140">For example, to specify the date of June 1, 2010, use the following string (time components are all entered as 0):</span></span>  
+  
+ `Mon, 01 Jun 2010 00:00:00 UTC`  
+  
+### <a name="other-formats-and-patterns"></a><span data-ttu-id="5e84e-141">Outros formatos e padrões</span><span class="sxs-lookup"><span data-stu-id="5e84e-141">Other Formats and Patterns</span></span>  
+ <span data-ttu-id="5e84e-142">Como mencionado anteriormente, um <xref:System.DateTime> em XAML pode ser especificado como qualquer cadeia de caracteres que é aceitável como entrada para <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="5e84e-142">As stated previously, a <xref:System.DateTime> in XAML can be specified as any string that is acceptable as input for <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="5e84e-143">Isso inclui outros formatos formalizados (por exemplo <xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>) e os formatos que não são formalizados como um determinado <xref:System.Globalization.DateTimeFormatInfo> formulário.</span><span class="sxs-lookup"><span data-stu-id="5e84e-143">This includes other formalized formats (for example <xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>), and formats that are not formalized as a particular <xref:System.Globalization.DateTimeFormatInfo> form.</span></span> <span data-ttu-id="5e84e-144">Por exemplo, o formulário `YYYY/mm/dd` é aceitável como entrada para <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="5e84e-144">For example, the form `YYYY/mm/dd` is acceptable as input for <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="5e84e-145">Este tópico não tenta descrever todos os formatos possíveis do trabalho e, como alternativa, recomenda o padrão de data abreviada como uma prática padrão.</span><span class="sxs-lookup"><span data-stu-id="5e84e-145">This topic does not attempt to describe all possible formats that work, and instead recommends the short date pattern as a standard practice.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="5e84e-146">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5e84e-146">See Also</span></span>  
+ [<span data-ttu-id="5e84e-147">Visão geral de XAML (WPF)</span><span class="sxs-lookup"><span data-stu-id="5e84e-147">XAML Overview (WPF)</span></span>](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
