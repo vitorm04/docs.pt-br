@@ -1,55 +1,38 @@
 ---
-title: "Tipos de dados dos parâmetros de tipo não podem ser inferidos a partir destes argumentos | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Não é possível inferir o(s) tipo(s) de dados do(s) parâmetro(s) de tipo a partir destes argumentos"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc36644
 - bc36647
 - vbc36647
 - vbc36644
-dev_langs:
-- VB
 helpviewer_keywords:
 - BC36644
 - BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 11fb338237e2607eabd3ce2630c543b8ee2c4675
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b290c25286dce2236823919e8287db9abefc0dd7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>Não é possível inferir o(s) tipo(s) de dados do(s) parâmetro(s) de tipo a partir destes argumentos
-Não é possível inferir os tipos de dados dos parâmetros de tipo com base nesses argumentos. Especificar os dados de tipos explicitamente podem corrigir esse erro.  
+# <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a><span data-ttu-id="03c07-102">Não é possível inferir o(s) tipo(s) de dados do(s) parâmetro(s) de tipo a partir destes argumentos</span><span class="sxs-lookup"><span data-stu-id="03c07-102">Data type(s) of the type parameter(s) cannot be inferred from these arguments</span></span>
+<span data-ttu-id="03c07-103">Tipos de dados dos parâmetros de tipo não podem ser inferidos a partir destes argumentos.</span><span class="sxs-lookup"><span data-stu-id="03c07-103">Data type(s) of the type parameter(s) cannot be inferred from these arguments.</span></span> <span data-ttu-id="03c07-104">Especificando os dados tipos explicitamente talvez corrija esse erro.</span><span class="sxs-lookup"><span data-stu-id="03c07-104">Specifying the data type(s) explicitly might correct this error.</span></span>  
   
- Esse erro ocorre quando ocorre falha na resolução de sobrecarga. Ele ocorre como uma mensagem subordinada que indica por que um candidato sobrecarga específica foi eliminado. A mensagem de erro explica que o compilador não pode usar a inferência de tipo para localizar os tipos de dados para os parâmetros de tipo.  
+ <span data-ttu-id="03c07-105">Esse erro ocorre quando ocorre falha na resolução de sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="03c07-105">This error occurs when overload resolution has failed.</span></span> <span data-ttu-id="03c07-106">Isso ocorre como uma mensagem subordinada que indica por que um candidato a sobrecarga específica foi eliminado.</span><span class="sxs-lookup"><span data-stu-id="03c07-106">It occurs as a subordinate message that states why a particular overload candidate has been eliminated.</span></span> <span data-ttu-id="03c07-107">A mensagem de erro explica que o compilador não pode usar a inferência de tipo para localizar tipos de dados para os parâmetros de tipo.</span><span class="sxs-lookup"><span data-stu-id="03c07-107">The error message explains that the compiler cannot use type inference to find data types for the type parameters.</span></span>  
   
 > [!NOTE]
->  Quando especificar argumentos não é uma opção (por exemplo, para operadores de consulta em expressões de consulta), a mensagem de erro aparece sem a segunda frase.  
+>  <span data-ttu-id="03c07-108">Quando especificar argumentos não é uma opção (por exemplo, para operadores de consulta em expressões de consulta), a mensagem de erro aparece sem a segunda frase.</span><span class="sxs-lookup"><span data-stu-id="03c07-108">When specifying arguments is not an option (for example, for query operators in query expressions), the error message appears without the second sentence.</span></span>  
   
- O código a seguir demonstra o erro.  
+ <span data-ttu-id="03c07-109">O código a seguir demonstra o erro.</span><span class="sxs-lookup"><span data-stu-id="03c07-109">The following code demonstrates the error.</span></span>  
   
 ```vb  
 Module Module1  
@@ -75,13 +58,13 @@ Interface InterfaceExample(Of T)
 End Interface  
 ```  
   
- **ID do erro:** BC36647 e BC36644  
+ <span data-ttu-id="03c07-110">**ID do erro:** BC36647 e BC36644</span><span class="sxs-lookup"><span data-stu-id="03c07-110">**Error ID:** BC36647 and BC36644</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="03c07-111">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="03c07-111">To correct this error</span></span>  
   
--   Você poderá especificar um tipo de dados para o parâmetro de tipo ou os parâmetros em vez de depender de inferência de tipo.  
+-   <span data-ttu-id="03c07-112">Você poderá especificar um tipo de dados para o parâmetro de tipo ou os parâmetros em vez de depender de inferência de tipo.</span><span class="sxs-lookup"><span data-stu-id="03c07-112">You may be able to specify a data type for the type parameter or parameters instead of relying on type inference.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Conversão de delegado reduzida](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)   
- [Procedimentos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)   
- [Conversões de tipo no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+## <a name="see-also"></a><span data-ttu-id="03c07-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="03c07-113">See Also</span></span>  
+ [<span data-ttu-id="03c07-114">Conversão de Delegado Reduzida</span><span class="sxs-lookup"><span data-stu-id="03c07-114">Relaxed Delegate Conversion</span></span>](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
+ [<span data-ttu-id="03c07-115">Procedimentos genéricos no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="03c07-115">Generic Procedures in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
+ [<span data-ttu-id="03c07-116">Conversões de tipo no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="03c07-116">Type Conversions in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

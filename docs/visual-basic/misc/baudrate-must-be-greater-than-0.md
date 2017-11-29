@@ -1,41 +1,25 @@
 ---
-title: "Taxa de transmissão deve ser maior que 0 | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Taxa de transmissão deve ser maior que 0"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 ms.assetid: 5d26c4b1-45ca-459b-9b96-907dbc6ea25c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 235d5373241c12adfc42062070a2bbb988c00800
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 06149dfaaff4ac0f1b52e1b05177b083b12bac0c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="baudrate-must-be-greater-than-0"></a>Taxa de transmissão deve ser maior que 0
-O `BaudRate` argumento especificado para o `My.Computer.Ports.OpenSerialPort` método deve ser maior que zero.  
+# <a name="baudrate-must-be-greater-than-0"></a><span data-ttu-id="83058-102">Taxa de transmissão deve ser maior que 0</span><span class="sxs-lookup"><span data-stu-id="83058-102">BaudRate must be greater than 0</span></span>
+<span data-ttu-id="83058-103">O `BaudRate` argumento especificado para o `My.Computer.Ports.OpenSerialPort` método deve ser maior que zero.</span><span class="sxs-lookup"><span data-stu-id="83058-103">The `BaudRate` argument specified for the `My.Computer.Ports.OpenSerialPort` method must be greater than zero.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="83058-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="83058-104">To correct this error</span></span>  
   
--   Altere o valor de `BaudRate` argumento em um número positivo.  
+-   <span data-ttu-id="83058-105">Alterar o valor da `BaudRate` argumento para um número positivo.</span><span class="sxs-lookup"><span data-stu-id="83058-105">Change the value of the `BaudRate` argument to a positive number.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Método OpenSerialPort](http://msdn.microsoft.com/en-us/ed1e75f0-635a-4229-8fe6-becea5d036c3)
+## <a name="see-also"></a><span data-ttu-id="83058-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="83058-106">See Also</span></span>  
+ [<span data-ttu-id="83058-107">Método OpenSerialPort</span><span class="sxs-lookup"><span data-stu-id="83058-107">My.Computer.Ports.OpenSerialPort Method</span></span>](http://msdn.microsoft.com/en-us/ed1e75f0-635a-4229-8fe6-becea5d036c3)

@@ -1,54 +1,46 @@
 ---
-title: Exemplo de documentos XML (LINQ to XML) | Documentos do Microsoft
+title: Documentos XML de exemplo (LINQ to XML)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a734cc4e-d95d-4631-91a2-81618c8ad894
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d2ba4eec12b3a51c912ed4d531f4de9f80ffa332
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: db9837d5dbe09b3045d88dc68e429877b39559f2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="sample-xml-documents-linq-to-xml"></a>Documentos XML de exemplo (LINQ to XML)
-Os seguintes arquivos de exemplo são usados nos exemplos de código e trechos de código em todo o [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] documentação.  
+# <a name="sample-xml-documents-linq-to-xml"></a><span data-ttu-id="47765-102">Documentos XML de exemplo (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="47765-102">Sample XML Documents (LINQ to XML)</span></span>
+<span data-ttu-id="47765-103">Os arquivos de exemplo a seguir são usados nos exemplos de código e nos trechos de código em toda a documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="47765-103">The following example files are used in the code samples and code snippets throughout the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span>  
   
 > [!NOTE]
->  As empresas, as organizações, os produtos, os nomes de domínio, os endereços de email, os logotipos, as pessoas, os locais e os eventos de exemplo descritos aqui são fictícios. Nenhuma associação com nenhuma empresa, organização, produto, nome de domínio, endereço de email, logotipo, pessoa, locais ou eventos reais é intencional nem deve ser inferida.  
+>  <span data-ttu-id="47765-104">As empresas, as organizações, os produtos, os nomes de domínio, os endereços de email, os logotipos, as pessoas, os locais e os eventos de exemplo descritos aqui são fictícios.</span><span class="sxs-lookup"><span data-stu-id="47765-104">The example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious.</span></span> <span data-ttu-id="47765-105">Nenhuma associação com nenhuma empresa, organização, produto, nome de domínio, endereço de email, logotipo, pessoa, locais ou eventos reais é intencional nem deve ser inferida.</span><span class="sxs-lookup"><span data-stu-id="47765-105">No association with any real company, organization, product, domain name, e-mail address, logo, person, places, or events is intended or should be inferred.</span></span>  
   
-## <a name="in-this-section"></a>Nesta seção  
+## <a name="in-this-section"></a><span data-ttu-id="47765-106">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="47765-106">In This Section</span></span>  
   
-|Tópico|Descrição|  
+|<span data-ttu-id="47765-107">Tópico</span><span class="sxs-lookup"><span data-stu-id="47765-107">Topic</span></span>|<span data-ttu-id="47765-108">Descrição</span><span class="sxs-lookup"><span data-stu-id="47765-108">Description</span></span>|  
 |-----------|-----------------|  
-|[Arquivo XML de exemplo: ordem de compra típica (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)|Um documento XML que contém uma ordem de compra típica.|  
-|[Arquivo XML de exemplo: ordem de compra típica em um namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)|Um documento XML em um namespace que contém uma ordem de compra típica.|  
-|[Arquivo XML de exemplo: várias ordens de compra (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)|Um documento XML que contém várias ordens de compra.|  
-|[Arquivo XML de exemplo: várias ordens de compra em um namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)|Um documento XML em um namespace que contém várias ordens de compra.|  
-|[Arquivo XML de exemplo: configuração de teste (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)|Um documento XML que contém alguns pseudodados de configuração de teste.|  
-|[Arquivo XML de exemplo: configuração de teste em um namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md)|Um documento XML em um namespace que contém alguns pseudodados de configuração de teste.|  
-|[Arquivo XML de exemplo: clientes e pedidos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)|Um documento XML que contém clientes e ordens.|  
-|[Arquivo XSD de exemplo: clientes e pedidos](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)|Uma definição de esquema de Xml (XSD) que valida o [arquivo XML de exemplo: clientes e pedidos (LINQ to XML)](http://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92).|  
-|[Arquivo XML de exemplo: clientes e pedidos em um namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)|Um documento XML em um namespace que contém clientes e ordens.|  
-|[Arquivo XML de exemplo: dados numéricos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)|Um documento XML que contém os dados apropriados para somar e agrupar.|  
-|[Arquivo XML de exemplo: dados numéricos em um namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)|Um documento XML em um namespace que contém os dados apropriados para somar e agrupar.|  
-|[Arquivo XML de exemplo: livros (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)|Um documento XML que contém um catálogo de livros.|  
-|[Arquivo XML de exemplo: ordens de compra consolidadas](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)|Apresenta um documento XML que contém as ordens de compras que estão em namespaces diferentes.|  
+|[<span data-ttu-id="47765-109">Arquivo XML de exemplo: ordem de compra típica (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="47765-109">Sample XML File: Typical Purchase Order (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)|<span data-ttu-id="47765-110">Um documento XML que contém uma ordem de compra típica.</span><span class="sxs-lookup"><span data-stu-id="47765-110">An XML document that contains a typical purchase order.</span></span>|  
+|[<span data-ttu-id="47765-111">Arquivo XML de exemplo: ordem de compra típica em um namespace</span><span class="sxs-lookup"><span data-stu-id="47765-111">Sample XML File: Typical Purchase Order in a Namespace</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)|<span data-ttu-id="47765-112">Um documento XML em um namespace que contém uma ordem de compra típica.</span><span class="sxs-lookup"><span data-stu-id="47765-112">An XML document in a namespace that contains a typical purchase order.</span></span>|  
+|[<span data-ttu-id="47765-113">Arquivo XML de exemplo: várias ordens de compra (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="47765-113">Sample XML File: Multiple Purchase Orders (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)|<span data-ttu-id="47765-114">Um documento XML que contém várias ordens de compra.</span><span class="sxs-lookup"><span data-stu-id="47765-114">An XML document that contains multiple purchase orders.</span></span>|  
+|[<span data-ttu-id="47765-115">Arquivo XML de exemplo: várias ordens de compra em um namespace</span><span class="sxs-lookup"><span data-stu-id="47765-115">Sample XML File: Multiple Purchase Orders in a Namespace</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)|<span data-ttu-id="47765-116">Um documento XML em um namespace que contém várias ordens de compra.</span><span class="sxs-lookup"><span data-stu-id="47765-116">An XML document in a namespace that contains multiple purchase orders.</span></span>|  
+|[<span data-ttu-id="47765-117">Arquivo XML de exemplo: configuração de teste (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="47765-117">Sample XML File: Test Configuration (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)|<span data-ttu-id="47765-118">Um documento XML que contém alguns pseudodados de configuração de teste.</span><span class="sxs-lookup"><span data-stu-id="47765-118">An XML document that contains some pseudo test configuration data.</span></span>|  
+|[<span data-ttu-id="47765-119">Arquivo XML de exemplo: configuração de teste em um namespace</span><span class="sxs-lookup"><span data-stu-id="47765-119">Sample XML File: Test Configuration in a Namespace</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md)|<span data-ttu-id="47765-120">Um documento XML em um namespace que contém alguns pseudodados de configuração de teste.</span><span class="sxs-lookup"><span data-stu-id="47765-120">An XML document in a namespace that contains some pseudo test configuration data.</span></span>|  
+|[<span data-ttu-id="47765-121">Arquivo XML de exemplo: clientes e pedidos (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="47765-121">Sample XML File: Customers and Orders (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)|<span data-ttu-id="47765-122">Um documento XML que contém clientes e ordens.</span><span class="sxs-lookup"><span data-stu-id="47765-122">An XML document that contains customers and orders.</span></span>|  
+|[<span data-ttu-id="47765-123">Arquivo XSD de exemplo: clientes e pedidos</span><span class="sxs-lookup"><span data-stu-id="47765-123">Sample XSD File: Customers and Orders</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)|<span data-ttu-id="47765-124">Uma definição de esquema XML (XSD) que valida o [Arquivo XML de exemplo: clientes e pedidos (LINQ to XML)](http://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92).</span><span class="sxs-lookup"><span data-stu-id="47765-124">An Xml Schema Definition (XSD) that validates the [Sample XML File: Customers and Orders (LINQ to XML)](http://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92).</span></span>|  
+|[<span data-ttu-id="47765-125">Arquivo XML de exemplo: clientes e pedidos em um namespace</span><span class="sxs-lookup"><span data-stu-id="47765-125">Sample XML File: Customers and Orders in a Namespace</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)|<span data-ttu-id="47765-126">Um documento XML em um namespace que contém clientes e ordens.</span><span class="sxs-lookup"><span data-stu-id="47765-126">An XML document in a namespace that contains customers and orders.</span></span>|  
+|[<span data-ttu-id="47765-127">Arquivo XML de exemplo: dados numéricos (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="47765-127">Sample XML File: Numerical Data (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)|<span data-ttu-id="47765-128">Um documento XML que contém os dados apropriados para somar e agrupar.</span><span class="sxs-lookup"><span data-stu-id="47765-128">An XML document that contains data suitable for summing and grouping.</span></span>|  
+|[<span data-ttu-id="47765-129">Arquivo XML de exemplo: dados numéricos em um namespace</span><span class="sxs-lookup"><span data-stu-id="47765-129">Sample XML File: Numerical Data in a Namespace</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)|<span data-ttu-id="47765-130">Um documento XML em um namespace que contém os dados apropriados para somar e agrupar.</span><span class="sxs-lookup"><span data-stu-id="47765-130">An XML document in a namespace that contains data suitable for summing and grouping.</span></span>|  
+|[<span data-ttu-id="47765-131">Arquivo XML de exemplo: livros (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="47765-131">Sample XML File: Books (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)|<span data-ttu-id="47765-132">Um documento XML que contém um catálogo de livros.</span><span class="sxs-lookup"><span data-stu-id="47765-132">An XML document that contains a catalog of books.</span></span>|  
+|[<span data-ttu-id="47765-133">Arquivo XML de exemplo: ordens de compra consolidadas</span><span class="sxs-lookup"><span data-stu-id="47765-133">Sample XML File: Consolidated Purchase Orders</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)|<span data-ttu-id="47765-134">Apresenta um documento XML que contém as ordens de compras que estão em namespaces diferentes.</span><span class="sxs-lookup"><span data-stu-id="47765-134">Presents an XML document that contains purchase orders that are in different namespaces.</span></span>|  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de programação (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="47765-135">Consulte também</span><span class="sxs-lookup"><span data-stu-id="47765-135">See Also</span></span>  
+ [<span data-ttu-id="47765-136">Guia de programação (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="47765-136">Programming Guide (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

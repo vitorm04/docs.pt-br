@@ -1,51 +1,37 @@
 ---
-title: "Como: habilitar tabulações entre formas (Visual Studio) | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Como habilitar tabulações entre formas (Visual Studio)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 dev_langs:
-- VB
+- csharp
+- vb
 helpviewer_keywords:
-- Line control, implementing tabbing
-- Shape control, implementing tabbing
+- Line control [Visual Basic], implementing tabbing
+- Shape control [Visual Basic], implementing tabbing
 ms.assetid: 09731b34-3900-4fcb-a9df-ce5280328433
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fb36960a056d7bd1fc1fa5d2fe1da63d83d7eee8
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a39957ffaa67d6abeb6d394ae9826d42ad2230de
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-enable-tabbing-between-shapes-visual-studio"></a>Como habilitar tabulações entre formas (Visual Studio)
-Controles de linha e forma não tem `TabStop` ou `TabIndex` propriedades, mas você ainda pode habilitar tabulações entre eles. No exemplo a seguir, pressionar as teclas CTRL e as teclas TAB será guia entre formas. somente da tecla TAB será guia entre os botões.  
+# <a name="how-to-enable-tabbing-between-shapes-visual-studio"></a><span data-ttu-id="b5803-102">Como habilitar tabulações entre formas (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="b5803-102">How to: Enable Tabbing Between Shapes (Visual Studio)</span></span>
+<span data-ttu-id="b5803-103">Controles de linha e forma não têm `TabStop` ou `TabIndex` propriedades, mas você ainda pode habilitar tabulações entre eles.</span><span class="sxs-lookup"><span data-stu-id="b5803-103">Line and shape controls do not have `TabStop` or `TabIndex` properties, but you can still enable tabbing among them.</span></span> <span data-ttu-id="b5803-104">No exemplo a seguir, pressionando o tecla CTRL e as teclas TAB será guia entre formas. pressionando a tecla de guia será guia entre os botões.</span><span class="sxs-lookup"><span data-stu-id="b5803-104">In the following example, pressing both the CTRL and the TAB keys will tab between shapes; pressing only the TAB key will tab between the buttons.</span></span>  
   
 > [!NOTE]
->  Seu computador pode mostrar diferentes nomes ou locais para alguns dos elementos de interface do usuário do Visual Studio nas instruções a seguir. A edição do Visual Studio que você possui e as configurações que você usa determinam esses elementos. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="b5803-105">Seu computador pode mostrar diferentes nomes ou locais para alguns dos elementos de interface do usuário do Visual Studio nas instruções a seguir.</span><span class="sxs-lookup"><span data-stu-id="b5803-105">Your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions.</span></span> <span data-ttu-id="b5803-106">A edição do Visual Studio que você possui e as configurações que você usa determinam esses elementos.</span><span class="sxs-lookup"><span data-stu-id="b5803-106">The Visual Studio edition that you have and the settings that you use determine these elements.</span></span> <span data-ttu-id="b5803-107">Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="b5803-107">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-## <a name="to-enable-tabbing-among-shapes"></a>Para habilitar tabulações entre formas  
+## <a name="to-enable-tabbing-among-shapes"></a><span data-ttu-id="b5803-108">Para habilitar tabulações entre formas</span><span class="sxs-lookup"><span data-stu-id="b5803-108">To enable tabbing among shapes</span></span>  
   
-1.  Arraste três <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>controles e dois <xref:System.Windows.Forms.Button>controles do **Toolbox** a um formulário.</xref:System.Windows.Forms.Button> </xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>  
+1.  <span data-ttu-id="b5803-109">Arraste três <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> controles e dois <xref:System.Windows.Forms.Button> controla do **caixa de ferramentas** a um formulário.</span><span class="sxs-lookup"><span data-stu-id="b5803-109">Drag three <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> controls and two <xref:System.Windows.Forms.Button> controls from the **Toolbox** to a form.</span></span>  
   
-2.  No **Editor de códigos**, adicione uma `Imports` ou `using` instrução na parte superior do módulo:  
+2.  <span data-ttu-id="b5803-110">No **Editor de códigos**, adicione um `Imports` ou `using` instrução na parte superior do módulo:</span><span class="sxs-lookup"><span data-stu-id="b5803-110">In the **Code Editor**, add an `Imports` or `using` statement at the top of the module:</span></span>  
   
 ```vb  
 Imports Microsoft.VisualBasic.PowerPacks  
@@ -55,17 +41,17 @@ Imports Microsoft.VisualBasic.PowerPacks
 using Microsoft.VisualBasic.PowerPacks;  
 ```  
 
-3.  Adicione o seguinte código em um procedimento de evento:  
+3.  <span data-ttu-id="b5803-111">Adicione o seguinte código em um procedimento de evento:</span><span class="sxs-lookup"><span data-stu-id="b5803-111">Add the following code in an event procedure:</span></span>  
   
-[!code-cs[&#1; VbPowerPacksTabbing](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-enable-tabbing-between-shapes-visual-studio_1.cs)]
-[!code-vb[VbPowerPacksTabbing n º&1;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-enable-tabbing-between-shapes-visual-studio_1.vb)]  
+[!code-csharp[VbPowerPacksTabbing#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-enable-tabbing-between-shapes-visual-studio_1.cs)]
+[!code-vb[VbPowerPacksTabbing#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-enable-tabbing-between-shapes-visual-studio_1.vb)]  
   
-4.  Adicione o seguinte código no `Button1_PreviewKeyDown` procedimento de evento:  
+4.  <span data-ttu-id="b5803-112">Adicione o seguinte código no `Button1_PreviewKeyDown` procedimento de evento:</span><span class="sxs-lookup"><span data-stu-id="b5803-112">Add the following code in the `Button1_PreviewKeyDown` event procedure:</span></span>  
   
-[!code-cs[N º&2; VbPowerPacksTabbing](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-enable-tabbing-between-shapes-visual-studio_2.cs)]
-[!code-vb[VbPowerPacksTabbing n º&2;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-enable-tabbing-between-shapes-visual-studio_2.vb)]  
+[!code-csharp[VbPowerPacksTabbing#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-enable-tabbing-between-shapes-visual-studio_2.cs)]
+[!code-vb[VbPowerPacksTabbing#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-enable-tabbing-between-shapes-visual-studio_2.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- [Como: desenhar formas com os controles OvalShape e RectangleShape](../../../visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)   
- [Como: desenhar linhas com o controle LineShape](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)   
- [Introdução aos controles de linha e forma](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)
+## <a name="see-also"></a><span data-ttu-id="b5803-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b5803-113">See Also</span></span>  
+ [<span data-ttu-id="b5803-114">Como desenhar formas com os controles OvalShape e RectangleShape</span><span class="sxs-lookup"><span data-stu-id="b5803-114">How to: Draw Shapes with the OvalShape and RectangleShape Controls</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)  
+ [<span data-ttu-id="b5803-115">Como desenhar linhas com o controle LineShape</span><span class="sxs-lookup"><span data-stu-id="b5803-115">How to: Draw Lines with the LineShape Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)  
+ [<span data-ttu-id="b5803-116">Introdução aos controles de linha e forma</span><span class="sxs-lookup"><span data-stu-id="b5803-116">Introduction to the Line and Shape Controls</span></span>](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)
