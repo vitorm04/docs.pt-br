@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework-oob
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- HTML
-- VB
-- CSharp
-- C++
 helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1b491d644112137cb24e847439aa133691e5261d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: d1ef95ac84872b2cc39ec3a93abab10c39cd7738
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] (anteriormente conhecido como "ADO.NET Data Services") é um componente do .NET Framework que permite criar serviços que usam o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para expor e consumir dados na Web ou na intranet usando a semântica de [REST (Transferência de Estado Representacional)](http://go.microsoft.com/fwlink/?LinkId=113919). O [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] expõe dados como recursos endereçáveis por URIs. Os dados são acessados e alterados usando os verbos HTTP padrão GET, PUT, POST e DELETE. O [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usa as convenções de relacionamento de entidade do [Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model.md) para expor recursos como conjuntos de entidades relacionadas por associações.  
@@ -140,4 +133,3 @@ O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] (anteriormente con
   
 ## <a name="see-also"></a>Consulte também  
  [Representational State Transfer (REST)](http://go.microsoft.com/fwlink/?LinkId=113919) [REST (Transferência de Estado Representacional)]
-

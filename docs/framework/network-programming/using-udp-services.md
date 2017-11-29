@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - protocols, UDP
 - network resources, UDP
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - sending data, UDP
 - application protocols, UDP
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2986feda76b035e3651712609364b4194378a64c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: c535710175423ebd0d163edc9bce78cfb2e18168
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-udp-services"></a>Usando os serviços UDP
 A classe <xref:System.Net.Sockets.UdpClient> se comunica com os serviços de rede usando o UDP. As propriedades e os métodos da classe <xref:System.Net.Sockets.UdpClient> abstraem os detalhes da criação de um <xref:System.Net.Sockets.Socket> para solicitar e receber dados usando o UDP.  
@@ -187,7 +184,6 @@ class Program
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Net.Sockets.UdpClient>   
- <xref:System.Net.IPAddress>   
+ <xref:System.Net.Sockets.UdpClient>  
+ <xref:System.Net.IPAddress>  
  
-

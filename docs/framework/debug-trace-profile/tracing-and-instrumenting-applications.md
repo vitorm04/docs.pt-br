@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - tracing [.NET Framework]
 - debugging [.NET Framework], instrumentation
@@ -23,19 +20,18 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 899776c29fc0d0c6a43f28c089c51b9695a1ef6f
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 932fef22681aeb2a68d7852884127155757e4099
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Rastreamento e instrumentação de aplicativos
-O rastreamento é uma maneira de monitorar a execução do aplicativo enquanto ele está em execução. É possível adicionar a instrumentação de rastreamento e depuração ao aplicativo do .NET Framework durante seu desenvolvimento e usar essa instrumentação enquanto você estiver desenvolvendo o aplicativo e depois de implantá-lo. É possível usar as classes <xref:System.Diagnostics.Trace?displayProperty=fullName>, <xref:System.Diagnostics.Debug?displayProperty=fullName> e <xref:System.Diagnostics.TraceSource?displayProperty=fullName> para registrar informações sobre erros e a execução do aplicativo em logs, arquivos de texto ou outros dispositivos para análise posterior.  
+O rastreamento é uma maneira de monitorar a execução do aplicativo enquanto ele está em execução. É possível adicionar a instrumentação de rastreamento e depuração ao aplicativo do .NET Framework durante seu desenvolvimento e usar essa instrumentação enquanto você estiver desenvolvendo o aplicativo e depois de implantá-lo. É possível usar as classes <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> para registrar informações sobre erros e a execução do aplicativo em logs, arquivos de texto ou outros dispositivos para análise posterior.  
   
  O termo *instrumentação* refere-se à capacidade de monitorar ou medir o nível de desempenho de um produto e de diagnosticar erros. Em programação, isso significa a capacidade de um aplicativo de incorporar:  
   
@@ -126,7 +122,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  Tenha cuidado especial ao colocar as instruções de rastreamento para uso durante o tempo de execução. Considere quais informações de rastreamento são provavelmente necessárias em um aplicativo implantado, para que todos os prováveis cenários de rastreamento sejam abordados de forma adequada. No entanto, como os aplicativos que usam o rastreamento variam muito, não há diretrizes gerais para o posicionamento estratégico de rastreamento. Para obter mais informações sobre como inserir instruções de rastreamento, consulte [Como adicionar instruções de rastreamento ao código do aplicativo](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md).  
   
 ## <a name="output-from-tracing"></a>Saída de rastreamento  
- A saída de rastreamento é coletada por objetos chamados *ouvintes*. Um ouvinte é um objeto que recebe a saída de rastreamento e grava-a em um dispositivo de saída (geralmente, uma janela, um log ou um arquivo de texto). Quando um ouvinte de rastreamento é criado, normalmente, ele é adicionado à coleção <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=fullName>, permitindo que o ouvinte receba toda a saída de rastreamento.  
+ A saída de rastreamento é coletada por objetos chamados *ouvintes*. Um ouvinte é um objeto que recebe a saída de rastreamento e grava-a em um dispositivo de saída (geralmente, uma janela, um log ou um arquivo de texto). Quando um ouvinte de rastreamento é criado, normalmente, ele é adicionado à coleção <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType>, permitindo que o ouvinte receba toda a saída de rastreamento.  
   
  As informações de rastreamento são sempre gravadas, pelo menos, no destino de saída <xref:System.Diagnostics.Trace> padrão, o <xref:System.Diagnostics.DefaultTraceListener>. Se, por algum motivo, você excluiu o <xref:System.Diagnostics.DefaultTraceListener> sem adicionar outros ouvintes à coleção <xref:System.Diagnostics.Trace.Listeners%2A>, não receberá nenhuma mensagem de rastreamento. Para obter mais informações, consulte [Ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/trace-listeners.md).  
   
@@ -154,15 +150,14 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  Se você não desabilitar o rastreamento e a depuração antes de implantar um aplicativo ASP.NET, o aplicativo poderá revelar informações sobre si mesmo que podem ser exploradas por um programa mal-intencionado. Para obter mais informações, consulte [Como compilar condicionalmente com Trace e Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md), [Compilando e criando](/visualstudio/ide/compiling-and-building-in-visual-studio) e [Como criar, inicializar e configurar opções de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md). A depuração também é configurável por meio do IIS (Serviços de Informações da Internet).  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Diagnostics.Trace>   
- <xref:System.Diagnostics.TraceSource>   
- [Contratos de código](../../../docs/framework/debug-trace-profile/code-contracts.md)   
- [Tipos de projeto do C#, F# e Visual Basic](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)   
- [Como adicionar instruções de rastreamento ao código do aplicativo](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)   
- [Como compilar condicionalmente com Trace e Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)   
- [Como criar, inicializar e configurar opções de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)   
- [Como criar e inicializar origens de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)   
- [Como usar TraceSource e filtros com ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)   
- [Ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/trace-listeners.md)   
+ <xref:System.Diagnostics.Trace>  
+ <xref:System.Diagnostics.TraceSource>  
+ [Contratos de código](../../../docs/framework/debug-trace-profile/code-contracts.md)  
+ [Tipos de projeto C#, F# e Visual Basic](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)  
+ [Como: adicionar instruções de rastreamento ao código do aplicativo](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
+ [Como: Compilar condicionalmente com Trace e Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)  
+ [Como: criar, inicializar e configurar opções de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
+ [Como: criar e inicializar fontes de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
+ [Como: Usar TraceSource e filtros com ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)  
+ [Ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
  [Opções de rastreamento](../../../docs/framework/debug-trace-profile/trace-switches.md)
-

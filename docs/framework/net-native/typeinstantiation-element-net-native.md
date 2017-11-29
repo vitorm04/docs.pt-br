@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b4b0a295e5d788eb50ba39227ac6971ea057ec1e
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 442970c8253147313a38e1a1518219a96ec41945
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lttypeinstantiationgt-element-net-native"></a>Elemento &lt;TypeInstantiation&gt; (.NET Nativo)
 Aplica a política de reflexão de tempo de execução a um tipo genérico construído.  
@@ -54,9 +52,9 @@ Aplica a política de reflexão de tempo de execução a um tipo genérico const
 |`Browse`|Reflexão|Atributo opcional. Controla a consulta para obter informações sobre elementos do programa, mas não permite qualquer acesso de tempo de execução.|  
 |`Dynamic`|Reflexão|Atributo opcional. Controla o acesso a todos os tipos de membro ao tempo de execução, incluindo construtores, métodos, campos, propriedades e eventos, habilitando a programação dinâmica.|  
 |`Serialize`|Serialização|Atributo opcional. Controla o acesso ao tempo de execução para construtores, campos e propriedades para habilitar a serialização e desserialização das instâncias por bibliotecas como o serializador Newtonsoft JSON.|  
-|`DataContractSerializer`|Serialização|Atributo opcional. Controla a política de serialização que usa a classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.|  
-|`DataContractJsonSerializer`|Serialização|Atributo opcional. Controla a política de serialização JSON que usa a classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName>.|  
-|`XmlSerializer`|Serialização|Atributo opcional. Controla a política de serialização XML que usa a classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>.|  
+|`DataContractSerializer`|Serialização|Atributo opcional. Controla a política de serialização que usa a classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.|  
+|`DataContractJsonSerializer`|Serialização|Atributo opcional. Controla a política de serialização JSON que usa a classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType>.|  
+|`XmlSerializer`|Serialização|Atributo opcional. Controla a política de serialização XML que usa a classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.|  
 |`MarshalObject`|Interoperabilidade|Atributo opcional. Política de controles de marshaling de tipos de referência para o Tempo de Execução do Windows e COM.|  
 |`MarshalDelegate`|Interoperabilidade|Atributo opcional. Controla a diretiva de marshaling de tipos delegados como ponteiros de função para código nativo.|  
 |`MarshalStructure`|Interoperabilidade|Atributo opcional. Controla a política de estruturas de marshaling para código nativo.|  
@@ -65,7 +63,7 @@ Aplica a política de reflexão de tempo de execução a um tipo genérico const
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*type_name*|O nome do tipo. Se este elemento `<TypeInstantiation>` for o filho de um elemento [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md), de um elemento [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) ou de outro elemento `<TypeInstantiation>`, o *type_name* poderá incluir o nome do tipo sem seu namespace. Caso contrário, o *type_name* deverá incluir o nome do tipo totalmente qualificado. O nome do tipo não decorado. Por exemplo, para um objeto <xref:System.Collections.Generic.List%601?displayProperty=fullName>, o elemento `<TypeInstantiation>` poderá aparecer da seguinte maneira:<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
+|*type_name*|O nome do tipo. Se este elemento `<TypeInstantiation>` for o filho de um elemento [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md), de um elemento [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) ou de outro elemento `<TypeInstantiation>`, o *type_name* poderá incluir o nome do tipo sem seu namespace. Caso contrário, o *type_name* deverá incluir o nome do tipo totalmente qualificado. O nome do tipo não decorado. Por exemplo, para um objeto <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, o elemento `<TypeInstantiation>` poderá aparecer da seguinte maneira:<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
   
 ## <a name="arguments-attribute"></a>Atributo de argumentos  
   
@@ -113,7 +111,7 @@ Aplica a política de reflexão de tempo de execução a um tipo genérico const
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   
- Após a compilação com a cadeia de ferramentas [!INCLUDE[net_native](../../../includes/net-native-md.md)], o exemplo gera uma exceção [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) na linha que chama o método <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=fullName>. Para eliminar a exceção e fornecer os metadados necessários, adicione o seguinte elemento `<TypeInstantiation>` ao arquivo de diretivas de tempo de execução:  
+ Após a compilação com a cadeia de ferramentas [!INCLUDE[net_native](../../../includes/net-native-md.md)], o exemplo gera uma exceção [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) na linha que chama o método <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType>. Para eliminar a exceção e fornecer os metadados necessários, adicione o seguinte elemento `<TypeInstantiation>` ao arquivo de diretivas de tempo de execução:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -127,7 +125,6 @@ Aplica a política de reflexão de tempo de execução a um tipo genérico const
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)   
+ [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)  
  [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-

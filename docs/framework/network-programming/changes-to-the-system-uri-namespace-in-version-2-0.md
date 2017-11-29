@@ -7,25 +7,19 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7ce81e348b3e5de285a3517d70b8bc477198d3e4
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 906abbcbd3ec00e76d8c183f61828fb5135d9154
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>Alterações no namespace System.Uri na versão 2.0
-Várias alterações foram feitas na classe <xref:System.Uri?displayProperty=fullName>. Essas alterações corrigiram comportamentos incorretos, além de melhorarem a usabilidade e a segurança.  
+Várias alterações foram feitas na classe <xref:System.Uri?displayProperty=nameWithType>. Essas alterações corrigiram comportamentos incorretos, além de melhorarem a usabilidade e a segurança.  
   
 ## <a name="obsolete-and-deprecated-members"></a>Membros obsoletos e preteridos  
  Construtores:  
@@ -85,5 +79,4 @@ Várias alterações foram feitas na classe <xref:System.Uri?displayProperty=ful
 -   A compactação de caminho do URI foi corrigida, de modo que um URI desfeito não possa percorrer o sistema de arquivos acima da raiz.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Uri?displayProperty=fullName>
-
+ <xref:System.Uri?displayProperty=nameWithType>

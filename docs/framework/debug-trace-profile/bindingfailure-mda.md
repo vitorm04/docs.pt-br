@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - binding failure
 - binding, failures
@@ -22,22 +16,21 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), binding failures
 - BindingFailure MDA
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4e78cdcc5bcf69902675fceacc9dac245bfec336
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 89c1ce4b39379aeae80240750cdbcd2e61b6ec11
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="bindingfailure-mda"></a>MDA bindingFailure
 O MDA (assistente para depuração gerenciada) `bindingFailure` é ativado quando um assembly falha ao ser carregado.  
   
 ## <a name="symptoms"></a>Sintomas  
- O código tentou carregar um assembly usando uma referência estática ou um dos métodos de carregador, como <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> ou <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>. O assembly não foi carregado e uma exceção <xref:System.IO.FileNotFoundException> ou <xref:System.IO.FileLoadException> é gerada.  
+ O código tentou carregar um assembly usando uma referência estática ou um dos métodos de carregador, como <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> ou <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>. O assembly não foi carregado e uma exceção <xref:System.IO.FileNotFoundException> ou <xref:System.IO.FileLoadException> é gerada.  
   
 ## <a name="cause"></a>Causa  
  Uma falha de associação ocorre quando o tempo de execução não pode carregar um assembly. Uma falha de associação pode ser o resultado de uma das seguintes situações:  
@@ -115,4 +108,3 @@ namespace ConsoleApplication1
   
 ## <a name="see-also"></a>Consulte também  
  [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

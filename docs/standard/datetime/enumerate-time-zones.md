@@ -1,56 +1,85 @@
 ---
-title: "Como enumerar os fusos horários presentes em um computador"
-description: "Como enumerar os fusos horários presentes em um computador"
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 08/15/2016
-ms.topic: article
+title: "Como: enumerar os fusos horários presentes em um computador"
+ms.custom: 
+ms.date: 04/10/2017
 ms.prod: .net
+ms.reviewer: 
+ms.suite: 
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: c5ae4a6c-1790-4355-b5b1-879aaf956129
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: f30ba2a483ff7e5867417969946c2774175d5e3d
-ms.lasthandoff: 03/02/2017
-
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- time zones [.NET Framework], enumerating
+- enumerating time zones [.NET Framework]
+ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
+caps.latest.revision: "12"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: f77afc8a0f2e6c110f4dc037c12ecc8b06908e60
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Como: enumerar os fusos horários presentes em um computador
 
-# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Como enumerar os fusos horários presentes em um computador
+Trabalhar com êxito com um fuso horário designado requer que informações sobre o fuso horário em questão estejam disponíveis no sistema. Os sistemas operacionais Windows XP e Windows Vista armazenar essas informações no registro. Embora o número total de fusos horários existentes seja grande, o Registro contém informações apenas sobre um subconjunto deles. Além disso, o Registro em si é uma estrutura dinâmica cujo conteúdo está sujeito a alterações deliberadas ou acidentais. Como resultado, um aplicativo nem sempre pode presumir que um determinado fuso horário esteja definido e disponível no sistema. A primeira etapa para muitos aplicativos que usam informações de fuso horário é determinar se os fusos horários necessários estão disponíveis no sistema local ou dar ao usuário uma lista dos fusos horários entre os quais escolher. Isso requer que o aplicativo enumere os fusos horários definidos no sistema local.
 
-Trabalhar com êxito com um fuso horário designado requer que informações sobre o fuso horário em questão estejam disponíveis no sistema. Por exemplo, o sistema operacional Windows armazena essas informações no Registro. Embora o número total de fusos horários existentes seja grande, o Registro contém informações apenas sobre um subconjunto deles. Além disso, o Registro em si é uma estrutura dinâmica cujo conteúdo está sujeito a alterações deliberadas ou acidentais. Como resultado, um aplicativo nem sempre pode presumir que um determinado fuso horário esteja definido e disponível no sistema. A primeira etapa para muitos aplicativos que usam informações de fuso horário é determinar se os fusos horários necessários estão disponíveis no sistema local ou dar ao usuário uma lista dos fusos horários entre os quais escolher. Isso requer que o aplicativo enumere os fusos horários definidos no sistema local. 
+> [!NOTE]
+> Se um aplicativo depende da presença de um determinado fuso horário que não podem ser definida em um sistema local, o aplicativo pode assegurar sua presença ao serializar e desserializar informações sobre o fuso horário. O fuso horário, em seguida, podem ser adicionado a um controle de lista para que o usuário do aplicativo possa selecioná-lo. Para obter detalhes, consulte [como: salvar fusos horários em um recurso inserido](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) e [como: restaurar fusos horários de um recurso incorporado](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
 
-## <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>Para enumerar os fusos horários presentes no sistema local
+### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>Para enumerar os fusos horários presentes no sistema local
 
-1. Chame o método [TimeZoneInfo.GetSystemTimeZones](xref:System.TimeZoneInfo.GetSystemTimeZones). O método retorna uma coleção [ReadOnlyCollection&lt;T&gt;](xref:System.Collections.ObjectModel.ReadOnlyCollection%601) genérica de objetos [TimeZoneInfo](xref:System.TimeZoneInfo). As entradas na coleção são classificadas segundo a propriedade [DisplayName](xref:System.TimeZoneInfo.DisplayName). Por exemplo:
+1. Chame o método <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType>. O método retorna um genérico <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> coleção de <xref:System.TimeZoneInfo> objetos. As entradas na coleção são classificadas por seus <xref:System.TimeZoneInfo.DisplayName%2A> propriedade. Por exemplo:
 
-    ```csharp
-    ReadOnlyCollection<TimeZoneInfo> tzCollection;
-    tzCollection = TimeZoneInfo.GetSystemTimeZones();
-    ```
+   [!code-csharp[System.TimeZone2.Concepts#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#1)]
+   [!code-vb[System.TimeZone2.Concepts#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#1)]
 
-    ```vb
-    Dim tzCollection As ReadOnlyCollection(Of TimeZoneInfo) = TimeZoneInfo.GetSystemTimeZones
-    ```
+2. Enumerar individuais <xref:System.TimeZoneInfo> objetos na coleção usando um `foreach` loop (em c#) ou um `For Each`...`Next` loop (no Visual Basic) e executar qualquer processamento necessário em cada objeto. Por exemplo, o código a seguir enumera o <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> coleção de <xref:System.TimeZoneInfo> objetos retornados na etapa 1 e lista o nome de exibição de cada fuso horário no console.
 
-2. Enumere os objetos [TimeZoneInfo](xref:System.TimeZoneInfo) individuais na coleção usando um loop `foreach` (em C#) ou um loop `For Each…Next` (no Visual Basic) e execute o processamento que for necessário em cada objeto. Por exemplo, o código a seguir enumera a coleção [ReadOnlyCollection&lt;T&gt;](xref:System.Collections.ObjectModel.ReadOnlyCollection%601) dos objetos [TimeZoneInfo](xref:System.TimeZoneInfo) retornados na etapa 1 e lista o nome de exibição de cada fuso horário no console.
+   [!code-csharp[System.TimeZone2.Concepts#12](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#12)]
+   [!code-vb[System.TimeZone2.Concepts#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#12)]
 
-    ```csharp
-    foreach (TimeZoneInfo timeZone in tzCollection)
-    Console.WriteLine("   {0}: {1}", timeZone.Id, timeZone.DisplayName);
-    ```
+### <a name="to-present-the-user-with-a-list-of-time-zones-present-on-the-local-system"></a>Para apresentar ao usuário uma lista de fusos horários presentes no sistema local
 
-    ```vb
-    For Each timeZone As TimeZoneInfo In tzCollection
-        Console.WriteLine("   {0}: {1}", timeZone.Id, timeZone.DisplayName)
-    Next
-    ```
+1. Chame o método <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType>. O método retorna um genérico <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> coleção de <xref:System.TimeZoneInfo> objetos.
+
+2. Atribua a coleção retornada na etapa 1 para o `DataSource` propriedade de um Windows forms ou ASP.NET controle de lista.
+
+3. Recuperar o <xref:System.TimeZoneInfo> objeto que o usuário selecionado.
+
+O exemplo fornece uma ilustração para um aplicativo do Windows.
+
+## <a name="example"></a>Exemplo
+
+O exemplo inicia um aplicativo do Windows que exibe os fusos horários definidos em um sistema em uma caixa de listagem. O exemplo exibe uma caixa de diálogo que contém o valor da <xref:System.TimeZoneInfo.DisplayName%2A> propriedade do objeto de fuso horário selecionado pelo usuário.
+
+[!code-csharp[System.TimeZone2.Concepts#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#2)]
+[!code-vb[System.TimeZone2.Concepts#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#2)]
+
+Mais controles de lista (como o <xref:System.Windows.Forms.ListBox?displayProperty=nameWithType> ou <xref:System.Web.UI.WebControls.BulletedList?displayProperty=nameWithType> controle) permite que você atribua uma coleção de variáveis de objeto para seus `DataSource` propriedade desde que a coleção implemente o <xref:System.Collections.IEnumerable> interface. (Genérica <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> classe faz isso.) Para exibir um objeto individual na coleção, o controle chama esse objeto `ToString` método para extrair a cadeia de caracteres que é usada para representar o objeto. No caso de <xref:System.TimeZoneInfo> objetos, o `ToString` método retorna o <xref:System.TimeZoneInfo> nome para exibição do objeto (o valor de seu <xref:System.TimeZoneInfo.DisplayName%2A> propriedade).
+
+> [!NOTE]
+> Como os controles de lista chamam um objeto `ToString` método, você pode atribuir uma coleção de <xref:System.TimeZoneInfo> objetos para o controle tem o controle exibir um nome significativo para cada objeto e recuperar o <xref:System.TimeZoneInfo> objeto que o usuário selecionado. Isso elimina a necessidade de extrair uma cadeia de caracteres para cada objeto na coleção, atribuir a cadeia de caracteres em uma coleção que por sua vez é atribuída para o controle `DataSource` propriedade, recuperar a cadeia de caracteres que o usuário selecionado e, em seguida, usar essa cadeia de caracteres para extrair o objeto Se ele descreve. 
+
+## <a name="compiling-the-code"></a>Compilando o código
+
+Este exemplo requer:
+
+* Que uma referência a System.Core.dll seja adicionada ao projeto.
+
+* Se os namespaces a seguir sejam importados:
+
+  <xref:System>(no código em c#)
+
+  <xref:System.Collections.ObjectModel>
 
 ## <a name="see-also"></a>Consulte também
 
-[Datas, horas e fusos horários](index.md)
-
-[Encontrando os fusos horários definidos em um sistema local](finding-the-time-zones-on-local-system.md)
-
-
+[Datas, horas e fusos horários](../../../docs/standard/datetime/index.md)
+[como: salvar fusos horários em um recurso incorporado](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)
+[como: restaurar fusos horários de um recurso inserido](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)
