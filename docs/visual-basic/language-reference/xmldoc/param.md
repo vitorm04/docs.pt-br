@@ -1,44 +1,26 @@
 ---
-title: "&lt;parâmetro&gt; (Visual Basic) | Documentos do Microsoft"
+title: '&lt;param&gt; (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - param XML tag
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 41852a7fc41595050940d87f9e741df5cb23361c
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 09c7473cd88a701d8e46251be9b1c268c2dc8805
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="ltparamgt-visual-basic"></a>&lt;parâmetro&gt; (Visual Basic)
+# <a name="ltparamgt-visual-basic"></a>&lt;param&gt; (Visual Basic)
 Define um nome de parâmetro e uma descrição.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -49,26 +31,26 @@ Define um nome de parâmetro e uma descrição.
   
 #### <a name="parameters"></a>Parâmetros  
  `name`  
- O nome de um parâmetro de método. Coloque o nome entre aspas duplas ("").  
+ O nome do parâmetro de um método. Coloque o nome entre aspas duplas (" ").  
   
  `description`  
- Uma descrição para o parâmetro.  
+ Uma descrição do parâmetro.  
   
 ## <a name="remarks"></a>Comentários  
- O `<param>` marca deve ser usada no comentário para uma declaração de método para descrever um dos parâmetros do método.  
+ O `<param>` marca deve ser usada no comentário de uma declaração de método para descrever um dos parâmetros do método.  
   
- O texto para o `<param>` marca aparecerão nos seguintes locais:  
+ O texto para o `<param>` marca será exibida nos seguintes locais:  
   
--   Informações de parâmetro do IntelliSense. Para obter mais informações, veja [Usando o IntelliSense](https://docs.microsoft.com/visualstudio/ide/using-intellisense).  
+-   Informações de parâmetro do IntelliSense. Para obter mais informações, veja [Usando o IntelliSense](/visualstudio/ide/using-intellisense).  
   
--   Pesquisador de objetos. Para obter mais informações, consulte [Exibindo a estrutura do código](https://docs.microsoft.com/visualstudio/ide/viewing-the-structure-of-code).  
+-   Pesquisador de objetos. Para obter mais informações, consulte [Exibindo a estrutura do código](/visualstudio/ide/viewing-the-structure-of-code).  
   
- Compile com [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação para um arquivo.  
+ Compile com [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa o `<param>` marca para descrever o `id` parâmetro.  
+ Este exemplo usa o `<param>` marcas para descrever o `id` parâmetro.  
   
- [!code-vb[VbVbcnXmlDocComments n º&6;](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/param_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/param_1.vb)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

@@ -1,37 +1,29 @@
 ---
-title: "Como: combinar e comparar coleções de cadeia de caracteres (Visual Basic) (LINQ) | Documentos do Microsoft"
+title: "Como: combinar e comparar coleções de cadeia de caracteres (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b037b1aca378dc8a765fdc54746ace27703cee9f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7240f9a8923060634e8824f2516c220b376e2e90
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Como: combinar e comparar coleções de cadeia de caracteres (LINQ) (Visual Basic)
-Este exemplo mostra como mesclar arquivos que contêm linhas de texto e, em seguida, classificar os resultados. Especificamente, mostra como executar uma concatenação simple, uma união e uma interseção de dois conjuntos de linhas de texto.  
+Este exemplo mostra como mesclar arquivos que contêm linhas de texto e, em seguida, classificar os resultados. Especificamente, mostra como executar uma concatenação, uma união e uma interseção simples nos dois conjuntos de linhas de texto.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>Para configurar o projeto e os arquivos de texto  
   
-1.  Copie esses nomes em um arquivo de texto chamado names1.txt e salve-o na pasta do projeto:  
+1.  Copie esses nomes em um arquivo de texto chamado names1.txt e salve-o na sua pasta do projeto:  
   
     ```  
     Bankov, Peter  
@@ -46,7 +38,7 @@ Este exemplo mostra como mesclar arquivos que contêm linhas de texto e, em segu
     Garcia, Debra  
     ```  
   
-2.  Copie esses nomes em um arquivo de texto chamado names2.txt e salve-o na pasta do projeto. Observe que os dois arquivos tem alguns nomes em comum.  
+2.  Copie esses nomes em um arquivo de texto chamado names2.txt e salve-o na sua pasta do projeto. Observe que os dois arquivos tem alguns nomes em comum.  
   
     ```  
     Liu, Jinghao  
@@ -180,8 +172,8 @@ End Class
 ```  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- Criar um projeto que tem como alvo o .NET Framework versão 3.5 ou superior com uma referência a System.Core.dll e uma `Imports` declaração para o namespace System. Linq.  
+ Crie um projeto que tenha como alvo o .NET Framework versão 3.5 ou posterior com uma referência a System.Core.dll e uma instrução `Imports` para o namespace System.Linq.  
   
 ## <a name="see-also"></a>Consulte também  
- [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
+ [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
  [LINQ e diretórios de arquivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

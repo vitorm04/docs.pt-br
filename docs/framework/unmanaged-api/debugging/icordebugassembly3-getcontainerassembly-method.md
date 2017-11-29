@@ -1,0 +1,57 @@
+---
+title: "Método ICorDebugAssembly3::GetContainerAssembly"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+ms.assetid: f5fddeb6-b82e-4ebb-b432-849ce8513c77
+caps.latest.revision: "5"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: f9a32520c2a67c0bc51a3f88e9822db49e4a3974
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="icordebugassembly3getcontainerassembly-method"></a>Método ICorDebugAssembly3::GetContainerAssembly
+Retorna o assembly do contêiner desse objeto `ICorDebugAssembly3`.  
+  
+## <a name="syntax"></a>Sintaxe  
+  
+```  
+HRESULT GetContainerAssembly(  
+    ICorDebugAssembly **ppAssembly  
+);  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ `ppAssembly`  
+ Um ponteiro para o endereço de um objeto ICorDebugAssembly que representa o assembly de contêiner, ou **nulo** se a chamada de método falhar.  
+  
+## <a name="return-value"></a>Valor de retorno  
+ `S_OK`Se a chamada do método for bem-sucedida; Caso contrário, `S_FALSE`, e `ppAssembly` é **nulo**.  
+  
+## <a name="remarks"></a>Comentários  
+ Se esse assembly foi mesclado com outros dentro de um assembly de contêiner único, esse método retorna o assembly do contêiner. Para obter mais informações e terminologia, consulte o [ICorDebugProcess6::EnableVirtualModuleSplitting](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-enablevirtualmodulesplitting-method.md) tópico.  
+  
+> [!NOTE]
+>  Esse método só está disponível com o .NET Native.  
+  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+  
+ **Cabeçalho:** CorDebug.idl, CorDebug.h  
+  
+ **Biblioteca:** CorGuids.lib  
+  
+ **Versões do .NET framework:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+  
+## <a name="see-also"></a>Consulte também  
+ [Interface ICorDebugAssembly3](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-interface.md)  
+ [Interfaces de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

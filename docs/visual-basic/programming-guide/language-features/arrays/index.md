@@ -1,45 +1,25 @@
 ---
 title: Matrizes no Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.Array
-dev_langs:
-- VB
+f1_keywords: vb.Array
 helpviewer_keywords:
 - arrays [Visual Basic]
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8ebad59a07d07d61ea77e41e4044b3febc0ef250
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 04deeccd19fd4edb3f2c88310d660eedf5c707d5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="arrays-in-visual-basic"></a>Matrizes no Visual Basic
 Uma matriz é um conjunto de valores que são logicamente relacionados uns aos outros, como o número de alunos em cada nível em uma escola primária.  Se você estiver procurando ajuda sobre matrizes no VBA (Visual Basic for Applications), consulte a [referência de linguagem](https://msdn.microsoft.com/library/office/gg264383\(v=office.14\).aspx).  
@@ -257,11 +237,11 @@ Dim prices(3, 4, 5) As Long
 ##  <a name="BKMK_ArrayTypes"></a> Tipos de matriz e outros tipos  
  Cada matriz tem um tipo de dados, que difere do tipo de dados de seus elementos. Não há nenhum tipo de dados único para todas as matrizes. Em vez disso, o tipo de dados de uma matriz é determinado pelo número de dimensões, ou *classificação*, da matriz e o tipo de dados dos elementos na matriz. Duas variáveis de matriz são consideradas tendo os mesmos dados somente quando elas têm a mesma classificação e quando seus elementos têm os mesmo tipo de dados. Os comprimentos das dimensões de uma matriz não influenciam o tipo de dados de matriz.  
   
- Cada matriz herda da classe <xref:System.Array?displayProperty=fullName> e você pode declarar uma variável para ser do tipo `Array`, mas não pode criar uma matriz do tipo `Array`. Além disso, a [instrução ReDim](../../../../visual-basic/language-reference/statements/redim-statement.md) não pode operar em uma variável declarada como tipo `Array`. Por esses motivos, e para a segurança de tipo, é aconselhável declarar cada matriz como um tipo específico, como `Integer` no exemplo anterior.  
+ Cada matriz herda da classe <xref:System.Array?displayProperty=nameWithType> e você pode declarar uma variável para ser do tipo `Array`, mas não pode criar uma matriz do tipo `Array`. Além disso, a [instrução ReDim](../../../../visual-basic/language-reference/statements/redim-statement.md) não pode operar em uma variável declarada como tipo `Array`. Por esses motivos, e para a segurança de tipo, é aconselhável declarar cada matriz como um tipo específico, como `Integer` no exemplo anterior.  
   
  Você pode descobrir o tipo de dados de uma matriz ou seus elementos de várias maneiras.  
   
--   Você pode chamar o método <xref:System.Object.GetType%2A?displayProperty=fullName> na variável para receber um objeto <xref:System.Type> para o tipo de tempo de execução da variável. O objeto <xref:System.Type> mantém informações abrangentes em suas propriedades e métodos.  
+-   Você pode chamar o método <xref:System.Object.GetType%2A?displayProperty=nameWithType> na variável para receber um objeto <xref:System.Type> para o tipo de tempo de execução da variável. O objeto <xref:System.Type> mantém informações abrangentes em suas propriedades e métodos.  
   
 -   Você pode passar a variável para o a função <xref:Microsoft.VisualBasic.Information.TypeName%2A> para receber um `String` que contém o nome do tipo de tempo de execução.  
   
@@ -278,12 +258,12 @@ Dim prices(3, 4, 5) As Long
   
  Para algumas coleções, você pode atribuir uma chave para qualquer objeto que colocar na coleção para que você possa recuperar rapidamente o objeto, usando a chave.  
   
- Se a coleção contiver elementos de apenas um tipo de dados, você poderá usar uma das classes no namespace <xref:System.Collections.Generic?displayProperty=fullName>. Uma coleção genérica impõe segurança de tipos para que nenhum outro tipo de dados possa ser adicionado a ela. Ao recuperar um elemento de uma coleção genérica, você não precisa determinar seu tipo de dados ou convertê-lo.  
+ Se a coleção contiver elementos de apenas um tipo de dados, você poderá usar uma das classes no namespace <xref:System.Collections.Generic?displayProperty=nameWithType>. Uma coleção genérica impõe segurança de tipos para que nenhum outro tipo de dados possa ser adicionado a ela. Ao recuperar um elemento de uma coleção genérica, você não precisa determinar seu tipo de dados ou convertê-lo.  
   
  Para obter mais informações sobre coleções, consulte [Coleções](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b).  
   
 ### <a name="example"></a>Exemplo  
- O exemplo a seguir usa a classe genérica [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Collections.Generic.List%601?displayProperty=fullName> para criar uma coleção de lista de objetos `Customer`.  
+ O exemplo a seguir usa a classe genérica [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> para criar uma coleção de lista de objetos `Customer`.  
   
  [!code-vb[VbVbalrArrays#1](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#1)]  
   
@@ -300,7 +280,6 @@ Dim prices(3, 4, 5) As Long
 |[Solução de problemas de matrizes](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)|Aborda alguns problemas comuns que surgem ao trabalhar com matrizes.|  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Array>   
- [Instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)   
+ <xref:System.Array>  
+ [Instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)  
  [Instrução ReDim](../../../../visual-basic/language-reference/statements/redim-statement.md)
-

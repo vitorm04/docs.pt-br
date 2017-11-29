@@ -8,21 +8,18 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6a0c5a2c3a159e4d10da03a584b29e4b77720534
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f277321ab94874970cb392dfe7f84a52a1cc2c40
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-access-http-specific-properties"></a>Como acessar propriedades específicas de HTTP
 Esta amostra explica como desligar o comportamento **Keep-alive** do HTTP e obter o número de versão do protocolo do servidor Web.  
@@ -62,7 +59,6 @@ HttpWResp.Close();
 -   Referências ao namespace **System.Net**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Acessando a Internet por meio de um proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)   
- [Usando protocolos de aplicativo](../../../docs/framework/network-programming/using-application-protocols.md)   
+ [Acessando a Internet por meio de um proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
+ [Usando protocolos de aplicativo](../../../docs/framework/network-programming/using-application-protocols.md)  
  [HTTP](../../../docs/framework/network-programming/http.md)
-

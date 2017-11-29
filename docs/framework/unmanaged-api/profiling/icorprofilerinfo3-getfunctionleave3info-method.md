@@ -1,0 +1,73 @@
+---
+title: "Método ICorProfilerInfo3::GetFunctionLeave3Info"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: ICorProfilerInfo3.GetFunctionLeave3Info Method
+api_location: Mscorwks.dll
+api_type: COM
+f1_keywords: ICorProfilerInfo3::GetFunctionLeave3Info
+helpviewer_keywords:
+- GetFunctionLeave3Info method [.NET Framework profiling]
+- ICorProfilerInfo3::GetFunctionLeave3Info method [.NET Framework profiling]
+ms.assetid: df7083d2-fd43-44c7-9ce5-912c25cef0ff
+topic_type: apiref
+caps.latest.revision: "11"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 04f48562e1ddc07ad1ae166ec44ac7de8afd4312
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="icorprofilerinfo3getfunctionleave3info-method"></a>Método ICorProfilerInfo3::GetFunctionLeave3Info
+Fornece o quadro de pilhas e o valor de retorno da função que está sendo relatado para o criador de perfil pelo [função FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) função. Esse método pode ser chamado somente durante o `FunctionLeave3WithInfo` retorno de chamada.  
+  
+## <a name="syntax"></a>Sintaxe  
+  
+```  
+HRESULT GetFunctionLeave3Info(  
+            [in]  FunctionID functionId,  
+            [in]  COR_PRF_ELT_INFO eltInfo,  
+            [out] COR_PRF_FRAME_INFO *pFrameInfo,  
+            [out] COR_PRF_FUNCTION_ARGUMENT_RANGE *pRetvalRange);  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ `functionId`  
+ [in] O `FunctionID` da função que está retornando.  
+  
+ `eltInfo`  
+ [in] Um identificador opaco que representa informações sobre um determinado registro de ativação. O criador de perfil deve fornecer as mesmas `eltInfo` que foi fornecido para o criador de perfil, o [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) função.  
+  
+ `pFrameInfo`  
+ [out] Um identificador opaco que representa informações de genéricos sobre um determinado registro de ativação. Esse identificador é válido somente durante o `FunctionLeave3WithInfo` que o criador de perfil de chamada de retorno de chamada a `GetFunctionLeave3Info` método.  
+  
+ `pRetvalRange`  
+ [out] Um ponteiro para um [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) estrutura que contém o valor retornado da função. Para acessar informações do valor de retorno, o `COR_PRF_ENABLE_FUNCTION_RETVAL` sinalizador deve ser definido. O criador de perfil pode usar o [: SetEventMask método](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) para definir os sinalizadores de evento.  
+  
+## <a name="remarks"></a>Comentários  
+  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+  
+ **Cabeçalho:** Corprof. idl, CorProf.h  
+  
+ **Biblioteca:** CorGuids.lib  
+  
+ **Versões do .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+  
+## <a name="see-also"></a>Consulte também  
+ [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)  
+ [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)  
+ [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)  
+ [Interface ICorProfilerInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
+ [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [Criação de perfil](../../../../docs/framework/unmanaged-api/profiling/index.md)

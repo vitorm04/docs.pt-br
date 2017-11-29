@@ -1,36 +1,20 @@
 ---
-title: "Nenhum método &quot;&lt;methodname&gt;&quot;pode aceitar um argumento do tipo&quot;&lt;typename&gt;&quot;para o parâmetro&quot;&lt;parametername&gt;&quot; | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Nenhum método &#39; &lt;methodname&gt;&#39; pode aceitar um argumento do tipo &#39;&lt; TypeName&gt;&#39; para o parâmetro &#39;&lt; nome do parâmetro&gt;&#39;"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 ms.assetid: 175c01dc-279c-4996-8501-d19a6671fdeb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 235038defbd847b731d93997a6abf61575f1751e
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: c2f1b6ddfaa307784421c3c2ea940307ee4451c5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="no-method-39ltmethodnamegt39-can-accept-an-argument-of-type-39lttypenamegt39-for-parameter-39ltparameternamegt39"></a>Nenhum método '&lt;methodname&gt;'pode aceitar um argumento do tipo'&lt;typename&gt;'para o parâmetro'&lt;parametername&gt;'
+# <a name="no-method-39ltmethodnamegt39-can-accept-an-argument-of-type-39lttypenamegt39-for-parameter-39ltparameternamegt39"></a>Nenhum método &#39; &lt;methodname&gt;&#39; pode aceitar um argumento do tipo &#39;&lt; TypeName&gt;&#39; para o parâmetro &#39;&lt; nome do parâmetro&gt;&#39;
 Uma chamada de método contém um argumento de um tipo que não é válido.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  

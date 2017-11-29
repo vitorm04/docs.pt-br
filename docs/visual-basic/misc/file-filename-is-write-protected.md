@@ -1,36 +1,20 @@
 ---
-title: "Arquivo &quot;&lt;filename&gt;&quot; é protegido contra gravação | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Arquivo &#39; &lt;filename&gt;&#39; é protegido contra gravação"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 ms.assetid: 6e5105b1-a634-4cde-a753-5bf1ae85a55a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 64864a67ff56b9d55040dff5a9e4e3f713cb1dd8
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7de769a6ff255cf15c15bce95b4133b21f716699
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="file-39ltfilenamegt39-is-write-protected"></a>Arquivo '&lt;filename&gt;' é protegido contra gravação
+# <a name="file-39ltfilenamegt39-is-write-protected"></a>Arquivo &#39; &lt;filename&gt;&#39; é protegido contra gravação
 O arquivo que você está tentando gravar está protegido contra gravação e, portanto, não pode ser alterado.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  

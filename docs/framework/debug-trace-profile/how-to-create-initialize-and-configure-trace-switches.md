@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - trace switches, configuring
 - tracing [.NET Framework], trace switches
@@ -21,29 +18,28 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6b5ba232e3c84f7bfa089822d4a4f792b179bf32
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f5fa8a0fbe6dc08811162ba9b1d4198af9256fc4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Como: criar, inicializar e configurar opções de rastreamento
 As opções de rastreamento permitem habilitar, desabilitar e filtrar a saída de rastreamento.  
   
 <a name="create"></a>   
 ## <a name="creating-and-initializing-a-trace-switch"></a>Criando e inicializando uma opção de rastreamento  
- Para usar opções de rastreamento, primeiro você deve criá-las e colocá-las no código. Há duas classes predefinidas com base nas quais você pode criar objetos de opção: a classe <xref:System.Diagnostics.BooleanSwitch?displayProperty=fullName> e a classe <xref:System.Diagnostics.TraceSwitch?displayProperty=fullName>. Use <xref:System.Diagnostics.BooleanSwitch> se você se importar apenas com o fato de uma mensagem de rastreamento ser exibida ou não; use <xref:System.Diagnostics.TraceSwitch> se desejar discriminar entre níveis de rastreamento. Se você usar uma <xref:System.Diagnostics.TraceSwitch>, poderá definir suas próprias mensagens de depuração e associá-las a diferentes níveis de rastreamento. Use ambos os tipos de opções com o rastreamento ou a depuração. Por padrão, uma <xref:System.Diagnostics.BooleanSwitch> está desabilitada e uma <xref:System.Diagnostics.TraceSwitch> está definida como o nível <xref:System.Diagnostics.TraceLevel.Off?displayProperty=fullName>. As opções de rastreamento podem ser criadas e colocadas em qualquer parte do código que você pode usá-las.  
+ Para usar opções de rastreamento, primeiro você deve criá-las e colocá-las no código. Há duas classes predefinidas com base nas quais você pode criar objetos de opção: a classe <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> e a classe <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>. Use <xref:System.Diagnostics.BooleanSwitch> se você se importar apenas com o fato de uma mensagem de rastreamento ser exibida ou não; use <xref:System.Diagnostics.TraceSwitch> se desejar discriminar entre níveis de rastreamento. Se você usar uma <xref:System.Diagnostics.TraceSwitch>, poderá definir suas próprias mensagens de depuração e associá-las a diferentes níveis de rastreamento. Use ambos os tipos de opções com o rastreamento ou a depuração. Por padrão, uma <xref:System.Diagnostics.BooleanSwitch> está desabilitada e uma <xref:System.Diagnostics.TraceSwitch> está definida como o nível <xref:System.Diagnostics.TraceLevel.Off?displayProperty=nameWithType>. As opções de rastreamento podem ser criadas e colocadas em qualquer parte do código que você pode usá-las.  
   
  Embora seja possível definir níveis de rastreamento e outras opções de configuração no código, recomendamos o uso do arquivo de configuração para gerenciar o estado das opções. Isso ocorre porque o gerenciamento da configuração das opções no sistema de configuração proporciona maior flexibilidade – você pode ativar e desativar várias opções e alterar os níveis sem recompilar o aplicativo.  
   
 #### <a name="to-create-and-initialize-a-trace-switch"></a>Para criar e inicializar uma opção de rastreamento  
   
-1.  Defina uma opção como o tipo <xref:System.Diagnostics.BooleanSwitch?displayProperty=fullName> ou o tipo <xref:System.Diagnostics.TraceSwitch?displayProperty=fullName> e defina o nome e a descrição da opção.  
+1.  Defina uma opção como o tipo <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> ou o tipo <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> e defina o nome e a descrição da opção.  
   
 2.  Configure a opção de rastreamento. Para obter mais informações, consulte [Configurando opções de rastreamento](#configure).  
   
@@ -72,7 +68,7 @@ As opções de rastreamento permitem habilitar, desabilitar e filtrar a saída d
   
  Em um aplicativo implantado, habilite o código de rastreamento reconfigurando objetos de opção quando o aplicativo não estiver em execução. Normalmente, isso envolve a ativação e desativação dos objetos de opção ou a alteração dos níveis de rastreamento e, em seguida, a reinicialização do aplicativo.  
   
- Quando você cria uma instância com base em uma opção, você também inicializa-a com a especificação de dois argumentos: um argumento *displayName* e um argumento *description*. O argumento *displayName* do construtor define a propriedade <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=fullName> da instância da classe <xref:System.Diagnostics.Switch>. O *displayName* é o nome usado para configurar a opção no arquivo .config e o argumento *description* deve retornar uma breve descrição da opção e quais mensagens são controladas por ela.  
+ Quando você cria uma instância com base em uma opção, você também inicializa-a com a especificação de dois argumentos: um argumento *displayName* e um argumento *description*. O argumento *displayName* do construtor define a propriedade <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=nameWithType> da instância da classe <xref:System.Diagnostics.Switch>. O *displayName* é o nome usado para configurar a opção no arquivo .config e o argumento *description* deve retornar uma breve descrição da opção e quais mensagens são controladas por ela.  
   
  Além de especificar o nome de uma opção a ser configurada, você também deve especificar um valor para a opção. Esse valor é um Inteiro. Para <xref:System.Diagnostics.BooleanSwitch>, um valor igual a 0 corresponde a **Off** e qualquer valor diferente de zero corresponde a **On**. Para <xref:System.Diagnostics.TraceSwitch>, 0, 1, 2, 3 e 4 correspondem a **Off**, **Error**, **Warning**, **Info** e **Verbose**, respectivamente. Qualquer número maior que 4 é tratado como **Verbose** e qualquer número menor que zero é tratado como **Off**.  
   
@@ -138,8 +134,7 @@ As opções de rastreamento permitem habilitar, desabilitar e filtrar a saída d
     ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Rastreando e instrumentando aplicativos](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)   
- [Como adicionar instruções de rastreamento ao código do aplicativo](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)   
- [Opções de rastreamento](../../../docs/framework/debug-trace-profile/trace-switches.md)   
+ [Rastreando e instrumentando aplicativos](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
+ [Como: adicionar instruções de rastreamento ao código do aplicativo](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
+ [Opções de rastreamento](../../../docs/framework/debug-trace-profile/trace-switches.md)  
  [Esquema de configurações de rastreamento e depuração](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-

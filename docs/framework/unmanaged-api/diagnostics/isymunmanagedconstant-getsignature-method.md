@@ -1,0 +1,62 @@
+---
+title: "Método ISymUnmanagedConstant::GetSignature"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: ISymUnmanagedConstant.GetSignature
+api_location: diasymreader.dll
+api_type: COM
+f1_keywords: ISymUnmanagedConstant::GetSignature
+helpviewer_keywords:
+- GetSignature method, ISymUnmanagedConstant interface [.NET Framework debugging]
+- ISymUnmanagedConstant::GetSignature method [.NET Framework debugging]
+ms.assetid: 3eb41151-a228-43e3-ba8f-e6dd3ceb8542
+topic_type: apiref
+caps.latest.revision: "10"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 314d9115fdba7d57538e5b24c56863944db517fe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="isymunmanagedconstantgetsignature-method"></a>Método ISymUnmanagedConstant::GetSignature
+Obtém a assinatura da constante.  
+  
+## <a name="syntax"></a>Sintaxe  
+  
+```  
+HRESULT GetSignature(  
+    [in]  ULONG32  cSig,  
+    [out] ULONG32  *pcSig,  
+    [out, size_is(cSig),  
+        length_is(*pcSig)] BYTE sig[]);  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ `cSig`  
+ [in] O comprimento do buffer que o `pcSig` parâmetro aponta para.  
+  
+ `pcSig`  
+ [out] Um ponteiro para um `ULONG32` que recebe o tamanho, em caracteres, do buffer necessário para conter a assinatura.  
+  
+ `sig`  
+ [out] O buffer que armazena a assinatura.  
+  
+## <a name="return-value"></a>Valor de retorno  
+ S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
+  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** CorSym.idl, CorSym.h  
+  
+## <a name="see-also"></a>Consulte também  
+ [Interface ISymUnmanagedConstant](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)  
+ [Método GetName](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)  
+ [Método GetValue](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)

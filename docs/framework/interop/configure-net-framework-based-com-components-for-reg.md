@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - components [.NET Framework], manifest
 - application manifests [.NET Framework]
@@ -21,16 +15,15 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cb323bfdff40aafa65c050d4d42f66047d63f650
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: d373d6abc82e482a3b1df873295573f0e34eeda2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Como configurar componentes do COM baseados no .NET Framework para ativação sem registro
 A ativação sem registro de componentes baseados no .NET Framework é apenas um pouco mais complicada do que para componentes COM. A instalação exige dois manifestos:  
@@ -52,7 +45,7 @@ A ativação sem registro de componentes baseados no .NET Framework é apenas um
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-     Para obter informações sobre os elementos do manifesto e seus atributos, pesquise “Referência de manifestos do aplicativo” na Biblioteca MSDN.  
+     Para obter informações sobre seus atributos e elementos de manifesto, consulte [manifestos de aplicativo](https://msdn.microsoft.com/library/windows/desktop/aa374191.aspx).  
   
 3.  Identifique o proprietário do manifesto. No exemplo a seguir, `myComApp` versão 1 possui o arquivo de manifesto.  
   
@@ -92,7 +85,7 @@ A ativação sem registro de componentes baseados no .NET Framework é apenas um
   
 5.  Salve e nomeie o arquivo de manifesto. O nome de um manifesto do aplicativo é o nome do executável do assembly seguido pela extensão .manifest. Por exemplo, o nome do arquivo de manifesto do aplicativo para myComApp.exe é myComApp.exe.manifest.  
   
- Você pode instalar um manifesto do aplicativo no mesmo diretório do aplicativo COM. Como alternativa, adicione-o como um recurso ao arquivo .exe do aplicativo. Para obter mais informações, pesquise “Assemblies lado a lado” na Biblioteca MSDN.  
+ Você pode instalar um manifesto do aplicativo no mesmo diretório do aplicativo COM. Como alternativa, adicione-o como um recurso ao arquivo .exe do aplicativo. Para obter informações adicionais, para obter mais informações, consulte [sobre Assemblies lado a lado](https://msdn.microsoft.com/library/windows/desktop/ff951640.aspx).  
   
 #### <a name="to-create-a-component-manifest"></a>Para criar um manifesto do componente  
   
@@ -188,8 +181,7 @@ A ativação sem registro de componentes baseados no .NET Framework é apenas um
      Novamente, `myresource.res` é o nome do arquivo de recurso que contém o recurso inserido.  
   
 ## <a name="see-also"></a>Consulte também  
- [Interoperabilidade COM sem registro](../../../docs/framework/interop/registration-free-com-interop.md)   
- [Requisitos da Interoperabilidade COM Sem Registro](http://msdn.microsoft.com/en-us/0c43bc57-eecf-4e6c-8114-490141cce4da)   
- [Configurando componentes COM para ativação sem registro](http://msdn.microsoft.com/en-us/bfe9b02f-d964-4784-960e-a1f94692fbfe)   
+ [Interoperabilidade COM sem registro](../../../docs/framework/interop/registration-free-com-interop.md)  
+ [Requisitos para interoperabilidade COM sem registro](http://msdn.microsoft.com/en-us/0c43bc57-eecf-4e6c-8114-490141cce4da)  
+ [Configurando componentes COM para ativação sem registro](http://msdn.microsoft.com/en-us/bfe9b02f-d964-4784-960e-a1f94692fbfe)  
  [Ativação sem registro de componentes baseados no .NET: um passo a passo](http://go.microsoft.com/fwlink/?LinkId=158812)
-

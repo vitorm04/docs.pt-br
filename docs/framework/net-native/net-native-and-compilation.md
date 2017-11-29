@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 39c1d68962ab1108f1a7c0aa976cb62558609d29
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 5a15ac314590b9b7e240e759b9482eafb7071cd3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-native-and-compilation"></a>Compilação e .NET nativo
 Aplicativos do Windows 8.1 e aplicativos de Área de Trabalho do Windows direcionados ao .NET Framework são escritos em uma linguagem de programação específica e compilados em IL (linguagem intermediária). Em tempo de execução, um compilador JIT (Just-in-Time) é responsável pela compilação de IL em código nativo para o computador local antes de um método ser executado pela primeira vez. Por outro lado, a cadeia de ferramentas do .NET Native converte código-fonte em código nativo em tempo de compilação. Este tópico compara .NET Native com outras tecnologias de compilação disponíveis para aplicativos do .NET Framework e também fornece uma visão prática de como o .NET Native produz código nativo que pode lhe ajudar a entender por que as exceções que ocorrem no código compilado com o .NET Native não ocorrem no código com compilação JIT.  
@@ -51,7 +49,7 @@ Aplicativos do Windows 8.1 e aplicativos de Área de Trabalho do Windows direcio
   
  Durante a conversão de um aplicativo de IL para código nativo, a cadeia de ferramentas do .NET Native executa operações como as seguintes:  
   
--   Para determinados caminhos de código, ele substitui o código que depende de reflexão e metadados pelo código nativo estático. Por exemplo, se um tipo de valor não substitui o método <xref:System.ValueType.Equals%2A?displayProperty=fullName>, o teste padrão de igualdade usa reflexão para recuperar objetos <xref:System.Reflection.FieldInfo> que representam os campos de tipo de valor e, em seguida, compara os valores de campo de duas instâncias. Ao compilar para código nativo, a cadeia de ferramentas do .NET Native substitui o código de reflexão e metadados por uma comparação estática dos valores de campo.  
+-   Para determinados caminhos de código, ele substitui o código que depende de reflexão e metadados pelo código nativo estático. Por exemplo, se um tipo de valor não substitui o método <xref:System.ValueType.Equals%2A?displayProperty=nameWithType>, o teste padrão de igualdade usa reflexão para recuperar objetos <xref:System.Reflection.FieldInfo> que representam os campos de tipo de valor e, em seguida, compara os valores de campo de duas instâncias. Ao compilar para código nativo, a cadeia de ferramentas do .NET Native substitui o código de reflexão e metadados por uma comparação estática dos valores de campo.  
   
 -   Sempre que possível, ele tenta eliminar todos os metadados.  
   
@@ -111,8 +109,7 @@ Aplicativos do Windows 8.1 e aplicativos de Área de Trabalho do Windows direcio
 -   As imagens NGEN tendem a ser frágeis. Por exemplo, um patch ou alteração para uma dependência normalmente requer que os assemblies que a usam também tenham imagem gerada novamente por NGEN. Isso é particularmente verdadeiro em assemblies do sistema na biblioteca de classes .NET Framework. Por outro lado, o .NET Native permite que aplicativos sejam atendidos independentemente uns dos outros.  
   
 ## <a name="see-also"></a>Consulte também  
- [Metadados e componentes autodescritivos](../../../docs/standard/metadata-and-self-describing-components.md)   
- [Por dentro do .NET Native (vídeo do Channel 9)](http://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)   
- [Reflexão e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)   
+ [Metadados e componentes autodescritivos](../../../docs/standard/metadata-and-self-describing-components.md)  
+ [Inside .NET nativo (vídeo do Channel 9)](http://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)  
+ [Reflexão e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
  [Solução de problemas gerais do .NET Native](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
-

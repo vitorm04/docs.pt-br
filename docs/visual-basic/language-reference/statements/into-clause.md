@@ -1,39 +1,21 @@
 ---
-title: "Cláusula INTO (Visual Basic) | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Cláusula Into (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Into keyword
+helpviewer_keywords: Into keyword [Visual Basic]
 ms.assetid: e1534550-8f4b-4978-b043-fad7b8fd79ac
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ff486602320664385243ec2c390338a45e047f4f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 73e120acbbc29aa3c3086c478c9842848e5db33b
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="into-clause-visual-basic"></a>Cláusula Into (Visual Basic)
 Identifica as funções de agregação ou agrupamentos para aplicar a uma coleção.  

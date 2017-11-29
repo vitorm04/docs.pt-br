@@ -1,40 +1,32 @@
 ---
-title: "Informações do chamador (Visual Basic) | Documentos do Microsoft"
+title: "Informações de chamador (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9a4b63fb424ad6aef9d1bd56f43ccccd79f0b9b3
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: dfd9339e990b2a2a7c57acde3c91295a7154fdc0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="caller-information-visual-basic"></a>Informações do chamador (Visual Basic)
+# <a name="caller-information-visual-basic"></a>Informações de chamador (Visual Basic)
 Ao usar atributos de informações do chamador, você pode obter informações sobre o chamador de um método. Você pode obter o caminho do arquivo do código-fonte, o número da linha no código-fonte e o nome do membro do chamador. Essas informações são úteis para fins de rastreamento, depuração e criação de ferramentas de diagnóstico.  
   
- Para obter essas informações, você deve usar os atributos que são aplicadas aos parâmetros opcionais, cada qual com um valor padrão. A tabela a seguir lista os atributos de informações do chamador que são definidos na <xref:System.Runtime.CompilerServices?displayProperty=fullName>namespace:</xref:System.Runtime.CompilerServices?displayProperty=fullName>  
+ Para obter essas informações, você deve usar os atributos que são aplicadas aos parâmetros opcionais, cada qual com um valor padrão. A tabela a seguir lista os atributos de informações do chamador que são definidos no namespace de <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:  
   
 |Atributo|Descrição|Tipo|  
 |---|---|---|  
-|<xref:System.Runtime.CompilerServices.CallerFilePathAttribute></xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|O caminho completo do arquivo de origem que contém o chamador. Esse é o caminho do arquivo no momento da compilação.|`String`|  
-|<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute></xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Número da linha no arquivo fonte no qual o método é chamado.|`Integer`|  
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute></xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Nome do método ou da propriedade do chamador. Consulte [nomes de membro](#MEMBERNAMES) mais adiante neste tópico.|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|O caminho completo do arquivo de origem que contém o chamador. Esse é o caminho do arquivo no momento da compilação.|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Número da linha no arquivo fonte no qual o método é chamado.|`Integer`|  
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Nome do método ou da propriedade do chamador. Consulte [Nomes dos membros](#MEMBERNAMES) mais adiante neste tópico.|`String`|  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como usar os atributos de informações do chamador. Em cada chamada para o método `TraceMessage`, as informações do chamador são substituídas como argumentos para os parâmetros opcionais.  
@@ -67,16 +59,16 @@ End Sub
   
  Os atributos de informações do chamador não tornam um parâmetro opcional. Em vez disso, eles afetam o valor padrão que é passado quando o argumento é omitido.  
   
- Os valores de informações do chamador são emitidos como literais em linguagem intermediária (IL) em tempo de compilação. Ao contrário dos resultados do <xref:System.Exception.StackTrace%2A>propriedade para exceções, os resultados não são afetados por ofuscamento.</xref:System.Exception.StackTrace%2A>  
+ Os valores de informações do chamador são emitidos como literais em linguagem intermediária (IL) em tempo de compilação. Ao contrário dos resultados da propriedade <xref:System.Exception.StackTrace%2A> para exceções, os resultados não são afetados por ofuscamento.  
   
  Você pode fornecer explicitamente os argumentos opcionais para controlar as informações do chamador ou ocultá-las.  
   
-###  <a name="MEMBERNAMES"></a>Nomes de membro  
- Você pode usar o atributo `CallerMemberName` para evitar especificar o nome do membro como um argumento `String` ao método chamado. Usando essa técnica, você pode evitar o problema que **refatoração Renomear** não altera o `String` valores. Esse benefício é especialmente útil para as seguintes tarefas:  
+###  <a name="MEMBERNAMES"></a> Nomes dos membros  
+ Você pode usar o atributo `CallerMemberName` para evitar especificar o nome do membro como um argumento `String` ao método chamado. Ao usar essa técnica, você evita o problema de que a **Refatoração de Renomeação** não altera os valores de `String`. Esse benefício é especialmente útil para as seguintes tarefas:  
   
 -   Usar rotinas de rastreamento e diagnóstico.  
   
--   Implementando o <xref:System.ComponentModel.INotifyPropertyChanged>ao associar dados da interface.</xref:System.ComponentModel.INotifyPropertyChanged> Essa interface permite que a propriedade de um objeto notifique um controle associado sobre a alteração da propriedade de modo que o controle possa exibir as informações atualizadas. Sem o atributo `CallerMemberName`, você deve especificar o nome da propriedade como um literal.  
+-   Implementando a interface <xref:System.ComponentModel.INotifyPropertyChanged> ao associar dados. Essa interface permite que a propriedade de um objeto notifique um controle associado sobre a alteração da propriedade de modo que o controle possa exibir as informações atualizadas. Sem o atributo `CallerMemberName`, você deve especificar o nome da propriedade como um literal.  
   
  O gráfico a seguir mostra os nomes de membros que são retornados quando você usa o atributo `CallerMemberName`.  
   
@@ -91,7 +83,7 @@ End Sub
 |Nenhum membro contentor (por exemplo, nível de assembly ou atributos que são aplicadas aos tipos)|O valor padrão do parâmetro opcional.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Atributos (Visual Basic)](../../../visual-basic/language-reference/attributes.md)   
- [Atributos comuns (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)   
- [Parâmetros opcionais](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)   
+ [Atributos (Visual Basic)](../../../visual-basic/language-reference/attributes.md)  
+ [Atributos comuns (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
+ [Parâmetros Opcionais](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
  [Conceitos de programação (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)

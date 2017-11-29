@@ -1,38 +1,27 @@
 ---
-title: "Usando variação para delegações genéricas Func e Action (Visual Basic) | Documentos do Microsoft"
-ms.custom: 
-ms.date: 2015-07-20
+title: "Usando variação para Func e ação de delegados genéricos (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 28c3f84d21f9fbc7e57ba079461194acf7612add
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b8f9b2ebf758bc0d67b2b623038a4beeb7149261
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Usando variação para delegações Func e Action genérica (Visual Basic)
-Esses exemplos demonstram como usar covariância e contravariância no `Func` e `Action` delegados genéricos para permitir a reutilização dos métodos e fornecer mais flexibilidade em seu código.  
+# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Usando variação para Func e ação de delegados genéricos (Visual Basic)
+Esses exemplos demonstram como usar covariância e contravariância nos delegados genéricos `Func` e `Action` para permitir a reutilização dos métodos e fornecer mais flexibilidade em seu código.  
   
  Para obter mais informações sobre covariância e contravariância, consulte [variação em delegações (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
   
-## <a name="using-delegates-with-covariant-type-parameters"></a>Usando delegados com parâmetros de tipo Covariant  
- O exemplo a seguir ilustra os benefícios de suporte covariância genérica `Func` delegados. O `FindByTitle` método assume um parâmetro do `String` digite e retorna um objeto do `Employee` tipo. No entanto, você pode atribuir esse método para o `Func(Of String, Person)` delegate porque `Employee` herda `Person`.  
+## <a name="using-delegates-with-covariant-type-parameters"></a>Usando delegados com parâmetros de tipo covariantes  
+ O exemplo a seguir ilustra os benefícios do suporte à covariância nos delegados genéricos `Func`. O método `FindByTitle` assume um parâmetro do tipo `String` e retorna um objeto do tipo `Employee`. No entanto, você pode atribuir esse método ao delegado `Func(Of String, Person)` porque `Employee` herda `Person`.  
   
 ```vb  
 ' Simple hierarchy of classes.  
@@ -69,8 +58,8 @@ Class Finder
 End Class  
 ```  
   
-## <a name="using-delegates-with-contravariant-type-parameters"></a>Usando delegados com parâmetros de tipo Contravariant  
- O exemplo a seguir ilustra os benefícios de suporte contravariância genérica `Action` delegados. O `AddToContacts` método assume um parâmetro do `Person` tipo. No entanto, você pode atribuir esse método para o `Action(Of Employee)` delegate porque `Employee` herda `Person`.  
+## <a name="using-delegates-with-contravariant-type-parameters"></a>Usando delegados com parâmetros de tipo contravariantes  
+ O exemplo a seguir ilustra os benefícios do suporte à contravariância nos delegados genéricos `Action`. O método `AddToContacts` assume um parâmetro do tipo `Person`. No entanto, você pode atribuir esse método ao delegado `Action(Of Employee)` porque `Employee` herda `Person`.  
   
 ```vb  
 Public Class Person  
@@ -107,5 +96,5 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Covariância e contravariância (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/covariance-and-contravariance.md)   
- [Genéricos](https://msdn.microsoft.com/library/ms172192)
+ [Covariância e contravariância (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)  
+ [Genéricos](~/docs/standard/generics/index.md)

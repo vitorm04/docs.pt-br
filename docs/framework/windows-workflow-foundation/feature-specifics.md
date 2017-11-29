@@ -8,16 +8,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
 ms.openlocfilehash: 1e7a223248b574e30c266c3c9ac66bf317f1d19f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Específicos de funcionalidade do Windows Workflow Foundation
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] adiciona um número de recursos a Windows Workflow Foundation. Este documento descreve um número de recursos novos, e fornece detalhes sobre cenários em que podem ser úteis.  
@@ -353,7 +352,7 @@ ms.lasthandoff: 09/25/2017
   
     1.  O perfil padrão é usado.  
   
-    2.  Abra o Visualizador de eventos e habilitar o canal analítico no seguinte nó: **Visualizador de eventos**, **Applications and Services Logs**, **Microsoft**, **Windows **, **Aplicativos de servidor de aplicativo**. Clique com botão direito **analítico** e selecione **Habilitar Log**.  
+    2.  Abra o Visualizador de eventos e habilitar o canal analítico no seguinte nó: **Visualizador de eventos**, **Applications and Services Logs**, **Microsoft**, **Windows** , **Aplicativos de servidor de aplicativo**. Clique com botão direito **analítico** e selecione **Habilitar Log**.  
   
     3.  Execute o serviço de fluxo de trabalho.  
   
@@ -373,4 +372,3 @@ ms.lasthandoff: 09/25/2017
 2.  Exemplos: [persistência](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
   
 3.  Documentação conceitual: [armazenamento de instância de fluxo de trabalho do SQL](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).
-

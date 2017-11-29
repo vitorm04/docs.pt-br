@@ -1,44 +1,36 @@
 ---
-title: "Como: executar o Streaming de transformação de grandes documentos XML (Visual Basic) | Documentos do Microsoft"
+title: "Como: executar o Streaming de transformação de grandes documentos XML (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 3d954cc9-4b3c-4b47-8132-ff7541cff53b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f35e42e29e316fe1610a011263aa68e622fb95a5
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d211cbd1c94d485e0c41d23eb12dcae28ae7ad6e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>Como: executar o Streaming de transformação de grandes documentos XML (Visual Basic)
 Às vezes você precisa transformar grandes arquivos XML e escrever seu aplicativo de modo que os requisitos de memória do aplicativo sejam previsíveis. Se você tentar preencher uma árvore XML com um arquivo XML muito grande, seu uso de memória será proporcional ao tamanho do arquivo (isto é, excessivo). Portanto, você deve usar uma técnica de streaming em vez disso.  
   
- As técnicas de streaming são melhor aplicadas em situações onde você precisa processar o documento de origem apenas uma vez e você pode processar os elementos na ordem do documento. Determinados operadores de consulta padrão, como <xref:System.Linq.Enumerable.OrderBy%2A>, iteram sua origem, coletar todos os dados, classificá-los e, em seguida, geram finalmente o primeiro item na sequência.</xref:System.Linq.Enumerable.OrderBy%2A> Observe que se você usar um operador de consulta que materializa sua origem antes de gerar o primeiro item, você não manterá um requisito pequeno de memória para seu aplicativo.  
+ As técnicas de streaming são melhor aplicadas em situações onde você precisa processar o documento de origem apenas uma vez e você pode processar os elementos na ordem do documento. Determinados operadores de consulta padrão, como <xref:System.Linq.Enumerable.OrderBy%2A>, iteram sua origem, coletam todos os dados, classificam e, em seguida, geram finalmente o primeiro item na sequência. Observe que se você usar um operador de consulta que materializa sua origem antes de gerar o primeiro item, você não manterá um requisito pequeno de memória para seu aplicativo.  
   
- Mesmo se você usar a técnica descrita no [como: transmitir fragmentos XML com acesso a informações de cabeçalho (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), se você tentar montar uma árvore XML que contém o documento transformado, uso será muito grande de memória.  
+ Mesmo se você usar a técnica descrita no [como: fragmentos XML de fluxo com acesso a informações de cabeçalho (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), se você tentar montar uma árvore XML que contém o documento transformado, uso será muito grande de memória.  
   
- Há duas principais abordagens. Uma abordagem é usar as características de processamento adiado de <xref:System.Xml.Linq.XStreamingElement>.</xref:System.Xml.Linq.XStreamingElement> Outra abordagem é criar um <xref:System.Xml.XmlWriter>e usar os recursos de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] para gravar os elementos para <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlWriter> Este tópico demonstra as duas abordagens.  
+ Há duas principais abordagens. Uma abordagem é usar as características de processamento adiado de <xref:System.Xml.Linq.XStreamingElement>. Outra abordagem é criar <xref:System.Xml.XmlWriter> e usar os recursos de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para gravar os elementos em um <xref:System.Xml.XmlWriter>. Este tópico demonstra as duas abordagens.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir cria o exemplo na [como: transmitir fragmentos XML com acesso a informações de cabeçalho (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
+ O exemplo a seguir cria o exemplo na [como: fragmentos XML de fluxo com acesso a informações de cabeçalho (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
   
- Este exemplo usa os recursos de execução adiada de <xref:System.Xml.Linq.XStreamingElement>para transmitir a saída.</xref:System.Xml.Linq.XStreamingElement> Este exemplo pode transformar um documento muito grande mantendo um requisito pequeno de memória.  
+ Este exemplo usa os recursos de execução adiada de <xref:System.Xml.Linq.XStreamingElement> para transmitir a saída. Este exemplo pode transformar um documento muito grande mantendo um requisito pequeno de memória.  
   
  Observe que o eixo personalizado (`StreamCustomerItem`) é escrito especificamente para esperar um documento que tem os elementos `Customer`, `Name` e `Item`, e que esses elementos serão organizados como no documento Source.xml a seguir. Uma implementação mais robusta, no entanto, seria preparada para analisar um documento inválido.  
   
@@ -263,15 +255,15 @@ End Class
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir também se baseia no exemplo em [como: transmitir fragmentos XML com acesso a informações de cabeçalho (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
+ O exemplo a seguir também cria o exemplo na [como: fragmentos XML de fluxo com acesso a informações de cabeçalho (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
   
- Este exemplo usa o recurso de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] para gravar os elementos para <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> Este exemplo pode transformar um documento muito grande mantendo um requisito pequeno de memória.  
+ Este exemplo usa o recurso de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para gravar os elementos em um <xref:System.Xml.XmlWriter>. Este exemplo pode transformar um documento muito grande mantendo um requisito pequeno de memória.  
   
  Observe que o eixo personalizado (`StreamCustomerItem`) é escrito especificamente para esperar um documento que tem os elementos `Customer`, `Name` e `Item`, e que esses elementos serão organizados como no documento Source.xml a seguir. Uma implementação mais robusta, no entanto, validaria o documento de origem com um XSD ou seria preparada para analisar um documento inválido.  
   
  Este exemplo usa o mesmo documento de origem, Source.xml, como o exemplo anterior neste tópico. Ele também produz exatamente a mesma saída.  
   
- Usando <xref:System.Xml.Linq.XStreamingElement>para transmitir a saída que XML é preferencial em relação a gravar a <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.Xml.Linq.XStreamingElement>  
+ Usar <xref:System.Xml.Linq.XStreamingElement> para transmitir o XML de saída é preferencial em vez de gravar em um <xref:System.Xml.XmlWriter>.  
   
 ```vb  
 Module Module1  
