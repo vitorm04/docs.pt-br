@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b17fc74b2143f7307316a167330d06c87b9d4c3d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3928c6b3690bd03a4365d21d5fbf2f4bd2a4f457
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="peer-to-peer-collaboration"></a>Colaboração ponto a ponto
 A rede ponto a ponto é a utilização dos computadores relativamente poderosos (computadores pessoais) que existem na borda da Internet para mais do que apenas tarefas de computação baseadas no cliente. O PC (computador pessoal) moderno tem um processador muito rápido, ampla memória e um disco rígido grande, nenhum dos quais está sendo totalmente utilizado ao executar tarefas comuns de computação, como email e navegação na Web. O PC moderno pode facilmente atuar como um cliente e um servidor (um par) para vários tipos de aplicativos.  
@@ -56,6 +50,5 @@ A rede ponto a ponto é a utilização dos computadores relativamente poderosos 
  Em um domínio do Active Directory, os controladores de domínio fornecem serviços de autenticação usando o Kerberos. Em um ambiente de par sem servidor, os pares devem fornecer sua própria autenticação. Para rede ponto a ponto, qualquer nó pode agir como uma AC, removendo a necessidade de um certificado raiz no repositório de raiz confiável do cada par. A autenticação é fornecida usando certificados autoassinados, formatados como certificados X.509. Esses são os certificados que são criados por cada par, o que gera o par de chaves pública/privada e o certificado é assinado usando a chave privada. O certificado autoassinado é usado para autenticação e para fornecer informações sobre a entidade de par. Assim como a autenticação X.509, a autenticação de rede ponto a ponto depende de uma cadeia de certificados ser rastreada de volta para uma chave pública confiável.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Net.PeerToPeer.Collaboration>   
+ <xref:System.Net.PeerToPeer.Collaboration>  
  [Sobre o namespace System.Net.PeerToPeer.Collaboration](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)
-

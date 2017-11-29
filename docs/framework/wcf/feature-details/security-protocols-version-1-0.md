@@ -1,0 +1,2776 @@
+---
+title: "Protocolos de segurança versão 1.0"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
+caps.latest.revision: "4"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: f40c79ad1a6eedc2b1de4dffa9de5b48aeb8e6f5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
+---
+# <a name="security-protocols-version-10"></a>Protocolos de segurança versão 1.0
+Os protocolos de segurança de serviços Web fornecer mecanismos de segurança de serviços Web que abrangem todos os enterprise existente, requisitos de segurança de mensagens. Esta seção descreve o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] detalhes de versão 1.0 (implementado no <xref:System.ServiceModel.Channels.SecurityBindingElement>) para protocolos de segurança de serviços Web a seguir.  
+  
+|Documento de especificação /|Link|  
+|-|-|  
+|WSS: Segurança de mensagens SOAP 1.0|http://docs.oasis-open.org/WSS/2004/01/OASIS-200401-WSS-SOAP-Message-Security-1.0.PDF|  
+|WSS: Perfil de Token de nome de usuário 1.0|http://docs.oasis-open.org/WSS/2004/01/OASIS-200401-WSS-username-token-Profile-1.0.PDF|  
+|WSS: X509 Token perfil 1.0|http://docs.oasis-open.org/WSS/2004/01/OASIS-200401-WSS-X509-token-Profile-1.0.PDF|  
+|WSS: SAML 1.1 Profile 1.0 do Token|http://docs.oasis-open.org/WSS/OASIS-WSS-SAML-token-Profile-1.0.PDF|  
+|WSS: Segurança de mensagens SOAP 1.1|http://www.oasis-open.org/committees/download.PHP/16790/WSS-v1.1-spec-os-SOAPMessageSecurity.PDF|  
+|Perfil de Token de nome de usuário 1.1 do WSS|http://docs.oasis-open.org/WSS/2004/01/OASIS-200401-WSS-username-token-Profile-1.0.PDF|  
+|WSS: Perfil de Token de x. 509 1.1|http://www.oasis-open.org/committees/download.PHP/16785/WSS-v1.1-spec-os-x509TokenProfile.PDF|  
+|WSS: Perfil de Token Kerberos 1.1|http://www.oasis-open.org/committees/download.PHP/16788/WSS-v1.1-spec-os-KerberosTokenProfile.PDF|  
+|WSS: SAML 1.1 Profile 1.1 do Token|http://www.oasis-open.org/committees/download.PHP/16768/WSS-v1.1-spec-os-SAMLTokenProfile.PDF|  
+|WS-Secure Conversation|http://msdn.microsoft.com/ws/2005/02/WS-Secure-Conversation/|  
+|WS-Trust|http://msdn.microsoft.com/ws/2005/02/WS-Trust/|  
+|Observação do aplicativo:<br /><br /> Usando o WS-Trust de Handshake TLS|A publicação|  
+|Observação do aplicativo:<br /><br /> Usando o WS-Trust para SPNEGO|A publicação|  
+|Observação do aplicativo:<br /><br /> Identidade e referências de endereçamento de ponto de extremidade de serviços Web|A publicação|  
+|O WS-SecurityPolicy 1.1<br /><br /> (2005/07)|http://msdn.microsoft.com/ws/2005/07/WS-Security-Policy/<br /><br /> como corrigida por errata enviado ao OASIS WS-SX Technical Committee http://www.oasis-open.org/archives/ws-sx/200512/msg00017.html|  
+  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], versão 1, fornece 17 modos de autenticação que podem ser usados como a base de configuração de segurança de serviços da Web. Cada modo é otimizado para um conjunto comum de requisitos de implantação, como:  
+  
+-   Credenciais usadas para autenticar o cliente e o serviço.  
+  
+-   Mecanismos de proteção de segurança transporte ou mensagem.  
+  
+-   Padrões de troca de mensagem.  
+  
+|Modo de autenticação|Autenticação de cliente|Autenticação de servidor|Modo|  
+|-------------------------|---------------------------|---------------------------|----------|  
+|UserNameOverTransport|Nome de usuário/senha|X509|Transporte|  
+|CertificateOverTransport|X509|X509|Transporte|  
+|KerberosOverTransport|Windows|X509|Transporte|  
+|IssuedTokenOverTransport|Federado|X509|Transporte|  
+|SspiNegotiatedOverTransport|Negociada Sspi do Windows|Negociada Sspi do Windows|Transporte|  
+|AnonymousForCertificate|Nenhum|X509|Mensagem|  
+|UserNameForCertificate|Nome de usuário/senha|X509|Mensagem|  
+|MutualCertificate|X509|X509|Mensagem|  
+|MutualCertificateDuplex|X509|X509|Mensagem|  
+|IssuedTokenForCertificate|Federado|X509|Mensagem|  
+|Kerberos|Windows|Windows|Mensagem|  
+|IssuedToken|Federado|Federado|Mensagem|  
+|SspiNegotiated|Negociada Sspi do Windows|Negociada Sspi do Windows|Mensagem|  
+|AnonymousForSslNegotiated|Nenhum|X509, Nego TLS|Mensagem|  
+|UserNameForSslNegotiated|Nome de usuário/senha|X509, Nego TLS|Mensagem|  
+|MutualSslNegotiated|X509|X509, Nego TLS|Mensagem|  
+|IssuedTokenForSslNegotiated|Federado|X509, Nego TLS|Mensagem|  
+  
+ Pontos de extremidade usando esses modos de autenticação podem expressar seus requisitos de segurança usando o WS-SecurityPolicy (WS-SP). Este documento descreve a estrutura de cabeçalho de segurança e mensagens de infraestrutura para cada modo de autenticação e fornece exemplos de políticas e mensagens.  
+  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]aproveita o WS-SecureConversation para oferecer suportam a sessões seguras para proteger os intercâmbios de várias mensagens entre aplicativos.  Consulte "Proteger sessões" abaixo para obter detalhes de implementação.  
+  
+ Além dos modos de autenticação, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornece as configurações para controlar os mecanismos de proteção comuns que se aplicam à maioria dos modos de autenticação com base em segurança de mensagem, por exemplo: ordem de assinatura versus operações de criptografia, conjuntos de algoritmo derivação de chave e a confirmação de assinatura.  
+  
+ Os prefixos e os namespaces a seguir são usadas neste documento.  
+  
+|Prefixo|Namespace|  
+|------------|---------------|  
+|s|http://www.w3.org/2003/05/SOAP-envelope|  
+|SP|http://schemas.xmlsoap.org/ws/2005/07/SecurityPolicy|  
+|a|http://www.w3.org/2005/08/Addressing|  
+|wsse|TBD-OASIS WSS 1.0 URI|  
+|wsse11|TBD-OASIS WSS 1.1 URI|  
+|wsu|TBD-OASIS WSS 1.0 utilitário URI|  
+|DS|TBD-W3C XMLDSig URI|  
+|WST|TBD-02/2005 WS-Trust URI|  
+|wssc|TBD-02/2005 WS-SecureConversation URI|  
+|wsaw|TBD - WS-Addressing namespace de política|  
+|wsp|http://schemas.xmlsoap.org/ws/2004/09/Policy|  
+|mssp|http://schemas.microsoft.com/ws/2005/07/SecurityPolicy|  
+  
+## <a name="1-token-profiles"></a>1. Perfis de token  
+ Especificações de segurança dos serviços da Web representam credencial como tokens de segurança. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]suporta os seguintes tipos de token:  
+  
+### <a name="11-usernametoken"></a>1.1 UsernameToken  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]perfis de UsernameToken10 e UsernameToken11 com as seguintes restrições a seguir:  
+  
+ R1101 PasswordType atributo no elemento UsernameToken\Password deve ser omitido ou tem valor #PasswordText (padrão).  
+  
+ O #PasswordDigest usando extensibilidade podem ser implementados. Foi observado que #PasswordDigest foi enganado geralmente para ser um mecanismo de proteção de senha segura o suficiente. Mas #PasswordDigest não pode servir como um substituto para criptografia de UsernameToken. O objetivo principal do #PasswordDigest é a proteção contra ataques de repetição. Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modos de autenticação, as ameaças de ataques de reprodução são atenuados usando assinaturas de mensagem.  
+  
+ B1102 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nunca emite Nonce e criado subelementos UsernameToken.  
+  
+ Estes subelementos destinam-se a ajudar na detecção de repetição. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]usa assinaturas de mensagem.  
+  
+ OASIS WSS SOAP mensagem segurança UsernameToken Profile 1.1 (UsernameToken11) introduziu a derivação de chave de recurso de senha.  
+  
+ B1103 UsernameToken senha não deve ser usada para derivação de chaves e, portanto, para operações criptográficas.  
+  
+ Motivo: senhas geralmente são consideradas muito fracas para ser usada para operações criptográficas.  
+  
+### <a name="12-x509-token"></a>1.2 x 509 Token  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oferece suporte a certificados de X509v3 como um tipo de credencial e segue X509TokenProfile1.0 e X509TokenProfile1.1 com as seguintes restrições:  
+  
+ Atributo ValueType o R1201 no elemento BinarySecurityToken deve ter valor #X509v3 quando ele contém um certificado de X509v3.  
+  
+ WSS X509 Token Profile 1.0 e 1.1 definem também X509PKIPathv&#1; e #PKCS7 como tipos de valor. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]não oferece suporte a esses tipos.  
+  
+ R1202 se uma extensão de SubjectKeyIdentifier (SKI) está presente no X509 certificado, wsse:KeyIdentifier deve ser usado para referências externas para o token, com ValueType como #X509SubjectKeyIdentifier e seu conteúdo o codificada em base64 valor de atributo extensão SKI do certificado.  
+  
+ Referências SKI são amplamente implementadas e mostrou para ser um tipo de referência externa altamente interoperável.  
+  
+ R1203 Uma referência externa para X509 segurança Token não devem usar ds:X509IssuerSerial.  
+  
+ X509TokenProfile1.1 de R1204 se estiver em uso, uma referência externa para X509 segurança Token deve usar a impressão digital introduzida por 1,1 WS-Security.  
+  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]dá suporte a X509IssuerSerial. No entanto, há problemas de interoperabilidade com X509IssuerSerial: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa uma cadeia de caracteres para comparar dois valores de X509IssuerSerial. Portanto, se um reorganiza os componentes do nome da entidade e envia para uma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uma referência a um certificado de serviço, ele não pode ser encontrado.  
+  
+### <a name="13-kerberos-token"></a>1.3 Token Kerberos  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]dá suporte a KerberosTokenProfile1.1 para fins de autenticação do Windows com as seguintes restrições:  
+  
+ R1301 um Kerberos Token deve conter o valor de um GSS encapsulado Kerberos v4 AP_REQ conforme definido em GSS_API e a especificação de Kerberos e deve ter o atributo ValueType com o valor #GSS_Kerberosv5_AP_REQ.  
+  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]usa GSS encapsulado AP-REQ Kerberos, não um bare AP-REQ. Isso é uma prática recomendada de segurança.  
+  
+### <a name="14-saml-v11-token"></a>1.4 SAML 1.1 Token  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]dá suporte a perfis de Token de SAML do WSS 1.0 e 1.1 para tokens do SAML 1.1. É possível implementar a outras versões de formatos de token SAML.  
+  
+### <a name="15-security-context-token"></a>1.5 Token de contexto de segurança de  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oferece suporte a segurança contexto Token SCT () introduzido no WS-SecureCoversation. SCT é usada para representar o contexto de segurança estabelecido no SecureConversation, bem como a negociação binária protocolos TLS e SSPI, descrito abaixo.  
+  
+## <a name="2-common-message-security-parameters"></a>2. Parâmetros comuns de segurança de mensagem  
+  
+### <a name="21-timestamp"></a>2.1 TimeStamp  
+ Presença de carimbo de hora é controlada usando o <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> propriedade o <xref:System.ServiceModel.Channels.SecurityBindingElement> classe. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Serializa sempre wsse:TimeStamp com wsse: criados e wsse: campos de expirar. O wsse:TimeStamp sempre é assinado quando a assinatura é usada.  
+  
+### <a name="22-protection-order"></a>2.2 ordem de proteção  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]dá suporte a ordem de proteção de mensagem "Logon antes de criptografar" e "Criptografar antes de inscrever-se" (1.1 de política de segurança). "Entrar antes de criptografar" é recomendado por motivos como: mensagens protegidas com criptografar antes de sinal estão sujeitos a ataques de substituição de assinatura a menos que o mecanismo do WS-Security 1.1 SignatureConfirmation for usado, e faz com que uma assinatura sobre conteúdo criptografado auditoria mais difícil.  
+  
+### <a name="23-signature-protection"></a>2.3 proteção de assinatura  
+ Quando criptografar antes de logon é usado, é recomendável para proteger a assinatura para evitar ataques de força bruta para adivinhar o conteúdo criptografado ou a chave de assinatura (especialmente quando um token personalizado é usado com material de chave fraca).  
+  
+### <a name="24-algorithm-suite"></a>2.4 conjunto de algoritmos de  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oferece suporte a todos os conjuntos de algoritmo listados na 1.1 de política de segurança.  
+  
+### <a name="25-key-derivation"></a>2.5 derivação de chave  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]usa "Derivação de chave para chaves simétricas", conforme descrito em WS-SecureConversation.  
+  
+### <a name="26-signature-confirmation"></a>2.6 confirmação de assinatura  
+ Confirmação de assinatura pode ser como proteção contra ataques intermediária para proteger o conjunto de assinaturas.  
+  
+### <a name="27-security-header-layout"></a>2.7 Layout de cabeçalho de segurança  
+ Cada modo de autenticação descreve um determinado layout para o cabeçalho de segurança. Elementos dentro do cabeçalho de segurança são ordenados semi-estruturados. Para definir a ordem dos elementos de filhos do cabeçalho de segurança, WS-Security Policy define os seguintes modos de layout de cabeçalho de segurança:  
+  
+|||  
+|-|-|  
+|Estrito|Itens são adicionados para o seguinte cabeçalho de segurança, que as regras de layout numerados descrito na seção 7.7.1 de acordo com um geral de política de segurança princípio de "declarar antes do uso".|  
+|Incerta|Itens são adicionados ao cabeçalho de segurança em qualquer ordem compatível com WSS: segurança de mensagens SOAP.|  
+|LaxTimestampFirst|Mesmo como Lax exceto que o primeiro item no cabeçalho de segurança deve ser um wsse:Timestamp|  
+|LaxTimestampLast|Mesmo que incerta exceto que o último item no cabeçalho de segurança deve ser um wsse:Timestamp|  
+  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oferece suporte a todos os quatro modos de layout de cabeçalho de segurança. Exemplos de estrutura e a mensagem de cabeçalho de segurança para os modos de autenticação abaixo siga o modo de "Strict".  
+  
+## <a name="2-common-message-security-parameters"></a>2. Parâmetros comuns de segurança de mensagem  
+ Esta seção fornece as políticas de exemplo para cada modo de autenticação junto com exemplos mostrando a estrutura de cabeçalho de segurança em mensagens trocadas por cliente e de serviço.  
+  
+### <a name="61-transport-protection"></a>6.1 proteção de transporte  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]fornece cinco modos de autenticação que usam um transporte seguro para proteger as mensagens; UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport e SspiNegotiatedOverTransport.  
+  
+ Esses modos de autenticação são construídos usando a associação de transporte descrita em SecurityPolicy. Para o UserNameOverTransport UsernameToken o modo de autenticação é um token de suporte assinado. Para outros modos de autenticação de token aparece como um token de endosso assinado. Apêndice C.1.2 e C.1.3 de SecurityPolicy descrevem o layout do cabeçalho de segurança em detalhes. Os cabeçalhos de segurança de exemplo a seguir mostram o layout estrito para um modo de autenticação específico.  
+  
+ O valor da propriedade "Chaves derivadas" para os tokens em todos os casos é "false".  
+  
+ Os valores de várias propriedades da associação de transporte são da seguinte maneira:  
+  
+ Carimbo de hora: true  
+  
+ Layout de cabeçalho de segurança: estrito  
+  
+ Conjunto de algoritmos: Basic256  
+  
+#### <a name="611-usernameovertransport"></a>6.1.1 UsernameOverTransport  
+ Com esse modo de autenticação, o cliente autentica com um Token de nome de usuário que aparece na camada de SOAP como um token de suporte assinado que é sempre enviado do iniciador para o destinatário. O serviço é autenticado usando um certificado x. 509 na camada de transporte. A associação usada é uma associação de transporte.  
+  
+ Política  
+  
+```xml  
+<wsp:Policy wsu:Id='UsernameOverTransport_policy' >  
+  <wsp:ExactlyOne>  
+    <wsp:All>  
+      <sp:TransportBinding >  
+        <wsp:Policy>  
+          <sp:TransportToken>  
+            <wsp:Policy>  
+              <sp:HttpsToken RequireClientCertificate='false' />   
+            </wsp:Policy>  
+          </sp:TransportToken>  
+          <sp:AlgorithmSuite>  
+            <wsp:Policy>  
+              <sp:Basic256 />   
+            </wsp:Policy>  
+          </sp:AlgorithmSuite>  
+          <sp:Layout>  
+            <wsp:Policy>  
+              <sp:Strict />   
+            </wsp:Policy>  
+          </sp:Layout>  
+          <sp:IncludeTimestamp />   
+        </wsp:Policy>  
+      </sp:TransportBinding>  
+      <sp:SignedSupportingTokens >  
+        <wsp:Policy>  
+          <sp:UsernameToken   
+sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
+            <wsp:Policy>  
+              <sp:WssUsernameToken10 />   
+            </wsp:Policy>  
+          </sp:UsernameToken>  
+        </wsp:Policy>  
+      </sp:SignedSupportingTokens>  
+      <sp:Wss11 >  
+        <wsp:Policy>  
+          <sp:MustSupportRefKeyIdentifier />   
+          <sp:MustSupportRefIssuerSerial />   
+          <sp:MustSupportRefThumbprint />   
+          <sp:MustSupportRefEncryptedKey />   
+        </wsp:Policy>  
+      </sp:Wss11>  
+      <sp:Trust10 >  
+        <wsp:Policy>  
+          <sp:MustSupportIssuedTokens />   
+          <sp:RequireClientEntropy />   
+          <sp:RequireServerEntropy />   
+        </wsp:Policy>  
+      </sp:Trust10>  
+      <wsaw:UsingAddressing />   
+    </wsp:All>  
+  </wsp:ExactlyOne>  
+</wsp:Policy>  
+```  
+  
+ Layout de cabeçalho de segurança  
+  
+ Solicitação  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+  <wsse:UsernameToken ... >  
+  ...  
+  </wsse:UsernameToken>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+</wsse:Security>  
+```  
+  
+#### <a name="612-certificateovertransport"></a>6.1.2 CertificateOverTransport  
+ Com esse modo de autenticação que o cliente autentica com um x. 509 do certificado que aparece na camada de SOAP como um token de suporte de endosso que é sempre enviado do iniciador para o destinatário. O serviço é autenticado usando um certificado x. 509 na camada de transporte. A associação usada é uma associação de transporte.  
+  
+ Política  
+  
+```xml  
+<wsp:Policy wsu:Id='CertificateOverTransport_policy' >  
+  <wsp:ExactlyOne>  
+    <wsp:All>  
+      <sp:TransportBinding xmlns:sp='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy' >  
+        <wsp:Policy>  
+          <sp:TransportToken>  
+            <wsp:Policy>  
+             <sp:HttpsToken RequireClientCertificate='false' />   
+            </wsp:Policy>  
+          </sp:TransportToken>  
+          <sp:AlgorithmSuite>  
+            <wsp:Policy>  
+              <sp:Basic256 />   
+            </wsp:Policy>  
+          </sp:AlgorithmSuite>  
+          <sp:Layout>  
+            <wsp:Policy>  
+              <sp:Strict />   
+            </wsp:Policy>  
+          </sp:Layout>  
+          <sp:IncludeTimestamp />   
+        </wsp:Policy>  
+      </sp:TransportBinding>  
+      <sp:EndorsingSupportingTokens>  
+        <wsp:Policy>  
+          <sp:X509Token   
+sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
+            <wsp:Policy>  
+              <sp:RequireThumbprintReference />   
+              <sp:WssX509V3Token10 />   
+            </wsp:Policy>  
+          </sp:X509Token>  
+          <sp:SignedParts>  
+            <sp:Header Name='To'   
+Namespace='http://www.w3.org/2005/08/addressing' />   
+          </sp:SignedParts>  
+        </wsp:Policy>  
+      </sp:EndorsingSupportingTokens>  
+      <sp:Wss11>  
+        <wsp:Policy>  
+          <sp:MustSupportRefKeyIdentifier />   
+          <sp:MustSupportRefIssuerSerial />   
+          <sp:MustSupportRefThumbprint />   
+          <sp:MustSupportRefEncryptedKey />   
+        </wsp:Policy>  
+      </sp:Wss11>  
+      <sp:Trust10>  
+        <wsp:Policy>  
+          <sp:MustSupportIssuedTokens />   
+          <sp:RequireClientEntropy />   
+          <sp:RequireServerEntropy />   
+        </wsp:Policy>  
+      </sp:Trust10>  
+      <wsaw:UsingAddressing />   
+    </wsp:All>  
+  </wsp:ExactlyOne>  
+</wsp:Policy>  
+```  
+  
+ Layout de cabeçalho de segurança  
+  
+ Solicitação  
+  
+```xml  
+<wsse:Security s:mustUnderstand="1">  
+  <wse:Timestamp u:Id="_0">  
+  ...  
+  </wse:Timestamp>  
+  <wsse:BinarySecurityToken>  
+  ...  
+  </wsse:BinarySecurityToken>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<o:Security>  
+  <u:Timestamp u:Id="_0">  
+  ...  
+  </u:Timestamp>  
+</o:Security>  
+```  
+  
+#### <a name="613-issuedtokenovertransport"></a>6.1.3 IssuedTokenOverTransport  
+ Com esse modo de autenticação o cliente não autentica para o serviço, como tal, mas em vez disso, apresenta um token emitido por um Token de segurança Service (STS) e comprova conhecimento de uma chave compartilhada. O token emitido é exibido na camada de SOAP como um token de suporte de endosso que é sempre enviado do iniciador para o destinatário. O serviço é autenticado usando um certificado x. 509 na camada de transporte. A associação é uma associação de transporte.  
+  
+ Política  
+  
+```xml  
+<wsp:Policy wsu:Id='IssuedTokenOverTransport_policy' >  
+  <wsp:ExactlyOne>  
+    <wsp:All>  
+      <sp:TransportBinding >  
+        <wsp:Policy>  
+          <sp:TransportToken>  
+            <wsp:Policy>  
+              <sp:HttpsToken RequireClientCertificate='false' />   
+            </wsp:Policy>  
+          </sp:TransportToken>  
+          <sp:AlgorithmSuite>  
+            <wsp:Policy>  
+              <sp:Basic256 />   
+            </wsp:Policy>  
+          </sp:AlgorithmSuite>  
+          <sp:Layout>  
+            <wsp:Policy>  
+              <sp:Strict />   
+            </wsp:Policy>  
+          </sp:Layout>  
+          <sp:IncludeTimestamp />   
+        </wsp:Policy>  
+      </sp:TransportBinding>  
+      <sp:EndorsingSupportingTokens>  
+        <wsp:Policy>  
+          <sp:IssuedToken   
+sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
+            <sp:RequestSecurityTokenTemplate>  
+              <wst:KeyType>  
+              http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey  
+              </wst:KeyType>   
+            </sp:RequestSecurityTokenTemplate>  
+            <wsp:Policy>  
+              <sp:RequireInternalReference />   
+            </wsp:Policy>  
+          </sp:IssuedToken>  
+          <sp:SignedParts>  
+            <sp:Header Name='To'   
+Namespace='http://www.w3.org/2005/08/addressing' />   
+          </sp:SignedParts>  
+        </wsp:Policy>  
+      </sp:EndorsingSupportingTokens>  
+      <sp:Wss11>  
+        <wsp:Policy>  
+          <sp:MustSupportRefKeyIdentifier />   
+          <sp:MustSupportRefIssuerSerial />   
+          <sp:MustSupportRefThumbprint />   
+          <sp:MustSupportRefEncryptedKey />   
+        </wsp:Policy>  
+      </sp:Wss11>  
+      <sp:Trust10>  
+        <wsp:Policy>  
+          <sp:MustSupportIssuedTokens />   
+          <sp:RequireClientEntropy />   
+          <sp:RequireServerEntropy />   
+        </wsp:Policy>  
+      </sp:Trust10>  
+      <wsaw:UsingAddressing />   
+    </wsp:All>  
+  </wsp:ExactlyOne>  
+</wsp:Policy>  
+```  
+  
+ Layout de cabeçalho de segurança  
+  
+ Solicitação  
+  
+```xml  
+<wsse:Security s:mustUnderstand="1" >  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <saml:Assertion ...>  
+  ...  
+  </saml:Assertion>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+</wsse:Security>  
+```  
+  
+#### <a name="614-kerberosovertransport"></a>6.1.4 KerberosOverTransport  
+ Com esse modo de autenticação o cliente autentica para o serviço usando um tíquete Kerberos. O token Kerberos aparece na camada de SOAP como um token de suporte de endosso. O serviço é autenticado usando um certificado x. 509 na camada de transporte. A associação é uma associação de transporte.  
+  
+ Política  
+  
+```xml  
+<wsp:Policy wsu:Id='KerberosOverTransport_policy' >  
+  <wsp:ExactlyOne>  
+    <wsp:All>  
+      <sp:TransportBinding>  
+        <wsp:Policy>  
+          <sp:TransportToken>  
+            <wsp:Policy>  
+              <sp:HttpsToken RequireClientCertificate='false' />   
+            </wsp:Policy>  
+          </sp:TransportToken>  
+          <sp:AlgorithmSuite>  
+            <wsp:Policy>  
+              <sp:Basic128 />   
+            </wsp:Policy>  
+          </sp:AlgorithmSuite>  
+          <sp:Layout>  
+            <wsp:Policy>  
+              <sp:Strict />   
+            </wsp:Policy>  
+          </sp:Layout>  
+          <sp:IncludeTimestamp />   
+        </wsp:Policy>  
+      </sp:TransportBinding>  
+      <sp:EndorsingSupportingTokens>  
+        <wsp:Policy>  
+          <sp:KerberosToken  
+sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Once' >  
+            <wsp:Policy>  
+              <sp:WssGssKerberosV5ApReqToken11 />   
+            </wsp:Policy>  
+          </sp:KerberosToken>  
+          <sp:SignedParts>  
+            <sp:Header Name='To'   
+Namespace='http://www.w3.org/2005/08/addressing' />   
+          </sp:SignedParts>  
+        </wsp:Policy>  
+      </sp:EndorsingSupportingTokens>  
+      <sp:Wss11>  
+        <wsp:Policy>  
+          <sp:MustSupportRefKeyIdentifier />   
+          <sp:MustSupportRefIssuerSerial />   
+          <sp:MustSupportRefThumbprint />   
+          <sp:MustSupportRefEncryptedKey />   
+        </wsp:Policy>  
+      </sp:Wss11>  
+      <sp:Trust10>  
+        <wsp:Policy>  
+          <sp:MustSupportIssuedTokens />   
+          <sp:RequireClientEntropy />   
+          <sp:RequireServerEntropy />   
+        </wsp:Policy>  
+      </sp:Trust10>  
+      <wsaw:UsingAddressing />   
+    </wsp:All>  
+  </wsp:ExactlyOne>  
+</wsp:Policy>  
+```  
+  
+ Layout de cabeçalho de segurança  
+  
+ Solicitação  
+  
+```xml  
+<wsse:Security s:mustUnderstand="1" >  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+  <wsse:BinarySecurityToken ValueType="...#GSS_Kerberosv5_AP_REQ">  
+  ...  
+  </wsse:BinarySecurityToken>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+</wsse:Security>  
+```  
+  
+#### <a name="615-sspinegotiatedovertransport"></a>6.1.5 SspiNegotiatedOverTransport  
+ Com esse modo, um protocolo de negociação é usado para realizar a autenticação de cliente e servidor. Kerberos é usado, se possível, caso contrário NTLM. O SCT resultante aparece na camada de SOAP como um token de suporte de endosso que é sempre enviado do iniciador ao destinatário. Além disso, o serviço é autenticado na camada de transporte por um certificado x. 509. A associação usada é uma associação de transporte. "SPNEGO" (negociação) descreve como [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa o protocolo de negociação binária SSPI com WS-Trust. Exemplos de cabeçalho de segurança nesta seção são depois que o SCT foi estabelecida por meio de handshake SPNEGO.  
+  
+ Política  
+  
+```xml  
+<wsp:Policy wsu:Id='SspiNegotiatedOverTransport_policy' >  
+  <wsp:ExactlyOne>  
+    <wsp:All>  
+      <sp:TransportBinding>  
+        <wsp:Policy>  
+          <sp:TransportToken>  
+            <wsp:Policy>  
+              <sp:HttpsToken RequireClientCertificate='false' />   
+            </wsp:Policy>  
+          </sp:TransportToken>  
+          <sp:AlgorithmSuite>  
+            <wsp:Policy>  
+              <sp:Basic256 />   
+            </wsp:Policy>  
+          </sp:AlgorithmSuite>  
+          <sp:Layout>  
+            <wsp:Policy>  
+              <sp:Strict />   
+            </wsp:Policy>  
+          </sp:Layout>  
+          <sp:IncludeTimestamp />   
+        </wsp:Policy>  
+      </sp:TransportBinding>  
+      <sp:EndorsingSupportingTokens>  
+        <wsp:Policy>  
+          <sp:SpnegoContextToken   
+sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
+            <wsp:Policy />   
+          </sp:SpnegoContextToken>  
+          <sp:SignedParts>  
+            <sp:Header Name='To'   
+Namespace='http://www.w3.org/2005/08/addressing' />   
+          </sp:SignedParts>  
+        </wsp:Policy>  
+      </sp:EndorsingSupportingTokens>  
+      <sp:Wss11>  
+        <wsp:Policy>  
+          <sp:MustSupportRefKeyIdentifier />   
+          <sp:MustSupportRefIssuerSerial />   
+          <sp:MustSupportRefThumbprint />   
+          <sp:MustSupportRefEncryptedKey />   
+        </wsp:Policy>  
+      </sp:Wss11>  
+      <sp:Trust10>  
+        <wsp:Policy>  
+          <sp:MustSupportIssuedTokens />   
+          <sp:RequireClientEntropy />   
+          <sp:RequireServerEntropy />   
+        </wsp:Policy>  
+      </sp:Trust10>  
+      <wsaw:UsingAddressing />   
+    </wsp:All>  
+  </wsp:ExactlyOne>  
+</wsp:Policy>  
+```  
+  
+### <a name="security-header-examples"></a>Exemplos de cabeçalho de segurança  
+ Quando o Token de contexto de segurança é estabelecido por meio de handshake SPNEGO usando negociação binária do WS-Trust, as mensagens de aplicativo têm cabeçalhos de segurança com a seguinte estrutura.  
+  
+ Solicitação  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+  <wssc:SecurityContextToken u:Id="uuid-2202746a-7725-453d-8747-809cb718dab0-29" >  
+  ...  
+  </wssc:SecurityContextToken>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+</wsse:Security>  
+```  
+  
+### <a name="62-using-x509-certificates-for-service-authentication"></a>6.2 usando certificados x. 509 para autenticação de serviço  
+ Esta seção descreve os seguintes modos de autenticação: MutualCertificate WSS1.0, CertificateDuplex mútua, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate e IssuedTokenForCertificate.  
+  
+#### <a name="621-mutualcertificate-wss10"></a>6.2.1 MutualCertificate WSS1.0  
+ Com esse modo de autenticação que o cliente autentica com um x. 509 do certificado que aparece na camada de SOAP que o token de iniciador. O serviço também é autenticado usando um certificado x. 509.  
+  
+ A associação usada é uma associação assimétrica com os seguintes valores de propriedade:  
+  
+ Token de iniciador: o certificado do cliente x. 509, com o modo de inclusão definido como .../IncludeToken/AlwaysToRecipient  
+  
+ Token de destinatário: Servidor do certificado x. 509, com o modo de inclusão é definido .../IncludeToken/Never  
+  
+ Proteção de token: False  
+  
+ Todo cabeçalho e corpo assinaturas: True  
+  
+ Ordem de proteção: SignBeforeEncrypt  
+  
+ Criptografar assinatura: True  
+  
+ Política  
+  
+```xml  
+<wsp:Policy wsu:Id='MutualCertificate_WSS10_policy' >  
+  <wsp:ExactlyOne>  
+    <wsp:All>  
+      <sp:AsymmetricBinding>  
+        <wsp:Policy>  
+          <sp:InitiatorToken>  
+            <wsp:Policy>  
+              <sp:X509Token   
+sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
+                <wsp:Policy>  
+                  <sp:WssX509V3Token10 />   
+                </wsp:Policy>  
+              </sp:X509Token>  
+            </wsp:Policy>  
+          </sp:InitiatorToken>  
+          <sp:RecipientToken>  
+            <wsp:Policy>  
+              <sp:X509Token   
+sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Never' >  
+                <wsp:Policy>  
+                  <sp:WssX509V3Token10 />   
+                </wsp:Policy>  
+              </sp:X509Token>  
+            </wsp:Policy>  
+          </sp:RecipientToken>  
+          <sp:AlgorithmSuite>  
+            <wsp:Policy>  
+              <sp:Basic256 />   
+            </wsp:Policy>  
+          </sp:AlgorithmSuite>  
+          <sp:Layout>  
+            <wsp:Policy>  
+              <sp:Strict />   
+            </wsp:Policy>  
+          </sp:Layout>  
+          <sp:IncludeTimestamp />   
+          <sp:EncryptSignature />   
+          <sp:OnlySignEntireHeadersAndBody />   
+        </wsp:Policy>  
+      </sp:AsymmetricBinding>  
+      <sp:Wss10>  
+        <wsp:Policy>  
+          <sp:MustSupportRefKeyIdentifier />   
+          <sp:MustSupportRefIssuerSerial />   
+        </wsp:Policy>  
+      </sp:Wss10>  
+      <sp:Trust10>  
+        <wsp:Policy>  
+          <sp:MustSupportIssuedTokens />   
+          <sp:RequireClientEntropy />   
+          <sp:RequireServerEntropy />   
+        </wsp:Policy>  
+      </sp:Trust10>  
+      <wsaw:UsingAddressing />   
+    </wsp:All>  
+  </wsp:ExactlyOne>  
+</wsp:Policy>  
+```  
+  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature  
+ Solicitação  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+  <wsse:BinarySecurityToken>  
+  ...  
+  </wsse:BinarySecurityToken>  
+  <xenc:EncryptedKey>  
+  ...  
+    <xenc:ReferenceList>  
+    ...  
+    </xenc:ReferenceList>  
+  </xenc:EncryptedKey>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+  <xenc:EncryptedKey>  
+  ...  
+    <xenc:ReferenceList>  
+    ...  
+    </xenc:ReferenceList>  
+  </xenc:EncryptedKey>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>  
+```  
+  
+ Exemplos de cabeçalho de segurança: EncryptBeforeSign  
+  
+ Solicitação  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+  <wsse:BinarySecurityToken>  
+  ...  
+  </wsse:BinarySecurityToken>  
+  <xenc:EncryptedKey>  
+  ...  
+  </xenc:EncryptedKey>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+  <xenc:EncryptedKey>  
+  ...  
+  </xenc:EncryptedKey>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+</wsse:Security>  
+```  
+  
+#### <a name="622-mutualcertificateduplex"></a>6.2.2 MutualCertificateDuplex  
+ Com esse modo de autenticação que o cliente autentica com um x. 509 do certificado que aparece na camada de SOAP que o token de iniciador. O serviço também é autenticado usando um certificado x. 509.  
+  
+ A associação usada é uma associação assimétrica com os seguintes valores de propriedade:  
+  
+ Token de iniciador: X509 do cliente certificado, o modo de inclusão estiver definido como .../IncludeToken/AlwaysToRecipient  
+  
+ Token de destinatário: X509 do servidor certificado, o modo de inclusão estiver definido como .../IncludeToken/AlwaysToInitiator  
+  
+ Proteção de token: False  
+  
+ Todo cabeçalho e corpo assinaturas: True  
+  
+ Ordem de proteção: SignBeforeEncrypt  
+  
+ Criptografar assinatura: True  
+  
+ Política  
+  
+```xml  
+<wsp:Policy wsu:Id='MutualCertificateDuplex_policy' >  
+  <wsp:ExactlyOne>  
+    <wsp:All>  
+      <sp:AsymmetricBinding>  
+        <wsp:Policy>  
+          <sp:InitiatorToken>  
+            <wsp:Policy>  
+              <sp:X509Token   
+sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
+                <wsp:Policy>  
+                  <sp:WssX509V3Token10 />   
+                </wsp:Policy>  
+              </sp:X509Token>  
+            </wsp:Policy>  
+          </sp:InitiatorToken>  
+          <sp:RecipientToken>  
+            <wsp:Policy>  
+              <sp:X509Token   
+sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToInitiator' >  
+                <wsp:Policy>  
+                  <sp:WssX509V3Token10 />   
+                </wsp:Policy>  
+              </sp:X509Token>  
+            </wsp:Policy>  
+          </sp:RecipientToken>  
+          <sp:AlgorithmSuite>  
+            <wsp:Policy>  
+              <sp:Basic256 />   
+            </wsp:Policy>  
+          </sp:AlgorithmSuite>  
+          <sp:Layout>  
+            <wsp:Policy>  
+              <sp:Strict />   
+            </wsp:Policy>  
+          </sp:Layout>  
+          <sp:IncludeTimestamp />   
+          <sp:EncryptSignature />   
+          <sp:OnlySignEntireHeadersAndBody />   
+        </wsp:Policy>  
+      </sp:AsymmetricBinding>  
+      <sp:Wss10>  
+        <wsp:Policy>  
+          <sp:MustSupportRefKeyIdentifier />   
+          <sp:MustSupportRefIssuerSerial />   
+        </wsp:Policy>  
+      </sp:Wss10>  
+      <sp:Trust10>  
+        <wsp:Policy>  
+          <sp:MustSupportIssuedTokens />   
+          <sp:RequireClientEntropy />   
+          <sp:RequireServerEntropy />   
+        </wsp:Policy>  
+      </sp:Trust10>  
+      <wsaw:UsingAddressing />   
+    </wsp:All>  
+  </wsp:ExactlyOne>  
+</wsp:Policy>  
+```  
+  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature  
+ Solicitação e resposta  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+  <wsse:BinarySecurityToken>  
+  ...  
+  </wsse:BinarySecurityToken>  
+  <xenc:EncryptedKey>  
+  ...  
+    <xenc:ReferenceList>  
+    ...  
+    </xenc:ReferenceList>  
+  </xenc:EncryptedKey>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>  
+```  
+  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemplos de cabeçalho de segurança: EncryptBeforeSign  
+ Solicitação e resposta  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+  <wsse:BinarySecurityToken>  
+  ...  
+  </wsse:BinarySecurityToken>  
+  <xenc:EncryptedKey>  
+  ...  
+  </xenc:EncryptedKey>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+</wsse:Security>  
+```  
+  
+#### <a name="623-using-symmetricbinding-with-x509-service-authentication"></a>6.2.3 usando SymmetricBinding com a autenticação do serviço x. 509  
+ "WSS10" fornecido suporte limitado para cenários com X509 tokens. Por exemplo, não havia uma maneira para fornecer proteção de assinatura e criptografia de mensagens usando apenas o token de serviço X509. "WSS11" introduziu o uso de EncryptedKey como um token simétrico. Agora, uma chave temporária criptografada para o certificado de x. 509 do serviço pode ser usada para proteção de mensagens de solicitação e resposta. Os modos de autenticação descritos na seção 6.4 abaixo usam esse padrão.  
+  
+ O WS-SecurityPolicy descreve esse padrão usando SymmetricBinding com o serviço de token X509 como o token de proteção.  
+  
+ Modos de autenticação AnonymousForCertificate, UsernameForCertificate, MutualCertificate WSS11 e IssuedTokenForCertificate todos usam uma instância semelhante de sp:SymmetricBinding com os seguintes valores de propriedade:  
+  
+ Token de proteção: X509 do servidor certificado, o modo de inclusão estiver definido como .../IncludeToken/Never  
+Proteção de token: False  
+  
+ Todo cabeçalho e corpo assinaturas: True  
+  
+ Ordem de proteção: SignBeforeEncrypt  
+  
+ Criptografar assinatura: True  
+  
+ Os modos de autenticação acima diferem apenas por tokens de suporte que eles usam. AnonymousForCertificate não tem todos os tokens de suporte, MutualCertificate WSS 1.1 tem o cliente do certificado X509 como um endossando dar suporte a tokens, UserNameForCertificate tem um Token de nome de usuário como um token de suporte assinado e IssuedTokenForCertificate tem o token emitido como um token de suporte de endosso.  
+  
+ Política  
+  
+ Vinculação simétrica  
+  
+```xml  
+<wsp:Policy wsu:Id='SymmetricCert_policy' >  
+  <wsp:ExactlyOne>  
+    <wsp:All>  
+      <sp:SymmetricBinding>  
+        <wsp:Policy>  
+          <sp:ProtectionToken>  
+            <wsp:Policy>  
+              <sp:X509Token   
+sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Never' >  
+                <wsp:Policy>  
+                  <sp:RequireDerivedKeys />   
+                  <sp:RequireThumbprintReference />   
+                  <sp:WssX509V3Token10 />   
+                </wsp:Policy>  
+              </sp:X509Token>  
+            </wsp:Policy>  
+          </sp:ProtectionToken>  
+          <sp:AlgorithmSuite>  
+            <wsp:Policy>  
+              <sp:Basic256 />   
+            </wsp:Policy>  
+          </sp:AlgorithmSuite>  
+          <sp:Layout>  
+            <wsp:Policy>  
+              <sp:Strict />   
+            </wsp:Policy>  
+          </sp:Layout>  
+          <sp:IncludeTimestamp />   
+          <sp:EncryptSignature />   
+          <sp:OnlySignEntireHeadersAndBody />  
+        </wsp:Policy>  
+      </sp:SymmetricBinding>  
+      <!-- Supporting Token Assertions appear here -->  
+      ...  
+      <sp:Wss11>  
+        <wsp:Policy>  
+          <sp:MustSupportRefKeyIdentifier />   
+          <sp:MustSupportRefIssuerSerial />   
+          <sp:MustSupportRefThumbprint />   
+          <sp:MustSupportRefEncryptedKey />   
+          <sp:RequireSignatureConfirmation />   
+        </wsp:Policy>  
+      </sp:Wss11>  
+      <sp:Trust10>  
+        <wsp:Policy>  
+          <sp:MustSupportIssuedTokens />   
+          <sp:RequireClientEntropy />   
+          <sp:RequireServerEntropy />   
+        </wsp:Policy>  
+      </sp:Trust10>  
+      <wsaw:UsingAddressing />   
+    </wsp:All>  
+  </wsp:ExactlyOne>  
+</wsp:Policy>  
+```  
+  
+#### <a name="624-anonymousforcertificate"></a>6.2.4 AnonymousForCertificate  
+ Com esse modo de autenticação o cliente é anônimo e o serviço é autenticado usando um certificado x. 509. A associação usada é uma instância de associação simétrica, conforme descrito em 6.4.2.  
+  
+ Política  
+  
+ Consulte "Política" 6.2.3 acima para obter detalhes de associação  
+  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature  
+ Solicitação  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+  <xenc:EncryptedKey>  
+  ...  
+  </xenc:EncryptedKey>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>  
+```  
+  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemplos de cabeçalho de segurança: EncryptBeforeSign  
+ Solicitação  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+  <xenc:EncryptedKey>  
+  ...  
+  </xenc:EncryptedKey>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <wsse11:SignatureConfirmation />  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+</wsse:Security>  
+```  
+  
+#### <a name="625-usernameforcertificate"></a>6.2.5 UserNameForCertificate  
+ Com esse modo de autenticação o cliente autentica para o serviço usando um Token de nome de usuário que aparece na camada de SOAP como um token de suporte assinado. O serviço autentica o cliente usando um certificado x. 509. A associação usada é uma associação simétrica com o token de proteção sendo uma chave gerada pelo cliente, criptografado com a chave pública do serviço.  
+  
+ Política  
+  
+ Consulte "Política" 6.2.3 acima para obter detalhes de associação  
+  
+ Assinatura de Token de suporte  
+  
+```xml  
+<sp:SignedSupportingTokens>  
+  <wsp:Policy>  
+    <sp:UsernameToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
+      <wsp:Policy>  
+        <sp:WssUsernameToken10 />   
+      </wsp:Policy>  
+    </sp:UsernameToken>  
+  </wsp:Policy>  
+</sp:SignedSupportingTokens>  
+```  
+  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature  
+ Solicitação  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+  <xenc:EncryptedKey>  
+  ...  
+  </xenc:EncryptedKey>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>  
+```  
+  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemplos de cabeçalho de segurança: EncryptBeforeSign  
+ Solicitação  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+  <xenc:EncryptedKey>  
+  ...  
+  </xenc:EncryptedKey>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+</wsse:Security>  
+```  
+  
+#### <a name="626-mutualcertificate-wss-11"></a>6.2.6 MutualCertificate (WSS 1.1)  
+ Com esse modo de autenticação que o cliente autentica com um x. 509 do certificado que aparece na camada de SOAP como um token de suporte de endosso. O serviço também é autenticado usando um certificado x. 509. A associação usada é uma associação simétrica com o token de proteção sendo uma chave gerada pelo cliente, criptografado com a chave pública do serviço.  
+  
+ Política  
+  
+ Consulte a política em 6.2.3 para os detalhes da associação  
+  
+ Endossando o Token de suporte  
+  
+```xml  
+<sp:EndorsingSupportingTokens>  
+  <wsp:Policy>  
+    <sp:X509Token sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
+      <wsp:Policy>  
+        <sp:RequireThumbprintReference />   
+        <sp:WssX509V3Token10 />   
+      </wsp:Policy>  
+    </sp:X509Token>  
+  </wsp:Policy>  
+</sp:EndorsingSupportingTokens>  
+```  
+  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature  
+ Solicitação  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+  <xenc:EncryptedKey>  
+  ...  
+  </xenc:EncryptedKey>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+  <wsse:BinarySecurityToken>  
+  ...  
+  </wsse:BinarySecurityToken>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+  <wsse:BinarySecurityToken>  
+  ...  
+  </wsse:BinarySecurityToken>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>  
+```  
+  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemplos de cabeçalho de segurança: EncryptBeforeSign  
+ Solicitação  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+  <xenc:EncryptedKey>  
+  ...  
+  </xenc:EncryptedKey>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <wsse:BinarySecurityToken>  
+  ...  
+  </wsse:BinarySecurityToken>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+  <xenc:EncryptedKey>  
+  ...  
+  </xenc:EncryptedKey>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <wsse11:SignatureConfirmation />  
+  <wsse11:SignatureConfirmation />  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+</wsse:Security>  
+```  
+  
+#### <a name="627-issuedtokenforcertificate"></a>6.2.7 IssuedTokenForCertificate  
+ Com essa autenticação o cliente não autenticar para o serviço, como tal, mas em vez disso, o modo apresenta um token emitido por um STS e comprova conhecimento de uma chave compartilhada. O token emitido é exibido na camada de SOAP como um token de suporte de endosso. O serviço autentica o cliente usando um certificado x. 509. A associação usada é uma associação simétrica com o token de proteção sendo uma chave gerada pelo cliente, criptografado com a chave pública do serviço.  
+  
+ Política  
+  
+ Consulte a política em 6.2.3 acima para obter detalhes de associação  
+  
+ Endossando o Token de suporte  
+  
+```xml  
+<sp:EndorsingSupportingTokens>  
+  <wsp:Policy>  
+    <sp:IssuedToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
+      <sp:RequestSecurityTokenTemplate>  
+        <wst:KeyType>  
+http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey  
+       </wst:KeyType>  
+     </sp:RequestSecurityTokenTemplate>  
+     <wsp:Policy>  
+       <sp:RequireDerivedKeys />   
+       <sp:RequireInternalReference />   
+     </wsp:Policy>  
+   </sp:IssuedToken>  
+  </wsp:Policy>  
+</sp:EndorsingSupportingTokens>  
+```  
+  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature  
+ Solicitação  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+  <xenc:EncryptedKey>  
+  ...  
+  </xenc:EncryptedKey>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+  <saml:Assertion>  
+  ...  
+  </saml:Assertion>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>  
+```  
+  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemplos de cabeçalho de segurança: EncryptBeforeSign  
+ Solicitação  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+  <xenc:EncryptedKey>  
+  ...  
+  </xenc:EncryptedKey>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <saml:Assertion>  
+  ...  
+  </saml:Assertion>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp u:Id="_0">  
+  ...  
+  </wsu:Timestamp>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <wssc:DerivedKeyToken>  
+  ...  
+  </wssc:DerivedKeyToken>  
+  <wsse11:SignatureConfirmation />  
+  <wsse11:SignatureConfirmation />  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+</wsse:Security>  
+```  
+  
+## <a name="63-kerberos"></a>6.3 Kerberos  
+ Com esse modo de autenticação o cliente autentica para o serviço usando um tíquete Kerberos. Esse tíquete mesmo também fornece autenticação de servidor. A associação usada é uma associação simétrica com as seguintes propriedades;  
+  
+ Token de proteção: Tíquete Kerberos, o modo de inclusão estiver definido como .../IncludeToken/Once  
+Proteção de token: False  
+  
+ Todo cabeçalho e corpo assinaturas: True  
+  
+ Ordem de proteção: SignBeforeEncrypt  
+  
+ Criptografar assinatura: True  
+  
+ Política  
+  
+```xml  
+<wsp:Policy wsu:Id='Kerberos_policy' >  
+  <wsp:ExactlyOne>  
+    <wsp:All>  
+      <sp:SymmetricBinding>  
+        <wsp:Policy>  
+          <sp:ProtectionToken>  
+            <wsp:Policy>  
+              <sp:KerberosToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Once' >  
+                <wsp:Policy>  
+                  <sp:RequireDerivedKeys />   
+                  <sp:WssGssKerberosV5ApReqToken11 />   
+                </wsp:Policy>  
+              </sp:KerberosToken>  
+            </wsp:Policy>  
+          </sp:ProtectionToken>  
+          <sp:AlgorithmSuite>  
+            <wsp:Policy>  
+              <sp:Basic128 />   
+            </wsp:Policy>  
+          </sp:AlgorithmSuite>  
+          <sp:Layout>  
+            <wsp:Policy>  
+              <sp:Strict />   
+            </wsp:Policy>  
+          </sp:Layout>  
+          <sp:IncludeTimestamp />   
+          <sp:EncryptSignature />   
+          <sp:OnlySignEntireHeadersAndBody />   
+        </wsp:Policy>  
+      </sp:SymmetricBinding>  
+      <sp:Wss11>  
+        <wsp:Policy>  
+          <sp:MustSupportRefKeyIdentifier />   
+          <sp:MustSupportRefIssuerSerial />   
+          <sp:MustSupportRefThumbprint />   
+          <sp:MustSupportRefEncryptedKey />   
+        </wsp:Policy>  
+      </sp:Wss11>  
+      <sp:Trust10>  
+        <wsp:Policy>  
+          <sp:MustSupportIssuedTokens />   
+          <sp:RequireClientEntropy />   
+          <sp:RequireServerEntropy />   
+        </wsp:Policy>  
+      </sp:Trust10>  
+      <wsaw:UsingAddressing />   
+    </wsp:All>  
+  </wsp:ExactlyOne>  
+</wsp:Policy>  
+```  
+  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature  
+ Solicitação  
+  
+```xml  
+<wsse:Security s:mustUnderstand="1">  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsse:BinarySecurityToken>  
+  ...  
+  </wsse:BinarySecurityToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security s:mustUnderstand="1">  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>    
+```  
+  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemplos de cabeçalho de segurança: EncryptBeforeSign  
+ Solicitação  
+  
+```xml  
+<wsse:Security>  
+TBD  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security>  
+TBD  
+</wsse:Security>  
+```  
+  
+#### <a name="64-issuedtoken"></a>6.4 IssuedToken  
+ Com esse modo de autenticação que o cliente não autenticar para o serviço, assim, em vez disso, o cliente apresenta um token emitido por um STS e comprova conhecimento de uma chave compartilhada. O serviço não é autenticado para o cliente, como tal, em vez disso, o STS criptografa a chave compartilhada como parte do token emitido, de modo que apenas o serviço possa descriptografar a chave. A associação usada é simétrica associação com as seguintes propriedades;  
+  
+ Modo de inclusão de Token de proteção: O Token emitido, é definido como .../IncludeToken/AlwaysToRecipient  
+Proteção de token: False  
+  
+ Todo cabeçalho e corpo assinaturas: True  
+  
+ Ordem de proteção: SignBeforeEncrypt  
+  
+ Criptografar assinatura: True  
+  
+ Política  
+  
+```xml  
+<wsp:Policy wsu:Id='CustomBinding_ISimple3_policy' >  
+  <wsp:ExactlyOne>  
+    <wsp:All>  
+      <sp:SymmetricBinding>  
+        <wsp:Policy>  
+          <sp:ProtectionToken>  
+            <wsp:Policy>  
+              <sp:IssuedToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
+                <sp:RequestSecurityTokenTemplate>  
+                  <wst:KeyType>  
+http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey  
+                  </wst:KeyType>   
+                </sp:RequestSecurityTokenTemplate>  
+                <wsp:Policy>  
+                  <sp:RequireDerivedKeys />   
+                  <sp:RequireInternalReference />   
+                </wsp:Policy>  
+              </sp:IssuedToken>  
+            </wsp:Policy>  
+          </sp:ProtectionToken>  
+          <sp:AlgorithmSuite>  
+            <wsp:Policy>  
+              <sp:Basic256 />   
+            </wsp:Policy>  
+          </sp:AlgorithmSuite>  
+          <sp:Layout>  
+            <wsp:Policy>  
+              <sp:Strict />   
+            </wsp:Policy>  
+          </sp:Layout>  
+          <sp:IncludeTimestamp />   
+          <sp:EncryptSignature />   
+          <sp:OnlySignEntireHeadersAndBody />   
+        </wsp:Policy>  
+      </sp:SymmetricBinding>  
+      <sp:Wss11>  
+        <wsp:Policy>  
+          <sp:MustSupportRefKeyIdentifier />   
+          <sp:MustSupportRefIssuerSerial />   
+          <sp:MustSupportRefThumbprint />   
+          <sp:MustSupportRefEncryptedKey />   
+        </wsp:Policy>  
+      </sp:Wss11>  
+      <sp:Trust10>  
+        <wsp:Policy>  
+          <sp:MustSupportIssuedTokens />   
+          <sp:RequireClientEntropy />   
+          <sp:RequireServerEntropy />   
+        </wsp:Policy>  
+      </sp:Trust10>  
+      <wsaw:UsingAddressing />   
+    </wsp:All>  
+  </wsp:ExactlyOne>  
+</wsp:Policy>  
+```  
+  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature  
+ Solicitação  
+  
+```xml  
+<wsse:Security s:mustUnderstand="1">  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <saml:Assertion>  
+  ...  
+  </saml:Assertion>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security s:mustUnderstand="1">  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>    
+```  
+  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemplos de cabeçalho de segurança: EncryptBeforeSign  
+ Solicitação  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <saml:Assertion>  
+  ...  
+  </saml:Assertion>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+</wsse:Security>  
+```  
+  
+### <a name="65-using-sslnegotiated-for-service-authentication"></a>6.5 usando SslNegotiated para autenticação de serviço  
+ Esta seção descreve um grupo de modos de autenticação que usa uma associação simétrica com o token de proteção sendo um Token de contexto de segurança por WS-SecureConversation (WS-SC) cujo valor da chave é negociado executando o protocolo TLS sobre WS-Trust (WS-F) primeira / Mensagens RSTR. Detalhes da implementação de handshake TLS usando o WS-Trust são descritos em TLSNEGO. Veja os exemplos de mensagem, vamos pressupor que SCT com um contexto de segurança associadas já está estabelecida por meio de um handshake.  
+  
+ A associação usada é uma associação simétrica com as seguintes propriedades;  
+  
+ Token de proteção: SslContextToken, modo de inclusão estiver definido como .../IncludeToken/Never  
+Proteção de token: False  
+  
+ Todo cabeçalho e corpo assinaturas: True  
+  
+ Ordem de proteção: SignBeforeEncrypt  
+  
+ Criptografar assinatura: True  
+  
+#### <a name="651-policy-for-sslnegotiated-service-authentication"></a>6.5.1 política de para autenticação do serviço SslNegotiated  
+ Política para todos os modos de autenticação nesta seção são semelhante e diferem apenas por específicas de suporte assinado ou endossando tokens usados.  
+  
+```xml  
+<wsp:Policy wsu:Id='SslNegotiated_policy' >  
+  <wsp:ExactlyOne>  
+    <wsp:All>  
+      <sp:SymmetricBinding>  
+        <wsp:Policy>  
+          <sp:ProtectionToken>  
+            <wsp:Policy>  
+              <mssp:SslContextToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' />  
+                <wsp:Policy>  
+                  <sp:RequireDerivedKeys />   
+                </wsp:Policy>  
+              </mssp:SslContextToken>  
+            </wsp:Policy>  
+          </sp:ProtectionToken>  
+          <sp:AlgorithmSuite>  
+            <wsp:Policy>  
+              <sp:Basic256 />   
+            </wsp:Policy>  
+          </sp:AlgorithmSuite>  
+          <sp:Layout>  
+            <wsp:Policy>  
+              <sp:Strict />   
+            </wsp:Policy>  
+          </sp:Layout>  
+          <sp:IncludeTimestamp />   
+          <sp:EncryptSignature />   
+          <sp:OnlySignEntireHeadersAndBody />   
+        </wsp:Policy>  
+      </sp:SymmetricBinding>  
+      <!-- Supporting token assertions go here -->  
+      ..  
+      <sp:Wss11>   
+        <wsp:Policy>  
+          <sp:MustSupportRefKeyIdentifier />   
+          <sp:MustSupportRefIssuerSerial />   
+          <sp:MustSupportRefThumbprint />   
+          <sp:MustSupportRefEncryptedKey />   
+        </wsp:Policy>  
+      </sp:Wss11>  
+      <sp:Trust10>  
+        <wsp:Policy>  
+          <sp:MustSupportIssuedTokens />   
+          <sp:RequireClientEntropy />   
+          <sp:RequireServerEntropy />   
+        </wsp:Policy>  
+      </sp:Trust10>  
+      <wsaw:UsingAddressing />   
+    </wsp:All>  
+  </wsp:ExactlyOne>  
+</wsp:Policy>  
+```  
+  
+#### <a name="652-anonymousforsslnegotiated"></a>6.5.2 AnonymousForSslNegotiated  
+ Com esse modo de autenticação o cliente é anônimo e o serviço é autenticado usando um certificado x. 509. A associação usada é uma instância de associação simétrica, conforme descrito em 6.5.1 acima.  
+  
+ Política  
+  
+ Consulte a política em 6.5.1 acima para obter detalhes de associação.  
+  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature  
+ Solicitação  
+  
+```xml  
+<wsse:Security s:mustUnderstand="1">  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:SecurityContextToken>  
+  ...  
+  </wsc:SecurityContextToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security s:mustUnderstand="1">  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>    
+```  
+  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemplos de cabeçalho de segurança: EncryptBeforeSign  
+ Solicitação  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:SecurityContextToken>  
+  ...  
+  </wsc:SecurityContextToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+</wsse:Security>  
+```  
+  
+#### <a name="653-usernameforsslnegotiated"></a>6.5.3 UserNameForSslNegotiated  
+ Com essa autenticação modo que é o cliente autentica usando um Token de nome de usuário que aparece na camada de SOAP como um token de suporte assinado. O serviço é autenticado usando um certificado x. 509. A associação usada é uma instância de associação simétrica, conforme descrito em 6.5.1.  
+  
+ Política  
+  
+ Consulte a seção 6.5.1 acima para obter detalhes de associação  
+  
+ Assinatura de Token de suporte  
+  
+```xml  
+<sp:SignedSupportingTokens>  
+  <wsp:Policy>  
+    <sp:UsernameToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
+      <wsp:Policy>  
+        <sp:WssUsernameToken10 />   
+      </wsp:Policy>  
+    </sp:UsernameToken>  
+  </wsp:Policy>  
+</sp:SignedSupportingTokens>  
+```  
+  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature  
+ Solicitação  
+  
+```xml  
+<wsse:Security s:mustUnderstand="1">  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:SecurityContextToken>  
+  ...  
+  </wsc:SecurityContextToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security s:mustUnderstand="1">  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>    
+```  
+  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemplos de cabeçalho de segurança: EncryptBeforeSign  
+ Solicitação  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:SecurityContextToken>  
+  ...  
+  </wsc:SecurityContextToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+</wsse:Security>  
+```  
+  
+#### <a name="654-issuedtokenforsslnegotiated"></a>6.5.4 IssuedTokenForSslNegotiated  
+ Com essa autenticação o cliente não autenticar para o serviço, como tal, mas em vez disso, o modo apresenta um token emitido por um STS e comprova conhecimento de uma chave compartilhada. O token emitido é exibido na camada de SOAP como um token de suporte de endosso. O serviço é autenticado usando um certificado x. 509. A associação usada é uma instância de associação simétrica, conforme descrito em 6.5.1 acima.  
+  
+ Política  
+  
+ Consulte a seção 6.5.1 acima para obter detalhes de associação  
+  
+ Endossando o Token de suporte  
+  
+```xml  
+<sp:EndorsingSupportingTokens>  
+  <wsp:Policy>  
+    <sp:IssuedToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
+      <sp:RequestSecurityTokenTemplate>  
+        <wst:KeyType>  
+http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey  
+        </wst:KeyType>   
+      </sp:RequestSecurityTokenTemplate>  
+      <wsp:Policy>  
+        <sp:RequireDerivedKeys />   
+        <sp:RequireInternalReference />   
+      </wsp:Policy>  
+    </sp:IssuedToken>  
+  </wsp:Policy>  
+</sp:EndorsingSupportingTokens>  
+```  
+  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature  
+ Solicitação  
+  
+```xml  
+<wsse:Security s:mustUnderstand="1">  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:SecurityContextToken>  
+  ...  
+  </wsc:SecurityContextToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+  <saml:Assertion>  
+  ...  
+  </saml:Assertion>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security s:mustUnderstand="1">  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>    
+```  
+  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemplos de cabeçalho de segurança: EncryptBeforeSign  
+ Solicitação  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:SecurityContextToken>  
+  ...  
+  </wsc:SecurityContextToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <saml:Assertion>  
+  ...  
+  </saml:Assertion>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsse11:SignatureConfirmation />  
+  <wsse11:SignatureConfirmation />  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+</wsse:Security>  
+```  
+  
+#### <a name="655-mutualsslnegotiated"></a>6.5.5 MutualSslNegotiated  
+ Com esse modo de autenticação o cliente e o serviço de autenticação usando certificados x. 509. A associação usada é uma instância de associação simétrica, conforme descrito em 6.5.1 acima.  
+  
+ Política  
+  
+ Consulte a seção 6.5.1 acima para obter detalhes de associação  
+  
+ Endossando o Token de suporte  
+  
+```xml  
+<sp:EndorsingSupportingTokens>  
+  <wsp:Policy>  
+    <sp:X509Token sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
+      <wsp:Policy>  
+        <sp:RequireThumbprintReference />   
+        <sp:WssX509V3Token10 />   
+      </wsp:Policy>  
+    </sp:X509Token>  
+  </wsp:Policy>  
+</sp:EndorsingSupportingTokens>  
+```  
+  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature  
+ Solicitação  
+  
+```xml  
+<wsse:Security s:mustUnderstand="1">  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:SecurityContextToken>  
+  ...  
+  </wsc:SecurityContextToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security s:mustUnderstand="1">  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>    
+```  
+  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemplos de cabeçalho de segurança: EncryptBeforeSign  
+ Solicitação  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:SecurityContextToken>  
+  ...  
+  </wsc:SecurityContextToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+</wsse:Security>  
+```  
+  
+### <a name="66-sspinegotiated"></a>6.6 SspiNegotiated  
+ Com esse modo de autenticação, um protocolo de negociação é usado para realizar a autenticação de cliente e servidor. Kerberos é usado, se possível, caso contrário NTLM. A associação usada é uma associação simétrica com as seguintes propriedades;  
+  
+ Token de proteção: SpnegoContextToken, modo de inclusão estiver definido como .../IncludeToken/AlwaysToRecipient  
+Proteção de token: False  
+  
+ Todo cabeçalho e corpo assinaturas: True  
+  
+ Ordem de proteção: SignBeforeEncrypt  
+  
+ Criptografar assinatura: True  
+  
+ Política  
+  
+```xml  
+<wsp:Policy wsu:Id='CustomBinding_ISimple13_policy' >  
+  <wsp:ExactlyOne>  
+    <wsp:All>  
+      <sp:SymmetricBinding>  
+        <wsp:Policy>  
+          <sp:ProtectionToken>  
+            <wsp:Policy>  
+              <sp:SpnegoContextToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
+                <wsp:Policy>  
+                  <sp:RequireDerivedKeys />   
+                </wsp:Policy>  
+              </sp:SpnegoContextToken>  
+            </wsp:Policy>  
+          </sp:ProtectionToken>  
+          <sp:AlgorithmSuite>  
+            <wsp:Policy>  
+              <sp:Basic256 />   
+            </wsp:Policy>  
+          </sp:AlgorithmSuite>  
+          <sp:Layout>  
+            <wsp:Policy>  
+              <sp:Strict />   
+            </wsp:Policy>  
+          </sp:Layout>  
+          <sp:IncludeTimestamp />   
+          <sp:EncryptSignature />   
+          <sp:OnlySignEntireHeadersAndBody />   
+        </wsp:Policy>  
+      </sp:SymmetricBinding>  
+      <sp:Wss11>  
+        <wsp:Policy>  
+          <sp:MustSupportRefKeyIdentifier />   
+          <sp:MustSupportRefIssuerSerial />   
+          <sp:MustSupportRefThumbprint />   
+          <sp:MustSupportRefEncryptedKey />   
+        </wsp:Policy>  
+      </sp:Wss11>  
+      <sp:Trust10>  
+        <wsp:Policy>  
+          <sp:MustSupportIssuedTokens />   
+          <sp:RequireClientEntropy />   
+          <sp:RequireServerEntropy />   
+        </wsp:Policy>  
+      </sp:Trust10>  
+      <wsaw:UsingAddressing />   
+    </wsp:All>  
+  </wsp:ExactlyOne>  
+</wsp:Policy>  
+```  
+  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature  
+ Solicitação  
+  
+```xml  
+<wsse:Security s:mustUnderstand="1">  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:SecurityContextToken>  
+  ...  
+  </wsc:SecurityContextToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security s:mustUnderstand="1">  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>    
+```  
+  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemplos de cabeçalho de segurança: EncryptBeforeSign  
+ Solicitação  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:SecurityContextToken>  
+  ...  
+  </wsc:SecurityContextToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security>  
+<wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+</wsse:Security>  
+```  
+  
+### <a name="67-secureconversation"></a>6.7 SecureConversation  
+ A associação usada é uma associação simétrica com o token de proteção sendo um SCT por WS-SecureConversation (WS-SC). O SCT é negociada com o WS-Trust (WS-Trust) ou WS-SecureConversation (WS-SC) acordo com uma associação aninhada, que também é uma associação simétrica que usa um protocolo de negociação. O protocolo de negociação usará o Kerberos para realizar a autenticação de cliente e servidor se possível. Se Kerberos não pode ser usado, ele retornará a NTLM.  
+  
+ Política  
+  
+```xml  
+<wsp:Policy wsu:Id='SecureConversation_policy' >  
+  <wsp:ExactlyOne>  
+    <wsp:All>  
+      <sp:SymmetricBinding>  
+        <wsp:Policy>  
+          <sp:ProtectionToken>  
+            <wsp:Policy>  
+              <sp:SecureConversationToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
+                <wsp:Policy>  
+                  <sp:RequireDerivedKeys />   
+                  <sp:BootstrapPolicy>  
+                    <wsp:Policy>  
+                      <sp:SignedParts>  
+                        <sp:Body />   
+                        <sp:Header Name='To' Namespace='http://www.w3.org/2005/08/addressing' />   
+                        <sp:Header Name='From' Namespace='http://www.w3.org/2005/08/addressing' />   
+                        <sp:Header Name='FaultTo' Namespace='http://www.w3.org/2005/08/addressing' />   
+                        <sp:Header Name='ReplyTo' Namespace='http://www.w3.org/2005/08/addressing' />   
+                        <sp:Header Name='MessageID' Namespace='http://www.w3.org/2005/08/addressing' />   
+                        <sp:Header Name='RelatesTo' Namespace='http://www.w3.org/2005/08/addressing' />   
+                        <sp:Header Name='Action' Namespace='http://www.w3.org/2005/08/addressing' />   
+                      </sp:SignedParts>  
+                      <sp:EncryptedParts>  
+                        <sp:Body />   
+                      </sp:EncryptedParts>  
+                      <sp:SymmetricBinding>  
+                        <wsp:Policy>  
+                          <sp:ProtectionToken>  
+                            <wsp:Policy>  
+                              <sp:SpnegoContextToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' >  
+                                <wsp:Policy>  
+                                  <sp:RequireDerivedKeys />   
+                                </wsp:Policy>  
+                              </sp:SpnegoContextToken>  
+                            </wsp:Policy>  
+                          </sp:ProtectionToken>  
+                          <sp:AlgorithmSuite>  
+                            <wsp:Policy>  
+                              <sp:Basic256 />   
+                            </wsp:Policy>  
+                          </sp:AlgorithmSuite>  
+                          <sp:Layout>  
+                            <wsp:Policy>  
+                              <sp:Strict />   
+                            </wsp:Policy>  
+                          </sp:Layout>  
+                          <sp:IncludeTimestamp />   
+                          <sp:EncryptSignature />   
+                          <sp:OnlySignEntireHeadersAndBody />   
+                        </wsp:Policy>  
+                      </sp:SymmetricBinding>  
+                      <sp:Wss11>  
+                        <wsp:Policy>  
+                          <sp:MustSupportRefKeyIdentifier />   
+                          <sp:MustSupportRefIssuerSerial />   
+                          <sp:MustSupportRefThumbprint />   
+                          <sp:MustSupportRefEncryptedKey />   
+                        </wsp:Policy>  
+                      </sp:Wss11>  
+                      <sp:Trust10>  
+                        <wsp:Policy>  
+                          <sp:MustSupportIssuedTokens />   
+                          <sp:RequireClientEntropy />   
+                          <sp:RequireServerEntropy />   
+                        </wsp:Policy>  
+                      </sp:Trust10>  
+                    </wsp:Policy>  
+                  </sp:BootstrapPolicy>  
+                </wsp:Policy>  
+              </sp:SecureConversationToken>  
+            </wsp:Policy>  
+          </sp:ProtectionToken>  
+          <sp:AlgorithmSuite>  
+            <wsp:Policy>  
+              <sp:Basic256 />   
+            </wsp:Policy>  
+          </sp:AlgorithmSuite>  
+          <sp:Layout>  
+            <wsp:Policy>  
+              <sp:Strict />   
+            </wsp:Policy>  
+          </sp:Layout>  
+          <sp:IncludeTimestamp />   
+          <sp:EncryptSignature />   
+          <sp:OnlySignEntireHeadersAndBody />   
+        </wsp:Policy>  
+      </sp:SymmetricBinding>  
+      <sp:Wss11>  
+        <wsp:Policy>  
+          <sp:MustSupportRefKeyIdentifier />   
+          <sp:MustSupportRefIssuerSerial />   
+          <sp:MustSupportRefThumbprint />   
+          <sp:MustSupportRefEncryptedKey />   
+        </wsp:Policy>  
+      </sp:Wss11>  
+      <sp:Trust10>  
+        <wsp:Policy>  
+          <sp:MustSupportIssuedTokens />   
+          <sp:RequireClientEntropy />   
+          <sp:RequireServerEntropy />   
+        </wsp:Policy>  
+      </sp:Trust10>  
+      <wsaw:UsingAddressing />   
+    </wsp:All>  
+  </wsp:ExactlyOne>  
+</wsp:Policy>  
+```  
+  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature  
+ Solicitação  
+  
+```xml  
+<wsse:Security s:mustUnderstand="1">  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:SecurityContextToken>  
+  ...  
+  </wsc:SecurityContextToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security s:mustUnderstand="1">  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+  <xenc:EncryptedData>  
+  ...  
+  </xenc:EncryptedData>  
+</wsse:Security>    
+```  
+  
+### <a name="security-header-examples-encryptbeforesign"></a>Exemplos de cabeçalho de segurança: EncryptBeforeSign  
+ Solicitação  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:SecurityContextToken>  
+  ...  
+  </wsc:SecurityContextToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+</wsse:Security>  
+```  
+  
+ Resposta  
+  
+```xml  
+<wsse:Security>  
+  <wsu:Timestamp>  
+  ...  
+  </wsu:Timestamp>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <wsc:DerivedKeyToken>  
+  ...  
+  </wsc:DerivedKeyToken>  
+  <ds:Signature>  
+  ...  
+  </ds:Signature>  
+  <xenc:ReferenceList>  
+  ...  
+  </xenc:ReferenceList>  
+</wsse:Security>  
+```

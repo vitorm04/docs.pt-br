@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - IPv6, improvements
 - IPv4
@@ -19,18 +14,17 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7901084f38099d74f3bcde086342bd3c90b34348
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e8ac63cae9d70f0249533848fa472da77f04b807
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# Protocolo IP versão 6
+# <a name="internet-protocol-version-6"></a>Protocolo IP versão 6
 O protocolo IP versão 6 (IPv6) é um novo pacote de protocolos padrão para a camada de rede da Internet. O IPv6 foi projetado para resolver muitos dos problemas da versão atual do pacote de protocolos IP (conhecido como IPv4) relacionados ao o esgotamento de endereços, a segurança, a configuração automática, a necessidade de extensibilidade e outros. O IPv6 expande os recursos da Internet para habilitar novos tipos de aplicativos, inclusive aplicativos móveis e de ponto a ponto. Estes são os principais problemas do protocolo IPv4 atual:  
   
 -   Rápido esgotamento do espaço de endereço.  
@@ -59,7 +53,7 @@ O protocolo IP versão 6 (IPv6) é um novo pacote de protocolos padrão para a c
   
  Para obter mais informações, consulte [Endereçamento IPv6](../../../docs/framework/network-programming/ipv6-addressing.md), [Roteamento IPv6](../../../docs/framework/network-programming/ipv6-routing.md), [Configuração automática de IPv6](../../../docs/framework/network-programming/ipv6-auto-configuration.md), [Habilitando e desabilitando o IPv6](../../../docs/framework/network-programming/enabling-and-disabling-ipv6.md) e [Como modificar o arquivo de configuração do computador para habilitar o suporte a IPv6](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md).  
   
-## Referências  
+## <a name="references"></a>Referências  
  A seguir, documentos RFC selecionados que podem ser encontrados no site da Internet Engineering Task Force ([http://www.ietf.org](http://www.ietf.org/)):  
   
 -   RFC 1287, voltado a arquitetura de Internet futura.  
@@ -72,8 +66,7 @@ O protocolo IP versão 6 (IPv6) é um novo pacote de protocolos padrão para a c
   
  Você também pode encontrar informações relacionadas ao IPv6 na [Área IPv6 na Technet](http://go.microsoft.com/fwlink/?LinkID=179658).  
   
-## Consulte também  
- [Amostra de soquetes IPv6](http://go.microsoft.com/fwlink/?LinkID=179568)   
- [Amostras de programação de rede](../../../docs/framework/network-programming/network-programming-samples.md)   
+## <a name="see-also"></a>Consulte também  
+ [Amostra de soquetes IPv6](http://go.microsoft.com/fwlink/?LinkID=179568)  
+ [Amostras de programação de rede](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Soquetes](../../../docs/framework/network-programming/sockets.md)
-

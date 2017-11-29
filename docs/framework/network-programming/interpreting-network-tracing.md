@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - TraceMode attribute
 - hexidecimal data, network tracing output
@@ -20,16 +15,15 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e8c451a84117208457942d1c3794628963a49e93
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: deb191f18bda5b00ef4a967f50e8e983289882a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="interpreting-network-tracing"></a>Interpretando o rastreamento de rede
 Quando o rastreamento de rede está habilitado, você pode usar o rastreamento para capturar as chamadas que seu aplicativo faz para membros de classe <xref:System.Net> diversos. A saída dessas chamadas pode ser semelhante aos exemplos a seguir.  
@@ -60,7 +54,6 @@ Quando o rastreamento de rede está habilitado, você pode usar o rastreamento p
  `Connection: Close`  
   
 ## <a name="see-also"></a>Consulte também  
- [Habilitando o rastreamento de rede](../../../docs/framework/network-programming/enabling-network-tracing.md)   
- [Como configurar o rastreamento de rede](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)   
+ [Habilitar o rastreamento de rede](../../../docs/framework/network-programming/enabling-network-tracing.md)  
+ [Como configurar o rastreamento de rede](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
  [Rastreamento de rede no .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
-

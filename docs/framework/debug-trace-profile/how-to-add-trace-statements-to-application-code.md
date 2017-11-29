@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - tracing [.NET Framework], conditional writes based on switches
 - trace statements
@@ -23,16 +20,15 @@ helpviewer_keywords:
 - trace switches, conditional writes based on switches
 - WriteIf method
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: adb4290b517230f26330cf3b4d94a7b3bc7fbf88
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 5dd46da24c379a7900dff0dc482577195f5f4c23
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Como adicionar instruções de rastreamento ao código de um aplicativo
 Os métodos usados com mais frequência para rastreamento são os métodos para gravar a saída em ouvintes: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert** e **Fail**. Esses métodos podem ser divididos em duas categorias: **Write**, **WriteLine**, and **Fail** emitem a saída incondicionalmente, enquanto **WriteIf**, **WriteLineIf** e **Assert** testam uma condição booliana e gravam ou não com base no valor da condição. **WriteIf** e **WriteLineIf** emitirão a saída se a condição for `true` e **Assert** emitirá a saída se a condição for `false`.  
@@ -84,25 +80,24 @@ Os métodos usados com mais frequência para rastreamento são os métodos para 
 1.  Chame o método <xref:System.Diagnostics.Trace.Assert%2A>.  
   
     ```vb  
-    Dim I As Integer = 4  
-    Trace.Assert(I = 5, "I is not equal to 5.")  
+    Dim i As Integer = 4  
+    Trace.Assert(i = 5, "i is not equal to 5.")  
     ```  
   
     ```csharp  
-    int I = 4;  
-    System.Diagnostics.Trace.Assert(I == 5, "I is not equal to 5.");  
+    int i = 4;  
+    System.Diagnostics.Trace.Assert(i == 5, "i is not equal to 5.");  
     ```  
   
     > [!NOTE]
-    >  Use **Assert** com o rastreamento e a depuração. Este exemplo gera a pilha de chamadas para qualquer ouvinte da coleção **Listeners**. Para obter mais informações, consulte [Declarações em código gerenciado](/visualstudio/debugger/assertions-in-managed-code) e <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>.  
+    >  Use **Assert** com o rastreamento e a depuração. Este exemplo gera a pilha de chamadas para qualquer ouvinte da coleção **Listeners**. Para obter mais informações, consulte [Declarações em código gerenciado](/visualstudio/debugger/assertions-in-managed-code) e <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Diagnostics.Debug.WriteIf%2A?displayProperty=fullName>   
- <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=fullName>   
- <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=fullName>   
- <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=fullName>   
- [Rastreando e instrumentando aplicativos](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)   
- [Como criar, inicializar e configurar opções de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)   
- [Opções de rastreamento](../../../docs/framework/debug-trace-profile/trace-switches.md)   
+ <xref:System.Diagnostics.Debug.WriteIf%2A?displayProperty=nameWithType>  
+ <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>  
+ <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>  
+ <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>  
+ [Rastreando e instrumentando aplicativos](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
+ [Como: criar, inicializar e configurar opções de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
+ [Opções de rastreamento](../../../docs/framework/debug-trace-profile/trace-switches.md)  
  [Ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-
