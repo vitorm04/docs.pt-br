@@ -1,51 +1,34 @@
 ---
-title: 'Como: atribuir uma matriz a outra matriz (Visual Basic) | Documentos do Microsoft'
+title: Como atribuir uma matriz a outra matriz (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - covariance, arrays
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fe97ec82205d89b18532758c93c719e4b30a335d
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 0dd2d678bbfdeaa6b12b5b5a4f69d0fbca8c1944
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Como atribuir uma matriz a outra matriz (Visual Basic)
-Como matrizes são objetos, você pode usá-los em instruções de atribuição como outros tipos de objeto. Uma variável de matriz contém um ponteiro para os dados que constituem os elementos da matriz e as informações de posição e comprimento, e uma atribuição copia somente esse ponteiro.  
+# <a name="how-to-assign-one-array-to-another-array-visual-basic"></a><span data-ttu-id="861dd-102">Como atribuir uma matriz a outra matriz (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="861dd-102">How to: Assign One Array to Another Array (Visual Basic)</span></span>
+<span data-ttu-id="861dd-103">Como matrizes são objetos, você pode usá-los em instruções de atribuição como outros tipos de objeto.</span><span class="sxs-lookup"><span data-stu-id="861dd-103">Because arrays are objects, you can use them in assignment statements like other object types.</span></span> <span data-ttu-id="861dd-104">Uma variável de matriz contém um ponteiro para os dados que constituem os elementos da matriz e as informações de classificação e comprimento, e uma atribuição copia somente esse ponteiro.</span><span class="sxs-lookup"><span data-stu-id="861dd-104">An array variable holds a pointer to the data constituting the array elements and the rank and length information, and an assignment copies only this pointer.</span></span>  
   
-### <a name="to-assign-one-array-to-another-array"></a>Para atribuir uma matriz a outra matriz  
+### <a name="to-assign-one-array-to-another-array"></a><span data-ttu-id="861dd-105">Para atribuir uma matriz a outra matriz</span><span class="sxs-lookup"><span data-stu-id="861dd-105">To assign one array to another array</span></span>  
   
-1.  Verifique se as duas matrizes têm a mesma classificação (número de dimensões) e tipos de dados de elemento compatíveis.  
+1.  <span data-ttu-id="861dd-106">Certifique-se de que as duas matrizes têm a mesma classificação (número de dimensões) e tipos de dados de elemento compatíveis.</span><span class="sxs-lookup"><span data-stu-id="861dd-106">Ensure that the two arrays have the same rank (number of dimensions) and compatible element data types.</span></span>  
   
-2.  Use uma instrução de atribuição padrão para atribuir a matriz de origem para a matriz de destino. Não siga o nome da matriz com parênteses.  
+2.  <span data-ttu-id="861dd-107">Use uma instrução de atribuição padrão para atribuir a matriz de origem para a matriz de destino.</span><span class="sxs-lookup"><span data-stu-id="861dd-107">Use a standard assignment statement to assign the source array to the destination array.</span></span> <span data-ttu-id="861dd-108">Não execute o nome da matriz com parênteses.</span><span class="sxs-lookup"><span data-stu-id="861dd-108">Do not follow either array name with parentheses.</span></span>  
   
     ```  
     Dim formArray() As System.Windows.Forms.Form  
@@ -53,22 +36,22 @@ Como matrizes são objetos, você pode usá-los em instruções de atribuição 
     controlArray = formArray  
     ```  
   
- Quando você atribuir uma matriz a outra, as seguintes regras se aplicam:  
+ <span data-ttu-id="861dd-109">Quando você atribui uma matriz para outro, as seguintes regras se aplicam:</span><span class="sxs-lookup"><span data-stu-id="861dd-109">When you assign one array to another, the following rules apply:</span></span>  
   
--   **Ordens iguais.** A classificação (número de dimensões) da matriz de destino deve ser o mesmo que a matriz de origem.  
+-   <span data-ttu-id="861dd-110">**Ordens iguais.**</span><span class="sxs-lookup"><span data-stu-id="861dd-110">**Equal Ranks.**</span></span> <span data-ttu-id="861dd-111">A classificação (número de dimensões) da matriz de destino deve ser a mesma que a matriz de origem.</span><span class="sxs-lookup"><span data-stu-id="861dd-111">The rank (number of dimensions) of the destination array must be the same as that of the source array.</span></span>  
   
-     Desde que as classificações de duas matrizes forem iguais, as dimensões não precisam ser iguais. O número de elementos em uma determinada dimensão pode mudar durante a atribuição.  
+     <span data-ttu-id="861dd-112">Desde que as classificações de duas matrizes forem iguais, as dimensões não precisam ser iguais.</span><span class="sxs-lookup"><span data-stu-id="861dd-112">Provided the ranks of the two arrays are equal, the dimensions do not need to be equal.</span></span> <span data-ttu-id="861dd-113">O número de elementos em uma determinada dimensão pode mudar durante a atribuição.</span><span class="sxs-lookup"><span data-stu-id="861dd-113">The number of elements in a given dimension can change during assignment.</span></span>  
   
--   **Tipos de elemento.** A ambas as matrizes devem ter *tipo de referência* elementos ou ambas as matrizes devem ter *tipo de valor* elementos. Para obter mais informações, consulte [tipos de valor e tipos de referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+-   <span data-ttu-id="861dd-114">**Tipos de elemento.**</span><span class="sxs-lookup"><span data-stu-id="861dd-114">**Element Types.**</span></span> <span data-ttu-id="861dd-115">Ou ambas as matrizes devem ter *fazem referência a tipo* elementos ou ambas as matrizes devem ter *tipo de valor* elementos.</span><span class="sxs-lookup"><span data-stu-id="861dd-115">Either both arrays must have *reference type* elements or both arrays must have *value type* elements.</span></span> <span data-ttu-id="861dd-116">Para obter mais informações, consulte [tipos de valor e tipos de referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).</span><span class="sxs-lookup"><span data-stu-id="861dd-116">For more information, see [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).</span></span>  
   
-    -   Se as duas matrizes têm elementos de tipo de valor, os tipos de dados do elemento devem ser exatamente o mesmo. A única exceção a isso é que você pode atribuir uma matriz de `Enum` elementos em uma matriz do tipo base do que `Enum`.  
+    -   <span data-ttu-id="861dd-117">Se as duas matrizes têm elementos de tipo de valor, os tipos de dados do elemento devem ser exatamente os mesmos.</span><span class="sxs-lookup"><span data-stu-id="861dd-117">If both arrays have value type elements, the element data types must be exactly the same.</span></span> <span data-ttu-id="861dd-118">A única exceção a isso é que você pode atribuir uma matriz de `Enum` elementos em uma matriz do tipo base do que `Enum`.</span><span class="sxs-lookup"><span data-stu-id="861dd-118">The only exception to this is that you can assign an array of `Enum` elements to an array of the base type of that `Enum`.</span></span>  
   
-    -   Se as duas matrizes têm referência a elementos de tipo, o tipo de elemento de origem deve derivar do tipo de elemento de destino. Quando esse for o caso, as duas matrizes têm a mesma relação de herança que seus elementos. Isso é chamado de *covariância de matriz*.  
+    -   <span data-ttu-id="861dd-119">Se as duas matrizes têm referência a elementos de tipo, o tipo de elemento de origem deve derivar do tipo de elemento de destino.</span><span class="sxs-lookup"><span data-stu-id="861dd-119">If both arrays have reference type elements, the source element type must derive from the destination element type.</span></span> <span data-ttu-id="861dd-120">Quando esse for o caso, as duas matrizes têm a mesma relação de herança que seus elementos.</span><span class="sxs-lookup"><span data-stu-id="861dd-120">When this is the case, the two arrays have the same inheritance relationship as their elements.</span></span> <span data-ttu-id="861dd-121">Isso é chamado de *covariância*.</span><span class="sxs-lookup"><span data-stu-id="861dd-121">This is called *array covariance*.</span></span>  
   
- O compilador relatará um erro se as regras acima são violadas, por exemplo, se os tipos de dados não forem compatíveis ou as classificações são diferentes. Você pode adicionar tratamento de erros em seu código para certificar-se de que as matrizes são compatíveis antes de tentar uma atribuição. Você também pode usar o [operador TryCast](../../../../visual-basic/language-reference/operators/trycast-operator.md) palavra-chave se você quiser evitar lançar uma exceção.  
+ <span data-ttu-id="861dd-122">O compilador relata um erro se as regras acima forem violadas, por exemplo, se os tipos de dados não são compatíveis ou as classificações são diferentes.</span><span class="sxs-lookup"><span data-stu-id="861dd-122">The compiler reports an error if the above rules are violated, for example if the data types are not compatible or the ranks are unequal.</span></span> <span data-ttu-id="861dd-123">Você pode adicionar ao seu código para certificar-se de que as matrizes são compatíveis antes de tentar uma atribuição de tratamento de erros.</span><span class="sxs-lookup"><span data-stu-id="861dd-123">You can add error handling to your code to make sure that the arrays are compatible before attempting an assignment.</span></span> <span data-ttu-id="861dd-124">Você também pode usar o [operador TryCast](../../../../visual-basic/language-reference/operators/trycast-operator.md) palavra-chave se você quiser evitar lançar uma exceção.</span><span class="sxs-lookup"><span data-stu-id="861dd-124">You can also use the [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md) keyword if you want to avoid throwing an exception.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Matrizes](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [Solucionando problemas de matrizes](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)   
- [Instrução Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)   
- [Conversões de Matriz](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+## <a name="see-also"></a><span data-ttu-id="861dd-125">Consulte também</span><span class="sxs-lookup"><span data-stu-id="861dd-125">See Also</span></span>  
+ [<span data-ttu-id="861dd-126">Matrizes</span><span class="sxs-lookup"><span data-stu-id="861dd-126">Arrays</span></span>](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [<span data-ttu-id="861dd-127">Solução de problemas de matrizes</span><span class="sxs-lookup"><span data-stu-id="861dd-127">Troubleshooting Arrays</span></span>](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)  
+ [<span data-ttu-id="861dd-128">Instrução Enum</span><span class="sxs-lookup"><span data-stu-id="861dd-128">Enum Statement</span></span>](../../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [<span data-ttu-id="861dd-129">Conversões de Matriz</span><span class="sxs-lookup"><span data-stu-id="861dd-129">Array Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)

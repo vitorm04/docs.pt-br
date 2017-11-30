@@ -1,128 +1,110 @@
 ---
-title: Recursos do Visual Basic que suportam LINQ | Documentos do Microsoft
+title: Funcionalidades do Visual Basic que suportam LINQ
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3bca15a07a88195589b9c9de5f9842eea42912f1
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 42465dbb168b7961792aec6b3c2bb7ae8f0a3355
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="visual-basic-features-that-support-linq"></a>Funcionalidades do Visual Basic que suportam LINQ
-O nome [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] refere-se à tecnologia no Visual Basic que oferece suporte à sintaxe de consulta e outra linguagem constrói diretamente na linguagem. Com [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)], você não precisa aprender uma nova linguagem para consulta em uma fonte de dados externa. É possível consultar dados em bancos de dados relacionais, armazenamentos XML ou objetos usando o Visual Basic. Essa integração de recursos de consulta para o idioma permite a verificação de tempo de compilação para erros de sintaxe e segurança de tipo. Essa integração também garante que você já sabe a maioria dos quais você precisa saber para escrever consultas sofisticadas, variadas no Visual Basic.  
+# <a name="visual-basic-features-that-support-linq"></a><span data-ttu-id="ecff0-102">Funcionalidades do Visual Basic que suportam LINQ</span><span class="sxs-lookup"><span data-stu-id="ecff0-102">Visual Basic Features That Support LINQ</span></span>
+<span data-ttu-id="ecff0-103">O nome [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] refere-se a tecnologia no Visual Basic que oferece suporte à sintaxe de consulta e outra linguagem constrói diretamente na linguagem.</span><span class="sxs-lookup"><span data-stu-id="ecff0-103">The name [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] refers to technology in Visual Basic that supports query syntax and other language constructs directly in the language.</span></span> <span data-ttu-id="ecff0-104">Com [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], você não precisa aprender uma nova linguagem de consulta em uma fonte de dados externa.</span><span class="sxs-lookup"><span data-stu-id="ecff0-104">With [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], you do not have to learn a new language to query against an external data source.</span></span> <span data-ttu-id="ecff0-105">Você pode consultar dados em bancos de dados relacionais, repositórios XML ou objetos usando o Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="ecff0-105">You can query against data in relational databases, XML stores, or objects by using Visual Basic.</span></span> <span data-ttu-id="ecff0-106">Essa integração de recursos de consulta para o idioma permite a verificação de tempo de compilação para erros de sintaxe e segurança de tipo.</span><span class="sxs-lookup"><span data-stu-id="ecff0-106">This integration of query capabilities into the language enables compile-time checking for syntax errors and type safety.</span></span> <span data-ttu-id="ecff0-107">Essa integração também garante que você já sabe mais do que você precisa saber para gravar consultas sofisticadas, variadas no Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="ecff0-107">This integration also ensures that you already know most of what you have to know to write rich, varied queries in Visual Basic.</span></span>  
   
- As seções a seguir descrevem as construções de linguagem que oferecem suporte a LINQ em detalhes suficientes para que você possa começar a ler a documentação de Introdução, exemplos de código e aplicativos de exemplo. Você também pode clicar nos links para obter explicações mais detalhadas sobre como os recursos de idioma se reúnem para habilitar a consulta integrada à linguagem. Um bom lugar para começar é [passo a passo: escrevendo consultas em Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
+ <span data-ttu-id="ecff0-108">As seções a seguir descrevem as construções de linguagem que oferecem suporte a LINQ em detalhes suficientes para que você possa começar a ler a documentação de Introdução, exemplos de código e aplicativos de exemplo.</span><span class="sxs-lookup"><span data-stu-id="ecff0-108">The following sections describe the language constructs that support LINQ in enough detail to enable you to get started in reading the introductory documentation, code examples, and sample applications.</span></span> <span data-ttu-id="ecff0-109">Você também pode clicar nos links para localizar explicações mais detalhadas sobre como os recursos de idioma são reunidas para habilitar a consulta integrada à linguagem.</span><span class="sxs-lookup"><span data-stu-id="ecff0-109">You can also click the links to find more detailed explanations of how the language features come together to enable language-integrated query.</span></span> <span data-ttu-id="ecff0-110">Um bom lugar para começar é [passo a passo: escrever consultas em Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).</span><span class="sxs-lookup"><span data-stu-id="ecff0-110">A good place to start is [Walkthrough: Writing Queries in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).</span></span>  
   
-## <a name="query-expressions"></a>Expressões de consulta  
- Expressões de consulta no Visual Basic podem ser expressa em uma sintaxe declarativa semelhante do SQL ou XQuery. Em tempo de compilação, a sintaxe de consulta é convertida em chamadas de método para a implementação de um provedor LINQ dos métodos de extensão de operador de consulta padrão. Controle de aplicativos que os operadores de consulta padrão estão no escopo, especificando o namespace apropriado com um `Imports` instrução. Sintaxe para uma expressão de consulta do Visual Basic tem esta aparência:  
+## <a name="query-expressions"></a><span data-ttu-id="ecff0-111">Expressões de consulta</span><span class="sxs-lookup"><span data-stu-id="ecff0-111">Query Expressions</span></span>  
+ <span data-ttu-id="ecff0-112">Expressões de consulta no Visual Basic podem ser expressa em uma sintaxe declarativa semelhante do SQL ou XQuery.</span><span class="sxs-lookup"><span data-stu-id="ecff0-112">Query expressions in Visual Basic can be expressed in a declarative syntax similar to that of SQL or XQuery.</span></span> <span data-ttu-id="ecff0-113">Em tempo de compilação, a sintaxe de consulta é convertida em chamadas de método para a implementação do provedor um LINQ os métodos de extensão de operador de consulta padrão.</span><span class="sxs-lookup"><span data-stu-id="ecff0-113">At compile time, query syntax is converted into method calls to a LINQ provider's implementation of the standard query operator extension methods.</span></span> <span data-ttu-id="ecff0-114">Controle de aplicativos que os operadores de consulta padrão estão no escopo, especificando o namespace apropriado com um `Imports` instrução.</span><span class="sxs-lookup"><span data-stu-id="ecff0-114">Applications control which standard query operators are in scope by specifying the appropriate namespace with an `Imports` statement.</span></span> <span data-ttu-id="ecff0-115">Sintaxe de uma expressão de consulta do Visual Basic tem esta aparência:</span><span class="sxs-lookup"><span data-stu-id="ecff0-115">Syntax for a Visual Basic query expression looks like this:</span></span>  
   
- [!code-vb[VbLINQVbFeatures n º&1;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_1.vb)]  
+ [!code-vb[VbLINQVbFeatures#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_1.vb)]  
   
- Para obter mais informações, consulte [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
+ <span data-ttu-id="ecff0-116">Para obter mais informações, consulte [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).</span><span class="sxs-lookup"><span data-stu-id="ecff0-116">For more information, see [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).</span></span>  
   
-## <a name="implicitly-typed-variables"></a>Variáveis digitadas implicitamente  
- Em vez de especificar explicitamente um tipo quando declarar e inicializar uma variável, você pode habilitar o compilador inferir e atribuir o tipo. Isso é conhecido como *inferência de tipo local*.  
+## <a name="implicitly-typed-variables"></a><span data-ttu-id="ecff0-117">Variáveis de tipadas implícito</span><span class="sxs-lookup"><span data-stu-id="ecff0-117">Implicitly Typed Variables</span></span>  
+ <span data-ttu-id="ecff0-118">Em vez de especificar um tipo explicitamente ao declarar e inicializar uma variável, você pode habilitar o compilador inferir e atribuir o tipo.</span><span class="sxs-lookup"><span data-stu-id="ecff0-118">Instead of explicitly specifying a type when you declare and initialize a variable, you can enable the compiler to infer and assign the type.</span></span> <span data-ttu-id="ecff0-119">Isso é conhecido como *inferência de tipo local*.</span><span class="sxs-lookup"><span data-stu-id="ecff0-119">This is referred to as *local type inference*.</span></span>  
   
- Variáveis cujos tipos são inferidos são fortemente tipadas, como as variáveis cujo tipo você especificar explicitamente. Inferência de tipo local só funciona quando você está definindo uma variável local dentro de um corpo de método. Para obter mais informações, consulte [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md) e [inferência de tipo Local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+ <span data-ttu-id="ecff0-120">Variáveis cujos tipos são inferidos são fortemente tipadas, como as variáveis cujo tipo que você especificar explicitamente.</span><span class="sxs-lookup"><span data-stu-id="ecff0-120">Variables whose types are inferred are strongly typed, just like variables whose type you specify explicitly.</span></span> <span data-ttu-id="ecff0-121">Inferência de tipo local só funciona quando você está definindo uma variável local dentro de um corpo de método.</span><span class="sxs-lookup"><span data-stu-id="ecff0-121">Local type inference works only when you are defining a local variable inside a method body.</span></span> <span data-ttu-id="ecff0-122">Para obter mais informações, consulte [opção Infer instrução](../../../../visual-basic/language-reference/statements/option-infer-statement.md) e [inferência de tipo Local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).</span><span class="sxs-lookup"><span data-stu-id="ecff0-122">For more information, see [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md) and [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).</span></span>  
   
- O exemplo a seguir ilustra a inferência de tipo local. Para usar este exemplo, você deve definir `Option Infer` para `On`.  
+ <span data-ttu-id="ecff0-123">O exemplo a seguir ilustra a inferência de tipo local.</span><span class="sxs-lookup"><span data-stu-id="ecff0-123">The following example illustrates local type inference.</span></span> <span data-ttu-id="ecff0-124">Para usar este exemplo, você deve definir `Option Infer` para `On`.</span><span class="sxs-lookup"><span data-stu-id="ecff0-124">To use this example, you must set `Option Infer` to `On`.</span></span>  
   
- [!code-vb[VbLINQVbFeatures n º&2;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_2.vb)]  
+ [!code-vb[VbLINQVbFeatures#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_2.vb)]  
   
- Inferência de tipo local também torna possível criar tipos anônimos, que são descritos posteriormente nesta seção e são necessários para consultas LINQ.  
+ <span data-ttu-id="ecff0-125">Inferência de tipo local também torna possível criar tipos anônimos, que são descritos posteriormente nesta seção e são necessários para consultas LINQ.</span><span class="sxs-lookup"><span data-stu-id="ecff0-125">Local type inference also makes it possible to create anonymous types, which are described later in this section and are necessary for LINQ queries.</span></span>  
   
- No exemplo a seguir LINQ, a inferência de tipo ocorre se `Option Infer` seja `On` ou `Off`. Ocorrerá um erro de tempo de compilação se `Option Infer` é `Off` e `Option Strict` é `On`.  
+ <span data-ttu-id="ecff0-126">No exemplo a seguir LINQ, a inferência de tipo ocorre se `Option Infer` é `On` ou `Off`.</span><span class="sxs-lookup"><span data-stu-id="ecff0-126">In the following LINQ example, type inference occurs if `Option Infer` is either `On` or `Off`.</span></span> <span data-ttu-id="ecff0-127">Ocorrerá um erro de tempo de compilação se `Option Infer` é `Off` e `Option Strict` é `On`.</span><span class="sxs-lookup"><span data-stu-id="ecff0-127">A compile-time error occurs if `Option Infer` is `Off` and `Option Strict` is `On`.</span></span>  
   
- [!code-vb[VbLINQVbFeatures n º&3;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_3.vb)]  
+ [!code-vb[VbLINQVbFeatures#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_3.vb)]  
   
-## <a name="object-initializers"></a>Inicializadores de objeto  
- Inicializadores de objeto são usados em expressões de consulta quando você precisa criar um tipo anônimo para manter os resultados de uma consulta. Eles também podem ser usados para inicializar objetos dos tipos nomeados fora de consultas. Usando um inicializador de objeto, você pode inicializar um objeto em uma única linha sem chamar explicitamente um construtor. Supondo que você tenha uma classe chamada `Customer` que tem pública `Name` e `Phone` propriedades, junto com outras propriedades, um inicializador de objeto pode ser usado desta maneira:  
+## <a name="object-initializers"></a><span data-ttu-id="ecff0-128">Inicializadores de objeto</span><span class="sxs-lookup"><span data-stu-id="ecff0-128">Object Initializers</span></span>  
+ <span data-ttu-id="ecff0-129">Inicializadores de objeto são usados em expressões de consulta quando você precisa criar um tipo anônimo para manter os resultados de uma consulta.</span><span class="sxs-lookup"><span data-stu-id="ecff0-129">Object initializers are used in query expressions when you have to create an anonymous type to hold the results of a query.</span></span> <span data-ttu-id="ecff0-130">Eles também podem ser usados para inicializar objetos dos tipos nomeados fora de consultas.</span><span class="sxs-lookup"><span data-stu-id="ecff0-130">They also can be used to initialize objects of named types outside of queries.</span></span> <span data-ttu-id="ecff0-131">Usando um inicializador de objeto, você pode inicializar um objeto em uma única linha sem chamar explicitamente um construtor.</span><span class="sxs-lookup"><span data-stu-id="ecff0-131">By using an object initializer, you can initialize an object in a single line without explicitly calling a constructor.</span></span> <span data-ttu-id="ecff0-132">Supondo que você tem uma classe denominada `Customer` que tem pública `Name` e `Phone` propriedades, junto com outras propriedades, um inicializador de objeto pode ser usado dessa maneira:</span><span class="sxs-lookup"><span data-stu-id="ecff0-132">Assuming that you have a class named `Customer` that has public `Name` and `Phone` properties, along with other properties, an object initializer can be used in this manner:</span></span>  
   
- [!code-vb[VbLINQVbFeatures n º&4;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_4.vb)]  
+ [!code-vb[VbLINQVbFeatures#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_4.vb)]  
   
- Para obter mais informações, consulte [inicializadores de objeto: tipos nomeados e anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
+ <span data-ttu-id="ecff0-133">Para obter mais informações, consulte [inicializadores de objeto: tipos nomeados e anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).</span><span class="sxs-lookup"><span data-stu-id="ecff0-133">For more information, see [Object Initializers: Named and Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).</span></span>  
   
-## <a name="anonymous-types"></a>Tipos anônimos  
- Tipos anônimos fornecem uma maneira conveniente de agrupar temporariamente um conjunto de propriedades em um elemento que você deseja incluir em um resultado de consulta. Isso permite que você escolha qualquer combinação de campos disponíveis na consulta, em qualquer ordem, sem definir um tipo de dados chamado para o elemento.  
+## <a name="anonymous-types"></a><span data-ttu-id="ecff0-134">Tipos anônimos</span><span class="sxs-lookup"><span data-stu-id="ecff0-134">Anonymous Types</span></span>  
+ <span data-ttu-id="ecff0-135">Tipos anônimos fornecem uma maneira conveniente para temporariamente agrupar um conjunto de propriedades em um elemento que você deseja incluir em um resultado de consulta.</span><span class="sxs-lookup"><span data-stu-id="ecff0-135">Anonymous types provide a convenient way to temporarily group a set of properties into an element that you want to include in a query result.</span></span> <span data-ttu-id="ecff0-136">Isso permite que você escolha qualquer combinação de campos disponíveis na consulta, em qualquer ordem, sem definir um tipo de dados nomeado para o elemento.</span><span class="sxs-lookup"><span data-stu-id="ecff0-136">This enables you to choose any combination of available fields in the query, in any order, without defining a named data type for the element.</span></span>  
   
- Um *tipo anônimo* é construído dinamicamente pelo compilador. O nome do tipo é atribuído pelo compilador e pode alterar com cada nova compilação. Portanto, o nome não pode ser usado diretamente. Tipos anônimos são inicializados da seguinte maneira:  
+ <span data-ttu-id="ecff0-137">Um *tipo anônimo* é construído dinamicamente pelo compilador.</span><span class="sxs-lookup"><span data-stu-id="ecff0-137">An *anonymous type* is constructed dynamically by the compiler.</span></span> <span data-ttu-id="ecff0-138">O nome do tipo é atribuído pelo compilador e pode ser alterado com cada nova compilação.</span><span class="sxs-lookup"><span data-stu-id="ecff0-138">The name of the type is assigned by the compiler, and it might change with each new compilation.</span></span> <span data-ttu-id="ecff0-139">Portanto, o nome não pode ser usado diretamente.</span><span class="sxs-lookup"><span data-stu-id="ecff0-139">Therefore, the name cannot be used directly.</span></span> <span data-ttu-id="ecff0-140">Tipos anônimos são inicializados da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="ecff0-140">Anonymous types are initialized in the following way:</span></span>  
   
- [!code-vb[VbLINQVbFeatures n º&5;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_5.vb)]  
+ [!code-vb[VbLINQVbFeatures#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_5.vb)]  
   
- Para obter mais informações, consulte [tipos anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+ <span data-ttu-id="ecff0-141">Para obter mais informações, consulte [Tipos anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).</span><span class="sxs-lookup"><span data-stu-id="ecff0-141">For more information, see [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).</span></span>  
   
-## <a name="extension-methods"></a>Métodos de extensão  
- Métodos de extensão permitem que você adicione métodos para um tipo de dados ou a interface de fora da definição. Esse recurso permite que você, na verdade, adicionar novos métodos para um tipo existente sem modificar o tipo de fato. Os operadores de consulta padrão são um conjunto de métodos de extensão que fornecem [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] funcionalidade de consulta para qualquer tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>.</xref:System.Collections.Generic.IEnumerable%601> Outras extensões para <xref:System.Collections.Generic.IEnumerable%601>incluem <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>e <xref:System.Linq.Enumerable.Intersect%2A>.</xref:System.Linq.Enumerable.Intersect%2A> </xref:System.Linq.Enumerable.Union%2A> </xref:System.Linq.Enumerable.Count%2A> </xref:System.Collections.Generic.IEnumerable%601>  
+## <a name="extension-methods"></a><span data-ttu-id="ecff0-142">Métodos de extensão</span><span class="sxs-lookup"><span data-stu-id="ecff0-142">Extension Methods</span></span>  
+ <span data-ttu-id="ecff0-143">Métodos de extensão permitem que você adicione métodos para um tipo de dados ou a interface de fora da definição.</span><span class="sxs-lookup"><span data-stu-id="ecff0-143">Extension methods enable you to add methods to a data type or interface from outside the definition.</span></span> <span data-ttu-id="ecff0-144">Esse recurso permite que você, na verdade, adicione novos métodos para um tipo existente sem modificar o tipo de fato.</span><span class="sxs-lookup"><span data-stu-id="ecff0-144">This feature enables you to, in effect, add new methods to an existing type without actually modifying the type.</span></span> <span data-ttu-id="ecff0-145">Os operadores de consulta padrão são um conjunto de métodos de extensão que fornecem [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] funcionalidade de consulta para qualquer tipo que implementa <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="ecff0-145">The standard query operators are themselves a set of extension methods that provide [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query functionality for any type that implements <xref:System.Collections.Generic.IEnumerable%601>.</span></span> <span data-ttu-id="ecff0-146">Outras extensões <xref:System.Collections.Generic.IEnumerable%601> incluem <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>, e <xref:System.Linq.Enumerable.Intersect%2A>.</span><span class="sxs-lookup"><span data-stu-id="ecff0-146">Other extensions to <xref:System.Collections.Generic.IEnumerable%601> include <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Intersect%2A>.</span></span>  
   
- O método de extensão a seguir adiciona um método de impressão para a <xref:System.String>classe.</xref:System.String>  
+ <span data-ttu-id="ecff0-147">O método de extensão a seguir adiciona um método de impressão para o <xref:System.String> classe.</span><span class="sxs-lookup"><span data-stu-id="ecff0-147">The following extension method adds a print method to the <xref:System.String> class.</span></span>  
   
- [!code-vb[VbLINQVbFeatures n º&6;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_6.vb)]  
+ [!code-vb[VbLINQVbFeatures#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_6.vb)]  
   
- O método é chamado como um método de instância comum de <xref:System.String>:</xref:System.String>  
+ <span data-ttu-id="ecff0-148">O método é chamado como um método de instância comum <xref:System.String>:</span><span class="sxs-lookup"><span data-stu-id="ecff0-148">The method is called like an ordinary instance method of <xref:System.String>:</span></span>  
   
- [!code-vb[VbLINQVbFeatures&#7;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_7.vb)]  
+ [!code-vb[VbLINQVbFeatures#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_7.vb)]  
   
- Para obter mais informações, consulte [métodos de extensão](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
+ <span data-ttu-id="ecff0-149">Para obter mais informações, consulte [Métodos de extensão](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).</span><span class="sxs-lookup"><span data-stu-id="ecff0-149">For more information, see [Extension Methods](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).</span></span>  
   
-## <a name="lambda-expressions"></a>Expressões lambda  
- Uma expressão lambda é uma função sem um nome que calcula e retorna um único valor. Ao contrário de funções nomeadas, uma expressão lambda pode ser definida e executada ao mesmo tempo. O exemplo a seguir exibe 4.  
+## <a name="lambda-expressions"></a><span data-ttu-id="ecff0-150">Expressões lambda</span><span class="sxs-lookup"><span data-stu-id="ecff0-150">Lambda Expressions</span></span>  
+ <span data-ttu-id="ecff0-151">Uma expressão lambda é uma função sem um nome que calcula e retorna um único valor.</span><span class="sxs-lookup"><span data-stu-id="ecff0-151">A lambda expression is a function without a name that calculates and returns a single value.</span></span> <span data-ttu-id="ecff0-152">Diferente das funções nomeadas, uma expressão lambda pode ser definida e executada ao mesmo tempo.</span><span class="sxs-lookup"><span data-stu-id="ecff0-152">Unlike named functions, a lambda expression can be defined and executed at the same time.</span></span> <span data-ttu-id="ecff0-153">O exemplo a seguir exibe 4.</span><span class="sxs-lookup"><span data-stu-id="ecff0-153">The following example displays 4.</span></span>  
   
- [!code-vb[VbLINQVbFeatures n º&8;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_8.vb)]  
+ [!code-vb[VbLINQVbFeatures#8](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_8.vb)]  
   
- Você pode atribuir a definição da expressão lambda para um nome de variável e, em seguida, usar o nome para chamar a função. O exemplo a seguir também exibe 4.  
+ <span data-ttu-id="ecff0-154">Você pode atribuir a definição da expressão lambda para um nome de variável e, em seguida, use o nome para chamar a função.</span><span class="sxs-lookup"><span data-stu-id="ecff0-154">You can assign the lambda expression definition to a variable name and then use the name to call the function.</span></span> <span data-ttu-id="ecff0-155">O exemplo a seguir também exibe 4.</span><span class="sxs-lookup"><span data-stu-id="ecff0-155">The following example also displays 4.</span></span>  
   
- [!code-vb[VbLINQVbFeatures&#12;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_9.vb)]  
+ [!code-vb[VbLINQVbFeatures#12](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_9.vb)]  
   
- Em [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)], expressões lambda são a base de muitos dos operadores de consulta padrão. O compilador cria expressões lambda para capturar os cálculos definidos nos métodos fundamentais de consulta como `Where`, `Select`, `Order By`, `Take While`e outros.  
+ <span data-ttu-id="ecff0-156">Em [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], expressões lambda são a base de muitos dos operadores de consulta padrão.</span><span class="sxs-lookup"><span data-stu-id="ecff0-156">In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], lambda expressions underlie many of the standard query operators.</span></span> <span data-ttu-id="ecff0-157">O compilador cria expressões lambda para capturar os cálculos definidos nos métodos fundamentais de consulta como `Where`, `Select`, `Order By`, `Take While`e outros.</span><span class="sxs-lookup"><span data-stu-id="ecff0-157">The compiler creates lambda expressions to capture the calculations that are defined in fundamental query methods such as `Where`, `Select`, `Order By`, `Take While`, and others.</span></span>  
   
- Por exemplo, o código a seguir define uma consulta que retorna todos os alunos sênior de uma lista de alunos.  
+ <span data-ttu-id="ecff0-158">Por exemplo, o código a seguir define uma consulta que retorna todos os alunos sênior de uma lista de alunos.</span><span class="sxs-lookup"><span data-stu-id="ecff0-158">For example, the following code defines a query that returns all senior students from a list of students.</span></span>  
   
- [!code-vb[VbLINQVbFeatures n º&9;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_10.vb)]  
+ [!code-vb[VbLINQVbFeatures#9](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_10.vb)]  
   
- A definição de consulta é compilada em código que é semelhante ao exemplo a seguir, que usa duas expressões lambda para especificar os argumentos para `Where` e `Select`.  
+ <span data-ttu-id="ecff0-159">A definição de consulta é compilada em código que é semelhante ao exemplo a seguir, que usa duas expressões lambda para especificar os argumentos para `Where` e `Select`.</span><span class="sxs-lookup"><span data-stu-id="ecff0-159">The query definition is compiled into code that is similar to the following example, which uses two lambda expressions to specify the arguments for `Where` and `Select`.</span></span>  
   
- [!code-vb[VbLINQVbFeatures n º&10;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_11.vb)]  
+ [!code-vb[VbLINQVbFeatures#10](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_11.vb)]  
   
- A versão pode ser executada usando um `For Each` loop:  
+ <span data-ttu-id="ecff0-160">A versão pode ser executada usando um `For Each` loop:</span><span class="sxs-lookup"><span data-stu-id="ecff0-160">Either version can be run by using a `For Each` loop:</span></span>  
   
- [!code-vb[VbLINQVbFeatures n º&11;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_12.vb)]  
+ [!code-vb[VbLINQVbFeatures#11](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_12.vb)]  
   
- Para obter mais informações, consulte [expressões Lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ <span data-ttu-id="ecff0-161">Para obter mais informações, consulte [Expressões Lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="ecff0-161">For more information, see [Lambda Expressions](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Consulta integrada à linguagem (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)   
- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)   
- [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [Instrução Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)   
- [Instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a><span data-ttu-id="ecff0-162">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ecff0-162">See Also</span></span>  
+ [<span data-ttu-id="ecff0-163">LINQ (consulta integrada à linguagem) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ecff0-163">Language-Integrated Query (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ [<span data-ttu-id="ecff0-164">Introdução ao LINQ no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ecff0-164">Getting Started with LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ [<span data-ttu-id="ecff0-165">LINQ e cadeias de caracteres (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ecff0-165">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [<span data-ttu-id="ecff0-166">Instrução Option Infer</span><span class="sxs-lookup"><span data-stu-id="ecff0-166">Option Infer Statement</span></span>](../../../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [<span data-ttu-id="ecff0-167">Instrução Option Strict</span><span class="sxs-lookup"><span data-stu-id="ecff0-167">Option Strict Statement</span></span>](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

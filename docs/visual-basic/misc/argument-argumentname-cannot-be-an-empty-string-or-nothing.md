@@ -1,45 +1,28 @@
 ---
-title: "Argumento &lt;argumentname&gt; não pode ser uma cadeia de caracteres vazia ou nada | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Argumento &lt;argumentname&gt; não pode ser uma cadeia de caracteres vazia ou Nothing"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrGeneral_ArgumentEmptyOrNothing_Name
+f1_keywords: vbrGeneral_ArgumentEmptyOrNothing_Name
 ms.assetid: 2c458944-1bdf-4ea7-9caf-560ca7582cc0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4e30ab2e98ae0fe3b3ff10a8009a2e7614091954
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: fa36806afdcda374a3e6de68232d99f956cdef49
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="argument-ltargumentnamegt-cannot-be-an-empty-string-or-nothing"></a>Argumento &lt;argumentname&gt; não pode ser uma cadeia de caracteres vazia ou nada
-O argumento requer um valor diferente de uma cadeia de caracteres vazia ("") ou `Nothing`. Isso pode ser um resultado de calcular incorretamente o valor.  
+# <a name="argument-ltargumentnamegt-cannot-be-an-empty-string-or-nothing"></a><span data-ttu-id="b5682-102">Argumento &lt;argumentname&gt; não pode ser uma cadeia de caracteres vazia ou Nothing</span><span class="sxs-lookup"><span data-stu-id="b5682-102">Argument &lt;argumentname&gt; cannot be an empty string or Nothing</span></span>
+<span data-ttu-id="b5682-103">O argumento requer um valor diferente de uma cadeia de caracteres vazia ("") ou `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="b5682-103">The argument requires a value other than an empty string ("") or `Nothing`.</span></span> <span data-ttu-id="b5682-104">Isso pode ser resultado de calcular incorretamente o valor.</span><span class="sxs-lookup"><span data-stu-id="b5682-104">This may be a result of incorrectly calculating the value.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="b5682-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="b5682-105">To correct this error</span></span>  
   
--   Forneça um valor válido para o argumento.  
+-   <span data-ttu-id="b5682-106">Forneça um valor válido para o argumento.</span><span class="sxs-lookup"><span data-stu-id="b5682-106">Supply a valid value for the argument.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de Erro](../../visual-basic/programming-guide/language-features/error-types.md)   
- [Nada](../../visual-basic/language-reference/nothing.md)   
- [Solução de problemas de exceções: System.NullReferenceException](http://msdn.microsoft.com/library/4822b0b4-8105-43fb-887a-3cc51ff02899)
+## <a name="see-also"></a><span data-ttu-id="b5682-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b5682-107">See Also</span></span>  
+ [<span data-ttu-id="b5682-108">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="b5682-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)  
+ [<span data-ttu-id="b5682-109">Nothing</span><span class="sxs-lookup"><span data-stu-id="b5682-109">Nothing</span></span>](../../visual-basic/language-reference/nothing.md)  
+ [<span data-ttu-id="b5682-110">Solução de problemas de exceções: System.NullReferenceException</span><span class="sxs-lookup"><span data-stu-id="b5682-110">Troubleshooting Exceptions: System.NullReferenceException</span></span>](http://msdn.microsoft.com/library/4822b0b4-8105-43fb-887a-3cc51ff02899)

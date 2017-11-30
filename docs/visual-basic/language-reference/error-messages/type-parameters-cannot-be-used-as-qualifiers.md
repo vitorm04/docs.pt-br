@@ -1,49 +1,31 @@
 ---
-title: "Parâmetros de tipo não podem ser usados como qualificadores | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Não é possível usar parâmetros de tipo como qualificadores"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc32098
 - bc32098
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC32098
+helpviewer_keywords: BC32098
 ms.assetid: bab05325-dde8-4621-a5f6-368b5b7b2d76
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1931945b1ae58019096a7ed1a27d2aeda76f4e45
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 58be51e0c05750ee044f0287cde8db037718b4aa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="type-parameters-cannot-be-used-as-qualifiers"></a>Não é possível usar parâmetros de tipo como qualificadores
-Um elemento de programação é qualificado com uma cadeia de caracteres de qualificação que inclui um parâmetro de tipo.  
+# <a name="type-parameters-cannot-be-used-as-qualifiers"></a><span data-ttu-id="5f565-102">Não é possível usar parâmetros de tipo como qualificadores</span><span class="sxs-lookup"><span data-stu-id="5f565-102">Type parameters cannot be used as qualifiers</span></span>
+<span data-ttu-id="5f565-103">Um elemento de programação está qualificado com uma cadeia de caracteres de qualificação que inclui um parâmetro de tipo.</span><span class="sxs-lookup"><span data-stu-id="5f565-103">A programming element is qualified with a qualification string that includes a type parameter.</span></span>  
   
- Um parâmetro de tipo representa um requisito para um tipo que deve ser fornecido quando o tipo genérico é construído. Ele não representa um tipo específico de definidos. Uma cadeia de caracteres de qualificação deve incluir somente os elementos que são definidos em tempo de compilação.  
+ <span data-ttu-id="5f565-104">Um parâmetro de tipo representa um requisito para um tipo que deve ser fornecido quando o tipo genérico é construído.</span><span class="sxs-lookup"><span data-stu-id="5f565-104">A type parameter represents a requirement for a type that is to be supplied when the generic type is constructed.</span></span> <span data-ttu-id="5f565-105">Ele não representa um tipo específico de definidos.</span><span class="sxs-lookup"><span data-stu-id="5f565-105">It does not represent a specific defined type.</span></span> <span data-ttu-id="5f565-106">Uma cadeia de caracteres de qualificação deve incluir somente os elementos que são definidos em tempo de compilação.</span><span class="sxs-lookup"><span data-stu-id="5f565-106">A qualification string must include only elements that are defined at compile time.</span></span>  
   
- As instruções a seguir podem gerar esse erro.  
+ <span data-ttu-id="5f565-107">As instruções a seguir podem gerar esse erro.</span><span class="sxs-lookup"><span data-stu-id="5f565-107">The following statements can generate this error.</span></span>  
   
 ```  
 Public Function checkText(Of c As System.Windows.Forms.Control)(  
@@ -54,15 +36,15 @@ Public Function checkText(Of c As System.Windows.Forms.Control)(
 End Function  
 ```  
   
- **ID do erro:** BC32098  
+ <span data-ttu-id="5f565-108">**ID do erro:** BC32098</span><span class="sxs-lookup"><span data-stu-id="5f565-108">**Error ID:** BC32098</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="5f565-109">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="5f565-109">To correct this error</span></span>  
   
-1.  Remova o parâmetro de tipo de cadeia de caracteres de qualificação ou substituí-lo com um tipo definido.  
+1.  <span data-ttu-id="5f565-110">Remova o parâmetro de tipo de cadeia de caracteres de qualificação ou substituí-lo com um tipo definido.</span><span class="sxs-lookup"><span data-stu-id="5f565-110">Remove the type parameter from the qualification string, or replace it with a defined type.</span></span>  
   
-2.  Se você precisar usar um tipo construído para localizar o elemento de programação que está sendo qualificado, você deve usar lógica adicional do programa.  
+2.  <span data-ttu-id="5f565-111">Se você precisar usar um tipo construído para localizar o elemento de programação que está sendo qualificado, você deve usar lógica adicional do programa.</span><span class="sxs-lookup"><span data-stu-id="5f565-111">If you need to use a constructed type to locate the programming element being qualified, you must use additional program logic.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Referências a elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [Lista de Tipos](../../../visual-basic/language-reference/statements/type-list.md)
+## <a name="see-also"></a><span data-ttu-id="5f565-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5f565-112">See Also</span></span>  
+ [<span data-ttu-id="5f565-113">Referências a Elementos Declarados</span><span class="sxs-lookup"><span data-stu-id="5f565-113">References to Declared Elements</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="5f565-114">Tipos genéricos no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5f565-114">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [<span data-ttu-id="5f565-115">Lista de Tipos</span><span class="sxs-lookup"><span data-stu-id="5f565-115">Type List</span></span>](../../../visual-basic/language-reference/statements/type-list.md)

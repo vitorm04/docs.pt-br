@@ -1,15 +1,12 @@
 ---
-title: 'Como: modificar dados em um banco de dados usando LINQ (Visual Basic) | Documentos do Microsoft'
+title: Como modificar dados em um banco de dados usando LINQ (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - inserting rows [LINQ to SQL]
 - deleting rows [LINQ to SQL]
@@ -21,75 +18,61 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 44ca3e44d8411a6329d176eb778677bfab2b365c
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 3c491825d8fcacb9852584e7934682598441c2bd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Como modificar dados em um banco de dados usando LINQ (Visual Basic)
-Consultas integradas à linguagem de consulta (LINQ) facilitam a acessar as informações do banco de dados e modifique os valores no banco de dados.  
+# <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a><span data-ttu-id="5b67c-102">Como modificar dados em um banco de dados usando LINQ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5b67c-102">How to: Modify Data in a Database by Using LINQ (Visual Basic)</span></span>
+<span data-ttu-id="5b67c-103">Consultas integradas à linguagem de consulta (LINQ) tornam mais fácil acessar as informações do banco de dados e modificar valores no banco de dados.</span><span class="sxs-lookup"><span data-stu-id="5b67c-103">Language-Integrated Query (LINQ) queries make it easy to access database information and modify values in the database.</span></span>  
   
- O exemplo a seguir mostra como criar um novo aplicativo que recupera e atualiza as informações em um banco de dados do SQL Server.  
+ <span data-ttu-id="5b67c-104">O exemplo a seguir mostra como criar um novo aplicativo que recupera e atualiza as informações em um banco de dados do SQL Server.</span><span class="sxs-lookup"><span data-stu-id="5b67c-104">The following example shows how to create a new application that retrieves and updates information in a SQL Server database.</span></span>  
   
- Os exemplos neste tópico usam o banco de dados de exemplo Northwind. Se você não tiver o banco de dados de exemplo Northwind no seu computador de desenvolvimento, você pode baixá-lo do [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) site da Web. Para obter instruções, consulte [baixando bancos de dados de exemplo](https://msdn.microsoft.com/library/bb399411).  
+ <span data-ttu-id="5b67c-105">Os exemplos neste tópico usam o banco de dados de exemplo Northwind.</span><span class="sxs-lookup"><span data-stu-id="5b67c-105">The examples in this topic use the Northwind sample database.</span></span> <span data-ttu-id="5b67c-106">Se você não tiver o banco de dados de exemplo Northwind no computador de desenvolvimento, você pode baixá-lo do [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) site da Web.</span><span class="sxs-lookup"><span data-stu-id="5b67c-106">If you do not have the Northwind sample database on your development computer, you can download it from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) Web site.</span></span> <span data-ttu-id="5b67c-107">Para obter instruções, consulte [baixando bancos de dados de exemplo](https://msdn.microsoft.com/library/bb399411).</span><span class="sxs-lookup"><span data-stu-id="5b67c-107">For instructions, see [Downloading Sample Databases](https://msdn.microsoft.com/library/bb399411).</span></span>  
   
-### <a name="to-create-a-connection-to-a-database"></a>Para criar uma conexão para um banco de dados  
+### <a name="to-create-a-connection-to-a-database"></a><span data-ttu-id="5b67c-108">Para criar uma conexão para um banco de dados</span><span class="sxs-lookup"><span data-stu-id="5b67c-108">To create a connection to a database</span></span>  
   
-1.  No Visual Studio, abra **Server Explorer**/**Database Explorer** clicando o **exibição** menu e selecione **Server Explorer**/**Database Explorer**.  
+1.  <span data-ttu-id="5b67c-109">No Visual Studio, abra **Server Explorer**/**Pesquisador de objetos de banco de dados** clicando o **exibição** menu e, em seguida, selecione **doGerenciadordeservidores** / **Pesquisador de objetos de banco de dados**.</span><span class="sxs-lookup"><span data-stu-id="5b67c-109">In Visual Studio, open **Server Explorer**/**Database Explorer** by clicking the **View** menu, and then select **Server Explorer**/**Database Explorer**.</span></span>  
   
-2.  Clique com botão direito **conexões de dados** na **Server Explorer**/**Database Explorer**e clique em **Adicionar Conexão**.  
+2.  <span data-ttu-id="5b67c-110">Clique com botão direito **conexões de dados** na **Server Explorer**/**Pesquisador de objetos de banco de dados**e clique em **Adicionar Conexão**.</span><span class="sxs-lookup"><span data-stu-id="5b67c-110">Right-click **Data Connections** in **Server Explorer**/**Database Explorer**, and click **Add Connection**.</span></span>  
   
-3.  Especifique uma conexão válida para o banco de dados de exemplo Northwind.  
+3.  <span data-ttu-id="5b67c-111">Especifique uma conexão válida para o banco de dados de exemplo Northwind.</span><span class="sxs-lookup"><span data-stu-id="5b67c-111">Specify a valid connection to the Northwind sample database.</span></span>  
   
-### <a name="to-add-a-project-with-a-linq-to-sql-file"></a>Para adicionar um projeto com um LINQ para SQL file  
+### <a name="to-add-a-project-with-a-linq-to-sql-file"></a><span data-ttu-id="5b67c-112">Para adicionar um projeto com uma LINQ ao arquivo SQL</span><span class="sxs-lookup"><span data-stu-id="5b67c-112">To add a Project with a LINQ to SQL file</span></span>  
   
-1.  No Visual Studio, no **arquivo** , aponte para **novo** e, em seguida, clique em **projeto**. Selecione Visual Basic **Windows Forms Application** como o tipo de projeto.  
+1.  <span data-ttu-id="5b67c-113">No Visual Studio, no menu **Arquivo**, aponte para **Novo** e clique em **Projeto**.</span><span class="sxs-lookup"><span data-stu-id="5b67c-113">In Visual Studio, on the **File** menu, point to **New** and then click **Project**.</span></span> <span data-ttu-id="5b67c-114">Selecione Visual Basic **aplicativo do Windows Forms** como o tipo de projeto.</span><span class="sxs-lookup"><span data-stu-id="5b67c-114">Select Visual Basic **Windows Forms Application** as the project type.</span></span>  
   
-2.  No menu **Projeto**, clique em **Adicionar Novo Item**. Selecione o **Classes LINQ to SQL** modelo de item.  
+2.  <span data-ttu-id="5b67c-115">No menu **Projeto**, clique em **Adicionar Novo Item**.</span><span class="sxs-lookup"><span data-stu-id="5b67c-115">On the **Project** menu, click **Add New Item**.</span></span> <span data-ttu-id="5b67c-116">Selecione o **Classes LINQ to SQL** modelo de item.</span><span class="sxs-lookup"><span data-stu-id="5b67c-116">Select the **LINQ to SQL Classes** item template.</span></span>  
   
-3.  Nomeie o arquivo `northwind.dbml`. Clique em **Adicionar**. O Object Relational Designer (Object Relational Designer) é aberto para o `northwind.dbml` arquivo.  
+3.  <span data-ttu-id="5b67c-117">Dê o nome `northwind.dbml` para o arquivo.</span><span class="sxs-lookup"><span data-stu-id="5b67c-117">Name the file `northwind.dbml`.</span></span> <span data-ttu-id="5b67c-118">Clique em **Adicionar**.</span><span class="sxs-lookup"><span data-stu-id="5b67c-118">Click **Add**.</span></span> <span data-ttu-id="5b67c-119">O Object Relational Designer (O/R Designer) é aberto para o `northwind.dbml` arquivo.</span><span class="sxs-lookup"><span data-stu-id="5b67c-119">The Object Relational Designer (O/R Designer) is opened for the `northwind.dbml` file.</span></span>  
   
-### <a name="to-add-tables-to-query-and-modify-to-the-designer"></a>Para adicionar tabelas para consultar e modificar para o designer  
+### <a name="to-add-tables-to-query-and-modify-to-the-designer"></a><span data-ttu-id="5b67c-120">Para adicionar tabelas para consultar e modificar para o designer</span><span class="sxs-lookup"><span data-stu-id="5b67c-120">To add tables to query and modify to the designer</span></span>  
   
-1.  Em **Server Explorer**/**Database Explorer**, expanda a conexão ao banco de dados Northwind. Expanda o **tabelas** pasta.  
+1.  <span data-ttu-id="5b67c-121">Em **Server Explorer**/**Pesquisador de objetos de banco de dados**, expanda a conexão ao banco de dados Northwind.</span><span class="sxs-lookup"><span data-stu-id="5b67c-121">In **Server Explorer**/**Database Explorer**, expand the connection to the Northwind database.</span></span> <span data-ttu-id="5b67c-122">Expanda o **tabelas** pasta.</span><span class="sxs-lookup"><span data-stu-id="5b67c-122">Expand the **Tables** folder.</span></span>  
   
-     Se você tiver fechado o Object Relational Designer, você poderá reabri-lo clicando duas vezes o `northwind.dbml` arquivo que você adicionou anteriormente.  
+     <span data-ttu-id="5b67c-123">Se você fechou o Object Relational Designer, você poderá reabri-la clicando duas vezes o `northwind.dbml` arquivo que você adicionou anteriormente.</span><span class="sxs-lookup"><span data-stu-id="5b67c-123">If you have closed the O/R Designer, you can reopen it by double-clicking the `northwind.dbml` file that you added earlier.</span></span>  
   
-2.  Clique na tabela clientes e arraste-o para o painel esquerdo do designer.  
+2.  <span data-ttu-id="5b67c-124">Clique na tabela clientes e arraste-o no painel esquerdo do designer.</span><span class="sxs-lookup"><span data-stu-id="5b67c-124">Click the Customers table and drag it to the left pane of the designer.</span></span>  
   
-     O designer cria um novo objeto de cliente para o seu projeto.  
+     <span data-ttu-id="5b67c-125">O designer cria um novo objeto de cliente para seu projeto.</span><span class="sxs-lookup"><span data-stu-id="5b67c-125">The designer creates a new Customer object for your project.</span></span>  
   
-3.  Salve suas alterações e feche o designer.  
+3.  <span data-ttu-id="5b67c-126">Salve suas alterações e fechar o designer.</span><span class="sxs-lookup"><span data-stu-id="5b67c-126">Save your changes and close the designer.</span></span>  
   
-4.  Salve seu projeto.  
+4.  <span data-ttu-id="5b67c-127">Salve seu projeto.</span><span class="sxs-lookup"><span data-stu-id="5b67c-127">Save your project.</span></span>  
   
-### <a name="to-add-code-to-modify-the-database-and-display-the-results"></a>Para adicionar código para modificar o banco de dados e exibir os resultados  
+### <a name="to-add-code-to-modify-the-database-and-display-the-results"></a><span data-ttu-id="5b67c-128">Para adicionar código para modificar o banco de dados e exibir os resultados</span><span class="sxs-lookup"><span data-stu-id="5b67c-128">To add code to modify the database and display the results</span></span>  
   
-1.  Do **Toolbox**, arraste um <xref:System.Windows.Forms.DataGridView>controle para o Windows Form padrão para seu projeto, Form1.</xref:System.Windows.Forms.DataGridView>  
+1.  <span data-ttu-id="5b67c-129">Do **caixa de ferramentas**, arraste um <xref:System.Windows.Forms.DataGridView> controle para o Windows Form padrão para seu projeto, Form1.</span><span class="sxs-lookup"><span data-stu-id="5b67c-129">From the **Toolbox**, drag a <xref:System.Windows.Forms.DataGridView> control onto the default Windows Form for your project, Form1.</span></span>  
   
-2.  Quando você adicionar tabelas ao / R Designer, o designer adicionará um <xref:System.Data.Linq.DataContext>objeto ao seu projeto.</xref:System.Data.Linq.DataContext> Este objeto contém o código que você pode usar para acessar a tabela de clientes. Ele também contém o código que define um objeto de cliente local e uma coleção de clientes para a tabela. O <xref:System.Data.Linq.DataContext>objeto para seu projeto é nomeado com base no nome do seu arquivo. dbml.</xref:System.Data.Linq.DataContext> Para este projeto, o <xref:System.Data.Linq.DataContext>objeto é denominado `northwindDataContext`.</xref:System.Data.Linq.DataContext>  
+2.  <span data-ttu-id="5b67c-130">Quando você adicionar tabelas ao / R Designer, o designer adicionará um <xref:System.Data.Linq.DataContext> objeto ao seu projeto.</span><span class="sxs-lookup"><span data-stu-id="5b67c-130">When you added tables to the O/R Designer, the designer added a <xref:System.Data.Linq.DataContext> object to your project.</span></span> <span data-ttu-id="5b67c-131">Este objeto contém o código que você pode usar para acessar a tabela de clientes.</span><span class="sxs-lookup"><span data-stu-id="5b67c-131">This object contains code that you can use to access the Customers table.</span></span> <span data-ttu-id="5b67c-132">Ele também contém o código que define um objeto de cliente local e uma coleção de clientes para a tabela.</span><span class="sxs-lookup"><span data-stu-id="5b67c-132">It also contains code that defines  a local Customer object and a Customers collection for the table.</span></span> <span data-ttu-id="5b67c-133">O <xref:System.Data.Linq.DataContext> objeto para seu projeto é nomeado com base no nome do seu arquivo dbml.</span><span class="sxs-lookup"><span data-stu-id="5b67c-133">The <xref:System.Data.Linq.DataContext> object for your project is named based on the name of your .dbml file.</span></span> <span data-ttu-id="5b67c-134">Para este projeto, o <xref:System.Data.Linq.DataContext> objeto é nomeado `northwindDataContext`.</span><span class="sxs-lookup"><span data-stu-id="5b67c-134">For this project, the <xref:System.Data.Linq.DataContext> object is named `northwindDataContext`.</span></span>  
   
-     Você pode criar uma instância do <xref:System.Data.Linq.DataContext>do objeto no seu código e consultar e modificar a coleção de clientes especificada por Object Relational Designer.</xref:System.Data.Linq.DataContext> As alterações feitas na coleção de clientes não serão refletidas no banco de dados enquanto você enviá-los ao chamar o <xref:System.Data.Linq.DataContext.SubmitChanges%2A>método de <xref:System.Data.Linq.DataContext>objeto.</xref:System.Data.Linq.DataContext> </xref:System.Data.Linq.DataContext.SubmitChanges%2A>  
+     <span data-ttu-id="5b67c-135">Você pode criar uma instância do <xref:System.Data.Linq.DataContext> do objeto no seu código e consultar e modificar a coleção de clientes especificada por Object Relational Designer.</span><span class="sxs-lookup"><span data-stu-id="5b67c-135">You can create an instance of the <xref:System.Data.Linq.DataContext> object in your code and query and modify the Customers collection specified by the O/R Designer.</span></span> <span data-ttu-id="5b67c-136">As alterações feitas na coleção de clientes não são refletidas no banco de dados até que você os enviar ao chamar o <xref:System.Data.Linq.DataContext.SubmitChanges%2A> método o <xref:System.Data.Linq.DataContext> objeto.</span><span class="sxs-lookup"><span data-stu-id="5b67c-136">Changes that you make to the Customers collection are not reflected in the database until you submit them by calling the <xref:System.Data.Linq.DataContext.SubmitChanges%2A> method of the <xref:System.Data.Linq.DataContext> object.</span></span>  
   
-     Clique duas vezes em Windows Form, Form1, para adicionar código ao <xref:System.Windows.Forms.Form.Load>evento para consultar a tabela de clientes que é exposta como uma propriedade de <xref:System.Data.Linq.DataContext>.</xref:System.Data.Linq.DataContext> </xref:System.Windows.Forms.Form.Load> Adicione o seguinte código:  
+     <span data-ttu-id="5b67c-137">Clique duas vezes o formulário do Windows Form1, para adicionar código para o <xref:System.Windows.Forms.Form.Load> eventos para consultar a tabela de clientes que é exposto como uma propriedade de seu <xref:System.Data.Linq.DataContext>.</span><span class="sxs-lookup"><span data-stu-id="5b67c-137">Double-click the Windows Form, Form1, to add code to the <xref:System.Windows.Forms.Form.Load> event to query the Customers table that is exposed as a property of your <xref:System.Data.Linq.DataContext>.</span></span> <span data-ttu-id="5b67c-138">Adicione o seguinte código:</span><span class="sxs-lookup"><span data-stu-id="5b67c-138">Add the following code:</span></span>  
   
     ```vb  
     Private db As northwindDataContext  
@@ -111,9 +94,9 @@ Consultas integradas à linguagem de consulta (LINQ) facilitam a acessar as info
     End Sub  
     ```  
   
-3.  Do **Toolbox**, arraste três <xref:System.Windows.Forms.Button>controles para o formulário.</xref:System.Windows.Forms.Button> Selecione o primeiro `Button` controle. No **propriedades** janela, defina a `Name` do `Button` controle `AddButton` e `Text` para `Add`. Selecione o segundo botão e defina o `Name` propriedade `UpdateButton` e `Text` propriedade `Update`. Selecione o terceiro botão e defina o `Name` propriedade `DeleteButton` e `Text` propriedade `Delete`.  
+3.  <span data-ttu-id="5b67c-139">Do **caixa de ferramentas**, arraste três <xref:System.Windows.Forms.Button> controles para o formulário.</span><span class="sxs-lookup"><span data-stu-id="5b67c-139">From the **Toolbox**, drag three <xref:System.Windows.Forms.Button> controls onto the form.</span></span> <span data-ttu-id="5b67c-140">Selecione a primeira `Button` controle.</span><span class="sxs-lookup"><span data-stu-id="5b67c-140">Select the first `Button` control.</span></span> <span data-ttu-id="5b67c-141">No **propriedades** janela, defina o `Name` do `Button` controle `AddButton` e `Text` para `Add`.</span><span class="sxs-lookup"><span data-stu-id="5b67c-141">In the **Properties** window, set the `Name` of the `Button` control to `AddButton` and the `Text` to `Add`.</span></span> <span data-ttu-id="5b67c-142">Selecione o segundo botão e defina o `Name` propriedade `UpdateButton` e `Text` propriedade `Update`.</span><span class="sxs-lookup"><span data-stu-id="5b67c-142">Select the second button and set the `Name` property to `UpdateButton` and the `Text` property to `Update`.</span></span> <span data-ttu-id="5b67c-143">Selecione o terceiro botão e defina o `Name` propriedade `DeleteButton` e `Text` propriedade `Delete`.</span><span class="sxs-lookup"><span data-stu-id="5b67c-143">Select the third button and set the `Name` property to `DeleteButton` and the `Text` property to `Delete`.</span></span>  
   
-4.  Clique duas vezes o **adicionar** botão Adicionar código ao seu `Click` eventos. Adicione o seguinte código:  
+4.  <span data-ttu-id="5b67c-144">Clique duas vezes o **adicionar** botão para adicionar código ao seu `Click` eventos.</span><span class="sxs-lookup"><span data-stu-id="5b67c-144">Double-click the **Add** button to add code to its `Click` event.</span></span> <span data-ttu-id="5b67c-145">Adicione o seguinte código:</span><span class="sxs-lookup"><span data-stu-id="5b67c-145">Add the following code:</span></span>  
   
     ```vb  
     Private Sub AddButton_Click(ByVal sender As System.Object,   
@@ -138,7 +121,7 @@ Consultas integradas à linguagem de consulta (LINQ) facilitam a acessar as info
     End Sub  
     ```  
   
-5.  Clique duas vezes o **atualização** botão Adicionar código ao seu `Click` eventos. Adicione o seguinte código:  
+5.  <span data-ttu-id="5b67c-146">Clique duas vezes o **atualização** botão para adicionar código ao seu `Click` eventos.</span><span class="sxs-lookup"><span data-stu-id="5b67c-146">Double-click the **Update** button to add code to its `Click` event.</span></span> <span data-ttu-id="5b67c-147">Adicione o seguinte código:</span><span class="sxs-lookup"><span data-stu-id="5b67c-147">Add the following code:</span></span>  
   
     ```vb  
     Private Sub UpdateButton_Click(ByVal sender As System.Object, _  
@@ -159,7 +142,7 @@ Consultas integradas à linguagem de consulta (LINQ) facilitam a acessar as info
     End Sub  
     ```  
   
-6.  Clique duas vezes o **excluir** botão Adicionar código ao seu `Click` eventos. Adicione o seguinte código:  
+6.  <span data-ttu-id="5b67c-148">Clique duas vezes o **excluir** botão para adicionar código ao seu `Click` eventos.</span><span class="sxs-lookup"><span data-stu-id="5b67c-148">Double-click the **Delete** button to add code to its `Click` event.</span></span> <span data-ttu-id="5b67c-149">Adicione o seguinte código:</span><span class="sxs-lookup"><span data-stu-id="5b67c-149">Add the following code:</span></span>  
   
     ```vb  
     Private Sub DeleteButton_Click(ByVal sender As System.Object, _  
@@ -180,11 +163,11 @@ Consultas integradas à linguagem de consulta (LINQ) facilitam a acessar as info
     End Sub  
     ```  
   
-7.  Pressione F5 para executar o projeto. Clique em **adicionar** para adicionar um novo registro. Clique em **atualização** para modificar o novo registro. Clique em **excluir** para excluir o novo registro.  
+7.  <span data-ttu-id="5b67c-150">Pressione F5 para executar o projeto.</span><span class="sxs-lookup"><span data-stu-id="5b67c-150">Press F5 to run your project.</span></span> <span data-ttu-id="5b67c-151">Clique em **adicionar** para adicionar um novo registro.</span><span class="sxs-lookup"><span data-stu-id="5b67c-151">Click **Add** to add a new record.</span></span> <span data-ttu-id="5b67c-152">Clique em **atualização** para modificar o novo registro.</span><span class="sxs-lookup"><span data-stu-id="5b67c-152">Click **Update** to modify the new record.</span></span> <span data-ttu-id="5b67c-153">Clique em **excluir** para excluir o registro de novo.</span><span class="sxs-lookup"><span data-stu-id="5b67c-153">Click **Delete** to delete the new record.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   
- [Consultas](../../../../visual-basic/language-reference/queries/queries.md)   
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)   
- [Métodos de DataContext (Object Relational Designer)](https://docs.microsoft.com/visualstudio/data-tools/datacontext-methods-o-r-designer)   
- [Como: atribuir procedimentos armazenados para executar atualizações, inserções e exclusões (Object Relational Designer)](http://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)
+## <a name="see-also"></a><span data-ttu-id="5b67c-154">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5b67c-154">See Also</span></span>  
+ [<span data-ttu-id="5b67c-155">LINQ</span><span class="sxs-lookup"><span data-stu-id="5b67c-155">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+ [<span data-ttu-id="5b67c-156">Consultas</span><span class="sxs-lookup"><span data-stu-id="5b67c-156">Queries</span></span>](../../../../visual-basic/language-reference/queries/queries.md)  
+ [<span data-ttu-id="5b67c-157">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="5b67c-157">LINQ to SQL</span></span>](https://msdn.microsoft.com/library/bb386976)  
+ [<span data-ttu-id="5b67c-158">Métodos de DataContext (Object Relational Designer)</span><span class="sxs-lookup"><span data-stu-id="5b67c-158">DataContext Methods (O/R Designer)</span></span>](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
+ [<span data-ttu-id="5b67c-159">Como: atribuir procedimentos armazenados para executar atualizações, inserções e exclusões (Object Relational Designer)</span><span class="sxs-lookup"><span data-stu-id="5b67c-159">How to: Assign stored procedures to perform updates, inserts, and deletes (O/R Designer)</span></span>](http://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)

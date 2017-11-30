@@ -1,40 +1,31 @@
 ---
-title: "Como: fazer várias solicitações da Web em paralelo usando Async e Await (Visual Basic) | Documentos do Microsoft"
+title: "Como: fazer várias solicitações da Web em paralelo usando Async e Await (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e4c41cc3813a9f96d944d115c6aaa5c5842a629b
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a9b96e8acf9f5453ac035769ea7b279c4fedadfb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Como: fazer várias solicitações da Web em paralelo usando Async e Await (Visual Basic)
-Em um método assíncrono, as tarefas são iniciadas quando eles são criados. O [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operador é aplicado à tarefa no ponto em que o método em que o processamento não pode continuar até que a tarefa seja concluída. Geralmente, uma tarefa é aguardada assim que ele é criado, como mostra o exemplo a seguir.  
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a><span data-ttu-id="b48d9-102">Como: fazer várias solicitações da Web em paralelo usando Async e Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b48d9-102">How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic)</span></span>
+<span data-ttu-id="b48d9-103">Em um método assíncrono, as tarefas são iniciadas quando elas são criadas.</span><span class="sxs-lookup"><span data-stu-id="b48d9-103">In an async method, tasks are started when they’re created.</span></span> <span data-ttu-id="b48d9-104">O [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operador é aplicado para a tarefa no momento no método em que o processamento não pode continuar até que a tarefa seja concluída.</span><span class="sxs-lookup"><span data-stu-id="b48d9-104">The [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operator is applied to the task at the point in the method where processing can’t continue until the task finishes.</span></span> <span data-ttu-id="b48d9-105">Geralmente, uma tarefa é aguardada assim que ela é criada, como mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="b48d9-105">Often a task is awaited as soon as it’s created, as the following example shows.</span></span>  
   
 ```vb  
 Dim result = Await someWebAccessMethodAsync(url)  
 ```  
   
- No entanto, você pode separar a criação da tarefa de aguardando a tarefa se o programa tiver outro trabalho conseguir que não depende da conclusão da tarefa.  
+ <span data-ttu-id="b48d9-106">No entanto, você pode separar a criação da tarefa da espera da tarefa se o programa tiver outro trabalho a realizar, que não depende da conclusão da tarefa.</span><span class="sxs-lookup"><span data-stu-id="b48d9-106">However, you can separate creating the task from awaiting the task if your program has other work to accomplish that doesn’t depend on the completion of the task.</span></span>  
   
 ```vb  
 ' The following line creates and starts the task.  
@@ -49,32 +40,32 @@ Dim myTask = someWebAccessMethodAsync(url)
 Dim result = Await myTask  
 ```  
   
- Entre iniciando uma tarefa e aguardando a ele, você pode iniciar outras tarefas. Tarefas adicionais implicitamente executem em paralelo, mas não há threads adicionais são criados.  
+ <span data-ttu-id="b48d9-107">Entre o início de uma tarefa e a espera por ela, você pode iniciar outras tarefas.</span><span class="sxs-lookup"><span data-stu-id="b48d9-107">Between starting a task and awaiting it, you can start other tasks.</span></span> <span data-ttu-id="b48d9-108">As tarefas adicionais são executadas implicitamente em paralelo, mas não são criados threads adicionais.</span><span class="sxs-lookup"><span data-stu-id="b48d9-108">The additional tasks implicitly run in parallel, but no additional threads are created.</span></span>  
   
- O programa a seguir inicia três downloads da web assíncrona e, em seguida, aguarda-los na ordem em que são chamados. Observe que, quando você executar o programa, o que as tarefas não são concluídas na ordem em que são criadas e espera sempre. Eles comecem a ser executadas quando eles são criados e uma ou mais tarefas podem terminar antes do método atinge as expressões await.  
+ <span data-ttu-id="b48d9-109">O programa a seguir inicia três downloads assíncronos na Web e, em seguida, os aguarda na ordem em que foram chamados.</span><span class="sxs-lookup"><span data-stu-id="b48d9-109">The following program starts three asynchronous web downloads and then awaits them in the order in which they’re called.</span></span> <span data-ttu-id="b48d9-110">Observe ao executar o programa, que as tarefas nem sempre são concluídas na ordem em que foram criadas e aguardadas.</span><span class="sxs-lookup"><span data-stu-id="b48d9-110">Notice, when you run the program, that the tasks don’t always finish in the order in which they’re created and awaited.</span></span> <span data-ttu-id="b48d9-111">Eles começam a ser executadas quando são criadas e uma ou mais tarefas podem terminar antes que o método alcance as expressões await.</span><span class="sxs-lookup"><span data-stu-id="b48d9-111">They start to run when they’re created, and one or more of the tasks might finish before the method reaches the await expressions.</span></span>  
   
 > [!NOTE]
->  Para concluir este projeto, você deve ter o Visual Studio 2012 ou posterior e o .NET Framework 4.5 ou posterior instalado no computador.  
+>  <span data-ttu-id="b48d9-112">Para concluir esse projeto, você precisa ter o Visual Studio 2012 ou posterior e o .NET Framework 4.5 ou posterior instalados no seu computador.</span><span class="sxs-lookup"><span data-stu-id="b48d9-112">To complete this project, you must have Visual Studio 2012 or higher and the .NET Framework 4.5 or higher installed on your computer.</span></span>  
   
- Outro exemplo que inicia diversas tarefas ao mesmo tempo, consulte [como: estender o Async Walkthrough por usando Task. WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
+ <span data-ttu-id="b48d9-113">Outro exemplo que inicia várias tarefas ao mesmo tempo, consulte [como: estender a Async Walkthrough por usando Task. WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).</span><span class="sxs-lookup"><span data-stu-id="b48d9-113">For another example that starts multiple tasks at the same time, see [How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).</span></span>  
   
- Você pode baixar o código deste exemplo de [amostras de código do desenvolvedor](http://go.microsoft.com/fwlink/?LinkId=254906).  
+ <span data-ttu-id="b48d9-114">Você pode baixar o código deste exemplo de [Exemplos de código para desenvolvedores](http://go.microsoft.com/fwlink/?LinkId=254906).</span><span class="sxs-lookup"><span data-stu-id="b48d9-114">You can download the code for this example from [Developer Code Samples](http://go.microsoft.com/fwlink/?LinkId=254906).</span></span>  
   
-### <a name="to-set-up-the-project"></a>Para configurar o projeto  
+### <a name="to-set-up-the-project"></a><span data-ttu-id="b48d9-115">Para configurar o projeto</span><span class="sxs-lookup"><span data-stu-id="b48d9-115">To set up the project</span></span>  
   
-1.  Para configurar um aplicativo WPF, conclua as etapas a seguir. Você pode encontrar instruções detalhadas para essas etapas em [passo a passo: acessando a Web, usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1.  <span data-ttu-id="b48d9-116">Para configurar um aplicativo WPF, complete as etapas a seguir.</span><span class="sxs-lookup"><span data-stu-id="b48d9-116">To set up a WPF application, complete the following steps.</span></span> <span data-ttu-id="b48d9-117">Você pode encontrar instruções detalhadas para essas etapas em [passo a passo: acessando a Web, usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span><span class="sxs-lookup"><span data-stu-id="b48d9-117">You can find detailed instructions for these steps in [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span>  
   
-    -   Crie um aplicativo WPF que contém uma caixa de texto e um botão. Nomeie o botão `startButton`e a caixa de texto nome `resultsTextBox`.  
+    -   <span data-ttu-id="b48d9-118">Crie um aplicativo WPF que contenha uma caixa de texto e um botão.</span><span class="sxs-lookup"><span data-stu-id="b48d9-118">Create a WPF application that contains a text box and a button.</span></span> <span data-ttu-id="b48d9-119">Dê o nome `startButton` para o botão e `resultsTextBox`, para a caixa de texto.</span><span class="sxs-lookup"><span data-stu-id="b48d9-119">Name the button `startButton`, and name the text box `resultsTextBox`.</span></span>  
   
-    -   Adicione uma referência para <xref:System.Net.Http>.</xref:System.Net.Http>  
+    -   <span data-ttu-id="b48d9-120">Adicione uma referência para <xref:System.Net.Http>.</span><span class="sxs-lookup"><span data-stu-id="b48d9-120">Add a reference for <xref:System.Net.Http>.</span></span>  
   
-    -   No arquivo MainWindow.xaml.vb, adicione uma `Imports` instrução `System.Net.Http`.  
+    -   <span data-ttu-id="b48d9-121">No arquivo MainWindow.xaml.vb, adicione um `Imports` instrução para `System.Net.Http`.</span><span class="sxs-lookup"><span data-stu-id="b48d9-121">In the MainWindow.xaml.vb file, add an `Imports` statement for `System.Net.Http`.</span></span>  
   
-### <a name="to-add-the-code"></a>Para adicionar o código  
+### <a name="to-add-the-code"></a><span data-ttu-id="b48d9-122">Para adicionar o código</span><span class="sxs-lookup"><span data-stu-id="b48d9-122">To add the code</span></span>  
   
-1.  Na janela de design, MainWindow. XAML, clique duas vezes no botão para criar o `startButton_Click` MainWindow.xaml.vb manipulador de eventos.  
+1.  <span data-ttu-id="b48d9-123">Na janela de design, MainWindow. XAML, clique duas vezes no botão para criar o `startButton_Click` MainWindow.xaml.vb manipulador de eventos.</span><span class="sxs-lookup"><span data-stu-id="b48d9-123">In the design window, MainWindow.xaml, double-click the button to create the `startButton_Click` event handler in MainWindow.xaml.vb.</span></span>  
   
-2.  Copie o seguinte código e cole-o no corpo da `startButton_Click` em MainWindow.xaml.vb.  
+2.  <span data-ttu-id="b48d9-124">Copie o seguinte código e cole-o no corpo da `startButton_Click` em MainWindow.xaml.vb.</span><span class="sxs-lookup"><span data-stu-id="b48d9-124">Copy the following code, and paste it into the body of `startButton_Click` in MainWindow.xaml.vb.</span></span>  
   
     ```vb  
     resultsTextBox.Clear()  
@@ -82,15 +73,15 @@ Dim result = Await myTask
     resultsTextBox.Text &= vbCrLf & "Control returned to button1_Click."  
     ```  
   
-     O código chama um método assíncrono, `CreateMultipleTasksAsync`, que acionam o aplicativo.  
+     <span data-ttu-id="b48d9-125">O código chama um método assíncrono, `CreateMultipleTasksAsync`, que controla o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="b48d9-125">The code calls an asynchronous method, `CreateMultipleTasksAsync`, which drives the application.</span></span>  
   
-3.  Adicione os seguintes métodos de suporte ao projeto:  
+3.  <span data-ttu-id="b48d9-126">Adicione os seguintes métodos de suporte ao projeto:</span><span class="sxs-lookup"><span data-stu-id="b48d9-126">Add the following support methods to the project:</span></span>  
   
-    -   `ProcessURLAsync`usa um <xref:System.Net.Http.HttpClient>método para baixar o conteúdo de um site como uma matriz de bytes.</xref:System.Net.Http.HttpClient> O método de suporte, `ProcessURLAsync` , em seguida, exibe e retorna o comprimento da matriz.  
+    -   <span data-ttu-id="b48d9-127">O `ProcessURLAsync` usa um método <xref:System.Net.Http.HttpClient> para baixar o conteúdo de um site como uma matriz de bytes.</span><span class="sxs-lookup"><span data-stu-id="b48d9-127">`ProcessURLAsync` uses an <xref:System.Net.Http.HttpClient> method to download the contents of a website as a byte array.</span></span> <span data-ttu-id="b48d9-128">Em seguida, o método de suporte `ProcessURLAsync` exibe e retorna o comprimento da matriz.</span><span class="sxs-lookup"><span data-stu-id="b48d9-128">The support method, `ProcessURLAsync` then displays and returns the length of the array.</span></span>  
   
-    -   `DisplayResults`Exibe o número de bytes na matriz de bytes para cada URL. Essa exibição mostra quando cada tarefa terminou o download.  
+    -   <span data-ttu-id="b48d9-129">O `DisplayResults` exibe o número de bytes na matriz de bytes para cada URL.</span><span class="sxs-lookup"><span data-stu-id="b48d9-129">`DisplayResults` displays the number of bytes in the byte array for each URL.</span></span> <span data-ttu-id="b48d9-130">Essa exibição mostra quando cada tarefa termina o download.</span><span class="sxs-lookup"><span data-stu-id="b48d9-130">This display shows when each task has finished downloading.</span></span>  
   
-     Copie os seguintes métodos e colá-los após o `startButton_Click` MainWindow.xaml.vb manipulador de eventos.  
+     <span data-ttu-id="b48d9-131">Copie os seguintes métodos e colá-los após o `startButton_Click` MainWindow.xaml.vb manipulador de eventos.</span><span class="sxs-lookup"><span data-stu-id="b48d9-131">Copy the following methods, and paste them after the `startButton_Click` event handler in MainWindow.xaml.vb.</span></span>  
   
     ```vb  
     Private Async Function ProcessURLAsync(url As String, client As HttpClient) As Task(Of Integer)  
@@ -112,17 +103,17 @@ Dim result = Await myTask
     End Sub  
     ```  
   
-4.  Finalmente, defina o método `CreateMultipleTasksAsync`, que executa as seguintes etapas.  
+4.  <span data-ttu-id="b48d9-132">Finalmente, defina o método `CreateMultipleTasksAsync`, que executa as seguintes etapas.</span><span class="sxs-lookup"><span data-stu-id="b48d9-132">Finally, define method `CreateMultipleTasksAsync`, which performs the following steps.</span></span>  
   
-    -   O método declara uma `HttpClient` objeto, que você precisa para acessar o método <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>em `ProcessURLAsync`.</xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>  
+    -   <span data-ttu-id="b48d9-133">O método declara um objeto `HttpClient`, que você precisa para acessar o método <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> em `ProcessURLAsync`.</span><span class="sxs-lookup"><span data-stu-id="b48d9-133">The method declares an `HttpClient` object,which you need  to access method <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> in `ProcessURLAsync`.</span></span>  
   
-    -   O método cria e inicia três tarefas do tipo <xref:System.Threading.Tasks.Task%601>, onde `TResult` é um inteiro.</xref:System.Threading.Tasks.Task%601> Como cada tarefa termina, `DisplayResults` exibe a URL da tarefa e o comprimento do conteúdo baixado. Como as tarefas estão em execução assíncrona, a ordem na qual os resultados são exibidos pode diferir da ordem na qual eles foram declarados.  
+    -   <span data-ttu-id="b48d9-134">O método cria e inicia três tarefas do tipo <xref:System.Threading.Tasks.Task%601>, em que `TResult` é um inteiro.</span><span class="sxs-lookup"><span data-stu-id="b48d9-134">The method creates and starts three tasks of type <xref:System.Threading.Tasks.Task%601>, where `TResult` is an integer.</span></span> <span data-ttu-id="b48d9-135">Conforme cada tarefa termina, `DisplayResults` exibe a URL da tarefa e o comprimento do conteúdo baixado.</span><span class="sxs-lookup"><span data-stu-id="b48d9-135">As each task finishes, `DisplayResults` displays the task's URL and the length of the downloaded contents.</span></span> <span data-ttu-id="b48d9-136">Como as tarefas estão em execução de maneira assíncrona, a ordem na qual os resultados são exibidos pode diferir da ordem na qual elas foram declaradas.</span><span class="sxs-lookup"><span data-stu-id="b48d9-136">Because the tasks are running asynchronously, the order in which the results appear might differ from the order in which they were declared.</span></span>  
   
-    -   O método aguarda a conclusão de cada tarefa. Cada `Await` operador suspende a execução de `CreateMultipleTasksAsync` até que a tarefa aguardada seja concluída. O operador também recupera o valor de retorno da chamada para `ProcessURLAsync` de cada tarefa concluída.  
+    -   <span data-ttu-id="b48d9-137">O método aguarda a conclusão de cada tarefa.</span><span class="sxs-lookup"><span data-stu-id="b48d9-137">The method awaits the completion of each task.</span></span> <span data-ttu-id="b48d9-138">Cada operador `Await` suspende a execução de `CreateMultipleTasksAsync` até que a tarefa aguardada seja concluída.</span><span class="sxs-lookup"><span data-stu-id="b48d9-138">Each `Await` operator suspends execution of `CreateMultipleTasksAsync` until the awaited task is finished.</span></span> <span data-ttu-id="b48d9-139">O operador também recupera o valor retornado da chamada ao `ProcessURLAsync` de cada tarefa concluída.</span><span class="sxs-lookup"><span data-stu-id="b48d9-139">The operator also retrieves the return value from the call to `ProcessURLAsync` from each completed task.</span></span>  
   
-    -   Quando as tarefas foram concluídas e os valores inteiros forem recuperados, o método soma os comprimentos dos sites e exibe o resultado.  
+    -   <span data-ttu-id="b48d9-140">Quando as tarefas forem concluídas e os valores inteiros forem recuperados, o método somará os comprimentos dos sites e exibirá o resultado.</span><span class="sxs-lookup"><span data-stu-id="b48d9-140">When the tasks have been completed and the integer values have been retrieved, the method sums the lengths of the websites and displays the result.</span></span>  
   
-     Copie o seguinte método e cole-o em sua solução.  
+     <span data-ttu-id="b48d9-141">Copie o seguinte método e cole-o em sua solução.</span><span class="sxs-lookup"><span data-stu-id="b48d9-141">Copy the following method, and paste it into your solution.</span></span>  
   
     ```vb  
     Private Async Function CreateMultipleTasksAsync() As Task  
@@ -154,12 +145,12 @@ Dim result = Await myTask
     End Function  
     ```  
   
-5.  Escolha a tecla F5 para executar o programa e, em seguida, escolha o **iniciar** botão.  
+5.  <span data-ttu-id="b48d9-142">Escolha a tecla F5 para executar o programa e, em seguida, escolha o botão **Iniciar**.</span><span class="sxs-lookup"><span data-stu-id="b48d9-142">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
   
-     Execute o programa várias vezes para verificar se as três tarefas não são concluídas sempre na mesma ordem e que a ordem em que elas sejam concluídas não é necessariamente a ordem em que elas são criadas e esperadas.  
+     <span data-ttu-id="b48d9-143">Execute o programa várias vezes para ver que as três tarefas nem sempre são concluídas na mesma ordem e que a ordem em que elas são concluídas não é, necessariamente, a ordem em que elas foram criadas e aguardadas.</span><span class="sxs-lookup"><span data-stu-id="b48d9-143">Run the program several times to verify that the three tasks don’t always finish in the same order and that the order in which they finish isn't necessarily the order in which they’re created and awaited.</span></span>  
   
-## <a name="example"></a>Exemplo  
- O código a seguir contém um exemplo completo.  
+## <a name="example"></a><span data-ttu-id="b48d9-144">Exemplo</span><span class="sxs-lookup"><span data-stu-id="b48d9-144">Example</span></span>  
+ <span data-ttu-id="b48d9-145">O código a seguir contem o exemplo completo.</span><span class="sxs-lookup"><span data-stu-id="b48d9-145">The following code contains the full example.</span></span>  
   
 ```vb  
 ' Add the following Imports statements, and add a reference for System.Net.Http.  
@@ -221,8 +212,7 @@ Class MainWindow
 End Class  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Passo a passo: Acessando a Web usando o Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
- [Programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)   
- [Como: estender o passo a passo assíncronas usando Task. WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-
+## <a name="see-also"></a><span data-ttu-id="b48d9-146">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b48d9-146">See Also</span></span>  
+ [<span data-ttu-id="b48d9-147">Instruções passo a passo: acessando a Web usando Async e Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b48d9-147">Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ [<span data-ttu-id="b48d9-148">Programação assíncrona com Async e Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b48d9-148">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/index.md)  
+ [<span data-ttu-id="b48d9-149">Como estender as instruções passo a passo assíncronas usando Task.WhenAll (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b48d9-149">How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

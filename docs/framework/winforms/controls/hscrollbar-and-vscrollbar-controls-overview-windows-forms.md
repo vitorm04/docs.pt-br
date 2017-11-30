@@ -1,0 +1,52 @@
+---
+title: "Visão geral dos controles HScrollBar e VScrollBar (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- HScrollBar
+- VScrollBar
+helpviewer_keywords:
+- ScrollBar control [Windows Forms]
+- HScrollBar control [Windows Forms], about HScrollBar
+- VScrollBar control [Windows Forms], about VScrollBar control
+- ScrollBar control [Windows Forms], about ScrollBar control
+- scroll bars [Windows Forms], about scroll bars
+ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 80ec592bf83969ae57495b0df2af110b5622ea11
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a><span data-ttu-id="cb3cc-102">Visão geral dos controles HScrollBar e VScrollBar (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="cb3cc-102">HScrollBar and VScrollBar Controls Overview (Windows Forms)</span></span>
+<span data-ttu-id="cb3cc-103">Windows Forms <xref:System.Windows.Forms.ScrollBar> controles são usados para fornecer fácil navegação por uma longa lista de itens ou uma grande quantidade de informações por qualquer um de rolagem horizontal ou verticalmente dentro de um aplicativo ou controle.</span><span class="sxs-lookup"><span data-stu-id="cb3cc-103">Windows Forms <xref:System.Windows.Forms.ScrollBar> controls are used to provide easy navigation through a long list of items or a large amount of information by scrolling either horizontally or vertically within an application or control.</span></span> <span data-ttu-id="cb3cc-104">Barras de rolagem são um elemento comum da interface do Windows, portanto, o <xref:System.Windows.Forms.ScrollBar> controle é frequentemente usado com controles que não derivam o <xref:System.Windows.Forms.ScrollableControl> classe.</span><span class="sxs-lookup"><span data-stu-id="cb3cc-104">Scroll bars are a common element of the Windows interface, so the <xref:System.Windows.Forms.ScrollBar> control is often used with controls that do not derive from the <xref:System.Windows.Forms.ScrollableControl> class.</span></span> <span data-ttu-id="cb3cc-105">Da mesma forma, muitos desenvolvedores escolhem incorporar o <xref:System.Windows.Forms.ScrollBar> controlar ao criar seus próprios controles de usuário.</span><span class="sxs-lookup"><span data-stu-id="cb3cc-105">Similarly, many developers choose to incorporate the <xref:System.Windows.Forms.ScrollBar> control when authoring their own user controls.</span></span>  
+  
+ <span data-ttu-id="cb3cc-106">O <xref:System.Windows.Forms.HScrollBar> (horizontal) e <xref:System.Windows.Forms.VScrollBar> (verticais) controles operar de forma independente de outros controles e ter seu próprio conjunto de eventos, propriedades e métodos.</span><span class="sxs-lookup"><span data-stu-id="cb3cc-106">The <xref:System.Windows.Forms.HScrollBar> (horizontal) and <xref:System.Windows.Forms.VScrollBar> (vertical) controls operate independently from other controls and have their own set of events, properties, and methods.</span></span> <span data-ttu-id="cb3cc-107"><xref:System.Windows.Forms.ScrollBar>controles não são o mesmo que as barras de rolagem internas que estão anexadas a caixas de texto, caixas de listagem, caixas de combinação ou formulários MDI (o <xref:System.Windows.Forms.TextBox> controle tem um <xref:System.Windows.Forms.TextBox.ScrollBars%2A> propriedade para mostrar ou ocultar as barras de rolagem que estão anexadas ao controle).</span><span class="sxs-lookup"><span data-stu-id="cb3cc-107"><xref:System.Windows.Forms.ScrollBar> controls are not the same as the built-in scroll bars that are attached to text boxes, list boxes, combo boxes, or MDI forms (the <xref:System.Windows.Forms.TextBox> control has a <xref:System.Windows.Forms.TextBox.ScrollBars%2A> property to show or hide scroll bars that are attached to the control).</span></span>  
+  
+ <span data-ttu-id="cb3cc-108">O <xref:System.Windows.Forms.ScrollBar> controla o uso de <xref:System.Windows.Forms.ScrollBar.Scroll> evento para monitorar a movimentação da caixa de rolagem (também conhecida como controle deslizante) ao longo da barra de rolagem.</span><span class="sxs-lookup"><span data-stu-id="cb3cc-108">The <xref:System.Windows.Forms.ScrollBar> controls use the <xref:System.Windows.Forms.ScrollBar.Scroll> event to monitor the movement of the scroll box (sometimes referred to as the thumb) along the scroll bar.</span></span> <span data-ttu-id="cb3cc-109">Usando o <xref:System.Windows.Forms.ScrollBar.Scroll> evento fornece acesso para o valor de barra de rolagem que está sendo arrastado.</span><span class="sxs-lookup"><span data-stu-id="cb3cc-109">Using the <xref:System.Windows.Forms.ScrollBar.Scroll> event provides access to the scroll bar value as it is being dragged.</span></span>  
+  
+## <a name="value-property"></a><span data-ttu-id="cb3cc-110">Propriedade Value</span><span class="sxs-lookup"><span data-stu-id="cb3cc-110">Value Property</span></span>  
+ <span data-ttu-id="cb3cc-111">O <xref:System.Windows.Forms.ScrollBar.Value%2A> propriedade (que, por padrão, é 0) é um `integer` valor correspondente para a posição da caixa de rolagem na barra de rolagem.</span><span class="sxs-lookup"><span data-stu-id="cb3cc-111">The <xref:System.Windows.Forms.ScrollBar.Value%2A> property (which, by default, is 0) is an `integer` value corresponding to the position of the scroll box in the scroll bar.</span></span> <span data-ttu-id="cb3cc-112">Quando a posição da caixa de rolagem é o valor mínimo, ela se move para a posição mais à esquerda (para barras de rolagem horizontais) ou a posição superior (para barras de rolagem verticais).</span><span class="sxs-lookup"><span data-stu-id="cb3cc-112">When the scroll box position is at the minimum value, it moves to the left-most position (for horizontal scroll bars) or the top position (for vertical scroll bars).</span></span> <span data-ttu-id="cb3cc-113">Quando a caixa de rolagem está no valor máximo, ela se move para a posição mais à direita ou para a posição inferior.</span><span class="sxs-lookup"><span data-stu-id="cb3cc-113">When the scroll box is at the maximum value, the scroll box moves to the right-most or bottom position.</span></span> <span data-ttu-id="cb3cc-114">Da mesma forma, um valor entre a parte inferior e superior do intervalo coloca a borda esquerda da caixa de rolagem no meio da barra de rolagem.</span><span class="sxs-lookup"><span data-stu-id="cb3cc-114">Similarly, a value halfway between the bottom and top of the range places the leading edge of the scroll box in the middle of the scroll bar.</span></span>  
+  
+ <span data-ttu-id="cb3cc-115">Além de usar cliques do mouse para alterar o valor da barra de rolagem, um usuário também pode arrastar a caixa de rolagem para qualquer ponto ao longo da barra.</span><span class="sxs-lookup"><span data-stu-id="cb3cc-115">In addition to using mouse clicks to change the scroll bar value, a user can also drag the scroll box to any point along the bar.</span></span> <span data-ttu-id="cb3cc-116">O valor resultante depende da posição da caixa de rolagem, mas é sempre dentro do intervalo da <xref:System.Windows.Forms.ScrollBar.Minimum%2A> para <xref:System.Windows.Forms.ScrollBar.Maximum%2A> propriedades definidas pelo usuário.</span><span class="sxs-lookup"><span data-stu-id="cb3cc-116">The resulting value depends on the position of the scroll box, but it is always within the range of the <xref:System.Windows.Forms.ScrollBar.Minimum%2A> to <xref:System.Windows.Forms.ScrollBar.Maximum%2A> properties set by the user.</span></span>  
+  
+## <a name="largechange-and-smallchange-properties"></a><span data-ttu-id="cb3cc-117">Propriedades de SmallChange e LargeChange</span><span class="sxs-lookup"><span data-stu-id="cb3cc-117">LargeChange and SmallChange Properties</span></span>  
+ <span data-ttu-id="cb3cc-118">Quando o usuário pressiona a tecla PAGE UP ou PAGE DOWN ou clica na faixa de barra de rolagem em qualquer lado da caixa de rolagem, o <xref:System.Windows.Forms.ScrollBar.Value%2A> alterações de propriedade de acordo com o valor definido para o <xref:System.Windows.Forms.ScrollBar.LargeChange%2A> propriedade.</span><span class="sxs-lookup"><span data-stu-id="cb3cc-118">When the user presses the PAGE UP or PAGE DOWN key or clicks in the scroll bar track on either side of the scroll box, the <xref:System.Windows.Forms.ScrollBar.Value%2A> property changes according to the value set in the <xref:System.Windows.Forms.ScrollBar.LargeChange%2A> property.</span></span>  
+  
+ <span data-ttu-id="cb3cc-119">Quando o usuário pressiona uma seta de chaves ou clica em um dos botões da barra de rolagem, o <xref:System.Windows.Forms.ScrollBar.Value%2A> alterações de propriedade de acordo com o valor definido para o <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> propriedade.</span><span class="sxs-lookup"><span data-stu-id="cb3cc-119">When the user presses one of the arrow keys or clicks one of the scroll bar buttons, the <xref:System.Windows.Forms.ScrollBar.Value%2A> property changes according to the value set in the <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> property.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="cb3cc-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="cb3cc-120">See Also</span></span>  
+ <xref:System.Windows.Forms.HScrollBar>  
+ <xref:System.Windows.Forms.VScrollBar>  
+ [<span data-ttu-id="cb3cc-121">Adições para formulários do Windows para o .NET Framework 2.0</span><span class="sxs-lookup"><span data-stu-id="cb3cc-121">Additions to Windows Forms for the .NET Framework 2.0</span></span>](http://msdn.microsoft.com/en-us/c61a923d-3d6a-4c8c-820c-e94c83f3f9a8)  
+ [<span data-ttu-id="cb3cc-122">Controles a serem usados nos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="cb3cc-122">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

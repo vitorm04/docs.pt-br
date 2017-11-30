@@ -1,15 +1,11 @@
 ---
-title: "Padrão (Visual Basic) | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Padrão (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.Default
-dev_langs:
-- VB
+f1_keywords: vb.Default
 helpviewer_keywords:
 - defaults, properties
 - properties [Visual Basic], default
@@ -17,47 +13,33 @@ helpviewer_keywords:
 - Default keyword [Visual Basic]
 - default properties
 ms.assetid: 45fce9b9-d212-4b2d-ab86-6e359b8b57af
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c27acad433b4dcee00fe5d1560892dd35d6811af
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 18126a0a5b6254da0b43e806b3de1f5b2127e6a9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="default-visual-basic"></a>Padrão (Visual Basic)
-Identifica uma propriedade como a propriedade padrão da sua classe, estrutura ou interface.  
+# <a name="default-visual-basic"></a><span data-ttu-id="5b85d-102">Padrão (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5b85d-102">Default (Visual Basic)</span></span>
+<span data-ttu-id="5b85d-103">Identifica uma propriedade como a propriedade padrão de sua classe, estrutura ou interface.</span><span class="sxs-lookup"><span data-stu-id="5b85d-103">Identifies a property as the default property of its class, structure, or interface.</span></span>  
   
-## <a name="remarks"></a>Comentários  
- Uma classe, estrutura ou interface pode designar no máximo uma de suas propriedades como o *propriedade padrão*, desde que a propriedade aceite pelo menos um parâmetro. Se o código faz referência a uma classe ou estrutura sem especificar um membro, Visual Basic toma essa referência para a propriedade padrão.  
+## <a name="remarks"></a><span data-ttu-id="5b85d-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="5b85d-104">Remarks</span></span>  
+ <span data-ttu-id="5b85d-105">Uma classe, estrutura ou interface pode designar no máximo uma de suas propriedades como o *propriedade padrão*, desde que a propriedade tem pelo menos um parâmetro.</span><span class="sxs-lookup"><span data-stu-id="5b85d-105">A class, structure, or interface can designate at most one of its properties as the *default property*, provided that property takes at least one parameter.</span></span> <span data-ttu-id="5b85d-106">Se o código faz referência a uma classe ou estrutura sem especificar um membro, Visual Basic toma essa referência para a propriedade padrão.</span><span class="sxs-lookup"><span data-stu-id="5b85d-106">If code makes a reference to a class or structure without specifying a member, Visual Basic resolves that reference to the default property.</span></span>  
   
- Propriedades padrão podem resultar em uma pequena redução nos caracteres de código fonte, mas eles podem tornar seu código mais difícil de ler. Se o código de chamada não está familiarizado com sua classe ou estrutura, quando ele faz referência ao nome de classe ou estrutura não poderá determinar se essa referência acessa a classe ou estrutura em si ou uma propriedade padrão. Isso pode levar a erros de compilador ou lógica de tempo de execução sutis.  
+ <span data-ttu-id="5b85d-107">Propriedades padrão podem resultar em uma pequena redução nos caracteres de código fonte, mas eles podem tornar o seu código mais difícil de ler.</span><span class="sxs-lookup"><span data-stu-id="5b85d-107">Default properties can result in a small reduction in source code-characters, but they can make your code more difficult to read.</span></span> <span data-ttu-id="5b85d-108">Se o código de chamada não está familiarizado com sua classe ou estrutura, quando ele faz referência ao nome de classe ou estrutura não poderá determinar se essa referência acessa a classe ou estrutura em si ou uma propriedade padrão.</span><span class="sxs-lookup"><span data-stu-id="5b85d-108">If the calling code is not familiar with your class or structure, when it makes a reference to the class or structure name it cannot be certain whether that reference accesses the class or structure itself, or a default property.</span></span> <span data-ttu-id="5b85d-109">Isso pode levar a erros de compilador ou erros de lógica de tempo de execução sutis.</span><span class="sxs-lookup"><span data-stu-id="5b85d-109">This can lead to compiler errors or subtle run-time logic errors.</span></span>  
   
- Você tanto pode reduzir a chance de erros de propriedade padrão sempre usando o [instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) para definir o tipo do compilador para `On`.  
+ <span data-ttu-id="5b85d-110">Você tanto pode reduzir a chance de erros de propriedade padrão sempre usando o [instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) para definir o tipo de compilador verificação `On`.</span><span class="sxs-lookup"><span data-stu-id="5b85d-110">You can somewhat reduce the chance of default property errors by always using the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md) to set compiler type checking to `On`.</span></span>  
   
- Se você estiver planejando usar uma classe ou estrutura predefinidas no seu código, você deve determinar se ele tem uma propriedade padrão e, nesse caso, o que seu nome é.  
+ <span data-ttu-id="5b85d-111">Se você estiver planejando usar uma classe ou estrutura predefinidas no seu código, você deve determinar se ela tem uma propriedade padrão e nesse caso, o que seu nome é.</span><span class="sxs-lookup"><span data-stu-id="5b85d-111">If you are planning to use a predefined class or structure in your code, you must determine whether it has a default property, and if so, what its name is.</span></span>  
   
- Por causa dessas desvantagens, você deve considerar não definir as propriedades padrão. Para fins de legibilidade de código, você deve também considerar sempre referir-se a todas as propriedades explicitamente, mesmo propriedades padrão.  
+ <span data-ttu-id="5b85d-112">Devido a essas desvantagens, você deve considerar não definir as propriedades padrão.</span><span class="sxs-lookup"><span data-stu-id="5b85d-112">Because of these disadvantages, you should consider not defining default properties.</span></span> <span data-ttu-id="5b85d-113">Para a legibilidade do código, você deve também considerar sempre referir-se a todas as propriedades explicitamente, mesmo propriedades padrão.</span><span class="sxs-lookup"><span data-stu-id="5b85d-113">For code readability, you should also consider always referring to all properties explicitly, even default properties.</span></span>  
   
- O `Default` modificador pode ser usado neste contexto:  
+ <span data-ttu-id="5b85d-114">O `Default` modificador pode ser usado neste contexto:</span><span class="sxs-lookup"><span data-stu-id="5b85d-114">The `Default` modifier can be used in this context:</span></span>  
   
- [Instrução Property](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="5b85d-115">Instrução Property</span><span class="sxs-lookup"><span data-stu-id="5b85d-115">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Como: declarar e chamar uma propriedade padrão no Visual Basic](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)   
- [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="5b85d-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5b85d-116">See Also</span></span>  
+ [<span data-ttu-id="5b85d-117">Como: declarar e chamar uma propriedade padrão no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5b85d-117">How to: Declare and Call a Default Property in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)  
+ [<span data-ttu-id="5b85d-118">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="5b85d-118">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

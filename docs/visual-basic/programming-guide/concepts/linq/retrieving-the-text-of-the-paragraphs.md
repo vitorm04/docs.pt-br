@@ -1,44 +1,40 @@
 ---
-title: "Recuperando o texto dos parágrafos (Visual Basic) | Documentos do Microsoft"
+title: "Recuperando o texto dos parágrafos (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 095fa0d9-7b1b-4cbb-9c13-e2c9d8923d31
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 147c8e60e44fd71869df84cbee9836213d96c0fd
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 492fc0dffd007f0ccdb7454c62e86cac753ca06b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a>Recuperando o texto dos parágrafos (Visual Basic)
-Este exemplo cria no exemplo anterior, [recuperando os parágrafos e seus estilos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md). Esse novo exemplo recupera o texto de cada parágrafo como uma cadeia de caracteres.  
+# <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a><span data-ttu-id="7ac4b-102">Recuperando o texto dos parágrafos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7ac4b-102">Retrieving the Text of the Paragraphs (Visual Basic)</span></span>
+<span data-ttu-id="7ac4b-103">Este exemplo é baseado no exemplo anterior, [recuperando os parágrafos e seus estilos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md).</span><span class="sxs-lookup"><span data-stu-id="7ac4b-103">This example builds on the previous example, [Retrieving the Paragraphs and Their Styles (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md).</span></span> <span data-ttu-id="7ac4b-104">Esse novo exemplo recupera o texto de cada parágrafo como uma cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="7ac4b-104">This new example retrieves the text of each paragraph as a string.</span></span>  
   
- Para recuperar o texto, este exemplo adiciona uma consulta adicional que executa iterações através da coleção de tipos anônimos e projeta uma nova coleção de um tipo anônimo com a adição de um novo membro, `Text`. Ele usa o <xref:System.Linq.Enumerable.Aggregate%2A>operador de consulta padrão para concatenar várias cadeias de caracteres em uma cadeia de caracteres.</xref:System.Linq.Enumerable.Aggregate%2A>  
+ <span data-ttu-id="7ac4b-105">Para recuperar o texto, este exemplo adiciona uma consulta adicional que executa iterações através da coleção de tipos anônimos e projeta uma nova coleção de um tipo anônimo com a adição de um novo membro, `Text`.</span><span class="sxs-lookup"><span data-stu-id="7ac4b-105">To retrieve the text, this example adds an additional query that iterates through the collection of anonymous types and projects a new collection of an anonymous type with the addition of a new member, `Text`.</span></span> <span data-ttu-id="7ac4b-106">Usa o operador padrão de consulta de <xref:System.Linq.Enumerable.Aggregate%2A> para concatenar várias cadeias de caracteres em uma cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="7ac4b-106">It uses the <xref:System.Linq.Enumerable.Aggregate%2A> standard query operator to concatenate multiple strings into one string.</span></span>  
   
- Essa técnica (isto é, principalmente se projetando a uma coleção de um tipo anônimo, usando nessa coleção para se a projetar uma nova coleção de um tipo anônimo) é uma linguagem comum e útil. Esta consulta pode ter sido gravados sem projeto para o primeiro tipo anônimo. Entretanto, por causa da avaliação lazy, fazer isso não usa de poder de processamento adicional. O idioma cria um breves mais objetos na heap, mas isso não prejudica significativamente o desempenho.  
+ <span data-ttu-id="7ac4b-107">Essa técnica (isto é, principalmente se projetando a uma coleção de um tipo anônimo, usando nessa coleção para se a projetar uma nova coleção de um tipo anônimo) é uma linguagem comum e útil.</span><span class="sxs-lookup"><span data-stu-id="7ac4b-107">This technique (that is, first projecting to a collection of an anonymous type, then using this collection to project to a new collection of an anonymous type) is a common and useful idiom.</span></span> <span data-ttu-id="7ac4b-108">Esta consulta pode ter sido gravados sem projeto para o primeiro tipo anônimo.</span><span class="sxs-lookup"><span data-stu-id="7ac4b-108">This query could have been written without projecting to the first anonymous type.</span></span> <span data-ttu-id="7ac4b-109">Entretanto, por causa da avaliação lazy, fazer isso não usa de poder de processamento adicional.</span><span class="sxs-lookup"><span data-stu-id="7ac4b-109">However, because of lazy evaluation, doing so does not use much additional processing power.</span></span> <span data-ttu-id="7ac4b-110">O idioma cria um breves mais objetos na heap, mas isso não prejudica significativamente o desempenho.</span><span class="sxs-lookup"><span data-stu-id="7ac4b-110">The idiom creates more short lived objects on the heap, but this does not substantially degrade performance.</span></span>  
   
- Naturalmente, seria possível escrever uma única consulta que contém a funcionalidade para recuperar os parágrafos, o estilo de cada parágrafo, e o texto de cada parágrafo. No entanto, geralmente é útil dividir uma consulta mais complexa em consultas múltiplas porque o código resultante é mais modular e fácil de manter. Além disso, se você precisar de reutilizar parte de consulta, é mais fácil refatorar se as consultas são gravadas dessa maneira.  
+ <span data-ttu-id="7ac4b-111">Naturalmente, seria possível escrever uma única consulta que contém a funcionalidade para recuperar os parágrafos, o estilo de cada parágrafo, e o texto de cada parágrafo.</span><span class="sxs-lookup"><span data-stu-id="7ac4b-111">Of course, it would be possible to write a single query that contains the functionality to retrieve the paragraphs, the style of each paragraph, and the text of each paragraph.</span></span> <span data-ttu-id="7ac4b-112">No entanto, geralmente é útil dividir uma consulta mais complexa em consultas múltiplas porque o código resultante é mais modular e fácil de manter.</span><span class="sxs-lookup"><span data-stu-id="7ac4b-112">However, it often is useful to break up a more complicated query into multiple queries because the resulting code is more modular and easier to maintain.</span></span> <span data-ttu-id="7ac4b-113">Além disso, se você precisar de reutilizar parte de consulta, é mais fácil refatorar se as consultas são gravadas dessa maneira.</span><span class="sxs-lookup"><span data-stu-id="7ac4b-113">Furthermore, if you need to reuse a portion of the query, it is easier to refactor if the queries are written in this manner.</span></span>  
   
- Essas consultas, que são encadeadas juntos, usam o modelo de processamento que é examinado em detalhes no tópico [Tutorial: execução adiada (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md).  
+ <span data-ttu-id="7ac4b-114">Essas consultas, que são encadeadas, usam o modelo de processamento é examinado em detalhes no tópico [Tutorial: execução adiada (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md).</span><span class="sxs-lookup"><span data-stu-id="7ac4b-114">These queries, which are chained together, use the processing model that is examined in detail in the topic [Tutorial: Deferred Execution (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md).</span></span>  
   
-## <a name="example"></a>Exemplo  
- Este exemplo processa um documento de WordprocessingML, determinando o nó do elemento, o nome do estilo, e o texto de cada parágrafo. Este exemplo cria nos exemplos anteriores neste tutorial. A nova consulta é chamada nos comentários no código a seguir.  
+## <a name="example"></a><span data-ttu-id="7ac4b-115">Exemplo</span><span class="sxs-lookup"><span data-stu-id="7ac4b-115">Example</span></span>  
+ <span data-ttu-id="7ac4b-116">Este exemplo processa um documento de WordprocessingML, determinando o nó do elemento, o nome do estilo, e o texto de cada parágrafo.</span><span class="sxs-lookup"><span data-stu-id="7ac4b-116">This example processes a WordprocessingML document, determining the element node, the style name, and the text of each paragraph.</span></span> <span data-ttu-id="7ac4b-117">Este exemplo cria nos exemplos anteriores neste tutorial.</span><span class="sxs-lookup"><span data-stu-id="7ac4b-117">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="7ac4b-118">A nova consulta é chamada nos comentários no código a seguir.</span><span class="sxs-lookup"><span data-stu-id="7ac4b-118">The new query is called out in comments in the code below.</span></span>  
   
- Para obter instruções para criar o documento de origem para este exemplo, consulte [criando o Office Open XML documento de origem (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ <span data-ttu-id="7ac4b-119">Para obter instruções para criar o documento de origem para este exemplo, consulte [criando o Office Open XML documento de origem (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="7ac4b-119">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- Este exemplo usa classes do assembly WindowsBase. Ele usa tipos no <xref:System.IO.Packaging?displayProperty=fullName>namespace.</xref:System.IO.Packaging?displayProperty=fullName>  
+ <span data-ttu-id="7ac4b-120">Este exemplo usa classes do assembly WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="7ac4b-120">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="7ac4b-121">Ele usa tipos no namespace <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="7ac4b-121">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -129,7 +125,7 @@ Module Module1
 End Module  
 ```  
   
- Este exemplo produz a seguinte saída quando aplicado ao documento descrito em [criando o Office Open XML documento de origem (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ <span data-ttu-id="7ac4b-122">Este exemplo produz a seguinte saída quando aplicada ao documento descrito em [criando o Office Open XML documento de origem (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="7ac4b-122">This example produces the following output when applied to the document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -149,11 +145,11 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-## <a name="next-steps"></a>Próximas etapas  
- O exemplo a seguir mostra como usar um método de extensão, em vez de <xref:System.Linq.Enumerable.Aggregate%2A>, para concatenar várias cadeias de caracteres em uma única cadeia de caracteres.</xref:System.Linq.Enumerable.Aggregate%2A>  
+## <a name="next-steps"></a><span data-ttu-id="7ac4b-123">Próximas etapas</span><span class="sxs-lookup"><span data-stu-id="7ac4b-123">Next Steps</span></span>  
+ <span data-ttu-id="7ac4b-124">O exemplo a seguir mostra como usar um método de extensão, em vez de <xref:System.Linq.Enumerable.Aggregate%2A>, para concatenar várias cadeias de caracteres em uma única cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="7ac4b-124">The next example shows how to use an extension method, instead of <xref:System.Linq.Enumerable.Aggregate%2A>, to concatenate multiple strings into a single string.</span></span>  
   
--   [Refatoração usando um método de extensão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
+-   [<span data-ttu-id="7ac4b-125">Refatoração usando um método de extensão (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7ac4b-125">Refactoring Using an Extension Method (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
- [Execução adiada e avaliação lenta em LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="7ac4b-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7ac4b-126">See Also</span></span>  
+ [<span data-ttu-id="7ac4b-127">Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7ac4b-127">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+ [<span data-ttu-id="7ac4b-128">Execução adiada e avaliação lenta em LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7ac4b-128">Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

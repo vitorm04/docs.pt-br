@@ -1,70 +1,52 @@
 ---
-title: "Quando usar uma enumeração (Visual Basic) | Documentos do Microsoft"
+title: "Quando usar uma enumeração (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- enumerations [Visual Basic]
+helpviewer_keywords: enumerations [Visual Basic]
 ms.assetid: e6e47b5b-3ed9-452d-a481-9c3fed88519a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f22102a2e1e7eafd7fcf4db1f46af2cc622eba70
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a3b2937cc71c0c31bd8dce3d77fb33f48e1b5750
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="when-to-use-an-enumeration-visual-basic"></a>Quando usar uma enumeração (Visual Basic)
-Enumerações oferecem uma maneira fácil de trabalhar com conjuntos de constantes relacionadas. Uma enumeração, ou `Enum`, é um nome simbólico para um conjunto de valores. Enumerações são tratadas como tipos de dados, e você pode usá-las para criar conjuntos de constantes para uso com variáveis e propriedades.  
+# <a name="when-to-use-an-enumeration-visual-basic"></a><span data-ttu-id="3f19d-102">Quando usar uma enumeração (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f19d-102">When to Use an Enumeration (Visual Basic)</span></span>
+<span data-ttu-id="3f19d-103">Enumerações oferecem uma maneira fácil de trabalhar com conjuntos de constantes relacionadas.</span><span class="sxs-lookup"><span data-stu-id="3f19d-103">Enumerations offer an easy way to work with sets of related constants.</span></span> <span data-ttu-id="3f19d-104">Uma enumeração, ou `Enum`, é um nome simbólico para um conjunto de valores.</span><span class="sxs-lookup"><span data-stu-id="3f19d-104">An enumeration, or `Enum`, is a symbolic name for a set of values.</span></span> <span data-ttu-id="3f19d-105">Enumerações são tratadas como tipos de dados, e você pode usá-los para criar conjuntos de constantes para uso com variáveis e propriedades.</span><span class="sxs-lookup"><span data-stu-id="3f19d-105">Enumerations are treated as data types, and you can use them to create sets of constants for use with variables and properties.</span></span>  
   
-## <a name="when-to-use-an-enumeration"></a>Quando usar uma enumeração  
- Sempre que um procedimento aceita um conjunto limitado de variáveis, considere usar uma enumeração. Enumerações fazem para código mais claro e mais legível, especialmente quando são utilizados nomes significativos.  
+## <a name="when-to-use-an-enumeration"></a><span data-ttu-id="3f19d-106">Quando usar uma enumeração</span><span class="sxs-lookup"><span data-stu-id="3f19d-106">When to Use an Enumeration</span></span>  
+ <span data-ttu-id="3f19d-107">Sempre que um procedimento aceita um conjunto limitado de variáveis, considere o uso de uma enumeração.</span><span class="sxs-lookup"><span data-stu-id="3f19d-107">Whenever a procedure accepts a limited set of variables, consider using an enumeration.</span></span> <span data-ttu-id="3f19d-108">Enumerações tornar código mais clara e mais legível, especialmente quando são usados nomes significativos.</span><span class="sxs-lookup"><span data-stu-id="3f19d-108">Enumerations make for clearer and more readable code, particularly when meaningful names are used.</span></span>  
   
- Os benefícios de usar enumerações incluem:  
+ <span data-ttu-id="3f19d-109">Os benefícios do uso de enumerações incluem:</span><span class="sxs-lookup"><span data-stu-id="3f19d-109">The benefits of using enumerations include:</span></span>  
   
--   Reduz erros causados por transpondo ou números de erros de digitação.  
+-   <span data-ttu-id="3f19d-110">Reduz os erros causados por Transpor ou números de erros de digitação.</span><span class="sxs-lookup"><span data-stu-id="3f19d-110">Reduces errors caused by transposing or mistyping numbers.</span></span>  
   
--   É fácil alterar os valores no futuro.  
+-   <span data-ttu-id="3f19d-111">É fácil alterar os valores no futuro.</span><span class="sxs-lookup"><span data-stu-id="3f19d-111">Makes it easy to change values in the future.</span></span>  
   
--   Torna o código mais fácil de ler, que significa que é menos provável que os erros serão surgir dentro dele.  
+-   <span data-ttu-id="3f19d-112">Torna o código mais fácil de ler, o que significa que é menos provável que os erros serão surgir nele.</span><span class="sxs-lookup"><span data-stu-id="3f19d-112">Makes code easier to read, which means it is less likely that errors will creep into it.</span></span>  
   
--   Garante a compatibilidade com versões posteriores. Com enumerações, seu código é menor probabilidade de falhar se futuramente alguém altera os valores correspondentes aos nomes de membro.  
+-   <span data-ttu-id="3f19d-113">Garante a compatibilidade com versões posteriores.</span><span class="sxs-lookup"><span data-stu-id="3f19d-113">Ensures forward compatibility.</span></span> <span data-ttu-id="3f19d-114">Com enumerações, seu código tem menos probabilidade de falhar se futuramente alguém altera os valores correspondentes aos nomes de membros.</span><span class="sxs-lookup"><span data-stu-id="3f19d-114">With enumerations, your code is less likely to fail if in the future someone changes the values corresponding to the member names.</span></span>  
   
-## <a name="naming-enumerations"></a>Enumerações de nomenclatura  
- Use uma convenção de nomenclatura para membros de enumeração. Quando [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] encontra um nome de membro de enumeração, uma exceção pode ser disparada se outras bibliotecas de tipo referenciado com o mesmo nome. Use um prefixo exclusivo que identifica os valores do seu aplicativo ou componente.  
+## <a name="naming-enumerations"></a><span data-ttu-id="3f19d-115">Enumerações de nomenclatura</span><span class="sxs-lookup"><span data-stu-id="3f19d-115">Naming Enumerations</span></span>  
+ <span data-ttu-id="3f19d-116">Use uma convenção de nomenclatura para os membros da enumeração.</span><span class="sxs-lookup"><span data-stu-id="3f19d-116">Use a naming convention for enumeration members.</span></span> <span data-ttu-id="3f19d-117">Quando [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] encontra um nome de membro de enumeração, uma exceção pode ser acionada se outras bibliotecas de tipo referenciado com o mesmo nome.</span><span class="sxs-lookup"><span data-stu-id="3f19d-117">When [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] encounters an enumeration member name, an exception may be thrown if other referenced type libraries contain the same name.</span></span> <span data-ttu-id="3f19d-118">Use um prefixo exclusivo que identifica os valores do seu aplicativo ou componente.</span><span class="sxs-lookup"><span data-stu-id="3f19d-118">Use a unique prefix that identifies the values from your application or component.</span></span>  
   
- Ao fazer referência a um membro de uma enumeração, você deve qualificar o nome do membro com o nome da enumeração ou então usar o `Imports` instrução. Para obter mais informações, consulte [enumerações e qualificação de nome](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).  
+ <span data-ttu-id="3f19d-119">Ao fazer referência a um membro de uma enumeração, você deve qualificar o nome do membro com o nome de enumeração ou então usar o `Imports` instrução.</span><span class="sxs-lookup"><span data-stu-id="3f19d-119">When referring to a member of an enumeration, you must qualify the member name with the enumeration name or else use the `Imports` statement.</span></span> <span data-ttu-id="3f19d-120">Para obter mais informações, consulte [enumerações e qualificação de nome](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).</span><span class="sxs-lookup"><span data-stu-id="3f19d-120">For more information, see [Enumerations and Name Qualification](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).</span></span>  
   
-## <a name="predefined-enumerations"></a>Enumerações predefinidas  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]Fornece um número de enumerações predefinidos, como `FirstDayOfWeek` e `MsgBoxResul`t, para facilitar o seu código. Para obter uma lista desses consulte [constantes e enumerações](../../../../visual-basic/language-reference/constants-and-enumerations.md).  
+## <a name="predefined-enumerations"></a><span data-ttu-id="3f19d-121">Enumerações predefinidas</span><span class="sxs-lookup"><span data-stu-id="3f19d-121">Predefined Enumerations</span></span>  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="3f19d-122">Fornece um número de enumerações predefinidos, como `FirstDayOfWeek` e `MsgBoxResult`, para facilitar o seu código.</span><span class="sxs-lookup"><span data-stu-id="3f19d-122"> provides a number of predefined enumerations, such as `FirstDayOfWeek` and `MsgBoxResult`, to facilitate your code.</span></span> <span data-ttu-id="3f19d-123">Para obter uma lista delas, consulte [constantes e enumerações](../../../../visual-basic/language-reference/constants-and-enumerations.md).</span><span class="sxs-lookup"><span data-stu-id="3f19d-123">For a list of these see [Constants and Enumerations](../../../../visual-basic/language-reference/constants-and-enumerations.md).</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Como: declarar uma enumeração](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)   
- [Como: fazer referência a um membro de enumeração](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)   
- [Enumerações e qualificação de nome](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)   
- [Como: iterar por uma enumeração no Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)   
- [Como: determinar a cadeia de caracteres associada a um valor de enumeração](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)   
- [Instrução Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)   
- [Constantes e Enumerações](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="3f19d-124">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3f19d-124">See Also</span></span>  
+ [<span data-ttu-id="3f19d-125">Como: declarar uma enumeração</span><span class="sxs-lookup"><span data-stu-id="3f19d-125">How to: Declare an Enumeration</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)  
+ [<span data-ttu-id="3f19d-126">Como fazer referência a um membro de enumeração</span><span class="sxs-lookup"><span data-stu-id="3f19d-126">How to: Refer to an Enumeration Member</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)  
+ [<span data-ttu-id="3f19d-127">Enumerações e Qualificação de Nome</span><span class="sxs-lookup"><span data-stu-id="3f19d-127">Enumerations and Name Qualification</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)  
+ [<span data-ttu-id="3f19d-128">Como: iterar por meio de uma enumeração no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3f19d-128">How to: Iterate Through An Enumeration in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)  
+ [<span data-ttu-id="3f19d-129">Como determinar a cadeia de caracteres associada a um valor de enumeração</span><span class="sxs-lookup"><span data-stu-id="3f19d-129">How to: Determine the String Associated with an Enumeration Value</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)  
+ [<span data-ttu-id="3f19d-130">Instrução Enum</span><span class="sxs-lookup"><span data-stu-id="3f19d-130">Enum Statement</span></span>](../../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [<span data-ttu-id="3f19d-131">Constantes e Enumerações</span><span class="sxs-lookup"><span data-stu-id="3f19d-131">Constants and Enumerations</span></span>](../../../../visual-basic/language-reference/constants-and-enumerations.md)
