@@ -1,1 +1,1 @@
-tecnologia adaptativa
+<span data-ttu-id="004a0-101">tecnologia adaptativa</span><span class="sxs-lookup"><span data-stu-id="004a0-101">assistive technology</span></span>

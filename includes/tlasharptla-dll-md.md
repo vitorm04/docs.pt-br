@@ -1,1 +1,1 @@
-DLL (biblioteca de vínculo dinâmico)
+<span data-ttu-id="e4876-101">DLL (biblioteca de vínculo dinâmico)</span><span class="sxs-lookup"><span data-stu-id="e4876-101">dynamic-link library (DLL)</span></span>

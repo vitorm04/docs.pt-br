@@ -1,58 +1,40 @@
 ---
-title: "Atributo &quot;&lt;attributename&gt;&quot; não pode ser aplicado várias vezes | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Atributo &#39; &lt;attributename&gt;&#39; não pode ser aplicado várias vezes"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc30663
 - vbc30663
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC30663
+helpviewer_keywords: BC30663
 ms.assetid: 3760e7ff-7238-40a1-8676-77d858a64fc0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 42d854393af2eecd0a624c7937a00b6912c898ac
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 216cf54fd164ca95b6378517a679b5b54183559f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="attribute-39ltattributenamegt39-cannot-be-applied-multiple-times"></a>Atributo '&lt;attributename&gt;' não pode ser aplicado várias vezes
-O atributo só pode ser aplicado uma vez. O `AttributeUsage` atributo determina se um atributo pode ser aplicado mais de uma vez.  
+# <a name="attribute-39ltattributenamegt39-cannot-be-applied-multiple-times"></a><span data-ttu-id="5b010-102">Atributo &#39; &lt;attributename&gt;&#39; não pode ser aplicado várias vezes</span><span class="sxs-lookup"><span data-stu-id="5b010-102">Attribute &#39;&lt;attributename&gt;&#39; cannot be applied multiple times</span></span>
+<span data-ttu-id="5b010-103">O atributo só pode ser aplicado uma vez.</span><span class="sxs-lookup"><span data-stu-id="5b010-103">The attribute can only be applied once.</span></span> <span data-ttu-id="5b010-104">O `AttributeUsage` atributo determina se um atributo pode ser aplicado mais de uma vez.</span><span class="sxs-lookup"><span data-stu-id="5b010-104">The `AttributeUsage` attribute determines whether an attribute can be applied more than once.</span></span>  
   
- **ID do erro:** BC30663  
+ <span data-ttu-id="5b010-105">**ID do erro:** BC30663</span><span class="sxs-lookup"><span data-stu-id="5b010-105">**Error ID:** BC30663</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="5b010-106">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="5b010-106">To correct this error</span></span>  
   
-1.  Verifique se que o atributo é aplicado somente uma vez.  
+1.  <span data-ttu-id="5b010-107">Verifique se que o atributo é aplicado somente uma vez.</span><span class="sxs-lookup"><span data-stu-id="5b010-107">Make sure the attribute is only applied once.</span></span>  
   
-2.  Se você estiver usando atributos personalizados que você desenvolveu, considere alterar seus `AttributeUsage` atributo para permitir que vários usos de atributo, como ocorre com o exemplo a seguir.  
+2.  <span data-ttu-id="5b010-108">Se você estiver usando atributos personalizados que você desenvolveu, considere alterar seus `AttributeUsage` atributo para permitir que vários usos de atributo, como ocorre com o exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="5b010-108">If you are using custom attributes you developed, consider changing their `AttributeUsage` attribute to allow multiple attribute usage, as with the following example.</span></span>  
   
 ```vb  
 <AttributeUsage(AllowMultiple := True)>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.AttributeUsageAttribute></xref:System.AttributeUsageAttribute>   
- [Criando atributos personalizados](../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)   
- [AttributeUsage](../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)
+## <a name="see-also"></a><span data-ttu-id="5b010-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5b010-109">See Also</span></span>  
+ <xref:System.AttributeUsageAttribute>  
+ [<span data-ttu-id="5b010-110">Criando Atributos Personalizados</span><span class="sxs-lookup"><span data-stu-id="5b010-110">Creating Custom Attributes</span></span>](../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+ [<span data-ttu-id="5b010-111">AttributeUsage</span><span class="sxs-lookup"><span data-stu-id="5b010-111">AttributeUsage</span></span>](../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)

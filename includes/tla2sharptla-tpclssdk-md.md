@@ -1,1 +1,1 @@
-SDK 1.7 do Tablet
+<span data-ttu-id="35ebf-101">SDK 1.7 do Tablet</span><span class="sxs-lookup"><span data-stu-id="35ebf-101">Tablet PC SDK 1.7</span></span>

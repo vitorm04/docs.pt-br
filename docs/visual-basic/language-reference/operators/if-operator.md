@@ -1,90 +1,73 @@
 ---
-title: Se o operador (Visual Basic) | Documentos do Microsoft
-ms.date: 2015-07-20
+title: Operador If (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.IfOperator
 - IfOperator
-dev_langs:
-- VB
 helpviewer_keywords:
-- ternary operators
+- ternary operators [Visual Basic]
 - conditional execution
 - If expressions [Visual Basic]
 - conditional operator [Visual Basic]
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b026718bd398d747dc30b161c2250a06e2ce0500
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2c553da5abf5453ba881671806b976125355c1e6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="if-operator-visual-basic"></a>Operador If (Visual Basic)
-Usos de curto-circuito avaliação para retornar um de dois valores condicionalmente. O `If` operador pode ser chamado com três argumentos ou com dois argumentos.  
+# <a name="if-operator-visual-basic"></a><span data-ttu-id="396de-102">Operador If (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="396de-102">If Operator (Visual Basic)</span></span>
+<span data-ttu-id="396de-103">Usos de curto-circuito avaliação para retornar um de dois valores condicionalmente.</span><span class="sxs-lookup"><span data-stu-id="396de-103">Uses short-circuit evaluation to conditionally return one of two values.</span></span> <span data-ttu-id="396de-104">O `If` operador pode ser chamado com três argumentos ou com dois argumentos.</span><span class="sxs-lookup"><span data-stu-id="396de-104">The `If` operator can be called with three arguments or with two arguments.</span></span>  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a><span data-ttu-id="396de-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="396de-105">Syntax</span></span>  
   
 ```  
 If( [argument1,] argument2, argument3 )  
 ```  
   
-## <a name="if-operator-called-with-three-arguments"></a>Se o operador chamado com três argumentos  
- Quando `If` é chamado usando três argumentos, o primeiro argumento deve ser avaliada como um valor que pode ser convertido como um `Boolean`. Que `Boolean` valor determinará qual dos outros dois argumentos é avaliado e retornado. A lista a seguir se aplica somente quando o `If` é chamado de operador usando três argumentos.  
+## <a name="if-operator-called-with-three-arguments"></a><span data-ttu-id="396de-106">Se o operador chamado com três argumentos</span><span class="sxs-lookup"><span data-stu-id="396de-106">If Operator Called with Three Arguments</span></span>  
+ <span data-ttu-id="396de-107">Quando `If` é chamado usando três argumentos, o primeiro argumento deve ser avaliada como um valor que pode ser convertido como um `Boolean`.</span><span class="sxs-lookup"><span data-stu-id="396de-107">When `If` is called by using three arguments, the first argument must evaluate to a value that can be cast as a `Boolean`.</span></span> <span data-ttu-id="396de-108">Que `Boolean` valor determinará qual dos outros dois argumentos é avaliado e retornado.</span><span class="sxs-lookup"><span data-stu-id="396de-108">That `Boolean` value will determine which of the other two arguments is evaluated and returned.</span></span> <span data-ttu-id="396de-109">A lista a seguir se aplica somente quando o `If` operador é chamado por meio de três argumentos.</span><span class="sxs-lookup"><span data-stu-id="396de-109">The following list applies only when the `If` operator is called by using three arguments.</span></span>  
   
-## <a name="parts"></a>Partes  
+## <a name="parts"></a><span data-ttu-id="396de-110">Partes</span><span class="sxs-lookup"><span data-stu-id="396de-110">Parts</span></span>  
   
-|Termo|Definição|  
+|<span data-ttu-id="396de-111">Termo</span><span class="sxs-lookup"><span data-stu-id="396de-111">Term</span></span>|<span data-ttu-id="396de-112">Definição</span><span class="sxs-lookup"><span data-stu-id="396de-112">Definition</span></span>|  
 |---|---|  
-|`argument1`|Necessário. `Boolean`. Determina qual dos outros argumentos para avaliar e retornar.|  
-|`argument2`|Necessário. `Object`. Avaliado e retornado se `argument1` é avaliada como `True`.|  
-|`argument3`|Necessário. `Object`. Avaliado e retornado se `argument1` é avaliada como `False` ou se `argument1` é um [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` variável que é avaliada como [nada](../../../visual-basic/language-reference/nothing.md).|  
+|`argument1`|<span data-ttu-id="396de-113">Necessário.</span><span class="sxs-lookup"><span data-stu-id="396de-113">Required.</span></span> <span data-ttu-id="396de-114">`Boolean`.</span><span class="sxs-lookup"><span data-stu-id="396de-114">`Boolean`.</span></span> <span data-ttu-id="396de-115">Determina qual dos outros argumentos para avaliar e retornar.</span><span class="sxs-lookup"><span data-stu-id="396de-115">Determines which of the other arguments to evaluate and return.</span></span>|  
+|`argument2`|<span data-ttu-id="396de-116">Necessário.</span><span class="sxs-lookup"><span data-stu-id="396de-116">Required.</span></span> <span data-ttu-id="396de-117">`Object`.</span><span class="sxs-lookup"><span data-stu-id="396de-117">`Object`.</span></span> <span data-ttu-id="396de-118">Avaliado e retornado se `argument1` é avaliada como `True`.</span><span class="sxs-lookup"><span data-stu-id="396de-118">Evaluated and returned if `argument1` evaluates to `True`.</span></span>|  
+|`argument3`|<span data-ttu-id="396de-119">Necessário.</span><span class="sxs-lookup"><span data-stu-id="396de-119">Required.</span></span> <span data-ttu-id="396de-120">`Object`.</span><span class="sxs-lookup"><span data-stu-id="396de-120">`Object`.</span></span> <span data-ttu-id="396de-121">Avaliado e retornado se `argument1` é avaliada como `False` ou se `argument1` é um [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` variável que é avaliada como [nada](../../../visual-basic/language-reference/nothing.md).</span><span class="sxs-lookup"><span data-stu-id="396de-121">Evaluated and returned if `argument1` evaluates to `False` or if `argument1` is a [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)`Boolean` variable that evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md).</span></span>|  
   
- Um `If` operador que é chamado com três argumentos funciona como um `IIf` função exceto que ele usa curto-circuito avaliação. Um `IIf` função sempre avalia todos os três argumentos, enquanto um `If` operador que possui três argumentos é avaliada somente dois deles. A primeira `If` argumento é avaliado e o resultado é convertido como um `Boolean` valor, `True` ou `False`. Se o valor for `True`, `argument2` é avaliada e seu valor é retornado, mas `argument3` não será avaliado. Se o valor da `Boolean` expressão é `False`, `argument3` é avaliada e seu valor é retornado, mas `argument2` não será avaliado. Os exemplos a seguir ilustram o uso de `If` quando são usados três argumentos:  
+ <span data-ttu-id="396de-122">Um `If` operador que é chamado com três argumentos funciona como um `IIf` função exceto que ele usa curto-circuito avaliação.</span><span class="sxs-lookup"><span data-stu-id="396de-122">An `If` operator that is called with three arguments works like an `IIf` function except that it uses short-circuit evaluation.</span></span> <span data-ttu-id="396de-123">Um `IIf` função sempre avalia todas as três argumentos, enquanto um `If` operador que tem três argumentos é avaliada apenas duas delas.</span><span class="sxs-lookup"><span data-stu-id="396de-123">An `IIf` function always evaluates all three of its arguments, whereas an `If` operator that has three arguments evaluates only two of them.</span></span> <span data-ttu-id="396de-124">A primeira `If` argumento é avaliado e o resultado será convertido como uma `Boolean` valor, `True` ou `False`.</span><span class="sxs-lookup"><span data-stu-id="396de-124">The first `If` argument is evaluated and the result is cast as a `Boolean` value, `True` or `False`.</span></span> <span data-ttu-id="396de-125">Se o valor for `True`, `argument2` é avaliada e seu valor é retornado, mas `argument3` não será avaliada.</span><span class="sxs-lookup"><span data-stu-id="396de-125">If the value is `True`, `argument2` is evaluated and its value is returned, but `argument3` is not evaluated.</span></span> <span data-ttu-id="396de-126">Se o valor da `Boolean` expressão é `False`, `argument3` é avaliada e seu valor é retornado, mas `argument2` não será avaliada.</span><span class="sxs-lookup"><span data-stu-id="396de-126">If the value of the `Boolean` expression is `False`, `argument3` is evaluated and its value is returned, but `argument2` is not evaluated.</span></span> <span data-ttu-id="396de-127">Os exemplos a seguir ilustram o uso do `If` quando são usados os três argumentos:</span><span class="sxs-lookup"><span data-stu-id="396de-127">The following examples illustrate the use of `If` when three arguments are used:</span></span>  
   
- [!code-vb[VbVbalrOperators&#100;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#100](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_1.vb)]  
   
- O exemplo a seguir ilustra o valor de avaliação de curto-circuito. O exemplo mostra duas tentativas de dividir variável `number` pela variável `divisor` exceto quando `divisor` é zero. Nesse caso, um 0 deve ser retornado, e deve ser feita nenhuma tentativa de executar a divisão porque resultaria um erro de tempo de execução. Porque o `If` avaliação de curto-circuito do uso de expressões, ele avalia o segundo ou terceiro argumento, dependendo do valor do primeiro argumento. Se o primeiro argumento for true, o divisor não for zero e é seguro avaliar o segundo argumento e realizar a divisão. Se o primeiro argumento for false, somente o terceiro argumento é avaliado e 0 é retornado. Portanto, quando o divisor for 0, nenhuma tentativa é feita para realizar a divisão e nenhum resultado de erro. No entanto, porque `IIf` não usa avaliação de curto-circuito, o segundo argumento é avaliado, mesmo quando o primeiro argumento é false. Isso causará um erro de divisão por zero tempo de execução.  
+ <span data-ttu-id="396de-128">O exemplo a seguir ilustra o valor de avaliação de curto-circuito.</span><span class="sxs-lookup"><span data-stu-id="396de-128">The following example illustrates the value of short-circuit evaluation.</span></span> <span data-ttu-id="396de-129">O exemplo mostra duas tentativas de dividir variável `number` pela variável `divisor` , exceto quando `divisor` é zero.</span><span class="sxs-lookup"><span data-stu-id="396de-129">The example shows two attempts to divide variable `number` by variable `divisor` except when `divisor` is zero.</span></span> <span data-ttu-id="396de-130">Nesse caso, 0 deve ser retornado, e deve ser feita nenhuma tentativa de executar a divisão porque resultaria um erro de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="396de-130">In that case, a 0 should be returned, and no attempt should be made to perform the division because a run-time error would result.</span></span> <span data-ttu-id="396de-131">Porque o `If` avaliação de curto-circuito do uso de expressões, ela avalia o segundo ou o terceiro argumento, dependendo do valor do primeiro argumento.</span><span class="sxs-lookup"><span data-stu-id="396de-131">Because the `If` expression uses short-circuit evaluation, it evaluates either the second or the third argument, depending on the value of the first argument.</span></span> <span data-ttu-id="396de-132">Se o primeiro argumento for true, o divisor não for zero e é seguro avaliar o segundo argumento e executar a divisão.</span><span class="sxs-lookup"><span data-stu-id="396de-132">If the first argument is true, the divisor is not zero and it is safe to evaluate the second argument and perform the division.</span></span> <span data-ttu-id="396de-133">Se o primeiro argumento for false, apenas o terceiro argumento é avaliado e 0 é retornado.</span><span class="sxs-lookup"><span data-stu-id="396de-133">If the first argument is false, only the third argument is evaluated and a 0 is returned.</span></span> <span data-ttu-id="396de-134">Portanto, quando o divisor for 0, nenhuma tentativa de executar a divisão e nenhum resultado de erro.</span><span class="sxs-lookup"><span data-stu-id="396de-134">Therefore, when the divisor is 0, no attempt is made to perform the division and no error results.</span></span> <span data-ttu-id="396de-135">No entanto, como `IIf` não usa avaliação de curto-circuito, o segundo argumento é avaliado, mesmo quando o primeiro argumento é false.</span><span class="sxs-lookup"><span data-stu-id="396de-135">However, because `IIf` does not use short-circuit evaluation, the second argument is evaluated even when the first argument is false.</span></span> <span data-ttu-id="396de-136">Isso causa um erro de divisão por zero tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="396de-136">This causes a run-time divide-by-zero error.</span></span>  
   
- [!code-vb[VbVbalrOperators&#101;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#101](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_2.vb)]  
   
-## <a name="if-operator-called-with-two-arguments"></a>Se o operador chamado com dois argumentos  
- O primeiro argumento para `If` pode ser omitido. Isso permite que o operador a ser chamado usando apenas dois argumentos. A lista a seguir se aplica somente quando o `If` operador é chamado com dois argumentos.  
+## <a name="if-operator-called-with-two-arguments"></a><span data-ttu-id="396de-137">Se o operador chamado com dois argumentos</span><span class="sxs-lookup"><span data-stu-id="396de-137">If Operator Called with Two Arguments</span></span>  
+ <span data-ttu-id="396de-138">O primeiro argumento para `If` pode ser omitido.</span><span class="sxs-lookup"><span data-stu-id="396de-138">The first argument to `If` can be omitted.</span></span> <span data-ttu-id="396de-139">Isso permite que o operador a ser chamado usando apenas dois argumentos.</span><span class="sxs-lookup"><span data-stu-id="396de-139">This enables the operator to be called by using only two arguments.</span></span> <span data-ttu-id="396de-140">A lista a seguir se aplica somente quando o `If` operador é chamado com dois argumentos.</span><span class="sxs-lookup"><span data-stu-id="396de-140">The following list applies only when the `If` operator is called with two arguments.</span></span>  
   
-## <a name="parts"></a>Partes  
+## <a name="parts"></a><span data-ttu-id="396de-141">Partes</span><span class="sxs-lookup"><span data-stu-id="396de-141">Parts</span></span>  
   
-|Termo|Definição|  
+|<span data-ttu-id="396de-142">Termo</span><span class="sxs-lookup"><span data-stu-id="396de-142">Term</span></span>|<span data-ttu-id="396de-143">Definição</span><span class="sxs-lookup"><span data-stu-id="396de-143">Definition</span></span>|  
 |---|---|  
-|`argument2`|Necessário. `Object`. Deve ser uma referência ou um tipo anulável. Avaliado e retornado quando ele for avaliado como algo diferente de `Nothing`.|  
-|`argument3`|Necessário. `Object`. Avaliado e retornado se `argument2` é avaliada como `Nothing`.|  
+|`argument2`|<span data-ttu-id="396de-144">Necessário.</span><span class="sxs-lookup"><span data-stu-id="396de-144">Required.</span></span> <span data-ttu-id="396de-145">`Object`.</span><span class="sxs-lookup"><span data-stu-id="396de-145">`Object`.</span></span> <span data-ttu-id="396de-146">Deve ser uma referência ou um tipo anulável.</span><span class="sxs-lookup"><span data-stu-id="396de-146">Must be a reference or nullable type.</span></span> <span data-ttu-id="396de-147">Avaliado e retornado quando ele for avaliado como algo diferente de `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="396de-147">Evaluated and returned when it evaluates to anything other than `Nothing`.</span></span>|  
+|`argument3`|<span data-ttu-id="396de-148">Necessário.</span><span class="sxs-lookup"><span data-stu-id="396de-148">Required.</span></span> <span data-ttu-id="396de-149">`Object`.</span><span class="sxs-lookup"><span data-stu-id="396de-149">`Object`.</span></span> <span data-ttu-id="396de-150">Avaliado e retornado se `argument2` é avaliada como `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="396de-150">Evaluated and returned if `argument2` evaluates to `Nothing`.</span></span>|  
   
- Quando o `Boolean` argumento for omitido, o primeiro argumento deve ser uma referência ou um tipo anulável. Se o primeiro argumento for avaliado como `Nothing`, o valor do segundo argumento é retornado. Em outros casos, o valor do primeiro argumento será retornado. O exemplo a seguir ilustra como funciona essa avaliação.  
+ <span data-ttu-id="396de-151">Quando o `Boolean` argumento for omitido, o primeiro argumento deve ser uma referência ou um tipo anulável.</span><span class="sxs-lookup"><span data-stu-id="396de-151">When the `Boolean` argument is omitted, the first argument must be a reference or nullable type.</span></span> <span data-ttu-id="396de-152">Se o primeiro argumento for avaliado como `Nothing`, o valor do segundo argumento é retornado.</span><span class="sxs-lookup"><span data-stu-id="396de-152">If the first argument evaluates to `Nothing`, the value of the second argument is returned.</span></span> <span data-ttu-id="396de-153">Em todos os outros casos, o valor do primeiro argumento será retornado.</span><span class="sxs-lookup"><span data-stu-id="396de-153">In all other cases, the value of the first argument is returned.</span></span> <span data-ttu-id="396de-154">O exemplo a seguir ilustra como esta avaliação funciona.</span><span class="sxs-lookup"><span data-stu-id="396de-154">The following example illustrates how this evaluation works.</span></span>  
   
- [!code-vb[VbVbalrOperators&#102;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_3.vb)]  
+ [!code-vb[VbVbalrOperators#102](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_3.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.Interaction.IIf%2A></xref:Microsoft.VisualBasic.Interaction.IIf%2A>   
- [Tipos de valor anulável](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)   
- [Nothing](../../../visual-basic/language-reference/nothing.md)
+## <a name="see-also"></a><span data-ttu-id="396de-155">Consulte também</span><span class="sxs-lookup"><span data-stu-id="396de-155">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Interaction.IIf%2A>  
+ [<span data-ttu-id="396de-156">Tipos de Valor Anulável</span><span class="sxs-lookup"><span data-stu-id="396de-156">Nullable Value Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
+ [<span data-ttu-id="396de-157">Nothing</span><span class="sxs-lookup"><span data-stu-id="396de-157">Nothing</span></span>](../../../visual-basic/language-reference/nothing.md)

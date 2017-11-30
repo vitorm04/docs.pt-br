@@ -1,1 +1,1 @@
-BITS (Serviço de Transferência Inteligente em Segundo Plano) da Microsoft
+<span data-ttu-id="a1ce3-101">BITS (Serviço de Transferência Inteligente em Segundo Plano) da Microsoft</span><span class="sxs-lookup"><span data-stu-id="a1ce3-101">Microsoft Background Intelligent Transfer Service (BITS)</span></span>

@@ -1,42 +1,26 @@
 ---
-title: "Alguns arquivos e pastas causou exceções durante a operação de | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Alguns arquivos e pastas causou exceções durante a operação"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 ms.assetid: b0471302-907c-42a6-a326-8d3d805ebe98
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 51c69d531a39b150d4fa75a10a411c35e1037d42
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a954328536f96477eb8a79d7cc9c216786803213
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="some-files-and-folders-caused-exceptions-during-the-operation"></a>Alguns arquivos e pastas causou exceções durante a operação
-Arquivos e diretórios podem causar exceções quando uma operação é tentada, mas o usuário não possui as permissões necessárias.  
+# <a name="some-files-and-folders-caused-exceptions-during-the-operation"></a><span data-ttu-id="1638c-102">Alguns arquivos e pastas causou exceções durante a operação</span><span class="sxs-lookup"><span data-stu-id="1638c-102">Some files and folders caused exceptions during the operation</span></span>
+<span data-ttu-id="1638c-103">Arquivos e diretórios podem causar exceções quando uma operação é tentada, mas o usuário não possui as permissões necessárias.</span><span class="sxs-lookup"><span data-stu-id="1638c-103">Directories and files may cause exceptions when an operation is attempted but the user lacks necessary permissions.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="1638c-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="1638c-104">To correct this error</span></span>  
   
--   Adicione as permissões necessárias para acessar todos os arquivos e pastas.  
+-   <span data-ttu-id="1638c-105">Adicione as permissões necessárias para acessar todos os arquivos e pastas.</span><span class="sxs-lookup"><span data-stu-id="1638c-105">Add the permissions necessary to access all files and folders.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Security.Permissions.FileIOPermission></xref:System.Security.Permissions.FileIOPermission>   
- [Solução de problemas: lendo e gravando em arquivos de texto](../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+## <a name="see-also"></a><span data-ttu-id="1638c-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1638c-106">See Also</span></span>  
+ <xref:System.Security.Permissions.FileIOPermission>  
+ [<span data-ttu-id="1638c-107">Solução de problemas: lendo e gravando em arquivos de texto</span><span class="sxs-lookup"><span data-stu-id="1638c-107">Troubleshooting: Reading from and Writing to Text Files</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)

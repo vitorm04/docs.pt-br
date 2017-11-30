@@ -1,56 +1,47 @@
 ---
-title: "Tratando a reentrada em aplicativos assíncronos (Visual Basic) | Documentos do Microsoft"
+title: "Tratando a reentrada em aplicativos assíncronos (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 64a708e3b88f48ad30d3f3ad25141a31f3d8f73d
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 45dfc4dd4ab42c3ce8edd7e41b7b0401bb0db672
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Tratando a reentrada em aplicativos assíncronos (Visual Basic)
-Quando você inclui o código assíncrono em seu aplicativo, você deve considerar e possivelmente evitar reentrância, que se refere ao redigitando uma operação assíncrona, antes de ser concluído. Se você não identificar e lidar com possibilidades de reentrância, ele pode causar resultados inesperados.  
+# <a name="handling-reentrancy-in-async-apps-visual-basic"></a><span data-ttu-id="d34ca-102">Tratando a reentrada em aplicativos assíncronos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d34ca-102">Handling Reentrancy in Async Apps (Visual Basic)</span></span>
+<span data-ttu-id="d34ca-103">Ao incluir código assíncrono em seu aplicativo, você deve considerar e, possivelmente, evitar a reentrância, que se refere à reinserção de uma operação assíncrona antes de ela ser concluída.</span><span class="sxs-lookup"><span data-stu-id="d34ca-103">When you include asynchronous code in your app, you should consider and possibly prevent reentrancy, which refers to reentering an asynchronous operation before it has completed.</span></span> <span data-ttu-id="d34ca-104">Se você não identificar e tratar as possibilidades de reentrância, isso poderá causar resultados inesperados.</span><span class="sxs-lookup"><span data-stu-id="d34ca-104">If you don't identify and handle possibilities for reentrancy, it can cause unexpected results.</span></span>  
   
- **Neste tópico**  
+ <span data-ttu-id="d34ca-105">**Neste tópico**</span><span class="sxs-lookup"><span data-stu-id="d34ca-105">**In this topic**</span></span>  
   
--   [Reconhecendo reentrada](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [<span data-ttu-id="d34ca-106">Reconhecendo a reentrância</span><span class="sxs-lookup"><span data-stu-id="d34ca-106">Recognizing Reentrancy</span></span>](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
--   [Tratando a reentrada](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [<span data-ttu-id="d34ca-107">Tratando a reentrância</span><span class="sxs-lookup"><span data-stu-id="d34ca-107">Handling Reentrancy</span></span>](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-    -   [Desabilitar o botão Iniciar](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [<span data-ttu-id="d34ca-108">Desabilitar o botão Iniciar</span><span class="sxs-lookup"><span data-stu-id="d34ca-108">Disable the Start Button</span></span>](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-    -   [Cancelar e reiniciar a operação](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [<span data-ttu-id="d34ca-109">Cancelar e reiniciar a operação</span><span class="sxs-lookup"><span data-stu-id="d34ca-109">Cancel and Restart the Operation</span></span>](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-    -   [Executar várias operações e a fila de saída](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [<span data-ttu-id="d34ca-110">Executar várias operações e colocar a saída na fila</span><span class="sxs-lookup"><span data-stu-id="d34ca-110">Run Multiple Operations and Queue the Output</span></span>](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
--   [Examinar e executar o aplicativo de exemplo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [<span data-ttu-id="d34ca-111">Examinar e executar o aplicativo de exemplo</span><span class="sxs-lookup"><span data-stu-id="d34ca-111">Reviewing and Running the Example App</span></span>](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
 > [!NOTE]
->  Para executar o exemplo, você deve ter o Visual Studio 2012 ou mais recente e o .NET Framework 4.5 ou posterior esteja instalado no computador.  
+>  <span data-ttu-id="d34ca-112">Para executar o exemplo, você deve ter o Visual Studio 2012 ou mais recente e o .NET Framework 4.5 ou posterior instalados no seu computador.</span><span class="sxs-lookup"><span data-stu-id="d34ca-112">To run the example, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>  
   
-##  <a name="BKMK_RecognizingReentrancy"></a>Reconhecendo reentrada  
- O exemplo neste tópico, os usuários escolhem um **iniciar** botão para iniciar um aplicativo assíncrono que baixa uma série de sites e calcula o número total de bytes baixados. Uma versão síncrona do exemplo responderia a mesma forma independentemente de quantas vezes um usuário escolhe o botão porque, após a primeira vez, o thread de interface do usuário ignora esses eventos até que o aplicativo é encerrado. Em um aplicativo assíncrono, no entanto, o thread de interface do usuário continua a responder e você pode digitar novamente a operação assíncrona antes de ser concluído.  
+##  <span data-ttu-id="d34ca-113"><a name="BKMK_RecognizingReentrancy"></a> Reconhecendo a reentrância</span><span class="sxs-lookup"><span data-stu-id="d34ca-113"><a name="BKMK_RecognizingReentrancy"></a> Recognizing Reentrancy</span></span>  
+ <span data-ttu-id="d34ca-114">No exemplo deste tópico, os usuários escolhem um botão **Iniciar** para iniciar um aplicativo assíncrono que baixa uma série de sites e calcula o número total de bytes baixados.</span><span class="sxs-lookup"><span data-stu-id="d34ca-114">In the example in this topic, users choose a **Start** button to initiate an asynchronous app that downloads a series of websites and calculates the total number of bytes that are downloaded.</span></span> <span data-ttu-id="d34ca-115">Uma versão síncrona do exemplo responderia da mesma forma, independentemente de quantas vezes um usuário escolhesse o botão porque, após a primeira vez, o thread da interface do usuário ignora esses eventos até que o aplicativo conclua a execução.</span><span class="sxs-lookup"><span data-stu-id="d34ca-115">A synchronous version of the example would respond the same way regardless of how many times a user chooses the button because, after the first time, the UI thread ignores those events until the app finishes running.</span></span> <span data-ttu-id="d34ca-116">Em um aplicativo assíncrono, no entanto, o thread da interface do usuário continua a responder e você pode reinserir a operação assíncrona antes que ele seja concluído.</span><span class="sxs-lookup"><span data-stu-id="d34ca-116">In an asynchronous app, however, the UI thread continues to respond, and you might reenter the asynchronous operation before it has completed.</span></span>  
   
- O exemplo a seguir mostra a esperada de saída se o usuário escolhe o **iniciar** botão apenas uma vez. É exibida uma lista dos sites baixados com o tamanho, em bytes, de cada site. O número total de bytes é exibida no final.  
+ <span data-ttu-id="d34ca-117">O exemplo a seguir mostra a saída esperada, caso o usuário escolha o botão **Iniciar** apenas uma vez.</span><span class="sxs-lookup"><span data-stu-id="d34ca-117">The following example shows the expected output if the user chooses the **Start** button only once.</span></span> <span data-ttu-id="d34ca-118">É exibida uma lista dos sites baixados com o tamanho, em bytes, de cada site.</span><span class="sxs-lookup"><span data-stu-id="d34ca-118">A list of the downloaded websites appears with the size, in bytes, of each site.</span></span> <span data-ttu-id="d34ca-119">O número total de bytes é exibido no final.</span><span class="sxs-lookup"><span data-stu-id="d34ca-119">The total number of bytes appears at the end.</span></span>  
   
 ```  
 1. msdn.microsoft.com/library/hh191443.aspx                83732  
@@ -65,7 +56,7 @@ Quando você inclui o código assíncrono em seu aplicativo, você deve consider
 TOTAL bytes returned:  890591  
 ```  
   
- No entanto, se o usuário clica no botão de mais de uma vez, o manipulador de eventos é chamado repetidamente, e o processo de download é reinserido cada vez. Como resultado, várias operações assíncronas estão em execução ao mesmo tempo, a saída intercala os resultados e o número total de bytes é confuso.  
+ <span data-ttu-id="d34ca-120">No entanto, se o usuário escolhe o botão mais de uma vez, o manipulador de eventos é invocado repetidamente e o processo de download é reinserido a cada vez.</span><span class="sxs-lookup"><span data-stu-id="d34ca-120">However, if the user chooses the button more than once, the event handler is invoked repeatedly, and the download process is reentered each time.</span></span> <span data-ttu-id="d34ca-121">Como resultado, várias operações assíncronas estarão em execução ao mesmo tempo, a saída intercalará os resultados e o número total de bytes será confuso.</span><span class="sxs-lookup"><span data-stu-id="d34ca-121">As a result, several asynchronous operations are running at the same time, the output interleaves the results, and the total number of bytes is confusing.</span></span>  
   
 ```  
 1. msdn.microsoft.com/library/hh191443.aspx                83732  
@@ -102,27 +93,27 @@ TOTAL bytes returned:  890591
 TOTAL bytes returned:  890591  
 ```  
   
- Você pode examinar o código que produz esta saída navegado até o final deste tópico. Você pode experimentar o código baixando a solução em seu computador local e, em seguida, executando o projeto WebsiteDownload ou usando o código no final deste tópico para criar seu próprio projeto para obter mais informações e instruções, consulte [revisando e executar o aplicativo de exemplo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645).  
+ <span data-ttu-id="d34ca-122">Você pode examinar o código que produz esta saída fazendo a rolagem até o final deste tópico.</span><span class="sxs-lookup"><span data-stu-id="d34ca-122">You can review the code that produces this output by scrolling to the end of this topic.</span></span> <span data-ttu-id="d34ca-123">Você pode fazer experimentos com o código baixando a solução em seu computador local e, em seguida, executar o projeto WebsiteDownload ou usar o código no final deste tópico para criar seu próprio projeto. Para obter mais informações e instruções, consulte [Examinar e executar o aplicativo de exemplo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645).</span><span class="sxs-lookup"><span data-stu-id="d34ca-123">You can experiment with the code by downloading the solution to your local computer and then running the WebsiteDownload project or by using the code at the end of this topic to create your own project For more information and instructions, see [Reviewing and Running the Example App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645).</span></span>  
   
-##  <a name="BKMK_HandlingReentrancy"></a>Tratando a reentrada  
- Você pode manipular reentrância de várias maneiras, dependendo do que você deseja que seu aplicativo faça. Este tópico apresenta os exemplos a seguir:  
+##  <span data-ttu-id="d34ca-124"><a name="BKMK_HandlingReentrancy"></a> Tratando a reentrância</span><span class="sxs-lookup"><span data-stu-id="d34ca-124"><a name="BKMK_HandlingReentrancy"></a> Handling Reentrancy</span></span>  
+ <span data-ttu-id="d34ca-125">É possível tratar a reentrância de várias maneiras, dependendo do que você deseja que seu aplicativo faça.</span><span class="sxs-lookup"><span data-stu-id="d34ca-125">You can handle reentrancy in a variety of ways, depending on what you want your app to do.</span></span> <span data-ttu-id="d34ca-126">Este tópico apresenta os exemplos a seguir:</span><span class="sxs-lookup"><span data-stu-id="d34ca-126">This topic presents the following examples:</span></span>  
   
--   [Desabilitar o botão Iniciar](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [<span data-ttu-id="d34ca-127">Desabilitar o botão Iniciar</span><span class="sxs-lookup"><span data-stu-id="d34ca-127">Disable the Start Button</span></span>](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-     Desabilitar o **iniciar** botão enquanto a operação está em execução para que o usuário não é possível interrompê-lo.  
+     <span data-ttu-id="d34ca-128">Desabilitar o botão **Iniciar** enquanto a operação estiver em execução para que o usuário não possa interrompê-la.</span><span class="sxs-lookup"><span data-stu-id="d34ca-128">Disable the **Start** button while the operation is running so that the user can't interrupt it.</span></span>  
   
--   [Cancelar e reiniciar a operação](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [<span data-ttu-id="d34ca-129">Cancelar e reiniciar a operação</span><span class="sxs-lookup"><span data-stu-id="d34ca-129">Cancel and Restart the Operation</span></span>](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-     Cancelar qualquer operação que ainda está em execução quando o usuário escolhe o **iniciar** novamente e, em seguida, continuar a permitir que a operação solicitada mais recentemente.  
+     <span data-ttu-id="d34ca-130">Cancelar qualquer operação que ainda estiver em execução quando o usuário escolher o botão **Iniciar** novamente e, em seguida, permitir que a operação solicitada mais recentemente continue.</span><span class="sxs-lookup"><span data-stu-id="d34ca-130">Cancel any operation that is still running when the user chooses the **Start** button again, and then let the most recently requested operation continue.</span></span>  
   
--   [Executar várias operações e a fila de saída](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [<span data-ttu-id="d34ca-131">Executar várias operações e colocar a saída na fila</span><span class="sxs-lookup"><span data-stu-id="d34ca-131">Run Multiple Operations and Queue the Output</span></span>](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-     Permitir que todos os solicitados operações executadas de forma assíncrona, mas coordenar a exibição da saída de forma que os resultados de cada operação aparecem juntos e na ordem.  
+     <span data-ttu-id="d34ca-132">Permitir que todas as operações solicitadas sejam executadas de forma assíncrona, mas coordenar a exibição da saída, de forma que os resultados de cada operação apareçam juntos e em ordem.</span><span class="sxs-lookup"><span data-stu-id="d34ca-132">Allow all requested operations to run asynchronously, but coordinate the display of output so that the results from each operation appear together and in order.</span></span>  
   
-###  <a name="BKMK_DisableTheStartButton"></a>Desabilitar o botão Iniciar  
- Você pode bloquear o **iniciar** botão enquanto uma operação está em execução, desativando o botão na parte superior do `StartButton_Click` manipulador de eventos. Você pode reativar o botão de dentro um `Finally` bloquear quando a operação é concluída para que os usuários podem executar o aplicativo novamente.  
+###  <span data-ttu-id="d34ca-133"><a name="BKMK_DisableTheStartButton"></a> Desabilitar o botão Iniciar</span><span class="sxs-lookup"><span data-stu-id="d34ca-133"><a name="BKMK_DisableTheStartButton"></a> Disable the Start Button</span></span>  
+ <span data-ttu-id="d34ca-134">Você pode bloquear o botão **Iniciar** enquanto uma operação estiver em execução, desabilitando o botão na parte superior do manipulador de eventos `StartButton_Click`.</span><span class="sxs-lookup"><span data-stu-id="d34ca-134">You can block the **Start** button while an operation is running by disabling the button at the top of the `StartButton_Click` event handler.</span></span> <span data-ttu-id="d34ca-135">Você pode reativar o botão de dentro um bloco `Finally` quando a operação for concluída para que os usuários possam executar o aplicativo novamente.</span><span class="sxs-lookup"><span data-stu-id="d34ca-135">You can then reenable the button from within a  `Finally` block when the operation finishes so that users can run the app again.</span></span>  
   
- O código a seguir mostra essas alterações, que são marcadas com asteriscos. Você pode adicionar as alterações ao código no final deste tópico, ou você pode baixar o aplicativo concluído de [Async exemplos: reentrada em aplicativos de área de trabalho do .NET](http://go.microsoft.com/fwlink/?LinkId=266571). O nome do projeto é DisableStartButton.  
+ <span data-ttu-id="d34ca-136">O código a seguir mostra essas alterações, que estão marcadas com asteriscos.</span><span class="sxs-lookup"><span data-stu-id="d34ca-136">The following code shows these changes, which are marked with asterisks.</span></span> <span data-ttu-id="d34ca-137">Você pode adicionar as alterações ao código no final deste tópico ou você pode baixar o aplicativo concluído em [Exemplos assíncronos: reentrância em aplicativos de área de trabalho do .NET](http://go.microsoft.com/fwlink/?LinkId=266571).</span><span class="sxs-lookup"><span data-stu-id="d34ca-137">You can add the changes to the code at the end of this topic, or you can download the finished app from [Async Samples: Reentrancy in .NET Desktop Apps](http://go.microsoft.com/fwlink/?LinkId=266571).</span></span> <span data-ttu-id="d34ca-138">O nome do projeto é DisableStartButton.</span><span class="sxs-lookup"><span data-stu-id="d34ca-138">The project name is DisableStartButton.</span></span>  
   
 ```vb  
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -145,16 +136,16 @@ Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub  
 ```  
   
- Como resultado das alterações, o botão não responde enquanto `AccessTheWebAsync` está baixando os sites da Web, para que o processo não pode ser restabelecido.  
+ <span data-ttu-id="d34ca-139">Como resultado das alterações, o botão não responderá enquanto `AccessTheWebAsync` estiver baixando os sites, para que o processo não possa ser reinserido.</span><span class="sxs-lookup"><span data-stu-id="d34ca-139">As a result of the changes, the button doesn't respond while `AccessTheWebAsync` is downloading the websites, so the process can’t be reentered.</span></span>  
   
-###  <a name="BKMK_CancelAndRestart"></a>Cancelar e reiniciar a operação  
- Em vez de desativar o **iniciar** botão, você pode manter o botão ativa, mas, se o usuário escolher o botão novamente, cancele a operação que já está em execução e permitir que a operação iniciada mais recentemente continuar.  
+###  <span data-ttu-id="d34ca-140"><a name="BKMK_CancelAndRestart"></a> Cancelar e reiniciar a operação</span><span class="sxs-lookup"><span data-stu-id="d34ca-140"><a name="BKMK_CancelAndRestart"></a> Cancel and Restart the Operation</span></span>  
+ <span data-ttu-id="d34ca-141">Em vez de desabilitar o botão **Iniciar**, você pode manter o botão ativo, mas, se o usuário escolher esse botão novamente, cancele a operação que já está em execução e permita que a operação iniciada mais recentemente continue.</span><span class="sxs-lookup"><span data-stu-id="d34ca-141">Instead of disabling the **Start** button, you can keep the button active but, if the user chooses that button again, cancel the operation that's already running and let the most recently started operation continue.</span></span>  
   
- Para obter mais informações sobre cancelamento, consulte [ajuste seu aplicativo Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).  
+ <span data-ttu-id="d34ca-142">Para obter mais informações sobre cancelamento, consulte [ajuste seu aplicativo Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).</span><span class="sxs-lookup"><span data-stu-id="d34ca-142">For more information about cancellation, see [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).</span></span>  
   
- Para configurar esse cenário, faça as seguintes alterações para o código básico que é fornecido no [revisando e executar o aplicativo de exemplo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645). Você também pode baixar o aplicativo concluído de [Async exemplos: reentrada em aplicativos de área de trabalho do .NET](http://go.microsoft.com/fwlink/?LinkId=266571). O nome do projeto é CancelAndRestart.  
+ <span data-ttu-id="d34ca-143">Para configurar esse cenário, faça as seguintes alterações no código básico que é fornecido em [Examinar e executar o aplicativo de exemplo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645).</span><span class="sxs-lookup"><span data-stu-id="d34ca-143">To set up this scenario, make the following changes to the basic code that is provided in [Reviewing and Running the Example App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645).</span></span> <span data-ttu-id="d34ca-144">Você também pode baixar o aplicativo finalizado de [Exemplos assíncronos: reentrância em aplicativos de área de trabalho do .NET](http://go.microsoft.com/fwlink/?LinkId=266571).</span><span class="sxs-lookup"><span data-stu-id="d34ca-144">You also can download the finished app from [Async Samples: Reentrancy in .NET Desktop Apps](http://go.microsoft.com/fwlink/?LinkId=266571).</span></span> <span data-ttu-id="d34ca-145">O nome do projeto é CancelAndRestart.</span><span class="sxs-lookup"><span data-stu-id="d34ca-145">The name of this project is CancelAndRestart.</span></span>  
   
-1.  Declarar uma <xref:System.Threading.CancellationTokenSource>variável, `cts`, que está no escopo para todos os métodos.</xref:System.Threading.CancellationTokenSource>  
+1.  <span data-ttu-id="d34ca-146">Declare uma variável <xref:System.Threading.CancellationTokenSource>, `cts`, que está no escopo para todos os métodos.</span><span class="sxs-lookup"><span data-stu-id="d34ca-146">Declare a <xref:System.Threading.CancellationTokenSource> variable, `cts`, that’s in scope for all methods.</span></span>  
   
     ```vb  
     Class MainWindow // Or Class MainPage  
@@ -163,7 +154,7 @@ End Sub
         Dim cts As CancellationTokenSource  
     ```  
   
-2.  Em `StartButton_Click`, determinar se uma operação já está em andamento. Se o valor de `cts` é `Nothing`, nenhuma operação já está ativa. Se o valor não for `Nothing`, a operação já está em execução foi cancelada.  
+2.  <span data-ttu-id="d34ca-147">Em `StartButton_Click`, determine se uma operação já está em andamento.</span><span class="sxs-lookup"><span data-stu-id="d34ca-147">In `StartButton_Click`, determine whether an operation is already underway.</span></span> <span data-ttu-id="d34ca-148">Se o valor de `cts` é `Nothing`, nenhuma operação já está ativa.</span><span class="sxs-lookup"><span data-stu-id="d34ca-148">If the value of `cts` is `Nothing`, no operation is already active.</span></span> <span data-ttu-id="d34ca-149">Se o valor não for `Nothing`, a operação que já está em execução foi cancelada.</span><span class="sxs-lookup"><span data-stu-id="d34ca-149">If the value isn't `Nothing`, the operation that is already running is canceled.</span></span>  
   
     ```vb  
     ' *** If a download process is already underway, cancel it.  
@@ -172,7 +163,7 @@ End Sub
     End If  
     ```  
   
-3.  Definir `cts` para um valor diferente que representa o processo atual.  
+3.  <span data-ttu-id="d34ca-150">Defina `cts` para um valor diferente que represente o processo atual.</span><span class="sxs-lookup"><span data-stu-id="d34ca-150">Set `cts` to a different value that represents the current process.</span></span>  
   
     ```vb  
     ' *** Now set cts to cancel the current process if the button is chosen again.  
@@ -180,7 +171,7 @@ End Sub
     cts = newCTS  
     ```  
   
-4.  No final da `StartButton_Click`, o processo atual for concluído, então, defina o valor de `cts` para `Nothing`.  
+4.  <span data-ttu-id="d34ca-151">No final da `StartButton_Click`, o processo atual for concluído, portanto, definir o valor de `cts` para `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="d34ca-151">At the end of `StartButton_Click`, the current process is complete, so set the value of `cts` back to `Nothing`.</span></span>  
   
     ```vb  
     ' *** When the process completes, signal that another process can proceed.  
@@ -189,7 +180,7 @@ End Sub
     End If  
     ```  
   
- O código a seguir mostra todas as alterações na `StartButton_Click`. As adições são marcadas com asteriscos.  
+ <span data-ttu-id="d34ca-152">O código a seguir mostra todas as alterações em `StartButton_Click`.</span><span class="sxs-lookup"><span data-stu-id="d34ca-152">The following code shows all the changes in `StartButton_Click`.</span></span> <span data-ttu-id="d34ca-153">As adições estão marcadas com asteriscos.</span><span class="sxs-lookup"><span data-stu-id="d34ca-153">The additions are marked with asterisks.</span></span>  
   
 ```vb  
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -224,15 +215,15 @@ Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub  
 ```  
   
- Em `AccessTheWebAsync`, faça as seguintes alterações.  
+ <span data-ttu-id="d34ca-154">Em `AccessTheWebAsync`, faça as seguintes alterações.</span><span class="sxs-lookup"><span data-stu-id="d34ca-154">In `AccessTheWebAsync`, make the following changes.</span></span>  
   
--   Adicionar um parâmetro para aceitar o token de cancelamento de `StartButton_Click`.  
+-   <span data-ttu-id="d34ca-155">Adicione um parâmetro para aceitar o token de cancelamento de `StartButton_Click`.</span><span class="sxs-lookup"><span data-stu-id="d34ca-155">Add a parameter to accept the cancellation token from `StartButton_Click`.</span></span>  
   
--   Use o <xref:System.Net.Http.HttpClient.GetAsync%2A>método para baixar os sites porque `GetAsync` aceita um <xref:System.Threading.CancellationToken>argumento.</xref:System.Threading.CancellationToken> </xref:System.Net.Http.HttpClient.GetAsync%2A>  
+-   <span data-ttu-id="d34ca-156">Use o método <xref:System.Net.Http.HttpClient.GetAsync%2A> para baixar os sites porque `GetAsync` aceita um argumento <xref:System.Threading.CancellationToken>.</span><span class="sxs-lookup"><span data-stu-id="d34ca-156">Use the <xref:System.Net.Http.HttpClient.GetAsync%2A> method to download the websites because `GetAsync` accepts a <xref:System.Threading.CancellationToken> argument.</span></span>  
   
--   Antes de chamar `DisplayResults` para exibir os resultados para cada site baixado, verifique `ct` para verificar que a operação atual não foi cancelada.  
+-   <span data-ttu-id="d34ca-157">Antes de chamar `DisplayResults` para exibir os resultados para cada site baixado, verifique `ct` para ver se a operação atual não foi cancelada.</span><span class="sxs-lookup"><span data-stu-id="d34ca-157">Before calling `DisplayResults` to display the results for each downloaded website, check `ct` to verify that the current operation hasn’t been canceled.</span></span>  
   
- O código a seguir mostra essas alterações, que são marcadas com asteriscos.  
+ <span data-ttu-id="d34ca-158">O código a seguir mostra essas alterações, que estão marcadas com asteriscos.</span><span class="sxs-lookup"><span data-stu-id="d34ca-158">The following code shows these changes, which are marked with asterisks.</span></span>  
   
 ```vb  
 ' *** Provide a parameter for the CancellationToken from StartButton_Click.  
@@ -272,7 +263,7 @@ Private Async Function AccessTheWebAsync(ct As CancellationToken) As Task
 End Function  
 ```  
   
- Se você escolher o **iniciar** botão várias vezes enquanto este aplicativo é executado, ele deve produzir resultados semelhantes a saída a seguir.  
+ <span data-ttu-id="d34ca-159">Se você escolher o botão **Iniciar** várias vezes enquanto este aplicativo estiver em execução, ele deverá produzir resultados semelhantes à saída a seguir.</span><span class="sxs-lookup"><span data-stu-id="d34ca-159">If you choose the **Start** button several times while this app is running, it should produce results that resemble the following output.</span></span>  
   
 ```  
 1. msdn.microsoft.com/library/hh191443.aspx                83732  
@@ -300,16 +291,16 @@ Download canceled.
 TOTAL bytes returned:  890591  
 ```  
   
- Para eliminar as listas parciais, remova a primeira linha do código em `StartButton_Click` desmarcar a caixa de texto sempre que o usuário reinicia a operação.  
+ <span data-ttu-id="d34ca-160">Para eliminar as listas parciais, remova a marca de comentário da primeira linha de código em `StartButton_Click`, para limpar a caixa de texto sempre que o usuário reiniciar a operação.</span><span class="sxs-lookup"><span data-stu-id="d34ca-160">To eliminate the partial lists, uncomment the first line of code in `StartButton_Click` to clear the text box each time the user restarts the operation.</span></span>  
   
-###  <a name="BKMK_RunMultipleOperations"></a>Executar várias operações e a fila de saída  
- Este exemplo terceiro é mais complicado que o aplicativo inicia outra operação assíncrona cada vez que o usuário escolhe o **iniciar** botão e todas as operações executadas até a conclusão. Todas as operações solicitadas baixar sites da lista de forma assíncrona, mas a saída das operações é apresentada em sequência. Ou seja, a atividade de download real é intercalada, como a saída em [reconhecendo reentrada](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) mostra, mas a lista de resultados para cada grupo é apresentado separadamente.  
+###  <span data-ttu-id="d34ca-161"><a name="BKMK_RunMultipleOperations"></a> Executar várias operações e colocar a saída na fila</span><span class="sxs-lookup"><span data-stu-id="d34ca-161"><a name="BKMK_RunMultipleOperations"></a> Run Multiple Operations and Queue the Output</span></span>  
+ <span data-ttu-id="d34ca-162">Este terceiro exemplo é mais complicado pois o aplicativo iniciará outra operação assíncrona a cada vez que o usuário escolher o botão **Iniciar** e todas as operações serão executadas até a conclusão.</span><span class="sxs-lookup"><span data-stu-id="d34ca-162">This third example is the most complicated in that the app starts another asynchronous operation each time that the user chooses the **Start** button, and all the operations run to completion.</span></span> <span data-ttu-id="d34ca-163">Todas as operações solicitadas baixam sites da lista de maneira assíncrona, mas a saída das operações será apresentada sequencialmente.</span><span class="sxs-lookup"><span data-stu-id="d34ca-163">All the requested operations download websites from the list asynchronously, but the output from the operations is presented sequentially.</span></span> <span data-ttu-id="d34ca-164">Ou seja, a atividade de download real é intercalada, conforme mostrado na saída em [Reconhecendo a reentrância](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), mas a lista de resultados para cada grupo é apresentada separadamente.</span><span class="sxs-lookup"><span data-stu-id="d34ca-164">That is, the actual downloading activity is interleaved, as the output in [Recognizing Reentrancy](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) shows, but the list of results for each group is presented separately.</span></span>  
   
- As operações de compartilham um global <xref:System.Threading.Tasks.Task>, `pendingWork`, que serve como um gatekeeper para o processo de exibição.</xref:System.Threading.Tasks.Task>  
+ <span data-ttu-id="d34ca-165">As operações compartilham uma <xref:System.Threading.Tasks.Task> global, `pendingWork`, que serve como um gatekeeper para o processo de exibição.</span><span class="sxs-lookup"><span data-stu-id="d34ca-165">The operations share a global <xref:System.Threading.Tasks.Task>, `pendingWork`, which serves as a gatekeeper for the display process.</span></span>  
   
- Você pode executar esse exemplo, colando as alterações no código no [criando o aplicativo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), ou você pode seguir as instruções em [baixados do aplicativo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) para baixar o exemplo e execute o projeto QueueResults.  
+ <span data-ttu-id="d34ca-166">Você pode executar esse exemplo, colando as alterações no código em [Compilando o aplicativo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) ou pode seguir as instruções em [Baixando o aplicativo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) para baixar o exemplo e executar o projeto QueueResults.</span><span class="sxs-lookup"><span data-stu-id="d34ca-166">You can run this example by pasting the changes into the code in [Building the App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), or you can follow the instructions in [Downloading the App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) to download the sample and then run the QueueResults project.</span></span>  
   
- A saída a seguir mostra o resultado se o usuário escolhe o **iniciar** botão apenas uma vez. O rótulo de letra A, indica que o resultado é a primeira vez o **iniciar** botão for escolhido. Os números mostram a ordem das URLs na lista de destinos de download.  
+ <span data-ttu-id="d34ca-167">A saída a seguir mostra o resultado, caso o usuário escolha o botão **Iniciar** apenas uma vez.</span><span class="sxs-lookup"><span data-stu-id="d34ca-167">The following output shows the result if the user chooses the **Start** button only once.</span></span> <span data-ttu-id="d34ca-168">O rótulo de letra A indica que o resultado é da primeira vez que o botão **Iniciar** foi escolhido.</span><span class="sxs-lookup"><span data-stu-id="d34ca-168">The letter label, A, indicates that the result is from the first time the **Start** button is chosen.</span></span> <span data-ttu-id="d34ca-169">Os números mostram a ordem das URLs na lista de destinos de download.</span><span class="sxs-lookup"><span data-stu-id="d34ca-169">The numbers show the order of the URLs in the list of download targets.</span></span>  
   
 ```  
 #Starting group A.  
@@ -329,7 +320,7 @@ TOTAL bytes returned:  918876
 #Group A is complete.  
 ```  
   
- Se o usuário escolhe o **iniciar** botão três vezes, o aplicativo produz uma saída semelhante das linhas a seguir. Inscreva-as linhas de informações que começam com um sustenido (#) rastrear o progresso do aplicativo.  
+ <span data-ttu-id="d34ca-170">Se o usuário escolher o botão **Iniciar** três vezes, o aplicativo produzirá uma saída semelhante à das linhas a seguir.</span><span class="sxs-lookup"><span data-stu-id="d34ca-170">If the user chooses the **Start** button three times, the app produces output that resembles the following lines.</span></span> <span data-ttu-id="d34ca-171">As linhas de informações que começam com um sinal de jogo da velha (#) rastreiam o progresso do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d34ca-171">The information lines that start with a pound sign (#) trace the progress of the application.</span></span>  
   
 ```  
 #Starting group A.  
@@ -385,12 +376,12 @@ TOTAL bytes returned:  920526
 #Group C is complete.  
 ```  
   
- Grupos de B e C iniciado antes de um grupo é concluída, mas a saída para cada grupo será exibido separadamente. Toda a saída para um grupo aparece primeira, seguido por toda a saída para o grupo B e, em seguida, toda a saída para o grupo C. O aplicativo sempre exibe os grupos em ordem e, para cada grupo, sempre exibe as informações sobre os sites individuais na ordem em que as URLs aparecem na lista de URLs.  
+ <span data-ttu-id="d34ca-172">Os grupos B e C iniciam antes da conclusão do grupo A, mas a saída para cada grupo é exibida separadamente.</span><span class="sxs-lookup"><span data-stu-id="d34ca-172">Groups B and C start before group A has finished, but the output for the each group appears separately.</span></span> <span data-ttu-id="d34ca-173">Toda a saída para o grupo A aparece em primeiro, seguida por toda a saída para o grupo B e, em seguida, toda a saída para o grupo C. O aplicativo sempre exibe os grupos em ordem e, para cada grupo, sempre exibe as informações sobre os sites individuais na ordem em que as URLs aparecem na lista de URLs.</span><span class="sxs-lookup"><span data-stu-id="d34ca-173">All the output for group A appears first, followed by all the output for group B, and then all the output for group C. The app always displays the groups in order and, for each group, always displays the information about the individual websites in the order that the URLs appear in the list of URLs.</span></span>  
   
- No entanto, é possível prever a ordem na qual os downloads realmente acontecem. Depois que tiverem sido iniciados vários grupos, as tarefas de download que elas geram estão todos ativas. Você não pode presumir que-1 será baixado antes de B-1, e você não pode presumir que-1 será baixado antes de A-2.  
+ <span data-ttu-id="d34ca-174">No entanto, não é possível prever a ordem na qual os downloads realmente acontecem.</span><span class="sxs-lookup"><span data-stu-id="d34ca-174">However, you can't predict the order in which the downloads actually happen.</span></span> <span data-ttu-id="d34ca-175">Depois que vários grupos tiverem sido iniciados, as tarefas de download que eles geram estarão todos ativas.</span><span class="sxs-lookup"><span data-stu-id="d34ca-175">After multiple groups have been started, the download tasks that they generate are all active.</span></span> <span data-ttu-id="d34ca-176">Você não pode presumir que A-1 será baixado antes de B-1 e não pode presumir que A-1 será baixado antes de A-2.</span><span class="sxs-lookup"><span data-stu-id="d34ca-176">You can't assume that A-1 will be downloaded before B-1, and you can't assume that A-1 will be downloaded before A-2.</span></span>  
   
-#### <a name="global-definitions"></a>Definições Globais  
- O código de exemplo contém as seguintes declarações globais dois que são visíveis a partir de todos os métodos.  
+#### <a name="global-definitions"></a><span data-ttu-id="d34ca-177">Definições Globais</span><span class="sxs-lookup"><span data-stu-id="d34ca-177">Global Definitions</span></span>  
+ <span data-ttu-id="d34ca-178">O código de exemplo contém as duas declarações globais a seguir, que estão visíveis em todos os métodos.</span><span class="sxs-lookup"><span data-stu-id="d34ca-178">The sample code contains the following two global declarations that are visible from all methods.</span></span>  
   
 ```vb  
 Class MainWindow    ' Class MainPage in Windows Store app.  
@@ -400,10 +391,10 @@ Class MainWindow    ' Class MainPage in Windows Store app.
     Private group As Char = ChrW(AscW("A") - 1)  
 ```  
   
- O `Task` variável, `pendingWork`, supervisiona o processo de exibição e impede que qualquer grupo de interromper a operação de exibição do outro grupo. A variável de caractere, `group`, rótulos a saída de grupos diferentes para verificar se os resultados aparecem na ordem esperada.  
+ <span data-ttu-id="d34ca-179">A variável `Task`, `pendingWork`, supervisiona o processo de exibição e impede que qualquer grupo interrompa a operação de exibição do outro grupo.</span><span class="sxs-lookup"><span data-stu-id="d34ca-179">The `Task` variable, `pendingWork`, oversees the display process and prevents any group from interrupting another group's display operation.</span></span> <span data-ttu-id="d34ca-180">A variável de caractere, `group`, rotula a saída de grupos diferentes para verificar se os resultados aparecem na ordem esperada.</span><span class="sxs-lookup"><span data-stu-id="d34ca-180">The character variable, `group`, labels the output from different groups to verify that results appear in the expected order.</span></span>  
   
-#### <a name="the-click-event-handler"></a>O manipulador de eventos de clique  
- O manipulador de eventos, `StartButton_Click`, a letra de grupo é incrementado toda vez que o usuário escolhe o **iniciar** botão. Em seguida, chama o manipulador `AccessTheWebAsync` para executar a operação de download.  
+#### <a name="the-click-event-handler"></a><span data-ttu-id="d34ca-181">O manipulador de eventos Click</span><span class="sxs-lookup"><span data-stu-id="d34ca-181">The Click Event Handler</span></span>  
+ <span data-ttu-id="d34ca-182">O manipulador de eventos `StartButton_Click`, incrementa a letra de grupo sempre que o usuário escolhe o botão **Iniciar**.</span><span class="sxs-lookup"><span data-stu-id="d34ca-182">The event handler, `StartButton_Click`, increments the group letter each time the user chooses the **Start** button.</span></span> <span data-ttu-id="d34ca-183">Em seguida, o manipulador chama `AccessTheWebAsync` para executar a operação de download.</span><span class="sxs-lookup"><span data-stu-id="d34ca-183">Then the handler calls `AccessTheWebAsync` to run the downloading operation.</span></span>  
   
 ```vb  
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -427,12 +418,12 @@ Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub  
 ```  
   
-#### <a name="the-accessthewebasync-method"></a>O método AccessTheWebAsync  
- Este exemplo divide `AccessTheWebAsync` em dois métodos. O primeiro método, `AccessTheWebAsync`, inicia todas as tarefas de download de um grupo e configura `pendingWork` para controlar o processo de exibição. O método usa uma consulta integrada à linguagem (consulta LINQ) e <xref:System.Linq.Enumerable.ToArray%2A>para iniciar todas as tarefas de download ao mesmo tempo.</xref:System.Linq.Enumerable.ToArray%2A>  
+#### <a name="the-accessthewebasync-method"></a><span data-ttu-id="d34ca-184">O método AccessTheWebAsync</span><span class="sxs-lookup"><span data-stu-id="d34ca-184">The AccessTheWebAsync Method</span></span>  
+ <span data-ttu-id="d34ca-185">Este exemplo divide o `AccessTheWebAsync` em dois métodos.</span><span class="sxs-lookup"><span data-stu-id="d34ca-185">This example splits `AccessTheWebAsync` into two methods.</span></span> <span data-ttu-id="d34ca-186">O primeiro método, `AccessTheWebAsync`, inicia todas as tarefas de download de um grupo e configura `pendingWork` para controlar o processo de exibição.</span><span class="sxs-lookup"><span data-stu-id="d34ca-186">The first method, `AccessTheWebAsync`, starts all the download tasks for a group and sets up `pendingWork` to control the display process.</span></span> <span data-ttu-id="d34ca-187">O método usa uma LINQ (consulta integrada à linguagem) e um <xref:System.Linq.Enumerable.ToArray%2A> para iniciar todas as tarefas de download ao mesmo tempo.</span><span class="sxs-lookup"><span data-stu-id="d34ca-187">The method uses a Language Integrated Query (LINQ query) and <xref:System.Linq.Enumerable.ToArray%2A> to start all the download tasks at the same time.</span></span>  
   
- `AccessTheWebAsync`em seguida, chama `FinishOneGroupAsync` para esperar pela conclusão de cada download e exibir seu comprimento.  
+ <span data-ttu-id="d34ca-188">Em seguida, o `AccessTheWebAsync` chama `FinishOneGroupAsync` para aguardar a conclusão de cada download e exibir seu comprimento.</span><span class="sxs-lookup"><span data-stu-id="d34ca-188">`AccessTheWebAsync` then calls `FinishOneGroupAsync` to await the completion of each download and display its length.</span></span>  
   
- `FinishOneGroupAsync`Retorna uma tarefa que é atribuída a `pendingWork` em `AccessTheWebAsync`. Que valor impede a interrupção por outra operação antes que a tarefa seja concluída.  
+ <span data-ttu-id="d34ca-189">O `FinishOneGroupAsync` retorna uma tarefa que é atribuída a `pendingWork` em `AccessTheWebAsync`.</span><span class="sxs-lookup"><span data-stu-id="d34ca-189">`FinishOneGroupAsync` returns a task that's assigned to `pendingWork` in `AccessTheWebAsync`.</span></span> <span data-ttu-id="d34ca-190">Esse valor impede a interrupção por outra operação antes que a tarefa seja concluída.</span><span class="sxs-lookup"><span data-stu-id="d34ca-190">That value prevents interruption by another operation before the task is complete.</span></span>  
   
 ```vb  
 Private Async Function AccessTheWebAsync(grp As Char) As Task(Of Char)  
@@ -461,10 +452,10 @@ Private Async Function AccessTheWebAsync(grp As Char) As Task(Of Char)
 End Function  
 ```  
   
-#### <a name="the-finishonegroupasync-method"></a>O método FinishOneGroupAsync  
- Esse método percorre as tarefas de download em um grupo, aguardando a cada uma delas, exibindo o comprimento do site baixado e adicionando o comprimento para o total.  
+#### <a name="the-finishonegroupasync-method"></a><span data-ttu-id="d34ca-191">O método FinishOneGroupAsync</span><span class="sxs-lookup"><span data-stu-id="d34ca-191">The FinishOneGroupAsync Method</span></span>  
+ <span data-ttu-id="d34ca-192">Esse método percorre as tarefas de download em um grupo, aguardando cada uma delas, exibindo o comprimento do site baixado e adicionando o comprimento ao total.</span><span class="sxs-lookup"><span data-stu-id="d34ca-192">This method cycles through the download tasks in a group, awaiting each one, displaying the length of the downloaded website, and adding the length to the total.</span></span>  
   
- A primeira instrução em `FinishOneGroupAsync` usa `pendingWork` para certificar-se de que inserindo o método não interfere com uma operação que já está no processo de exibição ou que já está aguardando. Se essa operação está em andamento, a operação de inserção deve esperar sua vez.  
+ <span data-ttu-id="d34ca-193">A primeira instrução em `FinishOneGroupAsync` usa `pendingWork` para verificar se o método de inserção não interfere com uma operação que já está no processo de exibição ou que já está aguardando.</span><span class="sxs-lookup"><span data-stu-id="d34ca-193">The first statement in `FinishOneGroupAsync` uses `pendingWork` to make sure that entering the method doesn't interfere with an operation that is already in the display process or that's already waiting.</span></span> <span data-ttu-id="d34ca-194">Se houver uma operação dessas em andamento, a operação de inserção deverá esperar por sua vez.</span><span class="sxs-lookup"><span data-stu-id="d34ca-194">If such an operation is in progress, the entering operation must wait its turn.</span></span>  
   
 ```vb  
 Private Async Function FinishOneGroupAsync(urls As List(Of String), contentTasks As Task(Of Byte())(), grp As Char) As Task  
@@ -491,14 +482,14 @@ Private Async Function FinishOneGroupAsync(urls As List(Of String), contentTasks
 End Function  
 ```  
   
- Você pode executar esse exemplo, colando as alterações no código no [criando o aplicativo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), ou você pode seguir as instruções em [baixados do aplicativo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) para baixar o exemplo e execute o projeto QueueResults.  
+ <span data-ttu-id="d34ca-195">Você pode executar esse exemplo, colando as alterações no código em [Compilando o aplicativo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) ou pode seguir as instruções em [Baixando o aplicativo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) para baixar o exemplo e executar o projeto QueueResults.</span><span class="sxs-lookup"><span data-stu-id="d34ca-195">You can run this example by pasting the changes into the code in [Building the App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), or you can follow the instructions in [Downloading the App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) to download the sample, and then run the QueueResults project.</span></span>  
   
-#### <a name="points-of-interest"></a>Pontos de Interesse  
- As linhas de informações que começam com um sinal de libra (#) na saída esclarecem como este exemplo funciona.  
+#### <a name="points-of-interest"></a><span data-ttu-id="d34ca-196">Pontos de Interesse</span><span class="sxs-lookup"><span data-stu-id="d34ca-196">Points of Interest</span></span>  
+ <span data-ttu-id="d34ca-197">As linhas de informações que começam com um sinal de jogo da velha (#) na saída esclarecem o funcionamento deste exemplo.</span><span class="sxs-lookup"><span data-stu-id="d34ca-197">The information lines that start with a pound sign (#) in the output clarify how this example works.</span></span>  
   
- A saída mostra os padrões a seguir.  
+ <span data-ttu-id="d34ca-198">A saída mostra os padrões a seguir.</span><span class="sxs-lookup"><span data-stu-id="d34ca-198">The output shows the following patterns.</span></span>  
   
--   Um grupo pode ser iniciado enquanto um grupo anterior está exibindo a saída, mas a exibição da saída do grupo anterior não é interrompida.  
+-   <span data-ttu-id="d34ca-199">Um grupo pode ser iniciado enquanto um grupo anterior estiver exibindo a saída, mas a exibição da saída do grupo anterior não será interrompida.</span><span class="sxs-lookup"><span data-stu-id="d34ca-199">A group can be started while a previous group is displaying its output, but the display of the previous group's output isn't interrupted.</span></span>  
   
     ```  
     #Starting group A.  
@@ -534,61 +525,61 @@ End Function
     TOTAL bytes returned:  915908  
     ```  
   
--   O `pendingWork` tarefa é `Nothing` no início de `FinishOneGroupAsync` apenas para um grupo, que foi iniciado primeiro. Um grupo ainda não tiver concluído uma expressão await quando ele atinge `FinishOneGroupAsync`. Portanto, o controle não foi retornado ao `AccessTheWebAsync`e a primeira atribuição para `pendingWork` não ocorreu.  
+-   <span data-ttu-id="d34ca-200">O `pendingWork` tarefa é `Nothing` no início de `FinishOneGroupAsync` apenas para um grupo, que foi iniciado primeiro.</span><span class="sxs-lookup"><span data-stu-id="d34ca-200">The `pendingWork` task is `Nothing` at the start of `FinishOneGroupAsync` only for group A, which started first.</span></span> <span data-ttu-id="d34ca-201">O grupo A ainda não concluiu uma expressão await quando alcança o `FinishOneGroupAsync`.</span><span class="sxs-lookup"><span data-stu-id="d34ca-201">Group A hasn’t yet completed an await expression when it reaches `FinishOneGroupAsync`.</span></span> <span data-ttu-id="d34ca-202">Portanto, o controle não foi retornado ao `AccessTheWebAsync` e a primeira atribuição para `pendingWork` não ocorreu.</span><span class="sxs-lookup"><span data-stu-id="d34ca-202">Therefore, control hasn't returned to `AccessTheWebAsync`, and the first assignment to `pendingWork` hasn't occurred.</span></span>  
   
--   As duas linhas a seguir sempre aparecem juntos na saída. O código nunca é interrompido entre iniciando a operação de um grupo `StartButton_Click` e atribuir uma tarefa para o grupo de `pendingWork`.  
+-   <span data-ttu-id="d34ca-203">As duas linhas a seguir sempre aparecem juntas na saída.</span><span class="sxs-lookup"><span data-stu-id="d34ca-203">The following two lines always appear together in the output.</span></span> <span data-ttu-id="d34ca-204">O código nunca é interrompido entre o início de uma operação de um grupo em `StartButton_Click` e a atribuição de uma tarefa para o grupo para `pendingWork`.</span><span class="sxs-lookup"><span data-stu-id="d34ca-204">The code is never interrupted between starting a group's operation in `StartButton_Click` and assigning a task for the group to `pendingWork`.</span></span>  
   
     ```  
     #Starting group B.  
     #Task assigned for group B. Download tasks are active.  
     ```  
   
-     Depois de insere um grupo de `StartButton_Click`, a operação não conclui uma expressão await, até que a operação entre `FinishOneGroupAsync`. Portanto, nenhuma outra operação pode obter controle durante esse segmento de código.  
+     <span data-ttu-id="d34ca-205">Depois que um grupo insere o `StartButton_Click`, a operação não conclui uma expressão await até que a operação insira `FinishOneGroupAsync`.</span><span class="sxs-lookup"><span data-stu-id="d34ca-205">After a group enters `StartButton_Click`, the operation doesn't complete an await expression until the operation enters `FinishOneGroupAsync`.</span></span> <span data-ttu-id="d34ca-206">Portanto, nenhuma outra operação pode obter controle durante esse segmento de código.</span><span class="sxs-lookup"><span data-stu-id="d34ca-206">Therefore, no other operation can gain control during that segment of code.</span></span>  
   
-##  <a name="BKMD_SettingUpTheExample"></a>Examinar e executar o aplicativo de exemplo  
- Para entender melhor o aplicativo de exemplo, você pode baixá-lo, compilá-lo ou examinar o código no final deste tópico sem implementar o aplicativo.  
+##  <span data-ttu-id="d34ca-207"><a name="BKMD_SettingUpTheExample"></a> Examinar e executar o aplicativo de exemplo</span><span class="sxs-lookup"><span data-stu-id="d34ca-207"><a name="BKMD_SettingUpTheExample"></a> Reviewing and Running the Example App</span></span>  
+ <span data-ttu-id="d34ca-208">Para entender melhor o aplicativo de exemplo, você pode baixá-lo, compilá-lo ou examinar o código ao final deste tópico sem implementar o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d34ca-208">To better understand the example app, you can download it, build it yourself, or review the code at the end of this topic without implementing the app.</span></span>  
   
 > [!NOTE]
->  Para executar o exemplo como um aplicativo de desktop do Windows Presentation Foundation (WPF), você deve ter o Visual Studio 2012 ou mais recente e o .NET Framework 4.5 ou posterior esteja instalado no computador.  
+>  <span data-ttu-id="d34ca-209">Para executar o exemplo como um aplicativo da área de trabalho do WPF (Windows Presentation Foundation), você deve ter o Visual Studio 2012 ou mais recente e o .NET Framework 4.5 ou posterior instalados no seu computador.</span><span class="sxs-lookup"><span data-stu-id="d34ca-209">To run the example as a Windows Presentation Foundation (WPF) desktop app, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>  
   
-###  <a name="BKMK_DownloadingTheApp"></a>Baixar o aplicativo  
+###  <span data-ttu-id="d34ca-210"><a name="BKMK_DownloadingTheApp"></a> Baixar o aplicativo</span><span class="sxs-lookup"><span data-stu-id="d34ca-210"><a name="BKMK_DownloadingTheApp"></a> Downloading the App</span></span>  
   
-1.  Baixe o arquivo compactado em [Async exemplos: reentrada em aplicativos de área de trabalho do .NET](http://go.microsoft.com/fwlink/?LinkId=266571).  
+1.  <span data-ttu-id="d34ca-211">Baixe o aplicativo compactado em [Exemplos assíncronos: reentrância em aplicativos de área de trabalho do .NET](http://go.microsoft.com/fwlink/?LinkId=266571).</span><span class="sxs-lookup"><span data-stu-id="d34ca-211">Download the compressed file from [Async Samples: Reentrancy in .NET Desktop Apps](http://go.microsoft.com/fwlink/?LinkId=266571).</span></span>  
   
-2.  Descompacte o arquivo baixado e, em seguida, inicie o Visual Studio.  
+2.  <span data-ttu-id="d34ca-212">Descompacte o arquivo baixado e, em seguida, inicie o Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="d34ca-212">Decompress the file that you downloaded, and then start Visual Studio.</span></span>  
   
-3.  Na barra de menus, escolha **arquivo**, **abrir**, **projeto/solução**.  
+3.  <span data-ttu-id="d34ca-213">Na barra de menus, escolha **Arquivo**, **Abrir**, **Projeto/Solução**.</span><span class="sxs-lookup"><span data-stu-id="d34ca-213">On the menu bar, choose **File**, **Open**, **Project/Solution**.</span></span>  
   
-4.  Navegue até a pasta que contém o código de exemplo descompactado e, em seguida, abra o arquivo de solução (. sln).  
+4.  <span data-ttu-id="d34ca-214">Navegue até a pasta que contém o código de exemplo descompactado e, em seguida, abra o arquivo de solução (.sln).</span><span class="sxs-lookup"><span data-stu-id="d34ca-214">Navigate to the folder that holds the decompressed sample code, and then open the solution (.sln) file.</span></span>  
   
-5.  Em **Solution Explorer**, abra o menu de atalho para o projeto que você deseja executar e, em seguida, escolha **definida como StartUpProject**.  
+5.  <span data-ttu-id="d34ca-215">No **Gerenciador de Soluções**, abra o menu de atalho do projeto que você deseja executar e, em seguida, escolha **Definir como Projeto de Inicialização**.</span><span class="sxs-lookup"><span data-stu-id="d34ca-215">In **Solution Explorer**, open the shortcut menu for the project that you want to run, and then choose **Set as StartUpProject**.</span></span>  
   
-6.  Escolha as teclas CTRL + F5 para compilar e executar o projeto.  
+6.  <span data-ttu-id="d34ca-216">Escolha as teclas CTRL+F5 para compilar e executar o projeto.</span><span class="sxs-lookup"><span data-stu-id="d34ca-216">Choose the CTRL+F5 keys to build and run the project.</span></span>  
   
-###  <a name="BKMK_BuildingTheApp"></a>Criando o aplicativo  
- A seção a seguir fornece o código para criar o exemplo como um aplicativo WPF.  
+###  <span data-ttu-id="d34ca-217"><a name="BKMK_BuildingTheApp"></a> Compilando o aplicativo</span><span class="sxs-lookup"><span data-stu-id="d34ca-217"><a name="BKMK_BuildingTheApp"></a> Building the App</span></span>  
+ <span data-ttu-id="d34ca-218">A seção a seguir fornece o código para compilar o exemplo como um aplicativo do WPF.</span><span class="sxs-lookup"><span data-stu-id="d34ca-218">The following section provides the code to build the example as a WPF app.</span></span>  
   
-##### <a name="to-build-a-wpf-app"></a>Para criar um aplicativo WPF  
+##### <a name="to-build-a-wpf-app"></a><span data-ttu-id="d34ca-219">Para compilar um aplicativo do WPF</span><span class="sxs-lookup"><span data-stu-id="d34ca-219">To build a WPF app</span></span>  
   
-1.  Inicie o Visual Studio.  
+1.  <span data-ttu-id="d34ca-220">Inicie o Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="d34ca-220">Start Visual Studio.</span></span>  
   
-2.  Na barra de menus, escolha **Arquivo**, **Novo**, **Projeto**.  
+2.  <span data-ttu-id="d34ca-221">Na barra de menus, escolha **Arquivo**, **Novo**, **Projeto**.</span><span class="sxs-lookup"><span data-stu-id="d34ca-221">On the menu bar, choose **File**, **New**, **Project**.</span></span>  
   
-     O **novo projeto** caixa de diálogo é aberta.  
+     <span data-ttu-id="d34ca-222">A caixa de diálogo **Novo Projeto** é aberta.</span><span class="sxs-lookup"><span data-stu-id="d34ca-222">The **New Project** dialog box opens.</span></span>  
   
-3.  No **modelos instalados** painel, expanda **Visual Basic**e, em seguida, expanda **Windows**.  
+3.  <span data-ttu-id="d34ca-223">No **modelos instalados** painel, expanda **Visual Basic**e, em seguida, expanda **Windows**.</span><span class="sxs-lookup"><span data-stu-id="d34ca-223">In the **Installed Templates** pane, expand **Visual Basic**, and then expand **Windows**.</span></span>  
   
-4.  Na lista de tipos de projeto, escolha **aplicativo WPF**.  
+4.  <span data-ttu-id="d34ca-224">Na lista de tipos de projeto, escolha **Aplicativo WPF**.</span><span class="sxs-lookup"><span data-stu-id="d34ca-224">In the list of project types, choose **WPF Application**.</span></span>  
   
-5.  Nomeie o projeto `WebsiteDownloadWPF`e, em seguida, escolha o **Okey** botão.  
+5.  <span data-ttu-id="d34ca-225">Nomeie o projeto como `WebsiteDownloadWPF` e escolha o botão **OK**.</span><span class="sxs-lookup"><span data-stu-id="d34ca-225">Name the project `WebsiteDownloadWPF`, and then choose the **OK** button.</span></span>  
   
-     O novo projeto aparece na **Solution Explorer**.  
+     <span data-ttu-id="d34ca-226">O novo projeto aparece no **Gerenciador de Soluções**.</span><span class="sxs-lookup"><span data-stu-id="d34ca-226">The new project appears in **Solution Explorer**.</span></span>  
   
-6.  No código de Editor do Visual Studio, escolha o **MainWindow** guia.  
+6.  <span data-ttu-id="d34ca-227">No Editor do Visual Studio Code, escolha a guia **MainWindow.xaml**.</span><span class="sxs-lookup"><span data-stu-id="d34ca-227">In the Visual Studio Code Editor, choose the **MainWindow.xaml** tab.</span></span>  
   
-     Se a guia não estiver visível, abra o menu de atalho de MainWindow. XAML no **Solution Explorer**e, em seguida, escolha **Exibir código**.  
+     <span data-ttu-id="d34ca-228">Se a guia não estiver visível, abra o menu de atalho para MainWindow.xaml no **Gerenciador de Soluções** e, em seguida, escolha **Exibir Código**.</span><span class="sxs-lookup"><span data-stu-id="d34ca-228">If the tab isn’t visible, open the shortcut menu for MainWindow.xaml in **Solution Explorer**, and then choose **View Code**.</span></span>  
   
-7.  No **XAML** exibir de MainWindow. XAML, substitua o código pelo código a seguir.  
+7.  <span data-ttu-id="d34ca-229">Na exibição **XAML** de MainWindow.xaml, substitua o código pelo código a seguir.</span><span class="sxs-lookup"><span data-stu-id="d34ca-229">In the **XAML** view of MainWindow.xaml, replace the code with the following code.</span></span>  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -606,13 +597,13 @@ End Function
     </Window>  
     ```  
   
-     Uma janela simple que contém uma caixa de texto e um botão aparece no **Design** exibição de MainWindow. XAML.  
+     <span data-ttu-id="d34ca-230">Uma janela simples, contendo uma caixa de texto e um botão, aparecerá no modo de exibição de **Design** de MainWindow.xaml.</span><span class="sxs-lookup"><span data-stu-id="d34ca-230">A simple window that contains a text box and a button appears in the **Design** view of MainWindow.xaml.</span></span>  
   
-8.  Adicione uma referência para <xref:System.Net.Http>.</xref:System.Net.Http>  
+8.  <span data-ttu-id="d34ca-231">Adicione uma referência para <xref:System.Net.Http>.</span><span class="sxs-lookup"><span data-stu-id="d34ca-231">Add a reference for <xref:System.Net.Http>.</span></span>  
   
-9. Em **Solution Explorer**, abra o menu de atalho para MainWindow.xaml.vb e, em seguida, escolha **Exibir código**.  
+9. <span data-ttu-id="d34ca-232">Em **Solution Explorer**, abra o menu de atalho para MainWindow.xaml.vb e, em seguida, escolha **Exibir código**.</span><span class="sxs-lookup"><span data-stu-id="d34ca-232">In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.vb, and then choose **View Code**.</span></span>  
   
-10. Em MainWindow.xaml.vb, substitua o código com o código a seguir.  
+10. <span data-ttu-id="d34ca-233">No MainWindow.xaml.vb, substitua o código com o código a seguir.</span><span class="sxs-lookup"><span data-stu-id="d34ca-233">In MainWindow.xaml.vb , replace the code with the following code.</span></span>  
   
     ```vb  
     ' Add the following Imports statements, and add a reference for System.Net.Http.  
@@ -690,11 +681,10 @@ End Function
     End Class  
     ```  
   
-11. Escolha as teclas CTRL + F5 para executar o programa e, em seguida, escolha o **iniciar** botão várias vezes.  
+11. <span data-ttu-id="d34ca-234">Escolha a tecla CTRL+F5 para executar o programa e, em seguida, escolha o botão **Iniciar** várias vezes.</span><span class="sxs-lookup"><span data-stu-id="d34ca-234">Choose the CTRL+F5 keys to run the program, and then choose the **Start** button several times.</span></span>  
   
-12. Faça as alterações de [desabilitar o botão Iniciar](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), [Cancelar e reiniciar a operação](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), ou [executar várias operações e a fila de saída](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) para lidar com a reentrância.  
+12. <span data-ttu-id="d34ca-235">Faça as alterações de [Desabilitar o botão Iniciar](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), [Cancelar e reiniciar a operação](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) ou [Executar várias operações e colocar a saída em fila](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) para tratar a reentrância.</span><span class="sxs-lookup"><span data-stu-id="d34ca-235">Make the changes from [Disable the Start Button](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), [Cancel and Restart the Operation](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), or [Run Multiple Operations and Queue the Output](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) to handle the reentrancy.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Passo a passo: Acessando a Web usando o Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
- [Programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="d34ca-236">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d34ca-236">See Also</span></span>  
+ [<span data-ttu-id="d34ca-237">Instruções passo a passo: acessando a Web usando Async e Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d34ca-237">Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ [<span data-ttu-id="d34ca-238">Programação assíncrona com Async e Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d34ca-238">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/index.md)

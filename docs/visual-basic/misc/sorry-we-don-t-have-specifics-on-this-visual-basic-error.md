@@ -1,9 +1,8 @@
 ---
-title: "Infelizmente, não há informações específicas sobre este erro do Visual Basic | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Infelizmente, estamos don &#39; não possui informações específicas sobre este erro do Visual Basic"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -3048,54 +3047,37 @@ f1_keywords:
 - bc31432
 - bc30233
 - bc30829
-dev_langs:
-- VB
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 406a53192e8ce2cd56280dad01ebce3165d7e377
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 132bb3f93ae5084df73aed56b6d1483830984928
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Infelizmente, não há informações específicas sobre este erro do Visual Basic
-Infelizmente não temos informações específicas sobre este erro. Você pode procurar o número do erro e o texto da mensagem para localizar informações na web. Ou pode perguntar a outros desenvolvedores usando um destes fóruns:  
+# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a><span data-ttu-id="8bf4a-102">Infelizmente, estamos don &#39; não possui informações específicas sobre este erro do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8bf4a-102">Sorry, we don&#39;t have specifics on this Visual Basic error</span></span>
+<span data-ttu-id="8bf4a-103">Infelizmente não temos informações específicas sobre este erro.</span><span class="sxs-lookup"><span data-stu-id="8bf4a-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="8bf4a-104">Você pode procurar o número do erro e o texto da mensagem para localizar informações na web.</span><span class="sxs-lookup"><span data-stu-id="8bf4a-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="8bf4a-105">Ou pode perguntar a outros desenvolvedores usando um destes fóruns:</span><span class="sxs-lookup"><span data-stu-id="8bf4a-105">Or, you can ask other developers using one of these forums:</span></span>  
   
- [Linguagem Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145963)  
- Fornece um fórum para perguntas e discussões gerais sobre a linguagem e o compilador [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ [<span data-ttu-id="8bf4a-106">Linguagem Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8bf4a-106">Visual Basic Language</span></span>](http://go.microsoft.com/fwlink/?LinkId=145963)  
+ <span data-ttu-id="8bf4a-107">Fornece um fórum para perguntas e discussões gerais sobre a linguagem e o compilador [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8bf4a-107">Provides a forum for questions about and general discussions of the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] language syntax and compiler.</span></span>  
   
- [Atualização e interoperabilidade do Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145966)  
- Fornece um fórum para perguntas sobre problemas com a atualização para o [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] e o trabalho com recursos de interoperabilidade.  
+ [<span data-ttu-id="8bf4a-108">Interoperabilidade e atualização do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8bf4a-108">Visual Basic Interop and Upgrade</span></span>](http://go.microsoft.com/fwlink/?LinkId=145966)  
+ <span data-ttu-id="8bf4a-109">Fornece um fórum para perguntas sobre problemas com a atualização para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] e o trabalho com recursos de interoperabilidade.</span><span class="sxs-lookup"><span data-stu-id="8bf4a-109">Provides a forum for questions about and issues with upgrading to [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] and working with interoperability features.</span></span>  
   
- [IDE do Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145971)  
- Fornece um fórum para perguntas sobre como trabalhar no ambiente [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)].  
+ [<span data-ttu-id="8bf4a-110">IDE do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8bf4a-110">Visual Basic IDE</span></span>](http://go.microsoft.com/fwlink/?LinkId=145971)  
+ <span data-ttu-id="8bf4a-111">Fornece um fórum para perguntas sobre como trabalhar no ambiente [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8bf4a-111">Provides a forum for questions about how to work in the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] environment.</span></span>  
   
- [Visual Basic-geral](http://go.microsoft.com/fwlink/?LinkId=145973)  
- Fornece um fórum para perguntas sobre, problemas com, o [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] que não são discutidas em outros fóruns.  
+ [<span data-ttu-id="8bf4a-112">Informações gerais sobre o Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8bf4a-112">Visual Basic General</span></span>](http://go.microsoft.com/fwlink/?LinkId=145973)  
+ <span data-ttu-id="8bf4a-113">Fornece um fórum para perguntas sobre, problemas com, o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] que não são discutidas em outros fóruns.</span><span class="sxs-lookup"><span data-stu-id="8bf4a-113">Provides a forum for questions about and issues with [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] that are not discussed in other forums.</span></span>  
   
- [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
- Fornece um fórum para perguntas sobre e problemas com o [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ [<span data-ttu-id="8bf4a-114">StackOverflow</span><span class="sxs-lookup"><span data-stu-id="8bf4a-114">StackOverflow</span></span>](http://stackoverflow.com/questions/tagged/vb.net)  
+ <span data-ttu-id="8bf4a-115">Fornece um fórum para perguntas sobre e problemas com o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8bf4a-115">Provides a forum for questions about and issues with [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
- Consulte também:  
- [Recursos Adicionais para Programadores do Visual Basic](../../visual-basic/getting-started/additional-resources.md)  
+ <span data-ttu-id="8bf4a-116">Consulte também:</span><span class="sxs-lookup"><span data-stu-id="8bf4a-116">Also see:</span></span>  
+ [<span data-ttu-id="8bf4a-117">Recursos Adicionais para Programadores do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8bf4a-117">Additional Resources for Visual Basic Programmers</span></span>](../../visual-basic/getting-started/additional-resources.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de programação em Visual Basic](../../visual-basic/programming-guide/index.md)   
- [Referência do Visual Basic](../../visual-basic/reference/index.md)
+## <a name="see-also"></a><span data-ttu-id="8bf4a-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8bf4a-118">See Also</span></span>  
+ [<span data-ttu-id="8bf4a-119">Guia de programação do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8bf4a-119">Visual Basic Programming Guide</span></span>](../../visual-basic/programming-guide/index.md)  
+ [<span data-ttu-id="8bf4a-120">Referência do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8bf4a-120">Visual Basic Reference</span></span>](../../visual-basic/reference/index.md)

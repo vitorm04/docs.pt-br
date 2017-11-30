@@ -1,1 +1,1 @@
-TFS (Estrutura de Serviços de Texto)
+<span data-ttu-id="7534f-101">TFS (Estrutura de Serviços de Texto)</span><span class="sxs-lookup"><span data-stu-id="7534f-101">Text Services Framework (TSF)</span></span>

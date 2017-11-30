@@ -1,1 +1,1 @@
-.NET Compact Framework 3,5
+<span data-ttu-id="cc34c-101">.NET Compact Framework 3,5</span><span class="sxs-lookup"><span data-stu-id="cc34c-101">.NET Compact Framework 3.5</span></span>

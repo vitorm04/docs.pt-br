@@ -1,44 +1,27 @@
 ---
-title: "Não é possível converter o valor inicial do tipo &quot;&lt;type1&gt;&quot;, valor limite de &quot;&lt;type2&gt;&quot;e incremento de&quot;&lt;Tipo3&gt;&quot; em um tipo comum | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Não é possível converter o valor inicial do tipo &#39; &lt;type1&gt;&#39; o valor de limite &#39;&lt; type2&gt;&#39; e o valor da etapa de &#39;&lt; Tipo3&gt;&#39; em um tipo comum"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrForLoop_CommonType3
+f1_keywords: vbrForLoop_CommonType3
 ms.assetid: 21c45bcf-539c-488a-9cae-221558c37146
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 585f6b085a5adc8fe95c5896a70ae8afcff04ccb
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 08bee0060898fce5db9404162a4cdea2e9e59774
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="cannot-convert-start-value-of-type-39lttype1gt39-limit-value-of-39lttype2gt39-and-step-value-of-39lttype3gt39-to-a-common-type"></a>Não é possível converter o valor inicial do tipo '&lt;type1&gt;', valor limite de '&lt;type2&gt;'e incremento de'&lt;Tipo3&gt;' em um tipo comum
-Especificado `For...Next` valores de controle tem tipos diferentes e, portanto, não são válidos porque eles não podem ser convertidos em um tipo comum.  
+# <a name="cannot-convert-start-value-of-type-39lttype1gt39-limit-value-of-39lttype2gt39-and-step-value-of-39lttype3gt39-to-a-common-type"></a><span data-ttu-id="1325c-102">Não é possível converter o valor inicial do tipo &#39; &lt;type1&gt;&#39; o valor de limite &#39;&lt; type2&gt;&#39; e o valor da etapa de &#39;&lt; Tipo3&gt;&#39; em um tipo comum</span><span class="sxs-lookup"><span data-stu-id="1325c-102">Cannot convert start value of type &#39;&lt;type1&gt;&#39;, limit value of &#39;&lt;type2&gt;&#39; and step value of &#39;&lt;type3&gt;&#39; to a common type</span></span>
+<span data-ttu-id="1325c-103">Especificado `For...Next` controle valores têm tipos diferentes e, portanto, não são válidos porque eles não podem ser convertidos em um tipo comum.</span><span class="sxs-lookup"><span data-stu-id="1325c-103">The specified `For...Next` control values have different types, and therefore are not valid because they cannot be converted to a common type.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="1325c-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="1325c-104">To correct this error</span></span>  
   
-1.  Altere o tipo de um ou mais dos valores para que todos podem ser convertidos em um tipo comum.  
+1.  <span data-ttu-id="1325c-105">Altere o tipo de um ou mais dos valores para que todos podem ser convertidos em um tipo comum.</span><span class="sxs-lookup"><span data-stu-id="1325c-105">Change the type of one or more of the values so all can be converted to a common type.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Alterações de depuração no Visual Basic .NET](http://msdn.microsoft.com/en-us/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75)   
- [Instrução For...Next](../../visual-basic/language-reference/statements/for-next-statement.md)
+## <a name="see-also"></a><span data-ttu-id="1325c-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1325c-106">See Also</span></span>  
+ [<span data-ttu-id="1325c-107">Alterações de depuração no Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="1325c-107">Debugging Changes in Visual Basic .NET</span></span>](http://msdn.microsoft.com/en-us/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75)  
+ [<span data-ttu-id="1325c-108">Instrução For...Next</span><span class="sxs-lookup"><span data-stu-id="1325c-108">For...Next Statement</span></span>](../../visual-basic/language-reference/statements/for-next-statement.md)
