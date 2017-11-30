@@ -1,47 +1,29 @@
 ---
-title: "Expressão lambda não será removida deste manipulador de eventos | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "A expressão lambda não será removida deste manipulador de eventos"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc42326
 - vbc42326
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC42326
+helpviewer_keywords: BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bdf7ad8f8a116c818e72d67150d72d0c96a4dc3b
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 1a4c57d1f8f41d2d9ebb645d3f2628c32a2c4e4c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>A expressão lambda não será removida deste manipulador de eventos
-A expressão lambda não será removida deste manipulador de eventos. Atribua a expressão lambda a uma variável e use a variável para adicionar e remover o evento.  
+Expressão lambda não será removida deste manipulador de eventos. Atribua a expressão lambda a uma variável e use a variável para adicionar e remover o evento.  
   
- Quando as expressões lambda são usadas com manipuladores de eventos, você não verá o comportamento esperado. O compilador gera um novo método para cada definição da expressão lambda, mesmo se eles forem idênticos. Portanto, o código a seguir exibe `False`.  
+ Quando as expressões lambda são usadas com manipuladores de eventos, você não poderá ver o comportamento esperado. O compilador gera um novo método para cada definição de expressão lambda, mesmo se eles são idênticos. Portanto, o código a seguir exibe `False`.  
   
 ```vb  
 Module Module1  
@@ -57,7 +39,7 @@ Module Module1
 End Module  
 ```  
   
- Quando as expressões lambda são usadas com manipuladores de eventos, isso pode causar resultados inesperados. No exemplo a seguir, a expressão lambda é adicionado por `AddHandler` não é removido o `RemoveHandler` instrução.  
+ Quando as expressões lambda são usadas com manipuladores de eventos, isso pode causar resultados inesperados. No exemplo a seguir, a expressão lambda adicionado por `AddHandler` não é removido o `RemoveHandler` instrução.  
   
 ```vb  
 Module Module1  
@@ -78,13 +60,13 @@ Module Module1
 End Module  
 ```  
   
- Por padrão, esta mensagem é um aviso. Para obter mais informações sobre como ocultar avisos ou tratar avisos como erros, consulte [Configurando avisos no Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Por padrão, esta mensagem é um aviso. Para obter mais informações sobre como ocultar avisos ou tratar avisos como erros, consulte [Configurando avisos no Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **ID do erro:** BC42326  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Para evitar o aviso e remova a expressão lambda, atribua a expressão lambda a uma variável e usar a variável em ambos os `AddHandler` e `RemoveHandler` instruções, conforme mostrado no exemplo a seguir.  
+-   Para evitar o aviso e remova a expressão lambda, atribua a expressão lambda a uma variável e use a variável em ambos os `AddHandler` e `RemoveHandler` instruções, conforme mostrado no exemplo a seguir.  
   
 ```vb  
 Module Module1  
@@ -109,6 +91,6 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Expressões lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
- [Conversão de delegado reduzida](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)   
+ [Expressões Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
+ [Conversão de Delegado Reduzida](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
  [Eventos](../../../visual-basic/programming-guide/language-features/events/index.md)

@@ -7,27 +7,21 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - network resources
 - networks [.NET Framework], programming how-tos
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6e63c65f0ebef37e854bd3cfd62a33e396470a57
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1b6e63c0db9815c7bcfc32ec962e3f85362cce4f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="network-programming-how-to-topics"></a>Tópicos explicativos de programação de rede
 A lista a seguir inclui links para os tópicos Como fazer encontrados na documentação conceitual para programação de rede.  
@@ -93,7 +87,6 @@ A lista a seguir inclui links para os tópicos Como fazer encontrados na documen
 -   [Como executar ping em um host](../../../docs/framework/network-programming/how-to-ping-a-host.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Programação de rede no .NET Framework](../../../docs/framework/network-programming/index.md)   
- [Amostras de programação de rede](../../../docs/framework/network-programming/network-programming-samples.md)   
+ [Programação de rede no .NET Framework](../../../docs/framework/network-programming/index.md)  
+ [Amostras de programação de rede](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Exemplos de rede do .NET na Galeria de Códigos do MSDN](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
-

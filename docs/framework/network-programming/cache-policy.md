@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - time-based cache policies
 - location-based cache policies
@@ -21,16 +16,15 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7323c93ef89e340595f6b62947ea45867e651425
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 375c3b44f505a9bf36ce721c5ccde9b888114309
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="cache-policy"></a>Política de cache
 Uma política de cache define as regras que são usadas para determinar se uma solicitação pode ser atendida usando uma cópia armazenada em cache do recurso solicitado. Os aplicativos especificam requisitos de cache de cliente para atualização, mas a política de cache efetiva é determinada pelos requisitos de cache de cliente, requisitos de expiração de conteúdo do servidor e requisitos de revalidação do servidor. A interação dos requisitos da política de cache de cliente e do servidor sempre resulta na política de cache mais conservadora, para ajudar a garantir que o conteúdo mais atualizado é retornado para o aplicativo cliente.  
@@ -54,8 +48,7 @@ Uma política de cache define as regras que são usadas para determinar se uma s
  Para obter exemplos de código que demonstram como criar e usar políticas de cache, consulte [Configurando o cache em aplicativos de rede](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Gerenciamento de cache para aplicativos de rede](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [Políticas de cache baseadas na localização](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [Políticas de cache baseadas em tempo](../../../docs/framework/network-programming/time-based-cache-policies.md)   
+ [Gerenciamento de cache para aplicativos de rede](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [Políticas de cache baseadas na localização](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [Políticas de cache baseadas em tempo](../../../docs/framework/network-programming/time-based-cache-policies.md)  
  [Configurando o cache em aplicativos de rede](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
-

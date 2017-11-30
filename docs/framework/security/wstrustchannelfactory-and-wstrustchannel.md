@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: e400d68924f1ed57ea1e71892e52f5aae2f5eebc
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory e WSTrustChannel
 Se você já estiver familiarizado com o WCF (Windows Communication Foundation), saberá que um cliente WCF já é baseado em federação. Configurando um cliente WCF com uma <xref:System.ServiceModel.WSFederationHttpBinding> ou uma associação personalizada semelhante, você pode habilitar a autenticação federada em um serviço.  
@@ -112,4 +110,3 @@ IHelloService serviceChannel = channelFactory.CreateChannelWithIssuedToken<IHell
   
 ## <a name="see-also"></a>Consulte também  
  [Recursos do WIF](../../../docs/framework/security/wif-features.md)
-

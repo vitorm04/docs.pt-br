@@ -7,24 +7,18 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0deccc8be5616c76f4c447c50f22544fe0fabe47
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 805f6f6ed7990b42065dfe7985a5d81844961897
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# Protocolo PNRP
+# <a name="peer-name-resolution-protocol"></a>Protocolo PNRP
 Em ambientes de ponto a ponto, pares usam sistemas de resolução de nome específicos para resolver os locais de rede (endereços, protocolos e portas) uns dos outros, com base em nomes ou outros tipos de identificadores. No passado, a resolução de nome de par foi complicada devido à conectividade inerentemente transitória, bem como outras falhas dentro do sistema DNS (Sistema de Nomes de Domínio).  
   
  A plataforma de rede ponto a ponto do Microsoft® Windows® resolve esse problema com o protocolo PNRP, um protocolo de registro de nomes e de resolução de nomes seguro, escalonável e dinâmico desenvolvido primeiro para o Windows XP e depois atualizado para o Windows Vista™. O PNRP funciona de forma muito diferente dos sistemas de resolução de nome tradicionais, abrindo incríveis novas possibilidades para desenvolvedores de aplicativos.  
@@ -45,7 +39,7 @@ Em ambientes de ponto a ponto, pares usam sistemas de resolução de nome espec�
   
 -  
   
-## O namespace System.Net.PeerToPeer  
+## <a name="the-systemnetpeertopeer-namespace"></a>O namespace System.Net.PeerToPeer  
   
 -   A funcionalidade do protocolo PNRP é definida pelo namespace <xref:System.Net.PeerToPeer> dentro do .NET Framework versão 3.5. Ele fornece um conjunto de tipos que podem ser usados para registrar e resolver os nomes de ponto a ponto com um serviço PNRP disponível.  
   
@@ -73,9 +67,8 @@ Em ambientes de ponto a ponto, pares usam sistemas de resolução de nome espec�
   
 -  
   
-## Consulte também  
- <xref:System.ServiceModel.PeerResolvers>   
- <xref:System.Net.PeerToPeer>   
- [Amostras de programação de rede](../../../docs/framework/network-programming/network-programming-samples.md)   
+## <a name="see-also"></a>Consulte também  
+ <xref:System.ServiceModel.PeerResolvers>  
+ <xref:System.Net.PeerToPeer>  
+ [Amostras de programação de rede](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Amostra de tecnologia PeerToPeer](http://go.microsoft.com/fwlink/?LinkID=179571)
-

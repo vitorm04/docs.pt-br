@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9968f12e-e05d-4e6a-9b65-6896c0e31ab1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 6772d484fa4d0ed3948ecee26adb2cf886340f11
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="json-web-token-handler"></a>Manipulador de Token da Web JSON
 A extensão do Manipulador de Tokens da Web JSON para Windows Identity Foundation permite que você crie e valide JWT (Tokens da Web JSON) em seus aplicativos. O Manipulador de Tokens JWT pode ser configurado para ser executado no pipeline WIF como outros manipuladores de tokens de segurança internos, mas também pode ser usado de forma independente para executar a validação do token em aplicativos leves. O Manipulador de Tokens JWT é particularmente útil ao usar um esquema de token portador OAuth 2.0, como a autenticação no Active Directory do Microsoft Azure.  
@@ -39,4 +37,3 @@ A extensão do Manipulador de Tokens da Web JSON para Windows Identity Foundatio
 -   **Validar um Token JWT**: os tokens JWT podem ser facilmente validados pela lógica de validação do manipulador de tokens, como uma parte do pipeline WIF do aplicativo ou chamados independentemente do WIF  
   
 -   **Criar um Token JWT**: o Manipulador de Tokens JWT pode ser usado para criar tokens JWT para autorização em serviços de downstream
-

@@ -1,0 +1,140 @@
+---
+title: "Usando extensões de atividade"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7ff4f441df437dc5785b6df77c16923a1a1c9906
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
+---
+# <a name="using-activity-extensions"></a>Usando extensões de atividade
+As atividades podem interagir com as extensões do aplicativo de fluxo de trabalho que permitem que o host fornece funcionalidade adicional que não é modelada explicitamente no fluxo de trabalho.  Este tópico descreve como criar e usar uma extensão para contar o número de vezes que a atividade é executado.  
+  
+### <a name="to-use-an-activity-extension-to-count-executions"></a>Para usar uma extensão de atividade para contar executa  
+  
+1.  Abra [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]. Selecione **novo**, **projeto**. Sob o **Visual C#** nó, selecione **fluxo de trabalho**.  Selecione **aplicativo de Console do fluxo de trabalho** da lista de modelos. Nomeie o projeto `Extensions`. Clique em **Okey** para criar o projeto.  
+  
+2.  Adicionar um `using` instrução no arquivo Program.cs para o **Generic** namespace.  
+  
+    ```  
+    using System.Collections.Generic;  
+    ```  
+  
+3.  No arquivo Program.cs, crie uma nova classe chamada **ExecutionCountExtension**. O código a seguir cria uma extensão do fluxo de trabalho que controla as IDs de instância quando seu **registrar** método é chamado.  
+  
+    ```  
+    // This extension collects a list of workflow Ids  
+    public class ExecutionCountExtension  
+    {  
+        IList<Guid> instances = new List<Guid>();  
+  
+        public int ExecutionCount  
+        {  
+            get  
+            {  
+                return this.instances.Count;  
+            }  
+        }  
+  
+        public IEnumerable<Guid> InstanceIds  
+        {  
+            get  
+            {  
+                return this.instances;  
+            }  
+        }  
+  
+        public void Register(Guid activityInstanceId)  
+        {  
+            if (!this.instances.Contains<Guid>(activityInstanceId))  
+            {  
+                instances.Add(activityInstanceId);  
+            }  
+        }  
+    }  
+    ```  
+  
+4.  Criar uma atividade que consome o **ExecutionCountExtension**. O código a seguir define uma atividade que recupera o **ExecutionCountExtension** objeto do tempo de execução e chama seu **registrar** método quando a atividade é executada.  
+  
+    ```  
+    // Activity that consumes an extension provided by the host. If the extension is available  
+    // in the context, it will invoke (in this case, registers the Id of the executing workflow)  
+    public class MyActivity: CodeActivity  
+    {  
+        protected override void Execute(CodeActivityContext context)  
+        {  
+            ExecutionCountExtension ext = context.GetExtension<ExecutionCountExtension>();  
+            if (ext != null)  
+            {  
+                ext.Register(context.WorkflowInstanceId);                         
+            }  
+  
+        }  
+    }  
+    ```  
+  
+5.  Implementar a atividade de **principal** método do arquivo program.cs. O código a seguir contém métodos para gerar dois fluxos de trabalho diferentes, para executar cada fluxo de trabalho várias vezes, e exibir os dados resultante que estão contidos na extensão.  
+  
+    ```  
+    class Program  
+    {  
+        // Creates a workflow that uses the activity that consumes the extension  
+        static Activity CreateWorkflow1()  
+        {  
+            return new Sequence  
+            {  
+                Activities =  
+                {  
+                    new MyActivity()  
+                }  
+            };  
+        }  
+  
+        // Creates a workflow that uses two instances of the activity that consumes the extension  
+        static Activity CreateWorkflow2()  
+        {  
+            return new Sequence  
+            {  
+                Activities =  
+                {  
+                    new MyActivity(),  
+                    new MyActivity()  
+                }  
+            };  
+        }  
+  
+        static void Main(string[] args)  
+        {  
+            // create the extension   
+            ExecutionCountExtension executionCountExt = new ExecutionCountExtension();  
+  
+            // configure the first invoker and execute 3 times  
+            WorkflowInvoker invoker = new WorkflowInvoker(CreateWorkflow1());  
+            invoker.Extensions.Add(executionCountExt);                          
+            invoker.Invoke();  
+            invoker.Invoke();  
+            invoker.Invoke();  
+  
+            // configure the second invoker and execute 2 times  
+            WorkflowInvoker invoker2 = new WorkflowInvoker(CreateWorkflow2());  
+            invoker2.Extensions.Add(executionCountExt);  
+            invoker2.Invoke();  
+            invoker2.Invoke();  
+  
+            // show the data in the extension  
+            Console.WriteLine("Executed {0} times", executionCountExt.ExecutionCount);  
+            executionCountExt.InstanceIds.ToList().ForEach(i => Console.WriteLine("...{0}", i));  
+        }  
+    }  
+    ```

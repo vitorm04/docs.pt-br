@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - startup settings schema
 - schema startup settings
 - configuration schema [.NET Framework], startup settings
 ms.assetid: 03de6972-442a-4648-9f3e-efa654e3b949
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cc014f65cec23f9ab1794d73e0f5d4f7cd5844da
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 61ea6d0c974683e73e835720cff48ff84169217e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="startup-settings-schema"></a>Esquema de configurações de inicialização
 As configurações de inicialização especificam a versão do Common Language Runtime que deve executar o aplicativo.  
@@ -40,6 +33,5 @@ As configurações de inicialização especificam a versão do Common Language R
 |[\<startup>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)|Contém os elementos **\<requiredRuntime>** e **\<supportedRuntime>**.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Esquema de arquivo de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)   
+ [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [\<PaveOver> Specifying Which Runtime Version to Use](http://msdn.microsoft.com/en-us/c376208d-980d-42b4-865b-fbe0d9cc97c2) (PaveOver> Especificando a versão do tempo de execução a ser usada)
-

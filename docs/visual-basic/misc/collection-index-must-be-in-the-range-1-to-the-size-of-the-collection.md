@@ -1,39 +1,22 @@
 ---
-title: "Índice de coleção deve estar no intervalo entre 1 e o tamanho da coleção | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Índice de coleção deve estar no intervalo entre 1 e o tamanho da coleção"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrArgument_CollectionIndex
+f1_keywords: vbrArgument_CollectionIndex
 ms.assetid: feee4d55-0754-40fe-9ce9-288ef543f569
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b02bd01f4a297175b0251def142ff3d28f233fad
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 8696af9e6b8c64d02f80e9d5b8eb85eee54f7e42
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="collection-index-must-be-in-the-range-1-to-the-size-of-the-collection"></a>Índice de coleção deve estar no intervalo entre 1 e o tamanho da coleção
-O valor de índice fornecido está fora do intervalo válido, que é 1 para o tamanho da coleção.  
+O valor de índice fornecido está fora do intervalo válido, o que é 1 para o tamanho da coleção.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   

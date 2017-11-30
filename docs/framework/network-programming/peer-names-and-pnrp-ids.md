@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 11d20e346bba9ae6300f88c5d5bf48f99ec27904
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: c5b4bcf0a7a7d23dd54fad36b341e3ed241975b3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Nomes de par e IDs de PNRP
 Um nome de par representa um ponto de extremidade para comunicação, que pode ser um computador, um usuário, um grupo, um serviço ou qualquer elemento associado a um par que pode ser resolvido para um endereço IPv6. O protocolo PNRP usa o nome do par estatisticamente exclusivo para a criação de uma ID de PNRP, que é usado para identificar membros de nuvem.  
@@ -46,6 +40,5 @@ Um nome de par representa um ponto de extremidade para comunicação, que pode s
  Essa combinação de ID P2P e Local de Serviço permite que várias IDs de PNRP sejam registradas em um único computador.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Net.PeerToPeer.PeerName>   
+ <xref:System.Net.PeerToPeer.PeerName>  
  <xref:System.Net.PeerToPeer>
-

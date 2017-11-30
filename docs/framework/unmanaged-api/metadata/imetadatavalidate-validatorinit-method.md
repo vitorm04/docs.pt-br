@@ -1,0 +1,59 @@
+---
+title: "Método IMetaDataValidate::ValidatorInit"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: IMetaDataValidate.ValidatorInit
+api_location: mscoree.dll
+api_type: COM
+f1_keywords: IMetaDataValidate::ValidatorInit
+helpviewer_keywords:
+- IMetaDataValidate::ValidatorInit method [.NET Framework metadata]
+- ValidatorInit method [.NET Framework metadata]
+ms.assetid: 6bafd75a-e2d0-4aea-aed1-074374d5dff6
+topic_type: apiref
+caps.latest.revision: "14"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: e2a9b265b4fcc75406f5d5f1dbddb8bd74b5832d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
+---
+# <a name="imetadatavalidatevalidatorinit-method"></a>Método IMetaDataValidate::ValidatorInit
+Define um sinalizador que especifica o tipo de módulo no escopo atual de metadados e registra o método de retorno de chamada especificada para erros de validação.  
+  
+## <a name="syntax"></a>Sintaxe  
+  
+```  
+HRESULT ValidatorInit (  
+   [in] DWORD       dwModuleType,  
+   [in] IUnknown    *pUnk  
+);  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ `dwModule`  
+ [in] Um valor de [CorValidatorModuleType](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md) enumeração que especifica o tipo de módulo no escopo atual de metadados.  
+  
+ `pUnk`  
+ [in] Um ponteiro para um <<!--zzxref:IUnknown --> `IUnknown`> instância que serve como um retorno de chamada de função para erros de validação.  
+  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+  
+ **Cabeçalho:** Cor.h  
+  
+ **Biblioteca:** usado como um recurso no MSCOREE  
+  
+ **Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+  
+## <a name="see-also"></a>Consulte também  
+ [Interface IMetaDataValidate](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)

@@ -1,38 +1,21 @@
 ---
-title: "Não é possível renomear com outra unidade | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Não é possível renomear com unidade diferente"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrID74
+f1_keywords: vbrID74
 ms.assetid: eddb087d-b2e9-4bc7-a567-0bb6c45e0d42
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 75de8823ceaf8173df86b6f4b233c390edc11d00
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 3153d3fd249abaea3492c98328965e0ae9234dfe
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="cannot-rename-with-different-drive"></a>Não é possível renomear com outra unidade
+# <a name="cannot-rename-with-different-drive"></a>Não é possível renomear com unidade diferente
 O `Rename` instrução não é possível especificar uma letra de unidade no caminho do arquivo.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  

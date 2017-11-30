@@ -4,16 +4,15 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.topic: article
 ms.assetid: e0aef017-4381-4f2f-a904-6e1ed898687e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: e76d0e3722be1246a46604aba19eb38aecc54e83
 ms.openlocfilehash: 7b7f13a5119b429d8a80f48cf670b897ed97e094
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/15/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="windows-workflow-wf-samples"></a>Fluxo de trabalho (WF) Exemplos do Windows
 Esses exemplos fornecem instruções em vários aspectos de [!INCLUDE[wf](../../../../includes/wf-md.md)].  
@@ -36,4 +35,3 @@ Os exemplos podem ser baixados da [Centro de Download da Microsoft](http://go.mi
  Os exemplos contidos nesta seção ferramenta novos recursos em C# 3,0. Para obter detalhes sobre alguns recursos novos do C# 3.0 que talvez sejam desconhecidos, consulte a [C# 3.0 Overview](http://go.microsoft.com/fwlink/?LinkId=193972) (Visão geral do C# 3.0).  
   
  Os exemplos podem ser baixados da [Centro de Download da Microsoft](http://go.microsoft.com/fwlink/?LinkId=150780).
-

@@ -1,0 +1,54 @@
+---
+title: "Método ICorProfilerCallback::ExceptionSearchCatcherFound"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: ICorProfilerCallback.ExceptionSearchCatcherFound
+api_location: mscorwks.dll
+api_type: COM
+f1_keywords: ICorProfilerCallback::ExceptionSearchCatcherFound
+helpviewer_keywords:
+- ExceptionSearchCatcherFound method [.NET Framework profiling]
+- ICorProfilerCallback::ExceptionSearchCatcherFound method [.NET Framework profiling]
+ms.assetid: 190f424d-5e37-4163-a191-0895686e9476
+topic_type: apiref
+caps.latest.revision: "12"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 434af3fb6201aefac40795ffed7781a72a97b729
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
+---
+# <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a>Método ICorProfilerCallback::ExceptionSearchCatcherFound
+Notifica o criador de perfil que a fase de pesquisa de tratamento de exceção foi localizado um manipulador para a exceção foi lançada.  
+  
+## <a name="syntax"></a>Sintaxe  
+  
+```  
+RESULT ExceptionSearchCatcherFound(  
+    [in] FunctionID functionId);  
+```  
+  
+#### <a name="parameters"></a>Parâmetros  
+ `functionId`  
+ [in] A ID da função que contém o manipulador de exceção.  
+  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+  
+ **Cabeçalho:** Corprof. idl, CorProf.h  
+  
+ **Biblioteca:** CorGuids.lib  
+  
+ **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+  
+## <a name="see-also"></a>Consulte também  
+ [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

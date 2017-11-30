@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - sending data, sockets
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 79a95a4a8aaeb46d218836f9ad2fb74897ae3803
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: c5c696e04b940923d53eb79c055330a91734e1a0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-an-asynchronous-server-socket"></a>Usando um soquete de servidor assíncrono
 Os soquetes de servidor assíncrono usam o modelo de programação assíncrono do .NET Framework para processar solicitações de serviço da rede. A classe <xref:System.Net.Sockets.Socket> segue o padrão de nomenclatura assíncrona do .NET Framework; por exemplo, o método <xref:System.Net.Sockets.Socket.Accept%2A> síncrono corresponde aos métodos <xref:System.Net.Sockets.Socket.BeginAccept%2A> e <xref:System.Net.Sockets.Socket.EndAccept%2A> assíncronos.  
@@ -69,7 +66,7 @@ listener.BeginAccept(
     listener);  
 ```  
   
- Os soquetes assíncronos usam threads do pool de threads do sistema para processar conexões de entrada. Um thread é responsável por aceitar conexões, outro thread é usado para manipular cada conexão de entrada e outro thread é responsável por receber dados da conexão. Eles podem ser o mesmo thread, dependendo de qual thread é atribuído pelo pool de threads. No exemplo a seguir, a classe <xref:System.Threading.ManualResetEvent?displayProperty=fullName> suspende a execução do thread principal e sinaliza quando a execução pode continuar.  
+ Os soquetes assíncronos usam threads do pool de threads do sistema para processar conexões de entrada. Um thread é responsável por aceitar conexões, outro thread é usado para manipular cada conexão de entrada e outro thread é responsável por receber dados da conexão. Eles podem ser o mesmo thread, dependendo de qual thread é atribuído pelo pool de threads. No exemplo a seguir, a classe <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> suspende a execução do thread principal e sinaliza quando a execução pode continuar.  
   
  O exemplo a seguir mostra um método assíncrono que cria um soquete TCP/IP assíncrono no computador local e começa a aceitar conexões. Ele supõe que haja um **ManualResetEvent** global chamado `allDone`, que o método seja um membro de uma classe chamada `SocketListener` e que um método de retorno de chamada chamado `acceptCallback` esteja definido.  
   
@@ -274,8 +271,7 @@ public static void readCallback(IAsyncResult ar) {
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Usando um soquete de servidor síncrono](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
- [Exemplo de soquete de servidor assíncrono](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)   
- [Threading](../../../docs/standard/threading/index.md)   
+ [Usando um soquete de servidor síncrona](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
+ [Exemplo de soquete de servidor assíncrono](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
+ [Threading](../../../docs/standard/threading/index.md)  
  [Escutando com soquetes](../../../docs/framework/network-programming/listening-with-sockets.md)
-

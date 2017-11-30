@@ -8,25 +8,22 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - sockets, asynchronous server sockets
 - sockets, code examples
 - asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9cf150a1ac5465a898ca9e330b186659ec6423f0
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: cf9889f53ca4b7079e762725d1f61eba4987e61e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="asynchronous-server-socket-example"></a>Exemplo de soquete de servidor assíncrono
 O programa de exemplo a seguir cria um servidor que recebe solicitações de conexão de clientes. O servidor é criado com um soquete assíncrono e, portanto, a execução do aplicativo para servidores não é suspensa enquanto ele aguarda uma conexão de um cliente. O aplicativo recebe uma cadeia de caracteres do cliente, exibe a cadeia de caracteres no console e, em seguida, retorna-a ao cliente. A cadeia de caracteres do cliente deve conter a cadeia de caracteres “\<EOF>” para sinalizar o final da mensagem.  
@@ -65,12 +62,12 @@ Public Class AsynchronousSocketListener
         Dim bytes() As Byte = New [Byte](1023) {}  
   
         ' Establish the local endpoint for the socket.  
-        Dim ipHostInfo As IPHostEntry = Dns.Resolve(Dns.GetHostName())  
+        Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())  
         Dim ipAddress As IPAddress = ipHostInfo.AddressList(0)  
         Dim localEndPoint As New IPEndPoint(ipAddress, 11000)  
   
         ' Create a TCP/IP socket.  
-        Dim listener As New Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp)  
+        Dim listener As New Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp)  
   
         ' Bind the socket to the local endpoint and listen for incoming connections.  
         listener.Bind(localEndPoint)  
@@ -189,12 +186,12 @@ public class AsynchronousSocketListener {
         // Establish the local endpoint for the socket.  
         // The DNS name of the computer  
         // running the listener is "host.contoso.com".  
-        IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName());  
+        IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());  
         IPAddress ipAddress = ipHostInfo.AddressList[0];  
         IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);  
   
         // Create a TCP/IP socket.  
-        Socket listener = new Socket(AddressFamily.InterNetwork,  
+        Socket listener = new Socket(ipAddress.AddressFamily,  
             SocketType.Stream, ProtocolType.Tcp );  
   
         // Bind the socket to the local endpoint and listen for incoming connections.  
@@ -308,7 +305,6 @@ public class AsynchronousSocketListener {
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplo de soquete de cliente assíncrono](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)   
- [Usando um soquete de servidor assíncrono](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)   
+ [Exemplo de soquete de cliente assíncrono](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)  
+ [Usando um soquete assíncrono de servidor](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
  [Exemplos de código de soquete](../../../docs/framework/network-programming/socket-code-examples.md)
-

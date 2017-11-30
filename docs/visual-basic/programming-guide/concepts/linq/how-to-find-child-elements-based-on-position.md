@@ -1,27 +1,22 @@
 ---
-title: "Como: localizar elementos filho com base na posição (XPath-LINQ para XML) (Visual Basic) | Documentos do Microsoft"
+title: "Como: localizar elementos filho com base na posição (XPath-LINQ para XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 6831e1db-5e97-444f-a7a1-d0a87104b005
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7c1ef9db560de02efa20dbe88ff0e73ffd9e7fff
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: fcd7cc8d68e6eccd00abeacf3c5817d3625b8891
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>Como: localizar elementos filho com base na posição (XPath-LINQ para XML) (Visual Basic)
 Às vezes você deseja localizar elementos com base em sua posição. Você pode desejar localizar o segundo elemento, ou você talvez queira localizar o terceiro através do quinto elemento.  
@@ -30,12 +25,12 @@ ms.lasthandoff: 03/13/2017
   
  `Test[position() >= 2 and position() <= 4]`  
   
- Há duas abordagens para escrever esta consulta de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] de uma maneira lazy. Você pode usar o <xref:System.Linq.Enumerable.Skip%2A>e <xref:System.Linq.Enumerable.Take%2A>operadores, ou você pode usar o <xref:System.Linq.Enumerable.Where%2A>sobrecarga que utiliza um índice.</xref:System.Linq.Enumerable.Where%2A> </xref:System.Linq.Enumerable.Take%2A> </xref:System.Linq.Enumerable.Skip%2A> Quando você usa o <xref:System.Linq.Enumerable.Where%2A>sobrecarga, você usar uma expressão lambda que leva dois argumentos.</xref:System.Linq.Enumerable.Where%2A> O exemplo a seguir mostra os dois métodos de selecione a posição de functionamento base.  
+ Há duas abordagens para escrever esta consulta de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] de uma maneira lazy. Você pode usar os operadores de <xref:System.Linq.Enumerable.Skip%2A> e de <xref:System.Linq.Enumerable.Take%2A> , ou você pode usar a sobrecarga de <xref:System.Linq.Enumerable.Where%2A> que usa um índice. Quando você usa a sobrecarga de <xref:System.Linq.Enumerable.Where%2A> , você usa uma expressão lambda que leva dois argumentos. O exemplo a seguir mostra os dois métodos de selecione a posição de functionamento base.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo localiza o segundo a quarto elemento de `Test` . O resultado é uma coleção de elementos.  
   
- Este exemplo usa o seguinte documento XML: [arquivo XML de exemplo: configuração de teste (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: configuração de teste (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
   
 ```vb  
 Dim testCfg As XElement = XElement.Load("TestConfig.xml")  
@@ -94,4 +89,3 @@ Results are identical
   
 ## <a name="see-also"></a>Consulte também  
  [LINQ to XML para XPath usuários (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-

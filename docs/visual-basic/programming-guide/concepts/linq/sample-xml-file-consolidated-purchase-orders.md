@@ -1,33 +1,25 @@
 ---
-title: 'Arquivo XML de exemplo: Consolidados compra Orders3 | Documentos do Microsoft'
+title: 'Arquivo XML de exemplo: Orders3 de compra consolidados'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 7203da90-a514-415a-b978-6980e89f3e9c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 72c33700766362e41df226465759797192e36e8b
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: ccb1e08ee6fc45ea407fbe3a0501062e8340ea02
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="sample-xml-file-consolidated-purchase-orders"></a>Arquivo XML de Exemplo: Pedidos de compra consolidados
-O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Este arquivo é um conjunto de pedidos de compra com várias formas diferentes de empresas. Os pedidos de compra de cada empresa em namespaces são separadas.  
+O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este arquivo é um conjunto de pedidos de compra com várias formas diferentes de empresas. Os pedidos de compra de cada empresa em namespaces são separadas.  
   
 ## <a name="consolidatedpurchaseordersxml"></a>ConsolidatedPurchaseOrders.xml  
   

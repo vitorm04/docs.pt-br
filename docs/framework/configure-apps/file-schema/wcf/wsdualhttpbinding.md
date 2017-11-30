@@ -5,26 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-helpviewer_keywords:
-- wsDualHttpBinding Element
+helpviewer_keywords: wsDualHttpBinding Element
 ms.assetid: fd8ac4e2-5641-473b-9115-73f14ab1c065
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 55edefebb654e26a6edc225f6436a8746ea42b82
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 2bc3af648c43e1dd7e1bc43e26765c9be5994366
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltwsdualhttpbindinggt"></a>&lt;wsDualHttpBinding&gt;
 Define uma associação segura, confiável e interoperável adequada para contratos de serviço duplex ou comunicação através de intermediários SOAP.  
@@ -144,10 +138,9 @@ textEncoding="Unicode/BigEndianUnicode/UTF8"
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.WSDualHttpBinding>   
- <xref:System.ServiceModel.Configuration.WSDualHttpBindingElement>   
- [Associações](../../../../../docs/framework/wcf/bindings.md)   
- [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
+ <xref:System.ServiceModel.WSDualHttpBinding>  
+ <xref:System.ServiceModel.Configuration.WSDualHttpBindingElement>  
+ [Bindings](../../../../../docs/framework/wcf/bindings.md) (Associações)  
+ [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<associação >](../../../../../docs/framework/misc/binding.md)
-

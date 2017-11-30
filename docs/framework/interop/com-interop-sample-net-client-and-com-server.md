@@ -5,29 +5,26 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 04e8f0297dca2099a793c4224898b7ffdaa16fba
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3a2db2aba0904aac89bf5fe73c715ff7a5eeb5f1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>Exemplo de interoperabilidade COM: cliente .NET e servidor COM
 Esta amostra apresenta como um [cliente .NET](#cpconcominteropsamplenetclientcomserveranchor1), criado para acessar um [servidor COM](#cpconcominteropsamplenetclientcomserveranchor2), cria uma instância de uma coclass COM e chama os membros da classe para executar cálculos de hipoteca.  
@@ -312,4 +309,3 @@ static double Round(double value, short digits)
   
 ## <a name="see-also"></a>Consulte também  
  [Expondo componentes do COM ao .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
-

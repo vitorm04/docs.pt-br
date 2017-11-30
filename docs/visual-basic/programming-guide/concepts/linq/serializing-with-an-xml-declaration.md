@@ -1,41 +1,33 @@
 ---
-title: "Serializando com uma declaração XML (Visual Basic) | Documentos do Microsoft"
+title: "Serializando com uma declaração XML (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 8726f79e-2bb0-4ba0-969d-197cca591647
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 373df9b28ae7434d33ae81eba701d289cf1aa4f7
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: e8544157104b202a36f2ef75b069bcdd297b9158
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="serializing-with-an-xml-declaration-visual-basic"></a>Serializando com uma declaração XML (Visual Basic)
 Este tópico descreve como controlar se a serialização gera uma declaração XML.  
   
 ## <a name="xml-declaration-generation"></a>Geração da declaração XML  
- Serializando um <xref:System.IO.File>ou um <xref:System.IO.TextWriter>usando o <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName>método ou o <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName>método gera uma declaração XML.</xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName> </xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName> </xref:System.IO.TextWriter> </xref:System.IO.File> Quando você serializa para um <xref:System.Xml.XmlWriter>, as configurações do gravador (especificado em uma <xref:System.Xml.XmlWriterSettings>objeto) determinam se uma declaração XML é gerada ou não.</xref:System.Xml.XmlWriterSettings> </xref:System.Xml.XmlWriter>  
+ Serializar para um <xref:System.IO.File> ou <xref:System.IO.TextWriter> usando o método <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType> ou o método <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType> gera uma declaração XML. Quando você serializa para um <xref:System.Xml.XmlWriter>, as configurações do gravador (especificadas em um objeto <xref:System.Xml.XmlWriterSettings>) determinam se uma declaração XML é gerada ou não.  
   
  Se você estiver serialização para uma cadeia de caracteres usando o método `ToString`, o XML resultante não incluirá uma declaração XML.  
   
 ### <a name="serializing-with-an-xml-declaration"></a>Serializando com uma declaração XML  
- O exemplo a seguir cria um <xref:System.Xml.Linq.XElement>, salva o documento em um arquivo e, em seguida, imprime o arquivo de console:</xref:System.Xml.Linq.XElement>  
+ O exemplo a seguir cria um <xref:System.Xml.Linq.XElement>, salva o documento em um arquivo e imprime o arquivo no console:  
   
 ```vb  
 Dim root As XElement = <Root>  
@@ -56,7 +48,7 @@ Console.WriteLine(str)
 ```  
   
 ### <a name="serializing-without-an-xml-declaration"></a>Serializando sem uma declaração XML  
- O exemplo a seguir mostra como salvar um <xref:System.Xml.Linq.XElement>a um <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.Xml.Linq.XElement>  
+ O exemplo a seguir mostra como salvar um <xref:System.Xml.Linq.XElement> em um <xref:System.Xml.XmlWriter>.  
   
 ```vb  
 Dim sb As StringBuilder = New StringBuilder()  

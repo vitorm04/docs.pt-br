@@ -1,30 +1,22 @@
 ---
-title: 'Como: controle prefixos de Namespace (Visual Basic) (LINQ to XML) | Documentos do Microsoft'
+title: 'Como: Controle prefixos de namespace (Visual Basic) (LINQ to XML)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9b559b54ffaa53b2ae5cd3b6c6d2d4db3ebe0a04
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a48feeb25cc8d28d57edc7421f73b2829f8c19ef
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>Como: Controle prefixos de namespace (Visual Basic) (LINQ to XML)
 Este tópico descreve como você pode controlar prefixos de namespace.  
@@ -32,7 +24,7 @@ Este tópico descreve como você pode controlar prefixos de namespace.
 ## <a name="example"></a>Exemplo  
   
 ### <a name="description"></a>Descrição  
- Esse exemplo declara dois namespaces. Especifica que o `http://www.adventure-works.com` namespace tem o prefixo `aw`e que o `www.fourthcoffee.com` namespace tem o prefixo `fc`.  
+ Esse exemplo declara dois namespaces. Especifica que o `http://www.adventure-works.com` namespace tem o prefixo `aw`e que o `www.fourthcoffee.com` namespace tem o prefixo de `fc`.  
   
 ### <a name="code"></a>Código  
   

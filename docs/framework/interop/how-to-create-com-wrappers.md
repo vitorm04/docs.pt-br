@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - COM,wrappers creating
 - COM,wrappers Visual Studio
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e99b084ddb565a8ae00ee917eaf7fca2c659ab64
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b8f8e5ef6aa90b1d31c589a82891f0ca1bfa5469
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-com-wrappers"></a>Como criar wrappers COM
 Crie wrappers COM (Component Object Model) usando recursos do [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] ou as ferramentas Tlbimp.exe e Regasm.exe do .NET Framework. Ambos os métodos geram dois tipos de wrappers COM:  
@@ -88,6 +81,5 @@ Crie wrappers COM (Component Object Model) usando recursos do [!INCLUDE[vsprvsex
  Execute o Regasm.exe em um assembly localizado em qualquer diretório e, em seguida, execute o [Gacutil.exe (Ferramenta do Cache de Assembly Global)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) para movê-lo para o cache de assembly global. A movimentação do assembly não invalida as entradas do Registro de local, porque o cache de assembly global sempre será examinado se o assembly não for encontrado em outro lugar.  
   
 ## <a name="see-also"></a>Consulte também  
- [RCW (Runtime Callable Wrapper)](../../../docs/framework/interop/runtime-callable-wrapper.md)   
+ [RCW (Runtime Callable Wrapper)](../../../docs/framework/interop/runtime-callable-wrapper.md)  
  [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md)
-

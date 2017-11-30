@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - formatting [.NET Framework], network tracing
 - network tracing, configuring
@@ -22,21 +17,20 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3a713b9b2d76d6198d035226aaa55be7345b87f1
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 12f328d58ef568c78d1e2c8a8ff564839cba9f3b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-network-tracing"></a>Como configurar o rastreamento de rede
 O aplicativo ou o arquivo de configuração do computador mantém as configurações que determinam o formato e o conteúdo dos rastreamentos de rede. Antes de executar este procedimento, certifique-se de que o rastreamento está habilitado. Para obter informações sobre como habilitar o rastreamento, consulte [Habilitando o rastreamento de rede](../../../docs/framework/network-programming/enabling-network-tracing.md).  
   
- O arquivo de configuração do computador, machine.config, é armazenado na pasta %Windir%\Microsoft.NET\Framework no diretório em que o Windows foi instalado. Há um outro arquivo machine.config nas pastas em %Windir%\Microsoft.NET\Framework para cada versão do .NET Framework instalada no computador (por exemplo, C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config).  
+ O arquivo de configuração do computador, machine.config, é armazenado na pasta %Windir%\Microsoft.NET\Framework no diretório em que o Windows foi instalado. Há um arquivo Machine. config separado nas pastas em %windir%\Microsoft.NET\Framework. para cada versão do .NET Framework instalado no computador (por exemplo, C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config ou C:\Windows\ Microsoft.NET\Framework64\v4.0.30319\Config\machine.config.).  
   
  Essas configurações também podem ser feitas no arquivo de configuração do aplicativo, que tem precedência sobre o arquivo de configuração do computador.  
   
@@ -112,8 +106,7 @@ O aplicativo ou o arquivo de configuração do computador mantém as configuraç
 |`Tracemode`|Atributo <xref:System.String> opcional. Definido como `includehex` para exibir rastreamentos de protocolo em formato hexadecimal e textual. Definido como `protocolonly` para exibir somente o texto. O valor padrão é `includehex`.<br /><br /> Esse atributo deve ser definido no elemento \<switches>, conforme mostrado no exemplo. Uma exceção é gerada se esse atributo é definido em um elemento no elemento \<source>.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Interpretando o rastreamento de rede](../../../docs/framework/network-programming/interpreting-network-tracing.md)   
- [Rastreamento de rede no .NET Framework](../../../docs/framework/network-programming/network-tracing.md)   
- [Habilitando o rastreamento de rede](../../../docs/framework/network-programming/enabling-network-tracing.md)   
+ [Interpretando o rastreamento de rede](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
+ [Rastreamento de rede no .NET Framework](../../../docs/framework/network-programming/network-tracing.md)  
+ [Habilitar o rastreamento de rede](../../../docs/framework/network-programming/enabling-network-tracing.md)  
  [Introdução à instrumentação e ao rastreamento](http://msdn.microsoft.com/en-us/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
-

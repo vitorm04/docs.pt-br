@@ -1,38 +1,21 @@
 ---
-title: "Não é possível converter o argumento &quot;&lt;argumentname&gt;&quot;do tipo&quot;&lt;type1&gt;&quot; no tipo&quot;&lt;type2&gt;&quot; | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Não é possível converter o argumento &#39; &lt;argumentname&gt;&#39; do tipo &#39;&lt; type1&gt;&#39; para o tipo &#39;&lt; type2&gt;&#39;"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrForLoop_ConvertToType3
+f1_keywords: vbrForLoop_ConvertToType3
 ms.assetid: fdf6c571-9c6c-4db2-8960-f394720b01e5
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 290790e61eac145ff95efee5d045a372a71365f5
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f5d3dbf62d136eb53897545e6ee473ec57d97686
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="cannot-convert-argument-39ltargumentnamegt39-of-type-39lttype1gt39-to-type-39lttype2gt39"></a>Não é possível converter o argumento '&lt;argumentname&gt;'do tipo'&lt;type1&gt;' no tipo'&lt;type2&gt;'
+# <a name="cannot-convert-argument-39ltargumentnamegt39-of-type-39lttype1gt39-to-type-39lttype2gt39"></a>Não é possível converter o argumento &#39; &lt;argumentname&gt;&#39; do tipo &#39;&lt; type1&gt;&#39; para o tipo &#39;&lt; type2&gt;&#39;
 Uma operação de conversão tenta converter um argumento para um tipo incompatível.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  

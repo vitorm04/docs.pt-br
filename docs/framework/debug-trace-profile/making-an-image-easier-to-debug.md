@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - images [.NET Framework], debugging
 - executable image for debugging
 - debugging [.NET Framework], executable images for
 ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e844cde5f33c1accb8addf953b5a72415f4dc301
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 46a9c11f3545e5d2b9f91572a87ee2614810e4d0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="making-an-image-easier-to-debug"></a>Facilitando a depuração de uma imagem
 Ao compilar código não gerenciado, você pode configurar uma imagem executável para depuração, definindo opções de IDE ou opções de linha de comando. Por exemplo, você pode usar a opção de linha de comando /**Zi** no Visual C++ para solicitar a ele que emita arquivos de símbolo de depuração (extensão de arquivo .pdb). De modo similar, a opção de linha de comando /**Od** informa ao compilador para desabilitar a otimização. O código resultante é executado mais lentamente, mas é mais fácil depurar, se isso for necessário.  
@@ -59,7 +52,7 @@ AllowOptimize=0
 >  No .NET Framework versão 2.0, o compilador JIT sempre gera informações de acompanhamento, independentemente do valor de `GenerateTrackingInfo`; no entanto, o valor de `AllowOptimize` ainda tem um efeito. Ao usar o [Ngen.exe (Gerador de Imagens Nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) para pré-compilar a imagem nativa sem otimização, o arquivo .ini deve estar presente na pasta de destino com `AllowOptimize=0` quando Ngen.exe for executado. Se você tiver pré-compilado um assembly sem otimização, você deverá remover o código pré-compilado usando a opção **/uninstall** do NGen.exe antes de executar novamente o Ngen.exe para pré-compilar o código como otimizado. Se o arquivo .ini não estiver presente na pasta, Ngen.exe pré-compilará o código por padrão como otimizado.  
   
 > [!NOTE]
->  O <xref:System.Diagnostics.DebuggableAttribute?displayProperty=fullName> controla as configurações de um assembly. **DebuggableAttribute** inclui dois campos que registram as configurações que indicam se o compilador JIT deve otimizar e/ou gerar informações de acompanhamento. No .NET Framework versão 2.0, o compilador JIT sempre gera informações de acompanhamento.  
+>  O <xref:System.Diagnostics.DebuggableAttribute?displayProperty=nameWithType> controla as configurações de um assembly. **DebuggableAttribute** inclui dois campos que registram as configurações que indicam se o compilador JIT deve otimizar e/ou gerar informações de acompanhamento. No .NET Framework versão 2.0, o compilador JIT sempre gera informações de acompanhamento.  
   
 > [!NOTE]
 >  Para um build de varejo, os compiladores não definem nenhum **DebuggableAttribute**. O comportamento padrão do compilador JIT é gerar o código de máquina com melhor desempenho e mais difícil de depurar. Habilitar o acompanhamento JIT reduz um pouco o desempenho, enquanto desabilitar a otimização reduz muito o desempenho.  
@@ -71,7 +64,6 @@ AllowOptimize=0
 >  Na versão 1.0 do .NET Framework, o compilador do Microsoft Visual C++ adiciona o **DebuggableAttribute** quando as opções do compilador **/clr** e **/Zi** são especificadas. Na versão 1.1 do .NET Framework, você deverá adicionar o **DebugabbleAttribute** manualmente no seu código ou usar a opção de vinculador **/ASSEMBLYDEBUG**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Depuração, rastreamento e criação de perfil](../../../docs/framework/debug-trace-profile/index.md)   
- [Habilitando a depuração por anexação JIT](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)   
+ [Depuração, rastreamento e criação de perfil](../../../docs/framework/debug-trace-profile/index.md)  
+ [Habilitando a depuração por anexação JIT](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)  
  [Habilitando a criação de perfil](http://msdn.microsoft.com/en-us/3b669676-f0e0-4ebf-8674-68986dd2020d)
-

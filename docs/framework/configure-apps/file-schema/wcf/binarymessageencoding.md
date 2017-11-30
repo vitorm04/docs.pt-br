@@ -5,24 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
 ms.assetid: e4ae3cd4-6b67-4ce1-af4b-9400e0a38dba
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8ddfe12fed87c2ad501364bc5d76df7b9480aa83
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 11d819d5d6302da309dd3e4ce674110c8419978f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltbinarymessageencodinggt"></a>&lt;binaryMessageEncoding&gt;
 Define um codificador de mensagem binária que codifica mensagens do Windows Communication Foundation (WCF) em binário no fio.  
@@ -80,14 +75,13 @@ Define um codificador de mensagem binária que codifica mensagens do Windows Com
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Configuration.BinaryMessageEncodingElement>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>   
- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>   
- [Codificação de mensagens](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)   
- [Escolhendo um codificador de mensagem](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)   
- [Associações](../../../../../docs/framework/wcf/bindings.md)   
- [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
+ <xref:System.ServiceModel.Configuration.BinaryMessageEncodingElement>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
+ <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
+ [Codificação de mensagens](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)  
+ [Escolhendo um codificador de mensagem](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
+ [Bindings](../../../../../docs/framework/wcf/bindings.md) (Associações)  
+ [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-
