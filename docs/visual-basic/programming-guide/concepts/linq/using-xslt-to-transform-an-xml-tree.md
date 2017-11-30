@@ -1,33 +1,25 @@
 ---
-title: "Usando XSLT para transformar uma árvore XML (Visual Basic) | Documentos do Microsoft"
+title: "Usando XSLT para transformar uma árvore XML (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 3390ca68-c270-4e1d-b64b-6a063a77017c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 226a802cd640f2f251e1849486dab4a5c4af3497
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 18637ecf786c3e44e7a07b5a1ca48cf3c8a4ae35
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a>Usando XSLT para transformar uma árvore XML (Visual Basic)
-Você pode criar uma árvore XML, criar um <xref:System.Xml.XmlReader>da árvore XML, criar um novo documento e criar um <xref:System.Xml.XmlWriter>que gravarão no novo documento.</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader> Em seguida, você pode chamar a transformação XSLT, passando a <xref:System.Xml.XmlReader>e <xref:System.Xml.XmlWriter>para a transformação.</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader> Depois que a transformação for concluída com êxito, a nova árvore XML será populada com os resultados da transformação.  
+Você pode criar uma árvore XML, criar um <xref:System.Xml.XmlReader> na árvore XML, criar um novo documento e criar um <xref:System.Xml.XmlWriter> que gravarão no novo documento. Em seguida, você pode chamar a transformação XSLT, passando <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter> para a transformação. Depois que a transformação for concluída com êxito, a nova árvore XML será populada com os resultados da transformação.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -78,6 +70,6 @@ Console.WriteLine(newTree)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=fullName></xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=fullName>   
- <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=fullName></xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=fullName>   
+ <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=nameWithType>  
+ <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=nameWithType>  
  [Avançada LINQ to XML programação (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

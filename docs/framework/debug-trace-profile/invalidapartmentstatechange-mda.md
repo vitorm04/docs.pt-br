@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid apartment state
 - managed debugging assistants (MDAs), invalid apartment state
@@ -24,16 +18,15 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - COM apartment states
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f42a2b840a0cf678cfc2a06be0e9ed252c355a2a
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 71634018e42ad66fdd2d03d0b0d496394cde801e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="invalidapartmentstatechange-mda"></a>MDA invalidApartmentStateChange
 O MDS (Assistente de Depuração Gerenciado) de `invalidApartmentStateChange` é ativado por qualquer um de dois problemas:  
@@ -50,7 +43,7 @@ O MDS (Assistente de Depuração Gerenciado) de `invalidApartmentStateChange` é
   
 ## <a name="cause"></a>Causa  
   
--   O thread foi inicializado anteriormente para um estado de apartment COM diferente. Observe que o estado de apartment de um thread pode ser definido explicitamente ou implicitamente. As operações explícitas incluem a propriedade <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=fullName> e os métodos <xref:System.Threading.Thread.SetApartmentState%2A> e <xref:System.Threading.Thread.TrySetApartmentState%2A>. Um thread criado usando o método <xref:System.Threading.Thread.Start%2A> está implicitamente definido como <xref:System.Threading.ApartmentState.MTA>, a menos que <xref:System.Threading.Thread.SetApartmentState%2A> seja chamado antes do thread ser iniciado. O thread principal do aplicativo também é implicitamente inicializado como <xref:System.Threading.ApartmentState.MTA>, a menos que o atributo <xref:System.STAThreadAttribute> seja especificado no método principal.  
+-   O thread foi inicializado anteriormente para um estado de apartment COM diferente. Observe que o estado de apartment de um thread pode ser definido explicitamente ou implicitamente. As operações explícitas incluem a propriedade <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> e os métodos <xref:System.Threading.Thread.SetApartmentState%2A> e <xref:System.Threading.Thread.TrySetApartmentState%2A>. Um thread criado usando o método <xref:System.Threading.Thread.Start%2A> está implicitamente definido como <xref:System.Threading.ApartmentState.MTA>, a menos que <xref:System.Threading.Thread.SetApartmentState%2A> seja chamado antes do thread ser iniciado. O thread principal do aplicativo também é implicitamente inicializado como <xref:System.Threading.ApartmentState.MTA>, a menos que o atributo <xref:System.STAThreadAttribute> seja especificado no método principal.  
   
 -   O método `CoUninitialize` (ou o método `CoInitializeEx`) com um modelo de simultaneidade diferente é chamado no thread.  
   
@@ -93,7 +86,6 @@ namespace ApartmentStateMDA
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
+ <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+ [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
  [Marshaling de interoperabilidade](../../../docs/framework/interop/interop-marshaling.md)
-
