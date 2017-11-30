@@ -1,10 +1,9 @@
 ---
-title: "Tipo de dados definido pelo usuário | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Tipo de dados definido pelo usuário"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - UserDefined
@@ -13,78 +12,62 @@ f1_keywords:
 - User-Defined
 - vb.UserDefined
 - vb.User-Defined
-dev_langs:
-- VB
 helpviewer_keywords:
-- user-defined data types, Visual Basic
+- user-defined data types [Visual Basic], Visual Basic
 - user-defined types
-- structures, as user-defined data types
-- user-defined types, Visual Basic
-- user-defined types, structure declaration
-- user-defined types, structures in Visual Basic
-- user-defined data types, structure declaration
+- structures [Visual Basic], as user-defined data types
+- user-defined types [Visual Basic], Visual Basic
+- user-defined types [Visual Basic], structure declaration
+- user-defined types [Visual Basic], structures in Visual Basic
+- user-defined data types [Visual Basic], structure declaration
 - data types [Visual Basic], assigning
-- Structure statement
+- Structure statement [Visual Basic]
 - data types [Visual Basic], user-defined
-- user-defined data types, structures in Visual Basic
+- user-defined data types [Visual Basic], structures in Visual Basic
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e76a556e21e5a359aafd294c106f9ca1fb6151e2
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7e1876d61a2ce89b04c6e5061b868f0be365639f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="user-defined-data-type"></a>Tipo de dados definido pelo usuário
-Mantém os dados em um formato que você definir. O `Structure` instrução define o formato.  
+# <a name="user-defined-data-type"></a><span data-ttu-id="cafd2-102">Tipo de dados definido pelo usuário</span><span class="sxs-lookup"><span data-stu-id="cafd2-102">User-Defined Data Type</span></span>
+<span data-ttu-id="cafd2-103">Contém dados em um formato que você definir.</span><span class="sxs-lookup"><span data-stu-id="cafd2-103">Holds data in a format you define.</span></span> <span data-ttu-id="cafd2-104">O `Structure` instrução define o formato.</span><span class="sxs-lookup"><span data-stu-id="cafd2-104">The `Structure` statement defines the format.</span></span>  
   
- Versões anteriores do Visual Basic suportam o tipo definido pelo usuário (UDT). A versão atual expande o UDT um *estrutura*. Uma estrutura é uma concatenação de um ou mais *membros* de vários tipos de dados. Visual Basic trata uma estrutura como uma única unidade, embora você também pode acessar seus membros individualmente.  
+ <span data-ttu-id="cafd2-105">Versões anteriores do Visual Basic oferecem suporte o tipo definido pelo usuário (UDT).</span><span class="sxs-lookup"><span data-stu-id="cafd2-105">Previous versions of Visual Basic support the user-defined type (UDT).</span></span> <span data-ttu-id="cafd2-106">A versão atual expande o UDT um *estrutura*.</span><span class="sxs-lookup"><span data-stu-id="cafd2-106">The current version expands the UDT to a *structure*.</span></span> <span data-ttu-id="cafd2-107">Uma estrutura é uma concatenação de um ou mais *membros* de vários tipos de dados.</span><span class="sxs-lookup"><span data-stu-id="cafd2-107">A structure is a concatenation of one or more *members* of various data types.</span></span> <span data-ttu-id="cafd2-108">Visual Basic trata uma estrutura como uma única unidade, embora você também pode acessar seus membros individualmente.</span><span class="sxs-lookup"><span data-stu-id="cafd2-108">Visual Basic treats a structure as a single unit, although you can also access its members individually.</span></span>  
   
-## <a name="remarks"></a>Comentários  
- Definir e usar um tipo de estrutura de dados quando você precisa combinar vários tipos de dados em uma única unidade, ou quando nenhum dos tipos de dados elementares atende às suas necessidades.  
+## <a name="remarks"></a><span data-ttu-id="cafd2-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="cafd2-109">Remarks</span></span>  
+ <span data-ttu-id="cafd2-110">Definir e usar um tipo de dados de estrutura, quando você precisa combinar vários tipos de dados em uma única unidade, ou quando nenhum dos tipos de dados elementares atende às suas necessidades.</span><span class="sxs-lookup"><span data-stu-id="cafd2-110">Define and use a structure data type when you need to combine various data types into a single unit, or when none of the elementary data types serve your needs.</span></span>  
   
- O valor padrão de um tipo de dados de estrutura consiste a combinação dos valores padrão de cada um dos seus membros.  
+ <span data-ttu-id="cafd2-111">O valor padrão de um tipo de dados de estrutura consiste na combinação dos valores padrão de cada um dos seus membros.</span><span class="sxs-lookup"><span data-stu-id="cafd2-111">The default value of a structure data type consists of the combination of the default values of each of its members.</span></span>  
   
-## <a name="declaration-format"></a>Formato de declaração  
- Uma declaração de estrutura começa com o [instrução Structure](../../../visual-basic/language-reference/statements/structure-statement.md) e termina com o `End``Structure` instrução. O `Structure` instrução fornece o nome da estrutura, que também é o identificador do tipo de dados é definir a estrutura. Outras partes do código podem usar esse identificador para declarar variáveis, parâmetros e função retornam valores desse da estrutura tipo de dados.  
+## <a name="declaration-format"></a><span data-ttu-id="cafd2-112">Formato de declaração</span><span class="sxs-lookup"><span data-stu-id="cafd2-112">Declaration Format</span></span>  
+ <span data-ttu-id="cafd2-113">Uma declaração de estrutura começa com o [instrução Structure](../../../visual-basic/language-reference/statements/structure-statement.md) e termina com o `End``Structure` instrução.</span><span class="sxs-lookup"><span data-stu-id="cafd2-113">A structure declaration starts with the [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md) and ends with the `End``Structure` statement.</span></span> <span data-ttu-id="cafd2-114">O `Structure` declaração fornece o nome da estrutura, que também é o identificador do tipo de dados é definir a estrutura.</span><span class="sxs-lookup"><span data-stu-id="cafd2-114">The `Structure` statement supplies the name of the structure, which is also the identifier of the data type the structure is defining.</span></span> <span data-ttu-id="cafd2-115">Outras partes do código podem usar esse identificador para declarar variáveis, parâmetros e função retornam valores desta estrutura tipo de dados.</span><span class="sxs-lookup"><span data-stu-id="cafd2-115">Other parts of the code can use this identifier to declare variables, parameters, and function return values to be of this structure's data type.</span></span>  
   
- As declarações entre o `Structure` e `End``Structure` instruções definem os membros da estrutura.  
+ <span data-ttu-id="cafd2-116">As declarações entre o `Structure` e `End``Structure` instruções definem os membros da estrutura.</span><span class="sxs-lookup"><span data-stu-id="cafd2-116">The declarations between the `Structure` and `End``Structure` statements define the members of the structure.</span></span>  
   
-## <a name="member-access-levels"></a>Níveis de acesso de membro  
- Você deve declarar cada membro usando um [instrução Dim](../../../visual-basic/language-reference/statements/dim-statement.md) ou uma instrução que especifica o nível de acesso, como [pública](../../../visual-basic/language-reference/modifiers/public.md), [amigo](../../../visual-basic/language-reference/modifiers/friend.md), ou [particular](../../../visual-basic/language-reference/modifiers/private.md). Se você usar um `Dim` instrução, os padrões de nível de acesso para público.  
+## <a name="member-access-levels"></a><span data-ttu-id="cafd2-117">Níveis de acesso de membro</span><span class="sxs-lookup"><span data-stu-id="cafd2-117">Member Access Levels</span></span>  
+ <span data-ttu-id="cafd2-118">Você deve declarar cada membro usando um [instrução Dim](../../../visual-basic/language-reference/statements/dim-statement.md) ou uma instrução que especifica o nível de acesso, como [pública](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), ou [privada](../../../visual-basic/language-reference/modifiers/private.md).</span><span class="sxs-lookup"><span data-stu-id="cafd2-118">You must declare every member using a [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md) or a statement that specifies access level, such as [Public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), or [Private](../../../visual-basic/language-reference/modifiers/private.md).</span></span> <span data-ttu-id="cafd2-119">Se você usar um `Dim` instrução, os padrões de nível de acesso para público.</span><span class="sxs-lookup"><span data-stu-id="cafd2-119">If you use a `Dim` statement, the access level defaults to public.</span></span>  
   
-## <a name="programming-tips"></a>Dicas de programação  
+## <a name="programming-tips"></a><span data-ttu-id="cafd2-120">Dicas de programação</span><span class="sxs-lookup"><span data-stu-id="cafd2-120">Programming Tips</span></span>  
   
--   **Consumo de memória.** Assim como acontece com todos os tipos de dados compostos, você não pode calcular com segurança o consumo de memória total de uma estrutura somando as alocações de armazenamento nominais de seus membros. Além disso, você não pode presumir que a ordem de armazenamento em memória é o mesmo que a ordem da declaração. Se você precisa controlar o layout de armazenamento de uma estrutura, você pode aplicar o <xref:System.Runtime.InteropServices.StructLayoutAttribute>de atributo para o `Structure` instrução.</xref:System.Runtime.InteropServices.StructLayoutAttribute>  
+-   <span data-ttu-id="cafd2-121">**Consumo de memória.**</span><span class="sxs-lookup"><span data-stu-id="cafd2-121">**Memory Consumption.**</span></span> <span data-ttu-id="cafd2-122">Assim como acontece com todos os tipos de dados compostos, você não pode calcular com segurança o consumo total de memória de uma estrutura somando as alocações de armazenamento nominais de seus membros.</span><span class="sxs-lookup"><span data-stu-id="cafd2-122">As with all composite data types, you cannot safely calculate the total memory consumption of a structure by adding together the nominal storage allocations of its members.</span></span> <span data-ttu-id="cafd2-123">Além disso, você não pode presumir com segurança que a ordem de armazenamento na memória é o mesmo que seu pedido da declaração.</span><span class="sxs-lookup"><span data-stu-id="cafd2-123">Furthermore, you cannot safely assume that the order of storage in memory is the same as your order of declaration.</span></span> <span data-ttu-id="cafd2-124">Se você precisar controlar o layout de armazenamento de uma estrutura, você pode aplicar o <xref:System.Runtime.InteropServices.StructLayoutAttribute> de atributo para o `Structure` instrução.</span><span class="sxs-lookup"><span data-stu-id="cafd2-124">If you need to control the storage layout of a structure, you can apply the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute to the `Structure` statement.</span></span>  
   
--   **Considerações de interoperabilidade.** Se você estiver fazendo interface com componentes não escritos para o .NET Framework, como objetos Automation ou COM, tenha em mente que os tipos definidos pelo usuário em outros ambientes não são compatíveis com o Visual Basic estruturam tipos.  
+-   <span data-ttu-id="cafd2-125">**Considerações de interoperabilidade.**</span><span class="sxs-lookup"><span data-stu-id="cafd2-125">**Interop Considerations.**</span></span> <span data-ttu-id="cafd2-126">Se você estiver fazendo interface com componentes não escritos para o .NET Framework, como objetos de automação ou COM, tenha em mente que os tipos definidos pelo usuário em outros ambientes não são compatíveis com o Visual Basic estruturam tipos.</span><span class="sxs-lookup"><span data-stu-id="cafd2-126">If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, keep in mind that user-defined types in other environments are not compatible with Visual Basic structure types.</span></span>  
   
--   **Ampliação.** Não há nenhuma conversão automática de ou para qualquer tipo de dados da estrutura. Você pode definir operadores de conversão em sua estrutura usando o [instrução Operator](../../../visual-basic/language-reference/statements/operator-statement.md), e você pode declarar cada operador de conversão ser `Widening` ou `Narrowing`.  
+-   <span data-ttu-id="cafd2-127">**Ampliação.**</span><span class="sxs-lookup"><span data-stu-id="cafd2-127">**Widening.**</span></span> <span data-ttu-id="cafd2-128">Não há nenhuma conversão automática de ou para qualquer tipo de dados da estrutura.</span><span class="sxs-lookup"><span data-stu-id="cafd2-128">There is no automatic conversion to or from any structure data type.</span></span> <span data-ttu-id="cafd2-129">Você pode definir os operadores de conversão em sua estrutura usando o [instrução Operator](../../../visual-basic/language-reference/statements/operator-statement.md), e você pode declarar cada operador de conversão ser `Widening` ou `Narrowing`.</span><span class="sxs-lookup"><span data-stu-id="cafd2-129">You can define conversion operators on your structure using the [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md), and you can declare each conversion operator to be `Widening` or `Narrowing`.</span></span>  
   
--   **Caracteres de tipo.** Tipos de dados de estrutura não têm nenhum caractere de tipo literal ou caractere de tipo identificador.  
+-   <span data-ttu-id="cafd2-130">**Caracteres de tipo.**</span><span class="sxs-lookup"><span data-stu-id="cafd2-130">**Type Characters.**</span></span> <span data-ttu-id="cafd2-131">Tipos de dados de estrutura não tem nenhum caractere de tipo literal ou o caractere de tipo identificador.</span><span class="sxs-lookup"><span data-stu-id="cafd2-131">Structure data types have no literal type character or identifier type character.</span></span>  
   
--   **Tipo de estrutura.** Não há nenhum tipo correspondente no .NET Framework. Todas as estruturas herdam da classe do .NET Framework <xref:System.ValueType?displayProperty=fullName>, mas nenhuma estrutura individual corresponde ao <xref:System.ValueType?displayProperty=fullName>.</xref:System.ValueType?displayProperty=fullName> </xref:System.ValueType?displayProperty=fullName>  
+-   <span data-ttu-id="cafd2-132">**Tipo de estrutura.**</span><span class="sxs-lookup"><span data-stu-id="cafd2-132">**Framework Type.**</span></span> <span data-ttu-id="cafd2-133">Não há nenhum tipo correspondente do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="cafd2-133">There is no corresponding type in the .NET Framework.</span></span> <span data-ttu-id="cafd2-134">Todas as estruturas de herdam da classe do .NET Framework <xref:System.ValueType?displayProperty=nameWithType>, mas nenhuma estrutura individual corresponde ao <xref:System.ValueType?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="cafd2-134">All structures inherit from the .NET Framework class <xref:System.ValueType?displayProperty=nameWithType>, but no individual structure corresponds to <xref:System.ValueType?displayProperty=nameWithType>.</span></span>  
   
-## <a name="example"></a>Exemplo  
- O paradigma do seguinte mostra a estrutura da declaração de uma estrutura.  
+## <a name="example"></a><span data-ttu-id="cafd2-135">Exemplo</span><span class="sxs-lookup"><span data-stu-id="cafd2-135">Example</span></span>  
+ <span data-ttu-id="cafd2-136">O paradigma a seguir mostra a estrutura da declaração de uma estrutura.</span><span class="sxs-lookup"><span data-stu-id="cafd2-136">The following paradigm shows the outline of the declaration of a structure.</span></span>  
   
 ```  
 [Public | Protected | Friend | Protected Friend | Private] Structure structname  
@@ -94,14 +77,14 @@ Mantém os dados em um formato que você definir. O `Structure` instrução defi
 End Structure  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ValueType></xref:System.ValueType>   
- <xref:System.Runtime.InteropServices.StructLayoutAttribute></xref:System.Runtime.InteropServices.StructLayoutAttribute>   
- [Tipos de dados](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Funções de conversão de tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Resumo da conversão](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Instrução Structure](../../../visual-basic/language-reference/statements/structure-statement.md)   
- [Ampliação](../../../visual-basic/language-reference/modifiers/widening.md)   
- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)   
- [Estruturas](../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Uso Eficiente de Tipos de Dados](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a><span data-ttu-id="cafd2-137">Consulte também</span><span class="sxs-lookup"><span data-stu-id="cafd2-137">See Also</span></span>  
+ <xref:System.ValueType>  
+ <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
+ [<span data-ttu-id="cafd2-138">Tipos de Dados</span><span class="sxs-lookup"><span data-stu-id="cafd2-138">Data Types</span></span>](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [<span data-ttu-id="cafd2-139">Funções de Conversão do Tipo</span><span class="sxs-lookup"><span data-stu-id="cafd2-139">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [<span data-ttu-id="cafd2-140">Resumo da Conversão</span><span class="sxs-lookup"><span data-stu-id="cafd2-140">Conversion Summary</span></span>](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [<span data-ttu-id="cafd2-141">Instrução Structure</span><span class="sxs-lookup"><span data-stu-id="cafd2-141">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [<span data-ttu-id="cafd2-142">Ampliação</span><span class="sxs-lookup"><span data-stu-id="cafd2-142">Widening</span></span>](../../../visual-basic/language-reference/modifiers/widening.md)  
+ [<span data-ttu-id="cafd2-143">Narrowing</span><span class="sxs-lookup"><span data-stu-id="cafd2-143">Narrowing</span></span>](../../../visual-basic/language-reference/modifiers/narrowing.md)  
+ [<span data-ttu-id="cafd2-144">Estruturas</span><span class="sxs-lookup"><span data-stu-id="cafd2-144">Structures</span></span>](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [<span data-ttu-id="cafd2-145">Uso Eficiente de Tipos de Dados</span><span class="sxs-lookup"><span data-stu-id="cafd2-145">Efficient Use of Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

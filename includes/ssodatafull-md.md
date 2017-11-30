@@ -1,1 +1,1 @@
-Open Data Protocol (OData)
+<span data-ttu-id="c7d10-101">Open Data Protocol (OData)</span><span class="sxs-lookup"><span data-stu-id="c7d10-101">Open Data Protocol (OData)</span></span>

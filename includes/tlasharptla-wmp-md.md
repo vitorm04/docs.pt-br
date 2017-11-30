@@ -1,1 +1,1 @@
-Player de Mídia do Microsoft Windows
+<span data-ttu-id="93c1b-101">Player de Mídia do Microsoft Windows</span><span class="sxs-lookup"><span data-stu-id="93c1b-101">Microsoft Windows Media Player</span></span>
