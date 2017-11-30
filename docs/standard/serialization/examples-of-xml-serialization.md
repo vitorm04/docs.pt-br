@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - XML serialization, examples
 - arrays, serializing
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 3f3fd8ce07b5b23d92c3ced93c733ec0c0f7680c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 874836c83fbe681692260be03efed3aec85dcfe4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="examples-of-xml-serialization"></a>Exemplos de Serialização XML
 A serialização XML pode ter mais de um formulário, de simples a complexo. Por exemplo, é possível serializar uma classe que consiste apenas em propriedades e campos públicos, conforme mostrado em [Apresentando a serialização XML](../../../docs/standard/serialization/introducing-xml-serialization.md). Os seguintes exemplos de código manipulam vários cenários avançados, incluindo como usar a serialização XML para gerar um fluxo XML que está de acordo com um documento de Esquema XML (XSD) específico.  
@@ -775,10 +772,9 @@ public class Test
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Apresentando a serialização XML](../../../docs/standard/serialization/introducing-xml-serialization.md)   
- [Controlando a serialização XML usando atributos](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)   
- [Atributos que controlam a serialização XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)   
- [Classe XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)   
- [Como serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
+ [Apresentando a serialização XML](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+ [Controlando a serialização XML usando atributos](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
+ [Atributos que controlam a serialização XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
+ [Classe XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
+ [Como serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
  [Como desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-
