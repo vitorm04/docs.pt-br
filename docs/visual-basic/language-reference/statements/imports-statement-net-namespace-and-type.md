@@ -1,17 +1,14 @@
 ---
-title: "Instrução Imports (tipo e Namespace .NET) | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Instrução Imports (tipo e namespace .NET)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Imports
 - imports
-dev_langs:
-- VB
 helpviewer_keywords:
 - declared element names [Visual Basic], qualification
 - imports [Visual Basic]
@@ -24,33 +21,19 @@ helpviewer_keywords:
 - aliases [Visual Basic], import
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 393f3e9a264817d8658585267c954d973290530a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 46cc78c2fd039fb56fd4d1b797f2d09cbe95d317
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="imports-statement-net-namespace-and-type"></a>Instrução Imports (tipo e namespace .NET)
-Permite digitar os nomes para se referir a qualificação de namespace.  
+# <a name="imports-statement-net-namespace-and-type"></a><span data-ttu-id="8aa56-102">Instrução Imports (tipo e namespace .NET)</span><span class="sxs-lookup"><span data-stu-id="8aa56-102">Imports Statement (.NET Namespace and Type)</span></span>
+<span data-ttu-id="8aa56-103">Permite digitar os nomes para se referir a qualificação de namespace.</span><span class="sxs-lookup"><span data-stu-id="8aa56-103">Enables type names to be referenced without namespace qualification.</span></span>  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a><span data-ttu-id="8aa56-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="8aa56-104">Syntax</span></span>  
   
 ```  
 Imports [ aliasname = ] namespace  
@@ -58,73 +41,73 @@ Imports [ aliasname = ] namespace
 Imports [ aliasname = ] namespace.element  
 ```  
   
-## <a name="parts"></a>Partes  
+## <a name="parts"></a><span data-ttu-id="8aa56-105">Partes</span><span class="sxs-lookup"><span data-stu-id="8aa56-105">Parts</span></span>  
   
-|Termo|Definição|  
+|<span data-ttu-id="8aa56-106">Termo</span><span class="sxs-lookup"><span data-stu-id="8aa56-106">Term</span></span>|<span data-ttu-id="8aa56-107">Definição</span><span class="sxs-lookup"><span data-stu-id="8aa56-107">Definition</span></span>|  
 |---|---|  
-|`aliasname`|Opcional. Um *alias de importação* ou nome pelo qual o código pode se referir a `namespace` em vez da cadeia de caracteres de qualificação completa. Consulte [nomes de elemento declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`namespace`|Necessário. O nome totalmente qualificado do namespace sendo importado. Pode ser uma cadeia de caracteres de namespaces aninhada em qualquer nível.|  
-|`element`|Opcional. O nome de um elemento de programação declarado no namespace. Pode ser qualquer elemento contêiner.|  
+|`aliasname`|<span data-ttu-id="8aa56-108">Opcional.</span><span class="sxs-lookup"><span data-stu-id="8aa56-108">Optional.</span></span> <span data-ttu-id="8aa56-109">Um *alias de importação* ou o nome pelo qual o código pode fazer referência a `namespace` em vez da cadeia de caracteres de qualificação completa.</span><span class="sxs-lookup"><span data-stu-id="8aa56-109">An *import alias* or name by which code can refer to `namespace` instead of the full qualification string.</span></span> <span data-ttu-id="8aa56-110">Consulte [declarado nomes de elemento](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span><span class="sxs-lookup"><span data-stu-id="8aa56-110">See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>|  
+|`namespace`|<span data-ttu-id="8aa56-111">Necessário.</span><span class="sxs-lookup"><span data-stu-id="8aa56-111">Required.</span></span> <span data-ttu-id="8aa56-112">O nome totalmente qualificado do namespace que está sendo importado.</span><span class="sxs-lookup"><span data-stu-id="8aa56-112">The fully qualified name of the namespace being imported.</span></span> <span data-ttu-id="8aa56-113">Pode ser uma cadeia de caracteres de namespaces aninhada em qualquer nível.</span><span class="sxs-lookup"><span data-stu-id="8aa56-113">Can be a string of namespaces nested to any level.</span></span>|  
+|`element`|<span data-ttu-id="8aa56-114">Opcional.</span><span class="sxs-lookup"><span data-stu-id="8aa56-114">Optional.</span></span> <span data-ttu-id="8aa56-115">O nome de um elemento de programação declarado no namespace.</span><span class="sxs-lookup"><span data-stu-id="8aa56-115">The name of a programming element declared in the namespace.</span></span> <span data-ttu-id="8aa56-116">Pode ser qualquer elemento de contêiner.</span><span class="sxs-lookup"><span data-stu-id="8aa56-116">Can be any container element.</span></span>|  
   
-## <a name="remarks"></a>Comentários  
- O `Imports` instrução permite tipos que estão contidos em um determinado namespace a ser referenciado diretamente.  
+## <a name="remarks"></a><span data-ttu-id="8aa56-117">Comentários</span><span class="sxs-lookup"><span data-stu-id="8aa56-117">Remarks</span></span>  
+ <span data-ttu-id="8aa56-118">O `Imports` instrução permite que os tipos contidos em um namespace específico a ser referenciado diretamente.</span><span class="sxs-lookup"><span data-stu-id="8aa56-118">The `Imports`  statement enables types that are contained in a given namespace to be referenced directly.</span></span>  
   
- Você pode fornecer um único nome de namespace ou uma cadeia de caracteres de namespaces aninhados. Cada namespace aninhado é separado do namespace de nível superior próximo por um período (`.`), como mostra o exemplo a seguir.  
+ <span data-ttu-id="8aa56-119">Você pode fornecer um nome de namespace único ou uma cadeia de caracteres de namespaces aninhados.</span><span class="sxs-lookup"><span data-stu-id="8aa56-119">You can supply a single namespace name or a string of nested namespaces.</span></span> <span data-ttu-id="8aa56-120">Cada namespace aninhado é separado do namespace de nível superior próximo por um período (`.`), como mostra o exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="8aa56-120">Each nested namespace is separated from the next higher level namespace by a period (`.`), as the following example illustrates.</span></span>  
   
  `Imports System.Collections.Generic`  
   
- Cada arquivo de origem pode conter qualquer número de `Imports` instruções. Estas deve seguir qualquer declaração de opção, como o `Option Strict` instrução e eles devem preceder qualquer declaração de elemento de programação, como `Module` ou `Class` instruções.  
+ <span data-ttu-id="8aa56-121">Cada arquivo de origem pode conter qualquer número de `Imports` instruções.</span><span class="sxs-lookup"><span data-stu-id="8aa56-121">Each source file can contain any number of `Imports` statements.</span></span> <span data-ttu-id="8aa56-122">Estas devem seguir qualquer declaração de opção, como o `Option Strict` instrução e eles devem preceder qualquer declaração de elemento de programação, como `Module` ou `Class` instruções.</span><span class="sxs-lookup"><span data-stu-id="8aa56-122">These must follow any option declarations, such as the `Option Strict` statement, and they must precede any programming element declarations, such as `Module` or `Class` statements.</span></span>  
   
- Você pode usar `Imports` somente no nível de arquivo. Isso significa que o contexto da declaração para importação deve ser um arquivo de origem e não pode ser um namespace, classe, estrutura, módulo, interface, procedimento ou bloco.  
+ <span data-ttu-id="8aa56-123">Você pode usar `Imports` apenas no nível de arquivo.</span><span class="sxs-lookup"><span data-stu-id="8aa56-123">You can use `Imports` only at file level.</span></span> <span data-ttu-id="8aa56-124">Isso significa que o contexto da declaração para importação deve ser um arquivo de origem e não pode ser um namespace, classe, estrutura, módulo, interface, procedimento ou bloco.</span><span class="sxs-lookup"><span data-stu-id="8aa56-124">This means the declaration context for importation must be a source file, and cannot be a namespace, class, structure, module, interface, procedure, or block.</span></span>  
   
- Observe que o `Imports` instrução não torna os elementos de outros projetos e assemblies disponíveis para seu projeto. Importar não toma o lugar de configurar uma referência. Ele apenas remove a necessidade de qualificar nomes que já estão disponíveis para seu projeto. Para obter mais informações, consulte "Importing Containing Elements" [referências a elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+ <span data-ttu-id="8aa56-125">Observe que o `Imports` instrução torna os elementos de outros projetos e assemblies disponíveis para seu projeto.</span><span class="sxs-lookup"><span data-stu-id="8aa56-125">Note that the `Imports` statement does not make elements from other projects and assemblies available to your project.</span></span> <span data-ttu-id="8aa56-126">Importar não toma o lugar de uma referência de parâmetro.</span><span class="sxs-lookup"><span data-stu-id="8aa56-126">Importing does not take the place of setting a reference.</span></span> <span data-ttu-id="8aa56-127">Ela remove somente a necessidade de qualificar nomes que já estão disponíveis para seu projeto.</span><span class="sxs-lookup"><span data-stu-id="8aa56-127">It only removes the need to qualify names that are already available to your project.</span></span> <span data-ttu-id="8aa56-128">Para obter mais informações, consulte "Importação que contém elementos" [referências a elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span><span class="sxs-lookup"><span data-stu-id="8aa56-128">For more information, see "Importing Containing Elements" in [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span></span>  
   
 > [!NOTE]
->  Você pode definir implícita `Imports` instruções usando o [referências de página, Designer de projeto (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/references-page-project-designer-visual-basic). Para obter mais informações, consulte [como: Adicionar ou remover Namespaces importados (Visual Basic)](http://msdn.microsoft.com/library/44cebec3-0ea0-47c2-8406-4edeab6a997e).  
+>  <span data-ttu-id="8aa56-129">Você pode definir implícita `Imports` instruções usando o [referências de página, Designer de projeto (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="8aa56-129">You can define implicit `Imports` statements by using the [References Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic).</span></span> <span data-ttu-id="8aa56-130">Para obter mais informações, consulte [como: Adicionar ou remover Namespaces importados (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="8aa56-130">For more information, see [How to: Add or Remove Imported Namespaces (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).</span></span>  
   
-## <a name="import-aliases"></a>Aliases de importação  
- Um *alias de importação* define o alias para um namespace ou tipo. Aliases de importação são úteis quando você precisa usar itens com o mesmo nome declarado em um ou mais namespaces. Para obter mais informações e um exemplo, consulte "Qualificar um nome de elemento" [referências a elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+## <a name="import-aliases"></a><span data-ttu-id="8aa56-131">Aliases de importação</span><span class="sxs-lookup"><span data-stu-id="8aa56-131">Import Aliases</span></span>  
+ <span data-ttu-id="8aa56-132">Um *alias de importação* define o alias para um namespace ou tipo.</span><span class="sxs-lookup"><span data-stu-id="8aa56-132">An *import alias* defines the alias for a namespace or type.</span></span> <span data-ttu-id="8aa56-133">Aliases de importação são úteis quando você precisa usar itens com o mesmo nome que são declarados em um ou mais namespaces.</span><span class="sxs-lookup"><span data-stu-id="8aa56-133">Import aliases are useful when you need to use items with the same name that are declared in one or more namespaces.</span></span> <span data-ttu-id="8aa56-134">Para obter mais informações e um exemplo, consulte "Qualificando um nome de elemento" [referências a elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span><span class="sxs-lookup"><span data-stu-id="8aa56-134">For more information and an example, see "Qualifying an Element Name" in [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span></span>  
   
- Você não deve declarar um membro no nível de módulo com o mesmo nome como `aliasname`. Se você fizer isso, o compilador do Visual Basic usa `aliasname` apenas para o membro declarado e não o reconhece como um alias de importação.  
+ <span data-ttu-id="8aa56-135">Você não deve declarar um membro no nível de módulo com o mesmo nome como `aliasname`.</span><span class="sxs-lookup"><span data-stu-id="8aa56-135">You should not declare a member at module level with the same name as `aliasname`.</span></span> <span data-ttu-id="8aa56-136">Se você fizer isso, o compilador do Visual Basic usa `aliasname` apenas para o membro declarado e não o reconhece como um alias de importação.</span><span class="sxs-lookup"><span data-stu-id="8aa56-136">If you do, the Visual Basic compiler uses `aliasname` only for the declared member and no longer recognizes it as an import alias.</span></span>  
   
- Embora a sintaxe usada para declarar um alias de importação é como aquela usada para importar um prefixo de namespace XML, os resultados são diferentes. Um alias de importação pode ser usado como uma expressão em seu código, enquanto que um prefixo de namespace XML pode ser usado apenas em literais XML ou propriedades de eixo XML como o prefixo para um elemento qualificado ou o nome do atributo.  
+ <span data-ttu-id="8aa56-137">Embora a sintaxe usada para declarar um alias de importação é como aquela usada para importar um prefixo de namespace XML, os resultados são diferentes.</span><span class="sxs-lookup"><span data-stu-id="8aa56-137">Although the syntax used for declaring an import alias is like that used for importing an XML namespace prefix, the results are different.</span></span> <span data-ttu-id="8aa56-138">Um alias de importação pode ser usado como uma expressão em seu código, enquanto um prefixo de namespace XML pode ser usado apenas em literais XML ou propriedades de eixo XML como o prefixo para um elemento qualificado ou o nome do atributo.</span><span class="sxs-lookup"><span data-stu-id="8aa56-138">An import alias can be used as an expression in your code, whereas an XML namespace prefix can be used only in XML literals or XML axis properties as the prefix for a qualified element or attribute name.</span></span>  
   
-### <a name="element-names"></a>Nomes de elementos  
- Se você fornecer `element`, ele deve representar um *elemento contêiner*, ou seja, um elemento de programação que pode conter outros elementos. Elementos de contêiner incluem classes, estruturas, módulos, interfaces e enumerações.  
+### <a name="element-names"></a><span data-ttu-id="8aa56-139">Nomes de elementos</span><span class="sxs-lookup"><span data-stu-id="8aa56-139">Element Names</span></span>  
+ <span data-ttu-id="8aa56-140">Se você fornecer `element`, ele deve representar um *elemento contêiner*, ou seja, um elemento de programação que pode conter outros elementos.</span><span class="sxs-lookup"><span data-stu-id="8aa56-140">If you supply `element`, it must represent a *container element*, that is, a programming element that can contain other elements.</span></span> <span data-ttu-id="8aa56-141">Elementos de contêiner incluem classes, estruturas, módulos, interfaces e enumerações.</span><span class="sxs-lookup"><span data-stu-id="8aa56-141">Container elements include classes, structures, modules, interfaces, and enumerations.</span></span>  
   
- O escopo dos elementos feitos disponíveis por uma `Imports` instrução depende de você especifica `element`. Se você especificar apenas `namespace`, tudo exclusivamente nomeado membros do namespace e os elementos de contêiner dentro desse namespace, estão disponíveis sem qualificação. Se você especificar ambas `namespace` e `element`, somente os membros daquele elemento estão disponíveis sem qualificação.  
+ <span data-ttu-id="8aa56-142">O escopo dos elementos feitos disponíveis por um `Imports` instrução depende se você especificar `element`.</span><span class="sxs-lookup"><span data-stu-id="8aa56-142">The scope of the elements made available by an `Imports` statement depends on whether you specify `element`.</span></span> <span data-ttu-id="8aa56-143">Se você especificar apenas `namespace`, todos os exclusivamente denominados membros do namespace e os elementos de contêiner dentro desse namespace, estão disponíveis sem qualificação.</span><span class="sxs-lookup"><span data-stu-id="8aa56-143">If you specify only `namespace`, all uniquely named members of that namespace, and members of container elements within that namespace, are available without qualification.</span></span> <span data-ttu-id="8aa56-144">Se você especificar ambos `namespace` e `element`, somente os membros desse elemento estão disponíveis sem qualificação.</span><span class="sxs-lookup"><span data-stu-id="8aa56-144">If you specify both `namespace` and `element`, only the members of that element are available without qualification.</span></span>  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir retorna todas as pastas na pasta C:\ usando a <xref:System.IO.DirectoryInfo>classe.</xref:System.IO.DirectoryInfo>  
+## <a name="example"></a><span data-ttu-id="8aa56-145">Exemplo</span><span class="sxs-lookup"><span data-stu-id="8aa56-145">Example</span></span>  
+ <span data-ttu-id="8aa56-146">O exemplo a seguir retorna todas as pastas na pasta C:\ usando o <xref:System.IO.DirectoryInfo> classe.</span><span class="sxs-lookup"><span data-stu-id="8aa56-146">The following example returns all the folders in the C:\ directory by using the <xref:System.IO.DirectoryInfo> class.</span></span>  
   
- O código não tem nenhum `Imports` instruções na parte superior do arquivo. Portanto, o `DirectoryInfo`, <xref:System.Text.StringBuilder>, e <xref:Microsoft.VisualBasic.ControlChars.CrLf>referências são inteiramente qualificadas com os namespaces.</xref:Microsoft.VisualBasic.ControlChars.CrLf> </xref:System.Text.StringBuilder>  
+ <span data-ttu-id="8aa56-147">O código não tiver nenhuma `Imports` instruções na parte superior do arquivo.</span><span class="sxs-lookup"><span data-stu-id="8aa56-147">The code has no `Imports` statements at the top of the file.</span></span> <span data-ttu-id="8aa56-148">Portanto, o `DirectoryInfo`, <xref:System.Text.StringBuilder>, e <xref:Microsoft.VisualBasic.ControlChars.CrLf> referências são inteiramente qualificadas com os namespaces.</span><span class="sxs-lookup"><span data-stu-id="8aa56-148">Therefore, the `DirectoryInfo`, <xref:System.Text.StringBuilder>, and <xref:Microsoft.VisualBasic.ControlChars.CrLf> references are all fully qualified with the namespaces.</span></span>  
   
- [!code-vb[VbVbalrStatements&#152;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_1.vb)]  
+ [!code-vb[VbVbalrStatements#152](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_1.vb)]  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir inclui `Imports` instruções para os namespaces referenciados. Portanto, os tipos não precisam ser totalmente qualificados com os namespaces.  
+## <a name="example"></a><span data-ttu-id="8aa56-149">Exemplo</span><span class="sxs-lookup"><span data-stu-id="8aa56-149">Example</span></span>  
+ <span data-ttu-id="8aa56-150">O exemplo a seguir inclui `Imports` instruções para os namespaces referenciados.</span><span class="sxs-lookup"><span data-stu-id="8aa56-150">The following example includes `Imports` statements for the referenced namespaces.</span></span> <span data-ttu-id="8aa56-151">Portanto, os tipos não precisam ser totalmente qualificados com os namespaces.</span><span class="sxs-lookup"><span data-stu-id="8aa56-151">Therefore, the types do not have to be fully qualified with the namespaces.</span></span>  
   
- [!code-vb[VbVbalrStatements&#153;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_2.vb)]  
+ [!code-vb[VbVbalrStatements#153](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_2.vb)]  
   
- [!code-vb[VbVbalrStatements&#154;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_3.vb)]  
+ [!code-vb[VbVbalrStatements#154](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_3.vb)]  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir inclui `Imports` instruções que crie aliases para os espaços para nome referenciados. Os tipos são qualificados com os alias.  
+## <a name="example"></a><span data-ttu-id="8aa56-152">Exemplo</span><span class="sxs-lookup"><span data-stu-id="8aa56-152">Example</span></span>  
+ <span data-ttu-id="8aa56-153">O exemplo a seguir inclui `Imports` instruções que criam os aliases para os namespaces referenciados.</span><span class="sxs-lookup"><span data-stu-id="8aa56-153">The following example includes `Imports` statements that create aliases for the referenced namespaces.</span></span> <span data-ttu-id="8aa56-154">Os tipos são qualificados com aliases.</span><span class="sxs-lookup"><span data-stu-id="8aa56-154">The types are qualified with the aliases.</span></span>  
   
- [!code-vb[VbVbalrStatements&#155;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_4.vb)]  
+ [!code-vb[VbVbalrStatements#155](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_4.vb)]  
   
- [!code-vb[VbVbalrStatements&#156;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_5.vb)]  
+ [!code-vb[VbVbalrStatements#156](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_5.vb)]  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir inclui `Imports` instruções que criam aliases para os tipos de referência. Os aliases são usados para especificar os tipos.  
+## <a name="example"></a><span data-ttu-id="8aa56-155">Exemplo</span><span class="sxs-lookup"><span data-stu-id="8aa56-155">Example</span></span>  
+ <span data-ttu-id="8aa56-156">O exemplo a seguir inclui `Imports` instruções que criam os aliases para tipos referenciados.</span><span class="sxs-lookup"><span data-stu-id="8aa56-156">The following example includes `Imports` statements that create aliases for the referenced types.</span></span> <span data-ttu-id="8aa56-157">Os aliases são usados para especificar os tipos.</span><span class="sxs-lookup"><span data-stu-id="8aa56-157">Aliases are used to specify the types.</span></span>  
   
- [!code-vb[VbVbalrStatements&#157;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_6.vb)]  
+ [!code-vb[VbVbalrStatements#157](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_6.vb)]  
   
- [!code-vb[VbVbalrStatements&#158;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_7.vb)]  
+ [!code-vb[VbVbalrStatements#158](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_7.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- [Instrução Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)   
- [Namespaces no Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)   
- [Referências e a instrução Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)   
- [Instrução Imports (Namespace XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)   
- [Referências a Elementos Declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+## <a name="see-also"></a><span data-ttu-id="8aa56-158">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8aa56-158">See Also</span></span>  
+ [<span data-ttu-id="8aa56-159">Instrução Namespace</span><span class="sxs-lookup"><span data-stu-id="8aa56-159">Namespace Statement</span></span>](../../../visual-basic/language-reference/statements/namespace-statement.md)  
+ [<span data-ttu-id="8aa56-160">Namespaces no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8aa56-160">Namespaces in Visual Basic</span></span>](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
+ [<span data-ttu-id="8aa56-161">Referências e a Instrução Imports</span><span class="sxs-lookup"><span data-stu-id="8aa56-161">References and the Imports Statement</span></span>](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
+ [<span data-ttu-id="8aa56-162">Instrução Imports (Namespace de XML)</span><span class="sxs-lookup"><span data-stu-id="8aa56-162">Imports Statement (XML Namespace)</span></span>](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)  
+ [<span data-ttu-id="8aa56-163">Referências a Elementos Declarados</span><span class="sxs-lookup"><span data-stu-id="8aa56-163">References to Declared Elements</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
