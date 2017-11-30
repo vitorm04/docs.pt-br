@@ -12,11 +12,11 @@ caps.latest.revision: "9"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 2a5ab416dc484dddc0b6aa0ec25757921815c723
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 1c866d337b6e02fa18241b6fafd9d4e5a397ef69
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="overloadgroups"></a>OverloadGroups
 Esse exemplo consiste em uma atividade (`CreateLocation`), que tem duas características interessantes:  
@@ -31,7 +31,7 @@ Esse exemplo consiste em uma atividade (`CreateLocation`), que tem duas caracter
   
 -   `[OverloadGroup]` une um conjunto de argumentos, para que o usuário de atividade pode escolher entre o uso de um conjunto ou outro. O usuário não pode usar argumentos de grupos diferentes de sobrecarga na mesma instância.  
   
- Depois de configurar diferentes fluxos de trabalho, chame <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> que retorna um <xref:System.Activities.Validation.ValidationResults> coleção de <!--zz <xref:System.Activities.Validation.ConstraintViolation>--> `System.Activities.Validation.ConstraintViolation`. Imprimir o <!--zz <xref:System.Activities.Validation.ConstraintViolation>--> `System.Activities.Validation.ConstraintViolation` objetos no console.  
+ Após configurar fluxos de trabalho diferentes, chamada <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> que retorna uma coleção de <xref:System.Activities.Validation.ValidationResults> de <xref:System.Activities.Validation.Constraint>. Imprima os objetos de <xref:System.Activities.Validation.Constraint> no console.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
@@ -46,6 +46,4 @@ Esse exemplo consiste em uma atividade (`CreateLocation`), que tem duas caracter
 >   
 >  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\OverloadGroups`  
-  
-## <a name="see-also"></a>Consulte também
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\OverloadGroups`

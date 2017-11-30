@@ -18,11 +18,11 @@ ms.assetid: 4af2c1df-9e3a-48c1-83ac-b192986fc5bc
 caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7f692ee1242af88dc6bd3938f7a00f3d11ed8ca7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d034c1daf495c50e299fec4c5bf399652dad08ce
+ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/25/2017
 ---
 # <a name="default-values-table-c-reference"></a>Tabela de valores padrão (Referência de C#)
 A tabela a seguir mostra os valores padrão de tipos de valor retornados por construtores padrão. Construtores padrão são invocados por meio do operador `new`, da seguinte maneira:
@@ -44,7 +44,7 @@ Lembre-se de que não é permitido usar variáveis não inicializadas no C#.
 |[bool](../../../csharp/language-reference/keywords/bool.md)|`false`|
 |[byte](../../../csharp/language-reference/keywords/byte.md)|0|
 |[char](../../../csharp/language-reference/keywords/char.md)|'\0'|
-|[decimal](../../../csharp/language-reference/keywords/decimal.md)|0,0M|
+|[decimal](../../../csharp/language-reference/keywords/decimal.md)|M 0|
 |[double](../../../csharp/language-reference/keywords/double.md)|0,0D|
 |[enum](../../../csharp/language-reference/keywords/enum.md)|O valor produzido pela expressão (E)0, em que E é o identificador de enumeração.|
 |[float](../../../csharp/language-reference/keywords/float.md)|0,0F|

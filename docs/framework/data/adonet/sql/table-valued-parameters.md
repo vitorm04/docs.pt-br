@@ -16,11 +16,11 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 47009516d4118fec1a075a2dbccfa747f9a63131
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.openlocfilehash: 47956848079e6094dc000d95ec4066f814a70e35
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="table-valued-parameters"></a>Parâmetros de valores de tabela
 Os parâmetros de valores de tabela fornecem uma maneira fácil de empacotar várias linhas de dados de um aplicativo cliente para o [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] sem exigir várias viagens de ida e volta ou lógica especial do lado do servidor para processar os dados. Você pode usar parâmetros de valores de tabela para encapsular linhas de dados em um aplicativo cliente e enviar os dados para o servidor em um único comando parametrizado. As linhas de dados de entrada são armazenadas em uma variável da tabela que pode, em seguida, ser operada usando o [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
@@ -96,7 +96,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 -   Você não pode usar instruções ALTER TABLE para modificar o design de parâmetros de valores de tabela.  
   
 ## <a name="configuring-a-sqlparameter-example"></a>Configurando um exemplo de SqlParameter  
- <xref:System.Data.SqlClient>dá suporte a popular parâmetros com valor de tabela do <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> ou System.Collections.Generic.IEnumerable\<<xref:Microsoft.SqlServer.Server.SqlDataRecord>> (<xref:System.Collections.Generic.IEnumerable%601>? qualifyHint = False & no upgrade automático = True) objetos. Você deve especificar um nome de tipo para o parâmetro com valor de tabela usando a propriedade <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> de um <xref:System.Data.SqlClient.SqlParameter>. O `TypeName` deve corresponder ao nome de um tipo compatível criado anteriormente no servidor. O fragmento de código a seguir demonstra como configurar o <xref:System.Data.SqlClient.SqlParameter> para inserir dados.  
+ <xref:System.Data.SqlClient>dá suporte a popular parâmetros com valor de tabela do <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> ou <xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord> objetos. Você deve especificar um nome de tipo para o parâmetro com valor de tabela usando a propriedade <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> de um <xref:System.Data.SqlClient.SqlParameter>. O `TypeName` deve corresponder ao nome de um tipo compatível criado anteriormente no servidor. O fragmento de código a seguir demonstra como configurar o <xref:System.Data.SqlClient.SqlParameter> para inserir dados.  
   
 ```csharp  
 // Configure the command and parameter.  

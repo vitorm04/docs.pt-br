@@ -12,11 +12,11 @@ caps.latest.revision: "13"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: d4f9d9e966a0a6d8fa48d195b17438b3d78b32a9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 01d5d6f35ed9eaa64786d18c2477862594c546be
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="basic-transactionscope"></a>TransactionScope básico
 Esse exemplo consiste em quatro cenários que executam a visualização como aninhar instâncias de <xref:System.Activities.Statements.TransactionScope> . O primeiro cenário mostra aninhar uma atividade de terceiro parte do autor não tem nenhum conhecimento de compilação. O segundo e terceiro cenários mostram como os intervalos são respeitados e mostra finais cenário de configuração de <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> .  
@@ -47,6 +47,4 @@ Esse exemplo consiste em quatro cenários que executam a visualização como ani
 >   
 >  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\BasicTransactionScope`  
-  
-## <a name="see-also"></a>Consulte também
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\BasicTransactionScope`

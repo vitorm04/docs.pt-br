@@ -1,38 +1,19 @@
 ---
 title: "Campos (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- fields [C#]
+helpviewer_keywords: fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: acf4ade68235a196fd6d2f3c6c71279748f3dd71
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8eef9bb644a28c69a1db59dcba3c12c9e3fa86b0
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="fields-c-programming-guide"></a>Campos (Guia de Programação em C#)
 Um *campo* é uma variável de qualquer tipo que é declarada diretamente em uma [classe](../../../csharp/language-reference/keywords/class.md) ou [struct](../../../csharp/language-reference/keywords/struct.md). Os campos são *membros* do tipo que os contém.  
@@ -45,22 +26,22 @@ Um *campo* é uma variável de qualquer tipo que é declarada diretamente em uma
   
  Os campos são declarados no bloco de classe, especificando o nível de acesso do campo, seguido pelo tipo do campo e pelo nome do campo. Por exemplo:  
   
- [!code-cs[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
+ [!code-csharp[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
   
  Para acessar um campo em um objeto, adicione um ponto após o nome do objeto, seguido pelo nome do campo, como em `objectname.fieldname`. Por exemplo:  
   
- [!code-cs[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
+ [!code-csharp[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
   
  Um campo pode receber um valor inicial, usando o operador de atribuição quando o campo é declarado. Para atribuir automaticamente o campo `day` ao `"Monday"`, por exemplo, você poderia declarar `day` como no exemplo a seguir:  
   
- [!code-cs[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_3.cs)]  
+ [!code-csharp[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_3.cs)]  
   
  Os campos são inicializados imediatamente antes do construtor para a instância do objeto ser chamado. Se o construtor atribuir o valor de um campo, ele substituirá qualquer valor fornecido durante a declaração do campo. Para obter mais informações, veja [Usando construtores](../../../csharp/programming-guide/classes-and-structs/using-constructors.md).  
   
 > [!NOTE]
 >  Um inicializador de campo não pode fazer referência a outros campos de instância.  
   
- Os campos podem ser marcados como [públicos](../../../csharp/language-reference/keywords/public.md), [particulares](../../../csharp/language-reference/keywords/private.md), [protegidos](../../../csharp/language-reference/keywords/protected.md), [internos](../../../csharp/language-reference/keywords/internal.md) ou `protected internal`. Esses modificadores de acesso definem como os usuários da classe podem acessar os campos. Para obter mais informações, consulte [Modificadores de Acesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Campos podem ser marcados como [pública](../../../csharp/language-reference/keywords/public.md), [privada](../../../csharp/language-reference/keywords/private.md), [protegido](../../../csharp/language-reference/keywords/protected.md), [interno](../../../csharp/language-reference/keywords/internal.md), [protegidos internos](../../../csharp/language-reference/keywords/protected-internal.md) ou [privado protegido](../../../csharp/language-reference/keywords/private-protected.md). Esses modificadores de acesso definem como os usuários da classe podem acessar os campos. Para obter mais informações, consulte [Modificadores de Acesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
  Opcionalmente, um campo pode ser declarado [static](../../../csharp/language-reference/keywords/static.md). Isso torna o campo disponível para chamadores a qualquer momento, mesmo se não existir nenhuma instância da classe. Para obter mais informações, consulte [Classes Estáticas e Membros de Classes Estáticas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
   
@@ -70,10 +51,9 @@ Um *campo* é uma variável de qualquer tipo que é declarada diretamente em uma
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Classes e structs](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [Usando construtores](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)   
- [Herança](../../../csharp/programming-guide/classes-and-structs/inheritance.md)   
- [Modificadores de acesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Classes e Structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [Usando construtores](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+ [Herança](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+ [Modificadores de acesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
  [Classes e membros de classes abstract e sealed](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
-

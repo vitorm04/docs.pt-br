@@ -1,27 +1,18 @@
 ---
 title: "Programação orientada a objeto (C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4a7f30293bb2d50981353badfb7e373b60dcfeec
+ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: de06921840f06f36d8600b9567986644f58c6ad5
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="object-oriented-programming-c"></a>Programação orientada a objeto (C#)
 O C# dá suporte completo à programação orientada a objeto, incluindo encapsulamento, herança e polimorfismo.  
@@ -242,7 +233,8 @@ Container.Nested nestedInstance = new Container.Nested()
 |[private](../../../csharp/language-reference/keywords/private.md)|O tipo ou membro pode ser acessado somente pelo código na mesma classe.|  
 |[protected](../../../csharp/language-reference/keywords/protected.md)|O tipo ou membro pode ser acessado somente pelo código na mesma classe ou em uma classe derivada.|  
 |[internal](../../../csharp/language-reference/keywords/internal.md)|O tipo ou membro pode ser acessado por qualquer código no mesmo assembly, mas não de outro assembly.|  
-|`protected internal`|O tipo ou membro pode ser acessado por qualquer código no mesmo assembly ou por qualquer classe derivada em outro assembly.|  
+|[protegidos internos](../../../csharp/language-reference/keywords/protected-internal.md)|O tipo ou membro pode ser acessado por qualquer código no mesmo assembly ou por qualquer classe derivada em outro assembly.|  
+|[privado protegido](../../../csharp/language-reference/keywords/private-protected.md)|O tipo ou membro pode ser acessado pelo código na mesma classe ou em uma classe derivada dentro do assembly da classe base.|  
   
  Para obter mais informações, consulte [Modificadores de Acesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
@@ -449,4 +441,3 @@ class SampleClass
   
 ## <a name="see-also"></a>Consulte também  
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-

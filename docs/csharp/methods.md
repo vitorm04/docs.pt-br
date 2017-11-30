@@ -10,12 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
+ms.openlocfilehash: 38e9d8955c99c7fb3ee6347af70037d3da08ff39
+ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: df8733c5c4532dc188ceb95d7bf236bcd2182b9f
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="methods"></a>Métodos #
 
@@ -88,11 +87,11 @@ Você pode invocar um método usando argumentos posicionais e argumentos nomeado
  <a name="inherited"></a>
  ##<a name="inherited-and-overridden-methods"></a>Métodos herdados e substituídos ##
 
-Além dos membros que são definidos explicitamente em um tipo, um tipo herda membros definidos em suas classes base. Uma vez que todos os tipos no sistema de tipos gerenciado herdam direta ou indiretamente da classe @System.Object, todos os tipos herdam seus membros, como @System.Object.Equals(System.Object), @System.Object.GetType e @System.Object.ToString. O exemplo a seguir define uma classe `Person`, instancia dois objetos `Person` e chama o método `Person.Equals` para determinar se os dois objetos são iguais. O método `Equals`, no entanto, não é definido na classe `Person`, ele é herdado do @System.Object.
+Além dos membros que são definidos explicitamente em um tipo, um tipo herda membros definidos em suas classes base. Desde que todos os tipos no sistema de tipo gerenciado herdam direta ou indiretamente a <xref:System.Object> classe, todos os tipos de herdam seus membros, como <xref:System.Object.Equals(System.Object)>, <xref:System.Object.GetType>, e <xref:System.Object.ToString>. O exemplo a seguir define uma classe `Person`, instancia dois objetos `Person` e chama o método `Person.Equals` para determinar se os dois objetos são iguais. O método `Equals`, no entanto, não é definido na classe `Person`, ele é herdado do <xref:System.Object>.
 
 [!code-csharp[csSnippets.Methods#104](../../samples/snippets/csharp/concepts/methods/inherited1.cs#104)]
 
-Tipos podem substituir membros herdados usando a palavra-chave `override` e fornecendo uma implementação para o método substituído. A assinatura do método deve ser a mesma que a do método substituído. O exemplo a seguir é semelhante ao anterior, exceto que ele substitui o método @Object.Equals(System.Object). (Ele também substitui o método @Object.GetHashCode, uma vez que os dois métodos destinam-se a fornecer resultados consistentes.)
+Tipos podem substituir membros herdados usando a palavra-chave `override` e fornecendo uma implementação para o método substituído. A assinatura do método deve ser o mesmo que o método substituído. O exemplo a seguir é semelhante ao anterior, exceto que ela substitui o <xref:System.Object.Equals(System.Object)> método. (Ele também substitui o método <xref:System.Object.GetHashCode>, uma vez que os dois métodos destinam-se a fornecer resultados consistentes.)
 
 [!code-csharp[csSnippets.Methods#105](../../samples/snippets/csharp/concepts/methods/overridden1.cs#105)]
 
@@ -196,7 +195,7 @@ Para usar um valor retornado de um método, o método de chamada pode usar a cha
 
 Usar uma variável local, nesse caso, `result`, para armazenar um valor é opcional. Isso pode ajudar a legibilidade do código ou pode ser necessário se você precisar armazenar o valor original do argumento para todo o escopo do método.
 
-Às vezes, você deseja que seu método retorne mais de um único valor. A partir do C# 7.0, você pode fazer isso facilmente usando *tipos de tupla* e *literais de tupla*. O tipo de tupla define os tipos de dados dos elementos da tupla. Os literais de tupla fornecem os valores reais da tupla retornada. No exemplo a seguir, `(string, string, string, int)` define o tipo de tupla que é retornado pelo método `GetPersonalInfo`. A expressão `(per.FirstName, per.MiddleName, per.LastName, per.Age)` é a tupla literal, o método retorna o nome, o nome do meio e o sobrenome, juntamente com a idade, de um objeto `PersonInfo`.
+Às vezes, você deseja que seu método retorne mais de um único valor. A partir do C# 7.0, você pode fazer isso facilmente usando *tipos de tupla* e *literais de tupla*. O tipo de tupla define os tipos de dados dos elementos da tupla. Os literais de tupla fornecem os valores reais da tupla retornada. No exemplo a seguir, `(string, string, string, int)` define o tipo de tupla que é retornado pelo `GetPersonalInfo` método. A expressão `(per.FirstName, per.MiddleName, per.LastName, per.Age)` é a tupla literal, o método retorna o nome, o nome do meio e o sobrenome, juntamente com a idade, de um objeto `PersonInfo`.
 
 ```csharp
 public (string, string, string, int) GetPersonalInfo(string id)
@@ -264,7 +263,7 @@ Se marcar um método com o modificador [async](language-reference/keywords/async
 > [!NOTE]
 > Um método assíncrono retorna para o chamador quando encontra o primeiro objeto esperado que ainda não está completo ou chega ao final do método assíncrono, o que ocorrer primeiro.
 
-Um método assíncrono pode conter um tipo de retorno de @System.Threading.Tasks.Task<TResult>, @System.Threading.Tasks.Task ou `void`. O tipo de retorno `void` é usado principalmente para definir manipuladores de eventos, nos quais o tipo de retorno `void` é necessário. Um método assíncrono que retorna `void` não pode ser aguardado e o chamador de um método de retorno nulo não pode capturar as exceções que esse método gera. O C# 7, quando lançado, amenizará essa estrição para permitir que um método assíncrono [retorne qualquer tipo semelhante à tarefa](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md).
+Um método assíncrono pode ter um tipo de retorno <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, ou `void`. O tipo de retorno `void` é usado principalmente para definir manipuladores de eventos, nos quais o tipo de retorno `void` é necessário. Um método assíncrono que retorna `void` não pode ser aguardado e o chamador de um método de retorno nulo não pode capturar as exceções que esse método gera. O C# 7, quando lançado, amenizará essa estrição para permitir que um método assíncrono [retorne qualquer tipo semelhante à tarefa](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md).
 
 No exemplo a seguir, `DelayAsync` é um método assíncrono que contém uma instrução return que retorna um inteiro. Como é um método assíncrono, sua declaração de método deve ter um tipo de retorno de `Task<int>`. Como o tipo de retorno é `Task<int>`, a avaliação da expressão `await` em `DoSomethingAsync` produz um inteiro, como a instrução `int result = await delayTask` a seguir demonstra.
 
@@ -295,7 +294,7 @@ Se o método retornar `void` ou for um método assíncrono, o corpo do método d
 
 Um iterador realiza uma iteração personalizada em uma coleção, como uma lista ou uma matriz. Um iterador usa a instrução [yield return](language-reference/keywords/yield.md) para retornar um elemento de cada vez. Quando uma instrução `yield return` for atingida, o local atual será lembrado para que o chamador possa solicitar o próximo elemento na sequência.
 
-O tipo de retorno de um iterador pode ser @System.Collections.IEnumerable, @System.Collections.Generic.IEnumerable%601, @System.Collections.IEnumerator ou @System.Collections.Generic.IEnumerator%601.
+O tipo de retorno de um iterador pode ser <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> ou <xref:System.Collections.Generic.IEnumerator%601>.
 
 Para obter mais informações, consulte [Iteradores](programming-guide/concepts/iterators.md).
 
@@ -309,4 +308,3 @@ Para obter mais informações, consulte [Iteradores](programming-guide/concepts/
 [out](language-reference/keywords/out.md)   
 [ref](language-reference/keywords/ref.md)   
 [Passando parâmetros](programming-guide/classes-and-structs/passing-parameters.md)
-

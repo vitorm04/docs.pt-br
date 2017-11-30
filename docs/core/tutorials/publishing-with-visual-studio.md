@@ -4,20 +4,18 @@ description: "A publicação cria o conjunto de arquivos necessários para execu
 keywords: ".NET, .NET Core, aplicativo do console, publicação, implantação"
 author: BillWagner
 ms.author: wiwagn
-ms.date: 08/07/2017
+ms.date: 10/05/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a19545d3-24af-4a32-9778-cfb5ae938287
+ms.openlocfilehash: a3e5bda5c99144c9ab5bbaf5e2f5566261af4813
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
-ms.openlocfilehash: 025e132cd5b6a44e98a1270e24ba6b2f9f12812c
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="publish-your-hello-world-application-with-visual-studio-2017"></a>Publicar um aplicativo Olá, Mundo com o Visual Studio 2017
 
 Em [Build a C# Hello World Application with .NET Core in Visual Studio 2017](with-visual-studio.md) (Compilar um aplicativo Olá, Mundo em C# com o .NET Core no Visual Studio 2017) ou [Build a Visual Basic Hello World Application with .NET Core in Visual Studio 2017](vb-with-visual-studio.md) (Compilar um aplicativo Olá, Mundo em Visual Basic com o .NET Core no Visual Studio 2017), você compilou um aplicativo de console Olá, Mundo. Em [Debug your C# Hello World application with Visual Studio 2017](debugging-with-visual-studio.md) (Depurar um aplicativo Olá, Mundo em C# com o Visual Studio 2017), você o testou usando o depurador do Visual Studio. Agora que você tem certeza de que ele funciona conforme o esperado, publique-o para que outros usuários possam executá-lo. A publicação cria o conjunto de arquivos necessários para executar seu aplicativo e você pode implantá-los copiando-os para um computador de destino.
@@ -40,15 +38,23 @@ Para publicar e executar seu aplicativo:
 1. Navegue até o aplicativo publicado no subdiretório `bin\release\PublishOutput` do diretório de projeto do aplicativo. Como mostra a figura a seguir, a saída publicada inclui os seguintes quatro arquivos:
 
       * *HelloWorld.deps.json*
+
+         Arquivo de dependências de tempo de execução do aplicativo. Define os componentes principais do .NET e as bibliotecas (incluindo a biblioteca de vínculo dinâmico que contém seu aplicativo) necessária para executar seu aplicativo. Para obter mais informações, consulte [arquivos de configuração de tempo de execução](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
+ 
       * *HelloWorld.dll*
+
+         O arquivo que contém seu aplicativo. É uma biblioteca de vínculo dinâmico que pode ser executada digitando o `dotnet HelloWorld.dll` comando na janela do console. 
+
       * *HelloWorld.pdb* (opcional para implantação)
+
+         Um arquivo que contém os símbolos de depuração. Não é necessário implantar esse arquivo juntamente com seu aplicativo, embora você deva salvá-lo caso precise depurar a versão publicada do seu aplicativo.
+
       * *HelloWorld.runtimeconfig.json*
 
-   O arquivo *HelloWorld.pdb* contém símbolos de depuração. Não é necessário implantar esse arquivo juntamente com seu aplicativo, embora você deva salvá-lo caso precise depurar a versão publicada do seu aplicativo.
+         Arquivo de configuração de tempo de execução do aplicativo. Identifica a versão do que seu aplicativo foi criado para ser executado .NET Core. Para obter mais informações, consulte [arquivos de configuração de tempo de execução](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).  
 
    ![Janela de console mostrando arquivos publicados](media/publishing-with-visual-studio/publishedfiles.png)
 
 O processo de publicação cria uma implantação dependente da estrutura, que é um tipo de implantação em que o aplicativo publicado será executado em qualquer plataforma com suporte pelo .NET Core com o .NET Core instalado no sistema. Os usuários podem executar o aplicativo emitindo o comando `dotnet HelloWorld.dll` de uma janela de console.
 
 Para saber mais sobre a publicação e implantação de aplicativos .NET Core, consulte [Implantação de aplicativos .NET Core](../../core/deploying/index.md).
-

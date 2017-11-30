@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - SQLMetal [LINQ to SQL]
 - code generation tool
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Erikre
 ms.author: erikre
 manager: erikre
+ms.openlocfilehash: fa4cf7baa3ca3ba19a733438920357034e8de193
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6d0ac9c682c60db8eb9e5188a71916dc5d97de60
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (ferramenta de geração de código)
 A ferramenta de linha de comando SqlMetal gera o código e o mapeamento para o componente [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Aplicando-se opções exibidas mais à frente neste tópico, é possível instruir SqlMetal para executar diversas ações diferentes, dentre as quais estão:  
@@ -150,7 +143,6 @@ sqlmetal [options] [<input file>]
 >  Ao usar a opção **/pluralize** com o banco de dados de exemplo Northwind, observe o comportamento a seguir. Quando SqlMetal cria nomes de tipo de linha para tabelas, os nomes de tabela são singulares. Quando ele cria propriedades <xref:System.Data.Linq.DataContext> para tabelas, os nomes de tabela serão plurais. Coincidentemente, as tabelas no banco de dados de exemplo Northwind já são plurais. Por isso, você não vê essa parte funcionando. Embora seja uma prática comum nomear tabelas de banco de dados singulares, também é uma prática comum no .NET nomear as coleções plurais.  
   
 ## <a name="see-also"></a>Consulte também  
- [Como gerar o modelo de objeto em Visual Basic ou C#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)   
- [Geração de código em LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)   
+ [Como: gerar o modelo de objeto no Visual Basic ou c#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
+ [Geração de código em LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
  [Mapeamento Externo](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-

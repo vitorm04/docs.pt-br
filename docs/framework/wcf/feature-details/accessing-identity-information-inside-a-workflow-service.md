@@ -13,14 +13,14 @@ caps.latest.revision: "9"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 3b1a54f1c1529879074d2d0e7172fd52c5386c8f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.openlocfilehash: a9797330cf983ed67d3bc07a7984d47454adcb49
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="accessing-identity-information-inside-a-workflow-service"></a>Acessando informações de identidade dentro de um serviço de fluxo de trabalho
-Para acessar informações de identidade dentro de um serviço de fluxo de trabalho, você deve implementar o <xref:System.ServiceModel.Activities.IReceiveMessageCallback> interface em uma propriedade personalizada de execução. No <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage%2A> System.Activities.ExecutionProperties)?qualifyHint=False & no upgrade automático = True método, você pode acessar o <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> para acessar informações de identidade. Este tópico o guiará através de implementar essa propriedade de execução, bem como uma atividade personalizada que será superficial essa propriedade como o <xref:System.ServiceModel.Activities.Receive> atividade em tempo de execução.  A atividade personalizada implementará o mesmo comportamento que um <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` atividade, exceto que, quando um <xref:System.ServiceModel.Activities.Receive> é colocado dentro do elemento, o <xref:System.ServiceModel.Activities.IReceiveMessageCallback> será chamado e as informações de identidade serão recuperadas.  
+Para acessar informações de identidade dentro de um serviço de fluxo de trabalho, você deve implementar o <xref:System.ServiceModel.Activities.IReceiveMessageCallback> interface em uma propriedade personalizada de execução. No <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> método, você pode acessar o <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> para acessar informações de identidade. Este tópico o guiará através de implementar essa propriedade de execução, bem como uma atividade personalizada que será superficial essa propriedade como o <xref:System.ServiceModel.Activities.Receive> atividade em tempo de execução.  A atividade personalizada implementará o mesmo comportamento que um <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` atividade, exceto que, quando um <xref:System.ServiceModel.Activities.Receive> é colocado dentro do elemento, o <xref:System.ServiceModel.Activities.IReceiveMessageCallback> será chamado e as informações de identidade serão recuperadas.  
   
 ### <a name="implement-ireceivemessagecallback"></a>Implementar IReceiveMessageCallback  
   

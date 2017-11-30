@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,16 +24,15 @@ helpviewer_keywords:
 - roles [.NET Framework], client application services
 - client application services, about client application services
 ms.assetid: 1487d8df-089e-4f21-abfb-a791a652b58e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
+ms.openlocfilehash: 31738e205d0b2b88cbb049607eeb027db873db3f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c776040786a51089c9aa988e9229805c06b28bae
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="client-application-services"></a>Serviços de aplicativo cliente
 Os serviços de aplicativos cliente facilitam a criação de aplicativos baseados em Windows que usam os serviços de aplicativo de perfil, funções e logon [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] incluídos nas Extensões AJAX do Microsoft ASP.NET 2.0. Esses serviços permitem que vários aplicativos Web e baseados no Windows compartilhem informações do usuário e a funcionalidade de gerenciamento de usuários de um único servidor. Por exemplo, você pode usar esses serviços para executar as seguintes tarefas:  
@@ -76,11 +74,10 @@ Os serviços de aplicativos cliente facilitam a criação de aplicativos baseado
  <xref:System.Web.ClientServices.Providers.UserValidatedEventArgs>  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral sobre Serviços de Aplicativos ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)   
- [Usando formulários de autenticação com Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)   
- [Usando Funções de Informações com Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)   
- [Usando Perfis de Informações com Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)   
- [Autenticação do ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)   
+ [Visão geral dos serviços de aplicativo do ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
+ [Usando formulários de autenticação com Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
+ [Usando funções de informações com o Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
+ [Usando informações de perfil com o Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
+ [Autenticação do ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
  [Gerenciando autorização usando funções](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)    
  [Visão Geral das Configurações do Aplicativo](../../../docs/framework/winforms/advanced/application-settings-overview.md)
-

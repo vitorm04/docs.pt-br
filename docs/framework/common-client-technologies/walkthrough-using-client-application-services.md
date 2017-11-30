@@ -5,24 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
+ms.openlocfilehash: fba53a19810a91a2e679616e73ea8c5fc8d38da1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 64a27269ee6f3711f0c51f2c97cd8876c3ea6103
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-using-client-application-services"></a>Instruções passo a passo: usando serviços de aplicativo cliente
 Este tópico descreve como criar um aplicativo do Windows que usa serviços de aplicativo cliente para autenticar usuários e recuperar funções de usuário e configurações.  
@@ -250,11 +251,12 @@ Este tópico descreve como criar um aplicativo do Windows que usa serviços de a
   
 3.  No editor de códigos, adicione as seguintes declarações na parte superior do arquivo Form1.  
   
-     [!code-csharp[ClientApplicationServices#001](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#001)]  [!code-vb[ClientApplicationServices#001](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#001)]  
+     [!code-csharp[ClientApplicationServices#001](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#001)]
+     [!code-vb[ClientApplicationServices#001](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#001)]  
   
 4.  No **Solution Explorer**, clique duas vezes em Form1 para exibir o designer.  
   
-5.  No designer, clique duas vezes na superfície do formulário para gerar um manipulador de eventos <xref:System.Windows.Forms.Form.Load?displayProperty=fullName> chamado `Form1_Load`.  
+5.  No designer, clique duas vezes na superfície do formulário para gerar um manipulador de eventos <xref:System.Windows.Forms.Form.Load?displayProperty=nameWithType> chamado `Form1_Load`.  
   
      O editor de códigos é exibido com o cursor no método `Form1_Load`.  
   
@@ -262,9 +264,10 @@ Este tópico descreve como criar um aplicativo do Windows que usa serviços de a
   
      Esse código nega acesso a usuários não autenticados saindo do aplicativo. Como alternativa, você pode permitir que usuários não autenticados acessem o formulário, mas negar acesso à funcionalidade específica. Normalmente, você não embutirá no código o nome de usuário e a senha dessa maneira, mas é útil para fins de teste. Na próxima seção, você substituirá esse código por um código mais robusto que exibe uma caixa de diálogo de logon e inclui tratamento de exceção.  
   
-     Observe que o método `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> está no [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)]. Este método delega seu trabalho para o provedor de autenticação configurado e retornará `true` se a autenticação for bem-sucedida. Seu aplicativo não exige uma referência direta para o provedor de autenticação do cliente.  
+     Observe que o método `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType> está no [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)]. Este método delega seu trabalho para o provedor de autenticação configurado e retornará `true` se a autenticação for bem-sucedida. Seu aplicativo não exige uma referência direta para o provedor de autenticação do cliente.  
   
-     [!code-csharp[ClientApplicationServices#300](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#300)]  [!code-vb[ClientApplicationServices#300](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#300)]  
+     [!code-csharp[ClientApplicationServices#300](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#300)]
+     [!code-vb[ClientApplicationServices#300](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#300)]  
   
  Agora você pode pressionar F5 para executar o aplicativo e, como você forneceu nome de usuário e senha corretos, verá o formulário.  
   
@@ -294,15 +297,17 @@ Este tópico descreve como criar um aplicativo do Windows que usa serviços de a
   
      Esse código exibe uma mensagem de boas-vindas e, em seguida, chama o método `ValidateUsingCredentialsProvider` que você adicionará na próxima etapa. Se o usuário não for autenticado, o método `ValidateUsingCredentialsProvider` retorna `false` e o método `Form1_Load` retorna. Isso impede que qualquer código adicional seja executado antes de sair do aplicativo. A mensagem de boas-vindas é útil para deixar claro quando o aplicativo é reiniciado. Você adicionará código para reiniciar o aplicativo quando implementar o logoff mais tarde nessa explicação passo a passo.  
   
-     [!code-csharp[ClientApplicationServices#011](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#011)]  [!code-vb[ClientApplicationServices#011](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#011)]  
+     [!code-csharp[ClientApplicationServices#011](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#011)]
+     [!code-vb[ClientApplicationServices#011](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#011)]  
   
 4.  Adicione o seguinte método depois do método `Form1_Load`.  
   
-     Esse método passa cadeias de caracteres vazias para o método `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName>, que faz com que a caixa de diálogo Logon apareça. Se o serviço de autenticação não estiver disponível, o método <xref:System.Web.Security.Membership.ValidateUser%2A> gerará um <xref:System.Net.WebException>. Nesse caso, o método `ValidateUsingCredentialsProvider` exibe uma mensagem de aviso e pergunta se o usuário deseja tentar novamente no modo offline. Essa funcionalidade exige o recurso **Salvar o hash de senha localmente para habilitar o logon offline** descrito em [Como: configurar serviços de aplicativo cliente](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md). Esse recurso é habilitado por padrão para novos projetos.  
+     Esse método passa cadeias de caracteres vazias para o método `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType>, que faz com que a caixa de diálogo Logon apareça. Se o serviço de autenticação não estiver disponível, o método <xref:System.Web.Security.Membership.ValidateUser%2A> gerará um <xref:System.Net.WebException>. Nesse caso, o método `ValidateUsingCredentialsProvider` exibe uma mensagem de aviso e pergunta se o usuário deseja tentar novamente no modo offline. Essa funcionalidade exige o recurso **Salvar o hash de senha localmente para habilitar o logon offline** descrito em [Como: configurar serviços de aplicativo cliente](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md). Esse recurso é habilitado por padrão para novos projetos.  
   
      Se o usuário não for validado, o método `ValidateUsingCredentialsProvider` exibirá uma mensagem de erro e sairá do aplicativo. Por fim, esse método retorna o resultado da tentativa de autenticação.  
   
-     [!code-csharp[ClientApplicationServices#020](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#020)]  [!code-vb[ClientApplicationServices#020](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#020)]  
+     [!code-csharp[ClientApplicationServices#020](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#020)]
+     [!code-vb[ClientApplicationServices#020](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#020)]  
   
 ### <a name="creating-a-login-form"></a>Criação de um formulário de logon  
  Um provedor de credenciais é uma classe que implementa a interface <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider>. Essa interface tem um único método chamado <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> que retorna um objeto <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials>. Os procedimentos a seguir descrevem como criar uma caixa de diálogo de logon que implementa <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> para exibir a si próprio e retornar as credenciais especificadas pelo usuário.  
@@ -379,20 +384,22 @@ Este tópico descreve como criar um aplicativo do Windows que usa serviços de a
   
      Esse código chama o método `DisplayButtonForManagerRole` que você adicionará na próxima etapa.  
   
-     [!code-csharp[ClientApplicationServices#012](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#012)]  [!code-vb[ClientApplicationServices#012](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#012)]  
+     [!code-csharp[ClientApplicationServices#012](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#012)]
+     [!code-vb[ClientApplicationServices#012](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#012)]  
   
 5.  Adicione o seguinte método ao final da classe Form1.  
   
-     Esse método chama o método <xref:System.Security.Principal.IPrincipal.IsInRole%2A> do <xref:System.Security.Principal.IPrincipal> retornado pela propriedade `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=fullName>. Para aplicativos configurados para usar serviços de aplicativos cliente, essa propriedade retorna um <xref:System.Web.ClientServices.ClientRolePrincipal>. Como essa classe implementa a interface <xref:System.Security.Principal.IPrincipal>, você não precisa referenciá-la explicitamente.  
+     Esse método chama o método <xref:System.Security.Principal.IPrincipal.IsInRole%2A> do <xref:System.Security.Principal.IPrincipal> retornado pela propriedade `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType>. Para aplicativos configurados para usar serviços de aplicativos cliente, essa propriedade retorna um <xref:System.Web.ClientServices.ClientRolePrincipal>. Como essa classe implementa a interface <xref:System.Security.Principal.IPrincipal>, você não precisa referenciá-la explicitamente.  
   
      Se o usuário está na função “manager”, o método `DisplayButtonForManagerRole` define a propriedade <xref:System.Windows.Forms.Control.Visible%2A> do `managerOnlyButton` para `true`. Esse método também exibe uma mensagem de erro se uma <xref:System.Net.WebException> for gerada, o que indica que o serviço de funções está indisponível.  
   
     > [!NOTE]
-    >  O método <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> sempre retornará `false` se o logon do usuário tiver expirado. Isso não ocorrerá se o aplicativo chamar o método <xref:System.Security.Principal.IPrincipal.IsInRole%2A> uma vez logo depois da autenticação, conforme mostrado no código de exemplo para essa explicação passo a passo. Se seu aplicativo precisar recuperar funções de usuário em outros momentos, convém adicionar código para revalidar usuários cujo logon tiver expirado. Se todos os usuários válidos forem atribuídos às funções, você poderá determinar se o logon expirou chamando o método <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=fullName>. Se nenhuma função tiver sido retornada, isso significará que o logon expirou. Para ver um exemplo dessa funcionalidade, consulte o método <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A>. Essa funcionalidade somente será necessária se você tiver selecionado **Exigir que os usuários façam logon novamente sempre que o cookie de servidor expirar** na configuração do aplicativo. Para obter mais informações, consulte [Como configurar serviços de aplicativo cliente](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
+    >  O método <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> sempre retornará `false` se o logon do usuário tiver expirado. Isso não ocorrerá se o aplicativo chamar o método <xref:System.Security.Principal.IPrincipal.IsInRole%2A> uma vez logo depois da autenticação, conforme mostrado no código de exemplo para essa explicação passo a passo. Se seu aplicativo precisar recuperar funções de usuário em outros momentos, convém adicionar código para revalidar usuários cujo logon tiver expirado. Se todos os usuários válidos forem atribuídos às funções, você poderá determinar se o logon expirou chamando o método <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=nameWithType>. Se nenhuma função tiver sido retornada, isso significará que o logon expirou. Para ver um exemplo dessa funcionalidade, consulte o método <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A>. Essa funcionalidade somente será necessária se você tiver selecionado **Exigir que os usuários façam logon novamente sempre que o cookie de servidor expirar** na configuração do aplicativo. Para obter mais informações, consulte [Como configurar serviços de aplicativo cliente](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
   
-     [!code-csharp[ClientApplicationServices#030](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#030)]  [!code-vb[ClientApplicationServices#030](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#030)]  
+     [!code-csharp[ClientApplicationServices#030](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#030)]
+     [!code-vb[ClientApplicationServices#030](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#030)]  
   
- Se a autenticação for bem-sucedida, o provedor de autenticação do cliente definirá a propriedade <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=fullName> para uma instância da classe <xref:System.Web.ClientServices.ClientRolePrincipal>. Essa classe implementa o método <xref:System.Security.Principal.IPrincipal.IsInRole%2A> para que o trabalho seja delegado ao provedor de função configurado. Como vimos antes, o código do seu aplicativo não exige uma referência direta para o provedor de serviço.  
+ Se a autenticação for bem-sucedida, o provedor de autenticação do cliente definirá a propriedade <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> para uma instância da classe <xref:System.Web.ClientServices.ClientRolePrincipal>. Essa classe implementa o método <xref:System.Security.Principal.IPrincipal.IsInRole%2A> para que o trabalho seja delegado ao provedor de função configurado. Como vimos antes, o código do seu aplicativo não exige uma referência direta para o provedor de serviço.  
   
  Agora você pode executar o aplicativo e fazer logon como funcionário para ver que o botão não aparece e, em seguida, fazer logon como gerente para ver o botão.  
   
@@ -425,18 +432,21 @@ Este tópico descreve como criar um aplicativo do Windows que usa serviços de a
   
      Esse código chama o método `BindWebSettingsTestTextBox` que você adicionará na próxima etapa.  
   
-     [!code-csharp[ClientApplicationServices#013](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#013)]  [!code-vb[ClientApplicationServices#013](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#013)]  
+     [!code-csharp[ClientApplicationServices#013](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#013)]
+     [!code-vb[ClientApplicationServices#013](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#013)]  
   
 9. Adicione o seguinte método ao final da classe Form1.  
   
      Este método associa a propriedade <xref:System.Windows.Forms.TextBox.Text%2A> do `webSettingsTestTextBox` para a propriedade `WebSettingsTestText` da classe `Settings` gerada anteriormente neste procedimento. Esse método também exibe uma mensagem de erro se uma <xref:System.Net.WebException> for gerada, o que indica que o serviço de configurações da Web está indisponível.  
   
-     [!code-csharp[ClientApplicationServices#040](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#040)]   [!code-vb[ClientApplicationServices#040](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#040)]  
+     [!code-csharp[ClientApplicationServices#040](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#040)]
+     [!code-vb[ClientApplicationServices#040](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#040)]  
   
     > [!NOTE]
     >  Normalmente você usará associação de dados para habilitar a comunicação bidirecional automática entre um controle e uma configuração da Web. No entanto, você também pode acessar as configurações da Web diretamente como mostrado no exemplo a seguir:  
   
-     [!code-csharp[ClientApplicationServices#322](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#322)]   [!code-vb[ClientApplicationServices#322](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#322)]  
+     [!code-csharp[ClientApplicationServices#322](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#322)]
+     [!code-vb[ClientApplicationServices#322](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#322)]  
   
 10. No designer, selecione o formulário e, em seguida, na janela **Propriedades**, clique no botão **Eventos**.  
   
@@ -444,19 +454,21 @@ Este tópico descreve como criar um aplicativo do Windows que usa serviços de a
   
 12. Substitua o método gerado pelo código a seguir.  
   
-     O manipulador de eventos <xref:System.Windows.Forms.Form.FormClosing> chama o método `SaveSettings`, que também é usado pela funcionalidade logoff que você adicionará na próxima seção. O método `SaveSettings` primeiro confirma que o usuário não fez logoff. Ele faz isso verificando a propriedade <xref:System.Security.Principal.IIdentity.AuthenticationType%2A> do <xref:System.Security.Principal.IIdentity> retornado pela entidade atual. A entidade atual é recuperada por meio da propriedade `static` <xref:System.Threading.Thread.CurrentPrincipal%2A>. Se o usuário tiver sido autenticado para serviços de aplicativo cliente, o tipo de autenticação será "ClientForms". O método `SaveSettings` não pode apenas verificar a propriedade <xref:System.Security.Principal.IIdentity.IsAuthenticated%2A?displayProperty=fullName> porque o usuário pode ter uma identidade válida do Windows após o logoff.  
+     O manipulador de eventos <xref:System.Windows.Forms.Form.FormClosing> chama o método `SaveSettings`, que também é usado pela funcionalidade logoff que você adicionará na próxima seção. O método `SaveSettings` primeiro confirma que o usuário não fez logoff. Ele faz isso verificando a propriedade <xref:System.Security.Principal.IIdentity.AuthenticationType%2A> do <xref:System.Security.Principal.IIdentity> retornado pela entidade atual. A entidade atual é recuperada por meio da propriedade `static` <xref:System.Threading.Thread.CurrentPrincipal%2A>. Se o usuário tiver sido autenticado para serviços de aplicativo cliente, o tipo de autenticação será "ClientForms". O método `SaveSettings` não pode apenas verificar a propriedade <xref:System.Security.Principal.IIdentity.IsAuthenticated%2A?displayProperty=nameWithType> porque o usuário pode ter uma identidade válida do Windows após o logoff.  
   
      Se o usuário não tiver feito logoff, o método `SaveSettings` chamará o método <xref:System.Configuration.ApplicationSettingsBase.Save%2A> da classe `Settings` gerada anteriormente neste procedimento. Esse método poderá gerar um <xref:System.Net.WebException> se o cookie de autenticação tiver expirado. Isso ocorrerá somente se você tiver selecionado **Exigir que os usuários façam logon novamente sempre que o cookie de servidor expirar** na configuração do aplicativo. Para obter mais informações, consulte [Como configurar serviços de aplicativo cliente](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md). O método `SaveSettings` trata a expiração do cookie chamando <xref:System.Web.Security.Membership.ValidateUser%2A> para exibir a caixa de diálogo de logon. Se o usuário fizer logon com êxito, o método `SaveSettings` tentará salvar as configurações novamente chamando a si mesmo.  
   
      Como no código anterior, o método `SaveSettings` exibirá uma mensagem de erro se o serviço remoto não estiver disponível. Se o provedor de configurações não puder acessar o serviço remoto, as configurações ainda serão salvas no cache local e recarregadas quando o aplicativo for reiniciado.  
   
-     [!code-csharp[ClientApplicationServices#050](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#050)]  [!code-vb[ClientApplicationServices#050](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#050)]  
+     [!code-csharp[ClientApplicationServices#050](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#050)]
+     [!code-vb[ClientApplicationServices#050](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#050)]  
   
 13. Adicione o seguinte método ao final da classe Form1.  
   
-     Esse código manipula o evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved?displayProperty=fullName> e exibe um aviso se não for possível salvar alguma configuração. O evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> não ocorrerá se o serviço configurações não estiver disponível ou se o cookie de autenticação tiver expirado. Um exemplo de quando o evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> ocorre é quando o usuário já fez logoff. Você pode testar este manipulador de eventos adicionando código de logoff ao método `SaveSettings` diretamente antes da chamada do método <xref:System.Configuration.ApplicationSettingsBase.Save%2A>. O código de logoff que você pode usar está descrito na próxima seção.  
+     Esse código manipula o evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved?displayProperty=nameWithType> e exibe um aviso se não for possível salvar alguma configuração. O evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> não ocorrerá se o serviço configurações não estiver disponível ou se o cookie de autenticação tiver expirado. Um exemplo de quando o evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> ocorre é quando o usuário já fez logoff. Você pode testar este manipulador de eventos adicionando código de logoff ao método `SaveSettings` diretamente antes da chamada do método <xref:System.Configuration.ApplicationSettingsBase.Save%2A>. O código de logoff que você pode usar está descrito na próxima seção.  
   
-     [!code-csharp[ClientApplicationServices#090](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#090)]  [!code-vb[ClientApplicationServices#090](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#090)]  
+     [!code-csharp[ClientApplicationServices#090](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#090)]
+     [!code-vb[ClientApplicationServices#090](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#090)]  
   
 14. Para C#, adicione o código a seguir ao final do método `Form1_Load`. Esse código associa o método que você adicionou na etapa anterior com o evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved>.  
   
@@ -479,16 +491,17 @@ Este tópico descreve como criar um aplicativo do Windows que usa serviços de a
   
 4.  Substitua o método `logoutButton_Click` gerado pelo código a seguir.  
   
-     Esse manipulador de eventos primeiro chama o método `SaveSettings` que você adicionou na seção anterior. Em seguida, o manipulador de eventos chama o método <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A?displayProperty=fullName>. Se o serviço de autenticação não estiver disponível, o método <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A> gerará um <xref:System.Net.WebException>. Nesse caso, o método `logoutButton_Click` exibe uma mensagem de aviso e muda temporariamente para o modo offline para desconectar o usuário. O modo offline será descrito na próxima seção.  
+     Esse manipulador de eventos primeiro chama o método `SaveSettings` que você adicionou na seção anterior. Em seguida, o manipulador de eventos chama o método <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A?displayProperty=nameWithType>. Se o serviço de autenticação não estiver disponível, o método <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A> gerará um <xref:System.Net.WebException>. Nesse caso, o método `logoutButton_Click` exibe uma mensagem de aviso e muda temporariamente para o modo offline para desconectar o usuário. O modo offline será descrito na próxima seção.  
   
      O logoff exclui o cookie de autenticação local para que o logon seja necessário quando o aplicativo for reiniciado. Após o logoff, o manipulador de eventos reinicia o aplicativo. Quando o aplicativo for reiniciado, ele exibirá a mensagem de boas-vindas seguida pela caixa de diálogo de logon. A mensagem de boas-vindas deixa claro que o aplicativo foi reiniciado. Isso evitará confusão se o usuário precisar fazer logon para salvar as configurações e, em seguida, precisar fazer logon novamente porque o aplicativo foi reiniciado.  
   
-     [!code-csharp[ClientApplicationServices#070](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#070)]  [!code-vb[ClientApplicationServices#070](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#070)]  
+     [!code-csharp[ClientApplicationServices#070](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#070)]
+     [!code-vb[ClientApplicationServices#070](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#070)]  
   
  Para testar a funcionalidade de logoff, execute o aplicativo e selecione **Lembrar-me** na caixa de diálogo de logon. Em seguida, feche e reinicie o aplicativo para confirmar que você não precisa mais fazer logon. Finalmente, reinicie o aplicativo clicando em logoff.  
   
 ## <a name="enabling-offline-mode"></a>Como habilitar o modo offline  
- No procedimento a seguir, você adiciona uma caixa de seleção ao formulário para permitir que o usuário entre no modo offline. Seu aplicativo indica o modo offline, definindo a propriedade `static` <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A?displayProperty=fullName> para `true`. O status offline é armazenado no disco rígido local no local indicado pela propriedade <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=fullName>. Isso significa que o status offline é armazenado de acordo com o usuário e o aplicativo.  
+ No procedimento a seguir, você adiciona uma caixa de seleção ao formulário para permitir que o usuário entre no modo offline. Seu aplicativo indica o modo offline, definindo a propriedade `static` <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A?displayProperty=nameWithType> para `true`. O status offline é armazenado no disco rígido local no local indicado pela propriedade <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>. Isso significa que o status offline é armazenado de acordo com o usuário e o aplicativo.  
   
  No modo offline, todas as solicitações de serviço de aplicativos cliente recuperam dados do cache local em vez de tentar acessar os serviços. Na configuração padrão, os dados locais incluem um formato criptografado da senha do usuário. Isso permite que o usuário faça logon enquanto o aplicativo estiver no modo offline. Para obter mais informações, consulte [Como configurar serviços de aplicativo cliente](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
   
@@ -506,18 +519,20 @@ Este tópico descreve como criar um aplicativo do Windows que usa serviços de a
   
 6.  Substitua o método gerado pelo código a seguir.  
   
-     Esse código atualiza o valor <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> e revalida silenciosamente o usuário quando eles retornarem ao modo online. O método <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A?displayProperty=fullName> usa as credenciais armazenadas em cache para que o usuário não precise entrar explicitamente. Se o serviço de autenticação não estiver disponível, será exibida uma mensagem de aviso e o aplicativo permanecerá offline.  
+     Esse código atualiza o valor <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> e revalida silenciosamente o usuário quando eles retornarem ao modo online. O método <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A?displayProperty=nameWithType> usa as credenciais armazenadas em cache para que o usuário não precise entrar explicitamente. Se o serviço de autenticação não estiver disponível, será exibida uma mensagem de aviso e o aplicativo permanecerá offline.  
   
     > [!NOTE]
     >  O método <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A> é apenas para conveniência. Como ele não tem um valor de retorno, não é possível indicar se a revalidação falhou. A revalidação pode falhar, por exemplo, se as credenciais do usuário tiverem sido alteradas no servidor. Nesse caso, você talvez queira incluir o código que valida usuários explicitamente após uma chamada de serviço falhar. Para saber mais, confira a seção Acesso às configurações da Web, anteriormente neste passo a passo.  
   
      Após revalidação, esse código salva as alterações às configurações locais da Web chamando o método `SaveSettings` que você adicionou anteriormente. Ele então recupera os novos valores no servidor chamando o método <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> da classe `Settings` do projeto (acessada como `Properties.Settings.Default` no C# e `My.Settings` em [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
   
-     [!code-csharp[ClientApplicationServices#080](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#080)]  [!code-vb[ClientApplicationServices#080](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#080)]  
+     [!code-csharp[ClientApplicationServices#080](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#080)]
+     [!code-vb[ClientApplicationServices#080](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#080)]  
   
 7.  Adicione o seguinte código ao final do método `Form1_Load` para ter certeza de que a caixa de seleção exibe o estado atual da conexão.  
   
-     [!code-csharp[ClientApplicationServices#014](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#014)]  [!code-vb[ClientApplicationServices#014](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#014)]  
+     [!code-csharp[ClientApplicationServices#014](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#014)]
+     [!code-vb[ClientApplicationServices#014](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#014)]  
   
  Isso conclui o aplicativo de exemplo. Para testar o recurso offline, execute o aplicativo, faça logon como funcionário ou gerente e, em seguida, selecione **Trabalhar offline**. Modifique o valor na caixa de texto e, em seguida, feche o aplicativo. Reinicialize o aplicativo. Antes de fazer logon, clique com o botão direito no ícone do ASP.NET Development Server na área de notificação da barra de tarefas e, em seguida, clique em **Parar**. Em seguida, faça logon normalmente. Mesmo quando o servidor não estiver em execução, você ainda poderá fazer logon. Modifique o valor da caixa de texto, saia e reinicie para ver o valor modificado.  
   
@@ -530,10 +545,9 @@ Este tópico descreve como criar um aplicativo do Windows que usa serviços de a
  Para aumentar a segurança do seu aplicativo, teste o aplicativo e o servidor completamente antes da implantação.  
   
 ## <a name="see-also"></a>Consulte também  
- [Serviços de aplicativo cliente](../../../docs/framework/common-client-technologies/client-application-services.md)   
- [Visão geral dos serviços de aplicativo cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md)   
- [Como configurar serviços de aplicativo cliente](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)   
- [Ferramenta de Administração de Site do ASP.NET](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)   
- [Criação e configuração do banco de dados de serviços de aplicativo para o SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)   
+ [Serviços de aplicativos cliente](../../../docs/framework/common-client-technologies/client-application-services.md)  
+ [Visão geral dos serviços de aplicativos cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
+ [Como configurar serviços de aplicativo cliente](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
+ [Ferramenta de administração de Site da Web do ASP.NET](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
+ [Criando e configurando o banco de dados dos serviços de aplicativos para o SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
  [Instruções passo a passo: uso de serviços de aplicativo do ASP.NET](http://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)
-

@@ -1,12 +1,9 @@
 ---
 title: "Expressões lambda (Guia de Programação em C#)"
-ms.date: 2017-03-03
+ms.date: 03/03/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - lambda expressions [C#]
 - outer variables [C#]
@@ -14,30 +11,14 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 9127cc5404fb85356f01cac26aa7b03a8ccd70da
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c952c72d9108775fbd0f824f82cacdab5ba91d09
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Expressões lambda (Guia de Programação em C#)
 Uma expressão lambda é uma [função anônima](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) que você pode usar para criar [delegados](../../../csharp/programming-guide/delegates/using-delegates.md) ou tipos de [árvore de expressão](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b). Ao usar expressões lambda, você pode escrever funções locais que podem ser passadas como argumentos ou retornadas como o valor de chamadas de função. Expressões lambda são particularmente úteis para escrever expressões de consulta LINQ.  
@@ -74,7 +55,7 @@ namespace ConsoleApplication1
   
  Lambdas são usadas em consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] baseadas em métodos como argumentos para métodos de operador de consulta padrão como <xref:System.Linq.Enumerable.Where%2A>.  
   
- Quando você usa a sintaxe baseada em método para chamar o método <xref:System.Linq.Enumerable.Where%2A> na classe <xref:System.Linq.Enumerable> (assim como você faz em [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para objetos e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]) o parâmetro é um tipo delegado <xref:System.Func%602?displayProperty=fullName>. Uma expressão lambda é a maneira mais conveniente de criar esse delegado. Quando você chama o mesmo método, por exemplo, na classe <xref:System.Linq.Queryable?displayProperty=fullName> (como faz em [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]), o tipo de parâmetro é uma <xref:System.Linq.Expressions.Expression?displayProperty=fullName><Func\>, em que Func é qualquer delegado Func com até 16 parâmetros de entrada. Novamente, uma expressão lambda é apenas uma maneira muito concisa de construir essa árvore de expressão. Os lambdas permitem que chamadas `Where` pareçam semelhantes embora, na verdade, o tipo de objeto criado do lambda seja diferente.  
+ Quando você usa a sintaxe baseada em método para chamar o método <xref:System.Linq.Enumerable.Where%2A> na classe <xref:System.Linq.Enumerable> (assim como você faz em [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para objetos e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]) o parâmetro é um tipo delegado <xref:System.Func%602?displayProperty=nameWithType>. Uma expressão lambda é a maneira mais conveniente de criar esse delegado. Quando você chama o mesmo método, por exemplo, na classe <xref:System.Linq.Queryable?displayProperty=nameWithType> (como faz em [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]), o tipo de parâmetro é uma <xref:System.Linq.Expressions.Expression?displayProperty=nameWithType><Func\>, em que Func é qualquer delegado Func com até 16 parâmetros de entrada. Novamente, uma expressão lambda é apenas uma maneira muito concisa de construir essa árvore de expressão. Os lambdas permitem que chamadas `Where` pareçam semelhantes embora, na verdade, o tipo de objeto criado do lambda seja diferente.  
   
  No exemplo anterior, observe que a assinatura do delegado tem um parâmetro de entrada implícito inserido do tipo `int` e retorna um `int`. A expressão lambda pode ser convertida como um delegado desse tipo porque também tem um parâmetro de entrada (`x`) e um valor de retorno que o compilador pode converter implicitamente no tipo `int`. (A inferência de tipos é discutida em mais detalhes nas seções a seguir.) Quando o delegado for chamado usando um parâmetro de entrada 5, ele retornará 25 como resultado.  
   
@@ -296,11 +277,10 @@ class Test
  [Expressões lambda, eventos e delegados](http://go.microsoft.com/fwlink/?LinkId=195395) em [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](http://go.microsoft.com/fwlink/?LinkId=195369)  
   
 ## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [LINQ (Consulta Integrada à Linguagem)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)   
- [Métodos Anônimos](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)   
- [is](../../../csharp/language-reference/keywords/is.md)   
- [Árvores de Expressão](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)   
- [Exemplos de C# do Visual Studio 2008 (veja arquivos de exemplo de consultas LINQ e programa XQuery)](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)   
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [LINQ (Consulta Integrada à Linguagem)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [Métodos anônimos](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
+ [is](../../../csharp/language-reference/keywords/is.md)  
+ [Árvores de Expressão](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
+ [Visual Studio 2008 amostras c# (Consulte exemplos de consultas LINQ arquivos e programas do XQuery)](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
  [Expressões lambda recursivas](http://go.microsoft.com/fwlink/?LinkId=112395)
-

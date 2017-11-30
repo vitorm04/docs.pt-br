@@ -6,12 +6,11 @@ ms.author: johalex
 ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
+ms.openlocfilehash: 16a72edde39e4857dbdfb400f195deb9975f993c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 84f1eaf5fbfcdf8d1dd1b90545f9236e2daedd15
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Pré-requisitos para .NET Core no Windows
 
@@ -39,9 +38,9 @@ Consulte [Versões de sistema operacional com suporte pelo .NET Core 1.x](https:
 
 ## <a name="net-core-dependencies"></a>Dependências do .NET Core
 
-O .NET Core requer os Pacotes Redistribuíveis do Visual C++ durante a execução em versões do Windows anteriores ao Windows 10 e Windows Server 2016. Essa dependência é instalada automaticamente pelo instalador do .NET Core.
+.NET core 1.1 e anterior requer o Visual C++ redistribuível quando executado em versões do Windows anteriores ao Windows 10 e Windows Server 2016. Essa dependência é instalada automaticamente pelo instalador do .NET Core.
 
-A [Atualização 3 dos Pacotes Redistribuíveis do Microsoft Visual C++ 2015](https://www.microsoft.com/en-us/download/details.aspx?id=52685) deve ser instalada manualmente ao:
+A [Atualização 3 dos Pacotes Redistribuíveis do Microsoft Visual C++ 2015](https://www.microsoft.com/download/details.aspx?id=52685) deve ser instalada manualmente ao:
 
    * Instalar o .NET Core com o [script do instalador](./tools/dotnet-install-script.md).
    * Implantar um aplicativo .NET Core autocontido.
@@ -95,4 +94,3 @@ Para desenvolver aplicativos .NET Core 1.x no Visual Studio, [baixe e instale o 
      > * Na caixa de diálogo **Sobre o Microsoft Visual Studio**, verifique o número de versão.
 >     * Para aplicativos .NET Core 2.x, o Visual Studio 2017 versão 15.3 (26730.01) ou superior.
 >     * Para aplicativos .NET Core 1.x, o Visual Studio 2017 versão 15.0 (26228.04) ou superior.
-

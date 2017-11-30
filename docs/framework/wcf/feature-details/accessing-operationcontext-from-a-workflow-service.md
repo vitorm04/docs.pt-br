@@ -13,14 +13,14 @@ caps.latest.revision: "9"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 11a6a1efad59ba5b9f3a143277909b63a5fe5e05
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.openlocfilehash: 3d18626412c0a6233c8792a4f19d5d05ef083333
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="accessing-operationcontext-from-a-workflow-service"></a>Acessando OperationContext por meio de um serviço de fluxo de trabalho
-Para acessar o <xref:System.ServiceModel.OperationContext> dentro de um serviço de fluxo de trabalho, você deve implementar o <xref:System.ServiceModel.Activities.IReceiveMessageCallback> interface em uma propriedade personalizada de execução. Substituir o <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage%2A> System.Activities.ExecutionProperties)?qualifyHint=False & no upgrade automático = True método que é passado uma referência para o <xref:System.ServiceModel.OperationContext>. Este tópico o guiará através de implementar essa propriedade de execução para recuperar um cabeçalho personalizado, bem como uma atividade personalizada que será superficial essa propriedade como o <xref:System.ServiceModel.Activities.Receive> em tempo de execução.  A atividade personalizada implementará o mesmo comportamento que um <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` atividade, exceto que, quando um <xref:System.ServiceModel.Activities.Receive> é colocado dentro do elemento, o <xref:System.ServiceModel.Activities.IReceiveMessageCallback> será chamado e o <xref:System.ServiceModel.OperationContext> informações serão recuperadas.  Este tópico também mostra como acessar o cliente <xref:System.ServiceModel.OperationContext> para adicionar cabeçalhos de saída por meio de <xref:System.ServiceModel.Activities.ISendMessageCallback> interface.  
+Para acessar o <xref:System.ServiceModel.OperationContext> dentro de um serviço de fluxo de trabalho, você deve implementar o <xref:System.ServiceModel.Activities.IReceiveMessageCallback> interface em uma propriedade personalizada de execução. Substituir o <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> método que é passado uma referência para o <xref:System.ServiceModel.OperationContext>. Este tópico o guiará através de implementar essa propriedade de execução para recuperar um cabeçalho personalizado, bem como uma atividade personalizada que será superficial essa propriedade como o <xref:System.ServiceModel.Activities.Receive> em tempo de execução.  A atividade personalizada implementará o mesmo comportamento que um <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` atividade, exceto que, quando um <xref:System.ServiceModel.Activities.Receive> é colocado dentro do elemento, o <xref:System.ServiceModel.Activities.IReceiveMessageCallback> será chamado e o <xref:System.ServiceModel.OperationContext> informações serão recuperadas.  Este tópico também mostra como acessar o cliente <xref:System.ServiceModel.OperationContext> para adicionar cabeçalhos de saída por meio de <xref:System.ServiceModel.Activities.ISendMessageCallback> interface.  
   
 ### <a name="implement-the-service-side-ireceivemessagecallback"></a>Implementar o IReceiveMessageCallback no lado do serviço  
   

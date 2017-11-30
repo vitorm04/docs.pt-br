@@ -12,16 +12,16 @@ caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 5dd488a01e00af0661ee7ee110c79d2c56a0b777
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: aacc20bf483877ac501fd8b35c04f6e3f9311afb
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="using-the-invokemethod-activity"></a>Usando a atividade de InvokeMethod
 Este exemplo demonstra como usar o <!--zz <xref:System.Activities.Statements.InvokeMethod%601> --> [ <code>System.Activities.Statements.InvokeMethod\`1</code> ](https://msdn.microsoft.com/library/dd647677.aspx) atividade invocar métodos públicos em classes públicas. O <!--zz <xref:System.Activities.Statements.InvokeMethod%601> --> [ <code>System.Activities.Statements.InvokeMethod\`1</code> ](https://msdn.microsoft.com/library/dd647677.aspx) atividade permite que um fluxo de trabalho chamar métodos em objetos, passar parâmetros, obter o valor de retorno, especificar tipos de métodos genéricos e especificar se o método é síncrono ou assíncrono. 
   
- Há uma versão não genérica do <xref:System.Activities.Statements.InvokeMethod> atividade em que o valor de retorno é definido como o <xref:System.Activities.Statements.InvokeMethod.Result%2A> propriedade e uma versão genérica do <!--zz <xref:System.Activities.Statements.InvokeMethod%601> --> [ <code>System.Activities.Statements.InvokeMethod\`1</code> ](https://msdn.microsoft.com/library/dd647677.aspx) em que o valor de retorno é retornado de atividade por meio de <!--zz <xref:System.Activities.Statements.InvokeMethod.Result%601.Result%2A> --> [ <code>System.Activities.Statements.InvokeMethod\`1.Result</code> ](https://msdn.microsoft.com/library/dd987724.aspx) propriedade do tipo `TResult`.  
+Há uma versão não genérica do <xref:System.Activities.Statements.InvokeMethod> atividade em que o valor de retorno é definido como o <xref:System.Activities.Statements.InvokeMethod.Result%2A> propriedade e uma versão genérica do <!--zz <xref:System.Activities.Statements.InvokeMethod%601> --> [ <code>System.Activities.Statements.InvokeMethod\`1</code> ](https://msdn.microsoft.com/library/dd647677.aspx) em que o valor de retorno é retornado de atividade por meio de <!--zz <xref:System.Activities.Statements.InvokeMethod.Result%601.Result%2A> --> [ <code>System.Activities.Statements.InvokeMethod\`1.Result</code> ](https://msdn.microsoft.com/library/dd987724.aspx) propriedade do tipo `TResult`. 
   
  Este exemplo demonstra como chamar vários tipos de método. A lista a seguir detalha os tipos de método demonstrado no exemplo:  
   
@@ -62,6 +62,4 @@ Este exemplo demonstra como usar o <!--zz <xref:System.Activities.Statements.Inv
 >   
 >  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InvokeMethod`  
-  
-## <a name="see-also"></a>Consulte também
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InvokeMethod`

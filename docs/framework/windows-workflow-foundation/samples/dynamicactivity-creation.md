@@ -12,11 +12,11 @@ caps.latest.revision: "14"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 4a579606bd3ee9d3f11669d59c6e7c9767b6eaf4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.openlocfilehash: 02dc1dfda28aae15889c0239f2913a8240869a76
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="dynamicactivity-creation"></a>Criação de DynamicActivity
 Este exemplo demonstra duas maneiras diferentes para criar uma atividade em tempo de execução usando a atividade de <xref:System.Activities.DynamicActivity> .  
@@ -154,6 +154,4 @@ Console.WriteLine("The average calculated using the code activity is = " + resul
 >   
 >  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\DynamicActivity\DynamicActivityCreation`  
-  
-## <a name="see-also"></a>Consulte também
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\DynamicActivity\DynamicActivityCreation`

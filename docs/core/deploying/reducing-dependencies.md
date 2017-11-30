@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 916251e3-87f9-4eee-81ec-94076215e6fa
+ms.openlocfilehash: e09b6f9124ec7614ab2e847d686435d74b00b336
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 23d83f0402e35bc4bed31ef59a6fff0e28e01d35
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="reducing-package-dependencies-with-projectjson"></a>Reduzindo as dependências de pacote com o project.json
 
 Este artigo aborda o que você precisa saber sobre como reduzir suas dependências de pacote ao criar bibliotecas `project.json`. No final deste artigo, você aprenderá como compor sua biblioteca de forma que ela usa apenas as dependências necessárias. 
@@ -32,11 +30,12 @@ No entanto, há uma boa chance de que a biblioteca não use todos os pacotes que
 Atualmente, não há nenhum comando `dotnet` oficial para cortar as referências de pacote.  Em vez disso, você terá que fazê-lo manualmente.  O processo geral é semelhante ao seguinte:
 
 1. Faça referência à `NETStandard.Library` versão `1.6.0` em uma seção `dependencies` de seu `project.json`.
-2. Restaure os pacotes com `dotnet restore` da linha de comando.
+2. Restaurar os pacotes com `dotnet restore` ([consulte a Observação](#dotnet-restore-note)) na linha de comando.
 3. Inspecione o arquivo `project.lock.json` e localize a seção `NETSTandard.Library`.  Ele estará perto do início do arquivo.
 4. Copie todos os pacotes listados em `dependencies`.
 5. Remova a referência `.NETStandard.Library` e substitua-a pelos pacotes copiados.
 6. Remova as referências aos pacotes que não são necessários.
+
 
 Você pode descobrir quais pacotes não são necessários das seguintes maneiras:
 
@@ -61,7 +60,7 @@ Para cortar essa biblioteca, você deve começar com o arquivo `project.json` e 
 }
 ```
 
-Em seguida, restaure os pacotes com `dotnet restore`, inspecione o arquivo `project.lock.json` e localize todos os pacotes restaurados para `NETSTandard.Library`.
+Em seguida, você restaura os pacotes com `dotnet restore` ([consulte a Observação](#dotnet-restore-note)), inspecione o `project.lock.json` de arquivos e localizar todos os pacotes restaurados para `NETSTandard.Library`.
 
 Veja como a seção relevante no arquivo `project.lock.json` se parece ao redirecionar para `netstandard1.0`:
 
@@ -158,3 +157,5 @@ Veja como um pacote cortado pareceria:
 
 Agora, ele tem uma superfície menor do que se tivesse dependentes no metapacote `NETStandard.Library`.
 
+<a name="dotnet-restore-note"></a>
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

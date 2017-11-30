@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Windows Runtime Metadata Export Tool
 - Winmdexp.exe
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 4571d7576bc81432c87e0371ae0b6df3261f5f08
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cf7698a068408b909174e69bde95bec4fdef8cd4
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Ferramenta de Exportação de Metadados do Windows Runtime )
 A Ferramenta de Exportação dos Metadados [!INCLUDE[wrt](../../../includes/wrt-md.md)] (Winmdexp.exe) transforma um módulo do .NET Framework em um arquivo que contém metadados [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Embora os assemblies do .NET Framework e os arquivos de metadados [!INCLUDE[wrt](../../../includes/wrt-md.md)] usem o mesmo formato físico, existem diferenças no conteúdo das tabelas de metadados, o que significa que os assemblies do .NET Framework não são automaticamente úteis como Componentes [!INCLUDE[wrt](../../../includes/wrt-md.md)]. O processo de transformar um módulo do .NET Framework em um componente [!INCLUDE[wrt](../../../includes/wrt-md.md)] é conhecido como *exportação*. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e no [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], o arquivo de metadados do Windows (.winmd) resultante contém metadados e implementação.  
@@ -48,7 +41,7 @@ winmdexp [options] winmdmodule
   
 |Argumento ou opção|Descrição|  
 |------------------------|-----------------|  
-|`winmdmodule`|Especifica o módulo (.winmdobj) a ser exportado. Somente um módulo é permitido. Para criar esse módulo, use a opção do compilador `/target` com o destino `winmdobj`. Consulte See [/target:winmdobj (Opções do compilador de C#)](~/docs/csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) ou [/target (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/target.md) na Biblioteca MSDN.|  
+|`winmdmodule`|Especifica o módulo (.winmdobj) a ser exportado. Somente um módulo é permitido. Para criar esse módulo, use a opção do compilador `/target` com o destino `winmdobj`. Consulte [/target: winmdobj (opções do compilador c#)](~/docs/csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) ou [/target (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/target.md).|  
 |`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Especifica o arquivo da documentação XML de saída que Winmdexp.exe produzirá. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], o arquivo de saída é basicamente igual ao arquivo de documentação XML da entrada.|  
 |`/moduledoc:` `docfile`<br /><br /> `/md:` `docfile`|Especifica o nome do arquivo de documentação XML que o compilador produziu com `winmdmodule`.|  
 |`/modulepdb:` `symbolfile`<br /><br /> `/mp:` `symbolfile`|Especifica o nome do arquivo PDB (banco de dados do programa) que contém símbolos para `winmdmodule`.|  
@@ -66,8 +59,7 @@ winmdexp [options] winmdmodule
  Ao gravar um aplicativo [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] ou um componente [!INCLUDE[wrt](../../../includes/wrt-md.md)] com C# ou Visual Basic, o .NET Framework dá suporte para deixar a programação com o [!INCLUDE[wrt](../../../includes/wrt-md.md)] mais natural. Isso é abordado no artigo [Suporte do .NET Framework para Aplicativos da Windows Store e do Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md). No processo, alguns tipos [!INCLUDE[wrt](../../../includes/wrt-md.md)] mais usados são mapeados para tipos do .NET Framework. Winmdexp.exe reverte esse processo e produz uma superfície de API que usa os tipos [!INCLUDE[wrt](../../../includes/wrt-md.md)] correspondentes. Por exemplo, tipos construídos com base na interface <xref:System.Collections.Generic.IList%601> são mapeados para tipos construídos com base na interface [!INCLUDE[wrt](../../../includes/wrt-md.md)][IVector\<T>](http://go.microsoft.com/fwlink/p/?LinkId=251132).  
   
 ## <a name="see-also"></a>Consulte também  
- [Suporte do .NET Framework para Aplicativos da Windows Store e Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)   
- [Criando Componentes do Windows Runtime no C# e no Visual Basic](http://go.microsoft.com/fwlink/p/?LinkID=238313)   
- [Mensagens de erro Winmdexp.exe](../../../docs/framework/tools/winmdexp-exe-error-messages.md)   
+ [Suporte do .NET Framework para Aplicativos da Windows Store e Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
+ [Criando componentes de tempo de execução do Windows em c# e Visual Basic](http://go.microsoft.com/fwlink/p/?LinkID=238313)  
+ [Mensagens de erro do winmdexp.exe](../../../docs/framework/tools/winmdexp-exe-error-messages.md)  
  [Ferramentas de build, implantação e configuração (.NET Framework)](http://msdn.microsoft.com/en-us/b8c921be-6012-4181-b8d4-ab15813fc9a7)
-

@@ -1,41 +1,22 @@
 ---
 title: "long (Referência de C#)"
-ms.date: 2017-03-14
+ms.date: 03/14/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - long_CSharpKeyword
 - long
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- long keyword [C#]
+helpviewer_keywords: long keyword [C#]
 ms.assetid: f9b24319-1f39-48be-a42b-d528ee28a7fd
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 7f18bed80550b293195961fd9d42491dd571cbaf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5f7d2d6a3d5781b4e120b8399c7206d4429dd98e
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="long-c-reference"></a>long (Referência de C#)
 
@@ -43,7 +24,7 @@ ms.lasthandoff: 07/28/2017
   
 |Tipo|Intervalo|Tamanho|Tipo do .NET Framework|  
 |----------|-----------|----------|-------------------------|  
-|`long`|-9.223.372.036.854.775.808 a 9.223.372.036.854.775.807|Inteiro de 64 bits com sinal|<xref:System.Int64?displayProperty=fullName>|  
+|`long`|-9.223.372.036.854.775.808 a 9.223.372.036.854.775.807|Inteiro de 64 bits com sinal|<xref:System.Int64?displayProperty=nameWithType>|  
   
 ## <a name="literals"></a>Literais 
 
@@ -51,14 +32,18 @@ Você pode declarar e inicializar uma variável `long` atribuindo um literal dec
 
 No exemplo a seguir, inteiros iguais a 4.294.967.296 representados como literais decimais, hexadecimais e binários são atribuídos a valores `long`.  
   
-[!code-cs[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Long)]  
+[!code-csharp[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Long)]  
 
 > [!NOTE] 
 > Use o prefixo `0x` ou `0X` para indicar um literal hexadecimal e o prefixo `0b` ou `0B` para indicar um literal binário. Literais decimais não têm nenhum prefixo. 
 
-Começando com o C# 7, você também pode usar o caractere de sublinhado, `_`, como um separador de dígitos para melhorar a legibilidade, como o exemplo a seguir mostra.
+Iniciando com o c# 7, alguns recursos foram adicionados melhorar a legibilidade. 
+ - C# 7.0 permite o uso do caractere de sublinhado, `_`, como um separador de dígito.
+ - 7.2 c# permite `_` a ser usado como separador de dígito de um literal binário ou hexadecimal, após o prefixo. Um literal decimal não pode ter um sublinhado à esquerda.
 
-[!code-cs[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
+Alguns exemplos são mostrados abaixo.
+
+[!code-csharp[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
  
  Literais inteiros também podem incluir um sufixo que indica o tipo. O sufixo `L` indica um `long`. O exemplo a seguir usa o sufixo `L` para indicar um inteiro longo:
  
@@ -122,12 +107,11 @@ long y = (long)3.0;   // OK: explicit conversion
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Int64>   
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Tabela de Tipos Integrais](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [Tabela de Tipos Internos](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
+ <xref:System.Int64>  
+ [Referência de C#](../../../csharp/language-reference/index.md)  
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
+ [Tabela de tipos integrais](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [Tabela de tipos internos](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
  [Tabela de conversões numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-

@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - type libraries [.NET Framework], importing
 - importing type library
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - type libraries
 - converting type definitions
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: e87568cc6ac86e7bdc24fd7e31f5b8c3ed260c88
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a4b0505ccd193b4fa3868953d3f07f8ba8cc5946
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (Importador de Biblioteca de Tipos)
 O Importador da Biblioteca de Tipos converte as definições de tipo encontradas dentro de uma biblioteca de tipos COM em definições equivalentes em um assembly do Common Language Runtime. A saída de Tlbimp.exe é um arquivo binário (um assembly) que contém os metadados do tempo de execução para os tipos definidos na biblioteca de tipos original. É possível examinar esse arquivo com ferramentas como [Ildasm.exe](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).  
@@ -141,13 +134,12 @@ void SomeMethod(out bool x);
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Ferramentas](../../../docs/framework/tools/index.md)   
- [Tlbexp.exe (Exportador da Biblioteca de Tipos)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)   
- [Importando uma biblioteca de tipos como um assembly](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)   
- [Resumo da conversão de bibliotecas de tipos em assemblies](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)   
- [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)   
- [Sn.exe (Ferramenta Nome Forte)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
- [Assemblies de nomes fortes](../../../docs/framework/app-domains/strong-named-assemblies.md)   
- [Atributos para importar bibliotecas de tipos em assemblies de interoperabilidade](http://msdn.microsoft.com/en-us/81e587b8-393f-43e1-9add-c4b05e65cbfd)   
+ [Ferramentas](../../../docs/framework/tools/index.md)  
+ [Tlbexp.exe (Exportador de Biblioteca de Tipos)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
+ [Importando uma biblioteca de tipos como um assembly](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)  
+ [Resumo da conversão de bibliotecas de tipos em assemblies](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
+ [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)  
+ [Sn.exe (Ferramenta Nome Forte)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+ [Assemblies de nomes fortes](../../../docs/framework/app-domains/strong-named-assemblies.md)  
+ [Atributos de importação de bibliotecas de tipo para Assemblies de interoperabilidade](http://msdn.microsoft.com/en-us/81e587b8-393f-43e1-9add-c4b05e65cbfd)  
  [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

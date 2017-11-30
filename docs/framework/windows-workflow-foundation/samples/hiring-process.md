@@ -12,11 +12,11 @@ caps.latest.revision: "13"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: cc095f5db48fd7545deda5413620d5f41ed6b39a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1f9f201e14abdcfb98c33e947428137eca3caeaf
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="hiring-process"></a>Processo de aluguer
 Este exemplo demonstra como implementar um processo enterprise usando as atividades de mensagem e os dois fluxos de trabalho hospedados como serviços de fluxo de trabalho. Esses fluxos de trabalho são parte da infraestrutura de TI de uma empresa fictícia chamada Contoso, Inc.  
@@ -242,6 +242,4 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
   
 1.  Exclua o armazenamento da instância do SQL Server em execução Cleanup.bat, localizado na pasta de DbSetup.  
   
-2.  Exclua o formulário de origem seu disco rígido.  
-  
-## <a name="see-also"></a>Consulte também
+2.  Exclua o formulário de origem seu disco rígido.

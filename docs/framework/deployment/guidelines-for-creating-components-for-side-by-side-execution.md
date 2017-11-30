@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - side-by-side execution, multiple application versions
 - side-by-side execution, multiple component versions
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 054744612ec54861f675005a27a309e00024b242
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 246cd565cd9ab981a993fcbee588783ec4e4e8fb
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Diretrizes para criação de componentes para execução lado a lado
 Siga estas diretrizes gerais para criar aplicativos gerenciados ou componentes projetados para execução lado a lado:  
@@ -78,6 +71,5 @@ Siga estas diretrizes gerais para criar aplicativos gerenciados ou componentes p
  A [ferramenta Cache de Assembly Global (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) permite que você substitua um assembly quando apenas o número de versão do arquivo é mais recente. O instalador geralmente não instala em um assembly, a menos que o número de versão do assembly seja maior.  
   
 ## <a name="see-also"></a>Consulte também  
- [Execução lado a lado](../../../docs/framework/deployment/side-by-side-execution.md)   
+ [Execução lado a lado](../../../docs/framework/deployment/side-by-side-execution.md)  
  [Como habilitar e desabilitar o redirecionamento automático de associações](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
-

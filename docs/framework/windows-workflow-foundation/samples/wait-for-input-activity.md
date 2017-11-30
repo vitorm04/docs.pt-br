@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: d4e9df410f5f8e6c95baa5ce5fdc9b2d339a190f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 145a71ff7d1ca07112ab91aa46ec4efb10429713
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="wait-for-input-activity"></a>Espera para atividades de entrada
 Este exemplo demonstra como criar indicadores nomeados em um fluxo de trabalho. [!INCLUDE[wf](../../../../includes/wf-md.md)] não fornece uma atividade para criar declarativa do indexador. Portanto, quando você deseja criar um indexador no fluxo de trabalho, você deve escrever uma atividade personalizado que o criar. A atividade de `WaitForInput` definida neste exemplo fornece essa funcionalidade, de modo que os usuários podem criar indicadores declarativamente dentro de um fluxo de trabalho.  
@@ -68,6 +68,4 @@ Este exemplo demonstra como criar indicadores nomeados em um fluxo de trabalho. 
 >   
 >  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\WaitForInput`  
-  
-## <a name="see-also"></a>Consulte também
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\WaitForInput`

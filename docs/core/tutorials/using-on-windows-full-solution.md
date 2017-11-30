@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: ba7e082c-a7c8-431e-a342-f67734b660f6
+ms.openlocfilehash: 694201c1a2a2c373f62b0e0d8e3c1d8aa7e6e881
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6b164198f5fbbae5ebc6164fc281dd7de8172b70
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>Compilar uma solução completa do .NET Core no Windows usando o Visual Studio 2017
 
 O Visual Studio 2017 fornece um ambiente de desenvolvimento completo para desenvolver aplicativos .NET Core. Os procedimentos deste documento descrevem as etapas necessárias para criar uma solução típica do .NET Core que inclui bibliotecas reutilizáveis, testes e o uso de bibliotecas de terceiros. 
@@ -29,7 +27,7 @@ Siga as instruções na [nossa página de pré-requisitos](../windows-prerequisi
 
 ### <a name="writing-the-library"></a>Escrevendo a biblioteca
 
-1. No Visual Studio, escolha **Arquivo**, **Novo** e **Projeto**. Na caixa de diálogo **Novo Projeto**, expanda o nó **Visual C#**, escolha o nó **.NET Core** e escolha **Biblioteca de Classes (.NET Standard)**. 
+1. No Visual Studio, escolha **Arquivo**, **Novo** e **Projeto**. No **novo projeto** caixa de diálogo, expanda o **Visual C#** nó e escolha o **.NET padrão** nó e, em seguida, escolha **biblioteca de classes (.NET Standard)**. 
 
 2. Nomeie o projeto como “Biblioteca” e a solução como “Dourada”. Deixe **Criar diretório para a solução** marcado. Clique em **OK**.
 
@@ -81,4 +79,3 @@ Siga as instruções na [nossa página de pré-requisitos](../windows-prerequisi
 9. Pressione F5 para executar o aplicativo.
 
    O aplicativo deve ser compilado sem erros e deve atingir o ponto de interrupção. Você também deve ser capaz de verificar se o aplicativo gera a saída "A resposta é 42".
-

@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: fa65be2eee481e20231bacb5d0861fa3d2c03f92
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5ad204e06868b21ac6f37bbdf02d29670a284496
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="in-process-side-by-side-execution"></a>Execução lado a lado em processo
 Desde o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], você pode usar a hospedagem lado a lado em processos para executar várias versões do CLR (Common Language Runtime) em um único processo. Por padrão, os componentes COM gerenciados são executados com a versão do .NET Framework com a qual eles foram criados, independentemente da versão do .NET Framework carregada para o processo.  
@@ -47,7 +40,7 @@ Desde o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], você po
   
 -   **Desenvolvedores de aplicativos**. A hospedagem lado a lado quase não tem efeito sobre os desenvolvedores de aplicativos. Por padrão, os aplicativos sempre são executados na versão do .NET Framework em que foram criados, isso não mudou. No entanto, os desenvolvedores podem substituir esse comportamento e direcionar o aplicativo para ser executado em uma versão mais recente do .NET Framework (consulte o [cenário 2](#scenarios)).  
   
--   **Desenvolvedores de bibliotecas e consumidores**. A hospedagem lado a lado não resolve os problemas de compatibilidade que os desenvolvedores de bibliotecas enfrentam. Uma biblioteca que é carregada diretamente por um aplicativo, por meio de uma referência direta ou uma chamada <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>, continua a usar o tempo de execução do <xref:System.AppDomain> em que foi carregada. Você deve testar suas bibliotecas em todas as versões do .NET Framework para as quais você deseja dar suporte. Se um aplicativo for compilado usando o tempo de execução [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], mas incluir uma biblioteca que foi criada usando um tempo de execução anterior, essa biblioteca usará o tempo de execução [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] também. No entanto, se você tiver um aplicativo que foi criado usando um tempo de execução mais recente e a biblioteca que foi criada usando o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], será necessário forçar o aplicativo a também usar o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (consulte o [cenário 3](#scenarios)).  
+-   **Desenvolvedores de bibliotecas e consumidores**. A hospedagem lado a lado não resolve os problemas de compatibilidade que os desenvolvedores de bibliotecas enfrentam. Uma biblioteca que é carregada diretamente por um aplicativo, por meio de uma referência direta ou uma chamada <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, continua a usar o tempo de execução do <xref:System.AppDomain> em que foi carregada. Você deve testar suas bibliotecas em todas as versões do .NET Framework para as quais você deseja dar suporte. Se um aplicativo for compilado usando o tempo de execução [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], mas incluir uma biblioteca que foi criada usando um tempo de execução anterior, essa biblioteca usará o tempo de execução [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] também. No entanto, se você tiver um aplicativo que foi criado usando um tempo de execução mais recente e a biblioteca que foi criada usando o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], será necessário forçar o aplicativo a também usar o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (consulte o [cenário 3](#scenarios)).  
   
 -   **Desenvolvedores de componente COM gerenciado**. No passado, componentes COM gerenciados eram executados automaticamente usando a versão mais recente do tempo de execução instalado no computador. Agora você pode executar componentes COM na versão do tempo de execução em que eles foram criados.  
   
@@ -189,6 +182,5 @@ int _tmain(int argc, _TCHAR* argv[])
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Elemento \<startup>](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)   
+ [\<inicialização > elemento](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
  Elemento [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
-

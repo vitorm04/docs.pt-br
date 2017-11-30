@@ -12,11 +12,11 @@ caps.latest.revision: "8"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: b5fc8834fb72163a615633d81232e25768683278
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 085c52d94db5af12a022fa353a80d69534bfe219
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="transaction-convoy-scope"></a>Escopo de trem de transação
 Este exemplo demonstra como criar um padrão paralelo de atividade de mensagem de trem em conjunto com <xref:System.ServiceModel.Activities.TransactedReceiveScope> para modelar um protocolo onde um número de operações podem ocorrer em qualquer ordem todo na mesma transação. Este exemplo também demonstra como <xref:System.ServiceModel.Activities.TransactedReceiveScope> automaticamente cria uma nova quando uma transação não é fluído para o servidor, portanto o cliente não usa nenhuma transações.  
@@ -50,6 +50,4 @@ Este exemplo demonstra como criar um padrão paralelo de atividade de mensagem d
 >   
 >  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactedConvoyScope`  
-  
-## <a name="see-also"></a>Consulte também
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactedConvoyScope`

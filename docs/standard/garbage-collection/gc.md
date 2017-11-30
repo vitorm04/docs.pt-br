@@ -1,22 +1,21 @@
 ---
 title: "Gerenciamento automático de memória e coleta de lixo"
-description: "Gerenciamento automático de memória e coleta de lixo"
+description: "Saiba como automático gerenciamento é um dos serviços que o Common Language Runtime fornece durante a execução do gerenciado de memória."
 keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
+author: dotnet-bot
+ms.author: dotnetcontent
 ms.date: 07/22/2016
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: d095b0b6-2454-4e23-80b4-c9e8a447116c
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 36423ac3248b14a9bb95611d5997d06b927fa88e
-ms.lasthandoff: 03/02/2017
-
+ms.openlocfilehash: 30bcf08ebb4e05706d5b25e2f805474dd1ee428e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="automatic-memory-management-and-garbage-collection"></a>Gerenciamento automático de memória e coleta de lixo
 
 O gerenciamento automático de memória é um dos serviços que o Common Language Runtime fornece durante a execução gerenciada. O coletor de lixo do Common Language Runtime gerencia a alocação e a liberação de memória para um aplicativo. Para desenvolvedores, isso significa que você não tem que escrever código para executar tarefas de gerenciamento de memória quando desenvolver aplicativos gerenciados. O gerenciamento automático de memória pode eliminar problemas comuns, como esquecer de liberar um objeto e causar um vazamento de memória ou tentar acessar a memória de um objeto que já tinha sido liberado. Esta seção descreve como o coletor de lixo aloca e libera memória.
@@ -31,7 +30,7 @@ A alocação memória com base no heap gerenciado é mais rápida do que a aloca
 
 O mecanismo de otimização do coletor de lixo determina o melhor momento para executar uma coleta com base nas alocações que estão sendo feitas. Quando o coletor de lixo executa uma coleta, ele libera a memória dos objetos que não estão mais sendo usados pelo aplicativo. Ele determina quais objetos não estão mais sendo usados examinando as raízes do aplicativo. Cada aplicativo tem um conjunto de raízes. Cada raiz refere-se a um objeto no heap gerenciado ou é definida como nula. As raízes de um aplicativo incluem campos estáticos, variáveis locais e parâmetros na pilha de um thread, além de registros de CPU. O coletor de lixo tem acesso à lista de raízes ativas mantidas pelo tempo de execução e pelo compilador JIT (just-in-time). Usando essa lista, ele examina as raízes de um aplicativo e, no processo, cria um gráfico que contém todos os objetos que possam ser alcançados nas raízes.
 
-Objetos que não estão no gráfico são inacessíveis nas raízes do aplicativo. O coletor de lixo considera lixo os objetos inacessíveis e liberará a memória alocada para eles. Durante uma coleta, o coletor de lixo examina o heap gerenciado, procurando os blocos de espaço de endereço ocupados por objetos inacessíveis. Na medida em que descobre cada objeto inacessível, ele usa uma função de cópia de memória para compactar os objetos acessíveis na memória, liberando os blocos de espaços de endereço alocados para objetos inacessíveis. Uma vez que a memória dos objetos acessíveis tenha sido compactada, o coletor de lixo faz as correções necessárias no ponteiro de forma que as raízes do aplicativo apontem para os objetos em seus novos locais. Ele também posiciona o ponteiro do heap gerenciado após o último objeto acessível. Observe que memória é compactada somente se uma coleta descobre um número significativo de objetos inacessíveis. Se todos os objetos no heap gerenciado sobrevivem a uma coleta, não há necessidade de compactação de memória.
+Objetos que não estão no gráfico são inacessíveis a partir das raízes do aplicativo. O coletor de lixo considera lixo os objetos inacessíveis e liberará a memória alocada para eles. Durante uma coleta, o coletor de lixo examina o heap gerenciado, procurando os blocos de espaço de endereço ocupados por objetos inacessíveis. Na medida em que descobre cada objeto inacessível, ele usa uma função de cópia de memória para compactar os objetos acessíveis na memória, liberando os blocos de espaços de endereço alocados para objetos inacessíveis. Uma vez que a memória dos objetos acessíveis tenha sido compactada, o coletor de lixo faz as correções necessárias no ponteiro de forma que as raízes do aplicativo apontem para os objetos em seus novos locais. Ele também posiciona o ponteiro do heap gerenciado após o último objeto acessível. Observe que memória é compactada somente se uma coleta descobre um número significativo de objetos inacessíveis. Se todos os objetos no heap gerenciado sobrevivem a uma coleta, não há necessidade de compactação de memória.
 
 Para melhorar o desempenho, o tempo de execução aloca memória para objetos grandes em um heap separado. O coletor de lixo automaticamente libera a memória para objetos grandes. No entanto, para evitar mover objetos grandes na memória, essa memória não é compactada.
 
@@ -56,5 +55,4 @@ Para a maioria dos objetos que seu aplicativo cria, você pode confiar no coleto
 [System.GC](xref:System.GC)
 
 [Coleta de lixo no .NET](index.md)
-
 

@@ -1,45 +1,27 @@
 ---
 title: "Como usar as Funcionalidades da Documentação XML (Guia de Programação em C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: eb647a275a5cd5fac2316706591440d9792861b3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: eeee77db523bc0ad97f425d4ba8076ae5740dfe8
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-use-the-xml-documentation-features-c-programming-guide"></a>Como usar as Funcionalidades da Documentação XML (Guia de Programação em C#)
 O exemplo a seguir fornece uma visão geral básica de um tipo que foi documentado.  
   
 ## <a name="example"></a>Exemplo  
- [!code-cs[csProgGuideDocComments#15](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/how-to-use-the-xml-documentation-features_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#15](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/how-to-use-the-xml-documentation-features_1.cs)]  
   
  **// Este arquivo .xml foi gerado com o exemplo de código anterior.**  
 **\<?xml version="1.0"?>**  
@@ -52,7 +34,7 @@ O exemplo a seguir fornece uma visão geral básica de um tipo que foi documenta
  **\<summary>**  
  **A documentação de resumo de nível fica aqui. \</summary>**  
  **\<remarks>**  
- **Comentários mais longos podem ser associados a um tipo ou membro**   
+ **Mais comentários podem ser associados um tipo ou membro**  
  **por meio da marca de comentário\</remarks>**  
  **\</member>**  
  **\<nome do membro="F:SomeClass.m_Name">**  
@@ -60,14 +42,14 @@ O exemplo a seguir fornece uma visão geral básica de um tipo que foi documenta
  **Repositório para a propriedade de nome\</summary>**  
  **\</member>**  
  **\<nome do membro="M:SomeClass.#ctor">**  
- **\<summary>O construtor de classe.\</summary>**   
+ **\<Resumo > o construtor da classe.  \< /summary >**  
  **\</member>**  
  **\<nome do membro="M:SomeClass.SomeMethod(System.String)">**  
  **\<summary>**  
  **Descrição de SomeMethod.\</summary>**  
  **\<nome do parâmetro="s"> A descrição do parâmetro para s fica aqui\</param>**  
  **\<seealso cref="T:System.String">**  
- **Você pode usar o atributo cref em qualquer marca para fazer referência a um tipo ou membro**   
+ **Você pode usar o atributo cref em qualquer marca para fazer referência a um tipo ou membro**  
  **e o compilador verificará se a referência existe. \</seealso>**  
  **\</member>**  
  **\<nome do membro="M:SomeClass.SomeOtherMethod">**  
@@ -116,7 +98,6 @@ O exemplo a seguir fornece uma visão geral básica de um tipo que foi documenta
         >  O arquivo XML não fornece informações completas sobre o tipo e os membros (por exemplo, ele não contém nenhuma informação de tipo). Para obter informações completas sobre um tipo ou membro, o arquivo de documentação deve ser usado com a reflexão no membro ou tipo real.  
   
 ## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [/doc (Opções do compilador C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)   
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [/doc (opções do compilador c#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
  [Comentários da documentação XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
-

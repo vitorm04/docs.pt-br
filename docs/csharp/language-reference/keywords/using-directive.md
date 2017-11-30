@@ -1,38 +1,19 @@
 ---
 title: "Diretiva using (Referência de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- using directive [C#]
+helpviewer_keywords: using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 02c50b1e7a54d776985b60570c898e7d0739c44c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1129efd8a1c4058a9648eab61f98cdcef7e9f2f7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-directive-c-reference"></a>Diretiva using (Referência de C#)
 A diretiva `using` tem três usos:  
@@ -81,15 +62,15 @@ class Program
   
  Crie uma diretiva `using` para usar os tipos em um namespace sem precisar especificar o namespace. Uma diretiva `using` não fornece acesso a nenhum namespace aninhado no namespace especificado.  
   
- Os namespaces vêm em duas categorias: definidos pelo usuário e definidos pelo sistema. Os namespaces definidos pelo usuário são namespaces definidos em seu código. Para obter uma lista dos namespaces definidos pelo sistema, consulte [Biblioteca de classes .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195).  
+ Os namespaces vêm em duas categorias: definidos pelo usuário e definidos pelo sistema. Os namespaces definidos pelo usuário são namespaces definidos em seu código. Para obter uma lista de namespaces definidos pelo sistema, consulte [visão geral da biblioteca de classes .NET Framework](../../../standard/class-library-overview.md).  
   
- Para obter exemplos de referência a métodos em outros assemblies, consulte [Criando e usando DLLs do C#](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).  
+ Para obter exemplos em métodos em outros assemblies de referência, consulte [criar e usar Assemblies usando a linha de comando](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   
 ## <a name="example-1"></a>Exemplo 1  
   
  O exemplo a seguir mostra como definir e usar um alias de `using` para um namespace:  
   
- [!code-cs[csrefKeywordsNamespace#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_1.cs)]  
+ [!code-csharp[csrefKeywordsNamespace#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_1.cs)]  
   
  Uma diretiva alias de using não pode ter um tipo genérico aberto no lado direito. Por exemplo, você não pode criar um alias de using para uma List\<T>, mas pode criar um para uma List\<int>.  
   
@@ -97,17 +78,16 @@ class Program
   
  O exemplo a seguir mostra como definir uma diretiva `using` e um alias `using` para uma classe:  
   
- [!code-cs[csrefKeywordsNamespace#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_2.cs)]  
+ [!code-csharp[csrefKeywordsNamespace#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_2.cs)]  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Usando namespaces](../../../csharp/programming-guide/namespaces/using-namespaces.md)   
- [Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Palavras-chave de namespace](../../../csharp/language-reference/keywords/namespace-keywords.md)   
- [Namespaces](../../../csharp/programming-guide/namespaces/index.md)   
+ [Referência de C#](../../../csharp/language-reference/index.md)  
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Usando namespaces](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
+ [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
+ [Palavras-chave de namespace](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+ [Namespaces](../../../csharp/programming-guide/namespaces/index.md)  
  [Instrução using](../../../csharp/language-reference/keywords/using-statement.md)
-

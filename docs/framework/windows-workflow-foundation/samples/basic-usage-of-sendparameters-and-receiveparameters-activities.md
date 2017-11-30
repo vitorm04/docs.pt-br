@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 9c3b6f189f1a2564662af89961c9363f025ae8c3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: a45e04c4368406255736312503e19de95ed12150
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="basic-usage-of-sendparameters-and-receiveparameters-activities"></a>Uso básico de atividades de SendParameters e de ReceiveParameters
 Este exemplo mostra o uso de <xref:System.ServiceModel.Activities.SendParametersContent> e de atividades de <xref:System.ServiceModel.Activities.ReceiveParametersContent> . O serviço expõe uma operação que recebe um argumento de cadeia de caracteres e ecoa a entrada de volta para o cliente. O exemplo a seguir mostra como configurar parâmetros para essas atividades de mensagem.  
@@ -38,6 +38,4 @@ Este exemplo mostra o uso de <xref:System.ServiceModel.Activities.SendParameters
   
 3.  Segundo, executam EchoWorkflowClient aplicativo gerado em [] do diretório da solução EchoWorkflowClient \ \ bin \ debug.  
   
-4.  O cliente chama a operação de eco no serviço e imprime os resultados. Quando completo, pressione ENTER para sair do cliente e o serviço.  
-  
-## <a name="see-also"></a>Consulte também
+4.  O cliente chama a operação de eco no serviço e imprime os resultados. Quando completo, pressione ENTER para sair do cliente e o serviço.

@@ -4,17 +4,16 @@ description: Encontre recursos para aprender a criar aplicativos .NET Core no Wi
 keywords: .NET, .NET Core
 author: johalex
 ms.author: johalex
-ms.date: 08/14/2017
+ms.date: 09/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
+ms.openlocfilehash: 45b361a40148c287511fafe25de4000c1dd54102
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 1f016b73a375c5ab63bba28accf57c5572d581c8
-ms.openlocfilehash: 694800954134888a511a90f069f55004bb2a2dce
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="get-started-with-net-core"></a>Introdução ao .NET Core
 
@@ -38,21 +37,14 @@ Consulte o tópico de [Desenvolvimento de pré-requisitos para o Windows](window
 
 ## <a name="linux"></a>Linux
 
-Instale o .NET Core na sua distribuição/versão:
-
-* [Red Hat Enterprise Linux 7](https://www.microsoft.com/net/core#linuxredhat)
-* [Ubuntu 14.04, 16.04, 16.10, 17.04 e Linux Mint 17, 18](https://www.microsoft.com/net/core#linuxubuntu)
-* [Debian 8.2+, 8.7+, 9](https://www.microsoft.com/net/core#linuxdebian)
-* [Fedora 24, 25, 26](https://www.microsoft.com/net/core#linuxfedora)
-* [CentOS 7.1 e Oracle Linux 7.1](https://www.microsoft.com/net/core#linuxcentos)
-* [SLES (SUSE Enterprise Linux ) 12 SP2, openSUSE 42.1, 42.2](https://www.microsoft.com/net/core#linuxopensuse)
+Instalar o .NET Core em [Linux](https://www.microsoft.com/net/core#linuxredhat).
 
 Você pode começar a desenvolver aplicativos .NET Core seguindo estes tutoriais passo a passo.
 
 * [Introdução ao .NET Core usando a linha de comando](tutorials/using-with-xplat-cli.md) -Use qualquer editor de código com a [CLI (Interface de Linha de Comando) de plataforma cruzada do .NET Core](tools/index.md).
 * [Introdução ao Visual Studio Code com o C# e o .NET Core em Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) – Esse vídeo do [Channel9](https://channel9.msdn.com) mostra como instalar e usar o [Visual Studio Code](https://code.visualstudio.com/), o editor de código leve para várias plataformas da Microsoft, para você criar seu primeiro aplicativo de console no .NET Core, em Ubuntu 14.04.
 
-O .NET Core tem suporte nas distribuições e versões do Linux listadas acima nos links de instalação.
+Consulte o [pré-requisitos para desenvolvimento Linux](linux-prerequisites.md) tópico para obter uma lista das distribuições de Linux e versões com suporte.
 
 ## <a name="os-x--macos"></a>OS X / macOS
 
@@ -67,4 +59,3 @@ Você pode começar a desenvolver aplicativos .NET Core seguindo estes tutoriais
 * [Compilar uma solução completa do .NET Core no macOS usando o Visual Studio para Mac](tutorials/using-on-mac-vs-full-solution.md) - Este tutorial mostra como compilar uma solução completa do .NET Core que inclui uma biblioteca reutilizável e testes de unidade.
 
 Consulte o tópico [Prerequisites for macOS development](macos-prerequisites.md) (Desenvolvimento de pré-requisitos para macOS) para ver uma lista das versões do OS X/macOS com suporte.
-

@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 4424a947-bdf9-4775-8d48-dc350a4e0aee
+ms.openlocfilehash: b0d4082d020da782b334a5b3999905f7de744e64
+ms.sourcegitcommit: 5d0e069655439984862a835f400058b7e8bbadc6
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7f31aeb3c07a75059a4f8cd9392dcea31eb5bf41
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/28/2017
 ---
-
 # <a name="how-to-manage-package-dependency-versions-for-net-core-10"></a>Como gerenciar versões de dependência de pacote para o .NET Core 1.0
 
 Esse artigo aborda o que você precisa saber sobre as versões do pacote para seus aplicativos e bibliotecas .NET Core.
@@ -51,7 +49,7 @@ Para restaurar os pacotes de forma confiável e escrever código com segurança,
 
 ### <a name="why-does-this-matter"></a>Por que isso importa?
 
-Asseguramos que, se você corrigir suas dependências para aquelas fornecidas junto com o .NET Core 1.0, os pacotes sempre funcionarão juntos.  Essa garantia não existe se você usar pacotes que não são corrigidos dessa maneira.
+Garantimos que se você corrigir as suas dependências para o que vem junto com o .NET Core 1.0, esses pacotes serão todas funcionam em conjunto. Essa garantia não existe se você usar pacotes que não são corrigidos dessa maneira.
 
 ### <a name="scenarios"></a>Cenários
 
@@ -59,11 +57,11 @@ Embora haja uma grande lista de todos os pacotes e suas versões lançadas com o
 
 **Você tem somente dependências de** `NETStandard.Library`**?**
 
-Se assim, você deve corrigir o pacote `NETStandard.Library` para a versão `1.6`.  Como esse é um metapacote auxiliar, o fechamento do seu pacote também é corrigido para 1.0.
+Se assim, você deve corrigir o `NETStandard.Library` pacote para a versão `1.6`.  Como esse é um metapacote auxiliar, o fechamento do seu pacote também é corrigido para 1.0.
 
 **Você tem somente dependências de** `Microsoft.NETCore.App`**?**
 
-Se assim, você deve corrigir o pacote `Microsoft.NETCore.App` para a versão `1.0.0`.  Como esse é um metapacote auxiliar, o fechamento do seu pacote também é corrigido para 1.0.
+Se assim, você deve corrigir o `Microsoft.NETCore.App` pacote para a versão `1.0.0`.  Como esse é um metapacote auxiliar, o fechamento do seu pacote também é corrigido para 1.0.
 
 **Você está [cortando](../deploying/reducing-dependencies.md) as dependências do seu metapacote**  `NETStandard.Library` **ou** `Microsoft.NETCore.App` **?**
 
@@ -86,4 +84,3 @@ Você pode ter adotado um padrão de controle de versão que usa uma cadeia de c
 [Lista de todos os pacotes de tempo de execução e suas versões para 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/release/1.0.0/LKG_Packages.txt).
 
 [Lista de todos os pacotes de aplicativo do .NET Core e suas versões para 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/core-setup/release/1.0.0/Latest_Packages.txt).
-

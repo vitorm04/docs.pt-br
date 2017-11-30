@@ -12,11 +12,11 @@ caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 6d1e2738e8cdb546a1dcbb00689e5b4c360ddd04
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: b90ab7e38f40cb515166d4d08e0316ffb9061be3
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="operationscope"></a>OperationScope
 Este exemplo demonstra como as atividades, <xref:System.ServiceModel.Activities.Receive> e <xref:System.ServiceModel.Activities.SendReply> de mensagens podem ser usados para expor uma atividade personalizado existente como uma operação em um serviço de fluxo de trabalho. Este exemplo inclui uma nova atividade personalizado chamada `OperationScope`. Se destina a tornar o desenvolvimento de um serviço de fluxo de trabalho permitir que os usuários criarem o corpo das operações separadamente como atividades personalizados e então facilmente expostos como as operações de serviço usando a atividade de `OperationScope` . Por exemplo, uma atividade personalizado de `Add` que aceita dois argumentos e retornos de `in` um argumento de `out` pode ser exposta como uma operação de `Add` no serviço de fluxo de trabalho soltando na `OperationScope`.  
@@ -47,6 +47,4 @@ Este exemplo demonstra como as atividades, <xref:System.ServiceModel.Activities.
 >   
 >  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\OperationScope`  
-  
-## <a name="see-also"></a>Consulte também
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\OperationScope`

@@ -1,41 +1,22 @@
 ---
 title: "byte (Referência de C#)"
-ms.date: 2017-03-14
+ms.date: 03/14/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - byte
 - byte_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- byte keyword [C#]
+helpviewer_keywords: byte keyword [C#]
 ms.assetid: 111f1db9-ca32-4f0e-b497-4783517eda47
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 231a491914071b1d43b5a8938e677be531726e75
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8ef7494e2a8a1463d37cff77d1dacebec8182b66
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="byte-c-reference"></a>byte (Referência de C#)
 
@@ -43,22 +24,26 @@ ms.lasthandoff: 07/28/2017
   
 |Tipo|Intervalo|Tamanho|Tipo do .NET Framework|  
 |----------|-----------|----------|-------------------------|  
-|`byte`|0 a 255|Inteiro de 8 bits sem sinal|<xref:System.Byte?displayProperty=fullName>|  
+|`byte`|0 a 255|Inteiro de 8 bits sem sinal|<xref:System.Byte?displayProperty=nameWithType>|  
   
 ## <a name="literals"></a>Literais  
 
- Você pode declarar e inicializar uma variável `byte` atribuindo um literal decimal, um literal hexadecimal ou (começando com C# 7) um literal binário a ela. Se o literal inteiro estiver fora do intervalo de `byte` (ou seja, se for menor que <xref:System.Byte.MinValue?displayProperty=fullName> ou maior que <xref:System.Byte.MaxValue?displayProperty=fullName>), ocorrerá um erro de compilação.
+ Você pode declarar e inicializar uma variável `byte` atribuindo um literal decimal, um literal hexadecimal ou (começando com C# 7) um literal binário a ela. Se o literal inteiro estiver fora do intervalo de `byte` (ou seja, se for menor que <xref:System.Byte.MinValue?displayProperty=nameWithType> ou maior que <xref:System.Byte.MaxValue?displayProperty=nameWithType>), ocorrerá um erro de compilação.
 
 No exemplo a seguir, inteiros iguais a 201 representados como literais decimais, hexadecimais e binários são implicitamente convertidos de valores [int](../../../csharp/language-reference/keywords/int.md) para `byte`.    
   
-[!code-cs[Byte](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Byte)]  
+[!code-csharp[Byte](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Byte)]  
 
 > [!NOTE] 
 > Use o prefixo `0x` ou `0X` para indicar um literal hexadecimal e o prefixo `0b` ou `0B` para indicar um literal binário. Literais decimais não têm nenhum prefixo.
 
-Começando com o C# 7, você também pode usar o caractere de sublinhado, `_`, como um separador de dígitos para melhorar a legibilidade, como o exemplo a seguir mostra.
+Iniciando com o c# 7, alguns recursos foram adicionados melhorar a legibilidade. 
+ - C# 7.0 permite o uso do caractere de sublinhado, `_`, como um separador de dígito.
+ - 7.2 c# permite `_` a ser usado como separador de dígito de um literal binário ou hexadecimal, após o prefixo. Um literal decimal não pode ter um sublinhado à esquerda.
 
-[!code-cs[Byte](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ByteS)]  
+Alguns exemplos são mostrados abaixo.
+
+[!code-csharp[Byte](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ByteS)]  
  
 ## <a name="conversions"></a>Conversões  
  Há uma conversão implícita predefinida de `byte` para [short](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) ou [decimal](../../../csharp/language-reference/keywords/decimal.md).  
@@ -124,12 +109,11 @@ SampleMethod((byte)5);
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Byte>   
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Tabela de Tipos Integrais](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [Tabela de Tipos Internos](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
+ <xref:System.Byte>  
+ [Referência de C#](../../../csharp/language-reference/index.md)  
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
+ [Tabela de tipos integrais](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [Tabela de tipos internos](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
  [Tabela de conversões numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-

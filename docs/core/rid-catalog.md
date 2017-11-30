@@ -6,12 +6,11 @@ ms.author: mairaw
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net-core
+ms.openlocfilehash: 067f9cfc283a14b7ea59a7454b7f593ce6eb5806
+ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
 ms.translationtype: HT
-ms.sourcegitcommit: 2943cc58d29323afb81f1c9ae7fc71b538851186
-ms.openlocfilehash: e1cb22d78ab9a28cbcd28a99b0b44415b5c46a4d
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="net-core-rid-catalog"></a>Catálogo de RIDs do .NET Core
 
@@ -39,7 +38,7 @@ RIDs que representem sistemas operacionais concretos geralmente seguem este padr
 
 - `[architecture]` é a arquitetura do processador. Por exemplo: `x86`, `x64`, `arm` ou `arm64`.
 
-- `[additional qualifiers]` distingue diferentes plataformas. Por exemplo: `aot` ou `corert`.
+- `[additional qualifiers]` distingue diferentes plataformas. Por exemplo `aot` ou `corert`.
 
 ## <a name="rid-graph"></a>Gráfico RID
 
@@ -86,7 +85,7 @@ Há algumas considerações sobre RIDs das quais você precisa se lembrar ao tra
 Para poder usar RIDs, você precisa saber quais RIDs existem. Novos RIDs são adicionados regularmente à plataforma.
 Para obter a versão completa e mais recente, confira o arquivo [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) no repositório CoreFX.
 
-O SDK do .NET Core 2.0 apresenta o conceito de RIDs portáteis. Eles são novos valores adicionados ao gráfico RID que não estão associados a uma versão específica ou distribuição de SO. Eles são particularmente úteis ao lidar com as várias distribuições de Linux.
+O SDK do .NET Core 2.0 apresenta o conceito de RIDs portáteis. Eles são novos valores adicionados ao gráfico RID que não estão associados a uma versão específica ou distribuição de SO. Eles são particularmente úteis ao lidar com várias distribuições de Linux.
 
 A lista a seguir mostra os RIDs mais comuns usados para cada SO. Ela não cobre os valores `arm` ou `corert`.
 
@@ -111,6 +110,8 @@ A lista a seguir mostra os RIDs mais comuns usados para cada SO. Ela não cobre 
   - `win10-x86`
   - `win10-arm`
   - `win10-arm64`
+
+Consulte [pré-requisitos para o .NET Core no Windows](windows-prerequisites.md) para obter mais informações.
 
 ## <a name="linux-rids"></a>RIDs do Linux
 
@@ -164,12 +165,19 @@ A lista a seguir mostra os RIDs mais comuns usados para cada SO. Ela não cobre 
   - `linuxmint.18-x64`
   - `linuxmint.18.1-x64` (.NET Core 2.0 ou versões posteriores)
 
-## <a name="os-x-rids"></a>RIDs do OS X
+Consulte [pré-requisitos para o .NET Core no Linux](linux-prerequisites.md) para obter mais informações.
 
-- `osx-x64` (.NET Core 2.0 ou versões posteriores)
+## <a name="macos-rids"></a>macOS RIDs
+
+macOS RIDs usam a marca de "OSX" mais antigos.
+
+- `osx-x64`(.NET core 2.0 ou versões posteriores, a versão mínima é `osx.10.12-x64`)
 - `osx.10.10-x64`
 - `osx.10.11-x64`
 - `osx.10.12-x64` (.NET Core 1.1 ou versões posteriores)
+- `osx.10.13-x64`
+
+Consulte [pré-requisitos para o .NET Core em macOS](macos-prerequisites.md) para obter mais informações.
 
 ## <a name="android-rids-net-core-20-or-later-versions"></a>RIDs Android (.NET Core 2.0 ou versões posteriores)
 
@@ -177,5 +185,5 @@ A lista a seguir mostra os RIDs mais comuns usados para cada SO. Ela não cobre 
 - `android.21`
 
 ## <a name="see-also"></a>Consulte também
- [IDs de Tempo de Execução](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)
 
+[IDs de Tempo de Execução](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)

@@ -1,27 +1,18 @@
 ---
 title: "Coleções (C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: get-started-article
-dev_langs:
-- CSharp
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4955b3d7048b4dfee23fbcf6eeaed995ebf4f1be
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 26a90b57350837bd51f222ff716364cb3bb902d5
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="collections-c"></a>Coleções (C#)
 Para muitos aplicativos, você desejará criar e gerenciar grupos de objetos relacionados. Há duas maneiras de agrupar objetos: criando matrizes de objetos e criando coleções de objetos.  
@@ -32,7 +23,7 @@ Para muitos aplicativos, você desejará criar e gerenciar grupos de objetos rel
   
  Uma coleção é uma classe, portanto você deve declarar uma instância da classe antes de adicionar elementos a essa coleção.  
   
- Se a coleção contiver elementos de apenas um tipo de dados, você poderá usar uma das classes no namespace <xref:System.Collections.Generic?displayProperty=fullName>. Uma coleção genérica impõe segurança de tipos para que nenhum outro tipo de dados possa ser adicionado a ela. Ao recuperar um elemento de uma coleção genérica, você não precisa determinar seu tipo de dados ou convertê-lo.  
+ Se a coleção contiver elementos de apenas um tipo de dados, você poderá usar uma das classes no namespace <xref:System.Collections.Generic?displayProperty=nameWithType>. Uma coleção genérica impõe segurança de tipos para que nenhum outro tipo de dados possa ser adicionado a ela. Ao recuperar um elemento de uma coleção genérica, você não precisa determinar seu tipo de dados ou convertê-lo.  
   
 > [!NOTE]
 >  Para os exemplos neste tópico, inclua diretivas [using](../../../csharp/language-reference/keywords/using-directive.md) para os namespaces `System.Collections.Generic` e `System.Linq`.  
@@ -195,17 +186,17 @@ public class Galaxy
   
  Algumas das classes de coleção comuns são descritas nesta seção:  
   
--   Classes @System.Collections.Generic  
+-   Classes <xref:System.Collections.Generic>  
   
--   Classes @System.Collections.Concurrent  
+-   Classes <xref:System.Collections.Concurrent>  
   
--   Classes @System.Collections  
+-   Classes <xref:System.Collections>  
   
 <a name="BKMK_Generic"></a>
 ### <a name="systemcollectionsgeneric-classes"></a>Classes System.Collections.Generic  
  Você pode criar uma coleção genérica usando uma das classes no namespace <xref:System.Collections.Generic>. Uma coleção genérica é útil quando cada item na coleção tem o mesmo tipo de dados. Uma coleção genérica impõe tipagem forte, permitindo que apenas o tipo de dados desejado seja adicionado.  
   
- A tabela a seguir lista algumas das classes frequentemente usadas do namespace <xref:System.Collections.Generic?displayProperty=fullName>:  
+ A tabela a seguir lista algumas das classes frequentemente usadas do namespace <xref:System.Collections.Generic?displayProperty=nameWithType>:  
 
 |Classe|Descrição| 
 |---|---|  
@@ -215,21 +206,21 @@ public class Galaxy
 |<xref:System.Collections.Generic.SortedList%602>|Representa uma coleção de pares chave/valor que são classificados por chave com base na implementação de <xref:System.Collections.Generic.IComparer%601> associada.|  
 |<xref:System.Collections.Generic.Stack%601>|Representa uma coleção de objetos UEPS (último a entrar, primeiro a sair).|  
   
- Para obter informações adicionais, consulte [Tipos de coleção comumente usados](../../../standard/collections/commonly-used-collection-types.md), [Selecionando uma classe de coleção](../../../standard/collections/selecting-a-collection-class.md) e @System.Collections.Generic.  
+ Para obter informações adicionais, consulte [Tipos de coleção comumente usados](../../../standard/collections/commonly-used-collection-types.md), [Selecionando uma classe de coleção](../../../standard/collections/selecting-a-collection-class.md) e <xref:System.Collections.Generic>.  
   
 <a name="BKMK_Concurrent"></a>
 ### <a name="systemcollectionsconcurrent-classes"></a>Classes System.Collections.Concurrent  
  No .NET Framework 4 ou mais recente, as coleções no namespace <xref:System.Collections.Concurrent> fornecem operações thread-safe eficientes para acessar itens da coleção de vários threads.  
   
- As classes no namespace <xref:System.Collections.Concurrent> deverão ser usadas em vez dos tipos correspondentes nos namespaces <xref:System.Collections.Generic?displayProperty=fullName> e <xref:System.Collections?displayProperty=fullName> sempre que vários threads estiverem acessando a coleção simultaneamente. Para obter mais informações, veja [Coleções thread-safe](../../../standard/collections/thread-safe/index.md) e <xref:System.Collections.Concurrent>.  
+ As classes no namespace <xref:System.Collections.Concurrent> deverão ser usadas em vez dos tipos correspondentes nos namespaces <xref:System.Collections.Generic?displayProperty=nameWithType> e <xref:System.Collections?displayProperty=nameWithType> sempre que vários threads estiverem acessando a coleção simultaneamente. Para obter mais informações, veja [Coleções thread-safe](../../../standard/collections/thread-safe/index.md) e <xref:System.Collections.Concurrent>.  
   
  Algumas classes incluídas no namespace <xref:System.Collections.Concurrent> são <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601> e <xref:System.Collections.Concurrent.ConcurrentStack%601>.  
   
 <a name="BKMK_Collections"></a>
 ### <a name="systemcollections-classes"></a>Classes System.Collections  
- As classes no namespace <xref:System.Collections?displayProperty=fullName> não armazenam elementos como objetos especificamente tipados, mas como objetos do tipo `Object`.  
+ As classes no namespace <xref:System.Collections?displayProperty=nameWithType> não armazenam elementos como objetos especificamente tipados, mas como objetos do tipo `Object`.  
   
- Sempre que possível, você deve usar as coleções genéricas no namespace <xref:System.Collections.Generic?displayProperty=fullName> ou no <xref:System.Collections.Concurrent> em vez dos tipos herdados no namespace `System.Collections`.  
+ Sempre que possível, você deve usar as coleções genéricas no namespace <xref:System.Collections.Generic?displayProperty=nameWithType> ou no <xref:System.Collections.Concurrent> em vez dos tipos herdados no namespace `System.Collections`.  
   
  A tabela a seguir lista algumas das classes frequentemente usadas no namespace `System.Collections`:  
   
@@ -590,15 +581,14 @@ private static IEnumerable<int> EvenSequence(
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Inicializadores de Objeto e Coleção](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)   
- [Conceitos de programação (C#)](../../../csharp/programming-guide/concepts/index.md)   
- [Instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
- [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)   
- [PLINQ (LINQ paralela)](../../../standard/parallel-programming/parallel-linq-plinq.md)   
- [Coleções e estruturas de dados](../../../standard/collections/index.md)   
- [Criando e manipulando coleções](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)   
- [Selecionando uma classe de coleção](../../../standard/collections/selecting-a-collection-class.md)   
- [Comparações e classificações dentro de coleções](../../../standard/collections/comparisons-and-sorts-within-collections.md)   
- [Quando usar coleções genéricas](../../../standard/collections/when-to-use-generic-collections.md)   
+ [Inicializadores de objeto e coleção](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+ [Conceitos de programação (C#)](../../../csharp/programming-guide/concepts/index.md)  
+ [Instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+ [PLINQ (LINQ paralelo)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
+ [Coleções e Estruturas de Dados](../../../standard/collections/index.md)  
+ [Criação e manipulação de coleções](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)  
+ [Selecionando uma Classe de Coleção](../../../standard/collections/selecting-a-collection-class.md)  
+ [Comparações e Classificações Dentro de Coleções](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
+ [Quando Usar Coleções Genéricas](../../../standard/collections/when-to-use-generic-collections.md)  
  [Como acessar uma classe de coleção com foreach](../../../csharp/programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)
-

@@ -5,24 +5,26 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 52f6b425ae4df138a843c6a790f10f78dc5a2b40
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 67e909a7b64500bba533290061652e82ffde07a5
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>Como definir e executar métodos dinâmicos
 Os procedimentos a seguir mostram como definir e executar um método dinâmico simples e um método dinâmico ligado a uma instância de uma classe. Para obter mais informações sobre métodos dinâmicos, consulte a classe <xref:System.Reflection.Emit.DynamicMethod> e [Cenários de métodos dinâmicos para a emissão de reflexão](http://msdn.microsoft.com/en-us/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e).  
@@ -31,11 +33,15 @@ Os procedimentos a seguir mostram como definir e executar um método dinâmico s
   
 1.  Declare um tipo de delegado para executar o método. Considere usar um delegado genérico para minimizar o número de tipos de delegado que você precisa declarar. O código a seguir declara dois tipos de delegado que podem ser usados para o método `SquareIt` e um deles é genérico.  
   
-     [!code-cpp[DynamicMethodHowTo#2](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#2)]  [!code-csharp[DynamicMethodHowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#2)]  [!code-vb[DynamicMethodHowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#2)]  
+     [!code-cpp[DynamicMethodHowTo#2](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#2)]
+     [!code-csharp[DynamicMethodHowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#2)]
+     [!code-vb[DynamicMethodHowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#2)]  
   
 2.  Crie uma matriz que especifica os tipos de parâmetro para o método dinâmico. Neste exemplo, o único parâmetro é um `int` (`Integer` no Visual Basic), portanto, a matriz tem apenas um elemento.  
   
-     [!code-cpp[DynamicMethodHowTo#3](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#3)]  [!code-csharp[DynamicMethodHowTo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#3)]  [!code-vb[DynamicMethodHowTo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#3)]  
+     [!code-cpp[DynamicMethodHowTo#3](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#3)]
+     [!code-csharp[DynamicMethodHowTo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#3)]
+     [!code-vb[DynamicMethodHowTo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#3)]  
   
 3.  Criará um <xref:System.Reflection.Emit.DynamicMethod>. Neste exemplo, o método é chamado `SquareIt`.  
   
@@ -44,37 +50,51 @@ Os procedimentos a seguir mostram como definir e executar um método dinâmico s
   
      O tipo do valor retornado é especificado como `long`. O método está associado com o módulo que contém a classe `Example`, que contém o código de exemplo. Qualquer módulo carregado pode ser especificado. O método dinâmico age como um método `static` de nível de módulo (`Shared` no Visual Basic).  
   
-     [!code-cpp[DynamicMethodHowTo#4](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#4)]  [!code-csharp[DynamicMethodHowTo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#4)]  [!code-vb[DynamicMethodHowTo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#4)]  
+     [!code-cpp[DynamicMethodHowTo#4](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#4)]
+     [!code-csharp[DynamicMethodHowTo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#4)]
+     [!code-vb[DynamicMethodHowTo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#4)]  
   
 4.  Emita o corpo do método. Neste exemplo, um objeto <xref:System.Reflection.Emit.ILGenerator> é usado para emitir o MSIL (Microsoft Intermediate Language). Como alternativa, um objeto <xref:System.Reflection.Emit.DynamicILInfo> pode ser usado em conjunto com geradores de código não gerenciado para emitir o corpo do método para um <xref:System.Reflection.Emit.DynamicMethod>.  
   
      O MSIL neste exemplo carrega o argumento, que é um `int`, para a pilha, converte-o em um `long`, duplica o `long` e multiplica os dois números. Isso deixa o resultado ao quadrado na pilha e tudo o que o método precisa fazer é retornar.  
   
-     [!code-cpp[DynamicMethodHowTo#5](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#5)]  [!code-csharp[DynamicMethodHowTo#5](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#5)]  [!code-vb[DynamicMethodHowTo#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#5)]  
+     [!code-cpp[DynamicMethodHowTo#5](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#5)]
+     [!code-csharp[DynamicMethodHowTo#5](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#5)]
+     [!code-vb[DynamicMethodHowTo#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#5)]  
   
 5.  Crie uma instância do delegado (declarado na etapa 1) que representa o método dinâmico chamando o método <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A>. Criar o delegado conclui o método e quaisquer tentativas adicionais de alterar o método — por exemplo, adicionando mais MSIL — são ignoradas. O código a seguir cria o delegado e o invoca, usando um delegado genérico.  
   
-     [!code-cpp[DynamicMethodHowTo#6](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#6)]  [!code-csharp[DynamicMethodHowTo#6](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#6)]  [!code-vb[DynamicMethodHowTo#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#6)]  
+     [!code-cpp[DynamicMethodHowTo#6](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#6)]
+     [!code-csharp[DynamicMethodHowTo#6](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#6)]
+     [!code-vb[DynamicMethodHowTo#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#6)]  
   
 ### <a name="to-define-and-execute-a-dynamic-method-that-is-bound-to-an-object"></a>Para definir e executar um método dinâmico associado a um objeto  
   
 1.  Declare um tipo de delegado para executar o método. Considere usar um delegado genérico para minimizar o número de tipos de delegado que você precisa declarar. O código a seguir declara um tipo de delegado genérico que pode ser usado para executar qualquer método com um parâmetro e um valor retornado ou um método com dois parâmetros e um valor retornado se o delegado estiver associado a um objeto.  
   
-     [!code-cpp[DynamicMethodHowTo#12](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#12)]  [!code-csharp[DynamicMethodHowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#12)]  [!code-vb[DynamicMethodHowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#12)]  
+     [!code-cpp[DynamicMethodHowTo#12](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#12)]
+     [!code-csharp[DynamicMethodHowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#12)]
+     [!code-vb[DynamicMethodHowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#12)]  
   
 2.  Crie uma matriz que especifica os tipos de parâmetro para o método dinâmico. Se o delegado que representa o método deve ser associado a um objeto, o primeiro parâmetro deve corresponder ao tipo ao qual o delegado está associado. Neste exemplo, há dois parâmetros, do tipo `Example` e do tipo `int` (`Integer` no Visual Basic).  
   
-     [!code-cpp[DynamicMethodHowTo#13](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#13)]  [!code-csharp[DynamicMethodHowTo#13](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#13)]  [!code-vb[DynamicMethodHowTo#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#13)]  
+     [!code-cpp[DynamicMethodHowTo#13](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#13)]
+     [!code-csharp[DynamicMethodHowTo#13](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#13)]
+     [!code-vb[DynamicMethodHowTo#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#13)]  
   
 3.  Criará um <xref:System.Reflection.Emit.DynamicMethod>. Neste exemplo, o método não tem nenhum nome. O tipo do valor retornado é especificado como `int` (`Integer` no Visual Basic). O método tem acesso aos membros particulares e protegidos da classe `Example`.  
   
-     [!code-cpp[DynamicMethodHowTo#14](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#14)]  [!code-csharp[DynamicMethodHowTo#14](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#14)]  [!code-vb[DynamicMethodHowTo#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#14)]  
+     [!code-cpp[DynamicMethodHowTo#14](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#14)]
+     [!code-csharp[DynamicMethodHowTo#14](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#14)]
+     [!code-vb[DynamicMethodHowTo#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#14)]  
   
 4.  Emita o corpo do método. Neste exemplo, um objeto <xref:System.Reflection.Emit.ILGenerator> é usado para emitir o MSIL (Microsoft Intermediate Language). Como alternativa, um objeto <xref:System.Reflection.Emit.DynamicILInfo> pode ser usado em conjunto com geradores de código não gerenciado para emitir o corpo do método para um <xref:System.Reflection.Emit.DynamicMethod>.  
   
      O MSIL neste exemplo carrega o primeiro argumento, que é uma instância da classe `Example` e o usa para carregar o valor de um campo de instância privada do tipo `int`. O segundo argumento é carregado e os dois números são multiplicados. Se o resultado for maior do que `int`, o valor será truncado e os bits mais significativos serão descartados. O método retorna, com o valor retornado na pilha.  
   
-     [!code-cpp[DynamicMethodHowTo#15](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#15)]  [!code-csharp[DynamicMethodHowTo#15](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#15)]  [!code-vb[DynamicMethodHowTo#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#15)]  
+     [!code-cpp[DynamicMethodHowTo#15](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#15)]
+     [!code-csharp[DynamicMethodHowTo#15](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#15)]
+     [!code-vb[DynamicMethodHowTo#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#15)]  
   
 5.  Crie uma instância do delegado (declarado na etapa 1) que representa o método dinâmico chamando a sobrecarga do método <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29>. Criar o delegado conclui o método e quaisquer tentativas adicionais de alterar o método — por exemplo, adicionando mais MSIL — são ignoradas.  
   
@@ -85,7 +105,9 @@ Os procedimentos a seguir mostram como definir e executar um método dinâmico s
   
      O delegado `OneParameter` é usado porque o primeiro parâmetro do método sempre recebe a instância do `Example`. Quando o delegado é invocado, apenas o segundo parâmetro é necessário.  
   
-     [!code-cpp[DynamicMethodHowTo#16](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#16)]  [!code-csharp[DynamicMethodHowTo#16](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#16)]  [!code-vb[DynamicMethodHowTo#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#16)]  
+     [!code-cpp[DynamicMethodHowTo#16](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#16)]
+     [!code-csharp[DynamicMethodHowTo#16](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#16)]
+     [!code-vb[DynamicMethodHowTo#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#16)]  
   
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir demonstra um método dinâmico simples e um método dinâmico associado a uma instância de uma classe.  
@@ -96,7 +118,9 @@ Os procedimentos a seguir mostram como definir e executar um método dinâmico s
   
  O exemplo de código define delegados que podem ser usados para executar os métodos.  
   
- [!code-cpp[DynamicMethodHowTo#1](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#1)] [!code-csharp[DynamicMethodHowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#1)] [!code-vb[DynamicMethodHowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#1)]  
+ [!code-cpp[DynamicMethodHowTo#1](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#1)]
+ [!code-csharp[DynamicMethodHowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#1)]
+ [!code-vb[DynamicMethodHowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
@@ -107,7 +131,6 @@ Os procedimentos a seguir mostram como definir e executar um método dinâmico s
 -   Compile o código na linha de comando usando csc.exe, vbc.exe ou cl.exe. Para compilar o código no Visual Studio, coloque-o em um modelo de projeto de aplicativo do console.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Reflection.Emit.DynamicMethod>   
- [Usando a emissão de reflexão](http://msdn.microsoft.com/en-us/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)   
+ <xref:System.Reflection.Emit.DynamicMethod>  
+ [Usando a reflexão de emissão](http://msdn.microsoft.com/en-us/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
  [Cenários de métodos dinâmicos para a emissão de reflexão](http://msdn.microsoft.com/en-us/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e)
-

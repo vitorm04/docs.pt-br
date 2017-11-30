@@ -12,11 +12,11 @@ caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: d7013ce5608efb32d7a640af622c2bc43f00b610
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: dc4e2ad7ad37bdda5c41c8d746ea5badf5db7751
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="confirmation"></a>Confirmação
 Este exemplo mostra quatro cenários comuns envolvendo o uso de <xref:System.Activities.Statements.CompensableActivity> e de confirmação. O exemplo é executado quatro fluxos de trabalho para mostrar a confirmação. Este exemplo está disponível em versões declarativas e imperativas.  
@@ -50,6 +50,4 @@ Este exemplo mostra quatro cenários comuns envolvendo o uso de <xref:System.Act
 >   
 >  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Compensation\Confirmation`  
-  
-## <a name="see-also"></a>Consulte também
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Compensation\Confirmation`

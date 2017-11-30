@@ -12,11 +12,11 @@ caps.latest.revision: "12"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: ea3814fe187fb721771b6ce09a5fa0ff95558852
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: cd5b8749ef2637dd1e9616257b5321ae7504dedd
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="corporate-purchase-process"></a>Processo de compra corporativo
 Este exemplo mostra como criar uma solicitação bem básico para o processo com base (RFP) de compra de propostas com a melhor seleção automático de proposta. Combina <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, e <xref:System.Activities.Statements.ForEach%601> e uma atividade personalizado para criar um fluxo de trabalho que representa o processo.  
@@ -180,6 +180,4 @@ Este exemplo mostra como criar uma solicitação bem básico para o processo com
   
 -   **Exibir RFP**: mostra o conteúdo de uma RFP existente. Fornecedores podem enviar suas propostas (ou convidado se o RFP não é concluído)  
   
--   **Conectar-se como**: O usuário pode acessar RFP usando diferentes identidades selecionando o participante desejado a **exibir como** caixa de combinação na grade RFPs active.  
-  
-## <a name="see-also"></a>Consulte também
+-   **Conectar-se como**: O usuário pode acessar RFP usando diferentes identidades selecionando o participante desejado a **exibir como** caixa de combinação na grade RFPs active.

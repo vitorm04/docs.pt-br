@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
+ms.openlocfilehash: 1e2ab018fc690b31b59a04bf8c0c0990225c293b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e94ab83bb6638438e0a98020a5b42755322af5da
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migrando do DNX para a CLI do .NET Core (project.json)
 
 ## <a name="overview"></a>Visão geral
@@ -62,7 +60,7 @@ A tabela a seguir mostra o mapeamento entre os comandos DNX/DNU e seus equivalen
 | dnu pack                          | dotnet pack       | Empacote um pacote NuGet do seu código.                                                                          |
 | dnx \[comando] (por exemplo, "dnx web")   | N/D\*             | No mundo DNX, execute um comando conforme definido no project.json.                                                       |
 | dnu install                       | N/D\*             | No mundo DNX, instale um pacote como uma dependência.                                                              |
-| dnu restore                       | dotnet restore    | Restaure as dependências especificadas no seu project.json.                                                              |
+| dnu restore                       | dotnet restore    | Restaure as dependências especificadas no seu project.json. ([consulte a Observação](#dotnet-restore-note))                                                               |
 | dnu publish                       | dotnet publish    | Publica seu aplicativo para implantação em uma das três formas (portátil, portátil com nativo e autônomo).    |
 | dnu wrap                          | N/D\*             | No mundo DNX, encapsule um project.json em csproj.                                                                      |
 | dnu commands                      | N/D\*             | No mundo DNX, gerencie os comandos instalados globalmente.                                                             |
@@ -78,7 +76,7 @@ O DNU vinha com um conceito chamado "comandos globais". Eles eram, essencialment
 A CLI não dá suporte a esse conceito. Contudo, ela dá suporte ao conceito de adição de comandos por projeto, os quais podem ser invocados usando a sintaxe familiar do `dotnet <command>`.
 
 ### <a name="installing-dependencies"></a>Instalando dependências
-A partir do v1, as ferramentas da CLI do .NET Core não têm um comando `install` para instalar dependências. Para instalar um pacote NuGet, você precisaria adicioná-lo como uma dependência ao seu arquivo `project.json` e então executar `dotnet restore`. 
+A partir do v1, as ferramentas da CLI do .NET Core não têm um comando `install` para instalar dependências. Para instalar um pacote do NuGet, você precisa adicioná-lo como uma dependência ao seu `project.json` e, em seguida, execute o `dotnet restore` ([consulte a Observação](#dotnet-restore-note)). 
 
 ### <a name="running-your-code"></a>Execução do código
 Há duas maneiras principais de executar o código. Uma delas é da origem, com `dotnet run`. Diferente do `dnx run`, isso não gerará nenhuma compilação na memória. Na verdade, isso invocará `dotnet build` para compilar seu código e executar o binário compilado. 
@@ -131,7 +129,7 @@ Se você estiver usando outros destinos `dnx` como o `dnx451`, será necessário
 
 Seu `project.json` agora está quase pronto. Você precisa examinar a lista de dependências e atualizá-las para suas versões mais recentes, especialmente se estiver usando dependências ASP.NET Core. Se estiver usando pacotes separados para as APIs BCL, poderá usar o pacote de tempo de execução, conforme explicado no documento [tipo de portabilidade do aplicativo](../deploying/index.md). 
 
-Quando estiver pronto, você pode tentar restaurar com `dotnet restore`. Dependendo da versão das suas dependências, você poderá encontrar erros se o NuGet não puder resolvê-las para um das estruturas de destino acima. Este é um problema “pontual”, pois à medida que o tempo passa, cada vez mais pacotes incluirão suporte a essas estruturas. Por enquanto, se você enfrentar isso, poderá usar a instrução `imports` dentro do nó `framework` para especificar para o NuGet que ele pode restaurar os pacotes direcionando a estrutura dentro da instrução "imports". Os erros de restauração obtidos nesse caso devem fornecer informações suficientes para indicar quais estruturas você precisa importar. Se você ficar um pouco confuso ou não tiver experiência nisso, especificar `dnxcore50` e `portable-net45+win8` na instrução `imports` geralmente é suficiente. O trecho de código JSON a seguir mostra como isso se parece:
+Quando estiver pronto, você pode tentar restaurar com `dotnet restore` ([consulte a Observação](#dotnet-restore-note)). Dependendo da versão das suas dependências, você poderá encontrar erros se o NuGet não puder resolvê-las para um das estruturas de destino acima. Este é um problema “pontual”, pois à medida que o tempo passa, cada vez mais pacotes incluirão suporte a essas estruturas. Por enquanto, se você enfrentar isso, poderá usar a instrução `imports` dentro do nó `framework` para especificar para o NuGet que ele pode restaurar os pacotes direcionando a estrutura dentro da instrução "imports". Os erros de restauração obtidos nesse caso devem fornecer informações suficientes para indicar quais estruturas você precisa importar. Se você ficar um pouco confuso ou não tiver experiência nisso, especificar `dnxcore50` e `portable-net45+win8` na instrução `imports` geralmente é suficiente. O trecho de código JSON a seguir mostra como isso se parece:
 
 ```json
     "frameworks": {
@@ -143,3 +141,5 @@ Quando estiver pronto, você pode tentar restaurar com `dotnet restore`. Depende
 
 Executar `dotnet build` mostrará os eventuais erros de build, porém não deve haver muitos. Depois de o código ser criado e executado corretamente, você poderá testá-lo com o executor. Execute `dotnet <path-to-your-assembly>` e observe a execução.
 
+<a name="dotnet-restore-note"></a>
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

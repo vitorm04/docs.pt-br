@@ -1,42 +1,23 @@
 ---
 title: "-win32manifest (opções do compilador C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /win32manifest
-dev_langs:
-- CSharp
+f1_keywords: /win32manifest
 helpviewer_keywords:
 - /win32manifest compiler option [C#]
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 40b1fa1f9aa465a56eccaf5fff5cf7bb59144e85
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 938317fdf0c56469b85b1231a47f83e9c2a7d0f2
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="win32manifest-c-compiler-options"></a>/win32manifest (opções do compilador C#)
 Use a opção **/win32manifest** para especificar um arquivo de manifesto do aplicativo Win32 para ser inserido em um arquivo PE do projeto.  
@@ -57,7 +38,7 @@ Use a opção **/win32manifest** para especificar um arquivo de manifesto do apl
 > [!NOTE]
 >  Essa opção e a opção [/win32res (opções do compilador C#)](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) opção são mutuamente exclusivas. Se você tentar usar ambas as opções na mesma linha de comando, você obterá um erro de build.  
   
- Um aplicativo que não tem nenhum manifesto do aplicativo que especifica que um nível de execução solicitado estará sujeito à virtualização de arquivos/Registro sob o recurso de Controle de Conta de Usuário no Windows Vista. Para obter mais informações sobre virtualização, consulte [The Windows Vista Developer Story: Windows Vista Application Development Requirements for User Account Control (UAC)](http://go.microsoft.com/fwlink/?LinkId=95452) (A história do desenvolvedor do Windows Vista: requisitos de desenvolvimento de aplicativos do Windows Vista para UAC (Controle de Conta de Usuário)).  
+ Um aplicativo que não tem nenhum aplicativo de manifesto que especifica que um nível de execução solicitado estará sujeito a virtualização de arquivo/registro sob o recurso de controle de conta de usuário do Windows. Para obter mais informações, consulte [User Account Control](/windows/access-protection/user-account-control/user-account-control-overview).  
   
  Seu aplicativo estará sujeito à virtualização se alguma dessas condições for verdadeira:  
   
@@ -90,7 +71,6 @@ Use a opção **/win32manifest** para especificar um arquivo de manifesto do apl
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Opções do compilador do C#](../../../csharp/language-reference/compiler-options/index.md)   
- [/nowin32manifest (opções do compilador C#)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)   
+ [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
+ [/nowin32manifest (opções do compilador c#)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)  
  [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
-

@@ -21,14 +21,14 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 96bd12b69b84537415ddf2e0ae992ec179f32493
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: aa6a2e60e34f6c3a78343318ae102883da84e266
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="isymunmanagedbindergetreaderfromstream-method"></a>Método ISymUnmanagedBinder::GetReaderFromStream
-Dado uma interface de metadados e um fluxo que contém o repositório de símbolos, retorna o correto <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> símbolos de estrutura que lerá a depuração do armazenamento de símbolo dado.  
+Dado uma interface de metadados e um fluxo que contém o repositório de símbolos, retorna o correto [ISymUnmanagedReader](isymunmanagedreader-interface.md) símbolos de estrutura que lerá a depuração do armazenamento de símbolo dado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ HRESULT GetReaderFromStream(
  [in] Um ponteiro para o fluxo que contém o repositório de símbolos.  
   
  `pRetVal`  
- [out] Um ponteiro que está definido para retornado <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> interface.  
+ [out] Um ponteiro que está definido para retornado [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  

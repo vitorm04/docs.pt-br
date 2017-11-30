@@ -1,6 +1,6 @@
 ---
 title: Matrizes em C# - um tour pela linguagem C#
-description: "Matrizes são o tipo mais básico de coleção da linguagem C#"
+description: "As matrizes são o tipo mais básico de coleção na linguagem c#"
 keywords: ".NET, csharp, matriz, coleção"
 author: BillWagner
 ms.author: wiwagn
@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
+ms.openlocfilehash: d7d5ae9f99ba1629a6f0aec57bebf74853cab27f
+ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 82362a3675c431423a99d3d728fb8dd1da58c9c7
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/02/2017
 ---
-
 # <a name="arrays"></a>Matrizes
 
 Uma ***matriz*** é uma estrutura de dados que contém algumas variáveis acessadas por meio de índices calculados. As variáveis contidas em uma matriz, também chamadas de ***elementos*** da matriz, são todas do mesmo tipo, e esse tipo é chamado de ***tipo de elemento*** da matriz.
@@ -54,4 +52,3 @@ Os dois exemplos anteriores são equivalentes ao seguinte:
 >[!div class="step-by-step"]
 [Anterior](structs.md)
 [Próximo](interfaces.md)
-

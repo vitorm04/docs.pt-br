@@ -1,40 +1,20 @@
 ---
 title: "-appconfig (opções do compilador C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /appconfig
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- /appconfig compiler option [C#]
+f1_keywords: /appconfig
+helpviewer_keywords: /appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ca752c6264d0ee886aa4c248738097e0caf1d756
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2aede966f92af3c94f4591b68732dbdbf5a4c5c9
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="appconfig-c-compiler-options"></a>/appconfig (opções do compilador C#)
 A opção do compilador **/appconfig** habilita um aplicativo em C# a especificar o local de um arquivo de configuração de aplicativo (app.config) de um assembly para o Common Language Runtime (CLR) no tempo de associação do assembly.  
@@ -76,7 +56,5 @@ A opção do compilador **/appconfig** habilita um aplicativo em C# a especifica
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão Geral da Unificação de Assemblies no .NET Framework](http://msdn.microsoft.com/en-us/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)   
- [\<supportPortability> Element](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)   
+ [\<supportPortability > elemento](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)  
  [Opções do compilador de C# listadas em ordem alfabética](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
-

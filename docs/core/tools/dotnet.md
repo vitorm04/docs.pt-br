@@ -7,12 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: bba8d77cda7538bf008dc0f510f9279d3c695c3d
+ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
 ms.translationtype: HT
-ms.sourcegitcommit: fa2e5ecbf41dc2a8cd90aabc6f7291db597e657e
-ms.openlocfilehash: 4c1c0e4ed1b1222abbcd104b2c10a44b1b99be8d
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="dotnet-command"></a>Comando dotnet
 
@@ -48,7 +47,7 @@ A única vez que `dotnet` é usado como um comando em si é ao executar [aplicat
 
 `--additionaldeps <PATH>`
 
-Caminho para o arquivo *deps.json* adicional.
+Caminho para adicionais *deps.json* arquivo.
 
 `--additionalprobingpath <PATH>`
 
@@ -187,6 +186,8 @@ Restaure as dependências para um determinado aplicativo:
 
 `dotnet restore`
 
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 Compile um projeto e suas dependências em um determinado diretório:
 
 `dotnet build`
@@ -208,4 +209,3 @@ Especifica o local do índice de manutenção a ser usado pelo host compartilhad
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
 Especifica se os dados sobre o uso de ferramentas .NET Core são coletados e enviados para a Microsoft. Defina como `true` para cancelar o recurso de telemetria (os valores `true`, `1` ou `yes` são aceitos); caso contrário, defina como `false` para cancelar os recursos de telemetria (os valores `false`, `0` ou `no`são aceitos). Se não estiver definido, o padrão será `false`, e o recurso de telemetria estará ativo.
-

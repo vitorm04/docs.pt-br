@@ -1,47 +1,55 @@
 ---
-title: "Operações básicas de cadeias de caracteres"
-description: "Operações básicas de cadeias de caracteres"
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 07/26/2016
-ms.topic: article
+title: "Operações básicas de cadeias de caracteres no .NET Framework"
+ms.custom: 
+ms.date: 03/30/2017
 ms.prod: .net
+ms.reviewer: 
+ms.suite: 
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 9658098d-de60-4868-ba5b-0c278748a90f
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: b8bdbeccd226c412e725200fcaf81ec568afc5bc
-ms.lasthandoff: 03/02/2017
-
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- strings [.NET Framework], basic string operations
+- custom strings
+ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: f241b99f97cad081a65fd8654169e444a1b588cb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
-# <a name="basic-string-operations"></a>Operações básicas de cadeias de caracteres
-
-Muitas vezes, os aplicativos respondem aos usuários criando mensagens com base na entrada do usuário. Por exemplo, não é incomum para sites responderem a um usuário recém-conectado com uma saudação especializada que inclui o nome do usuário. Vários métodos nas classes [System.String](xref:System.String) e [System.Text.StringBuilder](xref:System.Text.StringBuilder) permitem que você construa dinamicamente cadeias de caracteres personalizadas para exibir na interface do usuário. Esses métodos também ajudam a realizar várias operações de cadeias de caracteres básicas como criar novas cadeias de caracteres em matrizes de bytes, comparar os valores das cadeias de caracteres e modificar cadeias de caracteres existentes.
-
-## <a name="in-this-section"></a>Nesta seção
-
-[Creating new strings](creating-new.md) (Criando novas cadeias de caracteres) – descreve maneiras básicas de converter objetos em cadeias de caracteres e de combinar cadeias de caracteres.
-
-[Trimming and removing characters](trimming.md) (Cortando e removendo caracteres) – descreve como cortar ou remover caracteres em uma cadeia de caracteres. 
-
-[Padding strings](padding.md) (Preenchimento de cadeias de caracteres) – descreve como inserir caracteres ou espaços vazios em uma cadeia de caracteres.
-
-[Comparing strings](comparing.md) (Comparando cadeias de caracteres) – descreve como comparar o conteúdo de duas ou mais cadeias de caracteres.
-
-[Changing case](changing-case.md) (Alterando a definição de maiúsculas e minúsculas) – descreve como alterar a definição de maiúsculas e minúsculas dentro de uma cadeia de caracteres.
-
-[Using the StringBuilder class](stringbuilder.md) (Usando a classe StringBuilder) – descreve como criar e modificar objetos de cadeia de caracteres dinâmicos com a classe [StringBuilder](xref:System.Text.StringBuilder).
-
-[How to: Perform basic string manipulations](basic-manipulations.md) (Como executar manipulações de cadeias de caracteres básicas) – demonstra o uso das operações de cadeias de caracteres básicas.
-
-## <a name="related-sections"></a>Seções relacionadas
-
-[Conversão de tipo](type-conversion.md) – Descreve como converter de um tipo para outro.
-
-[Tipos de formatação](formatting-types.md) – descreve como formatar cadeias de caracteres usando especificadores de formato de cadeia de caracteres.
-
-
-
+# <a name="basic-string-operations-in-net"></a>Operações básicas de cadeia de caracteres no .NET
+Muitas vezes, os aplicativos respondem aos usuários criando mensagens com base na entrada do usuário. Por exemplo, não é incomum para sites responderem a um usuário recém-conectado com uma saudação especializada que inclui o nome do usuário. Vários métodos de <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.StringBuilder?displayProperty=nameWithType> classes permitem que você construa dinamicamente as cadeias de caracteres personalizadas para exibir na interface do usuário. Esses métodos também ajudam a realizar várias operações de cadeias de caracteres básicas como criar novas cadeias de caracteres em matrizes de bytes, comparar os valores das cadeias de caracteres e modificar cadeias de caracteres existentes.  
+  
+## <a name="in-this-section"></a>Nesta seção  
+ [Criando novas cadeias de caracteres](../../../docs/standard/base-types/creating-new.md)  
+ Descreve maneiras básicas para converter objetos em cadeias de caracteres e combinar cadeias de caracteres.  
+  
+ [Cortando e removendo caracteres](../../../docs/standard/base-types/trimming.md)  
+ Descreve como cortar ou remover caracteres em uma cadeia de caracteres.  
+  
+ [Preenchendo cadeias de caracteres](../../../docs/standard/base-types/padding.md)  
+ Descreve como inserir caracteres ou espaços vazios em uma cadeia de caracteres.  
+  
+ [Comparação de cadeias de caracteres](../../../docs/standard/base-types/comparing.md)  
+ Descreve como comparar o conteúdo de duas ou mais cadeias de caracteres.  
+  
+ [Alterando a definição de maiúsculas e minúsculas](../../../docs/standard/base-types/changing-case.md)  
+ Descreve como alterar o caso de caracteres em uma cadeia de caracteres.  
+  
+ [Uso da classe StringBuilder](../../../docs/standard/base-types/stringbuilder.md)  
+ Descreve como criar e modificar objetos de cadeia de caracteres dinâmica com o <xref:System.Text.StringBuilder> classe.  
+  
+ [Como executar manipulações de cadeias de caracteres básicas](../../../docs/standard/base-types/basic-manipulations.md)  
+ Demonstra o uso das operações básicas de cadeia de caracteres.  
+  
+## <a name="related-sections"></a>Seções relacionadas  
+ [Conversão de tipo no .NET](../../../docs/standard/base-types/type-conversion.md)  
+ Descreve como converter um tipo em outro tipo.  
+  
+ [Formatando Tipos](../../../docs/standard/base-types/formatting-types.md)  
+ Descreve como formatar cadeias de caracteres usando especificadores de formato.
