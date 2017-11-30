@@ -1,0 +1,92 @@
+---
+title: "Diretiva avançada"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: 75a22c88-5e54-4ae8-84cb-fbb22a612f0a
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3dd941509c37618480a20530d3f5239750917e98
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="advanced-policy"></a>Diretiva avançada
+Este exemplo amplia o exemplo simples de política. Além das regras residenciais de desconto e de desconto de negócio de exemplo simples de política, várias regras novos foram adicionadas.  
+  
+ Uma regra valioso é adicionada, que fornece desconto maior de pedidos importantes. Recebe um valor de prioridade menor do que as duas regras anteriores de modo que substitui o campo de desconto e tem precedência sobre as regras residenciais e comerciais de desconto.  
+  
+ Uma regra do total de cálculo também é adicionada, que compute o total com base no nível de desconto. Mostra como referenciar um método definido na atividade de fluxo de trabalho, bem como usar outras ações. Essa regra também demonstra encadeamento o comportamento desde que será avaliado a qualquer momento as alterações do campo de desconto. Além disso, a atribuição do método é mostrada com o RuleWriteAttribute no método de CalculateTotal. Isso faz com que as regras afetados (ErrorTotalRule) a ser reavaliadas sempre que o método é executado.  
+  
+ A regra mais recente é adicionada uma que detecta erros (neste caso, total menor que 0). Se isso ocorre, a execução de política é interrompida.  
+  
+ Finalmente, chamadas de `Console.Writeline` são adicionados como ações a cada regra fornecer mais visibilidade em execução de regra, para mostrar que também é possível acessar métodos estáticos em tipos referenciados. Você também pode usar o rastreamento para obter a visibilidade nas regras que são executadas.  
+  
+ Regras usadas nesse exemplo são:  
+  
+ **ResidentialDiscountRule:**  
+  
+ SE OrderValue > 500 E CustomerType = residencial  
+  
+ Em seguida, desconto = % 5  
+  
+ **BusinessDiscountRule:**  
+  
+ SE OrderValue > 10000 E CustomerType = business  
+  
+ Em seguida, desconto = 10%  
+  
+ **HighValueDiscountRule:**  
+  
+ SE OrderValue > 20000  
+  
+ ENTÃO desconto = 15%  
+  
+ **TotalRule:**  
+  
+ SE desconto > 0  
+  
+ ENTÃO CalculateTotal (OrderValue, desconto)  
+  
+ Total OUTRO = OrderValue  
+  
+ **ErrorTotalRule:**  
+  
+ Se Total \< 0  
+  
+ ENTÃO erro = “ErrorTotalRule acionado”; Stop  
+  
+ A avaliação e a execução da regra também podem ser consideradas com o rastreamento e o rastreamento.  
+  
+### <a name="to-build-the-sample"></a>Para criar o exemplo  
+  
+1.  Abra a solução em [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+  
+2.  Crie a solução. CTRL+SHIFT+B pressionando.  
+  
+3.  Executar a solução sem depuração pressionando CTRL + f5.  
+  
+### <a name="to-run-the-sample"></a>Para executar a amostra  
+  
+-   Na janela do prompt de comando SDK, execute o arquivo .exe no AdvancedPolicy \ bin \ debug (ou na pasta \ bin de AdvancedPolicy para a versão do Visual Basic de exemplo), que está localizado abaixo da pasta principal para o exemplo.  
+  
+> [!IMPORTANT]
+>  Os exemplos podem mais ser instalados no seu computador. Verificar o seguinte diretório (padrão) antes de continuar:  
+>   
+>  `<InstallDrive>:\WF_WCF_Samples`  
+>   
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está no seguinte diretório:  
+>   
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\AdvancedPolicy`  
+  
+## <a name="see-also"></a>Consulte também  
+ <xref:System.Workflow.Activities.Rules.RuleSet>  
+ <xref:System.Workflow.Activities.PolicyActivity>  
+ [Diretiva simples](../../../../docs/framework/windows-workflow-foundation/samples/simple-policy.md)
