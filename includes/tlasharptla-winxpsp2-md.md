@@ -1,1 +1,1 @@
-SP2 (Microsoft Windows XP Service Pack 2)
+<span data-ttu-id="6afd9-101">SP2 (Microsoft Windows XP Service Pack 2)</span><span class="sxs-lookup"><span data-stu-id="6afd9-101">Microsoft Windows XP Service Pack 2 (SP2)</span></span>

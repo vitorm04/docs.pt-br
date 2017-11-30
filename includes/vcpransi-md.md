@@ -1,1 +1,1 @@
-ANSI
+<span data-ttu-id="f50f7-101">ANSI</span><span class="sxs-lookup"><span data-stu-id="f50f7-101">ANSI</span></span>

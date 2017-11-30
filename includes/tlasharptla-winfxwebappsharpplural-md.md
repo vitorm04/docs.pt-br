@@ -1,1 +1,1 @@
-XBAPs (aplicativos de navegador XAML)
+<span data-ttu-id="25e7f-101">XBAPs (aplicativos de navegador XAML)</span><span class="sxs-lookup"><span data-stu-id="25e7f-101">XAML browser applications (XBAPs)</span></span>

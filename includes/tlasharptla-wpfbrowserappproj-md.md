@@ -1,1 +1,1 @@
-WPF (Aplicativo de navegação XAML)
+<span data-ttu-id="64938-101">WPF (Aplicativo de navegação XAML)</span><span class="sxs-lookup"><span data-stu-id="64938-101">XAML Browser Application (WPF)</span></span>

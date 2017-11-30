@@ -1,1 +1,1 @@
-Geração de imagens do WPF
+<span data-ttu-id="e5a5f-101">Geração de imagens do WPF</span><span class="sxs-lookup"><span data-stu-id="e5a5f-101">WPF Imaging</span></span>

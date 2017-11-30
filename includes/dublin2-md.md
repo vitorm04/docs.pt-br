@@ -1,1 +1,1 @@
-funcionalidades de hospedagem
+<span data-ttu-id="a2f20-101">funcionalidades de hospedagem</span><span class="sxs-lookup"><span data-stu-id="a2f20-101">hosting features</span></span>

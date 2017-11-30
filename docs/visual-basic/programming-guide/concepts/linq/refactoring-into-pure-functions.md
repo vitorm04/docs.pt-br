@@ -1,45 +1,41 @@
 ---
-title: "Refatoração em funções puras (Visual Basic) | Documentos do Microsoft"
+title: "Refatoração em funções puras (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e622436905893872521994f6dc1a5bc1c8b3d06a
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: d0a1b8d314cf1403ef5065e5432f7acd15ebb440
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="refactoring-into-pure-functions-visual-basic"></a>Refatoração em funções puras (Visual Basic)
-Um aspecto importante de transformações e puras é aprender como o código do refatorar usando funções puras.  
+# <a name="refactoring-into-pure-functions-visual-basic"></a><span data-ttu-id="44102-102">Refatoração em funções puras (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="44102-102">Refactoring Into Pure Functions (Visual Basic)</span></span>
+<span data-ttu-id="44102-103">Um aspecto importante de transformações e puras é aprender como o código do refatorar usando funções puras.</span><span class="sxs-lookup"><span data-stu-id="44102-103">An important aspect of pure functional transformations is learning how to refactor code using pure functions.</span></span>  
   
- Conforme observado anteriormente nesta seção, uma função pura tem duas características úteis:  
+ <span data-ttu-id="44102-104">Conforme observado anteriormente nesta seção, uma função pura tem duas características úteis:</span><span class="sxs-lookup"><span data-stu-id="44102-104">As noted previously in this section, a pure function has two useful characteristics:</span></span>  
   
--   Não tem efeito colateral. A função não altera quaisquer variáveis ou os dados de qualquer tipo fora da função.  
+-   <span data-ttu-id="44102-105">Não tem efeito colateral.</span><span class="sxs-lookup"><span data-stu-id="44102-105">It has no side effects.</span></span> <span data-ttu-id="44102-106">A função não altera quaisquer variáveis ou os dados de qualquer tipo fora da função.</span><span class="sxs-lookup"><span data-stu-id="44102-106">The function does not change any variables or the data of any type outside of the function.</span></span>  
   
--   É consistente. Dado o mesmo conjunto de dados de entrada, sempre retornará o mesmo valor de saída.  
+-   <span data-ttu-id="44102-107">É consistente.</span><span class="sxs-lookup"><span data-stu-id="44102-107">It is consistent.</span></span> <span data-ttu-id="44102-108">Dado o mesmo conjunto de dados de entrada, sempre retornará o mesmo valor de saída.</span><span class="sxs-lookup"><span data-stu-id="44102-108">Given the same set of input data, it will always return the same output value.</span></span>  
   
- Uma maneira de fazer a transição para programação funcional é o código existente do refatorar para eliminar efeitos colaterais desnecessários e dependências externas. Dessa maneira, você pode criar versões puras de função do código existente.  
+ <span data-ttu-id="44102-109">Uma maneira de fazer a transição para programação funcional é o código existente do refatorar para eliminar efeitos colaterais desnecessários e dependências externas.</span><span class="sxs-lookup"><span data-stu-id="44102-109">One way of transitioning to functional programming is to refactor existing code to eliminate unnecessary side effects and external dependencies.</span></span> <span data-ttu-id="44102-110">Dessa maneira, você pode criar versões puras de função do código existente.</span><span class="sxs-lookup"><span data-stu-id="44102-110">In this way, you can create pure function versions of existing code.</span></span>  
   
- Este tópico descreve o que é uma função pura e o que não é. O [Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) tutorial mostra como manipular um documento de WordprocessingML e inclui dois exemplos de como refatorar usando uma função pura.  
+ <span data-ttu-id="44102-111">Este tópico descreve o que é uma função pura e o que não é.</span><span class="sxs-lookup"><span data-stu-id="44102-111">This topic discusses what a pure function is and what it is not.</span></span> <span data-ttu-id="44102-112">O [Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) tutorial mostra como manipular um documento de WordprocessingML e inclui dois exemplos de como a refatoração usando uma função pura.</span><span class="sxs-lookup"><span data-stu-id="44102-112">The [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) tutorial shows how to manipulate a WordprocessingML document, and includes two examples of how to refactor using a pure function.</span></span>  
   
-## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminando efeitos colaterais e dependências externas  
- Os seguintes exemplos contrastam duas funções não puras e uma função pura.  
+## <a name="eliminating-side-effects-and-external-dependencies"></a><span data-ttu-id="44102-113">Eliminando efeitos colaterais e dependências externas</span><span class="sxs-lookup"><span data-stu-id="44102-113">Eliminating Side Effects and External Dependencies</span></span>  
+ <span data-ttu-id="44102-114">Os seguintes exemplos contrastam duas funções não puras e uma função pura.</span><span class="sxs-lookup"><span data-stu-id="44102-114">The following examples contrast two non-pure functions and a pure function.</span></span>  
   
-### <a name="non-pure-function-that-changes-a-class-member"></a>Função não pura que altera um membro de classe  
- No código a seguir, a função de `HypenatedConcat` não é uma função pura, porque altera o membro de dados `aMember` na classe:  
+### <a name="non-pure-function-that-changes-a-class-member"></a><span data-ttu-id="44102-115">Função não pura que altera um membro de classe</span><span class="sxs-lookup"><span data-stu-id="44102-115">Non-Pure Function that Changes a Class Member</span></span>  
+ <span data-ttu-id="44102-116">No código a seguir, a função de `HypenatedConcat` não é uma função pura, porque altera o membro de dados `aMember` na classe:</span><span class="sxs-lookup"><span data-stu-id="44102-116">In the following code, the `HypenatedConcat` function is not a pure function, because it modifies the `aMember` data member in the class:</span></span>  
   
 ```vb  
 Module Module1  
@@ -56,16 +52,16 @@ Module Module1
 End Module  
 ```  
   
- Esse código gera a seguinte saída:  
+ <span data-ttu-id="44102-117">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="44102-117">This code produces the following output:</span></span>  
   
 ```  
 StringOne-StringTwo  
 ```  
   
- Observe que é irrelevante se os dados modificados tem `public` ou `private` o acesso, ou um `shared` membro ou um membro de instância. Uma função pura não altera quaisquer dados fora da função.  
+ <span data-ttu-id="44102-118">Observe que é irrelevante se os dados que está sendo modificados tem `public` ou `private` acessar, ou é um `shared` membro ou um membro de instância.</span><span class="sxs-lookup"><span data-stu-id="44102-118">Note that it is irrelevant whether the data being modified has `public` or `private` access, or is a  `shared` member or an instance member.</span></span> <span data-ttu-id="44102-119">Uma função pura não altera quaisquer dados fora da função.</span><span class="sxs-lookup"><span data-stu-id="44102-119">A pure function does not change any data outside of the function.</span></span>  
   
-### <a name="non-pure-function-that-changes-an-argument"></a>Função não pura que altera um argumento  
- Além disso, a seguinte versão dessa mesma função não é pura porque modifica o conteúdo do seu parâmetro, `sb`.  
+### <a name="non-pure-function-that-changes-an-argument"></a><span data-ttu-id="44102-120">Função não pura que altera um argumento</span><span class="sxs-lookup"><span data-stu-id="44102-120">Non-Pure Function that Changes an Argument</span></span>  
+ <span data-ttu-id="44102-121">Além disso, a seguinte versão dessa mesma função não é pura porque modifica o conteúdo do seu parâmetro, `sb`.</span><span class="sxs-lookup"><span data-stu-id="44102-121">Furthermore, the following version of this same function is not pure because it modifies the contents of its parameter, `sb`.</span></span>  
   
 ```vb  
 Module Module1  
@@ -81,13 +77,13 @@ Module Module1
 End Module  
 ```  
   
- Esta versão do programa produz a mesma saída como a primeira versão, porque o `HypenatedConcat` função tiver alterado o valor (estado) do seu primeiro parâmetro ao chamar o <xref:System.Text.StringBuilder.Append%2A>função de membro.</xref:System.Text.StringBuilder.Append%2A> Observe que essa mudança ocorre independentemente do fato de que `HypenatedConcat` usa passar o parâmetro de atendimento-por- valor.  
+ <span data-ttu-id="44102-122">Esta versão do programa gerenciar as mesmas saída que a primeira versão, porque a função de `HypenatedConcat` alterou o valor (estado) do primeiro parâmetro chamar a função de membro de <xref:System.Text.StringBuilder.Append%2A> .</span><span class="sxs-lookup"><span data-stu-id="44102-122">This version of the program produces the same output as the first version, because the `HypenatedConcat` function has changed the value (state) of its first parameter by invoking the <xref:System.Text.StringBuilder.Append%2A> member function.</span></span> <span data-ttu-id="44102-123">Observe que essa mudança ocorre independentemente do fato de que `HypenatedConcat` usa passar o parâmetro de atendimento-por- valor.</span><span class="sxs-lookup"><span data-stu-id="44102-123">Note that this alteration occurs despite that fact that `HypenatedConcat` uses call-by-value parameter passing.</span></span>  
   
 > [!IMPORTANT]
->  Para tipos de referência, se você passa um parâmetro por valor, ele resulta em uma cópia de referência a um objeto que está sendo passado. Esta cópia ainda está associada com os mesmos dados de instância que a referência original (até que a variável de referência é atribuído a um novo objeto). a Atendimento-por- referência não necessariamente é necessária para uma função modifique um parâmetro.  
+>  <span data-ttu-id="44102-124">Para tipos de referência, se você passa um parâmetro por valor, ele resulta em uma cópia de referência a um objeto que está sendo passado.</span><span class="sxs-lookup"><span data-stu-id="44102-124">For reference types, if you pass a parameter by value, it results in a copy of the reference to an object being passed.</span></span> <span data-ttu-id="44102-125">Esta cópia ainda está associada com os mesmos dados de instância que a referência original (até que a variável de referência é atribuído a um novo objeto).</span><span class="sxs-lookup"><span data-stu-id="44102-125">This copy is still associated with the same instance data as the original reference (until the reference variable is assigned to a new object).</span></span> <span data-ttu-id="44102-126">a Atendimento-por- referência não necessariamente é necessária para uma função modifique um parâmetro.</span><span class="sxs-lookup"><span data-stu-id="44102-126">Call-by-reference is not necessarily required for a function to modify a parameter.</span></span>  
   
-### <a name="pure-function"></a>Função pura  
- Seguir essa versão de hows de programa como implementar a função de `HypenatedConcat` como uma função pura.  
+### <a name="pure-function"></a><span data-ttu-id="44102-127">Função pura</span><span class="sxs-lookup"><span data-stu-id="44102-127">Pure Function</span></span>  
+ <span data-ttu-id="44102-128">Seguir essa versão de hows de programa como implementar a função de `HypenatedConcat` como uma função pura.</span><span class="sxs-lookup"><span data-stu-id="44102-128">This next version of the program hows how to implement the `HypenatedConcat` function as a pure function.</span></span>  
   
 ```vb  
 Module Module1  
@@ -103,15 +99,15 @@ Module Module1
 End Module  
 ```  
   
- Além disso, esta versão gerencia a mesma linha de saída: `StringOne-StringTwo`. Observe que para manter o valor concatenado, ele é armazenado em `s2`variável intermediária.  
+ <span data-ttu-id="44102-129">Além disso, esta versão gerencia a mesma linha de saída: `StringOne-StringTwo`.</span><span class="sxs-lookup"><span data-stu-id="44102-129">Again, this version produces the same line of output: `StringOne-StringTwo`.</span></span> <span data-ttu-id="44102-130">Observe que para manter o valor concatenado, ele é armazenado em `s2`variável intermediária.</span><span class="sxs-lookup"><span data-stu-id="44102-130">Note that to retain the concatenated value, it is stored in the intermediate variable `s2`.</span></span>  
   
- Uma abordagem que pode ser muito útil é escrever as funções que são localmente impuros (isto é, declare e alteram variáveis locais) mas é global pura. Tais funções têm muitas das características desejáveis de composability, mas impedem alguns de linguagem e mais complicados de programação, como ter que usar a recursão quando um loop simples realizaria a mesma coisa.  
+ <span data-ttu-id="44102-131">Uma abordagem que pode ser muito útil é escrever as funções que são localmente impuros (isto é, declare e alteram variáveis locais) mas é global pura.</span><span class="sxs-lookup"><span data-stu-id="44102-131">One approach that can be very useful is to write functions that are locally impure (that is, they declare and modify local variables) but are globally pure.</span></span> <span data-ttu-id="44102-132">Tais funções têm muitas das características desejáveis de composability, mas impedem alguns de linguagem e mais complicados de programação, como ter que usar a recursão quando um loop simples realizaria a mesma coisa.</span><span class="sxs-lookup"><span data-stu-id="44102-132">Such functions have many of the desirable composability characteristics, but avoid some of the more convoluted functional programming idioms, such as having to use recursion when a simple loop would accomplish the same thing.</span></span>  
   
-## <a name="standard-query-operators"></a>Operadores de consulta padrão  
- Uma característica importante dos operadores de consulta padrão é que são implementados como funções puras.  
+## <a name="standard-query-operators"></a><span data-ttu-id="44102-133">Operadores de consulta padrão</span><span class="sxs-lookup"><span data-stu-id="44102-133">Standard Query Operators</span></span>  
+ <span data-ttu-id="44102-134">Uma característica importante dos operadores de consulta padrão é que são implementados como funções puras.</span><span class="sxs-lookup"><span data-stu-id="44102-134">An important characteristic of the standard query operators is that they are implemented as pure functions.</span></span>  
   
- Para obter mais informações, consulte [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ <span data-ttu-id="44102-135">Para obter mais informações, consulte [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).</span><span class="sxs-lookup"><span data-stu-id="44102-135">For more information, see [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução às transformações e puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
- [Programação funcional versus Programação imperativa (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+## <a name="see-also"></a><span data-ttu-id="44102-136">Consulte também</span><span class="sxs-lookup"><span data-stu-id="44102-136">See Also</span></span>  
+ [<span data-ttu-id="44102-137">Introdução às transformações e puras (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="44102-137">Introduction to Pure Functional Transformations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+ [<span data-ttu-id="44102-138">Programação funcional versus Programação imperativa (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="44102-138">Functional Programming vs. Imperative Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

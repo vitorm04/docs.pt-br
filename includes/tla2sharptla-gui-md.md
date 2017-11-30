@@ -1,1 +1,1 @@
-GUI
+<span data-ttu-id="bb4dc-101">GUI</span><span class="sxs-lookup"><span data-stu-id="bb4dc-101">GUI</span></span>

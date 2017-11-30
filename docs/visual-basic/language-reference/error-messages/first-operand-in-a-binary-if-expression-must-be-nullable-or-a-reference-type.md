@@ -1,47 +1,29 @@
 ---
-title: "O primeiro operando em um binário &quot;If&quot; expressão deve ser anulável ou um tipo de referência | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "O primeiro operando em um binário &#39; se &#39; a expressão deve ser nulo ou uma referência de tipo"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc33107
 - vbc33107
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC33107
+helpviewer_keywords: BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f8a761909902075347470e3703d9604839781f21
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f66b110c02076120c55a3bff28c3d7614bf8be26
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>O primeiro operando em um binário 'If' expressão deve ser anulável ou um tipo de referência
-Um `If` expressão pode levar dois ou três argumentos. Quando você envia apenas dois argumentos, o primeiro argumento deve ser um tipo de referência ou um tipo anulável. Se o primeiro argumento for avaliado como algo diferente de `Nothing`, seu valor será retornado. Se o primeiro argumento for avaliado como `Nothing`, o segundo argumento é avaliado e retornado.  
+# <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a><span data-ttu-id="187f9-102">O primeiro operando em um binário &#39; se &#39; a expressão deve ser nulo ou uma referência de tipo</span><span class="sxs-lookup"><span data-stu-id="187f9-102">First operand in a binary &#39;If&#39; expression must be nullable or a reference type</span></span>
+<span data-ttu-id="187f9-103">Um `If` expressão pode levar dois ou três argumentos.</span><span class="sxs-lookup"><span data-stu-id="187f9-103">An `If` expression can take either two or three arguments.</span></span> <span data-ttu-id="187f9-104">Quando você envia apenas dois argumentos, o primeiro argumento deve ser um tipo de referência ou um tipo anulável.</span><span class="sxs-lookup"><span data-stu-id="187f9-104">When you send only two arguments, the first argument must be a reference type or a nullable type.</span></span> <span data-ttu-id="187f9-105">Se o primeiro argumento for avaliado como algo diferente de `Nothing`, seu valor será retornado.</span><span class="sxs-lookup"><span data-stu-id="187f9-105">If the first argument evaluates to anything other than `Nothing`, its value is returned.</span></span> <span data-ttu-id="187f9-106">Se o primeiro argumento for avaliado como `Nothing`, o segundo argumento é avaliado e retornado.</span><span class="sxs-lookup"><span data-stu-id="187f9-106">If the first argument evaluates to `Nothing`, the second argument is evaluated and returned.</span></span>  
   
- Por exemplo, o código a seguir contém duas `If` expressões, uma com três argumentos e outra com dois argumentos. As expressões calculam e retornam o mesmo valor.  
+ <span data-ttu-id="187f9-107">Por exemplo, o código a seguir contém duas `If` expressões, uma com três argumentos e outra com dois argumentos.</span><span class="sxs-lookup"><span data-stu-id="187f9-107">For example, the following code contains two `If` expressions, one with three arguments and one with two arguments.</span></span> <span data-ttu-id="187f9-108">As expressões calculam e retornam o mesmo valor.</span><span class="sxs-lookup"><span data-stu-id="187f9-108">The expressions calculate and return the same value.</span></span>  
   
 ```vb  
 ' firstChoice is a nullable value type.  
@@ -53,7 +35,7 @@ Console.WriteLine(If(firstChoice IsNot Nothing, firstChoice, secondChoice))
 Console.WriteLine(If(firstChoice, secondChoice))  
 ```  
   
- As expressões a seguir causam esse erro:  
+ <span data-ttu-id="187f9-109">As expressões a seguir causam esse erro:</span><span class="sxs-lookup"><span data-stu-id="187f9-109">The following expressions cause this error:</span></span>  
   
 ```vb  
 Dim choice1 = 4  
@@ -66,18 +48,18 @@ Dim booleanVar = True
 'Console.WriteLine(If(booleanVar, "Test returns True."))  
 ```  
   
- **ID do erro:** BC33107  
+ <span data-ttu-id="187f9-110">**ID do erro:** BC33107</span><span class="sxs-lookup"><span data-stu-id="187f9-110">**Error ID:** BC33107</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="187f9-111">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="187f9-111">To correct this error</span></span>  
   
--   Se você não pode alterar o código para que o primeiro argumento é um tipo anulável ou tipo de referência, considere a conversão para um argumento de três `If` expressão, ou um `If...Then...Else` instrução.  
+-   <span data-ttu-id="187f9-112">Se você não pode alterar o código de forma que o primeiro argumento é um tipo anulável ou um tipo de referência, considere a conversão para um argumento de três `If` expressão, ou um `If...Then...Else` instrução.</span><span class="sxs-lookup"><span data-stu-id="187f9-112">If you cannot change the code so that the first argument is a nullable type or reference type, consider converting to a three-argument `If` expression, or to an `If...Then...Else` statement.</span></span>  
   
 ```vb  
 Console.WriteLine(If(choice1 < choice2, 1, 2))  
 Console.WriteLine(If(booleanVar, "Test returns True.", "Test returns False."))  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Se operador](../../../visual-basic/language-reference/operators/if-operator.md)   
- [If... Then... Instrução else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)   
- [Tipos de Valor Anulável](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+## <a name="see-also"></a><span data-ttu-id="187f9-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="187f9-113">See Also</span></span>  
+ [<span data-ttu-id="187f9-114">Operador If</span><span class="sxs-lookup"><span data-stu-id="187f9-114">If Operator</span></span>](../../../visual-basic/language-reference/operators/if-operator.md)  
+ [<span data-ttu-id="187f9-115">Instrução If...Then...Else</span><span class="sxs-lookup"><span data-stu-id="187f9-115">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [<span data-ttu-id="187f9-116">Tipos de Valor Anulável</span><span class="sxs-lookup"><span data-stu-id="187f9-116">Nullable Value Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

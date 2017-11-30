@@ -1,1 +1,1 @@
-EMF (Metarquivo Avançado)
+<span data-ttu-id="ced9b-101">EMF (Metarquivo Avançado)</span><span class="sxs-lookup"><span data-stu-id="ced9b-101">Enhanced Metafile (EMF)</span></span>

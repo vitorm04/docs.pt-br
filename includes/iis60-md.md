@@ -1,1 +1,1 @@
-Internet Information Services (IIS) 6.0
+<span data-ttu-id="88c0e-101">Internet Information Services (IIS) 6.0</span><span class="sxs-lookup"><span data-stu-id="88c0e-101">Internet Information Services (IIS) 6.0</span></span>
