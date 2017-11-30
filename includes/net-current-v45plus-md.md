@@ -1,1 +1,1 @@
-Disponível desde o 4.5
+<span data-ttu-id="e2d52-101">Disponível desde o 4.5</span><span class="sxs-lookup"><span data-stu-id="e2d52-101">Available since 4.5</span></span>

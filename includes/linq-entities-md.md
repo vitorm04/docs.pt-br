@@ -1,1 +1,1 @@
-LINQ to Entities
+<span data-ttu-id="4f8fe-101">LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="4f8fe-101">LINQ to Entities</span></span>

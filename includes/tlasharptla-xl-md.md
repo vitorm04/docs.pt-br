@@ -1,1 +1,1 @@
-Microsoft Excel
+<span data-ttu-id="a249f-101">Microsoft Excel</span><span class="sxs-lookup"><span data-stu-id="a249f-101">Microsoft Excel</span></span>

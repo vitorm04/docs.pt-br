@@ -1,1 +1,1 @@
-Microsoft Visual Basic .NET
+<span data-ttu-id="d40cb-101">Microsoft Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="d40cb-101">Microsoft Visual Basic .NET</span></span>

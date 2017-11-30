@@ -1,1 +1,1 @@
-ADO.NET 2.0
+<span data-ttu-id="410ba-101">ADO.NET 2.0</span><span class="sxs-lookup"><span data-stu-id="410ba-101">ADO.NET 2.0</span></span>
