@@ -1,1404 +1,434 @@
 ---
-title: Formatando tipos
-description: Formatando tipos
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 07/20/2016
-ms.topic: article
+title: Formatando tipos no .NET
+ms.custom: 
+ms.date: 03/30/2017
 ms.prod: .net
+ms.reviewer: 
+ms.suite: 
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: cf497639-9f91-45cb-836f-998d1cea2f43
-translationtype: Human Translation
-ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
-ms.openlocfilehash: e9b8ad13a48dd43236769b130d6f8a75b7b023ca
-ms.lasthandoff: 03/10/2017
-
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- data formatting [.NET Framework]
+- dates [.NET Framework], formatting
+- date formatting [.NET Framework]
+- number formatting [.NET Framework]
+- ToString method
+- custom cultural settings [.NET Framework]
+- numbers [.NET Framework], formatting
+- formatting strings [.NET Framework]
+- time [.NET Framework], formatting
+- currency [.NET Framework], formatting
+- types [.NET Framework], formatting
+- format specifiers [.NET Framework]
+- times [.NET Framework], formatting
+- culture [.NET Framework], formatting
+- formatting [.NET Framework], types supported
+- base types [.NET Framework], formatting
+- custom formatting [.NET Framework]
+- strings [.NET Framework], formatting
+ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
+caps.latest.revision: "43"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 816337ead810be405339a0616798a06689b97315
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
-# <a name="formatting-types"></a>Formatando tipos
-
-Formatação é o processo de conversão de uma instância de classe, estrutura ou valor de enumeração em sua representação de cadeia de caracteres, de forma que a cadeia de caracteres resultante possa ser exibida aos usuários ou desserializada para restaurar o tipo de dados original. Essa conversão pode apresentar uma série de desafios:
-
-* A maneira que os valores são armazenados internamente não necessariamente reflete a maneira que os usuários desejam exibi-los. Por exemplo, um número de telefone pode ser armazenado no formato **8009999999**, que não é amigável. Em vez disso, ele deve ser exibido como **800-999-9999**. Veja a seção [Cadeias de caracteres de formato personalizado](#custom-format-strings) para obter um exemplo que formata um número dessa maneira. 
-
-* Às vezes, a conversão de um objeto para sua representação de cadeia de caracteres não é intuitiva. Por exemplo, não é claro o modo como a representação de cadeia de caracteres de um objeto de **Temperatura** ou um objeto de **Pessoa** deve aparecer. Para obter um exemplo que formata um objeto **Temperatura** de diversas maneiras, veja a seção [Cadeias de caracteres de formato padrão](#standard-format-strings).
-
-* Muitas vezes, os valores exigem formatação que leva em conta a cultura. Por exemplo, em um aplicativo que usa números para refletir os valores monetários, cadeias de caracteres numéricas devem incluir o símbolo da moeda da cultura atual, o separador de grupo (que, na maioria das culturas, é o separador de milhar) e o símbolo decimal. Para ver um exemplo, consulte a seção [Formatação que leva em conta a cultura com provedores de formato e a interface IFormatProvider](#culture-sensitive-formatting-with-format-providers-and-the-iformatprovider-interface). 
-
-* Um aplicativo pode ter que exibir o mesmo valor de maneiras diferentes. Por exemplo, um aplicativo pode representar um membro de enumeração ao exibindo uma representação de cadeia de caracteres de seu nome ou exibindo seu valor subjacente. Para obter um exemplo que formata um membro da enumeração [DayOfWeek](xref:System.DayOfWeek) de maneiras diferentes, veja a seção [Cadeias de caracteres de formato padrão](#standard-format-strings).
-
-O .NET dá suporte à formatação avançada, que permite aos desenvolvedores atender a esses requisitos. 
-
+# <a name="formatting-types-in-net"></a><span data-ttu-id="4be59-102">Formatando tipos no .NET</span><span class="sxs-lookup"><span data-stu-id="4be59-102">Formatting Types in .NET</span></span>
+<span data-ttu-id="4be59-103"><a name="Introduction"></a> Formatação é o processo de conversão de uma instância de classe, estrutura ou valor de enumeração em sua representação de cadeia de caracteres, de forma que a cadeia de caracteres resultante possa ser exibida aos usuários ou desserializada para restaurar o tipo de dados original.</span><span class="sxs-lookup"><span data-stu-id="4be59-103"><a name="Introduction"></a> Formatting is the process of converting an instance of a class, structure, or enumeration value to its string representation, often so that the resulting string can be displayed to users or deserialized to restore the original data type.</span></span> <span data-ttu-id="4be59-104">Essa conversão pode apresentar uma série de desafios:</span><span class="sxs-lookup"><span data-stu-id="4be59-104">This conversion can pose a number of challenges:</span></span>  
+  
+-   <span data-ttu-id="4be59-105">A maneira que os valores são armazenados internamente não necessariamente reflete a maneira que os usuários desejam exibi-los.</span><span class="sxs-lookup"><span data-stu-id="4be59-105">The way that values are stored internally does not necessarily reflect the way that users want to view them.</span></span> <span data-ttu-id="4be59-106">Por exemplo, um número de telefone pode ser armazenado no formato 8009999999, que não é amigável.</span><span class="sxs-lookup"><span data-stu-id="4be59-106">For example, a telephone number might be stored in the form 8009999999, which is not user-friendly.</span></span> <span data-ttu-id="4be59-107">Em vez disso, ele deve ser exibido como 800-999-9999.</span><span class="sxs-lookup"><span data-stu-id="4be59-107">It should instead be displayed as 800-999-9999.</span></span> <span data-ttu-id="4be59-108">Veja a seção [Cadeias de caracteres de formato personalizado](#customStrings) para obter um exemplo que formata um número dessa maneira.</span><span class="sxs-lookup"><span data-stu-id="4be59-108">See the [Custom Format Strings](#customStrings) section for an example that formats a number in this way.</span></span>  
+  
+-   <span data-ttu-id="4be59-109">Às vezes, a conversão de um objeto para sua representação de cadeia de caracteres não é intuitiva.</span><span class="sxs-lookup"><span data-stu-id="4be59-109">Sometimes the conversion of an object to its string representation is not intuitive.</span></span> <span data-ttu-id="4be59-110">Por exemplo, não é claro o modo como a representação de cadeia de caracteres de um objeto de Temperatura ou um objeto de Pessoa deve aparecer.</span><span class="sxs-lookup"><span data-stu-id="4be59-110">For example, it is not clear how the string representation of a Temperature object or a Person object should appear.</span></span> <span data-ttu-id="4be59-111">Para obter um exemplo que formata um objeto Temperatura de diversas maneiras, veja a seção [Cadeias de caracteres de formato padrão](#standardStrings).</span><span class="sxs-lookup"><span data-stu-id="4be59-111">For an example that formats a Temperature object in a variety of ways, see the [Standard Format Strings](#standardStrings) section.</span></span>  
+  
+-   <span data-ttu-id="4be59-112">Muitas vezes, os valores exigem formatação que leva em conta a cultura.</span><span class="sxs-lookup"><span data-stu-id="4be59-112">Values often require culture-sensitive formatting.</span></span> <span data-ttu-id="4be59-113">Por exemplo, em um aplicativo que usa números para refletir os valores monetários, cadeias de caracteres numéricas devem incluir o símbolo da moeda da cultura atual, o separador de grupo (que, na maioria das culturas, é o separador de milhar) e o símbolo decimal.</span><span class="sxs-lookup"><span data-stu-id="4be59-113">For example, in an application that uses numbers to reflect monetary values, numeric strings should include the current culture’s currency symbol, group separator (which, in most cultures, is the thousands separator), and decimal symbol.</span></span> <span data-ttu-id="4be59-114">Para ver um exemplo, veja a seção [Formatação que leva em conta a cultura com provedores de formato e a interface IFormatProvider](#FormatProviders).</span><span class="sxs-lookup"><span data-stu-id="4be59-114">For an example, see the [Culture-Sensitive Formatting with Format Providers and the IFormatProvider Interface](#FormatProviders) section.</span></span>  
+  
+-   <span data-ttu-id="4be59-115">Um aplicativo pode ter que exibir o mesmo valor de maneiras diferentes.</span><span class="sxs-lookup"><span data-stu-id="4be59-115">An application may have to display the same value in different ways.</span></span> <span data-ttu-id="4be59-116">Por exemplo, um aplicativo pode representar um membro de enumeração ao exibindo uma representação de cadeia de caracteres de seu nome ou exibindo seu valor subjacente.</span><span class="sxs-lookup"><span data-stu-id="4be59-116">For example, an application may represent an enumeration member by displaying a string representation of its name or by displaying its underlying value.</span></span> <span data-ttu-id="4be59-117">Para obter um exemplo que formata um membro do <xref:System.DayOfWeek> enumeração de maneiras diferentes, consulte o [cadeias de caracteres de formato padrão](#standardStrings) seção.</span><span class="sxs-lookup"><span data-stu-id="4be59-117">For an example that formats a member of the <xref:System.DayOfWeek> enumeration in different ways, see the [Standard Format Strings](#standardStrings) section.</span></span>  
+  
 > [!NOTE]
-> A formatação converte o valor de um tipo em uma representação de cadeia de caracteres. A análise é o inverso da formatação. Uma operação de análise cria uma instância de um tipo de dados com base em na representação de sua cadeia de caracteres. Para obter informações sobre como converter cadeias de caracteres em outros tipos de dados, veja [Analisando cadeias de caracteres](parsing-strings.md).
-
-Esta visão geral contém as seguintes seções:
-
-* [Formatação em .NET](#formatting-in-net)
-
-* [Formatação padrão usando o método ToString](#default-formatting-using-the-tostring-method)
-
-* [Substituindo o método ToString](#overriding-the-tostring-method)
-
-* [As cadeias de caractere de formato e do método ToString](#the-tostring-method-and-format-strings)
-
-    * [Cadeias de caracteres de formato padrão](#standard-format-strings)
-    
-    * [Cadeias de caracteres de formato personalizado](#custom-format-strings)
-    
-    * [Cadeias de caracteres de formato e tipos do .NET](#format-strings-and-net-types)
-    
-* [Formatação que leva em conta a cultura com provedores de formato e a interface IFormatProvider](#culture-sensitive-formatting-with-format-providers-and-the-iformatprovider-interface)
-
-    * [Formatação de valores numéricos que leva em conta a cultura](#culture-sensitive-formatting-of-numeric-values)
-    
-    * [Formatação de valores de data e hora que leva em conta a cultura](#culture-sensitive-formatting-of-date-and-time-values)
-    
-* [A interface IFormattable](#the-iformattable-interface)
-
-* [Formatação de composição](#composite-formatting)
-
-* [Formatação personalizada com ICustomFormatter](#custom-formatting-with-icustomformatter)
-
-* [Tópicos relacionados](#related-topics)
-
-* [Referência](#reference)
-
-## <a name="formatting-in-net"></a>Formatação em .NET
-
-O mecanismo básico de formatação é a implementação padrão do método [Object.ToString](xref:System.Object.ToString), que é abordado na seção [Formatação padrão usando o método ToString](#default-formatting-using-the-tostring-method), mais adiante neste tópico. No entanto, o .NET oferece várias maneiras de modificar e estender o suporte à formatação padrão. Eles incluem o seguinte:
-
-* A substituição do método [ToString](xref:System.Object.ToString) para definir uma representação de cadeia de caracteres personalizada do valor de um objeto. Para obter mais informações, veja a seção [Substituindo o método ToString](#overriding-the-tostring-method) mais adiante neste tópico.
-
-* A definição dos especificadores de formato que permitem que a representação de cadeia de caracteres do valor de um objeto assuma várias formas. Por exemplo, o especificador de formato "X" na instrução a seguir converte um inteiro na representação de cadeia de caracteres de um valor hexadecimal.
-
-  ```csharp
-  int integerValue = 60312;
-  Console.WriteLine(integerValue.ToString("X"));   // Displays EB98.
-  ```
-
-  ```vb
-  Dim integerValue As Integer = 60312
-  Console.WriteLine(integerValue.ToString("X"))   ' Displays EB98.
-  ```
+>  <span data-ttu-id="4be59-118">A formatação converte o valor de um tipo em uma representação de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="4be59-118">Formatting converts the value of a type into a string representation.</span></span> <span data-ttu-id="4be59-119">A análise é o inverso da formatação.</span><span class="sxs-lookup"><span data-stu-id="4be59-119">Parsing is the inverse of formatting.</span></span> <span data-ttu-id="4be59-120">Uma operação de análise cria uma instância de um tipo de dados com base em na representação de sua cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="4be59-120">A parsing operation creates an instance of a data type from its string representation.</span></span> <span data-ttu-id="4be59-121">Para obter informações sobre como converter cadeias de caracteres em outros tipos de dados, veja [Analisando cadeias de caracteres](../../../docs/standard/base-types/parsing-strings.md).</span><span class="sxs-lookup"><span data-stu-id="4be59-121">For information about converting strings to other data types, see [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md).</span></span>  
   
-  Para obter mais informações sobre especificadores de formato, veja a seção [As cadeias de caractere de formato e do método ToString](#the-tostring-method-and-format-strings).
+ <span data-ttu-id="4be59-122">O .NET dá suporte à formatação avançada, que permite aos desenvolvedores atender a esses requisitos.</span><span class="sxs-lookup"><span data-stu-id="4be59-122">.NET provides rich formatting support that enables developers to address these requirements.</span></span>  
   
-* O uso de provedores de formato para aproveitar as convenções de formatação de uma cultura específica. Por exemplo, a instrução a seguir exibe um valor de moeda usando as convenções de formatação da cultura en-US. 
-
-  ```csharp
-  double cost = 1632.54; 
-  Console.WriteLine(cost.ToString("C", 
-                  new System.Globalization.CultureInfo("en-US")));   
-  // The example displays the following output:
-  //       $1,632.54
-  ```
-
-  ```vb
-  Dim cost As Double = 1632.54
-  Console.WriteLine(cost.ToString("C", New System.Globalization.CultureInfo("en-US")))
-  ' The example displays the following output:
-  '       $1,632.54
-  ```
+ <span data-ttu-id="4be59-123">Esta visão geral contém as seguintes seções:</span><span class="sxs-lookup"><span data-stu-id="4be59-123">This overview contains the following sections:</span></span>  
   
-  Para obter mais informações sobre a formatação com provedores de formato, veja a seção [Formatação que leva em conta a cultura com provedores de formato e a interface IFormatProvider](#culture-sensitive-formatting-with-format-providers-and-the-iformatprovider-interface).  
+-   [<span data-ttu-id="4be59-124">Formatação em .NET</span><span class="sxs-lookup"><span data-stu-id="4be59-124">Formatting in .NET</span></span>](#NetFormatting)  
   
-* A implementação da interface [IFormattable](xref:System.IFormattable) para dar suporte tanto à conversão de cadeia de caracteres com a classe [Convert](xref:System.Convert) quanto à formatação de composição. Para obter mais informações, veja a seção [A interface IFormattable](#the-iformattable-interface).
-
-* O uso da formatação de composição para inserir a representação de cadeia de caracteres de um valor em uma cadeia de caracteres maior. Para obter mais informações, veja a seção [Formatação de composição](#composite-formatting).
-
-* A implementação de [ICustomFormatter](xref:System.ICustomFormatter) e [IFormatProvider](xref:System.IFormatProvider) para fornecer uma solução completa de formatação personalizada. Para obter mais informações, veja a seção [Formatação personalizada com ICustomFormatter](#custom-formatting-with-icustomformatter).
-
-As seções a seguir examinam esses métodos para converter um objeto em sua representação de cadeia de caracteres.
-
-## <a name="default-formatting-using-the-tostring-method"></a>Formatação padrão usando o método ToString
-
-Cada tipo é derivado de [System.Object](xref:System.Object) herda automaticamente um método [ToString](xref:System.Object.ToString) sem parâmetros, que retorna o nome do tipo por padrão. O exemplo a seguir ilustra o método [ToString](xref:System.Object.ToString) padrão. Ele define uma classe chamada `Automobile` que não tem nenhuma implementação. Quando a classe é instanciada e seu método [ToString](xref:System.Object.ToString) é chamado, ele exibe seu nome de tipo. Observe que o método [ToString](xref:System.Object.ToString) não é chamado explicitamente no exemplo. O método [Console.WriteLine(Object)](xref:System.Console.WriteLine(System.Object)) chama implicitamente o método [ToString](xref:System.Object.ToString) do objeto é passado para ele como um argumento. 
-
-```csharp
-using System;
-
-public class Automobile
-{
-   // No implementation. All members are inherited from Object.
-}
-
-public class Example
-{
-   public static void Main()
-   {
-      Automobile firstAuto = new Automobile();
-      Console.WriteLine(firstAuto);
-   }
-}
-// The example displays the following output:
-//       Automobile
-```
-
-```vb 
-Public Class Automobile
-   ' No implementation. All members are inherited from Object.
-End Class
-
-Module Example
-   Public Sub Main()
-      Dim firstAuto As New Automobile()
-      Console.WriteLine(firstAuto)
-   End Sub
-End Module
-' The example displays the following output:
-'       Automobile
-```
-
-Já que todos os tipos, com a exceção das interfaces, são derivados de [Object](xref:System.Object), essa funcionalidade é fornecida automaticamente para suas estruturas ou classes personalizadas. No entanto, a funcionalidade oferecida pelo método [ToString](xref:System.Object.ToString) padrão é limitada: embora ele identifique o tipo, não fornece nenhuma informação sobre uma instância do tipo. Para fornecer uma representação de cadeia de caracteres de um objeto que fornece informações sobre o objeto, você deve substituir o método [ToString](xref:System.Object.ToString).
-
+-   [<span data-ttu-id="4be59-125">Formatação padrão usando o método ToString</span><span class="sxs-lookup"><span data-stu-id="4be59-125">Default Formatting Using the ToString Method</span></span>](#DefaultToString)  
+  
+-   [<span data-ttu-id="4be59-126">Substituindo o método ToString</span><span class="sxs-lookup"><span data-stu-id="4be59-126">Overriding the ToString Method</span></span>](#OverrideToString)  
+  
+-   [<span data-ttu-id="4be59-127">As cadeias de caractere de formato e do método ToString</span><span class="sxs-lookup"><span data-stu-id="4be59-127">The ToString Method and Format Strings</span></span>](#FormatStrings)  
+  
+    -   [<span data-ttu-id="4be59-128">Cadeias de caracteres de formato padrão</span><span class="sxs-lookup"><span data-stu-id="4be59-128">Standard Format Strings</span></span>](#standardStrings)  
+  
+    -   [<span data-ttu-id="4be59-129">Cadeias de caracteres de formato personalizado</span><span class="sxs-lookup"><span data-stu-id="4be59-129">Custom Format Strings</span></span>](#customStrings)  
+  
+    -   [<span data-ttu-id="4be59-130">Cadeias de caracteres de formato e tipos de biblioteca de classes do .NET</span><span class="sxs-lookup"><span data-stu-id="4be59-130">Format Strings and .NET Class Library Types</span></span>](#stringRef)  
+  
+-   [<span data-ttu-id="4be59-131">Formatação que leva em conta a cultura com provedores de formato e a interface IFormatProvider</span><span class="sxs-lookup"><span data-stu-id="4be59-131">Culture-Sensitive Formatting with Format Providers and the IFormatProvider Interface</span></span>](#FormatProviders)  
+  
+    -   [<span data-ttu-id="4be59-132">Formatação de valores numéricos que leva em conta a cultura</span><span class="sxs-lookup"><span data-stu-id="4be59-132">Culture-Sensitive Formatting of Numeric Values</span></span>](#numericCulture)  
+  
+    -   [<span data-ttu-id="4be59-133">Formatação de valores de data e hora que leva em conta a cultura</span><span class="sxs-lookup"><span data-stu-id="4be59-133">Culture-Sensitive Formatting of Date and Time Values</span></span>](#dateCulture)  
+  
+-   [<span data-ttu-id="4be59-134">A interface IFormattable</span><span class="sxs-lookup"><span data-stu-id="4be59-134">The IFormattable Interface</span></span>](#IFormattable)  
+  
+-   [<span data-ttu-id="4be59-135">Formatação de composição</span><span class="sxs-lookup"><span data-stu-id="4be59-135">Composite Formatting</span></span>](#CompositeFormatting)  
+  
+-   [<span data-ttu-id="4be59-136">Formatação personalizada com ICustomFormatter</span><span class="sxs-lookup"><span data-stu-id="4be59-136">Custom Formatting with ICustomFormatter</span></span>](#Custom)  
+  
+-   [<span data-ttu-id="4be59-137">Tópicos relacionados</span><span class="sxs-lookup"><span data-stu-id="4be59-137">Related Topics</span></span>](#RelatedTopics)  
+  
+-   [<span data-ttu-id="4be59-138">Referência</span><span class="sxs-lookup"><span data-stu-id="4be59-138">Reference</span></span>](#Reference)  
+  
+<a name="NetFormatting"></a>   
+## <a name="formatting-in-net"></a><span data-ttu-id="4be59-139">Formatação em .NET</span><span class="sxs-lookup"><span data-stu-id="4be59-139">Formatting in .NET</span></span>  
+ <span data-ttu-id="4be59-140">O mecanismo básico para a formatação é a implementação padrão da <xref:System.Object.ToString%2A?displayProperty=nameWithType> método, que é abordado no [padrão a formatação usando o método ToString](#DefaultToString) seção mais adiante neste tópico.</span><span class="sxs-lookup"><span data-stu-id="4be59-140">The basic mechanism for formatting is the default implementation of the <xref:System.Object.ToString%2A?displayProperty=nameWithType> method, which is discussed in the [Default Formatting Using the ToString Method](#DefaultToString) section later in this topic.</span></span> <span data-ttu-id="4be59-141">No entanto, o .NET oferece várias maneiras de modificar e estender o suporte à formatação padrão.</span><span class="sxs-lookup"><span data-stu-id="4be59-141">However, .NET provides several ways to modify and extend its default formatting support.</span></span> <span data-ttu-id="4be59-142">Eles incluem o seguinte:</span><span class="sxs-lookup"><span data-stu-id="4be59-142">These include the following:</span></span>  
+  
+-   <span data-ttu-id="4be59-143">Substituindo o <xref:System.Object.ToString%2A?displayProperty=nameWithType> método para definir uma representação de cadeia de caracteres personalizada do valor de um objeto.</span><span class="sxs-lookup"><span data-stu-id="4be59-143">Overriding the <xref:System.Object.ToString%2A?displayProperty=nameWithType> method to define a custom string representation of an object’s value.</span></span> <span data-ttu-id="4be59-144">Para obter mais informações, veja a seção [Substituindo o método ToString](#OverrideToString) mais adiante neste tópico.</span><span class="sxs-lookup"><span data-stu-id="4be59-144">For more information, see the [Overriding the ToString Method](#OverrideToString) section later in this topic.</span></span>  
+  
+-   <span data-ttu-id="4be59-145">A definição dos especificadores de formato que permitem que a representação de cadeia de caracteres do valor de um objeto assuma várias formas.</span><span class="sxs-lookup"><span data-stu-id="4be59-145">Defining format specifiers that enable the string representation of an object’s value to take multiple forms.</span></span> <span data-ttu-id="4be59-146">Por exemplo, o especificador de formato "X" na instrução a seguir converte um inteiro na representação de cadeia de caracteres de um valor hexadecimal.</span><span class="sxs-lookup"><span data-stu-id="4be59-146">For example, the "X" format specifier in the following statement converts an integer to the string representation of a hexadecimal value.</span></span>  
+  
+     [!code-csharp[Conceptual.Formatting.Overview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/specifier1.cs#3)]
+     [!code-vb[Conceptual.Formatting.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/specifier1.vb#3)]  
+  
+     <span data-ttu-id="4be59-147">Para obter mais informações sobre especificadores de formato, veja a seção [Cadeias de caracteres de formato e método ToString](#FormatStrings).</span><span class="sxs-lookup"><span data-stu-id="4be59-147">For more information about format specifiers, see the [ToString Method and Format Strings](#FormatStrings) section.</span></span>  
+  
+-   <span data-ttu-id="4be59-148">O uso de provedores de formato para aproveitar as convenções de formatação de uma cultura específica.</span><span class="sxs-lookup"><span data-stu-id="4be59-148">Using format providers to take advantage of the formatting conventions of a specific culture.</span></span> <span data-ttu-id="4be59-149">Por exemplo, a instrução a seguir exibe um valor de moeda usando as convenções de formatação da cultura en-US.</span><span class="sxs-lookup"><span data-stu-id="4be59-149">For example, the following statement displays a currency value by using the formatting conventions of the en-US culture.</span></span>  
+  
+     [!code-csharp[Conceptual.Formatting.Overview#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/specifier1.cs#10)]
+     [!code-vb[Conceptual.Formatting.Overview#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/specifier1.vb#10)]  
+  
+     <span data-ttu-id="4be59-150">Para obter mais informações sobre a formatação com provedores de formato, consulte a seção [Provedores de formato e a interface IFormatProvider](#FormatProviders).</span><span class="sxs-lookup"><span data-stu-id="4be59-150">For more information about formatting with format providers, see the [Format Providers and the IFormatProvider Interface](#FormatProviders) section.</span></span>  
+  
+-   <span data-ttu-id="4be59-151">Implementando o <xref:System.IFormattable> interface para oferecer suporte a ambas as conversão de cadeia de caracteres com o <xref:System.Convert> classe e formatação composta.</span><span class="sxs-lookup"><span data-stu-id="4be59-151">Implementing the <xref:System.IFormattable> interface to support both string conversion with the <xref:System.Convert> class and composite formatting.</span></span> <span data-ttu-id="4be59-152">Para obter mais informações, consulte a seção [Interface IFormattable](#IFormattable).</span><span class="sxs-lookup"><span data-stu-id="4be59-152">For more information, see the [IFormattable Interface](#IFormattable) section.</span></span>  
+  
+-   <span data-ttu-id="4be59-153">O uso da formatação de composição para inserir a representação de cadeia de caracteres de um valor em uma cadeia de caracteres maior.</span><span class="sxs-lookup"><span data-stu-id="4be59-153">Using composite formatting to embed the string representation of a value in a larger string.</span></span> <span data-ttu-id="4be59-154">Para obter mais informações, veja a seção [Formatação composição](#CompositeFormatting).</span><span class="sxs-lookup"><span data-stu-id="4be59-154">For more information, see the [Composite Formatting](#CompositeFormatting) section.</span></span>  
+  
+-   <span data-ttu-id="4be59-155">Implementando <xref:System.ICustomFormatter> e <xref:System.IFormatProvider> para fornecer uma solução completa de formatação personalizada.</span><span class="sxs-lookup"><span data-stu-id="4be59-155">Implementing <xref:System.ICustomFormatter> and <xref:System.IFormatProvider> to provide a complete custom formatting solution.</span></span> <span data-ttu-id="4be59-156">Para obter mais informações, veja a seção [Formatação personalizada com ICustomFormatter](#Custom).</span><span class="sxs-lookup"><span data-stu-id="4be59-156">For more information, see the [Custom Formatting with ICustomFormatter](#Custom) section.</span></span>  
+  
+ <span data-ttu-id="4be59-157">As seções a seguir examinam esses métodos para converter um objeto em sua representação de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="4be59-157">The following sections examine these methods for converting an object to its string representation.</span></span>  
+  
+ [<span data-ttu-id="4be59-158">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="4be59-158">Back to top</span></span>](#Introduction)  
+  
+<a name="DefaultToString"></a>   
+## <a name="default-formatting-using-the-tostring-method"></a><span data-ttu-id="4be59-159">Formatação padrão usando o método ToString</span><span class="sxs-lookup"><span data-stu-id="4be59-159">Default Formatting Using the ToString Method</span></span>  
+ <span data-ttu-id="4be59-160">Cada tipo que é derivado de <xref:System.Object?displayProperty=nameWithType> herda automaticamente sem um parâmetro `ToString` método, que retorna o nome do tipo por padrão.</span><span class="sxs-lookup"><span data-stu-id="4be59-160">Every type that is derived from <xref:System.Object?displayProperty=nameWithType> automatically inherits a parameterless `ToString` method, which returns the name of the type by default.</span></span> <span data-ttu-id="4be59-161">O exemplo a seguir ilustra o método `ToString` padrão.</span><span class="sxs-lookup"><span data-stu-id="4be59-161">The following example illustrates the default `ToString` method.</span></span> <span data-ttu-id="4be59-162">Ele define uma classe chamada `Automobile` que não tem nenhuma implementação.</span><span class="sxs-lookup"><span data-stu-id="4be59-162">It defines a class named `Automobile` that has no implementation.</span></span> <span data-ttu-id="4be59-163">Quando a classe é instanciada e seu método `ToString` é chamado, ele exibe seu nome de tipo.</span><span class="sxs-lookup"><span data-stu-id="4be59-163">When the class is instantiated and its `ToString` method is called, it displays its type name.</span></span> <span data-ttu-id="4be59-164">Observe que o método `ToString` não é chamado explicitamente no exemplo.</span><span class="sxs-lookup"><span data-stu-id="4be59-164">Note that the `ToString` method is not explicitly called in the example.</span></span> <span data-ttu-id="4be59-165">O <xref:System.Console.WriteLine%28System.Object%29?displayProperty=nameWithType> método chama implicitamente o `ToString` método do objeto passado a ele como um argumento.</span><span class="sxs-lookup"><span data-stu-id="4be59-165">The <xref:System.Console.WriteLine%28System.Object%29?displayProperty=nameWithType> method implicitly calls the `ToString` method of the object passed to it as an argument.</span></span>  
+  
+ [!code-csharp[Conceptual.Formatting.Overview#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/default1.cs#1)]
+ [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]  
+  
+> [!WARNING]
+>  <span data-ttu-id="4be59-166">Começando com [!INCLUDE[win81](../../../includes/win81-md.md)], o [!INCLUDE[wrt](../../../includes/wrt-md.md)] inclui uma interface [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) com um único método, [IStringable.ToString](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx), que fornece suporte a formatação padrão.</span><span class="sxs-lookup"><span data-stu-id="4be59-166">Starting with [!INCLUDE[win81](../../../includes/win81-md.md)], the [!INCLUDE[wrt](../../../includes/wrt-md.md)] includes an [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) interface with a single method, [IStringable.ToString](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx), which provides default formatting support.</span></span> <span data-ttu-id="4be59-167">No entanto, recomendamos que tipos gerenciados não implementem a interface `IStringable`.</span><span class="sxs-lookup"><span data-stu-id="4be59-167">However, we recommend that managed types do not implement the `IStringable` interface.</span></span> <span data-ttu-id="4be59-168">Para obter mais informações, consulte "o [!INCLUDE[wrt](../../../includes/wrt-md.md)] e `IStringable` Interface" seção o <xref:System.Object.ToString%2A?displayProperty=nameWithType> página de referência.</span><span class="sxs-lookup"><span data-stu-id="4be59-168">For more information, see "The [!INCLUDE[wrt](../../../includes/wrt-md.md)] and the `IStringable` Interface" section on the <xref:System.Object.ToString%2A?displayProperty=nameWithType> reference page.</span></span>  
+  
+ <span data-ttu-id="4be59-169">Como todos os tipos diferentes de interfaces são derivados da <xref:System.Object>, essa funcionalidade é fornecida automaticamente para as estruturas ou os classes personalizadas.</span><span class="sxs-lookup"><span data-stu-id="4be59-169">Because all types other than interfaces are derived from <xref:System.Object>, this functionality is automatically provided to your custom classes or structures.</span></span> <span data-ttu-id="4be59-170">No entanto, a funcionalidade oferecida pelo método `ToString` padrão é limitada: embora ele identifique o tipo, não fornece nenhuma informação sobre uma instância do tipo.</span><span class="sxs-lookup"><span data-stu-id="4be59-170">However, the functionality offered by the default `ToString` method, is limited: Although it identifies the type, it fails to provide any information about an instance of the type.</span></span> <span data-ttu-id="4be59-171">Para fornecer uma representação de cadeia de caracteres de um objeto que fornece informações sobre o objeto, você deve substituir o método `ToString`.</span><span class="sxs-lookup"><span data-stu-id="4be59-171">To provide a string representation of an object that provides information about that object, you must override the `ToString` method.</span></span>  
+  
 > [!NOTE]
-> Estruturas herdam de [ValueType](xref:System.ValueType), que por sua vez é derivado de [Object](xref:System.Object). Embora [ValueType](xref:System.ValueType) substitua [Object.ToString](xref:System.Object.ToString), sua implementação é idêntica.
-
-## <a name="overriding-the-tostring-method"></a>Substituindo o método ToString
-
-A exibição do nome de um tipo é geralmente de uso limitado e não permite que os consumidores dos seus tipos diferenciem uma instância da outra. No entanto, você pode substituir o método [ToString](xref:System.Object.ToString) para fornecer uma representação mais útil do valor de um objeto. O exemplo a seguir define um objeto `Temperature` e substitui seu método [ToString](xref:System.Object.ToString) para exibir a temperatura em graus Celsius.
-
-```csharp
-using System;
-
-public class Temperature
-{
-   private decimal temp;
-
-   public Temperature(decimal temperature)
-   {
-      this.temp = temperature;   
-   }
-
-   public override string ToString()
-   {
-      return this.temp.ToString("N1") + "°C";
-   }
-}
-
-public class Example
-{
-   public static void Main()
-   {
-      Temperature currentTemperature = new Temperature(23.6m);
-      Console.WriteLine("The current temperature is " +
-                        currentTemperature.ToString());
-   }
-}
-// The example displays the following output:
-//       The current temperature is 23.6°C.
-```
-
-```vb
-Public Class Temperature
-   Private temp As Decimal
-
-   Public Sub New(temperature As Decimal)
-      Me.temp = temperature
-   End Sub
-
-   Public Overrides Function ToString() As String
-      Return Me.temp.ToString("N1") + "°C"   
-   End Function
-End Class
-
-Module Example
-   Public Sub Main()
-      Dim currentTemperature As New Temperature(23.6d)
-      Console.WriteLine("The current temperature is " +
-                        currentTemperature.ToString())
-   End Sub
-End Module
-' The example displays the following output:
-'       The current temperature is 23.6°C.
-```
-
-No .NET, o método [ToString](xref:System.Object.ToString) de cada tipo de valor primitivo foi substituído para exibir o valor do objeto, em vez de seu nome. A tabela a seguir mostra a substituição de cada tipo primitivo. Observe que a maioria dos métodos substituídos chama outra sobrecarga do método [ToString](xref:System.Object.ToString) e passa-a ao especificador de formato "G" que define o formato geral de seu tipo, além de um objeto [IFormatProvider](xref:System.IFormatProvider) que representa a cultura atual.
-
-Tipo | Substituição de ToString
----- | -----------------
-[Booliano](xref:System.Boolean) | Retorna um [Boolean.TrueString](xref:System.Boolean.TrueString) ou [Boolean.FalseString](xref:System.Boolean.FalseString).
-[Byte](xref:System.Byte) | Chama `Byte.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o valor [Byte](xref:System.Byte) para a cultura atual.
-[Char](xref:System.Char) | Retorna o caractere como uma cadeia de caracteres.
-[DateTime](xref:System.DateTime) | Chama `DateTime.ToString("G", DatetimeFormatInfo.CurrentInfo)` para formatar o valor de data e hora para a cultura atual. 
-[Decimal](xref:System.Decimal) | Chama `Decimal.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o valor [Decimal](xref:System.Decimal) para a cultura atual.
-[Duplo](xref:System.Double) | Chama `Double.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o valor [Double](xref:System.Double) para a cultura atual.
-[Int16](xref:System.Int16) | Chama `Int16.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o valor [Int16](xref:System.Int16) para a cultura atual.
-[Int32](xref:System.Int32) | Chama `Int16.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o valor [Int32](xref:System.Int32) para a cultura atual.
-[Int64](xref:System.Int64) | Chama `Int16.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o valor [Int64](xref:System.Int64) para a cultura atual.
-[SByte](xref:System.SByte) | Chama `Int16.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o valor [SByte](xref:System.SByte) | para a cultura atual.
-[Simples](xref:System.Single) | Chama `Int16.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o valor [Single](xref:System.Single) para a cultura atual.
-[UInt32](xref:System.UInt32) | Chama `Int16.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o valor [UInt32](xref:System.UInt32) para a cultura atual.
-[UInt32](xref:System.UInt32) | Chama `Int16.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o valor [UInt32](xref:System.UInt32) para a cultura atual.
-[UInt64](xref:System.UInt64) | Chama `Int16.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o valor [UInt64](xref:System.UInt64) para a cultura atual.
-
-## <a name="the-tostring-method-and-format-strings"></a>As cadeias de caractere de formato e do método ToString
-
-Contar com o método padrão [ToString](xref:System.Object.ToString) ou substituir [ToString](xref:System.Object.ToString) é apropriado quando um objeto tem uma única representação de cadeia de caracteres. No entanto, o valor de um objeto normalmente tem várias representações. Por exemplo, uma temperatura pode ser expressa em graus Fahrenheit, graus Celsius ou kelvins. De forma similar, o valor de inteiro 10 pode ser representado de várias maneiras, incluindo 10, 10,0, 1.0e01 ou US $10,00.
-
-Para permitir que um único valor tenha várias representações de cadeia de caracteres, o .NET usa cadeias de caracteres de formato. Uma cadeia de caracteres de formato é uma cadeia de caracteres que contém um ou mais especificadores de formato predefinidos, que são caracteres únicos ou grupos de caracteres que definem como o método [ToString](xref:System.Object.ToString) deve formatar sua saída. A cadeia de caracteres de formato é passada como um parâmetro para o método [ToString](xref:System.Object.ToString) do objeto e determina como a representação de cadeia de caracteres do valor do objeto deve ser exibida.
-
-Todos os tipos numéricos, de data e hora e tipos de enumeração no .NET dão suporte a um conjunto predefinido de especificadores de formato. Você também pode usar cadeias de caracteres de formato para definir várias representações de cadeia de caracteres de seus tipos de dados definidos pelo aplicativo.
-
-### <a name="standard-format-strings"></a>Cadeias de caracteres de formato padrão
-
-Uma cadeia de caracteres de formato padrão contém um único especificador de formato, que é um caractere alfabético que define a representação de cadeia de caracteres do objeto ao qual ela é aplicada, junto com um especificador de precisão opcional que afeta a quantos dígitos serão exibidos na cadeia de caracteres de resultado. Se o especificador de precisão for omitido ou não houver suporte a ele, um especificador de formato padrão será equivalente a uma cadeia de caracteres de formato padrão. 
-
-O .NET define um conjunto de especificadores de formato padrão para todos os tipos numéricos, todos os tipos de data e hora e todos os tipos de enumeração. Por exemplo, cada uma dessas categorias dá suporte a um especificador de formato padrão "G", que define uma representação de cadeia de caracteres geral de um valor desse mesmo tipo.
-
-Cadeias de caracteres de formato padrão para tipos de enumeração controlam diretamente a representação de cadeia de caracteres de um valor. As cadeias de caracteres de formato passadas para o método [ToString](xref:System.Object.ToString) de um valor de enumeração determinam se o valor é exibido usando seu nome de cadeia de caracteres (especificadores de formato "G" e "F"), seu valor integral subjacente (o especificador de formato "D") ou seu valor hexadecimal (o especificador de formato "X"). O exemplo a seguir ilustra o uso de cadeias de caracteres de formato padrão para formatar um valor de enumeração [DayOfWeek](xref:System.DayOfWeek). 
-
-```csharp
-DayOfWeek thisDay = DayOfWeek.Monday;
-string[] formatStrings = {"G", "F", "D", "X"};
-
-foreach (string formatString in formatStrings)
-   Console.WriteLine(thisDay.ToString(formatString));
-// The example displays the following output:
-//       Monday
-//       Monday
-//       1
-//       00000001
-```
-
-```vb
-Dim thisDay As DayOfWeek = DayOfWeek.Monday
-Dim formatStrings() As String = {"G", "F", "D", "X"}
-
-For Each formatString As String In formatStrings
-   Console.WriteLine(thisDay.ToString(formatString))
-Next
-' The example displays the following output:
-'       Monday
-'       Monday
-'       1
-'       00000001
-```
-
-Para obter informações sobre cadeias de caracteres de formato de enumeração, veja [Cadeias de caracteres de formato de enumeração](enumeration-format.md).
-
-Cadeias de caracteres de formato padrão para tipos numéricos geralmente definem uma cadeia de caracteres de resultado cuja aparência exata é controlada por um ou mais valores de propriedade. Por exemplo, o especificador de formato "C" formata um número como um valor de moeda. Quando você chama o método [ToString](xref:System.Object.ToString) com o especificador de formato "C" como o único parâmetro, os seguintes valores de propriedade do objeto [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) da cultura atual são usados para definir a representação de cadeia de caracteres do valor numérico:
-
-* A propriedade [CurrencySymbol](xref:System.Globalization.NumberFormatInfo.CurrencySymbol), que especifica o símbolo da moeda da cultura atual.
-
-* A propriedade [CurrencyNegativePattern](xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern) ou [CurrencyPositivePattern](xref:System.Globalization.NumberFormatInfo.CurrencyPositivePattern), que retorna um inteiro que determina o seguinte: 
-
-    * O posicionamento do símbolo da moeda.
-    
-    * Se valores negativos são indicados por um sinal de negativo à esquerda, um sinal de negativo à direita ou parênteses.
-    
-    * Se um espaço é ou não exibido entre o valor numérico e o símbolo da moeda.
-    
-* A propriedade [CurrencyDecimalDigits](xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits), que define o número de dígitos fracionários na cadeia de caracteres de resultado.
-
-* A propriedade [CurrencyDecimalSeparator](xref:System.Globalization.NumberFormatInfo.CurrencyDecimalSeparator), que define o símbolo do separador decimal na cadeia de caracteres de resultado.
-
-* A propriedade [CurrencyGroupSeparator](xref:System.Globalization.NumberFormatInfo.CurrencyGroupSeparator), que define o símbolo de separador de grupo.
-
-* A propriedade [CurrencyGroupSizes](xref:System.Globalization.NumberFormatInfo.CurrencyGroupSizes), que define o número de dígitos em cada grupo à esquerda da vírgula decimal.
-
-* A propriedade [NegativeSign](xref:System.Globalization.NumberFormatInfo.NegativeSign), que determinará o sinal de negativo usado na cadeia de caracteres de resultado se parênteses não forem usados para indicar valores negativos.
-
-Além disso, cadeias de caracteres de formato numérico podem incluir um especificador de precisão. O significado desse especificador depende da cadeia de caracteres de formato com o qual ele é usado, mas ele normalmente indica o número total de dígitos ou o número de dígitos fracionários que devem aparecer na cadeia de caracteres de resultado. Por exemplo, o exemplo a seguir usa a cadeia de caracteres numérica padrão "X4" e um especificador de precisão para criar um valor de cadeia de caracteres com quatro dígitos hexadecimais.
-
-```csharp
-byte[] byteValues = { 12, 163, 255 };
-foreach (byte byteValue in byteValues)
-   Console.WriteLine(byteValue.ToString("X4"));
-// The example displays the following output:
-//       000C
-//       00A3
-//       00FF
-```
-
-```vb
-Dim byteValues() As Byte = { 12, 163, 255 }
-For Each byteValue As Byte In byteValues
-   Console.WriteLine(byteValue.ToString("X4"))
-Next
-' The example displays the following output:
-'       000C
-'       00A3
-'       00FF
-```
-
-Para obter mais informações sobre cadeias de caracteres de formatação numérica padrão, veja [Cadeias de caracteres de formato numérico padrão](standard-numeric.md). 
-
-Cadeias de caracteres de formato padrão para valores de data e hora são aliases para cadeias de caracteres de formato personalizado armazenadas por uma determinada classe [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo). Por exemplo, chamar o método [ToString](xref:System.Object.ToString) de um valor de data e hora com o especificador de formato "D" exibe a data e hora por meio do uso da cadeia de caracteres de formato personalizado armazenada na propriedade [DateTimeFormatInfo.LongDatePattern](xref:System.Globalization.DateTimeFormatInfo.LongDatePattern) da cultura atual. (Para obter mais informações sobre cadeias de caracteres de formato personalizado, veja a seção [Cadeias de caracteres de formato personalizado](#custom-format-strings).) O exemplo a seguir ilustra essa relação.
-
-```csharp
-using System;
-using System.Globalization;
-
-public class Example
-{
-   public static void Main()
-   {
-      DateTime date1 = new DateTime(2017, 6, 30);
-      Console.WriteLine("D Format Specifier:     {0:D}", date1);
-      string longPattern = CultureInfo.CurrentCulture.DateTimeFormat.LongDatePattern;
-      Console.WriteLine("'{0}' custom format string:     {1}", 
-                        longPattern, date1.ToString(longPattern));
-   }
-}
-// The example displays the following output when run on a system whose
-// current culture is en-US:
-//    D Format Specifier:     Tuesday, June 30, 2017
-//    'dddd, MMMM dd, yyyy' custom format string:     Tuesday, June 30, 2017
-```
-
-```vb
-Imports System.Globalization
-
-Module Example
-   Public Sub Main()
-      Dim date1 As Date = #6/30/2009#
-      Console.WriteLine("D Format Specifier:     {0:D}", date1)
-      Dim longPattern As String = CultureInfo.CurrentCulture.DateTimeFormat.LongDatePattern
-      Console.WriteLine("'{0}' custom format string:     {1}", _
-                        longPattern, date1.ToString(longPattern))
-   End Sub
-End Module
-' The example displays the following output when run on a system whose
-' current culture is en-US:
-'    D Format Specifier:     Tuesday, June 30, 2009
-'    'dddd, MMMM dd, yyyy' custom format string:     Tuesday, June 30, 2009
-```
-
-Para obter mais informações sobre o padrão de data e cadeias de caracteres de formato de hora, veja [Cadeias de caracteres de formato de data e hora padrão](standard-datetime.md).
-
-Você também pode usar cadeias de caracteres de formato padrão para definir a representação de cadeia de caracteres de um objeto definido pelo aplicativo que é produzido pelo método `ToString(String)` do objeto. Você pode definir os especificadores de formato padrão específicos que dão suporte a seu objeto e você pode determinar se eles diferenciam ou não maiúsculas de minúsculas. A implementação do `ToString(String)` método deve dar suporte ao seguinte:
-
-* Um especificador de formato "G" que representa um formato comum ou habitual do objeto. A sobrecarga sem parâmetros do método `ToString` de seu objeto deve chamar sua sobrecarga `ToString(String)` e passar cadeia de caracteres de formato padrão "G".
-
-* Suporte para um especificador de formato que é igual a uma referência nula. Um especificador de formato igual a uma referência nula deve ser considerado equivalente ao especificador de formato "G".
-
-Por exemplo, um `Temperature` classe interna pode armazenar a temperatura em graus Celsius e usar especificadores de formato para representar o valor do objeto `Temperature` em graus Fahrenheit, graus Celsius e kelvins. O exemplo a seguir fornece uma ilustração.
-
-```csharp
-using System;
-
-public class Temperature
-{
-   private decimal m_Temp;
-
-   public Temperature(decimal temperature)
-   {
-      this.m_Temp = temperature;
-   }
-
-   public decimal Celsius
-   {
-      get { return this.m_Temp; }
-   }
-
-   public decimal Kelvin
-   {
-      get { return this.m_Temp + 273.15m; }   
-   }
-
-   public decimal Fahrenheit
-   {
-      get { return Math.Round(((decimal) (this.m_Temp * 9 / 5 + 32)), 2); }
-   }
-
-   public override string ToString()
-   {
-      return this.ToString("C");
-   }
-
-   public string ToString(string format)
-   {  
-      // Handle null or empty string.
-      if (String.IsNullOrEmpty(format)) format = "C";
-      // Remove spaces and convert to uppercase.
-      format = format.Trim().ToUpperInvariant();      
-
-      // Convert temperature to Fahrenheit and return string.
-      switch (format)
-      {
-         // Convert temperature to Fahrenheit and return string.
-         case "F":
-            return this.Fahrenheit.ToString("N2") + " °F";
-         // Convert temperature to Kelvin and return string.
-         case "K":
-            return this.Kelvin.ToString("N2") + " K";
-         // return temperature in Celsius.
-         case "G":
-         case "C":
-            return this.Celsius.ToString("N2") + " °C";
-         default:
-            throw new FormatException(String.Format("The '{0}' format string is not supported.", format));
-      }      
-   }
-}
-
-public class Example
-{
-   public static void Main()
-   {
-      Temperature temp1 = new Temperature(0m);
-      Console.WriteLine(temp1.ToString());
-      Console.WriteLine(temp1.ToString("G"));
-      Console.WriteLine(temp1.ToString("C"));
-      Console.WriteLine(temp1.ToString("F"));
-      Console.WriteLine(temp1.ToString("K"));
-
-      Temperature temp2 = new Temperature(-40m);
-      Console.WriteLine(temp2.ToString());
-      Console.WriteLine(temp2.ToString("G"));
-      Console.WriteLine(temp2.ToString("C"));
-      Console.WriteLine(temp2.ToString("F"));
-      Console.WriteLine(temp2.ToString("K"));
-
-      Temperature temp3 = new Temperature(16m);
-      Console.WriteLine(temp3.ToString());
-      Console.WriteLine(temp3.ToString("G"));
-      Console.WriteLine(temp3.ToString("C"));
-      Console.WriteLine(temp3.ToString("F"));
-      Console.WriteLine(temp3.ToString("K"));
-
-      Console.WriteLine(String.Format("The temperature is now {0:F}.", temp3));
-   }
-}
-// The example displays the following output:
-//       0.00 °C
-//       0.00 °C
-//       0.00 °C
-//       32.00 °F
-//       273.15 K
-//       -40.00 °C
-//       -40.00 °C
-//       -40.00 °C
-//       -40.00 °F
-//       233.15 K
-//       16.00 °C
-//       16.00 °C
-//       16.00 °C
-//       60.80 °F
-//       289.15 K
-//       The temperature is now 16.00 °C.
-```
-
-```vb
-Public Class Temperature
-   Private m_Temp As Decimal
-
-   Public Sub New(temperature As Decimal)
-      Me.m_Temp = temperature
-   End Sub
-
-   Public ReadOnly Property Celsius() As Decimal
-      Get
-         Return Me.m_Temp
-      End Get   
-   End Property
-
-   Public ReadOnly Property Kelvin() As Decimal
-      Get
-         Return Me.m_Temp + 273.15d   
-      End Get
-   End Property
-
-   Public ReadOnly Property Fahrenheit() As Decimal
-      Get
-         Return Math.Round(CDec(Me.m_Temp * 9 / 5 + 32), 2)
-      End Get      
-   End Property
-
-   Public Overrides Function ToString() As String
-      Return Me.ToString("C")
-   End Function
-
-   Public Overloads Function ToString(format As String) As String  
-      ' Handle null or empty string.
-      If String.IsNullOrEmpty(format) Then format = "C"
-      ' Remove spaces and convert to uppercase.
-      format = format.Trim().ToUpperInvariant()      
-
-      Select Case format
-         Case "F"
-           ' Convert temperature to Fahrenheit and return string.
-            Return Me.Fahrenheit.ToString("N2") & " °F"
-         Case "K"
-            ' Convert temperature to Kelvin and return string.
-            Return Me.Kelvin.ToString("N2") & " K"
-         Case "C", "G"
-            ' Return temperature in Celsius.
-            Return Me.Celsius.ToString("N2") & " °C"
-         Case Else
-            Throw New FormatException(String.Format("The '{0}' format string is not supported.", format))
-      End Select      
-   End Function
-End Class
-
-Public Module Example
-   Public Sub Main()
-      Dim temp1 As New Temperature(0d)
-      Console.WriteLine(temp1.ToString())
-      Console.WriteLine(temp1.ToString("G"))
-      Console.WriteLine(temp1.ToString("C"))
-      Console.WriteLine(temp1.ToString("F"))
-      Console.WriteLine(temp1.ToString("K"))
-
-      Dim temp2 As New Temperature(-40d)
-      Console.WriteLine(temp2.ToString())
-      Console.WriteLine(temp2.ToString("G"))
-      Console.WriteLine(temp2.ToString("C"))
-      Console.WriteLine(temp2.ToString("F"))
-      Console.WriteLine(temp2.ToString("K"))
-
-      Dim temp3 As New Temperature(16d)
-      Console.WriteLine(temp3.ToString())
-      Console.WriteLine(temp3.ToString("G"))
-      Console.WriteLine(temp3.ToString("C"))
-      Console.WriteLine(temp3.ToString("F"))
-      Console.WriteLine(temp3.ToString("K"))
-
-      Console.WriteLine(String.Format("The temperature is now {0:F}.", temp3))
-   End Sub
-End Module
-' The example displays the following output:
-'       0.00 °C
-'       0.00 °C
-'       0.00 °C
-'       32.00 °F
-'       273.15 K
-'       -40.00 °C
-'       -40.00 °C
-'       -40.00 °C
-'       -40.00 °F
-'       233.15 K
-'       16.00 °C
-'       16.00 °C
-'       16.00 °C
-'       60.80 °F
-'       289.15 K
-'       The temperature is now 16.00 °C.
-```
-
-### <a name="custom-format-strings"></a>Cadeias de caracteres de formato personalizado
-
-Além de cadeias de caracteres de formato padrão, o .NET define cadeias de caracteres de formato personalizado para valores numéricos e valores de data e hora. Uma cadeia de caracteres de formato personalizado consiste em um ou mais especificadores de formato personalizado que definem a representação de cadeia de caracteres de um valor. Por exemplo, a cadeia de caracteres de formato de data e hora personalizada "aaaa/mm/dd hh:mm:ss.ffff t zzz" converte uma data em sua representação de cadeia de caracteres no formato "2008/11/15 07:45:00.0000 P -08:00" para a cultura en-US. Da mesma forma, a cadeia de caracteres de formato personalizado "0000" converte o valor inteiro 12 em "0012". Para obter uma lista completa de cadeias de caracteres de formato personalizado, veja [Cadeias de caracteres de formato de data e hora personalizado](custom-datetime.md) e [Cadeias de caracteres de formato numérico personalizado](custom-numeric.md).
-
-Se uma cadeia de caracteres de formato consiste em um único especificador de formato personalizado, o especificador de formato deve ser precedido pelo símbolo de porcentagem (%) para evitar confusão com um especificador de formato padrão. O exemplo a seguir usa o especificador de formato personalizado "M" para exibir um número de um ou dois dígitos do mês de uma data específica.
-
-```csharp
-DateTime date1 = new DateTime(2009, 9, 8);
-Console.WriteLine(date1.ToString("%M"));       
-// Displays 9
-```
-
-```vb
-Dim date1 As Date = #09/08/2009#
-Console.WriteLine(date1.ToString("%M"))      ' Displays 9
-```
-
-Muitas cadeias de caracteres de formato padrão para valores de data e hora são aliases para cadeias de caracteres de formato personalizado que são definidas pelas propriedades do objeto [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo). Cadeias de caracteres de formato personalizado também oferecem flexibilidade considerável no fornecimento de formação definida pelo aplicativo para valores numéricos ou valores de data e hora. Você pode definir suas próprias cadeias de caracteres de resultado personalizadas para valores numéricos e valores de data e hora combinando vários especificadores de formato personalizado em uma única cadeia de caracteres de formato personalizado. O exemplo a seguir define uma cadeia de caracteres de formato personalizado que exibe o dia da semana entre parênteses após o nome do mês, o dia e o ano.
-
-```csharp
-string customFormat = "MMMM dd, yyyy (dddd)";
-DateTime date1 = new DateTime(2009, 8, 28);
-Console.WriteLine(date1.ToString(customFormat));   
-// The example displays the following output if run on a system
-// whose language is English:
-//       August 28, 2009 (Friday) 
-```
-
-```vb
-Dim customFormat As String = "MMMM dd, yyyy (dddd)"
-Dim date1 As Date = #8/28/2009#
-Console.WriteLine(date1.ToString(customFormat))   
-' The example displays the following output if run on a system
-' whose language is English:
-'       August 28, 2009 (Friday) 
-```
-
-O exemplo a seguir define uma cadeia de caracteres de formato personalizado que exibe um valor [Int64](xref:System.Int64) como um número de telefone de sete dígitos padrão dos EUA, junto com seu código de área. 
-
-```csharp
-using System;
-
-public class Example
-{
-   public static void Main()
-   {
-      long number = 8009999999;
-      string fmt = "000-000-0000";
-      Console.WriteLine(number.ToString(fmt));
-   }
-}
-// The example displays the following output:
-//        800-999-9999
-```
-
-```vb
-Module Example
-   Public Sub Main()
-      Dim number As Long = 8009999999
-      Dim fmt As String = "000-000-0000"
-      Console.WriteLine(number.ToString(fmt))
-   End Sub
-End Module
-' The example displays the following output:
-
-' The example displays the following output:
-'       800-999-9999
-```
-
-Embora as cadeias de caracteres de formato padrão geralmente tratem da maioria das necessidades de formatação para os tipos definidos pelo aplicativo, você também pode definir especificadores de formato personalizado para formatar seus tipos. 
-
-### <a name="format-strings-and-net-types"></a>Cadeias de caracteres de formato e tipos do .NET
-
-Todos os tipos numéricos (ou seja, os tipos [Byte](xref:System.Byte), [Decimal](xref:System.Decimal), [Double](xref:System.Double), [Int16](xref:System.Int16), [Int32](xref:System.Int32), [Int64](xref:System.Int64), [SByte](xref:System.SByte), [Single](xref:System.Single), [UInt16](xref:System.UInt16), [UInt32](xref:System.UInt32), [UInt64](xref:System.UInt64) e [BigInteger](xref:System.Numerics.BigInteger)), bem como [DateTime](xref:System.DateTime), [DateTimeOffset](xref:System.DateTimeOffset), [TimeSpan](xref:System.TimeSpan), [Guid](xref:System.Guid) e todos os tipos de enumeração, dão suporte à formatação com cadeias de caracteres de formato. Para obter informações sobre as cadeias de caracteres de formato específicas às quais cada tipo dá suporte, veja os seguintes tópicos: 
-
-Título | Definição
------ | ----------
-[Cadeias de caracteres de formato numérico padrão](standard-numeric.md) | Descreve cadeias de caracteres de formato padrão que criam representações de cadeia de caracteres de valores numéricos frequentemente usadas. 
-[Cadeias de caracteres de formato numérico personalizado](custom-numeric.md) | Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para valores numéricos.
-[Cadeias de caracteres de formato de data e hora padrão](standard-datetime.md) | Descreve cadeias de caracteres de formato padrão que criam representações de cadeia de caracteres de valores [DateTime](xref:System.DateTime) frequentemente usadas.
-[Cadeias de caracteres de formato de data e hora personalizado](custom-datetime.md) | Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para valores [DateTime](xref:System.DateTime).
-[Cadeias de caracteres de formato TimeSpan padrão](standard-timespan.md) | Descreve cadeias de caracteres de formato padrão que criam representações de intervalos de tempo frequentemente usadas.
-[Cadeias de caracteres de formato TimeSpan personalizado](custom-timespan.md) | Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para intervalos de tempo.
-[Cadeias de caracteres de formato de enumeração](enumeration-format.md) | Descreve cadeias de caracteres de formato padrão que são usadas para criar representações de cadeia de caracteres de valores de enumeração.
-[Guid.ToString(String)](xref:System.Guid.ToString(System.String)) | Descreve cadeias de caracteres de formato padrão para valores [Guid](xref:System.Guid).
-
-## <a name="culture-sensitive-formatting-with-format-providers-and-the-iformatprovider-interface"></a>Formatação que leva em conta a cultura com provedores de formato e a interface IFormatProvider
-
-Embora os especificadores de formato permitam personalizar a formatação de objetos, a produção de uma representação de cadeia de caracteres de objetos significativa geralmente requer informações de formatação adicionais. Por exemplo, formatar um número como um valor de moeda usando a cadeia de caracteres de formato padrão "C" ou então uma cadeia de caracteres de formato personalizado como "$ #,#.00" requer que, no mínimo, informações sobre o símbolo correto da moeda, o separador de grupo e o separador decimal estejam disponíveis para inclusão na cadeia de caracteres formatada. No .NET, essas informações de formatação adicionais são disponibilizadas por meio da interface [IFormatProvider](xref:System.IFormatProvider), que é fornecida como um parâmetro para um ou mais sobrecargas do método `ToString` de tipos numéricos e tipos de data e hora. Implementações [IFormatProvider](xref:System.IFormatProvider) são usadas em .NET para dar suporte à formatação de cultura específica. O exemplo a seguir ilustra como a representação de cadeia de caracteres de um objeto é alterado quando ele é formatado com três objetos [IFormatProvider](xref:System.IFormatProvider) que representam diferentes culturas.
-
-```csharp
-using System;
-using System.Globalization;
-
-public class Example
-{
-   public static void Main()
-   {
-      decimal value = 1603.42m;
-      Console.WriteLine(value.ToString("C3", new CultureInfo("en-US")));
-      Console.WriteLine(value.ToString("C3", new CultureInfo("fr-FR")));
-      Console.WriteLine(value.ToString("C3", new CultureInfo("de-DE")));
-   }
-}
-// The example displays the following output:
-//       $1,603.420
-//       1 603,420 €
-//       1.603,420 €
-```
-
-```vb
-Imports System.Globalization
-
-Public Module Example
-   Public Sub Main()
-      Dim value As Decimal = 1603.42d
-      Console.WriteLine(value.ToString("C3", New CultureInfo("en-US")))
-      Console.WriteLine(value.ToString("C3", New CultureInfo("fr-FR")))
-      Console.WriteLine(value.ToString("C3", New CultureInfo("de-DE")))
-   End Sub
-End Module
-' The example displays the following output:
-'       $1,603.420
-'       1 603,420 €
-'       1.603,420 €
-```
-
-A interface [IFormatProvider](xref:System.IFormatProvider) inclui um método, [GetFormat(Type)](xref:System.IFormatProvider.GetFormat(System.Type)), que tem um único parâmetro que especifica o tipo de objeto que fornece informações de formatação. Se o método puder fornecer um objeto desse tipo, ele retornará esse objeto. Caso contrário, ele retornará uma referência nula.
-
-[IFormatProvider.GetFormat](xref:System.IFormatProvider.GetFormat(System.Type)) é um método de retorno de chamada. Quando você chama uma sobrecarga de método `ToString` que inclui um parâmetro [IFormatProvider](xref:System.IFormatProvider), ele chama o método [GetFormat](xref:System.IFormatProvider.GetFormat(System.Type)) desse objeto [IFormatProvider](xref:System.IFormatProvider). O método [GetFormat](xref:System.IFormatProvider.GetFormat(System.Type)) é responsável por retornar um objeto que fornece as informações de formatação necessárias (conforme especificadas pelo seu parâmetro *formatType*) para o método `ToString`. 
-
-Um número de métodos de conversão de cadeia de caracteres ou formatação inclui um parâmetro de tipo [IFormatProvider](xref:System.IFormatProvider), mas em muitos casos o valor do parâmetro é ignorado quando o método é chamado. A tabela a seguir lista alguns dos métodos de formatação que usam o parâmetro e o tipo do objeto [Type](xref:System.Type) que passam para o método [IFormatProvider.GetFormat](xref:System.IFormatProvider.GetFormat(System.Type)). 
-
-Método | Tipo de parâmetro *formatType*
------- | ------------------------------
-`ToString` método de tipos numéricos | [System.Globalization.NumberFormatInfo](xref:System.Globalization.NumberFormatInfo)
-`ToString` método de tipos de data e hora | [System.Globalization.DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo)
-[String.Format](xref:System.String.Format(System.IFormatProvider,System.String,System.Object)) | [System.ICustomFormatter](xref:System.ICustomFormatter)
-[StringBuilder.AppendFormat](xref:System.Text.StringBuilder.AppendFormat(System.IFormatProvider,System.String,System.Object)) | [System.ICustomFormatter](xref:System.ICustomFormatter)
-
-O .NET fornece três classes que implementam [IFormatProvider](xref:System.IFormatProvider): 
-
-* [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo), uma classe que fornece informações de formatação para valores de data e hora para uma cultura específica. Sua implementação [IFormatProvider.GetFormat](xref:System.IFormatProvider.GetFormat(System.Type)) retorna uma instância de si mesma.
-
-* [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo), uma classe que fornece informações de formatação numérica para uma cultura específica. Sua implementação [IFormatProvider.GetFormat](xref:System.IFormatProvider.GetFormat(System.Type)) retorna uma instância de si mesma.
-
-* [CultureInfo](xref:System.Globalization.CultureInfo). Sua implementação [IFormatProvider.GetFormat](xref:System.IFormatProvider.GetFormat(System.Type)) pode retornar um objeto [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) para fornecer informações de formatação numérica ou um objeto [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) para fornecer informações de formatação para valores de data e hora. 
-
-Você também pode implementar seu próprio provedor de formato para substituir qualquer uma dessas classes. No entanto, se o seu método `GetFormat` de sua implementação precisar fornecer informações de formatação ao método `ToString`, ele deverá retornar um objeto do tipo listado na tabela anterior.
-
-### <a name="culture-sensitive-formatting-of-numeric-values"></a>Formatação de valores numéricos que leva em conta a cultura
-
-Por padrão, a formatação de valores numéricos leva em conta a cultura. Se você não especificar uma cultura quando chamar um método de formatação, as convenções de formatação da cultura do thread atual serão usadas. Isso é ilustrado no exemplo a seguir, que altera a cultura do thread atual quatro vezes e, em seguida, chama o método [Decimal.ToString(String)](xref:System.Decimal.ToString(System.String)). Em cada caso, a cadeia de caracteres de resultado reflete as convenções de formatação da cultura atual. Isso ocorre porque os métodos `ToString` e `ToString(String)` encapsulam chamadas para o método `ToString(String, IFormatProvider)` de cada tipo numérico. 
-
-```csharp
-using System;
-using System.Globalization;
-using System.Threading;
-
-public class Example
-{
-   public static void Main()
-   {
-      string[] cultureNames = { "en-US", "fr-FR", "es-MX", "de-DE" };
-      Decimal value = 1043.17m;
-
-      foreach (var cultureName in cultureNames) {
-         // Change the current thread culture.
-         Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(cultureName);
-         Console.WriteLine("The current culture is {0}", 
-                           Thread.CurrentThread.CurrentCulture.Name);
-         Console.WriteLine(value.ToString("C2"));
-         Console.WriteLine();
-      }   
-   }
-}
-// The example displays the following output:
-//       The current culture is en-US
-//       $1,043.17
-//       
-//       The current culture is fr-FR
-//       1 043,17 €
-//       
-//       The current culture is es-MX
-//       $1,043.17
-//       
-//       The current culture is de-DE
-//       1.043,17 €
-```
-
-```vb
-Imports System.Globalization
-Imports System.Threading 
-
-Module Example
-   Public Sub Main()
-      Dim cultureNames() As String = { "en-US", "fr-FR", "es-MX", "de-DE" }
-      Dim value As Decimal = 1043.17d 
-
-      For Each cultureName In cultureNames
-         ' Change the current thread culture.
-         Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(cultureName)
-         Console.WriteLine("The current culture is {0}", 
-                           Thread.CurrentThread.CurrentCulture.Name)
-         Console.WriteLine(value.ToString("C2"))
-         Console.WriteLine()
-      Next                  
-   End Sub
-End Module
-' The example displays the following output:
-'       The current culture is en-US
-'       $1,043.17
-'       
-'       The current culture is fr-FR
-'       1 043,17 €
-'       
-'       The current culture is es-MX
-'       $1,043.17
-'       
-'       The current culture is de-DE
-'       1.043,17 €
-```
-
-Você também pode formatar um valor numérico para uma cultura específica chamando uma sobrecarga `ToString` que tenha um parâmetro de *provedor* e passando-o a um dos dois elementos a seguir: 
-
-* Um [CultureInfo](xref:System.Globalization.CultureInfo) objeto que representa a cultura cujas convenções de formatação devem ser usadas. Seu método [CultureInfo.GetFormat](xref:System.Globalization.CultureInfo.GetFormat(System.Type)) retorna o valor da propriedade [CultureInfo.NumberFormat](xref:System.Globalization.CultureInfo.NumberFormat), que é o objeto [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) que fornece informações de formatação específicas da cultura para valores numéricos.
-
-* Um objeto [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) que define as convenções de formatação específicas da cultura a ser usada. Seu método [GetFormat](xref:System.Globalization.NumberFormatInfo.GetFormat(System.Type)) retorna uma instância de si mesmo.
-
-O exemplo a seguir usa objetos [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) que representam as culturas inglês (Estados Unidos) e inglês (Grã-Bretanha), além das culturas neutras francês e russo, para formatar um número de ponto flutuante.
-
-```csharp
-using System;
-using System.Globalization;
-
-public class Example
-{
-   public static void Main()
-   {                                                                                                    
-      Double value = 1043.62957;
-      string[] cultureNames = { "en-US", "en-GB", "ru", "fr" };
-
-      foreach (var name in cultureNames) {
-         NumberFormatInfo nfi = CultureInfo.CreateSpecificCulture(name).NumberFormat;
-         Console.WriteLine("{0,-6} {1}", name + ":", value.ToString("N3", nfi));
-      }   
-   }
-}
-// The example displays the following output:
-//       en-US: 1,043.630
-//       en-GB: 1,043.630
-//       ru:    1 043,630
-//       fr:    1 043,630
-```
-
-```vb
-Imports System.Globalization
-
-Module Example
-   Public Sub Main()
-      Dim value As Double = 1043.62957
-      Dim cultureNames() As String = { "en-US", "en-GB", "ru", "fr" }
-
-      For Each name In cultureNames
-         Dim nfi As NumberFormatInfo = CultureInfo.CreateSpecificCulture(name).NumberFormat
-         Console.WriteLine("{0,-6} {1}", name + ":", value.ToString("N3", nfi))
-      Next   
-   End Sub
-End Module
-' The example displays the following output:
-'       en-US: 1,043.630
-'       en-GB: 1,043.630
-'       ru:    1 043,630
-'       fr:    1 043,630
-```
-
-### <a name="culture-sensitive-formatting-of-date-and-time-values"></a>Formatação de valores de data e hora que leva em conta a cultura
-
-Por padrão, a formatação de valores de data e hora leva em conta a cultura. Se você não especificar uma cultura quando chamar um método de formatação, as convenções de formatação da cultura do thread atual serão usadas. Isso é ilustrado no exemplo a seguir, que altera a cultura do thread atual quatro vezes e, em seguida, chama o método [DateTime.ToString(String)](xref:System.DateTime.ToString(System.String)). Em cada caso, a cadeia de caracteres de resultado reflete as convenções de formatação da cultura atual. Isso ocorre porque os métodos [DateTime.ToString()](xref:System.DateTime.ToString), [DateTime.ToString(String)](xref:System.DateTime.ToString(System.String)), [DateTimeOffset.ToString()](xref:System.DateTimeOffset.ToString(System.String)) e [DateTimeOffset.ToString(String)](xref:System.DateTimeOffset.ToString(System.String)) encapsulam chamadas para os métodos [DateTime.ToString(String, IFormatProvider)](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) e [DateTimeOffset.ToString(String, IFormatProvider)](xref:System.DateTimeOffset.ToString(System.String,System.IFormatProvider)).
-
-```csharp
-using System;
-using System.Globalization;
-using System.Threading;
-
-public class Example
-{
-   public static void Main()
-   {
-      string[] cultureNames = { "en-US", "fr-FR", "es-MX", "de-DE" };
-      DateTime dateToFormat = new DateTime(2012, 5, 28, 11, 30, 0);
-
-      foreach (var cultureName in cultureNames) {
-         // Change the current thread culture.
-         Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(cultureName);
-         Console.WriteLine("The current culture is {0}", 
-                           Thread.CurrentThread.CurrentCulture.Name);
-         Console.WriteLine(dateToFormat.ToString("F"));
-         Console.WriteLine();
-      }   
-   }
-}
-// The example displays the following output:
-//       The current culture is en-US
-//       Monday, May 28, 2012 11:30:00 AM
-//       
-//       The current culture is fr-FR
-//       lundi 28 mai 2012 11:30:00
-//       
-//       The current culture is es-MX
-//       lunes, 28 de mayo de 2012 11:30:00 a.m.
-//       
-//       The current culture is de-DE
-//       Montag, 28. Mai 2012 11:30:00
-```
-
-```vb
-Imports System.Globalization
-Imports System.Threading 
-
-Module Example
-   Public Sub Main()
-      Dim cultureNames() As String = { "en-US", "fr-FR", "es-MX", "de-DE" }
-      Dim dateToFormat As Date = #5/28/2012 11:30AM#
-
-      For Each cultureName In cultureNames
-         ' Change the current thread culture.
-         Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(cultureName)
-         Console.WriteLine("The current culture is {0}", 
-                           Thread.CurrentThread.CurrentCulture.Name)
-         Console.WriteLine(dateToFormat.ToString("F"))
-         Console.WriteLine()
-      Next                  
-   End Sub
-End Module
-' The example displays the following output:
-'       The current culture is en-US
-'       Monday, May 28, 2012 11:30:00 AM
-'       
-'       The current culture is fr-FR
-'       lundi 28 mai 2012 11:30:00
-'       
-'       The current culture is es-MX
-'       lunes, 28 de mayo de 2012 11:30:00 a.m.
-'       
-'       The current culture is de-DE
-'       Montag, 28. Mai 2012 11:30:00
-```
-
-Você também pode formatar um valor de data e hora para uma cultura específica chamando uma sobrecarga [DateTime.ToString](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) ou [DateTimeOffset.ToString](xref:System.DateTimeOffset.ToString(System.String,System.IFormatProvider)) que tenha um parâmetro de provedor e passando-o a um dos dois elementos a seguir: 
-
-* Um [CultureInfo](xref:System.Globalization.CultureInfo) objeto que representa a cultura cujas convenções de formatação devem ser usadas. Seu método [CultureInfo.GetFormat](xref:System.Globalization.CultureInfo.GetFormat(System.Type)) retorna o valor da propriedade [CultureInfo.NumberFormat](xref:System.Globalization.CultureInfo.NumberFormat), que é o objeto [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) que fornece informações de formatação específicas da cultura para valores numéricos.
-
-* Um objeto [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) que define as convenções de formatação específicas da cultura a ser usada. Seu método [GetFormat](xref:System.Globalization.DateTimeFormatInfo.GetFormat(System.Type)) retorna uma instância de si mesmo.
-
-O exemplo a seguir usa objetos [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) que representam as culturas inglês (Estados Unidos) e inglês (Grã-Bretanha), além das culturas neutras francês e russo, para formatar uma data. 
-
-```csharp
-using System;
-using System.Globalization;
-
-public class Example
-{
-   public static void Main()
-   {                                                                                                    
-      DateTime dat1 = new DateTime(2012, 5, 28, 11, 30, 0);
-      string[] cultureNames = { "en-US", "en-GB", "ru", "fr" };
-
-      foreach (var name in cultureNames) {
-         DateTimeFormatInfo dtfi = CultureInfo.CreateSpecificCulture(name).DateTimeFormat;
-         Console.WriteLine("{0}: {1}", name, dat1.ToString(dtfi));
-      }   
-   }
-}
-// The example displays the following output:
-//       en-US: 5/28/2012 11:30:00 AM
-//       en-GB: 28/05/2012 11:30:00
-//       ru: 28.05.2012 11:30:00
-//       fr: 28/05/2012 11:30:00
-```
-
-```vb
-Imports System.Globalization
-
-Module Example
-   Public Sub Main()
-      Dim dat1 As Date = #5/28/2012 11:30AM#
-      Dim cultureNames() As String = { "en-US", "en-GB", "ru", "fr" }
-
-      For Each name In cultureNames
-         Dim dtfi As DateTimeFormatInfo = CultureInfo.CreateSpecificCulture(name).DateTimeFormat
-         Console.WriteLine("{0}: {1}", name, dat1.ToString(dtfi))
-      Next   
-   End Sub
-End Module
-' The example displays the following output:
-'       en-US: 5/28/2012 11:30:00 AM
-'       en-GB: 28/05/2012 11:30:00
-'       ru: 28.05.2012 11:30:00
-'       fr: 28/05/2012 11:30:00
-```
-
-## <a name="the-iformattable-interface"></a>A interface IFormattable
-
-Normalmente, os tipos que sobrecarregam o método `ToString` com uma cadeia de caracteres de formato e um parâmetro [IFormatProvider](xref:System.IFormatProvider) também implementam a interface [IFormattable](xref:System.IFormattable). Essa interface tem um único membro, [IFormattable.ToString(String, IFormatProvider)](xref:System.IFormattable.ToString(System.String,System.IFormatProvider)), que inclui como parâmetros uma cadeia de caracteres de formato e um provedor de formato.
-
-Implementar a interface [IFormattable](xref:System.IFormattable) para a classe definida pelo aplicativo oferece duas vantagens: 
-
-* Suporte para conversão de cadeia de caracteres pela classe [Convert](xref:System.Convert). Chamadas para os métodos [Convert.ToString(Object)](xref:System.Convert.ToString(System.Object)) e [Convert.ToString(Object, IFormatProvider)](xref:System.Convert.ToString(System.Object,System.IFormatProvider)) chamam sua implementação [IFormattable](xref:System.IFormattable) automaticamente.
-
-* Suporte à formatação composição. Se um item de formato que inclui uma cadeia de caracteres de formato for usado para formatar seu tipo personalizado, o Common Language Runtime chamará automaticamente a implementação [IFormattable](xref:System.IFormattable) e passará a ele a cadeia de caracteres de formato. Para obter mais informações sobre formatação de composição com métodos como `String.Format` ou `Console.WriteLine`, veja a seção [Formatação de composição](#composite-formatting).
-
-O exemplo a seguir define uma classe `Temperature` que implementa a interface [IFormattable](xref:System.IFormattable). Ela dá suporte aos especificadores de formato "C" ou "G" para exibir a temperatura em graus Celsius, o especificador de formato "F" para exibir a temperatura em Fahrenheit e o especificador de formato "K" para exibir a temperatura em Kelvin.
-
-```csharp
-using System;
-using System.Globalization;
-
-public class Temperature : IFormattable
-{
-   private decimal m_Temp;
-
-   public Temperature(decimal temperature)
-   {
-      this.m_Temp = temperature;
-   }
-
-   public decimal Celsius
-   {
-      get { return this.m_Temp; }
-   }
-
-   public decimal Kelvin
-   {
-      get { return this.m_Temp + 273.15m; }   
-   }
-
-   public decimal Fahrenheit
-   {
-      get { return Math.Round((decimal) this.m_Temp * 9 / 5 + 32, 2); }
-   }
-
-   public override string ToString()
-   {
-      return this.ToString("G", null);
-   }
-
-   public string ToString(string format)
-   {
-      return this.ToString(format, null);
-   }
-
-   public string ToString(string format, IFormatProvider provider)  
-   {
-      // Handle null or empty arguments.
-      if (String.IsNullOrEmpty(format)) format = "G";
-      // Remove any white space and convert to uppercase.
-      format = format.Trim().ToUpperInvariant();
-
-      if (provider == null) provider = NumberFormatInfo.CurrentInfo;
-
-      switch (format)
-      {
-         // Convert temperature to Fahrenheit and return string.
-         case "F":
-            return this.Fahrenheit.ToString("N2", provider) + "°F";
-         // Convert temperature to Kelvin and return string.
-         case "K":
-            return this.Kelvin.ToString("N2", provider) + "K";
-         // Return temperature in Celsius.
-         case "C":
-         case "G":
-            return this.Celsius.ToString("N2", provider) + "°C";
-         default:
-            throw new FormatException(String.Format("The '{0}' format string is not supported.", format));
-      }      
-   }
-}
-```
-
-```vb
-Imports System.Globalization
-
-Public Class Temperature : Implements IFormattable
-   Private m_Temp As Decimal
-
-   Public Sub New(temperature As Decimal)
-      Me.m_Temp = temperature
-   End Sub
-
-   Public ReadOnly Property Celsius() As Decimal
-      Get
-         Return Me.m_Temp
-      End Get   
-   End Property
-
-   Public ReadOnly Property Kelvin() As Decimal
-      Get
-         Return Me.m_Temp + 273.15d   
-      End Get
-   End Property
-
-   Public ReadOnly Property Fahrenheit() As Decimal
-      Get
-         Return Math.Round(CDec(Me.m_Temp * 9 / 5 + 32), 2)
-      End Get      
-   End Property
-
-   Public Overrides Function ToString() As String
-      Return Me.ToString("G", Nothing)
-   End Function
-
-   Public Overloads Function ToString(format As String) As String
-      Return Me.ToString(format, Nothing)
-   End Function
-
-   Public Overloads Function ToString(format As String, provider As IFormatProvider) As String _  
-      Implements IFormattable.ToString
-
-      ' Handle null or empty arguments.
-      If String.IsNullOrEmpty(format) Then format = "G"
-      ' Remove any white space and convert to uppercase.
-      format = format.Trim().ToUpperInvariant()
-
-      If provider Is Nothing Then provider = NumberFormatInfo.CurrentInfo
-
-      Select Case format
-         ' Convert temperature to Fahrenheit and return string.
-         Case "F"
-            Return Me.Fahrenheit.ToString("N2", provider) & "°F"
-         ' Convert temperature to Kelvin and return string.
-         Case "K"
-            Return Me.Kelvin.ToString("N2", provider) & "K"
-         ' Return temperature in Celsius.
-         Case "C", "G"
-            Return Me.Celsius.ToString("N2", provider) & "°C"
-         Case Else
-            Throw New FormatException(String.Format("The '{0}' format string is not supported.", format))
-      End Select      
-   End Function
-End Class
-```
-
-O exemplo a seguir instancia um objeto `Temperature`. Depois, ele chama o método [ToString](xref:System.Convert.ToString(System.Object,System.IFormatProvider)) e usa várias cadeias de caracteres de formato de composição para obter diferentes representações de um objeto `Temperature`. Cada uma dessas chamadas de método, por sua vez, chama a implementação [IFormattable](xref:System.IFormattable) da classe `Temperature`.
-
-```csharp
-public class Example
-{
-   public static void Main()
-   {
-      Temperature temp1 = new Temperature(22m);
-      Console.WriteLine(Convert.ToString(temp1, new CultureInfo("ja-JP")));
-      Console.WriteLine("Temperature: {0:K}", temp1);
-      Console.WriteLine("Temperature: {0:F}", temp1);
-      Console.WriteLine(String.Format(new CultureInfo("fr-FR"), "Temperature: {0:F}", temp1));
-   }
-}
-// The example displays the following output:
-//       22.00°C
-//       Temperature: 295.15°K
-//       Temperature: 71.60°F
-//       Temperature: 71,60°F
-```
-
-```vb
-Public Module Example
-   Public Sub Main()
-      Dim temp1 As New Temperature(22d)
-      Console.WriteLine(Convert.ToString(temp1, New CultureInfo("ja-JP")))
-      Console.WriteLine("Temperature: {0:K}", temp1)
-      Console.WriteLine("Temperature: {0:F}", temp1)
-      Console.WriteLine(String.Format(New CultureInfo("fr-FR"), "Temperature: {0:F}", temp1)) 
-   End Sub
-End Module
-' The example displays the following output:
-'       22.00°C
-'       Temperature: 295.15°K
-'       Temperature: 71.60°F
-'       Temperature: 71,60°F
-```
-
-## <a name="composite-formatting"></a>Formatação de composição
-
-Alguns métodos, tais como `String.Format` e `StringBuilder.AppendFormat`, dão suporte à formatação de composição. Uma cadeia de caracteres de formato de composição é um tipo de modelo que retorna uma única cadeia de caracteres que incorpora a representação de cadeia de caracteres de zero, um ou mais objetos. Cada objeto é representado na cadeia de caracteres de formato de composição por um item de formato indexado. O índice do item de formato corresponde à posição do objeto que ele representa na lista de parâmetros do método. Os índices são baseados em zero. Por exemplo, na seguinte chamada para o método `String.Format`, o primeiro item de formato, `{0:D}`, é substituído pela representação de cadeia de caracteres de `thatDate`; o segundo item de formato, `{1}`, é substituído pela representação de cadeia de caracteres de `item1` e, por fim, o terceiro item de formato, `{2:C2}`, é substituído pela representação de cadeia de caracteres de `item1.Value`.
-
-```csharp
-result = String.Format("On {0:d}, the inventory of {1} was worth {2:C2}.", 
-                       thatDate, item1, item1.Value);
-Console.WriteLine(result);                            
-// The example displays output like the following if run on a system
-// whose current culture is en-US:
-//       On 5/1/2009, the inventory of WidgetA was worth $107.44.
-```
-
-```vb
-result = String.Format("On {0:d}, the inventory of {1} was worth {2:C2}.", _
-                       thatDate, item1, item1.Value)
-Console.WriteLine(result)                            
-' The example displays output like the following if run on a system
-' whose current culture is en-US:
-'       On 5/1/2009, the inventory of WidgetA was worth $107.44.
-```
-
-Além de substituir um item de formato pela representação de cadeia de caracteres de seu objeto correspondente, os itens de formato também permitem que você controle o seguinte: 
-
-* O modo específico em que um objeto é representado como uma cadeia de caracteres, se o objeto implementa a interface [IFormattable](xref:System.IFormattable) e se dá suporte a cadeias de caracteres de formato. Você pode fazer isso seguindo o índice do item de formato com um : (dois-pontos) seguido por uma cadeia de caracteres de formato válido. O exemplo anterior já fez isso ao formatar um valor de data com a cadeia de caracteres de formato (por exemplo, `{0:d}`) "d" (padrão de data abreviada) e formatando um valor numérico com a cadeia de caracteres de formato "C2" (por exemplo, `{2:C2}`) para representar o número como um valor de moeda com dois dígitos decimais fracionários. 
-
-* A largura do campo que contém a representação de cadeia de caracteres do objeto e o alinhamento da representação de cadeia de caracteres nesse campo. Você pode fazer isso seguindo o índice do item de formato com uma , (vírgula) seguida da largura do campo. A cadeia de caracteres será alinhada à direita no campo se a largura do campo for um valor positivo ou à esquerda se esse valor for negativo. O exemplo a seguir alinha os valores de data à esquerda em um campo de 20 caracteres e alinha valores decimais com um dígito fracionário à direita em um campo de 11 caracteres. 
-
-```csharp
-DateTime startDate = new DateTime(2015, 8, 28, 6, 0, 0);
-decimal[] temps = { 73.452m, 68.98m, 72.6m, 69.24563m,
-                   74.1m, 72.156m, 72.228m };
-Console.WriteLine("{0,-20} {1,11}\n", "Date", "Temperature");
-for (int ctr = 0; ctr < temps.Length; ctr++)
-   Console.WriteLine("{0,-20:g} {1,11:N1}", startDate.AddDays(ctr), temps[ctr]);
-
-// The example displays the following output:
-//       Date                 Temperature
-//
-//       8/28/2015 6:00 AM           73.5
-//       8/29/2015 6:00 AM           69.0
-//       8/30/2015 6:00 AM           72.6
-//       8/31/2015 6:00 AM           69.2
-//       9/1/2015 6:00 AM            74.1
-//       9/2/2015 6:00 AM            72.2
-//       9/3/2015 6:00 AM            72.2
-```
-
-```vb
-Dim startDate As New Date(2015, 8, 28, 6, 0, 0)
-Dim temps() As Decimal = { 73.452, 68.98, 72.6, 69.24563,
-                           74.1, 72.156, 72.228 }
-Console.WriteLine("{0,-20} {1,11}", "Date", "Temperature")
-Console.WriteLine()
-For ctr As Integer = 0 To temps.Length - 1
-   Console.WriteLine("{0,-20:g} {1,11:N1}", startDate.AddDays(ctr), temps(ctr))
-Next
-' The example displays the following output:
-'       Date                 Temperature
-'
-'       8/28/2015 6:00 AM           73.5
-'       8/29/2015 6:00 AM           69.0
-'       8/30/2015 6:00 AM           72.6
-'       8/31/2015 6:00 AM           69.2
-'       9/1/2015 6:00 AM            74.1
-'       9/2/2015 6:00 AM            72.2
-'       9/3/2015 6:00 AM            72.2
-```
-
-Observe que, se o componente de cadeia de caracteres de alinhamento e o componente de cadeia de caracteres de formato estiverem presentes, o primeiro precederá o último (por exemplo, `{0,-20:g}`. 
-
-Para obter mais informações sobre formatação de composição, veja [Formatação de composição](composite-format.md).
-
-## <a name="custom-formatting-with-icustomformatter"></a>Formatação personalizada com ICustomFormatter
-
-Dois métodos de formatação de composição, [String.Format(IFormatProvider, String, Object[])](xref:System.String.Format(System.IFormatProvider,System.String,System.Object[])) e [StringBuilder.AppendFormat(IFormatProvider, String, Object[])](xref:System.Text.StringBuilder.AppendFormat(System.IFormatProvider,System.String,System.Object)), incluem um parâmetro de provedor de formato que dá suporte à formatação personalizada. Quando um desses métodos de formatação é chamado, ele passa um objeto [Type](xref:System.Type) que representa uma interface [ICustomFormatter](xref:System.ICustomFormatter) para o método `GetFormat` do provedor de formato. O `GetFormat` em seguida, o método é responsável por retornar a implementação [ICustomFormatter](xref:System.ICustomFormatter) que oferece formatação personalizada.
-
-A interface [ICustomFormatter](xref:System.ICustomFormatter) tem um único método, [Format(String, Object, IFormatProvider)](xref:System.ICustomFormatter.Format(System.String,System.Object,System.IFormatProvider)), que é chamado automaticamente por um método de formatação de composição, uma vez para cada item de formato em uma cadeia de caracteres de formato de composição. O método [Format(String, Object, IFormatProvider)](xref:System.ICustomFormatter.Format(System.String,System.Object,System.IFormatProvider)) tem três parâmetros: uma cadeia de caracteres de formato, que representa o argumento *formatString* em um item de formato, um objeto a ser formatado e um objeto [IFormatProvider](xref:System.IFormatProvider) que oferece serviços de formatação. Normalmente, a classe que implementa [ICustomFormatter](xref:System.ICustomFormatter) também implementa [IFormatProvider](xref:System.IFormatProvider), portanto, este último parâmetro é uma referência para a própria classe de formatação personalizada. O método retorna uma representação de cadeia de caracteres formatada personalizada do objeto a ser formatado. Se o método não for capaz de formatar o objeto, ele deverá retornar uma referência nula.
-
-O exemplo a seguir fornece uma implementação [ICustomFormatter](xref:System.ICustomFormatter) chamada `ByteByByteFormatter` que exibe valores inteiros como uma sequência de valores hexadecimais de dois dígitos seguidos por um espaço.
-
-```csharp
-public class ByteByByteFormatter : IFormatProvider, ICustomFormatter
-{
-   public object GetFormat(Type formatType)
-   { 
-      if (formatType == typeof(ICustomFormatter))
-         return this;
-      else
-         return null;
-   }
-
-   public string Format(string format, object arg, 
-                          IFormatProvider formatProvider)
-   {   
-      if (! formatProvider.Equals(this)) return null;
-
-      // Handle only hexadecimal format string.
-      if (! format.StartsWith("X")) return null;
-
-      byte[] bytes;
-      string output = null;
-
-      // Handle only integral types.
-      if (arg is Byte) 
-         bytes = BitConverter.GetBytes((Byte) arg);
-      else if (arg is Int16)
-         bytes = BitConverter.GetBytes((Int16) arg);
-      else if (arg is Int32)
-         bytes = BitConverter.GetBytes((Int32) arg);
-      else if (arg is Int64)   
-         bytes = BitConverter.GetBytes((Int64) arg);
-      else if (arg is SByte)
-         bytes = BitConverter.GetBytes((SByte) arg);
-      else if (arg is UInt16)
-         bytes = BitConverter.GetBytes((UInt16) arg);
-      else if (arg is UInt32)
-         bytes = BitConverter.GetBytes((UInt32) arg);
-      else if (arg is UInt64)
-         bytes = BitConverter.GetBytes((UInt64) arg);
-      else
-         return null;
-
-      for (int ctr = bytes.Length - 1; ctr >= 0; ctr--)
-         output += String.Format("{0:X2} ", bytes[ctr]);   
-
-      return output.Trim();
-   }
-}
-```
-
-```vb
-Public Class ByteByByteFormatter : Implements IFormatProvider, ICustomFormatter
-   Public Function GetFormat(formatType As Type) As Object _
-                   Implements IFormatProvider.GetFormat
-      If formatType Is GetType(ICustomFormatter) Then
-         Return Me
-      Else
-         Return Nothing
-      End If
-   End Function
-
-   Public Function Format(fmt As String, arg As Object, 
-                          formatProvider As IFormatProvider) As String _
-                          Implements ICustomFormatter.Format
-
-      If Not formatProvider.Equals(Me) Then Return Nothing
-
-      ' Handle only hexadecimal format string.
-      If Not fmt.StartsWith("X") Then 
-            Return Nothing
-      End If
-
-      ' Handle only integral types.
-      If Not typeof arg Is Byte AndAlso
-         Not typeof arg Is Int16 AndAlso
-         Not typeof arg Is Int32 AndAlso
-         Not typeof arg Is Int64 AndAlso
-         Not typeof arg Is SByte AndAlso
-         Not typeof arg Is UInt16 AndAlso
-         Not typeof arg Is UInt32 AndAlso
-         Not typeof arg Is UInt64 Then _
-            Return Nothing
-
-      Dim bytes() As Byte = BitConverter.GetBytes(arg)
-      Dim output As String = Nothing
-
-      For ctr As Integer = bytes.Length - 1 To 0 Step -1
-         output += String.Format("{0:X2} ", bytes(ctr))   
-      Next
-
-      Return output.Trim()
-   End Function
-End Class
-```
-
-O exemplo a seguir usa a classe `ByteByByteFormatter` para formatar valores inteiros. Observe que o método [ICustomFormatter.Format](xref:System.ICustomFormatter.Format(System.String,System.Object,System.IFormatProvider)) é chamado mais de uma vez na segunda chamada do método [String.Format(IFormatProvider, String, Object[])](xref:System.ICustomFormatter.Format(System.String,System.Object,System.IFormatProvider)) e que o provedor padrão [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) é usado na terceira chamada de método porque o método `.ByteByByteFormatter.Format` não reconhece a cadeia de caracteres de formato "N0" e retorna uma referência nula.
-
-```csharp
-public class Example
-{
-   public static void Main()
-   {
-      long value = 3210662321; 
-      byte value1 = 214;
-      byte value2 = 19;
-
-      Console.WriteLine(String.Format(new ByteByByteFormatter(), "{0:X}", value));
-      Console.WriteLine(String.Format(new ByteByByteFormatter(), "{0:X} And {1:X} = {2:X} ({2:000})", 
-                                      value1, value2, value1 & value2));                                
-      Console.WriteLine(String.Format(new ByteByByteFormatter(), "{0,10:N0}", value));
-   }
-}
-// The example displays the following output:
-//       00 00 00 00 BF 5E D1 B1
-//       00 D6 And 00 13 = 00 12 (018)
-//       3,210,662,321
-```
-
-```vb
-Public Module Example
-   Public Sub Main()
-      Dim value As Long = 3210662321 
-      Dim value1 As Byte = 214
-      Dim value2 As Byte = 19
-
-      Console.WriteLine((String.Format(New ByteByByteFormatter(), "{0:X}", value)))
-      Console.WriteLine((String.Format(New ByteByByteFormatter(), "{0:X} And {1:X} = {2:X} ({2:000})", 
-                                      value1, value2, value1 And value2)))                                
-      Console.WriteLine(String.Format(New ByteByByteFormatter(), "{0,10:N0}", value))
-   End Sub
-End Module
-' The example displays the following output:
-'       00 00 00 00 BF 5E D1 B1
-'       00 D6 And 00 13 = 00 12 (018)
-'       3,210,662,321
-```
-
-## <a name="related-topics"></a>Tópicos relacionados
-
-Título | Definição
------ | ----------
-[Cadeias de caracteres de formato numérico padrão](standard-numeric.md) | Descreve cadeias de caracteres de formato padrão que criam representações de cadeia de caracteres de valores numéricos frequentemente usadas. 
-[Cadeias de caracteres de formato numérico personalizado](custom-numeric.md) | Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para valores numéricos.
-[Cadeias de caracteres de formato de data e hora padrão](standard-datetime.md) |  Descreve cadeias de caracteres de formato padrão que criam representações de cadeia de caracteres de valores [DateTime](xref:System.DateTime) frequentemente usadas.
-[Cadeias de caracteres de formato de data e hora personalizado](custom-datetime.md) | Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para valores [DateTime](xref:System.DateTime).
-[Cadeias de caracteres de formato TimeSpan padrão](standard-timespan.md) | Descreve cadeias de caracteres de formato padrão que criam representações de intervalos de tempo frequentemente usadas.
-[Cadeias de caracteres de formato TimeSpan personalizado](custom-timespan.md) | Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para intervalos de tempo.
-[Cadeias de caracteres de formato de enumeração](enumeration-format.md) | Descreve cadeias de caracteres de formato padrão que são usadas para criar representações de cadeia de caracteres de valores de enumeração.
-[Formatação de composição](composite-format.md) | Descreve como inserir um ou mais valores formatados em uma cadeia de caracteres. A cadeia de caracteres pode posteriormente ser exibida no console ou gravada em um fluxo.
-[Executando operações de formatação](performing-formatting-operations.md) | Lista os tópicos que fornecem instruções passo a passo para executar operações de formatação específicas.
-[Analisando cadeias de caracteres](parsing-strings.md) | Descreve como inicializar objetos para os valores descritos pelas representações de cadeia de caracteres desses objetos. A análise é a operação inversa da formatação.
-
-## <a name="reference"></a>Referência
-
-[System.IFormattable](xref:System.IFormattable)
-
-[System.IFormatProvider](xref:System.IFormatProvider)
-
-[System.ICustomFormatter](xref:System.ICustomFormatter)
-
+>  <span data-ttu-id="4be59-172">Estruturas herdam <xref:System.ValueType>, que por sua vez é derivada de <xref:System.Object>.</span><span class="sxs-lookup"><span data-stu-id="4be59-172">Structures inherit from <xref:System.ValueType>, which in turn is derived from <xref:System.Object>.</span></span> <span data-ttu-id="4be59-173">Embora <xref:System.ValueType> substitui <xref:System.Object.ToString%2A?displayProperty=nameWithType>, sua implementação é idêntica.</span><span class="sxs-lookup"><span data-stu-id="4be59-173">Although <xref:System.ValueType> overrides <xref:System.Object.ToString%2A?displayProperty=nameWithType>, its implementation is identical.</span></span>  
+  
+ [<span data-ttu-id="4be59-174">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="4be59-174">Back to top</span></span>](#Introduction)  
+  
+<a name="OverrideToString"></a>   
+## <a name="overriding-the-tostring-method"></a><span data-ttu-id="4be59-175">Substituindo o método ToString</span><span class="sxs-lookup"><span data-stu-id="4be59-175">Overriding the ToString Method</span></span>  
+ <span data-ttu-id="4be59-176">A exibição do nome de um tipo é geralmente de uso limitado e não permite que os consumidores dos seus tipos diferenciem uma instância da outra.</span><span class="sxs-lookup"><span data-stu-id="4be59-176">Displaying the name of a type is often of limited use and does not allow consumers of your types to differentiate one instance from another.</span></span> <span data-ttu-id="4be59-177">No entanto, você pode substituir o método `ToString` para fornecer uma representação mais útil do valor de um objeto.</span><span class="sxs-lookup"><span data-stu-id="4be59-177">However, you can override the `ToString` method to provide a more useful representation of an object’s value.</span></span> <span data-ttu-id="4be59-178">O exemplo a seguir define um objeto `Temperature` e substitui seu método `ToString` para exibir a temperatura em graus Celsius.</span><span class="sxs-lookup"><span data-stu-id="4be59-178">The following example defines a `Temperature` object and overrides its `ToString` method to display the temperature in degrees Celsius.</span></span>  
+  
+ [!code-csharp[Conceptual.Formatting.Overview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/overrides1.cs#2)]
+ [!code-vb[Conceptual.Formatting.Overview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/overrides1.vb#2)]  
+  
+ <span data-ttu-id="4be59-179">No .NET, o `ToString` método de cada tipo de valor primitivo foi substituído para exibir o valor do objeto, em vez de seu nome.</span><span class="sxs-lookup"><span data-stu-id="4be59-179">In .NET, the `ToString` method of each primitive value type has been overridden to display the object’s value instead of its name.</span></span> <span data-ttu-id="4be59-180">A tabela a seguir mostra a substituição de cada tipo primitivo.</span><span class="sxs-lookup"><span data-stu-id="4be59-180">The following table shows the override for each primitive type.</span></span> <span data-ttu-id="4be59-181">Observe que a maioria dos métodos substituídos chamar outra sobrecarga do `ToString` método e passá-lo o especificador de formato "G", que define o formato geral de seu tipo, e um <xref:System.IFormatProvider> objeto que representa a cultura atual.</span><span class="sxs-lookup"><span data-stu-id="4be59-181">Note that most of the overridden methods call another overload of the `ToString` method and pass it the "G" format specifier, which defines the general format for its type, and an <xref:System.IFormatProvider> object that represents the current culture.</span></span>  
+  
+|<span data-ttu-id="4be59-182">Tipo</span><span class="sxs-lookup"><span data-stu-id="4be59-182">Type</span></span>|<span data-ttu-id="4be59-183">Substituição de ToString</span><span class="sxs-lookup"><span data-stu-id="4be59-183">ToString override</span></span>|  
+|----------|-----------------------|  
+|<xref:System.Boolean>|<span data-ttu-id="4be59-184">Retorna um <xref:System.Boolean.TrueString?displayProperty=nameWithType> ou <xref:System.Boolean.FalseString?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="4be59-184">Returns either <xref:System.Boolean.TrueString?displayProperty=nameWithType> or <xref:System.Boolean.FalseString?displayProperty=nameWithType>.</span></span>|  
+|<xref:System.Byte>|<span data-ttu-id="4be59-185">Chamadas `Byte.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o <xref:System.Byte> valor para a cultura atual.</span><span class="sxs-lookup"><span data-stu-id="4be59-185">Calls `Byte.ToString("G", NumberFormatInfo.CurrentInfo)` to format the <xref:System.Byte> value for the current culture.</span></span>|  
+|<xref:System.Char>|<span data-ttu-id="4be59-186">Retorna o caractere como uma cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="4be59-186">Returns the character as a string.</span></span>|  
+|<xref:System.DateTime>|<span data-ttu-id="4be59-187">Chama `DateTime.ToString("G", DatetimeFormatInfo.CurrentInfo)` para formatar o valor de data e hora para a cultura atual.</span><span class="sxs-lookup"><span data-stu-id="4be59-187">Calls `DateTime.ToString("G", DatetimeFormatInfo.CurrentInfo)` to format the date and time value for the current culture.</span></span>|  
+|<xref:System.Decimal>|<span data-ttu-id="4be59-188">Chamadas `Decimal.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o <xref:System.Decimal> valor para a cultura atual.</span><span class="sxs-lookup"><span data-stu-id="4be59-188">Calls `Decimal.ToString("G", NumberFormatInfo.CurrentInfo)` to format the <xref:System.Decimal> value for the current culture.</span></span>|  
+|<xref:System.Double>|<span data-ttu-id="4be59-189">Chamadas `Double.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o <xref:System.Double> valor para a cultura atual.</span><span class="sxs-lookup"><span data-stu-id="4be59-189">Calls `Double.ToString("G", NumberFormatInfo.CurrentInfo)` to format the <xref:System.Double> value for the current culture.</span></span>|  
+|<xref:System.Int16>|<span data-ttu-id="4be59-190">Chamadas `Int16.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o <xref:System.Int16> valor para a cultura atual.</span><span class="sxs-lookup"><span data-stu-id="4be59-190">Calls `Int16.ToString("G", NumberFormatInfo.CurrentInfo)` to format the <xref:System.Int16> value for the current culture.</span></span>|  
+|<xref:System.Int32>|<span data-ttu-id="4be59-191">Chamadas `Int32.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o <xref:System.Int32> valor para a cultura atual.</span><span class="sxs-lookup"><span data-stu-id="4be59-191">Calls `Int32.ToString("G", NumberFormatInfo.CurrentInfo)` to format the <xref:System.Int32> value for the current culture.</span></span>|  
+|<xref:System.Int64>|<span data-ttu-id="4be59-192">Chamadas `Int64.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o <xref:System.Int64> valor para a cultura atual.</span><span class="sxs-lookup"><span data-stu-id="4be59-192">Calls `Int64.ToString("G", NumberFormatInfo.CurrentInfo)` to format the <xref:System.Int64> value for the current culture.</span></span>|  
+|<xref:System.SByte>|<span data-ttu-id="4be59-193">Chamadas `SByte.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o <xref:System.SByte> valor para a cultura atual.</span><span class="sxs-lookup"><span data-stu-id="4be59-193">Calls `SByte.ToString("G", NumberFormatInfo.CurrentInfo)` to format the <xref:System.SByte> value for the current culture.</span></span>|  
+|<xref:System.Single>|<span data-ttu-id="4be59-194">Chamadas `Single.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o <xref:System.Single> valor para a cultura atual.</span><span class="sxs-lookup"><span data-stu-id="4be59-194">Calls `Single.ToString("G", NumberFormatInfo.CurrentInfo)` to format the <xref:System.Single> value for the current culture.</span></span>|  
+|<xref:System.UInt16>|<span data-ttu-id="4be59-195">Chamadas `UInt16.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o <xref:System.UInt16> valor para a cultura atual.</span><span class="sxs-lookup"><span data-stu-id="4be59-195">Calls `UInt16.ToString("G", NumberFormatInfo.CurrentInfo)` to format the <xref:System.UInt16> value for the current culture.</span></span>|  
+|<xref:System.UInt32>|<span data-ttu-id="4be59-196">Chamadas `UInt32.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o <xref:System.UInt32> valor para a cultura atual.</span><span class="sxs-lookup"><span data-stu-id="4be59-196">Calls `UInt32.ToString("G", NumberFormatInfo.CurrentInfo)` to format the <xref:System.UInt32> value for the current culture.</span></span>|  
+|<xref:System.UInt64>|<span data-ttu-id="4be59-197">Chamadas `UInt64.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o <xref:System.UInt64> valor para a cultura atual.</span><span class="sxs-lookup"><span data-stu-id="4be59-197">Calls `UInt64.ToString("G", NumberFormatInfo.CurrentInfo)` to format the <xref:System.UInt64> value for the current culture.</span></span>|  
+  
+ [<span data-ttu-id="4be59-198">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="4be59-198">Back to top</span></span>](#Introduction)  
+  
+<a name="FormatStrings"></a>   
+## <a name="the-tostring-method-and-format-strings"></a><span data-ttu-id="4be59-199">As cadeias de caractere de formato e do método ToString</span><span class="sxs-lookup"><span data-stu-id="4be59-199">The ToString Method and Format Strings</span></span>  
+ <span data-ttu-id="4be59-200">Contar com o método padrão `ToString` ou substituir `ToString` é apropriado quando um objeto tem uma única representação de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="4be59-200">Relying on the default `ToString` method or overriding `ToString` is appropriate when an object has a single string representation.</span></span> <span data-ttu-id="4be59-201">No entanto, o valor de um objeto normalmente tem várias representações.</span><span class="sxs-lookup"><span data-stu-id="4be59-201">However, the value of an object often has multiple representations.</span></span> <span data-ttu-id="4be59-202">Por exemplo, uma temperatura pode ser expressa em graus Fahrenheit, graus Celsius ou kelvins.</span><span class="sxs-lookup"><span data-stu-id="4be59-202">For example, a temperature can be expressed in degrees Fahrenheit, degrees Celsius, or kelvins.</span></span> <span data-ttu-id="4be59-203">De forma similar, o valor de inteiro 10 pode ser representado de várias maneiras, incluindo 10, 10,0, 1.0e01 ou US $10,00.</span><span class="sxs-lookup"><span data-stu-id="4be59-203">Similarly, the integer value 10 can be represented in numerous ways, including 10, 10.0, 1.0e01, or $10.00.</span></span>  
+  
+ <span data-ttu-id="4be59-204">Para permitir que um único valor tenha várias representações de cadeia de caracteres, o .NET usa cadeias de caracteres de formato.</span><span class="sxs-lookup"><span data-stu-id="4be59-204">To enable a single value to have multiple string representations, .NET uses format strings.</span></span> <span data-ttu-id="4be59-205">Uma cadeia de caracteres de formato é uma cadeia de caracteres que contém um ou mais especificadores de formato predefinidos, que são caracteres únicos ou grupos de caracteres que definem como o método `ToString` deve formatar sua saída.</span><span class="sxs-lookup"><span data-stu-id="4be59-205">A format string is a string that contains one or more predefined format specifiers, which are single characters or groups of characters that define how the `ToString` method should format its output.</span></span> <span data-ttu-id="4be59-206">A cadeia de caracteres de formato é passada como um parâmetro para o método `ToString` do objeto e determina como a representação de cadeia de caracteres do valor do objeto deve ser exibida.</span><span class="sxs-lookup"><span data-stu-id="4be59-206">The format string is then passed as a parameter to the object's `ToString` method and determines how the string representation of that object's value should appear.</span></span>  
+  
+ <span data-ttu-id="4be59-207">Todos os tipos numéricos, de data e hora e tipos de enumeração no .NET dão suporte a um conjunto predefinido de especificadores de formato.</span><span class="sxs-lookup"><span data-stu-id="4be59-207">All numeric types, date and time types, and enumeration types in .NET support a predefined set of format specifiers.</span></span> <span data-ttu-id="4be59-208">Você também pode usar cadeias de caracteres de formato para definir várias representações de cadeia de caracteres de seus tipos de dados definidos pelo aplicativo.</span><span class="sxs-lookup"><span data-stu-id="4be59-208">You can also use format strings to define multiple string representations of your application-defined data types.</span></span>  
+  
+<a name="standardStrings"></a>   
+### <a name="standard-format-strings"></a><span data-ttu-id="4be59-209">Cadeias de caracteres de formato padrão</span><span class="sxs-lookup"><span data-stu-id="4be59-209">Standard Format Strings</span></span>  
+ <span data-ttu-id="4be59-210">Uma cadeia de caracteres de formato padrão contém um único especificador de formato, que é um caractere alfabético que define a representação de cadeia de caracteres do objeto ao qual ela é aplicada, junto com um especificador de precisão opcional que afeta a quantos dígitos serão exibidos na cadeia de caracteres de resultado.</span><span class="sxs-lookup"><span data-stu-id="4be59-210">A standard format string contains a single format specifier, which is an alphabetic character that defines the string representation of the object to which it is applied, along with an optional precision specifier that affects how many digits are displayed in the result string.</span></span> <span data-ttu-id="4be59-211">Se o especificador de precisão for omitido ou não houver suporte a ele, um especificador de formato padrão será equivalente a uma cadeia de caracteres de formato padrão.</span><span class="sxs-lookup"><span data-stu-id="4be59-211">If the precision specifier is omitted or is not supported, a standard format specifier is equivalent to a standard format string.</span></span>  
+  
+ <span data-ttu-id="4be59-212">O .NET define um conjunto de especificadores de formato padrão para todos os tipos numéricos, todos os tipos de data e hora e todos os tipos de enumeração.</span><span class="sxs-lookup"><span data-stu-id="4be59-212">.NET defines a set of standard format specifiers for all numeric types, all date and time types, and all enumeration types.</span></span> <span data-ttu-id="4be59-213">Por exemplo, cada uma dessas categorias dá suporte a um especificador de formato padrão "G", que define uma representação de cadeia de caracteres geral de um valor desse mesmo tipo.</span><span class="sxs-lookup"><span data-stu-id="4be59-213">For example, each of these categories supports a "G" standard format specifier, which defines a general string representation of a value of that type.</span></span>  
+  
+ <span data-ttu-id="4be59-214">Cadeias de caracteres de formato padrão para tipos de enumeração controlam diretamente a representação de cadeia de caracteres de um valor.</span><span class="sxs-lookup"><span data-stu-id="4be59-214">Standard format strings for enumeration types directly control the string representation of a value.</span></span> <span data-ttu-id="4be59-215">As cadeias de caracteres de formato passadas para o método `ToString` de um valor de enumeração determinam se o valor é exibido usando seu nome de cadeia de caracteres (especificadores de formato "G" e "F"), seu valor integral subjacente (o especificador de formato "D") ou seu valor hexadecimal (o especificador de formato "X").</span><span class="sxs-lookup"><span data-stu-id="4be59-215">The format strings passed to an enumeration value’s `ToString` method determine whether the value is displayed using its string name (the "G" and "F" format specifiers), its underlying integral value (the "D" format specifier), or its hexadecimal value (the "X" format specifier).</span></span> <span data-ttu-id="4be59-216">O exemplo a seguir ilustra o uso de cadeias de caracteres de formato padrão para formatar um <xref:System.DayOfWeek> valor de enumeração.</span><span class="sxs-lookup"><span data-stu-id="4be59-216">The following example illustrates the use of standard format strings to format a <xref:System.DayOfWeek> enumeration value.</span></span>  
+  
+ [!code-csharp[Conceptual.Formatting.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/standard1.cs#4)]
+ [!code-vb[Conceptual.Formatting.Overview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/standard1.vb#4)]  
+  
+ <span data-ttu-id="4be59-217">Para obter informações sobre cadeias de caracteres de formato de enumeração, veja [Cadeias de caracteres de formato de enumeração](../../../docs/standard/base-types/enumeration-format-strings.md).</span><span class="sxs-lookup"><span data-stu-id="4be59-217">For information about enumeration format strings, see [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md).</span></span>  
+  
+ <span data-ttu-id="4be59-218">Cadeias de caracteres de formato padrão para tipos numéricos geralmente definem uma cadeia de caracteres de resultado cuja aparência exata é controlada por um ou mais valores de propriedade.</span><span class="sxs-lookup"><span data-stu-id="4be59-218">Standard format strings for numeric types usually define a result string whose precise appearance is controlled by one or more property values.</span></span> <span data-ttu-id="4be59-219">Por exemplo, o especificador de formato "C" formata um número como um valor de moeda.</span><span class="sxs-lookup"><span data-stu-id="4be59-219">For example, the "C" format specifier formats a number as a currency value.</span></span> <span data-ttu-id="4be59-220">Quando você chama o `ToString` método com o especificador de formato "C" como o único parâmetro, os seguintes valores de propriedade da cultura atual do <xref:System.Globalization.NumberFormatInfo> objeto são usados para definir a representação de cadeia de caracteres do valor numérico:</span><span class="sxs-lookup"><span data-stu-id="4be59-220">When you call the `ToString` method with the "C" format specifier as the only parameter, the following property values from the current culture’s <xref:System.Globalization.NumberFormatInfo> object are used to define the string representation of the numeric value:</span></span>  
+  
+-   <span data-ttu-id="4be59-221">O <xref:System.Globalization.NumberFormatInfo.CurrencySymbol%2A> propriedade, que especifica o símbolo de moeda da cultura atual.</span><span class="sxs-lookup"><span data-stu-id="4be59-221">The <xref:System.Globalization.NumberFormatInfo.CurrencySymbol%2A> property, which specifies the current culture’s currency symbol.</span></span>  
+  
+-   <span data-ttu-id="4be59-222">O <xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A> ou <xref:System.Globalization.NumberFormatInfo.CurrencyPositivePattern%2A> propriedade, que retorna um inteiro que determina o seguinte:</span><span class="sxs-lookup"><span data-stu-id="4be59-222">The <xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A> or <xref:System.Globalization.NumberFormatInfo.CurrencyPositivePattern%2A> property, which returns an integer that determines the following:</span></span>  
+  
+    -   <span data-ttu-id="4be59-223">O posicionamento do símbolo da moeda.</span><span class="sxs-lookup"><span data-stu-id="4be59-223">The placement of the currency symbol.</span></span>  
+  
+    -   <span data-ttu-id="4be59-224">Se valores negativos são indicados por um sinal de negativo à esquerda, um sinal de negativo à direita ou parênteses.</span><span class="sxs-lookup"><span data-stu-id="4be59-224">Whether negative values are indicated by a leading negative sign, a trailing negative sign, or parentheses.</span></span>  
+  
+    -   <span data-ttu-id="4be59-225">Se um espaço é ou não exibido entre o valor numérico e o símbolo da moeda.</span><span class="sxs-lookup"><span data-stu-id="4be59-225">Whether a space appears between the numeric value and the currency symbol.</span></span>  
+  
+-   <span data-ttu-id="4be59-226">O <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A> propriedade, que define o número de dígitos fracionários na cadeia de caracteres de resultado.</span><span class="sxs-lookup"><span data-stu-id="4be59-226">The <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A> property, which defines the number of fractional digits in the result string.</span></span>  
+  
+-   <span data-ttu-id="4be59-227">O <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalSeparator%2A> propriedade, que define o símbolo do separador decimal na cadeia de caracteres de resultado.</span><span class="sxs-lookup"><span data-stu-id="4be59-227">The <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalSeparator%2A> property, which defines the decimal separator symbol in the result string.</span></span>  
+  
+-   <span data-ttu-id="4be59-228">O <xref:System.Globalization.NumberFormatInfo.CurrencyGroupSeparator%2A> propriedade, que define o símbolo de separador de grupo.</span><span class="sxs-lookup"><span data-stu-id="4be59-228">The <xref:System.Globalization.NumberFormatInfo.CurrencyGroupSeparator%2A> property, which defines the group separator symbol.</span></span>  
+  
+-   <span data-ttu-id="4be59-229">O <xref:System.Globalization.NumberFormatInfo.CurrencyGroupSizes%2A> propriedade, que define o número de dígitos em cada grupo à esquerda da vírgula decimal.</span><span class="sxs-lookup"><span data-stu-id="4be59-229">The <xref:System.Globalization.NumberFormatInfo.CurrencyGroupSizes%2A> property, which defines the number of digits in each group to the left of the decimal.</span></span>  
+  
+-   <span data-ttu-id="4be59-230">O <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A> propriedade, que determina o sinal negativo usado na cadeia de caracteres de resultado se parênteses não são usados para indicar valores negativos.</span><span class="sxs-lookup"><span data-stu-id="4be59-230">The <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A> property, which determines the negative sign used in the result string if parentheses are not used to indicate negative values.</span></span>  
+  
+ <span data-ttu-id="4be59-231">Além disso, cadeias de caracteres de formato numérico podem incluir um especificador de precisão.</span><span class="sxs-lookup"><span data-stu-id="4be59-231">In addition, numeric format strings may include a precision specifier.</span></span> <span data-ttu-id="4be59-232">O significado desse especificador depende da cadeia de caracteres de formato com o qual ele é usado, mas ele normalmente indica o número total de dígitos ou o número de dígitos fracionários que devem aparecer na cadeia de caracteres de resultado.</span><span class="sxs-lookup"><span data-stu-id="4be59-232">The meaning of this specifier depends on the format string with which it is used, but it typically indicates either the total number of digits or the number of fractional digits that should appear in the result string.</span></span> <span data-ttu-id="4be59-233">Por exemplo, o exemplo a seguir usa a cadeia de caracteres numérica padrão "X4" e um especificador de precisão para criar um valor de cadeia de caracteres com quatro dígitos hexadecimais.</span><span class="sxs-lookup"><span data-stu-id="4be59-233">For example, the following example uses the "X4" standard numeric string and a precision specifier to create a string value that has four hexadecimal digits.</span></span>  
+  
+ [!code-csharp[Conceptual.Formatting.Overview#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/precisionspecifier1.cs#6)]
+ [!code-vb[Conceptual.Formatting.Overview#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/precisionspecifier1.vb#6)]  
+  
+ <span data-ttu-id="4be59-234">Para obter mais informações sobre cadeias de caracteres de formatação numérica de padrão, veja [Cadeias de caracteres de formato numérico padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md).</span><span class="sxs-lookup"><span data-stu-id="4be59-234">For more information about standard numeric formatting strings, see [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md).</span></span>  
+  
+ <span data-ttu-id="4be59-235">Cadeias de caracteres de formato padrão para valores de data e hora são aliases para cadeias de caracteres de formato personalizado armazenadas por um determinado <xref:System.Globalization.DateTimeFormatInfo> propriedade.</span><span class="sxs-lookup"><span data-stu-id="4be59-235">Standard format strings for date and time values are aliases for custom format strings stored by a particular <xref:System.Globalization.DateTimeFormatInfo> property.</span></span> <span data-ttu-id="4be59-236">Por exemplo, chamar o `ToString` método de um valor de data e hora com o especificador de formato "D" exibe a data e hora usando a cadeia de caracteres de formato personalizado armazenada da cultura atual <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> propriedade.</span><span class="sxs-lookup"><span data-stu-id="4be59-236">For example, calling the `ToString` method of a date and time value with the "D" format specifier displays the date and time by using the custom format string stored in the current culture’s <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="4be59-237">(Para obter mais informações sobre cadeias de caracteres de formato personalizado, consulte a [próxima seção](#customStrings).) O exemplo a seguir ilustra essa relação.</span><span class="sxs-lookup"><span data-stu-id="4be59-237">(For more information about custom format strings, see the [next section](#customStrings).) The following example illustrates this relationship.</span></span>  
+  
+ [!code-csharp[Conceptual.Formatting.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/alias1.cs#5)]
+ [!code-vb[Conceptual.Formatting.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/alias1.vb#5)]  
+  
+ <span data-ttu-id="4be59-238">Para obter mais informações sobre o padrão de data e cadeias de caracteres de formato de hora, veja [Cadeias de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md).</span><span class="sxs-lookup"><span data-stu-id="4be59-238">For more information about standard date and time format strings, see [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md).</span></span>  
+  
+ <span data-ttu-id="4be59-239">Você também pode usar cadeias de caracteres de formato padrão para definir a representação de cadeia de caracteres de um objeto definido pelo aplicativo que é produzido pelo método `ToString(String)` do objeto.</span><span class="sxs-lookup"><span data-stu-id="4be59-239">You can also use standard format strings to define the string representation of an application-defined object that is produced by the object’s `ToString(String)` method.</span></span> <span data-ttu-id="4be59-240">Você pode definir os especificadores de formato padrão específicos que dão suporte a seu objeto e você pode determinar se eles diferenciam ou não maiúsculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="4be59-240">You can define the specific standard format specifiers that your object supports, and you can determine whether they are case-sensitive or case-insensitive.</span></span> <span data-ttu-id="4be59-241">A implementação do `ToString(String)` método deve dar suporte ao seguinte:</span><span class="sxs-lookup"><span data-stu-id="4be59-241">Your implementation of the `ToString(String)` method should support the following:</span></span>  
+  
+-   <span data-ttu-id="4be59-242">Um especificador de formato "G" que representa um formato comum ou habitual do objeto.</span><span class="sxs-lookup"><span data-stu-id="4be59-242">A "G" format specifier that represents a customary or common format of the object.</span></span> <span data-ttu-id="4be59-243">A sobrecarga sem parâmetros do método `ToString` de seu objeto deve chamar sua sobrecarga `ToString(String)` e passar cadeia de caracteres de formato padrão "G".</span><span class="sxs-lookup"><span data-stu-id="4be59-243">The parameterless overload of your object's `ToString` method should call its `ToString(String)` overload and pass it the "G" standard format string.</span></span>  
+  
+-   <span data-ttu-id="4be59-244">Suporte para um especificador de formato que é igual a uma referência nula (`Nothing` em Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="4be59-244">Support for a format specifier that is equal to a null reference (`Nothing` in Visual Basic).</span></span> <span data-ttu-id="4be59-245">Um especificador de formato igual a uma referência nula deve ser considerado equivalente ao especificador de formato "G".</span><span class="sxs-lookup"><span data-stu-id="4be59-245">A format specifier that is equal to a null reference should be considered equivalent to the "G" format specifier.</span></span>  
+  
+ <span data-ttu-id="4be59-246">Por exemplo, um `Temperature` classe interna pode armazenar a temperatura em graus Celsius e usar especificadores de formato para representar o valor do objeto `Temperature` em graus Fahrenheit, graus Celsius e kelvins.</span><span class="sxs-lookup"><span data-stu-id="4be59-246">For example, a `Temperature` class can internally store the temperature in degrees Celsius and use format specifiers to represent the value of the `Temperature` object in degrees Celsius, degrees Fahrenheit, and kelvins.</span></span> <span data-ttu-id="4be59-247">O exemplo a seguir fornece uma ilustração.</span><span class="sxs-lookup"><span data-stu-id="4be59-247">The following example provides an illustration.</span></span>  
+  
+ [!code-csharp[Conceptual.Formatting.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/appstandard1.cs#7)]
+ [!code-vb[Conceptual.Formatting.Overview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/appstandard1.vb#7)]  
+  
+ [<span data-ttu-id="4be59-248">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="4be59-248">Back to top</span></span>](#Introduction)  
+  
+<a name="customStrings"></a>   
+### <a name="custom-format-strings"></a><span data-ttu-id="4be59-249">Cadeias de caracteres de formato personalizado</span><span class="sxs-lookup"><span data-stu-id="4be59-249">Custom Format Strings</span></span>  
+ <span data-ttu-id="4be59-250">Além de cadeias de caracteres de formato padrão, o .NET define cadeias de caracteres de formato personalizado para valores numéricos e valores de data e hora.</span><span class="sxs-lookup"><span data-stu-id="4be59-250">In addition to the standard format strings, .NET defines custom format strings for both numeric values and date and time values.</span></span> <span data-ttu-id="4be59-251">Uma cadeia de caracteres de formato personalizado consiste em um ou mais especificadores de formato personalizado que definem a representação de cadeia de caracteres de um valor.</span><span class="sxs-lookup"><span data-stu-id="4be59-251">A custom format string consists of one or more custom format specifiers that define the string representation of a value.</span></span> <span data-ttu-id="4be59-252">Por exemplo, a cadeia de caracteres de formato de data e hora personalizada "aaaa/mm/dd hh:mm:ss.ffff t zzz" converte uma data em sua representação de cadeia de caracteres no formato "2008/11/15 07:45:00.0000 P -08:00" para a cultura en-US.</span><span class="sxs-lookup"><span data-stu-id="4be59-252">For example, the custom date and time format string "yyyy/mm/dd hh:mm:ss.ffff t zzz" converts a date to its string representation in the form "2008/11/15 07:45:00.0000 P -08:00" for the en-US culture.</span></span> <span data-ttu-id="4be59-253">Da mesma forma, a cadeia de caracteres de formato personalizado "0000" converte o valor inteiro 12 em "0012".</span><span class="sxs-lookup"><span data-stu-id="4be59-253">Similarly, the custom format string "0000" converts the integer value 12 to "0012".</span></span> <span data-ttu-id="4be59-254">Para obter uma lista completa de cadeias de caracteres de formato personalizado, veja [Cadeias de caracteres de formato de data e hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) e [Cadeias de caracteres de formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md).</span><span class="sxs-lookup"><span data-stu-id="4be59-254">For a complete list of custom format strings, see [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) and [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md).</span></span>  
+  
+ <span data-ttu-id="4be59-255">Se uma cadeia de caracteres de formato consiste em um único especificador de formato personalizado, o especificador de formato deve ser precedido pelo símbolo de porcentagem (%) para evitar confusão com um especificador de formato padrão.</span><span class="sxs-lookup"><span data-stu-id="4be59-255">If a format string consists of a single custom format specifier, the format specifier should be preceded by the percent (%) symbol to avoid confusion with a standard format specifier.</span></span> <span data-ttu-id="4be59-256">O exemplo a seguir usa o especificador de formato personalizado "M" para exibir um número de um ou dois dígitos do mês de uma data específica.</span><span class="sxs-lookup"><span data-stu-id="4be59-256">The following example uses the "M" custom format specifier to display a one-digit or two-digit number of the month of a particular date.</span></span>  
+  
+ [!code-csharp[Conceptual.Formatting.Overview#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/singlecustom1.cs#8)]
+ [!code-vb[Conceptual.Formatting.Overview#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/singlecustom1.vb#8)]  
+  
+ <span data-ttu-id="4be59-257">Muitas cadeias de caracteres de formato padrão para os valores de data e hora são aliases para cadeias de caracteres de formato personalizado são definidas pelas propriedades do <xref:System.Globalization.DateTimeFormatInfo> objeto.</span><span class="sxs-lookup"><span data-stu-id="4be59-257">Many standard format strings for date and time values are aliases for custom format strings that are defined by properties of the <xref:System.Globalization.DateTimeFormatInfo> object.</span></span> <span data-ttu-id="4be59-258">Cadeias de caracteres de formato personalizado também oferecem flexibilidade considerável no fornecimento de formação definida pelo aplicativo para valores numéricos ou valores de data e hora.</span><span class="sxs-lookup"><span data-stu-id="4be59-258">Custom format strings also offer considerable flexibility in providing application-defined formatting for numeric values or date and time values.</span></span> <span data-ttu-id="4be59-259">Você pode definir suas próprias cadeias de caracteres de resultado personalizadas para valores numéricos e valores de data e hora combinando vários especificadores de formato personalizado em uma única cadeia de caracteres de formato personalizado.</span><span class="sxs-lookup"><span data-stu-id="4be59-259">You can define your own custom result strings for both numeric values and date and time values by combining multiple custom format specifiers into a single custom format string.</span></span> <span data-ttu-id="4be59-260">O exemplo a seguir define uma cadeia de caracteres de formato personalizado que exibe o dia da semana entre parênteses após o nome do mês, o dia e o ano.</span><span class="sxs-lookup"><span data-stu-id="4be59-260">The following example defines a custom format string that displays the day of the week in parentheses after the month name, day, and year.</span></span>  
+  
+ [!code-csharp[Conceptual.Formatting.Overview#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/custom1.cs#9)]
+ [!code-vb[Conceptual.Formatting.Overview#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/custom1.vb#9)]  
+  
+ <span data-ttu-id="4be59-261">O exemplo a seguir define uma cadeia de caracteres de formato personalizado que exibe um <xref:System.Int64> valor como um número de telefone dos EUA padrão, com sete dígitos, juntamente com seu código de área.</span><span class="sxs-lookup"><span data-stu-id="4be59-261">The following example defines a custom format string that displays an <xref:System.Int64> value as a standard, seven-digit U.S. telephone number along with its area code.</span></span>  
+  
+ [!code-csharp[Conceptual.Formatting.Overview#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/telnumber1.cs#21)]
+ [!code-vb[Conceptual.Formatting.Overview#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/telnumber1.vb#21)]  
+  
+ <span data-ttu-id="4be59-262">Embora as cadeias de caracteres de formato padrão geralmente tratem da maioria das necessidades de formatação para os tipos definidos pelo aplicativo, você também pode definir especificadores de formato personalizado para formatar seus tipos.</span><span class="sxs-lookup"><span data-stu-id="4be59-262">Although standard format strings can generally handle most of the formatting needs for your application-defined types, you may also define custom format specifiers to format your types.</span></span>  
+  
+ [<span data-ttu-id="4be59-263">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="4be59-263">Back to top</span></span>](#Introduction)  
+  
+<a name="stringRef"></a>   
+### <a name="format-strings-and-net-class-library-types"></a><span data-ttu-id="4be59-264">Cadeias de caracteres de formato e tipos de biblioteca de classes do .NET</span><span class="sxs-lookup"><span data-stu-id="4be59-264">Format Strings and .NET Class Library Types</span></span>  
+ <span data-ttu-id="4be59-265">Todos os tipos numéricos (ou seja, o <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>e <xref:System.Numerics.BigInteger>tipos)</span><span class="sxs-lookup"><span data-stu-id="4be59-265">All numeric types (that is, the <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, and <xref:System.Numerics.BigInteger> types)</span></span>  
+  
+ <span data-ttu-id="4be59-266">, bem como o <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, <xref:System.Guid>, e todos os tipos de enumeração, suporte à formatação com cadeias de caracteres de formato.</span><span class="sxs-lookup"><span data-stu-id="4be59-266">, as well as the <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, <xref:System.Guid>, and all enumeration types, support formatting with format strings.</span></span> <span data-ttu-id="4be59-267">Para obter informações sobre as cadeias de caracteres de formato específicas às quais cada tipo dá suporte, veja os seguintes tópicos</span><span class="sxs-lookup"><span data-stu-id="4be59-267">For information on the specific format strings supported by each type, see the following topics</span></span>  
+  
+|<span data-ttu-id="4be59-268">Título</span><span class="sxs-lookup"><span data-stu-id="4be59-268">Title</span></span>|<span data-ttu-id="4be59-269">Definição</span><span class="sxs-lookup"><span data-stu-id="4be59-269">Definition</span></span>|  
+|-----------|----------------|  
+|[<span data-ttu-id="4be59-270">Cadeias de Caracteres de Formato Numérico Padrão</span><span class="sxs-lookup"><span data-stu-id="4be59-270">Standard Numeric Format Strings</span></span>](../../../docs/standard/base-types/standard-numeric-format-strings.md)|<span data-ttu-id="4be59-271">Descreve cadeias de caracteres de formato padrão que criam representações de cadeia de caracteres de valores numéricos frequentemente usadas.</span><span class="sxs-lookup"><span data-stu-id="4be59-271">Describes standard format strings that create commonly used string representations of numeric values.</span></span>|  
+|[<span data-ttu-id="4be59-272">Cadeias de caracteres de formato numérico personalizado</span><span class="sxs-lookup"><span data-stu-id="4be59-272">Custom Numeric Format Strings</span></span>](../../../docs/standard/base-types/custom-numeric-format-strings.md)|<span data-ttu-id="4be59-273">Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para valores numéricos.</span><span class="sxs-lookup"><span data-stu-id="4be59-273">Describes custom format strings that create application-specific formats for numeric values.</span></span>|  
+|[<span data-ttu-id="4be59-274">Cadeias de caracteres de formato de data e hora padrão</span><span class="sxs-lookup"><span data-stu-id="4be59-274">Standard Date and Time Format Strings</span></span>](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|<span data-ttu-id="4be59-275">Descreve as cadeias de caracteres de formato padrão que criar representações de cadeia de caracteres usadas de <xref:System.DateTime> valores.</span><span class="sxs-lookup"><span data-stu-id="4be59-275">Describes standard format strings that create commonly used string representations of <xref:System.DateTime> values.</span></span>|  
+|[<span data-ttu-id="4be59-276">Cadeias de caracteres de formato de data e hora personalizado</span><span class="sxs-lookup"><span data-stu-id="4be59-276">Custom Date and Time Format Strings</span></span>](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|<span data-ttu-id="4be59-277">Descreve as cadeias de caracteres de formato personalizado que criar formatos específicos do aplicativo para <xref:System.DateTime> valores.</span><span class="sxs-lookup"><span data-stu-id="4be59-277">Describes custom format strings that create application-specific formats for <xref:System.DateTime> values.</span></span>|  
+|[<span data-ttu-id="4be59-278">Cadeias de caracteres de formato TimeSpan padrão</span><span class="sxs-lookup"><span data-stu-id="4be59-278">Standard TimeSpan Format Strings</span></span>](../../../docs/standard/base-types/standard-timespan-format-strings.md)|<span data-ttu-id="4be59-279">Descreve cadeias de caracteres de formato padrão que criam representações de intervalos de tempo frequentemente usadas.</span><span class="sxs-lookup"><span data-stu-id="4be59-279">Describes standard format strings that create commonly used string representations of time intervals.</span></span>|  
+|[<span data-ttu-id="4be59-280">Cadeias de caracteres de formato TimeSpan personalizado</span><span class="sxs-lookup"><span data-stu-id="4be59-280">Custom TimeSpan Format Strings</span></span>](../../../docs/standard/base-types/custom-timespan-format-strings.md)|<span data-ttu-id="4be59-281">Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para intervalos de tempo.</span><span class="sxs-lookup"><span data-stu-id="4be59-281">Describes custom format strings that create application-specific formats for time intervals.</span></span>|  
+|[<span data-ttu-id="4be59-282">Cadeias de Caracteres de Formato de Enumeração</span><span class="sxs-lookup"><span data-stu-id="4be59-282">Enumeration Format Strings</span></span>](../../../docs/standard/base-types/enumeration-format-strings.md)|<span data-ttu-id="4be59-283">Descreve cadeias de caracteres de formato padrão que são usadas para criar representações de cadeia de caracteres de valores de enumeração.</span><span class="sxs-lookup"><span data-stu-id="4be59-283">Describes standard format strings that are used to create string representations of enumeration values.</span></span>|  
+|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|<span data-ttu-id="4be59-284">Descreve as cadeias de caracteres de formato padrão para <xref:System.Guid> valores.</span><span class="sxs-lookup"><span data-stu-id="4be59-284">Describes standard format strings for <xref:System.Guid> values.</span></span>|  
+  
+<a name="FormatProviders"></a>   
+## <a name="culture-sensitive-formatting-with-format-providers-and-the-iformatprovider-interface"></a><span data-ttu-id="4be59-285">Formatação que leva em conta a cultura com provedores de formato e a interface IFormatProvider</span><span class="sxs-lookup"><span data-stu-id="4be59-285">Culture-Sensitive Formatting with Format Providers and the IFormatProvider Interface</span></span>  
+ <span data-ttu-id="4be59-286">Embora os especificadores de formato permitam personalizar a formatação de objetos, a produção de uma representação de cadeia de caracteres de objetos significativa geralmente requer informações de formatação adicionais.</span><span class="sxs-lookup"><span data-stu-id="4be59-286">Although format specifiers let you customize the formatting of objects, producing a meaningful string representation of objects often requires additional formatting information.</span></span> <span data-ttu-id="4be59-287">Por exemplo, formatar um número como um valor de moeda usando a cadeia de caracteres de formato padrão "C" ou então uma cadeia de caracteres de formato personalizado como "$ #,#.00" requer que, no mínimo, informações sobre o símbolo correto da moeda, o separador de grupo e o separador decimal estejam disponíveis para inclusão na cadeia de caracteres formatada.</span><span class="sxs-lookup"><span data-stu-id="4be59-287">For example, formatting a number as a currency value by using either the "C" standard format string or a custom format string such as "$ #,#.00" requires, at a minimum, information about the correct currency symbol, group separator, and decimal separator to be available to include in the formatted string.</span></span> <span data-ttu-id="4be59-288">No .NET, essas informações de formatação adicionais são disponibilizadas por meio de <xref:System.IFormatProvider> interface, que é fornecido como um parâmetro para uma ou mais sobrecargas do `ToString` método de tipos numéricos e tipos de data e hora.</span><span class="sxs-lookup"><span data-stu-id="4be59-288">In .NET, this additional formatting information is made available through the <xref:System.IFormatProvider> interface, which is provided as a parameter to one or more overloads of the `ToString` method of numeric types and date and time types.</span></span> <span data-ttu-id="4be59-289"><xref:System.IFormatProvider>implementações são usadas no .NET para dar suporte a formatação de cultura específica.</span><span class="sxs-lookup"><span data-stu-id="4be59-289"><xref:System.IFormatProvider> implementations are used in .NET to support culture-specific formatting.</span></span> <span data-ttu-id="4be59-290">O exemplo a seguir ilustra como a representação de cadeia de caracteres de um objeto é alterado quando ele é formatado com três <xref:System.IFormatProvider> objetos que representam diferentes culturas.</span><span class="sxs-lookup"><span data-stu-id="4be59-290">The following example illustrates how the string representation of an object changes when it is formatted with three <xref:System.IFormatProvider> objects that represent different cultures.</span></span>  
+  
+ [!code-csharp[Conceptual.Formatting.Overview#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/iformatprovider1.cs#11)]
+ [!code-vb[Conceptual.Formatting.Overview#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/iformatprovider1.vb#11)]  
+  
+ <span data-ttu-id="4be59-291">O <xref:System.IFormatProvider> interface inclui um método, <xref:System.IFormatProvider.GetFormat%28System.Type%29>, que tem um único parâmetro que especifica o tipo de objeto que fornece informações de formatação.</span><span class="sxs-lookup"><span data-stu-id="4be59-291">The <xref:System.IFormatProvider> interface includes one method, <xref:System.IFormatProvider.GetFormat%28System.Type%29>, which has a single parameter that specifies the type of object that provides formatting information.</span></span> <span data-ttu-id="4be59-292">Se o método puder fornecer um objeto desse tipo, ele retornará esse objeto.</span><span class="sxs-lookup"><span data-stu-id="4be59-292">If the method can provide an object of that type, it returns it.</span></span> <span data-ttu-id="4be59-293">Caso contrário, ele retornará uma referência nula (`Nothing` em Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="4be59-293">Otherwise, it returns a null reference (`Nothing` in Visual Basic).</span></span>  
+  
+ <span data-ttu-id="4be59-294"><xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>é um método de retorno de chamada.</span><span class="sxs-lookup"><span data-stu-id="4be59-294"><xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> is a callback method.</span></span> <span data-ttu-id="4be59-295">Quando você chama um `ToString` sobrecarga do método que inclui um <xref:System.IFormatProvider> parâmetro, ele chama o <xref:System.IFormatProvider.GetFormat%2A> método que <xref:System.IFormatProvider> objeto.</span><span class="sxs-lookup"><span data-stu-id="4be59-295">When you call a `ToString` method overload that includes an <xref:System.IFormatProvider> parameter, it calls the <xref:System.IFormatProvider.GetFormat%2A> method of that <xref:System.IFormatProvider> object.</span></span> <span data-ttu-id="4be59-296">O <xref:System.IFormatProvider.GetFormat%2A> método é responsável por retornar um objeto que fornece as informações de formatação necessárias, conforme especificado pelo seu `formatType` parâmetro, como o `ToString` método.</span><span class="sxs-lookup"><span data-stu-id="4be59-296">The <xref:System.IFormatProvider.GetFormat%2A> method is responsible for returning an object that provides the necessary formatting information, as specified by its `formatType` parameter, to the `ToString` method.</span></span>  
+  
+ <span data-ttu-id="4be59-297">Um número de métodos de conversão de formatação ou cadeia de caracteres inclui um parâmetro de tipo <xref:System.IFormatProvider>, mas em muitos casos o valor do parâmetro é ignorado quando o método é chamado.</span><span class="sxs-lookup"><span data-stu-id="4be59-297">A number of formatting or string conversion methods include a parameter of type <xref:System.IFormatProvider>, but in many cases the value of the parameter is ignored when the method is called.</span></span> <span data-ttu-id="4be59-298">A tabela a seguir lista alguns dos métodos de formatação que usam o parâmetro e o tipo do <xref:System.Type> objeto que eles passam para o <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> método.</span><span class="sxs-lookup"><span data-stu-id="4be59-298">The following table lists some of the formatting methods that use the parameter and the type of the <xref:System.Type> object that they pass to the <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> method.</span></span>  
+  
+|<span data-ttu-id="4be59-299">Método</span><span class="sxs-lookup"><span data-stu-id="4be59-299">Method</span></span>|<span data-ttu-id="4be59-300">Tipo de parâmetro `formatType`</span><span class="sxs-lookup"><span data-stu-id="4be59-300">Type of `formatType` parameter</span></span>|  
+|------------|------------------------------------|  
+|<span data-ttu-id="4be59-301">`ToString` método de tipos numéricos</span><span class="sxs-lookup"><span data-stu-id="4be59-301">`ToString` method of numeric types</span></span>|<xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>|  
+|<span data-ttu-id="4be59-302">`ToString` método de tipos de data e hora</span><span class="sxs-lookup"><span data-stu-id="4be59-302">`ToString` method of date and time types</span></span>|<xref:System.Globalization.DateTimeFormatInfo?displayProperty=nameWithType>|  
+|<xref:System.String.Format%2A?displayProperty=nameWithType>|<xref:System.ICustomFormatter?displayProperty=nameWithType>|  
+|<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|<xref:System.ICustomFormatter?displayProperty=nameWithType>|  
+  
+> [!NOTE]
+>  <span data-ttu-id="4be59-303">O `ToString` métodos dos tipos numéricos e tipos de data e hora estão sobrecarregados, e apenas algumas das sobrecargas incluem um <xref:System.IFormatProvider> parâmetro.</span><span class="sxs-lookup"><span data-stu-id="4be59-303">The `ToString` methods of the numeric types and date and time types are overloaded, and only some of the overloads include an <xref:System.IFormatProvider> parameter.</span></span> <span data-ttu-id="4be59-304">Se um método não tem um parâmetro de tipo <xref:System.IFormatProvider>, o objeto que é retornado pelo <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> propriedade é passada em vez disso.</span><span class="sxs-lookup"><span data-stu-id="4be59-304">If a method does not have a parameter of type <xref:System.IFormatProvider>, the object that is returned by the <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> property is passed instead.</span></span> <span data-ttu-id="4be59-305">Por exemplo, uma chamada para o padrão <xref:System.Int32.ToString?displayProperty=nameWithType> método, por fim, resulta em uma chamada de método como o seguinte: `Int32.ToString("G", System.Globalization.CultureInfo.CurrentCulture)`.</span><span class="sxs-lookup"><span data-stu-id="4be59-305">For example, a call to the default <xref:System.Int32.ToString?displayProperty=nameWithType> method ultimately results in a method call such as the following: `Int32.ToString("G", System.Globalization.CultureInfo.CurrentCulture)`.</span></span>  
+  
+ <span data-ttu-id="4be59-306">.NET fornece três classes que implementam <xref:System.IFormatProvider>:</span><span class="sxs-lookup"><span data-stu-id="4be59-306">.NET provides three classes that implement <xref:System.IFormatProvider>:</span></span>  
+  
+-   <span data-ttu-id="4be59-307"><xref:System.Globalization.DateTimeFormatInfo>, uma classe que fornece informações de formatação para valores de data e hora para uma cultura específica.</span><span class="sxs-lookup"><span data-stu-id="4be59-307"><xref:System.Globalization.DateTimeFormatInfo>, a class that provides formatting information for date and time values for a specific culture.</span></span> <span data-ttu-id="4be59-308">Seu <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> implementação retorna uma instância de si mesma.</span><span class="sxs-lookup"><span data-stu-id="4be59-308">Its <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> implementation returns an instance of itself.</span></span>  
+  
+-   <span data-ttu-id="4be59-309"><xref:System.Globalization.NumberFormatInfo>, uma classe que fornece informações de formatação numéricas para uma cultura específica.</span><span class="sxs-lookup"><span data-stu-id="4be59-309"><xref:System.Globalization.NumberFormatInfo>, a class that provides numeric formatting information for a specific culture.</span></span> <span data-ttu-id="4be59-310">Seu <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> implementação retorna uma instância de si mesma.</span><span class="sxs-lookup"><span data-stu-id="4be59-310">Its <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> implementation returns an instance of itself.</span></span>  
+  
+-   <span data-ttu-id="4be59-311"><xref:System.Globalization.CultureInfo>.</span><span class="sxs-lookup"><span data-stu-id="4be59-311"><xref:System.Globalization.CultureInfo>.</span></span> <span data-ttu-id="4be59-312">Seu <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> implementação pode retornar um <xref:System.Globalization.NumberFormatInfo> objeto para fornecer informações de formatação numéricas ou uma <xref:System.Globalization.DateTimeFormatInfo> objeto para fornecer informações de formatação para valores de data e hora.</span><span class="sxs-lookup"><span data-stu-id="4be59-312">Its <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> implementation can return either a <xref:System.Globalization.NumberFormatInfo> object to provide numeric formatting information or a <xref:System.Globalization.DateTimeFormatInfo> object to provide formatting information for date and time values.</span></span>  
+  
+ <span data-ttu-id="4be59-313">Você também pode implementar seu próprio provedor de formato para substituir qualquer uma dessas classes.</span><span class="sxs-lookup"><span data-stu-id="4be59-313">You can also implement your own format provider to replace any one of these classes.</span></span> <span data-ttu-id="4be59-314">No entanto, se o seu método <xref:System.IFormatProvider.GetFormat%2A> de sua implementação precisar fornecer informações de formatação ao método `ToString`, ele deverá retornar um objeto do tipo listado na tabela anterior.</span><span class="sxs-lookup"><span data-stu-id="4be59-314">However, your implementation’s <xref:System.IFormatProvider.GetFormat%2A> method must return an object of the type listed in the previous table if it has to provide formatting information to the `ToString` method.</span></span>  
+  
+ [<span data-ttu-id="4be59-315">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="4be59-315">Back to top</span></span>](#Introduction)  
+  
+<a name="numericCulture"></a>   
+### <a name="culture-sensitive-formatting-of-numeric-values"></a><span data-ttu-id="4be59-316">Formatação de valores numéricos que leva em conta a cultura</span><span class="sxs-lookup"><span data-stu-id="4be59-316">Culture-Sensitive Formatting of Numeric Values</span></span>  
+ <span data-ttu-id="4be59-317">Por padrão, a formatação de valores numéricos leva em conta a cultura.</span><span class="sxs-lookup"><span data-stu-id="4be59-317">By default, the formatting of numeric values is culture-sensitive.</span></span> <span data-ttu-id="4be59-318">Se você não especificar uma cultura quando chamar um método de formatação, as convenções de formatação da cultura do thread atual serão usadas.</span><span class="sxs-lookup"><span data-stu-id="4be59-318">If you do not specify a culture when you call a formatting method, the formatting conventions of the current thread culture are used.</span></span> <span data-ttu-id="4be59-319">Isso é ilustrado no exemplo a seguir, que altera a cultura do thread atual quatro vezes e, em seguida, chama o <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> método.</span><span class="sxs-lookup"><span data-stu-id="4be59-319">This is illustrated in the following example, which changes the current thread culture four times and then calls the <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="4be59-320">Em cada caso, a cadeia de caracteres de resultado reflete as convenções de formatação da cultura atual.</span><span class="sxs-lookup"><span data-stu-id="4be59-320">In each case, the result string reflects the formatting conventions of the current culture.</span></span> <span data-ttu-id="4be59-321">Isso ocorre porque os métodos `ToString` e `ToString(String)` encapsulam chamadas para o método `ToString(String, IFormatProvider)` de cada tipo numérico.</span><span class="sxs-lookup"><span data-stu-id="4be59-321">This is because the `ToString` and `ToString(String)` methods wrap calls to each numeric type's `ToString(String, IFormatProvider)` method.</span></span>  
+  
+ [!code-csharp[Conceptual.Formatting.Overview#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific3.cs#19)]
+ [!code-vb[Conceptual.Formatting.Overview#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific3.vb#19)]  
+  
+ <span data-ttu-id="4be59-322">Você também pode formatar um valor numérico para uma cultura específica chamando uma sobrecarga `ToString` que tenha um parâmetro de `provider` e passando-o a um dos dois elementos a seguir:</span><span class="sxs-lookup"><span data-stu-id="4be59-322">You can also format a numeric value for a specific culture by calling a `ToString` overload that has a `provider` parameter and passing it either of the following:</span></span>  
+  
+-   <span data-ttu-id="4be59-323">Um <xref:System.Globalization.CultureInfo> objeto que representa a cultura cujas convenções de formatação serão usados.</span><span class="sxs-lookup"><span data-stu-id="4be59-323">A <xref:System.Globalization.CultureInfo> object that represents the culture whose formatting conventions are to be used.</span></span> <span data-ttu-id="4be59-324">Seu <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> método retornará o valor da <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType> propriedade, que é o <xref:System.Globalization.NumberFormatInfo> objeto que fornece informações de formatação específica da cultura para valores numéricos.</span><span class="sxs-lookup"><span data-stu-id="4be59-324">Its <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> method returns the value of the <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType> property, which is the <xref:System.Globalization.NumberFormatInfo> object that provides culture-specific formatting information for numeric values.</span></span>  
+  
+-   <span data-ttu-id="4be59-325">Um <xref:System.Globalization.NumberFormatInfo> objeto que define as convenções de formatação específica da cultura a ser usada.</span><span class="sxs-lookup"><span data-stu-id="4be59-325">A <xref:System.Globalization.NumberFormatInfo> object that defines the culture-specific formatting conventions to be used.</span></span> <span data-ttu-id="4be59-326">Seu <xref:System.Globalization.NumberFormatInfo.GetFormat%2A> método retorna uma instância de si mesma.</span><span class="sxs-lookup"><span data-stu-id="4be59-326">Its <xref:System.Globalization.NumberFormatInfo.GetFormat%2A> method returns an instance of itself.</span></span>  
+  
+ <span data-ttu-id="4be59-327">O exemplo a seguir usa <xref:System.Globalization.NumberFormatInfo> objetos que representam o inglês (Estados Unidos) e culturas inglês (Grã-Bretanha) e as culturas neutras francês e russos para formatar um número de ponto flutuante.</span><span class="sxs-lookup"><span data-stu-id="4be59-327">The following example uses <xref:System.Globalization.NumberFormatInfo> objects that represent the English (United States) and English (Great Britain) cultures and the French and Russian neutral cultures to format a floating-point number.</span></span>  
+  
+ [!code-csharp[Conceptual.Formatting.Overview#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific4.cs#20)]
+ [!code-vb[Conceptual.Formatting.Overview#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific4.vb#20)]  
+  
+<a name="dateCulture"></a>   
+### <a name="culture-sensitive-formatting-of-date-and-time-values"></a><span data-ttu-id="4be59-328">Formatação de valores de data e hora que leva em conta a cultura</span><span class="sxs-lookup"><span data-stu-id="4be59-328">Culture-Sensitive Formatting of Date and Time Values</span></span>  
+ <span data-ttu-id="4be59-329">Por padrão, a formatação de valores de data e hora leva em conta a cultura.</span><span class="sxs-lookup"><span data-stu-id="4be59-329">By default, the formatting of date and time values is culture-sensitive.</span></span> <span data-ttu-id="4be59-330">Se você não especificar uma cultura quando chamar um método de formatação, as convenções de formatação da cultura do thread atual serão usadas.</span><span class="sxs-lookup"><span data-stu-id="4be59-330">If you do not specify a culture when you call a formatting method, the formatting conventions of the current thread culture are used.</span></span> <span data-ttu-id="4be59-331">Isso é ilustrado no exemplo a seguir, que altera a cultura do thread atual quatro vezes e, em seguida, chama o <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> método.</span><span class="sxs-lookup"><span data-stu-id="4be59-331">This is illustrated in the following example, which changes the current thread culture four times and then calls the <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="4be59-332">Em cada caso, a cadeia de caracteres de resultado reflete as convenções de formatação da cultura atual.</span><span class="sxs-lookup"><span data-stu-id="4be59-332">In each case, the result string reflects the formatting conventions of the current culture.</span></span> <span data-ttu-id="4be59-333">Isso ocorre porque o <xref:System.DateTime.ToString?displayProperty=nameWithType>, <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ToString?displayProperty=nameWithType>, e <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> métodos encapsular chamadas para o <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> e <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> métodos.</span><span class="sxs-lookup"><span data-stu-id="4be59-333">This is because the <xref:System.DateTime.ToString?displayProperty=nameWithType>, <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ToString?displayProperty=nameWithType>, and <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> methods wrap calls to the <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> and <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> methods.</span></span>  
+  
+ [!code-csharp[Conceptual.Formatting.Overview#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific1.cs#17)]
+ [!code-vb[Conceptual.Formatting.Overview#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific1.vb#17)]  
+  
+ <span data-ttu-id="4be59-334">Você também pode formatar um valor de data e hora para uma cultura específica chamando um <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> ou <xref:System.DateTimeOffset.ToString%2A?displayProperty=nameWithType> sobrecarga que tem um `provider` parâmetro e passá-lo das seguintes maneiras:</span><span class="sxs-lookup"><span data-stu-id="4be59-334">You can also format a date and time value for a specific culture by calling a <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> or <xref:System.DateTimeOffset.ToString%2A?displayProperty=nameWithType> overload that has a `provider` parameter and passing it either of the following:</span></span>  
+  
+-   <span data-ttu-id="4be59-335">Um <xref:System.Globalization.CultureInfo> objeto que representa a cultura cujas convenções de formatação serão usados.</span><span class="sxs-lookup"><span data-stu-id="4be59-335">A <xref:System.Globalization.CultureInfo> object that represents the culture whose formatting conventions are to be used.</span></span> <span data-ttu-id="4be59-336">Seu <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> método retornará o valor da <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> propriedade, que é o <xref:System.Globalization.DateTimeFormatInfo> objeto que fornece informações de formatação específica da cultura para valores de data e hora.</span><span class="sxs-lookup"><span data-stu-id="4be59-336">Its <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> method returns the value of the <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> property, which is the <xref:System.Globalization.DateTimeFormatInfo> object that provides culture-specific formatting information for date and time values.</span></span>  
+  
+-   <span data-ttu-id="4be59-337">Um <xref:System.Globalization.DateTimeFormatInfo> objeto que define as convenções de formatação específica da cultura a ser usada.</span><span class="sxs-lookup"><span data-stu-id="4be59-337">A <xref:System.Globalization.DateTimeFormatInfo> object that defines the culture-specific formatting conventions to be used.</span></span> <span data-ttu-id="4be59-338">Seu <xref:System.Globalization.DateTimeFormatInfo.GetFormat%2A> método retorna uma instância de si mesma.</span><span class="sxs-lookup"><span data-stu-id="4be59-338">Its <xref:System.Globalization.DateTimeFormatInfo.GetFormat%2A> method returns an instance of itself.</span></span>  
+  
+ <span data-ttu-id="4be59-339">O exemplo a seguir usa <xref:System.Globalization.DateTimeFormatInfo> objetos que representam o inglês (Estados Unidos) e culturas inglês (Grã-Bretanha) e as culturas neutras francês e russos para formatar uma data.</span><span class="sxs-lookup"><span data-stu-id="4be59-339">The following example uses <xref:System.Globalization.DateTimeFormatInfo> objects that represent the English (United States) and English (Great Britain) cultures and the French and Russian neutral cultures to format a date.</span></span>  
+  
+ [!code-csharp[Conceptual.Formatting.Overview#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific2.cs#18)]
+ [!code-vb[Conceptual.Formatting.Overview#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific2.vb#18)]  
+  
+<a name="IFormattable"></a>   
+## <a name="the-iformattable-interface"></a><span data-ttu-id="4be59-340">A interface IFormattable</span><span class="sxs-lookup"><span data-stu-id="4be59-340">The IFormattable Interface</span></span>  
+ <span data-ttu-id="4be59-341">Tipos normalmente, essa sobrecarga de `ToString` método com uma cadeia de caracteres de formato e um <xref:System.IFormatProvider> parâmetro também implementam o <xref:System.IFormattable> interface.</span><span class="sxs-lookup"><span data-stu-id="4be59-341">Typically, types that overload the `ToString` method with a format string and an <xref:System.IFormatProvider> parameter also implement the <xref:System.IFormattable> interface.</span></span> <span data-ttu-id="4be59-342">Essa interface possui um único membro, <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, que inclui uma cadeia de caracteres de formato e um provedor de formato, como parâmetros.</span><span class="sxs-lookup"><span data-stu-id="4be59-342">This interface has a single member, <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, that includes both a format string and a format provider as parameters.</span></span>  
+  
+ <span data-ttu-id="4be59-343">Implementando o <xref:System.IFormattable> interface para sua classe definido pelo aplicativo oferece duas vantagens:</span><span class="sxs-lookup"><span data-stu-id="4be59-343">Implementing the <xref:System.IFormattable> interface for your application-defined class offers two advantages:</span></span>  
+  
+-   <span data-ttu-id="4be59-344">Suporte para conversão de cadeia de caracteres, a <xref:System.Convert> classe.</span><span class="sxs-lookup"><span data-stu-id="4be59-344">Support for string conversion by the <xref:System.Convert> class.</span></span> <span data-ttu-id="4be59-345">Chamadas para o <xref:System.Convert.ToString%28System.Object%29?displayProperty=nameWithType> e <xref:System.Convert.ToString%28System.Object%2CSystem.IFormatProvider%29?displayProperty=nameWithType> chamada de métodos seu <xref:System.IFormattable> implementação automaticamente.</span><span class="sxs-lookup"><span data-stu-id="4be59-345">Calls to the <xref:System.Convert.ToString%28System.Object%29?displayProperty=nameWithType> and <xref:System.Convert.ToString%28System.Object%2CSystem.IFormatProvider%29?displayProperty=nameWithType> methods call your <xref:System.IFormattable> implementation automatically.</span></span>  
+  
+-   <span data-ttu-id="4be59-346">Suporte à formatação composição.</span><span class="sxs-lookup"><span data-stu-id="4be59-346">Support for composite formatting.</span></span> <span data-ttu-id="4be59-347">Se um item de formato que inclui uma cadeia de caracteres de formato é usada para formatar seu tipo personalizado, o common language runtime chama automaticamente o <xref:System.IFormattable> implementação e passa a cadeia de caracteres de formato.</span><span class="sxs-lookup"><span data-stu-id="4be59-347">If a format item that includes a format string is used to format your custom type, the common language runtime automatically calls your <xref:System.IFormattable> implementation and passes it the format string.</span></span> <span data-ttu-id="4be59-348">Para obter mais informações sobre formatação de composição com métodos como <xref:System.String.Format%2A?displayProperty=nameWithType> ou <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, veja a seção [Formatação de composição](#CompositeFormatting).</span><span class="sxs-lookup"><span data-stu-id="4be59-348">For more information about composite formatting with methods such as <xref:System.String.Format%2A?displayProperty=nameWithType> or <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, see the [Composite Formatting](#CompositeFormatting) section.</span></span>  
+  
+ <span data-ttu-id="4be59-349">O exemplo a seguir define uma `Temperature` classe que implementa o <xref:System.IFormattable> interface.</span><span class="sxs-lookup"><span data-stu-id="4be59-349">The following example defines a `Temperature` class that implements the <xref:System.IFormattable> interface.</span></span> <span data-ttu-id="4be59-350">Ela dá suporte aos especificadores de formato "C" ou "G" para exibir a temperatura em graus Celsius, o especificador de formato "F" para exibir a temperatura em Fahrenheit e o especificador de formato "K" para exibir a temperatura em Kelvin.</span><span class="sxs-lookup"><span data-stu-id="4be59-350">It supports the "C" or "G" format specifiers to display the temperature in Celsius, the "F" format specifier to display the temperature in Fahrenheit, and the "K" format specifier to display the temperature in Kelvin.</span></span>  
+  
+ [!code-csharp[Conceptual.Formatting.Overview#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/iformattable.cs#12)]
+ [!code-vb[Conceptual.Formatting.Overview#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/iformattable.vb#12)]  
+  
+ <span data-ttu-id="4be59-351">O exemplo a seguir instancia um objeto `Temperature`.</span><span class="sxs-lookup"><span data-stu-id="4be59-351">The following example instantiates a `Temperature` object.</span></span> <span data-ttu-id="4be59-352">Depois, ele chama o <xref:System.Convert.ToString%2A> método e usa a cadeia de caracteres do várias cadeias de caracteres de formato composto para obter diferentes representações de um `Temperature` objeto.</span><span class="sxs-lookup"><span data-stu-id="4be59-352">It then calls the <xref:System.Convert.ToString%2A> method and uses several composite format strings to obtain different string representations of a `Temperature` object.</span></span> <span data-ttu-id="4be59-353">Cada uma dessas chamadas de método, por sua vez, chama o <xref:System.IFormattable> implementação de `Temperature` classe.</span><span class="sxs-lookup"><span data-stu-id="4be59-353">Each of these method calls, in turn, calls the <xref:System.IFormattable> implementation of the `Temperature` class.</span></span>  
+  
+ [!code-csharp[Conceptual.Formatting.Overview#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/iformattable.cs#13)]
+ [!code-vb[Conceptual.Formatting.Overview#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/iformattable.vb#13)]  
+  
+ [<span data-ttu-id="4be59-354">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="4be59-354">Back to top</span></span>](#Introduction)  
+  
+<a name="CompositeFormatting"></a>   
+## <a name="composite-formatting"></a><span data-ttu-id="4be59-355">Formatação composta</span><span class="sxs-lookup"><span data-stu-id="4be59-355">Composite Formatting</span></span>  
+ <span data-ttu-id="4be59-356">Alguns métodos, tais como <xref:System.String.Format%2A?displayProperty=nameWithType> e <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, dão suporte à formatação de composição.</span><span class="sxs-lookup"><span data-stu-id="4be59-356">Some methods, such as <xref:System.String.Format%2A?displayProperty=nameWithType> and <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, support composite formatting.</span></span> <span data-ttu-id="4be59-357">Uma cadeia de caracteres de formato de composição é um tipo de modelo que retorna uma única cadeia de caracteres que incorpora a representação de cadeia de caracteres de zero, um ou mais objetos.</span><span class="sxs-lookup"><span data-stu-id="4be59-357">A composite format string is a kind of template that returns a single string that incorporates the string representation of zero, one, or more objects.</span></span> <span data-ttu-id="4be59-358">Cada objeto é representado na cadeia de caracteres de formato de composição por um item de formato indexado.</span><span class="sxs-lookup"><span data-stu-id="4be59-358">Each object is represented in the composite format string by an indexed format item.</span></span> <span data-ttu-id="4be59-359">O índice do item de formato corresponde à posição do objeto que ele representa na lista de parâmetros do método.</span><span class="sxs-lookup"><span data-stu-id="4be59-359">The index of the format item corresponds to the position of the object that it represents in the method's parameter list.</span></span> <span data-ttu-id="4be59-360">Os índices são baseados em zero.</span><span class="sxs-lookup"><span data-stu-id="4be59-360">Indexes are zero-based.</span></span> <span data-ttu-id="4be59-361">Por exemplo, na seguinte chamada para o método <xref:System.String.Format%2A?displayProperty=nameWithType>, o primeiro item de formato, `{0:D}`, é substituído pela representação de cadeia de caracteres de `thatDate`; o segundo item de formato, `{1}`, é substituído pela representação de cadeia de caracteres de `item1` e, por fim, o terceiro item de formato, `{2:C2}`, é substituído pela representação de cadeia de caracteres de `item1.Value`.</span><span class="sxs-lookup"><span data-stu-id="4be59-361">For example, in the following call to the <xref:System.String.Format%2A?displayProperty=nameWithType> method, the first format item, `{0:D}`, is replaced by the string representation of `thatDate`; the second format item, `{1}`, is replaced by the string representation of `item1`; and the third format item, `{2:C2}`, is replaced by the string representation of `item1.Value`.</span></span>  
+  
+ [!code-csharp[Conceptual.Formatting.Overview#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/composite1.cs#14)]
+ [!code-vb[Conceptual.Formatting.Overview#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/composite1.vb#14)]  
+  
+ <span data-ttu-id="4be59-362">Além de substituir um item de formato pela representação de cadeia de caracteres de seu objeto correspondente, os itens de formato também permitem que você controle o seguinte:</span><span class="sxs-lookup"><span data-stu-id="4be59-362">In addition to replacing a format item with the string representation of its corresponding object, format items also let you control the following:</span></span>  
+  
+-   <span data-ttu-id="4be59-363">Específico forma em que um objeto é representado como uma cadeia de caracteres, se o objeto implementar a <xref:System.IFormattable> de interface e oferece suporte a cadeias de caracteres de formato.</span><span class="sxs-lookup"><span data-stu-id="4be59-363">The specific way in which an object is represented as a string, if the object implements the <xref:System.IFormattable> interface and supports format strings.</span></span> <span data-ttu-id="4be59-364">Você pode fazer isso seguindo o índice do item de formato com um `:` (dois-pontos) seguido por uma cadeia de caracteres de formato válido.</span><span class="sxs-lookup"><span data-stu-id="4be59-364">You do this by following the format item's index with a `:` (colon) followed by a valid format string.</span></span> <span data-ttu-id="4be59-365">O exemplo anterior já fez isso ao formatar um valor de data com a cadeia de caracteres de formato (por exemplo, `{0:d}`) "d" (padrão de data abreviada) e formatando um valor numérico com a cadeia de caracteres de formato "C2" (por exemplo, `{2:C2}`) para representar o número como um valor de moeda com dois dígitos decimais fracionários.</span><span class="sxs-lookup"><span data-stu-id="4be59-365">The previous example did this by formatting a date value with the "d" (short date pattern) format string (e.g., `{0:d}`) and   by formatting a numeric value with the "C2" format string (e.g., `{2:C2}` to represent the number as a currency value with two fractional decimal digits.</span></span>  
+  
+-   <span data-ttu-id="4be59-366">A largura do campo que contém a representação de cadeia de caracteres do objeto e o alinhamento da representação de cadeia de caracteres nesse campo.</span><span class="sxs-lookup"><span data-stu-id="4be59-366">The width of the field that contains the object's string representation, and the alignment of the string representation in that field.</span></span> <span data-ttu-id="4be59-367">Você pode fazer isso seguindo o índice do item de formato com uma `,` (vírgula) seguida da largura do campo.</span><span class="sxs-lookup"><span data-stu-id="4be59-367">You do this by following the format item's index with a `,` (comma) followed the field width.</span></span> <span data-ttu-id="4be59-368">A cadeia de caracteres será alinhada à direita no campo se a largura do campo for um valor positivo ou à esquerda se esse valor for negativo.</span><span class="sxs-lookup"><span data-stu-id="4be59-368">The string is right-aligned in the field if the field width is a positive value, and it is left-aligned if the field width is a negative value.</span></span> <span data-ttu-id="4be59-369">O exemplo a seguir alinha os valores de data à esquerda em um campo de 20 caracteres e alinha valores decimais com um dígito fracionário à direita em um campo de 11 caracteres.</span><span class="sxs-lookup"><span data-stu-id="4be59-369">The following example left-aligns date values in a 20-character field, and it right-aligns decimal values with one fractional digit in an 11-character field.</span></span>  
+  
+     [!code-csharp[Conceptual.Formatting.Overview#22](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/composite2.cs#22)]
+     [!code-vb[Conceptual.Formatting.Overview#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/composite2.vb#22)]  
+  
+     <span data-ttu-id="4be59-370">Observe que, se o componente de cadeia de caracteres de alinhamento e o componente de cadeia de caracteres de formato estiverem presentes, o primeiro precederá o último (por exemplo, `{0,-20:g}`.</span><span class="sxs-lookup"><span data-stu-id="4be59-370">Note that, if both the alignment string component and the format string component are present, the former precedes the latter (for example, `{0,-20:g}`.</span></span>  
+  
+ <span data-ttu-id="4be59-371">Para obter mais informações sobre formatação de composição, veja [Formatação de composição](../../../docs/standard/base-types/composite-formatting.md).</span><span class="sxs-lookup"><span data-stu-id="4be59-371">For more information about composite formatting, see [Composite Formatting](../../../docs/standard/base-types/composite-formatting.md).</span></span>  
+  
+ [<span data-ttu-id="4be59-372">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="4be59-372">Back to top</span></span>](#Introduction)  
+  
+<a name="Custom"></a>   
+## <a name="custom-formatting-with-icustomformatter"></a><span data-ttu-id="4be59-373">Formatação Personalizada com ICustomFormatter</span><span class="sxs-lookup"><span data-stu-id="4be59-373">Custom Formatting with ICustomFormatter</span></span>  
+ <span data-ttu-id="4be59-374">Dois métodos de formatação compostos <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> e <xref:System.Text.StringBuilder.AppendFormat%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, incluem um parâmetro de provedor de formato que dá suporte à formatação personalizada.</span><span class="sxs-lookup"><span data-stu-id="4be59-374">Two composite formatting methods, <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> and <xref:System.Text.StringBuilder.AppendFormat%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, include a format provider parameter that supports custom formatting.</span></span> <span data-ttu-id="4be59-375">Quando um desses métodos de formatação é chamado, ele passa um <xref:System.Type> objeto que representa um <xref:System.ICustomFormatter> interface para o provedor de formato <xref:System.IFormatProvider.GetFormat%2A> método.</span><span class="sxs-lookup"><span data-stu-id="4be59-375">When either of these formatting methods is called, it passes a <xref:System.Type> object that represents an <xref:System.ICustomFormatter> interface to the format provider’s <xref:System.IFormatProvider.GetFormat%2A> method.</span></span> <span data-ttu-id="4be59-376">O <xref:System.IFormatProvider.GetFormat%2A> , em seguida, o método é responsável por retornar a <xref:System.ICustomFormatter> implementação que fornece a formatação personalizada.</span><span class="sxs-lookup"><span data-stu-id="4be59-376">The <xref:System.IFormatProvider.GetFormat%2A> method is then responsible for returning the <xref:System.ICustomFormatter> implementation that provides custom formatting.</span></span>  
+  
+ <span data-ttu-id="4be59-377">O <xref:System.ICustomFormatter> interface tem um único método, <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29>, que é chamado automaticamente por uma método, uma vez para cada item de formato em uma cadeia de caracteres de formato composto de formatação de composição.</span><span class="sxs-lookup"><span data-stu-id="4be59-377">The <xref:System.ICustomFormatter> interface has a single method, <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29>, that is called automatically by a composite formatting method, once for each format item in a composite format string.</span></span> <span data-ttu-id="4be59-378">O <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29> método tem três parâmetros: uma cadeia de caracteres de formato, que representa o `formatString` argumento em um item de formato, um objeto para formatar e um <xref:System.IFormatProvider> objeto que fornece a formatação de serviços.</span><span class="sxs-lookup"><span data-stu-id="4be59-378">The <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29> method has three parameters: a format string, which represents the `formatString` argument in a format item, an object to format, and an <xref:System.IFormatProvider> object that provides formatting services.</span></span> <span data-ttu-id="4be59-379">Normalmente, a classe que implementa <xref:System.ICustomFormatter> também implementa <xref:System.IFormatProvider>, portanto, este último parâmetro é uma referência a formatação personalizada de classe em si.</span><span class="sxs-lookup"><span data-stu-id="4be59-379">Typically, the class that implements <xref:System.ICustomFormatter> also implements <xref:System.IFormatProvider>, so this last parameter is a reference to the custom formatting class itself.</span></span> <span data-ttu-id="4be59-380">O método retorna uma representação de cadeia de caracteres formatada personalizada do objeto a ser formatado.</span><span class="sxs-lookup"><span data-stu-id="4be59-380">The method returns a custom formatted string representation of the object to be formatted.</span></span> <span data-ttu-id="4be59-381">Se o método não for capaz de formatar o objeto, ele deverá retornar uma referência nula (`Nothing` em Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="4be59-381">If the method cannot format the object, it should return a null reference (`Nothing` in Visual Basic).</span></span>  
+  
+ <span data-ttu-id="4be59-382">O exemplo a seguir fornece uma <xref:System.ICustomFormatter> implementação denominada `ByteByByteFormatter` que exibe valores inteiros como uma sequência de valores hexadecimais de dois dígitos, seguido por um espaço.</span><span class="sxs-lookup"><span data-stu-id="4be59-382">The following example provides an <xref:System.ICustomFormatter> implementation named `ByteByByteFormatter` that displays integer values as a sequence of two-digit hexadecimal values followed by a space.</span></span>  
+  
+ [!code-csharp[Conceptual.Formatting.Overview#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#15)]
+ [!code-vb[Conceptual.Formatting.Overview#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#15)]  
+  
+ <span data-ttu-id="4be59-383">O exemplo a seguir usa a classe `ByteByByteFormatter` para formatar valores inteiros.</span><span class="sxs-lookup"><span data-stu-id="4be59-383">The following example uses the `ByteByByteFormatter` class to format integer values.</span></span> <span data-ttu-id="4be59-384">Observe que o <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> método é chamado mais de uma vez no segundo <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> chamada de método e que o padrão <xref:System.Globalization.NumberFormatInfo> provedor é usado na chamada do método terceira porque o.`ByteByByteFormatter.Format`</span><span class="sxs-lookup"><span data-stu-id="4be59-384">Note that the <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> method is called more than once in the second <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> method call, and that the default <xref:System.Globalization.NumberFormatInfo> provider is used in the third method call because the .`ByteByByteFormatter.Format`</span></span> <span data-ttu-id="4be59-385">não reconhece a cadeia de caracteres de formato "N0" e retorna uma referência nula (`Nothing` no Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="4be59-385">method does not recognize the "N0" format string and returns a null reference (`Nothing` in Visual Basic).</span></span>  
+  
+ [!code-csharp[Conceptual.Formatting.Overview#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#16)]
+ [!code-vb[Conceptual.Formatting.Overview#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#16)]  
+  
+ [<span data-ttu-id="4be59-386">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="4be59-386">Back to top</span></span>](#Introduction)  
+  
+<a name="RelatedTopics"></a>   
+## <a name="related-topics"></a><span data-ttu-id="4be59-387">Tópicos relacionados</span><span class="sxs-lookup"><span data-stu-id="4be59-387">Related Topics</span></span>  
+  
+|<span data-ttu-id="4be59-388">Título</span><span class="sxs-lookup"><span data-stu-id="4be59-388">Title</span></span>|<span data-ttu-id="4be59-389">Definição</span><span class="sxs-lookup"><span data-stu-id="4be59-389">Definition</span></span>|  
+|-----------|----------------|  
+|[<span data-ttu-id="4be59-390">Cadeias de Caracteres de Formato Numérico Padrão</span><span class="sxs-lookup"><span data-stu-id="4be59-390">Standard Numeric Format Strings</span></span>](../../../docs/standard/base-types/standard-numeric-format-strings.md)|<span data-ttu-id="4be59-391">Descreve cadeias de caracteres de formato padrão que criam representações de cadeia de caracteres de valores numéricos frequentemente usadas.</span><span class="sxs-lookup"><span data-stu-id="4be59-391">Describes standard format strings that create commonly used string representations of numeric values.</span></span>|  
+|[<span data-ttu-id="4be59-392">Cadeias de caracteres de formato numérico personalizado</span><span class="sxs-lookup"><span data-stu-id="4be59-392">Custom Numeric Format Strings</span></span>](../../../docs/standard/base-types/custom-numeric-format-strings.md)|<span data-ttu-id="4be59-393">Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para valores numéricos.</span><span class="sxs-lookup"><span data-stu-id="4be59-393">Describes custom format strings that create application-specific formats for numeric values.</span></span>|  
+|[<span data-ttu-id="4be59-394">Cadeias de caracteres de formato de data e hora padrão</span><span class="sxs-lookup"><span data-stu-id="4be59-394">Standard Date and Time Format Strings</span></span>](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|<span data-ttu-id="4be59-395">Descreve as cadeias de caracteres de formato padrão que criar representações de cadeia de caracteres usadas de <xref:System.DateTime> valores.</span><span class="sxs-lookup"><span data-stu-id="4be59-395">Describes standard format strings that create commonly used string representations of <xref:System.DateTime> values.</span></span>|  
+|[<span data-ttu-id="4be59-396">Cadeias de caracteres de formato de data e hora personalizado</span><span class="sxs-lookup"><span data-stu-id="4be59-396">Custom Date and Time Format Strings</span></span>](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|<span data-ttu-id="4be59-397">Descreve as cadeias de caracteres de formato personalizado que criar formatos específicos do aplicativo para <xref:System.DateTime> valores.</span><span class="sxs-lookup"><span data-stu-id="4be59-397">Describes custom format strings that create application-specific formats for <xref:System.DateTime> values.</span></span>|  
+|[<span data-ttu-id="4be59-398">Cadeias de caracteres de formato TimeSpan padrão</span><span class="sxs-lookup"><span data-stu-id="4be59-398">Standard TimeSpan Format Strings</span></span>](../../../docs/standard/base-types/standard-timespan-format-strings.md)|<span data-ttu-id="4be59-399">Descreve cadeias de caracteres de formato padrão que criam representações de intervalos de tempo frequentemente usadas.</span><span class="sxs-lookup"><span data-stu-id="4be59-399">Describes standard format strings that create commonly used string representations of time intervals.</span></span>|  
+|[<span data-ttu-id="4be59-400">Cadeias de caracteres de formato TimeSpan personalizado</span><span class="sxs-lookup"><span data-stu-id="4be59-400">Custom TimeSpan Format Strings</span></span>](../../../docs/standard/base-types/custom-timespan-format-strings.md)|<span data-ttu-id="4be59-401">Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para intervalos de tempo.</span><span class="sxs-lookup"><span data-stu-id="4be59-401">Describes custom format strings that create application-specific formats for time intervals.</span></span>|  
+|[<span data-ttu-id="4be59-402">Cadeias de Caracteres de Formato de Enumeração</span><span class="sxs-lookup"><span data-stu-id="4be59-402">Enumeration Format Strings</span></span>](../../../docs/standard/base-types/enumeration-format-strings.md)|<span data-ttu-id="4be59-403">Descreve cadeias de caracteres de formato padrão que são usadas para criar representações de cadeia de caracteres de valores de enumeração.</span><span class="sxs-lookup"><span data-stu-id="4be59-403">Describes standard format strings that are used to create string representations of enumeration values.</span></span>|  
+|[<span data-ttu-id="4be59-404">Formatação de composição</span><span class="sxs-lookup"><span data-stu-id="4be59-404">Composite Formatting</span></span>](../../../docs/standard/base-types/composite-formatting.md)|<span data-ttu-id="4be59-405">Descreve como inserir um ou mais valores formatados em uma cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="4be59-405">Describes how to embed one or more formatted values in a string.</span></span> <span data-ttu-id="4be59-406">A cadeia de caracteres pode posteriormente ser exibida no console ou gravada em um fluxo.</span><span class="sxs-lookup"><span data-stu-id="4be59-406">The string can subsequently be displayed on the console or written to a stream.</span></span>|  
+|[<span data-ttu-id="4be59-407">Executando operações de formatação</span><span class="sxs-lookup"><span data-stu-id="4be59-407">Performing Formatting Operations</span></span>](../../../docs/standard/base-types/performing-formatting-operations.md)|<span data-ttu-id="4be59-408">Lista os tópicos que fornecem instruções passo a passo para executar operações de formatação específicas.</span><span class="sxs-lookup"><span data-stu-id="4be59-408">Lists topics that provide step-by-step instructions for performing specific formatting operations.</span></span>|  
+|[<span data-ttu-id="4be59-409">Análise de cadeias de caracteres</span><span class="sxs-lookup"><span data-stu-id="4be59-409">Parsing Strings</span></span>](../../../docs/standard/base-types/parsing-strings.md)|<span data-ttu-id="4be59-410">Descreve como inicializar objetos para os valores descritos pelas representações de cadeia de caracteres desses objetos.</span><span class="sxs-lookup"><span data-stu-id="4be59-410">Describes how to initialize objects to the values described by string representations of those objects.</span></span> <span data-ttu-id="4be59-411">A análise é a operação inversa da formatação.</span><span class="sxs-lookup"><span data-stu-id="4be59-411">Parsing is the inverse operation of formatting.</span></span>|  
+  
+ [<span data-ttu-id="4be59-412">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="4be59-412">Back to top</span></span>](#Introduction)  
+  
+<a name="Reference"></a>   
+## <a name="reference"></a><span data-ttu-id="4be59-413">Referência</span><span class="sxs-lookup"><span data-stu-id="4be59-413">Reference</span></span>  
+ <xref:System.IFormattable?displayProperty=nameWithType>  
+  
+ <xref:System.IFormatProvider?displayProperty=nameWithType>  
+  
+ <xref:System.ICustomFormatter?displayProperty=nameWithType>

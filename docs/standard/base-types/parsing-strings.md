@@ -1,38 +1,49 @@
 ---
 title: Analisando cadeias de caracteres no .NET
-description: Analisando cadeias de caracteres no .NET
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 07/22/2016
-ms.topic: article
+ms.custom: 
+ms.date: 03/30/2017
 ms.prod: .net
+ms.reviewer: 
+ms.suite: 
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 8103c0a6-61d3-40dd-a3e9-2a32ba6a4c05
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: c741ae793d491f691a355df6ad064b81d609c7e5
-ms.lasthandoff: 03/03/2017
-
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parsing strings, about parsing strings
+- IFormatProvider interface, parsing strings
+- base types, parsing strings
+- Parse method
+- parsing strings
+ms.assetid: 5e758b41-db93-456b-8999-99b7304b090d
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 811db42e04e73d7acbc03e303297b19fdf643384
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
-# <a name="parsing-strings-in-net"></a>Analisando cadeias de caracteres no .NET
-
-Uma operação de análise converte uma cadeia de caracteres que representa um tipo base .NET em tal tipo base. Por exemplo, uma operação de análise é usada para converter uma cadeia de caracteres em um número de ponto flutuante ou em um valor de data e hora. O método usado com mais frequência para executar uma operação de análise é o método `Parse`. Como a análise é a operação inversa da formatação (que envolve a conversão de um tipo base em sua representação de cadeia de caracteres), muitas das mesmas regras e convenções se aplicam. Assim como a formatação usa um objeto que implementa a interface [IFormatProvider](xref:System.IFormatProvider) para fornecer informações de formatação sensíveis à cultura, a análise também usa um objeto que implementa a interface [IFormatProvider](xref:System.IFormatProvider) para determinar como interpretar uma representação de cadeia de caracteres. Para obter mais informações, consulte [Tipos de formatação no .NET](formatting-types.md).
-
-## <a name="in-this-section"></a>Nesta seção
-
-[Analisando cadeias de caracteres numéricas no .NET](parsing-numeric.md) – Descreve como converter cadeias de caracteres em tipos numéricos no .NET.
-
-[Analisando cadeias de caracteres de data e hora no .NET](parsing-datetime.md) – Descreve como converter cadeias de caracteres em tipos`DateTime` no .NET.
-
-[Analisando outras cadeias de caracteres no .NET](parsing-other.md) – Descreve como converter cadeias de caracteres em tipos [Char](xref:System.Char), [Boolean](xref:System.Boolean) e [Enum](xref:System.Enum).
-
-[Tipos de formatação no .NET](formatting-types.md) – Descreve os conceitos básicos de formatação, como especificadores de formato e provedores de formato.
-
-[Conversão de tipo no .NET](type-conversion.md) – Descreve como converter tipos.
-
-[Trabalhando com tipos base no .NET](index.md) – Descreve operações comuns que você pode executar em tipos base do .NET.
-
-
+# <a name="parsing-strings-in-net"></a><span data-ttu-id="12fab-102">Analisando cadeias de caracteres no .NET</span><span class="sxs-lookup"><span data-stu-id="12fab-102">Parsing Strings in .NET</span></span>
+<span data-ttu-id="12fab-103">Uma operação de análise converte uma cadeia de caracteres que representa um tipo base .NET em tal tipo base.</span><span class="sxs-lookup"><span data-stu-id="12fab-103">A parsing operation converts a string that represents a .NET base type into that base type.</span></span> <span data-ttu-id="12fab-104">Por exemplo, uma operação de análise é usada para converter uma cadeia de caracteres em um número de ponto flutuante ou em um valor de data e hora.</span><span class="sxs-lookup"><span data-stu-id="12fab-104">For example, a parsing operation is used to convert a string to a floating-point number or to a date and time value.</span></span> <span data-ttu-id="12fab-105">O método usado com mais frequência para executar uma operação de análise é o método `Parse`.</span><span class="sxs-lookup"><span data-stu-id="12fab-105">The method most commonly used to perform a parsing operation is the `Parse` method.</span></span> <span data-ttu-id="12fab-106">Como a análise é a operação inversa da formatação (que envolve a conversão de um tipo base em sua representação de cadeia de caracteres), muitas das mesmas regras e convenções se aplicam.</span><span class="sxs-lookup"><span data-stu-id="12fab-106">Because parsing is the reverse operation of formatting (which involves converting a base type into its string representation), many of the same rules and conventions apply.</span></span> <span data-ttu-id="12fab-107">Assim como a formatação usa um objeto que implementa o <xref:System.IFormatProvider> interface para fornecer informações de formatação sensíveis à cultura, análise também usa um objeto que implementa o <xref:System.IFormatProvider> interface para determinar como interpretar uma representação de cadeia de caracteres .</span><span class="sxs-lookup"><span data-stu-id="12fab-107">Just as formatting uses an object that implements the <xref:System.IFormatProvider> interface to provide culture-sensitive formatting information, parsing also uses an object that implements the <xref:System.IFormatProvider> interface to determine how to interpret a string representation.</span></span> <span data-ttu-id="12fab-108">Para obter mais informações, consulte [Tipos de formatação](../../../docs/standard/base-types/formatting-types.md).</span><span class="sxs-lookup"><span data-stu-id="12fab-108">For more information, see [Formatting Types](../../../docs/standard/base-types/formatting-types.md).</span></span>  
+  
+## <a name="in-this-section"></a><span data-ttu-id="12fab-109">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="12fab-109">In This Section</span></span>  
+ [<span data-ttu-id="12fab-110">Analisando cadeias de caracteres numéricas</span><span class="sxs-lookup"><span data-stu-id="12fab-110">Parsing Numeric Strings</span></span>](../../../docs/standard/base-types/parsing-numeric.md)  
+ <span data-ttu-id="12fab-111">Descreve como converter cadeias de caracteres em tipos numéricos do .NET.</span><span class="sxs-lookup"><span data-stu-id="12fab-111">Describes how to convert strings into .NET numeric types.</span></span>  
+  
+ [<span data-ttu-id="12fab-112">Analisando cadeias de caracteres de data e hora</span><span class="sxs-lookup"><span data-stu-id="12fab-112">Parsing Date and Time Strings</span></span>](../../../docs/standard/base-types/parsing-datetime.md)  
+ <span data-ttu-id="12fab-113">Descreve como converter cadeias de caracteres no .NET **DateTime** tipos.</span><span class="sxs-lookup"><span data-stu-id="12fab-113">Describes how to convert strings into .NET **DateTime** types.</span></span>  
+  
+ [<span data-ttu-id="12fab-114">Analisando outras cadeias de caracteres</span><span class="sxs-lookup"><span data-stu-id="12fab-114">Parsing Other Strings</span></span>](../../../docs/standard/base-types/parsing-other.md)  
+ <span data-ttu-id="12fab-115">Descreve como converter cadeias de caracteres em **Char**, **booliano**, e **Enum** tipos.</span><span class="sxs-lookup"><span data-stu-id="12fab-115">Describes how to convert strings into **Char**, **Boolean**, and **Enum** types.</span></span>  
+  
+## <a name="related-sections"></a><span data-ttu-id="12fab-116">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="12fab-116">Related Sections</span></span>  
+ [<span data-ttu-id="12fab-117">Formatando Tipos</span><span class="sxs-lookup"><span data-stu-id="12fab-117">Formatting Types</span></span>](../../../docs/standard/base-types/formatting-types.md)  
+ <span data-ttu-id="12fab-118">Descreve os conceitos básicos de formatação como especificadores de formato e provedores de formato.</span><span class="sxs-lookup"><span data-stu-id="12fab-118">Describes basic formatting concepts like format specifiers and format providers.</span></span>  
+  
+ [<span data-ttu-id="12fab-119">Conversão de tipo no .NET</span><span class="sxs-lookup"><span data-stu-id="12fab-119">Type Conversion in .NET</span></span>](../../../docs/standard/base-types/type-conversion.md)  
+ <span data-ttu-id="12fab-120">Descreve como converter tipos.</span><span class="sxs-lookup"><span data-stu-id="12fab-120">Describes how to convert types.</span></span>  
+  
+ [<span data-ttu-id="12fab-121">Tipos base</span><span class="sxs-lookup"><span data-stu-id="12fab-121">Base Types</span></span>](../../../docs/standard/base-types/index.md)  
+ <span data-ttu-id="12fab-122">Descreve as operações comuns que você pode executar em tipos de base do .NET.</span><span class="sxs-lookup"><span data-stu-id="12fab-122">Describes common operations that you can perform on .NET base types.</span></span>

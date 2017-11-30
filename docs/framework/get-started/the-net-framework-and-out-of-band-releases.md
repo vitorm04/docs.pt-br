@@ -5,65 +5,62 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 1785c222238a58893edf71352839b40ea8db29f7
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 208ea77318d67900eb059606b8ecd8e0e3b203a0
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/21/2017
 ---
-# <a name="the-net-framework-and-out-of-band-releases"></a>O .NET Framework e lançamentos fora da banda
-O .NET Framework está evoluindo para acomodar diferentes plataformas, como o Windows Phone e a Windows Store, bem como a área de trabalho e aplicativos Web tradicionais, e maximizar a reutilização de código. Além de nossas versões regulares do .NET Framework, lançamos também novos recursos fora de faixa (OOB) para melhorar o desenvolvimento interplataforma ou para introduzir novas funcionalidades. Este tópico discute a direção futura do .NET Framework e suas versões OOB.  
+# <a name="the-net-framework-and-out-of-band-releases"></a><span data-ttu-id="d71e0-102">O .NET Framework e lançamentos fora da banda</span><span class="sxs-lookup"><span data-stu-id="d71e0-102">The .NET Framework and Out-of-Band Releases</span></span>
+<span data-ttu-id="d71e0-103">O .NET Framework está evoluindo para acomodar diferentes plataformas, como o Windows Phone e a Windows Store, bem como a área de trabalho e aplicativos Web tradicionais, e maximizar a reutilização de código.</span><span class="sxs-lookup"><span data-stu-id="d71e0-103">The .NET Framework is evolving to accommodate different platforms such as Windows Phone and Windows Store apps as well as traditional desktop and web apps, and to maximize code reuse.</span></span> <span data-ttu-id="d71e0-104">Além de nossas versões regulares do .NET Framework, lançamos também novos recursos fora de faixa (OOB) para melhorar o desenvolvimento interplataforma ou para introduzir novas funcionalidades.</span><span class="sxs-lookup"><span data-stu-id="d71e0-104">In addition to our regular .NET Framework releases, we release new features out of band (OOB) to improve cross-platform development or to introduce new functionality.</span></span> <span data-ttu-id="d71e0-105">Este tópico discute a direção futura do .NET Framework e suas versões OOB.</span><span class="sxs-lookup"><span data-stu-id="d71e0-105">This topic discusses the future direction of the .NET Framework and its OOB releases.</span></span>  
   
-## <a name="advantages-of-oob-releases"></a>Vantagens das versões OOB  
- Enviar novos componentes ou atualizações de componentes fora de faixa permite que Microsoft forneça atualizações mais frequentes para o .NET Framework. Além disso, podemos coletar e responder aos comentários dos clientes de forma mais rápida.  
+## <a name="advantages-of-oob-releases"></a><span data-ttu-id="d71e0-106">Vantagens das versões OOB</span><span class="sxs-lookup"><span data-stu-id="d71e0-106">Advantages of OOB releases</span></span>  
+ <span data-ttu-id="d71e0-107">Enviar novos componentes ou atualizações de componentes fora de faixa permite que Microsoft forneça atualizações mais frequentes para o .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="d71e0-107">Shipping new components or updates to components out of band enables Microsoft to provide more frequent updates to the .NET Framework.</span></span> <span data-ttu-id="d71e0-108">Além disso, podemos coletar e responder aos comentários dos clientes de forma mais rápida.</span><span class="sxs-lookup"><span data-stu-id="d71e0-108">In addition, we can gather and respond to customer feedback more quickly.</span></span>  
   
- Quando você usa um recurso OOB em seu aplicativo, os usuários não precisam instalar a versão mais recente do .NET Framework para executar o aplicativo, pois os assemblies OOB são implantados junto com o pacote do aplicativo.  
+ <span data-ttu-id="d71e0-109">Quando você usa um recurso OOB em seu aplicativo, os usuários não precisam instalar a versão mais recente do .NET Framework para executar o aplicativo, pois os assemblies OOB são implantados junto com o pacote do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d71e0-109">When you use an OOB feature in your app, your users do not have to install the latest version of the .NET Framework to run your app, because the OOB assemblies deploy with your app package.</span></span>  
   
-## <a name="how-oob-packages-are-distributed"></a>Como os pacotes OOB são distribuídos  
- As versões OOB para os componentes principais do CLR (Common Language Runtime) são entregues com o [Gerenciador de Pacotes NuGet](http://nuget.codeplex.com/), uma extensão de código aberto do Visual Studio. O NuGet permite que você procure e adicione bibliotecas facilmente aos seus projetos .NET Framework via Gerenciador de Soluções no Visual Studio. O NuGet faz parte de todas as edições do Visual Studio a partir do Visual Studio 2012. Para verificar se o NuGet está instalado, procure **Gerenciador de Pacotes de Biblioteca** no menu **Ferramentas** do Visual Studio. Se ele não estiver instalado:  
+## <a name="how-oob-packages-are-distributed"></a><span data-ttu-id="d71e0-110">Como os pacotes OOB são distribuídos</span><span class="sxs-lookup"><span data-stu-id="d71e0-110">How OOB packages are distributed</span></span>  
+<span data-ttu-id="d71e0-111">Versões do OOB para componentes principais do common language runtime (CLR) são fornecidos por meio de [NuGet](https://www.nuget.org/), que é um Gerenciador de pacotes para .NET.</span><span class="sxs-lookup"><span data-stu-id="d71e0-111">OOB releases for core common language runtime (CLR) components are delivered through the [NuGet](https://www.nuget.org/), which is a package manager for .NET.</span></span> <span data-ttu-id="d71e0-112">O NuGet permite que você procure e adicione bibliotecas facilmente aos seus projetos .NET Framework via Gerenciador de Soluções no Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="d71e0-112">NuGet enables you to browse and add libraries to your .NET Framework projects easily from the Solution Explorer in Visual Studio.</span></span> <span data-ttu-id="d71e0-113">O NuGet faz parte de todas as edições do Visual Studio a partir do Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="d71e0-113">NuGet is included with all editions of Visual Studio starting with Visual Studio 2012.</span></span> <span data-ttu-id="d71e0-114">Para verificar se o NuGet está instalado, procure **Gerenciador de Pacotes de Biblioteca** no menu **Ferramentas** do Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="d71e0-114">To see if NuGet is installed, look for **Library Package Manager** on the Visual Studio **Tools** menu.</span></span> <span data-ttu-id="d71e0-115">Se ele não estiver instalado:</span><span class="sxs-lookup"><span data-stu-id="d71e0-115">If it’s not installed:</span></span>  
   
-1.  Na barra de menus do Visual Studio, escolha **Ferramentas**, **Extensões e Atualizações** (no Visual Studio 2010, escolha **Gerenciador de Extensões**).  
+1.  <span data-ttu-id="d71e0-116">Na barra de menus do Visual Studio, escolha **Ferramentas**, **Extensões e Atualizações** (no Visual Studio 2010, escolha **Gerenciador de Extensões**).</span><span class="sxs-lookup"><span data-stu-id="d71e0-116">On the Visual Studio menu bar, choose **Tools**, **Extensions and Updates** (in Visual Studio 2010, choose **Extension Manager**).</span></span>  
   
-     A caixa de diálogo **Extensões e Atualizações** é aberta.  
+     <span data-ttu-id="d71e0-117">A caixa de diálogo **Extensões e Atualizações** é aberta.</span><span class="sxs-lookup"><span data-stu-id="d71e0-117">The **Extensions and Updates** dialog box opens.</span></span>  
   
-2.  Escolha **Online**, **Gerenciador de Pacotes NuGet** e, em seguida, escolha **Baixar**.  
+2.  <span data-ttu-id="d71e0-118">Escolha **Online**, **Gerenciador de Pacotes NuGet** e, em seguida, escolha **Baixar**.</span><span class="sxs-lookup"><span data-stu-id="d71e0-118">Choose **Online**, **NuGet Package Manager**, and then choose **Download**.</span></span>  
   
-3.  Após a conclusão do download, reinicie o Visual Studio.  
+3.  <span data-ttu-id="d71e0-119">Após a conclusão do download, reinicie o Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="d71e0-119">After the download completes, restart Visual Studio.</span></span>  
   
- Para obter instruções de instalação detalhadas, veja [Instalação do NuGet](http://docs.nuget.org/docs/start-here/installing-nuget) no site de Documentação do NuGet. Para saber mais sobre o NuGet, veja a [documentação do NuGet](http://docs.nuget.org/).  
+ <span data-ttu-id="d71e0-120">Para obter instruções de instalação detalhadas, veja [Instalação do NuGet](http://docs.nuget.org/docs/start-here/installing-nuget) no site de Documentação do NuGet.</span><span class="sxs-lookup"><span data-stu-id="d71e0-120">For detailed installation instructions, see [Installing NuGet](http://docs.nuget.org/docs/start-here/installing-nuget) on the NuGet Docs website.</span></span> <span data-ttu-id="d71e0-121">Para saber mais sobre o NuGet, veja a [documentação do NuGet](http://docs.nuget.org/).</span><span class="sxs-lookup"><span data-stu-id="d71e0-121">For more information about NuGet, see the [NuGet documentation](http://docs.nuget.org/).</span></span>  
   
-## <a name="using-a-nuget-oob-package"></a>Usando um pacote OOB do NuGet  
- Após instalar o NuGet, você poderá procurar e adicionar referências aos pacotes NuGet usando o Gerenciador de Soluções no Visual Studio:  
+## <a name="using-a-nuget-oob-package"></a><span data-ttu-id="d71e0-122">Usando um pacote OOB do NuGet</span><span class="sxs-lookup"><span data-stu-id="d71e0-122">Using a NuGet OOB package</span></span>  
+ <span data-ttu-id="d71e0-123">Após instalar o NuGet, você poderá procurar e adicionar referências aos pacotes NuGet usando o Gerenciador de Soluções no Visual Studio:</span><span class="sxs-lookup"><span data-stu-id="d71e0-123">After you install NuGet, you can browse and add references to NuGet packages by using Solution Explorer in Visual Studio:</span></span>  
   
-1.  Abra o menu de atalho para seu projeto no Visual Studio e, em seguida, escolha **Gerenciar Pacotes NuGet**. (Esta opção também está disponível no menu **Projeto**.)  
+1.  <span data-ttu-id="d71e0-124">Abra o menu de atalho para seu projeto no Visual Studio e, em seguida, escolha **Gerenciar Pacotes NuGet**.</span><span class="sxs-lookup"><span data-stu-id="d71e0-124">Open the shortcut menu for your project in Visual Studio, and then choose **Manage NuGet Packages**.</span></span> <span data-ttu-id="d71e0-125">(Esta opção também está disponível no menu **Projeto**.)</span><span class="sxs-lookup"><span data-stu-id="d71e0-125">(This option is also available from the **Project** menu.)</span></span>  
   
-2.  No painel esquerdo, escolha **Online**.  
+2.  <span data-ttu-id="d71e0-126">No painel esquerdo, escolha **Online**.</span><span class="sxs-lookup"><span data-stu-id="d71e0-126">In the left pane, choose **Online**.</span></span>  
   
-3.  Se você deseja usar pacotes de pré-lançamento, na caixa de lista suspensa no painel intermediário, escolha **Incluir Pré-lançamento** em vez de **Somente Estável**.  
+3.  <span data-ttu-id="d71e0-127">Se você deseja usar pacotes de pré-lançamento, na caixa de lista suspensa no painel intermediário, escolha **Incluir Pré-lançamento** em vez de **Somente Estável**.</span><span class="sxs-lookup"><span data-stu-id="d71e0-127">If you want to use prerelease packages, in the drop-down list box in the middle pane, choose **Include Prerelease** instead of **Stable Only**.</span></span>  
   
-4.  No painel direito, use a caixa **Pesquisar** para localizar o pacote que deseja usar. Alguns pacotes da Microsoft são identificados pelo logotipo do Microsoft .NET Framework. Todos eles identificam Microsoft como o editor.  
+4.  <span data-ttu-id="d71e0-128">No painel direito, use a caixa **Pesquisar** para localizar o pacote que deseja usar.</span><span class="sxs-lookup"><span data-stu-id="d71e0-128">In the right pane, use the **Search** box to locate the package you would like to use.</span></span> <span data-ttu-id="d71e0-129">Alguns pacotes da Microsoft são identificados pelo logotipo do Microsoft .NET Framework. Todos eles identificam Microsoft como o editor.</span><span class="sxs-lookup"><span data-stu-id="d71e0-129">Some Microsoft packages are identified by the Microsoft .NET Framework logo, and all identify Microsoft as the publisher.</span></span>  
   
- ![Gerenciador de pacotes NuGet](../../../docs/framework/get-started/media/clrnugetdialog.png "clrNugetDialog")  
+ <span data-ttu-id="d71e0-130">![Gerenciador de pacotes NuGet](../../../docs/framework/get-started/media/clrnugetdialog.png "clrNugetDialog")</span><span class="sxs-lookup"><span data-stu-id="d71e0-130">![NuGet Package Manager](../../../docs/framework/get-started/media/clrnugetdialog.png "clrNugetDialog")</span></span>  
   
- Conforme mencionado anteriormente, quando você implanta um aplicativo que usa um pacote OOB, os assemblies OOB são fornecidos com o pacote do aplicativo.  
+ <span data-ttu-id="d71e0-131">Conforme mencionado anteriormente, quando você implanta um aplicativo que usa um pacote OOB, os assemblies OOB são fornecidos com o pacote do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d71e0-131">As mentioned previously, when you deploy an app that uses an OOB package, the OOB assemblies will ship with your app package.</span></span>  
   
-## <a name="types-of-oob-releases"></a>Tipos de versão OOB  
- Normalmente, um conjunto OOB possui uma ou várias versões de pré-lançamento e uma versão estável. A licença que acompanha uma versão pré-lançamento normalmente não permite a redistribuição, mas permite que você teste um pacote e forneça comentários. Os comentários são incorporados em quaisquer atualizações feitas no pacote. Um versão final é distribuída na forma de pacote estável com o NuGet e inclui uma licença que permite redistribuir o pacote Nuget com seu aplicativo. Pacotes estáveis têm suprote pela Microsoft. A Microsoft fornece suporte para IntelliSense, bem como para outros tipos de documentação, como postagens em blogs e respostas em fóruns para todos os pacotes. Além disso, o código-fonte pode ser disponibilizado em alguns pacotes, mas não em todos. Para consultar anúncios em relação a novos pacotes e atualizações, inscreva-se no [Blog do .NET Framework](http://blogs.msdn.com/b/dotnet/).  
+## <a name="types-of-oob-releases"></a><span data-ttu-id="d71e0-132">Tipos de versão OOB</span><span class="sxs-lookup"><span data-stu-id="d71e0-132">Types of OOB releases</span></span>  
+ <span data-ttu-id="d71e0-133">Normalmente, um conjunto OOB possui uma ou várias versões de pré-lançamento e uma versão estável.</span><span class="sxs-lookup"><span data-stu-id="d71e0-133">Typically, an OOB package has one or more prerelease versions and a stable version.</span></span> <span data-ttu-id="d71e0-134">A licença que acompanha uma versão pré-lançamento normalmente não permite a redistribuição, mas permite que você teste um pacote e forneça comentários.</span><span class="sxs-lookup"><span data-stu-id="d71e0-134">The license that accompanies a prerelease doesn't typically allow redistribution, but enables you to try out a package and provide feedback.</span></span> <span data-ttu-id="d71e0-135">Os comentários são incorporados em quaisquer atualizações feitas no pacote.</span><span class="sxs-lookup"><span data-stu-id="d71e0-135">Feedback is incorporated in any updates made to the package.</span></span> <span data-ttu-id="d71e0-136">Um versão final é distribuída na forma de pacote estável com o NuGet e inclui uma licença que permite redistribuir o pacote Nuget com seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d71e0-136">A final release is distributed as a stable package with NuGet and includes a license that lets you redistribute the NuGet package with your app.</span></span> <span data-ttu-id="d71e0-137">Pacotes estáveis têm suprote pela Microsoft.</span><span class="sxs-lookup"><span data-stu-id="d71e0-137">Stable packages are supported by Microsoft.</span></span> <span data-ttu-id="d71e0-138">A Microsoft fornece suporte para IntelliSense, bem como para outros tipos de documentação, como postagens em blogs e respostas em fóruns para todos os pacotes.</span><span class="sxs-lookup"><span data-stu-id="d71e0-138">Microsoft provides IntelliSense support as well as other types of documentation such as blog posts and forum answers for all packages.</span></span> <span data-ttu-id="d71e0-139">Além disso, o código-fonte pode ser disponibilizado em alguns pacotes, mas não em todos.</span><span class="sxs-lookup"><span data-stu-id="d71e0-139">In addition, source code may be available with some, but not all, packages.</span></span> <span data-ttu-id="d71e0-140">Para consultar anúncios em relação a novos pacotes e atualizações, inscreva-se no [Blog do .NET Framework](http://blogs.msdn.com/b/dotnet/).</span><span class="sxs-lookup"><span data-stu-id="d71e0-140">For announcements regarding new and updated packages, you can subscribe to [the .NET Framework Blog](http://blogs.msdn.com/b/dotnet/).</span></span>  
   
- Para encontrar pré-lançamentos e pacotes estáveis, selecione **Incluir Pré-lançamento** no Gerenciador de pacotes NuGet.  
+ <span data-ttu-id="d71e0-141">Para encontrar pré-lançamentos e pacotes estáveis, selecione **Incluir Pré-lançamento** no Gerenciador de pacotes NuGet.</span><span class="sxs-lookup"><span data-stu-id="d71e0-141">To find both prerelease and stable packages, choose **Include Prerelease** in the NuGet Package Manager.</span></span>  
   
- Para receber notificações sobre lançamentos de pacotes estáveis, inscreva-se no [feed do .NET Framework](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/).  
+ <span data-ttu-id="d71e0-142">Para receber notificações sobre lançamentos de pacotes estáveis, inscreva-se no [feed do .NET Framework](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/).</span><span class="sxs-lookup"><span data-stu-id="d71e0-142">If you want to be notified of stable package releases, subscribe to the [the .NET Framework feed](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/).</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução](../../../docs/framework/get-started/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="d71e0-143">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d71e0-143">See Also</span></span>  
+ [<span data-ttu-id="d71e0-144">Introdução</span><span class="sxs-lookup"><span data-stu-id="d71e0-144">Getting Started</span></span>](../../../docs/framework/get-started/index.md)

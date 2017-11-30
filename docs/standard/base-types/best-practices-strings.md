@@ -1,1106 +1,378 @@
 ---
-title: "Práticas recomendadas para o uso de cadeias de caracteres"
-description: "Práticas recomendadas para o uso de cadeias de caracteres"
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-ms.date: 07/26/2016
+title: "Práticas recomendadas para usar cadeias de caracteres no .NET"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
-ms.assetid: b3cefaa4-0a3f-4a96-aba9-1de30fb07c29
-translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 3efd30bade564fe1b7dbf93237a9ff40c58c5f1e
-
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- strings [.NET Framework],searching
+- best practices,string comparison and sorting
+- strings [.NET Framework],best practices
+- strings [.NET Framework],basic string operations
+- sorting strings
+- strings [.NET Framework],sorting
+- string comparison [.NET Framework],best practices
+- string sorting
+- comparing strings
+- strings [.NET Framework],comparing
+ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
+caps.latest.revision: "35"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: d187096fee5119a22d886029cd63173e4ca1c8ec
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
-# <a name="best-practices-for-using-strings"></a>Práticas recomendadas para o uso de cadeias de caracteres
-
-O .NET dá um amplo suporte para desenvolvimento de aplicativos localizados e globalizados e torna mais fácil aplicar as convenções da cultura atual ou de uma cultura específica ao executar operações comuns, como a classificação e a exibição cadeias de caracteres. Mas a classificação ou a comparação de cadeias de caracteres nem sempre é uma operação que leva em conta a cultura. Por exemplo, cadeias de caracteres que são usadas internamente por um aplicativo normalmente devem ser manipuladas de maneira idêntica em todas as culturas. Quando os dados de cadeias de caracteres culturalmente independentes, como marcações XML, marcações HTML, nomes de usuário, caminhos de arquivo e nomes de objetos do sistema, são interpretados como se levassem em conta a cultura, o código do aplicativo pode estar sujeito a bugs sutis, desempenho ruim e, em alguns casos, problemas de segurança.
-
-Este artigo examina os métodos de classificação, comparação e o uso de maiúsculas e minúsculas de cadeias de caracteres no .NET, apresenta recomendações para a seleção de um método de manipulação de cadeia de caracteres adequado e fornece informações adicionais sobre os métodos de manipulação de cadeia de caracteres. Ela também examina como os dados formatados, como dados numéricos e dados de data e hora, são manipulados para exibição e armazenamento. 
-
-Este artigo contém as seguintes seções:
-
-* [Recomendações para uso da cadeia de caracteres](#recommendations-for-string-usage)
-
-* [Especificação explícita de comparações da cadeia de caracteres](#specifying-string-comparisons-explicitly)
-
-* [Os detalhes da comparação de cadeia de caracteres](#the-details-of-string-comparison)
-
-* [Escolha de um membro StringComparison para a chamada de método](#choosing-a-stringcomparison-member-for-your-method-call)
-
-* [Métodos comuns de comparação da cadeia de caracteres](#common-string-comparison-methods)
-
-* [Métodos que realizam comparação indireta de cadeia de caracteres](#methods-that-perform-string-comparison-indirectly)
-
-* [Exibição e persistência de dados formatados](#displaying-and-persisting-formatted-data)
-
-## <a name="recommendations-for-string-usage"></a>Recomendações para uso da cadeia de caracteres
-
-Ao desenvolver com o .NET, siga estas recomendações simples quando usar cadeias de caracteres: 
-
-* Use sobrecargas que especificam explicitamente as regras de comparação de cadeias de caracteres para operações de cadeia de caracteres. Normalmente, isso envolve chamar uma sobrecarga de método que tem um parâmetro do tipo [StringComparison](xref:System.StringComparison).
-
-* Use [StringComparison.Ordinal](xref:System.StringComparison.Ordinal) ou [StringComparison.OrdinalIgnoreCase](xref:System.StringComparison.OrdinalIgnoreCase) para comparações como seu padrão seguro para a correspondência de cadeia de caracteres independente de cultura.
-
-* Use comparações com [StringComparison.Ordinal](xref:System.StringComparison.Ordinal) ou [StringComparison.OrdinalIgnoreCase](xref:System.StringComparison.OrdinalIgnoreCase) para melhorar o desempenho.
-
-* Use operações de cadeia de caracteres que se baseiam em [StringComparison.CurrentCulture](xref:System.StringComparison.CurrentCulture) ao exibir a saída para o usuário.
-
-* Use valores [StringComparison.Ordinal](xref:System.StringComparison.Ordinal) ou [StringComparison.OrdinalIgnoreCase](xref:System.StringComparison.OrdinalIgnoreCase) não linguísticos em vez de operações de cadeias de caracteres com base em [CultureInfo.InvariantCulture](xref:System.Globalization.CultureInfo.InvariantCulture) quando a comparação for linguisticamente irrelevante (simbólica, por exemplo).
-
-* Use o método [String.ToUpperInvariant](xref:System.String.ToUpperInvariant) em vez do método [String.ToLowerInvariant](xref:System.String.ToLowerInvariant) ao normalizar cadeias de caracteres para comparação.
-
-* Use uma sobrecarga do método [String](xref:System.String) `Equals` para testar se duas cadeias de caracteres são iguais.
-
-* Use uma sobrecarga dos métodos [String](xref:System.String) `Compare` e [String.CompareTo](xref:System.String.CompareTo(System.String)) para classificar as cadeias de caracteres, não para verificar a igualdade.
-
-* Use a formatação que leva em conta a cultura para exibir dados que não são de cadeias de caracteres, como números e datas, em uma interface do usuário. Use a formatação com a cultura invariável para persistir os dados que não são de cadeias de caracteres no formato de cadeia de caracteres.
-
-Evite as práticas a seguir ao usar cadeias de caracteres:
-
-* Não use sobrecargas que não especificam explicita ou implicitamente as regras de comparação de cadeias de caracteres para operações de cadeia de caracteres. 
-
-* Não use uma sobrecarga dos métodos [String](xref:System.String) `Compare` ou [String.CompareTo](xref:System.String.CompareTo(System.String)) e teste para um valor retornado de zero para determinar se duas cadeias de caracteres são iguais.
-
-* Não use a formatação que leva em conta a cultura para persistir dados numéricos ou dados de data e hora no formato de cadeia de caracteres.
-
-## <a name="specifying-string-comparisons-explicitly"></a>Especificação explícita de comparações da cadeia de caracteres
-
-A maioria dos métodos de manipulação de cadeia de caracteres no .NET é sobrecarregada. Normalmente, uma ou mais sobrecargas aceitam as configurações padrão, enquanto outras não aceitam nenhum padrão e definem a maneira exata em que as cadeias de caracteres devem ser comparadas ou manipuladas. A maioria dos métodos que não dependem de padrões inclui um parâmetro do tipo [StringComparison](xref:System.StringComparison), que é uma enumeração que especifica explicitamente as regras de comparação de cadeia de caracteres por cultura e maiúsculas e minúsculas. A tabela a seguir descreve os membros de enumeração de [StringComparison](xref:System.StringComparison). 
-
-Membro de StringComparison | Descrição
------------------------ | -----------
-[StringComparison.CurrentCulture](xref:System.StringComparison.CurrentCulture) | Executa uma comparação que diferencia maiúsculas de minúsculas usando a cultura atual.
-[CurrentCultureIgnoreCase](xref:System.StringComparison.CurrentCultureIgnoreCase) | Executa uma comparação que não diferencia maiúsculas de minúsculas usando a cultura atual.
-[StringComparison.Ordinal](xref:System.StringComparison.Ordinal) | Executa uma comparação ordinal.
-[StringComparison.OrdinalIgnoreCase](xref:System.StringComparison.OrdinalIgnoreCase) | Executa uma comparação ordinal que não diferencia maiúsculas de minúsculas.
-
-Por exemplo, o método [String](xref:System.String) `IndexOf`, que retorna um índice de uma subcadeia de caracteres em um objeto [String](xref:System.String) que corresponde a um caractere ou cadeia de caracteres, tem nove sobrecargas:
-
-* [IndexOf(Char)](xref:System.String.IndexOf(System.Char)), [IndexOf(Char, Int32)](xref:System.String.IndexOf(System.Char,System.Int32)) e [IndexOf(Char, Int32, Int32)](xref:System.String.IndexOf(System.Char,System.Int32,System.Int32)), que por padrão executam uma pesquisa ordinal (diferencia maiúsculas de minúsculas e não leva em consideração a cultura) para um caractere na cadeia de caracteres.
-
-* [IndexOf(String)](xref:System.String.IndexOf(System.String)), [IndexOf(String, Int32)](xref:System.String.IndexOf(System.String,System.Int32)) e [IndexOf(String, Int32, Int32)](xref:System.String.IndexOf(System.String,System.Int32,System.Int32)), que por padrão executam uma pesquisa que diferencia maiúsculas de minúsculas e leva em consideração a cultura para uma subcadeia de caracteres na cadeia de caracteres.
-
-* [IndexOf(String, StringComparison)](xref:System.String.IndexOf(System.String,System.StringComparison)), [IndexOf(String, Int32, StringComparison)](xref:System.String.IndexOf(System.String,System.Int32,System.StringComparison)) e [IndexOf(String, Int32, Int32, StringComparison)](xref:System.String.IndexOf(System.String,System.Int32,System.Int32,System.StringComparison)), que incluem um parâmetro de tipo StringComparison que permite que a forma de comparação seja especificada.
-
-É recomendável que você selecione uma sobrecarga que não usa valores padrão, pelos seguintes motivos:
-
-* Algumas sobrecargas com parâmetros padrão (aqueles que pesquisam um [Char](xref:System.Char) na instância de cadeia de caracteres) realizam uma comparação ordinal, enquanto outras (aquelas que pesquisam uma cadeia de caracteres na instância de cadeia de caracteres) levam em consideração a cultura. É difícil lembrar qual método usa o valor padrão e é fácil confundir as sobrecargas.
-
-* A intenção do código que depende de valores padrão para chamadas de método não é clara. No exemplo a seguir, que se baseia em padrões, é difícil saber se o desenvolvedor realmente planejava uma comparação ordinal ou linguística de duas cadeias de caracteres ou se uma diferença entre maiúsculas e minúsculas entre `protocol` e “http” pode fazer com que o teste de igualdade retorne `false`.
-
-  ```csharp
-  string protocol = GetProtocol(url);       
-  if (String.Equals(protocol, "http", StringComparison.OrdinalIgnoreCase)) {
-     // ...Code to handle HTTP protocol.
-  }
-  else {
-     throw new InvalidOperationException();
-  }
-  ```
-
-  ```vb
-  Dim protocol As String = GetProtocol(url)       
-  If String.Equals(protocol, "http") Then
-    ' ...Code to handle HTTP protocol.
-  Else
-     Throw New InvalidOperationException()
-  End If
-  ```
-
-Em geral, é recomendável que você chame um método que não se baseie em padrões, pois ele torna a intenção do código clara. Isso, por sua vez, torna o código mais legível e fácil de depurar e manter. O exemplo a seguir aborda as questões levantadas sobre o exemplo anterior. Ele deixa claro que a comparação ordinal é usada e que as diferenças de maiúsculas e minúsculas são ignoradas. 
-
-```csharp
-string protocol = GetProtocol(url);       
-if (String.Equals(protocol, "http", StringComparison.OrdinalIgnoreCase)) {
-   // ...Code to handle HTTP protocol.
-}
-else {
-   throw new InvalidOperationException();
-}
-```
-
-```vb
-Dim protocol As String = GetProtocol(url)       
-If String.Equals(protocol, "http", StringComparison.OrdinalIgnoreCase) Then
-   ' ...Code to handle HTTP protocol.
-Else
-   Throw New InvalidOperationException()
-End If
-```
-
-## <a name="the-details-of-string-comparison"></a>Os detalhes da comparação de cadeia de caracteres
-
-A comparação de cadeia de caracteres é o centro de muitas operações relacionadas à cadeia de caracteres, especialmente a classificação e teste de igualdade. As cadeias de caracteres são classificadas em uma determinada ordem: se “my” aparece antes de “string” em uma lista classificada de cadeias de caracteres, “my” deve comparar menos que ou igual a “string”. Além disso, a comparação define implicitamente a igualdade. A operação de comparação retorna zero para cadeias de caracteres que considerar iguais. Uma boa interpretação é que nenhuma cadeia de caracteres é menor que a outra. Operações mais significativas envolvendo cadeias de caracteres incluem um ou ambos destes procedimentos: comparação com outra cadeia de caracteres e execução de uma operação de classificação bem definida.
-
-No entanto, avaliar duas cadeias de caracteres quanto à igualdade ou ordem de classificação não gera um único resultado correto, o resultado depende dos critérios usados para comparar as cadeias de caracteres. Em particular, as comparações de cadeia de caracteres ordinais ou baseadas no uso de maiúsculas e minúsculas e convenções classificação da cultura atual ou da cultura invariável (uma cultura independente de localidade com base no idioma inglês) podem gerar resultados diferentes.
-
-### <a name="string-comparisons-that-use-the-current-culture"></a>Comparações de cadeia de caracteres que usam a cultura atual
-
-Um critério envolve o uso das convenções da cultura atual ao comparar cadeias de caracteres. As comparações que se baseiam na cultura atual usam a localidade ou a cultura atual do thread. Você deve sempre usar comparações que se baseiam na cultura atual quando os dados forem linguisticamente relevantes e quando eles refletirem a interação do usuário que leva em conta a cultura. 
-
-No entanto, o comportamento da comparação e do uso de maiúsculas e minúsculas no .NET muda quando a cultura muda. Isso acontece quando um aplicativo é executado em um computador que tem uma cultura diferente do computador em que o aplicativo foi desenvolvido ou quando o thread em execução muda sua cultura. Esse comportamento é intencional, mas permanece não óbvio para muitos desenvolvedores. O exemplo a seguir ilustra as diferenças na ordem de classificação entre as culturas de inglês dos EUA ("en-US") e sueco ("sv-SE"). Observe que as palavras "ångström", "Windows" e "Visual Studio" aparecem em posições diferentes nas matrizes de cadeias de caracteres classificadas.
-
-```csharp
-using System;
-using System.Globalization;
-using System.Threading;
-
-public class Example
-{
-   public static void Main()
-   {
-      string[] values= { "able", "ångström", "apple", "Æble", 
-                         "Windows", "Visual Studio" };
-      Array.Sort(values);
-      DisplayArray(values);
-
-      // Change culture to Swedish (Sweden).
-      string originalCulture = CultureInfo.CurrentCulture.Name;
-      Thread.CurrentThread.CurrentCulture = new CultureInfo("sv-SE");
-      Array.Sort(values);
-      DisplayArray(values);
-
-      // Restore the original culture.
-      Thread.CurrentThread.CurrentCulture = new CultureInfo(originalCulture);
-    }
-
-    private static void DisplayArray(string[] values)
-    {
-      Console.WriteLine("Sorting using the {0} culture:",  
-                        CultureInfo.CurrentCulture.Name);
-      foreach (string value in values)
-         Console.WriteLine("   {0}", value);
-
-      Console.WriteLine();
-    }
-}
-// The example displays the following output:
-//       Sorting using the en-US culture:
-//          able
-//          Æble
-//          ångström
-//          apple
-//          Visual Studio
-//          Windows
-//       
-//       Sorting using the sv-SE culture:
-//          able
-//          Æble
-//          apple
-//          Windows
-//          Visual Studio
-//          ångström
-```
-
-```vb
-Imports System.Globalization
-Imports System.Threading
-
-Module Example
-   Public Sub Main()
-      Dim values() As String = { "able", "ångström", "apple", _
-                                 "Æble", "Windows", "Visual Studio" }
-      Array.Sort(values)
-      DisplayArray(values)
-
-      ' Change culture to Swedish (Sweden).
-      Dim originalCulture As String = CultureInfo.CurrentCulture.Name
-      Thread.CurrentThread.CurrentCulture = New CultureInfo("sv-SE")
-      Array.Sort(values)
-      DisplayArray(values)
-
-      ' Restore the original culture.
-      Thread.CurrentThread.CurrentCulture = New CultureInfo(originalCulture)
-    End Sub
-
-    Private Sub DisplayArray(values() As String)
-      Console.WRiteLine("Sorting using the {0} culture:", _ 
-                        CultureInfo.CurrentCulture.Name)
-      For Each value As String In values
-         Console.WriteLine("   {0}", value)
-      Next
-      Console.WriteLine()   
-    End Sub
-End Module
-' The example displays the following output:
-'       Sorting using the en-US culture:
-'          able
-'          Æble
-'          ångström
-'          apple
-'          Visual Studio
-'          Windows
-'       
-'       Sorting using the sv-SE culture:
-'          able
-'          Æble
-'          apple
-'          Windows
-'          Visual Studio
-'          ångström
-```
-
-As comparações que não diferenciam maiúsculas de minúsculas que usam a cultura atual são iguais às comparações que levam em conta a cultura, exceto que elas ignoram as maiúsculas e minúsculas conforme determinado pela cultura atual do thread. Esse comportamento pode se manifestar em ordens de classificação também. 
-
-As comparações que usam a semântica de cultura atual são o padrão para os seguintes métodos:
-
-* Sobrecargas [String](xref:System.String) `Compare` que não incluem um parâmetro [StringComparison](xref:System.StringComparison).
-
-* Sobrecargas [String.CompareTo](xref:System.String.CompareTo(System.String)).
-
-* O método [String.StartsWith(String)](xref:System.String.StartsWith(System.String)) padrão. 
-
-* O método [String.EndsWith(String)](xref:System.String.EndsWith(System.String)) padrão.
-
-* Sobrecargas [String](xref:System.String) `IndexOf` que aceitam uma [String](xref:System.String) como um parâmetro de pesquisa e que não têm um parâmetro [StringComparison](xref:System.StringComparison).
-
-* Sobrecargas [String](xref:System.String) `LastIndexOf` que aceitam uma [String](xref:System.String) como um parâmetro de pesquisa e que não têm um parâmetro [StringComparison](xref:System.StringComparison).
-
-Em qualquer caso, é recomendável que você chame uma sobrecarga que tenha um parâmetro [StringComparison](xref:System.StringComparison) para deixar a intenção da chamada do método clara. 
-
-Bugs sutis e não tão sutis podem surgir quando dados de cadeias de caracteres não linguísticas são interpretados linguisticamente ou quando os dados da cadeia de caracteres de uma cultura específica são interpretados usando as convenções de outra cultura. O exemplo canônico é o problema do I turco.
-
-Para quase todos os alfabetos latinos, incluindo o do inglês dos EUA, o caractere "i" (\u0069) é a versão em letra minúscula do caractere "I" (\u0049). Essa regra de maiúsculas e minúsculas rapidamente se torna o padrão para alguém programando em tal cultura. No entanto, o alfabeto turco ("tr-TR") inclui um caractere "I com um ponto", "İ" (\u0130), que é a versão maiúscula de "i". O turco também inclui um caractere minúsculo "i sem um ponto", "ı" (\u0131), que em maiúscula é “I”. Esse comportamento também ocorre na cultura azerbaidjana ("az").
-
-Portanto, as suposições feitas sobre a colocação do "i" em maiúscula ou do "I" em minúscula não são válidas entre todas as culturas. Se você usar as sobrecargas padrão para rotinas de comparação de cadeias de caracteres, elas estarão sujeitas à variação entre culturas. Se os dados a serem comparados são forem linguísticos, o uso das sobrecargas padrão pode gerar resultados indesejáveis, como a tentativa a seguir de realizar uma comparação que não diferencia maiúsculas de minúsculas das cadeias de caracteres “file” e “FILE” ilustra.
-
-```csharp
-using System;
-using System.Globalization;
-using System.Threading;
-
-public class Example
-{
-   public static void Main()
-   {
-      string fileUrl = "file";
-      Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
-      Console.WriteLine("Culture = {0}",
-                        Thread.CurrentThread.CurrentCulture.DisplayName);
-      Console.WriteLine("(file == FILE) = {0}", 
-                       fileUrl.StartsWith("FILE", true, null));
-      Console.WriteLine();
-
-      Thread.CurrentThread.CurrentCulture = new CultureInfo("tr-TR");
-      Console.WriteLine("Culture = {0}",
-                        Thread.CurrentThread.CurrentCulture.DisplayName);
-      Console.WriteLine("(file == FILE) = {0}", 
-                        fileUrl.StartsWith("FILE", true, null));
-   }
-}
-// The example displays the following output:
-//       Culture = English (United States)
-//       (file == FILE) = True
-//       
-//       Culture = Turkish (Turkey)
-//       (file == FILE) = False
-```
-
-```vb
-Imports System.Globalization
-Imports System.Threading
-
-Module Example
-   Public Sub Main()
-      Dim fileUrl = "file"
-      Thread.CurrentThread.CurrentCulture = New CultureInfo("en-US")
-      Console.WriteLine("Culture = {0}", _
-                        Thread.CurrentThread.CurrentCulture.DisplayName)
-      Console.WriteLine("(file == FILE) = {0}", _ 
-                       fileUrl.StartsWith("FILE", True, Nothing))
-      Console.WriteLine()
-
-      Thread.CurrentThread.CurrentCulture = New CultureInfo("tr-TR")
-      Console.WriteLine("Culture = {0}", _
-                        Thread.CurrentThread.CurrentCulture.DisplayName)
-      Console.WriteLine("(file == FILE) = {0}", _ 
-                        fileUrl.StartsWith("FILE", True, Nothing))
-   End Sub
-End Module
-' The example displays the following output:
-'       Culture = English (United States)
-'       (file == FILE) = True
-'       
-'       Culture = Turkish (Turkey)
-'       (file == FILE) = False
-```
-
-Essa comparação pode causar problemas significativos se a cultura for usada inadvertidamente nas configurações sensíveis à segurança, como no exemplo a seguir. Uma chamada de método, como `IsFileURI("file:")` retorna `true` se a cultura atual for inglês dos EUA, mas `false` se a cultura atual for turco. Assim, em sistemas turcos, alguém poderia driblar as medidas de segurança que bloqueiam o acesso a URIs que não diferenciam maiúsculas de minúsculas que começam com “FILE:”.
-
-```csharp
-public static bool IsFileURI(String path) 
-{
-   return path.StartsWith("FILE:", true, null);
-}
-```
-
-```vb
-Public Shared Function IsFileURI(path As String) As Boolean 
-   Return path.StartsWith("FILE:", True, Nothing)
-End Function
-```
-
-Nesse caso, como "file:" deve ser interpretado como um identificador não linguístico que não leva em conta a cultura, o código deveria ser escrito como mostrado no exemplo a seguir.
-
-```csharp
-public static bool IsFileURI(string path) 
-{
-   return path.StartsWith("FILE:", StringComparison.OrdinalIgnoreCase);
-}
-```
-
-```vb
-Public Shared Function IsFileURI(path As String) As Boolean 
-    Return path.StartsWith("FILE:", StringComparison.OrdinalIgnoreCase)
-End Function
-```
-
-## <a name="ordinal-string-operations"></a>Operações Ordinais da Cadeia de Caracteres
-
-Especificar o valor [StringComparison.Ordinal](xref:System.StringComparison.Ordinal) ou [StringComparison.OrdinalIgnoreCase](xref:System.StringComparison.OrdinalIgnoreCase) em uma chamada de método significa uma comparação não linguística em que as funcionalidades de idiomas naturais são ignoradas. Os métodos que são invocados com esses valores de [StringComparison](xref:System.StringComparison) baseiam as decisões de operação da cadeia de caracteres em comparações de byte simples em vez de no uso de maiúsculas e minúsculas ou tabelas de equivalência que são parametrizadas pela cultura. Na maioria dos casos, essa abordagem se adapta melhor à interpretação pretendida de cadeias de caracteres, enquanto torna o código mais rápido e confiável. 
-
-Comparações ordinais são comparações de cadeia de caracteres nas quais cada byte de cada cadeia de caracteres é comparado sem a interpretação linguística, por exemplo, “windows” não corresponde a “Windows”. Use essa comparação quando o contexto determinar que as cadeias de caracteres devem corresponder exatamente ou exigir uma política de correspondência conservadora. Além disso, a comparação ordinal é a operação de comparação mais rápida porque ela não aplica nenhuma regra linguística ao determinar um resultado.
-
-As cadeias de caracteres no .NET podem conter caracteres nulos inseridos. Uma das diferenças mais clara entre a comparação ordinal e a que leva em conta a cultura (incluindo comparações que usam a cultura invariável) diz respeito à manipulação de caracteres nulos inseridos em uma cadeia de caracteres. Esses caracteres são ignorados quando você usa os métodos [String](xref:System.String) `Compare` e [String](xref:System.String) `Equals` para realizar comparações que levam em conta a cultura (incluindo comparações que usam a cultura invariável). Como resultado, em comparações que levam em conta a cultura, cadeias de caracteres que contêm caracteres nulos inseridos podem ser consideradas iguais a cadeias de caracteres que não contêm. 
-
+# <a name="best-practices-for-using-strings-in-net"></a><span data-ttu-id="0d716-102">Práticas recomendadas para usar cadeias de caracteres no .NET</span><span class="sxs-lookup"><span data-stu-id="0d716-102">Best Practices for Using Strings in .NET</span></span>
+<span data-ttu-id="0d716-103"><a name="top"></a>.NET fornece amplo suporte para desenvolvimento de aplicativos globalizados e localizados e torna mais fácil aplicar as convenções de cultura atual ou de uma cultura específica ao executar operações comuns, como classificação e exibir cadeias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="0d716-103"><a name="top"></a> .NET provides extensive support for developing localized and globalized applications, and makes it easy to apply the conventions of either the current culture or a specific culture when performing common operations such as sorting and displaying strings.</span></span> <span data-ttu-id="0d716-104">Mas a classificação ou a comparação de cadeias de caracteres nem sempre é uma operação que leva em conta a cultura.</span><span class="sxs-lookup"><span data-stu-id="0d716-104">But sorting or comparing strings is not always a culture-sensitive operation.</span></span> <span data-ttu-id="0d716-105">Por exemplo, cadeias de caracteres que são usadas internamente por um aplicativo normalmente devem ser manipuladas de maneira idêntica em todas as culturas.</span><span class="sxs-lookup"><span data-stu-id="0d716-105">For example, strings that are used internally by an application typically should be handled identically across all cultures.</span></span> <span data-ttu-id="0d716-106">Quando os dados de cadeias de caracteres culturalmente independentes, como marcações XML, marcações HTML, nomes de usuário, caminhos de arquivo e nomes de objetos do sistema, são interpretados como se levassem em conta a cultura, o código do aplicativo pode estar sujeito a bugs sutis, desempenho ruim e, em alguns casos, problemas de segurança.</span><span class="sxs-lookup"><span data-stu-id="0d716-106">When culturally independent string data, such as XML tags, HTML tags, user names, file paths, and the names of system objects, are interpreted as if they were culture-sensitive, application code can be subject to subtle bugs, poor performance, and, in some cases, security issues.</span></span>  
+  
+ <span data-ttu-id="0d716-107">Este tópico examina a cadeia de caracteres de classificação, de comparação e métodos de maiusculas e minúsculas no .NET, apresenta recomendações para selecionar um método de manipulação de cadeia de caracteres apropriado e fornece informações adicionais sobre métodos de manipulação de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="0d716-107">This topic examines the string sorting, comparison, and casing methods in .NET, presents recommendations for selecting an appropriate string-handling method, and provides additional information about string-handling methods.</span></span> <span data-ttu-id="0d716-108">Ela também examina como os dados formatados, como dados numéricos e dados de data e hora, são manipulados para exibição e armazenamento.</span><span class="sxs-lookup"><span data-stu-id="0d716-108">It also examines how formatted data, such as numeric data and date and time data, is handled for display and for storage.</span></span>  
+  
+ <span data-ttu-id="0d716-109">Esse tópico contém as seguintes seções:</span><span class="sxs-lookup"><span data-stu-id="0d716-109">This topic contains the following sections:</span></span>  
+  
+-   [<span data-ttu-id="0d716-110">Recomendações para uso de cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="0d716-110">Recommendations for String Usage</span></span>](#recommendations_for_string_usage)  
+  
+-   [<span data-ttu-id="0d716-111">Especifica comparações de cadeia de caracteres explicitamente</span><span class="sxs-lookup"><span data-stu-id="0d716-111">Specifying String Comparisons Explicitly</span></span>](#specifying_string_comparisons_explicitly)  
+  
+-   [<span data-ttu-id="0d716-112">Os detalhes de comparação de cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="0d716-112">The Details of String Comparison</span></span>](#the_details_of_string_comparison)  
+  
+-   [<span data-ttu-id="0d716-113">Escolhendo um membro StringComparison para a chamada de método</span><span class="sxs-lookup"><span data-stu-id="0d716-113">Choosing a StringComparison Member for Your Method Call</span></span>](#choosing_a_stringcomparison_member_for_your_method_call)  
+  
+-   [<span data-ttu-id="0d716-114">Métodos comuns de comparação de cadeia de caracteres no .NET</span><span class="sxs-lookup"><span data-stu-id="0d716-114">Common String Comparison Methods in .NET</span></span>](#common_string_comparison_methods_in_the_net_framework)  
+  
+-   [<span data-ttu-id="0d716-115">Métodos que executam a comparação de cadeia de caracteres indiretamente</span><span class="sxs-lookup"><span data-stu-id="0d716-115">Methods that Perform String Comparison Indirectly</span></span>](#methods_that_perform_string_comparison_indirectly)  
+  
+-   [<span data-ttu-id="0d716-116">Exibindo e persistir dados formatados</span><span class="sxs-lookup"><span data-stu-id="0d716-116">Displaying and Persisting Formatted Data</span></span>](#Formatted)  
+  
+<a name="recommendations_for_string_usage"></a>   
+## <a name="recommendations-for-string-usage"></a><span data-ttu-id="0d716-117">Recomendações para Uso da Cadeia de Caracteres</span><span class="sxs-lookup"><span data-stu-id="0d716-117">Recommendations for String Usage</span></span>  
+ <span data-ttu-id="0d716-118">Ao desenvolver com o .NET, siga estas recomendações simples quando usar cadeias de caracteres:</span><span class="sxs-lookup"><span data-stu-id="0d716-118">When you develop with .NET, follow these simple recommendations when you use strings:</span></span>  
+  
+-   <span data-ttu-id="0d716-119">Use sobrecargas que especificam explicitamente as regras de comparação de cadeias de caracteres para operações de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="0d716-119">Use overloads that explicitly specify the string comparison rules for string operations.</span></span> <span data-ttu-id="0d716-120">Normalmente, isso envolve uma sobrecarga de método que tem um parâmetro de tipo de chamada <xref:System.StringComparison>.</span><span class="sxs-lookup"><span data-stu-id="0d716-120">Typically, this involves calling a method overload that has a parameter of type <xref:System.StringComparison>.</span></span>  
+  
+-   <span data-ttu-id="0d716-121">Use <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> ou <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> para comparações como segurança padrão para correspondência de cadeia de caracteres de cultura independente.</span><span class="sxs-lookup"><span data-stu-id="0d716-121">Use <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> or <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> for comparisons as your safe default for culture-agnostic string matching.</span></span>  
+  
+-   <span data-ttu-id="0d716-122">Use as comparações com <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> ou <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> para melhorar o desempenho.</span><span class="sxs-lookup"><span data-stu-id="0d716-122">Use comparisons with <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> or <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> for better performance.</span></span>  
+  
+-   <span data-ttu-id="0d716-123">Usar operações de cadeia de caracteres com base em <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> quando você exibir a saída para o usuário.</span><span class="sxs-lookup"><span data-stu-id="0d716-123">Use string operations that are based on <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> when you display output to the user.</span></span>  
+  
+-   <span data-ttu-id="0d716-124">Use o não linguística <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> ou <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> valores em vez de operações de cadeia de caracteres com base em <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> quando a comparação é irrelevante linguisticamente (simbólico, por exemplo).</span><span class="sxs-lookup"><span data-stu-id="0d716-124">Use the non-linguistic <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> or <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> values instead of string operations based on <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> when the comparison is linguistically irrelevant (symbolic, for example).</span></span>  
+  
+-   <span data-ttu-id="0d716-125">Use o <xref:System.String.ToUpperInvariant%2A?displayProperty=nameWithType> método em vez do <xref:System.String.ToLowerInvariant%2A?displayProperty=nameWithType> método quando normalizar cadeias de caracteres para comparação.</span><span class="sxs-lookup"><span data-stu-id="0d716-125">Use the <xref:System.String.ToUpperInvariant%2A?displayProperty=nameWithType> method instead of the <xref:System.String.ToLowerInvariant%2A?displayProperty=nameWithType> method when you normalize strings for comparison.</span></span>  
+  
+-   <span data-ttu-id="0d716-126">Use uma sobrecarga de <xref:System.String.Equals%2A?displayProperty=nameWithType> método para testar se duas cadeias de caracteres são iguais.</span><span class="sxs-lookup"><span data-stu-id="0d716-126">Use an overload of the <xref:System.String.Equals%2A?displayProperty=nameWithType> method to test whether two strings are equal.</span></span>  
+  
+-   <span data-ttu-id="0d716-127">Use o <xref:System.String.Compare%2A?displayProperty=nameWithType> e <xref:System.String.CompareTo%2A?displayProperty=nameWithType> métodos para classificar cadeias de caracteres, para não verificar igualdade.</span><span class="sxs-lookup"><span data-stu-id="0d716-127">Use the <xref:System.String.Compare%2A?displayProperty=nameWithType> and <xref:System.String.CompareTo%2A?displayProperty=nameWithType> methods to sort strings, not to check for equality.</span></span>  
+  
+-   <span data-ttu-id="0d716-128">Use a formatação que leva em conta a cultura para exibir dados que não são de cadeias de caracteres, como números e datas, em uma interface do usuário.</span><span class="sxs-lookup"><span data-stu-id="0d716-128">Use culture-sensitive formatting to display non-string data, such as numbers and dates, in a user interface.</span></span> <span data-ttu-id="0d716-129">Use a formatação com a cultura invariável para persistir os dados que não são de cadeias de caracteres no formato de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="0d716-129">Use formatting with the invariant culture to persist non-string data in string form.</span></span>  
+  
+ <span data-ttu-id="0d716-130">Evite as práticas a seguir ao usar cadeias de caracteres:</span><span class="sxs-lookup"><span data-stu-id="0d716-130">Avoid the following practices when you use strings:</span></span>  
+  
+-   <span data-ttu-id="0d716-131">Não use sobrecargas que não especificam explicita ou implicitamente as regras de comparação de cadeias de caracteres para operações de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="0d716-131">Do not use overloads that do not explicitly or implicitly specify the string comparison rules for string operations.</span></span>  
+  
+-   <span data-ttu-id="0d716-132">Não use operações de cadeia de caracteres com base em <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> na maioria dos casos.</span><span class="sxs-lookup"><span data-stu-id="0d716-132">Do not use string operations based on <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> in most cases.</span></span> <span data-ttu-id="0d716-133">Uma das poucas exceções é quando a persistência de dados de forma linguisticamente significativos mas culturalmente desconhecidos.</span><span class="sxs-lookup"><span data-stu-id="0d716-133">One of the few exceptions is when you are persisting linguistically meaningful but culturally agnostic data.</span></span>  
+  
+-   <span data-ttu-id="0d716-134">Não use uma sobrecarga de <xref:System.String.Compare%2A?displayProperty=nameWithType> ou <xref:System.String.CompareTo%2A> método e teste para um valor de retorno de zero para determinar se duas cadeias de caracteres são iguais.</span><span class="sxs-lookup"><span data-stu-id="0d716-134">Do not use an overload of the <xref:System.String.Compare%2A?displayProperty=nameWithType> or <xref:System.String.CompareTo%2A> method and test for a return value of zero to determine whether two strings are equal.</span></span>  
+  
+-   <span data-ttu-id="0d716-135">Não use a formatação que leva em conta a cultura para persistir dados numéricos ou dados de data e hora no formato de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="0d716-135">Do not use culture-sensitive formatting to persist numeric data or date and time data in string form.</span></span>  
+  
+ [<span data-ttu-id="0d716-136">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="0d716-136">Back to top</span></span>](#top)  
+  
+<a name="specifying_string_comparisons_explicitly"></a>   
+## <a name="specifying-string-comparisons-explicitly"></a><span data-ttu-id="0d716-137">Especificando Comparações da Cadeia de Caracteres Explicitamente</span><span class="sxs-lookup"><span data-stu-id="0d716-137">Specifying String Comparisons Explicitly</span></span>  
+ <span data-ttu-id="0d716-138">A maioria dos métodos de manipulação de cadeia de caracteres no .NET é sobrecarregada.</span><span class="sxs-lookup"><span data-stu-id="0d716-138">Most of the string manipulation methods in .NET are overloaded.</span></span> <span data-ttu-id="0d716-139">Normalmente, uma ou mais sobrecargas aceitam as configurações padrão, enquanto outras não aceitam nenhum padrão e definem a maneira exata em que as cadeias de caracteres devem ser comparadas ou manipuladas.</span><span class="sxs-lookup"><span data-stu-id="0d716-139">Typically, one or more overloads accept default settings, whereas others accept no defaults and instead define the precise way in which strings are to be compared or manipulated.</span></span> <span data-ttu-id="0d716-140">A maioria dos métodos que não depende de padrões inclui um parâmetro de tipo <xref:System.StringComparison>, que é uma enumeração que especifica explicitamente as regras de comparação de cadeia de caracteres, cultura e caso.</span><span class="sxs-lookup"><span data-stu-id="0d716-140">Most of the methods that do not rely on defaults include a parameter of type <xref:System.StringComparison>, which is an enumeration that explicitly specifies rules for string comparison by culture and case.</span></span> <span data-ttu-id="0d716-141">A tabela a seguir descreve o <xref:System.StringComparison> membros de enumeração.</span><span class="sxs-lookup"><span data-stu-id="0d716-141">The following table describes the <xref:System.StringComparison> enumeration members.</span></span>  
+  
+|<span data-ttu-id="0d716-142">Membro de StringComparison</span><span class="sxs-lookup"><span data-stu-id="0d716-142">StringComparison member</span></span>|<span data-ttu-id="0d716-143">Descrição</span><span class="sxs-lookup"><span data-stu-id="0d716-143">Description</span></span>|  
+|-----------------------------|-----------------|  
+|<xref:System.StringComparison.CurrentCulture>|<span data-ttu-id="0d716-144">Executa uma comparação que diferencia maiúsculas de minúsculas usando a cultura atual.</span><span class="sxs-lookup"><span data-stu-id="0d716-144">Performs a case-sensitive comparison using the current culture.</span></span>|  
+|<xref:System.StringComparison.CurrentCultureIgnoreCase>|<span data-ttu-id="0d716-145">Executa uma comparação que não diferencia maiúsculas de minúsculas usando a cultura atual.</span><span class="sxs-lookup"><span data-stu-id="0d716-145">Performs a case-insensitive comparison using the current culture.</span></span>|  
+|<xref:System.StringComparison.InvariantCulture>|<span data-ttu-id="0d716-146">Executa uma comparação diferencia maiusculas de minúsculas, usando a cultura invariável.</span><span class="sxs-lookup"><span data-stu-id="0d716-146">Performs a case-sensitive comparison using the invariant culture.</span></span>|  
+|<xref:System.StringComparison.InvariantCultureIgnoreCase>|<span data-ttu-id="0d716-147">Executa uma comparação de maiusculas e minúsculas usando a cultura invariável.</span><span class="sxs-lookup"><span data-stu-id="0d716-147">Performs a case-insensitive comparison using the invariant culture.</span></span>|  
+|<xref:System.StringComparison.Ordinal>|<span data-ttu-id="0d716-148">Executa uma comparação ordinal.</span><span class="sxs-lookup"><span data-stu-id="0d716-148">Performs an ordinal comparison.</span></span>|  
+|<xref:System.StringComparison.OrdinalIgnoreCase>|<span data-ttu-id="0d716-149">Executa uma comparação ordinal que não diferencia maiúsculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="0d716-149">Performs a case-insensitive ordinal comparison.</span></span>|  
+  
+ <span data-ttu-id="0d716-150">Por exemplo, o <xref:System.String.IndexOf%2A> método, que retorna o índice de uma subcadeia de caracteres em um <xref:System.String> objeto que corresponde a um caractere ou uma cadeia de caracteres tem nove sobrecargas:</span><span class="sxs-lookup"><span data-stu-id="0d716-150">For example, the <xref:System.String.IndexOf%2A> method, which returns the index of a substring in a <xref:System.String> object that matches either a character or a string, has nine overloads:</span></span>  
+  
+-   <span data-ttu-id="0d716-151"><xref:System.String.IndexOf%28System.Char%29>, <xref:System.String.IndexOf%28System.Char%2CSystem.Int32%29>, e <xref:System.String.IndexOf%28System.Char%2CSystem.Int32%2CSystem.Int32%29>, que por padrão realizar uma pesquisa de (diferencia maiusculas de minúsculas e não levam em conta a cultura) ordinal para um caractere na cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="0d716-151"><xref:System.String.IndexOf%28System.Char%29>, <xref:System.String.IndexOf%28System.Char%2CSystem.Int32%29>, and <xref:System.String.IndexOf%28System.Char%2CSystem.Int32%2CSystem.Int32%29>, which by default perform an ordinal (case-sensitive and culture-insensitive) search for a character in the string.</span></span>  
+  
+-   <span data-ttu-id="0d716-152"><xref:System.String.IndexOf%28System.String%29>, <xref:System.String.IndexOf%28System.String%2CSystem.Int32%29>, e <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.Int32%29>, que por padrão realizar uma pesquisa diferencia maiusculas de minúsculas e sensíveis à cultura de uma subcadeia de caracteres na cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="0d716-152"><xref:System.String.IndexOf%28System.String%29>, <xref:System.String.IndexOf%28System.String%2CSystem.Int32%29>, and <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.Int32%29>, which by default perform a case-sensitive and culture-sensitive search for a substring in the string.</span></span>  
+  
+-   <span data-ttu-id="0d716-153"><xref:System.String.IndexOf%28System.String%2CSystem.StringComparison%29>, <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.StringComparison%29>, e <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.Int32%2CSystem.StringComparison%29>, que incluem um parâmetro de tipo <xref:System.StringComparison> que permite que o formulário da comparação seja especificado.</span><span class="sxs-lookup"><span data-stu-id="0d716-153"><xref:System.String.IndexOf%28System.String%2CSystem.StringComparison%29>, <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.StringComparison%29>, and <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.Int32%2CSystem.StringComparison%29>, which include a parameter of type <xref:System.StringComparison> that allows the form of the comparison to be specified.</span></span>  
+  
+ <span data-ttu-id="0d716-154">É recomendável que você selecione uma sobrecarga que não usa valores padrão, pelos seguintes motivos:</span><span class="sxs-lookup"><span data-stu-id="0d716-154">We recommend that you select an overload that does not use default values, for the following reasons:</span></span>  
+  
+-   <span data-ttu-id="0d716-155">Algumas sobrecargas com parâmetros padrão (aquelas que pesquise um <xref:System.Char> na instância de cadeia de caracteres) realizar uma comparação ordinal, ao passo que outras pessoas (aquelas que pesquisar uma cadeia de caracteres na instância de cadeia de caracteres) são sensíveis à cultura.</span><span class="sxs-lookup"><span data-stu-id="0d716-155">Some overloads with default parameters (those that search for a <xref:System.Char> in the string instance) perform an ordinal comparison, whereas others (those that search for a string in the string instance) are culture-sensitive.</span></span> <span data-ttu-id="0d716-156">É difícil lembrar qual método usa o valor padrão e é fácil confundir as sobrecargas.</span><span class="sxs-lookup"><span data-stu-id="0d716-156">It is difficult to remember which method uses which default value, and easy to confuse the overloads.</span></span>  
+  
+-   <span data-ttu-id="0d716-157">A intenção do código que depende de valores padrão para chamadas de método não é clara.</span><span class="sxs-lookup"><span data-stu-id="0d716-157">The intent of the code that relies on default values for method calls is not clear.</span></span> <span data-ttu-id="0d716-158">No exemplo a seguir, que se baseia em padrões, é difícil saber se o desenvolvedor realmente planejava uma comparação ordinal ou linguística de duas cadeias de caracteres ou se uma diferença entre maiúsculas e minúsculas entre `protocol` e “http” pode fazer com que o teste de igualdade retorne `false`.</span><span class="sxs-lookup"><span data-stu-id="0d716-158">In the following example, which relies on defaults, it is difficult to know whether the developer actually intended an ordinal or a linguistic comparison of two strings, or whether a case difference between `protocol` and "http" might cause the test for equality to return `false`.</span></span>  
+  
+     [!code-csharp[Conceptual.Strings.BestPractices#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/explicitargs1.cs#1)]
+     [!code-vb[Conceptual.Strings.BestPractices#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/explicitargs1.vb#1)]  
+  
+ <span data-ttu-id="0d716-159">Em geral, é recomendável que você chame um método que não se baseie em padrões, pois ele torna a intenção do código clara.</span><span class="sxs-lookup"><span data-stu-id="0d716-159">In general, we recommend that you call a method that does not rely on defaults, because it makes the intent of the code unambiguous.</span></span> <span data-ttu-id="0d716-160">Isso, por sua vez, torna o código mais legível e fácil de depurar e manter.</span><span class="sxs-lookup"><span data-stu-id="0d716-160">This, in turn, makes the code more readable and easier to debug and maintain.</span></span> <span data-ttu-id="0d716-161">O exemplo a seguir aborda as questões levantadas sobre o exemplo anterior.</span><span class="sxs-lookup"><span data-stu-id="0d716-161">The following example addresses the questions raised about the previous example.</span></span> <span data-ttu-id="0d716-162">Ele deixa claro que a comparação ordinal é usada e que as diferenças de maiúsculas e minúsculas são ignoradas.</span><span class="sxs-lookup"><span data-stu-id="0d716-162">It makes it clear that ordinal comparison is used and that differences in case are ignored.</span></span>  
+  
+ [!code-csharp[Conceptual.Strings.BestPractices#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/explicitargs1.cs#2)]
+ [!code-vb[Conceptual.Strings.BestPractices#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/explicitargs1.vb#2)]  
+  
+ [<span data-ttu-id="0d716-163">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="0d716-163">Back to top</span></span>](#top)  
+  
+<a name="the_details_of_string_comparison"></a>   
+## <a name="the-details-of-string-comparison"></a><span data-ttu-id="0d716-164">Os Detalhes de Comparação da Cadeia de Caracteres</span><span class="sxs-lookup"><span data-stu-id="0d716-164">The Details of String Comparison</span></span>  
+ <span data-ttu-id="0d716-165">A comparação de cadeia de caracteres é o centro de muitas operações relacionadas à cadeia de caracteres, especialmente a classificação e teste de igualdade.</span><span class="sxs-lookup"><span data-stu-id="0d716-165">String comparison is the heart of many string-related operations, particularly sorting and testing for equality.</span></span> <span data-ttu-id="0d716-166">As cadeias de caracteres são classificadas em uma determinada ordem: se “my” aparece antes de “string” em uma lista classificada de cadeias de caracteres, “my” deve comparar menos que ou igual a “string”.</span><span class="sxs-lookup"><span data-stu-id="0d716-166">Strings sort in a determined order: If "my" appears before "string" in a sorted list of strings, "my" must compare less than or equal to "string".</span></span> <span data-ttu-id="0d716-167">Além disso, a comparação define implicitamente a igualdade.</span><span class="sxs-lookup"><span data-stu-id="0d716-167">Additionally, comparison implicitly defines equality.</span></span> <span data-ttu-id="0d716-168">A operação de comparação retorna zero para cadeias de caracteres que considerar iguais.</span><span class="sxs-lookup"><span data-stu-id="0d716-168">The comparison operation returns zero for strings it deems equal.</span></span> <span data-ttu-id="0d716-169">Uma boa interpretação é que nenhuma cadeia de caracteres é menor que a outra.</span><span class="sxs-lookup"><span data-stu-id="0d716-169">A good interpretation is that neither string is less than the other.</span></span> <span data-ttu-id="0d716-170">Operações mais significativas envolvendo cadeias de caracteres incluem um ou ambos destes procedimentos: comparação com outra cadeia de caracteres e execução de uma operação de classificação bem definida.</span><span class="sxs-lookup"><span data-stu-id="0d716-170">Most meaningful operations involving strings include one or both of these procedures: comparing with another string, and executing a well-defined sort operation.</span></span>  
+  
+ <span data-ttu-id="0d716-171">No entanto, avaliar duas cadeias de caracteres quanto à igualdade ou ordem de classificação não gera um único resultado correto, o resultado depende dos critérios usados para comparar as cadeias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="0d716-171">However, evaluating two strings for equality or sort order does not yield a single, correct result; the outcome depends on the criteria used to compare the strings.</span></span> <span data-ttu-id="0d716-172">Em particular, as comparações de cadeia de caracteres ordinais ou baseadas no uso de maiúsculas e minúsculas e convenções classificação da cultura atual ou da cultura invariável (uma cultura independente de localidade com base no idioma inglês) podem gerar resultados diferentes.</span><span class="sxs-lookup"><span data-stu-id="0d716-172">In particular, string comparisons that are ordinal or that are based on the casing and sorting conventions of the current culture or the invariant culture (a locale-agnostic culture based on the English language) may produce different results.</span></span>  
+  
+<a name="current_culture"></a>   
+### <a name="string-comparisons-that-use-the-current-culture"></a><span data-ttu-id="0d716-173">Comparações da Cadeia de Caracteres que Usam a Cultura Atual</span><span class="sxs-lookup"><span data-stu-id="0d716-173">String Comparisons that Use the Current Culture</span></span>  
+ <span data-ttu-id="0d716-174">Um critério envolve o uso das convenções da cultura atual ao comparar cadeias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="0d716-174">One criterion involves using the conventions of the current culture when comparing strings.</span></span> <span data-ttu-id="0d716-175">As comparações que se baseiam na cultura atual usam a localidade ou a cultura atual do thread.</span><span class="sxs-lookup"><span data-stu-id="0d716-175">Comparisons that are based on the current culture use the thread's current culture or locale.</span></span> <span data-ttu-id="0d716-176">Se a cultura não é definida pelo usuário, o padrão é a configuração no **opções regionais** janela no painel de controle.</span><span class="sxs-lookup"><span data-stu-id="0d716-176">If the culture is not set by the user, it defaults to the setting in the **Regional Options** window in Control Panel.</span></span> <span data-ttu-id="0d716-177">Você deve sempre usar comparações que se baseiam na cultura atual quando os dados forem linguisticamente relevantes e quando eles refletirem a interação do usuário que leva em conta a cultura.</span><span class="sxs-lookup"><span data-stu-id="0d716-177">You should always use comparisons that are based on the current culture when data is linguistically relevant, and when it reflects culture-sensitive user interaction.</span></span>  
+  
+ <span data-ttu-id="0d716-178">No entanto, o comportamento da comparação e do uso de maiúsculas e minúsculas no .NET muda quando a cultura muda.</span><span class="sxs-lookup"><span data-stu-id="0d716-178">However, comparison and casing behavior in .NET changes when the culture changes.</span></span> <span data-ttu-id="0d716-179">Isso acontece quando um aplicativo é executado em um computador que tem uma cultura diferente do computador em que o aplicativo foi desenvolvido ou quando o thread em execução muda sua cultura.</span><span class="sxs-lookup"><span data-stu-id="0d716-179">This happens when an application executes on a computer that has a different culture than the computer on which the application was developed, or when the executing thread changes its culture.</span></span> <span data-ttu-id="0d716-180">Esse comportamento é intencional, mas permanece não óbvio para muitos desenvolvedores.</span><span class="sxs-lookup"><span data-stu-id="0d716-180">This behavior is intentional, but it remains non-obvious to many developers.</span></span> <span data-ttu-id="0d716-181">O exemplo a seguir ilustra as diferenças na ordem de classificação entre as culturas de inglês dos EUA ("en-US") e sueco ("sv-SE").</span><span class="sxs-lookup"><span data-stu-id="0d716-181">The following example illustrates differences in sort order between the U.S. English ("en-US") and Swedish ("sv-SE") cultures.</span></span> <span data-ttu-id="0d716-182">Observe que as palavras "ångström", "Windows" e "Visual Studio" aparecem em posições diferentes nas matrizes de cadeias de caracteres classificadas.</span><span class="sxs-lookup"><span data-stu-id="0d716-182">Note that the words "ångström", "Windows", and "Visual Studio" appear in different positions in the sorted string arrays.</span></span>  
+  
+ [!code-csharp[Conceptual.Strings.BestPractices#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/comparison1.cs#3)]
+ [!code-vb[Conceptual.Strings.BestPractices#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/comparison1.vb#3)]  
+  
+ <span data-ttu-id="0d716-183">As comparações que não diferenciam maiúsculas de minúsculas que usam a cultura atual são iguais às comparações que levam em conta a cultura, exceto que elas ignoram as maiúsculas e minúsculas conforme determinado pela cultura atual do thread.</span><span class="sxs-lookup"><span data-stu-id="0d716-183">Case-insensitive comparisons that use the current culture are the same as culture-sensitive comparisons, except that they ignore case as dictated by the thread's current culture.</span></span> <span data-ttu-id="0d716-184">Esse comportamento pode se manifestar em ordens de classificação também.</span><span class="sxs-lookup"><span data-stu-id="0d716-184">This behavior may manifest itself in sort orders as well.</span></span>  
+  
+ <span data-ttu-id="0d716-185">As comparações que usam a semântica de cultura atual são o padrão para os seguintes métodos:</span><span class="sxs-lookup"><span data-stu-id="0d716-185">Comparisons that use current culture semantics are the default for the following methods:</span></span>  
+  
+-   <span data-ttu-id="0d716-186"><xref:System.String.Compare%2A?displayProperty=nameWithType>sobrecargas que não incluam um <xref:System.StringComparison> parâmetro.</span><span class="sxs-lookup"><span data-stu-id="0d716-186"><xref:System.String.Compare%2A?displayProperty=nameWithType> overloads that do not include a <xref:System.StringComparison> parameter.</span></span>  
+  
+-   <span data-ttu-id="0d716-187"><xref:System.String.CompareTo%2A?displayProperty=nameWithType>sobrecargas.</span><span class="sxs-lookup"><span data-stu-id="0d716-187"><xref:System.String.CompareTo%2A?displayProperty=nameWithType> overloads.</span></span>  
+  
+-   <span data-ttu-id="0d716-188">O padrão <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> método e o <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> método com um `null` <xref:System.Globalization.CultureInfo> parâmetro.</span><span class="sxs-lookup"><span data-stu-id="0d716-188">The default <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> method, and the <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> method with a `null`<xref:System.Globalization.CultureInfo> parameter.</span></span>  
+  
+-   <span data-ttu-id="0d716-189">O padrão <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> método e o <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> método com um `null` <xref:System.Globalization.CultureInfo> parâmetro.</span><span class="sxs-lookup"><span data-stu-id="0d716-189">The default <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> method, and the <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> method with a `null`<xref:System.Globalization.CultureInfo> parameter.</span></span>  
+  
+-   <span data-ttu-id="0d716-190"><xref:System.String.IndexOf%2A?displayProperty=nameWithType>sobrecargas que aceitam um <xref:System.String> como uma pesquisa de parâmetro e que não têm um <xref:System.StringComparison> parâmetro.</span><span class="sxs-lookup"><span data-stu-id="0d716-190"><xref:System.String.IndexOf%2A?displayProperty=nameWithType> overloads that accept a <xref:System.String> as a search parameter and that do not have a <xref:System.StringComparison> parameter.</span></span>  
+  
+-   <span data-ttu-id="0d716-191"><xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>sobrecargas que aceitam um <xref:System.String> como uma pesquisa de parâmetro e que não têm um <xref:System.StringComparison> parâmetro.</span><span class="sxs-lookup"><span data-stu-id="0d716-191"><xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> overloads that accept a <xref:System.String> as a search parameter and that do not have a <xref:System.StringComparison> parameter.</span></span>  
+  
+ <span data-ttu-id="0d716-192">Em qualquer caso, é recomendável que você chame uma sobrecarga que tem um <xref:System.StringComparison> parâmetro para fazer com que a intenção do método de chamada clara.</span><span class="sxs-lookup"><span data-stu-id="0d716-192">In any case, we recommend that you call an overload that has a <xref:System.StringComparison> parameter to make the intent of the method call clear.</span></span>  
+  
+ <span data-ttu-id="0d716-193">Bugs sutis e não tão sutis podem surgir quando dados de cadeias de caracteres não linguísticas são interpretados linguisticamente ou quando os dados da cadeia de caracteres de uma cultura específica são interpretados usando as convenções de outra cultura.</span><span class="sxs-lookup"><span data-stu-id="0d716-193">Subtle and not so subtle bugs can emerge when non-linguistic string data is interpreted linguistically, or when string data from a particular culture is interpreted using the conventions of another culture.</span></span> <span data-ttu-id="0d716-194">O exemplo canônico é o problema do I turco.</span><span class="sxs-lookup"><span data-stu-id="0d716-194">The canonical example is the Turkish-I problem.</span></span>  
+  
+ <span data-ttu-id="0d716-195">Para quase todos os alfabetos latinos, incluindo o do inglês dos EUA, o caractere "i" (\u0069) é a versão em letra minúscula do caractere "I" (\u0049).</span><span class="sxs-lookup"><span data-stu-id="0d716-195">For nearly all Latin alphabets, including U.S. English, the character "i" (\u0069) is the lowercase version of the character "I" (\u0049).</span></span> <span data-ttu-id="0d716-196">Essa regra de maiúsculas e minúsculas rapidamente se torna o padrão para alguém programando em tal cultura.</span><span class="sxs-lookup"><span data-stu-id="0d716-196">This casing rule quickly becomes the default for someone programming in such a culture.</span></span> <span data-ttu-id="0d716-197">No entanto, o alfabeto turco ("tr-TR") inclui um caractere "I com um ponto", "İ" (\u0130), que é a versão maiúscula de "i".</span><span class="sxs-lookup"><span data-stu-id="0d716-197">However, the Turkish ("tr-TR") alphabet includes an "I with a dot" character "İ" (\u0130), which is the capital version of "i".</span></span> <span data-ttu-id="0d716-198">O turco também inclui um caractere minúsculo "i sem um ponto", "ı" (\u0131), que em maiúscula é “I”.</span><span class="sxs-lookup"><span data-stu-id="0d716-198">Turkish also includes a lowercase "i without a dot" character, "ı" (\u0131), which capitalizes to "I".</span></span> <span data-ttu-id="0d716-199">Esse comportamento também ocorre na cultura azerbaidjana ("az").</span><span class="sxs-lookup"><span data-stu-id="0d716-199">This behavior occurs in the Azerbaijani ("az") culture as well.</span></span>  
+  
+ <span data-ttu-id="0d716-200">Portanto, as suposições feitas sobre a colocação do "i" em maiúscula ou do "I" em minúscula não são válidas entre todas as culturas.</span><span class="sxs-lookup"><span data-stu-id="0d716-200">Therefore, assumptions made about capitalizing "i" or lowercasing "I" are not valid among all cultures.</span></span> <span data-ttu-id="0d716-201">Se você usar as sobrecargas padrão para rotinas de comparação de cadeias de caracteres, elas estarão sujeitas à variação entre culturas.</span><span class="sxs-lookup"><span data-stu-id="0d716-201">If you use the default overloads for string comparison routines, they will be subject to variance between cultures.</span></span> <span data-ttu-id="0d716-202">Se os dados a serem comparados são forem linguísticos, o uso das sobrecargas padrão pode gerar resultados indesejáveis, como a tentativa a seguir de realizar uma comparação que não diferencia maiúsculas de minúsculas das cadeias de caracteres “file” e “FILE” ilustra.</span><span class="sxs-lookup"><span data-stu-id="0d716-202">If the data to be compared is non-linguistic, using the default overloads can produce undesirable results, as the following attempt to perform a case-insensitive comparison of the strings "file" and "FILE" illustrates.</span></span>  
+  
+ [!code-csharp[Conceptual.Strings.BestPractices#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/turkish1.cs#11)]
+ [!code-vb[Conceptual.Strings.BestPractices#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/turkish1.vb#11)]  
+  
+ <span data-ttu-id="0d716-203">Essa comparação pode causar problemas significativos se a cultura for usada inadvertidamente nas configurações sensíveis à segurança, como no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="0d716-203">This comparison could cause significant problems if the culture is inadvertently used in security-sensitive settings, as in the following example.</span></span> <span data-ttu-id="0d716-204">Uma chamada de método, como `IsFileURI("file:")` retorna `true` se a cultura atual for inglês dos EUA, mas `false` se a cultura atual for turco.</span><span class="sxs-lookup"><span data-stu-id="0d716-204">A method call such as `IsFileURI("file:")` returns `true` if the current culture is U.S. English, but `false` if the current culture is Turkish.</span></span> <span data-ttu-id="0d716-205">Assim, em sistemas turcos, alguém poderia driblar as medidas de segurança que bloqueiam o acesso a URIs que não diferenciam maiúsculas de minúsculas que começam com “FILE:”.</span><span class="sxs-lookup"><span data-stu-id="0d716-205">Thus, on Turkish systems, someone could circumvent security measures that block access to case-insensitive URIs that begin with "FILE:".</span></span>  
+  
+ [!code-csharp[Conceptual.Strings.BestPractices#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/turkish1.cs#12)]
+ [!code-vb[Conceptual.Strings.BestPractices#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/turkish1.vb#12)]  
+  
+ <span data-ttu-id="0d716-206">Nesse caso, como "file:" deve ser interpretado como um identificador não linguístico que não leva em conta a cultura, o código deveria ser escrito como mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="0d716-206">In this case, because "file:" is meant to be interpreted as a non-linguistic, culture-insensitive identifier, the code should instead be written as shown in the following example.</span></span>  
+  
+ [!code-csharp[Conceptual.Strings.BestPractices#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/turkish1.cs#13)]
+ [!code-vb[Conceptual.Strings.BestPractices#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/turkish1.vb#13)]  
+  
+### <a name="ordinal-string-operations"></a><span data-ttu-id="0d716-207">Operações Ordinais da Cadeia de Caracteres</span><span class="sxs-lookup"><span data-stu-id="0d716-207">Ordinal String Operations</span></span>  
+ <span data-ttu-id="0d716-208">Especificando o <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> ou <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> valor em uma chamada de método significa uma comparação não linguística em que os recursos de idiomas naturais são ignorados.</span><span class="sxs-lookup"><span data-stu-id="0d716-208">Specifying the <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> or <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> value in a method call signifies a non-linguistic comparison in which the features of natural languages are ignored.</span></span> <span data-ttu-id="0d716-209">Métodos que são invocados com estas <xref:System.StringComparison> valores embasar decisões de operação de cadeia de caracteres em comparações de byte simples em vez de maiusculas e minúsculas ou equivalência de tabelas que são parametrizadas pela cultura.</span><span class="sxs-lookup"><span data-stu-id="0d716-209">Methods that are invoked with these <xref:System.StringComparison> values base string operation decisions on simple byte comparisons instead of casing or equivalence tables that are parameterized by culture.</span></span> <span data-ttu-id="0d716-210">Na maioria dos casos, essa abordagem se adapta melhor à interpretação pretendida de cadeias de caracteres, enquanto torna o código mais rápido e confiável.</span><span class="sxs-lookup"><span data-stu-id="0d716-210">In most cases, this approach best fits the intended interpretation of strings while making code faster and more reliable.</span></span>  
+  
+ <span data-ttu-id="0d716-211">Comparações ordinais são comparações de cadeia de caracteres nas quais cada byte de cada cadeia de caracteres é comparado sem a interpretação linguística, por exemplo, “windows” não corresponde a “Windows”.</span><span class="sxs-lookup"><span data-stu-id="0d716-211">Ordinal comparisons are string comparisons in which each byte of each string is compared without linguistic interpretation; for example, "windows" does not match "Windows".</span></span> <span data-ttu-id="0d716-212">Isso é basicamente uma chamada para o tempo de execução do C `strcmp` função.</span><span class="sxs-lookup"><span data-stu-id="0d716-212">This is essentially a call to the C runtime `strcmp` function.</span></span> <span data-ttu-id="0d716-213">Use essa comparação quando o contexto determinar que as cadeias de caracteres devem corresponder exatamente ou exigir uma política de correspondência conservadora.</span><span class="sxs-lookup"><span data-stu-id="0d716-213">Use this comparison when the context dictates that strings should be matched exactly or demands conservative matching policy.</span></span> <span data-ttu-id="0d716-214">Além disso, a comparação ordinal é a operação de comparação mais rápida porque ela não aplica nenhuma regra linguística ao determinar um resultado.</span><span class="sxs-lookup"><span data-stu-id="0d716-214">Additionally, ordinal comparison is the fastest comparison operation because it applies no linguistic rules when determining a result.</span></span>  
+  
+ <span data-ttu-id="0d716-215">As cadeias de caracteres no .NET podem conter caracteres nulos inseridos.</span><span class="sxs-lookup"><span data-stu-id="0d716-215">Strings in .NET can contain embedded null characters.</span></span> <span data-ttu-id="0d716-216">Uma das diferenças mais clara entre a comparação ordinal e a que leva em conta a cultura (incluindo comparações que usam a cultura invariável) diz respeito à manipulação de caracteres nulos inseridos em uma cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="0d716-216">One of the clearest differences between ordinal and culture-sensitive comparison (including comparisons that use the invariant culture) concerns the handling of embedded null characters in a string.</span></span> <span data-ttu-id="0d716-217">Esses caracteres são ignorados quando você usa o <xref:System.String.Compare%2A?displayProperty=nameWithType> e <xref:System.String.Equals%2A?displayProperty=nameWithType> métodos para executar comparações de cultura (incluindo comparações que usam a cultura invariável).</span><span class="sxs-lookup"><span data-stu-id="0d716-217">These characters are ignored when you use the <xref:System.String.Compare%2A?displayProperty=nameWithType> and <xref:System.String.Equals%2A?displayProperty=nameWithType> methods to perform culture-sensitive comparisons (including comparisons that use the invariant culture).</span></span> <span data-ttu-id="0d716-218">Como resultado, em comparações que levam em conta a cultura, cadeias de caracteres que contêm caracteres nulos inseridos podem ser consideradas iguais a cadeias de caracteres que não contêm.</span><span class="sxs-lookup"><span data-stu-id="0d716-218">As a result, in culture-sensitive comparisons, strings that contain embedded null characters can be considered equal to strings that do not.</span></span>  
+  
 > [!IMPORTANT]
-> Embora os métodos de comparação de cadeia de caracteres ignorem caracteres nulos inseridos, os métodos de pesquisa de cadeia de caracteres como [String.Contains](xref:System.String.Contains(System.String)), [String.EndsWith](xref:System.String.EndsWith(System.String)), [String.IndexOf](xref:System.String.IndexOf(System.Char)), [String.LastIndexOf](xref:System.String.LastIndexOf(System.String)) e [String.StartsWith](xref:System.String.StartsWith(System.String)) não. 
-
-O exemplo a seguir executa uma comparação que leva em conta a cultura da cadeia de caracteres "Aa" com uma cadeia de caracteres semelhante que contém vários caracteres nulos inseridos entre "A" e "a" e mostra como as duas cadeias de caracteres são consideradas iguais. 
-
-```csharp
-using System;
-
-public class Example
-{
-   public static void Main()
-   {
-      string str1 = "Aa";
-      string str2 = "A" + new String('\u0000', 3) + "a";
-      Console.WriteLine("Comparing '{0}' ({1}) and '{2}' ({3}):", 
-                        str1, ShowBytes(str1), str2, ShowBytes(str2));
-      Console.WriteLine("   With String.Compare:");
-      Console.WriteLine("      Current Culture: {0}", 
-                        String.Compare(str1, str2, StringComparison.CurrentCulture));
-      Console.WriteLine("      Invariant Culture: {0}", 
-                        String.Compare(str1, str2, StringComparison.InvariantCulture));
-
-      Console.WriteLine("   With String.Equals:");
-      Console.WriteLine("      Current Culture: {0}", 
-                        String.Equals(str1, str2, StringComparison.CurrentCulture));
-      Console.WriteLine("      Invariant Culture: {0}", 
-                        String.Equals(str1, str2, StringComparison.InvariantCulture));
-   }
-
-   private static string ShowBytes(string str)
-   {
-      string hexString = String.Empty;
-      for (int ctr = 0; ctr < str.Length; ctr++)
-      {
-         string result = String.Empty;
-         result = Convert.ToInt32(str[ctr]).ToString("X4");
-         result = " " + result.Substring(0,2) + " " + result.Substring(2, 2);
-         hexString += result;
-      }
-      return hexString.Trim();
-   }
-}
-// The example displays the following output:
-//    Comparing 'Aa' (00 41 00 61) and 'A   a' (00 41 00 00 00 00 00 00 00 61):
-//       With String.Compare:
-//          Current Culture: 0
-//          Invariant Culture: 0
-//       With String.Equals:
-//          Current Culture: True
-//          Invariant Culture: True
-```
-
-```vb
-Module Example
-   Public Sub Main()
-      Dim str1 As String = "Aa"
-      Dim str2 As String = "A" + New String(Convert.ToChar(0), 3) + "a"
-      Console.WriteLine("Comparing '{0}' ({1}) and '{2}' ({3}):", _
-                        str1, ShowBytes(str1), str2, ShowBytes(str2))
-      Console.WriteLine("   With String.Compare:")
-      Console.WriteLine("      Current Culture: {0}", _
-                        String.Compare(str1, str2, StringComparison.CurrentCulture))
-      Console.WriteLine("      Invariant Culture: {0}", _
-                        String.Compare(str1, str2, StringComparison.InvariantCulture))
-
-      Console.WriteLine("   With String.Equals:")
-      Console.WriteLine("      Current Culture: {0}", _
-                        String.Equals(str1, str2, StringComparison.CurrentCulture))
-      Console.WriteLine("      Invariant Culture: {0}", _
-                        String.Equals(str1, str2, StringComparison.InvariantCulture))
-   End Sub
-
-   Private Function ShowBytes(str As String) As String
-      Dim hexString As String = String.Empty
-      For ctr As Integer = 0 To str.Length - 1
-         Dim result As String = String.Empty
-         result = Convert.ToInt32(str.Chars(ctr)).ToString("X4")
-         result = " " + result.Substring(0,2) + " " + result.Substring(2, 2)
-         hexString += result
-      Next
-      Return hexString.Trim()
-   End Function
-End Module
-```
-
-No entanto, as cadeias de caracteres não são consideradas iguais ao usar a comparação ordinal, como mostra o exemplo a seguir.
-
-```csharp
-Console.WriteLine("Comparing '{0}' ({1}) and '{2}' ({3}):", 
-                  str1, ShowBytes(str1), str2, ShowBytes(str2));
-Console.WriteLine("   With String.Compare:");
-Console.WriteLine("      Ordinal: {0}", 
-                  String.Compare(str1, str2, StringComparison.Ordinal));
-
-Console.WriteLine("   With String.Equals:");
-Console.WriteLine("      Ordinal: {0}", 
-                  String.Equals(str1, str2, StringComparison.Ordinal));
-// The example displays the following output:
-//    Comparing 'Aa' (00 41 00 61) and 'A   a' (00 41 00 00 00 00 00 00 00 61):
-//       With String.Compare:
-//          Ordinal: 97
-//       With String.Equals:
-//          Ordinal: False
-```
-
-```vb
-Console.WriteLine("Comparing '{0}' ({1}) and '{2}' ({3}):", _
-                  str1, ShowBytes(str1), str2, ShowBytes(str2))
-Console.WriteLine("   With String.Compare:")
-Console.WriteLine("      Ordinal: {0}", _
-                  String.Compare(str1, str2, StringComparison.Ordinal))
-
-Console.WriteLine("   With String.Equals:")
-Console.WriteLine("      Ordinal: {0}", _
-                  String.Equals(str1, str2, StringComparison.Ordinal))
-' The example displays the following output:
-'    Comparing 'Aa' (00 41 00 61) and 'A   a' (00 41 00 00 00 00 00 00 00 61):
-'       With String.Compare:
-'          Ordinal: 97
-'       With String.Equals:
-'          Ordinal: False
-```
-
-As comparações ordinais que não diferenciam maiúsculas de minúsculas são a próxima abordagem conservadora. Essas comparações ignoram a maioria das maiúsculas e minúsculas, por exemplo, "windows" corresponde a "Windows". Ao lidar com caracteres ASCII, essa política é equivalente a [StringComparison.Ordinal](xref:System.StringComparison.Ordinal), exceto que ela ignora as maiúsculas e minúsculas de ASCII normais. Portanto, qualquer caractere em [A, Z] (\u0041-\u005A) corresponde ao caractere correspondente em [a,z] (\u0061-\007A). As maiúsculas e minúsculas fora do intervalo de ASCII usam as tabelas de cultura invariável. Portanto, a comparação a seguir:
-
-```csharp
-String.Compare(strA, strB, StringComparison.OrdinalIgnoreCase);
-```
-
-```vb
-String.Compare(strA, strB, StringComparison.OrdinalIgnoreCase)
-```
-
-é equivalente a (mas mais rápida do que) esta comparação: 
-
-```csharp
-String.Compare(strA.ToUpperInvariant(), strB.ToUpperInvariant(), 
-               StringComparison.Ordinal);
-```
-
-```vb
-String.Compare(strA.ToUpperInvariant(), strB.ToUpperInvariant(), 
-               StringComparison.Ordinal)
-```
-
-Essas comparações ainda são muito rápidas.
-
-Ambas [StringComparison.Ordinal](xref:System.StringComparison.Ordinal) e [StringComparison.OrdinalIgnoreCase](xref:System.StringComparison.OrdinalIgnoreCase) usam os valores binários diretamente e são mais adequadas para correspondência. Quando você não tiver certeza sobre as configurações de comparação, use um destes dois valores. No entanto, como elas executam uma comparação byte por byte, elas não classificam por uma ordem de classificação linguística (como um dicionário de inglês), mas por ordem de classificação binária. Os resultados podem parecer estranhos na maioria dos contextos se exibido aos usuários.
-
-A semântica ordinal é o padrão para sobrecargas [String](xref:System.String) `Equals` que não incluem um argumento [StringComparison](xref:System.StringComparison) (incluindo o operador de igualdade). Em qualquer caso, é recomendável que você chame uma sobrecarga que tenha um parâmetro [StringComparison](xref:System.StringComparison).
-
-### <a name="string-operations-that-use-the-invariant-culture"></a>Operações da cadeia de caracteres que usam a cultura invariável
-
-As comparações com a cultura invariável usam a propriedade [CompareInfo](xref:System.Globalization.CompareInfo) retornada pela propriedade [CultureInfo.InvariantCulture](xref:System.Globalization.CultureInfo.InvariantCulture) estática. Esse comportamento é o mesmo em todos os sistemas, ele converte qualquer caractere fora de seu intervalo no que ele acredita que sejam caracteres invariáveis equivalentes. Essa política pode ser útil para manter um conjunto de comportamentos de cadeia de caracteres entre culturas, mas geralmente fornece resultados inesperados.
-
-As comparações que não diferenciam maiúsculas de minúsculas com a cultura invariável usam a propriedade [CompareInfo](xref:System.Globalization.CompareInfo) estática retornada pela propriedade [CultureInfo.InvariantCulture](xref:System.Globalization.CultureInfo.InvariantCulture) estática para informações de comparação também. As diferenças de maiúsculas e minúsculas entre esses caracteres convertidos são ignoradas.
-
-O objeto [CultureInfo.InvariantCulture](xref:System.Globalization.CultureInfo.InvariantCulture) objeto faz um método [String](xref:System.String) `Compare` interpretar determinados conjuntos de caracteres como equivalentes. Por exemplo, a equivalência a seguir é válida na cultura invariável:
-
-InvariantCulture: a + ̊ = å
-
-O caractere da letra A minúscula latina “a” (\u0061), quando ele está próximo ao caractere de anel superior combinável "+ " ̊" (\u030a), é interpretado como a letra A minúscula latina com o caractere de anel superior "å" (\u00e5). Como mostra o exemplo a seguir, esse comportamento é diferente da comparação ordinal.
-
-```csharp
-string separated = "\u0061\u030a";
-string combined = "\u00e5";
-
-Console.WriteLine("Equal sort weight of {0} and {1} using InvariantCulture: {2}",
-                  separated, combined, 
-                  String.Compare(separated, combined, 
-                                 StringComparison.InvariantCulture) == 0);
-
-Console.WriteLine("Equal sort weight of {0} and {1} using Ordinal: {2}",
-                  separated, combined,
-                  String.Compare(separated, combined, 
-                                 StringComparison.Ordinal) == 0);
-// The example displays the following output:
-//    Equal sort weight of a° and å using InvariantCulture: True
-//    Equal sort weight of a° and å using Ordinal: False 
-```
-
-```vb
-Dim separated As String = ChrW(&h61) + ChrW(&h30a)
-Dim combined As String = ChrW(&he5)
-
-Console.WriteLine("Equal sort weight of {0} and {1} using InvariantCulture: {2}", _
-                  separated, combined, _
-                  String.Compare(separated, combined, _ 
-                                 StringComparison.InvariantCulture) = 0)
-
-Console.WriteLine("Equal sort weight of {0} and {1} using Ordinal: {2}", _
-                  separated, combined, _
-                  String.Compare(separated, combined, _
-                                 StringComparison.Ordinal) = 0)
-' The example displays the following output:
-'    Equal sort weight of a° and å using InvariantCulture: True
-'    Equal sort weight of a° and å using Ordinal: False
-```
-
-Ao interpretar nomes de arquivo, cookies ou qualquer outro elemento em que uma combinação como "å" pode aparecer, as comparações ordinais ainda oferecem o comportamento mais transparente e adequado.
-
-De forma geral, a cultura invariável tem muito poucas propriedades que a tornam útil para comparação. Ela faz a comparação de maneira linguisticamente relevante, o que impede que ela garanta a equivalência simbólica total, mas não é a opção de exibição em nenhuma cultura. Por exemplo, se um arquivo de dados grande que contém uma lista de identificadores classificados para exibição acompanha um aplicativo, a adição a essa lista exige uma inserção com a inserção de estilo invariável.
-
-## <a name="choosing-a-stringcomparison-member-for-your-method-call"></a>Escolha de um membro StringComparison para a chamada de método
-
-A tabela a seguir descreve o mapeamento do contexto semântico da cadeia de caracteres para um membro de enumeração [StringComparison](xref:System.StringComparison).
-
-Dados | Comportamento | Valor de System.StringComparison correspondente
----- | -------- | -------------------------------------------
-Identificadores internos que diferenciam maiúsculas de minúsculas, identificadores que diferenciam maiúsculas de minúsculas em padrões, como XML e HTTP ou configurações relacionadas à segurança que diferenciam maiúsculas de minúsculas. | Um identificador não linguístico, em que bytes correspondem exatamente. | [StringComparison.Ordinal](xref:System.StringComparison.Ordinal)
-Identificadores internos que não diferenciam maiúsculas de minúsculas, identificadores que não diferenciam maiúsculas de minúsculas em padrões, como XML e HTTP, caminhos de arquivo, valores e chave de Registro, variáveis do ambiente, identificadores de recurso (por exemplo nomes de identificador) ou configurações relacionadas à segurança que não diferenciam maiúsculas de minúsculas. | Um identificador não linguístico, em que as maiúsculas e minúsculas são irrelevantes. | [StringComparison.OrdinalIgnoreCase](xref:System.StringComparison.OrdinalIgnoreCase)
-Dados exibidos para o usuário ou para a maioria das entradas do usuário. | Dados que exigem os costumes linguísticos locais. | [StringComparison.CurrentCulture](xref:System.StringComparison.CurrentCulture) ou [CurrentCultureIgnoreCase](xref:System.StringComparison.CurrentCultureIgnoreCase)
-
-## <a name="common-string-comparison-methods"></a>Métodos comuns de comparação da cadeia de caracteres
-
-As seções a seguir descrevem os métodos que são mais comumente usados para a comparação de cadeias de caracteres.
-
-### <a name="stringcompare"></a>String.Compare
-
-Interpretação padrão: [StringComparison.CurrentCulture](xref:System.StringComparison.CurrentCulture).
-
-Como a operação mais central da interpretação de cadeia de caracteres, todas as instâncias de chamadas desse método devem ser examinadas para determinar se as cadeias de caracteres devem ser interpretadas de acordo com a cultura atual ou dissociadas da cultura (simbolicamente). Normalmente, é o último e uma comparação de [StringComparison.Ordinal](xref:System.StringComparison.Ordinal) deve ser usada.
-
-A classe [System.Globalization.CompareInfo](xref:System.Globalization.CompareInfo), que é retornada pela propriedade [CultureInfo.CompareInfo](xref:System.Globalization.CultureInfo.CompareInfo), também inclui um método [Compare](xref:System.Globalization.CompareInfo.Compare(System.String,System.Int32,System.String,System.Int32,System.Globalization.CompareOptions)) que fornece um grande número de opções de correspondência (ordinal, ignorando os espaços em branco, ignorando o tipo kana e assim por diante) por meio da enumeração de sinalizador [CompareOptions](xref:System.Globalization.CompareOptions). 
-
-### <a name="stringcompareto"></a>String.CompareTo
-
-Interpretação padrão: [StringComparison.CurrentCulture](xref:System.StringComparison.CurrentCulture).
-
-Esse método no momento não oferece uma sobrecarga que especifica um tipo [StringComparison](xref:System.StringComparison). Normalmente é possível converter esse método para o formato [String.Compare(String, String, StringComparison)](xref:System.String.Compare(System.String,System.String,System.StringComparison)) recomendado.
-
-Os tipos que implementam as interfaces [IComparable](xref:System.IComparable) e [IComparable&lt;T&gt;](xref:System.IComparable%601) implementam esse método. Como ele não oferece a opção de um parâmetro [StringComparison](xref:System.StringComparison), os tipos de implementação geralmente permitem que o usuário especifique um [StringComparer](xref:System.StringComparer) em seu construtor. O exemplo a seguir define uma classe `FileName` cujo construtor de classe inclui um parâmetro [StringComparer](xref:System.StringComparer). Esse objeto [StringComparer](xref:System.StringComparer) é então usado no método `FileName.CompareTo`.
-
-```csharp
-using System;
-
-public class FileName : IComparable
-{
-   string fname;
-   StringComparer comparer; 
-
-   public FileName(string name, StringComparer comparer)
-   {
-      if (String.IsNullOrEmpty(name))
-         throw new ArgumentNullException("name");
-
-      this.fname = name;
-
-      if (comparer != null)
-         this.comparer = comparer;
-      else
-         this.comparer = StringComparer.OrdinalIgnoreCase;
-   }
-
-   public string Name
-   {
-      get { return fname; }
-   }
-
-   public int CompareTo(object obj)
-   {
-      if (obj == null) return 1;
-
-      if (! (obj is FileName))
-         return comparer.Compare(this.fname, obj.ToString());
-      else
-         return comparer.Compare(this.fname, ((FileName) obj).Name);
-   }
-}
-```
-
-```vb
-Public Class FileName : Implements IComparable
-   Dim fname As String
-   Dim comparer As StringComparer 
-
-   Public Sub New(name As String, comparer As StringComparer)
-      If String.IsNullOrEmpty(name) Then
-         Throw New ArgumentNullException("name")
-      End If
-
-      Me.fname = name
-
-      If comparer IsNot Nothing Then
-         Me.comparer = comparer
-      Else
-         Me.comparer = StringComparer.OrdinalIgnoreCase
-      End If      
-   End Sub
-
-   Public ReadOnly Property Name As String
-      Get
-         Return fname
-      End Get   
-   End Property
-
-   Public Function CompareTo(obj As Object) As Integer _
-          Implements IComparable.CompareTo
-      If obj Is Nothing Then Return 1
-
-      If Not TypeOf obj Is FileName Then
-         obj = obj.ToString()
-      Else
-         obj = CType(obj, FileName).Name
-      End If         
-      Return comparer.Compare(Me.fname, obj)
-   End Function
-End Class
-```
-
-### <a name="stringequals"></a>String.Equals
-
-Interpretação padrão: [StringComparison.Ordinal](xref:System.StringComparison.Ordinal).
-
-A classe [String](xref:System.String) permite que você teste a igualdade chamando as sobrecargas do método `Equals` ou estáticas ou usando o operador de igualdade estático. O operador e as sobrecargas utilizam a comparação ordinal por padrão. No entanto, ainda é recomendável que você chame uma sobrecarga que especifique explicitamente o tipo [StringComparison](xref:System.StringComparison) mesmo se você desejar executar uma comparação ordinal. Isso facilita a pesquisa de código para uma determinada interpretação da cadeia de caracteres. 
-
-### <a name="stringtoupper-and-stringtolower"></a>String.ToUpper e String.ToLower
-
-Interpretação padrão: [StringComparison.CurrentCulture](xref:System.StringComparison.CurrentCulture).
-
-Você deve ter cuidado ao usar esses métodos, pois forçar uma cadeia de caracteres para maiúsculas ou minúsculas normalmente é usado como uma normalização pequena para comparar cadeias de caracteres independentemente de maiúsculas e minúsculas. Nesse caso, considere o uso de uma comparação que não diferencie maiúsculas de minúsculas. 
-
-Os métodos [String.ToUpperInvariant](xref:System.String.ToUpperInvariant) e [String.ToLowerInvariant](xref:System.String.ToLowerInvariant) também estão disponíveis. [ToUpperInvariant](xref:System.String.ToUpperInvariant) é o modo padrão de normalizar as maiúsculas e minúsculas. Comparações feitas usando [StringComparison.OrdinalIgnoreCase](xref:System.StringComparison.OrdinalIgnoreCase) são comportamentalmente a composição de duas chamadas: chamar [ToUpperInvariant](xref:System.String.ToUpperInvariant) nos dois argumentos da cadeia de caracteres e fazer uma comparação usando [StringComparison.Ordinal](xref:System.StringComparison.Ordinal).
-
-Também há sobrecargas disponíveis para converter para maiúsculas e minúsculas em uma cultura específica, passando um objeto [CultureInfo](xref:System.Globalization.CultureInfo) que representa aquela cultura para o método.
-
-### <a name="chartoupper-and-chartolower"></a>Char.ToUpper e Char.ToLower
-
-Interpretação padrão: [StringComparison.CurrentCulture](xref:System.StringComparison.CurrentCulture).
-
-Esses métodos funcionam de forma semelhante aos métodos [String.ToUpper](xref:System.String.ToUpper) e [String.ToLower](xref:System.String.ToLower) descritos na seção anterior.
-
-### <a name="stringstartswith-and-stringendswith"></a>String.StartsWith e String.EndsWith
-
-Interpretação padrão: [StringComparison.CurrentCulture](xref:System.StringComparison.CurrentCulture).
-
-Por padrão, esses dois métodos executam uma comparação que leva em conta a cultura.
-
-### <a name="stringindexof-and-stringlastindexof"></a>String.IndexOf e String.LastIndexOf
-
-Interpretação padrão: [StringComparison.CurrentCulture](xref:System.StringComparison.CurrentCulture).
-
-Há uma falta de consistência em como as sobrecargas padrão desses métodos realizam comparações. Todos os métodos [String](xref:System.String) `IndexOf` e [String](xref:System.String) `LastIndexOf` que incluem um parâmetro [Char](xref:System.Char) realizam uma comparação ordinal, mas os métodos [String](xref:System.String) `IndexOf` e [String`](xref:System.String) `LastIndexOf` padrão que incluem um parâmetro [String](xref:System.String) realizam uma comparação que leva em conta a cultura. 
-
-Se você chamar o método ` `IndexOf` or `LastIndexOf` e passar a ele uma cadeia de caracteres para localizar na instância atual, é recomendável que você chame uma sobrecarga que especifique explicitamente o tipo [StringComparison](xref:System.StringComparison). As sobrecargas que incluem um argumento [Char](xref:System.Char) não permitem que você especifique um tipo [StringComparison](xref:System.StringComparison).
-
-## <a name="methods-that-perform-string-comparison-indirectly"></a>Métodos que realizam comparação indireta de cadeia de caracteres
-
-Alguns métodos que não de cadeias de caracteres que têm a comparação de cadeia de caracteres como uma operação central usam o tipo [StringComparer](xref:System.StringComparer). A classe [StringComparer](xref:System.StringComparer) inclui quatro propriedades estáticas que retornam instâncias [StringComparer](xref:System.StringComparer) cujos métodos `Compare` realizam os seguintes tipos de comparações de cadeias de caracteres:
-
-* Comparações de cadeias de caracteres que levam em conta a cultura usando a cultura atual. Esse objeto [StringComparer](xref:System.StringComparer) é retornado pela propriedade [StringComparer.CurrentCulture](xref:System.StringComparer.CurrentCulture).
-
-* Comparações que não diferenciam maiúsculas de minúsculas usando a cultura atual. Esse objeto [StringComparer](xref:System.StringComparer) é retornado pela propriedade [StringComparer.CurrentCultureIgnoreCase](xref:System.StringComparer.CurrentCultureIgnoreCase).
-
-* Comparação ordinal. Esse objeto [StringComparer](xref:System.StringComparer) é retornado pela propriedade [StringComparer.Ordinal](xref:System.StringComparer.Ordinal). 
-
-* Comparação ordinal que não diferencia maiúsculas de minúsculas. Esse objeto [StringComparer](xref:System.StringComparer) é retornado pela propriedade [StringComparer.OrdinalIgnoreCase](xref:System.StringComparer.OrdinalIgnoreCase).
-
-### <a name="arraysort-and-arraybinarysearch"></a>Array.Sort e Array.BinarySearch
-
-Interpretação padrão: [StringComparison.CurrentCulture](xref:System.StringComparison.CurrentCulture).
-
-Ao armazenar quaisquer dados em uma coleção ou ler dados persistentes de um arquivo ou banco de dados em uma coleção, alternar a cultura atual pode invalidar as invariáveis na coleção. O método [Array.BinarySearch](xref:System.Array.BinarySearch(System.Array,System.Object)) assume que os elementos na matriz a serem pesquisados já estão classificados. Para classificar qualquer elemento de cadeia de caracteres na matriz, o método [Array.Sort](xref:System.Array.Sort(System.Array)) chama o método [String] `Compare` para ordenar os elementos individuais. Usar um comparador que leva em conta a cultura pode ser perigoso se a cultura mudar entre o momento em que a matriz é ordenada e que seu conteúdo é pesquisado. Por exemplo, no código a seguir, o armazenamento e a recuperação operam no comparador que é fornecido implicitamente pela propriedade `Thread.CurrentThread.CurrentCulture`. Se a cultura puder mudar entre as chamadas para `StoreNames` e `DoesNameExist`, e especialmente se os conteúdos da matriz forem mantidos em algum lugar entre as duas chamadas de método, a pesquisa binária poderá falhar. 
-
-```csharp
-// Incorrect.
-string []storedNames;
-
-public void StoreNames(string [] names)
-{
-   int index = 0;
-   storedNames = new string[names.Length];
-
-   foreach (string name in names)
-   {
-      this.storedNames[index++] = name;
-   }
-
-   Array.Sort(names); // Line A.
-}
-
-public bool DoesNameExist(string name)
-{
-   return (Array.BinarySearch(this.storedNames, name) >= 0);  // Line B.
-}
-```
-
-```vb
-' Incorrect.
-Dim storedNames() As String
-
-Public Sub StoreNames(names() As String)
-   Dim index As Integer = 0
-   ReDim storedNames(names.Length - 1)
-
-   For Each name As String In names
-      Me.storedNames(index) = name
-      index+= 1
-   Next
-
-   Array.Sort(names)          ' Line A.
-End Sub
-
-Public Function DoesNameExist(name As String) As Boolean
-   Return Array.BinarySearch(Me.storedNames, name) >= 0      ' Line B.
-End Function
-```
-
-Uma variação recomendada é exibida no exemplo a seguir, que usa o mesmo método de comparação (que não leva em conta a cultura) ordinal para classificar e pesquisar a matriz. O código de alteração é refletido nas linhas rotuladas como `Line A` e `Line B` nos dois exemplos.
-
-```csharp
-// Correct.
-string []storedNames;
-
-public void StoreNames(string [] names)
-{
-   int index = 0;
-   storedNames = new string[names.Length];
-
-   foreach (string name in names)
-   {
-      this.storedNames[index++] = name;
-   }
-
-   Array.Sort(names, StringComparer.Ordinal);  // Line A.
-}
-
-public bool DoesNameExist(string name)
-{
-   return (Array.BinarySearch(this.storedNames, name, StringComparer.Ordinal) >= 0);  // Line B.
-}
-```
-
-```vb
-' Correct.
-Dim storedNames() As String
-
-Public Sub StoreNames(names() As String)
-   Dim index As Integer = 0
-   ReDim storedNames(names.Length - 1)
-
-   For Each name As String In names
-      Me.storedNames(index) = name
-      index+= 1
-   Next
-
-   Array.Sort(names, StringComparer.Ordinal)           ' Line A.
-End Sub
-
-Public Function DoesNameExist(name As String) As Boolean
-   Return Array.BinarySearch(Me.storedNames, name, StringComparer.Ordinal) >= 0      ' Line B.
-End Function
-```
-
-Se esses dados forem mantidos e movidos entre as culturas e a classificação for usada para apresentar esses dados para o usuário, você pode considerar usar `StringComparison.InvariantCulture`, que opera linguisticamente para a melhor saída do usuário, mas não é afetado pelas alterações na cultura. O exemplo a seguir modifica os dois exemplos anteriores para usar a cultura invariável para classificar e pesquisar a matriz.
-
-```csharp
-// Correct.
-string []storedNames;
-
-public void StoreNames(string [] names)
-{
-   int index = 0;
-   storedNames = new string[names.Length];
-
-   foreach (string name in names)
-   {
-      this.storedNames[index++] = name;
-   }
-
-   Array.Sort(names, StringComparer.InvariantCulture);  // Line A.
-}
-
-public bool DoesNameExist(string name)
-{
-   return (Array.BinarySearch(this.storedNames, name, StringComparer.InvariantCulture) >= 0);  // Line B.
-}
-```
-
-```vb
-' Correct.
-Dim storedNames() As String
-
-Public Sub StoreNames(names() As String)
-   Dim index As Integer = 0
-   ReDim storedNames(names.Length - 1)
-
-   For Each name As String In names
-      Me.storedNames(index) = name
-      index+= 1
-   Next
-
-   Array.Sort(names, StringComparer.InvariantCulture)           ' Line A.
-End Sub
-
-Public Function DoesNameExist(name As String) As Boolean
-   Return Array.BinarySearch(Me.storedNames, name, StringComparer.InvariantCulture) >= 0      ' Line B.
-End Function
-```
-
-### <a name="collections-example-hashtable-constructor"></a>Exemplo de Coleções: Construtor da Tabela de Hash
-
-As cadeias de caracteres de hash fornecem um segundo exemplo de uma operação que é afetada pela maneira como as cadeias de caracteres são comparadas. 
-
-O exemplo a seguir instancia um objeto [Hashtable](xref:System.Collections.Hashtable) passando para ele o objeto [StringComparer](xref:System.StringComparer) que é retornado pela propriedade [StringComparer.OrdinalIgnoreCase](xref:System.StringComparer.OrdinalIgnoreCase). Como uma classe [StringComparer](xref:System.StringComparer) que é derivada de [StringComparer](xref:System.StringComparer) implementa a interface [IEqualityComparer](xref:System.Collections.IEqualityComparer), seu método [GetHashCode](xref:System.Collections.IEqualityComparer) é usado para calcular o código hash das cadeias de caracteres na tabela de hash.
-
-```csharp
-const int initialTableCapacity = 100;
-Hashtable h;
-
-public void PopulateFileTable(string directory)
-{
-   h = new Hashtable(initialTableCapacity, 
-                     StringComparer.OrdinalIgnoreCase);
-
-   foreach (string file in Directory.GetFiles(directory))
-         h.Add(file, File.GetCreationTime(file));
-}
-
-public void PrintCreationTime(string targetFile)
-{
-   Object dt = h[targetFile];
-   if (dt != null)
-   {
-      Console.WriteLine("File {0} was created at time {1}.",
-         targetFile, 
-         (DateTime) dt);
-   }
-   else
-   {
-      Console.WriteLine("File {0} does not exist.", targetFile);
-   }
-}
-```
-
-```vb
-Const initialTableCapacity As Integer = 100
-Dim h As Hashtable
-
-Public Sub PopulateFileTable(dir As String)
-   h = New Hashtable(initialTableCapacity, _
-                     StringComparer.OrdinalIgnoreCase)
-
-   For Each filename As String In Directory.GetFiles(dir)
-      h.Add(filename, File.GetCreationTime(filename))
-   Next                        
-End Sub
-
-Public Sub PrintCreationTime(targetFile As String)
-   Dim dt As Object = h(targetFile)
-   If dt IsNot Nothing Then
-      Console.WriteLine("File {0} was created at {1}.", _
-         targetFile, _
-         CDate(dt))
-   Else
-      Console.WriteLine("File {0} does not exist.", targetFile)
-   End If
-End Sub  
-```
-
-## <a name="displaying-and-persisting-formatted-data"></a>Exibição e persistência de dados formatados
-
-Quando você exibir dados que não são de cadeias de caracteres como números e datas e horas para os usuários, formate-os usando as configurações culturais do usuário. Por padrão, o método [String.Format](xref:System.String.Format(System.IFormatProvider,System.String,System.Object)) e os métodos `ToString` dos tipos numéricos e dos tipos de data e hora usam a cultura do thread atual para as operações de formatação. Para especificar explicitamente que o método de formatação deve usar a cultura atual, você pode chamar uma sobrecarga de um método de formatação que tenha um parâmetro de provedor, como [String.Format(IFormatProvider, String, Object[])](xref:System.String.Format(System.IFormatProvider,System.String,System.Object)) ou [DateTime.ToString(IFormatProvider)](xref:System.DateTime.ToString(System.IFormatProvider)) e passar para ela a propriedade [CultureInfo.CurrentCulture](xref:System.Globalization.CultureInfo.CurrentCulture). 
-
-Você pode manter os dados que não são de cadeias de caracteres como dados binários ou como dados formatados. Se optar por salvá-los como dados formatados, você deve chamar uma sobrecarga de método de formatação que inclua um parâmetro *provider* e passar para ele a propriedade [CultureInfo.InvariantCulture](xref:System.Globalization.CultureInfo.InvariantCulture). A cultura invariável fornece um formato consistente para os dados formatados que é independente da cultura e do computador. Em contraste, dados persistentes que são formatados usando culturas diferentes da cultura invariável têm várias limitações: 
-
-* É provável que os dados não sejam utilizáveis se forem recuperados em um sistema que tem uma cultura diferente ou se o usuário do sistema atual alterar a cultura atual e tentar recuperar os dados. 
-
-* As propriedades de uma cultura em um computador específico podem ser diferentes dos valores padrão. A qualquer momento, um usuário pode personalizar as configurações de exibição que levam em conta a cultura. Devido a isso, os dados formatados que são salvos em um sistema podem não ser legíveis após o usuário personalizar as configurações culturais. É provável que a portabilidade dos dados formatados entre computadores seja ainda mais limitada. 
-
-* Os padrões internacionais, regionais ou nacionais que controlam a formatação de números ou datas e horas são alterados ao longo do tempo e essas alterações são incorporadas nas atualizações do sistema operacional. Quando as convenções de formatação mudam, os dados que foram formatados usando as convenções anteriores podem se tornar ilegíveis. 
-
-O exemplo a seguir ilustra a portabilidade limitada resultante do uso da formatação que leva em conta a cultura para manter os dados. O exemplo salva uma matriz de valores de data e hora em um arquivo. Eles são formatados usando as convenções da cultura do inglês (Estados Unidos). Depois que o aplicativo altera a cultura do thread atual para francês (Suíça), ele tenta ler os valores salvos usando as convenções de formatação da cultura atual. A tentativa de ler dois dos itens de dados gera uma exceção [FormatException](xref:System.FormatException) e a matriz de datas agora contém dois elementos incorretos que são iguais a [MinValue](xref:System.DateTime.MinValue). 
-
-```csharp
-using System;
-using System.Globalization;
-using System.IO;
-using System.Text;
-using System.Threading;
-
-public class Example
-{
-   private static string filename = @".\dates.dat";
-
-   public static void Main()
-   {
-      DateTime[] dates = { new DateTime(1758, 5, 6, 21, 26, 0), 
-                           new DateTime(1818, 5, 5, 7, 19, 0), 
-                           new DateTime(1870, 4, 22, 23, 54, 0),  
-                           new DateTime(1890, 9, 8, 6, 47, 0), 
-                           new DateTime(1905, 2, 18, 15, 12, 0) }; 
-      // Write the data to a file using the current culture.
-      WriteData(dates);
-      // Change the current culture.
-      Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("fr-CH");
-      // Read the data using the current culture.
-      DateTime[] newDates = ReadData();
-      foreach (var newDate in newDates)
-         Console.WriteLine(newDate.ToString("g"));
-   }
-
-   private static void WriteData(DateTime[] dates) 
-   {
-      StreamWriter sw = new StreamWriter(filename, false, Encoding.UTF8);    
-      for (int ctr = 0; ctr < dates.Length; ctr++) {
-         sw.Write("{0}", dates[ctr].ToString("g", CultureInfo.CurrentCulture));
-         if (ctr < dates.Length - 1) sw.Write("|");   
-      }      
-      sw.Close();
-   }
-
-   private static DateTime[] ReadData() 
-   {
-      bool exceptionOccurred = false;
-
-      // Read file contents as a single string, then split it.
-      StreamReader sr = new StreamReader(filename, Encoding.UTF8);
-      string output = sr.ReadToEnd();
-      sr.Close();   
-
-      string[] values = output.Split( new char[] { '|' } );
-      DateTime[] newDates = new DateTime[values.Length]; 
-      for (int ctr = 0; ctr < values.Length; ctr++) {
-         try {
-            newDates[ctr] = DateTime.Parse(values[ctr], CultureInfo.CurrentCulture);
-         }
-         catch (FormatException) {
-            Console.WriteLine("Failed to parse {0}", values[ctr]);
-            exceptionOccurred = true;
-         }
-      }      
-      if (exceptionOccurred) Console.WriteLine();
-      return newDates;
-   }
-}
-// The example displays the following output:
-//       Failed to parse 4/22/1870 11:54 PM
-//       Failed to parse 2/18/1905 3:12 PM
-//       
-//       05.06.1758 21:26
-//       05.05.1818 07:19
-//       01.01.0001 00:00
-//       09.08.1890 06:47
-//       01.01.0001 00:00
-//       01.01.0001 00:00
-```
-
-```vb
-Imports System.Globalization
-Imports System.IO
-Imports System.Text
-Imports System.Threading
-
-Module Example
-   Private filename As String = ".\dates.dat"
-
-   Public Sub Main()
-      Dim dates() As Date = { #5/6/1758 9:26PM#, #5/5/1818 7:19AM#, _ 
-                              #4/22/1870 11:54PM#, #9/8/1890 6:47AM#, _ 
-                              #2/18/1905 3:12PM# }
-      ' Write the data to a file using the current culture.
-      WriteData(dates)
-      ' Change the current culture.
-      Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("fr-CH")
-      ' Read the data using the current culture.
-      Dim newDates() As Date = ReadData()
-      For Each newDate In newDates
-         Console.WriteLine(newDate.ToString("g"))
-      Next
-   End Sub
-
-   Private Sub WriteData(dates() As Date)
-      Dim sw As New StreamWriter(filename, False, Encoding.Utf8)    
-      For ctr As Integer = 0 To dates.Length - 1
-         sw.Write("{0}", dates(ctr).ToString("g", CultureInfo.CurrentCulture))
-         If ctr < dates.Length - 1 Then sw.Write("|")   
-      Next      
-      sw.Close()
-   End Sub
-
-   Private Function ReadData() As Date()
-      Dim exceptionOccurred As Boolean = False
-
-      ' Read file contents as a single string, then split it.
-      Dim sr As New StreamReader(filename, Encoding.Utf8)
-      Dim output As String = sr.ReadToEnd()
-      sr.Close()   
-
-      Dim values() As String = output.Split( {"|"c } )
-      Dim newDates(values.Length - 1) As Date 
-      For ctr As Integer = 0 To values.Length - 1
-         Try
-            newDates(ctr) = DateTime.Parse(values(ctr), CultureInfo.CurrentCulture)
-         Catch e As FormatException
-            Console.WriteLine("Failed to parse {0}", values(ctr))
-            exceptionOccurred = True
-         End Try
-      Next      
-      If exceptionOccurred Then Console.WriteLine()
-      Return newDates
-   End Function
-End Module
-' The example displays the following output:
-'       Failed to parse 4/22/1870 11:54 PM
-'       Failed to parse 2/18/1905 3:12 PM
-'       
-'       05.06.1758 21:26
-'       05.05.1818 07:19
-'       01.01.0001 00:00
-'       09.08.1890 06:47
-'       01.01.0001 00:00
-'       01.01.0001 00:00
-'
-```
-
-No entanto, se você substituir a propriedade [CultureInfo.CurrentCulture](xref:System.Globalization.CultureInfo.CurrentCulture) por [CultureInfo.InvariantCulture](xref:System.Globalization.CultureInfo.InvariantCulture) nas chamadas para [DateTime.ToString(String, IFormatProvider)](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) e [DateTime.Parse(String, IFormatProvider)](xref:System.DateTime.Parse(System.String,System.IFormatProvider)), os dados de data e hora mantidos serão restaurados com êxito, como a saída a seguir mostra.
-
-```
-// 06.05.1758 21:26
-// 05.05.1818 07:19
-// 22.04.1870 23:54
-// 08.09.1890 06:47
-// 18.02.1905 15:12
-```
-
-## <a name="see-also"></a>Consulte também
-
-[Manipulação de cadeias de caracteres](manipulating-strings.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
-
+>  <span data-ttu-id="0d716-219">Embora os métodos de comparação de cadeia de caracteres ignorar caracteres nulos inseridos, os métodos de pesquisa, como de cadeia de caracteres <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.EndsWith%2A?displayProperty=nameWithType>, <xref:System.String.IndexOf%2A?displayProperty=nameWithType>, <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>, e <xref:System.String.StartsWith%2A?displayProperty=nameWithType> não.</span><span class="sxs-lookup"><span data-stu-id="0d716-219">Although string comparison methods disregard embedded null characters, string search methods such as <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.EndsWith%2A?displayProperty=nameWithType>, <xref:System.String.IndexOf%2A?displayProperty=nameWithType>, <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>, and <xref:System.String.StartsWith%2A?displayProperty=nameWithType> do not.</span></span>  
+  
+ <span data-ttu-id="0d716-220">O exemplo a seguir executa uma comparação que leva em conta a cultura da cadeia de caracteres "Aa" com uma cadeia de caracteres semelhante que contém vários caracteres nulos inseridos entre "A" e "a" e mostra como as duas cadeias de caracteres são consideradas iguais.</span><span class="sxs-lookup"><span data-stu-id="0d716-220">The following example performs a culture-sensitive comparison of the string "Aa" with a similar string that contains several embedded null characters between "A" and "a", and shows how the two strings are considered equal.</span></span>  
+  
+ [!code-csharp[Conceptual.Strings.BestPractices#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/embeddednulls1.cs#19)]
+ [!code-vb[Conceptual.Strings.BestPractices#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/embeddednulls1.vb#19)]  
+  
+ <span data-ttu-id="0d716-221">No entanto, as cadeias de caracteres não são consideradas iguais ao usar a comparação ordinal, como mostra o exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="0d716-221">However, the strings are not considered equal when you use ordinal comparison, as the following example shows.</span></span>  
+  
+ [!code-csharp[Conceptual.Strings.BestPractices#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/embeddednulls2.cs#20)]
+ [!code-vb[Conceptual.Strings.BestPractices#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/embeddednulls2.vb#20)]  
+  
+ <span data-ttu-id="0d716-222">As comparações ordinais que não diferenciam maiúsculas de minúsculas são a próxima abordagem conservadora.</span><span class="sxs-lookup"><span data-stu-id="0d716-222">Case-insensitive ordinal comparisons are the next most conservative approach.</span></span> <span data-ttu-id="0d716-223">Essas comparações ignoram a maioria das maiúsculas e minúsculas, por exemplo, "windows" corresponde a "Windows".</span><span class="sxs-lookup"><span data-stu-id="0d716-223">These comparisons ignore most casing; for example, "windows" matches "Windows".</span></span> <span data-ttu-id="0d716-224">Ao lidar com caracteres ASCII, essa política é equivalente a <xref:System.StringComparison.Ordinal?displayProperty=nameWithType>, exceto que ele ignora maiusculas e minúsculas de usual ASCII.</span><span class="sxs-lookup"><span data-stu-id="0d716-224">When dealing with ASCII characters, this policy is equivalent to <xref:System.StringComparison.Ordinal?displayProperty=nameWithType>, except that it ignores the usual ASCII casing.</span></span> <span data-ttu-id="0d716-225">Portanto, qualquer caractere em [A, Z] (\u0041-\u005A) corresponde ao caractere correspondente em [a,z] (\u0061-\007A).</span><span class="sxs-lookup"><span data-stu-id="0d716-225">Therefore, any character in [A, Z] (\u0041-\u005A) matches the corresponding character in [a,z] (\u0061-\007A).</span></span> <span data-ttu-id="0d716-226">As maiúsculas e minúsculas fora do intervalo de ASCII usam as tabelas de cultura invariável.</span><span class="sxs-lookup"><span data-stu-id="0d716-226">Casing outside the ASCII range uses the invariant culture's tables.</span></span> <span data-ttu-id="0d716-227">Portanto, a comparação a seguir:</span><span class="sxs-lookup"><span data-stu-id="0d716-227">Therefore, the following comparison:</span></span>  
+  
+ [!code-csharp[Conceptual.Strings.BestPractices#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/comparison2.cs#4)]
+ [!code-vb[Conceptual.Strings.BestPractices#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/comparison2.vb#4)]  
+  
+ <span data-ttu-id="0d716-228">é equivalente a (mas mais rápida do que) esta comparação:</span><span class="sxs-lookup"><span data-stu-id="0d716-228">is equivalent to (but faster than) this comparison:</span></span>  
+  
+ [!code-csharp[Conceptual.Strings.BestPractices#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/comparison2.cs#5)]
+ [!code-vb[Conceptual.Strings.BestPractices#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/comparison2.vb#5)]  
+  
+ <span data-ttu-id="0d716-229">Essas comparações ainda são muito rápidas.</span><span class="sxs-lookup"><span data-stu-id="0d716-229">These comparisons are still very fast.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="0d716-230">O comportamento de cadeia de caracteres do sistema de arquivos, chaves do registro e valores e as variáveis de ambiente é melhor representado por <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0d716-230">The string behavior of the file system, registry keys and values, and environment variables is best represented by <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>.</span></span>  
+  
+ <span data-ttu-id="0d716-231">Ambos <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> e <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> usam os valores binários diretamente e são mais adequados para correspondência.</span><span class="sxs-lookup"><span data-stu-id="0d716-231">Both <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> and <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> use the binary values directly, and are best suited for matching.</span></span> <span data-ttu-id="0d716-232">Quando você não tiver certeza sobre as configurações de comparação, use um destes dois valores.</span><span class="sxs-lookup"><span data-stu-id="0d716-232">When you are not sure about your comparison settings, use one of these two values.</span></span> <span data-ttu-id="0d716-233">No entanto, como elas executam uma comparação byte por byte, elas não classificam por uma ordem de classificação linguística (como um dicionário de inglês), mas por ordem de classificação binária.</span><span class="sxs-lookup"><span data-stu-id="0d716-233">However, because they perform a byte-by-byte comparison, they do not sort by a linguistic sort order (like an English dictionary) but by a binary sort order.</span></span> <span data-ttu-id="0d716-234">Os resultados podem parecer estranhos na maioria dos contextos se exibido aos usuários.</span><span class="sxs-lookup"><span data-stu-id="0d716-234">The results may look odd in most contexts if displayed to users.</span></span>  
+  
+ <span data-ttu-id="0d716-235">Ordinal semântica é o padrão para <xref:System.String.Equals%2A?displayProperty=nameWithType> sobrecargas que não incluam um <xref:System.StringComparison> argumento (incluindo o operador de igualdade).</span><span class="sxs-lookup"><span data-stu-id="0d716-235">Ordinal semantics are the default for <xref:System.String.Equals%2A?displayProperty=nameWithType> overloads that do not include a <xref:System.StringComparison> argument (including the equality operator).</span></span> <span data-ttu-id="0d716-236">Em qualquer caso, é recomendável que você chame uma sobrecarga que tem um <xref:System.StringComparison> parâmetro.</span><span class="sxs-lookup"><span data-stu-id="0d716-236">In any case, we recommend that you call an overload that has a <xref:System.StringComparison> parameter.</span></span>  
+  
+### <a name="string-operations-that-use-the-invariant-culture"></a><span data-ttu-id="0d716-237">Operações da Cadeia de Caracteres que Usam a Cultura Invariável</span><span class="sxs-lookup"><span data-stu-id="0d716-237">String Operations that Use the Invariant Culture</span></span>  
+ <span data-ttu-id="0d716-238">As comparações com o uso de cultura invariável de <xref:System.Globalization.CultureInfo.CompareInfo%2A> propriedade retornada pelo estático <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> propriedade.</span><span class="sxs-lookup"><span data-stu-id="0d716-238">Comparisons with the invariant culture use the <xref:System.Globalization.CultureInfo.CompareInfo%2A> property returned by the static <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="0d716-239">Esse comportamento é o mesmo em todos os sistemas, ele converte qualquer caractere fora de seu intervalo no que ele acredita que sejam caracteres invariáveis equivalentes.</span><span class="sxs-lookup"><span data-stu-id="0d716-239">This behavior is the same on all systems; it translates any characters outside its range into what it believes are equivalent invariant characters.</span></span> <span data-ttu-id="0d716-240">Essa política pode ser útil para manter um conjunto de comportamentos de cadeia de caracteres entre culturas, mas geralmente fornece resultados inesperados.</span><span class="sxs-lookup"><span data-stu-id="0d716-240">This policy can be useful for maintaining one set of string behavior across cultures, but it often provides unexpected results.</span></span>  
+  
+ <span data-ttu-id="0d716-241">Comparações de maiusculas e minúsculas com a cultura invariável usam estático <xref:System.Globalization.CultureInfo.CompareInfo%2A> propriedade retornada pelo estático <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> propriedade para obter informações de comparação também.</span><span class="sxs-lookup"><span data-stu-id="0d716-241">Case-insensitive comparisons with the invariant culture use the static <xref:System.Globalization.CultureInfo.CompareInfo%2A> property returned by the static <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> property for comparison information as well.</span></span> <span data-ttu-id="0d716-242">As diferenças de maiúsculas e minúsculas entre esses caracteres convertidos são ignoradas.</span><span class="sxs-lookup"><span data-stu-id="0d716-242">Any case differences among these translated characters are ignored.</span></span>  
+  
+ <span data-ttu-id="0d716-243">Comparações que usam <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> e <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> funcionam de forma idêntica em cadeias de caracteres ASCII.</span><span class="sxs-lookup"><span data-stu-id="0d716-243">Comparisons that use <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> and <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> work identically on ASCII strings.</span></span> <span data-ttu-id="0d716-244">No entanto, <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> toma decisões linguísticas que podem não ser apropriadas para cadeias de caracteres que deve ser interpretado como um conjunto de bytes.</span><span class="sxs-lookup"><span data-stu-id="0d716-244">However, <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> makes linguistic decisions that might not be appropriate for strings that have to be interpreted as a set of bytes.</span></span> <span data-ttu-id="0d716-245">O `CultureInfo.InvariantCulture.CompareInfo` objeto torna o <xref:System.String.Compare%2A> método interpretar determinados conjuntos de caracteres como equivalentes.</span><span class="sxs-lookup"><span data-stu-id="0d716-245">The `CultureInfo.InvariantCulture.CompareInfo` object makes the <xref:System.String.Compare%2A> method interpret certain sets of characters as equivalent.</span></span> <span data-ttu-id="0d716-246">Por exemplo, a equivalência a seguir é válida na cultura invariável:</span><span class="sxs-lookup"><span data-stu-id="0d716-246">For example, the following equivalence is valid under the invariant culture:</span></span>  
+  
+ <span data-ttu-id="0d716-247">InvariantCulture: a + ̊ = å</span><span class="sxs-lookup"><span data-stu-id="0d716-247">InvariantCulture: a + ̊ = å</span></span>  
+  
+ <span data-ttu-id="0d716-248">A LETRA minúscula latina caracteres "a" (\u0061), quando ele está ao lado de caracteres COMBINANDO ANEL acima "+"̊"(\u030a) é interpretado como o LATINO pequena LETRA A com ANEL acima de caracteres"å"(\u00e5).</span><span class="sxs-lookup"><span data-stu-id="0d716-248">The LATIN SMALL LETTER A character "a"  (\u0061), when it is next to the COMBINING RING ABOVE character "+ " ̊" (\u030a), is interpreted as the LATIN SMALL LETTER A WITH RING ABOVE character "å" (\u00e5).</span></span> <span data-ttu-id="0d716-249">Como mostra o exemplo a seguir, esse comportamento é diferente da comparação ordinal.</span><span class="sxs-lookup"><span data-stu-id="0d716-249">As the following example shows, this behavior differs from ordinal comparison.</span></span>  
+  
+ [!code-csharp[Conceptual.Strings.BestPractices#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/comparison3.cs#15)]
+ [!code-vb[Conceptual.Strings.BestPractices#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/comparison3.vb#15)]  
+  
+ <span data-ttu-id="0d716-250">Ao interpretar nomes de arquivo, cookies ou qualquer outro elemento em que uma combinação como "å" pode aparecer, as comparações ordinais ainda oferecem o comportamento mais transparente e adequado.</span><span class="sxs-lookup"><span data-stu-id="0d716-250">When interpreting file names, cookies, or anything else where a combination such as "å" can appear, ordinal comparisons still offer the most transparent and fitting behavior.</span></span>  
+  
+ <span data-ttu-id="0d716-251">De forma geral, a cultura invariável tem muito poucas propriedades que a tornam útil para comparação.</span><span class="sxs-lookup"><span data-stu-id="0d716-251">On balance, the invariant culture has very few properties that make it useful for comparison.</span></span> <span data-ttu-id="0d716-252">Ela faz a comparação de maneira linguisticamente relevante, o que impede que ela garanta a equivalência simbólica total, mas não é a opção de exibição em nenhuma cultura.</span><span class="sxs-lookup"><span data-stu-id="0d716-252">It does comparison in a linguistically relevant manner, which prevents it from guaranteeing full symbolic equivalence, but it is not the choice for display in any culture.</span></span> <span data-ttu-id="0d716-253">Um dos motivos para usar alguns <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> de comparação é manter dados ordenados, para uma exibição cross-culturally idêntico.</span><span class="sxs-lookup"><span data-stu-id="0d716-253">One of the few reasons to use <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> for comparison is to persist ordered data for a cross-culturally identical display.</span></span> <span data-ttu-id="0d716-254">Por exemplo, se um arquivo de dados grande que contém uma lista de identificadores classificados para exibição acompanha um aplicativo, a adição a essa lista exige uma inserção com a inserção de estilo invariável.</span><span class="sxs-lookup"><span data-stu-id="0d716-254">For example, if a large data file that contains a list of sorted identifiers for display accompanies an application, adding to this list would require an insertion with invariant-style sorting.</span></span>  
+  
+ [<span data-ttu-id="0d716-255">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="0d716-255">Back to top</span></span>](#top)  
+  
+<a name="choosing_a_stringcomparison_member_for_your_method_call"></a>   
+## <a name="choosing-a-stringcomparison-member-for-your-method-call"></a><span data-ttu-id="0d716-256">Escolhendo um Membro StringComparison para a Chamada de Método</span><span class="sxs-lookup"><span data-stu-id="0d716-256">Choosing a StringComparison Member for Your Method Call</span></span>  
+ <span data-ttu-id="0d716-257">A tabela a seguir descreve o mapeamento do contexto de semântica de cadeia de caracteres para um <xref:System.StringComparison> membro de enumeração.</span><span class="sxs-lookup"><span data-stu-id="0d716-257">The following table outlines the mapping from semantic string context to a <xref:System.StringComparison> enumeration member.</span></span>  
+  
+|<span data-ttu-id="0d716-258">Dados</span><span class="sxs-lookup"><span data-stu-id="0d716-258">Data</span></span>|<span data-ttu-id="0d716-259">Comportamento</span><span class="sxs-lookup"><span data-stu-id="0d716-259">Behavior</span></span>|<span data-ttu-id="0d716-260">System.StringComparison correspondente</span><span class="sxs-lookup"><span data-stu-id="0d716-260">Corresponding System.StringComparison</span></span><br /><br /> <span data-ttu-id="0d716-261">Valor </span><span class="sxs-lookup"><span data-stu-id="0d716-261">value</span></span>|  
+|----------|--------------|-----------------------------------------------------|  
+|<span data-ttu-id="0d716-262">Identificadores internos diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="0d716-262">Case-sensitive internal identifiers.</span></span><br /><br /> <span data-ttu-id="0d716-263">Identificadores de maiusculas e minúsculas nos padrões como XML e HTTP.</span><span class="sxs-lookup"><span data-stu-id="0d716-263">Case-sensitive identifiers in standards such as XML and HTTP.</span></span><br /><br /> <span data-ttu-id="0d716-264">Configurações relacionadas à segurança diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="0d716-264">Case-sensitive security-related settings.</span></span>|<span data-ttu-id="0d716-265">Um identificador não linguístico, em que bytes correspondem exatamente.</span><span class="sxs-lookup"><span data-stu-id="0d716-265">A non-linguistic identifier, where bytes match exactly.</span></span>|<xref:System.StringComparison.Ordinal>|  
+|<span data-ttu-id="0d716-266">Identificadores internos maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="0d716-266">Case-insensitive internal identifiers.</span></span><br /><br /> <span data-ttu-id="0d716-267">Identificadores de maiusculas e minúsculas em padrões como XML e HTTP.</span><span class="sxs-lookup"><span data-stu-id="0d716-267">Case-insensitive identifiers in standards such as XML and HTTP.</span></span><br /><br /> <span data-ttu-id="0d716-268">Caminhos de arquivo.</span><span class="sxs-lookup"><span data-stu-id="0d716-268">File paths.</span></span><br /><br /> <span data-ttu-id="0d716-269">Chaves do registro e valores.</span><span class="sxs-lookup"><span data-stu-id="0d716-269">Registry keys and values.</span></span><br /><br /> <span data-ttu-id="0d716-270">Variáveis de ambiente.</span><span class="sxs-lookup"><span data-stu-id="0d716-270">Environment variables.</span></span><br /><br /> <span data-ttu-id="0d716-271">Identificadores de recurso (por exemplo, nomes de identificador).</span><span class="sxs-lookup"><span data-stu-id="0d716-271">Resource identifiers (for example, handle names).</span></span><br /><br /> <span data-ttu-id="0d716-272">Configurações relacionadas à segurança maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="0d716-272">Case-insensitive security-related settings.</span></span>|<span data-ttu-id="0d716-273">Um identificador não linguística, em que o caso é irrelevante; especialmente dados armazenados na maioria dos serviços de sistema do Windows.</span><span class="sxs-lookup"><span data-stu-id="0d716-273">A non-linguistic identifier, where case is irrelevant; especially data stored in most Windows system services.</span></span>|<xref:System.StringComparison.OrdinalIgnoreCase>|  
+|<span data-ttu-id="0d716-274">Alguns dados persistentes, linguisticamente relevantes.</span><span class="sxs-lookup"><span data-stu-id="0d716-274">Some persisted, linguistically relevant data.</span></span><br /><br /> <span data-ttu-id="0d716-275">Exibição de dados linguísticas que requer uma ordem de classificação fixa.</span><span class="sxs-lookup"><span data-stu-id="0d716-275">Display of linguistic data that requires a fixed sort order.</span></span>|<span data-ttu-id="0d716-276">Dados culturalmente desconhecidos que ainda são linguisticamente relevantes.</span><span class="sxs-lookup"><span data-stu-id="0d716-276">Culturally agnostic data that still is linguistically relevant.</span></span>|<xref:System.StringComparison.InvariantCulture><br /><br /> <span data-ttu-id="0d716-277">-ou-</span><span class="sxs-lookup"><span data-stu-id="0d716-277">-or-</span></span><br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
+|<span data-ttu-id="0d716-278">Dados exibidos para o usuário.</span><span class="sxs-lookup"><span data-stu-id="0d716-278">Data displayed to the user.</span></span><br /><br /> <span data-ttu-id="0d716-279">A maioria das entradas do usuário.</span><span class="sxs-lookup"><span data-stu-id="0d716-279">Most user input.</span></span>|<span data-ttu-id="0d716-280">Dados que exigem os costumes linguísticos locais.</span><span class="sxs-lookup"><span data-stu-id="0d716-280">Data that requires local linguistic customs.</span></span>|<xref:System.StringComparison.CurrentCulture><br /><br /> <span data-ttu-id="0d716-281">-ou-</span><span class="sxs-lookup"><span data-stu-id="0d716-281">-or-</span></span><br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
+  
+ [<span data-ttu-id="0d716-282">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="0d716-282">Back to top</span></span>](#top)  
+  
+<a name="common_string_comparison_methods_in_the_net_framework"></a>   
+## <a name="common-string-comparison-methods-in-net"></a><span data-ttu-id="0d716-283">Métodos comuns de comparação de cadeia de caracteres no .NET</span><span class="sxs-lookup"><span data-stu-id="0d716-283">Common String Comparison Methods in .NET</span></span>  
+ <span data-ttu-id="0d716-284">As seções a seguir descrevem os métodos que são mais comumente usados para a comparação de cadeias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="0d716-284">The following sections describe the methods that are most commonly used for string comparison.</span></span>  
+  
+### <a name="stringcompare"></a><span data-ttu-id="0d716-285">String.Compare</span><span class="sxs-lookup"><span data-stu-id="0d716-285">String.Compare</span></span>  
+ <span data-ttu-id="0d716-286">Padrão de interpretação: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0d716-286">Default interpretation: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.</span></span>  
+  
+ <span data-ttu-id="0d716-287">Como a operação mais central da interpretação de cadeia de caracteres, todas as instâncias de chamadas desse método devem ser examinadas para determinar se as cadeias de caracteres devem ser interpretadas de acordo com a cultura atual ou dissociadas da cultura (simbolicamente).</span><span class="sxs-lookup"><span data-stu-id="0d716-287">As the operation most central to string interpretation, all instances of these method calls should be examined to determine whether strings should be interpreted according to the current culture, or dissociated from the culture (symbolically).</span></span> <span data-ttu-id="0d716-288">Normalmente, é o último e um <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> comparação deve ser usada em vez disso.</span><span class="sxs-lookup"><span data-stu-id="0d716-288">Typically, it is the latter, and a <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> comparison should be used instead.</span></span>  
+  
+ <span data-ttu-id="0d716-289">O <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> classe, que é retornado pelo <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> também inclui uma propriedade, um <xref:System.Globalization.CompareInfo.Compare%2A> método que fornece um grande número de correspondência de opções (ordinal, ignorando espaço em branco, tipo kana ignorando e assim por diante) por meio do <xref:System.Globalization.CompareOptions> sinalizador enumeração.</span><span class="sxs-lookup"><span data-stu-id="0d716-289">The <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> class, which is returned by the <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> property, also includes a <xref:System.Globalization.CompareInfo.Compare%2A> method that provides a large number of matching options (ordinal, ignoring white space, ignoring kana type, and so on) by means of the <xref:System.Globalization.CompareOptions> flag enumeration.</span></span>  
+  
+### <a name="stringcompareto"></a><span data-ttu-id="0d716-290">String.CompareTo</span><span class="sxs-lookup"><span data-stu-id="0d716-290">String.CompareTo</span></span>  
+ <span data-ttu-id="0d716-291">Padrão de interpretação: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0d716-291">Default interpretation: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.</span></span>  
+  
+ <span data-ttu-id="0d716-292">Este método não oferece atualmente uma sobrecarga que especifica um <xref:System.StringComparison> tipo.</span><span class="sxs-lookup"><span data-stu-id="0d716-292">This method does not currently offer an overload that specifies a <xref:System.StringComparison> type.</span></span> <span data-ttu-id="0d716-293">É possível converter esse método para recomendada <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> formulário.</span><span class="sxs-lookup"><span data-stu-id="0d716-293">It is usually possible to convert this method to the recommended <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> form.</span></span>  
+  
+ <span data-ttu-id="0d716-294">Tipos que implementam o <xref:System.IComparable> e <xref:System.IComparable%601> interfaces implementam este método.</span><span class="sxs-lookup"><span data-stu-id="0d716-294">Types that implement the <xref:System.IComparable> and <xref:System.IComparable%601> interfaces implement this method.</span></span> <span data-ttu-id="0d716-295">Porque ele não oferece a opção de um <xref:System.StringComparison> parâmetro, implementar tipos geralmente permitem que o usuário especifique um <xref:System.StringComparer> no seu construtor.</span><span class="sxs-lookup"><span data-stu-id="0d716-295">Because it does not offer the option of a <xref:System.StringComparison> parameter, implementing types often let the user specify a <xref:System.StringComparer> in their constructor.</span></span> <span data-ttu-id="0d716-296">O exemplo a seguir define uma `FileName` classe cujo construtor de classe inclui um <xref:System.StringComparer> parâmetro.</span><span class="sxs-lookup"><span data-stu-id="0d716-296">The following example defines a `FileName` class whose class constructor includes a <xref:System.StringComparer> parameter.</span></span> <span data-ttu-id="0d716-297">Isso <xref:System.StringComparer> objeto é usado no `FileName.CompareTo` método.</span><span class="sxs-lookup"><span data-stu-id="0d716-297">This <xref:System.StringComparer> object is then used in the `FileName.CompareTo` method.</span></span>  
+  
+ [!code-csharp[Conceptual.Strings.BestPractices#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/api1.cs#6)]
+ [!code-vb[Conceptual.Strings.BestPractices#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/api1.vb#6)]  
+  
+### <a name="stringequals"></a><span data-ttu-id="0d716-298">String.Equals</span><span class="sxs-lookup"><span data-stu-id="0d716-298">String.Equals</span></span>  
+ <span data-ttu-id="0d716-299">Padrão de interpretação: <xref:System.StringComparison.Ordinal?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0d716-299">Default interpretation: <xref:System.StringComparison.Ordinal?displayProperty=nameWithType>.</span></span>  
+  
+ <span data-ttu-id="0d716-300">O <xref:System.String> classe permite que você teste de igualdade chamando a estáticas ou instância <xref:System.String.Equals%2A> sobrecargas do método, ou usando o operador de igualdade estático.</span><span class="sxs-lookup"><span data-stu-id="0d716-300">The <xref:System.String> class lets you test for equality by calling either the static or instance <xref:System.String.Equals%2A> method overloads, or by using the static equality operator.</span></span> <span data-ttu-id="0d716-301">O operador e as sobrecargas utilizam a comparação ordinal por padrão.</span><span class="sxs-lookup"><span data-stu-id="0d716-301">The overloads and operator use ordinal comparison by default.</span></span> <span data-ttu-id="0d716-302">No entanto, ainda é recomendável que você chame uma sobrecarga que especifica explicitamente o <xref:System.StringComparison> tipo mesmo se você deseja executar uma comparação ordinal; isso facilita o código para um determinado interpretação de cadeia de caracteres de pesquisa.</span><span class="sxs-lookup"><span data-stu-id="0d716-302">However, we still recommend that you call an overload that explicitly specifies the <xref:System.StringComparison> type even if you want to perform an ordinal comparison; this makes it easier to search code for a certain string interpretation.</span></span>  
+  
+### <a name="stringtoupper-and-stringtolower"></a><span data-ttu-id="0d716-303">String.ToUpper e String.ToLower</span><span class="sxs-lookup"><span data-stu-id="0d716-303">String.ToUpper and String.ToLower</span></span>  
+ <span data-ttu-id="0d716-304">Padrão de interpretação: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0d716-304">Default interpretation: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.</span></span>  
+  
+ <span data-ttu-id="0d716-305">Você deve ter cuidado ao usar esses métodos, pois forçar uma cadeia de caracteres para maiúsculas ou minúsculas normalmente é usado como uma normalização pequena para comparar cadeias de caracteres independentemente de maiúsculas e minúsculas.</span><span class="sxs-lookup"><span data-stu-id="0d716-305">You should be careful when you use these methods, because forcing a string to a uppercase or lowercase is often used as a small normalization for comparing strings regardless of case.</span></span> <span data-ttu-id="0d716-306">Nesse caso, considere o uso de uma comparação que não diferencie maiúsculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="0d716-306">If so, consider using a case-insensitive comparison.</span></span>  
+  
+ <span data-ttu-id="0d716-307">O <xref:System.String.ToUpperInvariant%2A?displayProperty=nameWithType> e <xref:System.String.ToLowerInvariant%2A?displayProperty=nameWithType> métodos também estão disponíveis.</span><span class="sxs-lookup"><span data-stu-id="0d716-307">The <xref:System.String.ToUpperInvariant%2A?displayProperty=nameWithType> and <xref:System.String.ToLowerInvariant%2A?displayProperty=nameWithType> methods are also available.</span></span> <span data-ttu-id="0d716-308"><xref:System.String.ToUpperInvariant%2A>é o modo padrão para normalizar o caso.</span><span class="sxs-lookup"><span data-stu-id="0d716-308"><xref:System.String.ToUpperInvariant%2A> is the standard way to normalize case.</span></span> <span data-ttu-id="0d716-309">As comparações feitas usando <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> são a composição de duas chamadas de maneira comportamental: chamar <xref:System.String.ToUpperInvariant%2A> em ambos os argumentos de cadeia de caracteres e fazer uma comparação usando <xref:System.StringComparison.Ordinal?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0d716-309">Comparisons made using <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> are behaviorally the composition of two calls: calling <xref:System.String.ToUpperInvariant%2A> on both string arguments, and doing a comparison using <xref:System.StringComparison.Ordinal?displayProperty=nameWithType>.</span></span>  
+  
+ <span data-ttu-id="0d716-310">Sobrecargas também estão disponíveis para converter para letras maiusculas e minúsculas em uma cultura específica, passando um <xref:System.Globalization.CultureInfo> objeto que representa essa cultura para o método.</span><span class="sxs-lookup"><span data-stu-id="0d716-310">Overloads are also available for converting to uppercase and lowercase in a specific culture, by passing a <xref:System.Globalization.CultureInfo> object that represents that culture to the method.</span></span>  
+  
+### <a name="chartoupper-and-chartolower"></a><span data-ttu-id="0d716-311">Char.ToUpper e Char.ToLower</span><span class="sxs-lookup"><span data-stu-id="0d716-311">Char.ToUpper and Char.ToLower</span></span>  
+ <span data-ttu-id="0d716-312">Padrão de interpretação: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0d716-312">Default interpretation: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.</span></span>  
+  
+ <span data-ttu-id="0d716-313">Esses métodos funcionam da mesma forma que o <xref:System.String.ToUpper%2A?displayProperty=nameWithType> e <xref:System.String.ToLower%2A?displayProperty=nameWithType> métodos descritos na seção anterior.</span><span class="sxs-lookup"><span data-stu-id="0d716-313">These methods work similarly to the <xref:System.String.ToUpper%2A?displayProperty=nameWithType> and <xref:System.String.ToLower%2A?displayProperty=nameWithType> methods described in the previous section.</span></span>  
+  
+### <a name="stringstartswith-and-stringendswith"></a><span data-ttu-id="0d716-314">String.StartsWith e String.EndsWith</span><span class="sxs-lookup"><span data-stu-id="0d716-314">String.StartsWith and String.EndsWith</span></span>  
+ <span data-ttu-id="0d716-315">Padrão de interpretação: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0d716-315">Default interpretation: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.</span></span>  
+  
+ <span data-ttu-id="0d716-316">Por padrão, esses dois métodos executam uma comparação que leva em conta a cultura.</span><span class="sxs-lookup"><span data-stu-id="0d716-316">By default, both of these methods perform a culture-sensitive comparison.</span></span>  
+  
+### <a name="stringindexof-and-stringlastindexof"></a><span data-ttu-id="0d716-317">String.IndexOf e String.LastIndexOf</span><span class="sxs-lookup"><span data-stu-id="0d716-317">String.IndexOf and String.LastIndexOf</span></span>  
+ <span data-ttu-id="0d716-318">Padrão de interpretação: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0d716-318">Default interpretation: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.</span></span>  
+  
+ <span data-ttu-id="0d716-319">Há uma falta de consistência em como as sobrecargas padrão desses métodos realizam comparações.</span><span class="sxs-lookup"><span data-stu-id="0d716-319">There is a lack of consistency in how the default overloads of these methods perform comparisons.</span></span> <span data-ttu-id="0d716-320">Todos os <xref:System.String.IndexOf%2A?displayProperty=nameWithType> e <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> métodos que incluem um <xref:System.Char> parâmetro realizar uma comparação ordinal, mas o padrão <xref:System.String.IndexOf%2A?displayProperty=nameWithType> e <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> métodos que incluem um <xref:System.String> parâmetro executar um sensíveis à cultura comparação.</span><span class="sxs-lookup"><span data-stu-id="0d716-320">All <xref:System.String.IndexOf%2A?displayProperty=nameWithType> and <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> methods that include a <xref:System.Char> parameter perform an ordinal comparison, but the default <xref:System.String.IndexOf%2A?displayProperty=nameWithType> and <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> methods that include a <xref:System.String> parameter perform a culture-sensitive comparison.</span></span>  
+  
+ <span data-ttu-id="0d716-321">Se você chamar o <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> ou <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> método e passá-lo em uma cadeia de caracteres a ser localizado na instância atual, recomendamos que você chame uma sobrecarga que especifica explicitamente o <xref:System.StringComparison> tipo.</span><span class="sxs-lookup"><span data-stu-id="0d716-321">If you call the <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> or <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> method and pass it a string to locate in the current instance, we recommend that you call an overload that explicitly specifies the <xref:System.StringComparison> type.</span></span> <span data-ttu-id="0d716-322">As sobrecargas que incluem um <xref:System.Char> argumento não permitem que você especifique um <xref:System.StringComparison> tipo.</span><span class="sxs-lookup"><span data-stu-id="0d716-322">The overloads that include a <xref:System.Char> argument do not allow you to specify a <xref:System.StringComparison> type.</span></span>  
+  
+ [<span data-ttu-id="0d716-323">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="0d716-323">Back to top</span></span>](#top)  
+  
+<a name="methods_that_perform_string_comparison_indirectly"></a>   
+## <a name="methods-that-perform-string-comparison-indirectly"></a><span data-ttu-id="0d716-324">Métodos que Realizam Comparação da Cadeia de Caracteres Indiretamente</span><span class="sxs-lookup"><span data-stu-id="0d716-324">Methods that Perform String Comparison Indirectly</span></span>  
+ <span data-ttu-id="0d716-325">Alguns métodos de não-cadeia de caracteres que têm a comparação de cadeia de caracteres como uma operação central, use o <xref:System.StringComparer> tipo.</span><span class="sxs-lookup"><span data-stu-id="0d716-325">Some non-string methods that have string comparison as a central operation use the <xref:System.StringComparer> type.</span></span> <span data-ttu-id="0d716-326">O <xref:System.StringComparer> classe inclui seis propriedades estáticas que retornam <xref:System.StringComparer> instâncias cuja <xref:System.StringComparer.Compare%2A?displayProperty=nameWithType> métodos executam os seguintes tipos de comparações de cadeia de caracteres:</span><span class="sxs-lookup"><span data-stu-id="0d716-326">The <xref:System.StringComparer> class includes six static properties that return <xref:System.StringComparer> instances whose <xref:System.StringComparer.Compare%2A?displayProperty=nameWithType> methods perform the following types of string comparisons:</span></span>  
+  
+-   <span data-ttu-id="0d716-327">Comparações de cadeias de caracteres que levam em conta a cultura usando a cultura atual.</span><span class="sxs-lookup"><span data-stu-id="0d716-327">Culture-sensitive string comparisons using the current culture.</span></span> <span data-ttu-id="0d716-328">Isso <xref:System.StringComparer> retornado pelo objeto de <xref:System.StringComparer.CurrentCulture%2A?displayProperty=nameWithType> propriedade.</span><span class="sxs-lookup"><span data-stu-id="0d716-328">This <xref:System.StringComparer> object is returned by the <xref:System.StringComparer.CurrentCulture%2A?displayProperty=nameWithType> property.</span></span>  
+  
+-   <span data-ttu-id="0d716-329">Comparações que não diferenciam maiúsculas de minúsculas usando a cultura atual.</span><span class="sxs-lookup"><span data-stu-id="0d716-329">Case-insensitive comparisons using the current culture.</span></span> <span data-ttu-id="0d716-330">Isso <xref:System.StringComparer> retornado pelo objeto de <xref:System.StringComparer.CurrentCultureIgnoreCase%2A?displayProperty=nameWithType> propriedade.</span><span class="sxs-lookup"><span data-stu-id="0d716-330">This <xref:System.StringComparer> object is returned by the <xref:System.StringComparer.CurrentCultureIgnoreCase%2A?displayProperty=nameWithType> property.</span></span>  
+  
+-   <span data-ttu-id="0d716-331">Comparações sem diferenciação de cultura usando as regras de comparação de palavras da cultura invariável.</span><span class="sxs-lookup"><span data-stu-id="0d716-331">Culture-insensitive comparisons using the word comparison rules of the invariant culture.</span></span> <span data-ttu-id="0d716-332">Isso <xref:System.StringComparer> retornado pelo objeto de <xref:System.StringComparer.InvariantCulture%2A?displayProperty=nameWithType> propriedade.</span><span class="sxs-lookup"><span data-stu-id="0d716-332">This <xref:System.StringComparer> object is returned by the <xref:System.StringComparer.InvariantCulture%2A?displayProperty=nameWithType> property.</span></span>  
+  
+-   <span data-ttu-id="0d716-333">Comparações de maiusculas e minúsculas e não levam em conta a cultura usando as regras de comparação de palavras da cultura invariável.</span><span class="sxs-lookup"><span data-stu-id="0d716-333">Case-insensitive and culture-insensitive comparisons using the word comparison rules of the invariant culture.</span></span> <span data-ttu-id="0d716-334">Isso <xref:System.StringComparer> retornado pelo objeto de <xref:System.StringComparer.InvariantCultureIgnoreCase%2A?displayProperty=nameWithType> propriedade.</span><span class="sxs-lookup"><span data-stu-id="0d716-334">This <xref:System.StringComparer> object is returned by the <xref:System.StringComparer.InvariantCultureIgnoreCase%2A?displayProperty=nameWithType> property.</span></span>  
+  
+-   <span data-ttu-id="0d716-335">Comparação ordinal.</span><span class="sxs-lookup"><span data-stu-id="0d716-335">Ordinal comparison.</span></span> <span data-ttu-id="0d716-336">Isso <xref:System.StringComparer> retornado pelo objeto de <xref:System.StringComparer.Ordinal%2A?displayProperty=nameWithType> propriedade.</span><span class="sxs-lookup"><span data-stu-id="0d716-336">This <xref:System.StringComparer> object is returned by the <xref:System.StringComparer.Ordinal%2A?displayProperty=nameWithType> property.</span></span>  
+  
+-   <span data-ttu-id="0d716-337">Comparação ordinal que não diferencia maiúsculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="0d716-337">Case-insensitive ordinal comparison.</span></span> <span data-ttu-id="0d716-338">Isso <xref:System.StringComparer> retornado pelo objeto de <xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType> propriedade.</span><span class="sxs-lookup"><span data-stu-id="0d716-338">This <xref:System.StringComparer> object is returned by the <xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType> property.</span></span>  
+  
+### <a name="arraysort-and-arraybinarysearch"></a><span data-ttu-id="0d716-339">Array.Sort e Array.BinarySearch</span><span class="sxs-lookup"><span data-stu-id="0d716-339">Array.Sort and Array.BinarySearch</span></span>  
+ <span data-ttu-id="0d716-340">Padrão de interpretação: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0d716-340">Default interpretation: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.</span></span>  
+  
+ <span data-ttu-id="0d716-341">Ao armazenar quaisquer dados em uma coleção ou ler dados persistentes de um arquivo ou banco de dados em uma coleção, alternar a cultura atual pode invalidar as invariáveis na coleção.</span><span class="sxs-lookup"><span data-stu-id="0d716-341">When you store any data in a collection, or read persisted data from a file or database into a collection, switching the current culture can invalidate the invariants in the collection.</span></span> <span data-ttu-id="0d716-342">O <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> método pressupõe que os elementos da matriz devem ser pesquisadas já estão classificados.</span><span class="sxs-lookup"><span data-stu-id="0d716-342">The <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> method assumes that the elements in the array to be searched are already sorted.</span></span> <span data-ttu-id="0d716-343">Para classificar qualquer elemento de cadeia de caracteres na matriz, o <xref:System.Array.Sort%2A?displayProperty=nameWithType> chamadas de método de <xref:System.String.Compare%2A?displayProperty=nameWithType> método ordenar elementos individuais.</span><span class="sxs-lookup"><span data-stu-id="0d716-343">To sort any string element in the array, the <xref:System.Array.Sort%2A?displayProperty=nameWithType> method calls the <xref:System.String.Compare%2A?displayProperty=nameWithType> method to order individual elements.</span></span> <span data-ttu-id="0d716-344">Usar um comparador que leva em conta a cultura pode ser perigoso se a cultura mudar entre o momento em que a matriz é ordenada e que seu conteúdo é pesquisado.</span><span class="sxs-lookup"><span data-stu-id="0d716-344">Using a culture-sensitive comparer can be dangerous if the culture changes between the time that the array is sorted and its contents are searched.</span></span> <span data-ttu-id="0d716-345">Por exemplo, no código a seguir, o armazenamento e a recuperação operam no comparador que é fornecido implicitamente pela propriedade `Thread.CurrentThread.CurrentCulture`.</span><span class="sxs-lookup"><span data-stu-id="0d716-345">For example, in the following code, storage and retrieval operate on the comparer that is provided implicitly by the `Thread.CurrentThread.CurrentCulture` property.</span></span> <span data-ttu-id="0d716-346">Se a cultura puder mudar entre as chamadas para `StoreNames` e `DoesNameExist`, e especialmente se os conteúdos da matriz forem mantidos em algum lugar entre as duas chamadas de método, a pesquisa binária poderá falhar.</span><span class="sxs-lookup"><span data-stu-id="0d716-346">If the culture can change between the calls to `StoreNames` and `DoesNameExist`, and especially if the array contents are persisted somewhere between the two method calls, the binary search may fail.</span></span>  
+  
+ [!code-csharp[Conceptual.Strings.BestPractices#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect1.cs#7)]
+ [!code-vb[Conceptual.Strings.BestPractices#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect1.vb#7)]  
+  
+ <span data-ttu-id="0d716-347">Uma variação recomendada é exibida no exemplo a seguir, que usa o mesmo método de comparação (que não leva em conta a cultura) ordinal para classificar e pesquisar a matriz.</span><span class="sxs-lookup"><span data-stu-id="0d716-347">A recommended variation appears in the following example, which uses the same ordinal (culture-insensitive) comparison method both to sort and to search the array.</span></span> <span data-ttu-id="0d716-348">O código de alteração é refletido nas linhas rotuladas como `Line A` e `Line B` nos dois exemplos.</span><span class="sxs-lookup"><span data-stu-id="0d716-348">The change code is reflected in the lines labeled `Line A` and `Line B` in the two examples.</span></span>  
+  
+ [!code-csharp[Conceptual.Strings.BestPractices#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect1.cs#8)]
+ [!code-vb[Conceptual.Strings.BestPractices#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect1.vb#8)]  
+  
+ <span data-ttu-id="0d716-349">Se esses dados forem mantidos e movidos entre as culturas e a classificação for usada para apresentar esses dados para o usuário, você pode considerar usar <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType>, que opera linguisticamente para a melhor saída do usuário, mas não é afetado pelas alterações na cultura.</span><span class="sxs-lookup"><span data-stu-id="0d716-349">If this data is persisted and moved across cultures, and sorting is used to present this data to the user, you might consider using <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType>, which operates linguistically for better user output but is unaffected by changes in culture.</span></span> <span data-ttu-id="0d716-350">O exemplo a seguir modifica os dois exemplos anteriores para usar a cultura invariável para classificar e pesquisar a matriz.</span><span class="sxs-lookup"><span data-stu-id="0d716-350">The following example modifies the two previous examples to use the invariant culture for sorting and searching the array.</span></span>  
+  
+ [!code-csharp[Conceptual.Strings.BestPractices#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect1.cs#9)]
+ [!code-vb[Conceptual.Strings.BestPractices#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect1.vb#9)]  
+  
+### <a name="collections-example-hashtable-constructor"></a><span data-ttu-id="0d716-351">Exemplo de Coleções: Construtor da Tabela de Hash</span><span class="sxs-lookup"><span data-stu-id="0d716-351">Collections Example: Hashtable Constructor</span></span>  
+ <span data-ttu-id="0d716-352">As cadeias de caracteres de hash fornecem um segundo exemplo de uma operação que é afetada pela maneira como as cadeias de caracteres são comparadas.</span><span class="sxs-lookup"><span data-stu-id="0d716-352">Hashing strings provides a second example of an operation that is affected by the way in which strings are compared.</span></span>  
+  
+ <span data-ttu-id="0d716-353">O exemplo a seguir cria um <xref:System.Collections.Hashtable> objeto passando-o <xref:System.StringComparer> objeto que é retornado pelo <xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType> propriedade.</span><span class="sxs-lookup"><span data-stu-id="0d716-353">The following example instantiates a <xref:System.Collections.Hashtable> object by passing it the <xref:System.StringComparer> object that is returned by the <xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="0d716-354">Porque uma classe <xref:System.StringComparer> que é derivado de <xref:System.StringComparer> implementa o <xref:System.Collections.IEqualityComparer> interface, seu <xref:System.Collections.IEqualityComparer.GetHashCode%2A> método é usado para calcular o código hash de cadeias de caracteres na tabela de hash.</span><span class="sxs-lookup"><span data-stu-id="0d716-354">Because a class <xref:System.StringComparer> that is derived from <xref:System.StringComparer> implements the <xref:System.Collections.IEqualityComparer> interface, its <xref:System.Collections.IEqualityComparer.GetHashCode%2A> method is used to compute the hash code of strings in the hash table.</span></span>  
+  
+ [!code-csharp[Conceptual.Strings.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect2.cs#10)]
+ [!code-vb[Conceptual.Strings.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect2.vb#10)]  
+  
+ [<span data-ttu-id="0d716-355">Voltar ao início</span><span class="sxs-lookup"><span data-stu-id="0d716-355">Back to top</span></span>](#top)  
+  
+<a name="Formatted"></a>   
+## <a name="displaying-and-persisting-formatted-data"></a><span data-ttu-id="0d716-356">Exibindo e Mantendo Dados Formatados</span><span class="sxs-lookup"><span data-stu-id="0d716-356">Displaying and Persisting Formatted Data</span></span>  
+ <span data-ttu-id="0d716-357">Quando você exibir dados que não são de cadeias de caracteres como números e datas e horas para os usuários, formate-os usando as configurações culturais do usuário.</span><span class="sxs-lookup"><span data-stu-id="0d716-357">When you display non-string data such as numbers and dates and times to users, format them by using the user's cultural settings.</span></span> <span data-ttu-id="0d716-358">Por padrão, o <xref:System.String.Format%2A?displayProperty=nameWithType> método e o `ToString` métodos dos tipos numéricos e os tipos de data e hora usam a cultura do thread atual para operações de formatação.</span><span class="sxs-lookup"><span data-stu-id="0d716-358">By default, the <xref:System.String.Format%2A?displayProperty=nameWithType> method and the `ToString` methods of the numeric types and the date and time types use the current thread culture for formatting operations.</span></span> <span data-ttu-id="0d716-359">Para especificar explicitamente que o método de formatação deve usar a cultura atual, você pode chamar uma sobrecarga de um método de formatação que tem um `provider` parâmetro, como <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> ou <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>e passá-lo a <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> propriedade.</span><span class="sxs-lookup"><span data-stu-id="0d716-359">To explicitly specify that the formatting method should use the current culture, you can call an overload of a formatting method that has a `provider` parameter, such as <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> or <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>, and pass it the <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> property.</span></span>  
+  
+ <span data-ttu-id="0d716-360">Você pode manter os dados que não são de cadeias de caracteres como dados binários ou como dados formatados.</span><span class="sxs-lookup"><span data-stu-id="0d716-360">You can persist non-string data either as binary data or as formatted data.</span></span> <span data-ttu-id="0d716-361">Se você optar por salvá-lo dados formatados como, você deve chamar uma sobrecarga de método de formatação que inclui um `provider` parâmetro e passá-lo a <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> propriedade.</span><span class="sxs-lookup"><span data-stu-id="0d716-361">If you choose to save it as formatted data, you should call a formatting method overload that includes a `provider` parameter and pass it the <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="0d716-362">A cultura invariável fornece um formato consistente para os dados formatados que é independente da cultura e do computador.</span><span class="sxs-lookup"><span data-stu-id="0d716-362">The invariant culture provides a consistent format for formatted data that is independent of culture and machine.</span></span> <span data-ttu-id="0d716-363">Em contraste, dados persistentes que são formatados usando culturas diferentes da cultura invariável têm várias limitações:</span><span class="sxs-lookup"><span data-stu-id="0d716-363">In contrast, persisting data that is formatted by using cultures other than the invariant culture has a number of limitations:</span></span>  
+  
+-   <span data-ttu-id="0d716-364">É provável que os dados não sejam utilizáveis se forem recuperados em um sistema que tem uma cultura diferente ou se o usuário do sistema atual alterar a cultura atual e tentar recuperar os dados.</span><span class="sxs-lookup"><span data-stu-id="0d716-364">The data is likely to be unusable if it is retrieved on a system that has a different culture, or if the user of the current system changes the current culture and tries to retrieve the data.</span></span>  
+  
+-   <span data-ttu-id="0d716-365">As propriedades de uma cultura em um computador específico podem ser diferentes dos valores padrão.</span><span class="sxs-lookup"><span data-stu-id="0d716-365">The properties of a culture on a specific computer can differ from standard values.</span></span> <span data-ttu-id="0d716-366">A qualquer momento, um usuário pode personalizar as configurações de exibição que levam em conta a cultura.</span><span class="sxs-lookup"><span data-stu-id="0d716-366">At any time, a user can customize culture-sensitive display settings.</span></span> <span data-ttu-id="0d716-367">Devido a isso, os dados formatados que são salvos em um sistema podem não ser legíveis após o usuário personalizar as configurações culturais.</span><span class="sxs-lookup"><span data-stu-id="0d716-367">Because of this, formatted data that is saved on a system may not be readable after the user customizes cultural settings.</span></span> <span data-ttu-id="0d716-368">É provável que a portabilidade dos dados formatados entre computadores seja ainda mais limitada.</span><span class="sxs-lookup"><span data-stu-id="0d716-368">The portability of formatted data across computers is likely to be even more limited.</span></span>  
+  
+-   <span data-ttu-id="0d716-369">Padrões internacionais, regionais ou nacionais que controlam a formatação de números ou datas e horas alterar ao longo do tempo, e essas alterações são incorporadas atualizações do sistema operacional Windows.</span><span class="sxs-lookup"><span data-stu-id="0d716-369">International, regional, or national standards that govern the formatting of numbers or dates and times change over time, and these changes are incorporated into Windows operating system updates.</span></span> <span data-ttu-id="0d716-370">Quando as convenções de formatação mudam, os dados que foram formatados usando as convenções anteriores podem se tornar ilegíveis.</span><span class="sxs-lookup"><span data-stu-id="0d716-370">When formatting conventions change, data that was formatted by using the previous conventions may become unreadable.</span></span>  
+  
+ <span data-ttu-id="0d716-371">O exemplo a seguir ilustra a portabilidade limitada resultante do uso da formatação que leva em conta a cultura para manter os dados.</span><span class="sxs-lookup"><span data-stu-id="0d716-371">The following example illustrates the limited portability that results from using culture-sensitive formatting to persist data.</span></span> <span data-ttu-id="0d716-372">O exemplo salva uma matriz de valores de data e hora em um arquivo.</span><span class="sxs-lookup"><span data-stu-id="0d716-372">The example saves an array of date and time values to a file.</span></span> <span data-ttu-id="0d716-373">Eles são formatados usando as convenções da cultura do inglês (Estados Unidos).</span><span class="sxs-lookup"><span data-stu-id="0d716-373">These are formatted by using the conventions of the English (United States) culture.</span></span> <span data-ttu-id="0d716-374">Depois que o aplicativo altera a cultura do thread atual para francês (Suíça), ele tenta ler os valores salvos usando as convenções de formatação da cultura atual.</span><span class="sxs-lookup"><span data-stu-id="0d716-374">After the application changes the current thread culture to French (Switzerland), it tries to read the saved values by using the formatting conventions of the current culture.</span></span> <span data-ttu-id="0d716-375">Tentativa de leitura de dois dos dados itens lança um <xref:System.FormatException> exceção e a matriz de datas agora contém dois elementos incorretos iguais ao <xref:System.DateTime.MinValue>.</span><span class="sxs-lookup"><span data-stu-id="0d716-375">The attempt to read two of the data items throws a <xref:System.FormatException> exception, and the array of dates now contains two incorrect elements that are equal to <xref:System.DateTime.MinValue>.</span></span>  
+  
+ [!code-csharp[Conceptual.Strings.BestPractices#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/persistence.cs#21)]
+ [!code-vb[Conceptual.Strings.BestPractices#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/persistence.vb#21)]  
+  
+ <span data-ttu-id="0d716-376">No entanto, se você substituir o <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> propriedade com <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> em chamadas para <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> e <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, persistente de data e hora dados são restaurados com êxito, como mostra a saída a seguir.</span><span class="sxs-lookup"><span data-stu-id="0d716-376">However, if you replace the <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> property with <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> in the calls to <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> and <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>,   the persisted date and time data is successfully restored, as the following output shows.</span></span>  
+  
+```  
+06.05.1758 21:26  
+05.05.1818 07:19  
+22.04.1870 23:54  
+08.09.1890 06:47  
+18.02.1905 15:12  
+```  
+  
+## <a name="see-also"></a><span data-ttu-id="0d716-377">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0d716-377">See Also</span></span>  
+ [<span data-ttu-id="0d716-378">Manipulando cadeias de caracteres</span><span class="sxs-lookup"><span data-stu-id="0d716-378">Manipulating Strings</span></span>](../../../docs/standard/base-types/manipulating-strings.md)

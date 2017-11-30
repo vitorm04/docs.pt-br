@@ -1,535 +1,333 @@
 ---
-title: Sistema de tipo comum detalhado
-description: Sistema de tipo comum detalhado
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 07/20/2016
-ms.topic: article
+title: Common Type System
+ms.custom: 
+ms.date: 03/30/2017
 ms.prod: .net
+ms.reviewer: 
+ms.suite: 
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: b5482a1d-7bdc-40fe-aa45-10df930ceb5b
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 6be672acc84a76106e25b82574acad16beb4a8ac
-ms.lasthandoff: 03/02/2017
-
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- type system
+- common type system
+- assemblies [.NET Framework], types
+- reference types
+- value types
+- cross-language interoperability
+- namespaces [.NET Framework], types
+- types, about types
+ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
+caps.latest.revision: "25"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 9f9952cfd6ed2d5bac66d1cd5e3c8eed7506cd5c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-
-# <a name="common-type-system-in-depth"></a>Sistema de tipo comum detalhado
-
-Este tópico contém as seções a seguir que exploram o Common Type System detalhadamente:
-
-* [Tipos no .NET](#types-in-net)
-
-* [Definições de tipo](#type-definitions)
-
-* [Membros de tipos](#type-members)
-
-* [Características de membros de tipo](#characteristics-of-type-members)
-
-
-## <a name="types-in-net"></a>Tipos no .NET
-
-Todos os tipos no .NET são tipos de valor ou tipos de referência. 
-
-Tipos de valor são tipos de dados cujos objetos são representados pelo valor real do objeto. Se uma instância de um tipo de valor é atribuída a uma variável, essa variável recebe uma nova cópia do valor.
-
-Tipos de referência são tipos de dados cujos objetos são representados por uma referência (semelhante a um ponteiro) para o valor real do objeto. Se um tipo de referência é atribuído a uma variável, essa variável referencia (aponta para) o valor original. Nenhuma cópia é feita. 
-
-O Common Type System no .NET dá suporte às seguintes cinco categorias de tipos:
-
-* [Classes](#classes)
-
-* [Estruturas](#structures)
-
-* [Enumerações](#enumerations)
-
-* [Interfaces](#interfaces)
-
-* [Delegados](#delegates)
-
-### <a name="classes"></a>Classes
-
-Uma classe é um tipo de referência que pode ser derivado diretamente de outra classe e que é derivada implicitamente de [System.Object](xref:System.Object). A classe define as operações que um objeto (que é uma instância da classe) pode executar (métodos, eventos ou propriedades) e os dados que o objeto contém (campos). Embora uma classe geralmente inclua a definição e a implementação (diferente de interfaces, por exemplo, que contêm somente a definição sem implementação), ela pode ter um ou mais membros que não têm implementação.
-
-A tabela a seguir descreve algumas das características que uma classe pode ter. Cada linguagem que dá suporte ao tempo de execução fornece uma maneira para indicar que uma classe ou um membro da classe tem uma ou mais dessas características. No entanto, as linguagens de programação individuais que segmentam o .NET não podem disponibilizar todas essas características.
-
-Característica | Descrição
--------------- | -----------
-sealed | Especifica que outra classe não pode ser derivada desse tipo.
-implementa | Indica que a classe usa uma ou mais interfaces, fornecendo implementações de membros da interface.
-abstract | Indica que a classe não pode ser instanciada. Para usá-la, você deve derivar outra classe a partir dela.
-herda | Indica que as instâncias da classe podem ser usadas em qualquer lugar em que a classe base for especificada. Uma classe derivada que herda de uma classe base pode usar a implementação de todos os membros públicos fornecidos pela classe base ou a classe derivada pode substituir a implementação dos membros públicos com sua própria implementação.
-exportado ou não exportado | Indica se uma classe está visível fora do assembly em que ela está definida. Essa característica só se aplica a classes de nível superior e não a classes aninhadas.
-
+# <a name="common-type-system"></a><span data-ttu-id="85862-102">Common Type System</span><span class="sxs-lookup"><span data-stu-id="85862-102">Common Type System</span></span>
+<span data-ttu-id="85862-103">O Common Type System define como os tipos são declarados, usados e gerenciados no Common Language Runtime e também é uma parte importante do suporte do tempo de execução para a integração entre linguagens.</span><span class="sxs-lookup"><span data-stu-id="85862-103">The common type system defines how types are declared, used, and managed in the common language runtime, and is also an important part of the runtime's support for cross-language integration.</span></span> <span data-ttu-id="85862-104">O Common Type System executa as seguintes funções:</span><span class="sxs-lookup"><span data-stu-id="85862-104">The common type system performs the following functions:</span></span>  
+  
+-   <span data-ttu-id="85862-105">Estabelece uma estrutura que ajuda a habilitar integração entre linguagens, segurança de tipos e execução de código de alto desempenho.</span><span class="sxs-lookup"><span data-stu-id="85862-105">Establishes a framework that helps enable cross-language integration, type safety, and high-performance code execution.</span></span>  
+  
+-   <span data-ttu-id="85862-106">Fornece um modelo orientado a objetos que dá suporte à implementação completa de muitas linguagens de programação.</span><span class="sxs-lookup"><span data-stu-id="85862-106">Provides an object-oriented model that supports the complete implementation of many programming languages.</span></span>  
+  
+-   <span data-ttu-id="85862-107">Define regras que as linguagens devem seguir, o que ajuda a assegurar que objetos escritos em linguagens diferentes possam interagir entre si.</span><span class="sxs-lookup"><span data-stu-id="85862-107">Defines rules that languages must follow, which helps ensure that objects written in different languages can interact with each other.</span></span>  
+  
+-   <span data-ttu-id="85862-108">Fornece uma biblioteca que contém os tipos de dados primitivos (como <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.Int32> e <xref:System.UInt64>) usados no desenvolvimento de aplicativos.</span><span class="sxs-lookup"><span data-stu-id="85862-108">Provides a library that contains the primitive data types (such as <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.Int32>, and <xref:System.UInt64>) used in application development.</span></span>  
+  
+ <span data-ttu-id="85862-109">Esse tópico contém as seguintes seções:</span><span class="sxs-lookup"><span data-stu-id="85862-109">This topic contains the following sections:</span></span>  
+  
+-   [<span data-ttu-id="85862-110">Tipos no .NET</span><span class="sxs-lookup"><span data-stu-id="85862-110">Types in .NET</span></span>](#types_in_the_net_framework)  
+  
+-   [<span data-ttu-id="85862-111">Definições de tipo</span><span class="sxs-lookup"><span data-stu-id="85862-111">Type Definitions</span></span>](#type_definitions)  
+  
+-   [<span data-ttu-id="85862-112">Membros de tipos</span><span class="sxs-lookup"><span data-stu-id="85862-112">Type Members</span></span>](#type_members)  
+  
+-   [<span data-ttu-id="85862-113">Características de membros de tipo</span><span class="sxs-lookup"><span data-stu-id="85862-113">Characteristics of Type Members</span></span>](#characteristics_of_type_members)  
+  
+<a name="types_in_the_net_framework"></a>   
+## <a name="types-in-net"></a><span data-ttu-id="85862-114">Tipos no .NET</span><span class="sxs-lookup"><span data-stu-id="85862-114">Types in .NET</span></span>  
+ <span data-ttu-id="85862-115">Todos os tipos no .NET são tipos de valor ou tipos de referência.</span><span class="sxs-lookup"><span data-stu-id="85862-115">All types in .NET are either value types or reference types.</span></span>  
+  
+ <span data-ttu-id="85862-116">Tipos de valor são tipos de dados cujos objetos são representados pelo valor real do objeto.</span><span class="sxs-lookup"><span data-stu-id="85862-116">Value types are data types whose objects are represented by the object's actual value.</span></span> <span data-ttu-id="85862-117">Se uma instância de um tipo de valor é atribuída a uma variável, essa variável recebe uma nova cópia do valor.</span><span class="sxs-lookup"><span data-stu-id="85862-117">If an instance of a value type is assigned to a variable, that variable is given a fresh copy of the value.</span></span>  
+  
+ <span data-ttu-id="85862-118">Tipos de referência são tipos de dados cujos objetos são representados por uma referência (semelhante a um ponteiro) para o valor real do objeto.</span><span class="sxs-lookup"><span data-stu-id="85862-118">Reference types are data types whose objects are represented by a reference (similar to a pointer) to the object's actual value.</span></span> <span data-ttu-id="85862-119">Se um tipo de referência é atribuído a uma variável, essa variável referencia (aponta para) o valor original.</span><span class="sxs-lookup"><span data-stu-id="85862-119">If a reference type is assigned to a variable, that variable references (points to) the original value.</span></span> <span data-ttu-id="85862-120">Nenhuma cópia é feita.</span><span class="sxs-lookup"><span data-stu-id="85862-120">No copy is made.</span></span>  
+  
+ <span data-ttu-id="85862-121">O Common Type System no .NET dá suporte às seguintes cinco categorias de tipos:</span><span class="sxs-lookup"><span data-stu-id="85862-121">The common type system in .NET supports the following five categories of types:</span></span>  
+  
+-   [<span data-ttu-id="85862-122">Classes</span><span class="sxs-lookup"><span data-stu-id="85862-122">Classes</span></span>](#Classes)  
+  
+-   [<span data-ttu-id="85862-123">Estruturas</span><span class="sxs-lookup"><span data-stu-id="85862-123">Structures</span></span>](#Structures)  
+  
+-   [<span data-ttu-id="85862-124">Enumerações</span><span class="sxs-lookup"><span data-stu-id="85862-124">Enumerations</span></span>](#Enumerations)  
+  
+-   [<span data-ttu-id="85862-125">Interfaces</span><span class="sxs-lookup"><span data-stu-id="85862-125">Interfaces</span></span>](#Interfaces)  
+  
+-   [<span data-ttu-id="85862-126">Delegados</span><span class="sxs-lookup"><span data-stu-id="85862-126">Delegates</span></span>](#Delegates)  
+  
+<a name="Classes"></a>   
+### <a name="classes"></a><span data-ttu-id="85862-127">Classes</span><span class="sxs-lookup"><span data-stu-id="85862-127">Classes</span></span>  
+ <span data-ttu-id="85862-128">Uma classe é um tipo de referência que pode ser derivada diretamente de outra classe e que é derivada implicitamente de <xref:System.Object?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="85862-128">A class is a reference type that can be derived directly from another class and that is derived implicitly from <xref:System.Object?displayProperty=nameWithType>.</span></span> <span data-ttu-id="85862-129">A classe define as operações que um objeto (que é uma instância da classe) pode executar (métodos, eventos ou propriedades) e os dados que o objeto contém (campos).</span><span class="sxs-lookup"><span data-stu-id="85862-129">The class defines the operations that an object (which is an instance of the class) can perform (methods, events, or properties) and the data that the object contains (fields).</span></span> <span data-ttu-id="85862-130">Embora uma classe geralmente inclua a definição e a implementação (diferente de interfaces, por exemplo, que contêm somente a definição sem implementação), ela pode ter um ou mais membros que não têm implementação.</span><span class="sxs-lookup"><span data-stu-id="85862-130">Although a class generally includes both definition and implementation (unlike interfaces, for example, which contain only definition without implementation), it can have one or more members that have no implementation.</span></span>  
+  
+ <span data-ttu-id="85862-131">A tabela a seguir descreve algumas das características que uma classe pode ter.</span><span class="sxs-lookup"><span data-stu-id="85862-131">The following table describes some of the characteristics that a class may have.</span></span> <span data-ttu-id="85862-132">Cada linguagem que dá suporte ao tempo de execução fornece uma maneira para indicar que uma classe ou um membro da classe tem uma ou mais dessas características.</span><span class="sxs-lookup"><span data-stu-id="85862-132">Each language that supports the runtime provides a way to indicate that a class or class member has one or more of these characteristics.</span></span> <span data-ttu-id="85862-133">No entanto, as linguagens de programação individuais que segmentam o .NET não podem disponibilizar todas essas características.</span><span class="sxs-lookup"><span data-stu-id="85862-133">However, individual programming languages that target .NET may not make all these characteristics available.</span></span>  
+  
+|<span data-ttu-id="85862-134">Característica</span><span class="sxs-lookup"><span data-stu-id="85862-134">Characteristic</span></span>|<span data-ttu-id="85862-135">Descrição</span><span class="sxs-lookup"><span data-stu-id="85862-135">Description</span></span>|  
+|--------------------|-----------------|  
+|<span data-ttu-id="85862-136">sealed</span><span class="sxs-lookup"><span data-stu-id="85862-136">sealed</span></span>|<span data-ttu-id="85862-137">Especifica que outra classe não pode ser derivada desse tipo.</span><span class="sxs-lookup"><span data-stu-id="85862-137">Specifies that another class cannot be derived from this type.</span></span>|  
+|<span data-ttu-id="85862-138">implementa</span><span class="sxs-lookup"><span data-stu-id="85862-138">implements</span></span>|<span data-ttu-id="85862-139">Indica que a classe usa uma ou mais interfaces, fornecendo implementações de membros da interface.</span><span class="sxs-lookup"><span data-stu-id="85862-139">Indicates that the class uses one or more interfaces by providing implementations of interface members.</span></span>|  
+|<span data-ttu-id="85862-140">abstract</span><span class="sxs-lookup"><span data-stu-id="85862-140">abstract</span></span>|<span data-ttu-id="85862-141">Indica que a classe não pode ser instanciada.</span><span class="sxs-lookup"><span data-stu-id="85862-141">Indicates that the class cannot be instantiated.</span></span> <span data-ttu-id="85862-142">Para usá-la, você deve derivar outra classe a partir dela.</span><span class="sxs-lookup"><span data-stu-id="85862-142">To use it, you must derive another class from it.</span></span>|  
+|<span data-ttu-id="85862-143">herda</span><span class="sxs-lookup"><span data-stu-id="85862-143">inherits</span></span>|<span data-ttu-id="85862-144">Indica que as instâncias da classe podem ser usadas em qualquer lugar em que a classe base for especificada.</span><span class="sxs-lookup"><span data-stu-id="85862-144">Indicates that instances of the class can be used anywhere the base class is specified.</span></span> <span data-ttu-id="85862-145">Uma classe derivada que herda de uma classe base pode usar a implementação de todos os membros públicos fornecidos pela classe base ou a classe derivada pode substituir a implementação dos membros públicos com sua própria implementação.</span><span class="sxs-lookup"><span data-stu-id="85862-145">A derived class that inherits from a base class can use the implementation of any public members provided by the base class, or the derived class can override the implementation of the public members with its own implementation.</span></span>|  
+|<span data-ttu-id="85862-146">exportado ou não exportado</span><span class="sxs-lookup"><span data-stu-id="85862-146">exported or not exported</span></span>|<span data-ttu-id="85862-147">Indica se uma classe está visível fora do assembly em que ela está definida.</span><span class="sxs-lookup"><span data-stu-id="85862-147">Indicates whether a class is visible outside the assembly in which it is defined.</span></span> <span data-ttu-id="85862-148">Essa característica só se aplica a classes de nível superior e não a classes aninhadas.</span><span class="sxs-lookup"><span data-stu-id="85862-148">This characteristic applies only to top-level classes and not to nested classes.</span></span>|  
+  
 > [!NOTE]
-> Uma classe também pode ser aninhada em uma classe ou estrutura pai. Classes aninhadas também têm características de membro. Para obter mais informações, consulte [Tipos aninhados](#nested-types).
-
-Membros da classe que não tenham implementação são membros abstratos. Uma classe que tenha um ou mais membros abstratos é ela própria abstrata. Não é possível criar novas instâncias dessa classe. Algumas linguagens que segmentam o tempo de execução permitem marcar uma classe como abstrata mesmo que nenhum de seus membros seja abstrato. É possível usar uma classe abstrata quando você deseja encapsular um conjunto básico de funcionalidades que as classes derivadas podem herdar ou substituir quando apropriado. Classes que não são abstratas são chamadas de classes concretas.
-
-Uma classe pode implementar qualquer número de interfaces, mas pode herdar apenas uma classe base além de [System.Object](xref:System.Object), de que todas as classes herdam implicitamente. Todas as classes devem ter pelo menos um construtor, que inicializa novas instâncias da classe. Se você não definir explicitamente um construtor, a maioria dos compiladores fornecerá automaticamente um construtor padrão (sem parâmetros).
-
-### <a name="structures"></a>Estruturas
-
-Uma estrutura é um tipo de valor que é derivado implicitamente de [System.ValueType](xref:System.ValueType) que, por sua vez, é derivado de [System.Object](xref:System.Object). Uma estrutura é muito útil para representar valores cujos requisitos de memória são pequenos e passar valores como parâmetros por valor para os métodos que tenham parâmetros fortemente tipados. No .NET, todos os tipos de dados primitivos ([Booliano](xref:System.Boolean), [Byte](xref:System.Byte), [Char](xref:System.Char), [DateTime](xref:System.DateTime), [Decimal](xref:System.Decimal), [Double](xref:System.Double), [Int16](xref:System.Int16), [Int32](xref:System.Int32), [Int64](xref:System.Int64), [SByte](xref:System.SByte), [Single](xref:System.Single), [UInt16](xref:System.UInt16), [UInt32](xref:System.UInt32) e [UInt64](xref:System.UInt64)) são definidos como estruturas.
-
-Assim como as classes, as estruturas definem os dados (os campos da estrutura) e as operações que podem ser executadas nesses dados (os métodos da estrutura). Isso significa que você pode chamar métodos em estruturas, incluindo os métodos virtuais definidos nas classes [System.Object](xref:System.Object) e [System.ValueType](xref:System.ValueType) e todos os métodos definidos no próprio tipo de valor. Em outras palavras, as estruturas podem ter campos, propriedades e eventos, bem como métodos estáticos e não estáticos. É possível criar instâncias de estruturas, passá-las como parâmetros, armazená-las como variáveis locais ou armazená-las em um campo de outro tipo de valor ou tipo de referência. As estruturas também podem implementar interfaces.
-
-Tipos de valor também são diferentes das classes em vários pontos. Primeiro, embora herdem implicitamente de [System.ValueType](xref:System.ValueType), eles não podem herdar diretamente de qualquer tipo. Da mesma forma, todos os tipos de valor são lacrados, o que significa que nenhum outro tipo pode ser derivado deles. Eles também não exigem construtores.
-
-Para cada tipo de valor, o Common Language Runtime fornece um tipo disponível demarcado correspondente, que é uma classe com o mesmo estado e comportamento que o tipo de valor. Uma instância de um tipo de valor é demarcada quando é passada para um método que aceita um parâmetro de tipo [System.Object](xref:System.Object). Ele é não demarcado (ou seja, convertido de uma instância de uma classe de volta para uma instância de um tipo de valor) quando o controle retorna de uma chamada de método que aceita um tipo de valor como um parâmetro por referência. Algumas linguagens exigem que você use sintaxe especial quando o tipo demarcado é necessário. Outras usam automaticamente o tipo demarcado quando necessário. Ao definir um tipo de valor, você está definindo o tipo demarcado e não demarcado.
-
-### <a name="enumerations"></a>Enumerações
-
-Uma enumeração (enum) é um tipo de valor que é herdado diretamente de [System.Enum](xref:System.Enum) e que fornece nomes alternativos para valores de um tipo primitivo subjacente. Um tipo de enumeração tem um nome, um tipo subjacente que deve ser um dos tipos inteiros com ou sem sinal internos (como [Byte](xref:System.Byte), [Int32](xref:System.Int32) ou [UInt64](xref:System.UInt64)) e um conjunto de campos. Os campos são campos literais estáticos, cada um deles representa uma constante. O mesmo valor pode ser atribuído a vários campos. Quando isso ocorre, você deve marcar um dos valores como o valor de enumeração primário para reflexão e conversão da cadeia de caracteres.
-
-Você pode atribuir um valor de tipo subjacente a uma enumeração e vice-versa (nenhuma conversão é exigida pelo tempo de execução). É possível criar uma instância de uma enumeração e chamar os métodos de [System.Enum](xref:System.Enum), assim como qualquer método definido no tipo subjacente da enumeração. No entanto, algumas linguagens talvez não deixem passar uma enumeração como um parâmetro quando uma instância do tipo subjacente é necessária (ou vice-versa).
-
-As seguintes restrições adicionais se aplicam a enumerações: 
-
-* Elas não podem definir seus próprios métodos.
-
-* Elas não podem implementar interfaces.
-
-* Elas não podem definir propriedades ou eventos.
-
-* Elas não podem ser genéricas, a menos que sejam genéricas apenas por estarem aninhadas dentro de um tipo genérico. Ou seja, uma enumeração não pode ter parâmetros de tipo próprios. 
-
+>  <span data-ttu-id="85862-149">Uma classe também pode ser aninhada em uma classe ou estrutura pai.</span><span class="sxs-lookup"><span data-stu-id="85862-149">A class can also be nested in a parent class or structure.</span></span> <span data-ttu-id="85862-150">Classes aninhadas também têm características de membro.</span><span class="sxs-lookup"><span data-stu-id="85862-150">Nested classes also have member characteristics.</span></span> <span data-ttu-id="85862-151">Para obter mais informações, consulte [Tipos aninhados](#NestedTypes).</span><span class="sxs-lookup"><span data-stu-id="85862-151">For more information, see [Nested Types](#NestedTypes).</span></span>  
+  
+ <span data-ttu-id="85862-152">Membros da classe que não tenham implementação são membros abstratos.</span><span class="sxs-lookup"><span data-stu-id="85862-152">Class members that have no implementation are abstract members.</span></span> <span data-ttu-id="85862-153">Uma classe que tenha um ou mais membros abstratos é ela própria abstrata. Não é possível criar novas instâncias dessa classe.</span><span class="sxs-lookup"><span data-stu-id="85862-153">A class that has one or more abstract members is itself abstract; new instances of it cannot be created.</span></span> <span data-ttu-id="85862-154">Algumas linguagens que segmentam o tempo de execução permitem marcar uma classe como abstrata mesmo que nenhum de seus membros seja abstrato.</span><span class="sxs-lookup"><span data-stu-id="85862-154">Some languages that target the runtime let you mark a class as abstract even if none of its members are abstract.</span></span> <span data-ttu-id="85862-155">É possível usar uma classe abstrata quando você deseja encapsular um conjunto básico de funcionalidades que as classes derivadas podem herdar ou substituir quando apropriado.</span><span class="sxs-lookup"><span data-stu-id="85862-155">You can use an abstract class when you want to encapsulate a basic set of functionality that derived classes can inherit or override when appropriate.</span></span> <span data-ttu-id="85862-156">Classes que não são abstratas são chamadas de classes concretas.</span><span class="sxs-lookup"><span data-stu-id="85862-156">Classes that are not abstract are referred to as concrete classes.</span></span>  
+  
+ <span data-ttu-id="85862-157">Uma classe pode implementar qualquer número de interfaces, mas pode herdar apenas de uma classe base além de <xref:System.Object?displayProperty=nameWithType>, de que todas as classes herdam implicitamente.</span><span class="sxs-lookup"><span data-stu-id="85862-157">A class can implement any number of interfaces, but it can inherit from only one base class in addition to <xref:System.Object?displayProperty=nameWithType>, from which all classes inherit implicitly.</span></span> <span data-ttu-id="85862-158">Todas as classes devem ter pelo menos um construtor, que inicializa novas instâncias da classe.</span><span class="sxs-lookup"><span data-stu-id="85862-158">All classes must have at least one constructor, which initializes new instances of the class.</span></span> <span data-ttu-id="85862-159">Se você não definir explicitamente um construtor, a maioria dos compiladores fornecerá automaticamente um construtor padrão (sem parâmetros).</span><span class="sxs-lookup"><span data-stu-id="85862-159">If you do not explicitly define a constructor, most compilers will automatically provide a default (parameterless) constructor.</span></span>  
+  
+<a name="Structures"></a>   
+### <a name="structures"></a><span data-ttu-id="85862-160">Estruturas</span><span class="sxs-lookup"><span data-stu-id="85862-160">Structures</span></span>  
+ <span data-ttu-id="85862-161">Uma estrutura é um tipo de valor que é derivado implicitamente do <xref:System.ValueType?displayProperty=nameWithType> que, por sua vez, é derivado de <xref:System.Object?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="85862-161">A structure is a value type that derives implicitly from <xref:System.ValueType?displayProperty=nameWithType>, which in turn is derived from <xref:System.Object?displayProperty=nameWithType>.</span></span> <span data-ttu-id="85862-162">Uma estrutura é muito útil para representar valores cujos requisitos de memória são pequenos e passar valores como parâmetros por valor para os métodos que tenham parâmetros fortemente tipados.</span><span class="sxs-lookup"><span data-stu-id="85862-162">A structure is very useful for representing values whose memory requirements are small, and for passing values as by-value parameters to methods that have strongly typed parameters.</span></span> <span data-ttu-id="85862-163">No .NET, todos os tipos de dados primitivos (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, e <xref:System.UInt64>) são definidos como estruturas.</span><span class="sxs-lookup"><span data-stu-id="85862-163">In .NET, all primitive data types (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, and <xref:System.UInt64>) are defined as structures.</span></span>  
+  
+ <span data-ttu-id="85862-164">Assim como as classes, as estruturas definem os dados (os campos da estrutura) e as operações que podem ser executadas nesses dados (os métodos da estrutura).</span><span class="sxs-lookup"><span data-stu-id="85862-164">Like classes, structures define both data (the fields of the structure) and the operations that can be performed on that data (the methods of the structure).</span></span> <span data-ttu-id="85862-165">Isso significa que você pode chamar métodos em estruturas, incluindo os métodos virtuais definidos nas classes <xref:System.Object?displayProperty=nameWithType> e <xref:System.ValueType?displayProperty=nameWithType> e todos os métodos definidos no próprio tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="85862-165">This means that you can call methods on structures, including the virtual methods defined on the <xref:System.Object?displayProperty=nameWithType> and <xref:System.ValueType?displayProperty=nameWithType> classes, and any methods defined on the value type itself.</span></span> <span data-ttu-id="85862-166">Em outras palavras, as estruturas podem ter campos, propriedades e eventos, bem como métodos estáticos e não estáticos.</span><span class="sxs-lookup"><span data-stu-id="85862-166">In other words, structures can have fields, properties, and events, as well as static and nonstatic methods.</span></span> <span data-ttu-id="85862-167">É possível criar instâncias de estruturas, passá-las como parâmetros, armazená-las como variáveis locais ou armazená-las em um campo de outro tipo de valor ou tipo de referência.</span><span class="sxs-lookup"><span data-stu-id="85862-167">You can create instances of structures, pass them as parameters, store them as local variables, or store them in a field of another value type or reference type.</span></span> <span data-ttu-id="85862-168">As estruturas também podem implementar interfaces.</span><span class="sxs-lookup"><span data-stu-id="85862-168">Structures can also implement interfaces.</span></span>  
+  
+ <span data-ttu-id="85862-169">Tipos de valor também são diferentes das classes em vários pontos.</span><span class="sxs-lookup"><span data-stu-id="85862-169">Value types also differ from classes in several respects.</span></span> <span data-ttu-id="85862-170">Primeiro, embora herdem implicitamente do <xref:System.ValueType?displayProperty=nameWithType>, eles não podem herdar diretamente de qualquer tipo.</span><span class="sxs-lookup"><span data-stu-id="85862-170">First, although they implicitly inherit from <xref:System.ValueType?displayProperty=nameWithType>, they cannot directly inherit from any type.</span></span> <span data-ttu-id="85862-171">Da mesma forma, todos os tipos de valor são lacrados, o que significa que nenhum outro tipo pode ser derivado deles.</span><span class="sxs-lookup"><span data-stu-id="85862-171">Similarly, all value types are sealed, which means that no other type can be derived from them.</span></span> <span data-ttu-id="85862-172">Eles também não exigem construtores.</span><span class="sxs-lookup"><span data-stu-id="85862-172">They also do not require constructors.</span></span>  
+  
+ <span data-ttu-id="85862-173">Para cada tipo de valor, o Common Language Runtime fornece um tipo disponível demarcado correspondente, que é uma classe com o mesmo estado e comportamento que o tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="85862-173">For each value type, the common language runtime supplies a corresponding boxed type, which is a class that has the same state and behavior as the value type.</span></span> <span data-ttu-id="85862-174">Uma instância de um tipo de valor é demarcada quando é passada para um método que aceita um parâmetro de tipo <xref:System.Object?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="85862-174">An instance of a value type is boxed when it is passed to a method that accepts a parameter of type <xref:System.Object?displayProperty=nameWithType>.</span></span> <span data-ttu-id="85862-175">Ele é não demarcado (ou seja, convertido de uma instância de uma classe de volta para uma instância de um tipo de valor) quando o controle retorna de uma chamada de método que aceita um tipo de valor como um parâmetro por referência.</span><span class="sxs-lookup"><span data-stu-id="85862-175">It is unboxed (that is, converted from an instance of a class back to an instance of a value type) when control returns from a method call that accepts a value type as a by-reference parameter.</span></span> <span data-ttu-id="85862-176">Algumas linguagens exigem que você use sintaxe especial quando o tipo demarcado é necessário. Outras usam automaticamente o tipo demarcado quando necessário.</span><span class="sxs-lookup"><span data-stu-id="85862-176">Some languages require that you use special syntax when the boxed type is required; others automatically use the boxed type when it is needed.</span></span> <span data-ttu-id="85862-177">Ao definir um tipo de valor, você está definindo o tipo demarcado e não demarcado.</span><span class="sxs-lookup"><span data-stu-id="85862-177">When you define a value type, you are defining both the boxed and the unboxed type.</span></span>  
+  
+<a name="Enumerations"></a>   
+### <a name="enumerations"></a><span data-ttu-id="85862-178">Enumerações</span><span class="sxs-lookup"><span data-stu-id="85862-178">Enumerations</span></span>  
+ <span data-ttu-id="85862-179">Uma enumeração (enum) é um tipo de valor que é herdado diretamente de <xref:System.Enum?displayProperty=nameWithType> e que fornece nomes alternativos para valores de um tipo primitivo subjacente.</span><span class="sxs-lookup"><span data-stu-id="85862-179">An enumeration (enum) is a value type that inherits directly from <xref:System.Enum?displayProperty=nameWithType> and that supplies alternate names for the values of an underlying primitive type.</span></span> <span data-ttu-id="85862-180">Um tipo de enumeração tem um nome, um tipo subjacente que deve ser um dos tipos inteiros com ou sem sinal internos (como <xref:System.Byte>, <xref:System.Int32> ou <xref:System.UInt64>) e um conjunto de campos.</span><span class="sxs-lookup"><span data-stu-id="85862-180">An enumeration type has a name, an underlying type that must be one of the built-in signed or unsigned integer types (such as <xref:System.Byte>, <xref:System.Int32>, or <xref:System.UInt64>), and a set of fields.</span></span> <span data-ttu-id="85862-181">Os campos são campos literais estáticos, cada um deles representa uma constante.</span><span class="sxs-lookup"><span data-stu-id="85862-181">The fields are static literal fields, each of which represents a constant.</span></span> <span data-ttu-id="85862-182">O mesmo valor pode ser atribuído a vários campos.</span><span class="sxs-lookup"><span data-stu-id="85862-182">The same value can be assigned to multiple fields.</span></span> <span data-ttu-id="85862-183">Quando isso ocorre, você deve marcar um dos valores como o valor de enumeração primário para reflexão e conversão da cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="85862-183">When this occurs, you must mark one of the values as the primary enumeration value for reflection and string conversion.</span></span>  
+  
+ <span data-ttu-id="85862-184">Você pode atribuir um valor de tipo subjacente a uma enumeração e vice-versa (nenhuma conversão é exigida pelo tempo de execução).</span><span class="sxs-lookup"><span data-stu-id="85862-184">You can assign a value of the underlying type to an enumeration and vice versa (no cast is required by the runtime).</span></span> <span data-ttu-id="85862-185">É possível criar uma instância de uma enumeração e chamar os métodos de <xref:System.Enum?displayProperty=nameWithType>, assim como qualquer método definido no tipo subjacente da enumeração.</span><span class="sxs-lookup"><span data-stu-id="85862-185">You can create an instance of an enumeration and call the methods of <xref:System.Enum?displayProperty=nameWithType>, as well as any methods defined on the enumeration's underlying type.</span></span> <span data-ttu-id="85862-186">No entanto, algumas linguagens talvez não deixem passar uma enumeração como um parâmetro quando uma instância do tipo subjacente é necessária (ou vice-versa).</span><span class="sxs-lookup"><span data-stu-id="85862-186">However, some languages might not let you pass an enumeration as a parameter when an instance of the underlying type is required (or vice versa).</span></span>  
+  
+ <span data-ttu-id="85862-187">As seguintes restrições adicionais se aplicam a enumerações:</span><span class="sxs-lookup"><span data-stu-id="85862-187">The following additional restrictions apply to enumerations:</span></span>  
+  
+-   <span data-ttu-id="85862-188">Elas não podem definir seus próprios métodos.</span><span class="sxs-lookup"><span data-stu-id="85862-188">They cannot define their own methods.</span></span>  
+  
+-   <span data-ttu-id="85862-189">Elas não podem implementar interfaces.</span><span class="sxs-lookup"><span data-stu-id="85862-189">They cannot implement interfaces.</span></span>  
+  
+-   <span data-ttu-id="85862-190">Elas não podem definir propriedades ou eventos.</span><span class="sxs-lookup"><span data-stu-id="85862-190">They cannot define properties or events.</span></span>  
+  
+-   <span data-ttu-id="85862-191">Elas não podem ser genéricas, a menos que sejam genéricas apenas por estarem aninhadas dentro de um tipo genérico.</span><span class="sxs-lookup"><span data-stu-id="85862-191">They cannot be generic, unless they are generic only because they are nested within a generic type.</span></span> <span data-ttu-id="85862-192">Ou seja, uma enumeração não pode ter parâmetros de tipo próprios.</span><span class="sxs-lookup"><span data-stu-id="85862-192">That is, an enumeration cannot have type parameters of its own.</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="85862-193">Tipos aninhados (incluindo enumerações) criados com o Visual Basic, C# e C++ incluem os parâmetros de tipo de todos os tipos genéricos e, portanto, serão genéricos mesmo se não tiverem parâmetros de tipo próprios.</span><span class="sxs-lookup"><span data-stu-id="85862-193">Nested types (including enumerations) created with Visual Basic, C#, and C++ include the type parameters of all enclosing generic types, and are therefore generic even if they do not have type parameters of their own.</span></span> <span data-ttu-id="85862-194">Para obter mais informações, consulte "Tipos Aninhados" no tópico de referência <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="85862-194">For more information, see "Nested Types" in the <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> reference topic.</span></span>  
+  
+ <span data-ttu-id="85862-195">O atributo <xref:System.FlagsAttribute> denota um tipo especial de enumeração chamado campo de bits.</span><span class="sxs-lookup"><span data-stu-id="85862-195">The <xref:System.FlagsAttribute> attribute denotes a special kind of enumeration called a bit field.</span></span> <span data-ttu-id="85862-196">O próprio tempo de execução não faz distinção entre enumerações tradicionais e campos de bits, mas a linguagem pode fazer isso.</span><span class="sxs-lookup"><span data-stu-id="85862-196">The runtime itself does not distinguish between traditional enumerations and bit fields, but your language might do so.</span></span> <span data-ttu-id="85862-197">Quando é feita essa distinção, operadores bit a bit podem ser usados em campos de bits, mas não em enumerações, para gerar valores sem nome.</span><span class="sxs-lookup"><span data-stu-id="85862-197">When this distinction is made, bitwise operators can be used on bit fields, but not on enumerations, to generate unnamed values.</span></span> <span data-ttu-id="85862-198">Enumerações geralmente são usadas para listas de elementos exclusivos, como dias da semana, país ou nomes de região etc.</span><span class="sxs-lookup"><span data-stu-id="85862-198">Enumerations are generally used for lists of unique elements, such as days of the week, country or region names, and so on.</span></span> <span data-ttu-id="85862-199">Os campos de bits são geralmente usados para listas de qualidades ou quantidades que possam ocorrer em combinação, como `Red And Big And Fast`.</span><span class="sxs-lookup"><span data-stu-id="85862-199">Bit fields are generally used for lists of qualities or quantities that might occur in combination, such as `Red And Big And Fast`.</span></span>  
+  
+ <span data-ttu-id="85862-200">O exemplo a seguir mostra como usar campos de bit e enumerações tradicionais.</span><span class="sxs-lookup"><span data-stu-id="85862-200">The following example shows how to use both bit fields and traditional enumerations.</span></span>  
+  
+ [!code-csharp[Conceptual.Types.Enum#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.enum/cs/example.cs#1)]
+ [!code-vb[Conceptual.Types.Enum#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.enum/vb/example.vb#1)]  
+  
+<a name="Interfaces"></a>   
+### <a name="interfaces"></a><span data-ttu-id="85862-201">Interfaces</span><span class="sxs-lookup"><span data-stu-id="85862-201">Interfaces</span></span>  
+ <span data-ttu-id="85862-202">Uma interface define um contrato que especifica um relacionamento "possível" ou um relacionamento de "propriedade".</span><span class="sxs-lookup"><span data-stu-id="85862-202">An interface defines a contract that specifies a "can do" relationship or a "has a" relationship.</span></span> <span data-ttu-id="85862-203">Interfaces são geralmente usadas para implementar a funcionalidade, como comparação e classificação (interfaces <xref:System.IComparable> e <xref:System.IComparable%601>), testes de igualdade (a interface <xref:System.IEquatable%601>), ou a enumeração de itens em uma coleção (as interfaces <xref:System.Collections.IEnumerable> e <xref:System.Collections.Generic.IEnumerable%601>).</span><span class="sxs-lookup"><span data-stu-id="85862-203">Interfaces are often used to implement functionality, such as comparing and sorting (the <xref:System.IComparable> and <xref:System.IComparable%601> interfaces), testing for equality (the <xref:System.IEquatable%601> interface), or enumerating items in a collection (the <xref:System.Collections.IEnumerable> and <xref:System.Collections.Generic.IEnumerable%601> interfaces).</span></span> <span data-ttu-id="85862-204">Interfaces podem ter propriedades, métodos, eventos e todos os que são membros abstratos; ou seja, embora a interface defina os membros e suas assinaturas, ela deixa para o tipo que implementa a interface para definir a funcionalidade de cada membro da interface.</span><span class="sxs-lookup"><span data-stu-id="85862-204">Interfaces can have properties, methods, and events, all of which are abstract members; that is, although the interface defines the members and their signatures, it leaves it to the type that implements the interface to define the functionality of each interface member.</span></span> <span data-ttu-id="85862-205">Isso significa que qualquer classe ou estrutura que implementa uma interface deve fornecer definições para os membros abstratos declarados na interface.</span><span class="sxs-lookup"><span data-stu-id="85862-205">This means that any class or structure that implements an interface must supply definitions for the abstract members declared in the interface.</span></span> <span data-ttu-id="85862-206">Uma interface pode exigir qualquer classe de implementação ou estrutura para também implementar uma ou mais outras interfaces.</span><span class="sxs-lookup"><span data-stu-id="85862-206">An interface can require any implementing class or structure to also implement one or more other interfaces.</span></span>  
+  
+ <span data-ttu-id="85862-207">As restrições a seguir se aplicam a interfaces:</span><span class="sxs-lookup"><span data-stu-id="85862-207">The following restrictions apply to interfaces:</span></span>  
+  
+-   <span data-ttu-id="85862-208">Uma interface pode ser declarada com qualquer acessibilidade, mas membros da interface devem ter acessibilidade pública.</span><span class="sxs-lookup"><span data-stu-id="85862-208">An interface can be declared with any accessibility, but interface members must all have public accessibility.</span></span>  
+  
+-   <span data-ttu-id="85862-209">Interfaces não podem definir construtores.</span><span class="sxs-lookup"><span data-stu-id="85862-209">Interfaces cannot define constructors.</span></span>  
+  
+-   <span data-ttu-id="85862-210">Interfaces não podem definir campos.</span><span class="sxs-lookup"><span data-stu-id="85862-210">Interfaces cannot define fields.</span></span>  
+  
+-   <span data-ttu-id="85862-211">Interfaces podem definir apenas membros de instância.</span><span class="sxs-lookup"><span data-stu-id="85862-211">Interfaces can define only instance members.</span></span> <span data-ttu-id="85862-212">Elas não podem definir membros estáticos.</span><span class="sxs-lookup"><span data-stu-id="85862-212">They cannot define static members.</span></span>  
+  
+ <span data-ttu-id="85862-213">Cada linguagem deve fornecer regras para mapear uma implementação para a interface que exija o membro, porque mais de uma interface pode declarar um membro com a mesma assinatura e esses membros podem ter implementações separadas.</span><span class="sxs-lookup"><span data-stu-id="85862-213">Each language must provide rules for mapping an implementation to the interface that requires the member, because more than one interface can declare a member with the same signature, and these members can have separate implementations.</span></span>  
+  
+<a name="Delegates"></a>   
+### <a name="delegates"></a><span data-ttu-id="85862-214">Delegados</span><span class="sxs-lookup"><span data-stu-id="85862-214">Delegates</span></span>  
+ <span data-ttu-id="85862-215">Os delegados são tipos de referência que têm um propósito semelhante aos de ponteiros de função no C++.</span><span class="sxs-lookup"><span data-stu-id="85862-215">Delegates are reference types that serve a purpose similar to that of function pointers in C++.</span></span> <span data-ttu-id="85862-216">Eles são usados para manipuladores de eventos e funções de retorno de chamada no .NET.</span><span class="sxs-lookup"><span data-stu-id="85862-216">They are used for event handlers and callback functions in .NET.</span></span> <span data-ttu-id="85862-217">Diferentemente de ponteiros de função, delegados são seguros, verificáveis e fortemente tipados.</span><span class="sxs-lookup"><span data-stu-id="85862-217">Unlike function pointers, delegates are secure, verifiable, and type safe.</span></span> <span data-ttu-id="85862-218">Um tipo de delegado pode representar qualquer método de instância ou método estático que tenha uma assinatura compatível.</span><span class="sxs-lookup"><span data-stu-id="85862-218">A delegate type can represent any instance method or static method that has a compatible signature.</span></span>  
+  
+ <span data-ttu-id="85862-219">Um parâmetro de um delegado será compatível com o parâmetro correspondente de um método se o tipo do parâmetro de delegado for mais restritivo do que o tipo do parâmetro de método, porque isso garante que um argumento passado para o delegado possa ser passado com segurança para o método.</span><span class="sxs-lookup"><span data-stu-id="85862-219">A parameter of a delegate is compatible with the corresponding parameter of a method if the type of the delegate parameter is more restrictive than the type of the method parameter, because this guarantees that an argument passed to the delegate can be passed safely to the method.</span></span>  
+  
+ <span data-ttu-id="85862-220">Da mesma forma, o tipo de retorno de um delegado será compatível com o tipo de retorno de um método se o tipo de retorno do método for mais restritivo do que o tipo de retorno do delegado, porque isso garante que o valor retornado do método possa ser convertido com segurança para o tipo retorno do delegado.</span><span class="sxs-lookup"><span data-stu-id="85862-220">Similarly, the return type of a delegate is compatible with the return type of a method if the return type of the method is more restrictive than the return type of the delegate, because this guarantees that the return value of the method can be cast safely to the return type of the delegate.</span></span>  
+  
+ <span data-ttu-id="85862-221">Por exemplo, um representante que tenha um parâmetro de tipo <xref:System.Collections.IEnumerable> e um tipo de retorno de <xref:System.Object> pode representar um método que tenha um parâmetro de tipo <xref:System.Object> e um valor de retorno de tipo <xref:System.Collections.IEnumerable>.</span><span class="sxs-lookup"><span data-stu-id="85862-221">For example, a delegate that has a parameter of type <xref:System.Collections.IEnumerable> and a return type of <xref:System.Object> can represent a method that has a parameter of type <xref:System.Object> and a return value of type <xref:System.Collections.IEnumerable>.</span></span> <span data-ttu-id="85862-222">Para obter mais informações e um código de exemplo, consulte <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Object%2CSystem.Reflection.MethodInfo%29?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="85862-222">For more information and example code, see <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Object%2CSystem.Reflection.MethodInfo%29?displayProperty=nameWithType>.</span></span>  
+  
+ <span data-ttu-id="85862-223">Diz-se que um delegado está associado ao método que representa.</span><span class="sxs-lookup"><span data-stu-id="85862-223">A delegate is said to be bound to the method it represents.</span></span> <span data-ttu-id="85862-224">Além de estar associado ao método, um delegado pode ser associado a um objeto.</span><span class="sxs-lookup"><span data-stu-id="85862-224">In addition to being bound to the method, a delegate can be bound to an object.</span></span> <span data-ttu-id="85862-225">O objeto representa o primeiro parâmetro do método e é passado para o método sempre que o delegado é invocado.</span><span class="sxs-lookup"><span data-stu-id="85862-225">The object represents the first parameter of the method, and is passed to the method every time the delegate is invoked.</span></span> <span data-ttu-id="85862-226">Se o método for um método de instância, o objeto associado será passado como parâmetro `this` implícito (`Me` no Visual Basic). Se o método for estático, o objeto será passado como o primeiro parâmetro formal do método e a assinatura do delegado deverá corresponder aos parâmetros restantes.</span><span class="sxs-lookup"><span data-stu-id="85862-226">If the method is an instance method, the bound object is passed as the implicit `this` parameter (`Me` in Visual Basic); if the method is static, the object is passed as the first formal parameter of the method, and the delegate signature must match the remaining parameters.</span></span> <span data-ttu-id="85862-227">Para obter mais informações e um código de exemplo, consulte <xref:System.Delegate?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="85862-227">For more information and example code, see <xref:System.Delegate?displayProperty=nameWithType>.</span></span>  
+  
+ <span data-ttu-id="85862-228">Todos os representantes herdam de <xref:System.MulticastDelegate?displayProperty=nameWithType>, que herda de <xref:System.Delegate?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="85862-228">All delegates inherit from <xref:System.MulticastDelegate?displayProperty=nameWithType>, which inherits from <xref:System.Delegate?displayProperty=nameWithType>.</span></span> <span data-ttu-id="85862-229">As linguagens C#, Visual Basic e C++ e não permitem a herança desses tipos.</span><span class="sxs-lookup"><span data-stu-id="85862-229">The C#, Visual Basic, and C++ languages do not allow inheritance from these types.</span></span> <span data-ttu-id="85862-230">Em vez disso, elas fornecem palavras-chave para declarar delegados.</span><span class="sxs-lookup"><span data-stu-id="85862-230">Instead, they provide keywords for declaring delegates.</span></span>  
+  
+ <span data-ttu-id="85862-231">Como representantes herdam de <xref:System.MulticastDelegate>, um representante tem uma lista de invocação, que é uma lista dos métodos que o representante representa e que são executados quando o representante é invocado.</span><span class="sxs-lookup"><span data-stu-id="85862-231">Because delegates inherit from <xref:System.MulticastDelegate>, a delegate has an invocation list, which is a list of methods that the delegate represents and that are executed when the delegate is invoked.</span></span> <span data-ttu-id="85862-232">Todos os métodos na lista recebem os argumentos fornecidos quando o delegado é invocado.</span><span class="sxs-lookup"><span data-stu-id="85862-232">All methods in the list receive the arguments supplied when the delegate is invoked.</span></span>  
+  
 > [!NOTE]
-> Tipos aninhados (incluindo enumerações) criados com o C# incluem os parâmetros de tipo de todos os tipos genéricos e, portanto, serão genéricos mesmo se não tiverem parâmetros de tipo próprios. Para obter mais informações, consulte o tópico de referência [Type.MakeGenericType](xref:System.Type.MakeGenericType(System.Type[])). 
-
-O atributo [FlagsAttribute](xref:System.FlagsAttribute) denota um tipo especial de enumeração chamado campo de bits. O próprio tempo de execução não faz distinção entre enumerações tradicionais e campos de bits, mas a linguagem pode fazer isso. Quando é feita essa distinção, operadores bit a bit podem ser usados em campos de bits, mas não em enumerações, para gerar valores sem nome. Enumerações geralmente são usadas para listas de elementos exclusivos, como dias da semana, país ou nomes de região etc. Os campos de bits são geralmente usados para listas de qualidades ou quantidades que possam ocorrer em combinação, como `Red And Big And Fast`.
-
-O exemplo a seguir mostra como usar campos de bit e enumerações tradicionais.
-
-```csharp
-using System;
-using System.Collections.Generic;
-
-// A traditional enumeration of some root vegetables.
-public enum SomeRootVegetables
-{
-    HorseRadish,
-    Radish,
-    Turnip
-}
-
-// A bit field or flag enumeration of harvesting seasons.
-[Flags]
-public enum Seasons
-{
-    None = 0,
-    Summer = 1,
-    Autumn = 2,
-    Winter = 4,
-    Spring = 8,
-    All = Summer | Autumn | Winter | Spring
-}
-
-public class Example
-{
-   public static void Main()
-   {
-       // Hash table of when vegetables are available.
-       Dictionary<SomeRootVegetables, Seasons> AvailableIn = new Dictionary<SomeRootVegetables, Seasons>();
-
-       AvailableIn[SomeRootVegetables.HorseRadish] = Seasons.All;
-       AvailableIn[SomeRootVegetables.Radish] = Seasons.Spring;
-       AvailableIn[SomeRootVegetables.Turnip] = Seasons.Spring | 
-            Seasons.Autumn;
-
-       // Array of the seasons, using the enumeration.
-       Seasons[] theSeasons = new Seasons[] { Seasons.Summer, Seasons.Autumn, 
-            Seasons.Winter, Seasons.Spring };
-
-       // Print information of what vegetables are available each season.
-       foreach (Seasons season in theSeasons)
-       {
-          Console.Write(String.Format(
-              "The following root vegetables are harvested in {0}:\n", 
-              season.ToString("G")));
-          foreach (KeyValuePair<SomeRootVegetables, Seasons> item in AvailableIn)
-          {
-             // A bitwise comparison.
-             if (((Seasons)item.Value & season) > 0)
-                 Console.Write(String.Format("  {0:G}\n", 
-                      (SomeRootVegetables)item.Key));
-          }
-       }
-   }
-}
-// The example displays the following output:
-//    The following root vegetables are harvested in Summer:
-//      HorseRadish
-//    The following root vegetables are harvested in Autumn:
-//      Turnip
-//      HorseRadish
-//    The following root vegetables are harvested in Winter:
-//      HorseRadish
-//    The following root vegetables are harvested in Spring:
-//      Turnip
-//      Radish
-//      HorseRadish
-```
-
-```vb
-Imports System.Collections.Generic
-
-' A traditional enumeration of some root vegetables.
-Public Enum SomeRootVegetables
-   HorseRadish
-   Radish
-   Turnip
-End Enum 
-
-' A bit field or flag enumeration of harvesting seasons.
-<Flags()> Public Enum Seasons
-   None = 0
-   Summer = 1
-   Autumn = 2
-   Winter = 4
-   Spring = 8
-   All = Summer Or Autumn Or Winter Or Spring
-End Enum 
-
-' Entry point.
-Public Class Example
-   Public Shared Sub Main()
-      ' Hash table of when vegetables are available.
-      Dim AvailableIn As New Dictionary(Of SomeRootVegetables, Seasons)()
-
-      AvailableIn(SomeRootVegetables.HorseRadish) = Seasons.All
-      AvailableIn(SomeRootVegetables.Radish) = Seasons.Spring
-      AvailableIn(SomeRootVegetables.Turnip) = Seasons.Spring Or _
-                                               Seasons.Autumn
-
-      ' Array of the seasons, using the enumeration.
-      Dim theSeasons() As Seasons = {Seasons.Summer, Seasons.Autumn, _
-                                     Seasons.Winter, Seasons.Spring}
-
-      ' Print information of what vegetables are available each season.
-      For Each season As Seasons In theSeasons
-         Console.WriteLine(String.Format( _
-              "The following root vegetables are harvested in {0}:", _
-              season.ToString("G")))
-         For Each item As KeyValuePair(Of SomeRootVegetables, Seasons) In AvailableIn
-            ' A bitwise comparison.
-            If(CType(item.Value, Seasons) And season) > 0 Then
-               Console.WriteLine("  " + _
-                     CType(item.Key, SomeRootVegetables).ToString("G"))
-            End If
-         Next
-      Next
-   End Sub 
-End Class 
-' The example displays the following output:
-'    The following root vegetables are harvested in Summer:
-'      HorseRadish
-'    The following root vegetables are harvested in Autumn:
-'      Turnip
-'      HorseRadish
-'    The following root vegetables are harvested in Winter:
-'      HorseRadish
-'    The following root vegetables are harvested in Spring:
-'      Turnip
-'      Radish
-'      HorseRadish
-```
-
-### <a name="interfaces"></a>Interfaces
-
-Uma interface define um contrato que especifica um relacionamento "possível" ou um relacionamento de "propriedade". Interfaces são geralmente usadas para implementar a funcionalidade, como comparação e classificação (interfaces [IComparable](xref:System.IComparable) e [IComparable&lt;T&gt;](xref:System.IComparable%601)), testes de igualdade (a interface [IEquatable&lt;T&gt;](xref:System.IEquatable%601)), ou a enumeração de itens em uma coleção (as interfaces [IEnumerable](xref:System.Collections.IEnumerable) e [IEnumerable&lt;T&gt;](xref:System.Collections.Generic.IEnumerable%601)). Interfaces podem ter propriedades, métodos, eventos e todos os que são membros abstratos; ou seja, embora a interface defina os membros e suas assinaturas, ela deixa para o tipo que implementa a interface para definir a funcionalidade de cada membro da interface. Isso significa que qualquer classe ou estrutura que implementa uma interface deve fornecer definições para os membros abstratos declarados na interface. Uma interface pode exigir qualquer classe de implementação ou estrutura para também implementar uma ou mais outras interfaces.
-
-As restrições a seguir se aplicam a interfaces: 
-
-* Uma interface pode ser declarada com qualquer acessibilidade, mas membros da interface devem ter acessibilidade pública.
-
-* Interfaces não podem definir construtores.
-
-* Interfaces não podem definir campos.
-
-* Interfaces podem definir apenas membros de instância. Elas não podem definir membros estáticos.
-
-Cada linguagem deve fornecer regras para mapear uma implementação para a interface que exija o membro, porque mais de uma interface pode declarar um membro com a mesma assinatura e esses membros podem ter implementações separadas.
-
-### <a name="delegates"></a>Delegados
-
-Os delegados são tipos de referência que têm um propósito semelhante aos de ponteiros de função no C++. Eles são usados para manipuladores de eventos e funções de retorno de chamada no .NET. Diferentemente de ponteiros de função, delegados são seguros, verificáveis e fortemente tipados. Um tipo de delegado pode representar qualquer método de instância ou método estático que tenha uma assinatura compatível. 
-
-Um parâmetro de um delegado será compatível com o parâmetro correspondente de um método se o tipo do parâmetro de delegado for mais restritivo do que o tipo do parâmetro de método, porque isso garante que um argumento passado para o delegado possa ser passado com segurança para o método.
-
-Da mesma forma, o tipo de retorno de um delegado será compatível com o tipo de retorno de um método se o tipo de retorno do método for mais restritivo do que o tipo de retorno do delegado, porque isso garante que o valor retornado do método possa ser convertido com segurança para o tipo retorno do delegado.
-
-Por exemplo, um delegado que tenha um parâmetro de tipo [IEnumerable](xref:System.Collections.IEnumerable) e um tipo de retorno de [Object](xref:System.Object) pode representar um método que tenha um parâmetro de tipo [Object](xref:System.Object) e um valor retornado de tipo [IEnumerable](xref:System.Collections.IEnumerable). 
-
- Diz-se que um delegado está associado ao método que representa. Além de estar associado ao método, um delegado pode ser associado a um objeto. O objeto representa o primeiro parâmetro do método e é passado para o método sempre que o delegado é invocado. Se o método for um método de instância, o objeto associado será passado como parâmetro `this` implícito (`Me` no Visual Basic). Se o método for estático, o objeto será passado como o primeiro parâmetro formal do método e a assinatura do delegado deverá corresponder aos parâmetros restantes. 
+>  <span data-ttu-id="85862-233">O valor retornado não é definido para um delegado que tenha mais de um método na lista de invocação, mesmo que o delegado tenha um tipo de retorno.</span><span class="sxs-lookup"><span data-stu-id="85862-233">The return value is not defined for a delegate that has more than one method in its invocation list, even if the delegate has a return type.</span></span>  
+  
+ <span data-ttu-id="85862-234">Em muitos casos, como acontece com métodos de retorno de chamada, um delegado representa apenas um método e as únicas ações que você precisa realizar são criar e invocar o delegado.</span><span class="sxs-lookup"><span data-stu-id="85862-234">In many cases, such as with callback methods, a delegate represents only one method, and the only actions you have to take are creating the delegate and invoking it.</span></span>  
+  
+ <span data-ttu-id="85862-235">Para delegados que representam vários métodos, o .NET fornece métodos do <xref:System.Delegate> e <xref:System.MulticastDelegate> delegar classes para dar suporte a operações como adicionar um método à lista de invocação do delegado (o <xref:System.Delegate.Combine%2A?displayProperty=nameWithType> método), a remoção de um método (o <xref:System.Delegate.Remove%2A?displayProperty=nameWithType> método) e obter a lista de invocação (o <xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType> método).</span><span class="sxs-lookup"><span data-stu-id="85862-235">For delegates that represent multiple methods, .NET provides methods of the <xref:System.Delegate> and <xref:System.MulticastDelegate> delegate classes to support operations such as adding a method to a delegate's invocation list (the <xref:System.Delegate.Combine%2A?displayProperty=nameWithType> method), removing a method (the <xref:System.Delegate.Remove%2A?displayProperty=nameWithType> method), and getting the invocation list (the <xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType> method).</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="85862-236">Não é necessário usar esses métodos para representantes de manipuladores de eventos em C#, C++ e Visual Basic, porque essas linguagens fornecem sintaxe para adicionar e remover manipuladores de eventos.</span><span class="sxs-lookup"><span data-stu-id="85862-236">It is not necessary to use these methods for event-handler delegates in C#, C++, and Visual Basic, because these languages provide syntax for adding and removing event handlers.</span></span>  
+  
  
- Todos os delegados herdam de [System.MulticastDelegate](xref:System.MulticastDelegate), que herda de [System.Delegate](xref:System.Delegate). As linguagens C# e Visual Basic não permitem a herança desses tipos. Em vez disso, elas fornecem palavras-chave para declarar delegados.
- 
- Como delegados herdam de [MulticastDelegate](xref:System.MulticastDelegate), um delegado tem uma lista dos métodos que o delegado representa e que são executados quando o delegado é invocado. Todos os métodos na lista recebem os argumentos fornecidos quando o delegado é invocado.
-
+  
+<a name="type_definitions"></a>   
+## <a name="type-definitions"></a><span data-ttu-id="85862-237">Definições de tipo</span><span class="sxs-lookup"><span data-stu-id="85862-237">Type Definitions</span></span>  
+ <span data-ttu-id="85862-238">Uma definição de tipo inclui o seguinte:</span><span class="sxs-lookup"><span data-stu-id="85862-238">A type definition includes the following:</span></span>  
+  
+-   <span data-ttu-id="85862-239">Qualquer atributo definido no tipo.</span><span class="sxs-lookup"><span data-stu-id="85862-239">Any attributes defined on the type.</span></span>  
+  
+-   <span data-ttu-id="85862-240">A acessibilidade do tipo (visibilidade).</span><span class="sxs-lookup"><span data-stu-id="85862-240">The type's accessibility (visibility).</span></span>  
+  
+-   <span data-ttu-id="85862-241">O nome do tipo.</span><span class="sxs-lookup"><span data-stu-id="85862-241">The type's name.</span></span>  
+  
+-   <span data-ttu-id="85862-242">O tipo de base do tipo.</span><span class="sxs-lookup"><span data-stu-id="85862-242">The type's base type.</span></span>  
+  
+-   <span data-ttu-id="85862-243">Qualquer interface implementada pelo tipo.</span><span class="sxs-lookup"><span data-stu-id="85862-243">Any interfaces implemented by the type.</span></span>  
+  
+-   <span data-ttu-id="85862-244">Definições para cada um dos membros do tipo.</span><span class="sxs-lookup"><span data-stu-id="85862-244">Definitions for each of the type's members.</span></span>  
+  
+### <a name="attributes"></a><span data-ttu-id="85862-245">Atributos</span><span class="sxs-lookup"><span data-stu-id="85862-245">Attributes</span></span>  
+ <span data-ttu-id="85862-246">Atributos fornecem metadados adicionais definidos pelo usuário.</span><span class="sxs-lookup"><span data-stu-id="85862-246">Attributes provide additional user-defined metadata.</span></span> <span data-ttu-id="85862-247">Com frequência, eles são usados para armazenar informações adicionais sobre um tipo em seu assembly ou para modificar o comportamento de um membro de tipo no ambiente do tempo de design ou do tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="85862-247">Most commonly, they are used to store additional information about a type in its assembly, or to modify the behavior of a type member in either the design-time or run-time environment.</span></span>  
+  
+ <span data-ttu-id="85862-248">Os atributos são as próprias classe herdadas de <xref:System.Attribute?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="85862-248">Attributes are themselves classes that inherit from <xref:System.Attribute?displayProperty=nameWithType>.</span></span> <span data-ttu-id="85862-249">Linguagens que dão suporte ao uso de atributos têm sua própria sintaxe para aplicar atributos a um elemento de linguagem.</span><span class="sxs-lookup"><span data-stu-id="85862-249">Languages that support the use of attributes each have their own syntax for applying attributes to a language element.</span></span> <span data-ttu-id="85862-250">Os atributos podem ser aplicados a praticamente qualquer elemento de linguagem; os elementos específicos para os quais um atributo pode ser aplicado são definidos pelo <xref:System.AttributeUsageAttribute> aplicado à classe de atributo.</span><span class="sxs-lookup"><span data-stu-id="85862-250">Attributes can be applied to almost any language element; the specific elements to which an attribute can be applied are defined by the <xref:System.AttributeUsageAttribute> that is applied to that attribute class.</span></span>  
+  
+### <a name="type-accessibility"></a><span data-ttu-id="85862-251">Acessibilidade de tipo</span><span class="sxs-lookup"><span data-stu-id="85862-251">Type Accessibility</span></span>  
+ <span data-ttu-id="85862-252">Todos os tipos têm um modificador que rege sua acessibilidade de outros tipos.</span><span class="sxs-lookup"><span data-stu-id="85862-252">All types have a modifier that governs their accessibility from other types.</span></span> <span data-ttu-id="85862-253">A tabela a seguir descreve as acessibilidades de tipo que o tempo de execução dá suporte.</span><span class="sxs-lookup"><span data-stu-id="85862-253">The following table describes the type accessibilities supported by the runtime.</span></span>  
+  
+|<span data-ttu-id="85862-254">Acessibilidade</span><span class="sxs-lookup"><span data-stu-id="85862-254">Accessibility</span></span>|<span data-ttu-id="85862-255">Descrição</span><span class="sxs-lookup"><span data-stu-id="85862-255">Description</span></span>|  
+|-------------------|-----------------|  
+|<span data-ttu-id="85862-256">public</span><span class="sxs-lookup"><span data-stu-id="85862-256">public</span></span>|<span data-ttu-id="85862-257">O tipo é acessível por todos os assemblies.</span><span class="sxs-lookup"><span data-stu-id="85862-257">The type is accessible by all assemblies.</span></span>|  
+|<span data-ttu-id="85862-258">assembly</span><span class="sxs-lookup"><span data-stu-id="85862-258">assembly</span></span>|<span data-ttu-id="85862-259">O tipo é acessível somente dentro do assembly.</span><span class="sxs-lookup"><span data-stu-id="85862-259">The type is accessible only from within its assembly.</span></span>|  
+  
+ <span data-ttu-id="85862-260">A acessibilidade de um tipo aninhado depende do domínio de acessibilidade, que é determinado pela acessibilidade declarada do membro e pelo domínio da acessibilidade do tipo imediatamente contido.</span><span class="sxs-lookup"><span data-stu-id="85862-260">The accessibility of a nested type depends on its accessibility domain, which is determined by both the declared accessibility of the member and the accessibility domain of the immediately containing type.</span></span> <span data-ttu-id="85862-261">Entretanto, o domínio de acessibilidade de um tipo aninhado não pode exceder o do tipo contido.</span><span class="sxs-lookup"><span data-stu-id="85862-261">However, the accessibility domain of a nested type cannot exceed that of the containing type.</span></span>  
+  
+ <span data-ttu-id="85862-262">O domínio de acessibilidade de um membro aninhado `M` declarado em um tipo `T` em um programa `P` é definido da seguinte forma (observe que `M` pode ser um tipo):</span><span class="sxs-lookup"><span data-stu-id="85862-262">The accessibility domain of a nested member `M` declared in a type `T` within a program `P` is defined as follows (noting that `M` might itself be a type):</span></span>  
+  
+-   <span data-ttu-id="85862-263">Se a acessibilidade declarada de `M` for `public`, o domínio de acessibilidade de `M` será o domínio de acessibilidade de `T`.</span><span class="sxs-lookup"><span data-stu-id="85862-263">If the declared accessibility of `M` is `public`, the accessibility domain of `M` is the accessibility domain of `T`.</span></span>  
+  
+-   <span data-ttu-id="85862-264">Se a acessibilidade declarada de `M` for `protected internal`, o domínio de acessibilidade de `M` será a interseção do domínio de acessibilidade de `T` com o texto de programa de `P` e o texto de programa de qualquer tipo derivado de `T` declarado fora de `P`.</span><span class="sxs-lookup"><span data-stu-id="85862-264">If the declared accessibility of `M` is `protected internal`, the accessibility domain of `M` is the intersection of the accessibility domain of `T` with the program text of `P` and the program text of any type derived from `T` declared outside `P`.</span></span>  
+  
+-   <span data-ttu-id="85862-265">Se a acessibilidade declarada de `M` for `protected`, o domínio de acessibilidade de `M` será a interseção do domínio de acessibilidade de `T` com o texto do programa de `T` e qualquer tipo derivado de `T`.</span><span class="sxs-lookup"><span data-stu-id="85862-265">If the declared accessibility of `M` is `protected`, the accessibility domain of `M` is the intersection of the accessibility domain of `T` with the program text of `T` and any type derived from `T`.</span></span>  
+  
+-   <span data-ttu-id="85862-266">Se a acessibilidade declarada de `M` for `internal`, o domínio de acessibilidade de `M` será a interseção do domínio de acessibilidade de `T` com o texto de programa de `P`.</span><span class="sxs-lookup"><span data-stu-id="85862-266">If the declared accessibility of `M` is `internal`, the accessibility domain of `M` is the intersection of the accessibility domain of `T` with the program text of `P`.</span></span>  
+  
+-   <span data-ttu-id="85862-267">Se a acessibilidade declarada de `M` for `private`, o domínio de acessibilidade de `M` será o texto de programa de `T`.</span><span class="sxs-lookup"><span data-stu-id="85862-267">If the declared accessibility of `M` is `private`, the accessibility domain of `M` is the program text of `T`.</span></span>  
+  
+### <a name="type-names"></a><span data-ttu-id="85862-268">Nomes de tipo</span><span class="sxs-lookup"><span data-stu-id="85862-268">Type Names</span></span>  
+ <span data-ttu-id="85862-269">O Common Type System impõe apenas duas restrições de nomes:</span><span class="sxs-lookup"><span data-stu-id="85862-269">The common type system imposes only two restrictions on names:</span></span>  
+  
+-   <span data-ttu-id="85862-270">Todos os nomes são codificados como cadeias de caracteres Unicode (16 bits).</span><span class="sxs-lookup"><span data-stu-id="85862-270">All names are encoded as strings of Unicode (16-bit) characters.</span></span>  
+  
+-   <span data-ttu-id="85862-271">Não são permitidos nomes que tenham um valor (16 bits) inserido de 0x0000.</span><span class="sxs-lookup"><span data-stu-id="85862-271">Names are not permitted to have an embedded (16-bit) value of 0x0000.</span></span>  
+  
+ <span data-ttu-id="85862-272">No entanto, a maioria das linguagens impõe restrições adicionais em nomes de tipo.</span><span class="sxs-lookup"><span data-stu-id="85862-272">However, most languages impose additional restrictions on type names.</span></span> <span data-ttu-id="85862-273">Todas as comparações são feitas em uma base byte por byte e, assim, diferenciam maiúsculas de minúsculas e são independentes de localidade.</span><span class="sxs-lookup"><span data-stu-id="85862-273">All comparisons are done on a byte-by-byte basis, and are therefore case-sensitive and locale-independent.</span></span>  
+  
+ <span data-ttu-id="85862-274">Embora um tipo possa referenciar tipos de outros módulos e assemblies, um tipo deve ser totalmente definido em um módulo do .NET.</span><span class="sxs-lookup"><span data-stu-id="85862-274">Although a type might reference types from other modules and assemblies, a type must be fully defined within one .NET module.</span></span> <span data-ttu-id="85862-275">(Dependendo do suporte do compilador, no entanto, ele pode ser dividido em vários arquivos de código-fonte.) Nomes de tipo precisam ser exclusivos somente dentro de um namespace.</span><span class="sxs-lookup"><span data-stu-id="85862-275">(Depending on compiler support, however, it can be divided into multiple source code files.) Type names need be unique only within a namespace.</span></span> <span data-ttu-id="85862-276">Para identificar totalmente um tipo, o nome de tipo deve ser qualificado pelo namespace que contém a implementação do tipo.</span><span class="sxs-lookup"><span data-stu-id="85862-276">To fully identify a type, the type name must be qualified by the namespace that contains the implementation of the type.</span></span>  
+  
+### <a name="base-types-and-interfaces"></a><span data-ttu-id="85862-277">Tipos de base e interfaces</span><span class="sxs-lookup"><span data-stu-id="85862-277">Base Types and Interfaces</span></span>  
+ <span data-ttu-id="85862-278">Um tipo pode herdar valores e comportamentos de outro tipo.</span><span class="sxs-lookup"><span data-stu-id="85862-278">A type can inherit values and behaviors from another type.</span></span> <span data-ttu-id="85862-279">O Common Type System não permite que tipos sejam herdados de mais de um tipo de base.</span><span class="sxs-lookup"><span data-stu-id="85862-279">The common type system does not allow types to inherit from more than one base type.</span></span>  
+  
+ <span data-ttu-id="85862-280">Um tipo pode implementar um número qualquer de interfaces.</span><span class="sxs-lookup"><span data-stu-id="85862-280">A type can implement any number of interfaces.</span></span> <span data-ttu-id="85862-281">Para implementar uma interface, um tipo deve implementar todos os membros virtuais dessa interface.</span><span class="sxs-lookup"><span data-stu-id="85862-281">To implement an interface, a type must implement all the virtual members of that interface.</span></span> <span data-ttu-id="85862-282">Um método virtual pode ser implementado por um tipo derivado e pode ser invocado estática ou dinamicamente.</span><span class="sxs-lookup"><span data-stu-id="85862-282">A virtual method can be implemented by a derived type and can be invoked either statically or dynamically.</span></span>  
+  
+  
+  
+<a name="type_members"></a>   
+## <a name="type-members"></a><span data-ttu-id="85862-283">Membros de tipos</span><span class="sxs-lookup"><span data-stu-id="85862-283">Type Members</span></span>  
+ <span data-ttu-id="85862-284">O tempo de execução permite que você defina os membros do tipo, o que especifica o comportamento e o estado de um tipo.</span><span class="sxs-lookup"><span data-stu-id="85862-284">The runtime enables you to define members of your type, which specifies the behavior and state of a type.</span></span> <span data-ttu-id="85862-285">Os membros de tipo incluem o seguinte:</span><span class="sxs-lookup"><span data-stu-id="85862-285">Type members include the following:</span></span>  
+  
+-   [<span data-ttu-id="85862-286">Campos</span><span class="sxs-lookup"><span data-stu-id="85862-286">Fields</span></span>](#Fields)  
+  
+-   [<span data-ttu-id="85862-287">Propriedades</span><span class="sxs-lookup"><span data-stu-id="85862-287">Properties</span></span>](#Properties)  
+  
+-   [<span data-ttu-id="85862-288">Métodos</span><span class="sxs-lookup"><span data-stu-id="85862-288">Methods</span></span>](#Methods)  
+  
+-   [<span data-ttu-id="85862-289">Construtores</span><span class="sxs-lookup"><span data-stu-id="85862-289">Constructors</span></span>](#Constructors)  
+  
+-   [<span data-ttu-id="85862-290">Eventos</span><span class="sxs-lookup"><span data-stu-id="85862-290">Events</span></span>](#Events)  
+  
+-   [<span data-ttu-id="85862-291">Tipos aninhados</span><span class="sxs-lookup"><span data-stu-id="85862-291">Nested types</span></span>](#NestedTypes)  
+  
+<a name="Fields"></a>   
+### <a name="fields"></a><span data-ttu-id="85862-292">Campos</span><span class="sxs-lookup"><span data-stu-id="85862-292">Fields</span></span>  
+ <span data-ttu-id="85862-293">Um campo descreve e contém parte do estado do tipo.</span><span class="sxs-lookup"><span data-stu-id="85862-293">A field describes and contains part of the type's state.</span></span> <span data-ttu-id="85862-294">Campos podem ser de qualquer tipo com suporte pelo tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="85862-294">Fields can be of any type supported by the runtime.</span></span> <span data-ttu-id="85862-295">Geralmente, os campos são `private` ou `protected`, de forma que são acessíveis somente de dentro da classe ou de uma classe derivada.</span><span class="sxs-lookup"><span data-stu-id="85862-295">Most commonly, fields are either `private` or `protected`, so that they are accessible only from within the class or from a derived class.</span></span> <span data-ttu-id="85862-296">Se o valor de um campo puder ser modificado fora de seu tipo, um acessador do conjunto de propriedades normalmente será usado.</span><span class="sxs-lookup"><span data-stu-id="85862-296">If the value of a field can be modified from outside its type, a property set accessor is typically used.</span></span> <span data-ttu-id="85862-297">Os campos expostos publicamente geralmente são somente leitura e podem ser de dois tipos:</span><span class="sxs-lookup"><span data-stu-id="85862-297">Publicly exposed fields are usually read-only and can be of two types:</span></span>  
+  
+-   <span data-ttu-id="85862-298">Constantes, cujo valor é atribuído no tempo de design.</span><span class="sxs-lookup"><span data-stu-id="85862-298">Constants, whose value is assigned at design time.</span></span> <span data-ttu-id="85862-299">Esses são membros estáticos de uma classe, embora eles não sejam definidos usando a palavra-chave `static` (`Shared` no Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="85862-299">These are static members of a class, although they are not defined using the `static` (`Shared` in Visual Basic) keyword.</span></span>  
+  
+-   <span data-ttu-id="85862-300">Variáveis somente leitura, cujos valores podem ser atribuídos no construtor da classe.</span><span class="sxs-lookup"><span data-stu-id="85862-300">Read-only variables, whose values can be assigned in the class constructor.</span></span>  
+  
+ <span data-ttu-id="85862-301">O exemplo a seguir ilustra esses dois usos de campos somente leitura.</span><span class="sxs-lookup"><span data-stu-id="85862-301">The following example illustrates these two usages of read-only fields.</span></span>  
+  
+ [!code-csharp[Conceptual.Types.Members.Fields#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.members.fields/cs/example.cs#1)]
+ [!code-vb[Conceptual.Types.Members.Fields#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.members.fields/vb/example.vb#1)]  
+  
+<a name="Properties"></a>   
+### <a name="properties"></a><span data-ttu-id="85862-302">Propriedades</span><span class="sxs-lookup"><span data-stu-id="85862-302">Properties</span></span>  
+ <span data-ttu-id="85862-303">Uma propriedade nomeia um valor ou um estado do tipo e define métodos para obter ou definir o valor da propriedade.</span><span class="sxs-lookup"><span data-stu-id="85862-303">A property names a value or state of the type and defines methods for getting or setting the property's value.</span></span> <span data-ttu-id="85862-304">Propriedades podem ser tipos primitivos, coleções de tipos primitivos, tipos definidos pelo usuário ou coleções de tipos definidos pelo usuário.</span><span class="sxs-lookup"><span data-stu-id="85862-304">Properties can be primitive types, collections of primitive types, user-defined types, or collections of user-defined types.</span></span> <span data-ttu-id="85862-305">Propriedades são, frequentemente, usadas para manter a interface pública de um tipo independente da representação real do tipo.</span><span class="sxs-lookup"><span data-stu-id="85862-305">Properties are often used to keep the public interface of a type independent from the type's actual representation.</span></span> <span data-ttu-id="85862-306">Isso permite que as propriedades reflitam os valores que não estão armazenados diretamente na classe (por exemplo, quando uma propriedade retorna um valor computado) ou para realizar uma validação antes de os valores serem atribuídos a campos privados.</span><span class="sxs-lookup"><span data-stu-id="85862-306">This enables properties to reflect values that are not directly stored in the class (for example, when a property returns a computed value) or to perform validation before values are assigned to private fields.</span></span> <span data-ttu-id="85862-307">O exemplo a seguir ilustra o padrão mais recente.</span><span class="sxs-lookup"><span data-stu-id="85862-307">The following example illustrates the latter pattern.</span></span>  
+  
+ [!code-csharp[Conceptual.Types.Members.Properties#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.members.properties/cs/example.cs#1)]
+ [!code-vb[Conceptual.Types.Members.Properties#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.members.properties/vb/example.vb#1)]  
+  
+ <span data-ttu-id="85862-308">Além de incluir a propriedade em si, o idioma intermediário Microsoft (MSIL) para um tipo que contém uma propriedade de leitura inclui um `get_` *propertyname* método e o MSIL para um tipo que contém um gravável propriedade inclui um `set_` *propertyname* método.</span><span class="sxs-lookup"><span data-stu-id="85862-308">In addition to including the property itself, the Microsoft intermediate language (MSIL) for a type that contains a readable property includes a `get_`*propertyname* method, and the MSIL for a type that contains a writable property includes a `set_`*propertyname* method.</span></span>  
+  
+<a name="Methods"></a>   
+### <a name="methods"></a><span data-ttu-id="85862-309">Métodos</span><span class="sxs-lookup"><span data-stu-id="85862-309">Methods</span></span>  
+ <span data-ttu-id="85862-310">Um método descreve as operações disponíveis no tipo.</span><span class="sxs-lookup"><span data-stu-id="85862-310">A method describes operations that are available on the type.</span></span> <span data-ttu-id="85862-311">A assinatura do método especifica os tipos permitidos de todos seus parâmetros e o valor retornado.</span><span class="sxs-lookup"><span data-stu-id="85862-311">A method's signature specifies the allowable types of all its parameters and of its return value.</span></span>  
+  
+ <span data-ttu-id="85862-312">Embora a maioria dos métodos defina o número exato de parâmetros necessários para chamadas de método, alguns métodos dão suporte a um número variável de parâmetros.</span><span class="sxs-lookup"><span data-stu-id="85862-312">Although most methods define the precise number of parameters required for method calls, some methods support a variable number of parameters.</span></span> <span data-ttu-id="85862-313">O parâmetro final declarado desses métodos é marcado com o atributo <xref:System.ParamArrayAttribute>.</span><span class="sxs-lookup"><span data-stu-id="85862-313">The final declared parameter of these methods is marked with the <xref:System.ParamArrayAttribute> attribute.</span></span> <span data-ttu-id="85862-314">Compiladores de linguagem normalmente fornecem uma palavra-chave, como `params` no C# e `ParamArray` no Visual Basic, que tornam o uso explícito de <xref:System.ParamArrayAttribute> desnecessário.</span><span class="sxs-lookup"><span data-stu-id="85862-314">Language compilers typically provide a keyword, such as `params` in C# and `ParamArray` in Visual Basic, that makes explicit use of <xref:System.ParamArrayAttribute> unnecessary.</span></span>  
+  
+<a name="Constructors"></a>   
+### <a name="constructors"></a><span data-ttu-id="85862-315">Construtores</span><span class="sxs-lookup"><span data-stu-id="85862-315">Constructors</span></span>  
+ <span data-ttu-id="85862-316">Um construtor é um tipo especial de método que cria novas instâncias de uma classe ou estrutura.</span><span class="sxs-lookup"><span data-stu-id="85862-316">A constructor is a special kind of method that creates new instances of a class or structure.</span></span> <span data-ttu-id="85862-317">Assim como qualquer outro método, um construtor pode incluir parâmetros. No entanto, os construtores não têm nenhum valor retornado (ou seja, eles retornam `void`).</span><span class="sxs-lookup"><span data-stu-id="85862-317">Like any other method, a constructor can include parameters; however, constructors have no return value (that is, they return `void`).</span></span>  
+  
+ <span data-ttu-id="85862-318">Se o código-fonte para uma classe não definir explicitamente um construtor, o compilador incluirá um construtor padrão (sem parâmetros).</span><span class="sxs-lookup"><span data-stu-id="85862-318">If the source code for a class does not explicitly define a constructor, the compiler includes a default (parameterless) constructor.</span></span> <span data-ttu-id="85862-319">No entanto, se o código-fonte de uma classe definir apenas construtores com parâmetros, os compiladores do Visual Basic e do C# não gerarão um construtor sem parâmetros.</span><span class="sxs-lookup"><span data-stu-id="85862-319">However, if the source code for a class defines only parameterized constructors, the Visual Basic and C# compilers do not generate a parameterless constructor.</span></span>  
+  
+ <span data-ttu-id="85862-320">Se o código-fonte de uma estrutura definir construtores, eles deverão ser parametrizados. Uma estrutura não pode definir um construtor padrão (sem parâmetros) e os compiladores não geram construtores sem parâmetros para estruturas ou outros tipos de valor.</span><span class="sxs-lookup"><span data-stu-id="85862-320">If the source code for a structure defines constructors, they must be parameterized; a structure cannot define a default (parameterless) constructor, and compilers do not generate parameterless constructors for structures or other value types.</span></span> <span data-ttu-id="85862-321">Todos os tipos de valor têm um construtor padrão implícito.</span><span class="sxs-lookup"><span data-stu-id="85862-321">All value types do have an implicit default constructor.</span></span> <span data-ttu-id="85862-322">Esse construtor é implementado pelo Common Language Runtime e inicializa todos os campos da estrutura com seus valores padrão.</span><span class="sxs-lookup"><span data-stu-id="85862-322">This constructor is implemented by the common language runtime and initializes all fields of the structure to their default values.</span></span>  
+  
+<a name="Events"></a>   
+### <a name="events"></a><span data-ttu-id="85862-323">Eventos</span><span class="sxs-lookup"><span data-stu-id="85862-323">Events</span></span>  
+ <span data-ttu-id="85862-324">Um evento define um incidente que pode ser respondido e define métodos para assinar, cancelar a assinatura e acionar o evento.</span><span class="sxs-lookup"><span data-stu-id="85862-324">An event defines an incident that can be responded to, and defines methods for subscribing to, unsubscribing from, and raising the event.</span></span> <span data-ttu-id="85862-325">Eventos são frequentemente usados para informar outros tipos de alterações de estado.</span><span class="sxs-lookup"><span data-stu-id="85862-325">Events are often used to inform other types of state changes.</span></span> <span data-ttu-id="85862-326">Para obter mais informações, consulte [Eventos](../../../docs/standard/events/index.md).</span><span class="sxs-lookup"><span data-stu-id="85862-326">For more information, see [Events](../../../docs/standard/events/index.md).</span></span>  
+  
+<a name="NestedTypes"></a>   
+### <a name="nested-types"></a><span data-ttu-id="85862-327">Tipos aninhados</span><span class="sxs-lookup"><span data-stu-id="85862-327">Nested Types</span></span>  
+ <span data-ttu-id="85862-328">Um tipo aninhado é um tipo membro de outros tipos.</span><span class="sxs-lookup"><span data-stu-id="85862-328">A nested type is a type that is a member of some other type.</span></span> <span data-ttu-id="85862-329">Os tipos aninhados devem ser unidos ao tipo de contenção e não devem ser utilizados como tipos de uso geral.</span><span class="sxs-lookup"><span data-stu-id="85862-329">Nested types should be tightly coupled to their containing type and must not be useful as a general-purpose type.</span></span> <span data-ttu-id="85862-330">Os tipos aninhados são úteis quando o tipo declarativo usa e cria instâncias do tipo aninhado e o uso do tipo aninhado não é exposto em membros públicos.</span><span class="sxs-lookup"><span data-stu-id="85862-330">Nested types are useful when the declaring type uses and creates instances of the nested type, and use of the nested type is not exposed in public members.</span></span>  
+  
+ <span data-ttu-id="85862-331">Os tipos aninhados são confusos para alguns desenvolvedores e não devem ficar publicamente visíveis, a menos que haja um motivo forte para a visibilidade.</span><span class="sxs-lookup"><span data-stu-id="85862-331">Nested types are confusing to some developers and should not be publicly visible unless there is a compelling reason for visibility.</span></span> <span data-ttu-id="85862-332">Em uma biblioteca bem projetada, os desenvolvedores raramente precisam usar tipos aninhados para instanciar objetos ou declarar variáveis.</span><span class="sxs-lookup"><span data-stu-id="85862-332">In a well-designed library, developers should rarely have to use nested types to instantiate objects or declare variables.</span></span>  
+  
+  
+  
+<a name="characteristics_of_type_members"></a>   
+## <a name="characteristics-of-type-members"></a><span data-ttu-id="85862-333">Características de membros de tipo</span><span class="sxs-lookup"><span data-stu-id="85862-333">Characteristics of Type Members</span></span>  
+ <span data-ttu-id="85862-334">O Common Type System permite que os membros de tipo tenham várias características. No entanto, as linguagens não necessariamente dão suporte a todas elas.</span><span class="sxs-lookup"><span data-stu-id="85862-334">The common type system allows type members to have a variety of characteristics; however, languages are not required to support all these characteristics.</span></span> <span data-ttu-id="85862-335">A tabela a seguir descreve as características de um membro.</span><span class="sxs-lookup"><span data-stu-id="85862-335">The following table describes member characteristics.</span></span>  
+  
+|<span data-ttu-id="85862-336">Característica</span><span class="sxs-lookup"><span data-stu-id="85862-336">Characteristic</span></span>|<span data-ttu-id="85862-337">Pode ser aplicado a</span><span class="sxs-lookup"><span data-stu-id="85862-337">Can apply to</span></span>|<span data-ttu-id="85862-338">Descrição</span><span class="sxs-lookup"><span data-stu-id="85862-338">Description</span></span>|  
+|--------------------|------------------|-----------------|  
+|<span data-ttu-id="85862-339">abstract</span><span class="sxs-lookup"><span data-stu-id="85862-339">abstract</span></span>|<span data-ttu-id="85862-340">Métodos, propriedades e eventos</span><span class="sxs-lookup"><span data-stu-id="85862-340">Methods, properties, and events</span></span>|<span data-ttu-id="85862-341">O tipo não fornece a implementação do método.</span><span class="sxs-lookup"><span data-stu-id="85862-341">The type does not supply the method's implementation.</span></span> <span data-ttu-id="85862-342">Tipos que herdam ou implementam métodos abstratos devem fornecer uma implementação para o método.</span><span class="sxs-lookup"><span data-stu-id="85862-342">Types that inherit or implement abstract methods must supply an implementation for the method.</span></span> <span data-ttu-id="85862-343">A única exceção é quando o tipo derivado é um tipo abstrato.</span><span class="sxs-lookup"><span data-stu-id="85862-343">The only exception is when the derived type is itself an abstract type.</span></span> <span data-ttu-id="85862-344">Todos os métodos abstratos são virtuais.</span><span class="sxs-lookup"><span data-stu-id="85862-344">All abstract methods are virtual.</span></span>|  
+|<span data-ttu-id="85862-345">privado, família, assembly, família e assembly, família ou assembly ou público</span><span class="sxs-lookup"><span data-stu-id="85862-345">private, family, assembly, family and assembly, family or assembly, or public</span></span>|<span data-ttu-id="85862-346">Todos</span><span class="sxs-lookup"><span data-stu-id="85862-346">All</span></span>|<span data-ttu-id="85862-347">Define a acessibilidade de um membro:</span><span class="sxs-lookup"><span data-stu-id="85862-347">Defines the accessibility of the member:</span></span><br /><br /> <span data-ttu-id="85862-348">particulares</span><span class="sxs-lookup"><span data-stu-id="85862-348">private</span></span><br /> <span data-ttu-id="85862-349">Acessível somente dentro do mesmo tipo que o membro ou de um tipo aninhado.</span><span class="sxs-lookup"><span data-stu-id="85862-349">Accessible only from within the same type as the member, or within a nested type.</span></span><br /><br /> <span data-ttu-id="85862-350">família</span><span class="sxs-lookup"><span data-stu-id="85862-350">family</span></span><br /> <span data-ttu-id="85862-351">Acessível dentro do mesmo tipo que o membro e de tipos derivados herdados dele.</span><span class="sxs-lookup"><span data-stu-id="85862-351">Accessible from within the same type as the member, and from derived types that inherit from it.</span></span><br /><br /> <span data-ttu-id="85862-352">assembly</span><span class="sxs-lookup"><span data-stu-id="85862-352">assembly</span></span><br /> <span data-ttu-id="85862-353">Acessível somente no assembly no qual o tipo é definido.</span><span class="sxs-lookup"><span data-stu-id="85862-353">Accessible only in the assembly in which the type is defined.</span></span><br /><br /> <span data-ttu-id="85862-354">família e assembly</span><span class="sxs-lookup"><span data-stu-id="85862-354">family and assembly</span></span><br /> <span data-ttu-id="85862-355">Acessíveis somente em tipos qualificados para acesso de família e assembly.</span><span class="sxs-lookup"><span data-stu-id="85862-355">Accessible only from types that qualify for both family and assembly access.</span></span><br /><br /> <span data-ttu-id="85862-356">família ou assembly</span><span class="sxs-lookup"><span data-stu-id="85862-356">family or assembly</span></span><br /> <span data-ttu-id="85862-357">Acessíveis somente dentro de tipos qualificados para acesso de família ou assembly.</span><span class="sxs-lookup"><span data-stu-id="85862-357">Accessible only from types that qualify for either family or assembly access.</span></span><br /><br /> <span data-ttu-id="85862-358">públicos</span><span class="sxs-lookup"><span data-stu-id="85862-358">public</span></span><br /> <span data-ttu-id="85862-359">Acessíveis dentro de qualquer tipo.</span><span class="sxs-lookup"><span data-stu-id="85862-359">Accessible from any type.</span></span>|  
+|<span data-ttu-id="85862-360">final</span><span class="sxs-lookup"><span data-stu-id="85862-360">final</span></span>|<span data-ttu-id="85862-361">Métodos, propriedades e eventos</span><span class="sxs-lookup"><span data-stu-id="85862-361">Methods, properties, and events</span></span>|<span data-ttu-id="85862-362">Um método virtual não pode ser substituído em um tipo derivado.</span><span class="sxs-lookup"><span data-stu-id="85862-362">The virtual method cannot be overridden in a derived type.</span></span>|  
+|<span data-ttu-id="85862-363">initialize-only</span><span class="sxs-lookup"><span data-stu-id="85862-363">initialize-only</span></span>|<span data-ttu-id="85862-364">Campos</span><span class="sxs-lookup"><span data-stu-id="85862-364">Fields</span></span>|<span data-ttu-id="85862-365">O valor pode apenas ser inicializado e não pode ser gravado após a inicialização.</span><span class="sxs-lookup"><span data-stu-id="85862-365">The value can only be initialized, and cannot be written after initialization.</span></span>|  
+|<span data-ttu-id="85862-366">instância</span><span class="sxs-lookup"><span data-stu-id="85862-366">instance</span></span>|<span data-ttu-id="85862-367">Campos, métodos, propriedades e eventos</span><span class="sxs-lookup"><span data-stu-id="85862-367">Fields, methods, properties, and events</span></span>|<span data-ttu-id="85862-368">Se um membro não estiver marcado como `static` (C# e C++), `Shared` (Visual Basic), `virtual` (C# e C++) ou `Overridable` (Visual Basic), ele será um membro de instância (não há palavra-chave de instância).</span><span class="sxs-lookup"><span data-stu-id="85862-368">If a member is not marked as `static` (C# and C++), `Shared` (Visual Basic), `virtual` (C# and C++), or `Overridable` (Visual Basic), it is an instance member (there is no instance keyword).</span></span> <span data-ttu-id="85862-369">Haverá tantas cópias desses membros na memória quanto objetos que as usam.</span><span class="sxs-lookup"><span data-stu-id="85862-369">There will be as many copies of such members in memory as there are objects that use it.</span></span>|  
+|<span data-ttu-id="85862-370">literal</span><span class="sxs-lookup"><span data-stu-id="85862-370">literal</span></span>|<span data-ttu-id="85862-371">Campos</span><span class="sxs-lookup"><span data-stu-id="85862-371">Fields</span></span>|<span data-ttu-id="85862-372">O valor atribuído ao campo é um valor fixo, conhecido no tempo de compilação, de um tipo de valor interno.</span><span class="sxs-lookup"><span data-stu-id="85862-372">The value assigned to the field is a fixed value, known at compile time, of a built-in value type.</span></span> <span data-ttu-id="85862-373">Às vezes, campos literais são conhecidos como constantes.</span><span class="sxs-lookup"><span data-stu-id="85862-373">Literal fields are sometimes referred to as constants.</span></span>|  
+|<span data-ttu-id="85862-374">newslot ou override</span><span class="sxs-lookup"><span data-stu-id="85862-374">newslot or override</span></span>|<span data-ttu-id="85862-375">Todos</span><span class="sxs-lookup"><span data-stu-id="85862-375">All</span></span>|<span data-ttu-id="85862-376">Define como o membro interage com os membros herdados que possuam a mesma assinatura:</span><span class="sxs-lookup"><span data-stu-id="85862-376">Defines how the member interacts with inherited members that have the same signature:</span></span><br /><br /> <span data-ttu-id="85862-377">newslot</span><span class="sxs-lookup"><span data-stu-id="85862-377">newslot</span></span><br /> <span data-ttu-id="85862-378">Oculta os membros herdados que possuam a mesma assinatura.</span><span class="sxs-lookup"><span data-stu-id="85862-378">Hides inherited members that have the same signature.</span></span><br /><br /> <span data-ttu-id="85862-379">override</span><span class="sxs-lookup"><span data-stu-id="85862-379">override</span></span><br /> <span data-ttu-id="85862-380">Substitui a definição de um método virtual herdado.</span><span class="sxs-lookup"><span data-stu-id="85862-380">Replaces the definition of an inherited virtual method.</span></span><br /><br /> <span data-ttu-id="85862-381">O padrão é newslot.</span><span class="sxs-lookup"><span data-stu-id="85862-381">The default is newslot.</span></span>|  
+|<span data-ttu-id="85862-382">static</span><span class="sxs-lookup"><span data-stu-id="85862-382">static</span></span>|<span data-ttu-id="85862-383">Campos, métodos, propriedades e eventos</span><span class="sxs-lookup"><span data-stu-id="85862-383">Fields, methods, properties, and events</span></span>|<span data-ttu-id="85862-384">O membro pertence ao tipo no qual está definido e não a uma instância particular do tipo; o membro existirá mesmo se uma instância do tipo não tiver sido criada e será compartilhado entre todas as instâncias do tipo.</span><span class="sxs-lookup"><span data-stu-id="85862-384">The member belongs to the type it is defined on, not to a particular instance of the type; the member exists even if an instance of the type is not created, and it is shared among all instances of the type.</span></span>|  
+|<span data-ttu-id="85862-385">virtual</span><span class="sxs-lookup"><span data-stu-id="85862-385">virtual</span></span>|<span data-ttu-id="85862-386">Métodos, propriedades e eventos</span><span class="sxs-lookup"><span data-stu-id="85862-386">Methods, properties, and events</span></span>|<span data-ttu-id="85862-387">O método pode ser implementado por um tipo derivado e pode ser invocado estática ou dinamicamente.</span><span class="sxs-lookup"><span data-stu-id="85862-387">The method can be implemented by a derived type and can be invoked either statically or dynamically.</span></span> <span data-ttu-id="85862-388">Se a invocação dinâmica for usada, o tipo da instância que faz a chamada no tempo de execução (em vez do tipo conhecido no tempo de compilação) determinará qual implementação do método será chamada.</span><span class="sxs-lookup"><span data-stu-id="85862-388">If dynamic invocation is used, the type of the instance that makes the call at run time (rather than the type known at compile time) determines which implementation of the method is called.</span></span> <span data-ttu-id="85862-389">Para invocar um método virtual estaticamente, a variável precisará ser convertida em um tipo que usa a versão desejada do método.</span><span class="sxs-lookup"><span data-stu-id="85862-389">To invoke a virtual method statically, the variable might have to be cast to a type that uses the desired version of the method.</span></span>|  
+  
+### <a name="overloading"></a><span data-ttu-id="85862-390">Sobrecarga</span><span class="sxs-lookup"><span data-stu-id="85862-390">Overloading</span></span>  
+ <span data-ttu-id="85862-391">Cada membro de tipo tem uma assinatura exclusiva.</span><span class="sxs-lookup"><span data-stu-id="85862-391">Each type member has a unique signature.</span></span> <span data-ttu-id="85862-392">Assinaturas de método consistem no nome de método e em uma lista de parâmetros (a ordem e os tipos dos argumentos do método).</span><span class="sxs-lookup"><span data-stu-id="85862-392">Method signatures consist of the method name and a parameter list (the order and types of the method's arguments).</span></span> <span data-ttu-id="85862-393">Os vários métodos com o mesmo nome podem ser definidos em um tipo desde que suas assinaturas sejam diferentes.</span><span class="sxs-lookup"><span data-stu-id="85862-393">Multiple methods with the same name can be defined within a type as long as their signatures differ.</span></span> <span data-ttu-id="85862-394">Quando dois ou mais métodos com o mesmo nome forem definidos, diz-se que o método está sobrecarregado.</span><span class="sxs-lookup"><span data-stu-id="85862-394">When two or more methods with the same name are defined, the method is said to be overloaded.</span></span> <span data-ttu-id="85862-395">Por exemplo, em <xref:System.Char?displayProperty=nameWithType>, o método <xref:System.Char.IsDigit%2A> está sobrecarregado.</span><span class="sxs-lookup"><span data-stu-id="85862-395">For example, in <xref:System.Char?displayProperty=nameWithType>, the <xref:System.Char.IsDigit%2A> method is overloaded.</span></span> <span data-ttu-id="85862-396">Um método utiliza um <xref:System.Char>.</span><span class="sxs-lookup"><span data-stu-id="85862-396">One method takes a <xref:System.Char>.</span></span> <span data-ttu-id="85862-397">O outro método utiliza um <xref:System.String> e um <xref:System.Int32>.</span><span class="sxs-lookup"><span data-stu-id="85862-397">The other method takes a <xref:System.String> and an <xref:System.Int32>.</span></span>  
+  
 > [!NOTE]
-> O valor retornado não é definido para um delegado que tenha mais de um método na lista de invocação, mesmo que o delegado tenha um tipo de retorno.
-
-Em muitos casos, como acontece com métodos de retorno de chamada, um delegado representa apenas um método e as únicas ações que você precisa realizar são criar e invocar o delegado. 
-
-Para delegados que representam vários métodos, o .NET fornece métodos das classes de delegado [Delegate](xref:System.Delegate) e [MulticastDelegate](xref:System.MulticastDelegate) para dar suporte a operações como adicionar um método à lista de invocação de um delegado (o método [Delegate.Combine](xref:System.Delegate.Combine(System.Delegate,System.Delegate))), remover um método (o método [Delegate.Remove](xref:System.Delegate.Remove(System.Delegate,System.Delegate))) e obter a lista de invocação (o método [Delegate.GetInvocationList](xref:System.Delegate.GetInvocationList)).
-
-> [!NOTE]
-> Não é necessário usar esses métodos para delegados de manipuladores de eventos em C# ou Visual Basic, porque essas linguagens fornecem sintaxe para adicionar e remover manipuladores de eventos.
-
-## <a name="type-definitions"></a>Definições de tipo
-
-Uma definição de tipo inclui o seguinte: 
-
-* Qualquer atributo definido no tipo.
-
-* A acessibilidade do tipo (visibilidade).
-
-* O nome do tipo.
-
-* O tipo de base do tipo.
-
-* Qualquer interface implementada pelo tipo.
-
-* Definições para cada um dos membros do tipo.
-
-### <a name="attributes"></a>Atributos
-
-Atributos fornecem metadados adicionais definidos pelo usuário. Com frequência, eles são usados para armazenar informações adicionais sobre um tipo em seu assembly ou para modificar o comportamento de um membro de tipo no ambiente do tempo de design ou do tempo de execução. 
-
-Os atributos são as próprias classes herdadas de [System.Attribute](xref:System.Attribute). Linguagens que dão suporte ao uso de atributos têm sua própria sintaxe para aplicar atributos a um elemento de linguagem. Os atributos podem ser aplicados a praticamente qualquer elemento de linguagem. Os elementos específicos para os quais um atributo pode ser aplicado são definidos pelo [AttributeUsageAttribute](xref:System.AttributeUsageAttribute) aplicado à classe de atributo.
-
-### <a name="type-accessibility"></a>Acessibilidade de tipo
-
-Todos os tipos têm um modificador que rege sua acessibilidade de outros tipos. A tabela a seguir descreve as acessibilidades de tipo que o tempo de execução dá suporte.
-
-Acessibilidade | Descrição
-------------- | -----------
-public | O tipo é acessível por todos os assemblies.
-assembly | O tipo é acessível somente dentro do assembly.
-
-A acessibilidade de um tipo aninhado depende do domínio de acessibilidade, que é determinado pela acessibilidade declarada do membro e pelo domínio da acessibilidade do tipo imediatamente contido. Entretanto, o domínio de acessibilidade de um tipo aninhado não pode exceder o do tipo contido.
-
-O domínio de acessibilidade de um membro aninhado `M` declarado em um tipo `T` em um programa `P` é definido da seguinte forma (observe que `M` pode ser um tipo): 
-
-* Se a acessibilidade declarada de `M` for `public`, o domínio de acessibilidade de `M` será o domínio de acessibilidade de `T`.
-
-* Se a acessibilidade declarada de `M` for `protected internal`, o domínio de acessibilidade de `M` será a interseção do domínio de acessibilidade de `T` com o texto de programa de `P` e o texto de programa de qualquer tipo derivado de `T` declarado fora de `P`.
-
-* Se a acessibilidade declarada de `M` for `protected`, o domínio de acessibilidade de `M` será a interseção do domínio de acessibilidade de `T` com o texto do programa de `T` e qualquer tipo derivado de `T`.
-
-* Se a acessibilidade declarada de `M` for `internal`, o domínio de acessibilidade de `M` será a interseção do domínio de acessibilidade de `T` com o texto de programa de `P`.
-
-* Se a acessibilidade declarada de `M` for `private`, o domínio de acessibilidade de `M` será o texto de programa de `T`.
-
-### <a name="type-names"></a>Nomes de tipo
-
-O Common Type System impõe apenas duas restrições de nomes: 
-
-* Todos os nomes são codificados como cadeias de caracteres Unicode (16 bits).
-
-* Não são permitidos nomes que tenham um valor (16 bits) inserido de 0x0000.
-
-No entanto, a maioria das linguagens impõe restrições adicionais em nomes de tipo. Todas as comparações são feitas em uma base byte por byte e, assim, diferenciam maiúsculas de minúsculas e são independentes de localidade.
-
-Embora um tipo possa referenciar tipos de outros módulos e assemblies, um tipo deve ser totalmente definido em um módulo do .NET. (Dependendo do suporte do compilador, no entanto, ele pode ser dividido em vários arquivos de código-fonte.) Nomes de tipo precisam ser exclusivos somente dentro de um namespace. Para identificar totalmente um tipo, o nome de tipo deve ser qualificado pelo namespace que contém a implementação do tipo.
-
-### <a name="base-types-and-interfaces"></a>Tipos de base e interfaces
-
-Um tipo pode herdar valores e comportamentos de outro tipo. O Common Type System não permite que tipos sejam herdados de mais de um tipo de base.
-
-Um tipo pode implementar um número qualquer de interfaces. Para implementar uma interface, um tipo deve implementar todos os membros virtuais dessa interface. Um método virtual pode ser implementado por um tipo derivado e pode ser invocado estática ou dinamicamente.
-
-## <a name="type-members"></a>Membros de tipos
-
-O tempo de execução permite que você defina os membros do tipo, o que especifica o comportamento e o estado de um tipo. Os membros de tipo incluem o seguinte:
-
-* [Campos](#fields)
-
-* [Propriedades](#properties)
-
-* [Métodos](#methods)
-
-* [Construtores](#constructors)
-
-* [Eventos](#events)
-
-* [Tipos aninhados](#nested-types)
-
-### <a name="fields"></a>Campos
-
-Um campo descreve e contém parte do estado do tipo. Campos podem ser de qualquer tipo com suporte pelo tempo de execução. Geralmente, os campos são `private` ou `protected`, de forma que são acessíveis somente de dentro da classe ou de uma classe derivada. Se o valor de um campo puder ser modificado fora de seu tipo, um acessador do conjunto de propriedades normalmente será usado. Os campos expostos publicamente geralmente são somente leitura e podem ser de dois tipos: 
-
-* Constantes, cujo valor é atribuído no tempo de design. Esses são membros estáticos de uma classe, embora eles não sejam definidos usando a palavra-chave `static` (`Shared` no Visual Basic).
-
-* Variáveis somente leitura, cujos valores podem ser atribuídos no construtor da classe.
-
-O exemplo a seguir ilustra esses dois usos de campos somente leitura.
-
-```csharp
-using System;
-
-public class Constants
-{
-   public const double Pi = 3.1416;
-   public readonly DateTime BirthDate;
-
-   public Constants(DateTime birthDate)
-   {
-      this.BirthDate = birthDate;
-   }
-}
-
-public class Example
-{
-   public static void Main()
-   {
-      Constants con = new Constants(new DateTime(1974, 8, 18));
-      Console.Write(Constants.Pi + "\n");
-      Console.Write(con.BirthDate.ToString("d") + "\n");
-   }
-}
-// The example displays the following output if run on a system whose current
-// culture is en-US:
-//    3.1417
-//    8/18/1974
-```
-
-```vb
-Public Class Constants
-   Public Const Pi As Double = 3.1416
-   Public ReadOnly BirthDate As Date
-
-   Public Sub New(birthDate As Date)
-      Me.BirthDate = birthDate
-   End Sub
-End Class
-
-Public Module Example
-   Public Sub Main()
-      Dim con As New Constants(#8/18/1974#)
-      Console.WriteLine(Constants.Pi.ToString())
-      Console.WriteLine(con.BirthDate.ToString("d"))
-   End Sub
-End Module
-' The example displays the following output if run on a system whose current
-' culture is en-US:
-'    3.1417
-'    8/18/1974
-```
-
-### <a name="properties"></a>Propriedades
-
-Uma propriedade nomeia um valor ou um estado do tipo e define métodos para obter ou definir o valor da propriedade. Propriedades podem ser tipos primitivos, coleções de tipos primitivos, tipos definidos pelo usuário ou coleções de tipos definidos pelo usuário. Propriedades são, frequentemente, usadas para manter a interface pública de um tipo independente da representação real do tipo. Isso permite que as propriedades reflitam os valores que não estão armazenados diretamente na classe (por exemplo, quando uma propriedade retorna um valor computado) ou para realizar uma validação antes de os valores serem atribuídos a campos privados. O exemplo a seguir ilustra o padrão mais recente.
-
-```csharp
-using System;
-
-public class Person
-{
-   private int m_Age;
-
-   public int Age
-   { 
-      get { return m_Age; }
-      set {
-         if (value < 0 || value > 125)
-         {
-            throw new ArgumentOutOfRangeException("The value of the Age property must be between 0 and 125.");
-         }
-         else
-         {
-            m_Age = value;
-         }         
-      }
-   }
-}
-```
-
-```vb
-Public Class Person
-   Private m_Age As Integer
-
-   Public Property Age As Integer
-      Get
-         Return m_Age
-      End Get
-      Set
-         If value < 0 Or value > 125 Then
-            Throw New ArgumentOutOfRangeException("The value of the Age property must be between 0 and 125.")
-         Else
-            m_Age = value
-         End If
-      End Set
-   End Property
-End Class
-```
-
-Além de incluir a própria propriedade, a MSIL (Microsoft Intermediate Language) para um tipo que contém uma propriedade legível inclui um método `get`*_propertyname* e a MSIL para um tipo que contém uma propriedade gravável inclui um método `set`*_propertyname*.
-
-### <a name="methods"></a>Métodos
-
-Um método descreve as operações disponíveis no tipo. A assinatura do método especifica os tipos permitidos de todos seus parâmetros e o valor retornado.
-
-Embora a maioria dos métodos defina o número exato de parâmetros necessários para chamadas de método, alguns métodos dão suporte a um número variável de parâmetros. O parâmetro final declarado desses métodos é marcado com o atributo [ParamArrayAttribute](xref:System.ParamArrayAttribute). Compiladores de linguagem normalmente fornecem uma palavra-chave, como `params` no C# e `ParamArray` no Visual Basic, que tornam o uso explícito de [ParamArrayAttribute](xref:System.ParamArrayAttribute) desnecessário.
-
-### <a name="constructors"></a>Construtores
-
-Um construtor é um tipo especial de método que cria novas instâncias de uma classe ou estrutura. Assim como qualquer outro método, um construtor pode incluir parâmetros. No entanto, os construtores não têm nenhum valor retornado (ou seja, eles retornam `void`). 
-
-Se o código-fonte para uma classe não definir explicitamente um construtor, o compilador incluirá um construtor padrão (sem parâmetros). No entanto, se o código-fonte de uma classe definir apenas construtores com parâmetros, o compilador do C# não gerará um construtor sem parâmetros.
-
-Se o código-fonte de uma estrutura definir construtores, eles deverão ser parametrizados. Uma estrutura não pode definir um construtor padrão (sem parâmetros) e os compiladores não geram construtores sem parâmetros para estruturas ou outros tipos de valor. Todos os tipos de valor têm um construtor padrão implícito. Esse construtor é implementado pelo Common Language Runtime e inicializa todos os campos da estrutura com seus valores padrão. 
-
-### <a name="events"></a>Eventos
-
-Um evento define um incidente que pode ser respondido e define métodos para assinar, cancelar a assinatura e acionar o evento. Eventos são frequentemente usados para informar outros tipos de alterações de estado.
-
-### <a name="nested-types"></a>Tipos aninhados
-
-Um tipo aninhado é um tipo membro de outros tipos. Os tipos aninhados devem ser unidos ao tipo de contenção e não devem ser utilizados como tipos de uso geral. Os tipos aninhados são úteis quando o tipo declarativo usa e cria instâncias do tipo aninhado e o uso do tipo aninhado não é exposto em membros públicos.
-
-Os tipos aninhados são confusos para alguns desenvolvedores e não devem ficar publicamente visíveis, a menos que haja um motivo forte para a visibilidade. Em uma biblioteca bem projetada, os desenvolvedores raramente precisam usar tipos aninhados para instanciar objetos ou declarar variáveis.
-
-## <a name="characteristics-of-type-members"></a>Características de membros de tipo
-
-O Common Type System permite que os membros de tipo tenham várias características. No entanto, as linguagens não necessariamente dão suporte a todas elas. A tabela a seguir descreve as características de um membro.
-
-Característica | Pode ser aplicado a | Descrição
--------------- | ------------ | -----------
-abstract | Métodos, propriedades e eventos | O tipo não fornece a implementação do método. Tipos que herdam ou implementam métodos abstratos devem fornecer uma implementação para o método. A única exceção é quando o tipo derivado é um tipo abstrato. Todos os métodos abstratos são virtuais.
-private | Todos | Acessível somente dentro do mesmo tipo que o membro ou de um tipo aninhado.
-família | Todos | Acessível dentro do mesmo tipo que o membro e de tipos derivados herdados dele.
-assembly | Todos | Acessível somente no assembly no qual o tipo é definido.
-família e assembly | Todos | Acessíveis somente em tipos qualificados para acesso de família e assembly.
-família ou assembly | Todos | Acessíveis somente dentro de tipos qualificados para acesso de família ou assembly.
-public | Todos | Acessíveis dentro de qualquer tipo.
-final | Métodos, propriedades e eventos | Um método virtual não pode ser substituído em um tipo derivado.
-initialize-only | Campos | O valor pode apenas ser inicializado e não pode ser gravado após a inicialização.
-instância | Campos, métodos, propriedades e eventos | Se um membro não estiver marcado como `static` (C#), `Shared` (Visual Basic), `virtual` (C#) ou `Overridable` (Visual Basic), ele será um membro de instância (não há palavra-chave de instância). Haverá tantas cópias desses membros na memória quanto objetos que as usam.
-literal | Campos | O valor atribuído ao campo é um valor fixo, conhecido no tempo de compilação, de um tipo de valor interno. Às vezes, campos literais são conhecidos como constantes.
-newslot ou override | Todos | Define como o membro interage com os membros herdados que têm a mesma assinatura: `newslot` oculta membros herdados que têm a mesma assinatura; `override` substitui a definição de um método virtual herdado. O padrão é newslot.
-static | Campos, métodos, propriedades e eventos | O membro pertence ao tipo no qual está definido e não a uma instância particular do tipo; o membro existirá mesmo se uma instância do tipo não tiver sido criada e será compartilhado entre todas as instâncias do tipo.
-virtual | Métodos, propriedades e eventos | O método pode ser implementado por um tipo derivado e pode ser invocado estática ou dinamicamente. Se a invocação dinâmica for usada, o tipo da instância que faz a chamada no tempo de execução (em vez do tipo conhecido no tempo de compilação) determinará qual implementação do método será chamada. Para invocar um método virtual estaticamente, a variável precisará ser convertida em um tipo que usa a versão desejada do método.
-
-### <a name="overloading"></a>Sobrecarga
-
-Cada membro de tipo tem uma assinatura exclusiva. Assinaturas de método consistem no nome de método e em uma lista de parâmetros (a ordem e os tipos dos argumentos do método). Os vários métodos com o mesmo nome podem ser definidos em um tipo desde que suas assinaturas sejam diferentes. Quando dois ou mais métodos com o mesmo nome forem definidos, diz-se que o método está sobrecarregado. Por exemplo, em [System.Char](xref:System.Char), o método `IsDigit` está sobrecarregado. Um método utiliza um [Char](xref:System.Char). O outro método utiliza uma [Cadeia de Caracteres](xref:System.String) e um [Int32](xref:System.Int32). 
-
-> [!NOTE]
-> O tipo de retorno não é considerado parte da assinatura do método. Ou seja, os métodos não poderão ser sobrecarregados se diferirem somente pelo tipo de retorno.
-
-### <a name="inheriting-overriding-and-hiding-members"></a>Herança, substituição e membros ocultos
-
-Um tipo derivado herda todos os membros de seu tipo de base; ou seja, esses membros são definidos e disponibilizados para o tipo derivado. O comportamento, ou qualidades, de membros herdados pode ser modificado de duas maneiras: 
-
-* Um tipo derivado pode ocultar um membro herdado definindo um novo membro com a mesma assinatura. Isso pode ser feito para fazer um membro privado anteriormente público ou para definir o novo comportamento de um método herdado marcado como `final`.
-
-* Um tipo derivado pode substituir um método virtual herdado. O método de substituição fornece uma nova definição do método que será invocado com base no tipo do valor no tempo de execução em vez do tipo de variável conhecido no tempo de compilação. Um método poderá substituir um método virtual somente se o método virtual não estiver marcado como `final` e o novo método for tão acessível quanto o método virtual.
-
-## <a name="see-also"></a>Consulte também
-
-[Conversão de tipos no .NET Framework](type-conversion.md)
+>  <span data-ttu-id="85862-398">O tipo de retorno não é considerado parte da assinatura do método.</span><span class="sxs-lookup"><span data-stu-id="85862-398">The return type is not considered part of a method's signature.</span></span> <span data-ttu-id="85862-399">Ou seja, os métodos não poderão ser sobrecarregados se diferirem somente pelo tipo de retorno.</span><span class="sxs-lookup"><span data-stu-id="85862-399">That is, methods cannot be overloaded if they differ only by return type.</span></span>  
+  
+### <a name="inheriting-overriding-and-hiding-members"></a><span data-ttu-id="85862-400">Herança, substituição e membros ocultos</span><span class="sxs-lookup"><span data-stu-id="85862-400">Inheriting, Overriding, and Hiding Members</span></span>  
+ <span data-ttu-id="85862-401">Um tipo derivado herda todos os membros de seu tipo de base; ou seja, esses membros são definidos e disponibilizados para o tipo derivado.</span><span class="sxs-lookup"><span data-stu-id="85862-401">A derived type inherits all members of its base type; that is, these members are defined on, and available to, the derived type.</span></span> <span data-ttu-id="85862-402">O comportamento, ou qualidades, de membros herdados pode ser modificado de duas maneiras:</span><span class="sxs-lookup"><span data-stu-id="85862-402">The behavior or qualities of inherited members can be modified in two ways:</span></span>  
+  
+-   <span data-ttu-id="85862-403">Um tipo derivado pode ocultar um membro herdado definindo um novo membro com a mesma assinatura.</span><span class="sxs-lookup"><span data-stu-id="85862-403">A derived type can hide an inherited member by defining a new member with the same signature.</span></span> <span data-ttu-id="85862-404">Isso pode ser feito para fazer um membro privado anteriormente público ou para definir o novo comportamento de um método herdado marcado como `final`.</span><span class="sxs-lookup"><span data-stu-id="85862-404">This might be done to make a previously public member private or to define new behavior for an inherited method that is marked as `final`.</span></span>  
+  
+-   <span data-ttu-id="85862-405">Um tipo derivado pode substituir um método virtual herdado.</span><span class="sxs-lookup"><span data-stu-id="85862-405">A derived type can override an inherited virtual method.</span></span> <span data-ttu-id="85862-406">O método de substituição fornece uma nova definição do método que será invocado com base no tipo do valor no tempo de execução em vez do tipo de variável conhecido no tempo de compilação.</span><span class="sxs-lookup"><span data-stu-id="85862-406">The overriding method provides a new definition of the method that will be invoked based on the type of the value at run time rather than the type of the variable known at compile time.</span></span> <span data-ttu-id="85862-407">Um método poderá substituir um método virtual somente se o método virtual não estiver marcado como `final` e o novo método for tão acessível quanto o método virtual.</span><span class="sxs-lookup"><span data-stu-id="85862-407">A method can override a virtual method only if the virtual method is not marked as `final` and the new method is at least as accessible as the virtual method.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="85862-408">Consulte também</span><span class="sxs-lookup"><span data-stu-id="85862-408">See Also</span></span>  
+ [<span data-ttu-id="85862-409">Biblioteca de classes do .NET</span><span class="sxs-lookup"><span data-stu-id="85862-409">.NET Class Library</span></span>](http://go.microsoft.com/fwlink/?LinkID=217856)  
+ [<span data-ttu-id="85862-410">Common Language Runtime</span><span class="sxs-lookup"><span data-stu-id="85862-410">Common Language Runtime</span></span>](../../../docs/standard/clr.md)  
+ [<span data-ttu-id="85862-411">Conversão de tipo no .NET</span><span class="sxs-lookup"><span data-stu-id="85862-411">Type Conversion in .NET</span></span>](../../../docs/standard/base-types/type-conversion.md)

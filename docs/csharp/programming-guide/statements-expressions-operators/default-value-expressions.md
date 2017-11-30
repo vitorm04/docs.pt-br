@@ -1,60 +1,57 @@
 ---
 title: "expressões de valor padrão (guia de programação em C#)"
 description: "As expressões de valor padrão produzem o valor padrão para qualquer tipo de referência ou tipo de valor"
-ms.date: 2017-08-23
+ms.date: 08/23/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - generics [C#], default keyword
 - default keyword [C#], generic programming
 ms.assetid: b9daf449-4e64-496e-8592-6ed2c8875a98
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: c2bb1c269e5347d615c47ab828506aef538c4761
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
-ms.openlocfilehash: 7b5b53d7ed92c6f6377a3e494daf1d02a4cf0934
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="default-value-expressions-c-programming-guide"></a>Expressões de valor padrão (Guia de Programação em C#)
+# <a name="default-value-expressions-c-programming-guide"></a><span data-ttu-id="9f6c8-103">Expressões de valor padrão (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="9f6c8-103">default value expressions (C# programming guide)</span></span>
 
-Uma expressão de valor padrão produz o valor padrão para um tipo. As expressões de valores padrão são úteis principalmente em classes e métodos genéricos. Um problema que surge ao usar genéricos é como atribuir um valor padrão a um tipo parametrizado `T` quando você ainda não sabe o seguinte:
+<span data-ttu-id="9f6c8-104">Uma expressão de valor padrão produz o valor padrão para um tipo.</span><span class="sxs-lookup"><span data-stu-id="9f6c8-104">A default value expression produces the default value for a type.</span></span> <span data-ttu-id="9f6c8-105">As expressões de valores padrão são úteis principalmente em classes e métodos genéricos.</span><span class="sxs-lookup"><span data-stu-id="9f6c8-105">Default value expressions are particularly useful in generic classes and methods.</span></span> <span data-ttu-id="9f6c8-106">Um problema que surge ao usar genéricos é como atribuir um valor padrão a um tipo parametrizado `T` quando você ainda não sabe o seguinte:</span><span class="sxs-lookup"><span data-stu-id="9f6c8-106">One issue that arises using generics is how to assign a default value to a parameterized type `T` when you do not know the following in advance:</span></span>
 
-- Se `T` é um tipo de referência ou um tipo de valor.
-- Quando `T` é um tipo de valor, se ele é um valor numérico ou um struct definido pelo usuário.
+- <span data-ttu-id="9f6c8-107">Se `T` é um tipo de referência ou um tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="9f6c8-107">Whether `T` is a reference type or a value type.</span></span>
+- <span data-ttu-id="9f6c8-108">Quando `T` é um tipo de valor, se ele é um valor numérico ou um struct definido pelo usuário.</span><span class="sxs-lookup"><span data-stu-id="9f6c8-108">If `T` is a value type, whether is a numeric value or a user-defined struct.</span></span>
 
- Dada uma variável `t` de um tipo parametrizado `T`, a instrução `t = null` só será válida se `T` for um tipo de referência. A atribuição `t = 0` funciona apenas para tipos de valor numérico, mas não para structs. A solução é usar uma expressão de valor padrão, que retorna `null` para tipos de referência (tipos de classes e tipos de interface) e zero para tipos de valor numérico. Para estruturas definidas pelo usuário, ela retorna o struct inicializado para o padrão de bit zero, que produz 0 ou `null` para cada membro dependendo se tal membro é um tipo de valor ou de referência. Para tipos que permitem valor nulo, `default` retorna um <xref:System.Nullable%601?displayProperty=fullName>, que é inicializado como qualquer struct.
+ <span data-ttu-id="9f6c8-109">Dada uma variável `t` de um tipo parametrizado `T`, a instrução `t = null` só será válida se `T` for um tipo de referência.</span><span class="sxs-lookup"><span data-stu-id="9f6c8-109">Given a variable `t` of a parameterized type `T`, the statement `t = null` is only valid if `T` is a reference type.</span></span> <span data-ttu-id="9f6c8-110">A atribuição `t = 0` funciona apenas para tipos de valor numérico, mas não para structs.</span><span class="sxs-lookup"><span data-stu-id="9f6c8-110">The assignment `t = 0` only works for numeric value types but not for structs.</span></span> <span data-ttu-id="9f6c8-111">A solução é usar uma expressão de valor padrão, que retorna `null` para tipos de referência (tipos de classes e tipos de interface) e zero para tipos de valor numérico.</span><span class="sxs-lookup"><span data-stu-id="9f6c8-111">The solution is to use a default value expression, which returns `null` for reference types (class types and interface types) and zero for numeric value types.</span></span> <span data-ttu-id="9f6c8-112">Para estruturas definidas pelo usuário, ela retorna o struct inicializado para o padrão de bit zero, que produz 0 ou `null` para cada membro dependendo se tal membro é um tipo de valor ou de referência.</span><span class="sxs-lookup"><span data-stu-id="9f6c8-112">For user-defined structs, it returns the struct initialized to the zero bit pattern, which produces 0 or `null` for each member depending on whether that member is a value or reference type.</span></span> <span data-ttu-id="9f6c8-113">Para tipos que permitem valor nulo, `default` retorna um <xref:System.Nullable%601?displayProperty=nameWithType>, que é inicializado como qualquer struct.</span><span class="sxs-lookup"><span data-stu-id="9f6c8-113">For nullable value types, `default` returns a <xref:System.Nullable%601?displayProperty=nameWithType>, which is initialized like any struct.</span></span>
 
-A expressão `default(T)` não é limitada a classes e métodos genéricos. As expressões de valor padrão podem ser usadas com qualquer tipo gerenciado. Todas estas expressões são válidas:
+<span data-ttu-id="9f6c8-114">A expressão `default(T)` não é limitada a classes e métodos genéricos.</span><span class="sxs-lookup"><span data-stu-id="9f6c8-114">The `default(T)` expression is not limited to generic classes and methods.</span></span> <span data-ttu-id="9f6c8-115">As expressões de valor padrão podem ser usadas com qualquer tipo gerenciado.</span><span class="sxs-lookup"><span data-stu-id="9f6c8-115">Default value expressions can be used with any managed type.</span></span> <span data-ttu-id="9f6c8-116">Todas estas expressões são válidas:</span><span class="sxs-lookup"><span data-stu-id="9f6c8-116">Any of these expressions are valid:</span></span>
 
- [!code-cs[csProgGuideGenerics#1](../../../../samples/snippets/csharp/programming-guide/statements-expressions-operators/default-value-expressions.cs)]
+ [!code-csharp[csProgGuideGenerics#1](../../../../samples/snippets/csharp/programming-guide/statements-expressions-operators/default-value-expressions.cs)]
 
- O exemplo da classe `GenericList<T>` a seguir mostra como usar o operador `default(T)` em uma classe genérica. Para obter mais informações, consulte [Visão geral de genéricos](../generics/introduction-to-generics.md).
+ <span data-ttu-id="9f6c8-117">O exemplo da classe `GenericList<T>` a seguir mostra como usar o operador `default(T)` em uma classe genérica.</span><span class="sxs-lookup"><span data-stu-id="9f6c8-117">The following example from the `GenericList<T>` class shows how to use the `default(T)` operator in a generic class.</span></span> <span data-ttu-id="9f6c8-118">Para obter mais informações, consulte [Visão geral de genéricos](../generics/introduction-to-generics.md).</span><span class="sxs-lookup"><span data-stu-id="9f6c8-118">For more information, see [Generics Overview](../generics/introduction-to-generics.md).</span></span>
 
- [!code-cs[csProgGuideGenerics#2](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#Snippet41)]
+ [!code-csharp[csProgGuideGenerics#2](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#Snippet41)]
 
-## <a name="default-literal-and-type-inference"></a>Inferência de tipo e literal padrão
+## <a name="default-literal-and-type-inference"></a><span data-ttu-id="9f6c8-119">Inferência de tipo e literal padrão</span><span class="sxs-lookup"><span data-stu-id="9f6c8-119">default literal and type inference</span></span>
 
-A partir do C# 7.1, o literal `default` pode ser usado para expressões de valor padrão quando o compilador pode inferir o tipo da expressão. O literal `default` produz o mesmo valor que o equivalente `default(T)`, em que `T` é o tipo inferido. Isso pode tornar código mais conciso, reduzindo a redundância de declarar um tipo mais de uma vez. O literal `default` pode ser usado em todos os locais a seguir:
+<span data-ttu-id="9f6c8-120">A partir do C# 7.1, o literal `default` pode ser usado para expressões de valor padrão quando o compilador pode inferir o tipo da expressão.</span><span class="sxs-lookup"><span data-stu-id="9f6c8-120">Beginning with C# 7.1, the `default` literal can be used for default value expressions when the compiler can infer the type of the expression.</span></span> <span data-ttu-id="9f6c8-121">O literal `default` produz o mesmo valor que o equivalente `default(T)`, em que `T` é o tipo inferido.</span><span class="sxs-lookup"><span data-stu-id="9f6c8-121">The `default` literal produces the same value as the equivalent `default(T)` where `T` is the inferred type.</span></span> <span data-ttu-id="9f6c8-122">Isso pode tornar código mais conciso, reduzindo a redundância de declarar um tipo mais de uma vez.</span><span class="sxs-lookup"><span data-stu-id="9f6c8-122">This can make code more concise by reducing the redundancy of declaring a type more than once.</span></span> <span data-ttu-id="9f6c8-123">O literal `default` pode ser usado em todos os locais a seguir:</span><span class="sxs-lookup"><span data-stu-id="9f6c8-123">The `default` literal can be used in any of the following locations:</span></span>
 
-- inicializador de variável
-- atribuição de variável
-- declarando o valor padrão para um parâmetro opcional
-- fornecendo o valor para um argumento de chamada de método
-- instrução de retorno (ou expressão em um membro no corpo da expressão)
+- <span data-ttu-id="9f6c8-124">inicializador de variável</span><span class="sxs-lookup"><span data-stu-id="9f6c8-124">variable initializer</span></span>
+- <span data-ttu-id="9f6c8-125">atribuição de variável</span><span class="sxs-lookup"><span data-stu-id="9f6c8-125">variable assignment</span></span>
+- <span data-ttu-id="9f6c8-126">declarando o valor padrão para um parâmetro opcional</span><span class="sxs-lookup"><span data-stu-id="9f6c8-126">declaring the default value for an optional parameter</span></span>
+- <span data-ttu-id="9f6c8-127">fornecendo o valor para um argumento de chamada de método</span><span class="sxs-lookup"><span data-stu-id="9f6c8-127">providing the value for a method call argument</span></span>
+- <span data-ttu-id="9f6c8-128">instrução de retorno (ou expressão em um membro no corpo da expressão)</span><span class="sxs-lookup"><span data-stu-id="9f6c8-128">return statement (or expression in an expression bodied member)</span></span>
 
-O exemplo a seguir mostra vários tipos de uso do literal `default` em uma expressão de valor padrão:
+<span data-ttu-id="9f6c8-129">O exemplo a seguir mostra vários tipos de uso do literal `default` em uma expressão de valor padrão:</span><span class="sxs-lookup"><span data-stu-id="9f6c8-129">The following example shows many usages of the `default` literal in a default value expression:</span></span>
 
-[!code-cs[csProgGuideGenerics#3](../../../../samples/snippets/csharp/programming-guide/statements-expressions-operators/default-literal.cs)]
+[!code-csharp[csProgGuideGenerics#3](../../../../samples/snippets/csharp/programming-guide/statements-expressions-operators/default-literal.cs)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a><span data-ttu-id="9f6c8-130">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9f6c8-130">See also</span></span>
 
- <xref:System.Collections.Generic>[Guia de Programação em C#](../index.md)   
- [Genéricos](../generics/index.md)   
- [Métodos Genéricos](../generics/generic-methods.md)   
- [Genéricos](~/docs/standard/generics/index.md)   
-
+ <span data-ttu-id="9f6c8-131"><xref:System.Collections.Generic>[Guia de programação em c#](../index.md)</span><span class="sxs-lookup"><span data-stu-id="9f6c8-131"><xref:System.Collections.Generic> [C# Programming Guide](../index.md)</span></span>  
+ [<span data-ttu-id="9f6c8-132">Genéricos</span><span class="sxs-lookup"><span data-stu-id="9f6c8-132">Generics</span></span>](../generics/index.md)  
+ [<span data-ttu-id="9f6c8-133">Métodos genéricos</span><span class="sxs-lookup"><span data-stu-id="9f6c8-133">Generic Methods</span></span>](../generics/generic-methods.md)  
+ [<span data-ttu-id="9f6c8-134">Genéricos</span><span class="sxs-lookup"><span data-stu-id="9f6c8-134">Generics</span></span>](~/docs/standard/generics/index.md)  
