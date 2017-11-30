@@ -1,46 +1,28 @@
 ---
-title: "Mid instrução | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Instrução Mid"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.MidB
 - vb.Mid
-dev_langs:
-- VB
 helpviewer_keywords:
-- substrings, Mid statement
+- substrings [Visual Basic], Mid statement
 - strings [Visual Basic], substrings
-- Mid statement
+- Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e385d6838daa16d45903c6b270fc47ad88797845
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 61d812ef91acc65728b04efc9aa99e3975e71d0c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mid-statement"></a>Instrução Mid
 Substitui um número especificado de caracteres em um `String` variável com caracteres de outra cadeia de caracteres.  
@@ -57,13 +39,13 @@ Mid( _
   
 ## <a name="parts"></a>Partes  
  `Target`  
- Necessário. Nome da `String` variável para modificar.  
+ Necessário. Nome do `String` variável para modificar.  
   
  `Start`  
  Necessário. Expressão `Integer`. Posição de caractere `Target` onde a substituição do texto começa. `Start`usa um índice baseado em um.  
   
  `Length`  
- Opcional. Expressão `Integer`. Número de caracteres a substituir. Se omitido, todos `String` é usado.  
+ Opcional. Expressão `Integer`. Número de caracteres a substituir. Se omitido, todos os `String` é usado.  
   
  `StringExpression`  
  Necessário. `String`expressão que substitui parte de `Target`.  
@@ -72,29 +54,29 @@ Mid( _
   
 |Tipo de exceção|Condição|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException></xref:System.ArgumentException>|`Start` <= 0 ou `Length` < 0.|  
+|<xref:System.ArgumentException>|`Start` <= 0 ou `Length` < 0.|  
   
 ## <a name="remarks"></a>Comentários  
- O número de caracteres substituído é sempre menor ou igual ao número de caracteres em `Target`.  
+ O número de caracteres serão substituídos sempre é menor ou igual ao número de caracteres em `Target`.  
   
- O Visual Basic possui uma <xref:Microsoft.VisualBasic.Strings.Mid%2A>função e um `Mid` instrução.</xref:Microsoft.VisualBasic.Strings.Mid%2A> Os dois elementos operam em um número especificado de caracteres em uma cadeia de caracteres, mas o `Mid` função retorna os caracteres enquanto o `Mid` instrução substitui os caracteres. Para obter mais informações, consulte <xref:Microsoft.VisualBasic.Strings.Mid%2A>.</xref:Microsoft.VisualBasic.Strings.Mid%2A>  
+ Visual Basic tem um <xref:Microsoft.VisualBasic.Strings.Mid%2A> função e um `Mid` instrução. Os dois elementos operam em um número especificado de caracteres em uma cadeia de caracteres, mas o `Mid` função retorna os caracteres enquanto o `Mid` instrução substitui os caracteres. Para obter mais informações, consulte <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
   
 > [!NOTE]
->  O `MidB` instrução de versões anteriores do Visual Basic substitui uma substring em bytes, em vez de caracteres. Ele é usado principalmente para converter cadeias de caracteres de dois bytes (DBCS) conjunto de aplicativos. Todas as cadeias de caracteres do Visual Basic estão em Unicode, e `MidB` não é mais suportado.  
+>  O `MidB` declaração de versões anteriores do Visual Basic substitui uma subcadeia de caracteres em bytes, em vez de caracteres. Ele é usado principalmente para converter cadeias de caracteres de dois bytes (DBCS) conjunto de aplicativos. Todas as cadeias de caracteres do Visual Basic estão em Unicode, e `MidB` não é mais suportada.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo usa o `Mid` instrução para substituir um número especificado de caracteres em uma variável de cadeia de caracteres com caracteres de outra cadeia de caracteres.  
   
- [!code-vb[VbVbalrStrings n º&5;](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]  
+ [!code-vb[VbVbalrStrings#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]  
   
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
  **Módulo:**`Strings`  
   
- **Assembly:**[!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]  
+ **Assembly:**[!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.Strings.Mid%2A></xref:Microsoft.VisualBasic.Strings.Mid%2A>   
- [Cadeias de caracteres](../../../visual-basic/programming-guide/language-features/strings/index.md)   
- [Introdução a cadeias de caracteres no Visual Basic](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+ <xref:Microsoft.VisualBasic.Strings.Mid%2A>  
+ [Cadeias de Caracteres](../../../visual-basic/programming-guide/language-features/strings/index.md)  
+ [Introdução às cadeias de caracteres no Visual Basic](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

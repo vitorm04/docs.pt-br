@@ -1,39 +1,31 @@
 ---
-title: "Depurando árvores de expressão no Visual Studio (Visual Basic) | Documentos do Microsoft"
+title: "Depurando árvores de expressão no Visual Studio (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: efbd8c19947c45b3ba15ce7b574000d56526ef45
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: ff1bee9c3c3fdeafab24368d2c7e8376d4ff7b97
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Depurando árvores de expressão no Visual Studio (Visual Basic)
-Quando você depurar seus aplicativos, você pode analisar a estrutura e o conteúdo das árvores de expressão. Para obter uma visão geral da estrutura de árvore de expressão, você pode usar o `DebugView` propriedade, que está disponível apenas no modo de depuração. Para obter mais informações sobre depuração, consulte [depuração no Visual Studio](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio).  
+Ao depurar seus aplicativos, você pode analisar a estrutura e o conteúdo das árvores de expressão. Para obter uma rápida visão geral da estrutura da árvore de expressão, você pode usar a propriedade `DebugView`, que está disponível apenas no modo de depuração. Para obter mais informações sobre depuração, consulte [Depurando no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).  
   
- Para melhor representar o conteúdo das árvores de expressão, o `DebugView` propriedade usa os visualizadores do Visual Studio. Para obter mais informações, consulte [criar os visualizadores personalizados](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data).  
+ Para melhor representar o conteúdo das árvores de expressão, a propriedade `DebugView` usa os visualizadores do Visual Studio. Para obter mais informações, consulte [Criar visualizadores personalizados](/visualstudio/debugger/create-custom-visualizers-of-data).  
   
 ### <a name="to-open-a-visualizer-for-an-expression-tree"></a>Para abrir um visualizador para uma árvore de expressão  
   
-1.  Clique no ícone de lupa que aparece ao lado de `DebugView` propriedade de uma árvore de expressão em **DataTips**, um **inspeção** janela, o **Autos** janela, ou o **locais** janela.  
+1.  Clique no ícone de lupa que aparece ao lado da propriedade `DebugView` de uma árvore de expressão em **DataTips**, uma janela **Inspeção**, a janela **Autos** ou a janela **Locais**.  
   
      Uma lista de visualizadores é exibida.  
   
@@ -42,9 +34,9 @@ Quando você depurar seus aplicativos, você pode analisar a estrutura e o conte
  Cada tipo de expressão é exibido no visualizador, conforme descrito nas seções a seguir.  
   
 ## <a name="parameterexpressions"></a>ParameterExpressions  
- <xref:System.Linq.Expressions.ParameterExpression>nomes de variáveis são exibidos com um símbolo "$" no início.</xref:System.Linq.Expressions.ParameterExpression>  
+ Os nomes de variáveis <xref:System.Linq.Expressions.ParameterExpression> são exibidos com o símbolo "$" no início.  
   
- Se um parâmetro não tem um nome, ele é atribuído um nome gerado automaticamente, como `$var1` ou `$var2`.  
+ Se um parâmetro não tiver um nome, será atribuído um nome gerado automaticamente, como `$var1` ou `$var2`.  
   
 ### <a name="examples"></a>Exemplos  
   
@@ -71,7 +63,7 @@ Quando você depurar seus aplicativos, você pode analisar a estrutura e o conte
      `$var1`  
   
 ## <a name="constantexpressions"></a>ConstantExpressions  
- Para <xref:System.Linq.Expressions.ConstantExpression>objetos que representam valores inteiros, cadeias de caracteres, e `null`, o valor da constante é exibido.</xref:System.Linq.Expressions.ConstantExpression>  
+ Para objetos <xref:System.Linq.Expressions.ConstantExpression> que representam valores inteiros, cadeias de caracteres e `null`, o valor da constante é exibido.  
   
 ### <a name="examples"></a>Exemplos  
   
@@ -98,7 +90,7 @@ Quando você depurar seus aplicativos, você pode analisar a estrutura e o conte
      10D  
   
 ## <a name="blockexpression"></a>BlockExpression  
- Se o tipo de uma <xref:System.Linq.Expressions.BlockExpression>objeto difere do tipo da última expressão no bloco, o tipo é exibido no `DebugInfo` propriedade entre colchetes angulares (\< e >).</xref:System.Linq.Expressions.BlockExpression> Caso contrário, o tipo do <xref:System.Linq.Expressions.BlockExpression>objeto não é exibido.</xref:System.Linq.Expressions.BlockExpression>  
+ Se o tipo de um objeto <xref:System.Linq.Expressions.BlockExpression> difere do tipo da última expressão no bloco, o tipo é exibido na propriedade `DebugInfo` entre colchetes angulares (\< e >). Caso contrário, o tipo do objeto <xref:System.Linq.Expressions.BlockExpression> não é exibido.  
   
 ### <a name="examples"></a>Exemplos  
   
@@ -132,9 +124,9 @@ Quando você depurar seus aplicativos, você pode analisar a estrutura e o conte
      `}`  
   
 ## <a name="lambdaexpression"></a>LambdaExpression  
- <xref:System.Linq.Expressions.LambdaExpression>objetos são exibidos junto com os tipos de delegado.</xref:System.Linq.Expressions.LambdaExpression>  
+ Objetos <xref:System.Linq.Expressions.LambdaExpression> são exibidos junto com seus tipos delegados.  
   
- Se uma expressão lambda não tem um nome, ele é atribuído um nome gerado automaticamente, como `#Lambda1` ou `#Lambda2`.  
+ Se uma expressão lambda não tiver um nome, será atribuído um nome gerado automaticamente, como `#Lambda1` ou `#Lambda2`.  
   
 ### <a name="examples"></a>Exemplos  
   
@@ -169,11 +161,11 @@ Quando você depurar seus aplicativos, você pode analisar a estrutura e o conte
      `}`  
   
 ## <a name="labelexpression"></a>LabelExpression  
- Se você especificar um valor padrão para o <xref:System.Linq.Expressions.LabelExpression>do objeto, esse valor é exibido antes do <xref:System.Linq.Expressions.LabelTarget>objeto.</xref:System.Linq.Expressions.LabelTarget> </xref:System.Linq.Expressions.LabelExpression>  
+ Se você especificar um valor padrão para o objeto <xref:System.Linq.Expressions.LabelExpression>, esse valor será exibido antes do objeto <xref:System.Linq.Expressions.LabelTarget>.  
   
- O `.Label` token indica o início do rótulo. O `.LabelTarget` token indica o destino de saltar para o destino.  
+ O token `.Label` indica o início do rótulo. O token `.LabelTarget` indica o local para o qual o destino deve saltar.  
   
- Se um rótulo não tem um nome, ele é atribuído um nome gerado automaticamente, como `#Label1` ou `#Label2`.  
+ Se um rótulo não tiver um nome, será atribuído um nome gerado automaticamente, como `#Label1` ou `#Label2`.  
   
 ### <a name="examples"></a>Exemplos  
   
@@ -220,8 +212,8 @@ Quando você depurar seus aplicativos, você pode analisar a estrutura e o conte
   
      `}`  
   
-## <a name="checked-operators"></a>Operadores de verificação  
- Operadores de verificação é exibido com o símbolo "#" na frente do operador. Por exemplo, o operador de adição verificado é exibido como `#+`.  
+## <a name="checked-operators"></a>Operadores verificados  
+ Os operadores verificados são exibidos com o símbolo "#" na frente do operador. Por exemplo, o operador de adição verificado é exibido como `#+`.  
   
 ### <a name="examples"></a>Exemplos  
   
@@ -248,6 +240,6 @@ Quando você depurar seus aplicativos, você pode analisar a estrutura e o conte
      `#(System.Int32)10D`  
   
 ## <a name="see-also"></a>Consulte também  
- [Árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)   
- [Depurando no Visual Studio](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio)   
- [Criar visualizadores personalizados](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data)
+ [Árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)  
+ [Depurando no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)  
+ [Criar visualizadores personalizados](/visualstudio/debugger/create-custom-visualizers-of-data)

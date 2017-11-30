@@ -1,38 +1,21 @@
 ---
-title: Argumento &quot;&lt;argument1&gt;&quot;deve ser menor ou igual ao comprimento do argumento&quot;&lt;argument2&gt;&quot; | Documentos do Microsoft
-ms.date: 2015-07-20
+title: Argumento &#39; &lt;argument1&gt;&#39; deve ser menor ou igual ao comprimento do argumento &#39;&lt; argument2&gt;&#39;
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrArgument_IndexLELength2
+f1_keywords: vbrArgument_IndexLELength2
 ms.assetid: 10765f81-79c5-44c2-89c5-888253105b78
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3c603c44f6830e7407157ffa3f412ebc8f1e79f3
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 13a148abbb0ffb2a86d187425b0d85a71c873f86
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="argument-39ltargument1gt39-must-be-less-than-or-equal-to-the-length-of-argument-39ltargument2gt39"></a>Argumento '&lt;argument1&gt;'deve ser menor ou igual ao comprimento do argumento'&lt;argument2&gt;'
+# <a name="argument-39ltargument1gt39-must-be-less-than-or-equal-to-the-length-of-argument-39ltargument2gt39"></a>Argumento &#39; &lt;argument1&gt;&#39; deve ser menor ou igual ao comprimento do argumento &#39;&lt; argument2&gt;&#39;
 Comprimento de um argumento excede o limite permitido, que é determinado pelo comprimento do segundo argumento.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
@@ -42,5 +25,5 @@ Comprimento de um argumento excede o limite permitido, que é determinado pelo c
 2.  Se o argumento é fornecido por um cálculo, verifique os valores dos processos de cálculo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Passando argumentos por valor e por referência](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)   
+ [Passando Argumentos por Valor e por Referência](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)  
  [Parâmetro de mecanismo de passagem para usuários do Visual Basic 6.0](http://msdn.microsoft.com/en-us/0fa2b0dc-aa1c-4797-bbd6-aa13c611cab2)

@@ -1,41 +1,33 @@
 ---
-title: 'Como: criar e usar Assemblies usando a linha de comando (Visual Basic) | Documentos do Microsoft'
+title: 'Como: criar e usar Assemblies usando a linha de comando (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 363bca806736e5540165ea96e9b4fe60d0968098
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 72f3e91f9fb88019f937dcd281aa14ab4e887daf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Como: criar e usar Assemblies usando a linha de comando (Visual Basic)
-Um assembly ou uma biblioteca de vínculo dinâmica (DLL), está vinculada ao seu programa em tempo de execução. Para demonstrar a criação e uso de uma DLL, considere o seguinte cenário:  
+Um assembly ou uma DLL (biblioteca de vínculo dinâmico), está vinculada ao seu programa em tempo de execução. Para demonstrar a compilação e uso de uma DLL, considere o seguinte cenário:  
   
--   `MathLibrary.DLL`: O arquivo de biblioteca que contém os métodos sejam chamados em tempo de execução. Neste exemplo, a DLL contém dois métodos, `Add` e `Multiply`.  
+-   `MathLibrary.DLL`: o arquivo de biblioteca que contém os métodos a serem chamados em tempo de execução. Neste exemplo, a DLL contém dois métodos, `Add` e `Multiply`.  
   
--   `Add`: O arquivo de origem que contém o método `Add`. Retorna a soma de seus parâmetros. A classe `AddClass` que contém o método `Add` é um membro do namespace `UtilityMethods`.  
+-   `Add`: o arquivo de origem que contém o método `Add`. Ele retorna a soma de seus parâmetros. A classe `AddClass` que contém o método `Add` é um membro do namespace `UtilityMethods`.  
   
--   `Mult`: O código-fonte que contém o método `Multiply`. Retorna o produto de seus parâmetros. A classe `MultiplyClass` que contém o método `Multiply` também é membro do namespace `UtilityMethods`.  
+-   `Mult`: o código-fonte que contém o método `Multiply`. Ele retorna o produto de seus parâmetros. A classe `MultiplyClass` que contém o método `Multiply` também é um membro do namespace `UtilityMethods`.  
   
--   `TestCode`: O arquivo que contém o `Main` método. Ele usa os métodos no arquivo DLL para calcular a soma e o produto dos argumentos de tempo de execução.  
+-   `TestCode`: o arquivo que contém o método `Main`. Ele usa os métodos no arquivo DLL para calcular a soma e o produto dos argumentos em tempo de execução.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -96,9 +88,9 @@ End Module
 ' 1234 * 5678 = 7006652  
 ```  
   
- Esse arquivo contém o algoritmo que usa os métodos DLL, `Add` e `Multiply`. Ele começa com a análise de argumentos inseridos na linha de comando, `num1` e `num2`. Em seguida, ele calcula a soma usando o `Add` método o `AddClass` classe e o produto usando o `Multiply` método o `MultiplyClass` classe.  
+ Esse arquivo contém o algoritmo que usa os métodos DLL `Add` e `Multiply`. Ele começa com a análise dos argumentos `num1` e `num2`, inseridos na linha de comando. Em seguida, ele calcula a soma, usando o método `Add` na classe `AddClass` e o produto, usando o método `Multiply` na classe `MultiplyClass`.  
   
- Observe que o `Imports` instrução no início do arquivo permite que você use os nomes de classe não qualificados para fazer referência os métodos DLL em tempo de compilação, da seguinte maneira:  
+ Observe que o `Imports` instrução no início do arquivo permite que você use os nomes de classe não qualificados para referenciar os métodos DLL em tempo de compilação, da seguinte maneira:  
   
 ```vb  
 MultiplyClass.Multiply(num1, num2)  
@@ -111,30 +103,30 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2)
 ```  
   
 ## <a name="execution"></a>Execução  
- Para executar o programa, digite o nome do arquivo executável, seguido por dois números, da seguinte maneira:  
+ Para executar o programa, digite o nome do arquivo EXE, seguido de dois números, da seguinte maneira:  
   
  `TestCode 1234 5678`  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- Para criar o arquivo `MathLibrary.DLL`, compilar os dois arquivos `Add` e `Mult` usando a seguinte linha de comando.  
+ Para criar o arquivo `MathLibrary.DLL`, compile os arquivos `Add` e `Mult` usando a seguinte linha de comando.  
   
 ```vb  
 vbc /target:library /out:MathLibrary.DLL Add.vb Mult.vb  
 ```  
   
- O [/target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) opção de compilador informa o compilador para gerar uma DLL em vez de um arquivo EXE. O [entrada/saída (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) opção de compilador seguida por um nome de arquivo é usada para especificar o nome do arquivo DLL. Caso contrário, o compilador usa o primeiro arquivo (`Add.vb`) como o nome da DLL.  
+ O [/target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) opção de compilador informa ao compilador para gerar uma DLL em vez de um arquivo EXE. O [entrada/saída (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) opção de compilador seguida por um nome de arquivo é usada para especificar o nome do arquivo DLL. Caso contrário, o compilador usará o primeiro arquivo (`Add.vb`) como o nome da DLL.  
   
- Para criar o arquivo executável, `TestCode.exe`, use a seguinte linha de comando:  
+ Para compilar o arquivo executável `TestCode.exe`, use a seguinte linha de comando:  
   
 ```vb  
 vbc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.vb  
 ```  
   
- O **/out** opção de compilador informa o compilador para gerar um arquivo EXE e especifica o nome do arquivo de saída (`TestCode.exe`). Essa opção de compilador é opcional. O [/reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) opção de compilador Especifica o arquivo DLL ou arquivos que esse programa usa.  
+ A opção do compilador **/out** informa ao compilador para gerar um arquivo EXE e especifica o nome do arquivo de saída (`TestCode.exe`). Essa opção do compilador é opcional. O [/reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) opção de compilador Especifica o arquivo DLL ou arquivos que usa este programa.  
   
  Para obter mais informações sobre a criação da linha de comando, consulte e [Compilando a partir da linha de comando](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Conceitos de programação](../../../../visual-basic/programming-guide/concepts/index.md)   
- [Assemblies e o Cache de Assembly Global (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)   
- [Criando uma classe para conter funções de DLL](http://msdn.microsoft.com/library/e08e4c34-0223-45f7-aa55-a3d8dd979b0f)
+ [Conceitos de Programação](../../../../visual-basic/programming-guide/concepts/index.md)  
+ [Assemblies e o cache de assembly global (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+ [Criando uma classe para conter funções de DLL](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

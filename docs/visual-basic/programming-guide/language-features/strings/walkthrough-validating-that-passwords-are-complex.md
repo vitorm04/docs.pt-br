@@ -1,67 +1,49 @@
 ---
-title: "Validação de complexidade de senhas (Visual Basic) | Documentos do Microsoft"
+title: "Validação de complexidade de senhas (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- String data type, validation
+helpviewer_keywords: String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e899900d60bddb83fb640abcc7f11f333c1af870
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: bdbe5f385c6b7a0898c4907b0d8afabdaed06fa0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>Instruções passo a passo: validando senhas complexas (Visual Basic)
-Esse método verifica se há algumas características de senhas robustas e atualiza um parâmetro de cadeia de caracteres com informações sobre em quais quesitos a senha falha.  
+Este método verifica se há algumas características de senha forte e atualiza um parâmetro de cadeia de caracteres com informações sobre quais verifica a senha falha.  
   
- Senhas podem ser usadas em um sistema seguro para autenticar um usuário. No entanto, as senhas devem ser difícil para usuários não autorizados de adivinhar. Os invasores podem usar um *ataque de dicionário* programa, que percorre todas as palavras em um dicionário (ou vários dicionários em linguagens diferentes) e teste se alguma das palavras funciona como uma senha de usuário. Senhas fracas, como "Yankees" ou "Mustang" podem ser adivinhadas facilmente. Senhas mais fortes, como "? Você 'L1N3vaFiNdMeyeP@sSWerd! ", são muito menos prováveis de serem adivinhadas. Um sistema protegido por senha deve assegurar que os usuários escolham senhas fortes.  
+ Senhas podem ser usadas em um sistema seguro para autorizar um usuário. No entanto, as senhas devem ser difícil para usuários não autorizados estimem. Os invasores podem usar um *ataque de dicionário* programa que itera por meio de todas as palavras de um dicionário (ou vários dicionários em idiomas diferentes) e teste se alguma das palavras funciona como uma senha de usuário. Senhas fracas como "Yankees" ou "Mustang" podem ser adivinhadas rapidamente. Senhas de alto nível, como "? Você 'L1N3vaFiNdMeyeP@sSWerd! ", são muito menos prováveis de ser adivinhada. Um sistema protegido por senha deve garantir que os usuários escolham senhas fortes.  
   
- Uma senha forte é complexa (contendo uma mistura de caracteres maiusculo, minúsculos, numérico e especial) e não é uma palavra. Este exemplo demonstra como verificar a complexidade.  
+ Uma senha forte é complexa (que contém uma mistura de caracteres maiusculo, minúsculo, numérico e especial) e não é uma palavra. Este exemplo demonstra como verificar a complexidade.  
   
 ## <a name="example"></a>Exemplo  
   
 ### <a name="code"></a>Código  
- [!code-vb[VbVbcnRegEx n º&1;](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/VisualBasic/walkthrough-validating-that-passwords-are-complex_1.vb)]  
+ [!code-vb[VbVbcnRegEx#1](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/VisualBasic/walkthrough-validating-that-passwords-are-complex_1.vb)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
  Chame este método passando a cadeia de caracteres que contém a senha.  
   
  Este exemplo requer:  
   
--   Acesso aos membros do <xref:System.Text.RegularExpressions>namespace.</xref:System.Text.RegularExpressions> Adicione um `Imports` instrução se você não está qualificando totalmente nomes de membros em seu código. Para obter mais informações, consulte [instrução Imports (tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+-   Acesso aos membros do namespace <xref:System.Text.RegularExpressions>. Adicione uma instrução `Imports` se você não está qualificando totalmente os nomes de membros em seu código. Para obter mais informações, consulte [Instrução Imports (tipo e namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="security"></a>Segurança  
- Se você estiver movendo a senha em uma rede, você precisa usar um método seguro para transferência de dados. Para obter mais informações, consulte [ASP.NET Web Application Security](https://msdn.microsoft.com/library/330a99hc).  
+ Se você estiver movendo a senha em uma rede, você precisa usar um método seguro de transferência de dados. Para obter mais informações, consulte [ASP.NET Web Application Security](https://msdn.microsoft.com/library/330a99hc).  
   
- Você pode aumentar a precisão do `ValidatePassword` função adicionando verificações de complexidade adicionais:  
+ Você pode melhorar a precisão do `ValidatePassword` função adicionando verificações de complexidade adicional:  
   
--   Compare seus subcadeias de caracteres em um dicionário definido pelo aplicativo, o identificador de usuário e o nome do usuário e a senha. Além disso, trate caracteres visualmente similares como equivalentes quando fizer as comparações. Por exemplo, trate as letras "l" e "e" como equivalentes aos numerais "1" e "3".  
+-   Compare a senha e suas substrings com o nome do usuário, o identificador de usuário e um dicionário definido pelo aplicativo. Além disso, trate caracteres visualmente similares como equivalentes ao executar as comparações. Por exemplo, trate as letras "l" e "e" como equivalentes aos numerais "1" e "3".  
   
 -   Se houver apenas um caractere maiusculo, certifique-se de não é o primeiro caractere do password.  
   
@@ -70,5 +52,5 @@ Esse método verifica se há algumas características de senhas robustas e atual
 -   Não permita senhas em que todos os símbolos são inseridos na linha superior do teclado.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Text.RegularExpressions.Regex></xref:System.Text.RegularExpressions.Regex>   
+ <xref:System.Text.RegularExpressions.Regex>  
  [Segurança de aplicativo Web ASP .NET](https://msdn.microsoft.com/library/330a99hc)

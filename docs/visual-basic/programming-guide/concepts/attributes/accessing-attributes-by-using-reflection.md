@@ -1,33 +1,25 @@
 ---
-title: "Acessando atributos usando reflexão (Visual Basic) | Documentos do Microsoft"
+title: "Acessando atributos usando reflexão (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c56e41da-5433-464f-a7bf-2a722e78bc9f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4763eccc5d1a6bdf3e89c1c4d825d5ff5c6caa3e
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a4397200b5a2aa5f337dd3479b5405c1a9f245a8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="accessing-attributes-by-using-reflection-visual-basic"></a>Acessando atributos usando reflexão (Visual Basic)
-O fato de que você pode definir atributos personalizados e colocá-los em seu código-fonte seria de pouco valor sem alguma maneira de recuperar essas informações e agir sobre ele. Por meio de reflexão, você pode recuperar as informações que foi definidas com atributos personalizados. O método principal é `GetCustomAttributes`, que retorna uma matriz de objetos que são os equivalentes de tempo de execução dos atributos de código de origem. Esse método possui várias versões sobrecarregadas. Para obter mais informações, consulte <xref:System.Attribute>.</xref:System.Attribute>  
+O fato de que você pode definir atributos personalizados e colocá-los em seu código-fonte seria de pouco valor sem alguma maneira de recuperar essas informações e tomar ação sobre elas. Por meio de reflexão, você pode recuperar as informações que foram definidas com atributos personalizados. O método principal é o `GetCustomAttributes`, que retorna uma matriz de objetos que são equivalentes, em tempo de execução, aos atributos do código-fonte. Esse método tem várias versões sobrecarregadas. Para obter mais informações, consulte <xref:System.Attribute>.  
   
  Uma especificação de atributo, como:  
   
@@ -45,10 +37,10 @@ Dim anonymousAuthorObject As Author = New Author("P. Ackerman")
 anonymousAuthorObject.version = 1.1  
 ```  
   
- No entanto, o código não será executado até `SampleClass` é consultada para atributos. Chamando `GetCustomAttributes` na `SampleClass` faz com que uma `Author` objeto a ser criado e inicializado como acima. Se a classe tiver outros atributos, outros objetos de atributo são construídos da mesma forma. `GetCustomAttributes`em seguida, retorna o `Author` objeto e quaisquer outros objetos de atributo em uma matriz. Você pode iterar sobre essa matriz, determinar quais atributos foram aplicados com base no tipo de cada elemento da matriz e extrair informações dos objetos de atributo.  
+ No entanto, o código não será executado até que `SampleClass` tenha os atributos consultados. Chamar `GetCustomAttributes` na `SampleClass` faz com que um objeto `Author` seja criado e inicializado como acima. Se a classe tiver outros atributos, outros objetos de atributo serão construídos de forma semelhante. Então o `GetCustomAttributes` retornará o objeto `Author` e quaisquer outros objetos de atributo em uma matriz. Você poderá iterar sobre essa matriz, determinar quais atributos foram aplicados com base no tipo de cada elemento da matriz e extrair informações dos objetos de atributo.  
   
 ## <a name="example"></a>Exemplo  
- Aqui está um exemplo completo. Um atributo personalizado é definido, aplicado a várias entidades e recuperado por meio de reflexão.  
+ Aqui está um exemplo completo. Um atributo personalizado é definido, aplicado a várias entidades e recuperado por meio da reflexão.  
   
 ```vb  
 ' Multiuse attribute  
@@ -117,10 +109,10 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Reflection></xref:System.Reflection>   
- <xref:System.Attribute></xref:System.Attribute>   
- [Guia de programação em Visual Basic](../../../../visual-basic/programming-guide/index.md)   
- [Recuperando informações armazenadas em atributos](http://msdn.microsoft.com/library/37dfe4e3-7da0-48b6-a3d9-398981524e1c)   
- [Reflexão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)   
- [Atributos (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)   
+ <xref:System.Reflection>  
+ <xref:System.Attribute>  
+ [Guia de programação do Visual Basic](../../../../visual-basic/programming-guide/index.md)  
+ [Recuperando informações armazenadas em atributos](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
+ [Reflexão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
+ [Atributos (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
  [Criando atributos personalizados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)

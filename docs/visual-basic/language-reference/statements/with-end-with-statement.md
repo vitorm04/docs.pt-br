@@ -1,50 +1,32 @@
 ---
-title: Com... Terminar com Statement (Visual Basic) | Documentos do Microsoft
-ms.date: 2015-07-20
+title: "Instrução With...End With (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.With
-dev_langs:
-- VB
+f1_keywords: vb.With
 helpviewer_keywords:
-- With keyword
-- loop structures, and With...End With statements
-- execution, on object
+- With keyword [Visual Basic]
+- loop structures [Visual Basic], and With...End With statements
+- execution [Visual Basic], on object
 - instructions, repeating
-- With...End With statements
-- With statement
-- With statement, nesting
+- With...End With statements [Visual Basic]
+- With statement [Visual Basic]
+- With statement [Visual Basic], nesting
 - objects [Visual Basic], accessing
 - With block
-- End keyword, With...End With statements
+- End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d7a34925ce15b094d1806d3f2aae297de3133874
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: aa1f416e1bfdf6cdb51b098c0e2bd5e9912cb309
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="withend-with-statement-visual-basic"></a>Instrução With...End With (Visual Basic)
 Executa uma série de instruções que referenciam repetidamente um único objeto ou estrutura de modo que as instruções possam usar uma sintaxe simplificada para acessar membros do objeto ou estrutura.  Ao usar uma estrutura, você só poderá ler os valores dos membros ou invocar métodos, e obterá um erro se tentar atribuir valores aos membros de uma estrutura usada em uma instrução `With...End With`.  
@@ -78,8 +60,7 @@ End With
   
  O tipo de dados de `objectExpression` pode ser qualquer tipo de classe ou estrutura, ou até mesmo um tipo elementar do Visual Basic, como `Integer`.  Se `objectExpression` resultar em algo diferente de um objeto, você só poderá ler os valores de seus membros ou invocar métodos, e obterá um erro se tentar atribuir valores aos membros de uma estrutura usada em uma instrução `With...End With`.  Esse é o mesmo erro que você obteria se invocasse um método que retornasse uma estrutura e imediatamente acessasse e atribuísse um valor a um membro do resultado da função, como `GetAPoint().x = 1`.  O problema em ambos os casos é que a estrutura só existe na pilha de chamadas, e não há maneira de um membro da estrutura alterada nessas situações gravar em um local de modo que qualquer outro código no programa possa observar a alteração.  
   
- 
-          `objectExpression` é avaliada uma vez, ao entrar no bloco. Você não pode reatribuir `objectExpression` de dentro do bloco `With`.  
+ `objectExpression` é avaliada uma vez, ao entrar no bloco. Você não pode reatribuir `objectExpression` de dentro do bloco `With`.  
   
  Dentro de um bloco `With`, você pode acessar os métodos e as propriedades de apenas o objeto especificado sem qualificá-los. Você pode usar métodos e propriedades de outros objetos, mas deverá qualificá-los com seus nomes de objeto.  
   
@@ -97,15 +78,15 @@ End With
 ## <a name="example"></a>Exemplo  
  No exemplo a seguir, cada bloco `With` executa uma série de instruções em um único objeto.  
   
- [!code-vb[VbVbalrWithStatement n º&2;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/with-end-with-statement_1.vb)]  
+ [!code-vb[VbVbalrWithStatement#2](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/with-end-with-statement_1.vb)]  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir aninha instruções `With…End With`. Na instrução `With` aninhada, a sintaxe faz referência ao objeto interno.  
   
- [!code-vb[VbVbalrWithStatement n º&1;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/with-end-with-statement_2.vb)]  
+ [!code-vb[VbVbalrWithStatement#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/with-end-with-statement_2.vb)]  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Collections.Generic.List%601></xref:System.Collections.Generic.List%601>   
- [Estruturas de controle aninhadas](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)   
- [Inicializadores de objeto: Tipos nomeados e anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   
+ <xref:System.Collections.Generic.List%601>  
+ [Estruturas de Controle Aninhadas](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
+ [Inicializadores de objeto: tipos nomeados e anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
  [Tipos Anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

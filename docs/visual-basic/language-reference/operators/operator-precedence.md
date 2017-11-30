@@ -1,49 +1,32 @@
 ---
-title: "Precedência do operador no Visual Basic | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Precedência do operador no Visual Basic"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- arithmetic operators, precedence
+- arithmetic operators [Visual Basic], precedence
 - operator precedence
-- logical operators, precedence
+- logical operators [Visual Basic], precedence
 - operators [Visual Basic], associativity
 - operators [Visual Basic], resolution
-- associativity of operators
+- associativity of operators [Visual Basic]
 - operators [Visual Basic], precedence
-- precedence, of operators
-- comparison operators, precedence
-- math operators
+- precedence [Visual Basic], of operators
+- comparison operators [Visual Basic], precedence
+- math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6532fc0c26db3b736c863be075571570a3d25eef
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 6c0fb466b404cafdd4b91d061971fd683375c715
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Precedência do operador no Visual Basic
 Quando várias operações ocorrem em uma expressão, cada parte é avaliado e resolvido em uma ordem predeterminada chamada *precedência do operador*.  
@@ -51,28 +34,28 @@ Quando várias operações ocorrem em uma expressão, cada parte é avaliado e r
 ## <a name="precedence-rules"></a>Regras de precedência  
  Quando as expressões contêm operadores de mais de uma categoria, eles são avaliados de acordo com as regras a seguir:  
   
--   Os operadores aritméticos e concatenação têm a ordem de precedência descrita na seção a seguir, e todas têm precedência maior do que a comparação, lógicos e operadores bit a bit.  
+-   Os operadores aritméticos e concatenação têm a ordem de precedência descrita na seção a seguir, e todos têm precedência maior do que a comparação, lógicos e operadores bit a bit.  
   
--   Todos os operadores de comparação têm a mesma precedência e todas têm precedência maior do que os operadores lógicos e bit a bit, mas menor precedência que os operadores aritméticos e concatenação.  
+-   Todos os operadores de comparação têm precedência igual e tudo o que tem precedência maior do que os operadores lógicos e bit a bit, mas menor precedência que os operadores aritméticos e concatenação.  
   
--   Os operadores lógicos e bit a bit que a ordem de precedência descrita na seção a seguir, e todas têm precedência menor que a aritmética, concatenação e operadores de comparação.  
+-   Os operadores lógicos e bit a bit que a ordem de precedência descrita na seção a seguir, e todos os tem precedência menor que a aritmética, concatenação e operadores de comparação.  
   
--   Operadores com a mesma precedência são avaliados da esquerda para a direita na ordem em que aparecem na expressão.  
+-   Os operadores com a mesma precedência são avaliados da esquerda para a direita na ordem em que aparecem na expressão.  
   
 ## <a name="precedence-order"></a>Ordem de precedência  
  Operadores são avaliados na seguinte ordem de precedência:  
   
 ### <a name="await-operator"></a>Operador Await  
- À espera  
+ await  
   
 ### <a name="arithmetic-and-concatenation-operators"></a>Aritmética e operadores de concatenação  
  Exponenciação (`^`)  
   
- Unários identidade e negação (`+`, `–`)  
+ Unário identidade e negação (`+`, `–`)  
   
  Multiplicação e divisão de ponto flutuante (`*`, `/`)  
   
- Divisão de inteiros (`\`)  
+ Divisão de inteiro (`\`)  
   
  Módulo aritmético (`Mod`)  
   
@@ -83,7 +66,7 @@ Quando várias operações ocorrem em uma expressão, cada parte é avaliado e r
  Aritmética bit shift (`<<`, `>>`)  
   
 ### <a name="comparison-operators"></a>Operadores de comparação  
- All comparison operators (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`... `Is`)  
+ Todos os operadores de comparação (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`... `Is`)  
   
 ### <a name="logical-and-bitwise-operators"></a>Operadores lógicos e bit a bit  
  Negação (`Not`)  
@@ -97,12 +80,12 @@ Quando várias operações ocorrem em uma expressão, cada parte é avaliado e r
 ### <a name="comments"></a>Comentários  
  O `=` operador é apenas o igualdade operador de comparação, não o operador de atribuição.  
   
- O operador de concatenação de cadeia de caracteres (`&`) não é um operador aritmético, mas na prioridade é agrupado com os operadores aritméticos.  
+ O operador de concatenação de cadeia de caracteres (`&`) não é um operador aritmético, mas em precedência são agrupados com os operadores aritméticos.  
   
- O `Is` e `IsNot` operadores são operadores de comparação de referência de objeto. Eles não são os valores dos dois objetos. eles verifique apenas para determinar se duas variáveis de objeto se referem à mesma instância de objeto.  
+ O `Is` e `IsNot` operadores são operadores de comparação de referência de objeto. Eles não comparam os valores de dois objetos; check apenas para determinar se duas variáveis de objeto se referem à mesma instância de objeto.  
   
 ## <a name="associativity"></a>Associatividade  
- Quando operadores de precedência igual aparecem juntos em uma expressão, por exemplo, multiplicação e divisão, o compilador avalia cada operação conforme ele encontra da esquerda para a direita. O exemplo a seguir ilustra essa situação.  
+ Quando os operadores de precedência igual aparecem juntos em uma expressão, por exemplo, multiplicação e divisão, o compilador avalia cada operação que ele encontra da esquerda para a direita. O exemplo a seguir ilustra essa situação.  
   
 ```  
 Dim n1 As Integer = 96 / 8 / 4  
@@ -110,12 +93,12 @@ Dim n2 As Integer = (96 / 8) / 4
 Dim n3 As Integer = 96 / (8 / 4)  
 ```  
   
- A primeira expressão é avaliada a divisão 96 / 8 (o que resulta em 12) e, em seguida, a divisão de 12 / 4, o que resulta em três. Porque o compilador avalia as operações `n1` da esquerda para a direita, a avaliação é o mesmo quando a ordem é explicitamente indicada para `n2`. Ambos `n1` e `n2` tem um resultado de três. Por outro lado, `n3` possui um resultado de 48, porque os parênteses forçam o compilador para avaliar 8 / 4 primeiro.  
+ A primeira expressão é avaliada a divisão de 96 / 8 (o que resulta em 12) e, em seguida, a divisão de 12 / 4, o que resulta em três. Porque o compilador avalia as operações para `n1` da esquerda para a direita, a avaliação é o mesmo quando a ordem é explicitamente indicado para `n2`. Ambos `n1` e `n2` tem um resultado de três. Por outro lado, `n3` possui um resultado de 48, porque os parênteses forçam o compilador para avaliar 8 / 4 primeiro.  
   
- Devido a esse comportamento, operadores são considerados *permanecem associativos* em [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ Devido a esse comportamento, operadores são considerados *deixado associativa* em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
 ## <a name="overriding-precedence-and-associativity"></a>Substituição de precedência e associatividade  
- Você pode usar parênteses para forçar algumas partes de uma expressão a ser avaliada antes de outros. Isso pode substituir a ordem de precedência e a associatividade à esquerda. [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]sempre executa operações que estão entre parênteses antes de fora. No entanto, dentro dos parênteses, ele mantém comum precedência e associatividade, a menos que você use parênteses dentro dos parênteses. O exemplo a seguir ilustra essa situação.  
+ Você pode usar parênteses para forçar algumas partes de uma expressão a ser avaliada antes de outros. Isso pode substituir a ordem de precedência e a capacidade de associação à esquerda. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]sempre executa operações que estão entre parênteses antes de pessoas de fora. No entanto, dentro dos parênteses, ele mantém comum precedência e a associação, a menos que você use parênteses entre parênteses. O exemplo a seguir ilustra essa situação.  
   
 ```  
 Dim a, b, c, d, e, f, g As Double  
@@ -136,11 +119,11 @@ g = (a - (b + c)) / (d * e)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [= Operador](../../../visual-basic/language-reference/operators/assignment-operator.md)   
- [Operador is](../../../visual-basic/language-reference/operators/is-operator.md)   
- [Operador IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)   
- [Operador LIKE](../../../visual-basic/language-reference/operators/like-operator.md)   
- [Operador TypeOf](../../../visual-basic/language-reference/operators/typeof-operator.md)   
- [Operador await](../../../visual-basic/language-reference/operators/await-operator.md)   
- [Operadores listados por funcionalidade](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
+ [Operador =](../../../visual-basic/language-reference/operators/assignment-operator.md)  
+ [Operador Is](../../../visual-basic/language-reference/operators/is-operator.md)  
+ [Operador IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)  
+ [Operador Like](../../../visual-basic/language-reference/operators/like-operator.md)  
+ [Operador TypeOf](../../../visual-basic/language-reference/operators/typeof-operator.md)  
+ [Operador Await](../../../visual-basic/language-reference/operators/await-operator.md)  
+ [Operadores Listados por Funcionalidade](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
  [Operadores e Expressões](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

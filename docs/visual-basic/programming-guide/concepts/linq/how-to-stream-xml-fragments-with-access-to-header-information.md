@@ -1,40 +1,31 @@
 ---
-title: "Como: transmitir fragmentos XML com acesso a informações de cabeçalho (Visual Basic) | Documentos do Microsoft"
+title: "Como: fragmentos XML com acesso a informações de cabeçalho (Visual Basic) de fluxo"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 299a938cd4b10dbca308685e389fab76656ac20b
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f745d0725b9b05620b4b967e51b452e54fe5e6d9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>Como: transmitir fragmentos XML com acesso a informações de cabeçalho (Visual Basic)
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>Como: fragmentos XML com acesso a informações de cabeçalho (Visual Basic) de fluxo
 Às vezes você precisará ler arbitrariamente grandes arquivos XML, e escreve seu aplicativo para que os vestígio de memória do aplicativo seja previsível. Se você tentar preencher uma árvore XML com um grande arquivo XML, seu uso de memória será proporcionalmente o tamanho do arquivo que é, excessivo. Portanto, você deve usar uma técnica de streaming em vez disso.  
   
- Uma opção é escrever seu aplicativo usando <xref:System.Xml.XmlReader>.</xref:System.Xml.XmlReader> No entanto, você talvez queira usar [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] para consultar a árvore XML. Se esse for o caso, você pode escrever seu próprio método personalizado do eixo. Para obter mais informações, consulte [como: gravar um LINQ para o método de eixo XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
+ Uma opção é escrever seu aplicativo usando <xref:System.Xml.XmlReader>. No entanto, talvez você queira usar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para consultar a árvore XML. Se esse for o caso, você pode escrever seu próprio método personalizado do eixo. Para obter mais informações, consulte [como: gravar um LINQ para o método de eixo XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
   
- Para escrever seu próprio método de eixo, você escreve um método pequeno que usa o <xref:System.Xml.XmlReader>para ler nós até atingir um de nós no qual você está interessado.</xref:System.Xml.XmlReader> Em seguida, chama o método <xref:System.Xml.Linq.XNode.ReadFrom%2A>, que lê a partir do <xref:System.Xml.XmlReader>e instancia um fragmento XML.</xref:System.Xml.XmlReader> </xref:System.Xml.Linq.XNode.ReadFrom%2A> Você pode escrever consultas LINQ no método personalizado do eixo.  
+ Para escrever seu próprio método do eixo, você escreve um pequeno método que usa <xref:System.Xml.XmlReader> para ler nós até que atingiu um dos nós em que você está interessado. O método chama em <xref:System.Xml.Linq.XNode.ReadFrom%2A>, que lê de <xref:System.Xml.XmlReader> e cria uma instância de um fragmento XML. Você pode escrever consultas LINQ no método personalizado do eixo.  
   
- As técnicas de streaming são melhor aplicadas em situações onde você precisa processar o documento de origem apenas uma vez e você pode processar os elementos na ordem do documento. Determinados operadores de consulta padrão, como <xref:System.Linq.Enumerable.OrderBy%2A>, iteram sua origem, coletar todos os dados, classificá-los e, em seguida, geram finalmente o primeiro item na sequência.</xref:System.Linq.Enumerable.OrderBy%2A> Observe que se você usar um operador de consulta que materialize sua origem antes de como o primeiro item, você não manterá pegada uma pequena de memória.  
+ As técnicas de streaming são melhor aplicadas em situações onde você precisa processar o documento de origem apenas uma vez e você pode processar os elementos na ordem do documento. Determinados operadores de consulta padrão, como <xref:System.Linq.Enumerable.OrderBy%2A>, iteram sua origem, coletam todos os dados, classificam e, em seguida, geram finalmente o primeiro item na sequência. Observe que se você usar um operador de consulta que materialize sua origem antes de como o primeiro item, você não manterá pegada uma pequena de memória.  
   
 ## <a name="example"></a>Exemplo  
  Às vezes o problema é apenas um pouco mais interessante. No documento XML a seguir, o consumidor do método personalizado do eixo também precisa saber o nome do cliente que cada item pertence.  
@@ -250,4 +241,3 @@ End Class
   
 ## <a name="see-also"></a>Consulte também  
  [Avançada LINQ to XML programação (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-

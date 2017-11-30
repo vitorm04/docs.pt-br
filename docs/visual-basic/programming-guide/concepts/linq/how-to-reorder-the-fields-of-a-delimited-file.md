@@ -1,39 +1,31 @@
 ---
-title: 'Como: reordenar os campos de um arquivo delimitado (LINQ) (Visual Basic) | Documentos do Microsoft'
+title: 'Como: reordenar os campos de um arquivo delimitado (LINQ) (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c451c7db-663b-4daf-b8ba-a2093095d672
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9abb0510ed3944cd80d6658238ef79d64dc0ca27
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f308495a21b671edf03fbd791ef77d668d55388d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>Como: reordenar os campos de um arquivo delimitado (LINQ) (Visual Basic)
-Um arquivo de valores separados por vírgulas (CSV) é um arquivo de texto que é geralmente usado para armazenar dados da planilha ou outros dados de tabela que são representados por linhas e colunas. Usando o <xref:System.String.Split%2A>método para separar os campos, é muito fácil consultar e manipular arquivos CSV usando LINQ.</xref:System.String.Split%2A> Na verdade, a mesma técnica pode ser usada para reordenar as partes de qualquer linha estruturada de texto; não é limitado a arquivos CSV.  
+Um CSV (arquivo de valores separados por vírgula) é um arquivo de texto que é frequentemente usado para armazenar dados de planilha ou outros dados de tabela que são representados por linhas e colunas. Ao usar o método <xref:System.String.Split%2A> para separar os campos, é muito fácil consultar e manipular arquivos CSV usando LINQ. Na verdade, a mesma técnica pode ser usada para reordenar as partes de qualquer linha estruturada de texto. Ela não é limitada a arquivos CSV.  
   
- O exemplo a seguir, suponha que as três colunas representam os "Sobrenome," alunos "first name" e "ID". Os campos estão em ordem alfabética com base em sobrenomes dos alunos. A consulta gera uma nova sequência na qual a coluna ID é exibido primeira, seguido por uma segunda coluna que combina o nome e sobrenome do aluno. As linhas são reordenadas acordo com o campo ID. Os resultados são salvos em um novo arquivo e os dados originais não são modificados.  
+ No exemplo a seguir, suponha que as três colunas representam o "sobrenome", o "nome" e a "ID" dos alunos. Os campos estão em ordem alfabética com base nos sobrenomes dos alunos. A consulta gera uma nova sequência, na qual a coluna ID é exibida em primeiro, seguida por uma segunda coluna que combina o nome e o sobrenome do aluno. As linhas são reordenadas acordo com o campo ID. Os resultados são salvos em um novo arquivo e os dados originais não são modificados.  
   
 ### <a name="to-create-the-data-file"></a>Para criar o arquivo de dados  
   
-1.  Copie as seguintes linhas em um arquivo de texto sem formatação denominado spreadsheet1.csv. Salve o arquivo na pasta do projeto.  
+1.  Copie as seguintes linhas em um arquivo de texto sem formatação denominado spreadsheet1.csv. Salve o arquivo na pasta do seu projeto.  
   
     ```  
     Adams,Terry,120  
@@ -94,6 +86,6 @@ End Class
 ## <a name="compiling-the-code"></a>Compilando o código  
   
 ## <a name="see-also"></a>Consulte também  
- [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ e diretórios de arquivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)   
+ [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [LINQ e diretórios de arquivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)  
  [Como gerar um XML de arquivos CSV](http://msdn.microsoft.com/library/dd7bab8c-96fa-4343-94d0-9739dd6a74fd)

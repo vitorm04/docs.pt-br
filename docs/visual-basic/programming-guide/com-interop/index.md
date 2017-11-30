@@ -1,42 +1,24 @@
 ---
 title: Interoperabilidade COM (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic code, COM interop
-- COM interop, in Visual Basic
+- COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 29275519a00ad0c33a5b85e592532ce456daefe0
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 87c87852024412b7a7ed55a2c429842ce75a13a8
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="com-interop-visual-basic"></a>Interoperabilidade COM (Visual Basic)
 O COM (Component Object Model) permite que um objeto exponha sua funcionalidade a outros componentes e aplicativos host. Atualmente, a maioria dos softwares incluem objetos COM. Embora os assemblies .NET sejam a melhor opção para novos aplicativos, algumas vezes será preciso empregar objetos COM. Esta seção aborda alguns dos problemas associados à criação e ao uso de objetos COM com [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
@@ -84,4 +66,3 @@ O COM (Component Object Model) permite que um objeto exponha sua funcionalidade 
   
  [Aplicando atributos de interoperabilidade](https://msdn.microsoft.com/library/d4w8x20h)  
  Aborda os atributos que você pode usar ao trabalhar com código não gerenciado.
-
