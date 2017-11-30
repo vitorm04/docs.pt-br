@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,46 +14,44 @@ helpviewer_keywords:
 - Visual Basic, performance
 - performance [Visual Basic]
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BillWagner
 ms.author: wiwagn
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 625e772ff603f6454012606902f2fde53c8be327
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 93db69b67bfac3bcefbc818032aae64df0fd47b9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="net-performance-tips"></a>Dicas de desempenho do .NET
-O termo *desempenho* geralmente se refere à velocidade de execução de um programa. Às vezes, você pode aumentar a velocidade de execução seguindo algumas regras básicas em seu código-fonte. Em alguns programas, é importante examinar atentamente o código e usar criadores de perfil para verificar se eles estão executando o mais rápido possível. Em outros programas, você não precisa executar essa otimização porque o código é executado em velocidade aceitável conforme ele é gravado. Este artigo lista algumas áreas comuns em que o desempenho pode ser prejudicado e dicas para melhorá-lo, bem como links para tópicos adicionais sobre desempenho. Para obter mais informações sobre como planejar e medir o desempenho, consulte [Desempenho](../../../docs/framework/performance/index.md)  
+# <a name="net-performance-tips"></a><span data-ttu-id="aadda-102">Dicas de desempenho do .NET</span><span class="sxs-lookup"><span data-stu-id="aadda-102">.NET Performance Tips</span></span>
+<span data-ttu-id="aadda-103">O termo *desempenho* geralmente se refere à velocidade de execução de um programa.</span><span class="sxs-lookup"><span data-stu-id="aadda-103">The term *performance* generally refers to the execution speed of a program.</span></span> <span data-ttu-id="aadda-104">Às vezes, você pode aumentar a velocidade de execução seguindo algumas regras básicas em seu código-fonte.</span><span class="sxs-lookup"><span data-stu-id="aadda-104">You can sometimes increase execution speed by following certain basic rules in your source code.</span></span> <span data-ttu-id="aadda-105">Em alguns programas, é importante examinar atentamente o código e usar criadores de perfil para verificar se eles estão executando o mais rápido possível.</span><span class="sxs-lookup"><span data-stu-id="aadda-105">In some programs, it is important to examine code closely and use profilers to make sure that it is running as fast as possible.</span></span> <span data-ttu-id="aadda-106">Em outros programas, você não precisa executar essa otimização porque o código é executado em velocidade aceitável conforme ele é gravado.</span><span class="sxs-lookup"><span data-stu-id="aadda-106">In other programs, you do not have to perform such optimization because the code is running acceptably fast as it is written.</span></span> <span data-ttu-id="aadda-107">Este artigo lista algumas áreas comuns em que o desempenho pode ser prejudicado e dicas para melhorá-lo, bem como links para tópicos adicionais sobre desempenho.</span><span class="sxs-lookup"><span data-stu-id="aadda-107">This article lists some common areas where performance can suffer and tips for improving it as well as links to additional performance topics.</span></span> <span data-ttu-id="aadda-108">Para obter mais informações sobre como planejar e medir o desempenho, consulte [Desempenho](../../../docs/framework/performance/index.md)</span><span class="sxs-lookup"><span data-stu-id="aadda-108">For more information about planning and measuring for performance, see [Performance](../../../docs/framework/performance/index.md)</span></span>  
   
-## <a name="boxing-and-unboxing"></a>Conversão boxing e unboxing  
- É melhor evitar o uso de tipos de valor em situações em que eles devem sofrer conversão boxing um grande número de vezes, por exemplo, em classes de coleções não genéricas como <xref:System.Collections.ArrayList?displayProperty=fullName>. Você pode evitar a conversão boxing de tipos de valor por meio de coleções genéricas como <xref:System.Collections.Generic.List%601?displayProperty=fullName>. As conversões boxing e unboxing são processos computacionalmente dispendiosos. Quando um tipo de valor é convertido, um objeto totalmente novo deve ser criado. Isso pode levar até 20 vezes mais tempo que a atribuição de uma referência simples. Ao fazer unboxing, o processo de conversão pode demorar quatro vezes mais que uma atribuição. Para obter mais informações, consulte [Conversões boxing e unboxing](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md).  
+## <a name="boxing-and-unboxing"></a><span data-ttu-id="aadda-109">Conversão boxing e unboxing</span><span class="sxs-lookup"><span data-stu-id="aadda-109">Boxing and Unboxing</span></span>  
+ <span data-ttu-id="aadda-110">É melhor evitar o uso de tipos de valor em situações em que eles devem sofrer conversão boxing um grande número de vezes, por exemplo, em classes de coleções não genéricas como <xref:System.Collections.ArrayList?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="aadda-110">It is best to avoid using value types in situations where they must be boxed a high number of times, for example in non-generic collections classes such as <xref:System.Collections.ArrayList?displayProperty=nameWithType>.</span></span> <span data-ttu-id="aadda-111">Você pode evitar a conversão boxing de tipos de valor por meio de coleções genéricas como <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="aadda-111">You can avoid boxing of value types by using generic collections such as <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>.</span></span> <span data-ttu-id="aadda-112">As conversões boxing e unboxing são processos computacionalmente dispendiosos.</span><span class="sxs-lookup"><span data-stu-id="aadda-112">Boxing and unboxing are computationally expensive processes.</span></span> <span data-ttu-id="aadda-113">Quando um tipo de valor é convertido, um objeto totalmente novo deve ser criado.</span><span class="sxs-lookup"><span data-stu-id="aadda-113">When a value type is boxed, an entirely new object must be created.</span></span> <span data-ttu-id="aadda-114">Isso pode levar até 20 vezes mais tempo que a atribuição de uma referência simples.</span><span class="sxs-lookup"><span data-stu-id="aadda-114">This can take up to 20 times longer than a simple reference assignment.</span></span> <span data-ttu-id="aadda-115">Ao fazer unboxing, o processo de conversão pode demorar quatro vezes mais que uma atribuição.</span><span class="sxs-lookup"><span data-stu-id="aadda-115">When unboxing, the casting process can take four times as long as an assignment.</span></span> <span data-ttu-id="aadda-116">Para obter mais informações, consulte [Conversões boxing e unboxing](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md).</span><span class="sxs-lookup"><span data-stu-id="aadda-116">For more information, see [Boxing and Unboxing](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md).</span></span>  
   
-## <a name="strings"></a>Cadeias de caracteres  
- Ao concatenar um grande número de variáveis de cadeia de caracteres, por exemplo em um loop estreito, use <xref:System.Text.StringBuilder?displayProperty=fullName> em vez do [operador +](~/docs/csharp/language-reference/operators/addition-operator.md) de C# ou dos [operadores de concatenação](~/docs/visual-basic/language-reference/operators/concatenation-operators.md) do Visual Basic. Para obter mais informações, consulte [Como concatenar várias cadeias de caracteres](~/docs/csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md) e [Operadores de concatenação no Visual Basic](~/docs/visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).  
+## <a name="strings"></a><span data-ttu-id="aadda-117">Cadeias de caracteres</span><span class="sxs-lookup"><span data-stu-id="aadda-117">Strings</span></span>  
+ <span data-ttu-id="aadda-118">Ao concatenar um grande número de variáveis de cadeia de caracteres, por exemplo em um loop estreito, use <xref:System.Text.StringBuilder?displayProperty=nameWithType> em vez do [operador +](~/docs/csharp/language-reference/operators/addition-operator.md) de C# ou dos [operadores de concatenação](~/docs/visual-basic/language-reference/operators/concatenation-operators.md) do Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="aadda-118">When you concatenate a large number of string variables, for example in a tight loop, use <xref:System.Text.StringBuilder?displayProperty=nameWithType> instead of the C# [+ operator](~/docs/csharp/language-reference/operators/addition-operator.md) or the Visual Basic [Concatenation Operators](~/docs/visual-basic/language-reference/operators/concatenation-operators.md).</span></span> <span data-ttu-id="aadda-119">Para obter mais informações, consulte [Como concatenar várias cadeias de caracteres](~/docs/csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md) e [Operadores de concatenação no Visual Basic](~/docs/visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).</span><span class="sxs-lookup"><span data-stu-id="aadda-119">For more information, see [How to: Concatenate Multiple Strings](~/docs/csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md) and [Concatenation Operators in Visual Basic](~/docs/visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).</span></span>  
   
-## <a name="destructors"></a>Destruidores  
- Destruidores vazios não devem ser usados. Quando uma classe contém um destruidor, uma entrada é criada na fila Finalizar. Quando o destruidor é chamado, o coletor de lixo é invocado para processar a fila. Se o destruidor estiver vazio, isso apenas resultará em uma perda de desempenho. Para obter mais informações, consulte [Destruidores](~/docs/csharp/programming-guide/classes-and-structs/destructors.md) e [Tempo de vida do objeto: como os objetos são criados e destruídos](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
+## <a name="destructors"></a><span data-ttu-id="aadda-120">Destruidores</span><span class="sxs-lookup"><span data-stu-id="aadda-120">Destructors</span></span>  
+ <span data-ttu-id="aadda-121">Destruidores vazios não devem ser usados.</span><span class="sxs-lookup"><span data-stu-id="aadda-121">Empty destructors should not be used.</span></span> <span data-ttu-id="aadda-122">Quando uma classe contém um destruidor, uma entrada é criada na fila Finalizar.</span><span class="sxs-lookup"><span data-stu-id="aadda-122">When a class contains a destructor, an entry is created in the Finalize queue.</span></span> <span data-ttu-id="aadda-123">Quando o destruidor é chamado, o coletor de lixo é invocado para processar a fila.</span><span class="sxs-lookup"><span data-stu-id="aadda-123">When the destructor is called, the garbage collector is invoked to process the queue.</span></span> <span data-ttu-id="aadda-124">Se o destruidor estiver vazio, isso apenas resultará em uma perda de desempenho.</span><span class="sxs-lookup"><span data-stu-id="aadda-124">If the destructor is empty, this simply results in a loss of performance.</span></span> <span data-ttu-id="aadda-125">Para obter mais informações, consulte [Destruidores](~/docs/csharp/programming-guide/classes-and-structs/destructors.md) e [Tempo de vida do objeto: como os objetos são criados e destruídos](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).</span><span class="sxs-lookup"><span data-stu-id="aadda-125">For more information, see [Destructors](~/docs/csharp/programming-guide/classes-and-structs/destructors.md) and [Object Lifetime: How Objects Are Created and Destroyed](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).</span></span>  
   
-## <a name="other-resources"></a>Outros recursos  
+## <a name="other-resources"></a><span data-ttu-id="aadda-126">Outros recursos</span><span class="sxs-lookup"><span data-stu-id="aadda-126">Other Resources</span></span>  
   
--   [Gravar código gerenciado mais rápido: conheça o custo das coisas](http://go.microsoft.com/fwlink/?LinkId=99294)  
+-   [<span data-ttu-id="aadda-127">Gravar código gerenciado mais rápido: conheça o custo das coisas</span><span class="sxs-lookup"><span data-stu-id="aadda-127">Writing Faster Managed Code: Know What Things Cost</span></span>](http://go.microsoft.com/fwlink/?LinkId=99294)  
   
--   [Gravação de aplicativos de alto desempenho gerenciados: informações elementares](http://go.microsoft.com/fwlink/?LinkId=99295)  
+-   [<span data-ttu-id="aadda-128">Gravação de aplicativos de alto desempenho gerenciados: informações elementares</span><span class="sxs-lookup"><span data-stu-id="aadda-128">Writing High-Performance Managed Applications: A Primer</span></span>](http://go.microsoft.com/fwlink/?LinkId=99295)  
   
--   [Noções básicas do coletor de lixo e dicas de desempenho](http://go.microsoft.com/fwlink/?LinkId=99296)  
+-   [<span data-ttu-id="aadda-129">Noções básicas do coletor de lixo e dicas de desempenho</span><span class="sxs-lookup"><span data-stu-id="aadda-129">Garbage Collector Basics and Performance Hints</span></span>](http://go.microsoft.com/fwlink/?LinkId=99296)  
   
--   [Dicas e truques sobre desempenho em aplicativos .NET](http://go.microsoft.com/fwlink/?LinkId=99297)  
+-   [<span data-ttu-id="aadda-130">Dicas e truques sobre desempenho em aplicativos .NET</span><span class="sxs-lookup"><span data-stu-id="aadda-130">Performance Tips and Tricks in .NET Applications</span></span>](http://go.microsoft.com/fwlink/?LinkId=99297)  
   
--   [Ferramentas de Diagnóstico Internas para .NET](http://go.microsoft.com/fwlink/?LinkId=112407)  
+-   [<span data-ttu-id="aadda-131">Ferramentas de Diagnóstico Internas para .NET</span><span class="sxs-lookup"><span data-stu-id="aadda-131">Inside Diagnostic Tools for .NET</span></span>](http://go.microsoft.com/fwlink/?LinkId=112407)  
   
--   [Informações úteis sobre desempenho, por Rico Mariani](http://go.microsoft.com/fwlink/?LinkId=115679)  
+-   [<span data-ttu-id="aadda-132">Informações úteis sobre desempenho, por Rico Mariani</span><span class="sxs-lookup"><span data-stu-id="aadda-132">Rico Mariani's Performance Tidbits</span></span>](http://go.microsoft.com/fwlink/?LinkId=115679)  
   
-## <a name="see-also"></a>Consulte também  
- [Desempenho](../../../docs/framework/performance/index.md)   
- [Conceitos de programação](http://msdn.microsoft.com/library/65c12cca-af4f-4017-886e-2dbc00a189d6)   
- [Guia de programação do Visual Basic](../../visual-basic/programming-guide/index.md)   
- [Guia de Programação em C#](http://msdn.microsoft.com/library/ac0f23a2-6bf3-4077-be99-538ae5fd3bc5)
-
+## <a name="see-also"></a><span data-ttu-id="aadda-133">Consulte também</span><span class="sxs-lookup"><span data-stu-id="aadda-133">See Also</span></span>  
+ [<span data-ttu-id="aadda-134">Desempenho</span><span class="sxs-lookup"><span data-stu-id="aadda-134">Performance</span></span>](../../../docs/framework/performance/index.md)  
+ [<span data-ttu-id="aadda-135">Conceitos de Programação</span><span class="sxs-lookup"><span data-stu-id="aadda-135">Programming Concepts</span></span>](http://msdn.microsoft.com/library/65c12cca-af4f-4017-886e-2dbc00a189d6)  
+ [<span data-ttu-id="aadda-136">Guia de programação do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="aadda-136">Visual Basic Programming Guide</span></span>](../../visual-basic/programming-guide/index.md)  
+ [<span data-ttu-id="aadda-137">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="aadda-137">C# Programming Guide</span></span>](http://msdn.microsoft.com/library/ac0f23a2-6bf3-4077-be99-538ae5fd3bc5)

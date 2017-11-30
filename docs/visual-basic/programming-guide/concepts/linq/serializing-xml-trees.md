@@ -1,44 +1,36 @@
 ---
-title: "Serializando árvores XML (Visual Basic) | Documentos do Microsoft"
+title: "Serializando árvores XML (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 2c340695-a726-4030-85be-6975d8a149cf
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 19d0679fc7a4afafa38fc2f61fb055281155c43a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 924c4dace92ed306852cd1d7d2fead8588d03dc4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="serializing-xml-trees-visual-basic"></a>Serializando árvores XML (Visual Basic)
-Serializar uma árvore XML significa gerar o XML a partir da árvore XML. Você pode serializar para um arquivo, para uma implementação concreta da <xref:System.IO.TextWriter>classe, ou para uma implementação concreta de <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.IO.TextWriter>  
+# <a name="serializing-xml-trees-visual-basic"></a><span data-ttu-id="1d7f8-102">Serializando árvores XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1d7f8-102">Serializing XML Trees (Visual Basic)</span></span>
+<span data-ttu-id="1d7f8-103">Serializar uma árvore XML significa gerar o XML a partir da árvore XML.</span><span class="sxs-lookup"><span data-stu-id="1d7f8-103">Serializing an XML tree means generating XML from the XML tree.</span></span> <span data-ttu-id="1d7f8-104">Você pode fazer a serialização para um arquivo, para uma implementação concreta da classe <xref:System.IO.TextWriter> ou a uma implementação concreta de um <xref:System.Xml.XmlWriter>.</span><span class="sxs-lookup"><span data-stu-id="1d7f8-104">You can serialize to a file, to a concrete implementation of the <xref:System.IO.TextWriter> class, or to a concrete implementation of an <xref:System.Xml.XmlWriter>.</span></span>  
   
- Você pode controlar vários aspectos da serialização. Por exemplo, você pode determinar se recuará o XML serializado e se gravará uma declaração XML.  
+ <span data-ttu-id="1d7f8-105">Você pode controlar vários aspectos da serialização.</span><span class="sxs-lookup"><span data-stu-id="1d7f8-105">You can control various aspects of serialization.</span></span> <span data-ttu-id="1d7f8-106">Por exemplo, você pode determinar se recuará o XML serializado e se gravará uma declaração XML.</span><span class="sxs-lookup"><span data-stu-id="1d7f8-106">For example, you can control whether to indent the serialized XML, and whether to write an XML declaration.</span></span>  
   
-## <a name="in-this-section"></a>Nesta seção  
+## <a name="in-this-section"></a><span data-ttu-id="1d7f8-107">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="1d7f8-107">In This Section</span></span>  
   
-|Tópico|Descrição|  
+|<span data-ttu-id="1d7f8-108">Tópico</span><span class="sxs-lookup"><span data-stu-id="1d7f8-108">Topic</span></span>|<span data-ttu-id="1d7f8-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="1d7f8-109">Description</span></span>|  
 |-----------|-----------------|  
-|[Preservar espaço em branco para serializar](../../../../visual-basic/programming-guide/concepts/linq/preserving-white-space-while-serializing.md)|Descreve como controlar o comportamento de espaço em branco durante a serialização das árvores XML.|  
-|[Serializando com uma declaração XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-with-an-xml-declaration.md)|Descreve como serializar uma árvore XML que inclua uma declaração XML.|  
-|[Serializando arquivos, o TextWriters, e o XmlWriters](../../../../visual-basic/programming-guide/concepts/linq/serializing-to-files-textwriters-and-xmlwriters.md)|Descreve como serializar um documento para um <xref:System.IO.File>, um <xref:System.IO.TextWriter>, ou <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.IO.TextWriter> </xref:System.IO.File>|  
-|[Serializando um XmlReader (chamada XSLT) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-to-an-xmlreader-invoking-xslt.md)|Descreve como criar um <xref:System.Xml.XmlReader>que permite que outro módulo leia o conteúdo de uma árvore XML.</xref:System.Xml.XmlReader>|  
+|[<span data-ttu-id="1d7f8-110">Preservar espaço em branco para serializar</span><span class="sxs-lookup"><span data-stu-id="1d7f8-110">Preserving White Space While Serializing</span></span>](../../../../visual-basic/programming-guide/concepts/linq/preserving-white-space-while-serializing.md)|<span data-ttu-id="1d7f8-111">Descreve como controlar o comportamento de espaço em branco durante a serialização das árvores XML.</span><span class="sxs-lookup"><span data-stu-id="1d7f8-111">Describes how to control white space behavior when you serialize XML trees.</span></span>|  
+|[<span data-ttu-id="1d7f8-112">Serializando com uma declaração XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1d7f8-112">Serializing with an XML Declaration (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-with-an-xml-declaration.md)|<span data-ttu-id="1d7f8-113">Descreve como serializar uma árvore XML que inclua uma declaração XML.</span><span class="sxs-lookup"><span data-stu-id="1d7f8-113">Describes how to serialize an XML tree that includes an XML declaration.</span></span>|  
+|[<span data-ttu-id="1d7f8-114">Serializando arquivos, o TextWriters, e o XmlWriters</span><span class="sxs-lookup"><span data-stu-id="1d7f8-114">Serializing to Files, TextWriters, and XmlWriters</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-to-files-textwriters-and-xmlwriters.md)|<span data-ttu-id="1d7f8-115">Descreve como serializar um documento para um <xref:System.IO.File>, um <xref:System.IO.TextWriter> ou um <xref:System.Xml.XmlWriter>.</span><span class="sxs-lookup"><span data-stu-id="1d7f8-115">Describes how to serialize a document to a <xref:System.IO.File>, a <xref:System.IO.TextWriter>, or an <xref:System.Xml.XmlWriter>.</span></span>|  
+|[<span data-ttu-id="1d7f8-116">Serializando um XmlReader (invocando XSLT) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1d7f8-116">Serializing to an XmlReader (Invoking XSLT) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-to-an-xmlreader-invoking-xslt.md)|<span data-ttu-id="1d7f8-117">Descreve como criar um <xref:System.Xml.XmlReader> que permita que outro módulo leia o conteúdo de uma árvore XML.</span><span class="sxs-lookup"><span data-stu-id="1d7f8-117">Describes how to create a <xref:System.Xml.XmlReader> that enables another module to read the contents of an XML tree.</span></span>|  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de programação (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="1d7f8-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1d7f8-118">See Also</span></span>  
+ [<span data-ttu-id="1d7f8-119">Guia de programação (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1d7f8-119">Programming Guide (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

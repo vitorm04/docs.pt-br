@@ -1,0 +1,46 @@
+---
+title: Funcionalidades de linguagem XAML 2009
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XAML 2009 [XAML Services]
+- XAML [XAML Services], XAML 2009
+ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
+caps.latest.revision: "11"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 6299a29cb79650eb59df3f198c3ea3fcd49d0076
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
+---
+# <a name="xaml-2009-language-features"></a><span data-ttu-id="c1887-102">Funcionalidades de linguagem XAML 2009</span><span class="sxs-lookup"><span data-stu-id="c1887-102">XAML 2009 Language Features</span></span>
+<span data-ttu-id="c1887-103">XAML 2009 é o termo abreviado para os novos recursos de linguagem XAML que estendem a especificação da linguagem XAML existente.</span><span class="sxs-lookup"><span data-stu-id="c1887-103">XAML 2009 is the shorthand term for new XAML language features that extend the existing XAML language specification.</span></span> <span data-ttu-id="c1887-104">XAML 2009 apresenta várias novas diretivas e construtores.</span><span class="sxs-lookup"><span data-stu-id="c1887-104">XAML 2009 introduces several new directives and constructs.</span></span> <span data-ttu-id="c1887-105">Isso inclui o[diretiva X:arguments](../../../docs/framework/xaml-services/x-arguments-directive.md); o [diretiva X:factorymethod](../../../docs/framework/xaml-services/x-factorymethod-directive.md); o [extensão de marcação X:Reference](../../../docs/framework/xaml-services/x-reference-markup-extension.md); o [diretiva X:TypeArguments ](../../../docs/framework/xaml-services/x-typearguments-directive.md); e os tipos internos para primitivos de linguagem comum (por exemplo `x:Char`).</span><span class="sxs-lookup"><span data-stu-id="c1887-105">These include the[x:Arguments Directive](../../../docs/framework/xaml-services/x-arguments-directive.md); the [x:FactoryMethod Directive](../../../docs/framework/xaml-services/x-factorymethod-directive.md); the [x:Reference Markup Extension](../../../docs/framework/xaml-services/x-reference-markup-extension.md); the [x:TypeArguments Directive](../../../docs/framework/xaml-services/x-typearguments-directive.md); and built-in types for common language primitives (for example `x:Char`).</span></span>  
+  
+<a name="xaml_2009_support_in_wpf_and_visual_studio"></a>   
+## <a name="xaml-2009-support-in-wpf-and-visual-studio"></a><span data-ttu-id="c1887-106">Suporte de 2009 XAML em WPF e do Visual Studio</span><span class="sxs-lookup"><span data-stu-id="c1887-106">XAML 2009 Support in WPF and Visual Studio</span></span>  
+ <span data-ttu-id="c1887-107">No WPF, você pode usar os recursos de XAML 2009, mas apenas para XAML que não é compilado marcação do WPF.</span><span class="sxs-lookup"><span data-stu-id="c1887-107">In WPF, you can use XAML 2009 features, but only for XAML that is not WPF markup-compiled.</span></span> <span data-ttu-id="c1887-108">Compilação de marcação XAML e o formulário BAML do XAML atualmente não dão os recursos e as palavras-chave de linguagem XAML 2009.</span><span class="sxs-lookup"><span data-stu-id="c1887-108">Markup-compiled XAML and the BAML form of XAML do not currently support the XAML 2009 language keywords and features.</span></span>  
+  
+ <span data-ttu-id="c1887-109">Observe que técnicas existentes para o carregamento XAML livre no WPF também têm possíveis segurança e restrições de acesso para tipos CLR e o sistema de tipos que são mais restritivas do que para compilação de marcação XAML.</span><span class="sxs-lookup"><span data-stu-id="c1887-109">Note that existing techniques for loading loose XAML in WPF also have possible security and access restrictions to CLR types and the type system that are more restrictive than for markup-compiled XAML.</span></span> <span data-ttu-id="c1887-110">Para obter mais informações, consulte [segurança (WPF)](../../../docs/framework/wpf/security-wpf.md) ou [estratégia de segurança do WPF - segurança da plataforma](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md).</span><span class="sxs-lookup"><span data-stu-id="c1887-110">For more information, see [Security (WPF)](../../../docs/framework/wpf/security-wpf.md) or [WPF Security Strategy - Platform Security](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md).</span></span>  
+  
+ <span data-ttu-id="c1887-111">XAML 2009 também apresenta recursos adicionais que modifique o 2006 XAML anterior construções ou que modificar os formulários de marcação básica.</span><span class="sxs-lookup"><span data-stu-id="c1887-111">XAML 2009 also introduces additional features that either modify the previous XAML 2006 constructs or that modify the basic markup forms.</span></span>  
+  
+### <a name="xkey-as-an-object-element"></a><span data-ttu-id="c1887-112">x: chave como um elemento de objeto</span><span class="sxs-lookup"><span data-stu-id="c1887-112">x:Key as an Object Element</span></span>  
+ <span data-ttu-id="c1887-113">Pode dar suporte a XAML 2009 `x:Key` como um objeto (um elemento de propriedade que tem o valor do elemento de objeto); no entanto, o XAML 2006 só tem suporte `x:Key` como um atributo.</span><span class="sxs-lookup"><span data-stu-id="c1887-113">XAML 2009 can support `x:Key` as an object (a property element that has object element value); however, XAML 2006 only supported `x:Key` as an attribute.</span></span> <span data-ttu-id="c1887-114">Consulte a seção "XAML 2009" [diretiva X:Key](../../../docs/framework/xaml-services/x-key-directive.md).</span><span class="sxs-lookup"><span data-stu-id="c1887-114">See the "XAML 2009" section of [x:Key Directive](../../../docs/framework/xaml-services/x-key-directive.md).</span></span>  
+  
+### <a name="xmlns-on-property-elements"></a><span data-ttu-id="c1887-115">xmlns em elementos de propriedade</span><span class="sxs-lookup"><span data-stu-id="c1887-115">xmlns on Property Elements</span></span>  
+ <span data-ttu-id="c1887-116">XAML 2009 pode dar suporte a definições de namespace (xmlns) XAML em elementos de propriedade; No entanto, o XAML 2006 suporta apenas definições xmlns em elementos de objeto.</span><span class="sxs-lookup"><span data-stu-id="c1887-116">XAML 2009 can support XAML namespace (xmlns) definitions on property elements; however, XAML 2006 only supports xmlns definitions on object elements.</span></span>  
+  
+### <a name="event-attributes"></a><span data-ttu-id="c1887-117">Atributos de evento</span><span class="sxs-lookup"><span data-stu-id="c1887-117">Event Attributes</span></span>  
+ <span data-ttu-id="c1887-118">Para atributos que são feitos por eventos, 2006 XAML pressupõe que a compilação da marcação está envolvida e envia os eventos de compilação da marcação.</span><span class="sxs-lookup"><span data-stu-id="c1887-118">For attributes that are backed by events, XAML 2006 presumes that markup compilation is involved and submits the events to markup compilation.</span></span> <span data-ttu-id="c1887-119">XAML 2009 dá suporte a um formulário de marcação que se parece com uma extensão de marcação, que transfere a ligação de evento até o tempo de execução de análise e o carregamento do XAML.</span><span class="sxs-lookup"><span data-stu-id="c1887-119">XAML 2009 supports a markup form that resembles a markup extension, which defers the event wiring until run-time parsing and loading of the XAML.</span></span> <span data-ttu-id="c1887-120">No entanto, os aplicativos WPF e cenários XAML para WPF UI geralmente não usar esse recurso.</span><span class="sxs-lookup"><span data-stu-id="c1887-120">However, WPF applications and XAML scenarios for WPF UI generally do not use this capability.</span></span> <span data-ttu-id="c1887-121">WPF e sua implementação de 2006 XAML usa a combinação de cabeamento de manipulador de eventos para eventos roteados definidos no <xref:System.Windows.UIElement> nível e o compilador de marcação etapa muito seu atributo processamento de eventos.</span><span class="sxs-lookup"><span data-stu-id="c1887-121">WPF and its XAML 2006 implementation uses the combination of event handler wiring for routed events defined at the <xref:System.Windows.UIElement> level and its markup compiler step for much of its event attribute processing.</span></span> <span data-ttu-id="c1887-122">O compilador de marcação pré-processa também quaisquer atributos de evento encontrados no XAML em que as ações de compilação declara que o compilador de marcação é usado.</span><span class="sxs-lookup"><span data-stu-id="c1887-122">The markup compiler also preprocesses any event attributes found in XAML where the build actions declare that the markup compiler is used.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="c1887-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c1887-123">See Also</span></span>  
+ [<span data-ttu-id="c1887-124">Visão geral de XAML (WPF)</span><span class="sxs-lookup"><span data-stu-id="c1887-124">XAML Overview (WPF)</span></span>](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

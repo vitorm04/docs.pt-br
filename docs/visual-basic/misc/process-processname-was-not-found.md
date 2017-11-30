@@ -1,43 +1,26 @@
 ---
-title: "Processo de&lt;processname&gt;&quot; não foi encontrado | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Processo de &#39; &lt;processname&gt;&#39; não foi encontrado"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrProcessNotFound
+f1_keywords: vbrProcessNotFound
 ms.assetid: d6095a7f-6168-4b00-8639-11fb64dd2ebe
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e4a3d6859e7817949bb90fb4025b08e1dd9b2b2b
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 564a8c0f41924d67d0a8aaeb833718817687d6ae
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="process-39ltprocessnamegt39-was-not-found"></a>Processo de&lt;processname&gt;' não foi encontrado
-O processo especificado não pode ser localizado.  
+# <a name="process-39ltprocessnamegt39-was-not-found"></a><span data-ttu-id="305a5-102">Processo de &#39; &lt;processname&gt;&#39; não foi encontrado</span><span class="sxs-lookup"><span data-stu-id="305a5-102">Process &#39;&lt;processname&gt;&#39; was not found</span></span>
+<span data-ttu-id="305a5-103">O processo especificado não pode ser localizado.</span><span class="sxs-lookup"><span data-stu-id="305a5-103">The specified process cannot be located.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="305a5-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="305a5-104">To correct this error</span></span>  
   
-1.  Certifique-se de que você forneceu o nome correto do processo.  
+1.  <span data-ttu-id="305a5-105">Certifique-se de que você forneceu o nome correto do processo.</span><span class="sxs-lookup"><span data-stu-id="305a5-105">Ensure that you have supplied the correct process name.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciamento de processos](http://msdn.microsoft.com/en-us/ef2f9767-330b-49f3-aa33-8574c241b9d2)
+## <a name="see-also"></a><span data-ttu-id="305a5-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="305a5-106">See Also</span></span>  
+ [<span data-ttu-id="305a5-107">Gerenciamento de processos</span><span class="sxs-lookup"><span data-stu-id="305a5-107">Managing Processes</span></span>](http://msdn.microsoft.com/en-us/ef2f9767-330b-49f3-aa33-8574c241b9d2)

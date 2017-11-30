@@ -5,58 +5,54 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - strings, interop marshaling
 - interop marshaling, strings
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d5e78bebf15630589a90a684f2299565728728c7
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 34cd8194f5f36c2f9c93517403aa27f6bbbcb698
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="default-marshaling-for-strings"></a>Marshaling padrão para cadeias de caracteres
-As classes <xref:System.String?displayProperty=fullName> e <xref:System.Text.StringBuilder?displayProperty=fullName> têm comportamentos de marshaling semelhantes.  
+# <a name="default-marshaling-for-strings"></a><span data-ttu-id="d6381-102">Marshaling padrão para cadeias de caracteres</span><span class="sxs-lookup"><span data-stu-id="d6381-102">Default Marshaling for Strings</span></span>
+<span data-ttu-id="d6381-103">As classes <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.StringBuilder?displayProperty=nameWithType> têm comportamentos de marshaling semelhantes.</span><span class="sxs-lookup"><span data-stu-id="d6381-103">Both the <xref:System.String?displayProperty=nameWithType> and <xref:System.Text.StringBuilder?displayProperty=nameWithType> classes have similar marshaling behavior.</span></span>  
   
- As cadeias de caracteres têm o marshaling realizado como um tipo `BSTR` de estilo COM ou como uma cadeia de caracteres terminada em nulo (uma matriz de caracteres que termina com um caractere nulo). Os caracteres na cadeia de caracteres podem ter o marshaling realizado como Unicode (o padrão em sistemas Windows) ou ANSI.  
+ <span data-ttu-id="d6381-104">As cadeias de caracteres têm o marshaling realizado como um tipo `BSTR` de estilo COM ou como uma cadeia de caracteres terminada em nulo (uma matriz de caracteres que termina com um caractere nulo).</span><span class="sxs-lookup"><span data-stu-id="d6381-104">Strings are marshaled as a COM-style `BSTR` type or as a null-terminated string (a character array that ends with a null character).</span></span> <span data-ttu-id="d6381-105">Os caracteres na cadeia de caracteres podem ter o marshaling realizado como Unicode (o padrão em sistemas Windows) ou ANSI.</span><span class="sxs-lookup"><span data-stu-id="d6381-105">The characters within the string can be marshaled as Unicode (the default on Windows systems) or ANSI.</span></span>  
   
- Este tópico fornece as seguintes informações sobre o marshaling de tipos de cadeia de caracteres:  
+ <span data-ttu-id="d6381-106">Este tópico fornece as seguintes informações sobre o marshaling de tipos de cadeia de caracteres:</span><span class="sxs-lookup"><span data-stu-id="d6381-106">This topic provides the following information on marshaling string types:</span></span>  
   
--   [Cadeias de caracteres usadas em interfaces](#cpcondefaultmarshalingforstringsanchor1)  
+-   [<span data-ttu-id="d6381-107">Cadeias de caracteres usadas em interfaces</span><span class="sxs-lookup"><span data-stu-id="d6381-107">Strings Used in Interfaces</span></span>](#cpcondefaultmarshalingforstringsanchor1)  
   
--   [Cadeias de caracteres usadas na invocação de plataforma](#cpcondefaultmarshalingforstringsanchor5)  
+-   [<span data-ttu-id="d6381-108">Cadeias de caracteres usadas na invocação de plataforma</span><span class="sxs-lookup"><span data-stu-id="d6381-108">Strings Used in Platform Invoke</span></span>](#cpcondefaultmarshalingforstringsanchor5)  
   
--   [Cadeias de caracteres usadas em estruturas](#cpcondefaultmarshalingforstringsanchor2)  
+-   [<span data-ttu-id="d6381-109">Cadeias de caracteres usadas em estruturas</span><span class="sxs-lookup"><span data-stu-id="d6381-109">Strings Used in Structures</span></span>](#cpcondefaultmarshalingforstringsanchor2)  
   
--   [Buffers de cadeia de caracteres de comprimento fixo](#cpcondefaultmarshalingforstringsanchor3)  
+-   [<span data-ttu-id="d6381-110">Buffers de cadeia de caracteres de comprimento fixo</span><span class="sxs-lookup"><span data-stu-id="d6381-110">Fixed-Length String Buffers</span></span>](#cpcondefaultmarshalingforstringsanchor3)  
   
 <a name="cpcondefaultmarshalingforstringsanchor1"></a>   
-## <a name="strings-used-in-interfaces"></a>Cadeias de caracteres usadas em interfaces  
- A tabela a seguir mostra as opções de marshaling para o tipo de dados String ao realizar marshaling dele como um argumento de método para um código não gerenciado. O atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> fornece vários valores de enumeração <xref:System.Runtime.InteropServices.UnmanagedType> para realizar marshaling de cadeias de caracteres para interfaces COM.  
+## <a name="strings-used-in-interfaces"></a><span data-ttu-id="d6381-111">Cadeias de caracteres usadas em interfaces</span><span class="sxs-lookup"><span data-stu-id="d6381-111">Strings Used in Interfaces</span></span>  
+ <span data-ttu-id="d6381-112">A tabela a seguir mostra as opções de marshaling para o tipo de dados String ao realizar marshaling dele como um argumento de método para um código não gerenciado.</span><span class="sxs-lookup"><span data-stu-id="d6381-112">The following table shows the marshaling options for the string data type when marshaled as a method argument to unmanaged code.</span></span> <span data-ttu-id="d6381-113">O atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> fornece vários valores de enumeração <xref:System.Runtime.InteropServices.UnmanagedType> para realizar marshaling de cadeias de caracteres para interfaces COM.</span><span class="sxs-lookup"><span data-stu-id="d6381-113">The <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute provides several <xref:System.Runtime.InteropServices.UnmanagedType> enumeration values to marshal strings to COM interfaces.</span></span>  
   
-|Tipo de enumeração|Descrição do formato não gerenciado|  
+|<span data-ttu-id="d6381-114">Tipo de enumeração</span><span class="sxs-lookup"><span data-stu-id="d6381-114">Enumeration type</span></span>|<span data-ttu-id="d6381-115">Descrição do formato não gerenciado</span><span class="sxs-lookup"><span data-stu-id="d6381-115">Description of unmanaged format</span></span>|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.BStr` (padrão)|Um `BSTR` de estilo COM com um tamanho prefixado e caracteres Unicode.|  
-|`UnmanagedType.LPStr`|Um ponteiro para uma matriz de caracteres ANSI terminada em nulo.|  
-|`UnmanagedType.LPWStr`|Um ponteiro para uma matriz de caracteres Unicode terminada em nulo.|  
+|<span data-ttu-id="d6381-116">`UnmanagedType.BStr` (padrão)</span><span class="sxs-lookup"><span data-stu-id="d6381-116">`UnmanagedType.BStr` (default)</span></span>|<span data-ttu-id="d6381-117">Um `BSTR` de estilo COM com um tamanho prefixado e caracteres Unicode.</span><span class="sxs-lookup"><span data-stu-id="d6381-117">A COM-style `BSTR` with a prefixed length and Unicode characters.</span></span>|  
+|`UnmanagedType.LPStr`|<span data-ttu-id="d6381-118">Um ponteiro para uma matriz de caracteres ANSI terminada em nulo.</span><span class="sxs-lookup"><span data-stu-id="d6381-118">A pointer to a null-terminated array of ANSI characters.</span></span>|  
+|`UnmanagedType.LPWStr`|<span data-ttu-id="d6381-119">Um ponteiro para uma matriz de caracteres Unicode terminada em nulo.</span><span class="sxs-lookup"><span data-stu-id="d6381-119">A pointer to a null-terminated array of Unicode characters.</span></span>|  
   
- Esta tabela se aplica a cadeias de caracteres. No entanto, para o <xref:System.Text.StringBuilder>, as únicas opções permitidas são `UnmanagedType.LPStr` e `UnmanagedType.LPWStr`.  
+ <span data-ttu-id="d6381-120">Esta tabela se aplica a cadeias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="d6381-120">This table applies to strings.</span></span> <span data-ttu-id="d6381-121">No entanto, para o <xref:System.Text.StringBuilder>, as únicas opções permitidas são `UnmanagedType.LPStr` e `UnmanagedType.LPWStr`.</span><span class="sxs-lookup"><span data-stu-id="d6381-121">However, for <xref:System.Text.StringBuilder>, the only options allowed are `UnmanagedType.LPStr` and `UnmanagedType.LPWStr`.</span></span>  
   
- O exemplo a seguir mostra as cadeias de caracteres declaradas na interface `IStringWorker`.  
+ <span data-ttu-id="d6381-122">O exemplo a seguir mostra as cadeias de caracteres declaradas na interface `IStringWorker`.</span><span class="sxs-lookup"><span data-stu-id="d6381-122">The following example shows strings declared in the `IStringWorker` interface.</span></span>  
   
 ```cpp  
 public interface IStringWorker {  
@@ -71,7 +67,7 @@ void PassStringRef4([MarshalAs(UnmanagedType.LPWStr)]ref String s);
 );  
 ```  
   
- O exemplo a seguir mostra a interface correspondente descrita em uma biblioteca de tipos.  
+ <span data-ttu-id="d6381-123">O exemplo a seguir mostra a interface correspondente descrita em uma biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="d6381-123">The following example shows the corresponding interface described in a type library.</span></span>  
   
 ```  
 […]  
@@ -88,24 +84,24 @@ HRESULT PassStringRef4([in, out] LPWStr *s);
 ```  
   
 <a name="cpcondefaultmarshalingforstringsanchor5"></a>   
-## <a name="strings-used-in-platform-invoke"></a>Cadeias de caracteres usadas na invocação de plataforma  
- A invocação de plataforma copia argumentos de cadeia de caracteres, convertendo-os do formato do .NET Framework (Unicode) para o formato não gerenciado da plataforma. As cadeias de caracteres são imutáveis e não são copiadas novamente da memória não gerenciada para a memória gerenciada quando a chamada é retornada.  
+## <a name="strings-used-in-platform-invoke"></a><span data-ttu-id="d6381-124">Cadeias de caracteres usadas na invocação de plataforma</span><span class="sxs-lookup"><span data-stu-id="d6381-124">Strings Used in Platform Invoke</span></span>  
+ <span data-ttu-id="d6381-125">A invocação de plataforma copia argumentos de cadeia de caracteres, convertendo-os do formato do .NET Framework (Unicode) para o formato não gerenciado da plataforma.</span><span class="sxs-lookup"><span data-stu-id="d6381-125">Platform invoke copies string arguments, converting from the .NET Framework format (Unicode) to the platform unmanaged format.</span></span> <span data-ttu-id="d6381-126">As cadeias de caracteres são imutáveis e não são copiadas novamente da memória não gerenciada para a memória gerenciada quando a chamada é retornada.</span><span class="sxs-lookup"><span data-stu-id="d6381-126">Strings are immutable and are not copied back from unmanaged memory to managed memory when the call returns.</span></span>  
   
- A tabela a seguir lista as opções de marshaling para cadeias de caracteres ao realizar marshaling delas como um argumento de método de uma chamada de invocação de plataforma. O atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> fornece vários valores de enumeração <xref:System.Runtime.InteropServices.UnmanagedType> para realizar marshaling de cadeias de caracteres.  
+ <span data-ttu-id="d6381-127">A tabela a seguir lista as opções de marshaling para cadeias de caracteres ao realizar marshaling delas como um argumento de método de uma chamada de invocação de plataforma.</span><span class="sxs-lookup"><span data-stu-id="d6381-127">The following table lists the marshaling options for strings when marshaled as a method argument of a platform invoke call.</span></span> <span data-ttu-id="d6381-128">O atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> fornece vários valores de enumeração <xref:System.Runtime.InteropServices.UnmanagedType> para realizar marshaling de cadeias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="d6381-128">The <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute provides several <xref:System.Runtime.InteropServices.UnmanagedType> enumeration values to marshal strings.</span></span>  
   
-|Tipo de enumeração|Descrição do formato não gerenciado|  
+|<span data-ttu-id="d6381-129">Tipo de enumeração</span><span class="sxs-lookup"><span data-stu-id="d6381-129">Enumeration type</span></span>|<span data-ttu-id="d6381-130">Descrição do formato não gerenciado</span><span class="sxs-lookup"><span data-stu-id="d6381-130">Description of unmanaged format</span></span>|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.AnsiBStr`|Um `BSTR` de estilo COM com um tamanho prefixado e caracteres ANSI.|  
-|`UnmanagedType.BStr`|Um `BSTR` de estilo COM com um tamanho prefixado e caracteres Unicode.|  
-|`UnmanagedType.LPStr`|Um ponteiro para uma matriz de caracteres ANSI terminada em nulo.|  
-|`UnmanagedType.LPTStr`|Um ponteiro para uma matriz terminada em nulo de caracteres dependentes de plataforma.|  
-|`UnmanagedType.LPWStr`|Um ponteiro para uma matriz de caracteres Unicode terminada em nulo.|  
-|`UnmanagedType.TBStr`|Um `BSTR` de estilo COM com um tamanho prefixado e caracteres dependentes de plataforma.|  
-|`VBByRefStr`|Um valor que permite que o .NET do Visual Basic altere uma cadeia de caracteres no código não gerenciado e reflita os resultados no código gerenciado. Há suporte para esse valor apenas na invocação de plataforma. Esse é o valor padrão no Visual Basic para cadeias de caracteres `ByVal`.|  
+|`UnmanagedType.AnsiBStr`|<span data-ttu-id="d6381-131">Um `BSTR` de estilo COM com um tamanho prefixado e caracteres ANSI.</span><span class="sxs-lookup"><span data-stu-id="d6381-131">A COM-style `BSTR` with a prefixed length and ANSI characters.</span></span>|  
+|`UnmanagedType.BStr`|<span data-ttu-id="d6381-132">Um `BSTR` de estilo COM com um tamanho prefixado e caracteres Unicode.</span><span class="sxs-lookup"><span data-stu-id="d6381-132">A COM-style `BSTR` with a prefixed length and Unicode characters.</span></span>|  
+|`UnmanagedType.LPStr`|<span data-ttu-id="d6381-133">Um ponteiro para uma matriz de caracteres ANSI terminada em nulo.</span><span class="sxs-lookup"><span data-stu-id="d6381-133">A pointer to a null-terminated array of ANSI characters.</span></span>|  
+|`UnmanagedType.LPTStr`|<span data-ttu-id="d6381-134">Um ponteiro para uma matriz terminada em nulo de caracteres dependentes de plataforma.</span><span class="sxs-lookup"><span data-stu-id="d6381-134">A pointer to a null-terminated array of platform-dependent characters.</span></span>|  
+|`UnmanagedType.LPWStr`|<span data-ttu-id="d6381-135">Um ponteiro para uma matriz de caracteres Unicode terminada em nulo.</span><span class="sxs-lookup"><span data-stu-id="d6381-135">A pointer to a null-terminated array of Unicode characters.</span></span>|  
+|`UnmanagedType.TBStr`|<span data-ttu-id="d6381-136">Um `BSTR` de estilo COM com um tamanho prefixado e caracteres dependentes de plataforma.</span><span class="sxs-lookup"><span data-stu-id="d6381-136">A COM-style `BSTR` with a prefixed length and platform-dependent characters.</span></span>|  
+|`VBByRefStr`|<span data-ttu-id="d6381-137">Um valor que permite que o .NET do Visual Basic altere uma cadeia de caracteres no código não gerenciado e reflita os resultados no código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="d6381-137">A value that enables Visual Basic .NET to change a string in unmanaged code, and have the results reflected in managed code.</span></span> <span data-ttu-id="d6381-138">Há suporte para esse valor apenas na invocação de plataforma.</span><span class="sxs-lookup"><span data-stu-id="d6381-138">This value is supported only for platform invoke.</span></span> <span data-ttu-id="d6381-139">Esse é o valor padrão no Visual Basic para cadeias de caracteres `ByVal`.</span><span class="sxs-lookup"><span data-stu-id="d6381-139">This is default value in Visual Basic for `ByVal` strings.</span></span>|  
   
- Esta tabela se aplica a cadeias de caracteres. No entanto, para o <xref:System.Text.StringBuilder>, as únicas opções permitidas são `LPStr`, `LPTStr` e `LPWStr`.  
+ <span data-ttu-id="d6381-140">Esta tabela se aplica a cadeias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="d6381-140">This table applies to strings.</span></span> <span data-ttu-id="d6381-141">No entanto, para o <xref:System.Text.StringBuilder>, as únicas opções permitidas são `LPStr`, `LPTStr` e `LPWStr`.</span><span class="sxs-lookup"><span data-stu-id="d6381-141">However, for <xref:System.Text.StringBuilder>, the only options allowed are `LPStr`, `LPTStr`, and `LPWStr`.</span></span>  
   
- A definição de tipo a seguir mostra o uso correto de `MarshalAsAttribute` para chamadas de invocação de plataforma.  
+ <span data-ttu-id="d6381-142">A definição de tipo a seguir mostra o uso correto de `MarshalAsAttribute` para chamadas de invocação de plataforma.</span><span class="sxs-lookup"><span data-stu-id="d6381-142">The following type definition shows the correct use of `MarshalAsAttribute` for platform invoke calls.</span></span>  
   
 ```vb  
 Class StringLibAPI      
@@ -148,22 +144,22 @@ String s);
 ```  
   
 <a name="cpcondefaultmarshalingforstringsanchor2"></a>   
-## <a name="strings-used-in-structures"></a>Cadeias de caracteres usadas em estruturas  
- Cadeias de caracteres são membros válidos de estruturas; no entanto, buffers do <xref:System.Text.StringBuilder> são inválidos em estruturas. A tabela a seguir mostra as opções de marshaling para o tipo de dados String quando o tipo tem o marshaling realizado como um campo. O atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> fornece vários valores de enumeração <xref:System.Runtime.InteropServices.UnmanagedType> para realizar marshaling de cadeias de caracteres para um campo.  
+## <a name="strings-used-in-structures"></a><span data-ttu-id="d6381-143">Cadeias de caracteres usadas em estruturas</span><span class="sxs-lookup"><span data-stu-id="d6381-143">Strings Used in Structures</span></span>  
+ <span data-ttu-id="d6381-144">Cadeias de caracteres são membros válidos de estruturas; no entanto, buffers do <xref:System.Text.StringBuilder> são inválidos em estruturas.</span><span class="sxs-lookup"><span data-stu-id="d6381-144">Strings are valid members of structures; however, <xref:System.Text.StringBuilder> buffers are invalid in structures.</span></span> <span data-ttu-id="d6381-145">A tabela a seguir mostra as opções de marshaling para o tipo de dados String quando o tipo tem o marshaling realizado como um campo.</span><span class="sxs-lookup"><span data-stu-id="d6381-145">The following table shows the marshaling options for the string data type when the type is marshaled as a field.</span></span> <span data-ttu-id="d6381-146">O atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> fornece vários valores de enumeração <xref:System.Runtime.InteropServices.UnmanagedType> para realizar marshaling de cadeias de caracteres para um campo.</span><span class="sxs-lookup"><span data-stu-id="d6381-146">The <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute provides several <xref:System.Runtime.InteropServices.UnmanagedType> enumeration values to marshal strings to a field.</span></span>  
   
-|Tipo de enumeração|Descrição do formato não gerenciado|  
+|<span data-ttu-id="d6381-147">Tipo de enumeração</span><span class="sxs-lookup"><span data-stu-id="d6381-147">Enumeration type</span></span>|<span data-ttu-id="d6381-148">Descrição do formato não gerenciado</span><span class="sxs-lookup"><span data-stu-id="d6381-148">Description of unmanaged format</span></span>|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.BStr`|Um `BSTR` de estilo COM com um tamanho prefixado e caracteres Unicode.|  
-|`UnmanagedType.LPStr`|Um ponteiro para uma matriz de caracteres ANSI terminada em nulo.|  
-|`UnmanagedType.LPTStr`|Um ponteiro para uma matriz terminada em nulo de caracteres dependentes de plataforma.|  
-|`UnmanagedType.LPWStr`|Um ponteiro para uma matriz de caracteres Unicode terminada em nulo.|  
-|`UnmanagedType.ByValTStr`|Uma matriz de comprimento fixo de caracteres; o tipo da matriz é determinado pelo conjunto de caracteres da estrutura que o contém.|  
+|`UnmanagedType.BStr`|<span data-ttu-id="d6381-149">Um `BSTR` de estilo COM com um tamanho prefixado e caracteres Unicode.</span><span class="sxs-lookup"><span data-stu-id="d6381-149">A COM-style `BSTR` with a prefixed length and Unicode characters.</span></span>|  
+|`UnmanagedType.LPStr`|<span data-ttu-id="d6381-150">Um ponteiro para uma matriz de caracteres ANSI terminada em nulo.</span><span class="sxs-lookup"><span data-stu-id="d6381-150">A pointer to a null-terminated array of ANSI characters.</span></span>|  
+|`UnmanagedType.LPTStr`|<span data-ttu-id="d6381-151">Um ponteiro para uma matriz terminada em nulo de caracteres dependentes de plataforma.</span><span class="sxs-lookup"><span data-stu-id="d6381-151">A pointer to a null-terminated array of platform-dependent characters.</span></span>|  
+|`UnmanagedType.LPWStr`|<span data-ttu-id="d6381-152">Um ponteiro para uma matriz de caracteres Unicode terminada em nulo.</span><span class="sxs-lookup"><span data-stu-id="d6381-152">A pointer to a null-terminated array of Unicode characters.</span></span>|  
+|`UnmanagedType.ByValTStr`|<span data-ttu-id="d6381-153">Uma matriz de comprimento fixo de caracteres; o tipo da matriz é determinado pelo conjunto de caracteres da estrutura que o contém.</span><span class="sxs-lookup"><span data-stu-id="d6381-153">A fixed-length array of characters; the array's type is determined by the character set of the containing structure.</span></span>|  
   
- O tipo `ByValTStr` é usado para matrizes de caracteres embutidas e de comprimento fixo que aparecem em uma estrutura. Outros tipos aplicam as referências de cadeia de caracteres contidas em estruturas que contêm ponteiros para cadeias de caracteres.  
+ <span data-ttu-id="d6381-154">O tipo `ByValTStr` é usado para matrizes de caracteres embutidas e de comprimento fixo que aparecem em uma estrutura.</span><span class="sxs-lookup"><span data-stu-id="d6381-154">The `ByValTStr` type is used for inline, fixed-length character arrays that appear within a structure.</span></span> <span data-ttu-id="d6381-155">Outros tipos aplicam as referências de cadeia de caracteres contidas em estruturas que contêm ponteiros para cadeias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="d6381-155">Other types apply to string references contained within structures that contain pointers to strings.</span></span>  
   
- O argumento `CharSet` do atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> aplicado à estrutura que o contém determina o formato do caractere de cadeias de caracteres em estruturas. As estruturas de exemplo a seguir contêm referências de cadeia de caracteres e cadeias de caracteres embutidas, bem como caracteres ANSI, Unicode e dependentes de plataforma.  
+ <span data-ttu-id="d6381-156">O argumento `CharSet` do atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> aplicado à estrutura que o contém determina o formato do caractere de cadeias de caracteres em estruturas.</span><span class="sxs-lookup"><span data-stu-id="d6381-156">The `CharSet` argument of the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute that is applied to the containing structure determines the character format of strings in structures.</span></span> <span data-ttu-id="d6381-157">As estruturas de exemplo a seguir contêm referências de cadeia de caracteres e cadeias de caracteres embutidas, bem como caracteres ANSI, Unicode e dependentes de plataforma.</span><span class="sxs-lookup"><span data-stu-id="d6381-157">The following example structures contain string references and inline strings, as well as ANSI, Unicode, and platform-dependent characters.</span></span>  
   
-### <a name="type-library-representation"></a>Representação da Biblioteca de Tipos  
+### <a name="type-library-representation"></a><span data-ttu-id="d6381-158">Representação da Biblioteca de Tipos</span><span class="sxs-lookup"><span data-stu-id="d6381-158">Type Library Representation</span></span>  
   
 ```  
 struct StringInfoA {  
@@ -181,7 +177,7 @@ struct StringInfoT {
 };  
 ```  
   
- O exemplo de código a seguir mostra como usar o atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> para definir a mesma estrutura em formatos diferentes.  
+ <span data-ttu-id="d6381-159">O exemplo de código a seguir mostra como usar o atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> para definir a mesma estrutura em formatos diferentes.</span><span class="sxs-lookup"><span data-stu-id="d6381-159">The following code example shows how to use the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute to define the same structure in different formats.</span></span>  
   
 ```vb  
 <StructLayout(LayoutKind.Sequential, CharSet := CharSet.Ansi)> _  
@@ -225,12 +221,12 @@ struct StringInfoT {
 ```  
   
 <a name="cpcondefaultmarshalingforstringsanchor3"></a>   
-## <a name="fixed-length-string-buffers"></a>Buffers de cadeia de caracteres de comprimento fixo  
- Em algumas circunstâncias, um buffer de caracteres de comprimento fixo deve ser passado para um código não gerenciado para ser manipulado. Apenas passar uma cadeia de caracteres não funciona neste caso, porque o receptor não pode modificar o conteúdo do buffer passado. Mesmo se a cadeia de caracteres for passada por referência, não haverá nenhuma maneira de inicializar o buffer em determinado tamanho.  
+## <a name="fixed-length-string-buffers"></a><span data-ttu-id="d6381-160">Buffers de cadeia de caracteres de comprimento fixo</span><span class="sxs-lookup"><span data-stu-id="d6381-160">Fixed-Length String Buffers</span></span>  
+ <span data-ttu-id="d6381-161">Em algumas circunstâncias, um buffer de caracteres de comprimento fixo deve ser passado para um código não gerenciado para ser manipulado.</span><span class="sxs-lookup"><span data-stu-id="d6381-161">In some circumstances, a fixed-length character buffer must be passed into unmanaged code to be manipulated.</span></span> <span data-ttu-id="d6381-162">Apenas passar uma cadeia de caracteres não funciona neste caso, porque o receptor não pode modificar o conteúdo do buffer passado.</span><span class="sxs-lookup"><span data-stu-id="d6381-162">Simply passing a string does not work in this case because the callee cannot modify the contents of the passed buffer.</span></span> <span data-ttu-id="d6381-163">Mesmo se a cadeia de caracteres for passada por referência, não haverá nenhuma maneira de inicializar o buffer em determinado tamanho.</span><span class="sxs-lookup"><span data-stu-id="d6381-163">Even if the string is passed by reference, there is no way to initialize the buffer to a given size.</span></span>  
   
- A solução é passar um buffer do <xref:System.Text.StringBuilder> como argumento, em vez de uma cadeia de caracteres. Um `StringBuilder` pode ser desreferenciado e modificado pelo receptor, desde que ele não exceda a capacidade do `StringBuilder`. Ele também pode ser inicializado com um comprimento fixo. Por exemplo, se você inicializar um buffer do `StringBuilder` em uma capacidade de `N`, o marshaler fornecerá um buffer com o tamanho de (`N`+ 1) caracteres. O + 1 leva em conta o fato de que a cadeia de caracteres não gerenciada tem um terminador nulo, ao contrário de `StringBuilder`.  
+ <span data-ttu-id="d6381-164">A solução é passar um buffer do <xref:System.Text.StringBuilder> como argumento, em vez de uma cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="d6381-164">The solution is to pass a <xref:System.Text.StringBuilder> buffer as the argument instead of a string.</span></span> <span data-ttu-id="d6381-165">Um `StringBuilder` pode ser desreferenciado e modificado pelo receptor, desde que ele não exceda a capacidade do `StringBuilder`.</span><span class="sxs-lookup"><span data-stu-id="d6381-165">A `StringBuilder` can be dereferenced and modified by the callee, provided it does not exceed the capacity of the `StringBuilder`.</span></span> <span data-ttu-id="d6381-166">Ele também pode ser inicializado com um comprimento fixo.</span><span class="sxs-lookup"><span data-stu-id="d6381-166">It can also be initialized to a fixed length.</span></span> <span data-ttu-id="d6381-167">Por exemplo, se você inicializar um buffer do `StringBuilder` em uma capacidade de `N`, o marshaler fornecerá um buffer com o tamanho de (`N`+ 1) caracteres.</span><span class="sxs-lookup"><span data-stu-id="d6381-167">For example, if you initialize a `StringBuilder` buffer to a capacity of `N`, the marshaler provides a buffer of size (`N`+1) characters.</span></span> <span data-ttu-id="d6381-168">O + 1 leva em conta o fato de que a cadeia de caracteres não gerenciada tem um terminador nulo, ao contrário de `StringBuilder`.</span><span class="sxs-lookup"><span data-stu-id="d6381-168">The +1 accounts for the fact that the unmanaged string has a null terminator while `StringBuilder` does not.</span></span>  
   
- Por exemplo, a função `GetWindowText` da API do Microsoft Win32 (definida em Windows.h) é um buffer de caracteres de comprimento fixo que deve ser passada para um código não gerenciado para ser manipulada. `LpString` aponta para um buffer alocado pelo chamador com o tamanho `nMaxCount`. O chamador deve alocar o buffer e definir o argumento `nMaxCount` com o tamanho do buffer alocado. O código a seguir mostra a declaração da função `GetWindowText`, conforme definido em Windows.h.  
+ <span data-ttu-id="d6381-169">Por exemplo, a função `GetWindowText` da API do Microsoft Win32 (definida em Windows.h) é um buffer de caracteres de comprimento fixo que deve ser passada para um código não gerenciado para ser manipulada.</span><span class="sxs-lookup"><span data-stu-id="d6381-169">For example, the Microsoft Win32 API `GetWindowText` function (defined in Windows.h) is a fixed-length character buffer that must be passed into unmanaged code to be manipulated.</span></span> <span data-ttu-id="d6381-170">`LpString` aponta para um buffer alocado pelo chamador com o tamanho `nMaxCount`.</span><span class="sxs-lookup"><span data-stu-id="d6381-170">`LpString` points to a caller-allocated buffer of size `nMaxCount`.</span></span> <span data-ttu-id="d6381-171">O chamador deve alocar o buffer e definir o argumento `nMaxCount` com o tamanho do buffer alocado.</span><span class="sxs-lookup"><span data-stu-id="d6381-171">The caller is expected to allocate the buffer and set the `nMaxCount` argument to the size of the allocated buffer.</span></span> <span data-ttu-id="d6381-172">O código a seguir mostra a declaração da função `GetWindowText`, conforme definido em Windows.h.</span><span class="sxs-lookup"><span data-stu-id="d6381-172">The following code shows the `GetWindowText` function declaration as defined in Windows.h.</span></span>  
   
 ```  
 int GetWindowText(  
@@ -240,7 +236,7 @@ int nMaxCount     // Maximum number of characters to copy.
 );  
 ```  
   
- Um `StringBuilder` pode ser desreferenciado e modificado pelo receptor, desde que ele não exceda a capacidade do `StringBuilder`. O exemplo de código a seguir demonstra como `StringBuilder` pode ser inicializado com um comprimento fixo.  
+ <span data-ttu-id="d6381-173">Um `StringBuilder` pode ser desreferenciado e modificado pelo receptor, desde que ele não exceda a capacidade do `StringBuilder`.</span><span class="sxs-lookup"><span data-stu-id="d6381-173">A `StringBuilder` can be dereferenced and modified by the callee, provided it does not exceed the capacity of the `StringBuilder`.</span></span> <span data-ttu-id="d6381-174">O exemplo de código a seguir demonstra como `StringBuilder` pode ser inicializado com um comprimento fixo.</span><span class="sxs-lookup"><span data-stu-id="d6381-174">The following code example demonstrates how `StringBuilder` can be initialized to a fixed length.</span></span>  
   
 ```vb  
 Public Class Win32API  
@@ -273,9 +269,8 @@ public class Window {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Comportamento de marshaling padrão](../../../docs/framework/interop/default-marshaling-behavior.md)   
- [Tipos blittable e não blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md)   
- [Atributos direcionais](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
- [Copiando e fixando](../../../docs/framework/interop/copying-and-pinning.md)
-
+## <a name="see-also"></a><span data-ttu-id="d6381-175">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d6381-175">See Also</span></span>  
+ [<span data-ttu-id="d6381-176">Comportamento de marshaling padrão</span><span class="sxs-lookup"><span data-stu-id="d6381-176">Default Marshaling Behavior</span></span>](../../../docs/framework/interop/default-marshaling-behavior.md)  
+ [<span data-ttu-id="d6381-177">Tipos blittable e não blittable</span><span class="sxs-lookup"><span data-stu-id="d6381-177">Blittable and Non-Blittable Types</span></span>](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
+ [<span data-ttu-id="d6381-178">Atributos direcionais</span><span class="sxs-lookup"><span data-stu-id="d6381-178">Directional Attributes</span></span>](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
+ [<span data-ttu-id="d6381-179">Copiando e fixando</span><span class="sxs-lookup"><span data-stu-id="d6381-179">Copying and Pinning</span></span>](../../../docs/framework/interop/copying-and-pinning.md)
