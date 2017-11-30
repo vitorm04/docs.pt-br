@@ -1,45 +1,37 @@
 ---
-title: "Construção funcional (LINQ to XML) (Visual Basic) | Documentos do Microsoft"
+title: "Construção funcional (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: feac4273-39ab-43ae-bab7-4059c807a785
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9fa8cb3c97a1e23a863296c828c82b240e9ab5db
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d5c68fb71fd59d08574cee9eec933cee25e504d9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="functional-construction-linq-to-xml-visual-basic"></a>Construção funcional (LINQ to XML) (Visual Basic)
-[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]Fornece uma maneira eficiente de criar elementos XML chamados *construção funcional*. Construção funcional é a capacidade de criar uma árvore XML em uma única instrução.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] fornece uma maneira eficiente de criar elementos XML chamada *construção funcional*. Construção funcional é a capacidade de criar uma árvore XML em uma única instrução.  
   
- Há vários recursos chave da interface de programação do [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] que permitem a construção funcional:  
+ Há vários recursos chave da interface de programação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] que permitem a construção funcional:  
   
--   O <xref:System.Xml.Linq.XElement>construtor aceita vários tipos de argumentos para o conteúdo.</xref:System.Xml.Linq.XElement> Por exemplo, você pode passar outro <xref:System.Xml.Linq.XElement>objeto, que se torna um elemento filho.</xref:System.Xml.Linq.XElement> Você pode passar um <xref:System.Xml.Linq.XAttribute>objeto, que se torna um atributo do elemento.</xref:System.Xml.Linq.XAttribute> Ou você pode passar qualquer outro tipo de objeto, que é convertido em uma cadeia de caracteres e torna-se o conteúdo de texto do elemento.  
+-   O construtor <xref:System.Xml.Linq.XElement> utiliza vários tipos de argumentos para o conteúdo. Por exemplo, você pode passar outro objeto <xref:System.Xml.Linq.XElement>, que se torna um elemento filho. Você pode passar um objeto <xref:System.Xml.Linq.XAttribute>, que se torna um atributo do elemento. Ou você pode passar qualquer outro tipo de objeto, que é convertido em uma cadeia de caracteres e torna-se o conteúdo de texto do elemento.  
   
--   O <xref:System.Xml.Linq.XElement>construtor aceita um `params` matriz do tipo <xref:System.Object>, de modo que você pode passar qualquer número de objetos para o construtor.</xref:System.Object> </xref:System.Xml.Linq.XElement> Isso permite que você crie um elemento que tem o conteúdo complexo.  
+-   O construtor <xref:System.Xml.Linq.XElement> utiliza uma matriz de `params` do tipo <xref:System.Object>, para que você possa passar qualquer número de objetos para o construtor. Isso permite que você crie um elemento que tem o conteúdo complexo.  
   
--   Se um objeto implementa <xref:System.Collections.Generic.IEnumerable%601>, a coleção do objeto é enumerada e todos os itens na coleção serão adicionados.</xref:System.Collections.Generic.IEnumerable%601> Se a coleção contiver <xref:System.Xml.Linq.XElement>ou <xref:System.Xml.Linq.XAttribute>objetos, cada item da coleção será adicionado separadamente.</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement> Isso é importante porque permite que você passe os resultados de uma [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] consulta para o construtor.  
+-   Se um objeto implementar <xref:System.Collections.Generic.IEnumerable%601>, a coleção no objeto será enumerada, e todos os itens da coleção serão adicionados. Se a coleção contiver objetos <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XAttribute>, cada item da coleção será adicionado separadamente. Isso é importante porque permite que você passe os resultados de uma consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para o construtor.  
   
  A seguir está um exemplo:  
   
- Esses recursos permitem que você escrever código usando literais XML para criar uma árvore XML e também para escrever um código que usa os resultados de [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] consultas quando você cria uma árvore XML:  
+ Esses recursos permitem que você escrever código usando literais XML para criar uma árvore XML e também para escrever código que usa os resultados de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] consultas quando você cria uma árvore XML:  
   
 ```vb  
 Dim srcTree As XElement = _  

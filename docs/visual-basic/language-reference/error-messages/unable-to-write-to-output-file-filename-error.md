@@ -1,44 +1,26 @@
 ---
-title: "Não é possível gravar no arquivo de saída &quot;&lt;filename&gt;&quot;: &lt;erro&gt; | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Não é possível gravar arquivo de saída &#39; &lt;filename&gt;&#39;: &lt;erro&gt;"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc31019
 - bc31019
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC31019
+helpviewer_keywords: BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fe093ec3b36ba733cb9b0c162e242c8dce6b7c78
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d142a8c741a9f0e25b8ac3c0002d04f437bf0ca9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>Não é possível gravar no arquivo de saída '&lt;filename&gt;': &lt;erro&gt;
+# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>Não é possível gravar arquivo de saída &#39; &lt;filename&gt;&#39;: &lt;erro&gt;
 Ocorreu um problema na criação do arquivo.  
   
  Não foi possível abrir um arquivo de saída para gravação. O arquivo (ou a pasta que contém o arquivo) pode estar aberto para uso exclusivo por outro processo ou pode ter seu atributo definido como somente leitura.  
@@ -57,11 +39,11 @@ Ocorreu um problema na criação do arquivo.
   
 1.  Compile o programa novamente para verificar se o erro persiste.  
   
-2.  Se o erro persistir, salve seu trabalho e reinicie o [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)].  
+2.  Se o erro persistir, salve seu trabalho e reinicie o [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
 3.  Se o erro persistir, reinicie o computador.  
   
-4.  Se o erro persistir, reinstale o [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+4.  Se o erro persistir, reinstale o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
 5.  Se o erro persistir após a reinstalação, notifique o Microsoft Product Support Services.  
   
@@ -75,11 +57,11 @@ Ocorreu um problema na criação do arquivo.
   
 ### <a name="to-change-the-attributes-of-a-file-or-folder"></a>Para alterar os atributos de um arquivo ou pasta  
   
-1.  Em **File Explorer**, com o botão direito no arquivo ou pasta e escolha **propriedades**.  
+1.  Em **Explorador de arquivos**, com o botão direito no arquivo ou pasta e escolha **propriedades**.  
   
 2.  No **atributos** seção o **geral** guia, desmarque o **somente leitura** caixa.  
   
 3.  Press **OK**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Fale conosco](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+ [Fale conosco](/visualstudio/ide/talk-to-us)

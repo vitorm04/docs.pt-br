@@ -1,40 +1,22 @@
 ---
 title: "Guia de programação do Visual Basic"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic code, language guide
 - Visual Basic, programming in
 - Visual Basic, language reference
 ms.assetid: 640e5796-2796-433c-af37-4d2a2334895b
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 01d6a1fc688f2cdf55ab4be5c6d0a8daccda2031
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 72234f4707e891abd00744db8cebe04114865522
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="visual-basic-programming-guide"></a>Guia de programação do Visual Basic
 Como acontece com qualquer linguagem de programação moderna, o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] é compatível com muitos constructos de programação e elementos de linguagem comuns. Este guia descreve os principais elementos de programação do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
@@ -55,4 +37,3 @@ Como acontece com qualquer linguagem de programação moderna, o [!INCLUDE[vbprv
   
  [Compilador de linha de comando do Visual Basic](../../visual-basic/reference/command-line-compiler/index.md)  
  Oferece informações sobre como usar o compilador [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] de linha de comando, as opções de compilador e a ferramenta de atualização de palavras-chave.
-

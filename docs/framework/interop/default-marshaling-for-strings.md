@@ -5,32 +5,28 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - strings, interop marshaling
 - interop marshaling, strings
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d5e78bebf15630589a90a684f2299565728728c7
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 34cd8194f5f36c2f9c93517403aa27f6bbbcb698
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="default-marshaling-for-strings"></a>Marshaling padrão para cadeias de caracteres
-As classes <xref:System.String?displayProperty=fullName> e <xref:System.Text.StringBuilder?displayProperty=fullName> têm comportamentos de marshaling semelhantes.  
+As classes <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.StringBuilder?displayProperty=nameWithType> têm comportamentos de marshaling semelhantes.  
   
  As cadeias de caracteres têm o marshaling realizado como um tipo `BSTR` de estilo COM ou como uma cadeia de caracteres terminada em nulo (uma matriz de caracteres que termina com um caractere nulo). Os caracteres na cadeia de caracteres podem ter o marshaling realizado como Unicode (o padrão em sistemas Windows) ou ANSI.  
   
@@ -274,8 +270,7 @@ public class Window {
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Comportamento de marshaling padrão](../../../docs/framework/interop/default-marshaling-behavior.md)   
- [Tipos blittable e não blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md)   
- [Atributos direcionais](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
+ [Comportamento de marshaling padrão](../../../docs/framework/interop/default-marshaling-behavior.md)  
+ [Tipos blittable e não blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
+ [Atributos direcionais](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [Copiando e fixando](../../../docs/framework/interop/copying-and-pinning.md)
-

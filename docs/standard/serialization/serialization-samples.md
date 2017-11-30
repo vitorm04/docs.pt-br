@@ -8,23 +8,22 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6a56f66d-c80a-43e9-8e50-fb9b61120222
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
 ms.openlocfilehash: 866294ebef7d16848f4fde28c05c6b3455969893
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="serialization-samples-for-the-net-framework"></a>Amostras de serialização para o .NET Framework
 Essa seção demonstra os objetos de serialização no .NET Framework.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Exemplo de tecnologia de serialização básica](../../../docs/standard/serialization/basic-serialization-technology-sample.md)  
- Demonstra como serializar um gráfico de objeto na memória para um fluxo.  
+ Demonstra como serializar um grafo de objeto na memória para um fluxo.  
   
  [Exemplo de tecnologia de serialização básica tolerante a versões](../../../docs/standard/serialization/version-tolerant-serialization-technology-sample.md)  
  Demonstra os recursos de tolerância de versão da Serialização .NET.  
@@ -43,4 +42,3 @@ Essa seção demonstra os objetos de serialização no .NET Framework.
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Serialização](../../../docs/standard/serialization/index.md)
-

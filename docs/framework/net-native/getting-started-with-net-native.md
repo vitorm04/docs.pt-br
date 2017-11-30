@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c9618213569766a6ae355a936a4b1f71a5046ef6
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: eeda0c58e9b5e9f8b48e335849ce12f7e8d94a1b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="getting-started-with-net-native"></a>Guia de Introdução ao .NET Native
 Se você estiver escrevendo um novo aplicativo do Windows para o Windows 10 ou migrando um aplicativo existente da Windows Store, siga o mesmo conjunto de procedimentos. Para criar um aplicativo [!INCLUDE[net_native](../../../includes/net-native-md.md)], siga estas etapas:  
@@ -69,11 +67,11 @@ Se você estiver escrevendo um novo aplicativo do Windows para o Windows 10 ou m
  **Métodos que dependem de reflexão**  
  Em alguns casos, o uso de reflexão no código não é óbvio. Algumas APIs comuns ou padrões de programação não são consideradas como parte da API de reflexão, mas dependem dela para serem executados com êxito. Isso inclui os seguintes métodos de instanciação do tipo e de construção de método:  
   
--   O método <xref:System.Type.MakeGenericType%2A?displayProperty=fullName>  
+-   O método <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>  
   
--   Os métodos <xref:System.Array.CreateInstance%2A?displayProperty=fullName> e <xref:System.Type.MakeArrayType%2A?displayProperty=fullName>  
+-   Os métodos <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> e <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>  
   
--   O método <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=fullName>.  
+-   O método <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType>.  
   
  Para obter mais informações, consulte [APIs que dependem de reflexão](../../../docs/framework/net-native/apis-that-rely-on-reflection.md).  
   
@@ -123,11 +121,10 @@ Se você estiver escrevendo um novo aplicativo do Windows para o Windows 10 ou m
 -   [Exceções em tempo de execução em aplicativos do .NET Native](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [NIB: Instalação e configuração do .NET Native](http://msdn.microsoft.com/en-us/7c9bc375-8b87-4c33-bede-72d513e362ec)   
- [.NET Native e compilação](../../../docs/framework/net-native/net-native-and-compilation.md)   
- [Reflexão e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)   
- [APIs que dependem de reflexão](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)   
- [Serialização e metadados](../../../docs/framework/net-native/serialization-and-metadata.md)   
+ [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [NIB: .NET Native instalação e configuração](http://msdn.microsoft.com/en-us/7c9bc375-8b87-4c33-bede-72d513e362ec)  
+ [.NET Native e compilação](../../../docs/framework/net-native/net-native-and-compilation.md)  
+ [Reflexão e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
+ [APIs que dependem de reflexão](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
+ [Serialização e metadados](../../../docs/framework/net-native/serialization-and-metadata.md)  
  [Migrando seu aplicativo da Windows Store para .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)
-

@@ -1,31 +1,27 @@
 ---
-title: "Como: alterar o Namespace de uma árvore inteira XML (Visual Basic) | Documentos do Microsoft"
+title: "Como: alterar o Namespace de uma árvore XML inteira (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 1837324b-5cb5-4fa8-95b9-3071efa0f913
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: af216e734c85806056e37d92733a3e4d49f8b73c
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 1c5ee83840f9d8b4105e7af53008a329dfde37d3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-visual-basic"></a>Como: alterar o Namespace de uma árvore inteira XML (Visual Basic)
-Às vezes você tem que alterar programaticamente ao namespace para um elemento ou atributo. LINQ to XML faz isso fácil. O <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=fullName>propriedade pode ser definida.</xref:System.Xml.Linq.XElement.Name%2A?displayProperty=fullName> O <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=fullName>não é possível definir a propriedade, mas você pode facilmente copiar os atributos em uma <xref:System.Collections.Generic.List%601?displayProperty=fullName>, remover os atributos existentes e, em seguida, adicionar novos atributos que estão no novo namespace desejada.</xref:System.Collections.Generic.List%601?displayProperty=fullName> </xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=fullName>  
+# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-visual-basic"></a>Como: alterar o Namespace de uma árvore XML inteira (Visual Basic)
+Às vezes você tem que alterar programaticamente ao namespace para um elemento ou atributo. LINQ to XML faz isso fácil. A propriedade de <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> pode ser definida. A propriedade de <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> não pode ser definida, mas você pode facilmente copiar os atributos em <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, remover os atributos existentes, e então adiciona novos atributos que estão no novo namespace desejada.  
   
- Para obter mais informações, consulte [trabalhar com Namespaces XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Para obter mais informações, consulte [trabalhando com Namespaces de XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir cria duas árvores XML em qualquer namespace. Altera o namespace de cada uma das árvores, e as combina em uma única árvore.  

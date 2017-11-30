@@ -1,31 +1,22 @@
 ---
 title: "Serialização (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 67379a76-5465-4af8-a781-0b0b25a62d9a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b88f78b86e79802238b78cfe097a0ccc73bfe778
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 43e3be09a66ca1fef4f6a5b829c3057d2740d9c8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="serialization-visual-basic"></a>Serialização (Visual Basic)
 A serialização é o processo de converter um objeto em um fluxo de bytes para armazenar o objeto ou transmiti-los na memória, um banco de dados ou um arquivo. Sua finalidade principal é salvar o estado de um objeto para recriá-lo quando necessário. O processo inverso é chamado desserialização.  
@@ -74,7 +65,7 @@ A serialização é o processo de converter um objeto em um fluxo de bytes para 
  Se você quiser que o objeto também seja desserializado de uma maneira personalizada, você deverá usar um construtor personalizado.  
   
 ## <a name="designer-serialization"></a>Serialização de designer  
- A serialização de designer é um formulário especial de serialização que envolve o tipo de persistência do objeto geralmente associado a ferramentas de desenvolvimento. A serialização de designer é o processo de conversão de um objeto gráfico em um arquivo de origem que pode, posteriormente, ser usado para recuperar o objeto gráfico. Um arquivo de origem pode conter código, marcação ou até mesmo informações de tabela do SQL.  
+ A serialização de designer é um formulário especial de serialização que envolve o tipo de persistência do objeto geralmente associado a ferramentas de desenvolvimento. A serialização de designer é o processo de conversão de um grafo do objeto em um arquivo de origem que pode, posteriormente, ser usado para recuperar o grafo do objeto. Um arquivo de origem pode conter código, marcação ou até mesmo informações de tabela do SQL.  
   
 ##  <a name="BKMK_RelatedTopics"></a> Exemplos e tópicos relacionados  
  [Passo a passo: mantendo um objeto no Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
@@ -85,4 +76,3 @@ A serialização é o processo de converter um objeto em um fluxo de bytes para 
   
  [Como gravar dados de objeto em um arquivo XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
  Mostra como gravar o objeto de uma classe para um arquivo XML usando a classe <xref:System.Xml.Serialization.XmlSerializer>.
-

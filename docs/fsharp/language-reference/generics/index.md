@@ -1,6 +1,6 @@
 ---
 title: "Genéricos (F#)"
-description: "Genéricos (F#)"
+description: "Saiba como usar funções genéricas de F # e tipos que permitem que você escrever código que funciona com uma variedade de tipos sem código de repetição."
 keywords: "visual f#, f#, programação funcional"
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: a9f2e2ee-bcb1-4ce3-8531-850aa183040f
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: 98f65de4f3434aea9ee0b78848b85ba398543974
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: e7a5712fddf4d372d1ada86927f50e394a59a410
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="generics"></a>Genéricos
 
 Os valores, os métodos, as propriedades e os tipos de agregação, como classes, registros e uniões discriminadas, da função em F# podem ser *genéricos*. As construções genéricas contêm pelo menos um parâmetro de tipo, que é geralmente fornecido pelo usuário da construção genérica. Os tipos e as funções genéricas permitem que você escreva códigos que funcionam com diversos tipos sem repetir o código de cada tipo. Tornar seu código genérico pode ser algo simples em F#, pois normalmente seu código é implicitamente inferido como genérico pelos mecanismos de generalização automática e de inferência de tipos do compilador.
@@ -103,7 +102,7 @@ Há dois tipos de parâmetros de tipo que podem ser usados em programas em F#. O
 
 [Parâmetros de tipo resolvidos estaticamente](statically-resolved-type-parameters.md)
 
-[Genéricos no .NET Framework](https://msdn.microsoft.com/library/ms172192.aspx)
+[Genéricos no .NET Framework](~/docs/standard/generics/index.md)
 
 [Generalização automática](automatic-generalization.md)
 

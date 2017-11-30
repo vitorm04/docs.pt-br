@@ -1,26 +1,22 @@
 ---
-title: "Como: recuperar parágrafos de um documento do Office Open XML (Visual Basic) | Documentos do Microsoft"
+title: "Como: recuperar parágrafos de um documento do Office Open XML (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 303fffb8a548805f4ae7c1e66d683b35b9faf2b0
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: ecce435601092e0025a977c797100e0b5ff74b86
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>Como: recuperar parágrafos de um documento do Office Open XML (Visual Basic)
 Este tópico apresenta um exemplo que abre um documento do Office Open XML, e retorna uma coleção de todos os parágrafos no documento.  
@@ -28,13 +24,13 @@ Este tópico apresenta um exemplo que abre um documento do Office Open XML, e re
  Para obter mais informações sobre o Office Open XML, consulte [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo abre um pacote do Office Open XML, usa os relacionamentos de pacote em Open XML para localizar o documento e partes de estilo. Consulta o documento, Projetando uma coleção de um tipo anônimo que contém os parágrafos <xref:System.Xml.Linq.XElement>nó, o nome do estilo de cada parágrafo e o texto de cada parágrafo.</xref:System.Xml.Linq.XElement>  
+ Este exemplo abre um pacote do Office Open XML, usa os relacionamentos de pacote em Open XML para localizar o documento e partes de estilo. Consulta no documento, projetando uma coleção de um tipo anônimo que contém o nó de <xref:System.Xml.Linq.XElement> de parágrafo, o nome do estilo de cada parágrafo, e o texto de cada parágrafo.  
   
  O exemplo usa um método de extensão chamado `StringConcatenate`, que é fornecido no exemplo também.  
   
- Para um tutorial detalhado que explica como este exemplo funciona, consulte [puro funcional transformações de XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
+ Para obter um tutorial detalhado que explica como este exemplo funciona, consulte [puro funcional transformações de XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
   
- Este exemplo usa as classes encontradas no assembly WindowsBase. Ele usa tipos no <xref:System.IO.Packaging?displayProperty=fullName>namespace.</xref:System.IO.Packaging?displayProperty=fullName>  
+ Este exemplo usa as classes encontradas no assembly WindowsBase. Ele usa tipos no namespace <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -165,7 +161,7 @@ Module Module1
 End Module  
 ```  
   
- Quando executado com o documento do Open XML de exemplo descrito na [criando o Office Open XML documento de origem (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), este exemplo produz a seguinte saída:  
+ Quando executado com o documento de Open XML de exemplo descrito no [criando o Office Open XML documento de origem (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), este exemplo produz a seguinte saída:  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -186,4 +182,4 @@ StyleName:Code >Hello World<
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Técnicas avançadas de consulta (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+ [Técnicas avançadas de consulta (LINQ para XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

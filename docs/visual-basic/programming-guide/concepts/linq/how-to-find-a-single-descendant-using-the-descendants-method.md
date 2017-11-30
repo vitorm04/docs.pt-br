@@ -1,32 +1,28 @@
 ---
-title: "Como: localizar um único descendente usando o método de descendentes (Visual Basic) | Documentos do Microsoft"
+title: "Como: localizar um único descendente usando o método de descendentes (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 0c03468c-efc8-4140-98f3-fb67acd9e8e1
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 74d4dd0b805a5ea2c189cb89bcaeca3f4cac1268
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 0647dee5ced1e986fcb3fac7915437dfb37b0796
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>Como: localizar um único descendente usando o método de descendentes (Visual Basic)
-Você pode usar o <xref:System.Xml.Linq.XContainer.Descendants%2A>método do eixo rapidamente escrever código para localizar um único exclusivamente elemento nomeado.</xref:System.Xml.Linq.XContainer.Descendants%2A> Essa técnica é especialmente útil quando você quer localizar um descendente específico com um nome específico. Você pode escrever o código para navegar até o elemento desejado, mas geralmente é mais rápido e fácil escrever código usando o <xref:System.Xml.Linq.XContainer.Descendants%2A>eixo.</xref:System.Xml.Linq.XContainer.Descendants%2A>  
+Você pode usar o método de eixo <xref:System.Xml.Linq.XContainer.Descendants%2A> para rapidamente escrever código para localizar um único elemento nomeado exclusivamente. Essa técnica é especialmente útil quando você quer localizar um descendente específico com um nome específico. Você pode escrever o código para navegar para o elemento desejado, mas geralmente é mais rápido e fácil escrever código usando o eixo <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa o <xref:System.Linq.Enumerable.First%2A>operador de consulta padrão.</xref:System.Linq.Enumerable.First%2A>  
+ Este exemplo usa o operador padrão de consulta <xref:System.Linq.Enumerable.First%2A>.  
   
 ```vb  
 Dim root As XElement = _  
@@ -57,7 +53,7 @@ GC3 Value
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra a mesma consulta para XML que está em um namespace. Para obter mais informações, consulte [trabalhar com Namespaces XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ O exemplo a seguir mostra a mesma consulta para XML que está em um namespace. Para obter mais informações, consulte [trabalhando com Namespaces de XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -94,4 +90,4 @@ GC3 Value
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+ [Consultas básicas (LINQ para XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -1,45 +1,27 @@
 ---
-title: "Acesso à propriedade padrão é ambíguo entre os membros de interface herdada&lt;defaultpropertyname&gt;&quot;da interface&quot;&lt;interfacename1&gt;&quot;e&quot;&lt;defaultpropertyname&gt;&quot;da interface&quot;&lt;interfacename2&gt;&quot; | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Acesso à propriedade padrão é ambíguo entre os membros de interface herdada &#39; &lt;defaultpropertyname&gt;&#39; de interface &#39;&lt; interfacename1&gt;&#39; e &#39;&lt; defaultpropertyname&gt;&#39; de interface &#39;&lt; interfacename2&gt;&#39;"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30686
 - bc30686
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC30686
+helpviewer_keywords: BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 115ed88aa6c0781c452be745365efee04d2ce66d
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 23d613668ee2d92484117759dd614ed2cad4bcb2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>Acesso à propriedade padrão é ambíguo entre os membros de interface herdada&lt;defaultpropertyname&gt;'da interface'&lt;interfacename1&gt;'e'&lt;defaultpropertyname&gt;'da interface'&lt;interfacename2&gt;'
-Uma interface herda de duas interfaces, cada uma declara uma propriedade padrão com o mesmo nome. O compilador não resolve um acesso a sua propriedade padrão sem qualificação. O exemplo a seguir ilustra essa situação.  
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>Acesso à propriedade padrão é ambíguo entre os membros de interface herdada &#39; &lt;defaultpropertyname&gt;&#39; de interface &#39;&lt; interfacename1&gt;&#39; e &#39;&lt; defaultpropertyname&gt;&#39; de interface &#39;&lt; interfacename2&gt;&#39;
+Uma interface herda de duas interfaces, cada uma delas declara uma propriedade padrão com o mesmo nome. O compilador não é possível resolver um acesso de propriedade padrão sem qualificação. O exemplo a seguir ilustra essa situação.  
   
 ```  
 Public Interface Iface1  
@@ -59,7 +41,7 @@ Public Class testClass
 End Class  
 ```  
   
- Quando você especificar `testObj(1)`, o compilador tenta resolvê-lo para a propriedade padrão. No entanto, há duas propriedades padrão possível por causa de interfaces herdadas, para que o compilador sinaliza esse erro.  
+ Quando você especificar `testObj(1)`, o compilador tenta resolvê-lo para a propriedade padrão. No entanto, há duas propriedades padrão possíveis devido a interfaces herdadas, para que o compilador sinaliza este erro.  
   
  **ID do erro:** BC30686  
   
@@ -73,7 +55,7 @@ End Class
   
      -ou-  
   
--   Implemente a interface herda de uma classe. Em seguida, você pode implementar cada uma das propriedades herdadas com nomes diferentes. No entanto, apenas um deles pode ser a propriedade padrão da classe de implementação. O exemplo a seguir ilustra essa situação.  
+-   Implemente a interface que herda de uma classe. Em seguida, você pode implementar cada uma das propriedades herdadas com nomes diferentes. No entanto, apenas um deles pode ser a propriedade padrão da classe de implementação. O exemplo a seguir ilustra essa situação.  
   
     ```  
     Public Class useIface3  

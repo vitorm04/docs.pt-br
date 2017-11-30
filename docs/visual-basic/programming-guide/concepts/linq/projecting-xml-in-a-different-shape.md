@@ -1,28 +1,24 @@
 ---
-title: Projetando XML em um formato diferente (Visual Basic) | Documentos do Microsoft
+title: Projetando XML em uma forma diferente (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0b05fbff86bcac06a3ce375c162c70dc308f4913
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 2cf5f963b8675f22c9cab0297d8f48eb68f5aefb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Projetando XML em um formato diferente (Visual Basic)
+# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Projetando XML em uma forma diferente (Visual Basic)
 Este tópico mostra um exemplo de projetar XML que está em uma forma diferente do XML fonte.  
   
  Várias transformações típicas XML consistem em consultas encadeadas, como neste exemplo. É comum para iniciar com alguma forma XML, resultados intermediários de projeto como coleções de tipos anônimos ou tipos nomeados, e para projetar finalmente nos resultados de novo em XML que está em uma forma totalmente diferente do XML fonte.  
@@ -32,7 +28,7 @@ Este tópico mostra um exemplo de projetar XML que está em uma forma diferente 
   
  Para obter instruções para criar o documento de origem para este exemplo, consulte [criando o Office Open XML documento de origem (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- Este exemplo usa classes do assembly WindowsBase. Ele usa tipos no <xref:System.IO.Packaging?displayProperty=fullName>namespace.</xref:System.IO.Packaging?displayProperty=fullName>  
+ Este exemplo usa classes do assembly WindowsBase. Ele usa tipos no namespace <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -241,7 +237,7 @@ End Module
 ```  
   
 ## <a name="next-steps"></a>Próximas etapas  
- No exemplo a seguir, você irá consultar para localizar todo o texto em um documento do Word:  
+ No exemplo a seguir, você consultará para localizar todo o texto em um documento do Word:  
   
 -   [Localizando texto em documentos do Word (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   

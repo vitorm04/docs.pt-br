@@ -1,34 +1,30 @@
 ---
-title: 'Como: projeta um novo tipo (LINQ to XML) (Visual Basic) | Documentos do Microsoft'
+title: 'Como: projeta um novo tipo (LINQ para XML) (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 8cfb24f5-89b2-4cfb-b85d-e7963f8f1845
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a7cbbce130aa78a7e14ffd61a1dcd76b969e1b35
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 73b677e45be1d457d54de01331c93f60348e6bfd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-project-a-new-type-linq-to-xml-visual-basic"></a>Como: projeta um novo tipo (LINQ to XML) (Visual Basic)
-Outros exemplos nesta seção mostraram consultas que retornam resultados como <xref:System.Collections.Generic.IEnumerable%601>de <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601>de `string`, e <xref:System.Collections.Generic.IEnumerable%601>de `int`.</xref:System.Collections.Generic.IEnumerable%601> </xref:System.Collections.Generic.IEnumerable%601> </xref:System.Xml.Linq.XElement> </xref:System.Collections.Generic.IEnumerable%601> Esses são tipos comuns de resultado, mas não são adequados para cada cenário. Em muitos casos você desejará suas consultas para retornar um <xref:System.Collections.Generic.IEnumerable%601>de algum outro tipo.</xref:System.Collections.Generic.IEnumerable%601>  
+# <a name="how-to-project-a-new-type-linq-to-xml-visual-basic"></a>Como: projeta um novo tipo (LINQ para XML) (Visual Basic)
+Outros exemplos nesta seção mostraram consultas que os resultados de retorno como <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> de `string`, e <xref:System.Collections.Generic.IEnumerable%601> de `int`. Esses são tipos comuns de resultado, mas não são adequados para cada cenário. Em muitos casos você desejará suas consultas para retornar <xref:System.Collections.Generic.IEnumerable%601> de qualquer outro tipo.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra como instanciar objetos na cláusula `Select` . O código define primeiro uma nova classe com um construtor, e altera a declaração de `Select` de modo que a expressão é uma nova instância da nova classe.  
   
- Este exemplo usa o seguinte documento XML: [arquivo XML de exemplo: ordem de compra típica (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: ordem de compra típica (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Public Class NameQty  
@@ -56,7 +52,7 @@ Public Class Program
 End Class  
 ```  
   
- Este exemplo usa o `M:System.Xml.Linq.XElement.Element` método foi introduzido no tópico [como: recuperar um único elemento filho (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md). Também usa conversões para recuperar os valores dos elementos que são retornados pelo método de `M:System.Xml.Linq.XElement.Element` .  
+ Este exemplo usa o `M:System.Xml.Linq.XElement.Element` método foi introduzido no tópico [como: recuperar um único elemento filho (LINQ para XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md). Também usa conversões para recuperar os valores dos elementos que são retornados pelo método de `M:System.Xml.Linq.XElement.Element` .  
   
  Este exemplo gera a seguinte saída:  
   
