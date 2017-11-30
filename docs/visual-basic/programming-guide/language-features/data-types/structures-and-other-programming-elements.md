@@ -1,50 +1,33 @@
 ---
-title: "Estruturas e outros elementos de programação (Visual Basic) | Documentos do Microsoft"
+title: "Estruturas e outros elementos de programação (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- structures, arrays
-- procedures, structures as arguments to
+- structures [Visual Basic], arrays
+- procedures [Visual Basic], structures as arguments to
 - objects [Visual Basic], structure elements
 - arrays [Visual Basic], structure elements
-- nested structures
+- nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8bb6d930846c6db67905c4e09078063b5b50613b
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: de343c06ec255d6cb68aa25d733e85385e884769
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Estruturas e outros elementos de programação (Visual Basic)
 Você pode usar as estruturas em conjunto com matrizes, objetos e procedimentos, bem como entre si. As interações usam a mesma sintaxe que esses elementos usam individualmente.  
   
 > [!NOTE]
->  Você não pode inicializar qualquer um dos elementos de estrutura na declaração da estrutura. Você pode atribuir valores somente para elementos de uma variável que foi declarada para ser de um tipo de estrutura.  
+>  Você não pode inicializar qualquer um dos elementos de estrutura na declaração da estrutura. Você pode atribuir valores somente para elementos de uma variável que foi declarada com um tipo de estrutura.  
   
 ## <a name="structures-and-arrays"></a>Estruturas e matrizes  
  Uma estrutura pode conter uma matriz como um ou mais dos seus elementos. O exemplo a seguir ilustra essa situação.  
@@ -72,7 +55,7 @@ mySystem.diskDrives(0) = "1.44 MB"
 Dim allSystems(100) As systemInfo  
 ```  
   
- Siga as mesmas regras para acessar os componentes dessa arquitetura de dados. O exemplo a seguir ilustra essa situação.  
+ Você seguir as mesmas regras para acessar os componentes dessa arquitetura de dados. O exemplo a seguir ilustra essa situação.  
   
 ```vb  
 ReDim allSystems(5).diskDrives(3)  
@@ -106,7 +89,7 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- O exemplo anterior passa a estrutura *por referência*, que permite que o procedimento modifique seus elementos de modo que as alterações tenham efeito no código de chamada. Se você quiser proteger uma estrutura contra tal modificação, passá-lo por valor.  
+ O exemplo anterior passa a estrutura *por referência*, que permite que o procedimento para modificar seus elementos para que as alterações tenham efeito no código de chamada. Se você quiser proteger uma estrutura contra tal modificação, passá-lo por valor.  
   
  Você também pode retornar uma estrutura de uma `Function` procedimento. O exemplo a seguir ilustra essa situação.  
   
@@ -122,7 +105,7 @@ End Function
 ```  
   
 ## <a name="structures-within-structures"></a>Estruturas dentro de estruturas  
- Estruturas podem conter outras estruturas. O exemplo a seguir ilustra essa situação.  
+ As estruturas podem conter outras estruturas. O exemplo a seguir ilustra essa situação.  
   
 ```vb  
 Public Structure driveInfo  
@@ -145,16 +128,16 @@ allSystems(1).diskDrives(0).type = "Floppy"
   
  Você também pode usar essa técnica para encapsular uma estrutura definida em um módulo dentro de uma estrutura definida em um módulo diferente.  
   
- Estruturas podem conter outras estruturas a uma profundidade arbitrária.  
+ As estruturas podem conter outras estruturas a uma profundidade arbitrária.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tipos de dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Tipos de dados elementares](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
- [Tipos de dados compostos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)   
- [Tipos de valor e tipos de referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Estruturas](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Solucionando problemas de tipos de dados](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Como: declarar uma estrutura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)   
- [Variáveis de estrutura](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)   
- [Estruturas e Classes](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)   
+ [Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [Tipos de Dados Elementares](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [Tipos de Dados Compostos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
+ [Tipos de Valor e Tipos de Referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [Estruturas](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [Solução de problemas de Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [Como declarar uma estrutura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [Variáveis de Estrutura](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
+ [Estruturas e Classes](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
  [Instrução Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)

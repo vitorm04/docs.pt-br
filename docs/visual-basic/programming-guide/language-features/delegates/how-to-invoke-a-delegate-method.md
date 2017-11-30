@@ -1,51 +1,34 @@
 ---
-title: "Como: chamar um método delegado (Visual Basic) | Documentos do Microsoft"
+title: "Como invocar um método delegado (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 29b20eb6089886c8111711388472004bbacea312
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: ea94d4bb26e168667fd75c6928e52261f230c85e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>Como invocar um método delegado (Visual Basic)
-Este exemplo mostra como associar um método um delegado e depois chama esse método por meio do delegado.  
+Este exemplo mostra como associar um método um delegado e depois chama esse método por meio do representante.  
   
 ### <a name="create-the-delegate-and-matching-procedures"></a>Crie o delegado e procedimentos correspondentes.  
   
-1.  Criar um delegado chamado `MySubDelegate`.  
+1.  Cria um delegado de nome `MySubDelegate`.  
   
     ```  
     Delegate Sub MySubDelegate(ByVal x As Integer)  
     ```  
   
-2.  Declare uma classe que contém um método com a mesma assinatura que o delegado.  
+2.  Declare uma classe que contém um método com a mesma assinatura do delegado.  
   
     ```  
     Class class1  
@@ -55,7 +38,7 @@ Este exemplo mostra como associar um método um delegado e depois chama esse mé
     End Class  
     ```  
   
-3.  Defina um método que cria uma instância do delegado e invoca o método associado com o delegado chamando interna `Invoke` método.  
+3.  Definir um método que cria uma instância do delegado e invoca o método associado com o delegado chamando o interno `Invoke` método.  
   
     ```  
     Protected Sub DelegateTest()  
@@ -68,7 +51,7 @@ Este exemplo mostra como associar um método um delegado e depois chama esse mé
     ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Instrução delegate](../../../../visual-basic/language-reference/statements/delegate-statement.md)   
- [Delegados](../../../../visual-basic/programming-guide/language-features/delegates/index.md)   
- [Eventos](../../../../visual-basic/programming-guide/language-features/events/index.md)   
+ [Instrução Delegate](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [Delegados](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
+ [Eventos](../../../../visual-basic/programming-guide/language-features/events/index.md)  
  [Aplicativos com Multithread](http://msdn.microsoft.com/library/a06a1a56-dd16-44e8-bc01-2c2255511bc6)

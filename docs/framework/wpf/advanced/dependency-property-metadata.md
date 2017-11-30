@@ -1,0 +1,110 @@
+---
+title: "Metadados de propriedade da dependência"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- APIs [WPF], metadata
+- dependency properties [WPF], metadata
+- metadata [WPF], for dependency properties
+- overriding metadata [WPF]
+ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 69f7a5af655586a62776a8c470f2e1c9811f91d7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="dependency-property-metadata"></a>Metadados de propriedade da dependência
+O sistema de propriedades [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] inclui um sistema de relatório de metadados que vai além do que pode ser relatado sobre uma propriedade por meio de reflexão ou das características gerais do [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. Os metadados de uma propriedade de dependência também podem ser atribuídos exclusivamente pela classe que define uma propriedade de dependência, podem ser alterados quando a propriedade de dependência é adicionada a uma classe diferente e podem ser substituídos especificamente por todas as classes derivadas que herdam a propriedade de dependência da classe base de definição.  
+  
+ 
+  
+<a name="prerequisites"></a>   
+## <a name="prerequisites"></a>Pré-requisitos  
+ Este tópico pressupõe que você entende as propriedades de dependência da perspectiva de um consumidor de propriedades de dependência existentes em classes [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e leu a [Visão geral das propriedades de dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md). Para seguir os exemplos deste tópico, você também deve ter noções básicas de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e saber como escrever aplicativos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+  
+<a name="dp_metadata_contents"></a>   
+## <a name="how-dependency-property-metadata-is-used"></a>Como os metadados de propriedade de dependência são usados  
+ Os metadados de propriedade de dependência existem como um objeto que pode ser consultado para examinar as características de uma propriedade de dependência. Esses metadados também são acessados frequentemente pelo sistema de propriedades enquanto ele processa qualquer propriedade de dependência. O objeto de metadados de uma propriedade de dependência pode conter os seguintes tipos de informações:  
+  
+-   Valor padrão para a propriedade de dependência, se nenhum outro valor puder ser determinado para a propriedade de dependência por valor local, estilo, herança, etc. Para uma discussão mais aprofundada de como os valores padrão participam da precedência usada pelo sistema de propriedades para atribuir valores para propriedades de dependência, consulte [Precedência de valor da propriedade de dependência](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md).  
+  
+-   Referências às implementações de retorno de chamada que afetam os comportamentos de coerção ou de notificação de alteração com base no tipo de proprietário. Observe que esses retornos de chamada são frequentemente definidos com um nível de acesso não público, de modo que obter as referências reais dos metadados geralmente não é possível, a menos que as referências estejam dentro de seu escopo de acesso permitido. Para obter mais informações sobre os retornos de chamada de propriedade de dependência, consulte [Retornos de chamada de propriedade de dependência e validação](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md).  
+  
+-   Se a propriedade de dependência em questão for considerada uma propriedade de nível de estrutura do WPF, os metadados poderão conter características das propriedades de dependência no nível da estrutura do WPF, que relatam informações e estados de serviço como a lógica da herança de propriedade e do mecanismo de layout no nível da estrutura do WPF. Para obter mais informações sobre este aspecto dos metadados de propriedade de dependência, consulte [Metadados de propriedade de estrutura](../../../../docs/framework/wpf/advanced/framework-property-metadata.md).  
+  
+<a name="APIs"></a>   
+## <a name="metadata-apis"></a>APIs de metadados  
+ O tipo que reporta a maioria das informações de metadados usados pelo sistema de propriedades é o <xref:System.Windows.PropertyMetadata> classe. Instâncias de metadados são especificadas opcionalmente quando as propriedades de dependência são registradas no sistema de propriedades e podem ser especificadas novamente para tipos adicionais que se adicionarem como proprietários ou substituírem os metadados que eles herdam da definição de propriedade de dependência da classe base. (Para casos em que o registro da propriedade não especifica metadados, um padrão <xref:System.Windows.PropertyMetadata> é criado com valores padrão para essa classe.) Os metadados registrados são retornados como <xref:System.Windows.PropertyMetadata> quando você chama os vários <xref:System.Windows.DependencyProperty.GetMetadata%2A> sobrecargas que obtém metadados de uma propriedade de dependência em um <xref:System.Windows.DependencyObject> instância.  
+  
+ O <xref:System.Windows.PropertyMetadata> classe é derivada de para fornecer metadados mais específicos para divisões estruturais como as classes de nível de framework do WPF. <xref:System.Windows.UIPropertyMetadata>Adiciona relatórios de animação e <xref:System.Windows.FrameworkPropertyMetadata> fornece as propriedades de nível de framework WPF mencionadas na seção anterior. Quando as propriedades de dependência são registradas, elas poderão ser registradas com essas <xref:System.Windows.PropertyMetadata> classes derivadas. Quando os metadados são examinados, a base de <xref:System.Windows.PropertyMetadata> tipo potencialmente pode ser convertido para as classes derivadas para que você possa examinar as propriedades mais específicas.  
+  
+> [!NOTE]
+>  As características das propriedades que podem ser especificadas em <xref:System.Windows.FrameworkPropertyMetadata> às vezes são chamadas nesta documentação como "sinalizadores". Quando você criar novas instâncias de metadados para uso em dependência registros de propriedade ou substituição de metadados, especifique esses valores usando a enumeração flagwise <xref:System.Windows.FrameworkPropertyMetadataOptions> e, em seguida, você fornece valores de enumeração para o possivelmenteconcatenados<xref:System.Windows.FrameworkPropertyMetadata> construtor. No entanto, uma vez construído, essas características de opção são expostas em um <xref:System.Windows.FrameworkPropertyMetadata> como uma série de propriedades Boolianas em vez do valor de construir enumeração. As propriedades boolianas permitem que você verifique cada condicional, em vez de exigirem que você aplique uma máscara a um valor de enumeração sinalizadora para obter as informações que lhe interessam. O construtor usa objetos <xref:System.Windows.FrameworkPropertyMetadataOptions> para manter o comprimento da assinatura de construtor razoável, enquanto os metadados construídos expõem as propriedades distintas para consultar os metadados mais intuitivo.  
+  
+<a name="override_or_subclass"></a>   
+## <a name="when-to-override-metadata-when-to-derive-a-class"></a>Quando substituir metadados, quando derivar uma classe  
+ O sistema de propriedades [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] estabeleceu capacidades para alterar algumas características das propriedades de dependência sem exigir que elas sejam totalmente reimplementadas. Isso é feito construindo uma instância diferente dos metadados de propriedade para a propriedade de dependência conforme ela existe em um tipo específico. Observe que a maioria das propriedades de dependência existentes não são propriedades virtuais, assim, "reimplementá-las" literalmente nas classes herdadas somente pode ser feito sombreando o membro existente.  
+  
+ Se o cenário que você está tentando habilitar para uma propriedade de dependência em um tipo não pode ser realizado modificando as características das propriedades de dependência existentes, talvez seja necessário criar uma classe derivada e, em seguida, declarar uma propriedade de dependência personalizada na sua classe derivada. Uma propriedade de dependência personalizada comporta-se de forma idêntica às propriedades de dependência definidas pelo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Para obter mais detalhes sobre propriedades de dependência personalizadas, consulte [Propriedades de dependência personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).  
+  
+ Uma característica notável de uma propriedade de dependência que você não pode substituir é seu tipo de valor. Se você estiver herdando uma propriedade de dependência que tenha o comportamento próximo do necessário, mas precisar de um tipo diferente para ela, será necessário implementar uma propriedade de dependência personalizada e talvez vincular as propriedades por meio de conversão de tipos ou outra implementação em sua classe personalizada. Além disso, você não pode substituir um existente <xref:System.Windows.ValidateValueCallback>, porque esse retorno de chamada existe no registro de campo próprio e não nos seus metadados.  
+  
+<a name="scenarios"></a>   
+## <a name="scenarios-for-changing-existing-metadata"></a>Cenários de alteração de metadados existentes  
+ Se você estiver trabalhando com os metadados de uma propriedade de dependência existente, um cenário comum para alterar os metadados de propriedade de dependência é alterar o valor padrão. Alterar ou adicionar retornos de chamada do sistema de propriedades é um cenário mais avançado. Você talvez queira fazer isso se sua implementação de uma classe derivada tiver diferentes inter-relações entre as propriedades de dependência. Uma das condicionais de ter um modelo de programação que dá suporte a código e uso declarativo é que as propriedades devem permitir serem definidas em qualquer ordem. Assim, todas as propriedades dependentes precisam ser definidas Just-In-Time sem contexto e não podem depender de conhecer uma ordem de configuração como pode ser encontrada em um construtor. Para obter mais informações sobre esse aspecto do sistema de propriedades, consulte [Retornos de chamada de propriedade de dependência e validação](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md). Observe que os retornos de chamada de validação não fazem parte dos metadados; eles fazem parte do identificador de propriedade de dependência. Portanto, os retornos de chamada de validação não podem ser alterados substituindo os metadados.  
+  
+ Em alguns casos, também convém alterar as opções de metadados de propriedade de nível de estrutura do WPF nas propriedades de dependência existentes. Essas opções comunicam determinadas condicionais conhecidas sobre as propriedades de nível de estrutura do WPF para outros processos de nível de estrutura do WPF, como o sistema de layout.  Configurar as opções geralmente é feita apenas quando registrar uma nova propriedade de dependência, mas também é possível alterar os metadados da propriedade de nível de framework WPF como parte de um <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> ou <xref:System.Windows.DependencyProperty.AddOwner%2A> chamar. Para obter os valores específicos a serem usados e mais informações, consulte [Metadados de propriedade de estrutura](../../../../docs/framework/wpf/advanced/framework-property-metadata.md). Para obter mais informações sobre como essas opções devem ser definidas para uma propriedade de dependência recém-registrada, consulte [Propriedades de dependência personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).  
+  
+<a name="dp_override_metadata"></a>   
+### <a name="overriding-metadata"></a>Substituindo metadados  
+ A finalidade da substituição de metadados é principalmente que você tenha a oportunidade de alterar os vários comportamentos derivados de metadados que são aplicados à propriedade de dependência conforme ela existe no seu tipo. As razões para isso são explicadas em mais detalhes na seção [Metadados](#dp_metadata_contents). Para obter mais informações incluindo alguns exemplos de código, consulte [Substituir metadados para uma propriedade de dependência](../../../../docs/framework/wpf/advanced/how-to-override-metadata-for-a-dependency-property.md).  
+  
+ Metadados de propriedade podem ser fornecido para uma propriedade de dependência durante a chamada de registro (<xref:System.Windows.DependencyProperty.Register%2A>). No entanto, em muitos casos, convém fornecer os metadados específicos do tipo da sua classe quando ela herda essa propriedade de dependência. Você pode fazer isso chamando o <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> método.  Para obter um exemplo da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], o <xref:System.Windows.FrameworkElement> classe é o tipo que registra pela primeira vez o <xref:System.Windows.UIElement.Focusable%2A> propriedade de dependência. Mas o <xref:System.Windows.Controls.Control> classe substitui os metadados para a propriedade de dependência fornecer seu próprio valor inicial padrão, mudando de `false` para `true`e caso contrário usar original <xref:System.Windows.UIElement.Focusable%2A> implementação.  
+  
+ Quando você substitui metadados, as diferentes características dos metadados são mescladas ou substituídas.  
+  
+-   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>é mesclado. Se você adicionar um novo <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, retorno de chamada é armazenado nos metadados. Se você não especificar um <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> em uma substituição, o valor de <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> é promovido como uma referência a partir do ancestral mais próximo que especificou nos metadados.  
+  
+-   O comportamento do sistema real da propriedade para <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> é que as implementações de todos os proprietários de metadados na hierarquia são retidas e adicionadas a uma tabela, com a ordem de execução pelo sistema de propriedade que retornos de chamada mais derivado da classe são chamados pela primeira vez.  
+  
+-   <xref:System.Windows.PropertyMetadata.DefaultValue%2A>é substituído. Se você não especificar um <xref:System.Windows.PropertyMetadata.DefaultValue%2A> em uma substituição, o valor de <xref:System.Windows.PropertyMetadata.DefaultValue%2A> é proveniente do ancestral mais próximo que especificou nos metadados.  
+  
+-   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>implementações são substituídas. Se você adicionar um novo <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, retorno de chamada é armazenado nos metadados. Se você não especificar um <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> em uma substituição, o valor de <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> é promovido como uma referência a partir do ancestral mais próximo que especificou nos metadados.  
+  
+-   O comportamento do sistema de propriedade é que apenas o <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> nos metadados imediatos é invocado. Não há referências a outras <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> implementações na hierarquia são mantidas.  
+  
+ Esse comportamento é implementado por <xref:System.Windows.PropertyMetadata.Merge%2A>e pode ser substituído em classes derivadas de metadados.  
+  
+#### <a name="overriding-attached-property-metadata"></a>Substituindo metadados de propriedade anexada  
+ No [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], as propriedades anexadas são implementadas como propriedades de dependência. Isso significa que elas também têm metadados de propriedade, que as classes individuais podem substituir. As considerações de escopo para uma propriedade anexada em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] são geralmente que qualquer <xref:System.Windows.DependencyObject> pode ter uma propriedade anexada definida neles. Portanto, qualquer <xref:System.Windows.DependencyObject> classe derivada pode substituir os metadados para qualquer propriedade anexada, pois ela pode ser definida em uma instância da classe. Você pode substituir os valores padrão, os retornos de chamada ou as propriedades de relatório de características de nível de estrutura do WPF. Se a propriedade anexada for definida em uma instância da sua classe, aquelas características de metadados de propriedade de substituição serão aplicadas. Por exemplo, você pode substituir o valor padrão, de modo que o valor de substituição seja relatado como o valor da propriedade anexada nas instâncias da sua classe, sempre que a propriedade não é definida de outra forma.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A> propriedade não é relevante para propriedades anexadas.  
+  
+<a name="dp_add_owner"></a>   
+### <a name="adding-a-class-as-an-owner-of-an-existing-dependency-property"></a>Adicionando uma classe como um proprietário de uma propriedade de dependência existente  
+ Uma classe pode adicionar a mesmo como um proprietário de uma propriedade de dependência que já tinha sido registrado, usando o <xref:System.Windows.DependencyProperty.AddOwner%2A> método. Isso permite que a classe use uma propriedade de dependência que foi registrada originalmente para um tipo diferente. A classe adicionada, normalmente, não é uma classe derivada do tipo que registrou primeiro essa propriedade de dependência como proprietária. Na verdade, isso permite que sua classe e suas classes derivadas "herdem" uma implementação de propriedade de dependência sem que a classe proprietária original e a classe adicionada estejam na mesma hierarquia de classe verdadeira. Além disso, a classe adicionada (e também as classes derivadas) pode fornecer metadados específicos para o tipo da propriedade de dependência original.  
+  
+ Além de adicionar-se como proprietária por meio de métodos de utilitário do sistema de propriedades, a classe adicionada deve declarar membros públicos adicionais em si mesma para tornar a propriedade de dependência um participante completo do sistema de propriedades com exposição em código e marcação. Uma classe que adiciona uma propriedade de dependência existente tem as mesmas responsabilidades que expor o modelo de objeto para essa propriedade de dependência como uma classe que define uma nova propriedade de dependência personalizada. O primeiro membro a ser exposto é um campo identificador de propriedade de dependência. Este campo deve ser um `public static readonly` campo do tipo <xref:System.Windows.DependencyProperty>, que é atribuída para o valor de retorno de <xref:System.Windows.DependencyProperty.AddOwner%2A> chamar. O segundo membro a ser definido é a propriedade "wrapper" do [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. O wrapper torna muito mais conveniente manipular sua propriedade de dependência em código (você evita chamadas para <xref:System.Windows.DependencyObject.SetValue%2A> cada vez e pode fazer essa chamada somente uma vez no wrapper próprio). O wrapper é implementado igual seria implementado se você estivesse registrando uma propriedade de dependência personalizada. Para obter mais informações de como implementar uma propriedade de dependência, consulte [Propriedades de dependência personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) e [Adicionar um tipo de proprietário para uma propriedade de dependência](../../../../docs/framework/wpf/advanced/how-to-add-an-owner-type-for-a-dependency-property.md).  
+  
+#### <a name="addowner-and-attached-properties"></a>AddOwner e propriedades anexadas  
+ Você pode chamar <xref:System.Windows.DependencyProperty.AddOwner%2A> para uma propriedade de dependência que é definida como uma propriedade anexada pela classe do proprietário. Geralmente o motivo para isso é expor a propriedade anexada anteriormente como uma propriedade de dependência não anexada. Você irá expor o <xref:System.Windows.DependencyProperty.AddOwner%2A> retornar o valor como um `public static readonly` campo para uso como o identificador de propriedade de dependência e irá definir "wrapper" de propriedades apropriado para que a propriedade aparece na tabela de membros e dá suporte a uma propriedade não anexadas uso em sua classe.  
+  
+## <a name="see-also"></a>Consulte também  
+ <xref:System.Windows.PropertyMetadata>  
+ <xref:System.Windows.DependencyObject>  
+ <xref:System.Windows.DependencyProperty>  
+ <xref:System.Windows.DependencyProperty.GetMetadata%2A>  
+ [Visão geral das propriedades da dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [Metadados de propriedade de Framework](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)

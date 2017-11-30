@@ -1,11 +1,10 @@
 ---
-title: "Cláusula Group By (Visual Basic) | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Cláusula Group By (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.QueryGroupByInto
@@ -13,35 +12,19 @@ f1_keywords:
 - vb.QueryGroupRef
 - vb.QueryGroupInto
 - vb.QueryGroup
-dev_langs:
-- VB
 helpviewer_keywords:
 - queries [Visual Basic], Group By
-- Group By statement
-- Group By clause
+- Group By statement [Visual Basic]
+- Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a40074c4602d6c0164c784d497fbfb134402bf62
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b719bfa2ebe4c324acf82a03e215e481283845fe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="group-by-clause-visual-basic"></a>Cláusula Group By (Visual Basic)
 Agrupa os elementos de um resultado de consulta. Também pode ser usado para aplicar funções de agregação para cada grupo. A operação de agrupamento é baseada em uma ou mais chaves.  
@@ -57,11 +40,11 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 -   `listField1`, `listField2`  
   
-     Opcional. Um ou mais campos de variável de consulta ou variáveis que identificam explicitamente os campos a serem incluídos no resultado agrupado. Se nenhum campo for especificado, todos os campos de variável de consulta ou variáveis são incluídos no resultado agrupado.  
+     Opcional. Um ou mais campos de variável de consulta ou variáveis que identificam explicitamente os campos a serem incluídos no resultado agrupado. Se nenhum campo foi especificado, todos os campos de variável de consulta ou variáveis são incluídos no resultado agrupado.  
   
 -   `keyExp1`  
   
-     Necessário. Uma expressão que identifica a chave a ser usada para determinar os grupos de elementos. Você pode especificar mais de uma chave para especificar uma chave composta.  
+     Necessário. Uma expressão que identifica a chave a ser usado para determinar os grupos de elementos. Você pode especificar mais de uma chave para especificar uma chave composta.  
   
 -   `keyExp2`  
   
@@ -69,7 +52,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 -   `aggregateList`  
   
-     Necessário. Uma ou mais expressões que identificam como os grupos são agregados. Para identificar um nome de membro para os resultados agrupados, use o `Group` palavra-chave, que pode estar em qualquer uma das seguintes formas:  
+     Necessário. Uma ou mais expressões que identificam como os grupos são agregados. Para identificar um nome de membro para os resultados agrupados, use o `Group` palavra-chave, que pode ser qualquer um dos seguintes formulários:  
   
     ```  
     Into Group  
@@ -84,20 +67,20 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
      Você também pode incluir funções agregadas para aplicar ao grupo.  
   
 ## <a name="remarks"></a>Comentários  
- Você pode usar o `Group By` cláusula para dividir os resultados de uma consulta em grupos. O agrupamento se baseia em uma chave ou uma chave composta que consiste em várias chaves. Elementos que estão associados com valores de chave correspondentes são incluídos no mesmo grupo.  
+ Você pode usar o `Group By` cláusula para dividir os resultados de uma consulta em grupos. O agrupamento é baseado em uma chave ou uma chave composta que consiste em várias chaves. Elementos que estão associados com valores de chave correspondentes são incluídos no mesmo grupo.  
   
- Você usa o `aggregateList` parâmetro do `Into` cláusula e `Group` palavra-chave para identificar o nome do membro que é usado para fazer referência ao grupo. Você também pode incluir funções agregadas de `Into` cláusula para calcular valores para os elementos agrupados. Para obter uma lista de funções de agregação padrão, consulte [cláusula Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ Usar o `aggregateList` parâmetro o `Into` cláusula e o `Group` palavra-chave para identificar o nome do membro que é usado para fazer referência ao grupo. Você também pode incluir funções agregadas a `Into` cláusula para calcular valores para os elementos agrupados. Para obter uma lista de funções de agregação padrão, consulte [cláusula Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir agrupa uma lista de clientes com base em sua localização (país) e fornece uma contagem dos clientes em cada grupo. Os resultados são ordenados pelo nome de país. Os resultados agrupados são ordenados pelo nome da cidade.  
+ O exemplo de código a seguir agrupa uma lista de clientes com base em sua localização (país) e fornece uma contagem de clientes em cada grupo. Os resultados são ordenados pelo nome de país. Os resultados agrupados são ordenados pelo nome da cidade.  
   
- [!code-vb[VbSimpleQuerySamples n º&11;](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-by-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#11](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-by-clause_1.vb)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Introdução ao LINQ no Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Consultas](../../../visual-basic/language-reference/queries/queries.md)   
- [Cláusula Select](../../../visual-basic/language-reference/queries/select-clause.md)   
- [Cláusula FROM](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Cláusula Order By](../../../visual-basic/language-reference/queries/order-by-clause.md)   
- [Cláusula Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)   
+ [Introdução ao LINQ no Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [Consultas](../../../visual-basic/language-reference/queries/queries.md)  
+ [Cláusula Select](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [Cláusula From](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Cláusula Order By](../../../visual-basic/language-reference/queries/order-by-clause.md)  
+ [Cláusula Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
  [Cláusula Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)

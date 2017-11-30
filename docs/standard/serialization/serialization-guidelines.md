@@ -4,22 +4,21 @@ ms.date: 03/30/2017
 ms.prod: .net
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
+- csharp
+- vb
 helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: ff2b5bc2e34a061f577dd839de8b5e834af102b8
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: a09db57aab479b5b1a96dca8f4b37bc112e05810
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="serialization-guidelines"></a>Diretrizes de serialização
 Este documento lista as diretrizes a serem consideradas na criação de uma API a ser serializado.  
@@ -58,28 +57,32 @@ Este documento lista as diretrizes a serem consideradas na criação de uma API 
 #### <a name="supporting-data-contract-serialization"></a>Dando suporte à serialização do contrato de dados  
  Os tipos podem dar suporte à serialização do contrato de dados aplicando o <xref:System.Runtime.Serialization.DataContractAttribute> ao tipo e o <xref:System.Runtime.Serialization.DataMemberAttribute> aos membros (campos e propriedades) do tipo.  
   
- [!code-csharp[SerializationGuidelines#1](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#1)] [!code-vb[SerializationGuidelines#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#1)]  
+ [!code-csharp[SerializationGuidelines#1](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#1)]
+ [!code-vb[SerializationGuidelines#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#1)]  
   
 1.  CONSIDERE marcar os membros de dados do tipo público se o tipo puder ser usado na confiança parcial. Na confiança total, os serializadores do contrato de dados podem serializar e desserializar tipos e membros não públicos, mas somente os membros públicos podem ser serializados e desserializados na confiança parcial.  
   
 2.  IMPLEMENTE um getter e um setter em todas as propriedades que têm Data-MemberAttribute. Os serializadores do contrato de dados requerem o getter e o setter para o tipo a ser considerado serializável. Se o tipo não será usado na confiança parcial, um ou ambos os acessadores de propriedade poderão ser não públicos.  
   
-     [!code-csharp[SerializationGuidelines#2](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#2)]  [!code-vb[SerializationGuidelines#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#2)]  
+     [!code-csharp[SerializationGuidelines#2](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#2)]
+     [!code-vb[SerializationGuidelines#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#2)]  
   
 3.  CONSIDERE o uso de retornos de chamada de serialização para a inicialização de instâncias desserializadas.  
   
      Os construtores não são chamados quando os objetos são desserializados. Portanto, qualquer lógica que executada durante a construção normal precisa ser implementada como um dos *retornos de chamada de serialização*.  
   
-     [!code-csharp[SerializationGuidelines#3](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#3)]  [!code-vb[SerializationGuidelines#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#3)]  
+     [!code-csharp[SerializationGuidelines#3](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#3)]
+     [!code-vb[SerializationGuidelines#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#3)]  
   
      <xref:System.Runtime.Serialization.OnDeserializedAttribute> é o atributo de retorno de chamada mais usado. Os outros atributos da família são <xref:System.Runtime.Serialization.OnDeserializingAttribute>,    
     <xref:System.Runtime.Serialization.OnSerializingAttribute> e <xref:System.Runtime.Serialization.OnSerializedAttribute>. Eles podem ser usados para marcar os retornos de chamada que são executados antes de desserialização, antes da serialização e, por fim, após a serialização, respectivamente.  
   
-4.  CONSIDERE o uso do <xref:System.Runtime.Serialization.KnownTypeAttribute> para indicar os tipos concretos que devem ser usados ao desserializar um gráfico de objeto complexo.  
+4.  CONSIDERE o uso do <xref:System.Runtime.Serialization.KnownTypeAttribute> para indicar os tipos concretos que devem ser usados ao desserializar um grafo de objeto complexo.  
   
      Por exemplo, se o tipo de um membro de dados desserializado for representado por uma classe abstrata, o serializador precisará das informações de *tipo conhecido* para decidir qual tipo concreto será instanciado e atribuído ao membro. Se o tipo conhecido não for especificado por meio do atributo, ele precisará ser passado para o serializador explicitamente (você pode fazer isso passando os tipos conhecidos para o construtor do serializador) ou precisará ser especificado no arquivo de configuração.  
   
-     [!code-csharp[SerializationGuidelines#4](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#4)]  [!code-vb[SerializationGuidelines#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#4)]  
+     [!code-csharp[SerializationGuidelines#4](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#4)]
+     [!code-vb[SerializationGuidelines#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#4)]  
   
      Nos casos em que a lista de tipos conhecidos não é conhecida estaticamente (quando a classe **Person** é compilada), **KnownTypeAttribute** também pode apontar para um método que retorna uma lista de tipos conhecidos em tempo de execução.  
   
@@ -91,7 +94,8 @@ Este documento lista as diretrizes a serem consideradas na criação de uma API 
   
      A interface permite que o serializador assegure de que nenhum dado sejam perdido durante o ciclo completo. A propriedade <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> armazena todos os dados da versão futura do tipo desconhecido na versão atual. Quando a versão atual for serializada e desserializada subsequentemente em uma versão futura, os dados adicionais estarão disponíveis no fluxo serializado através do valor da propriedade **ExtensionData**.  
   
-     [!code-csharp[SerializationGuidelines#5](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#5)]  [!code-vb[SerializationGuidelines#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#5)]  
+     [!code-csharp[SerializationGuidelines#5](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#5)]
+     [!code-vb[SerializationGuidelines#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#5)]  
   
      Para obter mais informações, consulte [Contratos de dados compatíveis por encaminhamento](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
@@ -102,9 +106,10 @@ Este documento lista as diretrizes a serem consideradas na criação de uma API 
   
      Em outras palavras, não aplique atributos do namespace <xref:System.Runtime.Serialization> a novos tipos, a menos que você saiba que o tipo será usado com a Serialização XML. O exemplo a seguir mostra como **System.Xml.Serialization** pode ser usado para controlar a forma do XML gerado.  
   
-     [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]  [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
+     [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
+     [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
   
-2.  CONSIDERE implementar a interface <xref:System.Xml.Serialization.IXmlSerializable> se quiser ainda mais controle sobre o formato do XML serializado do que o que é oferecido aplicando os atributos de Serialização XML. Dois métodos da interface <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A>e <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> permitem que você controle totalmente o fluxo XML serializável. Você também pode controlar o esquema XML gerado para o tipo aplicando o atributo <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>.  
+2.  CONSIDERE implementar a interface <xref:System.Xml.Serialization.IXmlSerializable> se quiser ainda mais controle sobre o formato do XML serializado do que o que é oferecido aplicando os atributos de Serialização XML. Dois métodos de interface, <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> e <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>, permitem que você controle totalmente o fluxo XML serializado. Você também pode controlar o esquema XML gerado para o tipo aplicando o atributo <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>.  
   
 #### <a name="supporting-runtime-serialization"></a>Suporte à serialização em tempo de execução  
  A *serialização em tempo de execução* é uma tecnologia usada pelo .NET Remoting. Se você considerar que os tipos serão transportados por meio da comunicação remota .NET, será necessário verificar se eles oferecem suporte à serialização em tempo de execução.  
@@ -113,32 +118,36 @@ Este documento lista as diretrizes a serem consideradas na criação de uma API 
   
 1.  CONSIDERE o suporte à serialização em tempo de execução se os tipos forem usados com a comunicação remota .NET. Por exemplo, o namespace <xref:System.AddIn> usa a comunicação remota .NET e, portanto, todos os tipos trocados entre os suplementos **System.AddIn** precisam oferecer suporte à serialização em tempo de execução.  
   
-     [!code-csharp[SerializationGuidelines#7](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#7)]  [!code-vb[SerializationGuidelines#7](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#7)]  
+     [!code-csharp[SerializationGuidelines#7](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#7)]
+     [!code-vb[SerializationGuidelines#7](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#7)]  
   
 2.  CONSIDERE a implementação do *padrão serializável em tempo de execução* se quiser controle completo sobre o processo de serialização. Por exemplo, se você quiser transformar os dados à medida que eles forem serializados ou desserializados.  
   
      O padrão é muito simples. Tudo o que você precisa fazer é implementar a interface <xref:System.Runtime.Serialization.ISerializable> e fornecer um construtor especial que é usado quando o objeto é desserializado.  
   
-     [!code-csharp[SerializationGuidelines#8](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#8)]  [!code-vb[SerializationGuidelines#8](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#8)]  
+     [!code-csharp[SerializationGuidelines#8](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#8)]
+     [!code-vb[SerializationGuidelines#8](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#8)]  
   
 3.  PROTEJA o construtor de serialização e forneça dois parâmetros tipados e nomeados exatamente conforme mostrado no exemplo aqui.  
   
-     [!code-csharp[SerializationGuidelines#9](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#9)]  [!code-vb[SerializationGuidelines#9](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#9)]  
+     [!code-csharp[SerializationGuidelines#9](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#9)]
+     [!code-vb[SerializationGuidelines#9](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#9)]  
   
 4.  IMPLEMENTE os membros ISerializable explicitamente.  
   
-     [!code-csharp[SerializationGuidelines#10](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#10)]  [!code-vb[SerializationGuidelines#10](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#10)]  
+     [!code-csharp[SerializationGuidelines#10](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#10)]
+     [!code-vb[SerializationGuidelines#10](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#10)]  
   
 5.  Aplicar uma demanda de link para a implementação **ISerializable.GetObjectData**. Isso garantirá que o somente núcleo completamente confiável e o serializador em tempo de execução terão acesso ao membro.  
   
-     [!code-csharp[SerializationGuidelines#11](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#11)]  [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]  
+     [!code-csharp[SerializationGuidelines#11](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#11)]
+     [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Usando contratos de dados](../../../docs/framework/wcf/feature-details/using-data-contracts.md)   
- [Serializador de contrato de dados](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)   
- [Tipos com suporte pelo serializador de contrato de dados](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)   
- [Serialização Binária](binary-serialization.md)   
- [Objetos remotos](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)   
- [Serialização XML e SOAP](xml-and-soap-serialization.md)   
+ [Usando contratos de dados](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [Serializador de contrato de dados](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
+ [Tipos com suporte pelo serializador de contrato de dados](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
+ [Serialização binária](binary-serialization.md)  
+ [Objetos remotos](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
+ [Serialização XML e SOAP](xml-and-soap-serialization.md)  
  [Segurança e serialização](../../../docs/framework/misc/security-and-serialization.md)
-

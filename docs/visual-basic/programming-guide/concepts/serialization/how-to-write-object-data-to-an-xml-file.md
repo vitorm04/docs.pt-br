@@ -1,33 +1,25 @@
 ---
-title: 'Como: gravar dados de objeto para um arquivo XML (Visual Basic) | Documentos do Microsoft'
+title: 'Como: gravar dados de objeto para um arquivo XML (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 146ccb7b1999049106d5f0be1ce78e740dfcf060
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: df461f9b560dac45add0d7c82ff4938b0a7b1e62
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Como: gravar dados de objeto para um arquivo XML (Visual Basic)
-Teste de exemplo grava o objeto de uma classe para um arquivo XML usando a <xref:System.Xml.Serialization.XmlSerializer>classe.</xref:System.Xml.Serialization.XmlSerializer>  
+Este exemplo grava o objeto de uma classe para um arquivo XML usando a classe <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -60,18 +52,18 @@ End Module
 ## <a name="robust-programming"></a>Programação robusta  
  As seguintes condições podem causar uma exceção:  
   
--   A classe sendo serializada não tem um construtor público, sem parâmetro.  
+-   A classe que está sendo serializada não tem um construtor público sem parâmetros.  
   
--   O arquivo existe e é somente leitura (<xref:System.IO.IOException>).</xref:System.IO.IOException>  
+-   O arquivo existe e é somente leitura (<xref:System.IO.IOException>).  
   
--   O caminho é muito longo (<xref:System.IO.PathTooLongException>).</xref:System.IO.PathTooLongException>  
+-   O caminho é muito longo (<xref:System.IO.PathTooLongException>).  
   
--   O disco está cheio (<xref:System.IO.IOException>).</xref:System.IO.IOException>  
+-   O disco está cheio (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
- Este exemplo cria um novo arquivo, se o arquivo ainda não existir. Se um aplicativo precisar criar um arquivo, o aplicativo precisa `Create` acesso para a pasta. Se o arquivo já existir, o aplicativo precisa apenas `Write` acessar, um privilégio menor. Sempre que possível, é mais seguro criar o arquivo durante a implantação e somente conceder `Read` acesso a um único arquivo, em vez de `Create` acesso para uma pasta.  
+ Este exemplo cria um novo arquivo, se o arquivo ainda não existe. Se um aplicativo precisar criar um arquivo, ele precisará de acesso `Create` para a pasta. Se o arquivo já existe, o aplicativo precisa apenas de acesso `Write`, um privilégio menor. Sempre que possível, é mais seguro criar o arquivo durante a implantação e somente conceder acesso `Read` a um único arquivo, em vez de acesso `Create` a uma pasta.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.IO.StreamWriter></xref:System.IO.StreamWriter>   
- [Como: ler dados de objeto de um arquivo XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)   
+ <xref:System.IO.StreamWriter>  
+ [Como ler dados de objeto de um arquivo XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
  [Serialização (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)

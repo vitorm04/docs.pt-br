@@ -1,61 +1,43 @@
 ---
-title: "Como esta chamada não é aguardada, o método atual continua sendo executado antes da chamada é concluída | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Como esta chamada não é aguardada, o método atual continua sendo executado antes da chamada ser concluída"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc42358
 - vbc42358
-helpviewer_keywords:
-- BC42358
+helpviewer_keywords: BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a9165414bc08b62aab20410e7af187fa4b45c162
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a0d0a5e7c50bacc657a3f54a7f08036ede59cbfa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Como esta chamada não é aguardada, o método atual continua sendo executado antes da chamada ser concluída
 Como esta chamada não era esperada, a execução do método atual continua antes da chamada ser concluída. Considere a possibilidade de aplicar o operador 'Await' para o resultado da chamada.  
   
- O método atual chama um método async que retorna um <xref:System.Threading.Tasks.Task>ou um <xref:System.Threading.Tasks.Task%601>e não se aplica a [Await](../../../visual-basic/language-reference/operators/await-operator.md) operador para o resultado.</xref:System.Threading.Tasks.Task%601> </xref:System.Threading.Tasks.Task> A chamada para o método assíncrono inicia uma tarefa assíncrona. No entanto, porque nenhum `Await` operador é aplicado, o programa continua sem esperar que a tarefa seja concluída. Na maioria dos casos, esse comportamento não é esperado. Geralmente os outros aspectos do método de chamada dependem dos resultados da chamada ou, no mínimo, o método chamado é esperado para ser concluída antes de retornar do método que contém a chamada.  
+ O método atual chama um método assíncrono que retorna um <xref:System.Threading.Tasks.Task> ou um <xref:System.Threading.Tasks.Task%601> e não se aplica a [Await](../../../visual-basic/language-reference/operators/await-operator.md) operador para o resultado. A chamada ao método assíncrono inicia uma tarefa assíncrona. No entanto, como nenhum operador `Await` é aplicado, o programa continua sem esperar que a tarefa seja concluída. Na maioria dos casos, esse comportamento não é esperado. Geralmente, os outros aspectos do método de chamada dependem dos resultados da chamada ou, no mínimo, é esperado que o método chamado seja concluído antes de retornar do método que contém a chamada.  
   
- Igualmente importante é o que acontece com exceções que são geradas em um método assíncrono chamado. Uma exceção é acionada em um método que retorna um <xref:System.Threading.Tasks.Task>ou <xref:System.Threading.Tasks.Task%601>é armazenado na tarefa retornada.</xref:System.Threading.Tasks.Task%601> </xref:System.Threading.Tasks.Task> Se você não esperar a tarefa ou verificar explicitamente se há exceções, a exceção será perdida. Se você esperar a tarefa, sua exceção será emitida novamente.  
+ Igualmente importante é o que acontece com as exceções que são geradas no método assíncrono chamado. Uma exceção que é gerada em um método que retorna um <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601> é armazenado na tarefa retornada. Se você não aguardar a tarefa ou verificar explicitamente se há exceções, a exceção será perdida. Se você aguardar a tarefa, a exceção será relançada.  
   
- Como prática recomendada, você deve sempre espera a chamada.  
+ Como uma melhor prática, você sempre deve aguardar a chamada.  
   
- Por padrão, esta mensagem é um aviso. Para obter mais informações sobre como ocultar avisos ou tratar avisos como erros, consulte [Configurando avisos no Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Por padrão, esta mensagem é um aviso. Para obter mais informações sobre como ocultar avisos ou tratar avisos como erros, consulte [Configurando avisos no Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **ID do erro:** BC42358  
   
 ### <a name="to-address-this-warning"></a>Para resolver este aviso  
   
--   Você deve considerar suprimir o aviso somente se você tiver certeza de que você não deseja aguardar a chamada assíncrona seja concluída e que o método chamado não gera nenhuma exceção. Nesse caso, você pode suprimir o aviso atribuindo o resultado da tarefa da chamada para uma variável.  
+-   Considere suprimir o aviso somente se você tiver certeza de que não deseja aguardar que a chamada assíncrona seja concluída e que o método chamado não gerará nenhuma exceção. Nesse caso, você pode suprimir o aviso atribuindo o resultado da tarefa da chamada a uma variável.  
   
-     O exemplo a seguir mostra como fazer com que o aviso, como suprimir a ele e a espera a chamada.  
+     O exemplo a seguir mostra como causar o aviso, como suprimi-lo e como aguardar a chamada.  
   
     ```vb  
     Async Function CallingMethodAsync() As Task  
@@ -105,7 +87,7 @@ Como esta chamada não era esperada, a execução do método atual continua ante
     End Function  
     ```  
   
-     No exemplo, se você escolher chamar n º 1 ou chamar n º 2, o método assíncrono unawaited (`CalledMethodAsync`) é concluída após os dois seu chamador (`CallingMethodAsync`) e o chamador do chamador (`StartButton_Click`) forem concluídas. A última linha na saída a seguir mostra quando termina o método chamado. Entrada e saída do manipulador de eventos chama `CallingMethodAsync` no exemplo completo está marcado na saída.  
+     No exemplo, se você escolher a Chamada nº 1 ou Chamada nº 2, o método assíncrono não aguardado (`CalledMethodAsync`) será concluído após o chamador (`CallingMethodAsync`) e o chamador do chamador (`StartButton_Click`) serem concluídos. A última linha na saída a seguir mostra quando o método chamado termina. A entrada e a saída do manipulador de eventos que chama `CallingMethodAsync` no exemplo completo estão marcadas na saída.  
   
     ```  
     Entering the Click event handler.  
@@ -117,15 +99,15 @@ Como esta chamada não era esperada, a execução do método atual continua ante
     ```  
   
 ## <a name="example"></a>Exemplo  
- O seguinte aplicativo do Windows Presentation Foundation (WPF) contém os métodos do exemplo anterior. As etapas a seguir configuram o aplicativo.  
+ O seguinte aplicativo do WPF (Windows Presentation Foundation) contém os métodos do exemplo anterior. As etapas a seguir configuram o aplicativo.  
   
-1.  Criar um aplicativo WPF e nomeie-o `AsyncWarning`.  
+1.  Crie um aplicativo WPF e nomeie-o `AsyncWarning`.  
   
-2.  No código de Editor do Visual Studio, escolha o **MainWindow** guia.  
+2.  No Editor do Visual Studio Code, escolha a guia **MainWindow.xaml**.  
   
-     Se a guia não estiver visível, abra o menu de atalho de MainWindow. XAML no **Solution Explorer**e, em seguida, escolha **Exibir código**.  
+     Se a guia não estiver visível, abra o menu de atalho para MainWindow.xaml no **Gerenciador de Soluções** e, em seguida, escolha **Exibir Código**.  
   
-3.  Substitua o código no **XAML** exibição de MainWindow. XAML com o código a seguir.  
+3.  Substitua o código na exibição **XAML** de MainWindow.xaml pelo código a seguir.  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -139,9 +121,9 @@ Como esta chamada não era esperada, a execução do método atual continua ante
     </Window>  
     ```  
   
-     Uma janela simple que contém um botão e uma caixa de texto aparece no **Design** exibição de MainWindow. XAML.  
+     Uma janela simples, contendo um botão e uma caixa de texto, aparecerá no modo de exibição de **Design** de MainWindow.xaml.  
   
-     Para obter mais informações sobre o Designer XAML, consulte [criando uma interface do usuário usando o Designer XAML](https://docs.microsoft.com/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Para obter informações sobre como criar sua própria interface do usuário simple, consulte o "para criar um aplicativo WPF" e "para criar um simples MainWindow WPF" seções de [passo a passo: acessando a Web, usando Async e Await](http://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042).  
+     Para obter mais informações sobre o Designer XAML, consulte [Criando uma interface do usuário usando o Designer XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Para obter informações sobre como criar sua própria interface do usuário simples, consulte as seções "Para criar um aplicativo WPF" e "Para criar uma simples MainWindow do WPF" do [Passo a passo: acessando a Web usando async e await](http://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042).  
   
 4.  Substitua o código em MainWindow.xaml.vb com o código a seguir.  
   
@@ -223,11 +205,10 @@ Como esta chamada não era esperada, a execução do método atual continua ante
     ' Exiting the Click event handler.  
     ```  
   
-5.  Escolha a tecla F5 para executar o programa e, em seguida, escolha o **iniciar** botão.  
+5.  Escolha a tecla F5 para executar o programa e, em seguida, escolha o botão **Iniciar**.  
   
-     A saída esperada é exibido no final do código.  
+     A saída esperada será exibida no final do código.  
   
 ## <a name="see-also"></a>Consulte também  
- [Operador await](../../../visual-basic/language-reference/operators/await-operator.md)   
+ [Operador Await](../../../visual-basic/language-reference/operators/await-operator.md)  
  [Programação assíncrona com Async e Await](../../../visual-basic/programming-guide/concepts/async/index.md)
-
