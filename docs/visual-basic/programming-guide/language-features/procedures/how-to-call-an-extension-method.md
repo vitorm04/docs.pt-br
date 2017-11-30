@@ -1,47 +1,29 @@
 ---
-title: "Como: chamar um método de extensão (Visual Basic) | Documentos do Microsoft"
+title: "Como chamar um método de extensão (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- calling extension methods
+- calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a7faf0eb36fee114d5fed914484c7c5cda0ae399
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 25b5a86af15694e6f64f96a5d5d645a01f8f1f12
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>Como chamar um método de extensão (Visual Basic)
 Métodos de extensão permitem adicionar métodos a uma classe existente. Depois que um método de extensão é declarado e colocado no escopo, você pode chamá-lo como um método de instância do tipo que ele estende. Para obter mais informações sobre como escrever um método de extensão, consulte [como: gravar um método de extensão](./how-to-write-an-extension-method.md).  
   
- Consultem as instruções a seguir para o método de extensão `PrintAndPunctuate`, que exibirá a instância de cadeia de caracteres que o chama, seguido por qualquer valor que será enviada para o segundo parâmetro, `punc`.  
+ Consultem as instruções a seguir para o método de extensão `PrintAndPunctuate`, que exibirá a instância de cadeia de caracteres que o chama, seguido de qualquer valor que será enviada para o segundo parâmetro, `punc`.  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -56,30 +38,30 @@ Module StringExtensions
 End Module  
 ```  
   
- O método deve estar no escopo quando ele é chamado.  
+ O método deve ser no escopo quando ela é chamada.  
   
 ### <a name="to-call-an-extension-method"></a>Para chamar um método de extensão  
   
-1.  Declare uma variável que tem o tipo de dados do primeiro parâmetro do método de extensão. Para `PrintAndPunctuate`, é necessário um <xref:System.String>variável:</xref:System.String>  
+1.  Declare uma variável que tem o tipo de dados do primeiro parâmetro do método de extensão. Para `PrintAndPunctuate`, é necessário um <xref:System.String> variável:  
   
     ```  
     Dim example = "Ready"  
     ```  
   
-2.  Que variável invocará o método de extensão e seu valor é associado ao primeiro parâmetro, `aString`. Será exibida a seguinte instrução de chamada `Ready?`.  
+2.  Que a variável chamará o método de extensão, e seu valor é vinculado ao primeiro parâmetro, `aString`. Exibirá a seguinte instrução de chamada `Ready?`.  
   
     ```  
     example.PrintAndPunctuate("?")  
     ```  
   
-     Observe que a chamada para esse método de extensão é apenas uma chamada para qualquer um dos, como o <xref:System.String>métodos que exigem um parâmetro da instância:</xref:System.String>  
+     Observe que a chamada para esse método de extensão é apenas como uma chamada para qualquer uma da <xref:System.String> métodos que exigem um parâmetro da instância:  
   
     ```  
     example.EndsWith("dy")  
     example.IndexOf("R")  
     ```  
   
-3.  Declarar outra variável string e chame o método novamente para ver se ele funciona com qualquer cadeia de caracteres.  
+3.  Declarar a outra variável de cadeia de caracteres e chame o método novamente para ver se ele funciona com qualquer cadeia de caracteres.  
   
     ```  
     Dim example2 = " or not"  
@@ -89,7 +71,7 @@ End Module
      Dessa vez, o resultado é: `or not!!!`.  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir é um exemplo completo da criação e uso de um método de extensão simples.  
+ O código a seguir é um exemplo completo de criação e uso de um método de extensão simples.  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -121,7 +103,6 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: gravar um método de extensão](./how-to-write-an-extension-method.md)   
- [Métodos de extensão](./extension-methods.md)   
+ [Como escrever um método de extensão](./how-to-write-an-extension-method.md)  
+ [Métodos de Extensão](./extension-methods.md)  
  [Escopo no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-

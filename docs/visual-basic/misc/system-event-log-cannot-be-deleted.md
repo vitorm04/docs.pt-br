@@ -1,37 +1,21 @@
 ---
-title: "Log de eventos do sistema não pode ser excluído | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Não é possível excluir o log de eventos do sistema"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 ms.assetid: 26ca8819-4ce5-49c6-98f3-27fe9e2e8e3d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a3d5507aa20d453d8d8fc920a728d9617e82bf45
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 297931db9d0bbced79a009575abc52a5676ac72a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="system-event-log-cannot-be-deleted"></a>Log de eventos do sistema não pode ser excluído
-Foi feita uma tentativa para excluir o log de eventos do sistema, que não pode ser excluído. O log do sistema rastreia eventos do sistema, como falhas de hardware e inicialização do sistema.  
+# <a name="system-event-log-cannot-be-deleted"></a>Não é possível excluir o log de eventos do sistema
+Foi feita uma tentativa para excluir o log de eventos do sistema, que não pode ser excluído. O log do sistema rastreia eventos do sistema, como falhas de hardware e de inicialização do sistema.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
@@ -40,5 +24,5 @@ Foi feita uma tentativa para excluir o log de eventos do sistema, que não pode 
 -   Não tente excluir o log de eventos do sistema.  
   
 ## <a name="see-also"></a>Consulte também  
- [Administração de Logs de eventos](http://msdn.microsoft.com/en-us/35f53238-bdd2-417b-acd8-2fd9f7397f18)   
+ [Administração de Logs de eventos](http://msdn.microsoft.com/en-us/35f53238-bdd2-417b-acd8-2fd9f7397f18)  
  [Como: criar e remover os Logs de eventos personalizados](http://msdn.microsoft.com/en-us/af9b7da0-80c7-46ac-b7f7-897063ddd503)

@@ -1,40 +1,36 @@
 ---
-title: "Refatoração usando um método de extensão (Visual Basic) | Documentos do Microsoft"
+title: "Refatoração usando um método de extensão (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 83934292a57b5830cc6a3b002b61c6ad657d4eb7
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 3ac7ce4c6a40829582628907bd50321bdda29bb7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>Refatoração usando um método de extensão (Visual Basic)
-Este exemplo cria no exemplo anterior, [recuperando o texto dos parágrafos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), refatoração a concatenação de cadeias de caracteres usando uma função pura é implementada como um método de extensão.  
+Este exemplo é baseado no exemplo anterior, [recuperando o texto dos parágrafos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), pela concatenação de cadeias de caracteres usando uma função pura é implementada como um método de extensão de refatoração.  
   
- O exemplo anterior usado o <xref:System.Linq.Enumerable.Aggregate%2A>operador de consulta padrão para concatenar várias cadeias de caracteres em uma cadeia de caracteres.</xref:System.Linq.Enumerable.Aggregate%2A> No entanto, é mais conveniente escrever um método de extensão para fazer isso, porque a consulta resultante menor e mais simples.  
+ O exemplo anterior usa o operador padrão de consulta de <xref:System.Linq.Enumerable.Aggregate%2A> para concatenar várias cadeias de caracteres em uma cadeia de caracteres. No entanto, é mais conveniente escrever um método de extensão para fazer isso, porque a consulta resultante menor e mais simples.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo processa um documento de WordprocessingML, recuperando os parágrafos, o estilo de cada parágrafo, e o texto de cada parágrafo. Este exemplo cria nos exemplos anteriores neste tutorial.  
   
  O exemplo contém várias sobrecargas de método `StringConcatenate` .  
   
- Você pode encontrar instruções para criar o documento de origem para este exemplo em [criando o Office Open XML documento de origem (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Você pode encontrar instruções para criar o documento de origem para este exemplo no [criando o Office Open XML documento de origem (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- Este exemplo usa classes do assembly WindowsBase. Ele usa tipos no <xref:System.IO.Packaging?displayProperty=fullName>namespace.</xref:System.IO.Packaging?displayProperty=fullName>  
+ Este exemplo usa classes do assembly WindowsBase. Ele usa tipos no namespace <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```vb  
 <System.Runtime.CompilerServices.Extension()> _  
@@ -229,7 +225,7 @@ Module Module1
 End Module  
 ```  
   
- Este exemplo produz a seguinte saída quando aplicado ao documento descrito em [criando o Office Open XML documento de origem (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Este exemplo produz a seguinte saída quando aplicada ao documento descrito em [criando o Office Open XML documento de origem (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -257,5 +253,5 @@ StyleName:Code >Hello World<
 -   [Refatoração usando uma função pura (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
+ [Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
  [Refatoração em funções puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

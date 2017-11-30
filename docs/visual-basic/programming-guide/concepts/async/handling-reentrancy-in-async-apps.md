@@ -1,56 +1,47 @@
 ---
-title: "Tratando a reentrada em aplicativos assíncronos (Visual Basic) | Documentos do Microsoft"
+title: "Tratando a reentrada em aplicativos assíncronos (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 64a708e3b88f48ad30d3f3ad25141a31f3d8f73d
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 45dfc4dd4ab42c3ce8edd7e41b7b0401bb0db672
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Tratando a reentrada em aplicativos assíncronos (Visual Basic)
-Quando você inclui o código assíncrono em seu aplicativo, você deve considerar e possivelmente evitar reentrância, que se refere ao redigitando uma operação assíncrona, antes de ser concluído. Se você não identificar e lidar com possibilidades de reentrância, ele pode causar resultados inesperados.  
+Ao incluir código assíncrono em seu aplicativo, você deve considerar e, possivelmente, evitar a reentrância, que se refere à reinserção de uma operação assíncrona antes de ela ser concluída. Se você não identificar e tratar as possibilidades de reentrância, isso poderá causar resultados inesperados.  
   
  **Neste tópico**  
   
--   [Reconhecendo reentrada](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Reconhecendo a reentrância](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
--   [Tratando a reentrada](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Tratando a reentrância](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
     -   [Desabilitar o botão Iniciar](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
     -   [Cancelar e reiniciar a operação](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-    -   [Executar várias operações e a fila de saída](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [Executar várias operações e colocar a saída na fila](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
 -   [Examinar e executar o aplicativo de exemplo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
 > [!NOTE]
->  Para executar o exemplo, você deve ter o Visual Studio 2012 ou mais recente e o .NET Framework 4.5 ou posterior esteja instalado no computador.  
+>  Para executar o exemplo, você deve ter o Visual Studio 2012 ou mais recente e o .NET Framework 4.5 ou posterior instalados no seu computador.  
   
-##  <a name="BKMK_RecognizingReentrancy"></a>Reconhecendo reentrada  
- O exemplo neste tópico, os usuários escolhem um **iniciar** botão para iniciar um aplicativo assíncrono que baixa uma série de sites e calcula o número total de bytes baixados. Uma versão síncrona do exemplo responderia a mesma forma independentemente de quantas vezes um usuário escolhe o botão porque, após a primeira vez, o thread de interface do usuário ignora esses eventos até que o aplicativo é encerrado. Em um aplicativo assíncrono, no entanto, o thread de interface do usuário continua a responder e você pode digitar novamente a operação assíncrona antes de ser concluído.  
+##  <a name="BKMK_RecognizingReentrancy"></a> Reconhecendo a reentrância  
+ No exemplo deste tópico, os usuários escolhem um botão **Iniciar** para iniciar um aplicativo assíncrono que baixa uma série de sites e calcula o número total de bytes baixados. Uma versão síncrona do exemplo responderia da mesma forma, independentemente de quantas vezes um usuário escolhesse o botão porque, após a primeira vez, o thread da interface do usuário ignora esses eventos até que o aplicativo conclua a execução. Em um aplicativo assíncrono, no entanto, o thread da interface do usuário continua a responder e você pode reinserir a operação assíncrona antes que ele seja concluído.  
   
- O exemplo a seguir mostra a esperada de saída se o usuário escolhe o **iniciar** botão apenas uma vez. É exibida uma lista dos sites baixados com o tamanho, em bytes, de cada site. O número total de bytes é exibida no final.  
+ O exemplo a seguir mostra a saída esperada, caso o usuário escolha o botão **Iniciar** apenas uma vez. É exibida uma lista dos sites baixados com o tamanho, em bytes, de cada site. O número total de bytes é exibido no final.  
   
 ```  
 1. msdn.microsoft.com/library/hh191443.aspx                83732  
@@ -65,7 +56,7 @@ Quando você inclui o código assíncrono em seu aplicativo, você deve consider
 TOTAL bytes returned:  890591  
 ```  
   
- No entanto, se o usuário clica no botão de mais de uma vez, o manipulador de eventos é chamado repetidamente, e o processo de download é reinserido cada vez. Como resultado, várias operações assíncronas estão em execução ao mesmo tempo, a saída intercala os resultados e o número total de bytes é confuso.  
+ No entanto, se o usuário escolhe o botão mais de uma vez, o manipulador de eventos é invocado repetidamente e o processo de download é reinserido a cada vez. Como resultado, várias operações assíncronas estarão em execução ao mesmo tempo, a saída intercalará os resultados e o número total de bytes será confuso.  
   
 ```  
 1. msdn.microsoft.com/library/hh191443.aspx                83732  
@@ -102,27 +93,27 @@ TOTAL bytes returned:  890591
 TOTAL bytes returned:  890591  
 ```  
   
- Você pode examinar o código que produz esta saída navegado até o final deste tópico. Você pode experimentar o código baixando a solução em seu computador local e, em seguida, executando o projeto WebsiteDownload ou usando o código no final deste tópico para criar seu próprio projeto para obter mais informações e instruções, consulte [revisando e executar o aplicativo de exemplo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645).  
+ Você pode examinar o código que produz esta saída fazendo a rolagem até o final deste tópico. Você pode fazer experimentos com o código baixando a solução em seu computador local e, em seguida, executar o projeto WebsiteDownload ou usar o código no final deste tópico para criar seu próprio projeto. Para obter mais informações e instruções, consulte [Examinar e executar o aplicativo de exemplo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645).  
   
-##  <a name="BKMK_HandlingReentrancy"></a>Tratando a reentrada  
- Você pode manipular reentrância de várias maneiras, dependendo do que você deseja que seu aplicativo faça. Este tópico apresenta os exemplos a seguir:  
+##  <a name="BKMK_HandlingReentrancy"></a> Tratando a reentrância  
+ É possível tratar a reentrância de várias maneiras, dependendo do que você deseja que seu aplicativo faça. Este tópico apresenta os exemplos a seguir:  
   
 -   [Desabilitar o botão Iniciar](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-     Desabilitar o **iniciar** botão enquanto a operação está em execução para que o usuário não é possível interrompê-lo.  
+     Desabilitar o botão **Iniciar** enquanto a operação estiver em execução para que o usuário não possa interrompê-la.  
   
 -   [Cancelar e reiniciar a operação](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-     Cancelar qualquer operação que ainda está em execução quando o usuário escolhe o **iniciar** novamente e, em seguida, continuar a permitir que a operação solicitada mais recentemente.  
+     Cancelar qualquer operação que ainda estiver em execução quando o usuário escolher o botão **Iniciar** novamente e, em seguida, permitir que a operação solicitada mais recentemente continue.  
   
--   [Executar várias operações e a fila de saída](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Executar várias operações e colocar a saída na fila](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-     Permitir que todos os solicitados operações executadas de forma assíncrona, mas coordenar a exibição da saída de forma que os resultados de cada operação aparecem juntos e na ordem.  
+     Permitir que todas as operações solicitadas sejam executadas de forma assíncrona, mas coordenar a exibição da saída, de forma que os resultados de cada operação apareçam juntos e em ordem.  
   
-###  <a name="BKMK_DisableTheStartButton"></a>Desabilitar o botão Iniciar  
- Você pode bloquear o **iniciar** botão enquanto uma operação está em execução, desativando o botão na parte superior do `StartButton_Click` manipulador de eventos. Você pode reativar o botão de dentro um `Finally` bloquear quando a operação é concluída para que os usuários podem executar o aplicativo novamente.  
+###  <a name="BKMK_DisableTheStartButton"></a> Desabilitar o botão Iniciar  
+ Você pode bloquear o botão **Iniciar** enquanto uma operação estiver em execução, desabilitando o botão na parte superior do manipulador de eventos `StartButton_Click`. Você pode reativar o botão de dentro um bloco `Finally` quando a operação for concluída para que os usuários possam executar o aplicativo novamente.  
   
- O código a seguir mostra essas alterações, que são marcadas com asteriscos. Você pode adicionar as alterações ao código no final deste tópico, ou você pode baixar o aplicativo concluído de [Async exemplos: reentrada em aplicativos de área de trabalho do .NET](http://go.microsoft.com/fwlink/?LinkId=266571). O nome do projeto é DisableStartButton.  
+ O código a seguir mostra essas alterações, que estão marcadas com asteriscos. Você pode adicionar as alterações ao código no final deste tópico ou você pode baixar o aplicativo concluído em [Exemplos assíncronos: reentrância em aplicativos de área de trabalho do .NET](http://go.microsoft.com/fwlink/?LinkId=266571). O nome do projeto é DisableStartButton.  
   
 ```vb  
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -145,16 +136,16 @@ Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub  
 ```  
   
- Como resultado das alterações, o botão não responde enquanto `AccessTheWebAsync` está baixando os sites da Web, para que o processo não pode ser restabelecido.  
+ Como resultado das alterações, o botão não responderá enquanto `AccessTheWebAsync` estiver baixando os sites, para que o processo não possa ser reinserido.  
   
-###  <a name="BKMK_CancelAndRestart"></a>Cancelar e reiniciar a operação  
- Em vez de desativar o **iniciar** botão, você pode manter o botão ativa, mas, se o usuário escolher o botão novamente, cancele a operação que já está em execução e permitir que a operação iniciada mais recentemente continuar.  
+###  <a name="BKMK_CancelAndRestart"></a> Cancelar e reiniciar a operação  
+ Em vez de desabilitar o botão **Iniciar**, você pode manter o botão ativo, mas, se o usuário escolher esse botão novamente, cancele a operação que já está em execução e permita que a operação iniciada mais recentemente continue.  
   
  Para obter mais informações sobre cancelamento, consulte [ajuste seu aplicativo Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).  
   
- Para configurar esse cenário, faça as seguintes alterações para o código básico que é fornecido no [revisando e executar o aplicativo de exemplo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645). Você também pode baixar o aplicativo concluído de [Async exemplos: reentrada em aplicativos de área de trabalho do .NET](http://go.microsoft.com/fwlink/?LinkId=266571). O nome do projeto é CancelAndRestart.  
+ Para configurar esse cenário, faça as seguintes alterações no código básico que é fornecido em [Examinar e executar o aplicativo de exemplo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645). Você também pode baixar o aplicativo finalizado de [Exemplos assíncronos: reentrância em aplicativos de área de trabalho do .NET](http://go.microsoft.com/fwlink/?LinkId=266571). O nome do projeto é CancelAndRestart.  
   
-1.  Declarar uma <xref:System.Threading.CancellationTokenSource>variável, `cts`, que está no escopo para todos os métodos.</xref:System.Threading.CancellationTokenSource>  
+1.  Declare uma variável <xref:System.Threading.CancellationTokenSource>, `cts`, que está no escopo para todos os métodos.  
   
     ```vb  
     Class MainWindow // Or Class MainPage  
@@ -163,7 +154,7 @@ End Sub
         Dim cts As CancellationTokenSource  
     ```  
   
-2.  Em `StartButton_Click`, determinar se uma operação já está em andamento. Se o valor de `cts` é `Nothing`, nenhuma operação já está ativa. Se o valor não for `Nothing`, a operação já está em execução foi cancelada.  
+2.  Em `StartButton_Click`, determine se uma operação já está em andamento. Se o valor de `cts` é `Nothing`, nenhuma operação já está ativa. Se o valor não for `Nothing`, a operação que já está em execução foi cancelada.  
   
     ```vb  
     ' *** If a download process is already underway, cancel it.  
@@ -172,7 +163,7 @@ End Sub
     End If  
     ```  
   
-3.  Definir `cts` para um valor diferente que representa o processo atual.  
+3.  Defina `cts` para um valor diferente que represente o processo atual.  
   
     ```vb  
     ' *** Now set cts to cancel the current process if the button is chosen again.  
@@ -180,7 +171,7 @@ End Sub
     cts = newCTS  
     ```  
   
-4.  No final da `StartButton_Click`, o processo atual for concluído, então, defina o valor de `cts` para `Nothing`.  
+4.  No final da `StartButton_Click`, o processo atual for concluído, portanto, definir o valor de `cts` para `Nothing`.  
   
     ```vb  
     ' *** When the process completes, signal that another process can proceed.  
@@ -189,7 +180,7 @@ End Sub
     End If  
     ```  
   
- O código a seguir mostra todas as alterações na `StartButton_Click`. As adições são marcadas com asteriscos.  
+ O código a seguir mostra todas as alterações em `StartButton_Click`. As adições estão marcadas com asteriscos.  
   
 ```vb  
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -226,13 +217,13 @@ End Sub
   
  Em `AccessTheWebAsync`, faça as seguintes alterações.  
   
--   Adicionar um parâmetro para aceitar o token de cancelamento de `StartButton_Click`.  
+-   Adicione um parâmetro para aceitar o token de cancelamento de `StartButton_Click`.  
   
--   Use o <xref:System.Net.Http.HttpClient.GetAsync%2A>método para baixar os sites porque `GetAsync` aceita um <xref:System.Threading.CancellationToken>argumento.</xref:System.Threading.CancellationToken> </xref:System.Net.Http.HttpClient.GetAsync%2A>  
+-   Use o método <xref:System.Net.Http.HttpClient.GetAsync%2A> para baixar os sites porque `GetAsync` aceita um argumento <xref:System.Threading.CancellationToken>.  
   
--   Antes de chamar `DisplayResults` para exibir os resultados para cada site baixado, verifique `ct` para verificar que a operação atual não foi cancelada.  
+-   Antes de chamar `DisplayResults` para exibir os resultados para cada site baixado, verifique `ct` para ver se a operação atual não foi cancelada.  
   
- O código a seguir mostra essas alterações, que são marcadas com asteriscos.  
+ O código a seguir mostra essas alterações, que estão marcadas com asteriscos.  
   
 ```vb  
 ' *** Provide a parameter for the CancellationToken from StartButton_Click.  
@@ -272,7 +263,7 @@ Private Async Function AccessTheWebAsync(ct As CancellationToken) As Task
 End Function  
 ```  
   
- Se você escolher o **iniciar** botão várias vezes enquanto este aplicativo é executado, ele deve produzir resultados semelhantes a saída a seguir.  
+ Se você escolher o botão **Iniciar** várias vezes enquanto este aplicativo estiver em execução, ele deverá produzir resultados semelhantes à saída a seguir.  
   
 ```  
 1. msdn.microsoft.com/library/hh191443.aspx                83732  
@@ -300,16 +291,16 @@ Download canceled.
 TOTAL bytes returned:  890591  
 ```  
   
- Para eliminar as listas parciais, remova a primeira linha do código em `StartButton_Click` desmarcar a caixa de texto sempre que o usuário reinicia a operação.  
+ Para eliminar as listas parciais, remova a marca de comentário da primeira linha de código em `StartButton_Click`, para limpar a caixa de texto sempre que o usuário reiniciar a operação.  
   
-###  <a name="BKMK_RunMultipleOperations"></a>Executar várias operações e a fila de saída  
- Este exemplo terceiro é mais complicado que o aplicativo inicia outra operação assíncrona cada vez que o usuário escolhe o **iniciar** botão e todas as operações executadas até a conclusão. Todas as operações solicitadas baixar sites da lista de forma assíncrona, mas a saída das operações é apresentada em sequência. Ou seja, a atividade de download real é intercalada, como a saída em [reconhecendo reentrada](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) mostra, mas a lista de resultados para cada grupo é apresentado separadamente.  
+###  <a name="BKMK_RunMultipleOperations"></a> Executar várias operações e colocar a saída na fila  
+ Este terceiro exemplo é mais complicado pois o aplicativo iniciará outra operação assíncrona a cada vez que o usuário escolher o botão **Iniciar** e todas as operações serão executadas até a conclusão. Todas as operações solicitadas baixam sites da lista de maneira assíncrona, mas a saída das operações será apresentada sequencialmente. Ou seja, a atividade de download real é intercalada, conforme mostrado na saída em [Reconhecendo a reentrância](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), mas a lista de resultados para cada grupo é apresentada separadamente.  
   
- As operações de compartilham um global <xref:System.Threading.Tasks.Task>, `pendingWork`, que serve como um gatekeeper para o processo de exibição.</xref:System.Threading.Tasks.Task>  
+ As operações compartilham uma <xref:System.Threading.Tasks.Task> global, `pendingWork`, que serve como um gatekeeper para o processo de exibição.  
   
- Você pode executar esse exemplo, colando as alterações no código no [criando o aplicativo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), ou você pode seguir as instruções em [baixados do aplicativo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) para baixar o exemplo e execute o projeto QueueResults.  
+ Você pode executar esse exemplo, colando as alterações no código em [Compilando o aplicativo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) ou pode seguir as instruções em [Baixando o aplicativo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) para baixar o exemplo e executar o projeto QueueResults.  
   
- A saída a seguir mostra o resultado se o usuário escolhe o **iniciar** botão apenas uma vez. O rótulo de letra A, indica que o resultado é a primeira vez o **iniciar** botão for escolhido. Os números mostram a ordem das URLs na lista de destinos de download.  
+ A saída a seguir mostra o resultado, caso o usuário escolha o botão **Iniciar** apenas uma vez. O rótulo de letra A indica que o resultado é da primeira vez que o botão **Iniciar** foi escolhido. Os números mostram a ordem das URLs na lista de destinos de download.  
   
 ```  
 #Starting group A.  
@@ -329,7 +320,7 @@ TOTAL bytes returned:  918876
 #Group A is complete.  
 ```  
   
- Se o usuário escolhe o **iniciar** botão três vezes, o aplicativo produz uma saída semelhante das linhas a seguir. Inscreva-as linhas de informações que começam com um sustenido (#) rastrear o progresso do aplicativo.  
+ Se o usuário escolher o botão **Iniciar** três vezes, o aplicativo produzirá uma saída semelhante à das linhas a seguir. As linhas de informações que começam com um sinal de jogo da velha (#) rastreiam o progresso do aplicativo.  
   
 ```  
 #Starting group A.  
@@ -385,12 +376,12 @@ TOTAL bytes returned:  920526
 #Group C is complete.  
 ```  
   
- Grupos de B e C iniciado antes de um grupo é concluída, mas a saída para cada grupo será exibido separadamente. Toda a saída para um grupo aparece primeira, seguido por toda a saída para o grupo B e, em seguida, toda a saída para o grupo C. O aplicativo sempre exibe os grupos em ordem e, para cada grupo, sempre exibe as informações sobre os sites individuais na ordem em que as URLs aparecem na lista de URLs.  
+ Os grupos B e C iniciam antes da conclusão do grupo A, mas a saída para cada grupo é exibida separadamente. Toda a saída para o grupo A aparece em primeiro, seguida por toda a saída para o grupo B e, em seguida, toda a saída para o grupo C. O aplicativo sempre exibe os grupos em ordem e, para cada grupo, sempre exibe as informações sobre os sites individuais na ordem em que as URLs aparecem na lista de URLs.  
   
- No entanto, é possível prever a ordem na qual os downloads realmente acontecem. Depois que tiverem sido iniciados vários grupos, as tarefas de download que elas geram estão todos ativas. Você não pode presumir que-1 será baixado antes de B-1, e você não pode presumir que-1 será baixado antes de A-2.  
+ No entanto, não é possível prever a ordem na qual os downloads realmente acontecem. Depois que vários grupos tiverem sido iniciados, as tarefas de download que eles geram estarão todos ativas. Você não pode presumir que A-1 será baixado antes de B-1 e não pode presumir que A-1 será baixado antes de A-2.  
   
 #### <a name="global-definitions"></a>Definições Globais  
- O código de exemplo contém as seguintes declarações globais dois que são visíveis a partir de todos os métodos.  
+ O código de exemplo contém as duas declarações globais a seguir, que estão visíveis em todos os métodos.  
   
 ```vb  
 Class MainWindow    ' Class MainPage in Windows Store app.  
@@ -400,10 +391,10 @@ Class MainWindow    ' Class MainPage in Windows Store app.
     Private group As Char = ChrW(AscW("A") - 1)  
 ```  
   
- O `Task` variável, `pendingWork`, supervisiona o processo de exibição e impede que qualquer grupo de interromper a operação de exibição do outro grupo. A variável de caractere, `group`, rótulos a saída de grupos diferentes para verificar se os resultados aparecem na ordem esperada.  
+ A variável `Task`, `pendingWork`, supervisiona o processo de exibição e impede que qualquer grupo interrompa a operação de exibição do outro grupo. A variável de caractere, `group`, rotula a saída de grupos diferentes para verificar se os resultados aparecem na ordem esperada.  
   
-#### <a name="the-click-event-handler"></a>O manipulador de eventos de clique  
- O manipulador de eventos, `StartButton_Click`, a letra de grupo é incrementado toda vez que o usuário escolhe o **iniciar** botão. Em seguida, chama o manipulador `AccessTheWebAsync` para executar a operação de download.  
+#### <a name="the-click-event-handler"></a>O manipulador de eventos Click  
+ O manipulador de eventos `StartButton_Click`, incrementa a letra de grupo sempre que o usuário escolhe o botão **Iniciar**. Em seguida, o manipulador chama `AccessTheWebAsync` para executar a operação de download.  
   
 ```vb  
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -428,11 +419,11 @@ End Sub
 ```  
   
 #### <a name="the-accessthewebasync-method"></a>O método AccessTheWebAsync  
- Este exemplo divide `AccessTheWebAsync` em dois métodos. O primeiro método, `AccessTheWebAsync`, inicia todas as tarefas de download de um grupo e configura `pendingWork` para controlar o processo de exibição. O método usa uma consulta integrada à linguagem (consulta LINQ) e <xref:System.Linq.Enumerable.ToArray%2A>para iniciar todas as tarefas de download ao mesmo tempo.</xref:System.Linq.Enumerable.ToArray%2A>  
+ Este exemplo divide o `AccessTheWebAsync` em dois métodos. O primeiro método, `AccessTheWebAsync`, inicia todas as tarefas de download de um grupo e configura `pendingWork` para controlar o processo de exibição. O método usa uma LINQ (consulta integrada à linguagem) e um <xref:System.Linq.Enumerable.ToArray%2A> para iniciar todas as tarefas de download ao mesmo tempo.  
   
- `AccessTheWebAsync`em seguida, chama `FinishOneGroupAsync` para esperar pela conclusão de cada download e exibir seu comprimento.  
+ Em seguida, o `AccessTheWebAsync` chama `FinishOneGroupAsync` para aguardar a conclusão de cada download e exibir seu comprimento.  
   
- `FinishOneGroupAsync`Retorna uma tarefa que é atribuída a `pendingWork` em `AccessTheWebAsync`. Que valor impede a interrupção por outra operação antes que a tarefa seja concluída.  
+ O `FinishOneGroupAsync` retorna uma tarefa que é atribuída a `pendingWork` em `AccessTheWebAsync`. Esse valor impede a interrupção por outra operação antes que a tarefa seja concluída.  
   
 ```vb  
 Private Async Function AccessTheWebAsync(grp As Char) As Task(Of Char)  
@@ -462,9 +453,9 @@ End Function
 ```  
   
 #### <a name="the-finishonegroupasync-method"></a>O método FinishOneGroupAsync  
- Esse método percorre as tarefas de download em um grupo, aguardando a cada uma delas, exibindo o comprimento do site baixado e adicionando o comprimento para o total.  
+ Esse método percorre as tarefas de download em um grupo, aguardando cada uma delas, exibindo o comprimento do site baixado e adicionando o comprimento ao total.  
   
- A primeira instrução em `FinishOneGroupAsync` usa `pendingWork` para certificar-se de que inserindo o método não interfere com uma operação que já está no processo de exibição ou que já está aguardando. Se essa operação está em andamento, a operação de inserção deve esperar sua vez.  
+ A primeira instrução em `FinishOneGroupAsync` usa `pendingWork` para verificar se o método de inserção não interfere com uma operação que já está no processo de exibição ou que já está aguardando. Se houver uma operação dessas em andamento, a operação de inserção deverá esperar por sua vez.  
   
 ```vb  
 Private Async Function FinishOneGroupAsync(urls As List(Of String), contentTasks As Task(Of Byte())(), grp As Char) As Task  
@@ -491,14 +482,14 @@ Private Async Function FinishOneGroupAsync(urls As List(Of String), contentTasks
 End Function  
 ```  
   
- Você pode executar esse exemplo, colando as alterações no código no [criando o aplicativo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), ou você pode seguir as instruções em [baixados do aplicativo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) para baixar o exemplo e execute o projeto QueueResults.  
+ Você pode executar esse exemplo, colando as alterações no código em [Compilando o aplicativo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) ou pode seguir as instruções em [Baixando o aplicativo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) para baixar o exemplo e executar o projeto QueueResults.  
   
 #### <a name="points-of-interest"></a>Pontos de Interesse  
- As linhas de informações que começam com um sinal de libra (#) na saída esclarecem como este exemplo funciona.  
+ As linhas de informações que começam com um sinal de jogo da velha (#) na saída esclarecem o funcionamento deste exemplo.  
   
  A saída mostra os padrões a seguir.  
   
--   Um grupo pode ser iniciado enquanto um grupo anterior está exibindo a saída, mas a exibição da saída do grupo anterior não é interrompida.  
+-   Um grupo pode ser iniciado enquanto um grupo anterior estiver exibindo a saída, mas a exibição da saída do grupo anterior não será interrompida.  
   
     ```  
     #Starting group A.  
@@ -534,61 +525,61 @@ End Function
     TOTAL bytes returned:  915908  
     ```  
   
--   O `pendingWork` tarefa é `Nothing` no início de `FinishOneGroupAsync` apenas para um grupo, que foi iniciado primeiro. Um grupo ainda não tiver concluído uma expressão await quando ele atinge `FinishOneGroupAsync`. Portanto, o controle não foi retornado ao `AccessTheWebAsync`e a primeira atribuição para `pendingWork` não ocorreu.  
+-   O `pendingWork` tarefa é `Nothing` no início de `FinishOneGroupAsync` apenas para um grupo, que foi iniciado primeiro. O grupo A ainda não concluiu uma expressão await quando alcança o `FinishOneGroupAsync`. Portanto, o controle não foi retornado ao `AccessTheWebAsync` e a primeira atribuição para `pendingWork` não ocorreu.  
   
--   As duas linhas a seguir sempre aparecem juntos na saída. O código nunca é interrompido entre iniciando a operação de um grupo `StartButton_Click` e atribuir uma tarefa para o grupo de `pendingWork`.  
+-   As duas linhas a seguir sempre aparecem juntas na saída. O código nunca é interrompido entre o início de uma operação de um grupo em `StartButton_Click` e a atribuição de uma tarefa para o grupo para `pendingWork`.  
   
     ```  
     #Starting group B.  
     #Task assigned for group B. Download tasks are active.  
     ```  
   
-     Depois de insere um grupo de `StartButton_Click`, a operação não conclui uma expressão await, até que a operação entre `FinishOneGroupAsync`. Portanto, nenhuma outra operação pode obter controle durante esse segmento de código.  
+     Depois que um grupo insere o `StartButton_Click`, a operação não conclui uma expressão await até que a operação insira `FinishOneGroupAsync`. Portanto, nenhuma outra operação pode obter controle durante esse segmento de código.  
   
-##  <a name="BKMD_SettingUpTheExample"></a>Examinar e executar o aplicativo de exemplo  
- Para entender melhor o aplicativo de exemplo, você pode baixá-lo, compilá-lo ou examinar o código no final deste tópico sem implementar o aplicativo.  
+##  <a name="BKMD_SettingUpTheExample"></a> Examinar e executar o aplicativo de exemplo  
+ Para entender melhor o aplicativo de exemplo, você pode baixá-lo, compilá-lo ou examinar o código ao final deste tópico sem implementar o aplicativo.  
   
 > [!NOTE]
->  Para executar o exemplo como um aplicativo de desktop do Windows Presentation Foundation (WPF), você deve ter o Visual Studio 2012 ou mais recente e o .NET Framework 4.5 ou posterior esteja instalado no computador.  
+>  Para executar o exemplo como um aplicativo da área de trabalho do WPF (Windows Presentation Foundation), você deve ter o Visual Studio 2012 ou mais recente e o .NET Framework 4.5 ou posterior instalados no seu computador.  
   
-###  <a name="BKMK_DownloadingTheApp"></a>Baixar o aplicativo  
+###  <a name="BKMK_DownloadingTheApp"></a> Baixar o aplicativo  
   
-1.  Baixe o arquivo compactado em [Async exemplos: reentrada em aplicativos de área de trabalho do .NET](http://go.microsoft.com/fwlink/?LinkId=266571).  
+1.  Baixe o aplicativo compactado em [Exemplos assíncronos: reentrância em aplicativos de área de trabalho do .NET](http://go.microsoft.com/fwlink/?LinkId=266571).  
   
 2.  Descompacte o arquivo baixado e, em seguida, inicie o Visual Studio.  
   
-3.  Na barra de menus, escolha **arquivo**, **abrir**, **projeto/solução**.  
+3.  Na barra de menus, escolha **Arquivo**, **Abrir**, **Projeto/Solução**.  
   
-4.  Navegue até a pasta que contém o código de exemplo descompactado e, em seguida, abra o arquivo de solução (. sln).  
+4.  Navegue até a pasta que contém o código de exemplo descompactado e, em seguida, abra o arquivo de solução (.sln).  
   
-5.  Em **Solution Explorer**, abra o menu de atalho para o projeto que você deseja executar e, em seguida, escolha **definida como StartUpProject**.  
+5.  No **Gerenciador de Soluções**, abra o menu de atalho do projeto que você deseja executar e, em seguida, escolha **Definir como Projeto de Inicialização**.  
   
-6.  Escolha as teclas CTRL + F5 para compilar e executar o projeto.  
+6.  Escolha as teclas CTRL+F5 para compilar e executar o projeto.  
   
-###  <a name="BKMK_BuildingTheApp"></a>Criando o aplicativo  
- A seção a seguir fornece o código para criar o exemplo como um aplicativo WPF.  
+###  <a name="BKMK_BuildingTheApp"></a> Compilando o aplicativo  
+ A seção a seguir fornece o código para compilar o exemplo como um aplicativo do WPF.  
   
-##### <a name="to-build-a-wpf-app"></a>Para criar um aplicativo WPF  
+##### <a name="to-build-a-wpf-app"></a>Para compilar um aplicativo do WPF  
   
 1.  Inicie o Visual Studio.  
   
 2.  Na barra de menus, escolha **Arquivo**, **Novo**, **Projeto**.  
   
-     O **novo projeto** caixa de diálogo é aberta.  
+     A caixa de diálogo **Novo Projeto** é aberta.  
   
 3.  No **modelos instalados** painel, expanda **Visual Basic**e, em seguida, expanda **Windows**.  
   
-4.  Na lista de tipos de projeto, escolha **aplicativo WPF**.  
+4.  Na lista de tipos de projeto, escolha **Aplicativo WPF**.  
   
-5.  Nomeie o projeto `WebsiteDownloadWPF`e, em seguida, escolha o **Okey** botão.  
+5.  Nomeie o projeto como `WebsiteDownloadWPF` e escolha o botão **OK**.  
   
-     O novo projeto aparece na **Solution Explorer**.  
+     O novo projeto aparece no **Gerenciador de Soluções**.  
   
-6.  No código de Editor do Visual Studio, escolha o **MainWindow** guia.  
+6.  No Editor do Visual Studio Code, escolha a guia **MainWindow.xaml**.  
   
-     Se a guia não estiver visível, abra o menu de atalho de MainWindow. XAML no **Solution Explorer**e, em seguida, escolha **Exibir código**.  
+     Se a guia não estiver visível, abra o menu de atalho para MainWindow.xaml no **Gerenciador de Soluções** e, em seguida, escolha **Exibir Código**.  
   
-7.  No **XAML** exibir de MainWindow. XAML, substitua o código pelo código a seguir.  
+7.  Na exibição **XAML** de MainWindow.xaml, substitua o código pelo código a seguir.  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -606,13 +597,13 @@ End Function
     </Window>  
     ```  
   
-     Uma janela simple que contém uma caixa de texto e um botão aparece no **Design** exibição de MainWindow. XAML.  
+     Uma janela simples, contendo uma caixa de texto e um botão, aparecerá no modo de exibição de **Design** de MainWindow.xaml.  
   
-8.  Adicione uma referência para <xref:System.Net.Http>.</xref:System.Net.Http>  
+8.  Adicione uma referência para <xref:System.Net.Http>.  
   
 9. Em **Solution Explorer**, abra o menu de atalho para MainWindow.xaml.vb e, em seguida, escolha **Exibir código**.  
   
-10. Em MainWindow.xaml.vb, substitua o código com o código a seguir.  
+10. No MainWindow.xaml.vb, substitua o código com o código a seguir.  
   
     ```vb  
     ' Add the following Imports statements, and add a reference for System.Net.Http.  
@@ -690,11 +681,10 @@ End Function
     End Class  
     ```  
   
-11. Escolha as teclas CTRL + F5 para executar o programa e, em seguida, escolha o **iniciar** botão várias vezes.  
+11. Escolha a tecla CTRL+F5 para executar o programa e, em seguida, escolha o botão **Iniciar** várias vezes.  
   
-12. Faça as alterações de [desabilitar o botão Iniciar](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), [Cancelar e reiniciar a operação](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), ou [executar várias operações e a fila de saída](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) para lidar com a reentrância.  
+12. Faça as alterações de [Desabilitar o botão Iniciar](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), [Cancelar e reiniciar a operação](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) ou [Executar várias operações e colocar a saída em fila](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) para tratar a reentrância.  
   
 ## <a name="see-also"></a>Consulte também  
- [Passo a passo: Acessando a Web usando o Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+ [Instruções passo a passo: acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  [Programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-

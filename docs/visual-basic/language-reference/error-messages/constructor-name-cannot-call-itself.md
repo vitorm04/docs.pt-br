@@ -1,47 +1,29 @@
 ---
-title: "Construtor &quot;&lt;nome&gt;&quot; não pode chamar a mesmo | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Construtor &#39; &lt;nome&gt;&#39; não é possível chamar a mesmo"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc30298
 - vbc30298
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC30298
+helpviewer_keywords: BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ff25354e49bb276bf5e48e7d6ee3b7f5a834ea8d
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2361d6f4d710e17a4f4e29ac03bfde523191fa83
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="constructor-39ltnamegt39-cannot-call-itself"></a>Construtor '&lt;nome&gt;' não pode chamar a mesmo
+# <a name="constructor-39ltnamegt39-cannot-call-itself"></a>Construtor &#39; &lt;nome&gt;&#39; não é possível chamar a mesmo
 Um `Sub New` procedimento em uma classe ou estrutura chama a mesmo.  
   
- A finalidade de um construtor é inicializar uma instância de uma classe ou estrutura quando ela é primeiro criado. Uma classe ou estrutura pode ter vários construtores, desde que todos eles têm diferentes listas de parâmetros. Um construtor pode chamar outro construtor para executar sua funcionalidade além de seu próprio. Mas não faz sentido um construtor chamar a próprio e, de fato resultaria em recursão infinita se permitido.  
+ A finalidade de um construtor é inicializar uma instância de uma classe ou estrutura quando ele é o primeiro criado. Uma classe ou estrutura pode ter vários construtores, contanto que todos tenham listas de parâmetros diferentes. Um construtor pode chamar outro construtor para executar sua funcionalidade além de seu próprio. Mas não faz sentido um construtor chamar a mesmo e de fato resultaria em recursão infinita se permitido.  
   
  **ID do erro:** BC30298  
   

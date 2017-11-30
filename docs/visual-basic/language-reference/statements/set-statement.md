@@ -1,49 +1,30 @@
 ---
-title: "Instrução Set (Visual Basic) | Documentos do Microsoft"
-ms.date: 2015-07-20
+title: "Instrução Set (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.Set
-dev_langs:
-- VB
+f1_keywords: vb.Set
 helpviewer_keywords:
-- property procedures, Set statements
-- Set statement
-- Set statement, syntax
+- property procedures [Visual Basic], Set statements
+- Set statement [Visual Basic]
+- Set statement [Visual Basic], syntax
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3a2e21b5edde8c889ff8f3250898fcfa5ddfacbf
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 3b18e6c858e64e78d7ab85fdaafd70e510f7a02f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-statement-visual-basic"></a>Instrução Set (Visual Basic)
-Declara um `Set` usado para atribuir um valor a uma propriedade do procedimento de propriedade.  
+Declara uma `Set` procedimento de propriedade usado para atribuir um valor a uma propriedade.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,10 +36,10 @@ End Set
   
 ## <a name="parts"></a>Partes  
  `attributelist`  
- Opcional. Consulte [lista atributo](../../../visual-basic/language-reference/statements/attribute-list.md).  
+ Opcional. Consulte [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
  `accessmodifier`  
- Opcional, no máximo uma do `Get` e `Set` instruções nessa propriedade. Pode ser uma das seguintes opções:  
+ Opcional no máximo uma da `Get` e `Set` instruções nesta propriedade. Pode ser um dos seguintes:  
   
 -   [Protegido](../../../visual-basic/language-reference/modifiers/protected.md)  
   
@@ -71,33 +52,33 @@ End Set
  Consulte [acessar níveis no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  `value`  
- Necessário. Parâmetro contendo o novo valor para a propriedade.  
+ Necessário. Parâmetro que contém o novo valor da propriedade.  
   
  `datatype`  
  Necessário se `Option Strict` é `On`. Tipo de dados a `value` parâmetro. O tipo de dados especificado deve ser o mesmo que o tipo de dados da propriedade onde isso `Set` instrução é declarada.  
   
  `statements`  
- Opcional. Uma ou mais declarações que executam quando o `Set` procedimento de propriedade é chamado.  
+ Opcional. Uma ou mais instruções que são executados quando o `Set` é chamado de procedimento de propriedade.  
   
  `End Set`  
- Necessário. Finaliza a definição de `Set` procedimento de propriedade.  
+ Necessário. Finaliza a definição do `Set` procedimento de propriedade.  
   
 ## <a name="remarks"></a>Comentários  
  Cada propriedade deve ter uma `Set` procedimento de propriedade, a menos que a propriedade é marcada como `ReadOnly`. O `Set` procedimento é usado para definir o valor da propriedade.  
   
  Visual Basic chama automaticamente uma propriedade `Set` procedimento quando uma instrução de atribuição fornece um valor a ser armazenado na propriedade.  
   
- Visual Basic passa um parâmetro para o `Set` procedimento durante atribuições de propriedade. Se você não fornecer um parâmetro para `Set`, o ambiente de desenvolvimento integrado (IDE) usa uma parâmetro implícito chamada `value`. O parâmetro armazena o valor a ser atribuído à propriedade. Você geralmente armazena esse valor em uma variável local privada e retorná-lo sempre que o `Get` procedimento é chamado.  
+ Visual Basic passa um parâmetro para o `Set` procedimento durante atribuições de propriedade. Se você não fornecer um parâmetro para `Set`, o ambiente de desenvolvimento integrado (IDE) usa uma parâmetro implícito denominada `value`. O parâmetro armazena o valor a ser atribuído à propriedade. Você normalmente armazena esse valor em uma variável local privada e retorná-lo sempre que o `Get` procedimento é chamado.  
   
- O corpo da declaração de propriedade pode conter somente da propriedade `Get` e `Set` procedimentos entre o [declaração de propriedade](../../../visual-basic/language-reference/statements/property-statement.md) e `End Property` instrução. Não é possível armazenar nada além desses procedimentos. Em particular, não é possível armazenar o valor da propriedade atual. Você deve armazenar esse valor fora da propriedade, porque se você armazená-lo em qualquer um dos procedimentos de propriedade, o outro procedimento de propriedade não pode acessá-lo. A abordagem usual é armazenar o valor em uma [particular](../../../visual-basic/language-reference/modifiers/private.md) variável declarada no mesmo nível da propriedade. Você deve definir uma `Set` procedimento dentro da propriedade à qual se aplica.  
+ O corpo da declaração de propriedade pode conter apenas da propriedade `Get` e `Set` procedimentos entre o [declaração de propriedade](../../../visual-basic/language-reference/statements/property-statement.md) e `End Property` instrução. Não é possível armazenar nada além desses procedimentos. Em particular, não é possível armazenar o valor da propriedade atual. Você deve armazenar esse valor fora da propriedade, porque se você armazená-lo em qualquer um dos procedimentos de propriedade, o outro procedimento de propriedade não é possível acessá-lo. A abordagem comum é para armazenar o valor em uma [privada](../../../visual-basic/language-reference/modifiers/private.md) variável declarada no mesmo nível como a propriedade. Você deve definir um `Set` procedimento dentro da propriedade à qual se aplica.  
   
- O `Set` procedimento assume como padrão o nível de acesso da propriedade que contém a menos que você use `accessmodifier` no `Set` instrução.  
+ O `Set` procedimento padrão é o nível de acesso da propriedade que o contém, a menos que você use `accessmodifier` no `Set` instrução.  
   
 ## <a name="rules"></a>Regras  
   
--   **Níveis de acesso mistos.** Se você estiver definindo uma propriedade de leitura / gravação, você pode opcionalmente especificar um nível de acesso diferente para o `Get` ou `Set` procedimento, mas não ambos. Se você fizer isso, o nível de acesso do procedimento deve ser mais restritivo do que o nível de acesso da propriedade. Por exemplo, se a propriedade é declarada `Friend`, você pode declarar o `Set` procedimento `Private`, mas não `Public`.  
+-   **Níveis de acesso mistos.** Se você estiver definindo uma propriedade de leitura / gravação, você pode especificar opcionalmente um nível de acesso diferentes para cada uma a `Get` ou `Set` procedimento, mas não ambos. Se você fizer isso, o nível de acesso do procedimento deve ser mais restritivo do que o nível de acesso da propriedade. Por exemplo, se a propriedade é declarada `Friend`, você pode declarar o `Set` procedimento `Private`, mas não `Public`.  
   
-     Se você estiver definindo um `WriteOnly` propriedade, o `Set` procedimento representa toda a propriedade. Você não pode declarar um acesso a diferentes níveis de `Set`, pois isso configuraria dois níveis de acesso para a propriedade.  
+     Se você estiver definindo um `WriteOnly` propriedade, o `Set` procedimento representa a propriedade de inteira. Você não pode declarar um acesso a diferentes níveis de `Set`, pois isso configuraria dois níveis de acesso para a propriedade.  
   
 ## <a name="behavior"></a>Comportamento  
   
@@ -110,11 +91,10 @@ End Set
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa o `Set` para definir o valor de uma propriedade.  
   
- [!code-vb[VbVbalrStatements&#55;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/set-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#55](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/set-statement_1.vb)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Instrução Get](../../../visual-basic/language-reference/statements/get-statement.md)   
- [Instrução Property](../../../visual-basic/language-reference/statements/property-statement.md)   
- [Instrução sub](../../../visual-basic/language-reference/statements/sub-statement.md)   
+ [Instrução Get](../../../visual-basic/language-reference/statements/get-statement.md)  
+ [Instrução Property](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Instrução Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
  [Procedimentos de Propriedade](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
-

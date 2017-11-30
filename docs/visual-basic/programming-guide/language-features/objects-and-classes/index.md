@@ -1,42 +1,24 @@
 ---
 title: Objetos e classes no Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b71219fff8354497f34930232952262008f6cc78
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: be5e0156b4cacc39e1613e06fe3c138838b02700
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objetos e classes no Visual Basic
 Um *objeto* é uma combinação de código e dados que podem ser tratados como uma unidade. Um objeto pode ser uma parte de um aplicativo, como um controle ou um formulário. Todo o aplicativo também pode ser um objeto.
@@ -281,4 +263,3 @@ Um tipo específico de confinamento de objeto é representado pelas *coleções*
 
  [Como inferir nomes e tipos de propriedade na declaração de tipo anônimo](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
  Explica como inferir nomes e tipos de propriedade em declarações de tipo anônimo. Fornece exemplos de inferência de tipos com e sem êxito.
-

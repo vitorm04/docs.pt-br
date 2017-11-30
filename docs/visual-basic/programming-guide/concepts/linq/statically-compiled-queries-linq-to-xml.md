@@ -1,30 +1,25 @@
 ---
-title: Compilado estaticamente consultas (LINQ to XML) (Visual Basic) | Documentos do Microsoft
+title: Estaticamente compiladas consultas (LINQ to XML) (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 3f4825c7-c3b0-48da-ba4e-8e97fb2a2f34
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2ea8e71acf861b93a21296c74254b3ca4d977d0a
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: d74cdb0ef089d59f8c0f6e9ef6656a1d06857633
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>Compilado estaticamente consultas (LINQ to XML) (Visual Basic)
-Um desempenho mais importante beneficia LINQ to XML, em vez de <xref:System.Xml.XmlDocument>, é que consultas no LINQ to XML são compiladas estaticamente, enquanto as consultas XPath devem ser interpretadas em tempo de execução.</xref:System.Xml.XmlDocument> Esse recurso é interna a LINQ to XML, portanto você não precisa executar etapas adicionais para aproveitá-lo, mas é útil entender a diferença ao escolher entre as duas tecnologias. Este tópico explica a diferença.  
+# <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>Estaticamente compiladas consultas (LINQ to XML) (Visual Basic)
+Um de desempenho mais importante beneficia LINQ to XML, diferentemente de <xref:System.Xml.XmlDocument>, é que as consultas em LINQ to XML são compiladas estaticamente, enquanto as consultas XPath devem ser interpretado em tempo de execução. Esse recurso é interna a LINQ to XML, portanto você não precisa executar etapas adicionais para aproveitá-lo, mas é útil entender a diferença ao escolher entre as duas tecnologias. Este tópico explica a diferença.  
   
 ## <a name="statically-compiled-queries-vs-xpath"></a>Consultas estaticamente compilado contra. XPath  
  O exemplo a seguir mostra como obter os elementos descendentes com um nome especificado e, com um atributo com um valor especificado.  
@@ -58,7 +53,7 @@ For Each el In list1
 Next   
 ```  
   
- O <xref:System.Linq.Enumerable.Where%2A>método é um método de extensão.</xref:System.Linq.Enumerable.Where%2A> Para obter mais informações, consulte [métodos de extensão](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md). Porque <xref:System.Linq.Enumerable.Where%2A>é um método de extensão, a consulta acima é compilada como se tivesse sido feita da seguinte maneira:</xref:System.Linq.Enumerable.Where%2A>  
+ O método de <xref:System.Linq.Enumerable.Where%2A> é um método de extensão. Para obter mais informações, consulte [Métodos de extensão](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md). Porque <xref:System.Linq.Enumerable.Where%2A> é um método de extensão, a consulta anterior é criada como se ele foi gravado como segue:  
   
 ```vb  
 Dim po = XDocument.Load("PurchaseOrders.xml")  
@@ -76,7 +71,7 @@ Next
 >  Esses exemplos são representante de código que o compilador pode escrever. A implementação real pode diferir um pouco desses exemplos, mas o desempenho será o mesmo ou semelhante a esses exemplos.  
   
 ## <a name="executing-xpath-expressions-with-xmldocument"></a>Executando com expressões XPath XmlDocument  
- O exemplo a seguir usa <xref:System.Xml.XmlDocument>para alcançar os mesmos resultados que os exemplos anteriores:</xref:System.Xml.XmlDocument>  
+ O exemplo a seguir usa <xref:System.Xml.XmlDocument> para executar os mesmos resultados que os exemplos anteriores:  
   
 ```vb  
 Dim reader = Xml.XmlReader.Create("PurchaseOrders.xml")  
@@ -89,9 +84,9 @@ Next
 reader.Close()  
 ```  
   
- Esta consulta retorna o mesmo resultado que os exemplos que usam LINQ para XML; a única diferença é que o LINQ to XML recua XML impresso, enquanto <xref:System.Xml.XmlDocument>não.</xref:System.Xml.XmlDocument>  
+ Esta consulta retorna as mesmas saída que os exemplos que usam LINQ to XML; a única diferença é que LINQ to XML recua XML impresso, enquanto <xref:System.Xml.XmlDocument> não.  
   
- No entanto, o <xref:System.Xml.XmlDocument>abordagem geralmente não executam bem como o LINQ to XML, porque o <xref:System.Xml.XmlNode.SelectNodes%2A>método deve fazer o seguinte internamente toda vez que ele é chamado:</xref:System.Xml.XmlNode.SelectNodes%2A> </xref:System.Xml.XmlDocument>  
+ No entanto, a abordagem de <xref:System.Xml.XmlDocument> geralmente não executa bem como LINQ to XML, porque o método de <xref:System.Xml.XmlNode.SelectNodes%2A> deve fazer o seguinte internamente todas as vezes nele é chamado:  
   
 -   Analisa a cadeia de caracteres que contém a expressão XPath, quebrando a cadeia de caracteres em tokens.  
   
@@ -101,8 +96,7 @@ reader.Close()
   
 -   Itera através de nós, selecionando adequadamente os nós para o conjunto de resultados com base na avaliação da expressão.  
   
- Este é significativamente mais do que o trabalho feito pela consulta correspondente LINQ to XML. A diferença de desempenho específico variam para diferentes tipos de consultas, mas em geral menos trabalho consultas LINQ to XML e, portanto, têm desempenho melhor, que avaliar expressões XPath usando <xref:System.Xml.XmlDocument>.</xref:System.Xml.XmlDocument>  
+ Este é significativamente mais do que o trabalho feito pela consulta correspondente LINQ to XML. A diferença desempenho específico variam para tipos diferentes de consultas, mas em geral LINQ to XML consultas menos trabalho e, portanto, executam melhor do que as expressões XPath de avaliação usando <xref:System.Xml.XmlDocument>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Desempenho (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
-

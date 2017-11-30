@@ -1,45 +1,27 @@
 ---
 title: Delegados (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - delegates [Visual Basic]
 - Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0b65f2d74064542177790e513eb2452274743b51
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: fe21d8c0dcefaea35d9f96cd2ecbff92a1c83d36
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="delegates-visual-basic"></a>Delegados (Visual Basic)
-Os delegados são objetos que se referem aos métodos. Às vezes, eles são descritos como *ponteiros de função fortemente tipados* porque eles são semelhante aos ponteiros de função usados em outras linguagens de programação. Mas ao contrário dos ponteiros de função, os delegados do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] são um tipo de referência baseado na classe <xref:System.Delegate?displayProperty=fullName>. Os delegados podem fazer referência a ambos os métodos compartilhados: os métodos que podem ser chamados sem uma instância específica de uma classe e os métodos de instância.  
+Os delegados são objetos que se referem aos métodos. Às vezes, eles são descritos como *ponteiros de função fortemente tipados* porque eles são semelhante aos ponteiros de função usados em outras linguagens de programação. Mas ao contrário dos ponteiros de função, os delegados do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] são um tipo de referência baseado na classe <xref:System.Delegate?displayProperty=nameWithType>. Os delegados podem fazer referência a ambos os métodos compartilhados: os métodos que podem ser chamados sem uma instância específica de uma classe e os métodos de instância.  
   
 ## <a name="delegates-and-events"></a>Representantes e eventos  
  Os delegados são úteis em situações em que é necessário um intermediário entre um procedimento de chamada e o procedimento sendo chamado. Por exemplo, você pode desejar que um objeto que aciona eventos possa chamar manipuladores de eventos diferentes em diferentes circunstâncias. Infelizmente, o objeto que aciona os eventos não pode saber de antemão quais manipulador de eventos estarão tratando um evento específico. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] permite que você associe dinamicamente os manipuladores de eventos a eventos criando um delegado para você quando você usa a instrução `AddHandler`. No tempo de execução, o delegado encaminha chamadas para o manipulador de eventos apropriado.  
@@ -91,4 +73,3 @@ Os delegados são objetos que se referem aos métodos. Às vezes, eles são desc
 |[Como passar procedimentos para outro procedimento no Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)|Demonstra como usar delegados para passar um procedimento para outro.|  
 |[Conversão de Delegado Reduzida](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)|Descreve como você pode atribuir assinaturas e funções a delegados ou manipuladores mesmo quando as assinaturas não são idênticas|  
 |[Eventos](../../../../visual-basic/programming-guide/language-features/events/index.md)|Fornece uma visão geral dos eventos no Visual Basic.|
-
