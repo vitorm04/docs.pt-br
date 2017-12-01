@@ -1,30 +1,24 @@
 ---
 title: "-refonly (Opções do compilador do C#)"
-ms.date: 2017-07-08
+ms.date: 07/08/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /refonly
-dev_langs:
-- CSharp
+f1_keywords: /refonly
 helpviewer_keywords:
 - /refonly compiler option [C#]
 - -refonly compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: c4c745416bda56f5f1b1b4ab8267274d972a990d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81a2252314ef51b5dc01fddc081eb881aa4431a7
-ms.openlocfilehash: af99f7565a43dd28b6271611bc8690e7a2e51482
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-
 # <a name="refonly-c-compiler-options"></a>/refonly (Opções do compilador do C#)
 
-O **/refonly** A opção /refonly indica que um assembly de referência deve ser gerado em vez de um assembly de implementação, como a saída primária. O parâmetro `/refonly` silenciosamente desabilita a geração de PDBs, uma vez que assemblies de referência não podem ser executados.
+O **/refonly** opção indica que um assembly de referência deve ser a saída em vez de um assembly de implementação, como a saída primária. O parâmetro `/refonly` silenciosamente desabilita a geração de PDBs, uma vez que assemblies de referência não podem ser executados.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -49,6 +43,5 @@ Os assemblies de referência removem ainda mais metadados (membros particulares)
 As opções `/refonly` e [`/refout`](refout-compiler-option.md) são mutualmente exclusivas.
 
 ## <a name="see-also"></a>Consulte também
- [Opções do compilador do C#](../../../csharp/language-reference/compiler-options/index.md)   
+ [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
  [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
-

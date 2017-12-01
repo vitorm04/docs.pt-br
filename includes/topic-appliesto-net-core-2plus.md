@@ -1,1 +1,1 @@
-**Este tópico aplica-se ao: ✓**.NET Core 2.x
+**Este tópico aplica-se a: ✓** .NET Core SDK 2. x

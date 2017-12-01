@@ -12,11 +12,11 @@ caps.latest.revision: "10"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 0fb0364310c8780dd41c5369e6b1851dee668d15
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4a4ff644367f0bcd6562bd8931406a11f39d62df
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="statemachine-scenario-using-a-combination-of-flowchart-and-pick"></a>Cenário de StateMachine usando uma combinação de fluxograma e de picareta
 Este exemplo demonstra como implementar um cenário simples de cronômetro usando uma combinação de atividades de <xref:System.Activities.Statements.Flowchart> e de <xref:System.Activities.Statements.Pick> . Using receber e envia dentro de atividade de picareta para escutar eventos de cronômetro.  
@@ -65,6 +65,4 @@ Este exemplo demonstra como implementar um cenário simples de cronômetro usand
 >   
 >  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\StateMachineWithPick`  
-  
-## <a name="see-also"></a>Consulte também
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\StateMachineWithPick`

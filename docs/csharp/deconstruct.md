@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 2bb94b3f1f4966ed44b2a5d4f14dfeee29707059
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e626eeb1f3de2716e1ffe4fcbec1c16558e5bf0e
+ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Desconstruindo tuplas e outros tipos #
 
@@ -34,7 +34,7 @@ O C# conta com suporte interno à desconstrução de tuplas, que permite que voc
 var (name, address, city, zip) = contact.GetAddressInfo();
 ```
 
-Há duas maneiras para desconstruir uma tupla:
+Há três maneiras de decompor uma tupla:
 
 - Você pode declarar explicitamente o tipo de cada campo dentro de parênteses. O exemplo a seguir usa essa abordagem para desconstruir a tupla de 3 retornada pelo método `QueryCityData`.
 
@@ -50,9 +50,15 @@ Há duas maneiras para desconstruir uma tupla:
 
     Isso é difícil e não é recomendado.
 
+- Por fim, você pode decompor a tupla em variáveis que já foi declarados.
+
+    [!code-csharp[Deconstruction-Declared](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple5.cs#1)]
+
 Observe que você não poderá especificar um tipo específico fora dos parênteses, mesmo se todos os campos na tupla tiverem o mesmo tipo. Isso gera o erro do compilador CS8136, "O formulário de desconstrução 'var (...)' não permite um tipo específico para 'var'.".
 
 Observe que você também deve atribuir cada elemento da tupla a uma variável. Se você omitir qualquer elemento, o compilador gerará o erro CS8132, "Não é possível desconstruir uma tupla de 'x' elementos em 'y' variáveis."
+
+Observe que você não pode misturar declarações e as atribuições de variáveis existentes no lado esquerdo de uma deconstruction. O compilador gera erro CS8184, "um deconstruction não é possível misturar declarações e expressões no esquerdo lado". Quando os membros incluem variáveis recentemente declarados e existentes.
 
 ## <a name="deconstructing-tuple-elements-with-discards"></a>Desconstruir elementos de tupla com descartes
 

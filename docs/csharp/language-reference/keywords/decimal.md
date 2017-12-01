@@ -12,11 +12,11 @@ ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
 caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 114c2c68f50704595b71f22386625091b5b05e8d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0e03ab24f5d22133e061be3872de00a143bbeca8
+ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/25/2017
 ---
 # <a name="decimal-c-reference"></a>decimal (Referência de C#)
 A palavra-chave `decimal` indica um tipo de dados de 128 bits. Comparado a outros tipos de pontos flutuantes, o tipo `decimal` tem mais precisão e um intervalo menor que o torna apropriado para cálculos financeiros e monetários. O intervalo e a precisão aproximados para o tipo `decimal` são mostrados na tabela a seguir.  
@@ -24,6 +24,8 @@ A palavra-chave `decimal` indica um tipo de dados de 128 bits. Comparado a outro
 |Tipo|Intervalo aproximado|Precisão|Tipo do .NET Framework|  
 |----------|-----------------------|---------------|-------------------------|  
 |`decimal`|(-7,9 x 10<sup>28</sup> a 7,9 x 10<sup>28</sup>) / (10<sup>0</sup> a 10<sup>28</sup>)|28 a 29 dígitos significativos|<xref:System.Decimal?displayProperty=nameWithType>|  
+
+O valor padrão de um `decimal` é 0 m.
   
 ## <a name="literals"></a>Literais  
  Se você desejar tratar um literal numérico como `decimal`, use o sufixo m ou M, por exemplo:  

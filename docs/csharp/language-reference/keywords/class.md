@@ -1,42 +1,22 @@
 ---
 title: "class (Referência de C#)"
-ms.date: 2017-07-18
+ms.date: 07/18/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - class_CSharpKeyword
 - class
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- class keyword [C#]
+helpviewer_keywords: class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: ae4b019ee88b6f331a76c750ab94fc76a3343adb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cd4fbca0ce7148c571075d31a0e1e4a986d75149
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="class-c-reference"></a>class (Referência de C#)
 
@@ -62,7 +42,7 @@ Somente a herança única é permitida em C#. Em outras palavras, uma classe pod
 
 Classes que você declara diretamente dentro de um namespace, não aninhadas em outras classes, podem ser [públicas](../../../csharp/language-reference/keywords/public.md) ou [internas](../../../csharp/language-reference/keywords/internal.md). As classes são `internal` por padrão.
 
-Membros de classe, incluindo classes aninhadas, podem ser [públicos](../../../csharp/language-reference/keywords/public.md), `protected internal`, [protegidos](../../../csharp/language-reference/keywords/protected.md), [internos](../../../csharp/language-reference/keywords/internal.md) ou [particulares](../../../csharp/language-reference/keywords/private.md). Os membros são [particulares](../../../csharp/language-reference/keywords/private.md) por padrão.
+Membros de classe, incluindo classes aninhadas, podem ser [pública](../../../csharp/language-reference/keywords/public.md), `protected internal`, [protegido](../../../csharp/language-reference/keywords/protected.md), [interno](../../../csharp/language-reference/keywords/internal.md), [privada](../../../csharp/language-reference/keywords/private.md), ou `private protected`. Os membros são [particulares](../../../csharp/language-reference/keywords/private.md) por padrão.
 
 Para obter mais informações, consulte [Modificadores de Acesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).
 
@@ -99,7 +79,7 @@ Uma classe pode conter declarações dos seguintes membros:
 ## <a name="example"></a>Exemplo
 O exemplo a seguir demonstra a declaração de métodos, construtores e campos de classe. Ele também demonstra a instanciação de objetos e a impressão de dados de instância. Neste exemplo, duas classes são declaradas. A primeira classe, `Child`, contém dois campos particulares (`name` e `age`), dois construtores públicos e um método público. A segunda classe, `StringTest`, é usada para conter `Main`.
 
-[!code-cs[csrefKeywordsTypes#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/class_1.cs)]
+[!code-csharp[csrefKeywordsTypes#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/class_1.cs)]
 
 ## <a name="comments"></a>Comentários
 Observe que, no exemplo anterior, os campos particulares (`name` e `age`) só podem ser acessados por meio dos métodos públicos da classe `Child`. Por exemplo, você não pode imprimir o nome do filho, do método `Main`, usando uma instrução como esta:
@@ -118,8 +98,7 @@ Por fim, observe que, para o objeto criado usando o construtor padrão (`child3`
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>Consulte também
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md)   
+ [Referência de C#](../../../csharp/language-reference/index.md)  
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+ [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
  [Tipos de referência](../../../csharp/language-reference/keywords/reference-types.md)
-

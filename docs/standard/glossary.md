@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
+ms.openlocfilehash: a6546818eaeac3c32a6a9ddd7e64b1b0e0ea170f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 33b22ab80f9b4d42975f2c41c880543c615a3e01
-ms.openlocfilehash: c66f1b2b85d377c84712c0ad73682cdeeb7249fd
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/31/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-glossary"></a>Glossário .NET
 
 A principal meta deste glossário é esclarecer os significados de termos e acrônimos selecionados que aparecem com frequência na documentação do .NET sem definições.
@@ -31,15 +29,15 @@ Semelhante ao [JIT](#jit), esse compilador também converte [IL](#il) em código
 
 A implementação do ASP.NET original que é fornecida com o .NET Framework.
 
-Às vezes, o ASP.NET é um termo abrangente que se refere a ambas as implementações de ASP.NET, incluindo o ASP.NET Core. O significado que o termo carrega em uma determinada instância é determinado pelo contexto. 
+Às vezes, o ASP.NET é um termo abrangente que se refere a ambas as implementações de ASP.NET, incluindo o ASP.NET Core. O significado que o termo carrega em uma determinada instância é determinado pelo contexto. Consulte para ASP.NET 4. x para tornar claro que você não estiver usando ASP.NET significa ambas as implementações. 
 
-Consulte [ASP.NET](/aspnet/#pivot=aspnet).
+Consulte [ASP.NET documentação](/aspnet/#pivot=aspnet).
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
 Uma implementação multiplataforma de alto desempenho e software livre do ASP.NET com base no .NET Core.
 
-Consulte [ASP.NET Core](/aspnet/#pivot=core).
+Consulte [documentação do ASP.NET Core](/aspnet/#pivot=core).
 
 ## <a name="assembly"></a>assembly
 
@@ -278,5 +276,4 @@ Uma implementação do .NET que é usada para criar aplicativos do Windows moder
 [.NET Core](../core/index.md)  
 [Visão geral do ASP.NET](/aspnet/index#pivot=aspnet)  
 [Visão geral do ASP.NET Core](/aspnet/index#pivot=core)  
-
 

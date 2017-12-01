@@ -13,11 +13,11 @@ caps.latest.revision: "8"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 1c84483b2ca18d63f20e64a62bb757e244db9b24
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.openlocfilehash: 1493728809721c125b371e0d2ade2050b4909e5d
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="using-contracts-in-workflow"></a>Utilizando contratos no fluxo de trabalho
 Ao implementar um serviço, você pode definir um número de contratos que descrevem o serviço e os dados que ele envia e recebe. Os dados são representados como contratos de dados e de mensagem; ambos [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e serviços de fluxo de trabalho usam definições de contrato de mensagem e contrato de dados como parte de descrições de serviços. O próprio serviço expõe metadados (na forma de WSDL) para descrever as operações do serviço. Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], serviço contratos e operação definir o serviço e as operações que ele suporta. No entanto, em um serviço de fluxo de trabalho, esses contratos são parte do processo de negócios em si; eles serão expostos nos metadados por um processo chamado inferência de contrato.  
@@ -29,17 +29,13 @@ Ao implementar um serviço, você pode definir um número de contratos que descr
   
 -   <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>  
   
--   <!--zz <xref:System.ServiceModel.Activities.Receive.OperationContractName%2A>  --> `System.ServiceModel.Activities.Receive.OperationContractName`
+-   <xref:System.ServiceModel.Activities.Receive.OperationName%2A>
   
--   <xref:System.ServiceModel.Activities.Receive.Action%2A>  
-  
--   <!--zz <xref:System.ServiceModel.Activities.Receive.ValueType%2A> --> `System.ServiceModel.Activities.Receive.ValueType`
-  
+-   <xref:System.ServiceModel.Activities.Receive.Action%2A>   
+ 
  <xref:System.ServiceModel.Activities.SendReply>Atividade  
   
 -   <xref:System.ServiceModel.Activities.SendReply.Action%2A>  
-  
--   <!--zz <xref:System.ServiceModel.Activities.SendReply.ValueType%2A>-->  `System.ServiceModel.Activities.SendReply.ValueType`
   
  <xref:System.ServiceModel.Activities.TransactedReceiveScope>Atividade  
   

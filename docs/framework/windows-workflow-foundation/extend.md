@@ -16,11 +16,11 @@ caps.latest.revision: "10"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 23fd5a76eff2fff0dd5175a1710e3fc8f64a1c1d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: c5abf2876e53c58b85fb2c56465dda63cb98fb12
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="extending-windows-workflow-foundation"></a>Estendendo Windows Workflow Foundation
 A seção a seguir descreve como estender [!INCLUDE[wf](../../../includes/wf-md.md)] com atividades personalizados e designers em ambientes rehosted fora de [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
@@ -28,8 +28,6 @@ A seção a seguir descreve como estender [!INCLUDE[wf](../../../includes/wf-md.
 ## <a name="in-this-section"></a>Nesta seção  
  [Personalizando a experiência de design de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)  
  Indica como os cenários para criar atividades personalizados e para rehosting [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] simplificados foram bastante em [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. O desenvolvimento e implantação agora são mais fácil e mais flexível porque o novo modelo de programação do designer de atividade é compilado em cima de [!INCLUDE[avalon1](../../../includes/avalon1-md.md)].  
-  
-## <a name="related-sections"></a>Seções relacionadas  
-  
-## <a name="see-also"></a>Consulte também  
+
+## <a name="see-also"></a>Consulte também
  [Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/index.md)

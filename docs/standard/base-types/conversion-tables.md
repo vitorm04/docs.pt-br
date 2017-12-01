@@ -1,77 +1,83 @@
 ---
-title: "Tabelas de conversão de tipos"
-description: "Tabelas de conversão de tipos"
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 07/22/2016
-ms.topic: article
+title: "Tabelas de conversão de tipos no .NET"
+ms.custom: 
+ms.date: 03/30/2017
 ms.prod: .net
+ms.reviewer: 
+ms.suite: 
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: d602f260-e7cf-49c8-a37f-731f40e4a538
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: a27f78bc3c0753a7c5bc752bb6391839bfc21e75
-ms.lasthandoff: 03/02/2017
-
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- widening conversions
+- narrowing conversions
+- type conversion, table
+- converting types, narrowing conversions
+- converting types, widening conversions
+- base types, converting
+- tables [.NET Framework], type conversions
+- data types [.NET Framework], converting
+ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 327469f9a151b6ef7e1c42f6669c0a9dae7016fd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-
-# <a name="type-conversion-tables"></a>Tabelas de conversão de tipos
-
-Conversões de expansão ocorrem quando um valor de um tipo é convertido em outro tipo de tamanho igual ou maior. Conversões de redução ocorrem quando um valor de um tipo é convertido em um valor de outro tipo de tamanho menor. As tabelas neste tópico ilustram os comportamentos exibidos por ambos os tipos de conversões.
-
-## <a name="widening-conversions"></a>Conversões de expansão
-
-Tipo | Pode ser convertido sem perda de dados para
----- | -------------------------------------
-[Byte](xref:System.Byte) | [UInt16](xref:System.UInt16), [Int16](xref:System.Int16), [UInt32](xref:System.UInt32), [Int32](xref:System.Int32), [UInt64](xref:System.UInt64), [Int64](xref:System.Int64), [Simples](xref:System.Single), [Duplo](xref:System.Double), [Decimal](xref:System.Decimal)
-[SByte](xref:System.SByte) | [Int16](xref:System.Int16), [Int32](xref:System.Int32), [Int64](xref:System.Int64), [Simples](xref:System.Single), [Duplo](xref:System.Double), [Decimal](xref:System.Decimal)
-[Int16](xref:System.Int16) | [Int32](xref:System.Int32), [Int64](xref:System.Int64), [Simples](xref:System.Single), [Duplo](xref:System.Double), [Decimal](xref:System.Decimal)
-[UInt16](xref:System.UInt16) | [UInt32](xref:System.UInt32), [Int32](xref:System.Int32), [UInt64](xref:System.UInt64), [Int64](xref:System.Int64), [Simples](xref:System.Single), [Duplo](xref:System.Double), [Decimal](xref:System.Decimal)
-[Char](xref:System.Char) | [UInt16](xref:System.UInt16), [UInt32](xref:System.UInt32), [Int32](xref:System.Int32), [UInt64](xref:System.UInt64), [Int64](xref:System.Int64), [Simples](xref:System.Single), [Duplo](xref:System.Double), [Decimal](xref:System.Decimal)
-[Int32](xref:System.Int32) | [Int64](xref:System.Int64), [Duplo](xref:System.Double), [Decimal](xref:System.Decimal)
-[UInt32](xref:System.UInt32) | [Int64](xref:System.Int64), [UInt64](xref:System.UInt64), [Duplo](xref:System.Double), [Decimal](xref:System.Decimal)
-[Int64](xref:System.Int64) | [Decimal](xref:System.Decimal)
-[UInt64](xref:System.UInt64) | [Decimal](xref:System.Decimal)
-[Simples](xref:System.Single) | [Duplo](xref:System.Double)
-
-Algumas conversões de expansão para [Simples](xref:System.Single) ou [Duplo](xref:System.Double) podem causar perda de precisão. A tabela a seguir descreve as conversões de expansão que, às vezes, resultam em perda de informações.
-
-Tipo | Pode ser convertido para
----- | -------------------
-[Int32](xref:System.Int32) | [Simples](xref:System.Single)
-[UInt32](xref:System.UInt32) | [Simples](xref:System.Single)
-[Int64](xref:System.Int64) | [Simples](xref:System.Single), [Duplo](xref:System.Double)
-[UInt64](xref:System.UInt64) | [Simples](xref:System.Single), [Duplo](xref:System.Double)
-[Decimal](xref:System.Decimal) | [Simples](xref:System.Single), [Duplo](xref:System.Double)
-
-## <a name="narrowing-conversions"></a>Conversões de redução
-
-Uma conversão de redução para [Simples](xref:System.Single) ou [Duplo](xref:System.Double) pode causar perda de informações. Se o tipo de destino não puder expressar corretamente a magnitude da origem, o tipo resultante será definido como a constante `PositiveInfinity` ou `NegativeInfinity`. `PositiveInfinity` resulta da divisão de um número positivo por zero e também é retornado quando o valor de um [Simples](xref:System.Single) ou [Duplo](xref:System.Double) ultrapassar o valor do `MaxValue` campo. `NegativeInfinity` resulta da divisão de um número negativo por zero e também é retornado quando o valor de um [Simples](xref:System.Single) ou [Duplo](xref:System.Double) for inferior ao valor do `MinValue` campo. Uma conversão de um [Duplo](xref:System.Double) para um [Simples](xref:System.Single) pode resultar em `PositiveInfinity` ou `NegativeInfinity`.
-
-Uma conversão de redução também pode resultar em perda de informações para outros tipos de dados. No entanto, [OverflowException](xref:System.OverflowException) será lançada se o valor de um tipo que está sendo convertido estiver fora do intervalo especificado pelos campos `MaxValue` e `MinValue` do tipo de destino e a conversão será verificada pelo tempo de execução para garantir que o valor do tipo de destino não ultrapasse `MaxValue` ou `MinValue`. Conversões executadas com a classe [System.Convert](xref:System.Convert) sempre são verificadas dessa maneira.
-
-A tabela a seguir lista conversões que lançam [OverflowException](xref:System.OverflowException) usando [System.Convert](xref:System.Convert) ou qualquer conversão selecionada se o valor do tipo que está sendo convertido estiver fora do intervalo definido pelo tipo resultante.
-
-Tipo | Pode ser convertido para
----- | -------------------
-[Byte](xref:System.Byte) | [SByte](xref:System.SByte)
-[SByte](xref:System.SByte) | [Byte](xref:System.Byte), [UInt16](xref:System.UInt16), [UInt32](xref:System.UInt32), [UInt64](xref:System.UInt64)
-[Int16](xref:System.Int16) | [Byte](xref:System.Byte), [SByte](xref:System.SByte), [UInt16](xref:System.UInt16)
-[UInt16](xref:System.UInt16) | [Byte](xref:System.Byte), [SByte](xref:System.SByte), [Int16](xref:System.Int16)
-[Int32](xref:System.Int32) | [Byte](xref:System.Byte), [SByte](xref:System.SByte), [Int16](xref:System.Int16), [UInt16](xref:System.UInt16), [UInt32](xref:System.UInt32)
-[UInt32](xref:System.UInt32) | [Byte](xref:System.Byte), [SByte](xref:System.SByte), [Int16](xref:System.Int16), [UInt16](xref:System.UInt16), [Int32](xref:System.Int32)
-[Int64](xref:System.Int64) | [Byte](xref:System.Byte), [SByte](xref:System.SByte), [Int16](xref:System.Int16), [UInt16](xref:System.UInt16), [Int32](xref:System.Int32), [UInt32](xref:System.UInt32), [UInt64](xref:System.UInt64)
-[UInt64](xref:System.UInt64) | [Byte](xref:System.Byte), [SByte](xref:System.SByte), [Int16](xref:System.Int16), [UInt16](xref:System.UInt16), [Int32](xref:System.Int32), [UInt32](xref:System.UInt32), [Int64](xref:System.Int64)
-[Decimal](xref:System.Decimal) | [Byte](xref:System.Byte), [SByte](xref:System.SByte), [Int16](xref:System.Int16), [UInt16](xref:System.UInt16), [Int32](xref:System.Int32), [UInt32](xref:System.UInt32), [Int64](xref:System.Int64), [UInt64](xref:System.UInt64)
-[Simples](xref:System.Single) | [Byte](xref:System.Byte), [SByte](xref:System.SByte), [Int16](xref:System.Int16), [UInt16](xref:System.UInt16), [Int32](xref:System.Int32), [UInt32](xref:System.UInt32), [Int64](xref:System.Int64), [UInt64](xref:System.UInt64)
-[Duplo](xref:System.Double) | [Byte](xref:System.Byte), [SByte](xref:System.SByte), [Int16](xref:System.Int16), [UInt16](xref:System.UInt16), [Int32](xref:System.Int32), [UInt32](xref:System.UInt32), [Int64](xref:System.Int64), [UInt64](xref:System.UInt64)
-
-## <a name="see-also"></a>Consulte também
-
-[System.Convert](xref:System.Convert)
-
-[Conversão de Tipos](type-conversion.md)
-
-
+# <a name="type-conversion-tables-in-net"></a>Tabelas de conversão de tipos no .NET
+Conversões de expansão ocorrem quando um valor de um tipo é convertido em outro tipo de tamanho igual ou maior. Conversões de redução ocorrem quando um valor de um tipo é convertido em um valor de outro tipo de tamanho menor. As tabelas neste tópico ilustram os comportamentos exibidos por ambos os tipos de conversões.  
+  
+## <a name="widening-conversions"></a>Conversões de expansão  
+ A tabela a seguir descreve as conversões ampliadoras que podem ser executadas sem a perda de informações.  
+  
+|Tipo|Pode ser convertido sem perda de dados para|  
+|----------|-------------------------------------------|  
+|<xref:System.Byte>|<xref:System.UInt16>, <xref:System.Int16>, <xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
+|<xref:System.SByte>|<xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
+|<xref:System.Int16>|<xref:System.Int32>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
+|<xref:System.UInt16>|<xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
+|<xref:System.Char>|<xref:System.UInt16>, <xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
+|<xref:System.Int32>|<xref:System.Int64>, <xref:System.Double>, <xref:System.Decimal>|  
+|<xref:System.UInt32>|<xref:System.Int64>, <xref:System.UInt64>, <xref:System.Double>, <xref:System.Decimal>|  
+|<xref:System.Int64>|<xref:System.Decimal>|  
+|<xref:System.UInt64>|<xref:System.Decimal>|  
+|<xref:System.Single>|<xref:System.Double>|  
+  
+ Algumas conversões de ampliação <xref:System.Single> ou <xref:System.Double> pode causar perda de precisão. A tabela a seguir descreve as conversões de expansão que, às vezes, resultam em perda de informações.  
+  
+|Tipo|Pode ser convertido para|  
+|----------|-------------------------|  
+|<xref:System.Int32>|<xref:System.Single>|  
+|<xref:System.UInt32>|<xref:System.Single>|  
+|<xref:System.Int64>|<xref:System.Single>, <xref:System.Double>|  
+|<xref:System.UInt64>|<xref:System.Single>, <xref:System.Double>|  
+|<xref:System.Decimal>|<xref:System.Single>, <xref:System.Double>|  
+  
+## <a name="narrowing-conversions"></a>Conversões de redução  
+ Uma conversão redutora para <xref:System.Single> ou <xref:System.Double> pode causar perda de informações. Se o tipo de destino não puder expressar corretamente a magnitude da origem, o tipo resultante será definido como a constante `PositiveInfinity` ou `NegativeInfinity`. `PositiveInfinity`resultados de divisão de um número positivo por zero e também é retornado quando o valor de um <xref:System.Single> ou <xref:System.Double> excede o valor da `MaxValue` campo. `NegativeInfinity`resultados de divisão por zero de um número negativo e também é retornado quando o valor de um <xref:System.Single> ou <xref:System.Double> cai abaixo do valor da `MinValue` campo. Uma conversão de um <xref:System.Double> para um <xref:System.Single> pode resultar em `PositiveInfinity` ou `NegativeInfinity`.  
+  
+ Uma conversão de redução também pode resultar em perda de informações para outros tipos de dados. No entanto, um <xref:System.OverflowException> é gerada se o valor de um tipo que está sendo convertido está fora do intervalo especificado, o tipo de destino `MaxValue` e `MinValue` campos e a conversão é verificada pelo tempo de execução para garantir que o valor de destino tipo não exceda seu `MaxValue` ou `MinValue`. Conversões executadas com a <xref:System.Convert?displayProperty=nameWithType> classe sempre são verificadas dessa maneira.  
+  
+ A tabela a seguir lista as conversões que lançam uma <xref:System.OverflowException> usando <xref:System.Convert?displayProperty=nameWithType> ou qualquer selecionada conversão se o valor do tipo que está sendo convertido estiver fora do intervalo definido pelo tipo resultante.  
+  
+|Tipo|Pode ser convertido para|  
+|----------|-------------------------|  
+|<xref:System.Byte>|<xref:System.SByte>|  
+|<xref:System.SByte>|<xref:System.Byte>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>|  
+|<xref:System.Int16>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.UInt16>|  
+|<xref:System.UInt16>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>|  
+|<xref:System.Int32>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>,<xref:System.UInt32>|  
+|<xref:System.UInt32>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>|  
+|<xref:System.Int64>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>,<xref:System.UInt32>,<xref:System.UInt64>|  
+|<xref:System.UInt64>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>|  
+|<xref:System.Decimal>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>|  
+|<xref:System.Single>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>|  
+|<xref:System.Double>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>|  
+  
+## <a name="see-also"></a>Consulte também  
+ <xref:System.Convert?displayProperty=nameWithType>  
+ [Conversão de tipo no .NET](../../../docs/standard/base-types/type-conversion.md)

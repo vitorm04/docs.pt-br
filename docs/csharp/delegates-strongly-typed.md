@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 564a683d-352b-4e57-8bac-b466529daf6b
+ms.openlocfilehash: 467ba18f8e032b9b3b8f480d4b10c92d0d7ba3b9
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0a8185c21e129c91b2c3ecb1f74f8ce2f75c5db9
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="strongly-typed-delegates"></a>Delegados Fortemente Tipados
 
 [Anterior](delegate-class.md)
@@ -30,7 +28,7 @@ Na prática, isso poderia levar à criação de novos tipos de delegado sempre q
 
 Felizmente, isso não é necessário. O .NET Core Framework contém vários tipos que podem ser reutilizados sempre que você precisar de tipos de delegado. Essas são definições [genéricas](programming-guide/generics/index.md) para que você possa declarar personalizações quando precisar de novas declarações de método. 
 
-O primeiro desses tipos é o tipo @System.Action e diversas variações:
+O primeiro desses tipos é o tipo <xref:System.Action> e diversas variações:
 
 ```csharp
 public delegate void Action();
@@ -41,7 +39,7 @@ public delegate void Action<in T1, in T2>(T1 arg1, T2 arg2);
 
 O modificador `in` no argumento de tipo genérico é abordado neste artigo sobre covariância.
 
-Há variações do delegado `Action` que contêm até 16 argumentos como @System.Action%6016.
+Há variações de `Action` delegado que contêm até 16 argumentos como <xref:System.Action%6016>.
 É importante que essas definições usem argumentos genéricos diferentes para cada um dos argumentos do delegado: isso proporciona a máxima flexibilidade. Os argumentos de método não precisam ser, mas podem ser, do mesmo tipo.
 
 Use um dos tipos `Action` para qualquer tipo de delegado que tenha um tipo de retorno nulo.
@@ -57,12 +55,12 @@ public delegate TResult Func<in T1, in T2, out TResult>(T1 arg1, T2 arg2);
 
 O modificador `out` no argumento de tipo genérico de resultado é abordado neste artigo sobre covariância.
 
-Há variações do delegado `Func` com até 16 argumentos de entrada como @System.Func%6017.
+Há variações de `Func` delegar com até 16 argumentos de entrada, como <xref:System.Func%6017>.
 O tipo do resultado é sempre o último parâmetro de tipo em todas as declarações `Func`, por convenção.
 
 Use um dos tipos `Func` para qualquer tipo de delegado que retorna um valor.
 
-Há também um tipo @System.Predicate%601 especializado para um delegado que retorna um teste em um único valor:
+Há também um especializado <xref:System.Predicate%601> tipo para um delegado que retorna um teste em um único valor:
 
 ```csharp
 public delegate bool Predicate<in T>(T obj);
@@ -85,4 +83,3 @@ Isso deve economizar tempo e minimizar o número de novos tipos de que você pre
 No próximo artigo, você verá vários padrões comuns para trabalhar com delegados na prática.
 
 [Avançar](delegates-patterns.md)
-

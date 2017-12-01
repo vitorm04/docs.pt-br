@@ -1,72 +1,75 @@
 ---
-title: Curta o tipo de dados (Visual Basic) | Documentos do Microsoft
-ms.date: 2015-07-20
+title: Tipo de dados curto (Visual Basic)
+ms.date: 04/20/2017
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.Short
-dev_langs:
-- VB
+author: rpetrusha
+ms.author: ronpet
+f1_keywords: vb.Short
 helpviewer_keywords:
-- numbers, whole
+- numbers [Visual Basic], whole
 - whole numbers
-- integral data types
+- integral data types [Visual Basic]
 - integer numbers
-- numbers, integer
-- integers, data types
-- integers, types
+- numbers [Visual Basic], integer
+- integers [Visual Basic], data types
+- integers [Visual Basic], types
 - data types [Visual Basic], integral
-- S literal type character
+- S literal type character [Visual Basic]
 - Short data type
-- literal type characters, S
+- literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e2bc79897b337cbab7f8de97741f2d6a32668fc7
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: fef948debed69cf9fb7b0e6bb65eb0ddbe497a92
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="short-data-type-visual-basic"></a>Tipo de dados curto (Visual Basic)
 Armazena inteiros de 16 bits (2 bytes) que variam de -32.768 a 32.767.  
   
 ## <a name="remarks"></a>Comentários  
- Use o `Short` tipo de dados para conter valores inteiros que não requerem a largura total de dados de `Integer`. Em alguns casos, o common language runtime pode empacotar seu `Short` variáveis próximas uma da outra e economizar memória.  
+ Use o `Short` tipo de dados para conter valores inteiros que não requerem a largura total de dados de `Integer`. Em alguns casos, o common language runtime pode empacotar sua `Short` variáveis próximas uma da outra e economizar memória.  
   
  O valor padrão de `Short` é 0.  
   
-## <a name="programming-tips"></a>Dicas de programação  
-  
--   **Ampliação.** The `Short` data type widens to `Integer`, `Long`, `Decimal`, `Single`, or `Double`. Isso significa que você pode converter `Short` para qualquer um desses tipos sem a ocorrência de um <xref:System.OverflowException?displayProperty=fullName>erro.</xref:System.OverflowException?displayProperty=fullName>  
+## <a name="literal-assignments"></a>Atribuições de literal
+
+Você pode declarar e inicializar uma `Short` variável atribuindo a ele um literal decimal, hexadecimal literal, um literal octal, ou (começando com Visual Basic 2017) um literal binário. Se o literal inteiro estiver fora do intervalo de `Short` (ou seja, se for menor que <xref:System.Int16.MinValue?displayProperty=nameWithType> ou maior que <xref:System.Int16.MaxValue?displayProperty=nameWithType>, ocorrerá um erro de compilação.
+
+No exemplo a seguir, inteiros igual à 1,034 que são representados como decimal, hexadecimal, e literais binárias são implicitamente convertidos do [inteiro](integer-data-type.md) para `Short` valores.
+
+[!code-vb[Short](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Short)]
+
+> [!NOTE]
+> Use o prefixo `&h` ou `&H` para denotar um hexadecimal literal, o prefixo `&b` ou `&B` para denotar um literal binário e o prefixo `&o` ou `&O` para denotar um literal octal. Literais decimais não têm nenhum prefixo.
+
+A partir do Visual Basic de 2017, você também pode usar o caractere de sublinhado, `_`, como um separador de dígito para melhorar a legibilidade, como o exemplo a seguir mostra.
+
+[!code-vb[Short](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ShortS)]
+
+Literais numéricos também podem incluir o `S` [caractere de tipo](../../programming-guide\language-features\data-types/type-characters.md) para denotar o `Short` tipo de dados, como mostra o exemplo a seguir.
+
+```vb
+Dim number = &H0326S
+```
+
+## <a name="programming-tips"></a>Dicas de programação
+
+-   **Ampliação.** O `Short` tipo de dados amplia a `Integer`, `Long`, `Decimal`, `Single`, ou `Double`. Isso significa que você pode converter `Short` em qualquer um desses tipos sem a ocorrência de um erro <xref:System.OverflowException?displayProperty=nameWithType>.  
   
 -   **Caracteres de tipo.** Acrescentar o caractere de tipo literal `S` a um literal o força ao tipo de dados `Short`. `Short`não tem nenhum caractere de tipo identificador.  
   
--   **Tipo de estrutura.** O tipo correspondente no .NET Framework é o <xref:System.Int16?displayProperty=fullName>estrutura.</xref:System.Int16?displayProperty=fullName>  
+-   **Tipo de estrutura.** O tipo correspondente no .NET Framework é a estrutura <xref:System.Int16?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Int16?displayProperty=fullName></xref:System.Int16?displayProperty=fullName>   
- [Tipos de dados](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Funções de conversão de tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Resumo da conversão](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Tipo de dados inteiro](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
- [Tipo de dados Long](../../../visual-basic/language-reference/data-types/long-data-type.md)   
+## <a name="see-also"></a>Consulte também
+
+ <xref:System.Int16?displayProperty=nameWithType>  
+ [Tipos de Dados](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Funções de Conversão do Tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Resumo da Conversão](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Tipo de Dados Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
+ [Tipo de Dados Long](../../../visual-basic/language-reference/data-types/long-data-type.md)  
  [Uso Eficiente de Tipos de Dados](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

@@ -1,30 +1,21 @@
 ---
 title: 'Passo a passo: acessando a Web usando async e await (C#)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: get-started-article
-dev_langs:
-- CSharp
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 85edc87bc8c5183f85618351034c0b043472b530
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7c03cad060e2ba459277c28f929df88be70e4044
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Passo a passo: acessando a Web usando async e await (C#)
 É possível escrever programas assíncronos de forma mais fácil e intuitiva usando funcionalidades async/await. Você pode escrever código assíncrono que se parece com código síncrono e deixar que o compilador trate das complicadas continuações e funções de retorno de chamada que um código assíncrono normalmente envolve.  
@@ -741,12 +732,11 @@ namespace AsyncExampleWPF
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplo de assincronia: acessando o passo a passo da Web (C# e Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255191)   
- [async](../../../../csharp/language-reference/keywords/async.md)   
- [await](../../../../csharp/language-reference/keywords/await.md)   
- [Programação assíncrona com async e await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
- [Tipos de retorno assíncronos (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)   
- [TAP (programação assíncrona baseada em tarefas)](http://go.microsoft.com/fwlink/?LinkId=204847)   
- [Como estender as instruções passo a passo assíncronas usando Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)   
+ [Exemplo de assíncrono: Acessando o passo a passo da Web (c# e Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255191)  
+ [async](../../../../csharp/language-reference/keywords/async.md)  
+ [await](../../../../csharp/language-reference/keywords/await.md)  
+ [Programação assíncrona com async e await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
+ [Tipos de retorno assíncronos (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)  
+ [Programação assíncrona com base em tarefa (TAP)](http://go.microsoft.com/fwlink/?LinkId=204847)  
+ [Como estender as instruções passo a passo assíncronas usando Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)  
  [Como fazer várias solicitações da Web em paralelo, usando async e await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
-

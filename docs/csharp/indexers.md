@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
+ms.openlocfilehash: 32e090524f414ef93b8481a8ad356b313191d8b9
+ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 468c86f36fe71558dcd7a9150337f5a3cce066b8
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/08/2017
 ---
-
 # <a name="indexers"></a>Indexadores
 
 Os *indexadores* são semelhantes às propriedades. De muitas maneiras, os indexadores baseiam-se nos mesmos recursos de linguagem que as [propriedades](properties.md). Os indexadores habilitam as propriedades *indexadas*: propriedades referenciadas com o uso de um ou mais argumentos. Esses argumentos fornecem um índice em um conjunto de valores.
@@ -41,7 +39,7 @@ public int this[string key]
 }
 ```
 
-Neste exemplo inicial, você pode ver a relação entre a sintaxe das propriedades e dos indexadores. Essa analogia impulsiona a maioria das regras de sintaxe para indexadores. Os indexadores podem ter qualquer modificador de acesso válido (público, protegido interno, protegido, interno ou particular). Eles podem ser sealed, virtual ou abstract. Assim como acontece com as propriedades, você pode especificar modificadores de acesso diferentes para os acessadores get e set em um indexador.
+Neste exemplo inicial, você pode ver a relação entre a sintaxe das propriedades e dos indexadores. Essa analogia impulsiona a maioria das regras de sintaxe para indexadores. Indexadores podem ter qualquer modificadores de acesso válido (pública, protegida interna, protegida, interna, privada ou privada protegida). Eles podem ser sealed, virtual ou abstract. Assim como acontece com as propriedades, você pode especificar modificadores de acesso diferentes para os acessadores get e set em um indexador.
 Você também pode especificar indexadores somente leitura (omitindo o acessador set) ou indexadores somente gravação (omitindo o acessador get).
 
 Você pode aplicar aos indexadores quase tudo o que aprendeu ao trabalhar com propriedades. A única exceção a essa regra são as *propriedades autoimplementadas*. O compilador não pode gerar sempre o armazenamento correto para um indexador.
@@ -335,4 +333,3 @@ Os desenvolvedores usam o tipo `DateTime`, mas usam a propriedade `Date` para ga
 
 Você deve criar indexadores sempre que tiver um elemento semelhante a uma propriedade em sua classe, em que essa propriedade representa não um único valor, mas uma coleção de valores em que cada item individual é identificado por um conjunto de argumentos. Esses argumentos podem identificar exclusivamente qual item da coleção deve ser referenciado.
 Os indexadores ampliam o conceito de [propriedades](properties.md), em que um membro é tratado como um item de dados de fora da classe, mas como um método do lado de dentro. Os indexadores permitem que os argumentos localizem um único item em uma propriedade que representa um conjunto de itens.
-

@@ -13,11 +13,11 @@ caps.latest.revision: "19"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: bcfb6476d6ae1e9c01458c7ec12dc0cd3c34e995
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.openlocfilehash: 73b7fd7564fea065167978deaad21bb533dbef0c
+ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/25/2017
 ---
 # <a name="service-versioning"></a>Controle de versão de serviço
 Após a implantação inicial e potencialmente várias vezes durante a vida útil, serviços (e os pontos de extremidade expõem) podem precisar ser alterada para uma variedade de motivos, como alterar as necessidades de negócios, requisitos de tecnologia da informação, ou aborda outros problemas. Cada alteração introduz uma nova versão do serviço. Este tópico explica como considerar o controle de versão no [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
@@ -167,14 +167,15 @@ public class PurchaseOrderV1 : IPurchaseOrderV1
 public interface IPurchaseOrderV2  
 {  
     DateTime OrderDate { get; set; }  
-}  
+}
+
 [DataContract(   
-Name = "PurchaseOrder ",  
+Name = "PurchaseOrder",  
 Namespace = "http://examples.microsoft.com/WCF/2006/02/PurchaseOrder")]  
 public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2  
 {  
     [DataMember(...)]  
-    public DateTime OrderId {...}  
+    public string OrderId {...}  
     [DataMember(...)]  
     public string CustomerId {...}  
     [DataMember(...)]  

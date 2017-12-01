@@ -3,16 +3,15 @@ title: "Comando dotnet run – CLI do .NET Core"
 description: "O comando dotnet run oferece uma opção conveniente para executar o aplicativo do código-fonte."
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 09/24/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 7670934199d7d4b8a7c5e598142366ef1eb3ef1c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: c98a69ced3c309da0ff035efb5c76e7034d54e79
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -74,6 +73,10 @@ Define a configuração da compilação. O valor padrão é `Debug`.
 
 Compila e executa o aplicativo usando a [estrutura](../../standard/frameworks.md) especificada. A estrutura deve ser especificada no arquivo de projeto.
 
+`--force`
+
+Forçará todas as dependências a serem resolvidas mesmo se última restauração tiver sido bem-sucedida. Isso é equivalente a excluir *project.assets.json*.
+
 `-h|--help`
 
 Imprime uma ajuda breve para o comando.
@@ -85,6 +88,10 @@ O nome do perfil de inicialização (se houver) a ser usado ao iniciar o aplicat
 `--no-build`
 
 Não compila o projeto antes da execução.
+
+`--no-dependencies`
+
+Ao restaurar um projeto com referências de P2P (projeto a projeto), restaura o projeto raiz, não as referências.
 
 `--no-launch-profile`
 
@@ -142,4 +149,3 @@ Execute o projeto especificado:
 Execute o projeto no diretório atual (o argumento `--help` neste exemplo é passado para o aplicativo, visto que o argumento `--` foi usado):
 
 `dotnet run --configuration Release -- --help`
-

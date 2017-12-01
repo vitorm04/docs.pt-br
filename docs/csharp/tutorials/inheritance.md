@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: ronpet
 ms.date: 08/16/2017
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
+ms.openlocfilehash: ec5ca3132ac68b85ebb517e569241f20080b4f63
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 3e1ec8b24c4debf24a0d52ad2a23897975c41550
-ms.openlocfilehash: 78aff41ae597a3dbe9a57e2342b52b399ea96d66
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="inheritance-in-c-and-net"></a>Herança em C# e .NET
 
@@ -34,7 +32,11 @@ Para criar e executar os exemplos neste tutorial, use o utilitário [dotnet](../
 1. Insira o comando [dotnet new console](../../core/tools/dotnet-new.md) no prompt de comando para criar um novo projeto do .NET Core.
 1. Copie e cole o código do exemplo em seu editor de código.
 1. Insira o comando [dotnet restore](../../core/tools/dotnet-restore.md) na linha de comando para carregar ou restaurar as dependências do projeto.
+
+  [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 1. Insira o comando [dotnet run](../../core/tools/dotnet-run.md) para compilar e executar o exemplo.
+
 
 ## <a name="background-what-is-inheritance"></a>Informações: O que é a herança?
 
@@ -54,15 +56,15 @@ Enquanto todos os outros membros de uma classe base são herdados por classes de
 
 - Membros [Privados](../language-reference/keywords/private.md) são visíveis apenas em classes derivadas que estão aninhadas em sua classe base. Caso contrário, eles não são visíveis em classes derivadas. No exemplo a seguir, `A.B` é uma classe aninhada derivada de `A`, e `C` deriva de `A`. O campo `A.value` privado fica visível em A.B. No entanto, se você remover os comentários do método `C.GetValue` e tentar compilar o exemplo, ele produzirá um erro do compilador CS0122: "'A.value' está inacessível devido ao seu nível de proteção".
 
-  [!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/private.cs#1)]
+  [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/private.cs#1)]
 
 - Membros [Protegidos](../language-reference/keywords/protected.md) são visíveis apenas em classes derivadas.
 
-- Membros [Internos](../language-reference/keywords/protected.md) são visíveis apenas em classes derivadas localizadas no mesmo assembly que a classe base. Eles não são visíveis em classes derivadas localizadas em um assembly diferente da classe base.
+- Membros [Internos](../language-reference/keywords/internal.md) são visíveis apenas em classes derivadas localizadas no mesmo assembly que a classe base. Eles não são visíveis em classes derivadas localizadas em um assembly diferente da classe base.
 
-- Membros [Públicos] (../language-reference/keywords/protected.md) são visíveis em classes derivadas e fazem parte da interface pública da classe derivada. Membros herdados público podem ser chamados como se tivessem sido definidos na classe derivada. No exemplo a seguir, a classe `A` define um método chamado `Method1`, e a classe `B` herda da classe `A`. Depois, o exemplo chama `Method1` como se fosse um método de instância em `B`.
+- [Público](../language-reference/keywords/public.md) membros são visíveis em classes derivadas e são parte da interface pública da classe derivada. Membros herdados público podem ser chamados como se tivessem sido definidos na classe derivada. No exemplo a seguir, a classe `A` define um método chamado `Method1`, e a classe `B` herda da classe `A`. Depois, o exemplo chama `Method1` como se fosse um método de instância em `B`.
 
-[!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
 Classes derivadas também podem *substituir* membros herdados fornecendo uma implementação alternativa. Para poder substituir um membro, o membro na classe base deve ser marcado com a palavra-chave [virtual](../language-reference/keywords/virtual.md). Por padrão, os membros da classe base não são marcados como `virtual` e não podem ser substituídos. A tentativa de substituir um membro não virtual, como faz o exemplo a seguir, gera o erro do compilador CS0506: "<member> não consegue substituir o membro herdado <member>, pois ele não está marcado como virtual, abstrato ou de substituição.
 
@@ -117,11 +119,11 @@ Apesar dos tipos possíveis de herança por meio de herança única, todos os ti
 
 Para ver o que significa herança implícita, vamos definir uma nova classe, `SimpleClass`, que é simplesmente uma definição de classe vazia:
 
-[!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
 
 Podemos usar reflexão (o que nos permite inspecionar os metadados de um tipo para obter informações sobre o tipo) para obter uma lista dos membros que pertencem ao tipo `SimpleClass`. Embora não tenhamos definido membros em nossa classe `SimpleClass`, a saída do exemplo indica que ele tem nove membros na verdade. Um deles é um construtor sem parâmetros (ou padrão) fornecido automaticamente para o tipo `SimpleClass` pelo compilador em C#. Os oito são membros do <xref:System.Object>, o tipo do qual todas as classes e interfaces no sistema do tipo .NET herdam implicitamente.
 
-[!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
 
 A herança implícita da classe <xref:System.Object> torna esses métodos disponíveis para a classe `SimpleClass`:
 
@@ -139,7 +141,7 @@ A herança implícita da classe <xref:System.Object> torna esses métodos dispon
 
 Devido à herança implícita, podemos chamar qualquer membro herdado de um objeto `SimpleClass` como se fosse um membro definido na classe `SimpleClass`. Por exemplo, o exemplo a seguir chama o método `SimpleClass.ToString`, que `SimpleClass` herda de <xref:System.Object>.
 
-[!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass2.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass2.cs#1)]
 
 A tabela a seguir lista as categorias de tipos que você pode criar em C#, e os tipos de onde eles herdam implicitamente. Cada tipo base disponibiliza um conjunto diferente de membros por meio de herança para tipos derivados implicitamente.
 
@@ -157,13 +159,13 @@ Normalmente, a herança é usada para expressar um relacionamento "é um(a)" ent
 > [!NOTE]
 > Uma classe ou struct pode implementar uma ou mais interfaces. Embora a implementação da interface seja apresentada geralmente como uma alternativa para herança única, ou como uma forma de usar a herança com structs, ela tem como objetivo expressar um relacionamento diferente (um relacionamento "pode fazer") entre uma interface e seu tipo de implementação em comparação com a herança. Uma interface define um subconjunto de funcionalidades (como a capacidade de testar a igualdade, comparar ou classificar objetos ou dar suporte à formatação e análise sensível à cultura) que disponibiliza para seus tipos de implementação.
 
-Observe que "é um(a)" também expressa o relacionamento entre um tipo e uma instanciação específica desse tipo. No exemplo a seguir, `Automobile` é uma classe que tem três propriedades somente leitura exclusivas: `Make`, o fabricante do automóvel; `Model`, o tipo de automóvel; e `Year`, o ano de fabricação. Nossa classe `Automobile` também tem um construtor cujos argumentos são atribuídos aos valores de propriedade. Ela também substitui o método <xref:System.Object.ToString%2A?displayProperty=fullName> para produzir uma cadeia de caracteres que identifica exclusivamente a instância `Automobile` em vez da classe `Automobile`.
+Observe que "é um(a)" também expressa o relacionamento entre um tipo e uma instanciação específica desse tipo. No exemplo a seguir, `Automobile` é uma classe que tem três propriedades somente leitura exclusivas: `Make`, o fabricante do automóvel; `Model`, o tipo de automóvel; e `Year`, o ano de fabricação. Nossa classe `Automobile` também tem um construtor cujos argumentos são atribuídos aos valores de propriedade. Ela também substitui o método <xref:System.Object.ToString%2A?displayProperty=nameWithType> para produzir uma cadeia de caracteres que identifica exclusivamente a instância `Automobile` em vez da classe `Automobile`.
 
-[!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
 
 Nesse caso, não devemos depender da herança para representar marcas e modelos de carro específicos. Por exemplo, não precisamos definir um tipo `Packard` para representar automóveis fabricados pela empresa Packard Motor Car Company. Em vez disso, podemos representá-los criando um objeto `Automobile` com os valores apropriados passados ao construtor de classe, como o exemplo a seguir.
 
-[!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#2)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#2)]
 
 Um relacionamento é-um(a) baseado na herança é mais bem aplicado a uma classe base e em classes derivadas que adicionam outros membros à classe base, ou que exigem funcionalidades adicionais não incluídas na classe base.
 
@@ -201,7 +203,7 @@ Ao criar nossa classe `Publication`, precisamos tomar várias decisões de desig
 
 O exemplo a seguir mostra o código-fonte para a classe `Publication`, bem como uma enumeração `PublicationType` que é retornada pela propriedade `Publication.PublicationType`. Além dos membros herdados de <xref:System.Object>, a classe `Publication` define os seguintes membros exclusivos e substituições de membro:
 
-[!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#1)]
 
 - Um construtor
 
@@ -218,7 +220,7 @@ O exemplo a seguir mostra o código-fonte para a classe `Publication`, bem como 
 
   `Title` é uma propriedade <xref:System.String> somente leitura cujo valor é fornecido pela chamada do construtor `Publication`.
 
-  `Pages` é uma propriedade <xref:System.Int32> de leitura-gravação que indica o número total de páginas da publicação. O valor é armazenado em um campo privado chamado `totalPages`. Ele deve ser um número positivo, caso contrário, será gerada uma exceção do tipo <xref:System.ArgumentOutOfRangeException>.
+  `Pages` é uma propriedade <xref:System.Int32> de leitura-gravação que indica o número total de páginas da publicação. O valor é armazenado em um campo privado chamado `totalPages`. O lançamento deve ser de um número positivo ou de um <xref:System.ArgumentOutOfRangeException>.
 
 - Membros relacionados ao publicador
 
@@ -234,7 +236,7 @@ O exemplo a seguir mostra o código-fonte para a classe `Publication`, bem como 
 
 - Uma substituição do método `ToString`
 
-  Se um tipo não substituir o método <xref:System.Object.ToString%2A?displayProperty=fullName>, ele retornará o nome totalmente qualificado do tipo, que é de pouca utilidade na diferenciação de uma instância para outra. A classe `Publication` substitui <xref:System.Object.ToString%2A?displayProperty=fullName> para retornar o valor da propriedade `Title`.
+  Se um tipo não substituir o método <xref:System.Object.ToString%2A?displayProperty=nameWithType>, ele retornará o nome totalmente qualificado do tipo, que é de pouca utilidade na diferenciação de uma instância para outra. A classe `Publication` substitui <xref:System.Object.ToString%2A?displayProperty=nameWithType> para retornar o valor da propriedade `Title`.
 
 A figura a seguir ilustra o relacionamento entre nossa classe base `Publication` e sua classe <xref:System.Object> herdada implicitamente.
 
@@ -244,7 +246,7 @@ A figura a seguir ilustra o relacionamento entre nossa classe base `Publication`
 
 A classe `Book` representa um livro como tipo especializado de publicação. O exemplo a seguir mostra o código-fonte para a classe `Book`.
 
-[!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#2)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#2)]
 
 Além dos membros herdados de `Publication`, a classe `Book` define os seguintes membros exclusivos e substituições de membro:
 
@@ -264,11 +266,11 @@ Além dos membros herdados de `Publication`, a classe `Book` define os seguintes
 
 - Um método `SetPrice`, que define os valores dos campos `bookPrice` e `ISOCurrencySymbol`. Estes são os valores retornados pela propriedade `Price` e `Currency`.
 
-- Substitui o método `ToString` (herdado de `Publication`) e os métodos <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> e <xref:System.Object.GetHashCode%2A> (herdados de <xref:System.Object>).
+- Substitui o método `ToString` (herdado de `Publication`) e os métodos <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> e <xref:System.Object.GetHashCode%2A> (herdados de <xref:System.Object>).
 
-  A menos que seja substituído, o método <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> testa a igualdade de referência. Ou seja, duas variáveis de objeto são consideradas iguais se fizerem referência ao mesmo objeto. No caso da classe `Book`, por outro lado, dois objetos `Book` devem ser iguais se eles tiverem o mesmo ISBN.
+  A menos que seja substituído, o método <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> testa a igualdade de referência. Ou seja, duas variáveis de objeto são consideradas iguais se fizerem referência ao mesmo objeto. No caso da classe `Book`, por outro lado, dois objetos `Book` devem ser iguais se eles tiverem o mesmo ISBN.
 
-  Ao substituir o método <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName>, substitua também o método <xref:System.Object.GetHashCode%2A>, que retorna um valor usado pelo tempo de execução para armazenar itens em coleções de hash para uma recuperação eficiente. O código de hash deve retornar um valor que é consistente com o teste de igualdade. Como substituímos <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> para retornar `true`, se as propriedades ISBN de dois objetos `Book` forem iguais, retornaremos o código hash computado chamando o método <xref:System.String.GetHashCode%2A> da cadeia de caracteres retornada pela propriedade `ISBN`.
+  Ao substituir o método <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>, substitua também o método <xref:System.Object.GetHashCode%2A>, que retorna um valor usado pelo tempo de execução para armazenar itens em coleções de hash para uma recuperação eficiente. O código de hash deve retornar um valor que é consistente com o teste de igualdade. Como substituímos <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> para retornar `true`, se as propriedades ISBN de dois objetos `Book` forem iguais, retornaremos o código hash computado chamando o método <xref:System.String.GetHashCode%2A> da cadeia de caracteres retornada pela propriedade `ISBN`.
 
 A figura a seguir ilustra o relacionamento entre a classe `Book` e `Publication`, sua classe base.
 
@@ -276,7 +278,7 @@ A figura a seguir ilustra o relacionamento entre a classe `Book` e `Publication`
 
 Agora podemos instanciar um objeto `Book`, chamar seus membros exclusivos e herdados e passá-lo como um argumento para um método que espera um parâmetro do tipo `Publication` ou do tipo `Book`, como mostra o exemplo a seguir.
 
-[!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
 
 ## <a name="designing-abstract-base-classes-and-their-derived-classes"></a>Criando classes base abstratas e suas classes derivadas
 <a name="abstract"></a>
@@ -285,20 +287,19 @@ No exemplo anterior, definimos uma classe base que forneceu uma implementação 
 
 Por exemplo, cada forma geométrica bidimensional fechada inclui duas propriedades: área, a extensão interna da forma; e perímetro, ou a distância entre as bordas da forma. A maneira com a qual essas propriedades são calculadas, no entanto, depende completamente da forma específica. Por exemplo, a fórmula para calcular o perímetro (ou circunferência) de um círculo, é muito diferente de um triângulo.
 
-O exemplo a seguir define uma classe base abstrata denominada `Shape` que define duas propriedades: `Area` e `Perimeter`. Observe que, além de marcar a classe com a palavra-chave [abstract](../language-reference/keywords/abstract.md), cada membro de instância também é marcado com a palavra-chave [abstract](../language-reference/keywords/abstract.md). Nesse caso, o `Shape` também substitui o método <xref:System.Object.ToString%2A?displayProperty=fullName> para retornar o nome do tipo, em vez de seu nome totalmente qualificado. E define dois membros estáticos, `GetArea` e `GetPerimeter`, que permitem a recuperação fácil da área e do perímetro de uma instância de qualquer classe derivada. Quando passamos uma instância de uma classe derivada para qualquer um desses métodos, o tempo de execução chama a substituição do método da classe derivada.
+O exemplo a seguir define uma classe base abstrata denominada `Shape` que define duas propriedades: `Area` e `Perimeter`. Observe que, além de marcar a classe com a palavra-chave [abstract](../language-reference/keywords/abstract.md), cada membro de instância também é marcado com a palavra-chave [abstract](../language-reference/keywords/abstract.md). Nesse caso, o `Shape` também substitui o método <xref:System.Object.ToString%2A?displayProperty=nameWithType> para retornar o nome do tipo, em vez de seu nome totalmente qualificado. E define dois membros estáticos, `GetArea` e `GetPerimeter`, que permitem a recuperação fácil da área e do perímetro de uma instância de qualquer classe derivada. Quando passamos uma instância de uma classe derivada para qualquer um desses métodos, o tempo de execução chama a substituição do método da classe derivada.
 
-[!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
 
 Em seguida, podemos derivar algumas classes de `Shape` que representam formas específicas. O exemplo a seguir define três classes, `Triangle`, `Rectangle` e `Circle`. Cada uma usa uma fórmula exclusiva para essa forma específica para calcular a área e o perímetro. Algumas das classes derivadas também definem propriedades, como `Rectangle.Diagonal` e `Circle.Diameter`, que são exclusivas para a forma que representam.
 
-[!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
 
 O exemplo a seguir usa objetos derivados de `Shape`. Ele cria uma matriz de objetos derivados de `Shape` e chama os métodos estáticos da classe `Shape`, que retorna valores de propriedade `Shape`. Observe que o tempo de execução recupera os valores das propriedades substituídas dos tipos derivados. O exemplo também converte cada objeto `Shape` na matriz ao seu tipo derivado e, se a conversão for bem-sucedida, recupera as propriedades dessa subclasse específica de `Shape`. 
 
-[!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
 ## <a name="see-also"></a>Consulte também
 
 [Classes e objetos](../tour-of-csharp/classes-and-objects.md)   
 [Herança (Guia de programação em C#)](../programming-guide/classes-and-structs/inheritance.md)
-

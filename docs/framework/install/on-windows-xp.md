@@ -8,30 +8,26 @@ ms.date: 08/03/2017
 ms.topic: article
 ms.prod: .net-framework
 ms.devlang: dotnet
+ms.openlocfilehash: f79ae387b123527b3795a2e12a68bd153b308f81
+ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
 ms.translationtype: HT
-ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
-ms.openlocfilehash: fe9d044efae87f212c620b9fa8c02221ca475d71
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/05/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/27/2017
 ---
-
-# <a name="install-the-net-framework-on-windows-xp"></a>Instalar o .NET Framework no Windows XP
+# <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Instalar o .NET Framework no Windows XP e Windows Server 2003
 
 > [!NOTE]
-> O Windows XP não tem mais suporte da Microsoft. Recomendamos a atualização para o Windows 10, que tem suporte e oferece suporte à versão mais recente do .NET Framework. Este documento é fornecido apenas como um guia de solução de problemas útil.
+> O Windows XP não tem mais suporte da Microsoft. É recomendável que atualizar para o Windows 10, que é suportado e inclui a versão mais recente do .NET Framework. Este documento é fornecido apenas como um guia de solução de problemas útil.
 
-Talvez você precise do .NET Framework para executar um aplicativo no Windows XP. Você pode usar as instruções a seguir para ajudar. As instruções dependem de qual versão do .NET Framework que você precisa.
+O .NET Framework é necessário para executar muitos aplicativos no Windows. Você pode usar as instruções a seguir para instalá-lo. Você pode ter chegado nesta página depois de tentar executar um aplicativo e ver a caixa de diálogo a seguir em seu computador.
 
-## <a name="net-framework-45-and-later"></a>.NET Framework 4.5 e posterior
+![Este aplicativo não pôde ser iniciado](./media/this-application-could-not-be-started.png)
 
-Você não pode instalar o .NET Framework 4.5 ou posterior no Windows XP. Em vez disso, você deve atualizar para uma versão posterior do Windows para usar uma versão posterior do .NET Framework.
-
-O .NET Framework 4.7 está incluído na [Atualização do Windows 10 para Criadores](https://www.microsoft.com/software-download/windows10).
+Essas instruções ajudará você a instalar as versões do .NET Framework que você precisa. O [do .NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) é a versão mais recente. Não há suporte no Windows XP e Windows Server 2003. Ele está incluído com o [criadores de atualização do Windows 10 estão](https://www.microsoft.com/software-download/windows10) e [1709 de versão do Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709).
 
 ## <a name="net-framework-403"></a>.NET Framework 4.0.3
 
-Você pode instalar o [.NET Framework 4.0.3](http://go.microsoft.com/fwlink/?LinkID=213834) no Windows XP. O .NET Framework 4.0.3 exige que o [.NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=213834) seja instalado primeiro. Ambas as versões do .NET Framework não têm mais suporte da Microsoft.
+O [do .NET Framework 4.0.3](http://go.microsoft.com/fwlink/?LinkID=213834) é a versão mais recente com suporte do .NET Framework no Windows XP e Windows Server 2003. O .NET Framework 4.0.3 exige que o [.NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=213834) seja instalado primeiro. Ambas as versões do .NET Framework não têm mais suporte da Microsoft.
 
 ## <a name="net-framework-4"></a>.NET Framework 4
 
@@ -43,7 +39,8 @@ Você pode instalar o [.NET Framework 3.5](http://go.microsoft.com/fwlink/?LinkI
 
 O .NET Framework 3.5 pode ser usado para executar aplicativos compilados para o .NET Framework 1.0 a 3.5.
 
-## <a name="help"></a>Ajuda
+## <a name="see-also"></a>Consulte também
 
-Você pode [entrar em contato com a Microsoft para obter ajuda](mailto:dotnet-install-help@microsoft.com?subject=Help installing .NET Framework) se não for possível instalar a versão correta do .NET Framework.
-
+[Baixar o .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)   
+[Solução de problemas de instalações e desinstalações bloqueadas do .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)   
+[Instalar o .NET Framework para desenvolvedores](guide-for-developers.md)

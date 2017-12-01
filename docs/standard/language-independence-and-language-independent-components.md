@@ -8,6 +8,9 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - language interoperability
 - Common Language Specification
@@ -16,16 +19,15 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: bc43226a508dfd0286c7667c02bdc2543346be9c
+ms.sourcegitcommit: 9c4b8d457ffb8d134c9d55c6d7682a0f22e2b9a8
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 270a75e0c4e3da5ea87196580ab09dbff24b80c6
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independência da linguagem e componentes independentes da linguagem
 O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor, você pode desenvolver em uma das muitas linguagens que segmentam o .NET Framework, como C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL e Windows PowerShell. É possível acessar os tipos e os membros das bibliotecas de classes desenvolvidas para o .NET Framework sem que seja necessário conhecer a linguagem em que foram originalmente gravados e sem precisar seguir as convenções da linguagem original. Se você for um desenvolvedor de componentes, o componente poderá ser acessado por qualquer aplicativo do .NET Framework, independentemente da linguagem.  
@@ -89,11 +91,13 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
  Por exemplo, inteiros sem sinal que não sejam <xref:System.Byte> não são compatíveis com CLS. Como a classe `Person` no exemplo a seguir expõe uma propriedade `Age` de tipo <xref:System.UInt16>, o código a seguir exibe um aviso do compilador.  
   
- [!code-csharp[Conceptual.CLSCompliant#1](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/public1.cs#1)] [!code-vb[Conceptual.CLSCompliant#1](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/public1.vb#1)]  
+ [!code-csharp[Conceptual.CLSCompliant#1](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/public1.cs#1)]
+ [!code-vb[Conceptual.CLSCompliant#1](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/public1.vb#1)]  
   
  É possível tornar a classe `Person` compatível com CLS alternado-se o tipo de propriedade `Age` de <xref:System.UInt16> para <xref:System.Int16>, que é um inteiro com sinal 16 bits compatível com CLS. Não é necessário alterar o tipo do campo `personAge` privado.  
   
- [!code-csharp[Conceptual.CLSCompliant#2](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/public2.cs#2)] [!code-vb[Conceptual.CLSCompliant#2](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/public2.vb#2)]  
+ [!code-csharp[Conceptual.CLSCompliant#2](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/public2.cs#2)]
+ [!code-vb[Conceptual.CLSCompliant#2](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/public2.vb#2)]  
   
  A interface pública de uma biblioteca consiste no seguinte:  
   
@@ -110,20 +114,20 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
 |Acessibilidade|[Acessibilidade de membro](#MemberAccess)|A acessibilidade não deverá ser alterada ao substituir métodos herdados, exceto na substituição de um método herdado de um assembly diferente com acessibilidade `family-or-assembly`. Nesse caso, a substituição deverá ter a acessibilidade `family`.|10|  
 |Acessibilidade|[Acessibilidade de membro](#MemberAccess)|A visibilidade e a acessibilidade de tipos e membros deverão ser de tal forma que os tipos na assinatura de qualquer membro sejam visíveis e acessíveis sempre que o próprio membro estiver visível e acessível. Por exemplo, um método público visível fora do assembly não deve ter um argumento cujo tipo seja visível somente dentro do assembly. A visibilidade e a acessibilidade dos tipos que compõem um tipo genérico instanciado usado na assinatura de qualquer membro deverão estar visíveis e acessíveis sempre que o próprio membro estiver visível e acessível. Por exemplo, um tipo genérico instanciado presente na assinatura de um membro visível fora do assembly não deverá ter um argumento genérico cujo tipo seja visível somente dentro do assembly.|12|  
 |Matrizes|[Matrizes](#arrays)|As matrizes deverão ter elementos com um tipo compatível com CLS e todas as dimensões da matriz deverão ter limites inferiores iguais a zero. Se o item for uma matriz, o tipo do elemento da matriz será necessário para diferenciar as sobrecargas. Quando a sobrecarga é baseada em dois ou mais tipos de matriz, os tipos de elemento deverão ser chamados de tipos.|16|  
-|Atributos|[Atributos](#attributes)|Os atributos deverão ser do tipo <xref:System.Attribute?displayProperty=fullName> ou de um tipo que o herde.|41|  
-|Atributos|[Atributos](#attributes)|A CLS só permite um subconjunto das codificações de atributos personalizados. Os únicos tipos que deverão ser exibidos nessas codificações são (consulte a Partição IV): <xref:System.Type?displayProperty=fullName>, <xref:System.String?displayProperty=fullName>, <xref:System.Char?displayProperty=fullName>, <xref:System.Boolean?displayProperty=fullName>, <xref:System.Byte?displayProperty=fullName>, <xref:System.Int16?displayProperty=fullName>, <xref:System.Int32?displayProperty=fullName>, <xref:System.Int64?displayProperty=fullName>, <xref:System.Single?displayProperty=fullName>, <xref:System.Double?displayProperty=fullName> e qualquer tipo de enumeração baseado em um tipo inteiro de base compatível com CLS.|34|  
+|Atributos|[Atributos](#attributes)|Os atributos deverão ser do tipo <xref:System.Attribute?displayProperty=nameWithType> ou de um tipo que o herde.|41|  
+|Atributos|[Atributos](#attributes)|A CLS só permite um subconjunto das codificações de atributos personalizados. Os únicos tipos que deverão ser exibidos nessas codificações são (consulte a Partição IV): <xref:System.Type?displayProperty=nameWithType>, <xref:System.String?displayProperty=nameWithType>, <xref:System.Char?displayProperty=nameWithType>, <xref:System.Boolean?displayProperty=nameWithType>, <xref:System.Byte?displayProperty=nameWithType>, <xref:System.Int16?displayProperty=nameWithType>, <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Int64?displayProperty=nameWithType>, <xref:System.Single?displayProperty=nameWithType>, <xref:System.Double?displayProperty=nameWithType> e qualquer tipo de enumeração baseado em um tipo inteiro de base compatível com CLS.|34|  
 |Atributos|[Atributos](#attributes)|A CLS não permite modificadores obrigatórios visíveis publicamente (`modreq`, consulte a Partição II), mas permite modificadores opcionais (`modopt`, consulte a Partição II) que ela não entende.|35|  
 |Construtores|[Construtores](#ctors)|Um construtor de objeto deverá chamar um construtor de instância de sua classe base antes de qualquer acesso aos dados da instância herdados. (Isso não se aplica a tipos de valor, que não precisam ter construtores.)|21|  
 |Construtores|[Construtores](#ctors)|Um construtor de objeto não deverá ser chamado, exceto como parte da criação de um objeto e um objeto não deve ser inicializado duas vezes.|22|  
 |Enumerações|[Enumerações](#enums)|O tipo subjacente de um enum deverá ser um tipo de inteiro CLS interno, o nome do campo deverá ser "value__", e esse campo deverá ser marcado como `RTSpecialName`.|7|  
-|Enumerações|[Enumerações](#enums)|Há dois tipos diferentes de enums, indicados pela presença ou pela ausência do atributo personalizado <xref:System.FlagsAttribute?displayProperty=fullName> (consulte a Biblioteca da Partição IV). Um representa valores de inteiro nomeados; o outro representa sinalizadores de bit nomeados que podem ser combinados para gerar um valor sem nome. O valor de um `enum` não está limitado aos valores especificados.|8|  
+|Enumerações|[Enumerações](#enums)|Há dois tipos diferentes de enums, indicados pela presença ou pela ausência do atributo personalizado <xref:System.FlagsAttribute?displayProperty=nameWithType> (consulte a Biblioteca da Partição IV). Um representa valores de inteiro nomeados; o outro representa sinalizadores de bit nomeados que podem ser combinados para gerar um valor sem nome. O valor de um `enum` não está limitado aos valores especificados.|8|  
 |Enumerações|[Enumerações](#enums)|Campos estáticos de literais de um enum deverão ter o tipo do próprio enum.|9|  
 |Eventos|[Eventos](#events)|Os métodos que implementam um evento deverão ser marcados como `SpecialName` em themetadata.|29|  
 |Eventos|[Eventos](#events)|A acessibilidade de um evento e de seus acessadores deverá ser idêntica.|30|  
 |Eventos|[Eventos](#events)|Os métodos `add` e `remove` de um evento deverão estar presentes ou ausentes.|31|  
-|Eventos|[Eventos](#events)|Os métodos `add` e `remove` de um evento deverão utilizar um parâmetro cada um cujo tipo define o tipo do evento, e ele deverá ser derivado de <xref:System.Delegate?displayProperty=fullName>.|32|  
+|Eventos|[Eventos](#events)|Os métodos `add` e `remove` de um evento deverão utilizar um parâmetro cada um cujo tipo define o tipo do evento, e ele deverá ser derivado de <xref:System.Delegate?displayProperty=nameWithType>.|32|  
 |Eventos|[Eventos](#events)|Os eventos deverão respeitar um padrão de nomenclatura específico. O atributo `SpecialName` mencionado na regra 29 da CLS deverá ser ignorado em comparações de nome apropriadas e respeitar as regras do identificador.|33|  
-|Exceções|[Exceções](#exceptions)|Os atributos acionados deverão ser do tipo <xref:System.Exception?displayProperty=fullName> ou de um tipo herdado dele. Mesmo assim, os métodos compatíveis com CLS não precisam bloquear a propagação de outros tipos de exceção.|40|  
+|Exceções|[Exceções](#exceptions)|Os atributos acionados deverão ser do tipo <xref:System.Exception?displayProperty=nameWithType> ou de um tipo herdado dele. Mesmo assim, os métodos compatíveis com CLS não precisam bloquear a propagação de outros tipos de exceção.|40|  
 |Geral|[Conformidade com CLS: as Regras](#Rules)|As regras CLS só se aplicam a essas partes de um tipo acessíveis ou visíveis fora do assembly de definição.|1|  
 |Geral|[Conformidade com CLS: as Regras](#Rules)|Membros de tipos incompatíveis com CLS não deverão ser marcados como compatíveis com CLS.|2|  
 |Genéricos|[Tipos e membros genéricos](#Generics)|Os tipos aninhados deverão ter, pelo menos, tantos parâmetros genéricos quanto o tipo delimitador. Os parâmetros genéricos em um tipo aninhado correspondem, por posição, aos parâmetros genéricos no tipo delimitador.|42|  
@@ -143,7 +147,7 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
 |Sobrecarga|[Sobrecargas](#overloads)|Somente propriedades e métodos podem ser sobrecarregados.|37|  
 |Sobrecarga|[Sobrecargas](#overloads)|As propriedades e os métodos só podem ser sobrecarregados com base no número e nos tipos de seus parâmetros, exceto os operadores de conversão chamados `op_Implicit` e `op_Explicit`, que também podem ser sobrecarregados com base no tipo de retorno.|38|  
 |Sobrecarga|--|Se dois ou mais métodos compatíveis com CLS declarados em um tipo tiverem o mesmo nome e, para um conjunto específico de instanciações de tipo, eles tiverem os mesmos tipos de parâmetro e retorno, esses métodos deverão ser semanticamente equivalentes nessas instanciações de tipo.|48|  
-|Tipos|[Tipo e assinaturas de membro de tipo](#Types)|<xref:System.Object?displayProperty=fullName> é compatível com CLS. Qualquer outra classe compatível com CLS deverá herdar de uma classe compatível com CLS.|23|  
+|Tipos|[Tipo e assinaturas de membro de tipo](#Types)|<xref:System.Object?displayProperty=nameWithType> é compatível com CLS. Qualquer outra classe compatível com CLS deverá herdar de uma classe compatível com CLS.|23|  
 |Propriedades|[Propriedades](#properties)|Os métodos que implementam os métodos getter e setter de uma propriedade deverão ser marcados como `SpecialName` nos metadados.|24|  
 |Propriedades|[Propriedades](#properties)|Os acessadores de uma propriedade deverão ser todos estáticos, virtuais ou de instância.|26|  
 |Propriedades|[Propriedades](#properties)|O tipo de uma propriedade deverá ser o tipo de retorno do getter e o tipo do último argumento do setter. Os tipos dos parâmetros da propriedade deverão ser os tipos dos parâmetros do getter e os tipos de todos os parâmetros, menos o parâmetro final do setter. Todos esses tipos deverão ser compatíveis com CLS e não deverão ser ponteiros gerenciados (por exemplo, não deverão ser passados por referência).|27|  
@@ -157,11 +161,12 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
 <a name="Types"></a>   
 ### <a name="types-and-type-member-signatures"></a>Tipos e assinaturas de membro de tipo  
- O tipo <xref:System.Object?displayProperty=fullName> é compatível com CLS e é o tipo base de todos os tipos de objeto no sistema de tipos do .NET Framework. A herança no .NET Framework é implícita (por exemplo, a classe <xref:System.String> herda implicitamente da classe <xref:System.Object>) ou explícita (por exemplo, a classe <xref:System.Globalization.CultureNotFoundException> herda explicitamente da classe <xref:System.ArgumentException>, que herda explicitamente da classe <xref:System.SystemException>, que herda explicitamente da classe <xref:System.Exception>). Para que um tipo derivado seja compatível com CLS, seu tipo base também deverá ser compatível com CLS.  
+ O tipo <xref:System.Object?displayProperty=nameWithType> é compatível com CLS e é o tipo base de todos os tipos de objeto no sistema de tipos do .NET Framework. A herança no .NET Framework é implícita (por exemplo, a classe <xref:System.String> herda implicitamente da classe <xref:System.Object>) ou explícita (por exemplo, a classe <xref:System.Globalization.CultureNotFoundException> herda explicitamente da classe <xref:System.ArgumentException>, que herda explicitamente da classe <xref:System.SystemException>, que herda explicitamente da classe <xref:System.Exception>). Para que um tipo derivado seja compatível com CLS, seu tipo base também deverá ser compatível com CLS.  
   
  O exemplo a seguir mostra um tipo derivado cujo tipo de base não é compatível com CLS. Ele define uma classe `Counter` base que usa um inteiro de 32 bits sem sinal como um contador. Como a classe fornece funcionalidade de contador encapsulando um inteiro sem sinal, a classe é marcada como não compatível com CLS. Assim, uma classe derivada, `NonZeroCounter`, também não é compatível com CLS.  
   
- [!code-csharp[Conceptual.CLSCompliant#12](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type3.cs#12)] [!code-vb[Conceptual.CLSCompliant#12](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type3.vb#12)]  
+ [!code-csharp[Conceptual.CLSCompliant#12](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type3.cs#12)]
+ [!code-vb[Conceptual.CLSCompliant#12](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type3.vb#12)]  
   
  Todos os tipos exibidos em assinaturas de membro, incluindo um tipo de retorno de método ou um tipo de propriedade, devem ser compatíveis com CLS. Além disso, para tipos genéricos:  
   
@@ -208,11 +213,13 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
  O exemplo a seguir ilustra o problema de conformidade com CLS em uma assinatura do método e em uma instanciação de tipo genérico. Ele define uma classe `InvoiceItem` com uma propriedade do tipo <xref:System.UInt32>, uma propriedade do tipo `Nullable(Of UInt32)` e um construtor com parâmetros de tipo <xref:System.UInt32> e `Nullable(Of UInt32)`. Você recebe quatro avisos do compilador ao tentar de compilar esse exemplo.  
   
- [!code-csharp[Conceptual.CLSCompliant#3](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type1.cs#3)] [!code-vb[Conceptual.CLSCompliant#3](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type1.vb#3)]  
+ [!code-csharp[Conceptual.CLSCompliant#3](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type1.cs#3)]
+ [!code-vb[Conceptual.CLSCompliant#3](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type1.vb#3)]  
   
  Para eliminar os avisos do compilador, substitua os tipos não compatíveis com CLS na interface pública `InvoiceItem` por tipos compatíveis:  
   
- [!code-csharp[Conceptual.CLSCompliant#4](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type2.cs#4)] [!code-vb[Conceptual.CLSCompliant#4](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type2.vb#4)]  
+ [!code-csharp[Conceptual.CLSCompliant#4](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type2.cs#4)]
+ [!code-vb[Conceptual.CLSCompliant#4](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type2.vb#4)]  
   
  Além dos tipos específicos listados, algumas categorias de tipos não são compatíveis com CLS. Entre eles estão tipos de ponteiro não gerenciados e tipos de ponteiro de função. O exemplo a seguir gera um aviso do compilador porque ele usa um ponteiro para um inteiro a fim de criar uma matriz de inteiros.  
   
@@ -228,13 +235,14 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
  Identificadores de linguagem de programação, como nomes de namespaces, tipos e membros, devem estar de acordo com o [Padrão Unicode 3.0, Relatório Técnico 15, Anexo 7](http://www.unicode.org/reports/tr15/tr15-18.html). Isso significa que:  
   
--   O primeiro caractere de um identificador pode ser qualquer letra maiúscula Unicode, letra minúscula, letra maiúscula do título, letra modificadora, outra letra ou o número da letra. Para obter informações sobre categorias de caracteres Unicode, consulte a enumeração <xref:System.Globalization.UnicodeCategory?displayProperty=fullName>.  
+-   O primeiro caractere de um identificador pode ser qualquer letra maiúscula Unicode, letra minúscula, letra maiúscula do título, letra modificadora, outra letra ou o número da letra. Para obter informações sobre categorias de caracteres Unicode, consulte a enumeração <xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType>.  
   
 -   Os caracteres subsequentes podem ser de qualquer uma das categorias, como o primeiro caractere e também podem incluir marcas sem espaçamento, marcas que combinam espaçamento, números decimais, pontuações de conector e códigos de formatação.  
   
  Antes de comparar identificadores, você deve filtrar códigos de formatação e converter os identificadores em Formulário C de Normalização de Unicode, porque um caractere único pode ser representado por várias unidades de código codificadas em UTF-16. As sequências de caracteres que produzem as mesmas unidades de código no Formulário C de Normalização de Unicode não são compatíveis com CLS. O exemplo a seguir define uma propriedade chamada `Å`, que consiste no caractere SÍMBOLO DE ANGSTROM (U+212B) e uma segunda propriedade chamada `Å`, que consiste no caractere LETRA LATINA MAIÚSCULA A COM ANEL SUPERIOR (U+00C5). Os compiladores do C# e do Visual Basic sinalizam o código-fonte como incompatível com CLS.  
   
- [!code-csharp[Conceptual.CLSCompliant#17](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/naming1.cs#17)] [!code-vb[Conceptual.CLSCompliant#17](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/naming1.vb#17)]  
+ [!code-csharp[Conceptual.CLSCompliant#17](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/naming1.cs#17)]
+ [!code-vb[Conceptual.CLSCompliant#17](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/naming1.vb#17)]  
   
  Os nomes de membro em um escopo específico (como os namespaces em um assembly, os tipos em um namespace ou os membros em um tipo) devem ser exclusivos, exceto os nomes resolvidos por meio de sobrecarga. Esse requisito é mais rígido do que o do Common Type System, que permite que vários membros em um escopo tenham nomes idênticos desde que sejam tipos diferentes de membros (por exemplo, um é um método e outro é um campo). Em particular, para membros de tipo:  
   
@@ -244,7 +252,8 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
  O exemplo a seguir ilustra o requisito de que nomes de membros devem ser exclusivos dentro de seu escopo. Ele define uma classe chamada `Converter` que inclui quatro membros chamados `Conversion`. Três são métodos e um é uma propriedade. O método que inclui um parâmetro <xref:System.Int64> tem um nome exclusivo, mas os dois métodos com um parâmetro <xref:System.Int32> não têm, porque o valor retornado não é considerado parte da assinatura de um membro. A propriedade `Conversion` também viola esse requisito porque as propriedades não podem ter o mesmo nome dos métodos sobrecarregados.  
   
- [!code-csharp[Conceptual.CLSCompliant#19](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/naming3.cs#19)] [!code-vb[Conceptual.CLSCompliant#19](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/naming3.vb#19)]  
+ [!code-csharp[Conceptual.CLSCompliant#19](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/naming3.cs#19)]
+ [!code-vb[Conceptual.CLSCompliant#19](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/naming3.vb#19)]  
   
  Linguagens individuais incluem palavras-chave exclusivas, portanto, linguagens que apontam para o Common Language Runtime também devem oferecer algum mecanismo para fazer referência a identificadores (como nomes de tipo) que coincidam com palavras-chave. Por exemplo, `case` é uma palavra-chave no C# e no Visual Basic. No entanto, o exemplo do Visual Basic a seguir pode remover a ambiguidade de uma classe chamada `case` da palavra-chave `case`, usando chaves de abertura e fechamento. Caso contrário, o exemplo produziria a mensagem de erro "A palavra-chave não é válida como um identificador", e não seria compilado.  
   
@@ -266,7 +275,8 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
  O exemplo a seguir define conversões explícitas e implícitas compatíveis com CLS. Ele cria uma classe `UDouble` que representa um número de ponto flutuante de precisão dupla com sinal. Ele fornece conversões implícitas de `UDouble` em <xref:System.Double> e conversões explícitas de `UDouble` em <xref:System.Single>, de <xref:System.Double> em `UDouble` e de <xref:System.Single> em `UDouble`. Ele também define um método `ToDouble` como uma alternativa ao operador de conversão implícita e os métodos `ToSingle`, `FromDouble` e `FromSingle` como alternativas aos operadores de conversão explícita.  
   
- [!code-csharp[Conceptual.CLSCompliant#15](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/convert1.cs#15)] [!code-vb[Conceptual.CLSCompliant#15](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/convert1.vb#15)]  
+ [!code-csharp[Conceptual.CLSCompliant#15](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/convert1.cs#15)]
+ [!code-vb[Conceptual.CLSCompliant#15](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/convert1.vb#15)]  
   
 <a name="arrays"></a>   
 ### <a name="arrays"></a>Matrizes  
@@ -274,15 +284,18 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
 -   Todas as dimensões de uma matriz devem ter um limite inferior igual a zero. O exemplo a seguir cria uma matriz não compatível com CLS com um limite inferior de um. Independentemente da presença do atributo <xref:System.CLSCompliantAttribute>, o compilador não detecta se a matriz retornada pelo método `Numbers.GetTenPrimes` não é compatível com CLS.  
   
-     [!code-csharp[Conceptual.CLSCompliant#8](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array1.cs#8)]  [!code-vb[Conceptual.CLSCompliant#8](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array1.vb#8)]  
+     [!code-csharp[Conceptual.CLSCompliant#8](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array1.cs#8)]
+     [!code-vb[Conceptual.CLSCompliant#8](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array1.vb#8)]  
   
 -   Todos os elementos de matriz devem consistir em tipos compatíveis com CLS. O exemplo a seguir define dois métodos que retornam matrizes não compatíveis com CLS. O primeiro retorna uma matriz de valores <xref:System.UInt32>. O segundo retorna uma matriz <xref:System.Object> que inclui valores <xref:System.Int32> e <xref:System.UInt32>. Embora o compilador identifique a primeira matriz como não compatível devido ao seu tipo <xref:System.UInt32>, ele não reconhece que a segunda matriz inclui elementos não compatíveis com CLS.  
   
-     [!code-csharp[Conceptual.CLSCompliant#9](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array2.cs#9)]  [!code-vb[Conceptual.CLSCompliant#9](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array2.vb#9)]  
+     [!code-csharp[Conceptual.CLSCompliant#9](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array2.cs#9)]
+     [!code-vb[Conceptual.CLSCompliant#9](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array2.vb#9)]  
   
 -   A resolução de sobrecarga para métodos que tenham parâmetros de matriz se baseia no fato de que são matrizes e em seu tipo de elemento. Por esse motivo, a seguinte definição de um método `GetSquares` sobrecarregado é compatível com CLS.  
   
-     [!code-csharp[Conceptual.CLSCompliant#10](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array3.cs#10)]  [!code-vb[Conceptual.CLSCompliant#10](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array3.vb#10)]  
+     [!code-csharp[Conceptual.CLSCompliant#10](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array3.cs#10)]
+     [!code-vb[Conceptual.CLSCompliant#10](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array3.vb#10)]  
   
 <a name="Interfaces"></a>   
 ### <a name="interfaces"></a>Interfaces  
@@ -294,13 +307,15 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
 -   Métodos que não são compatíveis com CLS. Por exemplo, a definição a seguir da interface inclui um método, `INumber.GetUnsigned`, que está marcado como não compatível com CLS. Este exemplo gera um aviso do compilador.  
   
-     [!code-csharp[Conceptual.CLSCompliant#6](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/interface2.cs#6)]  [!code-vb[Conceptual.CLSCompliant#6](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/interface2.vb#6)]  
+     [!code-csharp[Conceptual.CLSCompliant#6](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/interface2.cs#6)]
+     [!code-vb[Conceptual.CLSCompliant#6](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/interface2.vb#6)]  
   
      Devido a essa regra, os tipos compatíveis com CLS não são necessários para implementar membros não compatíveis com CLS. Se uma estrutura compatível com CLS expuser uma classe que implementa uma interface não compatível com CLS, ela também deverá fornecer implementações concretas de todos os membros não compatíveis com CLS.  
   
  Compiladores de linguagem compatíveis com CLS também devem permitir que uma classe forneça implementações separadas dos membros com o mesmo nome e a assinatura em várias interfaces.  O C# e o Visual Basic dão suporte a [implementações explícitas de interface](~/docs/csharp/programming-guide/interfaces/explicit-interface-implementation.md) para fornecer implementações diferentes de métodos com nomes idênticos. O Visual Basic também dá suporte à palavra-chave `Implements`, que permite que você designe explicitamente qual interface e membro um determinado membro implementa. O exemplo a seguir ilustra esse cenário, definindo uma classe `Temperature` que implementa as interfaces `ICelsius` e `IFahrenheit` como implementações explícitas de interface.  
   
- [!code-csharp[Conceptual.CLSCompliant#24](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/eii1.cs#24)] [!code-vb[Conceptual.CLSCompliant#24](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/eii1.vb#24)]  
+ [!code-csharp[Conceptual.CLSCompliant#24](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/eii1.cs#24)]
+ [!code-vb[Conceptual.CLSCompliant#24](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/eii1.vb#24)]  
   
 <a name="enums"></a>   
 ### <a name="enumerations"></a>Enumerações  
@@ -308,21 +323,22 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
 -   O tipo subjacente da enumeração deve ser um inteiro intrínseco compatível com CLS (<xref:System.Byte>, <xref:System.Int16>, <xref:System.Int32> ou <xref:System.Int64>). Por exemplo, o código a seguir tenta definir uma enumeração cujo tipo subjacente é <xref:System.UInt32> e gera um aviso do compilador.  
   
-     [!code-csharp[Conceptual.CLSCompliant#7](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/enum3.cs#7)]  [!code-vb[Conceptual.CLSCompliant#7](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/enum3.vb#7)]  
+     [!code-csharp[Conceptual.CLSCompliant#7](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/enum3.cs#7)]
+     [!code-vb[Conceptual.CLSCompliant#7](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/enum3.vb#7)]  
   
--   Um tipo de enumeração deve ter um campo de instância única chamado `Value__` que foi marcado com o atributo <xref:System.Reflection.FieldAttributes.RTSpecialName?displayProperty=fullName>. Isso permite que você referencie o valor do campo implicitamente.  
+-   Um tipo de enumeração deve ter um campo de instância única chamado `Value__` que foi marcado com o atributo <xref:System.Reflection.FieldAttributes.RTSpecialName?displayProperty=nameWithType>. Isso permite que você referencie o valor do campo implicitamente.  
   
 -   Uma enumeração inclui campos estáticos literais, cujos tipos correspondem ao tipo da própria enumeração. Por exemplo, se você definir uma enumeração `State` com valores de `State.On` e `State.Off`, `State.On` e `State.Off` serão campos literais estáticos cujo tipo será `State`.  
   
 -   Há dois tipos de enumeração:  
   
-    -   Uma enumeração que representa um conjunto de valores mutuamente excludentes, valores inteiros nomeados. Esse tipo de enumeração é indicado pela ausência do atributo personalizado <xref:System.FlagsAttribute?displayProperty=fullName>.  
+    -   Uma enumeração que representa um conjunto de valores mutuamente excludentes, valores inteiros nomeados. Esse tipo de enumeração é indicado pela ausência do atributo personalizado <xref:System.FlagsAttribute?displayProperty=nameWithType>.  
   
-    -   Uma enumeração que representa um conjunto de sinalizadores de bit que podem ser combinados para produzir um valor sem nome. Esse tipo de enumeração é indicado pela presença do atributo personalizado <xref:System.FlagsAttribute?displayProperty=fullName>.  
+    -   Uma enumeração que representa um conjunto de sinalizadores de bit que podem ser combinados para produzir um valor sem nome. Esse tipo de enumeração é indicado pela presença do atributo personalizado <xref:System.FlagsAttribute?displayProperty=nameWithType>.  
   
      Para obter mais informações, consulte a documentação da estrutura <xref:System.Enum>.  
   
--   O valor de uma enumeração não está limitado ao intervalo de seus valores especificados. Em outras palavras, o intervalo de valores em uma enumeração é o intervalo de seu valor subjacente. Você pode usar o método <xref:System.Enum.IsDefined%2A?displayProperty=fullName> para determinar se um valor especificado é membro de uma enumeração.  
+-   O valor de uma enumeração não está limitado ao intervalo de seus valores especificados. Em outras palavras, o intervalo de valores em uma enumeração é o intervalo de seu valor subjacente. Você pode usar o método <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> para determinar se um valor especificado é membro de uma enumeração.  
   
 <a name="members"></a>   
 ### <a name="type-members-in-general"></a>Membros de tipo em geral  
@@ -336,39 +352,46 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
  O exemplo a seguir ilustra o erro que é gerado quando o atributo <xref:System.CLSCompliantAttribute> é definido como `true` e `Person`, que é uma classe derivada de `Animal` tenta alterar a acessibilidade da propriedade `Species` de chave pública para privada. O exemplo será compilado com êxito se sua acessibilidade for alterada para pública.  
   
- [!code-csharp[Conceptual.CLSCompliant#28](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility1.cs#28)] [!code-vb[Conceptual.CLSCompliant#28](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility1.vb#28)]  
+ [!code-csharp[Conceptual.CLSCompliant#28](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility1.cs#28)]
+ [!code-vb[Conceptual.CLSCompliant#28](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility1.vb#28)]  
   
  Os tipos na assinatura de um membro deverão ser acessíveis sempre que o membro for acessível. Por exemplo, isso significa que um membro público não pode incluir um parâmetro cujo tipo seja privado, protegido ou interno. O exemplo a seguir ilustra o erro do compilador que resulta quando um construtor de classe `StringWrapper` expõe um valor de enumeração `StringOperationType` interno que determina como um valor de cadeia de caracteres deve ser encapsulado.  
   
- [!code-csharp[Conceptual.CLSCompliant#27](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility3.cs#27)] [!code-vb[Conceptual.CLSCompliant#27](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility3.vb#27)]  
+ [!code-csharp[Conceptual.CLSCompliant#27](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility3.cs#27)]
+ [!code-vb[Conceptual.CLSCompliant#27](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility3.vb#27)]  
   
 <a name="Generics"></a>   
 ### <a name="generic-types-and-members"></a>Tipos e membros genéricos  
  Tipos aninhados sempre têm pelo menos o mesmo número de parâmetros genéricos do tipo delimitador. Eles correspondem por posição aos parâmetros genéricos no tipo delimitador. O tipo genérico também pode incluir novos parâmetros genéricos.  
   
- A relação entre os parâmetros de tipo genérico de um tipo de contenção e seus tipos aninhados pode ser ocultada pela sintaxe de linguagens individuais. No exemplo a seguir, um tipo genérico `Outer<T>` contém duas classes aninhadas, `Inner1A` e `Inner1B<U>`. As chamadas para o método `ToString`, que cada classe herda de <xref:System.Object.ToString%2A?displayProperty=fullName>, mostra que cada classe aninhada inclui parâmetros de tipo de sua classe de contenção.  
+ A relação entre os parâmetros de tipo genérico de um tipo de contenção e seus tipos aninhados pode ser ocultada pela sintaxe de linguagens individuais. No exemplo a seguir, um tipo genérico `Outer<T>` contém duas classes aninhadas, `Inner1A` e `Inner1B<U>`. As chamadas para o método `ToString`, que cada classe herda de <xref:System.Object.ToString%2A?displayProperty=nameWithType>, mostra que cada classe aninhada inclui parâmetros de tipo de sua classe de contenção.  
   
- [!code-csharp[Conceptual.CLSCompliant#29](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/nestedgenerics2.cs#29)] [!code-vb[Conceptual.CLSCompliant#29](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/nestedgenerics2.vb#29)]  
+ [!code-csharp[Conceptual.CLSCompliant#29](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/nestedgenerics2.cs#29)]
+ [!code-vb[Conceptual.CLSCompliant#29](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/nestedgenerics2.vb#29)]  
   
  Os nomes de tipo genérico são codificados no formato *name\`n*, em que *name* é o nome do tipo, \` é um literal de caractere e *n* é o número de parâmetros declarados no tipo ou, para tipos genéricos aninhados, o número de parâmetros de tipo recém-introduzidos. Essa codificação de nomes de tipo genéricos é principalmente de interesse de desenvolvedores que usam a reflexão para acessar tipos genéricos compatíveis com CLS em uma biblioteca.  
   
  Se as restrições forem aplicadas a um tipo genérico, qualquer tipo usado como restrição também deverá ser compatível com CLS. O exemplo a seguir define uma classe chamada `BaseClass` que não é compatível com CLS e uma classe genérica chamada `BaseCollection` cujo parâmetro de tipo deve derivar de `BaseClass`. Mas como `BaseClass` não é compatível com CLS, o compilador emite um aviso.  
   
- [!code-csharp[Conceptual.CLSCompliant#34](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics5.cs#34)] [!code-vb[Conceptual.CLSCompliant#34](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics5.vb#34)]  
+ [!code-csharp[Conceptual.CLSCompliant#34](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics5.cs#34)]
+ [!code-vb[Conceptual.CLSCompliant#34](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics5.vb#34)]  
   
  Se um tipo genérico for derivado de um tipo de base genérico, ele deverá redeclarar todas as restrições, para assegurar que as restrições no tipo de base também sejam atendidas. O exemplo a seguir define um `Number<T>` que pode representar qualquer tipo numérico. Ele também define uma classe `FloatingPoint<T>` que representa um valor de ponto flutuante. No entanto, o código-fonte falha na compilação porque não aplica a restrição em `Number<T>` (esse T deve ser um tipo de valor) a `FloatingPoint<T>`.  
   
- [!code-csharp[Conceptual.CLSCompliant#30](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics2a.cs#30)] [!code-vb[Conceptual.CLSCompliant#30](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics2a.vb#30)]  
+ [!code-csharp[Conceptual.CLSCompliant#30](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics2a.cs#30)]
+ [!code-vb[Conceptual.CLSCompliant#30](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics2a.vb#30)]  
   
  O exemplo será compilado com êxito se a restrição for adicionada à classe `FloatingPoint<T>`.  
   
- [!code-csharp[Conceptual.CLSCompliant#31](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics2.cs#31)] [!code-vb[Conceptual.CLSCompliant#31](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics2.vb#31)]  
+ [!code-csharp[Conceptual.CLSCompliant#31](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics2.cs#31)]
+ [!code-vb[Conceptual.CLSCompliant#31](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics2.vb#31)]  
   
  A Common Language Specification impõe um modelo por instanciação conservador para tipos aninhados e membros protegidos. Tipos genéricos abertos não podem expor campos ou membros com assinaturas que contenham uma instanciação específica de um tipo genérico aninhado, protegido. Tipos não genéricos que estendam uma instanciação específica de uma interface ou classe base genérica não podem expor campos ou membros com assinaturas que contenham uma instanciação diferente de um tipo genérico aninhado e protegido.  
   
  O exemplo a seguir define um tipo genérico, `C1<T>` (ou `C1(Of T)` no Visual Basic) e uma classe protegida, `C1<T>.N` (ou `C1(Of T).N` no Visual Basic). `C1<T>` possui dois métodos, `M1` e `M2`. No entanto, `M1` é sem conformidade com CLS porque tenta retornar um objeto `C1<int>.N` (ou `C1(Of Integer).N`) de C1\<T> (ou `C1(Of T)`). Uma segunda classe, `C2`, é derivada de `C1<long>` (ou de `C1(Of Long)`). Tem dois métodos, `M3` e `M4`. No entanto, `M3` não é compatível com CLS porque tenta retornar um objeto `C1<int>.N` (ou `C1(Of Integer).N`) de uma subclasse de `C1<long>`. Os compiladores de linguagens podem ser ainda mais restritivos. Neste exemplo, o Visual Basic exibe um erro ao tentar compilar `M4`.  
   
- [!code-csharp[Conceptual.CLSCompliant#32](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics4.cs#32)] [!code-vb[Conceptual.CLSCompliant#32](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics4.vb#32)]  
+ [!code-csharp[Conceptual.CLSCompliant#32](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics4.cs#32)]
+ [!code-vb[Conceptual.CLSCompliant#32](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics4.vb#32)]  
   
 <a name="ctors"></a>   
 ### <a name="constructors"></a>Construtores  
@@ -378,9 +401,10 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
      Normalmente, os compiladores aplicam essa regra independentemente da conformidade com CLS, conforme mostrado no exemplo a seguir. Ele cria uma classe `Doctor` que é derivada de uma classe `Person`, mas a classe `Doctor` falha ao chamar o construtor de classe `Person` para inicializar campos herdados da instância.  
   
-     [!code-csharp[Conceptual.CLSCompliant#11](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/ctor1.cs#11)]  [!code-vb[Conceptual.CLSCompliant#11](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/ctor1.vb#11)]  
+     [!code-csharp[Conceptual.CLSCompliant#11](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/ctor1.cs#11)]
+     [!code-vb[Conceptual.CLSCompliant#11](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/ctor1.vb#11)]  
   
--   Um construtor de objeto não pode ser chamado, exceto para criar um objeto. Além disso, um objeto não pode ser inicializado duas vezes. Por exemplo, isso significa que <xref:System.Object.MemberwiseClone%2A?displayProperty=fullName> e métodos de desserialização como <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=fullName> não devem chamar construtores.  
+-   Um construtor de objeto não pode ser chamado, exceto para criar um objeto. Além disso, um objeto não pode ser inicializado duas vezes. Por exemplo, isso significa que <xref:System.Object.MemberwiseClone%2A?displayProperty=nameWithType> e métodos de desserialização como <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType> não devem chamar construtores.  
   
 <a name="properties"></a>   
 ### <a name="properties"></a>Propriedades  
@@ -394,11 +418,11 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
 <a name="events"></a>   
 ### <a name="events"></a>Eventos  
- Um evento é definido por seu nome e tipo. O tipo de evento é um delegado que é usado para indicar o evento. Por exemplo, o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> é do tipo <xref:System.ResolveEventHandler>. Além do evento em si, três métodos com nomes com base no nome do evento fornecem a implementação do evento e estão marcados como `SpecialName` nos metadados do assembly:  
+ Um evento é definido por seu nome e tipo. O tipo de evento é um delegado que é usado para indicar o evento. Por exemplo, o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> é do tipo <xref:System.ResolveEventHandler>. Além do evento em si, três métodos com nomes com base no nome do evento fornecem a implementação do evento e estão marcados como `SpecialName` nos metadados do assembly:  
   
--   Um método para adicionar um manipulador de eventos, chamado `add_`*EventName*. Por exemplo, o método de assinatura do evento para o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> é chamado `add_AssemblyResolve`.  
+-   Um método para adicionar um manipulador de eventos, chamado `add_`*EventName*. Por exemplo, o método de assinatura do evento para o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> é chamado `add_AssemblyResolve`.  
   
--   Um método para remover um manipulador de eventos, chamado `remove_`*EventName*. Por exemplo, o método de remoção para o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> é chamado `remove_AssemblyResolve`.  
+-   Um método para remover um manipulador de eventos, chamado `remove_`*EventName*. Por exemplo, o método de remoção para o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> é chamado `remove_AssemblyResolve`.  
   
 -   Um método para indicar que o evento ocorreu, chamado `raise_`*EventName*.  
   
@@ -409,7 +433,8 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
  O exemplo a seguir define uma classe compatível com CLS chamada `Temperature` que acionará um evento `TemperatureChanged` se a mudança de temperatura entre as duas leituras for igual ou exceder o valor de limite. A classe `Temperature` define explicitamente um método `raise_TemperatureChanged` para executar seletivamente os manipuladores de eventos.  
   
- [!code-csharp[Conceptual.CLSCompliant#20](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/event1.cs#20)] [!code-vb[Conceptual.CLSCompliant#20](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/event1.vb#20)]  
+ [!code-csharp[Conceptual.CLSCompliant#20](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/event1.cs#20)]
+ [!code-vb[Conceptual.CLSCompliant#20](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/event1.vb#20)]  
   
 <a name="overloads"></a>   
 ### <a name="overloads"></a>Sobrecargas  
@@ -426,21 +451,24 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
 <a name="exceptions"></a>   
 ### <a name="exceptions"></a>Exceções  
- Objetos de exceção devem derivar de <xref:System.Exception?displayProperty=fullName> ou de outro tipo derivado de <xref:System.Exception?displayProperty=fullName>. O exemplo a seguir ilustra o erro do compilador que resulta quando uma classe personalizada chamada `ErrorClass` é usada para tratamento de exceções.  
+ Objetos de exceção devem derivar de <xref:System.Exception?displayProperty=nameWithType> ou de outro tipo derivado de <xref:System.Exception?displayProperty=nameWithType>. O exemplo a seguir ilustra o erro do compilador que resulta quando uma classe personalizada chamada `ErrorClass` é usada para tratamento de exceções.  
   
- [!code-csharp[Conceptual.CLSCompliant#13](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/exceptions1.cs#13)] [!code-vb[Conceptual.CLSCompliant#13](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/exceptions1.vb#13)]  
+ [!code-csharp[Conceptual.CLSCompliant#13](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/exceptions1.cs#13)]
+ [!code-vb[Conceptual.CLSCompliant#13](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/exceptions1.vb#13)]  
   
- Para corrigir este erro, a classe `ErrorClass` deve herdar de <xref:System.Exception?displayProperty=fullName>. Além disso, a propriedade `Message` deve ser substituída. O exemplo a seguir corrige esses erros para definir uma classe `ErrorClass` que seja compatível com CLS.  
+ Para corrigir este erro, a classe `ErrorClass` deve herdar de <xref:System.Exception?displayProperty=nameWithType>. Além disso, a propriedade `Message` deve ser substituída. O exemplo a seguir corrige esses erros para definir uma classe `ErrorClass` que seja compatível com CLS.  
   
- [!code-csharp[Conceptual.CLSCompliant#14](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/exceptions2.cs#14)] [!code-vb[Conceptual.CLSCompliant#14](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/exceptions2.vb#14)]  
+ [!code-csharp[Conceptual.CLSCompliant#14](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/exceptions2.cs#14)]
+ [!code-vb[Conceptual.CLSCompliant#14](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/exceptions2.vb#14)]  
   
 <a name="attributes"></a>   
 ### <a name="attributes"></a>Atributos  
- Em assemblies do .NET Framework, atributos personalizados fornecem um mecanismo extensível para armazenamento de atributos personalizados e recuperação de metadados sobre objetos de programação, como assemblies, tipos, membros e parâmetros de método. Atributos personalizados devem derivar de <xref:System.Attribute?displayProperty=fullName> ou de um tipo derivado de <xref:System.Attribute?displayProperty=fullName>.  
+ Em assemblies do .NET Framework, atributos personalizados fornecem um mecanismo extensível para armazenamento de atributos personalizados e recuperação de metadados sobre objetos de programação, como assemblies, tipos, membros e parâmetros de método. Atributos personalizados devem derivar de <xref:System.Attribute?displayProperty=nameWithType> ou de um tipo derivado de <xref:System.Attribute?displayProperty=nameWithType>.  
   
- O exemplo a seguir viola essa regra. Ele define uma classe `NumericAttribute` que não deriva de <xref:System.Attribute?displayProperty=fullName>. Observe que um erro de compilador só acontece quando o atributo não compatível com CLS é aplicado e não quando a classe é definida.  
+ O exemplo a seguir viola essa regra. Ele define uma classe `NumericAttribute` que não deriva de <xref:System.Attribute?displayProperty=nameWithType>. Observe que um erro de compilador só acontece quando o atributo não compatível com CLS é aplicado e não quando a classe é definida.  
   
- [!code-csharp[Conceptual.CLSCompliant#18](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/attribute1.cs#18)] [!code-vb[Conceptual.CLSCompliant#18](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/attribute1.vb#18)]  
+ [!code-csharp[Conceptual.CLSCompliant#18](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/attribute1.cs#18)]
+ [!code-vb[Conceptual.CLSCompliant#18](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/attribute1.vb#18)]  
   
  O construtor ou as propriedades de um atributo compatível com CLS podem expor somente os seguintes tipos:  
   
@@ -468,11 +496,12 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
  O exemplo a seguir define uma classe `DescriptionAttribute` que é derivada de <xref:System.Attribute>. O construtor de classe tem um parâmetro do tipo `Descriptor`, portanto a classe não é compatível com CLS. Observe que o compilador do C# emite um aviso, mas compila com êxito, enquanto o compilador do Visual Basic nem emite um aviso ou um erro.  
   
- [!code-csharp[Conceptual.CLSCompliant#33](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/attribute2.cs#33)] [!code-vb[Conceptual.CLSCompliant#33](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/attribute2.vb#33)]  
+ [!code-csharp[Conceptual.CLSCompliant#33](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/attribute2.cs#33)]
+ [!code-vb[Conceptual.CLSCompliant#33](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/attribute2.vb#33)]  
   
 <a name="CLSAttribute"></a>   
 ## <a name="the-clscompliantattribute-attribute"></a>O atributo CLSCompliantAttribute  
- O atributo <xref:System.CLSCompliantAttribute> é usado para indicar se um elemento do programa está em conformidade com a Common Language Specification. O construtor <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=fullName> inclui um único parâmetro necessário, `isCompliant`, que indica se o elemento de programa é compatível com CLS.  
+ O atributo <xref:System.CLSCompliantAttribute> é usado para indicar se um elemento do programa está em conformidade com a Common Language Specification. O construtor <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType> inclui um único parâmetro necessário, `isCompliant`, que indica se o elemento de programa é compatível com CLS.  
   
  No tempo de compilação, o compilador detecta os elementos não compatíveis que provavelmente são compatíveis com CLS e emite um aviso. O compilador não emite avisos para tipos ou membros explicitamente declarados como não compatíveis.  
   
@@ -483,9 +512,9 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
 -   Para garantir que a interface pública da biblioteca de componentes exponha apenas elementos de programa que são compatíveis com CLS. Se os elementos não forem compatíveis com CLS, os compiladores geralmente emitirão um aviso.  
   
 > [!WARNING]
->  Em alguns casos, os compiladores de linguagem aplicam as regras de compatibilidade com CLS independentemente do uso ou não do atributo <xref:System.CLSCompliantAttribute>. Por exemplo, definir um membro estático em uma interface viola uma regra CLS. No entanto, se você definir um membro `static` (no C#) ou `Shared` (no Visual Basic) em uma interface, os compiladores do C# e do Visual Basic exibirão uma mensagem de erro e não compilarão o aplicativo.  
+>  Em alguns casos, os compiladores de linguagem aplicam as regras de compatibilidade com CLS independentemente do uso ou não do atributo <xref:System.CLSCompliantAttribute>. Por exemplo, definir um membro estático em uma interface viola uma regra CLS. Com essa relação, se você definir um `static` (em c#) ou `Shared` (no Visual Basic) membros em uma interface, tanto os compiladores c# e Visual Basic exibem uma mensagem de erro e falham ao compilar o aplicativo.  
   
- O atributo <xref:System.CLSCompliantAttribute> é marcado com um atributo <xref:System.AttributeUsageAttribute> que tem um valor de <xref:System.AttributeTargets.All?displayProperty=fullName>. Esse valor permite que você aplique o atributo <xref:System.CLSCompliantAttribute> a qualquer elemento de programa, incluindo assemblies, módulos, tipos (classes, estruturas, interfaces, enumerações e delegados), membros de tipo (construtores, métodos, propriedades, campos e eventos), parâmetros, parâmetros genéricos e valores de retorno. No entanto, na prática, você deve aplicar o atributo somente a assemblies, tipos e membros de tipo. Caso contrário, os compiladores ignoram o atributo e continuam gerando avisos do compilador sempre que encontrarem um parâmetro não compatível, parâmetro genérico ou valor retornado na interface pública da biblioteca.  
+ O atributo <xref:System.CLSCompliantAttribute> é marcado com um atributo <xref:System.AttributeUsageAttribute> que tem um valor de <xref:System.AttributeTargets.All?displayProperty=nameWithType>. Esse valor permite que você aplique o atributo <xref:System.CLSCompliantAttribute> a qualquer elemento de programa, incluindo assemblies, módulos, tipos (classes, estruturas, interfaces, enumerações e delegados), membros de tipo (construtores, métodos, propriedades, campos e eventos), parâmetros, parâmetros genéricos e valores de retorno. No entanto, na prática, você deve aplicar o atributo somente a assemblies, tipos e membros de tipo. Caso contrário, os compiladores ignoram o atributo e continuam gerando avisos do compilador sempre que encontrarem um parâmetro não compatível, parâmetro genérico ou valor retornado na interface pública da biblioteca.  
   
  O valor do atributo <xref:System.CLSCompliantAttribute> é herdado pelos elementos contidos no programa. Por exemplo, se um assembly for marcado como compatível com CLS, seus tipos também serão compatíveis com CLS. Se um tipo for marcado como compatível com CLS, seus membros e tipos aninhados também serão compatíveis com CLS.  
   
@@ -507,7 +536,8 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
   
  O exemplo a seguir usa o atributo <xref:System.CLSCompliantAttribute> para definir um assembly compatível com CLS e um tipo, `CharacterUtilities`, que tem dois membros não compatíveis com CLS. Como ambos os membros são marcados com o atributo `CLSCompliant(false)`, o compilador não produz avisos. A classe também fornece uma alternativa compatível com CLS para ambos os métodos. Normalmente, nós adicionaríamos apenas duas sobrecargas ao método `ToUTF16` para fornecer alternativas compatíveis com CLS. Entretanto, como os métodos não podem ser sobrecarregados com base no valor retornado, os nomes dos métodos compatíveis com CLS são diferentes dos nomes dos métodos não compatíveis.  
   
- [!code-csharp[Conceptual.CLSCompliant#35](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/indicator3.cs#35)] [!code-vb[Conceptual.CLSCompliant#35](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/indicator3.vb#35)]  
+ [!code-csharp[Conceptual.CLSCompliant#35](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/indicator3.cs#35)]
+ [!code-vb[Conceptual.CLSCompliant#35](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/indicator3.vb#35)]  
   
  Se você estiver desenvolvendo um aplicativo em vez de uma biblioteca (ou seja, se não estiver expondo tipos ou membros que possam ser consumidos por outros desenvolvedores de aplicativos), a conformidade com CLS dos elementos do programa que seu aplicativo consome só serão de interesse se sua linguagem não der suporte a eles. Nesse caso, seu compilador de linguagem gerará um erro quando você tentar usar um elemento não compatível com CLS.  
   
@@ -547,7 +577,8 @@ link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll
   
  O exemplo a seguir chama os métodos `NumericLib.NearZero` e `StringLib.ToTitleCase`. Observe que o código do Visual Basic e o código do C# podem acessar os métodos em ambas as classes.  
   
- [!code-csharp[Conceptual.CrossLanguage#3](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.crosslanguage/cs/useutilities1.cs#3)] [!code-vb[Conceptual.CrossLanguage#3](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.crosslanguage/vb/useutilities1.vb#3)]  
+ [!code-csharp[Conceptual.CrossLanguage#3](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.crosslanguage/cs/useutilities1.cs#3)]
+ [!code-vb[Conceptual.CrossLanguage#3](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.crosslanguage/vb/useutilities1.vb#3)]  
   
  Para compilar o código do Visual Basic, use este comando:  
   
@@ -563,4 +594,3 @@ csc example.cs /r:UtilityLib.dll
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.CLSCompliantAttribute>
-

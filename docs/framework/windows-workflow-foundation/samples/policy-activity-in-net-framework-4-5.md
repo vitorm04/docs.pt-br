@@ -12,11 +12,11 @@ caps.latest.revision: "15"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 1374bc086923b9ffef288a7fa90427710bdd91b4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: d12a3d5a74fa8b0d266fb2ba9494e1a5775f0411
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="policy-activity-in-net-framework-45"></a>Atividade de política no .NET Framework 4.5
 A atividade Policy4 permite que [!INCLUDE[wf2](../../../../includes/wf2-md.md)] em objetos de [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] WF (3,5) <xref:System.Workflow.Activities.Rules.RuleSet> é usado em [!INCLUDE[wf2](../../../../includes/wf2-md.md)] em [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 4,5 (WCF) diretamente usando o mecanismo de regras que é enviado em WF 3,5. Usando esta atividade, você pode criar e executar um WF 3,5 <xref:System.Workflow.Activities.Rules.RuleSet>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WF 3,5 do mecanismo incluído como parte do Windows Workflow Foundation, lido por favor a introdução ao mecanismo das regras do Windows Workflow Foundation. Para obter mais informações sobre como migrar regras WF no [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], leia [orientação de migração](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
@@ -87,6 +87,4 @@ public class Policy4Activity<TResult>: NativeActivity<TResult>
   
 3.  Para compilar o projeto, pressione CTRL+SHIFT+B.  
   
-4.  Para executar o projeto, pressione CTRL+F5.  
-  
-## <a name="see-also"></a>Consulte também
+4.  Para executar o projeto, pressione CTRL+F5.

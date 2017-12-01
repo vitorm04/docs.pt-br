@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: d208867789fc78a82a2e339596a5692280d95ff3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 07b7381ddc94e3bc40a4eb0ed546f9526b57600a
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guia de implantação do .NET Framework para administradores
 Este artigo passo a passo descreve como um administrador de sistemas pode implantar o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e suas dependências de sistema pela rede usando o Microsoft System Center Configuration Manager. Este artigo pressupõe que todos os computadores clientes de destino atendem aos requisitos mínimos do .NET Framework. Para obter uma lista dos requisitos de hardware e software para instalar o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], consulte [Requisitos do sistema](../../../docs/framework/get-started/system-requirements.md).  
@@ -39,8 +32,8 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
   
  Esse tópico contém as seguintes seções:  
   
- [O processo de implantação](#the_deployment_process)   
- [Implantando o .NET Framework](#deploying_in_a_test_environment)   
+ [O processo de implantação](#the_deployment_process)  
+ [Implantando o .NET Framework](#deploying_in_a_test_environment)  
  [Criar uma coleção](#creating_a_collection)  
  [Criar um pacote e um programa](#creating_a_package)  
  [Selecionar um ponto de distribuição](#select_dist_point)  
@@ -145,8 +138,8 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
 |**/norestart**|Impede que o programa de instalação reinicialize automaticamente. Se você usar essa opção, o Configuration Manager deverá processar a reinicialização do computador.|  
 |**/chainingpackage** *PackageName*|Especifica o nome do pacote que está fazendo o encadeamento. Essa informação é relatada com outras informações da sessão de instalação para aqueles que se inscreveram no [Programa de Aperfeiçoamento da Experiência do Usuário da Microsoft (CEIP)](http://go.microsoft.com/fwlink/p/?LinkId=248244). Se o nome do pacote contiver espaços, use aspas duplas como delimitadores: **/chainingpackage "Chaining Product"**.|  
   
- Estas etapas criam um pacote chamado .NET Framework 4.5. O programa implanta uma instalação silenciosa do .NET Framework 4.5. Em uma instalação silenciosa, os usuários não interagem com o processo de instalação e a aplicação encadeada precisa capturar o código de retorno e lidar com a reinicialização; consulte [Obtendo informações de progresso de um pacote de instalação](http://go.microsoft.com/fwlink/?LinkId=179606) na Biblioteca MSDN.  
-  
+ Estas etapas criam um pacote chamado .NET Framework 4.5. O programa implanta uma instalação silenciosa do .NET Framework 4.5. Em uma instalação silenciosa, os usuários não interagem com o processo de instalação e o aplicativo encadeamento tem o código de retorno de capturar e manipular a reinicialização; consulte [Obtendo informações sobre o andamento de um pacote de instalação](http://go.microsoft.com/fwlink/?LinkId=179606).  
+ 
 <a name="select_dist_point"></a>   
 ### <a name="select-a-distribution-point"></a>Selecione um ponto de distribuição  
  Para distribuir o pacote e o programa para computadores clientes de um servidor, primeiro designe um sistema de site como um ponto de distribuição e distribua o pacote para o ponto de distribuição.  
@@ -236,7 +229,7 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
 ### <a name="log-file-locations"></a>Localizações dos arquivos de log  
  Os seguintes arquivos de log são gerados durante a configuração do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]:  
   
- %temp%\Microsoft .NET Framework 4.5*.txt   
+ %temp%\Microsoft .NET Framework 4.5*.txt  
  %temp%\Microsoft .NET Framework 4.5\*.html  
   
  Você pode usar a [ferramenta de coleta de logs](http://www.microsoft.com/download/details.aspx?id=12493) para coletar os arquivos de log do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e criar um arquivo de gabinete compactado (.cab) que reduz o tamanho dos arquivos.  
@@ -272,6 +265,5 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
 -   [Códigos de resultado do Windows Update Agent](http://technet.microsoft.com/library/cc720442.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
- [Guia de implantação para desenvolvedores](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
+ [Guia de implantação para desenvolvedores](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
  [Requisitos do sistema](../../../docs/framework/get-started/system-requirements.md)
-

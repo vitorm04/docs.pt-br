@@ -6,18 +6,15 @@ ms.author: mairaw
 ms.date: 08/15/2016
 ms.topic: article
 ms.prod: .net
+ms.openlocfilehash: fa001492aa76c4690faca23cb2a1e0467a857a6d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: fe2c7ff4055779a000b68a68333f3e4d06381410
-ms.openlocfilehash: aa06ff8253f22c5c867d4ba12c0a132269e04a97
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor
 
-
-Há duas implementações com suporte para a compilação de aplicativos de servidor com o .NET: .NET Framework e .NET Core. Ambas compartilham muitos dos mesmos componentes e você pode compartilhar código entre as duas. No entanto, há diferenças fundamentais entre as duas e sua escolha depende do que você deseja realizar. Este artigo fornece diretrizes sobre quando usar cada uma.
-
+Há duas implementações com suporte para a compilação de aplicativos de servidor com o .NET: .NET Framework e .NET Core. Ambas compartilham muitos dos mesmos componentes e você pode compartilhar código entre as duas. No entanto, há diferenças fundamentais entre as duas e sua escolha depende do que você deseja realizar.  Este artigo fornece diretrizes sobre quando usar cada uma.
 
 Use o .NET Core para o aplicativo para servidores se:
 
@@ -42,7 +39,7 @@ As seguintes seções oferecem uma explicação mais detalhada sobre os motivos 
 
 Se seu aplicativo (web/serviço) precisa ser executado em várias plataformas (Windows, Linux e macOS), use o .NET Core.
 
-O .NET Core dá suporte aos sistemas operacionais mencionados anteriormente como sua estação de trabalho de desenvolvimento. O Visual Studio fornece um IDE (ambiente de desenvolvimento integrado) para Windows e Mac. Você também pode usar o Visual Studio Code, que é executado no Windows, Linux e macOS. O Visual Studio Code dá suporte ao .NET Core, incluindo IntelliSense e depuração. A maioria dos editores de terceiros, como Sublime, Emacs e VI, trabalham com o .NET Core. Esses editores de terceiros obtém o IntelliSense do editor usando o [Omnisharp](http://www.omnisharp.net/). Também é possível evitar o uso de editores de código e usar diretamente as [ferramentas de CLI do .NET Core](../core/tools/index.md), disponíveis para todas as plataformas com suporte.
+O .NET Core dá suporte aos sistemas operacionais mencionados anteriormente como sua estação de trabalho de desenvolvimento. Visual Studio fornece um ambiente de desenvolvimento integrado (IDE) para o Windows e macOS. Você também pode usar o Visual Studio Code, que é executado no Windows, Linux e macOS. O Visual Studio Code dá suporte ao .NET Core, incluindo IntelliSense e depuração. A maioria dos editores de terceiros, como Sublime, Emacs e VI, trabalham com o .NET Core. Esses editores de terceiros obtém o IntelliSense do editor usando o [Omnisharp](http://www.omnisharp.net/). Também é possível evitar o uso de editores de código e usar diretamente as [ferramentas de CLI do .NET Core](../core/tools/index.md), disponíveis para todas as plataformas com suporte.
 
 ### <a name="microservices-architecture"></a>Arquitetura de microsserviços
 
@@ -66,9 +63,7 @@ O desempenho e a escalabilidade são especialmente relevantes para arquiteturas 
 
 ### <a name="a-need-for-side-by-side-of-net-versions-per-application-level"></a>Necessidade de lado a lado de versões do .NET por nível de aplicativo
 
-
-Para instalar aplicativos com dependências em diferentes versões do .NET, é recomendável o .NET Core. O .NET core oferece instalação lado a lado de versões diferentes do tempo de execução do .NET Core no mesmo computador. Essa instalação lado a lado permite vários serviços no mesmo servidor, cada um em sua própria versão do .NET Core. Ela também reduz os riscos e gera economiza financeira nas operações de TI e atualizações de aplicativo.
-
+Para instalar aplicativos com dependências em diferentes versões do .NET, é recomendável o .NET Core. O .NET core oferece instalação lado a lado de versões diferentes do tempo de execução do .NET Core no mesmo computador. Essa instalação lado a lado permite vários serviços no mesmo servidor, cada um em sua própria versão do .NET Core. Ela também reduz os riscos e gera economia financeira nas operações de TI e atualizações de aplicativo.
 
 ## <a name="when-to-choose-net-framework"></a>Quando escolher o .NET Framework
 
@@ -111,10 +106,9 @@ Além do roteiro oficial, há outras estruturas a serem transferidas para o .NET
 Algumas plataformas de terceiros ou da Microsoft não oferecem suporte a .NET Core. Por exemplo, alguns serviços do Azure, como Reliable Services de Serviço de Monitoração com Estado de Malha e Reliable Actors da Malha de Serviço requerem o .NET Framework. Alguns outros serviços fornecem uma SDK ainda não estão disponível para consumo no .NET Core. Esta é uma circunstância transitória, pois todos os serviços do Azure usam o .NET Core. Enquanto isso, você sempre pode usar a API REST equivalente em vez do SDK do cliente.
 
 ## <a name="see-also"></a>Consulte também
- [Escolher entre o ASP.NET e ASP.NET Core](/aspnet/core/choose-aspnet-framework)   
- [Guia do .NET Core](../core/index.md)   
- [Portabilidade do .NET Framework para o .NET Core](../core/porting/index.md)   
- [.NET Framework no Guia do Docker](../framework/docker/index.md)   
- [Visão Geral dos Componentes do .NET](components.md)   
+ [Escolha entre o ASP.NET e ASP.NET Core](/aspnet/core/choose-aspnet-framework)  
+ [Guia do .NET Core](../core/index.md)  
+ [Portabilidade do .NET Framework para .NET Core](../core/porting/index.md)  
+ [.NET Framework no Guia do Docker](../framework/docker/index.md)  
+ [Visão Geral dos Componentes .NET](components.md)  
  [Microsserviços .NET. Arquitetura para aplicativos .NET em contêineres](microservices-architecture/index.md)
-

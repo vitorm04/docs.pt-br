@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
+ms.openlocfilehash: dc9b45e21f15ad92304685a1aff6760f3406cee2
+ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
 ms.translationtype: HT
-ms.sourcegitcommit: 019461964ba63d874ce86511474aa37b4342bbc4
-ms.openlocfilehash: b4a95438fe8b7490337de10299b824c5796bb4d1
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/22/2017
 ---
-
 # <a name="asynchronous-programming"></a>Programação assíncrona
 
 Se você tiver qualquer necessidade vinculada à E/S (como a solicitação de dados de uma rede ou o acesso a um banco de dados), você desejará usar a programação assíncrona.  Você também pode ter código vinculado à CPU, como a execução de um cálculo dispendioso, que também é um bom cenário para escrever código assíncrono.
@@ -141,7 +139,7 @@ public async Task<int> GetDotNetCountAsync()
     // to accept another request, rather than blocking on this one.
     var html = await _httpClient.DownloadStringAsync("http://dotnetfoundation.org");
 
-    return Regex.Matches(html, ".NET").Count;
+    return Regex.Matches(html, @"\.NET").Count;
 }
 ```
 
@@ -164,7 +162,7 @@ private async void SeeTheDotNets_Click(object sender, RoutedEventArgs e)
     // The await operator suspends SeeTheDotNets_Click, returning control to its caller.
     // This is what allows the app to be responsive and not hang on the UI thread.
     var html = await getDotNetFoundationHtmlTask;
-    int count = Regex.Matches(html, ".NET").Count;
+    int count = Regex.Matches(html, @"\.NET").Count;
 
     DotNetCountLabel.Text = $"Number of .NETs on dotnetfoundation.org: {count}";
 
@@ -175,12 +173,12 @@ private async void SeeTheDotNets_Click(object sender, RoutedEventArgs e)
 
 ### <a name="waiting-for-multiple-tasks-to-complete"></a>Aguardar a conclusão de várias tarefas
 
-Você pode encontrar em uma situação em que precisa recuperar várias partes de dados simultaneamente.  A API `Task` contém dois métodos, `Task.WhenAll` e `Task.WhenAny`, que permitem que você escreva código assíncrono que realiza uma espera sem bloqueio em vários trabalhos de segundo plano.
+Você pode encontrar em uma situação em que precisa recuperar várias partes de dados simultaneamente.  O `Task` API contém dois métodos, `Task.WhenAll` e `Task.WhenAny` que permitem que você escreva código assíncrono que executa uma espera sem bloqueio em vários trabalhos em segundo plano.
 
 Este exemplo mostra como você pode obter os dados `User` para um conjunto de `userId`s.
 
 ```csharp
-public async Task<User> GetUser(int userId)
+public async Task<User> GetUserAsync(int userId)
 {
     // Code omitted:
     //
@@ -188,13 +186,13 @@ public async Task<User> GetUser(int userId)
     // to the entry in the database with {userId} as its Id.
 }
 
-public static Task<IEnumerable<User>> GetUsers(IEnumerable<int> userIds)
+public static async Task<IEnumerable<User>> GetUsersAsync(IEnumerable<int> userIds)
 {
     var getUserTasks = new List<Task<User>>();
     
     foreach (int userId in userIds)
     {
-        getUserTasks.Add(GetUser(id));
+        getUserTasks.Add(GetUserAsync(userId));
     }
     
     return await Task.WhenAll(getUserTasks);
@@ -204,7 +202,7 @@ public static Task<IEnumerable<User>> GetUsers(IEnumerable<int> userIds)
 Aqui está outro jeito de escrever isso, de forma um pouco mais sucinta, usando LINQ:
 
 ```csharp
-public async Task<User> GetUser(int userId)
+public async Task<User> GetUserAsync(int userId)
 {
     // Code omitted:
     //
@@ -212,9 +210,9 @@ public async Task<User> GetUser(int userId)
     // to the entry in the database with {userId} as its Id.
 }
 
-public static async Task<User[]> GetUsers(IEnumerable<int> userIds)
+public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 {
-    var getUserTasks = userIds.Select(id => GetUser(id));
+    var getUserTasks = userIds.Select(id => GetUserAsync(id));
     return await Task.WhenAll(getUserTasks);
 }
 ```
@@ -272,4 +270,3 @@ Uma meta recomendada é alcançar a [Transparência referencial](https://en.wiki
 
 * A [Programação assíncrona em detalhes](../standard/async-in-depth.md) fornece mais informações sobre o funcionamento de Tarefas.
 * [Seis dicas essenciais para a programação assíncrona](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async) de Lucian Wischik é um ótimo recurso para a programação assíncrona
-

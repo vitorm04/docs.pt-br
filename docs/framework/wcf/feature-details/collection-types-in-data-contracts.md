@@ -20,11 +20,11 @@ caps.latest.revision: "19"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: ca3bbb4b88bf4355d3c487196672636e6b77d419
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 8591f1c7c3aa123acd17a9e3ab22cf950275f588
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="collection-types-in-data-contracts"></a>Tipos de coleção em contratos de dados
 Um *coleção* é uma lista de itens de um determinado tipo. No [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], essas listas podem ser representadas usando matrizes ou em uma variedade de outros tipos (lista genérica, genérico <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>, ou <xref:System.Collections.ArrayList>). Por exemplo, uma coleção pode conter uma lista de endereços para um cliente específico. Essas coleções são chamadas *liste coleções*, independentemente de seu tipo real.  
@@ -165,7 +165,7 @@ Um *coleção* é uma lista de itens de um determinado tipo. No [!INCLUDE[dnprdn
   
 ```xml  
 <CustomerList4>  
-    <customer>...</ customer>  
+    <customer>...</customer>  
     <customer>...</customer>  
     <customer>...</customer>  
     ...  
@@ -297,10 +297,10 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |Tipo referenciado|Interface implementada pelo tipo referenciado|Exemplo|Tipo tratado como|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |Não genérico ou fechado genérico (qualquer número de parâmetros)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> ou<br /><br /> `MyType<T> : IDictionary`onde T =`int`|Fechado genérico`IDictionary<object,object>`|  
-|Genérico fechado (qualquer número de parâmetros)|<xref:System.Collections.Generic.IDictionary%602>, fechado|`MyType<T> : IDictionary\<string, bool>`onde T =`int`|Genérico fechado (por exemplo, `IDIctionary\<string,bool>`)|  
-|Genérico fechado (qualquer número de parâmetros)|Genérica <xref:System.Collections.Generic.IDictionary%602>, chave ou valor é fechado, o outro está aberto e usa um dos parâmetros do tipo|`MyType\<T,U,V> : IDictionary\<string,V>`onde T =`int`, U =`float`, V =`bool`<br /><br /> ou<br /><br /> `MyType<Z> : IDictionary\<Z,bool>`onde Z =`string`|Genérico fechado (por exemplo, `IDictionary\<string,bool>`)|  
-|Genérico fechado (qualquer número de parâmetros)|Genérica <xref:System.Collections.Generic.IDictionary%602>, chave e valor são abertos e cada uma usa um dos parâmetros do tipo|`MyType\<T,U,V> : IDictionary\<V,U>`onde T =`int`, U =`bool`, V =`string`|Genérico fechado (por exemplo, `IDictionary\<string,bool>`)|  
-|Abra genérico (dois parâmetros)|Genérica <xref:System.Collections.Generic.IDictionary%602>, abrir, que usa dois parâmetros genéricos do tipo na ordem em que aparecem|`MyType\<K,V> : IDictionary\<K,V>`, K e V abertos|Genérico aberto (por exemplo, `IDictionary\<K,V>`)|  
+|Genérico fechado (qualquer número de parâmetros)|<xref:System.Collections.Generic.IDictionary%602>, fechado|`MyType<T> : IDictionary<string, bool>`onde T =`int`|Genérico fechado (por exemplo, `IDIctionary<string,bool>`)|  
+|Genérico fechado (qualquer número de parâmetros)|Genérica <xref:System.Collections.Generic.IDictionary%602>, chave ou valor é fechado, o outro está aberto e usa um dos parâmetros do tipo|`MyType<T,U,V> : IDictionary<string,V>`onde T =`int`, U =`float`, V =`bool`<br /><br /> ou<br /><br /> `MyType<Z> : IDictionary<Z,bool>`onde Z =`string`|Genérico fechado (por exemplo, `IDictionary<string,bool>`)|  
+|Genérico fechado (qualquer número de parâmetros)|Genérica <xref:System.Collections.Generic.IDictionary%602>, chave e valor são abertos e cada uma usa um dos parâmetros do tipo|`MyType<T,U,V> : IDictionary<V,U>`onde T =`int`, U =`bool`, V =`string`|Genérico fechado (por exemplo, `IDictionary<string,bool>`)|  
+|Abra genérico (dois parâmetros)|Genérica <xref:System.Collections.Generic.IDictionary%602>, abrir, que usa dois parâmetros genéricos do tipo na ordem em que aparecem|`MyType<K,V> : IDictionary<K,V>`, K e V abertos|Genérico aberto (por exemplo, `IDictionary<K,V>`)|  
   
  Se o tipo implementa ambos <xref:System.Collections.IDictionary> e genérica <xref:System.Collections.Generic.IDictionary%602>somente genérica <xref:System.Collections.Generic.IDictionary%602> é considerada.  
   

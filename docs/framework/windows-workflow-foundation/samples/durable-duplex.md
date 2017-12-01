@@ -12,11 +12,11 @@ caps.latest.revision: "10"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 5426272f574619f8d7cf163d13e9b37cb23bf31f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: d8beae85b2cee8956efd160b8540e76f04dd7ee7
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="durable-duplex"></a>Frente e verso durável
 Este exemplo demonstra como configurar e configurar a troca de dois lados durável de mensagem usando as atividades de mensagem em [!INCLUDE[wf](../../../../includes/wf-md.md)]. Uma troca frente e verso durável de mensagem é uma troca bidirecional de mensagem que ocorra um longo período de tempo. O tempo de vida de troca de mensagem pode ser maior que o tempo de vida do canal de comunicação e o tempo de vida de memória das instâncias de serviço.  
@@ -190,6 +190,4 @@ Este exemplo demonstra como configurar e configurar a troca de dois lados duráv
 >   
 >  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDuplex`  
-  
-## <a name="see-also"></a>Consulte também
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDuplex`

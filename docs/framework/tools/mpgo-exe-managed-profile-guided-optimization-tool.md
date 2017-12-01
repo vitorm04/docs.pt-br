@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Mpgo.exe
 - training scenarios, generating profiles with
@@ -21,16 +15,15 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: b6c95613cdc7ac656e8beafcf9a685e51eddf5a6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 81c68f718b0395b70f604ed9157daeaa84e9eefc
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Ferramenta de Otimização Guiada por Perfil Gerenciado)
 A Ferramenta de Otimização Guiada por Perfil Gerenciado (Mpgo.exe) é uma ferramenta de linha de comando que usa cenários de usuário final comuns para otimizar os assemblies de imagem nativa criados pelo [Gerador de Imagem Nativa (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). Essa ferramenta permite executar cenários de treinamento que geram dados de perfil. O [Gerador de Imagem Nativa (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) usa esses dados para otimizar seus assemblies de aplicativo de imagem nativa gerados. Um cenário de treinamento é uma execução de avaliação de um uso esperado do aplicativo. Mpgo.exe está disponível no Visual Studio Ultimate 2012 e em versões posteriores. Desde o [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], também é possível usar Mpgo.exe para otimizar aplicativos do [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
@@ -141,8 +134,7 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Ngen.exe (Gerador de Imagens Nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)   
- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)   
- [Improving Launch Performance for your Desktop Applications (Melhorando o Desempenho de Inicialização dos Aplicativos de Área de Trabalho)](http://go.microsoft.com/fwlink/p/?LinkId=248943)   
+ [Ngen.exe (Gerador de Imagens Nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
+ [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
+ [Melhorando o desempenho de inicialização para seus aplicativos de área de trabalho](http://go.microsoft.com/fwlink/p/?LinkId=248943)  
  [Uma visão geral dos aprimoramentos de desempenho no .NET 4.5](http://go.microsoft.com/fwlink/p/?LinkId=249131)
-
