@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 20f4013b-15fa-4fe7-b129-4ec4d231e479
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e586142bd50ac9965c2350130568077c9d13eb17
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2ce53b7e53b1b105e2c176fa3e75e3bcd33516ce
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelgetcommonbehaviors"></a><span data-ttu-id="eb679-102">System.ServiceModel.GetCommonBehaviors</span><span class="sxs-lookup"><span data-stu-id="eb679-102">System.ServiceModel.GetCommonBehaviors</span></span>
-<span data-ttu-id="eb679-103">System.ServiceModel.GetCommonBehaviors</span><span class="sxs-lookup"><span data-stu-id="eb679-103">System.ServiceModel.GetCommonBehaviors</span></span>  
+# <a name="systemservicemodelgetcommonbehaviors"></a><span data-ttu-id="25837-102">System.ServiceModel.GetCommonBehaviors</span><span class="sxs-lookup"><span data-stu-id="25837-102">System.ServiceModel.GetCommonBehaviors</span></span>
+<span data-ttu-id="25837-103">System.ServiceModel.GetCommonBehaviors</span><span class="sxs-lookup"><span data-stu-id="25837-103">System.ServiceModel.GetCommonBehaviors</span></span>  
   
-## <a name="description"></a><span data-ttu-id="eb679-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="eb679-104">Description</span></span>  
- <span data-ttu-id="eb679-105">Obter comportamentos comuns de Machine. config.</span><span class="sxs-lookup"><span data-stu-id="eb679-105">Get Machine.config common behaviors.</span></span>  
+## <a name="description"></a><span data-ttu-id="25837-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="25837-104">Description</span></span>  
+ <span data-ttu-id="25837-105">Obter comportamentos comuns de Machine. config.</span><span class="sxs-lookup"><span data-stu-id="25837-105">Get Machine.config common behaviors.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eb679-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="eb679-106">See Also</span></span>  
- [<span data-ttu-id="eb679-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="eb679-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="eb679-108">Usando o rastreamento para solucionar problemas de seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="eb679-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- <span data-ttu-id="eb679-109">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md) (Administração e diagnósticos)</span><span class="sxs-lookup"><span data-stu-id="eb679-109">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)</span></span>
+## <a name="see-also"></a><span data-ttu-id="25837-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="25837-106">See Also</span></span>  
+ [<span data-ttu-id="25837-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="25837-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="25837-108">Usando o rastreamento para solucionar problemas de seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="25837-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ <span data-ttu-id="25837-109">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md) (Administração e diagnósticos)</span><span class="sxs-lookup"><span data-stu-id="25837-109">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)</span></span>

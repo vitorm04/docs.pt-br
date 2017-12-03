@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2a1a5612-82c6-4cf6-aa96-ca6f5df12b69
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6cf182d7a71c38caf1dcee8823f362c614c87dd8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2336eb909e3e2ea893291d017d30b2328fc283cc
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodeldiagnosticsfailedtoaddanactivityidheader"></a><span data-ttu-id="a6a46-102">System.ServiceModel.Diagnostics.FailedToAddAnActivityIdHeader</span><span class="sxs-lookup"><span data-stu-id="a6a46-102">System.ServiceModel.Diagnostics.FailedToAddAnActivityIdHeader</span></span>
-<span data-ttu-id="a6a46-103">System.ServiceModel.Diagnostics.FailedToAddAnActivityIdHeader</span><span class="sxs-lookup"><span data-stu-id="a6a46-103">System.ServiceModel.Diagnostics.FailedToAddAnActivityIdHeader</span></span>  
+# <a name="systemservicemodeldiagnosticsfailedtoaddanactivityidheader"></a><span data-ttu-id="02c3e-102">System.ServiceModel.Diagnostics.FailedToAddAnActivityIdHeader</span><span class="sxs-lookup"><span data-stu-id="02c3e-102">System.ServiceModel.Diagnostics.FailedToAddAnActivityIdHeader</span></span>
+<span data-ttu-id="02c3e-103">System.ServiceModel.Diagnostics.FailedToAddAnActivityIdHeader</span><span class="sxs-lookup"><span data-stu-id="02c3e-103">System.ServiceModel.Diagnostics.FailedToAddAnActivityIdHeader</span></span>  
   
-## <a name="description"></a><span data-ttu-id="a6a46-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="a6a46-104">Description</span></span>  
- <span data-ttu-id="a6a46-105">Falha ao definir um cabeçalho de identificação de atividade em uma mensagem de saída.</span><span class="sxs-lookup"><span data-stu-id="a6a46-105">Failed to set an activity id header on an outgoing message.</span></span>  
+## <a name="description"></a><span data-ttu-id="02c3e-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="02c3e-104">Description</span></span>  
+ <span data-ttu-id="02c3e-105">Falha ao definir um cabeçalho de identificação de atividade em uma mensagem de saída.</span><span class="sxs-lookup"><span data-stu-id="02c3e-105">Failed to set an activity id header on an outgoing message.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a6a46-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a6a46-106">See Also</span></span>  
- [<span data-ttu-id="a6a46-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="a6a46-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="a6a46-108">Usando o rastreamento para solucionar problemas de seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="a6a46-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- <span data-ttu-id="a6a46-109">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md) (Administração e diagnósticos)</span><span class="sxs-lookup"><span data-stu-id="a6a46-109">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)</span></span>
+## <a name="see-also"></a><span data-ttu-id="02c3e-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="02c3e-106">See Also</span></span>  
+ [<span data-ttu-id="02c3e-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="02c3e-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="02c3e-108">Usando o rastreamento para solucionar problemas de seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="02c3e-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ <span data-ttu-id="02c3e-109">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md) (Administração e diagnósticos)</span><span class="sxs-lookup"><span data-stu-id="02c3e-109">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)</span></span>
