@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3d22067f-57b8-4e0f-a571-a694512187ae
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e4ab4d0a97cbbaa2e5aaee25e0154e1cc94a82f8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 59a9f0638855206f390ee7fbace580ba37e25e23
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="conditional-get-and-put"></a>Colocação e obtenção condicional
 Este exemplo demonstra como usar o novo recuperar condicional e APIs de atualização para o modelo de programação WCF REST. Como recuperar condicional e atualização são mais apropriadas para orientada a recursos e serviços REST, este exemplo estende o [serviço básico do recurso](../../../../docs/framework/wcf/samples/basic-resource-service.md) exemplo. Este exemplo se concentra na adição de suporte para recuperar condicional e atualize para o [serviço básico do recurso](../../../../docs/framework/wcf/samples/basic-resource-service.md) de exemplo usando as novas APIs introduzidas no [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)].  

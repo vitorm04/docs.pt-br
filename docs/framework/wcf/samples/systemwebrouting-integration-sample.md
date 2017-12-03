@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e5050834ff01ebb6a25e746d88f7d328ded505cd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c38c7af4988e6e47ee307f5cd7a8b6733b043a7c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="systemwebrouting-integration-sample"></a>Exemplo de integração de SystemWebRouting
 Este exemplo demonstra a integração da camada de hospedagem com as classes de <xref:System.Web.Routing> namespace. As classes de <xref:System.Web.Routing> namespace permitem que um aplicativo usar URLs não correspondem diretamente a um recurso físico. Usando o roteamento da Web permite ao desenvolvedor criar endereços virtuais para HTTP, em seguida, são mapeados para real [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços. Isso é útil quando um serviço WCF deve ser hospedado sem a necessidade de um arquivo físico ou recurso, ou quando os serviços devem ser acessados com URLs que não contêm arquivos, como HTML ou. aspx. Este exemplo demonstra como utilizar o <xref:System.Web.Routing.RouteTable> classe para criar URIs virtuais que são mapeados para executar serviços definidos em global. asax. Neste exemplo, há dois feeds RSS criados usando o WCF: um `movies` feed e um `channels` feed. As URLs para ativar os serviços não contêm uma extensão e são registradas no `Application_Start` método o `Global` classe derivada do <xref:System.Web.HttpApplication.Application_Start> classe.  

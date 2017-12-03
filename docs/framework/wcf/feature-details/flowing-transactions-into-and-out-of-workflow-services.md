@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2a093c2bfb0d7e60c3edc4a6ab04c8a7b7e38601
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d097068720bb937911316fdb29a83ba0e8e67713
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Transações de fluxo de entrada e saída de serviços de fluxo de trabalho
 Serviços de fluxo de trabalho e os clientes podem participar de transações.  Para uma operação de serviço fazer parte de uma transação de ambiente, coloque uma <xref:System.ServiceModel.Activities.Receive> atividade dentro de um <xref:System.ServiceModel.Activities.TransactedReceiveScope> atividade. Todas as chamadas feitas por um <xref:System.ServiceModel.Activities.Send> ou um <xref:System.ServiceModel.Activities.SendReply> atividade dentro de <xref:System.ServiceModel.Activities.TransactedReceiveScope> também será feita dentro da transação de ambiente. Um aplicativo de cliente de fluxo de trabalho pode criar uma transação de ambiente usando o <xref:System.Activities.Statements.TransactionScope> atividade e chamar operações de serviço usando a transação de ambiente. Este tópico orienta a criação de um serviço de fluxo de trabalho e o cliente de fluxo de trabalho que participam em transações.  
@@ -86,7 +86,7 @@ Serviços de fluxo de trabalho e os clientes podem participar de transações.  
   
 ### <a name="implement-the-workflow-service"></a>Implementar o serviço de fluxo de trabalho  
   
-1.  Adicionar um novo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço de fluxo de trabalho, chamado `WorkflowService` para o `Common` projeto. Para isso, clique em direito a `Common` projeto, selecione **adicionar**, **Novo Item... **, Selecione **fluxo de trabalho** em **modelos instalados** e selecione **serviço de fluxo de trabalho WCF**.  
+1.  Adicionar um novo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço de fluxo de trabalho, chamado `WorkflowService` para o `Common` projeto. Para isso, clique em direito a `Common` projeto, selecione **adicionar**, **Novo Item...** , Selecione **fluxo de trabalho** em **modelos instalados** e selecione **serviço de fluxo de trabalho WCF**.  
   
      ![Adicionando um serviço de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/media/addwfservice.JPG "AddWFService")  
   
@@ -119,7 +119,7 @@ Serviços de fluxo de trabalho e os clientes podem participar de transações.  
   
      ![Adicionando uma atividade Receive](../../../../docs/framework/wcf/feature-details/media/serviceaddreceive.JPG "ServiceAddReceive")  
   
-7.  Clique o **definir... ** link no <xref:System.ServiceModel.Activities.Receive> atividade e faça as seguintes configurações:  
+7.  Clique o **definir...**  link no <xref:System.ServiceModel.Activities.Receive> atividade e faça as seguintes configurações:  
   
      ![Definindo configurações de mensagem para a atividade de receber](../../../../docs/framework/wcf/feature-details/media/receivemessagesettings.JPG "ReceiveMessageSettings")  
   
@@ -151,7 +151,7 @@ Serviços de fluxo de trabalho e os clientes podem participar de transações.  
   
      ![Depois de adicionar atribuir e WriteLine](../../../../docs/framework/wcf/feature-details/media/afteraddingsbrwriteline.JPG "AfterAddingSBRWriteLine")  
   
-12. Clique com botão direito do <xref:System.ServiceModel.Activities.Receive> atividade e selecione **criar SendReply** e colá-lo após a última <xref:System.Activities.Statements.WriteLine> atividade. Clique o **definir... ** link no `SendReplyToReceive` atividade e faça as seguintes configurações.  
+12. Clique com botão direito do <xref:System.ServiceModel.Activities.Receive> atividade e selecione **criar SendReply** e colá-lo após a última <xref:System.Activities.Statements.WriteLine> atividade. Clique o **definir...**  link no `SendReplyToReceive` atividade e faça as seguintes configurações.  
   
      ![Configurações de mensagem de resposta](../../../../docs/framework/wcf/feature-details/media/replymessagesettings.JPG "ReplyMessageSettings")  
   
@@ -165,7 +165,7 @@ Serviços de fluxo de trabalho e os clientes podem participar de transações.  
   
 ### <a name="implement-the-workflow-client"></a>Implementar o cliente do fluxo de trabalho  
   
-1.  Adicionar um novo aplicativo de fluxo de trabalho WCF, chamado `WorkflowClient` para o `Common` projeto. Para isso, clique em direito a `Common` projeto, selecione **adicionar**, **Novo Item... **, Selecione **fluxo de trabalho** em **modelos instalados** e selecione **atividade**.  
+1.  Adicionar um novo aplicativo de fluxo de trabalho WCF, chamado `WorkflowClient` para o `Common` projeto. Para isso, clique em direito a `Common` projeto, selecione **adicionar**, **Novo Item...** , Selecione **fluxo de trabalho** em **modelos instalados** e selecione **atividade**.  
   
      ![Adicionar um projeto de atividade](../../../../docs/framework/wcf/feature-details/media/addactivity.JPG "AddActivity")  
   
@@ -199,7 +199,7 @@ Serviços de fluxo de trabalho e os clientes podem participar de transações.  
   
      ![Definir as propriedades da atividade enviar](../../../../docs/framework/wcf/feature-details/media/clientsendsettings.JPG "ClientSendSettings")  
   
-9. Clique o **definir... ** link e verifique as seguintes configurações:  
+9. Clique o **definir...**  link e verifique as seguintes configurações:  
   
      ![Configurações de mensagem de atividade de envio](../../../../docs/framework/wcf/feature-details/media/sendmessagesettings.JPG "SendMessageSettings")  
   

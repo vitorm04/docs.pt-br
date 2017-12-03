@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
 caps.latest.revision: "20"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 22dcace51b2c73193356450b4b210d1c1a899e28
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5886b327f1ea6d2866b9fc76bb29031ee870934e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="supported-deployment-scenarios"></a>Cenários de desempenho com suporte
 O subconjunto de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] recursos com suporte para uso em aplicativos parcialmente confiáveis é projetado para atender aos requisitos de algumas, mas nem todos os cenários de uso [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. No servidor, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] atende os requisitos de escala da Internet compartilhada provedores de hospedagem que executam aplicativos de terceiros no [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] conjunto por motivos de segurança de permissões de confiança média. No cliente, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] suporte de confiança parcial é projetado para atender aos requisitos de tecnologias de implantação, como [implantação de ClickOnce](http://go.microsoft.com/fwlink/?LinkId=83712) ou [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]da tecnologia de aplicativo de navegador XAML, que permitem contínua e implantação segura de aplicativos de área de trabalho de sites não confiáveis.  

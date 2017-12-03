@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
 caps.latest.revision: "30"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0dbd9d28d56d8d473b9e92d977da409b74290224
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0b5817ded29836bcc6c998aaf293a7b2fd99170c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Agrupamento de mensagens em fila em uma sessão
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Fornece uma sessão que permite agrupar um conjunto de mensagens relacionadas juntas para processamento por um único aplicativo. As mensagens que fazem parte de uma sessão devem ser parte da mesma transação. Como todas as mensagens fazem parte da mesma transação, se uma mensagem falhar ao ser processada toda a sessão será revertida. Sessões têm comportamento semelhante em relação a filas de mensagens mortas e suspeitas. O tempo para a propriedade de vida (TTL) definida em uma associação enfileirada configurada para sessões é aplicado à sessão como um todo. Se apenas algumas das mensagens na sessão são enviadas antes que o TTL expire, toda a sessão é colocada na fila de mensagens mortas. Da mesma forma, quando as mensagens em uma sessão não ser enviada a um aplicativo da fila de aplicativos, toda a sessão é colocada na fila de suspeitas (se disponível).  

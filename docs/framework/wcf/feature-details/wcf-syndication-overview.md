@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: af6d4c39-e5e8-4099-aee6-5261feff9107
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 629ec17ea01ec29480f15f5921d09e7497e9f8c8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4f1595cbb1d225e3dd4e73a354028745d4cd0428
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-syndication-overview"></a>Visão geral de sindicalização do WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]fornece suporte para expor feeds de agregação de um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço. Distribuição é um mecanismo de integração de aplicativos no qual um servidor expõe alguns dados de aplicativo em um formato interoperável conhecido como um feed. Um feed é um conjunto de dados de aplicativo que consiste em alguns metadados em nível de feed (título, autor, URL e outros metadados) e uma série de itens de feed. No feed, os itens do feed são geralmente tempo ordenadas em ordem cronológica inversa. Um item do feed consiste em um conjunto padrão de metadados de nível de item (título, URL, data de criação, categoria e outros metadados de nível de item) e um valor arbitrário de dados específicos do aplicativo. Os dois tipos mais comuns de feeds de agregação são RSS Really Simple Syndication () 2.0 e Atom 1.0, que são suportados pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  

@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2e8061ea-10f5-407c-a31f-d0d74ce12f27
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e9edc168dc6e4111e5f2d58a62c2b0341f74aa04
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 07a39983d0e561fdad4c09e641912b0d15aa4033
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="binding-a-custom-activity-property-to-a-designer-control"></a>Associando uma propriedade personalizada de atividade a um controle de designer
 Associar um controle de designer caixa de texto para um argumento de atividade é relativamente simples; associar um controle complexo do designer (como uma caixa combo) para um argumento de atividade pode apresentar desafios, no entanto. Este tópico discute como associar um argumento de atividade a um controle caixa de combinação em um designer personalizado de atividade.  

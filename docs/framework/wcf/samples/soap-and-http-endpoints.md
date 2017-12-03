@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9404d304302360b2be590c814d1f94cb46bd5f84
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d122512a16a0959d60bfa658d96aa87a52e40299
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="soap-and-http-endpoints"></a>Pontos de extremidade SOAP e HTTP
 Este exemplo demonstra como implementar um serviço baseado no RPC e expô-lo no formato SOAP e o "Plain Old XML" (POX) Formatar usando o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação da Web. Consulte o [serviço básico de HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) exemplo para obter mais detalhes sobre a associação HTTP para o serviço. Este exemplo enfoca os detalhes que pertencem ao expor o mesmo serviço via SOAP e HTTP usando ligações diferentes.  

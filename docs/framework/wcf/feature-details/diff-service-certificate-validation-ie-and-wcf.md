@@ -13,14 +13,14 @@ helpviewer_keywords:
 - certificates [WCF], service certificate validation
 ms.assetid: 9dffcab2-70a9-40f0-99fd-d3a0b296028f
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a58ea9f84571ede9943769e1f187a242383a88f0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b74886f05ca6dc38c724e02cd091c6dd212c554f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="differences-between-service-certificate-validation-done-by-internet-explorer-and-wcf"></a>Diferenças entre validação de certificado de serviço pelo Internet Explorer e o WCF
 Devido a diferença entre a forma como o Internet Explorer e [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] validar certificados de serviço quando HTTPS é usado, é possível que a Internet Explorer não poderá acessar a página de Ajuda ou WSDL Web Services Description Language () de um serviço, mesmo Embora um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente é capaz de enviar mensagens com êxito para os pontos de extremidade de serviço. Isso ocorre porque o Internet Explorer verifica se o certificado de serviço tem o `ServerAuthentication` objeto (OID) de identificadores nos sinalizadores de uso avançado, enquanto [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não impõe uma restrição tal. Se o Internet Explorer não é possível acessar a página de ajuda de serviço ou o WSDL para o serviço, use o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para acessar os metadados de serviço.  

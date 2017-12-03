@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 60151f6c-19b7-47af-9cdc-76c2ac95f301
 caps.latest.revision: "26"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d15609db250e4743ae2a7a1b6c3c355600704f02
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fc1608cc4e746af56e7d89237f0c1f5e6cc3bc7e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="correlation"></a>Correlação
 Quando os aplicativos de serviço de fluxo de trabalho se comunicam com outros serviços, é importante que as mensagens entre eles são despachadas para a instância de fluxo de trabalho apropriado. Correlação fornece o mecanismo para isso. Os tópicos nesta seção fornecem uma visão geral de correlação e como usá-lo em cenários de serviço de fluxo de trabalho diferente.  

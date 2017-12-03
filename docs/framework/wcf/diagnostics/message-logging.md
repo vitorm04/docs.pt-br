@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6bce0682-75ef-4d65-a659-b328fba4a8b5
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 04e1b881d9aab1c35195794394cddf5172288cc1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a771cbc22febf966fec2cf608a9b59204fc6e51a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="message-logging"></a>Registro em log de mensagens
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]fornece a capacidade de registrar em log mensagens de entrada e saídas para consumo offline. Log de mensagens permite que você veja quais a mensagem e é de corpo de mensagem semelhante. Esse tipo de log é particularmente útil para que você saiba o que foram passados argumentos e como o ponto de extremidade de recebimento viu os argumentos expressos como XML. Além disso, o registro a mensagem conforme ela foi recebida permite diagnosticar mensagens malformadas, bem como para ver como a mensagem foi recebida. Você também pode examinar a segurança tokens utilizados, partes criptografado e assinado e partes permanecem intactas.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7d8fea550d0def93cf1d86b9d4a7d6b09afaf90d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2e9d851d083f0b3a1bd00bafe5b0805a55635158
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="simplified-configuration"></a>Configuração simplificada
 Configurando [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] services pode ser uma tarefa complexa. Há muitas opções diferentes e nem sempre é fácil determinar quais configurações são necessárias. Enquanto os arquivos de configuração aumentará a flexibilidade de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviços, eles também são a origem para muitos difíceis de encontrar problemas. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]trata esses problemas e fornece uma maneira de reduzir o tamanho e a complexidade da configuração do serviço.  

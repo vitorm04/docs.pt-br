@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3fcb4225-addc-44f2-935d-30e4943a8812
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 755669b1305060efeb6af592867844b571b67020
-ms.sourcegitcommit: 5d0e069655439984862a835f400058b7e8bbadc6
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 869861ce1e2ba4456c8e8fbd06f9ff590fb3576a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="standard-endpoints"></a>Pontos de extremidade padrão
 Pontos de extremidade são definidos pela especificação de um endereço, uma ligação e um contrato. Outros parâmetros que podem ser definidos em um ponto de extremidade incluem a configuração de comportamento, cabeçalhos e escutam URIs.  Para determinados tipos de pontos de extremidade que não altere esses valores. Por exemplo, pontos de extremidade de troca de metadados sempre usam o <xref:System.ServiceModel.Description.IMetadataExchange> contrato. Outros pontos de extremidade, como <xref:System.ServiceModel.Description.WebHttpEndpoint> sempre exigem um comportamento de ponto de extremidade especificado. O uso de um ponto de extremidade pode ser melhorado por ter pontos de extremidade com valores padrão para propriedades de ponto de extremidade de uso geral. Pontos de extremidade padrão permitem que um desenvolvedor definir um ponto de extremidade que tem valores padrão ou em que as propriedades de um ou mais do ponto de extremidade não é alterado.  Esses pontos de extremidade permitem que você use um ponto de extremidade sem precisar especificar informações de natureza estática. Pontos de extremidade padrão podem ser usados para pontos de extremidade de infraestrutura e aplicativo.  

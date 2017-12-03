@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3d4320c088c66abdc2c4ff226eb99d66fcbd3b38
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 56b6252188854374b9e0eddd7aca53daba6f6086
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="correlation-overview"></a>Visão geral de correlação
 Correlação é o mecanismo para relacionar as mensagens do serviço de fluxo de trabalho para outro ou para o estado de instância de aplicativo, como uma resposta a uma solicitação inicial ou uma ID de ordem específica para o estado persistente de um fluxo de trabalho de processamento de pedidos. Este tópico fornece uma visão geral de correlação. Os outros tópicos nesta seção fornecem informações adicionais para cada tipo de correlação.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8ccbe0e8-7e55-441d-80de-5765f67542fa
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f991ebe2be79313bbcf51b41944f84886b1a0b8d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3e614abd2f9fb84f6012a3b00d90c16015287e18
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="service-channel-listeners-and-channels"></a>Serviço : ouvintes de canal e canais
 Há três categorias de objetos de canal: canais, ouvintes de canais e fábricas de canais. Canais são a interface entre o aplicativo e a pilha de canais. Ouvintes de canais são responsáveis por criar canais no lado do recebimento (ou escutar), normalmente em resposta a uma nova mensagem de entrada ou a conexão. Fábricas de canais são responsáveis por criar canais no lado de envio para iniciar a comunicação com um ponto de extremidade.  

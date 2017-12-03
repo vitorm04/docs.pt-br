@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f76ef924-34ce-48ae-8c8d-48faf9697754
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ab8f47601f84267d1ac357b313fa5d2215a586d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e0df4ddc6f2cc5404c8153b30df66cda41487691
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="conditioned-activity-group"></a>Grupo de atividade condicionado
 O exemplo demonstra um aplicativo do registro do traço. <xref:System.Workflow.Activities.ConditionedActivityGroup> (CAG) tem duas atividades de código a seguir: uma atividade do carro e uma atividade de linha sobrecarga. No construtor de `SimpleCAGWorkflow` , um objeto de ArrayList “travelNeedType” é preenchido com os tipos de registros de traço necessários. Comentando por uma ou ambas as instruções de `travelNeeds.Add` , você altera o comportamento de CAG de acordo. As atividades de carro e linha sobrecarga têm sua condição de <xref:System.Workflow.Activities.ConditionedActivityGroup.WhenConditionProperty> preenchida com <xref:System.Workflow.Activities.CodeCondition>. Atividade de carro executa somente se a coleção de `travelNeeds` tem uma entrada de `TravelNeeds.Car` , e a atividade de linha sobrecarga executa somente se a coleção de `travelNeeds` tem uma entrada de `TravelNeeds.Airline` .  

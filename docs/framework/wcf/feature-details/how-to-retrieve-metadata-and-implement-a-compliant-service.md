@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: adb1cb9006c6f0e01008dd5f610c4c340c7ddbff
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 33090cd855aa41607f6d330d695f24a6f60197d6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Como recuperar metadados e implementar um serviço compatível
 Geralmente, a mesma pessoa não projetar e implementar serviços. Em ambientes com aplicativos interoperacionais importantes, contratos podem ser criados ou descritos no WSDL Web Services Description Language () e um desenvolvedor deve implementar um serviço que está em conformidade com o contrato fornecido. Talvez você queira migrar um serviço existente para [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mas preservar o formato de transmissão. Além disso, os contratos duplex exigem chamadores implementar um contrato de retorno de chamada também.  

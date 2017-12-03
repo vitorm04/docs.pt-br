@@ -17,14 +17,14 @@ helpviewer_keywords:
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
 caps.latest.revision: "19"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2f103570cf7d94a9ac6256f3db991c44767fa7c4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4aa9cacfaa966bbe37618406f4b1413dec433726
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="administration-and-diagnostics"></a>Administração e diagnósticos
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Fornece um rico conjunto de funcionalidades que podem ajudá-lo a monitorar os diferentes estágios de vida do aplicativo. Por exemplo, você pode usar a configuração para configurar serviços e clientes na implantação. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]inclui um grande conjunto de contadores de desempenho para ajudá-lo a avaliar o desempenho do aplicativo. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]também expõe dados de inspeção de um serviço em tempo de execução por meio de um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provedor do Windows Management Instrumentation (WMI). Quando o aplicativo apresenta uma falha ou inicia funcionando incorretamente, você pode usar o Log de eventos para ver se algo significativo ocorreu. Você também pode usar a mensagem de log e rastreamento para ver quais eventos estão acontecendo ponta em seu aplicativo. Esses recursos ajudar os desenvolvedores e profissionais de TI para solucionar problemas de um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo quando ele não está funcionando corretamente.  

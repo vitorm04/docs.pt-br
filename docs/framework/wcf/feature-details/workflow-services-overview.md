@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
 caps.latest.revision: "30"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f33920dbad701d803b9cb062cdd2b11aa1346df4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: df3f52ef7b3620b67a00cf4f5eb731a4d0b98208
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="workflow-services-overview"></a>Visão geral de serviços de fluxo de trabalho
 Serviços de fluxo de trabalho são [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-com base em serviços que são implementados usando fluxos de trabalho. Serviços de fluxo de trabalho são fluxos de trabalho que usam as atividades de mensagens para enviar e receber [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mensagens. .NET framework 4.5 apresenta uma série de atividades de mensagens que permite enviar e receber mensagens de um fluxo de trabalho. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]atividades de mensagem e como eles podem ser usados para implementar os padrões de troca de mensagens diferentes, consulte [atividades de mensagens](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  

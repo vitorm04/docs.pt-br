@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
 caps.latest.revision: "27"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a52deae243e4f28e82eebd99e926ac8aeba4f02d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: da7cb5e30cd4c8c5bf59c45b5e38d766990275b7
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="data-contract-names"></a>Nomes de contrato de dados
 Às vezes, um cliente e um serviço não compartilham os mesmos tipos. Eles ainda podem passar dados entre si como os contratos de dados são equivalentes em ambos os lados. [Equivalência de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) é baseado no contrato de dados e nomes de membros de dados, e, portanto, um mecanismo é fornecido para mapear tipos e membros para esses nomes. Este tópico explica as regras de nomeação de contratos de dados, bem como o comportamento padrão do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ao criar nomes de infraestrutura.  

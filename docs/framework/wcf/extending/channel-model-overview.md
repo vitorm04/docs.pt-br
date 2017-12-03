@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: channel model [WCF]
 ms.assetid: 07a81e11-3911-4632-90d2-cca99825b5bd
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 19dfb8d6a75496cf193831c1d9e6e71ee6bb1a7a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9be7f226c331ad20c58a06b5c7497c7942db013d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="channel-model-overview"></a>Visão geral de modelo de canal
 O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pilha de canais é uma pilha de comunicação em camadas com um ou mais canais que processar mensagens. Na parte inferior da pilha é um canal de transporte é responsável para adaptar a pilha de canais de transporte subjacente (por exemplo, TCP, HTTP, SMTP e outros tipos de transporte.). Canais fornecem um modelo de programação de nível baixo para enviar e receber mensagens. Este modelo de programação se baseia em várias interfaces e outros tipos de coletivamente conhecidos como o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de canal. Este tópico discute as formas de canal, a construção de um ouvinte de canal básica (no serviço) e a fábrica de canais (no cliente).  

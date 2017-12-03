@@ -16,14 +16,14 @@ helpviewer_keywords:
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
 caps.latest.revision: "20"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a5734065a82c6b45b837c9cb5a74ba6e46207fb7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b69c17b9fcb14bbd70b60c32965fb1163c22e765
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Gerenciamento de declarações e autorizações com o modelo de identidade
 A autorização é o processo de determinar quais entidades têm permissão para alterar, exibir ou, caso contrário, acessar um recurso de computador. Por exemplo, em uma empresa, somente os gerentes podem permitidos para acessar os arquivos de seus funcionários. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]oferece suporte a dois mecanismos para executar o processamento de autorização. O primeiro mecanismo permite que você controle a autorização usando existente construções de runtime (CLR) de linguagem comum. O segundo é um modelo baseado em declarações, conhecido como o *modelo de identidade*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]usa o modelo de identidade para criar declarações de mensagens de entrada; Classes de modelo de identidade podem ser estendidos para dar suporte a novos tipos de declaração para esquemas de autorização personalizada. Este tópico apresenta uma visão geral de como os principais conceitos de programação do recurso de modelo de identidade, bem como uma lista das classes mais importantes que usa o recurso.  

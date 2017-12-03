@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 69911b2baf0e184957158ac536fa2271524cb2ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d8a2f0883a2d83ad5b3c1a2a3dd6c7e016583af7
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Como hospedar um serviço de fluxo de trabalho com o Windows Server App Fabric
 Serviços de fluxo de trabalho na malha de aplicativos de hospedagem é semelhante à hospedagem no IIS / WAS. A única diferença é que as ferramentas de que malha de aplicativos fornece para implantação, monitoramento e gerenciamento de serviços de fluxo de trabalho. Este tópico usa o serviço de fluxo de trabalho criado na [criando um serviço de fluxo de trabalho de longa execução](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). Esse tópico orientará você durante a criação de um serviço de fluxo de trabalho. Este tópico explica como hospedar o serviço de fluxo de trabalho usando a malha de aplicativos. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Malha de aplicativos do Windows Server, consulte [documentação do Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Antes de concluir as etapas abaixo, certifique-se de que ter o Windows Server App Fabric está instalado.  Para fazer essa abrir os serviços de informações da Internet (inetmgr.exe), clique no nome do servidor no **conexões** exibir, clique em Sites e clique em **Default Web Site**. O lado direito da tela, você verá uma seção chamada **App Fabric**. Se você não vir essa seção (ele estará na parte superior do painel à direita) não tem malha de aplicativos instalada. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Instalando o Windows Server App Fabric consulte [instalando o Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193136).  

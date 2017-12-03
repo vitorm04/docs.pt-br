@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 09c75ff3c19110a4ed97d8b95a4f63174cba0406
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dc6b3a056aaa7aa6cb0a57c72b9591393ca0aff2
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Como implementar um aplicativo cliente que utiliza o proxy de descoberta para encontrar um serviço
 Este tópico é o terceiro de três tópicos que descreve como implementar um proxy de descoberta. No tópico anterior, [como: implementar um serviço de descoberta que registra com o Proxy de descoberta](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), você já implementou um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço que é registrado com o proxy de descoberta. Neste tópico, você cria um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente que usa o proxy de descoberta para localizar o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.  

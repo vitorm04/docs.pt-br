@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
 caps.latest.revision: "43"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a518f1bc6019aea0667f6be018e06bbcf36e6e9e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3bb2646a500db299f164dce34fb062a509f90047
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="unsupported-scenarios"></a>Cenários sem suporte
 Por várias razões, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] não oferece suporte a alguns cenários de segurança específico. Por exemplo, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition não implementa os protocolos de autenticação SSPI ou Kerberos e, portanto, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não oferece suporte à execução de um serviço com a autenticação do Windows nessa plataforma. Outros mecanismos de autenticação, como nome de usuário/senha e a autenticação integrada do HTTP/HTTPS são suportados ao executar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no Windows XP Home Edition.  

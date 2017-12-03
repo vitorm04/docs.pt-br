@@ -13,14 +13,14 @@ helpviewer_keywords:
 - customer feedback [WCF]
 ms.assetid: ba0fd32b-cbcb-4f5b-b913-d98514ab5650
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d59ebd85e4110c246ef938770debf60e9d16ac48
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 40973353a0057bcd23c76c03eb1ce6406c95aca6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="feedback-and-community"></a>Feedback e comunidade
 Agradecemos seus comentários e preocupações sobre o [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] ou [!INCLUDE[infocard](../../../includes/infocard-md.md)] documentação. Na parte inferior de cada página no SDK é a frase "Enviar comentários sobre este tópico à Microsoft". Clique no link "Comentários" para enviar seus modos de exibição ou sugestões sobre o tópico específico.  

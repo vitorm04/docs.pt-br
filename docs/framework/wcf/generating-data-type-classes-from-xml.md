@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e0362673ebb7d686822fae594b3a41435ceb9a4d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 67b9e239c8b60511caf3989c0b3a1a5d6dcc9b26
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="generating-data-type-classes-from-xml"></a>Gerando classes de tipo de dados por meio de XML
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]inclui um novo recurso para gerar classes de tipo de dados de XML. Este tópico descreve como gerar automaticamente os tipos de dados para o .NET Blog o RSS feed.  

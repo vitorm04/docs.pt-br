@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 05e2c45b66f92229877ac3ec867da9b71cd4156a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 045807df433d519b00969812afb0ae2feac94b75
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="announcements-sample"></a>Exemplo de anúncios
 Este exemplo mostra como usar a funcionalidade de lançamento do recurso de descoberta. Anúncios de permitir que os serviços enviar mensagens de aviso que contém metadados sobre o serviço. Por padrão, um anúncio de saudação é enviado quando o serviço é iniciado e um anúncio bye é enviado quando o serviço foi desligado. Esses anúncios podem ser multicast ou eles podem ser enviados ponto a ponto. Este exemplo consiste de cliente e o serviço de dois projetos.  

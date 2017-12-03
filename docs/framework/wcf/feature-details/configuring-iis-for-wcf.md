@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 185fa5e641a1834a7c5f7906b5e5cf84dacaa9f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bd4bf1a97a544730714c46c1ba6f7f102166da35
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Configurando os Serviços de informação da internet 7.0 para o Windows Communication Foundation
 Serviços de informações da Internet (IIS) 7.0 tem um design modular que permite que você instale seletivamente os componentes necessários. Esse design é baseado na tecnologia controlada por manifesto componentização novo introduzida no [!INCLUDE[wv](../../../../includes/wv-md.md)]. Há mais de 40 componentes do recurso autônomo do [!INCLUDE[iisver](../../../../includes/iisver-md.md)] que podem ser instalados de forma independente. Isso permite que os profissionais de TI personalizar facilmente a instalação conforme necessário. Este tópico discute como configurar [!INCLUDE[iisver](../../../../includes/iisver-md.md)] para uso com [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e determinar quais componentes são necessários.  

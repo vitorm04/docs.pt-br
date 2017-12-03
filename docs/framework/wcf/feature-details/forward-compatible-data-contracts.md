@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
 caps.latest.revision: "21"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d7a0153533ce5ec748c6396676988fcdc73eae6e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ef25e349ca6245ff3247f3a136d9a950d03d81d5
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="forward-compatible-data-contracts"></a>Contratos de dados compatíveis por encaminhamento
 Um recurso do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sistema de contrato de dados é que os contratos podem evoluir ao longo do tempo maneiras incondicional. Ou seja, um cliente com uma versão mais antiga de um contrato de dados pode se comunicar com um serviço com uma versão mais recente do mesmo contrato de dados, ou um cliente com uma versão mais recente de um contrato de dados pode se comunicar com uma versão mais antiga do mesmo contrato de dados. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Práticas recomendadas: controle de versão de contrato de dados](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5b6dfd1b58c2e7ca3811757b5deb99ddbf878e29
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: eb88d7e523c671886e3ccb0fe22d545c616e2289
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
 O ConfigurationCodeGenerator é uma ferramenta que você pode usar para expor as implementações de canal personalizado para o sistema de configuração. Isso permite que os usuários do seu canal personalizado configurar seu canal usando um arquivo. config exatamente como eles configurará um fornecido pelo sistema de associação, como `NetTcpBinding` ou associação de um personalizado usando o `TcpTransportBindingElement`.  

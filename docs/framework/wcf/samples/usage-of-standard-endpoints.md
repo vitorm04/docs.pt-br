@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 85dda1619fe3a77c4716806de2467cb96287b2f9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f8e8851f40c4c5e5c1a9399e5dec1f56aa0a5509
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="usage-of-standard-endpoints"></a>Uso de pontos de extremidade padrão
 Este exemplo demonstra como usar pontos de extremidade padrão em arquivos de configuração de serviço. Um ponto de extremidade padrão permite que o usuário simplificar as definições de ponto de extremidade usando uma única propriedade para descrever um endereço, associação e contrato combinação com propriedades adicionais associadas a ele. Este exemplo demonstra como definir e implementar um ponto de extremidade padrão personalizado e como definir propriedades específicas no ponto de extremidade.  

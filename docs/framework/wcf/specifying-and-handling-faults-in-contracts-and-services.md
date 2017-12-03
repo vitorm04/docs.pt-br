@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
 caps.latest.revision: "22"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7be16a899974f325231a4010ad74bc55ee56d2a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7df149ab75d2e3f1e9167f66ef8ec3c40b73c827
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Especificando e lidando com falhas em contratos e serviços
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]aplicativos de lidar com situações de erro, mapeando os objetos de exceção gerenciada para objetos de falhas SOAP e objetos de falhas SOAP em objetos de exceção gerenciada. Os tópicos nesta seção abordam como criar contratos para expor o erro condições como falhas de SOAP personalizadas, como retornar essas falhas como parte da implementação de serviço e como os clientes capturar essas falhas.  

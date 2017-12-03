@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 91b611af6c8de5c2bc0119838eb12950d3207177
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fe09e2c91df0c25f070e06a39ce5e94a54062a20
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Como migrar serviços habilitados para AJAX ASP.NET para o WCF
 Este tópico descreve os procedimentos para migrar um serviço básico do ASP.NET AJAX para um equivalente habilitado para AJAX [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço. Ele mostra como criar um funcionalmente equivalente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] versão de um serviço ASP.NET AJAX. Os dois serviços podem ser usados lado a lado, ou o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço pode ser usado para substituir o serviço de AJAX do ASP.NET.  

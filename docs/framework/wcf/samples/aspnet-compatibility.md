@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
 caps.latest.revision: "25"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 953bc79207b7006977a0eb96e0026767bf05194c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2c8cf38e65bbc917720b1a1c5b604d81ca536c14
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="aspnet-compatibility"></a>Compatibilidade ASP.NET
 Este exemplo demonstra como habilitar [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modo de compatibilidade em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Serviços em execução [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] participar de modo de compatibilidade totalmente no [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativo pipeline e fazer uso de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] recursos, como a autorização de URL do arquivo, estado de sessão e o <xref:System.Web.HttpContext> classe. O <xref:System.Web.HttpContext> classe permite o acesso a cookies, sessões e outros [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] recursos. Esse modo exige que as associações de usam o transporte HTTP e o próprio serviço deve ser hospedado no IIS.  

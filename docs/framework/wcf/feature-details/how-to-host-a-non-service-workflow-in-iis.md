@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f362562c-767d-401b-8257-916616568fd4
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 892875fb8340220dc152f91ab2239257c7b96fb8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0abc1ac1cea6c9799c3d6bb349869b77f1d0b7c3
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-host-a-non-service-workflow-in-iis"></a>Como hospedar um fluxo de trabalho sem serviço no IIS
 Fluxos de trabalho que não são serviços de fluxo de trabalho podem ser hospedados em IIS / WAS. Isso é útil quando você precisa hospedar um fluxo de trabalho gravado por outra pessoa. Por exemplo, se o novo host do designer de fluxo de trabalho e permitir que os usuários criem seus próprios fluxos de trabalho.  Hospedando fluxos de trabalho sem serviço no IIS fornece suporte para recursos como o desligamento ocioso, reciclagem de processo, o monitoramento de integridade do processo e a ativação baseada em mensagem. Serviços de fluxo de trabalho hospedados no IIS contêm <xref:System.ServiceModel.Activities.Receive> atividades e o são ativados quando uma mensagem é recebida pelo IIS. Fluxos de trabalho não não contêm atividades de mensagem e por padrão, não não possível ativar enviando uma mensagem.  Você deve derivar uma classe de <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> e definir um contrato de serviço que contém operações para criar uma instância do fluxo de trabalho. Este tópico o orientará na criação de um fluxo de trabalho simple, definir um contrato de serviço que um cliente pode usar para ativar o fluxo de trabalho e derivar uma classe de <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> que usa o contrato de serviço para escutar as solicitações de criação de fluxo de trabalho.  

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c67ed21a8e4a9170d72ce842505e7695b11c26c9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cc4d6e3bb20cbe005ad7ce21ed37fe57c5d3466b
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Como configurar uma porta com um certificado SSL
 Ao criar um serviço auto-hospedado do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] com a classe <xref:System.ServiceModel.WSHttpBinding> que usa segurança de transporte, você também deve configurar uma porta com um certificado X.509. Se você estiver criando um serviço auto-hospedado, você poderá hospedá-lo serviço no IIS (Serviços de Informações da Internet). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Segurança de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  

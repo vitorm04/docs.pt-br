@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 02c6d346c6ebea27148c11f5f033f74dfb556e44
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 52a599d9cba2e68fdb74d364dad562d2547ca020
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Usando o controle para solucionar problemas de aplicativos
 [!INCLUDE[wf](../../../includes/wf-md.md)] permite controlar informações fluxo de trabalho- relacionado para fornecer detalhes a execução de um aplicativo ou um serviço de [!INCLUDE[wf2](../../../includes/wf2-md.md)] . hosts de[!INCLUDE[wf2](../../../includes/wf2-md.md)] pode capturar eventos de fluxo de trabalho durante a execução de uma instância de fluxo de trabalho. Se seu fluxo de trabalho gerencia falhas ou exceções, você pode usar [!INCLUDE[wf2](../../../includes/wf2-md.md)] que acompanha detalhes a solucionar seu processamento.  

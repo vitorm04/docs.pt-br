@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4331d2bc-5455-492a-9189-634a82597726
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0a682b84a90e64e0242a3490986cb526c7f028b8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b0a44aab556e362ad82fb4d9152edd5691f4bdbd
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-duplex-federated-binding"></a>Como criar uma associação duplex federada
 <xref:System.ServiceModel.WSFederationHttpBinding>suporta apenas os contratos de troca de mensagem de datagrama e solicitação/resposta. Para usar o contrato de troca de mensagens duplex, você deve criar uma associação personalizada. Os procedimentos a seguir mostram como fazer isso na configuração, usando segurança de modo de mensagem para os transportes HTTP e TCP e segurança de modo misto para o transporte TCP. Código de exemplo mostrando todas as associações de 3 é no final deste tópico.  
