@@ -9,19 +9,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 97247abe629d12b6c60d8157786b9b82e9e14f4b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 650cc0850b76cd6c855ea1f20b639752d7bef8cf
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="ltsystemservicemodelgt-of-workflow"></a><span data-ttu-id="3be15-102">&lt;System. ServiceModel&gt; de fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="3be15-102">&lt;system.serviceModel&gt; of workflow</span></span>
-<span data-ttu-id="3be15-103">Esta seção de configuração contém todos os elementos de configuração do fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="3be15-103">This configuration section contains all the workflow configuration elements.</span></span>  
+# <a name="ltsystemservicemodelgt-of-workflow"></a><span data-ttu-id="ccecb-102">&lt;System. ServiceModel&gt; de fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="ccecb-102">&lt;system.serviceModel&gt; of workflow</span></span>
+<span data-ttu-id="ccecb-103">Esta seção de configuração contém todos os elementos de configuração do fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="ccecb-103">This configuration section contains all the workflow configuration elements.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3be15-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="3be15-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ccecb-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ccecb-104">Syntax</span></span>  
   
 ```xml  
 <system.ServiceModel>  
@@ -99,21 +99,21 @@ ms.lasthandoff: 10/18/2017
 </system.ServiceModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="3be15-105">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="3be15-105">Attributes and Elements</span></span>  
- <span data-ttu-id="3be15-106">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="3be15-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ccecb-105">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="ccecb-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="ccecb-106">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="ccecb-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="3be15-107">Atributos</span><span class="sxs-lookup"><span data-stu-id="3be15-107">Attributes</span></span>  
- <span data-ttu-id="3be15-108">Nenhum</span><span class="sxs-lookup"><span data-stu-id="3be15-108">None</span></span>  
+### <a name="attributes"></a><span data-ttu-id="ccecb-107">Atributos</span><span class="sxs-lookup"><span data-stu-id="ccecb-107">Attributes</span></span>  
+ <span data-ttu-id="ccecb-108">Nenhum</span><span class="sxs-lookup"><span data-stu-id="ccecb-108">None</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="3be15-109">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="3be15-109">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="ccecb-109">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="ccecb-109">Child Elements</span></span>  
   
-|<span data-ttu-id="3be15-110">Elemento</span><span class="sxs-lookup"><span data-stu-id="3be15-110">Element</span></span>|<span data-ttu-id="3be15-111">Descrição</span><span class="sxs-lookup"><span data-stu-id="3be15-111">Description</span></span>|  
+|<span data-ttu-id="ccecb-110">Elemento</span><span class="sxs-lookup"><span data-stu-id="ccecb-110">Element</span></span>|<span data-ttu-id="ccecb-111">Descrição</span><span class="sxs-lookup"><span data-stu-id="ccecb-111">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="3be15-112">\<comportamentos ></span><span class="sxs-lookup"><span data-stu-id="3be15-112">\<behaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|<span data-ttu-id="3be15-113">Esta seção define o **serviceBehaviors** coleção.</span><span class="sxs-lookup"><span data-stu-id="3be15-113">This section defines the **serviceBehaviors** collection.</span></span>  <span data-ttu-id="3be15-114">Cada elemento na coleção define elementos de comportamento consumidos por serviços.</span><span class="sxs-lookup"><span data-stu-id="3be15-114">Each element in the collection defines behavior elements consumed by services.</span></span> <span data-ttu-id="3be15-115">Cada elemento de comportamento é identificado por seu exclusivo **nome** atributo.</span><span class="sxs-lookup"><span data-stu-id="3be15-115">Each behavior element is identified by its unique **name** attribute.</span></span>|  
-|[<span data-ttu-id="3be15-116">\<controle ></span><span class="sxs-lookup"><span data-stu-id="3be15-116">\<tracking></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|<span data-ttu-id="3be15-117">Representa uma seção de configuração para definir configurações de controle para um serviço de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="3be15-117">Represents a configuration section for defining tracking settings for a workflow service.</span></span><br /><br /> <span data-ttu-id="3be15-118">Para obter mais informações no controle de fluxo de trabalho e sua configuração, consulte [fluxo de trabalho de rastreamento e rastreamento](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) e [configurar rastreamento para um fluxo de trabalho](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span><span class="sxs-lookup"><span data-stu-id="3be15-118">For more information in workflow tracking and its configuration, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Configuring Tracking for a Workflow](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span></span>|  
+|[<span data-ttu-id="ccecb-112">\<comportamentos ></span><span class="sxs-lookup"><span data-stu-id="ccecb-112">\<behaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|<span data-ttu-id="ccecb-113">Esta seção define o **serviceBehaviors** coleção.</span><span class="sxs-lookup"><span data-stu-id="ccecb-113">This section defines the **serviceBehaviors** collection.</span></span>  <span data-ttu-id="ccecb-114">Cada elemento na coleção define elementos de comportamento consumidos por serviços.</span><span class="sxs-lookup"><span data-stu-id="ccecb-114">Each element in the collection defines behavior elements consumed by services.</span></span> <span data-ttu-id="ccecb-115">Cada elemento de comportamento é identificado por seu exclusivo **nome** atributo.</span><span class="sxs-lookup"><span data-stu-id="ccecb-115">Each behavior element is identified by its unique **name** attribute.</span></span>|  
+|[<span data-ttu-id="ccecb-116">\<controle ></span><span class="sxs-lookup"><span data-stu-id="ccecb-116">\<tracking></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|<span data-ttu-id="ccecb-117">Representa uma seção de configuração para definir configurações de controle para um serviço de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="ccecb-117">Represents a configuration section for defining tracking settings for a workflow service.</span></span><br /><br /> <span data-ttu-id="ccecb-118">Para obter mais informações no controle de fluxo de trabalho e sua configuração, consulte [fluxo de trabalho de rastreamento e rastreamento](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) e [configurar rastreamento para um fluxo de trabalho](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span><span class="sxs-lookup"><span data-stu-id="ccecb-118">For more information in workflow tracking and its configuration, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Configuring Tracking for a Workflow](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="3be15-119">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="3be15-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="ccecb-119">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="ccecb-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="3be15-120">Elemento</span><span class="sxs-lookup"><span data-stu-id="3be15-120">Element</span></span>|<span data-ttu-id="3be15-121">Descrição</span><span class="sxs-lookup"><span data-stu-id="3be15-121">Description</span></span>|  
+|<span data-ttu-id="ccecb-120">Elemento</span><span class="sxs-lookup"><span data-stu-id="ccecb-120">Element</span></span>|<span data-ttu-id="ccecb-121">Descrição</span><span class="sxs-lookup"><span data-stu-id="ccecb-121">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="3be15-122">\<configuration></span><span class="sxs-lookup"><span data-stu-id="3be15-122">\<configuration></span></span>|<span data-ttu-id="3be15-123">O elemento raiz para todos os elementos de configuração em um arquivo de configuração do .NET.</span><span class="sxs-lookup"><span data-stu-id="3be15-123">The root element for all configuration elements in a .NET configuration file.</span></span>|
+|<span data-ttu-id="ccecb-122">\<configuration></span><span class="sxs-lookup"><span data-stu-id="ccecb-122">\<configuration></span></span>|<span data-ttu-id="ccecb-123">O elemento raiz para todos os elementos de configuração em um arquivo de configuração do .NET.</span><span class="sxs-lookup"><span data-stu-id="ccecb-123">The root element for all configuration elements in a .NET configuration file.</span></span>|

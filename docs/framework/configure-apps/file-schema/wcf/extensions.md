@@ -10,17 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5bdfd491cdc39accb396664500eef7c66142ef9c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 34acc21230650fe5b8da2f81fd176c253c57f69d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="ltextensionsgt"></a><span data-ttu-id="82d15-102">&lt;extensões&gt;</span><span class="sxs-lookup"><span data-stu-id="82d15-102">&lt;extensions&gt;</span></span>
-<span data-ttu-id="82d15-103">Este elemento de configuração contém uma coleção de elementos XML que contêm metadados personalizados a serem publicados juntamente com os metadados detectável padrão (EPR, ContractTypeName, BindingName, escopo e ListenURI).</span><span class="sxs-lookup"><span data-stu-id="82d15-103">This configuration element contains a collection of XML elements that contain custom metadata to be published along with the standard discoverable metadata (EPR, ContractTypeName, BindingName, Scope and ListenURI).</span></span> <span data-ttu-id="82d15-104">Este é um exemplo do uso desse elemento de configuração.</span><span class="sxs-lookup"><span data-stu-id="82d15-104">The following is an example of using this configuration element.</span></span>  
+# <a name="ltextensionsgt"></a><span data-ttu-id="b43a0-102">&lt;extensões&gt;</span><span class="sxs-lookup"><span data-stu-id="b43a0-102">&lt;extensions&gt;</span></span>
+<span data-ttu-id="b43a0-103">Este elemento de configuração contém uma coleção de elementos XML que contêm metadados personalizados a serem publicados juntamente com os metadados detectável padrão (EPR, ContractTypeName, BindingName, escopo e ListenURI).</span><span class="sxs-lookup"><span data-stu-id="b43a0-103">This configuration element contains a collection of XML elements that contain custom metadata to be published along with the standard discoverable metadata (EPR, ContractTypeName, BindingName, Scope and ListenURI).</span></span> <span data-ttu-id="b43a0-104">Este é um exemplo do uso desse elemento de configuração.</span><span class="sxs-lookup"><span data-stu-id="b43a0-104">The following is an example of using this configuration element.</span></span>  
   
 ```xml  
 <services>  
@@ -55,5 +55,5 @@ ms.lasthandoff: 10/18/2017
 </behaviors>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="82d15-105">Consulte também</span><span class="sxs-lookup"><span data-stu-id="82d15-105">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="b43a0-105">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b43a0-105">See Also</span></span>  
  <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

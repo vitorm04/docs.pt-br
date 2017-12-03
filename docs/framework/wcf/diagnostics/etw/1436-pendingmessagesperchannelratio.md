@@ -10,29 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1f5b779b-1ca1-4653-b79b-db31df8fbb8b
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9f635c65b604090ad4c936068b3cfa68a27673e7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a8edb2e0988f8bcae0df322185f2a703440487b3
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="1436---pendingmessagesperchannelratio"></a><span data-ttu-id="91ecb-102">1436 - PendingMessagesPerChannelRatio</span><span class="sxs-lookup"><span data-stu-id="91ecb-102">1436 - PendingMessagesPerChannelRatio</span></span>
-## <a name="properties"></a><span data-ttu-id="91ecb-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="91ecb-103">Properties</span></span>  
+# <a name="1436---pendingmessagesperchannelratio"></a><span data-ttu-id="bc150-102">1436 - PendingMessagesPerChannelRatio</span><span class="sxs-lookup"><span data-stu-id="bc150-102">1436 - PendingMessagesPerChannelRatio</span></span>
+## <a name="properties"></a><span data-ttu-id="bc150-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="bc150-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="91ecb-104">ID</span><span class="sxs-lookup"><span data-stu-id="91ecb-104">ID</span></span>|<span data-ttu-id="91ecb-105">1436</span><span class="sxs-lookup"><span data-stu-id="91ecb-105">1436</span></span>|  
-|<span data-ttu-id="91ecb-106">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="91ecb-106">Keywords</span></span>|<span data-ttu-id="91ecb-107">Cota</span><span class="sxs-lookup"><span data-stu-id="91ecb-107">Quota</span></span>|  
-|<span data-ttu-id="91ecb-108">Nível</span><span class="sxs-lookup"><span data-stu-id="91ecb-108">Level</span></span>|<span data-ttu-id="91ecb-109">Detalhado</span><span class="sxs-lookup"><span data-stu-id="91ecb-109">Verbose</span></span>|  
-|<span data-ttu-id="91ecb-110">Canal</span><span class="sxs-lookup"><span data-stu-id="91ecb-110">Channel</span></span>|<span data-ttu-id="91ecb-111">Os aplicativos de servidor de Microsoft-Windows- aplicativo/analítico</span><span class="sxs-lookup"><span data-stu-id="91ecb-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="bc150-104">ID</span><span class="sxs-lookup"><span data-stu-id="bc150-104">ID</span></span>|<span data-ttu-id="bc150-105">1436</span><span class="sxs-lookup"><span data-stu-id="bc150-105">1436</span></span>|  
+|<span data-ttu-id="bc150-106">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="bc150-106">Keywords</span></span>|<span data-ttu-id="bc150-107">Cota</span><span class="sxs-lookup"><span data-stu-id="bc150-107">Quota</span></span>|  
+|<span data-ttu-id="bc150-108">Nível</span><span class="sxs-lookup"><span data-stu-id="bc150-108">Level</span></span>|<span data-ttu-id="bc150-109">Detalhado</span><span class="sxs-lookup"><span data-stu-id="bc150-109">Verbose</span></span>|  
+|<span data-ttu-id="bc150-110">Canal</span><span class="sxs-lookup"><span data-stu-id="bc150-110">Channel</span></span>|<span data-ttu-id="bc150-111">Os aplicativos de servidor de Microsoft-Windows- aplicativo/analítico</span><span class="sxs-lookup"><span data-stu-id="bc150-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="91ecb-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="91ecb-112">Description</span></span>  
- <span data-ttu-id="91ecb-113">Esse evento é emitido para fornecer as mensagens pendentes por informações de taxa de canal.</span><span class="sxs-lookup"><span data-stu-id="91ecb-113">This event is emitted to provide the pending messages per channel ratio information.</span></span>  
+## <a name="description"></a><span data-ttu-id="bc150-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="bc150-112">Description</span></span>  
+ <span data-ttu-id="bc150-113">Esse evento é emitido para fornecer as mensagens pendentes por informações de taxa de canal.</span><span class="sxs-lookup"><span data-stu-id="bc150-113">This event is emitted to provide the pending messages per channel ratio information.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="91ecb-114">Mensagem</span><span class="sxs-lookup"><span data-stu-id="91ecb-114">Message</span></span>  
- <span data-ttu-id="91ecb-115">Mensagens pendentes por taxa de canal: %1 / %2</span><span class="sxs-lookup"><span data-stu-id="91ecb-115">Pending messages per channel ratio: %1/%2</span></span>  
+## <a name="message"></a><span data-ttu-id="bc150-114">Mensagem</span><span class="sxs-lookup"><span data-stu-id="bc150-114">Message</span></span>  
+ <span data-ttu-id="bc150-115">Mensagens pendentes por taxa de canal: %1 / %2</span><span class="sxs-lookup"><span data-stu-id="bc150-115">Pending messages per channel ratio: %1/%2</span></span>  
   
-## <a name="details"></a><span data-ttu-id="91ecb-116">Detalhes</span><span class="sxs-lookup"><span data-stu-id="91ecb-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="bc150-116">Detalhes</span><span class="sxs-lookup"><span data-stu-id="bc150-116">Details</span></span>
