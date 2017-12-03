@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: WCF Data Services, configuring
 ms.assetid: 3d830bcd-32b4-4f26-9287-d58a071452c6
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 98584405b0c6a86f424f4bf82e29ea33197dfbeb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b41de296143d325ba0e1932831d4a3ef1bd7dc80
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a>Como: habilitar o acesso ao serviço de dados (WCF Data Services)
 Em [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você deve conceder explicitamente acesso a recursos que são expostos por um serviço de dados. Isso significa que, depois de criar um novo serviço de dados, você deve ainda explicitamente fornecer acesso a recursos individuais, como conjuntos de entidades. Este tópico mostra como habilitar a leitura e acesso de gravação a cinco da entidade define no serviço de dados Northwind é criado quando você concluir o [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Porque o <xref:System.Data.Services.EntitySetRights> enumeração é definida usando o <xref:System.FlagsAttribute>, você pode usar uma lógica ou conjunto de operador para especificar várias permissões para uma única entidade.  

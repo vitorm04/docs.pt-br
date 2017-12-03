@@ -14,14 +14,14 @@ helpviewer_keywords:
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 228b8d40b14781496b2c71a715008e8bf9caf86b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 545096292f34566b4bb6c3c44bb20ddac426af26
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Controle de versão de serviço de dados (WCF Data Services)
 O [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] permite criar serviços de dados para que os clientes possam acessar dados como usando URIs de recursos com base em um modelo de dados. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]também suporta a definição de operações de serviço. Após a implantação inicial e potencialmente várias vezes durante a vida útil, esses serviços de dados podem precisar ser alterada para uma variedade de motivos, como alterar as necessidades de negócios, requisitos de tecnologia da informação, ou para solucionar outros problemas. Quando você faz alterações a um serviço de dados existente, você deve considerar se deseja definir uma nova versão de seus dados de serviço e a melhor maneira de minimizar o impacto nos aplicativos cliente existentes. Este tópico fornece orientações sobre quando e como criar uma nova versão de um serviço de dados. Ele também descreve como [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] manipula uma troca entre clientes e serviços de dados que oferecem suporte a versões diferentes do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protocolo.  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 06c7107fe58647d29146ed5ef4cc31fc9004d2b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 21189ffd5fc8b113cc746fd855bd5c325aad78c6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>Utilitário de cliente do WCF Data Service (DataSvcUtil.exe)
 DataSvcUtil.exe é uma ferramenta de linha de comando fornecida pelo [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] que consome um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed e gera as classes de serviço de dados do cliente que são necessárias para acessar um serviço de dados de um aplicativo cliente .NET Framework. Esse utilitário pode gerar classes de dados usando as seguintes fontes de metadados:  

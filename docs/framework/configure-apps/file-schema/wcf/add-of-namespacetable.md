@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cf7b5b75-63bd-49a6-abac-4bfdab377e36
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f08f4b46c6e6290602fc78a2f06954b9cf0b07d5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5f159e3d92fdc7443cd20cf88300f331b78273ad
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltaddgt-of-ltnamespacetablegt"></a>&lt;adicionar&gt; &lt;namespaceTable&gt;
 Representa um elemento de configuração que contém o namespace para mapeamento de prefixo que pode ser usado em filtros de XPath para roteamento.  

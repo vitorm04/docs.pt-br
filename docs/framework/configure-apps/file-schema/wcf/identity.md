@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: fa6bfdf72bd292599867bf7a9571ecd6b408a2c2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 95b2ac18f6c04ad7ba31a8b1579506ac5c3b51ab
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltidentitygt"></a>&lt;identity&gt;
 O elemento de identidade permite que um desenvolvedor de cliente especificar em tempo de design a identidade esperada do serviço. No processo de handshake entre o cliente e o serviço, o [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] infraestrutura garantirá que a identidade do serviço esperado corresponde aos valores desse elemento e, portanto, pode ser autenticada. Para obter mais informações, consulte [autenticação e identidade de serviço](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  

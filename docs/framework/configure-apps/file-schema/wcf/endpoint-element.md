@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
 caps.latest.revision: "23"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 937819fabc50d4a0a43c6a3168e6d8a77bf4ceca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c466d7f7f00d7fd2358f0d5d71c0b705f316f66f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltendpointgt-element"></a>elemento de &lt;ponto de extremidade&gt;
 Especifica a associação, contrato e propriedades de endereço de um ponto de extremidade de serviço, que é usado para expor serviços.  
@@ -54,10 +54,10 @@ Especifica a associação, contrato e propriedades de endereço de um ponto de e
 |bindingConfiguration|Uma cadeia de caracteres que especifica o nome de associação da associação a ser usado quando o ponto de extremidade é instanciado. O nome da associação deve estar no escopo no ponto de que extremidade é definida. O padrão é uma cadeia de caracteres vazia.<br /><br /> Este atributo é usado em conjunto com `binding` para fazer referência a uma configuração de associação específica no arquivo de configuração. Defina esse atributo, se você está tentando usar uma associação personalizada. Caso contrário, uma exceção pode ser lançada.|  
 |bindingName|Uma cadeia de caracteres que especifica o nome qualificado exclusivo da associação para exportação de definição através de WSDL. O padrão é uma cadeia de caracteres vazia.|  
 |bindingNamespace|Exportar uma cadeia de caracteres que especifica o nome qualificado do namespace da associação de definição através de WSDL. O padrão é uma cadeia de caracteres vazia.|  
-|contrato|Uma cadeia de caracteres que indica qual contrato esse ponto de extremidade está expondo. O assembly deve implementar o tipo de contrato. Se uma implementação de serviço implementa um tipo de contrato único, essa propriedade pode ser omitida. O padrão é uma cadeia de caracteres vazia.|  
+|contrato|Uma cadeia de caracteres que indica qual contrato este ponto de extremidade está expondo. O assembly deve implementar o tipo de contrato. Se uma implementação de serviço implementa um tipo de contrato único, essa propriedade pode ser omitida. O padrão é uma cadeia de caracteres vazia.|  
 |endpointConfiguration|Uma cadeia de caracteres que especifica o nome do ponto de extremidade padrão que é definido pelo `kind` atributo, o que faz referência às informações adicionais de configuração do ponto de extremidade padrão. O mesmo nome deve ser definido na `<standardEndpoints>` seção.|  
 |isSystemEndpoint|Um valor booleano que especifica se um ponto de extremidade é um ponto de extremidade de infraestrutura.|  
-|tipo|Uma cadeia de caracteres que especifica o tipo de ponto de extremidade padrão aplicado. O tipo deve ser registrado no `<extensions>` seção ou em Machine. config. Se nada for especificado, um ponto de extremidade de serviço comum é criado.|  
+|tipo|Uma cadeia de caracteres que especifica o tipo de ponto de extremidade padrão aplicado. O tipo deve ser registrado na seção `<extensions>` ou em machine.config. Se nada for especificado, um ponto de extremidade de serviço comum é criado.|  
 |listenUriMode|Especifica como o transporte trata o `ListenUri` fornecido para o serviço de escuta. Os valores válidos são<br /><br /> -Explícita<br />-Exclusivo<br /><br /> O valor padrão é Explicit.|  
 |ListenUri|Uma cadeia de caracteres que especifica o URI no qual o ponto de extremidade de serviço escuta. O padrão é uma cadeia de caracteres vazia.|  
 |name|Atributo opcional. Uma cadeia de caracteres que especifica o nome do ponto de extremidade de serviço. O valor padrão é a concatenação do nome de associação e o nome de descrição do contrato. Serviços podem ter vários pontos de extremidade, portanto o ponto de extremidade `name` atributo é diferente do nome do serviço.|  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1f485329-2771-43bc-88de-df8f2faa3bb7
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 21f0165f8cda6701aa11058f2dac1bdde0f9ebbd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b82102fdd1e906df504aa9c29b3eb2d0080e0a3e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltudpdiscoveryendpointgt"></a>&lt;udpDiscoveryEndpoint&gt;
 Este elemento de configuração define um ponto de extremidade padrão que é pré-configurado para operações de descoberta através de um UDP associação multicast. Esse ponto de extremidade tem um contrato fixo e dá suporte a duas versões do protocolo WS-Discovery. Além disso, ele tem uma associação fixa do UDP e um endereço padrão conforme especificado nas especificações do WS-Discovery (WS-Discovery de abril de 2005 ou v 1.1 do WS-Discovery).  

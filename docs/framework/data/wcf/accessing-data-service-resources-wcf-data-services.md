@@ -16,14 +16,14 @@ helpviewer_keywords:
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 569830c5fbb9ecb837482202a4eb5a096ce21962
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c15ca5efcb23fa6705a4fcfa3eac6d6db09fcbad
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Acessando recursos do serviço de dados (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]oferece suporte a [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para expor seus dados como um feed com recursos endereçáveis por URIs. Esses recursos são representados de acordo com as convenções de relação de entidade do [modelo de dados de entidade](../../../../docs/framework/data/adonet/entity-data-model.md). Nesse modelo, as entidades representam unidades operacionais de dados que são tipos de dados em um domínio de aplicativo, como clientes, pedidos, itens e classes. Os dados de entidades são acessados e alterados usando-se a semântica REST (transferência de estado representativo), especificamente os verbos HTTP padrão GET, PUT, POST e DELETE.  

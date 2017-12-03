@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: dc41f6f7-cabc-4a64-9fa0-ceabf861b348
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 63d65ea50babd0cd4aa7ee92cdd6d2b281dcbc26
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3070e899d380d0a37358dbf746ac05234fd63446
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltsecuritygt-of-ltnethttpbinding"></a>&lt;segurança&gt; de &lt;netHttpBinding
 Define os recursos de segurança de [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
@@ -58,7 +58,7 @@ Define os recursos de segurança de [ \<basicHttpBinding >](../../../../../docs/
 |Nenhum|-Mensagens não são protegidas durante a transferência.|  
 |Transporte|A segurança é fornecida usando o transporte HTTPS. As mensagens SOAP são protegidas usando HTTPS. O serviço é autenticado para o cliente usando o certificado de x. 509 do serviço. O cliente é autenticado usando ClientCredentialType fornecido.|  
 |Mensagem|A segurança é fornecida usando a segurança de mensagem SOAP. Por padrão, o corpo é criptografado e assinado. Para essa associação, o sistema requer que o certificado do servidor para o cliente fora da banda. Válido somente `ClientCredentialType` para essa associação é `Certificate`.|  
-|TransportWithMessageCredential|Autenticação de integridade, confidencialidade e servidor são fornecidos pela segurança de transporte. Autenticação de cliente é fornecida por meio de segurança de mensagens SOAP. Esse modo é relevante quando o usuário estiver autenticando usando o nome de usuário/senha e há uma implantação existente de HTTP para transferência segura de mensagens.|  
+|TransportWithMessageCredential|Autenticação de integridade, confidencialidade e servidor são fornecidos pela segurança de transporte. A autenticação de cliente é fornecida por meio de segurança da mensagem SOAP. Esse modo é relevante quando o usuário estiver autenticando usando o nome de usuário/senha e há uma implantação existente de HTTP para transferência segura de mensagens.|  
 |TransportCredentialOnly|Esse modo não fornece confidencialidade e integridade de mensagens. Ele fornece autenticação de cliente com base em http. Esse modo deve ser usado com cuidado. Ele deve ser usado em ambientes onde a segurança de transporte está sendo fornecida por outros meios (como IPSec) e somente a autenticação do cliente é fornecida pelo [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] infraestrutura.|  
   
 ### <a name="child-elements"></a>Elementos filho  

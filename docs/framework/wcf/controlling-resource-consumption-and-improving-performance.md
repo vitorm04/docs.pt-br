@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d11cc876ba6fc9dcd94a88ebcde18b4bd13797de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8cd80805eee58db16f5865683cbd322a49c554a8
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Controlando o consumo de recursos e a melhoria de desempenho
 Este tópico descreve várias propriedades em áreas diferentes do [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] arquitetura que funcionam para controlar o consumo de recursos e afetar o desempenho.  

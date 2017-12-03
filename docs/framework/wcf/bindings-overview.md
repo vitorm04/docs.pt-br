@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a131574e0e3de8507a91807d5de2899238c14628
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: eb2d66217202ee43fb2377f4a8ef26a47b676c11
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Visão geral de associações do Windows Communication Foundation
 Associações são objetos que são usados para especificar os detalhes de comunicação que são necessárias para se conectar ao ponto de extremidade de uma [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] serviço. Cada ponto de extremidade em um [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviço requer uma associação a ser bem especificado. Este tópico descreve os tipos dos detalhes de comunicação que definem as associações, elementos de uma associação que associações são incluídas no [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], e como uma associação pode ser especificada para um ponto de extremidade.  

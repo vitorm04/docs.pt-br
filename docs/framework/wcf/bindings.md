@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b458c0491ec91cd528b40fb19e93b7948f8c059a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 36924bdc79a9789a991befb53c0025b7ea1fd601
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="windows-communication-foundation-bindings"></a>Associações do Windows Communication Foundation
 Especificar associações como um [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] ponto de extremidade de serviço se comunica com outros pontos de extremidade. Basicamente, uma associação deve especificar o transporte (por exemplo, HTTP ou TCP) a ser usado. Você também pode definir outras características, como segurança e suportem, por meio de associações.  
