@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
 caps.latest.revision: "32"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c78363a1a31a1b5f0ac3cc154c1ad53962d0e7de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 82fab5b5d7c702bc9f5e595572b8eba821159cd7
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-sessions"></a>Utilizando sessões
 Em [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplicativos, um *sessão* correlaciona a um grupo de mensagens em uma conversa. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]as sessões são diferentes do objeto de sessão disponível no [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplicativos, suporte a comportamentos diferentes e são controlados de maneiras diferentes. Este tópico descreve os recursos que permitem que as sessões no [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativos e como usá-los.  

@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 164a5419-315c-4987-ad72-54cbdb88d402
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6a5a0d805d5c8cbae67b97afa220ad769179e198
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f3a52550624e93fb9d262f7df2d2e922369c90a8
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="instance-locked-exception-action"></a>Ação bloqueado de exceção de instância
 A propriedade de <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.InstanceLockedExceptionAction%2A> de instância Store de fluxo de trabalho do SQL permite que você especifique que ação o provedor de persistência do SQL deve tomar quando ele recebe <xref:System.Runtime.DurableInstancing.InstanceLockedException>. O provedor de persistência recebe esta exceção quando tentar bloquear uma instância do serviço de fluxo de trabalho que está atualmente bloqueada por outro host serviço. Os valores para essa propriedade é <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry>, <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.BasicRetry>, e <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.AggressiveRetry>. O valor padrão é <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry>. A lista a seguir descreve as três opções:  

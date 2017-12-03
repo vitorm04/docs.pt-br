@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e30c68f5-8c6a-495a-bd20-667a4364c68e
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: bbc9d72a55bd0affdccae9b735355c7e30c5d933
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 988dbef057b5980ac3f23b88c39669706d44557e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="extract-wf-data-using-tracking"></a>Dados de extrair WF usando o rastreamento
 Este exemplo demonstra como usar o rastreamento de fluxo de trabalho para extrair variáveis e argumentos de fluxo de trabalho de atividades. Ele também mostra a adição de anotações a acompanhar registros e a extração de carregamento útil dos dados dentro dos registros personalizados de rastreamento. O exemplo usa o rastreamento de evento para o Windows (ETW) que controla o participante para extrair dados de fluxo de trabalho.  
