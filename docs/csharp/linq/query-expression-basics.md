@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: dbb77f57c7f3484930e1639da501ab828e1c2070
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7a1cf9eea4c5d75c6bcb6d2f0d5f68a07e3158d0
+ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/30/2017
 ---
 # <a name="query-expression-basics"></a>Noções básicas sobre expressões de consulta
 
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csrefQueryExpBasics#50](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_6.cs)]  
   
- Por outro lado, os dois exemplos a seguir mostram variáveis que não são variáveis de consulta embora sejam inicializadas com uma consulta. Elas não são variáveis de consulta porque armazenam resultados:  
+ Por outro lado, os dois exemplos a seguir mostram variáveis que não são variáveis de consulta, embora sejam inicializadas com uma consulta. Elas não são variáveis de consulta porque armazenam resultados:  
   
  [!code-csharp[csrefQueryExpBasics#51](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_7.cs)]  
   
@@ -176,7 +176,7 @@ ms.lasthandoff: 11/21/2017
  Para obter mais informações, consulte [Como executar uma subconsulta em uma operação de agrupamento](perform-a-subquery-on-a-grouping-operation.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Guia de programação c#](../programming-guide/index.md)  
+ [Guia de programação em C#](../programming-guide/index.md)  
  [Expressões de consulta LINQ](index.md)  
  [Palavras-chave de consulta (LINQ)](../language-reference/keywords/query-keywords.md)  
  [Visão geral de operadores de consulta padrão](../programming-guide/concepts/linq/standard-query-operators-overview.md)

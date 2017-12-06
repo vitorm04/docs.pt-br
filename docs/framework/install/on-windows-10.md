@@ -1,6 +1,6 @@
 ---
 title: Instalar o .NET Framework no Windows 10
-description: Saiba como instalar o .NET Framework no Windows 10 ou Windows Server 2016.
+description: Saiba como instalar o .NET Framework no Windows 10 ou no Windows Server 2016.
 author: rlander
 ms.author: mairaw
 keywords: ".Net Framework, Instalação"
@@ -8,72 +8,72 @@ ms.date: 11/17/2017
 ms.topic: article
 ms.custom: updateeachrelease
 ms.prod: .net-framework
-ms.openlocfilehash: d7f8dd4c6ee9f7eeda389a955f806a5765876ea7
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: ff4867c74b4477a0407126833f30941426d4a33a
+ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/01/2017
 ---
-# <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Instalar o .NET Framework no Windows 10 e Windows Server 2016
+# <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Instalar o .NET Framework no Windows 10 e no Windows Server 2016
 
-O .NET Framework é necessário para executar muitos aplicativos no Windows. As instruções neste artigo devem ajudá-lo a instalar as versões do .NET Framework que você precisa. O [do .NET Framework 4.7.1](https://www.microsoft.com/download/details.aspx?id=56115&desc=dotnet47) é a versão mais recente disponível.
+O .NET Framework é necessário para executar muitos aplicativos no Windows. As instruções neste artigo devem ajudá-lo a instalar as versões do .NET Framework que você precisa. O [.NET Framework 4.7.1](https://www.microsoft.com/download/details.aspx?id=56115&desc=dotnet47) é a versão mais recente disponível.
 
-Você pode ter chegado nesta página depois de tentar executar um aplicativo e ver uma caixa de diálogo em seu computador semelhante ao seguinte:
+Você pode ter chegado nesta página depois de tentar executar um aplicativo e ver uma caixa de diálogo em seu computador semelhante à seguinte:
 
-![Este aplicativo não pôde ser iniciado](./media/this-application-could-not-be-started.png)
+![Não foi possível iniciar o aplicativo](./media/this-application-could-not-be-started.png)
 
-## <a name="net-framework-471"></a>.NET framework 4.7.1
+## <a name="net-framework-471"></a>.NET Framework 4.7.1
 
-O .NET Framework 4.7.1 é incluído com:
+O .NET Framework 4.7.1 está incluído:
 
-* [Outono criadores de atualização do Windows 10 (versão 1709)](https://www.microsoft.com/software-download/windows10)
-* [Windows Server 2016 (versão 1709)](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709)
+* [No Windows 10 Fall Creators Update (versão 1709)](https://www.microsoft.com/software-download/windows10)
+* [No Windows Server 2016 (versão 1709)](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709)
 
 > [!div class="button"]
-[Baixar o .NET Framework 4.7.1](https://www.microsoft.com/net/download/thank-you/net471?utm_source=ms-docs&utm_medium=referral)
+[Baixe o .NET Framework 4.7.1](https://www.microsoft.com/net/download/thank-you/net471?utm_source=ms-docs&utm_medium=referral)
 
-O [do .NET Framework 4.7.1](https://www.microsoft.com/download/details.aspx?id=56115&desc=dotnet47) pode ser usado para executar aplicativos criados para o .NET Framework 4.0 por meio de 4.7.1.
+O [.NET Framework 4.7.1](https://www.microsoft.com/download/details.aspx?id=56115&desc=dotnet47) pode ser usado para executar aplicativos compilados para as versões 4.0 até 4.7.1 do .NET Framework.
 
-Você pode instalar o [do .NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) em:
+Você pode instalar o [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47):
 
-* Atualização de criadores do Windows 10 (versão 1703)
-* Atualização de aniversário do Windows 10 (versão 1607)
+* No Windows 10 Creators Update (versão 1703)
+* Na Atualização de Aniversário do Windows 10 (versão 1607)
 * Windows Server 2016
 
-Não há suporte para o .NET Framework 4.7.1 em:
+O .NET Framework 4.7.1 não é compatível:
 
-* Windows 10 1507
-* Windows 10 1511
+* Com o Windows 10 1507
+* Com o Windows 10 1511
 
-Se você estiver usando o Windows 10 1507 ou 1511 e você deseja instalar o .NET Framework 4.7.1, primeiro é necessário atualizar para uma versão mais recente do Windows 10.
+Se estiver usando o Windows 10 1507 ou 1511 e quiser instalar o .NET Framework 4.7.1, atualize antes para uma versão mais recente do Windows 10.
 
-## <a name="net-framework-461"></a>.NET Framework 4.6.1
+## <a name="net-framework-462"></a>.NET Framework 4.6.2
 
-O [do .NET Framework 4.6.1](https://www.microsoft.com/download/details.aspx?id=49981) é a versão mais recente com suporte do .NET Framework no Windows 10 1507 e 1511.
+O [.NET Framework 4.6.2](https://www.microsoft.com/en-us/download/details.aspx?id=53345) é a versão mais recente do .NET Framework compatível com o Windows 10 1507 e o 1511.
 
-O .NET Framework 4.6.1 dá suporte a aplicativos criados para o .NET Framework 4.0 por meio de 4.6.1.
+O .NET Framework 4.6.2 é compatível com aplicativos compilados para as versões 4.0 até 4.6.2 do .NET Framework.
 
 ## <a name="net-framework-35"></a>.NET Framework 3,5
 
 Siga as instruções para instalar o [.NET Framework 3.5 no Windows 10](dotnet-35-windows-10.md).
 
-O .NET Framework 3.5 dá suporte a aplicativos criados para o .NET Framework 1.0 por meio de 3.5.
+O .NET Framework 3.5 é compatível com aplicativos compilados para as versões 1.0 até 3.5 do .NET Framework.
 
 ## <a name="additional-information"></a>Informações adicionais
 
-Versões do .NET framework 4. x são atualizações in-loco de versões anteriores. Isso significa que o seguinte:
+As versões 4.x do .NET Framework são atualizações in-loco de versões anteriores. Isso significa o seguinte:
 
-- Você só pode ter uma versão do .NET Framework 4. x instalados em seu computador.
+- Você pode ter somente uma versão do .NET Framework 4. x instalada em seu computador.
 
-- Você não pode instalar uma versão anterior do .NET Framework em seu computador, se uma versão mais recente já está instalada.
+- Você não poderá instalar uma versão anterior do .NET Framework em seu computador se uma versão mais recente já tiver sido instalada.
 
-- versões do .NET Framework 4. x podem ser usadas para executar aplicativos criados para o .NET Framework 4.0 por meio dessa versão. Por exemplo, o .NET Framework 4.7 pode ser usado para executar aplicativos criados para o .NET Framework 4.0 a 4.7. A versão mais recente (.NET Framework 4.7.1) pode ser usada para executar todas as versões do .NET Framework 4.0 a partir de aplicativos criados.
+- As versões 4.x do .NET Framework podem ser usadas para executar aplicativos compilados para o .NET Framework 4.0 por meio dessa versão. Por exemplo, .NET Framework 4.7 pode ser usado para executar aplicativos compilados para as versões 4.0 até 4.7 do .NET Framework. A versão mais recente (.NET Framework 4.7.1) pode ser usada para executar aplicativos compilados para todas as versões do .NET Framework a partir da 4.0.
 
-Para obter uma lista de todas as versões do .NET Framework disponível para download, consulte o [.NET Downloads](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral) página.
+Para obter uma lista de todas as versões do .NET Framework disponíveis para download, consulte a página [Downloads do .NET](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral).
 
 ## <a name="help"></a>Ajuda
 
-Se você não pode obter a versão correta do .NET Framework instalado, você pode [entre em contato com a Microsoft para obter ajuda](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help).
+Se não for possível instalar a versão correta do .NET Framework, [entre em contato com a Microsoft para obter ajuda](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help).
 
 ## <a name="see-also"></a>Consulte também
 
