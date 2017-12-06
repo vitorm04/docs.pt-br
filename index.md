@@ -1,18 +1,19 @@
 ---
 layout: HubPage
-hide_bc: true
+hide_bc: True
 title: "Documentação .NET"
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 9e0f22f00ea2ef0e3919768a36410a5025300f6d
-ms.lasthandoff: 04/08/2017
-
+description: "Aprenda a usar o .NET para criar uma variedade de aplicativos em qualquer plataforma usando C#, Visual Basic e F#. Procure referência de API, código de exemplo, tutoriais e muito mais."
+ms.openlocfilehash: e2e5e0d63464cdfad3432daa2d99da08fefedb5f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/net/tutorials/csharp/getting-started">
+                <a href="/dotnet/csharp/quick-starts">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -30,7 +31,7 @@ ms.lasthandoff: 04/08/2017
                 </a>
             </li>
             <li>
-                <a href="/dotnet/api/?view=netcore-1.1">
+                <a href="/dotnet/api/?view=netcore-2.0">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -86,8 +87,8 @@ ms.lasthandoff: 04/08/2017
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/welcome">O que é o .NET?</a></h3>
-                                                <p><a href="/dotnet/standard/getting-started">Introdução</a></p>
+                                                <h3><a href="/dotnet/standard/">Guia do .NET</a></h3>
+                                                <p><a href="/dotnet/standard/get-started">Introdução</a></p>
                                                 <p><a href="/dotnet/standard/tour">Tour do .NET</a></p>
                                                 <p><a href="/dotnet/standard/components">Conceitos de arquitetura do .NET</a></p>
                                             </div>
@@ -106,10 +107,11 @@ ms.lasthandoff: 04/08/2017
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/core">Guia do .NET Core</a></h3>
-                                                <p><a href="/dotnet/core/getting-started">Introdução</a></p>
+                                                <p><a href="/dotnet/core/get-started">Introdução</a></p>
                                                 <p><a href="/dotnet/core/tutorials">Tutoriais</a></p>
                                                 <p><a href="/dotnet/core/porting">Portabilidade do .NET Framework</a></p>
                                                 <p><a href="/aspnet/core/getting-started">ASP.NET Core</a></p>
+                                                <p><a href="/ef/core/index">Núcleo EF</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -127,7 +129,7 @@ ms.lasthandoff: 04/08/2017
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/framework/">Guia do .NET Framework</a></h3>
                                                 <p><a href="/dotnet/framework/get-started/">Introdução</a></p>
-                                                <p><a href="/dotnet/framework/development-guide">Tutoriais</a></p>
+                                                <p><a href="/dotnet/framework/development-guide">Guia de desenvolvimento</a></p>
                                                 <p><a href="/dotnet/framework/develop-client-apps">Desenvolvimento do cliente</a></p>
                                                 <p><a href="/aspnet/#pivot=aspnet">ASP.NET</a></p>
                                             </div>
@@ -166,6 +168,7 @@ ms.lasthandoff: 04/08/2017
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/csharp">Guia do C#</a></h3>
+                                                <p><a href="/dotnet/csharp/quick-starts">Início Rápido</a></p>
                                                 <p><a href="/dotnet/csharp/getting-started">Introdução</a></p>
                                                 <p><a href="/dotnet/csharp/tour-of-csharp">Tour do C#</a></p>
                                                 <p><a href="/dotnet/csharp/language-reference">Referência da linguagem C#</a></p>
@@ -215,7 +218,7 @@ ms.lasthandoff: 04/08/2017
                             <li class="fullSpan">
                                 <div class="container footer">
                                     <p><a href="https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md">Contribuir com exemplos e documentação do .NET</a></p>
-                                    <p><a href="https://docs.microsoft.com/en-us/dotnet/project-json">Localizar a versão da documentação para Visual Studio 2015/project.json</a></p>
+                                    <p><a href="/dotnet/project-json">Localizar a versão da documentação para Visual Studio 2015/project.json</a></p>
                                 </div>
                             </li>
                         </ul>
@@ -273,7 +276,7 @@ ms.lasthandoff: 04/08/2017
                                             <div class="cardText">
                                                 <a href="https://www.asp.net/learn">
                                                     <h3>O que é ASP.NET?</h3>
-                                                    <p>Saiba mais sobre a plataforma Web do ASP.NET.</p>
+                                                    <p>Aprenda a fazer build de aplicativos web ASP.NET.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -329,7 +332,7 @@ ms.lasthandoff: 04/08/2017
                                             </div>
                                             <div class="cardText">
                                                 <a href="/aspnet/core/tutorials/your-first-mac-aspnet">
-                                                    <h3>ASP.NET no macOS e Código VS</h3>
+                                                    <h3>ASP.NET no macOS e no Visual Studio Code</h3>
                                                     <p>Aprenda a configurar, compilar e implantar aplicativos ASP.NET Core no macOS com Código do Visual Studio.</p>
                                                 </a>
                                             </div>
@@ -371,7 +374,7 @@ ms.lasthandoff: 04/08/2017
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://azure.microsoft.com/documentation/articles/cloud-services-dotnet-get-started">
+                                                <a href="/azure/cloud-services/cloud-services-dotnet-get-started">
                                                     <h3>Serviços de Nuvem do Azure e ASP.NET</h3>
                                                     <p>Aprenda a configurar, monitorar e dimensionar os serviços de nuvem no Azure.</p>
                                                 </a>
@@ -409,7 +412,7 @@ ms.lasthandoff: 04/08/2017
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://azure.microsoft.com/documentation/services/storage/">
+                                                <a href="https://docs.microsoft.com/azure/storage/">
                                                     <h3>Armazenamento do Azure</h3>
                                                     <p>Saiba mais sobre o Armazenamento do Azure e como criar aplicativos que usam blobs, tabelas, filas e arquivos do Azure.</p>
                                                 </a>
@@ -473,7 +476,7 @@ ms.lasthandoff: 04/08/2017
                                             <div class="cardText">
                                                 <a href="https://developer.xamarin.com/guides/xamarin-forms">
                                                     <h3>Xamarin.Forms</h3>
-                                                    <p>Crie interfaces do usuário em plataformas cruzadas de dispositivos móveis usando C# e F# com o Xamarin.Forms.</p>
+                                                    <p>Crie interfaces do usuário móveis multiplataforma usando C# e F# com o Xamarin.Forms.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -652,4 +655,3 @@ ms.lasthandoff: 04/08/2017
         </ul>
     </div>
 </div>
-
