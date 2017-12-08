@@ -14,10 +14,10 @@ items:
 - durationInMinutes: 1
   content: "Este início rápido ensina C# de forma interativa, usando seu navegador para escrever em C# e ver os resultados da compilação e da execução de seu código. Ele contém uma série de lições que começam com um programa \"Olá, Mundo\". Estas lições ensinam os princípios básicos da linguagem C#.\n"
   ms.openlocfilehash: ce1791bd7949c89269b1051d15765f5efd273e7c
-  ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
+  ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 12/01/2017
+  ms.lasthandoff: 12/07/2017
 - title: Executar seu primeiro programa em C#
   durationInMinutes: 2
   content: "Execute o seguinte código na janela interativa. Para fazer isso, digite o bloco de código a seguir na janela interativa e clique no botão **Executar**:\n\n```csharp\nConsole.WriteLine(\"Hello World!\");\n```\n\nParabéns! Você executou seu primeiro programa em C#. É um programa simples que imprime a mensagem \"Olá, Mundo!\". Ele usou o método <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> para imprimir essa mensagem. `Console` é um tipo que representa a janela do console. `WriteLine` é um método do tipo `Console` que imprime uma linha de texto nesse console de texto.\n\nVamos continuar e explorar mais. O restante desta lição explora como trabalhar com o tipo `string`, que representa o texto em C#. Como o tipo `Console`, o tipo `string` tem métodos. Os métodos `string` funcionam com texto. \n\n> [!NOTE]\n> Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).\n"
