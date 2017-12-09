@@ -12,11 +12,11 @@ ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
 caps.latest.revision: "36"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 69a3a575347a62b298c17af050cb925f7819b552
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 23a3299492c538963e9a5dceaadc81a44d386b19
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="await-c-reference"></a>await (Referência de C#)
 O operador `await` é aplicado a uma tarefa em um método assíncrono para inserir um ponto de suspensão na execução do método até que a tarefa aguardada seja concluída. A tarefa representa um trabalho em andamento.  
@@ -34,7 +34,7 @@ A tarefa à qual o operador `await` é aplicado, normalmente é retornada por um
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
 
 > [!IMPORTANT]
->  Para obter o exemplo completo, consulte [Passo a passo: acessando a Web usando async e await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Você pode baixar o exemplo em [Exemplos de código do desenvolvedor](http://go.microsoft.com/fwlink/?LinkID=255191) no site da Microsoft. O exemplo está no projeto AsyncWalkthrough_HttpClient.  
+>  Para obter o exemplo completo, consulte [Passo a passo: acessando a Web usando async e await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Você pode baixar o exemplo em [Exemplos de código do desenvolvedor](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) no site da Microsoft. O exemplo está no projeto AsyncWalkthrough_HttpClient.  
   
 Conforme mostrado no exemplo anterior, se `await` for aplicado ao resultado de uma chamada de método que retorna uma `Task<TResult>`, o tipo da expressão `await` será `TResult`. Se `await` for aplicado ao resultado de uma chamada de método que retorna uma `Task`, o tipo da expressão `await` será `void`. O exemplo a seguir ilustra a diferença.  
   

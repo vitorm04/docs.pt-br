@@ -13,11 +13,11 @@ ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 37f40312f1218b8e666eae7cb2de6c768ee32108
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e17622256ca6a0344797ba16e007ba6feb8f873
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="codepage-c-compiler-options"></a>/codepage (opções do compilador C#)
 Esta opção especifica qual página de código deve ser usada durante a compilação caso a página necessária não seja a página de código padrão atual do sistema.  
@@ -37,7 +37,7 @@ Esta opção especifica qual página de código deve ser usada durante a compila
   
  Caso os arquivos de código-fonte tiverem sido criados com a mesma página de código em uso no computador, com UNICODE ou UTF-8, não será necessário usar **/codepage**.  
   
- Consulte [GetCPInfo](http://go.microsoft.com/fwlink/?LinkId=148371) para obter informações sobre como localizar quais páginas de código têm suporte do sistema.  
+ Consulte [GetCPInfo](https://msdn.microsoft.com/library/dd318078(VS.85).aspx) para obter informações sobre como localizar quais páginas de código têm suporte do sistema.  
   
  Essa opção do compilador não está disponível no Visual Studio e não pode ser alterada programaticamente.  
   

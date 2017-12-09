@@ -1,3 +1,4 @@
+### YamlMime:YamlDocument
 documentType: Tutorial
 title: "Coleções em C#"
 metadata:
@@ -8,14 +9,14 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-items:
-- durationInMinutes: 1
-  content: "Este guia rápido ensina c# interativamente, usando seu navegador para escrever o código c# e ver os resultados de compilar e executar seu código. Ele contém uma série de lições que criam, modificam e exploram coleções e matrizes.\n"
   ms.openlocfilehash: e00cf6badcbd39cc1e9320095169d86efb9cad8f
   ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
   ms.translationtype: HT
   ms.contentlocale: pt-BR
   ms.lasthandoff: 11/22/2017
+items:
+- durationInMinutes: 1
+  content: "Este guia rápido ensina c# interativamente, usando seu navegador para escrever o código c# e ver os resultados de compilar e executar seu código. Ele contém uma série de lições que criam, modificam e exploram coleções e matrizes.\n"
 - title: Criar listas
   durationInMinutes: 2
   content: "Execute o seguinte código na janela interativa. Para fazer isso, digite o bloco de código a seguir na janela interativa (substitua \"<name>\" pelo seu nome) e clique no botão **Executar**:\n\n```csharp\nvar names = new List<string> { \"<name>\", \"Ana\", \"Felipe\" };\nforeach (var name in names)\n{\n  Console.WriteLine($\"Hello {name.ToUpper()}!\");\n}\n```\n\nVocê criou uma lista de cadeias de caracteres, adicionou três nomes a essa lista e imprimiu os nomes em MAIÚSCULAS. Você está usando conceitos que aprendeu em inícios rápidos anteriores para executar um loop pela lista.\n\nO código para exibir nomes usa **cadeias de caracteres interpoladas**.  Quando você precede um `string` com o caractere `$`, pode inserir o código C# na declaração da cadeia de caracteres. A cadeia de caracteres real substitui esse código C# pelo valor gerado. Neste exemplo, ela substitui o `{name.ToUpper()}` por cada nome, convertido em letras maiúsculas, pois você chamou o método <xref:System.String.ToUpper%2A>.\n\nVamos continuar explorando.\n\n> [!NOTE]\n> Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).\n"

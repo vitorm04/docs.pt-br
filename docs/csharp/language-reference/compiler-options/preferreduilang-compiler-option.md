@@ -13,11 +13,11 @@ ms.assetid: 68b2462f-6778-48d7-8052-62805fe8e02c
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ccf25e9a5d5d025f9024519b41c4afa17a5081f4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a96a054b3d1f73b0fee209557388f7ea213ebbe9
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="preferreduilang-c-compiler-options"></a>/preferreduilang (opções do compilador C#)
 Usando a opção do compilador `/preferreduilang`, é possível especificar o idioma em que o compilador C# exibe a saída, como mensagens de erro.  
@@ -30,7 +30,7 @@ Usando a opção do compilador `/preferreduilang`, é possível especificar o id
   
 ## <a name="arguments"></a>Arguments  
  `language`  
- O [nome do idioma](http://go.microsoft.com/fwlink/p/?LinkId=236992) do idioma a ser usado para a saída do compilador.  
+ O [nome do idioma](https://msdn.microsoft.com/library/windows/desktop/dd318696(v=vs.85).aspx) do idioma a ser usado para a saída do compilador.  
   
 ## <a name="remarks"></a>Comentários  
  É possível usar a opção do compilador `/preferreduilang` para especificar o idioma que você deseja que o compilador C# use para mensagens de erro e outras saídas de linha de comando. Se o pacote de idiomas do idioma não estiver instalado, a configuração de idioma do sistema operacional será usada e nenhum erro será relatado.  
