@@ -146,7 +146,7 @@ ms.lasthandoff: 12/02/2017
      [!code-csharp[CFX_WF_GettingStarted#11](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#11)]
      [!code-vb[CFX_WF_GettingStarted#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#11)]  
   
-##  <span data-ttu-id="44b0e-159"><a name="BKMK_ToRunTheApplication"></a>Para compilar e executar o aplicativo</span><span class="sxs-lookup"><span data-stu-id="44b0e-159"><a name="BKMK_ToRunTheApplication"></a> To build and run the application</span></span>  
+##  <a name="BKMK_ToRunTheApplication"></a><span data-ttu-id="44b0e-159">Para compilar e executar o aplicativo</span><span class="sxs-lookup"><span data-stu-id="44b0e-159">To build and run the application</span></span>  
   
 1.  <span data-ttu-id="44b0e-160">Clique com botão direito **NumberGuessWorkflowHost** na **Solution Explorer** e selecione **definir como projeto de inicialização**.</span><span class="sxs-lookup"><span data-stu-id="44b0e-160">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and select **Set as StartUp Project**.</span></span>  
   

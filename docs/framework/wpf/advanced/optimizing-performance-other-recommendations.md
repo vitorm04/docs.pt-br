@@ -29,7 +29,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="optimizing-performance-other-recommendations"></a><span data-ttu-id="1896b-102">Otimizando desempenho: outras recomendações</span><span class="sxs-lookup"><span data-stu-id="1896b-102">Optimizing Performance: Other Recommendations</span></span>
-<span data-ttu-id="1896b-103"><a name="introduction"></a> Este tópico apresenta recomendações de desempenho além daquelas abordadas pelos tópicos na seção [Otimizando o desempenho do aplicativo WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md).</span><span class="sxs-lookup"><span data-stu-id="1896b-103"><a name="introduction"></a> This topic provides performance recommendations in addition to the ones covered by the topics in the [Optimizing WPF Application Performance](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md) section.</span></span>  
+<a name="introduction"></a> <span data-ttu-id="1896b-103">Este tópico apresenta recomendações de desempenho além daquelas abordadas pelos tópicos na seção [Otimizando o desempenho do aplicativo WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md).</span><span class="sxs-lookup"><span data-stu-id="1896b-103">This topic provides performance recommendations in addition to the ones covered by the topics in the [Optimizing WPF Application Performance](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md) section.</span></span>  
   
  <span data-ttu-id="1896b-104">Esse tópico contém as seguintes seções:</span><span class="sxs-lookup"><span data-stu-id="1896b-104">This topic contains the following sections:</span></span>  
   

@@ -50,7 +50,7 @@ ms.lasthandoff: 12/02/2017
 > [!NOTE]
 >  <span data-ttu-id="fdb46-119">Cada etapa do tutorial de Introdução depende das etapas anteriores.</span><span class="sxs-lookup"><span data-stu-id="fdb46-119">Each step in the Getting Started tutorial depends on the previous steps.</span></span> <span data-ttu-id="fdb46-120">Se você não tiver concluído as etapas anteriores, você pode baixar uma versão completa do tutorial do [Windows Workflow Foundation (WF45) - Tutorial de Introdução](http://go.microsoft.com/fwlink/?LinkID=248976).</span><span class="sxs-lookup"><span data-stu-id="fdb46-120">If you did not complete the previous steps you can download a completed version of the tutorial from [Windows Workflow Foundation (WF45) - Getting Started Tutorial](http://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
-###  <span data-ttu-id="fdb46-121"><a name="BKMK_BackupCopy"></a>Para fazer uma cópia do projeto NumberGuessWorkflowActivities</span><span class="sxs-lookup"><span data-stu-id="fdb46-121"><a name="BKMK_BackupCopy"></a> To make a copy of the NumberGuessWorkflowActivities project</span></span>  
+###  <a name="BKMK_BackupCopy"></a><span data-ttu-id="fdb46-121">Para fazer uma cópia do projeto NumberGuessWorkflowActivities</span><span class="sxs-lookup"><span data-stu-id="fdb46-121">To make a copy of the NumberGuessWorkflowActivities project</span></span>  
   
 1.  <span data-ttu-id="fdb46-122">Abra o **WF45GettingStartedTutorial** solução [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] se não estiver aberto.</span><span class="sxs-lookup"><span data-stu-id="fdb46-122">Open the **WF45GettingStartedTutorial** solution in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] if it is not open.</span></span>  
   
@@ -73,10 +73,10 @@ ms.lasthandoff: 12/02/2017
   
 9. <span data-ttu-id="fdb46-135">Abra novamente o **WF45GettingStartedTutorial** solução [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fdb46-135">Re-open the **WF45GettingStartedTutorial** solution in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span></span>  
   
-###  <span data-ttu-id="fdb46-136"><a name="BKMK_UpdateWorkflows"></a>Para atualizar os fluxos de trabalho</span><span class="sxs-lookup"><span data-stu-id="fdb46-136"><a name="BKMK_UpdateWorkflows"></a> To update the workflows</span></span>  
+###  <a name="BKMK_UpdateWorkflows"></a><span data-ttu-id="fdb46-136">Para atualizar os fluxos de trabalho</span><span class="sxs-lookup"><span data-stu-id="fdb46-136">To update the workflows</span></span>  
  <span data-ttu-id="fdb46-137">Nesta seção, as definições de fluxo de trabalho são atualizadas.</span><span class="sxs-lookup"><span data-stu-id="fdb46-137">In this section, the workflow definitions are updated.</span></span> <span data-ttu-id="fdb46-138">As duas atividades `WriteLine` que fornecem comentários sobre o palpite do usuário são atualizadas, e uma nova atividade `WriteLine` é adicionada, que fornece informações adicionais sobre o jogo quando o número é acertado.</span><span class="sxs-lookup"><span data-stu-id="fdb46-138">The two `WriteLine` activities that give feedback on the user's guess are updated, and a new `WriteLine` activity is added that provides additional information about the game once the number is guessed.</span></span>  
   
-####  <span data-ttu-id="fdb46-139"><a name="BKMK_UpdateStateMachine"></a>Para atualizar o fluxo de trabalho StateMachine</span><span class="sxs-lookup"><span data-stu-id="fdb46-139"><a name="BKMK_UpdateStateMachine"></a> To update the StateMachine workflow</span></span>  
+####  <a name="BKMK_UpdateStateMachine"></a><span data-ttu-id="fdb46-139">Para atualizar o fluxo de trabalho StateMachine</span><span class="sxs-lookup"><span data-stu-id="fdb46-139">To update the StateMachine workflow</span></span>  
   
 1.  <span data-ttu-id="fdb46-140">Em **Solution Explorer**, sob o **NumberGuessWorkflowActivities** de projeto, clique duas vezes em **StateMachineNumberGuessWorkflow.xaml**.</span><span class="sxs-lookup"><span data-stu-id="fdb46-140">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **StateMachineNumberGuessWorkflow.xaml**.</span></span>  
   
@@ -118,7 +118,7 @@ ms.lasthandoff: 12/02/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-####  <span data-ttu-id="fdb46-148"><a name="BKMK_UpdateFlowchart"></a>Para atualizar o fluxo de trabalho do fluxograma</span><span class="sxs-lookup"><span data-stu-id="fdb46-148"><a name="BKMK_UpdateFlowchart"></a> To update the Flowchart workflow</span></span>  
+####  <a name="BKMK_UpdateFlowchart"></a><span data-ttu-id="fdb46-148">Para atualizar o fluxo de trabalho do fluxograma</span><span class="sxs-lookup"><span data-stu-id="fdb46-148">To update the Flowchart workflow</span></span>  
   
 1.  <span data-ttu-id="fdb46-149">Em **Solution Explorer**, sob o **NumberGuessWorkflowActivities** de projeto, clique duas vezes em **FlowchartNumberGuessWorkflow.xaml**.</span><span class="sxs-lookup"><span data-stu-id="fdb46-149">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **FlowchartNumberGuessWorkflow.xaml**.</span></span>  
   
@@ -154,7 +154,7 @@ ms.lasthandoff: 12/02/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-####  <span data-ttu-id="fdb46-155"><a name="BKMK_UpdateSequential"></a>Para atualizar o fluxo de trabalho sequencial</span><span class="sxs-lookup"><span data-stu-id="fdb46-155"><a name="BKMK_UpdateSequential"></a> To update the Sequential workflow</span></span>  
+####  <a name="BKMK_UpdateSequential"></a><span data-ttu-id="fdb46-155">Para atualizar o fluxo de trabalho sequencial</span><span class="sxs-lookup"><span data-stu-id="fdb46-155">To update the Sequential workflow</span></span>  
   
 1.  <span data-ttu-id="fdb46-156">Em **Solution Explorer**, sob o **NumberGuessWorkflowActivities** de projeto, clique duas vezes em **SequentialNumberGuessWorkflow.xaml**.</span><span class="sxs-lookup"><span data-stu-id="fdb46-156">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **SequentialNumberGuessWorkflow.xaml**.</span></span>  
   
@@ -190,7 +190,7 @@ ms.lasthandoff: 12/02/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-###  <span data-ttu-id="fdb46-161"><a name="BKMK_UpdateWorkflowVersionMap"></a>Para atualizar WorkflowVersionMap para incluir as versões anteriores do fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="fdb46-161"><a name="BKMK_UpdateWorkflowVersionMap"></a> To update WorkflowVersionMap to include the previous workflow versions</span></span>  
+###  <a name="BKMK_UpdateWorkflowVersionMap"></a><span data-ttu-id="fdb46-161">Para atualizar WorkflowVersionMap para incluir as versões anteriores do fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="fdb46-161">To update WorkflowVersionMap to include the previous workflow versions</span></span>  
   
 1.  <span data-ttu-id="fdb46-162">Clique duas vezes em **WorkflowVersionMap.cs** (ou **WorkflowVersionMap.vb**) sob o **NumberGuessWorkflowHost** para abri-lo.</span><span class="sxs-lookup"><span data-stu-id="fdb46-162">Double-click **WorkflowVersionMap.cs** (or **WorkflowVersionMap.vb**) under the **NumberGuessWorkflowHost** project to open it.</span></span>  
   
@@ -558,7 +558,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="fdb46-172"><a name="BKMK_BuildAndRun"></a>Para compilar e executar o aplicativo</span><span class="sxs-lookup"><span data-stu-id="fdb46-172"><a name="BKMK_BuildAndRun"></a> To build and run the application</span></span>  
+###  <a name="BKMK_BuildAndRun"></a><span data-ttu-id="fdb46-172">Para compilar e executar o aplicativo</span><span class="sxs-lookup"><span data-stu-id="fdb46-172">To build and run the application</span></span>  
   
 1.  <span data-ttu-id="fdb46-173">Pressione CTRL+SHIFT+B para criar o aplicativo, e CTRL+F5 para iniciar.</span><span class="sxs-lookup"><span data-stu-id="fdb46-173">Press CTRL+SHIFT+B to build the application, and then CTRL+F5 to start.</span></span>  
   

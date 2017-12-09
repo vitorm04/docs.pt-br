@@ -23,7 +23,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/11/2017
 ---
 # <a name="what39s-new-in-wpf-version-45"></a><span data-ttu-id="f6fb9-102">Novidades do WPF versão 4.5</span><span class="sxs-lookup"><span data-stu-id="f6fb9-102">What&#39;s New in WPF Version 4.5</span></span>
-<span data-ttu-id="f6fb9-103"><a name="introduction"></a>Este tópico contém informações sobre recursos novos e aprimorados no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] versão 4.5.</span><span class="sxs-lookup"><span data-stu-id="f6fb9-103"><a name="introduction"></a> This topic contains information about new and enhanced features in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] version 4.5.</span></span>  
+<a name="introduction"></a><span data-ttu-id="f6fb9-103">Este tópico contém informações sobre recursos novos e aprimorados no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] versão 4.5.</span><span class="sxs-lookup"><span data-stu-id="f6fb9-103">This topic contains information about new and enhanced features in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] version 4.5.</span></span>  
   
  <span data-ttu-id="f6fb9-104">Esse tópico contém as seguintes seções:</span><span class="sxs-lookup"><span data-stu-id="f6fb9-104">This topic contains the following sections:</span></span>  
   

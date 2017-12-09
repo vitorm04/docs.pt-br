@@ -26,7 +26,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="path-animations-overview"></a><span data-ttu-id="f0afd-102">Visão geral de animações do caminho</span><span class="sxs-lookup"><span data-stu-id="f0afd-102">Path Animations Overview</span></span>
-<span data-ttu-id="f0afd-103"><a name="introduction"></a> Este tópico apresenta animações de caminho, que permitem que você use um caminho geométrico para gerar valores de saída.</span><span class="sxs-lookup"><span data-stu-id="f0afd-103"><a name="introduction"></a> This topic introduces path animations, which enable you to use a geometric path to generate output values.</span></span> <span data-ttu-id="f0afd-104">Animações de caminho são úteis para mover e girar objetos junto em caminhos complexos.</span><span class="sxs-lookup"><span data-stu-id="f0afd-104">Path animations are useful for moving and rotating objects along complex paths.</span></span>  
+<a name="introduction"></a> <span data-ttu-id="f0afd-103">Este tópico apresenta animações de caminho, que permitem que você use um caminho geométrico para gerar valores de saída.</span><span class="sxs-lookup"><span data-stu-id="f0afd-103">This topic introduces path animations, which enable you to use a geometric path to generate output values.</span></span> <span data-ttu-id="f0afd-104">Animações de caminho são úteis para mover e girar objetos junto em caminhos complexos.</span><span class="sxs-lookup"><span data-stu-id="f0afd-104">Path animations are useful for moving and rotating objects along complex paths.</span></span>  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a><span data-ttu-id="f0afd-105">Pré-requisitos</span><span class="sxs-lookup"><span data-stu-id="f0afd-105">Prerequisites</span></span>  
