@@ -57,7 +57,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <span data-ttu-id="e75a0-125">Os indexadores podem ter mais de um parâmetro formal, por exemplo, ao acessar uma matriz bidimensional.</span><span class="sxs-lookup"><span data-stu-id="e75a0-125">Indexers can have more than one formal parameter, for example, when accessing a two-dimensional array.</span></span>  
   
-##  <span data-ttu-id="e75a0-126"><a name="BKMK_RelatedSections"></a> Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="e75a0-126"><a name="BKMK_RelatedSections"></a> Related Sections</span></span>  
+##  <a name="BKMK_RelatedSections"></a> <span data-ttu-id="e75a0-126">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="e75a0-126">Related Sections</span></span>  
   
 -   [<span data-ttu-id="e75a0-127">Usando indexadores</span><span class="sxs-lookup"><span data-stu-id="e75a0-127">Using Indexers</span></span>](../../../csharp/programming-guide/indexers/using-indexers.md)  
   

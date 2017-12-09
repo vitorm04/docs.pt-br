@@ -72,4 +72,4 @@ ms.lasthandoff: 10/18/2017
 
 <span data-ttu-id="e452e-148">A exceção notável a essa regra são os comandos `new` e `run`, pois eles não foram implementados como destinos do MSBuild.</span><span class="sxs-lookup"><span data-stu-id="e452e-148">The notable exception to this rule are `new` and `run` commands, as they have not been implemented as MSBuild targets.</span></span>
 
-<span data-ttu-id="e452e-149"><a name="dotnet-restore-note"></a> [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]</span><span class="sxs-lookup"><span data-stu-id="e452e-149"><a name="dotnet-restore-note"></a> [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]</span></span>
+<a name="dotnet-restore-note"></a> <span data-ttu-id="e452e-149">[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]</span><span class="sxs-lookup"><span data-stu-id="e452e-149">[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]</span></span>
