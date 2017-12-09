@@ -27,7 +27,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="fundamentals-of-garbage-collection"></a><span data-ttu-id="51095-102">Noções básicas da coleta de lixo</span><span class="sxs-lookup"><span data-stu-id="51095-102">Fundamentals of Garbage Collection</span></span>
-<span data-ttu-id="51095-103"><a name="top"></a>No common language runtime (CLR), o coletor de lixo atua como um Gerenciador de memória automática.</span><span class="sxs-lookup"><span data-stu-id="51095-103"><a name="top"></a> In the common language runtime (CLR), the garbage collector serves as an automatic memory manager.</span></span> <span data-ttu-id="51095-104">Ele oferece os seguintes benefícios:</span><span class="sxs-lookup"><span data-stu-id="51095-104">It provides the following benefits:</span></span>  
+<a name="top"></a><span data-ttu-id="51095-103">No common language runtime (CLR), o coletor de lixo atua como um Gerenciador de memória automática.</span><span class="sxs-lookup"><span data-stu-id="51095-103">In the common language runtime (CLR), the garbage collector serves as an automatic memory manager.</span></span> <span data-ttu-id="51095-104">Ele oferece os seguintes benefícios:</span><span class="sxs-lookup"><span data-stu-id="51095-104">It provides the following benefits:</span></span>  
   
 -   <span data-ttu-id="51095-105">Permite que você desenvolva seu aplicativo sem a necessidade de liberar memória.</span><span class="sxs-lookup"><span data-stu-id="51095-105">Enables you to develop your application without having to free memory.</span></span>  
   

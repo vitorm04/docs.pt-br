@@ -31,7 +31,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a><span data-ttu-id="b6a65-102">Construtores de alternância em expressões regulares</span><span class="sxs-lookup"><span data-stu-id="b6a65-102">Alternation Constructs in Regular Expressions</span></span>
-<span data-ttu-id="b6a65-103"><a name="top"></a>Construtores de alternância modificam uma expressão regular para habilitar o / ou ou correspondência condicional.</span><span class="sxs-lookup"><span data-stu-id="b6a65-103"><a name="top"></a> Alternation constructs modify a regular expression to enable either/or or conditional matching.</span></span> <span data-ttu-id="b6a65-104">O .NET dá suporte a três constructos de alternância:</span><span class="sxs-lookup"><span data-stu-id="b6a65-104">.NET supports three alternation constructs:</span></span>  
+<a name="top"></a><span data-ttu-id="b6a65-103">Construtores de alternância modificam uma expressão regular para habilitar o / ou ou correspondência condicional.</span><span class="sxs-lookup"><span data-stu-id="b6a65-103">Alternation constructs modify a regular expression to enable either/or or conditional matching.</span></span> <span data-ttu-id="b6a65-104">O .NET dá suporte a três constructos de alternância:</span><span class="sxs-lookup"><span data-stu-id="b6a65-104">.NET supports three alternation constructs:</span></span>  
   
 -   [<span data-ttu-id="b6a65-105">Correspondência de padrões com &#124;</span><span class="sxs-lookup"><span data-stu-id="b6a65-105">Pattern matching with &#124;</span></span>](#Either_Or)  
   
