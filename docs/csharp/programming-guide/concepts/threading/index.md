@@ -11,11 +11,11 @@ ms.assetid: 236d157d-37c0-4ee8-89fc-721e6c596325
 caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 633fe784b98bf67086581b82fb4b00cff28d5f5a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 661208662c022b2a3b9c5daae6b0425e46ea6501
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="threading-c"></a>Threading (C#)
 O threading permite que seu programa em C# execute processamento simultâneo para que você possa fazer mais de uma operação de cada vez. Por exemplo, você pode usar o threading para monitorar a entrada do usuário, executar tarefas em segundo plano e lidar com fluxos simultâneos de entrada.  
@@ -26,7 +26,7 @@ O threading permite que seu programa em C# execute processamento simultâneo par
   
 -   O namespace do .NET Framework <xref:System.Threading> facilita o uso de threads.  
   
--   Os threads compartilham os recursos do aplicativo. Para obter mais informações, consulte [Usando threads e threading](https://msdn.microsoft.com/library/e1dx6b2h).  
+-   Os threads compartilham os recursos do aplicativo. Para obter mais informações, consulte [Usando threads e threading](../../../../../docs/standard/threading/using-threads-and-threading.md).  
   
  Por padrão, um programa em C# tem um thread. No entanto, threads auxiliares podem ser criados e usados para executar código em paralelo com o thread primário. Esses segmentos são chamados de *threads de trabalho*.  
   
@@ -39,7 +39,7 @@ O threading permite que seu programa em C# execute processamento simultâneo par
  Você pode usar algumas ou todas essas classes para sincronizar as atividades de vários threads, mas é dado suporte para threading pela linguagem C#. Por exemplo, a [Instrução lock](../../../../csharp/language-reference/keywords/lock-statement.md) fornece recursos de sincronização por meio do uso implícito de <xref:System.Threading.Monitor>.  
   
 > [!NOTE]
->  A partir do [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], a programação multi-threaded é bastante simplificada com as classes <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, o [PLINQ (LINQ Paralelo)](https://msdn.microsoft.com/library/dd460688), as novas classes de coleta simultânea no namespace <xref:System.Collections.Concurrent?displayProperty=nameWithType> e um novo modelo de programação com base no conceito de tarefas em vez de threads. Para obter mais informações, consulte [Programação paralela](https://msdn.microsoft.com/library/dd460693).  
+>  A partir do [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], a programação multi-threaded é bastante simplificada com as classes <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, o [PLINQ (LINQ Paralelo)](https://msdn.microsoft.com/library/dd460688), as novas classes de coleta simultânea no namespace <xref:System.Collections.Concurrent?displayProperty=nameWithType> e um novo modelo de programação com base no conceito de tarefas em vez de threads. Para obter mais informações, consulte [Programação paralela](../../../../../docs/standard/parallel-programming/index.md).  
   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
@@ -52,4 +52,4 @@ O threading permite que seu programa em C# execute processamento simultâneo par
 |[Temporizadores de thread (C#)](../../../../csharp/programming-guide/concepts/threading/thread-timers.md)|Descreve como executar procedimentos em threads separados em intervalos fixos.|  
 |[Pooling de thread (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)|Descreve como usar um pool de threads de trabalho que são gerenciados pelo sistema.|  
 |[Como usar um pool de thread (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|Demonstra o uso sincronizado de vários threads no pool de threads.|  
-|[Threading](https://msdn.microsoft.com/library/3e8s7xdd)|Descreve como implementar o threading no .NET Framework.|
+|[Threading](../../../../../docs/standard/threading/index.md)|Descreve como implementar o threading no .NET Framework.|

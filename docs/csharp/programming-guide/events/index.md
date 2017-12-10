@@ -12,11 +12,11 @@ ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
 caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f714bded446e62ac6165d691d2404249275178e8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ab40de46bf198cf683ec4847a42d88b3d4807e0
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="events-c-programming-guide"></a>Eventos (Guia de Programação em C#)
 Eventos permitem que uma [classe](../../../csharp/language-reference/keywords/class.md) ou objeto notifique outras classes ou objetos quando algo interessante ocorre. A classe que envia (ou *aciona*) o evento é chamada de *editor* e as classes que recebem (ou *manipulam*) os eventos são chamadas *assinantes*.  
@@ -34,7 +34,7 @@ Eventos permitem que uma [classe](../../../csharp/language-reference/keywords/cl
   
 -   Normalmente, os eventos são usados para sinalizar ações do usuário, como cliques de botão ou seleções de menu em interfaces gráficas do usuário.  
   
--   Quando um evento tem vários assinantes, os manipuladores de eventos são invocados sincronicamente quando um evento é acionado. Para invocar eventos de forma assíncrona, consulte [Chamando métodos síncronos assincronamente](https://msdn.microsoft.com/library/2e08f6yc).  
+-   Quando um evento tem vários assinantes, os manipuladores de eventos são invocados sincronicamente quando um evento é acionado. Para invocar eventos de forma assíncrona, consulte [Chamando métodos síncronos assincronamente](../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).  
   
 -   Na biblioteca de classes do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], os eventos são baseados no delegado <xref:System.EventHandler> e na classe base <xref:System.EventArgs>.  
   
@@ -67,5 +67,5 @@ Eventos permitem que uma [classe](../../../csharp/language-reference/keywords/cl
  <xref:System.EventHandler>  
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
  [Delegados](../../../csharp/programming-guide/delegates/index.md)  
- [Criando manipuladores de eventos no Windows Forms](https://msdn.microsoft.com/library/dacysss4.aspx)  
- [Programação multi-threaded com o padrão assíncrono baseado em evento](https://msdn.microsoft.com/library/hkasytyf)
+ [Criando manipuladores de eventos no Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+ [Programação multi-threaded com o padrão assíncrono baseado em evento](../../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)
