@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: a1d6315c2546de12e85efdd06cf2520605cb6e91
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.openlocfilehash: 58003c88baf0f8aeea1a511334b99bd0295f8bf1
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="tutorial-creating-a-type-provider"></a>Tutorial: Criando um provedor de tipos
 
@@ -169,7 +169,7 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 
 Como alternativa, abra o Visual Studio, abra o menu Depurar, escolha `Debug/Attach to process…`e anexar para outro `devenv` processo em que você está editando seu script. Usando esse método, você pode direcionar mais facilmente a lógica específica no provedor de tipo digitando interativamente expressões na segunda instância (com e outros recursos do IntelliSense completo).
 
-Você pode desabilitar apenas meu código depuração para identificar melhor erros no código gerado. Para obter informações sobre como habilitar ou desabilitar esse recurso, consulte [navegar pelo código com o depurador](https://msdn.microsoft.com/library/y740d9d3.aspx). Além disso, você também pode definir exceções de primeira chance capturando abrindo o `Debug` menu e, em seguida, escolhendo `Exceptions` ou escolhendo as teclas Ctrl + Alt + E para abrir o `Exceptions` caixa de diálogo. Na caixa de diálogo, em `Common Language Runtime Exceptions`, selecione o `Thrown` caixa de seleção.
+Você pode desabilitar apenas meu código depuração para identificar melhor erros no código gerado. Para obter informações sobre como habilitar ou desabilitar esse recurso, consulte [navegar pelo código com o depurador](/visualstudio/debugger/navigating-through-code-with-the-debugger). Além disso, você também pode definir exceções de primeira chance capturando abrindo o `Debug` menu e, em seguida, escolhendo `Exceptions` ou escolhendo as teclas Ctrl + Alt + E para abrir o `Exceptions` caixa de diálogo. Na caixa de diálogo, em `Common Language Runtime Exceptions`, selecione o `Thrown` caixa de seleção.
 
 
 ### <a name="implementation-of-the-type-provider"></a>Implementação do provedor de tipo

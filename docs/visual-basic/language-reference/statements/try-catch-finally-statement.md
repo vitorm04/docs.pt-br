@@ -27,11 +27,11 @@ ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
 caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 08de4939960d8297269c82b1b040537dd43f3038
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 56dd7fc339c452d64eb18211337b9a7674a83e1c
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Instrução Try...Catch...Finally (Visual Basic)
 Fornece uma maneira de lidar com alguns ou todos os erros possíveis que podem ocorrer em um determinado bloco de código, ainda assim, executar código.  
@@ -194,5 +194,5 @@ End Try
  [Instrução Exit](../../../visual-basic/language-reference/statements/exit-statement.md)  
  [Instrução On Error](../../../visual-basic/language-reference/statements/on-error-statement.md)  
  [Melhores práticas para usar trechos de código](/visualstudio/ide/best-practices-for-using-code-snippets)  
- [Tratamento de Exceção](https://msdn.microsoft.com/library/dd997415)  
+ [Tratamento de Exceção](../../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)  
  [Instrução Throw](../../../visual-basic/language-reference/statements/throw-statement.md)

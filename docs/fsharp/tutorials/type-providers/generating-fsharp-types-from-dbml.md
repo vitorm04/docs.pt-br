@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 6fbb6ccc-248f-4226-95e9-f6f99541dbe4
-ms.openlocfilehash: 50e0a2bb6378c82b5c6425589da8a982b5fc496a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a919c2acb2b5b8c2ce93124f2f541bd092d15c35
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="walkthrough-generating-f-types-from-a-dbml-file"></a>Instruções passo a passo: gerando tipos F# com base em um arquivo DBML
 
@@ -24,7 +24,7 @@ Este guia foi escrito para F # 3.0 e será atualizado.  Consulte [FSharp.Data](h
 > [!NOTE]
 Os links de referência de API levará você para o MSDN.  A referência da API docs.microsoft.com não está completa.
 
-Este passo a passo para F # 3.0 descreve como criar tipos de dados de um banco de dados quando você tiver informações de esquema codificadas em um arquivo dbml. O LINQ to SQL usa esse formato de arquivo para representar o esquema de banco de dados. Você pode gerar um arquivo LINQ to SQL esquema no Visual Studio usando o Designer relacional de objeto (Object Relational). Para obter mais informações, consulte [Object Relational Designer Overview](https://msdn.microsoft.com/library/bb384511.aspx) e [geração de código em LINQ to SQL](https://msdn.microsoft.com/library/bb386976).
+Este passo a passo para F # 3.0 descreve como criar tipos de dados de um banco de dados quando você tiver informações de esquema codificadas em um arquivo dbml. O LINQ to SQL usa esse formato de arquivo para representar o esquema de banco de dados. Você pode gerar um arquivo LINQ to SQL esquema no Visual Studio usando o Designer relacional de objeto (Object Relational). Para obter mais informações, consulte [Object Relational Designer Overview](https://msdn.microsoft.com/library/bb384511.aspx) e [geração de código em LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md).
 
 O provedor de tipo de linguagem de marcação de banco de dados (DBML) permite que você escreva código que usa tipos com base em um esquema de banco de dados sem a necessidade de especificar uma cadeia de caracteres de conexão estática em tempo de compilação. Isso pode ser útil se você precisar permitir a possibilidade de que o aplicativo final usará um banco de dados diferente, credenciais diferentes ou uma cadeia de caracteres de conexão diferentes que você pode usar para desenvolver o aplicativo. Se você tiver uma conexão direta do banco de dados que você pode usar em tempo de compilação e esse é o mesmo banco de dados e as credenciais que você ainda usará em seu aplicativo compilado, você também pode usar o provedor de tipos SQLDataConnection. Para obter mais informações, consulte [passo a passo: acessando um banco de dados SQL usando provedores de tipos](accessing-a-sql-database.md).
 

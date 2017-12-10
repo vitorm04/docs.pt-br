@@ -14,11 +14,11 @@ ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 87c87852024412b7a7ed55a2c429842ce75a13a8
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 6a64eaba75128a3844847fbf803c86c2d700db72
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="com-interop-visual-basic"></a>Interoperabilidade COM (Visual Basic)
 O COM (Component Object Model) permite que um objeto exponha sua funcionalidade a outros componentes e aplicativos host. Atualmente, a maioria dos softwares incluem objetos COM. Embora os assemblies .NET sejam a melhor opção para novos aplicativos, algumas vezes será preciso empregar objetos COM. Esta seção aborda alguns dos problemas associados à criação e ao uso de objetos COM com [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
@@ -55,7 +55,7 @@ O COM (Component Object Model) permite que um objeto exponha sua funcionalidade 
  Descreve como usar objetos COM existentes como base para novos objetos.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Interoperação com código não gerenciado](https://msdn.microsoft.com/library/sd10k43k)  
+ [Interoperação com código não gerenciado](../../../../docs/framework/interop/index.md)  
  Descreve os serviços de interoperabilidade fornecidos pelo Common Language Runtime.  
   
  [Expondo componentes do COM ao .NET Framework](http://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
@@ -64,5 +64,5 @@ O COM (Component Object Model) permite que um objeto exponha sua funcionalidade 
  [Expondo componentes do .NET Framework ao COM](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
  Descreve a preparação e o uso de tipos gerenciados do COM.  
   
- [Aplicando atributos de interoperabilidade](https://msdn.microsoft.com/library/d4w8x20h)  
+ [Aplicando atributos de interoperabilidade](../../../../docs/framework/interop/applying-interop-attributes.md)  
  Aborda os atributos que você pode usar ao trabalhar com código não gerenciado.

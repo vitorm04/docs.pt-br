@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 8b2ed206-34e4-4256-a6ce-0c2499561165
-ms.openlocfilehash: d2a92f725c40443c8dc6af593d28deccd3ee88de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f56fed1e16b4de1d97766f37cb1c72297d5502d5
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="configuring-projects-in-visual-studio"></a>Configurando projetos no Visual Studio
 
@@ -32,7 +32,7 @@ O **Project Designer** e o uso geral são descritos completamente no tópico [In
 |`Build`|[Criar &#40; página, Designer de projeto C &#35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Permite que você controle como o código é compilado.|
 |`Build Events`|[Criar página de eventos, Designer de projeto &#40; C &#35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Permite que você especifique comandos para execução antes ou depois de uma compilação.|
 |`Debug`|[Página de Depuração, Designer de Projeto](https://msdn.microsoft.com/library/2wcdezs5.aspx)|Permite que você controle como o aplicativo é executado durante a depuração. Isso inclui o especiais modos que você deseja ativar, como SQL e de código nativo de depuração e linha de comando para uso e o que é o diretório inicial do aplicativo.|
-|`Reference Paths`|[Gerenciando referências em um projeto](https://msdn.microsoft.com/library/ez524kew.aspx)|Permite que você especifique onde pesquisar para assemblies que depende do código.|
+|`Reference Paths`|[Gerenciando referências em um projeto](/visualstudio/ide/managing-references-in-a-project)|Permite que você especifique onde pesquisar para assemblies que depende do código.|
 
 ## <a name="f-specific-settings"></a>F #-configurações específicas
 A tabela a seguir resume as configurações específicas para F #:

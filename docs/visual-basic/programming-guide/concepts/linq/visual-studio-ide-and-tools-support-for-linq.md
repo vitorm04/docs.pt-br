@@ -12,17 +12,17 @@ ms.assetid: e3bfe0d9-4a79-49cf-a31c-93297c688829
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 241487f83f09a14fd0ccb172881e134b3883aee8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 887c4fc280b64f996faf10e247c4c0ee1f1d6793
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>O Visual Studio IDE e suporte a ferramentas para LINQ (Visual Basic)
 O IDE (ambiente de desenvolvimento integrado) do Visual Studio fornece os seguintes recursos que dão suporte ao desenvolvimento de aplicativos LINQ:  
   
 ## <a name="object-relational-designer"></a>Object Relational Designer  
- O Object Relational Designer é uma ferramenta de design visual que você pode usar em [LINQ to SQL](https://msdn.microsoft.com/library/bb386976) aplicativos para gerar classes no Visual Basic que representam os dados relacionais em um banco de dados subjacente. Para obter mais informações, consulte [Ferramentas LINQ to SQL no Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ O Object Relational Designer é uma ferramenta de design visual que você pode usar em [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md) aplicativos para gerar classes no Visual Basic que representam os dados relacionais em um banco de dados subjacente. Para obter mais informações, consulte [Ferramentas LINQ to SQL no Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="sqlmetal-command-line-tool"></a>Ferramenta de linha de comando SQLMetal  
  SQLMetal é uma ferramenta de linha de comando que pode ser usada em processos de build para gerar classes de bancos de dados existentes para uso em aplicativos LINQ to SQL. Para obter mais informações, consulte [SqlMetal.exe (ferramenta de geração de código)](http://msdn.microsoft.com/library/819e5a96-7646-4fdb-b14b-fe31221b0614).  

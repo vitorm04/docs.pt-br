@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 809e9a34-b271-4c87-8356-2426b44f4721
-ms.openlocfilehash: bcba1e5d1cae1c610525c51bdbdd54088359e79a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 05727bf11eccfd64f823dd280b1a19210815ca5a
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="visual-f-development-environment-features"></a>Recursos do Ambiente de Desenvolvimento em Visual F#
 
@@ -50,7 +50,7 @@ A tabela a seguir resume os recursos de propriedades do projeto ou não suporte 
 |Segurança (níveis de confiança de alteração)|Não||
 
 ## <a name="code-and-text-editor-features"></a>Recursos do Editor de texto e código
-Os seguintes recursos do Visual Studiocode e editores de texto têm suporte em F #. Para obter informações gerais sobre a edição de código no Visual Studio e recursos do editor de texto, consulte [escrevendo código no Editor de texto de código e](https://msdn.microsoft.com/library/efc4xwkb.aspx).
+Os seguintes recursos do Visual Studiocode e editores de texto têm suporte em F #. Para obter informações gerais sobre a edição de código no Visual Studio e recursos do editor de texto, consulte [escrevendo código no Editor de texto de código e](/visualstudio/ide/writing-code-in-the-code-and-text-editor).
 
 |Recurso|Descrição|Com suporte em F #?|
 |-------|-----------|----------------|
@@ -58,18 +58,18 @@ Os seguintes recursos do Visual Studiocode e editores de texto têm suporte em F
 |Formatar automaticamente|Reformata o código com recuo padrão e estilo.|Não|
 |Indicadores|Permite que você salve locais no editor.|Sim|
 |Alterar o recuo|Recua ou unindents linhas selecionadas.|Sim|
-|[Localizando e substituindo texto](https://msdn.microsoft.com/library/139eef4h.aspx)|Permite pesquisar em um arquivo, projeto ou solução e potencialmente altere o texto.|Sim|
+|[Localizando e substituindo texto](/visualstudio/ide/finding-and-replacing-text)|Permite pesquisar em um arquivo, projeto ou solução e potencialmente altere o texto.|Sim|
 |Ir para definição de API do .NET Framework|Quando o cursor estiver posicionado em uma API do .NET Framework, mostra o código gerado a partir de metadados do .NET Framework.|Não|
 |Ir para definição de API definida pelo usuário|Quando o cursor estiver em uma entidade de programa que você definiu, move o cursor para o local em seu código onde a entidade é definida.|Sim|
 |Ir para a linha|Permite que você acesse uma linha específica em um arquivo, por número de linha.|Sim|
 |Barras de navegação na parte superior do arquivo|Habilita a saltar para locais no código, por, por exemplo, o nome da função.|Sim|
-|Estrutura. Consulte [de estrutura de tópicos](https://msdn.microsoft.com/library/td6a5x4s.aspx).|Permite que você recolher seções do seu código para criar uma exibição mais compacta.|Sim|
+|Estrutura. Consulte [de estrutura de tópicos](/visualstudio/ide/outlining).|Permite que você recolher seções do seu código para criar uma exibição mais compacta.|Sim|
 |Tabular|Converte espaços em tabulações.|Sim|
 |Colorização de tipo|Mostra definidos nomes de tipo em uma cor especial.|Sim|
 |Localização rápida. Consulte localização rápida, localizar e substituir a janela.|Permite pesquisar em um arquivo ou projeto.|Sim|
 
 ## <a name="intellisense-features"></a>Recursos do IntelliSense
-A tabela a seguir resume os recursos do IntelliSense, suporte e não tem suporte em F #. Para obter informações gerais sobre o IntelliSense, consulte [usando o IntelliSense](https://msdn.microsoft.com/library/hcw1s69b.aspx).
+A tabela a seguir resume os recursos do IntelliSense, suporte e não tem suporte em F #. Para obter informações gerais sobre o IntelliSense, consulte [usando o IntelliSense](/visualstudio/ide/using-intellisense).
 
 |Recurso|Descrição|Com suporte em F #?|
 |-------|-----------|----------------|
@@ -108,10 +108,10 @@ A tabela a seguir resume o suporte para F # em ferramentas do Visual Studio.
 |Hierarquia de chamadas|Exibe a estrutura aninhada de função chama em seu código.|Não|
 |Métricas de código|Reúne informações sobre seu código, como contagens de linha.|Não|
 |Exibição de Classe|Fornece uma exibição baseada no tipo de código em um projeto.|Não|
-|[Janela Lista de Erros](https://msdn.microsoft.com/library/33df3b7a.aspx)|Mostra uma lista de erros no código.|Sim|
+|[Janela Lista de Erros](/visualstudio/ide/reference/error-list-window)|Mostra uma lista de erros no código.|Sim|
 |[F# Interativo](../tutorials/fsharp-interactive/index.md)|Permite digitar (ou copie e cole) F # de código e executá-lo imediatamente, independentemente da criação do projeto. A janela F # interativo é uma leitura, avaliar, impressão Loop REPL ().|Sim|
 |Pesquisador de Objetos|Permite que você veja os tipos em um assembly.|Tipos F # que aparecem em módulos compilados não aparecer exatamente como você criá-los. Você pode examinar a representação compilada de tipos F #, mas não é possível exibir os tipos conforme elas aparecem de F #.|
-|[Janela de Saída](https://msdn.microsoft.com/library/3hk6fby3.aspx)|Exibe a saída de compilação.|Sim|
+|[Janela de Saída](/visualstudio/ide/reference/output-window)|Exibe a saída de compilação.|Sim|
 |Análise de desempenho|Fornece ferramentas para medir o desempenho do seu código.|Sim|
 |Janela Propriedades|Exibe e permite a edição das propriedades do objeto no ambiente de desenvolvimento que tem o foco.|Sim|
 |[Gerenciador de servidores](https://msdn.microsoft.com/library/x603htbk.aspx)|Fornece formas de interagir com uma variedade de recursos de servidor.|Sim|

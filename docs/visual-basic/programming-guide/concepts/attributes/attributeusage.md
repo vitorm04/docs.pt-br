@@ -12,11 +12,11 @@ ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: aef00d201c3dea82f67395bee0d85f8989afa01e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 29d227cf50fe23d5619bf5fb6f9a598ea78ef077
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
 Determina como uma classe de atributo personalizado pode ser usada. `AttributeUsage` é um atributo que pode ser aplicado às definições de atributo personalizado para controlar como o novo atributo pode ser aplicado. As configurações padrão têm essa aparência quando aplicadas explicitamente:  
@@ -174,7 +174,7 @@ A2
  <xref:System.Attribute>  
  <xref:System.Reflection>  
  [Guia de programação do Visual Basic](../../../../visual-basic/programming-guide/index.md)  
- [Atributos](https://msdn.microsoft.com/library/5x6cd29c)  
+ [Atributos](../../../../../docs/standard/attributes/index.md)  
  [Reflexão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
  [Atributos (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
  [Criando atributos personalizados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  

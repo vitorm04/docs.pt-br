@@ -35,11 +35,11 @@ ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
 caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7cc2563f193fba9f9e30fcdfd5ea2766be16ba63
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c81d1f795b0c27f2eaf07832f2c1276b626f5ce1
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Como definir uma classe capaz de fornecer uma funcionalidade idêntica em tipos de dados diferentes (Visual Basic)
 Você pode definir uma classe da qual você pode criar objetos que fornecem funcionalidade idêntica em tipos de dados diferentes. Para fazer isso, você especifica um ou mais *parâmetros de tipo* na definição. A classe, em seguida, pode servir como um modelo para objetos que usam vários tipos de dados. Uma classe definida dessa maneira é chamada uma *classe genérica*.  
@@ -85,7 +85,7 @@ Você pode definir uma classe da qual você pode criar objetos que fornecem func
 ## <a name="see-also"></a>Consulte também  
  [Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
  [Tipos genéricos no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Componentes de independência de linguagem e componentes independentes da linguagem](https://msdn.microsoft.com/library/12a7a7h3)  
+ [Componentes de independência de linguagem e componentes independentes da linguagem](../../../../../docs/standard/language-independence-and-language-independent-components.md)  
  [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
  [Lista de Tipos](../../../../visual-basic/language-reference/statements/type-list.md)  
  [Como usar uma classe genérica](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  

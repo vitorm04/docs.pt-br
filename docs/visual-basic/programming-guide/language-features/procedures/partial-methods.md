@@ -20,11 +20,11 @@ ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8ebedd6f8173e3c349240d24ddaf16e4841f67a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 975a86e33eb5744f94cd58efb227bf52eb07c1e8
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="partial-methods-visual-basic"></a>Métodos parciais (Visual Basic)
 Métodos parciais permitem aos desenvolvedores inserir a lógica personalizada em código. Normalmente, o código é parte de uma classe gerado pelo designer. Métodos parciais são definidos em uma classe parcial que é criada por um gerador de código, e eles são usados para fornecer notificação de que algo foi alterado. Elas permitem que o desenvolvedor especificar o comportamento personalizado em resposta a alterações.  
@@ -83,5 +83,5 @@ End Sub
  [Subprocedimentos](./sub-procedures.md)  
  [Parâmetros Opcionais](./optional-parameters.md)  
  [Parcial](../../../../visual-basic/language-reference/modifiers/partial.md)  
- [Geração de código em LINQ to SQL](https://msdn.microsoft.com/library/bb399400)  
- [Adicionando lógica comercial usando métodos parciais](https://msdn.microsoft.com/library/bb546176)
+ [Geração de código em LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
+ [Adicionando lógica comercial usando métodos parciais](../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)
