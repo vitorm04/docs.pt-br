@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
 caps.latest.revision: "38"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 50998acedf3b462e17c57d784dfc1ebe6fff38b9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d46be95be90901e51713bc20cd2898e3db069802
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="authorization-policy"></a>Política de autorização
 Este exemplo demonstra como implementar uma política de autorização de declaração personalizada e um Gerenciador de autorização de serviço personalizado associado. Isso é útil quando a verificações de acesso baseado em declarações para operações de serviço e antes das verificações de acesso, você torna serviço concede o chamador certos direitos. Este exemplo mostra o processo de adição de declarações, bem como o processo para fazer uma verificação de acesso em relação ao finalizadas conjunto de declarações. Todas as mensagens de aplicativo entre o cliente e servidor assinadas e criptografadas. Por padrão, com o `wsHttpBinding` ligação, um nome de usuário e senha fornecidos pelo cliente são usados para fazer logon para uma conta válida do Windows NT. Este exemplo demonstra como utilizar um personalizado <!--zz <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>--> `System.IdentityModel.Selectors.UsernamePasswordValidator` para autenticar o cliente. Além disso, este exemplo mostra o cliente autenticar para o serviço usando um certificado x. 509. Este exemplo mostra uma implementação de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> e <xref:System.ServiceModel.ServiceAuthorizationManager>, que entre eles conceder acesso aos métodos específicos do serviço para usuários específicos. Este exemplo é baseado no [nome de usuário de segurança de mensagem](../../../../docs/framework/wcf/samples/message-security-user-name.md), mas demonstra como executar uma transformação de declaração antes do <xref:System.ServiceModel.ServiceAuthorizationManager> que está sendo chamado.  

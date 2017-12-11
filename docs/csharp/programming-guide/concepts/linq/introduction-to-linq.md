@@ -11,11 +11,11 @@ ms.assetid: 54874feb-55e5-4ca8-a9d6-1c1127fd7fb1
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 6fd14840cfffb1a59949251b26c168aada336de9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: cc654dd020d3a20b028cd6545b00de84193174ac
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="introduction-to-linq-c"></a>Introdução ao LINQ (C#)
 O LINQ (consulta integrada à linguagem) é uma inovação introduzida no .NET Framework versão 3.5 que preenche a lacuna entre o mundo dos objetos e o mundo dos dados.  
@@ -33,7 +33,7 @@ O LINQ (consulta integrada à linguagem) é uma inovação introduzida no .NET F
 ## <a name="next-steps"></a>Próximas etapas  
  Para obter mais detalhes sobre o LINQ, comece se familiarizando com alguns conceitos básicos na seção de introdução [Introdução a LINQ em C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md) e, em seguida, leia a documentação da tecnologia do LINQ na qual você está interessado:  
   
--   Bancos de dados do SQL Server: [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+-   Bancos de dados do SQL Server: [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
   
 -   Documentos XML: [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
   

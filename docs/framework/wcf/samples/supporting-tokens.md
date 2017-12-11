@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
 caps.latest.revision: "29"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: bf4c153cb3bb0b977b2d1f0438d1b6ac0d46ab43
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ab728751a01d16c6b3d2d14de4dd09c2d2b0a17a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="supporting-tokens"></a>Tokens com suporte
 O suporte a Tokens demonstra como adicionar tokens adicionais para uma mensagem que usa o WS-Security. O exemplo adiciona um token de segurança binário x. 509 além de um token de segurança do nome de usuário. O token é passado em um cabeçalho de mensagem do WS-Security do cliente para o serviço e a parte da mensagem está assinado com a chave privada associada com o token de segurança x. 509 para provar a posse do certificado x. 509 para o receptor. Isso é útil no caso, quando há uma necessidade de ter várias declarações associadas a uma mensagem para autenticar ou autorizar o remetente. O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta.  

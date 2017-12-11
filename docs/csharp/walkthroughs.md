@@ -12,11 +12,11 @@ ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
 caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: cba6852f129e0c62a7ece97f18b6f67c423c608c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 92aef08636b7bba3a61367f8a707c82c75f8d3d3
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="c-walkthroughs"></a>Explicações passo a passo sobre o C#
 O passo a passo fornece instruções detalhadas para cenários comuns, o que os torna um bom local para começar a aprender sobre o produto ou uma área de recurso específica.  
@@ -37,19 +37,19 @@ O passo a passo fornece instruções detalhadas para cenários comuns, o que os 
  [Criando e usando objetos dinâmicos (C# e Visual Basic)](../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)  
  Mostra como criar um objeto personalizado que expõe dinamicamente o conteúdo de um arquivo de texto e como criar um projeto que usa a biblioteca `IronPython`.  
    
- [Criando um controle composto com o Visual C#](https://msdn.microsoft.com/library/a6h7e207.aspx)  
+ [Criando um controle composto com o Visual C#](../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
  Demonstra como criar um controle composto simples e estender sua funcionalidade por meio da herança.  
   
- [Criando um controle do Windows Forms que aproveita os recursos de tempo de design do Visual Studio](https://msdn.microsoft.com/library/35ea88wb.aspx)  
+ [Criando um controle do Windows Forms que aproveita os recursos de tempo de design do Visual Studio](../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
  Ilustra como criar um designer personalizado para um controle personalizado.  
   
- [Herdando um controle do Windows Forms com Visual C#](https://msdn.microsoft.com/library/5h0k2e6x.aspx)  
+ [Herdando um controle do Windows Forms com Visual C#](../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
  Demonstra como criar um controle de botão herdado simples. Esse botão herda a funcionalidade do botão padrão do Windows Forms e expõe um membro personalizado.  
   
- [Depurando controles personalizados do Windows Forms em tempo de design](https://msdn.microsoft.com/library/5ytx0z24.aspx)  
+ [Depurando controles personalizados do Windows Forms em tempo de design](../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
  Descreve como depurar o comportamento de tempo de design de seu controle personalizado.
 
- [Executando tarefas comuns usando smart tags em controles do Windows Forms](https://msdn.microsoft.com/library/xhz359sc.aspx)  
+ [Executando tarefas comuns usando smart tags em controles do Windows Forms](../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
  Demonstra algumas das tarefas mais comuns, como a adição ou remoção de uma guia em um `TabControl`, o encaixe de um controle em seu pai e a alteração da orientação de um controle `SplitContainer`.  
   
  [Escrevendo consultas em C# (LINQ)](../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  

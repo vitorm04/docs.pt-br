@@ -12,16 +12,16 @@ ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: abb2291ce797f3630eebd24e563994a2d86242bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 772d3e59dbc84f77dc6f94e7cc60a89c7888551a
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Classes usadas em E/S de arquivo do .NET Framework e o sistema de arquivos (Visual Basic)
 As tabelas a seguir listam as classes usadas comumente para E/S de arquivos do .NET Framework, categorizadas em classes de E/S de arquivos, classes usadas para criar fluxos e classes usadas para ler e gravar em fluxos.  
   
- Para inserir a documentação [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] e encontrar uma listagem mais abrangente, consulte [Visão geral da biblioteca de classes](https://msdn.microsoft.com/library/hfa3fa08).  
+ Para inserir a documentação [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] e encontrar uma listagem mais abrangente, consulte [Visão geral da biblioteca de classes](../../../../../docs/standard/class-library-overview.md).  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Classes básicas de E/S para arquivos, unidades e pastas  
  A tabela a seguir lista e descreve as principais classes usadas para E/S de arquivos.  
@@ -64,7 +64,7 @@ As tabelas a seguir listam as classes usadas comumente para E/S de arquivos do .
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Grava caracteres em um `String`. A saída pode ser um fluxo em qualquer codificação ou um `String`.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Compondo fluxos](https://msdn.microsoft.com/library/e4y2dch9)  
+ [Compondo fluxos](../../../../../docs/standard/io/composing-streams.md)  
  [E/S de arquivo e de fluxo](https://msdn.microsoft.com/library/k3352a4t)  
  [E/S de arquivo assíncrona](https://msdn.microsoft.com/library/kztecsys)  
  [Noções básicas de E/S de arquivo do .NET Framework e o sistema de arquivos (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)

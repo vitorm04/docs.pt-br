@@ -16,11 +16,11 @@ ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
 caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c0885c3cc989260cf67608bec0ff512c9f4835f6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8db1b59bd8de523ae74ca198302f814c2d43f25a
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Instruções passo a passo: escrevendo consultas em C# (LINQ)
 Essas instruções passo a passo demonstram os recursos de linguagem C# que são usados para gravar expressões de consulta LINQ.  
@@ -182,7 +182,7 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
 ## <a name="next-steps"></a>Próximas etapas  
  Depois que estiver familiarizado com os aspectos básicos de como trabalhar com consultas em C#, você estará pronto para ler a documentação e exemplos para o tipo específico de provedor LINQ que lhe interessam:  
   
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
   
  [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   

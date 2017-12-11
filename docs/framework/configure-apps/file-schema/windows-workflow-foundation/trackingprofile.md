@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: 154830ff-ddd3-4397-a3b5-5b334907777f
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 44dedc70f3d55a13d1a1e6771e8f4a8a097d7b31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 939aa89fd236df34b59dca18d45ccb23fc8049d0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="lttrackingprofilegt"></a>&lt;trackingProfile&gt;
 Representa uma seção de configuração para criar uma assinatura para rastrear registros em um participante de rastreamento de fluxo de trabalho. Um perfil de rastreamento contém consultas de rastreamento que permitem um participante de rastreamento assinar eventos de fluxo de trabalho que são emitidos quando o estado de uma instância de fluxo de trabalho é alterado em tempo de execução. As consultas definidas no perfil de rastreamento seção definem os tipos de eventos que são retornados pela assinatura.  
@@ -98,7 +98,7 @@ Representa uma seção de configuração para criar uma assinatura para rastrear
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<os participantes >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|Um elemento de configuração que contém todas as consultas para um fluxo de trabalho específico identificado pelo **um hiperlink "http://msdn.microsoft.com/en-us/library/ System.ServiceModel.Activities.Tracking.Configuration.profileworkflowelement.activitydefinitionid (VS.100).aspx "ctivityDefinitionId** propriedade.|  
+|[\<os participantes >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|Um elemento de configuração que contém todas as consultas para um fluxo de trabalho específico identificado pelo **um hiperlink "http://msdn.microsoft.com/en-us/library/ System.ServiceModel.Activities.Tracking.Configuration.profileworkflowelement.activitydefinitionid (VS.100). aspx "ctivityDefinitionId** propriedade.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
