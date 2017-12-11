@@ -28,7 +28,7 @@ Uma instrução `foreach` repete um grupo de instruções inseridas para cada el
   
  Em qualquer ponto dentro do bloco `foreach`, você pode sair do loop usando a palavra-chave [break](break.md) ou seguir para a próxima iteração no loop, usando a palavra-chave [continue](continue.md).
 
- Um loop `foreach` também pode ser encerrado pelas instruções [goto](goto.md), [retorn](return.md) ou [throw](throw.md).
+ Um loop `foreach` também pode ser encerrado pelas instruções [goto](goto.md), [return](return.md) ou [throw](throw.md).
 
  Para obter mais informações sobre a palavra-chave `foreach` e exemplos de códigos, consulte os seguintes tópicos:  
 
