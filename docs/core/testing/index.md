@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
-ms.openlocfilehash: 666c06b236ad870c5c683749ab57d4488b4b8a39
-ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
+ms.openlocfilehash: 780c2655b6d6a660939fb79ea58bec463ec97aa9
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Teste de unidade no .NET Core e .NET Standard
 
@@ -34,15 +34,18 @@ Ao escrever testes de unidade, tenha cuidado para não apresentar dependências 
 
 Saiba mais sobre testes de unidade em projetos do .NET Core:
 
-Os projetos de Teste de Unidade para .NET Core são suportados para [C#](../../csharp/index.md), [F#](../../fsharp/index.md) e [Visual Basic](../../visual-basic/index.md). Você também pode escolher entre [xUnit](http://xunit.github.io) e [MSTest](https://github.com/Microsoft/vstest-docs).
+Os projetos de Teste de Unidade para .NET Core são suportados para [C#](../../csharp/index.md), [F#](../../fsharp/index.md) e [Visual Basic](../../visual-basic/index.md). Também é possível escolher entre [xUnit](http://xunit.github.io), [NUnit](http://nunit.org) e [MSTest](https://github.com/Microsoft/vstest-docs).
 
 Você pode ler sobre as combinações nestes artigos passo a passo:
 
 * Criar testes de unidade usando [*XUnit* e *C#* com a CLI do .NET Core](unit-testing-with-dotnet-test.md).
+* Criar testes de unidade usando [*NUnit* e *C#* com a CLI do .NET Core](unit-testing-with-nunit.md).
 * Criar testes de unidade usando [*MSTest* e *C#* com a CLI do .NET Core](unit-testing-with-mstest.md).
 * Criar testes de unidade usando [*XUnit* e *F#* com a CLI do .NET Core](unit-testing-fsharp-with-dotnet-test.md).
+* Criar testes de unidade usando [*NUnit* e *F#* com a CLI do .NET Core](unit-testing-fsharp-with-nunit.md).
 * Criar testes de unidade usando [*MSTest* e *F#* com a CLI do .NET Core](unit-testing-fsharp-with-mstest.md).
 * Criar testes de unidade usando [*XUnit* e *Visual Basic* com a CLI do .NET Core](unit-testing-visual-basic-with-dotnet-test.md).
+* Criar testes de unidade usando [*NUnit* e *Visual Basic* com a CLI do .NET Core](unit-testing-visual-basic-with-nunit.md).
 * Criar testes de unidade usando [*MSTest* e *Visual Basic* com a CLI do .NET Core](unit-testing-visual-basic-with-mstest.md).
 
 É possível escolher idiomas diferentes para as bibliotecas de classe e as bibliotecas de teste de unidade. Você pode aprender como combinando e correspondendo os passo a passos mencionados acima.
