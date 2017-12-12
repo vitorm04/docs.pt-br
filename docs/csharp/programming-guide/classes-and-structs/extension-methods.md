@@ -12,11 +12,11 @@ ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
 caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 30058a461dddb872e76bef574273c62910e8b2c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 34a80e4bf129c6104d50a8a0877271136c0c4198
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="extension-methods-c-programming-guide"></a>Métodos de extensão (Guia de Programação em C#)
 Os métodos de extensão permitem que você "adicione" tipos existentes sem criar um novo tipo derivado, recompilar ou, caso contrário, modificar o tipo original. Os métodos de extensão são um tipo especial de método estático, mas são chamados como se fossem métodos de instância no tipo estendido. No caso do código cliente gravado em C#, F# e Visual Basic, não há nenhuma diferença aparente entre chamar um método de extensão e os métodos realmente definidos em um tipo.  
@@ -84,14 +84,14 @@ using System.Linq;
   
 -   Os métodos de extensão são trazidos para o escopo no nível do namespace. Por exemplo, se você tiver várias classes estáticas que contenham métodos de extensão em um único namespace chamado `Extensions`, todos eles serão trazidos para o escopo pela diretiva `using Extensions;`.  
   
- Para uma biblioteca de classes que você implemente, não use métodos de extensão para evitar incrementar o número de versão de um assembly. Se desejar adicionar funcionalidade significativa a uma biblioteca da qual você possua o código-fonte, siga as diretrizes padrão do .NET Framework para controle de versão do assembly. Para obter mais informações, consulte [Controle de versão do assembly](https://msdn.microsoft.com/library/51ket42z).  
+ Para uma biblioteca de classes que você implemente, não use métodos de extensão para evitar incrementar o número de versão de um assembly. Se desejar adicionar funcionalidade significativa a uma biblioteca da qual você possua o código-fonte, siga as diretrizes padrão do .NET Framework para controle de versão do assembly. Para obter mais informações, consulte [Controle de versão do assembly](../../../../docs/framework/app-domains/assembly-versioning.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Exemplos de programação paralela (Isso inclui vários métodos de extensão de exemplo)](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
+ [Exemplos de programação paralela (incluem vários métodos de extensão de exemplo)](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
  [Expressões Lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
  [Visão Geral de Operadores de Consulta Padrão](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- [Conversão de regras para a instância de parâmetros e seu impacto](http://go.microsoft.com/fwlink/?LinkId=112385)  
- [Métodos de extensão interoperabilidade entre linguagens](http://go.microsoft.com/fwlink/?LinkId=112386)  
- [Métodos de extensão e delegados na forma Curried](http://go.microsoft.com/fwlink/?LinkId=112387)  
+ [Regras de conversão para parâmetros de instância e seu impacto](http://go.microsoft.com/fwlink/?LinkId=112385)  
+ [Interoperabilidade de métodos de extensão entre linguagens](http://go.microsoft.com/fwlink/?LinkId=112386)  
+ [Métodos de extensão e representantes via currying](http://go.microsoft.com/fwlink/?LinkId=112387)  
  [Associação do método de extensão e relatório de erros](http://go.microsoft.com/fwlink/?LinkId=112388)

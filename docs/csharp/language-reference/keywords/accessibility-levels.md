@@ -1,6 +1,6 @@
 ---
 title: "Níveis de acessibilidade (Referência de C#)"
-ms.date: 07/20/2015
+ms.date: 12/06/2017
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.topic: article
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 77124554d7a0b38414e154e024aceddbfffcfbd4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 816ee0fab3fae21bff2ffbfcbfe39d04dcf95025
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="accessibility-levels-c-reference"></a>Níveis de acessibilidade (Referência de C#)
+
 Use os modificadores de acesso, [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) ou [private](../../../csharp/language-reference/keywords/private.md), para especificar um dos seguintes níveis de acessibilidade declarada de membros.  
   
 |Acessibilidade declarada|Significado|  
@@ -27,9 +27,9 @@ Use os modificadores de acesso, [public](../../../csharp/language-reference/keyw
 |`internal`|O acesso é limitado ao assembly atual.|  
 |`protected internal`|O acesso é limitado ao assembly atual ou aos tipos derivados da classe que os contém.|  
 |`private`|O acesso é limitado ao tipo recipiente.|  
-|`private protected`|O acesso é limitado à classe que contém ou tipos derivados da classe recipiente dentro do assembly atual.|  
+|`private protected`|O acesso é limitado à classe que o contém ou a tipos derivados da classe que o contém no assembly atual. Disponível desde o C# 7.2. |  
   
- Modificador de acesso de somente uma é permitida para um membro ou tipo, exceto quando você usa o `protected internal` ou `private protected` combinações.  
+ Apenas um modificador de acesso é permitido para um membro ou tipo, exceto quando você usa as combinações `protected internal` e `private protected`.  
   
  Os modificadores de acesso não são permitidos em namespaces. Namespaces não têm nenhuma restrição de acesso.  
   
