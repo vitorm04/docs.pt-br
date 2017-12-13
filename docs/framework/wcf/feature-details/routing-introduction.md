@@ -13,11 +13,11 @@ caps.latest.revision: "11"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 2b1347ff4e04a638ed5973f20ae64ef0058dc025
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f0205f4bc468d4a38a50fd2be36d05583ad87906
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="routing-introduction"></a>Introdução ao roteamento
 O serviço de roteamento fornece um SOAP conectável genérico que é capaz de roteamento de mensagens com base no conteúdo da mensagem intermediário. Com o serviço de roteamento, você pode criar lógica complexa de roteamento que permite que você implemente cenários como agregação de serviço, controle de versão do serviço, o roteamento de prioridade e roteamento de multicast. O serviço de roteamento também fornece erro tratamento que permite que você configure listas de pontos de extremidade de backup, para que as mensagens são enviadas se ocorrer uma falha ao enviar para o ponto de extremidade de destino principal.  
@@ -48,7 +48,7 @@ O serviço de roteamento fornece um SOAP conectável genérico que é capaz de r
  O exemplo a seguir define os pontos de extremidade do cliente e de serviço que são usados pelo serviço de roteamento por meio de programação e usando um arquivo de configuração.  
   
 ```xml  
-<services>  
+    <services>  
       <!--ROUTING SERVICE -->  
       <service behaviorConfiguration="routingData"  
                name="System.ServiceModel.Routing.RoutingService">  
@@ -61,7 +61,8 @@ O serviço de roteamento fornece um SOAP conectável genérico que é capaz de r
         <endpoint address=""  
                   binding="wsHttpBinding"  
                   name="reqReplyEndpoint"  
-                  contract="System.ServiceModel.Routing.IRequestReplyRouter" />      </service>  
+                  contract="System.ServiceModel.Routing.IRequestReplyRouter" />      
+      </service>  
     </services>  
     <behaviors>  
       <serviceBehaviors>  
