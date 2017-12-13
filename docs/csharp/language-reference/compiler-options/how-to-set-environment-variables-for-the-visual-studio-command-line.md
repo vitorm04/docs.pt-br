@@ -20,31 +20,31 @@ ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8012e310bb04ec3acef0790f9cd50ed42dd9286a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: afab503719f67cf7ad1762370ed3062e12ad88e9
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Como: configurar variáveis de ambiente para a linha de comando do Visual Studio
 
-O arquivo VsDevCmd.bat define as variáveis de ambiente apropriadas para habilitar as compilações de linha de comando. Para obter mais informações sobre VsDevCmd.bat, consulte [artigo da Base de dados de Conhecimento Q248802](http://go.microsoft.com/fwlink/?LinkId=225042).  
+O arquivo VsDevCmd.bat define as variáveis de ambiente adequadas para habilitar builds de linha de comando. Para obter mais informações sobre VsDevCmd.bat, consulte [Artigo da base de dados de conhecimento Q248802](https://support.microsoft.com/help/248802/you-receive-the-out-of-environment-space-error-message-when-you-execut).  
 
 > [!NOTE]
-> O arquivo VsDevCmd.bat é um novo arquivo fornecido com o Visual Studio de 2017. Visual Studio 2015 e versões anteriores usados VSVARS32.bat para a mesma finalidade. Esse arquivo foi armazenado no Visual Studio de \Program Files\Microsoft\\*versão*\Common7\Tools ou (x86) os arquivos de programas \Microsoft Visual Studio\\*versão*\Common7\Tools.
+> O arquivo VsDevCmd.bat é um novo arquivo fornecido com o Visual Studio 2017. O Visual Studio 2015 e versões anteriores usavam o VSVARS32.bat para a mesma finalidade. Esse arquivo era armazenado em \Arquivos de Programas\Microsoft Visual Studio\\*Versão*\Common7\Tools ou Arquivos de Programas (x86)\Microsoft Visual Studio\\*Versão*\Common7\Tools.
   
-Se a versão atual do Visual Studio está instalada em um computador que também tem uma versão anterior do Visual Studio, você não deve executar VsDevCmd.bat e VSVARS32. BAT de versões diferentes na mesma janela do Prompt de comando. Em vez disso, você deve executar o comando para cada versão em sua própria janela.
+Se a versão atual do Visual Studio estiver instalada em um computador que também tiver uma versão anterior do Visual Studio, você não deverá executar VsDevCmd.bat e VSVARS32.bat de versões diferentes na mesma janela do Prompt de Comando. Em vez disso, você deve executar o comando para cada versão em sua própria janela.
   
-### <a name="to-run-vsdevcmdbat"></a>Para executar VsDevCmd.BAT  
+### <a name="to-run-vsdevcmdbat"></a>Para executar o VsDevCmd.BAT  
   
-1.  Do **iniciar** menu, abrir o **Prompt de comando do desenvolvedor para VS 2017**.  Ele está no **2017 do Visual Studio** pasta.
+1.  No menu **Iniciar**, abra o **Prompt de Comando do Desenvolvedor para VS 2017**.  Ele está na pasta do **Visual Studio 2017**.
   
-2.  Altere para o Visual Studio \Program Files\Microsoft\\*versão*\\*oferta*\Common7\Tools ou \Program arquivos (x86) \Microsoft Visual Studio\\ *Versão*\\*oferta*\Common7\Tools subdiretório de sua instalação.  (*Versão* é *2017* para a versão atual. *Oferta* é um dos *Enterprise*, *Professional* ou *Community*.)
+2.  Altere para o subdiretório \Arquivos de Programas\Microsoft Visual Studio\\*Versão*\\*Oferta*\Common7\Tools ou \Arquivos de Programas (x86)\Microsoft Visual Studio\\*Versão*\\*Oferta*\Common7\Tools da sua instalação.  (a *Versão* é *2017* para a versão atual. *Oferta* é uma entre *Enterprise*, *Professional* ou *Community*).
   
-3.  Execute VsDevCmd.bat digitando **VsDevCmd**.  
+3.  Execute o VsDevCmd.bat digitando **VsDevCmd**.  
   
     > [!CAUTION]
-    >  VsDevCmd.bat pode variar de um computador para outro. Não substitua um arquivo de VsDevCmd.bat ausente ou danificado com um VsDevCmd.bat de outro computador. Em vez disso, execute novamente a instalação para substituir o arquivo não encontrado.  
+    >  O VsDevCmd.bat pode variar de um computador para outro. Não substitua um arquivo VsDevCmd.bat não encontrado ou danificado por um VsDevCmd.bat de outro computador. Em vez disso, execute novamente a instalação para substituir o arquivo não encontrado.  
   
 ## <a name="see-also"></a>Consulte também  
  [Build pela linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

@@ -10,13 +10,13 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.openlocfilehash: e00cf6badcbd39cc1e9320095169d86efb9cad8f
-  ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+  ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/22/2017
+  ms.lasthandoff: 12/07/2017
 items:
 - durationInMinutes: 1
-  content: "Este guia rápido ensina c# interativamente, usando seu navegador para escrever o código c# e ver os resultados de compilar e executar seu código. Ele contém uma série de lições que criam, modificam e exploram coleções e matrizes.\n"
+  content: "Este início rápido ensina C# de forma interativa, usando seu navegador para escrever código em C# e ver os resultados da compilação e da execução de seu código. Ele contém uma série de lições que criam, modificam e exploram coleções e matrizes.\n"
 - title: Criar listas
   durationInMinutes: 2
   content: "Execute o seguinte código na janela interativa. Para fazer isso, digite o bloco de código a seguir na janela interativa (substitua \"<name>\" pelo seu nome) e clique no botão **Executar**:\n\n```csharp\nvar names = new List<string> { \"<name>\", \"Ana\", \"Felipe\" };\nforeach (var name in names)\n{\n  Console.WriteLine($\"Hello {name.ToUpper()}!\");\n}\n```\n\nVocê criou uma lista de cadeias de caracteres, adicionou três nomes a essa lista e imprimiu os nomes em MAIÚSCULAS. Você está usando conceitos que aprendeu em inícios rápidos anteriores para executar um loop pela lista.\n\nO código para exibir nomes usa **cadeias de caracteres interpoladas**.  Quando você precede um `string` com o caractere `$`, pode inserir o código C# na declaração da cadeia de caracteres. A cadeia de caracteres real substitui esse código C# pelo valor gerado. Neste exemplo, ela substitui o `{name.ToUpper()}` por cada nome, convertido em letras maiúsculas, pois você chamou o método <xref:System.String.ToUpper%2A>.\n\nVamos continuar explorando.\n\n> [!NOTE]\n> Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).\n"
@@ -35,4 +35,4 @@ items:
 - title: "Desafio concluído"
   durationInMinutes: 3
   content: "Você conseguiu algo semelhante a isto?\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nCom cada iteração do loop, você está pegando os últimos dois inteiros na lista, somando-os e adicionando esse valor à lista. O loop será repetido até que você tenha adicionado 20 itens à lista.\n\n> [!NOTE]\n> Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).\n"
-- content: "Você concluiu o início rápido da lista. Este início rápido é o início rápido interativo final. Você pode continuar esses tutoriais em seu próprio ambiente de desenvolvimento. O tópico .NET [começar em 10 minutos](https://www.microsoft.com/net/core) tem instruções para configurar o ambiente de desenvolvimento local. Depois que tiver feito isso, continue com [Introdução às classes](introduction-to-classes.md) em seu ambiente local.\n\nSaiba mais sobre como trabalhar com o tipo `List` no tópico [Guia de .NET](../../standard/index.md) em [coleções](../../standard/collections/index.md). Você também aprenderá muitos outros tipos de coleção.\0"
+- content: "Você concluiu o início rápido da lista. Este início rápido é o último início rápido interativo. Você pode continuar esses inícios rápidos em seu próprio ambiente de desenvolvimento. O tópico do .NET [Familiarize-se em 10 minutos](https://www.microsoft.com/net/core) tem instruções para configurar o ambiente de desenvolvimento local. Depois de ter feito isso, continue com [Introdução a classes](introduction-to-classes.md) em seu ambiente local.\n\nSaiba mais sobre como trabalhar com o tipo `List` no tópico [Guia de .NET](../../standard/index.md) em [coleções](../../standard/collections/index.md). Você também aprenderá muitos outros tipos de coleção.\0"
