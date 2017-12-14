@@ -12,12 +12,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
+ms.openlocfilehash: 002c0e35bc8dfb54fc081fcb70000c9c61eb5fcc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: c2e2408b2d7a02a1a75965f32888d240bafae0f0
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="get-started-with-c"></a>Introdução ao C# #
 
@@ -72,5 +71,4 @@ Os seguintes tópicos estão disponíveis:
     Fornece links para explicações passo a passo sobre programação em C# e uma breve descrição sobre cada explicação passo a passo.
 
 ## <a name="see-also"></a>Consulte também
- [Introdução ao Visual C# e ao Visual Basic usando o Visual Studio](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic) [Central de Informações para Desenvolvedores Iniciantes](http://go.microsoft.com/fwlink/?LinkId=123826)
-
+ [Introdução ao Visual C# e Visual Basic usando o Visual Studio](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

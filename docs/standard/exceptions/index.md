@@ -17,16 +17,15 @@ helpviewer_keywords:
 - exceptions [.NET Framework]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: b064dc39f5807b154a1529eebe17493ae84981cf
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5d44996042d167c029291f2b454dc1a22cfbcfb4
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/21/2017
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Tratando e gerando exceções no .NET
 
@@ -36,7 +35,7 @@ Aplicativos devem ser capazes de tratar de erros que ocorrem durante a execuçã
 
 Uma exceção é qualquer condição de erro ou comportamento inesperado encontrado por um programa em execução. Exceções podem ser geradas devido a uma falha em seu código ou no código que você chama (como uma biblioteca compartilhada), recursos do sistema operacional não disponíveis, condições inesperadas encontradas pelo tempo de execução (como código que não pode ser verificado) e assim por diante. Seu aplicativo pode se recuperar de algumas dessas condições, mas não de outras. Embora você possa se recuperar da maioria das exceções de aplicativo, não é possível recuperar-se da maioria das exceções de tempo de execução.
 
-No .NET, uma exceção é um objeto que herda da classe [System.Exception](xref:System.Exception). Uma exceção é lançada de uma área do código em que ocorreu um problema. A exceção é passada pilha acima até que o aplicativo trate dela ou o programa seja encerrado.
+No .NET, uma exceção é um objeto herdado da classe <xref:System.Exception?displayProperty=nameWithType>. Uma exceção é lançada de uma área do código em que ocorreu um problema. A exceção é passada pilha acima até que o aplicativo trate dela ou o programa seja encerrado.
 
 ## <a name="exceptions-vs-traditional-error-handling-methods"></a>Métodos de tratamento de exceção vs. tratamento de erro tradicional
 
@@ -58,13 +57,13 @@ A tabela a seguir lista algumas exceções comuns com exemplos do que pode caus�
 
 | Tipo de exceção | Tipo base | Descrição | Exemplo |
 | -------------- | --------- | ----------- | ------- |
-| @System.Exception | @System.Object | A classe base para todas as exceções. | Nenhuma (use uma classe derivada dessa exceção). |
-| @System.IndexOutOfRangeException | @System.Exception | Gerada pelo tempo de execução somente quando uma matriz é indexada incorretamente. | Indexar uma matriz fora do intervalo válido: `arr[arr.Length+1]` |
-| @System.NullReferenceException | @System.Exception | Gerada pelo tempo de execução somente quando um objeto nulo é referenciado. | `object o = null; o.ToString();` |
-| @System.InvalidOperationException | @System.Exception | Gerada por métodos quando em um estado inválido. | Chamar `Enumerator.GetNext()` após a remoção de um item da coleção subjacente. |
-| @System.ArgumentException | @System.Exception | A classe base para todas as exceções de argumento. | Nenhuma (use uma classe derivada dessa exceção). |
-| @System.ArgumentNullException | @System.Exception | Gerada por métodos que não permitem que um argumento seja nulo. | `String s = null; "Calculate".IndexOf (s);` |
-| @System.ArgumentOutOfRangeException | @System.Exception | Gerada por métodos que verificam se os argumentos estão em um determinado intervalo. | `String s = "string"; s.Substring(s.Length+1);` |
+| <xref:System.Exception> | <xref:System.Object> | A classe base para todas as exceções. | Nenhuma (use uma classe derivada dessa exceção). |
+| <xref:System.IndexOutOfRangeException> | <xref:System.Exception> | Gerada pelo tempo de execução somente quando uma matriz é indexada incorretamente. | Indexar uma matriz fora do intervalo válido: `arr[arr.Length+1]` |
+| <xref:System.NullReferenceException> | <xref:System.Exception> | Gerada pelo tempo de execução somente quando um objeto nulo é referenciado. | `object o = null; o.ToString();` |
+| <xref:System.InvalidOperationException> | <xref:System.Exception> | Gerada por métodos quando em um estado inválido. | Chamar `Enumerator.GetNext()` após a remoção de um item da coleção subjacente. |
+| <xref:System.ArgumentException> | <xref:System.Exception> | A classe base para todas as exceções de argumento. | Nenhuma (use uma classe derivada dessa exceção). |
+| <xref:System.ArgumentNullException> | <xref:System.Exception> | Gerada por métodos que não permitem que um argumento seja nulo. | `String s = null; "Calculate".IndexOf (s);` |
+| <xref:System.ArgumentOutOfRangeException> | <xref:System.Exception> | Gerada por métodos que verificam se os argumentos estão em um determinado intervalo. | `String s = "string"; s.Substring(s.Length+1);` |
 
 ## <a name="see-also"></a>Consulte também
 
@@ -79,4 +78,3 @@ A tabela a seguir lista algumas exceções comuns com exemplos do que pode caus�
 * [Práticas recomendadas para exceções](best-practices-for-exceptions.md)
 
 Para saber mais sobre o funcionamento de exceções no .NET, veja [O que todo desenvolvedor precisa saber sobre exceções no tempo de execução](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md).
-

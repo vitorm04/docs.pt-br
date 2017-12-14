@@ -15,20 +15,18 @@ helpviewer_keywords:
 - C# language
 - Visual C#
 ms.author: wiwagn
+ms.openlocfilehash: 5ecc77970dbd32ca743bcd09fc63d49299a164a5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: 5cb79aa1fd89e080e8dc67c379a0a927102a6419
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/02/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
-
 # <a name="c-guide"></a>Guia de C#
 
 O guia do C# fornece uma grande quantidade de informações sobre a linguagem C#. Este site tem vários públicos diferentes. Dependendo de sua experiência com programação ou com a linguagem C# e .NET, convém explorar as diferentes seções deste guia.
 
 * Para desenvolvedores novatos:
-    - Comece com nossa seção de [tutoriais](tutorials/index.md). Esses tutoriais mostram como criar programas em C# desde o início. Os tutoriais fornecem um processo passo a passo para criar programas. Você aprenderá os conceitos da linguagem e como criar programas em C#. Se você preferir ler primeiro as informações da visão geral, experimente nosso [Tour da linguagem C#](tour-of-csharp/index.md). Ele explica os conceitos da linguagem C#. Depois de ler isso, você terá uma compreensão básica da linguagem e estará pronto para experimentar os tutoriais ou criar algo por conta própria.
+    - Comece pela nossa seção de [Inícios rápidos](quick-starts/index.md). Eles permitem explorar a linguagem C# interativamente no seu navegador. A partir daí, você pode continuar para a seção dos nossos [tutoriais](tutorials/index.md). Esses tutoriais mostram como criar programas em C# desde o início. Os tutoriais fornecem um processo passo a passo para criar programas. Você aprenderá os conceitos da linguagem e como criar programas em C#. Se você preferir ler primeiro as informações da visão geral, experimente nosso [Tour da linguagem C#](tour-of-csharp/index.md). Ele explica os conceitos da linguagem C#. Depois de ler isso, você terá uma compreensão básica da linguagem e estará pronto para experimentar os tutoriais ou criar algo por conta própria.
 
 * Para os desenvolvedores que não conhecem o C#: 
     - Se você já tiver trabalhado desenvolvimento antes, mas ainda não conhece o C#, leia o [tour da linguagem C#](tour-of-csharp/index.md). Você aprenderá a sintaxe e a estrutura básicas da linguagem, e poderá usar o tour de linguagem para comparar o C# a outras linguagens que já usou. Também é possível pesquisar nos [tutoriais](tutorials/index.md) para experimentar programas básicos em C#.
@@ -77,6 +75,5 @@ Há várias seções no Guia do C#. Você pode lê-los em ordem ou ir diretament
     - Links para a versão mais recente das Especificações de C# em formato Microsoft Word.  
   
 ## <a name="see-also"></a>Consulte também  
- [Introdução ao Visual C# e ao Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
+ [Introdução ao Visual C# e ao Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)  
  [Desenvolvimento .NET](https://msdn.microsoft.com/library/ff361664)
-

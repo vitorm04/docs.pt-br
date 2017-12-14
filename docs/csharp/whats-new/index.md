@@ -4,32 +4,34 @@ description: "Como a linguagem C# está evoluindo"
 keywords: C#, recursos mais recentes, novidades, Roslyn
 author: BillWagner
 ms.author: wiwagn
-ms.date: 03/21/2017
+ms.date: 11/13/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
+ms.openlocfilehash: 719fbe826b0b115b19067dbaf0d04f14e6534890
+ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
 ms.translationtype: HT
-ms.sourcegitcommit: df0438dd742db802bb0f935d840006236d5d9bf9
-ms.openlocfilehash: 0a328f62a02aea223340fcc00e839e841041a7d6
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/15/2017
 ---
-
 # <a name="whats-new-in-c"></a>Novidades no C# #
 
 Esta página fornece um roteiro de novos recursos em cada versão principal da linguagem C#. Os links a seguir fornecem informações detalhadas sobre os principais recursos adicionados a cada versão.
 
 > [!IMPORTANT]
-> A linguagem C# depende de tipos e métodos em uma *biblioteca padrão* para alguns dos recursos. Um exemplo é o processamento de exceção. Cada instrução ou expressão `throw` é verificada para garantir que o objeto que está sendo gerado é derivado de @System.Exception. Da mesma forma, cada `catch` é verificado para garantir que o tipo que está sendo capturado é derivado de @System.Exception. Cada versão pode adicionar novos requisitos. Para usar os recursos de linguagem mais recentes em ambientes mais antigos, talvez seja necessário instalar bibliotecas específicas. Elas estão documentadas na página de cada versão específica. Saiba mais sobre as [relações entre linguagem e biblioteca](relationships-between-language-and-library.md) para obter informações sobre essa dependência. 
+> A linguagem C# depende de tipos e métodos em uma *biblioteca padrão* para alguns dos recursos. Um exemplo é o processamento de exceção. Cada instrução ou expressão `throw` é verificada para garantir que o objeto que está sendo gerado é derivado de <xref:System.Exception>. Da mesma forma, cada `catch` é verificado para garantir que o tipo que está sendo capturado é derivado de <xref:System.Exception>. Cada versão pode adicionar novos requisitos. Para usar os recursos de linguagem mais recentes em ambientes mais antigos, talvez seja necessário instalar bibliotecas específicas. Essas dependências estão documentadas na página de cada versão específica. Saiba mais sobre as [relações entre linguagem e biblioteca](relationships-between-language-and-library.md) para obter informações sobre essa dependência. 
+
+
+* [C# 7.2](csharp-7-2.md):
+    - Esta página descreve os recursos mais recentes na linguagem C#. O C#7.2 está disponível atualmente no [Visual Studio 2017 versão 15.5](https://www.visualstudio.com/vs/whatsnew/) e no [SDK do .NET Core 2.0](../../core/whats-new/index.md).
 
 * [C# 7.1](csharp-7-1.md):
-    - Esta página descreve os recursos mais recentes na linguagem C#. Isso abrange o C#7.1, disponível atualmente no [Visual Studio 2017 versão 15.3](https://www.visualstudio.com/vs/whatsnew/) e no [SDK do .NET Core 2.0](../../core/whats-new/index.md).
+    - Esta página descreve os recursos no C# 7.1. Esses recursos foram adicionados no [Visual Studio 2017 versão 15.3](https://www.visualstudio.com/vs/whatsnew/) e no [SDK do .NET Core 2.0](../../core/whats-new/index.md).
 
 * [C# 7](csharp-7.md):
-    - Esta página descreve os recursos adicionados ao C# 7. Eles foram adicionados ao [Visual Studio 2017](https://www.visualstudio.com/vs/whatsnew/) e ao [.NET Core 1.0](../../core/whats-new/index.md) e posteriores
+    - Esta página descreve os recursos adicionados ao C# 7. Esses recursos foram adicionados ao [Visual Studio 2017](https://www.visualstudio.com/vs/whatsnew/) e ao [.NET Core 1.0](../../core/whats-new/index.md) e posterior
      
 * [C# 6](csharp-6.md):
     - Esta página descreve os recursos que foram adicionados no C# 6. Esses recursos estão disponíveis no Visual Studio 2015 para desenvolvedores do Windows e no .NET Core 1.0 para desenvolvedores explorando o C# no macOS e Linux.
@@ -68,4 +70,3 @@ A seguir estão listados as principais funcionalidades que foram introduzidas em
 
  * C# 1, Visual Studio .NET 2002: 
      - A primeira versão do [C#](../csharp.md).   
-

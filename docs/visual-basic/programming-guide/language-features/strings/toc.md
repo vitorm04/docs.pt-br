@@ -4,6 +4,7 @@
 ### [Tipos de Métodos de Manipulação da Cadeia de Caracteres](types-of-string-manipulation-methods.md)
 ### [Nothing e Cadeias de Caracteres](nothing-and-strings.md)
 ### [Como a cultura afeta cadeias de caracteres](how-culture-affects-strings.md)
+### [Cadeias de caracteres interpoladas](interpolated-strings.md)
 ### [Acesso a Cadeias de Caracteres baseado em Zero vs. Baseado em Um](zero-based-vs-one-based-string-access.md)
 ## [Como criar cadeias de caracteres usando StringBuilder](how-to-create-strings-using-a-stringbuilder.md)
 ## [Como pesquisar em uma cadeia de caracteres](how-to-search-within-a-string.md)

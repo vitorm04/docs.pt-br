@@ -8,21 +8,23 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - delegate model for events
 - application development [.NET Framework], events
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: d5b5c8db7dc264185a5f58438ead83d4a65ec492
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ae0776501bffc23ae07cc88c7f0d1729ed01b6f7
-ms.contentlocale: pt-br
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="handling-and-raising-events"></a>Manipulando e acionando eventos
 Os eventos no .NET Framework são baseados no modelo de representante. O modelo de representante segue o padrão de design do observador, que permite a um assinante se registrar em um provedor e receber notificações dele. Um remetente de eventos envia uma notificação por push de que um evento ocorreu e um receptor de eventos recebe essa notificação e define uma resposta. Este artigo descreve os principais componentes do modelo de representante, como consumir eventos em aplicativos e como implementar eventos no código.  
@@ -38,7 +40,8 @@ Os eventos no .NET Framework são baseados no modelo de representante. O modelo 
   
  O exemplo de código a seguir mostra como declarar um evento denominado `ThresholdReached`. O evento está associado ao representante <xref:System.EventHandler> e é gerado em um método chamado `OnThresholdReached`.  
   
- [!code-csharp[EventsOverview#1](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#1)] [!code-vb[EventsOverview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#1)]  
+ [!code-csharp[EventsOverview#1](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#1)]
+ [!code-vb[EventsOverview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#1)]  
   
 ## <a name="delegates"></a>Delegados  
  Um representante é um tipo que contém uma referência a um método. Um representante é declarado com uma assinatura que mostra o tipo de retorno e os parâmetros para os métodos aos quais faz referência, além de poder conter referências apenas aos métodos que correspondem à sua assinatura. Portanto, um representante é equivalente a um ponteiro de função fortemente tipado ou um retorno de chamada. Uma declaração de representante é suficiente para definir uma classe de representante.  
@@ -51,25 +54,28 @@ Os eventos no .NET Framework são baseados no modelo de representante. O modelo 
   
  Para cenários em que os representantes <xref:System.EventHandler> e <xref:System.EventHandler%601> não funcionam, você pode definir um representante. Os cenários que exigem que você defina um representante são muito raros; por exemplo, quando você deve trabalhar com código que não reconhece genéricos. Marque um representante com a palavra-chave `delegate` (em C#) e `Delegate` (no Visual Basic) na declaração. O exemplo a seguir mostra como declarar um representante chamado `ThresholdReachedEventHandler`.  
   
- [!code-csharp[EventsOverview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)] [!code-vb[EventsOverview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
+ [!code-csharp[EventsOverview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
+ [!code-vb[EventsOverview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
   
 ## <a name="event-data"></a>Dados do Evento  
- Os dados associados a um evento podem ser fornecidos por meio de uma classe de dados do evento. O .NET Framework fornece muitas classes de dados de evento que você pode usar em seus aplicativos. Por exemplo, a classe <xref:System.IO.Ports.SerialDataReceivedEventArgs> é a classe de dados de evento do evento <xref:System.IO.Ports.SerialPort.DataReceived?displayProperty=fullName>. O .NET Framework segue um padrão de nomenclatura de terminação para todas as classes de dados de evento com `EventArgs`. Determine qual classe de dados de evento está associada a um evento observando o representante do evento. Por exemplo, o representante <xref:System.IO.Ports.SerialDataReceivedEventHandler> inclui a classe <xref:System.IO.Ports.SerialDataReceivedEventArgs> como um de seus parâmetros.  
+ Os dados associados a um evento podem ser fornecidos por meio de uma classe de dados do evento. O .NET Framework fornece muitas classes de dados de evento que você pode usar em seus aplicativos. Por exemplo, a classe <xref:System.IO.Ports.SerialDataReceivedEventArgs> é a classe de dados de evento do evento <xref:System.IO.Ports.SerialPort.DataReceived?displayProperty=nameWithType>. O .NET Framework segue um padrão de nomenclatura de terminação para todas as classes de dados de evento com `EventArgs`. Determine qual classe de dados de evento está associada a um evento observando o representante do evento. Por exemplo, o representante <xref:System.IO.Ports.SerialDataReceivedEventHandler> inclui a classe <xref:System.IO.Ports.SerialDataReceivedEventArgs> como um de seus parâmetros.  
   
- A classe <xref:System.EventArgs> é o tipo base para todas as classes de dados de evento. <xref:System.EventArgs> também é a classe usada quando um evento não tem nenhum dado associado. Quando você criar um evento cuja finalidade seja apenas notificar outras classes de que algo aconteceu e que não precise passar nenhum dado, inclua a classe <xref:System.EventArgs> como o segundo parâmetro no representante. Você poderá passar o valor <xref:System.EventArgs.Empty?displayProperty=fullName> quando nenhum dado for fornecido. O representante <xref:System.EventHandler> inclui a classe <xref:System.EventArgs> como um parâmetro.  
+ A classe <xref:System.EventArgs> é o tipo base para todas as classes de dados de evento. <xref:System.EventArgs> também é a classe usada quando um evento não tem nenhum dado associado. Quando você criar um evento cuja finalidade seja apenas notificar outras classes de que algo aconteceu e que não precise passar nenhum dado, inclua a classe <xref:System.EventArgs> como o segundo parâmetro no representante. Você poderá passar o valor <xref:System.EventArgs.Empty?displayProperty=nameWithType> quando nenhum dado for fornecido. O representante <xref:System.EventHandler> inclui a classe <xref:System.EventArgs> como um parâmetro.  
   
  Quando quiser criar uma classe de dados de evento personalizada, crie uma classe derivada de <xref:System.EventArgs> e forneça todos os membros necessários para passar dados que estejam relacionados ao evento. Normalmente, você deve usar o mesmo padrão de nomenclatura do .NET Framework e terminar o nome da classe de dados de evento com `EventArgs`.  
   
  O exemplo a seguir mostra uma classe de dados de evento chamada `ThresholdReachedEventArgs`. Ele contém propriedades que são específicas ao evento que está sendo acionado.  
   
- [!code-csharp[EventsOverview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#3)] [!code-vb[EventsOverview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#3)]  
+ [!code-csharp[EventsOverview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#3)]
+ [!code-vb[EventsOverview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#3)]  
   
 ## <a name="event-handlers"></a>Manipuladores de Eventos  
  Para responder a um evento, você pode definir um método de manipulador de eventos no receptor do evento. Esse método deve corresponder à assinatura do representante para o evento que está sendo manipulado. No manipulador de eventos, execute as ações que são necessárias quando o evento é acionado, como coletar a entrada do usuário depois que ele clica em um botão. Para receber notificações de ocorrência de eventos, o método de manipulador de eventos deve estar inscrito no evento.  
   
  O exemplo a seguir mostra um método de manipulador de eventos chamado `c_ThresholdReached` que corresponde à assinatura para o representante <xref:System.EventHandler>. O método está inscrito no evento `ThresholdReached`.  
   
- [!code-csharp[EventsOverview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#2)] [!code-vb[EventsOverview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
+ [!code-csharp[EventsOverview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#2)]
+ [!code-vb[EventsOverview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
   
 ## <a name="static-and-dynamic-event-handlers"></a>Manipuladores de Eventos Estáticos e Dinâmicos  
  O .NET Framework permite que os assinantes se registrem para receber notificações de eventos de modo estático ou dinâmico. Os manipuladores de eventos estáticos permanecem em vigor por toda a vida da classe cujos eventos eles manipulam. Os manipuladores de eventos dinâmicos são ativados e desativados explicitamente durante a execução do programa, geralmente em resposta a alguma lógica de programa condicional. Por exemplo, eles podem ser usados se as notificações de eventos forem necessárias apenas sob determinadas condições, ou se um aplicativo fornecer vários manipuladores de eventos e as condições de tempo de execução definirem o apropriado para uso. O exemplo na seção anterior mostra como adicionar dinamicamente um manipulador de eventos. Para saber mais, confira [Eventos em C#](../../visual-basic/programming-guide/language-features/events/index.md) e [Eventos no Visual Basic](../../csharp/programming-guide/events/index.md).  
@@ -89,11 +95,10 @@ Os eventos no .NET Framework são baseados no modelo de representante. O modelo 
 |[Como consumir eventos em um aplicativo Web Forms](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|Mostra como manipular um evento acionado por um controle do Web Forms.|  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.EventHandler>   
- <xref:System.EventHandler%601>   
- <xref:System.EventArgs>   
- <xref:System.Delegate>   
- [Visão geral de eventos e eventos roteados (aplicativos da Windows Store)](http://go.microsoft.com/fwlink/?LinkId=261485)   
- [Eventos (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)   
+ <xref:System.EventHandler>  
+ <xref:System.EventHandler%601>  
+ <xref:System.EventArgs>  
+ <xref:System.Delegate>  
+ [Visão geral de eventos roteados e eventos (aplicativos da Windows Store)](http://go.microsoft.com/fwlink/?LinkId=261485)  
+ [Eventos (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
  [Eventos (guia de programação em C#)](../../csharp/programming-guide/events/index.md)
-

@@ -9,7 +9,7 @@
 ## [Implantando aplicativos do .NET Framework](net-framework-applications.md)
 ### [Como o tempo de execução localiza assemblies](how-the-runtime-locates-assemblies.md)
 ### [Práticas recomendadas para carregamento de assemblies](best-practices-for-assembly-loading.md)
-## [.NET framework Client Profile](client-profile.md)
+## [Perfil de cliente do .NET Framework](client-profile.md)
 ## [Execução lado a lado](side-by-side-execution.md)
 ### [Configurando o redirecionamento de associação de assembly](configuring-assembly-binding-redirection.md)
 ### [Diretrizes para criação de componentes para execução lado a lado](guidelines-for-creating-components-for-side-by-side-execution.md)

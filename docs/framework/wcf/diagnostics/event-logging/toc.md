@@ -1,4 +1,4 @@
-# [Log de eventos](index.md)
+# [Registro de eventos em log](index.md)
 ## [Referência geral de eventos](events-general-reference.md)
 ### [BindingError](bindingerror.md)
 ### [ComPlusDllHostInitializerStartingError](complusdllhostinitializerstartingerror.md)
