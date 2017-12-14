@@ -3,5 +3,5 @@
 ## [Usando a biblioteca de classes portátil com modelo MVVM](using-portable-class-library-with-model-view-view-model.md)
 ## [Recursos do aplicativo para bibliotecas direcionadas a várias plataformas](app-resources-for-libraries-that-target-multiple-platforms.md)
 ## [Suporte do .NET Framework para Aplicativos da Windows Store e Windows Runtime](support-for-windows-store-apps-and-windows-runtime.md)
-## [Passando um URI para o tempo de execução do Windows](passing-a-uri-to-the-windows-runtime.md)
-## [Método Windowsruntimestreamextensions](windowsruntimestreamextensions-asrandomaccessstream-method.md)
+## [Passando um URI para o Windows Runtime](passing-a-uri-to-the-windows-runtime.md)
+## [Método WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream)](windowsruntimestreamextensions-asrandomaccessstream-method.md)

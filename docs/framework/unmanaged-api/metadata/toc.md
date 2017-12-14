@@ -281,4 +281,4 @@
 ### [Estrutura CVStruct](cvstruct-structure.md)
 ### [Estrutura OSINFO](osinfo-structure.md)
 ## [Uniões de metadados](metadata-unions.md)
-### [CeeSectionRelocExtra união](ceesectionrelocextra-union.md)
+### [União CeeSectionRelocExtra](ceesectionrelocextra-union.md)

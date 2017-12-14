@@ -1,4 +1,4 @@
-# [Funções auxiliares do TlbExp](index.md)
+# [Funções auxiliares do Tlbexp](index.md)
 ## [Função GetTypeLibInfo](gettypelibinfo-function.md)
 ## [Função LoadTypeLibWithResolver](loadtypelibwithresolver-function.md)
 ## [Interface ITypeLibResolver](itypelibresolver-interface.md)
