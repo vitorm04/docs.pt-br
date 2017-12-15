@@ -16,11 +16,11 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 80cc1418418518efdccbb6dc0429b1ac61b56420
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7565d688c6aa177ec65918e72670a64d7eec7e1a
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Controles a serem usados nos Windows Forms
 Esta é uma lista alfabética de controles e componentes que podem ser usados nos Windows Forms. Além dos controles dos Windows Forms abordados nesta seção, você pode adicionar ActiveX e controles personalizados ao Windows Forms. Se não encontrar o controle necessário listado aqui, você poderá criar seus próprios. Para mais detalhes, consulte [Desenvolvendo controles dos Windows Forms no tempo de design](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Para mais informações sobre como escolher o controle necessário, consulte [Controles dos Windows Forms por função](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
@@ -83,9 +83,8 @@ Esta é uma lista alfabética de controles e componentes que podem ser usados no
  [Componente ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md)  
  Exibe informações de erro para o usuário de forma não intrusiva.  
   
- “Classe FileDialog”  
- Fornece funcionalidade de classe base para caixas de diálogo de arquivo.  
-  
+ [Classe FileDialog](../../../../docs/framework/winforms/controls/filedialog-class.md) fornece a funcionalidade de classe base para as caixas de diálogo de arquivo.
+
  [Controle FlowLayoutPanel](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)  
  Representa um painel que dispõe de forma dinâmica o conteúdo horizontal ou verticalmente.  
   
@@ -173,8 +172,7 @@ Esta é uma lista alfabética de controles e componentes que podem ser usados no
  [Componente SaveFileDialog](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)  
  Seleciona os arquivos a serem salvos e onde salvá-los.  
   
- “Classe SoundPlayer”  
- Permite que você inclua facilmente sons em seus aplicativos.  
+ [Classe SoundPlayer](../../../../docs/framework/winforms/controls/soundplayer-class.md) permite que você inclua facilmente sons em seus aplicativos.
   
  [Controle SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
  Permite que o usuário redimensione um controle encaixado.  

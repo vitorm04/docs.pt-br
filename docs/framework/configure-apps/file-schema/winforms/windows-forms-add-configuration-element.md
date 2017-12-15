@@ -15,11 +15,11 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 367ca30c577cbb4ed7fed130bdcbd4faac2d46c0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 828a28769e164535d4dde989ef8cce91caf9cb48
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms adicionar elemento de configuração
 
@@ -113,7 +113,7 @@ Começando com o .NET Framework 4.7, controles de formulários do Windows geram 
 
 ### <a name="single-pass-scaling"></a>Dimensionamento de passagem de único
 
-Dimensionamento único ou vários passos influencia a capacidade de resposta percebida da interface do usuário e os elementos da interface a aparência visual do usuário conforme são dimensionadas. Começando com o .NET Framework 4.7, formulários do Windows usa a escala de passagem. Nas versões anteriores do .NET Framework, o dimensionamento foi realizada por meio de várias passagens, o que causou alguns controles será dimensionada mais do que era necessária. Dimensionamento de fase única só deve ser desabilitado se seu aplicativo depende do comportamento antigo.  
+Dimensionamento único ou vários passos influencia a capacidade de resposta percebida da interface do usuário e a aparência dos elementos de interface do usuário conforme são dimensionadas. Começando com o .NET Framework 4.7, formulários do Windows usa a escala de passagem. Nas versões anteriores do .NET Framework, o dimensionamento foi realizada por meio de várias passagens, o que causou alguns controles será dimensionada mais do que era necessária. Dimensionamento de fase única só deve ser desabilitado se seu aplicativo depende do comportamento antigo.  
 
 ## <a name="see-also"></a>Consulte também
  

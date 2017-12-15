@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 369c8738addeb083b42063161957cf9f97e2cd1c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: e60ed6fb2fb85faa1d2d744bf29e40d3eaa639c3
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Específicos de funcionalidade do Windows Workflow Foundation
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] adiciona um número de recursos a Windows Workflow Foundation. Este documento descreve um número de recursos novos, e fornece detalhes sobre cenários em que podem ser úteis.  
@@ -82,7 +82,7 @@ ms.lasthandoff: 12/02/2017
   
 -   Um exemplo de correlação usado para agrupar mensagens seja adjacente uma correlação de solicitação de resposta que agrupe mensagens juntos.  
   
-    -   Em uma atividade de <xref:System.ServiceModel.Activities.Receive> , clique na propriedade de <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> e adicione <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> usando o CorrelationHandle criado na primeira etapa anterior.  
+    -   Em um <xref:System.ServiceModel.Activities.Receive> atividade, clique no <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> propriedade e adicione um <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> usando o CorrelationHandle criado na primeira etapa acima.  
   
     -   Criar um <xref:System.ServiceModel.Activities.SendReply> atividade clicando no <xref:System.ServiceModel.Activities.Receive> e clicando em "Criar SendReply". Cole-o no fluxo de trabalho após a atividade de <xref:System.ServiceModel.Activities.Receive> .  
   
@@ -182,7 +182,7 @@ ms.lasthandoff: 12/02/2017
   
     -   [Tratamento de falha em uma atividade do fluxograma usando TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
   
-    -   [Cenário de StateMachine usando uma combinação de fluxograma e de picareta](../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
+    -   [Cenário de StateMachine usando uma combinação de FlowChart e Pick](../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
   
     -   [Processo de contratação](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
   

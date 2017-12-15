@@ -17,11 +17,11 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a27e17e4940ff68f34d1e7e4accfb9e112bc412b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3f024ae77740c596d8646b10a036428e2342d084
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="weak-event-patterns"></a>Padrões de evento fraco
 Em aplicativos, é possível que manipuladores que estão anexados a origens de eventos não sejam destruídos em coordenação com o objeto de ouvinte que anexou o manipulador à origem. Essa situação pode levar a vazamentos de memória. O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] apresenta um padrão de design que pode ser usado para resolver esse problema, fornecendo uma classe de gerenciamento dedicada para determinados eventos e implementando uma interface em ouvintes para o evento. Esse padrão de design é conhecido como o *padrão de evento fraco*.  
@@ -45,7 +45,7 @@ Em aplicativos, é possível que manipuladores que estão anexados a origens de 
 |--------------|-----------------------|  
 |Usar uma classe existente de gerenciamento de evento fraco|Se o evento que você deseja assinar correspondente <xref:System.Windows.WeakEventManager>, use o Gerenciador de evento fraco existente. Para obter uma lista de gerenciadores de evento fraco que são incluídos com o WPF, consulte a hierarquia de herança na <xref:System.Windows.WeakEventManager> classe. No entanto, observe que há relativamente poucos gerenciadores de evento fraco incluídos com o WPF, então, provavelmente, você precisará escolher uma das outras abordagens.|  
 |Usar uma classe de gerenciador de evento fraco genérico|Use um genérico <xref:System.Windows.WeakEventManager%602> quando um existente <xref:System.Windows.WeakEventManager> é não está disponível, você deseja uma maneira fácil de implementar, e não se preocupam com eficiência. Genérica <xref:System.Windows.WeakEventManager%602> é menos eficiente do que um Gerenciador de evento fraco existentes ou personalizadas. Por exemplo, a classe genérica faz mais reflexão para descobrir o evento que recebeu o nome do evento. Além disso, o código para registrar o evento usando o genérico <xref:System.Windows.WeakEventManager%602> é mais detalhado do que usar um existente ou personalizado <xref:System.Windows.WeakEventManager>.|  
-|Criar uma classe de gerenciador de evento fraco personalizado|Criar um personalizado <xref:System.Windows.WeakEventManager> quando você existente <xref:System.Windows.WeakEventManager> não está disponível e você deseja que o uso mais eficiente. Usando um personalizado <xref:System.Windows.WeakEventManager> para assinar um evento será mais eficiente, mas você provoca o custo de escrever código mais no início.|  
+|Criar uma classe de gerenciador de evento fraco personalizado|Criar um personalizado <xref:System.Windows.WeakEventManager> quando um existente <xref:System.Windows.WeakEventManager> não está disponível e você deseja que o uso mais eficiente. Usando um personalizado <xref:System.Windows.WeakEventManager> para assinar um evento será mais eficiente, mas você provoca o custo de escrever código mais no início.|  
   
  As seções a seguir descrevem como implementar o padrão de evento fraco.  Para fins desta discussão, o evento que deve ser assinado tem as seguintes características.  
   

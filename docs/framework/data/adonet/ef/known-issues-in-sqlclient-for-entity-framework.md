@@ -13,11 +13,11 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 67d4c4f08661bbf2febefead64e62c8a84045f47
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ddc93c7d707b9569bd2ea1e2c09889d68ff056bf
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Problemas conhecidos em SqlClient para Entity Framework
 Esta seção descreve os problemas conhecidos relacionados ao provedor de dados. NET Framework para SQL Server (SqlClient).  
@@ -58,7 +58,7 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
  Determinados comportamentos de base de dados depende de nível de compatibilidade definido para base de dados. Se o atributo de `ProviderManifestToken` é definido como 2005 e sua versão do SQL Server é 2005, mas a compatibilidade em nível de uma base de dados é definida como “80 " (SQL Server 2000), [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] será gerado como alvo o SQL Server 2005, mas pode não ser executadas como esperado devido à configuração de nível de compatibilidade. Por exemplo, você pode perder ordenação informações se um nome de coluna na cláusula ORDER a lista corresponde a um nome de coluna no seletor.  
   
 ## <a name="nested-queries-in-projection"></a>Consultas aninhadas na projeção  
- Consultas aninhadas em uma cláusula de projeção podem obter convertido em consultas de produto cartesiano no servidor. Em alguns servidor back-end, incluindo o servidor de SLQ, isso pode fazer com que a tabela de TempDB a obtenha muito grande. Isso pode diminuir o desempenho do servidor.  
+ Consultas aninhadas em uma cláusula de projeção podem obter convertido em consultas de produto cartesiano no servidor. Em alguns servidores de back-end, incluindo do SLQ Server, isso pode causar a tabela TempDB ficar muito grande. Isso pode diminuir o desempenho do servidor.  
   
  Este é um exemplo de uma consulta aninhada em uma cláusula de projeção:  
   

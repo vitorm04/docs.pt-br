@@ -16,11 +16,11 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b82b409f27b14109c8e13fc8909235befc7a8d1d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4363e4e4e444a2c34b79e3b3ad8d8e2f36fe8e1a
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>Criando um objeto de DataView (LINQ to DataSet)
 Há duas maneiras de criar <xref:System.Data.DataView> no contexto de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] . Você pode criar <xref:System.Data.DataView> de uma consulta de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sobre <xref:System.Data.DataTable>, ou você pode criá-lo de <xref:System.Data.DataTable>tipado ou un- digitado. Em ambos os casos, você cria o <xref:System.Data.DataView> usando um do <xref:System.Data.DataTableExtensions.AsDataView%2A> métodos de extensão <xref:System.Data.DataView> não é construível diretamente no [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] contexto.  
@@ -60,7 +60,7 @@ Há duas maneiras de criar <xref:System.Data.DataView> no contexto de [!INCLUDE[
  [!code-csharp[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquery1)]
  [!code-vb[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquery1)]  
   
- Você também pode usar o <xref:System.Data.DataView.RowFilter%2A> e propriedades cadeia de caracteres- baseados de <xref:System.Data.DataView.Sort%2A> para filtrar e classificar <xref:System.Data.DataView> depois que foi criado de uma consulta. Observe que isso desmarcará classificação e informações de filtragem herdadas de consulta. O exemplo a seguir cria <xref:System.Data.DataView> de uma consulta de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] que filtros pelos sobrenomes que começam com “S”. A propriedade cadeia de caracteres- base de <xref:System.Data.DataView.Sort%2A> é definida para classificar em sobrenomes na ordem crescente e em nomes em ordem decrescente:  
+ Você também pode usar a cadeia de caracteres com base em <xref:System.Data.DataView.RowFilter%2A> e <xref:System.Data.DataView.Sort%2A> propriedades para filtrar e classificar uma <xref:System.Data.DataView> após ele ter sido criado de uma consulta. Observe que isso desmarcará classificação e informações de filtragem herdadas de consulta. O exemplo a seguir cria <xref:System.Data.DataView> de uma consulta de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] que filtros pelos sobrenomes que começam com “S”. A propriedade cadeia de caracteres- base de <xref:System.Data.DataView.Sort%2A> é definida para classificar em sobrenomes na ordem crescente e em nomes em ordem decrescente:  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquerystringsort)]
  [!code-vb[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquerystringsort)]  
