@@ -32,9 +32,9 @@ Vamos começar com um simples programa "Olá, Mundo" no .NET Core:
 
 1. Abra um projeto:
 
-    * Abra o Visual Studio Core.
+    * Abra o Visual Studio Code.
     * Clique no ícone do Explorer no menu à esquerda e, em seguida, clique em **Abrir Pasta**.
-    * Selecione **arquivo** > **Abrir pasta** no menu principal para abrir a pasta que você deseja seu projeto c# para e clique em **Selecionar pasta**. Para nosso exemplo, estamos criando uma pasta para nosso projeto chamado *HelloWorld*.
+    * Selecione **arquivo** > **Abrir pasta** no menu principal para abrir a pasta que você deseja armazenar seu projeto C# para e clique em **Selecionar pasta**. Para nosso exemplo, estamos criando uma pasta para nosso projeto chamado *HelloWorld*.
 
       ![VSCodeOpenFolder](media/with-visual-studio-code/vscodeopenfolder.png)
 
