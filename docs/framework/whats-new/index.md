@@ -13,11 +13,11 @@ ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 53205ca9fd304d1dd1c76c5d6952d78634c5b231
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
+ms.openlocfilehash: 2c8c7f8c4d4c7c882f4f295b13fa4add3a11582f
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novidades no .NET Framework
 <a name="introduction"></a> Este artigo resume os principais recursos novos e aprimoramentos nas seguintes versões do .NET Framework:  
@@ -67,7 +67,7 @@ Além disso, um dos focos principais do .NET Framework 4.7.1 é a melhoria de ac
 <a name="core471" />
 #### <a name="core"></a>Núcleo
 
-**Suporte para .NET Standard 2.0**
+**Compatível com o .NET Standard 2.0**
 
 O [.NET Standard](~/docs/standard/net-standard.md) define um conjunto das APIs que precisam estar disponíveis em todas as implementações do .NET compatíveis com a versão do standard. O .NET Framework 4.7.1 dá suporte total ao .NET Standard 2.0 e adiciona [cerca de 200 APIs](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt) que são definidas no .NET Standard 2.0 e não estão presentes no .NET Framework 4.6.1, 4.6.2 e 4.7. (Observe que essas versões do .NET Framework são compatíveis com o .NET Standard 2.0 somente se os arquivos de suporte do .NET Standard estiverem implantados no sistema de destino.) Para obter mais informações, consulte “BLC – Suporte ao .NET Standard 2.0” na postagem de blog [Tempo de execução e recursos do compilador do .NET Framework 4.7.1](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features).
 
@@ -777,7 +777,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 ### <a name="native-image-generator-ngen-pdbs"></a>PDBs do NGEN (Gerador de Imagens Nativas)
  O rastreamento de eventos entre máquinas permite aos clientes criar o perfil de um programa na Máquina A e examinar os dados de criação de perfil com mapeamento de linha de origem na Máquina B. Com as versões anteriores do .NET Framework, o usuário copiaria todos os módulos e imagens nativas da máquina com perfil para a máquina de análise que contém o PDB IL para criar o mapeamento da fonte para a nativa. Embora esse processo funcione bem quando os arquivos são relativamente pequenos, por exemplo, para aplicativos de telefone, os arquivos podem ser muito grandes em sistemas do desktop e a cópia exige um tempo considerável.
 
- Com PDBs do Ngen, o NGen pode criar um PDB que contém o mapeamento do IL para a nativa sem uma dependência do PDB do IL. Em nosso cenário de rastreamento de eventos entre máquinas, basta copiar o PDB da imagem nativa gerado pela Máquina A para a Máquina B e usar as [APIs de acesso à interface de depuração](https://msdn.microsoft.com/library/ee8x173s.aspx) para ler o mapeamento da fonte ao IL do PDB de IL e o mapeamento de IL para nativa do PDB da imagem nativa. A combinação dos dois mapeamentos fornece um mapeamento da fonte para nativa. Como o PDB da imagem nativa é muito menor do que todos os módulos e imagens nativas, o processo de cópia da Máquina A para a Máquina B é muito mais rápido.
+ Com PDBs do Ngen, o NGen pode criar um PDB que contém o mapeamento do IL para a nativa sem uma dependência do PDB do IL. Em nosso cenário de rastreamento de eventos entre máquinas, basta copiar o PDB da imagem nativa gerado pela Máquina A para a Máquina B e usar as [APIs de acesso à interface de depuração](/visualstudio/debugger/debug-interface-access/debug-interface-access-sdk-reference) para ler o mapeamento da fonte ao IL do PDB de IL e o mapeamento de IL para nativa do PDB da imagem nativa. A combinação dos dois mapeamentos fornece um mapeamento da fonte para nativa. Como o PDB da imagem nativa é muito menor do que todos os módulos e imagens nativas, o processo de cópia da Máquina A para a Máquina B é muito mais rápido.
 
 <a name="v46"></a> 
 ## <a name="whats-new-in-net-2015"></a>Novidades do .NET 2015
