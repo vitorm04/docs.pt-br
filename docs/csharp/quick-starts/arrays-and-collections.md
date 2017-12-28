@@ -10,24 +10,24 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 228a9dd88d0a511492ccb8b70e0231278969acbe
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: 6f559c7a3290e7db2266e10ec792c283394fb904
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="c-quick-start-collections"></a>Início Rápido de C# – Coleções #
 
-Esse início rápido fornece uma introdução à linguagem c# e os conceitos básicos do <xref:System.Collections.Generic.List%601> classe.
+Este início rápido fornece uma introdução à linguagem C# e os conceitos básicos da classe <xref:System.Collections.Generic.List%601>.
 
-Este guia rápido espera que você tem uma máquina que você pode usar para o desenvolvimento. O tópico .NET [começar em 10 minutos](https://www.microsoft.com/net/core) tem instruções para configurar o ambiente de desenvolvimento local no Mac, PC ou Linux.
+Este início rápido espera que você tenha uma máquina que possa usar para desenvolvimento. O tópico do .NET [Familiarize-se em 10 minutos](https://www.microsoft.com/net/core) tem instruções para configurar o ambiente de desenvolvimento local no Mac, PC ou Linux. Confira uma visão geral dos comandos que você usará na [introdução aos inícios rápidos locais](local-environment.md) com links para obter mais detalhes.
 
 ## <a name="a-basic-list-example"></a>Um exemplo de lista básica.
 
 Crie um diretório denominado **list-quickstart**. Torne-o o diretório atual e execute `dotnet new console`.
 
 > [!NOTE]
-> Se você acabou de concluir [Introdução ao .NET em 10 minutos](https://www.microsoft.com/net), você pode continuar usando o aplicativo de myApp que você acabou de criar.
+> Se você acabou de concluir [Introdução ao .NET em 10 minutos](https://www.microsoft.com/net), continue usando o aplicativo myApp que você acabou de criar.
  
 Abra **Program.cs** em seu editor favorito e substitua o código existente pelo seguinte:
 
@@ -210,7 +210,7 @@ Salve o arquivo e digite `dotnet run` para ver os resultados.
 > Para se concentrar apenas nesta seção, comente o código que chama `WorkingWithStrings();`. Coloque apenas dois caracteres `/` na frente da chamada, desta forma: `// WorkingWithStrings();`. 
 
 ## <a name="challenge"></a>Desafio
-Veja se você consegue combinar algumas das lições desta versão e de versões anteriores. Expanda o que você compilou até o momento com números Fibonacci. Tente escrever o código para gerar os 20 primeiros números na sequência.
+Veja se você consegue combinar alguns dos conceitos desta lição e de lições anteriores. Expanda o que você compilou até o momento com números Fibonacci. Tente escrever o código para gerar os 20 primeiros números na sequência. (Como uma dica, o vigésimo número Fibonacci é 6765.)
 
 ## <a name="complete-challenge"></a>Desafio concluído
 
@@ -218,6 +218,6 @@ Veja um exemplo de solução [analisando o código de exemplo finalizado no GitH
 
 Com cada iteração do loop, você está pegando os últimos dois inteiros na lista, somando-os e adicionando esse valor à lista. O loop será repetido até que você tenha adicionado 20 itens à lista.
 
-Parabéns, você concluiu o início rápido da lista. Você pode continuar com a [Introdução às classes](introduction-to-classes.md) início rápido em seu próprio ambiente de desenvolvimento.
+Parabéns, você concluiu o início rápido de lista. Continue com o início rápido [Introdução às classes](introduction-to-classes.md) em seu próprio ambiente de desenvolvimento.
 
 Saiba mais sobre como trabalhar com o tipo `List` no tópico [Guia de .NET](../../standard/index.md) em [coleções](../../standard/collections/index.md). Você também aprenderá muitos outros tipos de coleção.

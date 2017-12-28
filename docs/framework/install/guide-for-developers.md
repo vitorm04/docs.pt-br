@@ -14,17 +14,17 @@ ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 46e79e67b5d6f088eb2a0fb39e6f4f10c6ed8549
-ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
+ms.openlocfilehash: cee014956ff4ba2f8e0f66df5bd46a4e843352e4
+ms.sourcegitcommit: 4a96a0fe9f87de70291245d71b76c7d1b15127ae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/17/2017
 ---
 # <a name="install-the-net-framework-for-developers"></a>Instalar o .NET Framework para desenvolvedores
 
 O .NET é parte integrante de vários aplicativos em execução no Windows e fornece funcionalidades comuns para que esses aplicativos sejam executados. Para os desenvolvedores, o .NET Framework fornece um modelo de programação abrangente e consistente para compilar aplicativos que oferecem experiências de usuário visualmente impressionantes e uma comunicação direta e segura.  
 
-Este artigo fornece links para instalar todas as versões do .NET Framework, do .NET Framework 4.5 ao [!INCLUDE[net_current](../../../includes/net-current-version.md)], em seu computador. Se você for um desenvolvedor, também poderá usar esses links para baixar e redistribuir o .NET Framework com seus aplicativos.
+Este artigo fornece links para instalar todas as versões do .NET Framework, do .NET Framework 4.5 ao [!INCLUDE[net_current](../../../includes/net-current-version.md)], em seu computador. Se você for um desenvolvedor, também poderá usar esses links para baixar e redistribuir o .NET Framework com seus aplicativos. Para saber mais sobre a implantação de uma versão do .NET Framework com seu aplicativo, confira o [Guia de implantação do .NET Framework para desenvolvedores](../deployment/deployment-guide-for-developers.md).
 
 > [!NOTE]
 > Este tópico é destinado a desenvolvedores que desejam instalar o .NET Framework em seu próprio sistema ou que queiram instalá-lo com seus aplicativos. Para usuários interessados em instalar o .NET Framework, consulte os tópicos individuais que discutem a instalação do .NET Framework em sistemas operacionais específicos, como o [Instalar o .NET Framework no Windows 10 e no Windows Server 2016](on-windows-10.md).  

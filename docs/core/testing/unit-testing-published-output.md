@@ -1,28 +1,28 @@
 ---
-title: "Teste de saída publicada com vstest dotnet"
-description: "Saiba como executar testes na saída publicada com o comando de vstest dotnet."
+title: "Testar a saída publicada com dotnet vstest"
+description: "Saiba como executar testes na saída publicada com o comando dotnet vstest."
 author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
 ms.topic: article
 ms.prod: .net-core
-ms.devlang: dotnet
-ms.assetid: 3965e4ca-75b8-4969-b3af-ca993c397a15
-ms.openlocfilehash: 217787d41a9da6000941ded6caaa4f44d124644b
-ms.sourcegitcommit: 8a4f8e6a7f1341764abcd188a332cc28d1e2d8ec
+ms.openlocfilehash: 6651d41d4d60194aec035107e3a65df6a5f70a51
+ms.sourcegitcommit: 4a96a0fe9f87de70291245d71b76c7d1b15127ae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/17/2017
 ---
-# <a name="test-published-output-with-dotnet-vstest"></a>Teste de saída publicada com vstest dotnet
+# <a name="test-published-output-with-dotnet-vstest"></a>Testar a saída publicada com dotnet vstest
 
-Você pode executar testes na saída já publicada usando o `dotnet vstest` comando. Isso funcionará em xUnit MSTest e NUnit testes. Basta localizar o arquivo DLL que fazia parte de sua saída publicada e execute:
+Você pode executar testes na saída já publicada usando o comando `dotnet vstest`. Isso funcionará em testes xUnit, MSTest e NUnit. Basta localizar o arquivo DLL que fazia parte de sua saída publicada e execute:
+
 ```
 dotnet vstest <MyPublishedTests>.dll
 ```
-onde `<MyPublishedTests>` é o nome do seu projeto de teste publicada.
 
-### <a name="example-of-running-tests-on-a-published-dll"></a>Exemplo de execução de testes em uma DLL publicada
+em que `<MyPublishedTests>` é o nome de seu projeto de teste publicado.
+
+## <a name="example-of-running-tests-on-a-published-dll"></a>Exemplo de execução de testes em uma DLL publicada
 
 ```
 dotnet new mstest -o MyProject.Tests
@@ -31,8 +31,9 @@ dotnet publish -o out
 dotnet vstest out/MyProject.Tests.dll
 ```
 
-> [!NOTE] Observação: Se seu aplicativo tem como destino uma estrutura diferente de `netcoreapp` você ainda pode executar o `dotnet vstest` comando, passando o framework de destino com um sinalizador de framework. Por exemplo, `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`. No Visual Studio 2017 atualização 5 a estrutura desejada é detectada automaticamente.
+> [!NOTE]
+> Observação: se o seu aplicativo for direcionado a uma estrutura diferente de `netcoreapp`, ainda será possível executar o comando `dotnet vstest`, passando a estrutura de destino com um sinalizador de estrutura. Por exemplo, `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`. No Visual Studio 2017 Atualização 5, a estrutura desejada é detectada automaticamente.
 
-### <a name="related-topics"></a>Tópicos relacionados
-- [Teste de unidade com teste dotnet e xUnit](unit-testing-with-dotnet-test.md)
-- [Teste de unidade com teste dotnet e MSTest](unit-testing-with-mstest.md)
+## <a name="see-also"></a>Consulte também
+ [Teste de unidade com dotnet test e xUnit](unit-testing-with-dotnet-test.md)  
+ [Teste de unidade com dotnet test e MSTest](unit-testing-with-mstest.md)  

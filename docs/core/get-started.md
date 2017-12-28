@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
-ms.openlocfilehash: 45b361a40148c287511fafe25de4000c1dd54102
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1800eb5c69e2436d89f4abd3b519902c5724e411
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="get-started-with-net-core"></a>Introdução ao .NET Core
 
@@ -37,14 +37,14 @@ Consulte o tópico de [Desenvolvimento de pré-requisitos para o Windows](window
 
 ## <a name="linux"></a>Linux
 
-Instalar o .NET Core em [Linux](https://www.microsoft.com/net/core#linuxredhat).
+Instalar o .NET Core no [Linux](https://www.microsoft.com/net/core#linuxredhat).
 
 Você pode começar a desenvolver aplicativos .NET Core seguindo estes tutoriais passo a passo.
 
 * [Introdução ao .NET Core usando a linha de comando](tutorials/using-with-xplat-cli.md) -Use qualquer editor de código com a [CLI (Interface de Linha de Comando) de plataforma cruzada do .NET Core](tools/index.md).
 * [Introdução ao Visual Studio Code com o C# e o .NET Core em Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) – Esse vídeo do [Channel9](https://channel9.msdn.com) mostra como instalar e usar o [Visual Studio Code](https://code.visualstudio.com/), o editor de código leve para várias plataformas da Microsoft, para você criar seu primeiro aplicativo de console no .NET Core, em Ubuntu 14.04.
 
-Consulte o [pré-requisitos para desenvolvimento Linux](linux-prerequisites.md) tópico para obter uma lista das distribuições de Linux e versões com suporte.
+Confira o tópico de [Pré-requisitos para desenvolvimento no Linux](linux-prerequisites.md) para ver uma lista das distribuições e versões Linux com suporte.
 
 ## <a name="os-x--macos"></a>OS X / macOS
 

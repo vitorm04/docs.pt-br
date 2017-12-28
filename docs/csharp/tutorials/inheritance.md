@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: ec5ca3132ac68b85ebb517e569241f20080b4f63
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 39de8879fd902c714a58cf59c70f0a4914b2ff6e
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="inheritance-in-c-and-net"></a>Herança em C# e .NET
 
@@ -62,7 +62,7 @@ Enquanto todos os outros membros de uma classe base são herdados por classes de
 
 - Membros [Internos](../language-reference/keywords/internal.md) são visíveis apenas em classes derivadas localizadas no mesmo assembly que a classe base. Eles não são visíveis em classes derivadas localizadas em um assembly diferente da classe base.
 
-- [Público](../language-reference/keywords/public.md) membros são visíveis em classes derivadas e são parte da interface pública da classe derivada. Membros herdados público podem ser chamados como se tivessem sido definidos na classe derivada. No exemplo a seguir, a classe `A` define um método chamado `Method1`, e a classe `B` herda da classe `A`. Depois, o exemplo chama `Method1` como se fosse um método de instância em `B`.
+- Membros [Públicos](../language-reference/keywords/public.md) são visíveis em classes derivadas e fazem parte da interface pública da classe derivada. Membros herdados público podem ser chamados como se tivessem sido definidos na classe derivada. No exemplo a seguir, a classe `A` define um método chamado `Method1`, e a classe `B` herda da classe `A`. Depois, o exemplo chama `Method1` como se fosse um método de instância em `B`.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
