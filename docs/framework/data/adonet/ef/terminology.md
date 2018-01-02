@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1e8207eb35d2bf4a62e02725d4cfff4303282cfd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9e27ba9cbf2a87fe15355b812ea2447197425173
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-framework-terminology"></a>Terminologia do Entity Framework
 Este tópico define condições frequentemente referenciadas em [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] documentação. Os links são fornecidos para tópicos relevantes em que há informações adicionais disponíveis.  
@@ -86,7 +87,7 @@ Este tópico define condições frequentemente referenciadas em [!INCLUDE[adonet
 |tabela por tipo|Um método de modelagem de uma hierarquia de tipo em um banco de dados que usa várias tabelas com relações um-para-um para modelar os vários tipos.|  
   
 ## <a name="see-also"></a>Consulte também  
- [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
+ [Entity Framework do ADO.NET](../../../../../docs/framework/data/adonet/ef/index.md)  
  [Visão geral do Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)  
  [Introdução](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
  [Recursos do Entity Framework](../../../../../docs/framework/data/adonet/ef/resources.md)

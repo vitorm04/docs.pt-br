@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: d5e8518f2ca8a04d91f5bfdd9f6389c741d0278e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3cc809a6e896119c5d31c700f3e2ced171da9f7c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcleargt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Limpar&gt; elemento para &lt;ouvintes&gt; para &lt;fonte&gt;
 Limpa a coleção `Listeners` de uma origem de rastreamento.  

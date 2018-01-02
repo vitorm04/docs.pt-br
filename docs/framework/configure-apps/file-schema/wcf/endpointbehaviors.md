@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ba2475175fb6e25829c6ffd4d7393b3e7be7f8a1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a6e215b423847151639b8e1b32b9a343afca750f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltendpointbehaviorsgt"></a>&lt;endpointBehaviors&gt;
 Esta seção de configuração representa todos os comportamentos definidos para um ponto de extremidade específico. Para obter mais informações sobre comportamentos de configuração do cliente, consulte [especificando comportamento de tempo de execução do cliente](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md) e [Configurando comportamentos do cliente](../../../../../docs/framework/wcf/configuring-client-behaviors.md).  
@@ -25,5 +26,5 @@ Esta seção de configuração representa todos os comportamentos definidos para
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Configuration.EndpointBehaviorElementCollection>  
  <xref:System.ServiceModel.Configuration.EndpointBehaviorElement>  
- [Specifying Client Run-Time Behavior](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md) (Especificando o comportamento em tempo de execução do cliente)  
- [Configuring Client Behaviors](../../../../../docs/framework/wcf/configuring-client-behaviors.md) (Configurando comportamentos do cliente)
+ [Especificando o comportamento em tempo de execução do cliente](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
+ [Configurando comportamentos do cliente](../../../../../docs/framework/wcf/configuring-client-behaviors.md)

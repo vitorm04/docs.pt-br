@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b141f7bb31374c403f8d802a5df2ff1329b1e079
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 64f2d0fbc54900443046bd2c71215cc0928c8658
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connection-strings"></a>Cadeias de caracteres de conexão
 Uma cadeia de conexão contém informações de inicialização que são passadas como parâmetros de um provedor de dados para uma fonte de dados. A sintaxe depende do provedor de dados, e a cadeia de conexão é analisada durante a tentativa de abrir uma conexão. As cadeias de conexão usadas por Entity Framework contêm informações usadas para conectar ao provedor de dados ADO.NET subjacente que dá suporte a Entity Framework. Elas também contêm informações sobre os arquivos de modelo e de mapeamento necessários.  
@@ -118,7 +119,7 @@ Metadata=.\
  A resolução da cadeia de caracteres de substituição `DataDirectory` e do operador ~ é não recursiva. Por exemplo, quando `DataDirectory` incluir o caractere `~`, será gerada uma exceção. Isso evita uma recursão infinita.  
   
 ## <a name="see-also"></a>Consulte também  
- [Trabalhando com provedores de dados](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
+ [Trabalhando com Provedores de Dados](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
  [Considerações de implantação](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
  [Gerenciando conexões e transações](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
- [Cadeias de caracteres de Conexão](../../../../../docs/framework/data/adonet/connection-strings.md)
+ [Cadeia de Conexão](../../../../../docs/framework/data/adonet/connection-strings.md)

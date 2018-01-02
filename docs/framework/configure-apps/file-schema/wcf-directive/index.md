@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f91e4ac7b74b0ee3ab92e8ae59fe0f20e8f66287
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 34ea3b412af75f136255c7e95cc4f321bafe075b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-directive-syntax"></a>Sintaxe de diretiva do WCF
 Especifica as configurações usadas pelas diretivas do [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] em arquivos .svc para direcionar os compiladores. Cada diretiva pode conter um ou mais atributos (combinados com valores) que são específicos dessa diretiva. O [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] tem apenas a diretiva [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md).  
@@ -35,5 +36,5 @@ Especifica as configurações usadas pelas diretivas do [!INCLUDE[indigo1](../..
   
 ## <a name="see-also"></a>Consulte também  
  [Hospedagem](../../../../../docs/framework/wcf/feature-details/hosting.md)  
- [Hospedagem no Internet Information Services](../../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [Hospedagem nos Serviços de Informações da Internet](../../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
  [Hosting in Windows Process Activation Service](../../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md) (Hospedagem no Serviço de Ativação de Processos do Windows)

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: c8acf4b6d6e6e8a0fcf7d73139a1d2c5ea03f063
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: fd0d4742a162000d438851cef9c00e21368b7ba1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcertificatereferencegt"></a>&lt;certificateReference&gt;
 Especifica configurações que são usadas para encontrar e validar um certificado x. 509 em um repositório de certificados.  
@@ -52,10 +53,10 @@ Especifica configurações que são usadas para encontrar e validar um certifica
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|storeName|O nome do repositório de certificados x. 509. O padrão é "My". Opcional.|  
+|storeName|O nome do repositório de certificados X.509. O padrão é "My". Opcional.|  
 |storeLocation|Um <xref:System.Security.Cryptography.X509Certificates.StoreLocation> valor que especifica o local do repositório de certificados x. 509. O valor padrão é "LocalMachine". Opcional.|  
 |X509FindType|Um <xref:System.Security.Cryptography.X509Certificates.X509FindType> valor que especifica o tipo de pesquisa a ser executado. O padrão é "FindBySubjectDistinguishedName". Opcional.|  
-|findValue|O valor para pesquisar no repositório de certificados x. 509. Opcional.|  
+|findValue|O valor a ser pesquisado no repositório de certificados X.509. Opcional.|  
 |isChainIncluded|Especifica se a validação deve ser executada usando a cadeia de certificados. O padrão é "true"; a validação é executada usando a cadeia de certificados. Opcional.|  
   
 ### <a name="child-elements"></a>Elementos filho  

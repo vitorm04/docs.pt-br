@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5a280f9fe59ca5294276b98ec3632d6bc1a7ecba
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 41e65ca61a176359a593a8e03c5b763bc4d28592
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltmessagesenderauthenticationgt-element"></a>elemento &lt;messageSenderAuthentication&gt;
 Especifica opções de autenticação para remetentes de mensagens ponto a ponto.  
@@ -59,7 +60,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|Cadeia de caracteres|Opcional. Especifica o nome do tipo e assembly e outros dados usados para localizar o tipo. No mínimo, um nome de tipo e namespace são necessários. Informações opcionais incluem: nome do assembly, número de versão, cultura e token de chave pública.|  
+|Cadeia de Caracteres|Opcional. Especifica o nome do tipo e assembly e outros dados usados para localizar o tipo. No mínimo, um nome de tipo e namespace são necessários. Informações opcionais incluem: nome do assembly, número de versão, cultura e token de chave pública.|  
   
 ## <a name="certificatevalidationmode-attribute"></a>certificateValidationMode atributo  
   
@@ -117,7 +118,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
  <xref:System.ServiceModel.Security.PeerCredential.MessageSenderAuthentication%2A>  
  <xref:System.ServiceModel.Configuration.PeerCredentialElement.MessageSenderAuthentication%2A>  
  <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>  
- [Trabalhar com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [Trabalhando com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Rede ponto a ponto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
  [Autenticação de mensagens de canal par](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
  [Autenticação personalizada de canal par](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  

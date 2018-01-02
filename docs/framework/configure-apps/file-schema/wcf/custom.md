@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4e4b96e1274ad59ae5e63e7935d7408afd069a8c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9bcab1e8361448abfe14db8ac38a924c656b9065
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcustomgt"></a>&lt;personalizado&gt;
 Especifica configurações para um serviço resolvedor de pares personalizado.  
@@ -70,5 +71,5 @@ Especifica configurações para um serviço resolvedor de pares personalizado.
  <xref:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings>  
  <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>  
  <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>  
- [Resolvedor Peer](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
+ [Resolvedores pares](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
  [Adicionando um resolvedor personalizado para um aplicativo PeerChannel](http://msdn.microsoft.com/en-us/12aa3787-2962-439c-ad27-46523c8b0419)
