@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: af7b04969519cce49e9d753993245e1347f596d4
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: 4443609c9494ca93cbc5934dd62fedf434599962
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="c-quick-starts"></a>Inícios rápidos de C# #
 
@@ -36,13 +36,13 @@ Este início rápido presume que você concluiu o tutorial [Olá, Mundo](hello-w
 
 ## <a name="branches-and-loopsbranches-and-loopsyml"></a>[Ramificações e loops](branches-and-loops.yml)
 
-O início rápido [Ramificações e loops](branches-and-loops.yml) ensina os conceitos básicos da seleção de diferentes caminhos de código com base nos valores armazenados em variáveis. Você aprenderá os conceitos básicos do fluxo de controle, que são os fundamentos de como os programas tomam decisões e escolhem ações diferentes. Este guia de início rápido também está disponível [para execução local no seu computador](branches-and-loops-local.md).
+O início rápido [Ramificações e loops](branches-and-loops.yml) ensina os conceitos básicos da seleção de diferentes caminhos de execução de código com base nos valores armazenados em variáveis. Você aprenderá os conceitos básicos do fluxo de controle, que são os fundamentos de como os programas tomam decisões e escolhem ações diferentes. Este guia de início rápido também está disponível [para execução local no seu computador](branches-and-loops-local.md).
 
 Para esta lição inicial, é preciso que você tenha concluído as lições [Olá, Mundo](hello-world.yml) e [Números em C#](numbers-in-csharp.yml).
 
 ## <a name="list-collectionlist-collectionyml"></a>[Coleções de lista](list-collection.yml)
 
-A lição [Coleções de lista](list-collection.yml) fornece um tour pelo tipo Coleções de lista que armazena as sequências de dados. Você aprenderá a adicionar e remover itens, procurar e remover itens e classificar as listas. Você explorará os diferentes tipos de listas. Este guia de início rápido também está disponível [para execução local no seu computador](arrays-and-collections.md).
+A lição [Coleções de lista](list-collection.yml) fornece um tour pelo tipo Coleções de lista que armazena as sequências de dados. Você aprenderá a adicionar e remover itens, pesquisar itens e classificar listas. Você explorará os diferentes tipos de listas. Este guia de início rápido também está disponível [para execução local no seu computador](arrays-and-collections.md).
 
 O início rápido de partida presume que você já concluiu os inícios rápidos listados acima.
 
