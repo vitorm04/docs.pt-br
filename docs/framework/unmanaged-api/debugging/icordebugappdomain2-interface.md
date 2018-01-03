@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ebd1e504cbf2f74ad82e7fea6b6c3f355a1bda34
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c811107fcf32696aee17810af06ac0b2ddc9102d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugappdomain2-interface1"></a>Interface1 ICorDebugAppDomain2
 Fornece métodos para trabalhar com matrizes, ponteiros, ponteiros de função e tipos de referência. Essa interface é uma extensão da interface ICorDebugAppDomain.  
@@ -50,4 +51,4 @@ Fornece métodos para trabalhar com matrizes, ponteiros, ponteiros de função e
  **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Interfaces de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

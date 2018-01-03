@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6a40276b28f3d20428f0d7eb0556a762fdb56801
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 73966ffe89f0e84d5a516f20962472d900332faa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrdatatarget-interface"></a>Interface ICLRDataTarget
 Fornece métodos para interação com um item de destino do common language runtime (CLR).  
@@ -39,7 +40,7 @@ Fornece métodos para interação com um item de destino do common language runt
 |[Método GetThreadContext](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getthreadcontext-method.md)|Obtém um ponteiro para o contexto do thread com o identificador especificado.|  
 |[Método GetTLSValue](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-gettlsvalue-method.md)|Obtém um valor no armazenamento local de thread (TLS) no índice especificado para o segmento especificado.|  
 |[Método ReadVirtual](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-readvirtual-method.md)|Lê dados do endereço de memória virtual especificado no buffer especificado.|  
-|[Método de solicitação](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-request-method.md)|Chamado pelos comuns language runtime (CLR) dados serviços de acesso para uma operação de solicitação, conforme definido pela implementação.|  
+|[Método Request](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-request-method.md)|Chamado pelos comuns language runtime (CLR) dados serviços de acesso para uma operação de solicitação, conforme definido pela implementação.|  
 |[Método SetThreadContext](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-setthreadcontext-method.md)|Define o contexto atual do thread especificado no processo de destino.|  
 |[Método SetTLSValue](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-settlsvalue-method.md)|Define um valor no armazenamento local de thread (TLS) do thread no processo de destino especificado.|  
 |[Método WriteVirtual](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-writevirtual-method.md)|Grava dados de buffer especificado para o endereço de memória virtual especificado.|  
@@ -58,4 +59,4 @@ Fornece métodos para interação com um item de destino do common language runt
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)  
- [Interfaces de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

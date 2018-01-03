@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a77ce6e00ed4bbf866b8761d6339f4191151a6f6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e5d3d11e3897ff56ffcd475eb363405651578c1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugappdomainenum-interface1"></a>ICorDebugAppDomainEnum Interface1
 Fornece o `Next` método, que retorna um número especificado de `ICorDebugAppDomainEnum` valores que começam no seguinte local na enumeração. Esta interface é uma subclasse de "ICorDebugEnum".  
@@ -32,7 +33,7 @@ Fornece o `Next` método, que retorna um número especificado de `ICorDebugAppDo
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Próximo método](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-next-method.md)|Obtém o número de domínios de aplicativo especificado da coleção, começando na posição atual do cursor.|  
+|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-next-method.md)|Obtém o número de domínios de aplicativo especificado da coleção, começando na posição atual do cursor.|  
   
 ## <a name="remarks"></a>Comentários  
   
@@ -50,4 +51,4 @@ Fornece o `Next` método, que retorna um número especificado de `ICorDebugAppDo
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
- [Interfaces de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
