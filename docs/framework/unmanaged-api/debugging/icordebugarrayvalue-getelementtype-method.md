@@ -21,16 +21,17 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f225dd26376d511518900c38e13d74503004da17
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 17c1d51c01614a25d52f90557bb10b6842419995
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugarrayvaluegetelementtype-method"></a><span data-ttu-id="def0e-102">Método ICorDebugArrayValue::GetElementType</span><span class="sxs-lookup"><span data-stu-id="def0e-102">ICorDebugArrayValue::GetElementType Method</span></span>
-<span data-ttu-id="def0e-103">Obtém um valor que indica o tipo simple de elementos na matriz.</span><span class="sxs-lookup"><span data-stu-id="def0e-103">Gets a value that indicates the simple type of the elements in the array.</span></span>  
+# <a name="icordebugarrayvaluegetelementtype-method"></a><span data-ttu-id="e1646-102">Método ICorDebugArrayValue::GetElementType</span><span class="sxs-lookup"><span data-stu-id="e1646-102">ICorDebugArrayValue::GetElementType Method</span></span>
+<span data-ttu-id="e1646-103">Obtém um valor que indica o tipo simple de elementos na matriz.</span><span class="sxs-lookup"><span data-stu-id="e1646-103">Gets a value that indicates the simple type of the elements in the array.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="def0e-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="def0e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e1646-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e1646-104">Syntax</span></span>  
   
 ```  
 HRESULT GetElementType (  
@@ -38,15 +39,15 @@ HRESULT GetElementType (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="def0e-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="def0e-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="e1646-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="e1646-105">Parameters</span></span>  
  `pType`  
- <span data-ttu-id="def0e-106">[out] Um ponteiro para um valor da enumeração CorElementType que indica o tipo.</span><span class="sxs-lookup"><span data-stu-id="def0e-106">[out] A pointer to a value of the CorElementType enumeration that indicates the type.</span></span>  
+ <span data-ttu-id="e1646-106">[out] Um ponteiro para um valor da enumeração CorElementType que indica o tipo.</span><span class="sxs-lookup"><span data-stu-id="e1646-106">[out] A pointer to a value of the CorElementType enumeration that indicates the type.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="def0e-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="def0e-107">Requirements</span></span>  
- <span data-ttu-id="def0e-108">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="def0e-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e1646-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e1646-107">Requirements</span></span>  
+ <span data-ttu-id="e1646-108">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e1646-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="def0e-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="def0e-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e1646-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e1646-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="def0e-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="def0e-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e1646-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e1646-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="def0e-111">**Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="def0e-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="e1646-111">**Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e1646-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
