@@ -13,11 +13,12 @@ ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 531da21d69f13a212eecb7b079fbf90bd7c8e681
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 34402e74bb0cb560d213760c38ce4b936d712eb4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-guide"></a>Guia do .NET Framework
 
@@ -28,7 +29,7 @@ O .NET Framework é uma plataforma de desenvolvimento para criar aplicativos par
 
 O .NET Framework fornece vários serviços, incluindo gerenciamento de memória, segurança de tipo e memória, segurança, redes e implantação de aplicativos. Ele fornece APIs e estruturas de dados fáceis de usam que abstraem o sistema operacional do Windows. Você pode usar diversas linguagens de programação com o .NET Framework, incluindo C#, F# e Visual Basic.  
 
-Para obter uma introdução geral ao .NET Framework para usuários e desenvolvedores, confira [Introdução](../../docs/framework/get-started/index.md). Para obter uma introdução à arquitetura e aos recursos principais do .NET Framework, confira a [visão geral](../../docs/framework/get-started/overview.md).  
+Para obter uma introdução geral ao .NET Framework para usuários e desenvolvedores, veja [Introdução](../../docs/framework/get-started/index.md). Para obter uma introdução à arquitetura e aos recursos principais do .NET Framework, confira a [visão geral](../../docs/framework/get-started/overview.md).  
 
 O .NET Framework pode ser usado com o Docker e com [Contêineres do Windows](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview). Consulte [Implantação de aplicativos .NET Framework com Docker](./docker/index.md) para saber como executar aplicativos em contêineres do Docker.
 

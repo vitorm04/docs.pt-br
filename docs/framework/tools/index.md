@@ -18,11 +18,12 @@ caps.latest.revision: "65"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 777c78a1ee296fd92d48547aeb53a083afa95b28
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2615c7b8c75f7736bbf8334512790d0a5c43c8d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-tools"></a>Ferramentas do .NET Framework
 A ferramentas do .NET Framework facilitam a criação, a implantação e o gerenciamento de aplicativos e componentes com o .NET Framework como destino.  
@@ -61,7 +62,7 @@ A ferramentas do .NET Framework facilitam a criação, a implantação e o geren
  [Fuslogvw.exe (Visualizador de Log de Associação de Assembly)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)  
  Exibe informações sobre associações de assembly para ajudar a diagnosticar por que o .NET Framework não pode localizar um assembly no tempo de execução.  
   
- [Gacutil.exe (Ferramenta Cache de Assembly Global)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
+ [Gacutil.exe (Ferramenta do Cache de Assemblies Global)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
  Permite exibir e manipular o conteúdo do cache de assembly global e o cache de download.  
   
  [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)  

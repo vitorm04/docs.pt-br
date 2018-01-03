@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
-ms.openlocfilehash: 54540b8a1fc0ceaf68dfb3fcbb04fefae2296695
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: de71e043533d7a7d3d7d3fd3af0a8530c0e145b6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-core-guide"></a>Guia do .NET Core
 
@@ -136,7 +137,7 @@ Principais diferenças entre o .NET Core e o .NET Framework:
 - **APIs** – O .NET Core contém várias das mesmas APIs que o .NET Framework, porém em menor quantidade e com assinaturas diferentes (os nomes de assembly são diferentes e a forma dos tipos diferem em casos principais). No momento, essas diferenças normalmente exigem alterações no código para .NET Core. O .NET Core implementa a API [.NET Standard](../standard/net-standard.md), que crescerá para incluir mais funcionalidades da API BCL do .NET Framework ao longo do tempo.
 - **Subsistemas** – O.NET Core implementa um subconjunto dos subsistemas no .NET Framework com o objetivo de proporcionar uma implementação e um modelo de programação mais simples. Por exemplo, não há suporte para CAS (Segurança de Acesso do Código), porém há suporte para reflexão.
 - **Plataformas** – O .NET Framework dá suporte a Windows e Windows Server, enquanto o .NET Core também dá suporte a macOS e Linux.
-- **Software Livre** – O.NET Core é um software livre, enquanto um [subconjunto somente leitura do .NET Framework](https://github.com/microsoft/referencesource) é um software livre.
+- **Software Livre** – O .NET Core é um software livre, enquanto apenas um [subconjunto somente leitura do .NET Framework](https://github.com/microsoft/referencesource) é um software livre.
 
 Embora o .NET Core seja único e apresente diferenças significativas em relação ao .NET Framework e a outras implementações do .NET, é muito fácil compartilhar o código usando técnicas de compartilhamento de binários ou de fontes. 
 
