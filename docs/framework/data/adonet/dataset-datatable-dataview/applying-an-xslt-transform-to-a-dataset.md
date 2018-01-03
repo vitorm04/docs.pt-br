@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 17f5c8ede620a061bb80f98652497de0a165b06c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 35251c5e2a713463510b3ff8b65e9096385c6bcf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>Aplicando uma transformação XSLT a um conjunto de dados
 O **WriteXml** método o <xref:System.Data.DataSet> permite gravar o conteúdo de um **conjunto de dados** como dados XML. Uma tarefa comum é, em seguida, transformar esse XML em outro formato usando transformações de XSL (XSLT). No entanto, sincronizando um **conjunto de dados** com um <xref:System.Xml.XmlDataDocument> permite que você aplique uma folha de estilo XSLT para o conteúdo de um **conjunto de dados** sem precisar primeiro escrever o conteúdo do  **Conjunto de dados** como dados XML usando **WriteXml**.  

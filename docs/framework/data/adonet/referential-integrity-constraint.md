@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 10e469838073b4cf1faba1704b88b47f30b8b3d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 232098a4940e223fd8553eefa4964777b1695c5b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="referential-integrity-constraint"></a>restrição de integridade referencial
 Um *restrição de integridade referencial* modelo de dados na entidade (EDM) é semelhante a uma restrição de integridade referencial em um banco de dados relacional. Da mesma forma que uma coluna (ou colunas) de uma tabela de banco de dados podem fazer referência a chave primária de outra tabela, uma [propriedade](../../../../docs/framework/data/adonet/property.md) (ou propriedades) de um [tipo de entidade](../../../../docs/framework/data/adonet/entity-type.md) podem fazer referência a [chave da entidade ](../../../../docs/framework/data/adonet/entity-key.md) de outro tipo de entidade. O tipo de entidade referenciada é chamado de *extremidade principal* da restrição. O tipo de entidade que faz referência a extremidade principal é chamado de *extremidade dependente* da restrição.  
@@ -44,5 +45,5 @@ Um *restrição de integridade referencial* modelo de dados na entidade (EDM) é
  [!code-xml[EDM_Example_Model#RefConstraint](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#refconstraint)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Conceitos chave do modelo de dados de entidade](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Modelo de dados de entidade](../../../../docs/framework/data/adonet/entity-data-model.md)
+ [Principais conceitos do Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5f54b2cf43b0cdb84b83414702b98b1d4f4b6670
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 405bea18b03ba695dcb952d10a193decc124841d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-load-paged-results-wcf-data-services"></a>Como: carregar paginável resultados (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]permite que o serviço de dados limitar o número de entidades que são retornados em uma única resposta de feed. Quando isso acontece, a entrada final no feed contém um link para a próxima página de dados. O URI para a próxima página de dados é obtido chamando o <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> método o <xref:System.Data.Services.Client.QueryOperationResponse%601>, que é retornado quando o <xref:System.Data.Services.Client.DataServiceQuery%601> é executado. O URI representado pelo objeto, em seguida, é usado para carregar a próxima página de resultados. Para obter mais informações, consulte [carregar conteúdo adiada](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).  
@@ -43,5 +44,5 @@ ms.lasthandoff: 12/02/2017
  [!code-vb[Astoria Northwind Client#GetCustomersPagedNested](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getcustomerspagednested)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Carregamento adiado conteúdo](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  
- [Como: carregar entidades relacionadas](../../../../docs/framework/data/wcf/how-to-load-related-entities-wcf-data-services.md)
+ [Carregando conteúdo adiado](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  
+ [Como carregar entidades relacionadas](../../../../docs/framework/data/wcf/how-to-load-related-entities-wcf-data-services.md)

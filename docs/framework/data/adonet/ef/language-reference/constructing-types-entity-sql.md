@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 48dab533e26d6353c29667d81ea547f4b15d280f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a10ac4f8b89259c7d5ff46ad99ad6c8a925726d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="constructing-types-entity-sql"></a>Criando tipos (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]fornece três tipos de construtores: construtores e construtores de tipo nomeado construtores de conjunto de linhas.  

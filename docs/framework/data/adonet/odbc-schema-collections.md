@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 889e84db39af1257d709ef049e18d4397ea700d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b8c31f4e8b1463c184c9a8ff1cf64808783f030d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="odbc-schema-collections"></a>Coleções de esquema ODBC
 Esta seção discute o suporte de coleção de esquema para os drivers ODBC para Microsoft SQL Server, Oracle e Microsoft Jet.  
@@ -43,123 +44,123 @@ Esta seção discute o suporte de coleção de esquema para os drivers ODBC para
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_CAT|Cadeia de caracteres|  
-|TABLE_SCHEM|Cadeia de caracteres|  
-|TABLE_NAME|Cadeia de caracteres|  
-|TABLE_TYPE|Cadeia de caracteres|  
-|COMENTÁRIOS|Cadeia de caracteres|  
+|TABLE_CAT|Cadeia de Caracteres|  
+|TABLE_SCHEM|Cadeia de Caracteres|  
+|TABLE_NAME|Cadeia de Caracteres|  
+|TABLE_TYPE|Cadeia de Caracteres|  
+|COMENTÁRIOS|Cadeia de Caracteres|  
   
 ### <a name="indexes"></a>Índices  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_CAT|Cadeia de caracteres|  
-|TABLE_SCHEM|Cadeia de caracteres|  
-|TABLE_NAME|Cadeia de caracteres|  
+|TABLE_CAT|Cadeia de Caracteres|  
+|TABLE_SCHEM|Cadeia de Caracteres|  
+|TABLE_NAME|Cadeia de Caracteres|  
 |NON_UNIQUE|Int16|  
-|INDEX_QUALIFIER|Cadeia de caracteres|  
-|INDEX_NAME|Cadeia de caracteres|  
+|INDEX_QUALIFIER|Cadeia de Caracteres|  
+|INDEX_NAME|Cadeia de Caracteres|  
 |TIPO DE|Int16|  
 |ORDINAL_POSITION|Int16|  
-|COLUMN_NAME|Cadeia de caracteres|  
-|ASC_OR_DESC|Cadeia de caracteres|  
+|COLUMN_NAME|Cadeia de Caracteres|  
+|ASC_OR_DESC|Cadeia de Caracteres|  
 |CARDINALIDADE|Int32|  
 |PÁGINAS|Int32|  
-|FILTER_CONDITION|Cadeia de caracteres|  
-|SS_TYPE_SCHEMA|Cadeia de caracteres|  
+|FILTER_CONDITION|Cadeia de Caracteres|  
+|SS_TYPE_SCHEMA|Cadeia de Caracteres|  
 |SS_DATA_TYPE|Byte|  
   
 ### <a name="columns"></a>Colunas  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_CAT|Cadeia de caracteres|  
-|TABLE_SCHEM|Cadeia de caracteres|  
-|TABLE_NAME|Cadeia de caracteres|  
-|COLUMN_NAME|Cadeia de caracteres|  
+|TABLE_CAT|Cadeia de Caracteres|  
+|TABLE_SCHEM|Cadeia de Caracteres|  
+|TABLE_NAME|Cadeia de Caracteres|  
+|COLUMN_NAME|Cadeia de Caracteres|  
 |DATA_TYPE|Int16|  
-|TYPE_NAME|Cadeia de caracteres|  
+|TYPE_NAME|Cadeia de Caracteres|  
 |COLUMN_SIZE|Int32|  
 |BUFFER_LENGTH|Int32|  
 |DECIMAL_DIGITS|Int16|  
 |NUM_PREC_RADIX|Int16|  
 |PERMITE VALOR NULO|Int16|  
-|COMENTÁRIOS|Cadeia de caracteres|  
-|COLUMN_DEF|Cadeia de caracteres|  
+|COMENTÁRIOS|Cadeia de Caracteres|  
+|COLUMN_DEF|Cadeia de Caracteres|  
 |SQL_DATA_TYPE|Int16|  
 |SQL_DATETIME_SUB|Int16|  
 |CHAR_OCTET_LENGTH|Int32|  
 |ORDINAL_POSITION|Int32|  
-|IS_NULLABLE|Cadeia de caracteres|  
-|SS_TYPE_CATALOG|Cadeia de caracteres|  
-|SS_TYPE_SCHEMA|Cadeia de caracteres|  
+|IS_NULLABLE|Cadeia de Caracteres|  
+|SS_TYPE_CATALOG|Cadeia de Caracteres|  
+|SS_TYPE_SCHEMA|Cadeia de Caracteres|  
 |SS_DATA_TYPE|Byte|  
   
 ### <a name="procedures"></a>Procedimentos  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE_CAT|Cadeia de caracteres|  
-|PROCEDURE_SCHEM|Cadeia de caracteres|  
-|PROCEDURE_NAME|Cadeia de caracteres|  
+|PROCEDURE_CAT|Cadeia de Caracteres|  
+|PROCEDURE_SCHEM|Cadeia de Caracteres|  
+|PROCEDURE_NAME|Cadeia de Caracteres|  
 |NUM_INPUT_PARAMS|Int32|  
 |NUM_OUTPUT_PARAMS|Int32|  
 |NUM_RESULT_SETS|Int32|  
-|COMENTÁRIOS|Cadeia de caracteres|  
+|COMENTÁRIOS|Cadeia de Caracteres|  
 |PROCEDURE_TYPE|Int16|  
   
 ### <a name="procedurecolumns"></a>ProcedureColumns  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE_CAT|Cadeia de caracteres|  
-|PROCEDURE_SCHEM|Cadeia de caracteres|  
-|PROCEDURE_NAME|Cadeia de caracteres|  
-|COLUMN_NAME|Cadeia de caracteres|  
+|PROCEDURE_CAT|Cadeia de Caracteres|  
+|PROCEDURE_SCHEM|Cadeia de Caracteres|  
+|PROCEDURE_NAME|Cadeia de Caracteres|  
+|COLUMN_NAME|Cadeia de Caracteres|  
 |COLUMN_TYPE|Int16|  
 |DATA_TYPE|Int16|  
-|TYPE_NAME|Cadeia de caracteres|  
+|TYPE_NAME|Cadeia de Caracteres|  
 |COLUMN_SIZE|Int32|  
 |BUFFER_LENGTH|Int32|  
 |DECIMAL_DIGITS|Int16|  
 |NUM_PREC_RADIX|Int16|  
 |PERMITE VALOR NULO|Int16|  
-|COMENTÁRIOS|Cadeia de caracteres|  
-|COLUMN_DEF|Cadeia de caracteres|  
+|COMENTÁRIOS|Cadeia de Caracteres|  
+|COLUMN_DEF|Cadeia de Caracteres|  
 |SQL_DATA_TYPE|Int16|  
 |SQL_DATETIME_SUB|Int16|  
 |CHAR_OCTET_LENGTH|Int32|  
 |ORDINAL_POSITION|Int32|  
-|IS_NULLABLE|Cadeia de caracteres|  
-|SS_TYPE_CATALOG|Cadeia de caracteres|  
-|SS_TYPE_SCHEMA|Cadeia de caracteres|  
+|IS_NULLABLE|Cadeia de Caracteres|  
+|SS_TYPE_CATALOG|Cadeia de Caracteres|  
+|SS_TYPE_SCHEMA|Cadeia de Caracteres|  
 |SS_DATA_TYPE|Byte|  
   
 ### <a name="procedureparameters"></a>ProcedureParameters  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE_CAT|Cadeia de caracteres|  
-|PROCEDURE_SCHEM|Cadeia de caracteres|  
-|PROCEDURE_NAME|Cadeia de caracteres|  
-|COLUMN_NAME|Cadeia de caracteres|  
+|PROCEDURE_CAT|Cadeia de Caracteres|  
+|PROCEDURE_SCHEM|Cadeia de Caracteres|  
+|PROCEDURE_NAME|Cadeia de Caracteres|  
+|COLUMN_NAME|Cadeia de Caracteres|  
 |COLUMN_TYPE|Int16|  
 |DATA_TYPE|Int16|  
-|TYPE_NAME|Cadeia de caracteres|  
+|TYPE_NAME|Cadeia de Caracteres|  
 |COLUMN_SIZE|Int32|  
 |BUFFER_LENGTH|Int32|  
 |DECIMAL_DIGITS|Int16|  
 |NUM_PREC_RADIX|Int16|  
 |PERMITE VALOR NULO|Int16|  
-|COMENTÁRIOS|Cadeia de caracteres|  
-|COLUMN_DEF|Cadeia de caracteres|  
+|COMENTÁRIOS|Cadeia de Caracteres|  
+|COLUMN_DEF|Cadeia de Caracteres|  
 |SQL_DATA_TYPE|Int16|  
 |SQL_DATETIME_SUB|Int16|  
 |CHAR_OCTET_LENGTH|Int32|  
 |ORDINAL_POSITION|Int32|  
-|IS_NULLABLE|Cadeia de caracteres|  
-|SS_TYPE_CATALOG|Cadeia de caracteres|  
-|SS_TYPE_SCHEMA|Cadeia de caracteres|  
+|IS_NULLABLE|Cadeia de Caracteres|  
+|SS_TYPE_CATALOG|Cadeia de Caracteres|  
+|SS_TYPE_SCHEMA|Cadeia de Caracteres|  
 |SS_DATA_TYPE|Byte|  
   
 ## <a name="microsoft-oracle-odbc-driver"></a>Driver ODBC do Microsoft Oracle  
@@ -183,60 +184,60 @@ Esta seção discute o suporte de coleção de esquema para os drivers ODBC para
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_QUALIFIER|Cadeia de caracteres|  
-|TABLE_OWNER|Cadeia de caracteres|  
-|TABLE_NAME|Cadeia de caracteres|  
-|TABLE_TYPE|Cadeia de caracteres|  
-|COMENTÁRIOS|Cadeia de caracteres|  
+|TABLE_QUALIFIER|Cadeia de Caracteres|  
+|TABLE_OWNER|Cadeia de Caracteres|  
+|TABLE_NAME|Cadeia de Caracteres|  
+|TABLE_TYPE|Cadeia de Caracteres|  
+|COMENTÁRIOS|Cadeia de Caracteres|  
   
 ### <a name="columns"></a>Colunas  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_QUALIFIER|Cadeia de caracteres|  
-|TABLE_OWNER|Cadeia de caracteres|  
-|TABLE_NAME|Cadeia de caracteres|  
-|COLUMN_NAME|Cadeia de caracteres|  
+|TABLE_QUALIFIER|Cadeia de Caracteres|  
+|TABLE_OWNER|Cadeia de Caracteres|  
+|TABLE_NAME|Cadeia de Caracteres|  
+|COLUMN_NAME|Cadeia de Caracteres|  
 |DATA_TYPE|Int16|  
-|TYPE_NAME|Cadeia de caracteres|  
+|TYPE_NAME|Cadeia de Caracteres|  
 |PRECISÃO|Int32|  
 |COMPRIMENTO|Int32|  
 |ESCALA|Int16|  
 |BASE|Int16|  
 |PERMITE VALOR NULO|Int16|  
-|COMENTÁRIOS|Cadeia de caracteres|  
+|COMENTÁRIOS|Cadeia de Caracteres|  
 |ORDINAL_POSITION|Int32|  
   
 ### <a name="procedures"></a>Procedimentos  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE_QUALIFIER|Cadeia de caracteres|  
-|PROCEDURE_OWNER|Cadeia de caracteres|  
-|PROCEDURE_NAME|Cadeia de caracteres|  
+|PROCEDURE_QUALIFIER|Cadeia de Caracteres|  
+|PROCEDURE_OWNER|Cadeia de Caracteres|  
+|PROCEDURE_NAME|Cadeia de Caracteres|  
 |NUM_INPUT_PARAMS|Int16|  
 |NUM_OUTPUT_PARAMS|Int16|  
 |NUM_RESULT_SETS|Int16|  
-|COMENTÁRIOS|Cadeia de caracteres|  
+|COMENTÁRIOS|Cadeia de Caracteres|  
 |PROCEDURE_TYPE|Int16|  
   
 ### <a name="procedurecolumns"></a>ProcedureColumns  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE_QUALIFIER|Cadeia de caracteres|  
-|PROCEDURE_OWNER|Cadeia de caracteres|  
-|PROCEDURE_NAME|Cadeia de caracteres|  
-|COLUMN_NAME|Cadeia de caracteres|  
+|PROCEDURE_QUALIFIER|Cadeia de Caracteres|  
+|PROCEDURE_OWNER|Cadeia de Caracteres|  
+|PROCEDURE_NAME|Cadeia de Caracteres|  
+|COLUMN_NAME|Cadeia de Caracteres|  
 |COLUMN_TYPE|Int16|  
 |DATA_TYPE|Int16|  
-|TYPE_NAME|Cadeia de caracteres|  
+|TYPE_NAME|Cadeia de Caracteres|  
 |PRECISÃO|Int32|  
 |COMPRIMENTO|Int32|  
 |ESCALA|Int16|  
 |BASE|Int16|  
 |PERMITE VALOR NULO|Int16|  
-|COMENTÁRIOS|Cadeia de caracteres|  
+|COMENTÁRIOS|Cadeia de Caracteres|  
 |SOBRECARGA|Int32|  
 |ORDINAL_POSITION|Int32|  
   
@@ -261,60 +262,60 @@ Esta seção discute o suporte de coleção de esquema para os drivers ODBC para
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_QUALIFIER|Cadeia de caracteres|  
-|TABLE_OWNER|Cadeia de caracteres|  
-|TABLE_NAME|Cadeia de caracteres|  
-|TABLE_TYPE|Cadeia de caracteres|  
-|COMENTÁRIOS|Cadeia de caracteres|  
+|TABLE_QUALIFIER|Cadeia de Caracteres|  
+|TABLE_OWNER|Cadeia de Caracteres|  
+|TABLE_NAME|Cadeia de Caracteres|  
+|TABLE_TYPE|Cadeia de Caracteres|  
+|COMENTÁRIOS|Cadeia de Caracteres|  
   
 ### <a name="columns"></a>Colunas  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_QUALIFIER|Cadeia de caracteres|  
-|TABLE_OWNER|Cadeia de caracteres|  
-|TABLE_NAME|Cadeia de caracteres|  
-|COLUMN_NAME|Cadeia de caracteres|  
+|TABLE_QUALIFIER|Cadeia de Caracteres|  
+|TABLE_OWNER|Cadeia de Caracteres|  
+|TABLE_NAME|Cadeia de Caracteres|  
+|COLUMN_NAME|Cadeia de Caracteres|  
 |DATA_TYPE|Int16|  
-|TYPE_NAME|Cadeia de caracteres|  
+|TYPE_NAME|Cadeia de Caracteres|  
 |PRECISÃO|Int32|  
 |COMPRIMENTO|Int32|  
 |ESCALA|Int16|  
 |BASE|Int16|  
 |PERMITE VALOR NULO|Int16|  
-|COMENTÁRIOS|Cadeia de caracteres|  
+|COMENTÁRIOS|Cadeia de Caracteres|  
 |ORDINAL_POSITION|Int32|  
   
 ### <a name="procedures"></a>Procedimentos  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE_QUALIFIER|Cadeia de caracteres|  
-|PROCEDURE_OWNER|Cadeia de caracteres|  
-|PROCEDURE_NAME|Cadeia de caracteres|  
+|PROCEDURE_QUALIFIER|Cadeia de Caracteres|  
+|PROCEDURE_OWNER|Cadeia de Caracteres|  
+|PROCEDURE_NAME|Cadeia de Caracteres|  
 |NUM_INPUT_PARAMS|Int16|  
 |NUM_OUTPUT_PARAMS|Int16|  
 |NUM_RESULT_SETS|Int16|  
-|COMENTÁRIOS|Cadeia de caracteres|  
+|COMENTÁRIOS|Cadeia de Caracteres|  
 |PROCEDURE_TYPE|Int16|  
   
 ### <a name="procedurecolumns"></a>ProcedureColumns  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE_QUALIFIER|Cadeia de caracteres|  
-|PROCEDURE_OWNER|Cadeia de caracteres|  
-|PROCEDURE_NAME|Cadeia de caracteres|  
-|COLUMN_NAME|Cadeia de caracteres|  
+|PROCEDURE_QUALIFIER|Cadeia de Caracteres|  
+|PROCEDURE_OWNER|Cadeia de Caracteres|  
+|PROCEDURE_NAME|Cadeia de Caracteres|  
+|COLUMN_NAME|Cadeia de Caracteres|  
 |COLUMN_TYPE|Int16|  
 |DATA_TYPE|Int16|  
-|TYPE_NAME|Cadeia de caracteres|  
+|TYPE_NAME|Cadeia de Caracteres|  
 |PRECISÃO|Int32|  
 |COMPRIMENTO|Int32|  
 |ESCALA|Int16|  
 |BASE|Int16|  
 |PERMITE VALOR NULO|Int16|  
-|COMENTÁRIOS|Cadeia de caracteres|  
+|COMENTÁRIOS|Cadeia de Caracteres|  
 |SOBRECARGA|Int32|  
 |ORDINAL_POSITION|Int32|  
   
@@ -322,25 +323,25 @@ Esta seção discute o suporte de coleção de esquema para os drivers ODBC para
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE_CAT|Cadeia de caracteres|  
-|PROCEDURE_SCHEM|Cadeia de caracteres|  
-|PROCEDURE_NAME|Cadeia de caracteres|  
-|COLUMN_NAME|Cadeia de caracteres|  
+|PROCEDURE_CAT|Cadeia de Caracteres|  
+|PROCEDURE_SCHEM|Cadeia de Caracteres|  
+|PROCEDURE_NAME|Cadeia de Caracteres|  
+|COLUMN_NAME|Cadeia de Caracteres|  
 |COLUMN_TYPE|Int16|  
 |DATA_TYPE|Int16|  
-|TYPE_NAME|Cadeia de caracteres|  
+|TYPE_NAME|Cadeia de Caracteres|  
 |COLUMN_SIZE|Int32|  
 |BUFFER_LENGTH|Int32|  
 |DECIMAL_DIGITS|Int16|  
 |NUM_PREC_RADIX|Int16|  
 |PERMITE VALOR NULO|Int16|  
-|COMENTÁRIOS|Cadeia de caracteres|  
-|COLUMN_DEF|Cadeia de caracteres|  
+|COMENTÁRIOS|Cadeia de Caracteres|  
+|COLUMN_DEF|Cadeia de Caracteres|  
 |SQL_DATA_TYPE|Int16|  
 |SQL_DATETIME_SUB|Int16|  
 |CHAR_OCTET_LENGTH|Int32|  
 |ORDINAL_POSITION|Int32|  
-|IS_NULLABLE|Cadeia de caracteres|  
+|IS_NULLABLE|Cadeia de Caracteres|  
   
 ## <a name="see-also"></a>Consulte também  
  [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

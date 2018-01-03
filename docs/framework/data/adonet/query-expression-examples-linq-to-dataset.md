@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1967575aa7a287064d6da54d929ce095e89ee24f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d959d28f50cef7820702ae535dcc3307e59cf080
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="query-expression-examples-linq-to-dataset"></a>Consulte exemplos de expressões (LINQ to DataSet)
 Esta seção fornece [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] programa que os exemplos na sintaxe da expressão de consulta que usam os operadores de consulta padrão. O <xref:System.Data.DataSet> usado nesses exemplos é populada com o `FillDataSet` método, que é especificado em [carregar dados em um conjunto de dados](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Para obter mais informações, consulte [visão geral de operadores de consulta padrão](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
@@ -38,13 +39,13 @@ Esta seção fornece [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-m
  [Operadores de elemento](../../../../docs/framework/data/adonet/query-expression-syntax-examples-element-operators.md)  
  Os exemplos neste tópico demonstram como usar os métodos de <xref:System.Linq.Enumerable.First%2A> e de <xref:System.Linq.Enumerable.ElementAt%2A> para obter os elementos de <xref:System.Data.DataRow> de <xref:System.Data.DataSet>.  
   
- [Operadores de agregação](../../../../docs/framework/data/adonet/query-expression-syntax-examples-aggregate-operators.md)  
+ [Operadores agregados](../../../../docs/framework/data/adonet/query-expression-syntax-examples-aggregate-operators.md)  
  Os exemplos neste tópico demonstram como usar <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, e métodos de <xref:System.Linq.Enumerable.Sum%2A> para ver <xref:System.Data.DataSet> e os dados agregados.  
   
  [Operadores de junção](../../../../docs/framework/data/adonet/query-expression-syntax-examples-join-operators.md)  
  Os exemplos neste tópico demonstram como usar os métodos de <xref:System.Linq.Enumerable.GroupJoin%2A> e de <xref:System.Linq.Enumerable.Join%2A> para ver <xref:System.Data.DataSet>.  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplos de consulta com base em método:](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)  
+ [Exemplos de consulta baseada em método](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)  
  [Exemplos de operador de conjunto de dados específicos](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)  
- [LINQ para exemplos de conjunto de dados](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+ [Exemplos de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

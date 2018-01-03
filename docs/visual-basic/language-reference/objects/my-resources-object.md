@@ -14,11 +14,11 @@ ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b2a2de7229f59e7deea29fe4186a5e466459d9fa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 96e5b909d9945ed631cebe07e4cfc7d5dc2e019f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="myresources-object"></a>Objeto My.Resources
 Fornece classes e propriedades para acessar os recursos do aplicativo.  
@@ -26,12 +26,12 @@ Fornece classes e propriedades para acessar os recursos do aplicativo.
 ## <a name="remarks"></a>Comentários  
  O `My.Resources` objeto fornece acesso aos recursos do aplicativo e permite que você dinamicamente recuperar recursos para seu aplicativo. Para obter mais informações, consulte [recursos de gerenciamento de aplicativo (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
   
- O `My.Resources` objeto expõe apenas recursos globais. Ele não fornece acesso aos arquivos de recursos associados a formulários. Você deve acessar os recursos de formulário do formulário. Para obter mais informações, consulte [Passo a passo: Localizando o Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5).  
+ O `My.Resources` objeto expõe apenas recursos globais. Ele não fornece acesso aos arquivos de recursos associados a formulários. Você deve acessar os recursos de formulário do formulário.  
   
  Você pode acessar arquivos de recursos específicos de cultura do aplicativo do `My.Resources` objeto. Por padrão, o `My.Resources` objeto pesquisa os recursos do arquivo de recurso que corresponda a cultura do <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A> propriedade. No entanto, você pode substituir esse comportamento e especificar uma determinada cultura a ser usado para os recursos. Para saber mais, veja [Recursos em aplicativos da área de trabalho](../../../framework/resources/index.md).  
   
 ## <a name="properties"></a>Propriedades  
- As propriedades do `My.Resources` objeto fornece acesso somente leitura aos recursos do aplicativo. Para adicionar ou remover recursos, use o **Project Designer**. Para obter mais informações, consulte [como: Adicionar ou remover recursos](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d). Você pode acessar recursos adicionados por meio de **Project Designer** usando `My.Resources.``resourceName`.  
+ As propriedades do `My.Resources` objeto fornece acesso somente leitura aos recursos do aplicativo. Para adicionar ou remover recursos, use o **Project Designer**. Você pode acessar recursos adicionados por meio de **Project Designer** usando `My.Resources.``resourceName`.  
   
  Você também pode adicionar ou remover arquivos de recursos selecionando seu projeto no **Solution Explorer** e clicando em **Adicionar Novo Item** ou **Add Existing Item** do  **Projeto** menu. Você pode acessar recursos adicionados dessa maneira usando `My.Resources.``resourceFileName`.`resourceName`.  
   
@@ -56,7 +56,7 @@ Fornece classes e propriedades para acessar os recursos do aplicativo.
  O `My.Resources` objeto expõe cada arquivo de recurso como uma classe com propriedades compartilhadas. O nome da classe é o mesmo que o nome do arquivo de recurso. Conforme descrito na seção anterior, os recursos em um arquivo de recurso são expostos como propriedades na classe.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo define o título de um formulário para o recurso de cadeia de caracteres chamado `Form1Title` no arquivo de recurso do aplicativo. Para o exemplo funcione, o aplicativo deve ter uma cadeia de caracteres chamada `Form1Title` em seu arquivo de recurso. Para obter mais informações, consulte [como: Adicionar ou remover recursos](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d).  
+ Este exemplo define o título de um formulário para o recurso de cadeia de caracteres chamado `Form1Title` no arquivo de recurso do aplicativo. Para o exemplo funcione, o aplicativo deve ter uma cadeia de caracteres chamada `Form1Title` em seu arquivo de recurso.  
   
  [!code-vb[VbVbalrMyResources#1](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_1.vb)]  
   
@@ -78,12 +78,11 @@ Fornece classes e propriedades para acessar os recursos do aplicativo.
 ## <a name="example"></a>Exemplo  
  Este exemplo recupera a versão de cultura francesa de um recurso de cadeia de caracteres do aplicativo. O recurso é nomeado `Message`. Para alterar a cultura que o `My.Resources` usa o objeto, o exemplo usa <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>.  
   
- Para esse exemplo funcione, o aplicativo deve ter uma cadeia de caracteres chamada `Message` em seu recurso de arquivo e o aplicativo devem ter a versão de cultura francesa desse arquivo de recursos, Resources.fr-FR. Para obter mais informações, consulte [como: Adicionar ou remover recursos](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d). Se o aplicativo não tiver a versão de cultura francesa do arquivo de recurso, o `My.Resource` objeto recupera o recurso do arquivo de recurso de cultura padrão.  
+ Para esse exemplo funcione, o aplicativo deve ter uma cadeia de caracteres chamada `Message` em seu recurso de arquivo e o aplicativo devem ter a versão de cultura francesa desse arquivo de recursos, Resources.fr-FR. Se o aplicativo não tiver a versão de cultura francesa do arquivo de recurso, o `My.Resource` objeto recupera o recurso do arquivo de recurso de cultura padrão.  
   
  [!code-vb[VbVbalrMyResources#10](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_5.vb)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: adicionar ou remover recursos](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d)  
  [Gerenciando recursos de aplicativo (.NET)](/visualstudio/ide/managing-application-resources-dotnet)  
  [Recursos em aplicativos de área de trabalho](../../../framework/resources/index.md)  
- [Passo a passo: Localizando Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5)
+

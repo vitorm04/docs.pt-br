@@ -9,11 +9,11 @@ ms.assetid: 162641f6-5a19-4c37-8c92-17929885e87e
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b1e141ed0868628adfa9201267275381a0be7e32
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d9754ae81f0540d46c657bc38ed31e1fb47f9559
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automation-object-does-not-have-a-default-value"></a>Objeto de automação não tem um valor padrão
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]não é possível determinar o membro padrão para o objeto especificado.  
@@ -24,4 +24,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Tipos de Erro](../../visual-basic/programming-guide/language-features/error-types.md)  
- [PAVEOVER suporte de produto e acessibilidade](http://msdn.microsoft.com/en-us/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)
+

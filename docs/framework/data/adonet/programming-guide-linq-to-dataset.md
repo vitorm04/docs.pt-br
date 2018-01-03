@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1332bf297dae4baae62d2abd731d236ad49be4ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 298ff0c6bfc5bc251483de8e90e3a394a2337369
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programming-guide-linq-to-dataset"></a>Guia de programação (LINQ to DataSet)
 Esta seção fornece informações e exemplos conceituais para a programação com [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
@@ -44,13 +45,13 @@ Esta seção fornece informações e exemplos conceituais para a programação c
  [Associação de dados e LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
  Descreve a vinculação de dados usando o objeto <xref:System.Data.DataView>.  
   
- [Consultas LINQ to DataSet de depuração](../../../../docs/framework/data/adonet/debugging-linq-to-dataset-queries.md)  
+ [Depuração de consultas LINQ to DataSet](../../../../docs/framework/data/adonet/debugging-linq-to-dataset-queries.md)  
  Fornece informações sobre depuração e solução de problemas [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] consultas.  
   
  [Segurança](../../../../docs/framework/data/adonet/security-linq-to-dataset.md)  
  Descreve problemas de segurança no [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
   
- [LINQ para exemplos de conjunto de dados](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
+ [Exemplos de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
  Fornece exemplos de consultas que usam os operadores [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)].  
   
 ## <a name="reference"></a>Referência  

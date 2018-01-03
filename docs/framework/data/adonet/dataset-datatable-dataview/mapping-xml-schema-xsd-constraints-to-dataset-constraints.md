@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 9ac8e64c02d96450d41233cfbe65e1db839df9e7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8ac310542ba9dea360acbc2a0fbcbb07b7a8d6fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>Restrições de esquema (XSD) de XML de mapeamento para restrições de conjunto de dados
 A linguagem de definição de esquema XML (XSD) permite que sejam especificadas em elementos e atributos que define as restrições. Ao mapear um esquema XML para esquema relacional em um <xref:System.Data.DataSet>, restrições de esquema XML são mapeadas para restrições relacionais apropriadas em tabelas e colunas dentro de **conjunto de dados**.  
@@ -37,20 +38,20 @@ A linguagem de definição de esquema XML (XSD) permite que sejam especificadas 
  O processo de mapeamento converte essas restrições de esquema em restrições apropriadas nas tabelas criadas dentro de **conjunto de dados**.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Restrições de esquema XML (XSD) exclusivas mapa às restrições de conjunto de dados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Mapear restrições de esquema XML (XSD) exclusivos para restrições de conjunto de dados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  Descreve os elementos de esquema XML usados para criar restrições exclusivas em um **conjunto de dados**.  
   
- [Restrições de esquema XML (XSD) às restrições de conjunto de dados de chave de mapa](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-key-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Mapear restrições de esquema XML (XSD) para restrições de conjunto de dados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-key-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  Descreve os elementos de esquema XML usados para criar restrições de chave (onde os valores nulos não são permitidos restrições exclusivas) em um **conjunto de dados**.  
   
- [Mapear keyref restrições de esquema XML (XSD) para restrições de conjunto de dados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Mapear restrições de keyref do esquema XML (XSD) para restrições de conjunto de dados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  Descreve os elementos de esquema XML usados para criar keyref restrições (chave estrangeira) em um **conjunto de dados**.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Derivando a estrutura relacional do conjunto de dados de esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
  Descreve a estrutura relacional, ou o esquema, de um **conjunto de dados** que é criado a partir do esquema XSD.  
   
- [Gerar relações de conjunto de dados de esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [Gerando relações de conjunto de dados do esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
  Descreve os elementos de esquema XML usados para criar relações entre colunas da tabela em uma **conjunto de dados**.  
   
 ## <a name="see-also"></a>Consulte também  

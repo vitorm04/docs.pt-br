@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 73d98d5e2f97bd0425f11db35877f3eabca449be
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f3e80b5bb62cc785c220e2baeb773e6990c5fee1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="provider-manifest-specification"></a>Especificação do manifesto do provedor
 Esta seção discute como um provedor de armazenamento de dados pode suportar os tipos e funções no armazenamento de dados.  
@@ -269,10 +270,10 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |Nome do atributo|Tipo de dados|Necessária|Valor padrão|Descrição|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |Nome|Cadeia de caracteres|Sim|N/D|Identificador/nome de função|  
-|Tipoderetorno|Cadeia de caracteres|Não|Void|O tipo de retorno de EDM de função|  
+|Tipoderetorno|Cadeia de Caracteres|Não|Void|O tipo de retorno de EDM de função|  
 |Agregado|Boolean|Não|False|Retifique se a função é uma função agregada|  
 |Internos|Boolean|Não|verdadeiro|Retifique se a função é compilada no armazenamento de dados|  
-|StoreFunctionName|Cadeia de caracteres|Não|\<Nome >|Nome de função no armazenamento de dados.  Permite um nível de redirecionamento de nomes de função.|  
+|StoreFunctionName|Cadeia de Caracteres|Não|\<Nome >|Nome de função no armazenamento de dados.  Permite um nível de redirecionamento de nomes de função.|  
 |NiladicFunction|Boolean|Não|False|Retifique se a função não requer parâmetros e é chamado sem nenhum parâmetro|  
 |ParameterType<br /><br /> Semântica|ParameterSemantics|Não|AllowImplicit<br /><br /> Conversão|Escolha de como o pipeline de consulta deve manipular a substituição do tipo de parâmetro:<br /><br /> -ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
   
@@ -283,11 +284,11 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |Nome do atributo|Tipo de dados|Necessária|Valor padrão|Descrição|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |Nome|Cadeia de caracteres|Sim|N/D|Identificador/nome do parâmetro.|  
-|Tipo|Cadeia de caracteres|Sim|N/D|O tipo de EDM de parâmetro.|  
+|Tipo|Cadeia de Caracteres|Sim|N/D|O tipo de EDM de parâmetro.|  
 |Modo|Parâmetro<br /><br /> Direção|Sim|N/D|Direção do parâmetro:<br /><br /> -em<br />-out<br />-inout|  
   
 ##### <a name="namespace-attribute"></a>Atributo do namespace  
  Cada provedor de armazenamento de dados deve definir um namespace ou um grupo de namespaces para informações definida no manifesto. Este namespace pode ser usada em consultas Entity SQL para resolver nomes das funções e tipos. Por exemplo: SqlServer. O namespace deve ser diferente de namespace canônica, EDM, definido por serviços de entidade para que as funções padrão são suportadas por Entity consultas SQL.  
   
 ## <a name="see-also"></a>Consulte também  
- [Escrevendo um provedor de dados do Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+ [Escrevendo um Provedor de Dados do Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

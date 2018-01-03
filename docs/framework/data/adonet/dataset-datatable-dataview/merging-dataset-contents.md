@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5f45addd61f275a0bba4b61552bb629bfc6ee7df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 44d171cab4099436d7daea26def831f149b75b13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="merging-dataset-contents"></a>Mesclando conteúdo do DataSet
 Você pode usar o método <xref:System.Data.DataSet.Merge%2A> para mesclar o conteúdo de uma matriz <xref:System.Data.DataSet>, <xref:System.Data.DataTable> ou <xref:System.Data.DataRow> em um `DataSet` existente. Vários fatores e opções afetam a maneira como os novos dados são mesclados em um `DataSet` existente.  
@@ -90,7 +91,7 @@ Você pode usar o método <xref:System.Data.DataSet.Merge%2A> para mesclar o con
   
 ## <a name="see-also"></a>Consulte também  
  [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)  
- [Estados de linha e versões de linha](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
+ [Estados e versões de linha](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
  [DataAdapters e DataReaders](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [Retrieving and Modifying Data in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)  
  [Recuperando identidade ou valores de Autonumber](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  

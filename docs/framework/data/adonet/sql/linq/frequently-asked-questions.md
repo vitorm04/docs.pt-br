@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: edb48bd9cb0ff00c733af2d6ff4e616655a62b26
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: df3af6ae9fcd0c4539998357b3ab87b11dd13494
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="frequently-asked-questions"></a>Perguntas frequentes
 As seções a seguir respondem a alguns problemas comuns que você pode encontrar ao implementar o [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -46,7 +47,7 @@ As seções a seguir respondem a alguns problemas comuns que você pode encontra
   
 -   Status da conexão se <xref:System.Data.Linq.DataContext> for construído com um objeto de conexão.  
   
--   Configurações da cadeia de conexão (por exemplo, permitindo MARS, Multiple Active Result Sets). Para obter mais informações, consulte [vários conjuntos de MARS (resultados ativos)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md).  
+-   Configurações da cadeia de conexão (por exemplo, permitindo MARS, Multiple Active Result Sets). Para obter mais informações, confira [MARS (Conjunto de Resultados Ativos Múltiplos)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md).  
   
 ## <a name="updating-without-querying"></a>Atualizar sem consultar  
  P. Posso atualizar os dados da tabela sem primeiro consultar o banco de dados?  

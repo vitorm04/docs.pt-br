@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f1fd1c21fc4f156bfe7a5abf9f76bd341e2d0f10
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2835d2064f1845b55dd3a33abb086c5af0fb9e6c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="comparison-semantics-entity-sql"></a>Semântica de comparação (Entity SQL)
 Executar alguns dos seguintes operadores de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] envolve a comparação de instâncias do tipo:  
@@ -76,7 +77,7 @@ Executar alguns dos seguintes operadores de [!INCLUDE[esql](../../../../../../in
 ## <a name="supported-combinations"></a>Combinações suportados  
  A tabela a seguir mostra todas as combinações suportados operadores de comparação para cada tipo do tipo:  
   
-|**Tipo**|**=**<br /><br /> **!=**|**AGRUPAR POR**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **SE CRUZAM**<br /><br /> **EXCETO**<br /><br /> **DEFINIR**<br /><br /> **SOBREPOSIÇÕES**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDENAR POR**|**É NULO**<br /><br /> **NÃO É NULO**|  
+|**Tipo**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**É NULO**<br /><br /> **NÃO É NULO**|  
 |-|-|-|-|-|-|-|-|  
 |Tipo de entidade|REF<sup>1</sup>|Todas as propriedades<sup>2</sup>|Todas as propriedades<sup>2</sup>|Todas as propriedades<sup>2</sup>|Lançar<sup>3</sup>|Lançar<sup>3</sup>|REF<sup>1</sup>|  
 |Tipo complexo|Lançar<sup>3</sup>|Lançar<sup>3</sup>|Lançar<sup>3</sup>|Lançar<sup>3</sup>|Lançar<sup>3</sup>|Lançar<sup>3</sup>|Lançar<sup>3</sup>|  

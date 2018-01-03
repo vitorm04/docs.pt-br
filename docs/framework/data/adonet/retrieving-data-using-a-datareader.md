@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0b66ca2fbcc760598b771b4c02a46acc3c9c1d4e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b36f76516d4ddf94e177a5ecbb705e1d729318b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-data-using-a-datareader"></a>Recuperando dados usando um DataReader
 Recuperando dados usando um **DataReader** envolve a criação de uma instância do **comando** objeto e, em seguida, criando um **DataReader** chamando  **ExecuteReader** para recuperar linhas de uma fonte de dados. O exemplo a seguir ilustra o uso uma **DataReader** onde `reader` representa um DataReader válido e `command` representa um objeto de comando válido.  

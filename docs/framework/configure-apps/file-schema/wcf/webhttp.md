@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0b5388a680816bca6051525f5130308a3c7c2dc5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b488d4e4884f92b107b2b6be71827a2f8b4cdbf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltwebhttpgt"></a>&lt;webHttp&gt;
 Este elemento Especifica o <xref:System.ServiceModel.Description.WebHttpBehavior> em um ponto de extremidade por meio da configuração. Esse comportamento, quando usado em conjunto com o [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) associação padrão, permite que o modelo de programação da Web para um [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] serviço.  
@@ -44,7 +45,7 @@ Este elemento Especifica o <xref:System.ServiceModel.Description.WebHttpBehavior
 |automaticFormatSelectionEnabled|Quando essa propriedade é definida como `true`, a infraestrutura WCF determina o melhor formato a ser usado. Seleção automática de formato com versões anteriores é desabilitada por padrão para compatibilidade. Seleção automática de formato pode ser habilitada programaticamente ou por meio da configuração.|  
 |defaultBodyStyle|Especifica o estilo de corpo padrão das mensagens retornadas. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.Web.WebMessageBodyStyle> e [formatação HTTP Web do WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).|  
 |defaultOutgoingResponseFormat|Especifica o formato de resposta de saída do padrão de mensagens. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Formatação HTTP Web do WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).|  
-|faultExceptionEnabled|Obtém ou define o sinalizador que especifica se uma FaultException é gerada quando um erro de servidor interno (código de status HTTP: 500) ocorre.|  
+|faultExceptionEnabled|Obtém ou define o sinalizador que especifica se uma FaultException é gerada quando ocorre um erro de servidor interno (código de status HTTP: 500).|  
 |helpEnabled|Obtém ou define um valor que determina se a página de Ajuda está habilitada.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -59,5 +60,5 @@ Este elemento Especifica o <xref:System.ServiceModel.Description.WebHttpBehavior
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Configuration.WebHttpElement>  
  <xref:System.ServiceModel.Description.WebHttpBehavior>  
- [Integração de AJAX e suporte a JSON](../../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
+ [Integração AJAX e suporte para JSON](../../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
  [\<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)

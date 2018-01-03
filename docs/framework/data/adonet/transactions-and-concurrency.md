@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4e06f54ed27a555daa30f16f452cd03c8e188a0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4301a232e2b38d44ecb288e76439742f7fe4d58f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transactions-and-concurrency"></a>Transações e simultaneidade
 Uma transação consiste em um único comando ou em um grupo de comandos executados como um pacote. As transações permitem que você combine várias operações em uma única unidade de trabalho. Se uma falha ocorrer em determinado ponto na transação, todas as atualizações poderão ser revertidas para o estado em vigor antes da transação.  
@@ -38,7 +39,7 @@ Uma transação consiste em um único comando ou em um grupo de comandos executa
  [Transações distribuídas](../../../../docs/framework/data/adonet/distributed-transactions.md)  
  Descreve como executar transações distribuídas no ADO.NET.  
   
- [Integração de System. Transactions com o SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
+ [Integração de System.Transactions com o SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
  Descreve a integração do <xref:System.Transactions> com o [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] para trabalhar com transações distribuídas.  
   
  [Simultaneidade otimista](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  

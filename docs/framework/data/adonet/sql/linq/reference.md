@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7bd381706c9ceb7c1c8f80002cee3b857b695372
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 81803df493d53b94a57720755f9bc351404b7d49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reference"></a>Referência
 Esta seção fornece informações de referência para desenvolvedores do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -28,7 +29,7 @@ Esta seção fornece informações de referência para desenvolvedores do [!INCL
  [Funções e tipos de dados](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
  Descreve como common language runtime (CLR) construções têm expressões correspondentes no SQL where somente [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] forneceu explicitamente uma conversão no mecanismo de conversão.  
   
- [Mapeamento de atributo](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
+ [Mapeamento baseado em atributos](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
  Descreve o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] abordagem baseada em atributo para mapeamento de um [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelo de objeto para um banco de dados do SQL Server.  
   
  [Geração de código em LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  

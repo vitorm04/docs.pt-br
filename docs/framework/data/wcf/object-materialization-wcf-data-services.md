@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a8f20023e158b388ddd71e518ebcaa48c214252c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b093fce50de6a0437456f4fb0e025e3c853777e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="object-materialization-wcf-data-services"></a>Materialização de objetos (WCF Data Services)
 Quando você usa o **adicionar referência de serviço** caixa de diálogo para consumir um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed em um aplicativo cliente com base no .NET Framework, classes de dados equivalentes são gerados para cada tipo de entidade no modelo de dados exposto pelo feed. Para obter mais informações, consulte [gerando a biblioteca de cliente do serviço de dados](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). Dados de entidade que são retornados por uma consulta estão materializados em uma instância de uma dessas classes de serviço de dados de cliente gerada. Para obter informações sobre opções de mesclagem e a resolução de identidade para objetos rastreados, consulte [Gerenciando o contexto do serviço de dados](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).  

@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d17c270b7969b858903e5b86124801a1fb1acdc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 26ddca04d9278099bf5ffc59ca55246d1f107106
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltwshttpcontextbindinggt"></a>&lt;wsHttpContextBinding&gt;
 Fornece um contexto para o <xref:System.ServiceModel.WSHttpBinding> que requer que o nível de proteção seja assinado.  
@@ -113,7 +114,7 @@ Fornece um contexto para o <xref:System.ServiceModel.WSHttpBinding> que requer q
  <xref:System.ServiceModel.WSHttpContextBinding>  
  <xref:System.ServiceModel.Configuration.WSHttpContextBindingElement>  
  <xref:System.ServiceModel.Channels.ContextBindingElement>  
- [Bindings](../../../../../docs/framework/wcf/bindings.md) (Associações)  
+ [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<associação >](../../../../../docs/framework/misc/binding.md)  

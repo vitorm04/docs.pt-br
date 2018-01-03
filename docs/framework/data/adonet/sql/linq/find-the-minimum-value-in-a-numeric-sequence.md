@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c040b2a9a4c806d6e0f82ea2b22113b44df7d4c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a042d1b1e78afee632dea20bbafe2383e50430c7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="find-the-minimum-value-in-a-numeric-sequence"></a>Localizar o valor mínimo em uma sequência numérica
 Use o operador de <xref:System.Linq.Enumerable.Min%2A> para retornar o valor mínimo de uma sequência de valores numéricos.  
@@ -82,5 +83,5 @@ Use o operador de <xref:System.Linq.Enumerable.Min%2A> para retornar o valor mí
  `Konbu`  
   
 ## <a name="see-also"></a>Consulte também  
- [Consultas de agregação](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
+ [Consultas agregadas](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
  [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)

@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d5586e28e784c43488245db814abf32d863232fc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 68a28e25cf07ec3d84cc7bb12734594ca55e7e0c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>Como: Personalizar classes de entidade usando o editor de códigos
 Os desenvolvedores que usam o [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] podem usar o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para criar ou personalizar suas classes de entidade.  
@@ -26,43 +27,43 @@ Os desenvolvedores que usam o [!INCLUDE[vs_current_short](../../../../../../incl
   
  Os tópicos desta seção descrevem como personalizar o modelo de objeto.  
   
- [Como: especificar nomes de banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-names.md)  
+ [Como especificar nomes de banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-names.md)  
  Descreve como usar o <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>.  
   
- [Como: representa tabelas como Classes](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-tables-as-classes.md)  
+ [Como representar Tabelas como Classes](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-tables-as-classes.md)  
  Descreve como usar o <xref:System.Data.Linq.Mapping.TableAttribute>.  
   
- [Como: representa colunas como membros de classe](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-class-members.md)  
+ [Como representar colunas como membros de classe](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-class-members.md)  
  Descreve como usar o <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
- [Como: representa chaves primárias](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-primary-keys.md)  
+ [Como representar chaves primárias](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-primary-keys.md)  
  Descreve como usar o <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>.  
   
- [Como: mapear relações de banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)  
+ [Como mapear relações de banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)  
  Fornece exemplos de como usar o atributo <xref:System.Data.Linq.Mapping.AssociationAttribute>.  
   
- [Como: representa colunas como gerado pelo banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-database-generated.md)  
+ [Como representar colunas como geradas por banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-database-generated.md)  
  Descreve como usar o <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>.  
   
- [Como: representa colunas como colunas de versão ou carimbo de hora](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-timestamp-or-version-columns.md)  
+ [Como representar colunas como colunas de Carimbo de data/hora ou de Versão](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-timestamp-or-version-columns.md)  
  Descreve como usar o <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>.  
   
- [Como: especificar tipos de dados do banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-data-types.md)  
+ [Como especificar tipos de dados do banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-data-types.md)  
  Descreve como usar o <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>.  
   
- [Como: representa colunas computadas](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-computed-columns.md)  
+ [Como representar colunas calculadas](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-computed-columns.md)  
  Descreve como usar o <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>.  
   
- [Como: especificar campos de armazenamento particular](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-private-storage-fields.md)  
+ [Como especificar campos de armazenamento particular](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-private-storage-fields.md)  
  Descreve como usar o <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>.  
   
- [Como: representa colunas como permitir valores nulos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-allowing-null-values.md)  
+ [Como representar colunas que permitem valores nulos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-allowing-null-values.md)  
  Descreve como usar o <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>.  
   
- [Como: mapear hierarquias de herança](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md)  
+ [Como mapear hierarquias de herança](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md)  
  Descreve os mapeamentos necessários para especificar uma hierarquia de herança.  
   
- [Como: especificar verificação de conflitos de simultaneidade](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-concurrency-conflict-checking.md)  
+ [Como especificar a verificação de conflitos de simultaneidade](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-concurrency-conflict-checking.md)  
  Descreve como usar o <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>.  
   
 ## <a name="see-also"></a>Consulte também  

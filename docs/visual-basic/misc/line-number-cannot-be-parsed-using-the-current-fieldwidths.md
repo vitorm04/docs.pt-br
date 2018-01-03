@@ -9,11 +9,11 @@ ms.assetid: 84e14245-dfdf-4b62-8b84-e83a31608899
 caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 56d9181b1be33c196e6a7394947197a8301a21b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0e1e3aa7d8fa2a1440b28074cc2739fe3d8a8e2d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-fieldwidths"></a>Linha &lt;número&gt; não pode ser analisada usando FieldWidths atual
 A linha especificada não pode ser analisada pois seus campos têm larguras diferentes daquelas especificadas.  
@@ -24,7 +24,7 @@ A linha especificada não pode ser analisada pois seus campos têm larguras dife
   
 ## <a name="see-also"></a>Consulte também  
  [Como ler a partir de arquivos de texto com vários formatos](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
- [Método OpenTextFieldParser](http://msdn.microsoft.com/en-us/e5869f85-c078-485f-8323-8dc716494546)  
+ [OpenTextFieldParser](xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A)  
  [Analisando arquivos de texto com o objeto TextFieldParser](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
  [Objeto TextFieldParser](../../visual-basic/language-reference/objects/textfieldparser-object.md)  
  [Propriedade TextFieldParser.FieldWidths](http://msdn.microsoft.com/en-us/c6985360-60c6-494e-89e7-43b6b73f2597)  

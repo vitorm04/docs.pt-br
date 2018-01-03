@@ -14,11 +14,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 35dfb3eee5a01d5fed21bda59f1cab5eb09a1401
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2d20faaee94363a1f54cf398d72955f376087b36
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltnetpeertcpbindinggt"></a>&lt;netPeerTcpBinding&gt;
 Define uma associação de ponto a ponto canal mensagens TCP específicas.  
@@ -113,7 +114,7 @@ Define uma associação de ponto a ponto canal mensagens TCP específicas.
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.NetPeerTcpBinding>  
  <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement>  
- [Bindings](../../../../../docs/framework/wcf/bindings.md) (Associações)  
+ [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<associação >](../../../../../docs/framework/misc/binding.md)  

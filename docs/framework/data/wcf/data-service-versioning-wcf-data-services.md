@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 545096292f34566b4bb6c3c44bb20ddac426af26
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 824abc79ae8d7ddd36b907977057a659aca86f20
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Controle de versão de serviço de dados (WCF Data Services)
 O [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] permite criar serviços de dados para que os clientes possam acessar dados como usando URIs de recursos com base em um modelo de dados. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]também suporta a definição de operações de serviço. Após a implantação inicial e potencialmente várias vezes durante a vida útil, esses serviços de dados podem precisar ser alterada para uma variedade de motivos, como alterar as necessidades de negócios, requisitos de tecnologia da informação, ou para solucionar outros problemas. Quando você faz alterações a um serviço de dados existente, você deve considerar se deseja definir uma nova versão de seus dados de serviço e a melhor maneira de minimizar o impacto nos aplicativos cliente existentes. Este tópico fornece orientações sobre quando e como criar uma nova versão de um serviço de dados. Ele também descreve como [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] manipula uma troca entre clientes e serviços de dados que oferecem suporte a versões diferentes do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protocolo.  
@@ -84,5 +85,5 @@ O [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] permite criar 
  O `DataServices` elemento de metadados retornados também contém um `DataServiceVersion` atributo, que é o mesmo valor como o `DataServiceVersion` cabeçalho na mensagem de resposta. Aplicativos cliente, como o **adicionar referência de serviço** da caixa de diálogo [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], use essas informações para gerar classes de serviço de dados do cliente que funcionam corretamente com a versão do [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] que hospedam o serviço de dados. Para obter mais informações, consulte [OData: controle de versão de protocolo](http://go.microsoft.com/fwlink/?LinkId=186071).  
   
 ## <a name="see-also"></a>Consulte também  
- [Provedores de serviços de dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
+ [Provedores de Serviços de Dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
  [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md) (Definindo o WCF Data Services)

@@ -14,14 +14,14 @@ ms.assetid: adbd34bb-43d2-4266-90e7-cd1afaf49b4e
 caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9f7121d4787ce36feb6de5f08ca60a4419877f98
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: bc82714d25efbe9d379fff36f92261cf25a78862
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-of-member-39ltmembernamegt39-is-not-cls-compliant"></a>Tipo de membro &#39; &lt;membername&gt;&#39; não é compatível com CLS
-O tipo de dados especificado para este membro não é parte do [independência da linguagem e componentes independentes da linguagem](../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS). Isso não é um erro no seu componente, porque o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] e [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] suporte para esse tipo de dados. No entanto, outro componente escrito em estritamente código compatível com CLS não pode oferecer suporte a esse tipo de dados. Esse componente não poderá interagir com êxito com seu componente.  
+O tipo de dados especificado para este membro não é parte do [independência da linguagem e componentes independentes da linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS). Isso não é um erro no seu componente, porque o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] e [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] suporte para esse tipo de dados. No entanto, outro componente escrito em estritamente código compatível com CLS não pode oferecer suporte a esse tipo de dados. Esse componente não poderá interagir com êxito com seu componente.  
   
  O seguinte [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] tipos de dados não são compatíveis com CLS:  
   
@@ -49,4 +49,4 @@ O tipo de dados especificado para este membro não é parte do [independência d
   
 ## <a name="see-also"></a>Consulte também  
  [Reflexão](../../../framework/reflection-and-codedom/reflection.md)  
- [\<PAVE sobre > escrevendo código compatível com CLS](http://msdn.microsoft.com/en-us/4c705105-69a2-4e5e-b24e-0633bc32c7f3)
+ 

@@ -17,11 +17,11 @@ ms.assetid: c982bcf2-46e5-47a2-bc8f-a5cc32b7dc47
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8be88bf4834ca58b1fe708eb1ef7188c583fef0f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1ad39acdec92667fbb0848a1c64c567b504dcb67
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="baseaddress"></a>/baseaddress
 Especifica um endereço base padrão ao criar uma DLL.  
@@ -49,10 +49,10 @@ Especifica um endereço base padrão ao criar uma DLL.
   
 |Para definir /baseaddress no IDE do Visual Studio|  
 |---|  
-|1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**. Para obter mais informações, consulte [Introdução ao Designer de Projeto](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Clique na guia **Compilar**.<br />3.  Clique em **Avançadas**.<br />4.  Modificar o valor de **endereço de base DLL:** caixa. **Observação:** o **endereço de base DLL:** caixa é somente leitura, a menos que o destino é uma DLL.|  
+|1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**. <br />2.  Clique na guia **Compilar**.<br />3.  Clique em **Avançadas**.<br />4.  Modificar o valor de **endereço de base DLL:** caixa. **Observação:** o **endereço de base DLL:** caixa é somente leitura, a menos que o destino é uma DLL.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
  [/Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
  [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Sn.exe (Ferramenta Nome Forte)](https://msdn.microsoft.com/library/k5b5tt23)
+ [Sn.exe (ferramenta de nome forte)] [Sn.exe (ferramenta de nome forte)](../../../framework/tools/sn-exe-strong-name-tool.md))

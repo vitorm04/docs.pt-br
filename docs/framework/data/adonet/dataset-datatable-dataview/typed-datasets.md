@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e3d5edc4f469b59ff787e500ad447fe0076c332c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6ede928352c9e0f02f6ad4c27ce8f5347b868986
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="typed-datasets"></a>DataSets tipados
 Juntamente com acesso de associação tardia por meio de valores com variáveis fracamente tipadas, o <xref:System.Data.DataSet> fornece acesso a dados por meio de uma metáfora fortemente tipada. Tabelas e colunas que fazem parte do **DataSet** podem ser acessados usando nomes amigáveis e fortemente tipadas variáveis.  
@@ -27,7 +28,7 @@ Juntamente com acesso de associação tardia por meio de valores com variáveis 
  Além disso, fortemente tipada **DataSet** fornece acesso a valores como o tipo correto em tempo de compilação. Com um fortemente tipada **conjunto de dados**, erros de incompatibilidade de tipo são detectados quando o código é compilado em vez de em tempo de execução.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Gerando DataSets fortemente tipados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-strongly-typed-datasets.md)  
+ [Gerando conjuntos de dados fortemente tipados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-strongly-typed-datasets.md)  
  Descreve como criar e usar um fortemente tipada **conjunto de dados**.  
   
  [Anotando DataSets tipados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/annotating-typed-datasets.md)  

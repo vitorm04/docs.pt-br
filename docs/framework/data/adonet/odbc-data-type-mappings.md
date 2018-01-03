@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 82c4a84f1aee5872a899d8d42a06d22abc10b603
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f6f4e63b731f4e8088e86766e258f77cdd0eeff9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="odbc-data-type-mappings"></a>Mapeamentos de tipo de dados ODBC
 A tabela a seguir mostra o deduzido [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tipo para tipos de dados do .NET Framework Data Provider para ODBC (<xref:System.Data.Odbc>). Os métodos de acessador tipado para o <xref:System.Data.Odbc.OdbcDataReader> também são listados.  
@@ -27,12 +28,12 @@ A tabela a seguir mostra o deduzido [!INCLUDE[dnprdnshort](../../../../includes/
 |SQL_BIGINT|Int64|GetInt64()|  
 |SQL_BINARY|Byte[]|GetBytes|  
 |SQL_BIT|Boolean|GetBoolean()|  
-|SQL_CHAR|Cadeia de caracteres<br /><br /> Char[]|GetString)<br /><br /> GetChars|  
+|SQL_CHAR|Cadeia de Caracteres<br /><br /> Char[]|GetString)<br /><br /> GetChars|  
 |SQL_DECIMAL|Decimal|GetDecimal()|  
 |SQL_DOUBLE|Duplo|GetDouble()|  
-|SQL_GUID|GUID|GetGuid()|  
+|SQL_GUID|Guid|GetGuid()|  
 |SQL_INTEGER|Int32|GetInt32()|  
-|SQL_LONG_VARCHAR|Cadeia de caracteres<br /><br /> Char[]|GetString)<br /><br /> GetChars|  
+|SQL_LONG_VARCHAR|Cadeia de Caracteres<br /><br /> Char[]|GetString)<br /><br /> GetChars|  
 |SQL_LONGVARBINARY|Byte[]|GetBytes|  
 |SQL_NUMERIC|Decimal|GetDecimal()|  
 |SQL_REAL|Simples|GetFloat()|  
@@ -41,9 +42,9 @@ A tabela a seguir mostra o deduzido [!INCLUDE[dnprdnshort](../../../../includes/
 |SQL_TYPE_TIMES|DateTime|GetDateTime()|  
 |SQL_TYPE_TIMESTAMP|DateTime|GetDateTime()|  
 |SQL_VARBINARY|Byte[]|GetBytes|  
-|SQL_WCHAR|Cadeia de caracteres<br /><br /> Char[]|GetString)<br /><br /> GetChars|  
-|SQL_WLONGVARCHAR|Cadeia de caracteres<br /><br /> Char[]|GetString)<br /><br /> GetChars|  
-|SQL_WVARCHAR|Cadeia de caracteres<br /><br /> Char[]|GetString)<br /><br /> GetChars|  
+|SQL_WCHAR|Cadeia de Caracteres<br /><br /> Char[]|GetString)<br /><br /> GetChars|  
+|SQL_WLONGVARCHAR|Cadeia de Caracteres<br /><br /> Char[]|GetString)<br /><br /> GetChars|  
+|SQL_WVARCHAR|Cadeia de Caracteres<br /><br /> Char[]|GetString)<br /><br /> GetChars|  
   
 ## <a name="see-also"></a>Consulte também  
  [Retrieving and Modifying Data in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)  

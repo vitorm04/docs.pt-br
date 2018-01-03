@@ -17,11 +17,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9e41502fee9cfa272b154f6ddaf0e6a41a482bc7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0899a179ae51c4884f30fd93fddbcfe289d8d7a2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>Como: adicionar, modificar e excluir entidades (WCF Data Services)
 Com o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliotecas de cliente, você pode criar, atualizar e excluir dados de entidade em um serviço de dados executando as ações equivalentes em objetos de <xref:System.Data.Services.Client.DataServiceContext>. Para obter mais informações, consulte [atualizar o serviço de dados](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
@@ -54,6 +55,6 @@ Com o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliotecas de
   
 ## <a name="see-also"></a>Consulte também  
  [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)  
- [Como: anexar uma entidade existente para o DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md)  
- [Como: definir relações entre entidades](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md)  
+ [Como anexar uma entidade existente ao DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md)  
+ [Como definir relações entre entidades](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md)  
  [Operações de envio em lote](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)

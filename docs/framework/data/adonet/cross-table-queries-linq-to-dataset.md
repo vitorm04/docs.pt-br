@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d0b829840257dc2b3b4bbf0b8c3a294a77060e2d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 059dd39f3583c3b8fcf6736e514b9cc4870d3ad6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cross-table-queries-linq-to-dataset"></a>Consultas em tabelas cruzadas (LINQ to DataSet)
 Além de consultar uma única tabela, você também pode executar consultas de tabela cruzada em [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Isso é feito usando um *junção*. Uma junção é a associação de objetos em uma fonte de dados com objetos que compartilham um atributo comum em outra fonte de dados, como um produto ou entre em contato com a ID. Em programação orientada a objeto, relações entre objetos são relativamente fáceis de navegar porque cada objeto tem um membro que faz referência a outro objeto. Nas tabelas de banco de dados externo, no entanto, à navegação por relações não é tão simples. Tabelas de banco de dados não contêm relacionamentos internos. Nesses casos, a operação de junção pode ser usada para fazer a correspondência de elementos em cada origem. Por exemplo, considerando duas tabelas que contêm informações de produto e de vendas, você pode usar uma operação de união para corresponder as informações de vendas e produtos para a mesma ordem de venda.  
@@ -44,4 +45,4 @@ Além de consultar uma única tabela, você também pode executar consultas de t
  [Consultas de tabela única](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)  
  [Consultando DataSets tipados](../../../../docs/framework/data/adonet/querying-typed-datasets.md)  
  [Operações join](http://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107)  
- [LINQ para exemplos de conjunto de dados](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+ [Exemplos de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

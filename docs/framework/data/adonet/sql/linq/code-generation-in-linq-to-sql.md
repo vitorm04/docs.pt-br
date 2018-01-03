@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5720ca8adbfb4a25e6c1360ac156e950a2f1ce52
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 46fd6c75ea0854f8d70bdfaceaa9b2e997422abc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-generation-in-linq-to-sql"></a>Geração de código em LINQ para SQL
 Você pode gerar código para representar um banco de dados usando [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] ou a ferramenta de linha de comando SQLMetal. Em ambos os casos, a geração de código ponta a ponta ocorre em três estágios:  
@@ -280,8 +281,8 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Informações de plano de fundo](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [Informações gerais](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
  [Mapeamento Externo](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
- [Como: gerar o modelo de objeto como um arquivo externo](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)  
+ [Como gerar o modelo de objeto como um arquivo externo](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)  
  [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)  
  [Referência](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

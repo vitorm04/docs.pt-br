@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 2d6685bc3dc17294f786a572e6f11165ee011b83
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 92f2aa2aea721c424ba59af913b868907be36317
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="object-states-and-change-tracking"></a>Estados e controle de alterações de objeto
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]objetos sempre participarem alguns *estado*. Por exemplo, quando [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] cria um novo objeto, o objeto está no estado de `Unchanged` . Um novo objeto que você mesmo cria é desconhecido para o <xref:System.Data.Linq.DataContext> e está em `Untracked` estado. Após a execução com êxito de <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, todos os objetos conhecidos a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] estão no estado de `Unchanged` . (A única exceção é representada por aqueles que foram excluídas com êxito de base de dados, que estão no estado de `Deleted` e inutilizável que a instância de <xref:System.Data.Linq.DataContext> .)  
@@ -73,5 +74,5 @@ ms.lasthandoff: 11/21/2017
  Se você atualizar a referência ambos necessário e a chave estrangeira correspondente, você deve certificar-se que concordam. Uma exceção de <xref:System.InvalidOperationException> é lançada se os dois não são sincronizados momento em que você chamar <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. Embora as alterações de valor de chave estrangeira são suficientes para afetar uma atualização de linha base, você deve alterar a referência para manter a conectividade do grafo de objeto e consistência bidirecional relações.  
   
 ## <a name="see-also"></a>Consulte também  
- [Informações de plano de fundo](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [Inserir, atualizar e excluir operações](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)
+ [Informações gerais](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [Operações de inserção, atualização e exclusão](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)

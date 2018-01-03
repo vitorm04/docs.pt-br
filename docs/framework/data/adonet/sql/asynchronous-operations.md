@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b616a6cf08dd47a9e46e8e887efbc88469dedfd3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6f631d785698ae59370053c4e35307514c44087c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="asynchronous-operations"></a>Operações assíncronas
 Algumas operações de banco de dados, como execuções de comando, podem levar muito tempo para concluir. Nesse caso, aplicativos de thread único devem bloquear outras operações e aguarde até que o comando para concluir antes de continuar suas próprias operações. Por outro lado, a capacidade de atribuir a operação de longa execução a um thread em segundo plano permite que o thread de primeiro plano permaneça ativo durante toda a operação. Em um aplicativo do Windows, por exemplo, delegando a operação de longa execução a um thread em segundo plano permite que o thread de interface do usuário continuar responsiva durante a operação está em execução.  
@@ -30,7 +31,7 @@ Algumas operações de banco de dados, como execuções de comando, podem levar 
  Embora o uso de técnicas assíncronas com o ADO.NET recursos não adicionará considerações especiais, é provável que os desenvolvedores mais usará recursos assíncronos no ADO.NET que em outras áreas do .NET Framework. É importante estar ciente das vantagens e armadilhas de criação de aplicativos multithread. Os exemplos que siga essa seção Mencione várias questões importantes que os desenvolvedores precisa levar em conta ao criar aplicativos que incorporam a funcionalidade multi-threaded.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Aplicativos do Windows usando retornos de chamada](../../../../../docs/framework/data/adonet/sql/windows-applications-using-callbacks.md)  
+ [Aplicativos do Windows que usam retornos de chamada](../../../../../docs/framework/data/adonet/sql/windows-applications-using-callbacks.md)  
  Fornece um exemplo que demonstra como executar um comando assíncrono com segurança, lidar corretamente com a interação com um formulário e seu conteúdo de um thread separado.  
   
  [Aplicativos ASP.NET que usam identificadores de espera](../../../../../docs/framework/data/adonet/sql/aspnet-apps-using-wait-handles.md)  

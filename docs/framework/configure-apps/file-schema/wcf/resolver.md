@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a9b63848590fba6e07a4a32d8ffd70c277448adf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fc6e919600fbea15937a61eaa65299b3a372caaf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltresolvergt"></a>&lt;resolvedor&gt;
 Especifica a ID de um resolvedor de pares que é usado para resolver um par de malha para um conjunto de endereços de nó par que representa vários nós que participam na malha.  
@@ -67,5 +68,5 @@ Especifica a ID de um resolvedor de pares que é usado para resolver um par de m
  <xref:System.ServiceModel.NetPeerTcpBinding.Resolver%2A>  
  <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Resolver%2A>  
  <xref:System.ServiceModel.Configuration.PeerResolverElement>  
- [Resolvedor Peer](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
+ [Resolvedores pares](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
  [Adicionando um resolvedor personalizado para um aplicativo PeerChannel](http://msdn.microsoft.com/en-us/12aa3787-2962-439c-ad27-46523c8b0419)

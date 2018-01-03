@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: cb52916e8e0948725a2eeb15cf78410077c7dca1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d2b121bdadcc231d2ea3a2c1d2ebdab40306c5ea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="making-and-submitting-data-changes"></a>Fazendo e enviando alterações de dados
 Os tópicos desta seção descrevem como fazer e transmitir alterações para o banco de dados e como tratar conflitos de simultaneidade otimista.  
@@ -28,23 +29,23 @@ Os tópicos desta seção descrevem como fazer e transmitir alterações para o 
 >  Os desenvolvedores que usam o [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] podem usar o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para desenvolver procedimentos armazenados para a mesma finalidade.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Como: inserir linhas no banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/how-to-insert-rows-into-the-database.md)  
+ [Como inserir linhas no banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/how-to-insert-rows-into-the-database.md)  
  Descreve como inserir linhas no banco de dados adicionando objetos ao modelo de objeto.  
   
- [Como: atualizar linhas no banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/how-to-update-rows-in-the-database.md)  
+ [Como atualizar linhas no banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/how-to-update-rows-in-the-database.md)  
  Descreve como atualizar linhas no banco de dados atualizando objetos no modelo de objeto.  
   
- [Como: excluir linhas do banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)  
+ [Como excluir linhas do banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)  
  Descreve como excluir linhas no banco de dados excluindo objetos no modelo de objeto.  
   
- [Como: enviar alterações para o banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/how-to-submit-changes-to-the-database.md)  
+ [Como enviar alterações para o banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/how-to-submit-changes-to-the-database.md)  
  Descreve como enviar alterações no modelo de objeto ao banco de dados.  
   
- [Como: submissões de dados colchete usando transações](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)  
+ [Como delimitar submissões de dados entre colchetes usando transações](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)  
  Descreve como incluir operações em uma transação.  
   
- [Como: criar dinamicamente um banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md)  
+ [Como criar um banco de dados dinamicamente](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md)  
  Descreve como gerar bancos de dados dinamicamente e cenários típicos para essa abordagem.  
   
- [Como: gerenciar conflitos de alteração](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)  
+ [Como gerenciar conflitos de alteração](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)  
  Descreve técnicas de como resolver problemas de simultaneidade otimista.

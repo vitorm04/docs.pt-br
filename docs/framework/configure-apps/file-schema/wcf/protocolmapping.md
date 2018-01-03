@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 88eb76a5657bd4a83bebb32ce30f73d32693be9b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b2d932e8a7fbe9c1457b5cea5106b69317227a21
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltprotocolmappinggt"></a>&lt;protocolMapping&gt;
 Representa uma seção de configuração para definir um conjunto de mapeamento de padrão de protocolo entre esquemas de protocolo de transporte (por exemplo, http, net.tcp, NET. pipe, etc.) e as associações do WCF. Durante a criação de pontos de extremidade padrão em tempo de execução, [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] examina os mapeamentos configurados e decide em qual associação a ser usado para um determinado com base em endereço.  

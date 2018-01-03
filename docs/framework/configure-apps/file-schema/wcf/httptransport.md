@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3097f5352a8f92397b80f0c20e0cc2206e1e3fee
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 50cbf6521870a54f4f87c3eeb12030d5d7f2f6bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lthttptransportgt"></a>&lt;httpTransport&gt;
 Especifica um transporte HTTP para transmissão de mensagens SOAP para uma associação personalizada.  
@@ -85,8 +86,8 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
  <xref:System.ServiceModel.Channels.TransportBindingElement>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
  [Transportes](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Selecionando um transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [Bindings](../../../../../docs/framework/wcf/bindings.md) (Associações)  
+ [Escolhendo um transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
+ [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

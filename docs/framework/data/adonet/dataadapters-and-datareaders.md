@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 3e7a0af0b5fabdfacfcc825258242868b0fbb513
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6d071622862a645d11ea8228574f81d5f8c3e6e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapters e DataReaders
 Você pode usar o ADO.NET **DataReader** para recuperar um fluxo de dados somente leitura, somente encaminhamento de um banco de dados. Os resultados são retornados como a consulta é executada e são armazenados no buffer de rede no cliente até que você os solicita usando o **leitura** método o **DataReader**. Usando o **DataReader** pode aumentar o desempenho do aplicativo ao recuperar dados assim que ele está disponível e (por padrão) armazenar apenas uma linha por vez na memória, reduzindo a sobrecarga do sistema.  
@@ -39,10 +40,10 @@ Você pode usar o ADO.NET **DataReader** para recuperar um fluxo de dados soment
  [Adding Existing Constraints to a DataSet](../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md) (Adicionando restrições existentes a um DataSet)  
  Descreve como adicionar as restrições existentes a um `DataSet`.  
   
- [DataAdapter DataTable e DataColumn mapeamentos](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)  
+ [Mapeamentos de DataTable e de DataColumn do DataAdapter](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)  
  Descreve como configurar `DataTableMappings` e `ColumnMappings` para um `DataAdapter`.  
   
- [Paginação por meio de um resultado de consulta](../../../../docs/framework/data/adonet/paging-through-a-query-result.md)  
+ [Paginação por um resultado de consulta](../../../../docs/framework/data/adonet/paging-through-a-query-result.md)  
  Fornece um exemplo de como exibir os resultados de uma consulta como páginas de dados.  
   
  [Updating Data Sources with DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md) (Atualizando fontes de dados com DataAdapters)  

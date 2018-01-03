@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 94942360aaa91a39c8f46414807490bcb6e0b093
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 38b4f61b334a41cedf812a900265af95f1f52e61
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-and-remoting-considerations"></a>Considerações sobre segurança e comunicação remota
 Comunicação remota permite que você configure transparente chamadas entre domínios de aplicativo, processos ou computadores. No entanto, a movimentação da pilha código acesso segurança não pode ultrapassar os limites de processo ou máquinas (Aplicar entre domínios de aplicativos do mesmo processo).  

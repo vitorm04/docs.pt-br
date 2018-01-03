@@ -9,11 +9,11 @@ ms.assetid: c402da97-a2b2-4219-a83a-0cebbfdffef2
 caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c42c33bdbf06d3e0348ab0c430628c5d7f793660
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 63130405550684a6e5d8c9c7bfcd1aa971045f2b
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-39life39-cannot-be-zero"></a>Argumento &#39; Vida &#39; não pode ser zero
 Um argumento para `Life`, que deve ser um `Double` que especifica o período de vida útil do ativo, não é válido.  
@@ -25,7 +25,4 @@ Um argumento para `Life`, que deve ser um `Double` que especifica o período de 
 -   Verifique se as operações anteriores em variáveis na expressão, especialmente aquelas de outros procedimentos passadas para o procedimento como argumentos.  
   
 ## <a name="see-also"></a>Consulte também  
- [NÃO está em compilação: Função de BDD](http://msdn.microsoft.com/en-us/c7cf8929-d158-4399-b3cb-31d897d12556)  
- [NÃO está em compilação: Função de SDA](http://msdn.microsoft.com/en-us/23c25672-f5dd-49ac-9893-4faa82634181)  
- [NÃO está em compilação: Função SLN](http://msdn.microsoft.com/en-us/8e06130a-056e-4266-a8a9-1592b86f58d2)  
- [Passando Argumentos por Valor e por Referência](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+  [Passando Argumentos por Valor e por Referência](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

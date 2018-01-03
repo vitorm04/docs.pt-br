@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8b0147049a988a8fa2d0721da39f1d9c37278803
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b3040a16b6d167c4f066b2ddbd0a542741f88d62
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-encoding"></a>Decodificador de mensagens
 Codificação é o processo de transformar um conjunto de caracteres Unicode em uma sequência de bytes. Decodificação de é o processo inverso. Windows Communication Foundation (WCF) inclui três tipos de codificação para mensagens SOAP: texto, binária e mecanismo de otimização de transmissão mensagem (MTOM).  
@@ -31,7 +32,7 @@ Codificação é o processo de transformar um conjunto de caracteres Unicode em 
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Channels.CustomBinding>  
  <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
- [Bindings](../../../../../docs/framework/wcf/bindings.md) (Associações)  
+ [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  

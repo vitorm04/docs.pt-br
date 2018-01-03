@@ -32,11 +32,11 @@ ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
 caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 59fee9eb79af86df7f01bd77c27a929ef61fcfe2
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 22595eff2509d3954b3ce9d5038b19a681fbfbbe
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declared-element-names-visual-basic"></a>Nomes de elemento declarados (Visual Basic)
 Cada elemento declarado tem um nome, também chamado de um *identificador*, que é o código que se usa para se referir a ele.  
@@ -71,7 +71,7 @@ Cada elemento declarado tem um nome, também chamado de um *identificador*, que 
  `xyz$wv`  
   
 > [!CAUTION]
->  Nomes de elementos iniciados com um sublinhado (`_`) não fazem parte do [independência da linguagem e componentes independentes da linguagem](../../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS), então um código compatível com CLS não pode usar um componente que define tais nomes. No entanto, um sublinhado em qualquer outra posição de um nome de elemento é compatível com CLS.  
+>  Nomes de elementos iniciados com um sublinhado (`_`) não fazem parte do [independência da linguagem e componentes independentes da linguagem](../../../../standard/language-independence-and-language-independent-components.md) (CLS), então um código compatível com CLS não pode usar um componente que define tais nomes. No entanto, um sublinhado em qualquer outra posição de um nome de elemento é compatível com CLS.  
   
 ### <a name="name-length-guidelines"></a>Diretrizes para comprimento de nome  
  De forma prática, o nome deve ser tão curto quanto possível e ainda identificar claramente a natureza do elemento. Isso melhora a legibilidade do código e reduz o tamanho de arquivo de origem e de comprimento de linha.  

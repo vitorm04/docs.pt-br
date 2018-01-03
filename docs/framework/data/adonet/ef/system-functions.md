@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f2b7939371d99f8b503ac779f07b34f5fff497a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dda704e70fc7927f382e851189073ffa5dececb9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="system-functions"></a>Funções do sistema
 O provedor de dados. NET Framework para SQL Server (SqlClient) fornece as seguintes funções do sistema:  
@@ -29,10 +30,10 @@ O provedor de dados. NET Framework para SQL Server (SqlClient) fornece as seguin
 |`CURRENT_ USER` `()`|Retorna o nome do usuário atual.<br /><br /> **Valor retornado**<br /><br /> Um `String` ASCII.<br /><br /> **Exemplo**<br /><br /> `SqlServer.CURRENT_USER()`|  
 |`DATALENGTH` `(` `expression` `)`|Retorna o número de bytes usados para representar qualquer expressão.<br /><br /> **Argumentos**<br /><br /> `expression`: Um `Boolean`, `Byte`, `Int16`, `Int32`, `Int64`, `Single`, `Decimal`, `Double`, `DateTime`, `Time`, `DateTimeOffset`, `String`, `Binary`, ou `Guid`.<br /><br /> **Valor retornado**<br /><br /> O tamanho das propriedades como `Int32`.<br /><br /> **Exemplo**<br /><br /> `SELECT VALUE SqlServer.DATALENGTH(P.Name)FROM`<br /><br /> `AdventureWorksEntities.Product AS P`|  
 |`HOST_NAME()`|Retorna o nome da estação de trabalho.<br /><br /> **Valor retornado**<br /><br /> Um `String` Unicode.<br /><br /> **Exemplo**<br /><br /> `SqlServer.HOST_NAME()`|  
-|`ISDATE(` `expression` `)`|Determina se uma expressão de entrada é uma data válida.<br /><br /> **Argumentos**<br /><br /> `expression`: Um `Boolean`, `Byte`, `Int16`, `Int32`, `Int64`, `Single`, `Decimal`, `Double`, `DateTime`, `Time`, `DateTimeOffset`, `String`, `Binary`, ou `Guid`.<br /><br /> **Valor retornado**<br /><br /> Um `Int32`. Um (1) se a expressão de entrada é uma data válida. Zero (0) de outra maneira.<br /><br /> **Exemplo**<br /><br /> `SqlServer.ISDATE('1/1/2006')`|  
-|`ISNUMERIC(` `expression` `)`|Determina se uma expressão é um tipo numérico válido.<br /><br /> **Argumentos**<br /><br /> `expression`: Um `Boolean`, `Byte`, `Int16`, `Int32`, `Int64`, `Single`, `Decimal`, `Double`, `DateTime`, `Time`, `DateTimeOffset`, `String`, `Binary`, ou `Guid`.<br /><br /> **Valor retornado**<br /><br /> Um `Int32`. Um (1) se a expressão de entrada é uma data válida. Zero (0) de outra maneira.<br /><br /> **Exemplo**<br /><br /> `SqlServer.ISNUMERIC('21')`|  
+|`ISDATE(``expression``)`|Determina se uma expressão de entrada é uma data válida.<br /><br /> **Argumentos**<br /><br /> `expression`: Um `Boolean`, `Byte`, `Int16`, `Int32`, `Int64`, `Single`, `Decimal`, `Double`, `DateTime`, `Time`, `DateTimeOffset`, `String`, `Binary`, ou `Guid`.<br /><br /> **Valor retornado**<br /><br /> Um `Int32`. Um (1) se a expressão de entrada é uma data válida. Zero (0) de outra maneira.<br /><br /> **Exemplo**<br /><br /> `SqlServer.ISDATE('1/1/2006')`|  
+|`ISNUMERIC(``expression``)`|Determina se uma expressão é um tipo numérico válido.<br /><br /> **Argumentos**<br /><br /> `expression`: Um `Boolean`, `Byte`, `Int16`, `Int32`, `Int64`, `Single`, `Decimal`, `Double`, `DateTime`, `Time`, `DateTimeOffset`, `String`, `Binary`, ou `Guid`.<br /><br /> **Valor retornado**<br /><br /> Um `Int32`. Um (1) se a expressão de entrada é uma data válida. Zero (0) de outra maneira.<br /><br /> **Exemplo**<br /><br /> `SqlServer.ISNUMERIC('21')`|  
 |`NEWID()`|Cria um valor exclusivo do tipo GUID.<br /><br /> **Valor retornado**<br /><br /> Um `Guid`.<br /><br /> **Exemplo**<br /><br /> `SqlServer.NEWID()`|  
-|`USER_NAME(` `id` `)`|Retorna um nome de usuário de base de dados de um número de identificação especificado.<br /><br /> **Argumentos**<br /><br /> `expression`: Um número de identificação de `Int32` associada a um usuário de base de dados.<br /><br /> **Valor retornado**<br /><br /> Um `String` Unicode.<br /><br /> **Exemplo**<br /><br /> `SqlServer.USER_NAME(0)`|  
+|`USER_NAME(``id``)`|Retorna um nome de usuário de base de dados de um número de identificação especificado.<br /><br /> **Argumentos**<br /><br /> `expression`: Um número de identificação de `Int32` associada a um usuário de base de dados.<br /><br /> **Valor retornado**<br /><br /> Um `String` Unicode.<br /><br /> **Exemplo**<br /><br /> `SqlServer.USER_NAME(0)`|  
   
  Para obter mais informações sobre a cadeia de caracteres funções que SqlClient suporte, consulte a documentação para a versão do SQL Server que você especificou no manifesto do provedor SqlClient:  
   

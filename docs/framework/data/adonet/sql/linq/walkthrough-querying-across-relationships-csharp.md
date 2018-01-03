@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c294b888d95c4d6a77d96198f885c2363fda4e36
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 61586b8d556a9edccace25b75ceb2696ec675dd3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Passo a passo: Consultando através de relações (C#)
 Este passo a passo demonstra o uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associações* para representar as relações de chave estrangeira no banco de dados.  
@@ -29,7 +30,7 @@ Este passo a passo demonstra o uso de [!INCLUDE[vbtecdlinq](../../../../../../in
 ## <a name="prerequisites"></a>Pré-requisitos  
  Você deve ter concluído [passo a passo: modelo de objeto simples e de consulta (c#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md). Este passo a passo é baseado naquele, incluindo a presença do arquivo northwnd.mdf em c:\linqtest5.  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  Este passo a passo consiste em três tarefas principais:  
   
 -   Adicionando uma classe de entidade para representar a tabela Orders no banco de dados de exemplo Northwind.  

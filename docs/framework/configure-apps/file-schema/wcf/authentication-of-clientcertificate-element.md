@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0bebbc8b5cc315e92645cbbf0321de53122c7b1c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e909bd7f6257445fe4c42dd92ae366676f72d60c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltauthenticationgt-of-ltclientcertificategt-element"></a>&lt;autenticação&gt; de elemento &lt;clientCertificate&gt;
 Especifica os comportamentos de autenticação para certificados de cliente usados por um serviço.  
@@ -61,7 +62,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|Cadeia de caracteres|Especifica o nome do tipo e assembly e outros dados usados para localizar o tipo.|  
+|Cadeia de Caracteres|Especifica o nome do tipo e assembly e outros dados usados para localizar o tipo.|  
   
 ## <a name="certificatevalidationmode-attribute"></a>certificateValidationMode atributo  
   
@@ -124,5 +125,5 @@ trustedStoreLocation="CurrentUser/LocalMachine"
  <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Authentication%2A>  
  <xref:System.ServiceModel.Configuration.X509ClientCertificateAuthenticationElement>  
  [Comportamentos de segurança](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Como: criar um serviço que utiliza um validador de certificado personalizado](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
- [Trabalhar com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+ [Como criar um serviço que utiliza um validador de certificado personalizado](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
+ [Trabalhando com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

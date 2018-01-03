@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e48ac307087d5b90567c720d0c215ac0d52ccb6b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 99a87a3d0dfabb053ca05644e0b3e53361821b9b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-insert-update-and-delete-operations"></a>Personalizando a inserção, atualiazação, e as operações de exclusão
 Por padrão, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] gerencia dinâmico SQL para implementar à leitura, inserção, atualiazação, e as operações de exclusão. Na prática, no entanto, você personaliza normalmente seu aplicativo atender às suas necessidades comerciais.  
@@ -28,14 +29,14 @@ Por padrão, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]
  Tópicos desta seção descreve as técnicas que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornece personalizando à leitura, inserção, atualiazação, e as operações de exclusão em seu aplicativo.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Personalizando operações: Visão geral](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-overview.md)  
+ [Personalizando operações: visão geral](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-overview.md)  
  Descreve as diversas técnicas que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornece personalizando à leitura, inserção, atualiazação, e as operações de exclusão.  
   
- [Inserir, atualizar e excluir operações](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)  
+ [Operações de inserção, atualização e exclusão](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)  
  Descreve os processos de opção de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para manipular dados de base de dados.  
   
- [Responsabilidades do desenvolvedor em Substituir o comportamento padrão](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)  
+ [Responsabilidades do desenvolvedor em substituir o comportamento padrão](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)  
  Descreve a função do desenvolvedor em implementar os requisitos não aplicadas por [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Adicionando lógica comercial usando métodos parciais](../../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)  
+ [Adicionando a lógica de negócios usando métodos parciais](../../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)  
  Descreve como usar os métodos parciais para substituir métodos gerado automaticamente.

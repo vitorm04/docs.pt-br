@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b80eeedc67678d703664eb705408a72b7e4a2274
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: da48efc110669c170fc409e22cb8402f471b22e7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="canonical-functions"></a>Funções canônicas
 Essa seção discute as funções canônicas que têm suporte por todos os provedores de dados e podem ser usadas por todas as tecnologias de consulta. As funções canônicas não podem ser estendidas por um provedor.  
@@ -36,7 +37,7 @@ Essa seção discute as funções canônicas que têm suporte por todos os prove
  O namespace para a função canônica é <xref:System.Data.Metadata.Edm>. O namespace <xref:System.Data.Metadata.Edm> é incluído automaticamente em todas as consultas. No entanto, se outro namespace for importado e contiver uma função com o mesmo nome de uma função canônica (no namespace <xref:System.Data.Metadata.Edm>), você deverá especificar o namespace.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Funções agregadas canônicas](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)  
+ [Funções canônicas agregadas](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)  
  Discute funções canônicas de agregação de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
  [Funções canônicas matemáticas](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)  
@@ -48,7 +49,7 @@ Essa seção discute as funções canônicas que têm suporte por todos os prove
  [Funções canônicas de data e hora](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)  
  Discute funções canônicas de data e hora de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
- [Bit a bit funções canônicas](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)  
+ [Funções canônicas bit a bit](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)  
  Discute funções canônicas bit a bit de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
  [Funções espaciais](../../../../../../docs/framework/data/adonet/ef/language-reference/spatial-functions.md)  
@@ -60,5 +61,5 @@ Essa seção discute as funções canônicas que têm suporte por todos os prove
 ## <a name="see-also"></a>Consulte também  
  [Visão geral do Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
  [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Mapeamento de funções de modelo conceitual canônico para o SQL Server](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
+ [Mapeamento de funções canônicas de modelo conceitual para o SQL Server](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
  [Funções definidas pelo usuário](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)

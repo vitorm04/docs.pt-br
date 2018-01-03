@@ -20,11 +20,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7349864e8b191060964a7e716b34a0a7587e8f36
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 55ed062ce2b4464618dfdb8184be65847195280d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-query-options-to-a-data-service-query-wcf-data-services"></a>Como: adicionar opções de consulta para uma consulta de serviço de dados (WCF Data Services)
 O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite consultar um serviço de dados de um aplicativo cliente baseado em .NET Framework usando as classes de serviço de dados do cliente geradas. É o mais fácil de fazer isso para compor uma expressão de consulta de linguagem LINQ (consulta integrada) que inclui as opções de consulta desejado. Você também pode chamar uma série de métodos de consulta LINQ para compor uma consulta equivalente. Finalmente, você pode usar o <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> para adicionar opções de consulta para uma consulta. Em cada um desses casos, o URI que é gerado pelo cliente inclui o conjunto de entidades solicitado com as opções de consulta selecionada aplicadas. Para obter mais informações, consulte [consultando o Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
@@ -57,4 +58,4 @@ O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite consultar 
   
 ## <a name="see-also"></a>Consulte também  
  [Querying the Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md) (Consultando o serviço de dados)  
- [Como: projeto resultados da consulta](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)
+ [Como fazer para projetar resultados de consulta](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)

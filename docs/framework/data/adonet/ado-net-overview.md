@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: ae25f03a091d3a9705a2e445fec948d8c5e15e0f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e18115e460bf546c2fd6263e4671457a3da68f65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adonet-overview"></a>Visão geral do ADO.NET
 O ADO.NET fornece acesso consistente a fontes de dados como o SQL Server e o XML, e a fontes de dados expostas através do OLE DB e do ODBC. Os aplicativos do consumidor de compartilhamento de dados podem usar o ADO.NET para se conectar a essas fontes de dados, e para recuperar, manipular e atualizar os dados nelas contidos.  
@@ -33,25 +34,25 @@ O ADO.NET fornece acesso consistente a fontes de dados como o SQL Server e o XML
  **Declaração de privacidade**: O System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, SqlServerCe e System.Data.DataSetExtensions.dll assemblies não distingui entre um usuário dados privados e dados de não-particulares.  Esses assemblies não coletam, não armazenam nem transmitem dados privados de nenhum usuário. No entanto, os aplicativos de terceiros podem coletar, armazenar ou transmitir dados privados de um usuário usando esses assemblies.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Arquitetura ADO.NET](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
+ [Arquitetura do ADO.NET](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
  Fornece uma visão geral da arquitetura e dos componentes do ADO.NET.  
   
- [Diretrizes e opções de tecnologia ADO.NET](../../../../docs/framework/data/adonet/ado-net-technology-options-and-guidelines.md)  
+ [Opções e diretrizes da tecnologia ADO.NET](../../../../docs/framework/data/adonet/ado-net-technology-options-and-guidelines.md)  
  Descreve os produtos e as tecnologias incluídos na plataforma de dados de entidade.  
   
  [LINQ e ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
  Descreve como a consulta integrada à linguagem (LINQ) é implementada no ADO.NET e fornece links para tópicos relevantes.  
   
- [Provedores de dados do .NET framework](../../../../docs/framework/data/adonet/data-providers.md)  
+ [Provedores de dados do .NET Framework](../../../../docs/framework/data/adonet/data-providers.md)  
  Fornece uma visão geral do design do provedor de dados .NET Framework e dos provedores de dados .NET Framework incluídos no ADO.NET.  
   
- [Conjuntos de dados ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
+ [DataSets ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
  Fornece uma visão geral do design e dos componentes do `DataSet`.  
   
  [Execução lado a lado no ADO.NET](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
  Aborda as diferenças entre as versões do ADO.NET e seu efeito na execução lado a lado e na compatibilidade entre aplicativos.  
   
- [Exemplos de código ADO.NET](../../../../docs/framework/data/adonet/ado-net-code-examples.md)  
+ [Exemplos de código do ADO.NET](../../../../docs/framework/data/adonet/ado-net-code-examples.md)  
  Fornece exemplos de código que recuperam dados usando os provedores de dados ADO.NET.  
   
 ## <a name="related-sections"></a>Seções relacionadas  

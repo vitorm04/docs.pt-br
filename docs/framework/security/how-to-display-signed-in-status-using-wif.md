@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 494e67b39187a2a38f29f994e17051430d90f708
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f6951eb6c9df7a3fef09f5972f3cb5fcabe5496f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>Como exibir o status de conexão usando o WIF
 ## <a name="applies-to"></a>Aplica-se a  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="contents"></a>Conteúdo  
   
--   Visão Geral  
+-   Visão geral  
   
 -   Resumo das etapas  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/18/2017
   
 -   Etapa 5 – testar a integração entre o WIF e o seu aplicativo ASP.NET  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  Este tópico demonstra como criar um aplicativo com reconhecimento de declaração simples usando o WIF e como exibir facilmente se um usuário está conectado ou não. As etapas a seguir usam o STS de desenvolvimento local que está incluído com a extensão de Identidade e Acesso do Visual Studio. O STS de desenvolvimento local destina-se a um ambiente de teste e desenvolvimento para fornecer um método simples de integrar declarações em seu aplicativo. Ele nunca deve ser usado em um ambiente de produção, já que ele não executa autenticação real e credenciais não são necessárias. No entanto, o código obrigatório nas etapas a seguir é o mesmo para um aplicativo pronto para produção usando autenticação real.  
   
 ## <a name="summary-of-steps"></a>Resumo das etapas  

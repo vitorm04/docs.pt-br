@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 350364c92d6159313d8fae6d6f9986a5e581d89c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 546f4c2e1d6c0a35daf74efacebd7bba4aff8d05
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ole-db-data-type-mappings"></a>Mapeamentos de tipo de dados do OLE DB
 A tabela a seguir mostra o deduzido [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tipo para tipos de dados do .NET Framework Data Provider para ADO e OLE DB (<xref:System.Data.OleDb>). Os métodos de acessador tipado para o <xref:System.Data.OleDb.OleDbDataReader> também são listados.  
@@ -27,9 +28,9 @@ A tabela a seguir mostra o deduzido [!INCLUDE[dnprdnshort](../../../../includes/
 |adBigInt|DBTYPE_I8|Int64|GetInt64()|  
 |adBinary|DBTYPE_BYTES|Byte[]|GetBytes|  
 |adBoolean|DBTYPE_BOOL|Boolean|GetBoolean()|  
-|adBSTR|DBTYPE_BSTR|Cadeia de caracteres|GetString)|  
+|adBSTR|DBTYPE_BSTR|Cadeia de Caracteres|GetString)|  
 |AdChapter|DBTYPE_HCHAPTER|Suporte por meio de `DataReader`. Consulte [recuperando dados usando um DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).|GetValue()|  
-|adChar|DBTYPE_STR|Cadeia de caracteres|GetString)|  
+|adChar|DBTYPE_STR|Cadeia de Caracteres|GetString)|  
 |adCurrency|DBTYPE_CY|Decimal|GetDecimal()|  
 |adDate|DBTYPE_DATE|DateTime|GetDateTime()|  
 |adDBDate|DBTYPE_DBDATE|DateTime|GetDateTime()|  
@@ -39,7 +40,7 @@ A tabela a seguir mostra o deduzido [!INCLUDE[dnprdnshort](../../../../includes/
 |adDouble|DBTYPE_R8|Duplo|GetDouble()|  
 |adError|DBTYPE_ERROR|ExternalException|GetValue()|  
 |adFileTime|DBTYPE_FILETIME|DateTime|GetDateTime()|  
-|adGUID|DBTYPE_GUID|GUID|GetGuid()|  
+|adGUID|DBTYPE_GUID|Guid|GetGuid()|  
 |adIDispatch|DBTYPE_IDISPATCH *|Objeto|GetValue()|  
 |adInteger|DBTYPE_I4|Int32|GetInt32()|  
 |adIUnknown|DBTYPE_IUNKNOWN *|Objeto|GetValue()|  
@@ -53,7 +54,7 @@ A tabela a seguir mostra o deduzido [!INCLUDE[dnprdnshort](../../../../includes/
 |adUnsignedSmallInt|DBTYPE_UI2|UInt16|GetValue()|  
 |adUnsignedTinyInt|DBTYPE_UI1|Byte|GetByte()|  
 |adVariant|DBTYPE_VARIANT|Objeto|GetValue()|  
-|adWChar|DBTYPE_WSTR|Cadeia de caracteres|GetString)|  
+|adWChar|DBTYPE_WSTR|Cadeia de Caracteres|GetString)|  
 |adUserDefined|DBTYPE_UDT|sem suporte||  
 |adVarNumeric|DBTYPE_VARNUMERIC|sem suporte||  
   

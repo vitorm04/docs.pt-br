@@ -12,16 +12,17 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: e23ec35b94196d1f8a597d3a74850b5292a4ef09
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 239834a732fe3bc1cb3e8e7f1d126d26c210d1f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Alterações na autenticação NTLM para HttpWebRequest na versão 3.5 SP1
 Foram feitas alterações de segurança no .NET Framework versão 3.5 SP1 que afetam a maneira como a autenticação integrada do Windows é manipulada por <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream> e por classes relacionadas no namespace System.Net. Essas alterações podem afetar os aplicativos que usam essas classes para fazer solicitações da Web e receber respostas em que a autenticação integrada do Windows baseada no NTLM é usada. Essa alteração pode afetar os servidores Web e aplicativos cliente configurados para usar a autenticação integrada do Windows.  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  O design da autenticação integrada do Windows permite que algumas respostas de credencial sejam universais, o que significa que elas podem ser reutilizadas ou encaminhadas. Se esse recurso de design específico não for necessário, os protocolos de autenticação deverão conter informações específicas ao destino, bem como informações específicas ao canal. Em seguida, os serviços podem fornecer proteção estendida para garantir que as respostas de credencial contenham informações específicas ao serviço, como um SPN (Nome da Entidade de Serviço). Com essas informações nas trocas de credenciais, os serviços podem proteger melhor contra o uso mal intencionado de respostas de credencial que podem ter sido obtidas indevidamente.  
   
  Vários componentes nos namespaces <xref:System.Net> e <xref:System.Net.Security> executam a autenticação integrada do Windows em nome de um aplicativo de chamada. Esta seção descreve as alterações nos componentes do System.Net para adicionar a proteção estendida no uso que eles fazem da autenticação integrada do Windows.  

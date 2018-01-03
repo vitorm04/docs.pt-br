@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 143447020f41368a3553a0c8cda78e80806b75ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0424a92f2308c21404cf35cd59c797498e6af992
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-adonet-applications"></a>Protegendo aplicativos ADO.NET
 Escrever um aplicativo seguro do ADO.NET envolve mais do que evitar armadilhas comuns de codificação como não validar a entrada do usuário. Um aplicativo que acessa dados tem vários pontos possíveis de falha que um invasor pode explorar para recuperar, manipular ou destruir dados confidenciais. Portanto, é importante compreender todos os aspectos de segurança, do processo de modelagem de ameaças durante a fase de projeto do aplicativo até a sua eventual implantação e manutenção contínua.  
@@ -30,10 +31,10 @@ Escrever um aplicativo seguro do ADO.NET envolve mais do que evitar armadilhas c
  [Visão geral de segurança](../../../../docs/framework/data/adonet/security-overview.md)  
  Fornece recomendações para criar aplicativos seguros do ADO.NET.  
   
- [Proteger o acesso a dados](../../../../docs/framework/data/adonet/secure-data-access.md)  
+ [Acesso seguro a dados](../../../../docs/framework/data/adonet/secure-data-access.md)  
  Descreve como trabalhar com dados de uma fonte de dados segura.  
   
- [Proteger aplicativos cliente](../../../../docs/framework/data/adonet/secure-client-applications.md)  
+ [Aplicativos cliente seguros](../../../../docs/framework/data/adonet/secure-client-applications.md)  
  Descreve as considerações de segurança para aplicativos cliente.  
   
  [Segurança de acesso do código e o ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)  

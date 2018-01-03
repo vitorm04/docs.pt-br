@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: fa7bfd2a9fffdd0cfedced76cf83f9e01630c986
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c386016eebf4571399aa55a261c1225146df8ccd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="treat-entity-sql"></a>TRATAR (Entity SQL)
 Trata um objeto de um tipo base específico como um objeto do tipo derivado especificado.  
@@ -78,4 +79,4 @@ WHERE p IS OF (NamespaceName.Employee)
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Tipos anuláveis estruturados](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)
+ [Tipos estruturados anulável](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)

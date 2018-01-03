@@ -15,11 +15,11 @@ ms.assetid: fcba4a97-3622-4b87-a891-0f77deab4998
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: dead17435cd147bdcdf91bdc5b8e0aa651e9e9fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e157fb0e1fcdb3899440eed02a42b16f75541989
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optimize"></a>/optimize
 Habilita ou desabilita otimizações do compilador.  
@@ -45,7 +45,7 @@ Habilita ou desabilita otimizações do compilador.
   
 |Para definir /Optimize no ambiente de desenvolvimento integrado do Visual Studio|  
 |---|  
-|1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**.<br />     Para obter mais informações, consulte [Introdução ao Designer de Projeto](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Clique na guia **Compilar**.<br />3.  Clique no botão **Avançado**.<br />4.  Modificar o **habilitar otimizações** caixa de seleção.|  
+|1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**.<br />     <br />2.  Clique na guia **Compilar**.<br />3.  Clique no botão **Avançado**.<br />4.  Modificar o **habilitar otimizações** caixa de seleção.|  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir compila `T2.vb` e habilita otimizações de compilador.  

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d1222d3df30bf2b3de1761b8fa5c702dc687d0a0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3803d550fe345c6f485dd204cc119f8a927a3501
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datatables"></a>DataTables
 Um <xref:System.Data.DataSet> é composto de uma coleção tabelas, relações e restrições. No ADO.NET, <xref:System.Data.DataTable> objetos são usados para representar as tabelas em um **conjunto de dados**. Um **DataTable** representa uma tabela de dados relacionais de na memória; os dados são locais para o. Aplicativo baseado em rede no qual ele reside, mas pode ser preenchido por uma fonte de dados, como Microsoft SQL Server usando um **DataAdapter** para obter mais informações, consulte [preenchendo um DataSet de um DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .  

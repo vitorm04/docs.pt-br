@@ -19,11 +19,11 @@ ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
 caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4634c198b5fc41a4834cbd3cd96f9d3f1863d09b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1c8bd94bc8dd379edfda8c4350428684a5cda0b1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="option-infer-statement"></a>Instrução Option Infer
 Permite o uso de inferência de tipo local ao declarar variáveis.  
@@ -68,7 +68,7 @@ IntelliSense quando o Option Infer está desligado
   
 #### <a name="to-set-option-infer-in-the-ide"></a>Para definir o Option Infer no IDE  
   
-1.  No **Gerenciador de Soluções**, selecione um projeto. No menu **Projeto**, clique em **Propriedades**. Para obter mais informações, consulte [NIB: Gerenciando propriedades de projeto com o Designer de projeto](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).  
+1.  No **Gerenciador de Soluções**, selecione um projeto. No menu **Projeto**, clique em **Propriedades**.  
   
 2.  Clique na guia **Compilar**.  
   

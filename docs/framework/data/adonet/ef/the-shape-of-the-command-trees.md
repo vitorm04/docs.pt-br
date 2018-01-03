@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c3311ac88355ac0d7214ec932719e1445757d9e1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 13e2e154a96b46d630b6df11fe3ae024d799c8e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-shape-of-the-command-trees"></a>A forma das árvores de comando
 O módulo de geração SQL é responsável por gerar uma consulta SQL backend específica com base em uma entrada dada comando expressão de consulta de árvore. Esta seção descreve as características, propriedades, e a estrutura das árvores de comando de consulta.  
@@ -116,4 +117,4 @@ O módulo de geração SQL é responsável por gerar uma consulta SQL backend es
  Quando os tipos primitivos são referenciados em árvores de comando de saída, normalmente são referenciados em tipos primitivos de modelo conceitual. No entanto, certos expressões, provedores precisam o tipo primitivo correspondente do armazenamento. Os exemplos de como expressões incluem DbCastExpression e possivelmente DbNullExpression, se o provedor precisa converter o zero para o tipo correspondente. Nesses casos, os provedores devem fazer o mapeamento para o tipo de provedor com base no tipo primitivo tipo e em suas facetas.  
   
 ## <a name="see-also"></a>Consulte também  
- [Geração SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+ [Geração de SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

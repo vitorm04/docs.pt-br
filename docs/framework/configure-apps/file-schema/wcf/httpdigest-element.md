@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 374858701788c0c187fc718dae63371f62dcf1cb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 95e6a7d31949bd7a6badb029e3f768a63fbaf924
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lthttpdigestgt-element"></a>&lt;httpDigest&gt; Element
 Especifica um resumo de tipo de credencial usada na autenticação do cliente para um serviço.  
@@ -66,6 +67,6 @@ Especifica um resumo de tipo de credencial usada na autenticação do cliente pa
  <xref:System.ServiceModel.Configuration.HttpDigestClientElement>  
  <xref:System.ServiceModel.Security.HttpDigestClientCredential>  
  [Comportamentos de segurança](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Securing Clients](../../../../../docs/framework/wcf/securing-clients.md) (Protegendo clientes)  
- [Trabalhar com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [Protegendo clientes](../../../../../docs/framework/wcf/securing-clients.md)  
+ [Trabalhando com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

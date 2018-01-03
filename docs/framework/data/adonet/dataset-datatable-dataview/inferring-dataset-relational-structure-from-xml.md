@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5a846bc321aab19cb1d04ba55ca4cca4b7188bcd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3c58dbd35c2c203450960118b58da49518098ed7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>Inferindo estrutura relacional do conjunto de dados do XML
 A estrutura relacional, ou o esquema, de um <xref:System.Data.DataSet> é composto de tabelas, colunas, restrições e relações. Ao carregar um <xref:System.Data.DataSet> do XML, o esquema pode ser predefinido ou pode ser criado, explicitamente ou por meio de inferência do XML que está sendo carregado. Para obter mais informações sobre como carregar o esquema e o conteúdo de um <xref:System.Data.DataSet> do XML, consulte [carregar um conjunto de dados do XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) e [carregar informações de esquema de conjunto de dados do XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md).  
@@ -38,7 +39,7 @@ A estrutura relacional, ou o esquema, de um <xref:System.Data.DataSet> é compos
  [Inferindo colunas](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-columns.md)  
  Descreve os elementos e atributos XML que são inferidos como colunas de tabela.  
   
- [Inferência de relações](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-relationships.md)  
+ [Inferindo relações](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-relationships.md)  
  Descreve o <xref:System.Data.DataRelation> e <xref:System.Data.ForeignKeyConstraint> objetos criados por aninhado, inferido tabelas.  
   
  [Inferindo o texto do elemento](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-element-text.md)  

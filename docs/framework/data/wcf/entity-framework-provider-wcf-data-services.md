@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 26c054e3cc9dbf920ab280df43d97acdb90ca055
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bc27663904371991855b2fe7d96b4a15827d1180
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>Provedor de Entity Framework (WCF Data Services)
 Como o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], o ADO.NET Entity Framework é baseado no Modelo de Dados de Entidade, que é um tipo de modelo de relação entre entidades. O Entity Framework converte operações em relação a sua implementação do modelo de dados de entidade, que é chamado de *modelo conceitual*, em operações equivalentes em relação a uma fonte de dados. Isso torna a Entity Framework um provedor ideal para os serviços de dados que são baseados em dados relacionais, e qualquer banco de dados que tem um provedor de dados que dá suporte a Entity Framework pode ser usado com o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Para obter uma lista das fontes de dados que oferecem suporte ao Entity Framework, consulte [provedores de terceiros para o Entity Framework](http://go.microsoft.com/fwlink/?LinkId=143699).  
@@ -30,6 +31,6 @@ Como o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], o ADO.NET En
  Para saber mais sobre o Entity Framework, consulte [visão geral do Entity Framework](../../../../docs/framework/data/adonet/ef/overview.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Provedores de serviços de dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
+ [Provedores de Serviços de Dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
  [Provedor de reflexão](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)  
- [Modelo de dados de entidade](../../../../docs/framework/data/adonet/entity-data-model.md)
+ [Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 75cb32ac55bfa397d12f4ec514488f6b2a159e3d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7f3593b6d7f8778ae8d74e779d3446403b99b655
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-wcf-data-services"></a>Introdução ao WCF Data Services
 Os tópicos nesta seção o ajudarão a compreender rapidamente [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] e como usar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para expor e consumir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds explicando as tecnologias subjacentes. Esta seção inclui os dois conteúdo conceitual e um [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) tutorial.  

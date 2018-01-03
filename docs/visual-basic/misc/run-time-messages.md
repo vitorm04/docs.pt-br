@@ -11,11 +11,11 @@ ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bceda3e102ec79bda6607d77c3b778f9a2014a33
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 37c88c7d88e01e6201a4679ae312e045c8cfab4a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-basic-run-time-messages"></a>Mensagens de tempo de execução do Visual Basic
 Esta seção contém o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] mensagens de erro que ocorrem em tempo de execução.  
@@ -304,7 +304,7 @@ Esta seção contém o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] mensagens de 
   
  [Membro de dados ou método não encontrado](../../visual-basic/misc/method-or-data-member-not-found.md)  
   
- [My.Application.Log não pode determinar a quantidade de espaço em disco livre](../../visual-basic/misc/my-application-log-cannot-determine-the-amount-of-free-disk-space.md)  
+ [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
   
  [Argumento nomeado '\<argumentname >' especificado várias vezes](../../visual-basic/misc/named-argument-argumentname-specified-multiple-times.md)  
   
@@ -559,5 +559,5 @@ Esta seção contém o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] mensagens de 
  [Você deve especificar um caminho que está sob a pasta atual ou uma de suas subpastas](../../visual-basic/misc/you-must-specify-path-that-is-under-the-current-folder-or-one-of-sub-folders.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [NOTINBUILD como: obter informações sobre erros de tempo de execução do Visual Basic](http://msdn.microsoft.com/en-us/22a7d0a6-b7d7-4c5d-971c-52ff0583c656)  
+   
  [Mensagens de Erro](../../visual-basic/language-reference/error-messages/index.md)

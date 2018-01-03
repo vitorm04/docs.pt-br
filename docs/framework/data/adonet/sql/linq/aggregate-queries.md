@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: cb1f26ec1fb8e5344946938206bb2418eeb6cd2d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0f76178d6b10e8253fd135c35504389e03d8acae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="aggregate-queries"></a>Consultas de agregação
 O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suporte aos operadores de agregação `Average`, `Count`, `Max`, `Min` e `Sum`. Observe as seguintes características dos operadores de agregação no [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
@@ -35,13 +36,13 @@ O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suport
  Os exemplos nos seguintes tópicos derivam do banco de dados de exemplo Northwind. Para obter mais informações, consulte [baixando bancos de dados de exemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Retorna o valor médio de uma sequência numérica](../../../../../../docs/framework/data/adonet/sql/linq/return-the-average-value-from-a-numeric-sequence.md)  
+ [Retornar o valor médio de uma sequência numérica](../../../../../../docs/framework/data/adonet/sql/linq/return-the-average-value-from-a-numeric-sequence.md)  
  Demonstra como usar o operador <xref:System.Linq.Enumerable.Average%2A>.  
   
  [Contar o número de elementos em uma sequência](../../../../../../docs/framework/data/adonet/sql/linq/count-the-number-of-elements-in-a-sequence.md)  
  Demonstra como usar o operador <xref:System.Linq.Enumerable.Count%2A>.  
   
- [Localize o valor máximo em uma sequência numérica](../../../../../../docs/framework/data/adonet/sql/linq/find-the-maximum-value-in-a-numeric-sequence.md)  
+ [Localizar o valor máximo em uma sequência numérica](../../../../../../docs/framework/data/adonet/sql/linq/find-the-maximum-value-in-a-numeric-sequence.md)  
  Demonstra como usar o operador <xref:System.Linq.Enumerable.Max%2A>.  
   
  [Localizar o valor mínimo em uma sequência numérica](../../../../../../docs/framework/data/adonet/sql/linq/find-the-minimum-value-in-a-numeric-sequence.md)  

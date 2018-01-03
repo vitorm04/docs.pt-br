@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 3648340050e5ee3a761efcbedd89f649ff8d9c91
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6df0b6a06240a5f59c888ddcfb2b34764fd888fa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>Populando um DataSet a partir de um DataAdapter
 O [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataSet> é uma representação de dados residentes na memória que fornecem um modelo de programação relacional, consistente e independente da fonte de dados. O `DataSet` representa um conjunto completo de dados, que inclui tabelas, restrições e relações entre as tabelas. Como `DataSet` é independente da fonte de dados, um `DataSet` pode incluir o local de dados para o aplicativo, e os dados de várias fontes de dados. A interação com fontes de dados existente é controlada com o `DataAdapter`.  
@@ -195,5 +196,5 @@ adapter.Fill(customers, "Customers");
  [DataAdapters e DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [Data Type Mappings in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md) (Mapeamentos de tipo de dados no ADO.NET)  
  [Modificando dados com um DbDataAdapter](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)  
- [Vários conjuntos de resultados ativos (MARS)](../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
+ [MARS (Conjunto de Resultados Ativos Múltiplos)](../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
  [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

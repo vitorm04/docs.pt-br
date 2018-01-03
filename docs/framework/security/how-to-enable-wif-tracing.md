@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 516e065bc360538e7b62807a5492c0c6c9d16e69
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c9c3bc67d7ce59d259fec06377c5de1768a130ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-wif-tracing"></a>Como habilitar o rastreamento do WIF
 ## <a name="applies-to"></a>Aplica-se a  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/18/2017
   
 -   Objetivos  
   
--   Visão Geral  
+-   Visão geral  
   
 -   Resumo das etapas  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/18/2017
   
 -   Habilitar o rastreamento e verificar se ele está funcionando  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  O rastreamento permite depurar e solucionar problemas de vários tipos de problemas com o WIF, incluindo tokens, cookies, declarações, mensagens de protocolo e muito mais. O rastreamento do WIF é semelhante ao rastreamento do WCF; por exemplo, você pode escolher o detalhamento dos rastreamentos para exibir tudo, desde mensagens críticas até todas as mensagens. Os rastreamentos do WIF podem ser gerados em arquivos **.xml** ou em arquivos **.svclog** que podem ser exibidos usando a ferramenta Visualizador de Rastreamento de Serviço. Essa ferramenta está localizada no diretório **bin** do caminho de instalação do SDK do Windows no seu computador, por exemplo: **C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SvcTraceViewer.exe**.  
   
 ## <a name="summary-of-steps"></a>Resumo das etapas  

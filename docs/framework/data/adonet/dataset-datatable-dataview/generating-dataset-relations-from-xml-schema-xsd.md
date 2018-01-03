@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: bda9ff0052c6dc2462f007e3febb3cbf9ca7d5ac
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 916b9ad24c2ae2334635760a520116b4c19df314
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Gerar relações de conjunto de dados de esquema XML (XSD)
 Em um <xref:System.Data.DataSet>, formam uma associação entre duas ou mais colunas, criando uma relação pai-filho. Há três maneiras para representar um **DataSet** relação dentro de um esquema de linguagem XSD de definição de esquema XML:  
@@ -91,20 +92,20 @@ msdata:childkey="" />
  Usa o processo de mapeamento de **relação** elemento para criar uma relação pai-filho entre o **OrderNumber** coluna o **ordem** tabela e o **OrderNo** coluna o **OrderDetail** tabela o **conjunto de dados**. O processo de mapeamento especifica apenas a relação; ele não especificar automaticamente quaisquer restrições nos valores nessas colunas, assim como as restrições de chave key/foreign primárias em bancos de dados relacionais.  
   
 ### <a name="in-this-section"></a>Nesta seção  
- [Mapear relações implícita entre elementos de esquema aninhada](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
+ [Mapear relações implícita entre elementos de esquema aninhados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
  Descreve as restrições e relações são criadas implicitamente em um **DataSet** quando elementos aninhados são encontrados no esquema XML.  
   
  [Mapear relações definidas para elementos aninhados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
  Descreve como definir explicitamente as relações em um **DataSet** para elementos aninhados no esquema XML.  
   
- [Especificar as relações entre os elementos com nenhuma aninhamento](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
+ [Especificar as relações entre os elementos sem nenhum aninhamento](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
  Descreve como criar relações em um **DataSet** entre elementos de esquema XML que não estão aninhados.  
   
 ### <a name="related-sections"></a>Seções relacionadas  
  [Derivando a estrutura relacional do conjunto de dados de esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
  Descreve a estrutura relacional, ou o esquema, de um **conjunto de dados** que é criado a partir do esquema de linguagem XSD de definição de esquema XML.  
   
- [Restrições de esquema (XSD) de XML de mapeamento para restrições de conjunto de dados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Mapeamento de restrições de esquema XML (XSD) exclusivos para restrições de conjunto de dados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  Descreve os elementos de esquema XML usados para criar restrições de chave estrangeiras e exclusivas em uma **conjunto de dados**.  
   
 ## <a name="see-also"></a>Consulte também  

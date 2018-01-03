@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 06d2711d9dac203645c127fa86581a9888db3cb1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d94090eadaa634d1cc2912bf60c987c47c1b6a5f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Gerando SQL das árvores de comando - práticas recomendadas
 O modelo das árvores de comando de consulta de saída a consulta expressável no SQL. No entanto, há determinados desafios comum para criadores de provedor para gerar o SQL de uma árvore de comando de saída. Este tópico discute esses desafios. No próximo tópico, o provedor exemplo mostra como resolver esses desafios.  
@@ -149,4 +150,4 @@ ON b.y = d.z
  Quando mapear conceitual (EDM) tipos para tipos de provedor, você deve mapear para o tipo o maior (Int32) para que todos os possíveis valores caber. Além disso, evite mapear para tipos que não podem ser usados para muitas operações, como BLOB tipos (por exemplo, `ntext` em [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]).  
   
 ## <a name="see-also"></a>Consulte também  
- [Geração SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+ [Geração de SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

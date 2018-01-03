@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f0dcad5d6287d5399dac6cea38b10984781770f9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 48b80856242730a5412cd9d5d8dd2c7f857304ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="architecture-and-design"></a>Arquitetura e design
 O módulo de geração de SQL no [provedor exemplo](http://go.microsoft.com/fwlink/?LinkId=180616) é implementado como um visitante na árvore de expressão que representa a árvore de comandos. A geração é feita em uma única passada sobre a árvore de expressão.  
@@ -425,4 +426,4 @@ IsEmpty(inut) = Not Exists(input)
  Para gerar nomes exclusivos para alias de extensão e para colunas, existing_name_n <>de uso onde n é o alias as menores que ainda não foram usadas. A lista global de todas as aliases aumenta a necessidade de se conectar renomear.  
   
 ## <a name="see-also"></a>Consulte também  
- [Geração SQL no provedor exemplo](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+ [Geração de SQL no provedor exemplo](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

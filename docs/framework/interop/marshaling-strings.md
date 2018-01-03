@@ -22,18 +22,19 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 750f4e6852cd5aa52d03f884edcbfbf80ed5fab5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 89dace5ba946f2c6bd1384f23ffcff797e99bdd4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="marshaling-strings"></a>Realizando marshaling de cadeias de caracteres
 A invocação de plataforma copia parâmetros de cadeia de caracteres, convertendo-os do formato do .NET Framework (Unicode) para o formato não gerenciado (ANSI), se necessário. Já que as cadeias de caracteres gerenciadas são imutáveis, a invocação de plataforma não as copia de volta da memória não gerenciada para a memória gerenciada quando a função retorna.  
   
  A tabela a seguir lista as opções de marshaling para cadeias de caracteres, descreve o uso delas e fornece um link para a amostra de .NET Framework correspondente.  
   
-|Cadeia de caracteres|Descrição|Amostra|  
+|Cadeia de Caracteres|Descrição|Amostra|  
 |------------|-----------------|------------|  
 |Por valor.|Passa cadeias de caracteres como parâmetros In.|[MsgBox](../../../docs/framework/interop/msgbox-sample.md)|  
 |Como resultado.|Retorna cadeias de caracteres de código não gerenciado.|[Cadeias de Caracteres](http://msdn.microsoft.com/en-us/be9e82a3-dc95-4aaa-9396-61b66e467e02)|  

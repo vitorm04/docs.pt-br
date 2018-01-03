@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1643e5d645ec6c3ae35b2e57b8cb4f4bcb048379
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ebdee4427bd0848e75e58443fefd439acaa27f64
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="loader-etw-events"></a>Eventos ETW de carregador
 <a name="top"></a> Esses eventos coletam informações relacionadas ao carregamento e descarregamento de domínios do aplicativo, assemblies e módulos.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="application-domain-events"></a>Eventos de domínio do aplicativo  
  A tabela a seguir mostra a palavra-chave e o nível.  
   
-|Palavra-chave para acionar o evento|Evento|Nível|  
+|Palavra-chave para acionar o evento|evento|Nível|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AppDomainLoad_V1` e `AppDomainUnLoad_V1`|Informativo (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Informativo (4)|  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Descrição|  
+|evento|ID do evento|Descrição|  
 |-----------|--------------|-----------------|  
 |`AppDomainLoad_V1` (registrado para todos os domínios do aplicativo)|156|Gerado sempre que um domínio do aplicativo é criado durante o tempo de vida de um processo.|  
 |`AppDomainUnLoad_V1`|157|Gerado sempre que um domínio do aplicativo é destruído durante o tempo de vida de um processo.|  
@@ -74,7 +75,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="clr-loader-assembly-events"></a>Eventos de assembly do carregador CLR  
  A tabela a seguir mostra a palavra-chave e o nível.  
   
-|Palavra-chave para acionar o evento|Evento|Nível|  
+|Palavra-chave para acionar o evento|evento|Nível|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AssemblyLoad` e `AssemblyUnload`|Informativo (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Informativo (4)|  
@@ -82,7 +83,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Descrição|  
+|evento|ID do evento|Descrição|  
 |-----------|--------------|-----------------|  
 |`AssemblyLoad_V1`|154|Gerado quando um assembly é carregado.|  
 |`AssemblyUnload_V1`|155|Gerado quando um assembly é descarregado.|  
@@ -106,7 +107,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="module-events"></a>Eventos de módulo  
  A tabela a seguir mostra a palavra-chave e o nível.  
   
-|Palavra-chave para acionar o evento|Evento|Nível|  
+|Palavra-chave para acionar o evento|evento|Nível|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`ModuleLoad_V2` e `ModuleUnload_V2`|Informativo (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Informativo (4)|  
@@ -115,7 +116,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Descrição|  
+|evento|ID do evento|Descrição|  
 |-----------|--------------|-----------------|  
 |`ModuleLoad_V2`|152|Gerado quando um módulo é carregado durante o tempo de vida de um processo.|  
 |`ModuleUnload_V2`|153|Gerado quando um módulo é descarregado durante o tempo de vida de um processo.|  
@@ -154,7 +155,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="clr-domain-module-events"></a>Eventos de módulo de domínio CLR  
  A tabela a seguir mostra a palavra-chave e o nível.  
   
-|Palavra-chave para acionar o evento|Evento|Nível|  
+|Palavra-chave para acionar o evento|evento|Nível|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|Informativo (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|Informativo (4)|  
@@ -162,7 +163,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Descrição|  
+|evento|ID do evento|Descrição|  
 |-----------|--------------|-----------------|  
 |`DomainModuleLoad_V1`|151|Gerado quando um módulo é carregado para um domínio do aplicativo.|  
 |`DomainModuleDCStart_V1`|151|Enumera os módulos carregados para um domínio do aplicativo durante um encerramento inicial e é registrado para todos os domínios de aplicativo.|  
@@ -187,7 +188,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="module-range-events"></a>Eventos de intervalo de módulo  
  A tabela a seguir mostra a palavra-chave e o nível.  
   
-|Palavra-chave para acionar o evento|Evento|Nível|  
+|Palavra-chave para acionar o evento|evento|Nível|  
 |-----------------------------------|-----------|-----------|  
 |`PerfTrackKeyWord`)|`ModuleRange`|Informativo (4)|  
 |`PerfTrackKeyWord`|`ModuleRangeDCStart`|Informativo (4)|  
@@ -195,7 +196,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Descrição|  
+|evento|ID do evento|Descrição|  
 |-----------|--------------|-----------------|  
 |`ModuleRange`|158|Esse evento está presente se uma imagem carregada do gerador de imagem nativa (NGen) foi otimizada com IBC e contém informações sobre as seções quentes da imagem NGen.|  
 |`ModuleRangeDCStart`|160|Um evento `ModuleRange` disparado no início de um encerramento.|  

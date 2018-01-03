@@ -24,11 +24,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5dd46da24c379a7900dff0dc482577195f5f4c23
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 134e03a1438e4c9399962a245eb44eec9dd02924
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Como adicionar instruções de rastreamento ao código de um aplicativo
 Os métodos usados com mais frequência para rastreamento são os métodos para gravar a saída em ouvintes: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert** e **Fail**. Esses métodos podem ser divididos em duas categorias: **Write**, **WriteLine**, and **Fail** emitem a saída incondicionalmente, enquanto **WriteIf**, **WriteLineIf** e **Assert** testam uma condição booliana e gravam ou não com base no valor da condição. **WriteIf** e **WriteLineIf** emitirão a saída se a condição for `true` e **Assert** emitirá a saída se a condição for `false`.  
@@ -98,6 +99,6 @@ Os métodos usados com mais frequência para rastreamento são os métodos para 
  <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>  
  <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>  
  [Rastreando e instrumentando aplicativos](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [Como: criar, inicializar e configurar opções de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
+ [Como criar, inicializar e configurar as opções de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
  [Opções de rastreamento](../../../docs/framework/debug-trace-profile/trace-switches.md)  
  [Ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/trace-listeners.md)

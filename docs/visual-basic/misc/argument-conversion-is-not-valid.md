@@ -9,18 +9,15 @@ ms.assetid: a5497ad5-25be-4ac7-91fb-ad117d683efe
 caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cc8d8e879453f8efd2c890ca5a4b0768a7c145b3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 88c9705eec2a9f61e51ad8969b0c0113c13c3b26
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-39conversion39-is-not-valid"></a>Argumento &#39; Conversão de &#39; não é válido
 Um valor para o `VbStrConv` enumeração não é válida, possivelmente porque ele é menor que zero. Valores de enumeração devem ser maior que ou igual a zero.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Certifique-se de que o valor é maior que ou igual a zero.  
-  
-## <a name="see-also"></a>Consulte também  
- [Enumeração de VbStrConv NOTINBUILD](http://msdn.microsoft.com/en-us/59f83dd9-6361-47df-a836-02ba9d4cb936)
+1.  Certifique-se de que o valor é maior que ou igual a zero.

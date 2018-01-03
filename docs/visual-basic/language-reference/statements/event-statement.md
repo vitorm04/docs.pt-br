@@ -26,11 +26,11 @@ ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
 caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b863ed5c8aca3332f4af3d759789eec153a79aed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4ba49d6582eb2ecac4846eaee570a4d92439a5d9
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-statement"></a>Instrução Event
 Declara um evento definido pelo usuário.  
@@ -122,7 +122,7 @@ End Event
  Pressione F5 para executar o exemplo anterior e clique no botão **iniciar**. A primeira caixa de texto inicia a contagem regressiva de segundos. Depois de decorrido o tempo total (10 segundos), a primeira caixa de texto exibe "Concluído".  
   
 > [!NOTE]
->  O `My.Application.DoEvents` método não processa os eventos da mesma maneira que faz o formulário. Para habilitar o formulário para manipular os eventos diretamente, você pode usar multithreading. Para obter mais informações, consulte [Threading](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c).  
+>  O `My.Application.DoEvents` método não processa os eventos da mesma maneira que faz o formulário. Para habilitar o formulário para manipular os eventos diretamente, você pode usar multithreading. Para obter mais informações, consulte [Threading](../../programming-guide/concepts/threading/index.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Instrução RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  

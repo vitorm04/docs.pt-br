@@ -14,11 +14,11 @@ ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2be2c460fddf2e8ea4fe1239ec073f208c072d34
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4f8a87ea3f3e551dfc84212e92f1409ef61bcba2
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="libpath"></a>/libpath
 Especifica o local dos assemblies referenciados.  
@@ -54,7 +54,7 @@ Especifica o local dos assemblies referenciados.
   
 |Configurar /libpath no Visual Studio ambiente de desenvolvimento integrado|  
 |---|  
-|1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**. Para obter mais informações, consulte [Introdução ao Designer de Projeto](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Clique na guia **Referências**.<br />3.  Clique o **caminhos de referência...**  botão.<br />4.  No **caminhos de referência** caixa de diálogo, digite o nome do diretório no **pasta:** caixa.<br />5.  Clique em **adicionar pasta**.|  
+|1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**. <br />2.  Clique na guia **Referências**.<br />3.  Clique o **caminhos de referência...**  botão.<br />4.  No **caminhos de referência** caixa de diálogo, digite o nome do diretório no **pasta:** caixa.<br />5.  Clique em **adicionar pasta**.|  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir compila `T2.vb` para criar um arquivo .exe. O compilador procura no diretório de trabalho, no diretório raiz da unidade c: e no diretório da unidade c: novos Assemblies referências de assembly.  

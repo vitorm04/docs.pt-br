@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e8a993c75f33dd3c98da5534658d02b4eeeda51a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 62c5cef51e125443d87c47f7f62dc76aa5d352b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Executar uma consulta XPath em um conjunto de dados
 A relação entre um sincronizado <xref:System.Data.DataSet> e <xref:System.Xml.XmlDataDocument> permite a você fazer uso do XML serviços, como a consulta XML Path Language (XPath), que acessam o **XmlDataDocument** e podem executar determinadas funcionalidades modo mais conveniente de acessar o **DataSet** diretamente. Por exemplo, em vez de usar o **selecione** método de um <xref:System.Data.DataTable> para navegar em relações com outras tabelas em um **conjunto de dados**, você pode executar uma consulta XPath em um **XmlDataDocument**  que está sincronizado com o **DataSet**, para obter uma lista de elementos XML na forma de um <xref:System.Xml.XmlNodeList>. Nós o **XmlNodeList**, convertido como <xref:System.Xml.XmlElement> nós, pode ser passada para o **GetRowFromElement** método do **XmlDataDocument**para retornar a correspondência <xref:System.Data.DataRow> referências às linhas da tabela na sincronizado **conjunto de dados**.  

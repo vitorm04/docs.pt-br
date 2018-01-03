@@ -13,18 +13,19 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 19be8e04f8bb0cb11c98d5361deb6deffe797fca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 14d666624ac4572956364b3db3fd5ee7aad8799b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-sql-quick-reference"></a>Referência rápida de Entity SQL
 Este tópico fornece uma referência rápida às consultas de [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. As consultas neste tópico são baseadas no modelo de vendas do AdventureWorks.  
   
 ## <a name="literals"></a>Literais  
   
-### <a name="string"></a>Cadeia de caracteres  
+### <a name="string"></a>Cadeia de Caracteres  
  Há literais de cadeia de caracteres Unicode e não Unicode. Cadeias de caracteres Unicode são prefixadas por s. Por exemplo, `N'hello'`.  
   
  Este é um exemplo de um literal de cadeia de caracteres não Unicode:  

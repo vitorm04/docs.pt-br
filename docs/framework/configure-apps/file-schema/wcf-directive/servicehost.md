@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10f7a0b077fb50149ad60034607eec413e774ee6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 027debb311a3f9547623b6dff778e82b7e475327
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicehost"></a>@ServiceHost
 Associa a fábrica usada para produzir o host de serviço com o serviço hospedado e outros aspectos de programação necessários para acessar ou compilar o código de hospedagem fornecido no arquivo. svc.  
@@ -44,7 +45,7 @@ CodeBehind = "CodeBehind"%>
 #### <a name="debug"></a>Depurar  
  Indica se o [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] serviço deve ser compilado com símbolos de depuração. `true`Se o [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] serviço deve ser compilada com símbolos de depuração; caso contrário, `false`.  
   
-#### <a name="language"></a>Linguagem  
+#### <a name="language"></a>Idioma  
  Especifica o idioma usado ao compilar todo o código embutido no arquivo (. svc). Os valores podem representar qualquer. Idiomas com suporte a rede, incluindo c#, VB e JS, que se referem a c#, Visual Basic .NET e JScript .NET, respectivamente. Esse atributo é opcional.  
   
 #### <a name="codebehind"></a>Code-behind  

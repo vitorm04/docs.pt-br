@@ -17,11 +17,11 @@ ms.assetid: e9245edf-6bef-420d-a7c7-324117752783
 caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6b5da8e5eacacde9de5bdc54ef2d5e4d7f0d2653
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b02171b28034d676b7027e96c2c66e36be9ae604
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rootnamespace"></a>/rootnamespace
 Especifica um namespace para todas as declarações de tipo.  
@@ -45,7 +45,7 @@ Especifica um namespace para todas as declarações de tipo.
   
 |Para definir /rootnamespace no Visual Studio ambiente de desenvolvimento integrado|  
 |---|  
-|1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**. Para obter mais informações, consulte [Introdução ao Designer de Projeto](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Clique na guia **Aplicativo**.<br />3.  Modificar o valor de **Namespace raiz** caixa.|  
+|1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**. <br />2.  Clique na guia **Aplicativo**.<br />3.  Modificar o valor de **Namespace raiz** caixa.|  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir compila `In.vb` e inclui todas as declarações de tipo no namespace `mynamespace`.  

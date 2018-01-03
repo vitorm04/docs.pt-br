@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d3791ea4084a6ae568fef1e76680f91434284639
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8576ba3ae26788076fedf71a1f8028afbd263378
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>Cenários de segurança do aplicativo no SQL Server
 Não é possível corrigir único para criar um aplicativo de cliente do SQL Server seguro. Cada aplicativo é exclusivo em seus requisitos, o ambiente de implantação e a população de usuários. Um aplicativo que seja razoavelmente seguro quando ele é implantado inicialmente pode se tornar menos segura ao longo do tempo. É impossível prever com precisão de qualquer quais ameaças podem surgir no futuro.  
@@ -48,7 +49,7 @@ Não é possível corrigir único para criar um aplicativo de cliente do SQL Ser
  [Gerenciando permissões com procedimentos armazenados no SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  Descreve como usar procedimentos armazenados para gerenciar permissões e controlar o acesso a dados. Usando procedimentos armazenados é uma maneira eficiente para responder a muitas ameaças de segurança.  
   
- [Gravando SQL dinâmico seguro no SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
+ [Escrevendo SQL dinâmico seguro no SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  Descreve técnicas para gravação seguro SQL dinâmico, usando procedimentos armazenados.  
   
  [Assinando procedimentos armazenados no SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d0d7df7ff1a0e8e732688e10befb4bffa86599d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 184a55c3c5479f1999057e55dcc761a250051e5e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-key"></a>chave de entidade
 Um *chave da entidade* é um [propriedade](../../../../docs/framework/data/adonet/property.md) ou um conjunto de propriedades de um [tipo de entidade](../../../../docs/framework/data/adonet/entity-type.md) que são usadas para determinar a identidade. As propriedades que compõem uma chave de entidade são escolhidas em tempo de design. Os valores das propriedades de chave de entidade devem identificar exclusivamente uma instância do tipo de entidade dentro de um [conjunto de entidades](../../../../docs/framework/data/adonet/entity-set.md) em tempo de execução. As propriedades que compõem uma chave de entidade devem ser escolhidas para garantir a exclusividade de instâncias em um conjunto de entidades.  
@@ -50,5 +51,5 @@ Um *chave da entidade* é um [propriedade](../../../../docs/framework/data/adone
  Usar `Name` e `Address` para a chave de entidade é uma opção razoável, porque dois autores de mesmo nome é improvável de viver no mesmo endereço. No entanto, esta opção para uma chave de entidade não garante absolutamente chaves exclusivas de entidade em um conjunto de entidades. Adicione uma propriedade, como `AuthorId`, que pode ser usado para identificar exclusivamente um autor seria recomendado nesse caso.  
   
 ## <a name="see-also"></a>Consulte também  
- [Conceitos chave do modelo de dados de entidade](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Modelo de dados de entidade](../../../../docs/framework/data/adonet/entity-data-model.md)
+ [Principais conceitos do Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model.md)

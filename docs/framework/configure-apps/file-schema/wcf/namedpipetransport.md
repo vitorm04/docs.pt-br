@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3083fe7f8663007cfcc6e335b2dcf4c51d2ebc8a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7802bff708cb081aa9f54f76a35ff5842ad60544
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltnamedpipetransportgt"></a>&lt;namedPipeTransport&gt;
 Define um transporte que faz com que um canal transferir mensagens usando pipes nomeados quando ele é incluído em uma associação personalizada.  
@@ -58,17 +59,17 @@ nenhuma.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|ChannelInitializationTimeout|Obtém ou define um <xref:System.TimeSpan> que determina o tempo máximo que um canal pode estar com o status de inicialização antes de ser desconectada.|  
-|connectionBufferSize|Obtém ou define o tamanho do buffer usado para transmitir um bloco da mensagem serializada na conexão do cliente ou serviço.|  
-|hostNameComparisonMode|Obtém ou define um valor que indica se o nome do host é usado para acessar o serviço ao fazer correspondência no URI.|  
+|ChannelInitializationTimeout|Obtém ou define um <xref:System.TimeSpan> que determina o tempo máximo que um canal pode estar com o status de inicialização antes de ser desconectado.|  
+|connectionBufferSize|Obtém ou define o tamanho do buffer usado para transmitir uma parte da mensagem serializada na conexão do cliente ou do serviço.|  
+|hostNameComparisonMode|Obtém ou define um valor que indica se o nome do host é usado para alcançar o serviço ao fazer correspondência no URI.|  
 |manualAddressing|Obtém ou define um valor que indica se o endereçamento manual da mensagem é necessário.|  
 |maxBufferPoolSize|Obtém ou define o tamanho máximo, em bytes, de qualquer pool de buffer usado pelo transporte.|  
-|maxBufferSize|Obtém ou define o tamanho máximo do buffer a ser usado. Para mensagens em fluxo, esse valor deve ser pelo menos o tamanho máximo possível dos cabeçalhos de mensagem, que são lidas no modo de buffer.|  
-|maxOutputDelay|Obtém ou define o intervalo máximo de tempo que uma parte de uma mensagem ou uma mensagem completa pode permanecer em buffer na memória antes de serem enviadas.|  
-|maxPendingAccepts|Obtém ou define o número máximo de canais de que um serviço pode ter aguardando um ouvinte para processar conexões de entrada para o serviço.|  
+|maxBufferSize|Obtém ou define o tamanho máximo do buffer a ser usado. Para mensagens transmitidas, este valor deve ser pelo menos o tamanho máximo possível dos cabeçalhos de mensagem, lidos em modo em buffer.|  
+|maxOutputDelay|Obtém ou define o intervalo máximo de tempo que uma parte de uma mensagem ou uma mensagem completa pode permanecer armazenada em buffer na memória antes de ser enviada.|  
+|maxPendingAccepts|Obtém ou define o número máximo de canais que um serviço pode ter aguardando um ouvinte para processar conexões de entrada para o serviço.|  
 |maxPendingConnections|Obtém ou define o número máximo de conexões aguardando a expedição no serviço.|  
 |maxReceivedMessageSize|Obtém e define o tamanho de mensagem máximo permitido, em bytes, que pode ser recebido.|  
-|transferMode|Obtém ou define um valor que indica se as mensagens são armazenadas em buffer ou transmitidas em fluxo com o transporte orientado à conexão.|  
+|transferMode|Obtém ou define um valor que indica se as mensagens são armazenadas em buffer ou transmitidas com o transporte voltado para a conexão.|  
 |[\<connectionPoolSettings > de \<namedPipeTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/connectionpoolsettings.md)|Especifica as configurações do pool de conexão adicionais para uma associação de Pipe nomeado.|  
   
 ### <a name="parent-elements"></a>Elementos pai  

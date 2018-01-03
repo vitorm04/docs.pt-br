@@ -14,11 +14,11 @@ ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 04a1b16a10d2a3945d1efbe3a2bd0850f1da39fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ca2454f5c306b3defd1c885dfd59ee130f3e828
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reference-required-to-assembly-39ltassemblyidentitygt39-containing-type-39lttypenamegt39-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-39ltprojectname1gt39-and-39ltprojectname2gt39"></a>Referência necessária para o assembly &#39; &lt;assemblyidentity&gt;&#39; contendo tipo &#39;&lt; TypeName&gt;&#39; mas não foi possível encontrar uma referência adequada devido à ambiguidade entre projetos &#39;&lt; projectname1&gt;&#39; e &#39;&lt; projectname2&gt;&#39;
 Uma expressão usa um tipo, como classe, estrutura, interface, enumeração ou representante, que está definido fora do seu projeto. No entanto, você tem referências do projeto para definir o tipo de mais de um assembly.  
@@ -38,6 +38,6 @@ Uma expressão usa um tipo, como classe, estrutura, interface, enumeração ou r
 ## <a name="see-also"></a>Consulte também  
  [Gerenciando referências em um projeto](/visualstudio/ide/managing-references-in-a-project)  
  [Referências a Elementos Declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [NIB: como adicionar ou remover referências usando a caixa de diálogo Adicionar Referência](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)  
+   
  [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)  
  [Solução de Problemas de Referências Quebradas](/visualstudio/ide/troubleshooting-broken-references)

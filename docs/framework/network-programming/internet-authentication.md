@@ -25,11 +25,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f44bef7804e9101b2d1bc50ba53f3fc7a5fa90ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fbf25ae866b338d2f1ac0ea11570e0d535e9137c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="internet-authentication"></a>Autenticação da Internet
 As classes <xref:System.Net> dão suporte a uma variedade de mecanismos de autenticação de cliente, incluindo os métodos de autenticação padrão de Internet básico, digest, negotiate, NTLM e a autenticação Kerberos, bem como métodos personalizados criados por você.  
@@ -49,6 +50,6 @@ As classes <xref:System.Net> dão suporte a uma variedade de mecanismos de auten
  Alguns esquemas de autenticação podem autenticar um usuário sem primeiro fazer uma solicitação para um recurso. Um aplicativo pode economizar tempo pré-autenticando o usuário com o recurso, eliminando assim pelo menos uma viagem de ida e volta ao servidor. Ou então, pode executar a autenticação durante a inicialização de programa a fim de ser mais responsivo para o usuário mais tarde. Esquemas de autenticação que podem usar pré-autenticação definem a propriedade <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> como **true**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Básica e a autenticação Digest](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
- [A autenticação Kerberos e NTLM](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)  
+ [Autenticação Básica e Digest](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
+ [Autenticação Kerberos e NTLM](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)  
  [Segurança na programação de rede](../../../docs/framework/network-programming/security-in-network-programming.md)

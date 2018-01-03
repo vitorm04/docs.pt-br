@@ -14,11 +14,11 @@ ms.assetid: 9f148c15-0909-4cb8-a2db-777f8a8b45ae
 caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d98a9f3cadc42021c302915cfc5b058b41e11ec6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 53b77dec53be1d97c5f2526cb117933a2b8fe046
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="out-visual-basic"></a>/out (Visual Basic)
 Especifica o nome do arquivo de saída.  
@@ -42,7 +42,7 @@ Especifica o nome do arquivo de saída.
   
 |Para configurar /out no ambiente de desenvolvimento integrado do Visual Studio|  
 |---|  
-|1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**. Para obter mais informações, consulte [Introdução ao Designer de Projeto](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Clique na guia **Aplicativo**.<br />3.  Modificar o valor de **nome do Assembly** caixa.|  
+|1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**. <br />2.  Clique na guia **Aplicativo**.<br />3.  Modificar o valor de **nome do Assembly** caixa.|  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir compila `T2.vb` e cria o arquivo de saída `T2.exe`.  

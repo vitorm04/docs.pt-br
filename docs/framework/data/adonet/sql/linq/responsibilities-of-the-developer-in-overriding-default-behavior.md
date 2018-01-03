@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4792967bb21912e475c32c0f37149b89a838b133
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 232f57890e70e5be0ec60408587a622fafd1ba7e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>Responsabilidades do desenvolvedor em substituir o comportamento padrão
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]não impõe os seguintes requisitos, mas o comportamento será indefinido se esses requisitos não forem atendidos.  
@@ -37,4 +38,4 @@ ms.lasthandoff: 10/18/2017
 -   Finalmente, o método substituindo é esperado executar a operação indicada. A semântica de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] operações como carregamento adiantado, adiada carregar, e <xref:System.Data.Linq.DataContext.SubmitChanges%2A>) exigem as substituições para fornecer o serviço indicado. Por exemplo, uma carga de substituição que apenas retorna uma coleção vazia sem verificar o conteúdo do banco de dados provavelmente resultará em dados inconsistentes.  
   
 ## <a name="see-also"></a>Consulte também  
- [Personalizando a inserção, atualização e exclusão de operações](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)
+ [Personalizando as operações de inserção, atualização e exclusão](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

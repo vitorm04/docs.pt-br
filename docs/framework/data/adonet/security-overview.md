@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d7288eeffeb642d1e897e11153802633d71747bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2c0921e154f10abecb7cdedb23092f4341987a26
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-overview"></a>Visão geral de segurança
 Proteger um aplicativo é um processo contínuo. Nunca será um ponto em que um desenvolvedor pode garantir que um aplicativo é seguro de todos os ataques, porque é impossível prever quais tipos de novas tecnologias de ataques futuros causará. Por outro lado, só porque ninguém tem falhas de segurança ainda descobertos (ou publicado) em um sistema não significa que nenhum existem ou podem existir. Você precisa planejar a segurança durante a fase de design do projeto, bem como para planejar como segurança será mantida durante o tempo de vida do aplicativo.  

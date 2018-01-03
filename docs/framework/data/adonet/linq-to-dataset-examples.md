@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 808c12ee0f9a52c09fa32a0bdf2cc0177bf8be4b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e05042b8b94949c44e8a7a4942f02e7b7a84dd8e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linq-to-dataset-examples"></a>LINQ para exemplos de DataSet
 Esta seção fornece [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] exemplos que usam os operadores de consulta padrão de programação. O <xref:System.Data.DataSet> usado nesses exemplos é populada com o `FillDataSet` método, que é especificado em [carregar dados em um conjunto de dados](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Para obter mais informações, consulte [visão geral de operadores de consulta padrão](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
@@ -36,11 +37,11 @@ Esta seção fornece [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-m
   
 -   [Operadores de elemento](../../../../docs/framework/data/adonet/query-expression-syntax-examples-element-operators.md)  
   
--   [Operadores de agregação](../../../../docs/framework/data/adonet/query-expression-syntax-examples-aggregate-operators.md)  
+-   [Operadores agregados](../../../../docs/framework/data/adonet/query-expression-syntax-examples-aggregate-operators.md)  
   
 -   [Operadores de junção](../../../../docs/framework/data/adonet/query-expression-syntax-examples-join-operators.md)  
   
- [Exemplos de consulta com base em método:](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)  
+ [Exemplos de consulta baseada em método](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)  
  Contém os seguintes exemplos:  
   
 -   [Projeção](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  
@@ -55,7 +56,7 @@ Esta seção fornece [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-m
   
 -   [Operadores de elemento](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-element-operators.md)  
   
--   [Operadores de agregação](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-aggregate-operators.md)  
+-   [Operadores agregados](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-aggregate-operators.md)  
   
 -   [Join](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-join-linq-to-dataset.md)  
   
@@ -64,4 +65,4 @@ Esta seção fornece [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-m
   
 ## <a name="see-also"></a>Consulte também  
  [Guia de Programação](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
- [Carregar dados em um conjunto de dados](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+ [Carregar dados para um conjunto de dados](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)

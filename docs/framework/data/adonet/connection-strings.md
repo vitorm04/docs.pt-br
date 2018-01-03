@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: bd787373b869c31727cfc0d027b6b98774b0d630
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a20061c551f5cb1a19c64a2f92b8180465f58eb2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connection-strings-in-adonet"></a>Cadeias de caracteres de conexão no ADO.NET
 O .NET Framework 2.0 apresentou novas funcionalidades para trabalhar com cadeias de conexão, incluindo a introdução de novas palavras-chave nas classes de construtores de cadeias de conexão, que permitem criar mais facilmente cadeias de conexão válidas em tempo de execução.  
@@ -38,10 +39,10 @@ O .NET Framework 2.0 apresentou novas funcionalidades para trabalhar com cadeias
  [Construtores de cadeia de Conexão](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  Demonstra como usar as classes `ConnectionStringBuilder` para construir cadeias de conexão válidas em tempo de execução.  
   
- [Cadeias de caracteres de Conexão e arquivos de configuração](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)  
+ [Cadeias de conexão e arquivos de configuração](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)  
  Demonstra como armazenar e recuperar cadeias de conexão em arquivos de configuração.  
   
- [Sintaxe de cadeia de caracteres de Conexão](../../../../docs/framework/data/adonet/connection-string-syntax.md)  
+ [Sintaxe de cadeia de conexão](../../../../docs/framework/data/adonet/connection-string-syntax.md)  
  Descreve como configurar cadeias de conexão específicas do provedor para `SqlClient`, `OracleClient`, `OleDb` e `Odbc`.  
   
  [Protegendo informações de conexão](../../../../docs/framework/data/adonet/protecting-connection-information.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 854407d2e6d1341d5917cc78664c1f653e55fa35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d922598cb31e60b1c1648884555695c1ba089726
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="query-notifications-in-sql-server"></a>Notificações de consulta no SQL Server
 Criado utilizando a infraestrutura de Service Broker, as notificações de consulta permitem que os aplicativos sejam notificados quando os dados tiverem sido alterados. Esse recurso é especialmente útil para aplicativos que fornecem um cache de informações de um banco de dados, como um aplicativo Web, e precisam ser notificados quando os dados de origem são alterados.  
@@ -49,7 +50,7 @@ Criado utilizando a infraestrutura de Service Broker, as notificações de consu
 -   [Desenvolvimento (Service Broker)](http://msdn.microsoft.com/library/bb522908.aspx)  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Habilitar notificações de consulta](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  
+ [Habilitando notificações de consulta](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  
  Descreve como usar as notificações de consulta, incluindo os requisitos para habilitá-las e usá-las.  
   
  [SqlDependency em um aplicativo ASP.NET](../../../../../docs/framework/data/adonet/sql/sqldependency-in-an-aspnet-app.md)  

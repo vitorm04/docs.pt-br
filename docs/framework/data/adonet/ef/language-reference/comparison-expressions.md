@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0ec850636433c0c7ed2c61f4f97ba578952cac21
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: def78e45fa59fafbc6b8e5ffec7273f755e49d29
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="comparison-expressions"></a>Expressões de comparação
 Uma expressão de comparação verifica se um valor, um valor de propriedade, ou um resultado constante do método sejam iguais, não iguais, maior do que, ou menor que outro valor. Se uma comparação específico é inválido para [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], uma exceção será lançada. Todas as comparações, explícita e implícita, exigem que todos os componentes são comparáveis na fonte de dados. As expressões de comparação são usados nas cláusulas de `Where` para os resultados da consulta.  

@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 27a46a4dbb98d5c2bdcd30c485ae1b3b047a1a13
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2513f5ce139d23750c977f4f12396415cc4d913b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-features-and-adonet"></a>funcionalidades do SQL Server e ADO.NET
 Os tópicos desta seção discutem os recursos do SQL Server que são destinados a desenvolver aplicativos de banco de dados usando o ADO.NET.  
@@ -35,13 +36,13 @@ Os tópicos desta seção discutem os recursos do SQL Server que são destinados
  [Estatísticas do provedor do SQL Server](../../../../../docs/framework/data/adonet/sql/provider-statistics-for-sql-server.md)  
  Descreve o suporte para obter estatísticas de tempo de execução do SQL Server.  
   
- [Instâncias do SQL Server Express do usuário](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
+ [Instâncias do usuário do SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
  Descreve o suporte para instâncias de usuário do SQL Server Express.  
   
- [Banco de dados de espelhamento no SQL Server](../../../../../docs/framework/data/adonet/sql/database-mirroring-in-sql-server.md)  
+ [Espelhamento de banco de dados no SQL Server](../../../../../docs/framework/data/adonet/sql/database-mirroring-in-sql-server.md)  
  Descreve a funcionalidade de espelhamento de banco de dados.  
   
- [Integração Common Language Runtime do SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)  
+ [Integração do Common Language Runtime ao SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)  
  Descreve como os dados podem ser acessados de dentro de um objeto de banco de dados CLR no SQL Server.  
   
  [Notificações de consulta no SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  

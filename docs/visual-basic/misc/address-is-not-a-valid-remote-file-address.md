@@ -8,11 +8,11 @@ ms.assetid: 2c312242-6c42-4754-a1f5-7e801a542604
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9c9b527fafde8e221750fcda046bd7d17f251197
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b81c9a96ff90d429e5457283bbafb4ec3e021473
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltaddressgt-is-not-a-valid-remote-file-address"></a>&lt;endereço&gt; não é um endereço de arquivo remoto válido
 \<endereço > não é um endereço de arquivo remoto válido. Um endereço válido deve incluir um protocolo, um caminho e um nome de arquivo.  
@@ -24,8 +24,7 @@ ms.lasthandoff: 11/21/2017
 -   Verifique o endereço que você especificou para determinar onde ele falha e forneça as informações necessárias.  
   
 ## <a name="see-also"></a>Consulte também  
- [Método UploadFile](http://msdn.microsoft.com/en-us/5505ea3e-3dbd-460b-9f8f-62c84c0a4de6)  
- [Método DownloadFile](http://msdn.microsoft.com/en-us/aeb7ed8f-1ac9-4242-ae57-9f35914eb329)  
- [Como Carregar um Arquivo](../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
+ [UploadFile](xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A)  
+ [DownloadFile](xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A)  
  [Como Baixar um Arquivo](../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
- [Operações de rede no .NET Framework com Visual Basic](http://msdn.microsoft.com/en-us/c5379021-44ef-4d6a-acf5-e951fdcab6b2)
+

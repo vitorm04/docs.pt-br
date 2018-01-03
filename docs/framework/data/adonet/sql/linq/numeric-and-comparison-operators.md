@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f77cb612468b401f6aa526e46cc7481d0b47d385
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0b89555bc71d95291c096d2e694c315720cfb41c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="numeric-and-comparison-operators"></a>Numérico e operadores de comparação
 Aritmética e operadores de comparação funciona como esperado em Common Language Runtime (CLR) exceto como segue:  

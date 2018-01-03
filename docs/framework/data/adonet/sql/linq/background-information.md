@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b10845bb985e1461ddc5e09c4a87e1a673899ad6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c504d86a44437c81aa7ff556947b6ddaff6f9de7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="background-information"></a>Informações gerais
 Os tópicos nesta seção são pertinentes aos conceitos e procedimentos que estendem além dos fundamentos sobre o uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -34,10 +35,10 @@ Os tópicos nesta seção são pertinentes aos conceitos e procedimentos que est
  [ADO.NET e LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  
  Descreve o relacionamento de [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] e de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Analisando o LINQ to SQL código-fonte](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md)  
+ [Analisando o código-fonte LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md)  
  Descreve como processar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] que mapeia gerando e exibindo o código-fonte de base de dados de exemplo Northwind.  
   
- [Personalizando a inserção, atualização e exclusão de operações](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)  
+ [Personalizando as operações de inserção, atualização e exclusão](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)  
  Descreve como adicionar código de validação e outras personalizações.  
   
  [Associação de dados](../../../../../../docs/framework/data/adonet/sql/linq/data-binding.md)  
@@ -49,25 +50,25 @@ Os tópicos nesta seção são pertinentes aos conceitos e procedimentos que est
  [Chamadas de método locais](../../../../../../docs/framework/data/adonet/sql/linq/local-method-calls.md)  
  Descreve o suporte de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] locais para chamadas de método.  
   
- [N-camadas e aplicativos remotos com o LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
+ [Aplicativos de N camadas e remotos com o LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
  Fornece informações detalhadas para aplicativos de várias camadas que usam [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  [Identidade do objeto](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
  Descreve a identidade do objeto no modelo de objeto de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , e explica como esse recurso difere da identidade do objeto em uma base de dados.  
   
- [O LINQ no modelo de objeto do SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
+ [O modelo de objeto LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
  Descreve o modelo de objeto e sua relação ao modelo de dados relacional.  
   
  [Estados de objeto e controle de alterações](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md)  
  Fornece informações detalhadas sobre como [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de alterações.  
   
- [Simultaneidade otimista: Visão geral](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
+ [Simultaneidade otimista: visão geral](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
  Descreve concorrência otimista e define termos.  
   
  [Conceitos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
  Descreve aspectos de consultas em [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] que diferem das consultas em [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
   
- [Recuperando objetos do Cache de identidade](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md)  
+ [Recuperando objetos do cache de identidade](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md)  
  Descreve os tipos de consultas que recuperam objetos de cache de identidade.  
   
  [Segurança em LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)  
@@ -82,7 +83,7 @@ Os tópicos nesta seção são pertinentes aos conceitos e procedimentos que est
  [Suporte a transações](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)  
  Descreve os três modelos de transação que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] suporta.  
   
- [Incompatibilidade de tipo CLR do SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
+ [Tipos incompatíveis CLR do SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
  Descreve os desafios de misturar sistemas de diferentes tipos.  
   
  [Mapeamentos de tipo personalizado de SQL CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md)  

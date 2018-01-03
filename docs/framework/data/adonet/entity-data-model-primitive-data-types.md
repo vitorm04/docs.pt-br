@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0bfd6a1f2ab938468cc1aa02d6cf4b1eb4d7c530
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e9bf1298a5e3fbac82a931abcfb0919238d81bfb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-data-model-primitive-data-types"></a>Modelo de Dados de Entidade: Tipos de dados primitivos
 O modelo de dados de entidade (EDM) oferece suporte a um conjunto de tipos de dados primitivo abstrato (como cadeia de caracteres, Boolean, Int32 e assim por diante) que são usadas para definir [propriedades](../../../../docs/framework/data/adonet/property.md) em um modelo conceitual. Esses tipos de dados primitivos são proxies para os tipos de dados primitivos reais que são suportados no armazenamento ou no ambiente de hospedagem, como um base de dados SQL Server ou Common Language Runtime (CLR). EDM não define a semântica das operações ou das conversões sobre tipos de dados primitivos; essa semântica é definida pelo armazenamento ou pelo ambiente de hospedagem. Normalmente, os tipos de dados primitivos em EDM são mapeados para os tipos de dados primitivos no armazenamento ou no ambiente de hospedagem. Para obter informações sobre como o Entity Framework mapeia tipos primitivos de EDM para tipos de dados do SQL Server, consulte [SqlClient para Entity FrameworkTypes](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  
@@ -40,14 +41,14 @@ O modelo de dados de entidade (EDM) oferece suporte a um conjunto de tipos de da
 |Decimal|Contém um valor numérico com precisão e escala fixa.|Precisão, anulável, opção|  
 |Duplo|Contém um número de ponto flutuante com precisão de 15 dígitos.|Precisão, anulável, opção|  
 |Float|Contém um número de ponto flutuante com precisão de sete dígitos.|Precisão, anulável, opção|  
-|GUID|Contém um identificador exclusivo de 16 bytes.|Precisão, anulável, opção|  
+|Guid|Contém um identificador exclusivo de 16 bytes.|Precisão, anulável, opção|  
 |Int16|Contém um valor inteiro de 16 bits com sinal.|Precisão, anulável, opção|  
 |Int32|Contém um valor inteiro assinado de 32 bits.|Precisão, anulável, opção|  
 |Int64|Contém um valor inteiro assinado de 64 bits.|Precisão, anulável, opção|  
 |SByte|Contém um valor inteiro de 8 bits com sinal.|Precisão, anulável, opção|  
-|Cadeia de caracteres|Contém dados de caractere.|Unicode, FixedLength, MaxLength, agrupamento, precisão, anulável, opção|  
+|Cadeia de Caracteres|Contém dados de caractere.|Unicode, FixedLength, MaxLength, agrupamento, precisão, anulável, opção|  
 |Hora|Contém uma hora.|Precisão, anulável, opção|  
   
 ## <a name="see-also"></a>Consulte também  
- [Conceitos chave do modelo de dados de entidade](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Modelo de dados de entidade](../../../../docs/framework/data/adonet/entity-data-model.md)
+ [Principais conceitos do Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model.md)

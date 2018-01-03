@@ -16,16 +16,17 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c67fe25e405b81b3e48aa861dc4d6af837835226
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f7ab9d1043fdd1d4d78ec09390f227f297e471c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="handling-datatable-events"></a>Manipulação de eventos de DataTable
 O <xref:System.Data.DataTable> objeto fornece uma série de eventos que podem ser processadas por um aplicativo. A tabela a seguir descreve `DataTable` eventos.  
   
-|Evento|Descrição|  
+|evento|Descrição|  
 |-----------|-----------------|  
 |<xref:System.Data.DataTable.Initialized>|Ocorre após o <xref:System.Data.DataTable.EndInit%2A> método de um `DataTable` é chamado. Esse evento destina-se principalmente para oferecer suporte a cenários de tempo de design.|  
 |<xref:System.Data.DataTable.ColumnChanged>|Ocorre depois que um valor foi alterado com êxito em um <xref:System.Data.DataColumn>.|  

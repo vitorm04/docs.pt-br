@@ -35,11 +35,11 @@ ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
 caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 667ab7ceb54e1f339fd645883ca2686c0cbb72b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 52e9210f9e715b6055e6ed199ef1aa4b919c6dd6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-statement-visual-basic"></a>Instrução Function (Visual Basic)
 Declara o nome, parâmetros e código que definem um `Function` procedimento.  
@@ -239,7 +239,7 @@ End Function
   
  O tipo de retorno de uma função de iterador pode ser <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, ou <xref:System.Collections.Generic.IEnumerator%601>.  
   
- Para obter mais informações, consulte [Iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Para obter mais informações, consulte [Iteradores](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa o `Function` instrução para declarar o nome, parâmetros e código que formam o corpo de uma `Function` procedimento. O `ParamArray` modificador permite que a função aceite um número variável de argumentos.  

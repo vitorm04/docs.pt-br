@@ -14,14 +14,14 @@ ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a6a301c06cb86a4681709fbf67d3f731e2e6a9eb
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: e054f8d992154f66ab1d48a477a7e04900aa5b4d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="underlying-type-lttypenamegt-of-enum-is-not-cls-compliant"></a>O tipo subjacente &lt;typename&gt; de Enum não é compatível com CLS
-O tipo de dados especificado para essa enumeração não é parte do [independência da linguagem e componentes independentes da linguagem](../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS). Isso não é um erro no seu componente, porque o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] e [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] suporte para esse tipo de dados. No entanto, outro componente escrito em estritamente código compatível com CLS não pode oferecer suporte a esse tipo de dados. Esse componente não poderá interagir com êxito com seu componente.  
+O tipo de dados especificado para essa enumeração não é parte do [independência da linguagem e componentes independentes da linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS). Isso não é um erro no seu componente, porque o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] e [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] suporte para esse tipo de dados. No entanto, outro componente escrito em estritamente código compatível com CLS não pode oferecer suporte a esse tipo de dados. Esse componente não poderá interagir com êxito com seu componente.  
   
  O seguinte [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] tipos de dados não são compatíveis com CLS:  
   
@@ -48,6 +48,6 @@ O tipo de dados especificado para essa enumeração não é parte do [independê
 -   Se você estiver fazendo interface com objetos de automação ou COM, tenha em mente que alguns tipos têm larguras de dados diferentes do que no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Por exemplo, `uint` é geralmente 16 bits em outros ambientes. Se você estiver passando um argumento de 16 bits para tal componente, declare-o como `UShort` em vez de `UInteger` em gerenciado [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] código.  
   
 ## <a name="see-also"></a>Consulte também  
- [Reflexão](http://msdn.microsoft.com/library/5d1d1bcf-08de-4d0b-97a8-912d17c00f26)  
+ [Reflexão (Visual Basic)](../../programming-guide/concepts/reflection.md)  
  [Reflexão](../../../framework/reflection-and-codedom/reflection.md)  
- [\<PAVE sobre > escrevendo código compatível com CLS](http://msdn.microsoft.com/en-us/4c705105-69a2-4e5e-b24e-0633bc32c7f3)
+ 

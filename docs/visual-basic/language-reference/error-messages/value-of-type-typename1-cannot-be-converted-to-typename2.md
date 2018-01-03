@@ -14,11 +14,11 @@ ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2154a56f9ff004f906cb2b571f8771e74cfca9c5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b583c4272dd6e964de99fb14d2795152c655f3aa
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39"></a>Valor do tipo &#39; &lt;typename1&gt;&#39; não pode ser convertido para &#39;&lt; typename2&gt;&#39;
 O valor do tipo '\<typename1 >' não pode ser convertido em '\<typename2 >'. Incompatibilidade de tipo pode se dever à combinação de uma referência de arquivo com uma referência ao assembly '\<assemblyname >'. Tente substituir a referência de arquivo para '\<filepath >' no projeto '\<projectname1 >' com uma referência de projeto para '\<projectname2 >'.  
@@ -68,4 +68,4 @@ O valor do tipo '\<typename1 >' não pode ser convertido em '\<typename2 >'. Inc
 ## <a name="see-also"></a>Consulte também  
  [Conversões de tipo no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [Gerenciando referências em um projeto](/visualstudio/ide/managing-references-in-a-project)  
- [NIB: como adicionar ou remover referências usando a caixa de diálogo Adicionar Referência](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)
+ 

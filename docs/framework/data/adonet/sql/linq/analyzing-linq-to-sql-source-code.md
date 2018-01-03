@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0e1677d8e30b083efe99f916b28672ddb6c3dd99
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 730ecffc9543c8a1184bc41ab77d9aec9b53b5a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="analyzing-linq-to-sql-source-code"></a>Para analisar o código-fonte LINQ to SQL
 Usando as seguintes etapas, você pode produzir o código-fonte de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de base de dados de exemplo Northwind. Você pode comparar elementos modelo de objeto com os elementos de base de dados melhor para ver como os itens diferentes são mapeados.  
@@ -35,4 +36,4 @@ Usando as seguintes etapas, você pode produzir o código-fonte de [!INCLUDE[vbt
   
 ## <a name="see-also"></a>Consulte também  
  [Referência](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [Informações de plano de fundo](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+ [Informações gerais](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

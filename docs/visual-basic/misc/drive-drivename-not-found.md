@@ -9,11 +9,11 @@ ms.assetid: 0250e9f2-3470-4fe4-8fda-be4fbf2e2a30
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0bca33cd4d0dc802e37bbf19e94d6181ba337e2b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ea9234a11dfb1c040ef58c38d9dfc8a4f71ccb96
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="drive-39ltdrivenamegt39-not-found"></a>Unidade &#39; &lt;drivename&gt;&#39; não encontrado
 A unidade não pode ser encontrada. Sua conexão de rede foi perdida ou a unidade que você está tentando acessar está offline ou não existe.  
@@ -30,4 +30,4 @@ A unidade não pode ser encontrada. Sua conexão de rede foi perdida ou a unidad
   
 ## <a name="see-also"></a>Consulte também  
  [Tipos de Erro](../../visual-basic/programming-guide/language-features/error-types.md)  
- [PAVEOVER suporte de produto e acessibilidade](http://msdn.microsoft.com/en-us/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)
+

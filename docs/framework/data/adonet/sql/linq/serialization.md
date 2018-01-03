@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 844f206219fed527b73b5125ab82f1c044c59b5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 60f73644a047230a590e75f095575cf85140f3a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="serialization"></a>Serialização
 Este tópico descreve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] recursos de serialização. Os parágrafos que seguem fornecem informações sobre como adicionar em tempo de design a serialização durante a geração de código e o comportamento de serialização de tempo de execução de classes de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .  
@@ -31,7 +32,7 @@ Este tópico descreve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlin
   
 -   Na linha de comando SQLMetal, adicione o **/serialization** opção. Para obter mais informações, consulte [SqlMetal.exe (ferramenta de geração de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  O código gerado pelo [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornece recursos de carregamento adiado por padrão. A carga adiada é muito conveniente na camada de- mid para o carregamento transparente de dados sob demanda. No entanto, é problemática para serialização, porque o serializador dispara o carregamento adiada se a carga adiada é destinada ou não. Na verdade, quando um objeto é serializado, o fechamento transitivo em todas as referências adiar- carregadas de saída é serializado.  
   
  O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] recurso de serialização trata esse problema, principalmente por meio de dois mecanismos:  
@@ -83,6 +84,6 @@ Este tópico descreve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlin
  [!code-vb[DLinqSerialization#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#7)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Informações de plano de fundo](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [Informações gerais](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
  [SqlMetal.exe (Ferramenta de Geração de Código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)  
- [Como: faça a entidades serializável](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)
+ [Como tornar entidades serializáveis](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)

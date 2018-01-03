@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b42167491de72eff5f17dfd8f25ad862c118c23f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1b5603ad7402e46f8b977fe21b0ad1d43c4bfbf8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltclientcertificategt-of-ltclientcredentialsgt-element"></a>&lt;clientCertificate&gt; de &lt;clientCredentials&gt; Element
 Define um certificado x. 509 usado para autenticar um cliente para um serviço.  
@@ -71,7 +72,7 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
  <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>  
  <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>  
  [Comportamentos de segurança](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [How to: Specify Client Credential Values](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md) (Como especificar valores de credenciais do cliente)  
- [Securing Clients](../../../../../docs/framework/wcf/securing-clients.md) (Protegendo clientes)  
- [Trabalhar com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [Como especificar valores de credenciais do cliente](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)  
+ [Protegendo clientes](../../../../../docs/framework/wcf/securing-clients.md)  
+ [Trabalhando com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

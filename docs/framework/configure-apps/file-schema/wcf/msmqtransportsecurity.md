@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: eee2cb916d79bf3b79e882cd757b10344121f6b2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0ece4395c574a4d6bc9399788ad3fb513cb86379
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltmsmqtransportsecuritygt"></a>&lt;msmqTransportSecurity&gt;
 Especifica as configurações de segurança de transporte MSMQ para uma associação personalizada.  
@@ -71,8 +72,8 @@ Especifica as configurações de segurança de transporte MSMQ para uma associa�
  <xref:System.ServiceModel.Channels.CustomBinding>  
  [Filas no WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
  [Transportes](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Selecionando um transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [Bindings](../../../../../docs/framework/wcf/bindings.md) (Associações)  
+ [Escolhendo um transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
+ [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  

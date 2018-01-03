@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0ccc47a1ea740c5106517f6f53620ddc8097c531
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e8bbeb0d7ce040387b263486b947e793eca39d29
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-directly-execute-sql-queries"></a>Como executar diretamente consultas SQL
 O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] converte as consultas que você escreve em consultas SQL parametrizadas (em formato de texto) e as envia para o SQL Server para processamento.  
@@ -46,5 +47,5 @@ O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] converte a
  Os parâmetros são expressos no texto da consulta usando as mesmas chaves usadas por `Console.WriteLine()` e `String.Format()`. Na verdade, `String.Format()` é chamado de fato na cadeia de consulta que você fornecer, substituir os parâmetros entre chaves com nomes de parâmetro gerados como @p0, @p1 ..., @p(n).  
   
 ## <a name="see-also"></a>Consulte também  
- [Informações de plano de fundo](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [Informações gerais](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
  [Consultando o banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

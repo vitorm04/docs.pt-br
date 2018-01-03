@@ -17,11 +17,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b41de296143d325ba0e1932831d4a3ef1bd7dc80
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3f6c44a6d4182311b263d4c5570ebacf15200acc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a>Como: habilitar o acesso ao serviço de dados (WCF Data Services)
 Em [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você deve conceder explicitamente acesso a recursos que são expostos por um serviço de dados. Isso significa que, depois de criar um novo serviço de dados, você deve ainda explicitamente fornecer acesso a recursos individuais, como conjuntos de entidades. Este tópico mostra como habilitar a leitura e acesso de gravação a cinco da entidade define no serviço de dados Northwind é criado quando você concluir o [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Porque o <xref:System.Data.Services.EntitySetRights> enumeração é definida usando o <xref:System.FlagsAttribute>, você pode usar uma lógica ou conjunto de operador para especificar várias permissões para uma única entidade.  
@@ -39,5 +40,5 @@ Em [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você deve conce
      Isso permite que os clientes leram e acesso de gravação para o `Orders` e `Order_Details` conjuntos de entidade e acesso somente leitura para o `Customers` conjuntos de entidades.  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: desenvolver um WCF Data Services em execução no IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)  
+ [Como desenvolver um WCF Data Service em execução no IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)  
  [Configurando o serviço de dados](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)

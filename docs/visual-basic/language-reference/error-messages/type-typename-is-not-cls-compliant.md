@@ -14,16 +14,16 @@ ms.assetid: 634132c2-5646-44aa-98c6-f773e2e63882
 caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 16c12ee6c4f6efa20b9bab5ccf10077496b931ac
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 36a49ccf7d2185c26ef8d23eebea216cc193d951
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-lttypenamegt-is-not-cls-compliant"></a>Tipo &lt;typename&gt; não é compatível com CLS
 Uma variável, propriedade ou função de retorno é declarada com um tipo de dados que não é compatível com CLS.  
   
- Para um aplicativo ser compatível com o [independência da linguagem e componentes independentes da linguagem](../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS), ele deve usar somente tipos compatíveis com CLS.  
+ Para um aplicativo ser compatível com o [independência da linguagem e componentes independentes da linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS), ele deve usar somente tipos compatíveis com CLS.  
   
  O seguinte [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] tipos de dados não são compatíveis com CLS:  
   
@@ -41,7 +41,4 @@ Uma variável, propriedade ou função de retorno é declarada com um tipo de da
   
 -   Se seu aplicativo precisa para ser compatível com CLS, altere o tipo de dados desse elemento para o tipo compatível com CLS mais próximo. Por exemplo, no lugar de `UInteger` você poderá usar `Integer` se você não precisar que o intervalo de valores acima de 2.147.483.647. Se você precisar de intervalo estendido, você pode substituir `UInteger` com `Long`.  
   
--   Se seu aplicativo não precisa ser compatível com CLS, você não precisa alterar nada. Você deve conhecer sua incompatibilidade, no entanto.  
-  
-## <a name="see-also"></a>Consulte também  
- [\<PAVE sobre > escrevendo código compatível com CLS](http://msdn.microsoft.com/en-us/4c705105-69a2-4e5e-b24e-0633bc32c7f3)
+-   Se seu aplicativo não precisa ser compatível com CLS, você não precisa alterar nada. Você deve conhecer sua incompatibilidade, no entanto.

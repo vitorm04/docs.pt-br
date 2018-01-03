@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 19a95cf5d8d9b5fc5f805574b6de15c90fb38efd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2b3d1a42430a02e4b3dd4a715ef27acd3e46b8ea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="common-schema-collections"></a>Coleções de esquema comuns
 As coleções de esquema comum são as coleções de esquemas que são implementadas por cada um dos provedores gerenciados do .NET Framework. Você pode consultar um provedor gerenciado do .NET Framework para determinar a lista de coleções de esquema com suporte ao chamar o **GetSchema** método sem argumentos, ou com o nome da coleção de esquema "MetaDataCollections". Isso retornará um <xref:System.Data.DataTable> com uma lista de coleções de esquema com suporte, o número de restrições que oferecem suporte a cada um deles e o número de partes do identificador que eles usam. Essas coleções descrevem todas as colunas necessárias. Provedores serão livres para adicionar colunas adicionais, se desejarem. Por exemplo, `SqlClient` e `OracleClient` adicionar o nome do parâmetro na coleção de restrições.  
@@ -85,7 +86,7 @@ As coleções de esquema comum são as coleções de esquemas que são implement
 |IsLiteralSupported|bool|True – o tipo de dados pode ser expresso como um literal<br /><br /> FALSO – o tipo de dados não pode ser expresso como um literal|  
 |LiteralPrefix|cadeia de caracteres|O prefixo aplicado a um determinado literal.|  
 |LiteralSuffix|cadeia de caracteres|O sufixo aplicado a um determinado literal.|  
-|NativeDataType|Cadeia de caracteres|NativeDataType é uma coluna específica do OLE DB para expor o tipo de OLE DB do tipo de dados.|  
+|NativeDataType|Cadeia de Caracteres|NativeDataType é uma coluna específica do OLE DB para expor o tipo de OLE DB do tipo de dados.|  
   
 ## <a name="restrictions"></a>Restrições  
  Esta coleção de esquema exposto informações sobre as restrições que são suportados pelo provedor gerenciado do .NET Framework que está sendo usado para conectar-se ao banco de dados.  

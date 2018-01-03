@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 88e968d025c959ec33674a9d8edb5e63341433ec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 302ccb3d95fc982ec7950dc7808dce61b263c481
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcookiehandlergt"></a>&lt;cookieHandler&gt;
 Configura o <xref:System.IdentityModel.Services.CookieHandler> que o <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) usa para ler e gravar cookies.  
@@ -55,7 +56,7 @@ Configura o <xref:System.IdentityModel.Services.CookieHandler> que o <xref:Syste
 |name|Especifica o nome de base para qualquer cookie gravado. O padrão é "FedAuth".|  
 |path|Especifica o valor do caminho para qualquer cookie gravado. O padrão é "Appdomainappvirtualpath".|  
 |modo|Uma da <xref:System.IdentityModel.Services.CookieHandlerMode> valores que especifica o tipo de manipulador de cookie usado pelo SAM. Os valores a seguir podem ser usados:<br /><br /> -"Padrão" — o mesmo que "Em partes".<br />-"Blocos" – usa uma instância do <xref:System.IdentityModel.Services.ChunkedCookieHandler> classe. Este manipulador de cookie garante que os cookies individuais não exceder um tamanho máximo do conjunto. Isso é feito através de "agrupamento" potencialmente um cookie lógico em um número de cookies no-durante a transmissão.<br />-"Custom" – usa uma instância de uma classe personalizada derivada de <xref:System.IdentityModel.Services.CookieHandler>. A classe derivada é referenciada pelo `<customCookieHandler>` elemento filho.<br /><br /> O padrão é "Padrão".|  
-|persistentSessionLifetime|Especifica o tempo de vida de sessões persistentes. Se for zero, sessões transitórias são sempre usadas. O valor padrão é "0:0:0", que especifica uma sessão temporária. O valor máximo é "365:0:0", que especifica uma sessão de 365 dias. O valor deve ser especificado de acordo com a seguinte restrição: `<xs:pattern value="([0-9.]+:){0,1}([0-9]+:){0,1}[0-9.]+" />`, onde o valor mais à esquerda especifica os dias, o valor intermediário (se houver) especifica horas e minutos de Especifica o valor mais à direita (se houver).|  
+|persistentSessionLifetime|Especifica o tempo de vida de sessões persistentes. Se for zero, sessões transitórias serão sempre usadas. O valor padrão é "0:0:0", que especifica uma sessão temporária. O valor máximo é "365:0:0", que especifica uma sessão de 365 dias. O valor deve ser especificado de acordo com a seguinte restrição: `<xs:pattern value="([0-9.]+:){0,1}([0-9]+:){0,1}[0-9.]+" />`, onde o valor mais à esquerda especifica os dias, o valor intermediário (se houver) especifica horas e minutos de Especifica o valor mais à direita (se houver).|  
 |RequireSsl|Especifica se o sinalizador "Secure" é emitido para qualquer cookie gravado. Se esse valor for definido, os cookies de sessão de entrada só estará disponíveis via HTTPS. O padrão é "true".|  
 |hideFromScript|Controla se o sinalizador "HttpOnly" é emitido para qualquer cookie gravado. Alguns navegadores da web aceitam esse sinalizador, mantendo o script do lado do cliente acessem o valor do cookie. O padrão é "true".|  
 |domínio|O valor de domínio para qualquer cookie gravado. O padrão é "".|  

@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 96304cdde766f264fcfbd0f4aa3cf168adf8422d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2891313c15b4003db5d50f2e9f2d461de9397dfc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Confirmar uma transação de fase única e de várias fases
 Cada recurso usado em uma transação é gerenciado por um Gerenciador de recursos (RM), as ações são coordenadas por um Gerenciador de transações (TM). O [inscrição recursos como participantes em uma transação](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) tópico discute como um recurso (ou vários recursos) podem ser inscrita em uma transação. Este tópico discute como confirmação de transação pode ser coordenada entre recursos.  
@@ -119,5 +120,5 @@ public void InDoubt (Enlistment enlistment)
  O protocolo de confirmação de fase única é mais eficiente em tempo de execução porque todas as atualizações são feitas sem qualquer coordenação explícita. Para obter mais informações sobre esse protocolo, consulte [otimização usando única fase de confirmação e notificação de fase única passível de promoção](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Otimização de uso único de fase de confirmação e notificação de fase única passível de promoção](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
+ [Otimização usando confirmação de fase única e notificação de fase única promovível](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
  [Inscrição de recursos como participantes em uma transação](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)

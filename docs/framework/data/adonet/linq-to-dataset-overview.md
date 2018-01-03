@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 8b853eac26f41a3537438bd1f9b0263ae06b6e77
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 00b5d9ddd248c8a6bd54c77bd930eb56a4fa6057
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linq-to-dataset-overview"></a>LINQ para visão geral do DataSet
 O <xref:System.Data.DataSet> é um dos componentes mais amplamente usados de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. É um elemento fundamental do desconectada modelo de programação que [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] se baseia, e permite que você explicitamente os dados em cache de fontes de dados diferentes. Para a camada de apresentação, o <xref:System.Data.DataSet> é integrado com controles de interface gráfica do usuário para associação de dados. Para a camada intermediária, ele fornece um cache que preserva a forma relacional de dados e inclui a consulta rápida simples e serviços de navegação de hierarquia. Uma técnica comum usada para reduzir o número de solicitações em um banco de dados é usar o <xref:System.Data.DataSet> para armazenar em cache na camada intermediária. Por exemplo, considere um controlada por dados [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativo Web. Geralmente, uma parte significativa de dados do aplicativo não muda com frequência e é comum em sessões ou usuários. Esses dados podem ser mantidos na memória no servidor Web, reduzindo o número de solicitações no banco de dados e acelerando as interações do usuário. Outro aspecto útil de <xref:System.Data.DataSet> é que ele permite que um aplicativo para colocar subconjuntos de dados de um ou mais fonte de dados no espaço do aplicativo. O aplicativo pode manipular os dados na memória, mantendo sua forma relacional.  

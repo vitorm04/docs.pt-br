@@ -15,17 +15,17 @@ ms.assetid: 09731b34-3900-4fcb-a9df-ce5280328433
 caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a39957ffaa67d6abeb6d394ae9826d42ad2230de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0b1e8b0378e65becd80324491632ecd8dbffdbbf
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-enable-tabbing-between-shapes-visual-studio"></a>Como habilitar tabulações entre formas (Visual Studio)
 Controles de linha e forma não têm `TabStop` ou `TabIndex` propriedades, mas você ainda pode habilitar tabulações entre eles. No exemplo a seguir, pressionando o tecla CTRL e as teclas TAB será guia entre formas. pressionando a tecla de guia será guia entre os botões.  
   
 > [!NOTE]
->  Seu computador pode mostrar diferentes nomes ou locais para alguns dos elementos de interface do usuário do Visual Studio nas instruções a seguir. A edição do Visual Studio que você possui e as configurações que você usa determinam esses elementos. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Seu computador pode mostrar diferentes nomes ou locais para alguns dos elementos de interface do usuário do Visual Studio nas instruções a seguir. A edição do Visual Studio que você possui e as configurações que você usa determinam esses elementos. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="to-enable-tabbing-among-shapes"></a>Para habilitar tabulações entre formas  
   

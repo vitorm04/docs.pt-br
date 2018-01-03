@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 9119b6db6b1d3c2099af3c7bdbe042ced4dca94e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0f5aed56ba4958d44e0628f55115308751afae55
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Configurando parâmetros e tipos de dados de parâmetro
 Objetos de comando usam parâmetros para passar valores para instruções SQL ou procedimentos armazenados, fornecendo verificação de tipo e validação. Diferentemente do texto de comando, o parâmetro de entrada é tratado como um valor literal, não como código executável. Isso ajuda a proteger contra ataques de "Injeção de SQL", em que um invasor insere um comando que compromete a segurança no servidor em uma instrução SQL.  
@@ -65,12 +66,12 @@ Objetos de comando usam parâmetros para passar valores para instruções SQL ou
 |<xref:System.Decimal>|Decimal|Decimal|Decimal|Numeric|Número|  
 |<xref:System.Double>|Duplo|Float|Duplo|Duplo|Duplo|  
 |<xref:System.Single>|Simples|Real|Simples|Real|Float|  
-|<xref:System.Guid>|GUID|UniqueIdentifier|GUID|UniqueIdentifier|Raw|  
+|<xref:System.Guid>|Guid|UniqueIdentifier|Guid|UniqueIdentifier|Raw|  
 |<xref:System.Int16 >|Int16|SmallInt|SmallInt|SmallInt|Int16|  
 |<xref:System.Int32>|Int32|int|int|int|Int32|  
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Número|  
 |<xref:System.Object>|Objeto|Variante|Variante|Inferir um OdbcType de objeto não tem suporte.|Blob|  
-|<xref:System.String>|Cadeia de caracteres|NVarChar. Essa conversão implícita falhará se a cadeia de caracteres for maior do que o tamanho máximo de um NVarChar, que é 4000 caracteres. Para cadeias de caracteres maiores que 4000 caracteres, defina explicitamente o <xref:System.Data.SqlDbType>.|VarWChar|NVarChar|NVarChar|  
+|<xref:System.String>|Cadeia de Caracteres|NVarChar. Essa conversão implícita falhará se a cadeia de caracteres for maior do que o tamanho máximo de um NVarChar, que é 4000 caracteres. Para cadeias de caracteres maiores que 4000 caracteres, defina explicitamente o <xref:System.Data.SqlDbType>.|VarWChar|NVarChar|NVarChar|  
 |<xref:System.TimeSpan>|Hora|Hora no SQL Server 2008. Inferir um <xref:System.Data.SqlDbType> de TimeSpan não tem suporte em versões do SQL Server anteriores ao SQL Server 2008.|DBTime|Hora|DateTime|  
 |<xref:System.UInt16>|UInt16|Inferir um <xref:System.Data.SqlDbType> do UInt16 não tem suporte.|UnsignedSmallInt|int|UInt16|  
 |<xref:System.UInt32>|UInt32|Inferir um <xref:System.Data.SqlDbType> do UInt32 não tem suporte.|UnsignedInt|BigInt|UInt32|  

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 16c675491a378d72d82a252d79a73379f494893c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fd3982cf8eeeb88a162e77a3ef4b9d6e75e19fc6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-data-types-and-adonet"></a>Tipos de dados do SQL Server e ADO.NET
 O SQL Server e o .NET Framework são baseados em diferentes tipos de sistema, o que pode resultar em potencial perda de dados. Para preservar a integridade dos dados, o provedor de dados .NET Framework para SQL Server (<xref:System.Data.SqlClient>) fornece métodos tipados acessadores para trabalhar com dados do SQL Server. É possível usar enumerações nas classes <xref:System.Data.SqlDbType> para especificar tipos de dados <xref:System.Data.SqlClient.SqlParameter>.  
@@ -39,7 +40,7 @@ O SQL Server e o .NET Framework são baseados em diferentes tipos de sistema, o 
  [Manipulando valores nulos](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)  
  Demonstra como trabalhar com valores nulos e a lógica com três valores.  
   
- [Comparando GUID e uniqueidentifier valores](../../../../../docs/framework/data/adonet/sql/comparing-guid-and-uniqueidentifier-values.md)  
+ [Comparando valores de GUID e uniqueidentifier](../../../../../docs/framework/data/adonet/sql/comparing-guid-and-uniqueidentifier-values.md)  
  Demonstra como trabalhar com GUID e com valores uniqueidentifier no SQL Server e no .NET Framework.  
   
  [Dados de data e hora](../../../../../docs/framework/data/adonet/sql/date-and-time-data.md)  

@@ -20,11 +20,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 599b420dee2e1d19c85a078ac358a9249ca055ed
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 11b796b5b2abaff00c6d0f20894056f5863942b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>Carregamento adiado conteúdo (WCF Data Services)
 Por padrão, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limita a quantidade de dados retornados por uma consulta. No entanto, você pode carregar explicitamente os dados adicionais, inclusive entidades relacionadas, dados de resposta paginada e fluxos de dados binários do serviço de dados quando ele é necessário. Este tópico descreve como carregar conteúdo adiado para seu aplicativo.  

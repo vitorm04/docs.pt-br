@@ -17,11 +17,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 65b02945aa81fdf18ad328a833f8f85744035871
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8e8f5626ab7439b34377ba0200fd232c41017652
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-data-services-client-library"></a>Biblioteca de cliente do WCF Data Services
 Qualquer aplicativo pode interagir com um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]-com base em serviço de dados se ele pode enviar uma solicitação HTTP e o processo de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed que retorna um serviço de dados. Essa interoperabilidade permite que você acesse [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-com base em serviços de aplicativos um intervalo de Web habilitado. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]inclui bibliotecas de cliente que fornecem uma experiência de programação avançada, quando você consumir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds do .NET Framework ou aplicativos baseados no Silverlight.  
@@ -37,7 +38,7 @@ Qualquer aplicativo pode interagir com um [!INCLUDE[ssODataFull](../../../../inc
  [Querying the Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md) (Consultando o serviço de dados)  
  Descreve como consultar um serviço de dados de um aplicativo com base no .NET Framework usando bibliotecas de cliente.  
   
- [Carregamento adiado conteúdo](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  
+ [Carregando conteúdo adiado](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  
  Descreve como carregar o conteúdo adicional não incluído na resposta da consulta inicial.  
   
  [Atualizando o serviço de dados](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)  
@@ -58,7 +59,7 @@ Qualquer aplicativo pode interagir com um [!INCLUDE[ssODataFull](../../../../inc
  [Gerenciando o contexto do serviço de dados](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)  
  Descreve as opções para gerenciar o comportamento da biblioteca de cliente.  
   
- [Trabalhando com dados binários](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
+ [Trabalhando com os dados binários](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
  Descreve como acessar e alterar os dados binários retornados pelo serviço de dados como um fluxo de dados.  
   
 ## <a name="see-also"></a>Consulte também  

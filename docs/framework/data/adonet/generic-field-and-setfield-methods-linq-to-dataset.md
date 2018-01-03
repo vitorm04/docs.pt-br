@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 58c2126c97d68fbe33d53b9d9ffa81fcc1aec8a0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7f71a6e380730ce3d622437b28a3722793524968
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generic-field-and-setfield-methods-linq-to-dataset"></a>Campo genérico e métodos de SetField (LINQ to DataSet)
 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]fornece métodos de extensão para o <xref:System.Data.DataRow> classe para acessar valores de coluna: o <xref:System.Data.DataRowExtensions.Field%2A> método e o <xref:System.Data.DataRowExtensions.SetField%2A> método. Esses métodos fornecem acesso fácil aos valores de coluna para desenvolvedores, especialmente em relação a valores nulos. O <xref:System.Data.DataSet> usa <xref:System.DBNull.Value> para representar valores nulos, enquanto [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] usa o suporte a tipo anulável introduzido no [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]. Usando o acessador de coluna já existentes no <xref:System.Data.DataRow> exige que você converter o objeto de retorno para o tipo apropriado. Se um determinado campo de um <xref:System.Data.DataRow> pode ser nulo, você precisa verificar explicitamente um valor nulo como retornando <xref:System.DBNull.Value> e implicitamente convertê-la em outro lança do tipo um <xref:System.InvalidCastException>. No exemplo a seguir, se o <xref:System.Data.DataRow.IsNull%2A> método não foi usado para verificar se há um valor nulo, uma exceção será lançada se o indexador retornado <xref:System.DBNull.Value> e tentou convertê-lo para um <xref:System.String>.  

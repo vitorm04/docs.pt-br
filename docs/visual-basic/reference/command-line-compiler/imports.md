@@ -14,11 +14,11 @@ ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e8e9cd761263b3b61a4e6d3e33c5f7f875be7a1d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6cdb7cff2221930113d6b49a640da0844f175f1b
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="imports-visual-basic"></a>/imports (Visual Basic)
 Importa namespaces de um assembly específico.  
@@ -42,7 +42,7 @@ Importa namespaces de um assembly específico.
   
 |Para configurar /Imports no ambiente de desenvolvimento integrado do Visual Studio|  
 |---|  
-|1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**. Para obter mais informações, consulte [Introdução ao Designer de Projeto](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Clique na guia **Referências**.<br />3.  Insira o nome do namespace na caixa ao lado de **Add User Import** botão.<br />4.  Clique o **Add User Import** botão.|  
+|1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**. <br />2.  Clique na guia **Referências**.<br />3.  Insira o nome do namespace na caixa ao lado de **Add User Import** botão.<br />4.  Clique o **Add User Import** botão.|  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir compila quando `/imports:system` for especificado.  

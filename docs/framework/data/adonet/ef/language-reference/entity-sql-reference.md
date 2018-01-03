@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 776a2a93f559ba54651adc49e6b609c8156e9e31
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 58f30c4c2c220660b62b03ea4eb052bd2cf015eb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-sql-reference"></a>Referência de Entity SQL
 Esta seção contém [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tópicos de referência. Este tópico resume e agrupa os [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operadores por categoria.  
@@ -31,8 +32,8 @@ Esta seção contém [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tó
 |"/ (Divisão)"|Divisão.|  
 |[% (Módulo)](../../../../../../docs/framework/data/adonet/ef/language-reference/modulo-entity-sql.md)|Retorna o restante de uma divisão.|  
 |[* (Multiplicação)](../../../../../../docs/framework/data/adonet/ef/language-reference/multiply-entity-sql.md)|Multiplicação.|  
-|[-(Negativo)](../../../../../../docs/framework/data/adonet/ef/language-reference/negative-entity-sql.md)|Negação.|  
-|[-(Subtração)](../../../../../../docs/framework/data/adonet/ef/language-reference/subtract-entity-sql.md)|Subtração.|  
+|[- (Negativo)](../../../../../../docs/framework/data/adonet/ef/language-reference/negative-entity-sql.md)|Negação.|  
+|[- (Subtração)](../../../../../../docs/framework/data/adonet/ef/language-reference/subtract-entity-sql.md)|Subtração.|  
   
 ## <a name="canonical-functions"></a>Funções canônicas  
  As funções canônicas têm suporte por todos os provedores de dados e podem ser usadas por todas as tecnologias de consulta. A tabela a seguir lista as funções canônicas.  
@@ -43,7 +44,7 @@ Esta seção contém [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tó
 |[Funções canônicas matemáticas](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|Discute funções canônicas matemáticas de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].|  
 |[Funções canônicas de cadeia de caracteres](../../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|Discute funções canônicas de cadeias de caracteres de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].|  
 |[Funções canônicas de data e hora](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|Discute funções canônicas de data e hora de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].|  
-|[Bit a bit funções canônicas](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|Discute funções canônicas bit a bit de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].|  
+|[Funções canônicas bit a bit](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|Discute funções canônicas bit a bit de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].|  
 |[Outras funções canônicas](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)|Discute as funções não classificadas como bit a bit, data/hora, cadeia de caracteres, matemática ou de agregação.|  
   
 ## <a name="comparison-operators"></a>Operadores de comparação  
@@ -53,14 +54,14 @@ Esta seção contém [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tó
   
 |Operador|Descrição|  
 |--------------|-----------------|  
-|[= (Igual a)](../../../../../../docs/framework/data/adonet/ef/language-reference/equals-entity-sql.md)|Compara a igualdade de duas expressões.|  
+|[= (É igual a)](../../../../../../docs/framework/data/adonet/ef/language-reference/equals-entity-sql.md)|Compara a igualdade de duas expressões.|  
 |[> (Maior que)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-entity-sql.md)|Compara duas expressões para determinar se a expressão da esquerda tem um valor maior que a expressão da direita.|  
-|[> = (maior ou igual a)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-or-equal-to-entity-sql.md)|Compara duas expressões para determinar se a expressão da esquerda tem um valor maior que ou igual à expressão da direita.|  
+|[>= (Maior ou igual a)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-or-equal-to-entity-sql.md)|Compara duas expressões para determinar se a expressão da esquerda tem um valor maior que ou igual à expressão da direita.|  
 |[FOR &#91; NÃO &#93; NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|Determina se uma expressão de consulta é nula.|  
 |[< (Menor que)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|Compara duas expressões para determinar se a expressão da esquerda tem um valor menor que a expressão da direita.|  
-|[< = (menor ou igual a)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|Compara duas expressões para determinar se a expressão da esquerda tem um valor menor que ou igual à expressão da direita.|  
+|[<= (Menor ou igual a)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|Compara duas expressões para determinar se a expressão da esquerda tem um valor menor que ou igual à expressão da direita.|  
 |[&#91; NÃO &#93; ENTRE](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|Determina se uma expressão resulta em um valor em um intervalo especificado.|  
-|[! = (Igual a)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|Compara duas expressões para determinar se a expressão da esquerda não é igual a expressão da direita.|  
+|[!= (Não é igual a)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|Compara duas expressões para determinar se a expressão da esquerda não é igual a expressão da direita.|  
 |[&#91; NÃO &#93; COMO](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|Determina se uma cadeia de caracteres específica corresponde a um padrão especificado.|  
   
 ## <a name="logical-and-case-expression-operators"></a>Operadores lógicos e de expressão CASE  
@@ -71,24 +72,24 @@ Esta seção contém [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tó
 |[& & (AND lógico)](../../../../../../docs/framework/data/adonet/ef/language-reference/and-entity-sql.md)|AND lógico.|  
 |[Operador (Não lógico)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|NOT lógico.|  
 |[&#124; &#124; (OR lógico)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|OR lógico.|  
-|[CASO](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|Avalia um conjunto de expressões boolianas para determinar o resultado.|  
-|[EM SEGUIDA](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|O resultado de uma [quando](http://msdn.microsoft.com/en-us/6233fe9f-00b0-460e-8372-64e138a5f998) cláusula quando ela é avaliada como true.|  
+|[CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|Avalia um conjunto de expressões boolianas para determinar o resultado.|  
+|[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|O resultado de uma [quando](http://msdn.microsoft.com/en-us/6233fe9f-00b0-460e-8372-64e138a5f998) cláusula quando ela é avaliada como true.|  
   
 ## <a name="query-operators"></a>Operadores de Consulta  
  Os operadores de consulta são usados para definir as expressões de consulta que retornam dados de entidade. A tabela a seguir lista os operadores de consulta.  
   
 |Operador|Use|  
 |--------------|---------|  
-|[DE](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md)|Especifica a coleção que é usada em [selecione](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) instruções.|  
-|[AGRUPAR POR](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)|Especifica os grupos no qual os objetos que são retornados por uma consulta ([selecione](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) expressão devem ser colocados.|  
+|[FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md)|Especifica a coleção que é usada em [selecione](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) instruções.|  
+|[GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)|Especifica os grupos no qual os objetos que são retornados por uma consulta ([selecione](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) expressão devem ser colocados.|  
 |[GroupPartition](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md)|Retorna uma coleção de valores de argumento, projetada fora da partição do grupo para o qual a agregação está relacionada.|  
-|[TENDO](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md)|Especifica um critério de pesquisa para um grupo ou uma agregação.|  
-|[LIMITE](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)|Usado com o [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) cláusula de paginação física executada.|  
-|[ORDENAR POR](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)|Especifica a ordem de classificação que é usada em objetos retornados em uma [selecione](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) instrução.|  
-|[SELECIONE](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)|Especifica os elementos na projeção que são retornados por uma consulta.|  
-|[IGNORAR](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)|Usado com o [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) cláusula de paginação física executada.|  
-|[INÍCIO](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)|Especifica que apenas o primeiro conjunto de linhas será retornado do resultado da consulta.|  
-|[ONDE](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md)|Filtra condicionalmente os dados que são retornados por uma consulta.|  
+|[HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md)|Especifica um critério de pesquisa para um grupo ou uma agregação.|  
+|[LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)|Usado com o [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) cláusula de paginação física executada.|  
+|[ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)|Especifica a ordem de classificação que é usada em objetos retornados em uma [selecione](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) instrução.|  
+|[SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)|Especifica os elementos na projeção que são retornados por uma consulta.|  
+|[SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)|Usado com o [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) cláusula de paginação física executada.|  
+|[TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)|Especifica que apenas o primeiro conjunto de linhas será retornado do resultado da consulta.|  
+|[WHERE](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md)|Filtra condicionalmente os dados que são retornados por uma consulta.|  
   
 ## <a name="reference-operators"></a>Operadores de referência  
  Uma referência é um ponteiro lógico (chave estrangeira) para uma entidade específica em um conjunto de entidades específico. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]suporta os seguintes operadores para construir, decompor e navegar por meio de referências.  
@@ -97,8 +98,8 @@ Esta seção contém [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tó
 |--------------|---------|  
 |[CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)|Cria referências para uma entidade em um conjunto de entidades.|  
 |[DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)|Desreferencia um valor de referência e gera o resultado dessa desreferência.|  
-|[CHAVE](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)|Extraia a chave de uma referência ou uma expressão de entidade.|  
-|[NAVEGAR](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)|Permite que você navegue na relação de um tipo de objeto para outro|  
+|[KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)|Extraia a chave de uma referência ou uma expressão de entidade.|  
+|[NAVIGATE](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)|Permite que você navegue na relação de um tipo de objeto para outro|  
 |[REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)|Retorna uma referência a uma instância de entidade.|  
   
 ## <a name="set-operators"></a>Operador de conjunto  
@@ -106,14 +107,14 @@ Esta seção contém [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tó
   
 |Operador|Use|  
 |--------------|---------|  
-|[QUALQUERELEMENTO](../../../../../../docs/framework/data/adonet/ef/language-reference/anyelement-entity-sql.md)|Extrai um elemento de uma coleção multivalorada.|  
-|[EXCETO](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)|Retorna uma coleção de todos os valores distintos da expressão de consulta para a esquerda do operando EXCEPT que também não são retornados da expressão de consulta à direita do operando EXCEPT.|  
+|[ANYELEMENT](../../../../../../docs/framework/data/adonet/ef/language-reference/anyelement-entity-sql.md)|Extrai um elemento de uma coleção multivalorada.|  
+|[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)|Retorna uma coleção de todos os valores distintos da expressão de consulta para a esquerda do operando EXCEPT que também não são retornados da expressão de consulta à direita do operando EXCEPT.|  
 |[&#91; NÃO &#93; EXISTE](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|Determina se uma coleção está vazia.|  
-|[MESCLAR](../../../../../../docs/framework/data/adonet/ef/language-reference/flatten-entity-sql.md)|Converte uma coleção de coleções em uma coleção combinada.|  
+|[FLATTEN](../../../../../../docs/framework/data/adonet/ef/language-reference/flatten-entity-sql.md)|Converte uma coleção de coleções em uma coleção combinada.|  
 |[&#91; NÃO &#93; IN](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|Determina se um valor corresponde a qualquer valor em uma coleção.|  
-|[SE CRUZAM](../../../../../../docs/framework/data/adonet/ef/language-reference/intersect-entity-sql.md)|Retorna uma coleção de todos os valores diferentes que são retornados pelas expressões de consulta nos lados esquerdo e direito do operando INTERSECT.|  
-|[SOBREPOSIÇÕES](../../../../../../docs/framework/data/adonet/ef/language-reference/overlaps-entity-sql.md)|Determina se duas coleções têm elementos comuns.|  
-|[DEFINIR](../../../../../../docs/framework/data/adonet/ef/language-reference/set-entity-sql.md)|Usado para converter uma coleção de objetos em um conjunto gerando uma nova coleção com todos os elementos duplicados removidos.|  
+|[INTERSECT](../../../../../../docs/framework/data/adonet/ef/language-reference/intersect-entity-sql.md)|Retorna uma coleção de todos os valores diferentes que são retornados pelas expressões de consulta nos lados esquerdo e direito do operando INTERSECT.|  
+|[OVERLAPS](../../../../../../docs/framework/data/adonet/ef/language-reference/overlaps-entity-sql.md)|Determina se duas coleções têm elementos comuns.|  
+|[SET](../../../../../../docs/framework/data/adonet/ef/language-reference/set-entity-sql.md)|Usado para converter uma coleção de objetos em um conjunto gerando uma nova coleção com todos os elementos duplicados removidos.|  
 |[UNION](../../../../../../docs/framework/data/adonet/ef/language-reference/union-entity-sql.md)|Combina os resultados de duas ou mais consultas em uma única coleção.|  
   
 ## <a name="type-operators"></a>Operadores de tipo  
@@ -121,14 +122,14 @@ Esta seção contém [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tó
   
 |Operador|Use|  
 |--------------|---------|  
-|[CONVERSÃO](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)|Converte uma expressão de um tipo de dados para outro.|  
-|[COLEÇÃO](../../../../../../docs/framework/data/adonet/ef/language-reference/collection-entity-sql.md)|Usado em uma [função](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) operação para declarar uma coleção de tipos de entidade ou tipos complexos.|  
+|[CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)|Converte uma expressão de um tipo de dados para outro.|  
+|[COLLECTION](../../../../../../docs/framework/data/adonet/ef/language-reference/collection-entity-sql.md)|Usado em uma [função](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) operação para declarar uma coleção de tipos de entidade ou tipos complexos.|  
 |[FOR &#91; NÃO &#93; DE](../../../../../../docs/framework/data/adonet/ef/language-reference/isof-entity-sql.md)|Determina se o tipo de uma expressão é do tipo especificado ou um de seus subtipos.|  
 |[OFTYPE](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md)|Retorna uma coleção de objetos de uma expressão de consulta que é de um tipo específico.|  
 |[Construtor de tipo nomeado](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)|Usado para criar instâncias de tipos de entidade ou tipos complexos.|  
 |[MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)|Cria uma instância de um multiset de uma lista de valores.|  
-|[LINHA](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)|Constrói registros anônimos e tipados estruturalmente de um ou mais valores.|  
-|[TRATAR](../../../../../../docs/framework/data/adonet/ef/language-reference/treat-entity-sql.md)|Trata um objeto de um tipo base específico como um objeto do tipo derivado especificado.|  
+|[ROW](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)|Constrói registros anônimos e tipados estruturalmente de um ou mais valores.|  
+|[TREAT](../../../../../../docs/framework/data/adonet/ef/language-reference/treat-entity-sql.md)|Trata um objeto de um tipo base específico como um objeto do tipo derivado especificado.|  
   
 ## <a name="other-operators"></a>Outros operadores  
  A tabela a seguir lista outros [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operadores.  
@@ -136,9 +137,9 @@ Esta seção contém [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tó
 |Operador|Use|  
 |--------------|---------|  
 |[+ (Concatenação de cadeia de caracteres)](../../../../../../docs/framework/data/adonet/ef/language-reference/string-concatenation-entity-sql.md)|Usado para concatenar cadeias de caracteres no [!INCLUDE[esql](../../../../../../includes/esql-md.md)].|  
-|[. (Acesso de membro)](../../../../../../docs/framework/data/adonet/ef/language-reference/member-access-entity-sql.md)|Usado para acessar o valor de uma propriedade ou campo de uma instância do tipo estrutural de modelo conceitual.|  
-|[-(Comentário)](../../../../../../docs/framework/data/adonet/ef/language-reference/comment-entity-sql.md)|Inclui comentários de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].|  
-|[FUNÇÃO](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)|Define uma função embutida que pode ser executada em uma consulta Entity SQL.|  
+|[. (Acesso a Membro)](../../../../../../docs/framework/data/adonet/ef/language-reference/member-access-entity-sql.md)|Usado para acessar o valor de uma propriedade ou campo de uma instância do tipo estrutural de modelo conceitual.|  
+|[-- (Comentário)](../../../../../../docs/framework/data/adonet/ef/language-reference/comment-entity-sql.md)|Inclui comentários de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].|  
+|[FUNCTION](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)|Define uma função embutida que pode ser executada em uma consulta Entity SQL.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Entity SQL Language](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md) (Linguagem SQL de entidade)

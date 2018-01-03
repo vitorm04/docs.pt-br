@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 341723d44960d4eaf9d8338e3c266720816c0899
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 58d04a3ba1d73d4236353ff4f08a747ac7b6f0cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="manipulating-data-in-a-datatable"></a>Manipulando dados em uma DataTable
 Após criar i, <xref:System.Data.DataTable> em um <xref:System.Data.DataSet>, você pode executar as mesmas atividades que faria ao usar uma tabela em um banco de dados. Você pode adicionar, exibir, editar e excluir dados na tabela; você pode monitorar erros e eventos; e pode consultar os dados na tabela. Ao modificar dados em um **DataTable**, você também pode verificar se as alterações são precisas e determinam se deseja aceitar ou rejeitar as alterações de programaticamente.  
@@ -35,7 +36,7 @@ Após criar i, <xref:System.Data.DataTable> em um <xref:System.Data.DataSet>, vo
  [Edições de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-edits.md)  
  Explica como alterar os dados em uma linha, incluindo suspensão das alterações em uma linha até que as alterações propostas sejam verificadas e aceitas.  
   
- [Estados de linha e versões de linha](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
+ [Estados e versões de linha](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
  Fornece informações sobre os estados diferentes de uma linha.  
   
  [Exclusão de DataRow](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarow-deletion.md)  

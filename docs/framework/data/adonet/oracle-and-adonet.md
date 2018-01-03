@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c615c985f885734800b471ee31451cfb8a4c8500
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f77d5c98c96bd4b6085c30b6d1dd713bd324fbad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="oracle-and-adonet"></a>Oracle e ADO.NET
 > [!NOTE]
@@ -53,7 +54,7 @@ csc /r:System.Data.OracleClient.dll
  [Oracle BFILEs](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
  Descreve a classe <xref:System.Data.OracleClient.OracleBFile>, que é usada no trabalho com o tipo de dados Oracle BFILE.  
   
- [LOBs Oracle](../../../../docs/framework/data/adonet/oracle-lobs.md)  
+ [LOBs do Oracle](../../../../docs/framework/data/adonet/oracle-lobs.md)  
  Descreve a classe <xref:System.Data.OracleClient.OracleLob>, que é usada para no trabalho com tipos de dados Oracle LOB.  
   
  [REF CURSORs do Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  

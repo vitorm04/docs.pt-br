@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 696b1d3dd7312b52c28f11f64f007c29fb8a94b5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 24571209673d7706955bdb9ffbe21ad6da98e18a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="about-the-systemnetpeertopeercollaboration-namespace"></a>Sobre o namespace System.Net.PeerToPeer.Collaboration
 O namespace <xref:System.Net.PeerToPeer.Collaboration> fornece classes e APIs que são usadas para implementar as atividades de colaboração de pares usando a infraestrutura de Colaboração Ponto a Ponto.  

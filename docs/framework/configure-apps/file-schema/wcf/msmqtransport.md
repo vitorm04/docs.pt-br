@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 87fd7dc848e59cd8fb58131cf24cae4038ea82d3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 441ec2cd07d46d44f527da7799e9df6d3bec4408
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltmsmqtransportgt"></a>&lt;msmqTransport&gt;
 Faz com que um canal transferir mensagens sobre o transporte MSMQ quando ele é incluído em uma associação personalizada.  
@@ -103,8 +104,8 @@ Faz com que um canal transferir mensagens sobre o transporte MSMQ quando ele é 
  <xref:System.ServiceModel.Channels.CustomBinding>  
  [Filas no WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
  [Transportes](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Selecionando um transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [Bindings](../../../../../docs/framework/wcf/bindings.md) (Associações)  
+ [Escolhendo um transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
+ [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

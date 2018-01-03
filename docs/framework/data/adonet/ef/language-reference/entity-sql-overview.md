@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 301a934cad59b14d1a65a1e98247490d578e6866
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f77e3a5d0073cb13d1904f802c4d6760fc52caa9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-sql-overview"></a>Visão geral da Entity SQL
 A linguagem [!INCLUDE[esql](../../../../../../includes/esql-md.md)] é semelhante à SQL e permite que você consulte modelos conceituais no [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Modelos conceituais representam os dados em entidades e relações, e [!INCLUDE[esql](../../../../../../includes/esql-md.md)] permite consultar essas entidades e relações em um formato que é familiar para aqueles que usaram SQL.  
@@ -29,7 +30,7 @@ A linguagem [!INCLUDE[esql](../../../../../../includes/esql-md.md)] é semelhant
  Esta seção fornece informações conceituais sobre a linguagem [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Como o Entity SQL difere do Transact-SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md)  
+ [Diferenças entre o Entity SQL e o Transact-SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md)  
   
  [Referência rápida de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-quick-reference.md)  
   
@@ -49,11 +50,11 @@ A linguagem [!INCLUDE[esql](../../../../../../includes/esql-md.md)] é semelhant
   
  [Variáveis](../../../../../../docs/framework/data/adonet/ef/language-reference/variables-entity-sql.md)  
   
- [Não há suporte para expressões](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md)  
+ [Expressões sem suporte](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md)  
   
  [Literais](../../../../../../docs/framework/data/adonet/ef/language-reference/literals-entity-sql.md)  
   
- [Literais nulos e Inferência de tipo](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md)  
+ [Literais nulos e inferência de tipos](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md)  
   
  [Conjunto de caracteres de entrada](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)  
   
@@ -67,9 +68,9 @@ A linguagem [!INCLUDE[esql](../../../../../../includes/esql-md.md)] é semelhant
   
  [Semântica de comparação](../../../../../../docs/framework/data/adonet/ef/language-reference/comparison-semantics-entity-sql.md)  
   
- [Composição de consultas aninhadas Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/composing-nested-entity-sql-queries.md)  
+ [Composição de consultas aninhadas do Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/composing-nested-entity-sql-queries.md)  
   
- [Tipos anuláveis estruturados](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)  
+ [Tipos estruturados anulável](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  

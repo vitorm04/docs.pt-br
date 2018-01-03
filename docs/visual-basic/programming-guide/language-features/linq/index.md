@@ -12,11 +12,11 @@ ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
 caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b0e558e50f75b10a77834a6e94ccb7aadc55fdcb
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: acec0a067ef318d34c033529415afb5c321e19a2
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linq-in-visual-basic"></a>LINQ no Visual Basic
 Esta seção contém exemplos, visões gerais e informações que ajudarão você a compreender e usar o Visual Basic e [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
@@ -55,5 +55,5 @@ Esta seção contém exemplos, visões gerais e informações que ajudarão voc�
 ## <a name="see-also"></a>Consulte também  
  [LINQ (Consulta Integrada à Linguagem)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
  [Visão geral do LINQ to XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- [LINQ para visão geral do conjunto de dados](../../../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
+ [Visão geral de LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)

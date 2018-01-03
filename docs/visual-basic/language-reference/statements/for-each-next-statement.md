@@ -30,11 +30,11 @@ ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
 caps.latest.revision: "56"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4aefacd33e0b3c8f64fd26929af06469136237f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 11601eb1caad1c6cc6d9898f590436a977a78fa1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>Instrução For Each...Next (Visual Basic)
 Repete um grupo de instruções para cada elemento em uma coleção.  
@@ -73,7 +73,7 @@ Next [ element ]
   
  [!code-vb[VbVbalrStatements#121](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_1.vb)]  
   
- Para obter mais exemplos, consulte [coleções](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) e [matrizes](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Para obter mais exemplos, consulte [coleções](../../../standard/collections/index.md) e [matrizes](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="nested-loops"></a>Loops aninhados  
  Você pode aninhar `For Each` loops colocando um loop dentro de outra.  
@@ -105,7 +105,7 @@ Next [ element ]
   
 -   Há um loop infinito, o que é um loop que pode executar um número grande ou mesmo infinito de vezes. Se você detectar dessas condições, você pode usar `Exit For` para escapar do loop. Para obter mais informações, consulte [fazer... Loop instrução](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
-## <a name="iterators"></a>Iteradores  
+## <a name="iterators"></a>Iterators  
  Você usa um *iterador* para executar uma iteração personalizada em uma coleção. Um iterador pode ser uma função ou um `Get` acessador. Ele usa um `Yield` instrução para retornar cada elemento de uma coleção em uma hora.  
   
  Chamar um iterador usando um `For Each...Next` instrução. Cada iteração do loop `For Each` chama o iterador. Quando um `Yield` instrução for atingida no iterador, a expressão no `Yield` instrução será retornada e o local atual no código é retido. A execução será reiniciada desse local na próxima vez que o iterador for chamado.  
@@ -114,7 +114,7 @@ Next [ element ]
   
  [!code-vb[VbVbalrStatements#127](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_4.vb)]  
   
- Para obter mais informações, consulte [iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7), [instrução Yield](../../../visual-basic/language-reference/statements/yield-statement.md), e [iterador](../../../visual-basic/language-reference/modifiers/iterator.md).  
+ Para obter mais informações, consulte [iteradores](../../programming-guide/concepts/iterators.md), [instrução Yield](../../../visual-basic/language-reference/statements/yield-statement.md), e [iterador](../../../visual-basic/language-reference/modifiers/iterator.md).  
   
 ## <a name="technical-implementation"></a>Implementação Técnica  
  Quando um `For Each`...`Next` instrução é executada, Visual Basic avalia a coleção apenas uma vez, antes de inicia o loop. Se o bloco de instrução altera `element` ou `group`, essas alterações não afetam a iteração do loop.  
@@ -180,7 +180,7 @@ End Sub
  [!code-vb[VbVbalrStatements#125](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_7.vb)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Coleções](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [Coleções](../../../standard/collections/index.md)  
  [Instrução For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)  
  [Estruturas de Loop](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
  [Instrução While...End While](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  

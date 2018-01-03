@@ -14,11 +14,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3a05927721e55f65db6984c3200e64088a187248
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6f25f1f9137206c1adb3ab3f89b7c6a783aeccf0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-services-providers-wcf-data-services"></a>Provedores de serviços de dados (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]oferece suporte a vários modelos de provedor para expor dados como um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. Este tópico fornece informações para permitir que você selecione o melhor provedor de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para sua fonte de dados.  
@@ -42,4 +43,4 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>Consulte também  
  [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md) (Definindo o WCF Data Services)  
  [Configurando o serviço de dados](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)  
- [Hospedando o serviço de dados](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)
+ [Hospedagem o serviço de dados](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)

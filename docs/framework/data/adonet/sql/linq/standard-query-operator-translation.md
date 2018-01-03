@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1156608e9e1aa63a2404d5394c0c4211eea60693
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a30adbc060ead6eb1805f85bd563021ba7530c36
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="standard-query-operator-translation"></a>Conversão padrão de operador de consulta
 O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] converte operadores de consulta padrão em comandos SQL. O processador de consultas do banco de dados determina a semântica de execução de tradução de SQL.  
@@ -237,8 +238,8 @@ ORDER BY [t0].[CustomerID]
   
 ## <a name="see-also"></a>Consulte também  
  [Referência](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [Elementos Return ou Skip em uma sequência](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
+ [Retornar ou ignorar elementos em uma sequência](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
  [Concatenar duas sequências](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
- [Retorna a diferença entre duas sequências ajustada](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)  
- [Retornar a interseção de duas sequências](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
- [Retorna a união de duas sequências](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)
+ [Retornar a diferença de conjunto entre duas sequências](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)  
+ [Retornar a interseção de conjunto de duas sequências](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
+ [Retornar a união de conjunto de duas sequências](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)

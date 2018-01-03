@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: dde8a16ee0fbd86dacf6125c9a02209a794a5b74
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 95f8a5d4d03c349467cbd13976ca9023470735aa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writing-dataset-schema-information-as-xsd"></a>Gravando informações de esquema de conjunto de dados como XSD
 Você pode escrever o esquema de um <xref:System.Data.DataSet> como esquema de linguagem XSD de definição de esquema XML, para que você pode transportar, com ou sem dados relacionados, em um documento XML. Esquema XML pode ser gravado em um arquivo, um fluxo, um <xref:System.Xml.XmlWriter>, ou uma cadeia de caracteres; ele é útil para gerar um fortemente tipada **conjunto de dados**. Para obter mais informações sobre fortemente tipado **DataSet** objetos, consulte [DataSets tipados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).  

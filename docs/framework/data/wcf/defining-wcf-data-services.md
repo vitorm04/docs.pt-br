@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1e66c26c12f3f62ee61e02e16318e747793ff927
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 61b04be25f54ef22511f45b5752c3ccfa90d94ac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="defining-wcf-data-services"></a>Configurando WCF Data Services
 Esta seção descreve como criar e configurar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para expor dados como um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]as etapas básicas necessárias para criar um serviço de dados, consulte [expondo seus dados como um serviço](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md).  
@@ -27,7 +28,7 @@ Esta seção descreve como criar e configurar [!INCLUDE[ssAstoria](../../../../i
  [Configurando o serviço de dados](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)  
  Descreve as opções de configuração do serviço de dados fornecido pelo [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
- [Provedores de serviços de dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
+ [Provedores de Serviços de Dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
  Descreve os modelos de provedor para expor dados como um serviço de dados.  
   
  [Operações de serviço](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)  
@@ -39,13 +40,13 @@ Esta seção descreve como criar e configurar [!INCLUDE[ssAstoria](../../../../i
  [Interceptadores](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)  
  Descreve como definir métodos de interceptador para executar lógica de negócios personalizado em solicitações para o serviço de dados.  
   
- [Desenvolvendo e implantando WCF Data Services](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)  
+ [Desenvolvendo e implantando o WCF Data Services](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)  
  Descreve como desenvolver e implantar um serviço de dados usando o Visual Studio.  
   
  [Protegendo o WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)  
  Descreve a autenticação e a autorização para o serviço de dados e outras considerações de segurança.  
   
- [Hospedando o serviço de dados](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)  
+ [Hospedagem o serviço de dados](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)  
  Descreve como selecionar um host para o serviço de dados.  
   
  [Controle de versão de serviço de dados](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)  

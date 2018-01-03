@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a20f9675af5a67291d95a9297b1ffa1c81a80522
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a4311b610859b36f1587e5e3f85e2a5f06503e1d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bitwise-canonical-functions"></a>Funções canônicas bit a bit
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] inclui funções canônicas bit a bit.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/18/2017
 |Função|Descrição|  
 |--------------|-----------------|  
 |`BitWiseAnd (` `value1` `,`  `value2` `)`|Retorna a conjução bit a bit de `value1` e de `value2` como o tipo de `value1` e de `value2`.<br /><br /> **Argumentos**<br /><br /> Um `Byte`, `Int16`, `Int32`, e `Int64`.<br /><br /> **Exemplo**<br /><br /> `-- The following example returns 1.`<br /><br /> `BitWiseAnd(1,3)`|  
-|`BitWiseNot (` `value` `)`|Retorna a negação bit a bit de `value`.<br /><br /> **Argumentos**<br /><br /> Um `Byte`, `Int16`, `Int32`, e `Int64`.<br /><br /> **Exemplo**<br /><br /> `-- The following example returns -4.`<br /><br /> `BitWiseNot(3)`|  
+|`BitWiseNot (``value``)`|Retorna a negação bit a bit de `value`.<br /><br /> **Argumentos**<br /><br /> Um `Byte`, `Int16`, `Int32`, e `Int64`.<br /><br /> **Exemplo**<br /><br /> `-- The following example returns -4.`<br /><br /> `BitWiseNot(3)`|  
 |`BitWiseOr (` `value1` `,`  `value2` `)`|Retorna a disjução bit a bit de `value1` e de `value2` como o tipo de `value1` e de `value2`.<br /><br /> **Argumentos**<br /><br /> Um `Byte`, `Int16`, `Int32` e `Int64`.<br /><br /> **Exemplo**<br /><br /> `-- The following example returns 3.`<br /><br /> `BitWiseOr(1,3)`|  
 |`BitWiseXor (` `value1` `,`  `value2` `)`|Retorna a disjunção bit a bit exclusiva de `value1` e de `value2` como o tipo de `value1` e de `value2`.<br /><br /> **Argumentos**<br /><br /> Um `Byte`, `Int16`, `Int32` e `Int64`.<br /><br /> **Exemplo**<br /><br /> `-- The following example returns 2.`<br /><br /> `BitWiseXor (1,3)`|  
   

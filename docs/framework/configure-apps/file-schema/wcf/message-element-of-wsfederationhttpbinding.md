@@ -13,11 +13,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fb12cc0162cabd75f176c636b9cd4d00309bb594
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 09e384311f50553585c0a7a14a51df20858fb439
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltmessagegt-element-of-ltwsfederationhttpbindinggt"></a>elemento de &lt;mensagem&gt; de &lt;wsFederationHttpBinding&gt;
 Define as configurações para a segurança de nível de mensagem para o [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
@@ -98,7 +99,7 @@ Define as configurações para a segurança de nível de mensagem para o [ \<wsF
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |algorithmSuite|Define a mensagem de algoritmos de criptografia e chave-wrap. Consulte a tabela "atributo algorithmSuite" para obter valores válidos deste atributo. O valor padrão é `Basic256`.<br /><br /> Esse atributo é do tipo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Esses algoritmos são mapeados para aquelas especificadas na especificação de linguagem de política de segurança (WS-SecurityPolicy).|  
-|issuedKeyType|Especifica o tipo de chave a ser emitido. Os valores válidos incluem o seguinte:<br /><br /> -SymmetricKey<br />-PublicKey<br /><br /> O padrão é `SymmetricKey`. Esse atributo é do tipo <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
+|issuedKeyType|Especifica o tipo de chave a ser emitida. Os valores válidos incluem o seguinte:<br /><br /> -SymmetricKey<br />-PublicKey<br /><br /> O padrão é `SymmetricKey`. Esse atributo é do tipo <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
 |issuedTokenType|Uma cadeia de caracteres que contém um URI que especifica o tipo de token a ser emitido. O padrão é `null`.|  
 |negotiateServiceCredential|Um valor booleano que especifica se a credencial de serviço deve ser trocada como parte da negociação ou está disponível fora da banda. O padrão é `true`, que significa que a credencial de serviço é negociada.|  
   
@@ -143,7 +144,7 @@ Define as configurações para a segurança de nível de mensagem para o [ \<wsF
  <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>  
  <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>  
  `System.ServiceModel.Configuration.FederatedMessageSecurityElement`[Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Bindings](../../../../../docs/framework/wcf/bindings.md) (Associações)  
+ [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<associação >](../../../../../docs/framework/misc/binding.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 9b88308c5dad69ed1ba6f48f525931e94f13ef1a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e120ea532b6da455e31ce7345b6c4b2be1ec975f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ole-db-schema-collections"></a>Coleções de esquema de banco de dados OLE
 Esta seção discute o suporte de coleção de esquema para os provedores OLE DB para Microsoft SQL Server, Oracle e Microsoft Jet.  
@@ -41,12 +42,12 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_CATALOG|Cadeia de caracteres|  
-|TABLE_SCHEMA|Cadeia de caracteres|  
-|TABLE_NAME|Cadeia de caracteres|  
-|TABLE_TYPE|Cadeia de caracteres|  
-|TABLE_GUID|GUID|  
-|DESCRIÇÃO|Cadeia de caracteres|  
+|TABLE_CATALOG|Cadeia de Caracteres|  
+|TABLE_SCHEMA|Cadeia de Caracteres|  
+|TABLE_NAME|Cadeia de Caracteres|  
+|TABLE_TYPE|Cadeia de Caracteres|  
+|TABLE_GUID|Guid|  
+|DESCRIÇÃO|Cadeia de Caracteres|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
@@ -55,34 +56,34 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_CATALOG|Cadeia de caracteres|  
-|TABLE_SCHEMA|Cadeia de caracteres|  
-|TABLE_NAME|Cadeia de caracteres|  
-|COLUMN_NAME|Cadeia de caracteres|  
-|COLUMN_GUID|GUID|  
+|TABLE_CATALOG|Cadeia de Caracteres|  
+|TABLE_SCHEMA|Cadeia de Caracteres|  
+|TABLE_NAME|Cadeia de Caracteres|  
+|COLUMN_NAME|Cadeia de Caracteres|  
+|COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_HASDEFAULT|Boolean|  
-|COLUMN_DEFAULT|Cadeia de caracteres|  
+|COLUMN_DEFAULT|Cadeia de Caracteres|  
 |COLUMN_FLAGS|Int64|  
 |IS_NULLABLE|Boolean|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|GUID|  
+|TYPE_GUID|Guid|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
 |DATETIME_PRECISION|Int64|  
-|CHARACTER_SET_CATALOG|Cadeia de caracteres|  
-|CHARACTER_SET_SCHEMA|Cadeia de caracteres|  
-|CHARACTER_SET_NAME|Cadeia de caracteres|  
-|COLLATION_CATALOG|Cadeia de caracteres|  
-|COLLATION_SCHEMA|Cadeia de caracteres|  
-|COLLATION_NAME|Cadeia de caracteres|  
-|DOMAIN_CATALOG|Cadeia de caracteres|  
-|DOMAIN_SCHEMA|Cadeia de caracteres|  
-|DOMAIN_NAME|Cadeia de caracteres|  
-|DESCRIÇÃO|Cadeia de caracteres|  
+|CHARACTER_SET_CATALOG|Cadeia de Caracteres|  
+|CHARACTER_SET_SCHEMA|Cadeia de Caracteres|  
+|CHARACTER_SET_NAME|Cadeia de Caracteres|  
+|COLLATION_CATALOG|Cadeia de Caracteres|  
+|COLLATION_SCHEMA|Cadeia de Caracteres|  
+|COLLATION_NAME|Cadeia de Caracteres|  
+|DOMAIN_CATALOG|Cadeia de Caracteres|  
+|DOMAIN_SCHEMA|Cadeia de Caracteres|  
+|DOMAIN_NAME|Cadeia de Caracteres|  
+|DESCRIÇÃO|Cadeia de Caracteres|  
 |COLUMN_LCID|Int32|  
 |COLUMN_COMPFLAGS|Int32|  
 |COLUMN_SORTID|Int32|  
@@ -93,12 +94,12 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE_CATALOG|Cadeia de caracteres|  
-|PROCEDURE_SCHEMA|Cadeia de caracteres|  
-|PROCEDURE_NAME|Cadeia de caracteres|  
+|PROCEDURE_CATALOG|Cadeia de Caracteres|  
+|PROCEDURE_SCHEMA|Cadeia de Caracteres|  
+|PROCEDURE_NAME|Cadeia de Caracteres|  
 |PROCEDURE_TYPE|Int16|  
-|DEFINIÇÃO_DO_PROCEDIMENTO|Cadeia de caracteres|  
-|DESCRIÇÃO|Cadeia de caracteres|  
+|DEFINIÇÃO_DO_PROCEDIMENTO|Cadeia de Caracteres|  
+|DESCRIÇÃO|Cadeia de Caracteres|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
@@ -106,41 +107,41 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE_CATALOG|Cadeia de caracteres|  
-|PROCEDURE_SCHEMA|Cadeia de caracteres|  
-|PROCEDURE_NAME|Cadeia de caracteres|  
-|PARAMETER_NAME|Cadeia de caracteres|  
+|PROCEDURE_CATALOG|Cadeia de Caracteres|  
+|PROCEDURE_SCHEMA|Cadeia de Caracteres|  
+|PROCEDURE_NAME|Cadeia de Caracteres|  
+|PARAMETER_NAME|Cadeia de Caracteres|  
 |ORDINAL_POSITION|Int32|  
 |TIPO_DE_PARÂMETRO|Int32|  
 |PARAMETER_HASDEFAULT|Boolean|  
-|PARAMETER_DEFAULT|Cadeia de caracteres|  
+|PARAMETER_DEFAULT|Cadeia de Caracteres|  
 |IS_NULLABLE|Boolean|  
 |DATA_TYPE|Int32|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
-|DESCRIÇÃO|Cadeia de caracteres|  
-|TYPE_NAME|Cadeia de caracteres|  
-|LOCAL_TYPE_NAME|Cadeia de caracteres|  
+|DESCRIÇÃO|Cadeia de Caracteres|  
+|TYPE_NAME|Cadeia de Caracteres|  
+|LOCAL_TYPE_NAME|Cadeia de Caracteres|  
   
 ### <a name="catalog"></a>Catálogo  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|CATALOG_NAME|Cadeia de caracteres|  
-|DESCRIÇÃO|Cadeia de caracteres|  
+|CATALOG_NAME|Cadeia de Caracteres|  
+|DESCRIÇÃO|Cadeia de Caracteres|  
   
 ### <a name="indexes"></a>Índices  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_CATALOG|Cadeia de caracteres|  
-|TABLE_SCHEMA|Cadeia de caracteres|  
-|TABLE_NAME|Cadeia de caracteres|  
-|INDEX_CATALOG|Cadeia de caracteres|  
-|INDEX_SCHEMA|Cadeia de caracteres|  
-|INDEX_NAME|Cadeia de caracteres|  
+|TABLE_CATALOG|Cadeia de Caracteres|  
+|TABLE_SCHEMA|Cadeia de Caracteres|  
+|TABLE_NAME|Cadeia de Caracteres|  
+|INDEX_CATALOG|Cadeia de Caracteres|  
+|INDEX_SCHEMA|Cadeia de Caracteres|  
+|INDEX_NAME|Cadeia de Caracteres|  
 |PRIMARY_KEY|Boolean|  
 |EXCLUSIVO|Boolean|  
 |CLUSTERED|Boolean|  
@@ -152,13 +153,13 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
 |AUTO_UPDATE|Boolean|  
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
-|COLUMN_NAME|Cadeia de caracteres|  
-|COLUMN_GUID|GUID|  
+|COLUMN_NAME|Cadeia de Caracteres|  
+|COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |AGRUPAMENTO|Int16|  
 |CARDINALIDADE|Decimal|  
 |PÁGINAS|Int32|  
-|FILTER_CONDITION|Cadeia de caracteres|  
+|FILTER_CONDITION|Cadeia de Caracteres|  
 |INTEGRADO|Boolean|  
   
 ## <a name="microsoft-oracle-ole-db-provider"></a>Provedor OLE DB Microsoft Oracle  
@@ -182,12 +183,12 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_CATALOG|Cadeia de caracteres|  
-|TABLE_SCHEMA|Cadeia de caracteres|  
-|TABLE_NAME|Cadeia de caracteres|  
-|TABLE_TYPE|Cadeia de caracteres|  
-|TABLE_GUID|GUID|  
-|DESCRIÇÃO|Cadeia de caracteres|  
+|TABLE_CATALOG|Cadeia de Caracteres|  
+|TABLE_SCHEMA|Cadeia de Caracteres|  
+|TABLE_NAME|Cadeia de Caracteres|  
+|TABLE_TYPE|Cadeia de Caracteres|  
+|TABLE_GUID|Guid|  
+|DESCRIÇÃO|Cadeia de Caracteres|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
@@ -196,45 +197,45 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_CATALOG|Cadeia de caracteres|  
-|TABLE_SCHEMA|Cadeia de caracteres|  
-|TABLE_NAME|Cadeia de caracteres|  
-|COLUMN_NAME|Cadeia de caracteres|  
-|COLUMN_GUID|GUID|  
+|TABLE_CATALOG|Cadeia de Caracteres|  
+|TABLE_SCHEMA|Cadeia de Caracteres|  
+|TABLE_NAME|Cadeia de Caracteres|  
+|COLUMN_NAME|Cadeia de Caracteres|  
+|COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_HASDEFAULT|Boolean|  
-|COLUMN_DEFAULT|Cadeia de caracteres|  
+|COLUMN_DEFAULT|Cadeia de Caracteres|  
 |COLUMN_FLAGS|Int64|  
 |IS_NULLABLE|Boolean|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|GUID|  
+|TYPE_GUID|Guid|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
 |DATETIME_PRECISION|Int64|  
-|CHARACTER_SET_CATALOG|Cadeia de caracteres|  
-|CHARACTER_SET_SCHEMA|Cadeia de caracteres|  
-|CHARACTER_SET_NAME|Cadeia de caracteres|  
-|COLLATION_CATALOG|Cadeia de caracteres|  
-|COLLATION_SCHEMA|Cadeia de caracteres|  
-|COLLATION_NAME|Cadeia de caracteres|  
-|DOMAIN_CATALOG|Cadeia de caracteres|  
-|DOMAIN_SCHEMA|Cadeia de caracteres|  
-|DOMAIN_NAME|Cadeia de caracteres|  
-|DESCRIÇÃO|Cadeia de caracteres|  
+|CHARACTER_SET_CATALOG|Cadeia de Caracteres|  
+|CHARACTER_SET_SCHEMA|Cadeia de Caracteres|  
+|CHARACTER_SET_NAME|Cadeia de Caracteres|  
+|COLLATION_CATALOG|Cadeia de Caracteres|  
+|COLLATION_SCHEMA|Cadeia de Caracteres|  
+|COLLATION_NAME|Cadeia de Caracteres|  
+|DOMAIN_CATALOG|Cadeia de Caracteres|  
+|DOMAIN_SCHEMA|Cadeia de Caracteres|  
+|DOMAIN_NAME|Cadeia de Caracteres|  
+|DESCRIÇÃO|Cadeia de Caracteres|  
   
 ### <a name="procedures"></a>Procedimentos  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE_CATALOG|Cadeia de caracteres|  
-|PROCEDURE_SCHEMA|Cadeia de caracteres|  
-|PROCEDURE_NAME|Cadeia de caracteres|  
+|PROCEDURE_CATALOG|Cadeia de Caracteres|  
+|PROCEDURE_SCHEMA|Cadeia de Caracteres|  
+|PROCEDURE_NAME|Cadeia de Caracteres|  
 |PROCEDURE_TYPE|Int16|  
-|DEFINIÇÃO_DO_PROCEDIMENTO|Cadeia de caracteres|  
-|DESCRIÇÃO|Cadeia de caracteres|  
+|DEFINIÇÃO_DO_PROCEDIMENTO|Cadeia de Caracteres|  
+|DESCRIÇÃO|Cadeia de Caracteres|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
@@ -242,35 +243,35 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE_CATALOG|Cadeia de caracteres|  
-|PROCEDURE_SCHEMA|Cadeia de caracteres|  
-|PROCEDURE_NAME|Cadeia de caracteres|  
-|COLUMN_NAME|Cadeia de caracteres|  
-|COLUMN_GUID|GUID|  
+|PROCEDURE_CATALOG|Cadeia de Caracteres|  
+|PROCEDURE_SCHEMA|Cadeia de Caracteres|  
+|PROCEDURE_NAME|Cadeia de Caracteres|  
+|COLUMN_NAME|Cadeia de Caracteres|  
+|COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |ROWSET_NUMBER|Int64|  
 |ORDINAL_POSITION|Int64|  
 |IS_NULLABLE|Boolean|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|GUID|  
+|TYPE_GUID|Guid|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
-|DESCRIÇÃO|Cadeia de caracteres|  
+|DESCRIÇÃO|Cadeia de Caracteres|  
 |SOBRECARGA|Int16|  
   
 ### <a name="views"></a>Exibições  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_CATALOG|Cadeia de caracteres|  
-|TABLE_SCHEMA|Cadeia de caracteres|  
-|TABLE_NAME|Cadeia de caracteres|  
-|VIEW_DEFINITION|Cadeia de caracteres|  
+|TABLE_CATALOG|Cadeia de Caracteres|  
+|TABLE_SCHEMA|Cadeia de Caracteres|  
+|TABLE_NAME|Cadeia de Caracteres|  
+|VIEW_DEFINITION|Cadeia de Caracteres|  
 |CHECK_OPTION|Boolean|  
 |IS_UPDATABLE|Boolean|  
-|DESCRIÇÃO|Cadeia de caracteres|  
+|DESCRIÇÃO|Cadeia de Caracteres|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
@@ -278,12 +279,12 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_CATALOG|Cadeia de caracteres|  
-|TABLE_SCHEMA|Cadeia de caracteres|  
-|TABLE_NAME|Cadeia de caracteres|  
-|INDEX_CATALOG|Cadeia de caracteres|  
-|INDEX_SCHEMA|Cadeia de caracteres|  
-|INDEX_NAME|Cadeia de caracteres|  
+|TABLE_CATALOG|Cadeia de Caracteres|  
+|TABLE_SCHEMA|Cadeia de Caracteres|  
+|TABLE_NAME|Cadeia de Caracteres|  
+|INDEX_CATALOG|Cadeia de Caracteres|  
+|INDEX_SCHEMA|Cadeia de Caracteres|  
+|INDEX_NAME|Cadeia de Caracteres|  
 |PRIMARY_KEY|Boolean|  
 |EXCLUSIVO|Boolean|  
 |CLUSTERED|Boolean|  
@@ -295,13 +296,13 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
 |AUTO_UPDATE|Boolean|  
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
-|COLUMN_NAME|Cadeia de caracteres|  
-|COLUMN_GUID|GUID|  
+|COLUMN_NAME|Cadeia de Caracteres|  
+|COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |AGRUPAMENTO|Int16|  
 |CARDINALIDADE|Decimal|  
 |PÁGINAS|Int32|  
-|FILTER_CONDITION|Cadeia de caracteres|  
+|FILTER_CONDITION|Cadeia de Caracteres|  
 |INTEGRADO|Boolean|  
   
 ## <a name="microsoft-jet-ole-db-provider"></a>Provedor do Microsoft Jet OLE DB  
@@ -321,12 +322,12 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_CATALOG|Cadeia de caracteres|  
-|TABLE_SCHEMA|Cadeia de caracteres|  
-|TABLE_NAME|Cadeia de caracteres|  
-|TABLE_TYPE|Cadeia de caracteres|  
-|TABLE_GUID|GUID|  
-|DESCRIÇÃO|Cadeia de caracteres|  
+|TABLE_CATALOG|Cadeia de Caracteres|  
+|TABLE_SCHEMA|Cadeia de Caracteres|  
+|TABLE_NAME|Cadeia de Caracteres|  
+|TABLE_TYPE|Cadeia de Caracteres|  
+|TABLE_GUID|Guid|  
+|DESCRIÇÃO|Cadeia de Caracteres|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
@@ -335,45 +336,45 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_CATALOG|Cadeia de caracteres|  
-|TABLE_SCHEMA|Cadeia de caracteres|  
-|TABLE_NAME|Cadeia de caracteres|  
-|COLUMN_NAME|Cadeia de caracteres|  
-|COLUMN_GUID|GUID|  
+|TABLE_CATALOG|Cadeia de Caracteres|  
+|TABLE_SCHEMA|Cadeia de Caracteres|  
+|TABLE_NAME|Cadeia de Caracteres|  
+|COLUMN_NAME|Cadeia de Caracteres|  
+|COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_HASDEFAULT|Boolean|  
-|COLUMN_DEFAULT|Cadeia de caracteres|  
+|COLUMN_DEFAULT|Cadeia de Caracteres|  
 |COLUMN_FLAGS|Int64|  
 |IS_NULLABLE|Boolean|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|GUID|  
+|TYPE_GUID|Guid|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
 |DATETIME_PRECISION|Int64|  
-|CHARACTER_SET_CATALOG|Cadeia de caracteres|  
-|CHARACTER_SET_SCHEMA|Cadeia de caracteres|  
-|CHARACTER_SET_NAME|Cadeia de caracteres|  
-|COLLATION_CATALOG|Cadeia de caracteres|  
-|COLLATION_SCHEMA|Cadeia de caracteres|  
-|COLLATION_NAME|Cadeia de caracteres|  
-|DOMAIN_CATALOG|Cadeia de caracteres|  
-|DOMAIN_SCHEMA|Cadeia de caracteres|  
-|DOMAIN_NAME|Cadeia de caracteres|  
-|DESCRIÇÃO|Cadeia de caracteres|  
+|CHARACTER_SET_CATALOG|Cadeia de Caracteres|  
+|CHARACTER_SET_SCHEMA|Cadeia de Caracteres|  
+|CHARACTER_SET_NAME|Cadeia de Caracteres|  
+|COLLATION_CATALOG|Cadeia de Caracteres|  
+|COLLATION_SCHEMA|Cadeia de Caracteres|  
+|COLLATION_NAME|Cadeia de Caracteres|  
+|DOMAIN_CATALOG|Cadeia de Caracteres|  
+|DOMAIN_SCHEMA|Cadeia de Caracteres|  
+|DOMAIN_NAME|Cadeia de Caracteres|  
+|DESCRIÇÃO|Cadeia de Caracteres|  
   
 ### <a name="procedures"></a>Procedimentos  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE_CATALOG|Cadeia de caracteres|  
-|PROCEDURE_SCHEMA|Cadeia de caracteres|  
-|PROCEDURE_NAME|Cadeia de caracteres|  
+|PROCEDURE_CATALOG|Cadeia de Caracteres|  
+|PROCEDURE_SCHEMA|Cadeia de Caracteres|  
+|PROCEDURE_NAME|Cadeia de Caracteres|  
 |PROCEDURE_TYPE|Int16|  
-|DEFINIÇÃO_DO_PROCEDIMENTO|Cadeia de caracteres|  
-|DESCRIÇÃO|Cadeia de caracteres|  
+|DEFINIÇÃO_DO_PROCEDIMENTO|Cadeia de Caracteres|  
+|DESCRIÇÃO|Cadeia de Caracteres|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
@@ -381,13 +382,13 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_CATALOG|Cadeia de caracteres|  
-|TABLE_SCHEMA|Cadeia de caracteres|  
-|TABLE_NAME|Cadeia de caracteres|  
-|VIEW_DEFINITION|Cadeia de caracteres|  
+|TABLE_CATALOG|Cadeia de Caracteres|  
+|TABLE_SCHEMA|Cadeia de Caracteres|  
+|TABLE_NAME|Cadeia de Caracteres|  
+|VIEW_DEFINITION|Cadeia de Caracteres|  
 |CHECK_OPTION|Boolean|  
 |IS_UPDATABLE|Boolean|  
-|DESCRIÇÃO|Cadeia de caracteres|  
+|DESCRIÇÃO|Cadeia de Caracteres|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
@@ -395,12 +396,12 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE_CATALOG|Cadeia de caracteres|  
-|TABLE_SCHEMA|Cadeia de caracteres|  
-|TABLE_NAME|Cadeia de caracteres|  
-|INDEX_CATALOG|Cadeia de caracteres|  
-|INDEX_SCHEMA|Cadeia de caracteres|  
-|INDEX_NAME|Cadeia de caracteres|  
+|TABLE_CATALOG|Cadeia de Caracteres|  
+|TABLE_SCHEMA|Cadeia de Caracteres|  
+|TABLE_NAME|Cadeia de Caracteres|  
+|INDEX_CATALOG|Cadeia de Caracteres|  
+|INDEX_SCHEMA|Cadeia de Caracteres|  
+|INDEX_NAME|Cadeia de Caracteres|  
 |PRIMARY_KEY|Boolean|  
 |EXCLUSIVO|Boolean|  
 |CLUSTERED|Boolean|  
@@ -412,13 +413,13 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
 |AUTO_UPDATE|Boolean|  
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
-|COLUMN_NAME|Cadeia de caracteres|  
-|COLUMN_GUID|GUID|  
+|COLUMN_NAME|Cadeia de Caracteres|  
+|COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |AGRUPAMENTO|Int16|  
 |CARDINALIDADE|Decimal|  
 |PÁGINAS|Int32|  
-|FILTER_CONDITION|Cadeia de caracteres|  
+|FILTER_CONDITION|Cadeia de Caracteres|  
 |INTEGRADO|Boolean|  
   
 ## <a name="see-also"></a>Consulte também  

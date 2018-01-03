@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: e2c8d3150f19b5790f2db7b93b3100a9becff4c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b8d27385a08c58c61983315da41f27f4dcb29368
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="namespace-mapping-between-wif-35-and-wif-45"></a>Mapeamento de namespace entre o WIF 3.5 e o WIF 4.5
 Do .NET 4.5 em diante, o WIF (Windows Identity Foundation) foi totalmente integrado ao .NET Framework. Essa integração gerou alterações de nome e alguma consolidação dos namespaces do WIF e da superfície de API. Este tópico fornece algumas diretrizes e um mapeamento geral entre os namespaces do WIF 3.5 e os namespaces do WIF 4.5. Ele não se destina a apresentar a íntegra, mas em vez disso, fornecer algumas informações gerais sobre onde encontrar classes familiares do WIF 3.5 no WIF 4.5. Para obter mais informações sobre as diferenças entre o WIF 3.5 e o WIF 4.5, consulte [Novidades no Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md). Para obter diretrizes sobre como migrar um aplicativo criado usando o WIF 3.5 para o WIF 4.5, consulte [Diretrizes para migrar um aplicativo criado usando o WIF 3.5 para o WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md).  

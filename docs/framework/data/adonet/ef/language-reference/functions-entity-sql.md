@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: fb55fecc7c876fda5918418e353eaf327ce6c034
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 11ce680f4a240c82b51b1651886e39d829976e84
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="functions-entity-sql"></a>Funções (Entity SQL)
 Entity SQL oferece suporte funções definidas pelo usuário, funções, canônicas e funções específicos do provedor. As funções definidas pelo usuário são especificadas no modelo conceitual ou embutido na consulta. Para obter mais informações, consulte [funções definidas pelo usuário](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md).  
@@ -31,7 +32,7 @@ Entity SQL oferece suporte funções definidas pelo usuário, funções, canôni
   
  [Resolução de sobrecarga de função](../../../../../../docs/framework/data/adonet/ef/language-reference/function-overload-resolution-entity-sql.md)  
   
- [Funções de agregação](../../../../../../docs/framework/data/adonet/ef/aggregate-functions-sqlclient-for-entity-framework.md)  
+ [Funções agregadas](../../../../../../docs/framework/data/adonet/ef/aggregate-functions-sqlclient-for-entity-framework.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral do Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 277e12e59ea85be4d22e28a59bd7404e5e0111f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 27351c1d47d4ad40940e5b64f257e6a59fc7403a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="oracle-ref-cursors"></a>REF CURSORs do Oracle
 O provedor de dados .NET Framework para Oracle oferece suporte a Oracle **REF CURSOR** tipo de dados. Ao usar o provedor de dados para trabalhar com REF CURSORs do Oracle, você deve considerar os seguintes comportamentos.  
@@ -43,10 +44,10 @@ O provedor de dados .NET Framework para Oracle oferece suporte a Oracle **REF CU
  [Exemplos de REF CURSOR](../../../../docs/framework/data/adonet/ref-cursor-examples.md)  
  Contém três exemplos que demonstram como usar REF CURSORs.  
   
- [REF CURSOR parâmetros em um OracleDataReader](../../../../docs/framework/data/adonet/ref-cursor-parameters-in-an-oracledatareader.md)  
+ [Parâmetros de REF CURSOR em um OracleDataReader](../../../../docs/framework/data/adonet/ref-cursor-parameters-in-an-oracledatareader.md)  
  Demonstra como executar um procedimento armazenado PL/SQL que retorna um parâmetro REF CURSOR e lê o valor como um **OracleDataReader**.  
   
- [Recuperando dados de vários cursores de referência usando uma OracleDataReader](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)  
+ [Recuperando dados de vários REF CURSORs usando um OracleDataReader](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)  
  Demonstra como executar um procedimento armazenado PL/SQL que retorna dois parâmetros REF CURSOR e lê os valores usando um **OracleDataReader**.  
   
  [Preenchendo um DataSet usando um ou mais REF CURSORs](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)  

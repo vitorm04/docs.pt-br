@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 073a526e72f46864b2e08d33ec14a53034c144b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a34e49e4d11f442f15db2f06b330b8b84a165a08
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltassemblygt-element-net-native"></a>Elemento &lt;Assembly&gt; (.NET Nativo)
 Aplica a política de reflexão de tempo de execução a todos os tipos em um assembly especificado.  

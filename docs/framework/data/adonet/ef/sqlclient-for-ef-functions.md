@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 08526aeebd01196c064154a35df267b8040df796
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b580f0611d18b03ba831a3f5a3d0481bd27b0869
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqlclient-for-entity-framework-functions"></a>SqlClient para funções de Entity Framework
 O provedor de dados. NET Framework para SQL Server (SqlClient) para Entity Framework fornece um conjunto de funções para executar cálculos matemáticos e de agregação, bem como funções para executar `System.DateTime` e operações de `string` . Essas funções estão no espaço de `SQLServer` .  
@@ -27,9 +28,9 @@ O provedor de dados. NET Framework para SQL Server (SqlClient) para Entity Frame
  Para obter informações sobre como canônico funções são mapeados para funções do SQL Server, consulte [conceitual modelo canônico a mapeamento de funções do SQL Server](../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Mapeamento de funções de modelo conceitual canônico para o SQL Server](../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
+ [Mapeamento de funções canônicas de modelo conceitual para o SQL Server](../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
   
- [Funções de agregação](../../../../../docs/framework/data/adonet/ef/aggregate-functions-sqlclient-for-entity-framework.md)  
+ [Funções agregadas](../../../../../docs/framework/data/adonet/ef/aggregate-functions-sqlclient-for-entity-framework.md)  
   
  [Funções de data e hora](../../../../../docs/framework/data/adonet/ef/date-and-time-functions.md)  
   

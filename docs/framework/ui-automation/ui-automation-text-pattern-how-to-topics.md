@@ -18,11 +18,12 @@ caps.latest.revision: "62"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 96fab367bcec7f501e80f4533b2ee36e4cf86c77
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 80bd85af56608563b7a3c49912ce31a5f6dd0744
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-text-pattern-how-to-topics"></a>Tópicos em Como Fazer em Padrões de Texto em Automação de Interface de Usuário
 > [!NOTE]
@@ -31,8 +32,8 @@ ms.lasthandoff: 10/18/2017
  Esta seção inclui tópicos que explicam como usar o padrão de texto de automação de interface do usuário.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Adicionar conteúdo a um Text Box utilizando Automação de interface do usuário](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
- [Encontre e destaque texto usando automação de interface do usuário](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
+ [Adicionar conteúdo a uma caixa de texto utilizando automação da interface do usuário](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
+ [Localizar e destacar texto usando automação de interface do usuário](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
  [Obter atributos de texto usando automação de interface do usuário](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)  
  [Obter detalhes de atributos de texto misto usando automação de interface do usuário](../../../docs/framework/ui-automation/obtain-mixed-text-attribute-details-using-ui-automation.md)  
  [Percorrer texto usando automação de interface do usuário](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  

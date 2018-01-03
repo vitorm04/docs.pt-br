@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 05b87dfbb54de87ce7591dd6363d56ab69ebb8a7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3c912a97c0d362fa475ae93127b84cb4a680125c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-framework-overview"></a>Visão geral do Entity Framework
 O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] é um conjunto de tecnologias no ADO.NET que dão suporte ao desenvolvimento de aplicativos de software orientados a dados. Os arquitetos e desenvolvedores de aplicativos orientados a dados lutam com a necessidade de realizar dois objetivos muito diferentes. Precisam modelar as entidades, as relações e a lógica dos problemas de negócios que estão solucionando e também precisam trabalhar com os mecanismos de dados usados para armazenar e recuperar os dados. Os dados podem se estender por vários sistemas de armazenamento, cada um com seus próprios protocolos. Mesmo aplicativos que trabalhem com um único sistema de armazenamento devem balancear os requisitos do sistema de armazenamento com os requisitos de gravação eficiente e código de aplicativo que possa ser mantido.  
@@ -106,4 +107,4 @@ O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] é um conjunto 
  Fornece links para tópicos conceituais e links para tópicos e recursos externos para criar aplicativos do [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
- [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
+ [Entity Framework do ADO.NET](../../../../../docs/framework/data/adonet/ef/index.md)
