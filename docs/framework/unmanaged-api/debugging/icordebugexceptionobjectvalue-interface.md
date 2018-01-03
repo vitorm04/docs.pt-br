@@ -19,34 +19,35 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 47733a6af18d42d0d9db1e50cf21646289ef1443
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e6ee743a5e3e28b5d8b864f325239725ca6c0042
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugexceptionobjectvalue-interface"></a><span data-ttu-id="00e75-102">Interface ICorDebugExceptionObjectValue</span><span class="sxs-lookup"><span data-stu-id="00e75-102">ICorDebugExceptionObjectValue Interface</span></span>
-<span data-ttu-id="00e75-103">Estende a interface "ICorDebugObjectValue" para fornecer informações de rastreamento de pilha de um objeto de exceção gerenciada.</span><span class="sxs-lookup"><span data-stu-id="00e75-103">Extends the "ICorDebugObjectValue" interface to provide stack trace information from a managed exception object.</span></span>  
+# <a name="icordebugexceptionobjectvalue-interface"></a><span data-ttu-id="dda51-102">Interface ICorDebugExceptionObjectValue</span><span class="sxs-lookup"><span data-stu-id="dda51-102">ICorDebugExceptionObjectValue Interface</span></span>
+<span data-ttu-id="dda51-103">Estende a interface "ICorDebugObjectValue" para fornecer informações de rastreamento de pilha de um objeto de exceção gerenciada.</span><span class="sxs-lookup"><span data-stu-id="dda51-103">Extends the "ICorDebugObjectValue" interface to provide stack trace information from a managed exception object.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="00e75-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="00e75-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="dda51-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="dda51-104">Methods</span></span>  
   
-|<span data-ttu-id="00e75-105">Método</span><span class="sxs-lookup"><span data-stu-id="00e75-105">Method</span></span>|<span data-ttu-id="00e75-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="00e75-106">Description</span></span>|  
+|<span data-ttu-id="dda51-105">Método</span><span class="sxs-lookup"><span data-stu-id="dda51-105">Method</span></span>|<span data-ttu-id="dda51-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="dda51-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="00e75-107">Método EnumerateExceptionCallStack</span><span class="sxs-lookup"><span data-stu-id="00e75-107">EnumerateExceptionCallStack Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectvalue-enumerateexceptioncallstack-method.md)|<span data-ttu-id="00e75-108">Obtém um enumerador para a pilha de chamadas incorporada em um objeto de exceção.</span><span class="sxs-lookup"><span data-stu-id="00e75-108">Gets an enumerator to the call stack embedded in an exception object.</span></span>|  
+|[<span data-ttu-id="dda51-107">Método EnumerateExceptionCallStack</span><span class="sxs-lookup"><span data-stu-id="dda51-107">EnumerateExceptionCallStack Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectvalue-enumerateexceptioncallstack-method.md)|<span data-ttu-id="dda51-108">Obtém um enumerador para a pilha de chamadas incorporada em um objeto de exceção.</span><span class="sxs-lookup"><span data-stu-id="dda51-108">Gets an enumerator to the call stack embedded in an exception object.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="00e75-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="00e75-109">Remarks</span></span>  
- <span data-ttu-id="00e75-110">A chamada para `QueryInterface` funcionará para os objetos gerenciados que derivam de <xref:System.Exception?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="00e75-110">The call to `QueryInterface` will succeed for managed objects that derive from <xref:System.Exception?displayProperty=nameWithType>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dda51-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="dda51-109">Remarks</span></span>  
+ <span data-ttu-id="dda51-110">A chamada para `QueryInterface` funcionará para os objetos gerenciados que derivam de <xref:System.Exception?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="dda51-110">The call to `QueryInterface` will succeed for managed objects that derive from <xref:System.Exception?displayProperty=nameWithType>.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="00e75-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="00e75-111">Requirements</span></span>  
- <span data-ttu-id="00e75-112">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="00e75-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dda51-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="dda51-111">Requirements</span></span>  
+ <span data-ttu-id="dda51-112">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dda51-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="00e75-113">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="00e75-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="dda51-113">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="dda51-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="00e75-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="00e75-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="dda51-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dda51-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="00e75-115">**Versões do .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="00e75-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="dda51-115">**Versões do .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dda51-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="00e75-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="00e75-116">See Also</span></span>  
- [<span data-ttu-id="00e75-117">Interfaces de depuração</span><span class="sxs-lookup"><span data-stu-id="00e75-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="00e75-118">Depuração</span><span class="sxs-lookup"><span data-stu-id="00e75-118">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)  
+## <a name="see-also"></a><span data-ttu-id="dda51-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="dda51-116">See Also</span></span>  
+ [<span data-ttu-id="dda51-117">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="dda51-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [<span data-ttu-id="dda51-118">Depuração</span><span class="sxs-lookup"><span data-stu-id="dda51-118">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)  
  

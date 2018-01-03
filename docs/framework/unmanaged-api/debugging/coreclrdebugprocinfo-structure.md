@@ -22,16 +22,17 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 53616fb8e947d2a301dcfcb4e3870a9a9dc36ec1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d341b875f9f64b9aa1fcdcf21668dafea0beac12
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="coreclrdebugprocinfo-structure"></a><span data-ttu-id="da91c-102">Estrutura CoreClrDebugProcInfo</span><span class="sxs-lookup"><span data-stu-id="da91c-102">CoreClrDebugProcInfo Structure</span></span>
-<span data-ttu-id="da91c-103">Representa um processo que está em execução em um computador remoto.</span><span class="sxs-lookup"><span data-stu-id="da91c-103">Represents a process that is running on a remote machine.</span></span>  
+# <a name="coreclrdebugprocinfo-structure"></a><span data-ttu-id="f56f2-102">Estrutura CoreClrDebugProcInfo</span><span class="sxs-lookup"><span data-stu-id="f56f2-102">CoreClrDebugProcInfo Structure</span></span>
+<span data-ttu-id="f56f2-103">Representa um processo que está em execução em um computador remoto.</span><span class="sxs-lookup"><span data-stu-id="f56f2-103">Represents a process that is running on a remote machine.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="da91c-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="da91c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f56f2-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="f56f2-104">Syntax</span></span>  
   
 ```  
 struct  CoreClrDebugProcInfo {  
@@ -41,19 +42,19 @@ struct  CoreClrDebugProcInfo {
 };  
 ```  
   
-## <a name="members"></a><span data-ttu-id="da91c-105">Membros</span><span class="sxs-lookup"><span data-stu-id="da91c-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="f56f2-105">Membros</span><span class="sxs-lookup"><span data-stu-id="f56f2-105">Members</span></span>  
   
-|<span data-ttu-id="da91c-106">Membro</span><span class="sxs-lookup"><span data-stu-id="da91c-106">Member</span></span>|<span data-ttu-id="da91c-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="da91c-107">Description</span></span>|  
+|<span data-ttu-id="f56f2-106">Membro</span><span class="sxs-lookup"><span data-stu-id="f56f2-106">Member</span></span>|<span data-ttu-id="f56f2-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="f56f2-107">Description</span></span>|  
 |------------|-----------------|  
-|`m_dwPID`|<span data-ttu-id="da91c-108">Identificador de processo atribuída pelo sistema operacional.</span><span class="sxs-lookup"><span data-stu-id="da91c-108">OS-assigned process identifier.</span></span>|  
-|`m_dwInternalID`|<span data-ttu-id="da91c-109">Identificador de processo que é atribuído pelo proxy de depuração remoto em execução no computador de destino.</span><span class="sxs-lookup"><span data-stu-id="da91c-109">Process identifier that is assigned by the remote debugging proxy running on the target machine.</span></span> <span data-ttu-id="da91c-110">Esse identificador é reciclado com menos frequência do que o identificador de sistema operacional.</span><span class="sxs-lookup"><span data-stu-id="da91c-110">This identifier recycles less often than the OS identifier.</span></span>|  
-|`m_wszName`|<span data-ttu-id="da91c-111">Linha de comando do processo.</span><span class="sxs-lookup"><span data-stu-id="da91c-111">Command-line of the process.</span></span> <span data-ttu-id="da91c-112">Esse membro pode ser truncado.</span><span class="sxs-lookup"><span data-stu-id="da91c-112">This member may be truncated.</span></span>|  
+|`m_dwPID`|<span data-ttu-id="f56f2-108">Identificador de processo atribuída pelo sistema operacional.</span><span class="sxs-lookup"><span data-stu-id="f56f2-108">OS-assigned process identifier.</span></span>|  
+|`m_dwInternalID`|<span data-ttu-id="f56f2-109">Identificador de processo que é atribuído pelo proxy de depuração remoto em execução no computador de destino.</span><span class="sxs-lookup"><span data-stu-id="f56f2-109">Process identifier that is assigned by the remote debugging proxy running on the target machine.</span></span> <span data-ttu-id="f56f2-110">Esse identificador é reciclado com menos frequência do que o identificador de sistema operacional.</span><span class="sxs-lookup"><span data-stu-id="f56f2-110">This identifier recycles less often than the OS identifier.</span></span>|  
+|`m_wszName`|<span data-ttu-id="f56f2-111">Linha de comando do processo.</span><span class="sxs-lookup"><span data-stu-id="f56f2-111">Command-line of the process.</span></span> <span data-ttu-id="f56f2-112">Esse membro pode ser truncado.</span><span class="sxs-lookup"><span data-stu-id="f56f2-112">This member may be truncated.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="da91c-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="da91c-113">Requirements</span></span>  
- <span data-ttu-id="da91c-114">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="da91c-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f56f2-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f56f2-113">Requirements</span></span>  
+ <span data-ttu-id="f56f2-114">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f56f2-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="da91c-115">**Cabeçalho:** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="da91c-115">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
+ <span data-ttu-id="f56f2-115">**Cabeçalho:** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="f56f2-115">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
   
- <span data-ttu-id="da91c-116">**Biblioteca:** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="da91c-116">**Library:** mscordbi_macx86.dll</span></span>  
+ <span data-ttu-id="f56f2-116">**Biblioteca:** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="f56f2-116">**Library:** mscordbi_macx86.dll</span></span>  
   
- <span data-ttu-id="da91c-117">**Versões do .NET framework:** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="da91c-117">**.NET Framework Versions:** 3.5 SP1</span></span>
+ <span data-ttu-id="f56f2-117">**Versões do .NET framework:** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="f56f2-117">**.NET Framework Versions:** 3.5 SP1</span></span>

@@ -21,16 +21,17 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fe463135077bba61e2ba08c4f9f290257b23a93f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e8da5892198f3d2e8bcd7e68c2ec503d0ec64629
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugmodulecreatebreakpoint-method"></a><span data-ttu-id="09884-102">Método ICorDebugModule::CreateBreakpoint</span><span class="sxs-lookup"><span data-stu-id="09884-102">ICorDebugModule::CreateBreakpoint Method</span></span>
-<span data-ttu-id="09884-103">Este método não foi implementado na versão atual do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="09884-103">This method has not been implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugmodulecreatebreakpoint-method"></a><span data-ttu-id="90185-102">Método ICorDebugModule::CreateBreakpoint</span><span class="sxs-lookup"><span data-stu-id="90185-102">ICorDebugModule::CreateBreakpoint Method</span></span>
+<span data-ttu-id="90185-103">Este método não foi implementado na versão atual do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="90185-103">This method has not been implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="09884-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="09884-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="90185-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="90185-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateBreakpoint(  
@@ -38,5 +39,5 @@ HRESULT CreateBreakpoint(
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="09884-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="09884-105">Requirements</span></span>  
- <span data-ttu-id="09884-106">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="09884-106">**Header:** CorDebug.idl, CorDebug.h</span></span>
+## <a name="requirements"></a><span data-ttu-id="90185-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="90185-105">Requirements</span></span>  
+ <span data-ttu-id="90185-106">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="90185-106">**Header:** CorDebug.idl, CorDebug.h</span></span>
