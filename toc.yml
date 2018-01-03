@@ -1,4 +1,4 @@
-- name: Documentos
+- name: Docs
   tocHref: /
   topicHref: /
   items:
@@ -371,6 +371,9 @@
             - name: Conceitos
               tocHref: /dotnet/csharp/concepts/
               topicHref: /dotnet/csharp/concepts/index
+            - name: SDK da Plataforma do Compilador .NET
+              tocHref: /dotnet/csharp/roslyn-sdk/
+              topicHref: /dotnet/csharp/roslyn-sdk/index
             - name: Guia de programação
               tocHref: /dotnet/csharp/programming-guide/
               topicHref: /dotnet/csharp/programming-guide/index
