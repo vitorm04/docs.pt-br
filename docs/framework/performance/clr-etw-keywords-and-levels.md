@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7f5dcdd969619526c52a9ae44014030a9f0c6dc5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 72775d4cb478b6d9c9d2e65119c63f8a34ae47d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-etw-keywords-and-levels"></a>Palavras-chave e níveis ETW no CLR
 <a name="top"></a> Os eventos ETW (rastreamento de eventos para Windows) pode ser filtrado por categoria e nível. As [palavras-chave CLR ETW](#keywords) do evento permitem a filtragem de eventos por categoria; elas são usadas em combinações para os provedores de tempo de execução e de encerramento. Os [níveis de evento](#levels) são identificados por sinalizadores.  

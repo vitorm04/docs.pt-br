@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: a32019a99421cdb2b581f1196a0e477c8e5d30a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a453a2142ee8c3d1ab8d8d00e84e1ead60c46d91
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Autenticação Integrada do Windows com proteção estendida
 Foram feitas melhorias que afetam a maneira como a autenticação integrada do Windows é controlada por <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream> e por classes relacionadas no <xref:System.Net> e por namespaces relacionados. Foi adicionado suporte à proteção estendida a fim de aprimorar a segurança.  
@@ -27,7 +28,7 @@ Foram feitas melhorias que afetam a maneira como a autenticação integrada do W
   
  As alterações para dar suporte à proteção estendida estão disponíveis somente para aplicativos no Windows 7 e Windows Server 2008 R2. Os recursos de proteção estendida não estão disponíveis em versões anteriores do Windows.  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  O design da autenticação integrada do Windows permite que algumas respostas de desafio de credencial sejam universais, o que significa que elas podem ser reutilizadas ou encaminhadas. As respostas de desafio devem ser construídas no mínimo com informações específicas do destino e preferencialmente também com algumas informações específicas de canal. Os serviços, em seguida, podem fornecer proteção estendida para assegurar que as respostas de desafio de credencial contenham informações específicas do serviço, tal como um SPN (nome da entidade de serviço). Com essas informações nas trocas de credenciais, os serviços são capazes de proteger melhor contra o uso mal intencionado de respostas de desafio de credencial que podem ter sido usadas incorretamente.  
   
  O design de proteção estendida é uma melhoria projetada para minimizar ataques de retransmissão de autenticação de protocolos de autenticação. Ele gira em torno do conceito de informações de associação de serviço/canal.  

@@ -20,11 +20,12 @@ caps.latest.revision: "22"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 9634c686d23503dcb4deae171f0023055c41ce2d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8b28d6aafc0e9680123859ee0e9a28dd71a2249c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-events-overview"></a>Visão geral sobre eventos de automação de interface do usuário
 > [!NOTE]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="types-of-events"></a>Tipos de eventos  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]eventos se enquadram nas categorias a seguir.  
   
-|Evento|Descrição|  
+|evento|Descrição|  
 |-----------|-----------------|  
 |Alteração de propriedade|Gerado quando uma propriedade em um [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elemento ou controle de alterações do padrão. Por exemplo, se um cliente precisar monitorar o controle de caixa de seleção de um aplicativo, ele pode registrar para escutar em um evento de alteração de propriedade de <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> propriedade. Quando o controle de caixa de seleção é marcada ou desmarcada, o provedor gera o evento e o cliente possa agir conforme necessário.|  
 |Elemento de ação|Gerado quando uma alteração no [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] resultados do usuário final ou atividade de programação; por exemplo, quando um botão é clicado ou invocado por meio de <xref:System.Windows.Automation.InvokePattern>.|  

@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c5bfafcad5f1f60e7e763b69f220188517d29f17
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 157b5648af4ef429a73fe71a924e15ad3973f7f5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-marshaling-for-objects"></a>Marshaling padrão para objetos
 Os parâmetros e os campos tipados como <xref:System.Object?displayProperty=nameWithType> podem ser expostos para um código não gerenciado como um dos seguintes tipos:  
@@ -254,12 +255,12 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**TypeCode.Decimal**|**VT_DECIMAL**|  
 |**TypeCode.DateTime**|**VT_DATE**|  
 |**TypeCode.String**|**VT_BSTR**|  
-|Não há suporte.|**VT_INT**|  
-|Não há suporte.|**VT_UINT**|  
-|Não há suporte.|**VT_ARRAY**|  
-|Não há suporte.|**VT_RECORD**|  
-|Não há suporte.|**VT_CY**|  
-|Não há suporte.|**VT_VARIANT**|  
+|Sem suporte.|**VT_INT**|  
+|Sem suporte.|**VT_UINT**|  
+|Sem suporte.|**VT_ARRAY**|  
+|Sem suporte.|**VT_RECORD**|  
+|Sem suporte.|**VT_CY**|  
+|Sem suporte.|**VT_VARIANT**|  
   
  O valor da variante COM é determinado com uma chamada à interface **IConvertible.To** *Type*, em que **To** *Type* é a rotina de conversão que corresponde ao tipo retornado do **IConvertible.GetTypeCode**. Por exemplo, um objeto que retorna **TypeCode.Double** de **IConvertible.GetTypeCode** tem o marshaling realizado como uma variante COM do tipo **VT_R8**. É possível obter o valor da variante (armazenado no campo **dblVal** da variante COM) com a conversão para a interface **IConvertible** e uma chamada ao método <xref:System.IConvertible.ToDouble%2A>.  
   
@@ -293,7 +294,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**VT_ARRAY** &#124; **VT_\***|<xref:System.Array?displayProperty=nameWithType>|  
 |**VT_CY**|<xref:System.Decimal?displayProperty=nameWithType>|  
 |**VT_RECORD**|Tipo de valor demarcado correspondente.|  
-|**VT_VARIANT**|Não há suporte.|  
+|**VT_VARIANT**|Sem suporte.|  
   
  Os tipos de variante passados do COM para o código gerenciado e, em seguida, novamente para o COM podem não manter o mesmo tipo de variante durante a chamada. Considere o que acontece quando uma variante do tipo **VT_DISPATCH** é passada do COM para o .NET Framework. Durante o marshaling, a variante é convertida em um <xref:System.Object?displayProperty=nameWithType>. Se o **Object** for então passado novamente para o COM, ele terá o marshaling realizado novamente como uma variante do tipo **VT_UNKNOWN**. Não há nenhuma garantia de que a variante produzida quando um objeto tem o marshaling realizado de um código gerenciado para o COM terá o mesmo tipo de variante usado inicialmente para produzir o objeto.  
   

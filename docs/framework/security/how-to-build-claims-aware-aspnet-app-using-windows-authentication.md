@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 676a03678cbdf6fe08e628806df2a1853fb71718
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1f623cceec04e45d168269379e1af6bdeb573af0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Como criar um aplicativo ASP.NET baseado em declarações usando a Autenticação do Windows
 ## <a name="applies-to"></a>Aplica-se a  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/18/2017
   
 -   Objetivos  
   
--   Visão Geral  
+-   Visão geral  
   
 -   Resumo das etapas  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/18/2017
   
 -   Testar o aplicativo ASP.NET Web Forms para ver se ele está funcionando corretamente  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  No .NET 4.5, o WIF e sua autorização baseada em declarações foram incluídos como parte integrante do Framework. Anteriormente, se você quisesse obter declarações de um usuário do ASP.NET, precisava instalar o WIF e, em seguida, converter as interfaces para objetos de Entidade de Segurança, como `Thread.CurrentPrincipal` ou `HttpContext.Current.User`. Agora, as declarações são atendidas automaticamente por esses objetos de Entidade de Segurança.  
   
  A autenticação do Windows se beneficiou com a inclusão do WIF no .NET 4.5, porque todos os usuários autenticados pelas credenciais do Windows têm declarações associadas a eles automaticamente. Comece a usar essas declarações imediatamente em um aplicativo ASP.NET que usa a autenticação do Windows, conforme demonstrado por estas Instruções.  

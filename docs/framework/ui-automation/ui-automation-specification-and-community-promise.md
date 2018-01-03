@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 9ce3dc97e27ab76024c989e1b7208d388312c6b2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0dd130785734ef81948346f020c984d654b04542
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-specification-and-community-promise"></a>Especificação da automação de interface do usuário e promessa da comunidade
 Automação de interface de usuário fornece acesso programático à maioria dos elementos de interface do usuário do usuário na área de trabalho, permitindo que produtos de tecnologia assistencial, como leitores de tela para fornecer informações sobre a interface do usuário para os usuários finais e manipular a interface do usuário por meios diferente de entrada padrão .  

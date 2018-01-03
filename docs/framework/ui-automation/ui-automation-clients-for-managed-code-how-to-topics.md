@@ -17,11 +17,12 @@ caps.latest.revision: "58"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 31cd858cd6a753b1fddd7b4be6805390142be833
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 69ef9c378aae18767d41990094e52ac2be3cbd1f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-clients-for-managed-code-how-to-topics"></a>Clientes de automação de interface do usuário para tópicos de instrução do código gerenciado
 > [!NOTE]
@@ -31,10 +32,10 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Localizar um elemento de automação de interface do usuário com base em uma condição de propriedade](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [Navegar em elementos de automação de interface do usuário com TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
+ [Navegar em elementos de automação de interface do usuário com o TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
  [Localizar um elemento de automação de interface do usuário para um Item de lista](../../../docs/framework/ui-automation/find-a-ui-automation-element-for-a-list-item.md)  
  [Obter propriedades de elemento de automação de interface do usuário](../../../docs/framework/ui-automation/get-ui-automation-element-properties.md)  
  [Usar o cache em automação de interface do usuário](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
  [Assinar eventos de automação de interface do usuário](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)  
- [Registrar um Assembly do provedor do lado do cliente](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)  
+ [Registrar um assembly do provedor do lado do cliente](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)  
  [Usar a propriedade AutomationID](../../../docs/framework/ui-automation/use-the-automationid-property.md)

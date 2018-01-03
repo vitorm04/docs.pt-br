@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4b29ed1c3659b1705640888ded5fe21432dc6ada
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 28203dc428db6a2dd06e9c1e85b64ef80e81ffbe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>Equivalência de tipos e tipos de interoperabilidade inseridos
 A partir do [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], o Common Language Runtime dá suporte à inserção de informações de tipo para tipos COM diretamente em assemblies gerenciados, em vez de exigir que os assemblies gerenciados obtenham informações de tipo para tipos COM de assemblies de interoperabilidade. Como as informações de tipo inserido incluem somente os tipos e os membros que são realmente usados por um assembly gerenciado, dois assemblies gerenciados podem ter exibições muito diferentes do mesmo tipo COM. Cada assembly gerenciado tem um objeto <xref:System.Type> diferente para representar sua exibição do tipo COM. O Common Language Runtime dá suporte à equivalência de tipo entre essas exibições diferentes para interfaces, estruturas, enumerações e representantes.  

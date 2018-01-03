@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: deb191f18bda5b00ef4a967f50e8e983289882a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 91357d3400cccc6c61fa25bc72d7e8e6c5027811
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interpreting-network-tracing"></a>Interpretando o rastreamento de rede
 Quando o rastreamento de rede está habilitado, você pode usar o rastreamento para capturar as chamadas que seu aplicativo faz para membros de classe <xref:System.Net> diversos. A saída dessas chamadas pode ser semelhante aos exemplos a seguir.  
@@ -54,6 +55,6 @@ Quando o rastreamento de rede está habilitado, você pode usar o rastreamento p
  `Connection: Close`  
   
 ## <a name="see-also"></a>Consulte também  
- [Habilitar o rastreamento de rede](../../../docs/framework/network-programming/enabling-network-tracing.md)  
+ [Habilitando o rastreamento de rede](../../../docs/framework/network-programming/enabling-network-tracing.md)  
  [Como configurar o rastreamento de rede](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
  [Rastreamento de rede no .NET Framework](../../../docs/framework/network-programming/network-tracing.md)

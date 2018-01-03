@@ -25,11 +25,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 6f96463b4f9cb7e61c403cfd77f747c8aefd99a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6b799f57644420653b371ac0e65b414c807008b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="listening-with-sockets"></a>Escutando com soquetes
 Soquetes de ouvinte ou de servidor abrem uma porta na rede e aguardam até que um cliente se conecte a essa porta. Embora existam outros protocolos e famílias de endereços de rede, este exemplo mostra como criar um serviço remoto para uma rede TCP/IP.  
@@ -69,8 +70,8 @@ listener.Listen(100);
  O método **Listen** usa um único parâmetro que especifica quantas conexões pendentes para o **soquete** são permitidas antes que um erro de servidor ocupado seja retornado para o cliente em processo de conexão. Nesse caso, até 100 clientes são colocados na fila de conexão antes que uma resposta de servidor ocupado seja retornada ao cliente número 101.  
   
 ## <a name="see-also"></a>Consulte também  
- [Usando um soquete de servidor síncrona](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
- [Usando um soquete assíncrono de servidor](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
+ [Usando um soquete de servidor síncrono](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
+ [Usando um soquete de servidor assíncrono](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
  [Usando soquetes do cliente](../../../docs/framework/network-programming/using-client-sockets.md)  
  [Como criar um soquete](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
  [Soquetes](../../../docs/framework/network-programming/sockets.md)

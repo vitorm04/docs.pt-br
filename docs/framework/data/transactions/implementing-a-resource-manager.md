@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d9fe72090de3722137c2b0c2190c11f190be5fbc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 25a45626564bb58950b251ae5e9041609d96a207
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-a-resource-manager"></a>Implementar um Gerenciador de recursos
 Cada recurso usado em uma transação é gerenciado por um Gerenciador de recursos, as ações são coordenadas por um Gerenciador de transações. Gerenciadores de recursos trabalham em cooperação com o Gerenciador de transações para fornecer o aplicativo com uma garantia de atomicidade e isolamento. Microsoft SQL Server, filas de mensagens duráveis, tabelas de hash em memória são exemplos de gerenciadores de recursos.  
@@ -60,6 +61,6 @@ Cada recurso usado em uma transação é gerenciado por um Gerenciador de recurs
   
  Descreve como os três níveis de confiança para System. Transactions restringem o acesso os tipos de recursos que <xref:System.Transactions> expõe.  
   
- [Otimização de uso único de fase de confirmação e notificação de fase única passível de promoção](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
+ [Otimização usando confirmação de fase única e notificação de fase única promovível](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
   
  Descreve as práticas de otimização disponíveis para as implementações de gerenciadores de recursos.

@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 46a9c11f3545e5d2b9f91572a87ee2614810e4d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 86dd0c4349dce8dd9e50fdd44c38a08ec39d90bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="making-an-image-easier-to-debug"></a>Facilitando a depuração de uma imagem
 Ao compilar código não gerenciado, você pode configurar uma imagem executável para depuração, definindo opções de IDE ou opções de linha de comando. Por exemplo, você pode usar a opção de linha de comando /**Zi** no Visual C++ para solicitar a ele que emita arquivos de símbolo de depuração (extensão de arquivo .pdb). De modo similar, a opção de linha de comando /**Od** informa ao compilador para desabilitar a otimização. O código resultante é executado mais lentamente, mas é mais fácil depurar, se isso for necessário.  

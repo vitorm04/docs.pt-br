@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 90e079b593ed124da79f5f87b5189d199bc4572a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 36620e8a8f6cb96b11f951ee5477e6edad9c925a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltimpliestypegt-element-net-native"></a>Elemento &lt;ImpliesType&gt; (.NET Nativo)
 Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do método.  

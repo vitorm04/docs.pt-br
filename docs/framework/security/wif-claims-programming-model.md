@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 9cfc3491b18d312b80ba69991edb9930f59d47cc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6d7059c5209dc95ce68f28e0f32db929e7c97271
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wif-claims-programming-model"></a>Modelo de programação de declarações do WIF
 Os desenvolvedores do ASP.NET e do WCF (Windows Communication Foundation) normalmente usam as interfaces de IIdentity e IPrincipal para trabalhar com as informações de identidade do usuário. No .NET 4.5, o WIF (Windows Identity Foundation) foi integrado, de modo que as declarações agora estejam sempre presentes para qualquer entidade de segurança, conforme ilustrado no seguinte diagrama:  

@@ -25,11 +25,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4b557a9f9f462df2d1afe6d6b61871e0e9f40174
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 559926fffa52b234dda25ba2f0fd658aa2382c16
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Como usar TraceSource e filtros com ouvintes de rastreamento
 Um dos novos recursos do .NET Framework versão 2.0 é um sistema de rastreamento aprimorado. A premissa básica permanece inalterada: mensagens de rastreamento são enviadas por meio de comutadores para ouvintes, que relatam os dados para um meio de saída associado. Uma diferença principal para a versão 2.0 é que os rastreamentos podem ser iniciados por meio de instâncias da classe <xref:System.Diagnostics.TraceSource>. A <xref:System.Diagnostics.TraceSource> destina-se a funcionar como um sistema de rastreamento aprimorado e pode ser usada no lugar dos métodos estáticos das classes de rastreamento antigas <xref:System.Diagnostics.Trace> e <xref:System.Diagnostics.Debug>. As classes <xref:System.Diagnostics.Trace> e <xref:System.Diagnostics.Debug> familiares ainda existem, mas a prática recomendada é usar a classe <xref:System.Diagnostics.TraceSource> para o rastreamento.  
@@ -176,5 +177,5 @@ Um dos novos recursos do .NET Framework versão 2.0 é um sistema de rastreament
  <xref:System.Diagnostics.TextWriterTraceListener>  
  <xref:System.Diagnostics.ConsoleTraceListener>  
  <xref:System.Diagnostics.EventTypeFilter>  
- [Como: criar e inicializar fontes de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
+ [Como criar e inicializar fontes de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
  [Ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/trace-listeners.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3ee72f1c3eaf2c78a7cdff9b2a4db81ef0b767a2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 94ca7614e6df2d82216fa869309dff2da8eee634
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Como: associar dados usando uma fonte de dados do projeto (WCF Data Services)
 Você pode criar fontes de dados que são baseados nos objetos de dados gerados em um [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] aplicativo cliente. Quando você adiciona uma referência a um serviço de dados usando o **adicionar referência de serviço** caixa de diálogo, uma fonte de dados do projeto é criada junto com as classes de dados do cliente gerado. Uma fonte de dados é criada para cada conjunto de entidades que o serviço de dados expõe. Você pode criar formulários que exibem dados do serviço ao arrastar esses itens de fonte de dados do **fontes de dados** janela no designer. Esses itens se tornam os controles que estão associados à fonte de dados. Durante a execução, essa fonte de dados está associada a uma instância do <xref:System.Data.Services.Client.DataServiceCollection%601> classe, que é preenchido com objetos que são retornados por uma consulta para o serviço de dados. Para obter mais informações, consulte [vinculação de dados a controles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  

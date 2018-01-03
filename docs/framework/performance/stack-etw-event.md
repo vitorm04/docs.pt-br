@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 55219fe755f49b6edbd3b53cc686bf4f9087aa08
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1107c6608fe5136eb6159b1d4f0a438e95c4dabb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stack-etw-event"></a>Evento ETW de pilha
 O evento de pilha deve ser usado em conjunto com outros eventos para gerar rastreamentos de pilha depois que um evento é acionado. Ele é registrado quando o provedor de tempo de execução está habilitado. Esse é um evento de alta frequência porque é acionado sempre que outro evento de tempo de execução é acionado. Por esse motivo, recomendamos ter cautela ao usar esse evento.  
@@ -33,7 +34,7 @@ O evento de pilha deve ser usado em conjunto com outros eventos para gerar rastr
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Acionado quando|  
+|evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`CLRStackWalk`|82|Em conjunto com outros eventos para gerar rastreamentos de pilha após um evento.|  
   

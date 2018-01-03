@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 92c3b4fad775dcd04299e18da126107d8fbb4471
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ef089e72c3b8dd089db5022ea1808cee98c27ecd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-the-ui-automation-scrollitem-control-pattern"></a>Implementando o padrão de controle ScrollItem de interface de usuário
 > [!NOTE]

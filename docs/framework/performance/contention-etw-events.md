@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6d739eaf73ff8336e74130d7176697229fdffd12
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a09419c208d4ac754eb48da0c8d1b5d93386eb3d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contention-etw-events"></a>Eventos ETW de contenção
 Eventos de contenção são acionados sempre que há contenção em bloqueios <xref:System.Threading.Monitor?displayProperty=nameWithType> ou bloqueios nativos usados pelo tempo de execução. A contenção ocorre quando um thread aguarda um bloqueio, enquanto outro thread possui o bloqueio.  
@@ -33,7 +34,7 @@ Eventos de contenção são acionados sempre que há contenção em bloqueios <x
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Acionado quando|  
+|evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`ContentionStart_V1`|81|A contenção é iniciada. Esse evento não inclui o tempo de rotação antes que um thread aguarde para adquirir um bloqueio; ele é acionado apenas quando o thread aguarda para adquirir um bloqueio.|  
 |`ContentionStop`|81|A contenção é encerrada.|  

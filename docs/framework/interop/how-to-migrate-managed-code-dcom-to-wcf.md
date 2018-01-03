@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: af401cafe0740dcd9a313ae9143f9772605137d3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d97a7d855d6c5ccd0545d8bf95ebe7bcece88656
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Como: migrar código gerenciador do DCOM para o WCF
 O WCF (Windows Communication Foundation) é a opção recomendada e uma escolha segura no lugar do DCOM (Distributed Component Object Model) para chamadas de código gerenciado entre servidores e clientes em um ambiente distribuído. Este artigo mostra como migrar código de DCOM para o WCF para os cenários a seguir.  
@@ -430,7 +431,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Basic WCF Programming](../../../docs/framework/wcf/basic-wcf-programming.md) (Programação básica do WCF)  
- [Designing and Implementing Services](../../../docs/framework/wcf/designing-and-implementing-services.md) (Serviços de design e implantação)  
- [Building Clients](../../../docs/framework/wcf/building-clients.md) (Compilando clientes)  
+ [Programação básica do WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Serviços de design e implantação](../../../docs/framework/wcf/designing-and-implementing-services.md)  
+ [Compilando clientes](../../../docs/framework/wcf/building-clients.md)  
  [Serviços duplex](../../../docs/framework/wcf/feature-details/duplex-services.md)

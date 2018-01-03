@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5eb97ea9db0fa7132b1ed4320bf73d124452c201
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fc3e7d545a502c040e7e3ee5140d385b60e82d5c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provedor de streaming (WCF Data Services)
 Um serviço de dados pode expor dados de objeto binário grande. Esses dados binários podem representar fluxos de vídeo e áudio, imagens, arquivos de documento ou outros tipos de mídia binária. Quando uma entidade no modelo de dados inclui uma ou mais propriedades binárias, o serviço de dados retorna esses dados binários codificados como base 64 no feed de resposta. Como carregar e serializar os dados binários longos dessa maneira podem afetar o desempenho, o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define um mecanismo para recuperar dados binários independentes da entidade à qual ela pertence. Isso é feito separando os dados binários da entidade em um ou mais fluxos de dados.  
@@ -140,6 +141,6 @@ Um serviço de dados pode expor dados de objeto binário grande. Esses dados bin
  Para obter mais informações, consulte [controle de versão de serviço de dados](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Provedores de serviços de dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
+ [Provedores de Serviços de Dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
  [Provedores de serviços de dados personalizados](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)  
- [Trabalhando com dados binários](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)
+ [Trabalhando com os dados binários](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)

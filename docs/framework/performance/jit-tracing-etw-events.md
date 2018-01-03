@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b33a86eb235524ed9cbe5e07dd6625fedf884411
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cf205ef1707cee81e741f71d3dce771e53caee93
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="jit-tracing-etw-events"></a>Eventos ETW de rastreamento JIT
 <a name="top"></a> Esses eventos coletam informações sobre o êxito ou falha de inlining JIT (Just-In-Time) e chamadas tail JIT.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Acionado quando|  
+|evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningFailed`|186|O inlining JIT falhou.|  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Acionado quando|  
+|evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningSucceeded`|185|O inlining do método foi bem-sucedido.|  
   
@@ -106,7 +107,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Acionado quando|  
+|evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallFailed`|189|Falha na chamada tail do método.|  
   
@@ -136,7 +137,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Acionado quando|  
+|evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallSucceeded`|188|A chamada tail de método bem-sucedida.|  
   

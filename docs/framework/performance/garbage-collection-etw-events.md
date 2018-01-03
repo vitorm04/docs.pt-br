@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 06fc335e4b8011afd92e698b20e4b84572b153c3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 133d48baa9613ea698b6d6a21f0dfe88a798859c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="garbage-collection-etw-events"></a>Eventos ETW de coleta de lixo
 <a name="top"></a> Esses eventos coletam informações referentes à coleta de lixo. Eles ajudam no diagnóstico e na depuração, inclusive determinando quantas vezes a coleta de lixo foi executada, a quantidade de memória liberada durante a coleta de lixo e assim por diante.  
@@ -66,7 +67,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Acionado quando|  
+|evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`GCStart_V1`|1|Uma coleta de lixo foi iniciada.|  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Acionado quando|  
+|evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`GCEnd_V1`|2|A coleta de lixo foi encerrada.|  
   
@@ -116,7 +117,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Descrição|  
+|evento|ID do evento|Descrição|  
 |-----------|--------------|-----------------|  
 |`GCHeapStats_V1`|4|Mostra as estatísticas de heap no final de cada coleta de lixo.|  
   
@@ -151,7 +152,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Acionado quando|  
+|evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`GCCreateSegment_V1`|5|Um novo segmento de coleta de lixo foi criado. Além disso, quando o rastreamento é habilitado em um processo que já está em execução, esse evento é acionado para cada segmento existente.|  
   
@@ -178,7 +179,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Acionado quando|  
+|evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`GCFreeSegment_V1`|6|Um segmento de coleta de lixo foi liberado.|  
   
@@ -201,7 +202,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Acionado quando|  
+|evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`GCRestartEEBegin_V1`|7|A continuidade da suspensão do Common Language Runtime foi iniciada.|  
   
@@ -219,7 +220,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Acionado quando|  
+|evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`GCRestartEEEnd_V1`|3|A continuidade da suspensão do Common Language Runtime foi encerrada.|  
   
@@ -237,7 +238,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Acionado quando|  
+|evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`GCSuspendEE_V1`|9|Início da suspensão do mecanismo de execução da coleta de lixo.|  
   
@@ -261,7 +262,7 @@ ms.lasthandoff: 10/18/2017
   
  A seguinte tabela mostra as informações do evento:  
   
-|Evento|ID do evento|Acionado quando|  
+|evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`GCSuspendEEEnd_V1`|8|Fim da suspensão do mecanismo de execução da coleta de lixo.|  
   
@@ -279,7 +280,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Acionado quando|  
+|evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`GCAllocationTick_V2`|10|A cada vez, aproximadamente 100 KB são alocados.|  
   
@@ -307,7 +308,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Acionado quando|  
+|evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`GCFinalizersBegin_V1`|14|O início da execução dos finalizadores.|  
   
@@ -325,7 +326,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Acionado quando|  
+|evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`GCFinalizersEnd_V1`|13|O fim da execução dos finalizadores.|  
   
@@ -349,7 +350,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Acionado quando|  
+|evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`GCCreateConcurrentThread_V1`|11|O thread da coleta de lixo simultânea foi criado.|  
   
@@ -368,7 +369,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Acionado quando|  
+|evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`GCTerminateConcurrentThread_V1`|12|O thread da coleta de lixo simultânea foi terminado.|  
   

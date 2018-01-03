@@ -15,11 +15,12 @@ caps.latest.revision: "54"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 57fd183b042779d06274573db7b4569dbe6a54d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c87034827d0295578f9a7efe134d158291f87713
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-fundamentals"></a>Fundamentos de automação da interface do usuário
 > [!NOTE]
@@ -28,8 +29,8 @@ ms.lasthandoff: 10/18/2017
  Esta seção contém resumos de alto nível a [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão geral de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-overview.md)  
- [Automação de interface do usuário e Microsoft Active Accessibility](../../../docs/framework/ui-automation/ui-automation-and-microsoft-active-accessibility.md)  
+ [Visão geral de Automação da Interface do Usuário](../../../docs/framework/ui-automation/ui-automation-overview.md)  
+ [Automação de interface do usuário e Acessibilidade Ativa da Microsoft](../../../docs/framework/ui-automation/ui-automation-and-microsoft-active-accessibility.md)  
  [Visão geral de árvore de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
  [Visão geral de padrões de controle de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
  [Visão geral de propriedades de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)  

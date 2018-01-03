@@ -17,11 +17,12 @@ caps.latest.revision: "33"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: cb8b47b147e3a7a3c615418e2c0987e4d6a20f4c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9f22b7594775bc50ae84b4bbeb6fdc9fa0d9d0c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-the-ui-automation-selection-control-pattern"></a>Implementando o padrão de controle Selection de automação de interface do usuário
 > [!NOTE]
@@ -55,7 +56,7 @@ Exemplo de mapeamento de cadeia de caracteres de amostra de cor
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|Propriedade|Deve oferecer suporte a eventos de propriedade alterada usando <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> e <xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|Propriedade|Deve oferecer suporte a eventos de propriedade alterada usando <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> e <xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|Método|Nenhum|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Evento|Gerado quando uma seleção em um contêiner mudou significativamente e requer envio de mais eventos de adição e remoção de que o <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> permite constante.|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|evento|Gerado quando uma seleção em um contêiner mudou significativamente e requer envio de mais eventos de adição e remoção de que o <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> permite constante.|  
   
  O <xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A> e <xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A> propriedades podem ser dinâmicas. Por exemplo, o estado inicial de um controle não pode ter os itens selecionados por padrão, indicando que <xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A> é `false`. No entanto, depois que um item é selecionado, o controle deve sempre ter pelo menos um item selecionado. Da mesma forma, em casos raros, um controle pode permitir que vários itens sejam selecionados na inicialização, mas subsequentemente permitir que apenas único seleções a serem feitas.  
   

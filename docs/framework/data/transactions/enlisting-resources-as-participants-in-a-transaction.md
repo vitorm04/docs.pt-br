@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 98ac35edc458e370f2b7b9b116d2872d0db2da71
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 270b3755901e3c5bc95352b5f3d07a338e73a90e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enlisting-resources-as-participants-in-a-transaction"></a>Inscrição de recursos como participantes em uma transação
 Cada recurso que participa de uma transação é gerenciado por um Gerenciador de recursos, as ações são coordenadas por um Gerenciador de transações. A coordenação é feita por meio de notificações para assinantes que tem se inscrito em uma transação por meio do Gerenciador de transações.  
@@ -58,5 +59,5 @@ Cada recurso que participa de uma transação é gerenciado por um Gerenciador d
  O <xref:System.Transactions.Transaction> classe também fornece o <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> método para inscrever um podem ser promovidas única fase de inscrição (PSPE). Isso permite que um recurso durável manager (RM) para hospedar e "proprietário" de uma transação que posteriormente pode ser escalonada para ser gerenciado pelo MSDTC se necessário. Para obter mais informações sobre isso, consulte [otimização usando única fase de confirmação e notificação de fase única passível de promoção](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Otimização de uso único de fase de confirmação e notificação de fase única passível de promoção](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
+ [Otimização usando confirmação de fase única e notificação de fase única promovível](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
  [Confirmar uma transação de fase única e de várias fases](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)

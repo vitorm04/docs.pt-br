@@ -13,23 +13,24 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e90a13ebf46f1891061c78435b7ba47d68de001d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0b790064ef64ab44f3798a62d5dbf004f0f0bba6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode (referência de API não gerenciada)
 Oferece suporte à criação de licença Authenticode XrML e módulo de verificação.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Função axlgetissuerpublickeyhash](../../../../docs/framework/unmanaged-api/authenticode/axlgetissuerpublickeyhash-function.md)  
+ [Função _AxlGetIssuerPublicKeyHash](../../../../docs/framework/unmanaged-api/authenticode/axlgetissuerpublickeyhash-function.md)  
  Recupera o hash SHA-1 da chave pública associada à chave privada usada para assinar o certificado especificado.  
   
- [Função axlpublickeyblobtopublickeytoken](../../../../docs/framework/unmanaged-api/authenticode/axlpublickeyblobtopublickeytoken-function.md)  
+ [Função _AxlPublicKeyBlobToPublicKeyToken](../../../../docs/framework/unmanaged-api/authenticode/axlpublickeyblobtopublickeytoken-function.md)  
  Computa o token de chave pública do nome forte de um formato CSP PUBLICKEYBLOB.  
   
- [Função axlrsakeyvaluetopublickeytoken](../../../../docs/framework/unmanaged-api/authenticode/axlrsakeyvaluetopublickeytoken-function.md)  
+ [Função _AxlRSAKeyValueToPublicKeyToken](../../../../docs/framework/unmanaged-api/authenticode/axlrsakeyvaluetopublickeytoken-function.md)  
  Converte um Módulo e um Expoente em um token de chave pública com nome forte.  
   
  [Função CertFreeAuthenticodeSignerInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodesignerinfo-function.md)  

@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1ffa3cb853a02af21ca1dd528174e560b8d830a5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f4998cc0c836cf46d79d854ad9a85e7eacf70d7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lazy-initialization"></a>Inicialização lenta
 *Inicialização lenta* de um objeto significa que a criação dele é adiada até que ele seja usado pela primeira vez. (Para este tópico, os termos *inicialização lenta* e *instanciação lenta* são sinônimos.) A inicialização lenta é usada principalmente para melhorar o desempenho, evitar a computação dispendiosa e reduzir os requisitos de memória do programa. Estes são os cenários mais comuns:  

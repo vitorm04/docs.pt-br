@@ -15,11 +15,12 @@ caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 16ffe789635ee13c118c63c30ef255cc9b264a9c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 565cd9384e150f707b2e5e72342579d95c3a096e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Visão geral do modelo de programação atribuído (MEF)
 No Managed Extensibility Framework (MEF), um *modelo de programação* é um método específico de definir o conjunto de objetos conceituais opera MEF. Esses objetos conceituais incluem partes, importações e exportações. O MEF usa esses objetos, mas não especifica como eles devem ser representados. Portanto, uma grande variedade de modelos de programação são possíveis, incluindo modelos de programação personalizados.  

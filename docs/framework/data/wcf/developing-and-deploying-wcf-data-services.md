@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 87a074b96583f44e8655c9efde145e28b490f6e9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 34fd9bc3bf16446505caf12c6cfa4192ffb391c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>Desenvolvendo e implantando WCF Data Services
 Este tópico fornece informações sobre como desenvolver e implantar o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Para obter mais informações sobre [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], consulte [Introdução](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) e [visão geral](../../../../docs/framework/data/wcf/wcf-data-services-overview.md).  
@@ -130,6 +131,6 @@ Este tópico fornece informações sobre como desenvolver e implantar o [!INCLUD
 -   Como o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] inclui uma implementação básica do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], você pode usar o Windows Server AppFabric para monitorar um serviço de dados implantado no IIS executando no Windows Server. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]usando o Windows Server AppFabric para monitorar um serviço de dados, consulte a postagem [de rastreamento do WCF Data Services com o Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005).  
   
 ## <a name="see-also"></a>Consulte também  
- [Hospedando o serviço de dados](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)  
+ [Hospedagem o serviço de dados](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)  
  [Protegendo o WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)  
  [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md) (Definindo o WCF Data Services)

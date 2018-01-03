@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 466e3faed9b2877671ca265afdb613607b12f0de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7de0deafa8eea5aa69d368a740b245e84470e137
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>Passagem de NAT usando IPv6 e Teredo
 Foram feitas melhorias que dão suporte para a passagem de NAT (conversão de endereços de rede). Essas alterações são projetadas para uso com o IPv6 e Teredo, mas elas também são aplicáveis a outras tecnologias de túnel IP. Essas melhorias afetam as classes no <xref:System.Net> e nos namespaces relacionados.  
@@ -25,7 +26,7 @@ Foram feitas melhorias que dão suporte para a passagem de NAT (conversão de en
   
  As alterações para dar suporte à passagem NAT estão disponíveis somente para aplicativos que usam o .NET Framework versão 4. Esses recursos não estão disponíveis em versões anteriores do .NET Framework.  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  O protocolo IP versão 4 (IPv4) definiu um endereço IPv4 como tendo 32 bits de comprimento. Como resultado, o IPv4 dá suporte a aproximadamente 4 bilhões endereços IP exclusivos (2^32). Conforme o número de computadores e dispositivos de rede na Internet se expandiu na década de 1990, os limites do espaço de endereço IPv4 tornou-se aparente.  
   
  Uma das várias técnicas usadas para estender o tempo de vida do IPv4 foi implantar o NAT para permitir que um único endereço IP público exclusivo representasse um grande número de endereços IP privados (Intranet privada). Os endereços IP privados subjacentes ao dispositivo NAT compartilham um único endereço IPv4 público. O dispositivo NAT pode ser um dispositivo de hardware dedicado (um ponto de acesso sem fio e roteador de baixo custo, por exemplo) ou um computador que executa um serviço para fornecer NAT. Um dispositivo ou serviço para esse endereço IP público converte os pacotes de rede IP entre a Internet pública e a Intranet privada.  

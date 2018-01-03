@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 50d523fdd0498aef7e662af5f4dc41b2394dcf42
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c993a4f09a7187b45331f6beb71a9637da87d20f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>Gerenciando o contexto do serviço de dados (WCF Data Services)
 A classe <xref:System.Data.Services.Client.DataServiceContext> encapsula as operações que têm suporte em um serviço de dados especificado. Embora os serviços do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] sejam sem estado, o contexto não é. Portanto, você pode usar o <xref:System.Data.Services.Client.DataServiceContext> classe para manter o estado no cliente entre as interações com o serviço de dados para oferecer suporte a recursos como gerenciamento de alterações. Essa classe também gerencia identidades e rastreia alterações.  

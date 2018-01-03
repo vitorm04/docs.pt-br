@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 77a4b90b16a92e993d9283932b2a609f874c7568
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9362aa6ea02f5878d2419ee7cbaab349cae27038
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Como criar um serviço de dados usando uma fonte de dados do ADO.NET Entity Framework (WCF Data Services)
 O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] expõe dados de entidade como um serviço de dados. Esses dados de entidade são fornecidos pelo [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] quando a fonte de dados é um banco de dados relacional. Este tópico mostra como criar um modelo de dados com base no [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] em um aplicativo da Web [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] baseado em um banco de dados existente e usar esse modelo de dados para criar um novo serviço de dados.  
@@ -78,6 +79,6 @@ O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] expõe dados de en
   
 ## <a name="see-also"></a>Consulte também  
  [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md) (Definindo o WCF Data Services)  
- [Provedores de serviços de dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
- [Como: criar um serviço de dados usando o provedor de reflexão](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
- [Como: criar um serviço de dados usando um LINQ para a fonte de dados SQL](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md)
+ [Provedores de Serviços de Dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
+ [Como criar um serviço de dados usando o provedor de reflexão](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
+ [Como criar um serviço de dados usando uma fonte de dados LINQ to SQL](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md)

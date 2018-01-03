@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3dfd8b17e4ca01802651087ff20988744a411ed2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2a68f35dc5abb653514034cf0d30b62457b933de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="thread-pool-etw-events"></a>Eventos ETW de pool de threads
 <a name="top"></a> Esses eventos coletam informações sobre a função de trabalho e os threads de E/S.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Acionado quando|  
+|evento|ID do evento|Acionado quando|  
 |-|-|-|  
 |`ThreadPoolWorkerThreadStart`|50|Um thread de trabalho é criado.|  
 |`ThreadPoolWorkerThreadStop`|51|Um thread de trabalho é interrompido.|  
@@ -71,7 +72,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Descrição|  
+|evento|ID do evento|Descrição|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentSample`|54|Refere-se à coleta de informações para uma amostra; ou seja, uma medida da taxa de transferência com determinado nível de simultaneidade, em um instante.|  
   
@@ -91,7 +92,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Descrição|  
+|evento|ID do evento|Descrição|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|Registra uma alteração no controle, quando o algoritmo de injeção de threads (escalada) determina se uma alteração no nível de simultaneidade está em vigor.|  
   
@@ -113,7 +114,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Descrição|  
+|evento|ID do evento|Descrição|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentStats`|56|Coleta de dados no pool de threads.|  
   
@@ -148,7 +149,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Acionado quando|  
+|evento|ID do evento|Acionado quando|  
 |-|-|-|  
 |`IOThreadCreate_V1`|44|Um thread de E/S é criado no pool de threads.|  
   
@@ -169,7 +170,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Acionado quando|  
+|evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`IOThreadRetire_V1`|46|Um thread de E/S se torna um candidato para desativação.|  
   
@@ -190,7 +191,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Acionado quando|  
+|evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`IOThreadUnretire_V1`|47|Um thread de E/S é ativado novamente devido à E/S que chega em um período de espera depois que o thread se torna um candidato para desativação.|  
   
@@ -211,7 +212,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Acionado quando|  
+|evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`IOThreadTerminate`|45|Um thread de E/S é criado no pool de threads.|  
   

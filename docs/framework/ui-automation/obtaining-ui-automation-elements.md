@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: f657d4289e46f84246059010a2f9550d1c831d3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1e3f4b1583942b4dd29ca603bd880ba2acdcfd3c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="obtaining-ui-automation-elements"></a>Obtendo elementos da automação interface do usuário
 > [!NOTE]
@@ -108,5 +109,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Localizar um elemento de automação de interface do usuário com base em uma condição de propriedade](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [Navegar em elementos de automação de interface do usuário com TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
+ [Navegar em elementos de automação de interface do usuário com o TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
  [Visão geral de árvore de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)

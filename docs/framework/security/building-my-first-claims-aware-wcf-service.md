@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: a27420609a6bcb6e30a351e4b84a899da9583d5e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: af39c3c5788db95eaee248ca8454534022cab659
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>Criando meu primeiro serviço WCF baseado em declarações
 ## <a name="applies-to"></a>Aplica-se a  
@@ -26,7 +27,7 @@ ms.lasthandoff: 10/18/2017
   
 -   Windows Communication Foundation (WCF)  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  Este tópico descreve o cenário da criação de serviços WCF com reconhecimento de declarações usando o WIF. Geralmente há três participantes em um cenário de serviço Web com reconhecimento de declarações: o serviço Web em si, o usuário final e o STS (Serviço de Token de Segurança). A figura a seguir descreve esse cenário:  
   
  ![Serviço WCF básico baseado em declarações do WIF](../../../docs/framework/security/media/wifbasicclaimsawarewcfservice.gif "WIFBasicClaimsAwareWCFService")  

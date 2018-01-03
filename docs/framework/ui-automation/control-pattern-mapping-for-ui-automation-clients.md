@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 31beb7ab9a978f5bb379a3c1d61c90c19c26ca6b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6a5f9d115c601775cc4f5b1c61d71d739f7a405b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Mapeamento de Padrão de Controles para Clientes de Automação de IU
 > [!NOTE]
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/18/2017
   
 -   Suporte condicional. O controle pode suportar esse padrão de controle dependendo do estado do controle.  
   
--   Não há suporte. O controle não oferece suporte a esse padrão de controle; controles personalizados podem dar suporte a esse padrão de controle.  
+-   Sem suporte. O controle não oferece suporte a esse padrão de controle; controles personalizados podem dar suporte a esse padrão de controle.  
   
 > [!NOTE]
 >  Alguns controles têm suporte condicional para diversos padrões de controle, dependendo da funcionalidade do controle. Por exemplo, o controle de item de menu tem suporte condicional para o <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern>, ou <xref:System.Windows.Automation.SelectionItemPattern> padrão de controle, dependendo de sua função no controle do menu.  
@@ -87,4 +88,4 @@ ms.lasthandoff: 10/18/2017
 >  Se um tipo de controle não tiver nenhum padrão de controle com suporte listado mas tem um ou mais padrões de controle condicionalmente suportados, então um desses padrões de controle terão suporte em todos os tempos.  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-overview.md)
+ [Visão geral de Automação da Interface do Usuário](../../../docs/framework/ui-automation/ui-automation-overview.md)

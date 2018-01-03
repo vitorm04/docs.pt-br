@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 7db69de994770e122dd4a4233b9a44d572c32344
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1af6fc1b7802fe69f0585011322e2485695a030c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>Como habilitar o WIF para um aplicativo de serviço Web WCF
 ## <a name="applies-to"></a>Aplica-se a  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/18/2017
   
 -   Objetivos  
   
--   Visão Geral  
+-   Visão geral  
   
 -   Resumo das etapas  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/18/2017
   
 -   Criar um cliente WCF que solicita um token de um STS e passa-o ao serviço WCF  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  Estas instruções são destinadas a demonstrar como um desenvolvedor pode usar a autenticação federada ao desenvolver serviços WCF. Alguns dos benefícios de usar a federação nos serviços WCF incluem:  
   
 1.  Fatorar a lógica de autenticação fora do código de serviço WCF  

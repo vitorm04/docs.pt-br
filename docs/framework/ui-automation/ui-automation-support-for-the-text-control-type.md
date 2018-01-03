@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: edb2a41b7bb335ace8a937d64365ed40ecf8a4e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 33477a2d193d8c9e9e3ea84e178f6bf5ea4d5ff5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-support-for-the-text-control-type"></a>Suporte da automação de interface do usuário para o tipo de controle Text
 > [!NOTE]
@@ -98,4 +99,4 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Automation.ControlType.Text>  
  [Visão geral de tipos de controle de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
- [Visão geral de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-overview.md)
+ [Visão geral de Automação da Interface do Usuário](../../../docs/framework/ui-automation/ui-automation-overview.md)

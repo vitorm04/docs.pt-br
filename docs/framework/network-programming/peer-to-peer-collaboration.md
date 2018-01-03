@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3928c6b3690bd03a4365d21d5fbf2f4bd2a4f457
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 607fadad19d4fe69800798583a14d7fd9082ff23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-to-peer-collaboration"></a>Colaboração ponto a ponto
 A rede ponto a ponto é a utilização dos computadores relativamente poderosos (computadores pessoais) que existem na borda da Internet para mais do que apenas tarefas de computação baseadas no cliente. O PC (computador pessoal) moderno tem um processador muito rápido, ampla memória e um disco rígido grande, nenhum dos quais está sendo totalmente utilizado ao executar tarefas comuns de computação, como email e navegação na Web. O PC moderno pode facilmente atuar como um cliente e um servidor (um par) para vários tipos de aplicativos.  

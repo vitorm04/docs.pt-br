@@ -18,11 +18,12 @@ caps.latest.revision: "61"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: ca710fcd4d5ded93bdc1f47b3c8a523f3afa05f4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c374281af80d4546368d33b09a63b4fdb654f16c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-text-pattern"></a>Padrão de texto de automação da interface do usuário
 > [!NOTE]
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral de TextPattern de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
  [TextPattern e visão geral de objetos inseridos](../../../docs/framework/ui-automation/textpattern-and-embedded-objects-overview.md)  
- [Tópicos explicativos](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
+ [Tópicos de instruções](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Automation.Text>  

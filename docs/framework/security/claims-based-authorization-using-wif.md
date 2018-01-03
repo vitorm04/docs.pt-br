@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f1086958a56aadbddf54f20295b91e885adf71c4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: bc6a9d828f1ab666ddda687931785f3853b74374
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autorização baseada em declarações usando o WIF
 Em um aplicativo de terceira parte confiável, a autorização determina quais recursos uma identidade autenticada pode acessar e quais operações ela pode executar nesses recursos. A autorização inadequada ou fraca leva à divulgação de informações e à violação de dados. Este tópico descreve as abordagens disponíveis para implementar a autorização para aplicativos e serviços Web ASP.NET com reconhecimento de declarações usando o Windows Identity Foundation (WIF) e um Serviço de Token de Segurança (STS), por exemplo, o Serviço de Controle de Acesso (ACS) do Microsoft Azure.  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  Desde sua primeira versão, o .NET Framework oferece um mecanismo flexível para implementar a autorização. Esse mecanismo se baseia em duas interfaces simples – **IPrincipal** e **IIdentity**. As implementações concretas de **IIdentity** representam um usuário autenticado. Por exemplo, a implementação de **WindowsIdentity** representa um usuário que é autenticado pelo Active Directory e **GenericIdentity** representa um usuário cuja identidade é verificada por meio de um processo de autenticação personalizada. As implementações concretas de **IPrincipal** ajudam a verificar as permissões usando funções, dependendo do repositório de funções. Por exemplo, **WindowsPrincipal** verifica **WindowsIdentity** para obter a associação em grupos do Active Directory. Essa verificação é executada com uma chamada ao método **IsInRole** na interface **IPrincipal**. A verificação do acesso com base em funções é chamada de RBAC (Controle de Acesso Baseado em Função). Para obter mais informações, consulte [Controle de acesso baseado em função](../../../docs/framework/security/claims-based-authorization-using-wif.md#BKMK_1).  As declarações podem ser usadas para transportar informações sobre funções para oferecer suporte a mecanismos de autorização com base em função.  
   
  As reivindicações também podem ser usadas para habilitar decisões de autorização mais complicadas, além de funções. As declarações podem ser baseada em praticamente todas as informações sobre o usuário – idade, CEP, tamanho de sapato, etc. Um mecanismo de controle de acesso baseado em declarações arbitrárias é chamado de autorização baseada em declarações. Para obter mais informações, consulte [Autorização baseada em declarações](../../../docs/framework/security/claims-based-authorization-using-wif.md#BKMK_2).  

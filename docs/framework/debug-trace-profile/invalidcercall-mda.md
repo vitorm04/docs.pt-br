@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0c051e1513f8e8ad1735085cb93f106b4fb9b0d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c77c49fef5657d5f69538285149e458209ee9b7c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="invalidcercall-mda"></a>MDA invalidCERCall
 O MDA (Assistente de Depuração Gerenciado) de `invalidCERCall` é ativado quando há uma chamada de dentro do gráfico de CER (região de execução restrita) a um método que não tem nenhum contrato de confiabilidade um tem um contrato excessivamente fraco. Um contrato fraco é um contrato que declara que o pior caso de corrupção de estado tem escopo maior do que a instância passou para a chamada, ou seja, o <xref:System.AppDomain> ou o estado do processo pode se corromper ou o resultado dele não é sempre computável de forma determinística quando chamado dentro de uma CER.  

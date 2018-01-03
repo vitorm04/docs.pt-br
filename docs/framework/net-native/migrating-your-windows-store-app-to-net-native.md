@@ -13,11 +13,12 @@ caps.latest.revision: "29"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c4257876abeeccf762a7caa87f667468a16bba70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ce23d66f79f94af74250cff137499f6c8b1582ac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migrando seu aplicativo da Windows Store para .NET Nativo
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] fornece compilação estática dos aplicativos na Windows Store ou no computador do desenvolvedor. Isso difere da compilação dinâmica realizada para Aplicativos da Windows Store pelo compilador JIT (just-in-time) ou o [Gerador de Imagem Nativa (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) no dispositivo. Apesar das diferenças, o [!INCLUDE[net_native](../../../includes/net-native-md.md)] tenta manter a compatibilidade com os [.NET para aplicativos da Windows Store](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). Em geral, as coisas que funcionam em aplicativos do .NET para Windows Store também funcionam com [!INCLUDE[net_native](../../../includes/net-native-md.md)].  No entanto, em alguns casos, você pode encontrar alterações de comportamento. Este documento descreve essas diferenças entre os aplicativos padrão do .NET para Windows Store e o [!INCLUDE[net_native](../../../includes/net-native-md.md)] nas seguintes áreas:  

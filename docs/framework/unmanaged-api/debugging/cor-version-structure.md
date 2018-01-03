@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bd4a878b51685befb39eb486097be2e2f2c1d409
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b527cb9175315af98a9ad4e9be06d459ad6e188e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corversion-structure"></a>Estrutura COR_VERSION
 Armazena o número da versão com quatro partes padrão do CLR.  
@@ -45,7 +46,7 @@ typedef struct _COR_VERSION {
 |------------|-----------------|  
 |`dwMajor`|O número da versão principal.|  
 |`dwMinor`|O número da versão secundária.|  
-|`dwBuild`|O número de compilação.|  
+|`dwBuild`|O número de build.|  
 |`dwSubBuild`|O número de compilação sub.|  
   
 ## <a name="remarks"></a>Comentários  

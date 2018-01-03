@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: daaffd02eaaf7fcb0e64dbcda4bd2ee155163f4f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d234ea6f15706a47f6a758528dbe4eda0f3b778a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>Implementando o padrão de controle GridItem de interface de usuário
 > [!NOTE]

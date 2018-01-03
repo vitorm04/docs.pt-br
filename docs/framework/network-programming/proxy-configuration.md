@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: b543097d0fc85c502bd36f22225958f9239ccd71
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 41f7cfe76acfb4b6bbf66207685935c190a51901
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="proxy-configuration"></a>Configuração de proxy
 Um servidor proxy manipula as solicitações de clientes para recursos. Um proxy pode retornar um recurso solicitado do seu cache ou encaminhar a solicitação para o servidor na qual o recurso reside. Proxies podem melhorar o desempenho da rede, reduzindo o número de solicitações enviadas a servidores remotos. Proxies também podem ser usados para restringir o acesso aos recursos.  

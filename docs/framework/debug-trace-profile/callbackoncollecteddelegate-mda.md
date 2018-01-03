@@ -24,11 +24,12 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2e9f2208f2e309b2433bc158a309284131ae8abd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5459efbb07aa235bd7c1d34ffd6b56195fe0bf1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>MDA callbackOnCollectedDelegate
 O MDA (assistente para depuração gerenciada) `callbackOnCollectedDelegate` é ativado se um representante tem o marshaling realizado de um código gerenciado para um código não gerenciado como um ponteiro de função e um retorno de chamada é colocado nesse ponteiro de função depois que o representante foi coletado como lixo.  

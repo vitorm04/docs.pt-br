@@ -16,18 +16,19 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a9a01b1f47969d7ddec250fa8bcafe5e1a851b5c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5262d778151cfe0a0d7ed1750e0b71d4c9214a64
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="runtime-information-etw-events"></a>Eventos ETW de informações de tempo de execução
 Esses eventos ETW registram informações sobre o tempo de execução, incluindo a SKU, o número de versão, a maneira pela qual o tempo de execução foi ativado, os parâmetros de linha de comando com os quais ele foi iniciado, o GUID (se aplicável) e outras informações relevantes. Se vários tempos de execução estiverem sendo executados dentro de um processo, as informações fornecidas por esses eventos (o ClrInstanceID) ajudarão a desfazer a ambiguidade entre os tempos de execução.  
   
  A tabela a seguir mostra os dois eventos de informações de tempo de execução. Os eventos podem ser gerados sob qualquer palavra-chave ou máscara. (Para obter mais informações, consulte [Palavras-chaves e níveis CLR ETW](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
   
-|Evento|ID do evento|Provider|Descrição|  
+|evento|ID do evento|Provider|Descrição|  
 |-----------|--------------|--------------|-----------------|  
 |`RuntimeInformationEvent`|187|CLRRuntime|Gerado quando um tempo de execução é carregado.|  
 |`RuntimeInformationDCStart`|187|CLRRundown|Enumera os tempos de execução que são carregados.|  

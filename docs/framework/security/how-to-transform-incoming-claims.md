@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: bcf0e640e6b6b45ddb87070c7d6df2fa6dadc834
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1f736554cd50a5ca2bd45dfab2f41ba672601f29
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-transform-incoming-claims"></a>Como transformar declarações de entrada
 ## <a name="applies-to"></a>Aplica-se a  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/18/2017
   
 -   Objetivos  
   
--   Visão Geral  
+-   Visão geral  
   
 -   Resumo das etapas  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/18/2017
   
 -   Testar o aplicativo ASP.NET Web Forms para ver se ele está funcionando corretamente  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  O WIF expõe uma classe chamada <xref:System.Security.Claims.ClaimsAuthenticationManager> que permite que os usuários modifiquem declarações antes que elas sejam apresentadas para um aplicativo RP (de terceira parte confiável). O <xref:System.Security.Claims.ClaimsAuthenticationManager> é útil para separação de interesses entre autenticação e o código do aplicativo subjacente. O exemplo a seguir demonstra como adicionar uma função às declarações na <xref:System.Security.Claims.ClaimsPrincipal> de entrada que pode ser necessária para o RP.  
   
 ## <a name="summary-of-steps"></a>Resumo das etapas  

@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 353ae034381ab29787aba1c1c362f4c6fc57da7e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ea7214e284754b1a2f5c8a7a68f19b1b94e02a13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="method-etw-events"></a>Eventos ETW de método
 <a name="top"></a> Esses eventos coletam informações que são específicas para métodos. A carga desses eventos é necessária para resolução de símbolos. Além disso, esses eventos fornecem informações úteis, como o número de vezes que um método foi chamado.  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Descrição|  
+|evento|ID do evento|Descrição|  
 |-----------|--------------|-----------------|  
 |`MethodLoad_V1`|136|Gerado quando um método é carregado Just-In-Time (carregado via JIT) ou uma imagem NGEN é carregada. Métodos dinâmicos e genéricos não usam esta versão para carregamentos de método. Os auxiliares JIT nunca usam esta versão.|  
 |`MethodUnLoad_V1`|137|Gerado quando um módulo é descarregado ou um domínio do aplicativo é destruído. Métodos dinâmicos nunca usam essa versão para os descarregamentos de método.|  
@@ -87,7 +88,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Descrição|  
+|evento|ID do evento|Descrição|  
 |-----------|--------------|----------------|  
 |`DCStartInit_V1`|147|Enviado antes do início da enumeração durante um encerramento inicial.|  
 |`DCStartComplete_V1`|145|Enviado antes do término da enumeração durante um encerramento inicial.|  
@@ -115,7 +116,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Descrição|  
+|evento|ID do evento|Descrição|  
 |-----------|--------------|-----------------|  
 |`MethodLoadVerbose_V1`|143|Gerado quando um método é carregado via JIT ou uma imagem NGEN é carregada. Métodos dinâmicos e genéricos sempre usam esta versão para carregamentos de método. Os auxiliares JIT sempre usam esta versão.|  
 |`MethodUnLoadVerbose_V1`|144|Gerado quando um método dinâmico é destruído, um módulo é descarregado ou um domínio do aplicativo é destruído. Métodos dinâmicos sempre usam essa versão para os descarregamentos de método.|  
@@ -152,7 +153,7 @@ ms.lasthandoff: 10/18/2017
   
  A tabela a seguir mostra as informações do evento.  
   
-|Evento|ID do evento|Descrição|  
+|evento|ID do evento|Descrição|  
 |-----------|--------------|-----------------|  
 |`MethodJittingStarted`|145|Gerado quando um método está sendo compilado por JIT.|  
   

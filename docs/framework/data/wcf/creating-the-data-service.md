@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 22fc561d7df9bbd81bf19d351af2d07bc6b51237
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 57e305fd8b03e8d46c1fdcb7dd551f32062a1009
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-the-data-service"></a>Criando o serviço de dados
 Nesta tarefa, você criará um serviço de dados de exemplo que usa [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para expor um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed com base no banco de dados de exemplo Northwind. A tarefa envolve as seguintes etapas básicas:  
