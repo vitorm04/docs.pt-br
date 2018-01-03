@@ -21,16 +21,17 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f76bb1b017453d7ca890f9d6b1b603f9b0d790bc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 11cb4ab6d32f3dbada25fe42f062fdc2c1fabd17
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebuggenericvaluesetvalue-method"></a><span data-ttu-id="97ccd-102">Método ICorDebugGenericValue::SetValue</span><span class="sxs-lookup"><span data-stu-id="97ccd-102">ICorDebugGenericValue::SetValue Method</span></span>
-<span data-ttu-id="97ccd-103">Copia um novo valor de buffer especificado.</span><span class="sxs-lookup"><span data-stu-id="97ccd-103">Copies a new value from the specified buffer.</span></span>  
+# <a name="icordebuggenericvaluesetvalue-method"></a><span data-ttu-id="910a0-102">Método ICorDebugGenericValue::SetValue</span><span class="sxs-lookup"><span data-stu-id="910a0-102">ICorDebugGenericValue::SetValue Method</span></span>
+<span data-ttu-id="910a0-103">Copia um novo valor de buffer especificado.</span><span class="sxs-lookup"><span data-stu-id="910a0-103">Copies a new value from the specified buffer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="97ccd-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="97ccd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="910a0-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="910a0-104">Syntax</span></span>  
   
 ```  
 HRESULT SetValue (  
@@ -38,18 +39,18 @@ HRESULT SetValue (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="97ccd-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="97ccd-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="910a0-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="910a0-105">Parameters</span></span>  
  `pFrom`  
- <span data-ttu-id="97ccd-106">[in] Um ponteiro para o buffer da qual copiar o valor.</span><span class="sxs-lookup"><span data-stu-id="97ccd-106">[in] A pointer to the buffer from which to copy the value.</span></span>  
+ <span data-ttu-id="910a0-106">[in] Um ponteiro para o buffer da qual copiar o valor.</span><span class="sxs-lookup"><span data-stu-id="910a0-106">[in] A pointer to the buffer from which to copy the value.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="97ccd-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="97ccd-107">Remarks</span></span>  
- <span data-ttu-id="97ccd-108">Para tipos de referência, o valor é a referência, não o conteúdo.</span><span class="sxs-lookup"><span data-stu-id="97ccd-108">For reference types, the value is the reference, not the content.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="910a0-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="910a0-107">Remarks</span></span>  
+ <span data-ttu-id="910a0-108">Para tipos de referência, o valor é a referência, não o conteúdo.</span><span class="sxs-lookup"><span data-stu-id="910a0-108">For reference types, the value is the reference, not the content.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="97ccd-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="97ccd-109">Requirements</span></span>  
- <span data-ttu-id="97ccd-110">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="97ccd-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="910a0-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="910a0-109">Requirements</span></span>  
+ <span data-ttu-id="910a0-110">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="910a0-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="97ccd-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="97ccd-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="910a0-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="910a0-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="97ccd-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="97ccd-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="910a0-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="910a0-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="97ccd-113">**Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="97ccd-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="910a0-113">**Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="910a0-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -21,14 +21,15 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dfb2266caba00c27a3e2c94f26e603b9e5dc806d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e884b17daae5dcbbcc12b8973738e537e2649454
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugcontrollercancommitchanges-method"></a><span data-ttu-id="fad31-102">Método ICorDebugController::CanCommitChanges</span><span class="sxs-lookup"><span data-stu-id="fad31-102">ICorDebugController::CanCommitChanges Method</span></span>
-<span data-ttu-id="fad31-103">`CanCommitChanges` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="fad31-103">`CanCommitChanges` is obsolete.</span></span> <span data-ttu-id="fad31-104">Não chame este método.</span><span class="sxs-lookup"><span data-stu-id="fad31-104">Do not call this method.</span></span>  
+# <a name="icordebugcontrollercancommitchanges-method"></a><span data-ttu-id="8827a-102">Método ICorDebugController::CanCommitChanges</span><span class="sxs-lookup"><span data-stu-id="8827a-102">ICorDebugController::CanCommitChanges Method</span></span>
+<span data-ttu-id="8827a-103">`CanCommitChanges` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="8827a-103">`CanCommitChanges` is obsolete.</span></span> <span data-ttu-id="8827a-104">Não chame este método.</span><span class="sxs-lookup"><span data-stu-id="8827a-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fad31-105">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fad31-105">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="8827a-105">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8827a-105">See Also</span></span>  
  

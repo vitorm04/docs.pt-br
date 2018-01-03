@@ -21,16 +21,17 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1203aa4a6e35574c1d026ddc05cac810fed5b78b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c5f98395ff8e77aa52a470f893ea5db02d73fdf3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugchaingetprevious-method"></a><span data-ttu-id="80fdd-102">Método ICorDebugChain::GetPrevious</span><span class="sxs-lookup"><span data-stu-id="80fdd-102">ICorDebugChain::GetPrevious Method</span></span>
-<span data-ttu-id="80fdd-103">Obtém a cadeia anterior de quadros do thread.</span><span class="sxs-lookup"><span data-stu-id="80fdd-103">Gets the previous chain of frames for the thread.</span></span>  
+# <a name="icordebugchaingetprevious-method"></a><span data-ttu-id="284a4-102">Método ICorDebugChain::GetPrevious</span><span class="sxs-lookup"><span data-stu-id="284a4-102">ICorDebugChain::GetPrevious Method</span></span>
+<span data-ttu-id="284a4-103">Obtém a cadeia anterior de quadros do thread.</span><span class="sxs-lookup"><span data-stu-id="284a4-103">Gets the previous chain of frames for the thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="80fdd-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="80fdd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="284a4-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="284a4-104">Syntax</span></span>  
   
 ```  
 HRESULT GetPrevious (  
@@ -38,15 +39,15 @@ HRESULT GetPrevious (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="80fdd-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="80fdd-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="284a4-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="284a4-105">Parameters</span></span>  
  `ppChain`  
- <span data-ttu-id="80fdd-106">[out] Um ponteiro para o endereço de um objeto ICorDebugChain que representa a cadeia anterior de quadros para este segmento.</span><span class="sxs-lookup"><span data-stu-id="80fdd-106">[out] A pointer to the address of an ICorDebugChain object that represents the previous chain of frames for this thread.</span></span> <span data-ttu-id="80fdd-107">Se essa cadeia é a primeira cadeia, `ppChain` é nulo.</span><span class="sxs-lookup"><span data-stu-id="80fdd-107">If this chain is the first chain, `ppChain` is null.</span></span>  
+ <span data-ttu-id="284a4-106">[out] Um ponteiro para o endereço de um objeto ICorDebugChain que representa a cadeia anterior de quadros para este segmento.</span><span class="sxs-lookup"><span data-stu-id="284a4-106">[out] A pointer to the address of an ICorDebugChain object that represents the previous chain of frames for this thread.</span></span> <span data-ttu-id="284a4-107">Se essa cadeia é a primeira cadeia, `ppChain` é nulo.</span><span class="sxs-lookup"><span data-stu-id="284a4-107">If this chain is the first chain, `ppChain` is null.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="80fdd-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="80fdd-108">Requirements</span></span>  
- <span data-ttu-id="80fdd-109">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="80fdd-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="284a4-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="284a4-108">Requirements</span></span>  
+ <span data-ttu-id="284a4-109">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="284a4-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="80fdd-110">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="80fdd-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="284a4-110">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="284a4-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="80fdd-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="80fdd-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="284a4-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="284a4-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="80fdd-112">**Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="80fdd-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="284a4-112">**Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="284a4-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

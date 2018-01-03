@@ -21,14 +21,15 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 572a39652f5c48582bf09c109d0ab9c4874b37a1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: da25bd0186570a63ffd789fc44d9ed7252657575
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugeditandcontinuesnapshotsetpesymbolbytes-method"></a><span data-ttu-id="f79e4-102">Método ICorDebugEditAndContinueSnapshot::SetPESymbolBytes</span><span class="sxs-lookup"><span data-stu-id="f79e4-102">ICorDebugEditAndContinueSnapshot::SetPESymbolBytes Method</span></span>
-<span data-ttu-id="f79e4-103">`SetPESymbolBytes` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="f79e4-103">`SetPESymbolBytes` is obsolete.</span></span> <span data-ttu-id="f79e4-104">Não chame este método.</span><span class="sxs-lookup"><span data-stu-id="f79e4-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotsetpesymbolbytes-method"></a><span data-ttu-id="e7511-102">Método ICorDebugEditAndContinueSnapshot::SetPESymbolBytes</span><span class="sxs-lookup"><span data-stu-id="e7511-102">ICorDebugEditAndContinueSnapshot::SetPESymbolBytes Method</span></span>
+<span data-ttu-id="e7511-103">`SetPESymbolBytes` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="e7511-103">`SetPESymbolBytes` is obsolete.</span></span> <span data-ttu-id="e7511-104">Não chame este método.</span><span class="sxs-lookup"><span data-stu-id="e7511-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f79e4-105">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f79e4-105">See Also</span></span>  
- [<span data-ttu-id="f79e4-106">Interfaces de depuração</span><span class="sxs-lookup"><span data-stu-id="f79e4-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="e7511-105">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e7511-105">See Also</span></span>  
+ [<span data-ttu-id="e7511-106">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="e7511-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
