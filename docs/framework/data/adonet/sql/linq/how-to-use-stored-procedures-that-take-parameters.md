@@ -16,19 +16,20 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: fbd4e0b7534a213f56c5c6ba60208d3024535bd7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 28f389d7128283501291bc3220cfde3815cc0713
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-use-stored-procedures-that-take-parameters"></a><span data-ttu-id="1038d-102">Como: Use os procedimentos armazenados que têm parâmetros</span><span class="sxs-lookup"><span data-stu-id="1038d-102">How to: Use Stored Procedures that Take Parameters</span></span>
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="1038d-103"> mapeia parâmetros de saída para definições de referência, e para tipos de valor declara o parâmetro como anulável.</span><span class="sxs-lookup"><span data-stu-id="1038d-103"> maps output parameters to reference parameters, and for value types declares the parameter as nullable.</span></span>  
+# <a name="how-to-use-stored-procedures-that-take-parameters"></a><span data-ttu-id="eb335-102">Como: Use os procedimentos armazenados que têm parâmetros</span><span class="sxs-lookup"><span data-stu-id="eb335-102">How to: Use Stored Procedures that Take Parameters</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="eb335-103"> mapeia parâmetros de saída para definições de referência, e para tipos de valor declara o parâmetro como anulável.</span><span class="sxs-lookup"><span data-stu-id="eb335-103"> maps output parameters to reference parameters, and for value types declares the parameter as nullable.</span></span>  
   
- <span data-ttu-id="1038d-104">Para obter um exemplo de como usar um parâmetro de entrada em uma consulta que retorna um conjunto de linhas, consulte [como: retornar conjuntos de linhas](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md).</span><span class="sxs-lookup"><span data-stu-id="1038d-104">For an example of how to use an input parameter in a query that returns a rowset, see [How to: Return Rowsets](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md).</span></span>  
+ <span data-ttu-id="eb335-104">Para obter um exemplo de como usar um parâmetro de entrada em uma consulta que retorna um conjunto de linhas, consulte [como: retornar conjuntos de linhas](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md).</span><span class="sxs-lookup"><span data-stu-id="eb335-104">For an example of how to use an input parameter in a query that returns a rowset, see [How to: Return Rowsets](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1038d-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="1038d-105">Example</span></span>  
- <span data-ttu-id="1038d-106">O exemplo a seguir utiliza um único parâmetro de entrada (a identificação do cliente) e retorna um parâmetro de saída (o total de vendas para aquele cliente.)</span><span class="sxs-lookup"><span data-stu-id="1038d-106">The following example takes a single input parameter (the customer ID) and returns an out parameter (the total sales for that customer).</span></span>  
+## <a name="example"></a><span data-ttu-id="eb335-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="eb335-105">Example</span></span>  
+ <span data-ttu-id="eb335-106">O exemplo a seguir utiliza um único parâmetro de entrada (a identificação do cliente) e retorna um parâmetro de saída (o total de vendas para aquele cliente.)</span><span class="sxs-lookup"><span data-stu-id="eb335-106">The following example takes a single input parameter (the customer ID) and returns an out parameter (the total sales for that customer).</span></span>  
   
 ```  
 CREATE PROCEDURE [dbo].[CustOrderTotal]   
@@ -43,14 +44,14 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
  [!code-csharp[DLinqSprox#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/northwind-sprox.cs#2)]
  [!code-vb[DLinqSprox#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/northwind-sprox.vb#2)]  
   
-## <a name="example"></a><span data-ttu-id="1038d-107">Exemplo</span><span class="sxs-lookup"><span data-stu-id="1038d-107">Example</span></span>  
- <span data-ttu-id="1038d-108">Você poderia chamar esse procedimento armazenado como segue:</span><span class="sxs-lookup"><span data-stu-id="1038d-108">You would call this stored procedure as follows:</span></span>  
+## <a name="example"></a><span data-ttu-id="eb335-107">Exemplo</span><span class="sxs-lookup"><span data-stu-id="eb335-107">Example</span></span>  
+ <span data-ttu-id="eb335-108">Você poderia chamar esse procedimento armazenado como segue:</span><span class="sxs-lookup"><span data-stu-id="eb335-108">You would call this stored procedure as follows:</span></span>  
   
  [!code-csharp[DLinqSprox#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/Program.cs#3)]
  [!code-vb[DLinqSprox#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#3)]  
   
-## <a name="see-also"></a><span data-ttu-id="1038d-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1038d-109">See Also</span></span>  
- [<span data-ttu-id="1038d-110">Procedimentos armazenados</span><span class="sxs-lookup"><span data-stu-id="1038d-110">Stored Procedures</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
- <span data-ttu-id="1038d-111">[Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)</span><span class="sxs-lookup"><span data-stu-id="1038d-111">[Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)</span></span>  
- [<span data-ttu-id="1038d-112">Usando tipos que permitem valor nulo</span><span class="sxs-lookup"><span data-stu-id="1038d-112">Using Nullable Types</span></span>](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)  
- [<span data-ttu-id="1038d-113">Tipos de Valor Anulável</span><span class="sxs-lookup"><span data-stu-id="1038d-113">Nullable Value Types</span></span>](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+## <a name="see-also"></a><span data-ttu-id="eb335-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="eb335-109">See Also</span></span>  
+ [<span data-ttu-id="eb335-110">Procedimentos armazenados</span><span class="sxs-lookup"><span data-stu-id="eb335-110">Stored Procedures</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
+ <span data-ttu-id="eb335-111">[Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)</span><span class="sxs-lookup"><span data-stu-id="eb335-111">[Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)</span></span>  
+ [<span data-ttu-id="eb335-112">Usando tipos que permitem valor nulo</span><span class="sxs-lookup"><span data-stu-id="eb335-112">Using Nullable Types</span></span>](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)  
+ [<span data-ttu-id="eb335-113">Tipos de Valor Anulável</span><span class="sxs-lookup"><span data-stu-id="eb335-113">Nullable Value Types</span></span>](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

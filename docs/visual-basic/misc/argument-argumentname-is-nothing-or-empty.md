@@ -9,20 +9,20 @@ ms.assetid: 4a742518-30ce-4054-b1bb-df6978f15c06
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ac628e3968dcd395a9d7ac2c68ab09219e5a2eba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0fe84777f06933ece5abd829f7cabcce75d27313
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="argument-39ltargumentnamegt39-is-nothing-or-empty"></a><span data-ttu-id="10d3c-102">Argumento &#39; &lt;argumentname&gt;&#39; é Nothing ou vazio</span><span class="sxs-lookup"><span data-stu-id="10d3c-102">Argument &#39;&lt;argumentname&gt;&#39; is Nothing or empty</span></span>
-<span data-ttu-id="10d3c-103">Um nome de argumento não é válido porque ele é inicializado para `Nothing` ou está vazia.</span><span class="sxs-lookup"><span data-stu-id="10d3c-103">An argument name is not valid because it is initialized to `Nothing` or is empty.</span></span> <span data-ttu-id="10d3c-104">Um argumento deve ter um tipo de dados específico e um nome válido.</span><span class="sxs-lookup"><span data-stu-id="10d3c-104">An argument must have a specific data type and a valid name.</span></span>  
+# <a name="argument-39ltargumentnamegt39-is-nothing-or-empty"></a><span data-ttu-id="d25a7-102">Argumento &#39; &lt;argumentname&gt;&#39; é Nothing ou vazio</span><span class="sxs-lookup"><span data-stu-id="d25a7-102">Argument &#39;&lt;argumentname&gt;&#39; is Nothing or empty</span></span>
+<span data-ttu-id="d25a7-103">Um nome de argumento não é válido porque ele é inicializado para `Nothing` ou está vazia.</span><span class="sxs-lookup"><span data-stu-id="d25a7-103">An argument name is not valid because it is initialized to `Nothing` or is empty.</span></span> <span data-ttu-id="d25a7-104">Um argumento deve ter um tipo de dados específico e um nome válido.</span><span class="sxs-lookup"><span data-stu-id="d25a7-104">An argument must have a specific data type and a valid name.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="10d3c-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="10d3c-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="d25a7-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="d25a7-105">To correct this error</span></span>  
   
--   <span data-ttu-id="10d3c-106">Adicione um nome de argumento válido.</span><span class="sxs-lookup"><span data-stu-id="10d3c-106">Add a valid argument name.</span></span>  
+-   <span data-ttu-id="d25a7-106">Adicione um nome de argumento válido.</span><span class="sxs-lookup"><span data-stu-id="d25a7-106">Add a valid argument name.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="10d3c-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="10d3c-107">See Also</span></span>  
- [<span data-ttu-id="10d3c-108">Propriedade Info. DirectoryPath</span><span class="sxs-lookup"><span data-stu-id="10d3c-108">My.Application.Info.DirectoryPath Property</span></span>](http://msdn.microsoft.com/en-us/660586b9-638e-42a7-ae21-5eee34a3fccf)  
- [<span data-ttu-id="10d3c-109">Como analisar demarcadores de arquivo</span><span class="sxs-lookup"><span data-stu-id="10d3c-109">How to: Parse File Paths</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
- [<span data-ttu-id="10d3c-110">Nothing</span><span class="sxs-lookup"><span data-stu-id="10d3c-110">Nothing</span></span>](../../visual-basic/language-reference/nothing.md)
+## <a name="see-also"></a><span data-ttu-id="d25a7-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d25a7-107">See Also</span></span>  
+ [<span data-ttu-id="d25a7-108">Info. DirectoryPath</span><span class="sxs-lookup"><span data-stu-id="d25a7-108">My.Application.Info.DirectoryPath</span></span>](xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo.DirectoryPath)  
+ [<span data-ttu-id="d25a7-109">Como analisar demarcadores de arquivo</span><span class="sxs-lookup"><span data-stu-id="d25a7-109">How to: Parse File Paths</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
+ [<span data-ttu-id="d25a7-110">Nothing</span><span class="sxs-lookup"><span data-stu-id="d25a7-110">Nothing</span></span>](../../visual-basic/language-reference/nothing.md)

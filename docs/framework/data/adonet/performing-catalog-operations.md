@@ -16,16 +16,17 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f67f393dce518a76b80d91f7294ed19e9a0f411a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 841f4e126a475799e7cc66f6f7afbcc9318a1096
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="performing-catalog-operations"></a><span data-ttu-id="d5956-102">Executando operações de catálogo</span><span class="sxs-lookup"><span data-stu-id="d5956-102">Performing Catalog Operations</span></span>
-<span data-ttu-id="d5956-103">Para executar um comando para modificar um banco de dados ou o catálogo, como a instrução CREATE TABLE ou CREATE PROCEDURE, criar um **comando** usando as instruções SQL apropriadas do objeto e um **Conexão** objeto.</span><span class="sxs-lookup"><span data-stu-id="d5956-103">To execute a command to modify a database or catalog, such as the CREATE TABLE or CREATE PROCEDURE statement, create a **Command** object using the appropriate SQL statements and a **Connection** object.</span></span> <span data-ttu-id="d5956-104">Execute o comando com o **ExecuteNonQuery** método o **comando** objeto.</span><span class="sxs-lookup"><span data-stu-id="d5956-104">Execute the command with the **ExecuteNonQuery** method of the **Command** object.</span></span>  
+# <a name="performing-catalog-operations"></a><span data-ttu-id="9f936-102">Executando operações de catálogo</span><span class="sxs-lookup"><span data-stu-id="9f936-102">Performing Catalog Operations</span></span>
+<span data-ttu-id="9f936-103">Para executar um comando para modificar um banco de dados ou o catálogo, como a instrução CREATE TABLE ou CREATE PROCEDURE, criar um **comando** usando as instruções SQL apropriadas do objeto e um **Conexão** objeto.</span><span class="sxs-lookup"><span data-stu-id="9f936-103">To execute a command to modify a database or catalog, such as the CREATE TABLE or CREATE PROCEDURE statement, create a **Command** object using the appropriate SQL statements and a **Connection** object.</span></span> <span data-ttu-id="9f936-104">Execute o comando com o **ExecuteNonQuery** método o **comando** objeto.</span><span class="sxs-lookup"><span data-stu-id="9f936-104">Execute the command with the **ExecuteNonQuery** method of the **Command** object.</span></span>  
   
- <span data-ttu-id="d5956-105">O exemplo de código a seguir cria um procedimento armazenado em um banco de dados do Microsoft SQL Server.</span><span class="sxs-lookup"><span data-stu-id="d5956-105">The following code example creates a stored procedure in a Microsoft SQL Server database.</span></span>  
+ <span data-ttu-id="9f936-105">O exemplo de código a seguir cria um procedimento armazenado em um banco de dados do Microsoft SQL Server.</span><span class="sxs-lookup"><span data-stu-id="9f936-105">The following code example creates a stored procedure in a Microsoft SQL Server database.</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -55,7 +56,7 @@ SqlCommand command = new SqlCommand(queryString, connection);
 command.ExecuteNonQuery();  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d5956-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d5956-106">See Also</span></span>  
- [<span data-ttu-id="d5956-107">Usando os comandos para modificar dados</span><span class="sxs-lookup"><span data-stu-id="d5956-107">Using Commands to Modify Data</span></span>](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
- [<span data-ttu-id="d5956-108">Comandos e parâmetros</span><span class="sxs-lookup"><span data-stu-id="d5956-108">Commands and Parameters</span></span>](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- <span data-ttu-id="d5956-109">[ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="d5956-109">[ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)</span></span>
+## <a name="see-also"></a><span data-ttu-id="9f936-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9f936-106">See Also</span></span>  
+ [<span data-ttu-id="9f936-107">Usando os comandos para modificar dados</span><span class="sxs-lookup"><span data-stu-id="9f936-107">Using Commands to Modify Data</span></span>](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
+ [<span data-ttu-id="9f936-108">Comandos e parâmetros</span><span class="sxs-lookup"><span data-stu-id="9f936-108">Commands and Parameters</span></span>](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ <span data-ttu-id="9f936-109">[ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="9f936-109">[ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)</span></span>

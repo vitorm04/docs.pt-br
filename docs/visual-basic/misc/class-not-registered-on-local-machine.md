@@ -10,19 +10,19 @@ ms.assetid: 40c4c622-41d8-4005-9303-c30abe0707bb
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e4d5d6403bab59b16c45fad26f2860e72f8cce20
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 307d36d52cb66c431fd4d482132fa13af9a2903d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="class-not-registered-on-local-machine"></a><span data-ttu-id="f1720-102">Classe não registrada no computador local</span><span class="sxs-lookup"><span data-stu-id="f1720-102">Class not registered on local machine</span></span>
-<span data-ttu-id="f1720-103">Este erro geralmente ocorre como resultado de um arquivo corrompido.</span><span class="sxs-lookup"><span data-stu-id="f1720-103">This error is usually encountered as a result of a corrupted file.</span></span> <span data-ttu-id="f1720-104">Talvez seja necessário reinstalar [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f1720-104">You may need to reinstall [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span></span>  
+# <a name="class-not-registered-on-local-machine"></a><span data-ttu-id="12ab4-102">Classe não registrada no computador local</span><span class="sxs-lookup"><span data-stu-id="12ab4-102">Class not registered on local machine</span></span>
+<span data-ttu-id="12ab4-103">Este erro geralmente ocorre como resultado de um arquivo corrompido.</span><span class="sxs-lookup"><span data-stu-id="12ab4-103">This error is usually encountered as a result of a corrupted file.</span></span> <span data-ttu-id="12ab4-104">Talvez seja necessário reinstalar [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="12ab4-104">You may need to reinstall [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="f1720-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="f1720-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="12ab4-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="12ab4-105">To correct this error</span></span>  
   
--   <span data-ttu-id="f1720-106">Reinstale [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f1720-106">Reinstall [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span></span>  
+-   <span data-ttu-id="12ab4-106">Reinstale [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="12ab4-106">Reinstall [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f1720-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f1720-107">See Also</span></span>  
- [<span data-ttu-id="f1720-108">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="f1720-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)  
- [<span data-ttu-id="f1720-109">PAVEOVER suporte de produto e acessibilidade</span><span class="sxs-lookup"><span data-stu-id="f1720-109">PAVEOVER Product Support and Accessibility</span></span>](http://msdn.microsoft.com/en-us/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)
+## <a name="see-also"></a><span data-ttu-id="12ab4-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="12ab4-107">See Also</span></span>  
+ [<span data-ttu-id="12ab4-108">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="12ab4-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)  
+

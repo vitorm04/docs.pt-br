@@ -13,36 +13,37 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 226f7fa14331ee8e2500ac91a665e86928e37f8f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 467277a1697f9f6ca4da7278045cbec34202eed5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="flatten-entity-sql"></a><span data-ttu-id="285cc-102">ACHATAR (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="285cc-102">FLATTEN (Entity SQL)</span></span>
-<span data-ttu-id="285cc-103">Converte uma coleção de coleções em uma coleção combinada.</span><span class="sxs-lookup"><span data-stu-id="285cc-103">Converts a collection of collections into a flattened collection.</span></span> <span data-ttu-id="285cc-104">A nova coleção contém todos os mesmos elementos que a coleção antiga, mas sem uma estrutura aninhada.</span><span class="sxs-lookup"><span data-stu-id="285cc-104">The new collection contains all the same elements as the old collection, but without a nested structure.</span></span>  
+# <a name="flatten-entity-sql"></a><span data-ttu-id="3b132-102">ACHATAR (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="3b132-102">FLATTEN (Entity SQL)</span></span>
+<span data-ttu-id="3b132-103">Converte uma coleção de coleções em uma coleção combinada.</span><span class="sxs-lookup"><span data-stu-id="3b132-103">Converts a collection of collections into a flattened collection.</span></span> <span data-ttu-id="3b132-104">A nova coleção contém todos os mesmos elementos que a coleção antiga, mas sem uma estrutura aninhada.</span><span class="sxs-lookup"><span data-stu-id="3b132-104">The new collection contains all the same elements as the old collection, but without a nested structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="285cc-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="285cc-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3b132-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="3b132-105">Syntax</span></span>  
   
 ```  
 FLATTEN ( collection )  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="285cc-106">Arguments</span><span class="sxs-lookup"><span data-stu-id="285cc-106">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="3b132-106">Arguments</span><span class="sxs-lookup"><span data-stu-id="3b132-106">Arguments</span></span>  
  `collection`  
- <span data-ttu-id="285cc-107">Qualquer expressão válida que retorna uma coleção de coleções valor de ajuste em uma única coleção.</span><span class="sxs-lookup"><span data-stu-id="285cc-107">Any valid expression that returns a collection of value collections to flatten into a single collection.</span></span>  
+ <span data-ttu-id="3b132-107">Qualquer expressão válida que retorna uma coleção de coleções valor de ajuste em uma única coleção.</span><span class="sxs-lookup"><span data-stu-id="3b132-107">Any valid expression that returns a collection of value collections to flatten into a single collection.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="285cc-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="285cc-108">Remarks</span></span>  
- <span data-ttu-id="285cc-109">`FLATTEN` é um dos operadores definidos [!INCLUDE[esql](../../../../../../includes/esql-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="285cc-109">`FLATTEN` is one of the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators.</span></span> <span data-ttu-id="285cc-110">Todos os operadores definidos [!INCLUDE[esql](../../../../../../includes/esql-md.md)] são avaliados da esquerda para a direita.</span><span class="sxs-lookup"><span data-stu-id="285cc-110">All [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators are evaluated from left to right.</span></span> <span data-ttu-id="285cc-111">Consulte [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md) para obter informações de precedência para o [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operadores de conjunto.</span><span class="sxs-lookup"><span data-stu-id="285cc-111">See [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md) for precedence information for the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3b132-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="3b132-108">Remarks</span></span>  
+ <span data-ttu-id="3b132-109">`FLATTEN` é um dos operadores definidos [!INCLUDE[esql](../../../../../../includes/esql-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="3b132-109">`FLATTEN` is one of the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators.</span></span> <span data-ttu-id="3b132-110">Todos os operadores definidos [!INCLUDE[esql](../../../../../../includes/esql-md.md)] são avaliados da esquerda para a direita.</span><span class="sxs-lookup"><span data-stu-id="3b132-110">All [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators are evaluated from left to right.</span></span> <span data-ttu-id="3b132-111">Consulte [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md) para obter informações de precedência para o [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operadores de conjunto.</span><span class="sxs-lookup"><span data-stu-id="3b132-111">See [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md) for precedence information for the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="285cc-112">Exemplo</span><span class="sxs-lookup"><span data-stu-id="285cc-112">Example</span></span>  
- <span data-ttu-id="285cc-113">A seguinte consulta SQL Entity usa o operador de `FLATTEN` para converter uma coleção das coleções em uma coleção aplainada.</span><span class="sxs-lookup"><span data-stu-id="285cc-113">The following Entity SQL query uses the `FLATTEN` operator to convert a collection of collections into a flattened collection.</span></span> <span data-ttu-id="285cc-114">Para compilar e executar essa consulta, siga estas etapas:</span><span class="sxs-lookup"><span data-stu-id="285cc-114">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="3b132-112">Exemplo</span><span class="sxs-lookup"><span data-stu-id="3b132-112">Example</span></span>  
+ <span data-ttu-id="3b132-113">A seguinte consulta SQL Entity usa o operador de `FLATTEN` para converter uma coleção das coleções em uma coleção aplainada.</span><span class="sxs-lookup"><span data-stu-id="3b132-113">The following Entity SQL query uses the `FLATTEN` operator to convert a collection of collections into a flattened collection.</span></span> <span data-ttu-id="3b132-114">Para compilar e executar essa consulta, siga estas etapas:</span><span class="sxs-lookup"><span data-stu-id="3b132-114">To compile and run this query, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="285cc-115">Siga o procedimento [como: executar uma consulta que retorna resultados de StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="285cc-115">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1.  <span data-ttu-id="3b132-115">Siga o procedimento [como: executar uma consulta que retorna resultados de StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="3b132-115">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  <span data-ttu-id="285cc-116">Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:</span><span class="sxs-lookup"><span data-stu-id="285cc-116">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2.  <span data-ttu-id="3b132-116">Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:</span><span class="sxs-lookup"><span data-stu-id="3b132-116">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#FLATTEN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#flatten)]  
   
-## <a name="see-also"></a><span data-ttu-id="285cc-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="285cc-117">See Also</span></span>  
- [<span data-ttu-id="285cc-118">Referência de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="285cc-118">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="3b132-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3b132-117">See Also</span></span>  
+ [<span data-ttu-id="3b132-118">Referência de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="3b132-118">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

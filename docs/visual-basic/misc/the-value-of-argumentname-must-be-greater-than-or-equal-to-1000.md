@@ -9,22 +9,22 @@ ms.assetid: 81aed143-1abb-41c2-9922-8e83711100e3
 caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 600b82b55b76765e7abcdfd685b6115cd0a8c952
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 89e3c9a7803485df65c549ee8e2b525d690c2672
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="the-value-of-ltargumentnamegt-must-be-greater-than-or-equal-to-1000"></a><span data-ttu-id="25518-102">O valor de &lt;argumentname&gt; deve ser maior que ou igual a 1000</span><span class="sxs-lookup"><span data-stu-id="25518-102">The value of &lt;argumentname&gt; must be greater than or equal to 1000</span></span>
-<span data-ttu-id="25518-103">O valor de <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> propriedade deve ser maior ou igual a 1000.</span><span class="sxs-lookup"><span data-stu-id="25518-103">The value of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> property must be greater than or equal to 1000.</span></span>  
+# <a name="the-value-of-ltargumentnamegt-must-be-greater-than-or-equal-to-1000"></a><span data-ttu-id="c1004-102">O valor de &lt;argumentname&gt; deve ser maior que ou igual a 1000</span><span class="sxs-lookup"><span data-stu-id="c1004-102">The value of &lt;argumentname&gt; must be greater than or equal to 1000</span></span>
+<span data-ttu-id="c1004-103">O valor de <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> propriedade deve ser maior ou igual a 1000.</span><span class="sxs-lookup"><span data-stu-id="c1004-103">The value of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> property must be greater than or equal to 1000.</span></span>  
   
- <span data-ttu-id="25518-104">O <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> propriedade especifica o número máximo de bytes permitidos em um arquivo de log antes que um novo arquivo de log é criado.</span><span class="sxs-lookup"><span data-stu-id="25518-104">The <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> property specifies the maximum number of bytes allowed in a log file before a new log file is created.</span></span>  
+ <span data-ttu-id="c1004-104">O <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> propriedade especifica o número máximo de bytes permitidos em um arquivo de log antes que um novo arquivo de log é criado.</span><span class="sxs-lookup"><span data-stu-id="c1004-104">The <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> property specifies the maximum number of bytes allowed in a log file before a new log file is created.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="25518-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="25518-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="c1004-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="c1004-105">To correct this error</span></span>  
   
--   <span data-ttu-id="25518-106">Definir o <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> propriedade para um número maior que ou igual a 1000.</span><span class="sxs-lookup"><span data-stu-id="25518-106">Set the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> property to a number greater than or equal to 1000.</span></span>  
+-   <span data-ttu-id="c1004-106">Definir o <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> propriedade para um número maior que ou igual a 1000.</span><span class="sxs-lookup"><span data-stu-id="c1004-106">Set the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> property to a number greater than or equal to 1000.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="25518-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="25518-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c1004-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c1004-107">See Also</span></span>  
  <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A>  
- [<span data-ttu-id="25518-108">Objeto My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="25518-108">My.Application.Log Object</span></span>](../../visual-basic/language-reference/objects/my-application-log-object.md)  
- [<span data-ttu-id="25518-109">Objeto My.Log</span><span class="sxs-lookup"><span data-stu-id="25518-109">My.Log Object</span></span>](../../visual-basic/language-reference/objects/my-log-object.md)
+ [<span data-ttu-id="c1004-108">My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="c1004-108">My.Application.Log</span></span>](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
+ [<span data-ttu-id="c1004-109">Info. DirectoryPath</span><span class="sxs-lookup"><span data-stu-id="c1004-109">My.Application.Info.DirectoryPath</span></span>](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)

@@ -13,16 +13,17 @@ caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 68d21502b9033b4102c22fb4e0ea10a031e2e7cb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d6afee9ea1528d4219d32d32fff670ddbfb3033c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-detect-network-availability-and-address-changes"></a><span data-ttu-id="e3bde-102">Como detectar a disponibilidade de rede e alterações de endereço</span><span class="sxs-lookup"><span data-stu-id="e3bde-102">How to: Detect Network Availability and Address Changes</span></span>
-<span data-ttu-id="e3bde-103">Este exemplo mostra como detectar alterações no endereço de rede de uma interface.</span><span class="sxs-lookup"><span data-stu-id="e3bde-103">This sample shows how to detect changes in the network address of an interface.</span></span>  
+# <a name="how-to-detect-network-availability-and-address-changes"></a><span data-ttu-id="64b56-102">Como detectar a disponibilidade de rede e alterações de endereço</span><span class="sxs-lookup"><span data-stu-id="64b56-102">How to: Detect Network Availability and Address Changes</span></span>
+<span data-ttu-id="64b56-103">Este exemplo mostra como detectar alterações no endereço de rede de uma interface.</span><span class="sxs-lookup"><span data-stu-id="64b56-103">This sample shows how to detect changes in the network address of an interface.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e3bde-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="e3bde-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="64b56-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="64b56-104">Example</span></span>  
   
 ```  
 using System;  
@@ -53,7 +54,7 @@ namespace Examples.Net.AddressChanges
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="e3bde-105">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="e3bde-105">Compiling the Code</span></span>  
- <span data-ttu-id="e3bde-106">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="e3bde-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="64b56-105">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="64b56-105">Compiling the Code</span></span>  
+ <span data-ttu-id="64b56-106">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="64b56-106">This example requires:</span></span>  
   
--   <span data-ttu-id="e3bde-107">Referências ao namespace **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="e3bde-107">References to the **System.Net** namespace.</span></span>
+-   <span data-ttu-id="64b56-107">Referências ao namespace **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="64b56-107">References to the **System.Net** namespace.</span></span>

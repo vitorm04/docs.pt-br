@@ -8,26 +8,26 @@ ms.assetid: 3dd78d9f-890e-4409-bebb-048fdf34711b
 caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c6c0b29660d222c4499a90ac6a5095f509cde6e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f2052fd81fa5856914a676aa6985eeb51c892788
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="a-log-has-already-been-created-with-this-name-on-this-machine"></a><span data-ttu-id="1c8c7-102">Um log já foi criado com este nome nesta máquina</span><span class="sxs-lookup"><span data-stu-id="1c8c7-102">A log has already been created with this name on this machine</span></span>
-<span data-ttu-id="1c8c7-103">Foi feita uma tentativa para criar um log com um nome que já está em uso.</span><span class="sxs-lookup"><span data-stu-id="1c8c7-103">An attempt has been made to create a log with a name that is already in use.</span></span>  
+# <a name="a-log-has-already-been-created-with-this-name-on-this-machine"></a><span data-ttu-id="422a7-102">Um log já foi criado com este nome nesta máquina</span><span class="sxs-lookup"><span data-stu-id="422a7-102">A log has already been created with this name on this machine</span></span>
+<span data-ttu-id="422a7-103">Foi feita uma tentativa para criar um log com um nome que já está em uso.</span><span class="sxs-lookup"><span data-stu-id="422a7-103">An attempt has been made to create a log with a name that is already in use.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="1c8c7-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="1c8c7-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="422a7-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="422a7-104">To correct this error</span></span>  
   
--   <span data-ttu-id="1c8c7-105">Remova o log conflitante.</span><span class="sxs-lookup"><span data-stu-id="1c8c7-105">Remove the conflicting log.</span></span>  
+-   <span data-ttu-id="422a7-105">Remova o log conflitante.</span><span class="sxs-lookup"><span data-stu-id="422a7-105">Remove the conflicting log.</span></span>  
   
--   <span data-ttu-id="1c8c7-106">Use um nome diferente para o log.</span><span class="sxs-lookup"><span data-stu-id="1c8c7-106">Use a different name for the log.</span></span>  
+-   <span data-ttu-id="422a7-106">Use um nome diferente para o log.</span><span class="sxs-lookup"><span data-stu-id="422a7-106">Use a different name for the log.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1c8c7-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1c8c7-107">See Also</span></span>  
- [<span data-ttu-id="1c8c7-108">Objeto My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="1c8c7-108">My.Application.Log Object</span></span>](../../visual-basic/language-reference/objects/my-application-log-object.md)  
- [<span data-ttu-id="1c8c7-109">Como gravar mensagens de log</span><span class="sxs-lookup"><span data-stu-id="1c8c7-109">How to: Write Log Messages</span></span>](../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
- [<span data-ttu-id="1c8c7-110">Como registrar mensagens em log quando o aplicativo é iniciado ou encerrado</span><span class="sxs-lookup"><span data-stu-id="1c8c7-110">How to: Log Messages When the Application Starts or Shuts Down</span></span>](../../visual-basic/developing-apps/programming/log-info/how-to-log-messages-when-the-application-starts-or-shuts-down.md)  
- [<span data-ttu-id="1c8c7-111">Como gravar em um log de eventos do aplicativo</span><span class="sxs-lookup"><span data-stu-id="1c8c7-111">How to: Write to an Application Event Log</span></span>](../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)  
- [<span data-ttu-id="1c8c7-112">Trabalhando com logs de aplicativo</span><span class="sxs-lookup"><span data-stu-id="1c8c7-112">Working with Application Logs</span></span>](../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
- [<span data-ttu-id="1c8c7-113">Instruções passo a passo: determinando onde My.Application.Log grava informações</span><span class="sxs-lookup"><span data-stu-id="1c8c7-113">Walkthrough: Determining Where My.Application.Log Writes Information</span></span>](../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
- [<span data-ttu-id="1c8c7-114">Instruções passo a passo: alterando onde My.Application.Log grava informações</span><span class="sxs-lookup"><span data-stu-id="1c8c7-114">Walkthrough: Changing Where My.Application.Log Writes Information</span></span>](../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+## <a name="see-also"></a><span data-ttu-id="422a7-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="422a7-107">See Also</span></span>  
+ [<span data-ttu-id="422a7-108">My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="422a7-108">My.Application.Log</span></span>](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
+ [<span data-ttu-id="422a7-109">Como gravar mensagens de log</span><span class="sxs-lookup"><span data-stu-id="422a7-109">How to: Write Log Messages</span></span>](../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
+ [<span data-ttu-id="422a7-110">Como registrar mensagens em log quando o aplicativo é iniciado ou encerrado</span><span class="sxs-lookup"><span data-stu-id="422a7-110">How to: Log Messages When the Application Starts or Shuts Down</span></span>](../../visual-basic/developing-apps/programming/log-info/how-to-log-messages-when-the-application-starts-or-shuts-down.md)  
+ [<span data-ttu-id="422a7-111">Como gravar em um log de eventos do aplicativo</span><span class="sxs-lookup"><span data-stu-id="422a7-111">How to: Write to an Application Event Log</span></span>](../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)  
+ [<span data-ttu-id="422a7-112">Trabalhando com logs de aplicativo</span><span class="sxs-lookup"><span data-stu-id="422a7-112">Working with Application Logs</span></span>](../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
+ [<span data-ttu-id="422a7-113">Instruções passo a passo: determinando onde My.Application.Log grava informações</span><span class="sxs-lookup"><span data-stu-id="422a7-113">Walkthrough: Determining Where My.Application.Log Writes Information</span></span>](../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
+ [<span data-ttu-id="422a7-114">Instruções passo a passo: alterando onde My.Application.Log grava informações</span><span class="sxs-lookup"><span data-stu-id="422a7-114">Walkthrough: Changing Where My.Application.Log Writes Information</span></span>](../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

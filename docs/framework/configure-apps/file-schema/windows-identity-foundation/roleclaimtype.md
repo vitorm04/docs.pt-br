@@ -13,23 +13,24 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 8a5de30d60478b6601781ac34fd481a6167462e0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: eb46585561ca8a2ab7c69f09d073d38bc1b60646
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltroleclaimtypegt"></a><span data-ttu-id="6a62d-102">&lt;roleClaimType&gt;</span><span class="sxs-lookup"><span data-stu-id="6a62d-102">&lt;roleClaimType&gt;</span></span>
-<span data-ttu-id="6a62d-103">Especifica o tipo de declaração que define as declarações de tipo de função na coleção de <xref:System.Security.Claims.ClaimsIdentity> objetos retornados pelo <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> método do manipulador de token.</span><span class="sxs-lookup"><span data-stu-id="6a62d-103">Specifies the claim type that defines the role type claims in the collection of <xref:System.Security.Claims.ClaimsIdentity> objects returned by the <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> method of the token handler.</span></span>  
+# <a name="ltroleclaimtypegt"></a><span data-ttu-id="fdaea-102">&lt;roleClaimType&gt;</span><span class="sxs-lookup"><span data-stu-id="fdaea-102">&lt;roleClaimType&gt;</span></span>
+<span data-ttu-id="fdaea-103">Especifica o tipo de declaração que define as declarações de tipo de função na coleção de <xref:System.Security.Claims.ClaimsIdentity> objetos retornados pelo <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> método do manipulador de token.</span><span class="sxs-lookup"><span data-stu-id="fdaea-103">Specifies the claim type that defines the role type claims in the collection of <xref:System.Security.Claims.ClaimsIdentity> objects returned by the <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> method of the token handler.</span></span>  
   
- <span data-ttu-id="6a62d-104">\<System. IdentityModel ></span><span class="sxs-lookup"><span data-stu-id="6a62d-104">\<system.identityModel></span></span>  
-<span data-ttu-id="6a62d-105">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="6a62d-105">\<identityConfiguration></span></span>  
-<span data-ttu-id="6a62d-106">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="6a62d-106">\<securityTokenHandlers></span></span>  
-<span data-ttu-id="6a62d-107">\<add></span><span class="sxs-lookup"><span data-stu-id="6a62d-107">\<add></span></span>  
-<span data-ttu-id="6a62d-108">\<samlSecurityTokenRequirement ></span><span class="sxs-lookup"><span data-stu-id="6a62d-108">\<samlSecurityTokenRequirement></span></span>  
-<span data-ttu-id="6a62d-109">\<roleClaimType ></span><span class="sxs-lookup"><span data-stu-id="6a62d-109">\<roleClaimType></span></span>  
+ <span data-ttu-id="fdaea-104">\<System. IdentityModel ></span><span class="sxs-lookup"><span data-stu-id="fdaea-104">\<system.identityModel></span></span>  
+<span data-ttu-id="fdaea-105">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="fdaea-105">\<identityConfiguration></span></span>  
+<span data-ttu-id="fdaea-106">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="fdaea-106">\<securityTokenHandlers></span></span>  
+<span data-ttu-id="fdaea-107">\<add></span><span class="sxs-lookup"><span data-stu-id="fdaea-107">\<add></span></span>  
+<span data-ttu-id="fdaea-108">\<samlSecurityTokenRequirement ></span><span class="sxs-lookup"><span data-stu-id="fdaea-108">\<samlSecurityTokenRequirement></span></span>  
+<span data-ttu-id="fdaea-109">\<roleClaimType ></span><span class="sxs-lookup"><span data-stu-id="fdaea-109">\<roleClaimType></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6a62d-110">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="6a62d-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fdaea-110">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="fdaea-110">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -46,28 +47,28 @@ ms.lasthandoff: 10/18/2017
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="6a62d-111">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="6a62d-111">Attributes and Elements</span></span>  
- <span data-ttu-id="6a62d-112">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="6a62d-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="fdaea-111">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="fdaea-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="fdaea-112">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="fdaea-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="6a62d-113">Atributos</span><span class="sxs-lookup"><span data-stu-id="6a62d-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="fdaea-113">Atributos</span><span class="sxs-lookup"><span data-stu-id="fdaea-113">Attributes</span></span>  
   
-|<span data-ttu-id="6a62d-114">Atributo</span><span class="sxs-lookup"><span data-stu-id="6a62d-114">Attribute</span></span>|<span data-ttu-id="6a62d-115">Descrição</span><span class="sxs-lookup"><span data-stu-id="6a62d-115">Description</span></span>|  
+|<span data-ttu-id="fdaea-114">Atributo</span><span class="sxs-lookup"><span data-stu-id="fdaea-114">Attribute</span></span>|<span data-ttu-id="fdaea-115">Descrição</span><span class="sxs-lookup"><span data-stu-id="fdaea-115">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="6a62d-116">Valor </span><span class="sxs-lookup"><span data-stu-id="6a62d-116">value</span></span>|<span data-ttu-id="6a62d-117">Uma cadeia de caracteres que especifica o URI que representa o tipo de declaração da declaração a ser usado para o tipo de declaração de função.</span><span class="sxs-lookup"><span data-stu-id="6a62d-117">A string that specifies the URI that represents the claim type of the claim to use for the role claim type.</span></span>|  
+|<span data-ttu-id="fdaea-116">Valor </span><span class="sxs-lookup"><span data-stu-id="fdaea-116">value</span></span>|<span data-ttu-id="fdaea-117">Uma cadeia de caracteres que especifica o URI que representa o tipo de declaração da declaração a ser usado para o tipo de declaração de função.</span><span class="sxs-lookup"><span data-stu-id="fdaea-117">A string that specifies the URI that represents the claim type of the claim to use for the role claim type.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="6a62d-118">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="6a62d-118">Child Elements</span></span>  
- <span data-ttu-id="6a62d-119">Nenhum</span><span class="sxs-lookup"><span data-stu-id="6a62d-119">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="fdaea-118">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="fdaea-118">Child Elements</span></span>  
+ <span data-ttu-id="fdaea-119">Nenhum</span><span class="sxs-lookup"><span data-stu-id="fdaea-119">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="6a62d-120">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="6a62d-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="fdaea-120">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="fdaea-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="6a62d-121">Elemento</span><span class="sxs-lookup"><span data-stu-id="6a62d-121">Element</span></span>|<span data-ttu-id="6a62d-122">Descrição</span><span class="sxs-lookup"><span data-stu-id="6a62d-122">Description</span></span>|  
+|<span data-ttu-id="fdaea-121">Elemento</span><span class="sxs-lookup"><span data-stu-id="fdaea-121">Element</span></span>|<span data-ttu-id="fdaea-122">Descrição</span><span class="sxs-lookup"><span data-stu-id="fdaea-122">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="6a62d-123">\<samlSecurityTokenRequirement ></span><span class="sxs-lookup"><span data-stu-id="6a62d-123">\<samlSecurityTokenRequirement></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|<span data-ttu-id="6a62d-124">Fornece configuração para o <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> classe, o <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> classe ou uma classe derivada de qualquer uma dessas classes.</span><span class="sxs-lookup"><span data-stu-id="6a62d-124">Provides configuration for the <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> class, the <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> class, or a derived class of either of these classes.</span></span>|  
+|[<span data-ttu-id="fdaea-123">\<samlSecurityTokenRequirement ></span><span class="sxs-lookup"><span data-stu-id="fdaea-123">\<samlSecurityTokenRequirement></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|<span data-ttu-id="fdaea-124">Fornece configuração para o <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> classe, o <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> classe ou uma classe derivada de qualquer uma dessas classes.</span><span class="sxs-lookup"><span data-stu-id="fdaea-124">Provides configuration for the <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> class, the <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> class, or a derived class of either of these classes.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6a62d-125">Comentários</span><span class="sxs-lookup"><span data-stu-id="6a62d-125">Remarks</span></span>  
- <span data-ttu-id="6a62d-126">O `<roleClaimType>` elemento define o <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A> propriedade quando um <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> é inicializar o objeto de configuração.</span><span class="sxs-lookup"><span data-stu-id="6a62d-126">The `<roleClaimType>` element sets the <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A> property when a <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> object is initialized from configuration.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fdaea-125">Comentários</span><span class="sxs-lookup"><span data-stu-id="fdaea-125">Remarks</span></span>  
+ <span data-ttu-id="fdaea-126">O `<roleClaimType>` elemento define o <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A> propriedade quando um <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> é inicializar o objeto de configuração.</span><span class="sxs-lookup"><span data-stu-id="fdaea-126">The `<roleClaimType>` element sets the <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A> property when a <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> object is initialized from configuration.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6a62d-127">Exemplo</span><span class="sxs-lookup"><span data-stu-id="6a62d-127">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="fdaea-127">Exemplo</span><span class="sxs-lookup"><span data-stu-id="fdaea-127">Example</span></span>  
   
 ```xml  
 <add type="System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel">  
@@ -77,5 +78,5 @@ ms.lasthandoff: 10/18/2017
 </add>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6a62d-128">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6a62d-128">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="fdaea-128">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fdaea-128">See Also</span></span>  
  <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A>
