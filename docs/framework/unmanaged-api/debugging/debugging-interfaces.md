@@ -17,11 +17,12 @@ caps.latest.revision: "32"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: de2469d15eef40b9ef283d67aeca429d9d96a7ef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8e625818238a1fd18ef3885d2699e0f532efa40e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-interfaces"></a>Depurando interfaces
 Esta seção descreve as interfaces não gerenciadas que lidam com a depuração de um programa que está sendo executado no CLR (Common Language Runtime).  
@@ -54,7 +55,7 @@ Esta seção descreve as interfaces não gerenciadas que lidam com a depuração
  [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
  Fornece métodos que permitem que os desenvolvedores depurem aplicativos no ambiente do CLR.  
   
- [ICorDebugAppDomain Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-interface.md)  
+ [Interface1 ICorDebugAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-interface.md)  
  Fornece métodos para depurar domínios de aplicativo.  
   
  [Interface1 ICorDebugAppDomain2](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-interface.md)  
@@ -66,13 +67,13 @@ Esta seção descreve as interfaces não gerenciadas que lidam com a depuração
  [Interface ICorDebugAppDomain4](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain4-interface.md)  
  Logicamente estende o [ICorDebugAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-interface.md) interface para obter um objeto gerenciado de um COM callable wrapper.  
   
- [ICorDebugAppDomainEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-interface.md)  
+ [Interface1 ICorDebugAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-interface.md)  
  Fornece um método que retorna um número especificado de valores `ICorDebugAppDomain` iniciando no próximo local na enumeração.  
   
- [ICorDebugArrayValue Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-interface.md)  
+ [Interface1 ICorDebugArrayValue](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-interface.md)  
  Uma subclasse de `ICorDebugHeapValue` que representa uma matriz unidimensional ou multidimensional.  
   
- [ICorDebugAssembly Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-interface.md)  
+ [Interface1 ICorDebugAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-interface.md)  
  Representa um assembly.  
   
  [Interface1 ICorDebugAssembly2](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly2-interface.md)  
@@ -81,34 +82,34 @@ Esta seção descreve as interfaces não gerenciadas que lidam com a depuração
  [Interface ICorDebugAssembly3](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-interface.md)  
  Logicamente estende o [ICorDebugAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-interface.md) interface para oferecer suporte para assemblies de contêiner e seus assemblies independentes. **Disponível em apenas .NET nativo.**  
   
- [ICorDebugAssemblyEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-interface.md)  
+ [Interface1 ICorDebugAssemblyEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-interface.md)  
  Implementa métodos `ICorDebugEnum` e enumera matrizes de `ICorDebugAssembly`.  
   
  [Interface ICorDebugBlockingObjectEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-interface.md)  
  Fornece um enumerador para obter uma lista de [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) estruturas.  
   
- [ICorDebugBoxValue Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-interface.md)  
+ [Interface1 ICorDebugBoxValue](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-interface.md)  
  Uma subclasse de `ICorDebugHeapValue` que representa um objeto de classe com valor boxed.  
   
- [ICorDebugBreakpoint Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-interface.md)  
+ [Interface1 ICorDebugBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-interface.md)  
  Representa um ponto de interrupção em uma função ou um ponto de inspeção em um valor.  
   
- [ICorDebugBreakpointEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpointenum-interface.md)  
+ [Interface1 ICorDebugBreakpointEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpointenum-interface.md)  
  Implementa métodos `ICorDebugEnum` e enumera matrizes de `ICorDebugBreakpoint`.  
   
- [ICorDebugChain Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md)  
+ [Interface1 ICorDebugChain](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md)  
  Representa um segmento de uma pilha de chamadas física ou lógica.  
   
- [ICorDebugChainEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugchainenum-interface.md)  
+ [Interface1 ICorDebugChainEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugchainenum-interface.md)  
  Implementa métodos `ICorDebugEnum` e enumera matrizes de `ICorDebugChain`.  
   
- [ICorDebugClass Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)  
+ [Interface1 ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)  
  Representa um tipo, que pode ser básico ou complexo (isto é, definido pelo usuário). Se o tipo for genérico, `ICorDebugClass` representará o tipo genérico sem instância.  
   
  [Interface1 ICorDebugClass2](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-interface.md)  
  Representa uma classe genérica ou uma classe com um parâmetro do método do tipo <xref:System.Type>. Essa interface estende `ICorDebugClass`.  
   
- [ICorDebugCode Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md)  
+ [Interface1 ICorDebugCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md)  
  Representa um segmento de código MSIL (Microsoft Intermediate Language) ou código nativo.  
   
  [Interface1 ICorDebugCode2](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-interface.md)  
@@ -120,16 +121,16 @@ Esta seção descreve as interfaces não gerenciadas que lidam com a depuração
  [Interface ICorDebugCode4](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md)  
  Fornece um método que permite que um depurador enumerar as variáveis locais e os argumentos em uma função.  
   
- [ICorDebugCodeEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugcodeenum-interface.md)  
+ [Interface1 ICorDebugCodeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugcodeenum-interface.md)  
  Implementa métodos `ICorDebugEnum` e enumera matrizes de `ICorDebugCode`.  
   
  [Interface ICorDebugComObjectValue](../../../../docs/framework/unmanaged-api/debugging/icordebugcomobjectvalue-interface.md)  
  Fornece métodos para recuperar objetos da interface armazenados em cache.  
   
- [ICorDebugContext Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugcontext-interface.md)  
+ [Interface1 ICorDebugContext](../../../../docs/framework/unmanaged-api/debugging/icordebugcontext-interface.md)  
  Representa um objeto de contexto. Essa interface ainda não foi implementada.  
   
- [ICorDebugController Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-interface.md)  
+ [Interface1 ICorDebugController](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-interface.md)  
  Representa um escopo, um <xref:System.Diagnostics.Process> ou um <xref:System.AppDomain>, em que o contexto de execução de código pode ser controlado.  
   
  [Interface ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)  
@@ -147,16 +148,16 @@ Esta seção descreve as interfaces não gerenciadas que lidam com a depuração
  [Interface ICorDebugEditAndContinueErrorInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugeditandcontinueerrorinfo-interface.md)  
  Obsoleto. Não use essa interface.  
   
- [ICorDebugEditAndContinueSnapshot Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugeditandcontinuesnapshot-interface.md)  
+ [Interface1 ICorDebugEditAndContinueSnapshot](../../../../docs/framework/unmanaged-api/debugging/icordebugeditandcontinuesnapshot-interface.md)  
  Obsoleto. Não use essa interface.  
   
- [ICorDebugEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)  
+ [Interface1 ICorDebugEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)  
  Serve como a interface da base abstrata para depurar enumeradores.  
   
- [ICorDebugErrorInfoEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugerrorinfoenum-interface.md)  
+ [Interface1 ICorDebugErrorInfoEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugerrorinfoenum-interface.md)  
  Obsoleto. Não use essa interface.  
   
- [ICorDebugEval Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-interface.md)  
+ [Interface1 ICorDebugEval](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-interface.md)  
  Fornece métodos para permitir que o depurador execute um código no contexto do código que está sendo depurado.  
   
  [Interface1 ICorDebugEval2](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-interface.md)  
@@ -171,13 +172,13 @@ Esta seção descreve as interfaces não gerenciadas que lidam com a depuração
  [Interface ICorDebugExceptionObjectValue](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectvalue-interface.md)  
  Estende o [ICorDebugObjectValue](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-interface.md) interface para fornecer informações de rastreamento de pilha de um objeto de exceção gerenciada.  
   
- [ICorDebugFrame Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-interface.md)  
+ [Interface1 ICorDebugFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-interface.md)  
  Representa um quadro na pilha atual.  
   
- [ICorDebugFrameEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugframeenum-interface.md)  
+ [Interface1 ICorDebugFrameEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugframeenum-interface.md)  
  Implementa métodos `ICorDebugEnum` e enumera matrizes de `ICorDebugFrame`.  
   
- [ICorDebugFunction Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-interface1.md)  
+ [Interface1 ICorDebugFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-interface1.md)  
  Representa uma função ou um método gerenciado.  
   
  [Interface1 ICorDebugFunction2](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-interface.md)  
@@ -186,19 +187,19 @@ Esta seção descreve as interfaces não gerenciadas que lidam com a depuração
  [Interface ICorDebugFunction3](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-interface.md)  
  Logicamente estende o [ICorDebugFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-interface1.md) interface para fornecer acesso ao código de uma solicitação ReJIT.  
   
- [ICorDebugFunctionBreakpoint Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-interface.md)  
+ [Interface1 ICorDebugFunctionBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-interface.md)  
  Estende `ICorDebugBreakpoint` para fornecer suporte a pontos de interrupção dentro de funções.  
   
  [Interface ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)  
  Fornece um enumerador para objetos que serão coletados do lixo.  
   
- [ICorDebugGenericValue Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-interface.md)  
+ [Interface1 ICorDebugGenericValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-interface.md)  
  Uma subclasse de `ICorDebugValue` que se aplica a todos os valores. Essa interface fornece métodos Get e Set para o valor.  
   
  [Interface ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)  
  Fornece um enumerador para um objeto que mapeia GUIDs e seus objetos `ICorDebugType` correspondentes.  
   
- [ICorDebugHandleValue Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-interface.md)  
+ [Interface1 ICorDebugHandleValue](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-interface.md)  
  Uma subclasse de `ICorDebugReferenceValue` que representa um valor de referência para o qual o depurador criou um identificador para coleta de lixo.  
   
  [Interface ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)  
@@ -207,7 +208,7 @@ Esta seção descreve as interfaces não gerenciadas que lidam com a depuração
  [Interface ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)  
  Fornece um enumerador para regiões de memória do heap gerenciado.  
   
- [ICorDebugHeapValue Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-interface.md)  
+ [Interface1 ICorDebugHeapValue](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-interface.md)  
  Uma subclasse de `ICorDebugValue` que representa um objeto coletado pelo coletor de lixo do CLR.  
   
  [Interface1 ICorDebugHeapValue2](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-interface1.md)  
@@ -222,7 +223,7 @@ Esta seção descreve as interfaces não gerenciadas que lidam com a depuração
  [Interface ICorDebugILCode2](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)  
  Logicamente estende o [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) deslocamentos de interface forneça métodos que retornam o token de assinatura de variável local de uma função, e que mapeiam instrumentada IL (intermediate language) do criador de perfil para o método original IL deslocamentos.  
   
- [ICorDebugILFrame Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-interface.md)  
+ [Interface1 ICorDebugILFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-interface.md)  
  Representa um registro de ativação do código MSIL.  
   
  [Interface1 ICorDebugILFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-interface.md)  
@@ -237,7 +238,7 @@ Esta seção descreve as interfaces não gerenciadas que lidam com a depuração
  [Interface ICorDebugInstanceFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)  
  Representa as informações de símbolo de depuração para um campo de instância. **Disponível em apenas .NET nativo.**  
   
- [ICorDebugInternalFrame Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-interface.md)  
+ [Interface1 ICorDebugInternalFrame](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-interface.md)  
  Identifica os tipos de quadro para o depurador.  
   
  [Interface ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)  
@@ -267,7 +268,7 @@ Esta seção descreve as interfaces não gerenciadas que lidam com a depuração
  [Interface ICorDebugMetaDataLocator](../../../../docs/framework/unmanaged-api/debugging/icordebugmetadatalocator-interface.md)  
  Fornece informações de metadados ao depurador.  
   
- [ICorDebugModule Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-interface.md)  
+ [Interface1 ICorDebugModule](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-interface.md)  
  Representa um módulo de CLR, que é um executável ou uma biblioteca de vínculo dinâmico (DLL).  
   
  [Interface1 ICorDebugModule2](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-interface.md)  
@@ -276,34 +277,34 @@ Esta seção descreve as interfaces não gerenciadas que lidam com a depuração
  [Interface ICorDebugModule3](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-interface.md)  
  Cria um leitor de símbolos para um módulo dinâmico.  
   
- [ICorDebugModuleBreakpoint Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-interface.md)  
+ [Interface1 ICorDebugModuleBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-interface.md)  
  Estende `ICorDebugBreakpoint` para fornecer acesso aos módulos específicos.  
   
  [Interface ICorDebugModuleDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-interface.md)  
  Estende o [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) interface para oferecer suporte a eventos de nível de módulo. **Disponível em apenas .NET nativo.**  
   
- [ICorDebugModuleEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduleenum-interface.md)  
+ [Interface1 ICorDebugModuleEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduleenum-interface.md)  
  Implementa métodos `ICorDebugEnum` e enumera matrizes de `ICorDebugModule`.  
   
  [Interface ICorDebugMutableDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)  
  Estende o [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) interface para oferecer suporte a destinos de dados mutável.  
   
- [ICorDebugNativeFrame Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-interface.md)  
+ [Interface1 ICorDebugNativeFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-interface.md)  
  Uma implementação especializada de `ICorDebugFrame` usada para quadros nativos.  
   
  [Interface ICorDebugNativeFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)  
  Fornece métodos que testam relações de quadros pai e filho.  
   
- [ICorDebugObjectEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectenum-interface.md)  
+ [Interface1 ICorDebugObjectEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectenum-interface.md)  
  Implementa métodos `ICorDebugEnum` e enumera matrizes de objetos pelos endereços virtuais relacionados (RVAs).  
   
- [ICorDebugObjectValue Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-interface.md)  
+ [Interface1 ICorDebugObjectValue](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-interface.md)  
  Uma subclasse de `ICorDebugValue` que representa um valor que contém um objeto.  
   
  [Interface1 ICorDebugObjectValue2](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue2-interface.md)  
  Estende `ICorDebugObjectValue` para oferecer suporte a herança e substituição.  
   
- [ICorDebugProcess Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md)  
+ [Interface1 ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md)  
  Representa um processo que está executando o código gerenciado.  
   
  [Interface1 ICorDebugProcess2](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-interface1.md)  
@@ -324,10 +325,10 @@ Esta seção descreve as interfaces não gerenciadas que lidam com a depuração
  [Interface ICorDebugProcess8](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess8-interface.md)  
  Logicamente estende o [ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md) interface para habilitar ou desabilitar certos tipos de [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) retornos de chamada de exceção.  
   
- [ICorDebugProcessEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugprocessenum-interface.md)  
+ [Interface1 ICorDebugProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugprocessenum-interface.md)  
  Implementa métodos `ICorDebugEnum` e enumera matrizes de `ICorDebugProcess`.  
   
- [ICorDebugReferenceValue Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-interface.md)  
+ [Interface1 ICorDebugReferenceValue](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-interface.md)  
  Uma subclasse de `ICorDebugValue` que oferece suporte a tipos de referência.  
   
  [Interface ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)  
@@ -351,16 +352,16 @@ Esta seção descreve as interfaces não gerenciadas que lidam com a depuração
  [Interface ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)  
  Representa as informações de símbolo de depuração para um campo estático. **Disponível em apenas .NET nativo.**  
   
- [ICorDebugStepper Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-interface.md)  
+ [Interface1 ICorDebugStepper](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-interface.md)  
  Representa uma etapa na execução do código que é realizada por um depurador, serve como um identificador entre a emissão e a conclusão de um comando e fornece uma maneira de cancelar uma etapa.  
   
  [Interface1 ICorDebugStepper2](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper2-interface1.md)  
  Fornece suporte para a depuração JMC (Apenas Meu Código).  
   
- [ICorDebugStepperEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugstepperenum-interface.md)  
+ [Interface1 ICorDebugStepperEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugstepperenum-interface.md)  
  Implementa métodos `ICorDebugEnum` e enumera matrizes de `ICorDebugStepper`.  
   
- [ICorDebugStringValue Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-interface.md)  
+ [Interface1 ICorDebugStringValue](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-interface.md)  
  Uma subclasse de `ICorDebugHeapValue` que se aplica a valores de cadeia de caracteres.  
   
  [Interface ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)  
@@ -369,7 +370,7 @@ Esta seção descreve as interfaces não gerenciadas que lidam com a depuração
  [Interface ICorDebugSymbolProvider2](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)  
  Logicamente estende o [ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md) interface para recuperar informações de símbolo de depuração adicionais. **Disponível em apenas .NET nativo.**  
   
- [ICorDebugThread Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-interface.md)  
+ [Interface1 ICorDebugThread](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-interface.md)  
  Representa um thread em um processo. O tempo de vida de uma instância `ICorDebugThread` é igual ao tempo de vida do thread que ela representa.  
   
  [Interface1 ICorDebugThread2](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interface.md)  
@@ -381,16 +382,16 @@ Esta seção descreve as interfaces não gerenciadas que lidam com a depuração
  [Interface ICorDebugThread4](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)  
  Fornece informações de bloqueio de thread.  
   
- [ICorDebugThreadEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugthreadenum-interface1.md)  
+ [Interface1 ICorDebugThreadEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugthreadenum-interface1.md)  
  Implementa métodos `ICorDebugEnum` e enumera matrizes de `ICorDebugThread`.  
   
- [ICorDebugType Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md)  
+ [Interface1 ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md)  
  Representa um tipo, que pode ser básico ou complexo (isto é, definido pelo usuário). Se o tipo for genérico, `ICorDebugType` representará o tipo genérico instanciado.  
   
  [Interface ICorDebugType2](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)  
  Estende o [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) interface para recuperar o identificador de tipo de um tipo base ou um tipo complexo (definido pelo usuário).  
   
- [ICorDebugTypeEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugtypeenum-interface.md)  
+ [Interface1 ICorDebugTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugtypeenum-interface.md)  
  Implementa métodos `ICorDebugEnum` e enumera matrizes de `ICorDebugType`.  
   
  [Interface ICorDebugUnmanagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-interface.md)  
@@ -442,7 +443,7 @@ Esta seção descreve as interfaces não gerenciadas que lidam com a depuração
  Fornece métodos que percorrem uma coleção de objetos `ICorPublishProcess`.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Coclasses de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
+ [Depurando coclasses](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
   
  [Depurando funções estáticas globais](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)  
   

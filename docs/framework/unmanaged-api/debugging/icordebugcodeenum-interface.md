@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5d61b350e2c50f04ce8a471d0accbcebf3a5be6b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 91d1405a226d5f00609dbc2d322dd652bfd217c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugcodeenum-interface1"></a>ICorDebugCodeEnum Interface1
 Implementa métodos "ICorDebugEnum" e enumera matrizes "ICorDebugCode".  
@@ -32,7 +33,7 @@ Implementa métodos "ICorDebugEnum" e enumera matrizes "ICorDebugCode".
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Próximo método](../../../../docs/framework/unmanaged-api/debugging/icordebugcodeenum-next-method.md)|Obtém o número especificado de `ICorDebugCode` instâncias de enumeração, começando na posição atual.|  
+|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugcodeenum-next-method.md)|Obtém o número especificado de `ICorDebugCode` instâncias de enumeração, começando na posição atual.|  
   
 ## <a name="remarks"></a>Comentários  
   
@@ -49,4 +50,4 @@ Implementa métodos "ICorDebugEnum" e enumera matrizes "ICorDebugCode".
  **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Interfaces de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

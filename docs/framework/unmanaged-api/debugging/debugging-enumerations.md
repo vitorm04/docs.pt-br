@@ -17,11 +17,12 @@ caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c24882f2bd9819043bbc786bd2e5f35129a92744
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a5e294275da45575a3aed457fb2428c4768e78d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-enumerations"></a>Declarando enumerações
 Esta seção descreve as enumerações não gerenciadas que a API de depuração utiliza.  
@@ -148,9 +149,9 @@ Esta seção descreve as enumerações não gerenciadas que a API de depuração
  Fornece valores que especificam se as atualizações na memória para metadados estão visíveis para um depurador.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Coclasses de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
+ [Depurando coclasses](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
   
- [Interfaces de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
   
  [Depurando funções estáticas globais](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)  
   
