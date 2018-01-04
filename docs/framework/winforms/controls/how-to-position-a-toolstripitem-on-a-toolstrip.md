@@ -16,26 +16,27 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0740bb4f4ce5a5e801f14ceb50c68d57b9986969
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9512116356720d40c7d3835713a41964d8020597
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-position-a-toolstripitem-on-a-toolstrip"></a><span data-ttu-id="9e70f-102">Como posicionar um ToolStripItem em um ToolStrip</span><span class="sxs-lookup"><span data-stu-id="9e70f-102">How to: Position a ToolStripItem on a ToolStrip</span></span>
-<span data-ttu-id="9e70f-103">Você pode mover ou adicionar uma <xref:System.Windows.Forms.ToolStripItem> à esquerda ou à direita de um <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="9e70f-103">You can move or add a <xref:System.Windows.Forms.ToolStripItem> to the left or right side of a <xref:System.Windows.Forms.ToolStrip>.</span></span>  
+# <a name="how-to-position-a-toolstripitem-on-a-toolstrip"></a><span data-ttu-id="cd81d-102">Como posicionar um ToolStripItem em um ToolStrip</span><span class="sxs-lookup"><span data-stu-id="cd81d-102">How to: Position a ToolStripItem on a ToolStrip</span></span>
+<span data-ttu-id="cd81d-103">Você pode mover ou adicionar uma <xref:System.Windows.Forms.ToolStripItem> à esquerda ou à direita de um <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="cd81d-103">You can move or add a <xref:System.Windows.Forms.ToolStripItem> to the left or right side of a <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
-### <a name="to-move-or-add-a-toolstripitem-to-the-left-side-of-a-toolstrip"></a><span data-ttu-id="9e70f-104">Para mover ou adicionar um ToolStripItem para o lado esquerdo de um ToolStrip</span><span class="sxs-lookup"><span data-stu-id="9e70f-104">To move or add a ToolStripItem to the left side of a ToolStrip</span></span>  
+### <a name="to-move-or-add-a-toolstripitem-to-the-left-side-of-a-toolstrip"></a><span data-ttu-id="cd81d-104">Para mover ou adicionar um ToolStripItem para o lado esquerdo de um ToolStrip</span><span class="sxs-lookup"><span data-stu-id="cd81d-104">To move or add a ToolStripItem to the left side of a ToolStrip</span></span>  
   
-1.  <span data-ttu-id="9e70f-105">Definir o <xref:System.Windows.Forms.ToolStripItemAlignment> propriedade o <xref:System.Windows.Forms.ToolStripItem> para <xref:System.Windows.Forms.ToolStripItemAlignment.Left>.</span><span class="sxs-lookup"><span data-stu-id="9e70f-105">Set the <xref:System.Windows.Forms.ToolStripItemAlignment> property of the <xref:System.Windows.Forms.ToolStripItem> to <xref:System.Windows.Forms.ToolStripItemAlignment.Left>.</span></span>  
+1.  <span data-ttu-id="cd81d-105">Definir o <xref:System.Windows.Forms.ToolStripItemAlignment> propriedade o <xref:System.Windows.Forms.ToolStripItem> para <xref:System.Windows.Forms.ToolStripItemAlignment.Left>.</span><span class="sxs-lookup"><span data-stu-id="cd81d-105">Set the <xref:System.Windows.Forms.ToolStripItemAlignment> property of the <xref:System.Windows.Forms.ToolStripItem> to <xref:System.Windows.Forms.ToolStripItemAlignment.Left>.</span></span>  
   
-### <a name="to-move-or-add-a-toolstripitem-to-the-right-side-of-a-toolstrip"></a><span data-ttu-id="9e70f-106">Para mover ou adicionar um ToolStripItem à direita de um ToolStrip</span><span class="sxs-lookup"><span data-stu-id="9e70f-106">To move or add a ToolStripItem to the right side of a ToolStrip</span></span>  
+### <a name="to-move-or-add-a-toolstripitem-to-the-right-side-of-a-toolstrip"></a><span data-ttu-id="cd81d-106">Para mover ou adicionar um ToolStripItem à direita de um ToolStrip</span><span class="sxs-lookup"><span data-stu-id="cd81d-106">To move or add a ToolStripItem to the right side of a ToolStrip</span></span>  
   
-1.  <span data-ttu-id="9e70f-107">Definir o <xref:System.Windows.Forms.ToolStripItemAlignment> propriedade o <xref:System.Windows.Forms.ToolStripItem> para <xref:System.Windows.Forms.ToolStripItemAlignment.Right>.</span><span class="sxs-lookup"><span data-stu-id="9e70f-107">Set the <xref:System.Windows.Forms.ToolStripItemAlignment> property of the <xref:System.Windows.Forms.ToolStripItem> to <xref:System.Windows.Forms.ToolStripItemAlignment.Right>.</span></span>  
+1.  <span data-ttu-id="cd81d-107">Definir o <xref:System.Windows.Forms.ToolStripItemAlignment> propriedade o <xref:System.Windows.Forms.ToolStripItem> para <xref:System.Windows.Forms.ToolStripItemAlignment.Right>.</span><span class="sxs-lookup"><span data-stu-id="cd81d-107">Set the <xref:System.Windows.Forms.ToolStripItemAlignment> property of the <xref:System.Windows.Forms.ToolStripItem> to <xref:System.Windows.Forms.ToolStripItemAlignment.Right>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9e70f-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9e70f-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="cd81d-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="cd81d-108">See Also</span></span>  
  <xref:System.Windows.Forms.ToolStripItem>  
  <xref:System.Windows.Forms.ToolStripItemAlignment>  
  <xref:System.Windows.Forms.ToolStripItemAlignment.Left>  
  <xref:System.Windows.Forms.ToolStripItemAlignment.Right>  
- [<span data-ttu-id="9e70f-109">Visão geral do controle ToolStrip</span><span class="sxs-lookup"><span data-stu-id="9e70f-109">ToolStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+ [<span data-ttu-id="cd81d-109">Visão geral do controle ToolStrip</span><span class="sxs-lookup"><span data-stu-id="cd81d-109">ToolStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
