@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3231e5b043dd0e65c09f25eed56341e660bf1f87
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 94610842cd801a54bba0266a4f658d8a4bb60dcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endpoint-addresses"></a>Endereços do ponto de extremidade
 Cada ponto de extremidade tem um endereço associado a ele, que é usado para localizar e identificar o ponto de extremidade. Esse endereço consiste principalmente de um URI Uniform Resource Identifier (), que especifica o local do ponto de extremidade. O endereço do ponto de extremidade é representado no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] modelo de programação com o <xref:System.ServiceModel.EndpointAddress> classe, que contém um recurso opcional <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriedade que permite a autenticação do ponto de extremidade por outros pontos de extremidade que trocam mensagens com ele e um conjunto de opcional <xref:System.ServiceModel.EndpointAddress.Headers%2A> propriedades que definem outros cabeçalhos SOAP necessários para acessar o serviço. Os cabeçalhos opcionais fornecem adicionais e informações de endereçamento para identificar ou interagir com o ponto de extremidade de serviço mais detalhadas. O endereço de um ponto de extremidade é representado na transmissão como uma referência de ponto de extremidade WS-Addressing (EPR).  
@@ -148,5 +149,5 @@ Cada ponto de extremidade tem um endereço associado a ele, que é usado para lo
  Em alguns cenários, um ponto de extremidade recebe todas as mensagens que chegam no transporte subjacente e não apenas aquelas com apropriada `To` cabeçalho. Para habilitar isso, o usuário pode usar o <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> classe.  
   
 ## <a name="see-also"></a>Consulte também  
- [Specifying an Endpoint Address](../../../../docs/framework/wcf/specifying-an-endpoint-address.md) (Especificando um endereço do ponto de extremidade)  
+ [Especificando um endereço do ponto de extremidade](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
  [Autenticação e identidade de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

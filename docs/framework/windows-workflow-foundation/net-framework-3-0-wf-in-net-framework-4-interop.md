@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 51f11beb474758f16c6de0c47444e0467cac8bec
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e551a2a5253232ca7e504ea484601fb935901da4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Usando atividades do .NET Framework 3.0 WF no .NET Framework 4 com a atividade de Interoperabilidade
 A atividade de <xref:System.Activities.Statements.Interop> é uma atividade de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 4,5 (WCF) que envolve uma atividade de [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 3,5 (WCF) dentro de um fluxo de trabalho [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] . A atividade de WF 3 pode ser uma única atividade de folha ou uma árvore inteira de atividades. A execução (incluindo de manipulação de exceção e cancelar) e persistência de atividade de [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] ocorrem dentro do contexto da instância do fluxo de trabalho [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] que está executando.  
@@ -64,4 +65,4 @@ A atividade de <xref:System.Activities.Statements.Interop> é uma atividade de [
 4.  Uma atividade personalizado de WF 3 pode acessar dados usando filas de fluxo de trabalho no ambiente de interoperação exatamente a mesma forma como no tempo de execução do fluxo de trabalho WF 3. Nenhuma alteração de código personalizado de atividade é necessária. No host, os dados são enviados a fila para uma fila de fluxo de trabalho WF 3 continuando <xref:System.Activities.Bookmark>. O nome do marcador é a forma de cadeia de caracteres o nome da fila de fluxo de trabalho de <xref:System.IComparable> .  
   
 ## <a name="see-also"></a>Consulte também  
- [Usando um .NET Framework 3.0 ou o .NET Framework 3.5 atividade em um fluxo de trabalho do .NET Framework 4.5](../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)
+ [Usar uma atividade do .NET Framework 3.0 ou .NET Framework 3.5 em um fluxo de trabalho do .NET Framework 4.5](../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)

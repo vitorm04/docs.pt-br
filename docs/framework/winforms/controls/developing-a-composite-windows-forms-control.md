@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da180f888031aace892efc770184be53e9341047
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b98ba10e1c865417b9e844c4d5c31334f763e1b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>Desenvolvendo um controle dos Windows Forms composto
 Você pode desenvolver um controle Windows Forms composto combinando outros controles de formulários do Windows. Controles compostos que derivam de <xref:System.Web.UI.UserControl> são chamados de controles de usuário. A classe base, <xref:System.Windows.Forms.UserControl>, fornece o teclado do roteamento para os controles filho, garantindo que os controles filho podem receber foco. Para obter um exemplo de um controle de usuário, consulte o <xref:System.Windows.Forms.UserControl> exemplo em [como: aplicar atributos em controles dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
@@ -66,4 +67,4 @@ Você pode desenvolver um controle Windows Forms composto combinando outros cont
 ## <a name="see-also"></a>Consulte também  
  [Como aplicar atributos a controles dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)  
  [Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Variedades de Controles Personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+ [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

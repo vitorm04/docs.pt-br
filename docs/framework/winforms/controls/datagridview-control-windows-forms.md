@@ -24,11 +24,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08a0cc15cff39bb936a78db95c73568aa643d0b6
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 51f6765e5960ddadd27a476f7229a76fbfe985e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagridview-control-windows-forms"></a>Controle DataGridView (Windows Forms)
 O controle de `DataGridView` fornece uma maneira poderosa e flexível para exibir dados em um formato de tabela. Você pode usar o controle `DataGridView` para mostrar as exibições somente leitura de uma pequena quantidade de dados ou pode ajustar a escala para mostrar exibições editáveis de grandes conjuntos de dados.  
@@ -62,16 +63,16 @@ O controle de `DataGridView` fornece uma maneira poderosa e flexível para exibi
  [Classificando dados no controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/sorting-data-in-the-windows-forms-datagridview-control.md)  
  Fornece tópicos que descrevem os recursos de classificação no controle.  
   
- [Entrada de dados no controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
+ [Entrada de Dados no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
  Fornece tópicos que descrevem como alterar os maneira como os usuários adicionam e modificam dados no controle.  
   
  [Seleção e uso da Área de Transferência com o controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)  
  Fornece tópicos que descrevem os recursos de seleção de célula, linha e coluna no controle.  
   
- [Programando com células, linhas e colunas no controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)  
+ [Programando com células, linhas e colunas no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)  
  Fornece tópicos que descrevem como programar com objetos de célula, linha e coluna.  
   
- [Personalizando o controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
+ [Personalizando o controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
  Fornece tópicos que descrevem a pintura personalizada de células e linhas `DataGridView`, bem como a criação de tipos de célula, coluna e linha derivados.  
   
  [Ajuste de desempenho no controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  

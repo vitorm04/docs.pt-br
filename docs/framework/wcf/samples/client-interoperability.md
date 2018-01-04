@@ -13,17 +13,18 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 34f99bba686ec3b2de128c0f3573ecea42110b4e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fb8f8cba76099ea83c8384e422fbf8673e1ac58e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-interoperability"></a>Interoperabilidade do cliente
 Esta seção contém exemplos que demonstram a interoperabilidade entre [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e outras tecnologias.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Interoperando com serviços Web ASMX](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md)  
+ [Interoperabilidade com serviços Web ASMX](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md)  
  Demonstra como integrar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo cliente com um serviço Web ASMX existente.  
   
  [Exemplo de XMLSerializer](../../../../docs/framework/wcf/samples/xmlserializer-sample.md)  

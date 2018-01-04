@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ee285a7db058cd88843eb3addf207fb5c446dfa8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9bbe8549268c2b67b67184966e938f7d62b766a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="treeview-control-overview-windows-forms"></a>Visão geral do controle TreeView (Windows Forms)
 Com o Windows Forms <xref:System.Windows.Forms.TreeView> controle, você pode exibir uma hierarquia de nós para os usuários, como a forma como arquivos e pastas são exibidas no painel esquerdo do recurso Windows Explorer do sistema operacional Windows. Cada nó no modo de exibição de árvore pode conter outros nós, chamados *nós filho*. Você pode exibir nós pai ou nós que contêm nós filhos, como expandidos ou recolhidos. Você também pode exibir um modo de exibição de árvore com caixas de seleção ao lado de nós, definindo o modo de exibição de árvore <xref:System.Windows.Forms.TreeView.CheckBoxes%2A> propriedade `true`. Você pode, em seguida, por meio de programação marque ou desmarque nós definindo o nó <xref:System.Windows.Forms.TreeNode.Checked%2A> propriedade `true` ou `false`.  

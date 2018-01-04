@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 68edbf5a2c96893bdf0e3a7a923084adea9e3c21
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8bfcd632846510f8f62280bfb1620ba1f8c35ce3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-resource-service"></a>Serviço de recursos básicos
 Este exemplo demonstra como implementar um serviço baseado em HTTP usando o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] modelo de programação REST que expõe uma coleção de clientes que dá suporte a recuperar, adicionar, excluir e substituir operações. Este exemplo consiste em 2 componentes – uma auto-hospedado [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço HTTP (Service.cs) e um aplicativo de console (program.cs) que cria o serviço e faz chamadas para ele.  
@@ -49,5 +50,5 @@ Este exemplo demonstra como implementar um serviço baseado em HTTP usando o [!I
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicResourceService`  
   
 ## <a name="see-also"></a>Consulte também  
- [Serviço básico de HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md)  
+ [Serviço HTTP básico](../../../../docs/framework/wcf/samples/basic-http-service.md)  
  [Seleção automática de formato](../../../../docs/framework/wcf/samples/automatic-format-selection.md)

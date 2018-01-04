@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b4027f3ae604f2a3ff4996855fa6dd34d4de8ea2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a2327c6d9696bc5fb54943eb8bbce9d4795a378b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sorting-data-in-the-windows-forms-datagridview-control"></a>Classificando dados no controle DataGridView dos Windows Forms
 Por padrão, os usuários podem classificar os dados em um controle `DataGridView` clicando no cabeçalho de uma coluna de caixa de texto. Você pode modificar a propriedade `SortMode` de colunas específicas para permitir aos usuários classificar por outros tipos de coluna quando fizer sentido. Você também pode classificar os dados de forma programática por qualquer coluna ou por várias colunas.  

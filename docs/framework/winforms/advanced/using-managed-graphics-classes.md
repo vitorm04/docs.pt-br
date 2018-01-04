@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a53d5d4961e191ae3f3b821641e3f4b161cddf1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2a34e2726182c194882d94fe4b8d1164993d8284
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-managed-graphics-classes"></a>Usando classes de elementos gráficos gerenciadas
 Os tópicos a seguir descrevem como usar a API [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] na estrutura da classe gerenciada.  
@@ -33,7 +34,7 @@ Os tópicos a seguir descrevem como usar a API [!INCLUDE[ndptecgdiplus](../../..
  [Usando uma caneta para desenhar linhas e formas](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
  Demonstra como construir uma caneta e usá-la para desenhar uma variedade de formas e linhas.  
   
- [Usando um Pincel para Preencher Formas](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)  
+ [Usando um pincel para preencher formas](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)  
  Demonstra como criar um pincel e preencher formas com uma variedade de efeitos.  
   
  [Usando um Pincel de Gradiente para Preencher Formas](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
@@ -51,7 +52,7 @@ Os tópicos a seguir descrevem como usar a API [!INCLUDE[ndptecgdiplus](../../..
  [Construir e Desenhar Curvas](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)  
  Mostra como desenhar splines cardinais e de Bézier.  
   
- [Construindo e Desenhando Caminhos](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)  
+ [Construindo e desenhando demarcadores](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)  
  Mostra como criar figuras usando caminhos.  
   
  [Usando Transformações no GDI+ Gerenciado](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)  
@@ -60,7 +61,7 @@ Os tópicos a seguir descrevem como usar a API [!INCLUDE[ndptecgdiplus](../../..
  [Usar Contêineres de Elementos Gráficos](../../../../docs/framework/winforms/advanced/using-graphics-containers.md)  
  Mostra como gerenciar contêineres de elementos gráficos aninhados e de estado do objeto de elementos gráficos.  
   
- [Usando Regiões](../../../../docs/framework/winforms/advanced/using-regions.md)  
+ [Usando regiões](../../../../docs/framework/winforms/advanced/using-regions.md)  
  Demonstra como realizar o teste de clique e recorte com regiões.  
   
  [Recolorindo Imagens](../../../../docs/framework/winforms/advanced/recoloring-images.md)  

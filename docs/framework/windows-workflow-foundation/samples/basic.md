@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cfd3075ef58114d50be07e4070cfaa4492408e83
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7ec3fe498bc76c5fe7221d14c8af219420037c14
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic"></a>Basic
 Esta seção oferece exemplos que demonstram a funcionalidade básica de [!INCLUDE[wf](../../../../includes/wf-md.md)] .  
@@ -34,7 +35,7 @@ Esta seção oferece exemplos que demonstram a funcionalidade básica de [!INCLU
  [Designer](../../../../docs/framework/windows-workflow-foundation/samples/designer.md)  
  Contém exemplos que demonstram como usar [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].  
   
- [Designer ReHosting](../../../../docs/framework/windows-workflow-foundation/samples/designer-rehosting.md)  
+ [Mudança de host de designer](../../../../docs/framework/windows-workflow-foundation/samples/designer-rehosting.md)  
  Contém exemplos que demonstram novamente hospedar o designer de atividade.  
   
  [Execução](../../../../docs/framework/windows-workflow-foundation/samples/execution.md)  
@@ -55,7 +56,7 @@ Esta seção oferece exemplos que demonstram a funcionalidade básica de [!INCLU
  [Serviços](../../../../docs/framework/windows-workflow-foundation/samples/services.md)  
  Contém exemplos que demonstram serviços de fluxo de trabalho.  
   
- [Controle](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md)  
+ [Acompanhamento](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md)  
  Contém exemplos que demonstram o rastreamento de fluxo de trabalho.  
   
  [Transações](../../../../docs/framework/windows-workflow-foundation/samples/transactions.md)  

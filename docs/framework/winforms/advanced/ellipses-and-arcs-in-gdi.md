@@ -23,11 +23,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5ebeae1d076a0ebcf36d52dee1af0c0ad5f04fdf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 71126942f4cde37cc5d26bfba029c5f50f1065a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ellipses-and-arcs-in-gdi"></a>Elipses e arcos no GDI+
 Você pode facilmente desenha elipses e arcos usando o <xref:System.Drawing.Graphics.DrawEllipse%2A> e <xref:System.Drawing.Graphics.DrawArc%2A> métodos de <xref:System.Drawing.Graphics> classe.  
@@ -62,5 +63,5 @@ Você pode facilmente desenha elipses e arcos usando o <xref:System.Drawing.Grap
  <xref:System.Drawing.Pen?displayProperty=nameWithType>  
  [Linhas, Curvas e Formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
  [Como Criar Objetos Gráficos para Desenho](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- [Como Criar uma Caneta](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
- [Como desenhar uma forma delineada](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)
+ [Como criar uma caneta](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
+ [Como Desenhar uma Forma Delineada](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)

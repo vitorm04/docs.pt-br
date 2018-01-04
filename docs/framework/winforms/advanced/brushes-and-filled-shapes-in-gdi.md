@@ -24,11 +24,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 01d7359499c858ad7c4f1da2fa24f18e801bb324
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 89f0a7c86a83222030d9b50e20228f32e85ce730
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>Pincéis e formas preenchidas no GDI+
 Uma forma fechada, como um retângulo ou uma elipse, é composta por uma estrutura de tópicos e um interior. A estrutura de tópicos é desenhada com uma caneta e o interior é preenchido com um pincel. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]fornece várias classes de pincel para preencher os interiores das formas fechadas: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, e <xref:System.Drawing.Drawing2D.PathGradientBrush>. Todas essas classes herdam o <xref:System.Drawing.Brush> classe. A ilustração a seguir mostra um retângulo preenchido com um pincel sólido e uma elipse preenchida com um pincel de hachura.  

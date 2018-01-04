@@ -24,11 +24,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 51de367f2558abfc28be740409d8a0d394065acf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7b620b7386752e531a8d5252159c5f172176890a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-play-a-system-sound-from-a-windows-form"></a>Como executar um som de sistema a partir de um Windows Form
 O código a seguir exemplo desempenha o `Exclamation` som de sistema em tempo de execução. Para obter mais informações sobre sons do sistema, consulte <xref:System.Media.SystemSounds>.  

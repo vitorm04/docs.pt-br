@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f338eff156646a2df063da84eead274a34a39159
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19d67d99ddf6bab69aa1e5f993917142a4378105
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-behaviors-in-wcf"></a>Comportamentos de segurança no WCF
 Em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], comportamentos de modificam o comportamento de tempo de execução no nível de serviço ou no nível do ponto de extremidade. ([!INCLUDE[crabout](../../../../includes/crabout-md.md)] comportamentos em geral, consulte [especificando comportamento de tempo de execução do serviço](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Comportamentos de segurança* permitem o controle sobre as credenciais, autenticação, autorização e logs de auditoria. Você pode usar comportamentos por programação ou por meio da configuração. Este tópico se concentra na configuração os seguintes comportamentos relacionados às funções de segurança:  
@@ -228,5 +229,5 @@ Em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], comportamentos de mo
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [A auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
+ [Auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
  [Modelo de segurança para o Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -26,11 +26,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6193e4cc86a470f046c220dc21150e0fc0bf792a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b671910ac77b7456492cab871ace3abb61ac7fd7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Como associar um controle ComboBox ou ListBox dos Windows Forms a dados
 Você pode vincular o <xref:System.Windows.Forms.ComboBox> e <xref:System.Windows.Forms.ListBox> aos dados para executar tarefas como procurar dados em um banco de dados, inserir novos dados, ou editar dados existentes.  
@@ -66,6 +67,6 @@ Você pode vincular o <xref:System.Windows.Forms.ComboBox> e <xref:System.Window
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Forms.ComboBox>  
  <xref:System.Windows.Forms.ListBox>  
- [Vinculação de dados dos Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [Associação de dados do Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
  [Vinculação de dados e os Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
  [Controles dos Windows Forms usados para listar opções](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

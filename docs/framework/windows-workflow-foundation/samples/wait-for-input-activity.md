@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d877c147a19635782b652d96031644b3be42448a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ac05054d56c424ab3f4d1fdfd9c3590aac8b00bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wait-for-input-activity"></a>Espera para atividades de entrada
 Este exemplo demonstra como criar indicadores nomeados em um fluxo de trabalho. [!INCLUDE[wf](../../../../includes/wf-md.md)] não fornece uma atividade para criar declarativa do indexador. Portanto, quando você deseja criar um indexador no fluxo de trabalho, você deve escrever uma atividade personalizado que o criar. A atividade de `WaitForInput` definida neste exemplo fornece essa funcionalidade, de modo que os usuários podem criar indicadores declarativamente dentro de um fluxo de trabalho.  

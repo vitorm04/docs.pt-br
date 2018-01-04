@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 740a454873976e407843c417a7b09e5a5218398d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 26068ab72473a541b1f16aeb2a1f0d43ec7a7313
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="polygons-in-gdi"></a>Polígonos no GDI+
 Um polígono é uma forma fechada com três ou mais lados retos. Por exemplo, um triângulo é um polígono com três lados, um retângulo é um polígono com quatro lados e um Pentágono é um polígono com cinco lados. A ilustração a seguir mostra diversos polígonos.  
@@ -45,4 +46,4 @@ Um polígono é uma forma fechada com três ou mais lados retos. Por exemplo, um
  <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
  <xref:System.Drawing.Pen?displayProperty=nameWithType>  
  [Linhas, Curvas e Formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Como Criar uma Caneta](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)
+ [Como criar uma caneta](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)

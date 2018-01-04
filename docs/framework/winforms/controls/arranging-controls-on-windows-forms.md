@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b5709f07edc90b9094561870d31fbe28697974ac
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6f590080d1a3898e84df30f0fb690c3d18905f8e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="arranging-controls-on-windows-forms"></a>Organizando controles nos Windows Forms
 Ao colocar e manipular controles em formulários de diversas maneiras, você pode criar interfaces do usuário intuitivas e funcionais para usuários.  
@@ -66,7 +67,7 @@ Ao colocar e manipular controles em formulários de diversas maneiras, você pod
  [Passo a passo: definindo o layout de controles dos Windows Forms com preenchimento, margens e a propriedade AutoSize](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)  
  Descreve como você pode colocar controles em seus formulários usando o <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, e <xref:System.Windows.Forms.Control.AutoSize%2A> propriedades dentro de **Forms Designer**.  
   
- [Passo a passo: organizando controles nos Windows Forms usando linhas de alinhamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ [Instruções passo a passo: organizando controles no Windows Forms usando guias de alinhamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  Demonstra as várias funções de layout exercidas pelas guias de alinhamento.  
   
 ## <a name="related-sections"></a>Seções relacionadas  

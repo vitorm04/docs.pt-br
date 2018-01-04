@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 32aa83e69d1159b2afa376a7155c40e2a36d7684
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5e64a2a858b9506ec08beff728e23da0f817f170
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>Identificando controles dos Windows Forms individuais e fornecendo atalhos para eles
 Os controles adicionados ao Windows Forms têm propriedades e métodos que são usados para especializar ainda mais o usuário experiência. Personalizando a interface do usuário para atender às necessidades do usuário é extremamente importante para aplicativos do Windows bem projetados.  

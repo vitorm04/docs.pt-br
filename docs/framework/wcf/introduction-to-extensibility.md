@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 852d689ff3159818fb25ecfd9b6e5df6df84470c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f3f045fd35ef57be51c10d7948275899c1ae4f01
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="introduction-to-extensibility"></a>Introdução à extensibilidade
 O [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] modelo de aplicativo é projetado para resolver a maior parte dos requisitos de comunicação de qualquer aplicativo distribuído. Mas sempre há cenários em que o modelo de aplicativo padrão e implementações de fornecido pelo sistema não têm suporte. O [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] modelo de extensibilidade destina-se para dar suporte a cenários personalizados, permitindo que você modificar o comportamento do sistema em cada nível, até mesmo para o ponto de substituir o modelo de aplicativo inteiro. Este tópico descreve as várias áreas de extensão e aponta para obter mais informações sobre cada um.  
@@ -63,4 +64,4 @@ O [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] modelo de aplicativo é p
  Para modificar a relação entre o domínio de aplicativo de hospedagem e o host de serviço, você deve estender o <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> classe. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Estendendo a hospedagem com ServiceHostFactory](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Extending WCF](../../../docs/framework/wcf/extending/extending-wcf.md) (Estendendo o WCF)
+ [Estendendo o WCF](../../../docs/framework/wcf/extending/extending-wcf.md)

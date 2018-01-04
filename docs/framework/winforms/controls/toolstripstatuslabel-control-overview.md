@@ -17,11 +17,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2bd5da2474c59b9ea893b90f6b5f15343769f80c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6941ce03764604fce504d8aa79d53892ef9fed08
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstripstatuslabel-control-overview"></a>Visão geral do controle ToolStripStatusLabel
 O <xref:System.Windows.Forms.ToolStripStatusLabel> é um rótulo para um <xref:System.Windows.Forms.StatusStrip>. Como o <xref:System.Windows.Forms.Label> ou <xref:System.Windows.Forms.ToolStripLabel>, o <xref:System.Windows.Forms.ToolStripStatusLabel> fornece uma área de exibição não clicável para texto, imagens ou ambos. O <xref:System.Windows.Forms.ToolStripStatusLabel> é hospedado por um <xref:System.Windows.Forms.StatusStrip>.  
@@ -32,7 +33,7 @@ O <xref:System.Windows.Forms.ToolStripStatusLabel> é um rótulo para um <xref:S
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A>|Obtém ou define um valor que indica se o <xref:System.Windows.Forms.ToolStripStatusLabel> preenche automaticamente o espaço disponível no <xref:System.Windows.Forms.StatusStrip> como o formulário é redimensionado|  
 |<xref:System.Windows.Forms.ToolStripStatusLabel.BorderSides%2A>|Obtém ou define um valor que indica quais lados do <xref:System.Windows.Forms.ToolStripStatusLabel> Mostrar bordas.|  
-|<xref:System.Windows.Forms.ToolStripStatusLabel.BorderStyle%2A>|Obtém ou define o estilo da borda do <xref:System.Windows.Forms.ToolStripStatusLabel>.|  
+|<xref:System.Windows.Forms.ToolStripStatusLabel.BorderStyle%2A>|Obtém ou define o estilo de borda do <xref:System.Windows.Forms.ToolStripStatusLabel>.|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Forms.ToolStripStatusLabel>

@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f55cfb6afa8ad533aac84b391a7cd6fef83d72d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f68642eb5f996722097976e042006afbf366ae39
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="label-control-overview-windows-forms"></a>Visão geral do controle de rótulo (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.Label> controles são usados para exibir texto ou imagens que não podem ser editadas pelo usuário. Eles são usados para identificar objetos em um formulário — fornecendo uma descrição do que acontecerá se um determinado controle for clicado, por exemplo ou exibindo informações em resposta a um evento em tempo de execução ou processo em seu aplicativo. Por exemplo, você pode usar rótulos para adicionar legendas descritivas em caixas de texto, caixas de listagem, caixas de combinação e assim por diante. Também é possível escrever código para alterar o texto exibido por um rótulo em resposta a eventos em tempo de execução. Por exemplo, se o aplicativo leva alguns minutos para processar uma alteração, é possível exibir uma mensagem de status de processamento em um rótulo.  

@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aaf4d72396438178d807f28ba8cb0ac5c5cb368e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c3595e501341f64883ce2552f0a3c0850691f38c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="auto-confirm-pattern"></a>Confirme automaticamente o padrão
 Esse exemplo consiste em três situações a execução que ilustra uma atividade personalizado de `AutoConfirmScope` . O primeiro exemplo mostra a execução bem-sucedida de uma sequência de quatro atividades compensáveis onde o segundo e terceiro é aninhado em lugar em `AutoConfirmScope`. O segundo exemplo mostra a mesma sequência com uma exceção que ocorre após a execução do quarto <xref:System.Activities.Statements.CompensableActivity>. O terceiro cenário mostra a mesma sequência com uma exceção que ocorre em `AutoConfirmScope` após segundo <xref:System.Activities.Statements.CompensableActivity> completa.  

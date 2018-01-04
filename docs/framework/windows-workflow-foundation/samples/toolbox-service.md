@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 294c530072b2d694f9aeb54d04b36d72bb6da637
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b800f2d250a918ea2b6c49b121c4ca9040b20631
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolbox-service"></a>Serviço da caixa de ferramentas
 Este exemplo demonstra como atualizar as atividades da caixa de ferramentas de [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] com base no contexto de fluxo de trabalho. O exemplo contém um fluxo de trabalho que modifica o conteúdo da caixa de ferramentas com base em se uma atividade personalizado está selecionada.  

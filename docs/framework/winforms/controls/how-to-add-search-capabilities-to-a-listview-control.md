@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fd6c3011b234f9d281a68a51fa8d9ef9d610816c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 111fc6e4945998c99e63560afab6104f4daf89e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-search-capabilities-to-a-listview-control"></a>Como adicionar recursos de pesquisa a um controle ListView
 Muitas vezes, ao trabalhar com uma grande lista de itens em uma <xref:System.Windows.Forms.ListView> controle, que você quer oferecer recursos de pesquisa para o usuário. O <xref:System.Windows.Forms.ListView> controle oferece esse recurso de duas maneiras diferentes: correspondência de texto e pesquisa de localidade.  

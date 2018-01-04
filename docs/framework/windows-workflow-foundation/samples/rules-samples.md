@@ -12,20 +12,21 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9f130fb875074e45144e8ff7bb4cc48e353f0428
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 087b6aaf524ac2bf301d40b13ed8f3d7987d1956
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rules-samples"></a>Regras Exemplos
 Esta seção contém exemplos que demonstram usando o mecanismo das regras de fluxo de trabalho [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Diretiva avançada](../../../../docs/framework/windows-workflow-foundation/samples/advanced-policy.md)  
+ [Política avançada](../../../../docs/framework/windows-workflow-foundation/samples/advanced-policy.md)  
  Demonstra como estender o exemplo simples de política. Além das regras residenciais de desconto e de desconto de negócio de exemplo simples de política, várias regras novos foram adicionadas.  
   
- [Diretiva simples](../../../../docs/framework/windows-workflow-foundation/samples/simple-policy.md)  
+ [Política simples](../../../../docs/framework/windows-workflow-foundation/samples/simple-policy.md)  
  Demonstra como usar uma atividade de <xref:System.Workflow.Activities.PolicyActivity> em um fluxo de trabalho.  
   
  [IfElse com regras](../../../../docs/framework/windows-workflow-foundation/samples/ifelse-with-rules.md)  
@@ -34,5 +35,5 @@ Esta seção contém exemplos que demonstram usando o mecanismo das regras de fl
  [Grupo de atividade condicionado](../../../../docs/framework/windows-workflow-foundation/samples/conditioned-activity-group.md)  
  Demonstra um aplicativo do registro do traço.  
   
- [Ordem de processamento de política](../../../../docs/framework/windows-workflow-foundation/samples/order-processing-with-policy.md)  
+ [Ordenação de processamento com política](../../../../docs/framework/windows-workflow-foundation/samples/order-processing-with-policy.md)  
  Demonstra alguns dos principais recursos introduzidos em [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] de [!INCLUDE[wf](../../../../includes/wf-md.md)].

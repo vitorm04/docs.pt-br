@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e027228ea1cc047f213c28ac3a4984c2f0227c5a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 022a591a1d646b154c2bd59a2f2ab21b78b9dbda
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics-paths-in-gdi"></a>demarcadores de elementos gráficos no GDI+
 Os demarcadores são formados combinando linhas, retângulos e curvas simples. Lembre-se do [visão geral de elementos gráficos vetoriais](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md) que os seguintes blocos de construção básicos provaram para ser mais útil para desenhar imagens:  
@@ -81,4 +82,4 @@ Os demarcadores são formados combinando linhas, retângulos e curvas simples. L
  <xref:System.Drawing.Point?displayProperty=nameWithType>  
  [Linhas, Curvas e Formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
  [Como Criar Objetos Gráficos para Desenho](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- [Construindo e Desenhando Caminhos](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)
+ [Construindo e desenhando demarcadores](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)

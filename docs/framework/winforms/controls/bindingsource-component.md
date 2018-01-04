@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 006cafafdf8e3c3f4da77394d6155fa52e113b58
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 08b55bc2bd5af78eb6c3d0f5adce3ec39d288a9f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindingsource-component"></a>Componente BindingSource
 Encapsula uma fonte de dados para associação aos controles.  
@@ -40,16 +41,16 @@ Encapsula uma fonte de dados para associação aos controles.
  [Como classificar e filtrar dados ADO.NET com o componente BindingSource dos Windows Forms](../../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)  
  Demonstra como usar o <xref:System.Windows.Forms.BindingSource> componente para aplicar classificações e filtros para dados exibidos.  
   
- [Como associar a um serviço Web usando o BindingSource dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource.md)  
+ [Como associar a um serviço Web usando o BindingSource do Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource.md)  
  Mostra como usar o <xref:System.Windows.Forms.BindingSource> componente para vincular a um serviço Web.  
   
  [Como identificar erros e exceções que ocorram na associação de dados](../../../../docs/framework/winforms/controls/how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)  
  Demonstra como usar o <xref:System.Windows.Forms.BindingSource> componente para manipular normalmente erros que ocorrem em uma operação de associação de dados.  
   
- [Como associar um controle dos Windows Forms a um tipo](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)  
+ [Como associar um controle do Windows Forms a um tipo](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)  
  Demonstra como usar um <xref:System.Windows.Forms.BindingSource> componente para vincular a um tipo.  
   
- [Como associar um controle dos Windows Forms a um objeto de fábrica](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-factory-object.md)  
+ [Como associar um controle do Windows Forms a um objeto de alocador](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-factory-object.md)  
  Demonstra como usar um <xref:System.Windows.Forms.BindingSource> componente para vincular a um objeto de fábrica ou método.  
   
  [Como personalizar a adição de item com o BindingSource dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-item-addition-with-the-windows-forms-bindingsource.md)  
@@ -61,7 +62,7 @@ Encapsula uma fonte de dados para associação aos controles.
  [Como gerar notificações de alteração usando um BindingSource e a interface INotifyPropertyChanged](../../../../docs/framework/winforms/controls/raise-change-notifications--bindingsource.md)  
  Demonstra como usar um tipo que herda o <xref:System.ComponentModel.INotifyPropertyChanged> com um <xref:System.Windows.Forms.BindingSource> controle.  
   
- [Como refletir atualizações feitas na fonte de dados em um controle dos Windows Forms com o BindingSource](../../../../docs/framework/winforms/controls/reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)  
+ [Como refletir atualizações feitas na fonte de dados em um controle do Windows Forms com o BindingSource](../../../../docs/framework/winforms/controls/reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)  
  Demonstra como responder a alterações na fonte de dados usando o <xref:System.Windows.Forms.BindingSource> componente.  
   
  [Como compartilhar dados associados entre formulários usando o componente BindingSource](../../../../docs/framework/winforms/controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)  

@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c4b9748de672e36ae4c4ff913ab8c76262dc5875
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: b9c8a66d2b1d60226ad814730125754c7253ca94
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="networking-in-windows-forms-applications"></a>Sistemas de rede em aplicativos do Windows Forms
 O .NET Framework fornece classes para exibir páginas da Web, baixar conteúdo da Web, interagir com sites de protocolo FTP e consumir serviços Web, facilitando o build da funcionalidade de rede em seu aplicativo. Os recursos a seguir ajudarão a compreender as tecnologias de rede do .NET Framework e como você pode integrá-las ao Windows Forms.  
@@ -42,5 +43,5 @@ O .NET Framework fornece classes para exibir páginas da Web, baixar conteúdo d
  [Programação de rede no .NET Framework](../../../../docs/framework/network-programming/index.md)  
  Uma introdução ao sistema de rede no .NET Framework.  
   
- [Vinculação de dados dos Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [Associação de dados do Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
  Descreve como exibir o conteúdo do banco de dados em seu aplicativo, de um armazenamento de dados local ou de um banco de dados localizado em uma rede.

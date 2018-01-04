@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 99c7c0e02d82b9c7d05ab04cd8896449f8a7de89
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: abc6aafc5b7676a76db3416d8c88b25a836d21ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contracts"></a>Contratos de dados
 Esta seção contém exemplos que demonstram os contratos de dados em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -35,7 +36,7 @@ Esta seção contém exemplos que demonstram os contratos de dados em [!INCLUDE[
  [Referências de objeto](../../../../docs/framework/wcf/samples/object-references.md)  
  Demonstra como passar objetos por referências entre cliente e servidor.  
   
- [POCO suporte](../../../../docs/framework/wcf/samples/poco-support.md)  
+ [Suporte a POCO](../../../../docs/framework/wcf/samples/poco-support.md)  
  Demonstra o suporte de serialização para tipos desmarcados. ou seja, tipos aos quais atributos de serialização não foram aplicados, às vezes chamado de tipos simples antigo CLR Object (POCO).  
   
  [Uso do associador de serialização](../../../../docs/framework/wcf/samples/usage-of-serialization-binder.md)  

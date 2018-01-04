@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 91ef5c2c0d581575f60456e19920185a285cab07
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 50efd36e1d54bd456e184c42d62aded14e510947
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="scenario"></a>Cenário
 Esta seção contém exemplos de cenários de [!INCLUDE[wf](../../../../includes/wf-md.md)] .  
@@ -31,13 +32,13 @@ Esta seção contém exemplos de cenários de [!INCLUDE[wf](../../../../includes
  [Transações](../../../../docs/framework/windows-workflow-foundation/samples/transactions.md)  
  Contém exemplos que demonstram cenários usando transações.  
   
- [Confirme automaticamente o padrão](../../../../docs/framework/windows-workflow-foundation/samples/auto-confirm-pattern.md)  
+ [Padrão de confirmação automática](../../../../docs/framework/windows-workflow-foundation/samples/auto-confirm-pattern.md)  
  Consiste em três situações a execução que ilustra uma atividade personalizado de `AutoConfirmScope` .  
   
- [Cenário de StateMachine usando uma combinação de fluxograma e de picareta](../../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
+ [Cenário de StateMachine usando uma combinação de FlowChart e Pick](../../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
  Demonstra como implementar um cenário simples de cronômetro usando uma combinação de atividades de <xref:System.Activities.Statements.Flowchart> e de <xref:System.Activities.Statements.Pick> .  
   
- [Integração de WF em XAML e WPF](../../../../docs/framework/windows-workflow-foundation/samples/wpf-and-wf-integration-in-xaml.md)  
+ [Integração de WF e WPF em XAML](../../../../docs/framework/windows-workflow-foundation/samples/wpf-and-wf-integration-in-xaml.md)  
  Demonstra como criar um aplicativo que usa [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] e recursos de [!INCLUDE[wf](../../../../includes/wf-md.md)] em um único documento XAML. Para fazer isso, o exemplo usa [!INCLUDE[wf](../../../../includes/wf-md.md)] e extensibilidade XAML.  
   
  [Kit de ferramentas de Ruleset externo](../../../../docs/framework/windows-workflow-foundation/samples/external-ruleset-toolkit.md)  

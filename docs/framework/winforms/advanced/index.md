@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5efd63e971ea3ae2fa5cfd03a148fa453130c646
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 77bd9884681c632f0faa9279f63aea6eabfe076e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enhancing-windows-forms-applications"></a>Aprimorando aplicativos do Windows Forms
 O Windows Forms contém muitos recursos que você pode usar para aprimorar seus aplicativos do Windows para atender às necessidades específicas dos seus usuários. Os tópicos a seguir descrevem esses recursos e como usá-los.  
@@ -72,5 +73,5 @@ O Windows Forms contém muitos recursos que você pode usar para aprimorar seus 
  [Sistemas de Ajuda em Aplicativos dos Windows Forms](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)  
  Contém links para tópicos que descrevem e mostram como fornecer Ajuda do usuário em Aplicativos dos Windows Forms.  
   
- [Introdução ao Windows Forms](../../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
+ [Guia de introdução ao Windows Forms](../../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
  Contém links para tópicos que descrevem como usar os recursos básicos dos Windows Forms.

@@ -12,26 +12,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fc300d63d33ddbb234a4563d00675c5aaaee7cda
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8d94ad8974562872687889ef74efa6106c62c0f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-activity-designers"></a>Designers personalizados de atividades
 Esta seção contém exemplos de atividade que usam designer personalizadas para exibição no designer de fluxo de trabalho.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Designer de compostos personalizados - apresentador de Item de fluxo de trabalho](../../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md)  
+ [Designer de composição personalizados – Apresentador de item de fluxo de trabalho](../../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md)  
  Este exemplo mostra como criar um designer de atividade que superfícies tal uma "zona de descarte."  
   
- [Designer de compostos personalizados - apresentador de itens de fluxo de trabalho](../../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md)  
+ [Designer de compostos personalizados – apresentador de itens de fluxo de trabalho](../../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md)  
  Este exemplo mostra como criar um designer de atividade que surija uma coleção tão editável.  
   
  [Programação do repositório de metadados](../../../../docs/framework/windows-workflow-foundation/samples/metadata-store-programmability.md)  
  Este exemplo mostra como programar no armazenamento de metadados aplicando atributos para um tipo de tempo de execução, a fonte para que nós não tem controle sobre.  
   
- [Usando o ExpressionTextBox em um Designer de atividade personalizada](../../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)  
+ [Usando o ExpressionTextBox em um designer personalizado de atividades](../../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)  
  Este exemplo mostra como usar <xref:System.Activities.Presentation.View.ExpressionTextBox> em um designer personalizado de atividade.  
   
  [Usando a edição de escopo](../../../../docs/framework/windows-workflow-foundation/samples/using-editing-scope.md)  

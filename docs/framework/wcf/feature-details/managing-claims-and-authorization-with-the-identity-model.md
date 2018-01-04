@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b69c17b9fcb14bbd70b60c32965fb1163c22e765
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db0a304a908e906b635672eed1a84f0277284ad7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Gerenciamento de declarações e autorizações com o modelo de identidade
 A autorização é o processo de determinar quais entidades têm permissão para alterar, exibir ou, caso contrário, acessar um recurso de computador. Por exemplo, em uma empresa, somente os gerentes podem permitidos para acessar os arquivos de seus funcionários. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]oferece suporte a dois mecanismos para executar o processamento de autorização. O primeiro mecanismo permite que você controle a autorização usando existente construções de runtime (CLR) de linguagem comum. O segundo é um modelo baseado em declarações, conhecido como o *modelo de identidade*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]usa o modelo de identidade para criar declarações de mensagens de entrada; Classes de modelo de identidade podem ser estendidos para dar suporte a novos tipos de declaração para esquemas de autorização personalizada. Este tópico apresenta uma visão geral de como os principais conceitos de programação do recurso de modelo de identidade, bem como uma lista das classes mais importantes que usa o recurso.  
@@ -146,7 +147,7 @@ A autorização é o processo de determinar quais entidades têm permissão para
 |<xref:System.IdentityModel.Policy.IAuthorizationComponent>|Uma interface que fornece uma propriedade única cadeia de caracteres somente leitura: ID. O valor dessa propriedade é exclusivo para cada instância no sistema que implementa essa interface.|  
 |<xref:System.IdentityModel.Policy.AuthorizationContext>|Um *componente de autorização* que contém um conjunto de `ClaimSet` instâncias com zero ou mais propriedades; o resultado da avaliação de uma ou mais políticas de autorização.|  
 |<xref:System.IdentityModel.Claims.Claim>|Uma combinação de um tipo de declaração, à direita e um valor. As partes direita e valor são restritas pelo tipo de declaração.|  
-|<xref:System.IdentityModel.Claims.ClaimSet>|Uma classe base abstrata. Uma coleção de `Claim` instâncias.|  
+|<xref:System.IdentityModel.Claims.ClaimSet>|Uma classe base abstrata. Uma coleção de instâncias `Claim`.|  
 |<xref:System.IdentityModel.Claims.DefaultClaimSet>|Uma classe sealed. Uma implementação de `ClaimSet` classe.|  
 |<xref:System.IdentityModel.Policy.EvaluationContext>|Uma classe base abstrata. Passado para uma política de autorização durante a avaliação da política.|  
 |<xref:System.IdentityModel.Policy.IAuthorizationPolicy>|Uma interface derivada de `IAuthorizationComponent` e implementada pelas classes de política de autorização.|  
@@ -180,12 +181,12 @@ A autorização é o processo de determinar quais entidades têm permissão para
  <xref:System.IdentityModel.Policy>  
  <xref:System.IdentityModel.Tokens>  
  <xref:System.IdentityModel.Selectors>  
- [Declarações e Tokens](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
+ [Declarações e tokens](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
  [Declarações e negar acesso a recursos](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)  
  [Valores de recursos e criação de declarações](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
- [Como: criar uma declaração personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
- [Como: comparar declarações](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [Como: criar uma política de autorização personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
- [Como: criar um Gerenciador de autorização personalizada para um serviço](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [Como criar uma declaração personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
+ [Como comparar declarações](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
+ [Como criar uma política de autorização personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
+ [Como criar um gerenciador de autorização personalizado para um serviço](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
  [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

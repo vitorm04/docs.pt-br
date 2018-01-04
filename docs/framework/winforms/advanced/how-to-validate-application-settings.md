@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 309429c2481bad3a8dff4708d9e2ea8a03057a4e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e12620a5079efaba4faa9101253a3a586965b7e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-validate-application-settings"></a>Como validar configurações do aplicativo
 Este tópico demonstra como validar configurações do aplicativo antes que elas sejam persistentes.  
@@ -33,7 +34,7 @@ Este tópico demonstra como validar configurações do aplicativo antes que elas
   
  O evento que você usa depende de quando você precisa validar suas configurações, conforme descrito na tabela a seguir.  
   
-|Evento|Ocorrência e uso|  
+|evento|Ocorrência e uso|  
 |-----------|------------------------|  
 |<xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>|Ocorre após o carregamento inicial de um grupo de propriedades de configurações.<br /><br /> Use esse evento para validar valores iniciais para todo o grupo de propriedades antes que eles sejam usados no aplicativo.|  
 |<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>|Ocorre antes da alteração do valor de uma única propriedade.<br /><br /> Use esse evento para validar uma única propriedade antes que ela seja alterada. Pode fornecer imediatamente comentários aos usuários sobre suas ações e escolhas.|  
@@ -172,4 +173,4 @@ Este tópico demonstra como validar configurações do aplicativo antes que elas
   
 ## <a name="see-also"></a>Consulte também  
  [Criando manipuladores de eventos no Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
- [Como Criar Configurações de Aplicativo](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)
+ [Como criar configurações de aplicativo](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a4284f07a21a9bb176a78a8a2abefe7c7c7c6b66
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0ab2e105c9055760bbeaeef5e56a8cb18c538306
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Controle estendido através de relatórios e tratamento de erro
 Este exemplo demonstra como estender o controle sobre o tratamento de erros e o relatório de erros em um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] de serviço usando o <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface. O exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) com um código adicional adicionado ao serviço para manipular erros. O cliente força várias condições de erro. O serviço intercepta os erros e registra em log em um arquivo.  

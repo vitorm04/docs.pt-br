@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9532363adafd492ca35e10e6d20c788ddf5b1d17
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7d253f38fab21496dd305cc67e7b6e84846579f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-wcf-development-tools"></a>Utilizando as ferramentas de desenvolvimento do WCF
 Esta seção descreve o [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] ferramentas de desenvolvimento que podem ajudá-lo a desenvolver sua [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]serviço.  
@@ -25,19 +26,19 @@ Esta seção descreve o [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] [!INC
  Você pode usar o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] , em seguida, usar modelos como uma base para criar rapidamente seu próprio serviço [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host automática do serviço e [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] cliente testar, depurar e testar seu serviço. Juntos, essas ferramentas fornecem uma rápida e transparente de depuração e ciclo de testes e eliminar a necessidade de confirmação a um modelo de hospedagem mais cedo.  
   
 ## <a name="the-wcf-developer-tools"></a>As ferramentas de desenvolvedor do WCF  
- [WCF Visual Studio Templates](../../../docs/framework/wcf/wcf-vs-templates.md) (Modelos do Visual Studio do WCF)  
+ [Modelos do Visual Studio do WCF](../../../docs/framework/wcf/wcf-vs-templates.md)  
   
  Você pode usar predefinida [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] modelos de projeto e item em [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] para criar rapidamente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ao redor de aplicativos e serviços.  
   
- [WCF Service Host (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md) [Host de serviço do WCF (WcfSvcHost.exe)]  
+ [Host de serviço do WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
   
  O [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host automática de serviço (WcfSvcHost.exe) permite que você inicie a [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] depurador (F5) para hospedar e testar um serviço que você implementou automaticamente. Você pode testar, em seguida, o serviço usando o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] seu próprio cliente ou cliente de teste (wcfTestClient.exe) para localizar e corrigir quaisquer erros potenciais.  
   
- [WCF Test Client (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md) [Cliente de teste do WCF (WcfTestClient.exe)]  
+ [Cliente de teste do WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)  
   
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Cliente de teste (WcfTestClient.exe) é uma ferramenta de interface gráfica do usuário que permite a entrada de parâmetros de tipos arbitrários, envie de entrada para o serviço e o modo de exibição que envia a resposta do serviço. Fornece um serviço contínuo testando experiência quando combinado com [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host do serviço automaticamente.  
   
- [Generating Data Type Classes from XML](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md) (Gerando classes de tipo de dados por meio de XML)  
+ [Gerando classes de tipo de dados por meio de XML](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)  
   
  Dados XML armazenados na área de transferência podem ser colados em uma página de código. As classes definidas nos dados serão convertidas para tipos de código.  
   
@@ -53,6 +54,6 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
  [!INCLUDE[crabout](../../../includes/crabout-md.md)]Netsh.exe, consulte [como usar a ferramenta Netsh.exe e as opções de linha de comando](http://go.microsoft.com/fwlink/?LinkId=97877).  
   
 ## <a name="see-also"></a>Consulte também  
- [WCF Visual Studio Templates](../../../docs/framework/wcf/wcf-vs-templates.md) (Modelos do Visual Studio do WCF)  
- [WCF Service Host (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md) [Host de serviço do WCF (WcfSvcHost.exe)]  
- [WCF Test Client (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md) [Cliente de teste do WCF (WcfTestClient.exe)]
+ [Modelos do Visual Studio do WCF](../../../docs/framework/wcf/wcf-vs-templates.md)  
+ [Host de serviço do WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
+ [Cliente de teste do WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

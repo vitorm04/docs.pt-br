@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 72c9c2078f694a1739a7f33689a0d8275d786937
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: be885a964ad7e8d63045febfa279b23d0d85ab1f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-hosting-options"></a>Opções de hospedagem de fluxo de trabalho
 A maioria dos exemplos de [!INCLUDE[wf](../../../includes/wf-md.md)] usam os fluxos de trabalho que são hospedados em um aplicativo de console, mas isso não é um cenário realista para fluxos de trabalho do mundo real. Os fluxos de trabalho em aplicativos comerciais reais serão hospedados em processos persistentes: um serviço do Windows criado pelo desenvolvedor ou um aplicativo de servidor como [!INCLUDE[iisver](../../../includes/iisver-md.md)] ou AppFabric. As diferenças entre essas abordagens são as seguintes.  

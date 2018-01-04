@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f373696f4d3a92f15ab7c8641e02303da4a54e6d
-ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
+ms.workload: dotnet
+ms.openlocfilehash: e5f2769921241216d60c3ed1bb25edcf238830d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-new-windows-form"></a>Criando um novo formulário do Windows Forms
 Este tópico contém links para tópicos que descrevem como criar seu primeiro aplicativo do Windows Forms. Além disso, os tópicos nesta seção apresentam um pouco do vocabulário básico e diretrizes que você deve compreender quando você começar a criar um aplicativo Windows Forms. Para saber mais sobre aplicativos de formulários do Windows, os controles que você pode usá-los, eventos e manipulação de eventos e como tratar a entrada do usuário, consulte a lista de tópicos relacionados.  

@@ -20,11 +20,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f53dd2fdaa622e022f49c153b6dbc83030ae791
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1afe397a92ac6e79e84757baa0c41f6e0c54b7f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-apply-the-propertynamechanged-pattern"></a>Como aplicar o padrão PropertyNameChanged
 O exemplo de código a seguir demonstra como aplicar o *PropertyName*padrão alterado para um controle personalizado. Aplica esse padrão quando você implementar controles personalizados que são usados com o mecanismo de associação de dados de formulários do Windows.  
@@ -41,4 +42,4 @@ O exemplo de código a seguir demonstra como aplicar o *PropertyName*padrão alt
 ## <a name="see-also"></a>Consulte também  
  [Como implementar a interface INotifyPropertyChanged](../../../docs/framework/winforms/how-to-implement-the-inotifypropertychanged-interface.md)  
  [Notificação de alteração na vinculação de dados dos Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
- [Vinculação de dados dos Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+ [Associação de dados do Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)

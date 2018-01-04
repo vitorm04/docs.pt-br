@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d47add27fb1170ae1bc14b99342ea0222be3549
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bc1ede649a68747461882dfe607214bfb06b2ec3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-xmlserializer-class"></a>Usando a classe XmlSerializer
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]pode usar duas tecnologias diferentes de serialização para transformar os dados em seu aplicativo em XML que é transmitido entre clientes e serviços, um processo chamado de serialização.  
@@ -221,4 +222,4 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.MessageHeaderArrayAttribute>  
  [Especificando transferência de dados em contratos de serviço](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
  [Usando contratos de dados](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Como: melhorar a inicialização do tempo de WCF aplicativos cliente que usam o XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+ [Como melhorar o tempo de inicialização de aplicativos clientes WCF usando o XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)

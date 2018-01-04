@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b89453b427e6a9552416f95c488f0c2a575b5cb4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d44805021f0070109ce67f28126d59d36e4175f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="coordinate-systems-and-transformations"></a>Sistemas de coordenadas e transformações
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Fornece uma transformação do mundo e uma transformação de página para que você pode transformar (girar, dimensionar, traduzir e assim por diante) os itens que você desenhar. As duas transformações também permitem que você trabalhe em uma variedade de sistemas de coordenadas.  

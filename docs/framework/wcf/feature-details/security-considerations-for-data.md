@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 98bce70d7092a8ce9b9244479f7ff6d999bb0825
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bb7a40bc38a3fdf3f7be2b31e30e768e26be2d15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-considerations-for-data"></a>Considerações de segurança para dados
 Ao lidar com dados em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], você deve considerar um número de categorias de ameaça. A tabela a seguir lista as classes de ameaça mais importantes relacionados ao processamento de dados. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]fornece ferramentas para reduzir essas ameaças.  

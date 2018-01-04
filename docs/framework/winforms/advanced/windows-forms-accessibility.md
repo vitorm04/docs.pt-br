@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 94296e623407aad2fecb52b9e6ece7500778931b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 70eb72b8755b24e0ee91c2a77b562984422b0c99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-accessibility"></a>Acessibilidade dos Windows Forms
 A funcionalidade de acessibilidade dos Windows Forms permite que você disponibilize seu aplicativo para uma ampla variedade de usuários.  

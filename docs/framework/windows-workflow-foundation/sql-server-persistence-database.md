@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3a86cbe3d36383623c70c6a0588d3c0e8fe0bf5c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b66783ae09e15d324cc1b6ff2aa8db90e052dddf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-persistence-database"></a>A base de dados do SQL Server
 Esta seção fornece detalhes sobre as exibições públicas de base de dados suportadas por instância Store de fluxo de trabalho SQL e mostra como deserializar propriedades primitivas de instância de dados e como consultar instâncias são persistentes.  

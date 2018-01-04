@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c97279b553a615feda1dd3a195ad033744d82983
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a7e7187eb6ed444ba2c28aa301ce4b3b16129030
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>Migrando serviços Web de WSE 3.0 para o WCF
 Os benefícios da migração de serviços Web do WSE 3.0 para [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] incluem melhor desempenho e suporte a transportes adicionais, cenários de segurança adicional e WS-* especificações. Um serviço Web que é migrado de WSE 3.0 para [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pode ter até uma melhoria de desempenho de 200 a 400%. Para obter mais informações sobre os transportes suportados pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consulte [selecionando um transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Para obter uma lista dos cenários com suporte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consulte [cenários comuns de segurança](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Para obter uma lista das especificações que são suportados pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consulte [guia de interoperabilidade de protocolos de serviços Web](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md).  
@@ -133,7 +134,7 @@ Os benefícios da migração de serviços Web do WSE 3.0 para [!INCLUDE[indigo1]
  O equivalente de um transporte personalizado WSE 3.0 em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] é uma extensão de canal. Para obter detalhes sobre como criar uma extensão de canal, consulte [estendendo a camada do canal](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Basic Programming Lifecycle](../../../../docs/framework/wcf/basic-programming-lifecycle.md) (Ciclo de vida de programação básica)  
+ [Ciclo de vida de programação básica](../../../../docs/framework/wcf/basic-programming-lifecycle.md)  
  [Associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [Como: criar uma associação personalizada utilizando o SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [Como: criar um SecurityBindingElement para um modo de autenticação especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+ [Como criar uma associação personalizada utilizando o SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [Como criar um SecurityBindingElement para um modo de autenticação especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

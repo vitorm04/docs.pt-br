@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 149b6a421100d2b6f678e89f6b3ebf6b276dc4a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c2be4bdc923b894476747c69aca15ffa6f9b2c66
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-the-ilistsource-interface"></a>Como implementar a interface IListSource
 Implementar o <xref:System.ComponentModel.IListSource> interface para criar uma classe associável que não implementa <xref:System.Collections.IList> , mas em vez disso, fornece uma lista de outro local.  

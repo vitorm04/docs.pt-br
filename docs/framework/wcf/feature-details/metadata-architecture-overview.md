@@ -14,11 +14,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc42aa130ce5da05739af43d287441d1644d55c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a8890cc05ec6b0b889dafcb787e216b50a681876
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-architecture-overview"></a>Visão geral da arquitetura de metadados
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Fornece uma infraestrutura avançada para exportar, publicação, recuperar e importação de metadados de serviço. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]os serviços usam metadados para descrever como interagir com pontos de extremidade do serviço para que as ferramentas, como Svcutil.exe, podem gerar automaticamente o código do cliente para acessar o serviço.  
@@ -100,8 +101,8 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Description>  
  [Formatos de metadados](../../../../docs/framework/wcf/feature-details/metadata-formats.md)  
  [Exportando e importando metadados](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
- [Metadados de publicação](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
+ [Publicando metadados](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
  [Recuperando metadados](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
- [Uso de metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
+ [Usando metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
  [Considerações de segurança com metadados](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
  [Estendendo o sistema de metadados](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

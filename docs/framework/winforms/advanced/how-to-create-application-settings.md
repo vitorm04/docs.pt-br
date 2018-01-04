@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 481239b472ced5ef6251b665dad16e83a170607d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6d0ede88d8f9b4c15cd3e0f141870b9a5e747aa9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-application-settings"></a>Como criar configurações de aplicativo
 Usando código gerenciado, é possível criar novas configurações de aplicativo e associá-las a propriedades no seu formulário ou aos controles de formulário, para que essas configurações sejam carregadas e salvas automaticamente no tempo de execução.  
@@ -60,4 +61,4 @@ Usando código gerenciado, é possível criar novas configurações de aplicativ
  <xref:System.Configuration.SpecialSettingAttribute>  
  <xref:System.Configuration.LocalFileSettingsProvider>  
  [Visão Geral das Configurações do Aplicativo](../../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [Como Validar Configurações do Aplicativo](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)
+ [Como validar configurações de aplicativo](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)

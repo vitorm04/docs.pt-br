@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c8766e33f0fb253d532ff7161ed0a1e7842d0c50
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f9355596982025bf9834924a0de8e79e7073fc0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Acessando quadros no Document Object Model HTML gerenciado
 Alguns documentos HTML são compostos de *quadros* ou janelas que podem manter seus próprios documentos HTML distintos. Usar quadros facilita a criação de páginas HTML na qual uma ou mais partes da página permanecem estáticas, como uma barra de navegação, enquanto outros quadros alterar seu conteúdo constantemente.  
@@ -52,4 +53,4 @@ Alguns documentos HTML são compostos de *quadros* ou janelas que podem manter s
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento de quadro &#124; quadro de objeto](http://msdn.microsoft.com/library/ms535250.aspx)  
- [Usando o Modelo de Objeto do Documento de HTML gerenciado](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+ [Usando o Modelo de Objeto do Documento HTML gerenciado](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

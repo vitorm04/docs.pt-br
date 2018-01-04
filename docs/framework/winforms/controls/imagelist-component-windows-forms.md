@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ee1da95a61153b3a2a8478e63bac21271120890d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 946f024ee0c0bf421a00ef2708c436003949f3b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imagelist-component-windows-forms"></a>Componente ImageList (Windows Forms)
 Windows Forms `ImageList` componente é usado para armazenar as imagens, que podem ser exibidas por controles. Uma lista de imagens permite escrever código para um catálogo de imagens único e consistente.  

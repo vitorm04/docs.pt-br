@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 995a466801337b5bbbf69c5c07f693b6d57c1d98
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: cb3fd4038634969d34be4514f4d314cf5d7513e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Como associar dados ao controle MaskedTextBox
 Você pode associar dados a um <xref:System.Windows.Forms.MaskedTextBox> controlar exatamente como faria para qualquer outro controle de formulários do Windows. No entanto, se o formato dos seus dados no banco de dados não corresponder ao formato esperado pela sua definição de máscara, será necessário reformatar os dados. O procedimento a seguir demonstra como fazer isso usando o <xref:System.Windows.Forms.Binding.Format> e <xref:System.Windows.Forms.Binding.Parse> eventos de <xref:System.Windows.Forms.Binding> classe para exibir o número de telefone separados e campos de banco de dados de extensão de telefone como um único campo editável.  

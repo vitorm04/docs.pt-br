@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 313867b76d569fb98b1bd5d46c658763d0020726
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 443611afa2fd2deafb3268a1bcd15a55c36fffe9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Programando com células, linhas e colunas no controle DataGridView dos Windows Forms
 Esta seção fornece tópicos que demonstram várias tarefas de programação que envolvem a célula, linha e coluna objetos.  
@@ -61,7 +62,7 @@ Esta seção fornece tópicos que demonstram várias tarefas de programação qu
  Fornece documentação de referência para o <xref:System.Windows.Forms.DataGridViewColumn> classe.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Recursos básicos de coluna, linha e célula no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
+ [Funcionalidades de coluna, linha e célula básicas no controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
  Fornece tópicos que descrevem as propriedades da célula, linha e coluna mais usados.  
   
 ## <a name="see-also"></a>Consulte também  

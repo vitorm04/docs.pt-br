@@ -20,11 +20,12 @@ caps.latest.revision: "22"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 595999bfa7d3472fc31274a0c9652af5416d2da5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 84fa0e6b20f3d2b75d3182f64ddc9c70ef661f10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-security-mode"></a>Como definir o modo de segurança
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]a segurança tem três modos de segurança comuns encontrados em associações mais predefinidas: transporte, mensagem e "transporte com credencial de mensagem". Dois modos adicionais são específicos para duas ligações: o modo "somente credencial transporte" encontrado na <xref:System.ServiceModel.BasicHttpBinding>e o "Dois", encontrado na <xref:System.ServiceModel.NetMsmqBinding>. No entanto, neste tópico se concentra em três modos de segurança comuns: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message>, e <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
@@ -124,12 +125,12 @@ ms.lasthandoff: 11/21/2017
  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Como: usar a segurança de transporte e as credenciais de mensagem](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: configurar uma porta com um certificado SSL](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
- [Como: usar a segurança de transporte e as credenciais de mensagem](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
+ [Como configurar uma porta com um certificado SSL](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [Como usar a segurança do transporte e as credenciais de mensagem](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
  [Segurança de transporte](../../../docs/framework/wcf/feature-details/transport-security.md)  
  [Segurança de mensagem](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
  [Visão geral de segurança](../../../docs/framework/wcf/feature-details/security-overview.md)  
- [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md) (Associações fornecidas pelo sistema)  
+ [Associações fornecidas pelo sistema](../../../docs/framework/wcf/system-provided-bindings.md)  
  [\<segurança >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)  
  [\<segurança >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)  
  [\<segurança >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)

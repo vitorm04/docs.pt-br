@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f6d94a2c06711e30455e1e8195f9e9c004bae78f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 99d8fba848129156d94e54d1da7d08122ccfa735
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="activity-library"></a>Biblioteca de Atividades
 Esta seção contém exemplos que demonstram atividades personalizados avançados em [!INCLUDE[wf](../../../../includes/wf-md.md)].  
@@ -25,19 +26,19 @@ Esta seção contém exemplos que demonstram atividades personalizados avançado
  [Atividade de política no .NET Framework 4.5](../../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md)  
  Demonstra como a atividade Policy4 permite que [!INCLUDE[wf2](../../../../includes/wf2-md.md)] em objetos de [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] WF (3,5) <xref:System.Workflow.Activities.Rules.RuleSet> é usado em [!INCLUDE[wf2](../../../../includes/wf2-md.md)]em [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 4,5 (WCF) diretamente usando o mecanismo de regras que é enviado em WF 3,5.  
   
- [Atividade personalizado para iniciar em um intervalo de valores](../../../../docs/framework/windows-workflow-foundation/samples/custom-activity-to-switch-on-a-range-of-values.md)  
+ [Atividade personalizada para alternar em um intervalo de valores](../../../../docs/framework/windows-workflow-foundation/samples/custom-activity-to-switch-on-a-range-of-values.md)  
  Demonstra como criar uma atividade personalizado que estende o uso de <xref:System.Activities.Statements.Switch%601>.  
   
- [LINQ a atividade de objetos](../../../../docs/framework/windows-workflow-foundation/samples/linq-to-objects-activity.md)  
+ [Atividade de LINQ to Objects](../../../../docs/framework/windows-workflow-foundation/samples/linq-to-objects-activity.md)  
  Demonstra como criar uma atividade para usar LINQ a objetos para os elementos de consulta em uma coleção.  
   
- [LINQ to SQL de exemplo](../../../../docs/framework/windows-workflow-foundation/samples/linq-to-sql-sample.md)  
+ [Exemplo de LINQ to SQL](../../../../docs/framework/windows-workflow-foundation/samples/linq-to-sql-sample.md)  
  Demonstra como criar uma atividade para usar entidades de consulta LINQ to SQL das tabelas em bases de dados SQL Server.  
   
  [Usando a atividade de InvokePowerShell](../../../../docs/framework/windows-workflow-foundation/samples/using-the-invokepowershell-activity.md)  
  Demonstra como chamar comandos do Windows PowerShell que usam a atividade de InvokePowerShell.  
   
- [Atividade de RangeEnumeration](../../../../docs/framework/windows-workflow-foundation/samples/rangeenumeration-activity.md)  
+ [Atividade RangeEnumeration](../../../../docs/framework/windows-workflow-foundation/samples/rangeenumeration-activity.md)  
  Demonstra como criar uma atividade personalizado que executa iterações sobre uma coleção de números.  
   
  [Atividades de expressão regular](../../../../docs/framework/windows-workflow-foundation/samples/regular-expression-activities.md)  
@@ -49,7 +50,7 @@ Esta seção contém exemplos que demonstram atividades personalizados avançado
  [Para a atividade](../../../../docs/framework/windows-workflow-foundation/samples/for-activity.md)  
  Demonstra como criar uma atividade personalizado que herda de <xref:System.Activities.NativeActivity> e usá-lo em um fluxo de trabalho para iterar sobre um intervalo de valores.  
   
- [Espera para atividades de entrada](../../../../docs/framework/windows-workflow-foundation/samples/wait-for-input-activity.md)  
+ [Espera por atividades de entrada](../../../../docs/framework/windows-workflow-foundation/samples/wait-for-input-activity.md)  
  Demonstra como criar indicadores nomeados em um fluxo de trabalho.  
   
  [Paralelo estrangulado ForEach](../../../../docs/framework/windows-workflow-foundation/samples/throttled-parallel-foreach.md)  
@@ -64,16 +65,16 @@ Esta seção contém exemplos que demonstram atividades personalizados avançado
  [Atividade de CommentOut](../../../../docs/framework/windows-workflow-foundation/samples/commentout-activity.md)  
  Demonstra como escrever uma atividade personalizado que remove outras atividades do caminho de execução, comentando efetivamente eles para fora.  
   
- [Atividade exteriorizada de política no .NET Framework 4.5](../../../../docs/framework/windows-workflow-foundation/samples/externalized-policy-activity-in-net-framework-4-5.md)  
+ [Atividade de política exteriorizada no .NET Framework 4.5](../../../../docs/framework/windows-workflow-foundation/samples/externalized-policy-activity-in-net-framework-4-5.md)  
  Demonstra como a atividade ExternalizedPolicy4 permite executar [!INCLUDE[wf2](../../../../includes/wf2-md.md)] existente em objetos de [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] WF (3,5) <xref:System.Workflow.Activities.Rules.RuleSet> em [!INCLUDE[wf2](../../../../includes/wf2-md.md)] em [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 4,5 (WCF) diretamente usando o mecanismo de regras que é enviado em WF 3,5.  
   
  [Atividade de NoPersistScope](../../../../docs/framework/windows-workflow-foundation/samples/nopersistscope-activity.md)  
  Demonstra como manipular um estado não-serializáveis e descartável em um fluxo de trabalho.  
   
- [ForEach não genéricos](../../../../docs/framework/windows-workflow-foundation/samples/non-generic-foreach.md)  
+ [ForEach não genérico](../../../../docs/framework/windows-workflow-foundation/samples/non-generic-foreach.md)  
  Demonstra como criar uma versão não genérico de atividade de <xref:System.Activities.Statements.ForEach%601> .  
   
- [ParallelForEach não genéricos](../../../../docs/framework/windows-workflow-foundation/samples/non-generic-parallelforeach.md)  
+ [ParallelForEach não genérico](../../../../docs/framework/windows-workflow-foundation/samples/non-generic-parallelforeach.md)  
  Demonstra como criar uma versão não genérico de atividade de <xref:System.Activities.Statements.ParallelForEach%601> .  
   
  [Obter WorkflowInstanceId](../../../../docs/framework/windows-workflow-foundation/samples/get-workflowinstanceid.md)  

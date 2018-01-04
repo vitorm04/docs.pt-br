@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b1ae4172dbdf82b4bd5bdd9a7f8afc1901fcfa3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 619c4832626693a56280c70af3ade5dbb9e9d4de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a>Como gerenciar o estouro de ToolStrip nos Windows Forms
 Quando todos os itens em uma <xref:System.Windows.Forms.ToolStrip> controle não se ajustarem no espaço reservado, você pode habilitar a funcionalidade de estouro no <xref:System.Windows.Forms.ToolStrip> e determinar o comportamento de estouro de específicos <xref:System.Windows.Forms.ToolStripItem>s.  

@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f1a0675777f6ba5e353715e22b40a62f9cac0e32
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 07025b43b690d576b71f6f5cb7d846deccf55028
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-contracts"></a>Contratos de mensagem
 Esta seção contém exemplos que demonstram os contratos de mensagem em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -29,7 +30,7 @@ Esta seção contém exemplos que demonstram os contratos de mensagem em [!INCLU
  Sem tipo solicitação-resposta  
  Demonstra como definir contratos de operação que usam a classe de mensagem.  
   
- [Mensagens sem](../../../../docs/framework/wcf/samples/unwrapped-messages.md)  
+ [Mensagens sem quebra de texto](../../../../docs/framework/wcf/samples/unwrapped-messages.md)  
  Demonstra mensagens sem. Por padrão, o corpo da mensagem é formatado, de modo que os parâmetros para uma operação de serviço são quebrados.  
   
  [Definindo as propriedades de estilo e uso](../../../../docs/framework/wcf/samples/setting-the-use-and-style-properties.md)  

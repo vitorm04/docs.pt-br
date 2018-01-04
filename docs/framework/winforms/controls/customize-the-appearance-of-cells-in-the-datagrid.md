@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 545a3bff5e810f9c0a995366e7f6460930f9e936
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 61b2a39943dfca412afa4b66265aabbf65b9ccf0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-customize-the-appearance-of-cells-in-the-windows-forms-datagridview-control"></a>Como personalizar a aparência de células no controle DataGridView dos Windows Forms
 Você pode personalizar a aparência de qualquer célula manipulando o <xref:System.Windows.Forms.DataGridView> do controle <xref:System.Windows.Forms.DataGridView.CellPainting> eventos. Você pode extrair o <xref:System.Windows.Forms.DataGridView> do controle <xref:System.Drawing.Graphics> do <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs.Graphics%2A> propriedade o <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs>. Com isso <xref:System.Drawing.Graphics>, você pode afetar a aparência de todo o <xref:System.Windows.Forms.DataGridView> controle, mas você geralmente desejará afetam apenas a aparência da célula que está atualmente sendo pintada. O <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs.ClipBounds%2A> propriedade o <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs> permite restringir as operações de pintura para a célula que está atualmente sendo pintado.  

@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aeea572bea367406b8391339748a76c8bd168a61
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3a56a3fa5ed8d470216e9c96b53e1ea21762bd2a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Passo a passo de criação de credenciais de serviço e cliente personalizados
 Este tópico mostra como implementar o cliente personalizadas e as credenciais de serviço e como usar credenciais personalizadas do código do aplicativo.  
@@ -52,9 +53,9 @@ Este tópico mostra como implementar o cliente personalizadas e as credenciais d
 ## <a name="first-in-a-series"></a>Primeiro em uma série  
  Criando uma classe de credenciais personalizado é apenas a primeira etapa, porque é o motivo para personalizar as credenciais alterar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] comportamento sobre o provisionamento de credenciais, a serialização de token de segurança ou a autenticação. Outros tópicos nesta seção descrevem como criar autenticadores e serializadores personalizados. Nesse sentido, criando a classe de credenciais personalizado é o primeiro tópico na série. As ações subsequentes (Criando autenticadores e serializadores personalizados) podem ser feitas somente depois de criar credenciais personalizadas. Tópicos adicionais que são criados com base neste tópico incluem:  
   
--   [Como: criar um provedor de Token de segurança personalizadas](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+-   [Como criar um provedor de token de segurança personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
   
--   [Como: criar um autenticador de Token de segurança personalizadas](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+-   [Como criar um autenticador de token de segurança personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
   
 -   [Como: criar um Token personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
   
@@ -197,6 +198,6 @@ Este tópico mostra como implementar o cliente personalizadas e as credenciais d
  <xref:System.IdentityModel.Selectors.SecurityTokenManager>  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
  <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>  
- [Como: criar um provedor de Token de segurança personalizadas](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
- [Como: criar um autenticador de Token de segurança personalizadas](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
- [Como: criar um Token personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)
+ [Como criar um provedor de token de segurança personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+ [Como criar um autenticador de token de segurança personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+ [Como criar um token personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)

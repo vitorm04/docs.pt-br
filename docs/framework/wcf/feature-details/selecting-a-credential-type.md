@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 455dec4adefc479433945f9f9b02708c23437991
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 629d5c55bd679539220566db17401151a1339d18
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="selecting-a-credential-type"></a>Selecionando um tipo de credencial
 *Credenciais* são os dados [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usa para estabelecer uma identidade reivindicada ou recursos. Por exemplo, o passport é uma credencial que emite um governo para comprovar nacionalidade em um país ou região. Em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], credenciais podem ter várias formas, como tokens de nome de usuário e certificados x. 509. Este tópico discute as credenciais, como eles são usados em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]e como selecionar o credencial correto para seu aplicativo.  
@@ -123,4 +124,4 @@ ms.lasthandoff: 12/02/2017
  [Conceitos de segurança](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
  [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Programação de segurança do WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
- [Segurança de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)
+ [Segurança de transporte de HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

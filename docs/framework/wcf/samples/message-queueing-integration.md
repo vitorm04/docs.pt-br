@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d2e4771ac7ed2c9dce94bc4e9da62bb0017daa30
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9e27134c9a18d5125566b582ac17cf6a95b3b83f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-queueing-integration"></a>Integração de enfileiramento de mensagem
 Esta seção contém exemplos que demonstram a integração entre o enfileiramento de mensagens e [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -29,7 +30,7 @@ Esta seção contém exemplos que demonstram a integração entre o enfileiramen
  [Demux personalizado](../../../../docs/framework/wcf/samples/custom-demux.md)  
  Demonstra como cabeçalhos de mensagens MSMQ podem ser mapeados para operações de serviço diferentes para que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços que usam <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> não está limitado a usar uma operação de serviço.  
   
- [O Windows Communication Foundation para enfileiramento de mensagens](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
+ [Windows Communication Foundation para Enfileiramento de Mensagens](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  Demonstra como um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo pode enviar uma mensagem para um aplicativo de serviço de enfileiramento de mensagens (MSMQ).  
   
  [Correlação de mensagem](../../../../docs/framework/wcf/samples/message-correlation.md)  

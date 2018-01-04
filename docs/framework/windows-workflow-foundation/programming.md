@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fd42299a217cef6125f348d47e0a5216f9e8205f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7ad763512a4f39f2d0b2e2f03b052de5b8dcc031
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-workflow-foundation-programming"></a>Programação do Windows Workflow Foundation
 Esta seção contém um conjunto de tópicos de instruções que você deve compreender para se tornar um programador proficiente de [!INCLUDE[wf](../../../includes/wf-md.md)].  

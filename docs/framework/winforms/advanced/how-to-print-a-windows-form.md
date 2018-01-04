@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9149b90317036c7c62c5fca3056bb697df56e543
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8c50b1f47d207334160ed12674ee8efb1390fb84
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-print-a-windows-form"></a>Como imprimir um formulário do Windows Forms
 Como parte do processo de desenvolvimento, geralmente convém imprimir uma cópia do seu Windows Form. O exemplo de código a seguir mostra como imprimir uma cópia do formulário atual usando o <xref:System.Drawing.Graphics.CopyFromScreen%2A> método.  
@@ -49,5 +50,5 @@ Como parte do processo de desenvolvimento, geralmente convém imprimir uma cópi
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Drawing.Printing.PrintDocument>  
- [Como Renderizar Imagens com o GDI+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)  
+ [Como renderizar imagens com o GDI+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)  
  [Como Imprimir Elementos Gráficos nos Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)

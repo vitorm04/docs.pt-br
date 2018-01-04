@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 722c37645d95009ce03bbbf813bc9f9fb2418e60
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 27ba3e94e28a1e26d370fa6daf7c93019d1e2428
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drag-and-drop-operations-and-clipboard-support"></a>Operações de arrastar e soltar e suporte à área de transferência
 Você pode habilitar operações arrastar e soltar do usuário dentro de um aplicativo baseado em Windows manipulando uma série de eventos, particularmente o <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, e <xref:System.Windows.Forms.Control.DragDrop> eventos.  
@@ -42,7 +43,7 @@ Você pode habilitar operações arrastar e soltar do usuário dentro de um apli
  Descreve como acessar os dados armazenados na área de transferência.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Funcionalidade do tipo "arrastar e soltar" nos Windows Forms](../../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)  
+ [Funcionalidade do tipo "arrastar e soltar" no Windows Forms](../../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)  
  Descreve os métodos, os eventos e as classes usados para implementar o comportamento do tipo "arrastar e soltar".  
   
  <xref:System.Windows.Forms.Control.QueryContinueDrag>  

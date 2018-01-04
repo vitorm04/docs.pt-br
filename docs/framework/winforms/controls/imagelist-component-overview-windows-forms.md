@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 02fb14b84341d594f35885be220027631999d202
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a913de1a6808c7e600a4f28ed58dedf93506466b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>Visão geral do componente ImageList (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ImageList> componente é usado para armazenar as imagens, que podem ser exibidas por controles. Uma lista de imagens permite escrever código para um catálogo de imagens único e consistente. Por exemplo, você pode girar imagens exibidas por um <xref:System.Windows.Forms.Button> controle simplesmente alterando o botão <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> ou <xref:System.Windows.Forms.ButtonBase.ImageKey%2A> propriedade. Você também pode associar a mesma lista de imagem a vários controles. Por exemplo, se você estiver usando um <xref:System.Windows.Forms.ListView> controle e um <xref:System.Windows.Forms.TreeView> controle para exibir a mesma lista de arquivos, alterando o ícone de um arquivo na lista de imagens fará com que o ícone novo para aparecer em ambos os modos de exibição.  

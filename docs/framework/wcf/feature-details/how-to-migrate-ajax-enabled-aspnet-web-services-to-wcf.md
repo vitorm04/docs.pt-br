@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fe09e2c91df0c25f070e06a39ce5e94a54062a20
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2ca8dbbffdb48c33160e3c4f7495057b9ce60c13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Como migrar serviços habilitados para AJAX ASP.NET para o WCF
 Este tópico descreve os procedimentos para migrar um serviço básico do ASP.NET AJAX para um equivalente habilitado para AJAX [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço. Ele mostra como criar um funcionalmente equivalente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] versão de um serviço ASP.NET AJAX. Os dois serviços podem ser usados lado a lado, ou o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço pode ser usado para substituir o serviço de AJAX do ASP.NET.  
@@ -223,4 +224,4 @@ d.Add("two", 2);
 |Caracteres de escape|Sempre com um escape barra (/). nunca permite sem escapados caracteres inválidos de JSON, como "\n".|Com um escape barra (/) para valores de data e hora.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: usar a configuração para adicionar um ponto de extremidade do ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+ [Como usar a configuração para adicionar um ponto de extremidade do ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

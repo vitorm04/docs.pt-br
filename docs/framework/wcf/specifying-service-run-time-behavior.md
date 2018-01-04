@@ -16,16 +16,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 117011d0ceecf04b6c73655873985dbd08768ab6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c2c1534b161f81fa90dce52c825b0417dc8fd35d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-service-run-time-behavior"></a>Especificando comportamento de tempo de execução de serviço
 Depois que você tiver criado um contrato de serviço ([Criando contratos de serviço](../../../docs/framework/wcf/designing-service-contracts.md)) e implementado o contrato de serviço ([implementando contratos de serviço](../../../docs/framework/wcf/implementing-service-contracts.md)) você pode configurar o comportamento da operação das tempo de execução do serviço. Este tópico discute o serviço fornecido pelo sistema e comportamentos de operação e descreve onde encontrar mais informações para criar novos comportamentos. Enquanto alguns comportamentos são aplicados como atributos, muitos são aplicados usando um arquivo de configuração do aplicativo ou programaticamente. [!INCLUDE[crabout](../../../includes/crabout-md.md)]como configurar seu aplicativo de serviço, consulte [Configurando os serviços de](../../../docs/framework/wcf/configuring-services.md).  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  O contrato define as entradas, saídas, tipos de dados e recursos de um serviço desse tipo. Implementar um contrato de serviço cria uma classe que, quando configurado com uma associação em um endereço, preenche o contrato que ele implementa. Contratual, associação e informações de endereço são todos conhecidos pelo cliente; sem eles, o cliente não pode fazer uso do serviço.  
   
  No entanto, as especificações de operação, como problemas ou gerenciamento de instâncias de threading são opacas para clientes. Depois que você implementou o contrato de serviço, você pode configurar um grande número de características de operação usando *comportamentos*. Comportamentos são objetos que modificam o [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] definindo uma propriedade de tempo de execução ou inserindo um tipo de personalização no tempo de execução em tempo de execução. [!INCLUDE[crabout](../../../includes/crabout-md.md)]modificando o tempo de execução Criando comportamentos definidos pelo usuário, consulte [estendendo ServiceHost e a camada de modelo de serviço](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
@@ -119,7 +120,7 @@ Depois que você tiver criado um contrato de serviço ([Criando contratos de ser
 -   <xref:System.ServiceModel.Description.TransactedBatchingBehavior>. Otimiza as operações de recebimento para os transportes que recebe suporte transacional.  
   
 ### <a name="contract-behaviors"></a>Comportamentos de contrato  
- <xref:System.ServiceModel.DeliveryRequirementsAttribute>. Especifica os requisitos de recurso associações devem fornecer para a implementação de serviço ou cliente.  
+ <xref:System.ServiceModel.DeliveryRequirementsAttribute>. Especifica os requisitos de recurso que as associações devem fornecer para a implementação do serviço ou cliente.  
   
 ### <a name="operation-behaviors"></a>Comportamentos de operação  
  Os seguintes comportamentos de operação especificar controles de serialização e a transação para operações.  
@@ -131,5 +132,5 @@ Depois que você tiver criado um contrato de serviço ([Criando contratos de ser
 -   <xref:System.ServiceModel.TransactionFlowAttribute>. Especifica o nível no qual uma operação de serviço aceita um cabeçalho de transação.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configuring Services](../../../docs/framework/wcf/configuring-services.md) (Configurando serviços)  
- [Como: controlar instanciação de serviço](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+ [Configurando serviços](../../../docs/framework/wcf/configuring-services.md)  
+ [Como controlar instanciação de serviço](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

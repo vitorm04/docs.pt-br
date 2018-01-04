@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: f0205f4bc468d4a38a50fd2be36d05583ad87906
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.workload: dotnet
+ms.openlocfilehash: e0fe14f096ae0914235ea1d23b874f0aea906d9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing-introduction"></a>Introdução ao roteamento
 O serviço de roteamento fornece um SOAP conectável genérico que é capaz de roteamento de mensagens com base no conteúdo da mensagem intermediário. Com o serviço de roteamento, você pode criar lógica complexa de roteamento que permite que você implemente cenários como agregação de serviço, controle de versão do serviço, o roteamento de prioridade e roteamento de multicast. O serviço de roteamento também fornece erro tratamento que permite que você configure listas de pontos de extremidade de backup, para que as mensagens são enviadas se ocorrer uma falha ao enviar para o ponto de extremidade de destino principal.  
@@ -413,5 +414,5 @@ using (ServiceHost serviceHost =
   
 ## <a name="see-also"></a>Consulte também  
  [Filtros de mensagem](../../../../docs/framework/wcf/feature-details/message-filters.md)  
- [Contratos de roteamento](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
+ [Roteando contratos](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
  [Escolhendo um filtro](../../../../docs/framework/wcf/feature-details/choosing-a-filter.md)

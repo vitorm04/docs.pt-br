@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 382d20c66728869ce006c35a1e44e3a56217e1c2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 63248009497152a41a6313a50ed6e7544ac62cbe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-settings-for-windows-forms"></a>Configurações do aplicativo para o Windows Forms
 O recurso Configurações de aplicativo dos Windows Forms facilita a criação, o repositório e a manutenção de aplicativos personalizados e preferências do usuário no cliente. Com as Configurações de aplicativo, é possível armazenar não apenas dados do aplicativo, como cadeias de conexão de banco de dados, mas também dados específicos do usuário, como posições da barra de ferramentas e as listas mais recentemente usadas.  
@@ -39,10 +40,10 @@ O recurso Configurações de aplicativo dos Windows Forms facilita a criação, 
  [Configurações do Aplicativo para Controles Personalizados](~/docs/framework/winforms/advanced/application-settings-for-custom-controls.md)  
  Discute o que deve ser realizado para oferecer a seus controles personalizados a capacidade de persistir as configurações de aplicativo quando estiverem hospedados em aplicativos de terceiros.  
   
- [Como Criar Configurações de Aplicativo](~/docs/framework/winforms/advanced/how-to-create-application-settings.md)  
+ [Como criar configurações de aplicativo](~/docs/framework/winforms/advanced/how-to-create-application-settings.md)  
  Demonstra como criar novas configurações do aplicativo que persistem entre sessões do aplicativo.  
   
- [Como Validar Configurações do Aplicativo](~/docs/framework/winforms/advanced/how-to-validate-application-settings.md)  
+ [Como validar configurações de aplicativo](~/docs/framework/winforms/advanced/how-to-validate-application-settings.md)  
  Demonstra como validar configurações do aplicativo antes que elas sejam persistentes.  
   
 ## <a name="related-topics"></a>Tópicos relacionados

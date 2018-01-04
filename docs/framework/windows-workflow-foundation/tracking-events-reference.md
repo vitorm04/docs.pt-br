@@ -12,11 +12,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9eaf7f8bd4d477b08cda16ca544f240a417f6b21
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5fba1e622a9be31f7db7bc0ccc05fda0997b12c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tracking-events-reference"></a>Referência de eventos de rastreamento
 Durante a execução um fluxo de trabalho aumenta de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] que acompanham eventos como se move por várias etapas no tempo de vida. O host pode assinar esses eventos e ter atualizado no status de progresso de fluxo de trabalho durante seu ciclo de vida. Os eventos de rastreamento gerados são discutidos nesta seção.  

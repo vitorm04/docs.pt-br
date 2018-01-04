@@ -12,17 +12,18 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dd5483f7889a792a658c6c230465c19939e6baab
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 39e7e8e16838c4959e67d0c9d0f5e17286e1167f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migration"></a>Migração
 Esta seção contém exemplos que demonstram como migrar [!INCLUDE[wf](../../../../includes/wf-md.md)][!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] uso de escrita de conteúdo a [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Usando um .NET Framework 3.0 ou o .NET Framework 3.5 atividade em um fluxo de trabalho do .NET Framework 4.5](../../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)  
+ [Usar uma atividade do .NET Framework 3.0 ou .NET Framework 3.5 em um fluxo de trabalho do .NET Framework 4.5](../../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)  
  Demonstra como usar a atividade de <xref:System.Activities.Statements.Interop> para passar uma cadeia de caracteres como um argumento para uma atividade personalizado de [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] .  
   
  [Usando interoperabilidade com troca de dados externa](../../../../docs/framework/windows-workflow-foundation/samples/using-interop-with-external-data-exchange.md)  

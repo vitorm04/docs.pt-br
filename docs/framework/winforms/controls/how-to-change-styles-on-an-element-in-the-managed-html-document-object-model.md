@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 968dd4210e13e301ba2f0ca24617df23706cefc0
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3726ccdebf310d831fb0d7ea21fab011293f6d99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>Como alterar estilos em um elemento no Document Object Model HTML gerenciado
 Você pode usar estilos em HTML para controlar a aparência de um documento e seus elementos. <xref:System.Windows.Forms.HtmlDocument>e <xref:System.Windows.Forms.HtmlElement> suporte <xref:System.Windows.Forms.HtmlElement.Style%2A> propriedades que usam cadeias de caracteres de estilo do seguinte formato:  
@@ -42,7 +43,7 @@ Você pode usar estilos em HTML para controlar a aparência de um documento e se
   
 ### <a name="to-process-style-changes-in-a-windows-forms-application"></a>Processar as alterações de estilo em um Aplicativo do Windows Forms  
   
-1.  Crie um novo projeto do Windows Forms.  
+1.  Criar um novo projeto dos Windows Forms.  
   
 2.  Crie um novo arquivo de classe terminando na extensão apropriada para sua linguagem de programação.  
   

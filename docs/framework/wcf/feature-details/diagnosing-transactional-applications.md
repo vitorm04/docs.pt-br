@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15bb435269ca67e8de67e8e768e98d5832556f02
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0826881bac88f2bfa933ae71b798186dafc55303
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnosticando aplicativos transacionais
 Este tópico descreve como usar o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] recurso de gerenciamento e diagnóstico para solucionar problemas de um aplicativo transacional.  
@@ -131,6 +132,6 @@ Este tópico descreve como usar o [!INCLUDE[indigo1](../../../../includes/indigo
      Isso também permite que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] rastreamento, como [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] também utiliza o <xref:System.Transactions> infraestrutura.  
   
 ## <a name="see-also"></a>Consulte também  
- [Administration and Diagnostics](../../../../docs/framework/wcf/diagnostics/index.md) (Administração e diagnósticos)  
+ [Administração e diagnósticos](../../../../docs/framework/wcf/diagnostics/index.md)  
  [Configurando o rastreamento](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [WS-AtomicTransaction Configuration Utility (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) [Utilitário de configuração de WS-AtomicTransaction (wsatConfig.exe)]
+ [Utilitário de configuração de WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

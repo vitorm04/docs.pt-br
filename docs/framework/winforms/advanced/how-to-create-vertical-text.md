@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d690700224954e71b163f6e22a25e343d7e414ce
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 8615a90094232381f2c8d51f5593276d0c01f892
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-vertical-text"></a>Como criar texto vertical
 Você pode usar um <xref:System.Drawing.StringFormat> objeto para especificar que o texto ser desenhada verticalmente em vez de horizontalmente.  

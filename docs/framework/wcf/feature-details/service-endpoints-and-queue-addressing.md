@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b2c8b85c2920133e21e7659ca0c27e28ab4a8eae
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5605c90d5f63e0ed80ac5a47b36781c45b687cba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Pontos de extremidade de serviço e endereçamento de fila
 Este tópico discute como os clientes atendem serviços leem de filas e como pontos de extremidade de serviço são mapeados para filas. Como um lembrete, a ilustração a seguir mostra o clássico [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] na fila de implantação do aplicativo.  
@@ -115,4 +116,4 @@ Este tópico discute como os clientes atendem serviços leem de filas e como pon
  Observe que você não pode usar o endereçamento net.msmq:// com `MsmqIntegrationBinding`. Porque `MsmqIntegrationBinding` dá suporte a forma livre MSMQ formato nome de endereçamento, você pode usar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço que usa esta associação para usar os recursos da lista de distribuição e multicast em MSMQ. Especificação de uma exceção `CustomDeadLetterQueue` ao usar o `MsmqIntegrationBinding`. Ele deve estar net.msmq:// a forma, semelhante a como ele é especificado usando o `NetMsmqBinding`.  
   
 ## <a name="see-also"></a>Consulte também  
- [Um aplicativo em fila de hospedagem na Web](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+ [Hospedagem na Web de um aplicativo na fila](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

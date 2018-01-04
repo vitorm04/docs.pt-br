@@ -24,11 +24,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e6926d72f5aae82588cb45d1a231e8f1b413b22c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e672c0bf6eddaef7bd0b2103fdde75ae2554dedd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="checkedlistbox-control-windows-forms"></a>Controle CheckedListBox (Windows Forms)
 Windows Forms `CheckedListBox` controle exibe uma lista de itens, como o <xref:System.Windows.Forms.ListBox> controlar e também pode exibir uma marca de seleção ao lado de itens na lista.  

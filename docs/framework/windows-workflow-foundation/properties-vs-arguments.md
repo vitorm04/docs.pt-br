@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4fcb38322d6b068095238add9334aa2d081c4a5d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b1b9083ecd147a1247209b272dfd1d7b0e3c74f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-vs-arguments"></a>Propriedades vs. Arguments
 Há várias opções disponíveis para passar dados em uma atividade. Além de usar de <xref:System.Activities.InArgument>, as atividades também podem ser desenvolvidas que recebem dados usando propriedades padrão de CLR ou propriedades públicas de <xref:System.Activities.ActivityAction> . Este tópico discute como selecionar o tipo apropriado do método.  

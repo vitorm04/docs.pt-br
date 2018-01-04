@@ -16,11 +16,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 89be7e347556c8ec34296044f17fbfd4450bc127
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d2f15dc4bb3bd4a6d1163823509f0f2c2bf2c11a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework
 Os controles do Windows Forms são componentes reutilizáveis que encapsulam a funcionalidade de interface do usuário e são usados em aplicativos Windows do lado do cliente. O Windows Forms não só fornece vários controles prontos para usar como também proporciona a infraestrutura para desenvolver seus próprios controles. É possível combinar os controles existentes, ampliar os controles existentes e fazer seus controles personalizados. Esta seção fornece informações básicas e exemplos para ajudar a desenvolver controles do Windows Forms.  
@@ -29,7 +30,7 @@ Os controles do Windows Forms são componentes reutilizáveis que encapsulam a f
  [Visão geral do uso de controles no Windows Forms](../../../../docs/framework/winforms/controls/overview-of-using-controls-in-windows-forms.md)  
  Destaca os elementos essenciais do uso de controles em aplicativos do Windows Forms.  
   
- [Variedades de Controles Personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
  Descreve os diferentes tipos de controles personalizados, você pode criar com o <xref:System.Windows.Forms?displayProperty=nameWithType> namespace.  
   
  [Noções básicas sobre o desenvolvimento de controles dos Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)  
@@ -41,7 +42,7 @@ Os controles do Windows Forms são componentes reutilizáveis que encapsulam a f
  [Eventos em controles do Windows Forms](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
  Descreve como manipular e definir eventos nos controles do Windows Forms.  
   
- [Atributos em controles do Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+ [Atributos em controles dos Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
  Descreve os atributos que você pode aplicar a propriedades ou outros membros de seus controles e componentes personalizados.  
   
  [Pintura e renderização de controle personalizado](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fc0190747545e9325b62453bc79d163d3e566791
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 75723b03468c2e7aeda765f2dabfc30e394c8c88
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-visual-studio-templates"></a>Modelos do Visual Studio do WCF
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] modelos são modelos predefinidos de projeto e item, você pode usar em [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] para criar rapidamente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ao redor de aplicativos e serviços.  
@@ -93,5 +94,5 @@ ms.lasthandoff: 12/02/2017
 >  O serviço do WCF habilitado para Silverlight expõe um `basicHttpBinding` ponto de extremidade sem habilitar as configurações de segurança. Portanto, as informações sobre o serviço podem ser obtidas por todos os clientes que se conectam a este serviço. Mensagens trocadas entre o serviço e o cliente também não estão assinadas ou criptografadas. Para proteger corretamente o ponto de extremidade, você deve usar a autenticação do ASP.NET, HTTPS ou outros mecanismos.  
   
 ## <a name="see-also"></a>Consulte também  
- [WCF Service Host (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md) [Host de serviço do WCF (WcfSvcHost.exe)]  
- [WCF Test Client (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md) [Cliente de teste do WCF (WcfTestClient.exe)]
+ [Host de serviço do WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
+ [Cliente de teste do WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

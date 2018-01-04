@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9324a7b2634eb7a42b2dbd00814e9647e6741369
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ffe7d050de84eba8c7962a62a8604a72f78bc2bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a>Como copiar e colar um controle ElementHost em tempo de design
 Este procedimento mostra como copiar um controle Windows Presentation Foundation (WPF) em um Windows Form.  

@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7455f2b45e47a6d72118055bd891f7c297b56483
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1c4e51f65df010f466f43c2018d9b1eec6e4ca58
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="nesting-of-transactionscope-within-a-service"></a>Aninhamento de TransactionScope em um serviço
 Este exemplo consiste de dois cenários que executam a visualização como manipular instâncias de atividade de <xref:System.Activities.Statements.TransactionScope> em um serviço. A transação é iniciada primeiro usando a atividade de <xref:System.Activities.Statements.TransactionScope> para criar uma nova transação no cliente e em <xref:System.ServiceModel.Activities.TransactedReceiveScope> para receber e escopo o tempo de vida de transação no servidor. O primeiro cenário dentro do serviço executa uma atividade new de <xref:System.Activities.Statements.TransactionScope> para demonstrar aninhamento de atividades de <xref:System.Activities.Statements.TransactionScope> dentro do serviço. O segundo cenário mostra como os intervalos são respeitados dentro das atividades aninhados de <xref:System.Activities.Statements.TransactionScope> .  

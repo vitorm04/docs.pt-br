@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d00f8847e64e30b42490f319ea3e1df5e5a1850d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c87e384b3186a1dd4b53ba6c21d92bf4d0e6a8c7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Filas no Windows Communication Foundation
 Os tópicos desta seção discutem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] suporte para filas. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oferece suporte para enfileiramento de mensagens, aproveitando o enfileiramento de mensagens do Microsoft (anteriormente conhecido como MSMQ) como um transporte e permite que os seguintes cenários:  
@@ -40,16 +41,16 @@ Os tópicos desta seção discutem [!INCLUDE[indigo1](../../../../includes/indig
  [Enfileiramento no WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  Uma visão geral de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] suporte de fila.  
   
- [Como: Exchange mensagens em fila com pontos de extremidade do WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [Como trocar mensagens na fila com pontos de extremidade do WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
  Explica como usar o <xref:System.ServiceModel.NetMsmqBinding> classe para a comunicação entre um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente e [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço.  
   
- [Como: trocar mensagens com pontos de extremidade do WCF e aplicativos de enfileiramento de mensagens](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ [Como trocar mensagens com pontos de extremidade do WCF e aplicativos de enfileiramento de mensagens](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
  Explica como usar o <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> para comunicação entre [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e aplicativos de enfileiramento de mensagens.  
   
  [Agrupamento de mensagens em fila em uma sessão](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
  Explica como agrupar mensagens em uma fila para facilitar o processamento de mensagem correlacionado a um único aplicativo de recebimento.  
   
- [Mensagens de lote em uma transação](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ [Mensagens em lote em uma transação](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
  Explica como lote de mensagens em uma transação.  
   
  [Usando filas de mensagens mortas para lidar com falhas de transferência de mensagem](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
@@ -58,16 +59,16 @@ Os tópicos desta seção discutem [!INCLUDE[indigo1](../../../../includes/indig
  [Manipulação de mensagens suspeitas](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
  Explica como manipular mensagens suspeitas (mensagens excederam o número máximo de tentativas de entrega para o aplicativo de recebimento).  
   
- [Diferenças de funcionalidades em fila no Windows Vista, Windows Server 2003 e Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
+ [Diferenças de recursos da Fila no Windows Vista, Windows Server 2003 e Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
  Resume as diferenças entre o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] filas de recurso entre [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
- [Protegendo mensagens usando a segurança de transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
+ [Protegendo mensagens usando a segurança do transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
  Descreve como usar a segurança de transporte para proteger mensagens em fila.  
   
  [Protegendo as mensagens com segurança de mensagem](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
  Descreve como usar a segurança de mensagem para proteger mensagens em fila.  
   
- [Solucionando problemas de mensagens em fila](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)  
+ [Solução de problemas de mensagens em fila](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)  
  Explica como solucionar problemas comuns de enfileiramento de mensagens.  
   
  [Práticas recomendadas para a comunicação em fila](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  

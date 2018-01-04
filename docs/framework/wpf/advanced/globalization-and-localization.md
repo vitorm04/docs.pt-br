@@ -21,11 +21,12 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cbfd7be17e2e9472afbd5ad00dad2ca104ee1854
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e9191778cdb8c57c5cf4628a072ea20fae532e81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="globalization-and-localization"></a>Globalização e localização
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]fornece amplo suporte para o desenvolvimento de aplicativos prontos para o mundo.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/22/2017
  [Visão geral do uso de layout automático](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
  [Atributos de localização e comentários](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)  
  [Visão geral dos recursos bidirecionais no WPF](../../../../docs/framework/wpf/advanced/bidirectional-features-in-wpf-overview.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/advanced/globalization-and-localization-how-to-topics.md)  
+ [Tópicos de instruções](../../../../docs/framework/wpf/advanced/globalization-and-localization-how-to-topics.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Globalization>  
