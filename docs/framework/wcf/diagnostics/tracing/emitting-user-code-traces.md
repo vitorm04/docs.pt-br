@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2162377fbe8f8329c12dfd88a55d893d26f5b2bf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a71ab8d8b4f96900e6d0f83541b6ae17f09ddeee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="emitting-user-code-traces"></a>Emitindo traços de código de usuário
 Além de habilitar o rastreamento na configuração para coletar dados de instrumentação gerados por [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], você também pode emitir rastreamentos programaticamente no código do usuário. Dessa forma, você pode criar proativamente dados de instrumentação que você pode examinar posteriormente para fins de diagnóstico. Este tópico discute como você pode fazer isso.  
@@ -151,4 +152,4 @@ Modo de exibição de gráfico de correlação de erro
  Definir atividades e propagação a ID de atividade nos permitem realizar correlação erro direto entre pontos de extremidade. Dessa forma, pode localizar a causa de um erro mais rapidamente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Estendendo rastreamento](../../../../../docs/framework/wcf/samples/extending-tracing.md)
+ [Estendendo o rastreamento](../../../../../docs/framework/wcf/samples/extending-tracing.md)

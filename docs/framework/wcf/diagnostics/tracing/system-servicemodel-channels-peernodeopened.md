@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3c7c09a6213f06aeda90548edfd72a0dc7ae8c00
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2e067aa093b820d96fcc96b1505b096dfec46769
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelspeernodeopened"></a>System.ServiceModel.Channels.PeerNodeOpened
 Uma nova conexão de vizinho foi aberto com êxito.  
@@ -27,5 +28,5 @@ Uma nova conexão de vizinho foi aberto com êxito.
   
 ## <a name="see-also"></a>Consulte também  
  [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Usando o rastreamento para solucionar problemas de seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md) (Administração e diagnósticos)
+ [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "50"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 616751adfd14e2f07de764b37d684ecdc276847b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9a07aed6ade7d5eb806b666711a49c0b9507d3ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="analytic-trace-event-reference"></a>Referência de evento de rastreamento analítico
 A tabela a seguir define os níveis de eventos, identificadores e as mensagens associadas a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] rastreamento analítico.  
@@ -59,7 +60,7 @@ A tabela a seguir define os níveis de eventos, identificadores e as mensagens a
 |[301 - UserDefinedErrorOccurred](../../../../../docs/framework/wcf/diagnostics/etw/301-userdefinederroroccurred.md)|Erro|Nome: '%1', referência: '%2', carga: %3.|UserEvents, HealthMonitoring, EndToEndMonitoring, solução de problemas, ServiceModel|  
 |[302 - UserDefinedWarningOccurred](../../../../../docs/framework/wcf/diagnostics/etw/302-userdefinedwarningoccurred.md)|Aviso|Nome: '%1', referência: '%2', carga: %3.|UserEvents, HealthMonitoring, EndToEndMonitoring, solução de problemas, ServiceModel|  
 |[303 - UserDefinedInformationEventOccured](../../../../../docs/framework/wcf/diagnostics/etw/303-userdefinedinformationeventoccured.md)|Informações|Nome: '%1', referência: '%2', carga: %3.|UserEvents, HealthMonitoring, EndToEndMonitoring, solução de problemas, ServiceModel|  
-|[401 - StopSignPostEvent](../../../../../docs/framework/wcf/diagnostics/etw/401-stopsignpostevent.md)|Informações|Limite de atividade.|Solução de problemas|  
+|[401- StopSignPostEvent](../../../../../docs/framework/wcf/diagnostics/etw/401-stopsignpostevent.md)|Informações|Limite de atividade.|Solução de problemas|  
 |[402 - StartSignpostEvent](../../../../../docs/framework/wcf/diagnostics/etw/402-startsignpostevent.md)|Informações|Limite de atividade.|Solução de problemas|  
 |[403 - SuspendSignpostEvent](../../../../../docs/framework/wcf/diagnostics/etw/403-suspendsignpostevent.md)|Informações|Limite de atividade.|Solução de problemas|  
 |[404 - ResumeSignpostEvent](../../../../../docs/framework/wcf/diagnostics/etw/404-resumesignpostevent.md)|Informações|Limite de atividade.|Solução de problemas|  
@@ -368,7 +369,7 @@ A tabela a seguir define os níveis de eventos, identificadores e as mensagens a
 |[5605 - SessionCookieReadingSuccess](../../../../../docs/framework/wcf/diagnostics/etw/5605-sessioncookiereadingsuccess.md)|Detalhado|Token de sessão de leitura do cookie de sessão bem-sucedida.|Segurança|  
 |[5606 - PrincipalSettingFromSessionTokenStarted](../../../../../docs/framework/wcf/diagnostics/etw/5606-principalsettingfromsessiontokenstarted.md)|Detalhado|Configuração principal do token de sessão iniciada.|Segurança|  
 |[5607 - PrincipalSettingFromSessionTokenSuccess](../../../../../docs/framework/wcf/diagnostics/etw/5607-principalsettingfromsessiontokensuccess.md)|Detalhado|Configuração principal do token de sessão bem-sucedida.|Segurança|  
-|[57393 - appDomainUnload](../../../../../docs/framework/wcf/diagnostics/etw/57393-appdomainunload.md)|Informações|O descarregamento do AppDomain. AppDomain.FriendlyName %1, ProcessName %2, ProcessId %3.|Infraestrutura|  
+|[57393 - AppDomainUnload](../../../../../docs/framework/wcf/diagnostics/etw/57393-appdomainunload.md)|Informações|O descarregamento do AppDomain. AppDomain.FriendlyName %1, ProcessName %2, ProcessId %3.|Infraestrutura|  
 |[57394 - HandledException](../../../../../docs/framework/wcf/diagnostics/etw/57394-handledexception.md)|Informações|Tratando uma exceção.|Infraestrutura|  
 |[57395 - ShipAssertExceptionMessage](../../../../../docs/framework/wcf/diagnostics/etw/57395-shipassertexceptionmessage.md)|Erro|Ocorreu uma falha inesperada. Aplicativos não devem tentar manipular esse erro. Para fins de diagnóstico, esta mensagem em inglês está associada à falha: %1.|Infraestrutura|  
 |[57396 - ThrowingException](../../../../../docs/framework/wcf/diagnostics/etw/57396-throwingexception.md)|Aviso|Gerar uma exceção. Fonte de %1.|Infraestrutura|  

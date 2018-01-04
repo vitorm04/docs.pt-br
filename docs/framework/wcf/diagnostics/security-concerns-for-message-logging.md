@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 1f3d62e8b6771666dd3a55855ca0c5e41853f439
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87815be1f0951d54a8d9eedbfdcaca038fa6fe09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-concerns-for-message-logging"></a>Problemas de segurança de registro em log de mensagens
 Este tópico descreve como você pode proteger dados confidenciais de serem expostas em logs de mensagem, bem como os eventos gerados pelo log de mensagens.  
@@ -120,5 +121,5 @@ Este tópico descreve como você pode proteger dados confidenciais de serem expo
  Esses eventos podem ser exibidos na ferramenta do Visualizador de eventos que vem com o Windows. Para obter mais informações sobre isso, consulte [log de eventos](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Log de mensagens](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
+ [Registro de mensagens em log](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
  [Questões de segurança e dicas úteis para rastreamento](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)

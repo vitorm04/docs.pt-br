@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4aa9cacfaa966bbe37618406f4b1413dec433726
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d26386a0669c92b1b21559474c8f5f61862e6de7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="administration-and-diagnostics"></a>Administração e diagnósticos
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Fornece um rico conjunto de funcionalidades que podem ajudá-lo a monitorar os diferentes estágios de vida do aplicativo. Por exemplo, você pode usar a configuração para configurar serviços e clientes na implantação. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]inclui um grande conjunto de contadores de desempenho para ajudá-lo a avaliar o desempenho do aplicativo. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]também expõe dados de inspeção de um serviço em tempo de execução por meio de um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provedor do Windows Management Instrumentation (WMI). Quando o aplicativo apresenta uma falha ou inicia funcionando incorretamente, você pode usar o Log de eventos para ver se algo significativo ocorreu. Você também pode usar a mensagem de log e rastreamento para ver quais eventos estão acontecendo ponta em seu aplicativo. Esses recursos ajudar os desenvolvedores e profissionais de TI para solucionar problemas de um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo quando ele não está funcionando corretamente.  
@@ -53,12 +54,12 @@ ms.lasthandoff: 12/02/2017
  [Configurar seu aplicativo](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)  
  [Serviços de implantação](../../../../docs/framework/wcf/diagnostics/deploying-services.md)  
  [Referência de exceções](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)  
- [Log de eventos](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Log de mensagens](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
- [Configuration Editor Tool (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) (Ferramenta Editor de configuração (SvcConfigEditor.exe))  
- [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) (Ferramenta Visualizador de rastreamento de serviço (SvcTraceViewer.exe))  
+ [Registro de eventos em log](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Registro de mensagens em log](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
+ [Ferramenta Editor de configuração (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
+ [Ferramenta Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
  [Ferramenta de registro de ServiceModel](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)  
  [Rastreamento](../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Usando o Windows Management Instrumentation para diagnóstico](../../../../docs/framework/wcf/diagnostics/wmi/index.md)  
+ [Usando a Instrumentação de Gerenciamento do Windows para diagnóstico](../../../../docs/framework/wcf/diagnostics/wmi/index.md)  
  [Contadores de desempenho](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)  
  [Ferramentas do Windows Communication Foundation](../../../../docs/framework/wcf/tools.md)

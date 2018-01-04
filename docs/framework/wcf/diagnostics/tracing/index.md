@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3d57517daaf78e737ea4417d5d46cf33400ff97a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 75870850a7df01d255d3512dde2a550e2a6c205a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tracing"></a>Rastreamento
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]Fornece dados de diagnóstico e de instrumentação do aplicativo para análise e monitoramento de falhas. Você pode usar o rastreamento em vez de um depurador para entender como um aplicativo está funcionando, ou por que ele falha. Você também pode correlacionar processamento e falhas em componentes para fornecer uma experiência de ponta a ponta.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/02/2017
   
  Esta seção descreve como você pode usar o rastreamento de atividade e a propagação de correlação de ponta a ponta para auxiliar a depuração.  
   
- [Usando o rastreamento para solucionar problemas de seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
   
  Esta seção descreve como você pode usar o rastreamento para depurar seu aplicativo.  
   
@@ -50,4 +51,4 @@ ms.lasthandoff: 12/02/2017
  Este tópico lista todos os rastreamentos gerados pelo [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
- [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) (Ferramenta Visualizador de rastreamento de serviço (SvcTraceViewer.exe))
+ [Ferramenta Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
