@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a1e1b57a1b5a4dfc29a1c6ee4eee7fb1ffc8f72f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 40fbc768f060dc7f3d602ab625d3e71808868346
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="missingnecessaryenhancedkeyusage"></a>MissingNecessaryEnhancedKeyUsage
 ID: 157  
@@ -30,5 +31,5 @@ ID: 157
  Esse evento indica que um certificado de identidade com o nome de assunto específico e a impressão digital não fornece os dados específicos entre seus EnhancedKeyUsages. O evento lista o nome de processo e a ID de processo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Log de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Registro de eventos em log](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [Referência geral de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

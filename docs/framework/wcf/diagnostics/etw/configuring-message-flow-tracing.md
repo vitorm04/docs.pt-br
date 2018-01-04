@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cfac12fc0c5fbaabf612bbd8cc950f93a59a54c8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8df32a64c07db8a45dfb41a46e7a65a92fbef434
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-message-flow-tracing"></a>Configurando rastreamento de fluxo de mensagem
 Quando [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] atividade de rastreamento está habilitada, IDs de atividade de ponta a ponta são atribuídos às atividades lógicas em todo o [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] pilha. Em [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)], agora há uma versão de desempenho superior desse recurso que funciona com evento rastreamento do Windows (ETW) chamado de rastreamento de fluxo de mensagem. Quando habilitada, IDs de atividade de ponta a ponta são obtidas (ou atribuídos ao se vazia) mensagens de entrada e são propagadas para todos os eventos de rastreamento que são emitidos depois que a mensagem tem sido decodificada pelo canal. Os clientes podem usar esse recurso para reconstruir os fluxos de mensagens com logs de rastreamento de serviços diferentes após a decodificação.  

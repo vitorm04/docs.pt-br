@@ -21,11 +21,12 @@ caps.latest.revision: "29"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7ff2c57be82166ecf5eb8a012491044eb2cb79d4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: dc3d490284e371aefb2de712cb5721b0246caa6a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="setting-up-a-profiling-environment"></a>Configurando um ambiente de criação de perfil
 > [!NOTE]
@@ -104,4 +105,4 @@ pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)
  Essa técnica também leva a cada processo CLR obtendo atribuído. O criador de perfil deve adicionar a lógica para sua [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) retorno de chamada para detectar se o processo atual é de interesse. Se não for, o criador de perfil pode falhar o retorno de chamada sem executar a inicialização.  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)
+ [Visão geral da criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)

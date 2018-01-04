@@ -38,11 +38,12 @@ caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6d7918a369b5a5656fa2e059bdaaf6c211bd022c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 84688ed80d0cb1b802290176400eb45998052a34
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-overview"></a>Visão geral da criação de perfil
 <a name="top"></a>Um criador de perfil é uma ferramenta que monitora a execução de outro aplicativo. Um criador de perfil de tempo de execução (CLR) de linguagem comum é uma biblioteca de vínculo dinâmico (DLL) que consiste em funções que recebem mensagens e enviam mensagens para o CLR usando a API de criação de perfil. O criador de perfil DLL é carregado pelo CLR em tempo de execução.  
@@ -239,6 +240,6 @@ Arquitetura de criação de perfil
 |-----------|-----------------|  
 |[Configurando um ambiente de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|Explica como inicializar um criador de perfil, defina as notificações de eventos e criar o perfil de um serviço do Windows.|  
 |[Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|Descreve as interfaces não gerenciadas que usa a API de criação de perfil.|  
-|[Funções estáticas globais de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)|Descreve as funções estáticas globais não gerenciadas que usa a API de criação de perfil.|  
-|[Enumerações de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)|Descreve as enumerações não gerenciadas que usa a API de criação de perfil.|  
+|[Criando perfil de funções estáticas globais](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)|Descreve as funções estáticas globais não gerenciadas que usa a API de criação de perfil.|  
+|[Criando perfil de enumerações](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)|Descreve as enumerações não gerenciadas que usa a API de criação de perfil.|  
 |[Estruturas de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)|Descreve as estruturas não gerenciadas que usa a API de criação de perfil.|

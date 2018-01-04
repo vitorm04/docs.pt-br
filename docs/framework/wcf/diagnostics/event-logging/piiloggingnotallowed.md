@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ea85d3acc7b332a641726ab565409f1bdf1c51ba
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 44c4c1bbd42b2bf66c83899623012d6b07c1a2f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="piiloggingnotallowed"></a>PiiLoggingNotAllowed
 ID: 108  
@@ -30,5 +31,5 @@ ID: 108
  Esse evento indica que nenhum PII conhecido está sendo registrado. Log de PII conhecido não é permitido. Para permitir o registro em log de PII conhecido, defina "enableLoggingKnownPii" `true` em Machine. config. O evento lista o nome de processo e a ID de processo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Log de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Registro de eventos em log](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [Referência geral de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

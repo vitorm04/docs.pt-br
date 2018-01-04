@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 826a83e60f73b414fbeb37335d74597e57bee1cc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e922b749792b541083b991340731796be1772c61
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationservicehostcreatedservicecontract"></a>System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceContract
 System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceContract  
@@ -27,5 +28,5 @@ System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceContra
   
 ## <a name="see-also"></a>Consulte também  
  [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Usando o rastreamento para solucionar problemas de seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md) (Administração e diagnósticos)
+ [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)

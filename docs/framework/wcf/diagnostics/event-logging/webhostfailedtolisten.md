@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a6225e20fd47b329564ba1b61398f5d3391a172
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 70607b0799f03e5e0132f02fc4bbc1fa2d4d25bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="webhostfailedtolisten"></a>WebHostFailedToListen
 ID: 112  
@@ -30,5 +31,5 @@ ID: 112
  Esse evento indica que ocorreu um erro ao tentar ouvir a URL específica. Esse processo de trabalho é encerrado. O evento lista a exceção, o nome do processo e a ID de processo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Log de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Registro de eventos em log](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [Referência geral de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

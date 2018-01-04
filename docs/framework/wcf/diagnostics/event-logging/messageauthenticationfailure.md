@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e079b74b67979e420aa7a83067785d5b128841a0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 666163638cafdf4c090fbc9d9b76902631435442
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="messageauthenticationfailure"></a>MessageAuthenticationFailure
 ID: 170  
@@ -30,5 +31,5 @@ ID: 170
  Esse evento indica que houve falha na autenticação de mensagem. O evento lista o serviço, a ação, a identidade do cliente e a atividade de ID.  
   
 ## <a name="see-also"></a>Consulte também  
- [Log de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Registro de eventos em log](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [Referência geral de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c8df18807239302a744159e4ad552a37471152c5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: de207e95b9fa0e747b00dbcd7a211e41723e46cf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="complusinvokingmethodfailed"></a>ComPlusInvokingMethodFailed
 ID: 133  
@@ -27,5 +28,5 @@ ID: 133
  Categoria: ServiceModel  
   
 ## <a name="see-also"></a>Consulte também  
- [Log de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Registro de eventos em log](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [Referência geral de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

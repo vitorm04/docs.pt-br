@@ -14,11 +14,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2dd456401073d8c7f3c7bc9fbfbe5c11dbbd4e58
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3492821d56f7089c2aa53bba566690ded02f8a5b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="analytic-tracing-overview"></a>Visão geral de rastreamento analítico
 Rastreamento analítico em [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] é um alto desempenho e o recurso de rastreamento de verbosidade baixa conjunto sobre o evento de rastreamento para Windows (ETW). ETW é executado no nível do kernel para reduzir significativamente a sobrecarga de operações de rastreamento. Ele com eficiência armazena em buffer os eventos de modo de usuário e do kernel e permite habilitar dinâmico de log sem a necessidade de serviço será reiniciado. Os dados de rastreamento estão disponíveis no caso de logs depois que ele foi emitido e recebidas.  

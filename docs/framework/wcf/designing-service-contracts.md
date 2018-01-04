@@ -17,11 +17,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3204e4c280c6c1acd50062fa44b46344926c3908
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 293d7f8502b39eac6508ba10b2fac128c6aa4879
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="designing-service-contracts"></a>Criando contratos de serviço
 Este tópico descreve qual serviço os contratos são, como elas são definidas, as operações que estão disponíveis (e as implicações para as trocas de mensagens subjacente), quais tipos de dados são usados e outros problemas que ajudarão a criar operações que atendem a requisitos do seu cenário.  
@@ -279,12 +280,12 @@ End Interface
  Um resultado é que, se os nomes e os namespaces não são explicitamente definidas, o uso de ofuscação de IL no assembly altera os nomes de tipo de contrato e namespaces e resultados de WSDL modificado e trocas de transmissão que normalmente não. Se você não definir os nomes de contrato e os namespaces explicitamente, mas pretende usar ofuscamento, use o <xref:System.Reflection.ObfuscationAttribute> e <xref:System.Reflection.ObfuscateAssemblyAttribute> namespaces e nomes de tipo de atributos para impedir a modificação do contrato.  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: criar um contrato de solicitação-resposta](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)  
- [Como: criar um contrato unidirecional](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)  
- [Como: criar um contrato Duplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [Como criar um contrato de solicitação-resposta](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)  
+ [Como criar um contrato unidirecional](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)  
+ [Como criar um contrato duplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
  [Especificando transferência de dados em contratos de serviço](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
- [Specifying and Handling Faults in Contracts and Services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md) (Especificando e lidando com falhas em contratos e serviços)  
- [Using Sessions](../../../docs/framework/wcf/using-sessions.md) (Usando sessões)  
+ [Especificando e lidando com falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
+ [Usando sessões](../../../docs/framework/wcf/using-sessions.md)  
  [Operações síncronas e assíncronas](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)  
- [Reliable Services](../../../docs/framework/wcf/reliable-services.md) (Serviços confiáveis)  
- [Services and Transactions](../../../docs/framework/wcf/services-and-transactions.md) (Serviços e transações)
+ [Serviços confiáveis](../../../docs/framework/wcf/reliable-services.md)  
+ [Serviços e transações](../../../docs/framework/wcf/services-and-transactions.md)

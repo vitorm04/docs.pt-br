@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cd9dce1745c1a110ac2cbadd497c02c1323a2338
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4fe80e3785a579d429acb9026748787dd9a27379
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="participantrecoverylogentrycorrupt"></a>ParticipantRecoveryLogEntryCorrupt
 ID: 138  
@@ -30,5 +31,5 @@ ID: 138
  Esse evento indica que uma entrada de log de recuperação de participante foi corrompida e não pôde ser desserializada. Pode haver perda de dados desse erro. A ID da transação de listas de eventos, dados de recuperação (codificação Base64), exceção, nome do processo e processo de identificação.  
   
 ## <a name="see-also"></a>Consulte também  
- [Log de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Registro de eventos em log](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [Referência geral de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

@@ -16,23 +16,24 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1c3f5a197be1ace2fc4f039baf783492db77bed7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9d50ab37a90df418b031cb8aba5d84f0bbac9a1d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-clients"></a>Compilando clientes
 Os tópicos nesta seção demonstram como criar e usar um [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] cliente.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [WCF Client Overview](../../../docs/framework/wcf/wcf-client-overview.md) (Visão geral do cliente do WCF)  
+ [Visão geral do cliente do WCF](../../../docs/framework/wcf/wcf-client-overview.md)  
  Fornece uma visão geral de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] clientes e como elas funcionam.  
   
- [Accessing Services Using a WCF Client](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md) (Usando um cliente do WCF para acessar serviços)  
+ [Usando um cliente do WCF para acessar serviços](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
  Descreve o método básico da criação de um [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] objeto cliente para uso em um aplicativo cliente.  
   
- [Securing Clients](../../../docs/framework/wcf/securing-clients.md) (Protegendo clientes)  
+ [Protegendo clientes](../../../docs/framework/wcf/securing-clients.md)  
  Descreve como configurar a segurança [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] clientes.  
   
 ## <a name="reference"></a>Referência  
@@ -51,6 +52,6 @@ Os tópicos nesta seção demonstram como criar e usar um [!INCLUDE[indigo1](../
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Hosting Services](../../../docs/framework/wcf/hosting-services.md) (Hospedando serviços)  
+ [Hospedando serviços](../../../docs/framework/wcf/hosting-services.md)  
   
- [Designing and Implementing Services](../../../docs/framework/wcf/designing-and-implementing-services.md) (Serviços de design e implantação)
+ [Serviços de design e implantação](../../../docs/framework/wcf/designing-and-implementing-services.md)

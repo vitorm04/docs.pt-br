@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bfedfbd0177018de4affce67f16ee5f713f7d5de
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7aecdcecedcee98828b398f9172985d2e09fb9be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-intermediaries"></a>Práticas recomendadas: intermediárias
 Deve-se ter cuidado para lidar com falhas corretamente ao chamar intermediários para certificar-se de canais do lado do serviço em intermediária estão fechados corretamente.  
@@ -43,5 +44,5 @@ catch (Exception e)
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [WCF Error Handling](../../../docs/framework/wcf/wcf-error-handling.md) (Tratamento de erro do WCF)  
- [Specifying and Handling Faults in Contracts and Services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md) (Especificando e lidando com falhas em contratos e serviços)
+ [Tratamento de erro do WCF](../../../docs/framework/wcf/wcf-error-handling.md)  
+ [Especificando e lidando com falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

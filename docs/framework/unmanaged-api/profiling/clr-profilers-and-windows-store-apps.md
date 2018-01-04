@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: db1152e82edde34dc8dbaba09f20b9f769dffbca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d884b80ba8ccc42d1b6acc671db408305a095a7d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Criadores de perfil CLR e aplicativos da Windows Store
 Este tópico discute o que você precisa pensar sobre quando gravar ferramentas de diagnóstico que analisam gerenciado código em execução dentro de um aplicativo da Windows Store.  Ele também fornece diretrizes para modificar suas ferramentas de desenvolvimento para que eles continuem a funcionar quando você executá-los nos aplicativos da Windows Store.  Para entender essas informações, é melhor que se você estiver familiarizado com o idioma em tempo de execução de criação de perfil API comum, você já tiver usado essa API em uma ferramenta de diagnóstica que é executado corretamente em relação a aplicativos de área de trabalho do Windows e você agora está interessado em modificando a ferramenta para executar corretamente em aplicativos da Windows Store.  

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be20fa22484cb002792a5bc714f2009fb342f644
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7b82c1821362b874f38f9419269708a7f61ab690
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exceptions-reference"></a>Referência de exceções
 Esta seção lista todas as exceções nas seguintes áreas geradas por [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]:  
@@ -28,23 +29,23 @@ Esta seção lista todas as exceções nas seguintes áreas geradas por [!INCLUD
   
  [Configuração](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)  
   
- [Comunicações principais: Estrutura de canal](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-channel-framework.md)  
+ [Comunicações principais: estrutura de canais](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-channel-framework.md)  
   
- [Comunicações principais: Estrutura de Conexão](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-connection-framework.md)  
+ [Comunicações principais: estrutura de conexão](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-connection-framework.md)  
   
  Comunicações principais: canais de transportes de HTTP/HTTPS  
   
- [Comunicações principais: Canais de transporte Duplex internos](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-internal-duplex-transport-channels.md)  
+ [Comunicações principais: canais de transporte duplex internos](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-internal-duplex-transport-channels.md)  
   
- [Comunicações principais: Canais de transporte de Pipe nomeado](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-named-pipe-transport-channels.md)  
+ [Comunicações principais: canais de transporte de pipe nomeado](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-named-pipe-transport-channels.md)  
   
- [Comunicações principais: Canais de transporte TCP](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-tcp-transport-channels.md)  
+ [Comunicações principais: canais de transporte TCP](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-tcp-transport-channels.md)  
   
- [Comunicações principais: Estrutura de transporte](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-transport-framework.md)  
+ [Comunicações principais: estrutura de transporte](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-transport-framework.md)  
   
  [Comunicações principais: utilitários](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-utilities.md)  
   
- [Comunicações principais: Suporte de Webhost](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-webhost-support.md)  
+ [Comunicações principais: suporte de Webhost](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-webhost-support.md)  
   
  [Transação](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/transaction-exceptions.md)  
   
@@ -54,9 +55,9 @@ Esta seção lista todas as exceções nas seguintes áreas geradas por [!INCLUD
   
  [Transporte de integração do MSMQ](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/msmq-integration-transport.md)  
   
- [Transporte MSMQ](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/msmq-transport.md)  
+ [Transporte de MSMQ](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/msmq-transport.md)  
   
- [Mensagens confiáveis](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/reliable-messaging.md)  
+ [Reliable Messaging](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/reliable-messaging.md)  
   
  [Exceções de segurança](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/security-exceptions.md)  
   

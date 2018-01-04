@@ -19,16 +19,17 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 754c938242035549b9deb94a2fe3b975b1384fc0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 713b9594ac628c2c256e8592d3894feee8029332
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="defining-and-specifying-faults"></a>Definindo e especificando falhas
 Falhas de SOAP transmitem condição informações de erro de um serviço para um cliente e, no caso de duplex, de um cliente para um serviço de forma interoperável. Este tópico discute quando e como definir o conteúdo de falhas personalizado e especificar quais operações podem retorná-los. [!INCLUDE[crabout](../../../includes/crabout-md.md)]como um serviço ou cliente duplex, pode enviar as falhas e como um cliente ou aplicativo de serviço lida com essas falhas, consulte [enviando e recebendo falhas](../../../docs/framework/wcf/sending-and-receiving-faults.md). Para obter uma visão geral de tratamento de erros em [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplicativos, consulte [especificando e tratamento de falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  Declarado falhas de SOAP são aquelas em que uma operação tem um <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> que especifica um tipo personalizado de falhas SOAP. Falhas de SOAP não declaradas são aqueles que não são especificados no contrato para uma operação. Este tópico ajuda você a identificar as condições de erro e criar um contrato de falha para o serviço que os clientes podem usar para lidar adequadamente com essas condições de erro quando notificado por falhas de SOAP personalizadas. As tarefas básicas são, em ordem:  
   
 1.  Defina as condições de erro que um cliente do seu serviço deve conhecer.  
@@ -101,9 +102,9 @@ End Class
  <xref:System.ServiceModel.FaultContractAttribute>  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
- [Specifying and Handling Faults in Contracts and Services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md) (Especificando e lidando com falhas em contratos e serviços)  
- [Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md) (Enviando e recebendo falhas)  
- [How to: Declare Faults in Service Contracts](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md) (Como declarar falhas em contratos de serviço)  
- [Understanding Protection Level](../../../docs/framework/wcf/understanding-protection-level.md) (Noções básicas de nível de proteção)  
- [How to: Set the ProtectionLevel Property](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md) (Como definir a propriedade ProtectionLevel)  
+ [Especificando e lidando com falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
+ [Enviando e recebendo falhas](../../../docs/framework/wcf/sending-and-receiving-faults.md)  
+ [Como declarar falhas em contratos de serviço](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)  
+ [Noções básicas de nível de proteção](../../../docs/framework/wcf/understanding-protection-level.md)  
+ [Como definir a propriedade ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
  [Especificando transferência de dados em contratos de serviço](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

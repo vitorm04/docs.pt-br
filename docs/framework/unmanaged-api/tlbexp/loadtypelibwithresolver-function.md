@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0241745396ab01a777eef6e3b88e4c12bdd8b429
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f069d09f25575c39db097024384ad1bf14eaaf02
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="loadtypelibwithresolver-function"></a>Função LoadTypeLibWithResolver
 Carrega uma biblioteca de tipos e usa fornecido [interface ITypeLibResolver](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) para resolver quaisquer bibliotecas de tipo referenciado internamente.  
@@ -96,5 +97,5 @@ HRESULT LoadTypeLibWithResolver(
  **Versão do .NET framework:** 2.0, 3.0, 3.5  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções auxiliares do TlbExp](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
+ [Funções auxiliares do Tlbexp](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
  [Função LoadTypeLibEx](https://msdn.microsoft.com/library/windows/desktop/ms221249\(v=vs.85\).aspx)

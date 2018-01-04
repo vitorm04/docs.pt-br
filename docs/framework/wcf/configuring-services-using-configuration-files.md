@@ -14,11 +14,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4decb820f012d3f4b2a9855cd08701f14dcc5431
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 11229a5677341db05223116c932f13b1f567e712
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configurando serviços usando arquivos de configuração
 Configurar um serviço [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] com um arquivo de configuração oferece flexibilidade para fornecer dados do comportamento do ponto de extremidade e do serviço na hora da implantação em vez de em tempo de design. Este tópico descreve as principais técnicas disponíveis.  
@@ -272,7 +273,7 @@ Configurar um serviço [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] com 
  Se uma coleção de comportamentos filho contiver um comportamento que já esteja presente na coleção de comportamentos pai, o comportamento filho substituirá o pai. Portanto, se uma coleção de comportamento pai tinha `<serviceMetadata httpGetEnabled="False" />` e uma coleção de comportamento filho tinha `<serviceMetadata httpGetEnabled="True" />`, o comportamento de filho poderia substituir o comportamento do pai da coleção de comportamento e httpGetEnabled seria "true".  
   
 ## <a name="see-also"></a>Consulte também  
- [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) (Configuração simplificada)  
+ [Configuração simplificada](../../../docs/framework/wcf/simplified-configuration.md)  
  [Configuring Windows Communication Foundation Applications](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a) (Configurando aplicativos do Windows Communication Foundation)  
  [\<serviço >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
  [\<associação >](../../../docs/framework/misc/binding.md)

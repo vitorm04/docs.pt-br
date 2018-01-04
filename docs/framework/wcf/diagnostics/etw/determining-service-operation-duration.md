@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 24f1bc22e088c0198ec8a8f8183611d2b43941b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2c96aa6752feca637f89ed309d1a5c87cea4a3a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="determining-service-operation-duration"></a>Determinando a duração da operação de serviço
 Se o rastreamento analítico é habilitado em um [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] aplicativo, a duração da execução de uma operação de serviço pode facilmente ser determinada examinando o log de eventos.  Este tópico demonstra como determinar a quantidade de tempo para concluir uma operação de serviço.  

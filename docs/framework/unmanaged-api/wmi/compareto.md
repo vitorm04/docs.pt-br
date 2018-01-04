@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dacb1516bebfc73ae9e16b03f3755ab49382e571
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 038074b5bb3adc816caa226d3167395758d2ae57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="compareto-function"></a>Função CompareTo
 Compara a um objeto para outro objeto de gerenciamento do Windows.  
@@ -77,7 +78,7 @@ Os sinalizadores que podem ser passados como o `lEnumFlags` argumento são defin
 | `WBEM_FLAG_IGNORE_DEFAULT_VALUES` | 4 | Ignore valores padrão das propriedades. Esse sinalizador só se aplica a comparação de classes. |
 | `WBEM_FLAG_IGNORE_FLAVOR` | 0x20 | Ignore tipos de qualificadores. Este sinalizador ainda considera qualificadores, mas ignora diferenças de tipo, como regras de propagação e substituir as restrições. |
 | `WBEM_FLAG_IGNORE_CASE` | 0x10 | Ignore maiusculas e minúsculas na comparação de valores de cadeia de caracteres. Isso se aplica a cadeias de caracteres e valores de qualificador. A comparação de nomes de propriedade e qualificador sempre diferencia maiusculas de minúsculas, independentemente de se esse sinalizador é definido. |
-| `WBEM_FLAG_IGNORE_CLASS` | 0x8 | Suponha que os objetos que estão sendo comparados são instâncias da mesma classe. Consequentemente, esse sinalizador compara somente informações relacionadas à instância. Use este sinalizadores para otimizar o desempenho. Se os objetos não são da mesma classe, os resultados serão indefinidos. |
+| `WBEM_FLAG_IGNORE_CLASS` | 0x8 | Suponha que os objetos que estão sendo comparados são instâncias da mesma classe. Consequentemente, esse sinalizador compara somente informações relacionadas à instância. Use este sinalizadores para otimizar o desempenho. Se os objetos não são da mesma classe, os resultados são indefinidos. |
 
 Ou você pode especificar um único sinalizador composto da seguinte maneira:
 

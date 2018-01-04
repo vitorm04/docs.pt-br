@@ -8,11 +8,12 @@ ms.date: 11/06/2017
 ms.topic: article-type-from-white-list
 ms.prod: .net-framework
 ms.devlang: cpp
-ms.openlocfilehash: 461d90aaf5beca1c0f1d1965ce0ea07411e56e79
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.workload: dotnet
+ms.openlocfilehash: 466ba410f7d6c13eb5f1949bf3aa32c3951a8ba7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Windows Management Instrumentation (WMI) e contadores de desempenho (referência de API não gerenciada)
 
@@ -28,13 +29,13 @@ A API inclui as seguintes funções:
 | [Função BeginMethodEnumeration](beginmethodenumeration.md) |  Inicia uma enumeração dos métodos disponíveis para um objeto. |
 | [Função BlessIWbemServices](blessiwbemservices.md) | Indica se as credenciais do usuário permitirem o acesso a uma determinada classe IWbemServices. |
 | [Função BlessIWbemServicesObject](blessiwbemservicesobject.md) | Indica se as credenciais do usuário permitirem o acesso a um objeto de serviço IWbem especificado. |
-| [Função clone](clone.md) | Retorna um novo objeto que é um clone completo do objeto atual. |
+| [Função Clone](clone.md) | Retorna um novo objeto que é um clone completo do objeto atual. |
 | [Função CloneEnumWbemClassObject](cloneenumwbemclassobject.md) | Faz uma cópia lógica de um enumerador, mantendo sua posição atual em uma enumeração. |
 | [Função CompareTo](compareto.md) | Compara a um objeto para outro objeto de gerenciamento do Windows. |
 | [Função ConnectServerWmi](connectserverwmi.md) | Cria uma conexão por meio do DCOM para um namespace do WMI em um computador especificado. |
 | [Função CreateClassEnumWmi](createclassenumwmi.md) | Retorna um enumerador para todas as classes que atendem aos critérios de seleção especificada. |
 | [Função CreateInstanceEnumWmi](createinstanceenumwmi.md) | Retorna um enumerador que retorna as instâncias de uma classe especificada que atendem aos critérios de seleção especificada. |
-| [Excluir função](delete.md) | Exclui uma propriedade especificada de uma definição de classe e todos os seus qualificadores. |
+| [Função Delete](delete.md) | Exclui uma propriedade especificada de uma definição de classe e todos os seus qualificadores. |
 | [Função DeleteMethod](deletemethod.md) | Exclui um método especificado de uma definição de classe do CIM. |
 | [Função EndEnumeration](endenumeration.md) | Encerra uma sequência de enumeração. | 
 | [Função EndMethodEnumeration](endmethodenumeration.md) | Encerra uma sequência de enumeração iniciada chamando o [BeginMethodEnumeration função](beginmethodenumeration.md). |

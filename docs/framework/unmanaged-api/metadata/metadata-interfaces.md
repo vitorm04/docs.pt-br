@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 638727dae1f0f32e5c92c0da7513719bd11ae8d9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e4043bdb7ea128e7ac34349dad8c51a0b247df71
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-interfaces"></a>Interfaces de metadados
 Esta seção descreve as interfaces não gerenciadas que fornecem acesso aos metadados expostos por tipos do .NET Framework, métodos, campos e assim por diante.  

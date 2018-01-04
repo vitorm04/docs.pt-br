@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a84b671725ab41bc3287f184406ebec381f0a554
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 78373d482aaaa0121a6c2708f543188d9cc9464d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-data-contract-versioning"></a>Práticas recomendadas: controle de versão de contrato de dados
 Este tópico lista as práticas recomendadas para a criação de contratos de dados que podem evoluir facilmente ao longo do tempo. [!INCLUDE[crabout](../../../includes/crabout-md.md)]contratos de dados, consulte os tópicos [usando contratos de dados](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -113,5 +114,5 @@ Este tópico lista as práticas recomendadas para a criação de contratos de da
  [Usando contratos de dados](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
  [Controle de versão de contrato de dados](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
  [Nomes de contrato de dados](../../../docs/framework/wcf/feature-details/data-contract-names.md)  
- [Contratos de dados compatíveis por encaminhamento](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
+ [Contratos de dados compatíveis com encaminhamento](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
  [Retornos de chamada de serialização tolerantes à versão](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8cd80805eee58db16f5865683cbd322a49c554a8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ecb8ae5edfb35ccaffecbfb4e960d3f4a46bad0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Controlando o consumo de recursos e a melhoria de desempenho
 Este tópico descreve várias propriedades em áreas diferentes do [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] arquitetura que funcionam para controlar o consumo de recursos e afetar o desempenho.  
@@ -57,5 +58,5 @@ Este tópico descreve várias propriedades em áreas diferentes do [!INCLUDE[ind
  Quando um serviço WCF é hospedado em IIS e ASP.NET, as definições de configuração do IIS e ASP.NET podem afetar o taxa de transferência e volume de memória do serviço WCF.  [!INCLUDE[crabout](../../../includes/crabout-md.md)]Desempenho do ASP.NET, consulte [melhorando o desempenho do ASP.NET](http://go.microsoft.com/fwlink/?LinkId=186462).  Uma configuração que pode ter consequências não intencionais é <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, que é uma propriedade do <xref:System.Web.Configuration.ProcessModelSection>. Se seu aplicativo tiver um número fixo ou pequeno de clientes, a configuração <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> 2 pode fornecer um aumento da taxa de transferência em um computador multiprocessador que tem uma utilização da CPU próximo a 100%. Esse aumento no desempenho vem com um custo: também causará um aumento no uso de memória, que pode reduzir escalabilidade.  
   
 ## <a name="see-also"></a>Consulte também  
- [Administration and Diagnostics](../../../docs/framework/wcf/diagnostics/index.md) (Administração e diagnósticos)  
- [Dados grandes e Streaming](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
+ [Administração e diagnósticos](../../../docs/framework/wcf/diagnostics/index.md)  
+ [Dados grandes e streaming](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
