@@ -15,27 +15,28 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 37a811f8c3d4e7da82c24fa8f2147ee4cafe64c6
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0bdd08efff930b2ddb8b985376992dd895067cfb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="events-how-to-topics"></a><span data-ttu-id="a1aad-102">Tópicos explicativos de eventos</span><span class="sxs-lookup"><span data-stu-id="a1aad-102">Events How-to Topics</span></span>
-<span data-ttu-id="a1aad-103">Os tópicos nesta seção descrevem como usar eventos em WPF.</span><span class="sxs-lookup"><span data-stu-id="a1aad-103">The topics in this section describe how to use events in WPF.</span></span>  
+# <a name="events-how-to-topics"></a><span data-ttu-id="bb50f-102">Tópicos explicativos de eventos</span><span class="sxs-lookup"><span data-stu-id="bb50f-102">Events How-to Topics</span></span>
+<span data-ttu-id="bb50f-103">Os tópicos nesta seção descrevem como usar eventos em WPF.</span><span class="sxs-lookup"><span data-stu-id="bb50f-103">The topics in this section describe how to use events in WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a1aad-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="a1aad-104">In This Section</span></span>  
- [<span data-ttu-id="a1aad-105">Adicionar um manipulador de eventos usando código</span><span class="sxs-lookup"><span data-stu-id="a1aad-105">Add an Event Handler Using Code</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md)  
- [<span data-ttu-id="a1aad-106">Manipular um evento roteado</span><span class="sxs-lookup"><span data-stu-id="a1aad-106">Handle a Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
- [<span data-ttu-id="a1aad-107">Criar um evento roteado personalizado</span><span class="sxs-lookup"><span data-stu-id="a1aad-107">Create a Custom Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)  
- [<span data-ttu-id="a1aad-108">Localizar o elemento de origem em um manipulador de eventos</span><span class="sxs-lookup"><span data-stu-id="a1aad-108">Find the Source Element in an Event Handler</span></span>](../../../../docs/framework/wpf/advanced/how-to-find-the-source-element-in-an-event-handler.md)  
- [<span data-ttu-id="a1aad-109">Adicionar tratamento de classes para um evento roteado</span><span class="sxs-lookup"><span data-stu-id="a1aad-109">Add Class Handling for a Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-class-handling-for-a-routed-event.md)  
+## <a name="in-this-section"></a><span data-ttu-id="bb50f-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="bb50f-104">In This Section</span></span>  
+ [<span data-ttu-id="bb50f-105">Adicionar um manipulador de eventos usando código</span><span class="sxs-lookup"><span data-stu-id="bb50f-105">Add an Event Handler Using Code</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md)  
+ [<span data-ttu-id="bb50f-106">Manipular um evento roteado</span><span class="sxs-lookup"><span data-stu-id="bb50f-106">Handle a Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
+ [<span data-ttu-id="bb50f-107">Criar um evento roteado personalizado</span><span class="sxs-lookup"><span data-stu-id="bb50f-107">Create a Custom Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)  
+ [<span data-ttu-id="bb50f-108">Localizar o elemento de origem em um manipulador de eventos</span><span class="sxs-lookup"><span data-stu-id="bb50f-108">Find the Source Element in an Event Handler</span></span>](../../../../docs/framework/wpf/advanced/how-to-find-the-source-element-in-an-event-handler.md)  
+ [<span data-ttu-id="bb50f-109">Adicionar tratamento de classes para um evento roteado</span><span class="sxs-lookup"><span data-stu-id="bb50f-109">Add Class Handling for a Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-class-handling-for-a-routed-event.md)  
   
-## <a name="reference"></a><span data-ttu-id="a1aad-110">Referência</span><span class="sxs-lookup"><span data-stu-id="a1aad-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="bb50f-110">Referência</span><span class="sxs-lookup"><span data-stu-id="bb50f-110">Reference</span></span>  
  <xref:System.Windows.RoutedEvent>  
   
  <xref:System.Windows.EventManager>  
   
  <xref:System.Windows.RoutingStrategy>  
   
-## <a name="related-sections"></a><span data-ttu-id="a1aad-111">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="a1aad-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="bb50f-111">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="bb50f-111">Related Sections</span></span>
