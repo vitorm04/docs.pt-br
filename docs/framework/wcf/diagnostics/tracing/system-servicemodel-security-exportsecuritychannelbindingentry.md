@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: d3c18f029514aa5ba1d585f65e963e5d8c9a99c9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dc44d107a5f1f3ed02e5d0e09f5d6becbd3cbffa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecurityexportsecuritychannelbindingentry"></a><span data-ttu-id="592fb-102">System.ServiceModel.Security.ExportSecurityChannelBindingEntry</span><span class="sxs-lookup"><span data-stu-id="592fb-102">System.ServiceModel.Security.ExportSecurityChannelBindingEntry</span></span>
-<span data-ttu-id="592fb-103">System.ServiceModel.Security.ExportSecurityChannelBindingEntry</span><span class="sxs-lookup"><span data-stu-id="592fb-103">System.ServiceModel.Security.ExportSecurityChannelBindingEntry</span></span>  
+# <a name="systemservicemodelsecurityexportsecuritychannelbindingentry"></a><span data-ttu-id="9ff5f-102">System.ServiceModel.Security.ExportSecurityChannelBindingEntry</span><span class="sxs-lookup"><span data-stu-id="9ff5f-102">System.ServiceModel.Security.ExportSecurityChannelBindingEntry</span></span>
+<span data-ttu-id="9ff5f-103">System.ServiceModel.Security.ExportSecurityChannelBindingEntry</span><span class="sxs-lookup"><span data-stu-id="9ff5f-103">System.ServiceModel.Security.ExportSecurityChannelBindingEntry</span></span>  
   
-## <a name="description"></a><span data-ttu-id="592fb-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="592fb-104">Description</span></span>  
- <span data-ttu-id="592fb-105">Iniciando o ExportChannelBinding de segurança.</span><span class="sxs-lookup"><span data-stu-id="592fb-105">Starting the Security ExportChannelBinding.</span></span>  
+## <a name="description"></a><span data-ttu-id="9ff5f-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="9ff5f-104">Description</span></span>  
+ <span data-ttu-id="9ff5f-105">Iniciando o ExportChannelBinding de segurança.</span><span class="sxs-lookup"><span data-stu-id="9ff5f-105">Starting the Security ExportChannelBinding.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="592fb-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="592fb-106">See Also</span></span>  
- [<span data-ttu-id="592fb-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="592fb-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="592fb-108">Usando o rastreamento para solucionar problemas de seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="592fb-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- <span data-ttu-id="592fb-109">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md) (Administração e diagnósticos)</span><span class="sxs-lookup"><span data-stu-id="592fb-109">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)</span></span>
+## <a name="see-also"></a><span data-ttu-id="9ff5f-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9ff5f-106">See Also</span></span>  
+ [<span data-ttu-id="9ff5f-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="9ff5f-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="9ff5f-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="9ff5f-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="9ff5f-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="9ff5f-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

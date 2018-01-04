@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f7a5a1cb14902fd3f4a978cf793fb4f595f87dd2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 89bb8b7181122e638b653e45e85d2c85081d08c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelperformancecountersfailedforservice"></a><span data-ttu-id="8a374-102">System.ServiceModel.PerformanceCountersFailedForService</span><span class="sxs-lookup"><span data-stu-id="8a374-102">System.ServiceModel.PerformanceCountersFailedForService</span></span>
-<span data-ttu-id="8a374-103">System.ServiceModel.PerformanceCountersFailedForService</span><span class="sxs-lookup"><span data-stu-id="8a374-103">System.ServiceModel.PerformanceCountersFailedForService</span></span>  
+# <a name="systemservicemodelperformancecountersfailedforservice"></a><span data-ttu-id="151cf-102">System.ServiceModel.PerformanceCountersFailedForService</span><span class="sxs-lookup"><span data-stu-id="151cf-102">System.ServiceModel.PerformanceCountersFailedForService</span></span>
+<span data-ttu-id="151cf-103">System.ServiceModel.PerformanceCountersFailedForService</span><span class="sxs-lookup"><span data-stu-id="151cf-103">System.ServiceModel.PerformanceCountersFailedForService</span></span>  
   
-## <a name="description"></a><span data-ttu-id="8a374-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="8a374-104">Description</span></span>  
- <span data-ttu-id="8a374-105">Contadores de desempenho de carregamento para o serviço falhou.</span><span class="sxs-lookup"><span data-stu-id="8a374-105">Loading performance counters for the service failed.</span></span> <span data-ttu-id="8a374-106">Contadores de desempenho não estão disponíveis para este serviço.</span><span class="sxs-lookup"><span data-stu-id="8a374-106">Performance counters are not available for this service.</span></span>  
+## <a name="description"></a><span data-ttu-id="151cf-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="151cf-104">Description</span></span>  
+ <span data-ttu-id="151cf-105">Contadores de desempenho de carregamento para o serviço falhou.</span><span class="sxs-lookup"><span data-stu-id="151cf-105">Loading performance counters for the service failed.</span></span> <span data-ttu-id="151cf-106">Contadores de desempenho não estão disponíveis para este serviço.</span><span class="sxs-lookup"><span data-stu-id="151cf-106">Performance counters are not available for this service.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8a374-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8a374-107">See Also</span></span>  
- [<span data-ttu-id="8a374-108">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="8a374-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="8a374-109">Usando o rastreamento para solucionar problemas de seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="8a374-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- <span data-ttu-id="8a374-110">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md) (Administração e diagnósticos)</span><span class="sxs-lookup"><span data-stu-id="8a374-110">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)</span></span>
+## <a name="see-also"></a><span data-ttu-id="151cf-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="151cf-107">See Also</span></span>  
+ [<span data-ttu-id="151cf-108">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="151cf-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="151cf-109">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="151cf-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="151cf-110">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="151cf-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

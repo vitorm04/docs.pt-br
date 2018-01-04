@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf298cb7fcea46de900b4b75b002b543d871d992
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1e8cd300a56c2908e257ded51834319404a34dad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemruntimeserializationwriteobjectcontentend"></a><span data-ttu-id="34449-102">System.Runtime.Serialization.WriteObjectContentEnd</span><span class="sxs-lookup"><span data-stu-id="34449-102">System.Runtime.Serialization.WriteObjectContentEnd</span></span>
-<span data-ttu-id="34449-103">System.Runtime.Serialization.WriteObjectContentEnd</span><span class="sxs-lookup"><span data-stu-id="34449-103">System.Runtime.Serialization.WriteObjectContentEnd</span></span>  
+# <a name="systemruntimeserializationwriteobjectcontentend"></a><span data-ttu-id="d99bf-102">System.Runtime.Serialization.WriteObjectContentEnd</span><span class="sxs-lookup"><span data-stu-id="d99bf-102">System.Runtime.Serialization.WriteObjectContentEnd</span></span>
+<span data-ttu-id="d99bf-103">System.Runtime.Serialization.WriteObjectContentEnd</span><span class="sxs-lookup"><span data-stu-id="d99bf-103">System.Runtime.Serialization.WriteObjectContentEnd</span></span>  
   
-## <a name="description"></a><span data-ttu-id="34449-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="34449-104">Description</span></span>  
- <span data-ttu-id="34449-105">WriteObjectContent terminar.</span><span class="sxs-lookup"><span data-stu-id="34449-105">Finished WriteObjectContent.</span></span>  
+## <a name="description"></a><span data-ttu-id="d99bf-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="d99bf-104">Description</span></span>  
+ <span data-ttu-id="d99bf-105">WriteObjectContent terminar.</span><span class="sxs-lookup"><span data-stu-id="d99bf-105">Finished WriteObjectContent.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="34449-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="34449-106">See Also</span></span>  
- [<span data-ttu-id="34449-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="34449-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="34449-108">Usando o rastreamento para solucionar problemas de seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="34449-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- <span data-ttu-id="34449-109">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md) (Administração e diagnósticos)</span><span class="sxs-lookup"><span data-stu-id="34449-109">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)</span></span>
+## <a name="see-also"></a><span data-ttu-id="d99bf-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d99bf-106">See Also</span></span>  
+ [<span data-ttu-id="d99bf-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="d99bf-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="d99bf-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="d99bf-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="d99bf-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="d99bf-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

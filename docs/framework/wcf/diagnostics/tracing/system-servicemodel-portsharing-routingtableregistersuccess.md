@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d72c47319a68caed46c2f75caee8eaefef69439b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f55ec715dd69b76a710ede839c16589d103eb7a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelportsharingroutingtableregistersuccess"></a><span data-ttu-id="ee0e3-102">System.ServiceModel.PortSharing.RoutingTableRegisterSuccess</span><span class="sxs-lookup"><span data-stu-id="ee0e3-102">System.ServiceModel.PortSharing.RoutingTableRegisterSuccess</span></span>
-<span data-ttu-id="ee0e3-103">System.ServiceModel.PortSharing.RoutingTableRegisterSuccess</span><span class="sxs-lookup"><span data-stu-id="ee0e3-103">System.ServiceModel.PortSharing.RoutingTableRegisterSuccess</span></span>  
+# <a name="systemservicemodelportsharingroutingtableregistersuccess"></a><span data-ttu-id="d8d87-102">System.ServiceModel.PortSharing.RoutingTableRegisterSuccess</span><span class="sxs-lookup"><span data-stu-id="d8d87-102">System.ServiceModel.PortSharing.RoutingTableRegisterSuccess</span></span>
+<span data-ttu-id="d8d87-103">System.ServiceModel.PortSharing.RoutingTableRegisterSuccess</span><span class="sxs-lookup"><span data-stu-id="d8d87-103">System.ServiceModel.PortSharing.RoutingTableRegisterSuccess</span></span>  
   
-## <a name="description"></a><span data-ttu-id="ee0e3-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="ee0e3-104">Description</span></span>  
- <span data-ttu-id="ee0e3-105">O namespace foi registrado com êxito.</span><span class="sxs-lookup"><span data-stu-id="ee0e3-105">The namespace was successfully registered.</span></span>  
+## <a name="description"></a><span data-ttu-id="d8d87-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="d8d87-104">Description</span></span>  
+ <span data-ttu-id="d8d87-105">O namespace foi registrado com êxito.</span><span class="sxs-lookup"><span data-stu-id="d8d87-105">The namespace was successfully registered.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ee0e3-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ee0e3-106">See Also</span></span>  
- [<span data-ttu-id="ee0e3-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="ee0e3-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="ee0e3-108">Usando o rastreamento para solucionar problemas de seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="ee0e3-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- <span data-ttu-id="ee0e3-109">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md) (Administração e diagnósticos)</span><span class="sxs-lookup"><span data-stu-id="ee0e3-109">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)</span></span>
+## <a name="see-also"></a><span data-ttu-id="d8d87-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d8d87-106">See Also</span></span>  
+ [<span data-ttu-id="d8d87-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="d8d87-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="d8d87-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="d8d87-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="d8d87-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="d8d87-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

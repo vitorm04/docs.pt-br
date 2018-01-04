@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f8c74c6982658722b7bfcff93786baed8d62adb7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ef58b44e2fe6242a4f6e3b7f2af56e92b3dc79cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationtxproxytxabortedbytm"></a><span data-ttu-id="281be-102">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByTM</span><span class="sxs-lookup"><span data-stu-id="281be-102">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByTM</span></span>
-<span data-ttu-id="281be-103">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByTM</span><span class="sxs-lookup"><span data-stu-id="281be-103">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByTM</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationtxproxytxabortedbytm"></a><span data-ttu-id="64b17-102">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByTM</span><span class="sxs-lookup"><span data-stu-id="64b17-102">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByTM</span></span>
+<span data-ttu-id="64b17-103">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByTM</span><span class="sxs-lookup"><span data-stu-id="64b17-103">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByTM</span></span>  
   
-## <a name="description"></a><span data-ttu-id="281be-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="281be-104">Description</span></span>  
- <span data-ttu-id="281be-105">ComPlus: Transação anulada pelo Gerenciador de transações.</span><span class="sxs-lookup"><span data-stu-id="281be-105">ComPlus: The transaction was aborted by Transaction Manager.</span></span>  
+## <a name="description"></a><span data-ttu-id="64b17-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="64b17-104">Description</span></span>  
+ <span data-ttu-id="64b17-105">ComPlus: Transação anulada pelo Gerenciador de transações.</span><span class="sxs-lookup"><span data-stu-id="64b17-105">ComPlus: The transaction was aborted by Transaction Manager.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="281be-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="281be-106">See Also</span></span>  
- [<span data-ttu-id="281be-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="281be-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="281be-108">Usando o rastreamento para solucionar problemas de seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="281be-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- <span data-ttu-id="281be-109">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md) (Administração e diagnósticos)</span><span class="sxs-lookup"><span data-stu-id="281be-109">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)</span></span>
+## <a name="see-also"></a><span data-ttu-id="64b17-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="64b17-106">See Also</span></span>  
+ [<span data-ttu-id="64b17-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="64b17-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="64b17-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="64b17-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="64b17-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="64b17-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
