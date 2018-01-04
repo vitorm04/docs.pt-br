@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6244b21c2729df3bfe5899a4f4970f4b48030057
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e9112269da02bd7eff9838509673db7adbc3fb53
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="layout-in-windows-forms-controls"></a>Layout em controles dos Windows Forms
 O posicionamento exato dos controles no formulário é uma prioridade alta para muitos aplicativos. O <xref:System.Windows.Forms?displayProperty=nameWithType> namespace fornece várias ferramentas de layout para fazer isso.  

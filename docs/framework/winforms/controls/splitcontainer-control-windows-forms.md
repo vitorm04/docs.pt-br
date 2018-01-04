@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 336243cc4db7039225ba272cac1ba7a3f173f361
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 66eb0e8fc630696c86c8b85c85b67023bd568dc1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="splitcontainer-control-windows-forms"></a>Controle SplitContainer (Windows Forms)
 O controle `SplitContainer` dos Windows Forms pode ser considerado uma composição; são dois painéis separados por uma barra móvel. Quando o ponteiro do mouse passa sobre a barra, ele muda de forma para mostrar que a barra é móvel.  
@@ -40,7 +41,7 @@ O controle `SplitContainer` dos Windows Forms pode ser considerado uma composiç
  [Como dividir uma janela horizontalmente](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)  
  Descreve como controlar a orientação do separador dentro do controle `SplitContainer`.  
   
- [Como Criar uma Interface do Usuário com Vários Painéis nos Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
+ [Como criar uma interface do usuário multipainel com o Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Cria uma interface do usuário em vários painéis que é semelhante à usada no Microsoft Outlook.  
   
  Consulte também [Como dividir uma janela horizontalmente usando o Designer](http://msdn.microsoft.com/library/ms233667\(v=vs.110\)), [Como criar uma Interface no estilo Windows Explorer em um Windows Form](http://msdn.microsoft.com/library/zh2fe5a5\(v=vs.110\)), [Como criar uma Interface do usuário multipainéis com Windows Forms usando o Designer](http://msdn.microsoft.com/library/ms233661\(v=vs.110\)).  

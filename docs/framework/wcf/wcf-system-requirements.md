@@ -14,11 +14,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 65f5c2e8ac0a767d3ecc4d270ac9280a8cc78bfc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 81f79691424bb48679605e385785bd7bf11b4db5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-system-requirements"></a>Requisitos do sistema do WCF
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]é uma infraestrutura de comunicação é usada para criar aplicativos distribuídos. A lista a seguir os requisitos que permitem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] para executar.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 12/02/2017
  **Observação** funcionalidade o enfileiramento de mensagens (MSMQ) de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] tem suporte somente em [!INCLUDE[wv](../../../includes/wv-md.md)], [!INCLUDE[ws2003r2](../../../includes/ws2003r2-md.md)], [!INCLUDE[ws2003sp1](../../../includes/ws2003sp1-md.md)], e [!INCLUDE[wxppro](../../../includes/wxppro-md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
- [Conceptual Overview](../../../docs/framework/wcf/conceptual-overview.md) (Visão geral conceitual)  
- [Basic WCF Programming](../../../docs/framework/wcf/basic-wcf-programming.md) (Programação básica do WCF)  
- [WCF Feature Details](../../../docs/framework/wcf/feature-details/index.md) (Detalhes de recursos do WCF)  
- [Guidelines and Best Practices](../../../docs/framework/wcf/guidelines-and-best-practices.md) (Diretrizes e práticas recomendadas)
+ [Visão geral conceitual](../../../docs/framework/wcf/conceptual-overview.md)  
+ [Programação básica do WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Detalhes de recursos do WCF](../../../docs/framework/wcf/feature-details/index.md)  
+ [Diretrizes e práticas recomendadas](../../../docs/framework/wcf/guidelines-and-best-practices.md)

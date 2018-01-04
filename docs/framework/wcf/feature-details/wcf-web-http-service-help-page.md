@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a2059a5918a7b24b69d047de652eab6fa6616385
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cdd05397990c2b1bfc89493235804e14f6d41a1f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-web-http-service-help-page"></a>Página de ajuda de serviço HTTP Web do WCF
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]Fornece uma página de ajuda automática para serviços WCF WEB HTTP. Esta página de Ajuda contém uma descrição de cada operação de solicitação e resposta formatos e esquemas. Essa funcionalidade é desativada por padrão. Quando um usuário navega para um serviço WCF WEB HTTP e acrescenta "/Help" no final da URL, por exemplo http://localhost:8000/clientes/ajuda, é exibida uma página de ajuda com o seguinte.  

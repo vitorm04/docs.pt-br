@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: ca1ce99fae09ef7d3c9ad3ea47984b671cadb27c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f0c8b125d3fc313dca4140b871ccea8165329fda
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-binding"></a>Associação de segurança de mensagem
 Esta seção contém exemplos que demonstram a associação de segurança de mensagem nos serviços do Windows em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  

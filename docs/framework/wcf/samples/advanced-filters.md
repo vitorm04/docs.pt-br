@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 988c41bb691d27e819710bbc2cd48bc1c844e7c5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 357b57bb39ca31b48d21cb83209a72d0b3d12a62
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="advanced-filters"></a>Filtros avançados
 Este exemplo demonstra um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] o serviço de roteamento. O serviço de roteamento é um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] componente que torna mais fácil incluir um roteador baseado em conteúdo em seu aplicativo. Este exemplo se adapta o padrão [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] exemplo de cálculo para se comunicar usando o serviço de roteamento. Este exemplo mostra como definir a lógica de roteamento baseado em conteúdo com o uso de filtros de mensagem e tabelas de filtro de mensagem.  

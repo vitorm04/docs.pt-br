@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8fb699a93effcdf0b5f88606419479d51754125b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: efd297dcc11005d6b6d47bb9ce3853a757046e8f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>Controles com suporte de desenho do proprietário interno
 Proprietário do desenho nos Windows Forms, que é também conhecido como desenho personalizado, é uma técnica para alterar a aparência visual de certos controles.  
@@ -195,7 +196,7 @@ Proprietário do desenho nos Windows Forms, que é também conhecido como desenh
   
 -   <xref:System.Windows.Forms.ToolStripRenderer>  
   
--   [Como criar e definir um renderizador personalizado para o controle ToolStrip nos Windows Forms](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+-   [Como criar e definir um renderizador personalizado para o controle ToolStrip no Windows Forms](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
   
 -   [Como personalizar o desenho de um controle ToolStrip](../../../../docs/framework/winforms/controls/how-to-custom-draw-a-toolstrip-control.md)  
   

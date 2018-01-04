@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 50521591af6f77b98e52aa4a847216f63186d78b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fad26de46f3af04ae0340da6aa02bbe454e77e6f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Como herdar formulários usando a caixa de diálogo Selecionador de Herança
 A maneira mais fácil de herdar um formulário ou outro objeto é usar a caixa de diálogo **Selecionador de Herança**. Com ela, você pode aproveitar códigos ou interfaces do usuário já criados em outras soluções.  

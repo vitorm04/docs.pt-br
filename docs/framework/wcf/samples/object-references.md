@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e734f7909265b4e811b462f81d471b24b6330d6a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a86b442ffeeeb77a0c124b9b3e3441ba24d68e4a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="object-references"></a>Referências de objeto
 Este exemplo demonstra como passar objetos por referências entre servidor e cliente. Exemplos de uso simulados *redes sociais*. Consiste em uma rede social um `Person` que contém uma lista de amigos no qual cada friend é uma instância da classe de `Person` classe, com sua própria lista de amigos. Isso cria um gráfico de objetos. O serviço expõe operações nessas redes sociais.  
@@ -125,4 +126,4 @@ public List<Person> GetCommonFriends(List<Person> people)
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>  
- [Referências de objeto de interoperabilidade](../../../../docs/framework/wcf/feature-details/interoperable-object-references.md)
+ [Referências de objeto interoperável](../../../../docs/framework/wcf/feature-details/interoperable-object-references.md)

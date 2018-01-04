@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 18217f2edea5fde5f1f3b2d776cdacced15c73fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 66c3ed6dfcbbd89d406718917ed22dd297489638
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a>Como ocultar cabeçalhos no controle DataGridView dos Windows Forms
 Às vezes você deseja exibir um <xref:System.Windows.Forms.DataGridView> sem cabeçalhos de coluna. No <xref:System.Windows.Forms.DataGridView> controle, o <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> o valor da propriedade determina se os cabeçalhos de coluna são exibidos.  
@@ -46,4 +47,4 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A?displayProperty=nameWithType>  
- [Recursos básicos de coluna, linha e célula no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)
+ [Funcionalidades de coluna, linha e célula básicas no controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)

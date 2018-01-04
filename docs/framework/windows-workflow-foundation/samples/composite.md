@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: daf8208663b524b7812d4bbbbeec815058f14353
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: afa76503377db8de164253f2d24d0b2be1981a04
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="composite"></a>Composição
 Esta seção contém exemplos personalizados de atividade compostos de outras atividades em [!INCLUDE[wf](../../../../includes/wf-md.md)].  
@@ -25,5 +26,5 @@ Esta seção contém exemplos personalizados de atividade compostos de outras at
  [Composição básica de atividades](../../../../docs/framework/windows-workflow-foundation/samples/basic-activity-composition.md)  
  Demonstra como composto atividades personalizados e sistema forneceu atividades para criar uma atividades mais personalizados.  
   
- [Introdução ao escrever uma atividade personalizada](../../../../docs/framework/windows-workflow-foundation/samples/getting-started-writing-a-custom-activity.md)  
+ [Introdução à elaboração de uma atividade personalizada](../../../../docs/framework/windows-workflow-foundation/samples/getting-started-writing-a-custom-activity.md)  
  Demonstra como definir uma atividade personalizado simples em XAML.

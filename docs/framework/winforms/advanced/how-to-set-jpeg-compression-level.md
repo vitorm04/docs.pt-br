@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 66b5a90dd10ec10330adeae2cd859d7b307d3e69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 02e417fbcdb68e114ea0fc7afad7c22f6b2fdae9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>Como definir o nível de compactação de JPEG
 É possível modificar os parâmetros de uma imagem ao salvar a imagem em disco para minimizar o tamanho do arquivo ou melhorar sua qualidade. Você pode ajustar a qualidade de uma imagem JPEG modificando seu nível de compactação. Para especificar o nível de compactação quando você salva uma imagem JPEG, você deve criar um <xref:System.Drawing.Imaging.EncoderParameters> de objeto e passá-lo para o <xref:System.Drawing.Image.Save%2A> método o <xref:System.Drawing.Image> classe. Inicializar o <xref:System.Drawing.Imaging.EncoderParameters> objeto para que ele tenha uma matriz que consiste em uma <xref:System.Drawing.Imaging.EncoderParameter>. Quando você cria o <xref:System.Drawing.Imaging.EncoderParameter>, especifique o <xref:System.Drawing.Imaging.Encoder.Quality> codificador e o nível de compactação desejado.  

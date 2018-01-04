@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1c6ae9c4159f8f9eafd73608e4fc3f4a646c1eaa
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3fa5c240adaaf6512cfbd6b7bd0796bd0983a530
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Formatação básica e estilos no controle DataGridView dos Windows Forms
 O controle `DataGridView` facilita a tarefa de definir a aparência básica de células e a formatação da exibição dos valores de célula. Você pode definir os estilos de aparência e formatação de células individuais, para células em linhas e colunas específicas ou para todas as células no controle definindo as propriedades dos objetos `DataGridViewCellStyle` acessados por meio de várias propriedades do controle `DataGridView`. Além disso, é possível modificar esses estilos dinamicamente com base em fatores como o valor da célula manipulando o evento `CellFormatting`.  
@@ -64,7 +65,7 @@ O controle `DataGridView` facilita a tarefa de definir a aparência básica de c
  [Personalizando o controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
  Fornece tópicos que descrevem a pintura personalizada de células e linhas <xref:System.Windows.Forms.DataGridView>, bem como a criação de tipos de célula, coluna e linha derivados.  
   
- [Recursos básicos de coluna, linha e célula no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
+ [Funcionalidades de coluna, linha e célula básicas no controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
  Fornece tópicos que descrevem as propriedades da célula, linha e coluna mais usados.  
   
 ## <a name="see-also"></a>Consulte também  

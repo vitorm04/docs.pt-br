@@ -12,11 +12,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d95eece0a02433a78a400f1cfd9ab06ca716668e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dfc99593e1c705cff5069b5dd864d372f8afda8e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="database-access-activities"></a>Atividades de acesso a base de dados
 As atividades de acesso a base de dados permitem que você acesse um base de dados em um fluxo de trabalho. Essas atividades permitirem o acesso a bancos de dados para recuperar ou modificar as informações e usar [ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081) para acessar o banco de dados.  

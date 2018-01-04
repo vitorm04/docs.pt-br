@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 75b9c56d2d9df80745cec2b811c39f5e438d07c2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f7cbca79cd3541df1db7ace3a7d5f67bf3f2b2ab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>Como herdar da classe de controle
 Se você quiser criar um controle personalizado completamente a ser usado em um formulário do Windows, você deve herdar do <xref:System.Windows.Forms.Control> classe. Ao herdar do <xref:System.Windows.Forms.Control> classe requer que você executar o planejamento e implementação mais, ele também fornece a maior variedade de opções. Ao herdar de <xref:System.Windows.Forms.Control>, herdam a funcionalidade básica que faz com que os controles de trabalho. A funcionalidade inerente a <xref:System.Windows.Forms.Control> classe manipula a entrada do usuário por meio do teclado e mouse, define os limites e o tamanho do controle, fornece um identificador do windows e fornece segurança e tratamento de mensagens. Ela não incorpora nenhum pintura, que nesse caso é a renderização efetiva da interface gráfica do controle, nem incorpora qualquer funcionalidade de interação do usuário específica. Você deve fornecer todos esses aspectos por meio de código personalizado.  
@@ -54,7 +55,7 @@ Se você quiser criar um controle personalizado completamente a ser usado em um 
 8.  Salve e teste seu controle.  
   
 ## <a name="see-also"></a>Consulte também  
- [Variedades de Controles Personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
  [Como herdar da classe UserControl](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)  
  [Como herdar de controles dos Windows Forms existentes](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  
  [Como Criar Controles para o Windows Forms](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)  

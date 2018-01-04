@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a6d60bec8c3b69d9fd094f59b1f4d8c9ec4d8dff
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 665e05907f837887a7dd0375e540b6e9167a820e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>Serviço de AJAX com exemplo de JSON e XML
 Este exemplo demonstra como usar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para criar um serviço assíncrona AJAX JavaScript and XML () que retorna dados JSON JavaScript Object Notation () ou XML. Você pode acessar um serviço de AJAX usando código JavaScript de um cliente de navegador da Web. Este exemplo se baseia o [serviço AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md) exemplo.  
@@ -122,4 +123,4 @@ xmlHttp.onreadystatechange=function(){
 3.  Navegue até http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm (não abrir XmlAjaxClientPage.htm no navegador do diretório do projeto).  
   
 ## <a name="see-also"></a>Consulte também  
- [Serviço de AJAX utilizando o HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)
+ [Serviço AJAX utilizando HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)

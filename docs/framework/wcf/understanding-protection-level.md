@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f107e4d1a9779c04a33060af34ee1fc873305eab
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c379cf39f30bf7e75907dba5fb06ba4e3862e299
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-protection-level"></a>Noções básicas de nível de proteção
 O `ProtectionLevel` propriedade é encontrada em muitas classes diferentes, como o <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.OperationContractAttribute> classes. A propriedade controla como uma parte (ou inteiro) de uma mensagem é protegido. Este tópico explica o [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] recurso e como ele funciona.  
@@ -112,7 +113,7 @@ O `ProtectionLevel` propriedade é encontrada em muitas classes diferentes, como
  <xref:System.ServiceModel.MessageHeaderAttribute>  
  <xref:System.ServiceModel.MessageBodyMemberAttribute>  
  <xref:System.Net.Security.ProtectionLevel>  
- [Securing Services](../../../docs/framework/wcf/securing-services.md) (Protegendo serviços)  
- [How to: Set the ProtectionLevel Property](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md) (Como definir a propriedade ProtectionLevel)  
- [Specifying and Handling Faults in Contracts and Services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md) (Especificando e lidando com falhas em contratos e serviços)  
+ [Protegendo serviços](../../../docs/framework/wcf/securing-services.md)  
+ [Como definir a propriedade ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
+ [Especificando e lidando com falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
  [Usando contratos de mensagem](../../../docs/framework/wcf/feature-details/using-message-contracts.md)

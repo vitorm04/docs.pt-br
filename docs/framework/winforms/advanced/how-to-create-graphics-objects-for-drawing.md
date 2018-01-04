@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 72f1af49a5c64395e018707d1f71cc0feaa2d22c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d4b626d3d87c6537b74b6d28e086303474ea2c3e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Como criar objetos gráficos para desenho
 Antes que você possa desenhar linhas e formas, renderizar texto, ou exibir e manipular imagens com [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], você precisa criar um <xref:System.Drawing.Graphics> objeto. O <xref:System.Drawing.Graphics> objeto representa um [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] superfície de desenho e é o objeto que é usado para criar imagens gráficas.  
@@ -186,4 +187,4 @@ Antes que você possa desenhar linhas e formas, renderizar texto, ou exibir e ma
  [Introdução à Programação de Elementos Gráficos](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
  [Elementos Gráficos e Desenho nos Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
  [Linhas, Curvas e Formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Como Renderizar Imagens com o GDI+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)
+ [Como renderizar imagens com o GDI+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)

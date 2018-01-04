@@ -16,11 +16,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1513d0e534da4ef12d8bcf345bdb34ac40912b4e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b662c034e4c3d7c21c9a48537cd7f80f4bb6b659
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="self-host"></a>Self-Host
 Este exemplo demonstra como implementar um serviço hospedado automaticamente em um aplicativo de console. Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md). O arquivo de configuração do serviço foi renomeado de Web. config para o App. config e modificado para configurar um endereço base, o host usa. O código de origem do serviço foi modificado para implementar um estático `Main` função que cria e abre um host de serviço que fornece o endereço base configurado. A implementação do serviço foi modificada para gravar a saída para o console para cada operação. O cliente está inalterado, exceto para a configuração do endereço de ponto de extremidade correto do serviço.  

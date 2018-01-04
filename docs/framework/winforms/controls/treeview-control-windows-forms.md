@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6660cf0c7de11058aeb70c7f61cd3239dd7f0f04
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2183954363c03064d9d41480bb63e32cca58b857
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="treeview-control-windows-forms"></a>Controle TreeView (Windows Forms)
 O controle `TreeView` dos Windows Forms exibe uma hierarquia de nós, como a forma como arquivos e pastas são exibidos no painel esquerdo do recurso Windows Explorer em sistemas operacionais Windows.  

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d68f1b6ecfb55a917dde97b395b4455930565409
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: edfd0670d951a07526454bc380cee91c66e4e7a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="services"></a>Serviços
 Esta seção contém exemplos que demonstram [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviços.  
@@ -53,7 +54,7 @@ Esta seção contém exemplos que demonstram [!INCLUDE[indigo1](../../../../incl
  [Endereçamento](../../../../docs/framework/wcf/samples/addressing.md)  
  Demonstra vários aspectos e recursos de endereços de ponto de extremidade.  
   
- [Obrigatória](../../../../docs/framework/wcf/samples/imperative.md)  
+ [Obrigatório](../../../../docs/framework/wcf/samples/imperative.md)  
  Demonstra como definir um <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> para um serviço usando o código, em vez de definir o `wsHttpBinding` na configuração de associação.  
   
  [Vários contratos](../../../../docs/framework/wcf/samples/multiple-contracts.md)  
@@ -71,5 +72,5 @@ Esta seção contém exemplos que demonstram [!INCLUDE[indigo1](../../../../incl
  [Descrição do serviço](../../../../docs/framework/wcf/samples/service-description.md)  
  Demonstra como um serviço pode recuperar suas informações de descrição de serviço em tempo de execução.  
   
- [Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md)  
+ [ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md)  
  Demonstra como usar o modo de simultaneidade reentrante em uma implementação de serviço.

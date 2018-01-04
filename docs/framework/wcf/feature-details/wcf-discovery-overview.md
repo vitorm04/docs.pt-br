@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cb9fc13d7facf3bdc3f9da43297a47fd1cf4af65
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 28bf67b3840cb37c918198dd0910db9d592a6823
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-discovery-overview"></a>Visão geral de descoberta do WCF
 As APIs de descoberta fornecem um modelo de programação unificado para a publicação dinâmica e a descoberta de serviços da Web usando o protocolo WS-Discovery. Essas APIs permitem que os serviços publicar a mesmos e clientes para localizar os serviços publicados. Depois que um serviço é feito detectável, o serviço tem a capacidade de enviar mensagens de aviso, bem como ouvir e responder às solicitações de descoberta. Serviços detectáveis podem enviar mensagens de saudação de anunciar sua chegada em uma rede e Bye anunciar sua saída de uma rede. Para localizar um serviço, os clientes enviam uma `Probe` solicitação que contém critérios específicos, como o tipo de contrato de serviço, as palavras-chave e escopo na rede. Serviços de recebem o `Probe` solicitar e determinar se eles correspondem aos critérios. Se corresponder a um serviço, ele responde enviando um `ProbeMatch` mensagem de volta para o cliente com as informações necessárias para entrar em contato com o serviço. Os clientes também podem enviar `Resolve` solicitações que permita localizar os serviços que alteraram seu endereço de ponto de extremidade. Serviços correspondentes respondem às `Resolve` solicitações enviando um `ResolveMatch` mensagem de volta ao cliente.  

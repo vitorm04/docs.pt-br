@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 127111df239cb042f8261acaa62c3798b99653ad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 25a69f31d8da8638cfc92ff94d8f90dbcb327158
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindingsource-component-architecture"></a>Arquitetura do componente BindingSource
 Com o <xref:System.Windows.Forms.BindingSource> componente, você pode associar universalmente todos os controles de formulários do Windows para fontes de dados.  
@@ -183,7 +184,7 @@ Com o <xref:System.Windows.Forms.BindingSource> componente, você pode associar 
  <xref:System.Windows.Forms.BindingNavigator>  
  [Visão geral do componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)  
  [Controle BindingNavigator](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
- [Vinculação de dados dos Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [Associação de dados do Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
  [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [Como associar um controle dos Windows Forms a um tipo](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)  
- [Como refletir atualizações feitas na fonte de dados em um controle dos Windows Forms com o BindingSource](../../../../docs/framework/winforms/controls/reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)
+ [Como associar um controle do Windows Forms a um tipo](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)  
+ [Como refletir atualizações feitas na fonte de dados em um controle do Windows Forms com o BindingSource](../../../../docs/framework/winforms/controls/reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)

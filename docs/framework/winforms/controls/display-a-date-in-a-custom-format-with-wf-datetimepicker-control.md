@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0b92fec7565aad2a881f714f9232eae10bf7633c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a5f5c7d856991ae8e0bf7caff656bf7010255628
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-a-date-in-a-custom-format-with-the-windows-forms-datetimepicker-control"></a>Como exibir uma data em um formato personalizado com o controle DateTimePicker dos Windows Forms
 Windows Forms <xref:System.Windows.Forms.DateTimePicker> controle oferece flexibilidade na formatação de exibição de datas e horas no controle. O <xref:System.Windows.Forms.DateTimePicker.Format%2A> propriedade permite que você selecione um dos formatos predefinidos, listados no <xref:System.Windows.Forms.DateTimePickerFormat>. Se nenhum desses for adequada para suas finalidades, você pode criar seu próprio estilo de formato usando caracteres de formato listados na <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>.  

@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 71fa29fc36292bb6620ab458785abaabc749c38d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 05dd1e06c2cba31bca1282e8d409ab1b5610d1dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>Como adicionar ou remover imagens ImageList com o designer
 Você pode adicionar imagens a um <xref:System.Windows.Forms.ImageList> componente várias maneiras diferentes. Você pode adicionar imagens muito rapidamente, usando a marca inteligente associada a <xref:System.Windows.Forms.ImageList>, ou se você estiver configurando várias outras propriedades da <xref:System.Windows.Forms.ImageList>, você pode achar mais conveniente adicionar imagens com a janela Propriedades. Também é possível adicionar imagens usando o código. Para obter mais informações sobre como adicionar imagens com o código, consulte [Como adicionar ou remover imagens com o componente ImageList dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md). Normalmente você preencher o <xref:System.Windows.Forms.ImageList> componente com imagens antes que ele está associado com um controle, mas isso não é necessário.  

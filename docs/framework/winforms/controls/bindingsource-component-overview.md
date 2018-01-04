@@ -18,11 +18,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf46a3d5207f3414bc8abd5fd7bdb904e91f07d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 291ceb32d7128a63ba9a251ce916c18adb100100
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindingsource-component-overview"></a>Visão geral do componente BindingSource
 O <xref:System.Windows.Forms.BindingSource> componente é projetado para simplificar o processo de associar controles a uma fonte de dados subjacente. O <xref:System.Windows.Forms.BindingSource> componente atua como um canal e para outros controles vincular a uma fonte de dados. Ele fornece uma abstração da conexão de dados do formulário enquanto passa comandos para a lista de dados subjacente. Além disso, você pode adicionar dados diretamente a ele para que o próprio componente funcione como uma fonte de dados.  
@@ -73,5 +74,5 @@ O <xref:System.Windows.Forms.BindingSource> componente é projetado para simplif
  [Arquitetura do componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component-architecture.md)  
  [Componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
  [Controle BindingNavigator](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
- [Vinculação de dados dos Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [Associação de dados do Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
  [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

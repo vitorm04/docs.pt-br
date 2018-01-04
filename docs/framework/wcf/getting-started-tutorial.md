@@ -17,11 +17,12 @@ caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 649fc2572e809238977ca3deb5740ada2dd5dc14
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 182e82eec107c170a793d0d48bcfe5493c04d618
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-tutorial"></a>Guia de introdução ao tutorial
 Os tópicos contidos nesta seção visam fornecer uma exposição rápida da experiência em programação do [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Eles devem ser concluídos na ordem da lista que se encontra na parte inferior deste tópico. Trabalhe com este tutorial para adquirir uma compreensão introdutória das etapas necessárias para criar serviços e aplicativos de cliente do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Um serviço expõe um ou mais pontos de extremidade, sendo que cada um deles expõe uma ou mais operações de serviço. O *ponto de extremidade* de um serviço Especifica um endereço onde o serviço pode ser encontrado, uma associação que contém as informações que descrevem como um cliente deve se comunicar com o serviço e um contrato que define a funcionalidade fornecido pelo serviço para seus clientes.  
@@ -40,22 +41,22 @@ Os tópicos contidos nesta seção visam fornecer uma exposição rápida da exp
  Para obter informações mais detalhadas sobre a criação de serviços e clientes, consulte [básicas de programação WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [How to: Define a Service Contract](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) (Como definir um contrato de serviço)  
+ [Como definir um contrato de serviço](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
  Descreve como criar um contrato de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usando uma interface definida pelo usuário. O contrato define a funcionalidade exposta pelo serviço.  
   
- [How to: Implement a Service Contract](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md) (Como implementar um contrato de serviço)  
+ [Como implementar um contrato de serviço](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
  Descreve como implementar um contrato de serviço. Após ser definido, um contrato deve ser implementado com uma classe de serviço.  
   
- [How to: Host and Run a Basic Service](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md) (Como hospedar e executar um serviço básico)  
+ [Como hospedar e executar um serviço básico](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)  
  Descreve como configurar um ponto de extremidade para o serviço no código e como hospedar o serviço em um aplicativo de console. Para se tornar ativo, um serviço deve ser configurado e hospedado em um ambiente de tempo de execução. Esse ambiente cria o serviço e controla seu contexto e tempo de vida.  
   
- [How to: Create a Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md) (Como criar um cliente)  
+ [Como criar um cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
  Descreve como recuperar metadados usados para criar um proxy do cliente de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] de um serviço de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Esse processo usa a funcionalidade de Adicionar Referência de Serviço no Visual Studio 2011.  
   
- [How to: Configure a Client](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md) (Como configurar um cliente)  
+ [Como configurar um cliente](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)  
  Descreve como configurar um cliente WCF. A configuração do cliente requer a especificação do ponto de extremidade que o cliente usa para acessar o serviço.  
   
- [How to: Use a Client](../../../docs/framework/wcf/how-to-use-a-wcf-client.md) (Como usar um cliente)  
+ [Como usar um cliente](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)  
  Descreve como usar o proxy do cliente de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] para chamar operações de serviço.  
   
 ## <a name="reference"></a>Referência  
@@ -64,12 +65,12 @@ Os tópicos contidos nesta seção visam fornecer uma exposição rápida da exp
  <xref:System.ServiceModel.OperationContractAttribute>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Windows Communication Foundation Samples](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91) (Amostras do Windows Communication Foundation)  
+ [Amostras do Windows Communication Foundation](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
- [Basic Programming Lifecycle](../../../docs/framework/wcf/basic-programming-lifecycle.md) (Ciclo de vida de programação básica)  
+ [Ciclo de vida de programação básica](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Conceptual Overview](../../../docs/framework/wcf/conceptual-overview.md) (Visão geral conceitual)  
- [Guide to the Documentation](../../../docs/framework/wcf/guide-to-the-documentation.md) (Guia da documentação)  
- [What Is Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md) (O que é o Windows Communication Foundation)  
- [WCF Feature Details](../../../docs/framework/wcf/feature-details/index.md) (Detalhes de recursos do WCF)
+ [Visão geral conceitual](../../../docs/framework/wcf/conceptual-overview.md)  
+ [Guia da documentação](../../../docs/framework/wcf/guide-to-the-documentation.md)  
+ [O que é o Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
+ [Detalhes de recursos do WCF](../../../docs/framework/wcf/feature-details/index.md)

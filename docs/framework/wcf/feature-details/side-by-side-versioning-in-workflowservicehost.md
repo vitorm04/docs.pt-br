@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f3629778ded2b690f8169223101d89cb551e1449
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db8f79fcdc1398b891933f5fef9f07410e5de11e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>Controle de versão lado a lado no WorkflowServiceHost
 O controle de versões lado a lado do <xref:System.ServiceModel.Activities.WorkflowServiceHost> introduzidas no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] fornece a capacidade de hospedar várias versões de um serviço de fluxo de trabalho em um único ponto de extremidade. A funcionalidade de lado a lado fornecida permite que um serviço de fluxo de trabalho seja configurado para que novas instâncias do serviço de fluxo de trabalho sejam criadas usando a nova definição de fluxo de trabalho, enquanto executa instâncias completas usando a definição existente. Este tópico fornece uma visão geral da execução lado a lado do serviço de fluxo de trabalho usando <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  

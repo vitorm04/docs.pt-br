@@ -28,11 +28,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5b72bbaef26e1c61f86e354adc7df7404469ee0d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7f21564c800dd960a96dfc024fa2cccc6b27780f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>Canetas, linhas e retângulos no GDI+
 Para desenhar linhas com [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] você precisa criar um <xref:System.Drawing.Graphics> objeto e um <xref:System.Drawing.Pen> objeto. O <xref:System.Drawing.Graphics> objeto fornece os métodos que possuem o desenho, e o <xref:System.Drawing.Pen> objeto armazena atributos, como cor da linha, largura e estilo.  
@@ -81,6 +82,6 @@ Para desenhar linhas com [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdi
  <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
  <xref:System.Drawing.Pen?displayProperty=nameWithType>  
  <xref:System.Drawing.Rectangle?displayProperty=nameWithType>  
- [Como Criar uma Caneta](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
- [Como Desenhar uma Linha em um Windows Form](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)  
- [Como desenhar uma forma delineada](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)
+ [Como criar uma caneta](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
+ [Como desenhar uma linha em um formulário do Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)  
+ [Como Desenhar uma Forma Delineada](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6136aca5af6a5da7d7ac468e07c81047352d9be2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c541ebf83babcbdbda86c5b6f3862727d49d8679
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-execution-properties"></a>Propriedades de execução de fluxo de trabalho
 Com o armazenamento local (TLS) de segmento, CLR mantém um contexto de execução para cada segmento. Este contexto de execução determina propriedades de segmento conhecidos como a identidade da thread, a transação ambiente, e o conjunto de permissões atual além de propriedades definidos pelo usuário do segmento como slots nomeados.  

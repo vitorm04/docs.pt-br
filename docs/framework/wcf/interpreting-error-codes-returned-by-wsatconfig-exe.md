@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd37e88c581638e5ae11d85803fa3a970b4c8409
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 889a14d7d30c3c7750b38f55256ccc4ff004f10d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>Interpretando os códigos de erro retornados pelo wsatConfig.exe
 Este tópico lista todos os códigos de erro gerado pelo utilitário de configuração do WS-AtomicTransaction (wsatConfig.exe) e as ações recomendadas para ser executada.  
@@ -78,4 +79,4 @@ Este tópico lista todos os códigos de erro gerado pelo utilitário de configur
 |56|Ocorreu um erro inesperado ao tentar iniciar a sessão de rastreamento ETW.|Entre em contato com a Microsoft.|  
   
 ## <a name="see-also"></a>Consulte também  
- [WS-AtomicTransaction Configuration Utility (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) [Utilitário de configuração de WS-AtomicTransaction (wsatConfig.exe)]
+ [Utilitário de configuração de WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 6b73565409e26456ad09067066455ef2459b2e3c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 89a6d5c2e485699a55c77797c34eaca2c9848c40
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-secure-profile"></a>Perfil seguro confiável
 Este exemplo demonstra como compor [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e [confiável perfil seguro](http://go.microsoft.com/fwlink/?LinkId=178140) (RSP). Este exemplo demonstra a implementação de um [fazer Conexão](http://go.microsoft.com/fwlink/?LinkId=178141) canal que pode ser composto em conjunto com o sistema de mensagens confiável e, opcionalmente, um canal seguro para criar uma associação segura confiável com base na especificação RSP.  

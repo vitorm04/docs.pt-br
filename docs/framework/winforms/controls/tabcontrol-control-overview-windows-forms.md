@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 707fb08e487acc8a585e9fe9a246e7485d5e2749
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 04407ca8ddb51658ffd9cc4078d8f545c08e9312
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a>Visão geral do controle TabControl (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.TabControl> exibe várias guias, como divisores em um bloco de anotações ou rótulos em um conjunto de pastas em um arquivo convencional. As guias podem conter imagens e outros controles. Você pode usar o controle de guia para produzir o tipo de várias páginas da caixa de diálogo que aparece muitos lugares no sistema operacional Windows, como as propriedades de exibição de painel de controle. Além disso, o <xref:System.Windows.Forms.TabControl> pode ser usado para criar páginas de propriedade, que são usadas para definir um grupo de propriedades relacionadas.  

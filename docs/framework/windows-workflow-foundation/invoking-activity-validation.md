@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f089abdf4c534a5016185e5a6f52067f46693604
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f22fc7dc53f52b47be2da3313f678825d4362750
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="invoking-activity-validation"></a>Invocando a validação de atividades
 Validação de atividade fornece um método para identificar e relatar erros na configuração de quaisquer atividades antes da execução. A validação ocorre quando um trabalho são alterados no designer de trabalho e todos os erros ou avisos de validação são exibidos no designer de fluxo de trabalho. Validação também ocorre em tempo de execução quando um fluxo de trabalho é chamado e se qualquer erro de validação ocorre, <xref:System.Activities.InvalidWorkflowException> é acionada pela lógica padrão de validação. [!INCLUDE[wf](../../../includes/wf-md.md)] fornece a classe de <xref:System.Activities.Validation.ActivityValidationServices> que pode ser usada pelo aplicativo de fluxo de trabalho e os desenvolvedores de trabalho feito com ferramentas validar explicitamente uma atividade. Este tópico descreve como usar <xref:System.Activities.Validation.ActivityValidationServices> para executar a validação de atividade.  

@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52cead578ad03052b5734c5b7a5b5a897dd48732
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8cc06a81c879e6ebd50c4eb6a70590c28cc43f6e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="b233zier-splines-in-gdi"></a>Splines de Bézier no GDI+
 Uma spline de Bézier é uma curva especificada por quatro pontos: dois pontos de extremidade (p1 e p2) e dois pontos de controle (c1 e c2). A curva começa em p1 e termina em p2. A curva não passa pelos pontos de controle, porém eles funcionam como ímãs, puxando a curva em determinadas direções e influenciando o modo de inclinação da curva. A ilustração a seguir mostra uma curva de Bézier junto com seus pontos de extremidade e de controle.  
@@ -53,4 +54,4 @@ Uma spline de Bézier é uma curva especificada por quatro pontos: dois pontos d
  [Linhas, Curvas e Formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
  [Construir e Desenhar Curvas](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)  
  [Como Criar Objetos Gráficos para Desenho](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- [Como Criar uma Caneta](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)
+ [Como criar uma caneta](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)

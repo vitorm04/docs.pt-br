@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 2d3a35839aaf980331b3b84181027d9c170c619d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: eb9038ee6e28cdb5fbf213d56542419e7cdf36c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-extensibility"></a>Extensibilidade de segurança
 Esta seção contém exemplos que demonstram a segurança personalizada em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -29,7 +30,7 @@ Esta seção contém exemplos que demonstram a segurança personalizada em [!INC
  [Provedor de Token SAML](../../../../docs/framework/wcf/samples/saml-token-provider.md)  
  Demonstra como implementar um provedor de token SAML de cliente personalizadas.  
   
- [Os Tokens de suporte](../../../../docs/framework/wcf/samples/supporting-tokens.md)  
+ [Tokens de suporte](../../../../docs/framework/wcf/samples/supporting-tokens.md)  
  Demonstra como adicionar tokens adicionais para uma mensagem que usa o WS-Security.  
   
  [Autenticador de token](../../../../docs/framework/wcf/samples/token-authenticator.md)  
@@ -41,7 +42,7 @@ Esta seção contém exemplos que demonstram a segurança personalizada em [!INC
  [Validador de senha do nome de usuário](../../../../docs/framework/wcf/samples/user-name-password-validator.md)  
  Demonstra como implementar um validador UserNamePassword personalizado.  
   
- [Validador de certificado x. 509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md)  
+ [Validador de certificado X.509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md)  
  Demonstra como implementar um validador personalizado de certificado x. 509.  
   
  [Política de autorização](../../../../docs/framework/wcf/samples/authorization-policy.md)  
