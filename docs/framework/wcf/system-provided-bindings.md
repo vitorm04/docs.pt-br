@@ -14,11 +14,12 @@ caps.latest.revision: "60"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ea5cd7f8510836b17a20b523dc2455611cdb2382
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c5f8df31e31c9617fe7bcd92789671d220382a82
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="system-provided-bindings"></a>Associações fornecidas pelo sistema
 Associações de especificar o mecanismo de comunicação para usar ao conversar com um ponto de extremidade e indicar como se conectar a um ponto de extremidade. Uma associação contém os seguintes elementos:  
@@ -96,6 +97,6 @@ Associações de especificar o mecanismo de comunicação para usar ao conversar
 |Streaming|Especifica se o fluxo tem suporte para mensagens de entrada e saídas. Use o `TransferMode` propriedade na associação para definir o valor. Os valores possíveis incluem:<br /><br /> -   <xref:System.ServiceModel.TransferMode.Buffered>: As mensagens de solicitação e resposta são buffer.<br />-   <xref:System.ServiceModel.TransferMode.Streamed>: As mensagens de solicitação e resposta são transmitidas.<br />-   <xref:System.ServiceModel.TransferMode.StreamedRequest>: A mensagem de solicitação é transmitida e a mensagem de resposta é armazenada em buffer.<br />-   <xref:System.ServiceModel.TransferMode.StreamedResponse>: A mensagem de solicitação é armazenado em buffer e a mensagem de resposta é transmitida.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Endpoint Creation Overview](../../../docs/framework/wcf/endpoint-creation-overview.md) (Visão geral de criação de ponto de extremidade)  
- [Using Bindings to Configure Services and Clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md) (Usando associações para configurar serviços e clientes)  
- [Basic WCF Programming](../../../docs/framework/wcf/basic-wcf-programming.md) (Programação básica do WCF)
+ [Visão geral de criação de ponto de extremidade](../../../docs/framework/wcf/endpoint-creation-overview.md)  
+ [Usando associações para configurar serviços e clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+ [Programação básica do WCF](../../../docs/framework/wcf/basic-wcf-programming.md)

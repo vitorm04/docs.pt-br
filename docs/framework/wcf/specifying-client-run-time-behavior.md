@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 22d244fdc2c9fc3d3802e520d1fdd6f31bdc1c4e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a8c05dc56ec8fac0a77b1a21536d815b5b65f830
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-client-run-time-behavior"></a>Especificando a execução do cliente- Comportamento do tempo
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]os clientes, como [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] serviços, podem ser configurados para modificar o comportamento de tempo de execução de acordo com o aplicativo cliente. Três atributos estão disponíveis para especificar o comportamento de tempo de execução do cliente. Objetos de retorno de chamada duplex cliente podem usar o <xref:System.ServiceModel.CallbackBehaviorAttribute> e <xref:System.ServiceModel.Description.CallbackDebugBehavior> atributos para modificar seu comportamento de tempo de execução. O atributo, <xref:System.ServiceModel.Description.ClientViaBehavior>, pode ser usado para separar o destino lógico de destino da rede imediata. Além disso, podem usar tipos de retorno de chamada de cliente duplex alguns comportamentos no lado do serviço. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Especificando o comportamento de tempo de execução do serviço](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
@@ -53,4 +54,4 @@ ms.lasthandoff: 12/02/2017
  Você pode usar o <xref:System.ServiceModel.Description.ClientViaBehavior> comportamento para especificar o Uniform Resource Identifier para o qual o canal de transporte deve ser criado. Use esse comportamento quando o destino da rede imediata não é o processador pretendido da mensagem. Isso permite que vários saltos conversas quando o aplicativo de chamada não sabe, necessariamente, o destino final ou quando o destino `Via` cabeçalho não é um endereço.  
   
 ## <a name="see-also"></a>Consulte também  
- [Specifying Service Run-Time Behavior](../../../docs/framework/wcf/specifying-service-run-time-behavior.md) (Especificando o comportamento em tempo de execução do serviço)
+ [Especificando o comportamento em tempo de execução do serviço](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

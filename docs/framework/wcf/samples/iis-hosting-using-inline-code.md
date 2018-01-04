@@ -16,11 +16,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c66c55cc9872871a8b29cff6e027fc5d2e410f48
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fc1e17d027aece31bf6313a23799dc2d18af3ee7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iis-hosting-using-inline-code"></a>Hospedagem do IIS utilizando código embutido
 Este exemplo demonstra como implementar um serviço hospedado pelo Internet Information Services (IIS), em que o código de serviço está contido na linha em um arquivo. svc e compilado por demanda. Código de serviço também pode ser implementado diretamente nos arquivos de código de origem localizado no diretório de \App_Code do aplicativo ou compilado no assembly implantada no \bin. Este exemplo demonstra essas técnicas.  

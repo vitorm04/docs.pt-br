@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8d95e2aace6dc50b16aeea0fca02f0a27c37322c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0dcbf2cc1aee1333ad5062f2a467adfd0dbe00c3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>Como exibir guias alinhadas lateralmente com TabControl
 O <xref:System.Windows.Forms.TabControl.Alignment%2A> propriedade <xref:System.Windows.Forms.TabControl> dá suporte a exibir as guias verticalmente (ao longo de borda esquerda ou direita do controle), em vez de horizontalmente (na parte superior ou inferior do controle). Por padrão, essa exibição vertical resulta em uma experiência de usuário ruim, porque o <xref:System.Windows.Forms.TabPage.Text%2A> propriedade o <xref:System.Windows.Forms.TabPage> objeto não exibidas na guia quando esses estilos estejam habilitados. Também não há nenhuma maneira direta de controlar a direção do texto dentro da guia. Você pode usar o proprietário desenhar em <xref:System.Windows.Forms.TabControl> para melhorar essa experiência.  

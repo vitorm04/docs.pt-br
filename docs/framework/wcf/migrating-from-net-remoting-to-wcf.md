@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f39a26d52d7002e793935135e0c5d5e8f11c3d8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b387e100ff881c5394b6a77716a733b3928eae9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migrando de .NET Remoting para o WCF
 Este artigo descreve como migrar um aplicativo que usa comunicação remota do .NET para usar o Windows Communication Foundation (WCF). Ele compara os conceitos semelhantes entre esses produtos e, em seguida, descreve como realizar vários cenários comuns de comunicação remota no WCF.  
@@ -112,11 +113,11 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
   
  Há muitas maneiras de configurar e hospedar serviços WCF. Isso é apenas um exemplo, conhecido como "auto-hospedado". Para mais informações, consulte os seguintes tópicos:  
   
--   [How to: Define a Service Contract](how-to-define-a-wcf-service-contract.md) (Como definir um contrato de serviço)  
+-   [Como definir um contrato de serviço](how-to-define-a-wcf-service-contract.md)  
   
--   [Configuring Services Using Configuration Files](configuring-services-using-configuration-files.md) (Configurando serviços usando arquivos de configuração)  
+-   [Configurando serviços usando arquivos de configuração](configuring-services-using-configuration-files.md)  
   
--   [Hosting Services](hosting-services.md) (Hospedando serviços)  
+-   [Hospedando serviços](hosting-services.md)  
   
 ### <a name="client-implementation-comparison"></a>Comparação de implementação do cliente  
   

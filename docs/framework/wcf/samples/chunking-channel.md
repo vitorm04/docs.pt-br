@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2fe0ad62a55c6536b0054aa23ac556b896b02be4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d55b0085552f0baf826380340aaf9f1117ab3307
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="chunking-channel"></a>Canal de agrupamento
 Ao enviar mensagens grandes usando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], geralmente é desejável para limitar a quantidade de memória usada para armazenar em buffer as mensagens. É uma solução possível transmitir o corpo da mensagem (supondo que a maior parte dos dados está no corpo). No entanto, alguns protocolos exigem armazenamento em buffer da mensagem inteira. Mensagens confiáveis e segurança são dois exemplos como esse. Outra solução possível é dividir a mensagens grandes em mensagens menores chamado partes, enviar parte de um desses blocos em um momento e reconstituir a mensagem grande no lado de recepção. O próprio aplicativo poderia fazer esse agrupamento e eliminação de agrupamento ou use um canal personalizado para fazer isso. O exemplo de canal agrupamento mostra como um protocolo personalizado ou canal em camadas pode ser usado para fazer o agrupamento e a eliminação de agrupamento de mensagens arbitrariamente grandes.  

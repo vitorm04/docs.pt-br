@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a6f6a1d205a0e8443d7dc81da53855a1b7920def
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9928b6a63f30e111d0e84ae6d83b730ae15eedce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="strongly-typed-extensions-sample"></a>Exemplo de extensões fortemente tipadas
 O exemplo usa o <xref:System.ServiceModel.Syndication.SyndicationFeed> classe para fins de exemplo. No entanto, os padrões demonstrados neste exemplo podem ser usados com todas as classes de distribuição que oferecem suporte a dados de extensão.  

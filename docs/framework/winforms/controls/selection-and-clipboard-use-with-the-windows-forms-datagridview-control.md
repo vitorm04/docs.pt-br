@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 888fb1cbd960c006dc2705a2b0bd66c038a926f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ceea4108f39619ccbcbf0286905a94b8236607cb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Seleção e uso da Área de Transferência com o controle DataGridView dos Windows Forms
 O controle `DataGridView` oferece uma variedade de opções para configurar como os usuários podem selecionar células, linhas e colunas. Por exemplo, você pode habilitar uma ou várias seleções, seleção de todas as linhas ou colunas quando os usuários clicam em células ou de todas as linhas ou colunas somente quando os usuários clicam em seus cabeçalhos, o que permite a seleção da célula também. Se você quiser fornecer sua própria interface do usuário para seleção, desabilite a seleção comum e gerencie todas as seleções de forma programática. Além disso, você pode permitir que os usuários copiem os valores selecionados para a área de transferência.  
@@ -63,4 +64,4 @@ O controle `DataGridView` oferece uma variedade de opções para configurar como
   
 ## <a name="see-also"></a>Consulte também  
  [Controle DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
- [Manipulação de teclado e mouse padrão no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)
+ [Tratamento de teclado e mouse padrão no controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)

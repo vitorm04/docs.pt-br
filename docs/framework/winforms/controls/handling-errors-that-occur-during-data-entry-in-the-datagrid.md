@@ -23,11 +23,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7c602af6799da57fec904c87da7bed77c0040eff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 016a30e4b578ead199124d70cc12f240c74bf370
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>Instruções passo a passo: identificando erros que ocorram durante a entrada de dados no controle DataGridView dos Windows Forms
 O tratamento de erros do armazenamento de dados subjacente é um recurso necessário para um aplicativo de entrada de dados. Windows Forms <xref:System.Windows.Forms.DataGridView> controle torna isso fácil expondo o <xref:System.Windows.Forms.DataGridView.DataError> evento, que é gerado quando o repositório de dados detecta uma violação de restrição ou uma regra de negócio quebrada.  

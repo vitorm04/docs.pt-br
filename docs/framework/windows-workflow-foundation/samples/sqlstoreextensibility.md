@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e3e63a11ce87c95a5afc8e7f60c8e262da5c6bd1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f4d3776c4cc3fb61fc01b84ee90bb714e1acb4fa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 Este exemplo demonstra o uso e configuração de propriedades elevadas no armazenamento de instância de fluxo de trabalho SQL. O armazenamento de instância de fluxo de trabalho do SQL é uma implementação SQL- base de um armazenamento de instância. Permite que uma instância salve o estado e carrega o estado para e de um base de dados SQL Server ou do SQL Server Express. O recurso de extensibilidade de armazenamento permite que o usuário defina as propriedades que são armazenadas no armazenamento de instância. Essas propriedades são exibidas em uma exibição promovida propriedades que permite que o usuário possa ver para eles.  

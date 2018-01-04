@@ -13,11 +13,12 @@ caps.latest.revision: "55"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7832060a29ceb2dc58feac9ce2fc97f58caf70f0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9c739db4db5afad8fc379a5da4764cb9ab6804fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)
 A ferramenta Visualizador de Rastreamento de Serviço do [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] ajuda você a analisar os rastreamentos de diagnóstico gerados pelo [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. O Visualizador de Rastreamento de Serviço oferece um modo fácil de mesclar, exibir e filtrar mensagens de rastreamento no log, para que você possa diagnosticar, reparar e verificar problemas de serviço do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  

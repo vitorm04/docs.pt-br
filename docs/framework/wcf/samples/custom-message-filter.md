@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bf8950ae023d60222ccd843035b5fb808de39c84
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 37b8721fe1e56bda400f3254fd5d19f828df523e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-message-filter"></a>Filtro de mensagem personalizado
 Este exemplo demonstra como substituir a mensagem de filtros que [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usa para enviar mensagens a pontos de extremidade.  

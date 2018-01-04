@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 28e6de46098a8309a17e0c264411f865fb9b1de2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d1d8ea4987d918da79dcf1f69b842f19901e63a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extensibility"></a>Extensibilidade
 Esta seção contém exemplos que lidam com extensibilidade personalizada e outros recursos do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -65,7 +66,7 @@ Esta seção contém exemplos que lidam com extensibilidade personalizada e outr
  [Alternativa de DataContract](../../../../docs/framework/wcf/samples/datacontract-surrogate.md)  
  Demonstra como processos como a serialização, desserialização, exportação de esquema e importação de esquema podem ser personalizados usando um contrato de dados alternativos classe.  
   
- [Estendendo o controle sobre o tratamento de erros e emissão de relatórios](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
+ [Estendendo o controle sobre o tratamento de erro e emissão de relatórios](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
  Demonstra como estender o controle sobre o tratamento de erros e o relatório de erros em um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de serviço usando o <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface.  
   
  [Inspetores de mensagem](../../../../docs/framework/wcf/samples/message-inspectors.md)  

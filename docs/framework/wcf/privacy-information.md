@@ -17,11 +17,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 93b03a2fb49774c425882183bf7fcda8b6e5c3de
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f66f773551f45f9e4c5978ef09bbe4061a3326bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informações de privacidade do Windows Communication Foundation
 A Microsoft está comprometida em proteger a privacidade dos usuários finais. Quando você cria um aplicativo usando [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], versão 3.0, seu aplicativo pode afetar a privacidade de seus usuários finais. Por exemplo, seu aplicativo explicitamente pode coletar informações de contato do usuário, ou pode solicitar ou enviar informações pela Internet para seu site da Web. Se você inserir a tecnologia da Microsoft em seu aplicativo, essa tecnologia pode ter seu próprio comportamento que pode afetar a privacidade. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]não enviar informações à Microsoft do seu aplicativo, a menos que você ou o usuário final optar por enviá-lo para nós.  

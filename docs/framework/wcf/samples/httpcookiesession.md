@@ -13,11 +13,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 72d6dcef2ac59fd63706d8d8c843f739575cf5cc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4c06efd7450afe93eaecca1e678eb6f8bf5de7a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 Este exemplo demonstra como criar um canal de protocolo personalizado para usar cookies HTTP para o gerenciamento de sessão. Esse canal permite a comunicação entre [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviços e clientes ASMX ou entre [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clientes e serviços ASMX.  

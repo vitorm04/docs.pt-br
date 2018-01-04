@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3621b05f1faae671d93106f50dfef1311959e48e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c1c11ca487003e57a499b3ff46178350e6aad404
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Redimensionando colunas e linhas no controle DataGridView dos Windows Forms
 O controle `DataGridView` fornece diversas opções para personalizar o comportamento de dimensionamento de suas colunas e linhas. Normalmente, células `DataGridView` não são redimensionados com base em seu conteúdo. Em vez disso, elas cortam qualquer valor de exibição maior do que a célula. Se o conteúdo puder ser exibido como uma cadeia de caracteres, a célula o exibirá em uma dica de ferramenta.  

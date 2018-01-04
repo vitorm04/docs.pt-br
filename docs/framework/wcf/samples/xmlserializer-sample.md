@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1e18459d985447359d6314b68e48ce1ad4b0b9d2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c89194eebbfe4f25b8d8120be16a18306a92a889
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xmlserializer-sample"></a>Exemplo de XMLSerializer 
 Este exemplo demonstra como serializar e desserializar os tipos que são compatíveis com o <xref:System.Xml.Serialization.XmlSerializer>. O padrão [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] formatador de <xref:System.Runtime.Serialization.DataContractSerializer> classe. O <xref:System.Xml.Serialization.XmlSerializer> classe pode ser usada para serializar e desserializar tipos quando o <xref:System.Runtime.Serialization.DataContractSerializer> classe não pode ser usada. Isso é geralmente o caso quando um controle preciso sobre o XML é necessário – por exemplo, se uma parte dos dados deve ser um atributo XML e não um elemento XML. Além disso, o <xref:System.Xml.Serialization.XmlSerializer> geralmente é selecionada automaticamente durante a criação de clientes para não -[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços.  

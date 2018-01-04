@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f4c89e6382b5edd0ca295fde8f498fe97bdb64d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4df9060f173647767a3a070a451e0f2d3e02cf0d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>Cliente ASMX com um serviço do WCF
 Este exemplo demonstra como criar um serviço usando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e, em seguida, acessar o serviço de não[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente, como um cliente ASMX.  

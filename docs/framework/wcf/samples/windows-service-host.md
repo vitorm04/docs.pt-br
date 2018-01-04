@@ -16,11 +16,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e3dd2b4880ea61f5c3236a3e15ba1c939dbc2952
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3634d5c14b0d0fcc0113296dec4843585625698d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-service-host"></a>Host de serviço do Windows
 Este exemplo demonstra um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço hospedado em um serviço Windows gerenciado. Serviços do Windows são controlados usando o miniaplicativo Serviços no **painel de controle** e pode ser configurado para iniciar automaticamente após a reinicialização do sistema. O exemplo consiste em um programa do cliente e um programa de serviço do Windows. O serviço é implementado como um programa .exe e contém o seu próprio código de hospedagem. Em outros ambientes de hospedagem, como serviços de ativação de processos do Windows (WAS) ou serviços de informações da Internet (IIS), não é necessário para gravar o código de hospedagem.  

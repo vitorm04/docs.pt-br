@@ -13,11 +13,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 26a47e6ea0d93d81275d7b3b87c88d0d3ab595df
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d5de916aa5825625f29efe316571ad5085afb431
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Compilando os exemplos do Windows Communication Foundation 
 O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemplos podem ser criados usando o Visual Studio 2010 ou usando o **msbuild** comando da linha de comando. Ambos os procedimentos são descritos neste tópico.  
@@ -92,4 +93,4 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemplos podem ser cri
   
 ## <a name="see-also"></a>Consulte também  
  [Executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md)  
- [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)]
+ [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

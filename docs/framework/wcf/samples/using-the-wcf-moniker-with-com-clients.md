@@ -13,11 +13,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8a44ea352f5ff82294a9a28acb5a6b7f0730cf24
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dbda85f056d7e8a465127bff948dcaaaf41094d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Usando o WCF Moniker com clientes COM
 Este exemplo demonstra como usar o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] moniker de serviço para integrar serviços Web em ambientes de desenvolvimento baseado em COM, como o Microsoft Office Visual Basic for Applications (VBA Office) ou Visual Basic 6.0. Este exemplo consiste em um cliente do Windows Script Host (. vbs), uma biblioteca de cliente de suporte (. dll) e uma biblioteca de serviço (. dll) hospedada pelo Internet Information Services (IIS). O serviço é um serviço de cálculo e o cliente COM chamadas operações matemáticas, adicionar, subtrair, multiplicar e dividir — no serviço. Atividade do cliente estiver visível na janela de caixa de mensagem.  

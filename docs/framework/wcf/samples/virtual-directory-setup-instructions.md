@@ -13,11 +13,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 72487c4a6720f80119beb837fbb3b5ea25ac3b93
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2684091d15a4c0796a0b8fb85952c0f902c1f545
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="virtual-directory-setup-instructions"></a>Instruções de definição de diretório virtual
 O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemplos destinam-se para compartilhar um diretório virtual comum denominado servicemodelsamples que é mapeada para a pasta %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
@@ -201,4 +202,4 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemplos destinam-se p
     3.  No **grupo** coluna, verifique se o valor de **ASPNET** for "Users".  
   
 ## <a name="see-also"></a>Consulte também  
- [Hospedagem instruções de serviço de informações da Internet](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
+ [Instruções de hospedagem do Serviços de Informações da Internet](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)

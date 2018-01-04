@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7b16f87b73654a3faa7cc261c552bc48647ad2e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19868e282409180383fb6bef232082bee6b71f99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Como definir opções de grade para todos os Windows Forms
 Quando você se acostumar a trabalhar no ambiente de desenvolvimento do [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], defina as preferências para todos os formulários e projetos em que você trabalha no Designer de Formulários do Windows.  
@@ -40,7 +41,7 @@ Quando você se acostumar a trabalhar no ambiente de desenvolvimento do [!INCLUD
      No painel direito, sob o título **Configurações de Layout**, você pode configurar as configurações de grade padrão para todos os novos formulários criados. Essas configurações incluem o tamanho da grade, se os controles se ajustam a ela e se ela é ativada por padrão. Além disso, você pode selecionar entre os modos de layout **SnapToGrid** e **SnapLines**. Para obter mais informações sobre guias de alinhamento, veja [Instruções passo a passo: organizando controles nos Windows Forms usando guias de alinhamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Passo a passo: organizando controles nos Windows Forms usando linhas de alinhamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ [Instruções passo a passo: organizando controles no Windows Forms usando guias de alinhamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Geral, Designer de formulários do Windows, a caixa de diálogo Opções](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)  
  [Controles dos Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
  [Como Adicionar Controles ao Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
