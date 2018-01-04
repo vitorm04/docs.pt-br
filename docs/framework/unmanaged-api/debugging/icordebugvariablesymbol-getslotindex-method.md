@@ -13,16 +13,17 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d632bc792152afcfc94b51235dc0699fb3efc245
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: abb84e529768e0be44883511bb89703a4c3199df
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugvariablesymbolgetslotindex-method"></a><span data-ttu-id="7b027-102">Método ICorDebugVariableSymbol::GetSlotIndex</span><span class="sxs-lookup"><span data-stu-id="7b027-102">ICorDebugVariableSymbol::GetSlotIndex Method</span></span>
-<span data-ttu-id="7b027-103">Obtém o índice de slot gerenciado de uma variável local.</span><span class="sxs-lookup"><span data-stu-id="7b027-103">Gets the managed slot index of a local variable.</span></span>  
+# <a name="icordebugvariablesymbolgetslotindex-method"></a><span data-ttu-id="b671d-102">Método ICorDebugVariableSymbol::GetSlotIndex</span><span class="sxs-lookup"><span data-stu-id="b671d-102">ICorDebugVariableSymbol::GetSlotIndex Method</span></span>
+<span data-ttu-id="b671d-103">Obtém o índice de slot gerenciado de uma variável local.</span><span class="sxs-lookup"><span data-stu-id="b671d-103">Gets the managed slot index of a local variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7b027-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="7b027-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b671d-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b671d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSlotIndex(  
@@ -30,28 +31,28 @@ HRESULT GetSlotIndex(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="7b027-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="7b027-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b671d-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="b671d-105">Parameters</span></span>  
  `pSlotIndex`  
- <span data-ttu-id="7b027-106">[out] Um ponteiro para o índice de slot da variável local.</span><span class="sxs-lookup"><span data-stu-id="7b027-106">[out] A pointer to the local variable's slot index.</span></span>  
+ <span data-ttu-id="b671d-106">[out] Um ponteiro para o índice de slot da variável local.</span><span class="sxs-lookup"><span data-stu-id="b671d-106">[out] A pointer to the local variable's slot index.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7b027-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="7b027-107">Return Value</span></span>  
- <span data-ttu-id="7b027-108">`S_OK` se bem-sucedido.</span><span class="sxs-lookup"><span data-stu-id="7b027-108">`S_OK` if successful.</span></span> <span data-ttu-id="7b027-109">`E_FAIL`Se a variável é um argumento de função.</span><span class="sxs-lookup"><span data-stu-id="7b027-109">`E_FAIL` if the variable is a function argument.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b671d-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="b671d-107">Return Value</span></span>  
+ <span data-ttu-id="b671d-108">`S_OK` se bem-sucedido.</span><span class="sxs-lookup"><span data-stu-id="b671d-108">`S_OK` if successful.</span></span> <span data-ttu-id="b671d-109">`E_FAIL`Se a variável é um argumento de função.</span><span class="sxs-lookup"><span data-stu-id="b671d-109">`E_FAIL` if the variable is a function argument.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7b027-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="7b027-110">Remarks</span></span>  
- <span data-ttu-id="7b027-111">O índice de slot gerenciado de uma variável local pode ser usado para recuperar informações de metadados da variável</span><span class="sxs-lookup"><span data-stu-id="7b027-111">The managed slot index of a local variable can be used to retrieve the variable's metadata information</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b671d-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="b671d-110">Remarks</span></span>  
+ <span data-ttu-id="b671d-111">O índice de slot gerenciado de uma variável local pode ser usado para recuperar informações de metadados da variável</span><span class="sxs-lookup"><span data-stu-id="b671d-111">The managed slot index of a local variable can be used to retrieve the variable's metadata information</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="7b027-112">Esse método só está disponível com o .NET Native.</span><span class="sxs-lookup"><span data-stu-id="7b027-112">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="b671d-112">Esse método só está disponível com o .NET Native.</span><span class="sxs-lookup"><span data-stu-id="b671d-112">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7b027-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7b027-113">Requirements</span></span>  
- <span data-ttu-id="7b027-114">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7b027-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b671d-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b671d-113">Requirements</span></span>  
+ <span data-ttu-id="b671d-114">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b671d-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7b027-115">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7b027-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b671d-115">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b671d-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="7b027-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7b027-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b671d-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b671d-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7b027-117">**Versões do .NET framework:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7b027-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="b671d-117">**Versões do .NET framework:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b671d-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7b027-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7b027-118">See Also</span></span>  
- [<span data-ttu-id="7b027-119">Interface ICorDebugVariableSymbol</span><span class="sxs-lookup"><span data-stu-id="7b027-119">ICorDebugVariableSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)  
- [<span data-ttu-id="7b027-120">Interfaces de depuração</span><span class="sxs-lookup"><span data-stu-id="7b027-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="b671d-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b671d-118">See Also</span></span>  
+ [<span data-ttu-id="b671d-119">Interface ICorDebugVariableSymbol</span><span class="sxs-lookup"><span data-stu-id="b671d-119">ICorDebugVariableSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)  
+ [<span data-ttu-id="b671d-120">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="b671d-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -21,16 +21,17 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 79b9ad5711ac1d0166a7ad328cc227f17780476c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7c9823c0e4a471a398285c5960f3ce7bfc60fb23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icorpublishappdomainenumnext-method"></a><span data-ttu-id="65059-102">Método ICorPublishAppDomainEnum::Next</span><span class="sxs-lookup"><span data-stu-id="65059-102">ICorPublishAppDomainEnum::Next Method</span></span>
-<span data-ttu-id="65059-103">Obtém o número especificado de domínios de aplicativo que existem atualmente no processo, começando na posição atual.</span><span class="sxs-lookup"><span data-stu-id="65059-103">Gets the specified number of application domains that currently exist in the process, starting at the current position.</span></span>  
+# <a name="icorpublishappdomainenumnext-method"></a><span data-ttu-id="f436f-102">Método ICorPublishAppDomainEnum::Next</span><span class="sxs-lookup"><span data-stu-id="f436f-102">ICorPublishAppDomainEnum::Next Method</span></span>
+<span data-ttu-id="f436f-103">Obtém o número especificado de domínios de aplicativo que existem atualmente no processo, começando na posição atual.</span><span class="sxs-lookup"><span data-stu-id="f436f-103">Gets the specified number of application domains that currently exist in the process, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="65059-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="65059-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f436f-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="f436f-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (  
@@ -41,24 +42,24 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="65059-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="65059-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f436f-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="f436f-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="65059-106">[in] O número de elementos a serem recuperados.</span><span class="sxs-lookup"><span data-stu-id="65059-106">[in] The number of elements to be retrieved.</span></span>  
+ <span data-ttu-id="f436f-106">[in] O número de elementos a serem recuperados.</span><span class="sxs-lookup"><span data-stu-id="f436f-106">[in] The number of elements to be retrieved.</span></span>  
   
  `objects`  
- <span data-ttu-id="65059-107">[out] Um ponteiro para a matriz de recuperados [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md) objetos, cada um deles representa um domínio de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="65059-107">[out] A pointer to the array of retrieved [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md) objects, each of which represents an application domain.</span></span>  
+ <span data-ttu-id="f436f-107">[out] Um ponteiro para a matriz de recuperados [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md) objetos, cada um deles representa um domínio de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="f436f-107">[out] A pointer to the array of retrieved [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md) objects, each of which represents an application domain.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="65059-108">[out] Ponteiro para o número de domínios de aplicativo, na verdade, retornadas.</span><span class="sxs-lookup"><span data-stu-id="65059-108">[out] Pointer to the number of application domains actually returned.</span></span> <span data-ttu-id="65059-109">Esse valor pode ser null se `celt` é um.</span><span class="sxs-lookup"><span data-stu-id="65059-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="f436f-108">[out] Ponteiro para o número de domínios de aplicativo, na verdade, retornadas.</span><span class="sxs-lookup"><span data-stu-id="f436f-108">[out] Pointer to the number of application domains actually returned.</span></span> <span data-ttu-id="f436f-109">Esse valor pode ser null se `celt` é um.</span><span class="sxs-lookup"><span data-stu-id="f436f-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="65059-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="65059-110">Requirements</span></span>  
- <span data-ttu-id="65059-111">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="65059-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f436f-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f436f-110">Requirements</span></span>  
+ <span data-ttu-id="f436f-111">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f436f-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="65059-112">**Cabeçalho:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="65059-112">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="f436f-112">**Cabeçalho:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="f436f-112">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="65059-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="65059-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f436f-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f436f-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="65059-114">**Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="65059-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f436f-114">**Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f436f-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="65059-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="65059-115">See Also</span></span>  
- [<span data-ttu-id="65059-116">Interface ICorPublishAppDomainEnum</span><span class="sxs-lookup"><span data-stu-id="65059-116">ICorPublishAppDomainEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f436f-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f436f-115">See Also</span></span>  
+ [<span data-ttu-id="f436f-116">Interface ICorPublishAppDomainEnum</span><span class="sxs-lookup"><span data-stu-id="f436f-116">ICorPublishAppDomainEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)

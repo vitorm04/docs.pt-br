@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e7a666fa755f2c513a1a03aaf0ef2d7e29e561fd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0e44c0fabc093d4184ec37f87a9c256fe702b867
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3410---httppipelinefaulted"></a><span data-ttu-id="3d9da-102">3410 - HttpPipelineFaulted</span><span class="sxs-lookup"><span data-stu-id="3d9da-102">3410 - HttpPipelineFaulted</span></span>
-## <a name="properties"></a><span data-ttu-id="3d9da-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="3d9da-103">Properties</span></span>  
+# <a name="3410---httppipelinefaulted"></a><span data-ttu-id="643f9-102">3410 - HttpPipelineFaulted</span><span class="sxs-lookup"><span data-stu-id="643f9-102">3410 - HttpPipelineFaulted</span></span>
+## <a name="properties"></a><span data-ttu-id="643f9-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="643f9-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="3d9da-104">ID</span><span class="sxs-lookup"><span data-stu-id="3d9da-104">ID</span></span>|<span data-ttu-id="3d9da-105">3410</span><span class="sxs-lookup"><span data-stu-id="3d9da-105">3410</span></span>|  
-|<span data-ttu-id="3d9da-106">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="3d9da-106">Keywords</span></span>|<span data-ttu-id="3d9da-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="3d9da-107">HTTP</span></span>|  
-|<span data-ttu-id="3d9da-108">Nível</span><span class="sxs-lookup"><span data-stu-id="3d9da-108">Level</span></span>|<span data-ttu-id="3d9da-109">Aviso</span><span class="sxs-lookup"><span data-stu-id="3d9da-109">Warning</span></span>|  
-|<span data-ttu-id="3d9da-110">Canal</span><span class="sxs-lookup"><span data-stu-id="3d9da-110">Channel</span></span>|<span data-ttu-id="3d9da-111">Os aplicativos de servidor de Microsoft-Windows- aplicativo/analítico</span><span class="sxs-lookup"><span data-stu-id="3d9da-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="643f9-104">ID</span><span class="sxs-lookup"><span data-stu-id="643f9-104">ID</span></span>|<span data-ttu-id="643f9-105">3410</span><span class="sxs-lookup"><span data-stu-id="643f9-105">3410</span></span>|  
+|<span data-ttu-id="643f9-106">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="643f9-106">Keywords</span></span>|<span data-ttu-id="643f9-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="643f9-107">HTTP</span></span>|  
+|<span data-ttu-id="643f9-108">Nível</span><span class="sxs-lookup"><span data-stu-id="643f9-108">Level</span></span>|<span data-ttu-id="643f9-109">Aviso</span><span class="sxs-lookup"><span data-stu-id="643f9-109">Warning</span></span>|  
+|<span data-ttu-id="643f9-110">Canal</span><span class="sxs-lookup"><span data-stu-id="643f9-110">Channel</span></span>|<span data-ttu-id="643f9-111">Os aplicativos de servidor de Microsoft-Windows- aplicativo/analítico</span><span class="sxs-lookup"><span data-stu-id="643f9-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="3d9da-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="3d9da-112">Description</span></span>  
- <span data-ttu-id="3d9da-113">Esse evento é emitido quando o manipulador de mensagens Http apresentou falha.</span><span class="sxs-lookup"><span data-stu-id="3d9da-113">This event is emitted when the Http message handler has faulted.</span></span>  
+## <a name="description"></a><span data-ttu-id="643f9-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="643f9-112">Description</span></span>  
+ <span data-ttu-id="643f9-113">Esse evento é emitido quando o manipulador de mensagens Http apresentou falha.</span><span class="sxs-lookup"><span data-stu-id="643f9-113">This event is emitted when the Http message handler has faulted.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="3d9da-114">Mensagem</span><span class="sxs-lookup"><span data-stu-id="3d9da-114">Message</span></span>  
- <span data-ttu-id="3d9da-115">Manipulador de mensagens HTTP apresentou falha.</span><span class="sxs-lookup"><span data-stu-id="3d9da-115">Http message handler is faulted.</span></span>  
+## <a name="message"></a><span data-ttu-id="643f9-114">Mensagem</span><span class="sxs-lookup"><span data-stu-id="643f9-114">Message</span></span>  
+ <span data-ttu-id="643f9-115">Manipulador de mensagens HTTP apresentou falha.</span><span class="sxs-lookup"><span data-stu-id="643f9-115">Http message handler is faulted.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="3d9da-116">Detalhes</span><span class="sxs-lookup"><span data-stu-id="3d9da-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="643f9-116">Detalhes</span><span class="sxs-lookup"><span data-stu-id="643f9-116">Details</span></span>

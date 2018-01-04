@@ -21,16 +21,17 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4eb3287612a8301d551a1443d803e60e4d03f7db
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0dbf2775217a78c1cbb9a96093354f0fc0b278bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugreferencevaluedereference-method"></a><span data-ttu-id="ddf77-102">Método ICorDebugReferenceValue::Dereference</span><span class="sxs-lookup"><span data-stu-id="ddf77-102">ICorDebugReferenceValue::Dereference Method</span></span>
-<span data-ttu-id="ddf77-103">Obtém o objeto referenciado.</span><span class="sxs-lookup"><span data-stu-id="ddf77-103">Gets the object that is referenced.</span></span>  
+# <a name="icordebugreferencevaluedereference-method"></a><span data-ttu-id="d9639-102">Método ICorDebugReferenceValue::Dereference</span><span class="sxs-lookup"><span data-stu-id="d9639-102">ICorDebugReferenceValue::Dereference Method</span></span>
+<span data-ttu-id="d9639-103">Obtém o objeto referenciado.</span><span class="sxs-lookup"><span data-stu-id="d9639-103">Gets the object that is referenced.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ddf77-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ddf77-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d9639-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d9639-104">Syntax</span></span>  
   
 ```  
 HRESULT Dereference (  
@@ -38,18 +39,18 @@ HRESULT Dereference (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ddf77-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="ddf77-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="d9639-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="d9639-105">Parameters</span></span>  
  `ppValue`  
- <span data-ttu-id="ddf77-106">[out] Um ponteiro para o endereço de um ICorDebugValue que representa o objeto para o qual este objeto ICorDebugReferenceValue aponta.</span><span class="sxs-lookup"><span data-stu-id="ddf77-106">[out] A pointer to the address of an ICorDebugValue that represents the object to which this ICorDebugReferenceValue object points.</span></span>  
+ <span data-ttu-id="d9639-106">[out] Um ponteiro para o endereço de um ICorDebugValue que representa o objeto para o qual este objeto ICorDebugReferenceValue aponta.</span><span class="sxs-lookup"><span data-stu-id="d9639-106">[out] A pointer to the address of an ICorDebugValue that represents the object to which this ICorDebugReferenceValue object points.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ddf77-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="ddf77-107">Remarks</span></span>  
- <span data-ttu-id="ddf77-108">O `ICorDebugValue` objeto é válido apenas enquanto sua referência ainda não foram desabilitada.</span><span class="sxs-lookup"><span data-stu-id="ddf77-108">The `ICorDebugValue` object is valid only while its reference has not yet been disabled.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d9639-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="d9639-107">Remarks</span></span>  
+ <span data-ttu-id="d9639-108">O `ICorDebugValue` objeto é válido apenas enquanto sua referência ainda não foram desabilitada.</span><span class="sxs-lookup"><span data-stu-id="d9639-108">The `ICorDebugValue` object is valid only while its reference has not yet been disabled.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ddf77-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ddf77-109">Requirements</span></span>  
- <span data-ttu-id="ddf77-110">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ddf77-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d9639-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d9639-109">Requirements</span></span>  
+ <span data-ttu-id="d9639-110">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d9639-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ddf77-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ddf77-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d9639-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d9639-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ddf77-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ddf77-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d9639-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d9639-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ddf77-113">**Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ddf77-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="d9639-113">**Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d9639-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

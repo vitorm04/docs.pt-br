@@ -21,16 +21,17 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 810192848e15a200a4b2eb33eaf60ddbd7c7c607
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 32b75a0d9cbe783778678585a98b453418920e21
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="iassemblynamegetdisplayname-method"></a><span data-ttu-id="95a3c-102">Método IAssemblyName::GetDisplayName</span><span class="sxs-lookup"><span data-stu-id="95a3c-102">IAssemblyName::GetDisplayName Method</span></span>
-<span data-ttu-id="95a3c-103">Obtém o nome legível do assembly referenciado por essa [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) objeto.</span><span class="sxs-lookup"><span data-stu-id="95a3c-103">Gets the human-readable name of the assembly referenced by this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object.</span></span>  
+# <a name="iassemblynamegetdisplayname-method"></a><span data-ttu-id="53361-102">Método IAssemblyName::GetDisplayName</span><span class="sxs-lookup"><span data-stu-id="53361-102">IAssemblyName::GetDisplayName Method</span></span>
+<span data-ttu-id="53361-103">Obtém o nome legível do assembly referenciado por essa [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) objeto.</span><span class="sxs-lookup"><span data-stu-id="53361-103">Gets the human-readable name of the assembly referenced by this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="95a3c-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="95a3c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="53361-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="53361-104">Syntax</span></span>  
   
 ```  
 HRESULT GetDisplayName (  
@@ -40,23 +41,23 @@ HRESULT GetDisplayName (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="95a3c-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="95a3c-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="53361-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="53361-105">Parameters</span></span>  
  `szDisplayName`  
- <span data-ttu-id="95a3c-106">[out] O buffer de cadeia de caracteres que contém o nome do assembly referenciado.</span><span class="sxs-lookup"><span data-stu-id="95a3c-106">[out] The string buffer that contains the name of the referenced assembly.</span></span>  
+ <span data-ttu-id="53361-106">[out] O buffer de cadeia de caracteres que contém o nome do assembly referenciado.</span><span class="sxs-lookup"><span data-stu-id="53361-106">[out] The string buffer that contains the name of the referenced assembly.</span></span>  
   
  `pccDisplayName`  
- <span data-ttu-id="95a3c-107">[out no] O tamanho de `szDisplayName` em caracteres largos, incluindo um caractere terminador nulo.</span><span class="sxs-lookup"><span data-stu-id="95a3c-107">[in, out] The size of `szDisplayName` in wide characters, including a null terminator character.</span></span>  
+ <span data-ttu-id="53361-107">[out no] O tamanho de `szDisplayName` em caracteres largos, incluindo um caractere terminador nulo.</span><span class="sxs-lookup"><span data-stu-id="53361-107">[in, out] The size of `szDisplayName` in wide characters, including a null terminator character.</span></span>  
   
  `dwDisplayFlags`  
- <span data-ttu-id="95a3c-108">[in] Uma combinação bit a bit de [ASM_DISPLAY_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-display-flags-enumeration.md) valores que influenciam os recursos do `szDisplayName`.</span><span class="sxs-lookup"><span data-stu-id="95a3c-108">[in] A bitwise combination of [ASM_DISPLAY_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-display-flags-enumeration.md) values that influence the features of `szDisplayName`.</span></span>  
+ <span data-ttu-id="53361-108">[in] Uma combinação bit a bit de [ASM_DISPLAY_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-display-flags-enumeration.md) valores que influenciam os recursos do `szDisplayName`.</span><span class="sxs-lookup"><span data-stu-id="53361-108">[in] A bitwise combination of [ASM_DISPLAY_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-display-flags-enumeration.md) values that influence the features of `szDisplayName`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="95a3c-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="95a3c-109">Requirements</span></span>  
- <span data-ttu-id="95a3c-110">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="95a3c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="53361-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="53361-109">Requirements</span></span>  
+ <span data-ttu-id="53361-110">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="53361-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="95a3c-111">**Cabeçalho:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="95a3c-111">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="53361-111">**Cabeçalho:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="53361-111">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="95a3c-112">**Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="95a3c-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="53361-112">**Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="53361-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="95a3c-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="95a3c-113">See Also</span></span>  
- [<span data-ttu-id="95a3c-114">Interface IAssemblyName</span><span class="sxs-lookup"><span data-stu-id="95a3c-114">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
- [<span data-ttu-id="95a3c-115">Enumerações de fusão</span><span class="sxs-lookup"><span data-stu-id="95a3c-115">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="53361-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="53361-113">See Also</span></span>  
+ [<span data-ttu-id="53361-114">Interface IAssemblyName</span><span class="sxs-lookup"><span data-stu-id="53361-114">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
+ [<span data-ttu-id="53361-115">Enumerações de fusão</span><span class="sxs-lookup"><span data-stu-id="53361-115">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

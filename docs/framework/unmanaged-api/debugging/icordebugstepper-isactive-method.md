@@ -21,16 +21,17 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 25e4b59c59ee4340c14da22143f49c645e1dcc7b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: dd919852d3e7c187dff7fc4304d0a1b42f5294e0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugstepperisactive-method"></a><span data-ttu-id="ba09f-102">Método ICorDebugStepper::IsActive</span><span class="sxs-lookup"><span data-stu-id="ba09f-102">ICorDebugStepper::IsActive Method</span></span>
-<span data-ttu-id="ba09f-103">Obtém um valor que indica se este ICorDebugStepper está atualmente executando uma etapa.</span><span class="sxs-lookup"><span data-stu-id="ba09f-103">Gets a value that indicates whether this ICorDebugStepper is currently executing a step.</span></span>  
+# <a name="icordebugstepperisactive-method"></a><span data-ttu-id="2fe44-102">Método ICorDebugStepper::IsActive</span><span class="sxs-lookup"><span data-stu-id="2fe44-102">ICorDebugStepper::IsActive Method</span></span>
+<span data-ttu-id="2fe44-103">Obtém um valor que indica se este ICorDebugStepper está atualmente executando uma etapa.</span><span class="sxs-lookup"><span data-stu-id="2fe44-103">Gets a value that indicates whether this ICorDebugStepper is currently executing a step.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ba09f-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ba09f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2fe44-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="2fe44-104">Syntax</span></span>  
   
 ```  
 HRESULT IsActive (  
@@ -38,18 +39,18 @@ HRESULT IsActive (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ba09f-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="ba09f-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2fe44-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="2fe44-105">Parameters</span></span>  
  `pbActive`  
- <span data-ttu-id="ba09f-106">[out] Retorna `true` se o seletor está executando uma etapa; caso contrário, retornará `false`.</span><span class="sxs-lookup"><span data-stu-id="ba09f-106">[out] Returns `true` if the stepper is currently executing a step; otherwise, returns `false`.</span></span>  
+ <span data-ttu-id="2fe44-106">[out] Retorna `true` se o seletor está executando uma etapa; caso contrário, retornará `false`.</span><span class="sxs-lookup"><span data-stu-id="2fe44-106">[out] Returns `true` if the stepper is currently executing a step; otherwise, returns `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ba09f-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="ba09f-107">Remarks</span></span>  
- <span data-ttu-id="ba09f-108">Qualquer ação de etapa permanece ativa até que o depurador recebe um [: Stepcomplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md) chamar, que automaticamente desativa o seletor.</span><span class="sxs-lookup"><span data-stu-id="ba09f-108">Any step action remains active until the debugger receives a [ICorDebugManagedCallback::StepComplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md) call, which automatically deactivates the stepper.</span></span> <span data-ttu-id="ba09f-109">Um seletor também pode ser desativado prematuramente chamando [ICorDebugStepper](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md) antes do retorno de chamada condição for atingida.</span><span class="sxs-lookup"><span data-stu-id="ba09f-109">A stepper may also be deactivated prematurely by calling [ICorDebugStepper::Deactivate](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md) before the callback condition is reached.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2fe44-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="2fe44-107">Remarks</span></span>  
+ <span data-ttu-id="2fe44-108">Qualquer ação de etapa permanece ativa até que o depurador recebe um [: Stepcomplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md) chamar, que automaticamente desativa o seletor.</span><span class="sxs-lookup"><span data-stu-id="2fe44-108">Any step action remains active until the debugger receives a [ICorDebugManagedCallback::StepComplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md) call, which automatically deactivates the stepper.</span></span> <span data-ttu-id="2fe44-109">Um seletor também pode ser desativado prematuramente chamando [ICorDebugStepper](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md) antes do retorno de chamada condição for atingida.</span><span class="sxs-lookup"><span data-stu-id="2fe44-109">A stepper may also be deactivated prematurely by calling [ICorDebugStepper::Deactivate](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md) before the callback condition is reached.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ba09f-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ba09f-110">Requirements</span></span>  
- <span data-ttu-id="ba09f-111">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ba09f-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2fe44-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2fe44-110">Requirements</span></span>  
+ <span data-ttu-id="2fe44-111">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2fe44-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ba09f-112">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ba09f-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2fe44-112">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2fe44-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ba09f-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ba09f-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2fe44-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2fe44-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ba09f-114">**Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ba09f-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="2fe44-114">**Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2fe44-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

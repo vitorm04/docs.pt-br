@@ -21,16 +21,17 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 71d24bc83d6a26c800d0d97e885b322cc2b4ccbd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1e17b411e39e522006092d79380566484f8fab67
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanagedmethodgetranges-method"></a><span data-ttu-id="df751-102">Método ISymUnmanagedMethod::GetRanges</span><span class="sxs-lookup"><span data-stu-id="df751-102">ISymUnmanagedMethod::GetRanges Method</span></span>
-<span data-ttu-id="df751-103">Fornecido uma posição em um documento, retorna uma matriz de pares deslocamentos de início e término que correspondem aos intervalos de Microsoft intermediate language (MSIL) que abrange a posição dentro desse método.</span><span class="sxs-lookup"><span data-stu-id="df751-103">Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method.</span></span> <span data-ttu-id="df751-104">A matriz é uma matriz de inteiros e tem o formato [início, end, início, fim].</span><span class="sxs-lookup"><span data-stu-id="df751-104">The array is an array of integers and has the format [start, end, start, end].</span></span> <span data-ttu-id="df751-105">O número de pares de intervalo é o comprimento da matriz dividido por 2.</span><span class="sxs-lookup"><span data-stu-id="df751-105">The number of range pairs is the length of the array divided by 2.</span></span>  
+# <a name="isymunmanagedmethodgetranges-method"></a><span data-ttu-id="b860d-102">Método ISymUnmanagedMethod::GetRanges</span><span class="sxs-lookup"><span data-stu-id="b860d-102">ISymUnmanagedMethod::GetRanges Method</span></span>
+<span data-ttu-id="b860d-103">Fornecido uma posição em um documento, retorna uma matriz de pares deslocamentos de início e término que correspondem aos intervalos de Microsoft intermediate language (MSIL) que abrange a posição dentro desse método.</span><span class="sxs-lookup"><span data-stu-id="b860d-103">Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method.</span></span> <span data-ttu-id="b860d-104">A matriz é uma matriz de inteiros e tem o formato [início, end, início, fim].</span><span class="sxs-lookup"><span data-stu-id="b860d-104">The array is an array of integers and has the format [start, end, start, end].</span></span> <span data-ttu-id="b860d-105">O número de pares de intervalo é o comprimento da matriz dividido por 2.</span><span class="sxs-lookup"><span data-stu-id="b860d-105">The number of range pairs is the length of the array divided by 2.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="df751-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="df751-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b860d-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b860d-106">Syntax</span></span>  
   
 ```  
 HRESULT GetRanges(  
@@ -43,30 +44,30 @@ HRESULT GetRanges(
         length_is(*pcRanges)] ULONG32 ranges[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="df751-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="df751-107">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b860d-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="b860d-107">Parameters</span></span>  
  `document`  
- <span data-ttu-id="df751-108">[in] O documento para o qual o deslocamento é solicitado.</span><span class="sxs-lookup"><span data-stu-id="df751-108">[in] The document for which the offset is requested.</span></span>  
+ <span data-ttu-id="b860d-108">[in] O documento para o qual o deslocamento é solicitado.</span><span class="sxs-lookup"><span data-stu-id="b860d-108">[in] The document for which the offset is requested.</span></span>  
   
  `line`  
- <span data-ttu-id="df751-109">[in] A linha do documento correspondente a intervalos.</span><span class="sxs-lookup"><span data-stu-id="df751-109">[in] The document line corresponding to the ranges.</span></span>  
+ <span data-ttu-id="b860d-109">[in] A linha do documento correspondente a intervalos.</span><span class="sxs-lookup"><span data-stu-id="b860d-109">[in] The document line corresponding to the ranges.</span></span>  
   
  `column`  
- <span data-ttu-id="df751-110">[in] A coluna de documento correspondente a intervalos.</span><span class="sxs-lookup"><span data-stu-id="df751-110">[in] The document column corresponding to the ranges.</span></span>  
+ <span data-ttu-id="b860d-110">[in] A coluna de documento correspondente a intervalos.</span><span class="sxs-lookup"><span data-stu-id="b860d-110">[in] The document column corresponding to the ranges.</span></span>  
   
  `cRanges`  
- <span data-ttu-id="df751-111">[in] O tamanho do `ranges` matriz.</span><span class="sxs-lookup"><span data-stu-id="df751-111">[in] The size of the `ranges` array.</span></span>  
+ <span data-ttu-id="b860d-111">[in] O tamanho do `ranges` matriz.</span><span class="sxs-lookup"><span data-stu-id="b860d-111">[in] The size of the `ranges` array.</span></span>  
   
  `pcRanges`  
- <span data-ttu-id="df751-112">[out] Um ponteiro para um `ULONG32` que recebe o tamanho do buffer necessário para conter os intervalos.</span><span class="sxs-lookup"><span data-stu-id="df751-112">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.</span></span>  
+ <span data-ttu-id="b860d-112">[out] Um ponteiro para um `ULONG32` que recebe o tamanho do buffer necessário para conter os intervalos.</span><span class="sxs-lookup"><span data-stu-id="b860d-112">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.</span></span>  
   
  `ranges`  
- <span data-ttu-id="df751-113">[out] Um ponteiro para o buffer que recebe os intervalos.</span><span class="sxs-lookup"><span data-stu-id="df751-113">[out] A pointer to the buffer that receives the ranges.</span></span>  
+ <span data-ttu-id="b860d-113">[out] Um ponteiro para o buffer que recebe os intervalos.</span><span class="sxs-lookup"><span data-stu-id="b860d-113">[out] A pointer to the buffer that receives the ranges.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="df751-114">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="df751-114">Return Value</span></span>  
- <span data-ttu-id="df751-115">S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="df751-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b860d-114">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="b860d-114">Return Value</span></span>  
+ <span data-ttu-id="b860d-115">S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="b860d-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="df751-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="df751-116">Requirements</span></span>  
- <span data-ttu-id="df751-117">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="df751-117">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b860d-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b860d-116">Requirements</span></span>  
+ <span data-ttu-id="b860d-117">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="b860d-117">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="df751-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="df751-118">See Also</span></span>  
- [<span data-ttu-id="df751-119">Interface ISymUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="df751-119">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b860d-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b860d-118">See Also</span></span>  
+ [<span data-ttu-id="b860d-119">Interface ISymUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="b860d-119">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

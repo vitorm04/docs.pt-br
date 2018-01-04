@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ea2880aa0253de2018aaef15a2abcfb72ceeab9b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f445d4b46f1c1bbb9cdb4ed402a4ea0f3e435db4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3348---servicehostfaulted"></a><span data-ttu-id="0aaab-102">3348 - ServiceHostFaulted</span><span class="sxs-lookup"><span data-stu-id="0aaab-102">3348 - ServiceHostFaulted</span></span>
-## <a name="properties"></a><span data-ttu-id="0aaab-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="0aaab-103">Properties</span></span>  
+# <a name="3348---servicehostfaulted"></a><span data-ttu-id="35bfc-102">3348 - ServiceHostFaulted</span><span class="sxs-lookup"><span data-stu-id="35bfc-102">3348 - ServiceHostFaulted</span></span>
+## <a name="properties"></a><span data-ttu-id="35bfc-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="35bfc-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="0aaab-104">ID</span><span class="sxs-lookup"><span data-stu-id="0aaab-104">ID</span></span>|<span data-ttu-id="0aaab-105">3348</span><span class="sxs-lookup"><span data-stu-id="0aaab-105">3348</span></span>|  
-|<span data-ttu-id="0aaab-106">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="0aaab-106">Keywords</span></span>|<span data-ttu-id="0aaab-107">TCP</span><span class="sxs-lookup"><span data-stu-id="0aaab-107">TCP</span></span>|  
-|<span data-ttu-id="0aaab-108">Nível</span><span class="sxs-lookup"><span data-stu-id="0aaab-108">Level</span></span>|<span data-ttu-id="0aaab-109">Crítico</span><span class="sxs-lookup"><span data-stu-id="0aaab-109">Critical</span></span>|  
-|<span data-ttu-id="0aaab-110">Canal</span><span class="sxs-lookup"><span data-stu-id="0aaab-110">Channel</span></span>|<span data-ttu-id="0aaab-111">Os aplicativos de servidor de Microsoft-Windows- aplicativo/analítico</span><span class="sxs-lookup"><span data-stu-id="0aaab-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="35bfc-104">ID</span><span class="sxs-lookup"><span data-stu-id="35bfc-104">ID</span></span>|<span data-ttu-id="35bfc-105">3348</span><span class="sxs-lookup"><span data-stu-id="35bfc-105">3348</span></span>|  
+|<span data-ttu-id="35bfc-106">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="35bfc-106">Keywords</span></span>|<span data-ttu-id="35bfc-107">TCP</span><span class="sxs-lookup"><span data-stu-id="35bfc-107">TCP</span></span>|  
+|<span data-ttu-id="35bfc-108">Nível</span><span class="sxs-lookup"><span data-stu-id="35bfc-108">Level</span></span>|<span data-ttu-id="35bfc-109">Crítico</span><span class="sxs-lookup"><span data-stu-id="35bfc-109">Critical</span></span>|  
+|<span data-ttu-id="35bfc-110">Canal</span><span class="sxs-lookup"><span data-stu-id="35bfc-110">Channel</span></span>|<span data-ttu-id="35bfc-111">Os aplicativos de servidor de Microsoft-Windows- aplicativo/analítico</span><span class="sxs-lookup"><span data-stu-id="35bfc-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="0aaab-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="0aaab-112">Description</span></span>  
- <span data-ttu-id="0aaab-113">Esse evento é emitido quando o host de serviço com defeito.</span><span class="sxs-lookup"><span data-stu-id="0aaab-113">This event is emitted when the service host faulted.</span></span>  
+## <a name="description"></a><span data-ttu-id="35bfc-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="35bfc-112">Description</span></span>  
+ <span data-ttu-id="35bfc-113">Esse evento é emitido quando o host de serviço com defeito.</span><span class="sxs-lookup"><span data-stu-id="35bfc-113">This event is emitted when the service host faulted.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="0aaab-114">Mensagem</span><span class="sxs-lookup"><span data-stu-id="0aaab-114">Message</span></span>  
- <span data-ttu-id="0aaab-115">Falha de host de serviço.</span><span class="sxs-lookup"><span data-stu-id="0aaab-115">Service host faulted.</span></span>  
+## <a name="message"></a><span data-ttu-id="35bfc-114">Mensagem</span><span class="sxs-lookup"><span data-stu-id="35bfc-114">Message</span></span>  
+ <span data-ttu-id="35bfc-115">Falha de host de serviço.</span><span class="sxs-lookup"><span data-stu-id="35bfc-115">Service host faulted.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="0aaab-116">Detalhes</span><span class="sxs-lookup"><span data-stu-id="0aaab-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="35bfc-116">Detalhes</span><span class="sxs-lookup"><span data-stu-id="35bfc-116">Details</span></span>

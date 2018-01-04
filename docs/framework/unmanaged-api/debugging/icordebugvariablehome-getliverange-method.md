@@ -21,16 +21,17 @@ caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8554bf2667f3542b3164b60eaed998087fe175d5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1bb86921be3398e6e9653838c1aec6b40ca86469
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugvariablehomegetliverange-method"></a><span data-ttu-id="328ae-102">Método IcorDebugVariableHome::GetLiveRange</span><span class="sxs-lookup"><span data-stu-id="328ae-102">IcorDebugVariableHome::GetLiveRange Method</span></span>
-<span data-ttu-id="328ae-103">Obtém o intervalo nativo através da qual esta variável está ativo.</span><span class="sxs-lookup"><span data-stu-id="328ae-103">Gets the native range over which this variable is live.</span></span>  
+# <a name="icordebugvariablehomegetliverange-method"></a><span data-ttu-id="ef0b8-102">Método IcorDebugVariableHome::GetLiveRange</span><span class="sxs-lookup"><span data-stu-id="ef0b8-102">IcorDebugVariableHome::GetLiveRange Method</span></span>
+<span data-ttu-id="ef0b8-103">Obtém o intervalo nativo através da qual esta variável está ativo.</span><span class="sxs-lookup"><span data-stu-id="ef0b8-103">Gets the native range over which this variable is live.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="328ae-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="328ae-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ef0b8-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ef0b8-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLiveRange(  
@@ -39,21 +40,21 @@ HRESULT GetLiveRange(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="328ae-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="328ae-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ef0b8-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="ef0b8-105">Parameters</span></span>  
  `pStartOffset`  
- <span data-ttu-id="328ae-106">[out] O deslocamento lógico em que a variável é primeiro ao vivo.</span><span class="sxs-lookup"><span data-stu-id="328ae-106">[out] The logical offset at which the variable is first live.</span></span>  
+ <span data-ttu-id="ef0b8-106">[out] O deslocamento lógico em que a variável é primeiro ao vivo.</span><span class="sxs-lookup"><span data-stu-id="ef0b8-106">[out] The logical offset at which the variable is first live.</span></span>  
   
  `pEndOffset`  
- <span data-ttu-id="328ae-107">[out] O deslocamento lógico imediatamente após o ponto em que a variável seja o última ao vivo.</span><span class="sxs-lookup"><span data-stu-id="328ae-107">[out] The logical offset immediately after the point at which the variable is last live.</span></span>  
+ <span data-ttu-id="ef0b8-107">[out] O deslocamento lógico imediatamente após o ponto em que a variável seja o última ao vivo.</span><span class="sxs-lookup"><span data-stu-id="ef0b8-107">[out] The logical offset immediately after the point at which the variable is last live.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="328ae-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="328ae-108">Requirements</span></span>  
- <span data-ttu-id="328ae-109">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="328ae-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ef0b8-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ef0b8-108">Requirements</span></span>  
+ <span data-ttu-id="ef0b8-109">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ef0b8-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="328ae-110">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="328ae-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ef0b8-110">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ef0b8-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="328ae-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="328ae-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ef0b8-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ef0b8-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="328ae-112">**Versões do .NET framework:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="328ae-112">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="ef0b8-112">**Versões do .NET framework:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ef0b8-112">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="328ae-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="328ae-113">See Also</span></span>  
- [<span data-ttu-id="328ae-114">Interface ICorDebugVariableHome</span><span class="sxs-lookup"><span data-stu-id="328ae-114">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ef0b8-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ef0b8-113">See Also</span></span>  
+ [<span data-ttu-id="ef0b8-114">Interface ICorDebugVariableHome</span><span class="sxs-lookup"><span data-stu-id="ef0b8-114">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

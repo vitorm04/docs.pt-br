@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e4c5150ed4ad991b7fb74b28bdec15eb5b66d966
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: aa136c97578c340aa11348f8559eff634dbc295a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3330---securitynegotiationstart"></a><span data-ttu-id="46587-102">3330 - SecurityNegotiationStart</span><span class="sxs-lookup"><span data-stu-id="46587-102">3330 - SecurityNegotiationStart</span></span>
-## <a name="properties"></a><span data-ttu-id="46587-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="46587-103">Properties</span></span>  
+# <a name="3330---securitynegotiationstart"></a><span data-ttu-id="d80b2-102">3330 - SecurityNegotiationStart</span><span class="sxs-lookup"><span data-stu-id="d80b2-102">3330 - SecurityNegotiationStart</span></span>
+## <a name="properties"></a><span data-ttu-id="d80b2-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="d80b2-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="46587-104">ID</span><span class="sxs-lookup"><span data-stu-id="46587-104">ID</span></span>|<span data-ttu-id="46587-105">3330</span><span class="sxs-lookup"><span data-stu-id="46587-105">3330</span></span>|  
-|<span data-ttu-id="46587-106">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="46587-106">Keywords</span></span>|<span data-ttu-id="46587-107">Segurança</span><span class="sxs-lookup"><span data-stu-id="46587-107">Security</span></span>|  
-|<span data-ttu-id="46587-108">Nível</span><span class="sxs-lookup"><span data-stu-id="46587-108">Level</span></span>|<span data-ttu-id="46587-109">Detalhado</span><span class="sxs-lookup"><span data-stu-id="46587-109">Verbose</span></span>|  
-|<span data-ttu-id="46587-110">Canal</span><span class="sxs-lookup"><span data-stu-id="46587-110">Channel</span></span>|<span data-ttu-id="46587-111">Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração</span><span class="sxs-lookup"><span data-stu-id="46587-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="d80b2-104">ID</span><span class="sxs-lookup"><span data-stu-id="d80b2-104">ID</span></span>|<span data-ttu-id="d80b2-105">3330</span><span class="sxs-lookup"><span data-stu-id="d80b2-105">3330</span></span>|  
+|<span data-ttu-id="d80b2-106">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="d80b2-106">Keywords</span></span>|<span data-ttu-id="d80b2-107">Segurança</span><span class="sxs-lookup"><span data-stu-id="d80b2-107">Security</span></span>|  
+|<span data-ttu-id="d80b2-108">Nível</span><span class="sxs-lookup"><span data-stu-id="d80b2-108">Level</span></span>|<span data-ttu-id="d80b2-109">Detalhado</span><span class="sxs-lookup"><span data-stu-id="d80b2-109">Verbose</span></span>|  
+|<span data-ttu-id="d80b2-110">Canal</span><span class="sxs-lookup"><span data-stu-id="d80b2-110">Channel</span></span>|<span data-ttu-id="d80b2-111">Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração</span><span class="sxs-lookup"><span data-stu-id="d80b2-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="46587-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="46587-112">Description</span></span>  
- <span data-ttu-id="46587-113">Esse evento é emitido quando iniciado a negociação de segurança.</span><span class="sxs-lookup"><span data-stu-id="46587-113">This event is emitted when the security negotiation started.</span></span>  
+## <a name="description"></a><span data-ttu-id="d80b2-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="d80b2-112">Description</span></span>  
+ <span data-ttu-id="d80b2-113">Esse evento é emitido quando iniciado a negociação de segurança.</span><span class="sxs-lookup"><span data-stu-id="d80b2-113">This event is emitted when the security negotiation started.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="46587-114">Mensagem</span><span class="sxs-lookup"><span data-stu-id="46587-114">Message</span></span>  
- <span data-ttu-id="46587-115">Iniciar a negociação de segurança.</span><span class="sxs-lookup"><span data-stu-id="46587-115">Security negotiation started.</span></span>  
+## <a name="message"></a><span data-ttu-id="d80b2-114">Mensagem</span><span class="sxs-lookup"><span data-stu-id="d80b2-114">Message</span></span>  
+ <span data-ttu-id="d80b2-115">Iniciar a negociação de segurança.</span><span class="sxs-lookup"><span data-stu-id="d80b2-115">Security negotiation started.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="46587-116">Detalhes</span><span class="sxs-lookup"><span data-stu-id="46587-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="d80b2-116">Detalhes</span><span class="sxs-lookup"><span data-stu-id="d80b2-116">Details</span></span>

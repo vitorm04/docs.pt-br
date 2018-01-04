@@ -21,16 +21,17 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 70a7c389ac44e8a513ec8a764d19c9a316ca7c08
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e7a427396158fda7d387eecbeff58e6c1ef591dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icorthreadpoolcorcreatetimer-method"></a><span data-ttu-id="b43b7-102">Método ICorThreadpool::CorCreateTimer</span><span class="sxs-lookup"><span data-stu-id="b43b7-102">ICorThreadpool::CorCreateTimer Method</span></span>
-<span data-ttu-id="b43b7-103">Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.</span><span class="sxs-lookup"><span data-stu-id="b43b7-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icorthreadpoolcorcreatetimer-method"></a><span data-ttu-id="6b349-102">Método ICorThreadpool::CorCreateTimer</span><span class="sxs-lookup"><span data-stu-id="6b349-102">ICorThreadpool::CorCreateTimer Method</span></span>
+<span data-ttu-id="6b349-103">Esse método oferece suporte a infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.</span><span class="sxs-lookup"><span data-stu-id="6b349-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b43b7-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b43b7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6b349-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="6b349-104">Syntax</span></span>  
   
 ```  
 HRESULT CorCreateTimer (  
@@ -43,14 +44,14 @@ HRESULT CorCreateTimer (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="b43b7-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b43b7-105">Requirements</span></span>  
- <span data-ttu-id="b43b7-106">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b43b7-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6b349-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6b349-105">Requirements</span></span>  
+ <span data-ttu-id="6b349-106">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6b349-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b43b7-107">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b43b7-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="6b349-107">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="6b349-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="b43b7-108">**Biblioteca:** incluído como um recurso no MSCOREE</span><span class="sxs-lookup"><span data-stu-id="b43b7-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="6b349-108">**Biblioteca:** incluído como um recurso no MSCOREE</span><span class="sxs-lookup"><span data-stu-id="6b349-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="b43b7-109">**Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b43b7-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6b349-109">**Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6b349-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b43b7-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b43b7-110">See Also</span></span>  
- [<span data-ttu-id="b43b7-111">Interface ICorThreadpool</span><span class="sxs-lookup"><span data-stu-id="b43b7-111">ICorThreadpool Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)
+## <a name="see-also"></a><span data-ttu-id="6b349-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6b349-110">See Also</span></span>  
+ [<span data-ttu-id="6b349-111">Interface ICorThreadpool</span><span class="sxs-lookup"><span data-stu-id="6b349-111">ICorThreadpool Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)

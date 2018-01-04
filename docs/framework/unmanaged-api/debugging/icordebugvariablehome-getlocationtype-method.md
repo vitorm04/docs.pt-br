@@ -21,16 +21,17 @@ caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a600f26440e29a60d776be8679d7a298d77434f7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ec44705f75959dce893932789b026504d65a3105
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugvariablehomegetlocationtype-method"></a><span data-ttu-id="0aed3-102">Método ICorDebugVariableHome::GetLocationType</span><span class="sxs-lookup"><span data-stu-id="0aed3-102">ICorDebugVariableHome::GetLocationType Method</span></span>
-<span data-ttu-id="0aed3-103">Obtém o tipo de local nativo da variável.</span><span class="sxs-lookup"><span data-stu-id="0aed3-103">Gets the type of the variable's native location.</span></span>  
+# <a name="icordebugvariablehomegetlocationtype-method"></a><span data-ttu-id="6556f-102">Método ICorDebugVariableHome::GetLocationType</span><span class="sxs-lookup"><span data-stu-id="6556f-102">ICorDebugVariableHome::GetLocationType Method</span></span>
+<span data-ttu-id="6556f-103">Obtém o tipo de local nativo da variável.</span><span class="sxs-lookup"><span data-stu-id="6556f-103">Gets the type of the variable's native location.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0aed3-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="0aed3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6556f-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="6556f-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLocationType(  
@@ -38,19 +39,19 @@ HRESULT GetLocationType(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0aed3-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="0aed3-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="6556f-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="6556f-105">Parameters</span></span>  
  `pLocationType`  
- <span data-ttu-id="0aed3-106">[out] Um ponteiro para o tipo de local nativo da variável.</span><span class="sxs-lookup"><span data-stu-id="0aed3-106">[out] A pointer to the type of the variable's native location.</span></span>  <span data-ttu-id="0aed3-107">Consulte o [VariableLocationType](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md) enumeração para obter mais informações.</span><span class="sxs-lookup"><span data-stu-id="0aed3-107">See the [VariableLocationType](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md) enumeration for more information.</span></span>  
+ <span data-ttu-id="6556f-106">[out] Um ponteiro para o tipo de local nativo da variável.</span><span class="sxs-lookup"><span data-stu-id="6556f-106">[out] A pointer to the type of the variable's native location.</span></span>  <span data-ttu-id="6556f-107">Consulte o [VariableLocationType](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md) enumeração para obter mais informações.</span><span class="sxs-lookup"><span data-stu-id="6556f-107">See the [VariableLocationType](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md) enumeration for more information.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0aed3-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0aed3-108">Requirements</span></span>  
- <span data-ttu-id="0aed3-109">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0aed3-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6556f-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6556f-108">Requirements</span></span>  
+ <span data-ttu-id="6556f-109">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6556f-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0aed3-110">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0aed3-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="6556f-110">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6556f-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0aed3-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0aed3-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6556f-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6556f-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0aed3-112">**Versões do .NET framework:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0aed3-112">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="6556f-112">**Versões do .NET framework:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6556f-112">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0aed3-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0aed3-113">See Also</span></span>  
- [<span data-ttu-id="0aed3-114">Interface ICorDebugVariableHome</span><span class="sxs-lookup"><span data-stu-id="0aed3-114">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)  
- [<span data-ttu-id="0aed3-115">Enumeração VariableLocationType</span><span class="sxs-lookup"><span data-stu-id="0aed3-115">VariableLocationType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)
+## <a name="see-also"></a><span data-ttu-id="6556f-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6556f-113">See Also</span></span>  
+ [<span data-ttu-id="6556f-114">Interface ICorDebugVariableHome</span><span class="sxs-lookup"><span data-stu-id="6556f-114">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)  
+ [<span data-ttu-id="6556f-115">Enumeração VariableLocationType</span><span class="sxs-lookup"><span data-stu-id="6556f-115">VariableLocationType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)

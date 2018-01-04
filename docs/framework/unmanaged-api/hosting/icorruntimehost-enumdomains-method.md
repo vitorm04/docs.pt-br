@@ -21,16 +21,17 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c63e4345815a073fe6aa422018b6fadf45bd5370
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f12135134e38b3f52c66aa951d61a3da7cf5fa50
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icorruntimehostenumdomains-method"></a><span data-ttu-id="3a178-102">Método ICorRuntimeHost::EnumDomains</span><span class="sxs-lookup"><span data-stu-id="3a178-102">ICorRuntimeHost::EnumDomains Method</span></span>
-<span data-ttu-id="3a178-103">Obtém um enumerador para os domínios no processo atual.</span><span class="sxs-lookup"><span data-stu-id="3a178-103">Gets an enumerator for the domains in the current process.</span></span>  
+# <a name="icorruntimehostenumdomains-method"></a><span data-ttu-id="dfcc8-102">Método ICorRuntimeHost::EnumDomains</span><span class="sxs-lookup"><span data-stu-id="dfcc8-102">ICorRuntimeHost::EnumDomains Method</span></span>
+<span data-ttu-id="dfcc8-103">Obtém um enumerador para os domínios no processo atual.</span><span class="sxs-lookup"><span data-stu-id="dfcc8-103">Gets an enumerator for the domains in the current process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3a178-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="3a178-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dfcc8-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="dfcc8-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumDomains (  
@@ -38,27 +39,27 @@ HRESULT EnumDomains (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3a178-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="3a178-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="dfcc8-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="dfcc8-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="3a178-106">[out] Um enumerador para os domínios.</span><span class="sxs-lookup"><span data-stu-id="3a178-106">[out] An enumerator for the domains.</span></span>  
+ <span data-ttu-id="dfcc8-106">[out] Um enumerador para os domínios.</span><span class="sxs-lookup"><span data-stu-id="dfcc8-106">[out] An enumerator for the domains.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3a178-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="3a178-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="dfcc8-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="dfcc8-107">Return Value</span></span>  
   
-|<span data-ttu-id="3a178-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3a178-108">HRESULT</span></span>|<span data-ttu-id="3a178-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="3a178-109">Description</span></span>|  
+|<span data-ttu-id="dfcc8-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="dfcc8-108">HRESULT</span></span>|<span data-ttu-id="dfcc8-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="dfcc8-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="3a178-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="3a178-110">S_OK</span></span>|<span data-ttu-id="3a178-111">A operação foi bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="3a178-111">The operation was successful.</span></span>|  
-|<span data-ttu-id="3a178-112">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="3a178-112">S_FALSE</span></span>|<span data-ttu-id="3a178-113">Falha ao concluir a operação.</span><span class="sxs-lookup"><span data-stu-id="3a178-113">The operation failed to complete.</span></span>|  
-|<span data-ttu-id="3a178-114">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="3a178-114">E_FAIL</span></span>|<span data-ttu-id="3a178-115">Ocorreu uma falha catastrófica, desconhecida.</span><span class="sxs-lookup"><span data-stu-id="3a178-115">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="3a178-116">Se um método retornará E_FAIL, o common language runtime (CLR) não será mais utilizável no processo.</span><span class="sxs-lookup"><span data-stu-id="3a178-116">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="3a178-117">As chamadas subsequentes para hospedagem de APIs retornam HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="3a178-117">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="3a178-118">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="3a178-118">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="3a178-119">O CLR não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="3a178-119">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="dfcc8-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="dfcc8-110">S_OK</span></span>|<span data-ttu-id="dfcc8-111">A operação foi bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="dfcc8-111">The operation was successful.</span></span>|  
+|<span data-ttu-id="dfcc8-112">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="dfcc8-112">S_FALSE</span></span>|<span data-ttu-id="dfcc8-113">Falha ao concluir a operação.</span><span class="sxs-lookup"><span data-stu-id="dfcc8-113">The operation failed to complete.</span></span>|  
+|<span data-ttu-id="dfcc8-114">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="dfcc8-114">E_FAIL</span></span>|<span data-ttu-id="dfcc8-115">Ocorreu uma falha catastrófica, desconhecida.</span><span class="sxs-lookup"><span data-stu-id="dfcc8-115">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="dfcc8-116">Se um método retornará E_FAIL, o common language runtime (CLR) não será mais utilizável no processo.</span><span class="sxs-lookup"><span data-stu-id="dfcc8-116">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="dfcc8-117">As chamadas subsequentes para hospedagem de APIs retornam HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="dfcc8-117">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="dfcc8-118">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="dfcc8-118">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="dfcc8-119">O CLR não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="dfcc8-119">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="3a178-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3a178-120">Requirements</span></span>  
- <span data-ttu-id="3a178-121">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3a178-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dfcc8-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="dfcc8-120">Requirements</span></span>  
+ <span data-ttu-id="dfcc8-121">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dfcc8-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3a178-122">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3a178-122">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="dfcc8-122">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="dfcc8-122">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="3a178-123">**Biblioteca:** incluído como um recurso no MSCOREE</span><span class="sxs-lookup"><span data-stu-id="3a178-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="dfcc8-123">**Biblioteca:** incluído como um recurso no MSCOREE</span><span class="sxs-lookup"><span data-stu-id="dfcc8-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="3a178-124">**Versão do .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="3a178-124">**.NET Framework Version:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="dfcc8-124">**Versão do .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="dfcc8-124">**.NET Framework Version:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3a178-125">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3a178-125">See Also</span></span>  
- [<span data-ttu-id="3a178-126">Interface ICorRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="3a178-126">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="dfcc8-125">Consulte também</span><span class="sxs-lookup"><span data-stu-id="dfcc8-125">See Also</span></span>  
+ [<span data-ttu-id="dfcc8-126">Interface ICorRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="dfcc8-126">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
