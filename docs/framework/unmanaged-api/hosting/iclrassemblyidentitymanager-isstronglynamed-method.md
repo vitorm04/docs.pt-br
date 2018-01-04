@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d0cb0bcaf5d19ec088511e64baffff9031911b32
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1cb727d9144fc3364a04cd5b9064527c55f5ee79
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrassemblyidentitymanagerisstronglynamed-method"></a>Método ICLRAssemblyIdentityManager::IsStronglyNamed
 Obtém um valor que indica se o assembly especificado tem um nome forte.  

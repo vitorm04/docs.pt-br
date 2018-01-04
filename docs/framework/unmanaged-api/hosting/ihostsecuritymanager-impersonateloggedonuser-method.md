@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8c5956dcad6908f0117de7f5ff0c6632ad3bb925
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bf01ca07544fcce59eef81707bb1ff2d1f375feb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihostsecuritymanagerimpersonateloggedonuser-method"></a>Método IHostSecurityManager::ImpersonateLoggedOnUser
 Solicitações que código ser executado usando as credenciais da identidade do usuário atual.  

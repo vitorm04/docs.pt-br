@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f6ef8314329aba60d8c23c6f00725192d83961ec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b864b057e274424a8515ab1bb122da74538c4c63
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugmodule3-interface"></a>Interface ICorDebugModule3
 Cria um leitor de símbolos para um módulo dinâmico.  
@@ -45,7 +46,7 @@ interface ICorDebugModule3 : IUnknown
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Icordebugmodule3::](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|Cria um leitor de símbolo (normalmente [ISymUnmanagedReader Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) para um módulo dinâmico.|  
+|[Método ICorDebugModule3::CreateReaderForInMemorySymbols](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|Cria um leitor de símbolo (normalmente [ISymUnmanagedReader Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) para um módulo dinâmico.|  
   
 ## <a name="remarks"></a>Comentários  
  Essa interface logicamente estende as interfaces "ICorDebugModule" e "ICorDebugModule2".  
@@ -66,4 +67,4 @@ interface ICorDebugModule3 : IUnknown
  [Interface ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
  [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
     
- [Interfaces de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

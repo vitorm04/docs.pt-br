@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e261f4cb43843ec61ec6cbd1609e6967a4a38a82
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fc2d8eacb05e861290ad19a34c261943dc2959a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>Método ICorDebugNativeFrame2::IsMatchingParentFrame
 Determina se o intervalo especificado é o pai do quadro atual.  
@@ -70,5 +71,5 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICorDebugNativeFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)  
- [Interfaces de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d03423aa20ed9582f0e2cb38b24169a25d47e352
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 28ec0ba45a83ccf51cc84ee9deb2c658b9b106bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadataemitsetmethodprops-method"></a>Método IMetaDataEmit::SetMethodProps
 Define ou atualiza o recurso, armazenado em do endereço virtual relativo especificado, de um método definido por uma chamada anterior ao [Definemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md).  

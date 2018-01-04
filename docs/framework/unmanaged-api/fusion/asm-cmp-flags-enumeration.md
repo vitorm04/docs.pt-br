@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a85b658294dae90efcfd931565d67678246bd6f8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4930a4998ace3a1cd9e60300818fcfc75702b63b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="asmcmpflags-enumeration"></a>Enumeração ASM_CMP_FLAGS
 Indica a versão, compilação, cultura, assinatura e assim por diante, de dois assemblies a serem comparadas o [: Isequal](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md) método.  

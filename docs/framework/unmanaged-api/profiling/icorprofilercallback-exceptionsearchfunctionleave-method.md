@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 063b8e666b122103c6776b86aa86d1215e200016
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e63309ea1d92018b41c8ee32fcd66f865af5d891
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilercallbackexceptionsearchfunctionleave-method"></a>Método ICorProfilerCallback::ExceptionSearchFunctionLeave
 Notifica o criador de perfil que a fase de pesquisa de tratamento de exceção concluiu a pesquisa de uma função.  

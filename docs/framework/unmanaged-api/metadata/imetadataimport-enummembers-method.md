@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cc17437c18dd7a2cdc2fdabdc714b12f8d91cc7a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: aa7dabad0e555fe965cba4e5cbc69c10c9826b8e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadataimportenummembers-method"></a>Método IMetaDataImport::EnumMembers
 Enumera os tokens de MemberDef que representa os membros do tipo especificado.  

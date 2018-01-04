@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 01c94df1d8e6ddef0110268461a2b28f594201b6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c3464b4ad963b2fe764cefc5868440b7748f8c4d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugvalue-interface1"></a>ICorDebugValue Interface1
 Representa um valor no processo sendo depurado. O valor pode ser uma leitura ou um valor de gravação.  
@@ -60,4 +61,4 @@ Representa um valor no processo sendo depurado. O valor pode ser uma leitura ou 
     
     
  [Interface ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)  
- [Interfaces de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

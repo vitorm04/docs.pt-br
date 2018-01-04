@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 80b42a2ed4e93fd5e4c662bab34b111fe0757890
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 66e4ba870319a1c60419ab794088a41eb9c4db3e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugilframe4-interface"></a>Interface ICorDebugILFrame4
 [Com suporte no .NET Framework 4.5.2 e versões posteriores]  
@@ -49,5 +50,5 @@ ms.lasthandoff: 11/21/2017
  **Versões do .NET framework:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Interfaces de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -17,17 +17,18 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 26fa9471b46a7a963d66ebf0d5b3c6a0286ae640
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5583a9b81d81acfca80368ca54d5f97899daa1d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-unmanaged-api-reference"></a>Criação de perfil (referência de API não gerenciada)
 A API de criação de perfil permite que um criador de perfil monitorar a execução do programa, o common language runtime (CLR).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão geral de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
+ [Visão geral da criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
  Descreve os serviços e interfaces que o CLR fornece para dar suporte à criação de perfil no ambiente do .NET Framework.  
   
  [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
@@ -42,10 +43,10 @@ A API de criação de perfil permite que um criador de perfil monitorar a execu�
  [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)  
  Documenta as condições sob as quais uma chamada de método retorna o `CORPROF_E_UNSUPPORTED_CALL_SEQUENCE` HRESULT.  
   
- [Funções estáticas globais de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)  
+ [Criando perfil de funções estáticas globais](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)  
  Descreve as funções estáticas globais não gerenciadas que usa a API de criação de perfil.  
   
- [Enumerações de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)  
+ [Criando perfil de enumerações](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)  
  Descreve as enumerações não gerenciadas que usa a API de criação de perfil.  
   
  [Estruturas de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)  

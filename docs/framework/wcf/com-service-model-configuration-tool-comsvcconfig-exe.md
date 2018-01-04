@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 322268f5b11a5078545ae120440f91d327d6a615
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 40e7644ade32f245772a8971cf0693683b980952
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>Ferramenta de configuração de modelo de serviço COM+ (ComSvcConfig.exe)
 A ferramenta de linha de comando de configuração de modelo de serviço COM+ (ComSvcConfig.exe) permite que você configure COM+ interfaces a serem expostas como serviços da Web.  
@@ -105,4 +106,4 @@ ComSvcConfig.exe /list /application:OnlineStore /hosting:complus
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: usar a ferramenta de configuração de modelo de serviço COM+](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+ [Como usar a ferramenta de configuração de modelo de serviço do COM+](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

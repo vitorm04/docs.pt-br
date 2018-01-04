@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 14b4e6dae97777873f458018acdaf0c3f5d4f070
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b10d74cd54afc3c93578710d4a2e339a1f8761f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrstrongnamegethashfromassemblyfilew-method"></a>Método ICLRStrongName::GetHashFromAssemblyFileW
 Gera um hash com base no conteúdo do arquivo especificado por uma cadeia de caracteres Unicode.  

@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4814de2de71ba0fa4d1400f0be27fa4942febf54
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f353ecaf4f0a64920fa7e23b98d09ef3191428cb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugexceptionobjectcallstackenum-interface"></a>Interface ICorDebugExceptionObjectCallStackEnum
 Fornece um enumerador para informações de pilha de chamadas que são inseridas em um objeto de exceção. Esta interface é uma subclasse da interface ICorDebugEnum.  
@@ -49,5 +50,5 @@ Fornece um enumerador para informações de pilha de chamadas que são inseridas
  **Versões do .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Interfaces de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 318bd7d05a7da5ce728ca80fe9bacfd84f501884
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 991931bb937c0ec138deacc3b6163a1f76c60e00
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadatatablesgetnextuserstring-method"></a>Método IMetaDataTables::GetNextUserString
 Obtém o índice da linha que contém a cadeia de caracteres codificada Avançar na coluna da tabela atual.  

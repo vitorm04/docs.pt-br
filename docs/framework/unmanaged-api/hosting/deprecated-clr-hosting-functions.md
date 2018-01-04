@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9530fecb4f2ca6f59d165e49c282320966fd2fa8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 985425ad44003f5971b21f107fad322f2123f6ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deprecated-clr-hosting-functions"></a>Funções de hospedagem CLR reprovadas
 Esta seção descreve as funções estáticas globais não gerenciadas usados por versões anteriores da API de hospedagem.  
@@ -118,10 +119,10 @@ Esta seção descreve as funções estáticas globais não gerenciadas usados po
  [Função DestroyICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/destroyiceefilegen-function.md)  
  Preterido. Destrói um [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) objeto.  
   
- [Função FExecuteInAppDomainCallback](../../../../docs/framework/unmanaged-api/hosting/fexecuteinappdomaincallback-function-pointer.md)  
+ [Ponteiro de função FExecuteInAppDomainCallback](../../../../docs/framework/unmanaged-api/hosting/fexecuteinappdomaincallback-function-pointer.md)  
  Preterido. Aponta para uma função que o CLR chama para executar código gerenciado.  
   
- [Função FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)  
+ [Ponteiro de função FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)  
  Preterido. Aponta para uma função que o CLR chama para notificar o host que a inicialização tiver seja iniciada ou concluída.  
   
  [Função GetCLRIdentityManager](../../../../docs/framework/unmanaged-api/hosting/getclridentitymanager-function.md)  
@@ -136,10 +137,10 @@ Esta seção descreve as funções estáticas globais não gerenciadas usados po
  [Função LoadStringRCEx](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  
  Preterido. Converte um valor HRESULT a uma mensagem de erro apropriada para a cultura especificada.  
   
- [Função Lpoverlapped_completion_routine](../../../../docs/framework/unmanaged-api/hosting/lpoverlapped-completion-routine-function-pointer.md)  
+ [Ponteiro de função LPOVERLAPPED_COMPLETION_ROUTINE](../../../../docs/framework/unmanaged-api/hosting/lpoverlapped-completion-routine-function-pointer.md)  
  Preterido. Aponta para uma função que notifica o host quando um sobreposto (ou seja, assíncrona) e/s para um dispositivo foi concluída.  
   
- [Função Lpthread_start_routine](../../../../docs/framework/unmanaged-api/hosting/lpthread-start-routine-function-pointer.md)  
+ [Ponteiro de função LPTHREAD_START_ROUTINE](../../../../docs/framework/unmanaged-api/hosting/lpthread-start-routine-function-pointer.md)  
  Preterido. Aponta para uma função que notifica o host que um thread começou a executar.  
   
  [Função RunDll32ShimW](../../../../docs/framework/unmanaged-api/hosting/rundll32shimw-function.md)  
@@ -151,20 +152,20 @@ Esta seção descreve as funções estáticas globais não gerenciadas usados po
 ## <a name="infrastructure-functions"></a>Funções de infraestrutura  
  As funções nesta seção são para uso apenas do .NET Framework.  
   
- [Função cordllmain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)  
+ [Função _CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)  
  Inicializa o CLR, localiza o ponto de entrada gerenciado no cabeçalho do CLR do assembly DLL e começa a ser executada.  
   
- [Função CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)  
+ [Função _CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)  
  Inicializa o CLR, localiza o ponto de entrada gerenciado no cabeçalho do executável do assembly CLR e começa a ser executada.  
   
- [Função CorExeMain2](../../../../docs/framework/unmanaged-api/hosting/corexemain2-function.md)  
+ [Função _CorExeMain2](../../../../docs/framework/unmanaged-api/hosting/corexemain2-function.md)  
  Executa o ponto de entrada no código do mapeamento de memória especificado. Essa função é chamada pelo carregador do sistema operacional.  
   
- [Função CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md)  
+ [Função _CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md)  
  Notifica o carregador quando as imagens do módulo gerenciado são descarregadas.  
   
- [Função CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md)  
+ [Função _CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md)  
  Valida as imagens do módulo gerenciado e notifica o carregador do sistema operacional depois de terem sido carregados.  
   
 ## <a name="see-also"></a>Consulte também  
- [.NET framework 4 hospedando funções estáticas globais](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md) 
+ [.NET Framework 4 hospedando funções estáticas globais](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md) 

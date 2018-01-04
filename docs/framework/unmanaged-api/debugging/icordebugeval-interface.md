@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 57b285ef5b2d3f8342b473f09650e6db7ec1693d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 77e97e31a20c392eebae1b373bb1af53f87c23e9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugeval-interface1"></a>ICorDebugEval Interface1
 Fornece métodos para permitir que o depurador execute um código no contexto do código que está sendo depurado.  
@@ -68,4 +69,4 @@ Fornece métodos para permitir que o depurador execute um código no contexto do
     
     
     
- [Interfaces de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7e64a52ca70606f83138b636f7ccb62ba18908f5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a33420d50a964479c74a59bf5b7cc0da320aee04
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugvariablehomeenum-interface"></a>Interface ICorDebugVariableHomeEnum
 Fornece um enumerador para a variáveis locais e os argumentos em uma função.  
@@ -32,7 +33,7 @@ Fornece um enumerador para a variáveis locais e os argumentos em uma função.
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Próximo método](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md)|Obtém o número especificado de [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instâncias que contêm informações sobre as variáveis locais e os argumentos em uma função.|  
+|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md)|Obtém o número especificado de [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instâncias que contêm informações sobre as variáveis locais e os argumentos em uma função.|  
   
 ## <a name="remarks"></a>Comentários  
  O `ICorDebugVariableHomeEnum` interface implementa a interface ICorDebugEnum.  
@@ -50,4 +51,4 @@ Fornece um enumerador para a variáveis locais e os argumentos em uma função.
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)  
- [Interfaces de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

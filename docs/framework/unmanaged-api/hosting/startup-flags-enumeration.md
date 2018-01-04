@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ebfb45e6d568b4fa1db209264e02332df636474f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ca2db0cd7082a596999f1d74c9092264a65692ea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="startupflags-enumeration"></a>Enumeração STARTUP_FLAGS
 Contém valores que indicam o comportamento de inicialização do common language runtime (CLR). Por padrão, a coleta de lixo é não simultânea e somente é carregar a biblioteca de classe base para a área de um domínio neutro.  

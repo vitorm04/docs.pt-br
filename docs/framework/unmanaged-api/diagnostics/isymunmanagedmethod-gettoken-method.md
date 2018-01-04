@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b3cbcd27d42928223411a31dbb68e6d1dd0391fd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: bfdc070c21c7929166bfa957c0e0dd63da80f761
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="isymunmanagedmethodgettoken-method"></a>Método ISymUnmanagedMethod::GetToken
 Retorna o token de metadados para esse método.  

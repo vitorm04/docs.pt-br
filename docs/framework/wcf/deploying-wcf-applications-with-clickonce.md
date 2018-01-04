@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 714e8341c58e5337d8e45bf61b48137d33fa51b9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0e87e01c39c5f50ff3f4d4e9479a68e19cceb90f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-wcf-applications-with-clickonce"></a>Implantando aplicativos do WCF com um clique
 Aplicativos cliente que usam [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] podem ser implantados usando a tecnologia ClickOnce. Essa tecnologia permite tirar proveito do tempo de execução proteções de segurança fornecidas pela segurança de acesso do código, desde que eles são assinados digitalmente com um certificado confiável. O certificado usado para assinar o aplicativo ClickOnce deve residir no repositório de fornecedor confiável e política de segurança local no computador cliente deve ser configurada para conceder permissões de confiança total para os aplicativos assinados com o certificado do Editor.  

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d22fa926b300384b7f790468b1b3d0becafdb942
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 936df5c3d913a2ee5a1648906fb3ece2751d8ef5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugvirtualunwinder-interface"></a>Interface ICorDebugVirtualUnwinder
 Fornece métodos para ajudar a desenrolamento de pilha.  
@@ -27,7 +28,7 @@ Fornece métodos para ajudar a desenrolamento de pilha.
 |Método|Nome|  
 |------------|----------|  
 |[Método GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugvirtualunwinder-getcontext-method.md)|Obtém o contexto atual deste unwinder.|  
-|[Próximo método](../../../../docs/framework/unmanaged-api/debugging/icordebugvirtualunwinder-next-method.md)|Avança para o contexto do chamador.|  
+|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvirtualunwinder-next-method.md)|Avança para o contexto do chamador.|  
   
 ## <a name="remarks"></a>Comentários  
  Os membros de `ICorDebugVirtualUnwinder` interface são implementadas pelo depurador para ajudar o desenrolamento de pilha.  
@@ -45,5 +46,5 @@ Fornece métodos para ajudar a desenrolamento de pilha.
  **Versões do .NET framework:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Interfaces de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

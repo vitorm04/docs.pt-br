@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9a97706e5cf407f16b6d06efce11576fbb131d1f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1ac081cbd1fef0ca46750d8d7a74a22f23dbf0bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugregistersetsetthreadcontext-method"></a>Método ICorDebugRegisterSet::SetThreadContext
 `SetThreadContext`não é implementado no .NET Framework versão 2.0. Não chame este método.  

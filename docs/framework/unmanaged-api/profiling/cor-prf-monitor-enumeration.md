@@ -19,11 +19,12 @@ caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c0e2f774bd178676494f24364c7b8890665c3810
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e6dc135681d11a496dbc27553d46a5d101b6d7b9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corprfmonitor-enumeration"></a>Enumeração COR_PRF_MONITOR
 Contém valores usados para especificar comportamentos, recursos ou eventos que o criador de perfis deseja assinar.  
@@ -196,6 +197,6 @@ typedef enum {
  **Versões do .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Enumerações de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)  
+ [Criando perfil de enumerações](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)  
  [Método GetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)  
  [Método SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)

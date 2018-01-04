@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2b3d67328dbf68491d319e55e63a9c3540cd1ee4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 44f2272c0f4e1423c222a004559d7bbd58237d82
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihostsecuritymanager-interface"></a>Interface IHostSecurityManager
 Fornece métodos que permitem o acesso e controle sobre o contexto de segurança do thread em execução no momento.  
@@ -63,4 +64,4 @@ Fornece métodos que permitem o acesso e controle sobre o contexto de segurança
   
 ## <a name="see-also"></a>Consulte também  
  [Interface IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)  
- [Interfaces de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+ [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

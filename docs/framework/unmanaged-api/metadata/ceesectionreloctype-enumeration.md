@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d78b6b3867cb168e4ebf93c07f17a911e1955832
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d257778a9a05e2654d7f91c0205424d001f5ae3e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ceesectionreloctype-enumeration"></a>Enumeração CeeSectionRelocType
 Fornece valores para influenciar o tipo de `reloc` instrução emitida em uma chamada para [: Addsectionreloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md).  

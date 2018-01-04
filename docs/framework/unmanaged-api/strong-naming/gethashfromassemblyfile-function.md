@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1598e4e332525f87392ae5b0ad486a735e760651
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ed5de637f8b8d51e2619ba205d89c753b27722bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="gethashfromassemblyfile-function"></a>Função GetHashFromAssemblyFile
 Obtém um hash do arquivo de assembly especificado, usando o algoritmo de hash especificado.  

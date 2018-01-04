@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0c8a4421b716614081368755388bd2ab8d8fe22e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 018ed69e52efd21ca25029284c70f1c8493d877f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugstackwalk-interface"></a>Interface ICorDebugStackWalk
 Fornece métodos para colocar os métodos gerenciados, ou quadros, em uma pilha de thread.  
@@ -34,7 +35,7 @@ Fornece métodos para colocar os métodos gerenciados, ou quadros, em uma pilha 
 |------------|-----------------|  
 |[Método GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md)|Retorna o contexto para o quadro atual de `ICorDebugStackWalk` objeto.|  
 |[Método SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)|Define o `ICorDebugStackWalk` o contexto atual do objeto para um contexto válido para o thread.|  
-|[Próximo método](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md)|Move o `ICorDebugStackWalk` objeto para o próximo quadro.|  
+|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md)|Move o `ICorDebugStackWalk` objeto para o próximo quadro.|  
 |[Método GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getframe-method.md)|Obtém o quadro atual de `ICorDebugStackWalk` objeto.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -52,5 +53,5 @@ Fornece métodos para colocar os métodos gerenciados, ou quadros, em uma pilha 
  **Versões do .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Interfaces de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

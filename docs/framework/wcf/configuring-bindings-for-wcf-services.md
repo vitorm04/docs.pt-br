@@ -14,11 +14,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 92fc3886f81ee401cbd3de2fb6ef251e4c340394
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b11810e0a39c5b6091a63ef33e5abfccb95b7555
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Configurando associações para serviços do Windows Communication Foundation
 Ao criar um aplicativo, você geralmente deseja adiar decisões para o administrador após a implantação do aplicativo. Por exemplo, geralmente não há nenhuma maneira de saber com antecedência qual um endereço de serviço ou identificador de recurso uniforme (URI) será. Em vez de codificar um endereço, é preferível para permitir que um administrador fazer isso depois de criar um serviço. Essa flexibilidade é feita por meio da configuração.  
@@ -63,8 +64,7 @@ Ao criar um aplicativo, você geralmente deseja adiar decisões para o administr
   <endpoint   
       address="/HelloWorld2/"  
       contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
-      binding="basicHttpBinding" />  
-  </endpoint>  
+      binding="basicHttpBinding" />
 </service>  
 ```  
   
@@ -89,8 +89,7 @@ Ao criar um aplicativo, você geralmente deseja adiar decisões para o administr
   <endpoint   
       address="/HelloWorld2/"  
       contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
-      binding="basicHttpBinding" />  
-  </endpoint>  
+      binding="basicHttpBinding" />
 </service>  
 <bindings>  
     <basicHttpBinding   
@@ -113,12 +112,11 @@ Ao criar um aplicativo, você geralmente deseja adiar decisões para o administr
 </behaviors>  
 <services>  
     <service   
-       name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
+       name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
        <endpoint   
           address="http://computer:8080/Hello"  
           contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
-          binding="basicHttpBinding" />  
-       </endpoint>  
+          binding="basicHttpBinding" />
     </service>  
 </services>  
 ```  
@@ -136,14 +134,12 @@ Ao criar um aplicativo, você geralmente deseja adiar decisões para o administr
         address="http://computer:8080/Hello1"  
         contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
         binding="basicHttpBinding"  
-        bindingConfiguration="shortTimeout"  
-    </endpoint>  
+        bindingConfiguration="shortTimeout" />
     <endpoint  
         address="http://computer:8080/Hello2"  
         contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
         binding="basicHttpBinding"  
-        bindingConfiguration="Secure"  
-     </endpoint>  
+        bindingConfiguration="Secure" />
 </service>  
 <bindings>  
     <basicHttpBinding   
@@ -151,8 +147,9 @@ Ao criar um aplicativo, você geralmente deseja adiar decisões para o administr
         timeout="00:00:00:01"   
      />  
      <basicHttpBinding   
-        name="Secure" />  
+        name="Secure">  
         <Security mode="Transport" />  
+     </basicHttpBinding>
 </bindings>  
 ```  
   
@@ -175,7 +172,7 @@ Ao criar um aplicativo, você geralmente deseja adiar decisões para o administr
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) (Configuração simplificada)  
- [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md) (Associações fornecidas pelo sistema)  
- [Endpoint Creation Overview](../../../docs/framework/wcf/endpoint-creation-overview.md) (Visão geral de criação de ponto de extremidade)  
- [Using Bindings to Configure Services and Clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md) (Usando associações para configurar serviços e clientes)
+ [Configuração simplificada](../../../docs/framework/wcf/simplified-configuration.md)  
+ [Associações fornecidas pelo sistema](../../../docs/framework/wcf/system-provided-bindings.md)  
+ [Visão geral de criação de ponto de extremidade](../../../docs/framework/wcf/endpoint-creation-overview.md)  
+ [Usando associações para configurar serviços e clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

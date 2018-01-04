@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fb247f85984cff167e9e0ce729a5143633a3f7c9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 153daddc0a5529d2c1cddc4669c3dbb098ce7bc2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="asmname-enumeration"></a>Enumeração ASM_NAME
 Indica a versão, compilação, cultura, assinatura e assim por diante, do assembly cujas propriedades serão recuperadas ou definidas por [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) métodos.  

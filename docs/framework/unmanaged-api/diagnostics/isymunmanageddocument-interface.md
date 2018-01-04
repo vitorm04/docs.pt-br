@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8654f28cc4d82a5ed1419215807ec3360522fd55
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2e176679b4fdb4d0a2c5c4fbcbc09403e45f1ad1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="isymunmanageddocument-interface"></a>Interface ISymUnmanagedDocument
 Representa um documento referenciado por um repositório de símbolo. Um documento é definido por um localizador de recursos uniforme (URL) e um GUID de tipo de documento. Você pode localizar o documento, independentemente de como ele é armazenado usando a URL e GUID do tipo de documento. Você pode armazenar a origem do documento no repositório de símbolos e recuperá-lo por meio dessa interface.  
@@ -44,4 +45,4 @@ Representa um documento referenciado por um repositório de símbolo. Um documen
 |[Método HasEmbeddedSource](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-hasembeddedsource-method.md)|Retorna `true` se o documento tem origem inserida nos símbolos de depuração; caso contrário, retornará `false`.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Interfaces de armazenamento de símbolo de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+ [Interfaces do repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

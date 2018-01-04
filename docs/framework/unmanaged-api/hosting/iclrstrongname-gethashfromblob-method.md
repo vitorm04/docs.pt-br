@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: afb3614d4911b7e8b8666b1205af1c1d3d176b5d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1947441e395ddb9d9d0fd9c4b02e7e991b1c84a2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrstrongnamegethashfromblob-method"></a>Método ICLRStrongName::GetHashFromBlob
 Obtém um hash do assembly no endereço de memória especificado, usando o algoritmo de hash especificado.  

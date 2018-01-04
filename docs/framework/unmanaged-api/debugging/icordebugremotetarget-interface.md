@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 38357072b3a6e8e8a326a16600b2d7ed56cdcb2e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fcfdab2857745dee7c40823ad25592de5dc833ea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugremotetarget-interface"></a>Interface ICorDebugRemoteTarget
 Fornece métodos que permitem aos desenvolvedores depurar aplicativos baseados no Silverlight no ambiente do common language runtime (CLR).  
@@ -47,7 +48,7 @@ interface ICorDebugRemoteTarget  : IUnknown
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Icordebugremotetarget::](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-gethostname-method.md)|Retorna o nome do host ou o endereço IP de um computador remoto.|  
+|[Método ICorDebugRemoteTarget::GetHostName](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-gethostname-method.md)|Retorna o nome do host ou o endereço IP de um computador remoto.|  
   
 ## <a name="remarks"></a>Comentários  
  Não há suporte para a depuração (ou seja, código gerenciado e nativo) de modo misto no Windows 95, Windows 98 ou Windows ME ou em plataformas x86 não (como IA-64 e AMD64).  
@@ -64,4 +65,4 @@ interface ICorDebugRemoteTarget  : IUnknown
 ## <a name="see-also"></a>Consulte também  
  [Interface ICorDebugRemote](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)  
  [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
- [Interfaces de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

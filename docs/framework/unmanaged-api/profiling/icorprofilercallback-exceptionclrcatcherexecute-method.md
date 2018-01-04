@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b63f428cd75ed98d30e4b6ecca69dbe3b5b5656d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c5d278fa196836d18b8515bee5af1946b2ca4d74
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherexecute-method"></a>Método ICorProfilerCallback::ExceptionCLRCatcherExecute
 Chamado quando um `catch` bloco de exceção é executada dentro do common language runtime (CLR) em si. Este método está obsoleto no .NET Framework versão 2.0.  

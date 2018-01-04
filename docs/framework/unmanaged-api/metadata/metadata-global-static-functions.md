@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9228ee93c0f265c92ebc3c1a7f711aff29059695
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 39fbeb735e4ba6ded119974286c22a3df1a5a5af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-global-static-functions"></a>Funções estáticas globais de metadados
 Começando com o [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], a documentação para o `_Cor*`, `CoInitialize*`, `CoUninitialize*`, e `CoEEShutDownCOM` funções, que pertencem à hospedagem, está localizado em [funções de hospedagem de CLR preterido](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md). Não há nenhum funções estáticas globais que pertencem aos metadados.  

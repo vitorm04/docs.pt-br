@@ -22,11 +22,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e13355078727a55c950bed795d3b01b6c7d52564
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 62d43121efbc039b8fad0b78bed7ec4a655efabb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icoreclrdebugtarget-interface"></a>Interface ICoreClrDebugTarget
 Fornece métodos que controlam as contagens de referência, enumerar os processos e liberar a memória associada a um depurador anexado a um destino Macintosh Silverlight remoto.  
@@ -56,9 +57,9 @@ class ICoreClrDebugTarget {
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Icoreclrdebugtarget:](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)|Enumera os processos em execução em um computador remoto.|  
-|[Método: Enumruntimes](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)|Enumera os tempos de execução de linguagem comum (CLRs) do processo especificado em um computador remoto.|  
-|[Método Icoreclrdebugtarget:](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)|Libera a memória alocada por métodos de enumeração nesta classe.|  
+|[Método ICoreClrDebugTarget::EnumProcesses](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)|Enumera os processos em execução em um computador remoto.|  
+|[Método ICoreClrDebugTarget::EnumRuntimes](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)|Enumera os tempos de execução de linguagem comum (CLRs) do processo especificado em um computador remoto.|  
+|[Método ICoreClrDebugTarget::FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)|Libera a memória alocada por métodos de enumeração nesta classe.|  
   
 ## <a name="remarks"></a>Comentários  
  Atualmente, essa funcionalidade tem suporte somente para um destino de aplicativo baseado em Silverlight que está em execução em um computador Macintosh remoto de depuração.  
@@ -76,4 +77,4 @@ class ICoreClrDebugTarget {
  [Interface ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
  [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
     
- [Interfaces de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

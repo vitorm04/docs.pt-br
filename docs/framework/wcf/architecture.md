@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7be93c5949966c052e77adebe8bb4d7aac9149bb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1bc7383c5b93203b144c965f06fa7365c864de27
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-architecture"></a>Arquitetura do Windows Communication Foundation
 O gráfico a seguir ilustra as camadas principais do [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] arquitetura.  
@@ -56,5 +57,5 @@ O gráfico a seguir ilustra as camadas principais do [!INCLUDE[indigo1](../../..
  Serviços também podem ser *hospedado*, ou executar um executável gerenciado por um agente externo, como o IIS ou o serviço de ativação do Windows (WAS). Permite que o WAS [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativos seja ativada automaticamente quando implantado em um computador executando o WAS. Os serviços também podem ser executados manualmente como executáveis (arquivos .exe). Um serviço também pode ser executado automaticamente como um serviço do Windows. Componentes COM+ também podem ser hospedados como [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviços.  
   
 ## <a name="see-also"></a>Consulte também  
- [What Is Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md) (O que é o Windows Communication Foundation)  
- [Fundamental Windows Communication Foundation Concepts](../../../docs/framework/wcf/fundamental-concepts.md) (Conceitos fundamentais do Windows Communication Foundation)
+ [O que é o Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
+ [Conceitos fundamentais do Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)

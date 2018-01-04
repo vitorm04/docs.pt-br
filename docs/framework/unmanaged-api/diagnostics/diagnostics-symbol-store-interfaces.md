@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 50ef54c90609bf8ef1e3a943664daef95f50d926
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9a9550bf1e3e5500356584b1bdd53f5d3061e190
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a>Interfaces de armazenamento de símbolo de diagnóstico
 Este tópico descreve as interfaces não gerenciadas que permitem que um compilador para gerar informações de símbolo para uso por um depurador.  
@@ -124,8 +125,8 @@ Este tópico descreve as interfaces não gerenciadas que permitem que um compila
  Interface ISymUnmanagedWriter5.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Enumerações de armazenamento de símbolo de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  
+ [Enumerações do repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  
   
- [Estruturas de armazenamento de símbolo de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
+ [Estruturas de repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
   
  [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

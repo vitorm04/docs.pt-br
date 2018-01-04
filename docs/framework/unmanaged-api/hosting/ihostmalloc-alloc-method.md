@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9cc4447424d1594f6fa86e07be659a6ba97f0427
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7d999425be2bc5963aaa9f15b82bd951f6f564af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihostmallocalloc-method"></a>Método IHostMAlloc::Alloc
 Solicita que o host alocar a quantidade especificada de memória do heap.  

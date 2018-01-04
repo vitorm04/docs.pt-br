@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bfac4e32841b8a8332a1f4124c1326f1ef7da1f8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 13309a7362f468d3711176db2adc7a82e3b949d3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getrequestedruntimeversion-function"></a>Função GetRequestedRuntimeVersion
 Obtém o número de versão do common language runtime (CLR) solicitado pelo aplicativo especificado. Se essa versão não estiver instalado, obtém a versão mais recente está instalada antes da versão solicitada.  
@@ -77,4 +78,4 @@ HRESULT GetRequestedRuntimeVersion (
 ## <a name="see-also"></a>Consulte também  
  [Função GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
  [Função GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)  
- [Funções de hospedagem CLR reprovadas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+ [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

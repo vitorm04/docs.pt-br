@@ -17,20 +17,21 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dfe29b9d66bf332c8df359abe01b3b4edc1c7c55
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 62110d07903b05e68ddfc72c297a785bad72c87f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-unmanaged-api-reference"></a>Depuração (referência de API não gerenciada)
 A depuração da API permite que um depurador depurar o código que é executado no ambiente do common language runtime (CLR). O código a ser depurado pode ser qualquer tipo de código que o CLR dá suporte.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Coclasses de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
+ [Depurando coclasses](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
  Descreve os coclasses não gerenciadas que usa a API de depuração.  
   
- [Interfaces de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  Descreve as interfaces não gerenciadas que permitem a depuração de um programa que está sendo executado pelo CLR.  
   
  [Depurando funções estáticas globais](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)  

@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 28ecba8b88ceadaf743f5c65bc6f257f7ef8cd60
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fab9da8f7e63ad000595378f5bc36f3aadc2ac3d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrtaskmanagersetuilocale-method"></a>Método ICLRTaskManager::SetUILocale
 Notifica o common language runtime (CLR) que o host tiver modificado a localidade de interface do usuário ou a cultura, a tarefa em execução no momento.  

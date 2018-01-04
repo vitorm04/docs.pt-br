@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a6195b53d11877c6b7b2a52c3fd8d194dfb51810
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cc34c3a1049a24a27fae4d13288efbd5a98a4dc9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugremote-interface"></a>Interface ICorDebugRemote
 Fornece a capacidade de iniciar ou anexar um depurador gerenciado a um processo remoto de destino.  
@@ -64,8 +65,8 @@ interface ICorDebugRemote : IUnknown
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Icordebugremote:](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|Cria um processo em um computador remoto para depuração gerenciada.|  
-|[Método Icordebugremote:](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|Inicia um processo em um computador remoto sob o depurador.|  
+|[Método ICorDebugRemote::CreateProcessEx](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|Cria um processo em um computador remoto para depuração gerenciada.|  
+|[Método ICorDebugRemote::DebugActiveProcessEx](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|Inicia um processo em um computador remoto sob o depurador.|  
   
 ## <a name="remarks"></a>Comentários  
  Atualmente, essa funcionalidade tem suporte somente para um destino de aplicativo baseado em Silverlight que está em execução em um computador Macintosh remoto de depuração.  
@@ -83,4 +84,4 @@ interface ICorDebugRemote : IUnknown
  [Interface ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
  [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
     
- [Interfaces de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

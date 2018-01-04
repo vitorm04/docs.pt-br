@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2773042c695320ab1e90d4c5d341e2df5f0f778f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1cd58c53deec0a895ae6f67cccf26d2c8c2530be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihostthreadpoolmanager-interface"></a>Interface IHostThreadPoolManager
 Fornece métodos que permitem que o common language runtime (CLR) para configurar o pool de threads e para a fila de itens de trabalho para o pool de threads.  
@@ -54,4 +55,4 @@ Fornece métodos que permitem que o common language runtime (CLR) para configura
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Threading>  
  <xref:System.Threading.ThreadPool>  
- [Interfaces de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+ [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

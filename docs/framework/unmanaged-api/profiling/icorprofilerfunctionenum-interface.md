@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1067fa6738b23492b3a58500b4cb6ba1d030304f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1a3014c8b00cb431c2c5b101e17dc51f49bf73f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilerfunctionenum-interface"></a>Interface ICorProfilerFunctionEnum
 Fornece métodos para iterar em sequência por meio de uma coleção de funções no common language runtime.  
@@ -32,9 +33,9 @@ Fornece métodos para iterar em sequência por meio de uma coleção de funçõe
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método clone](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-clone-method.md)|Obtém um ponteiro de interface para uma cópia deste `ICorProfilerFunctionEnum` interface.|  
+|[Método Clone](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-clone-method.md)|Obtém um ponteiro de interface para uma cópia deste `ICorProfilerFunctionEnum` interface.|  
 |[Método GetCount](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-getcount-method.md)|Obtém o número de funções que foram carregados pelo aplicativo ou à força pelo criador de perfil.|  
-|[Próximo método](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-next-method.md)|Obtém o número especificado de funções de contíguas de uma coleção sequencial de funções, começando na posição atual do enumerador na sequência.|  
+|[Método Next](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-next-method.md)|Obtém o número especificado de funções de contíguas de uma coleção sequencial de funções, começando na posição atual do enumerador na sequência.|  
 |[Método Reset](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-reset-method.md)|Move o cursor do enumerador para a posição inicial da sequência de.|  
 |[Método Skip](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-skip-method.md)|Avança o cursor do enumerador de sua posição atual para que o número especificado de elementos será ignorado.|  
   

@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 09f7d437e09063bf621990dec4f2903139af8238
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c23010f7175b63f140ec1367e90e145b18ae6f9c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadataimportisglobal-method"></a>Método IMetaDataImport::IsGlobal
 Obtém um valor que indica se o campo, método ou tipo representado pelo token de metadados especificado tem escopo global.  

@@ -18,11 +18,12 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: db7b05c8819fea6554d23d20d88561cac1566a87
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d638bd101aad1992f39e73ac6b2eb9fa53c8c7bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="diagnostics-symbol-store-enumerations"></a>Enumerações de armazenamento de símbolo de diagnóstico
 Este tópico descreve as enumerações não gerenciadas que usa o armazenamento de símbolo de diagnóstico API.  
@@ -41,8 +42,8 @@ Este tópico descreve as enumerações não gerenciadas que usa o armazenamento 
  Identifica os retornos de chamada para funções do depurador.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Interfaces de armazenamento de símbolo de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
+ [Interfaces do repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
   
- [Estruturas de armazenamento de símbolo de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
+ [Estruturas de repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
   
  [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

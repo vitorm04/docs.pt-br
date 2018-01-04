@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: f2438c2d5402f6cff695ecc9832329ff826ded01
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 74197e3195d96a0bb353d48ed3d57a15b40f461c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadataconvertergetmetadatafromtypelib-method"></a>Método IMetaDataConverter::GetMetaDataFromTypeLib
 Obtém um ponteiro de interface para um [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) instância que representa a assinatura de metadados do tipo de biblioteca representada pelo `ITypeLib` instância.  

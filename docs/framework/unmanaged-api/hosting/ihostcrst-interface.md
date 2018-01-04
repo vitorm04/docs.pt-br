@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 59485d7a642ba8b3233d5d077062e89fb2ac9b14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3a9ed2b390ad741d90f9179ef5101d328d3b639d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihostcrst-interface"></a>Interface IHostCrst
 Serve como a representação do host de uma seção crítica de threading.  
@@ -32,7 +33,7 @@ Serve como a representação do host de uma seção crítica de threading.
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método ENTER](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-enter-method.md)|Entrar na seção crítica.|  
+|[Método Enter](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-enter-method.md)|Entrar na seção crítica.|  
 |[Método Leave](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-leave-method.md)|Deixa a seção crítica.|  
 |[Método SetSpinCount](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-setspincount-method.md)|Define a contagem de rotação da seção crítica.|  
 |[Método TryEnter](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-tryenter-method.md)|As tentativas de inserir a seção crítica e relatórios de êxito ou falha imediatamente.|  
@@ -52,4 +53,4 @@ Serve como a representação do host de uma seção crítica de threading.
 ## <a name="see-also"></a>Consulte também  
  [Interface ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
  [Interface IHostSyncManager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
- [Interfaces de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+ [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

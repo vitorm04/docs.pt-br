@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eb2d66217202ee43fb2377f4a8ef26a47b676c11
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4bc4fc7559872a808c2de87e4926075614351030
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Visão geral de associações do Windows Communication Foundation
 Associações são objetos que são usados para especificar os detalhes de comunicação que são necessárias para se conectar ao ponto de extremidade de uma [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] serviço. Cada ponto de extremidade em um [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviço requer uma associação a ser bem especificado. Este tópico descreve os tipos dos detalhes de comunicação que definem as associações, elementos de uma associação que associações são incluídas no [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], e como uma associação pode ser especificada para um ponto de extremidade.  
@@ -65,4 +66,4 @@ Associações são objetos que são usados para especificar os detalhes de comun
  Você pode definir associações de duas maneiras: por meio de código ou por meio da configuração. Essas duas abordagens não dependem de se você estiver usando uma associação fornecida pelo sistema ou uma associação personalizada. Em geral, usando o código oferece total controle sobre a definição de uma associação em tempo de design. Usando a configuração, por outro lado, permite que um administrador do sistema ou o usuário de um [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviço ou cliente para alterar os parâmetros de ligação sem ter que recompilar o aplicativo de serviço. Essa flexibilidade geralmente é desejável, porque não há nenhuma maneira de prever os requisitos específicos do computador no qual um [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativo é implantado. Informações de manter a associação (e o endereçamento) sem o código permite que a alteração sem a necessidade de recompilação ou reimplantação do aplicativo. Observe que associações definidas em código são criadas após associações especificadas na configuração, permitindo que as associações de código definido substituir a configuração definida associações.  
   
 ## <a name="see-also"></a>Consulte também  
- [Using Bindings to Configure Services and Clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md) (Usando associações para configurar serviços e clientes)
+ [Usando associações para configurar serviços e clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

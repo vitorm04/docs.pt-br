@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1b72a2814ee2276363152052c7bf734104d4f395
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fd864cbb5a95143f6dd7f55fc1b1fc57f9f42e98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugmanagedcallback-interface"></a>Interface ICorDebugManagedCallback
 Fornece métodos para processar retornos de chamada do depurador.  
@@ -32,8 +33,8 @@ Fornece métodos para processar retornos de chamada do depurador.
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método break](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-break-method.md)|Notifica o depurador quando um <xref:System.Reflection.Emit.OpCodes.Break> instrução no fluxo de código é executada.|  
-|[Método de ponto de interrupção](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-breakpoint-method.md)|Notifica o depurador quando um ponto de interrupção é encontrado.|  
+|[Método Break](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-break-method.md)|Notifica o depurador quando um <xref:System.Reflection.Emit.OpCodes.Break> instrução no fluxo de código é executada.|  
+|[Método Breakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-breakpoint-method.md)|Notifica o depurador quando um ponto de interrupção é encontrado.|  
 |[Método BreakpointSetError](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-breakpointseterror-method.md)|Notifica o depurador que o common language runtime (CLR) não pôde associar com precisão de um ponto de interrupção foi definido antes de uma função foi just-in-time (JIT) compilado.|  
 |[Método ControlCTrap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-controlctrap-method.md)|Notifica o depurador que um CTRL + C é retido no processo sendo depurado.|  
 |[Método CreateAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createappdomain-method.md)|Notifica o depurador um domínio de aplicativo foi criado.|  
@@ -81,4 +82,4 @@ Fornece métodos para processar retornos de chamada do depurador.
 ## <a name="see-also"></a>Consulte também  
  [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
  [Interface ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
- [Interfaces de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

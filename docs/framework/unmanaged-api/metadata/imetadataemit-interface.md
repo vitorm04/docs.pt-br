@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b62e11f8237330122ccd2bd8775f8d113545dd95
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 856b4c42b018d6b1cefe6b61e21a15e7212f9541
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadataemit-interface"></a>Interface IMetaDataEmit
 Fornece métodos para criar, modificar e salvar metadados sobre o assembly no escopo definido no momento. Os metadados podem ser armazenado na memória ou salvo em disco.  

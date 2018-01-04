@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 700e9bcfe33e5be3725bd24b212b3a77ad139b2c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dd30fe7904fa6c0685dd9c39931cc545e4e30583
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="osinfo-structure"></a>Estrutura OSINFO
 Contém detalhes sobre o sistema operacional para um assembly ou módulo.  

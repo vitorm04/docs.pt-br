@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cc16cd932fc2ce0cf5cb53c227081501e79ed2d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fb1e507bea6f52e4959f241f1507807a76c0ec5a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>Método ICorProfilerInfo4::GetReJITIDs
 Retorna uma matriz de IDs de identificar todos os recompilado JIT versões da função especificada ainda alocados. Isso inclui versões recompilado JIT de funções que foram posteriormente revertidas, mas ainda não liberadas (por exemplo, quando o domínio de aplicativo que contém a função revertida ainda está em uso).  

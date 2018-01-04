@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1d11889ab9db408b6e703bbaec17fd0487f142a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 902ad9f67d06306e79666f0e10d85bdb9c65c377
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iassemblyname-interface"></a>Interface IAssemblyName
 Fornece métodos para descrever e trabalhar com uma identidade exclusiva de assembly.  
@@ -32,7 +33,7 @@ Fornece métodos para descrever e trabalhar com uma identidade exclusiva de asse
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método clone](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-clone-method.md)|Cria uma cópia superficial deste `IAssemblyName` objeto.|  
+|[Método Clone](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-clone-method.md)|Cria uma cópia superficial deste `IAssemblyName` objeto.|  
 |[Método Finalize](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-finalize-method.md)|Permite que este `IAssemblyName` objeto para liberar recursos e executar outras operações de limpeza antes do destruidor é chamado.|  
 |[Método GetDisplayName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md)|Obtém o nome legível do assembly referenciado por essa `IAssemblyName` objeto.|  
 |[Método GetName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getname-method.md)|Obtém o nome simple, não criptografado do assembly referenciado por essa `IAssemblyName` objeto.|  

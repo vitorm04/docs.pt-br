@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1ac361f939a134aa6d2bc8b215c5d447b352466e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4775b6ae00f34d7d046515f8700a35470b2f6650
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihostmallocfree-method"></a>Método IHostMAlloc::Free
 Libera a memória foi alocada usando o [alocação](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md) função.  

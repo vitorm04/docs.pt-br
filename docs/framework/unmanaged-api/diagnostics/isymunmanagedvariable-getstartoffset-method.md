@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5b7fd3a64202224ef5a7cc348ee8e9974a664d09
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b3fa0c710eb5de8b9a92970002336de22adb2458
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="isymunmanagedvariablegetstartoffset-method"></a>Método ISymUnmanagedVariable::GetStartOffset
 Obtém o deslocamento do início dessa variável dentro de seu pai. Se esta é uma variável local dentro de um escopo, se o deslocamento de início dentro os deslocamentos definidos para o escopo.  

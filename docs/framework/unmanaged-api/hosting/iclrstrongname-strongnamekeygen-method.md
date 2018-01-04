@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 13eef3e4c0cf4aa8de55aa96335e570ef1985e9a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3b434783d7537c5f6a3127183f66d4b0b3f77534
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrstrongnamestrongnamekeygen-method"></a>Método ICLRStrongName::StrongNameKeyGen
 Cria um novo par de chaves pública/privada para uso de nome forte.  

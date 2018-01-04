@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a8df22e5f9ea2ca294f502fcebf4b2ed5cd7900d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d47be1d220729ed32fcf77a77e611003085c15d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="isymunmanagedwriterclosescope-method"></a>Método ISymUnmanagedWriter::CloseScope
 Fecha o escopo léxico atual.  
@@ -47,7 +48,7 @@ HRESULT CloseScope(
 ## <a name="remarks"></a>Comentários  
  Quando um escopo é fechado, não mais variáveis podem ser definidos dentro dela.  
   
- [Isymunmanagedwriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) retorna um identificador de escopo opaco que pode ser usado com [: Setscoperange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) definir posteriormente um escopo inicial e final deslocamento. Nesse caso, os deslocamentos passado para `ISymUnmanagedWriter::OpenScope` e `ISymUnmanagedWriter::CloseScope` são ignorados. Identificadores de escopo são válidos somente no método atual.  
+ [Isymunmanagedwriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) retorna um identificador de escopo opaco que pode ser usado com [: Setscoperange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) definir posteriormente um escopo inicial e final deslocamento. Nesse caso, os deslocamentos passados para `ISymUnmanagedWriter::OpenScope` e `ISymUnmanagedWriter::CloseScope` são ignorados. Identificadores de escopo são válidos somente no método atual.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  

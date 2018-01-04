@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 590cd87d6a566e9c8c3819fd1b250997938e9c35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1ac362432a5d0c613f4ee1409ee15d92bfef3aeb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrerrorreportingmanager-interface"></a>Interface ICLRErrorReportingManager
 Fornece métodos que permitem que o host configurar os despejos de pilha personalizado para o relatório de erros.  
@@ -53,4 +54,4 @@ Fornece métodos que permitem que o host configurar os despejos de pilha persona
   
 ## <a name="see-also"></a>Consulte também  
  [Enumeração ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)  
- [Interfaces de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+ [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

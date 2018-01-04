@@ -17,11 +17,12 @@ caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 35a8e5bce0263c78d99e4530d01a9a9cad3e913e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2c4ad879c486fa39c739ccb3d1da76d64082144d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-enumerations"></a>Enumerações de metadados
 Esta seção descreve as enumerações não gerenciadas que usa o API de metadados.  

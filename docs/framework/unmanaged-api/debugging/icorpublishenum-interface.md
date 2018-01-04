@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7034945824e439b42134f8ea3c13bfaf73dbb649
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9f09d0f80eba86d03d0db7af8fd63d2231c9a88d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorpublishenum-interface"></a>Interface ICorPublishEnum
 Serve como a interface base abstrata para os enumeradores que são usados na publicação de informações sobre domínios de aplicativos e processos.  
@@ -32,7 +33,7 @@ Serve como a interface base abstrata para os enumeradores que são usados na pub
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método clone](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-clone-method.md)|Cria uma cópia deste `ICorPublishEnum` objeto.|  
+|[Método Clone](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-clone-method.md)|Cria uma cópia deste objeto `ICorPublishEnum`.|  
 |[Método GetCount](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-getcount-method.md)|Obtém o número de itens na enumeração.|  
 |[Método Reset](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-reset-method.md)|Move o cursor de para o início da enumeração.|  
 |[Método Skip](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-skip-method.md)|Move o cursor para a frente na enumeração pelo número especificado de itens.|  
@@ -55,4 +56,4 @@ Serve como a interface base abstrata para os enumeradores que são usados na pub
   
 ## <a name="see-also"></a>Consulte também  
  [Coclass CorpubPublish](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)  
- [Interfaces de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

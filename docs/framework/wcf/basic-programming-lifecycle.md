@@ -14,11 +14,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 78ad1159232ecfb75745dd72b7da1e3153a79574
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4f5c45cad0b1e4ae1aa6b1963e9acdab47cd9203
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-programming-lifecycle"></a>Ciclo de vida de programação básica
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]permite que aplicativos se comuniquem se estiverem no mesmo computador, através da Internet, ou em diferentes plataformas de aplicativo. Este tópico descreve as tarefas que são necessárias para criar um [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativo. Para um aplicativo de exemplo de funcionamento, consulte [Tutorial de Introdução](../../../docs/framework/wcf/getting-started-tutorial.md).  
@@ -41,4 +42,4 @@ ms.lasthandoff: 12/02/2017
  Quando você estiver familiarizado com o desenvolvimento de contratos de serviço, você também pode ler [Introdução à extensibilidade](../../../docs/framework/wcf/introduction-to-extensibility.md). Se você tiver problemas com seu serviço, verifique [início rápido de solução de problemas do WCF](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md) para ver se outras pessoas tenham problemas iguais ou semelhantes.  
   
 ## <a name="see-also"></a>Consulte também  
- [Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md) (Implementando contratos de serviço)
+ [Implementando contratos de serviço](../../../docs/framework/wcf/implementing-service-contracts.md)

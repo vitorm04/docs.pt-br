@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a35606f85e134886addd8b30c240442800a9109e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a215ba1f468823a93c1515c4a3875764a6ba5bb2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadataemitdeleteclasslayout-method"></a>Método IMetaDataEmit::DeleteClassLayout
 Destrói a assinatura de metadados de layout de classe para o tipo representado pelo token especificado.  

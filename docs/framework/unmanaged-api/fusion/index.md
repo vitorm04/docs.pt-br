@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 10a3dc67cb1edffb01671d34c8671f8228146bf3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9860b90ad61dcd53a990235acb3924c08168782b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fusion-unmanaged-api-reference"></a>Fusion (referência de API não gerenciada)
 A API de fusão permite que um host de tempo de execução acessar as propriedades de recursos do aplicativo para localizar as versões corretas desses recursos para o aplicativo.  

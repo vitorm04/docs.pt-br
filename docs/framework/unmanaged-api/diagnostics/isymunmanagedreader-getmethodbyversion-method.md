@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ba4c3ae5b1883c3113d205eab44375cbd1034c29
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 810cc5cda9de7c61c1b23d1574ceff19bfec3bc8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="isymunmanagedreadergetmethodbyversion-method"></a>Método ISymUnmanagedReader::GetMethodByVersion
 Obtém um método de leitor de símbolo, considerando um token de método e um número de versão de editar e copiar. Números de versão começam em 1 e são incrementados cada vez que o método é alterado como resultado de uma operação de cópia e de edição.  

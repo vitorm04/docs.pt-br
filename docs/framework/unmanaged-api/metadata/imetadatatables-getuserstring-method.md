@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 648cc9e6f947f5eaf5dd6c9354ba305f7ca0d530
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f3d7ffc2c7334a6b5873581bf9f079b2b7c8053e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadatatablesgetuserstring-method"></a>Método IMetaDataTables::GetUserString
 Obtém a cadeia de caracteres codificada no índice especificado na coluna de cadeia de caracteres no escopo atual.  

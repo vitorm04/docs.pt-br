@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8c39a60d3b34ca1b5c219d12bda4af5217f389f3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2a4074920d3ca616498c14511bf39763d7d87ed3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Adicione uma referência de serviço em um projeto de subconjunto portátil
 Projetos de subconjunto portátil permitem que os programadores do assembly .NET manter uma árvore de origem única e sistema de compilação e ainda dar suporte a várias implementações de .NET (área de trabalho, Silverlight, Windows Phone e XBOX). Projetos de subconjunto portátil só fazem referência a bibliotecas portáteis do .NET que são um assembly do framework .NET que pode ser usado em qualquer implementação do .NET.  
@@ -54,5 +55,5 @@ Projetos de subconjunto portátil permitem que os programadores do assembly .NET
 14. O <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> não tem suporte em projetos de subconjunto portáteis.  
   
 ## <a name="see-also"></a>Consulte também  
- [Accessing Services Using a WCF Client](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md) (Usando um cliente do WCF para acessar serviços)  
+ [Usando um cliente do WCF para acessar serviços](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
  [Biblioteca de classes portátil](http://msdn.microsoft.com/library/gg597391\(v=vs.110\))

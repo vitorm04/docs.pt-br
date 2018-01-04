@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ee526a79d89a9e4e3483daa07a512b6b7f920e70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d6fa95d17e7ff6f857765ea2dd48f61b047a47b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugprocess-interface1"></a>ICorDebugProcess Interface1
 Representa um processo que está executando o código gerenciado. Esta interface é uma subclasse de ICorDebugController.  
@@ -66,4 +67,4 @@ Representa um processo que está executando o código gerenciado. Esta interface
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
- [Interfaces de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

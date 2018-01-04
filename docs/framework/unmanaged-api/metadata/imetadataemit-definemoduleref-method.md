@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2b3131e6cebf09b0767d1331656ff16b2b55d749
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2b745e216ca49ed5d226d6d531281880b43e4939
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadataemitdefinemoduleref-method"></a>Método IMetaDataEmit::DefineModuleRef
 Cria a assinatura de metadados para um módulo com o nome especificado.  

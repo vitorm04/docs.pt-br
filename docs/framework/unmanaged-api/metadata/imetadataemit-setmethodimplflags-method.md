@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d69940d5cffe397d009b7364a20a09dbbd95db4c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8026ec666e853b5a0ccd98e5ba75a3e04ffea9a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadataemitsetmethodimplflags-method"></a>Método IMetaDataEmit::SetMethodImplFlags
 Define ou atualiza a assinatura de metadados da implementação do método herdado que é referenciada por token especificado.  

@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 876dfabd835fa96fd3661f4e91eeb661ddaf9c30
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 823f2e0b542f5a9d8868cd3b71adb9a8cca4ec6a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-unmanaged-api-reference"></a>Hospedagem (referência de API não gerenciada)
 A API de hospedagem permite que os hosts gerenciados integrar o common language runtime (CLR) em seus aplicativos.  
@@ -36,7 +37,7 @@ A API de hospedagem permite que os hosts gerenciados integrar o common language 
  [Hospedando funções estáticas globais](../../../../docs/framework/unmanaged-api/hosting/hosting-global-static-functions.md)  
  Descreve as funções estáticas globais não gerenciadas que usa a API de hospedagem.  
   
- [Interfaces de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
+ [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
  Descreve as interfaces não gerenciadas que permitem que um host de tempo de execução integrar o CLR em um aplicativo não gerenciado.  
   
  [Estruturas de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  

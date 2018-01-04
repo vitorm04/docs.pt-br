@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: efb8a3a74997c6894eff6fafb87e933a6d2cf7bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a94fb09e1ff62abac9dd716257ba75542453707e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadataimportfindmemberref-method"></a>Método IMetaDataImport::FindMemberRef
 Obtém um ponteiro para o token de MemberRef para o membro de referência que é delimitada por especificado <xref:System.Type> e que tem a assinatura de nome e os metadados especificada.  

@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ff0e51327e0e66c2a282ebf46e6036f81d3d568b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 27d81e8b5171ded3301eaafea19d4a09b461078e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrassemblyreferencelistisstringassemblyreferenceinlist-method"></a>Método ICLRAssemblyReferenceList::IsStringAssemblyReferenceInList
 Obtém um valor que indica se o nome fornecido corresponde ao nome de um assembly na lista.  

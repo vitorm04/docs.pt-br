@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5e8a853ebfa84ab5517e34bd67ae38672fdacddf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6e32570b381d6cab4326a13246dfe053b5032589
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-services"></a>Implantando serviços
 Este tópico descreve como você pode implantar um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplicativo em um ambiente de tempo de execução.  
@@ -27,4 +28,4 @@ Este tópico descreve como você pode implantar um [!INCLUDE[indigo1](../../../.
   
 ## <a name="see-also"></a>Consulte também  
  [Hospedagem](../../../../docs/framework/wcf/feature-details/hosting.md)  
- [Hosting Services](../../../../docs/framework/wcf/hosting-services.md) (Hospedando serviços)
+ [Hospedando serviços](../../../../docs/framework/wcf/hosting-services.md)
