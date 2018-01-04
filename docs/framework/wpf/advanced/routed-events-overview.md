@@ -26,11 +26,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be4447570f89637910506b6257c092c86f24991b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 22ce2611afa2a3b2b06b7d378479e5ffd2f744f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routed-events-overview"></a>Visão geral de eventos roteados
 Este tópico descreve o conceito de eventos roteados no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. O tópico define a terminologia de eventos roteados, descreve como eventos roteados são roteados por uma árvore de elementos, resume como manipular eventos roteados e apresenta como criar seus próprios eventos roteados personalizados.
@@ -260,7 +261,7 @@ Processamento de eventos de entrada por túnel e por propagação
  <xref:System.Windows.RoutedEventArgs>  
  [Marcando eventos roteados como manipulados e tratamento de classes](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
  [Visão geral da entrada](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Visão geral dos comandos](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [Propriedades de dependência personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [Visão geral de comandos](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
+ [Propriedades de dependência personalizada](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
  [Árvores no WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)  
  [Padrões de evento fraco](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)

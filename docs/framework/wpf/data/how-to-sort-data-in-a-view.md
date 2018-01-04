@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2c39cec8aaf12b268790c19751562b16fa34cfdc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7467913f867ea0990ae85b0ad933c11f2fd271b9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-sort-data-in-a-view"></a>Como classificar dados em uma exibição
 Este exemplo descreve como classificar dados em uma exibição.  
@@ -51,4 +52,4 @@ Este exemplo descreve como classificar dados em uma exibição.
  [Classificar uma coluna GridView quando um cabeçalho é clicado](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
  [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [Filtrar dados em uma exibição](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [Tópicos de instruções](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

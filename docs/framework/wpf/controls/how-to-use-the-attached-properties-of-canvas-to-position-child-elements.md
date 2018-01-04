@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 85ee852c868f26937494d5d340d2db4210224754
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5314f39c3012826f25fa6c64baf7eb8e42329f58
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-attached-properties-of-canvas-to-position-child-elements"></a>Como usar as propriedades anexas de tela para posicionar elementos filho
 Este exemplo mostra como usar as propriedades anexas de <xref:System.Windows.Controls.Canvas> para posicionar elementos filho.  
@@ -44,5 +45,5 @@ Este exemplo mostra como usar as propriedades anexas de <xref:System.Windows.Con
  <xref:System.Windows.Controls.Canvas.Top%2A>  
  <xref:System.Windows.Controls.Button>  
  [Visão geral de painéis](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)  
+ [Tópicos de instruções](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)  
  [Visão geral das propriedades anexadas](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)

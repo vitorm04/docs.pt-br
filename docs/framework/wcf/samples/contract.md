@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f03e1bf9562b53ed4b43655848a4469ab8d7626d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: abdbe581f53931d72a8d60f6b1767c03d5205c9f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contract"></a>Contrato
 Esta seção contém exemplos que demonstram os contratos no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -38,5 +39,5 @@ Esta seção contém exemplos que demonstram os contratos no [!INCLUDE[indigo1](
  [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)  
  Demonstra como adicionar tipos conhecidos dinamicamente durante a serialização e desserialização.  
   
- [Usando o DataContractSerializer e DataContractResolver para fornecer a funcionalidade NetDataContractSerializer](../../../../docs/framework/wcf/samples/datacontractserializer-datacontractresolver-netdatacontractserializer.md)  
+ [Usando o DataContractSerializer e DataContractResolver para fornecer a funcionalidade de NetDataContractSerializer](../../../../docs/framework/wcf/samples/datacontractserializer-datacontractresolver-netdatacontractserializer.md)  
  Demonstra como usar <xref:System.Runtime.Serialization.DataContractSerializer> com um número apropriado <xref:System.Runtime.Serialization.DataContractResolver> fornece a mesma funcionalidade que <xref:System.Runtime.Serialization.NetDataContractSerializer>.

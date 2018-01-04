@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f2b04dfa51f578ba80e2b766f455719afbb86b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9cd8f9b14f114060ebec8e336c1212d61fa19c83
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="path-markup-syntax"></a>Sintaxe de marcação do caminho
 Caminhos são discutidos em [formas e desenho básico no WPF Overview](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) e [visão geral de geometria](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), no entanto, este tópico descreve detalhadamente poderoso e complexo minivocê idioma pode usar para especificar o caminho geometrias mais eficiência usando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -152,7 +153,7 @@ Em letras maiusculas `V` indica que `y` é um valor absoluto; em letras minúscu
   
 |Sintaxe|  
 |------------|  
-|`Q` `controlPoint` `endPoint`<br /><br /> - ou -<br /><br /> `q` `controlPoint` `endPoint`|  
+|`Q``controlPoint``endPoint`<br /><br /> - ou -<br /><br /> `q``controlPoint``endPoint`|  
   
 |Termo|Descrição|  
 |----------|-----------------|  
@@ -176,7 +177,7 @@ Em letras maiusculas `V` indica que `y` é um valor absoluto; em letras minúscu
   
 |Sintaxe|  
 |------------|  
-|`T` `controlPoint` `endPoint`<br /><br /> - ou -<br /><br /> `t` `controlPoint` `endPoint`|  
+|`T``controlPoint``endPoint`<br /><br /> - ou -<br /><br /> `t``controlPoint``endPoint`|  
   
 |Termo|Descrição|  
 |----------|-----------------|  
@@ -212,7 +213,7 @@ Em letras maiusculas `V` indica que `y` é um valor absoluto; em letras minúscu
   
 |Sintaxe|  
 |------------|  
-|`x` `,` `y`<br /><br /> - ou -<br /><br /> `x` `y`|  
+|`x``,``y`<br /><br /> - ou -<br /><br /> `x` `y`|  
   
 |Termo|Descrição|  
 |----------|-----------------|  
@@ -241,4 +242,4 @@ Em letras maiusculas `V` indica que `y` é um valor absoluto; em letras minúscu
  <xref:System.Windows.Media.PathFigureCollection>  
  [Visão geral de formas e desenho básico no WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
  [Visão geral de geometria](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
+ [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)

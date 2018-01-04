@@ -18,11 +18,12 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de9740d74b87de7b81da10b458a7e935a427af98
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6873de24e33876b7caaf9014ca7e9d6bc80375c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-and-deploying-wpf-applications"></a>Compilando e implantando aplicativos do WPF
 O modelo de compilação e implantação fornece a capacidade de criar e implantar aplicativos localmente e remotamente, incluindo o seguinte:  
@@ -35,8 +36,8 @@ O modelo de compilação e implantação fornece a capacidade de criar e implant
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Compilar um aplicativo WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
- [Implantando um aplicativo do WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/app-development/build-and-deploy-how-to-topics.md)  
+ [Implantando um aplicativo WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
+ [Tópicos de instruções](../../../../docs/framework/wpf/app-development/build-and-deploy-how-to-topics.md)  
   
 ## <a name="reference"></a>Referência  
  MSBuild  

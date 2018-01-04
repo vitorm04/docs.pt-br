@@ -16,11 +16,12 @@ ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: df52c44ca72108ffc984bed169daae654c01aa87
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 83ed8ee8b8bfd9c3d6dadfedad8889af10a86466
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-localize-an-application"></a>Como localizar um aplicativo
 Esse tutorial explica como criar um aplicativo localizado usando a ferramenta LocBaml.  
@@ -29,7 +30,7 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
 >  A ferramenta LocBaml não é um aplicativo pronto para produção. Ela é apresentada como um exemplo que usa algumas das APIs de localização e ilustra como você pode escrever uma ferramenta de localização.  
   
 <a name="Introduction"></a>   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  Esta discussão oferece uma abordagem passo a passo para a localização de um aplicativo. Primeiro, você preparará o seu aplicativo para que o texto que será convertido possa ser extraído. Depois que o texto for traduzido, você o mesclará em uma nova cópia do aplicativo original.  
   
 <a name="Requirements"></a>   

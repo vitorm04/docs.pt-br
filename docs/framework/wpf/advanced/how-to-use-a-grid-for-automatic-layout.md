@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d18563c44381a276d15996dff3f9552c46833b4a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bbd8bd7e36b7b773837b839e77ec88a8e7c8f0d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-grid-for-automatic-layout"></a>Como usar uma grade para layout automático
 Este exemplo descreve como usar uma grade na abordagem de layout automático para criar um aplicativo localizável.  

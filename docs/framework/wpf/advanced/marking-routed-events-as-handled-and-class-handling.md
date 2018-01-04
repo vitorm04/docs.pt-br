@@ -28,11 +28,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ec6bd76b6254b44dfacfd7f3d29341ece0a78f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b2c9a550e1423acb37da9645d09cdb4ccefcea66
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Marcando eventos roteados como manipulados e tratamento de classes
 Os manipuladores de um evento roteado podem marcar o evento manipulado nos dados do evento. Efetivamente, a manipulação do evento reduzirá a rota. A manipulação de classes é um conceito de programação com suporte nos eventos roteados. Um manipulador de classes tem a oportunidade de manipular um evento roteado específico no nível de uma classe com um manipulador que é invocado antes de qualquer manipulador de instâncias em uma instância da classe.  

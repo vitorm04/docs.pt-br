@@ -26,11 +26,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da7234dfd3c1a80ebd2c21d3748bc3281573bb4f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 91ccf1f98d9e1e2f5784246cf30995b689a0b94b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printing-overview"></a>Visão geral da impressão
 Com o [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], os desenvolvedores de aplicativos que usam o [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] têm um novo conjunto avançado de [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] de gerenciamento de sistema de impressão e de impressão. Com o [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], alguns desses aprimoramentos do sistema de impressão também estão disponíveis para os desenvolvedores que criam aplicativos do [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e desenvolvedores que usam código não gerenciado. No núcleo dessa nova funcionalidade está o novo formato de arquivo [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] e o caminho de impressão [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
@@ -152,8 +153,8 @@ Para aplicativos que não exigem a funcionalidade ou suporte [!INCLUDE[TLA2#tla_
  <xref:System.Printing.PrintCapabilities>  
  <xref:System.Printing.PrintServer>  
  <xref:System.Printing.PrintQueue>  
- [Tópicos explicativos](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)  
+ [Tópicos de instruções](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)  
  [Documentos no WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [XPS](http://www.microsoft.com/xps)  
- [Serialização e armazenamento do documento](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
+ [Serialização e armazenamento de documentos](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
  [Microsoft XPS Document conversor (MXDC)](https://msdn.microsoft.com/library/windows/desktop/ff686803.aspx)

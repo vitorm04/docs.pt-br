@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d32dfe359d4f51403c5aaaae319fe4cb52eed3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 913cccadc90eaef589f42d097a14b1472c7129fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>GUIDs de pasta conhecidas para locais personalizados da caixa de diálogo
 Você usa um <xref:System.Guid> para especificar um [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] pasta conhecidos quando você adicionar pastas para um <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> coleção. GUIDs de pasta conhecida não diferenciam maiúsculas de minúsculas e são definidas no arquivo KnownFolders.h no [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  

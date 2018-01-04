@@ -15,18 +15,19 @@ caps.latest.revision: "86"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 921a9f3abd8c4cba8cfa0f59b8321ee309642dbb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 58f65d6c25627ba84ffe83677bbaadfc2e55e6f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="documents"></a>Documentos
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Fornece um conjunto versátil de componentes que permitem aos desenvolvedores criar aplicativos com recursos avançados de documentos e uma experiência de leitura melhor. Além de capacidades avançadas e qualidade, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] também fornece serviços de gerenciamento simplificado de empacotamento de documento, segurança e armazenamento.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Documentos no WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Serialização e armazenamento do documento](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
+ [Serialização e armazenamento de documentos](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
  [Anotações](../../../../docs/framework/wpf/advanced/annotations.md)  
  [Conteúdo de fluxo](../../../../docs/framework/wpf/advanced/flow-content.md)  
  [Tipografia](../../../../docs/framework/wpf/advanced/typography.md)  

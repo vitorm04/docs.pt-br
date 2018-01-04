@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ca2bac983e25ab7453230a6718fe7eaa98e82275
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bcf06f4dc0d8c70ae85d5add5a2fee078238d5e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-control-development-basics"></a>Noções básicas sobre o desenvolvimento de controle dos Windows Forms
 Um controle de formulários do Windows é uma classe que deriva diretamente ou indiretamente de <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. A lista a seguir descreve os cenários comuns para o desenvolvimento de controles do Windows Forms:  
@@ -44,4 +45,4 @@ Um controle de formulários do Windows é uma classe que deriva diretamente ou i
  [Como desenvolver um controle simples dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  
  [Desenvolvendo um controle de composição dos Windows Forms](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)  
  [Como criar um controle dos Windows Forms que mostre o progresso](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)  
- [Variedades de Controles Personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+ [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

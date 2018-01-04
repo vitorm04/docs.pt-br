@@ -17,11 +17,12 @@ caps.latest.revision: "61"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c34bb03e27d223c09238f658563e8a368a0c6948
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b6aee3d6161d5a20a55e05e86c8479b9182d4e0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="image-how-to-topics"></a>Tópicos explicativos da imagem
 Os tópicos nesta seção descrevem como usar o <xref:System.Windows.Controls.Image> elemento.  
@@ -41,4 +42,4 @@ Os tópicos nesta seção descrevem como usar o <xref:System.Windows.Controls.Im
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da geração de imagens](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+ [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)

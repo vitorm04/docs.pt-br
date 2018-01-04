@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31fb9adbda47514e5405d465c0b5e2493b966d8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 72439cdc1c1017378a5b6b3f6b4bf41a9eee2537
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-to-an-enumeration"></a>Como associar a uma enumeração
 Este exemplo mostra como associar a uma enumeração associando ao método GetValues da enumeração.  
@@ -34,4 +35,4 @@ Este exemplo mostra como associar a uma enumeração associando ao método GetVa
 ## <a name="see-also"></a>Consulte também  
  [Associar a um método](../../../../docs/framework/wpf/data/how-to-bind-to-a-method.md)  
  [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [Tópicos de instruções](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

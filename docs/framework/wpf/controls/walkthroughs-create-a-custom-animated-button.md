@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bce1140ed11332b5bf30d487b2acacc644687d26
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3ece907b23772504990ef334f446d7b6072f5d44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>Instruções passo a passo: criar um botão animado personalizado
 Como o nome sugere, o [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] é excelente para fazer experiências avançadas de apresentação para clientes. Essas instruções passo a passo mostram como personalizar a aparência e o comportamento de um botão (incluindo animações). Essa personalização é feita usando um estilo e modelo para que você possa aplicar esse botão personalizado facilmente aos botões em seu aplicativo. A ilustração a seguir mostra o botão personalizado que você criará.  

@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: ae5cfd6cdb557aff4910f38ea0fb7f4b54afbbb0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b5bce62b03b97f182d314a379c9532fc05148050
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Noções básicas sobre estruturas e conceitos do fluxo de nó XAML
 Os leitores XAML e gravadores XAML, conforme implementado no serviços de XAML do .NET Framework baseiam-se o conceito de design de um fluxo do nó XAML. O fluxo do nó XAML é uma conceituação, passando de um conjunto de nós XAML. Neste conceituação passando, um processador XAML orienta a estrutura das relações no XAML em um nó por vez. A qualquer momento, somente um registro atual ou a posição atual existe em um fluxo do nó XAML aberto e muitos aspectos da API de relatam somente as informações disponíveis da posição. O nó atual em um fluxo do nó XAML pode ser descrito como um objeto, um membro ou um valor. Tratando XAML como um fluxo do nó XAML, leitores XAML podem se comunicar com gravadores XAML e habilitar um programa exibir, interagir com ou alterar o conteúdo de um fluxo do nó XAML durante um caminho de carga ou a gravação de operação de caminho que envolve XAML. Projeto de API de leitor e gravador XAML e o conceito de fluxo do nó XAML são semelhantes às anterior leitor relacionado e designs de gravador e conceitos, como o [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] e <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter> classes. Este tópico aborda os conceitos de fluxo do nó XAML e descreve como você pode escrever rotinas que interagem com representações de XAML no nível de nó XAML.  

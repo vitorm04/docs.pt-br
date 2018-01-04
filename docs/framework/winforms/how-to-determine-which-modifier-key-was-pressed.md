@@ -35,11 +35,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6fdc93063bbc8c9428f2f01c6cd5c0578e77ab01
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ffe09cc07b3eb36184a7242d418fd6782219806e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-which-modifier-key-was-pressed"></a>Como determinar qual tecla modificadora foi pressionada
 Quando você cria um aplicativo que aceita a digitação do usuário, também é recomendável monitorar as teclas modificadoras como SHIFT, ALT e CTRL. Quando uma tecla modificadora for pressionada junto com outras teclas, ou com cliques do mouse, seu aplicativo pode responder adequadamente. Por exemplo, se a letra S for pressionada, isso poderá simplesmente fazer um “s” aparecer na tela, mas se as teclas CTRL + S forem pressionadas, o documento atual poderá ser salvo. Se você tratar o <xref:System.Windows.Forms.Control.KeyDown> evento, o <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> propriedade do <xref:System.Windows.Forms.KeyEventArgs> recebida pelo evento manipulador Especifica quais teclas modificadoras são pressionadas. Como alternativa, o <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> propriedade <xref:System.Windows.Forms.KeyEventArgs> Especifica o caractere que foi pressionado, bem como qualquer tecla modificadora combinada com um OR bit a bit. No entanto, se você estiver tratando o <xref:System.Windows.Forms.Control.KeyPress> evento ou um evento do mouse, o manipulador de eventos não recebe essas informações. Nesse caso, você deve usar o <xref:System.Windows.Forms.Control.ModifierKeys%2A> propriedade o <xref:System.Windows.Forms.Control> classe. Em ambos os casos, você deve executar um AND bit a bit dos <xref:System.Windows.Forms.Keys> valor e o valor que você está testando. O <xref:System.Windows.Forms.Keys> enumeração oferece variações de cada tecla modificadora, portanto, é importante que você execute o bit a bit e com o valor correto. Por exemplo, a tecla SHIFT é representada por <xref:System.Windows.Forms.Keys.Shift>, <xref:System.Windows.Forms.Keys.ShiftKey>, <xref:System.Windows.Forms.Keys.RShiftKey> e <xref:System.Windows.Forms.Keys.LShiftKey> o valor correto para testar SHIFT como uma tecla modificadora <xref:System.Windows.Forms.Keys.Shift>. Da mesma forma testar CTLR e ALT como modificadoras você deve usar o <xref:System.Windows.Forms.Keys.Control> e <xref:System.Windows.Forms.Keys.Alt> valores, respectivamente.  

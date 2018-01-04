@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9275f1812111365ed6b0fb3be6957cd9ca883fdf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 62eb27919e762004667b3d5179c35cb04d9a9422
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transports-in-windows-communication-foundation"></a>Transportes no Windows Communication Foundation
 A camada de transporte é o nível mais baixo da pilha de canais. Os transportes principais usados em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] são HTTP, HTTPS, TCP e pipes nomeados. Os tópicos nesta seção abordam escolhendo entre esses transportes, configurando o transporte e definir propriedades de ajuste.  
@@ -29,7 +30,7 @@ A camada de transporte é o nível mais baixo da pilha de canais. Os transportes
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]inclui transportes adicionais. Para obter informações sobre o transporte de enfileiramento de mensagens (também conhecido como MSMQ), consulte [sessões confiáveis e filas](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md). Para obter informações sobre o transporte de ponto a ponto, consulte [rede ponto a ponto](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Selecionando um transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
+ [Escolhendo um transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
  Descreve os três principais transportes e considerações ao selecionar um.  
   
  [Escolhendo um codificador de mensagem](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
@@ -41,7 +42,7 @@ A camada de transporte é o nível mais baixo da pilha de canais. Os transportes
  [Configurando HTTP e HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)  
  Descreve como configurar o transporte HTTP e HTTPS, elementos de associação.  
   
- [Como: substituir a reserva de URL do WCF com uma reserva restrita](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
+ [Como substituir a reserva de URL do WCF com uma reserva restrita](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
  Descreve como usar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]URL restrito reservas.  
   
  [Cotas de transporte](../../../../docs/framework/wcf/feature-details/transport-quotas.md)  
@@ -50,7 +51,7 @@ A camada de transporte é o nível mais baixo da pilha de canais. Os transportes
  [Trabalhando com NATs e Firewalls](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md)  
  Descreve como configurar a camada de transporte quando mensagens são enviadas ou recebidas por trás de um firewall ou a conversão de endereços de rede (NAT) está presente.  
   
- [Compartilhamento de porta NET. TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
+ [Compartilhamento de porta do NET.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
  Descreve como usar o componente de compartilhamento de porta NET. TCP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
 ## <a name="reference"></a>Referência  
@@ -63,6 +64,6 @@ A camada de transporte é o nível mais baixo da pilha de canais. Os transportes
  <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Bindings](../../../../docs/framework/wcf/feature-details/bindings.md) (Associações)  
+ [Associações](../../../../docs/framework/wcf/feature-details/bindings.md)  
   
  [Estendendo associações](../../../../docs/framework/wcf/extending/extending-bindings.md)

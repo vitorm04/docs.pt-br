@@ -22,11 +22,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: df6659853e9c410ece3233cfa630c9066303a871
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 68a3d2c7335ff15706925f9a7986164e6d9c0c36
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="choosing-between-class-and-struct"></a>Escolhendo entre a classe e Struct
 Uma das decisões de design básico que faces cada designer de estrutura é um tipo de design como uma classe (um tipo de referência) ou como uma estrutura (um tipo de valor). Boa compreensão das diferenças no comportamento de tipos de referência e tipos de valor é crucial para essa opção.  

@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 04bdf32ea329ff25fd62255b4512d8a9d5703b8f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a258a0e145e9a24e6e87bb511fdbd6166422a656
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="preview-events"></a>Eventos de visualização
 Eventos de Visualização, também conhecidos como eventos de túnel, são eventos roteados em que a direção da rota vai da raiz do aplicativo em direção ao elemento que gerou o evento e é relatado como origem nos dados do evento. Nem todos os cenários de eventos têm suporte ou precisam de eventos de visualização. Este tópico descreve as situações em que os eventos de visualização existem, como aplicativos ou componentes devem lidar com eles e casos em que criar eventos de visualização em componentes ou classes personalizados pode ser apropriado.  

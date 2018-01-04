@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1b414aee19082196ab242706c7730c031cf3a76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1b8008d104437454f36f6f425634c40968d5481a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimizing-performance-controls"></a>Otimizando desempenho: controles
 O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] inclui muitos dos componentes comuns de interface do usuário que são usados na maioria dos aplicativos do Windows. Este tópico contém técnicas para melhorar o desempenho de sua interface do usuário.  
@@ -42,7 +43,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
 -   Configuração <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> para `false`.  
   
--   Configuração <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A>--> `IsVirtualizing` para `false`.    
+-   Configuração <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A>--> `IsVirtualizing` para `false`.  
   
  Uma consideração importante quando você virtualiza contêineres de itens é se você tem informações de estado adicionais associadas a um contêiner de item que pertence ao item. Nesse caso, você precisa salvar o estado adicional. Por exemplo, você pode ter um item contido em um <xref:System.Windows.Controls.Expander> controle e o <xref:System.Windows.Controls.Expander.IsExpanded%2A> estado associado ao contêiner do item e não para o próprio item. Quando o contêiner é reutilizado para um novo item, o valor atual de <xref:System.Windows.Controls.Expander.IsExpanded%2A> é usado para o novo item. Além disso, o item antigo perde corretas <xref:System.Windows.Controls.Expander.IsExpanded%2A> valor.  
   

@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 43a38406a3c9cc171944448fce2fa2f70c483baa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: db1b7f47ef135b1a174eecef7e53b41e6996256d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>Padrões de construtor seguro para DependencyObjects
 De modo geral, os construtores de classe não devem chamar retornos de chamada como métodos virtuais ou representantes, porque construtores podem ser chamados como inicialização de base dos construtores para uma classe derivada. O fornecimento do virtual pode ser feito em um estado de inicialização incompleta de um determinado objeto. No entanto, o sistema de propriedades chama e expõe os retornos de chamada internamente, como parte do sistema de propriedades de dependência. Uma operação como simples de definir um valor de propriedade de dependência com <xref:System.Windows.DependencyObject.SetValue%2A> chamada potencialmente inclui um retorno de chamada em algum lugar na determinação. Por esse motivo, você deve ter cuidado ao definir valores de propriedade de dependência dentro do corpo de um construtor, o que poderá se tornar problemático se o tipo for usado como uma classe base. Há um padrão específico para implementar <xref:System.Windows.DependencyObject> construtores que evita problemas específicos com estados de propriedade de dependência e os retornos de chamada inerentes, que é documentado aqui.  
@@ -125,6 +126,6 @@ public MyClass : SomeBaseClass {
  Esses mesmos padrões se aplicam se você estiver definindo uma propriedade que não tenha um wrapper para a conveniência de configuração de propriedade e definir valores com <xref:System.Windows.DependencyObject.SetValue%2A>. As chamadas para <xref:System.Windows.DependencyObject.SetValue%2A> que passar parâmetros do construtor também deve chamar o construtor padrão da classe de inicialização.  
   
 ## <a name="see-also"></a>Consulte também  
- [Propriedades de dependência personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [Propriedades de dependência personalizada](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
  [Visão geral das propriedades da dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
  [Segurança de propriedade da dependência](../../../../docs/framework/wpf/advanced/dependency-property-security.md)

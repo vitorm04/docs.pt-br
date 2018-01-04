@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bb546a3429012a49ee7652a3470460935fc76d70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2e392b47682d1bf53dc31073920bdf212fb7d997
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>Como usar o padrão de detalhes mestre com dados hierárquicos
 Este exemplo mostra como implementar o cenário de detalhes mestre.  
@@ -48,4 +49,4 @@ Este exemplo mostra como implementar o cenário de detalhes mestre.
  [Associar a uma coleção e exibir informações com base na seleção](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
  [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [Visão geral de modelagem dos dados](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [Tópicos de instruções](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

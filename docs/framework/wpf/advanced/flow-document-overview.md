@@ -20,11 +20,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10f7eda2b6761a825dcb2b24ae9f11b2e1262d7e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a99bd2336de41366d27c15e4bc4cfb2b2aff3cd0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flow-document-overview"></a>Visão geral do documento de fluxo
 Os documentos dinâmicos são projetados para otimizar a exibição e legibilidade. Em vez de serem configurados para um layout predefinido, os documentos dinâmicos ajustam e refluem seu conteúdo com base em variáveis de tempo de execução como tamanho da janela, resolução do dispositivo e preferências opcionais do usuário. Além disso, os documentos dinâmicos oferecem recursos de documento avançados, como paginação e colunas. Este tópico fornece uma visão geral dos documentos dinâmicos e como criá-los.  
@@ -68,7 +69,7 @@ Os documentos dinâmicos são projetados para otimizar a exibição e legibilida
 ## <a name="flow-document-types"></a>Tipos de documento dinâmico  
  A exibição de conteúdo de documento dinâmico e a aparência dela depende de que objeto é usado para hospedar o conteúdo dinâmico. Há quatro controles que oferecem suporte à exibição de conteúdo de fluxo: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, <xref:System.Windows.Controls.RichTextBox>, e <xref:System.Windows.Controls.FlowDocumentScrollViewer>. Esses controles são descritos resumidamente abaixo.  
   
- **Observação:** <xref:System.Windows.Documents.FlowDocument> é necessária para diretamente hospedar conteúdo de fluxo, então todos esses controles de exibição consumam um <xref:System.Windows.Documents.FlowDocument> para habilitar a hospedagem de conteúdo de fluxo.  
+ **Observação:** <xref:System.Windows.Documents.FlowDocument> é necessária para diretamente hospedar conteúdo de fluxo, então todos esses controles de exibição consumam um <xref:System.Windows.Documents.FlowDocument> para habilitar a hospedagem de conteúdo de fluxo.
   
 ### <a name="flowdocumentreader"></a>FlowDocumentReader  
  <xref:System.Windows.Controls.FlowDocumentReader>inclui recursos que permitem ao usuário escolher dinamicamente entre diversos modos de exibição, um página única (uma página no tempo), modo de visualização um duas páginas-em-um-vez (formato de leitura de livro) modo e um modo de exibição (sem parte inferior) de rolagem contínua. Para obter mais informações sobre esses modos de exibição, consulte <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>. Se você não precisa da capacidade dinamicamente alternar entre modos de exibição diferentes, <xref:System.Windows.Controls.FlowDocumentPageViewer> e <xref:System.Windows.Controls.FlowDocumentScrollViewer> oferecem fluxo leves visualizadores de conteúdo que foram corrigidos em um modo de visualização particular.  
@@ -361,7 +362,7 @@ Os documentos dinâmicos são projetados para otimizar a exibição e legibilida
 ## <a name="see-also"></a>Consulte também  
  [Texto](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
  [Tipografia no WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
+ [Tópicos de instruções](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
  [Visão geral do modelo de conteúdo TextElement](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
  [Visão geral de RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
  [Documentos no WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  

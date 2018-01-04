@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ec860cc9cc58febd98d8642c98a50ec296592d02
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2d57fb099fa364d34b7df5c5fce792eb42079a31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-binding-validation"></a>Como implementar validação de associação
 Este exemplo mostra como usar um <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> e um gatilho de estilo para fornecer comentários visuais para informar ao usuário quando um valor inválido for digitado, com base em uma regra de validação personalizada.  
@@ -49,4 +50,4 @@ Este exemplo mostra como usar um <xref:System.Windows.Controls.Validation.ErrorT
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [Tópicos de instruções](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

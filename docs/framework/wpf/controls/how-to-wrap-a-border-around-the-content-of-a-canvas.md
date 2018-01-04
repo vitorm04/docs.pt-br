@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 410bb4fdd171a63038703366c6c4616dc7563ea0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cbcc13512427d02867a50b17aeb75180ede28f3a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-wrap-a-border-around-the-content-of-a-canvas"></a>Como encapsular uma borda em torno do conteúdo de uma tela
 Este exemplo mostra como encapsular um <xref:System.Windows.Controls.Canvas> elemento com um <xref:System.Windows.Controls.Border>.  

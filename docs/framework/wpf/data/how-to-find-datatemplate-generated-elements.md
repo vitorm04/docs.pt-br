@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 22d5f393d376935f04459e2713e9658c80af6efa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 481a22cfd9419d36473c77b5d2282a711259e031
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-find-datatemplate-generated-elements"></a>Como encontrar elementos DataTemplate-Generated
 Este exemplo mostra como localizar elementos que são gerados por um <xref:System.Windows.DataTemplate>.  
@@ -50,7 +51,7 @@ Este exemplo mostra como localizar elementos que são gerados por um <xref:Syste
 ## <a name="see-also"></a>Consulte também  
  [Como localizar elementos gerados por ControlTemplate](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
  [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [Tópicos de instruções](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
  [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [Namescopes XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)  
  [Árvores no WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)

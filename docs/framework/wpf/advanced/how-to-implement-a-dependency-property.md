@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9bc4dee8f0b2eef76e5769ae7da3a13edf7c3300
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d63e66b2458fa4ff21a227bdc2898d97e5eb30f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-a-dependency-property"></a>Como implementar uma propriedade de dependência
 Este exemplo mostra como fazer uma [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] propriedade com um <xref:System.Windows.DependencyProperty> campo, portanto, definir uma propriedade de dependência. Ao definir suas próprias propriedades, se deseja dar suporte a muitos aspectos de funcionalidades do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], incluindo estilos, vinculação de dados, herança, animação e valores padrão, você deve implementá-las como uma propriedade de dependência.  
@@ -44,4 +45,4 @@ Este exemplo mostra como fazer uma [!INCLUDE[TLA#tla_clr](../../../../includes/t
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral das propriedades da dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+ [Tópicos de instruções](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)

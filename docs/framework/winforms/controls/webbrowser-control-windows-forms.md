@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0a87c1cd87b21b10404ae4a19ee931cc5f69ece
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 65c92a64619ae993671f7669117e852994072047
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="webbrowser-control-windows-forms"></a>Controle WebBrowser (Windows Forms)
 O controle `WebBrowser` dos Windows Forms hospeda páginas da Web e fornece recursos de navegação na Web para seu aplicativo.  
@@ -48,7 +49,7 @@ O controle `WebBrowser` dos Windows Forms hospeda páginas da Web e fornece recu
  [Como implementar a comunicação bidirecional entre o código DHTML e o código do aplicativo cliente](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)  
  Descreve como configurar a comunicação bidirecional entre o código do aplicativo e DHTML em uma página da Web hospedada pelo controle.  
   
- [Usando o Modelo de Objeto do Documento de HTML gerenciado](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)  
+ [Usando o Modelo de Objeto do Documento HTML gerenciado](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)  
  Fornece tópicos que descrevem como manipular ou criar páginas HTML hospedadas pelo <xref:System.Windows.Forms.WebBrowser> controle.  
   
 ## <a name="reference"></a>Referência  

@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e90f7f69aebf48bbc27321d3808468a2df49f793
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: b27f8544a44a252eb1a1afd6e096f303360c14e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-a-command"></a>Como habilitar um comando
 O exemplo a seguir demonstra como usar comandos em [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  O exemplo mostra como associar um <xref:System.Windows.Input.RoutedCommand> para um <xref:System.Windows.Controls.Button>, crie um <xref:System.Windows.Input.CommandBinding>e criar manipuladores de eventos que implementam o <xref:System.Windows.Input.RoutedCommand>.  Para obter mais informações sobre comandos, consulte [Visão geral de comandos](../../../../docs/framework/wpf/advanced/commanding-overview.md).  

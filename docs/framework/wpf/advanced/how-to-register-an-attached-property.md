@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aecb5d2f35b8532ad2ae7558af1a93243b0fd6df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 37c727eee7b56473808fec06ea42044fc742f7f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-register-an-attached-property"></a>Como registrar uma propriedade anexada
 Este exemplo mostra como registrar uma propriedade anexada e fornecer acessadores públicos para que você possa usar a propriedade no [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e no código. Propriedades anexadas são um conceito de sintaxe definido pelo [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. A maioria das propriedades anexadas para tipos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também são implementadas como propriedades de dependência. Você pode usar propriedades de dependência em qualquer <xref:System.Windows.DependencyObject> tipos.  
@@ -39,5 +40,5 @@ Este exemplo mostra como registrar uma propriedade anexada e fornecer acessadore
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.DependencyProperty>  
  [Visão geral das propriedades da dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Propriedades de dependência personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+ [Propriedades de dependência personalizada](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [Tópicos de instruções](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)

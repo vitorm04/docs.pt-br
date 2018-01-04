@@ -18,18 +18,19 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f7bebc19f06044ca2360d7f0c48d5ab1c51c1b62
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: a0f55a8811380abd32f4c25fe83c16e62616f283
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resources-wpf"></a>Recursos (WPF)
 Um recurso é um objeto que pode ser reutilizado em locais diferentes do aplicativo. WPF oferece suporte a diferentes tipos de recursos. Esses recursos são basicamente dois tipos de recursos: XAML recursos e arquivos de dados do recurso. Pincéis e estilos são exemplos de recursos XAML. Arquivos de dados do recurso são arquivos de dados não executáveis que precisa de um aplicativo.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Recursos XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [Arquivos de recurso, conteúdo e dados de aplicativo WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
+ [Arquivos de recursos, de conteúdo e de dados de aplicativos do WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
  [URIs "pack://" no WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
   
 ## <a name="reference"></a>Referência  

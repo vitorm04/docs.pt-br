@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b1a3c211829ed5542b0d5501955ccaa334f670e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5241958ce297fbb4aac859c203dcdc3dfc500253
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performance"></a>Desempenho
 Para obter melhor desempenho dos aplicativos necessário previsão na estrutura de aplicativo e um entendimento de práticas recomendadas para [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] desenvolvimento de aplicativos. Os tópicos nesta seção fornecem informações adicionais sobre a criação de alto desempenho [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos.  

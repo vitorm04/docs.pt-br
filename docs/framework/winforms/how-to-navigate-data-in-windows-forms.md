@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7c754bba18e93f63306701381f66af04b593c473
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d99d794164307cb22c5dfc89d6c9c227aa457a59
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Como navegar por dados no Windows Forms
 Em um aplicativo do Windows, a maneira mais fácil de navegar por meio de registros em uma fonte de dados é associar um <xref:System.Windows.Forms.BindingSource> componente para a fonte de dados e controles de associação para o <xref:System.Windows.Forms.BindingSource>. Você pode usar o método de navegação internos no <xref:System.Windows.Forms.BindingSource> tais um <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> e <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. Usar esses métodos ajustará o <xref:System.Windows.Forms.BindingSource.Position%2A> e <xref:System.Windows.Forms.BindingSource.Current%2A> propriedades do <xref:System.Windows.Forms.BindingSource> adequadamente. Você também pode localizar um item e defina-o como o item atual, definindo o <xref:System.Windows.Forms.BindingSource.Position%2A> propriedade.  
@@ -64,4 +65,4 @@ Em um aplicativo do Windows, a maneira mais fácil de navegar por meio de regist
  [Fontes de dados com suporte nos Windows Forms](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)  
  [Notificação de alteração na vinculação de dados dos Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
  [Vinculação de dados e os Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
- [Vinculação de dados dos Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+ [Associação de dados do Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)

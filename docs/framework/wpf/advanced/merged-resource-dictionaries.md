@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7ce02b772bacf2115a1bb74039fdff30a46fea8b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6cbea4316db159582790f371844f6e65fc22fd5f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="merged-resource-dictionaries"></a>Dicionários de recursos mesclados
 Os recursos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] dão suporte a um recurso de dicionário de recursos mesclados. Esse recurso fornece uma maneira de definir a parte de recursos de um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fora do aplicativo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] compilado. Os recursos podem ser compartilhados entre aplicativos e são também isolados de modo mais conveniente para localização.  
@@ -65,4 +66,4 @@ Os recursos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-wincli
  <xref:System.Windows.ResourceDictionary>  
  [Recursos XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
  [Recursos e código](../../../../docs/framework/wpf/advanced/resources-and-code.md)  
- [Arquivos de recurso, conteúdo e dados de aplicativo WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+ [Arquivos de recursos, de conteúdo e de dados de aplicativos do WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)

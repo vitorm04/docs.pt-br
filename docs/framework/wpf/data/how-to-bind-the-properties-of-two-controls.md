@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff3da19d33e747ec514de9cd24fa08ccd6ab13bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e79b1f9f00e8c76f94bf4386a284607f526624a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-the-properties-of-two-controls"></a>Como associar as propriedades de dois controles
 Este exemplo mostra como associar a propriedade de um controle instanciado a de outro usando o <xref:System.Windows.Data.Binding.ElementName%2A> propriedade.  
@@ -39,4 +40,4 @@ Este exemplo mostra como associar a propriedade de um controle instanciado a de 
   
 ## <a name="see-also"></a>Consulte também  
  [Especificar a origem da associação](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [Tópicos de instruções](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

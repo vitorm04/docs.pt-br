@@ -18,17 +18,18 @@ caps.latest.revision: "68"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e50c6abac6e949245c89b8f25a093ba72a3eb530
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a473b9972cd300dc45212e47292b73c3ca2c2221
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stackpanel"></a>StackPanel
 O <xref:System.Windows.Controls.StackPanel> elemento é usado para empilhar elementos filho horizontal ou verticalmente.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Tópicos explicativos](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)  
+ [Tópicos de instruções](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Controls.Panel>  

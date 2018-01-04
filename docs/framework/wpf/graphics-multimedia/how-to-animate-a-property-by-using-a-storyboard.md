@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2129ea06e8c92b3912d2abdd3d1a63e651ac59e1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: ba6cb3483c983ddbcd3fac2281fe40aef31301b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-a-property-by-using-a-storyboard"></a>Como animar uma propriedade usando um storyboard
 Este exemplo mostra como usar um <xref:System.Windows.Media.Animation.Storyboard> para animar propriedades. Para animar uma propriedade usando um <xref:System.Windows.Media.Animation.Storyboard>, criar uma animação para cada propriedade que você deseja animar e também criar um <xref:System.Windows.Media.Animation.Storyboard> para conter as animações.  

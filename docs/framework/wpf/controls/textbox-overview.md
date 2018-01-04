@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1116093ddcd95c99deac8a1e1b14fef3b0a458f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 50e36192198c172843d79a4195e894b848f84c90
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textbox-overview"></a>Visão geral de TextBox
 O <xref:System.Windows.Controls.TextBox> classe permite que você exiba ou edite o texto não formatado. Um uso comum de um <xref:System.Windows.Controls.TextBox> está editando o texto não formatado em um formulário. Por exemplo, um formulário solicitando o nome do usuário, número de telefone, etc. usaria <xref:System.Windows.Controls.TextBox> controles de entrada de texto. Este tópico apresenta o <xref:System.Windows.Controls.TextBox> classe e fornece exemplos de como usá-lo em ambos os [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)].  
@@ -78,5 +79,5 @@ O <xref:System.Windows.Controls.TextBox> classe permite que você exiba ou edite
  Geralmente o <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> evento deve ser usado para detectar sempre que o texto em uma <xref:System.Windows.Controls.TextBox> ou <xref:System.Windows.Controls.RichTextBox> for alterado, em vez disso, em seguida, <xref:System.Windows.UIElement.KeyDown> como esperado. Consulte [Como detectar quando o texto em um TextBox foi alterado](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md) para ver um exemplo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Tópicos explicativos](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md)  
+ [Tópicos de instruções](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md)  
  [Visão geral de RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

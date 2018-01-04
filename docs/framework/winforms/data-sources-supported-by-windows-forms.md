@@ -26,11 +26,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b02e492d0357c80776df0a1d0bd01ce228fa0b04
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2d2c1c021759c7032257e95eb2cad202a461dc05
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Fontes de dados com suporte do Windows Forms
 Tradicionalmente, a associação de dados era usada nos aplicativos para tirar proveito dos dados armazenados em bancos de dados. Com a associação de dados do Windows Forms, você pode acessar dados de bancos de dados, bem como dados em outras estruturas, como matrizes e coleções, desde que certos requisitos mínimos sejam atendidos.  
@@ -70,4 +71,4 @@ Tradicionalmente, a associação de dados era usada nos aplicativos para tirar p
 ## <a name="see-also"></a>Consulte também  
  [Notificação de alteração na vinculação de dados dos Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
  [Vinculação de dados e os Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
- [Vinculação de dados dos Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+ [Associação de dados do Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)

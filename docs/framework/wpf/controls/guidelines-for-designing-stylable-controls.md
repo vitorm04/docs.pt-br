@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 80edbd452be52e77a464ab29347dbe5d4067d0e1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6707a434f64838467033966c9093e1e415b1fb31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Diretrizes para criar controles com estilo
 Este documento resume um conjunto de práticas recomendadas a serem consideradas ao criar um controle que você deseja que seja fácil de criar estilos e modelos. Nós chegamos a este conjunto de práticas recomendadas por meio de muitas tentativas e erros ao trabalhar nos estilos de controle de tema do conjunto de controles internos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Aprendemos que uma definição de estilo bem-sucedida é tanto uma função de um modelo de objeto com um bom design quanto é do próprio estilo. O público-alvo deste documento é o autor do controle, não os autores de estilo.  

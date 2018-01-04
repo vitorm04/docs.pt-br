@@ -17,11 +17,12 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9a86833f2b773f1724393de091bc65a5cbb75c9b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 157e7bf7ed481afc0b797a05721a4d7973b8790b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics"></a>Gráficos
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]oferece suporte integrado a multimídia, elementos gráficos vetoriais, animação e composição de conteúdo, tornando mais fácil para os desenvolvedores criem interfaces de usuário e conteúdo interessantes.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
  [Formas](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
  [Transformações](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
  [Configurações do Registro de renderização dos elementos gráficos](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
+ [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Shapes.Shape>  

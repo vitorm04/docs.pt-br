@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 78e5faf7aab684f2a8760204079a26a61b9c3fda
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ea6e7d26ad70eef3aae4678b922ef01bccc9450b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="treeview-styles-and-templates"></a>Estilos e modelos TreeView
 Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.TreeView> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para que o controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -66,7 +67,7 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 |NoItems|HasItemsStates|O <xref:System.Windows.Controls.TreeViewItem> não tem itens.|  
 |Selecionado|SelectionStates|O <xref:System.Windows.Controls.TreeViewItem> está selecionado.|  
 |SelectedInactive|SelectionStates|O <xref:System.Windows.Controls.TreeViewItem> é selecionado, mas não está ativo.|  
-|Não selecionado|SelectionStates|O <xref:System.Windows.Controls.TreeViewItem> não estiver selecionada.|  
+|Não selecionado|SelectionStates|O <xref:System.Windows.Controls.TreeViewItem> não está selecionado.|  
 |Válido|ValidationStates|O controle usa o <xref:System.Windows.Controls.Validation> classe e o <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `false`.|  
 |InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é de propriedade anexada `true` tem o controle tem foco.|  
 |InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é de propriedade anexada `true` tem o controle não tem foco.|  

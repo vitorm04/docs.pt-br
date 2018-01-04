@@ -18,11 +18,12 @@ caps.latest.revision: "71"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b9ebc62926efc09eb45e51ca9a7bf08527568929
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 13affab3e1e6a1a732231763219e9b419ea7ea51
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="element-tree-and-serialization"></a>Árvore de elementos e serialização
 Elementos de programação do WPF, geralmente, existem em alguma forma de relação de árvore uns aos outros. Por exemplo, um aplicativo de que interface de usuário criada em XAML pode ser conceitualizado como uma árvore de objetos. A árvore de elementos pode ser dividida em duas árvores discretos ainda às vezes paralelas: a árvore lógica e a árvore visual. Serialização no WPF envolve salvar o estado dessas duas árvores, bem como o estado do aplicativo e gravá-la em um arquivo, possivelmente como XAML.  
@@ -31,7 +32,7 @@ Elementos de programação do WPF, geralmente, existem em alguma forma de relaç
  [Árvores no WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)  
  [Limitações de serialização de XamlWriter.Save](../../../../docs/framework/wpf/advanced/serialization-limitations-of-xamlwriter-save.md)  
  [Inicialização de elementos de objeto que não estão em uma árvore de objetos](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/advanced/element-tree-and-serialization-how-to-topics.md)  
+ [Tópicos de instruções](../../../../docs/framework/wpf/advanced/element-tree-and-serialization-how-to-topics.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Markup>  

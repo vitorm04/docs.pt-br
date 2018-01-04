@@ -17,11 +17,12 @@ caps.latest.revision: "82"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0a34719cc0d54d55c2331a28a6cfb9cbaf7e4891
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c30c8e0399229cd58d09295e24258eb3e2275818
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="build-and-deploy-how-to-topics"></a>Tópicos explicativos de compilação e implantação
 Os tópicos a seguir mostram como criar arquivos de projeto para os diversos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tipos de aplicativos.  

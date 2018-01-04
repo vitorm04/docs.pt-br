@@ -18,11 +18,12 @@ caps.latest.revision: "85"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d02a32eb2d27d6e8ace4e81703bfadbb3a1b1ca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7a051002fb0dda77ee2e8a5d8ef95ae3ebf24cc9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drag-and-drop"></a>Arrastar e soltar
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Fornece um arraste altamente flexível e a infraestrutura de soltar que dá suporte a arrastar e soltar de dados dentro de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos, bem como outros [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] aplicativos.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/18/2017
  [Visão geral de arrastar e soltar](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)  
  [Dados e objetos de dados](../../../../docs/framework/wpf/advanced/data-and-data-objects.md)  
  [Passo a passo: habilitando arrastar e soltar em um controle de usuário](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
+ [Tópicos de instruções](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.DataFormat>  

@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ffd472a7c410bd541ea0382f05f7ed92acb0e688
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1d17aa00ce551d951b0e178304632572abf592b6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="operator-overloads"></a>Sobrecargas de operador
 Sobrecargas de operador permitem que os tipos de estrutura apareçam como se fossem primitivos de linguagem internas.  
@@ -121,5 +124,5 @@ Sobrecargas de operador permitem que os tipos de estrutura apareçam como se fos
  *Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
 ## <a name="see-also"></a>Consulte também  
- [Diretrizes de Design de membro](../../../docs/standard/design-guidelines/member.md)  
+ [Diretrizes de design de membro](../../../docs/standard/design-guidelines/member.md)  
  [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)

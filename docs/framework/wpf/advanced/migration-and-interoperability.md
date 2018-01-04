@@ -23,11 +23,12 @@ caps.latest.revision: "41"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3d469d5f53b97ec05e8714cff1ea663dda827a1a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 28d1fd13c6f189010f676dad6a1e2c4b700da161
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migration-and-interoperability"></a>Migração e interoperabilidade
 Esta página contém links para documentos que descrevem como implementar interoperabilidade entre [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos e outros tipos de [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] aplicativos.  

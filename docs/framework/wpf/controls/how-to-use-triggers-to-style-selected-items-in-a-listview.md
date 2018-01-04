@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e86c7f875376a4ab28eec7cd032a165745445441
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3f8965ee524d6a5cb03a54ac07d8889ff9801440
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-triggers-to-style-selected-items-in-a-listview"></a>Como usar gatilhos para criar itens selecionados em um ListView
 Este exemplo mostra como definir <xref:System.Windows.Style.Triggers%2A> para um <xref:System.Windows.Controls.ListViewItem> controle para que quando um valor de propriedade de um <xref:System.Windows.Controls.ListViewItem> alterações, o <xref:System.Windows.Style> do <xref:System.Windows.Controls.ListViewItem> alterações na resposta.  
@@ -42,6 +43,6 @@ Este exemplo mostra como definir <xref:System.Windows.Style.Triggers%2A> para um
  <xref:System.Windows.Controls.Control>  
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.GridView>  
- [Tópicos explicativos](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [Tópicos de instruções](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
  [Visão geral de ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
  [Visão geral de GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)

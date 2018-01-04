@@ -14,11 +14,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10c6afbcde22a82e6227ce1d95d57749bee1a88c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 06c5bb1d4a36d51bb07d59b48c730f722af23f8c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Modo virtual no controle DataGridView dos Windows Forms
 Com o modo virtual, você pode gerenciar a interação entre o <xref:System.Windows.Forms.DataGridView> controle e um cache de dados personalizados. Para implementar o modo virtual, defina o <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> propriedade `true` e lidar com um ou mais dos eventos descritos neste tópico. Você normalmente manipulará pelo menos o evento `CellValueNeeded`, que permite os valores de consulta do controle no cache de dados.  
@@ -49,7 +50,7 @@ Com o modo virtual, você pode gerenciar a interação entre o <xref:System.Wind
   
  Os seguintes eventos ocorrem somente quando o <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> está definida como `true`.  
   
-|Evento|Descrição|  
+|evento|Descrição|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.CellValueNeeded>|Usado pelo controle para recuperar um valor de célula do cache de dados para exibição. Esse evento ocorre somente para células em colunas não associadas.|  
 |<xref:System.Windows.Forms.DataGridView.CellValuePushed>|Usado pelo controle para confirmar a entrada do usuário de uma célula para o cache de dados. Esse evento ocorre somente para células em colunas não associadas.<br /><br /> Chamar o <xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A> método ao alterar um valor armazenado em cache fora de um <xref:System.Windows.Forms.DataGridView.CellValuePushed> manipulador de eventos para garantir que o valor atual é exibido no controle e aplicar qualquer modos de dimensionamento automático atualmente em vigor.|  
@@ -74,7 +75,7 @@ Com o modo virtual, você pode gerenciar a interação entre o <xref:System.Wind
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
- [Ajuste de desempenho no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [Ajuste de desempenho no controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
  [Práticas recomendadas para colocação em escala do controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)  
  [Passo a passo: implementando o modo virtual no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)  
  [Implementando o modo virtual com carregamento de dados Just-In-Time no controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15e24e0350071fabd32342402abdf497937ee90d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 45dab820072b3eb0bcc448ce32251e3ff5a3e622
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>Visão geral do controle ToolStrip (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ToolStrip> controle e suas classes associadas fornecem uma estrutura comum para a combinação de elementos da interface do usuário em menus, barras de ferramentas e barras de status. <xref:System.Windows.Forms.ToolStrip>controles de oferecem uma experiência avançada de tempo de design que inclui a ativação no local e editar, layout personalizado e rafting, que é a capacidade de compartilhar espaço horizontal ou vertical das barras de ferramentas.  

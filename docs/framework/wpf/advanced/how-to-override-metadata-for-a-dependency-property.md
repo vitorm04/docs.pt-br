@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8e7cb01c81b5fb24830cbe0cc39befbadaf4405e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 78d90414d86d06040065ad8ae18a037412723ce0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>Como substituir metadados para uma propriedade de dependência
 Este exemplo mostra como substituir os metadados de propriedade de dependência padrão que vêm de uma classe herdada, chamando o <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> método e fornecendo metadados específicos do tipo.  
@@ -44,5 +45,5 @@ Este exemplo mostra como substituir os metadados de propriedade de dependência 
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.DependencyProperty>  
  [Visão geral das propriedades da dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Propriedades de dependência personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+ [Propriedades de dependência personalizada](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [Tópicos de instruções](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)

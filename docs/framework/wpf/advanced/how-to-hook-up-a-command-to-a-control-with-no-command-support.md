@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6f38a6f900ee2b253708da4b63bdc2f474fa3ab1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 804c4ffd54a0f8cc94e8849a223b1af8b27a58b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-no-command-support"></a>Como enganchar um comando em um controle sem suporte de comando
 O exemplo a seguir mostra como conectar um <xref:System.Windows.Input.RoutedCommand> para um <xref:System.Windows.Controls.Control> que não tem embutido no suporte para o comando.  Para um exemplo completo que interliga comandos a várias fontes, consulte o exemplo de [Criar um exemplo de RoutedCommand personalizado](http://go.microsoft.com/fwlink/?LinkID=159980).  
@@ -57,5 +58,5 @@ O exemplo a seguir mostra como conectar um <xref:System.Windows.Input.RoutedComm
  [!code-vb[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbindinginit)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral dos comandos](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
+ [Visão geral de comandos](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
  [Interligar um comando a um controle com suporte de comando](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)

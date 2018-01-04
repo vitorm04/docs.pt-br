@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 47fb0a871c3792450386c440629ead1ee3fbecdf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5eed85f982687bfc90f53e57ab1ec3949820097e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-whether-a-freezable-is-frozen"></a>Como determinar se um congelável está congelado
 Este exemplo mostra como determinar se um <xref:System.Windows.Freezable> objeto está congelado. Se você tentar modificar uma congelada <xref:System.Windows.Freezable> do objeto, ele lança um <xref:System.InvalidOperationException>. Para evitar gerar essa exceção, use o <xref:System.Windows.Freezable.IsFrozen%2A> propriedade o <xref:System.Windows.Freezable> objeto para determinar se ele está congelado.  
@@ -38,4 +39,4 @@ Este exemplo mostra como determinar se um <xref:System.Windows.Freezable> objeto
  <xref:System.Windows.Freezable>  
  <xref:System.Windows.Freezable.IsFrozen%2A>  
  [Visão geral de objetos congeláveis](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)
+ [Tópicos de instruções](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)

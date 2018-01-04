@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cad79f26a48f3f5e905b2f2ac7de9191dd8539f8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d1d85e85079504e28a5b0ae78dc8be3a4b928ea3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drawing-formatted-text"></a>Desenhando texto formatado
 Este tópico fornece uma visão geral dos recursos do <xref:System.Windows.Media.FormattedText> objeto. Este objeto fornece controle de baixo nível para desenhar texto em aplicativos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -115,15 +116,15 @@ Vídeo em exibição na geometria de caminho do texto
 |DT_END_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|Use o <xref:System.Windows.Media.FormattedText.Trimming%2A> propriedade com o valor <xref:System.Windows.TextTrimming.CharacterEllipsis>.<br /><br /> Use <xref:System.Windows.TextTrimming.WordEllipsis> obter [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] finais DT_END_ELLIPSIS com DT_WORD_ELIPSIS — nesse caso, reticências de caractere ocorrem apenas em palavras que não cabem em uma única linha.|  
 |DT_EXPAND_TABS|Nenhum|Não obrigatório. As guias são expandidas automaticamente para paradas a cada 4 ems, o que é aproximadamente a largura de 8 caracteres independentes do idioma.|  
 |DT_EXTERNALLEADING|Nenhum|Não obrigatório. O entrelinhamento externo sempre é incluído no espaçamento entre linhas. Use o <xref:System.Windows.Media.FormattedText.LineHeight%2A> propriedade para criar espaçamento definido pelo usuário.|  
-|DT_HIDEPREFIX|Nenhum|Não há suporte. Remova o '&' da cadeia de caracteres antes de construir o <xref:System.Windows.Media.FormattedText> objeto.|  
+|DT_HIDEPREFIX|Nenhum|Sem suporte. Remova o '&' da cadeia de caracteres antes de construir o <xref:System.Windows.Media.FormattedText> objeto.|  
 |DT_LEFT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Este é o alinhamento de texto padrão. Use o <xref:System.Windows.Media.FormattedText.TextAlignment%2A> propriedade com o valor definido <xref:System.Windows.TextAlignment.Left>. (Somente WPF)|  
-|DT_MODIFYSTRING|Nenhum|Não há suporte.|  
+|DT_MODIFYSTRING|Nenhum|Sem suporte.|  
 |DT_NOCLIP|<xref:System.Windows.Media.Visual.VisualClip%2A>|O recorte não acontece automaticamente. Se você quiser recortar texto, use o <xref:System.Windows.Media.Visual.VisualClip%2A> propriedade.|  
-|DT_NOFULLWIDTHCHARBREAK|Nenhum|Não há suporte.|  
+|DT_NOFULLWIDTHCHARBREAK|Nenhum|Sem suporte.|  
 |DT_NOPREFIX|Nenhum|Não obrigatório. O caractere "&" nas cadeias de caracteres sempre é tratado como um caractere normal.|  
 |DT_PATHELLIPSIS|Nenhum|Use o <xref:System.Windows.Media.FormattedText.Trimming%2A> propriedade com o valor <xref:System.Windows.TextTrimming.WordEllipsis>.|  
-|DT_PREFIX|Nenhum|Não há suporte. Se você deseja usar sublinhados para texto, como uma tecla aceleradora ou link, use o <xref:System.Windows.Media.FormattedText.SetTextDecorations%2A> método.|  
-|DT_PREFIXONLY|Nenhum|Não há suporte.|  
+|DT_PREFIX|Nenhum|Sem suporte. Se você deseja usar sublinhados para texto, como uma tecla aceleradora ou link, use o <xref:System.Windows.Media.FormattedText.SetTextDecorations%2A> método.|  
+|DT_PREFIXONLY|Nenhum|Sem suporte.|  
 |DT_RIGHT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Use o <xref:System.Windows.Media.FormattedText.TextAlignment%2A> propriedade com o valor definido <xref:System.Windows.TextAlignment.Right>. (Somente WPF)|  
 |DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|Defina a propriedade <xref:System.Windows.Media.FormattedText.FlowDirection%2A> como <xref:System.Windows.FlowDirection.RightToLeft>.|  
 |DT_SINGLELINE|Nenhum|Não obrigatório. <xref:System.Windows.Media.FormattedText>objetos se comportar como um controle de única linha, a menos que o o <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> está definida ou o texto contém uma quebra de linha (CR/LF) de feed.|  

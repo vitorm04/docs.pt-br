@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: faa74e982fb114d041468c53dde2f978bb3faa35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0feef370e6b09d2f58a33f2142bd654e1d7e3402
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Visão geral das extensões de marcação para XAML
 Extensões de marcação são uma técnica XAML para obtenção de um valor que não é um primitivo nem um tipo específico de XAML. Para uso de atributo, extensões de marcação usam a sequência de caracteres conhecido de uma chave de abertura `{` para inserir o escopo de extensão de marcação e uma chave de fechamento `}` para sair. Ao usar serviços XAML do .NET Framework, você pode usar algumas das extensões de marcação de linguagem XAML predefinidas do assembly System. XAML. Você também pode subclasse do <xref:System.Windows.Markup.MarkupExtension> classe, definido em System. XAML e definir suas próprias extensões de marcação. Ou você pode usar extensões de marcação definidas por uma estrutura específica, se você já está fazendo referência a essa estrutura.  
@@ -167,4 +168,4 @@ public Collate(CollationMode collationMode, object collateThis) {...}
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Markup.MarkupExtension>  
  [Conversores de tipo e extensões de marcação para XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)  
- [Extensões de marcação e XAML WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+ [Extensões de marcação e XAML do WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

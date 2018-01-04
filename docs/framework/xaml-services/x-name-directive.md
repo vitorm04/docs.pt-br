@@ -21,11 +21,12 @@ caps.latest.revision: "27"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 90f0d27f3bf5adffe8a9b47940451e71fda082b9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 676f7f696fda26ee9d86d14f06dc7b70e2565157
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xname-directive"></a>Diretiva x:Name
 Identifica os elementos definidos em XAML em um namescope XAML. Namescopes XAML e seus modelos de exclusividade podem ser aplicados a objetos instanciados, quando estruturas fornecem APIs ou implementam comportamentos que acessam o gráfico de objeto criado XAML em tempo de execução.  

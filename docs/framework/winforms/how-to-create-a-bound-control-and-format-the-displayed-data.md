@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a8c2836d841215ed3ca8e04461b1298cd41287de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 33d5491feccacba7f7b010b57e890ff7543a46f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Como criar um controle associado e formatar os dados exibidos
 Com a associação de dados do Windows Forms, você pode formatar os dados exibidos em um controle associado a dados usando a caixa de diálogo **Formatação e associação avançada**.  
@@ -67,4 +68,4 @@ Com a associação de dados do Windows Forms, você pode formatar os dados exibi
 ## <a name="see-also"></a>Consulte também  
  [Como criar um controle associado simples em um Windows Form](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)  
  [Validação da entrada do usuário nos Windows Forms](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
- [Vinculação de dados dos Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+ [Associação de dados do Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)

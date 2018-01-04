@@ -19,11 +19,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e0886e387b6de34673cd4990ef8b61e08674b531
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 62144217199a62da3e41bf381162c94c91d00e72
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="listview-overview"></a>Visão geral de ListView
 O <xref:System.Windows.Controls.ListView> controle fornece a infraestrutura para exibir um conjunto de itens de dados em diferentes layouts ou modos de exibição. Por exemplo, talvez um usuário queira exibir itens de dados em uma tabela e classificar suas colunas.  
@@ -99,5 +100,5 @@ O <xref:System.Windows.Controls.ListView> controle fornece a infraestrutura para
  <xref:System.Windows.Controls.ListViewItem>  
  <xref:System.Windows.Data.Binding>  
  [Visão geral de GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [Tópicos de instruções](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
  [Controles](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

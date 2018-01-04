@@ -23,11 +23,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bb803d8cf1a51acf76fb1ef264e0fe63b8a21073
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b7a69a4dcd5fc39b700bf9c3404e70d581509ebc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drag-and-drop-overview"></a>Visão geral de arrastar e soltar
 Este tópico fornece uma visão geral do suporte ao recurso do tipo "arrastar e soltar" em aplicativos do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Normalmente, o recurso do tipo "arrastar e soltar" se refere a um método de transferência de dados que envolve o uso de um mouse (ou algum outro dispositivo apontador) para selecionar um ou mais objetos, arrastá-los sobre um destino de soltar desejado na [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] e soltá-los.  
@@ -77,7 +78,7 @@ Este tópico fornece uma visão geral do suporte ao recurso do tipo "arrastar e 
   
 ### <a name="drag-source-events"></a>Eventos de origem do arrasto  
   
-|Evento|Resumo|  
+|evento|Resumo|  
 |-----------|-------------|  
 |<xref:System.Windows.DragDrop.GiveFeedback>|Esse evento ocorre continuamente durante uma operação do tipo "arrastar e soltar" e permite que a origem de soltar forneça informações de comentários ao usuário. Geralmente, esses comentários são fornecidos com a alteração da aparência do ponteiro do mouse para indicar os efeitos permitidos pelo destino de soltar.  Esse é um evento de propagação.|  
 |<xref:System.Windows.DragDrop.QueryContinueDrag>|Esse evento ocorre quando há uma alteração nos estados do teclado ou do botão do mouse durante uma do tipo "arrastar e soltar" e permite que a origem de soltar cancele a operação do tipo "arrastar e soltar", dependendo dos estados da tecla e do botão. Esse é um evento de propagação.|  
@@ -86,7 +87,7 @@ Este tópico fornece uma visão geral do suporte ao recurso do tipo "arrastar e 
   
 ### <a name="drop-target-events"></a>Eventos de destino de soltar  
   
-|Evento|Resumo|  
+|evento|Resumo|  
 |-----------|-------------|  
 |<xref:System.Windows.DragDrop.DragEnter>|Esse evento ocorre quando um objeto é arrastado para os limites do destino de soltar. Esse é um evento de propagação.|  
 |<xref:System.Windows.DragDrop.DragLeave>|Esse evento ocorre quando um objeto é arrastado para fora dos limites do destino de soltar.  Esse é um evento de propagação.|  
@@ -229,5 +230,5 @@ Este tópico fornece uma visão geral do suporte ao recurso do tipo "arrastar e 
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Clipboard>  
  [Passo a passo: habilitando arrastar e soltar em um controle de usuário](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
+ [Tópicos de instruções](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
  [Arrastar e soltar](../../../../docs/framework/wpf/advanced/drag-and-drop.md)

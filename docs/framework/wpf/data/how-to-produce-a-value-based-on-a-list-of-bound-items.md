@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7d16a198ed78c1ffd9dcaad595e9cc9be3cb2de0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c3987690a1acb180ee22fa02e399accd9c5d481d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>Como produzir um valor com base em uma lista de itens associados
 <xref:System.Windows.Data.MultiBinding>permite associar uma propriedade de destino da associação a uma lista de propriedades de fonte e, em seguida, aplicar lógica para produzir um valor com as entradas disponíveis. Este exemplo demonstra como usar <xref:System.Windows.Data.MultiBinding>.  
@@ -46,4 +47,4 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Consulte também  
  [Converter dados associados](../../../../docs/framework/wpf/data/how-to-convert-bound-data.md)  
  [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [Tópicos de instruções](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23f49481806d386bece1ad0634dd635c9eaf51f6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bac1fa1576e684a4b10f00310c08e4e7101a5df0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-application-resources"></a>Como usar recursos do aplicativo
 Esse exemplo demonstra como usar recursos do aplicativo.  
@@ -38,4 +39,4 @@ Esse exemplo demonstra como usar recursos do aplicativo.
 ## <a name="see-also"></a>Consulte também  
  [Recursos XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
  [Visão geral do gerenciamento de aplicativos](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)
+ [Tópicos de instruções](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)

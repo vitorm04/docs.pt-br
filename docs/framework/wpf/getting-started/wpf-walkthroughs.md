@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c4c67033711575e0e13785fd448114a6042d8e8
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c24b5beae2a10720ee4d89b9d2d60306978d2628
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-walkthroughs"></a>Explicações passo a passo WPF
 Instruções passo a passo oferecem orientações em etapas para cenários comuns. Isso torna esse bom local para começar a conhecer o produto ou uma área de recurso específica.  
@@ -52,7 +53,7 @@ Instruções passo a passo oferecem orientações em etapas para cenários comun
 |-----------|-----------------|  
 |[Passo a passo: hospedando um controle do Windows Forms no WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Demonstra como hospedar um Windows Forms <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> controle em um aplicativo do WPF.|  
 |[Passo a passo: hospedando um controle composto do Windows Forms no WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Demonstra como hospedar um controle composto de entrada de dados [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] em um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].|  
-|[Passo a passo: hospedando um controle composto do WPF no Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|Demonstra como hospedar um controle composto de entrada de dados de WPF em um Aplicativo do Windows Forms.|  
+|[Instruções passo a passo: hospedando um controle de composição do WPF nos Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|Demonstra como hospedar um controle composto de entrada de dados de WPF em um Aplicativo do Windows Forms.|  
 |[Passo a passo: organizando controles do Windows Forms no WPF](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|Demonstra como usar recursos de layout do WPF para organizar controles do Windows Forms em um aplicativo híbrido.|  
 |[Instruções passo a passo: associando a dados em aplicativos híbridos](../../../../docs/framework/wpf/advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|Demonstra como usar a associação de dados em aplicativos híbridos que incluem controles do Windows Forms e do WPF.|  
   

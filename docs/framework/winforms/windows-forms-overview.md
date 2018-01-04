@@ -16,11 +16,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bcb666c41f849ac39386c3eaf85bbaf8b19053e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bc9ff97583566bd950486d96bd100f05ef651c7e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-overview"></a>Visão geral dos Windows Forms
 A visão geral a seguir descreve as vantagens dos aplicativos cliente inteligentes, os principais recursos de programação dos Windows Forms e como você pode usar o Windows Forms para criar clientes inteligentes que atendem às necessidades de empresas e usuários finais de hoje.  
@@ -73,7 +74,7 @@ A visão geral a seguir descreve as vantagens dos aplicativos cliente inteligent
 |Usando o <xref:System.Windows.Forms.BindingSource> componente|[Como associar controles dos Windows Forms ao componente BindingSource usando o designer](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
 |Trabalhando com fontes de dados [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]|[Como classificar e filtrar dados ADO.NET com o componente BindingSource dos Windows Forms](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|  
 |Usando a janela de Fontes de Dados|[Passo a passo: exibindo dados em um Windows Form](http://msdn.microsoft.com/library/f6e08c2c-c792-43de-adf3-3e52c0100225)|  
-|Usando configurações de aplicativo|[Como Criar Configurações de Aplicativo](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|  
+|Usando configurações de aplicativo|[Como criar configurações de aplicativo](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|  
   
 ### <a name="deploying-applications-to-client-computers"></a>Implantando aplicativos em computadores cliente  
  Depois de escrever o seu aplicativo, você precisa enviá-lo para seus usuários para que eles possam instalá-lo e executá-lo em seus próprios computadores cliente. Ao usar a tecnologia [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], você pode implantar seus aplicativos no [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] usando somente alguns cliques e oferecer aos usuários uma URL que aponta para o seu aplicativo na Web. O [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] gerencia todos os elementos e as dependências do seu aplicativo e garante que ele seja instalado adequadamente no computador cliente.  
@@ -103,7 +104,7 @@ A visão geral a seguir descreve as vantagens dos aplicativos cliente inteligent
 |Saiba mais sobre a segurança dos Windows Forms|[Visão geral da segurança dos Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Introdução ao Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
+ [Guia de introdução ao Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
  [Criando um novo Windows Form](../../../docs/framework/winforms/creating-a-new-windows-form.md)  
  [Visão geral do controle ToolStrip](../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
  [Visão geral do controle DataGridView](../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  

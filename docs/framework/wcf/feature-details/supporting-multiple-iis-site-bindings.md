@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bf2dbccd81b9c2e7b4ec78863d3de0227baedf92
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8dcd6a5e6204b1a629c1ee1e2ddfb9b263fa8054
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>Suporte a ligações de site do IIS
 Ao hospedar um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço em Internet Information Services (IIS) 7.0, talvez você queira fornecer vários endereços de base que usam o mesmo protocolo no mesmo site. Isso permite que o mesmo serviço responder a um número de URIs diferentes. Isso é útil quando você deseja hospedar um serviço que escuta em http://www.contoso.com e http://contoso.com. Também é útil criar um serviço que tem um endereço base para usuários internos e um endereço base separado para usuários externos. Por exemplo: http://internal.contoso.com e http://www.contoso.com.  

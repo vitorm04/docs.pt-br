@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7735e721917c5f78b791a200a670599fe3cff310
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d5d81497872e231fb1b235d9707b9a36505d3165
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-windows-forms"></a>Guia de introdução ao Windows Forms
 Com o Windows Forms você pode criar aplicativos potentes baseados em Windows. Os tópicos a seguir mostram a fundo como aproveitar a capacidade dos Windows Forms para exibir dados, manipular entradas do usuário e implantar seus aplicativos com facilidade e maior segurança.  

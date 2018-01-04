@@ -35,11 +35,12 @@ caps.latest.revision: "50"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c12d8655babeb45800f4a5c068cb2ab74faac3d1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 910eed7c1786730a3ffce5add995e543021f4759
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="input-overview"></a>Visão geral da entrada
 <a name="introduction"></a> O subsistema [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece um poderoso [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] para obter entrada de uma variedade de dispositivos, incluindo o mouse, teclado, toque e caneta. Este tópico descreve os serviços fornecidos pelo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e explica a arquitetura dos sistemas de entrada.  
@@ -405,7 +406,7 @@ Eventos de toque e de manipulação
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral do foco](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [Visão geral dos comandos](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
+ [Visão geral de comandos](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
  [Visão geral de eventos roteados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
  [Visão geral de elementos base](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
  [Propriedades](../../../../docs/framework/wpf/advanced/properties-wpf.md)

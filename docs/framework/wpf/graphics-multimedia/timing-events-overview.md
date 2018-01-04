@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f50923d9e314d2f677e26416cef59fdf380213e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 79669bdc4b5f9cfb8bdac92efa07e932cc14ac57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="timing-events-overview"></a>Visão geral dos eventos de tempo
 Este tópico descreve como usar os cinco eventos de tempo disponíveis em <xref:System.Windows.Media.Animation.Timeline> e <xref:System.Windows.Media.Animation.Clock> objetos.  
@@ -64,7 +65,7 @@ Este tópico descreve como usar os cinco eventos de tempo disponíveis em <xref:
 ## <a name="public-events"></a>Eventos Públicos  
  O <xref:System.Windows.Media.Animation.Timeline> e <xref:System.Windows.Media.Animation.Clock> classes fornecem cinco eventos de tempo. A tabela a seguir lista esses eventos e as condições que os disparam.  
   
-|Evento|Disparar a operação interativa|Outros gatilhos|  
+|evento|Disparar a operação interativa|Outros gatilhos|  
 |-----------|--------------------------------------|--------------------|  
 |**Concluído**|Ir diretamente para o preenchimento|O relógio é concluído.|  
 |**CurrentGlobalSpeedInvalidated**|Pausar, retomar, procurar, definir taxa de velocidade, ir diretamente para o preenchimento, parar|O relógio reverte, acelera, inicia ou interrompe.|  

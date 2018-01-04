@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5c8299a3f4885618601c8087a61c21dc5d989813
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d68d829e5543b1c299668493c11b62ccb11d81af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-resize-columns-with-a-gridsplitter"></a>Como redimensionar colunas com um GridSplitter
 Este exemplo mostra como criar um vertical <xref:System.Windows.Controls.GridSplitter> para redistribuir o espaço entre duas colunas em uma <xref:System.Windows.Controls.Grid> sem alterar as dimensões do <xref:System.Windows.Controls.Grid>.  
@@ -46,4 +47,4 @@ Este exemplo mostra como criar um vertical <xref:System.Windows.Controls.GridSpl
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Controls.GridSplitter>  
- [Tópicos explicativos](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)
+ [Tópicos de instruções](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)

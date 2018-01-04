@@ -18,11 +18,12 @@ caps.latest.revision: "45"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9ea154bc7c7a20bcdd57e1f271a4010f50646de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 385bcb8678b11e1cb8f84ae509b1f1b6777665d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimizing-wpf-application-performance"></a>Otimizando o desempenho do aplicativo WPF
 Esta seção destina-se como uma referência para [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] os desenvolvedores de aplicativos que estão procurando maneiras de melhorar o desempenho de seus aplicativos. Se você for um desenvolvedor que há de novo para o [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], você deve primeiro familiarizar com ambas as plataformas. Esta seção pressupõe conhecimento prático de ambos e é gravada para programadores que já conhecem o suficiente para obter seus aplicativos em execução.  

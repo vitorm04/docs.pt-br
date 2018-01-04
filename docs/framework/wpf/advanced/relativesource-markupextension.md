@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41978e7b91c50b33649bd88e23d22fce7a272c5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6ea5d269c3d455a4fbe3a34dca4335e0d8999d80
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="relativesource-markupextension"></a>RelativeSource MarkupExtension
 Especifica as propriedades de um <xref:System.Windows.Data.RelativeSource> origem de associação a ser usado dentro de um [extensão de marcação de associação](../../../../docs/framework/wpf/advanced/binding-markup-extension.md), ou ao definir o <xref:System.Windows.Data.Binding.RelativeSource%2A> propriedade de um <xref:System.Windows.Data.Binding> elemento estabelecido em XAML.  
@@ -116,7 +117,7 @@ Especifica as propriedades de um <xref:System.Windows.Data.RelativeSource> orige
  <xref:System.Windows.Data.Binding>  
  [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [Visão geral de XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Extensões de marcação e XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
+ [Extensões de marcação e XAML do WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
  [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [Visão geral das declarações de associação](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
  [Extensão de marcação x:Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md)

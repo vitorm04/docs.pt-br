@@ -18,11 +18,12 @@ caps.latest.revision: "60"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8425084b2124fc6082331c9bb87c1f1f2ad9031e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 136c7b13cf5f0e824985398564fc8f17476d64f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="typography"></a>Tipografia
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]inclui suporte para apresentação rica do conteúdo de texto. Texto no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é processado usando [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], que melhora a clareza e legibilidade do texto. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]também oferece suporte a [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fontes, que fornecem funcionalidades adicionais além daqueles definidos pelo [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] formato.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
  [Formatação de texto avançada](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)  
  [Fontes](../../../../docs/framework/wpf/advanced/fonts-wpf.md)  
  [Glifos](../../../../docs/framework/wpf/advanced/glyphs.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/advanced/typography-how-to-topics.md)  
+ [Tópicos de instruções](../../../../docs/framework/wpf/advanced/typography-how-to-topics.md)  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Documents.Typography>  

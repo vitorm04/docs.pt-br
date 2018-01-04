@@ -16,11 +16,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dddf6940e180b3d997357390ead38f99f52994ae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f00597d48ff100325c1fb2884f64169164415a50
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolbar-overview"></a>Visão geral de ToolBar
 <xref:System.Windows.Controls.ToolBar>controles são contêineres para um grupo de comandos ou controles que são geralmente relacionados em sua função. Um <xref:System.Windows.Controls.ToolBar> normalmente contém botões que chamam comandos.  

@@ -19,11 +19,12 @@ caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 61e2bc470641279b594b8f77eb924a47d8a063ac
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6a1b3e78bac5c388bbca4afa6354e5f9aee02c65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-wpf"></a>Propriedades (WPF)
 O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece um conjunto de serviços que pode ser usado para estender a funcionalidade de uma propriedade [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. Coletivamente, esses serviços normalmente são referidos como o sistema de propriedade do WPF. Uma propriedade que tem o suporte do sistema de propriedades do [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] é conhecida como uma propriedade de dependência.  
@@ -42,7 +43,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
  [Padrões de construtor seguro para DependencyObjects](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)  
  [Propriedades de dependência do tipo de coleção](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)  
  [Carregamento de XAML e propriedades da dependência](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)  
+ [Tópicos de instruções](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.DependencyProperty>  

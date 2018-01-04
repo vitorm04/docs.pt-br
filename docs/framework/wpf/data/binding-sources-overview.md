@@ -17,11 +17,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 806a62d57e1099bb9d7cdcca657be500c33b0df1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 88f1a22fc15e85e687c7b7eeb0a6e01445277d09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="binding-sources-overview"></a>Visão geral das fontes de associação
 Na associação de dados, o objeto de origem da associação refere-se ao objeto do qual você obtém dados. Este tópico discute os tipos de objetos que você pode usar como a origem da associação.  
@@ -109,6 +110,6 @@ Na associação de dados, o objeto de origem da associação refere-se ao objeto
  <xref:System.Windows.Data.XmlDataProvider>  
  [Especificar a origem da associação](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)  
  [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [Tópicos de instruções](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
  [Visão geral da vinculação de dados do WPF com LINQ to XML](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)  
  [Associação de dados](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)

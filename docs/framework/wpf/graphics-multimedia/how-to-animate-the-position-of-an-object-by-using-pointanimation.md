@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6590c79ac6b6f104d9944a32da4c99318d334eec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: baa412a889ee82c9bf20ff1d6420d8a86f339ca6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-the-position-of-an-object-by-using-pointanimation"></a>Como animar a posição de um objeto usando PointAnimation
 Este exemplo mostra como usar o <xref:System.Windows.Media.Animation.PointAnimation> classe para animar um objeto ao longo de um <xref:System.Windows.Shapes.Path>.  
@@ -41,6 +42,6 @@ Este exemplo mostra como usar o <xref:System.Windows.Media.Animation.PointAnimat
  <xref:System.Windows.Media.EllipseGeometry.Center%2A>  
  [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [Elementos gráficos e multimídia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
+ [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
  [Animação e temporização](http://msdn.microsoft.com/en-us/7d83765b-d5ae-41b1-b423-80206e1124aa)  
- [Tópicos explicativos](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+ [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

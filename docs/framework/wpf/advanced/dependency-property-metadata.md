@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 69f7a5af655586a62776a8c470f2e1c9811f91d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5b5c4ee554e8a0148c7d8d8044735f66778e7117
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dependency-property-metadata"></a>Metadados de propriedade da dependência
 O sistema de propriedades [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] inclui um sistema de relatório de metadados que vai além do que pode ser relatado sobre uma propriedade por meio de reflexão ou das características gerais do [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. Os metadados de uma propriedade de dependência também podem ser atribuídos exclusivamente pela classe que define uma propriedade de dependência, podem ser alterados quando a propriedade de dependência é adicionada a uma classe diferente e podem ser substituídos especificamente por todas as classes derivadas que herdam a propriedade de dependência da classe base de definição.  

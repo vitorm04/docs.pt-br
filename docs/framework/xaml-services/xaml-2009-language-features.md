@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 6299a29cb79650eb59df3f198c3ea3fcd49d0076
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 447ba37330e8027d86fd24239a8aca2461dce8d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-2009-language-features"></a>Funcionalidades de linguagem XAML 2009
 XAML 2009 é o termo abreviado para os novos recursos de linguagem XAML que estendem a especificação da linguagem XAML existente. XAML 2009 apresenta várias novas diretivas e construtores. Isso inclui o[diretiva X:arguments](../../../docs/framework/xaml-services/x-arguments-directive.md); o [diretiva X:factorymethod](../../../docs/framework/xaml-services/x-factorymethod-directive.md); o [extensão de marcação X:Reference](../../../docs/framework/xaml-services/x-reference-markup-extension.md); o [diretiva X:TypeArguments ](../../../docs/framework/xaml-services/x-typearguments-directive.md); e os tipos internos para primitivos de linguagem comum (por exemplo `x:Char`).  

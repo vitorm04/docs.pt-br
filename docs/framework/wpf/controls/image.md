@@ -17,17 +17,18 @@ caps.latest.revision: "61"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 769c40434ecb0ac1bbae63f1697e5005c0de875b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 096773fd8cb303cc504bc956d500e8f1e55cda00
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="image"></a>Image
 O <xref:System.Windows.Controls.Image> elemento é usado para exibir imagens de bitmap em [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Tópicos explicativos](../../../../docs/framework/wpf/controls/image-how-to-topics.md)  
+ [Tópicos de instruções](../../../../docs/framework/wpf/controls/image-how-to-topics.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Controls.Image>  
@@ -38,4 +39,4 @@ O <xref:System.Windows.Controls.Image> elemento é usado para exibir imagens de 
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da geração de imagens](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+ [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
