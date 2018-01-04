@@ -20,11 +20,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de7bfb7d926f9aa75ccfcfe8a550a0dbae4e12ef
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2c868e2b31fa15d0f0c9228828beba03666d5591
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>Como personificar um cliente em um serviço
 Representar um cliente em um [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] serviço permite que o serviço executar ações em nome do cliente. Para ações sujeitos a acesso (ACL) da lista de controle verifica, como acesso a diretórios e arquivos em um computador ou acesso a um banco de dados do SQL Server, a verificação ACL é em relação à conta de usuário do cliente. Este tópico mostra as etapas básicas necessárias para permitir que um cliente em um domínio do Windows definir um nível de representação do cliente. Para um exemplo de isso, consulte [representar o cliente](../../../docs/framework/wcf/samples/impersonating-the-client.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]representação do cliente, consulte [delegação e representação](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  

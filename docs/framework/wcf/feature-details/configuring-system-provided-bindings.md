@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 91994fc31e4b0f30d575cd43ad44e66dcdb0a7f0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0e77cf5cc271e86c02e8355dde6f721fe7751416
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-system-provided-bindings"></a>Configurando associações fornecidas pelo sistema
 Associações de especificar o mecanismo de comunicação para usar ao conversar com um ponto de extremidade e indicar como se conectar a um ponto de extremidade. Associações consistem em elementos que definem como o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] canais são colocadas em camadas para cima para fornecer os recursos de comunicação solicitado. Uma associação contém três tipos de elementos:  
@@ -87,6 +88,6 @@ Associações de especificar o mecanismo de comunicação para usar ao conversar
 |Streaming|Especifica se o fluxo de mensagem tem suporte.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Endpoint Creation Overview](../../../../docs/framework/wcf/endpoint-creation-overview.md) (Visão geral de criação de ponto de extremidade)  
- [Using Bindings to Configure Services and Clients](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md) (Usando associações para configurar serviços e clientes)  
- [Basic WCF Programming](../../../../docs/framework/wcf/basic-wcf-programming.md) (Programação básica do WCF)
+ [Visão geral de criação de ponto de extremidade](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
+ [Usando associações para configurar serviços e clientes](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+ [Programação básica do WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)

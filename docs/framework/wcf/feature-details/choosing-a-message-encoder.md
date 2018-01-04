@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 743e8cdf1a10efb7b99d6c6dcfcff611df6fbf4e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cb8ba8145d371a8773d860e88f073bcc5b732f1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-message-encoder"></a>Escolhendo um codificador de mensagem
 Este tópico discute os critérios para escolher entre os codificadores de mensagem que estão incluídos no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]: binário, o texto e o mecanismo de otimização de transmissão mensagem (MTOM).  
@@ -94,4 +95,4 @@ O cliente e o serviço precisam concordar em enviar e receber mensagens compacta
   
 ## <a name="see-also"></a>Consulte também
 
-[Bindings](../../../../docs/framework/wcf/feature-details/bindings.md) (Associações)
+[Associações](../../../../docs/framework/wcf/feature-details/bindings.md)

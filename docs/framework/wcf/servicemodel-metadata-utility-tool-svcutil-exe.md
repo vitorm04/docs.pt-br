@@ -18,11 +18,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0f2ef91986cb5ad31560c4a7f418218a168f1b2f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ce66f98f064ec5c9460dd1909f8eb7bc44c26f76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Ferramenta Utilitário de Metadados ServiceModel (Svcutil.exe)
 A ferramenta Utilitário de Metadados ServiceModel é usada para gerar código de modelo de serviço de documentos de metadados e documentos de metadados de código de modelo de serviço.  
@@ -36,10 +37,10 @@ A ferramenta Utilitário de Metadados ServiceModel é usada para gerar código d
 |Tarefa|Tópico|  
 |----------|-----------|  
 |Gera código de serviços em execução ou documentos estáticos de metadados.|[Gerando um cliente WCF de metadados de serviço](../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)|  
-|Exporta documentos de metadados de código compilado.|[Como: usar o Svcutil.exe para exportar metadados de código de serviço compilado](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|  
-|Validates código compilado de serviço.|[Como: usar o Svcutil.exe para validar o código de serviço compilado](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|  
-|Baixa documentos de metadados de serviços em execução.|[Como: usar o Svcutil.exe para baixar documentos de metadados](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|  
-|Gera código de serialização.|[Como: melhorar a inicialização do tempo de WCF aplicativos cliente que usam o XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|  
+|Exporta documentos de metadados de código compilado.|[Como usar o Svcutil.exe para exportar metadados de código de serviço compilado](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|  
+|Validates código compilado de serviço.|[Como usar o Svcutil.exe para validar o código de serviço compilado](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|  
+|Baixa documentos de metadados de serviços em execução.|[Como usar o Svcutil.exe para baixar documentos de metadados](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|  
+|Gera código de serialização.|[Como melhorar o tempo de inicialização de aplicativos clientes WCF usando o XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|  
   
 > [!CAUTION]
 >  Svcutil substituirá os arquivos existentes em um disco se os nomes fornecidos como parâmetros forem idênticos. Isso pode incluir arquivos de código, configuração ou metadados. Para evitar isso ao gerar arquivos de código e de configuração, use a opção `/mergeConfig`.  
@@ -274,4 +275,4 @@ A ferramenta Utilitário de Metadados ServiceModel é usada para gerar código d
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
- [How to: Create a Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md) (Como criar um cliente)
+ [Como criar um cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)

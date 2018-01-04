@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: ec2800d2b6a910f75366e323b7580afe08de2acb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e1ad7cd844ffbd3f45517f7d812ad3f5fa1ae3c3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Como proteger um serviço com um certificado X.509
 Proteger um serviço com um certificado x. 509 é uma técnica básica que a maioria das associações em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usar. Este tópico explica as etapas de configuração de um serviço hospedado automaticamente com um certificado x. 509.  
@@ -93,4 +94,4 @@ Proteger um serviço com um certificado x. 509 é uma técnica básica que a mai
 -   <xref:System.Runtime.Serialization>  
   
 ## <a name="see-also"></a>Consulte também  
- [Trabalhar com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+ [Trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

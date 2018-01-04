@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ef8a2f43138eba1189f9e56419b9f95a5a9a043f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 22df793bd5873d6f69c3a2e86e96d4a1cefcff0d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="architecture-of-syndication"></a>Arquitetura de sindicalização
 A API de distribuição foi projetada para fornecer um modelo de programação do formato neutro que permite que o conteúdo distribuído ser gravados em transmissão em uma variedade de formatos. O modelo de dados abstrato consiste das seguintes classes:  
@@ -88,6 +89,6 @@ A API de distribuição foi projetada para fornecer um modelo de programação d
 -   Um recurso importante de protocolos de distribuição é extensibilidade. Atom 1.0 e RSS 2.0 permitem que você adicione elementos e atributos para feeds de agregação que não estão definidos nas especificações. O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação de distribuição fornece duas maneiras de trabalhar com os atributos personalizados e extensões: derivar uma nova classe e tipadas vagamente acesso. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Extensibilidade de sindicalização](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral de Sindicalização do WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- [Como o modelo de objeto de Sindicalização do WCF mapeia para Atom e RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)  
- [Modelo de programação WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+ [Visão geral de sindicalização do WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
+ [Como o modelo de objeto de sindicalização do WCF é mapeado para Atom e RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)  
+ [Modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

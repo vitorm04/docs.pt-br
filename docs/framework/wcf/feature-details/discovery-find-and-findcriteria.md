@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b367b5133cd765fe7e160cd2706589c1773eeb59
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 470fb0788aa3407fff14d1e4df4a89180c5e079d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-find-and-findcriteria"></a>FindCriteria e descoberta achada
 Uma operação de localização de descoberta é iniciada por um cliente para descobrir um ou mais serviços e é uma das ações de descoberta principais. Executar uma pesquisa envia uma mensagem de teste do WS-Discovery pela rede. Serviços que correspondem aos critérios especificados responder com mensagens WS-Discovery ProbeMatch. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]mensagens de descoberta, consulte o [especificação WS-Discovery](http://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -76,7 +77,7 @@ Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endp
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral de descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [Usando o canal cliente Discovery](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
+ [Usando o canal de cliente de descoberta](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
  [Descoberta com escopos](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
- [Assíncrono encontrado](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)  
+ [Descoberta assíncrona](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)  
  [Básico](../../../../docs/framework/wcf/samples/basic-sample.md)

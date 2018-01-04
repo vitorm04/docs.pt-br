@@ -20,11 +20,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 68d9d153127f3f34c6546cef9f2b3ab5fc668899
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e9773725a0d4626a8488249ead6440ad67a2a14a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-versioning"></a>Controle de versão de contrato de dados
 Como desenvolvem aplicativos, você também terá que alterar o uso de serviços de contratos de dados. Este tópico explica como contratos de dados de versão. Este tópico descreve os mecanismos de controle de versão do contrato de dados. Para obter uma visão geral completa e orientação prescritiva do controle de versão, consulte [práticas recomendadas: controle de versão de contrato de dados](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -135,8 +136,7 @@ Naturalmente, o contrato de dados de conteúdo de uma coleção (por exemplo, a 
  <xref:System.Runtime.Serialization.SerializationException>  
  <xref:System.Runtime.Serialization.IExtensibleDataObject>  
  [Retornos de chamada de serialização tolerantes à versão](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)  
- [Best Practices: Data Contract Versioning](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md) 
-(Práticas recomendadas: controle de versão de contrato de dados)  
+ [Práticas recomendadas: controle de versão de contrato de dados](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
  [Usando contratos de dados](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
  [Equivalência de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [Contratos de dados compatíveis por encaminhamento](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+ [Contratos de dados compatíveis com encaminhamento](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "28"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 509da8b697f38ea75d9509a8243f3e9e09cc661b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2b8e84fe75f812cdcb97dcc24a0edad2d238515b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-services"></a>Serviços de segurança
 Segurança de um [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] serviço consiste em dois requisitos principais: transferir a segurança e a autorização. (Um terceiro requisito, a auditoria de eventos de segurança, é descrita em [auditoria](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Em suma, a segurança de transferência inclui integridade (para detectar violação de assinatura digital), confidencialidade (criptografia de mensagens) e autenticação (verificar a identidade do serviço e o cliente). Autorização é o controle de acesso a recursos, por exemplo, permitindo que apenas usuários com privilégios ler um arquivo. Usando recursos do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], os dois principais requisitos facilmente são implementados.  
@@ -114,15 +115,15 @@ Segurança de um [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] serviço c
  <xref:System.ServiceModel.ServiceContractAttribute>  
  <xref:System.ServiceModel.OperationContractAttribute>  
  [Autenticação e identidade de serviço](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Understanding Protection Level](../../../docs/framework/wcf/understanding-protection-level.md) (Noções básicas de nível de proteção)  
+ [Noções básicas de nível de proteção](../../../docs/framework/wcf/understanding-protection-level.md)  
  [Delegação e representação](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
- [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md) (Criando contratos de serviço)  
+ [Criando contratos de serviço](../../../docs/framework/wcf/designing-service-contracts.md)  
  [Segurança](../../../docs/framework/wcf/feature-details/security.md)  
  [Visão geral de segurança](../../../docs/framework/wcf/feature-details/security-overview.md)  
- [How to: Set the ProtectionLevel Property](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md) (Como definir a propriedade ProtectionLevel)  
- [How to: Secure a Service with Windows Credentials](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md) (Como proteger um serviço com credenciais Windows)  
- [How to: Set the Security Mode](../../../docs/framework/wcf/how-to-set-the-security-mode.md) (Como definir o modo de segurança)  
- [How to: Specify the Client Credential Type](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md) (Como especificar o tipo de credencial do cliente)  
- [How to: Restrict Access with the PrincipalPermissionAttribute Class](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md) (Como restringir o acesso com a classe PrincipalPermissionAttribute)  
- [How to: Impersonate a Client on a Service](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md) (Como representar um cliente em um serviço)  
- [How to: Examine the Security Context](../../../docs/framework/wcf/how-to-examine-the-security-context.md) (Como examinar o contexto de segurança)
+ [Como definir a propriedade ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
+ [Como proteger um serviço com credenciais Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
+ [Como definir o modo de segurança](../../../docs/framework/wcf/how-to-set-the-security-mode.md)  
+ [Como especificar o tipo de credencial do cliente](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)  
+ [Como restringir o acesso com a classe PrincipalPermissionAttribute](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
+ [Como representar um cliente em um serviço](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
+ [Como examinar o contexto de segurança](../../../docs/framework/wcf/how-to-examine-the-security-context.md)

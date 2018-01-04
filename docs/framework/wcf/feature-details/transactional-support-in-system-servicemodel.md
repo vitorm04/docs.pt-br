@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 92e75f8f23bb0bc6d11e9bb6fd6e83c35559b847
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3e01f24af2b6853c7a43377bc0b7f7d338195472
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transactional-support-in-systemservicemodel"></a>Suporte transacional em System.ServiceModel
 Os tópicos nesta seção descrevem as funcionalidades transacionais [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fornece.  
@@ -29,10 +30,10 @@ Os tópicos nesta seção descrevem as funcionalidades transacionais [!INCLUDE[i
  [Configuração de transação de ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)  
  Descreve as várias definições de configuração que podem ser usadas para habilitar a transação para um serviço.  
   
- [Ativando o fluxo de transação](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)  
+ [Habilitando o fluxo de transação](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)  
  Descreve como habilitar o fluxo de transações.  
   
- [Como: criar um serviço transacional](../../../../docs/framework/wcf/feature-details/how-to-create-a-transactional-service.md)  
+ [Como criar um serviço transacional](../../../../docs/framework/wcf/feature-details/how-to-create-a-transactional-service.md)  
  Demonstra como criar um serviço transacional em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  [Diagnosticando aplicativos transacionais](../../../../docs/framework/wcf/feature-details/diagnosing-transactional-applications.md)  
@@ -41,5 +42,5 @@ Os tópicos nesta seção descrevem as funcionalidades transacionais [!INCLUDE[i
  [Comparando transações em COM+ e ServiceModel](../../../../docs/framework/wcf/feature-details/comparing-transactions-in-com-and-servicemodel.md)  
  Descreve como simular o comportamento de um transacional serviço COM+ usando os atributos fornecidos pelo <xref:System.ServiceModel> namespace.  
   
- [Integração de Enterprise Services componentes transacionais](../../../../docs/framework/wcf/feature-details/integrating-enterprise-services-transactional-components.md)  
+ [Integração de componentes transacionais do Enterprise Services](../../../../docs/framework/wcf/feature-details/integrating-enterprise-services-transactional-components.md)  
  Descreve como integrar o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços com o código que usa o serviço de empresa.

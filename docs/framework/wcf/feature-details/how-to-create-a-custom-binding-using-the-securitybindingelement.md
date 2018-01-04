@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 0042ae642d8e3a5936c316921b2f9377a0eac17a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e230c02d53f8222034dfd79872cde9c540c31963
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Como criar uma associação personalizada utilizando o SecurityBindingElement
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]inclui várias associações fornecidas pelo sistema que podem ser configuradas, mas não fornecem total flexibilidade ao configurar a segurança todas as opções que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oferece suporte. Este tópico demonstra como criar uma associação personalizada diretamente de elementos de associação individuais e destaca algumas das configurações de segurança que podem ser especificadas ao criar essa associação. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Criando associações personalizadas, consulte [estendendo associações](../../../../docs/framework/wcf/extending/extending-bindings.md).  
@@ -121,4 +122,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
  [Estendendo associações](../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md) (Associações fornecidas pelo sistema)
+ [Associações fornecidas pelo sistema](../../../../docs/framework/wcf/system-provided-bindings.md)

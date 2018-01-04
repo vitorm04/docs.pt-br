@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 932db4ef12666d20ba497cc8f6d78b43c7670373
-ms.sourcegitcommit: 5126483ef09c487296801bbac368dd8a55a6b709
+ms.workload: dotnet
+ms.openlocfilehash: 1270eb202a1e8cbf1a297a13593dd0aa6046cb6c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-and-aspnet-web-api"></a>API do WCF e ASP.NET Web
 WCF é o modelo de programação unificada da Microsoft para a criação de aplicativos orientados a serviços. Ele permite aos desenvolvedores criarem soluções seguras, confiáveis e transacionadas que se integram nas plataformas e interoperam com os investimentos existentes. [ASP.NET Web API](http://www.asp.net/web-api) é uma estrutura que torna mais fácil criar serviços HTTP que alcançam uma ampla gama de clientes, incluindo navegadores e dispositivos móveis. A API do ASP.NET Web é uma plataforma ideal para criar aplicativos com REST no .NET Framework. Este tópico apresenta algumas diretrizes para ajudá-lo a decidir qual tecnologia atenderá melhor suas necessidades.  
@@ -37,5 +38,5 @@ WCF é o modelo de programação unificada da Microsoft para a criação de apli
  Use WCF para criar serviços Web confiáveis e seguros que estejam acessíveis em uma variedade de transportes. Use API do ASP.NET Web para criar serviços baseados em HTTP que estejam acessíveis a partir de uma ampla variedade de clientes. Use a API do ASP.NET Web se você estiver criando novos serviços de estilo REST. Embora o WCF forneça algum suporte para escrever serviços de estilo REST, o suporte para REST na API do ASP.NET Web é mais completo e todas as melhorias futuras do recurso REST serão feitas na API do ASP.NET Web. Se você tiver um serviço WCF existente e quiser expor pontos de extremidade adicionais REST, use WCF e o <xref:System.ServiceModel.WebHttpBinding>.  
   
 ## <a name="see-also"></a>Consulte também  
- [What Is Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md) (O que é o Windows Communication Foundation)  
- [Fundamental Windows Communication Foundation Concepts](../../../docs/framework/wcf/fundamental-concepts.md) (Conceitos fundamentais do Windows Communication Foundation)  
+ [O que é o Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
+ [Conceitos fundamentais do Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)  

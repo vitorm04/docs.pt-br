@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f2393209352f18eb25b9837ca1ad8ca2746b91d6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cd4f91ef5389dd4b8ecb63c1148d3a86918f2d10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-secure-session"></a>Como criar uma sessão segura
 Com exceção do [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) associação, as associações fornecidas pelo sistema em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] automaticamente use sessões seguras quando a segurança de mensagens está habilitada.  
@@ -93,4 +94,4 @@ Com exceção do [ \<basicHttpBinding >](../../../../docs/framework/configure-ap
      [!code-vb[c_CreateSecureSession#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createsecuresession/vb/secureservice.vb#2)]  
   
 ## <a name="see-also"></a>Consulte também  
- [WCF Bindings Overview](../../../../docs/framework/wcf/bindings-overview.md) (Visão geral de associações do WCF)
+ [Visão geral de associações do WCF](../../../../docs/framework/wcf/bindings-overview.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4aa0f4aec0a673a07c6b6d752d8609caedbcfa4b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 13001ff291c1d2874e5c9ce6e427afe09067432a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuration-channel-factory"></a>Factory do canal de configuração
 Ele aborda o uso do <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>. O <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> permite o gerenciamento centralizado de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configuração do cliente. Isso também pode ser útil em cenários em que a configuração é selecionada ou alterada depois que o domínio de aplicativo de tempo de carregamento.  

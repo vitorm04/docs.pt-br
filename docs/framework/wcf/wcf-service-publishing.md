@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 526544118432eb263cc856931d9f4943b9918d93
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4e3d86153d4192e04e55fb9e99ef588b45511560
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-service-publishing"></a>Publicação de serviço do WCF
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Serviço de publicação ajuda em andamento no ambiente de desenvolvimento iniciais fornecido pelo [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host de serviço e [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] cliente de teste para realmente implantar o aplicativo em um ambiente de produção para fins de teste. Antes de confirmar a um plano de implantação final, você pode usar [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] serviço de publicação para verificar se seu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviço executa corretamente e está pronto para ser publicado. Você também pode optar por implantar seu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bibliotecas em vários locais de destino para teste de serviço.  
@@ -81,6 +82,6 @@ ms.lasthandoff: 12/02/2017
  Publicação para IIS local requer o privilégio de administrador, porque requer o IIS em execução na conta de administrador. Se um usuário sem privilégios de administrador abrir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviço de publicação, o IIS não está disponível como um local de destino. Funciona a publicação para o sistema de arquivos ou FTP Site sem privilégios de administrador.  
   
 ## <a name="see-also"></a>Consulte também  
- [WCF Visual Studio Templates](../../../docs/framework/wcf/wcf-vs-templates.md) (Modelos do Visual Studio do WCF)  
- [WCF Service Host (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md) [Host de serviço do WCF (WcfSvcHost.exe)]  
- [WCF Test Client (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md) [Cliente de teste do WCF (WcfTestClient.exe)]
+ [Modelos do Visual Studio do WCF](../../../docs/framework/wcf/wcf-vs-templates.md)  
+ [Host de serviço do WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
+ [Cliente de teste do WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

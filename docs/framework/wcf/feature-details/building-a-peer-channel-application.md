@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e1d533a1f559044caf3bc711e9401b75703254bc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1d3ca06c2e702ef64a05834116e1c89b4872b32b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-a-peer-channel-application"></a>Compilando um aplicativo de canal par
 As seções a seguir fornecem orientação sobre como desenvolver aplicativos de canal par.  
@@ -29,7 +30,7 @@ As seções a seguir fornecem orientação sobre como desenvolver aplicativos de
  [Limitando a distribuição de mensagem](../../../../docs/framework/wcf/feature-details/limiting-message-distribution.md)  
  Discute o uso de contagem de salto, um filtro de propagação de mensagem, um filtro local ou uma conexão direta para controlar como as mensagens são encaminhadas em toda a malha e fornece diretrizes gerais para escolher uma abordagem.  
   
- [Adicionando Status Online e Offline](../../../../docs/framework/wcf/feature-details/adding-online-and-offline-status.md)  
+ [Adicionando status online e offline](../../../../docs/framework/wcf/feature-details/adding-online-and-offline-status.md)  
  Descreve como usar o <xref:System.ServiceModel.IOnlineStatus> interface para monitorar os detalhes específicos sobre o status de uma conexão de canal par online e offline.  
   
  [Protegendo aplicativos de canal par](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  

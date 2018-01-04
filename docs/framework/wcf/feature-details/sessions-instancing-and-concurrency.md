@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 44aebb701eb7222773c030994fbaa9c0109dce70
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5d4559f177b05f7d238c9f30649a5b01af7fb6f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sessões,instanciação e simultaneidade
 Um *sessão* é uma correlação de todas as mensagens enviadas entre dois pontos de extremidade. *Instanciação* refere-se para controlar o tempo de vida de objetos de serviço definido pelo usuário e seus relacionados <xref:System.ServiceModel.InstanceContext> objetos. *Simultaneidade* é o termo dado ao controle do número de threads em execução em um <xref:System.ServiceModel.InstanceContext> ao mesmo tempo.  
@@ -118,9 +119,9 @@ public class CalculatorService : ICalculatorConcurrency
 |Simples|-Um comportamento com o canal de sessão: uma sessão e um <xref:System.ServiceModel.InstanceContext> para todas as chamadas.<br />-Comportamento com canal sem sessão: uma exceção será lançada.|-Um comportamento com o canal de sessão: uma sessão e <xref:System.ServiceModel.InstanceContext> para o singleton criado ou usuário especificado.<br />-Comportamento com canal sem sessão: um <xref:System.ServiceModel.InstanceContext> para o singleton criado ou usuário especificado.|-Um comportamento com o canal de sessão: uma exceção será lançada.<br />-Comportamento com canal sem sessão: um <xref:System.ServiceModel.InstanceContext> para cada singleton criado ou para o singleton especificado pelo usuário.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Using Sessions](../../../../docs/framework/wcf/using-sessions.md) (Usando sessões)  
- [Como: criar um serviço que requer sessões](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)  
- [Como: controlar instanciação de serviço](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)  
+ [Usando sessões](../../../../docs/framework/wcf/using-sessions.md)  
+ [Como criar um serviço que requer sessões](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)  
+ [Como controlar instanciação de serviço](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)  
  [Simultaneidade](../../../../docs/framework/wcf/samples/concurrency.md)  
- [Criação de instância](../../../../docs/framework/wcf/samples/instancing.md)  
+ [Instanciação](../../../../docs/framework/wcf/samples/instancing.md)  
  [Sessão](../../../../docs/framework/wcf/samples/session.md)

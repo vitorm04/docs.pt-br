@@ -16,11 +16,12 @@ caps.latest.revision: "37"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 74a2e5c15b25dc9958b74ddeb0abf9adcad10bc0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c4c6ecbfc3407e3ebc321e92cd9e78dc2d80a3a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-overview"></a>Visão geral de segurança
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]é uma SOAP baseada em mensagens distribuídas programação plataforma e mensagens entre clientes e serviços de segurança que são essencial para proteger dados. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Fornece uma plataforma versátil e interoperável para a troca de mensagens de segurança com base na infraestrutura de segurança existente e os padrões de segurança reconhecido para mensagens SOAP.  
@@ -109,17 +110,17 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
- [Securing Services](../../../../docs/framework/wcf/securing-services.md) (Protegendo serviços)  
+ [Protegendo serviços](../../../../docs/framework/wcf/securing-services.md)  
  [Cenários comuns de segurança](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
  [Associações e segurança](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
  [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Autenticação](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  [Autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- [Federação e Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [A auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Orientações de segurança e práticas recomendadas](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
- [Configuring Services Using Configuration Files](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md) (Configurando serviços usando arquivos de configuração)  
- [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md) (Associações fornecidas pelo sistema)  
- [Endpoint Creation Overview](../../../../docs/framework/wcf/endpoint-creation-overview.md) (Visão geral de criação de ponto de extremidade)  
+ [Federação e tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [Auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
+ [Diretrizes e práticas recomendadas de segurança](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [Configurando serviços usando arquivos de configuração](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
+ [Associações fornecidas pelo sistema](../../../../docs/framework/wcf/system-provided-bindings.md)  
+ [Visão geral de criação de ponto de extremidade](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
  [Estendendo a segurança](../../../../docs/framework/wcf/extending/extending-security.md)  
  [Modelo de segurança para o Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

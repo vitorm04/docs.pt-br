@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e43aca439ee354557cac42ba88599b6ea105b097
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b16ca5b4cfe615eedd9e532b12f61394806829bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Como configurar um serviço do WCF hospedado no IIS com SSL
 Este tópico descreve como configurar um serviço WCF hospedado pelo IIS para usar a segurança de transporte HTTP. Segurança de transporte HTTP requer um certificado SSL a ser registrado com o IIS. Se você não tiver um certificado SSL que você pode usar o IIS para gerar um certificado de teste. Em seguida, você deve adicionar uma associação SSL para o site da web e configurar as propriedades de autenticação do site da web. Finalmente, você precisa configurar o serviço do WCF para usar HTTPS.  
@@ -155,7 +156,7 @@ Este tópico descreve como configurar um serviço WCF hospedado pelo IIS para us
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Hospedagem no Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [Hospedagem instruções de serviço de informações da Internet](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
- [Práticas recomendadas de hospedagem de serviços de informações da Internet](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [Hospedagem nos Serviços de Informações da Internet](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [Instruções de hospedagem do Serviços de Informações da Internet](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+ [Práticas recomendadas de hospedagem de Serviços de Informações da Internet](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
  [Hospedagem do IIS utilizando código embutido](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)

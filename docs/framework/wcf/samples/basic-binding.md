@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f001f4f8fac2e0366aa705d1998fe33d6dc4438
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 89fb080a890ee866ab16882065bd35495fadfddb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-binding"></a>Associações básicas
 Esta seção contém exemplos básicos que demonstram o uso do atributo de associação de um elemento de ponto de extremidade.  
@@ -26,7 +27,7 @@ Esta seção contém exemplos básicos que demonstram o uso do atributo de assoc
  [Exemplo de segurança de mensagem](../../../../docs/framework/wcf/samples/message-security-sample.md)  
  Demonstra como implementar um aplicativo que usa o `basicHttpBinding` e segurança de mensagem.  
   
- [BasicBinding com segurança de transporte](../../../../docs/framework/wcf/samples/basicbinding-with-transport-security.md)  
+ [BasicBinding com segurança do transporte](../../../../docs/framework/wcf/samples/basicbinding-with-transport-security.md)  
  Demonstra o uso da segurança de transporte SSL com a associação básica.  
   
  [BasicBinding](../../../../docs/framework/wcf/samples/basicbinding.md)  

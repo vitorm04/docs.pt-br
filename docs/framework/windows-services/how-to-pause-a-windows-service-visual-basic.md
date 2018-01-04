@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: d44358d3f76f50a06ede5e7d720f4f48d80893de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 90f2b01fae057a05cc71f77cecea3fdf85c832b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-pause-a-windows-service-visual-basic"></a>Como pausar um Serviço Windows (Visual Basic)
 Este exemplo usa o <xref:System.ServiceProcess.ServiceController> componente para pausar o serviço de administração do IIS no computador local.  
@@ -58,4 +59,4 @@ Este exemplo usa o <xref:System.ServiceProcess.ServiceController> componente par
  <xref:System.ServiceProcess.ServiceController>  
  <xref:System.ServiceProcess.ServiceControllerStatus>  
  <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>  
- [Como: continuar um serviço do Windows (Visual Basic)](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)
+ [Como Continuar um Serviço Windows (Visual Basic)](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)

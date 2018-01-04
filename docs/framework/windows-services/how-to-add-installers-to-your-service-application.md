@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 8137e41f92335849916dfc9e9ce72afeb186e73c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0dcb666f317ab285ae0156d2df16947f71665aee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Como adicionar instaladores ao aplicativo de serviço
 O Visual Studio possui componentes de instalação que podem instalar recursos associados com seus aplicativos de serviço. Componentes de instalação registram um serviço individual no sistema ao qual ele está sendo instalado e informe o Gerenciador de controle de serviços que o serviço existe. Quando você trabalha com um aplicativo de serviço, você pode selecionar um link na janela Propriedades para adicionar automaticamente os instaladores apropriados ao seu projeto.  
@@ -70,7 +71,7 @@ O Visual Studio possui componentes de instalação que podem instalar recursos a
     >  Para cada serviço adicional em seu projeto, você deve adicionar adicional <xref:System.ServiceProcess.ServiceInstaller> componente para o projeto `ProjectInstaller` classe. O <xref:System.ServiceProcess.ServiceProcessInstaller> componente adicionado na etapa três funciona com todos os instaladores de serviço individuais no projeto.  
   
 ## <a name="see-also"></a>Consulte também  
- [Introdução aos aplicativos de serviço do Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Como: instalar e desinstalar serviços](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [Como: iniciar serviços](../../../docs/framework/windows-services/how-to-start-services.md)  
- [Como: especificar o contexto de segurança para serviços](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)
+ [Introdução aos Aplicativos de Serviço Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [Como instalar e desinstalar serviços](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
+ [Como iniciar serviços](../../../docs/framework/windows-services/how-to-start-services.md)  
+ [Como especificar o contexto de segurança para serviços](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)

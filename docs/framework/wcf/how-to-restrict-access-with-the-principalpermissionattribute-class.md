@@ -20,11 +20,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ddfb7b343bf4eb551b5029c538d29f104698adf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: da91e3456fdca863980c89f45e0cc28db19170be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Como restringir acesso com a PrincipalPermissionAttribute class
 Controlar o acesso aos recursos em um computador de domínio do Windows é uma tarefa de segurança básico. Por exemplo, somente a certos usuários devem ser capazes de exibir dados confidenciais, como informações de folha de pagamento. Este tópico explica como restringir o acesso a um método exigindo que o usuário pertence a um grupo predefinido. Para obter um exemplo de funcionamento, consulte [autorizar o acesso a operações de serviço](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
@@ -101,4 +102,4 @@ Controlar o acesso aos recursos em um computador de domínio do Windows é uma t
  <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>  
  [Autorizando o acesso a operações de serviço](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
  [Visão geral de segurança](../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md) (Implementando contratos de serviço)
+ [Implementando contratos de serviço](../../../docs/framework/wcf/implementing-service-contracts.md)

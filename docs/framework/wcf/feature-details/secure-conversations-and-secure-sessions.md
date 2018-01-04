@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 6647ef8124279e9fc0b3049beb5c87f887125dfa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d519640c40daf248a01a19f0450f3aea8de6cc04
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="secure-conversations-and-secure-sessions"></a>Sessões seguras e conversas seguras
 Um recurso do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] é a capacidade de estabelecer sessões seguras entre dois pontos de extremidade que autentiquem uns aos outros e concordem com um processo de criptografia e assinatura digital. Por exemplo, o ponto de extremidade de serviço pode exigir um ponto de extremidade do cliente para enviar um token de segurança com base em um certificado x. 509 para autenticação. Depois que o cliente é autenticado, o ponto de extremidade de serviço retorna um token de contexto de segurança (SCT) para o cliente que é usado para proteger todas as mensagens subsequentes na sessão. Estabelecer essa sessão segura permite que o conjunto de mensagens trocadas entre os dois pontos de extremidade para ser mais eficiente, porque o SCT tem uma chave simétrica. Chaves assimétricas, os certificados x. 509 se baseiam, exigem mais potência computacional que as chaves simétricas quando gerar uma assinatura digital ou criptografar um conjunto de dados.  
@@ -28,4 +29,4 @@ Um recurso do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] é a capac
   
 ## <a name="see-also"></a>Consulte também  
  [Sessões, instanciação e simultaneidade](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
- [Como: criar um serviço que requer sessões](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
+ [Como criar um serviço que requer sessões](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)

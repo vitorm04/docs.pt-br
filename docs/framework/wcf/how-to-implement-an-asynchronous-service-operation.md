@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cd208cf361b78da7f755bbe77070d440fe07b4ac
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 276dd3cc84c15c66adeab30f86583e6d9eec4144
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Como implementar uma operação de serviço assíncrona
 Em [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplicativos, uma operação de serviço podem ser implementados assíncrona ou síncrona sem ditando ao cliente como chamá-lo. Por exemplo, operações de serviço assíncrona podem chamar sincronamente e operações de serviço síncronas podem ser chamadas de forma assíncrona. Para obter um exemplo que mostra como chamar uma operação assíncrona em um aplicativo cliente, consulte [como: chamar operações de serviço assíncrona](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]operações síncronas e assíncronas, consulte [criar contratos de serviço](../../../docs/framework/wcf/designing-service-contracts.md) e [síncrona e operações assíncronas](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). Este tópico descreve a estrutura básica de uma operação de serviço assíncrona, o código não está completo. Para um exemplo completo de cliente e serviço consulte [assíncrona](http://msdn.microsoft.com/en-us/833db946-f511-4f64-a26f-2759a11217c7).  
@@ -56,5 +57,5 @@ Em [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplicativos, uma operaç
  [!code-vb[C_SyncAsyncClient#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_syncasyncclient/vb/services.vb#1)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md) (Criando contratos de serviço)  
+ [Criando contratos de serviço](../../../docs/framework/wcf/designing-service-contracts.md)  
  [Operações síncronas e assíncronas](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)

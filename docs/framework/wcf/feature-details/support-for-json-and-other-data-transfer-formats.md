@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8b30f984455afbffd08ead8ebf1aa3aafc140956
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4bd0bb824588a71230131af8237d3c99f37350c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="support-for-json-and-other-data-transfer-formats"></a>Suporte para JSON e outros formatos de transferência de dados
 JSON (JavaScript Object Notation) é um formato de codificação de dados eficiente que permite a troca rápida de pequenas quantidades de dados entre navegadores e AJAX (JavaScript assíncrono e XML)-serviços Web ativada.  
@@ -26,7 +27,7 @@ JSON (JavaScript Object Notation) é um formato de codificação de dados eficie
  [Serialização JSON autônoma](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)  
  Descreve a serialização JSON autônoma.  
   
- [Como: serializar e desserializar dados JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)  
+ [Como serializar e desserializar dados JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)  
  Demonstra como serializar objetos do tipo .NET em dados codificados em JSON e, em seguida, desserializar dados no formato JSON novamente em instâncias de tipos do .NET usando o <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
   
  [Mapeamento entre JSON e XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)  

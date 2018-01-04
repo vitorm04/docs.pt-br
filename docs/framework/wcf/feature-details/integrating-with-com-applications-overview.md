@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6ae704ad9542c162b1c37f3eb9edf31f864cd42e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5b20ae5329f08e9391fd7b93218c44c3c1978a48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integração com visão geral de aplicativos COM
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]oferece ao desenvolvedor de código gerenciado com um ambiente rico para criar aplicativos conectados. No entanto, se você tem um investimento significativo em código não gerenciado COM base em e não deseja migrar, você pode ainda integrar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços da Web diretamente no seu código existente usando o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] moniker de serviço. O moniker de serviço pode ser usado em ambientes de desenvolvimento todo com base no intervalo de COM, como Office VBA, Visual Basic 6.0 ou Visual C++ 6.0.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<?xml version="1.0" encoding="utf-8"?>`  
 >   
->  `<configuration xmlns=` `http://schemas.microsoft.com/.NetConfiguration/v2.0` `>`  
+>  `<configuration xmlns=``http://schemas.microsoft.com/.NetConfiguration/v2.0``>`  
 >   
 >  `<startup>`  
 >   
@@ -75,4 +76,4 @@ ms.lasthandoff: 12/02/2017
 >  `</configuration>`  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: registrar e configurar um Moniker de serviço](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+ [Como registrar e configurar um moniker de serviço](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

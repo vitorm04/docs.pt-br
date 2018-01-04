@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a65f2c1daaac7e0e795412d666bb7d15e639361
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 79ca0be932f473c99f8e9aeb64635e4bcd4397bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="schema-import-and-export"></a>Importação e exportação de esquemas
 O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] inclui um novo mecanismo de serialização, o <xref:System.Runtime.Serialization.DataContractSerializer>. O `DataContractSerializer` converte entre [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] XML (em ambas as direções) e objetos. O serializador em si, além de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclui mecanismos de exportação de esquema e importação do esquema associado. *Esquema* é uma descrição legível por máquina formal e precisa a forma do XML que produz o serializador ou que o desserializador pode acessar. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]usa a linguagem de definição de esquema do World Wide Web Consortium (W3C) XML (XSD) como sua representação de esquema, que é amplamente interoperável com várias plataformas de terceiros.  
@@ -73,5 +74,5 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] inclui um novo mecanis
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.XsdDataContractImporter>  
  <xref:System.Runtime.Serialization.XsdDataContractExporter>  
- [Importando esquema para gerar Classes](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)  
+ [Importando o esquema para gerar classes](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)  
  [Exportando esquemas de Classes](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)

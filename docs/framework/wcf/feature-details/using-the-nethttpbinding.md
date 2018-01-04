@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ba5c8a977513ebaae902e3c3d37f950003548474
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ca19446d286395a744496fa300ad1a72e504e738
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-nethttpbinding"></a>Usando o NetHttpBinding
 O <xref:System.ServiceModel.NetHttpBinding> é uma associação criada para consumir HTTP ou serviços WebSocket e usa a codificação binária por padrão. O <xref:System.ServiceModel.NetHttpBinding> detectará se tiver sido usado com contrato de solicitação-resposta ou contrato de duplex e alterará seu comportamento para corresponder. Ele usará HTTP para contratos de solicitação-resposta e WebSockets para contratos duplex. Esse comportamento pode ser substituído usando o <!--zz <xref:System.ServiceModel.NetHttpBinding.WebSocketTransportUsage%2A> --> `WebSocketTransportUsage` configuração:  
@@ -69,7 +70,7 @@ ServiceHost svchost = new ServiceHost(typeof(Service1), baseAddress);
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Configuring Bindings for Services](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md) (Configurando associações para serviços)  
- [Bindings](../../../../docs/framework/wcf/feature-details/bindings.md) (Associações)  
- [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md) (Associações fornecidas pelo sistema)  
+ [Configurando associações para serviços](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
+ [Associações](../../../../docs/framework/wcf/feature-details/bindings.md)  
+ [Associações fornecidas pelo sistema](../../../../docs/framework/wcf/system-provided-bindings.md)  
  [Serviços duplex](../../../../docs/framework/wcf/feature-details/duplex-services.md)

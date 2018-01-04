@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 90edf0735d890e0abc1560de5a7f523ee2faa7c8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c24b039709a013f210a42d67c744c03489e4cf73
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Como configurar um emissor local
 Este tópico descreve como configurar um cliente para usar um emissor local para tokens emitidos.  
@@ -85,6 +86,6 @@ Este tópico descreve como configurar um cliente para usar um emissor local para
  Observe que, se um endereço do emissor e a associação especificadas para uma associação de determinado, o emissor local não é usado para pontos de extremidade que utilizam essa associação. Clientes que pretende usar sempre o emissor local devem garantir que eles não usam essa associação ou que eles modificar a associação para que o endereço do emissor é `null`.  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: configurar as credenciais em um serviço de Federação](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [Como: criar um cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Como: criar uma WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+ [Como configurar as credenciais em um Serviço de Federação](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Como criar um cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Como criar um WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d6fd1bf29af743e5bfcd466ffdf7430c389635de
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 977bc032d62856673994e07a71b77d3b668ce7af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communcation-foundation-bindings"></a>Associações do Windows Communcation Foundation
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]separa como o software para um aplicativo é gravado de como ele se comunica com outros softwares. Associações são usadas para especificar o transporte, a codificação e detalhes de protocolo necessárias para clientes e serviços para se comunicar entre si. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]usa associações para gerar a representação eletrônica subjacente do ponto de extremidade, para a maioria dos detalhes da associação deve ser aceito por terceiros que estão se comunicando. A maneira mais fácil de fazer isso é para clientes de um serviço usar a mesma associação que o ponto de extremidade para o serviço usa. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]como fazer isso, consulte [usando associações para clientes e configurar o Windows Communication Foundation Services](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb).  

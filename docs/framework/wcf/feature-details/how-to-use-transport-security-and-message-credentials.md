@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: e29ae3a0374f6ee027180835629eacceaa928d2f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 70575732e7840d243373fd1512f788c776f17ceb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>Como utilizar credenciais de mensagem e segurança de transporte
 Proteger um serviço com credenciais de transporte e de mensagem usa o melhor dos modos de segurança de transporte e de mensagem no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Sum, segurança de camada de transporte fornece integridade e confidencialidade, enquanto a segurança de camada de mensagem fornece uma variedade de credenciais que não são possíveis com os mecanismos de segurança de transporte estrito. Este tópico mostra as etapas básicas para a implementação de transporte com credenciais de mensagem usando o <xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.NetTcpBinding> associações. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]definir o modo de segurança, consulte [como: definir o modo de segurança](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
@@ -170,6 +171,6 @@ Proteger um serviço com credenciais de transporte e de mensagem usa o melhor do
     ```  
   
 ## <a name="see-also"></a>Consulte também  
- [How to: Set the Security Mode](../../../../docs/framework/wcf/how-to-set-the-security-mode.md) (Como definir o modo de segurança)  
- [Securing Services](../../../../docs/framework/wcf/securing-services.md) (Protegendo serviços)  
+ [Como definir o modo de segurança](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)  
+ [Protegendo serviços](../../../../docs/framework/wcf/securing-services.md)  
  [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

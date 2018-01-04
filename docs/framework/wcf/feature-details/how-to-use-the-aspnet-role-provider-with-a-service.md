@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eb5adec17f834687038b729a475fbcc0e2311c01
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ef526ed1f809fad2f07b66629bbc80530b764d65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>Como utilizar o provedor de função do ASP.NET com um serviço
 O [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de função (em conjunto com o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de associação) é um recurso que permite [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aos desenvolvedores criar sites da Web que permite que os usuários criem uma conta com um site e para serem atribuídos a funções de autorização finalidades. Com esse recurso, qualquer usuário pode estabelecer uma conta com o site e faça logon para o acesso exclusivo para o site e seus serviços. Isso é diferente de segurança do Windows, que exige que os usuários possuem contas em um domínio do Windows. Em vez disso, qualquer usuário que forneça suas credenciais (a combinação de nome e senha de usuário) pode usar o site e seus serviços.  
@@ -78,4 +79,4 @@ O [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de função
   
 ## <a name="see-also"></a>Consulte também  
  [Provedor de função e associação](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)  
- [Como: usar o provedor de associação do ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
+ [Como usar o provedor de associação do ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5981e68ebe2870870fff5e92e87d7582ac2c42b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 582eaef518e10acb4c4c356226ce0be24d1b4c35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Como exibir certificados com o snap-in do MMC
 Um tipo comum de credenciais é o certificado X.509. Ao criar serviços ou clientes seguros, você poderá especificar que um certificado seja usado como a credencial de cliente ou serviço usando métodos como <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>. O método exige vários parâmetros, como o armazenamento onde o certificado está armazenado e um valor para usar ao procurar pelo certificado. O procedimento a seguir demonstra como examinar os repositórios em um computador para localizar um certificado apropriado. Para obter um exemplo de encontrar a impressão digital do certificado, consulte [como: recuperar a impressão digital de um certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
@@ -65,6 +66,6 @@ Um tipo comum de credenciais é o certificado X.509. Ao criar serviços ou clien
 4.  Para exibir detalhes de qualquer certificado, selecione o certificado e clique em **exibição**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Trabalhar com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Como: criar certificados temporários para uso durante o desenvolvimento](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)  
- [Como: recuperar a impressão digital de um certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+ [Trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [Como criar certificados temporários para uso durante o desenvolvimento](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)  
+ [Como recuperar a impressão digital de um certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)

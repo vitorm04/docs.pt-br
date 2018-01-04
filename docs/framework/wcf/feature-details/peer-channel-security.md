@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: edb53e6cd234a059ebd3e7ddff9aaa258ae6027b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8d9b63e4cb056cf72f2e7b4796883f3fc2873a49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-channel-security"></a>Segurança de canal par
 Canal par permite uma variedade de tipos de aplicativo distribuído que dependem de mensagens entre vários participantes. Alguns exemplos incluem a distribuição de conteúdo de escala da Internet, em que uma fonte confiável distribui o conteúdo (por exemplo, mídia ou atualizações de software), um grupo de amigos do exchange músicas e fotos ou uma equipe de colegas em colaboração editar um documento. Cada um desses cenários exige um modelo de segurança exclusivo. O modelo de segurança de canal par foi desenvolvido para atender a esses cenários e fornece um modelo de segurança para as respectivas necessidades de modelos diferentes de identidade, autenticação e autorização.  
@@ -46,4 +47,4 @@ Canal par permite uma variedade de tipos de aplicativo distribuído que dependem
 ## <a name="see-also"></a>Consulte também  
  [Protegendo aplicativos de canal par](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
  [Conceitos de canal par](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)  
- [Criando um aplicativo de canal par](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+ [Compilando um aplicativo de canal par](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

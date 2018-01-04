@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: edf1dd36fe8c0f3e6c1ae8087d1bacbc00cf307a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e8c10c9d4838a2b6c9d3a021d22d2dfd4dc865da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Mensagem de segurança com um cliente anônimo
 O cenário a seguir mostra um cliente e o serviço protegido pelo [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] segurança de mensagem. Uma meta de design é usar segurança de mensagem em vez de segurança de transporte, para que no futuro, ela pode suportar um modelo mais avançado baseado em declarações. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]usando declarações avançada para autorização, consulte [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  

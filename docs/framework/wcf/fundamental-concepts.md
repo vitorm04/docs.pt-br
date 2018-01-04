@@ -18,11 +18,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e44ded58e7c48fae281030b5757d0d891d5600e6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0c05aa44a46b934a78af38c33ee34dd03f69e56d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Conceitos fundamentais do Windows Communication Foundation
 Este documento fornece uma exibição de alto nível da arquitetura do [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Ele destina-se a explicar os principais conceitos e como eles se adaptam entre si. Para obter um tutorial sobre como criar a versão mais simples de um [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviço e cliente, consulte [Tutorial de Introdução](../../../docs/framework/wcf/getting-started-tutorial.md). Para saber mais [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] de programação, consulte [básicas de programação WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -163,6 +164,6 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Abreviação para o conjunto crescente de especificações de Serviço Web (WS), como WS-Security, WS-ReliableMessaging e assim por diante, que são implementadas no [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
- [What Is Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md) (O que é o Windows Communication Foundation)  
- [Windows Communication Foundation Architecture](../../../docs/framework/wcf/architecture.md) (Arquitetura do Windows Communication Foundation)  
+ [O que é o Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
+ [Arquitetura do Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)  
  [Arquitetura de segurança](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)

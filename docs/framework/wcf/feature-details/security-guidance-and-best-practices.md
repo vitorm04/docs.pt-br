@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 6178a3487f0721b0d799e801e03bb79a024c3952
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b81a7d8aa46a96fde1285e182e5080732bbef7b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-guidance-and-best-practices"></a>Orientação de segurança e práticas recomendadas
 Os tópicos nesta seção apresentam diretrizes para e itens a serem considerados ao criar seguro [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplicativos. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Segurança Consulte e o Windows Server AppFabric [segurança modelo para Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
@@ -34,5 +35,5 @@ Os tópicos nesta seção apresentam diretrizes para e itens a serem considerado
  Contém entradas relacionadas à segurança e desempenho.  
   
 ## <a name="see-also"></a>Consulte também  
- [Basic WCF Programming](../../../../docs/framework/wcf/basic-wcf-programming.md) (Programação básica do WCF)  
+ [Programação básica do WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
  [Modelo de segurança para o Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

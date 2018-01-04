@@ -16,18 +16,19 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 180367920eb6f900fbb6b234b94f3b3a2c7fe52f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1e011eb2f22abdc06a35fb7f656e180a4537245d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-services-using-a-client"></a>Usando um cliente para acessar um serviço
 Aplicativos cliente devem criar, configurar e usar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] objetos de canal ou de cliente para se comunicar com os serviços. O [visão geral do cliente WCF](../../../../docs/framework/wcf/wcf-client-overview.md) tópico fornece uma visão geral de objetos e as etapas envolvidas na criação de objetos de cliente e o canal básico e usá-los.  
   
  Este tópico fornece informações detalhadas sobre alguns dos problemas com o cliente, aplicativos e objetos de cliente e o canal que podem ser úteis dependendo do cenário.  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  Este tópico descreve o comportamento e problemas relacionados a:  
   
 -   Tempos de vida de canal e a sessão.  
@@ -105,9 +106,9 @@ Aplicativos cliente devem criar, configurar e usar [!INCLUDE[indigo2](../../../.
   
 ## <a name="see-also"></a>Consulte também  
  [Serviços duplex](../../../../docs/framework/wcf/feature-details/duplex-services.md)  
- [Como: acessar os serviços com unidirecional e contratos de solicitação-resposta](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
- [Como: acessar serviços com um contrato Duplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
- [Como: acessar um WSE 3.0 Service](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
- [Como: usar o ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)  
- [Como: chamar operações de serviço de forma assíncrona](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
+ [Como acessar os serviços com contratos unidirecionais e de solicitação-resposta](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
+ [Como acessar serviços com um contrato Duplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
+ [Como acessar um WSE 3.0 Service](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
+ [Como usar o ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)  
+ [Como chamar operações de serviço de forma assíncrona](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
  [Aplicativos cliente de camada intermediária](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)

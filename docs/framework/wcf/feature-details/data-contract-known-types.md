@@ -20,11 +20,12 @@ caps.latest.revision: "42"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cdb9e539d16b874ffd37b8e381757594561386e7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 24d26358c0bf0440b2fbba143629a0e4bda21cec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-known-types"></a>Tipos de contratos de dados conhecidos
 O <xref:System.Runtime.Serialization.KnownTypeAttribute> classe permite que você especificar com antecedência, os tipos que devem ser incluídos para consideração durante a desserialização. Para obter um exemplo de funcionamento, consulte o [tipos conhecidos](../../../../docs/framework/wcf/samples/known-types.md) exemplo.  
@@ -185,4 +186,4 @@ O <xref:System.Runtime.Serialization.KnownTypeAttribute> classe permite que voc�
  <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A>  
  [Tipos conhecidos](../../../../docs/framework/wcf/samples/known-types.md)  
  [Equivalência de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md) (Criando contratos de serviço)
+ [Criando contratos de serviço](../../../../docs/framework/wcf/designing-service-contracts.md)

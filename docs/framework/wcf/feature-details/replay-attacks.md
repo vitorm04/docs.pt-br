@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cd96404adea7fb8e7d59dcea322b2d3832f2bfe4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: df2a7a78e876ec3228491569c918ad9add2e080d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="replay-attacks"></a>Ataques por repetição
 Um *reproduzir ataque* ocorre quando um invasor copia um fluxo de mensagens entre duas partes e repete o fluxo para um ou mais das partes. A menos que atenuado, os computadores sujeitos a ataque processam o fluxo como mensagens legítimas, resultando em um intervalo de consequências incorretas, como pedidos de redundância de um item.  

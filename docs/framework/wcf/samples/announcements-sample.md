@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 045807df433d519b00969812afb0ae2feac94b75
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 485a5f98ead246b02aab4ffc5abebd5c88ea92dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="announcements-sample"></a>Exemplo de anúncios
 Este exemplo mostra como usar a funcionalidade de lançamento do recurso de descoberta. Anúncios de permitir que os serviços enviar mensagens de aviso que contém metadados sobre o serviço. Por padrão, um anúncio de saudação é enviado quando o serviço é iniciado e um anúncio bye é enviado quando o serviço foi desligado. Esses anúncios podem ser multicast ou eles podem ser enviados ponto a ponto. Este exemplo consiste de cliente e o serviço de dois projetos.  

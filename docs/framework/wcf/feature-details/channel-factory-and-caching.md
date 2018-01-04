@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1b06d290760afa9a52274c30899e25f00bc18af2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b92c94c6ae15684a087af07edd5801aa4bb9f671
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="channel-factory-and-caching"></a>Cache e fábrica de canal
 Os aplicativos cliente do WCF usam a classe <xref:System.ServiceModel.ChannelFactory%601> para criar um canal de comunicação com um serviço WCF.  Criar instâncias de <xref:System.ServiceModel.ChannelFactory%601> resulta em alguma sobrecarga porque envolve as seguintes operações:  
@@ -123,7 +124,7 @@ public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.ClientBase%601>  
- [Building Clients](../../../../docs/framework/wcf/building-clients.md) (Compilando clientes)  
+ [Compilando clientes](../../../../docs/framework/wcf/building-clients.md)  
  [Clientes](../../../../docs/framework/wcf/feature-details/clients.md)  
- [Accessing Services Using a WCF Client](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md) (Usando um cliente do WCF para acessar serviços)  
- [Como: usar o ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+ [Usando um cliente do WCF para acessar serviços](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
+ [Como usar o ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

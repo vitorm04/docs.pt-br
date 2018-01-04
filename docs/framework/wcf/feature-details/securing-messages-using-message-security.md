@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 5106e066de71c8cf5be472ae831adf3cd29e300d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: be727fe2b69258a058ba99dc8aa40ae148d3dd99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-messages-using-message-security"></a>Protegendo as mensagens com a segurança de mensagens
 Esta seção discute [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança da mensagem ao usar <xref:System.ServiceModel.NetMsmqBinding>.  
@@ -74,7 +75,7 @@ Esta seção discute [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seg
  Ao usar a segurança de transporte e segurança de mensagem, o certificado usado para proteger a mensagem no transporte e o nível de mensagem SOAP deve ser o mesmo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Protegendo mensagens usando a segurança de transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
- [Segurança no serviço de enfileiramento de mensagens](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
+ [Protegendo mensagens usando a segurança do transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
+ [Segurança de mensagem através do enfileiramento de mensagem](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
  [Conceitos de segurança](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
  [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

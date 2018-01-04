@@ -13,11 +13,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c75a7cedac9d06c9f8da36dc131521053450a37
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8583ac00f1216e68f95c3d41d8c896b555d0aa8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stand-alone-json-serialization"></a>Serialização JSON autônoma
 JSON (JavaScript Object Notation) é um formato de dados que é projetado especificamente para ser usado pelo código JavaScript em execução em páginas da Web dentro do navegador. É o formato de dados padrão usado por serviços ASP.NET AJAX criados no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -36,13 +37,13 @@ JSON (JavaScript Object Notation) é um formato de dados que é projetado especi
 |Todos os tipos numéricos, por exemplo <xref:System.Int32>, <xref:System.Decimal> ou<xref:System.Double>|Número|Valores especiais, como `Double.NaN`, `Double.PositiveInfinity` e `Double.NegativeInfinity` não são suportados e resultar em JSON inválido.|  
 |<xref:System.Enum>|Número|Consulte "Enumerações e JSON", mais adiante neste tópico.|  
 |<xref:System.Boolean>|Boolean|--|  
-|<xref:System.String>, <xref:System.Char>|Cadeia de caracteres|--|  
-|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|Cadeia de caracteres|O formato desses tipos nas JSON é o mesmo do XML (essencialmente, período de tempo no formato ISO 8601 duração, GUID no formato "12345678-ABCD-ABCD-ABCD-1234567890AB" e o URI em formato de cadeia de caracteres natural, como "http://www.example.com"). Para obter informações precisas, consulte [referência de esquema de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).|  
-|<xref:System.Xml.XmlQualifiedName>|Cadeia de caracteres|O formato é "nome: namespace" (nada antes do primeiro vírgula é o nome). O nome ou o namespace pode ser ausente. Se não houver nenhum namespace os dois-pontos podem também ser omitido.|  
+|<xref:System.String>, <xref:System.Char>|Cadeia de Caracteres|--|  
+|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|Cadeia de Caracteres|O formato desses tipos nas JSON é o mesmo do XML (essencialmente, período de tempo no formato ISO 8601 duração, GUID no formato "12345678-ABCD-ABCD-ABCD-1234567890AB" e o URI em formato de cadeia de caracteres natural, como "http://www.example.com"). Para obter informações precisas, consulte [referência de esquema de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).|  
+|<xref:System.Xml.XmlQualifiedName>|Cadeia de Caracteres|O formato é "nome: namespace" (nada antes do primeiro vírgula é o nome). O nome ou o namespace pode ser ausente. Se não houver nenhum namespace os dois-pontos podem também ser omitido.|  
 |<xref:System.Array>do tipo<xref:System.Byte>|Matriz de números|Cada número representa o valor de um byte.|  
 |<xref:System.DateTime>|Data e hora ou cadeia de caracteres|Consulte as datas / horas e JSON neste tópico.|  
 |<xref:System.DateTimeOffset>|Tipo complexo|Consulte as datas / horas e JSON neste tópico.|  
-|Tipos de XML e ADO.NET (<xref:System.Xml.XmlElement>,<br /><br /> <xref:System.Xml.Linq.XElement>. Matrizes de <xref:System.Xml.XmlNode>,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|Cadeia de caracteres|Consulte a seção de tipos XML e JSON deste tópico.|  
+|Tipos de XML e ADO.NET (<xref:System.Xml.XmlElement>,<br /><br /> <xref:System.Xml.Linq.XElement>. Matrizes de <xref:System.Xml.XmlNode>,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|Cadeia de Caracteres|Consulte a seção de tipos XML e JSON deste tópico.|  
 |<xref:System.DBNull>|Tipo complexo vazio|--|  
 |Matrizes, dicionários e coleções|Matriz|Consulte a seção matrizes, dicionários e coleções deste tópico.|  
 |Tipos complexos (com o <xref:System.Runtime.Serialization.DataContractAttribute> ou <xref:System.SerializableAttribute> aplicadas)|Tipo complexo|Membros de dados se tornam membros do tipo complexo de JavaScript.|  
@@ -271,4 +272,4 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
  Os nomes de chave do serializador codifica XML que não são nomes válidos de XML. Por exemplo, um membro de dados com o nome de "123" teria um nome codificado como "_x0031\__x0032\__x0033\_" porque "123" é um nome de elemento XML inválido (começa com um dígito). Pode surgir uma situação semelhante com alguns conjuntos de caracteres internacionais não válidos em nomes XML. Para obter uma explicação do efeito de XML no processamento de JSON, consulte [mapeamento entre JSON e XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Suporte para JSON e outros dados formatos de transferência](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)
+ [Suporte para JSON e outros formatos de transferência de dados](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

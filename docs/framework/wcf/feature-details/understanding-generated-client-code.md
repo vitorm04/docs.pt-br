@@ -16,16 +16,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 935f3fe168ebafd7a62c54d2aec1c8336a31a54a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4c57469b61a12ff5043632cf2b6f4fe3a8a53d56
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-generated-client-code"></a>Noções básicas de código de cliente gerado
 O [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) gera o código de cliente e um arquivo de configuração do aplicativo cliente para uso na criação de aplicativos cliente. Este tópico fornece um tour dos exemplos de código gerado para cenários de contrato de serviço padrão. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Criando um aplicativo cliente usando o código gerado, consulte [visão geral do cliente WCF](../../../../docs/framework/wcf/wcf-client-overview.md).  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  Se você usar [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] para gerar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] tipos de cliente para o seu projeto, você normalmente não precisa examinar o código de cliente gerada. Se você não estiver usando um ambiente de desenvolvimento que executa os mesmos serviços para você, você pode usar uma ferramenta como o Svcutil.exe para gerar o código de cliente e, em seguida, use esse código para desenvolver seu aplicativo cliente.  
   
  Como Svcutil.exe tem várias opções que modificam as informações de tipo gerado, este tópico não aborda todos os cenários. No entanto, as seguintes tarefas padrão envolvem localizando o código gerado:  
@@ -91,4 +92,4 @@ O [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../d
  [!code-csharp[C_GeneratedCodeFiles#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#13)]  
   
 ## <a name="see-also"></a>Consulte também  
- [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md) (Visão geral do cliente do WCF)
+ [Visão geral do cliente do WCF](../../../../docs/framework/wcf/wcf-client-overview.md)

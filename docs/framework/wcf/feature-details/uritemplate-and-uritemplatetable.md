@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b9d08fa0e0ec556779d246af5ec11fcbeb54dedc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate and UriTemplateTable
 Os desenvolvedores da Web exigem a capacidade para descrever a forma e o layout dos seus serviços de responder às URIs. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]adicionadas duas novas classes para oferecer aos desenvolvedores controle sobre suas URIs. <xref:System.UriTemplate>e <xref:System.UriTemplateTable> formam a base do mecanismo de expedição baseada em URI em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Essas classes também podem ser usadas em seus próprios, permitindo que desenvolvedores para tirar proveito dos modelos e o mecanismo de mapeamento de URI sem implementar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço.  
@@ -347,4 +348,4 @@ Console.WriteLine("Bound URI: {0}", boundUri);
  [Modelo de objeto de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
  [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
  [Tabela de UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
- [Tabela de UriTemplate Dispatcher](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)
+ [Dispatcher de Tabela de UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

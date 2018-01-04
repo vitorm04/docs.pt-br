@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e6543f1faec5d3298c9a2b825b3a016eb5e7d09
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c74f95fba492b677d3b1702d090c7a055bc5f1ff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-in-a-managed-application"></a>Hospedagem em um aplicativo gerenciado
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]os serviços podem ser hospedados em qualquer [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplicativo. Os serviços de hospedagem é a opção de hospedagem mais flexível porque ela exige a menor infra-estrutura para implantar. No entanto, também é a opção de hospedagem menos eficiente, porque os aplicativos gerenciados não fornecem recursos avançados de hospedagem e gerenciamento de outras opções de hospedagem em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como serviços de informações da Internet (IIS) e serviços do Windows.  
@@ -35,5 +36,5 @@ ms.lasthandoff: 12/02/2017
  Outros cenários comuns que habilita hospedagem interna é aplicativos cliente avançados, como aqueles baseados em [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] ou Windows Forms (WinForms). Essa opção de hospedagem também torna mais fácil para aplicativos cliente avançados, como [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] e aplicativos WinForms, para se comunicar com o mundo exterior. Por exemplo, um cliente de colaboração ponto a ponto que usa [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] para sua interface do usuário e também hospeda um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço que permite que outros clientes para se conectar a ele e compartilhar informações.  
   
 ## <a name="see-also"></a>Consulte também  
- [Hosting Services](../../../../docs/framework/wcf/hosting-services.md) (Hospedando serviços)  
+ [Hospedando serviços](../../../../docs/framework/wcf/hosting-services.md)  
  [Tutorial de Introdução](../../../../docs/framework/wcf/getting-started-tutorial.md)

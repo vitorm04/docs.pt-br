@@ -16,11 +16,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d464042411b2d06368bb596e6d8d1dc0976808e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 37b8ff108cb9ddb0df8ff4cb365ae543959546cb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Início rápido de solução de problemas do WCF
 Este tópico lista alguns problemas conhecidos que os clientes têm executado até ao desenvolver clientes do WCF e serviços. Se o problema que você está executando em não estiver nesta lista, recomendamos que você configurar o rastreamento para o serviço. Isso irá gerar um arquivo de rastreamento que você pode exibir com o Visualizador de arquivo de rastreamento e obter informações detalhadas sobre exceções que pode estar ocorrendo no serviço. Para obter mais informações sobre como configurar o rastreamento, consulte: [Configurando o rastreamento](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Para obter mais informações sobre o Visualizador do arquivo de rastreamento, consulte: [ferramenta de Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  

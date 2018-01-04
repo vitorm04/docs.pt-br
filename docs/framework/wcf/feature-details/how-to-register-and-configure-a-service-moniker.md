@@ -16,11 +16,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 32cb95eebbc5738204b063f1cf5f8264e775791f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6e5c57927a455b5d2a253becac35b1bf9033933f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Como registrar e configurar um Moniker de serviço
 Antes de usar o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] moniker de serviço dentro de um aplicativo COM um contrato com tipo, você deve registrar os tipos de atributo necessários com e configurar o aplicativo COM e o moniker com a configuração de associação necessária.  
@@ -108,4 +109,4 @@ Antes de usar o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] moniker 
      Isso modifica as definições de interface importado para que todos os métodos retornam um `HResult`. Outros valores de retorno são convertidos em parâmetros de saída. A execução geral dos métodos permanece o mesmo. Isso permite que você determine a causa de uma exceção ao chamar um método no proxy. Essa funcionalidade está disponível somente do código C++.  
   
 ## <a name="see-also"></a>Consulte também  
- [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)]
+ [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

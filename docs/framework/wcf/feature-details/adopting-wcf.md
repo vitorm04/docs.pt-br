@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e27ee5f2e1b2ad042fd8c0104e89b99eb5e4bc96
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 522d4d39df6df62a6bed2fdc9f6d72df1193faca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adopting-windows-communication-foundation"></a>Adotando o Windows Communication Foundation
 Você pode optar por usar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para novos desenvolvimentos, enquanto continua a manter os aplicativos existentes desenvolvidos usando o ASP.NET. Porque [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] é deve ser a escolha mais adequada para facilitar a comunicação com os aplicativos criados com o .NET Framework em qualquer cenário, pode servir como uma ferramenta padrão para resolver uma ampla variedade de problemas de comunicação de software de forma não é possível que o ASP.NET.  
@@ -35,6 +36,6 @@ Você pode optar por usar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)
  Para obter uma análise completa sobre como migrar serviços de Web do ASP.NET existentes para o WCF, consulte [serviços Web ASP.NET e o Windows Communication Foundation](http://go.microsoft.com/fwlink/?LinkID=71761). Esta seção descreve como implementar um serviço WCF compatível com dos metadados para que o serviço Web ASP.NET e como migrar o código de cliente e de serviço da Web do ASP.NET para [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: recuperar metadados e implementar um serviço compatível](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)  
- [Como: migrar o código de serviço da Web do ASP.NET para o Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-to-wcf.md)  
- [Como: migrar o código de cliente de serviço da Web do ASP.NET para o Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-client-to-wcf.md)
+ [Como recuperar metadados e implementar um serviço em conformidade](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)  
+ [Como migrar o código de serviço Web do ASP.NET para o Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-to-wcf.md)  
+ [Como migrar o código de cliente de serviço Web do ASP.NET para o Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-client-to-wcf.md)

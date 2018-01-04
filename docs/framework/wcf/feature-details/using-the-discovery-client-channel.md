@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f012cc43d7160b737e5a9a5d4ceb5e50e91d07a1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 11d693e35017d7290e1cf1209dc3d6423afc38b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-discovery-client-channel"></a>Usando o canal cliente Discovery
 Ao escrever um aplicativo cliente WCF que você precisa saber o endereço do ponto de extremidade do serviço que você está chamando. Em muitas situações o endereço do ponto de extremidade de serviço não for conhecido antecipadamente ou o endereço do serviço de alterações ao longo do tempo. O canal cliente Discovery permite que você escrever um aplicativo de cliente do WCF, descreva o serviço que você deseja chamar e o canal cliente envia uma solicitação de investigação automaticamente. Quando um serviço responde, o canal cliente discovery recupera o endereço de ponto de extremidade para o serviço da resposta de investigação e as usa para chamar o serviço.  

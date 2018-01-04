@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a5c7cb9d963e56c6a6e06421afdb14427440643c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 08fcb852977272d593229abea426abc8bf9b7e48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="duplex-services"></a>Serviços de duplex
 Um contrato de serviço duplex é um padrão de troca de mensagem no qual os pontos de extremidade podem enviar mensagens para o outro independentemente. Um serviço duplex, portanto, pode enviar mensagens para o ponto de extremidade do cliente, fornecendo o comportamento do tipo de evento. Comunicação duplex ocorre quando um cliente se conecta a um serviço e fornece o serviço com um canal em que o serviço pode enviar mensagens de volta ao cliente. Observe que o comportamento do tipo de evento de serviços duplex só funciona em uma sessão.  
@@ -96,5 +97,5 @@ binding.ClientBaseAddress = new Uri("http://localhost:8000/DuplexTestUsingCode/C
   
 ## <a name="see-also"></a>Consulte também  
  [Duplex](../../../../docs/framework/wcf/samples/duplex.md)  
- [Specifying Client Run-Time Behavior](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md) (Especificando o comportamento em tempo de execução do cliente)  
- [Como: criar uma fábrica de canais e usá-lo para criar e gerenciar canais](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+ [Especificando o comportamento em tempo de execução do cliente](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
+ [Como criar uma fábrica de canais e utilizá-la para criar e gerenciar canais](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

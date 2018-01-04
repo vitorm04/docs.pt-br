@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a3d436690108158cfd7675cf00788a564b8a1dc6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2c84f25dfd5d3066f9c5d0b62bc0b28bc98c283d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-wcf"></a>Estendendo o WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]permite que você modifique e estender os componentes de tempo de execução para controlar com precisão e estender aplicativos baseados em serviço. Os tópicos nesta seção vá em detalhes sobre a arquitetura de extensibilidade. Para obter mais informações sobre programação básica, consulte [básicas de programação WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -61,8 +62,8 @@ ms.lasthandoff: 12/02/2017
  <xref:System.IdentityModel.Tokens>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Basic WCF Programming](../../../../docs/framework/wcf/basic-wcf-programming.md) (Programação básica do WCF)  
+ [Programação básica do WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
- [WCF Feature Details](../../../../docs/framework/wcf/feature-details/index.md) (Detalhes de recursos do WCF)  
+ [Detalhes de recursos do WCF](../../../../docs/framework/wcf/feature-details/index.md)  
   
- [Guidelines and Best Practices](../../../../docs/framework/wcf/guidelines-and-best-practices.md) (Diretrizes e práticas recomendadas)
+ [Diretrizes e práticas recomendadas](../../../../docs/framework/wcf/guidelines-and-best-practices.md)

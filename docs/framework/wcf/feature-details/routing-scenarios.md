@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 7ae79ad13b360a61e1d9b10f94dff5a37aae1d89
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3ef101a9a5f78e1b85ac7cb983b4766088b83317
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing-scenarios"></a>Cenários de roteamento
 Enquanto o serviço de roteamento é altamente personalizável, ele pode ser um desafio para criar lógica de roteamento eficiente, ao criar uma nova configuração do zero.  No entanto, há vários cenários comuns que siga a maioria das configurações de serviço de roteamento. Enquanto esses cenários não podem ser aplicadas diretamente em sua configuração específica, Noções básicas sobre como o serviço de roteamento pode ser configurado para tratar desses cenários ajudam a entender o serviço de roteamento.  
@@ -77,13 +78,13 @@ Enquanto o serviço de roteamento é altamente personalizável, ele pode ser um 
  Para obter as etapas usadas para configurar a manipulação de erro, consulte [How To: tratamento de erros](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md). Para obter um exemplo de implementação de tratamento de erros, consulte o [ponte e o tratamento de erros](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md) e [avançados de tratamento de erros](../../../../docs/framework/wcf/samples/advanced-error-handling.md) exemplos.  
   
 ### <a name="in-this-section"></a>Nesta seção  
- [Como: Controle de versão de serviço](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+ [Como controlar a versão do serviço](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [Como: Particionamento de dados de serviço](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [Como particionar dados de serviço](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
- [Como Atualizar de dinâmico](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
+ [Como atualizar dinamicamente](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   
- [Como: Tratamento de erros](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
+ [Como fazer para tratar erros](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Introdução ao roteamento](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1bf20f11e7077c981e73aa087c654b9cf0c87bcb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7cf47ce71c70ab9054b1417bab7ae05d9c029188
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="information-disclosure"></a>Divulgação de informações
 Divulgação de informações permite que um invasor obtenha informações valiosas sobre um sistema. Portanto, sempre considere quais informações são revelar e se ele pode ser usado por um usuário mal-intencionado. A seguir lista os ataques de divulgação de informações possíveis e fornece atenuantes para cada.  
@@ -72,4 +73,4 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
  [Negação de serviço](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
  [Violação](../../../../docs/framework/wcf/feature-details/tampering.md)  
  [Cenários sem suporte](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
- [Ataques de repetição](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+ [Ataques de reprodução](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b1b7ab4ed91487965ac8b0d78a9a44818cfee9eb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5dcefa658aec37b9af3c4f9285ec76a0d549b868
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>Como obter um certificado (WCF)
 Usar o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] recursos que usam certificados x. 509, apenas o primeiro obter certificados.  
@@ -37,5 +38,5 @@ Usar o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] recursos que usam
     >  Qualquer abordagem, o destinatário da solicitação SOAP que contém o certificado x. 509 deve confiar no certificado de x. 509. Isso significa que o certificado x. 509 ou um emissor da cadeia de certificados no repositório de certificados de pessoas confiáveis e que o certificado x. 509 não está no repositório de certificados não confiáveis.  
   
 ## <a name="see-also"></a>Consulte também  
- [Trabalhar com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Como: criar certificados temporários para uso durante o desenvolvimento](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
+ [Trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [Como criar certificados temporários para uso durante o desenvolvimento](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)

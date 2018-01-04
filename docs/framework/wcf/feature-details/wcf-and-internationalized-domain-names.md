@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cae287ab440115b15f6c26209a3d40bee4f9703b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7a0a6cd2a809648aadfba9bac2c4ab35c26b4c65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-and-internationalized-domain-names"></a>WCF e nomes de domínio internacionalizados
 Foi adicionado suporte para permitir que os serviços WCF com nomes de domínio internacionalizados (IDNS). Um nome de domínio internacionalizados é um nome de domínio que contém caracteres não-ASCII. Esse suporte inclui a capacidade de hospedar um serviço WCF com um nome IDN e um cliente WCF para se comunicar com um serviço web com um nome IDN.  

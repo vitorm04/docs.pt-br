@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 05a110318bbe92f18d0bc6becb453a5d7851821c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 017d3e51022ad9980dc8f058415697c80a2a6b35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="federation-and-issued-tokens"></a>Federação e tokens emitidos
 Com [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], você pode criar clientes que se comunicam com segurança com os serviços que implementam as especificações de WS-Federation e WS-Trust. As especificações de usam XML, SOAP e WSDL Web Services Description Language () para fornecer mecanismos que permitem a autenticação e autorização em realms de confiança diferente.  
@@ -33,25 +34,25 @@ Com [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], você pode criar cl
  [Federação e confiabilidade](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)  
  Lista os problemas de design para estar ciente de quando criar federado serviços ou clientes.  
   
- [Como: criar um cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Como criar um cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
  Descreve os conceitos básicos de criação de um cliente federado com [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Como: configurar as credenciais em um serviço de Federação](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Como configurar as credenciais em um Serviço de Federação](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  Descreve as etapas de criação de um serviço federado.  
   
- [Como: criar uma WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [Como criar um WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
  Descreve como configurar clientes e serviços que usam o `WSFederationHttpBinding`.  
   
- [Como: criar um serviço de Token de segurança](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-token-service.md)  
+ [Como criar um serviço de token de segurança](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-token-service.md)  
  Descreve as etapas de criação de um serviço de token de segurança.  
   
- [Declarações e Tokens de segurança de asserções Markup Language (SAML)](../../../../docs/framework/wcf/feature-details/saml-tokens-and-claims.md)  
+ [Declarações e tokens de SAML (Security Assertions Markup Language)](../../../../docs/framework/wcf/feature-details/saml-tokens-and-claims.md)  
  Descreve os tokens de segurança asserções Markup Language (SAML), que são extensíveis e habilitar a criação avançada tipos de declaração.  
   
- [Como: configurar um emissor Local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [Como configurar um emissor Local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
  Descreve como criar um emissor local dos tokens de segurança.  
   
- [Como: desabilitar sessões seguranças em uma WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [Como: desabilitar sessões seguras em um WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  Descreve como desabilitar sessões seguras em uma `WSFederationHttpBinding`. Desabilitar sessões seguras é necessário ao criar uma Web farm que exige uma sessão para cada cliente.  
   
 ## <a name="reference"></a>Referência  

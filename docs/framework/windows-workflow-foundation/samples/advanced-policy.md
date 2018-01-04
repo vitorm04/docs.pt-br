@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b9752b5779f4fbb525488e88f2f11c98de7b4ba8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c83f4167ce1947b10f97e0cab5b5ddd2f8e00c76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="advanced-policy"></a>Diretiva avançada
 Este exemplo amplia o exemplo simples de política. Além das regras residenciais de desconto e de desconto de negócio de exemplo simples de política, várias regras novos foram adicionadas.  
@@ -89,4 +90,4 @@ Este exemplo amplia o exemplo simples de política. Além das regras residenciai
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Workflow.Activities.Rules.RuleSet>  
  <xref:System.Workflow.Activities.PolicyActivity>  
- [Diretiva simples](../../../../docs/framework/windows-workflow-foundation/samples/simple-policy.md)
+ [Política simples](../../../../docs/framework/windows-workflow-foundation/samples/simple-policy.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5886b327f1ea6d2866b9fc76bb29031ee870934e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3e6039567e4fad7fe4c014665dd3ae0c3082a9d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="supported-deployment-scenarios"></a>Cenários de desempenho com suporte
 O subconjunto de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] recursos com suporte para uso em aplicativos parcialmente confiáveis é projetado para atender aos requisitos de algumas, mas nem todos os cenários de uso [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. No servidor, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] atende os requisitos de escala da Internet compartilhada provedores de hospedagem que executam aplicativos de terceiros no [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] conjunto por motivos de segurança de permissões de confiança média. No cliente, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] suporte de confiança parcial é projetado para atender aos requisitos de tecnologias de implantação, como [implantação de ClickOnce](http://go.microsoft.com/fwlink/?LinkId=83712) ou [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]da tecnologia de aplicativo de navegador XAML, que permitem contínua e implantação segura de aplicativos de área de trabalho de sites não confiáveis.  

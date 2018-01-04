@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6aa79e76bd81c0d56b30d4bac2edd4b9cbef6b33
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c12bd11cee62cd769f7dffc142806fa5ab1b0137
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>Comparando os serviços Web ASP.NET com o WCF baseado em desenvolvimento
 O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] tem uma opção de modo de compatibilidade com o ASP.NET que permite que os aplicativos do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sejam programados e configurados como serviços Web ASP.NET, e simulam seu comportamento. As seções a seguir comparam os serviços Web ASP.NET e o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] com base no que é necessário para desenvolver aplicativos usando as duas tecnologias.  
@@ -761,4 +762,4 @@ public void Receive(Message input)
  O idioma da configuração do ASP.NET permite que você especifique a cultura dos serviços individuais. O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não oferece suporte a essa configuração, a não ser no modo de compatibilidade com o ASP.NET. Para localizar um serviço do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que não usa o modo de compatibilidade com o ASP.NET, compile o tipo de serviço em assemblies culturais e tenha pontos de extremidade específicos de cultura separados para cada assembly cultural.  
   
 ## <a name="see-also"></a>Consulte também  
- [Comparando serviços Web do ASP.NET ao WCF com base no propósito e padrões usados](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+ [Comparando serviços Web do ASP.NET ao WCF com base na finalidade e padrões usados](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)

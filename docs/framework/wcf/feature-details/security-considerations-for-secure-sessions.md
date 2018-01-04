@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 3154080682d406598b47122c64cc856ff8cb1f15
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: be460249ed877b2f67f2d153c2aea4a3cc4d2b37
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-considerations-for-secure-sessions"></a>Considerações de segurança para sessões seguras
 Você deve considerar os itens a seguir que afetam a segurança ao implementar sessões seguras. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Considerações sobre segurança, consulte [considerações de segurança](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) e [práticas recomendadas de segurança](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  
@@ -31,6 +32,6 @@ Você deve considerar os itens a seguir que afetam a segurança ao implementar s
  Isso significa que se você quiser um token personalizado derivada, você deve quebrar o seu tipo de cláusula em uma `SecurityTokenReference` elemento. Há uma opção para desativar a derivação, mas o padrão é derivar as chaves. Se você não incluir a chave, serializar o token de chave derivada for bem-sucedida, mas a tentativa de desserializá-lo lança uma exceção.  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: desabilitar sessões seguranças em uma WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [Como: desabilitar sessões seguras em um WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  [Considerações sobre segurança](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
  [Práticas recomendadas de segurança](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)

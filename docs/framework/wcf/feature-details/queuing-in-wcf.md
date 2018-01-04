@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1364aa4284bcc858a9164f78e14daecc1a3ad54
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3c50bbc54d56d3fdc7a848af0e77cfbb2c15c9bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queuing-in-wcf"></a>Enfileiramento no WCF
 Esta seção descreve como usar a comunicação em fila em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -115,9 +116,9 @@ Esta seção descreve como usar a comunicação em fila em [!INCLUDE[indigo1](..
 ### <a name="sample-code"></a>Código de exemplo  
  Para obter instruções passo a passo sobre como escrever WCF serviços que usam o MSMQ Consulte os tópicos a seguir:  
   
--   [Como: trocar mensagens com pontos de extremidade do WCF e aplicativos de enfileiramento de mensagens](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+-   [Como trocar mensagens com pontos de extremidade do WCF e aplicativos de enfileiramento de mensagens](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
--   [Como: Exchange mensagens em fila com pontos de extremidade do WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+-   [Como trocar mensagens na fila com pontos de extremidade do WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  Para obter um exemplo de código completo que ilustra o uso do MSMQ no WCF, consulte os tópicos a seguir:  
   
@@ -135,8 +136,8 @@ Esta seção descreve como usar a comunicação em fila em [!INCLUDE[indigo1](..
   
 -   [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
   
--   [Segurança no serviço de enfileiramento de mensagens](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
+-   [Segurança de mensagem através do enfileiramento de mensagem](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Pontos de extremidade de serviço e endereçamento de fila](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)  
- [Um aplicativo em fila de hospedagem na Web](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+ [Hospedagem na Web de um aplicativo na fila](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

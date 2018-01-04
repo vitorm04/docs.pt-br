@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 87121270d45637834b9499228075f49710073d21
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5322ff2c79ab5051b3a9aaaeaafe7db6c9c2f683
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="syndication-extensibility"></a>Extensibilidade de sindicalização
 A API de distribuição foi projetada para fornecer um modelo de programação do formato neutro que permite que o conteúdo distribuído ser gravado para a transmissão em uma variedade de formatos. O modelo de dados abstrato consiste das seguintes classes:  
@@ -55,5 +56,5 @@ A API de distribuição foi projetada para fornecer um modelo de programação d
 -   Substituir <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateItem> na classe MyExtensionFeed para instanciar um MyExtensionItem em vez do padrão <xref:System.ServiceModel.Syndication.SyndicationItem>. Uma série de métodos são definidos no <xref:System.ServiceModel.Syndication.SyndicationFeed> e <xref:System.ServiceModel.Syndication.SyndicationItem> que você pode criar <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationCategory>, e <xref:System.ServiceModel.Syndication.SyndicationPerson> objetos (por exemplo, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateLink>, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateCategory>, e <xref:System.ServiceModel.Syndication.SyndicationFeed.CreatePerson>). Tudo isso pode ser substituído para criar uma classe derivada personalizada.  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral de Sindicalização do WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- [Arquitetura de distribuição](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
+ [Visão geral de sindicalização do WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
+ [Arquitetura de sindicalização](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)

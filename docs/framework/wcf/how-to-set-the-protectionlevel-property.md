@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6105b1b367f9f8cab1f2ba3a38b148038478c780
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a9b90df85259dfe48f071ca2b4b8404cfe8e673e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>Como definir a propriedade ProtectionLevel
 Você pode definir o nível de proteção, aplicando um atributo apropriado e definindo a propriedade. Você pode configurar a proteção no nível de serviço para afetar todas as partes de todas as mensagens, ou você pode definir a proteção nos níveis de cada vez mais granulares de métodos para partes da mensagem. [!INCLUDE[crabout](../../../includes/crabout-md.md)]o `ProtectionLevel` propriedade, consulte [Noções básicas sobre nível de proteção](../../../docs/framework/wcf/understanding-protection-level.md).  
@@ -104,4 +105,4 @@ Você pode definir o nível de proteção, aplicando um atributo apropriado e de
  <xref:System.ServiceModel.FaultContractAttribute>  
  <xref:System.ServiceModel.MessageContractAttribute>  
  <xref:System.ServiceModel.MessageBodyMemberAttribute>  
- [Understanding Protection Level](../../../docs/framework/wcf/understanding-protection-level.md) (Noções básicas de nível de proteção)
+ [Noções básicas de nível de proteção](../../../docs/framework/wcf/understanding-protection-level.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0d9d2fb363aa753edc6d2d4002a948fbb35b75ad
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0330c386730c6b0436196bb5b85162bc4621c214
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-windows-communication-foundation-client"></a>Como utilizar o cliente do Windows Communication Foundation
 Este é o último dos seis tarefas necessárias para criar um basic [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplicativo. Para obter uma visão geral de todos os seis das tarefas, consulte o [Tutorial de Introdução](../../../docs/framework/wcf/getting-started-tutorial.md) tópico.  
@@ -148,11 +149,11 @@ Add(100,15.99) = 115.99Subtract(145,76.54) = 68.46Multiply(9,81.25) = 731.25Divi
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Building Clients](../../../docs/framework/wcf/building-clients.md) (Compilando clientes)  
- [How to: Create a Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md) (Como criar um cliente)  
+ [Compilando clientes](../../../docs/framework/wcf/building-clients.md)  
+ [Como criar um cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
  [Tutorial de Introdução](../../../docs/framework/wcf/getting-started-tutorial.md)  
- [Basic WCF Programming](../../../docs/framework/wcf/basic-wcf-programming.md) (Programação básica do WCF)  
- [Como: criar um contrato Duplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
- [Como: acessar serviços com um contrato Duplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
+ [Programação básica do WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Como criar um contrato duplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [Como acessar serviços com um contrato Duplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
  [Introdução](../../../docs/framework/wcf/samples/getting-started-sample.md)  
- [Hospedagem interna](../../../docs/framework/wcf/samples/self-host.md)
+ [Auto-hospedagem](../../../docs/framework/wcf/samples/self-host.md)

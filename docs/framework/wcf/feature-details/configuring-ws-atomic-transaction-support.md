@@ -14,11 +14,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d398df112a7309979ba35020fa1d9538aa0ce5d6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 922b2048a262e722a11ee77c41e96dddec411326
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>Configurando suporte de transações de WS-Atomic
 Este tópico descreve como você pode configurar o suporte do WS-AtomicTransaction (WS-AT) usando o utilitário de configuração do WS-AT.  
@@ -128,5 +129,5 @@ Este tópico descreve como você pode configurar o suporte do WS-AtomicTransacti
 -   31: detalhado  
   
 ## <a name="see-also"></a>Consulte também  
- [WS-AtomicTransaction Configuration Utility (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) [Utilitário de configuração de WS-AtomicTransaction (wsatConfig.exe)]  
- [WS-AtomicTransaction Configuration MMC Snap-in](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) (Snap-in do MMC de configuração de WS-AtomicTransaction)
+ [Utilitário de configuração de WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)  
+ [Snap-in do MMC de configuração de WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)

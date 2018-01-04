@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f502d24f98c9229d064be3de0e0edc081664dd03
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dd52e36199fc2412abb003d530dd5614cda8049b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wsdl-and-policy"></a>WSDL e política
 Este tópico aborda [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WSDL 1.1, detalhes de implementação de WS-Policy e mecanismo WS-PolicyAttachment, bem como declarações adicionais do WS-Policy e extensões WSDL 1.1 introduzidas por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -83,6 +84,6 @@ Este tópico aborda [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WSDL
 |mssp:RequireClientCertificate|Aninhados|Este elemento opcional especifica um requisito para um certificado de cliente a ser fornecido como parte do protocolo TLSNEGO. Se essa asserção estiver presente, um certificado de cliente deve ser fornecido. Se essa asserção não estiver presente, um certificado de cliente não deve ser fornecido. Essa declaração não deve ser usada fora mssp:SslContextToken.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Publicação de WSDL personalizado](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
- [Como: exportar o WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
- [Como: Importar WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+ [Publicação de WSDL personalizada](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
+ [Como exportar o WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
+ [Como importar WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

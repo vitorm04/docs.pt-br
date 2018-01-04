@@ -16,11 +16,12 @@ caps.latest.revision: "243"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49ed554c7bfea024acce6a6dc6d32db44a6e91f5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 76cc8f456701d65b675ce7b89436da5213ea9430
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-glossary-for-net-framework-45"></a>Glossário Windows Communication Foundation para o .NET Framework 4.5
 Os seguintes termos são definidos para a documentação do Windows Communication Foundation.  
@@ -49,7 +50,7 @@ Os seguintes termos são definidos para a documentação do Windows Communicatio
 |iniciando a operação|Uma operação que é chamada como o primeiro funcionamento de uma nova sessão. Iniciar operações não pode ser chamado somente após pelo menos uma operação iniciando foi chamada.|  
 |modelo de instâncias|Um serviço tem um modelo de instanciação. Existem três modelos instanciamento: &quot;único,&quot; no qual um único objeto CLR serviços os clientes. &quot;por chamada,&quot; no qual um novo objeto CLR é criado para lidar com cada chamada de cliente; e &quot;por sessão,&quot; em que um conjunto de CLR objetos são criados, um para cada sessão separada. A escolha de um modelo de instanciação depende dos requisitos de aplicativo e o padrão de uso esperado do serviço.|  
 |mensagem|Uma mensagem é uma unidade independente de dados que podem consistir de várias partes, incluindo um corpo e cabeçalhos.|  
-|contrato de mensagens|Um contato de mensagem descreve o formato de uma mensagem. Por exemplo, isso declara se os elementos da mensagem devem estar presentes em cabeçalhos ou no corpo, qual nível de segurança deve ser aplicado para quais elementos de mensagem e assim por diante.|  
+|contrato de mensagens|Um contrato de mensagem descreve o formato de uma mensagem. Por exemplo, isso declara se os elementos da mensagem devem estar presentes em cabeçalhos ou no corpo, qual nível de segurança deve ser aplicado para quais elementos de mensagem e assim por diante.|  
 |modo de segurança de mensagem|O modo de segurança de mensagem especifica que a segurança é fornecida implementando uma ou mais das especificações de segurança. Cada mensagem contém os mecanismos necessários para fornecer segurança durante seu trânsito e ativar os destinatários para detectar violação e descriptografar as mensagens. Nesse sentido, a segurança é encapsulada dentro de cada mensagem, fornecendo segurança de ponta a ponta em vários saltos. Como as informações de segurança se tornam parte da mensagem, também é possível incluir vários tipos de credenciais com a mensagem (elas são chamadas de reivindicações). Essa abordagem também tem a vantagem de permitir que a mensagem viaje com segurança em qualquer transporte, incluindo vários transportes entre sua origem e o destino. A desvantagem dessa abordagem é a complexidade dos mecanismos de criptografia empregados, resultando em implicações de desempenho.|  
 |metadados|Os metadados de um serviço descrevem as características de serviço que uma entidade externa precisa entender para se comunicar com o serviço. Os metadados podem ser consumidos pela ferramenta de utilitário de metadados de ServiceModel (Svcutil.exe) para gerar um cliente de WCF e configuração de rastreamento que um aplicativo cliente pode usar para interagir com o serviço.  Os metadados expostos pelo serviço incluem os documentos XML do esquema, que definem o contrato de dados do serviço, e os documentos WSDL, que descrevem os métodos do serviço.  Quando ativados, os metadados para o serviço são gerados automaticamente pela inspecionando o serviço e seus pontos de extremidade. Para publicar metadados de um serviço, você deverá explicitamente ativar o comportamento dos metadados.|  
 |contrato de operação|Um contrato de operação define os parâmetros e o tipo de retorno de uma operação. Ao criar uma interface que define o contrato de serviço, você significa um contrato de operação aplicando o T: Atributo de System.ServiceModel.OperationContractAttribute a cada definição do método que é parte do contrato. As operações podem ser modeladas como utilizar uma única mensagem e retornar uma única mensagem, ou como utilizar um conjunto de tipos e retornar um tipo. Nesse último caso, o sistema determina o formato para as mensagens que são trocadas pela operação.|  

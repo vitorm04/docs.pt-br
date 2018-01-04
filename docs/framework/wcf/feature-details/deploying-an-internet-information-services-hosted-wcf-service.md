@@ -13,11 +13,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b9b19e111e11097cbb4b4af60ae0b28956a4a381
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 869e3b81e94e6efaa8d6cd9f4f021b52b6b43f48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Implantando um Serviço WCF hospedado do Internet Information Services dos Serviços de Informações da Internet
 Desenvolver e implantar um serviço do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hospedado no IIS (Serviços de Informações da Internet) consiste nas seguintes tarefas:  
@@ -113,6 +114,6 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
  Por exemplo, um ponto de extremidade do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configurado para usar a autenticação resumida do HTTP deve residir em um diretório virtual do IIS que também seja configurado para permitir a autenticação resumida do HTTP. As combinações sem correspondência de configurações do IIS e configurações de ponto de extremidade do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] resultam em um erro durante a ativação do serviço.  
   
 ## <a name="see-also"></a>Consulte também  
- [Hospedagem no Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [Práticas recomendadas de hospedagem de serviços de informações da Internet](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [Hospedagem nos Serviços de Informações da Internet](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [Práticas recomendadas de hospedagem de Serviços de Informações da Internet](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
  [Recursos de hospedagem do Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201276)

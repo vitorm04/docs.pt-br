@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf12cac374759c1cb45a7086ac771a982758e78f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6761c044f166105a2e463d0f89ed0b3813d4b97a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-service-host-internals"></a>Internos do host de serviço de fluxo de trabalho
 <xref:System.ServiceModel.WorkflowServiceHost>Fornece um host para os serviços de fluxo de trabalho. Ele é responsável por escutar mensagens de entrada e roteá-los para a instância do serviço de fluxo de trabalho apropriado, ele controla descarregar e persistentes de fluxos de trabalho ociosos e muito mais. Este tópico descreve como WorkflowServiceHost processa mensagens de entrada.  
@@ -61,9 +62,9 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Serviços de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [Serviços de hospedagem de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/hosting-workflow-services.md)  
+ [Serviços de fluxo de trabalho de hospedagem](../../../../docs/framework/wcf/feature-details/hosting-workflow-services.md)  
  [Ponto de extremidade de controle de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)  
  [Exemplo de ponto de extremidade de gerenciamento de fluxo de trabalho](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)  
- [Como: configurar o fluxo de trabalho sem tratamento do comportamento de exceção com WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)  
+ [Como configurar um comportamento de exceção sem tratamento de fluxo de trabalho com o WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)  
  [Criando um serviço de fluxo de trabalho de longa execução](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)  
  [Persistência de fluxo de trabalho](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)

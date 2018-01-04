@@ -14,11 +14,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 620e039dd9a53a7c09eedd3d1a4892c5c43ffd2b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d41e9d2416ddbbd4c729b8c2a23754d19f0630d3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-transport"></a>Selecionando um transporte
 Este tópico discute os critérios para escolher entre os três transportes principais que estão incluídos no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]: HTTP, TCP e pipes nomeados. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]também inclui um (também conhecido como MSMQ) de enfileiramento de mensagens de transporte, mas este documento não aborda o enfileiramento de mensagens.  
@@ -79,6 +80,6 @@ Este tópico discute os critérios para escolher entre os três transportes prin
  <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
  <xref:System.ServiceModel.NetNamedPipeBinding>  
  <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
- [Bindings](../../../../docs/framework/wcf/feature-details/bindings.md) (Associações)  
- [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md) (Associações fornecidas pelo sistema)  
+ [Associações](../../../../docs/framework/wcf/feature-details/bindings.md)  
+ [Associações fornecidas pelo sistema](../../../../docs/framework/wcf/system-provided-bindings.md)  
  [Criando associações definidas pelo usuário](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)

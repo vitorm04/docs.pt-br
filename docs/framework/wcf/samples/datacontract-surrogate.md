@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8ffb8ec71d6a8bbbdf365b78ad13af7524cc33ba
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f14b69cba50839f3c4105b286af4de0523385b38
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datacontract-surrogate"></a>Alternativa de DataContract
 Este exemplo demonstra como processos como a serialização, desserialização, exportação de esquema e importação de esquema podem ser personalizados usando um contrato de dados alternativos classe. Este exemplo mostra como usar um substituto em um cenário de cliente e servidor onde os dados são serializados e transmitidos entre um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] cliente e serviço.  

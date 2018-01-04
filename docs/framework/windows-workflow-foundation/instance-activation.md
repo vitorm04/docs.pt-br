@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d33e809a0db0b812cf7311d7b5686d9125e80976
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 41615618857c804c37f00e9d20a031a6d17bcab3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="instance-activation"></a>Ativação de instância
 A instância Store de fluxo de trabalho do SQL executa uma tarefa periodicamente interna que acorde e detecte instâncias praticáveis ou activatable de fluxo de trabalho na base de dados de persistência. Se encontra uma instância viável de fluxo de trabalho, notifica o host de fluxo de trabalho que é capaz de ativar a instância. Se o armazenamento de instância encontra uma instância activatable de fluxo de trabalho, notifica um host genérico que ative um host de fluxo de trabalho, que executa por sua vez a instância de fluxo de trabalho. As seções neste tópico explica o processo de ativação de instância em detalhes.  

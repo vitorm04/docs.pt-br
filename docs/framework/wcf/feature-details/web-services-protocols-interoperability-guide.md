@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a7dfcd092cb7b21e31ec1098df5e9534cd27cfc9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b962452b6127d259733418969f1fb7b5036b1e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Guia de interoperabilidade de protocolos de serviços
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]implementa um número de protocolos de serviços da Web. Muitos desses protocolos incluem um número de pontos de extensibilidade da esquerda para a critério do implementador e opções. Este tópico fornece uma lista de Web services protocolos [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa. Outros tópicos nesta seção fornecem detalhes de implementação para cada protocolo tem suportado.  
@@ -75,7 +76,7 @@ ms.lasthandoff: 12/02/2017
 |WS-Secure Conversation|[Linguagem de conversa segura de serviços Web](http://go.microsoft.com/fwlink/?LinkId=95317)|  
 |WS-Trust 1.4|[Idioma de confiança de serviços Web](http://go.microsoft.com/fwlink/?LinkId=169514)|  
 |WS-SecurityPolicy 2005/07|[Linguagem de conversa segura de serviços Web](http://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> Como corrigida por errata enviado ao OASIS WS-SX Technical Committee.<br /><br /> [mensagem do WS-sx](http://go.microsoft.com/fwlink/?LinkId=96700)|  
-|WS-ReliableMessaging 1.1|[Protocolo de mensagens confiável versão 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)|  
+|WS-ReliableMessaging 1.1|[Protocolo de Reliable Messaging versão 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)|  
   
  <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>oferece suporte às especificações na tabela a seguir.  
   
@@ -111,12 +112,12 @@ ms.lasthandoff: 12/02/2017
 -   [Segurança básica de perfil 1.0 trabalho rascunho](http://go.microsoft.com/fwlink/?LinkId=96711)  
   
 ## <a name="see-also"></a>Consulte também  
- [Protocolos com suporte por associações de interoperabilidade fornecidas pelo sistema de serviços Web](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+ [Protocolos de serviços Web com suporte em associações de interoperabilidade fornecidas pelo sistema](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
  [Protocolos de mensagens](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)  
  [Referência de esquema de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
  [WSDL e política](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)  
  [Protocolos de segurança](../../../../docs/framework/wcf/feature-details/security-protocols.md)  
- [Protocolo de mensagens confiável versão 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)  
- [Protocolo de mensagens confiável versão 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)  
+ [Protocolo de Reliable Messaging versão 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)  
+ [Protocolo de Reliable Messaging versão 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)  
  [Protocolos de transação](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)  
- [Protocolo de intercâmbio de contexto](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)
+ [Protocolo de troca de contexto](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)

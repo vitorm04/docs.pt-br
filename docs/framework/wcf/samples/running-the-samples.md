@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1a37c7b01d4ef40727c02e0782422776086b5297
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3003c89b0cfcda9866c5b1accd154900bc650454
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Executando os exemplos do Windows Communication Foundation
 O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemplos podem ser executados em uma configuração de computador único ou entre computadores. Fornecido, os exemplos estão prontos para execução em um único computador. Em uma configuração entre computadores, é necessário modificar o arquivo de configuração do exemplo. Os procedimentos a seguir explicam como executar um exemplo em configurações do mesmo computador e entre computadores. Observe que há variações nas etapas para serviços hospedados no serviços de informações da Internet (IIS) e os exemplos auto-hospedado. A maioria dos exemplos estão hospedados no IIS; Consulte as informações do Leiame do exemplo para determinar como ele está hospedado.  

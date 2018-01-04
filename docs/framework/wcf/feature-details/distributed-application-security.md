@@ -16,11 +16,12 @@ caps.latest.revision: "32"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 842ce0efefcc026ad33d9be3b2b681fcfc9c0b59
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1e67c5da534e7b35d4d27c0164d9389c8afe252b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="distributed-application-security"></a>Segurança de aplicativos distribuídos
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]segurança é dividida em três áreas funcionais principais: transferir a segurança, controle de acesso e auditoria. Segurança de transferência fornece autenticação, integridade e confidencialidade. Transferência de segurança é fornecida por um dos seguintes: segurança, segurança de mensagem de transporte ou `TransportWithMessageCredential`.  
@@ -105,7 +106,7 @@ ms.lasthandoff: 11/21/2017
  O modo de segurança de mensagem também permite que você execute a segurança de transferência para que a credencial de serviço é trocada com o cliente como parte de uma negociação inicial. Para habilitar a negociação, defina o <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> propriedade `true`.  
   
 ## <a name="see-also"></a>Consulte também  
- [Endpoint Creation Overview](../../../../docs/framework/wcf/endpoint-creation-overview.md) (Visão geral de criação de ponto de extremidade)  
- [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md) (Associações fornecidas pelo sistema)  
+ [Visão geral de criação de ponto de extremidade](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
+ [Associações fornecidas pelo sistema](../../../../docs/framework/wcf/system-provided-bindings.md)  
  [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Modelo de segurança para o Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

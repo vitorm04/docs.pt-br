@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fbf351f0d71893457419d3b8b0e2cfb9c96ad0b0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2aa8adc0ce197c3776b8314009fcaa061bed884d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-feature-details"></a>Detalhes de funcionalidades do WCF
 O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite intenso controle sobre as funções de mensagens de um aplicativo. Os tópicos nesta seção fornecem detalhes sobre os recursos disponíveis. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Consulte básica de programação, [básicas de programação WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -30,7 +31,7 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite intenso contro
  [Serviços de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  Descreve como criar e configurar serviços de fluxo de trabalho.  
   
- [Pontos de extremidade: Endereços, associações e contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Pontos de extremidade: endereços, associações e contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
  Descreve como controlar vários aspectos do seu serviço.  
   
  [Serialização e transferência de dados](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
@@ -66,13 +67,13 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite intenso contro
  [Interoperabilidade e integração](../../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)  
  Descreve como usar o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para estender sua lógica existente, em vez de precisar reescrevê-la se você tiver um investimento substancial em lógica de aplicativo baseada em componente hospedada em COM+.  
   
- [Modelo de programação WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [Modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
  Descreve o modelo de programação da Web do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que permite aos desenvolvedores expor operações de serviço do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] a pontos de extremidade não SOAP.  
   
  [Sindicalização do WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
  Descreve o suporte para expor facilmente feeds de sindicalização de um serviço do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Integração de AJAX e suporte a JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
+ [Integração AJAX e suporte para JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
  Descreve o suporte para ASP.NET AJAX (Asynchronous JavaScript and XML) e o formato de dados JSON (JavaScript Object Notation) para permitir que serviços do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] exponham operações a clientes AJAX.  
   
  [Descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
@@ -91,4 +92,4 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite intenso contro
  <xref:System.ServiceModel.Routing>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Basic WCF Programming](../../../../docs/framework/wcf/basic-wcf-programming.md) (Programação básica do WCF)
+ [Programação básica do WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c6959ec7f2226f0d6554e9210b3ee1311871cdcf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 24336c180ad8d10a60567ebfeb0f0899f972e2c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-client-credential-type"></a>Como especificar o tipo de credencial de cliente
 Depois de definir um modo de segurança (transporte ou mensagem), você tem a opção de configuração de tipo de credencial de cliente. Essa propriedade especifica o tipo de credencial do cliente deve fornecer para o serviço de autenticação. [!INCLUDE[crabout](../../../includes/crabout-md.md)]configuração do modo de segurança (uma etapa necessária antes de configurar o cliente do tipo de credencial), consulte [como: definir o modo de segurança](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
@@ -68,5 +69,5 @@ Depois de definir um modo de segurança (transporte ou mensagem), você tem a op
     ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Securing Services](../../../docs/framework/wcf/securing-services.md) (Protegendo serviços)  
- [How to: Set the Security Mode](../../../docs/framework/wcf/how-to-set-the-security-mode.md) (Como definir o modo de segurança)
+ [Protegendo serviços](../../../docs/framework/wcf/securing-services.md)  
+ [Como definir o modo de segurança](../../../docs/framework/wcf/how-to-set-the-security-mode.md)

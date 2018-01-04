@@ -14,11 +14,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 91b03e29c2841434d4222f59ae62028bf2431a84
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a2785f74d9a07b267d836a9f6e6749d259a1ab21
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exporting-and-importing-metadata"></a>Exportando e importando metadados
 Em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], exportação de metadados é o processo de descrever os pontos de extremidade de serviço e projeção-los em uma representação padronizada paralela que os clientes podem usar para entender como usar o serviço. Importação de metadados de serviço é o processo de geração de <xref:System.ServiceModel.Description.ServiceEndpoint> instâncias ou partes de metadados de serviço.  
@@ -57,16 +58,16 @@ Em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], exportação de meta
  O <xref:System.ServiceModel.Description.WsdlExporter> tipo relança qualquer exceção capturada durante o processo de exportação. Essas exceções não são capturadas como erros de `Errors` propriedade. Uma vez o <xref:System.ServiceModel.Description.WsdlExporter> lançará uma exceção, ele está em um estado de falha e não pode ser reutilizado. O <xref:System.ServiceModel.Description.WsdlExporter> Adicionar avisos para sua `Errors` propriedade quando uma operação não pode ser exportada porque ele usa o curinga ações e quando os nomes de associação duplicada forem encontrados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Como: importar metadados para pontos de extremidade de serviço](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
+ [Como importar metadados para pontos de extremidade de serviço](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
  Descreve como importar metadados baixado para objetos de descrição.  
   
- [Como: exportar metadados de pontos de extremidade de serviço](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
+ [Como exportar metadados de pontos de extremidade de serviço](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
  Descreve como exportar objetos de descrição nos metadados.  
   
  [Referência WSDL e ServiceDescription](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
  Descreve o mapeamento entre os objetos de descrição e WSDL.  
   
- [Como: usar o Svcutil.exe para exportar metadados de código de serviço compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ [Como usar o Svcutil.exe para exportar metadados de código de serviço compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
  Descreve o uso de Svcutil.exe para exportar metadados para os serviços, contratos e tipos de dados em assemblies compilados.  
   
  [Referência de esquema de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  

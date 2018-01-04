@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ea506499cf6678beb51195654739f2537b98a188
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b75fe67d99fa611f248c8d5dbb779f47e2bc717d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-streaming"></a>Como habilitar transmissão
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]pode enviar mensagens usando transferências em buffer ou transmitidas. No modo de transferência em buffer padrão, uma mensagem deve ser entregue completamente antes de um destinatário possa lê-lo. No modo de transferência de streaming, o receptor pode começar a processar a mensagem antes de entregar completamente. O modo de streaming é útil quando as informações que são passadas é demoradas e podem ser processadas em série. O modo contínuo também é útil quando a mensagem é muito grande para ser totalmente armazenada em buffer.  
@@ -85,5 +86,5 @@ ms.lasthandoff: 12/02/2017
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Dados grandes e Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
+ [Dados grandes e streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
  [Fluxo](../../../../docs/framework/wcf/samples/stream.md)

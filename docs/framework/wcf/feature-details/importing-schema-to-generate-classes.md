@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ae7ed7b1d01420c8e542d9ecce577995e927adc3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a872fbd5be56fed3d01481d1740c70932fd60c06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importando esquema para gerar classes
 Para gerar classes de esquemas que podem ser usados com [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], use o <xref:System.Runtime.Serialization.XsdDataContractImporter> classe. Este tópico descreve o processo e variações.  
@@ -195,7 +196,7 @@ Para gerar classes de esquemas que podem ser usados com [!INCLUDE[indigo1](../..
  <xref:System.Runtime.Serialization.XsdDataContractExporter>  
  <xref:System.Runtime.Serialization.ImportOptions>  
  [Referência de esquema de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- [Substitutos de contrato de dados](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)  
+ [Alternativas de contrato de dados](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)  
  [Exportação e importação de esquema](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
  [Exportando esquemas de Classes](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)  
  [Referência de esquema de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)

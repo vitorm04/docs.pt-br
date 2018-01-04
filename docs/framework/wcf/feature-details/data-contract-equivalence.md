@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7367cabecc18f32860e0a391ce5cf48d54503dc6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4059fa401d082f4408080cf5fd13f1331314a2d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-equivalence"></a>Equivalência de contrato de dados
 Para um cliente enviar dados de um determinado tipo com êxito a um serviço ou um serviço para enviar dados com êxito a um cliente, o tipo de envio não necessariamente precisa existir na extremidade de recebimento. O único requisito é que os contratos de ambos os tipos de dados ser equivalentes. (Às vezes, equivalência estrita não é necessária, conforme discutido em [controle de versão de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  

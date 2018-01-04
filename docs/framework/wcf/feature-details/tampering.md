@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 96ab38de1fb2a932fefd4e37cbfab3d9bfbea616
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6ee041de1a9e009ca68ecc8bba8bc2fa06ba6ca3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tampering"></a>Violação
 *Violação* é o ato de alteração de uma mensagem ou a entrega de uma mensagem e usando a mensagem alterada para uma finalidade que não seja o que ele estivesse destinado.  
@@ -35,4 +36,4 @@ ms.lasthandoff: 12/02/2017
  [Elevação de privilégio](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
  [Negação de serviço](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
  [Cenários sem suporte](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
- [Ataques de repetição](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+ [Ataques de reprodução](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

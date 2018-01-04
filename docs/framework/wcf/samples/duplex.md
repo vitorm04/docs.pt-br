@@ -14,11 +14,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 88ad38a6a93a897e2362d61c1166b87813ab7859
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0baf0a188ccb67f50a57ea0a56bb16dc40c53bbc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="duplex"></a>Duplex
 O exemplo Duplex demonstra como definir e implementar um contrato duplex. Comunicação duplex ocorre quando um cliente estabelece uma sessão com um serviço e fornece o serviço de um canal em que o serviço pode enviar mensagens de volta ao cliente. Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md). Um contrato duplex é definido como um par de interfaces — uma interface principal do cliente para o serviço e uma interface de retorno de chamada do serviço ao cliente. Neste exemplo, o `ICalculatorDuplex` interface permite que o cliente executar operações matemáticas, calculando o resultado em uma sessão. O serviço retorna resultados sobre o `ICalculatorDuplexCallback` interface. Um contrato duplex requer uma sessão, porque um contexto deve ser estabelecido para correlacionar o conjunto de mensagens sendo enviadas entre o cliente e o serviço.  

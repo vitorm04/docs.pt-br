@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4db4b105bc958a19dc803aa74dc9193e8a8a7edb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e1b46239366c38b54a38e3ce62b59c81eeb3316c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Como utilizar a configuração para adicionar um ponto de extremidade AJAX ASP.NET
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]permite que você crie um serviço que permite que um ponto de extremidade AJAX ASP.NET habilitado disponível que pode ser chamado do JavaScript em um site do cliente. Para criar um ponto de extremidade, você pode usar um arquivo de configuração, assim como acontece com todos os outros [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pontos de extremidade, ou use um método que não requer nenhum elemento de configuração. Este tópico demonstra o método de configuração.  
@@ -116,4 +117,4 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>Consulte também  
  [Criando serviços WCF para o ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
- [Como: migrar serviços Web do ASP.NET AJAX habilitado para o WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+ [Como migrar serviços Web do ASP.NET habilitados para AJAX para o WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

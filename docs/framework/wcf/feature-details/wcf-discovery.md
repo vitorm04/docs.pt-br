@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c9b083180870e451816b54dddc10068ca7ec5db
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c11daa14a3897b05947dd6f8c3f3be99eb69c377
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-discovery"></a>Descoberta de WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]fornece suporte para habilitar o serviço seja detectável em tempo de execução de uma maneira interoperável usando o protocolo WS-Discovery. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]serviços podem anunciar a disponibilidade de rede usando uma mensagem de multicast ou em um servidor de proxy de descoberta. Aplicativos cliente podem pesquisar a rede ou um servidor de proxy de descoberta para localizar os serviços que atendem a um conjunto de critérios. Os tópicos nesta seção fornecem uma visão geral e descrevem o modelo de programação para esse recurso em detalhes.  
@@ -33,10 +34,10 @@ ms.lasthandoff: 12/02/2017
  [Modelo de objeto de descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)  
  Descreve as classes no modelo de objeto de extensibilidade de suporte do WS-Discovery.  
   
- [Como: adicionar programaticamente a capacidade de descoberta para um cliente e de serviço do WCF](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)  
+ [Como adicionar programaticamente a capacidade de descoberta a um cliente e serviço do WCF](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)  
  Mostra como fazer um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço detectável.  
   
- [Implementando um Proxy de descoberta](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md)  
+ [Implementando um proxy de descoberta](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md)  
  Descreve as etapas necessárias para implementar um proxy de descoberta, um serviço de descoberta que registra com o proxy de descoberta e um cliente que usa o proxy de descoberta para localizar o serviço de descoberta.  
   
  [Controle de versão de descoberta](../../../../docs/framework/wcf/feature-details/discovery-versioning.md)  
@@ -45,5 +46,5 @@ ms.lasthandoff: 12/02/2017
  [Configurando a descoberta em um arquivo de configuração](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md)  
  Mostra como configurar a descoberta na configuração.  
   
- [Usando o canal cliente Discovery](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
+ [Usando o canal de cliente de descoberta](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
  Mostra como usar um canal de cliente de descoberta ao escrever um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo cliente.

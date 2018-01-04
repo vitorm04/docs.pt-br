@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 340af20c44b8fde3fdff92d07837c3cc04ca517d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f187e6fb64fd3bbf08b3d0b92917ffc640b02186
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-validation"></a>Validação de cliente
 Os serviços com frequência publicar metadados para habilitar a geração automática e a configuração de tipos de proxy de cliente. Quando o serviço não for confiável, os aplicativos cliente devem validar que os metadados está de acordo com a política do aplicativo cliente sobre segurança, transações, o tipo de contrato de serviço e assim por diante. O exemplo a seguir demonstra como gravar um cliente de comportamento de ponto de extremidade que valida o ponto de extremidade de serviço para garantir que esse ponto de extremidade de serviço é seguro.  
@@ -74,4 +75,4 @@ Os serviços com frequência publicar metadados para habilitar a geração autom
     >  Esse script não remove os certificados de serviço em um cliente ao executar este exemplo entre computadores. Se você tiver executado [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] exemplos que usam certificados em computadores, certifique-se de desmarcar os certificados de serviço que foram instalados em CurrentUser - TrustedPeople repositório. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Consulte também  
- [Uso de metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+ [Usando metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)

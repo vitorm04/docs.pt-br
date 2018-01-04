@@ -14,11 +14,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9f016cc075b98b03c17959280215f7aa64f44e24
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c07130715b0416e7a8603b46a1c39c2f22dd7d2e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ws-reliable-session"></a>Sessão confiável de WS
 Este exemplo demonstra o uso de sessões confiáveis. Sessões confiáveis oferecem suporte para o sistema de mensagens confiável e sessões. Mensagens confiáveis tentativas de comunicação em caso de falha e permite que as garantias de entrega seja especificada, como na ordem chegada de mensagens. Sessões de mantêm o estado dos clientes entre chamadas. O exemplo implementa sessões para manter o estado do cliente e especifica as garantias de entrega em ordem.  

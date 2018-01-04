@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e8572541e0bf9ddcfb93939c177b5cb8c440b41
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f4b2c8daa176ef1f9aef24cac3125d59fcc02fa9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Como hospedar um serviço WCF em um serviço Windows gerenciado
 Este tópico descreve as etapas básicas necessárias para criar um serviço [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] que é hospedado por um serviço Windows. O cenário é habilitado pela opção de hospedagem do serviço Windows gerenciado, que é um serviço [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de execução longa, hospedado fora do IIS (Serviços de Informações da Internet), em um ambiente seguro que não é ativado por mensagem. O tempo de vida do serviço é controlado pelo sistema operacional. Essa opção de hospedagem está disponível em todas as versões do Windows.  
@@ -145,7 +146,7 @@ Este tópico descreve as etapas básicas necessárias para criar um serviço [!I
  Como a opção de "auto-hospedagem", o ambiente de hospedagem de serviços Windows requer que algum código de hospedagem seja criado como parte do aplicativo. O serviço é implementado como um aplicativo de console e contém seu próprio código de hospedagem. Em outros ambientes de hospedagem, como o WAS (Serviço de Ativação de Processos do Windows), hospedado no IIS, não é necessário que os desenvolvedores criem código de hospedagem.  
   
 ## <a name="see-also"></a>Consulte também  
- [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) (Configuração simplificada)  
- [Hospedando em um aplicativo gerenciado](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)  
- [Hosting Services](../../../../docs/framework/wcf/hosting-services.md) (Hospedando serviços)  
+ [Configuração simplificada](../../../../docs/framework/wcf/simplified-configuration.md)  
+ [Hospedagem em um aplicativo gerenciado](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)  
+ [Hospedando serviços](../../../../docs/framework/wcf/hosting-services.md)  
  [Recursos de hospedagem do Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201276)

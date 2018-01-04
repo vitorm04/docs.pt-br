@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ff5fbf570c826f5c430109d9f79b3d5f39382f6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a751245f0a933fda649d5919bab86abf2969dbf6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="streaming-message-transfer"></a>Transmissão de transferência de mensagem
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]transportes oferecem suporte a dois modos de transferência de mensagens:  
@@ -57,4 +58,4 @@ ms.lasthandoff: 12/02/2017
  Alterar o modo de transferência do buffer transmitido também altera a forma de canal nativo do TCP e transportes de pipe nomeado. Para transferências em buffer, a forma de canal nativo é <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. Para transferências em fluxo, os canais nativo são <xref:System.ServiceModel.Channels.IRequestChannel> e <xref:System.ServiceModel.Channels.IReplyChannel>. Alterar o modo de transferência em um aplicativo existente que usa estes transporta diretamente (ou seja, não por meio de um contrato de serviço) requer a alteração da forma de canal esperado para fábricas de canais e ouvintes.  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: habilitar o Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+ [Como habilitar o streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

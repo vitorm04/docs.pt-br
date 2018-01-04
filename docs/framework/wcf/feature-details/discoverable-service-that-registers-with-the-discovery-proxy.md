@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ffe4a94328d2728ca936425a58d4d641922356a0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ee99c7c74f0e1e2d287802d46cf4b716cfa3b76d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Como implementar um serviço de descoberta que registra usando o proxy de descoberta
 Este tópico é a segunda de quatro tópicos que descreve como implementar um proxy de descoberta. No tópico anterior, [como: implementar um Proxy de descoberta](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), implementado um proxy de descoberta. Neste tópico, você cria um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço que envia mensagens de aviso (`Hello` e `Bye`) para o proxy de descoberta, deixá-lo registrar e cancelar seu registro com o proxy de descoberta.  
@@ -296,5 +297,5 @@ namespace Microsoft.Samples.Discovery
 
 ## <a name="see-also"></a>Consulte também  
  [Descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
- [Como: implementar um Proxy de descoberta](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
- [Como: implementar um aplicativo cliente que usa o Proxy de descoberta para localizar um serviço](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+ [Como implementar um proxy de descoberta](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [Como implementar um aplicativo cliente que usa o proxy de descoberta para localizar um serviço](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

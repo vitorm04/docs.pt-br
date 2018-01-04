@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ef25e349ca6245ff3247f3a136d9a950d03d81d5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5ffd4a09de508a2353af356863f9e4f41fc253e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="forward-compatible-data-contracts"></a>Contratos de dados compatíveis por encaminhamento
 Um recurso do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sistema de contrato de dados é que os contratos podem evoluir ao longo do tempo maneiras incondicional. Ou seja, um cliente com uma versão mais antiga de um contrato de dados pode se comunicar com um serviço com uma versão mais recente do mesmo contrato de dados, ou um cliente com uma versão mais recente de um contrato de dados pode se comunicar com uma versão mais antiga do mesmo contrato de dados. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Práticas recomendadas: controle de versão de contrato de dados](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -54,5 +55,4 @@ Um recurso do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sistema de
  <xref:System.Runtime.Serialization.IExtensibleDataObject>  
  <xref:System.Runtime.Serialization.ExtensionDataObject>  
  [Controle de versão de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
- [Best Practices: Data Contract Versioning](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md) 
-(Práticas recomendadas: controle de versão de contrato de dados)
+ [Práticas recomendadas: controle de versão de contrato de dados](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)

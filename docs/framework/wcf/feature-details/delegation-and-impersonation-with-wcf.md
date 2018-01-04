@@ -19,11 +19,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9cd9e5c4f978eb6e8492d9bd6c90a32f87cfbce9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6319a9793698e12a984c875670d71b2cbb0b00ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegação e representação com o WCF
 *Representação* é uma técnica comum que os serviços usam para restringir o acesso de cliente aos recursos de um domínio serviço. Recursos de domínio de serviço podem ser recursos do computador, como arquivos locais (representação), ou um recurso em outro computador, como um compartilhamento de arquivo (delegação). Para um aplicativo de exemplo, consulte [representar o cliente](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Para obter um exemplo de como usar a representação, consulte [como: representar um cliente em um serviço](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -31,7 +32,7 @@ ms.lasthandoff: 12/02/2017
 > [!IMPORTANT]
 >  Lembre-se de que, ao representar um cliente em um serviço, o serviço é executado com as credenciais do cliente, que podem ter mais privilégios que o processo do servidor.  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  Normalmente, os clientes chamar um serviço para que o serviço executar alguma ação no nome do cliente. A representação permite que o serviço atuar como o cliente ao executar a ação. A delegação permite que um serviço front-end encaminhar a solicitação do cliente para um serviço de back-end de forma que o serviço de back-end também pode representar o cliente. Geralmente, a representação é usada como uma maneira de verificar se um cliente está autorizado a executar uma ação específica, enquanto a delegação é uma maneira de fluxo de recursos de representação, junto com a identidade do cliente, para um serviço back-end. A delegação é um recurso do domínio Windows que pode ser usado quando a autenticação Kerberos é executada. A delegação é diferente do fluxo de identidade e, como a delegação transfere a capacidade de representar o cliente sem posse da senha do cliente, é uma quantidade maior operação privilegiada de fluxo de identidade.  
   
  Representação e delegação exigem que o cliente tenha uma identidade do Windows. Se um cliente não possui uma identidade do Windows, a única opção disponível é a identidade do cliente para o segundo serviço de fluxo.  
@@ -231,5 +232,5 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
  <xref:System.Security.Principal.TokenImpersonationLevel.Identification>  
  [Usando a representação com segurança de transporte](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
  [Representar o cliente](../../../../docs/framework/wcf/samples/impersonating-the-client.md)  
- [How to: Impersonate a Client on a Service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md) (Como representar um cliente em um serviço)  
- [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)]
+ [Como representar um cliente em um serviço](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
+ [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

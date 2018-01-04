@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e0fe1f8641de2b4ee504deeae8f97b312dfe9b99
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fe1be9177f3e811a3037377360f46f42904d5af3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="form-post"></a>Postagem de formulário
 Este exemplo demonstra como estender o WCF REST modelo de programação para dar suporte a novos formatos de solicitação de entrada. O exemplo também inclui uma implementação de um formatador que pode desserializar uma solicitação de uma postagem de formulário HTML em um [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tipo. Além disso, o exemplo usa um modelo T4 para retornar uma página HTML, que fornece um formulário HTML que usuários podem lançar o serviço WCF REST.  

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8c25403f298444732f6787979add595bd877bb2c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e4cfae36dfcb65dfd93dfc4fb1d6b64ba01e1b11
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>How to: Replace the WCF URL Reservation with a Restricted Reservation
 Uma reserva de URL permite restringir quem pode receber mensagens de uma URL ou um conjunto de URLs. Uma reserva consiste em um modelo de URL, uma lista de controle de acesso (ACL) e um conjunto de sinalizadores. O modelo de URL define qual afeta a reserva de URLs. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]como os modelos de URL são processados, consulte [roteamento de solicitações de entrada](http://go.microsoft.com/fwlink/?LinkId=136764). A ACL controla qual usuário ou grupo de usuários tem permissão para receber mensagens das URLs especificadas. Os sinalizadores indicam se a reserva é para conceder uma permissão de usuário ou grupo para escutar a URL diretamente ou a permissão para escutar algum outro processo.  

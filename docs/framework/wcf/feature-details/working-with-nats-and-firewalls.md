@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5587300edf739eedb99084735eda81538ab61ef7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cae680c8958c86dc57a2aff3c2d567e1fdac981d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-nats-and-firewalls"></a>Trabalhando com NATs e firewalls
 O cliente e o servidor de uma conexão de rede com frequência não têm uma conexão direta e abrir o caminho para a comunicação. Pacotes são filtradas, roteadas, analisados e transformados em máquinas de ponto de extremidade e intermediários máquinas na rede. Conversões de endereço de rede (NAT) e firewalls são exemplos comuns de aplicativos intermediários que podem participar de comunicação de rede.  
@@ -65,14 +66,14 @@ O cliente e o servidor de uma conexão de rede com frequência não têm uma con
   
 |Endereçamento|Direto de servidor|Servidor direto com NAT transversal|Servidor NAT|Servidor NAT com NAT transversal|  
 |--------------------|-------------------|--------------------------------------|----------------|-----------------------------------|  
-|Direto do cliente|Qualquer transporte e MEPS|Qualquer transporte e MEPS|Não há suporte.|Não há suporte.|  
-|Cliente diretamente com o percurso de NAT|Qualquer transporte e MEPS.|Qualquer transporte e MEPS.|Não há suporte.|TCP com Teredo e qualquer MEPS. [!INCLUDE[wv](../../../../includes/wv-md.md)]tem uma opção de configuração de máquina para o suporte HTTP com Teredo.|  
-|Cliente NAT|Qualquer transporte não dual e MEPS. Duplex MEPS requer o transporte TCP.|Qualquer transporte não dual e MEPS. Duplex MEPS requer o transporte TCP.|Não há suporte.|Não há suporte.|  
-|Cliente NAT com NAT transversal|Qualquer transporte não dual e MEPS. Duplex MEPS requer o transporte TCP.|HTTP quase dupla e qualquer MEPS. Duplex MEPS requer o transporte TCP. Transporte TCP dupla requer Teredo. [!INCLUDE[wv](../../../../includes/wv-md.md)]tem uma opção de configuração de máquina para o suporte HTTP com Teredo.|Não há suporte.|TCP com Teredo e qualquer MEPS. [!INCLUDE[wv](../../../../includes/wv-md.md)]tem uma opção de configuração de máquina para o suporte HTTP com Teredo.|  
+|Direto do cliente|Qualquer transporte e MEPS|Qualquer transporte e MEPS|Sem suporte.|Sem suporte.|  
+|Cliente diretamente com o percurso de NAT|Qualquer transporte e MEPS.|Qualquer transporte e MEPS.|Sem suporte.|TCP com Teredo e qualquer MEPS. [!INCLUDE[wv](../../../../includes/wv-md.md)]tem uma opção de configuração de máquina para o suporte HTTP com Teredo.|  
+|Cliente NAT|Qualquer transporte não dual e MEPS. Duplex MEPS requer o transporte TCP.|Qualquer transporte não dual e MEPS. Duplex MEPS requer o transporte TCP.|Sem suporte.|Sem suporte.|  
+|Cliente NAT com NAT transversal|Qualquer transporte não dual e MEPS. Duplex MEPS requer o transporte TCP.|HTTP quase dupla e qualquer MEPS. Duplex MEPS requer o transporte TCP. Transporte TCP dupla requer Teredo. [!INCLUDE[wv](../../../../includes/wv-md.md)]tem uma opção de configuração de máquina para o suporte HTTP com Teredo.|Sem suporte.|TCP com Teredo e qualquer MEPS. [!INCLUDE[wv](../../../../includes/wv-md.md)]tem uma opção de configuração de máquina para o suporte HTTP com Teredo.|  
   
 |Restrições de firewall|Servidor aberto|Servidor de firewall gerenciado|Servidor com o firewall somente HTTP|Servidor com o firewall apenas de saída|  
 |---------------------------|-----------------|----------------------------------|-------------------------------------|-----------------------------------------|  
-|Abrir do cliente|Qualquer transporte e MEPS.|Qualquer transporte e MEPS.|Qualquer transporte HTTP e MEPS.|Não há suporte.|  
-|Cliente com o firewall gerenciado|Qualquer transporte não dual e MEPS. Duplex MEPS requer o transporte TCP.|Qualquer transporte não dual e MEPS. Duplex MEPS requer o transporte TCP.|Qualquer transporte HTTP e MEPS.|Não há suporte.|  
-|Cliente com o firewall somente HTTP|Qualquer transporte HTTP e MEPS.|Qualquer transporte HTTP e MEPS.|Qualquer transporte HTTP e MEPS.|Não há suporte.|  
-|Cliente com o firewall apenas de saída|Qualquer transporte não dual e MEPS. Duplex MEPS requer o transporte TCP.|Qualquer transporte não dual e MEPS. Duplex MEPS requer o transporte TCP.|Qualquer transporte HTTP e qualquer MEPS não-duplex.|Não há suporte.|
+|Abrir do cliente|Qualquer transporte e MEPS.|Qualquer transporte e MEPS.|Qualquer transporte HTTP e MEPS.|Sem suporte.|  
+|Cliente com o firewall gerenciado|Qualquer transporte não dual e MEPS. Duplex MEPS requer o transporte TCP.|Qualquer transporte não dual e MEPS. Duplex MEPS requer o transporte TCP.|Qualquer transporte HTTP e MEPS.|Sem suporte.|  
+|Cliente com o firewall somente HTTP|Qualquer transporte HTTP e MEPS.|Qualquer transporte HTTP e MEPS.|Qualquer transporte HTTP e MEPS.|Sem suporte.|  
+|Cliente com o firewall apenas de saída|Qualquer transporte não dual e MEPS. Duplex MEPS requer o transporte TCP.|Qualquer transporte não dual e MEPS. Duplex MEPS requer o transporte TCP.|Qualquer transporte HTTP e qualquer MEPS não-duplex.|Sem suporte.|

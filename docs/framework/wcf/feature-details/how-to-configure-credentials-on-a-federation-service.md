@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cb5e3cc0e33947f1797e283461738f96b6d4a8b4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 243dbd73d60577cbda2d8cf4fad1fd2e510d87ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Como configurar credenciais em um serviço de federação
 Em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], criar um serviço federado consiste nos seguintes procedimentos principais:  
@@ -84,9 +85,9 @@ Em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], criar um serviço fe
 ## <a name="see-also"></a>Consulte também  
  [Federação](../../../../docs/framework/wcf/feature-details/federation.md)  
  [Federação e confiabilidade](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)  
- [Exemplo de Federação](../../../../docs/framework/wcf/samples/federation-sample.md)  
- [Como: desabilitar sessões seguranças em uma WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
- [Como: criar uma WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
- [Como: criar um cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Trabalhar com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Modos de autenticação SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)
+ [Exemplo de federação](../../../../docs/framework/wcf/samples/federation-sample.md)  
+ [Como: desabilitar sessões seguras em um WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [Como criar um WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [Como criar um cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [Modos de autenticação de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e03a38e2a93dd866bc3da65527d5410b09009e00
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b95ee7c28c67ff861dc401d1405306c78b9663de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Como criar certificados X.509 que podem ser acessados pelo WCF
 Para disponibilizar um certificado x. 509 para [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], código do aplicativo deve especificar o nome do repositório de certificado e o local. Em determinadas circunstâncias, a identidade do processo deve ter acesso ao arquivo que contém a chave privada associada ao certificado x. 509. Para obter a chave privada associada com um certificado x. 509 no repositório de certificados, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] deve ter permissão para fazer isso. Por padrão, somente o proprietário e a conta do sistema podem acessar a chave privada de um certificado.  
@@ -82,5 +83,5 @@ Para disponibilizar um certificado x. 509 para [!INCLUDE[indigo1](../../../../in
   
 ## <a name="see-also"></a>Consulte também  
  [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)  
- [Como: recuperar a impressão digital de um certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)  
- [Trabalhar com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+ [Como recuperar a impressão digital de um certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)  
+ [Trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

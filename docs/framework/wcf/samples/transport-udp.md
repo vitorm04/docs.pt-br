@@ -13,11 +13,12 @@ caps.latest.revision: "48"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fc30a755278251ac9e06f2ddd56e2c369b950af4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1933d216f991b78e21a56ec67826dce0b4a7b24a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-udp"></a>Transporte: UDP
 O transporte UDP demonstra como implementar UDP unicast e multicast como um personalizado [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] transporte. O exemplo descreve o procedimento recomendado para a criação de um transporte personalizado no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], usando a estrutura de canal e seguindo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] práticas recomendadas. As etapas para criar um transporte personalizado são da seguinte maneira:  

@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 680a86d453dd8ca7c78d0ca6ba60cbaa691e44f3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f6256db06825a79b5235b92e2ed205608f04aac7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="services-and-transactions"></a>Serviços e transações
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]aplicativos podem iniciar uma transação de dentro de um cliente e coordenar a transação na operação de serviço. Os clientes podem iniciar uma transação e chamar várias operações de serviço e certifique-se de que as operações de serviço sejam confirmadas ou revertidas como uma única unidade.  
@@ -98,6 +99,6 @@ using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Require
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Suporte transacional em System. ServiceModel](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)  
+ [Suporte transacional em System.ServiceModel](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)  
  [Modelos de transação](../../../docs/framework/wcf/feature-details/transaction-models.md)  
  [Fluxo de transação WS](../../../docs/framework/wcf/samples/ws-transaction-flow.md)

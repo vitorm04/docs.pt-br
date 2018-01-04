@@ -14,11 +14,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c0952f238c34176112f6ec6a8520fb603cca4750
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f1d3f7ed4ebde0f607b3c86cf9879d219af85b20
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queues-overview"></a>Visão geral de filas
 Esta seção apresenta o geral e principais conceitos por trás de comunicação em fila. Seções subsequentes entram em detalhes sobre como os conceitos de enfileiramento de mensagens descritos aqui são manifestados em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -88,8 +89,8 @@ Esta seção apresenta o geral e principais conceitos por trás de comunicação
  [Sessões e filas](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
  [Filas de mensagens mortas](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
  [Comunicação em fila volátil](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
- [O Windows Communication Foundation para enfileiramento de mensagens](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
- [Instalando o enfileiramento de mensagens (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
+ [Windows Communication Foundation para Enfileiramento de Mensagens](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
+ [Instalando o Enfileiramento de Mensagens (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
  [Exemplos de associação de integração de serviço de enfileiramento de mensagem](http://msdn.microsoft.com/en-us/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
  [Enfileiramento de mensagens para o Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
- [Segurança no serviço de enfileiramento de mensagens](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+ [Segurança de mensagem através do enfileiramento de mensagem](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

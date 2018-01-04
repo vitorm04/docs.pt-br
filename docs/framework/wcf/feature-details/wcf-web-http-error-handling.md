@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 156960a6594f5475e339b36e5dabf46f26d13d62
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3c5f397d50a5a97801241afd8e64abf2e56b05dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-web-http-error-handling"></a>Tratamento de erros HTTP Web do WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Tratamento de erros de Web HTTP permite que você retorne erros de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços Web HTTP que especificam um status HTTP de código e retornar detalhes do erro usando o mesmo formato que a operação (por exemplo, XML ou JSON).  
@@ -60,8 +61,8 @@ Public string Operation2()
  <xref:System.ServiceModel.Web.WebFaultException>é um <xref:System.ServiceModel.FaultException> e, portanto, pode ser usado como o modelo de programação de exceção de falha para os serviços que expõem pontos de extremidade SOAP, bem como a web pontos de extremidade HTTP.  
   
 ## <a name="see-also"></a>Consulte também  
- [Modelo de programação WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [Modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
  [Formatação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)  
- [Defining and Specifying Faults](../../../../docs/framework/wcf/defining-and-specifying-faults.md) (Definindo e especificando falhas)  
- [Tratando exceções e falhas](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)  
- [Sending and Receiving Faults](../../../../docs/framework/wcf/sending-and-receiving-faults.md) (Enviando e recebendo falhas)
+ [Definindo e especificando falhas](../../../../docs/framework/wcf/defining-and-specifying-faults.md)  
+ [Tratamento de exceções e falhas](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)  
+ [Enviando e recebendo falhas](../../../../docs/framework/wcf/sending-and-receiving-faults.md)

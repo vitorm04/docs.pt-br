@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 75b18dab37a18723671cebf51c3cc943b907b38a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fa6f9d0b9631420013593cb44903b5451549e8c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Como fazer intercâmbio de mensagens com pontos de extremidade do WCF e aplicativos de enfileiramento de mensagens
 Você pode integrar aplicativos existentes do serviço de enfileiramento de mensagens (MSMQ) com [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplicativos usando a associação de integração do MSMQ para converter as mensagens MSMQ em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mensagens. Isso permite que você chame em aplicativos de receptor MSMQ de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clientes, bem como chamar em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços de aplicativos de remetente do MSMQ.  
@@ -74,8 +75,8 @@ Você pode integrar aplicativos existentes do serviço de enfileiramento de mens
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral de filas](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
- [Como: Exchange mensagens em fila com pontos de extremidade do WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- [O Windows Communication Foundation para enfileiramento de mensagens](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
- [Instalando o enfileiramento de mensagens (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
+ [Como trocar mensagens na fila com pontos de extremidade do WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [Windows Communication Foundation para Enfileiramento de Mensagens](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
+ [Instalando o Enfileiramento de Mensagens (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
  [Enfileiramento de mensagens para o Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
- [Segurança no serviço de enfileiramento de mensagens](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+ [Segurança de mensagem através do enfileiramento de mensagem](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

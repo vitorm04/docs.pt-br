@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bcda7f9edc741e8f0c9c56214119255ca2777d77
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 541770db6b9cc624fd08ab4db275bc63fa5deca9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="channels-extensibility"></a>Extensibilidade de canais
 Esta seção contém exemplos que demonstram os canais personalizados.  
@@ -29,7 +30,7 @@ Esta seção contém exemplos que demonstram os canais personalizados.
  [Perfil seguro confiável](../../../../docs/framework/wcf/samples/reliable-secure-profile.md)  
  Demonstra como compor [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e perfil seguro confiável (RSP).  
   
- [Distribuidor de canal personalizado](../../../../docs/framework/wcf/samples/custom-channel-dispatcher.md)  
+ [Dispatcher de canal personalizado](../../../../docs/framework/wcf/samples/custom-channel-dispatcher.md)  
  Demonstra como criar a pilha de canais de forma personalizada implementando <xref:System.ServiceModel.ServiceHostBase> diretamente e como criar um distribuidor de canal personalizado no ambiente de host da Web.  
   
  [Canal de agrupamento](../../../../docs/framework/wcf/samples/chunking-channel.md)  
@@ -41,5 +42,5 @@ Esta seção contém exemplos que demonstram os canais personalizados.
  [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md)  
  Demonstra como criar um canal de protocolo personalizado para usar cookies HTTP para o gerenciamento de sessão.  
   
- [Interceptor de mensagem personalizado](../../../../docs/framework/wcf/samples/custom-message-interceptor.md)  
+ [Interceptador de mensagem personalizado](../../../../docs/framework/wcf/samples/custom-message-interceptor.md)  
  Demonstra como implementar um elemento de associação personalizada que cria fábricas de canais e ouvintes de canais para interceptar todas as mensagens de entrada e saídas em um ponto específico na pilha de tempo de execução.

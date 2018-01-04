@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5c238d4c923b00a6c3387caa9bdafd69b126753c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 37dea97db8816f68f0331580cfa21daed7f69914
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-analytic-tracing"></a>Rastreamento analítico do WCF
 Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no fluxo de analíticos rastreamentos que [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] grava ETW no [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Rastreamentos analíticos destinam-se para tornar mais fácil obter visibilidade em seus serviços sem pagar uma penalidade de desempenho alto. Este exemplo mostra como usar o <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> APIs para eventos de gravação que se integram ao [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços.  
@@ -45,7 +46,7 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
 ## <a name="custom-event-details"></a>Detalhes do evento personalizado  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]do manifesto do provedor de eventos ETW define três eventos que são projetados para ser emitida por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] autores de dentro do código de serviço do serviço. A tabela a seguir mostra uma divisão dos três eventos.  
   
-|Evento|Descrição|ID do evento|  
+|evento|Descrição|ID do evento|  
 |-----------|-----------------|--------------|  
 |UserDefinedInformationEventOccurred|Emita esse evento quando algo Observação acontece em seu serviço que não é um problema. Por exemplo, você pode emitir um evento com êxito após uma chamada para um banco de dados.|301|  
 |UserDefinedWarningOccurred|Emitir este evento quando ocorre um problema que pode resultar em uma falha no futuro. Por exemplo, você pode emitir um evento de aviso quando uma chamada para um banco de dados falhar, mas você conseguiu recuperar voltando para um repositório de dados redundantes.|302|  

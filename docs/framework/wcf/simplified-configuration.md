@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2e9d851d083f0b3a1bd00bafe5b0805a55635158
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3ff1dee5a57b0c134c25631ce5c694b1b6b2c006
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="simplified-configuration"></a>Configuração simplificada
 Configurando [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] services pode ser uma tarefa complexa. Há muitas opções diferentes e nem sempre é fácil determinar quais configurações são necessárias. Enquanto os arquivos de configuração aumentará a flexibilidade de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviços, eles também são a origem para muitos difíceis de encontrar problemas. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]trata esses problemas e fornece uma maneira de reduzir o tamanho e a complexidade da configuração do serviço.  
@@ -121,9 +122,9 @@ Configurando [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] services pode 
 >  Esse recurso se relaciona apenas a configuração do serviço WCF, não a configuração de cliente. A maioria das vezes, a configuração de cliente do WCF será gerada por uma ferramenta como svcutil.exe ou adicionar uma referência de serviço do Visual Studio. Se você estiver configurando um cliente WCF manualmente, será necessário adicionar um \<cliente > elemento para a configuração e especifique quaisquer pontos de extremidade que você deseja chamar.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configuring Services Using Configuration Files](../../../docs/framework/wcf/configuring-services-using-configuration-files.md) (Configurando serviços usando arquivos de configuração)  
- [Configuring Bindings for Services](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md) (Configurando associações para serviços)  
+ [Configurando serviços usando arquivos de configuração](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
+ [Configurando associações para serviços](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
  [Configurando associações fornecidas pelo sistema](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Configuring Services](../../../docs/framework/wcf/configuring-services.md) (Configurando serviços)  
+ [Configurando serviços](../../../docs/framework/wcf/configuring-services.md)  
  [Configuring Windows Communication Foundation Applications](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a) (Configurando aplicativos do Windows Communication Foundation)  
- [Configuring WCF Services in Code](../../../docs/framework/wcf/configuring-wcf-services-in-code.md) (Configurando serviços do WCF em código)
+ [Configurando serviços do WCF em código](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)

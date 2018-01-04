@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 950e748ae8ea883ac3e8d5257ef9ab07dffc4acc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6c5042e73945c54da2b1ee71fc5ea61727dc73c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>Como utilizar o provedor de associação do ASP.NET
 O [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de associação é um recurso que permite [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aos desenvolvedores criar sites da Web que permitem aos usuários criar combinações de nome e senha de usuário exclusivo. Com esse recurso, qualquer usuário pode estabelecer uma conta com o site e entre para obter acesso exclusivo para o site e seus serviços. Isso é diferente de segurança do Windows, que exige que os usuários possuem contas em um domínio do Windows. Em vez disso, qualquer usuário que forneça suas credenciais (a combinação de nome e senha de usuário) pode usar o site e seus serviços.  
@@ -165,5 +166,5 @@ O [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedor de associa�
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: usar o provedor de função ASP.NET com um serviço](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
+ [Como usar o provedor de função ASP.NET com um serviço](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
  [Provedor de função e associação](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)

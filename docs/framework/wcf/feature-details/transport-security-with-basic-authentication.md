@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f7b744fff9e779db842402c5328dfeb5f3904071
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fe6b996c37e66f41c3946b8ef3437f8fa82c5201
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-security-with-basic-authentication"></a>Segurança de transporte com autenticação básica
 A ilustração a seguir mostra um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] cliente e serviço. O servidor precisa de um certificado x. 509 válido que pode ser usado para Secure Sockets Layer (SSL) e os clientes devem confiar em certificado do servidor. Além disso, o serviço Web já tem uma implementação de SSL que pode ser usada. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Habilitar autenticação básica no Internet Information Services (IIS), consulte [http://go.microsoft.com/fwlink/?LinkId=83822](http://go.microsoft.com/fwlink/?LinkId=83822).  
@@ -123,8 +124,8 @@ A ilustração a seguir mostra um [!INCLUDE[indigo1](../../../../includes/indigo
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>  
  <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>  
- [Trabalhar com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Como: configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [Trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [Como configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
  [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [\<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)  
  [Modelo de segurança para o Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

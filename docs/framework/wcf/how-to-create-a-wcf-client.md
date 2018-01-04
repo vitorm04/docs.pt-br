@@ -16,11 +16,12 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cd2740cfef2a618e4ab220f7db84fc78a10e0980
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2591cad6354ec40f1fb6ead265c84a67adf3eec8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a>Como criar um cliente do Windows Communication Foundation
 Esta é a quarta das seis tarefas necessárias para criar um aplicativo [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Para obter uma visão geral de todos os seis das tarefas, consulte o [Tutorial de Introdução](../../../docs/framework/wcf/getting-started-tutorial.md) tópico.  
@@ -62,8 +63,8 @@ Esta é a quarta das seis tarefas necessárias para criar um aplicativo [!INCLUD
  Agora você criou o proxy que o aplicativo cliente usará para chamar o serviço de calculadora. Vá para o próximo tópico na série: [como: configurar um cliente](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)]  
+ [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
  [Introdução](../../../docs/framework/wcf/samples/getting-started-sample.md)  
- [Hospedagem interna](../../../docs/framework/wcf/samples/self-host.md)  
- [Como: publicar metadados para um serviço usando um arquivo de configuração](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
- [Como: usar o Svcutil.exe para baixar documentos de metadados](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)
+ [Auto-hospedagem](../../../docs/framework/wcf/samples/self-host.md)  
+ [Como publicar metadados para um serviço usando um arquivo de configuração](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ [Como usar o Svcutil.exe para baixar documentos de metadados](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)

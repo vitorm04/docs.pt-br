@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 3981a0d0c82b8bc35536a9afd702e753fcf07db5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 78e787c129c0161e8730472124ee4162e2d1ba9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>LeiaMe para exemplo de autenticação de proteção estendida
 Proteção estendida é uma iniciativa de segurança para impedir ataques man-in-the-middle (MITM), em que um invasor (o "man-in-the-middle") intercepta as credenciais do cliente e as utiliza para acessar recursos protegidos no servidor pretendido do cliente.  

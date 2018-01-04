@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0abc1ac1cea6c9799c3d6bb349869b77f1d0b7c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4b7ffdc00a7723fd6b514fbb5577c48da15d719c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-non-service-workflow-in-iis"></a>Como hospedar um fluxo de trabalho sem serviço no IIS
 Fluxos de trabalho que não são serviços de fluxo de trabalho podem ser hospedados em IIS / WAS. Isso é útil quando você precisa hospedar um fluxo de trabalho gravado por outra pessoa. Por exemplo, se o novo host do designer de fluxo de trabalho e permitir que os usuários criem seus próprios fluxos de trabalho.  Hospedando fluxos de trabalho sem serviço no IIS fornece suporte para recursos como o desligamento ocioso, reciclagem de processo, o monitoramento de integridade do processo e a ativação baseada em mensagem. Serviços de fluxo de trabalho hospedados no IIS contêm <xref:System.ServiceModel.Activities.Receive> atividades e o são ativados quando uma mensagem é recebida pelo IIS. Fluxos de trabalho não não contêm atividades de mensagem e por padrão, não não possível ativar enviando uma mensagem.  Você deve derivar uma classe de <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> e definir um contrato de serviço que contém operações para criar uma instância do fluxo de trabalho. Este tópico o orientará na criação de um fluxo de trabalho simple, definir um contrato de serviço que um cliente pode usar para ativar o fluxo de trabalho e derivar uma classe de <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> que usa o contrato de serviço para escutar as solicitações de criação de fluxo de trabalho.  
@@ -684,10 +685,10 @@ namespace CreationClient
   
 ## <a name="see-also"></a>Consulte também  
  [Serviços de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [Hospedagem no Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [Práticas recomendadas de hospedagem de serviços de informações da Internet](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
- [Hospedagem instruções de serviço de informações da Internet](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+ [Hospedagem nos Serviços de Informações da Internet](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [Práticas recomendadas de hospedagem de Serviços de Informações da Internet](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [Instruções de hospedagem do Serviços de Informações da Internet](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
  [Arquitetura do Windows Workflow](../../../../docs/framework/windows-workflow-foundation/architecture.md)  
- [De Workflowhostingendpoint](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
+ [Indicador de resumo de WorkflowHostingEndpoint](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
  [Hospedando novamente o Designer de Fluxo de Trabalho](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
  [Visão geral do Windows Workflow](../../../../docs/framework/windows-workflow-foundation/overview.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a942a26ad239233f13ee8791d1178fb47573e710
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bf4f96116e8a4e687e7818796fa4b95e1b9b171a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
 Este exemplo demonstra como hospedar um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] rotas de serviço REST usando o ASP.NET. O [serviço básico do recurso](../../../../docs/framework/wcf/samples/basic-resource-service.md) exemplo mostra uma versão auto-hospedado deste cenário e descreve a implementação do serviço em camadas. Este tópico enfoca o recurso de integração do ASP.NET. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ASP.NET roteamento, consulte <xref:System.Web.Routing>.  

@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 787f47f6ca8f25e6df4cc74024febf494f18bf9d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c70b7df47cb3f367318fb388ceda2163f538cb32
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Como acessar um serviço WSE 3.0 com um cliente do WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]os clientes são compatíveis com o nível de transmissão com aprimoramentos WSE (Web Services) 3.0 para Microsoft .NET de serviços quando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] os clientes são configurados para usar a versão de agosto de 2004 da especificação WS-Addressing. No entanto, serviços WSE 3.0 não dão suporte o protocolo de intercâmbio (MEX) de metadados, então quando você usa o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para criar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] classe de cliente, as configurações de segurança não são aplicadas para gerado [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente. Portanto, você deve especificar as configurações de segurança que o serviço WSE 3.0 requer após o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente é gerado.  

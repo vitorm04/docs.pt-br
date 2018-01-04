@@ -14,11 +14,12 @@ caps.latest.revision: "22"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: d41d2f8419644d5ddcb15f49bbe895b0a3f1f2d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a30f42c88e2478341737b99ad239d37c87a1063e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-clients"></a>Protegendo clientes
 Em [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], o serviço determina os requisitos de segurança para clientes. Ou seja, o serviço Especifica o modo de segurança para usar, e se o cliente deve fornecer uma credencial. O processo de proteção de um cliente, portanto, é simples: usar os metadados obtidos do serviço (se ela for publicada) e criar um cliente. Os metadados especificam como configurar o cliente. Se o serviço exigir que o cliente forneça uma credencial, você deve obter uma credencial que atende ao requisito. Este tópico descreve o processo em mais detalhes. [!INCLUDE[crabout](../../../includes/crabout-md.md)]criar um serviço seguro, consulte [protegendo serviços](../../../docs/framework/wcf/securing-services.md).  
@@ -168,9 +169,9 @@ Em [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], o serviço determina os
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  
  [\<associações >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
- [Configuration Editor Tool (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) (Ferramenta Editor de configuração (SvcConfigEditor.exe))  
- [Securing Services](../../../docs/framework/wcf/securing-services.md) (Protegendo serviços)  
- [Accessing Services Using a WCF Client](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md) (Usando um cliente do WCF para acessar serviços)  
- [How to: Specify Client Credential Values](../../../docs/framework/wcf/how-to-specify-client-credential-values.md) (Como especificar valores de credenciais do cliente)  
- [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)]  
- [How to: Specify the Client Credential Type](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md) (Como especificar o tipo de credencial do cliente)
+ [Ferramenta Editor de configuração (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
+ [Protegendo serviços](../../../docs/framework/wcf/securing-services.md)  
+ [Usando um cliente do WCF para acessar serviços](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
+ [Como especificar valores de credenciais do cliente](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)  
+ [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+ [Como especificar o tipo de credencial do cliente](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)

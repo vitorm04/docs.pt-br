@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 231948af1a0bfe7840ffbde2ab162ceea33698ca
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 42c89ae71078a3ddfbe7e85273a6f62879781c80
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-channels"></a>Canais de desenvolvimento
 Para desenvolver um canal de transporte ou protocolo que pode ser usado com o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] camada de aplicativo requer várias etapas. Este tópico descreve as etapas e direciona para tópicos específicos para obter mais informações. Para entender o modelo de canal e os vários tipos que são mencionados neste tópico, consulte [visão geral do modelo de canal](../../../../docs/framework/wcf/extending/channel-model-overview.md). Para obter um exemplo de canal de transporte completa, consulte [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  

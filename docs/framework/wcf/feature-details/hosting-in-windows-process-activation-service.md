@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 63f44a6380d2bca4ad831c590920e09ab93610c4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 40122670c84f87590a31b79f39695e9626ea9883
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hospedagem no serviço de ativação do processo do Windows
 O serviço de ativação de processos do Windows (WAS) gerencia a ativação e a vida útil dos processos de trabalho que contêm aplicativos que hospedam [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviços. O modelo de processo WAS generaliza o [!INCLUDE[iis601](../../../../includes/iis601-md.md)] modelo de processo para o servidor HTTP, removendo a dependência no HTTP. Isso permite que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services para usar HTTP e protocolos não HTTP, como o Net.TCP, em um ambiente de hospedagem que oferece suporte à ativação baseada em mensagem e oferece a capacidade de hospedar um grande número de aplicativos em determinado computador.  
@@ -61,8 +62,8 @@ NET.TCP://contoso.com/Billing/GetOrders.svc/SecureEndpoint
  Aplicativos são organizados em sites para fins de endereçamento e gerenciamento. Em tempo de execução aplicativos também são agrupados juntos em pools de aplicativos. Um pool de aplicativos pode hospedar vários aplicativos diferentes de vários sites diferentes. Todos os aplicativos dentro de um pool de aplicativos compartilham um conjunto comum de características de tempo de execução. Por exemplo, todos executados sob a mesma versão do common language runtime (CLR) e todos eles compartilham uma identidade de processo comum. Cada pool de aplicativos corresponde a uma instância de um processo de trabalho (w3wp.exe). Cada aplicativo gerenciado em execução dentro de um pool de aplicativo compartilhado é isolado de outros aplicativos por meio de um AppDomain do CLR.  
   
 ## <a name="see-also"></a>Consulte também  
- [ARQUITETURA de ativação](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)  
+ [Arquitetura de ativação WAS](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)  
  [Configurando o WAS para utilização com o WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
- [Como: instalar e configurar os componentes de ativação do WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)  
+ [Como instalar e configurar os componentes de ativação do WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)  
  [Como hospedar um serviço do WCF no WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
  [Recursos de hospedagem do Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201276)

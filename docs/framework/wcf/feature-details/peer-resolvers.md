@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dbc09bd409dc106046d6c5e51dae8932c9eba326
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e946066a352fb29c593a7d84fd6e728c226a3175
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-resolvers"></a>Resolvedor peer
 Para conectar a uma malha, um nó ponto requer que os endereços IP de outros nós. Endereços IP são obtidos entrando em contato com um serviço de resolução, que usa a ID de malha e retorna uma lista de endereços correspondentes a nós registrado com esse ID de malha. O resolvedor mantém uma lista de endereços de registrado, ele cria, fazendo com que cada nó na malha registrar com o serviço.  
@@ -45,9 +46,9 @@ Para conectar a uma malha, um nó ponto requer que os endereços IP de outros n�
  Para ver uma demonstração de como implementar um resolvedor personalizado, consulte [resolvedor ponto a ponto personalizado de canal par](http://msdn.microsoft.com/en-us/5b75a2bb-7ff1-4a14-abe7-3debf0537d23).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [O custompeerresolverservice: registro de clientes](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
+ [Sobre o CustomPeerResolverService: Registro de clientes](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Conceitos de canal par](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)  
  [Segurança de canal par](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)  
- [Criando um aplicativo de canal par](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+ [Compilando um aplicativo de canal par](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

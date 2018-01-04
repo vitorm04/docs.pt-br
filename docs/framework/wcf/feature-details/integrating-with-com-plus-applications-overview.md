@@ -16,11 +16,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 04de29891bcf5d8cdbac32ffc85d64a4003e3184
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0fbed530a1b968bb049ee20262eb2b8fa9ba13c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integração com visão geral de aplicativos COM+
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Fornece um ambiente rico para criar aplicativos distribuídos. Se você já estiver usando a lógica do aplicativo baseado em componente hospedada em COM+, você pode usar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para estender sua lógica existente em vez de precisar reescrevê-la. Um cenário comum é quando você deseja expor existente lógica de negócios de COM+ ou serviços corporativos por meio de serviços Web.  
@@ -112,4 +113,4 @@ ms.lasthandoff: 12/02/2017
  O processo COM+ reciclagem de recursos não pode ser usado em aplicativos integrados. Se o aplicativo está configurado para usar a reciclagem de processo e os componentes estão em execução em um processo hospedados pelo COM+, o serviço não for iniciado. Esse requisito não inclui serviços usando o modo de-processo hospedado na Web porque não são aplicadas as configurações de reciclagem do processo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Integração com visão geral de aplicativos COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+ [Visão geral da integração de aplicativos COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

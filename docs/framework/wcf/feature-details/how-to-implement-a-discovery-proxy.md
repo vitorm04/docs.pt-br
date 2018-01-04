@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 90713d1779566448547265d6487c113abdc84e00
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 25db6b46758e11c194952fbca03286891a5914d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Como implementar um proxy de descoberta
 Este tópico explica como implementar um proxy de descoberta. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]o recurso de descoberta no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], consulte [visão geral de descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Um proxy de descoberta pode ser implementado, criando uma classe que estende o <xref:System.ServiceModel.Discovery.DiscoveryProxy> classe abstrata. Há um número de outras classes de suporte definido e usado neste exemplo. `OnResolveAsyncResult`, `OnFindAsyncResult` e `AsyncResult`. Essas classes implementam o <xref:System.IAsyncResult> interface. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.IAsyncResult> consulte [interface System. IAsyncResult](xref:System.IAsyncResult).
@@ -989,6 +990,6 @@ namespace Microsoft.Samples.Discovery
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral de descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [Como: implementar um serviço de descoberta que registra com o Proxy de descoberta](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
- [Como: implementar um aplicativo cliente que usa o Proxy de descoberta para localizar um serviço](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
- [Como: testar o Proxy de descoberta](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+ [Como implementar um serviço de descoberta que registra usando o proxy de descoberta](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
+ [Como implementar um aplicativo cliente que usa o proxy de descoberta para localizar um serviço](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
+ [Como testar o proxy de descoberta](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

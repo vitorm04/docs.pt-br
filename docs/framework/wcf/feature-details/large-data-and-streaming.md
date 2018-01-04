@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23daee4b8e7cd1fcf7ec7f085fb40d788aa5e556
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 187927a9e75348454f5832c2a34bf780e48e4358
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="large-data-and-streaming"></a>Dados grandes e streaming
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] é uma infraestrutura de comunicação com base em XML. Porque os dados XML normalmente são codificados no formato de texto padrão definido no [especificação XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838)conectados arquitetos e desenvolvedores de sistemas são normalmente se preocupam com a superfície de transmissão (ou o tamanho) de mensagens enviadas em a rede e a codificação baseada em texto de XML é difícil especiais para a transferência eficiente de dados binários.  
@@ -249,4 +250,4 @@ public class UploadStreamMessage
 >  A decisão de usar transferência em buffer ou em streaming é uma decisão local do ponto de extremidade. Para transportes HTTP, o modo de transferência não se propaga para uma conexão ou para servidores proxy e outros intermediários. A definição do modo de transferência não é refletida na descrição da interface de serviço. Após gerar um cliente do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para um serviço, você deve editar o arquivo de configuração dos serviços que pretende usar com transferências em streaming para definir o modo. Para transportes TCP e pipe nomeado, o modo de transferência é propagado como uma declaração de política.  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: habilitar o Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+ [Como habilitar o streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c54ce56cccffa350479d0dd4dcec130ddd004764
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 013c9e963ca75cc612d869a55b33d69aebbcad33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="nettcp-port-sharing"></a>Compartilhamento de porta Net.TCP
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Fornece um novo protocolo de rede baseada em TCP (net.tcp://) para comunicação de alto desempenho. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]também apresenta um novo componente do sistema, o serviço de compartilhamento de porta NET. TCP que permite que portas NET. TCP ser compartilhado entre vários processos de usuário.  
@@ -59,7 +60,7 @@ ms.lasthandoff: 12/02/2017
  Embora o serviço de compartilhamento de porta NET. TCP fornece uma camada de processamento entre aplicativos e rede, os aplicativos que usam o compartilhamento de porta ainda devem ser protegidos como se eles foram escuta diretamente na rede. Especificamente, os aplicativos que usam o compartilhamento de porta devem avaliar os privilégios do processo em que executarem. Considere a execução de seu aplicativo usando a conta de serviço de rede interna, que é executado com um conjunto mínimo de privilégios de processo necessário para a comunicação de rede.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurando o serviço de compartilhamento de porta NET. TCP](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)  
+ [Configurando o serviço de compartilhamento de porta NET.TCP](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)  
  [Hospedagem](../../../../docs/framework/wcf/feature-details/hosting.md)  
- [Como: configurar um serviço WCF para compartilhamento de porta de uso](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)  
- [Como: habilitar o serviço de compartilhamento de porta NET. TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+ [Como configurar um serviço WCF para usar compartilhamento de porta](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)  
+ [Como habilitar o serviço de compartilhamento de porta do NET.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

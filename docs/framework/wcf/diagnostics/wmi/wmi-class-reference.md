@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a74f1d7e70b8664df5022d6f9f42cf04b88f930
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0e221c8197b9713dd5f4e35114ada3c63f4978ef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wmi-class-reference"></a>Referência de classe WMI
 Esta seção lista todas as classes WMI expostas pelo [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] provedor WMI.  
@@ -72,7 +73,7 @@ Esta seção lista todas as classes WMI expostas pelo [!INCLUDE[indigo1](../../.
   
  [MatchAllEndpointBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/matchallendpointbehavior.md)  
   
- [Classe MessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/messageencodingbindingelement.md)  
+ [MessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/messageencodingbindingelement.md)  
   
  [MsmqBindingElementBase](../../../../../docs/framework/wcf/diagnostics/wmi/msmqbindingelementbase.md)  
   
@@ -94,9 +95,9 @@ Esta seção lista todas as classes WMI expostas pelo [!INCLUDE[indigo1](../../.
   
  [OperationBehaviorAttribute](../../../../../docs/framework/wcf/diagnostics/wmi/operationbehaviorattribute.md)  
   
- [Classe PeerCustomResolverBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/peercustomresolverbindingelement.md)  
+ [PeerCustomResolverBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/peercustomresolverbindingelement.md)  
   
- [Classe PeerResolverBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/peerresolverbindingelement.md)  
+ [PeerResolverBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/peerresolverbindingelement.md)  
   
  [PeerSecuritySettings](../../../../../docs/framework/wcf/diagnostics/wmi/peersecuritysettings.md)  
   

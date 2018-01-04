@@ -13,20 +13,21 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c0a7d5390681e7270381df109601d269f12a707a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fa545e812de8c87191d6bba7df5cc5a5a494af3d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-metadata"></a>Utilizando metadados
 Metadados de serviço contém uma descrição legível por máquina do serviço. Metadados de serviço incluem descrições das pontos de extremidade de serviço, associações, contratos, operações e mensagens. Você pode usar os metadados de serviço para uma variedade de propósitos, incluindo a geração automática de um cliente para consumir o serviço, a descrição do serviço de implementação e atualizar dinamicamente a associação para um cliente.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Noções básicas de código do cliente gerado](../../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)  
+ [Entendendo o código do cliente gerado](../../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)  
  Descreve as diferentes classes e interfaces de Svcutil.exe ferramenta gera.  
   
- [Como: recuperar metadados e implementar um serviço compatível](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)  
+ [Como recuperar metadados e implementar um serviço em conformidade](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)  
  Demonstra como recuperar metadados usando Svcutil.exe e implementar um serviço compatível.  
   
  [Gerando um cliente WCF de metadados de serviço](../../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)  

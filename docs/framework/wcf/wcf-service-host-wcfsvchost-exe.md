@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 39d59e23b407a01e91f68022a1b67e590858235e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 495088463a6a7463ce1452588dc55d35110f0092
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Host de serviço do WCF (WcfSvcHost.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Host de serviço (WcfSvcHost.exe) permite que você inicie a [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] depurador (F5) para hospedar e testar um serviço que você implementou automaticamente. Você pode testar, em seguida, o serviço usando [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] cliente de teste (WcfTestClient.exe) ou seu próprio cliente, para localizar e corrigir todos os possíveis erros.  
@@ -121,4 +122,4 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
  Para obter mais informações sobre netsh.exe, consulte "[como usar a ferramenta Netsh.exe e as opções de linha de comando](http://go.microsoft.com/fwlink/?LinkId=97877)".  
   
 ## <a name="see-also"></a>Consulte também  
- [WCF Test Client (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md) [Cliente de teste do WCF (WcfTestClient.exe)]
+ [Cliente de teste do WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: bfb1acc5c1c665ebd410b0a49e8f357e5b9458f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 53ae64af0612cb905a2342491761b1e27ef19c06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-security-token-service"></a>Como criar um serviço de token de segurança
 Um serviço de token de segurança implementa o protocolo definido na especificação WS-Trust. Esse protocolo define os formatos de mensagem e padrões de troca de mensagem para a emissão, renovação, cancelando e validar tokens de segurança. Um serviço de token de segurança fornece um ou mais desses recursos. Este tópico é o cenário mais comum: implementação de emissão de token.  
@@ -141,4 +142,4 @@ Um serviço de token de segurança implementa o protocolo definido na especifica
  <xref:System.IdentityModel.Tokens.SamlAssertion>  
  <xref:System.ServiceModel.Security.Tokens.BinarySecretSecurityToken>  
  <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>  
- [Exemplo de Federação](../../../../docs/framework/wcf/samples/federation-sample.md)
+ [Exemplo de federação](../../../../docs/framework/wcf/samples/federation-sample.md)

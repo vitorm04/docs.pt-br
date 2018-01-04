@@ -16,11 +16,12 @@ caps.latest.revision: "42"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ddbf0df6e4fbf62ab0e7ec8c741a0f3be01c35ef
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6491faa6134c1e80e07294d8f888200c04fa8704
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-application"></a>Como hospedar um serviço do WCF em um aplicativo gerenciado
 Para hospedar um serviço dentro de um aplicativo gerenciado, o código inserido para o serviço dentro do código de aplicativo gerenciado, definir um ponto de extremidade para o serviço de imperativa no código, declarativamente por meio de configuração ou usando os pontos de extremidade padrão e, em seguida, criar um instância do <xref:System.ServiceModel.ServiceHost>.  
@@ -103,10 +104,10 @@ Para hospedar um serviço dentro de um aplicativo gerenciado, o código inserido
  <xref:System.Configuration.ConfigurationManager.AppSettings%2A>  
  <xref:System.Configuration.ConfigurationManager>  
  [Como hospedar um serviço WCF no IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)  
- [Hospedagem interna](../../../docs/framework/wcf/samples/self-host.md)  
- [Hosting Services](../../../docs/framework/wcf/hosting-services.md) (Hospedando serviços)  
- [How to: Define a Service Contract](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) (Como definir um contrato de serviço)  
- [How to: Implement a Service Contract](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md) (Como implementar um contrato de serviço)  
- [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)]  
- [Using Bindings to Configure Services and Clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md) (Usando associações para configurar serviços e clientes)  
- [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md) (Associações fornecidas pelo sistema)
+ [Auto-hospedagem](../../../docs/framework/wcf/samples/self-host.md)  
+ [Hospedando serviços](../../../docs/framework/wcf/hosting-services.md)  
+ [Como definir um contrato de serviço](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
+ [Como implementar um contrato de serviço](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
+ [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+ [Usando associações para configurar serviços e clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+ [Associações fornecidas pelo sistema](../../../docs/framework/wcf/system-provided-bindings.md)

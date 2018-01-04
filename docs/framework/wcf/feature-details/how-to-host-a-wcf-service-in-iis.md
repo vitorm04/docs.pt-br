@@ -16,11 +16,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 934b5d16cdea7026e0e7874cf04ab53c8fbdf58e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3b23d3f69d52299fcf3ca8b5ff56d0c4673026b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>Como hospedar um serviço WCF no IIS
 Este tópico descreve as etapas básicas necessárias para criar um serviço [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] que é hospedado por um IIS (Serviços de Informações da Internet). Este tópico pressupõe que você está familiarizado com o IIS e compreende como usar a ferramenta de gerenciamento do IIS para criar e gerenciar aplicativos do IIS. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Consulte IIS [Internet Information Services](http://go.microsoft.com/fwlink/?LinkId=132449). Um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que é executado no ambiente do IIS aproveita os recursos do IIS, como a reciclagem do processo, desligamento ocioso, monitoramento de integridade do processo e a ativação baseada em mensagem. Essa opção de hospedando requer que o IIS esteja configurado corretamente, mas não requer que nenhum código de hospedagem seja escrito como parte do aplicativo. Você pode usar a hospedagem do IIS somente com um transporte HTTP.  
@@ -86,8 +87,8 @@ Este tópico descreve as etapas básicas necessárias para criar um serviço [!I
  [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Hospedagem no Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [Hosting Services](../../../../docs/framework/wcf/hosting-services.md) (Hospedando serviços)  
- [Serviços WCF e ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)  
+ [Hospedagem nos Serviços de Informações da Internet](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [Hospedando serviços](../../../../docs/framework/wcf/hosting-services.md)  
+ [Serviços do WCF e ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)  
  [Segurança](../../../../docs/framework/wcf/feature-details/security.md)  
  [Recursos de hospedagem do Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201276)

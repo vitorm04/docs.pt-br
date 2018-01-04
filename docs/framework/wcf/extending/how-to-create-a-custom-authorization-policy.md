@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0086dc0c82fefad3cb1e5a73ddd9ced909f05453
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1af5e2cbf7c124e490fea04deadd1afffcde5cbb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>Como criar uma diretiva de autorização personalizada
 A infraestrutura do modelo de identidade no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] oferece suporte a um modelo de autorização baseada em declarações. Declarações são extraídas de tokens, opcionalmente processadas pela diretiva de autorização personalizada e, em seguida, são colocadas em um <xref:System.IdentityModel.Policy.AuthorizationContext> que podem ser examinadas para tomar decisões de autorização. Uma política personalizada pode ser usada para transformar declarações de tokens de entrada em declarações esperadas pelo aplicativo. Dessa forma, a camada de aplicativo pode ser isolada dos detalhes sobre as diferentes declarações apresentados pelo token de diferentes tipos [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oferece suporte. Este tópico mostra como implementar uma política de autorização personalizada e adicionar essa política para a coleção de políticas usado por um serviço.  
@@ -87,6 +88,6 @@ A infraestrutura do modelo de identidade no [!INCLUDE[indigo1](../../../../inclu
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  
- [Como: comparar declarações](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [Como: criar um Gerenciador de autorização personalizada para um serviço](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [Como comparar declarações](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
+ [Como criar um gerenciador de autorização personalizado para um serviço](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
  [Política de autorização](../../../../docs/framework/wcf/samples/authorization-policy.md)

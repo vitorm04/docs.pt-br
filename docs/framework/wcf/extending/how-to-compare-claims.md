@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ecc9ce3c5ae46026be9f6355c8330b4455f45d91
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bf7a621a7aa457b2993c761caa2ad576d216638b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-compare-claims"></a>Como comparar declarações
 A infraestrutura do modelo de identidade no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] é usada para executar a verificação de autorização. Dessa forma, uma tarefa comum é comparar declarações no contexto de autorização para as declarações necessárias para executar a ação solicitada ou acessar o recurso solicitado. Este tópico descreve como comparar declarações, incluindo tipos de declaração internas e personalizadas. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]a infraestrutura do modelo de identidade, consulte [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
@@ -82,4 +83,4 @@ A infraestrutura do modelo de identidade no [!INCLUDE[indigo1](../../../../inclu
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
- [Como: criar uma declaração personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+ [Como criar uma declaração personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)

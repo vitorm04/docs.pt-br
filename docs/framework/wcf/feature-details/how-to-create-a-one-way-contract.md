@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f93247a96501359bcda8d2956308e6570c597f93
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d08fcb955c972ffbd7ef0a48625f1005ab366dd0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-one-way-contract"></a>Como criar um contrato unidirecional
 Este tópico mostra as etapas básicas para criar métodos que usam um contrato unidirecional. Esses métodos invocar operações em um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] de um cliente de serviço, mas não espera uma resposta. Esse tipo de contrato pode ser usado, por exemplo, para publicar as notificações para vários assinantes. Você também pode usar os contratos unidirecionais ao criar um contrato duplex (bidirecional), que permite que clientes e servidores para se comunicar uns com os outros independentemente para que qualquer um pode iniciar chamadas para o outro. Isso pode permitir que, em particular, o servidor fazer chamadas unidirecionais para o cliente que o cliente pode tratar eventos. Para obter informações detalhadas sobre como especificar métodos unidirecionais, consulte o <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> propriedade e o <xref:System.ServiceModel.OperationContractAttribute> classe.  
@@ -44,7 +45,7 @@ Este tópico mostra as etapas básicas para criar métodos que usam um contrato 
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.ServiceContractAttribute>  
  <xref:System.ServiceModel.OperationContractAttribute>  
- [Designing and Implementing Services](../../../../docs/framework/wcf/designing-and-implementing-services.md) (Serviços de design e implantação)  
- [How to: Define a Service Contract](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) (Como definir um contrato de serviço)  
+ [Serviços de design e implantação](../../../../docs/framework/wcf/designing-and-implementing-services.md)  
+ [Como definir um contrato de serviço](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
  [Sessão](../../../../docs/framework/wcf/samples/session.md)  
- [Como: criar um contrato Duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+ [Como criar um contrato duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

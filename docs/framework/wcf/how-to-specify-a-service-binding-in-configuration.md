@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0220dffd07f41210051953130cf99ebbfd4f0173
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ea54b2f84c9de233ff2560795dc97f79c15aa0af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>Como especificar uma associação de serviço em configuração
 Neste exemplo, um `ICalculator` contrato é definido para um serviço básico de cálculo, o serviço é implementado no `CalculatorService` classe e seu ponto de extremidade está configurado no arquivo Web. config, onde ele é especificado que o serviço usa o <xref:System.ServiceModel.BasicHttpBinding> . Para obter uma descrição de como configurar este serviço usando código em vez de uma configuração, consulte [como: especificar uma associação de serviço em código](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md).  
@@ -103,5 +104,5 @@ Neste exemplo, um `ICalculator` contrato é definido para um serviço básico de
     ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Using Bindings to Configure Services and Clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md) (Usando associações para configurar serviços e clientes)  
- [Specifying an Endpoint Address](../../../docs/framework/wcf/specifying-an-endpoint-address.md) (Especificando um endereço do ponto de extremidade)
+ [Usando associações para configurar serviços e clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+ [Especificando um endereço do ponto de extremidade](../../../docs/framework/wcf/specifying-an-endpoint-address.md)

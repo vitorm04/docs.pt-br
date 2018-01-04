@@ -16,11 +16,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7354306b5385ef135ea496766026c3ac99505ffe
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1f1026320114592c25bb5fd123bf92227b26b015
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guide-to-the-documentation"></a>Guia para a documentação
 Desde que este é um guia sobre o [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] documentação. Documentos associados são pontos de partida recomendados agrupados de acordo com interesses e níveis específicos de experiência.  
@@ -72,7 +73,7 @@ Desde que este é um guia sobre o [!INCLUDE[indigo1](../../../includes/indigo1-m
  Para ver uma lista de protocolos compatíveis com as associações fornecidas pelo sistema, consulte [Web Services dá suporte para protocolos associações de interoperabilidade System-Provided](../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md). Para ver a lista de associações fornecidas pelo sistema, consulte [System-Provided associações](../../../docs/framework/wcf/system-provided-bindings.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Windows Communication Foundation Samples](../../../docs/framework/wcf/samples/index.md) (Amostras do Windows Communication Foundation)  
- [Conceptual Overview](../../../docs/framework/wcf/conceptual-overview.md) (Visão geral conceitual)  
- [Guidelines and Best Practices](../../../docs/framework/wcf/guidelines-and-best-practices.md) (Diretrizes e práticas recomendadas)  
- [Building Clients](../../../docs/framework/wcf/building-clients.md) (Compilando clientes)
+ [Amostras do Windows Communication Foundation](../../../docs/framework/wcf/samples/index.md)  
+ [Visão geral conceitual](../../../docs/framework/wcf/conceptual-overview.md)  
+ [Diretrizes e práticas recomendadas](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
+ [Compilando clientes](../../../docs/framework/wcf/building-clients.md)

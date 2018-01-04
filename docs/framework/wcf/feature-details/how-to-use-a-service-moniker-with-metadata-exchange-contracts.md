@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31720b0639f9be68a2124b4ff844a2837787ef81
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7d2b5b6d4a671a3eb281f49dd60fd3c00ee76f8a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Como usar um Moniker de serviço com contratos de intercâmbio de metadados
 Depois de desenvolver algumas novas [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services, você pode decidir que deseja ser capaz de chamar esses serviços de um script ou um aplicativo do Visual Basic 6.0. Um método seria gerar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] assembly de cliente, registre o assembly com, instalar o assembly no GAC e faça referência os tipos COM o código do Visual Basic. Quando você distribui o aplicativo, você precisa distribuir o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] assembly cliente também. O usuário terá, em seguida, registre o assembly de cliente do WCF com e colocá-lo no GAC. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Interoperabilidade COM também permite que você faça o mesmo serviço chama sem depender de um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] assembly cliente. O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] moniker permite que você possa chamar qualquer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço em qualquer linguagem compatível COM o com (Visual Basic, VBScript, Visual Basic for Applications (VBA) e assim por diante), especificando um ponto de extremidade do exchange (Mex) de metadados URI que usa o moniker de serviço para extrair informações de tipo sobre o serviço. Este tópico descreve como chamar o guia de Introdução [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de exemplo usando um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] moniker que especifica um ponto de extremidade Mex.  
@@ -50,5 +51,5 @@ Depois de desenvolver algumas novas [!INCLUDE[indigo2](../../../../includes/indi
     >  Se o identificador de origem está malformado ou se o serviço está indisponível, a chamada para `GetObject` retornará um erro dizendo "Sintaxe inválida".  Se você receber esse erro, verifique se você estiver usando o identificador de origem está correto e o serviço está disponível.  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: usar o Moniker de serviço do Windows Communication Foundation sem registro](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)  
- [Como: usar um Moniker de serviço com contratos WSDL](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)
+ [Como usar o moniker de serviço do Windows Communication Foundation sem Registro](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)  
+ [Como usar um moniker de serviço com contratos WSDL](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)

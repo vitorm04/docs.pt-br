@@ -13,11 +13,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fb45a08e9f21578b69dedbe504cfb8bbd21193bb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0bdd1874004af1ebbde69c622853d5fdcd982005
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pooling"></a>Agrupamento
 Este exemplo demonstra como estender [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para dar suporte a pool de objetos. O exemplo demonstra como criar um atributo que é sintaticamente e semanticamente semelhante do `ObjectPoolingAttribute` funcionalidade de serviços corporativos de atributo. Pool de objetos pode fornecer um aumento significativo no desempenho do aplicativo. No entanto, ele pode ter o efeito oposto, se ele não está sendo usado corretamente. Pool de objetos ajuda a reduzir a sobrecarga de recriar os objetos usados com frequência que requerem inicialização ampla. No entanto, se uma chamada para um método em um objeto de pool leva uma quantidade considerável de tempo para concluir, pool de objetos enfileira solicitações adicionais assim que o tamanho máximo do pool for atingido. Portanto, pode falhar atender solicitações de criação de um objeto lançando uma exceção de tempo limite.  

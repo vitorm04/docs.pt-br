@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1f411e0280a1f663e5e001e471eb836208083160
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d1a39162097c21f20c0dd04f3911442602871436
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hospedando um aplicativo de serviço do Windows
 Serviços do Windows (anteriormente conhecidos como serviços do Windows NT) fornecem um processo de modelo especialmente adequado para aplicativos que devem estar contidos em um executável de longa execução e não exibem nenhuma forma de interface do usuário. O tempo de vida de uma janela de aplicativo de serviço é gerenciado pelo Gerenciador de controle de serviços (SCM), que permite que você iniciar, parar e pausar aplicativos de serviço do Windows. Você pode configurar um processo de serviço do Windows para iniciar automaticamente quando o computador é iniciado, tornando-o um ambiente de hospedagem adequado para aplicativos "sempre ativos". [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Aplicativos de serviço do Windows, consulte [aplicativos de serviço do Windows](http://go.microsoft.com/fwlink/?LinkId=89450).  
@@ -48,8 +49,8 @@ Serviços do Windows (anteriormente conhecidos como serviços do Windows NT) for
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceProcess>  
- [Passo a passo: Criando um aplicativo de serviço do Windows no Designer de componente](http://go.microsoft.com/fwlink/?LinkId=94875)  
- [Como: hospedar um serviço WCF em um serviço Windows gerenciado](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
- [Host de serviço do Windows](../../../../docs/framework/wcf/samples/windows-service-host.md)  
+ [Passo a passo: criando um aplicativo de Serviço Windows no Designer de componentes](http://go.microsoft.com/fwlink/?LinkId=94875)  
+ [Como hospedar um serviço WCF em um serviço Windows gerenciado](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
+ [Host de serviço Windows](../../../../docs/framework/wcf/samples/windows-service-host.md)  
  [Arquitetura de programação de aplicativo de serviço](http://go.microsoft.com/fwlink/?LinkId=94876)  
  [Recursos de hospedagem do Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201276)

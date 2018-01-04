@@ -14,11 +14,12 @@ caps.latest.revision: "58"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 062167742a70307949624066b8607a37d5c7ed71
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c69f79d8629acee80a2e59346032e7733ec37dea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-a-windows-communication-foundation-service-contract"></a>Como definir um contrato de serviço do Windows Communication Foundation
 Esta é a primeira das seis tarefas necessárias para criar um aplicativo [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] básico. Para obter uma visão geral de todos os seis das tarefas, consulte o [Tutorial de Introdução](../../../docs/framework/wcf/getting-started-tutorial.md) tópico.  
@@ -93,6 +94,6 @@ Esta é a primeira das seis tarefas necessárias para criar um aplicativo [!INCL
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.ServiceContractAttribute>  
  <xref:System.ServiceModel.OperationContractAttribute>  
- [How to: Implement a Service Contract](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md) (Como implementar um contrato de serviço)  
+ [Como implementar um contrato de serviço](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
  [Introdução](../../../docs/framework/wcf/samples/getting-started-sample.md)  
- [Hospedagem interna](../../../docs/framework/wcf/samples/self-host.md)
+ [Auto-hospedagem](../../../docs/framework/wcf/samples/self-host.md)

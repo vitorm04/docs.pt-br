@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9f13fffcfb6094b56f1cbfdffca52a1b24f437b4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c2e3ba1d360c55f10cde9447b3961d84ffe1cdb2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-wcf-services-for-aspnet-ajax"></a>Criando serviços do WCF para o AJAX ASP.NET
 Microsoft ASP.NET AJAX permite que você crie rapidamente páginas da Web que incluem uma rica experiência de usuário com elementos de interface do usuário familiares. ASP.NET AJAX fornece bibliotecas de scripts de cliente que incorporam entre navegadores ECMAScript (JavaScript) e tecnologias HTML (DHTML) dinâmicas, e ele se integra-los com a plataforma de desenvolvimento baseada em servidor ASP.NET 2.0. Usando o ASP.NET AJAX, você pode melhorar a experiência do usuário e a eficiência de seus aplicativos Web.  
@@ -68,7 +69,7 @@ Microsoft ASP.NET AJAX permite que você crie rapidamente páginas da Web que in
  Pontos de extremidade AJAX em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ainda pode ser consumido sem a estrutura do ASP.NET AJAX. Isso requer uma compreensão da arquitetura do suporte de suporte AJAX [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Para obter uma discussão dessa arquitetura, consulte [modelo de objeto de programação do WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md). Para obter um exemplo de código que demonstra essa abordagem, consulte o [serviço de AJAX com JSON e XML](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Modelo de programação WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [Como: adicionar um ponto de extremidade do ASP.NET AJAX sem utilizar a configuração](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)  
- [Como: usar a configuração para adicionar um ponto de extremidade do ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)  
- [Como: escolher solicitações entre HTTP POST e HTTP GET para pontos de extremidade do ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)
+ [Modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [Como adicionar um ponto de extremidade do ASP.NET AJAX sem utilizar a configuração](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)  
+ [Como usar a configuração para adicionar um ponto de extremidade do ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)  
+ [Como escolher entre solicitações HTTP POST e HTTP GET para pontos de extremidade do ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)

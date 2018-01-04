@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0a19c7e8dec9587816d78be8bea58fc4ca366d5e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 72c7233a1c667b7ee3a1f00cc2fdf3c78f58e789
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="content-based-correlation"></a>Correlação baseada em conteúdo
 Quando os serviços de fluxo de trabalho se comunicar com clientes e outros serviços, geralmente há alguns dados de mensagens trocadas que relaciona exclusivamente uma mensagem para uma determinada instância. Correlação baseada em conteúdo usa esses dados na mensagem, como um número ou a ordem de ID de cliente, para rotear mensagens para a instância de fluxo de trabalho adequado. Este tópico explica como usar a correlação baseada em conteúdo em fluxos de trabalho.  

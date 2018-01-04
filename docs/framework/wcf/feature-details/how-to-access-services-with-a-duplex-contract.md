@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8ec8b7f37dc7f04a7ddb2c6373b50e98fe41cf98
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 425d17fa34b61985ad3600f992e028e156f6adb9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>Como acessar serviços com um contrato duplex
 Um recurso de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] é a capacidade de criar um serviço que usa um padrão de mensagens duplex. Esse padrão permite que um serviço para se comunicar com o cliente por meio de um retorno de chamada. Este tópico mostra as etapas para criar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente em uma classe de cliente que implementa a interface de retorno de chamada.  
@@ -99,7 +100,7 @@ Um recurso de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] é a capac
   
 ## <a name="see-also"></a>Consulte também  
  [Tutorial de Introdução](../../../../docs/framework/wcf/getting-started-tutorial.md)  
- [Como: criar um contrato Duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
- [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)]  
- [How to: Create a Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md) (Como criar um cliente)  
- [Como: usar o ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+ [Como criar um contrato duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+ [Como criar um cliente](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ [Como usar o ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

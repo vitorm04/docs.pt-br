@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: acec310e6e4b97cbcefbdd86d55ce8c4e6b238af
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e502642375c6e940b069c072cf1535f22b3d163f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-and-net-framework-client-profile"></a>Perfil de cliente WCF e .NET Framework
 [!INCLUDE[arrowhead](../../../includes/arrowhead-md.md)]é uma versão leve do completo .net Framework criado para clientes que não é necessário a estrutura inteira. Nem todos os Windows Communication Foundation é suportado pela estrutura do cliente.  

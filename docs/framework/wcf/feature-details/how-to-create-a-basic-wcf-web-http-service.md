@@ -16,11 +16,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 72e111340fc01df3def2fcb1d5360b00720af2f6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4dc60bbb51bc573840d0d45356f0cd84fd32db2a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>Como criar um serviço Web HTTP WCF básico
 O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite criar um serviço que expõe um ponto de extremidade Web. Os pontos de extremidade Web enviam dados por XML ou JSON; não há envelope SOAP. Este tópico demonstra como expor um ponto de extremidade desse tipo.  
@@ -125,4 +126,4 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite criar um servi
  <xref:System.ServiceModel.Web.WebInvokeAttribute>  
  <xref:System.ServiceModel.Web.WebServiceHost>  
  <xref:System.ServiceModel.Description.WebHttpBehavior>  
- [Modelo de programação WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+ [Modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9d52b71fe783764dcdbf5acd2ffe0e0ee1e7e56d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3f6282dfbf5e67f91167e5abf0640641000994d5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-msmq-binding"></a>Associação de MSMQ de rede
 Esta seção contém exemplos que demonstram o uso de atributos de associação de MSMQ de um elemento de ponto de extremidade.  
@@ -32,7 +33,7 @@ Esta seção contém exemplos que demonstram o uso de atributos de associação 
  [Filas de mensagens mortas](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
  Demonstra como manipular e processar mensagens com falha na entrega.  
   
- [Tratamento no MSMQ 4.0 de mensagens suspeitas](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md)  
+ [Tratamento de mensagens suspeitas no MSMQ 4.0](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md)  
  Demonstra como executar um serviço usando o MSMQ 4.0 de tratamento de mensagens suspeitas.  
   
  [Sessões e filas](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
@@ -47,7 +48,7 @@ Esta seção contém exemplos que demonstram o uso de atributos de associação 
  [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
  Demonstra como executar transacionada comunicação em fila por meio do serviço de enfileiramento de mensagens (MSMQ) em HTTP.  
   
- [Segurança no serviço de enfileiramento de mensagens](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
+ [Segurança de mensagem através do enfileiramento de mensagem](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
  Demonstra como implementar um aplicativo que usa o WS-Security com autenticação de certificado x. 509v3 para o cliente e requer a autenticação de servidor usando o certificado do servidor x. 509v3 em relação ao MSMQ.  
   
  [Gerador de produto de ReceiveContext](../../../../docs/framework/wcf/samples/receivecontext-enabled-wcf-channels.md)  

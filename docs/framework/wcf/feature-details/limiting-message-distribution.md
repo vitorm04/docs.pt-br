@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 191baa2df4a6a5a4fe8139e8b7ad36bd1c60b40d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b4d81583a8dfc2c48fb9b7533f071495b562615e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="limiting-message-distribution"></a>Limitando a distribuição de mensagens
 Canal par ocorre por design, uma malha de difusão. Seu modelo básico de inundação envolve a distribuição de cada mensagem enviada por qualquer membro de uma malha para todos os outros membros dessa malha. Isso é ideal em situações em que cada mensagem gerada por um membro é relevantes e úteis para todos os outros membros (por exemplo, uma sala de bate-papo). No entanto, muitos aplicativos têm uma necessidade ocasional de limitando a distribuição de mensagem. Por exemplo, se um novo membro une uma malha e deseja recuperar a última mensagem enviada por meio da malha, esta solicitação não precisa ser inundados para todos os membros da malha. A solicitação pode ser limitada a perto vizinhos ou mensagens geradas localmente podem ser filtradas. As mensagens também podem ser enviadas a um nó individual na malha. Este tópico discute o uso de contagem de salto, um filtro de propagação de mensagem, um filtro local ou uma conexão direta para controlar como as mensagens são encaminhadas em toda a malha e fornece diretrizes gerais para escolher uma abordagem.  
@@ -75,4 +76,4 @@ Canal par ocorre por design, uma malha de difusão. Seu modelo básico de inunda
     -   *Baixo*: qualquer, conexão direta provavelmente não é necessária.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criando um aplicativo de canal par](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+ [Compilando um aplicativo de canal par](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

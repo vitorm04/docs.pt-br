@@ -13,11 +13,12 @@ caps.latest.revision: "45"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eb32d1c9c0c0922dae27b2933259df9470cceeba
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 70d1b76108c9eab0280e6499ab2b4d0c70def853
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Visão geral de modelo de programação HTTP Web do WCF
 O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] modelo de programação HTTP WEB fornece os elementos básicos necessários para criar serviços WEB HTTP com [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Serviços WEB HTTP são projetados para ser acessado por mais ampla variedade de possíveis clientes, incluindo navegadores da Web e têm os seguintes requisitos exclusivos:  
@@ -156,4 +157,4 @@ interface ICustomer
 ## <a name="see-also"></a>Consulte também  
  [Sindicalização do WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
  [Modelo de objeto de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- [Modelo de programação WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+ [Modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
