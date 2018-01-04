@@ -17,25 +17,26 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2065c5f18afebc67b1bf0f3d3c8f27426e9c9736
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5098278bacc1e1cf6319bd610d1fd39d41c8d20d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="listbox"></a><span data-ttu-id="1ab20-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="1ab20-102">ListBox</span></span>
-<span data-ttu-id="1ab20-103">Um <xref:System.Windows.Controls.ListBox> controle fornece aos usuários uma lista de itens selecionáveis.</span><span class="sxs-lookup"><span data-stu-id="1ab20-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  
+# <a name="listbox"></a><span data-ttu-id="42de5-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="42de5-102">ListBox</span></span>
+<span data-ttu-id="42de5-103">Um <xref:System.Windows.Controls.ListBox> controle fornece aos usuários uma lista de itens selecionáveis.</span><span class="sxs-lookup"><span data-stu-id="42de5-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  
   
- <span data-ttu-id="1ab20-104">A figura a seguir ilustra um típico <xref:System.Windows.Controls.ListBox>.</span><span class="sxs-lookup"><span data-stu-id="1ab20-104">The following figure illustrates a typical <xref:System.Windows.Controls.ListBox>.</span></span>  
+ <span data-ttu-id="42de5-104">A figura a seguir ilustra um típico <xref:System.Windows.Controls.ListBox>.</span><span class="sxs-lookup"><span data-stu-id="42de5-104">The following figure illustrates a typical <xref:System.Windows.Controls.ListBox>.</span></span>  
   
- <span data-ttu-id="1ab20-105">![Captura de tela da caixa de listagem](../../../../docs/framework/wpf/controls/media/ss-ctl-listbox.gif "SS_CTL_listbox")</span><span class="sxs-lookup"><span data-stu-id="1ab20-105">![ListBox screen shot](../../../../docs/framework/wpf/controls/media/ss-ctl-listbox.gif "SS_CTL_listbox")</span></span>  
-<span data-ttu-id="1ab20-106">Caixa de listagem típica</span><span class="sxs-lookup"><span data-stu-id="1ab20-106">Typical ListBox</span></span>  
+ <span data-ttu-id="42de5-105">![Captura de tela da caixa de listagem](../../../../docs/framework/wpf/controls/media/ss-ctl-listbox.gif "SS_CTL_listbox")</span><span class="sxs-lookup"><span data-stu-id="42de5-105">![ListBox screen shot](../../../../docs/framework/wpf/controls/media/ss-ctl-listbox.gif "SS_CTL_listbox")</span></span>  
+<span data-ttu-id="42de5-106">Caixa de listagem típica</span><span class="sxs-lookup"><span data-stu-id="42de5-106">Typical ListBox</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1ab20-107">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="1ab20-107">In This Section</span></span>  
- [<span data-ttu-id="1ab20-108">Tópicos explicativos</span><span class="sxs-lookup"><span data-stu-id="1ab20-108">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="42de5-107">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="42de5-107">In This Section</span></span>  
+ [<span data-ttu-id="42de5-108">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="42de5-108">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listbox-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="1ab20-109">Referência</span><span class="sxs-lookup"><span data-stu-id="1ab20-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="42de5-109">Referência</span><span class="sxs-lookup"><span data-stu-id="42de5-109">Reference</span></span>  
  <xref:System.Windows.Controls.ListBox>  
   <xref:System.Windows.Controls.ListBoxItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="1ab20-110">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="1ab20-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="42de5-110">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="42de5-110">Related Sections</span></span>

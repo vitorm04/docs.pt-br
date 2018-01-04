@@ -17,21 +17,22 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f09c1aac387d26d44398331d62b25e588d4bbdc1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d9bec0b3edd6a5ab3997c42e3b8154f0c41531d5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="control-customization"></a><span data-ttu-id="3b771-102">Personalização do controle</span><span class="sxs-lookup"><span data-stu-id="3b771-102">Control Customization</span></span>
-<span data-ttu-id="3b771-103">Esta categoria abrange as várias classes base, interfaces e outros elementos e conceitos usados na criação de um totalmente funcional [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] controle.</span><span class="sxs-lookup"><span data-stu-id="3b771-103">This category covers the various base classes, interfaces and other elements and concepts used in creating a fully functional [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] control.</span></span>  
+# <a name="control-customization"></a><span data-ttu-id="31dc9-102">Personalização do controle</span><span class="sxs-lookup"><span data-stu-id="31dc9-102">Control Customization</span></span>
+<span data-ttu-id="31dc9-103">Esta categoria abrange as várias classes base, interfaces e outros elementos e conceitos usados na criação de um totalmente funcional [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] controle.</span><span class="sxs-lookup"><span data-stu-id="31dc9-103">This category covers the various base classes, interfaces and other elements and concepts used in creating a fully functional [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3b771-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="3b771-104">In This Section</span></span>  
- [<span data-ttu-id="3b771-105">Visão geral da criação de controle</span><span class="sxs-lookup"><span data-stu-id="3b771-105">Control Authoring Overview</span></span>](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
- [<span data-ttu-id="3b771-106">Diretrizes para criar controles com estilo</span><span class="sxs-lookup"><span data-stu-id="3b771-106">Guidelines for Designing Stylable Controls</span></span>](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)  
- [<span data-ttu-id="3b771-107">Adorners</span><span class="sxs-lookup"><span data-stu-id="3b771-107">Adorners</span></span>](../../../../docs/framework/wpf/controls/adorners.md)  
- [<span data-ttu-id="3b771-108">Estilos e modelos de controle</span><span class="sxs-lookup"><span data-stu-id="3b771-108">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [<span data-ttu-id="3b771-109">Automação de interface do usuário de um controle personalizado do WPF</span><span class="sxs-lookup"><span data-stu-id="3b771-109">UI Automation of a WPF Custom Control</span></span>](../../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md)  
+## <a name="in-this-section"></a><span data-ttu-id="31dc9-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="31dc9-104">In This Section</span></span>  
+ [<span data-ttu-id="31dc9-105">Visão geral da criação de controle</span><span class="sxs-lookup"><span data-stu-id="31dc9-105">Control Authoring Overview</span></span>](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
+ [<span data-ttu-id="31dc9-106">Diretrizes para criar controles com estilo</span><span class="sxs-lookup"><span data-stu-id="31dc9-106">Guidelines for Designing Stylable Controls</span></span>](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)  
+ [<span data-ttu-id="31dc9-107">Adorners</span><span class="sxs-lookup"><span data-stu-id="31dc9-107">Adorners</span></span>](../../../../docs/framework/wpf/controls/adorners.md)  
+ [<span data-ttu-id="31dc9-108">Estilos e modelos de controle</span><span class="sxs-lookup"><span data-stu-id="31dc9-108">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="31dc9-109">Automação de interface do usuário de um controle personalizado do WPF</span><span class="sxs-lookup"><span data-stu-id="31dc9-109">UI Automation of a WPF Custom Control</span></span>](../../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md)  
   
-## <a name="see-also"></a><span data-ttu-id="3b771-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3b771-110">See Also</span></span>  
- [<span data-ttu-id="3b771-111">Estilo e modelagem</span><span class="sxs-lookup"><span data-stu-id="3b771-111">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a><span data-ttu-id="31dc9-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="31dc9-110">See Also</span></span>  
+ [<span data-ttu-id="31dc9-111">Estilo e modelagem</span><span class="sxs-lookup"><span data-stu-id="31dc9-111">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)

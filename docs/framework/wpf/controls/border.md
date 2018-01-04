@@ -18,24 +18,25 @@ caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9ca2931b8eff6404ab79aa525eabcb46baa7cc8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d061bd77c2edc00a912f4d64bc7ef38b608f9066
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="border"></a><span data-ttu-id="27a45-102">Borda</span><span class="sxs-lookup"><span data-stu-id="27a45-102">Border</span></span>
-<span data-ttu-id="27a45-103">O exemplo a seguir demonstra como alterar as propriedades de dinamicamente o <xref:System.Windows.Controls.Border> elemento.</span><span class="sxs-lookup"><span data-stu-id="27a45-103">The following sample demonstrates how to dynamically change properties of the <xref:System.Windows.Controls.Border> element.</span></span>  
+# <a name="border"></a><span data-ttu-id="d8d3d-102">Borda</span><span class="sxs-lookup"><span data-stu-id="d8d3d-102">Border</span></span>
+<span data-ttu-id="d8d3d-103">O exemplo a seguir demonstra como alterar as propriedades de dinamicamente o <xref:System.Windows.Controls.Border> elemento.</span><span class="sxs-lookup"><span data-stu-id="d8d3d-103">The following sample demonstrates how to dynamically change properties of the <xref:System.Windows.Controls.Border> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="27a45-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="27a45-104">In This Section</span></span>  
- [<span data-ttu-id="27a45-105">Animar um valor de BorderThickness</span><span class="sxs-lookup"><span data-stu-id="27a45-105">Animate a BorderThickness Value</span></span>](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d8d3d-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="d8d3d-104">In This Section</span></span>  
+ [<span data-ttu-id="d8d3d-105">Animar um valor de BorderThickness</span><span class="sxs-lookup"><span data-stu-id="d8d3d-105">Animate a BorderThickness Value</span></span>](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)  
   
-## <a name="reference"></a><span data-ttu-id="27a45-106">Referência</span><span class="sxs-lookup"><span data-stu-id="27a45-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d8d3d-106">Referência</span><span class="sxs-lookup"><span data-stu-id="d8d3d-106">Reference</span></span>  
  <xref:System.Windows.Controls.Decorator>  
   
  <xref:System.Windows.Controls.Border>  
   
-## <a name="related-sections"></a><span data-ttu-id="27a45-107">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="27a45-107">Related Sections</span></span>  
- [<span data-ttu-id="27a45-108">Visão geral de painéis</span><span class="sxs-lookup"><span data-stu-id="27a45-108">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="d8d3d-107">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="d8d3d-107">Related Sections</span></span>  
+ [<span data-ttu-id="d8d3d-108">Visão geral de painéis</span><span class="sxs-lookup"><span data-stu-id="d8d3d-108">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
   
- [<span data-ttu-id="27a45-109">Visão geral de alinhamento, margens e preenchimento</span><span class="sxs-lookup"><span data-stu-id="27a45-109">Alignment, Margins, and Padding Overview</span></span>](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+ [<span data-ttu-id="d8d3d-109">Visão geral de alinhamento, margens e preenchimento</span><span class="sxs-lookup"><span data-stu-id="d8d3d-109">Alignment, Margins, and Padding Overview</span></span>](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)

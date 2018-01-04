@@ -17,22 +17,23 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f7b95489259a914eec14c79b8e391f2a3795b2b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2d903eb1a7c47902aeda522264037384bd1f56d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="textblock"></a><span data-ttu-id="80ffb-102">TextBlock</span><span class="sxs-lookup"><span data-stu-id="80ffb-102">TextBlock</span></span>
-<span data-ttu-id="80ffb-103">O <xref:System.Windows.Controls.TextBlock> controle oferece suporte flexível de texto para [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos.</span><span class="sxs-lookup"><span data-stu-id="80ffb-103">The <xref:System.Windows.Controls.TextBlock> control provides flexible text support for [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.</span></span> <span data-ttu-id="80ffb-104">O elemento é voltado principalmente para basic [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] cenários que não necessitam de mais de um parágrafo de texto.</span><span class="sxs-lookup"><span data-stu-id="80ffb-104">The element is targeted primarily toward basic [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] scenarios that do not require more than one paragraph of text.</span></span>  
+# <a name="textblock"></a><span data-ttu-id="156ea-102">TextBlock</span><span class="sxs-lookup"><span data-stu-id="156ea-102">TextBlock</span></span>
+<span data-ttu-id="156ea-103">O <xref:System.Windows.Controls.TextBlock> controle oferece suporte flexível de texto para [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos.</span><span class="sxs-lookup"><span data-stu-id="156ea-103">The <xref:System.Windows.Controls.TextBlock> control provides flexible text support for [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.</span></span> <span data-ttu-id="156ea-104">O elemento é voltado principalmente para basic [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] cenários que não necessitam de mais de um parágrafo de texto.</span><span class="sxs-lookup"><span data-stu-id="156ea-104">The element is targeted primarily toward basic [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] scenarios that do not require more than one paragraph of text.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="80ffb-105">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="80ffb-105">In This Section</span></span>  
- [<span data-ttu-id="80ffb-106">Visão geral de TextBlock</span><span class="sxs-lookup"><span data-stu-id="80ffb-106">TextBlock Overview</span></span>](../../../../docs/framework/wpf/controls/textblock-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="156ea-105">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="156ea-105">In This Section</span></span>  
+ [<span data-ttu-id="156ea-106">Visão geral de TextBlock</span><span class="sxs-lookup"><span data-stu-id="156ea-106">TextBlock Overview</span></span>](../../../../docs/framework/wpf/controls/textblock-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="80ffb-107">Referência</span><span class="sxs-lookup"><span data-stu-id="80ffb-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="156ea-107">Referência</span><span class="sxs-lookup"><span data-stu-id="156ea-107">Reference</span></span>  
  <xref:System.Windows.Controls.Label>  
   
-## <a name="related-sections"></a><span data-ttu-id="80ffb-108">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="80ffb-108">Related Sections</span></span>  
- [<span data-ttu-id="80ffb-109">Documentos no WPF</span><span class="sxs-lookup"><span data-stu-id="80ffb-109">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+## <a name="related-sections"></a><span data-ttu-id="156ea-108">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="156ea-108">Related Sections</span></span>  
+ [<span data-ttu-id="156ea-109">Documentos no WPF</span><span class="sxs-lookup"><span data-stu-id="156ea-109">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
   
- [<span data-ttu-id="80ffb-110">Visão geral do documento de fluxo</span><span class="sxs-lookup"><span data-stu-id="80ffb-110">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+ [<span data-ttu-id="156ea-110">Visão geral do documento de fluxo</span><span class="sxs-lookup"><span data-stu-id="156ea-110">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

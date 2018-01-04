@@ -17,24 +17,25 @@ caps.latest.revision: "74"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4403d508f0a99b4cefd3ef59e6d1caf746f31fec
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 38da15eee931d2519efa0c502cfaa61ed0691a8f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="resources-how-to-topics"></a><span data-ttu-id="32742-102">Tópicos explicativos de recursos</span><span class="sxs-lookup"><span data-stu-id="32742-102">Resources How-to Topics</span></span>
-<span data-ttu-id="32742-103">Os tópicos nesta seção descrevem como usar [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] recursos.</span><span class="sxs-lookup"><span data-stu-id="32742-103">The topics in this section describe how to use [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] resources.</span></span>  
+# <a name="resources-how-to-topics"></a><span data-ttu-id="8c63f-102">Tópicos explicativos de recursos</span><span class="sxs-lookup"><span data-stu-id="8c63f-102">Resources How-to Topics</span></span>
+<span data-ttu-id="8c63f-103">Os tópicos nesta seção descrevem como usar [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] recursos.</span><span class="sxs-lookup"><span data-stu-id="8c63f-103">The topics in this section describe how to use [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] resources.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="32742-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="32742-104">In This Section</span></span>  
- [<span data-ttu-id="32742-105">Definir e referenciar um recurso</span><span class="sxs-lookup"><span data-stu-id="32742-105">Define and Reference a Resource</span></span>](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
- [<span data-ttu-id="32742-106">Usar recursos do aplicativo</span><span class="sxs-lookup"><span data-stu-id="32742-106">Use Application Resources</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)  
- [<span data-ttu-id="32742-107">Usar SystemFonts</span><span class="sxs-lookup"><span data-stu-id="32742-107">Use SystemFonts</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
- [<span data-ttu-id="32742-108">Usar chaves de fontes do sistema</span><span class="sxs-lookup"><span data-stu-id="32742-108">Use System Fonts Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)  
- [<span data-ttu-id="32742-109">Usar SystemParameters</span><span class="sxs-lookup"><span data-stu-id="32742-109">Use SystemParameters</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)  
- [<span data-ttu-id="32742-110">Usar chaves de parâmetros do sistema</span><span class="sxs-lookup"><span data-stu-id="32742-110">Use System Parameters Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
+## <a name="in-this-section"></a><span data-ttu-id="8c63f-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="8c63f-104">In This Section</span></span>  
+ [<span data-ttu-id="8c63f-105">Definir e referenciar um recurso</span><span class="sxs-lookup"><span data-stu-id="8c63f-105">Define and Reference a Resource</span></span>](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
+ [<span data-ttu-id="8c63f-106">Usar recursos do aplicativo</span><span class="sxs-lookup"><span data-stu-id="8c63f-106">Use Application Resources</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)  
+ [<span data-ttu-id="8c63f-107">Usar SystemFonts</span><span class="sxs-lookup"><span data-stu-id="8c63f-107">Use SystemFonts</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
+ [<span data-ttu-id="8c63f-108">Usar chaves de fontes do sistema</span><span class="sxs-lookup"><span data-stu-id="8c63f-108">Use System Fonts Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)  
+ [<span data-ttu-id="8c63f-109">Usar SystemParameters</span><span class="sxs-lookup"><span data-stu-id="8c63f-109">Use SystemParameters</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)  
+ [<span data-ttu-id="8c63f-110">Usar chaves de parâmetros do sistema</span><span class="sxs-lookup"><span data-stu-id="8c63f-110">Use System Parameters Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
   
-## <a name="reference"></a><span data-ttu-id="32742-111">Referência</span><span class="sxs-lookup"><span data-stu-id="32742-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="8c63f-111">Referência</span><span class="sxs-lookup"><span data-stu-id="8c63f-111">Reference</span></span>  
  <xref:System.Windows.FrameworkTemplate.Resources%2A>  
   
  <xref:System.Windows.SystemColors>  
@@ -43,5 +44,5 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.SystemFonts>  
   
-## <a name="related-sections"></a><span data-ttu-id="32742-112">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="32742-112">Related Sections</span></span>  
- [<span data-ttu-id="32742-113">Recursos XAML</span><span class="sxs-lookup"><span data-stu-id="32742-113">XAML Resources</span></span>](../../../../docs/framework/wpf/advanced/xaml-resources.md)
+## <a name="related-sections"></a><span data-ttu-id="8c63f-112">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="8c63f-112">Related Sections</span></span>  
+ [<span data-ttu-id="8c63f-113">Recursos XAML</span><span class="sxs-lookup"><span data-stu-id="8c63f-113">XAML Resources</span></span>](../../../../docs/framework/wpf/advanced/xaml-resources.md)

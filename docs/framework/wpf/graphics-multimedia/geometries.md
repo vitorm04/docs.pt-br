@@ -19,23 +19,24 @@ caps.latest.revision: "55"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ace9058a7f495a9cc2cf64398fd91338b7200f3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7fbe50f6a282f93ca4f0a2e2be74dbcefa604014
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="geometries"></a><span data-ttu-id="f4541-102">Geometrias</span><span class="sxs-lookup"><span data-stu-id="f4541-102">Geometries</span></span>
-<span data-ttu-id="f4541-103"><xref:System.Windows.Media.Geometry>é uma classe versátil, usada para renderizar [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] gráficos, objetos hit-test e definir regiões de recorte</span><span class="sxs-lookup"><span data-stu-id="f4541-103"><xref:System.Windows.Media.Geometry> is a versatile class, used to render [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] graphics, hit-test objects, and define clipping regions</span></span>  
+# <a name="geometries"></a><span data-ttu-id="8df7f-102">Geometrias</span><span class="sxs-lookup"><span data-stu-id="8df7f-102">Geometries</span></span>
+<span data-ttu-id="8df7f-103"><xref:System.Windows.Media.Geometry>é uma classe versátil, usada para renderizar [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] gráficos, objetos hit-test e definir regiões de recorte</span><span class="sxs-lookup"><span data-stu-id="8df7f-103"><xref:System.Windows.Media.Geometry> is a versatile class, used to render [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] graphics, hit-test objects, and define clipping regions</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f4541-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="f4541-104">In This Section</span></span>  
- [<span data-ttu-id="f4541-105">Sintaxe de marcação de caminho</span><span class="sxs-lookup"><span data-stu-id="f4541-105">Path Markup Syntax</span></span>](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
- [<span data-ttu-id="f4541-106">Visão geral de geometria</span><span class="sxs-lookup"><span data-stu-id="f4541-106">Geometry Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [<span data-ttu-id="f4541-107">Tópicos explicativos</span><span class="sxs-lookup"><span data-stu-id="f4541-107">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="8df7f-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="8df7f-104">In This Section</span></span>  
+ [<span data-ttu-id="8df7f-105">Sintaxe de marcação de caminho</span><span class="sxs-lookup"><span data-stu-id="8df7f-105">Path Markup Syntax</span></span>](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
+ [<span data-ttu-id="8df7f-106">Visão geral de geometria</span><span class="sxs-lookup"><span data-stu-id="8df7f-106">Geometry Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
+ [<span data-ttu-id="8df7f-107">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="8df7f-107">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="f4541-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f4541-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="8df7f-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8df7f-108">See Also</span></span>  
  <xref:System.Windows.Media.Brushes>  
  <xref:System.Windows.Shapes.Shape>  
- [<span data-ttu-id="f4541-109">Elementos gráficos e geração de imagens 2D</span><span class="sxs-lookup"><span data-stu-id="f4541-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [<span data-ttu-id="f4541-110">Visão geral de formas e desenho básico no WPF</span><span class="sxs-lookup"><span data-stu-id="f4541-110">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [<span data-ttu-id="f4541-111">Elementos gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="f4541-111">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [<span data-ttu-id="8df7f-109">Elementos gráficos e geração de imagens 2D</span><span class="sxs-lookup"><span data-stu-id="8df7f-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="8df7f-110">Visão geral de formas e desenho básico no WPF</span><span class="sxs-lookup"><span data-stu-id="8df7f-110">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [<span data-ttu-id="8df7f-111">Elementos gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="8df7f-111">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

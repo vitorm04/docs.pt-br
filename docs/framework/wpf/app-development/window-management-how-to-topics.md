@@ -15,29 +15,30 @@ caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dd3771e0fcbf83b00f52d78a5c63793dae116e4e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 7fea4c74fc837181e1b0a007fb83ddce1c4cd52a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="window-management-how-to-topics"></a><span data-ttu-id="ed06f-102">Tópicos de instruções de gerenciamento de janela</span><span class="sxs-lookup"><span data-stu-id="ed06f-102">Window Management How-to Topics</span></span>
-<span data-ttu-id="ed06f-103">Os tópicos a seguir mostram como gerenciar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span><span class="sxs-lookup"><span data-stu-id="ed06f-103">The following topics show how to manage [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span></span>  
+# <a name="window-management-how-to-topics"></a><span data-ttu-id="28ddd-102">Tópicos de instruções de gerenciamento de janela</span><span class="sxs-lookup"><span data-stu-id="28ddd-102">Window Management How-to Topics</span></span>
+<span data-ttu-id="28ddd-103">Os tópicos a seguir mostram como gerenciar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span><span class="sxs-lookup"><span data-stu-id="28ddd-103">The following topics show how to manage [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ed06f-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="ed06f-104">In This Section</span></span>  
- [<span data-ttu-id="ed06f-105">Dimensionar automaticamente uma janela para caber seu conteúdo</span><span class="sxs-lookup"><span data-stu-id="ed06f-105">Automatically Size a Window to Fit Its Content</span></span>](../../../../docs/framework/wpf/app-development/how-to-automatically-size-a-window-to-fit-its-content.md)  
-  [<span data-ttu-id="ed06f-106">Obter todas as janelas em um aplicativo</span><span class="sxs-lookup"><span data-stu-id="ed06f-106">Get all Windows in an Application</span></span>](../../../../docs/framework/wpf/app-development/how-to-get-all-windows-in-an-application.md)  
-  [<span data-ttu-id="ed06f-107">Obter e definir a janela principal do aplicativo</span><span class="sxs-lookup"><span data-stu-id="ed06f-107">Get and Set the Main Application Window</span></span>](../../../../docs/framework/wpf/app-development/how-to-get-and-set-the-main-application-window.md)  
-  [<span data-ttu-id="ed06f-108">Abrindo uma caixa de diálogo</span><span class="sxs-lookup"><span data-stu-id="ed06f-108">Open a Dialog Box</span></span>](../../../../docs/framework/wpf/app-development/how-to-open-a-dialog-box.md)  
-  [<span data-ttu-id="ed06f-109">Abrir uma caixa de mensagem</span><span class="sxs-lookup"><span data-stu-id="ed06f-109">Open a Message Box</span></span>](../../../../docs/framework/wpf/app-development/how-to-open-a-message-box.md)  
-  [<span data-ttu-id="ed06f-110">Abrir uma janela</span><span class="sxs-lookup"><span data-stu-id="ed06f-110">Open a Window</span></span>](../../../../docs/framework/wpf/app-development/how-to-open-a-window.md)  
-  [<span data-ttu-id="ed06f-111">Retornar o resultado de uma caixa de diálogo</span><span class="sxs-lookup"><span data-stu-id="ed06f-111">Return a Dialog Box Result</span></span>](../../../../docs/framework/wpf/app-development/how-to-return-a-dialog-box-result.md)  
+## <a name="in-this-section"></a><span data-ttu-id="28ddd-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="28ddd-104">In This Section</span></span>  
+ [<span data-ttu-id="28ddd-105">Dimensionar automaticamente uma janela para caber seu conteúdo</span><span class="sxs-lookup"><span data-stu-id="28ddd-105">Automatically Size a Window to Fit Its Content</span></span>](../../../../docs/framework/wpf/app-development/how-to-automatically-size-a-window-to-fit-its-content.md)  
+  [<span data-ttu-id="28ddd-106">Obter todas as janelas em um aplicativo</span><span class="sxs-lookup"><span data-stu-id="28ddd-106">Get all Windows in an Application</span></span>](../../../../docs/framework/wpf/app-development/how-to-get-all-windows-in-an-application.md)  
+  [<span data-ttu-id="28ddd-107">Obter e definir a janela principal do aplicativo</span><span class="sxs-lookup"><span data-stu-id="28ddd-107">Get and Set the Main Application Window</span></span>](../../../../docs/framework/wpf/app-development/how-to-get-and-set-the-main-application-window.md)  
+  [<span data-ttu-id="28ddd-108">Abrindo uma caixa de diálogo</span><span class="sxs-lookup"><span data-stu-id="28ddd-108">Open a Dialog Box</span></span>](../../../../docs/framework/wpf/app-development/how-to-open-a-dialog-box.md)  
+  [<span data-ttu-id="28ddd-109">Abrir uma caixa de mensagem</span><span class="sxs-lookup"><span data-stu-id="28ddd-109">Open a Message Box</span></span>](../../../../docs/framework/wpf/app-development/how-to-open-a-message-box.md)  
+  [<span data-ttu-id="28ddd-110">Abrir uma janela</span><span class="sxs-lookup"><span data-stu-id="28ddd-110">Open a Window</span></span>](../../../../docs/framework/wpf/app-development/how-to-open-a-window.md)  
+  [<span data-ttu-id="28ddd-111">Retornar o resultado de uma caixa de diálogo</span><span class="sxs-lookup"><span data-stu-id="28ddd-111">Return a Dialog Box Result</span></span>](../../../../docs/framework/wpf/app-development/how-to-return-a-dialog-box-result.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="ed06f-112">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="ed06f-112">Related Sections</span></span>  
- [<span data-ttu-id="ed06f-113">Visão geral do gerenciamento de aplicativos</span><span class="sxs-lookup"><span data-stu-id="ed06f-113">Application Management Overview</span></span>](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="28ddd-112">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="28ddd-112">Related Sections</span></span>  
+ [<span data-ttu-id="28ddd-113">Visão geral do gerenciamento de aplicativos</span><span class="sxs-lookup"><span data-stu-id="28ddd-113">Application Management Overview</span></span>](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
   
- [<span data-ttu-id="ed06f-114">Visão geral de navegação</span><span class="sxs-lookup"><span data-stu-id="ed06f-114">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+ [<span data-ttu-id="28ddd-114">Visão geral de navegação</span><span class="sxs-lookup"><span data-stu-id="28ddd-114">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
   
- [<span data-ttu-id="ed06f-115">Hospedagem</span><span class="sxs-lookup"><span data-stu-id="ed06f-115">Hosting</span></span>](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
+ [<span data-ttu-id="28ddd-115">Hospedagem</span><span class="sxs-lookup"><span data-stu-id="28ddd-115">Hosting</span></span>](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
   
- [<span data-ttu-id="ed06f-116">Compilar e implantar</span><span class="sxs-lookup"><span data-stu-id="ed06f-116">Build and Deploy</span></span>](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+ [<span data-ttu-id="28ddd-116">Compilar e implantar</span><span class="sxs-lookup"><span data-stu-id="28ddd-116">Build and Deploy</span></span>](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)

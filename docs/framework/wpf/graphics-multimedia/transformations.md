@@ -26,21 +26,22 @@ caps.latest.revision: "50"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b26b2945f35e0ba96cc76e7bce460c06ab9887e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: da061a85338e4a9afb530a2986942950b7dcc136
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="transformations"></a><span data-ttu-id="ccde8-102">Transformações</span><span class="sxs-lookup"><span data-stu-id="ccde8-102">Transformations</span></span>
-<span data-ttu-id="ccde8-103">Transformações são usadas para girar, dimensionar, converter ou distorcer <xref:System.Windows.FrameworkElement> objetos.</span><span class="sxs-lookup"><span data-stu-id="ccde8-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
+# <a name="transformations"></a><span data-ttu-id="9a998-102">Transformações</span><span class="sxs-lookup"><span data-stu-id="9a998-102">Transformations</span></span>
+<span data-ttu-id="9a998-103">Transformações são usadas para girar, dimensionar, converter ou distorcer <xref:System.Windows.FrameworkElement> objetos.</span><span class="sxs-lookup"><span data-stu-id="9a998-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ccde8-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="ccde8-104">In This Section</span></span>  
- [<span data-ttu-id="ccde8-105">Visão geral de transformações</span><span class="sxs-lookup"><span data-stu-id="ccde8-105">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [<span data-ttu-id="ccde8-106">Tópicos explicativos</span><span class="sxs-lookup"><span data-stu-id="ccde8-106">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="9a998-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="9a998-104">In This Section</span></span>  
+ [<span data-ttu-id="9a998-105">Visão geral de transformações</span><span class="sxs-lookup"><span data-stu-id="9a998-105">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
+ [<span data-ttu-id="9a998-106">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="9a998-106">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="ccde8-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ccde8-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="9a998-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9a998-107">See Also</span></span>  
  <xref:System.Windows.Media.Transform>  
- [<span data-ttu-id="ccde8-108">Elementos gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="ccde8-108">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="ccde8-109">Visão geral de renderização de gráficos do WPF</span><span class="sxs-lookup"><span data-stu-id="ccde8-109">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [<span data-ttu-id="ccde8-110">Layout</span><span class="sxs-lookup"><span data-stu-id="ccde8-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)
+ [<span data-ttu-id="9a998-108">Elementos gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="9a998-108">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [<span data-ttu-id="9a998-109">Visão geral de renderização de gráficos do WPF</span><span class="sxs-lookup"><span data-stu-id="9a998-109">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [<span data-ttu-id="9a998-110">Layout</span><span class="sxs-lookup"><span data-stu-id="9a998-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)

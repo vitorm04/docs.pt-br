@@ -17,33 +17,34 @@ caps.latest.revision: "61"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 405c9485e61692df83337740c2ccdae0408c1c0b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cdf54273ba040b82a3e292f82680a480b8a807a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="xaml-namespace-x-language-features"></a><span data-ttu-id="c5745-102">Funcionalidades da linguagem (x:) do Namespace XAML</span><span class="sxs-lookup"><span data-stu-id="c5745-102">XAML Namespace (x:) Language Features</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="c5745-103">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="c5745-103">In This Section</span></span>  
- [<span data-ttu-id="c5745-104">Extensão de marcação x:Array</span><span class="sxs-lookup"><span data-stu-id="c5745-104">x:Array Markup Extension</span></span>](x-array-markup-extension.md)  
- [<span data-ttu-id="c5745-105">Diretiva x:Class</span><span class="sxs-lookup"><span data-stu-id="c5745-105">x:Class Directive</span></span>](x-class-directive.md)  
- [<span data-ttu-id="c5745-106">Diretiva x:ClassModifier</span><span class="sxs-lookup"><span data-stu-id="c5745-106">x:ClassModifier Directive</span></span>](x-classmodifier-directive.md)  
- [<span data-ttu-id="c5745-107">Tipo intrínseco x:Code (XAML)</span><span class="sxs-lookup"><span data-stu-id="c5745-107">x:Code Intrinsic XAML Type</span></span>](x-code-intrinsic-xaml-type.md)  
- [<span data-ttu-id="c5745-108">Diretiva x:FieldModifier</span><span class="sxs-lookup"><span data-stu-id="c5745-108">x:FieldModifier Directive</span></span>](x-fieldmodifier-directive.md)  
- [<span data-ttu-id="c5745-109">Diretiva x:Key</span><span class="sxs-lookup"><span data-stu-id="c5745-109">x:Key Directive</span></span>](x-key-directive.md)  
- [<span data-ttu-id="c5745-110">Diretiva x:Member</span><span class="sxs-lookup"><span data-stu-id="c5745-110">x:Member Directive</span></span>](x-member-directive.md)  
- [<span data-ttu-id="c5745-111">Diretiva x:Members</span><span class="sxs-lookup"><span data-stu-id="c5745-111">x:Members Directive</span></span>](x-members-directive.md)  
- [<span data-ttu-id="c5745-112">Diretiva x:Name</span><span class="sxs-lookup"><span data-stu-id="c5745-112">x:Name Directive</span></span>](x-name-directive.md)  
- [<span data-ttu-id="c5745-113">Extensão de marcação x:Null</span><span class="sxs-lookup"><span data-stu-id="c5745-113">x:Null Markup Extension</span></span>](x-null-markup-extension.md)  
- [<span data-ttu-id="c5745-114">Atributo x:Shared</span><span class="sxs-lookup"><span data-stu-id="c5745-114">x:Shared Attribute</span></span>](x-shared-attribute.md)  
- [<span data-ttu-id="c5745-115">Diretiva x:Property</span><span class="sxs-lookup"><span data-stu-id="c5745-115">x:Property Directive</span></span>](x-property-directive.md)  
- [<span data-ttu-id="c5745-116">Extensão de marcação x:Static</span><span class="sxs-lookup"><span data-stu-id="c5745-116">x:Static Markup Extension</span></span>](x-static-markup-extension.md)  
- [<span data-ttu-id="c5745-117">Diretiva x:Subclass</span><span class="sxs-lookup"><span data-stu-id="c5745-117">x:Subclass Directive</span></span>](x-subclass-directive.md)  
- [<span data-ttu-id="c5745-118">Extensão de marcação x:Type</span><span class="sxs-lookup"><span data-stu-id="c5745-118">x:Type Markup Extension</span></span>](x-type-markup-extension.md)  
- [<span data-ttu-id="c5745-119">Diretiva x:TypeArguments</span><span class="sxs-lookup"><span data-stu-id="c5745-119">x:TypeArguments Directive</span></span>](x-typearguments-directive.md)  
- [<span data-ttu-id="c5745-120">Diretiva x:Uid</span><span class="sxs-lookup"><span data-stu-id="c5745-120">x:Uid Directive</span></span>](x-uid-directive.md)  
- [<span data-ttu-id="c5745-121">Tipo intrínseco x:XData (XAML)</span><span class="sxs-lookup"><span data-stu-id="c5745-121">x:XData Intrinsic XAML Type</span></span>](x-xdata-intrinsic-xaml-type.md)  
- [<span data-ttu-id="c5745-122">Gramática XamlName</span><span class="sxs-lookup"><span data-stu-id="c5745-122">XamlName Grammar</span></span>](xamlname-grammar.md)  
- [<span data-ttu-id="c5745-123">Sequência de escape {} - extensão de marcação</span><span class="sxs-lookup"><span data-stu-id="c5745-123">{} Escape Sequence - Markup Extension</span></span>](escape-sequence-markup-extension.md)  
- [<span data-ttu-id="c5745-124">Tratamento de xml:lang em XAML</span><span class="sxs-lookup"><span data-stu-id="c5745-124">xml:lang Handling in XAML</span></span>](xml-lang-handling-in-xaml.md)  
- [<span data-ttu-id="c5745-125">Tratamento de xml:space em XAML</span><span class="sxs-lookup"><span data-stu-id="c5745-125">xml:space Handling in XAML</span></span>](xml-space-handling-in-xaml.md)
+# <a name="xaml-namespace-x-language-features"></a><span data-ttu-id="e96ae-102">Funcionalidades da linguagem (x:) do Namespace XAML</span><span class="sxs-lookup"><span data-stu-id="e96ae-102">XAML Namespace (x:) Language Features</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="e96ae-103">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="e96ae-103">In This Section</span></span>  
+ [<span data-ttu-id="e96ae-104">Extensão de marcação x:Array</span><span class="sxs-lookup"><span data-stu-id="e96ae-104">x:Array Markup Extension</span></span>](x-array-markup-extension.md)  
+ [<span data-ttu-id="e96ae-105">Diretiva x:Class</span><span class="sxs-lookup"><span data-stu-id="e96ae-105">x:Class Directive</span></span>](x-class-directive.md)  
+ [<span data-ttu-id="e96ae-106">Diretiva x:ClassModifier</span><span class="sxs-lookup"><span data-stu-id="e96ae-106">x:ClassModifier Directive</span></span>](x-classmodifier-directive.md)  
+ [<span data-ttu-id="e96ae-107">Tipo intrínseco x:Code (XAML)</span><span class="sxs-lookup"><span data-stu-id="e96ae-107">x:Code Intrinsic XAML Type</span></span>](x-code-intrinsic-xaml-type.md)  
+ [<span data-ttu-id="e96ae-108">Diretiva x:FieldModifier</span><span class="sxs-lookup"><span data-stu-id="e96ae-108">x:FieldModifier Directive</span></span>](x-fieldmodifier-directive.md)  
+ [<span data-ttu-id="e96ae-109">Diretiva x:Key</span><span class="sxs-lookup"><span data-stu-id="e96ae-109">x:Key Directive</span></span>](x-key-directive.md)  
+ [<span data-ttu-id="e96ae-110">Diretiva x:Member</span><span class="sxs-lookup"><span data-stu-id="e96ae-110">x:Member Directive</span></span>](x-member-directive.md)  
+ [<span data-ttu-id="e96ae-111">Diretiva x:Members</span><span class="sxs-lookup"><span data-stu-id="e96ae-111">x:Members Directive</span></span>](x-members-directive.md)  
+ [<span data-ttu-id="e96ae-112">Diretiva x:Name</span><span class="sxs-lookup"><span data-stu-id="e96ae-112">x:Name Directive</span></span>](x-name-directive.md)  
+ [<span data-ttu-id="e96ae-113">Extensão de marcação x:Null</span><span class="sxs-lookup"><span data-stu-id="e96ae-113">x:Null Markup Extension</span></span>](x-null-markup-extension.md)  
+ [<span data-ttu-id="e96ae-114">Atributo x:Shared</span><span class="sxs-lookup"><span data-stu-id="e96ae-114">x:Shared Attribute</span></span>](x-shared-attribute.md)  
+ [<span data-ttu-id="e96ae-115">Diretiva x:Property</span><span class="sxs-lookup"><span data-stu-id="e96ae-115">x:Property Directive</span></span>](x-property-directive.md)  
+ [<span data-ttu-id="e96ae-116">Extensão de marcação x:Static</span><span class="sxs-lookup"><span data-stu-id="e96ae-116">x:Static Markup Extension</span></span>](x-static-markup-extension.md)  
+ [<span data-ttu-id="e96ae-117">Diretiva x:Subclass</span><span class="sxs-lookup"><span data-stu-id="e96ae-117">x:Subclass Directive</span></span>](x-subclass-directive.md)  
+ [<span data-ttu-id="e96ae-118">Extensão de marcação x:Type</span><span class="sxs-lookup"><span data-stu-id="e96ae-118">x:Type Markup Extension</span></span>](x-type-markup-extension.md)  
+ [<span data-ttu-id="e96ae-119">Diretiva x:TypeArguments</span><span class="sxs-lookup"><span data-stu-id="e96ae-119">x:TypeArguments Directive</span></span>](x-typearguments-directive.md)  
+ [<span data-ttu-id="e96ae-120">Diretiva x:Uid</span><span class="sxs-lookup"><span data-stu-id="e96ae-120">x:Uid Directive</span></span>](x-uid-directive.md)  
+ [<span data-ttu-id="e96ae-121">Tipo intrínseco x:XData (XAML)</span><span class="sxs-lookup"><span data-stu-id="e96ae-121">x:XData Intrinsic XAML Type</span></span>](x-xdata-intrinsic-xaml-type.md)  
+ [<span data-ttu-id="e96ae-122">Gramática XamlName</span><span class="sxs-lookup"><span data-stu-id="e96ae-122">XamlName Grammar</span></span>](xamlname-grammar.md)  
+ [<span data-ttu-id="e96ae-123">Sequência de escape {} - extensão de marcação</span><span class="sxs-lookup"><span data-stu-id="e96ae-123">{} Escape Sequence - Markup Extension</span></span>](escape-sequence-markup-extension.md)  
+ [<span data-ttu-id="e96ae-124">Tratamento de xml:lang em XAML</span><span class="sxs-lookup"><span data-stu-id="e96ae-124">xml:lang Handling in XAML</span></span>](xml-lang-handling-in-xaml.md)  
+ [<span data-ttu-id="e96ae-125">Tratamento de xml:space em XAML</span><span class="sxs-lookup"><span data-stu-id="e96ae-125">xml:space Handling in XAML</span></span>](xml-space-handling-in-xaml.md)

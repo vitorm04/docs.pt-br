@@ -17,23 +17,24 @@ caps.latest.revision: "79"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 809f63d0057dd55d092343578d2952b2abdc0812
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 23fba12742943720f5b73db708015e798f0ac886
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="data-binding-wpf"></a><span data-ttu-id="16743-102">Associação de dados (WPF)</span><span class="sxs-lookup"><span data-stu-id="16743-102">Data Binding (WPF)</span></span>
-<span data-ttu-id="16743-103">Associação de dados do Windows Presentation Foundation (WPF) fornece uma maneira simple e consistente para aplicações apresentar e interagir com dados.</span><span class="sxs-lookup"><span data-stu-id="16743-103">Windows Presentation Foundation (WPF) data binding provides a simple and consistent way for applications to present and interact with data.</span></span> <span data-ttu-id="16743-104">Elementos podem ser associados aos dados de uma variedade de fontes de dados na forma de objetos common language runtime (CLR) e XML.</span><span class="sxs-lookup"><span data-stu-id="16743-104">Elements can be bound to data from a variety of data sources in the form of common language runtime (CLR) objects and XML.</span></span>  
+# <a name="data-binding-wpf"></a><span data-ttu-id="003a0-102">Associação de dados (WPF)</span><span class="sxs-lookup"><span data-stu-id="003a0-102">Data Binding (WPF)</span></span>
+<span data-ttu-id="003a0-103">Associação de dados do Windows Presentation Foundation (WPF) fornece uma maneira simple e consistente para aplicações apresentar e interagir com dados.</span><span class="sxs-lookup"><span data-stu-id="003a0-103">Windows Presentation Foundation (WPF) data binding provides a simple and consistent way for applications to present and interact with data.</span></span> <span data-ttu-id="003a0-104">Elementos podem ser associados aos dados de uma variedade de fontes de dados na forma de objetos common language runtime (CLR) e XML.</span><span class="sxs-lookup"><span data-stu-id="003a0-104">Elements can be bound to data from a variety of data sources in the form of common language runtime (CLR) objects and XML.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="16743-105">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="16743-105">In This Section</span></span>  
- [<span data-ttu-id="16743-106">Visão geral da vinculação de dados</span><span class="sxs-lookup"><span data-stu-id="16743-106">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [<span data-ttu-id="16743-107">Visão geral das origens da associação</span><span class="sxs-lookup"><span data-stu-id="16743-107">Binding Sources Overview</span></span>](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
- [<span data-ttu-id="16743-108">Visão geral de modelagem dos dados</span><span class="sxs-lookup"><span data-stu-id="16743-108">Data Templating Overview</span></span>](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [<span data-ttu-id="16743-109">Visão geral das declarações de associação</span><span class="sxs-lookup"><span data-stu-id="16743-109">Binding Declarations Overview</span></span>](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [<span data-ttu-id="16743-110">Tópicos explicativos</span><span class="sxs-lookup"><span data-stu-id="16743-110">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="003a0-105">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="003a0-105">In This Section</span></span>  
+ [<span data-ttu-id="003a0-106">Visão geral da vinculação de dados</span><span class="sxs-lookup"><span data-stu-id="003a0-106">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="003a0-107">Visão geral das origens da associação</span><span class="sxs-lookup"><span data-stu-id="003a0-107">Binding Sources Overview</span></span>](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
+ [<span data-ttu-id="003a0-108">Visão geral de modelagem dos dados</span><span class="sxs-lookup"><span data-stu-id="003a0-108">Data Templating Overview</span></span>](../../../../docs/framework/wpf/data/data-templating-overview.md)  
+ [<span data-ttu-id="003a0-109">Visão geral das declarações de associação</span><span class="sxs-lookup"><span data-stu-id="003a0-109">Binding Declarations Overview</span></span>](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
+ [<span data-ttu-id="003a0-110">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="003a0-110">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="16743-111">Referência</span><span class="sxs-lookup"><span data-stu-id="16743-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="003a0-111">Referência</span><span class="sxs-lookup"><span data-stu-id="003a0-111">Reference</span></span>  
  <xref:System.Windows.Data>  
   
  <xref:System.Windows.Data.Binding>  
@@ -42,9 +43,9 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
-## <a name="related-sections"></a><span data-ttu-id="16743-112">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="16743-112">Related Sections</span></span>  
- [<span data-ttu-id="16743-113">Arrastar e soltar</span><span class="sxs-lookup"><span data-stu-id="16743-113">Drag and Drop</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
+## <a name="related-sections"></a><span data-ttu-id="003a0-112">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="003a0-112">Related Sections</span></span>  
+ [<span data-ttu-id="003a0-113">Arrastar e soltar</span><span class="sxs-lookup"><span data-stu-id="003a0-113">Drag and Drop</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
   
- [<span data-ttu-id="16743-114">Associação de dados</span><span class="sxs-lookup"><span data-stu-id="16743-114">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [<span data-ttu-id="003a0-114">Associação de dados</span><span class="sxs-lookup"><span data-stu-id="003a0-114">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
   
- [<span data-ttu-id="16743-115">Passo a passo: armazenando dados de aplicativo em cache em um aplicativo WPF</span><span class="sxs-lookup"><span data-stu-id="16743-115">Walkthrough: Caching Application Data in a WPF Application</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+ [<span data-ttu-id="003a0-115">Passo a passo: armazenando dados de aplicativo em cache em um aplicativo WPF</span><span class="sxs-lookup"><span data-stu-id="003a0-115">Walkthrough: Caching Application Data in a WPF Application</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
