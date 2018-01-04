@@ -13,26 +13,27 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 880e088b0876be991a42a1fbf5e0775b635770b8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 10835670bd233efaeb845679088181a259da60c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="509---servicehostopenstart"></a><span data-ttu-id="3b0d2-102">509 - ServiceHostOpenStart</span><span class="sxs-lookup"><span data-stu-id="3b0d2-102">509 - ServiceHostOpenStart</span></span>
-## <a name="properties"></a><span data-ttu-id="3b0d2-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="3b0d2-103">Properties</span></span>  
+# <a name="509---servicehostopenstart"></a><span data-ttu-id="d8d20-102">509 - ServiceHostOpenStart</span><span class="sxs-lookup"><span data-stu-id="d8d20-102">509 - ServiceHostOpenStart</span></span>
+## <a name="properties"></a><span data-ttu-id="d8d20-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="d8d20-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="3b0d2-104">ID</span><span class="sxs-lookup"><span data-stu-id="3b0d2-104">ID</span></span>|<span data-ttu-id="3b0d2-105">509</span><span class="sxs-lookup"><span data-stu-id="3b0d2-105">509</span></span>|  
-|<span data-ttu-id="3b0d2-106">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="3b0d2-106">Keywords</span></span>|<span data-ttu-id="3b0d2-107">ServiceHost</span><span class="sxs-lookup"><span data-stu-id="3b0d2-107">ServiceHost</span></span>|  
-|<span data-ttu-id="3b0d2-108">Nível</span><span class="sxs-lookup"><span data-stu-id="3b0d2-108">Level</span></span>|<span data-ttu-id="3b0d2-109">Informações</span><span class="sxs-lookup"><span data-stu-id="3b0d2-109">Information</span></span>|  
-|<span data-ttu-id="3b0d2-110">Canal</span><span class="sxs-lookup"><span data-stu-id="3b0d2-110">Channel</span></span>|<span data-ttu-id="3b0d2-111">Os aplicativos de servidor de Microsoft-Windows- aplicativo/analítico</span><span class="sxs-lookup"><span data-stu-id="3b0d2-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="d8d20-104">ID</span><span class="sxs-lookup"><span data-stu-id="d8d20-104">ID</span></span>|<span data-ttu-id="d8d20-105">509</span><span class="sxs-lookup"><span data-stu-id="d8d20-105">509</span></span>|  
+|<span data-ttu-id="d8d20-106">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="d8d20-106">Keywords</span></span>|<span data-ttu-id="d8d20-107">ServiceHost</span><span class="sxs-lookup"><span data-stu-id="d8d20-107">ServiceHost</span></span>|  
+|<span data-ttu-id="d8d20-108">Nível</span><span class="sxs-lookup"><span data-stu-id="d8d20-108">Level</span></span>|<span data-ttu-id="d8d20-109">Informações</span><span class="sxs-lookup"><span data-stu-id="d8d20-109">Information</span></span>|  
+|<span data-ttu-id="d8d20-110">Canal</span><span class="sxs-lookup"><span data-stu-id="d8d20-110">Channel</span></span>|<span data-ttu-id="d8d20-111">Os aplicativos de servidor de Microsoft-Windows- aplicativo/analítico</span><span class="sxs-lookup"><span data-stu-id="d8d20-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="3b0d2-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="3b0d2-112">Description</span></span>  
- <span data-ttu-id="3b0d2-113">Esse evento é emitido quando abrir ServiceHost iniciado.</span><span class="sxs-lookup"><span data-stu-id="3b0d2-113">This event is emitted when ServiceHost Open started.</span></span>  
+## <a name="description"></a><span data-ttu-id="d8d20-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="d8d20-112">Description</span></span>  
+ <span data-ttu-id="d8d20-113">Esse evento é emitido quando abrir ServiceHost iniciado.</span><span class="sxs-lookup"><span data-stu-id="d8d20-113">This event is emitted when ServiceHost Open started.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="3b0d2-114">Mensagem</span><span class="sxs-lookup"><span data-stu-id="3b0d2-114">Message</span></span>  
- <span data-ttu-id="3b0d2-115">Abrir ServiceHost iniciado.</span><span class="sxs-lookup"><span data-stu-id="3b0d2-115">ServiceHost Open started.</span></span>  
+## <a name="message"></a><span data-ttu-id="d8d20-114">Mensagem</span><span class="sxs-lookup"><span data-stu-id="d8d20-114">Message</span></span>  
+ <span data-ttu-id="d8d20-115">Abrir ServiceHost iniciado.</span><span class="sxs-lookup"><span data-stu-id="d8d20-115">ServiceHost Open started.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="3b0d2-116">Detalhes</span><span class="sxs-lookup"><span data-stu-id="3b0d2-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="d8d20-116">Detalhes</span><span class="sxs-lookup"><span data-stu-id="d8d20-116">Details</span></span>

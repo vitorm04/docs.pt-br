@@ -13,14 +13,15 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 365ed993be6c21567090b51fd41b551240abd1e1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 489b2526ab91f03f420b7db6237d3e9cce62241f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="reliable-messaging-sessions-faulted"></a><span data-ttu-id="f217f-102">Sessões de mensagem confiável com falhas</span><span class="sxs-lookup"><span data-stu-id="f217f-102">Reliable Messaging Sessions Faulted</span></span>
-<span data-ttu-id="f217f-103">Nome do contador: Sessões de mensagens confiáveis com falha.</span><span class="sxs-lookup"><span data-stu-id="f217f-103">Counter Name: Reliable Messaging Sessions Faulted.</span></span>  
+# <a name="reliable-messaging-sessions-faulted"></a><span data-ttu-id="b2cd7-102">Sessões de mensagem confiável com falhas</span><span class="sxs-lookup"><span data-stu-id="b2cd7-102">Reliable Messaging Sessions Faulted</span></span>
+<span data-ttu-id="b2cd7-103">Nome do contador: Sessões de mensagens confiáveis com falha.</span><span class="sxs-lookup"><span data-stu-id="b2cd7-103">Counter Name: Reliable Messaging Sessions Faulted.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="f217f-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="f217f-104">Description</span></span>  
- <span data-ttu-id="f217f-105">Número de sessões de mensagens confiáveis com falha neste serviço.</span><span class="sxs-lookup"><span data-stu-id="f217f-105">Number of reliable messaging sessions that are faulted in this service.</span></span>
+## <a name="description"></a><span data-ttu-id="b2cd7-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="b2cd7-104">Description</span></span>  
+ <span data-ttu-id="b2cd7-105">Número de sessões de mensagens confiáveis com falha neste serviço.</span><span class="sxs-lookup"><span data-stu-id="b2cd7-105">Number of reliable messaging sessions that are faulted in this service.</span></span>

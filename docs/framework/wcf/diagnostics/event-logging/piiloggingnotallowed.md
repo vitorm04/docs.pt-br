@@ -13,22 +13,23 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ea85d3acc7b332a641726ab565409f1bdf1c51ba
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 44c4c1bbd42b2bf66c83899623012d6b07c1a2f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="piiloggingnotallowed"></a><span data-ttu-id="9ce7f-102">PiiLoggingNotAllowed</span><span class="sxs-lookup"><span data-stu-id="9ce7f-102">PiiLoggingNotAllowed</span></span>
-<span data-ttu-id="9ce7f-103">ID: 108</span><span class="sxs-lookup"><span data-stu-id="9ce7f-103">Id: 108</span></span>  
+# <a name="piiloggingnotallowed"></a><span data-ttu-id="da054-102">PiiLoggingNotAllowed</span><span class="sxs-lookup"><span data-stu-id="da054-102">PiiLoggingNotAllowed</span></span>
+<span data-ttu-id="da054-103">ID: 108</span><span class="sxs-lookup"><span data-stu-id="da054-103">Id: 108</span></span>  
   
- <span data-ttu-id="9ce7f-104">Severidade: erro</span><span class="sxs-lookup"><span data-stu-id="9ce7f-104">Severity: Error</span></span>  
+ <span data-ttu-id="da054-104">Severidade: erro</span><span class="sxs-lookup"><span data-stu-id="da054-104">Severity: Error</span></span>  
   
- <span data-ttu-id="9ce7f-105">Categoria: rastreamento</span><span class="sxs-lookup"><span data-stu-id="9ce7f-105">Category: Tracing</span></span>  
+ <span data-ttu-id="da054-105">Categoria: rastreamento</span><span class="sxs-lookup"><span data-stu-id="da054-105">Category: Tracing</span></span>  
   
-## <a name="description"></a><span data-ttu-id="9ce7f-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="9ce7f-106">Description</span></span>  
- <span data-ttu-id="9ce7f-107">Esse evento indica que nenhum PII conhecido está sendo registrado.</span><span class="sxs-lookup"><span data-stu-id="9ce7f-107">This event indicates that no known PII is being logged.</span></span> <span data-ttu-id="9ce7f-108">Log de PII conhecido não é permitido.</span><span class="sxs-lookup"><span data-stu-id="9ce7f-108">Logging of known PII is not allowed.</span></span> <span data-ttu-id="9ce7f-109">Para permitir o registro em log de PII conhecido, defina "enableLoggingKnownPii" `true` em Machine. config. O evento lista o nome de processo e a ID de processo.</span><span class="sxs-lookup"><span data-stu-id="9ce7f-109">To allow logging of known PII, set "enableLoggingKnownPii" to `true` in Machine.config. The event lists the process name and process ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="da054-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="da054-106">Description</span></span>  
+ <span data-ttu-id="da054-107">Esse evento indica que nenhum PII conhecido está sendo registrado.</span><span class="sxs-lookup"><span data-stu-id="da054-107">This event indicates that no known PII is being logged.</span></span> <span data-ttu-id="da054-108">Log de PII conhecido não é permitido.</span><span class="sxs-lookup"><span data-stu-id="da054-108">Logging of known PII is not allowed.</span></span> <span data-ttu-id="da054-109">Para permitir o registro em log de PII conhecido, defina "enableLoggingKnownPii" `true` em Machine. config. O evento lista o nome de processo e a ID de processo.</span><span class="sxs-lookup"><span data-stu-id="da054-109">To allow logging of known PII, set "enableLoggingKnownPii" to `true` in Machine.config. The event lists the process name and process ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9ce7f-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9ce7f-110">See Also</span></span>  
- [<span data-ttu-id="9ce7f-111">Log de eventos</span><span class="sxs-lookup"><span data-stu-id="9ce7f-111">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [<span data-ttu-id="9ce7f-112">Referência geral de eventos</span><span class="sxs-lookup"><span data-stu-id="9ce7f-112">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="da054-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="da054-110">See Also</span></span>  
+ [<span data-ttu-id="da054-111">Registro de eventos em log</span><span class="sxs-lookup"><span data-stu-id="da054-111">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [<span data-ttu-id="da054-112">Referência geral de eventos</span><span class="sxs-lookup"><span data-stu-id="da054-112">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

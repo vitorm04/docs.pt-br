@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6c893c63868e8ba5dad4fbb29999945b9f4d2ed4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0ea50942b30adf6c3cf4577493e994a7235fd580
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3333---outgoingmessagesecured"></a><span data-ttu-id="a1bdf-102">3333 - OutgoingMessageSecured</span><span class="sxs-lookup"><span data-stu-id="a1bdf-102">3333 - OutgoingMessageSecured</span></span>
-## <a name="properties"></a><span data-ttu-id="a1bdf-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="a1bdf-103">Properties</span></span>  
+# <a name="3333---outgoingmessagesecured"></a><span data-ttu-id="e6180-102">3333 - OutgoingMessageSecured</span><span class="sxs-lookup"><span data-stu-id="e6180-102">3333 - OutgoingMessageSecured</span></span>
+## <a name="properties"></a><span data-ttu-id="e6180-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="e6180-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="a1bdf-104">ID</span><span class="sxs-lookup"><span data-stu-id="a1bdf-104">ID</span></span>|<span data-ttu-id="a1bdf-105">3333</span><span class="sxs-lookup"><span data-stu-id="a1bdf-105">3333</span></span>|  
-|<span data-ttu-id="a1bdf-106">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="a1bdf-106">Keywords</span></span>|<span data-ttu-id="a1bdf-107">Segurança</span><span class="sxs-lookup"><span data-stu-id="a1bdf-107">Security</span></span>|  
-|<span data-ttu-id="a1bdf-108">Nível</span><span class="sxs-lookup"><span data-stu-id="a1bdf-108">Level</span></span>|<span data-ttu-id="a1bdf-109">Detalhado</span><span class="sxs-lookup"><span data-stu-id="a1bdf-109">Verbose</span></span>|  
-|<span data-ttu-id="a1bdf-110">Canal</span><span class="sxs-lookup"><span data-stu-id="a1bdf-110">Channel</span></span>|<span data-ttu-id="a1bdf-111">Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração</span><span class="sxs-lookup"><span data-stu-id="a1bdf-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="e6180-104">ID</span><span class="sxs-lookup"><span data-stu-id="e6180-104">ID</span></span>|<span data-ttu-id="e6180-105">3333</span><span class="sxs-lookup"><span data-stu-id="e6180-105">3333</span></span>|  
+|<span data-ttu-id="e6180-106">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="e6180-106">Keywords</span></span>|<span data-ttu-id="e6180-107">Segurança</span><span class="sxs-lookup"><span data-stu-id="e6180-107">Security</span></span>|  
+|<span data-ttu-id="e6180-108">Nível</span><span class="sxs-lookup"><span data-stu-id="e6180-108">Level</span></span>|<span data-ttu-id="e6180-109">Detalhado</span><span class="sxs-lookup"><span data-stu-id="e6180-109">Verbose</span></span>|  
+|<span data-ttu-id="e6180-110">Canal</span><span class="sxs-lookup"><span data-stu-id="e6180-110">Channel</span></span>|<span data-ttu-id="e6180-111">Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração</span><span class="sxs-lookup"><span data-stu-id="e6180-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="a1bdf-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="a1bdf-112">Description</span></span>  
- <span data-ttu-id="a1bdf-113">Esse evento é emitido quando a mensagem de saída foi protegida.</span><span class="sxs-lookup"><span data-stu-id="a1bdf-113">This event is emitted when the outgoing message has been secured.</span></span>  
+## <a name="description"></a><span data-ttu-id="e6180-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="e6180-112">Description</span></span>  
+ <span data-ttu-id="e6180-113">Esse evento é emitido quando a mensagem de saída foi protegida.</span><span class="sxs-lookup"><span data-stu-id="e6180-113">This event is emitted when the outgoing message has been secured.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="a1bdf-114">Mensagem</span><span class="sxs-lookup"><span data-stu-id="a1bdf-114">Message</span></span>  
- <span data-ttu-id="a1bdf-115">Mensagem de saída foi protegida.</span><span class="sxs-lookup"><span data-stu-id="a1bdf-115">Outgoing message has been secured.</span></span>  
+## <a name="message"></a><span data-ttu-id="e6180-114">Mensagem</span><span class="sxs-lookup"><span data-stu-id="e6180-114">Message</span></span>  
+ <span data-ttu-id="e6180-115">Mensagem de saída foi protegida.</span><span class="sxs-lookup"><span data-stu-id="e6180-115">Outgoing message has been secured.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="a1bdf-116">Detalhes</span><span class="sxs-lookup"><span data-stu-id="a1bdf-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="e6180-116">Detalhes</span><span class="sxs-lookup"><span data-stu-id="e6180-116">Details</span></span>

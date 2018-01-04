@@ -13,22 +13,23 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f1a69842bcd0c5404e1c60951d69303dbf0bd39d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4dd3cb14c77eadf00d4479dd84a8d71c3dbe7ce3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="failedtotraceevent"></a><span data-ttu-id="e2f30-102">FailedToTraceEvent</span><span class="sxs-lookup"><span data-stu-id="e2f30-102">FailedToTraceEvent</span></span>
-<span data-ttu-id="e2f30-103">ID: 104</span><span class="sxs-lookup"><span data-stu-id="e2f30-103">Id: 104</span></span>  
+# <a name="failedtotraceevent"></a><span data-ttu-id="8863b-102">FailedToTraceEvent</span><span class="sxs-lookup"><span data-stu-id="8863b-102">FailedToTraceEvent</span></span>
+<span data-ttu-id="8863b-103">ID: 104</span><span class="sxs-lookup"><span data-stu-id="8863b-103">Id: 104</span></span>  
   
- <span data-ttu-id="e2f30-104">Severidade: erro</span><span class="sxs-lookup"><span data-stu-id="e2f30-104">Severity: Error</span></span>  
+ <span data-ttu-id="8863b-104">Severidade: erro</span><span class="sxs-lookup"><span data-stu-id="8863b-104">Severity: Error</span></span>  
   
- <span data-ttu-id="e2f30-105">Categoria: rastreamento</span><span class="sxs-lookup"><span data-stu-id="e2f30-105">Category: Tracing</span></span>  
+ <span data-ttu-id="8863b-105">Categoria: rastreamento</span><span class="sxs-lookup"><span data-stu-id="8863b-105">Category: Tracing</span></span>  
   
-## <a name="description"></a><span data-ttu-id="e2f30-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="e2f30-106">Description</span></span>  
- <span data-ttu-id="e2f30-107">Eventos não foram rastreados.</span><span class="sxs-lookup"><span data-stu-id="e2f30-107">An event or events were not traced.</span></span> <span data-ttu-id="e2f30-108">O evento de lista de cadeia de caracteres original do evento, o nome do processo e a ID de processo.</span><span class="sxs-lookup"><span data-stu-id="e2f30-108">The event lists the original event string, process name and process ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="8863b-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="8863b-106">Description</span></span>  
+ <span data-ttu-id="8863b-107">Eventos não foram rastreados.</span><span class="sxs-lookup"><span data-stu-id="8863b-107">An event or events were not traced.</span></span> <span data-ttu-id="8863b-108">O evento de lista de cadeia de caracteres original do evento, o nome do processo e a ID de processo.</span><span class="sxs-lookup"><span data-stu-id="8863b-108">The event lists the original event string, process name and process ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e2f30-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e2f30-109">See Also</span></span>  
- [<span data-ttu-id="e2f30-110">Log de eventos</span><span class="sxs-lookup"><span data-stu-id="e2f30-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [<span data-ttu-id="e2f30-111">Referência geral de eventos</span><span class="sxs-lookup"><span data-stu-id="e2f30-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="8863b-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8863b-109">See Also</span></span>  
+ [<span data-ttu-id="8863b-110">Registro de eventos em log</span><span class="sxs-lookup"><span data-stu-id="8863b-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [<span data-ttu-id="8863b-111">Referência geral de eventos</span><span class="sxs-lookup"><span data-stu-id="8863b-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

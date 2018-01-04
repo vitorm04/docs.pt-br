@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ab1198a6c7e233fd168c79fdfbd7d518faa60ea1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d1bf6b68f5ddb2bd2af535e751f1a7d6fc4ee06f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationmexmonikermetadataexchangecomplete"></a><span data-ttu-id="8af81-102">System.ServiceModel.ComIntegration.ComIntegrationMexMonikerMetadataExchangeComplete</span><span class="sxs-lookup"><span data-stu-id="8af81-102">System.ServiceModel.ComIntegration.ComIntegrationMexMonikerMetadataExchangeComplete</span></span>
-<span data-ttu-id="8af81-103">System.ServiceModel.ComIntegration.ComIntegrationMexMonikerMetadataExchangeComplete</span><span class="sxs-lookup"><span data-stu-id="8af81-103">System.ServiceModel.ComIntegration.ComIntegrationMexMonikerMetadataExchangeComplete</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationmexmonikermetadataexchangecomplete"></a><span data-ttu-id="2b775-102">System.ServiceModel.ComIntegration.ComIntegrationMexMonikerMetadataExchangeComplete</span><span class="sxs-lookup"><span data-stu-id="2b775-102">System.ServiceModel.ComIntegration.ComIntegrationMexMonikerMetadataExchangeComplete</span></span>
+<span data-ttu-id="2b775-103">System.ServiceModel.ComIntegration.ComIntegrationMexMonikerMetadataExchangeComplete</span><span class="sxs-lookup"><span data-stu-id="2b775-103">System.ServiceModel.ComIntegration.ComIntegrationMexMonikerMetadataExchangeComplete</span></span>  
   
-## <a name="description"></a><span data-ttu-id="8af81-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="8af81-104">Description</span></span>  
- <span data-ttu-id="8af81-105">O moniker de serviço concluída a recuperação de metadados</span><span class="sxs-lookup"><span data-stu-id="8af81-105">The service moniker completed retrieval of metadata</span></span>  
+## <a name="description"></a><span data-ttu-id="2b775-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="2b775-104">Description</span></span>  
+ <span data-ttu-id="2b775-105">O moniker de serviço concluída a recuperação de metadados</span><span class="sxs-lookup"><span data-stu-id="2b775-105">The service moniker completed retrieval of metadata</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8af81-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8af81-106">See Also</span></span>  
- [<span data-ttu-id="8af81-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="8af81-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="8af81-108">Usando o rastreamento para solucionar problemas de seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="8af81-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- <span data-ttu-id="8af81-109">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md) (Administração e diagnósticos)</span><span class="sxs-lookup"><span data-stu-id="8af81-109">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)</span></span>
+## <a name="see-also"></a><span data-ttu-id="2b775-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2b775-106">See Also</span></span>  
+ [<span data-ttu-id="2b775-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="2b775-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="2b775-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="2b775-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="2b775-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="2b775-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

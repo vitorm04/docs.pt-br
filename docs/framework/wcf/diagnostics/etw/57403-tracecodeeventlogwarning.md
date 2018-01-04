@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 280885a45f731eb6a61c93f0c5ba9c1b12b8f38b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bc28915f5e34effd2972a11d592bd3d7c4f08878
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="57403---tracecodeeventlogwarning"></a><span data-ttu-id="8a9d8-102">57403 - TraceCodeEventLogWarning</span><span class="sxs-lookup"><span data-stu-id="8a9d8-102">57403 - TraceCodeEventLogWarning</span></span>
-## <a name="properties"></a><span data-ttu-id="8a9d8-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="8a9d8-103">Properties</span></span>  
+# <a name="57403---tracecodeeventlogwarning"></a><span data-ttu-id="5a492-102">57403 - TraceCodeEventLogWarning</span><span class="sxs-lookup"><span data-stu-id="5a492-102">57403 - TraceCodeEventLogWarning</span></span>
+## <a name="properties"></a><span data-ttu-id="5a492-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="5a492-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="8a9d8-104">ID</span><span class="sxs-lookup"><span data-stu-id="8a9d8-104">ID</span></span>|<span data-ttu-id="8a9d8-105">57403</span><span class="sxs-lookup"><span data-stu-id="8a9d8-105">57403</span></span>|  
-|<span data-ttu-id="8a9d8-106">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="8a9d8-106">Keywords</span></span>|<span data-ttu-id="8a9d8-107">Infraestrutura</span><span class="sxs-lookup"><span data-stu-id="8a9d8-107">Infrastructure</span></span>|  
-|<span data-ttu-id="8a9d8-108">Nível</span><span class="sxs-lookup"><span data-stu-id="8a9d8-108">Level</span></span>|<span data-ttu-id="8a9d8-109">Aviso</span><span class="sxs-lookup"><span data-stu-id="8a9d8-109">Warning</span></span>|  
-|<span data-ttu-id="8a9d8-110">Canal</span><span class="sxs-lookup"><span data-stu-id="8a9d8-110">Channel</span></span>|<span data-ttu-id="8a9d8-111">Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração</span><span class="sxs-lookup"><span data-stu-id="8a9d8-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="5a492-104">ID</span><span class="sxs-lookup"><span data-stu-id="5a492-104">ID</span></span>|<span data-ttu-id="5a492-105">57403</span><span class="sxs-lookup"><span data-stu-id="5a492-105">57403</span></span>|  
+|<span data-ttu-id="5a492-106">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="5a492-106">Keywords</span></span>|<span data-ttu-id="5a492-107">Infraestrutura</span><span class="sxs-lookup"><span data-stu-id="5a492-107">Infrastructure</span></span>|  
+|<span data-ttu-id="5a492-108">Nível</span><span class="sxs-lookup"><span data-stu-id="5a492-108">Level</span></span>|<span data-ttu-id="5a492-109">Aviso</span><span class="sxs-lookup"><span data-stu-id="5a492-109">Warning</span></span>|  
+|<span data-ttu-id="5a492-110">Canal</span><span class="sxs-lookup"><span data-stu-id="5a492-110">Channel</span></span>|<span data-ttu-id="5a492-111">Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração</span><span class="sxs-lookup"><span data-stu-id="5a492-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="8a9d8-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="8a9d8-112">Description</span></span>  
- <span data-ttu-id="8a9d8-113">Esse evento é emitido em TraceCodeEventLogWarning.</span><span class="sxs-lookup"><span data-stu-id="8a9d8-113">This event is emitted on TraceCodeEventLogWarning.</span></span>  
+## <a name="description"></a><span data-ttu-id="5a492-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="5a492-112">Description</span></span>  
+ <span data-ttu-id="5a492-113">Esse evento é emitido em TraceCodeEventLogWarning.</span><span class="sxs-lookup"><span data-stu-id="5a492-113">This event is emitted on TraceCodeEventLogWarning.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="8a9d8-114">Mensagem</span><span class="sxs-lookup"><span data-stu-id="8a9d8-114">Message</span></span>  
- <span data-ttu-id="8a9d8-115">Gravado no EventLog.</span><span class="sxs-lookup"><span data-stu-id="8a9d8-115">Wrote to the EventLog.</span></span>  
+## <a name="message"></a><span data-ttu-id="5a492-114">Mensagem</span><span class="sxs-lookup"><span data-stu-id="5a492-114">Message</span></span>  
+ <span data-ttu-id="5a492-115">Gravado no EventLog.</span><span class="sxs-lookup"><span data-stu-id="5a492-115">Wrote to the EventLog.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="8a9d8-116">Detalhes</span><span class="sxs-lookup"><span data-stu-id="8a9d8-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="5a492-116">Detalhes</span><span class="sxs-lookup"><span data-stu-id="5a492-116">Details</span></span>

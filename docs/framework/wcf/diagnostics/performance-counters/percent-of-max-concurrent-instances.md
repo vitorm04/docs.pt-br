@@ -13,14 +13,15 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8d7fff10ce54b7b9da9a6b47a23904bd18f54409
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8b031d2837f28b7324638f5d3c0f4ac84faac3a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="percent-of-max-concurrent-instances"></a><span data-ttu-id="6b8ab-102">Porcentagem de máximo de instâncias simultâneas</span><span class="sxs-lookup"><span data-stu-id="6b8ab-102">Percent of Max Concurrent Instances</span></span>
-<span data-ttu-id="6b8ab-103">Nome do contador: % De instâncias simultâneas máx</span><span class="sxs-lookup"><span data-stu-id="6b8ab-103">Counter Name: Percent of Max Concurrent Instances</span></span>  
+# <a name="percent-of-max-concurrent-instances"></a><span data-ttu-id="74f8e-102">Porcentagem de máximo de instâncias simultâneas</span><span class="sxs-lookup"><span data-stu-id="74f8e-102">Percent of Max Concurrent Instances</span></span>
+<span data-ttu-id="74f8e-103">Nome do contador: % De instâncias simultâneas máx</span><span class="sxs-lookup"><span data-stu-id="74f8e-103">Counter Name: Percent of Max Concurrent Instances</span></span>  
   
-## <a name="description"></a><span data-ttu-id="6b8ab-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="6b8ab-104">Description</span></span>  
- <span data-ttu-id="6b8ab-105">O número de instâncias simultâneas como uma porcentagem do máximo instâncias simultâneas.</span><span class="sxs-lookup"><span data-stu-id="6b8ab-105">The number of concurrent instances as a percentage of maximum concurrent instances.</span></span>
+## <a name="description"></a><span data-ttu-id="74f8e-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="74f8e-104">Description</span></span>  
+ <span data-ttu-id="74f8e-105">O número de instâncias simultâneas como uma porcentagem do máximo instâncias simultâneas.</span><span class="sxs-lookup"><span data-stu-id="74f8e-105">The number of concurrent instances as a percentage of maximum concurrent instances.</span></span>

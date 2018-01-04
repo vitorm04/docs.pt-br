@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a8d0e2c74edddbd14e3825857a9b5f0413005f7d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6cf5f9c2ddb7f258db22e6849341a00009f0dd0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3418---websocketconnectionaccepted"></a><span data-ttu-id="99f6d-102">3418 - WebSocketConnectionAccepted</span><span class="sxs-lookup"><span data-stu-id="99f6d-102">3418 - WebSocketConnectionAccepted</span></span>
-## <a name="properties"></a><span data-ttu-id="99f6d-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="99f6d-103">Properties</span></span>  
+# <a name="3418---websocketconnectionaccepted"></a><span data-ttu-id="86bed-102">3418 - WebSocketConnectionAccepted</span><span class="sxs-lookup"><span data-stu-id="86bed-102">3418 - WebSocketConnectionAccepted</span></span>
+## <a name="properties"></a><span data-ttu-id="86bed-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="86bed-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="99f6d-104">ID</span><span class="sxs-lookup"><span data-stu-id="99f6d-104">ID</span></span>|<span data-ttu-id="99f6d-105">3418</span><span class="sxs-lookup"><span data-stu-id="99f6d-105">3418</span></span>|  
-|<span data-ttu-id="99f6d-106">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="99f6d-106">Keywords</span></span>|<span data-ttu-id="99f6d-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="99f6d-107">HTTP</span></span>|  
-|<span data-ttu-id="99f6d-108">Nível</span><span class="sxs-lookup"><span data-stu-id="99f6d-108">Level</span></span>|<span data-ttu-id="99f6d-109">Detalhado</span><span class="sxs-lookup"><span data-stu-id="99f6d-109">Verbose</span></span>|  
-|<span data-ttu-id="99f6d-110">Canal</span><span class="sxs-lookup"><span data-stu-id="99f6d-110">Channel</span></span>|<span data-ttu-id="99f6d-111">Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração</span><span class="sxs-lookup"><span data-stu-id="99f6d-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="86bed-104">ID</span><span class="sxs-lookup"><span data-stu-id="86bed-104">ID</span></span>|<span data-ttu-id="86bed-105">3418</span><span class="sxs-lookup"><span data-stu-id="86bed-105">3418</span></span>|  
+|<span data-ttu-id="86bed-106">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="86bed-106">Keywords</span></span>|<span data-ttu-id="86bed-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="86bed-107">HTTP</span></span>|  
+|<span data-ttu-id="86bed-108">Nível</span><span class="sxs-lookup"><span data-stu-id="86bed-108">Level</span></span>|<span data-ttu-id="86bed-109">Detalhado</span><span class="sxs-lookup"><span data-stu-id="86bed-109">Verbose</span></span>|  
+|<span data-ttu-id="86bed-110">Canal</span><span class="sxs-lookup"><span data-stu-id="86bed-110">Channel</span></span>|<span data-ttu-id="86bed-111">Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração</span><span class="sxs-lookup"><span data-stu-id="86bed-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="99f6d-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="99f6d-112">Description</span></span>  
- <span data-ttu-id="99f6d-113">Esse evento é emitido quando a conexão WebSocket é aceita.</span><span class="sxs-lookup"><span data-stu-id="99f6d-113">This event is emitted when WebSocket connection is accepted.</span></span>  
+## <a name="description"></a><span data-ttu-id="86bed-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="86bed-112">Description</span></span>  
+ <span data-ttu-id="86bed-113">Esse evento é emitido quando a conexão WebSocket é aceita.</span><span class="sxs-lookup"><span data-stu-id="86bed-113">This event is emitted when WebSocket connection is accepted.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="99f6d-114">Mensagem</span><span class="sxs-lookup"><span data-stu-id="99f6d-114">Message</span></span>  
- <span data-ttu-id="99f6d-115">Websocketid: % 1 conexão aceito.</span><span class="sxs-lookup"><span data-stu-id="99f6d-115">WebSocketId:%1 connection accepted.</span></span>  
+## <a name="message"></a><span data-ttu-id="86bed-114">Mensagem</span><span class="sxs-lookup"><span data-stu-id="86bed-114">Message</span></span>  
+ <span data-ttu-id="86bed-115">Websocketid: % 1 conexão aceito.</span><span class="sxs-lookup"><span data-stu-id="86bed-115">WebSocketId:%1 connection accepted.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="99f6d-116">Detalhes</span><span class="sxs-lookup"><span data-stu-id="99f6d-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="86bed-116">Detalhes</span><span class="sxs-lookup"><span data-stu-id="86bed-116">Details</span></span>

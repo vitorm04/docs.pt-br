@@ -13,22 +13,23 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 531392ac19b777674b5abf9bc0b84a9e44955ab5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 79093dc2174e51453ebdd7067ae97b28cb930495
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="piiloggingon"></a><span data-ttu-id="f6193-102">PiiLoggingOn</span><span class="sxs-lookup"><span data-stu-id="f6193-102">PiiLoggingOn</span></span>
-<span data-ttu-id="f6193-103">ID: 107</span><span class="sxs-lookup"><span data-stu-id="f6193-103">Id: 107</span></span>  
+# <a name="piiloggingon"></a><span data-ttu-id="a5cee-102">PiiLoggingOn</span><span class="sxs-lookup"><span data-stu-id="a5cee-102">PiiLoggingOn</span></span>
+<span data-ttu-id="a5cee-103">ID: 107</span><span class="sxs-lookup"><span data-stu-id="a5cee-103">Id: 107</span></span>  
   
- <span data-ttu-id="f6193-104">Severidade: erro</span><span class="sxs-lookup"><span data-stu-id="f6193-104">Severity: Error</span></span>  
+ <span data-ttu-id="a5cee-104">Severidade: erro</span><span class="sxs-lookup"><span data-stu-id="a5cee-104">Severity: Error</span></span>  
   
- <span data-ttu-id="f6193-105">Categoria: rastreamento</span><span class="sxs-lookup"><span data-stu-id="f6193-105">Category: Tracing</span></span>  
+ <span data-ttu-id="a5cee-105">Categoria: rastreamento</span><span class="sxs-lookup"><span data-stu-id="a5cee-105">Category: Tracing</span></span>  
   
-## <a name="description"></a><span data-ttu-id="f6193-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="f6193-106">Description</span></span>  
- <span data-ttu-id="f6193-107">Esse evento indica que o log de PII foi ativado.</span><span class="sxs-lookup"><span data-stu-id="f6193-107">This event indicates that PII logging has been turned on.</span></span> <span data-ttu-id="f6193-108">As informações confidenciais serão registradas.</span><span class="sxs-lookup"><span data-stu-id="f6193-108">Sensitive information will be logged.</span></span> <span data-ttu-id="f6193-109">O evento lista o nome de processo e a ID de processo.</span><span class="sxs-lookup"><span data-stu-id="f6193-109">The event lists the process name and process ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="a5cee-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="a5cee-106">Description</span></span>  
+ <span data-ttu-id="a5cee-107">Esse evento indica que o log de PII foi ativado.</span><span class="sxs-lookup"><span data-stu-id="a5cee-107">This event indicates that PII logging has been turned on.</span></span> <span data-ttu-id="a5cee-108">As informações confidenciais serão registradas.</span><span class="sxs-lookup"><span data-stu-id="a5cee-108">Sensitive information will be logged.</span></span> <span data-ttu-id="a5cee-109">O evento lista o nome de processo e a ID de processo.</span><span class="sxs-lookup"><span data-stu-id="a5cee-109">The event lists the process name and process ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f6193-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f6193-110">See Also</span></span>  
- [<span data-ttu-id="f6193-111">Log de eventos</span><span class="sxs-lookup"><span data-stu-id="f6193-111">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [<span data-ttu-id="f6193-112">Referência geral de eventos</span><span class="sxs-lookup"><span data-stu-id="f6193-112">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="a5cee-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a5cee-110">See Also</span></span>  
+ [<span data-ttu-id="a5cee-111">Registro de eventos em log</span><span class="sxs-lookup"><span data-stu-id="a5cee-111">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [<span data-ttu-id="a5cee-112">Referência geral de eventos</span><span class="sxs-lookup"><span data-stu-id="a5cee-112">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

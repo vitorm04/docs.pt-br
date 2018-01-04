@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08022bf0aca169fdc1a00cf5d98acd5b69bdab94
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 06378cb5d404830f210421091a1abaa0d7da2e3c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="57396---throwingexception"></a><span data-ttu-id="ce1b3-102">57396 - ThrowingException</span><span class="sxs-lookup"><span data-stu-id="ce1b3-102">57396 - ThrowingException</span></span>
-## <a name="properties"></a><span data-ttu-id="ce1b3-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="ce1b3-103">Properties</span></span>  
+# <a name="57396---throwingexception"></a><span data-ttu-id="ba97c-102">57396 - ThrowingException</span><span class="sxs-lookup"><span data-stu-id="ba97c-102">57396 - ThrowingException</span></span>
+## <a name="properties"></a><span data-ttu-id="ba97c-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="ba97c-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="ce1b3-104">ID</span><span class="sxs-lookup"><span data-stu-id="ce1b3-104">ID</span></span>|<span data-ttu-id="ce1b3-105">57396</span><span class="sxs-lookup"><span data-stu-id="ce1b3-105">57396</span></span>|  
-|<span data-ttu-id="ce1b3-106">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="ce1b3-106">Keywords</span></span>|<span data-ttu-id="ce1b3-107">Infraestrutura</span><span class="sxs-lookup"><span data-stu-id="ce1b3-107">Infrastructure</span></span>|  
-|<span data-ttu-id="ce1b3-108">Nível</span><span class="sxs-lookup"><span data-stu-id="ce1b3-108">Level</span></span>|<span data-ttu-id="ce1b3-109">Aviso</span><span class="sxs-lookup"><span data-stu-id="ce1b3-109">Warning</span></span>|  
-|<span data-ttu-id="ce1b3-110">Canal</span><span class="sxs-lookup"><span data-stu-id="ce1b3-110">Channel</span></span>|<span data-ttu-id="ce1b3-111">Os aplicativos de servidor de Microsoft-Windows- aplicativo/analítico</span><span class="sxs-lookup"><span data-stu-id="ce1b3-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="ba97c-104">ID</span><span class="sxs-lookup"><span data-stu-id="ba97c-104">ID</span></span>|<span data-ttu-id="ba97c-105">57396</span><span class="sxs-lookup"><span data-stu-id="ba97c-105">57396</span></span>|  
+|<span data-ttu-id="ba97c-106">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="ba97c-106">Keywords</span></span>|<span data-ttu-id="ba97c-107">Infraestrutura</span><span class="sxs-lookup"><span data-stu-id="ba97c-107">Infrastructure</span></span>|  
+|<span data-ttu-id="ba97c-108">Nível</span><span class="sxs-lookup"><span data-stu-id="ba97c-108">Level</span></span>|<span data-ttu-id="ba97c-109">Aviso</span><span class="sxs-lookup"><span data-stu-id="ba97c-109">Warning</span></span>|  
+|<span data-ttu-id="ba97c-110">Canal</span><span class="sxs-lookup"><span data-stu-id="ba97c-110">Channel</span></span>|<span data-ttu-id="ba97c-111">Os aplicativos de servidor de Microsoft-Windows- aplicativo/analítico</span><span class="sxs-lookup"><span data-stu-id="ba97c-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="ce1b3-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="ce1b3-112">Description</span></span>  
- <span data-ttu-id="ce1b3-113">Esse evento é emitido ao lançar uma exceção.</span><span class="sxs-lookup"><span data-stu-id="ce1b3-113">This event is emitted when throwing an exception.</span></span>  
+## <a name="description"></a><span data-ttu-id="ba97c-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="ba97c-112">Description</span></span>  
+ <span data-ttu-id="ba97c-113">Esse evento é emitido ao lançar uma exceção.</span><span class="sxs-lookup"><span data-stu-id="ba97c-113">This event is emitted when throwing an exception.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="ce1b3-114">Mensagem</span><span class="sxs-lookup"><span data-stu-id="ce1b3-114">Message</span></span>  
- <span data-ttu-id="ce1b3-115">Gerar uma exceção.</span><span class="sxs-lookup"><span data-stu-id="ce1b3-115">Throwing an exception.</span></span> <span data-ttu-id="ce1b3-116">Fonte de %1.</span><span class="sxs-lookup"><span data-stu-id="ce1b3-116">Source %1.</span></span>  
+## <a name="message"></a><span data-ttu-id="ba97c-114">Mensagem</span><span class="sxs-lookup"><span data-stu-id="ba97c-114">Message</span></span>  
+ <span data-ttu-id="ba97c-115">Gerar uma exceção.</span><span class="sxs-lookup"><span data-stu-id="ba97c-115">Throwing an exception.</span></span> <span data-ttu-id="ba97c-116">Fonte de %1.</span><span class="sxs-lookup"><span data-stu-id="ba97c-116">Source %1.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="ce1b3-117">Detalhes</span><span class="sxs-lookup"><span data-stu-id="ce1b3-117">Details</span></span>
+## <a name="details"></a><span data-ttu-id="ba97c-117">Detalhes</span><span class="sxs-lookup"><span data-stu-id="ba97c-117">Details</span></span>

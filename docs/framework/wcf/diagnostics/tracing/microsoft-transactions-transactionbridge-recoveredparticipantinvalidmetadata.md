@@ -13,22 +13,23 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 356a7e05d4254fe8a96fef46132cc76f8aea0f98
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 89a0053d7e8a82bfdabb4209014e527308d942dc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="microsofttransactionstransactionbridgerecoveredparticipantinvalidmetadata"></a><span data-ttu-id="22bfe-102">Microsoft.Transactions.TransactionBridge.RecoveredParticipantInvalidMetadata</span><span class="sxs-lookup"><span data-stu-id="22bfe-102">Microsoft.Transactions.TransactionBridge.RecoveredParticipantInvalidMetadata</span></span>
-<span data-ttu-id="22bfe-103">A referência de ponto de extremidade encontrada em uma entrada de log de recuperação de participante continha metadados inválidos ou incompatíveis.</span><span class="sxs-lookup"><span data-stu-id="22bfe-103">The endpoint reference found in a participant recovery log entry contained invalid or incompatible metadata.</span></span>  
+# <a name="microsofttransactionstransactionbridgerecoveredparticipantinvalidmetadata"></a><span data-ttu-id="6001a-102">Microsoft.Transactions.TransactionBridge.RecoveredParticipantInvalidMetadata</span><span class="sxs-lookup"><span data-stu-id="6001a-102">Microsoft.Transactions.TransactionBridge.RecoveredParticipantInvalidMetadata</span></span>
+<span data-ttu-id="6001a-103">A referência de ponto de extremidade encontrada em uma entrada de log de recuperação de participante continha metadados inválidos ou incompatíveis.</span><span class="sxs-lookup"><span data-stu-id="6001a-103">The endpoint reference found in a participant recovery log entry contained invalid or incompatible metadata.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="22bfe-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="22bfe-104">Description</span></span>  
- <span data-ttu-id="22bfe-105">O sistema não é possível criar um proxy para uma inscrição de participante recuperado.</span><span class="sxs-lookup"><span data-stu-id="22bfe-105">The system cannot create a proxy for a recovered participant enlistment.</span></span>  
+## <a name="description"></a><span data-ttu-id="6001a-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="6001a-104">Description</span></span>  
+ <span data-ttu-id="6001a-105">O sistema não é possível criar um proxy para uma inscrição de participante recuperado.</span><span class="sxs-lookup"><span data-stu-id="6001a-105">The system cannot create a proxy for a recovered participant enlistment.</span></span>  
   
-## <a name="troubleshooting"></a><span data-ttu-id="22bfe-106">Solução de problemas</span><span class="sxs-lookup"><span data-stu-id="22bfe-106">Troubleshooting</span></span>  
- <span data-ttu-id="22bfe-107">Se o problema persistir, entre em contato com Microsoft.</span><span class="sxs-lookup"><span data-stu-id="22bfe-107">Contact Microsoft if problem persists.</span></span>  
+## <a name="troubleshooting"></a><span data-ttu-id="6001a-106">Solução de problemas</span><span class="sxs-lookup"><span data-stu-id="6001a-106">Troubleshooting</span></span>  
+ <span data-ttu-id="6001a-107">Se o problema persistir, entre em contato com Microsoft.</span><span class="sxs-lookup"><span data-stu-id="6001a-107">Contact Microsoft if problem persists.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="22bfe-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="22bfe-108">See Also</span></span>  
- [<span data-ttu-id="22bfe-109">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="22bfe-109">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="22bfe-110">Usando o rastreamento para solucionar problemas de seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="22bfe-110">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- <span data-ttu-id="22bfe-111">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md) (Administração e diagnósticos)</span><span class="sxs-lookup"><span data-stu-id="22bfe-111">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)</span></span>
+## <a name="see-also"></a><span data-ttu-id="6001a-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6001a-108">See Also</span></span>  
+ [<span data-ttu-id="6001a-109">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="6001a-109">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="6001a-110">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="6001a-110">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="6001a-111">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="6001a-111">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

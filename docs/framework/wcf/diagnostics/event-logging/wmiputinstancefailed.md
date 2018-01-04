@@ -13,22 +13,23 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 50f721413457892dcf0fe4ee957cd1301fefd0c6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 62fdf1e4e2347f2659a59b7f829404e4e3be43c4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="wmiputinstancefailed"></a><span data-ttu-id="dd7fc-102">WmiPutInstanceFailed</span><span class="sxs-lookup"><span data-stu-id="dd7fc-102">WmiPutInstanceFailed</span></span>
-<span data-ttu-id="dd7fc-103">ID: 121</span><span class="sxs-lookup"><span data-stu-id="dd7fc-103">Id: 121</span></span>  
+# <a name="wmiputinstancefailed"></a><span data-ttu-id="85df2-102">WmiPutInstanceFailed</span><span class="sxs-lookup"><span data-stu-id="85df2-102">WmiPutInstanceFailed</span></span>
+<span data-ttu-id="85df2-103">ID: 121</span><span class="sxs-lookup"><span data-stu-id="85df2-103">Id: 121</span></span>  
   
- <span data-ttu-id="dd7fc-104">Severidade: erro</span><span class="sxs-lookup"><span data-stu-id="dd7fc-104">Severity: Error</span></span>  
+ <span data-ttu-id="85df2-104">Severidade: erro</span><span class="sxs-lookup"><span data-stu-id="85df2-104">Severity: Error</span></span>  
   
- <span data-ttu-id="dd7fc-105">Categoria: ServiceModel</span><span class="sxs-lookup"><span data-stu-id="dd7fc-105">Category: ServiceModel</span></span>  
+ <span data-ttu-id="85df2-105">Categoria: ServiceModel</span><span class="sxs-lookup"><span data-stu-id="85df2-105">Category: ServiceModel</span></span>  
   
-## <a name="description"></a><span data-ttu-id="dd7fc-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="dd7fc-106">Description</span></span>  
- <span data-ttu-id="dd7fc-107">Esse evento indica que a solicitação de PutInstance WMI não foi processada.</span><span class="sxs-lookup"><span data-stu-id="dd7fc-107">This event indicates that the WMI PutInstance request was not processed.</span></span> <span data-ttu-id="dd7fc-108">A listas de eventos do objeto WMI, a exceção, o nome do processo e o processo de identificação.</span><span class="sxs-lookup"><span data-stu-id="dd7fc-108">The event lists the WMI Object, exception, process name and process ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="85df2-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="85df2-106">Description</span></span>  
+ <span data-ttu-id="85df2-107">Esse evento indica que a solicitação de PutInstance WMI não foi processada.</span><span class="sxs-lookup"><span data-stu-id="85df2-107">This event indicates that the WMI PutInstance request was not processed.</span></span> <span data-ttu-id="85df2-108">A listas de eventos do objeto WMI, a exceção, o nome do processo e o processo de identificação.</span><span class="sxs-lookup"><span data-stu-id="85df2-108">The event lists the WMI Object, exception, process name and process ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dd7fc-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="dd7fc-109">See Also</span></span>  
- [<span data-ttu-id="dd7fc-110">Log de eventos</span><span class="sxs-lookup"><span data-stu-id="dd7fc-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [<span data-ttu-id="dd7fc-111">Referência geral de eventos</span><span class="sxs-lookup"><span data-stu-id="dd7fc-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="85df2-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="85df2-109">See Also</span></span>  
+ [<span data-ttu-id="85df2-110">Registro de eventos em log</span><span class="sxs-lookup"><span data-stu-id="85df2-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [<span data-ttu-id="85df2-111">Referência geral de eventos</span><span class="sxs-lookup"><span data-stu-id="85df2-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

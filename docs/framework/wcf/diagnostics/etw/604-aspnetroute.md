@@ -13,26 +13,27 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 32d5f3f864665291989f4b96220e952bccbe048a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e58b06244a73d8eea600850c34867d3f9646f353
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="604---aspnetroute"></a><span data-ttu-id="3c5e4-102">604 - AspNetRoute</span><span class="sxs-lookup"><span data-stu-id="3c5e4-102">604 - AspNetRoute</span></span>
-## <a name="properties"></a><span data-ttu-id="3c5e4-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="3c5e4-103">Properties</span></span>  
+# <a name="604---aspnetroute"></a><span data-ttu-id="e47b5-102">604 - AspNetRoute</span><span class="sxs-lookup"><span data-stu-id="e47b5-102">604 - AspNetRoute</span></span>
+## <a name="properties"></a><span data-ttu-id="e47b5-103">Propriedades</span><span class="sxs-lookup"><span data-stu-id="e47b5-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="3c5e4-104">ID</span><span class="sxs-lookup"><span data-stu-id="3c5e4-104">ID</span></span>|<span data-ttu-id="3c5e4-105">604</span><span class="sxs-lookup"><span data-stu-id="3c5e4-105">604</span></span>|  
-|<span data-ttu-id="3c5e4-106">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="3c5e4-106">Keywords</span></span>|<span data-ttu-id="3c5e4-107">RoutingServices</span><span class="sxs-lookup"><span data-stu-id="3c5e4-107">RoutingServices</span></span>|  
-|<span data-ttu-id="3c5e4-108">Nível</span><span class="sxs-lookup"><span data-stu-id="3c5e4-108">Level</span></span>|<span data-ttu-id="3c5e4-109">Detalhado</span><span class="sxs-lookup"><span data-stu-id="3c5e4-109">Verbose</span></span>|  
-|<span data-ttu-id="3c5e4-110">Canal</span><span class="sxs-lookup"><span data-stu-id="3c5e4-110">Channel</span></span>|<span data-ttu-id="3c5e4-111">Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração</span><span class="sxs-lookup"><span data-stu-id="3c5e4-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="e47b5-104">ID</span><span class="sxs-lookup"><span data-stu-id="e47b5-104">ID</span></span>|<span data-ttu-id="e47b5-105">604</span><span class="sxs-lookup"><span data-stu-id="e47b5-105">604</span></span>|  
+|<span data-ttu-id="e47b5-106">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="e47b5-106">Keywords</span></span>|<span data-ttu-id="e47b5-107">RoutingServices</span><span class="sxs-lookup"><span data-stu-id="e47b5-107">RoutingServices</span></span>|  
+|<span data-ttu-id="e47b5-108">Nível</span><span class="sxs-lookup"><span data-stu-id="e47b5-108">Level</span></span>|<span data-ttu-id="e47b5-109">Detalhado</span><span class="sxs-lookup"><span data-stu-id="e47b5-109">Verbose</span></span>|  
+|<span data-ttu-id="e47b5-110">Canal</span><span class="sxs-lookup"><span data-stu-id="e47b5-110">Channel</span></span>|<span data-ttu-id="e47b5-111">Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração</span><span class="sxs-lookup"><span data-stu-id="e47b5-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="3c5e4-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="3c5e4-112">Description</span></span>  
- <span data-ttu-id="3c5e4-113">Esse evento é emitido quando uma nova rota Asp.Net '%1' com serviceType '%2' e serviceHostFactoryType '%3' é adicionada.</span><span class="sxs-lookup"><span data-stu-id="3c5e4-113">This event is emitted when a new Asp.Net route '%1' with serviceType '%2' and serviceHostFactoryType '%3' is added.</span></span>  
+## <a name="description"></a><span data-ttu-id="e47b5-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="e47b5-112">Description</span></span>  
+ <span data-ttu-id="e47b5-113">Esse evento é emitido quando uma nova rota Asp.Net '%1' com serviceType '%2' e serviceHostFactoryType '%3' é adicionada.</span><span class="sxs-lookup"><span data-stu-id="e47b5-113">This event is emitted when a new Asp.Net route '%1' with serviceType '%2' and serviceHostFactoryType '%3' is added.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="3c5e4-114">Mensagem</span><span class="sxs-lookup"><span data-stu-id="3c5e4-114">Message</span></span>  
- <span data-ttu-id="3c5e4-115">Uma nova rota Asp.Net '%1' com serviceType '%2' e serviceHostFactoryType '%3' é adicionada.</span><span class="sxs-lookup"><span data-stu-id="3c5e4-115">A new Asp.Net route '%1' with serviceType '%2' and serviceHostFactoryType '%3' is added.</span></span>  
+## <a name="message"></a><span data-ttu-id="e47b5-114">Mensagem</span><span class="sxs-lookup"><span data-stu-id="e47b5-114">Message</span></span>  
+ <span data-ttu-id="e47b5-115">Uma nova rota Asp.Net '%1' com serviceType '%2' e serviceHostFactoryType '%3' é adicionada.</span><span class="sxs-lookup"><span data-stu-id="e47b5-115">A new Asp.Net route '%1' with serviceType '%2' and serviceHostFactoryType '%3' is added.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="3c5e4-116">Detalhes</span><span class="sxs-lookup"><span data-stu-id="3c5e4-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="e47b5-116">Detalhes</span><span class="sxs-lookup"><span data-stu-id="e47b5-116">Details</span></span>
