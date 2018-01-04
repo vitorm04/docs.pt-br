@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 7d7b7bce36415a1571b2bceb593fa3792356f8e8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c47da18b211ab8d57401236ff2d089f49d51f880
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecurityclientsessioncloseresponsesent"></a><span data-ttu-id="6e22b-102">System.ServiceModel.Security.SecurityClientSessionCloseResponseSent</span><span class="sxs-lookup"><span data-stu-id="6e22b-102">System.ServiceModel.Security.SecurityClientSessionCloseResponseSent</span></span>
-<span data-ttu-id="6e22b-103">System.ServiceModel.Security.SecurityClientSessionCloseResponseSent</span><span class="sxs-lookup"><span data-stu-id="6e22b-103">System.ServiceModel.Security.SecurityClientSessionCloseResponseSent</span></span>  
+# <a name="systemservicemodelsecuritysecurityclientsessioncloseresponsesent"></a><span data-ttu-id="d0898-102">System.ServiceModel.Security.SecurityClientSessionCloseResponseSent</span><span class="sxs-lookup"><span data-stu-id="d0898-102">System.ServiceModel.Security.SecurityClientSessionCloseResponseSent</span></span>
+<span data-ttu-id="d0898-103">System.ServiceModel.Security.SecurityClientSessionCloseResponseSent</span><span class="sxs-lookup"><span data-stu-id="d0898-103">System.ServiceModel.Security.SecurityClientSessionCloseResponseSent</span></span>  
   
-## <a name="description"></a><span data-ttu-id="6e22b-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="6e22b-104">Description</span></span>  
- <span data-ttu-id="6e22b-105">Uma mensagem de resposta de fechamento foi enviada pela sessão de segurança do cliente.</span><span class="sxs-lookup"><span data-stu-id="6e22b-105">A Close response message was sent by the client security session.</span></span>  
+## <a name="description"></a><span data-ttu-id="d0898-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="d0898-104">Description</span></span>  
+ <span data-ttu-id="d0898-105">Uma mensagem de resposta de fechamento foi enviada pela sessão de segurança do cliente.</span><span class="sxs-lookup"><span data-stu-id="d0898-105">A Close response message was sent by the client security session.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6e22b-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6e22b-106">See Also</span></span>  
- [<span data-ttu-id="6e22b-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="6e22b-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="6e22b-108">Usando o rastreamento para solucionar problemas de seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="6e22b-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- <span data-ttu-id="6e22b-109">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md) (Administração e diagnósticos)</span><span class="sxs-lookup"><span data-stu-id="6e22b-109">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)</span></span>
+## <a name="see-also"></a><span data-ttu-id="d0898-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d0898-106">See Also</span></span>  
+ [<span data-ttu-id="d0898-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="d0898-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="d0898-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="d0898-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="d0898-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="d0898-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 8e0b2a5ad8f8c8cb67f10a0d888fe109f5901d6e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7fddfa8f88852b368737224eaa6643c7adb16dd6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecurityspntosidmappingfailure"></a><span data-ttu-id="75384-102">System.ServiceModel.Security.SecuritySpnToSidMappingFailure</span><span class="sxs-lookup"><span data-stu-id="75384-102">System.ServiceModel.Security.SecuritySpnToSidMappingFailure</span></span>
-<span data-ttu-id="75384-103">System.ServiceModel.Security.SecuritySpnToSidMappingFailure</span><span class="sxs-lookup"><span data-stu-id="75384-103">System.ServiceModel.Security.SecuritySpnToSidMappingFailure</span></span>  
+# <a name="systemservicemodelsecuritysecurityspntosidmappingfailure"></a><span data-ttu-id="e2a27-102">System.ServiceModel.Security.SecuritySpnToSidMappingFailure</span><span class="sxs-lookup"><span data-stu-id="e2a27-102">System.ServiceModel.Security.SecuritySpnToSidMappingFailure</span></span>
+<span data-ttu-id="e2a27-103">System.ServiceModel.Security.SecuritySpnToSidMappingFailure</span><span class="sxs-lookup"><span data-stu-id="e2a27-103">System.ServiceModel.Security.SecuritySpnToSidMappingFailure</span></span>  
   
-## <a name="description"></a><span data-ttu-id="75384-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="75384-104">Description</span></span>  
- <span data-ttu-id="75384-105">O ServicePrincipalName não pôde ser mapeado para um SecurityIdentifier.</span><span class="sxs-lookup"><span data-stu-id="75384-105">The ServicePrincipalName could not be mapped to a SecurityIdentifier.</span></span>  
+## <a name="description"></a><span data-ttu-id="e2a27-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="e2a27-104">Description</span></span>  
+ <span data-ttu-id="e2a27-105">O ServicePrincipalName não pôde ser mapeado para um SecurityIdentifier.</span><span class="sxs-lookup"><span data-stu-id="e2a27-105">The ServicePrincipalName could not be mapped to a SecurityIdentifier.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="75384-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="75384-106">See Also</span></span>  
- [<span data-ttu-id="75384-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="75384-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="75384-108">Usando o rastreamento para solucionar problemas de seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="75384-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- <span data-ttu-id="75384-109">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md) (Administração e diagnósticos)</span><span class="sxs-lookup"><span data-stu-id="75384-109">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)</span></span>
+## <a name="see-also"></a><span data-ttu-id="e2a27-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e2a27-106">See Also</span></span>  
+ [<span data-ttu-id="e2a27-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="e2a27-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="e2a27-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="e2a27-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="e2a27-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="e2a27-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

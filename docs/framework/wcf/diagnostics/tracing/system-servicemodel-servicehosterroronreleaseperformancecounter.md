@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 293efd9291c803800ed411c14da3a12412e13cb0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f70cebad6c21c76b9d0c6e83a41c4d2ba95ac4ac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelservicehosterroronreleaseperformancecounter"></a><span data-ttu-id="09cf6-102">System.ServiceModel.ServiceHostErrorOnReleasePerformanceCounter</span><span class="sxs-lookup"><span data-stu-id="09cf6-102">System.ServiceModel.ServiceHostErrorOnReleasePerformanceCounter</span></span>
-<span data-ttu-id="09cf6-103">System.ServiceModel.ServiceHostErrorOnReleasePerformanceCounter</span><span class="sxs-lookup"><span data-stu-id="09cf6-103">System.ServiceModel.ServiceHostErrorOnReleasePerformanceCounter</span></span>  
+# <a name="systemservicemodelservicehosterroronreleaseperformancecounter"></a><span data-ttu-id="ee102-102">System.ServiceModel.ServiceHostErrorOnReleasePerformanceCounter</span><span class="sxs-lookup"><span data-stu-id="ee102-102">System.ServiceModel.ServiceHostErrorOnReleasePerformanceCounter</span></span>
+<span data-ttu-id="ee102-103">System.ServiceModel.ServiceHostErrorOnReleasePerformanceCounter</span><span class="sxs-lookup"><span data-stu-id="ee102-103">System.ServiceModel.ServiceHostErrorOnReleasePerformanceCounter</span></span>  
   
-## <a name="description"></a><span data-ttu-id="09cf6-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="09cf6-104">Description</span></span>  
- <span data-ttu-id="09cf6-105">Ocorreram erros no ServiceHost ao chamar ReleasePerformanceCounters.</span><span class="sxs-lookup"><span data-stu-id="09cf6-105">Errors occurred on the ServiceHost when calling ReleasePerformanceCounters.</span></span> <span data-ttu-id="09cf6-106">Este rastreamento pode ser usado para determinar os erros ao lançar contadores de desempenho.</span><span class="sxs-lookup"><span data-stu-id="09cf6-106">This trace can be used to determine errors when releasing performance counters.</span></span>  
+## <a name="description"></a><span data-ttu-id="ee102-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="ee102-104">Description</span></span>  
+ <span data-ttu-id="ee102-105">Ocorreram erros no ServiceHost ao chamar ReleasePerformanceCounters.</span><span class="sxs-lookup"><span data-stu-id="ee102-105">Errors occurred on the ServiceHost when calling ReleasePerformanceCounters.</span></span> <span data-ttu-id="ee102-106">Este rastreamento pode ser usado para determinar os erros ao lançar contadores de desempenho.</span><span class="sxs-lookup"><span data-stu-id="ee102-106">This trace can be used to determine errors when releasing performance counters.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="09cf6-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="09cf6-107">See Also</span></span>  
- [<span data-ttu-id="09cf6-108">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="09cf6-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="09cf6-109">Usando o rastreamento para solucionar problemas de seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="09cf6-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- <span data-ttu-id="09cf6-110">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md) (Administração e diagnósticos)</span><span class="sxs-lookup"><span data-stu-id="09cf6-110">[Administration and Diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)</span></span>
+## <a name="see-also"></a><span data-ttu-id="ee102-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ee102-107">See Also</span></span>  
+ [<span data-ttu-id="ee102-108">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="ee102-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="ee102-109">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="ee102-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="ee102-110">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="ee102-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

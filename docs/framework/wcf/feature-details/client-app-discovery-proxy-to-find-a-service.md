@@ -13,31 +13,32 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dc6b3a056aaa7aa6cb0a57c72b9591393ca0aff2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 920f2f85333f23d1b07b6a8ddf2a05279ee477ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a><span data-ttu-id="896d6-102">Como implementar um aplicativo cliente que utiliza o proxy de descoberta para encontrar um serviço</span><span class="sxs-lookup"><span data-stu-id="896d6-102">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>
-<span data-ttu-id="896d6-103">Este tópico é o terceiro de três tópicos que descreve como implementar um proxy de descoberta.</span><span class="sxs-lookup"><span data-stu-id="896d6-103">This topic is the third of three topics that discusses how to implement a discovery proxy.</span></span> <span data-ttu-id="896d6-104">No tópico anterior, [como: implementar um serviço de descoberta que registra com o Proxy de descoberta](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), você já implementou um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço que é registrado com o proxy de descoberta.</span><span class="sxs-lookup"><span data-stu-id="896d6-104">In the previous topic, [How to: Implement a Discoverable Service that Registers with the Discovery Proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), you implemented a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service that registers itself with the discovery proxy.</span></span> <span data-ttu-id="896d6-105">Neste tópico, você cria um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente que usa o proxy de descoberta para localizar o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span><span class="sxs-lookup"><span data-stu-id="896d6-105">In this topic you create a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client that uses the discovery proxy to find the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
+# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a><span data-ttu-id="5b729-102">Como implementar um aplicativo cliente que utiliza o proxy de descoberta para encontrar um serviço</span><span class="sxs-lookup"><span data-stu-id="5b729-102">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>
+<span data-ttu-id="5b729-103">Este tópico é o terceiro de três tópicos que descreve como implementar um proxy de descoberta.</span><span class="sxs-lookup"><span data-stu-id="5b729-103">This topic is the third of three topics that discusses how to implement a discovery proxy.</span></span> <span data-ttu-id="5b729-104">No tópico anterior, [como: implementar um serviço de descoberta que registra com o Proxy de descoberta](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), você já implementou um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço que é registrado com o proxy de descoberta.</span><span class="sxs-lookup"><span data-stu-id="5b729-104">In the previous topic, [How to: Implement a Discoverable Service that Registers with the Discovery Proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), you implemented a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service that registers itself with the discovery proxy.</span></span> <span data-ttu-id="5b729-105">Neste tópico, você cria um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente que usa o proxy de descoberta para localizar o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span><span class="sxs-lookup"><span data-stu-id="5b729-105">In this topic you create a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client that uses the discovery proxy to find the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
-### <a name="implement-the-client"></a><span data-ttu-id="896d6-106">Implementar o cliente</span><span class="sxs-lookup"><span data-stu-id="896d6-106">Implement the client</span></span>  
+### <a name="implement-the-client"></a><span data-ttu-id="5b729-106">Implementar o cliente</span><span class="sxs-lookup"><span data-stu-id="5b729-106">Implement the client</span></span>  
   
-1.  <span data-ttu-id="896d6-107">Adicionar um novo projeto de aplicativo de console para o `DiscoveryProxyExample` solução chamada `Client`.</span><span class="sxs-lookup"><span data-stu-id="896d6-107">Add a new console application project to the `DiscoveryProxyExample` solution called `Client`.</span></span>  
+1.  <span data-ttu-id="5b729-107">Adicionar um novo projeto de aplicativo de console para o `DiscoveryProxyExample` solução chamada `Client`.</span><span class="sxs-lookup"><span data-stu-id="5b729-107">Add a new console application project to the `DiscoveryProxyExample` solution called `Client`.</span></span>  
   
-2.  <span data-ttu-id="896d6-108">Adicione referências aos assemblies a seguir:</span><span class="sxs-lookup"><span data-stu-id="896d6-108">Add references to the following assemblies:</span></span>  
+2.  <span data-ttu-id="5b729-108">Adicione referências aos assemblies a seguir:</span><span class="sxs-lookup"><span data-stu-id="5b729-108">Add references to the following assemblies:</span></span>  
   
-    1.  <span data-ttu-id="896d6-109">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="896d6-109">System.ServiceModel</span></span>  
+    1.  <span data-ttu-id="5b729-109">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="5b729-109">System.ServiceModel</span></span>  
   
-    2.  <span data-ttu-id="896d6-110">System.ServiceModel.Discovery</span><span class="sxs-lookup"><span data-stu-id="896d6-110">System.ServiceModel.Discovery</span></span>  
+    2.  <span data-ttu-id="5b729-110">System.ServiceModel.Discovery</span><span class="sxs-lookup"><span data-stu-id="5b729-110">System.ServiceModel.Discovery</span></span>  
   
-3.  <span data-ttu-id="896d6-111">Adicione o GeneratedClient.cs localizado na parte inferior deste tópico para o projeto.</span><span class="sxs-lookup"><span data-stu-id="896d6-111">Add the GeneratedClient.cs found at the bottom of this topic to the project.</span></span>  
+3.  <span data-ttu-id="5b729-111">Adicione o GeneratedClient.cs localizado na parte inferior deste tópico para o projeto.</span><span class="sxs-lookup"><span data-stu-id="5b729-111">Add the GeneratedClient.cs found at the bottom of this topic to the project.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="896d6-112">Esse arquivo normalmente é gerado usando uma ferramenta como Svcutil.exe.</span><span class="sxs-lookup"><span data-stu-id="896d6-112">This file is usually generated using a tool such as Svcutil.exe.</span></span> <span data-ttu-id="896d6-113">Ele é fornecido neste tópico para simplificar a tarefa.</span><span class="sxs-lookup"><span data-stu-id="896d6-113">It is provided in this topic to simplify the task.</span></span>  
+    >  <span data-ttu-id="5b729-112">Esse arquivo normalmente é gerado usando uma ferramenta como Svcutil.exe.</span><span class="sxs-lookup"><span data-stu-id="5b729-112">This file is usually generated using a tool such as Svcutil.exe.</span></span> <span data-ttu-id="5b729-113">Ele é fornecido neste tópico para simplificar a tarefa.</span><span class="sxs-lookup"><span data-stu-id="5b729-113">It is provided in this topic to simplify the task.</span></span>  
   
-4.  <span data-ttu-id="896d6-114">Abra o arquivo Program.cs e adicione o seguinte método.</span><span class="sxs-lookup"><span data-stu-id="896d6-114">Open the Program.cs file and add the following method.</span></span> <span data-ttu-id="896d6-115">Esse método usa um endereço de ponto de extremidade e usa para inicializar o cliente do serviço (proxy).</span><span class="sxs-lookup"><span data-stu-id="896d6-115">This method takes an endpoint address and uses it to initialize the service client (proxy).</span></span>  
+4.  <span data-ttu-id="5b729-114">Abra o arquivo Program.cs e adicione o seguinte método.</span><span class="sxs-lookup"><span data-stu-id="5b729-114">Open the Program.cs file and add the following method.</span></span> <span data-ttu-id="5b729-115">Esse método usa um endereço de ponto de extremidade e usa para inicializar o cliente do serviço (proxy).</span><span class="sxs-lookup"><span data-stu-id="5b729-115">This method takes an endpoint address and uses it to initialize the service client (proxy).</span></span>  
   
     ```  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -72,7 +73,7 @@ ms.lasthandoff: 12/02/2017
             }  
     ```  
   
-5.  <span data-ttu-id="896d6-116">Adicione o seguinte código ao método de `Main` .</span><span class="sxs-lookup"><span data-stu-id="896d6-116">Add the following code to the `Main` method.</span></span>  
+5.  <span data-ttu-id="5b729-116">Adicione o seguinte código ao método de `Main` .</span><span class="sxs-lookup"><span data-stu-id="5b729-116">Add the following code to the `Main` method.</span></span>  
   
     ```  
     public static void Main()  
@@ -111,10 +112,10 @@ ms.lasthandoff: 12/02/2017
             }  
     ```  
   
- <span data-ttu-id="896d6-117">Você concluiu a implementação do aplicativo cliente.</span><span class="sxs-lookup"><span data-stu-id="896d6-117">You have completed implementing the client application.</span></span> <span data-ttu-id="896d6-118">Continue no [como: testar o Proxy de descoberta](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).</span><span class="sxs-lookup"><span data-stu-id="896d6-118">Continue on to [How to: Test the Discovery Proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).</span></span>  
+ <span data-ttu-id="5b729-117">Você concluiu a implementação do aplicativo cliente.</span><span class="sxs-lookup"><span data-stu-id="5b729-117">You have completed implementing the client application.</span></span> <span data-ttu-id="5b729-118">Continue no [como: testar o Proxy de descoberta](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).</span><span class="sxs-lookup"><span data-stu-id="5b729-118">Continue on to [How to: Test the Discovery Proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="896d6-119">Exemplo</span><span class="sxs-lookup"><span data-stu-id="896d6-119">Example</span></span>  
- <span data-ttu-id="896d6-120">É o código completo listando deste tópico.</span><span class="sxs-lookup"><span data-stu-id="896d6-120">This is the full code listing for this topic.</span></span>  
+## <a name="example"></a><span data-ttu-id="5b729-119">Exemplo</span><span class="sxs-lookup"><span data-stu-id="5b729-119">Example</span></span>  
+ <span data-ttu-id="5b729-120">É o código completo listando deste tópico.</span><span class="sxs-lookup"><span data-stu-id="5b729-120">This is the full code listing for this topic.</span></span>  
   
 ```  
 // GeneratedClient.cs  
@@ -291,7 +292,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="896d6-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="896d6-121">See Also</span></span>  
- [<span data-ttu-id="896d6-122">Visão geral de descoberta do WCF</span><span class="sxs-lookup"><span data-stu-id="896d6-122">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [<span data-ttu-id="896d6-123">Como: implementar um Proxy de descoberta</span><span class="sxs-lookup"><span data-stu-id="896d6-123">How to: Implement a Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
- [<span data-ttu-id="896d6-124">Como: implementar um serviço de descoberta que registra com o Proxy de descoberta</span><span class="sxs-lookup"><span data-stu-id="896d6-124">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+## <a name="see-also"></a><span data-ttu-id="5b729-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5b729-121">See Also</span></span>  
+ [<span data-ttu-id="5b729-122">Visão geral de descoberta do WCF</span><span class="sxs-lookup"><span data-stu-id="5b729-122">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [<span data-ttu-id="5b729-123">Como implementar um proxy de descoberta</span><span class="sxs-lookup"><span data-stu-id="5b729-123">How to: Implement a Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [<span data-ttu-id="5b729-124">Como implementar um serviço de descoberta que registra usando o proxy de descoberta</span><span class="sxs-lookup"><span data-stu-id="5b729-124">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
