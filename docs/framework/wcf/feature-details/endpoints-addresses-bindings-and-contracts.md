@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6c0b13ee48ed729d89f4b4b506e3608abe7e82b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: af82cb934570b371d332c0e08ebc9b2338d0c0d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Pontos de extremidade: endereços, associações e contratos
 Toda a comunicação com um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço ocorre por meio de *pontos de extremidade* do serviço. Pontos de extremidade de fornecem aos clientes acesso para a funcionalidade oferecida por um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço.  
@@ -82,21 +83,21 @@ Toda a comunicação com um [!INCLUDE[indigo1](../../../../includes/indigo1-md.m
  [Endereços](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)  
  Descreve como os pontos de extremidade são resolvidos em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Bindings](../../../../docs/framework/wcf/feature-details/bindings.md) (Associações)  
+ [Associações](../../../../docs/framework/wcf/feature-details/bindings.md)  
  Descreve como as associações são usadas para especificar o transporte, a codificação e detalhes de protocolo necessárias para clientes e serviços para se comunicar entre si.  
   
  [Contratos](../../../../docs/framework/wcf/feature-details/contracts.md)  
  Descreve como os contratos definem os métodos de um serviço.  
   
- [Como: criar um ponto de extremidade de serviço na configuração](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Como criar um ponto de extremidade de serviço na configuração](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Descreve como criar um ponto de extremidade de serviço na configuração.  
   
- [Como: criar um ponto de extremidade de serviço em código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [Como criar um ponto de extremidade de serviço no código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  Descreve como criar um ponto de extremidade de serviço em código.  
   
- [Como: usar o Svcutil.exe para validar o código de serviço compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
+ [Como usar o Svcutil.exe para validar o código de serviço compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
  Descreve como detectar erros nas configurações e implementações de serviço sem hospedar o serviço usando o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Configuring Services](../../../../docs/framework/wcf/configuring-services.md) (Configurando serviços)  
+ [Configurando serviços](../../../../docs/framework/wcf/configuring-services.md)  
  [Estendendo associações](../../../../docs/framework/wcf/extending/extending-bindings.md)

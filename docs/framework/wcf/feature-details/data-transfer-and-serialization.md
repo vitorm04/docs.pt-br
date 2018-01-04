@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 29ca4041e24a99546dfb665b0ce9e695732442d4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8daadec1eef20e62747cdbfcafd1fd13cfc16093
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-transfer-and-serialization"></a>Serialização e transferência de dados
 Em um sistema conectado, o clientes e serviços dependem da troca de dados para realizar qualquer tarefa. Como desenvolvedor de um serviço ou cliente, você também deve entender como [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] lida com dados e serialização de dados para criar aplicativos que são eficiente e fácil de manter.  
@@ -41,13 +42,13 @@ Em um sistema conectado, o clientes e serviços dependem da troca de dados para 
  [Usando contratos de mensagem](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)  
  Descreve como contratos de mensagem permitem controle refinado sobre mensagens SOAP.  
   
- [Usando a classe de mensagem](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)  
+ [Usando a classe de mensagens](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)  
  Descreve como usar recursos de classe de mensagem.  
   
  [Filtragem](../../../../docs/framework/wcf/feature-details/filtering.md)  
  Descreve a filtragem, que permite que o pré-processamento de uma mensagem com base em vários critérios.  
   
- [Dados grandes e Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
+ [Dados grandes e streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
  Descreve como enviar um grande bloco de dados, como um arquivo binário.  
   
  [Considerações sobre segurança para dados](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
@@ -71,6 +72,5 @@ Em um sistema conectado, o clientes e serviços dependem da troca de dados para 
  [Estendendo codificadores e serializadores](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Best Practices: Data Contract Versioning](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md) 
-(Práticas recomendadas: controle de versão de contrato de dados)  
- [Service Versioning](../../../../docs/framework/wcf/service-versioning.md) (Controle de versão de serviço)
+ [Práticas recomendadas: controle de versão de contrato de dados](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
+ [Controle de versão de serviço](../../../../docs/framework/wcf/service-versioning.md)

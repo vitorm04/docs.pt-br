@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: affc9ed8f9e16834af8d7281ce9a7eaedd7d5e8e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8e4b0a724653f5366d6da96f511fac9e62f64816
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata"></a>Metadados
 O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fornece uma infraestrutura para exportar, publicação, recuperar e importação de metadados de serviço. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]os serviços usam metadados para descrever como interagir com pontos de extremidade do serviço para que as ferramentas, como Svcutil.exe, podem gerar automaticamente o código do cliente para acessar o serviço.  
@@ -33,13 +34,13 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fornece uma infraestru
  [Exportando e importando metadados](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
  Descreve como exportar e importar metadados.  
   
- [Metadados de publicação](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
+ [Publicando metadados](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
  Descreve como [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] publica os metadados.  
   
  [Recuperando metadados](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
  Descreve as diferentes maneiras de recuperar metadados.  
   
- [Uso de metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
+ [Usando metadados](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
  Descreve as diferentes maneiras de usar os metadados de serviço.  
   
  [Considerações de segurança com metadados](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  

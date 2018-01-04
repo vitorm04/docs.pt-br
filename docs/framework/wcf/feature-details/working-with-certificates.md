@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 63f9d22c571a007653fc794dc7638c8221a676aa
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 80bc22599a2c7b3478912453b3f90a563aec9c57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-certificates"></a>Trabalhando com certificados
 Para programar a segurança do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], os certificados digitais X.509 são normalmente usados para autenticar clientes e servidores, criptografar e assinar mensagens digitalmente. Este tópico explica rapidamente os recursos do certificado digital X.509 e como usá-los no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], e inclui links para tópicos que explicam esses conceitos ainda mais ou que mostram como realizar tarefas comuns usando o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e certificados.  

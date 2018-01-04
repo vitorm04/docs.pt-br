@@ -14,11 +14,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c4cafff46d31ed9a5737dbb74acecab96b1f1a1e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b23dac1db5252d3ce2bd60e4f8525dd89d9127b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-services"></a>Serviços de hospedagem
 Para se tornar ativa, um serviço deve ser hospedado em um ambiente de tempo de execução que cria e controla o contexto e o tempo de vida. [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]os serviços são projetados para funcionar em qualquer processo do Windows que dá suporte a código gerenciado.  
@@ -72,9 +73,9 @@ Para se tornar ativa, um serviço deve ser hospedado em um ambiente de tempo de 
   
 ## <a name="see-also"></a>Consulte também  
  [Requisitos do sistema](../../../docs/framework/wcf/wcf-system-requirements.md)  
- [Basic Programming Lifecycle](../../../docs/framework/wcf/basic-programming-lifecycle.md) (Ciclo de vida de programação básica)  
- [Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md) (Implementando contratos de serviço)  
+ [Ciclo de vida de programação básica](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
+ [Implementando contratos de serviço](../../../docs/framework/wcf/implementing-service-contracts.md)  
  [Como hospedar um serviço WCF no IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)  
  [Como hospedar um serviço do WCF no WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
- [Como: hospedar um serviço WCF em um serviço Windows gerenciado](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
- [How to: Host a WCF Service in a Managed Application](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md) (Como hospedar um serviço do WCF em um aplicativo gerenciado)
+ [Como hospedar um serviço WCF em um serviço Windows gerenciado](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
+ [Como hospedar um serviço do WCF em um aplicativo gerenciado](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)

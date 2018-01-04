@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 35dc7ad932ea114e2751fa86ceb757dc795795f5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7ece2585287f6e2767e64c2ec03c75adcfe161c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-configuration"></a>Configuração do cliente
 Você pode usar o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] configuração do cliente para especificar o endereço, associação de comportamento e de contrato, as propriedades de "ABC" do ponto de extremidade de cliente, que os clientes usam para se conectar aos pontos de extremidade de serviço. O [ \<cliente >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) elemento tem um [ \<ponto de extremidade >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento cujos atributos são usados para configurar o ponto de extremidade ABC. Esses atributos são discutidos na seção "Configurando pontos de extremidade" deste tópico.  
@@ -104,5 +105,5 @@ Você pode usar o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] config
  O [ \<metadados >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) elemento é usado para especificar configurações usadas para registrar metadados importar extensões. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Estendendo o sistema de metadados, consulte[estendendo o sistema de metadados](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Pontos de extremidade: Endereços, associações e contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [Configuring Client Behaviors](../../../../docs/framework/wcf/configuring-client-behaviors.md) (Configurando comportamentos do cliente)
+ [Pontos de extremidade: endereços, associações e contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Configurando comportamentos do cliente](../../../../docs/framework/wcf/configuring-client-behaviors.md)

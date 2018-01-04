@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8dbaa6f3df2bd4dcbde199f867686b3e05ae235f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 61a0811176a5db17e040073d031fa50865a09857
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>Atributos de ServiceModel e referência de ServiceDescription
 O *árvore descrição* é a hierarquia de tipos (começando com o <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> classe) que juntas descrevem todos os aspectos de um serviço. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]usa uma descrição de árvore para criar um tempo de execução de serviço válido, para publicar Web Services Description Language (WSDL), linguagem de definição de esquema XML (XSD) e declarações de política (metadados) sobre o serviço que os clientes podem usar para conectar e usar o serviço e Gere diversas representações de arquivo de código e configuração dos valores de árvore de descrição.  

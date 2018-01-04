@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f66821f38e8915ee93cf5b1b77dd75e32662121
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 88495e42a57790b75c096235cda65cbedbf86a23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>Publicando e recuperando metadados através de uma associação personalizada
 O <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> fornece suporte para adicionar o ponto de extremidade de metadados para um serviço. Esses pontos de extremidade de metadados podem responder a solicitações HTTP GET em uma URL que tenha um `?wsdl` querystring e solicitações GET do WS-transferência conforme definido na especificação WS-MetadataExchange (MEX). Pontos de extremidade MEX implementam o <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> contrato.  
@@ -38,7 +39,7 @@ O <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=
  Ao publicar metadados sobre uma associação personalizada, certifique-se de que a associação fornece o suporte de segurança que exige de seus metadados. Por exemplo, para evitar a divulgação de informações e certifique-se de que o cliente tem o direito para obter os metadados, você pode tornar seu aplicativo e seus metadados mais seguro configurando seu <xref:System.ServiceModel.Description.IMetadataExchange> ponto de extremidade para exigir a autenticação e criptografia. O exemplo [personalizado proteger metadados de ponto de extremidade](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) demonstra esse cenário.  
   
 ## <a name="see-also"></a>Consulte também  
- [Securing Services](../../../../docs/framework/wcf/securing-services.md) (Protegendo serviços)  
- [Associações do WS-MetadataExchange](../../../../docs/framework/wcf/extending/ws-metadataexchange-bindings.md)  
- [Como: configurar um personalizado WS-Metadata Exchange associação](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)  
- [Como: recuperar metadados através de uma associação não MEX](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
+ [Protegendo serviços](../../../../docs/framework/wcf/securing-services.md)  
+ [Associações de WS-MetadataExchange](../../../../docs/framework/wcf/extending/ws-metadataexchange-bindings.md)  
+ [Como configurar uma associação personalizada do WS-Metadata Exchange](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)  
+ [Como recuperar metadados por meio de uma associação não MEX](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)

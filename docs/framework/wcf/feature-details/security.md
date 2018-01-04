@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 38f62a6ccc0c9291f3963173475f99d5800feb39
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2f2314c8def27bac9e64685d2af3cdd7639332f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-security"></a>Segurança do Windows Communication Foundation
 Os tópicos nesta seção descrevem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] recursos de segurança e como usá-los para ajudar a proteger mensagens.  
@@ -53,16 +54,16 @@ Os tópicos nesta seção descrevem [!INCLUDE[indigo1](../../../../includes/indi
  [Autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
  Descreve os cenários comuns de autorização com implementações de segurança.  
   
- [Federação e Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [Federação e tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
  Descreve os fundamentos da federação e como criar clientes que se comunicam com servidores federados.  
   
  [Confiança parcial](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
  Descreve como executar cenários parcialmente confiável e [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] limitações ao executar parcialmente confiável.  
   
- [A auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
+ [Auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
  Descreve como fazer a auditoria de eventos de segurança.  
   
- [Orientações de segurança e práticas recomendadas](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [Diretrizes e práticas recomendadas de segurança](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
  Diretrizes para criação de seguro [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativos.  
   
 ## <a name="reference"></a>Referência  
@@ -71,13 +72,13 @@ Os tópicos nesta seção descrevem [!INCLUDE[indigo1](../../../../includes/indi
  <xref:System.ServiceModel.Security>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [WCF Feature Details](../../../../docs/framework/wcf/feature-details/index.md) (Detalhes de recursos do WCF)  
+ [Detalhes de recursos do WCF](../../../../docs/framework/wcf/feature-details/index.md)  
   
- [Basic WCF Programming](../../../../docs/framework/wcf/basic-wcf-programming.md) (Programação básica do WCF)  
+ [Programação básica do WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
  [Tutorial de Introdução](../../../../docs/framework/wcf/getting-started-tutorial.md)  
   
- [Conceptual Overview](../../../../docs/framework/wcf/conceptual-overview.md) (Visão geral conceitual)  
+ [Visão geral conceitual](../../../../docs/framework/wcf/conceptual-overview.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar seu aplicativo](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)

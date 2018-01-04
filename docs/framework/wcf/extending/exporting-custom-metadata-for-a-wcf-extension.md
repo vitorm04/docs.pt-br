@@ -13,18 +13,19 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: abe0bd7b08d254e97eef74ad1a99b1bcf6dd997e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dbdbef495232fb1ffaeb8d1dc739c2db1355556d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>Exportando metadados personalizados para uma extensão do WCF
 Em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], exportação de metadados é o processo de descrever os pontos de extremidade de serviço e projeção-los em uma representação padronizada paralela que os clientes podem usar para entender como usar o serviço. Metadados personalizados consistem em elementos XML que não é possível exportar os exporters metadados fornecidos pelo sistema. Normalmente, isso inclui elementos WSDL personalizados para elementos de associação e comportamentos definidos pelo usuário e declarações de política sobre os recursos e requisitos de associações e contratos.  
   
  Esta seção descreve a exportação WSDL personalizado ou declarações de política e não se concentra em que o processo de exportação. Para obter mais informações sobre como usar os tipos que exportar e importar metadados seja metadados personalizados ou construída pelo sistema, consulte [exportando e importando metadados](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  Quando os metadados são publicados usando o <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>, o <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> é examinado e XSD e WSDL – incluindo as declarações de política – são gerados para todos os contratos e associações que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pode suportar usando atributos fornecidos pelo sistema e associações. No entanto, os atributos de comportamento personalizado ou elementos de associação requerem suporte antes que eles podem ser exportados corretamente.  
   
  Esta seção descreve:  
@@ -52,6 +53,6 @@ Em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], exportação de meta
  Para obter mais informações, consulte [como: exportar declarações de política personalizada](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: exportar o WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
- [Como: exportar declarações de política personalizada](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)  
+ [Como exportar o WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
+ [Como exportar declarações de política personalizada](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)  
  [Importando metadados personalizados para uma extensão do WCF](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

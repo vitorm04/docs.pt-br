@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6cba37a82174ab255cb6814e296154485fbdd54c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f0ea15e8fe9580f561eedf048ed2aaf2e2ed248f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Como especificar a cadeia de certificados da autoridade de certificação utilizada para verificar assinaturas (WCF)
 Quando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] recebe uma mensagem SOAP assinada usando um certificado x. 509, por padrão, ele verifica se o certificado x. 509 foi emitido por uma autoridade de certificação confiável. Isso é feito procurando em um repositório de certificados e determinar se o certificado de autoridade de certificação tiver sido designada como confiável. Para que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para determinar isso, a cadeia de certificados de autoridade de certificação deve ser instalada no repositório de certificado correto.  
@@ -44,4 +45,4 @@ Quando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] recebe uma mensag
          [!INCLUDE[crabout](../../../../includes/crabout-md.md)]usando o snap-in de certificados com o MMC, consulte [como: exibir certificados com o Snap-in do MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Trabalhar com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+ [Trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

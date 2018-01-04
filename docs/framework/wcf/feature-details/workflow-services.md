@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 043aa541e32077faf8141701a5ec7e8c0e711959
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0e33915105ca9ff095f09bcd52431212e7c8e927
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-services"></a>Serviços de fluxo de trabalho
 O [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] permite descrever completamente um serviço baseado em fluxo de trabalho de maneira declarativa em XAML. Você pode definir um fluxo de trabalho que implementa o serviço e descreve pontos de extremidade que o serviço expõe, tudo totalmente em XAML. Os tópicos desta seção descrevem, detalhadamente, o modelo de programação que oferece suporte a escrever serviços de maneira declarativa.  
@@ -29,10 +30,10 @@ O [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 
  [Atividades de mensagens](../../../../docs/framework/wcf/feature-details/messaging-activities.md)  
  Discute as atividades que permitem que os fluxos de trabalho enviem e recebam mensagens.  
   
- [Como: criar um serviço de fluxo de trabalho com atividades de mensagens](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
+ [Como criar um serviço de fluxo de trabalho com atividades de mensagens](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
  Descreve como usar as atividades de mensagem para criar um serviço de fluxo de trabalho.  
   
- [Como: Acessar um serviço em um aplicativo de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)  
+ [Como acessar um serviço de um aplicativo de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)  
  Discute como chamar um serviço de um aplicativo de fluxo de trabalho.  
   
  [Correlação](../../../../docs/framework/wcf/feature-details/correlation.md)  
@@ -41,7 +42,7 @@ O [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 
  [Processamento de mensagens de fora de ordem](../../../../docs/framework/wcf/feature-details/out-of-order-message-processing.md)  
  Descreve como configurar um serviço para aceitar mensagens fora de ordem.  
   
- [Como: criar um serviço de fluxo de trabalho que chama o serviço de outro fluxo de trabalho](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-that-calls-another-workflow-service.md)  
+ [Como criar um serviço de fluxo de trabalho que chama outro serviço de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-that-calls-another-workflow-service.md)  
  Descreve como chamar um serviço de fluxo de trabalho de forma síncrona de dentro de outro serviço de fluxo de trabalho.  
   
  [Desenvolvimento de serviço de fluxo de trabalho de primeiro contrato](../../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md)  
@@ -50,7 +51,7 @@ O [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 
  [Como criar um serviço de fluxo de trabalho que consome um contrato de serviço existente](../../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)  
  Fornece um exemplo passo a passo de como criar um serviço de fluxo de trabalho usando um contrato de serviço existente.  
   
- [Visão geral dos serviços de fluxo de trabalho hospedagem](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
+ [Visão geral dos serviços de fluxo de trabalho de hospedagem](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
  Descreve os aspectos diferentes de hospedar um serviço de fluxo de trabalho.  
   
  [Utilizando contratos no fluxo de trabalho](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)  

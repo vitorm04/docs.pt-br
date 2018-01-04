@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a1771f5c69442ea4e95925339c28204663f78eb2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0725c4f4275853cce958072a57d7f6ca4059e8cf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-endpoints"></a>Pontos de extremidade do Windows Communication Foundation
 Toda a comunicação com um [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] serviço ocorre por meio de *pontos de extremidade* do serviço. Pontos de extremidade fornecem acesso de clientes para a funcionalidade que um [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ofertas de serviço.  
@@ -33,30 +34,30 @@ Toda a comunicação com um [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]
   
  Para obter descrições sobre como especificar essas partes individuais de um ponto de extremidade, consulte:  
   
--   [Specifying an Endpoint Address](../../../docs/framework/wcf/specifying-an-endpoint-address.md) (Especificando um endereço do ponto de extremidade)  
+-   [Especificando um endereço do ponto de extremidade](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
   
--   [Using Bindings to Configure Services and Clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md) (Usando associações para configurar serviços e clientes)  
+-   [Usando associações para configurar serviços e clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
   
--   [Designing and Implementing Services](../../../docs/framework/wcf/designing-and-implementing-services.md) (Serviços de design e implantação)  
+-   [Serviços de design e implantação](../../../docs/framework/wcf/designing-and-implementing-services.md)  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Endpoint Creation Overview](../../../docs/framework/wcf/endpoint-creation-overview.md) (Visão geral de criação de ponto de extremidade)  
+ [Visão geral de criação de ponto de extremidade](../../../docs/framework/wcf/endpoint-creation-overview.md)  
  Descreve a estrutura de um ponto de extremidade e descreve como definir um ponto de extremidade na configuração e no código, bem como usar os pontos de extremidade padrão, associações e comportamentos fornecido pelo tempo de execução.  
   
- [Specifying an Endpoint Address](../../../docs/framework/wcf/specifying-an-endpoint-address.md) (Especificando um endereço do ponto de extremidade)  
+ [Especificando um endereço do ponto de extremidade](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
  Descreve como a comunicação com um [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviço ocorre por meio de pontos de extremidade.  
   
- [Como: criar um ponto de extremidade de serviço na configuração](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Como criar um ponto de extremidade de serviço na configuração](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Demonstra como criar um ponto de extremidade de serviço na configuração.  
   
- [Como: criar um ponto de extremidade de serviço em código](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [Como criar um ponto de extremidade de serviço no código](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  Demonstra como criar um ponto de extremidade de serviço em código.  
   
- [Publishing Metadata Endpoints](../../../docs/framework/wcf/publishing-metadata-endpoints.md) (Publicando pontos de extremidade de metadados)  
+ [Publicando pontos de extremidade de metadados](../../../docs/framework/wcf/publishing-metadata-endpoints.md)  
  Demonstra como publicar metadados, publicar pontos de extremidade de metadados na configuração e no código.  
   
 ## <a name="reference"></a>Referência  
  <xref:System.ServiceModel.EndpointAddress>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Basic Programming Lifecycle](../../../docs/framework/wcf/basic-programming-lifecycle.md) (Ciclo de vida de programação básica)
+ [Ciclo de vida de programação básica](../../../docs/framework/wcf/basic-programming-lifecycle.md)

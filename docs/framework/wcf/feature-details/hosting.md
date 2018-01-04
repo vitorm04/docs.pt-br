@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2cc98a6c6b0e8b552a7bf04d3fc1a97b41883677
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f25f0c9e773bbadd992284adf6c79d77aaa2441c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting"></a>Hospedagem
 Os tópicos na seção descrevem a hospedagem de serviços. Um serviço pode ser hospedado por serviços de informações da Internet (IIS), o serviço de ativação de processos do Windows (WAS), o Windows Server AppFabric, um serviço do Windows ou por um aplicativo gerenciado, esta opção também é conhecida como *hospedagem self*.  
@@ -25,24 +26,24 @@ Os tópicos na seção descrevem a hospedagem de serviços. Um serviço pode ser
  É importante observar que executando um serviço ou qualquer extensão de segurança de comprometer um host não confiável.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Hospedagem no Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [Hospedagem nos Serviços de Informações da Internet](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
  Descreve como um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço é hospedado no Internet Information Services ou [do Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=196496).  
   
  [Hosting in Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md) (Hospedagem no Serviço de Ativação de Processos do Windows)  
  Descreve como um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço é hospedado pelo serviço de ativação de processos do Windows.  
   
- [Hospedando em um aplicativo de serviço do Windows](../../../../docs/framework/wcf/feature-details/hosting-in-a-windows-service-application.md)  
+ [Hospedagem em um aplicativo de serviço Windows](../../../../docs/framework/wcf/feature-details/hosting-in-a-windows-service-application.md)  
  Descreve como um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço é hospedado por um serviço do Windows.  
   
- [Hospedando em um aplicativo gerenciado](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)  
+ [Hospedagem em um aplicativo gerenciado](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)  
  Descreve como um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço é hospedado em um aplicativo gerenciado.  
   
- [Ativação com base em configuração no IIS e WAS](../../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)  
+ [Ativação baseada em configuração no IIS e WAS](../../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)  
  Descreve como um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço é hospedado em IIS ou do WAS sem usar um arquivo. svc.  
   
- [Suporte a ligações de Site do IIS](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md)  
+ [Suporte a ligações de site do IIS](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md)  
  Descreve como especificar vários endereços de base para um serviço usando o mesmo esquema de URI em um único site.  
   
 ## <a name="see-also"></a>Consulte também  
- [Hosting Services](../../../../docs/framework/wcf/hosting-services.md) (Hospedando serviços)  
+ [Hospedando serviços](../../../../docs/framework/wcf/hosting-services.md)  
  [Recursos de hospedagem do Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201276)

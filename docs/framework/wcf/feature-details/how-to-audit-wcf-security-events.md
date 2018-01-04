@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 67fca1af6a9e1fdd35051e8b289679677a0abd6b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d3456eb374add7768fa6f2d01bc1b7b610c9577e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>Como fazer auditoria de eventos de segurança do Windows Communication Foundation
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]permite registrar eventos de segurança para o log de eventos do Windows, que pode ser visualizado usando o Visualizador de eventos do Windows. Este tópico explica como configurar um aplicativo para que ele registra eventos de segurança. [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] auditoria, consulte [auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
@@ -100,4 +101,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>  
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
  <xref:System.ServiceModel.AuditLogLocation>  
- [A auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+ [Auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)

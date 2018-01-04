@@ -17,11 +17,12 @@ caps.latest.revision: "49"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: c0af5a5d96f20b2ba5118909a3f0c5ba405bdb11
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f35bd56bdc69f8c57a7e46984778051b57b7a06a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-considerations-in-wcf"></a>Considerações de segurança no WCF
 Os tópicos nesta seção listam vários itens relacionados à segurança a serem considerados durante a criação de um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplicativo.  
@@ -39,7 +40,7 @@ Os tópicos nesta seção listam vários itens relacionados à segurança a sere
  [Violação](../../../../docs/framework/wcf/feature-details/tampering.md)  
  Discute a alteração de mensagens ou a entrega de mensagens e como resolvê-la.  
   
- [Ataques de repetição](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
+ [Ataques de reprodução](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
  Discute o que acontece quando um invasor copia um fluxo de mensagens entre duas partes e repete o fluxo para um ou mais partes e como mitigar isso.  
   
  [Considerações sobre segurança para sessões seguras](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)  
@@ -58,7 +59,7 @@ Os tópicos nesta seção listam vários itens relacionados à segurança a sere
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Orientações de segurança e práticas recomendadas](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [Diretrizes e práticas recomendadas de segurança](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Segurança](../../../../docs/framework/wcf/feature-details/security.md)

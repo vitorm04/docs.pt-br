@@ -13,29 +13,30 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d065f4af7476e90c789c0647b1944aa50b5af5fc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 35994b76498d9287f5f0c22c024afc176d1f9260
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-authorization"></a>Autorização personalizada
 Autorização é o processo de controlar o acesso a recursos e tarefas. Os tópicos nesta seção permitem que você criar para implementar tipos de declaração diferente ou políticas.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Como: criar uma política de autorização personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
+ [Como criar uma política de autorização personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
  Descreve como criar uma política personalizada.  
   
- [Como: criar um Gerenciador de autorização personalizada para um serviço](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [Como criar um gerenciador de autorização personalizado para um serviço](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
  Descreve como criar um Gerenciador de personalizado.  
   
- [Como: criar uma declaração personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
+ [Como criar uma declaração personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
  Descreve como criar uma declaração personalizada.  
   
- [Como: comparar declarações](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
+ [Como comparar declarações](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
  Descreve como comparar declarações.  
   
- [Como: criar uma identidade Principal personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-principal-identity.md)  
+ [Como criar uma identidade de entidade de segurança personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-principal-identity.md)  
  Ilustra o cenário quando <xref:System.ServiceModel.Description.PrincipalPermissionMode.Custom> é usado em combinação com uma política de autorização personalizada e uma entidade de segurança personalizada.  
   
 ## <a name="reference"></a>Referência  

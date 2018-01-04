@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 906d45ccba7185e82aed82626a13034f2e97422d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 57b40493d0e9bcbbaaf1366c74ff116343f6ee96
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-impersonation-with-transport-security"></a>Utilizando Personificação com segurança de transporte
 *Representação* é a capacidade de um aplicativo de servidor para assumir a identidade do cliente. É comum para serviços usar representação ao validar acesso aos recursos. O aplicativo de servidor é executado usando uma conta de serviço, mas quando o servidor aceita uma conexão de cliente, ele representa o cliente para que as verificações de acesso são executadas usando as credenciais do cliente. Segurança de transporte é um mecanismo para passar as credenciais e proteger a comunicação usando essas credenciais. Este tópico descreve como usar a segurança de transporte em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] com o recurso de representação. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]representação usando a segurança de mensagem, consulte [delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 |Anônimo|O aplicativo de servidor pode executar verificações de acesso em relação às credenciais do cliente, mas não recebeu nenhuma informação sobre a identidade do cliente. Esse nível de representação é significativa apenas para comunicação na máquina, como pipes nomeados. Usando `Anonymous` com uma conexão remota promove o nível de representação para identificar.|  
 |Identificar|O aplicativo de servidor sabe a identidade do cliente e pode executar a validação de acesso em relação às credenciais do cliente, mas não é possível representar o cliente. Identificar é o nível de representação padrão usado com as credenciais SSPI em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , a menos que o provedor de token fornece um nível de representação diferentes.|  
 |Impersonate|O aplicativo do servidor pode acessar recursos no computador servidor como o cliente, além de realizar verificações de acesso. O aplicativo de servidor não pode acessar recursos em máquinas remotas usando a identidade do cliente porque o token de representação não tem credenciais de rede|  
-|Representante|Além de ter os mesmos recursos `Impersonate`, o nível de representação de representante também permite que o aplicativo do servidor para acessar os recursos em máquinas remotas usando a identidade do cliente e para passar a identidade para outros aplicativos.<br /><br /> **Importante** a conta de domínio do servidor deve ser marcada como confiáveis para delegação no controlador de domínio para usar esses recursos adicionais. Esse nível de representação não pode ser usado com contas de domínio do cliente marcadas como confidenciais.|  
+|delegado|Além de ter os mesmos recursos `Impersonate`, o nível de representação de representante também permite que o aplicativo do servidor para acessar os recursos em máquinas remotas usando a identidade do cliente e para passar a identidade para outros aplicativos.<br /><br /> **Importante** a conta de domínio do servidor deve ser marcada como confiáveis para delegação no controlador de domínio para usar esses recursos adicionais. Esse nível de representação não pode ser usado com contas de domínio do cliente marcadas como confidenciais.|  
   
  Os níveis mais comumente usados com segurança de transporte são `Identify` e `Impersonate`. Os níveis de `None` e `Anonymous` não são recomendadas para uso normal, e muitas transportes não dão suporte com os níveis de autenticação. O `Delegate` nível é um recurso avançado que deve ser usado com cuidado. Somente os aplicativos de servidor confiável devem receber a permissão para delegar credenciais.  
   
@@ -67,5 +68,5 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Consulte também  
  [Delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
  [Autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- [How to: Impersonate a Client on a Service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md) (Como representar um cliente em um serviço)  
- [Noções básicas sobre a autenticação HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)
+ [Como representar um cliente em um serviço](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
+ [Entendendo a autenticação HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)

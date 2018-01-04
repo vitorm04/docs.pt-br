@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9be7f226c331ad20c58a06b5c7497c7942db013d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7f6f45b788d825fed3c8f5d627190dd8911ec4c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="channel-model-overview"></a>Visão geral de modelo de canal
 O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pilha de canais é uma pilha de comunicação em camadas com um ou mais canais que processar mensagens. Na parte inferior da pilha é um canal de transporte é responsável para adaptar a pilha de canais de transporte subjacente (por exemplo, TCP, HTTP, SMTP e outros tipos de transporte.). Canais fornecem um modelo de programação de nível baixo para enviar e receber mensagens. Este modelo de programação se baseia em várias interfaces e outros tipos de coletivamente conhecidos como o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de canal. Este tópico discute as formas de canal, a construção de um ouvinte de canal básica (no serviço) e a fábrica de canais (no cliente).  
@@ -81,9 +82,9 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pilha de canais é uma
   
 |Tópico|Descrição|  
 |-----------|-----------------|  
-|[Serviço: Ouvintes de canais e canais](../../../../docs/framework/wcf/extending/service-channel-listeners-and-channels.md)|Descreve os ouvintes de canais que escuta canais de entrada em um aplicativo de serviço.|  
-|[Cliente: Fábricas de canais e canais](../../../../docs/framework/wcf/extending/client-channel-factories-and-channels.md)|Descreve as fábricas de canais que criam canais para se conectar a um aplicativo de serviço.|  
-|[Noções básicas sobre o estado muda](../../../../docs/framework/wcf/extending/understanding-state-changes.md)|Descreve como o <xref:System.ServiceModel.ICommunicationObject?displayProperty=nameWithType> alterações de estado em canais de modelos de interface.|  
+|[Serviço: ouvintes de canais e canais](../../../../docs/framework/wcf/extending/service-channel-listeners-and-channels.md)|Descreve os ouvintes de canais que escuta canais de entrada em um aplicativo de serviço.|  
+|[Cliente: fábricas de canais e canais](../../../../docs/framework/wcf/extending/client-channel-factories-and-channels.md)|Descreve as fábricas de canais que criam canais para se conectar a um aplicativo de serviço.|  
+|[Entendendo mudanças de estado](../../../../docs/framework/wcf/extending/understanding-state-changes.md)|Descreve como o <xref:System.ServiceModel.ICommunicationObject?displayProperty=nameWithType> alterações de estado em canais de modelos de interface.|  
 |[Escolhendo um padrão de troca de mensagem](../../../../docs/framework/wcf/extending/choosing-a-message-exchange-pattern.md)|Descreve os seis padrões de troca de mensagem básica que podem dar suporte a canais.|  
-|[Tratando exceções e falhas](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)|Descreve como lidar com falhas e exceções em canais personalizados.|  
+|[Tratamento de exceções e falhas](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)|Descreve como lidar com falhas e exceções em canais personalizados.|  
 |[Configuração e suporte a metadados](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)|Descreve como suporte ao uso de canais personalizados do modelo de aplicativo e como exportar e importar metadados usando associações e elementos de associação.|

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 572a19723583a6bc717a71b3b46040148f29e1cd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c4cfa3d58127fa560f39ce0dcfe51b97ded6223a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="msmqtransportbindingelement"></a>MsmqTransportBindingElement
 MsmqTransportBindingElement  
@@ -58,7 +59,7 @@ class MsmqTransportBindingElement : MsmqBindingElementBase
   
  Tipo de acesso: somente leitura  
   
- Retorna um valor booliano que indica se os endereços de fila devem ser convertidos usando o Active Directory.  
+ Retorna um valor booliano que indica se os endereços da fila devem ser convertidos usando o Active Directory.  
   
 ## <a name="requirements"></a>Requisitos  
   

@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 40973353a0057bcd23c76c03eb1ce6406c95aca6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 75ae86f399c525176c41dec5265c282adfd41652
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="feedback-and-community"></a>Feedback e comunidade
 Agradecemos seus comentários e preocupações sobre o [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] ou [!INCLUDE[infocard](../../../includes/infocard-md.md)] documentação. Na parte inferior de cada página no SDK é a frase "Enviar comentários sobre este tópico à Microsoft". Clique no link "Comentários" para enviar seus modos de exibição ou sugestões sobre o tópico específico.  

@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 007dec81766423ea2826e98ae0b6b399a1508f11
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7031e222b152bfa61e13e0e4a44b5ad9418b07c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mixing-trust-protocols-in-federated-scenarios"></a>Misturando protocolos confiáveis em cenários federados
 Pode haver cenários em que os clientes federados se comunicar com um serviço e um serviço de Token de segurança (STS) que não têm a mesma versão de confiança. O serviço WSDL pode conter um `RequestSecurityTokenTemplate` asserção com elementos de WS-Trust das versões diferentes do que o STS. Nesses casos, um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] cliente converte os elementos de WS-Trust recebidos do `RequestSecurityTokenTemplate` para corresponder o STS confiança versão. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]versões de relação de confiança de identificadores incompatíveis somente para associações padrão. Todos os parâmetros de algoritmo padrão que são reconhecidos pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fazem parte da associação padrão. Este tópico descreve o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] comportamento com várias configurações entre o serviço e o STS de relação de confiança.  

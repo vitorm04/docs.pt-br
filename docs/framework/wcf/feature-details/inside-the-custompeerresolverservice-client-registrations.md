@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7daa3c08bb15b13543a4f972d7e4c5e4929e16e8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9c979922bf8c7b786fd0a671c22289fb148a883c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a>Sobre o CustomPeerResolverService: Registro de clientes
 Cada nó na malha publica suas informações de ponto de extremidade para o serviço de resolução por meio de `Register` função. O serviço resolvedor armazena essas informações como um registro. Este registro contém um identificador exclusivo (RegistrationID) e informações de ponto de extremidade (PeerNodeAddress) para o nó.  
@@ -44,4 +45,4 @@ Cada nó na malha publica suas informações de ponto de extremidade para o serv
  Quando um nó se registra com um serviço de resolução, ele recebe um <xref:System.ServiceModel.PeerResolvers.RegisterResponseInfo> objeto do serviço. Esse objeto tem um `RegistrationLifetime` propriedade que indica para o nó de quanto tempo ele tem antes do registro expira e é removido, o serviço de resolução. Se, por exemplo, o `RegistrationLifetime` é 2 minutos, o nó precisa chamar `Refresh` em menos de 2 minutos para garantir o registro permanecerá atualizado e não será excluído. Quando o serviço resolvedor recebe um `Refresh` solicitação, ele procura o registro e redefine a hora de expiração. Atualize o retorna um <xref:System.ServiceModel.PeerResolvers.RefreshResponseInfo> do objeto com um `RegistrationLifetime` propriedade.  
   
 ## <a name="see-also"></a>Consulte também  
- [Resolvedor Peer](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+ [Resolvedores pares](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)

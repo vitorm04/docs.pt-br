@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fc1608cc4e746af56e7d89237f0c1f5e6cc3bc7e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0a0be008eae45ca5bbe6ca77383bde433931b72e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="correlation"></a>Correlação
 Quando os aplicativos de serviço de fluxo de trabalho se comunicam com outros serviços, é importante que as mensagens entre eles são despachadas para a instância de fluxo de trabalho apropriado. Correlação fornece o mecanismo para isso. Os tópicos nesta seção fornecem uma visão geral de correlação e como usá-lo em cenários de serviço de fluxo de trabalho diferente.  
@@ -29,7 +30,7 @@ Quando os aplicativos de serviço de fluxo de trabalho se comunicam com outros s
  [Troca de contexto](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)  
  Descreve a correlação de intercâmbio de contexto.  
   
- [Frente e verso durável](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)  
+ [Duplex durável](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)  
  Descreve a correlação duplex durável.  
   
  [Conteúdo com base](../../../../docs/framework/wcf/feature-details/content-based-correlation.md)  

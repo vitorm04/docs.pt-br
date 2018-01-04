@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1bf0b63d3de750b5ec2aea41dcb6bb700385663a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c4a18289fcc5f6dfd68f13a006223d5870d3cd4f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-workflow-services"></a>Serviços de fluxo de trabalho de hospedagem
 Um serviço de fluxo de trabalho deve ser hospedado para responder às mensagens de entrada. Serviços de fluxo de trabalho usam o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mensagens infraestrutura e são, portanto, hospedado de forma semelhante. Como [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços de fluxo de trabalho de serviços podem ser hospedados em qualquer aplicativo gerenciado, em serviços de informações da Internet (IIS), ou em serviços de ativação de processo para Windows (WAS). Além disso, serviços de fluxo de trabalho podem ser hospedados em Windows Server App Fabric. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Consulte Windows Server App Fabric [documentação do Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193037), [recursos de hospedagem do AppFabric](http://go.microsoft.com/fwlink/?LinkId=196494), e [conceitos de hospedagem do AppFabric](http://go.microsoft.com/fwlink/?LinkId=196495). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]as várias maneiras de host [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services consulte [serviços de hospedagem](../../../../docs/framework/wcf/hosting-services.md).  
@@ -64,5 +65,5 @@ Um serviço de fluxo de trabalho deve ser hospedado para responder às mensagens
  A ferramenta de implantação da Web foi criada para facilitar o trabalho de implantação. A ferramenta permite que você migrar aplicativos entre o IIS 6.0 e IIS 7.0, sincronizar farms de servidores e empacotar, arquivar e implantar aplicativos da Web. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Ferramenta de implantação da MS](http://go.microsoft.com/fwlink/?LinkId=178690)  
   
 ## <a name="see-also"></a>Consulte também  
- [Internos do Host de serviço de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-service-host-internals.md)  
+ [Detalhes internos do host de serviço de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-service-host-internals.md)  
  [Configurando WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/configuring-workflowservicehost.md)

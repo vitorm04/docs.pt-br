@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d05cbb3091eb3a6bae3341947e14fcc1e78d1207
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9208a73f6a35e4c05ab9be612491f3f7db792a5b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>Importando metadados personalizados para uma extensão do WCF
 Em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], importação de metadados é o processo de geração de uma representação abstrata de um serviço ou seus componentes de seus metadados. Por exemplo, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pode importar <xref:System.ServiceModel.Description.ServiceEndpoint> instâncias, <xref:System.ServiceModel.Channels.Binding> instâncias ou <xref:System.ServiceModel.Description.ContractDescription> instâncias de um WSDL documentos para um serviço. Para importar os metadados de serviço em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], use uma implementação do <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> classe abstrata. Tipos que derivam de <xref:System.ServiceModel.Description.MetadataImporter> classe implementa o suporte para formatos de metadados de importação que aproveitam o WS-Policy importar lógica em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -26,7 +27,7 @@ Em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], importação de meta
   
  Esta seção descreve como importar as extensões WSDL e declarações de política. Ele não se concentra em que o processo de importação. Para obter mais informações sobre como usar os tipos que exportar e importar metadados independentemente se os metadados são personalizados ou suporte de sistema, consulte [exportando e importando metadados](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  O <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> tipo é a implementação do <xref:System.ServiceModel.Description.MetadataImporter> acompanha de classe abstrata [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. O <xref:System.ServiceModel.Description.WsdlImporter> tipo importa os metadados WSDL anexado políticas que são empacotadas em um <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType> objeto. Declarações de política e as extensões WSDL que não reconhecem os importadores padrão são passadas com todos os importadores WSDL e política personalizada registrado para a importação. Normalmente, importers são implementados para dar suporte a elementos de associação definida pelo usuário ou para modificar o contrato importado.  
   
  Esta seção descreve:  
@@ -59,6 +60,6 @@ Em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], importação de meta
 >  Metadados inválidos ou inadequado podem ser passado para o importador. Certifique-se de que importadores personalizados são robustos em todas as formas de XML.  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: Importar WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)  
- [Como: importar asserções de políticas personalizadas](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)  
- [Como: gravar uma extensão para o ServiceContractGenerator](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)
+ [Como importar WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)  
+ [Como importar declarações de políticas personalizadas](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)  
+ [Como gravar uma extensão para o ServiceContractGenerator](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)

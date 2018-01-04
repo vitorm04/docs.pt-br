@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0938b98a3f079d03653df55f10c26a4a62db5bf3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fc0e954ae5cadbe7e70cd8a83d3d5841f4e0d142
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Ativação com base em configuração no ISS e WAS
 Normalmente, ao hospedar um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço em serviços de informações da Internet (IIS) ou o serviço de ativação de processos do Windows (WAS), você deve fornecer um arquivo. svc. O arquivo. svc contém o nome do serviço e uma fábrica de host de serviço personalizada opcional. Esse arquivo adicional aumenta a sobrecarga de gerenciamento. O recurso de ativação com base em configuração remove a necessidade de ter um arquivo. svc e, portanto, os respectivos sobrecarga.  
@@ -49,7 +50,7 @@ Normalmente, ao hospedar um [!INCLUDE[indigo1](../../../../includes/indigo1-md.m
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection.ServiceActivations%2A>  
- [Hosting Services](../../../../docs/framework/wcf/hosting-services.md) (Hospedando serviços)  
- [Visão geral dos serviços de fluxo de trabalho hospedagem](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
+ [Hospedando serviços](../../../../docs/framework/wcf/hosting-services.md)  
+ [Visão geral dos serviços de fluxo de trabalho de hospedagem](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
  [\<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)  
  [Recursos de hospedagem do Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201276)

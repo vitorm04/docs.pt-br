@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 9428c5d7c8c6cf0f571b05a8b9c33b96d073d7a5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d8881768d66e95ce1391ce1be1663bdc3107a347
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="common-security-scenarios"></a>Cenários comuns de segurança
 Os tópicos nesta seção um número de cliente possíveis e as configurações de segurança do serviço de catálogo. As configurações variam de acordo com uma série de fatores. Por exemplo, se um cliente ou serviço estiver em uma intranet, ou se a segurança é fornecida pelo Windows ou o transporte (por exemplo, HTTPS).  
@@ -27,7 +28,7 @@ Os tópicos nesta seção um número de cliente possíveis e as configurações 
  [Serviço e cliente de Internet desprotegido](../../../../docs/framework/wcf/feature-details/internet-unsecured-client-and-service.md)  
  Um exemplo de um cliente público, segura e de serviço.  
   
- [Serviço e cliente inseguro de intranet](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
+ [Serviço e cliente desprotegido de Intranet](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
  Básico [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço desenvolvido para fornecer informações em uma rede privada segura para um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo.  
   
  [Segurança de transporte com autenticação básica](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
@@ -60,7 +61,7 @@ Os tópicos nesta seção um número de cliente possíveis e as configurações 
  [Segurança de mensagem com certificados mútuos](../../../../docs/framework/wcf/feature-details/message-security-with-mutual-certificates.md)  
  Os servidores possuem certificados, e cada cliente tem um certificado. O certificado do servidor é distribuído com o aplicativo e está disponível fora da banda.  
   
- [Segurança de mensagem com Tokens emitidos](../../../../docs/framework/wcf/feature-details/message-security-with-issued-tokens.md)  
+ [Segurança de mensagem com tokens emitidos](../../../../docs/framework/wcf/feature-details/message-security-with-issued-tokens.md)  
  Segurança federada que permite o estabelecimento de uma relação de confiança entre domínios independentes.  
   
  [Subsistema confiável](../../../../docs/framework/wcf/feature-details/trusted-subsystem.md)  
@@ -84,10 +85,10 @@ Os tópicos nesta seção um número de cliente possíveis e as configurações 
   
  [Autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
- [Federação e Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [Federação e tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
   
- [A auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
+ [Auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Orientações de segurança e práticas recomendadas](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [Diretrizes e práticas recomendadas de segurança](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
  [Modelo de segurança para o Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

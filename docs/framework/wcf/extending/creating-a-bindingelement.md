@@ -13,16 +13,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bdd547a62391d11050071e1ede648b28c28bd3f4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0184d07210322e6ed04441f7190857cf07205b15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-bindingelement"></a>Criando um BindingElement
 Associações e elementos de associação (objetos que estendem <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> e <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>, respectivamente) são o local onde o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] modelo de aplicativo é associado a fábricas de canais e ouvintes de canais. Sem associações, usar os canais personalizados exige a programação no nível do canal como descrito em [programação de nível de serviço de canal](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) e [programação de nível de canal cliente](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). Este tópico discute o requisito mínimo para habilitar o uso do seu canal em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], o desenvolvimento de um <xref:System.ServiceModel.Channels.BindingElement> de canal e habilitar o uso do aplicativo conforme descrito na etapa 4 do [canais de desenvolvimento](../../../../docs/framework/wcf/extending/developing-channels.md).  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  Criando um <xref:System.ServiceModel.Channels.BindingElement> para seu canal permite que os desenvolvedores para usá-lo em um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo. <xref:System.ServiceModel.Channels.BindingElement>objetos podem ser usados do <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> classe para conectar-se um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativo para o canal sem a necessidade das informações de tipo exato do seu canal.  
   
  Uma vez um <xref:System.ServiceModel.Channels.BindingElement> tiver sido criado, você pode habilitar a funcionalidade mais, dependendo das suas necessidades, seguindo as etapas restantes de desenvolvimento de canal descritas em [canais de desenvolvimento](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -83,5 +84,5 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Channels.BindingElement>  
- [Canais de desenvolvimento](../../../../docs/framework/wcf/extending/developing-channels.md)  
+ [Desenvolvimento de canais](../../../../docs/framework/wcf/extending/developing-channels.md)  
  [Transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

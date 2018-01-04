@@ -13,11 +13,12 @@ caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3bb2646a500db299f164dce34fb062a509f90047
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 96ae88fd29391bf173da33398dfb41b3a06441ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="unsupported-scenarios"></a>Cenários sem suporte
 Por várias razões, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] não oferece suporte a alguns cenários de segurança específico. Por exemplo, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition não implementa os protocolos de autenticação SSPI ou Kerberos e, portanto, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não oferece suporte à execução de um serviço com a autenticação do Windows nessa plataforma. Outros mecanismos de autenticação, como nome de usuário/senha e a autenticação integrada do HTTP/HTTPS são suportados ao executar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no Windows XP Home Edition.  
@@ -124,4 +125,4 @@ Por várias razões, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nã
  [Elevação de privilégio](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
  [Negação de serviço](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
  [Violação](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Ataques de repetição](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+ [Ataques de reprodução](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
