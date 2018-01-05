@@ -19,11 +19,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8d158629b428bda8e7749df393ad0724225b5a0a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 90611e0b18e58e4c24b44e7c87cba56e4b0b01ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-seek-a-clock-synchronously"></a>Como buscar um relógio de forma síncrona
 Use o <xref:System.Windows.Media.Animation.ClockController.SeekAlignedToLastTick%2A> método para procurar um relógio para um ponto específico de forma síncrona. O exemplo a seguir demonstra ambos o <xref:System.Windows.Media.Animation.ClockController.Seek%2A> e <xref:System.Windows.Media.Animation.ClockController.SeekAlignedToLastTick%2A> métodos de um <xref:System.Windows.Media.Animation.ClockController>.  

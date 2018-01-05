@@ -17,11 +17,14 @@ caps.latest.revision: "95"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 697842906772c190c67e2f6ec1a4eb255229f289
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 893bbc94d909d5c94b7f8727912a298575617c2c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Desenvolvimento entre plataformas com a Biblioteca de Classes Portátil
 O tipo de projeto de Biblioteca de Classes Portátil .NET Framework no Visual Studio ajuda a criar de maneira rápida e fácil aplicativos e bibliotecas de plataforma cruzada para plataformas Microsoft.  

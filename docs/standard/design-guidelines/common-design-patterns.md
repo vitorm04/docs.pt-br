@@ -16,18 +16,21 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dd2d78e675ebc67cc2e49f5bc7141558d462a3e4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5b2c25728903e4a193a15e6586fffe528ecb7c7e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-design-patterns"></a>Padrões comuns de Design
 Há diversos livros em padrões de software, os idiomas padrão e antipatterns que o assunto muito amplo de padrões de endereço. Portanto, este capítulo fornece diretrizes e discussões relacionadas a um conjunto muito limitado de padrões que são usados com frequência no design de APIs do .NET Framework.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Propriedades de dependência](../../../docs/standard/design-guidelines/dependency-properties.md)  
- [Padrão de Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md)  
+ [Padrão de descarte](../../../docs/standard/design-guidelines/dispose-pattern.md)  
  *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
  *Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  

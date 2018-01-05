@@ -18,11 +18,12 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e4d52fab42dabeaa8ef51812308fe5807030184e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 63efdae02dd14e1a2692ebb6ee00c7d56c8b04c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-layer-programming-how-to-topics"></a>Tópicos explicativos de programação da camada visual
 Os tópicos nesta seção demonstram como usar a camada visual para composição de baixo nível e testes.  

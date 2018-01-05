@@ -22,11 +22,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a46bf111b76ef6d07fa99cc3b19684a0726b7062
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 66a297ed035f5afde06913b89f1f92dee5745f48
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="constructor-design"></a>Design do construtor
 Há dois tipos de construtores: digite construtores e construtores de instância.  
@@ -87,5 +90,5 @@ Há dois tipos de construtores: digite construtores e construtores de instância
  *Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
 ## <a name="see-also"></a>Consulte também  
- [Diretrizes de Design de membro](../../../docs/standard/design-guidelines/member.md)  
+ [Diretrizes de design de membro](../../../docs/standard/design-guidelines/member.md)  
  [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)

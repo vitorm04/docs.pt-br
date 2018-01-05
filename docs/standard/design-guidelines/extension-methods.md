@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b7edc3420eabe4de20a2fe39f38ae5eee53b593c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 28ce4451f9f8cc634ab76b3b4ef845103ea55e35
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="extension-methods"></a>Métodos de extensão
 Métodos de extensão são um recurso de linguagem que permite que os métodos estáticos ser chamado usando a sintaxe de chamada de método de instância. Esses métodos devem ter pelo menos um parâmetro, que representa a instância em que é o método operar.  
@@ -55,5 +58,5 @@ Métodos de extensão são um recurso de linguagem que permite que os métodos e
  *Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
 ## <a name="see-also"></a>Consulte também  
- [Diretrizes de Design de membro](../../../docs/standard/design-guidelines/member.md)  
+ [Diretrizes de design de membro](../../../docs/standard/design-guidelines/member.md)  
  [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)

@@ -19,11 +19,14 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4ef77fb9e196abf046e0d4648a49b5d4d3fad47e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 78ba02fa227bd5c10337da0ef8b65ceab476c1ed
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="passing-a-uri-to-the-windows-runtime"></a>Passando um URI para o Windows Runtime
 Os métodos de Tempo de Execução do Windows só aceitam URIs absolutos. Se você apresentar um URI relativo a um método [!INCLUDE[wrt](../../../includes/wrt-md.md)], será lançada uma exceção <xref:System.ArgumentException>. Eis o porquê: quando você usa o [!INCLUDE[wrt](../../../includes/wrt-md.md)] no código do .NET Framework, o [Windows](http://go.microsoft.com/fwlink/p/?LinkId=238376) classe aparece como <xref:System.Uri?displayProperty=nameWithType> no Intellisense. O <xref:System.Uri?displayProperty=nameWithType> classe permite que os URIs relativos, mas o [Windows](http://go.microsoft.com/fwlink/p/?LinkId=238376) classe não. Isso também vale para métodos expostos nos componentes do [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Se seu componente expõe um método que usa um URI, a assinatura presente no código inclui <xref:System.Uri?displayProperty=nameWithType>. No entanto, para os usuários do seu componente, a assinatura inclui [Windows](http://go.microsoft.com/fwlink/p/?LinkId=238376). Os URIs enviados aos seus componentes devem ser absolutos.  

@@ -25,11 +25,14 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3be1a51db31f18255eabe633cdeaeb860f9c8ce7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3e75f3c74c5966ce5ce22b23f7ba179e903d37aa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="secure-coding-guidelines"></a>Diretrizes de codificação segura
 Segurança de acesso do código e segurança baseada em evidência fornecem mecanismos muito poderosos, explícitos para implementar a segurança. A maioria dos códigos de aplicativo podem simplesmente usar a infraestrutura implementada pelo .NET Framework. Em alguns casos, adicionais de segurança específicas do aplicativo é necessária, criado, estendendo o sistema de segurança ou usando novos métodos ad hoc.  

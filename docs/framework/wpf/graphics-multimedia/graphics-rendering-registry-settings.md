@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c1a86d715edb68564d6ebfcc8a419e333da4ea03
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a760f910bfd9e64fddfe2e7db3bb380cf744719d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics-rendering-registry-settings"></a>Configurações do Registro de renderização dos elementos gráficos
 Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] configurações do Registro de renderização de elementos gráficos que afetam [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos.  
@@ -80,7 +81,7 @@ Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../
   
 |Chave do Registro|Tipo de valor|  
 |------------------|----------------|  
-|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|Cadeia de caracteres|  
+|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|Cadeia de Caracteres|  
   
  Em novembro de 2004, [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] lançou uma nova versão das diretrizes de teste do driver; os drivers gravados após esta data oferecem mais estabilidade. Por padrão, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usará o pipeline de aceleração de hardware para esses drivers e restabelecerá a renderização de software para drivers XPDM publicados antes desta data.  
   

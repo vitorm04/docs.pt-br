@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: d6a9333b2267e82fc25b2a0ec4bf5dd14f644078
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c9cc5e2bff9cc2591c7a12630da5422dbf73713a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xshared-attribute"></a>Atributo x:Shared
 Quando definido como `false`, modifica o comportamento de recuperação de recursos do WPF para que as solicitações para o recurso atribuído criam uma nova instância para cada solicitação, em vez de compartilhar a mesma instância para todas as solicitações.  

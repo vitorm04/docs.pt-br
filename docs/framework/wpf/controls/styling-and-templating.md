@@ -26,11 +26,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5bd85383cc27687974fbf3689793a60569a4f97a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c33739d0e753146ffdc8b825d88c6ca7ba63fa1a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="styling-and-templating"></a>Estilo e modelagem
 O estilo e a modelagem do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] se refere a um conjunto de recursos (estilos, modelos, gatilhos e storyboards) que permitem que os desenvolvedores e designers criem efeitos visualmente atraentes, além de uma aparência consistente para o produto. Embora os desenvolvedores e/ou designers possam personalizar a aparência de forma ampla conforme o aplicativo, é necessário um forte modelo de estilo e modelagem para permitir a manutenção e o compartilhamento da aparência dentro dos aplicativos e entre eles. O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece esse modelo.  

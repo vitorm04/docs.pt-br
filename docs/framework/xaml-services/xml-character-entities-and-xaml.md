@@ -31,11 +31,12 @@ caps.latest.revision: "23"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 5973c67b26e07bba69383cc625ff34493d825a41
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6b325c931579606f6d1d90eb821766a4110acfd5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-character-entities-and-xaml"></a>Entidades e XAML de caractere XML
 XAML usa entidades de caractere definidas no XML para caracteres especiais. Este tópico descreve algumas entidades de caractere específico e considerações gerais para outros conceitos XML em XAML.  
@@ -56,11 +57,11 @@ XAML usa entidades de caractere definidas no XML para caracteres especiais. Este
   
 |Caractere|Entidade|Observações|  
 |---------------|------------|-----------|  
-|& (E comercial)|&amp;|Deve ser usado para valores de atributo e conteúdo de um elemento.|  
-|> (maior-de caractere)|&gt;|Deve ser usado para um valor de atributo, mas > é aceitável como o conteúdo de um elemento, contanto que < não precedê-lo.|  
-|< (menor-de caractere)|&lt;|Deve ser usado para um valor de atributo, mas \< é aceitável como o conteúdo de um elemento, contanto que > não segue.|  
-|"(aspas normais)|&quot;|Deve ser usado para um valor de atributo, mas uma aspa simples (') é aceitável como o conteúdo de um elemento. Observe que os valores de atributo podem ser delimitados por uma aspa simples simples (') ou por uma aspa simples ('); qualquer caractere que aparecer primeiro define o compartimento do valor de atributo e as aspas alternativa podem ser usada como um literal dentro do valor.|  
-|' (aspa simples reta)|&apos;|Deve ser usado para um valor de atributo, mas uma reta aspas simples (') é aceitável como o conteúdo de um elemento. Observe que os valores de atributo podem ser delimitados por uma aspa simples simples (') ou por uma aspa simples ('); qualquer caractere que aparecer primeiro define o compartimento do valor de atributo e as aspas alternativa podem ser usada como um literal dentro do valor.|  
+|& (E comercial)|\&amp;|Deve ser usado para valores de atributo e conteúdo de um elemento.|  
+|> (maior-de caractere)|\&gt;|Deve ser usado para um valor de atributo, mas > é aceitável como o conteúdo de um elemento, contanto que < não precedê-lo.|  
+|< (menor-de caractere)|\&lt;|Deve ser usado para um valor de atributo, mas \< é aceitável como o conteúdo de um elemento, contanto que > não segue.|  
+|"(aspas normais)|\&quot;|Deve ser usado para um valor de atributo, mas uma aspa simples (') é aceitável como o conteúdo de um elemento. Observe que os valores de atributo podem ser delimitados por uma aspa simples simples (') ou por uma aspa simples ('); qualquer caractere que aparecer primeiro define o compartimento do valor de atributo e as aspas alternativa podem ser usada como um literal dentro do valor.|  
+|' (aspa simples reta)|\&apos;|Deve ser usado para um valor de atributo, mas uma reta aspas simples (') é aceitável como o conteúdo de um elemento. Observe que os valores de atributo podem ser delimitados por uma aspa simples simples (') ou por uma aspa simples ('); qualquer caractere que aparecer primeiro define o compartimento do valor de atributo e as aspas alternativa podem ser usada como um literal dentro do valor.|  
 |(mapeamentos de caracteres numéricos)|&#*[inteiro]* ; ou & #x*[hex]*;|XAML oferece suporte a mapeamentos de caracteres numéricos para a codificação ativa.|  
 |(espaço incondicional)|&\#160; (supondo que a codificação UTF-8)|Para elementos de fluxo de documento, ou elementos que recebem texto como o WPF <xref:System.Windows.Controls.TextBox>, espaços não separáveis são retirados da marcação, mesmo para `xml:space="default"`. (Para obter mais informações, consulte [processamento de espaço em branco em XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).)|  
   
@@ -74,6 +75,6 @@ XAML usa entidades de caractere definidas no XML para caracteres especiais. Este
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral de XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Extensões de marcação e XAML WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
+ [Extensões de marcação e XAML do WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
  [Gramática XamlName](../../../docs/framework/xaml-services/xamlname-grammar.md)  
  [Processamento de Espaço em branco em XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)

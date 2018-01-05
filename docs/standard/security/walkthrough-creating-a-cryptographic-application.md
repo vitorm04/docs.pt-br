@@ -20,11 +20,14 @@ caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ab596fd10de81e60e6396268cbd5c5b31aa13078
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 869d35a15a028e6df09dea281ac653ab8b9a28d6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Instruções passo a passo: criando um aplicativo criptográfico
 Este passo a passo demonstra como criptografar e descriptografar o conteúdo. Os exemplos de código são projetados para um aplicativo Windows Forms. Este aplicativo não demonstram cenários do mundo real, como o uso de cartões inteligentes. Em vez disso, ele demonstra os fundamentos da criptografia e descriptografia.  

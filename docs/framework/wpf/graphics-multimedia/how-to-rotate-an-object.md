@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b9b6212ed6c50faf73a6d3531f001a1b7e72d33
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b356ef1782ec5bba4f7288644a0802f029456bbf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-rotate-an-object"></a>Como girar um objeto
 Este exemplo mostra como girar um objeto. O exemplo cria primeiro um <xref:System.Windows.Media.RotateTransform> e, em seguida, especifica sua <xref:System.Windows.Media.RotateTransform.Angle%2A> em graus.  
@@ -57,4 +58,4 @@ Dois objetos que giram 45 graus de diferentes centros de rotação
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Media.Transform>  
  [Visão geral de transformações](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+ [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

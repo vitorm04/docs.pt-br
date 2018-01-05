@@ -23,11 +23,14 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4e85ee15223bc135384d698a175d57b4fd543747
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5718f19318121c2025b9d92a5947574289c1f4d0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-serialization"></a>Serialização personalizada
 A serialização personalizada é o processo de controlar a serialização e a desserialização de um tipo. Controlando a serialização, é possível garantir a compatibilidade de serialização, que é a capacidade de serializar e desserializar entre versões de um tipo sem interromper a funcionalidade básica do tipo. Por exemplo, na primeira versão de um tipo, pode haver apenas dois campos. Na próxima versão de um tipo, vários outros campos são adicionados. No entanto, a segunda versão de um aplicativo deve ser capaz de serializar e desserializar ambos os tipos. As seções a seguir descrevem como controlar a serialização.

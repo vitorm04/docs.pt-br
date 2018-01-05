@@ -18,11 +18,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2b24a934285f88386daa764c5b28bd82cf5d39a9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6b02abef0180b6de82e26837863849cce35c994f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="type-design-guidelines"></a>Diretrizes de Design de tipo
 Da perspectiva do CLR, há apenas duas categorias de tipos — referenciar tipos e tipos de valor —, mas com a finalidade de uma discussão sobre o design de estrutura, dividimos tipos em grupos mais lógicos, cada um com suas próprias regras de design específico.  
@@ -46,8 +49,8 @@ Da perspectiva do CLR, há apenas duas categorias de tipos — referenciar tipos
  [Design de classe abstrata](../../../docs/standard/design-guidelines/abstract-class.md)  
  [Design de classe estática](../../../docs/standard/design-guidelines/static-class.md)  
  [Design de interface](../../../docs/standard/design-guidelines/interface.md)  
- [Estrutura de Design](../../../docs/standard/design-guidelines/struct.md)  
- [Design de enum](../../../docs/standard/design-guidelines/enum.md)  
+ [Design de Struct](../../../docs/standard/design-guidelines/struct.md)  
+ [Design de enumeração](../../../docs/standard/design-guidelines/enum.md)  
  [Tipos aninhados](../../../docs/standard/design-guidelines/nested-types.md)  
  *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   

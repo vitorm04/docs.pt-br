@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 9a445d7e730ecb743d5e4086ec682b12a7bf3ff9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 25aac1d4478279561cbcdda6c1cf912c3c3b2cde
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Atributos CLR relacionados a XAML para tipos personalizados e bibliotecas
 Este tópico descreve os atributos de tempo de execução (CLR) linguagem comuns que são definidos pelo serviços XAML do .NET Framework. Ele também descreve outros atributos CLR que são definidos no .NET Framework que tem um cenário relacionados a XAML para aplicativo assemblies ou tipos. Atribuição de assemblies, tipos ou membros com esses atributos CLR fornece relacionadas aos tipos de informações do sistema de tipo XAML. Informações são fornecidas para qualquer consumidor XAML que usa serviços XAML do .NET Framework para processar o fluxo do nó XAML diretamente ou por meio de leitores XAML dedicados e gravadores XAML.  
@@ -46,7 +47,7 @@ Este tópico descreve os atributos de tempo de execução (CLR) linguagem comuns
   
  **Argumentos:** uma cadeia de caracteres que especifica o nome da propriedade que corresponda a um argumento de construtor simples.  
   
- <xref:System.Windows.Markup.ConstructorArgumentAttribute>Especifica que um objeto pode ser inicializado usando uma sintaxe do construtor não padrão e uma propriedade do nome especificado fornece informações de construção. Essas informações são principalmente para a serialização de XAML. Para obter mais informações, consulte <xref:System.Windows.Markup.ConstructorArgumentAttribute>.  
+ <xref:System.Windows.Markup.ConstructorArgumentAttribute>Especifica que um objeto pode ser inicializado usando uma sintaxe do construtor não padrão e uma propriedade do nome especificado fornece informações de construção. Essas informações são principalmente para serialização XAML. Para obter mais informações, consulte <xref:System.Windows.Markup.ConstructorArgumentAttribute>.  
   
 ### <a name="contentpropertyattribute"></a>ContentPropertyAttribute  
  **Documentação de referência:**  <xref:System.Windows.Markup.ContentPropertyAttribute>  

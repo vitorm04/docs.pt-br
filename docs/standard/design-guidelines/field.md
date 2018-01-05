@@ -17,11 +17,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dc3249518dd1e1c751de08c22d1c5eb4fa28dc6d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ccced2c9e816122d770f43056c36ab4a6d510fde
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="field-design"></a>Design de campo
 O princípio de encapsulamento é um dos conceitos mais importantes no design orientado a objeto. Esse princípio afirma que os dados armazenados dentro de um objeto devem ser acessíveis somente para esse objeto.  
@@ -51,5 +54,5 @@ O princípio de encapsulamento é um dos conceitos mais importantes no design or
  *Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
 ## <a name="see-also"></a>Consulte também  
- [Diretrizes de Design de membro](../../../docs/standard/design-guidelines/member.md)  
+ [Diretrizes de design de membro](../../../docs/standard/design-guidelines/member.md)  
  [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)

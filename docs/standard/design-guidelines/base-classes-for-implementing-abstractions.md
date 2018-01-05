@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6c8cd779dba0e7ce559e29af7b16bf04b3d0dc2d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 96264456ac6afc569c46caf5faed6c37ea22bc8e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>Classes base para implementar abstrações
 Estritamente falando, uma classe torna-se uma classe base quando outra classe é derivada. Para fins desta seção, no entanto, uma classe base é uma classe projetada principalmente para fornecer uma abstração comum ou para outras classes de reutilizar alguns implementação padrão embora herança. Classes base geralmente ficam no meio de hierarquias de herança entre uma abstração na raiz de uma hierarquia e várias implementações personalizadas na parte inferior.  
@@ -43,4 +46,4 @@ Estritamente falando, uma classe torna-se uma classe base quando outra classe é
   
 ## <a name="see-also"></a>Consulte também  
  [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)  
- [Criação de extensibilidade](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+ [Designer voltado para extensibilidade](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

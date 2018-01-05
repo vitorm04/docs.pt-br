@@ -19,11 +19,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1a10e74342141f8ef6664cc424552dc173d9b0f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e58e3ea00a00b24e476fd158beb3b0515e607f9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="geometry-overview"></a>Visão geral da geometria
 Esta visão geral descreve como usar o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> classes para descrever formas. Este tópico também contrasta as diferenças entre <xref:System.Windows.Media.Geometry> objetos e <xref:System.Windows.Shapes.Shape> elementos.  
@@ -233,7 +234,7 @@ Uma PathGeometry com várias figuras
  <xref:System.Windows.Media.GeometryDrawing>  
  [Elementos gráficos e geração de imagens 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
  [Sintaxe de marcação de caminho](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
- [Tópicos explicativos](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
+ [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
  [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [Visão geral de formas e desenho básico no WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
  [Visão geral dos objetos de desenho](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)

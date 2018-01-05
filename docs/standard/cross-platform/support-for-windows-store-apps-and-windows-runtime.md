@@ -19,11 +19,14 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a8ee68c53173f0919a9200ed5ac82fed3e27affc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6dccf9d70772c4eaa8818388ad662b1f93804431
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Suporte do .NET Framework para aplicativos da Windows Store e Windows Runtime 
 O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] dá suporte a vários cenários de desenvolvimento de software com o [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Esses cenários se enquadram em três categorias:  
@@ -158,4 +161,4 @@ O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] dá suporte a vários cen
 |[Desenvolvendo aplicativos da Windows Store (VB / c / C++ e XAML)](http://go.microsoft.com/fwlink/p/?LinkId=238311)|Fornece os principais recursos para ajudá-lo a começar a desenvolver [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicativos usando o c# ou Visual Basic, incluindo muitos tópicos do guia de início rápido, diretrizes e práticas recomendadas. (No Centro de desenvolvimento do Windows.)|  
 |[Criando componentes de tempo de execução do Windows em c# e Visual Basic](http://go.microsoft.com/fwlink/p/?LinkId=238313)|Descreve como criar um [!INCLUDE[wrt](../../../includes/wrt-md.md)] componente usando o .NET Framework, explica como usá-lo como parte de um [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicativo compilado para Windows usando JavaScript e descreve como depurar a combinação com o Visual Studio. (No Centro de desenvolvimento do Windows.)|  
 |[Referência de tempo de execução do Windows](http://go.microsoft.com/fwlink/?LinkId=238319)|A documentação de referência para o [!INCLUDE[wrt](../../../includes/wrt-md.md)]. (No Centro de desenvolvimento do Windows.)|  
-|[Passando um URI para o tempo de execução do Windows](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|Descreve um problema que pode ocorrer quando você passar um URI do código gerenciado para o [!INCLUDE[wrt](../../../includes/wrt-md.md)]e como evitá-la.|
+|[Passando um URI para o Windows Runtime](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|Descreve um problema que pode ocorrer quando você passar um URI do código gerenciado para o [!INCLUDE[wrt](../../../includes/wrt-md.md)]e como evitá-la.|

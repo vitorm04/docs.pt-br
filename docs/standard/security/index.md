@@ -18,11 +18,14 @@ caps.latest.revision: "37"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5d6bf5929466d09b70cb74ffdf6c46d21c6f85ca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7f8600da624ff75ce2dbd5c417f886d6b3b1ac37
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="security-in-the-net-framework"></a>Segurança no .NET Framework
 O Common Language Runtime e o .NET Framework fornecem muitos serviços e classes úteis que permitem aos desenvolvedores escrever código seguro com facilidade e que permitem aos administradores de sistema personalizar as permissões concedidas ao código para que ele possa acessar recursos protegidos. Além disso, o tempo de execução e o .NET Framework fornecem classes e serviços úteis que facilitam o uso de criptografia e segurança baseada em função.  

@@ -30,11 +30,14 @@ caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0651ae0fbc85b01d3e02354c06a9796804c8516e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 866d31662b8ae7d5c887af7d86007cb93a57d88f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="cryptographic-signatures"></a>Assinaturas criptográficas
 <a name="top"></a>Assinaturas digitais criptográficas usam algoritmos de chave pública para fornecer a integridade dos dados. Quando você assinar dados com uma assinatura digital, alguém pode verificar a assinatura e pode provar que os dados origem de você e não foi alterados depois que você assinou. Para obter mais informações sobre assinaturas digitais, consulte [serviços criptográficos](../../../docs/standard/security/cryptographic-services.md).  

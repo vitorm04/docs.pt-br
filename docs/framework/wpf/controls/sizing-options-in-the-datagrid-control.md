@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eee894b536b19ec38a9809ab5dc49f5682c1df9c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4219dc88a263b73aa89812a2f841a920c804796b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sizing-options-in-the-datagrid-control"></a>Opções de dimensionamento no controle DataGrid
 Várias opções estão disponíveis para controlar como o <xref:System.Windows.Controls.DataGrid> tamanhos em si. O <xref:System.Windows.Controls.DataGrid>e linhas e colunas individuais no <xref:System.Windows.Controls.DataGrid>, pode ser definida para dimensionar automaticamente a seu conteúdo ou pode ser definido como valores específicos. Por padrão, o <xref:System.Windows.Controls.DataGrid> serão reduzidas e ampliadas para ajustar o tamanho do seu conteúdo.  

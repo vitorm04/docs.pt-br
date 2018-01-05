@@ -17,11 +17,14 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a812207fb58e6c87c263966081060d02f8038963
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 38c344e4f4ede58fcb39dd638f6aa8e896e63da0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="framework-design-guidelines"></a>Diretrizes de design de estrutura
 Esta seção fornece diretrizes para a criação de bibliotecas que estendem e interagem com o .NET Framework. A meta é ajudar os designers de biblioteca a garantir a consistência de API e facilidade de uso, fornecendo um modelo de programação unificado que é independente da linguagem de programação usada para desenvolvimento. É recomendável que você siga estas diretrizes de design ao desenvolver classes e componentes que estendem o .NET Framework. Projeto de biblioteca inconsistente negativamente afeta a produtividade do desenvolvedor e desencoraja adoção.  
@@ -37,10 +40,10 @@ Esta seção fornece diretrizes para a criação de bibliotecas que estendem e i
  [Diretrizes de Design de tipo](../../../docs/standard/design-guidelines/type.md)  
  Fornece diretrizes para usar classes estáticas e abstratos, interfaces, enumerações, estruturas e outros tipos.  
   
- [Diretrizes de Design de membro](../../../docs/standard/design-guidelines/member.md)  
+ [Diretrizes de design de membro](../../../docs/standard/design-guidelines/member.md)  
  Fornece diretrizes para criar e usar propriedades, métodos, construtores, campos, eventos, operadores e parâmetros.  
   
- [Criação de extensibilidade](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+ [Designer voltado para extensibilidade](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
  Discute os mecanismos de extensibilidade, como subclassificação, usando membros virtuais, eventos e retornos de chamada e explica como escolher os mecanismos que melhor atende aos requisitos do framework.  
   
  [Diretrizes de design para exceções](../../../docs/standard/design-guidelines/exceptions.md)  

@@ -18,11 +18,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 217e9eae3540e0a20afd0888d24803285d6352b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 39dd4e31e84e455b72ce53bd8abffd650ce77dfc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="events-and-callbacks"></a>Eventos e retornos de chamada
 Retornos de chamada são os pontos de extensibilidade que permitem que uma estrutura de retorno de chamada no código de usuário por meio de um representante. Esses representantes geralmente são passados para o framework por meio de um parâmetro de um método.  
@@ -52,5 +55,5 @@ Retornos de chamada são os pontos de extensibilidade que permitem que uma estru
  *Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
 ## <a name="see-also"></a>Consulte também  
- [Criação de extensibilidade](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+ [Designer voltado para extensibilidade](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
  [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)

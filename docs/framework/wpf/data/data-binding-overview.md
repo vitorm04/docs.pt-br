@@ -21,11 +21,12 @@ caps.latest.revision: "78"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fbf731504022cb25e0cdeff5e0a557b67b987fd4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 817a7ba73c37c15afa1be402da38e828d2aba426
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-overview"></a>Visão geral da vinculação de dados
 A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece aos aplicativos uma maneira simples e consistente para apresentar e interagir com os dados. Os elementos podem ser associados aos dados de uma variedade de fontes de dados na forma de objetos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>tais como <xref:System.Windows.Controls.Button> e <xref:System.Windows.Controls.ItemsControl>s como <xref:System.Windows.Controls.ListBox> e <xref:System.Windows.Controls.ListView> tem uma funcionalidade interna para permitir a estilização flexível de um único item de dados ou coleções de itens de dados. É possível gerar exibições com classificação, filtragem e agrupamento dos dados.  
@@ -445,5 +446,5 @@ A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
  [Associar aos resultados de uma consulta LINQ](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
  [Associação de dados](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
  [Demonstração de associação de dados](http://go.microsoft.com/fwlink/?LinkID=163703)  
- [Tópicos explicativos](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [Tópicos de instruções](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
  [Associar a uma fonte de dados ADO.NET](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)

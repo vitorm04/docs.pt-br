@@ -18,11 +18,14 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 804b91cdda1316bc0a3081c8353493faf8869b4f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 157e20a80f0a76e157fad091bec6bfe635a9ccb8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="security-and-user-input"></a>Segurança e entrada do usuário
 Dados de usuário, que pode ser qualquer tipo de entrada (dados de uma solicitação da Web ou a URL de entrada para controles de um aplicativo do Microsoft Windows Forms e assim por diante), negativamente pode influenciar o código porque geralmente usados diretamente como parâmetros para chamar outro código. Essa situação é semelhante a chamar seu código com parâmetros estranhos um código mal-intencionado, e as mesmas precauções devem ser tomadas. Entrada do usuário é realmente difícil fazer seguro porque não há nenhum quadro de pilha para rastrear a presença de dados potencialmente não confiáveis.  

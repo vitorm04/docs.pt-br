@@ -24,11 +24,14 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0b40e09a9a2c534d3376fa6930d8166591873a0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 333e99997bad3852ae34753165aa736ef32ac004
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Gerando chaves para criptografia e descriptografia
 Criação e gerenciamento de chaves é uma parte importante do processo de criptografia. Algoritmos simétricos exigem a criação de uma chave e um vetor de inicialização (IV). A chave deve ser mantida em segredo de qualquer pessoa que não deve descriptografar os dados. O IV não precisa ser secreta, mas deve ser alterado para cada sessão. Algoritmos assimétricos exigem a criação de uma chave pública e uma chave privada. A chave pública pode ser publicada para qualquer pessoa, enquanto a chave privada deve conhecida somente pela parte que descriptografa os dados criptografados com a chave pública. Esta seção descreve como gerar e gerenciar chaves simétricas e assimétricas algoritmos.  

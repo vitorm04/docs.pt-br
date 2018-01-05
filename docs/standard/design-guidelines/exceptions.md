@@ -18,19 +18,22 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 30ee456632070f778d51d7fb40475a795a0f620b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 471746242e7abe491148201103741fd00f4338cb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="design-guidelines-for-exceptions"></a>Diretrizes de design para exceções
 Manipulação de exceção tem muitas vantagens em relação a relatórios de erros com base em valor de retorno. Design de boa estrutura ajuda o desenvolvedor do aplicativo perceber os benefícios de exceções. Esta seção aborda os benefícios de exceções e apresenta diretrizes para usá-las com eficiência.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Lançando exceções](../../../docs/standard/design-guidelines/exception-throwing.md)  
+ [Gerando exceções](../../../docs/standard/design-guidelines/exception-throwing.md)  
  [Usando tipos de exceção padrão](../../../docs/standard/design-guidelines/using-standard-exception-types.md)  
- [Desempenho e exceções](../../../docs/standard/design-guidelines/exceptions-and-performance.md)  
+ [Exceções e desempenho](../../../docs/standard/design-guidelines/exceptions-and-performance.md)  
  *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
  *Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  

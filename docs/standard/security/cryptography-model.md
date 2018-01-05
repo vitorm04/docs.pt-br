@@ -16,11 +16,14 @@ caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9fb0a726a4bef5b6efa67d5f63c1899468f7e8ad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 842ebbe9104463a3c75f01f41a4fe5953b95303d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-framework-cryptography-model"></a>Modelo de Criptografia do .NET Framework
 O .NET Framework fornece implementações de muitos algoritmos de criptografia padrão. Esses algoritmos são fáceis de usar e têm as propriedades possíveis padrão mais seguras. Além disso, o modelo de criptografia do .NET Framework de herança do objeto, o design do fluxo e a configuração é extremamente extensível.  

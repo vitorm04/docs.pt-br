@@ -13,11 +13,14 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 75915c92390be1698f5a972901c1defc8003e096
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 462812070446e9013c2cf2c4d3e2f15831e84e70
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="serialization-how-to-topics"></a>Tópicos com instruções de serialização
 A lista a seguir inclui links para os tópicos Como fazer encontrados na documentação conceitual para serialização.  

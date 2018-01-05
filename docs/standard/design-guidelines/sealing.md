@@ -18,11 +18,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8caa253a3f17c58f542317de579c4f7832c4efac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 39bb29d36b6d81464b1213ebc0bf7aee6ceb5713
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="sealing"></a>Lacrar
 Um dos recursos orientados a objeto estruturas é que os desenvolvedores podem estender e personalizá-los de maneiras inesperadas pelos designers do framework. Este é o poder e o risco de design extensível. Quando você cria a estrutura, ele é, portanto, muito importante projetar cuidadosamente para extensibilidade quando for necessário e para limitar a extensibilidade quando é perigoso.  
@@ -57,5 +60,5 @@ Um dos recursos orientados a objeto estruturas é que os desenvolvedores podem e
   
 ## <a name="see-also"></a>Consulte também  
  [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)  
- [Criação de extensibilidade](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
- [Classes não lacradas](../../../docs/standard/design-guidelines/unsealed-classes.md)
+ [Designer voltado para extensibilidade](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+ [Classes não seladas](../../../docs/standard/design-guidelines/unsealed-classes.md)

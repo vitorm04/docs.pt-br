@@ -14,11 +14,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: df0d1c5f8bff9d4cb546378f281a44c696246553
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3f0a38c69dc286587e702b80ef4093bb98d78b5a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="usage-guidelines"></a>Diretrizes de uso
 Esta seção contém diretrizes para usar tipos comuns nas APIs publicamente acessível. Ele lida com o uso direto de tipos de estrutura (por exemplo, atributos de serialização) internas e operadores comuns de sobrecarga.  
@@ -33,7 +36,7 @@ Esta seção contém diretrizes para usar tipos comuns nas APIs publicamente ace
  [Atributos](../../../docs/standard/design-guidelines/attributes.md)  
  [Coleções](/cpp/mfc/collections)  
  [Serialização](../../../docs/standard/design-guidelines/serialization.md)  
- [Uso de System. XML](../../../docs/standard/design-guidelines/system-xml-usage.md)  
+ [Uso de System.XML](../../../docs/standard/design-guidelines/system-xml-usage.md)  
  [Operadores de igualdade](../../../docs/standard/design-guidelines/equality-operators.md)  
  *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   

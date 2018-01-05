@@ -17,11 +17,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8c4f4179087679ff891c705cf16693fc69c808d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 38f0f6ac030af08039438b7e766c3f0f5bed7534
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="key-frame-animations-overview"></a>Visão geral das animações de quadro-chave
 Este tópico apresenta as animações de quadro-chave. As animações de quadro-chave permitem realizar animações usando mais de dois valores de destino e controlam o método de interpolação de uma animação.  

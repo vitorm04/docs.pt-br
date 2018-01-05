@@ -22,11 +22,14 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ce3c5ce3d79a36320eee6b7312518d2559509127
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 02c8b4b9f46f051e42fb2ae85a39b6ff48ad2f1a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="principal-and-identity-objects"></a>Objetos Principal e Identity
 Código gerenciado pode descobrir a identidade ou a função de uma entidade de segurança por meio de um <xref:System.Security.Principal.IPrincipal> objeto, que contém uma referência a um <xref:System.Security.Principal.IIdentity> objeto. Pode ser útil comparar objetos de identidade e uma entidade para conceitos familiares, como contas de usuário e grupo. Na maioria dos ambientes de rede, contas de usuário representam pessoas ou programas, enquanto as contas de grupo representam certas categorias de usuários e os direitos que eles possuem. Da mesma forma, os objetos de identidade do .NET Framework representam usuários, enquanto funções representam as associações e contextos de segurança. No .NET Framework, o objeto principal encapsula um objeto de identidade e uma função. Aplicativos do .NET framework concedem direitos para a entidade de segurança com base em sua identidade ou, mais comumente, sua associação de função.  

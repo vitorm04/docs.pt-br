@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31bd56323e90368f850ae54854e6f50b63d5f7fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a3dee3d94063a94869869a9d94ab3cc2bc0a26fb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tooltip-overview"></a>Visão geral de ToolTip
 Uma dica de ferramenta é uma pequena janela pop-up que aparece quando um usuário pausa o ponteiro do mouse sobre um elemento, tal como em um <xref:System.Windows.Controls.Button>. Este tópico apresenta a dica de ferramenta e discute como criar e personalizar o conteúdo da dica de ferramenta.  
@@ -90,4 +91,4 @@ Uma dica de ferramenta é uma pequena janela pop-up que aparece quando um usuár
  <xref:System.Windows.Controls.ToolTip>  
  <xref:System.Windows.Controls.ToolTipEventArgs>  
  <xref:System.Windows.Controls.ToolTipEventHandler>  
- [Tópicos explicativos](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
+ [Tópicos de instruções](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)

@@ -19,11 +19,14 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e1bddb7bb3559e6f39b7884b92f64bee8fbb3510
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b36f230c9a5f8653f3e252d26fe6464bb9cac4bb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="capitalization-conventions"></a>Convenções de maiusculas e minúsculas
 As diretrizes neste capítulo dispor de um método simples para o uso de caso que, quando aplicadas de forma consistente, criar identificadores de tipos, membros e parâmetros de fácil leitura.  
@@ -63,7 +66,7 @@ As diretrizes neste capítulo dispor de um método simples para o uso de caso qu
 |Interface|Pascal|`public interface IEnumerable { ... }`|  
 |Método|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
 |Propriedade|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
-|Evento|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
+|evento|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
 |Campo|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
 |Valor de enumeração|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
 |Parâmetro|Ter|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  

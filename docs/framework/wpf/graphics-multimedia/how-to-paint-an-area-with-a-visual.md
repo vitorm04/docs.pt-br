@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4cd1bafb528613f15ec5eb597179bc0dd05ace0f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 183117472cc74c958bdd7f807236eded97610b1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-paint-an-area-with-a-visual"></a>Como pintar uma área com um visual
 Este exemplo mostra como usar o <xref:System.Windows.Media.VisualBrush> classe para pintar uma área com um <xref:System.Windows.Media.Visual>.  

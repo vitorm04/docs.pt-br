@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f97445be151afdf460da6610462930c564e42ccc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8f66f737b0668028fa45434fed4e6d6180ee69f8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-control-serialization-of-derived-classes"></a>Como controlar a serialização de classes derivadas
 O uso do atributo **XmlElementAttribute** para alterar o nome de um elemento XML não é a única maneira de personalizar a serialização de objetos. Você também pode personalizar o fluxo XML derivando de uma classe existente e instruindo a instância de <xref:System.Xml.Serialization.XmlSerializer> sobre como serializar a nova classe.  

@@ -34,11 +34,14 @@ caps.latest.revision: "34"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cbea6ab0fcf72937bc936510a89593861115f287
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1fd0df0e12149371b3403782056982784c0ca3cd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="cryptographic-services"></a>Serviços criptográficos
 <a name="top"></a>Redes públicas, como a Internet não fornecem um meio de comunicação segura entre entidades. Comunicação por essas redes é suscetível a sendo lidas ou modificadas até mesmo por terceiros não autorizados. A criptografia ajuda a proteger os dados sejam exibidos, fornece maneiras para detectar se os dados foram modificados e ajuda a fornecer uma maneira segura de comunicação nos canais de outra forma não seguras. Por exemplo, os dados podem ser criptografados usando um algoritmo de criptografia, transmitidos em um estado criptografado e mais tarde descriptografados pelo parceiro pretendido. Se outra pessoa interceptar os dados criptografados, será difícil decifrar.  

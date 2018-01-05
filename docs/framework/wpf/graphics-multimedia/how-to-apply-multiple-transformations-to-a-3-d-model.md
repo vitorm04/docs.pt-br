@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 77e9f664ababa32cf0629f513f81b1e24030eac1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 26832827b0e92813802073adcb4c2db99dff0807
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-apply-multiple-transformations-to-a-3-d-model"></a>Como aplicar várias transformações a um modelo 3D
 Este exemplo mostra como usar um <xref:System.Windows.Media.Media3D.RotateTransform3D> e um <xref:System.Windows.Media.Media3D.ScaleTransform3D> para girar e alterar a escala de um modelo 3D. O código a seguir mostra como aplicar essas transformações para o <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> propriedade de um <xref:System.Windows.Media.Media3D.GeometryModel3D> em XAML.  

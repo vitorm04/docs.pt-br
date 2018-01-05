@@ -26,11 +26,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f17ec5f48115f3e85852f33ea926657df172a2da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 745a5b87119bbce3211332eee9f23d80c15c9c28
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-partial-trust-security"></a>Segurança parcialmente confiável do WPF
 <a name="introduction"></a> Em geral, os aplicativos da Internet devem ter acesso restrito aos recursos críticos do sistema, para evitar danos mal-intencionados. Por padrão, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] e linguagens de script do lado do cliente não são capazes de acessar recursos críticos do sistema. Porque [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] aplicativos hospedados em navegador podem ser iniciados a partir do navegador, eles devem estar de acordo com um conjunto similar de restrições. Para impor essas restrições, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] depende de ambos [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] e [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (consulte [estratégia de segurança do WPF - segurança da plataforma](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Por padrão, os aplicativos hospedados em navegador solicitarem a zona da Internet [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] conjunto de permissões, independentemente de se eles são iniciados a partir da Internet, intranet local ou no computador local. Aplicativos que são executados com nada menos do que o conjunto completo de permissões devem ser executados com confiança parcial.  

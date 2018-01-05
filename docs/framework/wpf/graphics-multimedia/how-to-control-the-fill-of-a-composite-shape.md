@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5730b930a4f863ad01fcb6153d9bfd8f700fdb92
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bb7956ab70dc30c7d090b9616cc603df2dc0b4e1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-control-the-fill-of-a-composite-shape"></a>Como controlar o preenchimento de uma forma composta
 O <xref:System.Windows.Media.GeometryGroup.FillRule%2A> propriedade de um <xref:System.Windows.Media.GeometryGroup> ou <xref:System.Windows.Media.PathGeometry>, especifica uma "regra" que a forma de composição usa para determinar se um determinado ponto é parte da geometria. Há dois valores possíveis para <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule.EvenOdd> e <xref:System.Windows.Media.FillRule.Nonzero>. As seções a seguir descreverão como usar essas duas regras.  
@@ -41,7 +42,7 @@ O <xref:System.Windows.Media.GeometryGroup.FillRule%2A> propriedade de um <xref:
   
  ![Diagrama: valor da propriedade FillRule de EvenOdd](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleevenodd2.png "FillRuleEvenOdd2")  
   
- **NonZero:** essa regra determina se um ponto está na região de preenchimento do caminho desenhando um raio desse ponto até o infinito em qualquer direção e então examinando os locais em que um segmento da forma cruza o raio. Começando com uma contagem de zero, adicione um sempre que um segmento cruzar o raio da esquerda para a direita e subtraia um sempre que um segmento de caminho cruzar o raio da direita para a esquerda. Após a contagem de cruzamentos, se o resultado for zero, em seguida, o ponto está fora do caminho. Caso contrário, ele estará dentro.  
+ **NonZero:** essa regra determina se um ponto está na região de preenchimento do caminho desenhando um raio desse ponto até o infinito em qualquer direção e então examinando os locais em que um segmento da forma cruza o raio. Começando com uma contagem de zero, adicione um sempre que um segmento cruzar o raio da esquerda para a direita e subtraia um sempre que um segmento de caminho cruzar o raio da direita para a esquerda. Após a contagem de cruzamentos, se o resultado for zero, o ponto estará fora do caminho. Caso contrário, ele estará dentro.  
   
  [!code-xaml[GeometriesMiscSnippets_snip#FillRuleNonZeroValueEllipseGeometry](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovalueellipsegeometry)]  
   
