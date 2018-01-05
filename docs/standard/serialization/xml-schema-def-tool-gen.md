@@ -17,55 +17,58 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3c1f0dd08e820e5433f05c8bc90d85c84eb05972
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0e390b808f9eaa5d6b305284e1abe28f45f4d104
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a><span data-ttu-id="7dfbe-102">Como usar a ferramenta de definição de esquema XML para gerar classes e documentos de esquema XML</span><span class="sxs-lookup"><span data-stu-id="7dfbe-102">How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents</span></span>
-<span data-ttu-id="7dfbe-103">A ferramenta de Definição de Esquema XML (Xsd.exe) permite gerar um esquema XML que descreve uma classe ou gerar a classe definida por um esquema XML.</span><span class="sxs-lookup"><span data-stu-id="7dfbe-103">The XML Schema Definition tool (Xsd.exe) allows you to generate an XML schema that describes a class or to generate the class defined by an XML schema.</span></span> <span data-ttu-id="7dfbe-104">Os seguintes procedimentos mostram como executar essas operações.</span><span class="sxs-lookup"><span data-stu-id="7dfbe-104">The following procedures show how to perform these operations.</span></span>  
+# <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a><span data-ttu-id="2a34b-102">Como usar a ferramenta de definição de esquema XML para gerar classes e documentos de esquema XML</span><span class="sxs-lookup"><span data-stu-id="2a34b-102">How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents</span></span>
+<span data-ttu-id="2a34b-103">A ferramenta de Definição de Esquema XML (Xsd.exe) permite gerar um esquema XML que descreve uma classe ou gerar a classe definida por um esquema XML.</span><span class="sxs-lookup"><span data-stu-id="2a34b-103">The XML Schema Definition tool (Xsd.exe) allows you to generate an XML schema that describes a class or to generate the class defined by an XML schema.</span></span> <span data-ttu-id="2a34b-104">Os seguintes procedimentos mostram como executar essas operações.</span><span class="sxs-lookup"><span data-stu-id="2a34b-104">The following procedures show how to perform these operations.</span></span>  
   
-### <a name="to-generate-classes-that-conform-to-a-specific-schema"></a><span data-ttu-id="7dfbe-105">Para gerar classes que estão em conformidade com um esquema específico</span><span class="sxs-lookup"><span data-stu-id="7dfbe-105">To generate classes that conform to a specific schema</span></span>  
+### <a name="to-generate-classes-that-conform-to-a-specific-schema"></a><span data-ttu-id="2a34b-105">Para gerar classes que estão em conformidade com um esquema específico</span><span class="sxs-lookup"><span data-stu-id="2a34b-105">To generate classes that conform to a specific schema</span></span>  
   
-1.  <span data-ttu-id="7dfbe-106">Abra um prompt de comando.</span><span class="sxs-lookup"><span data-stu-id="7dfbe-106">Open a command prompt.</span></span>  
+1.  <span data-ttu-id="2a34b-106">Abra um prompt de comando.</span><span class="sxs-lookup"><span data-stu-id="2a34b-106">Open a command prompt.</span></span>  
   
-2.  <span data-ttu-id="7dfbe-107">Passe o esquema XML como um argumento para a ferramenta de definição de esquema XML, que cria um conjunto de classes que correspondem precisamente ao Esquema XML, por exemplo:</span><span class="sxs-lookup"><span data-stu-id="7dfbe-107">Pass the XML Schema as an argument to the XML Schema Definition tool, which creates a set of classes that are precisely matched to the XML Schema, for example:</span></span>  
+2.  <span data-ttu-id="2a34b-107">Passe o esquema XML como um argumento para a ferramenta de definição de esquema XML, que cria um conjunto de classes que correspondem precisamente ao Esquema XML, por exemplo:</span><span class="sxs-lookup"><span data-stu-id="2a34b-107">Pass the XML Schema as an argument to the XML Schema Definition tool, which creates a set of classes that are precisely matched to the XML Schema, for example:</span></span>  
   
     ```  
     xsd mySchema.xsd  
     ```  
   
-     <span data-ttu-id="7dfbe-108">A ferramenta somente pode processar esquemas que fazem referência à especificação de XML World Wide Web Consortium de 16 de março de 2001.</span><span class="sxs-lookup"><span data-stu-id="7dfbe-108">The tool can only process schemas that reference the World Wide Web Consortium XML specification of March 16, 2001.</span></span> <span data-ttu-id="7dfbe-109">Em outras palavras, o namespace do Esquema XML deve ser "http://www.w3.org/2001/XMLSchema", conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="7dfbe-109">In other words, the XML Schema namespace must be "http://www.w3.org/2001/XMLSchema" as shown in the following example.</span></span>  
+     <span data-ttu-id="2a34b-108">A ferramenta somente pode processar esquemas que fazem referência à especificação de XML World Wide Web Consortium de 16 de março de 2001.</span><span class="sxs-lookup"><span data-stu-id="2a34b-108">The tool can only process schemas that reference the World Wide Web Consortium XML specification of March 16, 2001.</span></span> <span data-ttu-id="2a34b-109">Em outras palavras, o namespace do Esquema XML deve ser "http://www.w3.org/2001/XMLSchema", conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="2a34b-109">In other words, the XML Schema namespace must be "http://www.w3.org/2001/XMLSchema" as shown in the following example.</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
     <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
     ```  
   
-3.  <span data-ttu-id="7dfbe-110">Modifique as classes com métodos, propriedades ou campos, conforme o necessário.</span><span class="sxs-lookup"><span data-stu-id="7dfbe-110">Modify the classes with methods, properties, or fields, as necessary.</span></span> <span data-ttu-id="7dfbe-111">Para obter mais informações sobre como modificar uma classe com atributos, consulte [Controlando a serialização XML usando atributos](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md) e [Atributos que controlam a serialização SOAP codificada](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).</span><span class="sxs-lookup"><span data-stu-id="7dfbe-111">For more information about modifying a class with attributes, see [Controlling XML Serialization Using Attributes](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md) and [Attributes That Control Encoded SOAP Serialization](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).</span></span>  
+3.  <span data-ttu-id="2a34b-110">Modifique as classes com métodos, propriedades ou campos, conforme o necessário.</span><span class="sxs-lookup"><span data-stu-id="2a34b-110">Modify the classes with methods, properties, or fields, as necessary.</span></span> <span data-ttu-id="2a34b-111">Para obter mais informações sobre como modificar uma classe com atributos, consulte [Controlando a serialização XML usando atributos](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md) e [Atributos que controlam a serialização SOAP codificada](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).</span><span class="sxs-lookup"><span data-stu-id="2a34b-111">For more information about modifying a class with attributes, see [Controlling XML Serialization Using Attributes](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md) and [Attributes That Control Encoded SOAP Serialization](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).</span></span>  
   
- <span data-ttu-id="7dfbe-112">É geralmente útil examinar o esquema do fluxo de XML que é gerado quando instâncias de uma classe (ou classes) são serializadas.</span><span class="sxs-lookup"><span data-stu-id="7dfbe-112">It is often useful to examine the schema of the XML stream that is generated when instances of a class (or classes) are serialized.</span></span> <span data-ttu-id="7dfbe-113">Por exemplo, você pode publicar seu esquema para outros usarem ou pode compará-lo com um esquema com o qual está tentando obter conformidade.</span><span class="sxs-lookup"><span data-stu-id="7dfbe-113">For example, you might publish your schema for others to use, or you might compare it to a schema with which you are trying to achieve conformity.</span></span>  
+ <span data-ttu-id="2a34b-112">É geralmente útil examinar o esquema do fluxo de XML que é gerado quando instâncias de uma classe (ou classes) são serializadas.</span><span class="sxs-lookup"><span data-stu-id="2a34b-112">It is often useful to examine the schema of the XML stream that is generated when instances of a class (or classes) are serialized.</span></span> <span data-ttu-id="2a34b-113">Por exemplo, você pode publicar seu esquema para outros usarem ou pode compará-lo com um esquema com o qual está tentando obter conformidade.</span><span class="sxs-lookup"><span data-stu-id="2a34b-113">For example, you might publish your schema for others to use, or you might compare it to a schema with which you are trying to achieve conformity.</span></span>  
   
-#### <a name="to-generate-an-xml-schema-document-from-a-set-of-classes"></a><span data-ttu-id="7dfbe-114">Para gerar um documento de esquema XML de um conjunto de classes</span><span class="sxs-lookup"><span data-stu-id="7dfbe-114">To generate an XML Schema document from a set of classes</span></span>  
+#### <a name="to-generate-an-xml-schema-document-from-a-set-of-classes"></a><span data-ttu-id="2a34b-114">Para gerar um documento de esquema XML de um conjunto de classes</span><span class="sxs-lookup"><span data-stu-id="2a34b-114">To generate an XML Schema document from a set of classes</span></span>  
   
-1.  <span data-ttu-id="7dfbe-115">Compile uma classe ou classes em uma DLL.</span><span class="sxs-lookup"><span data-stu-id="7dfbe-115">Compile the class or classes into a DLL.</span></span>  
+1.  <span data-ttu-id="2a34b-115">Compile uma classe ou classes em uma DLL.</span><span class="sxs-lookup"><span data-stu-id="2a34b-115">Compile the class or classes into a DLL.</span></span>  
   
-2.  <span data-ttu-id="7dfbe-116">Abra um prompt de comando.</span><span class="sxs-lookup"><span data-stu-id="7dfbe-116">Open a command prompt.</span></span>  
+2.  <span data-ttu-id="2a34b-116">Abra um prompt de comando.</span><span class="sxs-lookup"><span data-stu-id="2a34b-116">Open a command prompt.</span></span>  
   
-3.  <span data-ttu-id="7dfbe-117">Passe a DLL como argumento para Xsd.exe, por exemplo:</span><span class="sxs-lookup"><span data-stu-id="7dfbe-117">Pass the DLL as an argument to Xsd.exe, for example:</span></span>  
+3.  <span data-ttu-id="2a34b-117">Passe a DLL como argumento para Xsd.exe, por exemplo:</span><span class="sxs-lookup"><span data-stu-id="2a34b-117">Pass the DLL as an argument to Xsd.exe, for example:</span></span>  
   
     ```  
     xsd MyFile.dll  
     ```  
   
-     <span data-ttu-id="7dfbe-118">O esquema (ou esquemas) serão escritos, começando com o nome "schema0.xsd".</span><span class="sxs-lookup"><span data-stu-id="7dfbe-118">The schema (or schemas) will be written, beginning with the name "schema0.xsd".</span></span>  
+     <span data-ttu-id="2a34b-118">O esquema (ou esquemas) serão escritos, começando com o nome "schema0.xsd".</span><span class="sxs-lookup"><span data-stu-id="2a34b-118">The schema (or schemas) will be written, beginning with the name "schema0.xsd".</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7dfbe-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7dfbe-119">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="2a34b-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2a34b-119">See Also</span></span>  
  <xref:System.Data.DataSet>  
- [<span data-ttu-id="7dfbe-120">A ferramenta de definição de esquema XML e a serialização XML</span><span class="sxs-lookup"><span data-stu-id="7dfbe-120">The XML Schema Definition Tool and XML Serialization</span></span>](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)  
- [<span data-ttu-id="7dfbe-121">Apresentando a serialização XML</span><span class="sxs-lookup"><span data-stu-id="7dfbe-121">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)  
- [<span data-ttu-id="7dfbe-122">Ferramenta de Definição de Esquema XML (Xsd.exe)</span><span class="sxs-lookup"><span data-stu-id="7dfbe-122">XML Schema Definition Tool (Xsd.exe)</span></span>](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)  
+ [<span data-ttu-id="2a34b-120">A ferramenta de definição de esquema XML e a serialização XML</span><span class="sxs-lookup"><span data-stu-id="2a34b-120">The XML Schema Definition Tool and XML Serialization</span></span>](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)  
+ [<span data-ttu-id="2a34b-121">Apresentando a serialização XML</span><span class="sxs-lookup"><span data-stu-id="2a34b-121">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+ [<span data-ttu-id="2a34b-122">Ferramenta de Definição de Esquema XML (Xsd.exe)</span><span class="sxs-lookup"><span data-stu-id="2a34b-122">XML Schema Definition Tool (Xsd.exe)</span></span>](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)  
  <xref:System.Xml.Serialization.XmlSerializer>  
- [<span data-ttu-id="7dfbe-123">Como serializar um objeto</span><span class="sxs-lookup"><span data-stu-id="7dfbe-123">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [<span data-ttu-id="7dfbe-124">Como desserializar um objeto</span><span class="sxs-lookup"><span data-stu-id="7dfbe-124">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+ [<span data-ttu-id="2a34b-123">Como serializar um objeto</span><span class="sxs-lookup"><span data-stu-id="2a34b-123">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [<span data-ttu-id="2a34b-124">Como desserializar um objeto</span><span class="sxs-lookup"><span data-stu-id="2a34b-124">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
