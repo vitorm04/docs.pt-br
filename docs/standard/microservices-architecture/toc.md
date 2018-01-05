@@ -41,6 +41,7 @@
 ### [Implementando um barramento de eventos com o RabbitMQ para o ambiente de desenvolvimento ou de teste](multi-container-microservice-net-applications/rabbitmq-event-bus-development-test-environment.md)
 ### [Assinando eventos](multi-container-microservice-net-applications/subscribe-events.md)
 ### [Testando os aplicativos Web e os serviços do ASP.NET Core](multi-container-microservice-net-applications/test-aspnet-core-services-web-apps.md)
+### [Implementar tarefas em segundo plano em microsserviços com IHostedService](multi-container-microservice-net-applications/background-tasks-with-ihostedservice.md)
 ## [Lidando com a complexidade dos negócios em um microsserviço com padrões DDD e CQRS](microservice-ddd-cqrs-patterns/index.md)
 ### [Aplicando padrões CQRS e DDD simplificados em um microsserviço](microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns.md)
 ### [Aplicando abordagens CQRS e CQS em um microsserviço DDD em eShopOnContainers](microservice-ddd-cqrs-patterns/eshoponcontainers-cqrs-ddd-microservice.md)
