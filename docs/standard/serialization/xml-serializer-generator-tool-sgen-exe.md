@@ -15,11 +15,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 005e78c32d49c8c1b204a3ac9376d943311868fd
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0e2f268dc2ab1e2aebe2f51d733a59bd093329d5
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Ferramenta geradora de serializador de XML (Sgen.exe)
 O Gerador de Serializador de XML cria um assembly de serialização de XML para tipos em um assembly especificado para aprimorar o desempenho de inicialização de um <xref:System.Xml.Serialization.XmlSerializer> quando ele serializa ou desserializa objetos dos tipos especificados.  
@@ -50,7 +50,7 @@ sgen [options]
 |**/?**|Exibe sintaxe de comando e opções para a ferramenta.|  
   
 ## <a name="remarks"></a>Comentários  
- Quando o Gerador do Serializador do XML não é usado, um <xref:System.Xml.Serialization.XmlSerializer> gera o código de serialização e um assembly de serialização para cada tipo toda vez que um aplicativo é executado. Para aprimorar o desempenho da inicialização da serialização de XML, use a ferramenta Sgen.exe para gerar esses assemblies com antecedência. Esses assemblies podem então ser implantados com o aplicativo.  
+ Quando o Gerador do Serializador do XML não é usado, um <xref:System.Xml.Serialization.XmlSerializer> gera o código de serialização e um assembly de serialização para cada tipo toda vez que um aplicativo é executado. Para melhorar o desempenho de inicialização de serialização de XML, use a ferramenta de Sgen.exe para gerar os assemblies com antecedência. Esses assemblies podem então ser implantados com o aplicativo.  
   
  O Gerador do Serializador do XML também pode aprimorar o desempenho de clientes que usam proxies de serviço Web XML para se comunicarem com servidores porque o processo de serialização não incorrerá em um acerto de desempenho quando o tipo for carregado pela primeira vez.  
   
