@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 95266f9f28d5054db3ea8552ebb45e5a83aba060
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4ba3d248dbdd81cf2e2e4445d1e1eb160605542c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-45"></a>Como configurar um aplicativo para oferecer suporte ao .NET Framework 4 ou 4.5
 Todos os aplicativos que hospedam o CLR (Common Language Runtime) precisam iniciar ou *ativar* o CLR para executar o código gerenciado. Normalmente, um aplicativo .NET Framework é executado na versão do CLR em que foi criado, mas você pode alterar esse comportamento para aplicativos de área de trabalho usando um arquivo de configuração do aplicativo (às vezes chamado arquivo app.config). No entanto, você não pode alterar o comportamento padrão de ativação para aplicativos da Windows Store ou Windows Phone usando um arquivo de configuração de aplicativo. Este artigo explica como ativar seu aplicativo de área de trabalho para executar em outra versão do .NET Framework e fornece um exemplo de como utilizar a versão 4 ou 4.5.  

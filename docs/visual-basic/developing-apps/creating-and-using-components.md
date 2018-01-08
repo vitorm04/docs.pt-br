@@ -9,11 +9,11 @@ ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 453d341961207dd851136aa47a52759b0841424d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 17c9b7440d60c38ba30d230f8412c3ca1a21830a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Criando e usando componentes no Visual Basic
 Um *componente* é uma classe que implementa a interface <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> ou que deriva direta ou indiretamente de uma classe que implementa <xref:System.ComponentModel.IComponent>. Um componente [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] é um objeto que é reutilizável, pode interagir com outros objetos e fornece controle sobre recursos externos e suporte ao tempo de design.  
@@ -32,8 +32,6 @@ Um *componente* é uma classe que implementa a interface <xref:System.ComponentM
 -   Se o seu componente precisar ter o marshaling realizado por valor, derive de <xref:System.ComponentModel.MarshalByValueComponent>.  
   
 -   Se o seu componente não puder derivar de uma das implementações de base devido a herança única, implemente <xref:System.ComponentModel.IComponent>.  
-  
- Para obter mais informações sobre o suporte ao tempo de design, consulte [Atributos de tempo de design para componentes](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3) e [Estendendo o suporte ao tempo de design](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).  
   
 ## <a name="component-classes"></a>Classes de componentes  
  O namespace <xref:System.ComponentModel> fornece classes que são usadas para implementar o comportamento de tempo de design e tempo de execução de componentes e controles. Este namespace inclui as classes e interfaces base para implementar atributos e conversores de tipo, associar a fontes de dados e licenciar componentes.  
@@ -65,22 +63,9 @@ Um *componente* é uma classe que implementa a interface <xref:System.ComponentM
 -   <xref:System.ComponentModel.PropertyDescriptor>. Fornece informações sobre uma propriedade.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Classe versus componente versus controle](http://msdn.microsoft.com/library/db8b842e-44d9-40cc-a0f8-70fd189632c3)  
- Define *componente* e *controle* e discute as diferenças entre eles e as classes.  
-  
- [Criação de componentes](http://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)  
- Roteiro para uma introdução aos componentes.  
-  
- [Instruções passo a passo para criação de componentes](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
- Links para tópicos que fornecem instruções passo a passo para programação de componentes.  
-  
- [Classes de componentes](http://msdn.microsoft.com/library/ce2e5647-e673-4c2b-8125-ffebbd9d71bc)  
- Descreve o que torna uma classe um componente, as maneiras de expor a funcionalidade do componente, como controlar o acesso a componentes e controlar como instâncias de componentes são criadas.  
-  
  [Solução de problemas de criação de controle e de componente](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  Explica como corrigir problemas comuns.  
   
 ## <a name="see-also"></a>Consulte também  
- [Como acessar o suporte em tempo de design nos Windows Forms](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)  
- [Como: estender a aparência e comportamento de controles no modo de Design](http://msdn.microsoft.com/library/68f85054-2253-47f5-a4f2-3f1ac8c9f27b)  
- [Como realizar uma inicialização personalizada para controles no modo de design](http://msdn.microsoft.com/library/914eaa03-092f-4556-9160-b8a2a40641d9)
+ [Como acessar o suporte em tempo de design nos Windows Forms](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ 

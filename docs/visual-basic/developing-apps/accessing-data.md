@@ -11,11 +11,11 @@ ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fd4dbc66f37325afa64b7bf9720cad23e08c6bfb
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: ae0611fdadabd6ab684f3f97995f3be3e348e648
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Acessando dados em aplicativos do Visual Basic
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] inclui vários novos recursos para ajudar no desenvolvimento de aplicativos que acessam dados. Formulários de associação de dados para aplicativos do Windows são criados arrastando itens da janela [Fontes de Dados](/visualstudio/data-tools/add-new-data-sources) para um formulário. Associe controles a dados arrastando itens da janela **Fontes de Dados** para os controles existentes.  
@@ -30,11 +30,11 @@ ms.lasthandoff: 12/09/2017
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  Fornece links para tópicos que descrevem como usar LINQ com Visual Basic.  
   
- [LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md)  
  Fornece informações sobre [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]. Inclui exemplos de programação.  
   
  [Ferramentas LINQ to SQL no Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
- Fornece links para tópicos sobre como criar um modelo de objeto [LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/index.md) em aplicativos.  
+ Fornece links para tópicos sobre como criar um modelo de objeto [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md) em aplicativos.  
   
  [Trabalhando com conjuntos de dados em aplicativos de N camadas](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
  Fornece links para tópicos sobre como criar aplicativos de dados multicamadas.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/09/2017
  [Salvar dados de volta no banco de dados](/visualstudio/data-tools/save-data-back-to-the-database)  
  Fornece links para páginas que explicam como enviar dados atualizados de um aplicativo para o banco de dados.  
   
- [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)  
+ [ADO.NET](../../framework/data/adonet/index.md)  
  Descreve as classes ADO.NET, que expõem serviços de acesso a dados ao programador do .NET Framework.
 
  [Dados em soluções do Office](https://msdn.microsoft.com/library/xx069ybh)  

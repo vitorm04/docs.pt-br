@@ -23,11 +23,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7dfa8bab1d142462d49524495e3e5dc0b4960a4d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a4123ea28b317d432f9a36ea0c084d7fdacc7ffe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>Assemblies no Common Language Runtime
 Assemblies são os blocos de construção de aplicativos .NET Framework; eles formam a unidade fundamental de implantação, controle de versão, reutilização, ativação de escopo e permissões de segurança. Um assembly é uma coleção de tipos e recursos compilados para funcionar juntos e formar uma unidade lógica de funcionalidade. Um assembly oferece ao Common Language Runtime as informações de que ele precisa para estar ciente das implementações de tipo. Para o tempo de execução, um tipo não existe fora do contexto de um assembly.  

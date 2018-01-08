@@ -21,11 +21,12 @@ caps.latest.revision: "45"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e93a1d116ac0480c80e259ddbadbc65fd9539389
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d8bd7baec77e6e776f93a2a13156d66c1199f918
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Prompt de Comando do Desenvolvedor para o Visual Studio
 O Prompt de Comando do Desenvolvedor do Visual Studio define automaticamente as variáveis de ambiente que permitem usar as ferramentas do .NET Framework com facilidade. O Prompt de Comando do Desenvolvedor é instalado com as edições completa ou Community do Visual Studio. Ele não é instalado com as versões Express do Visual Studio.  
@@ -90,7 +91,7 @@ O Prompt de Comando do Desenvolvedor do Visual Studio define automaticamente as 
   
 7.  Escolha um valor para o campo **Diretório inicial**, como **Diretório do Projeto**.  
   
-8.  Selecione o botão **OK**.  
+8.  Escolha o botão **OK**.  
   
  Depois disso, o novo item de menu será adicionado e você poderá acessar o prompt de comando no menu **Ferramentas**.  
   

@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b3a33b57ee7cf38e06195244023e8bb918dea02b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1320c0364b1fdc3a67d2ac99d0591f37044c36a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-the-net-framework"></a>Implantando o .NET Framework
 Esta seção da documentação do .NET Framework fornece informações para desenvolvedores que desejam instalar o .NET Framework com seus aplicativos e administradores que desejam implantar o .NET Framework em uma rede. Ele também aborda os problemas de ativação e reinicialização associados à implantação e como monitorar o andamento da instalação do .NET Framework.  

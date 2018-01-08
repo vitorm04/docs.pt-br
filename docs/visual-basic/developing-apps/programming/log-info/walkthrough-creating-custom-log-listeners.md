@@ -14,11 +14,11 @@ ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b1bda4a3465af4ed95de720117ea2e03f9a86b84
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: f141421350b0ad7b8287e43b676a9439eae1f24c
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Instruções passo a passo: criando ouvintes de log personalizados (Visual Basic)
 Estas instruções passo a passo demonstram como criar um ouvinte de log personalizado e configurá-lo para ouvir a saída do objeto `My.Application.Log`.  
@@ -41,11 +41,11 @@ Estas instruções passo a passo demonstram como criar um ouvinte de log persona
   
  Para garantir que o `My.Application.Log` use o ouvinte de log, você deve nomear fortemente o assembly que contém o ouvinte de log.  
   
- O procedimento seguinte fornece algumas etapas simples para criar um assembly de ouvinte de log de nome forte. Para obter mais informações, consulte [Criando e usando assemblies de nomes fortes](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
+ O procedimento seguinte fornece algumas etapas simples para criar um assembly de ouvinte de log de nome forte. Para obter mais informações, consulte [Criando e usando assemblies de nomes fortes](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md).  
   
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>Para nomear fortemente o assembly de ouvinte de log  
   
-1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, escolha **Propriedades**. Para obter mais informações, consulte [Introdução ao Designer de Projeto](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
+1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, escolha **Propriedades**.   
   
 2.  Clique na guia **Assinatura**.  
   

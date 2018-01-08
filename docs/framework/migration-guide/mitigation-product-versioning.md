@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1b507769ba6868a4cd841ca463900b126cfb5b90
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 15648a3dfc115e55dd78eb1f074b9c4235b89f34
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mitigation-product-versioning"></a>Mitigação: Controle de versão de produto
 Na [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e posterior, o controle de versão de produto foi alterada em relação às versões anteriores do .NET Framework (o .NET Framework 4, 4.5, 4.5.1 e 4.5.2).  

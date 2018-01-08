@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a956e0c4521e4a1079b331868e811e68af2e710d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 327ef282c23fc02791eb7c531fd1ae25c6700fd4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assembly-versioning"></a>Controle de versão de assemblies
 Todo o controle de versão de assemblies que usam o Common Language Runtime é feito no nível do assembly. A versão específica de um assembly e as versões de assemblies dependentes são registradas no manifesto do assembly. A política de versão padrão do tempo de execução diz que aplicativos só são executados com as versões com que foram compilados e testados, a menos que essa política de versão seja substituída pela política de versão explícita em arquivos de configuração (o arquivo de configuração do aplicativo, o arquivo de política do editor e o arquivo de configuração do administrador do computador).  

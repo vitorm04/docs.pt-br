@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 39fbd38549a791a761c633dca90dbdeeeefce10b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f3a087f296a742bc9f0f5672d9bf0cb73c836121
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a>Criando e usando assemblies de nomes fortes
 <a name="top"></a> Um nome forte consiste na identidade do assembly — seu nome de texto simples, número de versão e informações de cultura (se fornecidas) — mais uma chave pública e uma assinatura digital. Ela é gerada de um arquivo do assembly usando a chave privada correspondente. (O arquivo do assembly inclui o manifesto do assembly, que contém os nomes e os hashes de todos os arquivos que compõem o assembly.)  

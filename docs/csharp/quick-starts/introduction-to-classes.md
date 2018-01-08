@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: b7598309f48cbccf2d270be53a4b40dae11e8df8
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: 44ee6a3d2dd800f91b5066ea578f4b37852ff295
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="introduction-to-classes"></a>Introdução às classes
 
@@ -69,7 +69,7 @@ namespace classes
         {
         }
 
-        public void MakeWithdrawal(decimal amount, DateTime date, string payee, string note)
+        public void MakeWithdrawal(decimal amount, DateTime date, string note)
         {
         }
     }
@@ -97,7 +97,7 @@ public BankAccount(string name, decimal initialBalance)
 Construtores são chamados quando você cria um objeto usando [`new`](../language-reference/keywords/new.md). Substitua a linha `Console.WriteLine("Hello World!");` no arquivo ***program.cs*** pela seguinte linha (substitua `<name>` pelo seu nome):
 
 ```csharp
-var account = new BankAccount("<name", 1000);
+var account = new BankAccount("<name>", 1000);
 Console.WriteLine($"Account {account.Number} was created for {account.Owner} with {account.Balance} initial balance.");
 ```
 
@@ -169,9 +169,11 @@ Depois, teste se você recebe condições de erro ao tentar criar uma conta com 
 
 ```csharp
 // Test that the initial balances must be positive:
-try {
+try
+{
     var invalidAccount = new BankAccount("invalid", -55);
-} catch (ArgumentOutOfRangeException e)
+}
+catch (ArgumentOutOfRangeException e)
 {
     Console.WriteLine("Exception caught creating account with negative balance");
     Console.WriteLine(e.ToString());
@@ -182,9 +184,11 @@ Use as [instruções `try` e `catch`](../language-reference/keywords/try-catch.m
 
 ```csharp
 // Test for a negative balance
-try {
+try
+{
     account.MakeWithdrawal(750, DateTime.Now, "Attempt to overdraw");
-} catch (InvalidOperationException e)
+}
+catch (InvalidOperationException e)
 {
     Console.WriteLine("Exception caught trying to overdraw");
     Console.WriteLine(e.ToString());

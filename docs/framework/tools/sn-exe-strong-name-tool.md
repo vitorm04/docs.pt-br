@@ -21,11 +21,12 @@ caps.latest.revision: "44"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e303246737d52f76d893074973804710b2dc9b71
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ff7036bce069aa24742f7ead7bb0735fed0f3678
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Ferramenta de Nome Forte)
 A ferramenta Nome Forte (Sn.exe) ajuda a assinar assemblies com [nomes fortes](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe oferece opções para o gerenciamento de chaves, geração de assinaturas e verificação de assinaturas.  
@@ -69,7 +70,7 @@ sn [-quiet][option [parameter(s)]]
 |**-Rh** *assembly*|Recomputa hashes para todos os arquivos no assembly.|  
 |**-t**[**p**] *infile*|Exibe o token da chave pública armazenada em *infile*. O conteúdo de *infile* deve ser uma chave pública gerada anteriormente com base em um arquivo de par de chaves usando **-p**.  Não use a opção **-t[p]** para extrair o token diretamente de um arquivo de par de chaves.<br /><br /> Sn.exe computa o token usando uma função de hash da chave pública. Para economizar espaço, o Common Language Runtime armazena tokens de chave pública no manifesto como parte de uma referência a outro assembly quando registra uma dependência para um assembly com um nome forte. A opção **-tp** exibe a chave pública além do token. Se o atributo <xref:System.Reflection.AssemblySignatureKeyAttribute> tiver sido aplicado ao assembly, o token será para a chave de identidade, e o nome do algoritmo de hash e a chave de identidade será exibida.<br /><br /> Essa opção não verifica a assinatura do assembly e não deve ser usada para tomar decisões de confiança.  Essa opção exibe apenas os dados brutos do token de chave pública.|  
 |**-T**[**p**] *assembly*|Exibe o token de chave pública do *assembly*. O *assembly* deve ser o nome de um arquivo que contém um manifesto do assembly.<br /><br /> Sn.exe computa o token usando uma função de hash da chave pública. Para economizar espaço, o tempo de execução armazena tokens de chave pública no manifesto como parte de uma referência a outro assembly quando registra uma dependência para um assembly com um nome forte. A opção **-Tp** exibe a chave pública além do token. Se o atributo <xref:System.Reflection.AssemblySignatureKeyAttribute> tiver sido aplicado ao assembly, o token será para a chave de identidade, e o nome do algoritmo de hash e a chave de identidade será exibida.<br /><br /> Essa opção não verifica a assinatura do assembly e não deve ser usada para tomar decisões de confiança.  Essa opção exibe apenas os dados brutos do token de chave pública.|  
-|`-TS` `assembly` `infile`|Assina o `assembly` assinado ou parcialmente assinado com o par de chaves em `infile`.|  
+|`-TS``assembly``infile`|Assina o `assembly` assinado ou parcialmente assinado com o par de chaves em `infile`.|  
 |-`TSc``assembly``container`|Assina o `assembly` assinado ou parcialmente assinado com o par de chaves no contêiner de chave `container`.|  
 |**-v** *assembly*|Verifica o nome forte em *assembly*, em que *assembly* é o nome de um arquivo que contém um manifesto do assembly.|  
 |**-vf**  *assembly*|Verifica o nome forte no *assembly*. Diferente da opção **-v**, **-vf** força a verificação, mesmo que seja desabilitada usando a opção **-Vr**.|  

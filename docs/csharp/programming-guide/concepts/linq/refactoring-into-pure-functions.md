@@ -8,11 +8,11 @@ ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 36bb31975523055962fa9572109dab7e2ed47336
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4fe9a9250e0a87ecaa02258526b7cc796de8e387
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refatoração em funções puras (C#)
 
@@ -35,21 +35,21 @@ Um aspecto importante de transformações e puras é aprender como o código do 
  Os seguintes exemplos contrastam duas funções não puras e uma função pura.  
   
 ### <a name="non-pure-function-that-changes-a-class-member"></a>Função não pura que altera um membro de classe  
- No código a seguir, a função de `HypenatedConcat` não é uma função pura, porque altera o membro de dados `aMember` na classe:  
+ No código a seguir, a função de `HyphenatedConcat` não é uma função pura, porque altera o membro de dados `aMember` na classe:  
   
 ```csharp  
 public class Program  
 {  
     private static string aMember = "StringOne";  
   
-    public static void HypenatedConcat(string appendStr)  
+    public static void HyphenatedConcat(string appendStr)  
     {  
         aMember += '-' + appendStr;  
     }  
   
     public static void Main()  
     {  
-        HypenatedConcat("StringTwo");  
+        HyphenatedConcat("StringTwo");  
         Console.WriteLine(aMember);  
     }  
 }  
@@ -69,7 +69,7 @@ StringOne-StringTwo
 ```csharp  
 public class Program  
 {  
-    public static void HypenatedConcat(StringBuilder sb, String appendStr)  
+    public static void HyphenatedConcat(StringBuilder sb, String appendStr)  
     {  
         sb.Append('-' + appendStr);  
     }  
@@ -77,19 +77,19 @@ public class Program
     public static void Main()  
     {  
         StringBuilder sb1 = new StringBuilder("StringOne");  
-        HypenatedConcat(sb1, "StringTwo");  
+        HyphenatedConcat(sb1, "StringTwo");  
         Console.WriteLine(sb1);  
     }  
 }  
 ```  
   
- Esta versão do programa gerenciar as mesmas saída que a primeira versão, porque a função de `HypenatedConcat` alterou o valor (estado) do primeiro parâmetro chamar a função de membro de <xref:System.Text.StringBuilder.Append%2A> . Observe que essa mudança ocorre independentemente do fato de que `HypenatedConcat` usa passar o parâmetro de atendimento-por- valor.  
+ Esta versão do programa gerenciar as mesmas saída que a primeira versão, porque a função de `HyphenatedConcat` alterou o valor (estado) do primeiro parâmetro chamar a função de membro de <xref:System.Text.StringBuilder.Append%2A> . Observe que essa mudança ocorre independentemente do fato de que `HyphenatedConcat` usa passar o parâmetro de atendimento-por- valor.  
   
 > [!IMPORTANT]
 >  Para tipos de referência, se você passa um parâmetro por valor, ele resulta em uma cópia de referência a um objeto que está sendo passado. Esta cópia ainda está associada com os mesmos dados de instância que a referência original (até que a variável de referência é atribuído a um novo objeto). a Atendimento-por- referência não necessariamente é necessária para uma função modifique um parâmetro.  
   
 ### <a name="pure-function"></a>Função pura  
-Esta próxima versão do programa mostra como implementar a função `HypenatedConcat` como uma função pura.  
+Esta próxima versão do programa mostra como implementar a função `HyphenatedConcat` como uma função pura.  
   
 ```csharp  
 class Program  

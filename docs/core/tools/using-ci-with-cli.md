@@ -10,15 +10,16 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 0d6e1e34-277c-4aaf-9880-3ebf81023857
-ms.openlocfilehash: 596bc689e423082dcae0c79801e9f796b398391e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: cc2defb72c61e45ecfebd26937f1c3fd2d405171
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Usando ferramentas e SDK do .NET Core na CI (Integração Contínua)
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 Este documento descreve o uso do SDK do .NET Core e as respectivas ferramentas em um servidor de build. O conjunto de ferramentas do .NET Core funciona de forma interativa, quando o desenvolvedor digita comandos em um prompt de comando, e de forma automática, quando um servidor de CI (integração contínua) executa um script de build. As opções, entradas, saídas e os comandos são os mesmos. Você só precisa fornecer uma maneira de obter as ferramentas e um sistema para criar o aplicativo. Este documento se refere aos cenários de aquisição de ferramentas para CI com recomendações sobre como projetar e estruturar os scripts de build.
 

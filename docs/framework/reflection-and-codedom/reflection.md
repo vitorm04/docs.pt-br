@@ -32,11 +32,12 @@ caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7c2d95bfae212f658945904a647885ebd303cbc7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: df2f376da61f49bd00ea39783bc62015b31ba402
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reflection-in-the-net-framework"></a>Reflexão no .NET Framework
 As classes no namespace <xref:System.Reflection>, juntamente com <xref:System.Type?displayProperty=nameWithType> permitem que você obtenha informações sobre os [assemblies](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) carregados e os tipos definidos neles, como [classes](http://msdn.microsoft.com/en-us/ad7d3561-271e-4546-82fc-e00b059f27a9), [interfaces](http://msdn.microsoft.com/en-us/fd9d5975-5363-4bc9-b883-609f887895e5) e [tipos de valor](http://msdn.microsoft.com/en-us/c9c567f8-8ab1-4d88-834d-00f7d92418de). Você também pode usar a reflexão para criar instâncias de tipo em tempo de execução e para invocá-los e acessá-los. Para tópicos sobre aspectos específicos da reflexão, consulte [Tópicos relacionados](#related_topics) no final dessa visão geral.  
