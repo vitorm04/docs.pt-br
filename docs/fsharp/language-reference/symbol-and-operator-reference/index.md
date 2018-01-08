@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ab453800-d4d0-4a11-9d55-2b358d56af27
-ms.openlocfilehash: d1000e991a6c07693f2e639ee8f0a386d53a2aae
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: cb21ef7385cb679f9d445f8ee419db3d727fa057
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="symbol-and-operator-reference"></a>Referência de símbolos e operadores
 
@@ -40,7 +40,7 @@ A tabela a seguir descreve os símbolos usados na linguagem F#, fornece links pa
 |`&`|[Expressões Match](../match-expressions.md)|<ul><li>Calcula o endereço de um valor mutável, para uso ao interoperar com outros idiomas.<br /></li><li>Usado em padrões AND.<br /></li><ul/>|
 |`&&`|[Operadores Boolianos](boolean-operators.md)|<ul><li>Calcula a operação AND booleana.<br /></li><ul/>|
 |`&&&`|[Operadores Bit a Bit](bitwise-operators.md)|<ul><li>Calcula a operação AND bit a bit.<br /></li><ul/>|
-|`'`|[Literais](../literals.md)<br /><br />[Generalização automática](../generics/automatic-generalization.md)|<ul><li>Delimita um literal de caractere único.<br /></li><li>Indica um parâmetro de tipo genérico.<br /></li><ul/>|
+|`'`|[Literais](../literals.md)<br /><br />[Generalização Automática](../generics/automatic-generalization.md)|<ul><li>Delimita um literal de caractere único.<br /></li><li>Indica um parâmetro de tipo genérico.<br /></li><ul/>|
 |<code>&#96;&#96;...&#96;&#96;</code>|Não há mais informações disponíveis.|<ul><li>Delimita um identificador que não seria um identificador legal, como uma palavra-chave de idioma.<br /></li><ul/>|
 |`( )`|[Tipo Unit](../unit-type.md)|<ul><li>Representa um único valor do tipo de unidade.<br /></li><ul/>|
 |`(...)`|[Tuplas](../tuples.md)<br /><br />[Sobrecarga de Operador](../operator-overloading.md)|<ul><li>Indica a ordem na qual as expressões são avaliadas.<br /></li><li>Delimita uma tupla.<br /></li><li>Usado em definições de operador.<br /></li><ul/>|
@@ -66,7 +66,7 @@ A tabela a seguir descreve os símbolos usados na linguagem F#, fornece links pa
 |`:`|[Funções](../functions/index.md)|<ul><li>Em uma anotação de tipo, separa um nome de parâmetro ou de membro do seu tipo.<br /></li><ul/>|
 |`::`|[Listas](../lists.md)<br /><br />[Expressões Match](../match-expressions.md)|<ul><li>Cria uma lista. O elemento no lado esquerdo é anexado à lista no lado direito.<br /></li><li>Usado na correspondência de padrões para separar as partes de uma lista.<br /></li><ul/>|
 |`:=`|[Células de Referência](../reference-cells.md)|<ul><li>Atribui um valor a uma célula de referência.<br /></li><ul/>|
-|`:>`|[Conversões](../casting-and-conversions.md)|<ul><li>Converte um tipo em um tipo que seja superior na hierarquia.<br /></li><ul/>|
+|`:>`|[Conversões Cast e conversões](../casting-and-conversions.md)|<ul><li>Converte um tipo em um tipo que seja superior na hierarquia.<br /></li><ul/>|
 |`:?`|[Expressões Match](../match-expressions.md)|<ul><li>Retorna `true` se o valor corresponder ao tipo especificado; caso contrário, retorna `false` (operador de teste do tipo).<br /></li><ul/>|
 |`:?>`|[Conversões](../casting-and-conversions.md)|<ul><li>Converte um tipo em um tipo que seja inferior na hierarquia.<br /></li><ul/>|
 |`;`|[Sintaxe Detalhada](../verbose-syntax.md)<br /><br />[Listas](../lists.md)<br /><br />[Registros](../records.md)|<ul><li>Separa expressões (usadas principalmente na sintaxe detalhada).<br /></li><li>Separa elementos de uma lista.<br /></li><li>Separa campos de um registro.<br /></li><ul/>|
@@ -92,7 +92,7 @@ A tabela a seguir descreve os símbolos usados na linguagem F#, fornece links pa
 |`>?`|[Operadores Anuláveis](nullable-operators.md)|<ul><li>Calcula a operação "maior que", quando o lado direito for um tipo que permite valor nulo.<br /></li><ul/>|
 |`>>`|[Funções](../functions/index.md)|<ul><li>Compõe duas funções (operador de composição direta).<br /></li><ul/>|
 |`>>>`|[Operadores Bit a Bit](bitwise-operators.md)|<ul><li>Desloca bits na quantidade no lado esquerdo para a direita pelo número de casas especificado no lado direito.<br /></li><ul/>|
-|`>=`|[Operadores Aritméticos](arithmetic-operators.md)|<ul><li>Retorna `true` se o lado direito for maior ou igual ao lado esquerdo; caso contrário, retorna `false`.<br /></li><ul/>|
+|`>=`|[Operadores Aritméticos](arithmetic-operators.md)|<ul><li>Retorna `true` se o lado esquerdo é maior que ou igual à direita; caso contrário, retornará `false`.<br /></li><ul/>|
 |`>=?`|[Operadores Anuláveis](nullable-operators.md)|<ul><li>Calcula a operação "maior ou igual a", quando o lado direito for um tipo que permite valor nulo.<br /></li><ul/>|
 |`?`|[Parâmetros e Argumentos](../parameters-and-arguments.md)|<ul><li>Especifica um argumento opcional.<br /></li><li>Usado como um operador de chamadas de método e propriedade dinâmicas. Você deve fornecer sua própria implementação.<br /></li><ul/>|
 |`? ... <- ...`|Não há mais informações disponíveis.|<ul><li>Usado como um operador de propriedades de configuração dinâmica. Você deve fornecer sua própria implementação.<br /></li><ul/>|
@@ -107,7 +107,7 @@ A tabela a seguir descreve os símbolos usados na linguagem F#, fornece links pa
 |`^`|[Parâmetros de Tipo Resolvidos Estaticamente](../generics/statically-resolved-type-parameters.md)<br /><br />[Cadeias de Caracteres](../strings.md)|<ul><li>Especifica os parâmetros de tipo que devem ser resolvidos no tempo de compilação, não no tempo de execução.<br /></li><li>Concatena sequências.<br /></li><ul/>|
 |`^^^`|[Operadores Bit a Bit](bitwise-operators.md)|<ul><li>Calcula a operação OR exclusiva bit a bit.<br /></li><ul/>|
 |`_`|[Expressões Match](../match-expressions.md)<br /><br />[Genéricos](../generics/index.md)|<ul><li>Indica um padrão de curinga.<br /></li><li>Especifica um parâmetro genérico anônimo.<br /></li><ul/>|
-|<code>&#96;</code>|[Generalização automática](../generics/automatic-generalization.md)|<ul><li>Usado internamente para indicar um parâmetro de tipo genérico.<br /></li><ul/>|
+|<code>&#96;</code>|[Generalização Automática](../generics/automatic-generalization.md)|<ul><li>Usado internamente para indicar um parâmetro de tipo genérico.<br /></li><ul/>|
 |`{...}`|[Sequências](../sequences.md)<br /><br />[Registros](../records.md)|<ul><li>Delimita expressões de sequência e expressões de computação.<br /></li><li>Usado em definições de registro.<br /></li><ul/>|
 |<code>&#124;</code>|[Expressões Match](../match-expressions.md)|<ul><li>Delimita casos de correspondência individuais, casos de união discriminada individuais e valores de enumeração.<br /></li><ul/>|
 |<code>&#124;&#124;</code>|[Operadores Boolianos](boolean-operators.md)|<ul><li>Calcula a operação OR booleana.<br /></li><ul/>|

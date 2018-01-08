@@ -29,16 +29,16 @@ ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e1039359145902bffe3f91aa654a43790d16b887
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 96baa5d91d0a600b84ed832fb1e3b1ed71a9d89d
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="on-error-statement-visual-basic"></a>Instrução On Error (Visual Basic)
 Ativa uma rotina de tratamento de erros e especifica o local da rotina de dentro de um procedimento; também pode ser usado para desabilitar uma rotina de tratamento de erros.  
   
- Sem um `On Error` instrução, qualquer erro de tempo de execução que ocorre é fatal: uma mensagem de erro é exibida e a execução é interrompida.  
+ Sem tratamento de erros, qualquer erro de tempo de execução que ocorre é fatal: uma mensagem de erro é exibida e a execução é interrompida.  
   
  Sempre que possível, sugerimos que você use o tratamento em seu código, em vez de usar o tratamento de exceção não estruturado de exceções estruturado e `On Error` instrução. Para obter mais informações, consulte [Instrução Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
