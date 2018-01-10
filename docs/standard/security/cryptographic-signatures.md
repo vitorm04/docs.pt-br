@@ -33,11 +33,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 866d31662b8ae7d5c887af7d86007cb93a57d88f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c4e460c11e0e78d56a54da1dd178b3f8e9f381b6
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cryptographic-signatures"></a>Assinaturas criptográficas
 <a name="top"></a>Assinaturas digitais criptográficas usam algoritmos de chave pública para fornecer a integridade dos dados. Quando você assinar dados com uma assinatura digital, alguém pode verificar a assinatura e pode provar que os dados origem de você e não foi alterados depois que você assinou. Para obter mais informações sobre assinaturas digitais, consulte [serviços criptográficos](../../../docs/standard/security/cryptographic-services.md).  
@@ -115,7 +115,7 @@ class Class1
 ### <a name="signing-xml-files"></a>Assinatura de arquivos XML  
  O .NET Framework fornece o <xref:System.Security.Cryptography.Xml> namespace, que permite que você assinar XML. Assinatura XML é importante quando você deseja verificar se o XML provém de uma fonte de determinados. Por exemplo, se você estiver usando um serviço de cotação de ações que usa o XML, você pode verificar a origem do XML se ele está assinado.  
   
- Siga as classes nesse namespace o [recomendação de processamento e a sintaxe de assinatura XML](http://go.microsoft.com/fwlink/?LinkId=136777) da World Wide Web Consortium.  
+ Siga as classes nesse namespace o [recomendação de processamento e a sintaxe de assinatura XML](http://www.w3.org/TR/xmldsig-core/) da World Wide Web Consortium.  
   
  [Voltar ao início](#top)  
   

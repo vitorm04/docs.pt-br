@@ -37,11 +37,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1fd0df0e12149371b3403782056982784c0ca3cd
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 1f95193e4ac90df0d0abe5a46ade08d799bdf6b2
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cryptographic-services"></a>Serviços criptográficos
 <a name="top"></a>Redes públicas, como a Internet não fornecem um meio de comunicação segura entre entidades. Comunicação por essas redes é suscetível a sendo lidas ou modificadas até mesmo por terceiros não autorizados. A criptografia ajuda a proteger os dados sejam exibidos, fornece maneiras para detectar se os dados foram modificados e ajuda a fornecer uma maneira segura de comunicação nos canais de outra forma não seguras. Por exemplo, os dados podem ser criptografados usando um algoritmo de criptografia, transmitidos em um estado criptografado e mais tarde descriptografados pelo parceiro pretendido. Se outra pessoa interceptar os dados criptografados, será difícil decifrar.  
@@ -283,7 +283,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="suite_b"></a>   
 ## <a name="suite-b-support"></a>Suporte ao conjunto B  
- O [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] suporta o conjunto de algoritmos criptográficos publicado pela agência de segurança (NSA) National conjunto B. Para obter mais informações sobre o Suite B, consulte o [NSA Suite B criptografia fatos folha](http://go.microsoft.com/fwlink/?LinkId=100111).  
+ O [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] suporta o conjunto de algoritmos criptográficos publicado pela agência de segurança (NSA) National conjunto B. Para obter mais informações sobre o Suite B, consulte o [NSA Suite B criptografia fatos folha](https://www.nsa.gov/what-we-do/information-assurance/).  
   
  Os seguintes algoritmos estão incluídos:  
   

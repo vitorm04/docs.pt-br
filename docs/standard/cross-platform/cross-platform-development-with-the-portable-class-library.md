@@ -20,11 +20,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 893bbc94d909d5c94b7f8727912a298575617c2c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ea0a111727093cb65a98e48255b06b3c4516d258
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Desenvolvimento entre plataformas com a Biblioteca de Classes Portátil
 O tipo de projeto de Biblioteca de Classes Portátil .NET Framework no Visual Studio ajuda a criar de maneira rápida e fácil aplicativos e bibliotecas de plataforma cruzada para plataformas Microsoft.  
@@ -57,7 +57,7 @@ O tipo de projeto de Biblioteca de Classes Portátil .NET Framework no Visual St
   
 |SKU do Visual Studio|Suporte para criação de uma Biblioteca de Classes Portátil|  
 |-----------------------|---------------------------------------------------|  
-|Visual Studio 2010, Professional, Premium ou Ultimate|Sim, quando você instala o [ferramentas de biblioteca portátil](http://go.microsoft.com/fwlink/?LinkId=210823).|  
+|Visual Studio 2010, Professional, Premium ou Ultimate|Sim, quando você instala o [ferramentas de biblioteca portátil](https://marketplace.visualstudio.com/items?itemName=BCLTeam.PortableLibraryTools2).|  
 |Versões do Visual Studio Express 2010|Não.|  
 |Visual Studio 2012 Professional, Premium ou Ultimate|Sim. Para suporte por telefone, instale o [Windows Phone SDK 8.0](http://go.microsoft.com/fwlink/?LinkId=265772).|  
 |Versões do Visual Studio Express 2012|Não.|  
@@ -171,7 +171,7 @@ Caixa de diálogo Alterar Destinos no Visual Studio 2012
   
  Por exemplo, a Biblioteca de Classes Portátil contém tipos relacionados a interface de usuário apenas quando os destinos são Windows 8.1 e Windows Phone 8.1. Além disso, você também pode encontrar limitações se usar plataformas de destino (como Xbox, .NET Framework 4 e Windows Phone 7) que foram lançadas antes da introdução da Biblioteca de Classes Portátil. O .NET Framework libera pacotes através do NuGet que aprimoram o suporte da Biblioteca de Classes Portátil para algumas dessas plataformas mais antigas. Para obter mais informações e uma lista de pacotes do NuGet, consulte [o .NET Framework e lançamentos fora de banda](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).  
   
- Se houver suporte a um membro na Biblioteca de Classes Portátil e aos destinos selecionados, isso aparecerá no projeto no IntelliSense. Além disso, o ícone de biblioteca de classes portátil ![suportados pela biblioteca portátil](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon") aparece nas tabelas de membros, no [biblioteca de classes do .NET Framework](http://go.microsoft.com/fwlink/?LinkId=211358) lado suporte para membros. Por exemplo, a tabela de membros a seguir mostra que a propriedade <xref:System.String.Chars%2A> na classe <xref:System.String> tem suporte na Biblioteca de Classes Portátil:  
+ Se houver suporte a um membro na Biblioteca de Classes Portátil e aos destinos selecionados, isso aparecerá no projeto no IntelliSense. Além disso, o ícone de biblioteca de classes portátil ![suportados pela biblioteca portátil](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon") aparece nas tabelas de membros, no [biblioteca de classes do .NET Framework](https://msdn.microsoft.com/library/mt472912.aspx) lado suporte para membros. Por exemplo, a tabela de membros a seguir mostra que a propriedade <xref:System.String.Chars%2A> na classe <xref:System.String> tem suporte na Biblioteca de Classes Portátil:  
   
  ![Ícone de membro com suporte](../../../docs/standard/cross-platform/media/plibsupportedmemberlist.png "PlibSupportedMemberList")  
 Ícone da Biblioteca de classes portátil  
