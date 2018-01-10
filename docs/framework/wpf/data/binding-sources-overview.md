@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 88f1a22fc15e85e687c7b7eeb0a6e01445277d09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6b603599232a5cb4d33e2b7c9ad00e7ab3a24649
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="binding-sources-overview"></a>Visão geral das fontes de associação
 Na associação de dados, o objeto de origem da associação refere-se ao objeto do qual você obtém dados. Este tópico discute os tipos de objetos que você pode usar como a origem da associação.  
@@ -39,7 +39,7 @@ Na associação de dados, o objeto de origem da associação refere-se ao objeto
 |objetos dinâmicos|Você pode vincular a propriedades disponíveis e indexadores de um objeto que implementa o <xref:System.Dynamic.IDynamicMetaObjectProvider> interface. Se você pode acessar o membro no código, pode associar a ele. Por exemplo, se um objeto dinâmico permite que você acesse um membro no código por meio de `someObjet.AProperty`, você pode associar a ele, definindo o caminho de associação como `AProperty`.|  
 |Objetos [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)]|Você pode vincular a [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] objetos, como <xref:System.Data.DataTable>. O [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] <xref:System.Data.DataView> implementa o <xref:System.ComponentModel.IBindingList> interface, que oferece notificações de alteração que o mecanismo de associação ouve.|  
 |Objetos [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]|Você pode associar e executar `XPath` consultas em um <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>, ou <xref:System.Xml.XmlElement>. Uma maneira conveniente de acessar [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dados que são a fonte de associação em marcação são usar um <xref:System.Windows.Data.XmlDataProvider> objeto. Para obter mais informações, consulte [Associar a dados XML usando um XMLDataProvider e consultas XPath](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> Você também pode associar a um <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XDocument>, ou ligar os resultados de consultas executadas em objetos desses tipos usando LINQ para XML. Uma maneira conveniente usar o LINQ to XML para acessar dados XML que são a fonte de associação em marcação é usar um <xref:System.Windows.Data.ObjectDataProvider> objeto. Para obter mais informações, consulte [Associar a XDocument, XElement ou LINQ para resultados de Consulta XML](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|  
-|Objetos <xref:System.Windows.DependencyObject>|Você pode vincular a dependência propertiesof que qualquer <xref:System.Windows.DependencyObject>. Para obter um exemplo, consulte [Associar as propriedades de dois controles](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md).|  
+|Objetos <xref:System.Windows.DependencyObject>|Você pode vincular a propriedades de dependência de qualquer <xref:System.Windows.DependencyObject>. Para obter um exemplo, consulte [Associar as propriedades de dois controles](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md).|  
   
 <a name="classes"></a>   
 ## <a name="implementing-a-class-for-the-binding-source"></a>Implementando uma classe para a origem da associação  
