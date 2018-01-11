@@ -113,7 +113,7 @@
     },
     {
       "path_to_root": "_csharplang",
-      "url": "https://github.com/dotnet/csharplang",
+      "url": "https://github.com/dotnet/csharplang", 
       "branch": "master"
     },
     {
