@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: 4ca87c8410a04e9198e9dd6c379760e7b6596585
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: db481c18a79f55b079ec2558b884ce288e2a9933
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="executing-expression-trees"></a>Executar árvores de expressão
 
@@ -28,7 +28,7 @@ O tipo de expressão `Expression<TDelegate>` é o único exemplo concreto nas bi
 
 Na maioria dos casos, isso cria um mapeamento simples entre uma expressão e o delegado correspondente. Por exemplo, uma árvore de expressão que é representada por `Expression<Func<int>>` seria convertida em um delegado do tipo `Func<int>`. Para uma expressão lambda com qualquer tipo de retorno e lista de argumentos, existe um tipo delegado que é o tipo de destino para o código executável representado por essa expressão lamdba.
 
-O tipo `LamdbaExpression` contém membros `Compile` e `CompileToMethod` que você usaria para converter uma árvore de expressão em código executável. O método `Compile` cria um delegado. O método `ConmpileToMethod` atualiza um objeto `MethodBuilder` com a IL que representa a saída compilada da árvore de expressão. Observe que `CompileToMethod` só está disponível na estrutura de área de trabalho completa e não na estrutura do .NET Core.
+O tipo `LamdbaExpression` contém membros `Compile` e `CompileToMethod` que você usaria para converter uma árvore de expressão em código executável. O método `Compile` cria um delegado. O método `CompileToMethod` atualiza um objeto `MethodBuilder` com a IL que representa a saída compilada da árvore de expressão. Observe que `CompileToMethod` só está disponível na estrutura de área de trabalho completa e não na estrutura do .NET Core.
 
 Opcionalmente, você também pode fornecer um `DebugInfoGenerator` que receberá as informações de depuração de símbolo para o objeto delegado gerado. Isso permite que você converta a árvore de expressão em um objeto delegado e tenha as informações de depuração completas sobre o delegado gerado.
 
