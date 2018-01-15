@@ -8,11 +8,11 @@ ms.date: 08/16/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: cc861f186bea681bb32a2f8041a7155026679987
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 9e7fefde6763dbd5c73c01e45e5652d9f207c213
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="whats-new-in-c-72"></a>Novidades no C# 7.2
 
@@ -59,7 +59,7 @@ Por exemplo:
 int binaryValue = 0b_0101_0101;
 ```
 
-## `private protected`
+## <a name="private-protected-access-modifier"></a>modificador de acesso _protegido privado_
 
 Por fim, um novo modificador de acesso composto: `private protected` indica que um membro pode ser acessado pela classe que o contém ou por classes derivadas que são declaradas no mesmo assembly. Enquanto que `protected internal` permite o acesso por classes derivadas ou classes que estejam no mesmo assembly, o `private protected` limita o acesso a tipos derivados declarados no mesmo assembly.
 

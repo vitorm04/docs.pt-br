@@ -7,11 +7,12 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: d2c99df730d90e0a6b69197cf036c62073cf8749
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.workload: dotnetcore
+ms.openlocfilehash: 7fad6bf67dfe7b0d6f70ce527a153080aa17d888
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
@@ -38,7 +39,7 @@ A migração é executada no seguinte:
 * O arquivo *solution.sln*, onde ele migra os projetos referenciados na solução.
 * Em todos os subdiretórios do diretório especificado, recursivamente.
 
-O comando `dotnet migrate` mantém o arquivo *project.json* migrado em um diretório `backup`, que será criado se ainda não existir. Esse comportamento é substituído usando o `--skip-backup` opção.
+O comando `dotnet migrate` mantém o arquivo *project.json* migrado em um diretório `backup`, que será criado se ainda não existir. Esse comportamento é substituído com a opção `--skip-backup`.
 
 Por padrão, a operação de migração produzirá o estado do processo de migração para a saída padrão (STDOUT). Se você usar a opção `--report-file <REPORT_FILE>`, a saída será salva no arquivo especificado. 
 

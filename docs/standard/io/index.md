@@ -23,14 +23,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 33d33826037197a0c679dacfff57eb77de5f5341
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9ddb94119d009d61e8126724df2a4b852b7ad3f5
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="file-and-stream-io"></a>E/S de arquivo e de fluxo
-E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados de ou para uma mídia de armazenamento. No .NET Framework, os namespaces [System.IO](http://go.microsoft.com/fwlink/?LinkId=231142) contêm tipos que permitem a leitura e a gravação, de forma síncrona e assíncrona, em fluxos de dados e arquivos. Esses namespaces também contêm tipos que executam compactação e descompactação em arquivos e tipos que possibilitam a comunicação por meio de pipes e portas seriais.  
+E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados de ou para uma mídia de armazenamento. No .NET Framework, os namespaces `System.IO` contêm tipos que permitem a leitura e a gravação, de forma síncrona e assíncrona, em fluxos de dados e arquivos. Esses namespaces também contêm tipos que executam compactação e descompactação em arquivos e tipos que possibilitam a comunicação por meio de pipes e portas seriais.  
   
  Um arquivo é uma coleção ordenada e nomeada de bytes com armazenamento persistente. Ao trabalhar com arquivos, você trabalha com caminhos de diretórios, armazenamento em disco e nomes de arquivos e diretórios. Por outro lado, um fluxo é uma sequência de bytes que você pode usar para ler e gravar em um repositório, o qual pode ser uma entre vários tipos de mídia de armazenamento (por exemplo, discos ou memória). Assim como há vários repositórios diferentes de discos, há vários tipos diferentes de fluxos diferentes de fluxos de arquivos, como os fluxos de rede, memória e pipes.  
   
@@ -51,7 +51,7 @@ E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados d
   
  Além de usar essas classes, os usuários do Visual Basic podem usar os métodos e as propriedades fornecidas pela classe <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> para E/S de arquivo.  
   
- Confira [Como copiar diretórios](../../../docs/standard/io/how-to-copy-directories.md), [Como criar uma listagem de diretórios](http://msdn.microsoft.com/en-us/4d2772b1-b991-4532-a8a6-6ef733277e69) e [Como enumerar diretórios e arquivos](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
+ Confira [Como copiar diretórios](../../../docs/standard/io/how-to-copy-directories.md), [Como criar uma listagem de diretórios](http://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69) e [Como enumerar diretórios e arquivos](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
   
 ## <a name="streams"></a>Fluxos  
  A classe base abstrata <xref:System.IO.Stream> oferece suporte a leitura e gravação de bytes. Todas as classes que representam fluxos herdam da classe <xref:System.IO.Stream>. A classe <xref:System.IO.Stream> e suas classes derivadas fornecem uma visão comum de fontes e repositórios de dados, isolando o programador de detalhes específicos do sistema operacional e dispositivos subjacentes.  
@@ -128,7 +128,7 @@ E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados d
 ## <a name="isolated-storage"></a>Armazenamentos isolado  
  Um armazenamento isolado é um mecanismo de armazenamento de dados que fornece isolamento e segurança ao definir maneiras padronizadas de associar códigos a dados salvos. O armazenamento fornece um sistema de arquivos virtual que é isolado por usuário, assembly e (opcionalmente) domínio. O armazenamento isolado é particularmente útil quando o aplicativo não tem permissão para acessar arquivos de usuários. Você pode salvar configurações ou arquivos para seu aplicativo de modo que ele seja controlado pela política de segurança do computador.  
   
- O armazenamento isolado não está disponível para aplicativos da [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Em vez disso, use as classes de dados do aplicativo no namespace [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx). Para saber mais, confira [Dados de aplicativo](http://go.microsoft.com/fwlink/?LinkId=229175) no Centro de Desenvolvimento do Windows.  
+ O armazenamento isolado não está disponível para aplicativos da [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Em vez disso, use as classes de dados do aplicativo no namespace [Windows.Storage](/uwp/api/Windows.Storage). Para saber mais, confira [Dados de aplicativo](/previous-versions/windows/apps/hh464917(v=win.10)) no Centro de Desenvolvimento do Windows.  
   
  As classes a seguir são usadas com frequência na implementação do armazenamento isolado:  
   
@@ -147,7 +147,7 @@ E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados d
   
 -   Tipos especificamente relacionados às operações de arquivo, como <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> e <xref:System.IO.DirectoryInfo>, não estão incluídos no [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Use os tipos no namespace [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) do [!INCLUDE[wrt](../../../includes/wrt-md.md)], como [StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) e [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
   
--   O armazenamento isolado não está disponível. Use [dados de aplicativo](http://go.microsoft.com/fwlink/?LinkId=229175).  
+-   O armazenamento isolado não está disponível. Use [dados de aplicativo](/previous-versions/windows/apps/hh464917(v=win.10)).  
   
 -   Use métodos assíncronos, como <xref:System.IO.Stream.ReadAsync%2A> e <xref:System.IO.Stream.WriteAsync%2A>, para evitar o bloqueio do thread da interface do usuário.  
   
@@ -160,7 +160,7 @@ E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados d
 ## <a name="io-and-security"></a>E/S e segurança  
  Ao usar as classes no namespace <xref:System.IO?displayProperty=nameWithType>, você deve atender aos requisitos de segurança do sistema operacional, como ACLs (listas de controle de acesso) para controlar o acesso a arquivos e diretórios. Esse é um requisito adicional aos requisitos de <xref:System.Security.Permissions.FileIOPermission>. As ACLs podem ser gerenciadas por meio de programação. Para saber mais, confira [Como adicionar ou remover entradas da lista de controle de acesso](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
   
- As políticas de segurança padrão impedem que aplicativos da Internet ou intranet acessem arquivos no computador do usuário. Consequentemente, não use classes de E/S que exijam um caminho para um arquivo físico ao escrever código que será baixado via Internet ou intranet. Em vez disso, use [armazenamento isolado](../../../docs/standard/io/isolated-storage.md) para aplicativos .NET Framework tradicionais ou use [dados de aplicativo](http://go.microsoft.com/fwlink/?LinkId=229175) para aplicativos da [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+ As políticas de segurança padrão impedem que aplicativos da Internet ou intranet acessem arquivos no computador do usuário. Consequentemente, não use classes de E/S que exijam um caminho para um arquivo físico ao escrever código que será baixado via Internet ou intranet. Em vez disso, use [armazenamento isolado](../../../docs/standard/io/isolated-storage.md) para aplicativos .NET Framework tradicionais ou use [dados de aplicativo](/previous-versions/windows/apps/hh464917(v=win.10)) para aplicativos da [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   
  Uma verificação de segurança é executada somente quando o fluxo é construído. Consequentemente, não abra um fluxo para depois passá-lo para código ou domínios de aplicativos menos confiáveis.  
   

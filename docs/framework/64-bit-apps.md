@@ -17,11 +17,12 @@ caps.latest.revision: "53"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1ee85512cde0ce50e6a5c34cc5f6acc531c24bc0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e968d64d02780eb8f8d404e533443c7663d3d60f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="64-bit-applications"></a>Aplicativos de 64 bits
 Ao compilar um aplicativo, você pode especificar se ele deve ser executado em um sistema operacional Windows de 64 bits como um aplicativo nativo ou no WOW64 (Windows de 32 bits em Windows de 64 bits). O WOW64 é um ambiente de compatibilidade que permite que um aplicativo de 32 bits seja executado em um sistema de 64 bits. O WOW64 está incluído em todas as versões de 64 bits do sistema operacional Windows.  
@@ -46,7 +47,7 @@ Ao compilar um aplicativo, você pode especificar se ele deve ser executado em u
   
 -   Código que converte `IntPtr` em `Int32`.  
   
- Para obter mais informações sobre como a porta de um aplicativo de 32 bits para ser executado no CLR de 64 bits, consulte [código gerenciado de migração de 32 bits para 64 bits](https://msdn.microsoft.com/library/ms973190.aspx).  
+ Para obter mais informações sobre como portar um aplicativo de 32 bits para execução no CLR de 64 bits, consulte [Migrando um código gerenciado de 32 bits para 64 bits](https://msdn.microsoft.com/library/ms973190.aspx).  
   
 ## <a name="general-64-bit-programming-information"></a>Informações de Programação em 64 Bits em Geral  
  Para obter informações gerais sobre a programação de 64 bits, confira os seguintes documentos:  

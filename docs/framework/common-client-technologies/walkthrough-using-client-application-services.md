@@ -19,11 +19,12 @@ caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fba53a19810a91a2e679616e73ea8c5fc8d38da1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 124c9321623fd6fe9c5414fc1eed2e41be1e75f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-using-client-application-services"></a>Instruções passo a passo: usando serviços de aplicativo cliente
 Este tópico descreve como criar um aplicativo do Windows que usa serviços de aplicativo cliente para autenticar usuários e recuperar funções de usuário e configurações.  
@@ -374,7 +375,7 @@ Este tópico descreve como criar um aplicativo do Windows que usa serviços de a
   
 3.  Na janela **Propriedades**, defina as seguintes propriedades para o botão.  
   
-  	|Propriedade|Valor|  
+  	|propriedade|Valor|  
   	|--------------|-----------|  
   	|**(Nome)**|managerOnlyButton|  
   	|**Texto**|&Manager task|  
@@ -548,6 +549,6 @@ Este tópico descreve como criar um aplicativo do Windows que usa serviços de a
  [Serviços de aplicativos cliente](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [Visão geral dos serviços de aplicativos cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  [Como configurar serviços de aplicativo cliente](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
- [Ferramenta de administração de Site da Web do ASP.NET](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
+ [Ferramenta de Administração de Site ASP.NET](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
  [Criando e configurando o banco de dados dos serviços de aplicativos para o SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
  [Instruções passo a passo: uso de serviços de aplicativo do ASP.NET](http://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)

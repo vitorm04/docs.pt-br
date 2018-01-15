@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 916251e3-87f9-4eee-81ec-94076215e6fa
-ms.openlocfilehash: e09b6f9124ec7614ab2e847d686435d74b00b336
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 858fc77d9652bfa59ed0bb3159260f40c76156a4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Reduzindo as dependências de pacote com o project.json
 
@@ -30,7 +31,7 @@ No entanto, há uma boa chance de que a biblioteca não use todos os pacotes que
 Atualmente, não há nenhum comando `dotnet` oficial para cortar as referências de pacote.  Em vez disso, você terá que fazê-lo manualmente.  O processo geral é semelhante ao seguinte:
 
 1. Faça referência à `NETStandard.Library` versão `1.6.0` em uma seção `dependencies` de seu `project.json`.
-2. Restaurar os pacotes com `dotnet restore` ([consulte a Observação](#dotnet-restore-note)) na linha de comando.
+2. Restaure pacotes com `dotnet restore` ([veja observação](#dotnet-restore-note)) por meio da linha de comando.
 3. Inspecione o arquivo `project.lock.json` e localize a seção `NETSTandard.Library`.  Ele estará perto do início do arquivo.
 4. Copie todos os pacotes listados em `dependencies`.
 5. Remova a referência `.NETStandard.Library` e substitua-a pelos pacotes copiados.
@@ -60,7 +61,7 @@ Para cortar essa biblioteca, você deve começar com o arquivo `project.json` e 
 }
 ```
 
-Em seguida, você restaura os pacotes com `dotnet restore` ([consulte a Observação](#dotnet-restore-note)), inspecione o `project.lock.json` de arquivos e localizar todos os pacotes restaurados para `NETSTandard.Library`.
+Em seguida, restaure pacotes com `dotnet restore` ([veja observação](#dotnet-restore-note)), inspecione o arquivo `project.lock.json` e localize todos os pacotes restaurados para `NETSTandard.Library`.
 
 Veja como a seção relevante no arquivo `project.lock.json` se parece ao redirecionar para `netstandard1.0`:
 

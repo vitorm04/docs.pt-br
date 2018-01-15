@@ -23,11 +23,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 80f95099644552aed34553385544f21d07b29114
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 49355c4271efc37a40c025c0f8275ec42e13723e
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="handling-and-raising-events"></a>Manipulando e acionando eventos
 Os eventos no .NET Framework são baseados no modelo de representante. O modelo de representante segue o padrão de design do observador, que permite a um assinante se registrar em um provedor e receber notificações dele. Um remetente de eventos envia uma notificação por push de que um evento ocorreu e um receptor de eventos recebe essa notificação e define uma resposta. Este artigo descreve os principais componentes do modelo de representante, como consumir eventos em aplicativos e como implementar eventos no código.  
@@ -102,6 +102,6 @@ Os eventos no .NET Framework são baseados no modelo de representante. O modelo 
  <xref:System.EventHandler%601>  
  <xref:System.EventArgs>  
  <xref:System.Delegate>  
- [Visão geral de eventos roteados e eventos (aplicativos da Windows Store)](http://go.microsoft.com/fwlink/?LinkId=261485)  
+ [Visão geral de eventos e eventos roteados (aplicativos UWP)](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
  [Eventos (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
  [Eventos (guia de programação em C#)](../../csharp/programming-guide/events/index.md)

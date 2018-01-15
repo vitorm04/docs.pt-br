@@ -16,11 +16,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e5719cf7cfb5ec99f1bfbf952048e98c9465e1fa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 55b4ab154f9f3a9b17274697c30ca826218322ab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-application-services-overview"></a>Visão geral dos serviços de aplicativo cliente
 Os serviços de aplicativo cliente fornecem acesso simplificado ao logon, às funções e aos serviços de perfil do [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] por meio dos aplicativos Windows Forms e WPF (Windows Presentation Foundation). Os serviços de aplicativo [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] estão incluídos nas Extensões AJAX do Microsoft ASP.NET 2.0, que estão incluídas no [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] e no [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Esses serviços permitem que vários aplicativos Web e baseados no Windows compartilhem informações do usuário e a funcionalidade de gerenciamento de usuários de um único servidor.  
@@ -92,10 +93,10 @@ Os serviços de aplicativo cliente fornecem acesso simplificado ao logon, às fu
  [Como implementar login de usuário com serviços de aplicativos cliente](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  [Instruções passo a passo: usando serviços de aplicativos cliente](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
  [Visão Geral das Configurações do Aplicativo](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [Visão geral dos serviços de aplicativo do ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
+ [Visão geral dos Serviços de Aplicativos ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
  [Usando formulários de autenticação com Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
- [Usando funções de informações com o Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
- [Usando informações de perfil com o Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
+ [Usando informações de funções com o Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
+ [Usando informações de perfis com o Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
  [Autenticação do ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
- [Gerenciando autorização usando funções](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)  
+ [Gerenciando a autorização usando funções](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)  
  [Criando e configurando o banco de dados dos serviços de aplicativos para o SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)

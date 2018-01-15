@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: ec86c558b9aa9c6269fcf9890978f61a934c081f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e9707d3b67a80fface2c26c589780c60c2e293f7
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="working-with-linq"></a>Trabalhando com LINQ
 
@@ -329,6 +329,6 @@ Compile e execute novamente. A saída é um pouco mais limpa e o código é um p
 
 ## <a name="conclusion"></a>Conclusão
 
-Este exemplo mostrou alguns dos métodos usados em LINQ e como criar seus próprios métodos que serão facilmente usados com o código habilitado para LINQ. Ele também mostrou as diferenças entre a avaliação lenta e a rápida e o impacto que a decisão pode ter no desempenho.
+Esta amostra mostrou alguns dos métodos usados em LINQ e como criar seus próprios métodos que serão usados com facilidade com o código habilitado para LINQ. Ele também mostrou as diferenças entre a avaliação lenta e a rápida e o impacto que a decisão pode ter no desempenho.
 
 Você aprendeu um pouco sobre uma técnica dos mágicos. Os mágicos usam o embaralhamento porque eles podem controlar onde cada carta fica no baralho. Em alguns truques, o mágico escolha uma pessoa para colocar a carta no topo do baralho e embaralha as cartas algumas vezes, sabendo onde a carta escolhida está. Outras ilusões exigem que o baralho esteja disposto de uma determinada maneira. Um mágico fará a disposição do baralho antes de realizar o truque. Em seguida, ele embaralhará as cartas 5 vezes usando uma ordem aleatória interna. No palco, ele pode mostrar como é o embaralhamento e embaralhar mais três vezes e ter o baralho definido exatamente como deseja.

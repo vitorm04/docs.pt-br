@@ -18,16 +18,17 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 45fd02c4f87d33766741e6fd023f9b40b9964d63
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fb9bd85797dd129f6f34992c58c9772668ce2cb0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-serviced-components-with-the-global-assembly-cache"></a>Usando componentes atendidos com o cache de assemblies global
-Componentes atendidos (componentes COM+ com código gerenciado) devem ser colocados no cache de assembly global. Em alguns cenários, o Common Language Runtime e serviços COM+ podem manipular componentes atendidos que não estão no cache de assembly global; em outros cenários, eles não podem. Os seguintes cenários ilustram isso:  
+Componentes atendidos (componentes COM+ com código gerenciado) devem ser colocados no Cache de Assembly Global. Em alguns cenários, o Common Language Runtime e os Serviços COM+ podem manipular componentes atendidos que não estão no Cache de Assembly Global; em outros cenários, eles não podem. Os seguintes cenários ilustram isso:  
   
--   Para componentes atendidos em um aplicativo de COM+ Server, o assembly que contém os componentes deve estar no cache de assembly global, pois Dllhost.exe não é executado no mesmo diretório que contém os componentes atendidos.  
+-   Para componentes atendidos em um aplicativo COM+ para Servidor, o assembly que contém os componentes deve estar no Cache de Assembly Global, pois Dllhost.exe não é executado no mesmo diretório que contém os componentes atendidos.  
   
 -   Para componentes atendidos em um aplicativo de COM+ Library, o tempo de execução e COM+ Services podem resolver as referências ao assembly que contém os componentes pesquisando o diretório atual. Nesse caso, o assembly não precisa estar no cache de assembly global.  
   
@@ -35,4 +36,4 @@ Componentes atendidos (componentes COM+ com código gerenciado) devem ser coloca
   
 ## <a name="see-also"></a>Consulte também  
  [Como trabalhar com assemblies e o cache de assembly global](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
- [Gacutil.exe (Ferramenta Cache de Assembly Global)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+ [Gacutil.exe (Ferramenta do Cache de Assemblies Global)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)

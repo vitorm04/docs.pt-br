@@ -37,11 +37,12 @@ caps.latest.revision: "26"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c91195c4e70366a3feb7a96f80e4e44dda89239e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f170c3e7174b231153a9e201f617faa786291056
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Empacotando e implantando recursos em aplicativos de área de trabalho
 Aplicativos se baseiam no Gerenciador de Recursos do .NET Framework, representado pela classe <xref:System.Resources.ResourceManager>, para recuperar os recursos localizados. O Gerenciador de Recursos pressupõe que um modelo de hub e spoke é usado para empacotar e implantar recursos. O hub é o principal assembly que contém o código executável não localizável e os recursos para uma única cultura, chamada de cultura neutra ou padrão. O padrão é a cultura de fallback para o aplicativo; é a cultura que tem os recursos utilizados quando não há recursos localizados disponíveis. Cada spoke conecta-se a um assembly satélite que contém os recursos para uma única cultura, mas não contém nenhum código.  
@@ -64,7 +65,7 @@ Aplicativos se baseiam no Gerenciador de Recursos do .NET Framework, representad
  Ao empacotar os recursos de seu aplicativo, você deve nomeá-los usando as convenções de nomenclatura esperadas pelo Common Language Runtime. O tempo de execução identifica um recurso pelo seu nome de cultura. Cada cultura tem um nome exclusivo, que normalmente é uma combinação de um nome de cultura de duas letras minúsculas associado a um idioma e, se necessário, um nome de subcultura de duas letras maiúsculas associado a um país ou região. O nome de subcultura vem depois do nome da cultura, separado por um traço (-). Exemplos incluem ja-JP para japonês falado no Japão, en-US para inglês falado nos Estados Unidos, de-DE para alemão falado na Alemanha, ou de-AT para alemão falado na Áustria. Consulte a [Referência de API de suporte ao idioma nacional (NLS)](http://go.microsoft.com/fwlink/?LinkId=200048) na Central de desenvolvedores Go Global para obter uma lista completa de nomes de cultura.  
   
 > [!NOTE]
->  Para obter informações sobre como criar arquivos de recursos, consulte [criar arquivos de recurso](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) e [Criando Assemblies Satélites](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).  
+>  Para obter informações sobre como criar arquivos de recursos, consulte [Criando arquivos de recursos](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) e [Criando assemblies satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).  
   
 <a name="cpconpackagingdeployingresourcesanchor1"></a>   
 ## <a name="the-resource-fallback-process"></a>O Processo de Fallback do Recurso  

@@ -12,11 +12,12 @@ ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 manager: wpickett
 ms.custom: mvc
-ms.openlocfilehash: ce02033a7994d48494b4e627f1ed8f1dea4caadb
-ms.sourcegitcommit: 5bfcb8d341239df251351f318038d31cdc9159d7
+ms.workload: dotnetcore
+ms.openlocfilehash: 8c6daabb3040998d3376ad022790c16b9629233f
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="introduction-to-net-and-docker"></a>Introdução ao .NET e ao Docker
 
@@ -41,11 +42,11 @@ A [relação entre contêineres, imagens e registros do Docker](../../standard/m
 * [Compilar Imagens do Docker para aplicativos .NET Core](../docker/building-net-docker-images.md)
 
 
-### <a name="getting-net-docker-images"></a>Obter imagens do .NET Docker
+### <a name="getting-net-docker-images"></a>Obtendo imagens do Docker no .NET
 
 As imagens oficiais do .NET Docker são criadas e otimizadas pela Microsoft. Elas ficam publicamente disponíveis nos repositórios da Microsoft no Hub do Docker. Cada repositório pode conter várias imagens, dependendo das versões do .NET e das versões do sistema operacional. A maioria dos repositórios de imagens fornecem muitas opções de marcação para ajudar você a selecionar uma versão específica do framework e um sistema operacional (distribuição Linux ou versão do Windows).
 
-## <a name="scenario-based-guidance"></a>Orientação baseada em cenário
+## <a name="scenario-based-guidance"></a>Diretrizes baseadas em cenário
 
 A intenção da Microsoft para repositórios do .NET é ter repositórios granulares e focados, que representam um cenário ou carga de trabalho específica.
 
@@ -103,7 +104,7 @@ Este repositório contém exemplos que demonstram várias configurações do Doc
 
 **.NET Framework 4.7**
 
-O [exemplo dotnet-framework:4.7](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7) demonstra o uso de "hello world" básico do [.NET Framework 4.7](../../framework/whats-new/index.md#v47). Ele mostra como você pode compilar e implantar o aplicativo dependendo da [imagem do docker para .NET Framework 4.7](https://github.com/Microsoft/dotnet-framework-docker/blob/master/4.7/Dockerfile).
+A [amostra dotnet-framework:4.7](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7) demonstra o uso básico de “olá, mundo” do [.NET Framework 4.7](../../framework/whats-new/index.md#v47). Ele mostra como você pode compilar e implantar o aplicativo dependendo da [imagem do docker para .NET Framework 4.7](https://github.com/Microsoft/dotnet-framework-docker/blob/master/4.7/Dockerfile).
 
 **.NET Framework 4.6.2**
 
@@ -203,5 +204,4 @@ Agora que você aprendeu sobre a plataforma do Docker e imagens diferentes do Do
 ## <a name="next-steps"></a>Próximas etapas
 
 * [Aprenda noções básicas do Docker com o .NET Core](docker-basics-dotnet-core.md)
-* [Compilar imagens do Docker do .NET Core](building-net-docker-images.md)
-\
+* [Compilando imagens do Docker no .NET Core](building-net-docker-images.md)

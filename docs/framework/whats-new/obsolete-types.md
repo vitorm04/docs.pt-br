@@ -17,11 +17,12 @@ caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 659028e56849af1404768afff2de3ae95fb3aba8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f30b9e245ad38b0e861590e9b2ca3658a2b5e967
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Tipos obsoletos no .NET Framework
 <a name="introduction"></a>As tabelas deste artigo listam os tipos que estão obsoletos no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e no [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], organizados por assembly. Use os links a seguir para ver uma lista dos tipos obsoletos e das alternativas recomendadas em cada assembly. Como esses tipos são obsoletos, todos seus membros também estão obsoletos. Para obter uma lista de membros obsoletos adicionais na biblioteca de classes .NET Framework, confira [Membros obsoletos](../../../docs/framework/whats-new/obsolete-members.md).  
@@ -489,11 +490,11 @@ ms.lasthandoff: 11/21/2017
   
 |Tipo|Mensagem|  
 |----------|-------------|  
-|Todos os tipos no namespace <xref:System.Workflow.Activities?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Rules.RuleActionTrackingEvent?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Rules.RuleConditionReference?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Rules.RuleSetReference?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>.\*.|  
+|Todos os tipos no namespace <xref:System.Workflow.Activities?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|  
+|<xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|  
+|<xref:System.Workflow.Activities.Rules.RuleActionTrackingEvent?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|  
+|<xref:System.Workflow.Activities.Rules.RuleConditionReference?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|  
+|<xref:System.Workflow.Activities.Rules.RuleSetReference?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|  
   
  [Voltar ao início](#introduction)  
   
@@ -502,16 +503,16 @@ ms.lasthandoff: 11/21/2017
   
 |Tipo|Mensagem|  
 |----------|-------------|  
-|Todos os tipos no namespace <xref:System.Workflow.ComponentModel>, exceto <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=nameWithType> e <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>.\*.|  
-|Todos os tipos no namespace <xref:System.Workflow.ComponentModel.Compiler>, exceto <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=nameWithType> e <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>.\*.|  
-|Todos os tipos no namespace <xref:System.Workflow.ComponentModel.Design>, exceto <xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityTypeCodeDomSerializer?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.DependencyObjectCodeDomSerializer?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>.\*.|  
+|Todos os tipos no namespace <xref:System.Workflow.ComponentModel>, exceto <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=nameWithType> e <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|  
+|Todos os tipos no namespace <xref:System.Workflow.ComponentModel.Compiler>, exceto <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=nameWithType> e <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|  
+|Todos os tipos no namespace <xref:System.Workflow.ComponentModel.Design>, exceto <xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityTypeCodeDomSerializer?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.DependencyObjectCodeDomSerializer?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|  
   
  [Voltar ao início](#introduction)  
   
@@ -520,13 +521,13 @@ ms.lasthandoff: 11/21/2017
   
 |Tipo|Mensagem|  
 |----------|-------------| 
-|<xref:System.Activities.Statements.Interop>|Substituído primeiramente no .NET Framework 4.5.<br /><br />Os tipos Workflow Foundation 3.0 foram preteridos. Em vez disso, use os tipos do Workflow 4.0 de <xref:System.Activities>.\*.|  
-|<xref:System.Activities.Tracking.InteropTrackingRecord>|Substituído primeiramente no .NET Framework 4.5.<br /><br />Os tipos Workflow Foundation 3.0 foram preteridos. Em vez disso, use os tipos do Workflow 4.0 de <xref:System.Activities>.\*.|   
-|Todos os tipos no namespace <xref:System.Workflow.Runtime>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>.\*.|  
-|Todos os tipos no namespace <xref:System.Workflow.Runtime.Configuration>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>.\*.|  
-|Todos os tipos no namespace <xref:System.Workflow.Runtime.DebugEngine>, exceto <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>.\*.|  
-|Todos os tipos no namespace <xref:System.Workflow.Runtime.Hosting>, exceto <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>.\*.|  
-|Todos os tipos no namespace <xref:System.Workflow.Runtime.Tracking>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>.\*.|  
+|<xref:System.Activities.Statements.Interop>|Substituído primeiramente no .NET Framework 4.5.<br /><br />Os tipos Workflow Foundation 3.0 foram preteridos. Em vez disso, use os tipos do Workflow 4.0 de <xref:System.Activities>\*.|  
+|<xref:System.Activities.Tracking.InteropTrackingRecord>|Substituído primeiramente no .NET Framework 4.5.<br /><br />Os tipos Workflow Foundation 3.0 foram preteridos. Em vez disso, use os tipos do Workflow 4.0 de <xref:System.Activities>\*.|   
+|Todos os tipos no namespace <xref:System.Workflow.Runtime>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|  
+|Todos os tipos no namespace <xref:System.Workflow.Runtime.Configuration>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|  
+|Todos os tipos no namespace <xref:System.Workflow.Runtime.DebugEngine>, exceto <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|  
+|Todos os tipos no namespace <xref:System.Workflow.Runtime.Hosting>, exceto <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|  
+|Todos os tipos no namespace <xref:System.Workflow.Runtime.Tracking>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|  
   
  [Voltar ao início](#introduction)  
   
@@ -535,27 +536,27 @@ ms.lasthandoff: 11/21/2017
   
 |Tipo|Mensagem|  
 |----------|-------------|  
-|<xref:System.ServiceModel.WorkflowServiceHost?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Activation.WorkflowServiceHostFactory?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Activities.Description.WorkflowRuntimeEndpoint?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Configuration.ExtendedWorkflowRuntimeServiceElementCollection?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Configuration.PersistenceProviderElement?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Configuration.WorkflowRuntimeElement?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Description.DurableOperationAttribute?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Description.DurableServiceAttribute?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Description.PersistenceProviderBehavior?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Description.UnknownExceptionAction?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Description.WorkflowRuntimeBehavior?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Dispatcher.DurableOperationContext?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.InstanceLockException?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.InstanceNotFoundException?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.LockingPersistenceProvider?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.PersistenceException?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.PersistenceProvider?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.PersistenceProviderFactory?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.SqlPersistenceProviderFactory?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>.\*.|  
-|Todos os tipos no namespace <xref:System.Workflow.Activities?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Runtime.Hosting.ChannelManagerService?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>.\*.|  
+|<xref:System.ServiceModel.WorkflowServiceHost?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Activation.WorkflowServiceHostFactory?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Activities.Description.WorkflowRuntimeEndpoint?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Configuration.ExtendedWorkflowRuntimeServiceElementCollection?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Configuration.PersistenceProviderElement?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Configuration.WorkflowRuntimeElement?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Description.DurableOperationAttribute?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Description.DurableServiceAttribute?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Description.PersistenceProviderBehavior?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Description.UnknownExceptionAction?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Description.WorkflowRuntimeBehavior?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Dispatcher.DurableOperationContext?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.InstanceLockException?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.InstanceNotFoundException?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.LockingPersistenceProvider?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.PersistenceException?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.PersistenceProvider?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.PersistenceProviderFactory?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.SqlPersistenceProviderFactory?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>\*.|  
+|Todos os tipos no namespace <xref:System.Workflow.Activities?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>\*.|  
+|<xref:System.Workflow.Runtime.Hosting.ChannelManagerService?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>\*.|  
   
  [Voltar ao início](#introduction)  
   
@@ -638,7 +639,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="VBCompat"></a>   
 ### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>Assembly: Microsoft.VisualBasic.Compatibility.dll  
-  Para obter informações sobre a migração do Visual Basic 6, consulte [Visual Basic 6.0 Resource Center](https://msdn.microsoft.com/library/windows/desktop/ms788229).
+  Para obter informações sobre a migração do Visual Basic 6, consulte [Centro de Recursos do Visual Basic 6.0](https://msdn.microsoft.com/library/windows/desktop/ms788229).
 |Tipo|Mensagem|  
 |----------|-------------|  
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray?displayProperty=nameWithType>|Este membro está obsoleto.|  

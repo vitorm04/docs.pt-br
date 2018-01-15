@@ -14,11 +14,11 @@ ms.assetid: 0253bb6d-5519-4a50-b882-b93ef5cca0d9
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 96e6785086f8c97f983c6dcd6fd713c01e34e258
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c1ce74601136c870097d6d558e1f3ff12ba1c212
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a>Como criar um arquivo no Visual Basic
 Este exemplo cria um arquivo de texto vazio no caminho especificado usando o método <xref:System.IO.File.Create%2A> na classe <xref:System.IO.File>.  
@@ -57,4 +57,4 @@ Este exemplo cria um arquivo de texto vazio no caminho especificado usando o mé
  <xref:System.IO>  
  <xref:System.IO.File.Create%2A>  
  [Usando bibliotecas de código parcialmente confiável](../../../../framework/misc/using-libraries-from-partially-trusted-code.md)  
- [Noções Básicas da Segurança de Acesso do Código](https://msdn.microsoft.com/library/33tceax8)
+ [Noções Básicas da Segurança de Acesso do Código](../../../../framework/misc/code-access-security-basics.md)

@@ -1,5 +1,5 @@
 ---
-title: "Introdução ao c# e Visual Studio Code - guia c#"
+title: "Introdução ao C# e Visual Studio Code – Guia do C#"
 description: Saiba como criar e depurar seu primeiro aplicativo .NET Core no C# usando o Visual Studio Code.
 keywords: "C#, Introdução, Aquisição, Instalação, Visual Studio Code, Plataforma Cruzada"
 author: kendrahavens
@@ -10,11 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
-ms.openlocfilehash: 3a9de689946507e4b6d89f684461d65049b3375a
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnetcore
+ms.openlocfilehash: 95052da1688ec1026f11ff679dda6aad50a340fa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introdução ao Visual Studio Code e C#
 
@@ -34,20 +35,20 @@ Vamos começar com um simples programa "Olá, Mundo" no .NET Core:
 
     * Abra o Visual Studio Core.
     * Clique no ícone do Explorer no menu à esquerda e, em seguida, clique em **Abrir Pasta**.
-    * Selecione **arquivo** > **Abrir pasta** no menu principal para abrir a pasta que você deseja seu projeto c# para e clique em **Selecionar pasta**. Para nosso exemplo, estamos criando uma pasta para nosso projeto chamado *HelloWorld*.
+    * Selecione **Arquivo** > **Abrir Pasta** no menu principal para abrir a pasta na qual deseja colocar o projeto C# e clique em **Selecionar Pasta**. Para nosso exemplo, estamos criando uma pasta para nosso projeto chamada *HelloWorld*.
 
       ![VSCodeOpenFolder](media/with-visual-studio-code/vscodeopenfolder.png)
 
 2. Inicialize um projeto em C#:
-    * Abra o Terminal integrado de código do Visual Studio selecionando **exibição** > **Terminal integrada** no menu principal.
+    * Abra o Terminal Integrado no Visual Studio Code selecionando **Exibir** > **Terminal Integrado** no menu principal.
     * Na janela do terminal, digite `dotnet new console`.
-    * Este comando cria um `Program.cs` arquivo na pasta com um programa simples "alô mundo" já gravada, junto com um arquivo de projeto c# chamado `HelloWorld.csproj`.
+    * Esse comando cria um arquivo `Program.cs` na pasta com um programa simples “Olá, Mundo” já escrito, junto com um arquivo de projeto C# chamado `HelloWorld.csproj`.
 
       ![O novo comando dotnet](media/with-visual-studio-code/dotnetnew.png)
 
 3. Resolva os ativos do build:
 
-    * Para **.NET Core 1. x**, tipo `dotnet restore`. Executar `dotnet restore` fornece acesso a pacotes .NET Core que são necessários para compilar seu projeto.
+    * Para o **.NET Core 1.x**, digite `dotnet restore`. Executar `dotnet restore` fornece acesso a pacotes .NET Core que são necessários para compilar seu projeto.
 
       ![O comando de restauração dotnet](media/with-visual-studio-code/dotnetrestore.png)
 
@@ -63,11 +64,11 @@ Você também pode assistir a um tutorial breve em vídeo para obter ajuda na in
 
 ## <a name="debug"></a>Depurar
 
-1. Abra *Program.cs* clicando nele. A primeira vez que você abrir um arquivo c# no Visual Studio Code, [OmniSharp](http://www.omnisharp.net/) é carregado no editor.
+1. Abra *Program.cs* clicando nele. Na primeira vez que um arquivo do C# é aberto no Visual Studio Code, o [OmniSharp](http://www.omnisharp.net/) é carregado no editor.
 
     ![Abra o arquivo Program.cs](media/with-visual-studio-code/opencs.png)
 
-2. Código do Visual Studio solicitará que você adicionar os ativos ausentes para compilar e depurar seu aplicativo. Selecione **Sim**. 
+2. O Visual Studio Code deverá solicitar que você adicione os ativos ausentes para compilar e depurar o aplicativo. Selecione **Sim**. 
 
     ![Prompt para ativos ausentes](media/with-visual-studio-code/missing-assets.png)
 
@@ -79,7 +80,7 @@ Você também pode assistir a um tutorial breve em vídeo para obter ajuda na in
 
     ![Seleção do .NET Core](media/with-visual-studio-code/selectcore.png)
 
-5. Adicionar um ponto de interrupção ao seu projeto, basta clicar no **editor margem**, que é o espaço à esquerda dos números de linha no editor, próximo a linha 9.
+5. Adicione um ponto de interrupção ao projeto clicando na **margem do editor**, espaço à esquerda dos números de linha no editor, ao lado da linha 9.
 
     ![Definindo um ponto de interrupção](media/with-visual-studio-code/setbreakpoint.png)
 

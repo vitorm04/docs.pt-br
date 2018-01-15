@@ -1,40 +1,40 @@
 ---
-title: "A relação entre os recursos de linguagem e tipos de biblioteca | Microsoft Docs"
-description: "Recursos de linguagem geralmente dependem de tipos de biblioteca para implementação. Entenda a relação."
-keywords: "Design de linguagem c#, biblioteca padrão"
+title: "A relação entre os recursos de linguagem e os tipos de bibliotecas | Microsoft Docs"
+description: "Os recursos de linguagem geralmente dependem dos tipos de bibliotecas para implementação. Entenda a relação."
+keywords: "Design de linguagem C#, biblioteca padrão"
 author: billwagner
 ms.author: wiwagn
 ms.date: 07/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 93fd26a72743fcf45df3904cb8d0c787d8a228a8
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: b7de4fdb4356e8822dba6aaaf67d615980ff09cd
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 01/05/2018
 ---
-# <a name="relationships-between-language-features-and-library-types"></a>Relações entre os recursos de linguagem e tipos de biblioteca
+# <a name="relationships-between-language-features-and-library-types"></a>Relações entre os recursos de linguagem e os tipos de bibliotecas
 
-A definição de linguagem c# requer uma biblioteca padrão para determinados tipos e membros determinados acessíveis desses tipos. O compilador gera o código que usa esses tipos necessários e os membros de muitos recursos de idioma diferente. Quando necessário, há pacotes do NuGet que contêm os tipos necessários para as versões mais recentes do idioma ao escrever código para ambientes em que esses tipos ou membros não foram implantados ainda.
+A definição de linguagem C# exige que uma biblioteca padrão tenha determinados tipos e determinados membros acessíveis nesses tipos. O compilador gera o código que usa esses tipos e membros necessários para muitos recursos de linguagem diferentes. Quando necessário, há pacotes NuGet que contêm os tipos necessários para as versões mais recentes da linguagem ao escrever um código para ambientes em que esses tipos ou membros ainda não foram implantados.
 
-Essa dependência na funcionalidade de biblioteca padrão foi parte da linguagem c# desde sua primeira versão. Nessa versão, os exemplos incluídos:
+Essa dependência da funcionalidade da biblioteca padrão faz parte da linguagem C# desde sua primeira versão. Nessa versão, os exemplos incluíam:
 
-* <xref:System.Exception>-usado para todas as exceções geradas pelo compilador.
-* <xref:System.String>-C# `string` tipo é um sinônimo para <xref:System.String>.
-* <xref:System.Int32>-sinônimo de `int`.
+* <xref:System.Exception> – usado para todas as exceções geradas pelo compilador.
+* <xref:System.String> – tipo `string` C# é um sinônimo de <xref:System.String>.
+* <xref:System.Int32> – sinônimo de `int`.
 
-A primeira versão foi simple: o compilador e a biblioteca padrão fornecidos juntos e não havia somente uma versão de cada.
+A primeira versão era simples: o compilador e a biblioteca padrão eram fornecidos juntos e havia somente uma versão de cada um.
 
-As versões subsequentes do c# ocasionalmente adicionou novos tipos ou membros para as dependências. Os exemplos incluem: <xref:System.Runtime.CompilerServices.INotifyCompletion>, <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> e <xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>. C# 7.0 continua isso adicionando uma dependência no <xref:System.ValueTuple> para implementar o [tuplas](../tuples.md) recurso de idioma.
+As versões posteriores do C# ocasionalmente adicionaram novos tipos ou membros às dependências. Os exemplos incluem: <xref:System.Runtime.CompilerServices.INotifyCompletion>, <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> e <xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>. O C# 7.0 continua isso adicionando uma dependência de <xref:System.ValueTuple> para implementar o recurso de linguagem de [tuplas](../tuples.md).
 
-A equipe de design de linguagem funciona para minimizar a área de superfície dos tipos e membros necessários em uma biblioteca padrão compatível. Essa meta é equilibrada em relação a um design limpo onde novos recursos de biblioteca são incorporados diretamente para o idioma. Haverá novos recursos em versões futuras do c# que exigem novos tipos e membros em uma biblioteca padrão. É importante entender como gerenciar essas dependências em seu trabalho.
+A equipe de design de linguagem trabalha para minimizar a área de superfície dos tipos e membros necessários em uma biblioteca padrão em conformidade. Essa meta é equilibrada em relação a um design limpo no qual novos recursos de biblioteca são incorporados diretamente na linguagem. Haverá novos recursos em versões futuras do C# que exigem novos tipos e membros em uma biblioteca padrão. É importante entender como gerenciar essas dependências em seu trabalho.
 
-## <a name="managing-your-dependencies"></a>Gerenciando suas dependências
+## <a name="managing-your-dependencies"></a>Gerenciando as dependências
 
-Ferramentas do compilador c# agora são desacopladas o ciclo de versão das bibliotecas do .NET em plataformas com suporte. Na verdade, bibliotecas .NET diferentes têm ciclos de lançamento diferentes: o .NET Framework no Windows é relesed como uma atualização do Windows, .NET Core é fornecido em uma agenda separada e as versões do Xamarin do envio de atualizações de biblioteca com as ferramentas Xamarin para cada plataforma de destino.
+As ferramentas do compilador C# agora são desacopladas do ciclo de liberação das bibliotecas .NET em plataformas com suporte. Na verdade, bibliotecas .NET diferentes têm ciclos de liberação diferentes: o .NET Framework no Windows é liberado como um Windows Update, o .NET Core é fornecido em um agendamento separado e as versões do Xamarin das atualizações de biblioteca são fornecidas com as ferramentas do Xamarin para cada plataforma de destino.
 
-A maior parte do tempo, você não perceberá essas alterações. No entanto, quando você estiver trabalhando com uma versão mais recente do idioma que requer recursos não ainda nas bibliotecas do .NET nessa plataforma, você será referenciar os pacotes do NuGet para fornecer esses novos tipos.
-Como as plataformas de seu aplicativo suporta é atualizadas com as novas instalações do framework, você pode remover a referência extra.
+Na maior parte do tempo, você não perceberá essas alterações. No entanto, quando estiver trabalhando com uma versão mais recente da linguagem que exige recursos que ainda não estão nas bibliotecas .NET nessa plataforma, você referenciará os pacotes NuGet para fornecer esses novos tipos.
+Conforme as plataformas para as quais seu aplicativo dá suporte forem atualizadas com as novas instalações de estrutura, você poderá remover a referência extra.
 
-Essa separação significa que você pode usar os novos recursos de linguagem até mesmo quando você direcionar máquinas que podem não ter o framework correspondente.
+Essa separação significa que você pode usar os novos recursos de linguagem até mesmo quando direcionar computadores que podem não ter a estrutura correspondente.

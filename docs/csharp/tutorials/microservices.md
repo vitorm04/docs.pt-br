@@ -10,15 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: 6cdc4eb0d0fea93b5210532210ad0c928e35a7a5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d399cdce81350356b71e21d879a4f5b5079f98d8
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="microservices-hosted-in-docker"></a>Microsserviços hospedados no Docker
-
-## <a name="introduction"></a>Introdução
 
 Este tutorial detalha as tarefas necessárias para compilar e implantar um microsserviço ASP.NET Core em um contêiner do Docker. Durante este tutorial, você aprenderá:
 
@@ -56,13 +54,13 @@ Aqui, você precisará instalar uma série de ferramentas de linha de comando qu
 
 `npm install -g yo bower grunt-cli gulp`
 
-A opção `-g` indica que é uma instalação global, e essas ferramentas estão disponíveis em todo o sistema. (Uma instalação local define o escopo do pacote para um único projeto). Após a instalação dessas ferramentas essenciais, você precisará instalar os geradores de modelo asp.net de yeoman:
+A opção `-g` indica que é uma instalação global, e essas ferramentas estão disponíveis em todo o sistema. (Uma instalação local define o escopo do pacote para um único projeto). Após a instalação dessas ferramentas básicas, você precisará instalar os geradores de modelo ASP.NET do Yeoman:
 
 `npm install -g generator-aspnet`
 
 ## <a name="create-the-application"></a>Criar o aplicativo
 
-Agora que você instalou todas as ferramentas, crie um novo aplicativo asp.net core. Para usar o gerador de linha de comando, execute o seguinte comando yeoman no shell de sua preferência:
+Agora que você instalou todas as ferramentas, crie um novo aplicativo ASP.NET Core. Para usar o gerador de linha de comando, execute o seguinte comando yeoman no shell de sua preferência:
 
 `yo aspnet`
 
@@ -70,12 +68,12 @@ Esse comando solicita a seleção do Tipo de aplicativo que você deseja criar. 
 
 O modelo cria oito arquivos para você:
 
-* Um .gitignore, personalizado para aplicativos asp.net core.
+* Um .gitignore, personalizado para aplicativos ASP.NET Core.
 * Um arquivo Startup.cs. Contém a base do aplicativo.
 * Um arquivo Program.cs. Contém o ponto de entrada do aplicativo.
 * Um arquivo WeatherMicroservice.csproj. Esse é o arquivo de compilação do aplicativo.
 * Um dockerfile. Esse script cria uma imagem do Docker para o aplicativo.
-* Um README.md. Contém links para outros recursos do asp.net core.
+* Um README.md. Contém links para outros recursos do ASP.NET Core.
 * Um arquivo web.config. Contém informações básicas de configuração.
 * Um arquivo runtimeconfig.template.json. Contém as configurações de depuração usadas pelos IDEs.
 
@@ -113,7 +111,7 @@ O nó 'estruturas' especifica as versões e as configurações da estrutura .NET
 
 O aplicativo é implementado em Startup.cs. Esse arquivo contém a classe de inicialização.
 
-Os dois métodos são chamados pela infraestrutura do asp.net core para configurar e executar o aplicativo. O método `ConfigureServices` descreve os serviços que são necessários para este aplicativo. Você está compilando um microsserviço enxuto, portanto, não precisa configurar dependências. O método `Configure` configura os manipuladores para solicitações HTTP de entrada. O modelo gera um manipulador simples que responde a qualquer solicitação com o texto "Hello World!".
+Os dois métodos são chamados pela infraestrutura do ASP.NET Core para configurar e executar o aplicativo. O método `ConfigureServices` descreve os serviços que são necessários para este aplicativo. Você está compilando um microsserviço enxuto, portanto, não precisa configurar dependências. O método `Configure` configura os manipuladores para solicitações HTTP de entrada. O modelo gera um manipulador simples que responde a qualquer solicitação com o texto "Hello World!".
 
 ## <a name="build-a-microservice"></a>Criar um microsserviço
 
@@ -227,7 +225,7 @@ Um ***Contêiner do Docker*** representa uma instância em execução de uma ima
 
 Por analogia, você pode considerar a *imagem do Docker* como uma *classe* e o *Contêiner do Docker* como um objeto ou uma instância dessa classe.  
 
-O Dockerfile criado pelo modelo asp.net servirá para os nossos objetivos. Vamos analisar o conteúdo.
+O Dockerfile criado pelo modelo ASP.NET servirá para nossos objetivos. Vamos analisar o conteúdo.
 
 A primeira linha especifica a imagem de origem:
 
@@ -259,7 +257,7 @@ RUN dotnet publish -c Release -o out
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Isso copiará o arquivo de projeto do diretório atual para a VM do docker e restaurará todos os pacotes. Usar a CLI do dotnet significa que a imagem do Docker deve incluir o SDK do .NET Core. Depois disso, o restante de seu aplicativo será copiado e o comando publish do dotnet compilará e empacotará seu aplicativo.
+Isso copiará o arquivo de projeto do diretório atual para a VM do Docker e restaurará todos os pacotes. Usar a CLI do dotnet significa que a imagem do Docker deve incluir o SDK do .NET Core. Depois disso, o restante de seu aplicativo será copiado e o comando publish do dotnet compilará e empacotará seu aplicativo.
 
 A linha final do arquivo executa o aplicativo:
 
@@ -267,7 +265,7 @@ A linha final do arquivo executa o aplicativo:
 ENTRYPOINT ["dotnet", "out/WeatherMicroservice.dll", "--server.urls", "http://0.0.0.0:5000"]
 ```
 
-Essa porta configurada é referenciada no argumento `--server.urls` para `dotnet` na última linha do Dockerfile. O comando `ENTRYPOINT` informa ao Docker qual comando, e opções de linha de comando, inicia o serviço. 
+Essa porta configurada é referenciada no argumento `--server.urls` para `dotnet` na última linha do Dockerfile. O comando `ENTRYPOINT` informa ao Docker qual comando e quais opções de linha de comando iniciarão o serviço. 
 
 ## <a name="building-and-running-the-image-in-a-container"></a>Crie e execute a imagem em um contêiner.
 
@@ -279,7 +277,7 @@ obj/*
 out/*
 ```
 
-Compile a imagem usando o comando de compilação do docker. Execute o seguinte comando no diretório que contém seu código.
+Crie a imagem usando o comando `docker build`. Execute o seguinte comando no diretório que contém seu código.
 
 ```console
 docker build -t weather-microservice .
@@ -320,7 +318,7 @@ docker attach --sig-proxy=false hello-docker
 O argumento `--sig-proxy=false` significa que os comandos `Ctrl-C` não são enviados ao processo do contêiner, mas, em vez disso, interrompem o comando `docker attach`. O argumento final é o nome fornecido ao contêiner no comando `docker run`. 
 
 > [!NOTE]
-> Use também a ID de contêiner atribuída pelo docker para se referir a qualquer contêiner. Se você não tiver especificado um nome para seu contêiner no `docker run`, use a id do contêiner.
+> Use também a ID de contêiner atribuída pelo Docker para se referir a qualquer contêiner. Se você não tiver especificado um nome para seu contêiner no `docker run`, use a id do contêiner.
 
 Abra um navegador e navegue até seu serviço. Você verá as mensagens de diagnóstico nas janelas de comando do contêiner anexado em execução.
 
@@ -346,8 +344,8 @@ docker rmi weather-microservice
 
 ## <a name="conclusion"></a>Conclusão 
 
-Neste tutorial, você criou um microsserviço do asp.net core e adicionou alguns recursos simples.
+Neste tutorial, você criou um microsserviço do ASP.NET Core e adicionou alguns recursos simples.
 
-Você criou uma imagem de contêiner do docker para o serviço e executou o contêiner em seu computador. Você anexou uma janela de terminal ao serviço e viu as mensagens de diagnóstico de seu serviço.
+Você criou uma imagem de contêiner do Docker para o serviço e executou o contêiner no computador. Você anexou uma janela de terminal ao serviço e viu as mensagens de diagnóstico de seu serviço.
 
 Durante o tutorial, você viu vários recursos da linguagem C# em ação.

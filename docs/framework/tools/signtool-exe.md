@@ -16,11 +16,12 @@ caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 06a8b2e41841dfa43609468cce60a3776137b720
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 326b952b742dc3400b7a84ba35594b61aeaabb6c
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Ferramenta de Assinatura)
 A Ferramenta de Assinatura é uma ferramenta de linha de comando que assina digitalmente arquivos, verifica assinaturas em arquivos e em arquivos de carimbo de data/hora.  
@@ -147,7 +148,7 @@ signtool [command] [options] [file_name | ...]
   
  Para obter exemplos de uso, consulte [Using SignTool to Verify a File Signature](http://msdn.microsoft.com/library/windows/desktop/aa388171.aspx) (Usando SignTool para verificar a assinatura de um arquivo).  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  A Ferramenta de Assinatura retorna um dos códigos de saída a seguir quando é encerrada.  
   
 |Código de saída|Descrição|  
@@ -178,7 +179,7 @@ signtool sign /f MyCert.pfx /p MyPassword MyFile.exe
  O comando a seguir assina digitalmente e coloca carimbos de data/hora em um arquivo. O certificado usado para assinar o arquivo é armazenado em um arquivo PFX.  
   
 ```  
-signtool sign /f MyCert.pfx /t  HYPERLINK "http://timestamp.verisign.com/scripts/timstamp.dll" http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
+signtool sign /f MyCert.pfx /t http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
 ```  
   
  O comando a seguir assina um arquivo usando um certificado localizado no armazenamento `My` que tem um nome de entidade de `My Company Certificate`.  
@@ -196,7 +197,7 @@ Signtool sign /f MyCert.pfx /d: "MyControl" /du http://www.example.com/MyControl
  O comando a seguir marca um arquivo com carimbos de data/hora já assinado digitalmente.  
   
 ```  
-signtool timestamp /t  HYPERLINK "http://timestamp.verisign.com/scripts/timstamp.dll" http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
+signtool timestamp /t http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
 ```  
   
  O comando a seguir verifica se um arquivo foi assinado.  

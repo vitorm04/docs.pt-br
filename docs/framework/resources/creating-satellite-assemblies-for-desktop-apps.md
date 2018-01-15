@@ -34,11 +34,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 11d455f16c5ee3ce78c26c7642831900e527b960
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0d360dc5b95c1cdb8de54bcbd723d0056c81c9c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Criando assemblies satélite para aplicativos de área de trabalho
 Arquivos de recurso desempenham um papel central em aplicativos localizados. Eles permitem que um aplicativo exiba cadeias de caracteres, imagens e outros dados no idioma e na cultura do usuário e forneça dados alternativos se esses recursos não estiverem disponíveis. O .NET Framework usa um modelo de hub e spoke para localizar e recuperar os recursos localizados. O hub é o principal assembly que contém o código executável não localizável e os recursos para uma única cultura, que é chamada de cultura neutra ou padrão. O padrão é a cultura de fallback para o aplicativo; ela é usada quando não há recursos localizados disponíveis. Você usa o atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> para designar a cultura da cultura padrão do aplicativo. Cada spoke conecta-se a um assembly satélite que contém os recursos para uma única cultura localizada, mas não contém nenhum código. Como os assemblies satélite não fazem parte do assembly principal, você pode facilmente atualizar ou substituir recursos que correspondem a uma cultura específica sem substituir o assembly principal do aplicativo.  
@@ -250,7 +251,7 @@ gacutil /i:StringLibrary.resources.dll
 7.  Compile o seguinte código-fonte para StringLibrary.vb ou StringLibrary.cs com os recursos da cultura padrão em um assembly de biblioteca assinado com atraso chamado StringLibrary.dll:  
   
     > [!IMPORTANT]
-    >  Se você estiver usando a linha de comando em vez de Visual Studio para criar o exemplo, você deve modificar a chamada para o <xref:System.Resources.ResourceManager> construtor de classe `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`.  
+    >  Se você estiver usando a linha de comando em vez do Visual Studio para criar o exemplo, modifique a chamada ao construtor de classe <xref:System.Resources.ResourceManager> para `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`.  
   
      [!code-csharp[Conceptual.Resources.Satellites#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#1)]
      [!code-vb[Conceptual.Resources.Satellites#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#1)]  
@@ -321,5 +322,5 @@ gacutil /i:StringLibrary.resources.dll
  [Assinar um assembly com atraso](../../../docs/framework/app-domains/delay-sign-assembly.md)  
  [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
  [Sn.exe (Ferramenta Nome Forte)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
- [Gacutil.exe (Ferramenta Cache de Assembly Global)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
+ [Gacutil.exe (Ferramenta do Cache de Assemblies Global)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
  [Recursos em aplicativos de área de trabalho](../../../docs/framework/resources/index.md)

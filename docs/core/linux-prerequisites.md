@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
-ms.openlocfilehash: 04fdf26e150e6d489c0641588563f69f24835615
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: ec08d9fa3ad672400b61c269da0c6a70ed9ef2f5
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Pré-requisitos para o .NET Core no Linux
 
@@ -62,14 +63,14 @@ Consulte [.NET Core 1.x Supported OS Versions](https://github.com/dotnet/core/bl
 
 ## <a name="linux-distribution-dependencies"></a>Dependências de distribuição do Linux
 
-O exemplo a seguir devem ser exemplos. Os nomes e versões exatas podem variar ligeiramente em sua distribuição Linux de escolha.
+Veja a seguir alguns exemplos. Os nomes e as versões exatas podem variar ligeiramente na distribuição Linux de sua escolha.
 
 ### <a name="ubuntu"></a>Ubuntu
 
 As distribuições do Ubuntu requerem que as seguintes bibliotecas estejam instaladas:
 
 * libunwind8
-* liblttng ust0
+* liblttng-ust0
 * libcurl3
 * libssl1.0.0
 * libuuid1
@@ -84,11 +85,11 @@ As distribuições do Ubuntu requerem que as seguintes bibliotecas estejam insta
 As distribuições do CentOS requerem que as seguintes bibliotecas estejam instaladas:
 
 * libunwind
-* deve lttng
+* lttng-ust
 * libcurl
-* bibliotecas OpenSSL
+* openssl-libs
 * libuuid
-* krb5 bibliotecas
+* krb5-libs
 * libicu
 * zlib
 
@@ -105,7 +106,7 @@ No Linux, há duas opções de pacote de instalador:
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>Instalações de script com o script do instalador do .NET Core
 
-Os scripts `dotnet-install` são usados para executar uma instalação de não administrador da cadeia de ferramentas da CLI e o tempo de execução compartilhado. Você pode baixar o script de: https://dot.net/v1/dotnet-install.sh
+Os scripts `dotnet-install` são usados para executar uma instalação de não administrador da cadeia de ferramentas da CLI e o tempo de execução compartilhado. Baixe o script em https://dot.net/v1/dotnet-install.sh
 
 O script bash do instalador é usado em cenários de automação e em instalações não realizadas por administrador. Esse script também lê as opções do PowerShell para que elas possam ser usadas com o script em sistemas Linux/OS X.
 
@@ -211,6 +212,12 @@ Para que o canal do .NET do Red Hat acesse a ajuda de registro, consulte o [Cap�
 
 3. Configure o feed do pacote de host de versão desejado.
 
+   **Ubuntu 17.10**
+
+   ```bash
+   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-artful-prod artful main" > /etc/apt/sources.list.d/dotnetdev.list'
+   sudo apt-get update
+   ```
    **Ubuntu 17.04**
 
    ```bash
@@ -235,7 +242,7 @@ Para que o canal do .NET do Red Hat acesse a ajuda de registro, consulte o [Cap�
 4. Instale o .NET Core.
 
    ```bash
-   sudo apt-get install dotnet-sdk-2.0.0
+   sudo apt-get install dotnet-sdk-2.1.3
    ```
 
 4. Execute o comando `dotnet --version` para comprovar que a instalação foi bem-sucedida.

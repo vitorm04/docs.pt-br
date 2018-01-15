@@ -9,31 +9,32 @@ ms.date: 10/17/2017
 ms.topic: article
 ms.prod: .net-framework
 ms.devlang: dotnet
-ms.openlocfilehash: f0ba44b6eecb7e74f65da530f39c7db55a7f90d8
-ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
+ms.workload: dotnet
+ms.openlocfilehash: 5a8ecaddf50969275e7de03f9b108019f423c23e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Instalar o .NET Framework no Windows 8 e Windows Server 2012
 
-O .NET Framework é necessário para executar muitos aplicativos no Windows. Você pode usar as instruções a seguir para instalá-lo. Você pode ter chegado nesta página depois de tentar executar um aplicativo e ver a caixa de diálogo a seguir em seu computador.
+O .NET Framework é necessário para executar muitos aplicativos no Windows. Use as instruções a seguir para instalá-lo. Você pode ter chegado nesta página depois de tentar executar um aplicativo e ver a caixa de diálogo a seguir no computador.
 
-![Este aplicativo não pôde ser iniciado](./media/this-application-could-not-be-started.png)
+![Não foi possível iniciar o aplicativo](./media/this-application-could-not-be-started.png)
 
-Essas instruções ajudará você a instalar as versões do .NET Framework que você precisa. O [do .NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) é a versão mais recente. Não há suporte no Windows 8. Ele está incluído com o [criadores de atualização do Windows 10 estão](https://www.microsoft.com/software-download/windows10) e [1709 de versão do Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709).
+Essas instruções ajudarão você a instalar as versões do .NET Framework necessárias. O [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) é a última versão. Não há suporte para ele no Windows 8. Ele está incluído no [Windows 10 Fall Creators Update](https://www.microsoft.com/software-download/windows10) e [Windows Server 2016 Versão 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709).
 
-## <a name="net-framework-471"></a>.NET framework 4.7.1
+## <a name="net-framework-471"></a>.NET Framework 4.7.1
 
 * [Baixar o .NET Framework 4.7.1](https://www.microsoft.com/net/framework/versions/net471?utm_source=ms-docs&utm_medium=referral)
 
-Há suporte para o .NET Framework 4.7.1 no Windows Server 2012. Não há suporte no Windows 8.
+Há suporte para o .NET Framework 4.7.1 no Windows Server 2012. Não há suporte para ele no Windows 8.
 
-O [do .NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) pode ser usado para executar aplicativos criados para o .NET Framework 4.0 ou posterior.
+O [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) pode ser usado para executar aplicativos criados para o .NET Framework 4.0 ou posterior.
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 
-O [do .NET Framework 4.6](https://www.microsoft.com/en-us/download/details.aspx?id=48130) é a versão mais recente com suporte do .NET Framework no Windows 8.
+O [.NET Framework 4.6](https://www.microsoft.com/en-us/download/details.aspx?id=48130) é a última versão do .NET Framework com suporte no Windows 8.
 
 O .NET Framework 4.6 dá suporte a aplicativos criados para o .NET Framework 4.0 a 4.6.
 

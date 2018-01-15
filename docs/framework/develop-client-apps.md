@@ -24,11 +24,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: daf09f94b4c0854365274773f8c426cc07e8c6dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f90cbac0e7f78d8965a75df281c0db6b213d9e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>Implementando aplicativos cliente com o .NET Framework
 Há várias maneiras de desenvolver aplicativos baseados no Windows com o .NET Framework que são executados localmente nos computadores ou dispositivos dos usuários. Esta seção contém tópicos que descrevem como criar aplicativos baseados no Windows usando o WPF (Windows Presentation Foundation) ou o Windows Forms. No entanto, você pode também usar o .NET Framework para criar aplicativos Web e aplicativos cliente para computadores ou dispositivos que depois pode disponibilizar pela Windows Store e pela Loja do Windows Phone.  
@@ -63,5 +64,5 @@ Há várias maneiras de desenvolver aplicativos baseados no Windows com o .NET F
  [Biblioteca de classes portátil](../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)  
  [Visão Geral](../../docs/framework/get-started/overview.md)  
  [Guia de desenvolvimento](../../docs/framework/development-guide.md)  
- [Como: criar um aplicativo de área de trabalho do Windows](http://msdn.microsoft.com/library/47021403-eaca-4c34-946a-a26c42a64148)  
+ [Como criar um aplicativo da área de trabalho do Windows](http://msdn.microsoft.com/library/47021403-eaca-4c34-946a-a26c42a64148)  
  [Aplicativos do Serviço Windows](../../docs/framework/windows-services/index.md)

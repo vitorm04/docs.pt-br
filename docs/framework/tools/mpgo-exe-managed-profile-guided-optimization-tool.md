@@ -19,11 +19,12 @@ caps.latest.revision: "31"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b6c95613cdc7ac656e8beafcf9a685e51eddf5a6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 49d2154b1af4350c3145f2cb9be30505e0967a4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Ferramenta de Otimização Guiada por Perfil Gerenciado)
 A Ferramenta de Otimização Guiada por Perfil Gerenciado (Mpgo.exe) é uma ferramenta de linha de comando que usa cenários de usuário final comuns para otimizar os assemblies de imagem nativa criados pelo [Gerador de Imagem Nativa (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). Essa ferramenta permite executar cenários de treinamento que geram dados de perfil. O [Gerador de Imagem Nativa (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) usa esses dados para otimizar seus assemblies de aplicativo de imagem nativa gerados. Um cenário de treinamento é uma execução de avaliação de um uso esperado do aplicativo. Mpgo.exe está disponível no Visual Studio Ultimate 2012 e em versões posteriores. Desde o [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], também é possível usar Mpgo.exe para otimizar aplicativos do [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
@@ -136,5 +137,5 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
 ## <a name="see-also"></a>Consulte também  
  [Ngen.exe (Gerador de Imagens Nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
  [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
- [Melhorando o desempenho de inicialização para seus aplicativos de área de trabalho](http://go.microsoft.com/fwlink/p/?LinkId=248943)  
+ [Melhorando o desempenho de inicialização dos aplicativos da área de trabalho](http://go.microsoft.com/fwlink/p/?LinkId=248943)  
  [Uma visão geral dos aprimoramentos de desempenho no .NET 4.5](http://go.microsoft.com/fwlink/p/?LinkId=249131)

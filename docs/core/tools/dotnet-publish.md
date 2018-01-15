@@ -7,11 +7,12 @@ ms.date: 09/01/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: d59ba8cf74a63c7d4a2234989477b5778fa0148f
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.workload: dotnetcore
+ms.openlocfilehash: 46e2f6d485f360660424accbddc2278eaa497a8d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -91,11 +92,11 @@ Não executa uma restauração implícita ao executar o comando.
 `-o|--output <OUTPUT_DIRECTORY>`
 
 Especifica o caminho para o diretório de saída. Se não for especificado, o padrão será *./bin/[configuração]/[estrutura]/* para uma implantação dependente da estrutura, ou *./bin/[configuração]/[estrutura]/[tempo de execução]* para implantações autocontidas.
-Se um caminho relativo for fornecido, o diretório de saída gerado é relativo ao local de arquivo de projeto, não para o diretório de trabalho atual.
+Se um caminho relativo for fornecido, o diretório de saída gerado será relativo ao local do arquivo de projeto, não ao diretório de trabalho atual.
 
 `--self-contained`
 
-Publica o tempo de execução do .NET Core com seu aplicativo para que não seja necessário instalar o tempo de execução no computador de destino. Se um identificador de tempo de execução for especificado, seu valor padrão será `true`. Para obter mais informações sobre os diferentes tipos de implantação, consulte [implantação de aplicativos .NET Core](../deploying/index.md).
+Publica o tempo de execução do .NET Core com seu aplicativo para que não seja necessário instalar o tempo de execução no computador de destino. Se um identificador de tempo de execução for especificado, seu valor padrão será `true`. Para obter mais informações sobre os diferentes tipos de implantação, consulte [Implantação de aplicativos .NET Core](../deploying/index.md).
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
@@ -130,7 +131,7 @@ Especifica um ou vários [manifestos de destino](../deploying/runtime-store.md) 
 `-o|--output <OUTPUT_DIRECTORY>`
 
 Especifica o caminho para o diretório de saída. Se não for especificado, o padrão será *./bin/[configuração]/[estrutura]/* para uma implantação dependente da estrutura, ou *./bin/[configuração]/[estrutura]/[tempo de execução]* para implantações autocontidas.
-Se um caminho relativo for fornecido, o diretório de saída gerado é relativo ao local de arquivo de projeto, não para o diretório de trabalho atual.
+Se um caminho relativo for fornecido, o diretório de saída gerado será relativo ao local do arquivo de projeto, não ao diretório de trabalho atual.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 

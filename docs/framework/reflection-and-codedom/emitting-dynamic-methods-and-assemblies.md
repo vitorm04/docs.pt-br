@@ -17,11 +17,12 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 91b0cc4614834f2ad8f7b54d9364d484ca9a6990
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c724620c987b2ee871dc282bca0dd3da1a5031bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Emitindo métodos e assemblies dinâmicos
 Esta seção descreve um conjunto de tipos gerenciados no namespace <xref:System.Reflection.Emit> que permite que um compilador ou ferramenta emita metadados e o MSIL (Microsoft Intermediate Language) no tempo de execução e, opcionalmente, gere um arquivo executável portátil (PE) no disco. Mecanismos de script e compiladores são os principais usuários desse namespace. Nesta seção, a funcionalidade fornecida pelo namespace <xref:System.Reflection.Emit> é conhecida como emissão de reflexão.  
@@ -46,20 +47,20 @@ Esta seção descreve um conjunto de tipos gerenciados no namespace <xref:System
   
 ## <a name="in-this-section"></a>Nesta seção
   
-[Emissão de reflexão problemas de segurança](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
+[Problemas de segurança na emissão de reflexão](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
 Descreve os problemas de segurança relacionados à criação de assemblies dinâmicos usando emissão de reflexão.  
 
-[Como: definir e executar métodos dinâmicos](how-to-define-and-execute-dynamic-methods.md)   
-Mostra como executar um método dinâmico simples e um método dinâmico ligado a uma instância de uma classe.
+[Como definir e executar métodos dinâmicos](how-to-define-and-execute-dynamic-methods.md)   
+Mostra como executar um método dinâmico simples e um método dinâmico vinculado a uma instância de uma classe.
 
-[Como: definir um tipo genérico com reflexão emitir](how-to-define-a-generic-type-with-reflection-emit.md)   
-Mostra como criar um tipo genérico simple com parâmetros de tipo dois, como a classe, interface e restrições especiais para os parâmetros de tipo e como criar memers que usam os parâmetros de tipo da classe como tipos de parâmetro e tipos de retorno.
+[Como definir um tipo genérico com a emissão de reflexão](how-to-define-a-generic-type-with-reflection-emit.md)   
+Mostra como criar um tipo genérico simples com dois parâmetros de tipo, como aplicar restrições de classe, de interface e especiais aos parâmetros de tipo e como criar membros que usam os parâmetros de tipo da classe como tipos de parâmetro e tipos de retorno.
 
-[Como: definir um método genérico com reflexão emitir](how-to-define-a-generic-method-with-reflection-emit.md)   
-Mostra como criar, emitir e invoca um método genérico simple.
+[Como definir um método genérico com a emissão de reflexão](how-to-define-a-generic-method-with-reflection-emit.md)   
+Mostra como criar, emitir e invocar um método genérico simples.
 
-[Assemblies de coleção para a geração de tipo dinâmico](collectible-assemblies.md)   
-Apresenta os assemblies de coleção, que são conjuntos dinâmicos que podem ser descarregados sem descarregar o domínio de aplicativo no qual eles foram criados.
+[Assemblies de coleção para geração de tipos dinâmicos](collectible-assemblies.md)   
+Apresenta os assemblies de coleção, que são assemblies dinâmicos que podem ser descarregados sem descarregar o domínio do aplicativo no qual eles foram criados.
   
 ## <a name="reference"></a>Referência  
  <xref:System.Reflection.Emit.OpCodes>  
@@ -79,4 +80,4 @@ Apresenta os assemblies de coleção, que são conjuntos dinâmicos que podem se
  Explica como explorar os metadados e o código gerenciado.  
   
  [Assemblies no Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- Fornece uma visão geral dos assemblies em implementações de .NET.
+ Fornece uma visão geral dos assemblies em implementações do .NET.

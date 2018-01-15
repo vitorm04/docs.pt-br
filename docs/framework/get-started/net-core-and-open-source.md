@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8233db6bdf8c07bcc62f2e0f3819afb72dc10f5a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cc41a51a9c85b84f2f5365eb1650ebec37888652
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-core-and-open-source"></a>.NET Core e software livre
 Este tópico fornece uma breve visão geral sobre o que é o .NET Core e mostra como você pode encontrar mais informações. Para obter a lista completa de tópicos sobre o .NET Core, visite o [Guia do .NET Core](../../core/index.md).
@@ -54,6 +55,6 @@ Este tópico fornece uma breve visão geral sobre o que é o .NET Core e mostra 
 -   [ASP.NET Core](https://github.com/aspnet/home)  
   
 ## <a name="see-also"></a>Consulte também  
- [Home page do .NET core](https://www.microsoft.com/net/core)  
+ [Home page do .NET Core](https://www.microsoft.com/net/core)  
  [Guia do .NET Core](../../core/index.md)  
  [Documentação do ASP.NET Core](/aspnet/core/)

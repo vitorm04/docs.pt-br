@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 82ebe16d-5e1c-46cc-91e8-71974296429c
-ms.openlocfilehash: fc7a40667c9b0a623bb0ebdf4ad60783fa58e6c5
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.workload: dotnetcore
+ms.openlocfilehash: 302383ec44afd91d1df7f6c717b268d5f965c8c9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Implantando aplicativos .NET Core com ferramentas da CLI (interface de linha de comando)
 
@@ -48,7 +49,7 @@ Implantar uma implantação dependente de estrutura sem dependências de terceir
 
 1. Atualize as ferramentas e as dependências do projeto.
  
-   Execute o [restauração dotnet](../tools/dotnet-restore.md) ([consulte a Observação](#dotnet-restore-note)) comando para restaurar as dependências especificadas em seu projeto.
+   Execute o comando [dotnet restore](../tools/dotnet-restore.md) ([veja observação](#dotnet-restore-note)) para restaurar as dependências especificadas no projeto.
 
 1. Crie um build de depuração do seu aplicativo.
 
@@ -71,7 +72,7 @@ Além dos binários do aplicativo, o instalador deverá também agrupar o instal
 
 ## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>Implantação dependente de estrutura com dependências de terceiros
 
-Implantar uma implantação dependente de estrutura com uma ou mais dependências de terceiros requer que as dependências estejam disponíveis para seu projeto. São necessárias duas etapas adicionais antes de executar o `dotnet restore` ([consulte a Observação](#dotnet-restore-note)) comando:
+Implantar uma implantação dependente de estrutura com uma ou mais dependências de terceiros requer que as dependências estejam disponíveis para seu projeto. São necessárias duas etapas adicionais antes de executar o comando `dotnet restore` ([veja observação](#dotnet-restore-note)):
 
 1. Adicione referências para as bibliotecas de terceiros necessárias à seção `<ItemGroup>` do arquivo *csproj*. A seção `<ItemGroup>` a seguir contém uma dependência no [Json.NET](http://www.newtonsoft.com/json) como uma biblioteca de terceiros:
 
@@ -81,7 +82,7 @@ Implantar uma implantação dependente de estrutura com uma ou mais dependência
       </ItemGroup>
       ```
 
-1. Se você ainda não o fez, baixe o pacote NuGet contendo a dependência de terceiros. Para baixar o pacote, execute o `dotnet restore` ([consulte a Observação](#dotnet-restore-note)) comando depois de adicionar a dependência. Como a dependência é resolvida fora do cache local do NuGet no momento da publicação, ela deve estar disponível no seu sistema.
+1. Se você ainda não o fez, baixe o pacote NuGet contendo a dependência de terceiros. Para baixar o pacote, execute o comando `dotnet restore` ([veja observação](#dotnet-restore-note)) depois de adicionar a dependência. Como a dependência é resolvida fora do cache local do NuGet no momento da publicação, ela deve estar disponível no seu sistema.
 
 Observe que uma implantação dependente de estrutura com dependências de terceiros tem a mesma portabilidade que suas dependências de terceiros. Por exemplo, se uma biblioteca de terceiros der suporte apenas a macOS, o aplicativo não será portátil para sistemas Windows. Isso acontecerá se a dependência de terceiros em si depender do código nativo. Um bom exemplo disso é o [servidor Kestrel](/aspnet/core/fundamentals/servers/kestrel), que requer uma dependência nativa no [libuv](https://github.com/libuv/libuv). Quando uma FDD é criada para um aplicativo com esse tipo de dependência de terceiros, a saída publicada contém uma pasta para cada [RID (Identificador de Tempo de Execução)](../rid-catalog.md) que dá suporte a dependência nativa (e que existe em seu pacote NuGet).
 
@@ -119,7 +120,7 @@ Implantar uma implantação autocontida sem dependências de terceiros inclui a 
 
 1. Atualize as ferramentas e as dependências do projeto.
 
-   Execute o [restauração dotnet](../tools/dotnet-restore.md) ([consulte a Observação](#dotnet-restore-note)) comando para restaurar as dependências especificadas em seu projeto.
+   Execute o comando [dotnet restore](../tools/dotnet-restore.md) ([veja observação](#dotnet-restore-note)) para restaurar as dependências especificadas no projeto.
 
 1. Crie um build de depuração do seu aplicativo.
 
@@ -154,7 +155,7 @@ A seguir está o arquivo *csproj* completo para esse projeto.
 
 ## <a name="self-contained-deployment-with-third-party-dependencies"></a>Implantação autocontida com dependências de terceiros
 
-Implantar uma implantação autocontida com uma ou mais dependências de terceiros envolve adicionar as dependências. São necessárias duas etapas adicionais antes de executar o `dotnet restore` ([consulte a Observação](#dotnet-restore-note)) comando:
+Implantar uma implantação autocontida com uma ou mais dependências de terceiros envolve adicionar as dependências. São necessárias duas etapas adicionais antes de executar o comando `dotnet restore` ([veja observação](#dotnet-restore-note)):
 
 1. Adicione referências a quaisquer bibliotecas de terceiros à seção `<ItemGroup>` de seu arquivo *csproj*. A seção `<ItemGroup>` a seguir usa Json.NET como uma biblioteca de terceiros.
 
@@ -164,7 +165,7 @@ Implantar uma implantação autocontida com uma ou mais dependências de terceir
       </ItemGroup>
     ```
 
-1. Se você ainda não o fez, baixe o pacote NuGet que contém a dependência de terceiros para seu sistema. Para disponibilizar a dependência ao seu aplicativo, execute o `dotnet restore` ([consulte a Observação](#dotnet-restore-note)) comando depois de adicionar a dependência. Como a dependência é resolvida fora do cache local do NuGet no momento da publicação, ela deve estar disponível no seu sistema.
+1. Se você ainda não o fez, baixe o pacote NuGet que contém a dependência de terceiros para seu sistema. Para disponibilizar a dependência para seu aplicativo, execute o comando `dotnet restore` ([veja observação](#dotnet-restore-note)) depois de adicionar a dependência. Como a dependência é resolvida fora do cache local do NuGet no momento da publicação, ela deve estar disponível no seu sistema.
 
 A seguir está o arquivo *csproj* completo para esse projeto:
 

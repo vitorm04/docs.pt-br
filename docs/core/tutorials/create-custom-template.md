@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
-ms.openlocfilehash: c3955951c0367e1933342172c1bc1888fb58f60c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 44b4ff6b870a6515f623c690ad722917c9ea5bd3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Criar um modelo personalizado para dotnet new
 
@@ -39,7 +40,7 @@ Se você desejar usar o exemplo baixado com a distribuição do sistema de arqui
 
 ## <a name="create-a-template-from-a-project"></a>Criar um modelo com base em um projeto
 
-Use um projeto existente que você confirmou compila e executa ou cria um novo projeto de aplicativo de console em uma pasta no disco rígido. Este tutorial pressupõe que o nome da pasta do projeto é *GarciaSoftware.ConsoleTemplate.CSharp* armazenado em *Documentos/Modelos* no perfil do usuário. O nome do modelo de projeto do tutorial está no formato *\<Nome da empresa>.\<Tipo de modelo>.\<Linguagem de programação>*, mas é livre para nomear seu projeto e o modelo que você deseja.
+Use um projeto existente que você confirmou que compila e executa ou crie um novo projeto de aplicativo de console em uma pasta no disco rígido. Este tutorial pressupõe que o nome da pasta do projeto é *GarciaSoftware.ConsoleTemplate.CSharp* armazenado em *Documentos/Modelos* no perfil do usuário. O nome do modelo de projeto do tutorial está no formato *\<Nome da empresa>.\<Tipo de modelo>.\<Linguagem de programação>*, mas é livre para nomear seu projeto e o modelo que você deseja.
 
 1. Adicione uma pasta à raiz do projeto chamado *.template.config*.
 1. Dentro da pasta *.template.config*, crie um arquivo *template.json* para configurar o modelo. Para obter mais informações e definições de membro para o arquivo *template.json*, consulte o tópico [Custom templates for dotnet new](../tools/custom-templates.md#templatejson) (Modelos personalizados para dotnet new) e o esquema [*template.json* esquema no Repositório de Esquema JSON](http://json.schemastore.org/template).

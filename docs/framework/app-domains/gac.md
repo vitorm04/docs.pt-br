@@ -21,34 +21,35 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9ca51a06e6e7ec89576facf3a70c789325fd893c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eedb33042bd904340cc02526c3f1cf927c09bd9c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="global-assembly-cache"></a>Cache de assemblies global
-Cada computador onde o Common Language Runtime está instalado tem um cache de código da máquina chamado cache de assembly global. O cache de assembly global armazena assemblies projetados especificamente para serem compartilhados por vários aplicativos no computador.  
+Cada computador em que o Common Language Runtime está instalado tem um cache de código em todo o computador chamado Cache de Assembly Global. O Cache de Assembly Global armazena assemblies projetados especificamente para serem compartilhados por vários aplicativos no computador.  
   
- Você deve compartilhar assemblies instalando-os no cache de assembly global somente quando precisar. Como diretriz geral, mantenha as dependências de um assembly privadas e localize os assemblies no diretório de aplicativo, a menos que o compartilhamento de um assembly seja explicitamente obrigatório. Além disso, não é necessário instalar assemblies no cache de assembly global a fim de torná-los acessíveis para interoperabilidade COM ou código não gerenciado.  
+ Você deverá compartilhar assemblies instalando-os no Cache de Assembly Global somente quando precisar. Como diretriz geral, mantenha as dependências de um assembly privadas e localize os assemblies no diretório de aplicativo, a menos que o compartilhamento de um assembly seja explicitamente obrigatório. Além disso, não é necessário instalar assemblies no Cache de Assembly Global a fim de torná-los acessíveis para interoperabilidade COM ou código não gerenciado.  
   
 > [!NOTE]
->  Há situações em que você explicitamente não deseja instalar um assembly no cache de assembly global. Se colocar um dos assemblies que compõem um aplicativo no cache de assembly global, você não poderá mais replicar nem instalar o aplicativo usando o comando **xcopy** para copiar o diretório do aplicativo. Você também deve mover o assembly no cache de assembly global.  
+>  Há cenários em que você explicitamente não deseja instalar um assembly no Cache de Assembly Global. Se você colocar um dos assemblies que compõem um aplicativo no Cache de Assembly Global, não poderá mais replicar nem instalar o aplicativo usando o comando **xcopy** para copiar o diretório de aplicativo. Você também deve mover o assembly no Cache de Assembly Global.  
   
- Há duas maneiras de implantar um assembly no cache de assembly global:  
+ Há duas maneiras de implantar um assembly no Cache de Assembly Global:  
   
--   Use um instalador projetado para funcionar com o cache de assembly global. Essa é a opção preferencial para instalar assemblies no cache de assembly global.  
+-   Usar um instalador projetado para funcionar com o Cache de Assembly Global. Essa é a opção preferencial para instalar assemblies no Cache de Assembly Global.  
   
 -   Use uma ferramenta de desenvolvedor chamada [Global Assembly Cache (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), fornecida pelo [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
   
     > [!NOTE]
-    >  Em cenários de implantação, use o Windows Installer para instalar assemblies no cache de assembly global. Só use a ferramenta Global Assembly Cache em cenários de desenvolvimento, porque ela não fornece contagem de referência de assembly e outros recursos fornecidos durante o uso do Windows Installer.  
+    >  Em cenários de implantação, use o Windows Installer para instalar assemblies no Cache de Assembly Global. Só use a ferramenta Global Assembly Cache em cenários de desenvolvimento, porque ela não fornece contagem de referência de assembly e outros recursos fornecidos durante o uso do Windows Installer.  
   
- A partir do .NET Framework 4, o local padrão do cache de assembly global é **%windir%\Microsoft.NET\assembly**. Em versões anteriores do .NET Framework, o local padrão era **%windir%\assembly**.  
+ A partir do .NET Framework 4, a localização padrão do Cache de Assembly Global é **%windir%\Microsoft.NET\assembly**. Em versões anteriores do .NET Framework, o local padrão era **%windir%\assembly**.  
   
- Os administradores geralmente protegem o diretório systemroot usando uma ACL (lista de controle de acesso) para controlar acesso de escrita e execução. Como o cache de assembly global é instalado em um subdiretório do diretório systemroot, ele herda a ACL desse diretório. É recomendável que apenas usuários com privilégios Administrador tenham permissão para excluir arquivos do cache de assembly global.  
+ Os administradores geralmente protegem o diretório systemroot usando uma ACL (lista de controle de acesso) para controlar acesso de escrita e execução. Como o Cache de Assembly Global é instalado em um subdiretório do diretório systemroot, ele herda a ACL desse diretório. É recomendável que apenas usuários com privilégios de Administrador tenham permissão para excluir arquivos do Cache de Assembly Global.  
   
- Assemblies implantados no cache de assembly global devem ter um nome forte. Quando um assembly é adicionado ao cache de assembly global, são executadas verificações de integridade em todos os arquivos que compõem o assembly. O cache executa essas verificações de integridade para garantir que um assembly não tenha sido adulterado, por exemplo, quando um arquivo é alterado, mas o manifesto não reflete a alteração.  
+ Assemblies implantados no Cache de Assembly Global devem ter um nome forte. Quando um assembly é adicionado ao Cache de Assembly Global, são executadas verificações de integridade em todos os arquivos que compõem o assembly. O cache executa essas verificações de integridade para garantir que um assembly não tenha sido adulterado, por exemplo, quando um arquivo é alterado, mas o manifesto não reflete a alteração.  
   
 ## <a name="see-also"></a>Consulte também  
  [Assemblies no Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  

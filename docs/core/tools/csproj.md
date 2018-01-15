@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
-ms.openlocfilehash: 288012e5f1f48ed60a388790ca42371496df92c3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 329a74cf083819896aafd7fc7993fa0e8ac8f8c2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adições ao formato csproj para .NET Core
 
@@ -37,11 +38,11 @@ Os metapacotes são referenciados implicitamente de acordo com as estruturas de 
 ### <a name="recommendations"></a>Recomendações
 Como os metapacotes `Microsoft.NETCore.App` ou `NetStandard.Library` são referenciados implicitamente, estas são nossas melhores práticas:
 
-* Durante o direcionamento do .NET Core ou padrão do .NET, nunca tem uma referência explícita para o `Microsoft.NETCore.App` ou `NetStandard.Library` metapackages por meio de um `<PackageReference>` item no arquivo de projeto.
-* Se você precisar de uma versão específica do tempo de execução durante o direcionamento do .NET Core, você deve usar o `<RuntimeFrameworkVersion>` propriedade em seu projeto (por exemplo, `1.0.4`) em vez de fazer referência a metapackage.
+* Durante o direcionamento do .NET Core ou do .NET Standard, nunca tenha uma referência explícita aos metapacotes `Microsoft.NETCore.App` ou `NetStandard.Library` por meio de um item `<PackageReference>` no arquivo de projeto.
+* Se precisar de uma versão específica do tempo de execução ao direcionar o .NET Core, use a propriedade `<RuntimeFrameworkVersion>` no projeto (por exemplo, `1.0.4`) em vez de referenciar o metapacote.
     * Isso poderá ocorrer se você estiver usando [implantações independentes](../deploying/index.md#self-contained-deployments-scd) e precisar de uma versão de patch específica do tempo de execução do 1.0.0 LTS, por exemplo.
-* Se você precisar de uma versão específica da `NetStandard.Library` metapackage durante o direcionamento do .NET padrão, você pode usar o `<NetStandardImplicitPackageVersion>` propriedade e defina a versão que você precisa.
-* Não adicione explicitamente ou atualizar referências a qualquer um de `Microsoft.NETCore.App` ou `NetStandard.Library` metapackage em projetos do .NET Framework. Se qualquer versão do `NetStandard.Library` é necessária ao usar um pacote do NuGet baseado em .NET padrão, o NuGet automaticamente instala essa versão.
+* Se precisar de uma versão específica do metapacote `NetStandard.Library` ao direcionar o .NET Core, use a propriedade `<NetStandardImplicitPackageVersion>` e defina a versão necessária.
+* Não adicione explicitamente nem atualize referências a nenhum dos metapacotes `Microsoft.NETCore.App` ou `NetStandard.Library` em projetos do .NET Framework. Se uma versão do `NetStandard.Library` for necessária ao usar um pacote NuGet baseado no .NET Standard, o NuGet automaticamente instalará essa versão.
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>Inclusões de compilação padrão em projetos do .NET Core
 Com a mudança para o formato *csproj* nas últimas versões do SDK, mudamos as inclusões e exclusões padrão de itens de compilação e recursos inseridos dos arquivos de propriedades do SDK. Isso significa que você não precisa mais especificar esses itens no arquivo de projeto. 
@@ -71,9 +72,9 @@ A configuração dessa propriedade como `false` substituirá a inclusão implíc
 
 Essa alteração não modifica a mecânica principal de outras inclusões. No entanto, se desejar especificar, por exemplo, alguns arquivos para serem publicados com o aplicativo, ainda poderá usar os mecanismos conhecidos em *csproj* para fazer isso (por exemplo, o elemento `<Content>`).
 
-`<EnableDefaultCompileItems>`somente desabilita `Compile` globs, mas não afeta outras globs, como o implícita `None` glob, que também se aplica a \*. cs itens. Por isso, **Solution Explorer** continuará Mostrar \*. cs itens como parte do projeto, incluído como `None` itens. De maneira semelhante, você pode usar `<EnableDefaultNoneItems>` para desabilitar o implícita `None` glob.
+`<EnableDefaultCompileItems>` somente desabilita globs `Compile`, mas não afeta outros globs, como o glob `None` implícito, que também se aplica a itens \*.cs. Por isso, o **Gerenciador de Soluções** continuará mostrando itens \*.cs como parte do projeto, incluídos como itens `None`. De maneira semelhante, use `<EnableDefaultNoneItems>` para desabilitar o glob `None` implícito.
 
-Para desabilitar **globs implícita todos os**, você pode definir o `<EnableDefaultItems>` propriedade `false` como no exemplo a seguir:
+Para desabilitar **todos os globs implícitos**, defina a propriedade `<EnableDefaultItems>` como `false` como no seguinte exemplo:
 ```xml
 <PropertyGroup>
     <EnableDefaultItems>false</EnableDefaultItems>
