@@ -11,11 +11,11 @@ ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
 caps.latest.revision: "27"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7445a2919baaa477b4611c4c5ee5a0031539ca30
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 628f08aaebfa209fc9cb7cfb2b506fc67d5424f9
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>Inicializadores de objeto e coleção (Guia de Programação em C#)
 Os inicializadores de objeto permitem atribuir valores a quaisquer campos ou propriedades acessíveis de um objeto na hora de criação sem que seja necessário invocar um construtor seguido por linhas de instruções de atribuição. A sintaxe do inicializador de objeto permite especificar argumentos para um construtor ou omitir os argumentos (e a sintaxe de parênteses).  O exemplo a seguir mostra como usar um inicializador de objeto com um tipo nomeado `Cat` e como invocar o construtor padrão. Observe o uso de propriedades autoimplementadas na classe `Cat`. Para obter mais informações, consulte [Propriedades autoimplementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).  
@@ -24,7 +24,7 @@ Os inicializadores de objeto permitem atribuir valores a quaisquer campos ou pro
   
  [!code-csharp[csProgGuideLINQ#45](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_2.cs)] 
  
-A sintaxe de inicializadores de objeto permite que você crie uma instância e, depois que ele atribui o objeto recentemente criado, com suas propriedades atribuídos, a variável na atribuição.
+A sintaxe dos inicializadores de objetos permite que você crie uma instância, e depois atribui o objeto recém-criado, com suas propriedades atribuídas, à variável na atribuição.
   
 ## <a name="object-initializers-with-anonymous-types"></a>Inicializadores de objeto com tipos anônimos  
  Embora inicializadores de objetos possam ser usados em qualquer contexto, eles são especialmente úteis em expressões de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Expressões de consulta fazem uso frequente de [tipos anônimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md), que podem ser inicializados somente usando um inicializador de objeto, como mostrado na declaração a seguir.  
@@ -80,9 +80,20 @@ var numbers = new Dictionary<int, string> {
 };  
 ```  
   
-## <a name="example"></a>Exemplo  
+## <a name="examples"></a>Exemplos
+
+ O exemplo a seguir combina os conceitos de inicializadores de coleção e objeto.
+
  [!code-csharp[csProgGuideLINQ#46](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_6.cs)]  
-  
+ 
+ Mostrado no exemplo a seguir, um objeto que implementa <xref:System.Collections.IEnumerable> que contém um método `Add` com vários parâmetros permite inicializadores de coleção com vários elementos por item na lista correspondente à assinatura do método `Add`. 
+ 
+ [!code-csharp[csProgGuideLINQ#84](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_7.cs)]
+ 
+ Os métodos `Add` podem usar a palavra-chave `params` para ter um número variável de argumentos como mostrado no seguinte exemplo. Este exemplo demonstra a implementação personalizada de um indexador para inicializar uma coleção usando indexadores.
+ 
+ [!code-csharp[csProgGuideLINQ#85](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_8.cs)]
+ 
 ## <a name="see-also"></a>Consulte também  
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
  [Expressões de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  

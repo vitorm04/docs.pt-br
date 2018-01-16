@@ -9,11 +9,11 @@ ms.assetid: a1ad761e-42f7-41dd-a62f-452a2de26b9d
 caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ec4fe9cc9fe7bf868fcc8afe4dc4e4234241e352
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 61baf26c9f942a59e3787ca55a2ac6a824410608
+ms.sourcegitcommit: 3fd4e718d1bac9769fe0c1dd08ca1b2323ae272b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="introduction-to-generics-c-programming-guide"></a>Introdução aos genéricos (Guia de Programação em C#)
 As classes e métodos genéricos combinam a capacidade de reutilização, a segurança de tipos e a eficiência de uma maneira que suas contrapartes não genéricas não conseguem. Os genéricos são usados com mais frequência com coleções e com os métodos que operam nelas. A versão 2.0 da biblioteca de classes do .NET Framework fornece um novo namespace, <xref:System.Collections.Generic>, que contém várias classes de coleção novas com base em genéricos. É recomendável que todos os aplicativos que se destinam ao [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 2.0 e posterior usem as novas classes de coleção genéricas em vez das contrapartes não genéricas mais antigas, como a <xref:System.Collections.ArrayList>. Para obter mais informações, consulte [Genéricos na biblioteca de Classes .NET Framework](../../../csharp/programming-guide/generics/generics-in-the-net-framework-class-library.md).  
@@ -22,9 +22,9 @@ As classes e métodos genéricos combinam a capacidade de reutilização, a segu
   
 -   Como o tipo de um parâmetro de método no método `AddHead`.  
   
--   Como o tipo de retorno do método público `GetNext` e a propriedade `Data` na classe `Node` aninhada.  
+-   Como o tipo de retorno da propriedade `Data` na classe `Node` aninhada.  
   
--   Como o tipo de dados do membro particular na classe aninhada.  
+-   Como o tipo de `data` do membro particular na classe aninhada.  
   
  Observe que T está disponível para a classe `Node` aninhada. Quando `GenericList<T>` é instanciada com um tipo concreto, por exemplo como um `GenericList<int>`, cada ocorrência de `T` será substituída por `int`.  
   
