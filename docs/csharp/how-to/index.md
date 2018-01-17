@@ -7,11 +7,11 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 04c780980ef0665b40a0c3a698193fc9fa738424
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.openlocfilehash: cfe7115717fcca834d87b7bcdc64ddd1df8ef843
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-to-c"></a>Instruções (C#)
 
@@ -57,7 +57,7 @@ As cadeias de caracteres são o tipo de dados fundamental usado para exibir ou m
 - [Compare cadeias de caracteres](../programming-guide/strings/how-to-compare-strings.md).
 - [Modifique o conteúdo da cadeia de caracteres](../programming-guide/strings/how-to-modify-string-contents.md).
 - [Determine se uma cadeia de caracteres representa um número](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
-- [Use <xref:System.String.Split%2A> para separar as cadeias de caracteres](../programming-guide/strings/how-to-parse-strings-using-string-split.md).
+- [Use `String.Split` para separar as cadeias de caracteres](parse-strings-using-split.md).
 - [Junte várias cadeias de caracteres em uma](../programming-guide/strings/how-to-concatenate-multiple-strings.md).
 - [Pesquise texto em uma cadeia de caracteres](../programming-guide/strings/how-to-search-strings-using-string-methods.md).
 - [Pesquise cadeias de caracteres usando expressões regulares](../programming-guide/strings/how-to-search-strings-using-regular-expressions.md).

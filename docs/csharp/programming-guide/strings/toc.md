@@ -2,7 +2,6 @@
 ## [Como concatenar várias cadeias de caracteres](how-to-concatenate-multiple-strings.md)
 ## [Como modificar o conteúdo de uma cadeia de caracteres](how-to-modify-string-contents.md)
 ## [Como comparar cadeias de caracteres](how-to-compare-strings.md)
-## [Como analisar cadeias de caracteres usando String.Split](how-to-parse-strings-using-string-split.md)
 ## [Como pesquisar cadeias de caracteres usando métodos de cadeia de caracteres](how-to-search-strings-using-string-methods.md)
 ## [Como pesquisar cadeias de caracteres usando expressões regulares](how-to-search-strings-using-regular-expressions.md)
 ## [Como determinar se uma cadeia de caracteres representa um valor numérico](how-to-determine-whether-a-string-represents-a-numeric-value.md)
