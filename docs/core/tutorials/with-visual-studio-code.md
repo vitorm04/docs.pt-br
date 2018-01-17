@@ -18,7 +18,7 @@ ms.lasthandoff: 11/15/2017
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introdução ao Visual Studio Code e C#
 
-O .NET Core oferece uma plataforma modular e rápida para a criação de aplicativos que são executados no Windows, Linux e macOS. Use o Visual Studio Code com a extensão do C# para obter uma excelente experiência de edição com suporte completo para IntelliSense em C# (autocompletar código de forma inteligente) e depuração.
+O .NET Core oferece uma plataforma modular e rápida para a criação de aplicativos que são executados no Windows, Linux e macOS. Use o Visual Studio Code com a extensão do C# para obter uma excelente experiência de edição com suporte completo para IntelliSense em C# (preenchimento de código inteligente) e depuração.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -33,13 +33,13 @@ Vamos começar com um simples programa "Olá, Mundo" no .NET Core:
 1. Abra um projeto:
 
     * Abra o Visual Studio Code.
-    * Clique no ícone do Explorer no menu à esquerda e, em seguida, clique em **Open Folder** ou.
-    * Selecione **File** > **Open Folder...** no menu principal para abrir a pasta que você deseja armazenar seu projeto C# e clique em **Selecionar pasta**. Para nosso exemplo, estamos criando uma pasta para nosso projeto chamado *HelloWorld*.
+    * Clique no ícone do Explorer no menu à esquerda e, em seguida, clique em **Abrir Pasta**; ou
+    * Selecione **Arquivo** > **Abrir Pasta...** no menu principal para abrir a pasta em que você deseja armazenar seu projeto C# e clique em **Selecionar pasta**. Para nosso exemplo, estamos criando uma pasta para nosso projeto chamado *HelloWorld*.
 
       ![VSCodeOpenFolder](media/with-visual-studio-code/vscodeopenfolder.png)
 
 2. Inicialize um projeto em C#:
-    * Abra o Terminal integrado de código do Visual Studio selecionando **View** > **Integrated Terminal** no menu principal.
+    * Abra o Terminal Integrado do Visual Studio Code selecionando **Exibir** > **Terminal Integrado** no menu principal.
     * Na janela do terminal, digite `dotnet new console`.
     * Este comando cria um arquivo de projeto (`HelloWorld.csproj`) e um arquivo de código (`Program.cs`) com um código simples, que imprime "Hello, World!" quando executado.
 
@@ -67,7 +67,7 @@ Você também pode assistir a um tutorial breve em vídeo para obter ajuda na in
 
     ![Abra o arquivo Program.cs](media/with-visual-studio-code/opencs.png)
 
-2. O Visual Studio Code solicitará que você adicione as dependências ausentes para compilar e depurar seu projeto. Selecione **Yes** na barra superior. 
+2. O Visual Studio Code solicitará que você adicione os ativos ausentes para compilar e depurar seu projeto. Selecione **Sim** na barra superior.  
 
     ![Prompt para ativos ausentes](media/with-visual-studio-code/missing-assets.png)
 
@@ -79,11 +79,11 @@ Você também pode assistir a um tutorial breve em vídeo para obter ajuda na in
 
     ![Seleção do .NET Core](media/with-visual-studio-code/selectcore.png)
 
-5. Adicione um breakpoint ao seu código. Para isso, clique no espaço logo à esquerda dos números de linha no editor. Para este exemplo, faça isso na linha 9.
+5. Adicione um ponto de interrupção ao seu código. Para isso, clique no **editor de margem** logo à esquerda dos números de linha no editor. Para este exemplo, faça isso na linha 9. 
 
     ![Definindo um ponto de interrupção](media/with-visual-studio-code/setbreakpoint.png)
 
-6. Para iniciar a depuração, use a tecla <kbd>F5</kbd> ou a seta verde. O depurador pausa a execução do programa quando ele atinge o breakpoint definido na etapa anterior.
+6. Para iniciar a depuração, use a tecla <kbd>F5</kbd> ou a seta verde. O depurador interrompe a execução do programa quando ele atinge o ponto de interrupção definido na etapa anterior. 
     * Durante a depuração, você pode exibir as variáveis locais no painel superior esquerdo ou usar o console de depuração.
 
     ![Executar e depurar](media/with-visual-studio-code/rundebug.png)
