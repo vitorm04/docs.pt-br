@@ -10,62 +10,62 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5b2b0d34-d0a7-4bcd-baf2-58aa8456d00b
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 3e3f58608f6ef872f0000bc2d887cfd548589e17
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 24abe7be9acb01b81f4d2a76d74c2f75bdb7786f
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="isof-entity-sql"></a><span data-ttu-id="9029f-102">ISOF (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="9029f-102">ISOF (Entity SQL)</span></span>
-<span data-ttu-id="9029f-103">Determina se o tipo de uma expressão é do tipo especificado ou um de seus subtipos.</span><span class="sxs-lookup"><span data-stu-id="9029f-103">Determines whether the type of an expression is of the specified type or one of its subtypes.</span></span>  
+# <a name="isof-entity-sql"></a><span data-ttu-id="59ac8-102">ISOF (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="59ac8-102">ISOF (Entity SQL)</span></span>
+<span data-ttu-id="59ac8-103">Determina se o tipo de uma expressão é do tipo especificado ou um de seus subtipos.</span><span class="sxs-lookup"><span data-stu-id="59ac8-103">Determines whether the type of an expression is of the specified type or one of its subtypes.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9029f-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="9029f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="59ac8-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="59ac8-104">Syntax</span></span>  
   
 ```  
 expression IS [ NOT ] OF ( [ ONLY ] type )  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="9029f-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="9029f-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="59ac8-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="59ac8-105">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="9029f-106">Qualquer expressão de consulta válida para determinar o tipo de.</span><span class="sxs-lookup"><span data-stu-id="9029f-106">Any valid query expression to determine the type of.</span></span>  
+ <span data-ttu-id="59ac8-106">Qualquer expressão de consulta válida para determinar o tipo de.</span><span class="sxs-lookup"><span data-stu-id="59ac8-106">Any valid query expression to determine the type of.</span></span>  
   
- <span data-ttu-id="9029f-107">NOT</span><span class="sxs-lookup"><span data-stu-id="9029f-107">NOT</span></span>  
- <span data-ttu-id="9029f-108">Nega o resultado de EDM.Boolean de ESTÁ DE.</span><span class="sxs-lookup"><span data-stu-id="9029f-108">Negates the EDM.Boolean result of IS OF.</span></span>  
+ <span data-ttu-id="59ac8-107">NOT</span><span class="sxs-lookup"><span data-stu-id="59ac8-107">NOT</span></span>  
+ <span data-ttu-id="59ac8-108">Nega o resultado de EDM.Boolean de ESTÁ DE.</span><span class="sxs-lookup"><span data-stu-id="59ac8-108">Negates the EDM.Boolean result of IS OF.</span></span>  
   
- <span data-ttu-id="9029f-109">SOMENTE</span><span class="sxs-lookup"><span data-stu-id="9029f-109">ONLY</span></span>  
- <span data-ttu-id="9029f-110">Especifica que É returns `true` somente se `expression` é do tipo `type` e não qualquer um de seus subtipos.</span><span class="sxs-lookup"><span data-stu-id="9029f-110">Specifies that IS OF returns `true` only if `expression` is of type `type` and not any of one its subtypes.</span></span>  
+ <span data-ttu-id="59ac8-109">SOMENTE</span><span class="sxs-lookup"><span data-stu-id="59ac8-109">ONLY</span></span>  
+ <span data-ttu-id="59ac8-110">Especifica que É returns `true` somente se `expression` é do tipo `type` e não qualquer um de seus subtipos.</span><span class="sxs-lookup"><span data-stu-id="59ac8-110">Specifies that IS OF returns `true` only if `expression` is of type `type` and not any of one its subtypes.</span></span>  
   
  `type`  
- <span data-ttu-id="9029f-111">O tipo para testar `expression` contra.</span><span class="sxs-lookup"><span data-stu-id="9029f-111">The type to test `expression` against.</span></span> <span data-ttu-id="9029f-112">O tipo URL deve ser qualificada.</span><span class="sxs-lookup"><span data-stu-id="9029f-112">The type must be namespace-qualified.</span></span>  
+ <span data-ttu-id="59ac8-111">O tipo para testar `expression` contra.</span><span class="sxs-lookup"><span data-stu-id="59ac8-111">The type to test `expression` against.</span></span> <span data-ttu-id="59ac8-112">O tipo URL deve ser qualificada.</span><span class="sxs-lookup"><span data-stu-id="59ac8-112">The type must be namespace-qualified.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9029f-113">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="9029f-113">Return Value</span></span>  
- <span data-ttu-id="9029f-114">`true` se `expression` é do tipo T e T é um tipo base, ou um tipo derivado de `type`; se `expression` nulo é nulo em tempo de execução; caso contrário, `false`.</span><span class="sxs-lookup"><span data-stu-id="9029f-114">`true` if `expression` is of type T and T is either a base type, or a derived type of `type`; null if `expression` is null at runtime; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="59ac8-113">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="59ac8-113">Return Value</span></span>  
+ <span data-ttu-id="59ac8-114">`true` se `expression` é do tipo T e T é um tipo base, ou um tipo derivado de `type`; se `expression` nulo é nulo em tempo de execução; caso contrário, `false`.</span><span class="sxs-lookup"><span data-stu-id="59ac8-114">`true` if `expression` is of type T and T is either a base type, or a derived type of `type`; null if `expression` is null at runtime; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9029f-115">Comentários</span><span class="sxs-lookup"><span data-stu-id="9029f-115">Remarks</span></span>  
- <span data-ttu-id="9029f-116">As expressões `expression IS NOT OF (type)` e `expression IS NOT OF (ONLY type)` são sintaticamente equivalentes à `NOT (expression IS OF (type))` e `NOT (expression IS OF (ONLY type))`, respectivamente.</span><span class="sxs-lookup"><span data-stu-id="9029f-116">The expressions `expression IS NOT OF (type)` and `expression IS NOT OF (ONLY type)` are syntactically equivalent to `NOT (expression IS OF (type))` and `NOT (expression IS OF (ONLY type))`, respectively.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="59ac8-115">Comentários</span><span class="sxs-lookup"><span data-stu-id="59ac8-115">Remarks</span></span>  
+ <span data-ttu-id="59ac8-116">As expressões `expression IS NOT OF (type)` e `expression IS NOT OF (ONLY type)` são sintaticamente equivalentes à `NOT (expression IS OF (type))` e `NOT (expression IS OF (ONLY type))`, respectivamente.</span><span class="sxs-lookup"><span data-stu-id="59ac8-116">The expressions `expression IS NOT OF (type)` and `expression IS NOT OF (ONLY type)` are syntactically equivalent to `NOT (expression IS OF (type))` and `NOT (expression IS OF (ONLY type))`, respectively.</span></span>  
   
- <span data-ttu-id="9029f-117">A tabela a seguir mostra o comportamento do operador de `IS OF` sobre alguns padrões e típicos do canto.</span><span class="sxs-lookup"><span data-stu-id="9029f-117">The following table shows the behavior of `IS OF` operator over some typical- and corner patterns.</span></span> <span data-ttu-id="9029f-118">Todas as exceções são geradas do lado do cliente antes que o provedor obtenha chamado:</span><span class="sxs-lookup"><span data-stu-id="9029f-118">All exceptions are thrown from the client side before the provider gets invoked:</span></span>  
+ <span data-ttu-id="59ac8-117">A tabela a seguir mostra o comportamento do operador de `IS OF` sobre alguns padrões e típicos do canto.</span><span class="sxs-lookup"><span data-stu-id="59ac8-117">The following table shows the behavior of `IS OF` operator over some typical- and corner patterns.</span></span> <span data-ttu-id="59ac8-118">Todas as exceções são geradas do lado do cliente antes que o provedor obtenha chamado:</span><span class="sxs-lookup"><span data-stu-id="59ac8-118">All exceptions are thrown from the client side before the provider gets invoked:</span></span>  
   
-|<span data-ttu-id="9029f-119">Padrão</span><span class="sxs-lookup"><span data-stu-id="9029f-119">Pattern</span></span>|<span data-ttu-id="9029f-120">Comportamento</span><span class="sxs-lookup"><span data-stu-id="9029f-120">Behavior</span></span>|  
+|<span data-ttu-id="59ac8-119">Padrão</span><span class="sxs-lookup"><span data-stu-id="59ac8-119">Pattern</span></span>|<span data-ttu-id="59ac8-120">Comportamento</span><span class="sxs-lookup"><span data-stu-id="59ac8-120">Behavior</span></span>|  
 |-------------|--------------|  
-|<span data-ttu-id="9029f-121">o zero ESTÁ DE (EntityType)</span><span class="sxs-lookup"><span data-stu-id="9029f-121">null IS OF (EntityType)</span></span>|<span data-ttu-id="9029f-122">Gera</span><span class="sxs-lookup"><span data-stu-id="9029f-122">Throws</span></span>|  
-|<span data-ttu-id="9029f-123">o zero ESTÁ DE (ComplexType)</span><span class="sxs-lookup"><span data-stu-id="9029f-123">null IS OF (ComplexType)</span></span>|<span data-ttu-id="9029f-124">Gera</span><span class="sxs-lookup"><span data-stu-id="9029f-124">Throws</span></span>|  
-|<span data-ttu-id="9029f-125">o zero ESTÁ DE (RowType)</span><span class="sxs-lookup"><span data-stu-id="9029f-125">null IS OF (RowType)</span></span>|<span data-ttu-id="9029f-126">Gera</span><span class="sxs-lookup"><span data-stu-id="9029f-126">Throws</span></span>|  
-|<span data-ttu-id="9029f-127">O DELEITE (zero) COMO EntityType ESTÁ DE (EntityType)</span><span class="sxs-lookup"><span data-stu-id="9029f-127">TREAT (null AS EntityType) IS OF (EntityType)</span></span>|<span data-ttu-id="9029f-128">Retorna DBNull</span><span class="sxs-lookup"><span data-stu-id="9029f-128">Returns DBNull</span></span>|  
-|<span data-ttu-id="9029f-129">O DELEITE (zero) COMO ComplexType ESTÁ DE (ComplexType)</span><span class="sxs-lookup"><span data-stu-id="9029f-129">TREAT (null AS ComplexType) IS OF (ComplexType)</span></span>|<span data-ttu-id="9029f-130">Gera</span><span class="sxs-lookup"><span data-stu-id="9029f-130">Throws</span></span>|  
-|<span data-ttu-id="9029f-131">O DELEITE (zero) COMO RowType ESTÁ DE (RowType)</span><span class="sxs-lookup"><span data-stu-id="9029f-131">TREAT (null AS RowType) IS OF (RowType)</span></span>|<span data-ttu-id="9029f-132">Gera</span><span class="sxs-lookup"><span data-stu-id="9029f-132">Throws</span></span>|  
-|<span data-ttu-id="9029f-133">EntityType ESTÁ DE (EntityType)</span><span class="sxs-lookup"><span data-stu-id="9029f-133">EntityType IS OF (EntityType)</span></span>|<span data-ttu-id="9029f-134">Retorna retificam/falso</span><span class="sxs-lookup"><span data-stu-id="9029f-134">Returns true/false</span></span>|  
-|<span data-ttu-id="9029f-135">ComplexType ESTÁ DE (ComplexType)</span><span class="sxs-lookup"><span data-stu-id="9029f-135">ComplexType IS OF (ComplexType)</span></span>|<span data-ttu-id="9029f-136">Gera</span><span class="sxs-lookup"><span data-stu-id="9029f-136">Throws</span></span>|  
-|<span data-ttu-id="9029f-137">RowType ESTÁ DE (RowType)</span><span class="sxs-lookup"><span data-stu-id="9029f-137">RowType IS OF (RowType)</span></span>|<span data-ttu-id="9029f-138">Gera</span><span class="sxs-lookup"><span data-stu-id="9029f-138">Throws</span></span>|  
+|<span data-ttu-id="59ac8-121">o zero ESTÁ DE (EntityType)</span><span class="sxs-lookup"><span data-stu-id="59ac8-121">null IS OF (EntityType)</span></span>|<span data-ttu-id="59ac8-122">Gera</span><span class="sxs-lookup"><span data-stu-id="59ac8-122">Throws</span></span>|  
+|<span data-ttu-id="59ac8-123">o zero ESTÁ DE (ComplexType)</span><span class="sxs-lookup"><span data-stu-id="59ac8-123">null IS OF (ComplexType)</span></span>|<span data-ttu-id="59ac8-124">Gera</span><span class="sxs-lookup"><span data-stu-id="59ac8-124">Throws</span></span>|  
+|<span data-ttu-id="59ac8-125">o zero ESTÁ DE (RowType)</span><span class="sxs-lookup"><span data-stu-id="59ac8-125">null IS OF (RowType)</span></span>|<span data-ttu-id="59ac8-126">Gera</span><span class="sxs-lookup"><span data-stu-id="59ac8-126">Throws</span></span>|  
+|<span data-ttu-id="59ac8-127">O DELEITE (zero) COMO EntityType ESTÁ DE (EntityType)</span><span class="sxs-lookup"><span data-stu-id="59ac8-127">TREAT (null AS EntityType) IS OF (EntityType)</span></span>|<span data-ttu-id="59ac8-128">Retorna DBNull</span><span class="sxs-lookup"><span data-stu-id="59ac8-128">Returns DBNull</span></span>|  
+|<span data-ttu-id="59ac8-129">O DELEITE (zero) COMO ComplexType ESTÁ DE (ComplexType)</span><span class="sxs-lookup"><span data-stu-id="59ac8-129">TREAT (null AS ComplexType) IS OF (ComplexType)</span></span>|<span data-ttu-id="59ac8-130">Gera</span><span class="sxs-lookup"><span data-stu-id="59ac8-130">Throws</span></span>|  
+|<span data-ttu-id="59ac8-131">O DELEITE (zero) COMO RowType ESTÁ DE (RowType)</span><span class="sxs-lookup"><span data-stu-id="59ac8-131">TREAT (null AS RowType) IS OF (RowType)</span></span>|<span data-ttu-id="59ac8-132">Gera</span><span class="sxs-lookup"><span data-stu-id="59ac8-132">Throws</span></span>|  
+|<span data-ttu-id="59ac8-133">EntityType ESTÁ DE (EntityType)</span><span class="sxs-lookup"><span data-stu-id="59ac8-133">EntityType IS OF (EntityType)</span></span>|<span data-ttu-id="59ac8-134">Retorna retificam/falso</span><span class="sxs-lookup"><span data-stu-id="59ac8-134">Returns true/false</span></span>|  
+|<span data-ttu-id="59ac8-135">ComplexType ESTÁ DE (ComplexType)</span><span class="sxs-lookup"><span data-stu-id="59ac8-135">ComplexType IS OF (ComplexType)</span></span>|<span data-ttu-id="59ac8-136">Gera</span><span class="sxs-lookup"><span data-stu-id="59ac8-136">Throws</span></span>|  
+|<span data-ttu-id="59ac8-137">RowType ESTÁ DE (RowType)</span><span class="sxs-lookup"><span data-stu-id="59ac8-137">RowType IS OF (RowType)</span></span>|<span data-ttu-id="59ac8-138">Gera</span><span class="sxs-lookup"><span data-stu-id="59ac8-138">Throws</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="9029f-139">Exemplo</span><span class="sxs-lookup"><span data-stu-id="9029f-139">Example</span></span>  
- <span data-ttu-id="9029f-140">O seguinte [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consulta usa o operador é de para determinar o tipo de uma expressão de consulta e, em seguida, usa o operador de tratar para converter um objeto do tipo de curso em uma coleção de objetos do tipo OnsiteCourse.</span><span class="sxs-lookup"><span data-stu-id="9029f-140">The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the IS OF operator to determine the type of a query expression, and then uses the TREAT operator to convert an object of the type Course to a collection of objects of the type OnsiteCourse.</span></span> <span data-ttu-id="9029f-141">A consulta se baseia o [modelo School](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac).</span><span class="sxs-lookup"><span data-stu-id="9029f-141">The query is based on the [School Model](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac).</span></span>  
+## <a name="example"></a><span data-ttu-id="59ac8-139">Exemplo</span><span class="sxs-lookup"><span data-stu-id="59ac8-139">Example</span></span>  
+ <span data-ttu-id="59ac8-140">O seguinte [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consulta usa o operador é de para determinar o tipo de uma expressão de consulta e, em seguida, usa o operador de tratar para converter um objeto do tipo de curso em uma coleção de objetos do tipo OnsiteCourse.</span><span class="sxs-lookup"><span data-stu-id="59ac8-140">The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the IS OF operator to determine the type of a query expression, and then uses the TREAT operator to convert an object of the type Course to a collection of objects of the type OnsiteCourse.</span></span> <span data-ttu-id="59ac8-141">A consulta se baseia o [modelo School](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac).</span><span class="sxs-lookup"><span data-stu-id="59ac8-141">The query is based on the [School Model](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac).</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  
   
-## <a name="see-also"></a><span data-ttu-id="9029f-142">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9029f-142">See Also</span></span>  
- [<span data-ttu-id="9029f-143">Referência de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="9029f-143">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="59ac8-142">Consulte também</span><span class="sxs-lookup"><span data-stu-id="59ac8-142">See Also</span></span>  
+ [<span data-ttu-id="59ac8-143">Referência de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="59ac8-143">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

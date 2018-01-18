@@ -10,30 +10,30 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 97546ae2-0e42-4d26-961d-e0b244d81ded
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 0e3f3da6554239b4f04e244d3339a4280e1add85
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b5160f5a2c68cab798dde154275c062e2bf31739
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="datatablereaders"></a><span data-ttu-id="31d40-102">DataTableReaders</span><span class="sxs-lookup"><span data-stu-id="31d40-102">DataTableReaders</span></span>
-<span data-ttu-id="31d40-103">O <xref:System.Data.DataTableReader> apresenta o conteúdo de um <xref:System.Data.DataTable> ou <xref:System.Data.DataSet> na forma de um ou mais resultados de somente leitura, somente encaminhamento define.</span><span class="sxs-lookup"><span data-stu-id="31d40-103">The <xref:System.Data.DataTableReader> presents the contents of a <xref:System.Data.DataTable> or a <xref:System.Data.DataSet> in the form of one or more read-only, forward-only result sets.</span></span>  
+# <a name="datatablereaders"></a><span data-ttu-id="c221b-102">DataTableReaders</span><span class="sxs-lookup"><span data-stu-id="c221b-102">DataTableReaders</span></span>
+<span data-ttu-id="c221b-103">O <xref:System.Data.DataTableReader> apresenta o conteúdo de um <xref:System.Data.DataTable> ou <xref:System.Data.DataSet> na forma de um ou mais resultados de somente leitura, somente encaminhamento define.</span><span class="sxs-lookup"><span data-stu-id="c221b-103">The <xref:System.Data.DataTableReader> presents the contents of a <xref:System.Data.DataTable> or a <xref:System.Data.DataSet> in the form of one or more read-only, forward-only result sets.</span></span>  
   
- <span data-ttu-id="31d40-104">Quando você cria um **DataTableReader** de um **DataTable**, resultante **DataTableReader** objeto contém um conjunto de resultados com os mesmos dados que o  **DataTable** do qual ele foi criado, exceto para todas as linhas que foram marcadas como excluídas.</span><span class="sxs-lookup"><span data-stu-id="31d40-104">When you create a **DataTableReader** from a **DataTable**, the resulting **DataTableReader** object contains one result set with the same data as the **DataTable** from which it was created, except for any rows that have been marked as deleted.</span></span> <span data-ttu-id="31d40-105">As colunas aparecem na mesma ordem que o original **DataTable**.</span><span class="sxs-lookup"><span data-stu-id="31d40-105">The columns appear in the same order as in the original **DataTable**.</span></span>  
+ <span data-ttu-id="c221b-104">Quando você cria um **DataTableReader** de um **DataTable**, resultante **DataTableReader** objeto contém um conjunto de resultados com os mesmos dados que o  **DataTable** do qual ele foi criado, exceto para todas as linhas que foram marcadas como excluídas.</span><span class="sxs-lookup"><span data-stu-id="c221b-104">When you create a **DataTableReader** from a **DataTable**, the resulting **DataTableReader** object contains one result set with the same data as the **DataTable** from which it was created, except for any rows that have been marked as deleted.</span></span> <span data-ttu-id="c221b-105">As colunas aparecem na mesma ordem que o original **DataTable**.</span><span class="sxs-lookup"><span data-stu-id="c221b-105">The columns appear in the same order as in the original **DataTable**.</span></span>  
   
- <span data-ttu-id="31d40-106">Um **DataTableReader** pode conter vários conjuntos de resultados se ela foi criada chamando <xref:System.Data.DataSet.CreateDataReader%2A>.</span><span class="sxs-lookup"><span data-stu-id="31d40-106">A **DataTableReader** may contain multiple result sets if it was created by calling <xref:System.Data.DataSet.CreateDataReader%2A>.</span></span> <span data-ttu-id="31d40-107">Os resultados estão na mesma ordem que a **DataTables** no **DataSet** do objeto <xref:System.Data.DataSet.Tables%2A> coleção.</span><span class="sxs-lookup"><span data-stu-id="31d40-107">The results are in the same order as the **DataTables** in the **DataSet** object's <xref:System.Data.DataSet.Tables%2A> collection.</span></span>  
+ <span data-ttu-id="c221b-106">Um **DataTableReader** pode conter vários conjuntos de resultados se ela foi criada chamando <xref:System.Data.DataSet.CreateDataReader%2A>.</span><span class="sxs-lookup"><span data-stu-id="c221b-106">A **DataTableReader** may contain multiple result sets if it was created by calling <xref:System.Data.DataSet.CreateDataReader%2A>.</span></span> <span data-ttu-id="c221b-107">Os resultados estão na mesma ordem que a **DataTables** no **DataSet** do objeto <xref:System.Data.DataSet.Tables%2A> coleção.</span><span class="sxs-lookup"><span data-stu-id="c221b-107">The results are in the same order as the **DataTables** in the **DataSet** object's <xref:System.Data.DataSet.Tables%2A> collection.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="31d40-108">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="31d40-108">In This Section</span></span>  
- [<span data-ttu-id="31d40-109">Criando um DataReader</span><span class="sxs-lookup"><span data-stu-id="31d40-109">Creating a DataReader</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datareader.md)  
- <span data-ttu-id="31d40-110">Discute como criar um **DataTableReader** objeto.</span><span class="sxs-lookup"><span data-stu-id="31d40-110">Discusses how to create a **DataTableReader** object.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="c221b-108">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="c221b-108">In This Section</span></span>  
+ [<span data-ttu-id="c221b-109">Criando um DataReader</span><span class="sxs-lookup"><span data-stu-id="c221b-109">Creating a DataReader</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datareader.md)  
+ <span data-ttu-id="c221b-110">Discute como criar um **DataTableReader** objeto.</span><span class="sxs-lookup"><span data-stu-id="c221b-110">Discusses how to create a **DataTableReader** object.</span></span>  
   
- [<span data-ttu-id="31d40-111">Navegando DataTables</span><span class="sxs-lookup"><span data-stu-id="31d40-111">Navigating DataTables</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/navigating-datatables.md)  
- <span data-ttu-id="31d40-112">Descreve o uso do **leitura** método para mover o conteúdo de um **DataTableReader**.</span><span class="sxs-lookup"><span data-stu-id="31d40-112">Describes the use of the **Read** method to move through the contents of a **DataTableReader**.</span></span>  
+ [<span data-ttu-id="c221b-111">Navegando DataTables</span><span class="sxs-lookup"><span data-stu-id="c221b-111">Navigating DataTables</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/navigating-datatables.md)  
+ <span data-ttu-id="c221b-112">Descreve o uso do **leitura** método para mover o conteúdo de um **DataTableReader**.</span><span class="sxs-lookup"><span data-stu-id="c221b-112">Describes the use of the **Read** method to move through the contents of a **DataTableReader**.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="31d40-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="31d40-113">See Also</span></span>  
- <span data-ttu-id="31d40-114">[Retrieving and Modifying Data in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="31d40-114">[Retrieving and Modifying Data in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)</span></span>  
- <span data-ttu-id="31d40-115">[ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="31d40-115">[ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)</span></span>
+## <a name="see-also"></a><span data-ttu-id="c221b-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c221b-113">See Also</span></span>  
+ <span data-ttu-id="c221b-114">[Retrieving and Modifying Data in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="c221b-114">[Retrieving and Modifying Data in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)</span></span>  
+ <span data-ttu-id="c221b-115">[ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="c221b-115">[ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)</span></span>

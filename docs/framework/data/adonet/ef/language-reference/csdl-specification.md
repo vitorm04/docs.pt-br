@@ -10,17 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6bb94c37-87da-447a-8dfd-83d1c4b5a2d2
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 4bbdf1ab43ca04f02836e619cbbb4636067db8cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c62e34e3e509e48d90688d9894ec5378b251447c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="csdl-specification"></a><span data-ttu-id="e0d24-102">Especificação de CSDL</span><span class="sxs-lookup"><span data-stu-id="e0d24-102">CSDL Specification</span></span>
-<span data-ttu-id="e0d24-103">O [msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) site agora é o local principal para o conteúdo do Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="e0d24-103">The [msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) site is now the main location for the Entity Framework content.</span></span>  
+# <a name="csdl-specification"></a><span data-ttu-id="c6e61-102">Especificação de CSDL</span><span class="sxs-lookup"><span data-stu-id="c6e61-102">CSDL Specification</span></span>
+<span data-ttu-id="c6e61-103">O [msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) site agora é o local principal para o conteúdo do Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="c6e61-103">The [msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) site is now the main location for the Entity Framework content.</span></span>  
   
- <span data-ttu-id="e0d24-104">O conteúdo deste tópico agora está disponível na seguinte página: [especificação CSDL](http://msdn.microsoft.com/data/jj652004).</span><span class="sxs-lookup"><span data-stu-id="e0d24-104">The content for this topic is now available on the following page: [CSDL Specification](http://msdn.microsoft.com/data/jj652004).</span></span>
+ <span data-ttu-id="c6e61-104">O conteúdo deste tópico agora está disponível na seguinte página: [especificação CSDL](http://msdn.microsoft.com/data/jj652004).</span><span class="sxs-lookup"><span data-stu-id="c6e61-104">The content for this topic is now available on the following page: [CSDL Specification](http://msdn.microsoft.com/data/jj652004).</span></span>
