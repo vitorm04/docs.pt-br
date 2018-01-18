@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 58aab611-7e6f-4749-b983-28ab7ae87dbe
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 82d2dec81429da43bf19e8673b56658ee9f4a2d3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7a79587762ec9b69bcc580af63fc1db19e491dec
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dbconnection-dbcommand-and-dbexception"></a>DbConnection, DbCommand e DbException
 Depois de ter criado um <xref:System.Data.Common.DbProviderFactory> e um <xref:System.Data.Common.DbConnection>, você pode trabalhar com comandos e leitores de dados para recuperar dados da fonte de dados.  

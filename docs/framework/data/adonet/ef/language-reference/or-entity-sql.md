@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8e649648-eb9a-4380-9d74-36e62260628c
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1f606d01c12ce3f5d9d4ff8720b06511a64347f8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b44934aa0db73f872f0ab27a4c36c5c615855de1
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="-or-entity-sql"></a>|| (OU) (Entity SQL)
 Combina duas expressões de `Boolean` .  
@@ -41,7 +41,7 @@ boolean_expression || boolean_expression
 ## <a name="remarks"></a>Comentários  
  OR é um operador lógico de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] . É usada para combinar duas condições. Quando mais de um operador lógico é usado em uma declaração, OU de operadores são avaliados em seguida E operadores. No entanto, você pode alterar a ordem de classificação usando parênteses.  
   
- Barras verticais duplas (&#124; &#124;) têm a mesma funcionalidade que o operador OR.  
+ Barras verticais duplas (& #124; & #124;) têm a mesma funcionalidade que o operador OR.  
   
  A tabela a seguir mostra valores e tipos de retorno de entrada possíveis.  
   

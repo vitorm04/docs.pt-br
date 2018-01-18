@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 3944fb6d68ed054feb8d7ddec149745b78810ee2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 64858f89a569be3056f878561f8031f16830f81d
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="what39s-new-in-adonet"></a>O que &#39; s no ADO.NET
 Os recursos a seguir são novos no [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
@@ -32,7 +32,7 @@ Os recursos a seguir são novos no [!INCLUDE[vstecado](../../../../includes/vste
   
 -   O suporte foi adicionado para programação assíncrona.  Consulte [programação assíncrona](../../../../docs/framework/data/adonet/asynchronous-programming.md) para obter mais informações.  
   
--   As falhas de conexão não serão registradas no log de eventos estendido. Para obter mais informações, consulte [dados de rastreamento no ADO.NET](../../../../docs/framework/data/adonet/data-tracing.md).  
+-   As falhas de conexão não serão registradas no log de eventos estendido. Para obter mais informações, consulte [Rastreamento de dados no ADO.NET](../../../../docs/framework/data/adonet/data-tracing.md).  
   
 -   O SqlClient agora tem suporte para alta disponibilidade do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], recurso de recuperação de desastre, AlwaysOn. Para obter mais informações, consulte [SqlClient suporte para alta disponibilidade, recuperação de desastres](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).  
   

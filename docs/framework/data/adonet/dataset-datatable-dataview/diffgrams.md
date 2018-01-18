@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6166cae86d2956ae3eec28b98fe0af864f6b708b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 81cf30367808a3f198514c0d72fa86a617a5ff13
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="diffgrams"></a>DiffGrams
 Um DiffGram é um formato XML que identifica as versões atuais e originais de elementos de dados. O <xref:System.Data.DataSet> usa o formato DiffGram para carregar e manter seu conteúdo e para serializar o conteúdo para o transporte em uma conexão de rede. Quando um <xref:System.Data.DataSet> é gravada como um DiffGram, ele preenche o DiffGram com todas as informações necessárias para precisa recriar o conteúdo, embora não o esquema do <xref:System.Data.DataSet>, incluindo valores de coluna tanto o **Original** e **atual** versões de linha, as informações de erro de linha e ordem de linha.  
@@ -81,10 +81,10 @@ Um DiffGram é um formato XML que identifica as versões atuais e originais de e
  **\<**  ***DataInstance***  **>**  
  O nome desse elemento, ***DataInstance***, é usado para fins de explicação nesta documentação. Um ***DataInstance*** elemento representa uma <xref:System.Data.DataSet> ou uma linha de um <xref:System.Data.DataTable>. Em vez de *DataInstance*, o elemento conterá o nome do <xref:System.Data.DataSet> ou <xref:System.Data.DataTable>. Este bloco de formato DiffGram contém os dados atuais, se ele tiver sido modificado ou não. Um elemento ou linha, que foi modificada é identificada com o **diffgr: HasChanges** anotação.  
   
- **\<diffgr: antes de >**  
+ **\<diffgr:before>**  
  Este bloco de formato DiffGram contém a versão original de uma linha. Correspondem a elementos em elementos do bloco de ***DataInstance*** bloquear usando o **diffgr: ID** anotação.  
   
- **\<diffgr:Errors >**  
+ **\<diffgr:errors>**  
  Este bloco de formato DiffGram contém informações de erro para uma linha específica no ***DataInstance*** bloco. Correspondem a elementos em elementos do bloco de ***DataInstance*** bloquear usando o **diffgr: ID** anotação.  
   
 ## <a name="diffgram-annotations"></a>Anotações de DiffGram  
@@ -96,7 +96,7 @@ Um DiffGram é um formato XML que identifica as versões atuais e originais de e
 |----------------|-----------------|  
 |**id**|Usado para emparelhar os elementos de  **\<diffgr: antes de >** e  **\<diffgr:errors >** blocos a elementos no  **\<**  ***DataInstance***  **>**  bloco. Valores com o **diffgr: ID** anotação estão no formato *[TableName] [RowIdentifier]*. Por exemplo: `<Customers diffgr:id="Customers1">`.|  
 |**parentId**|Identifica qual elemento do  **\<**  ***DataInstance***  **>**  bloco é o elemento pai do elemento atual. Valores com o **diffgr:** anotação estão no formato *[TableName] [RowIdentifier]*. Por exemplo: `<Orders diffgr:parentId="Customers1">`.|  
-|**hasChanges**|Identifica uma linha de  **\<**  ***DataInstance***  **>**  bloquear conforme modificado. O **hasChanges** anotação pode ter um dos seguintes valores:<br /><br /> **inserido**<br /> Identifica um **adicionado** linha.<br /><br /> **modificado**<br /> Identifica um **modificadas** linha que contém um **Original** versão de linha no  **\<diffgr: antes de >** bloco. Observe que **excluído** linhas terão um **Original** versão de linha no  **\<diffgr: antes de >** bloco, mas haverá nenhum elemento anotado no  **\<**  ***DataInstance***  **>**  bloco.|  
+|**hasChanges**|Identifica uma linha de  **\<**  ***DataInstance***  **>**  bloquear conforme modificado. O **hasChanges** anotação pode ter um dos seguintes valores:<br /><br /> **inserted**<br /> Identifica um **adicionado** linha.<br /><br /> **modified**<br /> Identifica um **modificadas** linha que contém um **Original** versão de linha no  **\<diffgr: antes de >** bloco. Observe que **excluído** linhas terão um **Original** versão de linha no  **\<diffgr: antes de >** bloco, mas haverá nenhum elemento anotado no  **\<**  ***DataInstance***  **>**  bloco.|  
 |**hasErrors**|Identifica uma linha de  **\<**  ***DataInstance***  **>**  bloco com um **RowError**. O elemento de erro é colocado no  **\<diffgr:errors >** bloco.|  
 |**Erro**|Contém o texto do **RowError** para um determinado elemento no  **\<diffgr:errors >** bloco.|  
   

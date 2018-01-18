@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a30adbc060ead6eb1805f85bd563021ba7530c36
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fc99fea9b722f6c3395f6bade625a09c6e97eb08
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="standard-query-operator-translation"></a>Conversão padrão de operador de consulta
 O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] converte operadores de consulta padrão em comandos SQL. O processador de consultas do banco de dados determina a semântica de execução de tradução de SQL.  
@@ -165,7 +165,7 @@ ORDER BY [t0].[CustomerID]
   
  Os operadores `is` e `as` e o método `GetType` não são restritos ao operador `Select`. Podem ser usados em outros operadores de consulta também.  
   
-## <a name="sql-server-2008-support"></a>Suporte do SQL Server 2008  
+## <a name="sql-server-2008-support"></a>SQL Server 2008 Support  
  A partir do .NET Framework 3.5 SP1, o LINQ to SQL dá suporte ao mapeamento para novos tipos de data e hora introduzidos com o SQL Server 2008. Mas, há algumas limitações aos operadores de consulta do LINQ to SQL que você pode usar ao operar com valores mapeados para esses novos tipos.  
   
 ### <a name="unsupported-query-operators"></a>Operadores de consulta não suportados  

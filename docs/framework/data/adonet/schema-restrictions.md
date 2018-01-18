@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 4a3cc1f0c27af1ad41e14374b4c155e6b8620f28
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5b004b70716c61af8ac37fef76f660c488e5a74
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="schema-restrictions"></a>Restrições de esquema
 O segundo parâmetro opcional do **GetSchema** método é retornado as restrições que são usadas para limitar a quantidade de informações de esquema e ela é passada para o **GetSchema** método como uma matriz de cadeias de caracteres . A posição na matriz determina os valores que você pode passar, e isso é equivalente ao número de restrição.  
@@ -141,7 +141,7 @@ class Program
 }  
 ```  
   
-## <a name="sql-server-schema-restrictions"></a>Restrições de esquema do SQL Server  
+## <a name="sql-server-schema-restrictions"></a>SQL Server Schema Restrictions  
  As tabelas a seguir listam as restrições para coleções de esquema do SQL Server.  
   
 ### <a name="users"></a>Usuários  
@@ -222,28 +222,28 @@ class Program
   
 |Nome da restrição|Nome do Parâmetro|Restrição padrão|Número de restrição|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catálogo|@Catalog|DB_NAME|1|  
-|Proprietário|@Owner|user_name)|2|  
-|Tabela|@Table|o.Name|3|  
-|ConstraintName|@ConstraintName|x.Name|4|  
-|Column|@Column|c.Name|5|  
+|Catálogo|@Catalog|db_name()|1|  
+|Proprietário|@Owner|user_name()|2|  
+|Tabela|@Table|o.name|3|  
+|ConstraintName|@ConstraintName|x.name|4|  
+|Column|@Column|c.name|5|  
   
 ### <a name="indexes"></a>Índices  
   
 |Nome da restrição|Nome do Parâmetro|Restrição padrão|Número de restrição|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catálogo|@Catalog|DB_NAME|1|  
-|Proprietário|@Owner|user_name)|2|  
-|Tabela|@Table|o.Name|3|  
+|Catálogo|@Catalog|db_name()|1|  
+|Proprietário|@Owner|user_name()|2|  
+|Tabela|@Table|o.name|3|  
   
 ### <a name="userdefinedtypes"></a>UserDefinedTypes  
   
 |Nome da restrição|Nome do Parâmetro|Restrição padrão|Número de restrição|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|assembly_name|@AssemblyName|assemblies.Name|1|  
-|udt_name|@UDTName|Types.assembly_class|2|  
+|assembly_name|@AssemblyName|assemblies.name|1|  
+|udt_name|@UDTName|types.assembly_class|2|  
   
-### <a name="foreignkeys"></a>Chaves externas  
+### <a name="foreignkeys"></a>ForeignKeys  
   
 |Nome da restrição|Nome do Parâmetro|Restrição padrão|Número de restrição|  
 |----------------------|--------------------|-------------------------|------------------------|  
@@ -252,7 +252,7 @@ class Program
 |Tabela|@Table|TABLE_NAME|3|  
 |Nome|@Name|CONSTRAINT_NAME|4|  
   
-## <a name="sql-server-2008-schema-restrictions"></a>Restrições de esquema do SQL Server 2008  
+## <a name="sql-server-2008-schema-restrictions"></a>SQL Server 2008 Schema Restrictions  
  As tabelas a seguir listam as restrições para coleções de esquema do SQL Server 2008. Essas restrições são válida começando com a versão 3.5 SP1 do .NET Framework e do SQL Server 2008. Eles não têm suporte em versões anteriores do .NET Framework e do SQL Server.  
   
 ### <a name="columnsetcolumns"></a>ColumnSetColumns  

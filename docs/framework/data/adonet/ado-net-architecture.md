@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2916321ff51f335b40a2cc4eef90cdccdfc25bda
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d1f09901ef6eb30fe3f43ee19ab17ceaaa2b78e8
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="adonet-architecture"></a>Arquitetura do ADO.NET
 Antigamente, o processamento de dados dependia basicamente de um modelo de duas camadas baseado em conexão. Como o processamento de dados usa cada vez mais arquiteturas de várias camadas, os programadores estão adotando uma abordagem desconectada para fornecer melhor escalabilidade a seus aplicativos.  
@@ -34,7 +34,7 @@ Antigamente, o processamento de dados dependia basicamente de um modelo de duas 
   
  O diagrama a seguir ilustra a relação entre um provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e um `DataSet`.  
   
- ![Gráfico do ADO.Net](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
+ ![ADO.Net graphic](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 Arquitetura do ADO.NET  
   
 ### <a name="choosing-a-datareader-or-a-dataset"></a>Escolhendo um DataReader ou um DataSet  

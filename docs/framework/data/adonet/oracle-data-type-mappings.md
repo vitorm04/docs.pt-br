@@ -10,40 +10,40 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ec34ae21-bbbb-4adb-b672-83865e2a8451
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6ec4bc061ea7a2b7875c9c5521d73dfd2e96954a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: adb0fc332e00e766a62d0af1c110c5a7ce2d42c3
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="oracle-data-type-mappings"></a>Mapeamentos de tipo de dados Oracle
 A tabela a seguir lista os tipos de dados Oracle e seus mapeamentos para o <xref:System.Data.OracleClient.OracleDataReader>.  
   
 |Tipo de dados Oracle|Tipo de dados do .NET Framework retornado por OracleDataReader.GetValue|Tipo de dados OracleClient retornado por OracleDataReader.GetOracleValue|Comentários|  
 |----------------------|--------------------------------------------------------------------|------------------------------------------------------------------------|-------------|  
-|**BFILE**|**Byte]**|<xref:System.Data.OracleClient.OracleBFile>||  
-|**BLOB**|**Byte]**|<xref:System.Data.OracleClient.OracleLob>||  
+|**BFILE**|**Byte[]**|<xref:System.Data.OracleClient.OracleBFile>||  
+|**BLOB**|**Byte[]**|<xref:System.Data.OracleClient.OracleLob>||  
 |**CHAR**|**Cadeia de caracteres**|<xref:System.Data.OracleClient.OracleString>||  
 |**CLOB**|**Cadeia de caracteres**|<xref:System.Data.OracleClient.OracleLob>||  
 |**DATE**|**DateTime**|<xref:System.Data.OracleClient.OracleDateTime>||  
 |**FLOAT**|**Decimal**|<xref:System.Data.OracleClient.OracleNumber>|Esse tipo de dados é um alias para o **número** tipo de dados e foi projetado para que o <xref:System.Data.OracleClient.OracleDataReader> retorna um **decimal** ou <xref:System.Data.OracleClient.OracleNumber> em vez de um valor de ponto flutuante. O uso do tipo de dados do .NET Framework pode causar um estouro.|  
-|**NÚMERO INTEIRO**|**Decimal**|<xref:System.Data.OracleClient.OracleNumber>|Esse tipo de dados é um alias para o **NUMBER(38)** tipo de dados e foi projetado para que o <xref:System.Data.OracleClient.OracleDataReader> retorna um **decimal** ou <xref:System.Data.OracleClient.OracleNumber> em vez de um valor inteiro. O uso do tipo de dados do .NET Framework pode causar um estouro.|  
+|**INTEGER**|**Decimal**|<xref:System.Data.OracleClient.OracleNumber>|Esse tipo de dados é um alias para o **NUMBER(38)** tipo de dados e foi projetado para que o <xref:System.Data.OracleClient.OracleDataReader> retorna um **decimal** ou <xref:System.Data.OracleClient.OracleNumber> em vez de um valor inteiro. O uso do tipo de dados do .NET Framework pode causar um estouro.|  
 |**INTERVALO DE ANO PARA MÊS**|**Int32**|<xref:System.Data.OracleClient.OracleMonthSpan>||  
 |**DIA DE INTERVALO PARA O SEGUNDO**|**TimeSpan**|<xref:System.Data.OracleClient.OracleTimeSpan>||  
 |**LONG**|**Cadeia de caracteres**|<xref:System.Data.OracleClient.OracleString>||  
-|**LONG RAW**|**Byte]**|<xref:System.Data.OracleClient.OracleBinary>||  
+|**LONG RAW**|**Byte[]**|<xref:System.Data.OracleClient.OracleBinary>||  
 |**NCHAR**|**Cadeia de caracteres**|<xref:System.Data.OracleClient.OracleString>||  
 |**NCLOB**|**Cadeia de caracteres**|<xref:System.Data.OracleClient.OracleLob>||  
 |**NÚMERO**|**Decimal**|<xref:System.Data.OracleClient.OracleNumber>|O uso do tipo de dados do .NET Framework pode causar um estouro.|  
 |**NVARCHAR2**|**Cadeia de caracteres**|<xref:System.Data.OracleClient.OracleString>||  
-|**BRUTO**|**Byte]**|<xref:System.Data.OracleClient.OracleBinary>||  
+|**RAW**|**Byte[]**|<xref:System.Data.OracleClient.OracleBinary>||  
 |**REF CURSOR**|||O Oracle **REF CURSOR** não há suporte para o tipo de dados o <xref:System.Data.OracleClient.OracleDataReader> objeto.|  
 |**ROWID**|**Cadeia de caracteres**|<xref:System.Data.OracleClient.OracleString>||  
-|**CARIMBO DE HORA**|**DateTime**|<xref:System.Data.OracleClient.OracleDateTime>||  
+|**TIMESTAMP**|**DateTime**|<xref:System.Data.OracleClient.OracleDateTime>||  
 |**CARIMBO DE HORA COM O FUSO HORÁRIO LOCAL**|**DateTime**|<xref:System.Data.OracleClient.OracleDateTime>||  
 |**CARIMBO DE HORA COM O FUSO HORÁRIO**|**DateTime**|<xref:System.Data.OracleClient.OracleDateTime>||  
 |**INTEIRO NÃO ASSINADO**|**Número**|<xref:System.Data.OracleClient.OracleNumber>|Esse tipo de dados é um alias para o **NUMBER(38)** tipo de dados e foi projetado para que o <xref:System.Data.OracleClient.OracleDataReader> retorna um **decimal** ou <xref:System.Data.OracleClient.OracleNumber> em vez de um valor inteiro não assinado. O uso do tipo de dados do .NET Framework pode causar um estouro.|  
@@ -56,10 +56,10 @@ A tabela a seguir lista os tipos de dados Oracle e seus mapeamentos para o <xref
 |**BFILE**||**BFile**|Oracle permite somente a associação de um **BFILE** como um **BFILE** parâmetro. O provedor de dados .NET para Oracle não automaticamente constrói uma para você se você tentar associar não**BFILE** valor, como **byte []** ou <xref:System.Data.OracleClient.OracleBinary>.|  
 |**BLOB**||**Blob**|Oracle permite somente a associação de um **BLOB** como um **BLOB** parâmetro. O provedor de dados .NET para Oracle não automaticamente constrói uma para você se você tentar associar não**BLOB** valor, como **byte []** ou <xref:System.Data.OracleClient.OracleBinary>.|  
 |**CHAR**|**AnsiStringFixedLength**|**Char**||  
-|**CLOB**||**CLOB**|Oracle permite somente a associação de um **CLOB** como um **CLOB** parâmetro. O provedor de dados .NET para Oracle não automaticamente constrói uma para você se você tentar associar não**CLOB** valor, como **System. String** ou <xref:System.Data.OracleClient.OracleString>.|  
+|**CLOB**||**Clob**|Oracle permite somente a associação de um **CLOB** como um **CLOB** parâmetro. O provedor de dados .NET para Oracle não automaticamente constrói uma para você se você tentar associar não**CLOB** valor, como **System. String** ou <xref:System.Data.OracleClient.OracleString>.|  
 |**DATE**|**DateTime**|**DateTime**||  
 |**FLOAT**|**Single, Double, Decimal**|**Flutuar, clique duas vezes, número**|<xref:System.Data.OracleClient.OracleParameter.Size%2A>Determina o **System.Data.DBType** e <xref:System.Data.OracleClient.OracleType>.|  
-|**NÚMERO INTEIRO**|**SByte, Int16, Int32, Int64, Decimal**|**SByte, Int16, Int32, número**|<xref:System.Data.OracleClient.OracleParameter.Size%2A>Determina o **System.Data.DBType** e <xref:System.Data.OracleClient.OracleType>.|  
+|**INTEGER**|**SByte, Int16, Int32, Int64, Decimal**|**SByte, Int16, Int32, número**|<xref:System.Data.OracleClient.OracleParameter.Size%2A>Determina o **System.Data.DBType** e <xref:System.Data.OracleClient.OracleType>.|  
 |**INTERVALO DE ANO PARA MÊS**|**Int32**|**IntervalYearToMonth**|<xref:System.Data.OracleClient.OracleType> só está disponível com o uso do software cliente e servidor Oracle 9i.|  
 |**DIA DE INTERVALO PARA O SEGUNDO**|**Object**|**IntervalDayToSecond**|<xref:System.Data.OracleClient.OracleType> só está disponível com o uso do software cliente e servidor Oracle 9i.|  
 |**LONG**|**AnsiString**|**LongVarChar**||  
@@ -68,10 +68,10 @@ A tabela a seguir lista os tipos de dados Oracle e seus mapeamentos para o <xref
 |**NCLOB**||**NClob**|Oracle permite somente a associação de um **NCLOB** como um **NCLOB** parâmetro. O provedor de dados .NET para Oracle não automaticamente constrói uma para você se você tentar associar não**NCLOB** valor, como **System. String** ou <xref:System.Data.OracleClient.OracleString>.|  
 |**NÚMERO**|**VarNumeric**|**Número**||  
 |**NVARCHAR2**|**Cadeia de caracteres**|**NVarChar**||  
-|**BRUTO**|**Binary**|**Bruto**||  
+|**RAW**|**Binary**|**Bruto**||  
 |**REF CURSOR**||**Cursor**|Para obter mais informações, consulte [REF CURSORs do Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md).|  
-|**ROWID**|**AnsiString**|**RowId**||  
-|**CARIMBO DE HORA**|**DateTime**|**Carimbo de data/hora**|<xref:System.Data.OracleClient.OracleType> só está disponível com o uso do software cliente e servidor Oracle 9i.|  
+|**ROWID**|**AnsiString**|**Rowid**||  
+|**TIMESTAMP**|**DateTime**|**Carimbo de data/hora**|<xref:System.Data.OracleClient.OracleType> só está disponível com o uso do software cliente e servidor Oracle 9i.|  
 |**CARIMBO DE HORA COM O FUSO HORÁRIO LOCAL**|**DateTime**|**TimestampLocal**|<xref:System.Data.OracleClient.OracleType> só está disponível com o uso do software cliente e servidor Oracle 9i.|  
 |**CARIMBO DE HORA COM O FUSO HORÁRIO**|**DateTime**|**TimestampWithTz**|<xref:System.Data.OracleClient.OracleType> só está disponível com o uso do software cliente e servidor Oracle 9i.|  
 |**INTEIRO NÃO ASSINADO**|**Byte, UInt16, UInt32, UInt64, Decimal**|**Byte, UInt16, Uint32, número**|<xref:System.Data.OracleClient.OracleParameter.Size%2A>Determina o **System.Data.DBType** e <xref:System.Data.OracleClient.OracleType>.|  

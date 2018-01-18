@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 0f5aed56ba4958d44e0628f55115308751afae55
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a71ba7ed12196184b7e826ed70c92a9873efdb0c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Configurando parâmetros e tipos de dados de parâmetro
 Objetos de comando usam parâmetros para passar valores para instruções SQL ou procedimentos armazenados, fornecendo verificação de tipo e validação. Diferentemente do texto de comando, o parâmetro de entrada é tratado como um valor literal, não como código executável. Isso ajuda a proteger contra ataques de "Injeção de SQL", em que um invasor insere um comando que compromete a segurança no servidor em uma instrução SQL.  

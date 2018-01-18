@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 76d9b8fab965523852adafb6b7d858c34e72d408
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e95c6dc6bceb367000f4aa174a368bf046bc1b93
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-schema-collections"></a>Coleções de esquema do SQL Server
 O Microsoft .NET Framework Data Provider para SQL Server dá suporte a coleções de esquema adicionais além das coleções de esquema comuns. As coleções de esquema variam ligeiramente conforme a versão do SQL Server que você está usando. Para determinar a lista de coleções de esquema com suporte, chame o **GetSchema** método sem argumentos, ou com o nome da coleção de esquema "MetaDataCollections". Isso retornará um <xref:System.Data.DataTable> com uma lista de coleções de esquema com suporte, o número de restrições que oferecem suporte a cada um deles e o número de partes do identificador que eles usam.  
@@ -28,7 +28,7 @@ O Microsoft .NET Framework Data Provider para SQL Server dá suporte a coleçõe
 |ColumnName|DataType|Descrição|  
 |----------------|--------------|-----------------|  
 |Database_Name|Cadeia de Caracteres|Nome do banco de dados.|  
-|DBID|Int16|ID do banco de dados.|  
+|dbid|Int16|ID do banco de dados.|  
 |create_date|DateTime|Data de criação do banco de dados.|  
   
 ## <a name="foreign-keys"></a>Chaves estrangeiras  
@@ -57,12 +57,12 @@ O Microsoft .NET Framework Data Provider para SQL Server dá suporte a coleçõe
 |table_name|Cadeia de Caracteres|Nome da tabela.|  
 |index_name|Cadeia de Caracteres|Nome do índice.|  
   
-### <a name="indexes-sql-server-2008"></a>Índices (SQL Server 2008)  
+### <a name="indexes-sql-server-2008"></a>Indexes (SQL Server 2008)  
  Começando com o .NET Framework versão 3.5 SP1 e o SQL Server 2008, as colunas a seguir foram adicionadas à coleção de esquema de índices para dar suporte a novos tipos espaciais, filestream e as colunas esparsas. Essas colunas não têm suporte em versões anteriores do .NET Framework e do SQL Server.  
   
 |ColumnName|DataType|Descrição|  
 |----------------|--------------|-----------------|  
-|type_desc|Cadeia de Caracteres|O tipo do índice será um dos seguintes:<br /><br /> -HEAP<br />-CLUSTERIZADO<br />-NÃO CLUSTERIZADO<br />-XML<br />-ESPACIAL|  
+|type_desc|Cadeia de Caracteres|O tipo do índice será um dos seguintes:<br /><br /> -HEAP<br />-CLUSTERIZADO<br />-NÃO CLUSTERIZADO<br />-   XML<br />-ESPACIAL|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -74,7 +74,7 @@ O Microsoft .NET Framework Data Provider para SQL Server dá suporte a coleçõe
 |table_catalog|Cadeia de Caracteres|Nome da tabela de índice está associado.|  
 |table_schema|Cadeia de Caracteres|Esquema que contém a tabela de índice está associado.|  
 |table_name|Cadeia de Caracteres|Nome da tabela.|  
-|nome da coluna|Cadeia de Caracteres|Nome da coluna de índice está associado.|  
+|column_name|Cadeia de Caracteres|Nome da coluna de índice está associado.|  
 |ordinal_position|Int32|Posição ordinal da coluna.|  
 |KeyType|Byte|O tipo de objeto.|  
 |index_name|Cadeia de Caracteres|Nome do índice.|  
@@ -153,7 +153,7 @@ O Microsoft .NET Framework Data Provider para SQL Server dá suporte a coleçõe
 |CHARACTER_SET_NAME|Cadeia de Caracteres|Retorna o nome exclusivo para o caractere definido se essa coluna for dados de texto ou dados de caractere de tipo. Caso contrário, NULL será retornado.|  
 |COLLATION_CATALOG|Cadeia de Caracteres|Mestre retorna, indicando o banco de dados no qual o agrupamento é definido, se a coluna de dados de caractere ou dados de texto tipo. Caso contrário, essa coluna é NULL.|  
   
-### <a name="columns-sql-server-2008"></a>Colunas (SQL Server 2008)  
+### <a name="columns-sql-server-2008"></a>Columns (SQL Server 2008)  
  Começando com o .NET Framework versão 3.5 SP1 e o SQL Server 2008, as colunas a seguir foram adicionadas à coleção de esquema de colunas para dar suporte a novos tipos espaciais, filestream e as colunas esparsas. Essas colunas não têm suporte em versões anteriores do .NET Framework e do SQL Server.  
   
 |ColumnName|DataType|Descrição|  

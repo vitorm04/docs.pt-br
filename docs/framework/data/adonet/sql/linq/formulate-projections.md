@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 745742df-0eda-479b-83f8-29bd8a80db96
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: bb22ddd4882d9885c55301a6fdc6a0eb336b49af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 67c196b5c693e36e45d4cad4fa75e08145dd699d
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="formulate-projections"></a>Formule projeções
 Os exemplos a seguir mostram como a declaração de `select` em C# e a declaração de `Select` em [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] podem ser combinadas com outros recursos para formar projeções de consulta.  

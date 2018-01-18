@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6bc9a754325f7d01ee36622a23efde1cbc7c4812
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c2de777dbd8bf6ac18db95a1cf647d259a252f8d
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="distributed-transactions"></a>Transações distribuídas
 Uma transação é um conjunto de tarefas relacionadas que é bem-sucedida (confirmação) ou falha (anulação) como uma unidade, entre outras coisas. Um *transação distribuída* é uma transação que afeta a vários recursos. Para que uma transação distribuída seja confirmada, todos os participantes devem garantir que qualquer alteração nos dados será permanente. As alterações devem persistir mesmo que haja falhas do sistema ou outros eventos imprevisíveis. Mesmo se um único participante não fizer essa garantia, a transação inteira falhará e todas as alterações aos dados dentro do escopo da transação serão revertidas.  

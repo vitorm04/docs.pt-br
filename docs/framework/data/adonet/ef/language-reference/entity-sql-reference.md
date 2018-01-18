@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 58f30c4c2c220660b62b03ea4eb052bd2cf015eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f92fbcf1aaa8f5d2c856fe1acdbc6d3886fa0c25
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="entity-sql-reference"></a>Referência de Entity SQL
 Esta seção contém [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tópicos de referência. Este tópico resume e agrupa os [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operadores por categoria.  
@@ -57,12 +57,12 @@ Esta seção contém [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tó
 |[= (É igual a)](../../../../../../docs/framework/data/adonet/ef/language-reference/equals-entity-sql.md)|Compara a igualdade de duas expressões.|  
 |[> (Maior que)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-entity-sql.md)|Compara duas expressões para determinar se a expressão da esquerda tem um valor maior que a expressão da direita.|  
 |[>= (Maior ou igual a)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-or-equal-to-entity-sql.md)|Compara duas expressões para determinar se a expressão da esquerda tem um valor maior que ou igual à expressão da direita.|  
-|[FOR &#91; NÃO &#93; NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|Determina se uma expressão de consulta é nula.|  
+|[IS &#91;NOT&#93; NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|Determina se uma expressão de consulta é nula.|  
 |[< (Menor que)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|Compara duas expressões para determinar se a expressão da esquerda tem um valor menor que a expressão da direita.|  
 |[<= (Menor ou igual a)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|Compara duas expressões para determinar se a expressão da esquerda tem um valor menor que ou igual à expressão da direita.|  
-|[&#91; NÃO &#93; ENTRE](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|Determina se uma expressão resulta em um valor em um intervalo especificado.|  
+|[&#91;NOT&#93; BETWEEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|Determina se uma expressão resulta em um valor em um intervalo especificado.|  
 |[!= (Não é igual a)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|Compara duas expressões para determinar se a expressão da esquerda não é igual a expressão da direita.|  
-|[&#91; NÃO &#93; COMO](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|Determina se uma cadeia de caracteres específica corresponde a um padrão especificado.|  
+|[&#91;NOT&#93; LIKE](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|Determina se uma cadeia de caracteres específica corresponde a um padrão especificado.|  
   
 ## <a name="logical-and-case-expression-operators"></a>Operadores lógicos e de expressão CASE  
  Os operadores lógicos testam a verdade de uma condição. A expressão CASE avalia um conjunto de expressões boolianas para determinar o resultado. A tabela a seguir lista os operadores lógicos e de expressão CASE.  
@@ -109,9 +109,9 @@ Esta seção contém [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tó
 |--------------|---------|  
 |[ANYELEMENT](../../../../../../docs/framework/data/adonet/ef/language-reference/anyelement-entity-sql.md)|Extrai um elemento de uma coleção multivalorada.|  
 |[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)|Retorna uma coleção de todos os valores distintos da expressão de consulta para a esquerda do operando EXCEPT que também não são retornados da expressão de consulta à direita do operando EXCEPT.|  
-|[&#91; NÃO &#93; EXISTE](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|Determina se uma coleção está vazia.|  
+|[&#91;NOT&#93; EXISTS](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|Determina se uma coleção está vazia.|  
 |[FLATTEN](../../../../../../docs/framework/data/adonet/ef/language-reference/flatten-entity-sql.md)|Converte uma coleção de coleções em uma coleção combinada.|  
-|[&#91; NÃO &#93; IN](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|Determina se um valor corresponde a qualquer valor em uma coleção.|  
+|[&#91;NOT&#93; IN](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|Determina se um valor corresponde a qualquer valor em uma coleção.|  
 |[INTERSECT](../../../../../../docs/framework/data/adonet/ef/language-reference/intersect-entity-sql.md)|Retorna uma coleção de todos os valores diferentes que são retornados pelas expressões de consulta nos lados esquerdo e direito do operando INTERSECT.|  
 |[OVERLAPS](../../../../../../docs/framework/data/adonet/ef/language-reference/overlaps-entity-sql.md)|Determina se duas coleções têm elementos comuns.|  
 |[SET](../../../../../../docs/framework/data/adonet/ef/language-reference/set-entity-sql.md)|Usado para converter uma coleção de objetos em um conjunto gerando uma nova coleção com todos os elementos duplicados removidos.|  

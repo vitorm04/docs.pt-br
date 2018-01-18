@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 98ab4226-bb9f-44e7-af46-61a9b1a4e47c
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: dfa18b0f71e30c4e901dc3b55726306a4d46b220
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b3e69017b5f617cff9bf2c159d5538a8c41e4cc0
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="entity-data-model-namespaces"></a>Modelo de Dados de Entidade: Namespaces
 Um namespace de modelo de dados na entidade (EDM) é um contêiner abstrato de [tipos de entidade](../../../../docs/framework/data/adonet/entity-type.md), [tipos complexos](../../../../docs/framework/data/adonet/complex-type.md), e [associações](../../../../docs/framework/data/adonet/association-type.md). Namespaces em EDM são semelhantes aos espaços em uma linguagem de programação: fornecem o contexto para os objetos que contêm e fornecem uma maneira de torne os objetos que têm o mesmo nome (mas estão contidos em namespaces diferentes).  

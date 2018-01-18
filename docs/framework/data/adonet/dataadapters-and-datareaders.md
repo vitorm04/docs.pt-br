@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6d071622862a645d11ea8228574f81d5f8c3e6e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3a7ce8787dec2f80ba04bef08c5ac355a907feaf
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapters e DataReaders
 Você pode usar o ADO.NET **DataReader** para recuperar um fluxo de dados somente leitura, somente encaminhamento de um banco de dados. Os resultados são retornados como a consulta é executada e são armazenados no buffer de rede no cliente até que você os solicita usando o **leitura** método o **DataReader**. Usando o **DataReader** pode aumentar o desempenho do aplicativo ao recuperar dados assim que ele está disponível e (por padrão) armazenar apenas uma linha por vez na memória, reduzindo a sobrecarga do sistema.  

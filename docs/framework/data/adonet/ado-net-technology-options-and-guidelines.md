@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 11ca23427460ed4c469fc45e43f3b32e4ec5eb25
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26678ebf9478efadc73661defe19be77cb69d075
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Opções e diretrizes da tecnologia ADO.NET
 A Plataforma de Dados do ADO.NET é uma estratégia de várias versões para diminuir a quantidade de codificação e de manutenção necessária para habilitar os desenvolvedores para programarem com modelos de dados de entidade conceituais. Essa plataforma inclui o ADO.NET Entity Framework e as tecnologias relacionadas.  

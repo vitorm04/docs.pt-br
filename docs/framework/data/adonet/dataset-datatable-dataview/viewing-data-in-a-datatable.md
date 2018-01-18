@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ab7a60b4195f3d8976a61e3909682b3748e30341
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2576c95ad7739d28e2ca822fd13fb6f176900814
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="viewing-data-in-a-datatable"></a>Exibindo dados em uma DataTable
 Você pode acessar o conteúdo de um <xref:System.Data.DataTable> usando o **linhas** e **colunas** coleções do **DataTable**. Você também pode usar o <xref:System.Data.DataTable.Select%2A> método para retornar subconjuntos de dados em um **DataTable** acordo com critérios inclusive critérios de pesquisa, ordem de classificação e o estado de linha. Além disso, você pode usar o <xref:System.Data.DataRowCollection.Find%2A> método o **DataRowCollection** durante a pesquisa de uma linha específica usando um valor de chave primária.  
@@ -42,7 +42,7 @@ Você pode acessar o conteúdo de um <xref:System.Data.DataTable> usando o **lin
 |**Adicionado**|Uma nova linha.|  
 |**Nenhum**|nenhuma.|  
 |**OriginalRows**|Linhas originais, incluindo linhas inalteradas e excluídas.|  
-|**Inalterado**|Uma linha inalterada.|  
+|**Unchanged**|Uma linha inalterada.|  
   
  No exemplo a seguir, o **DataSet** objeto for filtrado para que você está apenas trabalhando com linhas cuja **DataViewRowState** é definido como **CurrentRows**.  
   

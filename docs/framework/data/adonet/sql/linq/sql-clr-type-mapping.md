@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 84c7f870edd1c8082936b380547e181d129f529e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc6a3d38b8534c9727562cb3fb82f96fa60db7ec
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-clr-type-mapping"></a>Mapeamento de tipo SQL-CLR
 No LINQ to SQL, o modelo de dados de um banco de dados relacional mapeia para um modelo de objeto que é expresso na linguagem de programação de sua escolha. Quando o aplicativo é executado, o LINQ to SQL converte consultas integradas à linguagem no modelo de objeto em SQL e as envia para o banco de dados para execução. Quando o banco de dados retorna os resultados, o LINQ to SQL converte os resultados de volta para os objetos com os quais você pode trabalhar em sua própria linguagem de programação.  

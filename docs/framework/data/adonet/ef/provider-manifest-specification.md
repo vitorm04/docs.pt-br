@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: f3e80b5bb62cc785c220e2baeb773e6990c5fee1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e478f145511266a919b1bc948e3218b60f3de993
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="provider-manifest-specification"></a>Especificação do manifesto do provedor
 Esta seção discute como um provedor de armazenamento de dados pode suportar os tipos e funções no armazenamento de dados.  
@@ -72,7 +72,7 @@ Esta seção discute como um provedor de armazenamento de dados pode suportar os
 ## <a name="provider-manifest-discoverability"></a>Descoberta manifesto provedor  
  O manifesto é usado por vários serviços indiretamente componentes de entidade dos tipos (por exemplo ferramentas ou consulta) mas aproveitado mais diretamente por metadados com o uso do carregador de metadados do armazenamento de dados.  
   
- ![dfb3d02b &#45; 7a8c &#45; 4d 51 &#45; ac5a &#45; a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
+ ![dfb3d02b&#45;7a8c&#45;4d51&#45;ac5a&#45;a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
   
  No entanto, um provedor determinado pode suportar armazenamentos diferentes ou versões diferentes do mesmo armazenamento. Portanto, um provedor deve relatar um manifesto diferente para cada armazenamento de dados suportado.  
   
@@ -88,7 +88,7 @@ Esta seção discute como um provedor de armazenamento de dados pode suportar os
 ## <a name="provider-manifest-programming-model"></a>Manifesto modelo de programação do provedor  
  Os provedores derivam de <xref:System.Data.Common.DbXmlEnabledProviderManifest>, que permite que especifiquem seus manifestos declarativamente. A ilustração a seguir mostra a hierarquia de classe de um provedor:  
   
- ![Nenhum](../../../../../docs/framework/data/adonet/ef/media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
+ ![None](../../../../../docs/framework/data/adonet/ef/media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
   
 ### <a name="discoverability-api"></a>Descoberta API  
  O manifesto do provedor é carregado pelo carregador de metadados de Store (StoreItemCollection), usando uma conexão de armazenamento de dados ou um token de manifesto do provedor.  
@@ -275,7 +275,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |Internos|Boolean|Não|verdadeiro|Retifique se a função é compilada no armazenamento de dados|  
 |StoreFunctionName|Cadeia de Caracteres|Não|\<Nome >|Nome de função no armazenamento de dados.  Permite um nível de redirecionamento de nomes de função.|  
 |NiladicFunction|Boolean|Não|False|Retifique se a função não requer parâmetros e é chamado sem nenhum parâmetro|  
-|ParameterType<br /><br /> Semântica|ParameterSemantics|Não|AllowImplicit<br /><br /> Conversão|Escolha de como o pipeline de consulta deve manipular a substituição do tipo de parâmetro:<br /><br /> -ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
+|ParameterType<br /><br /> Semântica|ParameterSemantics|Não|AllowImplicit<br /><br /> Conversão|Escolha de como o pipeline de consulta deve manipular a substituição do tipo de parâmetro:<br /><br /> -   ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
   
  **Nó de parâmetros**  
   

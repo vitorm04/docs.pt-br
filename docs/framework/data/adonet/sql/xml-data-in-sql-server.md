@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9849d319-f518-4e3d-a7cd-f8fdcaaa1d4d
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 712630938989e2187042e8ab143361da664e6bcf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 75d81a79b549d877467cde427265fb4c65f27caf
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="xml-data-in-sql-server"></a>Dados XML no SQL Server
 SQL Server expõe a funcionalidade do SQLXML dentro do .NET Framework. Os desenvolvedores podem gravar aplicativos que acessam dados XML de uma instância do SQL Server, trazer os dados para o ambiente do .NET Framework, processar os dados e enviar que as atualizações de volta para o SQL Server. Dados XML podem ser usados de várias maneiras no SQL Server, incluindo o armazenamento de dados e como valores de parâmetro para recuperar dados. O **SqlXml** classe do .NET Framework fornece o suporte do lado do cliente para trabalhar com dados armazenados em uma coluna XML no SQL Server. Para obter mais informações, consulte "Classes gerenciadas SQLXML" nos Manuais Online do SQL Server.  

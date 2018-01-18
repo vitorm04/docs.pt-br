@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a195656d02d3b7e26ad4f0d8715fc8bf5663750b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 957c31d3262e5c97d576d444748bd1979aee0ce0
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="function-entity-sql"></a>FUNÇÃO (Entity SQL)
 Define uma função no escopo de um comando de consulta Entity SQL.  
@@ -58,7 +58,7 @@ FUNCTION function-name
  REF **(**`data_type`**)**  
  Uma expressão que retorna uma referência a um tipo de objeto.  
   
- LINHA **(**`row_expression`**)**  
+ ROW **(**`row_expression`**)**  
  Uma expressão que retorna registros anônimos, tipados estrutural de um ou mais valores. Para obter mais informações, consulte [linha](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).  
   
 ## <a name="remarks"></a>Comentários  

@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2ac06c78670b4113ab718c06423c04c0ea27c208
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4f199a0fc0939bd5fae4fefb7440c46bd471e4b6
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="oracle-schema-collections"></a>Coleções de esquema do Oracle
 O provedor de dados do Microsoft .NET Framework para Oracle oferece suporte aos seguintes coleções de esquema específico além das coleções de esquema comuns:  
@@ -53,7 +53,7 @@ O provedor de dados do Microsoft .NET Framework para Oracle oferece suporte aos 
   
 -   PrimaryKeys  
   
--   Chaves externas  
+-   ForeignKeys  
   
 -   ForeignKeyColumns  
   
@@ -79,12 +79,12 @@ O provedor de dados do Microsoft .NET Framework para Oracle oferece suporte aos 
 |----------------|--------------|-----------------|  
 |PROPRIETÁRIO|Cadeia de Caracteres|Proprietário do índice|  
 |INDEX_NAME|Cadeia de Caracteres|Nome do índice.|  
-|INDEX_TYPE FOI|Cadeia de Caracteres|Tipo de índice (NORMAL, BITMAP, NORMAL com base em função, com base em função BITMAP ou domínio).|  
+|INDEX_TYPE|Cadeia de Caracteres|Tipo de índice (NORMAL, BITMAP, NORMAL com base em função, com base em função BITMAP ou domínio).|  
 |TABLE_OWNER|Cadeia de Caracteres|Proprietário do objeto indexado.|  
 |TABLE_NAME|Cadeia de Caracteres|Nome do objeto indexado.|  
 |TABLE_TYPE|Cadeia de Caracteres|Tipo do objeto indexado (por exemplo, a tabela, o CLUSTER).|  
 |EXCLUSIVIDADE|Cadeia de Caracteres|Se o índice é exclusivo ou NONUNIQUE.|  
-|COMPACTAÇÃO|Cadeia de Caracteres|Se o índice está habilitado ou desabilitado.|  
+|COMPRESSION|Cadeia de Caracteres|Se o índice está habilitado ou desabilitado.|  
 |PREFIX_LENGTH|Decimal|Número de colunas no prefixo da chave de compactação.|  
 |TABLESPACE_NAME|Cadeia de Caracteres|Nome do espaço de tabela que contém o índice.|  
 |INI_TRANS|Decimal|Número inicial de transações.|  
@@ -171,7 +171,7 @@ O provedor de dados do Microsoft .NET Framework para Oracle oferece suporte aos 
 |INCREMENT_BY|Decimal|Valor pelo qual a sequência é incrementada.|  
 |CYCLE_FLAG|Cadeia de Caracteres|Sequência circundar ao atingir o limite.|  
 |ORDER_FLAG|Cadeia de Caracteres|Números de sequência são gerados na ordem.|  
-|TAMANHO_DO_CACHE|Decimal|Número de números de sequência em cache.|  
+|CACHE_SIZE|Decimal|Número de números de sequência em cache.|  
 |LAST_NUMBER|Decimal|Número de sequência último gravado no disco. Se uma sequência usa o cache, o número gravado em disco é o último número colocado no cache de sequência. Esse número é provavelmente será maior que o último número de sequência que foi usado.|  
   
 ## <a name="synonyms"></a>Sinônimos  
@@ -209,7 +209,7 @@ O provedor de dados do Microsoft .NET Framework para Oracle oferece suporte aos 
 |TEXT_LENGTH|Decimal|Comprimento do texto de exibição.|  
 |TEXTO|Cadeia de Caracteres|Texto de exibição.|  
 |TYPE_TEXT_LENGTH|Decimal|Comprimento da cláusula de tipo do modo de exibição digitada.|  
-|TIPO_TEXTO|Cadeia de Caracteres|Digite a cláusula do modo de exibição digitada.|  
+|TYPE_TEXT|Cadeia de Caracteres|Digite a cláusula do modo de exibição digitada.|  
 |OID_TEXT_LENGTH|Decimal|Comprimento da cláusula com OID do modo de exibição digitada.|  
 |OID_TEXT|Cadeia de Caracteres|COM a cláusula OID do modo de exibição digitada.|  
 |VIEW_TYPE_OWNER|Cadeia de Caracteres|Proprietário do tipo da exibição se a exibição é um modo de exibição digitado.|  
@@ -273,7 +273,7 @@ O provedor de dados do Microsoft .NET Framework para Oracle oferece suporte aos 
 |ColumnName|DataType|Descrição|  
 |----------------|--------------|-----------------|  
 |PROPRIETÁRIO|Cadeia de Caracteres|Nome do proprietário do objeto.|  
-|NOME_DO_PACOTE|Cadeia de Caracteres|Nome do pacote.|  
+|PACKAGE_NAME|Cadeia de Caracteres|Nome do pacote.|  
 |OBJECT_NAME|Cadeia de Caracteres|Nome do procedimento ou função.|  
 |ARGUMENT_NAME|Cadeia de Caracteres|Nome do argumento.|  
 |POSIÇÃO|Decimal|Posição na lista de argumentos, ou nulo para o valor de retorno da função.|  
@@ -328,7 +328,7 @@ O provedor de dados do Microsoft .NET Framework para Oracle oferece suporte aos 
 |INDEX_OWNER|Cadeia de Caracteres|Nome do usuário que possui o índice.|  
 |INDEX_NAME|Cadeia de Caracteres|Nome do índice.|  
   
-## <a name="foreignkeys"></a>Chaves externas  
+## <a name="foreignkeys"></a>ForeignKeys  
   
 |ColumnName|DataType|Descrição|  
 |----------------|--------------|-----------------|  
@@ -366,9 +366,9 @@ O provedor de dados do Microsoft .NET Framework para Oracle oferece suporte aos 
 |----------------|--------------|-----------------|  
 |PROPRIETÁRIO|Cadeia de Caracteres|Proprietário do objeto.|  
 |OBJECT_NAME|Cadeia de Caracteres|Nome do procedimento ou função.|  
-|NOME_DO_PACOTE|Cadeia de Caracteres|Nome do procedimento ou função.|  
+|PACKAGE_NAME|Cadeia de Caracteres|Nome do procedimento ou função.|  
 |OBJECT_ID|Decimal|Número de objeto do objeto.|  
-|SOBRECARGA|Cadeia de Caracteres|Identificador exclusivo da sobrecarga.|  
+|OVERLOAD|Cadeia de Caracteres|Identificador exclusivo da sobrecarga.|  
 |ARGUMENT_NAME|Cadeia de Caracteres|Nome do argumento.|  
 |POSIÇÃO|Decimal|Posição na lista de argumentos, ou null para um valor de retorno da função.|  
 |SEQUÊNCIA|Decimal|Sequência de argumento, incluindo todos os níveis de aninhamento.|  
@@ -380,7 +380,7 @@ O provedor de dados do Microsoft .NET Framework para Oracle oferece suporte aos 
 |DATA_LENGTH|Decimal|Comprimento da coluna (em bytes).|  
 |DATA_PRECISION|Decimal|Comprimento em decimal (número) ou binary dígitos (FLOAT).|  
 |DATA_SCALE|Decimal|Dígitos à direita da vírgula decimal em um número.|  
-|BASE|Decimal|Base do argumento para um número.|  
+|RADIX|Decimal|Base do argumento para um número.|  
 |CHARACTER_SET_NAME|Cadeia de Caracteres|Nome para o argumento do conjunto de caracteres.|  
 |TYPE_OWNER|Cadeia de Caracteres|Proprietário do tipo do argumento.|  
 |TYPE_NAME|Cadeia de Caracteres|Nome do tipo do argumento. Se o tipo for um tipo de local do pacote (isto é, ela é declarada em uma especificação de pacote), em seguida, essa coluna exibe o nome do pacote.|  

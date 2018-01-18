@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: c3d952c2a9e8f1199fa8ef4b6181dabcfbcc4012
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 272d0b8bc58094737d157abfff9f3f026a0f5953
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="walkthrough-sql-generation"></a>Passo a passo: Geração SQL
 Este tópico ilustra como geração SQL ocorre no [provedor exemplo](http://go.microsoft.com/fwlink/?LinkId=180616). A seguinte consulta SQL Entity usa o modelo que está incluído com o provedor exemplo:  
@@ -119,11 +119,11 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
 ## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>Primeiro estágio de geração SQL: Visitar a árvore de expressão  
  A figura a seguir ilustra o inicial vazio o estado do visitante.  Em todo este tópico, somente as propriedades relevantes da explicação passo a passo são mostradas.  
   
- ![Diagrama de](../../../../../docs/framework/data/adonet/ef/media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")  
   
  Quando o nó de projeto é visitado, VisitInputExpression é chamado sobre sua entrada (Join4), que causa a visitar de Join4 pelo método VisitJoinExpression. Porque este é um nível superior, se associa os retornos de IsParentAJoin e falsos um novo SqlSelectStatement (SelectStatement0) é criado e empurrado na pilha da declaração SELECT. Além disso, um novo escopo (scope0) é inserido na tabela de símbolo. Antes que a primeira entrada (deixada) do join foi visitada, “true” é empurrado na pilha de IsParentAJoin. Right before Join1, que é a entrada esquerda de Join4, é visitado, o estado do visitante é conforme mostrado na figura a seguir.  
   
- ![Diagrama de](../../../../../docs/framework/data/adonet/ef/media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f-6166-44ea-8e74-c5001d5d5d79")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f-6166-44ea-8e74-c5001d5d5d79")  
   
  Quando o método de visita de associação é chamado sobre Join4, IsParentAJoin é true, então reutiliza a instrução select SelectStatement0 atuais. Um novo escopo é inserido (scope1). Antes de visitar seu filho esquerdo, Extent1, outro verdadeiro é empurrado na pilha de IsParentAJoin.  
   
@@ -131,11 +131,11 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  Antes que a entrada direita de Join1 está visitada, “LEFT OUTER JOIN” é adicionado à cláusula de SelectStatement0. Porque a entrada direita é uma expressão de verificação, verdadeira é empurrado novamente para a pilha de IsParentAJoin. O estado antes de entrada visitar a direita conforme mostrado na figura a seguir.  
   
- ![Diagrama de](../../../../../docs/framework/data/adonet/ef/media/ca62c31b-7ff6-4836-b209-e16166304fdc.gif "ca62c31b-7ff6-4836-b209-e16166304fdc")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/ca62c31b-7ff6-4836-b209-e16166304fdc.gif "ca62c31b-7ff6-4836-b209-e16166304fdc")  
   
  A entrada direita é processada da mesma forma como entrada esquerda. O estado após visitado entrada direita é mostrado na figura a seguir.  
   
- ![Diagrama de](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")  
   
  “False” seguir é empurrado na pilha de IsParentAJoin e == o Var de Var de condição de adição (Extent1) .CategoryID (Extent2) .CategoryID é processado. O Var (Extenent1) é resolvido <para symbol_Extent1> após pesquisa na tabela de símbolo. Porque a instância é resolvida para um símbolo simple, como resultado do processamento Var(Extent1). CategoryID, um SqlBuilder com \<symbol1 >. " CategoryID"será retornado. O outro lado de comparação é processado mesma forma, e o resultado de visitar a condição de associação é acrescentado à cláusula de SelectStatement1 e o valor “false” é aparecido a pilha de IsParentAJoin.  
   
@@ -145,13 +145,13 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  O nó a seguir seja processado é Join3, como filhos de Join4. Porque é um filho à direita, “false” é empurrado para a pilha de IsParentAJoin. O estado do visitante é ilustrado nesse momento na figura a seguir.  
   
- ![Diagrama de](../../../../../docs/framework/data/adonet/ef/media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")  
   
  Para Join3, IsParentAJoin retorna false e precisa-o de iniciar um novo SqlSelectStatement (SelectStatement1) e de empurrá-lo na pilha. O processamento continua como fez com o anterior o anterior, se associa um novo escopo é empurrado na pilha e os filhos são processados. O filho esquerdo é uma extensão (Extent3) e o filho adequado é uma união (Join2) que também precisa iniciar um novo SqlSelectStatement: SelectStatement2. Os filhos em Join2 são extensões e também são agregados em SelectStatement2.  
   
  O estado do visitante right after Join2 está visitado, mas antes que o após processamento (ProcessJoinInputResult) é feito é mostrado na figura a seguir:  
   
- ![Diagrama de](../../../../../docs/framework/data/adonet/ef/media/7510346f-8b09-4c99-b411-40af239c3c4d.gif "7510346f-8b09-4c99-b411-40af239c3c4d")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/7510346f-8b09-4c99-b411-40af239c3c4d.gif "7510346f-8b09-4c99-b411-40af239c3c4d")  
   
  Na figura anterior, SelectStatement2 é mostrado como flutuante livre porque foi aparecido fora da pilha, mas ainda não a postagem processada pelo pai. Precisa ser adicionado à parte do pai, mas não é uma instrução SQL concluída sem uma cláusula SELECT. Assim, neste ponto, as colunas padrão (todas as colunas geradas por suas entradas) são adicionados à lista select pelo método AddDefaultColumns. AddDefaultColumns itera através dos símbolos em FromExtents e cada símbolo adiciona todas as colunas trazidas no escopo. Para um símbolo simples, ele tem o tipo do símbolo para recuperar todas as suas propriedades sejam adicionadas. Também preenche o dicionário de AllColumnNames com os nomes de coluna. O SelectStatement2 concluído é acrescentado à cláusula de SelectStatement1.  
   
@@ -165,7 +165,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  A condição de adição de Join4 é processada da mesma forma. O controle retorna para o método de VisitInputExpression que processou a parte superior a maioria de projeto. Examinando o FromExtents de SelectStatement0 retornado, a entrada é identificada como uma união, e remove as extensões originais e substituir-las com uma nova extensão com apenas o símbolo do join. A tabela de símbolo é atualizada e também a parte da projeção de Projeto é processada em seguida. Resolver propriedades e ajuste das extensões do join são como descrito anteriormente.  
   
- ![Diagrama de](../../../../../docs/framework/data/adonet/ef/media/9456d6a9-ea2e-40ae-accc-a10e18e28b81.gif "9456d6a9-ea2e-40ae-accc-a10e18e28b81")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/9456d6a9-ea2e-40ae-accc-a10e18e28b81.gif "9456d6a9-ea2e-40ae-accc-a10e18e28b81")  
   
  Finalmente, o seguinte SqlSelectStatement é gerado:  
   

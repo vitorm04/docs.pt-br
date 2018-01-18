@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 992d9a018f81bbd3f0c9204168f513024769e079
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f40f6c3d94aeeae41c4cce00bac8de863226f287
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="deferred-versus-immediate-loading"></a>Adiado contra a carga immediate
 Quando você consulta para um objeto, você só retorna o objeto que você solicitou. O *relacionados* objetos não são buscados automaticamente ao mesmo tempo. (Para obter mais informações, consulte [consulta entre relações](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) Você não pode ver o fato de que os objetos relacionados não são carregados já, porque uma tentativa de acessar gerencia uma solicitação que recupere-os.  

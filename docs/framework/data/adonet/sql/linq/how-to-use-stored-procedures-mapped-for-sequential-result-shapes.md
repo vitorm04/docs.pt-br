@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: a73530de-5a4e-4d9c-8d66-abb19c225b11
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 227fe2c777d23172caba5f290d9626552af4747a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a136876d358a94bf1b61540c93d10aea42a9798b
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-sequential-result-shapes"></a>Como: Use os procedimentos armazenados mapeados para formas sequenciais de resultado
 Esse tipo de procedimento armazenado pode gerar mais de uma forma de resultado, mas você souber ordem em que os resultados são retornados. Compare este cenário com o cenário onde você não souber a sequência de retorna. Para obter mais informações, consulte [como: Use procedimentos armazenados mapeados para várias formas de resultado](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md).  

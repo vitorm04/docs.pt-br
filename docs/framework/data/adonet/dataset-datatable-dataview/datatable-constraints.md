@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 3767467024d6c0d0dfbf1be8829d77ba3f7fa439
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 500dad1699843bae04aea6d5c16a1ccf53bb102a
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="datatable-constraints"></a>Restrições de DataTable
 Você pode usar restrições para impor restrições nos dados em um <xref:System.Data.DataTable>, para manter a integridade dos dados. Uma restrição é uma regra automática, aplicada a uma coluna ou colunas relacionadas, que determina o curso de ação quando o valor de uma linha é modificado de alguma maneira. As restrições são aplicadas quando o `System.Data.DataSet.EnforceConstraints` propriedade o <xref:System.Data.DataSet> é **true**. Para um exemplo de código que mostra como definir a propriedade `EnforceConstraints`, consulte o tópico de referência <xref:System.Data.DataSet.EnforceConstraints%2A>.  
@@ -35,7 +35,7 @@ Você pode usar restrições para impor restrições nos dados em um <xref:Syste
   
 |Configuração de regra|Descrição|  
 |------------------|-----------------|  
-|**Em cascata**|Excluir ou atualizar linhas relacionadas.|  
+|**Cascade**|Excluir ou atualizar linhas relacionadas.|  
 |**SetNull**|Defina os valores nas linhas relacionadas para **DBNull**.|  
 |**SetDefault**|Definir valores em linhas relacionadas para o valor padrão.|  
 |**Nenhum**|Nenhuma ação em linhas relacionadas. Esse é o padrão.|  
@@ -71,7 +71,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
   
 |Configuração de regra|Descrição|  
 |------------------|-----------------|  
-|**Em cascata**|Aceitar ou rejeitar alterações em linhas filho.|  
+|**Cascade**|Aceitar ou rejeitar alterações em linhas filho.|  
 |**Nenhum**|Nenhuma ação em linhas filho. Esse é o padrão.|  
   
 ### <a name="example"></a>Exemplo  

@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 5276697ebdc065965d970afc4ac2ef6be61c8f20
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3700e4010176abed05677043469476fe34cd564c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>Restrições de esquema XML (XSD) exclusivas mapa às restrições de conjunto de dados
 Em um esquema de linguagem XSD de definição de esquema XML, o **exclusivo** elemento Especifica a restrição de exclusividade em um elemento ou atributo. No processo de converter um esquema XML em um esquema relacional, a restrição unique especificada em um elemento ou atributo no esquema XML é mapeada para uma restrição exclusiva no <xref:System.Data.DataTable> nas <xref:System.Data.DataSet> que é gerado.  
@@ -27,8 +27,8 @@ Em um esquema de linguagem XSD de definição de esquema XML, o **exclusivo** el
   
 |Nome do atributo|Descrição|  
 |--------------------|-----------------|  
-|**MSDATA:ConstraintName**|Se esse atributo for especificado, seu valor é usado como o nome da restrição. Caso contrário, o **nome** atributo fornece o valor do nome da restrição.|  
-|**MSDATA:PrimaryKey**|Se `PrimaryKey="true"` está presente no **exclusivo** elemento, uma restrição exclusiva será criada com o **IsPrimaryKey** propriedade definida como **true**.|  
+|**msdata:ConstraintName**|Se esse atributo for especificado, seu valor é usado como o nome da restrição. Caso contrário, o **nome** atributo fornece o valor do nome da restrição.|  
+|**msdata:PrimaryKey**|Se `PrimaryKey="true"` está presente no **exclusivo** elemento, uma restrição exclusiva será criada com o **IsPrimaryKey** propriedade definida como **true**.|  
   
  O exemplo a seguir mostra um esquema XML que usa o **exclusivo** elemento para especificar uma restrição de exclusividade.  
   

@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 60da108fd77465917cdfe1dd744067eac9e88d7b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bdb12ce6f697bbc42052e35c252c9cad6a5e962e
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Execução lado a lado no ADO.NET
 Execução lado a lado no [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] é a capacidade de executar um aplicativo em um computador que tem várias versões do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] instalado exclusivamente usando a versão para a qual o aplicativo foi compilado. Para obter informações detalhadas sobre a configuração de execução lado a lado, consulte [execução lado a lado](../../../../docs/framework/deployment/side-by-side-execution.md).  

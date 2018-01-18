@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a547bbb38d58d5b4c22e78bfd64fef4094865143
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a146cf50639351479d42bff684ea7db21ecf5d3b
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="date-and-time-data"></a>Dados de data e hora
 O SQL Server 2008 apresenta novos tipos de dados para manipular as informações de data e hora. Os novos tipos de dados incluem tipos separados para data e hora, e tipos de dados expandidos com maior intervalo, precisão e reconhecimento de fuso horário. A partir do .NET Framework versão 3.5 Service Pack (SP) 1, o Provedor de Dados .NET Framework para SQL Server (<xref:System.Data.SqlClient>) oferece suporte completo para todos os novos recursos do Mecanismo de Banco de Dados do SQL Server 2008. Você deve instalar o .NET Framework 3.5 SP1 (ou posterior) para usar esses novos recursos com o SqlClient.  
@@ -243,7 +243,7 @@ command.Parameters.AddWithValue( _
 |-----------|-----------------|  
 |[Dados de data e hora tipos e funções (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=98360)|Fornece uma visão geral de todos os tipos e as funções de dados de data e hora de Transact-SQL.|  
 |[Usando dados de data e hora](http://go.microsoft.com/fwlink/?LinkId=98361)|Fornece informações sobre os tipos e as funções de dados de data e hora, e exemplos de como usá-los.|  
-|[Tipos de dados (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=98362)|Descreve os tipos de dados do sistema no SQL Server 2008.|  
+|[Data Types (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=98362)|Descreve os tipos de dados do sistema no SQL Server 2008.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Mapeamentos de tipo de dados do SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  

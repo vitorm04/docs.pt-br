@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
 caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 99b5af9f33fa92c6e635ee0190893e377724d970
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f870bab357db7a425378afcfb0bedd19b0359ce1
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlclient-streaming-support"></a>Suporte de streaming do SqlClient
 O suporte a streaming entre o [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] e um novo aplicativo (novo no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) oferece suporte a dados não estruturados no servidor (documentos, imagens e arquivos de mídia). Um banco de dados do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] pode armazenar BLOBs (objetos binários grandes), mas recuperar BLOBS pode usar muita memória.  

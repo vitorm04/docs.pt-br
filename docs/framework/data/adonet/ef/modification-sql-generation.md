@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 4ed5c6fd4e8bdbf148a57401163936631236b46b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6696d80246d61cc2eac47266837d79661141b9b0
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="modification-sql-generation"></a>Geração de alteração SQL
 Esta seção discute como desenvolver um módulo de geração SQL de alteração para o seu (SQL: provedor de base de dados compliant 1999). Este módulo é responsável para converter uma árvore de comando de alteração apropriadas nas instruções SQL INSERT, UPDATE ou DELETE.  
@@ -38,7 +38,7 @@ Esta seção discute como desenvolver um módulo de geração SQL de alteração
   
  DbModificationCommandTree e suas implementações que são produzidas pelo [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] representar sempre uma operação de única linha. Esta seção descreve esses tipos com as restrições no .NET Framework versão 3.5.  
   
- ![Diagrama de](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
   
  DbModificationCommandTree tem uma propriedade de destino que representa o destino definido para a operação de alteração. A propriedade da expressão de destino, que define o conjunto de entrada é sempre DbScanExpression.  Um DbScanExpression pode representar uma tabela ou exibição, ou um conjunto de dados definido com uma consulta se a propriedade de metadados "Definição de consulta" de seu destino for não nulo.  
   

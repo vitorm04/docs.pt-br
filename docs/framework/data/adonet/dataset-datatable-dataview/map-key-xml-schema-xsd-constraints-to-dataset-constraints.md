@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 249cb8419d4f032c37a922c9aa640f02f6efbd56
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6b999e6b1d6d73f107b7e1f4cb0d7e14c099a1f6
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>Restrições de esquema XML (XSD) às restrições de conjunto de dados de chave de mapa
 Em um esquema, você pode especificar uma restrição de chave em um elemento ou atributo usando o **chave** elemento. O elemento ou atributo no qual uma restrição de chave for especificada deve ter valores exclusivos em qualquer instância do esquema e não pode ter valores nulos.  
@@ -29,8 +29,8 @@ Em um esquema, você pode especificar uma restrição de chave em um elemento ou
   
 |Nome do atributo|Descrição|  
 |--------------------|-----------------|  
-|**MSDATA:ConstraintName**|Se esse atributo for especificado, seu valor é usado como o nome da restrição. Caso contrário, o **nome** atributo fornece o valor do nome da restrição.|  
-|**MSDATA:PrimaryKey**|Se `PrimaryKey="true"` estiver presente, o **IsPrimaryKey** restrição está definida como **true**, tornando uma chave primária. O **AllowDBNull** coluna está definida como **false**, porque as chaves primárias não podem ter valores nulos.|  
+|**msdata:ConstraintName**|Se esse atributo for especificado, seu valor é usado como o nome da restrição. Caso contrário, o **nome** atributo fornece o valor do nome da restrição.|  
+|**msdata:PrimaryKey**|Se `PrimaryKey="true"` estiver presente, o **IsPrimaryKey** restrição está definida como **true**, tornando uma chave primária. O **AllowDBNull** coluna está definida como **false**, porque as chaves primárias não podem ter valores nulos.|  
   
  Na conversão do esquema no qual uma restrição de chave for especificada, o processo de mapeamento cria uma restrição exclusiva na tabela com o **AllowDBNull** propriedade column definida como **false** para cada coluna a restrição. O **IsPrimaryKey** propriedade da restrição unique também é definida como **false** , a menos que você especificou `msdata:PrimaryKey="true"` no **chave** elemento. Isso é idêntico de uma restrição exclusiva no esquema no qual `PrimaryKey="true"`.  
   

@@ -10,20 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b117b8b75cd4b90f3689fa535b0afbac0ca00fdc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b9d566f99802ea80ae73132579bb3068b1ff3b28
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="adonet-datasets"></a>DataSets ADO.NET
 O objeto <xref:System.Data.DataSet> é essencial para dar suporte a cenários de dados desconectados e distribuídos com o [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. O **DataSet** é uma representação residente na memória de dados que fornece um modelo de programação relacional consistente, independentemente da fonte de dados. Ele pode ser usado com várias e diferentes fontes de dados, com dados XML ou para gerenciar o local dos dados no aplicativo. O **DataSet** representa um conjunto completo de dados, incluindo tabelas relacionadas, restrições e relações entre as tabelas. A ilustração a seguir mostra o **conjunto de dados** modelo de objeto.  
   
- ![Gráfico do ADO.Net](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
+ ![ADO.Net graphic](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 Modelo de objeto DataSet  
   
  Os métodos e objetos em um **DataSet** são consistentes com aqueles no modelo de banco de dados relacional.  

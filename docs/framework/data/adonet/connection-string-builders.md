@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a782969502509cb766e3a1d38222118a352dc3db
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: beec0aba34bc38ba310aa87dadeeaa4b41c82649
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="connection-string-builders"></a>Construtores de cadeia de conexão
 Em versões anteriores do [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]verificação de cadeias de caracteres de conexão com a cadeia de caracteres concatenada valores não tivesse ocorrido, para que em tempo de execução, uma palavra-chave incorreta gerados pelo tempo de compilação um <xref:System.ArgumentException>. Cada provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dava suporte a diferentes tipos de sintaxe de palavras-chave de cadeias de conexão, o que dificultava a construção de cadeias de conexão válidas manualmente. Para resolver esse problema, o [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 introduziu novos construtores de cadeia de conexão para cada provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Cada provedor de dados inclui uma classe de construtor de cadeia de conexão fortemente tipada que herda de <xref:System.Data.Common.DbConnectionStringBuilder>. A tabela a seguir lista os provedores de dados [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e suas respectivas classes de construtores de cadeias de conexão.  

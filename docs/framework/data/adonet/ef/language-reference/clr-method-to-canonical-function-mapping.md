@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 53acc5745b3b80cd4c124dc3f9a74173bb118158
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 29f0c8e663dad2eaa849137e1d02d24b9cef398b
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Método CLR ao mapeamento canônico de função
 Entity Framework fornece um conjunto de funções canônicas que implementam a funcionalidade que são comuns através de muitos sistemas de base de dados, como a manipulação de cadeia de caracteres e funções matemáticas. Isso permite aos desenvolvedores para direcionar uma ampla gama de sistemas de base de dados. Quando chamadas de uma tecnologia consultando, como LINQ to Entities, essas funções canônicas são transmitidos para a função correspondente correta do armazenamento para o provedor que está sendo usado. Isso permite que as chamadas de função são expressos em um formulário comuns através de fontes de dados, fornecendo uma experiência consistente de consulta por de fontes de dados. Bit a bit AND, OR, NOT, e operadores XOR também são mapeados para funções canônicas quando o operando é um tipo numérico. Para operandos boolianos, o bit a bit AND, OR, NOT, e operadores XOR de computação não, a lógica AND, OR e XOR operações do respectivos operandos. Para obter mais informações, consulte [funções canônicas](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
@@ -60,7 +60,7 @@ Entity Framework fornece um conjunto de funções canônicas que implementam a f
 |System.String remove (Int32 `startIndex`, Int32 `count`)|Concat (subcadeia de caracteres (`this`, 1, `startIndex`), Substring (`this`, `startIndex`  +  `count` + 1, tamanho (`this`)-(`startIndex` + `count`)))|Remova (`startIndex`, `count`) é suportado apenas se `count` é um inteiro maior ou igual a 0.|  
 istema. Substituição de cadeia de caracteres (cadeia de caracteres `oldValue`, cadeia de caracteres `newValue`)|Substitua (`this`, `oldValue`, `newValue`)||  
 |Subsequência de caracteres de System.String (Int32 `startIndex`)|Subsequência de caracteres (`this`, `startIndex` +1, comprimento (`this`) - `startIndex`)||  
-|Subsequência de caracteres de System.String (Int32 `startIndex`, Int32 `length`)|Substring (`this`, `startIndex` + 1, `length`)||  
+|Subsequência de caracteres de System.String (Int32 `startIndex`, Int32 `length`)|Substring(`this`, `startIndex` +1, `length`)||  
 |System.String ToLower()|ToLower (`this`)||  
 |System.String ToUpper()|ToUpper (`this`)||  
 |System.String Trim()|Preparo (`this`)||  
@@ -79,13 +79,13 @@ istema. Substituição de cadeia de caracteres (cadeia de caracteres `oldValue`,
 |Op_GreaterThan booleano (DateTime `t1`, DateTime `t2`)|Operador >||  
 |Op_GreaterThanOrEqual booleano (DateTime `t1`, DateTime `t2`)|Operador >=||  
 |Op_Inequality booleano (DateTime `t1`, DateTime `t2`)|Operador !=||  
-|Op_LessThan booliano (DateTime `t1`, DateTime `t2`)|< operador||  
+|Boolean op_LessThan(DateTime `t1`, DateTime `t2`)|< operador||  
 |Op_LessThanOrEqual booleano (DateTime `t1`, DateTime `t2`)|<operador =||  
-|Microsoft.VisualBasic.DateAndTime.DatePart (_<br /><br /> ByVal `Interval` como DateInterval,\_<br /><br /> ByVal `DateValue` como DateTime,\_<br /><br /> ByVal opcional `FirstDayOfWeekValue` como FirstDayOfWeek = VbSunday,\_<br /><br /> ByVal opcional `FirstWeekOfYearValue` como FirstWeekOfYear = VbFirstJan1\_<br /><br /> Como o inteiro)||Consulte a seção de função DatePart para mais informações.|  
+|Microsoft.VisualBasic.DateAndTime.DatePart (_<br /><br /> ByVal `Interval` As DateInterval, \_<br /><br /> ByVal `DateValue` como DateTime,\_<br /><br /> ByVal opcional `FirstDayOfWeekValue` como FirstDayOfWeek = VbSunday,\_<br /><br /> ByVal opcional `FirstWeekOfYearValue` como FirstWeekOfYear = VbFirstJan1\_<br /><br /> Como o inteiro)||Consulte a seção de função DatePart para mais informações.|  
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||  
 |Microsoft.VisualBasic.DateAndTime.Year (DateTime `TimeValue`)|Year()||  
 |Microsoft.VisualBasic.DateAndTime.Month (DateTime `TimeValue`)|Month()||  
-Microsoft. VisualBasic.DateAndTime.Day (DateTime `TimeValue`)|Day()||  
+icrosoft.VisualBasic.DateAndTime.Day(DateTime `TimeValue`)|Day()||  
 |Microsoft.VisualBasic.DateAndTime.Hour (DateTime `TimeValue`)|Hour()||  
 |Microsoft.VisualBasic.DateAndTime.Minute (DateTime `TimeValue`)|Minute()||  
 |Microsoft.VisualBasic.DateAndTime.Second (DateTime `TimeValue`)|Second()||  

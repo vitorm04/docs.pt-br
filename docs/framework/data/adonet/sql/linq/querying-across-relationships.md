@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 297878d0-685b-4c01-b2e0-9d731b7322bc
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 03c2da9f65964a9ed43d1e82abf779b43be733ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f06297f79807a1548a6b5ac77aed45f52c8d03af
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="querying-across-relationships"></a>Consulte através das relações
 Referências a outros objetos ou coleções de outros objetos em suas definições de classe correspondem diretamente às relações de chave estrangeira na base de dados. Você pode usar estas relações quando você consulta usando notação de ponto para acessar as propriedades de relação e para navegar de um objeto para outro. Essas operações de acesso a traduzem mais complexo join ou correlacionaram a subconsultas no equivalente SQL.  

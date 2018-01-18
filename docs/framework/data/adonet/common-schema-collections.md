@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2b3d1a42430a02e4b3dd4a715ef27acd3e46b8ea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 893093900b3fc4276f9bd7143b1f235a5ba98f90
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="common-schema-collections"></a>Coleções de esquema comuns
 As coleções de esquema comum são as coleções de esquemas que são implementadas por cada um dos provedores gerenciados do .NET Framework. Você pode consultar um provedor gerenciado do .NET Framework para determinar a lista de coleções de esquema com suporte ao chamar o **GetSchema** método sem argumentos, ou com o nome da coleção de esquema "MetaDataCollections". Isso retornará um <xref:System.Data.DataTable> com uma lista de coleções de esquema com suporte, o número de restrições que oferecem suporte a cada um deles e o número de partes do identificador que eles usam. Essas coleções descrevem todas as colunas necessárias. Provedores serão livres para adicionar colunas adicionais, se desejarem. Por exemplo, `SqlClient` e `OracleClient` adicionar o nome do parâmetro na coleção de restrições.  

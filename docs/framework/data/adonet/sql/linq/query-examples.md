@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 91ff476ed8f6060975c6adc1fe01a6db9c199969
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b3aabf5a47088fa408547527c5f18fa69a48e02
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="query-examples"></a>Exemplos de consulta
 Esta seção fornece exemplos do [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] e do C# de consultas típicas do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Os desenvolvedores que usam [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] podem encontrar muito mais exemplos em uma solução de exemplo disponível na seção de exemplos. Para obter mais informações, consulte [exemplos](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  

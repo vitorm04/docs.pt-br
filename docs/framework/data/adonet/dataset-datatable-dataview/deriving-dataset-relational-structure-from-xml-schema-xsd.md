@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 3fcedf488a038f379bae26fd7da0f4bf027b2e55
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eb4f6e3a63c901ec69ca5572a6f79d2f0ac4adfc
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Derivando a estrutura relacional do DataSet do esquema XML (XSD)
 Esta seção fornece uma visão geral de como o esquema relacional de um `DataSet` é compilado a partir de um documento de esquema XSD (linguagem de definição de esquema XML). Em geral, para cada `complexType` elemento filho de um elemento de esquema, uma tabela é gerada no `DataSet`. A estrutura da tabela é determinada pela definição do tipo complexo. Tabelas são criadas no `DataSet` para elementos de nível superior no esquema. No entanto, uma tabela é criada somente para um nível superior `complexType` elemento quando o `complexType` elemento está aninhado em outro `complexType` aninhada de caso de elemento, no qual `complexType` elemento é mapeado para um `DataTable` dentro de `DataSet`.  

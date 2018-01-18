@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 48b80856242730a5412cd9d5d8dd2c7f857304ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce16e89e697a7865a65d86b408e49b5ad671bae1
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="architecture-and-design"></a>Arquitetura e design
 O módulo de geração de SQL no [provedor exemplo](http://go.microsoft.com/fwlink/?LinkId=180616) é implementado como um visitante na árvore de expressão que representa a árvore de comandos. A geração é feita em uma única passada sobre a árvore de expressão.  
@@ -29,7 +29,7 @@ O módulo de geração de SQL no [provedor exemplo](http://go.microsoft.com/fwli
   
 -   Para renomear alias, você deve identificar todas as aliases usadas para evitar colisões em renomear. Para adiar as opções renomeando em SqlBuilder, o símbolo de uso objetos para representar as colunas que são candidatos para renomear.  
   
- ![Diagrama de](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
   
  Na primeira etapa, a visitar a árvore de expressão, as expressões são agrupadas em SqlSelectStatements, join são aplainadas, e ingressar em alias são aplainadas. Durante esta etapa, os objetos do símbolo representam colunas ou alias de entrada que podem ser renomeados.  
   

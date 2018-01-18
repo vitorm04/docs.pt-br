@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
 caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 679196a6cc21705c8cc07e373a928f3c77c6befb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b0a81fd9b92e626b52c5a74c65798ddedbd94a9
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Enumerando instâncias do SQL Server (ADO.NET)
 O [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] permite que aplicativos localizem instâncias do [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] na rede atual. A classe <xref:System.Data.Sql.SqlDataSourceEnumerator> expõe essas informações para o desenvolvedor de aplicativos, fornecendo um <xref:System.Data.DataTable> que contém informações sobre todos os servidores visíveis. Isso retorna a tabela contém uma lista de instâncias de servidor disponíveis na rede que corresponde à lista fornecida quando um usuário tenta criar uma nova conexão e expande a lista suspensa que contém todos os servidores disponíveis na **Conexão Propriedades** caixa de diálogo. Os resultados exibidos nem sempre estão completos.  
@@ -56,10 +56,10 @@ System.Data.DataTable dataTable = instance.GetDataSources();
   
 |Column|Descrição|  
 |------------|-----------------|  
-|**Nome do servidor**|Nome do servidor.|  
+|**ServerName**|Nome do servidor.|  
 |**InstanceName**|Nome da instância do servidor. Em branco se o servidor estiver sendo executado como a instância padrão.|  
 |**IsClustered**|Indica se o servidor faz parte de um cluster.|  
-|**Versão**|Versão do servidor. Por exemplo:<br /><br /> -9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-11.0.xx ([!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012)|  
+|**Versão**|Versão do servidor. Por exemplo:<br /><br /> -   9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-   10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-   11.0.xx ([!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012)|  
   
 ## <a name="enumeration-limitations"></a>Limitações de enumeração  
  Todos os servidores disponíveis podem estar ou não listados. A lista varia de acordo com fatores como o tempo limite e o tráfego de rede. Isso pode gerar listas diferentes em duas chamadas consecutivas. Somente os servidores na mesma rede serão listados. Pacotes de difusão normalmente não atravessarão roteadores. Por isso, talvez você não encontre um servidor listado, mas ele será estável em chamadas.  

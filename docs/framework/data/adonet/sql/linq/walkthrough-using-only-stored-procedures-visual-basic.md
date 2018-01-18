@@ -11,15 +11,15 @@ ms.topic: article
 dev_langs: vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2eed4db8ee76d6f7bea8b0628219e858a1db9695
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 800cc7d6a1e4aa836ebe75afcbe29a3532ee173a
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Passo a passo: Usando somente procedimentos armazenados (Visual Basic)
 Essa explicação passo a passo fornece um cenário de ponta a ponta básico de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para acessar dados usando somente procedimentos armazenados. Essa abordagem é frequentemente usada por administradores de banco de dados para limitar como o repositório de dados é acessado.  
@@ -48,7 +48,7 @@ Essa explicação passo a passo fornece um cenário de ponta a ponta básico de 
   
      Este passo a passo foi escrito usando a ferramenta SqlMetal com a seguinte linha de comando:  
   
-     **SqlMetal /code:"c:\linqtest3\northwind.vb" /language: vb "c:\linqtest3\northwnd.mdf" /sprocs /functions / Pluralizar**  
+     **sqlmetal /code:"c:\linqtest3\northwind.vb" /language:vb "c:\linqtest3\northwnd.mdf" /sprocs /functions /pluralize**  
   
      Para obter mais informações, consulte [SqlMetal.exe (ferramenta de geração de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   

@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6aa72d4c3ac27b3be6704943819596ad628e4f7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0586a3cb658acb0732add3e78f68344d887646fc
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="oracle-lobs"></a>Oracle LOBs
 O provedor de dados .NET Framework para Oracle inclui o <xref:System.Data.OracleClient.OracleLob> classe, que é usado para trabalhar com o Oracle **LOB** tipos de dados.  
@@ -28,7 +28,7 @@ O provedor de dados .NET Framework para Oracle inclui o <xref:System.Data.Oracle
 |Tipo de dados|Descrição|  
 |---------------|-----------------|  
 |**Blob**|Um Oracle **BLOB** tipo de dados que contém dados binários com um tamanho máximo de 4 gigabytes. Isso mapeia para um **matriz** do tipo **bytes**.|  
-|**CLOB**|Um Oracle **CLOB** tipo de dados que contém dados de caracteres, com base no caractere padrão definido no servidor, com um tamanho máximo de 4 gigabytes. Isso mapeia para **cadeia de caracteres**.|  
+|**Clob**|Um Oracle **CLOB** tipo de dados que contém dados de caracteres, com base no caractere padrão definido no servidor, com um tamanho máximo de 4 gigabytes. Isso mapeia para **cadeia de caracteres**.|  
 |**NClob**|Um Oracle **NCLOB** tipo de dados que contém dados de caracteres, com base em conjunto no servidor com um tamanho máximo de 4 gigabytes de caracteres nacional. Isso mapeia para **cadeia de caracteres**.|  
   
  Um **OracleLob** difere de um <xref:System.Data.OracleClient.OracleBFile> em que os dados são armazenados no servidor, em vez de em um arquivo físico no sistema operacional. Ele também pode ser um objeto de leitura / gravação, ao contrário de um **OracleBFile**, que é sempre somente leitura.  

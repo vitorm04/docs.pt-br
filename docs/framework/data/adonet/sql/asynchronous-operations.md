@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6f631d785698ae59370053c4e35307514c44087c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 293f1ff1fad193c019a42372a30ae6466c074515
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="asynchronous-operations"></a>Operações assíncronas
 Algumas operações de banco de dados, como execuções de comando, podem levar muito tempo para concluir. Nesse caso, aplicativos de thread único devem bloquear outras operações e aguarde até que o comando para concluir antes de continuar suas próprias operações. Por outro lado, a capacidade de atribuir a operação de longa execução a um thread em segundo plano permite que o thread de primeiro plano permaneça ativo durante toda a operação. Em um aplicativo do Windows, por exemplo, delegando a operação de longa execução a um thread em segundo plano permite que o thread de interface do usuário continuar responsiva durante a operação está em execução.  

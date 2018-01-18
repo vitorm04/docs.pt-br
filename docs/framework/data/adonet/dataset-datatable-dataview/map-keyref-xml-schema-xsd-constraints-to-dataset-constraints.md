@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: f888a682510dbf768e5eab2ffdd530e2ac7cf635
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e364efe0856a5291fc8157ef6ab185c2438a3347
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapear keyref restrições de esquema XML (XSD) para restrições de conjunto de dados
 O **keyref** elemento permite estabelecer links entre elementos dentro de um documento. Isso é semelhante a uma relação de chave estrangeira no banco de dados relacional. Se um esquema Especifica a **keyref** elemento, o elemento foi convertido durante o processo de mapeamento de esquema para uma restrição de chave estrangeira correspondente nas colunas nas tabelas do <xref:System.Data.DataSet>. Por padrão, o **keyref** elemento também gera uma relação com o **ParentTable**, **ChildTable**, **ParentColumn**e  **ChildColumn** propriedades especificadas na relação.  
@@ -27,11 +27,11 @@ O **keyref** elemento permite estabelecer links entre elementos dentro de um doc
   
 |Nome do atributo|Descrição|  
 |--------------------|-----------------|  
-|**MSDATA:ConstraintOnly**|Se **ConstraintOnly = "true"** é especificado no **keyref** elemento no esquema, uma restrição é criada, mas nenhuma relação é criada. Se esse atributo não for especificado (ou seja definido como **False**), a restrição e a relação são criados no **conjunto de dados**.|  
-|**MSDATA:ConstraintName**|Se o **ConstraintName** atributo for especificado, seu valor é usado como o nome da restrição. Caso contrário, o **nome** atributo do **keyref** elemento no esquema fornece o nome da restrição no **conjunto de dados**.|  
-|**MSDATA:UpdateRule**|Se o **UpdateRule** atributo é especificado no **keyref** elemento no esquema, seu valor é atribuído ao **UpdateRule** propriedade restrição no  **Conjunto de dados**. Caso contrário, o **UpdateRule** está definida como **Cascade**.|  
-|**MSDATA:DeleteRule**|Se o **DeleteRule** atributo é especificado no **keyref** elemento no esquema, seu valor é atribuído ao **DeleteRule** propriedade restrição no  **Conjunto de dados**. Caso contrário, o **DeleteRule** está definida como **Cascade**.|  
-|**MSDATA:AcceptRejectRule**|Se o **AcceptRejectRule** atributo é especificado no **keyref** elemento no esquema, seu valor é atribuído ao **AcceptRejectRule** propriedade restrição no  **Conjunto de dados**. Caso contrário, o **AcceptRejectRule** está definida como **nenhum**.|  
+|**msdata:ConstraintOnly**|Se **ConstraintOnly = "true"** é especificado no **keyref** elemento no esquema, uma restrição é criada, mas nenhuma relação é criada. Se esse atributo não for especificado (ou seja definido como **False**), a restrição e a relação são criados no **conjunto de dados**.|  
+|**msdata:ConstraintName**|Se o **ConstraintName** atributo for especificado, seu valor é usado como o nome da restrição. Caso contrário, o **nome** atributo do **keyref** elemento no esquema fornece o nome da restrição no **conjunto de dados**.|  
+|**msdata:UpdateRule**|Se o **UpdateRule** atributo é especificado no **keyref** elemento no esquema, seu valor é atribuído ao **UpdateRule** propriedade restrição no  **Conjunto de dados**. Caso contrário, o **UpdateRule** está definida como **Cascade**.|  
+|**msdata:DeleteRule**|Se o **DeleteRule** atributo é especificado no **keyref** elemento no esquema, seu valor é atribuído ao **DeleteRule** propriedade restrição no  **Conjunto de dados**. Caso contrário, o **DeleteRule** está definida como **Cascade**.|  
+|**msdata:AcceptRejectRule**|Se o **AcceptRejectRule** atributo é especificado no **keyref** elemento no esquema, seu valor é atribuído ao **AcceptRejectRule** propriedade restrição no  **Conjunto de dados**. Caso contrário, o **AcceptRejectRule** está definida como **nenhum**.|  
   
  O exemplo a seguir contém um esquema que especifica o **chave** e **keyref** relações entre o **OrderNumber** elemento filho do **ordem**  elemento e o **OrderNo** elemento filho do **OrderDetail** elemento.  
   

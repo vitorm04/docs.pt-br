@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 1776f48f-9bea-41f6-83a4-c990c7a2c991
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 509c25f5c6d1108b76028af5cfd8f2a090c92137
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fee008d0b1f278a48eacd8eae70d75bbbfd93691
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>Execução de SqlCommand com um SqlNotificationRequest
 Um <xref:System.Data.SqlClient.SqlCommand> pode ser configurado para gerar uma notificação quando as alterações de dados depois que ele foi buscado do servidor e o conjunto de resultados deve ser diferente se a consulta foi executada novamente. Isso é útil para situações em que você deseja usar filas de notificação personalizada no servidor ou quando você não desejar manter objetos vivos.  

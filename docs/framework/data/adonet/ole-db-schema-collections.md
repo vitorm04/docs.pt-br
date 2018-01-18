@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: e120ea532b6da455e31ce7345b6c4b2be1ec975f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 33e794559abd7f619f7431683f06e59705b57d41
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="ole-db-schema-collections"></a>Coleções de esquema de banco de dados OLE
 Esta seção discute o suporte de coleção de esquema para os provedores OLE DB para Microsoft SQL Server, Oracle e Microsoft Jet.  
@@ -98,7 +98,7 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
 |PROCEDURE_SCHEMA|Cadeia de Caracteres|  
 |PROCEDURE_NAME|Cadeia de Caracteres|  
 |PROCEDURE_TYPE|Int16|  
-|DEFINIÇÃO_DO_PROCEDIMENTO|Cadeia de Caracteres|  
+|PROCEDURE_DEFINITION|Cadeia de Caracteres|  
 |DESCRIÇÃO|Cadeia de Caracteres|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
@@ -112,7 +112,7 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
 |PROCEDURE_NAME|Cadeia de Caracteres|  
 |PARAMETER_NAME|Cadeia de Caracteres|  
 |ORDINAL_POSITION|Int32|  
-|TIPO_DE_PARÂMETRO|Int32|  
+|PARAMETER_TYPE|Int32|  
 |PARAMETER_HASDEFAULT|Boolean|  
 |PARAMETER_DEFAULT|Cadeia de Caracteres|  
 |IS_NULLABLE|Boolean|  
@@ -234,7 +234,7 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
 |PROCEDURE_SCHEMA|Cadeia de Caracteres|  
 |PROCEDURE_NAME|Cadeia de Caracteres|  
 |PROCEDURE_TYPE|Int16|  
-|DEFINIÇÃO_DO_PROCEDIMENTO|Cadeia de Caracteres|  
+|PROCEDURE_DEFINITION|Cadeia de Caracteres|  
 |DESCRIÇÃO|Cadeia de Caracteres|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
@@ -259,7 +259,7 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
 |DESCRIÇÃO|Cadeia de Caracteres|  
-|SOBRECARGA|Int16|  
+|OVERLOAD|Int16|  
   
 ### <a name="views"></a>Exibições  
   
@@ -373,7 +373,7 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
 |PROCEDURE_SCHEMA|Cadeia de Caracteres|  
 |PROCEDURE_NAME|Cadeia de Caracteres|  
 |PROCEDURE_TYPE|Int16|  
-|DEFINIÇÃO_DO_PROCEDIMENTO|Cadeia de Caracteres|  
+|PROCEDURE_DEFINITION|Cadeia de Caracteres|  
 |DESCRIÇÃO|Cadeia de Caracteres|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  

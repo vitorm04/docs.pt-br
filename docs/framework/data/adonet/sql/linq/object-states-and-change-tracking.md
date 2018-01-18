@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 92f2aa2aea721c424ba59af913b868907be36317
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f7eb1a8afe87caece18432c66a8d8a268ce9fbd2
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="object-states-and-change-tracking"></a>Estados e controle de alterações de objeto
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]objetos sempre participarem alguns *estado*. Por exemplo, quando [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] cria um novo objeto, o objeto está no estado de `Unchanged` . Um novo objeto que você mesmo cria é desconhecido para o <xref:System.Data.Linq.DataContext> e está em `Untracked` estado. Após a execução com êxito de <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, todos os objetos conhecidos a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] estão no estado de `Unchanged` . (A única exceção é representada por aqueles que foram excluídas com êxito de base de dados, que estão no estado de `Deleted` e inutilizável que a instância de <xref:System.Data.Linq.DataContext> .)  

@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: fc821aeb1fb7812b3a858bf901e91ccc625f142a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0834e23c4530e2800eae0d0088b6701d02dd2a1a
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>Modificando dados com um DbDataAdapter
 O <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> método de um <xref:System.Data.Common.DbProviderFactory> object dá a você uma <xref:System.Data.Common.DbDataAdapter> objeto terá rigidez de tipos para o provedor de dados subjacente especificado no momento em que você criar a fábrica. Você pode usar um <xref:System.Data.Common.DbCommandBuilder> para criar comandos para inserir, atualizar e excluir dados de um <xref:System.Data.DataSet> para uma fonte de dados.  
