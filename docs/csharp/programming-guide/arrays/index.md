@@ -11,11 +11,11 @@ ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
 caps.latest.revision: "33"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1cdd319ef6bbb296c7afa5195563b92bdd361f0b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8d395bcb179650fe29ab0918e7f91f3c8b6197b5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="arrays-c-programming-guide"></a>Matrizes (Guia de Programação em C#)
 Você pode armazenar diversas variáveis do mesmo tipo em uma estrutura de dados de matriz. Você pode declarar uma matriz especificando o tipo de seus elementos.  
@@ -59,4 +59,4 @@ Você pode armazenar diversas variáveis do mesmo tipo em uma estrutura de dados
 ## <a name="see-also"></a>Consulte também  
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
  [Coleções](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
- [Tipo de coleção Array](http://msdn.microsoft.com/en-us/8a9964de-8941-47b1-a3cf-a01bc88db9e8)
+ [Tipo de coleção Array](http://msdn.microsoft.com/library/8a9964de-8941-47b1-a3cf-a01bc88db9e8)

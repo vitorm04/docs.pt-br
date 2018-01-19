@@ -14,11 +14,11 @@ ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
 caps.latest.revision: "45"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 556d5f55f7564e960ac35ece2fba6eacb3e82b66
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bd22abedc8fc43fd2bd0ea77e1506394400fbfbb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="c-programming-guide"></a>Guia de programação em C#
 Esta seção fornece informações detalhadas sobre os principais recursos da linguagem C# e os recursos acessíveis para C# por meio do .NET Framework.  
@@ -73,7 +73,7 @@ Esta seção fornece informações detalhadas sobre os principais recursos da li
  [Comentários da documentação XML](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
   
 ## <a name="platform-sections"></a>Seções da plataforma  
- [Domínios de aplicativo (C# e Visual Basic)](http://msdn.microsoft.com/en-us/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
+ [Domínios de aplicativo (C# e Visual Basic)](http://msdn.microsoft.com/library/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
   
  [Assemblies e o Cache de Assembly Global](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
   
