@@ -19,7 +19,7 @@ manager: craigg
 ms.workload: dotnet
 ms.openlocfilehash: 02cbcee218db310fdddc7f42d9b6f01a16a8314d
 ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/17/2018
 ---
