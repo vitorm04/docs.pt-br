@@ -14,49 +14,49 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ecccb2f3b062afd631ef9ba36bc8ac8521db7646
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f02336dc35083009f601b3c4fb3568585a0beeef
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="ltworkflowinstancequeriesgt-of-wcf"></a><span data-ttu-id="009b4-102">&lt;workflowInstanceQueries&gt; de WCF</span><span class="sxs-lookup"><span data-stu-id="009b4-102">&lt;workflowInstanceQueries&gt; of WCF</span></span>
-<span data-ttu-id="009b4-103">Representa uma coleção de elementos de configuração que controlam alterações de ciclo de vida de instância de fluxo de trabalho como um evento iniciado ou concluído.</span><span class="sxs-lookup"><span data-stu-id="009b4-103">Represents a collection of configuration elements that track workflow instance life cycle changes such as a started or completed event.</span></span>  
+# <a name="ltworkflowinstancequeriesgt-of-wcf"></a><span data-ttu-id="951d8-102">&lt;workflowInstanceQueries&gt; de WCF</span><span class="sxs-lookup"><span data-stu-id="951d8-102">&lt;workflowInstanceQueries&gt; of WCF</span></span>
+<span data-ttu-id="951d8-103">Representa uma coleção de elementos de configuração que controlam alterações de ciclo de vida de instância de fluxo de trabalho como um evento iniciado ou concluído.</span><span class="sxs-lookup"><span data-stu-id="951d8-103">Represents a collection of configuration elements that track workflow instance life cycle changes such as a started or completed event.</span></span>  
   
- <span data-ttu-id="009b4-104">Para obter mais informações sobre consultas de perfil de controle, consulte [perfis de controle](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="009b4-104">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
+ <span data-ttu-id="951d8-104">Para obter mais informações sobre consultas de perfil de controle, consulte [perfis de controle](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="951d8-104">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
   
- <span data-ttu-id="009b4-105">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="009b4-105">\<system.serviceModel></span></span>  
-<span data-ttu-id="009b4-106">\<controle ></span><span class="sxs-lookup"><span data-stu-id="009b4-106">\<tracking></span></span>  
-<span data-ttu-id="009b4-107">\<trackingProfile ></span><span class="sxs-lookup"><span data-stu-id="009b4-107">\<trackingProfile></span></span>  
-<span data-ttu-id="009b4-108">\<fluxo de trabalho ></span><span class="sxs-lookup"><span data-stu-id="009b4-108">\<workflow></span></span>  
-<span data-ttu-id="009b4-109">\<workflowInstanceQueries ></span><span class="sxs-lookup"><span data-stu-id="009b4-109">\<workflowInstanceQueries></span></span>  
+ <span data-ttu-id="951d8-105">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="951d8-105">\<system.serviceModel></span></span>  
+<span data-ttu-id="951d8-106">\<controle ></span><span class="sxs-lookup"><span data-stu-id="951d8-106">\<tracking></span></span>  
+<span data-ttu-id="951d8-107">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="951d8-107">\<trackingProfile></span></span>  
+<span data-ttu-id="951d8-108">\<workflow></span><span class="sxs-lookup"><span data-stu-id="951d8-108">\<workflow></span></span>  
+<span data-ttu-id="951d8-109">\<workflowInstanceQueries></span><span class="sxs-lookup"><span data-stu-id="951d8-109">\<workflowInstanceQueries></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="009b4-110">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="009b4-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="951d8-110">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="951d8-110">Syntax</span></span>  
   
 ```xml
 <tracking>   <trackingProfile name="Name">       <workflow>          <workflowInstanceQueries>             <workflowInstanceQuery>                <states>                   <state name="Name"/>                </states>            </workflowInstanceQuery>         </workflowInstanceQueries>       </workflow>   </trackingProfile></tracking>  
 ```
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="009b4-111">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="009b4-111">Attributes and Elements</span></span>  
- <span data-ttu-id="009b4-112">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="009b4-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="951d8-111">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="951d8-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="951d8-112">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="951d8-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="009b4-113">Atributos</span><span class="sxs-lookup"><span data-stu-id="009b4-113">Attributes</span></span>  
- <span data-ttu-id="009b4-114">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="009b4-114">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="951d8-113">Atributos</span><span class="sxs-lookup"><span data-stu-id="951d8-113">Attributes</span></span>  
+ <span data-ttu-id="951d8-114">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="951d8-114">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="009b4-115">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="009b4-115">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="951d8-115">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="951d8-115">Child Elements</span></span>  
   
-|<span data-ttu-id="009b4-116">Elemento</span><span class="sxs-lookup"><span data-stu-id="009b4-116">Element</span></span>|<span data-ttu-id="009b4-117">Descrição</span><span class="sxs-lookup"><span data-stu-id="009b4-117">Description</span></span>|  
+|<span data-ttu-id="951d8-116">Elemento</span><span class="sxs-lookup"><span data-stu-id="951d8-116">Element</span></span>|<span data-ttu-id="951d8-117">Descrição</span><span class="sxs-lookup"><span data-stu-id="951d8-117">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="009b4-118">\<workflowInstanceQuery ></span><span class="sxs-lookup"><span data-stu-id="009b4-118">\<workflowInstanceQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|<span data-ttu-id="009b4-119">Uma consulta que é usada para controlar as alterações de ciclo de vida de instância de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="009b4-119">A query that is used to track workflow instance life cycle changes.</span></span>|  
+|[<span data-ttu-id="951d8-118">\<workflowInstanceQuery></span><span class="sxs-lookup"><span data-stu-id="951d8-118">\<workflowInstanceQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|<span data-ttu-id="951d8-119">Uma consulta que é usada para controlar as alterações de ciclo de vida de instância de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="951d8-119">A query that is used to track workflow instance life cycle changes.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="009b4-120">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="009b4-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="951d8-120">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="951d8-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="009b4-121">Elemento</span><span class="sxs-lookup"><span data-stu-id="009b4-121">Element</span></span>|<span data-ttu-id="009b4-122">Descrição</span><span class="sxs-lookup"><span data-stu-id="009b4-122">Description</span></span>|  
+|<span data-ttu-id="951d8-121">Elemento</span><span class="sxs-lookup"><span data-stu-id="951d8-121">Element</span></span>|<span data-ttu-id="951d8-122">Descrição</span><span class="sxs-lookup"><span data-stu-id="951d8-122">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="009b4-123">\<fluxo de trabalho ></span><span class="sxs-lookup"><span data-stu-id="009b4-123">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="009b4-124">Um elemento de configuração que contém todas as consultas para um fluxo de trabalho específico identificado pelo [activityDefinitionId](http://msdn.microsoft.com/en-us/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx) propriedade.</span><span class="sxs-lookup"><span data-stu-id="009b4-124">A configuration element that contains all queries for a specific workflow identified by the [activityDefinitionId](http://msdn.microsoft.com/en-us/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx) property.</span></span>|  
+|[<span data-ttu-id="951d8-123">\<workflow></span><span class="sxs-lookup"><span data-stu-id="951d8-123">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="951d8-124">Um elemento de configuração que contém todas as consultas para um fluxo de trabalho específico identificado pelo [activityDefinitionId](http://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx) propriedade.</span><span class="sxs-lookup"><span data-stu-id="951d8-124">A configuration element that contains all queries for a specific workflow identified by the [activityDefinitionId](http://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx) property.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="009b4-125">Comentários</span><span class="sxs-lookup"><span data-stu-id="009b4-125">Remarks</span></span>  
- <span data-ttu-id="009b4-126"><xref:System.Activities.Tracking.WorkflowInstanceQuery> é usado para assinar seguintes a <xref:System.Activities.Tracking.TrackingRecord> os objetos:</span><span class="sxs-lookup"><span data-stu-id="009b4-126">The <xref:System.Activities.Tracking.WorkflowInstanceQuery> is used to subscribe to the following <xref:System.Activities.Tracking.TrackingRecord> objects:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="951d8-125">Comentários</span><span class="sxs-lookup"><span data-stu-id="951d8-125">Remarks</span></span>  
+ <span data-ttu-id="951d8-126"><xref:System.Activities.Tracking.WorkflowInstanceQuery> é usado para assinar seguintes a <xref:System.Activities.Tracking.TrackingRecord> os objetos:</span><span class="sxs-lookup"><span data-stu-id="951d8-126">The <xref:System.Activities.Tracking.WorkflowInstanceQuery> is used to subscribe to the following <xref:System.Activities.Tracking.TrackingRecord> objects:</span></span>  
   
 -   <xref:System.Activities.Tracking.WorkflowInstanceRecord>  
   
@@ -68,8 +68,8 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>  
   
-## <a name="example"></a><span data-ttu-id="009b4-127">Exemplo</span><span class="sxs-lookup"><span data-stu-id="009b4-127">Example</span></span>  
- <span data-ttu-id="009b4-128">A configuração a seguir assina o fluxo de trabalho em nível de instância registros de controle para o `Started` estado da instância usando esta consulta.</span><span class="sxs-lookup"><span data-stu-id="009b4-128">The following configuration subscribes to workflow instance-level tracking records for the `Started` instance state using this query.</span></span>  
+## <a name="example"></a><span data-ttu-id="951d8-127">Exemplo</span><span class="sxs-lookup"><span data-stu-id="951d8-127">Example</span></span>  
+ <span data-ttu-id="951d8-128">A configuração a seguir assina o fluxo de trabalho em nível de instância registros de controle para o `Started` estado da instância usando esta consulta.</span><span class="sxs-lookup"><span data-stu-id="951d8-128">The following configuration subscribes to workflow instance-level tracking records for the `Started` instance state using this query.</span></span>  
   
 ```xml  
 <workflowInstanceQueries>  
@@ -81,8 +81,8 @@ ms.lasthandoff: 12/22/2017
 </workflowInstanceQueries>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="009b4-129">Consulte também</span><span class="sxs-lookup"><span data-stu-id="009b4-129">See Also</span></span>  
- <span data-ttu-id="009b4-130"><xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="009b4-130"><xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection?displayProperty=nameWithType></span></span>       
- <span data-ttu-id="009b4-131"><xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="009b4-131"><xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType></span></span>       
- [<span data-ttu-id="009b4-132">Acompanhamento e rastreamento de fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="009b4-132">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [<span data-ttu-id="009b4-133">Acompanhando perfis</span><span class="sxs-lookup"><span data-stu-id="009b4-133">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a><span data-ttu-id="951d8-129">Consulte também</span><span class="sxs-lookup"><span data-stu-id="951d8-129">See Also</span></span>  
+ <span data-ttu-id="951d8-130"><xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="951d8-130"><xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection?displayProperty=nameWithType></span></span>       
+ <span data-ttu-id="951d8-131"><xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="951d8-131"><xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType></span></span>       
+ [<span data-ttu-id="951d8-132">Acompanhamento e rastreamento de fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="951d8-132">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [<span data-ttu-id="951d8-133">Acompanhando perfis</span><span class="sxs-lookup"><span data-stu-id="951d8-133">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
