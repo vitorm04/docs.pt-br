@@ -16,35 +16,35 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 77886cef1a8dbd320223526b86f86fa9cee6a9f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b0967790f2bbf8fa9a889c56fa9c5168f7523bd
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt; elemento
+
 Especifica a quais versões do Common Language Runtime o aplicativo oferece suporte. Este elemento deve ser usado por todos os aplicativos criados com a versão 1.1 ou posterior do .NET Framework.  
   
 [\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
-
-[\<startup>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+&nbsp;&nbsp;[\<startup>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime>**  
   
-**\<supportedRuntime>**  
-  
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Sintaxe
   
 ```xml  
 <supportedRuntime version="runtime version" sku="sku id"/>  
 ```  
   
-## <a name="attributes"></a>Atributos  
+## <a name="attributes"></a>Atributos
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |**version**|Atributo opcional.<br /><br /> Um valor de cadeia de caracteres que especifica a versão do Common Language Runtime (CLR) a qual esse aplicativo oferece suporte. Para obter valores válidos do `version` de atributo, consulte o [valores de "versão de tempo de execução"](#version) seção. **Observação:** por meio do .NET Framework 3.5, o "*versão de tempo de execução*" valor assume a forma *principais*. *pequenas*. *criar*. A partir do [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], somente os números das versões principal e secundária são necessários (isto é, "v4.0" em vez de "v4.0.30319"). A cadeia de caracteres mais curta é recomendada.|  
-|**SKU**|Atributo opcional.<br /><br /> Um valor de cadeia de caracteres que especifica a unidade de manutenção de estoque (SKU), que por sua vez Especifica qual versão do .NET Framework oferece suporte a esse aplicativo.<br /><br /> Começando com o .NET Framework 4.0, o uso do `sku` atributo é recomendado.  Quando presente, indica a versão do .NET Framework que o aplicativo é destinado.<br /><br /> Para obter valores válidos do atributo sku, consulte o [valores de "id do sku"](#sku) seção.|  
+|**sku**|Atributo opcional.<br /><br /> Um valor de cadeia de caracteres que especifica a unidade de manutenção de estoque (SKU), que por sua vez Especifica qual versão do .NET Framework oferece suporte a esse aplicativo.<br /><br /> Começando com o .NET Framework 4.0, o uso do `sku` atributo é recomendado.  Quando presente, indica a versão do .NET Framework que o aplicativo é destinado.<br /><br /> Para obter valores válidos do atributo sku, consulte o [valores de "id do sku"](#sku) seção.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Comentários
+
 Se o  **\<supportedRuntime >** elemento não está presente no arquivo de configuração do aplicativo, a versão do tempo de execução usada para criar o aplicativo é usada.  
 
 O  **\<supportedRuntime >** elemento deve ser usado por todos os aplicativos criados com a versão 1.1 ou posterior do tempo de execução. Os aplicativos criados para oferecer suporte a apenas versão 1.0 do tempo de execução devem usar o [ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) elemento.  
@@ -65,36 +65,36 @@ O `runtime` atributo especifica a versão do Common Language Runtime (CLR) que �
 
 |Versão do .NET Framework|Atributo `version`|  
 |----------------------------|-------------------------|  
-|1.0|"v 1.0.3705"|  
-|1.1|"v 1.1.4322"|  
-|2.0|"v 2.0.50727"|  
-|3.0|"v 2.0.50727"|  
-|3.5|"v 2.0.50727"|  
-|4.0-4.7.1|"v 4.0"|  
+|1.0|"v1.0.3705"|  
+|1.1|"v1.1.4322"|  
+|2.0|"v2.0.50727"|  
+|3.0|"v2.0.50727"|  
+|3.5|"v2.0.50727"|  
+|4.0-4.7.1|"v4.0"|  
 
-  
 <a name="sku"></a>   
-## <a name="sku-id-values"></a>valores de "id do sku"  
+## <a name="sku-id-values"></a>valores de "id do sku"
+
 O `sku` atributo usa um moniker do framework de destino (TFM) para indicar a versão do .NET Framework que o aplicativo tem como alvo e precisa ser executado. A tabela a seguir lista os valores válidos são suportados pelo `sku` atributo, começando com o .NET Framework 4.
   
 |Versão do .NET Framework|Atributo `sku`|  
 |----------------------------|---------------------|  
-|4.0|". NETFramework, Version = v 4.0 "|  
-|4.0, o perfil de cliente|". NETFramework, Version = v 4.0, perfil = cliente "|  
+|4.0|".NETFramework,Version=v4.0"|  
+|4.0, o perfil de cliente|".NETFramework,Version=v4.0,Profile=Client"|  
 |atualização da plataforma 4.0, 1|.NETFramework,Version=v4.0.1|  
 |4.0, o perfil de cliente da atualização 1|.NETFramework,Version=v4.0.1,Profile=Client|  
 |atualização da plataforma 4.0, 2|.NETFramework,Version=v4.0.2|  
 |4.0, perfil do cliente, atualização 2|.NETFramework,Version=v4.0.2,Profile=Client|  
 |atualização da plataforma 4.0, 3|.NETFramework,Version=v4.0.3|  
 |4.0, perfil do cliente, a atualização 3|.NETFramework,Version=v4.0.3,Profile=Client|  
-|4.5|". NETFramework, Version = v 4.5 "|  
-|4.5.1|". NETFramework, Version = v4.5.1 "|  
-|4.5.2|". NETFramework, Version = v4.5.2 "|  
-|4.6|". NETFramework, Version = v 4.6 "|  
-|4.6.1|". NETFramework, Version = v4.6.1 "|  
-|4.6.2|". NETFramework, Version = v4.6.2 "|  
-|4.7|". NETFramework, Version = v 4.7 "|
-|4.7.1|". NETFramework, Version = 4.7.1"|
+|4.5|".NETFramework,Version=v4.5"|  
+|4.5.1|".NETFramework,Version=v4.5.1"|  
+|4.5.2|".NETFramework,Version=v4.5.2"|  
+|4.6|".NETFramework,Version=v4.6"|  
+|4.6.1|".NETFramework,Version=v4.6.1"|  
+|4.6.2|".NETFramework,Version=v4.6.2"|  
+|4.7|".NETFramework,Version=v4.7"|
+|4.7.1|".NETFramework,Version=v4.7.1"|
 
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como especificar a versão de tempo de execução com suporte em um arquivo de configuração. O arquivo de configuração indica que o aplicativo tem como alvo o .NET Framework 4.7.  
@@ -107,10 +107,12 @@ O `sku` atributo usa um moniker do framework de destino (TFM) para indicar a ver
 </configuration>  
 ```  
   
-## <a name="configuration-file"></a>Arquivo de Configuração  
- Este elemento pode ser usado no arquivo de configuração do aplicativo.  
-  
-## <a name="see-also"></a>Consulte também  
+## <a name="configuration-file"></a>arquivo de configuração
+
+Este elemento pode ser usado no arquivo de configuração do aplicativo.
+
+## <a name="see-also"></a>Consulte também
+
  [Esquema de configurações de inicialização](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Execução lado a lado em processo](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)
+ [Execução lado a lado em processo](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)  
