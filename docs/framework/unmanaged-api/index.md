@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9836d8d02bb81fc19a5b3a1714e32fcefeb8791d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d86cf65dfb3637dbacfeff0cf2b5f48b12c49212
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="unmanaged-api-reference"></a>Referência de API não gerenciada
 Esta seção inclui informações sobre APIs não gerenciadas que podem ser usadas por aplicativos relacionados a código gerenciado, como hosts de tempo de execução, compiladores, desmontadores, ofuscadores, depuradores e criadores de perfis.  
@@ -40,7 +40,7 @@ Esta seção inclui informações sobre APIs não gerenciadas que podem ser usad
  [Constantes](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
  Descreve as constantes que são definidas em CorSym.idl.  
   
- [Atributos de Interface personalizada](http://msdn.microsoft.com/en-us/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
+ [Atributos de Interface personalizada](http://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
  Descreve os atributos de interface personalizada do COM (Component Object Model).  
   
  [Depuração](../../../docs/framework/unmanaged-api/debugging/index.md)  
@@ -73,4 +73,4 @@ Esta seção inclui informações sobre APIs não gerenciadas que podem ser usad
 ## <a name="related-sections"></a>Seções relacionadas  
  [Guia de desenvolvimento](../../../docs/framework/development-guide.md)  
   
- [Leitura avançada para o .NET Framework](http://msdn.microsoft.com/en-us/faae8083-fecb-4514-b133-b0a5a32a7c3c)
+ [Leitura avançada para o .NET Framework](http://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)

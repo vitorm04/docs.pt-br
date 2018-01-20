@@ -33,11 +33,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 283faabf0f23df2650f8d87fdebae1102b83235d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4af28280de24f3e25362f18985c209b1a2f29523
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>Esquema de arquivos de configuração para o .NET Framework
 
@@ -86,10 +86,10 @@ Para obter informações sobre os tipos, o formato e o local dos arquivos de con
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Esquema de configurações remotas](http://msdn.microsoft.com/en-us/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) Descreve os elementos que configuram aplicativos clientes e para servidores que implementam a comunicação remota.
+[Esquema de configurações remotas](http://msdn.microsoft.com/library/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) Descreve os elementos que configuram aplicativos clientes e para servidores que implementam a comunicação remota.
 
 [Esquema de configurações do ASP.NET](http://msdn.microsoft.com/library/b5ysx397\(v=vs.100\).aspx) Descreve os elementos que controlam o comportamento de aplicativos Web do ASP.NET.
 
-[Esquema de configurações de serviços Web](http://msdn.microsoft.com/en-us/f84d6d55-1add-4eb7-ae46-33df5833ea2e) Descreve os elementos que controlam o comportamento dos serviços Web do ASP.NET e de seus clientes.
+[Esquema de configurações de serviços Web](http://msdn.microsoft.com/library/f84d6d55-1add-4eb7-ae46-33df5833ea2e) Descreve os elementos que controlam o comportamento dos serviços Web do ASP.NET e de seus clientes.
 
-[Configurando aplicativos do .NET Framework](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42) Descreve como configurar a segurança, associação de assembly e a comunicação remota no .NET Framework.
+[Configurando aplicativos do .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42) Descreve como configurar a segurança, associação de assembly e a comunicação remota no .NET Framework.

@@ -17,11 +17,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 1bd25dd0444c428e000371abe494e62b258eaa63
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2593df04b93db17f9ca61a98b21aaec1d534d46
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>Permissão de segurança para redirecionamento de associações de assemblies
 O redirecionamento de associação de assembly explícito em um arquivo de configuração do aplicativo requer uma permissão de segurança. Isso se aplica ao redirecionamento de assemblies do .NET Framework e assemblies de terceiros. A permissão é concedida, definindo o <xref:System.Security.Permissions.SecurityPermissionFlag> sinalizador no <xref:System.Security.Permissions.SecurityPermission>. Assemblies gerenciados não têm permissões por padrão.  
@@ -36,12 +36,12 @@ O redirecionamento de associação de assembly explícito em um arquivo de confi
 |----------|-----------------------------------|  
 |Zona confiável (computador local)|**ON**|  
 |Zona de intranet|**ON**|  
-|Zona da Internet|**DESATIVAR**|  
-|Zonas não confiáveis|**DESATIVAR**|  
+|Zona da Internet|**OFF**|  
+|Zonas não confiáveis|**OFF**|  
   
  Um administrador pode alterar essas configurações de segurança para oferecer suporte ou restringir cenários específicos em um determinado computador. Não há ferramentas para alterar o **BindingRedirects** sinalizador definindo o padrão; um administrador deve editar manualmente o arquivo Security config no computador do usuário.  
   
 ## <a name="see-also"></a>Consulte também  
- [Arquivos de política do publicador e execução lado a lado](http://msdn.microsoft.com/en-us/97a042be-4d72-40c3-91c0-76fd36bdf133)  
+ [Arquivos de política do publicador e execução lado a lado](http://msdn.microsoft.com/library/97a042be-4d72-40c3-91c0-76fd36bdf133)  
  [Como habilitar e desabilitar o redirecionamento automático de associações](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)  
  [Execução lado a lado](../../../docs/framework/deployment/side-by-side-execution.md)

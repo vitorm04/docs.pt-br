@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3667d507f4c35174c1e888c9781b5f74ffd496a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 16ed99181f8462e805638b5d3881464b16f21177
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Passo a passo: Meu aplicativo da área de trabalho primeiro do WPF
 Este passo a passo fornece uma introdução ao desenvolvimento de um [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aplicativo que inclui os elementos que são comuns à maioria [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativos: [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] marcação, por trás do código, definições de aplicativo, controles, layout associação de dados e estilos. 
@@ -56,7 +56,7 @@ Para obter mais informações sobre como instalar a versão mais recente do Visu
 ## <a name="creating-the-application-project"></a>Criando o projeto de aplicativo  
  Nesta seção, você criará a infraestrutura do aplicativo, que inclui uma definição de aplicativo, duas páginas e uma imagem. 
   
-1. Crie um novo projeto de aplicativo do WPF no Visual Basic ou no Visual C#, chamado `ExpenseIt`. Para obter mais informações, consulte [Como criar um novo projeto de aplicativo do WPF](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82). 
+1. Crie um novo projeto de aplicativo do WPF no Visual Basic ou no Visual C#, chamado `ExpenseIt`. Para obter mais informações, consulte [Como criar um novo projeto de aplicativo do WPF](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82). 
   
     > [!NOTE]
     >  Este passo a passo usa o <xref:System.Windows.Controls.DataGrid> controle que está disponível no .NET Framework 4. Ser-se de que seu projeto se destina ao .NET Framework 4 ou posterior. Para obter mais informações, consulte[como: uma versão do .NET Framework de destino](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework). 
@@ -115,7 +115,7 @@ Para obter mais informações sobre como instalar a versão mais recente do Visu
 ## <a name="adding-files-to-the-application"></a>Adicionando arquivos ao aplicativo  
  Nesta seção, você adiciona duas páginas e uma imagem ao aplicativo. 
   
-1. Adicione uma nova página (WPF) ao projeto nomeado `ExpenseItHome.xaml`. Para obter mais informações, consulte [como: adicionar novos itens a um projeto WPF](http://msdn.microsoft.com/en-us/17e6b238-fc32-4385-98ef-2f66ca09d9ad). 
+1. Adicione uma nova página (WPF) ao projeto nomeado `ExpenseItHome.xaml`. Para obter mais informações, consulte [como: adicionar novos itens a um projeto WPF](http://msdn.microsoft.com/library/17e6b238-fc32-4385-98ef-2f66ca09d9ad). 
   
      Esta página é a primeira página que será exibida quando o aplicativo for iniciado. Ela mostrará uma lista de pessoas na qual um usuário poderá selecionar uma delas para exibir um relatório de despesas. 
   
@@ -171,7 +171,7 @@ Para obter mais informações sobre como instalar a versão mais recente do Visu
     [!code-csharp[ExpenseIt#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/ExpenseReportPage.xaml.cs#5)]
     [!code-vb[ExpenseIt#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseReportPage.xaml.vb#5)]  
   
-10. Adicione uma imagem chamada watermark.png ao projeto. Você pode criar sua própria imagem ou copiar o arquivo do código de exemplo. Para obter mais informações, consulte [NIB: como adicionar itens existentes a um projeto](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3). 
+10. Adicione uma imagem chamada watermark.png ao projeto. Você pode criar sua própria imagem ou copiar o arquivo do código de exemplo. Para obter mais informações, consulte [NIB: como adicionar itens existentes a um projeto](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3). 
 
 ## <a name="building-and-running-the-application"></a>Criar e executar o aplicativo  
  Nesta seção, você vai compilar e executar o aplicativo. 
@@ -280,7 +280,7 @@ Para obter mais informações sobre como instalar a versão mais recente do Visu
   
 1. Abra ExpenseItHome.xaml. 
   
-2. Adicionar um <xref:System.Windows.Controls.Primitives.ButtonBase.Click> manipulador de eventos para o <xref:System.Windows.Controls.Button> elemento. Para obter mais informações, consulte [Como Criar um Manipulador de Eventos Simples](http://msdn.microsoft.com/en-us/b1456e07-9dec-4354-99cf-18666b64f480). 
+2. Adicionar um <xref:System.Windows.Controls.Primitives.ButtonBase.Click> manipulador de eventos para o <xref:System.Windows.Controls.Button> elemento. Para obter mais informações, consulte [Como Criar um Manipulador de Eventos Simples](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480). 
   
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]  
   

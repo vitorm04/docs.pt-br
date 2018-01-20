@@ -37,11 +37,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1f95193e4ac90df0d0abe5a46ade08d799bdf6b2
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 653ffbf9597be9c82300b2be69ed6a7f9412769d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="cryptographic-services"></a>Serviços criptográficos
 <a name="top"></a>Redes públicas, como a Internet não fornecem um meio de comunicação segura entre entidades. Comunicação por essas redes é suscetível a sendo lidas ou modificadas até mesmo por terceiros não autorizados. A criptografia ajuda a proteger os dados sejam exibidos, fornece maneiras para detectar se os dados foram modificados e ajuda a fornecer uma maneira segura de comunicação nos canais de outra forma não seguras. Por exemplo, os dados podem ser criptografados usando um algoritmo de criptografia, transmitidos em um estado criptografado e mais tarde descriptografados pelo parceiro pretendido. Se outra pessoa interceptar os dados criptografados, será difícil decifrar.  
@@ -206,7 +206,7 @@ ms.lasthandoff: 01/09/2018
   
 -   Alice envia a mensagem de texto sem formatação e a mensagem de hash (assinatura digital) para Bob. Bob recebe e hashes de mensagem e compara o valor de hash para o valor de hash que recebeu de Alice. Se os valores de hash forem idênticos, a mensagem não foi alterada. Se os valores não forem idênticos, a mensagem foi alterada depois de Alice escreveu.  
   
-     Infelizmente, esse método não estabelecer a autenticidade do remetente. Qualquer pessoa pode representar Alice e enviar uma mensagem para Bob. Eles podem usar o mesmo algoritmo de hash para assinar sua mensagem, e tudo Bob pode determinar é que a mensagem corresponde a sua assinatura. Isso é uma forma de um ataque man-in-the-middle. Consulte [NIB: exemplo de comunicação seguro geração CNG (Cryptography Next)](http://msdn.microsoft.com/en-us/8048e94e-054a-417b-87c6-4f5e26710e6e) para obter mais informações.  
+     Infelizmente, esse método não estabelecer a autenticidade do remetente. Qualquer pessoa pode representar Alice e enviar uma mensagem para Bob. Eles podem usar o mesmo algoritmo de hash para assinar sua mensagem, e tudo Bob pode determinar é que a mensagem corresponde a sua assinatura. Isso é uma forma de um ataque man-in-the-middle. Consulte [NIB: exemplo de comunicação seguro geração CNG (Cryptography Next)](http://msdn.microsoft.com/library/8048e94e-054a-417b-87c6-4f5e26710e6e) para obter mais informações.  
   
 -   Alice envia a mensagem de texto sem formatação para Bob através de um canal de público não seguro. Envia a mensagem de hash para Bob por um canal seguro de particular. Bob recebe a mensagem de texto sem formatação, coloca em hash e compara o hash com o hash troca em particular. Se os hashes corresponderem, Bob saberá duas coisas:  
   
@@ -260,7 +260,7 @@ ms.lasthandoff: 01/09/2018
  [Voltar ao início](#top)  
   
 <a name="clickonce"></a>   
-## <a name="clickonce-manifests"></a>Manifestos ClickOnce  
+## <a name="clickonce-manifests"></a>ClickOnce Manifests  
  No [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)], as seguintes classes de criptografia permitem que você obtenha e verifique as informações sobre assinaturas de manifesto para aplicativos que são implantados usando [a tecnologia ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment):  
   
 -   O <xref:System.Security.Cryptography.ManifestSignatureInformation> classe obtém informações sobre uma assinatura de manifesto quando você usar seu <xref:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature%2A> sobrecargas do método.  

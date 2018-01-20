@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f66f773551f45f9e4c5978ef09bbe4061a3326bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2d0172b91393e4e9e373a247c33be938a3160e14
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informações de privacidade do Windows Communication Foundation
 A Microsoft está comprometida em proteger a privacidade dos usuários finais. Quando você cria um aplicativo usando [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], versão 3.0, seu aplicativo pode afetar a privacidade de seus usuários finais. Por exemplo, seu aplicativo explicitamente pode coletar informações de contato do usuário, ou pode solicitar ou enviar informações pela Internet para seu site da Web. Se você inserir a tecnologia da Microsoft em seu aplicativo, essa tecnologia pode ter seu próprio comportamento que pode afetar a privacidade. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]não enviar informações à Microsoft do seu aplicativo, a menos que você ou o usuário final optar por enviá-lo para nós.  
@@ -140,9 +140,9 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  \-Para xmlns:wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" e xmlns:wst = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
- WST:BinarySecret  
+ wst:BinarySecret  
   
- WST:Entropy  
+ wst:Entropy  
   
  \-Para xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" e xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
@@ -162,27 +162,27 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  \<Asserção  
   
- MajorVersion = "1"  
+ MajorVersion="1"  
   
- MinorVersion = "1"  
+ MinorVersion="1"  
   
- AssertionId = "[ID]"  
+ AssertionId="[ID]"  
   
- Emissor = "[string]"  
+ Issuer="[string]"  
   
- IssueInstant = "[dateTime]"  
+ IssueInstant="[dateTime]"  
   
  >  
   
- \<Condições NotBefore = "[dateTime]" NotOnOrAfter = "[dateTime]" >  
+ \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
   
- \<AudienceRestrictionCondition >  
+ \<AudienceRestrictionCondition>  
   
  \<Público-alvo > [uri]\</Audience > +  
   
- \</ AudienceRestrictionCondition > *  
+ \</AudienceRestrictionCondition>*  
   
- \<DoNotCacheCondition / > *  
+ \<DoNotCacheCondition />*  
   
  <\!– o tipo base abstrato  
   
@@ -194,9 +194,9 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  \<Aviso >  
   
- \<AssertionIDReference > [ID]\</AssertionIDReference > *  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>*  
   
- \<Asserção > [asserção]\</Assertion > *  
+ \<Assertion>[assertion]\</Assertion>*  
   
  [Nenhum] *  
   
@@ -206,7 +206,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  \<Instrução / > *  
   
- \<SubjectStatement >  
+ \<SubjectStatement>  
   
  \<Assunto >  
   
@@ -222,27 +222,27 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  `</NameIdentifier>?`  
   
- \<SubjectConfirmation >  
+ \<SubjectConfirmation>  
   
- \<ConfirmationMethod > [anyUri]\</ConfirmationMethod > +  
+ \<ConfirmationMethod>[anyUri]\</ConfirmationMethod>+  
   
- \<SubjectConfirmationData > [qualquer]\</SubjectConfirmationData >?  
+ \<SubjectConfirmationData>[any]\</SubjectConfirmationData>?  
   
- \<DS:KeyInfo >... \</ds:KeyInfo >?  
+ \<ds:KeyInfo>...\</ds:KeyInfo>?  
   
- \</ SubjectConfirmation >?  
+ \</SubjectConfirmation>?  
   
- \</ Assunto >  
+ \</Subject>  
   
- \</ SubjectStatement > *  
+ \</SubjectStatement>*  
   
  -->  
   
  \<AuthenticationStatement  
   
- AuthenticationMethod = "[uri]"  
+ AuthenticationMethod="[uri]"  
   
- AuthenticationInstant = "[dateTime]"  
+ AuthenticationInstant="[dateTime]"  
   
  >  
   
@@ -258,25 +258,25 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  < AuthorityBinding  
   
- AuthorityKind = "[QName]"  
+ AuthorityKind="[QName]"  
   
- Local = "[uri]"  
+ Location="[uri]"  
   
- Ligação = "[uri]"  
+ Binding="[uri]"  
   
  />*  
   
- \</ AuthenticationStatement > *  
+ \</AuthenticationStatement>*  
   
- \<AttributeStatement >  
+ \<AttributeStatement>  
   
  [Assunto]  
   
  \<Atributo  
   
- AttributeName = "[string]"  
+ AttributeName="[string]"  
   
- AttributeNamespace = "[uri]"  
+ AttributeNamespace="[uri]"  
   
  >  
   
@@ -284,13 +284,13 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  \</ Atributo > +  
   
- \</ AttributeStatement > *  
+ \</AttributeStatement>*  
   
  \<AuthorizationDecisionStatement  
   
- Recurso = "[uri]"  
+ Resource="[uri]"  
   
- Decisão = "[permitir &#124; Deny &#124; indeterminado]"  
+ Decision="[Permit&#124;Deny&#124;Indeterminate]"  
   
  >  
   
@@ -300,15 +300,15 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  \<Evidência >  
   
- \<AssertionIDReference > [ID]\</AssertionIDReference > +  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>+  
   
- \<Asserção > [asserção]\</Assertion > +  
+ \<Assertion>[assertion]\</Assertion>+  
   
  \</ Evidência >?  
   
- \</ AuthorizationDecisionStatement > *  
+ \</AuthorizationDecisionStatement>*  
   
- \</ Asserção >  
+ \</Assertion>  
   
 #### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>Informações removidas de corpos de mensagens ao registrar em log mensagens descriptografados/não criptografado  
  Conforme descrito anteriormente, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] remove chaves e informações potencialmente pessoais dos cabeçalhos da mensagem para mensagens registradas descriptografados/sem criptografia. Além disso, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] remove as chaves e informações pessoais potencialmente corpos de mensagens para os elementos do corpo e as ações na lista a seguir, que descrevem as mensagens de segurança envolvidas na troca de chaves.  
@@ -319,11 +319,11 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  Informações serão removidas para esses elementos do corpo, que envolve a troca de chaves:  
   
- WST:RequestSecurityToken  
+ wst:RequestSecurityToken  
   
- WST:RequestSecurityTokenResponse  
+ wst:RequestSecurityTokenResponse  
   
- WST:RequestSecurityTokenResponseCollection  
+ wst:RequestSecurityTokenResponseCollection  
   
  Informações também são removidas para cada uma das seguintes ações:  
   
@@ -331,9 +331,9 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue  
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/renew  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Renew  
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/renew  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Renew  
   
  http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Cancel  
   
@@ -351,21 +351,21 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Amend  
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/renew  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Renew  
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/renew  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Renew  
   
  http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Cancel  
   
  http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Cancel  
   
- http://schemas.xmlsoap.org/ws/2004/04/Security/Trust/RST/SCT  
+ http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT  
   
- http://schemas.xmlsoap.org/ws/2004/04/Security/Trust/RSTR/SCT  
+ http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT  
   
- http://schemas.xmlsoap.org/ws/2004/04/Security/Trust/RST/SCT-Amend  
+ http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT-Amend  
   
- http://schemas.xmlsoap.org/ws/2004/04/Security/Trust/RSTR/SCT-Amend  
+ http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT-Amend  
   
 #### <a name="no-information-is-removed-from-application-specific-headers-and-body-data"></a>Nenhuma informação é removida da cabeçalhos específicos de aplicativos e dados do corpo  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]não rastreia informações pessoais em cabeçalhos específicos do aplicativo (por exemplo, cadeias de consulta) ou o corpo de dados (por exemplo, o número do cartão de crédito).  
@@ -413,5 +413,5 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
  O WSDL Web Services Description Language () contém uma definição da porta. Cada porta tem um endereço de ponto de extremidade e uma associação que representa os serviços usados pelo aplicativo. Expondo WSDL pode ser desativado usando a configuração. Nenhuma informação é mantida no computador.  
   
 ## <a name="see-also"></a>Consulte também  
- [Windows Communication Foundation](http://msdn.microsoft.com/en-us/fd327ade-0260-4c40-adbe-b74645ba3277)  
+ [Windows Communication Foundation](http://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  
  [Segurança](../../../docs/framework/wcf/feature-details/security.md)

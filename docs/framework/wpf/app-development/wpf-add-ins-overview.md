@@ -24,11 +24,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 76a836e2699617803b78f76f90b27452bd0cdd0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffd45957b41cdfd8488aedd865aa70ef5b2634b2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wpf-add-ins-overview"></a>Visão geral dos suplementos do WPF
 <a name="Introduction"></a> O [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] inclui um modelo de suplemento que os desenvolvedores podem usar para criar aplicativos que deem suporte a extensibilidade de suplemento. Esse modelo permite a criação de suplementos que integram e estendem a funcionalidade do aplicativo. Em alguns cenários, os aplicativos também devem exibir [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] que são fornecidas por suplementos. Este tópico mostra como o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aumenta o modelo de suplemento do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para habilitar estes cenários, a arquitetura por trás dele, seus benefícios e suas limitações.  
@@ -111,7 +111,7 @@ ms.lasthandoff: 12/22/2017
 -   Tem o <xref:System.SerializableAttribute> atributo aplicado.  
   
 > [!NOTE]
->  Para obter mais informações sobre a criação de objetos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] remotos, consulte [Transformar os objetos em remotos](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a).  
+>  Para obter mais informações sobre a criação de objetos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] remotos, consulte [Transformar os objetos em remotos](http://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a).  
   
  Os tipos de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] não são remotos. Para resolver o problema, o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] estende o modelo de suplemento do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para habilitar uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] criada pelos suplementos para ser exibida de aplicativos host. Esse suporte é fornecido por [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] por dois tipos: o <xref:System.AddIn.Contract.INativeHandleContract> interface e dois métodos estáticos implementados pelo <xref:System.AddIn.Pipeline.FrameworkElementAdapters> classe: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> e <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Em um nível elevado, esses tipos e métodos são usados da seguinte maneira:  
   
@@ -297,6 +297,6 @@ ms.lasthandoff: 12/22/2017
  <xref:System.LoaderOptimizationAttribute>  
  [Suplementos e extensibilidade](../../../../docs/framework/add-ins/index.md)  
  [Domínios do aplicativo](../../../../docs/framework/app-domains/application-domains.md)  
- [Visão geral de comunicação remota do .NET framework](http://msdn.microsoft.com/en-us/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
- [Fazendo a objetos remotos](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a)  
+ [Visão geral de comunicação remota do .NET framework](http://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
+ [Fazendo a objetos remotos](http://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)  
  [Tópicos de instruções](../../../../docs/framework/wpf/app-development/how-to-topics.md)

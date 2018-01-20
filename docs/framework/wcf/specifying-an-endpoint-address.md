@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 21b15fb2b3f3d204ebd5b59f5a93f8e53a89ff71
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 403ff897de4dc9ee95a854d9658bdee344755d59
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Especificando um endereço de ponto de extremidade
 Toda a comunicação com um [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] serviço ocorre por meio de seus pontos de extremidade. Cada <xref:System.ServiceModel.Description.ServiceEndpoint> contém um <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, um <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>e um <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. O contrato especifica quais operações estão disponíveis. Especifica a associação para se comunicar com o serviço e o endereço Especifica onde encontrar o serviço. Cada ponto de extremidade deve ter um endereço exclusivo. O endereço do ponto de extremidade é representado pelo <xref:System.ServiceModel.EndpointAddress> classe, que contém um identificador de recursos uniforme (URI) que representa o endereço do serviço, um <xref:System.ServiceModel.EndpointAddress.Identity%2A>, que representa a identidade de segurança do serviço e uma coleção de opcional <xref:System.ServiceModel.EndpointAddress.Headers%2A>. Os cabeçalhos opcionais fornecem informações mais detalhadas de endereçamento para identificar ou interagir com o ponto de extremidade. Por exemplo, os cabeçalhos podem indicar como processar uma mensagem de entrada, onde o ponto de extremidade deve enviar uma mensagem de resposta ou qual instância de um serviço para usar para processar uma mensagem de entrada de um determinado usuário quando houver várias instâncias.  
@@ -34,11 +34,11 @@ Toda a comunicação com um [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]
   
 -   Esquema: http:  
   
--   Máquina: www.fabrikam.com  
+-   Machine: www.fabrikam.com  
   
 -   (Opcional) Porta: 322  
   
--   Caminho: /mathservice.svc/secureEndpoint  
+-   Path: /mathservice.svc/secureEndpoint  
   
  Parte do modelo EPR é que cada referência de ponto de extremidade pode executar alguns parâmetros de referência que adicionar informações de identificação extra. Em [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], esses parâmetros de referência são modelados como instâncias de <xref:System.ServiceModel.Channels.AddressHeader> classe.  
   
@@ -49,7 +49,7 @@ Toda a comunicação com um [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]
  Ao hospedar no IIS, você não gerencia o <xref:System.ServiceModel.ServiceHost> instância por conta própria. O endereço base sempre é o endereço especificado no arquivo. svc para o serviço ao hospedar no IIS. Portanto, você deve usar endereços de ponto de extremidade relativa para pontos de extremidade do serviço hospedado no IIS. Fornecendo um endereço de ponto de extremidade totalmente qualificado pode resultar em erros na implantação do serviço. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Implantando um serviço WCF hospedados em serviços de informações da Internet](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   
 ## <a name="defining-endpoint-addresses-in-configuration"></a>Definir os endereços de ponto de extremidade na configuração  
- Para definir um ponto de extremidade em um arquivo de configuração, use o [ \<ponto de extremidade >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
+ Para definir um ponto de extremidade em um arquivo de configuração, use o [ \<ponto de extremidade >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
   
  [!code-xml[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  
   

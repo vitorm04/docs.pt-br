@@ -18,11 +18,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 5f79ed7af91f2e54edbc2174da2afa1b3cb56557
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4cfe8752ce3a562e1e4b576c63b56ff56255ff62
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specifying-an-assembly39s-location"></a>Especificando um Assembly &#39; s local
 Há duas maneiras de especificar o local de um assembly:  
@@ -31,7 +31,7 @@ Há duas maneiras de especificar o local de um assembly:
   
 -   Usando o [ \<probing >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) elemento.  
   
- Você também pode usar o [ferramenta de configuração do .NET Framework (Mscorcfg.msc)](http://msdn.microsoft.com/en-us/a7106c52-68da-490e-b129-971b2c743764) para especificar locais de assembly ou especificar locais para o common language runtime para investigação para assemblies.  
+ Você também pode usar o [ferramenta de configuração do .NET Framework (Mscorcfg.msc)](http://msdn.microsoft.com/library/a7106c52-68da-490e-b129-971b2c743764) para especificar locais de assembly ou especificar locais para o common language runtime para investigação para assemblies.  
   
 ## <a name="using-the-codebase-element"></a>Usando o \<codeBase > elemento  
  Você pode usar o  **\<codeBase >** elemento apenas na configuração ou publicador política arquivos de máquina que redirecionam também a versão do assembly. Quando o tempo de execução determina qual versão do assembly a ser usado, ele se aplica a configuração de base de código do arquivo que determina a versão. Se nenhuma base de código é indicado, o tempo de execução de testes para o assembly da maneira normal. Para obter detalhes, consulte [como o tempo de execução Localiza Assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
@@ -80,4 +80,4 @@ Há duas maneiras de especificar o local de um assembly:
  [Assemblies no Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Configuração de aplicativos .NET Framework](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+ [Configuração de aplicativos .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

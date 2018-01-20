@@ -23,11 +23,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ac4b6fc2ae36d848306178f281cceeeb0654ec03
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5cee99346d19c632739bcc6540c43f1a35217a2f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>Instruções passo a passo: criando um aplicativo extensível
 Este passo a passo descreve como criar um pipeline para um suplemento que executa funções de cálculo simples. Não demonstra um cenário do mundo real; em vez disso, ele demonstra a funcionalidade básica de um pipeline e como um suplemento pode fornecer serviços para um host.  
@@ -52,11 +52,11 @@ Este passo a passo descreve como criar um pipeline para um suplemento que execut
   
 -   Executando o aplicativo de host.  
   
- Esse pipeline passa somente tipos serializáveis (<xref:System.Double> e <xref:System.String>), entre o host e o suplemento. Para obter um exemplo que mostra como passar coleções de tipos de dados complexos, consulte [passo a passo: passando coleções entre Hosts e suplementos](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5).  
+ Esse pipeline passa somente tipos serializáveis (<xref:System.Double> e <xref:System.String>), entre o host e o suplemento. Para obter um exemplo que mostra como passar coleções de tipos de dados complexos, consulte [passo a passo: passando coleções entre Hosts e suplementos](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5).  
   
  O contrato para este pipeline define um modelo de objeto de quatro operações aritméticas: adicionar, subtrair, multiplicar e dividir. O host fornece o suplemento com uma equação para calcular, como 2 + 2, e o suplemento retorna o resultado para o host.  
   
- Versão 2 do suplemento Calculadora fornece mais Calculando possibilidades e demonstra o controle de versão. Ela é descrita [passo a passo: Habilitando compatibilidade com versões anteriores, como alterações do seu Host](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
+ Versão 2 do suplemento Calculadora fornece mais Calculando possibilidades e demonstra o controle de versão. Ela é descrita [passo a passo: Habilitando compatibilidade com versões anteriores, como alterações do seu Host](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
  Você precisa dos seguintes itens para concluir esta explicação:  
@@ -73,7 +73,7 @@ Este passo a passo descreve como criar um pipeline para um suplemento que execut
 2.  Nome da solução `CalculatorV1`.  
   
 ## <a name="creating-the-pipeline-directory-structure"></a>Criando a estrutura de diretórios de Pipeline  
- O modelo de suplemento requer os assemblies de segmento de pipeline ser colocado em uma estrutura de diretório especificado. Para obter mais informações sobre a estrutura do pipeline, consulte [requisitos de desenvolvimento de Pipeline](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+ O modelo de suplemento requer os assemblies de segmento de pipeline ser colocado em uma estrutura de diretório especificado. Para obter mais informações sobre a estrutura do pipeline, consulte [requisitos de desenvolvimento de Pipeline](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
 #### <a name="to-create-the-pipeline-directory-structure"></a>Para criar a estrutura de diretório de pipeline  
   
@@ -92,10 +92,10 @@ Este passo a passo descreve como criar um pipeline para um suplemento que execut
       HostSideAdapters  
     ```  
   
-     Não é necessário colocar a estrutura de pastas do pipeline na sua pasta de aplicativo; Isso é feito aqui apenas para conveniência. A etapa apropriada, passo a passo explica como alterar o código se a estrutura de pastas do pipeline está em um local diferente. Consulte a discussão de requisitos de diretório do pipeline em [requisitos de desenvolvimento de Pipeline](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+     Não é necessário colocar a estrutura de pastas do pipeline na sua pasta de aplicativo; Isso é feito aqui apenas para conveniência. A etapa apropriada, passo a passo explica como alterar o código se a estrutura de pastas do pipeline está em um local diferente. Consulte a discussão de requisitos de diretório do pipeline em [requisitos de desenvolvimento de Pipeline](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
     > [!NOTE]
-    >  O `CalcV2` pasta não é usada neste passo a passo; é um espaço reservado para [passo a passo: Habilitando compatibilidade com versões anteriores, como alterações do seu Host](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
+    >  O `CalcV2` pasta não é usada neste passo a passo; é um espaço reservado para [passo a passo: Habilitando compatibilidade com versões anteriores, como alterações do seu Host](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
   
 ## <a name="creating-the-contract-and-views"></a>Criar o contrato e modos de exibição  
  O segmento de contrato para este pipeline define o `ICalc1Contract` interface, que define quatro métodos: `add`, `subtract`, `multiply`, e `divide`.  
@@ -204,7 +204,7 @@ Este passo a passo descreve como criar um pipeline para um suplemento que execut
   
  Nesse pipeline, o suplemento fornece um serviço para o host e o fluxo de tipos do suplemento para o host. Porque nenhum tipo de fluxo do host para o suplemento, você não precisa incluem um adaptador de exibição para o contrato.  
   
- Para implementar o gerenciamento de vida útil, use um <xref:System.AddIn.Pipeline.ContractHandle> objeto para anexar um token de tempo de vida para o contrato. Você deve manter uma referência a esse identificador em ordem para gerenciamento de vida útil trabalhar. Depois que o token é aplicado, sem programação adicional é necessária porque o sistema suplemento pode descartar objetos quando eles não estão sendo usados e disponibilizá-las para coleta de lixo. Para obter mais informações, consulte [gerenciamento de vida útil](http://msdn.microsoft.com/en-us/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
+ Para implementar o gerenciamento de vida útil, use um <xref:System.AddIn.Pipeline.ContractHandle> objeto para anexar um token de tempo de vida para o contrato. Você deve manter uma referência a esse identificador em ordem para gerenciamento de vida útil trabalhar. Depois que o token é aplicado, sem programação adicional é necessária porque o sistema suplemento pode descartar objetos quando eles não estão sendo usados e disponibilizá-las para coleta de lixo. Para obter mais informações, consulte [gerenciamento de vida útil](http://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
   
 #### <a name="to-create-the-host-side-adapter"></a>Para criar o adaptador do host  
   
@@ -339,7 +339,7 @@ Este passo a passo descreve como criar um pipeline para um suplemento que execut
     |Calc1HVA|MyApp|  
   
     > [!NOTE]
-    >  Se você decidiu colocar sua estrutura de pasta de pipeline em um local diferente da pasta de seu aplicativo, você deve modificar os caminhos mostrados na tabela adequadamente. Consulte a discussão de requisitos de diretório do pipeline em [requisitos de desenvolvimento de Pipeline](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+    >  Se você decidiu colocar sua estrutura de pasta de pipeline em um local diferente da pasta de seu aplicativo, você deve modificar os caminhos mostrados na tabela adequadamente. Consulte a discussão de requisitos de diretório do pipeline em [requisitos de desenvolvimento de Pipeline](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
 2.  Compile a solução do Visual Studio.  
   
@@ -348,7 +348,7 @@ Este passo a passo descreve como criar um pipeline para um suplemento que execut
     > [!NOTE]
     >  Se você não alterou **Copy Local** para **False** para o `Calc1AddInView` projeto de referência no `AddInCalcV1` projeto, problemas de contexto do carregador impede que o suplemento que está sendo localizado.  
   
-     Para obter informações sobre como implantar o pipeline, consulte [requisitos de desenvolvimento de Pipeline](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+     Para obter informações sobre como implantar o pipeline, consulte [requisitos de desenvolvimento de Pipeline](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
 ## <a name="running-the-host-application"></a>Executando o aplicativo de Host  
  Agora você está pronto para executar o host e interagir com o suplemento.  
@@ -364,8 +364,8 @@ Este passo a passo descreve como criar um pipeline para um suplemento que execut
 4.  Tipo **sair** e pressione a **Enter** tecla para fechar o aplicativo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Passo a passo: Habilitando a compatibilidade com versões anteriores, como as alterações de Host](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
- [Passo a passo: Passando coleções entre Hosts e suplementos](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)  
- [Requisitos de desenvolvimento de pipeline](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
- [Contratos, exibições e adaptadores](http://msdn.microsoft.com/en-us/a6460173-9507-4b87-8c07-d4ee245d715c)  
+ [Passo a passo: Habilitando a compatibilidade com versões anteriores, como as alterações de Host](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+ [Passo a passo: Passando coleções entre Hosts e suplementos](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
+ [Requisitos de desenvolvimento de pipeline](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
+ [Contratos, exibições e adaptadores](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
  [Desenvolvimento de pipeline](../../../docs/framework/add-ins/pipeline-development.md)

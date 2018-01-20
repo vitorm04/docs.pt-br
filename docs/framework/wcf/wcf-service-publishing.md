@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 4e3d86153d4192e04e55fb9e99ef588b45511560
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 823edadf7d387d1a509edbdf839ac6eeece5d41f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-service-publishing"></a>Publicação de serviço do WCF
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Serviço de publicação ajuda em andamento no ambiente de desenvolvimento iniciais fornecido pelo [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host de serviço e [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] cliente de teste para realmente implantar o aplicativo em um ambiente de produção para fins de teste. Antes de confirmar a um plano de implantação final, você pode usar [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] serviço de publicação para verificar se seu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviço executa corretamente e está pronto para ser publicado. Você também pode optar por implantar seu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bibliotecas em vários locais de destino para teste de serviço.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Biblioteca de serviço de distribuição.  
   
- Você pode encontrar esses modelos de serviço, escolhendo **arquivo** -> **novo projeto** -> **Visual Basic** ou **Visual C#**  ->  **WCF**. Para outros modelos de WCF neste local (incluindo o aplicativo de serviço de fluxo de trabalho WCF e o aplicativo de serviço WCF), você pode publicar usando [publicação para aplicativos da web com um clique](https://msdn.microsoft.com/en-us/library/dd465337\(v=vs.110\).aspx).  
+ Você pode encontrar esses modelos de serviço, escolhendo **arquivo** -> **novo projeto** -> **Visual Basic** ou **Visual C#**  ->  **WCF**. Para outros modelos de WCF neste local (incluindo o aplicativo de serviço de fluxo de trabalho WCF e o aplicativo de serviço WCF), você pode publicar usando [publicação para aplicativos da web com um clique](https://msdn.microsoft.com/library/dd465337\(v=vs.110\).aspx).  
   
  O serviço pode ser publicado para os seguintes locais de destino.  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="assembly-files"></a>Arquivos de assembly  
  Quando você publica um [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] de serviço usando essa ferramenta, o serviço será automaticamente criado primeiro e os arquivos de assembly são gerados no projeto de serviço após a construção.  
   
-### <a name="svc-file"></a>. Arquivo SVC  
+### <a name="svc-file"></a>.SVC File  
  A operação de publicação gera um arquivo SVC para cada [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviço, se o arquivo existe ou não, para garantir a validade da versão. Há dois tipos diferentes de arquivos svc: uma para [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] biblioteca de serviço e biblioteca de serviço de distribuição e outra para sequencial e biblioteca de serviço de fluxo de trabalho de máquina de estado. Gerado \*arquivo. svc é copiado para a pasta raiz no local de destino.  
   
 ### <a name="webconfig-file"></a>Arquivo Web. config  

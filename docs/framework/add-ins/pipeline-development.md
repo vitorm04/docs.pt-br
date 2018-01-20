@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0ad577145c26b9c43e8b7fb3b61f27f374ff9298
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 33646bbd7b0043cb5fc036b9b11aa4cf37cd537f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="pipeline-development"></a>Desenvolvimento de pipelines
 O pipeline de suplemento é o caminho de segmentos de pipeline que o aplicativo de host e o suplemento devem usar para se comunicar entre si.  
@@ -41,14 +41,14 @@ Pipeline de suplemento
   
  Se você carregar o host e o suplemento em domínios de aplicativo separados, você tem um limite de isolamento que separa o escopo do aplicativo host do escopo do suplemento. O contrato é o assembly só que é carregado no host e domínios de aplicativo do suplemento. O host e o suplemento cada referem-se apenas à sua exibição dos métodos de contrato. Portanto, eles serão separados por uma camada de abstração do contrato.  
   
- Para desenvolver os segmentos de pipeline, você deve criar uma estrutura de diretório que conterá a eles. Para obter mais informações sobre os requisitos de desenvolvimento e diretrizes de escopo, consulte [requisitos de desenvolvimento de Pipeline](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+ Para desenvolver os segmentos de pipeline, você deve criar uma estrutura de diretório que conterá a eles. Para obter mais informações sobre os requisitos de desenvolvimento e diretrizes de escopo, consulte [requisitos de desenvolvimento de Pipeline](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
  A ilustração a seguir mostra os tipos que compõem os segmentos de pipeline. Os nomes dos tipos mostrados na ilustração são arbitrários, mas todos os tipos, exceto para o host e o host de exibição dos atributos suplemento exigem para que possam ser descobertos por métodos que construir um armazenamento de informações.  
   
  ![Adicionar &#45; no modelo com atributos necessários em tipos. ] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
 Pipeline de suplemento com tipos  
   
- A tabela a seguir descreve os segmentos de pipeline para ativar um suplemento. Para obter mais informações sobre esses segmentos, consulte [contratos, exibições e adaptadores](http://msdn.microsoft.com/en-us/a6460173-9507-4b87-8c07-d4ee245d715c).  
+ A tabela a seguir descreve os segmentos de pipeline para ativar um suplemento. Para obter mais informações sobre esses segmentos, consulte [contratos, exibições e adaptadores](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c).  
   
 |Segmento de pipeline|Descrição|  
 |----------------------|-----------------|  
@@ -89,14 +89,14 @@ Caminho de ativação de suplemento para o host
   
      Descreve um suplemento de cálculo que executa a adição, subtração, multiplicação e cálculos de divisão para o host.  
   
--   [Passo a passo: Habilitando a compatibilidade com versões anteriores, como as alterações de Host](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+-   [Passo a passo: Habilitando a compatibilidade com versões anteriores, como as alterações de Host](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
   
      Descreve um suplemento de calculadora com recursos aprimorados de cálculo e como manter a compatibilidade com o suplemento de calculadora primeiro.  
   
--   [Passo a passo: Passando coleções entre Hosts e suplementos](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)  
+-   [Passo a passo: Passando coleções entre Hosts e suplementos](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
   
      Descreve como passar conjuntos de dados pelo pipeline usando um cenário de armazenamento do catálogo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Cenários de Pipeline do suplemento](http://msdn.microsoft.com/en-us/feb70e0b-8734-494c-aeaf-b567f014043e)  
+ [Cenários de Pipeline do suplemento](http://msdn.microsoft.com/library/feb70e0b-8734-494c-aeaf-b567f014043e)  
  [Suplementos e extensibilidade](../../../docs/framework/add-ins/index.md)

@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9c739db4db5afad8fc379a5da4764cb9ab6804fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7526f5cda302618b2f240e5ae1c126e60b9ab5e6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)
 A ferramenta Visualizador de Rastreamento de Serviço do [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] ajuda você a analisar os rastreamentos de diagnóstico gerados pelo [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. O Visualizador de Rastreamento de Serviço oferece um modo fácil de mesclar, exibir e filtrar mensagens de rastreamento no log, para que você possa diagnosticar, reparar e verificar problemas de serviço do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
@@ -421,7 +421,7 @@ A ferramenta Visualizador de Rastreamento de Serviço do [!INCLUDE[indigo1](../.
 |![Rastreamento de parada da atividade](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|Rastreamento de interrupção de atividade: um rastreamento que marca o fim de uma atividade. . Contém o nome da atividade. Como designer ou desenvolvedor de aplicativos, você deve definir um rastreamento de interrupção de atividade por ID de atividade para cada origem de rastreamento. Nenhum rastreamento de uma determinada origem aparece após a interrupção de atividade emitida por essa origem de rastreamento, exceto se a granularidade do tempo de rastreamento não for suficientemente pequena. Quando isso acontece, dois rastreamentos com o mesmo tempo, incluindo uma interrupção, podem ser intercalados quando exibidos. Se a ID de atividade for propagada nas origens de rastreamento para a correlação de rastreamentos, você poderá consultar várias interrupções para a mesma ID de atividade (uma por origem de rastreamento). O rastreamento de interrupção será emitido se ActivityTracing estiver habilitado para a origem de rastreamento.|  
 |![Rastreamento de suspensão de atividade](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Rastreamento de suspensão de atividade: um rastreamento que marca o tempo em que uma atividade está em pausa. Nenhum rastreamento é emitido em uma atividade suspensa até que a atividade seja retomada. Uma atividade suspensa indica que nenhum processamento está ocorrendo nela no escopo da origem de rastreamento. Os rastreamentos de suspensão/retomada são úteis para a criação de perfil. O rastreamento de suspensão será emitido se ActivityTracing estiver habilitado para a origem de rastreamento.|  
 |![Retomar a atividade de rastreamento](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|Rastreamento de retomada de atividade: um rastreamento que marca o tempo em que uma atividade é retomada após ter sido suspensa. Os rastreamentos podem ser emitidos novamente nessa atividade. Os rastreamentos de suspensão/retomada são úteis para a criação de perfil. O rastreamento de retomada será emitido se ActivityTracing estiver habilitado para a origem de rastreamento.|  
-|![Transferência de](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Transferência: um rastreamento que é emitido quando o fluxo de controle lógico é transferido de uma atividade para outra. A atividade de origem da transferência poderá continuar a executar o trabalho em paralelo à atividade de destino da transferência. O rastreamento de transferência será emitido se ActivityTracing estiver habilitado para a origem de rastreamento.|  
+|![Transfer](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Transferência: um rastreamento que é emitido quando o fluxo de controle lógico é transferido de uma atividade para outra. A atividade de origem da transferência poderá continuar a executar o trabalho em paralelo à atividade de destino da transferência. O rastreamento de transferência será emitido se ActivityTracing estiver habilitado para a origem de rastreamento.|  
 |![Transferência de](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Transferência de: um rastreamento que define uma transferência de outra atividade para a atividade atual.|  
 |![Transferir para](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Transferência para: um rastreamento que define uma transferência de fluxo de controle lógico da atividade atual para outra atividade.|  
   
@@ -437,7 +437,7 @@ A ferramenta Visualizador de Rastreamento de Serviço do [!INCLUDE[indigo1](../.
   
 |Ícone|Descrição|  
 |----------|-----------------|  
-|![Atividade](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Atividade: indica que a atividade atual é uma atividade genérica.|  
+|![Activity](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Atividade: indica que a atividade atual é uma atividade genérica.|  
 |![Atividade de raiz](../../../docs/framework/wcf/media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|Atividade raiz: indica a atividade raiz de um processo.|  
   
 ### <a name="wcf-activities"></a>Atividades do WCF  
@@ -463,4 +463,4 @@ A ferramenta Visualizador de Rastreamento de Serviço do [!INCLUDE[indigo1](../.
 ## <a name="see-also"></a>Consulte também  
  [Usando o Visualizador de Rastreamento de Serviço para exibir rastreamentos correlacionados e solucionar problemas](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  [Configurando o rastreamento](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [Rastreamento de atividades e propagação de correlação de rastreamento ponta a ponta](http://msdn.microsoft.com/en-us/2c11a905-64f8-47b5-bae5-a74fc666137e)
+ [Rastreamento de atividades e propagação de correlação de rastreamento ponta a ponta](http://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)

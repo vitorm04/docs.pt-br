@@ -24,11 +24,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7e4d336992be216178b1237c9f43bffb3de61fba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 030b84245a5cec09dac3133b04235c65f7bb2d80
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="add-ins-and-extensibility"></a>Suplementos e extensibilidade
 <a name="top"></a>Os suplementos fornecem recursos estendidos ou serviços para um aplicativo host. O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornece um modelo de programação que os desenvolvedores podem usar para desenvolver os complementos e ativá-los em seus aplicativos de host. O modelo realiza isso criando um pipeline de comunicação entre o host e o suplemento. O modelo é implementado usando os tipos no <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>, e <xref:System.AddIn.Contract> namespaces.  
@@ -81,7 +81,7 @@ Pipeline de suplemento
 ### <a name="discovery-and-activation"></a>Detecção e ativação  
  Você pode ativar um suplemento usando um token de uma coleção que representa os suplementos encontrados em um armazenamento de informações. Complementos são encontrados por meio de pesquisa para o tipo que define a exibição do host do suplemento. Você também pode encontrar um add-in específico pelo tipo que define o suplemento. O armazenamento de informações consiste em dois arquivos de cache: o repositório de pipeline e o repositório de suplementos.  
   
- Para obter informações sobre como atualizar e recompilar o armazenamento de informações, consulte [suplemento descoberta](http://msdn.microsoft.com/en-us/5d268dde-11df-4c4d-a022-f58d88bbc421). Para obter informações sobre como ativar suplementos, consulte [suplemento ativação](http://msdn.microsoft.com/en-us/bedcbcdf-5964-4215-b5f3-3299798b2b3f) e [como: ativar suplementos com segurança e isolamento diferentes](http://msdn.microsoft.com/en-us/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
+ Para obter informações sobre como atualizar e recompilar o armazenamento de informações, consulte [suplemento descoberta](http://msdn.microsoft.com/library/5d268dde-11df-4c4d-a022-f58d88bbc421). Para obter informações sobre como ativar suplementos, consulte [suplemento ativação](http://msdn.microsoft.com/library/bedcbcdf-5964-4215-b5f3-3299798b2b3f) e [como: ativar suplementos com segurança e isolamento diferentes](http://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
   
 ### <a name="isolation-levels-and-external-processes"></a>Níveis de isolamento e processos externos  
  O modelo dá suporte a vários níveis de isolamento entre um suplemento e seu host ou suplementos. A partir de menos isolado, esses níveis são os seguintes:  
@@ -96,10 +96,10 @@ Pipeline de suplemento
   
 -   Cada suplemento é carregado exclusivamente em seu próprio domínio de aplicativo em um processo externo. Esse é o cenário mais isolado.  
   
- Para obter mais informações sobre o uso de processos externos, consulte [como: ativar suplementos com segurança e isolamento diferentes](http://msdn.microsoft.com/en-us/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
+ Para obter mais informações sobre o uso de processos externos, consulte [como: ativar suplementos com segurança e isolamento diferentes](http://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
   
 ### <a name="lifetime-management"></a>Gerenciamento do tempo de vida  
- Porque o modelo de suplemento ultrapassa os limites de domínio e o processo do aplicativo, a coleta de lixo por si só não é suficiente para liberar e recuperar os objetos. O modelo fornece um mecanismo de gerenciamento do ciclo de vida que usa tokens e contagem de referência e geralmente não requer programação adicional. Para obter mais informações, consulte [gerenciamento de vida útil](http://msdn.microsoft.com/en-us/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
+ Porque o modelo de suplemento ultrapassa os limites de domínio e o processo do aplicativo, a coleta de lixo por si só não é suficiente para liberar e recuperar os objetos. O modelo fornece um mecanismo de gerenciamento do ciclo de vida que usa tokens e contagem de referência e geralmente não requer programação adicional. Para obter mais informações, consulte [gerenciamento de vida útil](http://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
   
  [Voltar ao início](#top)  
   
@@ -115,7 +115,7 @@ Pipeline de suplemento
 |Título|Descrição|  
 |-----------|-----------------|  
 |[Desenvolvimento de pipeline](../../../docs/framework/add-ins/pipeline-development.md)|Descreve o canal de comunicação de segmentos do aplicativo host para o suplemento. Fornece exemplos de código nos tópicos de instruções passo a passo que descrevem como construir o pipeline e como implantar segmentos para o pipeline em [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
-|[Domínios do aplicativo e assemblies](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)|Descreve a relação entre os domínios de aplicativo, que fornecem um limite de isolamento de segurança, confiabilidade e controle de versão e assemblies.|  
+|[Domínios do aplicativo e assemblies](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|Descreve a relação entre os domínios de aplicativo, que fornecem um limite de isolamento de segurança, confiabilidade e controle de versão e assemblies.|  
   
  [Voltar ao início](#top)  
   

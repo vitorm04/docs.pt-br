@@ -17,11 +17,11 @@ ms.author: mairaw
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5547322759dcafb25e9f1c8541fa67876d0cd401
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 7d67bacab3f8f8f4c21c5048d3ffb332ae6e8d77
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="binary-serialization"></a>Serialização binária
 
@@ -375,8 +375,8 @@ O .NET Core dá suporte à serialização binária com um subconjunto de tipos. 
  [Segurança e serialização](../../../docs/framework/misc/security-and-serialization.md)  
  Descreve as diretrizes para codificação segura para seguir ao escrever o código que executa a serialização.  
   
- [Objetos remotos](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)  
+ [Objetos remotos](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
  Descreve os vários métodos de comunicação disponíveis no .NET Framework para comunicações remotas.  
   
- [Serviços Web XML criados com o ASP.NET e clientes de serviços Web XML](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)  
+ [Serviços Web XML criados com o ASP.NET e clientes de serviços Web XML](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
  Fornece tópicos que descrevem e explicam como programar serviços Web XML criados usando o ASP.NET.

@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 75723b03468c2e7aeda765f2dabfc30e394c8c88
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2bb195af180ab9d840f91fe82f9f643119663374
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-visual-studio-templates"></a>Modelos do Visual Studio do WCF
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] modelos são modelos predefinidos de projeto e item, você pode usar em [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] para criar rapidamente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ao redor de aplicativos e serviços.  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/22/2017
  Um arquivo de host de serviço (service1.svc) também é criado se o projeto existente for um projeto da Web.  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>Projeto de serviço do WF WCF e o modelo de Item.  
- Esses modelos criam [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services que hospeda um serviço de fluxo de trabalho, que é um fluxo de trabalho que pode ser acessado como um serviço web. Modelos separados existem para modelos de programação imperativos ou XAML. Usar os modelos, você pode criar o fluxo de trabalho de máquina de estado ou sequencial. Para obter mais informações sobre esses tipos de fluxo de trabalho, consulte [Windows Workflow Foundation tutoriais](http://msdn.microsoft.com/en-us/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)]criar projetos de fluxo de trabalho, consulte [criar projetos de fluxo de trabalho herdado](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Esses modelos criam [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services que hospeda um serviço de fluxo de trabalho, que é um fluxo de trabalho que pode ser acessado como um serviço web. Modelos separados existem para modelos de programação imperativos ou XAML. Usar os modelos, você pode criar o fluxo de trabalho de máquina de estado ou sequencial. Para obter mais informações sobre esses tipos de fluxo de trabalho, consulte [Windows Workflow Foundation tutoriais](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)]criar projetos de fluxo de trabalho, consulte [criar projetos de fluxo de trabalho herdado](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
   
  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]Designer é mais ágil nas respostas quando tipo XOML fluxos de trabalho são usados em vez disso, de código com base em aqueles. Fluxo de trabalho XOML é o tipo de fluxo de trabalho padrão a ser criado.  
   

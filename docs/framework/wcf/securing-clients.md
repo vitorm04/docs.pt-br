@@ -15,11 +15,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: a30f42c88e2478341737b99ad239d37c87a1063e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 611272f9d0369a89d401315e9b6379d2e8cd27c0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="securing-clients"></a>Protegendo clientes
 Em [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], o serviço determina os requisitos de segurança para clientes. Ou seja, o serviço Especifica o modo de segurança para usar, e se o cliente deve fornecer uma credencial. O processo de proteção de um cliente, portanto, é simples: usar os metadados obtidos do serviço (se ela for publicada) e criar um cliente. Os metadados especificam como configurar o cliente. Se o serviço exigir que o cliente forneça uma credencial, você deve obter uma credencial que atende ao requisito. Este tópico descreve o processo em mais detalhes. [!INCLUDE[crabout](../../../includes/crabout-md.md)]criar um serviço seguro, consulte [protegendo serviços](../../../docs/framework/wcf/securing-services.md).  
@@ -117,7 +117,7 @@ Em [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], o serviço determina os
 </configuration>  
 ```  
   
- Para definir a credencial do cliente em configuração, adicione uma [ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) elemento ao arquivo de configuração. Além disso, o elemento de comportamento adicional deve ser vinculado ao ponto de extremidade do serviço usando o `behaviorConfiguration` atributo o [ \<ponto de extremidade >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento conforme mostrado no exemplo a seguir. O valor de `behaviorConfiguration` atributo deve corresponder ao valor do comportamento `name` atributo.  
+ Para definir a credencial do cliente em configuração, adicione uma [ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) elemento ao arquivo de configuração. Além disso, o elemento de comportamento adicional deve ser vinculado ao ponto de extremidade do serviço usando o `behaviorConfiguration` atributo o [ \<ponto de extremidade >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento conforme mostrado no exemplo a seguir. O valor de `behaviorConfiguration` atributo deve corresponder ao valor do comportamento `name` atributo.  
   
  `<configuration>`  
   
@@ -168,7 +168,7 @@ Em [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], o serviço determina os
  <xref:System.ServiceModel.Description.ClientCredentials>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  
- [\<associações >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
+ [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
  [Ferramenta Editor de configuração (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
  [Protegendo serviços](../../../docs/framework/wcf/securing-services.md)  
  [Usando um cliente do WCF para acessar serviços](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  

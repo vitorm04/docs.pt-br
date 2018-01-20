@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 14b7691b1c105ceb3e209c5d86bda455657a4198
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5f6df22918dedf32738a8cb9d73af2e625923a4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-sessions"></a>Utilizando sessões
 Em [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplicativos, um *sessão* correlaciona a um grupo de mensagens em uma conversa. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]as sessões são diferentes do objeto de sessão disponível no [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplicativos, suporte a comportamentos diferentes e são controlados de maneiras diferentes. Este tópico descreve os recursos que permitem que as sessões no [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativos e como usá-los.  
@@ -147,7 +147,7 @@ Em [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplicativos, um *sessão
  Há uma interação entre o <xref:System.ServiceModel.SessionMode> enumeração em um contrato e o <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> propriedade, que controla a associação entre canais e objetos de serviço específico. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Sessões, instanciação e simultaneidade](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
   
 ### <a name="sharing-instancecontext-objects"></a>Compartilhamento InstanceContext objetos  
- Você também pode controlar qual canal baseadas em sessão ou chamada está associada com a qual <xref:System.ServiceModel.InstanceContext> objeto executando essa associação por conta própria. Para obter um exemplo completo, consulte [InstanceContextSharing](http://msdn.microsoft.com/en-us/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230).  
+ Você também pode controlar qual canal baseadas em sessão ou chamada está associada com a qual <xref:System.ServiceModel.InstanceContext> objeto executando essa associação por conta própria. Para obter um exemplo completo, consulte [InstanceContextSharing](http://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230).  
   
 ## <a name="sessions-and-streaming"></a>Sessões e Streaming  
  Quando você tiver uma grande quantidade de dados para transferência, o modo de transferência de streaming do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] será uma alternativa viável para o comportamento padrão de buffer e processamento de mensagens na memória em sua totalidade. Você pode obter um comportamento inesperado durante o streaming de chamadas com uma associação baseada em sessão. Todas as chamadas de streaming são feitas por um único canal (o canal de datagrama) que não oferece suporte a sessões mesmo que a associação que está sendo usada esteja configurada para usar sessões. Se vários clientes fazem chamadas para o mesmo objeto de serviço de streaming via uma associação com base em sessão e modo de simultaneidade do objeto de serviço é definido como único e o modo de contexto da instância é definido como `PerSession`, todas as chamadas devem passar pelo canal de datagrama e, portanto apenas uma chamada é processada por vez. Portanto, um ou mais clientes podem atingir o tempo limite. Você pode contornar esse problema definindo o objeto de serviço `InstanceContextMode` para `PerCall` ou simultaneidade a vários.  

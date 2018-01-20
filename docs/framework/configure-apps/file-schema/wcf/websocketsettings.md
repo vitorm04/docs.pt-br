@@ -14,18 +14,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7ee0f555fc1e3412032e0a7dda3a747bbfef6f4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01bc858aeeff750baa3f54e813dea5c9779143f8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltwebsocketsettingsgt"></a>&lt;webSocketSettings&gt;
 Um elemento de configuração usado para especificar configurações de soquete da Web.  
   
-\<sistema. ServiceModel >  
-\<associações >  
-\<netHttpBinding >  
+\<system.ServiceModel>  
+\<bindings>  
+\<netHttpBinding>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,7 +57,7 @@ Um elemento de configuração usado para especificar configurações de soquete 
 |maxPendingConnections|Especifica o número máximo de conexões que estão aguardando envio no serviço.|  
 |receiveBufferSize|Especifica o tamanho do buffer de recepção.|  
 |sendBufferSize|Especifica o tamanho do buffer de envio.|  
-|subprotocolo|Especifica o subprotocolo de soquete da Web.|  
+|subProtocol|Especifica o subprotocolo de soquete da Web.|  
 |transportUsage|Especifica quando usar soquetes da Web.|  
   
 ## <a name="transportusage-attribute"></a>transportUsage atributo  
@@ -75,7 +75,7 @@ Um elemento de configuração usado para especificar configurações de soquete 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|\<netHttpBinding >|Especifica o NetHttpBinding|  
+|\<netHttpBinding>|Especifica o NetHttpBinding|  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como usar o \<webSocketSettings > elemento.  
@@ -103,5 +103,5 @@ Um elemento de configuração usado para especificar configurações de soquete 
  <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<associação >](../../../../../docs/framework/misc/binding.md)
+ [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)
