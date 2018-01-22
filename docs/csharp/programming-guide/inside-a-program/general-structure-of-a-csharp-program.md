@@ -9,11 +9,11 @@ ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
 caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8886f7601ce4d1de4a6b277a803ff87eb67bee78
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ac9b0ad47dc9608c3082167493caa7c4bc966497
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>Estrutura geral de um programa em C# (Guia de Programação em C#)
 Os programas C# podem consistir em um ou mais arquivos. Cada arquivo pode conter zero ou mais namespaces. Um namespace pode conter tipos como classes, estruturas, interfaces, enumerações e delegados, além de outros namespaces. A seguir está o esqueleto de um programa em C# que contém todos esses elementos.  
@@ -40,4 +40,4 @@ Os programas C# podem consistir em um ou mais arquivos. Cada arquivo pode conter
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
  [Por dentro de um programa em C#](../../../csharp/programming-guide/inside-a-program/index.md)  
  [Referência de C#](../../../csharp/language-reference/index.md)  
- [\<Aplicativos de exemplo do paveover>C#](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)
+ [\<Aplicativos de exemplo do paveover>C#](http://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)

@@ -14,11 +14,11 @@ ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
 caps.latest.revision: "39"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c17dcce921f3a6ff1a9c547c5ff5d34c3dbbf28d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1b6511394e69edd344c4f4a1bbc9da549a1a2a17
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- seu primeiro programa (Guia de Programação em C#)
 O procedimento a seguir cria uma versão de C# do programa tradicional "Hello World!" programa. O programa exibe a cadeia de caracteres `Hello World!`  
@@ -135,7 +135,7 @@ O procedimento a seguir cria uma versão de C# do programa tradicional "Hello Wo
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
  [Por dentro de um programa em C#](../../../csharp/programming-guide/inside-a-program/index.md)  
  [Cadeias de Caracteres](../../../csharp/programming-guide/strings/index.md)  
- [\<Aplicativos de exemplo do paveover>C#](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
+ [\<Aplicativos de exemplo do paveover>C#](http://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
  [Referência de C#](../../../csharp/language-reference/index.md)  
  [Main() e argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/index.md)  
  [Introdução ao Visual C# e ao Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

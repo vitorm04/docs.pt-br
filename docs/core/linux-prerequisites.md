@@ -4,17 +4,17 @@ description: "Versões do Linux e dependências do .NET Core com suporte para de
 keywords: .NET, .NET Core, Linux, debian, ubuntu, RHEL, centOS,
 author: jralexander
 ms.author: johalex
-ms.date: 09/07/2017
+ms.date: 12/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 ms.workload: dotnetcore
-ms.openlocfilehash: ec08d9fa3ad672400b61c269da0c6a70ed9ef2f5
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: d3c5dde443f848831f7c0585633339c35213357b
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Pré-requisitos para o .NET Core no Linux
 
@@ -74,7 +74,7 @@ As distribuições do Ubuntu requerem que as seguintes bibliotecas estejam insta
 * libcurl3
 * libssl1.0.0
 * libuuid1
-* libkrb5
+* libkrb5-3
 * zlib1g
 * libicu52 (para 14.X)
 * libicu55 (para 16.X)

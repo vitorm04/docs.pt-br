@@ -11,11 +11,11 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
 ms.workload: dotnetcore
-ms.openlocfilehash: f5815e1ad2a36a8ef3279f6ff83465dba9ec5d50
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cf65dc80f135badcb1580726a12a9ae9d94ae3d7
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -58,43 +58,43 @@ O modelo para o qual criar uma instância quando o comando é invocado. Cada mod
 
 O comando contém uma lista padrão de modelos. Use `dotnet new -l` para obter uma lista dos modelos disponíveis. A tabela a seguir mostra os modelos que vêm pré-instalados com o SDK do .NET Core 2.0. O idioma padrão do modelo é mostrado entre parênteses.
 
-|Descrição do modelo                          | Nome do modelo  | Linguagens     |
-|----------------------------------------------|----------------|---------------|
-| Aplicativo de console                          | console        | [C#], F#, VB  |
-| Biblioteca de classes                                | classlib       | [C#], F#, VB  |
-| Projeto de teste de unidade                            | mstest         | [C#], F#, VB  |
-| Projeto de teste de xUnit                           | xunit          | [C#], F#, VB  |
-| ASP.NET Core vazio                           | web            | [C#], F#      |
-| Aplicativo Web ASP.NET Core (Modelo-Exibição-Controlador) | mvc            | [C#], F#      |
-| Aplicativo Web ASP.NET Core                         | razor          | [C#]          |
-| ASP.NET Core com Angular                    | angular        | [C#]          |
-| ASP.NET Core com React.js                   | react          | [C#]          |
-| ASP.NET Core com React.js e Redux         | reactredux     | [C#]          |
-| API Web do ASP.NET Core                         | webapi         | [C#], F#      |
-| Arquivo global.json                             | globaljson     |               |
-| Configuração do NuGet                                 | nugetconfig    |               |
-| Configuração da Web                                   | webconfig      |               |
-| Arquivo de solução                                | sln            |               |
-| Página do Razor                                   | página           |               |
-| MVC/ViewImports                              | viewimports    |               |
-| MVC ViewStart                                | viewstart      |               |
+|Descrição do modelo                          | Nome do modelo | Linguagens     |
+|----------------------------------------------|---------------|---------------|
+| Aplicativo de console                          | `console`     | [C#], F#, VB  |
+| Biblioteca de classes                                | `classlib`    | [C#], F#, VB  |
+| Projeto de teste de unidade                            | `mstest`      | [C#], F#, VB  |
+| Projeto de teste de xUnit                           | `xunit`       | [C#], F#, VB  |
+| ASP.NET Core vazio                           | `web`         | [C#], F#      |
+| Aplicativo Web ASP.NET Core (Modelo-Exibição-Controlador) | `mvc`         | [C#], F#      |
+| Aplicativo Web ASP.NET Core                         | `razor`       | [C#]          |
+| ASP.NET Core com Angular                    | `angular`     | [C#]          |
+| ASP.NET Core com React.js                   | `react`       | [C#]          |
+| ASP.NET Core com React.js e Redux         | `reactredux`  | [C#]          |
+| API Web do ASP.NET Core                         | `webapi`      | [C#], F#      |
+| Arquivo global.json                             | `globaljson`  |               |
+| Configuração do NuGet                                 | `nugetconfig` |               |
+| Configuração da Web                                   | `webconfig`   |               |
+| Arquivo de solução                                | `sln`         |               |
+| Página do Razor                                   | `page`        |               |
+| MVC/ViewImports                              | `viewimports` |               |
+| MVC ViewStart                                | `viewstart`   |               |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 O comando contém uma lista padrão de modelos. Use `dotnet new -all` para obter uma lista dos modelos disponíveis. A tabela a seguir mostra os modelos que vêm pré-instalados com o SDK do .NET Core 1.x. O idioma padrão do modelo é mostrado entre parênteses.
 
-|Descrição do modelo  | Nome do modelo  | Linguagens |
-|----------------------|----------------|-----------|
-| Aplicativo de console  | console        | [C#], F#  |
-| Biblioteca de classes        | classlib       | [C#], F#  |
-| Projeto de teste de unidade    | mstest         | [C#], F#  |
-| Projeto de teste de xUnit   | xunit          | [C#], F#  |
-| ASP.NET Core vazio   | web            | [C#]      |
-| Aplicativo Web ASP.NET Core | mvc            | [C#], F#  |
-| API Web do ASP.NET Core | webapi         | [C#]      |
-| Configuração do NuGet         | nugetconfig    |           |
-| Configuração da Web           | webconfig      |           |
-| Arquivo de solução        | sln            |           |
+|Descrição do modelo  | Nome do modelo | Linguagens |
+|----------------------|---------------|-----------|
+| Aplicativo de console  | `console`     | [C#], F#  |
+| Biblioteca de classes        | `classlib`    | [C#], F#  |
+| Projeto de teste de unidade    | `mstest`      | [C#], F#  |
+| Projeto de teste de xUnit   | `xunit`       | [C#], F#  |
+| ASP.NET Core vazio   | `web`         | [C#]      |
+| Aplicativo Web ASP.NET Core | `mvc`         | [C#], F#  |
+| API Web do ASP.NET Core | `webapi`      | [C#]      |
+| Configuração do NuGet         | `nugetconfig` |           |
+| Configuração da Web           | `webconfig`   |           |
+| Arquivo de solução        | `sln`         |           |
 
 ---
 

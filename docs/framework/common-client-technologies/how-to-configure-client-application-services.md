@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d28f55ddd550e95d9859258d89b4910cf320e3cd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bac21a0c9535326becfe94610db33869da89c471
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>Como configurar serviços de aplicativo cliente
 Este tópico descreve como usar o [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **Designer de Projeto** para habilitar e configurar serviços de aplicativos cliente. Você pode usar serviços do aplicativo cliente para validar os usuários e recuperar funções de usuário e configurações de um serviço do aplicativo [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existente. Após a configuração, você pode acessar os serviços habilitados no código do aplicativo, conforme descrito em [Visão geral dos serviços de aplicativo cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Para obter mais informações sobre os serviços de aplicativos [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consulte [Visão geral sobre Serviços de Aplicativos ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
@@ -75,7 +75,7 @@ Este tópico descreve como usar o [!INCLUDE[vsprvs](../../../includes/vsprvs-md.
   
 2.  Marque ou desmarque **Salvar hash de senha localmente para habilitar o logon offline**. Quando você seleciona essa opção, um formato criptografado da senha do usuário será armazenado em cache localmente. Isso é útil se você implementar o modo offline para o seu aplicativo. Com essa opção selecionada, você pode validar usuários mesmo quando a propriedade <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> tiver sido definida como `true`.  
   
-3.  Marque ou desmarque **Requer que os usuários façam logon novamente sempre que o cookie de servidor expira**. O cookie de autenticação é configurado no serviço remoto e indica quanto tempo o logon do usuário permanecerá ativo. Para obter mais informações sobre como configurar o cookie, consulte o atributo `timeout` no [Elemento forms para autenticação (Esquema de Definições do ASP.NET)](http://msdn.microsoft.com/en-us/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3).  
+3.  Marque ou desmarque **Requer que os usuários façam logon novamente sempre que o cookie de servidor expira**. O cookie de autenticação é configurado no serviço remoto e indica quanto tempo o logon do usuário permanecerá ativo. Para obter mais informações sobre como configurar o cookie, consulte o atributo `timeout` no [Elemento forms para autenticação (Esquema de Definições do ASP.NET)](http://msdn.microsoft.com/library/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3).  
   
      Se você selecionar essa opção, tentar acessar as funções remotas ou os serviços de configurações da Web, após o cookie de autenticação ter expirado, irá gerar uma <xref:System.Net.WebException>. Você pode tratar essa exceção e exibir uma caixa de diálogo de logon para revalidar os usuários. Para obter um exemplo desse comportamento, consulte [Instruções passo a passo: usando serviços de aplicativo cliente](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md). Essa opção é útil para aplicativos implantados em locais públicos, para garantir que os usuários que deixam o aplicativo em execução após o uso não permanecerão autenticados indefinidamente.  
   

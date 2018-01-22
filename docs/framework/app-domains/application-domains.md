@@ -24,11 +24,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 668edf8cacc4d675592c776b0a24923f447d8810
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe2d8ea8be2781e747398e18cc99cc6ce6cf6dc5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="application-domains"></a>Domínios do aplicativo
 Sistemas operacionais e ambientes em tempo de execução normalmente fornecem alguma forma de isolamento entre aplicativos. Por exemplo, o Windows usa processos para isolar aplicativos. Esse isolamento é necessário para garantir que o código em execução em um aplicativo não possa afetar outros aplicativos não relacionados.  
@@ -64,7 +64,7 @@ Sistemas operacionais e ambientes em tempo de execução normalmente fornecem al
     > [!NOTE]
     >  Você não pode descarregar assemblies ou tipos individuais. Apenas um domínio completo pode ser descarregado.  
   
--   O código em execução em um aplicativo não pode diretamente acessar o código ou os recursos de outro aplicativo. O Common Language Runtime impõe esse isolamento, impedindo chamadas diretas entre objetos em domínios de aplicativo diferentes. Objetos que passam entre domínios são copiados ou acessados pelo proxy. Se o objeto for copiado, a chamada para o objeto será local. Ou seja, tanto o chamador quanto o objeto referenciado estão no mesmo domínio de aplicativo. Se o objeto for acessado por meio de um proxy, a chamada para o objeto será remota. Nesse caso, o chamador e o objeto referenciado estão em domínios diferentes. Chamadas entre domínios usam a mesma infraestrutura de chamada remota entre dois processos ou entre dois computadores. Assim, os metadados para o objeto referenciado devem estar disponíveis para ambos os domínios de aplicativo para permitir que a chamada de método seja compilada corretamente por JIT. Se o domínio de chamada não tiver acesso aos metadados do objeto sendo chamado, a compilação poderá falhar com uma exceção de tipo **System.IO.FileNotFound**. Confira [Remote Objects](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58) (Objetos remotos) para obter mais detalhes. O mecanismo para determinar como objetos podem ser acessados em domínios é determinado pelo objeto. Para obter mais informações, consulte <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
+-   O código em execução em um aplicativo não pode diretamente acessar o código ou os recursos de outro aplicativo. O Common Language Runtime impõe esse isolamento, impedindo chamadas diretas entre objetos em domínios de aplicativo diferentes. Objetos que passam entre domínios são copiados ou acessados pelo proxy. Se o objeto for copiado, a chamada para o objeto será local. Ou seja, tanto o chamador quanto o objeto referenciado estão no mesmo domínio de aplicativo. Se o objeto for acessado por meio de um proxy, a chamada para o objeto será remota. Nesse caso, o chamador e o objeto referenciado estão em domínios diferentes. Chamadas entre domínios usam a mesma infraestrutura de chamada remota entre dois processos ou entre dois computadores. Assim, os metadados para o objeto referenciado devem estar disponíveis para ambos os domínios de aplicativo para permitir que a chamada de método seja compilada corretamente por JIT. Se o domínio de chamada não tiver acesso aos metadados do objeto sendo chamado, a compilação poderá falhar com uma exceção de tipo **System.IO.FileNotFound**. Confira [Remote Objects](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58) (Objetos remotos) para obter mais detalhes. O mecanismo para determinar como objetos podem ser acessados em domínios é determinado pelo objeto. Para obter mais informações, consulte <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
   
 -   O escopo do comportamento do código é dado pelo aplicativo no qual ele é executado. Em outras palavras, o domínio do aplicativo fornece definições de configuração, como as políticas de versão do aplicativo, o local de qualquer assembly remoto acessado e informações sobre onde localizar assemblies carregados no domínio.  
   

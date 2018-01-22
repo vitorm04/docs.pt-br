@@ -32,11 +32,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0bb3ab57d78e1a7b6d53261af50d4698ab1a4ff2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2cd2b8e8ecb0e5d451ebf3c6823144e4a90e0d79
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-the-codedom"></a>Usando o CodeDOM
 O CodeDOM fornece tipos que representam muitos dos tipos mais comuns de elementos de código-fonte. Você pode criar um programa que cria um modelo de código-fonte usando elementos do CodeDOM para montar um grafo de objeto. Este grafo de objeto pode ser renderizado como código-fonte usando um gerador de código CodeDOM para uma linguagem de programação com suporte. O CodeDOM também pode ser usado para compilar o código-fonte em um assembly binário.  
@@ -136,4 +136,4 @@ O CodeDOM fornece tipos que representam muitos dos tipos mais comuns de elemento
   
  Para obter a documentação para cada um dos tipos do CodeDOM, consulte a documentação de referência para o namespace <xref:System.CodeDom>.  
   
- Para uma verificação rápida para localizar o elemento de CodeDOM que representa um tipo específico de elemento de código, consulte a [Referência rápida do CodeDOM](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524).
+ Para uma verificação rápida para localizar o elemento de CodeDOM que representa um tipo específico de elemento de código, consulte a [Referência rápida do CodeDOM](http://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524).

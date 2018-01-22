@@ -15,11 +15,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7aaac046a6f5022e4b903faacd609748092d2809
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5d7950ae39ada3e1e0e070967f8d578fc3371126
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="net-framework-development-guide"></a>Guia de Desenvolvimento do .NET Framework
 Esta seção explica como criar, configurar, depurar, proteger e implantar aplicativos .NET Framework. Esta seção também fornece informações sobre áreas de tecnologia como programação dinâmica, interoperabilidade, extensibilidade, gerenciamento de memória e threading.  
@@ -73,7 +73,7 @@ Esta seção explica como criar, configurar, depurar, proteger e implantar aplic
  [Desempenho](../../docs/framework/performance/index.md)  
  Fornece informações sobre armazenamento em cache, inicialização ociosa, confiabilidade e eventos ETW.  
   
- <!--zz [Advanced Reading for the .NET Framework](http://msdn.microsoft.com/en-us/faae8083-fecb-4514-b133-b0a5a32a7c3c)  
+ <!--zz [Advanced Reading for the .NET Framework](http://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)  
  Provides information about advanced development tasks and techniques in the .NET Framework, including extensibility, interoperability, and reflection. Also includes the reference topics for unmanaged APIs that can be used by managed apps, such as runtime hosts, compilers, disassemblers, debuggers, and profilers.  --> 
   
 ## <a name="reference"></a>Referência  
@@ -90,5 +90,5 @@ Esta seção explica como criar, configurar, depurar, proteger e implantar aplic
  [Ferramentas](../../docs/framework/tools/index.md)  
  Descreve as ferramentas que ajudam a desenvolver, configurar e implantar aplicativos usando tecnologias do .NET Framework.  
   
- [Exemplos do .NET Framework](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)  
+ [Exemplos do .NET Framework](http://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
  Fornece links para a Galeria de Exemplos de Código do MSDN com exemplos de aplicativos que demonstram tecnologias .NET Framework.

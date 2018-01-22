@@ -18,20 +18,20 @@ ms.assetid: 8d53f6ba-5c3b-4183-976e-9c0f26fd3680
 caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1d03556f4c8d0f4910f8b07f0dce4d4c7dced744
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fd841e22e8baf59ba702bc3b1ba4d056dbecb530
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="help--c-compiler-options"></a>/help, /? (Opções do Compilador C#)
+# <a name="-help---c-compiler-options"></a>/help, /? (Opções do Compilador C#)
 Essa opção envia uma lista de opções do compilador e uma breve descrição de cada opção para stdout.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```console  
-/help  
-/?  
+-help  
+-?  
 ```  
   
 ## <a name="remarks"></a>Comentários  

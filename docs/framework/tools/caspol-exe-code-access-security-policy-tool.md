@@ -27,11 +27,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0054e77138218e83693c13727866e8e6841170f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6ab363e833ecde86a17d9adea3fcd26351725868
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Ferramenta de Política de Segurança de Acesso de Código)
 A ferramenta de política (Caspol.exe) CAS (Code Access Security) permite que usuários e administradores modifiquem a política de segurança para o nível de política do computador, o nível de política do usuário e o nível de política da empresa.  
@@ -114,7 +114,7 @@ caspol [options]
 ## <a name="remarks"></a>Comentários  
  A política de segurança é expressada usando-se três níveis de política: política de computador, política de usuário e política de empresa. O conjunto de permissões recebido por um assembly é determinado pela interseção dos conjuntos de permissões permitidos por esses três níveis de política. Cada nível de política é representado por uma estrutura hierárquica de grupos de códigos. Cada grupo de códigos tem uma condição de associação que determina qual código é um membro desse grupo. Um conjunto de permissões nomeado também está associado a cada grupo de códigos. Esse conjunto de permissões especifica as permissões permitidas pelo tempo de execução que a condição de associação deve ter. Uma hierarquia do grupo de códigos, além de seus conjuntos de permissões nomeados associados, define e mantém cada nível de política de segurança. É possível usar as opções **–user**, **-customuser**, **–machine** e **-enterprise** para definir o nível de política de segurança.  
   
- Para obter mais informações sobre a política de segurança e como o tempo de execução determina quais permissões devem ser concedidas ao código, consulte [Gerenciamento de Políticas de Segurança](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
+ Para obter mais informações sobre a política de segurança e como o tempo de execução determina quais permissões devem ser concedidas ao código, consulte [Gerenciamento de Políticas de Segurança](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
   
 ## <a name="referencing-code-groups-and-permission-sets"></a>Fazendo Referência a Grupos de Códigos e Conjuntos de Permissões  
  Para facilitar referências a grupos de códigos em uma hierarquia, a opção **-list** exibe uma lista recuada de grupos de códigos com seus rótulos numéricos (1, 1.1, 1.1.1 e assim por diante). As outras operações de linha de comando com grupos de códigos como destino também usam os rótulos numéricos para fazer referência a grupos de códigos específicos.  

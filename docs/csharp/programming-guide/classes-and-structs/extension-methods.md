@@ -12,11 +12,11 @@ ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
 caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 34a80e4bf129c6104d50a8a0877271136c0c4198
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 4c94e6cd2894959d64fe463c85b4460893f2bf96
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="extension-methods-c-programming-guide"></a>Métodos de extensão (Guia de Programação em C#)
 Os métodos de extensão permitem que você "adicione" tipos existentes sem criar um novo tipo derivado, recompilar ou, caso contrário, modificar o tipo original. Os métodos de extensão são um tipo especial de método estático, mas são chamados como se fossem métodos de instância no tipo estendido. No caso do código cliente gravado em C#, F# e Visual Basic, não há nenhuma diferença aparente entre chamar um método de extensão e os métodos realmente definidos em um tipo.  
@@ -91,7 +91,7 @@ using System.Linq;
  [Exemplos de programação paralela (incluem vários métodos de extensão de exemplo)](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
  [Expressões Lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
  [Visão Geral de Operadores de Consulta Padrão](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- [Regras de conversão para parâmetros de instância e seu impacto](http://go.microsoft.com/fwlink/?LinkId=112385)  
- [Interoperabilidade de métodos de extensão entre linguagens](http://go.microsoft.com/fwlink/?LinkId=112386)  
- [Métodos de extensão e representantes via currying](http://go.microsoft.com/fwlink/?LinkId=112387)  
- [Associação do método de extensão e relatório de erros](http://go.microsoft.com/fwlink/?LinkId=112388)
+ [Regras de conversão para parâmetros de instância e seu impacto](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/conversion-rules-for-instance-parameters-and-their-impact)  
+ [Interoperabilidade de métodos de extensão entre linguagens](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/extension-methods-interoperability-between-languages)  
+ [Métodos de extensão e representantes via currying](https://blogs.msdn.microsoft.com/sreekarc/2007/05/01/extension-methods-and-curried-delegates)  
+ [Associação do método de extensão e relatório de erros](https://blogs.msdn.microsoft.com/sreekarc/2007/04/26/extension-method-binding-and-error-reporting)

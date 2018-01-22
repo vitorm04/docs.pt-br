@@ -14,11 +14,11 @@ ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
 caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b24a367eaf78ef520cc2dd54db6ad58b215179ad
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 7e4bc1814ed5c86660b4333542a3dc4eb7462e89
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Visão geral sobre interoperabilidade (Guia de Programação em C#)
 O tópico descreve métodos para permitir a interoperabilidade entre código gerenciado e código não gerenciado do C#.  
@@ -67,5 +67,5 @@ O tópico descreve métodos para permitir a interoperabilidade entre código ger
  [Introdução à Interoperabilidade COM](http://go.microsoft.com/fwlink/?LinkId=112406)  
  [Marshaling entre código gerenciado e não gerenciado](http://go.microsoft.com/fwlink/?LinkId=112398)  
  [Interoperação com código não gerenciado](../../../../docs/framework/interop/index.md)  
- [Interoperabilidade COM avançada](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
+ [Interoperabilidade COM avançada](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)

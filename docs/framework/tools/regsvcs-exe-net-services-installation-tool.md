@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: dd7f50d591232feda0259ecefdb5b9e39514ccb2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bfe7c3e34c2ceaf01f89c1e54f930991ee7e0a2b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (Ferramenta de Instalação de Serviços .NET)
 A ferramenta Instalação de Serviços .NET realiza as seguintes ações:  
@@ -76,7 +76,7 @@ A ferramenta Instalação de Serviços .NET realiza as seguintes ações:
 ## <a name="remarks"></a>Comentários  
  O Regsvcs.exe exige um arquivo do assembly de origem especificado por *assemblyFile.dll*. Esse assembly deve ser assinado com um nome forte. Para obter mais informações sobre a assinatura de nome forte, consulte [Assinando um assembly com um nome forte](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md). Os nomes do aplicativo de destino e do arquivo da biblioteca de tipos são opcionais. O argumento *applicationName* pode ser gerado com base no arquivo do assembly de origem e será criado por Regsvcs.exe, se ainda não existir. O argumento *typelibraryfile* pode especificar um nome da biblioteca de tipos. Se você não especificar um nome da biblioteca de tipos, Regsvcs.exe usará o nome do assembly como o padrão.  
   
- Quando Regsvcs.exe registra os métodos de um componente, ele está sujeito a [demandas](http://msdn.microsoft.com/en-us/e5283e28-2366-4519-b27d-ef5c1ddc1f48) e [demandas de link](../../../docs/framework/misc/link-demands.md) nesses métodos. Como a ferramenta é executada em um ambiente totalmente confiável, a maioria das demandas de uma permissão é bem-sucedida. No entanto, Regsvcs.exe não pode registrar componentes com métodos protegidos por uma demanda ou uma exigência de vínculo para <xref:System.Security.Permissions.StrongNameIdentityPermission> ou <xref:System.Security.Permissions.PublisherIdentityPermission>.  
+ Quando Regsvcs.exe registra os métodos de um componente, ele está sujeito a [demandas](http://msdn.microsoft.com/library/e5283e28-2366-4519-b27d-ef5c1ddc1f48) e [demandas de link](../../../docs/framework/misc/link-demands.md) nesses métodos. Como a ferramenta é executada em um ambiente totalmente confiável, a maioria das demandas de uma permissão é bem-sucedida. No entanto, Regsvcs.exe não pode registrar componentes com métodos protegidos por uma demanda ou uma exigência de vínculo para <xref:System.Security.Permissions.StrongNameIdentityPermission> ou <xref:System.Security.Permissions.PublisherIdentityPermission>.  
   
  Você deve ter privilégios administrativos no computador local para usar Regsvcs.exe.  
   
