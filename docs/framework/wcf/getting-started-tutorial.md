@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 182e82eec107c170a793d0d48bcfe5493c04d618
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74a322730c5e9fc205097da310a8db1fd7c50f82
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="getting-started-tutorial"></a>Guia de introdução ao tutorial
 Os tópicos contidos nesta seção visam fornecer uma exposição rápida da experiência em programação do [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Eles devem ser concluídos na ordem da lista que se encontra na parte inferior deste tópico. Trabalhe com este tutorial para adquirir uma compreensão introdutória das etapas necessárias para criar serviços e aplicativos de cliente do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Um serviço expõe um ou mais pontos de extremidade, sendo que cada um deles expõe uma ou mais operações de serviço. O *ponto de extremidade* de um serviço Especifica um endereço onde o serviço pode ser encontrado, uma associação que contém as informações que descrevem como um cliente deve se comunicar com o serviço e um contrato que define a funcionalidade fornecido pelo serviço para seus clientes.  
@@ -36,7 +36,7 @@ Os tópicos contidos nesta seção visam fornecer uma exposição rápida da exp
 > [!NOTE]
 >  Se você estiver executando [!INCLUDE[wv](../../../includes/wv-md.md)] ou versões posteriores do sistema operacional Windows, você deve iniciar [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] indo para o menu Iniciar e clique direito no Visual Studio 2011 e selecionando **executar como administrador**. Para iniciar o Visual Studio 2011 sempre como um administrador, você pode criar um atalho, clique com botão direito no atalho, selecione Propriedades, selecione o **compatibilidade** guia e verifique o **executar este programa como administrador** caixa de seleção. Quando você iniciar o Visual Studio 2011 com esse atalho, ele sempre será executado como administrador.  
   
- Para aplicativos de exemplo que podem ser baixados em seu disco rígido e executar, consulte os tópicos [exemplos do Windows Communication Foundation](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91). Este tópico, em particular, consulte o [Introdução](../../../docs/framework/wcf/samples/getting-started-sample.md).  
+ Para aplicativos de exemplo que podem ser baixados em seu disco rígido e executar, consulte os tópicos [exemplos do Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91). Este tópico, em particular, consulte o [Introdução](../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
  Para obter informações mais detalhadas sobre a criação de serviços e clientes, consulte [básicas de programação WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
   
@@ -65,7 +65,7 @@ Os tópicos contidos nesta seção visam fornecer uma exposição rápida da exp
  <xref:System.ServiceModel.OperationContractAttribute>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Amostras do Windows Communication Foundation](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Amostras do Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
  [Ciclo de vida de programação básica](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
   

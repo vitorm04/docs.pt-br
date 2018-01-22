@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1946f2b4a2cef8946eb05f995150fafada954d09
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 29f1f4f22a48aed1020b8e7ea42fe5ffd5b9f566
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="composing-nested-entity-sql-queries"></a>Composta consultas aninhadas Entity SQL
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] é uma linguagem funcional rico. O bloco de construção de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] é uma expressão. Diferentemente do SQL convencional, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] não está limitado a um conjunto de resultados de tabela: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] oferece suporte a composição de expressões complexas que podem ter expressões aninhadas, parâmetros ou literais. Um valor na expressão pode ser parametrizado ou composto por alguma outra expressão.  
@@ -57,7 +57,7 @@ UNION ALL
 FROM … );  
 ```  
   
- O exemplo a seguir demonstra como corretamente aninhar expressões em [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [como: ordenar a união de duas consultas](http://msdn.microsoft.com/en-us/853c583a-eaba-4400-830d-be974e735313).  
+ O exemplo a seguir demonstra como corretamente aninhar expressões em [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [como: ordenar a união de duas consultas](http://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313).  
   
 ## <a name="nested-queries-in-projection"></a>Consultas aninhadas na projeção  
  Consultas aninhadas na cláusula de projeto podem obter convertido em consultas de produto cartesiano no servidor. Em alguns servidores backend, incluindo o servidor de SLQ, isso pode fazer com que a tabela de TempDB obtenha muito grande, que pode afetar o desempenho do servidor.  

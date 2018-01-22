@@ -9,11 +9,11 @@ ms.assetid: 15ac09a7-47f0-44f3-9e84-5bd10bd07450
 caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f454b77fa0752f0149037046ba79654dcdfab977
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 49e52d7b219d834609658b652f78629c36f79e59
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="the-connectiontimeout-must-be-greater-than-0"></a>ConnectionTimeout deve ser maior que 0
 Quando o upload e download de arquivos com o [My.Computer.Network](xref:Microsoft.VisualBasic.Devices.Network), você deve especificar um `connectionTimeout` maior `0`.  
@@ -23,8 +23,8 @@ Quando o upload e download de arquivos com o [My.Computer.Network](xref:Microsof
 -   Forneça um `connectionTimeout` que é maior do que `0`.  
   
 ## <a name="see-also"></a>Consulte também  
- [UploadFile](xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A)  
- [DownloadFile](xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A)  
+ [My.Computer.Network.UploadFile](xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A)  
+ [My.Computer.Network.DownloadFile](xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A)  
  [Como Carregar um Arquivo](../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
  [Como Baixar um Arquivo](../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
- [Operações de rede no .NET Framework com Visual Basic](http://msdn.microsoft.com/en-us/c5379021-44ef-4d6a-acf5-e951fdcab6b2)
+ [Operações de rede no .NET Framework com Visual Basic](http://msdn.microsoft.com/library/c5379021-44ef-4d6a-acf5-e951fdcab6b2)

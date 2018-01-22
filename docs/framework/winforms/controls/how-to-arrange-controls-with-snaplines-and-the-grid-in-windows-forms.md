@@ -19,23 +19,23 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7e3754df2930503e7e7a123ffdb4d4b787338c20
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 166ccba959bd9facb8e24d580d47577a0c8746a8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Como organizar controles com guias de alinhamento e a grade nos Windows Forms
 Ao usar os recursos de layout do [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], você pode direcionar precisamente onde os controles serão colocados em um formulário. Controles adicionados a um formulário ou movidos em um formulário podem ser alinhados automaticamente para as linhas e colunas da grade Designer de Formulários do Windows ou você pode alinhar controles usando o recurso de guias de ajuste.  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-snap-all-controls-to-the-grid"></a>Para ajustar todos os controles à grade  
   
 -   Selecione o modo de layout **SnapToGrid** na caixa de diálogo **Opções** do Designer de Formulários do Windows.  
   
-     Para obter mais informações, consulte [Geral, Designer de Formulários do Windows, Caixa de diálogo Opções](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834). Todos os controles agora se alinham junto aos pontos na grade.  
+     Para obter mais informações, consulte [Geral, Designer de Formulários do Windows, Caixa de diálogo Opções](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834). Todos os controles agora se alinham junto aos pontos na grade.  
   
      Você pode encaixar controles individuais na grade bloqueando-os no lugar. No entanto, enquanto eles estiverem bloqueados, não poderão ser movidos ou redimensionados. Para obter mais informações sobre bloqueio de controles, consulte [Como bloquear controles nos Windows Forms](../../../../docs/framework/winforms/controls/how-to-lock-controls-to-windows-forms.md).  
   
@@ -46,7 +46,7 @@ Ao usar os recursos de layout do [!INCLUDE[vsprvs](../../../../includes/vsprvs-m
      Para obter mais informações, consulte [Instruções passo a passo: organizando controles nos Windows Forms usando guias de alinhamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md). Agora você pode usar guias de alinhamento para alinhar e organizar controles no formulário.  
   
 ## <a name="see-also"></a>Consulte também  
- [Geral, Designer de formulários do Windows, a caixa de diálogo Opções](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [Geral, Designer de formulários do Windows, a caixa de diálogo Opções](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
  [Instruções passo a passo: organizando controles no Windows Forms usando guias de alinhamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Controles dos Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
  [Como Adicionar Controles ao Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  

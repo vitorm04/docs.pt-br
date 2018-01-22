@@ -14,22 +14,22 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b1de8b8ceaf56931dfd3f09e5cc21ac939c49b4a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a900a1f3fc2e07cffe04833cc3c7d3ccd063e24a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltpeerauthenticationgt"></a>&lt;peerAuthentication&gt;
 Especifica as configurações de autenticação para um certificado de ponto a ponto usado por um nó ponto a ponto.  
   
- \<sistema. ServiceModel >  
+ \<system.ServiceModel>  
 \<comportamentos >  
 \<serviceBehaviors >  
-\<comportamento >  
-\<serviceCredentials >  
-\<par >  
-\<peerAuthentication >  
+\<behavior>  
+\<serviceCredentials>  
+\<peer>  
+\<peerAuthentication>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -61,7 +61,7 @@ Especifica as configurações de autenticação para um certificado de ponto a p
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<par >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|Especifica as credenciais atuais de um nó ponto a ponto.|  
+|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|Especifica as credenciais atuais de um nó ponto a ponto.|  
   
 ## <a name="remarks"></a>Comentários  
  O `<authentication>` elemento corresponde à <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> classe. Este elemento Especifica um validador, que é invocado durante a autenticação de vizinho de vizinho na malha. Quando um novo par tenta estabelecer uma conexão vizinha, ele passa suas próprias credenciais para o par está respondendo. O validador do Respondente é invocado para verificar a credencial da parte remota. Sempre que uma conexão ponto a ponto é estabelecida na malha, os pontos são autenticados mutuamente, validadores significado em ambas as extremidades são invocados.  
@@ -74,6 +74,6 @@ Especifica as configurações de autenticação para um certificado de ponto a p
  <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>  
  [Trabalhando com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Rede ponto a ponto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [Autenticação de mensagens de canal par](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [Autenticação personalizada de canal par](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [Autenticação de mensagens de canal par](http://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [Autenticação personalizada de canal par](http://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
  [Protegendo aplicativos de canal par](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

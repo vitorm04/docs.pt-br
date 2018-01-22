@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 94610842cd801a54bba0266a4f658d8a4bb60dcd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="endpoint-addresses"></a>Endereços do ponto de extremidade
 Cada ponto de extremidade tem um endereço associado a ele, que é usado para localizar e identificar o ponto de extremidade. Esse endereço consiste principalmente de um URI Uniform Resource Identifier (), que especifica o local do ponto de extremidade. O endereço do ponto de extremidade é representado no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] modelo de programação com o <xref:System.ServiceModel.EndpointAddress> classe, que contém um recurso opcional <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriedade que permite a autenticação do ponto de extremidade por outros pontos de extremidade que trocam mensagens com ele e um conjunto de opcional <xref:System.ServiceModel.EndpointAddress.Headers%2A> propriedades que definem outros cabeçalhos SOAP necessários para acessar o serviço. Os cabeçalhos opcionais fornecem adicionais e informações de endereçamento para identificar ou interagir com o ponto de extremidade de serviço mais detalhadas. O endereço de um ponto de extremidade é representado na transmissão como uma referência de ponto de extremidade WS-Addressing (EPR).  
@@ -32,11 +32,11 @@ Cada ponto de extremidade tem um endereço associado a ele, que é usado para lo
   
 -   Esquema: http:  
   
--   Máquina: www.fabrikam.com  
+-   Machine: www.fabrikam.com  
   
 -   (opcional) Porta: 322  
   
--   Caminho: /mathservice.svc/secureEndpoint  
+-   Path: /mathservice.svc/secureEndpoint  
   
 ## <a name="defining-an-address-for-a-service"></a>Definir um endereço para um serviço  
  O endereço de ponto de extremidade para um serviço pode ser especificado imperativa usando código ou declarativamente por meio de configuração. Definir pontos de extremidade no código geralmente não é prático porque as associações e os endereços para um serviço implantado normalmente são diferentes daqueles usados enquanto o serviço está sendo desenvolvido. Geralmente, é mais prático definir pontos de extremidade de serviço usando a configuração em vez do código. Informações sem o código de endereçamento e manter a associação permite que a alteração sem precisar recompilar ou reimplantar o aplicativo.  
@@ -67,9 +67,9 @@ Cada ponto de extremidade tem um endereço associado a ele, que é usado para lo
   
  Por exemplo, um site pode conter os seguintes endereços de base:  
   
--   http://Payroll.myorg.com/Service.svc  
+-   http://payroll.myorg.com/Service.svc  
   
--   http://Shipping.myorg.com/Service.svc  
+-   http://shipping.myorg.com/Service.svc  
   
  Com [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], você especificar um filtro de prefixo no nível do AppDomain no arquivo de configuração. Você pode fazer isso a [ \<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) elemento, que contém uma lista de prefixos. Os endereços base entrados fornecidos pelo IIS, são filtrados com base na lista de prefixo opcional. Por padrão, quando um prefixo não for especificado, todos os endereços são passados. Especificando os resultados de prefixo apenas o endereço base correspondente para esse esquema deverá ser passado.  
   
@@ -130,7 +130,7 @@ Cada ponto de extremidade tem um endereço associado a ele, que é usado para lo
   
 -   No código, crie os cabeçalhos de endereço personalizado usando o <xref:System.ServiceModel.Channels.AddressHeader> classe e, em seguida, usada na construção de um <xref:System.ServiceModel.EndpointAddress>.  
   
--   Na configuração, personalizada [ \<cabeçalhos >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) são especificados como filhos do [ \<ponto de extremidade >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
+-   Na configuração, personalizada [ \<cabeçalhos >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) são especificados como filhos do [ \<ponto de extremidade >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
   
  Configuração geralmente é preferível para o código, que permite a você alterar os cabeçalhos após a implantação.  
   
@@ -141,7 +141,7 @@ Cada ponto de extremidade tem um endereço associado a ele, que é usado para lo
   
 -   No código, especifique um endereço de escutando personalizado adicionando um <xref:System.ServiceModel.Description.ClientViaBehavior> classe à coleção de comportamento do ponto de extremidade.  
   
--   Em configuração, especifique um endereço de escutando personalizado com o `ListenUri` atributo do serviço [ \<ponto de extremidade >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
+-   Em configuração, especifique um endereço de escutando personalizado com o `ListenUri` atributo do serviço [ \<ponto de extremidade >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
   
 ### <a name="custom-soap-address-filter"></a>Filtro de endereço SOAP personalizado  
  O <xref:System.ServiceModel.EndpointAddress.Uri%2A> é usada em conjunto com nenhum <xref:System.ServiceModel.EndpointAddress.Headers%2A> propriedade para definir o filtro de endereço de um ponto de extremidade SOAP (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). Por padrão, esse filtro verifica se uma mensagem de entrada tem um `To` cabeçalho da mensagem que coincide com o ponto de extremidade do URI e que todos os cabeçalhos de ponto de extremidade necessários estão presentes na mensagem.  

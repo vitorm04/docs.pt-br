@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 27e9391b72ccb65e50ce3154cf7a1c97d796ebd7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfeacc0d4fb736c523538896246b0f406f995fa7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>Dados e modelagem no .NET Framework
 Esta seção fornece informações de como acessar dados usando ADO.NET, LINQ (consulta integrada à linguagem), WCF Data Services e XML.  
@@ -31,7 +31,7 @@ Esta seção fornece informações de como acessar dados usando ADO.NET, LINQ (c
  [ADO.NET](../../../docs/framework/data/adonet/index.md)  
  Descreve a arquitetura do ADO.NET e como usar as classes do ADO.NET para gerenciar dados de aplicativo e interagir com fontes de dados, incluindo o Microsoft SQL Server, fontes de dados OLE DB e XML.  
   
- [Portal LINQ](http://msdn.microsoft.com/en-us/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
+ [Portal LINQ](http://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
  Fornece links para a documentação relevante da LINQ (consulta integrada à linguagem).  
   
  [Transaction Processing](../../../docs/framework/data/transactions/index.md) (Processamento de transações)  
@@ -43,7 +43,7 @@ Esta seção fornece informações de como acessar dados usando ADO.NET, LINQ (c
  [Documentos e dados XML](../../../docs/standard/data/xml/index.md)  
  Fornece uma visão geral sobre um conjunto abrangente e integrado de classes que funcionam com documentos e dados XML no .NET Framework.  
   
- [XML Standards Reference](http://msdn.microsoft.com/en-us/79c78508-c9d0-423a-a00f-672e855de401) (Referência de padrões XML)  
+ [XML Standards Reference](http://msdn.microsoft.com/library/79c78508-c9d0-423a-a00f-672e855de401) (Referência de padrões XML)  
  Fornece informações de referência sobre os padrões XML com suporte da Microsoft.  
   
 ## <a name="related-sections"></a>Seções relacionadas  

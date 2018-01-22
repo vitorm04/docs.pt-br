@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b68bce0e3f1139b48446200decca5beb0a1a1a71
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: e6eea471aa421cf5a154e6873c7ea64b71733bfd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="type-system-entity-sql"></a>Sistema de tipo (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]dá suporte a uma variedade de tipos:  
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/17/2018
   
 -   Tipos anônimos que não são definidos no esquema explicitamente: <xref:System.Data.Metadata.Edm.CollectionType>, <xref:System.Data.Metadata.Edm.RowType>, e <xref:System.Data.Metadata.Edm.RefType>.  
   
- Esta seção discute os tipos anônimos que não são definidos no esquema explicitamente mas é suportada por [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Para obter informações sobre tipos primitivos e nominais, consulte [tipos de modelo conceitual (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4).  
+ Esta seção discute os tipos anônimos que não são definidos no esquema explicitamente mas é suportada por [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Para obter informações sobre tipos primitivos e nominais, consulte [tipos de modelo conceitual (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4).  
   
 ## <a name="rows"></a>Linhas  
  A estrutura de uma linha depende da sequência de membros tipados e nomeados em que a linha consiste. Um tipo de linha não tem nenhuma identidade e não pode ser herdada de. As instâncias do mesmo tipo de linha são equivalentes se os membros são equivalentes respectivamente. As linhas não têm nenhum comportamento além de sua equivalência estrutural e não têm equivalentes em Common Language Runtime. Consultas podem resultar em estruturas que contêm linhas ou coleções de linhas. API que associação entre as consultas de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] e o idioma de host define como as linhas são feitas na consulta que gerou o resultado. Para obter informações sobre como construir uma instância de linha, consulte [construindo tipos](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  

@@ -21,11 +21,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: acc6bee115548ca1f3ba676c4d09b83d4f40e52e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1fcd56e1563b1fcd400d3c1d68b2675efaac3200
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="expose-the-content-of-a-table-using-ui-automation"></a>Expor o conteúdo de uma tabela usando automação de interface do usuário
 > [!NOTE]
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/22/2017
  O exemplo de código a seguir demonstra como obter um <xref:System.Windows.Automation.AutomationElement> que representa o conteúdo de uma célula de tabela; propriedades de célula como índices de linha e coluna, linha e coluna intervalos e informações de cabeçalho de linha e coluna também são obtidas. Este exemplo usa um manipulador de eventos de alteração de foco para simular a passagem de teclado de um controle tabular que implementa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Informações para cada item de tabela são expostas em um evento de alteração de foco.  
   
 > [!NOTE]
->  Como as alterações de foco são eventos globais da área de trabalho, os eventos de alteração foco fora da tabela devem ser filtrados. Consulte o [TrackFocus Sample](http://msdn.microsoft.com/en-us/4a91c0af-6bb5-4d38-a743-cf136f268fc9) para uma implementação relacionada.  
+>  Como as alterações de foco são eventos globais da área de trabalho, os eventos de alteração foco fora da tabela devem ser filtrados. Consulte o [TrackFocus Sample](http://msdn.microsoft.com/library/4a91c0af-6bb5-4d38-a743-cf136f268fc9) para uma implementação relacionada.  
   
  [!code-csharp[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#starttarget)]
  [!code-vb[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#starttarget)]  

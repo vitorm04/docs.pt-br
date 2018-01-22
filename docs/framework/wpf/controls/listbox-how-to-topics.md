@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: cd1cc6914a8bd22d1cc8787a45328716a6c4c97f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dd588ad47da3d8b603a4800eb294c45096de2489
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="listbox-how-to-topics"></a>Tópicos explicativos ListBox
 Os tópicos nesta seção descrevem como usar o <xref:System.Windows.Controls.ListBox> controle para exibir listas de itens selecionáveis.  
@@ -30,7 +30,7 @@ Os tópicos nesta seção descrevem como usar o <xref:System.Windows.Controls.Li
 ## <a name="in-this-section"></a>Nesta seção  
  [Associar um ListBox a dados](../../../../docs/framework/wpf/controls/how-to-bind-a-listbox-to-data.md)  
  [Obter um ListBoxItem](../../../../docs/framework/wpf/controls/how-to-get-a-listboxitem.md)  
- [Como: adicionar dados a um ItemsControl](http://msdn.microsoft.com/en-us/271e52ce-0f44-4b1f-a7da-0bc72bd9ed65)  
+ [Como: adicionar dados a um ItemsControl](http://msdn.microsoft.com/library/271e52ce-0f44-4b1f-a7da-0bc72bd9ed65)  
  [Melhorar o desempenho de rolagem de um ListBox](../../../../docs/framework/wpf/controls/how-to-improve-the-scrolling-performance-of-a-listbox.md)  
   
 ## <a name="reference"></a>Referência  

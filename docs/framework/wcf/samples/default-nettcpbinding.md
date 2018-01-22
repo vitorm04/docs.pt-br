@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 472bc9cc1ff18c7e199a1133a1d54994cea21055
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: acaaee2a34fad776847f3f2a89d458b49d817d30
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="default-nettcpbinding"></a>NetTcpBinding padrão
 Este exemplo demonstra o uso de <xref:System.ServiceModel.NetTcpBinding> associação. Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de cálculo. Neste exemplo, o serviço é hospedado automaticamente. O cliente e o serviço são aplicativos de console.  
@@ -36,7 +36,7 @@ Este exemplo demonstra o uso de <xref:System.ServiceModel.NetTcpBinding> associa
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- A associação é especificada nos arquivos de configuração do cliente e do serviço. O tipo de associação é especificado no `binding` atributo do [ \<ponto de extremidade >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento conforme mostrado no exemplo de configuração.  
+ A associação é especificada nos arquivos de configuração do cliente e do serviço. O tipo de associação é especificado no `binding` atributo do [ \<ponto de extremidade >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento conforme mostrado no exemplo de configuração.  
   
 ```xml  
 <endpoint address=""  

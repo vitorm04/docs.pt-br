@@ -18,14 +18,14 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9361de4726b1dc58238db5ca7b5605f2cc75485d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d7cbef9247b82268b8006d640b967ffd03ae6717
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>Expondo componentes do COM para o .NET Framework
-Esta seção resume o processo necessário para expor um componente COM existente ao código gerenciado. Para obter detalhes sobre como escrever servidores COM que são totalmente integrados ao .NET Framework, consulte [Considerações sobre design para interoperação](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689).  
+Esta seção resume o processo necessário para expor um componente COM existente ao código gerenciado. Para obter detalhes sobre como escrever servidores COM que são totalmente integrados ao .NET Framework, consulte [Considerações sobre design para interoperação](http://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689).  
   
  Os componentes COM existentes são recursos valiosos no código gerenciado, como aplicativos de negócios de camada intermediária ou como uma funcionalidade isolada. Um componente ideal tem um assembly de interoperabilidade primário e está em conformidade total com os padrões de programação impostos pelo COM.  
   
@@ -35,7 +35,7 @@ Esta seção resume o processo necessário para expor um componente COM existent
   
      O Common Language Runtime exige metadados para todos os tipos, incluindo tipos COM. Há várias maneiras de obter um assembly que contém tipos COM importados como metadados.  
   
-2.  [Crie tipos COM em um código gerenciado](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66).  
+2.  [Crie tipos COM em um código gerenciado](http://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66).  
   
      É possível inspecionar tipos COM, ativar instâncias e invocar métodos no objeto COM da mesma maneira que você faria com qualquer tipo gerenciado.  
   
@@ -49,7 +49,7 @@ Esta seção resume o processo necessário para expor um componente COM existent
   
 ## <a name="see-also"></a>Consulte também  
  [Interoperação com código não gerenciado](../../../docs/framework/interop/index.md)  
- [Considerações sobre design para interoperação](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)  
+ [Considerações sobre design para interoperação](http://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689)  
  [Amostra de interoperabilidade COM: cliente .NET e servidor COM](../../../docs/framework/interop/com-interop-sample-net-client-and-com-server.md)  
  [Componentes de independência de linguagem e componentes independentes da linguagem](../../../docs/standard/language-independence-and-language-independent-components.md)  
  [Gacutil.exe (Ferramenta do Cache de Assemblies Global)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)

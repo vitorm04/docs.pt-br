@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1ed9669479a3854c843716a1aeb37f7701ea7d7b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 121cbc1c07ea8f6458df81d861aea3f8e1f91086
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>Como adicionar uma tela inicial a um aplicativo WPF
 Este tópico mostra como adicionar uma janela de inicialização ou *tela inicial*, para um aplicativo do Windows Presentation Foundation (WPF).  
@@ -32,7 +32,7 @@ Este tópico mostra como adicionar uma janela de inicialização ou *tela inicia
   
 1.  Crie ou localize uma imagem que deseja usar para a tela inicial. Você pode usar qualquer formato de imagem com suporte do Windows Imaging Component (WIC). Por exemplo, você pode usar o formato TIFF, GIF, JPEG, PNG ou BMP.  
   
-2.  Adicione o arquivo de imagem ao projeto de aplicativo do WPF. Para obter mais informações, consulte [NIB: como adicionar itens existentes a um projeto](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
+2.  Adicione o arquivo de imagem ao projeto de aplicativo do WPF. Para obter mais informações, consulte [NIB: como adicionar itens existentes a um projeto](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
   
 3.  No Gerenciador de Soluções, selecione a imagem.  
   
@@ -61,4 +61,4 @@ Este tópico mostra como adicionar uma janela de inicialização ou *tela inicia
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.SplashScreen>  
- [NIB: como adicionar itens existentes a um projeto](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)
+ [NIB: como adicionar itens existentes a um projeto](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)

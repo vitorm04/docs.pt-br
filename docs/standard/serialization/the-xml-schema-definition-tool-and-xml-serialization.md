@@ -20,11 +20,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 67451a30e5681718e5b9cdd07468ac5bf20322bc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 41a17644d2d89b83822e64d48a6a12d0dccfc2a2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>A ferramenta de definição de esquema XML e a serialização XML
 A ferramenta de Definição de Esquema XML ([Ferramenta de Definição de Esquema XML [Xsd.exe]](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)) é instalada junto com as ferramentas do .NET Framework como parte do Software Development Kit do Windows® (SDK do Windows). A ferramenta é criada principalmente para duas finalidades:  
@@ -43,4 +43,4 @@ A ferramenta de Definição de Esquema XML ([Ferramenta de Definição de Esquem
  [Como serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
  [Como desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
  [Como usar a ferramenta de definição de esquema XML para gerar classes e documentos de esquema XML](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)  
- [Suporte à associação de esquema XML no .NET Framework](http://msdn.microsoft.com/en-us/8f0619dd-f1fc-4895-ae21-6d45d0382cc1)
+ [Suporte à associação de esquema XML no .NET Framework](http://msdn.microsoft.com/library/8f0619dd-f1fc-4895-ae21-6d45d0382cc1)

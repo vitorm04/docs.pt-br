@@ -19,11 +19,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 182882d33772054c7ac4208ca9571fa8018c2a07
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ccd490f6d31ad1d20128497e5115147eddb3df4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Como criar uma política de editor
 Fornecedores de módulos (assemblies) podem indicar que os aplicativos devem usar uma versão mais recente de um assembly, incluindo um arquivo de política do publicador com o assembly atualizado. O arquivo de política de publicador Especifica as configurações de base de código e redirecionamento de assembly e usa o mesmo formato, como um arquivo de configuração do aplicativo. O arquivo de política de publicador é compilado em um assembly e colocado no cache de assembly global.  
@@ -72,7 +72,7 @@ Fornecedores de módulos (assemblies) podem indicar que os aplicativos devem usa
   
     -   O *publisherPolicyAssemblyFile* argumento é o nome do assembly da diretiva publisher resultados deste comando. O nome do arquivo assembly deve seguir o formato:  
   
-         **diretiva.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **. dll**  
+         **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
   
     -   O *keyPairFile* argumento é o nome do arquivo que contém o par de chaves. Você deve assinar o assembly e o assembly de política do publicador com o mesmo par de chaves.  
   
@@ -100,7 +100,7 @@ Fornecedores de módulos (assemblies) podem indicar que os aplicativos devem usa
   
 1.  Digite o seguinte comando no prompt de comando:  
   
-     **gacutil /i***publisherPolicyAssemblyFile*   
+     **gacutil /i**  *publisherPolicyAssemblyFile*  
   
      O comando a seguir adiciona `policy.1.0.myAssembly.dll` ao cache de assembly global.  
   
@@ -115,7 +115,7 @@ Fornecedores de módulos (assemblies) podem indicar que os aplicativos devem usa
  [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Configurando aplicativos](../../../docs/framework/configure-apps/index.md)  
- [Configuração de aplicativos .NET Framework](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [Configuração de aplicativos .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [Esquema de configurações do tempo de execução](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Esquema de arquivos de configuração](../../../docs/framework/configure-apps/file-schema/index.md)  
  [Redirecionando versões de assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

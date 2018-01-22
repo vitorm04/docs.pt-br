@@ -29,11 +29,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9a85da0d1714c263b446c88b7c18e934817aea94
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d1006f59f9841a10066c83a8f0800d3a7c17500a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Criando protótipos em código gerenciado
 Este tópico descreve como acessar funções não gerenciadas e apresenta vários campos de atributo que anotam a definição de método no código gerenciado. Para obter exemplos que demonstram como construir declarações baseadas no .NET a serem usadas com a invocação de plataforma, consulte [Realizando marshaling de dados com a invocação de plataforma](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
@@ -235,7 +235,7 @@ interface IDemandStubsItf
  [Especificando um ponto de entrada](../../../docs/framework/interop/specifying-an-entry-point.md)  
  [Especificando um conjunto de caracteres](../../../docs/framework/interop/specifying-a-character-set.md)  
  [Exemplos de invocação de plataforma](../../../docs/framework/interop/platform-invoke-examples.md)  
- [Considerações de segurança de invocação de plataforma](http://msdn.microsoft.com/en-us/bbcc67f7-50b5-4917-88ed-cb15470409fb)  
+ [Considerações de segurança de invocação de plataforma](http://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb)  
  [Identificando funções em DLLs](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
  [Criando uma classe para conter funções de DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  
  [Chamando uma função de DLL](../../../docs/framework/interop/calling-a-dll-function.md)

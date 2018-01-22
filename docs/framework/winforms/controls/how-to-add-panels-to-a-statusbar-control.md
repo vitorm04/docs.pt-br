@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 96fbfc86183afef047d210fbc13a0944f2b209b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 044fffa06a3900e64e66f5f87f259e34340f4959
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>Como adicionar painéis a um controle StatusBar
 > [!IMPORTANT]
@@ -134,7 +134,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Forms.StatusBar>  
  <xref:System.Windows.Forms.ToolStripStatusLabel>  
- [Caixa de diálogo Editor de coleção](http://msdn.microsoft.com/en-us/53fb3aad-bffa-4da5-ac89-8438e6fc803c)  
+ [Caixa de diálogo Editor de coleção](http://msdn.microsoft.com/library/53fb3aad-bffa-4da5-ac89-8438e6fc803c)  
  [Como definir o tamanho de painéis da barra de status](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)  
  [Passo a passo: atualizando informações da barra de status em tempo de execução](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
  [Como determinar qual painel no controle StatusBar dos Windows Forms foi clicado](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  

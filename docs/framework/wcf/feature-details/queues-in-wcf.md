@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c87e384b3186a1dd4b53ba6c21d92bf4d0e6a8c7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4dfc78d355db4bd8c9d43541545e6fac35086b39
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Filas no Windows Communication Foundation
 Os tópicos desta seção discutem [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] suporte para filas. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oferece suporte para enfileiramento de mensagens, aproveitando o enfileiramento de mensagens do Microsoft (anteriormente conhecido como MSMQ) como um transporte e permite que os seguintes cenários:  
@@ -75,4 +75,4 @@ Os tópicos desta seção discutem [!INCLUDE[indigo1](../../../../includes/indig
  Explica as práticas recomendadas para usar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] comunicação em fila.  
   
 ## <a name="see-also"></a>Consulte também  
- [Enfileiramento de mensagens](http://msdn.microsoft.com/en-us/ff917e87-05d5-478f-9430-0f560675ece1)
+ [Enfileiramento de mensagens](http://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)

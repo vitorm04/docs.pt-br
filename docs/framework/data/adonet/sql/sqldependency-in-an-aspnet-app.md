@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 3481d0f0be5a52b33125e2a92849f402cce82d93
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9e8bbf6d72e07820256f69a06020354ef3ba3977
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>SqlDependency em um aplicativo ASP.NET
 O exemplo nesta seção mostra como usar <xref:System.Data.SqlClient.SqlDependency> indiretamente, aproveitando o ASP.NET <xref:System.Web.Caching.SqlCacheDependency> objeto. O <xref:System.Web.Caching.SqlCacheDependency> objeto usa um <xref:System.Data.SqlClient.SqlDependency> para ouvir as notificações e atualizar corretamente o cache.  
@@ -58,7 +58,7 @@ O exemplo nesta seção mostra como usar <xref:System.Data.SqlClient.SqlDependen
      [!code-csharp[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#1)]
      [!code-vb[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#1)]  
   
-5.  Adicione dois métodos auxiliares, `GetConnectionString` e `GetSQL`. A cadeia de caracteres de conexão definida usa segurança integrada. Você precisará verificar se a conta que você está usando tem as permissões necessárias e se o banco de dados de exemplo, **AdventureWorks**, tem notificações habilitadas. Para obter mais informações, consulte [especiais considerações ao usar notificações de consulta](http://msdn.microsoft.com/en-us/a83c8dc8-4fb9-4ffd-a2a5-c07cf4a203c7).  
+5.  Adicione dois métodos auxiliares, `GetConnectionString` e `GetSQL`. A cadeia de caracteres de conexão definida usa segurança integrada. Você precisará verificar se a conta que você está usando tem as permissões necessárias e se o banco de dados de exemplo, **AdventureWorks**, tem notificações habilitadas. Para obter mais informações, consulte [especiais considerações ao usar notificações de consulta](http://msdn.microsoft.com/library/a83c8dc8-4fb9-4ffd-a2a5-c07cf4a203c7).  
   
      [!code-csharp[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#2)]
      [!code-vb[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#2)]  

@@ -22,11 +22,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 5198de558d24770c8fdd4bfc10ce4a9199eeff47
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb33d3175cf9e43797125b47c811042771e45782
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Automação da Interface do Usuário e Escala da Tela
 > [!NOTE]
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     Esta função torna o processo inteiro [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-com suporte, o que significa que todas as janelas que pertencem ao processo são fora de escala. No [Highlighter Sample](http://msdn.microsoft.com/en-us/19ba4577-753e-4efd-92cc-c02ee67c1b69), por exemplo, as quatro janelas que compõem o retângulo de realce estão localizadas nas coordenadas físicas obtidas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], não nas coordenadas lógicas. Se o exemplo não fosse [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-com suporte, o realce poderia ser desenhado nas coordenadas lógicas na área de trabalho, o que pode resultar em posicionamento incorreto em uma não-96 - [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] ambiente.  
+     Esta função torna o processo inteiro [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-com suporte, o que significa que todas as janelas que pertencem ao processo são fora de escala. No [Highlighter Sample](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69), por exemplo, as quatro janelas que compõem o retângulo de realce estão localizadas nas coordenadas físicas obtidas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], não nas coordenadas lógicas. Se o exemplo não fosse [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-com suporte, o realce poderia ser desenhado nas coordenadas lógicas na área de trabalho, o que pode resultar em posicionamento incorreto em uma não-96 - [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] ambiente.  
   
 2.  Para obter as coordenadas do cursor, chame o [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] função `GetPhysicalCursorPos`. O exemplo a seguir mostra como declarar e usar essa função.  
   
@@ -87,4 +87,4 @@ ms.lasthandoff: 12/22/2017
  Se seu aplicativo executa uma comunicação direta entre processos não- [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-com reconhecimento de aplicativos, talvez seja necessário converter entre coordenadas físicas e lógicas usando o [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] funções `PhysicalToLogicalPoint` e `LogicalToPhysicalPoint`.  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplo de marca-texto](http://msdn.microsoft.com/en-us/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+ [Exemplo de marca-texto](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)

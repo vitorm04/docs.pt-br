@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: e2d95b1c63cf751a694051e5def09e20dd7ab7a9
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 08f662d41f1a147970ae7611f4fe061dd86bac1f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>SqlClient para Entity Framework
 Esta seção descreve o provedor de dados. NET Framework para SQL Server (SqlClient), que permite Entity Framework para trabalhar sobre o Microsoft SQL Server.  
@@ -29,7 +29,7 @@ Esta seção descreve o provedor de dados. NET Framework para SQL Server (SqlCli
  Para usar SqlClient, atribua a cadeia de caracteres “System.Data.SqlClient” ao atributo de `Provider` do elemento de `Schema` .  
   
 ## <a name="providermanifesttoken-schema-attribute"></a>Atributo do esquema de ProviderManifestToken  
- `ProviderManifestToken` é necessário um atributo do elemento de `Schema` em SSDL. Este token é usado para carregar o manifesto do provedor para cenários off-line. Para obter mais informações sobre `ProviderManifestToken` de atributo, consulte [elemento de esquema (SSDL)](http://msdn.microsoft.com/en-us/fec75ae4-7f16-4421-9265-9dac61509222).  
+ `ProviderManifestToken` é necessário um atributo do elemento de `Schema` em SSDL. Este token é usado para carregar o manifesto do provedor para cenários off-line. Para obter mais informações sobre `ProviderManifestToken` de atributo, consulte [elemento de esquema (SSDL)](http://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222).  
   
  SqlClient pode ser usado como um provedor de dados para versões diferentes de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. Essas versões têm recursos diferentes. Por exemplo, [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] não oferece suporte `varchar(max)` e os tipos de `nvarchar(max)` que foram introduzidos com [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)].  
   
@@ -40,7 +40,7 @@ Esta seção descreve o provedor de dados. NET Framework para SQL Server (SqlCli
 |2000|2005|2008|  
   
 > [!NOTE]
->  Começando com [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] 2010, o [ferramentas de modelo de dados de entidade ADO.NET](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527) não oferecem suporte a SQL Server 2000.  
+>  Começando com [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] 2010, o [ferramentas de modelo de dados de entidade ADO.NET](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) não oferecem suporte a SQL Server 2000.  
   
 ## <a name="provider-namespace-name"></a>Nome do namespace do provedor  
  Todos os provedores devem especificar um namespace. Essa propriedade informa a Entity Framework que prefixo é usado pelo provedor para compilações específicas, como tipos e funções. O namespace para manifestos de provedor SqlClient é `SqlServer`. Para obter mais informações sobre namespaces, consulte [Namespaces](../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md).  

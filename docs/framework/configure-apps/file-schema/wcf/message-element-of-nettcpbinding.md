@@ -14,21 +14,21 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ae44c80f99b2753b4914ff0844fd9538f3ac3f34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab40ab1cd889665829e42072803010ad49e717a9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltmessagegt-element-of-ltnettcpbindinggt"></a>elemento de &lt;mensagem&gt; de &lt;netTcpBinding&gt;
 Define o tipo de requisitos de segurança de nível de mensagem para um ponto de extremidade configurado com o [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
   
- \<sistema. ServiceModel >  
-\<associações >  
-\<netTcpBinding >  
+ \<system.ServiceModel>  
+\<bindings>  
+\<netTcpBinding>  
 \<associação >  
-\<segurança >  
-\<mensagem >  
+\<security>  
+\<message>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -86,7 +86,7 @@ Define o tipo de requisitos de segurança de nível de mensagem para um ponto de
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<segurança >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Define os recursos de segurança para o <xref:System.ServiceModel.Configuration.NetTcpBindingElement>.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Define os recursos de segurança para o <xref:System.ServiceModel.Configuration.NetTcpBindingElement>.|  
   
 ## <a name="remarks"></a>Comentários  
  Mensagem usa a segurança em nível de mensagem para a integridade e confidencialidade da mensagem SOAP e para a autenticação mútua de pares de comunicação. Se este modo de segurança é selecionado em uma associação, a pilha de canais é configurada com elementos de associação de segurança de mensagem e as mensagens SOAP são protegidas em conformidade com o WS-Security * padrões.  
@@ -99,5 +99,5 @@ Define o tipo de requisitos de segurança de nível de mensagem para um ponto de
  [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<associação >](../../../../../docs/framework/misc/binding.md)
+ [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2337de6889a92b295e0a4f3a88d2a5039e583508
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fa21433979d955603c67bc2822676f56e855d098
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="globalizing-windows-forms"></a>Globalizando o Windows Forms
 *Globalização* é o processo de criar e desenvolver um produto de software que funciona para várias culturas.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [Passo a passo: Localizando Windows Forms](http://msdn.microsoft.com/library/y99d1cd3\(v=vs.110\))  
   
--   [Passo a passo: Criando um Layout que ajusta proporção para localização](http://msdn.microsoft.com/en-us/library/7k9fa71y\(v=vs.110\))  
+-   [Passo a passo: Criando um Layout que ajusta proporção para localização](http://msdn.microsoft.com/library/7k9fa71y\(v=vs.110\))  
   
 -   [Como: criar caixas de mensagem para formulários do Windows de Bi-direcional](http://msdn.microsoft.com/library/k1689bxh\(v=vs.110\))  
   

@@ -14,11 +14,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 07882617e7625c07bade85c59116581e16f95121
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 56ff06c17eda8483c7d067af9fb39a402d2f6ea5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="getting-started-with-net-native"></a>Guia de Introdução ao .NET Native
 Se você estiver escrevendo um novo aplicativo do Windows para o Windows 10 ou migrando um aplicativo existente da Windows Store, siga o mesmo conjunto de procedimentos. Para criar um aplicativo [!INCLUDE[net_native](../../../includes/net-native-md.md)], siga estas etapas:  
@@ -123,7 +123,7 @@ Se você estiver escrevendo um novo aplicativo do Windows para o Windows 10 ou m
   
 ## <a name="see-also"></a>Consulte também  
  [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [NIB: .NET Native instalação e configuração](http://msdn.microsoft.com/en-us/7c9bc375-8b87-4c33-bede-72d513e362ec)  
+ [NIB: .NET Native instalação e configuração](http://msdn.microsoft.com/library/7c9bc375-8b87-4c33-bede-72d513e362ec)  
  [.NET Native e compilação](../../../docs/framework/net-native/net-native-and-compilation.md)  
  [Reflexão e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
  [APIs que dependem de reflexão](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  

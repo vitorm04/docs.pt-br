@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 214e0de13ba362bf4f101a665e943a424c56363c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ea71737e1e214aa1a035739901bf79f8ef4a9c7a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>Como configurar um cliente do WCF para interoperar com serviços WSE3.0
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]os clientes são compatíveis com o nível de transmissão com Web Services aprimoramentos 3.0 para Microsoft .NET (WSE) de serviços quando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] os clientes são configurados para usar a versão de agosto de 2004 da especificação WS-Addressing.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  Crie uma classe que representa uma associação que pode se comunicar com serviços WSE 3.0 Web.  
   
-     A seguinte classe faz parte do [interoperar com WSE](http://msdn.microsoft.com/en-us/f6816861-96a0-45f9-8736-8e4e82cd3a41) exemplo.  
+     A seguinte classe faz parte do [interoperar com WSE](http://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41) exemplo.  
   
     1.  Crie uma classe que derive da classe <xref:System.ServiceModel.Channels.Binding>.  
   
@@ -75,4 +75,4 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Channels.Binding>  
- [Interoperando com WSE](http://msdn.microsoft.com/en-us/f6816861-96a0-45f9-8736-8e4e82cd3a41)
+ [Interoperando com WSE](http://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)

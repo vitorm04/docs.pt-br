@@ -14,24 +14,24 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 41e65ca61a176359a593a8e03c5b763bc4d28592
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 20d452a6aa9047032d989d62d6c1121d7edc5ee3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltmessagesenderauthenticationgt-element"></a>elemento &lt;messageSenderAuthentication&gt;
 Especifica opções de autenticação para remetentes de mensagens ponto a ponto.  
   
  Para obter mais informações sobre programação ponto a ponto, consulte [rede ponto a ponto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
- \<sistema. ServiceModel >  
+ \<system.ServiceModel>  
 \<comportamentos >  
-\<endpointBehaviors >  
-\<comportamento >  
-\<clientCredentials >  
-\<par >  
-\<messageSenderAuthentication >  
+\<endpointBehaviors>  
+\<behavior>  
+\<clientCredentials>  
+\<peer>  
+\<messageSenderAuthentication>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,7 +56,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 |revocationMode|Um dos modos usados para verificar por listas de certificados revogados (CRL).|  
 |trustedStoreLocation|Um dos locais de armazenamento de sistema de dois: `LocalMachine` ou `CurrentUser`. Esse valor é usado quando um certificado de serviço é negociado ao cliente. A validação é executada em relação a **pessoas confiáveis** armazenar no local de armazenamento especificado.|  
   
-## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType atributo  
+## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType Attribute  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -87,7 +87,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<par >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Especifica uma credencial usada para autenticar o cliente para um serviço de ponto a ponto.|  
+|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Especifica uma credencial usada para autenticar o cliente para um serviço de ponto a ponto.|  
   
 ## <a name="remarks"></a>Comentários  
  Esse elemento deve ser configurado se você escolher autenticação de mensagem. Para canais de saída, cada mensagem é assinada usando o certificado fornecido pelo [ \<certificado >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md). Todas as mensagens, antes da entrega para o aplicativo, são verificados em relação a credencial de mensagem usando o validador especificado pelo `customCertificateValidatorType` atributos desse elemento. O validador pode aceitar ou rejeitar a credencial.  
@@ -120,6 +120,6 @@ trustedStoreLocation="CurrentUser/LocalMachine"
  <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>  
  [Trabalhando com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Rede ponto a ponto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [Autenticação de mensagens de canal par](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [Autenticação personalizada de canal par](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [Autenticação de mensagens de canal par](http://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [Autenticação personalizada de canal par](http://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
  [Protegendo aplicativos de canal par](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

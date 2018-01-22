@@ -22,11 +22,11 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 36c8ae484120fc835bf341d37cda72b22b401117
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cf894239db623b34d23757edd1c39d3652a7e0f7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="securing-method-access"></a>Protegendo o acesso dos métodos
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Limite o escopo de acessibilidade para a classe, assembly ou classes derivadas, se eles podem ser confiáveis. Essa é a maneira mais simples para limitar o acesso do método. Observe que, em geral, as classes derivadas podem ser menos confiáveis do que a classe que derivam, embora em alguns casos, eles compartilham identidade da classe pai. Em particular, não deduzir a relação de confiança da palavra-chave **protegido**, que não é necessariamente usado no contexto de segurança.  
   
--   Limitar o acesso de método para chamadores de uma identidade especificada – essencialmente, qualquer [evidência](http://msdn.microsoft.com/en-us/64ceb7c8-a0b4-46c4-97dc-6c22da0539da) (nome forte, publisher, zona e assim por diante) que você escolher.  
+-   Limitar o acesso de método para chamadores de uma identidade especificada – essencialmente, qualquer [evidência](http://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da) (nome forte, publisher, zona e assim por diante) que você escolher.  
   
 -   Limite o acesso de método para chamadores com as permissões que você selecionar.  
   

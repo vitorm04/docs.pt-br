@@ -22,11 +22,11 @@ author: ghogen
 ms.author: ghogen
 manager: douge
 ms.workload: dotnet
-ms.openlocfilehash: 17d4c5908929f02077b1eb48932a50e83f48d076
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 325e43f4b1734bc6ab8753285e5069f36b0fda51
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="developing-windows-service-applications"></a>Desenvolvendo aplicativos do Serviço Windows
 Usando o Microsoft [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou o Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK, você pode criar serviços facilmente, criando um aplicativo que é instalado como um serviço. Esse tipo de aplicativo é chamado um serviço do Windows. Com recursos de estrutura, você pode criar serviços, instalá-los, iniciar, interromper e controlar seu comportamento.  
@@ -57,5 +57,5 @@ Usando o Microsoft [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou o Micro
  <xref:System.ServiceProcess.ServiceInstaller>  
  Descreve os recursos do <xref:System.ServiceProcess.ServiceInstaller> classe, que é usada junto com o <xref:System.ServiceProcess.ServiceProcessInstaller> classe para instalar e desinstalar o serviço.  
   
- [NIB criar projetos de modelos](http://msdn.microsoft.com/en-us/7c36d86a-6b79-4480-8228-0f925f1204b2)  
+ [NIB criar projetos de modelos](http://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2)  
  Descreve os projetos de tipos usados neste capítulo e como escolher entre eles.

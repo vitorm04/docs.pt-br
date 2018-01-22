@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a18afd8ba06b5bcc70ca5a6febc10be8050891b0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2a2fc73ee5e9f9e0a2f8351f8d38311801ebfb34
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>Criando manipuladores de eventos no Windows Forms
 Um manipulador de eventos é um procedimento no seu código que determina quais ações são executadas quando ocorre um evento, por exemplo, quando o usuário clica em um botão ou uma fila de mensagens recebe uma mensagem. Quando um evento é gerado, o manipulador ou manipuladores de eventos que receberão o evento são executados. Os eventos podem ser atribuídos a vários manipuladores e os métodos que manipulam os eventos particulares podem ser alterados dinamicamente. Você também pode usar o Designer de Formulários do Windows para criar manipuladores de eventos.  
@@ -45,7 +45,7 @@ Um manipulador de eventos é um procedimento no seu código que determina quais 
  [Ordem de eventos nos Windows Forms](../../../docs/framework/winforms/order-of-events-in-windows-forms.md)  
  Descreve a ordem em que os eventos são gerados em controles Windows Forms.  
   
- [Como: criar manipuladores de eventos usando o Designer](http://msdn.microsoft.com/en-us/8461e9b8-14e8-406f-936e-3726732b23d2)  
+ [Como: criar manipuladores de eventos usando o Designer](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)  
  Descreve como usar o Designer de Formulários do Windows para criar manipuladores de eventos.  
   
 ## <a name="related-sections"></a>Seções relacionadas  

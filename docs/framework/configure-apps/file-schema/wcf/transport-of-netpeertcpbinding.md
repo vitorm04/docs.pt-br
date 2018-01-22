@@ -14,20 +14,20 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ed3e933e1c3468a09b1d6b089b4abf52dad85017
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6cc5e0b2aa52c8fa37e6148f66dc24fca273a640
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="lttransportgt-of-ltnetpeertcpbindinggt"></a>&lt;transporte&gt; de &lt;netPeerTcpBinding&gt;
 Especifica as configurações de segurança em nível de transporte ao usar o [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).  
   
- \<sistema. ServiceModel >  
-\<associações >  
-\<netPeerTcpBinding >  
+ \<system.ServiceModel>  
+\<bindings>  
+\<netPeerTcpBinding>  
 \<associação >  
-\<segurança >  
+\<security>  
 \<transporte >  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -55,7 +55,7 @@ Especifica as configurações de segurança em nível de transporte ao usar o [ 
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|certificado|Requer a autenticação do transporte de canal par X509 certificado.|  
+|certificado|A autenticação do transporte de canal par requer um certificado X509.|  
 |Senha|A autenticação do transporte de canal par requer uma senha correta.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -65,7 +65,7 @@ Especifica as configurações de segurança em nível de transporte ao usar o [ 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<segurança >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|Define as configurações de segurança para o [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|Define as configurações de segurança para o [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>  
@@ -75,5 +75,5 @@ Especifica as configurações de segurança em nível de transporte ao usar o [ 
  [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<associação >](../../../../../docs/framework/misc/binding.md)
+ [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

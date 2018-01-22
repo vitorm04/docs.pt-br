@@ -18,11 +18,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 03ebb5a8193d3376d40fa830f13ab9324846ba2c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d25f561444cd672e8842711025f4299c375d6bb4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementação do provedor de automação de interface do usuário no lado do servidor
 > [!NOTE]
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 -   UIAutomationProviders.dll  
   
--   UIAutomationTypes  
+-   UIAutomationTypes.dll  
   
 -   WindowsBase.dll  
   
@@ -187,5 +187,5 @@ ms.lasthandoff: 12/22/2017
  [Disparar eventos de um provedor de automação de interface do usuário](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)  
  [Habilitar navegação de um provedor de fragmento de automação de interface do usuário](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)  
  [Suporte a padrões de controle em um provedor de automação de interface do usuário](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [Exemplo simples de provedor](http://msdn.microsoft.com/en-us/c10a6255-e8dc-494b-a051-15111b47984a)  
- [Exemplo de provedor de fragmento](http://msdn.microsoft.com/en-us/778ef1bc-8610-4bc9-886e-aeff94a8a13e)
+ [Exemplo simples de provedor](http://msdn.microsoft.com/library/c10a6255-e8dc-494b-a051-15111b47984a)  
+ [Exemplo de provedor de fragmento](http://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)

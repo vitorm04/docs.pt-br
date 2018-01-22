@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 57e305fd8b03e8d46c1fdcb7dd551f32062a1009
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7d890e4c2041ae4c70a79adfc0ab4141402fcd3f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="creating-the-data-service"></a>Criando o serviço de dados
 Nesta tarefa, você criará um serviço de dados de exemplo que usa [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para expor um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed com base no banco de dados de exemplo Northwind. A tarefa envolve as seguintes etapas básicas:  
@@ -114,4 +114,4 @@ Nesta tarefa, você criará um serviço de dados de exemplo que usa [!INCLUDE[ss
  [Acessando o serviço de um navegador da Web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [ADO.NET Entity Data Model Tools](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527) (Ferramentas de modelo de dados de entidade do ADO.NET)
+ [ADO.NET Entity Data Model Tools](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) (Ferramentas de modelo de dados de entidade do ADO.NET)

@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9362aa6ea02f5878d2419ee7cbaab349cae27038
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e90b11800685707460171e5e2d250ef757979c44
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Como criar um serviço de dados usando uma fonte de dados do ADO.NET Entity Framework (WCF Data Services)
 O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] expõe dados de entidade como um serviço de dados. Esses dados de entidade são fornecidos pelo [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] quando a fonte de dados é um banco de dados relacional. Este tópico mostra como criar um modelo de dados com base no [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] em um aplicativo da Web [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] baseado em um banco de dados existente e usar esse modelo de dados para criar um novo serviço de dados.  
@@ -55,7 +55,7 @@ O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] expõe dados de en
   
 9. Clique em **concluir** para concluir o assistente.  
   
-     Isso cria um modelo de dados padrão com base no banco de dados específico. O [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] permite personalizar o modelo de dados. Para obter mais informações, consulte [Tarefas](http://msdn.microsoft.com/en-us/7166f1f1-4de8-4bd4-86b5-5e20a2ebaccb).  
+     Isso cria um modelo de dados padrão com base no banco de dados específico. O [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] permite personalizar o modelo de dados. Para obter mais informações, consulte [Tarefas](http://msdn.microsoft.com/library/7166f1f1-4de8-4bd4-86b5-5e20a2ebaccb).  
   
 ### <a name="to-create-the-data-service-by-using-the-new-data-model"></a>Para criar o serviço de dados usando o novo modelo de dados  
   

@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2176682a5e3f396cc9d9fc60baf409fd1e9ba807
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1f34a43a482791d31f6265575b8cbb2c8190779a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-animate-a-rectangle"></a>Como animar um retângulo
 Este exemplo mostra como animar alterações de tamanho e posição de um retângulo.  
@@ -42,5 +42,5 @@ Este exemplo mostra como animar alterações de tamanho e posição de um retân
  [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [Elementos gráficos e multimídia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
  [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
- [Animação e temporização](http://msdn.microsoft.com/en-us/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [Animação e temporização](http://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
  [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

@@ -14,11 +14,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: 254cc241edf2d1c53ce9dd14eee41cd8bf6eaa76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2604b9dacf11b9971b10d23d9a807092ddf07830
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-secure-messages-within-reliable-sessions"></a>Como proteger mensagens em sessões confiáveis
 
@@ -32,7 +32,7 @@ Esse procedimento consiste em três tarefas principais a seguir:
 
 1. Especifique o tipo de credencial de cliente que o cliente deve usar para ser autenticado com o serviço.
 
-É importante na primeira tarefa que o elemento de configuração de ponto de extremidade contêm um `bindingConfiguration` atributo que faz referência a uma configuração de associação chamada (neste exemplo) `MessageSecurity`. O [  **\<associação >** ](../../../../docs/framework/misc/binding.md) elemento de configuração, em seguida, faz referência a esse nome para permitir sessões confiáveis, definindo o `enabled` atributo o [  **\<reliableSession >** ](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) elemento `true`. Você pode exigir que as garantias de entrega ordenada estão disponíveis em uma sessão confiável, definindo o `ordered` atributo `true`.
+É importante na primeira tarefa que o elemento de configuração de ponto de extremidade contêm um `bindingConfiguration` atributo que faz referência a uma configuração de associação chamada (neste exemplo) `MessageSecurity`. O [  **\<associação >** ](../../../../docs/framework/misc/binding.md) elemento de configuração, em seguida, faz referência a esse nome para permitir sessões confiáveis, definindo o `enabled` atributo o [  **\<reliableSession >** ](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) elemento `true`. Você pode exigir que as garantias de entrega ordenada estão disponíveis em uma sessão confiável, definindo o `ordered` atributo `true`.
 
 Para a cópia de origem do exemplo no qual se baseia neste procedimento de configuração, consulte o [sessão confiável de WS](../../../../docs/framework/wcf/samples/ws-reliable-session.md).
 

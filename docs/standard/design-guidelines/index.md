@@ -20,11 +20,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 38c344e4f4ede58fcb39dd638f6aa8e896e63da0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c48b3cbaae4155a894ba77263505b2ca85238427
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="framework-design-guidelines"></a>Diretrizes de design de estrutura
 Esta seção fornece diretrizes para a criação de bibliotecas que estendem e interagem com o .NET Framework. A meta é ajudar os designers de biblioteca a garantir a consistência de API e facilidade de uso, fornecendo um modelo de programação unificado que é independente da linguagem de programação usada para desenvolvimento. É recomendável que você siga estas diretrizes de design ao desenvolver classes e componentes que estendem o .NET Framework. Projeto de biblioteca inconsistente negativamente afeta a produtividade do desenvolvedor e desencoraja adoção.  
@@ -55,11 +55,11 @@ Esta seção fornece diretrizes para a criação de bibliotecas que estendem e i
  [Padrões comuns de Design](../../../docs/standard/design-guidelines/common-design-patterns.md)  
  Fornece diretrizes para escolher e implementar propriedades de dependência e o padrão dispose.  
   
- *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
+ *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
  *Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão Geral](../../../docs/framework/get-started/overview.md)  
- [Roteiro para o .NET Framework](http://msdn.microsoft.com/en-us/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
+ [Roteiro para o .NET Framework](http://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
  [Guia de desenvolvimento](../../../docs/framework/development-guide.md)

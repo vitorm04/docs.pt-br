@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f45d0fb6a2ffb2e20cc23e67de4cac6a2f2c81bc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8bd9b87fdfa54a6f9bf53e4fa897106257b4c625
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-forms-security"></a>Segurança do Windows Forms
 O Windows Forms oferece um modelo de segurança baseado em código (os níveis de segurança são definidos para o código, independentemente do usuário que o executa). Isso vai além de qualquer esquema de segurança que já pode estar em vigor no seu sistema de computador. Eles podem incluir os do navegador (como a segurança baseada em zonas disponível no Internet Explorer) ou do sistema operacional (como a segurança baseada em credenciais do Windows NT).  
@@ -44,10 +44,10 @@ O Windows Forms oferece um modelo de segurança baseado em código (os níveis d
  Descreve como realizar manipulação de janela, como usar a Área de Transferência e como fazer chamadas a código não gerenciado em um ambiente de confiança parcial.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [NIB: política de segurança padrão](http://msdn.microsoft.com/en-us/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
+ [NIB: política de segurança padrão](http://msdn.microsoft.com/library/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
  Lista as permissões padrão concedidas nos conjuntos de permissão de Confiança Total, Intranet Local e Internet.  
   
- [NIB: administração de política de segurança geral](http://msdn.microsoft.com/en-us/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
+ [NIB: administração de política de segurança geral](http://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
  Fornece informações sobre como administrar a política de segurança do .NET Framework e elevar as permissões.  
   
  [Permissões perigosas e administração de política](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)  
@@ -56,7 +56,7 @@ O Windows Forms oferece um modelo de segurança baseado em código (os níveis d
  [Diretrizes de codificação segura](../../../docs/standard/security/secure-coding-guidelines.md)  
  Fornece links para tópicos que explicam as práticas recomendadas para escrever código com segurança no .NET Framework.  
   
- [NIB: solicitando permissões](http://msdn.microsoft.com/en-us/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
+ [NIB: solicitando permissões](http://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
  Discute o uso de atributos que permitem que o tempo de execução saiba quais permissões seu código precisa executar.  
   
  [Principais conceitos de segurança](../../../docs/standard/security/key-security-concepts.md)  
@@ -65,8 +65,8 @@ O Windows Forms oferece um modelo de segurança baseado em código (os níveis d
  [Noções Básicas da Segurança de Acesso do Código](../../../docs/framework/misc/code-access-security-basics.md)  
  Discute as noções básicas de trabalhar com a política de segurança de tempo de execução do .NET Framework.  
   
- [NIB: determinando quando modificar a política de segurança](http://msdn.microsoft.com/en-us/af749b17-e461-409d-84b9-a3d44789db16)  
+ [NIB: determinando quando modificar a política de segurança](http://msdn.microsoft.com/library/af749b17-e461-409d-84b9-a3d44789db16)  
  Explica como determinar quando seus aplicativos precisam divergir da política de segurança padrão.  
   
- [NIB: implantando a política de segurança](http://msdn.microsoft.com/en-us/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
+ [NIB: implantando a política de segurança](http://msdn.microsoft.com/library/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
  Discute a melhor maneira de implantar alterações de política de segurança.

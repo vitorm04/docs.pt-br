@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 18e8be0668fa13c43f31d5314cacf91165ba8519
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b79112878141fd791c2fba183d2d1fec9f1b7044
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>Operações assíncronas (WCF Data Services)
 Os aplicativos Web devem acomodar uma latência maior entre cliente e servidor do que os aplicativos que são executados dentro das redes internas. Para otimizar o desempenho e a experiência do usuário do seu aplicativo, recomendamos usar os métodos assíncronos das classes <xref:System.Data.Services.Client.DataServiceContext> e <xref:System.Data.Services.Client.DataServiceQuery%601> ao acessar servidores do [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] pela Web.  
@@ -45,7 +45,7 @@ Os aplicativos Web devem acomodar uma latência maior entre cliente e servidor d
 |Salvando alterações nos objetos no <xref:System.Data.Services.Client.DataServiceContext>|-   <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A>|  
   
 ## <a name="threading-considerations-for-asynchronous-operations"></a>Considerações de threads para operações assíncronas  
- Em um aplicativo multithread, o representante que é registrado como um retorno de chamada para a operação assíncrona não é necessariamente invocado no mesmo thread que foi usado para chamar o *começar* método, que cria a solicitação inicial. Em um aplicativo em que o retorno de chamada deve ser chamado em um segmento específico, você deve explicitamente empacotar a execução do *final* método que manipula a resposta, o thread desejado. Por exemplo, em aplicativos baseados no Windows Presentation Foundation (WPF) e aplicativos baseados no Silverlight, a resposta deverá ser lido de volta para o thread de interface de usuário usando o método <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> no objeto <xref:System.Windows.Threading.Dispatcher>. Para obter mais informações, consulte [consultando o Data Service (WCF Data Services/Silverlight)](http://msdn.microsoft.com/en-us/3a7cdc07-c37e-4da2-b98b-c3763fd0970b).  
+ Em um aplicativo multithread, o representante que é registrado como um retorno de chamada para a operação assíncrona não é necessariamente invocado no mesmo thread que foi usado para chamar o *começar* método, que cria a solicitação inicial. Em um aplicativo em que o retorno de chamada deve ser chamado em um segmento específico, você deve explicitamente empacotar a execução do *final* método que manipula a resposta, o thread desejado. Por exemplo, em aplicativos baseados no Windows Presentation Foundation (WPF) e aplicativos baseados no Silverlight, a resposta deverá ser lido de volta para o thread de interface de usuário usando o método <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> no objeto <xref:System.Windows.Threading.Dispatcher>. Para obter mais informações, consulte [consultando o Data Service (WCF Data Services/Silverlight)](http://msdn.microsoft.com/library/3a7cdc07-c37e-4da2-b98b-c3763fd0970b).  
   
 ## <a name="see-also"></a>Consulte também  
  [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)

@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9b808d10cd393d84ed29cb5e1cccfcff9c6c098d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c5121238341afac46ad1c999710d51b5c203a1b6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="effects-of-modifying-a-base-form39s-appearance"></a>Efeitos da modificação de um formulário Base &#39; s aparência
 Durante o desenvolvimento de aplicativo, geralmente você precisará alterar a aparência do formulário base do qual outros formulários no projeto (ou em outros projetos) são herdadas.  
@@ -32,7 +32,7 @@ Durante o desenvolvimento de aplicativo, geralmente você precisará alterar a a
  Em tempo de design, altera a aparência do formulário base (seja a configuração das propriedades ou a adição e subtração de controles) são refletidas nos formulários herdados quando o projeto que contém o formulário base é criado. Não é suficiente para que você simplesmente salve as alterações para o formulário base. Para criar um projeto, escolha **criar** do **criar** menu.  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
  As modificações feitas no formulário base no tempo de execução tem afetam formulários herdados que já são instanciados.  
   

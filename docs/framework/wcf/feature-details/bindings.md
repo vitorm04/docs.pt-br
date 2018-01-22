@@ -18,14 +18,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 977bc032d62856673994e07a71b77d3b668ce7af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 494869985f14dc9562b8d98a7d68cd9639cca97b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-communcation-foundation-bindings"></a>Associações do Windows Communcation Foundation
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]separa como o software para um aplicativo é gravado de como ele se comunica com outros softwares. Associações são usadas para especificar o transporte, a codificação e detalhes de protocolo necessárias para clientes e serviços para se comunicar entre si. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]usa associações para gerar a representação eletrônica subjacente do ponto de extremidade, para a maioria dos detalhes da associação deve ser aceito por terceiros que estão se comunicando. A maneira mais fácil de fazer isso é para clientes de um serviço usar a mesma associação que o ponto de extremidade para o serviço usa. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]como fazer isso, consulte [usando associações para clientes e configurar o Windows Communication Foundation Services](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]separa como o software para um aplicativo é gravado de como ele se comunica com outros softwares. Associações são usadas para especificar o transporte, a codificação e detalhes de protocolo necessárias para clientes e serviços para se comunicar entre si. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]usa associações para gerar a representação eletrônica subjacente do ponto de extremidade, para a maioria dos detalhes da associação deve ser aceito por terceiros que estão se comunicando. A maneira mais fácil de fazer isso é para clientes de um serviço usar a mesma associação que o ponto de extremidade para o serviço usa. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]como fazer isso, consulte [usando associações para clientes e configurar o Windows Communication Foundation Services](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb).  
   
  Uma associação é composta de uma coleção de elementos de associação. Cada elemento descreve alguns aspectos de como o ponto de extremidade se comunica com os clientes. Uma associação deve incluir pelo menos um elemento de associação de transporte, pelo menos um elemento de associação codificação de mensagens (que pode fornecer o elemento de associação de transporte por padrão), e qualquer número de outros elementos de associação de protocolo. O processo que cria um tempo de execução sem essa descrição permite que cada elemento de associação contribuir código para esse tempo de execução.  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/22/2017
  [Configurando associações fornecidas pelo sistema](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  Descreve como usar e modificar as associações que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornece para dar suporte a cenários comuns.  
   
- [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  Descreve como definir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] associações para serviços e clientes imperativa no código e declarativamente usando a configuração.  
   
  [Associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md)  

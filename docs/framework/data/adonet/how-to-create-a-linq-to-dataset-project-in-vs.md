@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 3add191250a10d1d6016263ada0ba53fc8082717
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c749cdd56f0c964b84788b05470406234ef3eb0a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Como criar um projeto LINQ to DataSet no Visual Studio
 Os diferentes tipos de projetos do [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] exigem determinados namespaces importados (Visual Basic) ou diretivas `using` (C#) e referências. O requisito mínimo é uma referência ao System.Core.dll e uma diretiva `using` para <xref:System.Linq>. Por padrão, eles serão fornecidos se você criar um novo projeto [!INCLUDE[csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)]. O [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] também exige uma referência para System.Data.dll e System.Data.DataSetExtensions.dll e uma diretiva `Imports` (Visual Basic) ou `using` (C#).  
@@ -62,4 +62,4 @@ Os diferentes tipos de projetos do [!INCLUDE[vbteclinq](../../../../includes/vbt
   
 ## <a name="see-also"></a>Consulte também  
  [Introdução](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)  
- [Introdução ao LINQ](http://msdn.microsoft.com/en-us/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)
+ [Introdução ao LINQ](http://msdn.microsoft.com/library/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)

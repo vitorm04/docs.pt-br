@@ -21,17 +21,17 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 4a502cb309bce3a1a2fb55c9e5477b7a6a395960
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4299775cd23162839ab9846adc7d2c64cc18a404
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltstartupgt-element"></a>&lt;inicialização&gt; elemento
 Especifica informações de inicialização de tempo de execução de linguagem comum.  
   
  \<configuration>  
-\<inicialização >  
+\<startup>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,7 +49,7 @@ Especifica informações de inicialização de tempo de execução de linguagem 
 |---------------|-----------------|  
 |`useLegacyV2RuntimeActivationPolicy`|Atributo opcional.<br /><br /> Especifica se deseja habilitar o [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] política de ativação de tempo de execução ou usar o [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] política de ativação.|  
   
-## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>Atributo useLegacyV2RuntimeActivationPolicy  
+## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy Attribute  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -78,7 +78,7 @@ Especifica informações de inicialização de tempo de execução de linguagem 
  Esse atributo é útil se seu aplicativo usa caminhos de ativação herdadas, como o [função CorBindToRuntimeEx](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), e você deseja que esses caminhos para ativar a versão 4 do CLR em vez de uma versão anterior, ou se seu aplicativo criado com o [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] , mas tem uma dependência em um assembly de modo misto criado com uma versão anterior do .NET Framework. Nesses cenários, defina o atributo como `true`.  
   
 > [!NOTE]
->  Definindo o atributo para `true` impede que o CLR versão 1.1 ou CLR versão 2.0 seja carregado no mesmo processo, efetivamente, desabilitando o recurso de lado a lado em processo (consulte [execução lado a lado para interoperabilidade COM](http://msdn.microsoft.com/en-us/4302318c-3586-49bf-8620-b9a39cdf4a32)).  
+>  Definindo o atributo para `true` impede que o CLR versão 1.1 ou CLR versão 2.0 seja carregado no mesmo processo, efetivamente, desabilitando o recurso de lado a lado em processo (consulte [execução lado a lado para interoperabilidade COM](http://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como especificar a versão de tempo de execução em um arquivo de configuração.  
@@ -102,6 +102,6 @@ Especifica informações de inicialização de tempo de execução de linguagem 
 ## <a name="see-also"></a>Consulte também  
  [Esquema de configurações de inicialização](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver> Specifying Which Runtime Version to Use](http://msdn.microsoft.com/en-us/c376208d-980d-42b4-865b-fbe0d9cc97c2) (PaveOver> Especificando a versão do tempo de execução a ser usada)  
- [Execução lado a lado para interoperabilidade COM](http://msdn.microsoft.com/en-us/4302318c-3586-49bf-8620-b9a39cdf4a32)  
+ [\<PaveOver> Specifying Which Runtime Version to Use](http://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2) (PaveOver> Especificando a versão do tempo de execução a ser usada)  
+ [Execução lado a lado para interoperabilidade COM](http://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)  
  [Execução lado a lado em processo](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

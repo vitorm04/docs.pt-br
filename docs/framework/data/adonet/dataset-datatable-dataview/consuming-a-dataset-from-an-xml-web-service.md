@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2f60a26d94734dacaba7e540c0584c8eb1ada803
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 316bebfec652987351e64368c3b7c0155011fe8e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Consumir um conjunto de dados de um serviço Web XML
 O <xref:System.Data.DataSet> foi projetado com um design desconectado, em parte para facilitar o transporte conveniente de dados pela Internet. O **DataSet** é "serializável" em que ele pode ser especificado como uma entrada ou saída de serviços Web XML sem qualquer codificação adicional necessário para transmitir o conteúdo do **conjunto de dados** de um serviço Web XML para um cliente e vice-versa. O **DataSet** é convertido implicitamente em um fluxo XML usando o formato DiffGram, enviados pela rede e, em seguida, reconstruídos do fluxo XML como um **DataSet** na extremidade de recebimento. Isso fornece um método muito simples e flexível para transmitir e retornando dados relacionais usando serviços Web XML. Para obter mais informações sobre o formato DiffGram, consulte [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
@@ -29,7 +29,7 @@ O <xref:System.Data.DataSet> foi projetado com um design desconectado, em parte 
  O exemplo a seguir mostra como criar um serviço Web XML e um cliente que usam o **DataSet** para transportar dados relacionais (incluindo dados modificados) e resolver todas as atualizações de volta para a fonte de dados original.  
   
 > [!NOTE]
->  É recomendável que você sempre considerar as implicações de segurança ao criar um serviço Web XML. Para obter informações sobre como proteger um serviço Web XML, consulte [Protegendo XML Web Services criado usando ASP.NET](http://msdn.microsoft.com/en-us/354b2ab1-2782-4542-b32a-dc560178b90c).  
+>  É recomendável que você sempre considerar as implicações de segurança ao criar um serviço Web XML. Para obter informações sobre como proteger um serviço Web XML, consulte [Protegendo XML Web Services criado usando ASP.NET](http://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c).  
   
 ### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>Para criar um serviço Web XML que retorna e consome um conjunto de dados  
   
@@ -277,5 +277,5 @@ O <xref:System.Data.DataSet> foi projetado com um design desconectado, em parte 
  [Populating a DataSet from a DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) (Preenchendo um DataSet por meio de um DataAdapter)  
  [Updating Data Sources with DataAdapters](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md) (Atualizando fontes de dados com DataAdapters)  
  [Parâmetros DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
- [Ferramenta do Web Services Description Language (Wsdl.exe)](http://msdn.microsoft.com/en-us/b9210348-8bc2-4367-8c91-d1a04b403e88)  
+ [Ferramenta do Web Services Description Language (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88)  
  [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 358bc0428a53817e85d5a5e278d8da4e1a8b6927
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 447b2d6c0e5eeafeaff89aa1d6430eec72d59a4d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="connection-strings-and-configuration-files"></a>Cadeias de conexão e arquivos de configuração
 Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulnerabilidades de segurança e problemas de manutenção. Cadeias de caracteres de conexão não criptografada compiladas em código-fonte do aplicativo podem ser exibidas usando o [Ildasm.exe (IL Disassembler)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) ferramenta. Além disso, se a cadeia de conexão for alterada, seu aplicativo deverá ser recompilado. Por esses motivos, recomendamos armazenar cadeias de conexão em um arquivo de configuração do aplicativo.  
@@ -156,7 +156,7 @@ Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulner
  O namespace <xref:System.Configuration> fornece classes para trabalhar com parâmetros de configuração programaticamente. A classe <xref:System.Configuration.ConfigurationManager> fornece acesso a arquivos de computador, aplicativo e configuração do usuário. Se você estiver criando um aplicativo ASP.NET, você pode usar o <xref:System.Web.Configuration.WebConfigurationManager> classe, que fornece a mesma funcionalidade, enquanto também permitindo que você acesse as configurações que são exclusivas para aplicativos ASP.NET, como aqueles encontrados no  **\< System. Web >**.  
   
 > [!NOTE]
->  O namespace <xref:System.Security.Cryptography> contém classes que oferecem opções adicionais para criptografar e descriptografar dados. Use essas classes se você precisar de serviços de criptografia que não estão disponíveis usando a configuração protegida. Algumas dessas classes são wrappers da Microsoft CryptoAPI não gerenciada, enquanto outras são implementações puramente gerenciadas. Para obter mais informações, consulte [serviços criptográficos](http://msdn.microsoft.com/en-us/68a1e844-c63c-44af-9247-f6716eb23781).  
+>  O namespace <xref:System.Security.Cryptography> contém classes que oferecem opções adicionais para criptografar e descriptografar dados. Use essas classes se você precisar de serviços de criptografia que não estão disponíveis usando a configuração protegida. Algumas dessas classes são wrappers da Microsoft CryptoAPI não gerenciada, enquanto outras são implementações puramente gerenciadas. Para obter mais informações, consulte [serviços criptográficos](http://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781).  
   
 ### <a name="appconfig-example"></a>Exemplo de App.config  
  Este exemplo demonstra como ativar a criptografia de **connectionStrings** seção um **App. config** arquivo para um aplicativo do Windows. Nesse exemplo, o procedimento utiliza o nome do aplicativo como um argumento, por exemplo, “MyApplication.exe”. O **App. config** arquivo, em seguida, será criptografado e copiado para a pasta que contém o executável com o nome de "MyApplication.exe.config".  
@@ -178,7 +178,7 @@ Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulner
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- Para obter mais informações para proteger aplicativos ASP.NET, consulte [NIB: segurança ASP.NET](http://msdn.microsoft.com/en-us/04b37532-18d9-40b4-8e5f-ee09a70b311d) e [práticas de segurança do ASP.NET 2.0 em um relance](http://go.microsoft.com/fwlink/?LinkId=59997) no Centro de desenvolvedores do ASP.NET.  
+ Para obter mais informações para proteger aplicativos ASP.NET, consulte [NIB: segurança ASP.NET](http://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d) e [práticas de segurança do ASP.NET 2.0 em um relance](http://go.microsoft.com/fwlink/?LinkId=59997) no Centro de desenvolvedores do ASP.NET.  
   
 ## <a name="see-also"></a>Consulte também  
  [Construtores de cadeia de Conexão](../../../../docs/framework/data/adonet/connection-string-builders.md)  

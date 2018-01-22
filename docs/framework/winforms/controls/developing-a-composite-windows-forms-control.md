@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b98ba10e1c865417b9e844c4d5c31334f763e1b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 06ad98fef8c51cb995644c3b29236a9b0f8cfe29
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>Desenvolvendo um controle dos Windows Forms composto
 Você pode desenvolver um controle Windows Forms composto combinando outros controles de formulários do Windows. Controles compostos que derivam de <xref:System.Web.UI.UserControl> são chamados de controles de usuário. A classe base, <xref:System.Windows.Forms.UserControl>, fornece o teclado do roteamento para os controles filho, garantindo que os controles filho podem receber foco. Para obter um exemplo de um controle de usuário, consulte o <xref:System.Windows.Forms.UserControl> exemplo em [como: aplicar atributos em controles dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
@@ -34,7 +34,7 @@ Você pode desenvolver um controle Windows Forms composto combinando outros cont
   
 -   [Passo a passo: serializando coleções de tipos padrão com DesignerSerializationVisibilityAttribute](http://msdn.microsoft.com/library/ms171731\(v=vs.110\))  
   
--   [Passo a passo: Herdando um Windows Forms controle com o Visual C#](http://msdn.microsoft.com/en-us/09476da0-8d4c-4a4c-b969-649519dfb438))  
+-   [Passo a passo: Herdando um Windows Forms controle com o Visual C#](http://msdn.microsoft.com/library/09476da0-8d4c-4a4c-b969-649519dfb438))  
   
 -   [Como fornecer um bitmap da caixa de ferramentas para um controle](http://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
   
@@ -56,7 +56,7 @@ Você pode desenvolver um controle Windows Forms composto combinando outros cont
   
 -   [Passo a passo: criando um controle de composição com o Visual Basic](http://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
   
--   [Passo a passo: Criando um controle composto com o Visual C#](http://msdn.microsoft.com/en-us/f88481a8-c746-4a36-9479-374ce5f2e91f))  
+-   [Passo a passo: Criando um controle composto com o Visual C#](http://msdn.microsoft.com/library/f88481a8-c746-4a36-9479-374ce5f2e91f))  
   
 -   [Passo a passo: herdando um controle dos Windows Forms com Visual Basic](http://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
   

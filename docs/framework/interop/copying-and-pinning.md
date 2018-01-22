@@ -19,11 +19,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5014bcc0696a8650bed1d00d1224c892660c041e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11739d35d3a6d845feb1f6d9544f6ea347a9942d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="copying-and-pinning"></a>Copiando e fixando
 Ao realizar marshaling dos dados, o marshaler de interoperabilidade pode copiar ou fixar os dados com marshaling. A cópia dos dados coloca uma cópia dos dados de um local de memória em outro local de memória. A ilustração a seguir mostra as diferenças entre a cópia de um tipo de valor e a cópia de um tipo passado por referência da memória gerenciada para a não gerenciada.  
@@ -88,6 +88,6 @@ Tipos de referência passados por valor e por referência
   
 ## <a name="see-also"></a>Consulte também  
  [Comportamento de marshaling padrão](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Gerenciamento de memória com o empacotador de interoperabilidade](http://msdn.microsoft.com/en-us/417206ce-ee3e-4619-9529-0c0b686c7bee)  
- [Atributos direcionais](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
+ [Gerenciamento de memória com o empacotador de interoperabilidade](http://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee)  
+ [Atributos direcionais](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [Marshaling de interoperabilidade](../../../docs/framework/interop/interop-marshaling.md)

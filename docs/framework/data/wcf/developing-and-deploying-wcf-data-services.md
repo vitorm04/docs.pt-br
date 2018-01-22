@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 34fd9bc3bf16446505caf12c6cfa4192ffb391c0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8abe23aebefadc68268aa1dada8474336b1f87e7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>Desenvolvendo e implantando WCF Data Services
 Este tópico fornece informações sobre como desenvolver e implantar o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Para obter mais informações sobre [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], consulte [Introdução](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) e [visão geral](../../../../docs/framework/data/wcf/wcf-data-services-overview.md).  
@@ -63,7 +63,7 @@ Este tópico fornece informações sobre como desenvolver e implantar o [!INCLUD
   
     -   Este servidor só pode ser acessado no computador local.  
   
-    -   Este servidor escuta no `localhost` e em uma porta específica, não na porta 80, que é a porta padrão para mensagens HTTP. Para obter mais informações, consulte [Servidores Web no Visual Studio para projetos Web ASP.NET](http://msdn.microsoft.com/en-us/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
+    -   Este servidor escuta no `localhost` e em uma porta específica, não na porta 80, que é a porta padrão para mensagens HTTP. Para obter mais informações, consulte [Servidores Web no Visual Studio para projetos Web ASP.NET](http://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
   
     -   Este servidor executa o serviço de dados no contexto de sua conta de usuário atual. Por exemplo, se você estiver executando como um usuário de nível de administrador, um serviço de dados em execução na [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] Development Server terá privilégios de administrador. Isso pode fazer o serviço de dados ser capaz de acessar recursos que ele não tem os direitos de acesso quando implantado em um servidor IIS.  
   
@@ -89,7 +89,7 @@ Este tópico fornece informações sobre como desenvolver e implantar o [!INCLUD
   
 -   Para depurar um serviço de dados, você pode desejar obter mais informações sobre um erro do serviço de dados do que durante a operação normal. Você pode obter informações de erro adicionais do serviço de dados definindo a propriedade <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> no <xref:System.Data.Services.DataServiceConfiguration> para `true` e definindo a propriedade <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> do atributo <xref:System.ServiceModel.Description.ServiceDebugBehavior> na classe de serviço de dados como `true`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]o post [depuração WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=201868). Você também pode habilitar o rastreamento no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para exibir as exceções geradas na camada de mensagens HTTP. Para obter mais informações, consulte [Configurando rastreamento](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
--   Um serviço de dados é geralmente desenvolvido como um projeto de aplicativo do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], mas você também pode criá-lo como um projeto do site do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] no [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Para obter informações sobre as diferenças entre os dois tipos de projetos, consulte [NIB: projetos de aplicativos Web versus projetos de Site da Web no Visual Studio](http://msdn.microsoft.com/en-us/2861815e-f5a2-4378-a2f8-b8a86dc012f5).  
+-   Um serviço de dados é geralmente desenvolvido como um projeto de aplicativo do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], mas você também pode criá-lo como um projeto do site do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] no [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Para obter informações sobre as diferenças entre os dois tipos de projetos, consulte [NIB: projetos de aplicativos Web versus projetos de Site da Web no Visual Studio](http://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5).  
   
 -   Quando você cria um serviço de dados usando o **Adicionar Novo Item** da caixa de diálogo [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], o serviço de dados é hospedado pelo [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] no IIS. Embora o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] e o IIS sejam o host padrão para um serviço de dados, outras opções de hospedagem têm suporte. Para obter mais informações, consulte [hospeda o serviço de dados](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md).  
   
@@ -102,9 +102,9 @@ Este tópico fornece informações sobre como desenvolver e implantar o [!INCLUD
   
     -   **Tecnologias de implantação para aplicativos Web ASP.NET**  
   
-        -   [Pacote de implantação da Web](http://msdn.microsoft.com/en-us/1f9713c8-9540-494c-b80d-9893b970ad6f)  
+        -   [Pacote de implantação da Web](http://msdn.microsoft.com/library/1f9713c8-9540-494c-b80d-9893b970ad6f)  
   
-        -   [Publicação de um clique](http://msdn.microsoft.com/en-us/59226246-99ad-4aec-975d-7c61e8a8911c)  
+        -   [Publicação de um clique](http://msdn.microsoft.com/library/59226246-99ad-4aec-975d-7c61e8a8911c)  
   
     -   **Tecnologias de implantação para Sites da Web ASP.NET**  
   
@@ -114,7 +114,7 @@ Este tópico fornece informações sobre como desenvolver e implantar o [!INCLUD
   
         -   [XCopy](http://msdn.microsoft.com/library/4312c651-2119-49be-bbeb-ee28bdbfe71e)  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]as opções de implantação para um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativo, consulte [visão geral da implantação da Web do Visual Studio e ASP.NET](http://msdn.microsoft.com/en-us/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]as opções de implantação para um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativo, consulte [visão geral da implantação da Web do Visual Studio e ASP.NET](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
   
     > [!TIP]
     >  Antes de tentar implantar o serviço de dados para o IIS, verifique se você testou a implantação para um servidor Web que esteja executando o IIS. Para obter mais informações, consulte [como: desenvolver um WCF Data Service em execução no IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
@@ -126,7 +126,7 @@ Este tópico fornece informações sobre como desenvolver e implantar o [!INCLUD
 ### <a name="deployment-considerations"></a>Considerações de implantação  
  Você deve considerar o seguinte ao implantar um serviço de dados:  
   
--   Quando você implanta um serviço de dados que usa o provedor do [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] para acessar um banco de dados do SQL Server, você também pode ter que propagar as estruturas de dados, os dados ou ambos com a implantação do serviço de dados. O [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] pode criar automaticamente scripts (arquivos .sql) para fazer isso no banco de dados de destino e esses scripts podem ser incluídos no pacote de implantação da Web de um aplicativo do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Para obter mais informações, consulte [NIB: como: implantar um banco de dados com um projeto de aplicativo Web](http://msdn.microsoft.com/en-us/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Para uma [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] site da Web, você pode fazer isso usando o **Assistente de publicação de banco de dados** em [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Para obter mais informações, consulte [Implantando um banco de dados usando o Assistente de publicação de banco de dados](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).  
+-   Quando você implanta um serviço de dados que usa o provedor do [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] para acessar um banco de dados do SQL Server, você também pode ter que propagar as estruturas de dados, os dados ou ambos com a implantação do serviço de dados. O [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] pode criar automaticamente scripts (arquivos .sql) para fazer isso no banco de dados de destino e esses scripts podem ser incluídos no pacote de implantação da Web de um aplicativo do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Para obter mais informações, consulte [NIB: como: implantar um banco de dados com um projeto de aplicativo Web](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Para uma [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] site da Web, você pode fazer isso usando o **Assistente de publicação de banco de dados** em [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Para obter mais informações, consulte [Implantando um banco de dados usando o Assistente de publicação de banco de dados](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).  
   
 -   Como o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] inclui uma implementação básica do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], você pode usar o Windows Server AppFabric para monitorar um serviço de dados implantado no IIS executando no Windows Server. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]usando o Windows Server AppFabric para monitorar um serviço de dados, consulte a postagem [de rastreamento do WCF Data Services com o Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005).  
   

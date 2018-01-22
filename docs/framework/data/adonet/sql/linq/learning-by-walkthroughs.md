@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 56852fece0ca1f2dbb70b1bb29c09205b97faf56
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c49ecfec032a20090e8eca1c94efe9e1f35cce7d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="learning-by-walkthroughs"></a>Aprendendo com explicações passo a passo
 O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentação fornece várias instruções passo a passo. Este tópico aborda alguns problemas gerais da explicação passo a passo (incluindo solução de problemas) e fornece links para várias explicações passo a passo para iniciantes aprenderem sobre o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -50,7 +50,7 @@ O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta�
   
 -   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]explicações passo a passo geralmente requerem o banco de dados de exemplo Northwind. Para obter mais informações, consulte [baixando bancos de dados de exemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
--   As caixas de diálogo e os comandos de menu que você vê nas explicações passo a passo podem diferir dos descritos na Ajuda, dependendo de suas configurações ativas ou da edição do [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]. Para alterar as configurações, clique em **Importar e exportar configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+-   As caixas de diálogo e os comandos de menu que você vê nas explicações passo a passo podem diferir dos descritos na Ajuda, dependendo de suas configurações ativas ou da edição do [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]. Para alterar as configurações, clique em **Importar e exportar configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 -   Para as explicações passo a passo que abordam cenários de várias camadas, um servidor deve estar localizado em um computador que seja diferente do computador de desenvolvimento, e você deve ter as permissões apropriadas para acessar o servidor.  
   

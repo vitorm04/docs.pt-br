@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b54982439f621ea504c91c264dde002751ec9185
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f5d9b334aae1607f4fb46e0b41155b50eb95a46
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Padrões de design: publicação-assinatura baseada em lista
 Este exemplo ilustra o padrão com base em lista de publicação-assinatura implementado como um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] programa.  
@@ -135,7 +135,7 @@ public class PriceChangeEventArgs : EventArgs
   
 3.  Execute Datasource.exe de \datasource\bin\\, sob a pasta de idioma específico. Atividade de fonte de dados é exibida na janela do console. Depois que a fonte de dados envia informações ao serviço, que deve ser transmitidos para cada cliente.  
   
-4.  Se o cliente, fonte de dados e programas de serviço não são capazes de se comunicar, consulte [dicas de solução de problemas](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Se o cliente, fonte de dados e programas de serviço não são capazes de se comunicar, consulte [dicas de solução de problemas](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-run-the-sample-across-machines"></a>Para executar o exemplo em computadores  
   

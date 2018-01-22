@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7ffc74fdbec204b798ee93a8ee2c91db992a83cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bab723e4e52db9936e635f1348dff86d75de274d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedimento de configuração único para exemplos do Windows Communication Foundation
 A maioria do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemplos são hospedados em serviços de informações da Internet (IIS) e executar a partir de um diretório virtual comum. Este procedimento de configuração única cria uma pasta no disco; Ele também adiciona um diretório virtual IIS chamado **ServiceModelSamples**.  
@@ -36,7 +36,7 @@ A maioria do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemplos s�
   
 3.  Se [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] não estiver instalado, e o sistema operacional não é Windows Server 2008 SP2 ou posterior, instalar [251798 Hotfix](http://go.microsoft.com/fwlink/?LinkId=184693).  
   
-4.  Execute os seguintes comandos. Para obter mais informações sobre por que esses comandos devem ser executados, consulte [IIS serviço hospedado não](http://msdn.microsoft.com/en-us/ee5499fc-1b10-4cda-a9b1-13dba70f05f8).  
+4.  Execute os seguintes comandos. Para obter mais informações sobre por que esses comandos devem ser executados, consulte [IIS serviço hospedado não](http://msdn.microsoft.com/library/ee5499fc-1b10-4cda-a9b1-13dba70f05f8).  
   
     > [!WARNING]
     >  Se o IIS for reinstalado, os comandos a seguir precisa ser executado novamente.  

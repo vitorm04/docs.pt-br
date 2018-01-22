@@ -14,11 +14,11 @@ author: BillWagner
 ms.author: wiwagn
 manager: wpickett
 ms.workload: wiwagn
-ms.openlocfilehash: ac4052773044e44f546894a54dc21728dbd6634a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a33e065d9daa886c27cde31c8f16f9b9eaa45938
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Escrevendo aplicativos .NET Framework grandes e dinâmicos
 Este artigo apresenta dicas para melhorar o desempenho de grandes aplicativos do .NET Framework ou aplicativos que processam um grande volume de dados, como arquivos ou bancos de dados. Essas dicas vêm da nova gravação de compiladores do C# e do Visual Basic em código gerenciado, e este artigo inclui diversos exemplos reais do compilador do C#.  
@@ -47,7 +47,7 @@ Este artigo apresenta dicas para melhorar o desempenho de grandes aplicativos do
  Estabeleça metas de desempenho para experiências ou cenários importantes do cliente no aplicativo e gravar testes para avaliar o desempenho.  Investigue testes com falha aplicando o método científico: use perfis para orientá-lo, crie hipóteses sobre qual seria o problema e teste as hipóteses com um experimento ou uma alteração feita no código.  Estabeleça medidas de desempenho de linha de base com o passar do tempo, usando testes regulares para que seja possível isolar as alterações que causam regressões no desempenho.  Abordando o trabalho de desempenho de maneira rigorosa, você evitará a perda de tempo com atualizações desnecessárias de código.  
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>Fato 3: boas ferramentas fazem toda a diferença  
- As boas ferramentas permitem chegar rapidamente aos maiores problemas de desempenho (CPU, memória ou disco) e ajudam a alocar o código que causa esses afunilamentos.  A Microsoft fornece uma variedade de ferramentas de desempenho, como [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling), [Ferramenta de Análise do Windows Phone](http://msdn.microsoft.com/en-us/e67e3199-ea43-4d14-ab7e-f7f19266253f) e [PerfView](http://www.microsoft.com/download/details.aspx?id=28567).  
+ As boas ferramentas permitem chegar rapidamente aos maiores problemas de desempenho (CPU, memória ou disco) e ajudam a alocar o código que causa esses gargalos.  A Microsoft fornece uma variedade de ferramentas de desempenho, como [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling), [Ferramenta de Análise do Windows Phone](http://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f) e [PerfView](http://www.microsoft.com/download/details.aspx?id=28567).  
   
  PerfView é uma ferramenta gratuita e incrivelmente eficiente que ajuda você a se concentrar em problemas intensos, como E/S de disco, eventos de GC e memória.  Capture eventos [ETW](../../../docs/framework/wcf/samples/etw-tracing.md) (Rastreamento de Eventos para Windows) relacionados ao desempenho e exiba informações por aplicativo, processo, pilha e thread com facilidade.  O PerfView mostra quanto e que tipo de memória o aplicativo aloca, além de quais funções ou pilhas de chamadas contribuem para a quantidade de alocações da memória. Para obter detalhes, consulte os tópicos avançados da ajuda, as demonstrações e os vídeos incluídos com a ferramenta (como os [tutoriais do PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial) no Channel 9).  
   
@@ -140,7 +140,7 @@ public class BoxingExample
  Mantenha o fator do primeiro desempenho em mente (ou seja, não otimize antes) e não comece a gravar novamente todo o código dessa forma.    Esteja atento aos custos da conversão boxing, mas só altere o código depois de criar o perfil do aplicativo e encontrar os pontos de acesso.  
   
 ### <a name="strings"></a>Cadeias de caracteres  
- As manipulações da cadeia de caracteres são as maiores responsáveis pelas alocações e costumam aparecer no PerfView entre as cinco primeiras alocações.  Os programas usam cadeias de caracteres na serialização, em JSON e nas APIs REST.  É possível usar cadeias de caracteres como constantes programáticas na interoperação com sistemas quando não é possível usar tipos de enumeração.  Quando a criação de perfis mostrar que as cadeias de caracteres estão afetando muito o desempenho, procure chamadas para métodos <xref:System.String> como <xref:System.String.Format%2A>, <xref:System.String.Concat%2A>, <xref:System.String.Split%2A>, <xref:System.String.Join%2A>, <xref:System.String.Substring%2A> e assim por diante.  O uso de <xref:System.Text.StringBuilder> para evitar o custo com a criação de uma cadeia de caracteres com base em muitas peças ajuda, mas mesmo a alocação do objeto <xref:System.Text.StringBuilder> pode se tornar um afunilamento que precisa ser gerenciado.  
+ As manipulações da cadeia de caracteres são as maiores responsáveis pelas alocações e costumam aparecer no PerfView entre as cinco primeiras alocações.  Os programas usam cadeias de caracteres na serialização, em JSON e nas APIs REST.  É possível usar cadeias de caracteres como constantes programáticas na interoperação com sistemas quando não é possível usar tipos de enumeração.  Quando a criação de perfis mostrar que as cadeias de caracteres estão afetando muito o desempenho, procure chamadas para métodos <xref:System.String> como <xref:System.String.Format%2A>, <xref:System.String.Concat%2A>, <xref:System.String.Split%2A>, <xref:System.String.Join%2A>, <xref:System.String.Substring%2A> e assim por diante.  O uso de <xref:System.Text.StringBuilder> para evitar o custo com a criação de uma cadeia de caracteres com base em muitas peças ajuda, mas mesmo a alocação do objeto <xref:System.Text.StringBuilder> pode se tornar um gargalo que precisa ser gerenciado.  
   
  **Exemplo 3: operações da cadeia de caracteres**  
   

@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2181682fcdf0468a978dd939dbbcbb4a18cdd38b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: e69073f757c07c5dd262900d4d8f7ad2cc83cdc4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="code-access-security-and-adonet"></a>Segurança de acesso do código e o ADO.NET
 O .NET Framework oferece segurança baseada em função e segurança de acesso de código (CAS), ambas são implementadas por meio de uma infraestrutura comum fornecida pelo CLR (Common Language Runtime). No mundo do código não gerenciado, a maioria dos aplicativos é executada com as permissões do usuário ou da entidade de segurança. Como resultado, é possível que os sistemas de computador sejam danificados e os dados particulares sejam comprometidos quando um software mal-intencionado ou com erro for executado por um usuário com privilégios elevados.  
@@ -34,7 +34,7 @@ O .NET Framework oferece segurança baseada em função e segurança de acesso d
  O CLR permite que o código realize apenas as operações que ele tem permissão para executar. O código pode solicitar permissões, e essas solicitações são respeitadas com base na política de segurança definida por um administrador.  
   
 > [!NOTE]
->  O código executado no CLR não pode conceder permissões a ele mesmo. Por exemplo, o código pode solicitar e receber menos permissões do que uma política de segurança permite, mas nunca receberá mais permissões. Ao conceder as permissões, comece com nenhuma permissão e depois adicione as permissões mais restritas para a tarefa específica que está sendo executada. Começar com todas as permissões e depois negar permissões individuais resulta em aplicativos inseguros que podem conter brechas de segurança não intencionais para a concessão de mais permissões do que as necessárias. Para obter mais informações, consulte [NIB: configuração de política de segurança](http://msdn.microsoft.com/en-us/0f130bcd-1bba-4346-b231-0bcca7dab1a4) e [NIB: gerenciamento de política de segurança](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
+>  O código executado no CLR não pode conceder permissões a ele mesmo. Por exemplo, o código pode solicitar e receber menos permissões do que uma política de segurança permite, mas nunca receberá mais permissões. Ao conceder as permissões, comece com nenhuma permissão e depois adicione as permissões mais restritas para a tarefa específica que está sendo executada. Começar com todas as permissões e depois negar permissões individuais resulta em aplicativos inseguros que podem conter brechas de segurança não intencionais para a concessão de mais permissões do que as necessárias. Para obter mais informações, consulte [NIB: configuração de política de segurança](http://msdn.microsoft.com/library/0f130bcd-1bba-4346-b231-0bcca7dab1a4) e [NIB: gerenciamento de política de segurança](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
   
  Existem três tipos de permissões de acesso de código:  
   
@@ -49,14 +49,14 @@ O .NET Framework oferece segurança baseada em função e segurança de acesso d
 ### <a name="requesting-permissions"></a>Solicitando permissões  
  A finalidade de solicitar permissões é informar ao tempo de execução quais permissões seu aplicativo requer para ser executado, e garantir que ele receberá apenas as permissões de que realmente precisa. Por exemplo, se seu aplicativo precisa gravar dados no disco local, ele requer a <xref:System.Security.Permissions.FileIOPermission>. Se essa permissão não for concedida, o aplicativo falhará quando tentar gravar no disco. Entretanto, se o aplicativo solicitar a `FileIOPermission` e essa permissão não for concedida, ele gerará a exceção no início e não será carregado.  
   
- Em um cenário onde o aplicativo precisa apenas ler dados do disco, você pode solicitar que ele nunca receba permissões de gravação. No caso de um bug ou um ataque mal-intencionado, seu código não pode danificar os dados em que opera. Para obter mais informações, consulte [NIB: solicitando permissões](http://msdn.microsoft.com/en-us/0447c49d-8cba-45e4-862c-ff0b59bebdc2).  
+ Em um cenário onde o aplicativo precisa apenas ler dados do disco, você pode solicitar que ele nunca receba permissões de gravação. No caso de um bug ou um ataque mal-intencionado, seu código não pode danificar os dados em que opera. Para obter mais informações, consulte [NIB: solicitando permissões](http://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2).  
   
 ## <a name="role-based-security-and-cas"></a>Segurança baseada em função e CAS  
  Implementar a segurança baseada em função e a segurança de acesso de código (CAS) melhora a segurança geral de seu aplicativo. A segurança baseada em função pode ser baseada em uma conta do Windows ou uma identidade personalizada, tornando as informações sobre a entidade de segurança disponíveis ao thread atual. Além disso, os aplicativos são geralmente necessários para fornecer acesso a dados ou recursos com base nas credenciais fornecidas pelo usuário. Em geral, esses aplicativos verificam a função de um usuário e fornecem acesso aos recursos com base nas funções.  
   
  A segurança baseada em função permite que um componente identifique os usuários atuais e suas funções associadas em tempo de execução. Essas informações são então mapeadas por meio de uma política de CAS para determinar o conjunto de permissões concedidas em tempo de execução. Para um domínio de aplicativo especificado, o host pode alterar a política de segurança baseada em função padrão e definir uma entidade de segurança padrão que represente um usuário e as funções associadas a esse usuário.  
   
- O CLR usa permissões para implementar seu mecanismo de imposição de restrições em código gerenciado. As permissões de segurança baseada em função fornecem um mecanismo para descobrir se um usuário (ou o agente que atua em nome do usuário) tem uma identidade em particular ou é membro de uma função especificada. Para obter mais informações, consulte [permissões de segurança](http://msdn.microsoft.com/en-us/b03757b4-e926-4196-b738-3733ced2bda0).  
+ O CLR usa permissões para implementar seu mecanismo de imposição de restrições em código gerenciado. As permissões de segurança baseada em função fornecem um mecanismo para descobrir se um usuário (ou o agente que atua em nome do usuário) tem uma identidade em particular ou é membro de uma função especificada. Para obter mais informações, consulte [permissões de segurança](http://msdn.microsoft.com/library/b03757b4-e926-4196-b738-3733ced2bda0).  
   
  Dependendo do tipo de aplicativo que você está criando, você também deve considerar implementar as permissões baseadas em função no banco de dados. Para obter mais informações sobre a segurança baseada em função no SQL Server, consulte [segurança do SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
   
@@ -150,7 +150,7 @@ O .NET Framework oferece segurança baseada em função e segurança de acesso d
  Para habilitar o uso de permissões <xref:System.Data.SqlClient> para uma zona específica, um administrador de sistema deve criar um conjunto de permissões personalizado e configurá-lo como o conjunto de permissões para uma zona específica. Os conjuntos de permissões padrão, como `LocalIntranet`, não podem ser modificados. Por exemplo, para incluir <xref:System.Data.SqlClient> permissões de código que tem um <xref:System.Security.Policy.Zone> de `LocalIntranet`, um administrador de sistema pode copiar o conjunto de permissões `LocalIntranet`, renomeie-o como "CustomLocalIntranet", adicione o <xref:System.Data.SqlClient> permissões, importar a permissão de CustomLocalIntranet definida usando o [Caspol.exe (ferramenta de política de segurança de acesso do código)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)e defina o conjunto de permissões `LocalIntranet_Zone` para CustomLocalIntranet.  
   
 ### <a name="sample-permission-set"></a>Conjunto de permissões de exemplo  
- A seguir está um conjunto de permissões de exemplo para o Provedor de Dados .NET Framework para SQL Server em um cenário parcialmente confiável. Para obter informações sobre como criar conjuntos de permissões personalizadas, consulte [NIB: Configurando permissões define usando Caspol.exe](http://msdn.microsoft.com/en-us/94e2625e-21ad-4038-af36-6d1f9df40a57).  
+ A seguir está um conjunto de permissões de exemplo para o Provedor de Dados .NET Framework para SQL Server em um cenário parcialmente confiável. Para obter informações sobre como criar conjuntos de permissões personalizadas, consulte [NIB: Configurando permissões define usando Caspol.exe](http://msdn.microsoft.com/library/94e2625e-21ad-4038-af36-6d1f9df40a57).  
   
 ```xml  
 <PermissionSet class="System.Security.NamedPermissionSet"  
@@ -171,7 +171,7 @@ AllowBlankPassword="False">
 ```  
   
 ## <a name="verifying-adonet-code-access-using-security-permissions"></a>Verificando o acesso de código ADO.NET usando permissões de segurança  
- Para cenários de confiança parcial, você pode exigir privilégios CAS para determinados métodos em seu código especificando um <xref:System.Data.SqlClient.SqlClientPermissionAttribute>. Se o privilégio não for permitido pela política de segurança restrita em vigor, uma exceção será gerada antes que seu código seja executado. Para obter mais informações sobre a política de segurança, consulte [NIB: gerenciamento de política de segurança](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9) e [NIB: práticas recomendadas de política de segurança](http://msdn.microsoft.com/en-us/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05).  
+ Para cenários de confiança parcial, você pode exigir privilégios CAS para determinados métodos em seu código especificando um <xref:System.Data.SqlClient.SqlClientPermissionAttribute>. Se o privilégio não for permitido pela política de segurança restrita em vigor, uma exceção será gerada antes que seu código seja executado. Para obter mais informações sobre a política de segurança, consulte [NIB: gerenciamento de política de segurança](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9) e [NIB: práticas recomendadas de política de segurança](http://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05).  
   
 ### <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra como escrever um código que requer um cadeia de conexão específica. Ele simula a negação de permissões irrestritas a <xref:System.Data.SqlClient>, que um administrador de sistema implementaria usando uma política CAS no mundo real.  
@@ -203,11 +203,11 @@ Failed, as expected: Request failed.
 ## <a name="interoperability-with-unmanaged-code"></a>Interoperabilidade com código não gerenciado  
  O código executado fora do CLR é chamado de código não gerenciado. Portanto, mecanismos de segurança, como o CAS, não podem ser aplicados a código não gerenciado. Componentes COM, interfaces ActiveX e funções da API do Win32 são exemplos de código não gerenciado. Aplicam-se considerações de segurança especiais ao executar o código não gerenciado, para que você não coloque em risco a segurança geral do aplicativo. Para obter mais informações, consulte [interoperação com código não gerenciado](../../../../docs/framework/interop/index.md).  
   
- O .NET Framework também oferece suporte à compatibilidade com versões anteriores a componentes COM existentes fornecendo acesso por meio da interoperabilidade COM. Você pode incorporar componentes COM em um aplicativo .NET Framework usando ferramentas de interoperabilidade COM para importar os tipos COM relevantes. Uma vez importados, os tipos COM estão prontos para uso. A interoperabilidade COM também permite que clientes COM acessem o código gerenciado exportando metadados do assembly para uma biblioteca de tipos e registrando o componente gerenciado como um componente COM. Para obter mais informações, consulte [Advanced COM Interoperability](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb).  
+ O .NET Framework também oferece suporte à compatibilidade com versões anteriores a componentes COM existentes fornecendo acesso por meio da interoperabilidade COM. Você pode incorporar componentes COM em um aplicativo .NET Framework usando ferramentas de interoperabilidade COM para importar os tipos COM relevantes. Uma vez importados, os tipos COM estão prontos para uso. A interoperabilidade COM também permite que clientes COM acessem o código gerenciado exportando metadados do assembly para uma biblioteca de tipos e registrando o componente gerenciado como um componente COM. Para obter mais informações, consulte [Advanced COM Interoperability](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb).  
   
 ## <a name="see-also"></a>Consulte também  
  [Securing ADO.NET Applications](../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)  
- [PAVE Security in Native and .NET Framework Code](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784) (PAVE Segurança no código nativo e do .NET Framework)  
- [Segurança de acesso do código](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03)  
- [Segurança baseada em Função](http://msdn.microsoft.com/en-us/239442e3-5be4-4203-b7fd-793baffea803)  
+ [PAVE Security in Native and .NET Framework Code](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784) (PAVE Segurança no código nativo e do .NET Framework)  
+ [Segurança de acesso do código](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)  
+ [Segurança baseada em Função](http://msdn.microsoft.com/library/239442e3-5be4-4203-b7fd-793baffea803)  
  [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

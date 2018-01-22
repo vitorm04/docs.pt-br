@@ -17,16 +17,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1d0c98224b8b508fec5fe584388872757a9dfdf3
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 1d17bb97811bb3a2ae979e5a05b8d39baf2b9c63
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="loading-a-dataset-from-xml"></a>Carregando um DataSet a partir de XML
 O conteúdo de um <xref:System.Data.DataSet> ADO.NET pode ser criado de um fluxo ou documento XML. Além disso, com o .NET Framework, você tem grande flexibilidade sobre quais informações são carregadas do XML e como o esquema ou estrutura relacional do <xref:System.Data.DataSet> é criado.  
   
- Para preencher um <xref:System.Data.DataSet> com dados de XML, use o **ReadXml** método o <xref:System.Data.DataSet> objeto. O **ReadXml** método lê de um arquivo, um fluxo ou um **XmlReader**e usa como argumentos a origem do XML mais um recurso opcional **XmlReadMode** argumento. (Para obter mais informações sobre o **XmlReader**, consulte [NIB: leitura de dados XML com XmlTextReader](http://msdn.microsoft.com/en-us/762c069b-b50c-41b8-936e-39eacfb0d540).) O **ReadXml** método lê o conteúdo do fluxo XML ou documento e carrega o <xref:System.Data.DataSet> com dados. Também criará o esquema relacional do <xref:System.Data.DataSet> dependendo do **XmlReadMode** especificado e se já existe um esquema relacional.  
+ Para preencher um <xref:System.Data.DataSet> com dados de XML, use o **ReadXml** método o <xref:System.Data.DataSet> objeto. O **ReadXml** método lê de um arquivo, um fluxo ou um **XmlReader**e usa como argumentos a origem do XML mais um recurso opcional **XmlReadMode** argumento. (Para obter mais informações sobre o **XmlReader**, consulte [NIB: leitura de dados XML com XmlTextReader](http://msdn.microsoft.com/library/762c069b-b50c-41b8-936e-39eacfb0d540).) O **ReadXml** método lê o conteúdo do fluxo XML ou documento e carrega o <xref:System.Data.DataSet> com dados. Também criará o esquema relacional do <xref:System.Data.DataSet> dependendo do **XmlReadMode** especificado e se já existe um esquema relacional.  
   
  A tabela a seguir descreve as opções para o **XmlReadMode** argumento.  
   

@@ -14,16 +14,16 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 665e05907f837887a7dd0375e540b6e9167a820e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7d831d4663031419977b75c6cfe183ac4bd52a86
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>Serviço de AJAX com exemplo de JSON e XML
 Este exemplo demonstra como usar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para criar um serviço assíncrona AJAX JavaScript and XML () que retorna dados JSON JavaScript Object Notation () ou XML. Você pode acessar um serviço de AJAX usando código JavaScript de um cliente de navegador da Web. Este exemplo se baseia o [serviço AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md) exemplo.  
   
- Ao contrário de outros exemplos de AJAX, este exemplo não usa o ASP.NET AJAX e o <xref:System.Web.UI.ScriptManager> controle. Com alguma configuração adicional, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX serviços podem ser acessados de qualquer página HTML por meio de JavaScript, e esse cenário é mostrado aqui. Para obter um exemplo do uso de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] com o ASP.NET AJAX, consulte [AJAX exemplos](http://msdn.microsoft.com/en-us/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).  
+ Ao contrário de outros exemplos de AJAX, este exemplo não usa o ASP.NET AJAX e o <xref:System.Web.UI.ScriptManager> controle. Com alguma configuração adicional, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX serviços podem ser acessados de qualquer página HTML por meio de JavaScript, e esse cenário é mostrado aqui. Para obter um exemplo do uso de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] com o ASP.NET AJAX, consulte [AJAX exemplos](http://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).  
   
  Este exemplo mostra como alternar o tipo de resposta de uma operação entre JSON e XML. Essa funcionalidade está disponível, independentemente se o serviço está configurado para ser acessado por ASP.NET AJAX ou por uma página de cliente HTML/JavaScript.  
   

@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1c68fc09ca1ca50ec544e79ec6fb8bf00a1b09ee
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 68b077ec6c7edd30882c9c84a10aa14060a589e8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="security-considerations-entity-framework"></a>Considerações de segurança (Entity Framework)
 Este tópico descreve considerações de segurança específicas para desenvolver, implantar e executar aplicativos [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Você também deve seguir as recomendações para criar aplicativos seguros do [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Para obter mais informações, consulte [visão geral de segurança](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -109,7 +109,7 @@ Este tópico descreve considerações de segurança específicas para desenvolve
   
      Os ataques de injeção de SQL podem ser executados em [!INCLUDE[esql](../../../../../includes/esql-md.md)] fornecendo entrada mal-intencionada para valores que são usados em um predicado de consulta e em nomes de parâmetro. Para evitar o risco de injeção de SQL, você nunca deve combinar a entrada do usuário com o texto de comando de [!INCLUDE[esql](../../../../../includes/esql-md.md)].  
   
-     As consultas [!INCLUDE[esql](../../../../../includes/esql-md.md)] aceitam parâmetros em todas as partes onde literais são aceitos. Você deve usar consultas parametrizadas em vez de literais insira de um agente externo diretamente na consulta. Você também deve considerar usando métodos do construtor de consulta para construir com segurança [Entity SQL](http://msdn.microsoft.com/en-us/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+     As consultas [!INCLUDE[esql](../../../../../includes/esql-md.md)] aceitam parâmetros em todas as partes onde literais são aceitos. Você deve usar consultas parametrizadas em vez de literais insira de um agente externo diretamente na consulta. Você também deve considerar usando métodos do construtor de consulta para construir com segurança [Entity SQL](http://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0).  
   
 -   Ataques de injeção de [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]:  
   
@@ -143,7 +143,7 @@ Este tópico descreve considerações de segurança específicas para desenvolve
  As considerações de segurança a seguir se aplicam ao gerar e trabalhar com tipos de entidade.  
   
 #### <a name="do-not-share-an-objectcontext-across-application-domains"></a>Não compartilhe um ObjectContext entre domínios do aplicativo.  
- O compartilhamento de um <xref:System.Data.Objects.ObjectContext> com mais de um domínio do aplicativo pode expor informações na cadeia de conexão. Em vez disso, transfira objetos serializados ou grafos de objetos para o outro domínio do aplicativo e depois anexe esses objetos a um <xref:System.Data.Objects.ObjectContext> nesse domínio do aplicativo. Para obter mais informações, consulte [serializar objetos](http://msdn.microsoft.com/en-us/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
+ O compartilhamento de um <xref:System.Data.Objects.ObjectContext> com mais de um domínio do aplicativo pode expor informações na cadeia de conexão. Em vez disso, transfira objetos serializados ou grafos de objetos para o outro domínio do aplicativo e depois anexe esses objetos a um <xref:System.Data.Objects.ObjectContext> nesse domínio do aplicativo. Para obter mais informações, consulte [serializar objetos](http://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
   
 #### <a name="prevent-type-safety-violations"></a>Evite violações de segurança de tipos.  
  Se a segurança de tipo for violada, o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] não poderá garantir a integridade dos dados em objetos. As violações de segurança de tipo podem ocorrer se você permitir que aplicativos não confiáveis sejam executados com segurança de acesso do código de confiança total.  

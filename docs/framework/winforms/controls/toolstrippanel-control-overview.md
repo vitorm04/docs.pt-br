@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c7976e4641f5bda02d6569ab17e7f1de139c59a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d376b5df4fabf63a87be04eca01136e22b3e3f82
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="toolstrippanel-control-overview"></a>Visão geral do controle ToolStripPanel
 Um <xref:System.Windows.Forms.ToolStripPanel> fornece uma única área de posicionamento e rafting <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, e <xref:System.Windows.Forms.StatusStrip> controles. Vários <xref:System.Windows.Forms.ToolStrip> controles pilha vertical ou horizontalmente, dependendo do <xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A> do <xref:System.Windows.Forms.ToolStripPanel>.  
@@ -41,4 +41,4 @@ Um <xref:System.Windows.Forms.ToolStripPanel> fornece uma única área de posici
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Forms.ToolStripContainer>  
  <xref:System.Windows.Forms.ToolStripContentPanel>  
- [Exemplo de ToolStrip](http://msdn.microsoft.com/en-us/b7352439-184a-4a3a-b2ad-07465d3af9ed)
+ [Exemplo de ToolStrip](http://msdn.microsoft.com/library/b7352439-184a-4a3a-b2ad-07465d3af9ed)

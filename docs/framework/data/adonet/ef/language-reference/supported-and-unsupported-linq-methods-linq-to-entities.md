@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 17fc714acd85b065dbbfa6812d3b55970d5523a2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 58fa10c62819979bfad15e4cae49118d25ed8670
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Métodos suportados e sem suporte LINQ (LINQ to Entities)
 Esta seção fornece informações sobre os operadores padrões integrados linguagem de consulta de consulta (LINQ) que são suportados ou sem suporte em consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] . Muitos dos operadores de consulta padrão LINQ têm uma versão sobrecarregada que aceita um argumento integer. O argumento de inteiro corresponde a um índice com base em zero na sequência que está sendo operada, um <xref:System.Collections.Generic.IEqualityComparer%601>, ou <xref:System.Collections.Generic.IComparer%601>. Salvo indicação caso contrário, essas versões sobrecarregadas dos operadores de consulta padrão LINQ não são suportadas, e tentar usá-los irá acionar uma exceção.  
@@ -156,7 +156,7 @@ Esta seção fornece informações sobre os operadores padrões integrados lingu
 |<xref:System.Linq.Queryable.Sum%2A>|Sem suporte|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Decimal))) _ ) As Nullable(Of Decimal)`|`Nullable<decimal> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<decimal>>> selector )`|  
   
 ## <a name="type-methods"></a>Métodos de tipo  
- Os operadores de consulta padrão LINQ que lidam com a conversão de tipos e os testes de CLR são suportados em [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Somente tipos de CLR que mapeiam para tipos de modelo conceitual são suportados em LINQ to Entities. Para obter uma lista dos tipos de modelo conceitual, consulte [tipos de modelo conceitual (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4). A tabela a seguir lista os métodos suportados e sem suporte de tipo.  
+ Os operadores de consulta padrão LINQ que lidam com a conversão de tipos e os testes de CLR são suportados em [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Somente tipos de CLR que mapeiam para tipos de modelo conceitual são suportados em LINQ to Entities. Para obter uma lista dos tipos de modelo conceitual, consulte [tipos de modelo conceitual (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). A tabela a seguir lista os métodos suportados e sem suporte de tipo.  
   
 |Método|Suporte|Assinatura de função do Visual Basic|Assinatura de método C#|  
 |------------|-------------|-------------------------------------|--------------------------|  

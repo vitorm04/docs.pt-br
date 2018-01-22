@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 11229a5677341db05223116c932f13b1f567e712
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 93dc8119e76f5c9cbff5c91a7e5d0cde3b0072f2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configurando serviços usando arquivos de configuração
 Configurar um serviço [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] com um arquivo de configuração oferece flexibilidade para fornecer dados do comportamento do ponto de extremidade e do serviço na hora da implantação em vez de em tempo de design. Este tópico descreve as principais técnicas disponíveis.  
@@ -79,7 +79,7 @@ Configurar um serviço [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] com 
 ### <a name="the-services-element"></a>O \<services > elemento  
  O elemento `services` contém as especificações de todos os serviços que o aplicativo hospeda. A partir do modelo de configuração simplificada no [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], esta seção é opcional.  
   
- [\<Serviços >](../../../docs/framework/configure-apps/file-schema/wcf/services.md)  
+ [\<services>](../../../docs/framework/configure-apps/file-schema/wcf/services.md)  
   
 ### <a name="the-service-element"></a>O \<service > elemento  
  Cada serviço tem os seguintes atributos:  
@@ -88,7 +88,7 @@ Configurar um serviço [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] com 
   
 -   `behaviorConfiguration`. Especifica o nome de um dos elementos `behavior` localizados no elemento `behaviors`. O comportamento especificado governa as ações, como, por exemplo, se o serviço permite representação. Se seu valor for o nome vazio ou se nenhum `behaviorConfiguration` for fornecido, o conjunto padrão de comportamentos de serviço será adicionado ao serviço.  
   
--   [\<serviço >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
+-   [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
   
 ### <a name="the-endpoint-element"></a>O \<ponto de extremidade > elemento  
  Cada ponto de extremidade requer um endereço, uma associação e um contrato, que são representados pelos seguintes atributos:  
@@ -101,19 +101,19 @@ Configurar um serviço [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] com 
   
 -   `contract`. Especifica a interface que define o contrato. Essa é a interface implementada no tipo CLR (Common Language Runtime) especificado pelo atributo `name` do elemento `service`.  
   
--   [\<ponto de extremidade > Referência de elemento](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
+-   [\<ponto de extremidade > Referência de elemento](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
   
 ### <a name="the-bindings-element"></a>O \<associações > elemento  
  O elemento `bindings` contém as especificações de todas as associações que podem ser usadas por qualquer ponto de extremidade definido em qualquer serviço.  
   
- [\<associações >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
+ [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
   
 ### <a name="the-binding-element"></a>O \<associação > elemento  
  O `binding` elementos contidos no `bindings` elemento pode ser qualquer uma das associações fornecidas pelo sistema (consulte [System-Provided associações](../../../docs/framework/wcf/system-provided-bindings.md)) ou uma associação personalizada (consulte [associações personalizadas](../../../docs/framework/wcf/extending/custom-bindings.md)). O elemento `binding` tem um atributo `name` que correlaciona a associação ao ponto de extremidade especificado no atributo `bindingConfiguration` do elemento `endpoint`. Se nenhum nome for especificado, a associação corresponderá ao padrão desse tipo de associação.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]Configurar serviços e clientes, consulte [Configurando o Windows Communication Foundation aplicativos](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)]Configurar serviços e clientes, consulte [Configurando o Windows Communication Foundation aplicativos](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
- [\<associação >](../../../docs/framework/misc/binding.md)  
+ [\<binding>](../../../docs/framework/misc/binding.md)  
   
 ### <a name="the-behaviors-element"></a>O \<comportamentos > elemento  
  Esse é um elemento contêiner dos elementos `behavior` que definem os comportamentos de um serviço.  
@@ -123,7 +123,7 @@ Configurar um serviço [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] com 
 ### <a name="the-behavior-element"></a>O \<comportamento > elemento  
  Cada `behavior` elemento é identificado por um `name` de atributo e fornece o comportamento fornecido pelo sistema, como <`throttling`>, ou um comportamento personalizado. Se nenhum nome for fornecido, esse elemento de comportamento corresponderá ao comportamento padrão do serviço ou do ponto de extremidade.  
   
- [\<comportamento >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
+ [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>Como usar as configurações de associação e de comportamento  
  O [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] facilita o compartilhamento das configurações entre pontos de extremidade usando um sistema de referência na configuração. Em vez de atribuir valores de configuração diretamente a um ponto de extremidade, os valores da configuração relacionados à associação são agrupados em elementos `bindingConfiguration` na seção `<binding>`. A configuração de uma associação é um grupo nomeado de configurações em uma associação. Os pontos de extremidade podem fazer referência a `bindingConfiguration` por nome.  
@@ -274,6 +274,6 @@ Configurar um serviço [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] com 
   
 ## <a name="see-also"></a>Consulte também  
  [Configuração simplificada](../../../docs/framework/wcf/simplified-configuration.md)  
- [Configuring Windows Communication Foundation Applications](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a) (Configurando aplicativos do Windows Communication Foundation)  
- [\<serviço >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
- [\<associação >](../../../docs/framework/misc/binding.md)
+ [Configuring Windows Communication Foundation Applications](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a) (Configurando aplicativos do Windows Communication Foundation)  
+ [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
+ [\<binding>](../../../docs/framework/misc/binding.md)

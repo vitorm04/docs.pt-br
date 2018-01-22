@@ -24,11 +24,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e8c39d3c84fe24f86692c289860f22381a3cf5a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 65d09b33982f62b965d6907902ded98f87d9a97e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="com-callable-wrapper"></a>COM Callable Wrapper
 Quando um cliente COM chama um objeto .NET, o Common Language Runtime cria o objeto gerenciado e um CCW (COM Callable Wrapper) para o objeto. Se não é possível referenciar um objeto .NET diretamente, os clientes COM usam o CCW como um proxy do objeto gerenciado.  
@@ -190,6 +190,6 @@ public class LoanApp : IAnother {
  [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md)  
  [Wrappers COM](../../../docs/framework/interop/com-wrappers.md)  
  [Expondo componentes do .NET Framework ao COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Simulando Interfaces de COM](http://msdn.microsoft.com/en-us/ad2ab959-e2be-411b-aaff-275c3fba606c)  
+ [Simulando Interfaces de COM](http://msdn.microsoft.com/library/ad2ab959-e2be-411b-aaff-275c3fba606c)  
  [Qualificando tipos .NET para interoperação](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
  [RCW (Runtime Callable Wrapper)](../../../docs/framework/interop/runtime-callable-wrapper.md)

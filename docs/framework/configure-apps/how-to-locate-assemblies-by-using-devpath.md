@@ -21,11 +21,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 4ee4200a67ef9d9d123be3bc32b02ac61512d23b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0944f2798c45a039149baaa6e46ce2b56eb5c5df
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>Como localizar assemblies usando DEVPATH
 Os desenvolvedores talvez queira certificar-se de que um assembly compartilhado que estão criando funciona corretamente com vários aplicativos. Em vez de continuamente colocar o assembly no cache de assembly global durante o ciclo de desenvolvimento, o desenvolvedor pode criar uma variável de ambiente DEVPATH que aponta para o diretório de saída de compilação para o assembly.  
@@ -55,4 +55,4 @@ Os desenvolvedores talvez queira certificar-se de que um assembly compartilhado 
 >  Use essa configuração somente em tempo de desenvolvimento. O tempo de execução não verifica as versões em assemblies de nomes fortes encontrados no DEVPATH. Ele simplesmente usa o primeiro conjunto que encontrar.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configuração de aplicativos .NET Framework](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+ [Configuração de aplicativos .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

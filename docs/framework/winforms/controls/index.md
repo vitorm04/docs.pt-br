@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3149a0629fab704dbcae92095b3ef62dc5f9c36c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b990c0a6084f3d2866c16aed3a390fdf7717596
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-forms-controls"></a>Controles de Windows Forms
 À medida que você cria e modifica a interface do usuário de seus aplicativos dos Windows Forms, será necessário adicionar, alinhar e posicionar controles. Os controles são objetos que estão contidos em objetos de formulário. Cada tipo de controle tem seu próprio conjunto de propriedades, métodos e eventos que o tornam adequado para uma finalidade específica. Você pode manipular os controles no designer e escrever o código para adicionar controles dinamicamente em tempo de execução.  
@@ -50,5 +50,5 @@ ms.lasthandoff: 12/22/2017
  [Aplicativos cliente](../../../../docs/framework/develop-client-apps.md)  
  Fornece uma visão geral do desenvolvimento de aplicativos baseados no Windows.  
   
- [Instruções passo a passo dos Windows Forms](http://msdn.microsoft.com/en-us/fd44d13d-4733-416f-aefc-32592e59e5d9)  
+ [Instruções passo a passo dos Windows Forms](http://msdn.microsoft.com/library/fd44d13d-4733-416f-aefc-32592e59e5d9)  
  Lista os tópicos de instruções passo a passo sobre Windows Forms e controles.

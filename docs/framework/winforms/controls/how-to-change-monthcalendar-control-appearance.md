@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b9c401532fa7a5f09462cf12084f32bca3f721cf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 89aa2d57e7990bb2b0016fa4936cf1487578db01
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>Como alterar a aparência do controle MonthCalendar do Windows Forms
 Windows Forms <xref:System.Windows.Forms.MonthCalendar> controle permite que você personalize a aparência do calendário de várias maneiras. Por exemplo, você pode definir o esquema de cores e optar por exibir ou ocultar os números de semana e a data atual.  
@@ -53,7 +53,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> controle permite que voc
     ```  
   
     > [!NOTE]
-    >  Desde o Windows Vista e dependendo do tema, definir algumas propriedades pode não mudar a aparência do calendário. Por exemplo, se o Windows é configurado para usar o tema Aero, definindo o <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, ou <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propriedades não tem nenhum efeito. Isso ocorre porque uma versão atualizada do calendário é renderizada com uma aparência derivada no tempo de execução do tema atual do sistema operacional. Se quiser usar essas propriedades e habilitar a versão anterior do calendário, desabilite os estilos visuais para o aplicativo. Desabilitar os estilos visuais pode afetar a aparência e o comportamento de outros controles no seu aplicativo. Para desativar estilos visuais no Visual Basic, abra o Designer de projeto e desmarque o **estilos visuais XP habilitar** caixa de seleção. Para desabilitar estilos visuais em C#, abra Program.cs e comente `Application.EnableVisualStyles();`. Para obter mais informações sobre estilos visuais, consulte [Como habilitar os estilos visuais do Windows XP](http://msdn.microsoft.com/en-us/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f).  
+    >  Desde o Windows Vista e dependendo do tema, definir algumas propriedades pode não mudar a aparência do calendário. Por exemplo, se o Windows é configurado para usar o tema Aero, definindo o <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, ou <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propriedades não tem nenhum efeito. Isso ocorre porque uma versão atualizada do calendário é renderizada com uma aparência derivada no tempo de execução do tema atual do sistema operacional. Se quiser usar essas propriedades e habilitar a versão anterior do calendário, desabilite os estilos visuais para o aplicativo. Desabilitar os estilos visuais pode afetar a aparência e o comportamento de outros controles no seu aplicativo. Para desativar estilos visuais no Visual Basic, abra o Designer de projeto e desmarque o **estilos visuais XP habilitar** caixa de seleção. Para desabilitar estilos visuais em C#, abra Program.cs e comente `Application.EnableVisualStyles();`. Para obter mais informações sobre estilos visuais, consulte [Como habilitar os estilos visuais do Windows XP](http://msdn.microsoft.com/library/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f).  
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>Exibir a data atual na parte inferior do controle  
   

@@ -20,11 +20,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 8abf7868312883e264848b0de1aa803ce3be5839
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26475a543950b4f7161243d72252cc1982adf93f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="redirecting-assembly-versions"></a>Redirecionando versões de assembly
 Você pode redirecionar referências de associação de tempo de compilação para assemblies do .NET Framework, os assemblies de terceiros ou assemblies do seu próprio aplicativo. Você pode redirecionar seu aplicativo para usar uma versão diferente de um assembly de várias maneiras: por meio da política de publicador, por meio de um arquivo de configuração do aplicativo. ou por meio do arquivo de configuração de máquina. Este artigo descreve o funcionamento de associação de assembly do .NET Framework e como ele pode ser configurado.  
@@ -170,7 +170,7 @@ Você pode redirecionar referências de associação de tempo de compilação pa
  [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Configurando aplicativos](../../../docs/framework/configure-apps/index.md)  
- [Configuração de aplicativos .NET Framework](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [Configuração de aplicativos .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [Esquema de configurações do tempo de execução](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Esquema de arquivos de configuração](../../../docs/framework/configure-apps/file-schema/index.md)  
  [Como criar uma política de editor](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

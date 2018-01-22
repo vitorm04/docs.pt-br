@@ -20,11 +20,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a704930f707895e7f343566fab544e2f8b32b22c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fdae288650a0ff7b1a34b3a38a231d3da6caf560
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Como configurar componentes do COM baseados no .NET Framework para ativação sem registro
 A ativação sem registro de componentes baseados no .NET Framework é apenas um pouco mais complicada do que para componentes COM. A instalação exige dois manifestos:  
@@ -183,6 +183,6 @@ A ativação sem registro de componentes baseados no .NET Framework é apenas um
   
 ## <a name="see-also"></a>Consulte também  
  [Interoperabilidade COM sem registro](../../../docs/framework/interop/registration-free-com-interop.md)  
- [Requisitos para interoperabilidade COM sem registro](http://msdn.microsoft.com/en-us/0c43bc57-eecf-4e6c-8114-490141cce4da)  
- [Configurando componentes COM para ativação sem registro](http://msdn.microsoft.com/en-us/bfe9b02f-d964-4784-960e-a1f94692fbfe)  
+ [Requisitos para interoperabilidade COM sem registro](http://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da)  
+ [Configurando componentes COM para ativação sem registro](http://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe)  
  [Ativação sem registro de componentes baseados no .NET: um passo a passo](http://go.microsoft.com/fwlink/?LinkId=158812)

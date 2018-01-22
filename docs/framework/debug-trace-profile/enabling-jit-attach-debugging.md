@@ -17,11 +17,11 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ae0b692c99f6682c6854292c230490637ad45727
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 71b2e95076edbda3a67a84c9185d8b689c158e12
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="enabling-jit-attach-debugging"></a>Habilitando a depuração por anexação JIT
 A depuração de anexação JIT é a expressão usada para descrever a anexação de um depurador a um processo quando você encontra erros ou ela pode ser disparada por funções ou métodos específicos.  
@@ -47,4 +47,4 @@ A depuração de anexação JIT é a expressão usada para descrever a anexaçã
 ## <a name="see-also"></a>Consulte também  
  [Depuração, rastreamento e criação de perfil](../../../docs/framework/debug-trace-profile/index.md)  
  [Facilitando a depuração de uma imagem](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)  
- [Habilitando a criação de perfil](http://msdn.microsoft.com/en-us/3b669676-f0e0-4ebf-8674-68986dd2020d)
+ [Habilitando a criação de perfil](http://msdn.microsoft.com/library/3b669676-f0e0-4ebf-8674-68986dd2020d)

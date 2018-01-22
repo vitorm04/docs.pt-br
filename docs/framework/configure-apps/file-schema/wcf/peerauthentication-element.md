@@ -14,24 +14,24 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: eed1bac41babb970e3d85a8ae1aa5132f44e3621
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a2b0195ec042a0ad342f199f0bf9c2fd3a19821f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltpeerauthenticationgt-element"></a>Elemento &lt;peerAuthentication&gt;
 Especifica as opções de autenticação para clientes ponto a ponto.  
   
  [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]Consulte programação, a ponto [rede ponto a ponto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
- \<sistema. ServiceModel >  
+ \<system.ServiceModel>  
 \<comportamentos >  
-\<endpointBehaviors >  
-\<comportamento >  
-\<clientCredentials >  
-\<par >  
-\<PeerAuthentication >  
+\<endpointBehaviors>  
+\<behavior>  
+\<clientCredentials>  
+\<peer>  
+\<PeerAuthentication>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,7 +56,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 |`revocationMode`|Enumeração opcional. Um dos modos usados para verificar por listas de certificados revogados (CRL). O padrão é `Online`.|  
 |`trustedStoreLocation`|Enumeração opcional. Um dos locais de armazenamento de sistema de dois: `LocalMachine` ou `CurrentUser`. Esse valor é usado quando um certificado de serviço é negociado ao cliente. A validação é executada em relação a **pessoas confiáveis** armazenar no local de armazenamento especificado. O padrão é `CurrentUser`.|  
   
-## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType atributo  
+## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType Attribute  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -87,7 +87,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<par >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Especifica uma credencial usada para autenticar o cliente para um serviço de ponto a ponto.|  
+|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Especifica uma credencial usada para autenticar o cliente para um serviço de ponto a ponto.|  
   
 ## <a name="remarks"></a>Comentários  
  O `<authentication>` elemento corresponde à <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> classe. Este elemento Especifica um validador, que é invocado durante a autenticação de vizinho de vizinho na malha. Quando um novo par tenta estabelecer uma conexão vizinha, ele passa suas próprias credenciais para o par está respondendo. O validador do Respondente é invocado para verificar a credencial da parte remota. Sempre que uma conexão ponto a ponto é estabelecida na malha, os pontos são autenticados mutuamente, validadores significado em ambas as extremidades são invocados.  
@@ -121,6 +121,6 @@ trustedStoreLocation="CurrentUser/LocalMachine"
  <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>  
  [Trabalhando com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Rede ponto a ponto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [Autenticação de mensagens de canal par](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [Autenticação personalizada de canal par](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [Autenticação de mensagens de canal par](http://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [Autenticação personalizada de canal par](http://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
  [Protegendo aplicativos de canal par](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

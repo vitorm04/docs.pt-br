@@ -1,5 +1,5 @@
 ---
-title: '&lt;NET. TCP&gt;'
+title: '&lt;net.tcp&gt;'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,17 +14,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a3d22b6feef80dbff8c7f20b130ce2b0f9702c9e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 61b799afa1761e59c5cedf5b14eadcaf6fcaada0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="ltnettcpgt"></a>&lt;NET. TCP&gt;
+# <a name="ltnettcpgt"></a>&lt;net.tcp&gt;
 Especifica as definições de configuração de rede. TCP porta de serviço de compartilhamento, que permite que vários processos compartilhem a mesma porta TCP.  
   
- \<system.serviceModel.activation >  
-\<NET. TCP >  
+ \<system.serviceModel.activation>  
+\<net.tcp>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -73,7 +73,7 @@ Especifica as definições de configuração de rede. TCP porta de serviço de c
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<allowAccounts >](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Uma coleção de elementos de configuração que contêm um `securityIdentifier` atributo para especificar contas de usuário para processos que hospedam [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] serviços e recebem acesso de conexão para o serviço de compartilhamento.|  
+|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Uma coleção de elementos de configuração que contêm um `securityIdentifier` atributo para especificar contas de usuário para processos que hospedam [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] serviços e recebem acesso de conexão para o serviço de compartilhamento.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -82,9 +82,9 @@ Especifica as definições de configuração de rede. TCP porta de serviço de c
 |[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|Contém definições de configuração para o processo do ouvinte SMSvcHost.exe.|  
   
 ## <a name="remarks"></a>Comentários  
- Para obter mais informações sobre o compartilhamento de porta, consulte [compartilhamento de porta NET. TCP](http://msdn.microsoft.com/en-us/f13692ee-a179-4439-ae72-50db9534eded). Para entender como configurar a serviço de compartilhamento de porta, consulte [Configurando o serviço de compartilhamento de porta NET. TCP](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0).  
+ Para obter mais informações sobre o compartilhamento de porta, consulte [compartilhamento de porta NET. TCP](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded). Para entender como configurar a serviço de compartilhamento de porta, consulte [Configurando o serviço de compartilhamento de porta NET. TCP](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>  
- [Compartilhamento de porta do NET.TCP](http://msdn.microsoft.com/en-us/f13692ee-a179-4439-ae72-50db9534eded)  
- [Configurando o serviço de compartilhamento de porta NET.TCP](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)
+ [Compartilhamento de porta do NET.TCP](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
+ [Configurando o serviço de compartilhamento de porta NET.TCP](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)

@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d64f873a8cbdd76ac25ae8f16b02f10de568fe02
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d1630226701dae8ddb51f939cebb38bf04f524c2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="clr-triggers"></a>Gatilhos de CLR
 Um gatilho é um tipo especial de procedimento armazenado que é executado automaticamente quando um evento de linguagem é executado. Devido à integração do Microsoft SQL Server com o CLR do .NET Framework, você pode usar qualquer linguagem do .NET Framework para criar gatilhos CLR.  
@@ -30,5 +30,5 @@ Um gatilho é um tipo especial de procedimento armazenado que é executado autom
 1.  [Gatilhos CLR](http://go.microsoft.com/fwlink/?LinkId=115397)  
   
 ## <a name="see-also"></a>Consulte também  
- [Criando objetos do SQL Server 2005 em código gerenciado](http://msdn.microsoft.com/en-us/5358a825-e19b-49aa-8214-674ce5fed1da)  
+ [Criando objetos do SQL Server 2005 em código gerenciado](http://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
  [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

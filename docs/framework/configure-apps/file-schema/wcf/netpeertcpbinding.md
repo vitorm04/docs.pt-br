@@ -15,18 +15,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2d20faaee94363a1f54cf398d72955f376087b36
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a890243ee12202efa9743a6151255525c7f78be2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltnetpeertcpbindinggt"></a>&lt;netPeerTcpBinding&gt;
 Define uma associação de ponto a ponto canal mensagens TCP específicas.  
   
- \<sistema. ServiceModel >  
-\<associações >  
-\<netPeerTcpBinding >  
+ \<system.ServiceModel>  
+\<bindings>  
+\<netPeerTcpBinding>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -69,21 +69,21 @@ Define uma associação de ponto a ponto canal mensagens TCP específicas.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Define as restrições na complexidade de mensagens SOAP que podem ser processadas por pontos de extremidade configurados com essa associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
-|[\<resolvedor >](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|Especifica a ID de um resolvedor peer usado por esta associação para resolver um par de malha para os endereços IP do ponto de extremidade de nós dentro da malha ponto a ponto.|  
-|[\<segurança >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|Define as configurações de segurança para a mensagem. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.PeerSecurityElement>.|  
+|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Define as restrições na complexidade de mensagens SOAP que podem ser processadas por pontos de extremidade configurados com essa associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<resolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|Especifica a ID de um resolvedor peer usado por esta associação para resolver um par de malha para os endereços IP do ponto de extremidade de nós dentro da malha ponto a ponto.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|Define as configurações de segurança para a mensagem. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.PeerSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<associações >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
  Essa associação oferece suporte para a criação de aplicativos ponto a ponto ou com vários participantes usando o transporte de par sobre TCP. Cada nó par pode hospedar vários canais par definidos com esse tipo de associação.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como usar a associação NetPeerTcpBinding, que permite a comunicação com vários participantes usando um canal par. Para um cenário detalhado de como usar essa associação, consulte [Net TCP de mesmo nível](http://msdn.microsoft.com/en-us/31f4db66-edb2-40a6-b92a-14098e92acae).  
+ O exemplo a seguir demonstra como usar a associação NetPeerTcpBinding, que permite a comunicação com vários participantes usando um canal par. Para um cenário detalhado de como usar essa associação, consulte [Net TCP de mesmo nível](http://msdn.microsoft.com/library/31f4db66-edb2-40a6-b92a-14098e92acae).  
   
 ```xml  
 <configuration>  
@@ -116,7 +116,7 @@ Define uma associação de ponto a ponto canal mensagens TCP específicas.
  <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement>  
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<associação >](../../../../../docs/framework/misc/binding.md)  
- [Rede ponto a ponto TCP](http://msdn.microsoft.com/en-us/31f4db66-edb2-40a6-b92a-14098e92acae)  
+ [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)  
+ [Rede ponto a ponto TCP](http://msdn.microsoft.com/library/31f4db66-edb2-40a6-b92a-14098e92acae)  
  [Rede ponto a ponto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)

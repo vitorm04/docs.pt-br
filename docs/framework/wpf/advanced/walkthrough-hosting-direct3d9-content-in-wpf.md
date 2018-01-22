@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 10558348a963f0b243dcfbe23171f6e24da6da0d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ad6ac99a77e3477499a871e269cc7faa7a59f12
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>Instruções passo a passo: hospedando conteúdo de Direct3D9 no WPF
 Esta instrução passo a passo mostra como hospedar o conteúdo Direct3D9 em um aplicativo do Windows Presentation Foundation (WPF).  
@@ -50,7 +50,7 @@ Esta instrução passo a passo mostra como hospedar o conteúdo Direct3D9 em um 
   
 #### <a name="to-create-the-wpf-project"></a>Para criar o projeto WPF  
   
--   Crie um novo projeto de aplicativo do WPF no Visual C#, chamado `D3DHost`. Para obter mais informações, consulte [Como criar um novo projeto de aplicativo do WPF](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
+-   Crie um novo projeto de aplicativo do WPF no Visual C#, chamado `D3DHost`. Para obter mais informações, consulte [Como criar um novo projeto de aplicativo do WPF](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
   
      MainWindow.xaml é aberto no [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   

@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e946066a352fb29c593a7d84fd6e728c226a3175
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79c26ca9e167455dfbd664ea96e574c130cdc3d2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="peer-resolvers"></a>Resolvedor peer
 Para conectar a uma malha, um nó ponto requer que os endereços IP de outros nós. Endereços IP são obtidos entrando em contato com um serviço de resolução, que usa a ID de malha e retorna uma lista de endereços correspondentes a nós registrado com esse ID de malha. O resolvedor mantém uma lista de endereços de registrado, ele cria, fazendo com que cada nó na malha registrar com o serviço.  
@@ -43,7 +43,7 @@ Para conectar a uma malha, um nó ponto requer que os endereços IP de outros n�
 > [!NOTE]
 >  Ao usar redes locais e imediatamente com um resolvedor personalizado, é altamente recomendável que aplicativos usando o ou o suporte a redes de local de link ou imediatamente incluem lógica que seleciona um único endereço de conexão local para usar ao se conectar. Isso evita confusão potencialmente causado por computadores com vários endereços de conexão local. Acordo com isso, canal par somente oferece suporte a um único endereço de conexão local a qualquer momento. Você pode especificar esse endereço com o `ListenIpAddress` propriedade o <xref:System.ServiceModel.NetPeerTcpBinding>.  
   
- Para ver uma demonstração de como implementar um resolvedor personalizado, consulte [resolvedor ponto a ponto personalizado de canal par](http://msdn.microsoft.com/en-us/5b75a2bb-7ff1-4a14-abe7-3debf0537d23).  
+ Para ver uma demonstração de como implementar um resolvedor personalizado, consulte [resolvedor ponto a ponto personalizado de canal par](http://msdn.microsoft.com/library/5b75a2bb-7ff1-4a14-abe7-3debf0537d23).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Sobre o CustomPeerResolverService: Registro de clientes](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  

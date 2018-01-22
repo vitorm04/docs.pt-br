@@ -14,21 +14,21 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5048bc2980d7eb51efc1707cfc143f3a81ddf81d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 88f9a766c85ec0fd6cb3379be239db33dc6ebb20
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltmessagegt-of-ltws2007httpbindinggt"></a>&lt;mensagem&gt; de &lt;ws2007HttpBinding&gt;
 Define as configurações de segurança em nível de mensagem do [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) elemento.  
   
- \<sistema. ServiceModel >  
-\<associações >  
-\<ws2007HttpBinding >  
+ \<system.ServiceModel>  
+\<bindings>  
+\<ws2007HttpBinding>  
 \<associação >  
-\<segurança >  
-\<mensagem >  
+\<security>  
+\<message>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -100,7 +100,7 @@ Define as configurações de segurança em nível de mensagem do [ \<ws2007HttpB
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<segurança >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|Define as configurações de segurança para um [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md).|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|Define as configurações de segurança para um [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md).|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>  
@@ -110,5 +110,5 @@ Define as configurações de segurança em nível de mensagem do [ \<ws2007HttpB
  [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<associação >](../../../../../docs/framework/misc/binding.md)
+ [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -21,11 +21,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 969ab4f3c63571488c66c8a505df3969fcd788e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fdd26f335fb2f9b8072103def5b00d91a6740817
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-the-automationid-property"></a>Usar a propriedade AutomationID
 > [!NOTE]
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>Usar um caminho persistente para retornar a um AutomationElement identificado anteriormente  
   
--   Aplicativos de cliente, de scripts de teste simples para registro robusto e utilitários de reprodução, podem exigir acesso aos elementos que atualmente não estão instanciados, como um arquivo de abrir a caixa de diálogo ou um item de menu e, portanto, não existem na árvore de automação de interface do usuário. Esses elementos só podem ser instanciados através da reprodução, ou "reproduzir", uma sequência específica de [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] ações com o uso de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] propriedades como AutomationID, padrões de controle e ouvintes de evento. Consulte [Test Script Generator Sample](http://msdn.microsoft.com/en-us/028467fd-2980-4691-9522-0131dcef23a0) para obter um exemplo que usa [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] para gerar scripts de teste com base na interação do usuário com o [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
+-   Aplicativos de cliente, de scripts de teste simples para registro robusto e utilitários de reprodução, podem exigir acesso aos elementos que atualmente não estão instanciados, como um arquivo de abrir a caixa de diálogo ou um item de menu e, portanto, não existem na árvore de automação de interface do usuário. Esses elementos só podem ser instanciados através da reprodução, ou "reproduzir", uma sequência específica de [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] ações com o uso de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] propriedades como AutomationID, padrões de controle e ouvintes de evento. Consulte [Test Script Generator Sample](http://msdn.microsoft.com/library/028467fd-2980-4691-9522-0131dcef23a0) para obter um exemplo que usa [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] para gerar scripts de teste com base na interação do usuário com o [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  

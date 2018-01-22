@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2127cdb1178da37bcfe77a0e1a02ccd34be2d800
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce89e27089ea2f0c918d0fe37c4eea141698f9be
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Nomenclatura forte (referência de API não gerenciada)
 A API de nomeação forte permite que um cliente administrar a assinatura para assemblies de nome forte.  
@@ -30,7 +30,7 @@ A API de nomeação forte permite que um cliente administrar a assinatura para a
  Assinar um assembly com um nome forte adiciona uma criptografia de chave pública ao arquivo que contém o manifesto do assembly. Assinatura de nome forte ajuda a verificar exclusividade de nome, impede a falsificação de nome e fornece chamadores com uma identidade exclusiva quando uma referência é resolvida. No entanto, nenhum nível de confiança está associado com um nome forte.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Fortes nomes funções estáticas globais](http://msdn.microsoft.com/en-us/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
+ [Fortes nomes funções estáticas globais](http://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
  Descreve as funções estáticas globais não gerenciadas que usa a API de nomeação forte.  
   
 > [!NOTE]
@@ -114,7 +114,7 @@ A API de nomeação forte permite que um cliente administrar a assinatura para a
  [Função StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
  Obtém um token que representa uma chave pública. Preteridos a partir de [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [Estrutura de nomenclatura forte](http://msdn.microsoft.com/en-us/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
+ [Estrutura de nomenclatura forte](http://msdn.microsoft.com/library/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
  Descreve a estrutura não gerenciada que usa a API de nomeação forte para administrar a assinatura para assemblies de nome forte.  
   
  [Estrutura PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  

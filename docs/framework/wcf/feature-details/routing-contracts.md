@@ -14,11 +14,11 @@ author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3d70368f7514b64d67a186b328b1f19d231fe0c1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1c026c57129672eb25bb244a4fc928b827398e08
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="routing-contracts"></a>Contratos de roteamento
 Contratos de roteamento definem os padrões de mensagens que o serviço de roteamento pode processar.  Cada contrato está sem especificação de tipo e permite que o serviço receber uma mensagem sem o conhecimento do esquema de mensagem ou ação. Isso permite que o serviço de roteamento genericamente rotear mensagens sem configuração adicional para as especificações das mensagens subjacentes que está sendo encaminhada.  
@@ -32,11 +32,11 @@ Contratos de roteamento definem os padrões de mensagens que o serviço de rotea
   
 |Contrato|Forma|Forma de canal|  
 |--------------|-----------|-------------------|  
-|<xref:System.ServiceModel.Routing.ISimplexDatagramRouter>|SessionMode = SessionMode<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true|IInputChannel -> IOutputChannel|  
+|<xref:System.ServiceModel.Routing.ISimplexDatagramRouter>|SessionMode = SessionMode.Allowed<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true|IInputChannel -> IOutputChannel|  
 |<xref:System.ServiceModel.Routing.ISimplexSessionRouter>|SessionMode = SessionMode<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true|IInputSessionChannel -> IOutputSessionChannel|  
-|<xref:System.ServiceModel.Routing.IRequestReplyRouter>|SessionMode = SessionMode<br /><br /> AsyncPattern = true|IReplyChannel -> IRequestChannel|  
+|<xref:System.ServiceModel.Routing.IRequestReplyRouter>|SessionMode = SessionMode.Allowed<br /><br /> AsyncPattern = true|IReplyChannel -> IRequestChannel|  
 |<xref:System.ServiceModel.Routing.IDuplexSessionRouter>|SessionMode=SessionMode.Required<br /><br /> CallbackContract=typeof(ISimplexSession)<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true<br /><br /> TransactionFlow(TransactionFlowOption.Allowed)|IDuplexSessionChannel -> IDuplexSessionChannel|  
   
 ## <a name="see-also"></a>Consulte também  
- [Serviço de roteamento](http://msdn.microsoft.com/en-us/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
+ [Serviço de roteamento](http://msdn.microsoft.com/library/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
  [Introdução ao roteamento](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

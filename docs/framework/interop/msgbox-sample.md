@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d5dcabfadae35cad980d210806c47dab3f5a0082
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b14ee9c435d36e8d6a49cbfb29a57365bcd42d6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="msgbox-sample"></a>Exemplo de MsgBox
 Esta amostra demonstra como passar tipos de cadeia de caracteres por valor como parâmetros In e quando usar os campos <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> e <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>.  
@@ -55,7 +55,7 @@ Esta amostra demonstra como passar tipos de cadeia de caracteres por valor como 
   
 ## <a name="see-also"></a>Consulte também  
  [Marshaling em cadeias de caracteres](../../../docs/framework/interop/marshaling-strings.md)  
- [Tipos de dados de invocação de plataforma](http://msdn.microsoft.com/en-us/16014d9f-d6bd-481e-83f0-df11377c550f)  
+ [Tipos de dados de invocação de plataforma](http://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f)  
  [Marshaling padrão para cadeias de caracteres](../../../docs/framework/interop/default-marshaling-for-strings.md)  
  [Criando protótipos em código gerenciado](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
  [Especificando um conjunto de caracteres](../../../docs/framework/interop/specifying-a-character-set.md)

@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 70f8b00ca0f57d4d6bf9fc49ab12443f0a8c9b83
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c952a79b70314ff9de195da322efd78d54176201
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="security-overview"></a>Visão geral de segurança
 Proteger um aplicativo é um processo contínuo. Nunca será um ponto em que um desenvolvedor pode garantir que um aplicativo é seguro de todos os ataques, porque é impossível prever quais tipos de novas tecnologias de ataques futuros causará. Por outro lado, só porque ninguém tem falhas de segurança ainda descobertos (ou publicado) em um sistema não significa que nenhum existem ou podem existir. Você precisa planejar a segurança durante a fase de design do projeto, bem como para planejar como segurança será mantida durante o tempo de vida do aplicativo.  
@@ -78,7 +78,7 @@ Proteger um aplicativo é um processo contínuo. Nunca será um ponto em que um 
 |Recurso|Descrição|  
 |--------------|-----------------|  
 |[Segurança de acesso do código e o ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Descreve as interações entre ambientes parcialmente confiáveis da perspectiva de um aplicativo ADO.NET, segurança baseada em função e segurança de acesso ao código.|  
-|[Segurança de acesso do código](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03)|Contém links para tópicos adicionais que descrevem o CAS no .NET Framework.|  
+|[Segurança de acesso do código](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|Contém links para tópicos adicionais que descrevem o CAS no .NET Framework.|  
   
 ## <a name="database-security"></a>Segurança de banco de dados  
  O princípio de menos privilégios também se aplica à fonte de dados. Algumas diretrizes gerais para segurança de banco de dados incluem:  
@@ -100,7 +100,7 @@ Proteger um aplicativo é um processo contínuo. Nunca será um ponto em que um 
 |Recurso|Descrição|  
 |--------------|-----------------|  
 |[SQL Server Security](../../../../docs/framework/data/adonet/sql/sql-server-security.md) (Segurança do SQL Server)|Fornece uma visão geral de segurança do SQL Server com cenários de aplicativos que fornecem orientação para a criação de aplicativos seguros do ADO.NET destino do SQL Server.|  
-|[Recomendações para estratégias de acesso de dados](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)|Fornece recomendações para acessar dados e executar operações de banco de dados.|  
+|[Recomendações para estratégias de acesso de dados](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Fornece recomendações para acessar dados e executar operações de banco de dados.|  
   
 ## <a name="security-policy-and-administration"></a>Diretiva de segurança e administração  
  Administrar incorretamente a política de CAS (segurança) de acesso do código pode criar vulnerabilidades de segurança. Quando um aplicativo é implantado, técnicas para monitorar a segurança devem ser usadas e riscos avaliados como novas ameaças surgem.  
@@ -109,11 +109,11 @@ Proteger um aplicativo é um processo contínuo. Nunca será um ponto em que um 
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[PONTA: Gerenciamento de política de segurança](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|Fornece informações sobre como criar e administrar a política de segurança.|  
-|[PONTA: Práticas recomendadas de política de segurança](http://msdn.microsoft.com/en-us/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Fornece links que descrevem como administrar a política de segurança.|  
+|[PONTA: Gerenciamento de política de segurança](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|Fornece informações sobre como criar e administrar a política de segurança.|  
+|[PONTA: Práticas recomendadas de política de segurança](http://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Fornece links que descrevem como administrar a política de segurança.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Securing ADO.NET Applications](../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)  
- [PAVE Security in Native and .NET Framework Code](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784) (PAVE Segurança no código nativo e do .NET Framework)  
+ [PAVE Security in Native and .NET Framework Code](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784) (PAVE Segurança no código nativo e do .NET Framework)  
  [SQL Server Security](../../../../docs/framework/data/adonet/sql/sql-server-security.md) (Segurança do SQL Server)  
  [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

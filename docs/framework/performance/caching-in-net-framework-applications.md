@@ -18,11 +18,11 @@ author: tdykstra
 ms.author: tdykstra
 manager: wpickett
 ms.workload: tdykstra
-ms.openlocfilehash: d72099543292a89f930135689358b37f87aac44f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9429a1a1eeef82c7587ef573f6413e45a4e97a91
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="caching-in-net-framework-applications"></a>Armazenamento em cache em aplicativos do .NET Framework
 O cache permite que você armazene dados na memória para acesso rápido. Quando os dados são acessados novamente, os aplicativos podem obter os dados do cache, em vez de recuperá-los da fonte original. Isso pode melhorar o desempenho e a escalabilidade. Além disso, o cache torna os dados disponíveis quando a fonte de dados está temporariamente indisponível.  
@@ -64,7 +64,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
 >  Ao desenvolver novos aplicativos, recomendamos o uso da classe <xref:System.Runtime.Caching.MemoryCache>. A API fornecida no namespace <xref:System.Runtime.Caching> é como a API fornecida no namespace <xref:System.Web.Caching.Cache>. Portanto, a API será familiar se você usou o cache em versões anteriores do ASP.NET. Para obter um exemplo de como usar o cache em aplicativos ASP.NET, consulte [Passo a passo: Armazenando dados de aplicativo em cache no ASP.NET](http://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23).  
   
 ### <a name="output-caching"></a>Cache de saída  
- Para armazenar dados de aplicativo em cache manualmente, use a classe <xref:System.Runtime.Caching.MemoryCache> no ASP.NET. O ASP.NET também dá suporte ao cache de saída, que armazena a saída gerada de páginas, controles e respostas HTTP na memória. É possível configurar o cache de saída de forma declarativa em uma página da Web ASP.NET ou usando as configurações do arquivo Web.config. Para obter mais informações, consulte [Elemento outputCache para armazenar em cache (esquema de configurações do ASP.NET)](http://msdn.microsoft.com/en-us/47cd2b47-316f-4dfd-bbf8-539be3066fee).  
+ Para armazenar dados de aplicativo em cache manualmente, use a classe <xref:System.Runtime.Caching.MemoryCache> no ASP.NET. O ASP.NET também dá suporte ao cache de saída, que armazena a saída gerada de páginas, controles e respostas HTTP na memória. É possível configurar o cache de saída de forma declarativa em uma página da Web ASP.NET ou usando as configurações do arquivo Web.config. Para obter mais informações, consulte [Elemento outputCache para armazenar em cache (esquema de configurações do ASP.NET)](http://msdn.microsoft.com/library/47cd2b47-316f-4dfd-bbf8-539be3066fee).  
   
  O ASP.NET permite estender o cache de saída criando provedores de cache de saída personalizados. Usando provedores personalizados, você pode armazenar o conteúdo armazenado em cache usando outros dispositivos de armazenamento, como discos, armazenamento em nuvem e mecanismos de cache distribuído. Para criar um provedor de cache de saída personalizado, crie uma classe que é derivada da classe <xref:System.Web.Caching.OutputCacheProvider> e configure o aplicativo para usar o provedor de cache de saída personalizado.  
   

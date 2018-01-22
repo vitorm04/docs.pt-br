@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: fd5d812fbedcbef0f6ce10b324d60961eba804cf
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 2aab11481bb23228f9ad920c5d01ef7d345e05d3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-call-custom-database-functions"></a>Como: Funções de base de dados personalizados de chamada
 Este tópico descreve como chamar funções personalizados que são definidas na base de dados de dentro das consultas LINQ to Entities.  
@@ -38,14 +38,14 @@ Este tópico descreve como chamar funções personalizados que são definidas na
   
 2.  Declarar uma função em linguagem de definição de esquema de armazenamento (SSDL) do arquivo. edmx. O nome da função deve ser o mesmo que o nome da função declarada no base de dados.  
   
-     Para obter mais informações, consulte [elemento de função (SSDL)](http://msdn.microsoft.com/en-us/b60cfc3d-8b93-423e-8c99-b867256640a4).  
+     Para obter mais informações, consulte [elemento de função (SSDL)](http://msdn.microsoft.com/library/b60cfc3d-8b93-423e-8c99-b867256640a4).  
   
 3.  Adicione um método correspondente a uma classe em seu código do aplicativo e aplicar <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> a nota de método que os parâmetros de <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> e de <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> de atributo é o nome do espaço do modelo conceitual e o nome da função no modelo conceitual respectivamente. A resolução de nomes de função para LINQ diferencia maiúsculas de minúsculas.  
   
 4.  Chame o método em uma consulta LINQ to Entities.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como chamar uma função de base de dados personalizado de uma consulta LINQ to Entities. O exemplo usa o modelo de escola. Para obter informações sobre o modelo de escola, consulte [criando o banco de dados de exemplo School](http://msdn.microsoft.com/en-us/c1bec483-a0ea-4660-aa0b-7b0a8b68fed0) e [gerando o EDMX escola arquivo](http://msdn.microsoft.com/en-us/c48b3907-a8be-4fe6-884c-e95af1852758).  
+ O exemplo a seguir demonstra como chamar uma função de base de dados personalizado de uma consulta LINQ to Entities. O exemplo usa o modelo de escola. Para obter informações sobre o modelo de escola, consulte [criando o banco de dados de exemplo School](http://msdn.microsoft.com/library/c1bec483-a0ea-4660-aa0b-7b0a8b68fed0) e [gerando o EDMX escola arquivo](http://msdn.microsoft.com/library/c48b3907-a8be-4fe6-884c-e95af1852758).  
   
  O código a seguir adiciona a função de `AvgStudentGrade` a base de dados de exemplo de escola.  
   
@@ -72,5 +72,5 @@ Este tópico descreve como chamar funções personalizados que são definidas na
  [!code-vb[DP L2E MapToDBFunction#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e maptodbfunction/vb/module1.vb#4)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral do arquivo. edmx](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+ [Visão geral do arquivo. edmx](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
  [Consultas no LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

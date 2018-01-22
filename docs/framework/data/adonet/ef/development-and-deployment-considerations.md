@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: e6c494354532ffdeffdc714f748c5b009511443a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 6d0d1a4a604549f18e48d690753451be4c98f280
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="development-and-deployment-considerations"></a>Considerações de desenvolvimento e implantação
 Os tópicos nessa seção resolvem os problema a serem considerados ao desenvolver ou implantando um aplicativo baseado no ADO.NET Entity Framework.  
@@ -36,4 +36,4 @@ Os tópicos nessa seção resolvem os problema a serem considerados ao desenvolv
  [Entity Framework do ADO.NET](../../../../../docs/framework/data/adonet/ef/index.md)  
  [Visão geral do Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)  
  [Introdução](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- [ADO.NET Entity Data Model Tools](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527) (Ferramentas de modelo de dados de entidade do ADO.NET)
+ [ADO.NET Entity Data Model Tools](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) (Ferramentas de modelo de dados de entidade do ADO.NET)

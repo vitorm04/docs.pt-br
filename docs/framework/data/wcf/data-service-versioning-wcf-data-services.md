@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 824abc79ae8d7ddd36b907977057a659aca86f20
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 73e394c4d0a7f78fca7c8c70f68bfc16da556d8d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Controle de versão de serviço de dados (WCF Data Services)
 O [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] permite criar serviços de dados para que os clientes possam acessar dados como usando URIs de recursos com base em um modelo de dados. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]também suporta a definição de operações de serviço. Após a implantação inicial e potencialmente várias vezes durante a vida útil, esses serviços de dados podem precisar ser alterada para uma variedade de motivos, como alterar as necessidades de negócios, requisitos de tecnologia da informação, ou para solucionar outros problemas. Quando você faz alterações a um serviço de dados existente, você deve considerar se deseja definir uma nova versão de seus dados de serviço e a melhor maneira de minimizar o impacto nos aplicativos cliente existentes. Este tópico fornece orientações sobre quando e como criar uma nova versão de um serviço de dados. Ele também descreve como [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] manipula uma troca entre clientes e serviços de dados que oferecem suporte a versões diferentes do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protocolo.  
@@ -80,7 +80,7 @@ O [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] permite criar 
 |Versão 3|-Você pode baixar e instalar uma versão de pré-lançamento que dá suporte a [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] versão 3 do [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=203885).|  
   
 ### <a name="metadata-versions"></a>Versões de metadados  
- Por padrão, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa a versão 1.1 do CSDL para representar um modelo de dados. Isso é sempre o caso para modelos de dados se baseiam em um provedor de reflexão ou um provedor de serviços de dados personalizados. No entanto, quando o modelo de dados é definido usando o [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], a versão de CSDL retornado é o mesmo que a versão que é usada pelo [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]. A versão de CSDL é determinada pelo namespace do [elemento Schema](http://msdn.microsoft.com/en-us/396074d8-f99c-4f50-a073-68bce848224f). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]a especificação de [ \[MC CSDL\]: formato de arquivo de definição de esquema conceitual](http://go.microsoft.com/fwlink/?LinkId=159072).  
+ Por padrão, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa a versão 1.1 do CSDL para representar um modelo de dados. Isso é sempre o caso para modelos de dados se baseiam em um provedor de reflexão ou um provedor de serviços de dados personalizados. No entanto, quando o modelo de dados é definido usando o [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], a versão de CSDL retornado é o mesmo que a versão que é usada pelo [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]. A versão de CSDL é determinada pelo namespace do [elemento Schema](http://msdn.microsoft.com/library/396074d8-f99c-4f50-a073-68bce848224f). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]a especificação de [ \[MC CSDL\]: formato de arquivo de definição de esquema conceitual](http://go.microsoft.com/fwlink/?LinkId=159072).  
   
  O `DataServices` elemento de metadados retornados também contém um `DataServiceVersion` atributo, que é o mesmo valor como o `DataServiceVersion` cabeçalho na mensagem de resposta. Aplicativos cliente, como o **adicionar referência de serviço** da caixa de diálogo [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], use essas informações para gerar classes de serviço de dados do cliente que funcionam corretamente com a versão do [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] que hospedam o serviço de dados. Para obter mais informações, consulte [OData: controle de versão de protocolo](http://go.microsoft.com/fwlink/?LinkId=186071).  
   

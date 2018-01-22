@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2e78ce6b61ed1c6755072729b08a76d402e021b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cdb8d96b6d58afa86463243a385799950fb0fda0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="timer-component-windows-forms"></a>Componente Temporizador (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.Timer> é um componente que gera um evento em intervalos regulares. Esse componente foi projetado para um ambiente do Windows Forms.  
@@ -48,5 +48,5 @@ Windows Forms <xref:System.Windows.Forms.Timer> é um componente que gera um eve
  [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.  
   
- [Controle de timer para usuários do Visual Basic 6.0](http://msdn.microsoft.com/en-us/38e5184a-1e50-45cf-b936-dae566c0cfc5)  
+ [Controle de timer para usuários do Visual Basic 6.0](http://msdn.microsoft.com/library/38e5184a-1e50-45cf-b936-dae566c0cfc5)  
  Descreve como a funcionalidade de temporizador foi alterado no Visual Basic em comparação com versões anteriores.

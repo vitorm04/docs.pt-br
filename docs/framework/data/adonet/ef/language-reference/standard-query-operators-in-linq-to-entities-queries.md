@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d61dbe2051109273a8616336e0efb46f7bd20864
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 94a024081acfcf4b1926f485c6dbfc2f394b418c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Operadores de consulta padrão em consultas LINQ to Entities
 Em uma consulta, você especifica as informações que deseja recuperar da fonte de dados. Uma consulta também pode especificar como essas informações devem ser classificadas, agrupadas e moldadas antes de serem retornadas. A sintaxe de consulta LINQ fornece um conjunto de métodos de consulta padrão que você pode usar em uma consulta. A maioria desses métodos operam em sequências; Nesse contexto, uma sequência é um objeto cujo tipo implementa o <xref:System.Collections.Generic.IEnumerable%601> interface ou <xref:System.Linq.IQueryable%601> interface. A funcionalidade de consulta de operadores de consulta padrão inclui filtragem, projeção, agregação, classificação, agrupamento, paginação e muito mais. Alguns dos operadores de consulta padrão mais usados possuem sintaxe de palavra-chave dedicada para que possam ser chamados por meio da sintaxe da expressão de consulta. Uma expressão de consulta é uma maneira diferente e mais legível de expressar uma consulta do que o equivalente baseado em método. As cláusulas de expressão de consulta são convertidas em chamadas para os métodos de consulta em tempo de compilação. Para obter uma lista de operadores de consulta padrão com as cláusulas de expressão de consulta equivalente, consulte [visão geral de operadores de consulta padrão](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
@@ -78,7 +78,7 @@ Em uma consulta, você especifica as informações que deseja recuperar da fonte
 |`Sum`|Retorna um valor nulo.|Retorna um valor nulo.|Retorna a soma do valor não nulo em uma sequência.|Computa a soma de uma sequência de valores numéricos.|  
   
 ## <a name="type-methods"></a>Métodos de tipo  
- Há suporte para os dois métodos LINQ que tratam da conversão e do teste de tipos no contexto do [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Isso significa que os únicos tipos com suporte são aqueles que mapeiam para o tipo [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] apropriado. Para obter uma lista desses tipos, consulte [tipos de modelo conceitual (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4). Os métodos de tipo são `Convert` e `OfType`.  
+ Há suporte para os dois métodos LINQ que tratam da conversão e do teste de tipos no contexto do [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Isso significa que os únicos tipos com suporte são aqueles que mapeiam para o tipo [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] apropriado. Para obter uma lista desses tipos, consulte [tipos de modelo conceitual (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). Os métodos de tipo são `Convert` e `OfType`.  
   
  Há suporte para `OfType` em tipos de entidade. Há suporte para `Convert` em tipos primitivos de modelo conceitual.  Também há suporte para os métodos C# `is` e `as`.  
   

@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 975c5ea5d5b3ab81d37b713e84f273e4c2c1c0b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba057a0b96d393a5efbaf054e75c34f446c7dde6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Como fazer intercâmbio de mensagens em fila com pontos de extremidade do WCF
 Filas Certifique-se de que o sistema de mensagens confiável pode ocorrer entre um cliente e um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] de serviço, mesmo se o serviço não está disponível no momento da comunicação. Os procedimentos a seguir mostram como garantir a comunicação durável entre um cliente e um serviço usando o padrão na fila associação ao implementar o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.  
@@ -52,7 +52,7 @@ Filas Certifique-se de que o sistema de mensagens confiável pode ocorrer entre 
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5.  Definir um <xref:System.ServiceModel.Description.ServiceEndpoint> na configuração que especifica o endereço do serviço e usa o padrão de <xref:System.ServiceModel.NetMsmqBinding> associação. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]usando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configuração, consulte [Configurando o Windows Communication Foundation aplicativos](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+5.  Definir um <xref:System.ServiceModel.Description.ServiceEndpoint> na configuração que especifica o endereço do serviço e usa o padrão de <xref:System.ServiceModel.NetMsmqBinding> associação. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]usando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configuração, consulte [Configurando o Windows Communication Foundation aplicativos](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
   
   
@@ -101,6 +101,6 @@ Filas Certifique-se de que o sistema de mensagens confiável pode ocorrer entre 
  [Como trocar mensagens com pontos de extremidade do WCF e aplicativos de enfileiramento de mensagens](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
  [Windows Communication Foundation para Enfileiramento de Mensagens](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  [Instalando o Enfileiramento de Mensagens (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [Exemplos de associação de integração de serviço de enfileiramento de mensagem](http://msdn.microsoft.com/en-us/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
+ [Exemplos de associação de integração de serviço de enfileiramento de mensagem](http://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
  [Enfileiramento de mensagens para o Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
  [Segurança de mensagem através do enfileiramento de mensagem](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

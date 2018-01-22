@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9b6b9ddd27422c09f21833548634afd7945afa89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b5b27a51dcec17f72b86e77a7ee2ab773aec1dc3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] (anteriormente conhecido como "ADO.NET Data Services") é um componente do .NET Framework que permite criar serviços que usam o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para expor e consumir dados na Web ou na intranet usando a semântica de [REST (Transferência de Estado Representacional)](http://go.microsoft.com/fwlink/?LinkId=113919). O [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] expõe dados como recursos endereçáveis por URIs. Os dados são acessados e alterados usando os verbos HTTP padrão GET, PUT, POST e DELETE. O [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usa as convenções de relacionamento de entidade do [Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model.md) para expor recursos como conjuntos de entidades relacionadas por associações.  
@@ -120,7 +120,7 @@ O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] (anteriormente con
  [Visão Geral](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
  Apresenta uma visão geral dos recursos e da funcionalidade disponíveis no [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
- [What's New in WCF Data Services](http://msdn.microsoft.com/en-us/cf22cad5-b8d9-472b-8d7c-b863b64eaae8) (Novidades no WCF Data Services)  
+ [What's New in WCF Data Services](http://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8) (Novidades no WCF Data Services)  
  Descreve as novas funcionalidades no [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] e o suporte para novos recursos do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
   
  [Introdução](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  

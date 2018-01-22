@@ -1,5 +1,5 @@
 ---
-title: '&lt;qualifyAssembly&gt; elemento'
+title: '&lt;qualifyAssembly&gt; Element'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -21,19 +21,19 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7da2e1ac5c16f6e481c974794efceb12f102b1a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7dd24ae9e5659deff7ddbe4183c70d5b442542cd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="ltqualifyassemblygt-element"></a>&lt;qualifyAssembly&gt; elemento
+# <a name="ltqualifyassemblygt-element"></a>&lt;qualifyAssembly&gt; Element
 Especifica o nome completo do assembly que deve ser carregado dinamicamente quando um nome parcial é usado.  
   
  \<configuration>  
-\<tempo de execução >  
-\<assemblyBinding >  
-\<qualifyAssembly >  
+\<runtime>  
+\<assemblyBinding>  
+\<qualifyAssembly>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -87,4 +87,4 @@ Especifica o nome completo do assembly que deve ser carregado dinamicamente quan
 ## <a name="see-also"></a>Consulte também  
  [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Como o tempo de execução localiza assemblies](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [NIB: Referências de Assembly parcial](http://msdn.microsoft.com/en-us/ec90f07a-398c-4306-9401-0fc5ff9cb59f)
+ [NIB: Referências de Assembly parcial](http://msdn.microsoft.com/library/ec90f07a-398c-4306-9401-0fc5ff9cb59f)

@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 31dd8d636a64b54c914d48b4faee95f82de680fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4375803ab51b139a66ac789f0670fce1e5f64682
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="richtextbox-how-to-topics"></a>Tópicos explicativos RichTextBox
 Esta seção fornece exemplos que demonstram como realizar tarefas comuns usando o <xref:System.Windows.Controls.RichTextBox> controle.  
@@ -32,7 +32,7 @@ Esta seção fornece exemplos que demonstram como realizar tarefas comuns usando
  [Alterar a seleção em um RichTextBox com programação](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
  [Salvar, carregar e imprimir conteúdo RichTextBox](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  
  [Posicionar um menu de contexto personalizado em um RichTextBox](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
- [Como: substituir o Host de conteúdo padrão para um controle RichTextBox](http://msdn.microsoft.com/en-us/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
+ [Como: substituir o Host de conteúdo padrão para um controle RichTextBox](http://msdn.microsoft.com/library/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Controls.TextBox>  

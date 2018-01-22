@@ -17,11 +17,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9776e900015dad8bce8c16991b8ce0aeb6067812
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 52ef9cce9ee28c6329f688bb9ac751f0f9016657
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltsupportportabilitygt-element"></a>&lt;supportPortability&gt; elemento
 Especifica que um aplicativo pode fazer referência ao mesmo assembly em duas implementações diferentes do .NET Framework, desabilitando o comportamento padrão que trata os assemblies como equivalentes para fins de portabilidade do aplicativo.  
@@ -44,8 +44,8 @@ Especifica que um aplicativo pode fazer referência ao mesmo assembly em duas im
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|PCT|Atributo obrigatório.<br /><br /> Especifica o token de chave pública do assembly afetado, como uma cadeia de caracteres.|  
-|Habilitado|Atributo opcional.<br /><br /> Especifica se o suporte para a portabilidade entre implementações de assembly do .NET Framework especificado deve ser habilitado.|  
+|PKT|Atributo obrigatório.<br /><br /> Especifica o token de chave pública do assembly afetado, como uma cadeia de caracteres.|  
+|habilitado|Atributo opcional.<br /><br /> Especifica se o suporte para a portabilidade entre implementações de assembly do .NET Framework especificado deve ser habilitado.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   
@@ -89,4 +89,4 @@ Especifica que um aplicativo pode fazer referência ao mesmo assembly em duas im
   
 ## <a name="see-also"></a>Consulte também  
  [/AppConfig (opções do compilador c#)](http://msdn.microsoft.com/library/ee523958.aspx)  
- [Visão geral do .NET framework Assembly Unificação](http://msdn.microsoft.com/en-us/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)
+ [Visão geral do .NET framework Assembly Unificação](http://msdn.microsoft.com/library/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)

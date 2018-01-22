@@ -20,11 +20,11 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 39645de71913baeaa39524e1cae081de9cac3442
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4447f648277576169c9004d1880283728639c8f3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="coropenflags-enumeration"></a>Enumeração CorOpenFlags
 Contém valores de sinalizadores que controlam o comportamento dos metadados ao abrir arquivos de manifesto.  
@@ -62,7 +62,7 @@ typedef enum CorOpenFlags
 |`ofCacheImage`|Obsoleto. Este sinalizador é ignorado.|  
 |`ofManifestMetadata`|Obsoleto. Este sinalizador é ignorado.|  
 |`ofReadOnly`|Indica que o arquivo deve ser aberto para leitura e que uma chamada para `QueryInterface` para um [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) não podem ser feitas.|  
-|`ofTakeOwnership`|Indica que a memória foi alocada usando uma chamada para [CoTaskMemAlloc](http://msdn.microsoft.com/en-us/c4cb588d-9482-4f90-a92e-75b604540d5c) e será liberado pelos metadados.|  
+|`ofTakeOwnership`|Indica que a memória foi alocada usando uma chamada para [CoTaskMemAlloc](http://msdn.microsoft.com/library/c4cb588d-9482-4f90-a92e-75b604540d5c) e será liberado pelos metadados.|  
 |`ofNoTypeLib`|Obsoleto. Este sinalizador é ignorado.|  
 |`ofNoTransform`|Indica se as transformações automáticas de arquivos .winmd devem ser desabilitadas. Em outras palavras, a projeção de um tipo de Tempo de Execução do Windows para um tipo de .NET Framework deve ser desabilitada. Para obter mais informações, consulte [sob o escopo com o .NET e o tempo de execução do Windows](http://msdn.microsoft.com/magazine/jj651569.aspx).|  
 |`ofReserved1`|Reservado para uso interno.|  

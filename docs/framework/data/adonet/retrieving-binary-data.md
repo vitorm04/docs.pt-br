@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b32002b8bb9b1eaf7a72a8fac306ecdd5f2e5931
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f91f23906a6d52a66a3cf972fe5636926dba4112
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="retrieving-binary-data"></a>Recuperando dados binários
 Por padrão, o **DataReader** carrega os dados de entrada como uma linha, como uma linha inteira de dados está disponível. Os blobs precisam de tratamento diferente, no entanto, porque podem conter gigabytes de dados que não podem ser contidos em uma única linha. O **ExecuteReader** método tem uma sobrecarga que levará um <xref:System.Data.CommandBehavior> argumento para modificar o comportamento padrão da **DataReader**. Você pode passar <xref:System.Data.CommandBehavior.SequentialAccess> para o **ExecuteReader** método para modificar o comportamento padrão da **DataReader** para que, em vez de carregamento de linhas de dados, ela carregará dados sequencialmente conforme são recebido. Isso é ideal para carregar BLOBs ou outras estruturas grandes de dados. Observe que esse comportamento pode depender da sua fonte de dados. Por exemplo, retornar um BLOB do Microsoft Access carregará o BLOB inteiro que está sendo carregado na memória, em vez de em sequência à medida que é recebido.  
@@ -165,6 +165,6 @@ connection.Close();
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Trabalhando com DataReaders](http://msdn.microsoft.com/en-us/126a966a-d08d-4d22-a19f-f432908b2b54)  
+ [Trabalhando com DataReaders](http://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
  [SQL Server Binary and Large-Value Data](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md) (Dados binários e de valor grande do SQL Server)  
  [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

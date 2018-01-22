@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1eab181ec63da5f0494ce5c4acabe6c6f868be15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ea4e34049ef54cd6d161e381bf92818b5f3531c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 Este exemplo demonstra o `netNamedPipeBinding` associação, que fornece comunicação entre processos no mesmo computador. Pipes nomeados não funcionam em computadores. Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) serviço da Calculadora.  
@@ -29,7 +29,7 @@ Este exemplo demonstra o `netNamedPipeBinding` associação, que fornece comunic
 > [!NOTE]
 >  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
- A associação é especificada nos arquivos de configuração do cliente e do serviço. O tipo de associação é especificado no `binding` atributo do[\<ponto de extremidade >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento conforme mostrado no exemplo de configuração:  
+ A associação é especificada nos arquivos de configuração do cliente e do serviço. O tipo de associação é especificado no `binding` atributo do[\<ponto de extremidade >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento conforme mostrado no exemplo de configuração:  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  

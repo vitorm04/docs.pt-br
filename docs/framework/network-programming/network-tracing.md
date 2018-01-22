@@ -29,11 +29,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 24494ec700054f73e83e8cb8c33bd86eb265b8e1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ef5698300d7d3cb333bc7d58a782c02823718d8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="network-tracing-in-the-net-framework"></a>Rastreamento de rede no .NET Framework
 O rastreamento de rede no .NET Framework fornece acesso a informações sobre invocações de método e tráfego de rede geradas por um aplicativo gerenciado. Esse recurso é útil para a depuração de aplicativos em desenvolvimento e para analisar aplicativos implantados. A saída fornecida pelo rastreamento de rede é personalizável para oferecer suporte a diferentes cenários de uso em tempo de desenvolvimento e em um ambiente de produção.  
@@ -49,4 +49,4 @@ O rastreamento de rede no .NET Framework fornece acesso a informações sobre in
  [Habilitando o rastreamento de rede](../../../docs/framework/network-programming/enabling-network-tracing.md)  
  [Como configurar o rastreamento de rede](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
  [Interpretando o rastreamento de rede](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
- [Introdução à instrumentação e ao rastreamento](http://msdn.microsoft.com/en-us/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+ [Introdução à instrumentação e ao rastreamento](http://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
