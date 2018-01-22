@@ -5,16 +5,16 @@ keywords: "C#, Introdução, Lições, Interativo"
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/18/2017
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 4443609c9494ca93cbc5934dd62fedf434599962
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: 1218e8cf877ae102e927a591b38d4c0732e5288d
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="c-quick-starts"></a>Inícios rápidos de C# #
 
@@ -39,6 +39,12 @@ Este início rápido presume que você concluiu o tutorial [Olá, Mundo](hello-w
 O início rápido [Ramificações e loops](branches-and-loops.yml) ensina os conceitos básicos da seleção de diferentes caminhos de execução de código com base nos valores armazenados em variáveis. Você aprenderá os conceitos básicos do fluxo de controle, que são os fundamentos de como os programas tomam decisões e escolhem ações diferentes. Este guia de início rápido também está disponível [para execução local no seu computador](branches-and-loops-local.md).
 
 Para esta lição inicial, é preciso que você tenha concluído as lições [Olá, Mundo](hello-world.yml) e [Números em C#](numbers-in-csharp.yml).
+
+## <a name="interpolated-stringsinterpolated-stringsyml"></a>[Cadeias de caracteres interpoladas](interpolated-strings.yml)
+
+O início rápido de [cadeias de caracteres interpoladas](interpolated-strings.yml) mostra como inserir uma expressão em uma cadeia de caracteres maior. Você aprenderá como definir uma expressão interpolada, como criar uma cadeia de caracteres de resultado de uma cadeia de caracteres interpolada que tem uma ou mais expressões interpoladas e como controlar a formatação, a largura da coluna e o alinhamento de expressões incluídas na cadeia de caracteres de resultado. 
+
+Para esta lição inicial, é preciso que você tenha concluído as lições [Olá, Mundo](hello-world.yml), [Números em C#](numbers-in-csharp.yml) e [Ramificações e loops](branches-and-loops.yml).
 
 ## <a name="list-collectionlist-collectionyml"></a>[Coleções de lista](list-collection.yml)
 
