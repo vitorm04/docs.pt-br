@@ -18,24 +18,24 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: cd1cc6914a8bd22d1cc8787a45328716a6c4c97f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dd588ad47da3d8b603a4800eb294c45096de2489
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="listbox-how-to-topics"></a><span data-ttu-id="ee9d6-102">Tópicos explicativos ListBox</span><span class="sxs-lookup"><span data-stu-id="ee9d6-102">ListBox How-to Topics</span></span>
-<span data-ttu-id="ee9d6-103">Os tópicos nesta seção descrevem como usar o <xref:System.Windows.Controls.ListBox> controle para exibir listas de itens selecionáveis.</span><span class="sxs-lookup"><span data-stu-id="ee9d6-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListBox> control to display selectable lists of items.</span></span>  
+# <a name="listbox-how-to-topics"></a><span data-ttu-id="7fd37-102">Tópicos explicativos ListBox</span><span class="sxs-lookup"><span data-stu-id="7fd37-102">ListBox How-to Topics</span></span>
+<span data-ttu-id="7fd37-103">Os tópicos nesta seção descrevem como usar o <xref:System.Windows.Controls.ListBox> controle para exibir listas de itens selecionáveis.</span><span class="sxs-lookup"><span data-stu-id="7fd37-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListBox> control to display selectable lists of items.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ee9d6-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="ee9d6-104">In This Section</span></span>  
- [<span data-ttu-id="ee9d6-105">Associar um ListBox a dados</span><span class="sxs-lookup"><span data-stu-id="ee9d6-105">Bind a ListBox to Data</span></span>](../../../../docs/framework/wpf/controls/how-to-bind-a-listbox-to-data.md)  
- [<span data-ttu-id="ee9d6-106">Obter um ListBoxItem</span><span class="sxs-lookup"><span data-stu-id="ee9d6-106">Get a ListBoxItem</span></span>](../../../../docs/framework/wpf/controls/how-to-get-a-listboxitem.md)  
- [<span data-ttu-id="ee9d6-107">Como: adicionar dados a um ItemsControl</span><span class="sxs-lookup"><span data-stu-id="ee9d6-107">How to: Add Data to an ItemsControl</span></span>](http://msdn.microsoft.com/en-us/271e52ce-0f44-4b1f-a7da-0bc72bd9ed65)  
- [<span data-ttu-id="ee9d6-108">Melhorar o desempenho de rolagem de um ListBox</span><span class="sxs-lookup"><span data-stu-id="ee9d6-108">Improve the Scrolling Performance of a ListBox</span></span>](../../../../docs/framework/wpf/controls/how-to-improve-the-scrolling-performance-of-a-listbox.md)  
+## <a name="in-this-section"></a><span data-ttu-id="7fd37-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="7fd37-104">In This Section</span></span>  
+ [<span data-ttu-id="7fd37-105">Associar um ListBox a dados</span><span class="sxs-lookup"><span data-stu-id="7fd37-105">Bind a ListBox to Data</span></span>](../../../../docs/framework/wpf/controls/how-to-bind-a-listbox-to-data.md)  
+ [<span data-ttu-id="7fd37-106">Obter um ListBoxItem</span><span class="sxs-lookup"><span data-stu-id="7fd37-106">Get a ListBoxItem</span></span>](../../../../docs/framework/wpf/controls/how-to-get-a-listboxitem.md)  
+ [<span data-ttu-id="7fd37-107">Como: adicionar dados a um ItemsControl</span><span class="sxs-lookup"><span data-stu-id="7fd37-107">How to: Add Data to an ItemsControl</span></span>](http://msdn.microsoft.com/library/271e52ce-0f44-4b1f-a7da-0bc72bd9ed65)  
+ [<span data-ttu-id="7fd37-108">Melhorar o desempenho de rolagem de um ListBox</span><span class="sxs-lookup"><span data-stu-id="7fd37-108">Improve the Scrolling Performance of a ListBox</span></span>](../../../../docs/framework/wpf/controls/how-to-improve-the-scrolling-performance-of-a-listbox.md)  
   
-## <a name="reference"></a><span data-ttu-id="ee9d6-109">Referência</span><span class="sxs-lookup"><span data-stu-id="ee9d6-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="7fd37-109">Referência</span><span class="sxs-lookup"><span data-stu-id="7fd37-109">Reference</span></span>  
  <xref:System.Windows.Controls.ListBox>  
   
  <xref:System.Windows.Controls.ListBoxItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="ee9d6-110">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="ee9d6-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="7fd37-110">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="7fd37-110">Related Sections</span></span>
