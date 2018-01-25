@@ -14,19 +14,19 @@ ms.assetid: 426afb36-a8fb-469d-9c45-a35d9512557c
 caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a473c02dba1b69a34d601b4d49e02cc202eeb158
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2585e494cc87978b47fe2de5a05b6d2e031c8929
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="nologo-c-compiler-options"></a>/nologo (opções do compilador C#)
-A opção **/nologo** inibe a exibição da faixa de conexão quando o compilador é iniciado e a exibição de mensagens informativas durante a compilação.  
+# <a name="-nologo-c-compiler-options"></a>-nologo (opções do compilador C#)
+A opção **-nologo** inibe a exibição da faixa de conexão quando o compilador é iniciado e inibe a exibição de mensagens informativas durante a compilação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```console  
-/nologo  
+-nologo  
 ```  
   
 ## <a name="remarks"></a>Comentários  

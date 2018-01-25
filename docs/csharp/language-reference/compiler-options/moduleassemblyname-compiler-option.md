@@ -13,19 +13,19 @@ ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
 caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c8ebd6f7498adead4586c9e90ec58ca8efe81aaa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ef68b6a75d9f5bd65e7d549240dc061097f2d30c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="moduleassemblyname-c-compiler-option"></a>/moduleassemblyname (Opção do compilador de C#)
+# <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (opção do compilador C#)
 Especifica um assembly cujos tipos não públicos podem ser acessados por um .netmodule.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```console  
-/moduleassemblyname:assembly_name  
+-moduleassemblyname:assembly_name  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -33,7 +33,7 @@ Especifica um assembly cujos tipos não públicos podem ser acessados por um .ne
  O nome do assembly cujos tipos não públicos podem ser acessados por um .netmodule.  
   
 ## <a name="remarks"></a>Comentários  
- O **/moduleassemblyname** deverá ser usado ao compilar um .netmodule e quando as condições a seguir forem true:  
+ O **-moduleassemblyname** deverá ser usado ao compilar um .netmodule e quando as condições a seguir forem true:  
   
 -   O .netmodule precisa acessar tipos não públicos em um assembly existente.  
   
@@ -41,7 +41,7 @@ Especifica um assembly cujos tipos não públicos podem ser acessados por um .ne
   
 -   O assembly existente concedeu acesso de assembly amigável ao assembly no qual o .netmodule será compilado.  
   
- Para obter mais informações sobre a compilação de um .netmodule, consulte [/target:module (Opções do Compilador C#)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
+ Para obter mais informações sobre a compilação de um .netmodule, consulte [-target:module (Opções do compilador do C#)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
   
  Para obter mais informações sobre assemblies amigos, consulte [Assemblies Amigáveis](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
   
@@ -54,7 +54,7 @@ Especifica um assembly cujos tipos não públicos podem ser acessados por um .ne
   
 ```csharp  
 // moduleassemblyname_1.cs  
-// compile with: /target:library  
+// compile with: -target:library  
 using System;  
 using System.Runtime.CompilerServices;  
   
@@ -70,11 +70,11 @@ class An_Internal_Class
 ```  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo compila um .netmodule que acessa um tipo não público no assembly moduleassemblyname_1.dll. Sabendo que esse .netmodule será compilado dentro de um assembly chamado csman_an_assembly, é possível especificar **/moduleassemblyname**, permitindo que o .netmodule acesse tipos não públicos em um assembly que tenha concedido acesso de assembly amigável ao csman_an_assembly.  
+ Este exemplo compila um .netmodule que acessa um tipo não público no assembly moduleassemblyname_1.dll. Sabendo que esse .netmodule será compilado dentro de um assembly chamado csman_an_assembly, é possível especificar **-moduleassemblyname**, permitindo que o .netmodule acesse tipos não públicos em um assembly que tenha concedido acesso de assembly amigável ao csman_an_assembly.  
   
 ```csharp  
 // moduleassemblyname_2.cs  
-// compile with: /moduleassemblyname:csman_an_assembly /target:module /reference:moduleassemblyname_1.dll  
+// compile with: -moduleassemblyname:csman_an_assembly -target:module -reference:moduleassemblyname_1.dll  
 class B {  
     public void Test() {  
         An_Internal_Class x = new An_Internal_Class();  
@@ -88,7 +88,7 @@ class B {
   
 ```csharp  
 // csman_an_assembly.cs  
-// compile with: /addmodule:moduleassemblyname_2.netmodule /reference:moduleassemblyname_1.dll  
+// compile with: -addmodule:moduleassemblyname_2.netmodule -reference:moduleassemblyname_1.dll  
 class A {  
     public static void Main() {  
         B bb = new B();  

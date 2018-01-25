@@ -4,16 +4,16 @@ description: "Neste início rápido sobre branches e loops, você escreve códig
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 7954475616b122f8bb96ad00d05b476b3beeb52c
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: 609c8625b19025a20c1da1e767870eafbab4c4a0
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="branches-and-loops"></a>Loops e branches
 
@@ -254,7 +254,7 @@ Tente você mesmo. Depois verifique como você fez. Você deve obter 63 como res
 
 Você concluiu o início rápido "branches e loops".
 
-Continue com o início rápido [Matrizes e coleções](arrays-and-collections.md) em seu próprio ambiente de desenvolvimento.
+Continue com o início rápido [Cadeias de caracteres interpoladas](interpolated-strings-local.md) em seu próprio ambiente de desenvolvimento.
 
 Saiba mais sobre esses conceitos nestes tópicos:
 

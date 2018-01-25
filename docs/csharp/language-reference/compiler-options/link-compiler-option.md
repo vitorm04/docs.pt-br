@@ -17,21 +17,21 @@ ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
 caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 229bd7e6a7f3691bcb4e6c6dab6f9f36dc3d45f5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 12ba3762a1c514c52b844a30efc9f49648c51b46
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="link-c-compiler-options"></a>/link (opções do compilador C#)
+# <a name="-link-c-compiler-options"></a>-link (opções do compilador C#)
 Faz com que o compilador disponibilize as informações de tipo COM nos assemblies especificados para o projeto sendo compilado no momento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```console  
-/link:fileList  
+-link:fileList  
 // -or-  
-/l:fileList  
+-l:fileList  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -39,16 +39,16 @@ Faz com que o compilador disponibilize as informações de tipo COM nos assembli
  Necessário. Lista delimitada por vírgulas de nomes de arquivo do assembly. Se o nome do arquivo contém um espaço, coloque o nome entre aspas.  
   
 ## <a name="remarks"></a>Comentários  
- A opção `/link` permite que você implante um aplicativo que inseriu informações de tipo. O aplicativo pode usar tipos em um assembly de tempo de execução que implementa as informações de tipo inseridas sem a necessidade de uma referência ao assembly de tempo de execução. Se forem publicadas várias versões do assembly de tempo de execução, o aplicativo que contém as informações de tipo inseridas poderá trabalhar com as várias versões sem precisar ser recompilado. Para obter um exemplo, consulte [Instruções passo a passo: Inserindo tipos de assemblies gerenciado](../../programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).  
+ A opção `-link` permite que você implante um aplicativo que inseriu informações de tipo. O aplicativo pode usar tipos em um assembly de tempo de execução que implementa as informações de tipo inseridas sem a necessidade de uma referência ao assembly de tempo de execução. Se forem publicadas várias versões do assembly de tempo de execução, o aplicativo que contém as informações de tipo inseridas poderá trabalhar com as várias versões sem precisar ser recompilado. Para obter um exemplo, consulte [Instruções passo a passo: Inserindo tipos de assemblies gerenciado](../../programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).  
   
- Usar a opção `/link` é especialmente útil quando você está trabalhando com a interoperabilidade COM. Você pode inserir tipos COM para que seu aplicativo não precise mais de um PIA (assembly de interoperabilidade primário) no computador de destino. A opção `/link` instrui o compilador a inserir as informações de tipo de COM do assembly de interoperabilidade referenciado no código compilado resultante. O tipo COM é identificado pelo valor CLSID (GUID). Como resultado, o aplicativo pode ser executado em um computador de destino que tem os mesmos tipos COM instalados com os mesmos valores CLSID. Os aplicativos que automatizam o Microsoft Office são um bom exemplo. Como aplicativos como o Office normalmente mantêm o mesmo valor CLSID entre diferentes versões, seu aplicativo pode usar os tipos COM referenciados contanto que o .NET Framework 4 ou posterior esteja instalado no computador de destino e seu aplicativo use métodos, propriedades ou eventos que estão incluídos nos tipos COM referenciados.  
+ Usar a opção `-link` é especialmente útil quando você está trabalhando com a interoperabilidade COM. Você pode inserir tipos COM para que seu aplicativo não precise mais de um PIA (assembly de interoperabilidade primário) no computador de destino. A opção `-link` instrui o compilador a inserir as informações de tipo de COM do assembly de interoperabilidade referenciado no código compilado resultante. O tipo COM é identificado pelo valor CLSID (GUID). Como resultado, o aplicativo pode ser executado em um computador de destino que tem os mesmos tipos COM instalados com os mesmos valores CLSID. Os aplicativos que automatizam o Microsoft Office são um bom exemplo. Como aplicativos como o Office normalmente mantêm o mesmo valor CLSID entre diferentes versões, seu aplicativo pode usar os tipos COM referenciados contanto que o .NET Framework 4 ou posterior esteja instalado no computador de destino e seu aplicativo use métodos, propriedades ou eventos que estão incluídos nos tipos COM referenciados.  
   
- A opção `/link` incorpora apenas interfaces, estruturas e delegados. Não há suporte para a inserção de classes COM.  
+ A opção `-link` incorpora apenas interfaces, estruturas e delegados. Não há suporte para a inserção de classes COM.  
   
 > [!NOTE]
 >  Quando você cria uma instância de um tipo COM inserido no seu código, você deve criar a instância usando a interface apropriada. Tentar criar uma instância de um tipo COM inserido usando o CoClass causa um erro.  
   
- Para definir a opção `/link` em [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], adicione uma referência de assembly e defina a propriedade `Embed Interop Types` como **true**. O valor padrão da propriedade `Embed Interop Types` é **false**.  
+ Para definir a opção `-link` em [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], adicione uma referência de assembly e defina a propriedade `Embed Interop Types` como **true**. O valor padrão da propriedade `Embed Interop Types` é **false**.  
   
  Se você vincular a um assembly COM (Assembly A) que em si faz referência a outro assembly COM (Assembly B), também precisará vincular ao Assembly B se uma das seguintes opções for verdadeira:  
   
@@ -56,9 +56,9 @@ Faz com que o compilador disponibilize as informações de tipo COM nos assembli
   
 -   Um campo, propriedade, evento ou método que tem um tipo de retorno ou de parâmetro do Assembly B é invocado.  
   
- Como a opção do compilador [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md), a opção do compilador `/link` usa o arquivo de resposta Csc.rsp, que faz referência a assemblies [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] usados com frequência. Use a opção do compilador [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) se não desejar que o compilador use o arquivo Csc.rsp.  
+ Como a opção do compilador [-reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md), a opção do compilador `-link` usa o arquivo de resposta Csc.rsp, que faz referência a assemblies [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] usados com frequência. Use a opção do compilador [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) se não quiser que o compilador use o arquivo Csc.rsp.  
   
- A forma abreviada de `/link` é `/l`.  
+ A forma abreviada de `-link` é `-l`.  
   
 ## <a name="generics-and-embedded-types"></a>Tipos genéricos e inseridos  
  As seções a seguir descrevem as limitações no uso de tipos genéricos em aplicativos que inserem tipos de interoperabilidade.  
@@ -83,13 +83,13 @@ Faz com que o compilador disponibilize as informações de tipo COM nos assembli
  O código a seguir compila o arquivo de origem `OfficeApp.cs` e faz referência aos assemblies de `COMData1.dll` e `COMData2.dll` para produzir `OfficeApp.exe`.  
   
 ```csharp  
-csc /link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.cs  
+csc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.cs  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
  [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
  [Instruções passo a passo: inserindo tipos de assemblies gerenciados](../../programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
- [/reference (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)  
- [/noconfig (opções do compilador c#)](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)  
+ [-reference (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)  
+ [-noconfig (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)  
  [Build pela linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
  [Visão geral sobre interoperabilidade](../../../csharp/programming-guide/interop/interoperability-overview.md)

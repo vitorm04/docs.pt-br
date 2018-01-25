@@ -13,19 +13,19 @@ ms.assetid: 4e8212e5-04e3-45b1-8a42-41bc50e683b0
 caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a053e5676b10de3bd2eecf6de8be7a30329962af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b50454112bc7aee6c3e0f8fe674e8727ca9e49be
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="recurse-c-compiler-options"></a>/recurse (opções do compilador C#)
-A opção /recurse permite compilar arquivos de código-fonte em todos os diretórios filho do diretório especificado (dir) ou do diretório do projeto.  
+# <a name="-recurse-c-compiler-options"></a>-recurse (opções do compilador C#)
+A opção -recurse permite compilar arquivos de código-fonte em todos os diretórios filho do diretório especificado (dir) ou do diretório do projeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```console  
-/recurse:[dir\]file  
+-recurse:[dir\]file  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -36,9 +36,9 @@ A opção /recurse permite compilar arquivos de código-fonte em todos os diret�
  Os arquivos a serem pesquisados. São permitidos caracteres curinga.  
   
 ## <a name="remarks"></a>Comentários  
- A opção **/recurse** permite compilar arquivos de código-fonte em todos os diretórios filho do diretório especificado (`dir`) ou do diretório do projeto.  
+ A opção **-recurse** permite compilar arquivos de código-fonte em todos os diretórios filho do diretório especificado (`dir`) ou do diretório do projeto.  
   
- É possível usar curingas em um nome de arquivo para compilar todos os arquivos correspondentes no diretório do projeto sem usar **/recurse**.  
+ É possível usar curingas em um nome de arquivo para compilar todos os arquivos correspondentes no diretório do projeto sem usar **-recurse**.  
   
  Essa opção do compilador não está disponível no Visual Studio e não pode ser alterada programaticamente.  
   
@@ -52,7 +52,7 @@ csc *.cs
  Compila todos os arquivos C# no diretório dir1\dir2 e quaisquer diretórios abaixo dele e gera dir2.dll:  
   
 ```console  
-csc /target:library /out:dir2.dll /recurse:dir1\dir2\*.cs  
+csc -target:library -out:dir2.dll -recurse:dir1\dir2\*.cs  
 ```  
   
 ## <a name="see-also"></a>Consulte também  

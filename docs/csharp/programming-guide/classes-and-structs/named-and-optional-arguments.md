@@ -19,11 +19,11 @@ ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
 caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e6fceb569a79b5988171f06ae6c09d86b5fc667d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e4c57efa4027af5dd6b0476eb65845a39fc0b691
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argumentos nomeados e opcionais (Guia de Programação em C#)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] apresenta argumentos nomeados e opcionais. *Argumentos nomeados* permitem especificar um argumento para um parâmetro específico associando o argumento ao nome do parâmetro e não com à posição do parâmetro na lista de parâmetros. *Argumentos opcionais* permitem omitir argumentos para alguns parâmetros. Ambas as técnicas podem ser usadas com os métodos, indexadores, construtores e delegados.  
@@ -33,29 +33,29 @@ ms.lasthandoff: 11/21/2017
  Os parâmetros nomeados e opcionais, quando usados em conjunto, permitem que você forneça argumentos para apenas alguns parâmetros de uma lista de parâmetros opcionais. Essa capacidade facilita bastante a chamadas para interfaces COM como as APIs de Automação do Microsoft Office.  
   
 ## <a name="named-arguments"></a>Argumentos nomeados  
- Os argumentos nomeados liberam você da necessidade de lembrar ou procurar a ordem dos parâmetros nas listas de parâmetros de métodos chamados. O parâmetro para cada argumento pode ser especificado pelo nome do parâmetro. Por exemplo, uma função que imprime os detalhes do pedido (como o nome do vendedor, nome de produto & número de ordem) pode ser chamado da maneira padrão enviando argumentos por posição, na ordem definida pela função.
+ Os argumentos nomeados liberam você da necessidade de lembrar ou procurar a ordem dos parâmetros nas listas de parâmetros de métodos chamados. O parâmetro para cada argumento pode ser especificado pelo nome do parâmetro. Por exemplo, uma função que imprime detalhes de pedidos (como o nome do vendedor, nome do produto e número do pedido) pode ser chamada da maneira padrão, por meio do envio de argumentos por posição, na ordem definida pela função.
   
  `PrintOrderDetails("Gift Shop", 31, "Red Mug");`
   
- Se você não lembrar a ordem dos parâmetros, mas souber seus nomes, você pode enviar os argumentos em qualquer ordem.  
+ Se não se lembrar da ordem dos parâmetros, mas souber os nomes, você poderá enviar os argumentos em qualquer ordem.  
   
  `PrintOrderDetails(orderNum: 31, productName: "Red Mug", sellerName: "Gift Shop");`
   
  `PrintOrderDetails(productName: "Red Mug", sellerName: "Gift Shop", orderNum: 31);`
   
- Os argumentos nomeados também melhoram a legibilidade do código identificando o que cada argumento representa. O método de exemplo abaixo, o `sellerName` não pode ser nulo ou espaço em branco. Como ambos `sellerName` e `productName` são tipos de cadeia de caracteres, em vez de enviar argumentos por posição, faz sentido usar argumentos nomeados para desambiguar os dois e reduzir a confusão para qualquer pessoa que o código de leitura.
+ Os argumentos nomeados também melhoram a legibilidade do código identificando o que cada argumento representa. No método de exemplo abaixo, o `sellerName` não pode ser nulo ou espaço em branco. Como `sellerName` e `productName` são tipos de cadeia de caracteres, em vez de enviar argumentos por posição, é melhor usar argumentos nomeados para remover a ambiguidade dos dois e reduzir a confusão para qualquer pessoa que leia o código.
   
- Argumentos com nome, quando usado com argumentos posicionais, são válidas, desde 
+ Os argumentos nomeados, quando usados com argumentos posicionais, são válidos, desde que 
 
-- eles não são seguidos por argumentos posicionais, ou
+- não sejam seguidos por argumentos posicionais ou,
 
  `PrintOrderDetails("Gift Shop", 31, productName: "Red Mug");`
 
-- _começando com o c# 7.2_, eles são usados na posição correta. No exemplo a seguir, o parâmetro `orderNum` está na posição correta, mas não seja explicitamente nomeado.
+- _começando com o C# 7.2_, sejam usados na posição correta. No exemplo a seguir, o parâmetro `orderNum` está na posição correta, mas não está explicitamente nomeado.
 
  `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
- No entanto, argumentos nomeados fora de ordem são inválidos se ele estiverem seguidos por argumentos posicionais.
+ No entanto, argumentos nomeados fora de ordem serão inválidos se estiverem seguidos por argumentos posicionais.
 
  ```csharp
  // This generates CS1738: Named argument specifications must appear after all fixed arguments have been specified.
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/21/2017
  ```
   
 ## <a name="example"></a>Exemplo  
- O código a seguir implementa os exemplos desta seção, juntamente com outros motivos.  
+ O código a seguir implementa os exemplos desta seção, juntamente com outros exemplos.  
   
  [!code-csharp[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_1.cs)]  
   
@@ -106,7 +106,7 @@ Parâmetros opcionais no ExampleMethod
 ## <a name="com-interfaces"></a>Interfaces COM  
  Os argumentos nomeados e opcionais, juntamente com suporte para objetos dinâmicos e outros aprimoramentos, aprimoram enormemente a interoperabilidade com APIs COM, como APIs de Automação do Office.  
   
- Por exemplo, o método [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=148201) na interface [Range](http://go.microsoft.com/fwlink/?LinkId=148196) do Microsoft Office Excel tem sete parâmetros, todos opcionais. Esses parâmetros são mostrados na ilustração a seguir.  
+ Por exemplo, o método [AutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat(v=office.15).aspx) na interface [Range](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range(v=office.15).aspx) do Microsoft Office Excel tem sete parâmetros, todos opcionais. Esses parâmetros são mostrados na ilustração a seguir.  
   
  ![Informações rápidas do IntelliSense para o método AutoFormat.](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
 Parâmetros de AutoFormat  

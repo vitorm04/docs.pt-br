@@ -8,11 +8,11 @@ ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
 caps.latest.revision: "6"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4955b3d7048b4dfee23fbcf6eeaed995ebf4f1be
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 271939b869433742f8b5720ba05955169ea5c410
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="collections-c"></a>Coleções (C#)
 Para muitos aplicativos, você desejará criar e gerenciar grupos de objetos relacionados. Há duas maneiras de agrupar objetos: criando matrizes de objetos e criando coleções de objetos.  
@@ -546,7 +546,7 @@ public class Color
 ```  
 
 <a name="BKMK_Iterators"></a> 
-##  <a name="iterators"></a>Iteradores  
+##  <a name="iterators"></a>Iterators  
  Um *iterador* é usado para realizar uma iteração personalizada em uma coleção. Um iterador pode ser um método ou um acessador `get`. Um iterador usa uma instrução [yield return](../../../csharp/language-reference/keywords/yield.md) para retornar um elemento da coleção por vez.  
   
  Você chama um iterador usando uma instrução [foreach](../../../csharp/language-reference/keywords/foreach-in.md). Cada iteração do loop `foreach` chama o iterador. Quando uma instrução `yield return` é alcançada no iterador, uma expressão é retornada e o local atual no código é retido. A execução será reiniciada desse local na próxima vez que o iterador for chamado.  
@@ -587,7 +587,7 @@ private static IEnumerable<int> EvenSequence(
  [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
  [PLINQ (LINQ paralelo)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
  [Coleções e Estruturas de Dados](../../../standard/collections/index.md)  
- [Criação e manipulação de coleções](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)  
+ [Criando e manipulando coleções](http://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
  [Selecionando uma Classe de Coleção](../../../standard/collections/selecting-a-collection-class.md)  
  [Comparações e Classificações Dentro de Coleções](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
  [Quando Usar Coleções Genéricas](../../../standard/collections/when-to-use-generic-collections.md)  

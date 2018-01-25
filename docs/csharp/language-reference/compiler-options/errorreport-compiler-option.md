@@ -13,13 +13,13 @@ ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
 caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: bc8720662fb4c91953e2d399f08613f5055b1158
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 6d2fcb3f0bf4491de23b70c8beebf7ae495b2aa0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="errorreport-c-compiler-options"></a>/errorreport (opções do compilador C#)
+# <a name="-errorreport-c-compiler-options"></a>-errorreport (opções do compilador C#)
 Esta opção fornece uma maneira conveniente de relatar um erro interno do compilador do C# à Microsoft.  
   
 > [!NOTE]
@@ -28,7 +28,7 @@ Esta opção fornece uma maneira conveniente de relatar um erro interno do compi
 ## <a name="syntax"></a>Sintaxe  
   
 ```console  
-/errorreport:{ none | prompt | queue | send }  
+-errorreport:{ none | prompt | queue | send }  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -42,12 +42,12 @@ Esta opção fornece uma maneira conveniente de relatar um erro interno do compi
  Enfileira o relatório de erros. Quando você faz logon com credenciais administrativas, pode relatar falhas desde a última vez que você fez logon. Não será solicitado que você envie relatórios de falhas mais de uma vez a cada três dias. **queue** é o padrão quando você compila um aplicativo na linha de comando.  
   
  **send**  
- Envia automaticamente relatórios de erros internos do compilador para a Microsoft. Para habilitar essa opção, primeiro você deve concordar com a política de coleta de dados da Microsoft. Na primeira vez que você especificar **/errorreport:send** em um computador, uma mensagem de compilador indicará a um site que contém a política de coleta de dados da Microsoft.  
+ Envia automaticamente relatórios de erros internos do compilador para a Microsoft. Para habilitar essa opção, primeiro você deve concordar com a política de coleta de dados da Microsoft. Na primeira vez que você especificar **-errorreport:send** em um computador, uma mensagem de compilador indicará um site que contém a política de coleta de dados da Microsoft.  
     
 ## <a name="remarks"></a>Comentários  
  Um ICE (erro interno do compilador) ocorre quando o compilador não pode processar um arquivo de código-fonte. Quando um ICE ocorre, o compilador não produz um arquivo de saída ou qualquer diagnóstico útil que você pode usar para corrigir o código.  
   
- Em versões anteriores, quando você recebia um ICE, era incentivado a entrar em contato com o Microsoft Product Support Services para relatar o problema. Usando **/errorreport**, você pode fornecer informações do ICE à equipe do Visual C#. Os relatórios de erro podem ajudar a melhorar versões futuras do compilador.  
+ Em versões anteriores, quando você recebia um ICE, era incentivado a entrar em contato com o Microsoft Product Support Services para relatar o problema. Usando **-errorreport**, você pode fornecer informações do ICE à equipe do Visual C#. Os relatórios de erro podem ajudar a melhorar versões futuras do compilador.  
   
  A capacidade do usuário de enviar relatórios depende das permissões de política de usuário e de computador.  
   

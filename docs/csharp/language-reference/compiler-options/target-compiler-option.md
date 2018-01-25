@@ -14,14 +14,14 @@ ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
 caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4666f0305fc2de35c1fa594ccef3dd3a64c0f67c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 44dd99ef834f98a1a918c659d3057f8f6f91805a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="target-c-compiler-options"></a>/target (opções do compilador C#)
-A opção do compilador **/target** pode ser especificada e uma das quatro formas:  
+# <a name="-target-c-compiler-options"></a>-target (opções do compilador C#)
+A opção do compilador **-target** pode ser especificada em uma das quatro formas:  
   
  [/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)  
  Para criar um arquivo .exe para aplicativos [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].  
@@ -41,15 +41,15 @@ A opção do compilador **/target** pode ser especificada e uma das quatro forma
  [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)  
  Para criar um arquivo .winmdobj intermediário.  
   
- A menos que você especifique **/target:module**, o **/target** faz com que um manifesto do assembly do .NET Framework seja colocado em um arquivo de saída. Para obter mais informações, consulte [Assemblies no Common Language Runtime](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md) e [Atributos comuns](../../programming-guide/concepts/attributes/common-attributes.md).  
+ A menos que você especifique **-target:module**, o **-target** faz com que um manifesto do assembly do .NET Framework seja colocado em um arquivo de saída. Para obter mais informações, consulte [Assemblies no Common Language Runtime](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md) e [Atributos comuns](../../programming-guide/concepts/attributes/common-attributes.md).  
   
  O manifesto do assembly é colocado no primeiro arquivo de saída .exe na compilação ou na primeira DLL, se não houver nenhum arquivo de saída .exe. Por exemplo, na linha de comando a seguir, o manifesto será colocado em `1.exe`:  
   
 ```console  
-csc /out:1.exe t1.cs /out:2.netmodule t2.cs  
+csc -out:1.exe t1.cs -out:2.netmodule t2.cs  
 ```  
   
- O compilador cria apenas um manifesto do assembly por compilação. As informações sobre todos os arquivos em uma compilação são colocados no manifesto do assembly. Todos os arquivos de saída, exceto os criados com **/target:module** podem conter um manifesto do assembly. Ao gerar vários arquivos de saída na linha de comando, apenas um manifesto do assembly pode ser criado e ele deve ir para o primeiro arquivo de saída especificado na linha de comando. Não importa qual é o primeiro arquivo de saída (**/target:exe**, **/target:winexe**, **/target:library** ou **/target:module**), todos os outros arquivos de saída produzidos na mesma compilação devem ser módulos (**/target:module**).  
+ O compilador cria apenas um manifesto do assembly por compilação. As informações sobre todos os arquivos em uma compilação são colocados no manifesto do assembly. Todos os arquivos de saída, exceto os criados com **-target:module** podem conter um manifesto do assembly. Ao gerar vários arquivos de saída na linha de comando, apenas um manifesto do assembly pode ser criado e ele deve ir para o primeiro arquivo de saída especificado na linha de comando. Não importa qual é o primeiro arquivo de saída (**-target:exe**, **-target:winexe**, **-target:library** ou **-target:module**), todos os outros arquivos de saída produzidos na mesma compilação devem ser módulos (**-target:module**).  
   
  Se você criar um assembly, pode indicar que todo ou parte do seu código está em conformidade com CLS com o atributo <xref:System.CLSCompliantAttribute>.  
   
@@ -69,4 +69,4 @@ public class TestClass
 ## <a name="see-also"></a>Consulte também  
  [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
  [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)  
- [/subsystemversion (opções do compilador C#)](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)
+ [-subsystemversion (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)

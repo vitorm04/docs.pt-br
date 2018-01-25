@@ -13,19 +13,19 @@ ms.assetid: fdb77ed9-da03-45bd-bb7f-250704da1bcc
 caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 146977522b400418a26f6a83e1a0ccdca8675bf9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b253a9ddafead823480f9893e809f17b6c22a179
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="unsafe-c-compiler-options"></a>/unsafe (opções do compilador C#)
-A opção do compilador **/unsafe** permite que o código que usa a palavra-chave [unsafe](../../../csharp/language-reference/keywords/unsafe.md) seja compilado.  
+# <a name="-unsafe-c-compiler-options"></a>-unsafe (opções do compilador C#)
+A opção do compilador **-unsafe** permite que o código que usa a palavra-chave [unsafe](../../../csharp/language-reference/keywords/unsafe.md) seja compilado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```console  
-/unsafe  
+-unsafe  
 ```  
   
 ## <a name="remarks"></a>Comentários  
@@ -45,7 +45,7 @@ A opção do compilador **/unsafe** permite que o código que usa a palavra-chav
  Compile `in.cs` para o modo não seguro:  
   
 ```console  
-csc /unsafe in.cs  
+csc -unsafe in.cs  
 ```  
   
 ## <a name="see-also"></a>Consulte também  

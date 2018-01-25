@@ -13,19 +13,19 @@ ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
 caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 499203bb4714fa2d07b2c0e42958ffd0e472facc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2784e63b7c1e67b32fc448b4b112ad0252b1abd9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="nowarn-c-compiler-options"></a>/nowarn (opções do compilador C#)
-A opção **/nowarn** permite suprimir a exibição de um ou mais avisos pelo compilador. Separe vários números de aviso com uma vírgula.  
+# <a name="-nowarn-c-compiler-options"></a>-nowarn (opções do compilador C#)
+A opção **-nowarn** permite suprimir a exibição de um ou mais avisos pelo compilador. Separe vários números de aviso com uma vírgula.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```console  
-/nowarn:number1[,number2,...]  
+-nowarn:number1[,number2,...]  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -33,11 +33,11 @@ A opção **/nowarn** permite suprimir a exibição de um ou mais avisos pelo co
  Números de aviso que você deseja que o compilador suprima.  
   
 ## <a name="remarks"></a>Comentários  
- Você só precisa especificar a parte numérica do identificador de aviso. Por exemplo, se quiser suprimir CS0028, você pode especificar `/nowarn:28`.  
+ Você só precisa especificar a parte numérica do identificador de aviso. Por exemplo, se quiser suprimir CS0028, você pode especificar `-nowarn:28`.  
   
- O compilador ignorará silenciosamente números de aviso passados para `/nowarn` que eram válidos em versões anteriores, mas que foram removidos do compilador. Por exemplo, CS0679 era válido no compilador no Visual Studio .NET 2002, mas foi removido posteriormente.  
+ O compilador ignorará silenciosamente números de aviso passados para `-nowarn` que eram válidos em versões anteriores, mas que foram removidos do compilador. Por exemplo, CS0679 era válido no compilador no Visual Studio .NET 2002, mas foi removido posteriormente.  
   
- Os avisos a seguir não podem ser suprimidos pela opção `/nowarn`:  
+ Os avisos a seguir não podem ser suprimidos pela opção `-nowarn`:  
   
 -   Aviso do compilador (nível 1) CS2002  
   

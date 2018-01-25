@@ -11,20 +11,20 @@ helpviewer_keywords:
 - -refout compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: dc78165fc8f273948111c174ae0bf0af6591a8ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fbae6f461304c37ba2ef10da16b5d520377bb225
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="refout-c-compiler-options"></a>/refout (Opções do compilador do C#)
+# <a name="-refout-c-compiler-options"></a>-refout (Opções do compilador do C#)
 
-A opção **/refout** especifica um caminho de arquivo em que o assembly de referência deve ser gerado. Isso se converte em `metadataPeStream` na API de emissão.
+A opção **-refout** especifica um caminho de arquivo em que o assembly de referência deve ser gerado. Isso se converte em `metadataPeStream` na API de emissão.
 
 ## <a name="syntax"></a>Sintaxe
 
 ```console
-/refout:filepath
+-refout:filepath
 ```
 
 ## <a name="arguments"></a>Arguments
@@ -45,7 +45,7 @@ Os assemblies de referência removem ainda mais metadados (membros particulares)
 - Todos os métodos virtuais são mantidos. As implementações explícitas da interface são mantidas. As propriedades e eventos explicitamente implementados são mantidos, uma vez que seus acessadores são virtuais (e são, portanto, mantidos).
 - Todos os campos de um struct são mantidos. (Este é um candidato para refinamento pós-c#-7.1)
 
-As opções `/refout` e [`/refonly`](refonly-compiler-option.md) são mutualmente exclusivas.
+As opções `-refout` e [`-refonly`](refonly-compiler-option.md) são mutualmente exclusivas.
 
 ## <a name="see-also"></a>Consulte também
  [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  

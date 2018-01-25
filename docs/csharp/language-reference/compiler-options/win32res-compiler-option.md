@@ -14,19 +14,19 @@ ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
 caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 96583542c62305cbaa5a24f66e9e54ec9b525c90
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4c24da8bb745847612d882d00eff7f03dbc60475
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="win32res-c-compiler-options"></a>/win32res (opções do compilador C#)
-A opção **/win32res** insere um recurso do Win32 no arquivo de saída.  
+# <a name="-win32res-c-compiler-options"></a>-win32res (opções do compilador C#)
+A opção **-win32res** insere um recurso do Win32 no arquivo de saída.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```console  
-/win32res:filename  
+-win32res:filename  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -36,9 +36,9 @@ A opção **/win32res** insere um recurso do Win32 no arquivo de saída.
 ## <a name="remarks"></a>Comentários  
  Um arquivo de recurso do Win32 pode ser criado com o [Compilador de Recursos](../../language-reference/compiler-options/resource-compiler-option.md). O Compilador de Recursos é invocado quando você compila um programa do Visual C++; um arquivo .res é criado com base no arquivo .rc.  
   
- Um recurso do Win32 pode conter informações de versão ou de bitmap (ícone) que ajudariam a identificar seu aplicativo no Explorador de Arquivos. Se você não especificar a **/win32res**, o compilador gerará informações de versão com base na versão do assembly.  
+ Um recurso do Win32 pode conter informações de versão ou de bitmap (ícone) que ajudariam a identificar seu aplicativo no Explorador de Arquivos. Se você não especificar a **-win32res**, o compilador gerará informações de versão com base na versão do assembly.  
   
- Consulte [/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) (para referenciar) ou [/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) (para anexar) um arquivo de recursos do .NET Framework.  
+ Consulte [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) (para referenciar) ou [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) (para anexar) um arquivo de recurso do .NET Framework.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
@@ -52,7 +52,7 @@ A opção **/win32res** insere um recurso do Win32 no arquivo de saída.
  Compilar `in.cs` e anexar um arquivo de recurso do Win32 `rf.res` para produzir `in.exe`:  
   
 ```console  
-csc /win32res:rf.res in.cs  
+csc -win32res:rf.res in.cs  
 ```  
   
 ## <a name="see-also"></a>Consulte também  

@@ -8,22 +8,23 @@ f1_keywords: /refonly
 helpviewer_keywords:
 - /refonly compiler option [C#]
 - -refonly compiler option [C#]
+- refonly compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c4c745416bda56f5f1b1b4ab8267274d972a990d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 25b0f6e024e194dff641fd5069755d0ea112a50b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="refonly-c-compiler-options"></a>/refonly (Opções do compilador do C#)
+# <a name="-refonly-c-compiler-options"></a>-refonly (Opções do compilador do C#)
 
-O **/refonly** opção indica que um assembly de referência deve ser a saída em vez de um assembly de implementação, como a saída primária. O parâmetro `/refonly` silenciosamente desabilita a geração de PDBs, uma vez que assemblies de referência não podem ser executados.
+A opção **-refonly** indica que um assembly de referência deve ser gerado em vez de um assembly de implementação, como a saída primária. O parâmetro `-refonly` silenciosamente desabilita a geração de PDBs, uma vez que assemblies de referência não podem ser executados.
 
 ## <a name="syntax"></a>Sintaxe
 
 ```console
-/refonly
+-refonly
 ```
 
 ## <a name="remarks"></a>Comentários
@@ -40,7 +41,7 @@ Os assemblies de referência removem ainda mais metadados (membros particulares)
 - Todos os métodos virtuais são mantidos. As implementações explícitas da interface são mantidas. As propriedades e eventos explicitamente implementados são mantidos, uma vez que seus acessadores são virtuais (e são, portanto, mantidos).
 - Todos os campos de um struct são mantidos. (Este é um candidato para refinamento pós-c#-7.1)
 
-As opções `/refonly` e [`/refout`](refout-compiler-option.md) são mutualmente exclusivas.
+As opções `-refonly` e [`-refout`](refout-compiler-option.md) são mutualmente exclusivas.
 
 ## <a name="see-also"></a>Consulte também
  [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  

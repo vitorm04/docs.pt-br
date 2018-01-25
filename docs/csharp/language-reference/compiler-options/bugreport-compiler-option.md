@@ -13,19 +13,19 @@ ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
 caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d1341383d48a28966a0873f3124cdc3567ec3f76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d2a6c27454cc8f95b9662d6ae688471849c5cee0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="bugreport-c-compiler-options"></a>/bugreport (opções do compilador C#)
+# <a name="-bugreport-c-compiler-options"></a>-bugreport (opções do compilador C#)
 Especifica que as informações de depuração devem ser colocadas em um arquivo para análise posterior.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```console  
-/bugreport:file  
+-bugreport:file  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -33,7 +33,7 @@ Especifica que as informações de depuração devem ser colocadas em um arquivo
  O nome do arquivo que conterá o relatório de bug.  
   
 ## <a name="remarks"></a>Comentários  
- A opção **/bugreport** especifica que as informações a seguir devem ser colocadas em `file`:  
+ A opção **-bugreport** especifica que as informações a seguir devem ser colocadas em `file`:  
   
 -   Uma cópia de todos os arquivos de código-fonte na compilação.  
   
@@ -49,7 +49,7 @@ Especifica que as informações de depuração devem ser colocadas em um arquivo
   
 -   Uma solicitação de como você acha que o problema deve ser corrigido.  
   
- Se essa opção for usada com **/errorreport:prompt** ou **/errorreport:send**, as informações no arquivo serão enviadas à Microsoft Corporation.  
+ Se essa opção for usada com **-errorreport:prompt** ou **-errorreport:send**, as informações no arquivo serão enviadas à Microsoft Corporation.  
   
  Como uma cópia de todos os arquivos de código-fonte será colocada no `file`, talvez seja desejável reproduzir o suposto defeito do código no programa mais curto possível.  
   
@@ -59,5 +59,5 @@ Especifica que as informações de depuração devem ser colocadas em um arquivo
   
 ## <a name="see-also"></a>Consulte também  
  [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
- [/errorreport (opções do compilador c#)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)  
+ [-errorreport (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)  
  [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

@@ -13,27 +13,27 @@ ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
 caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e02f82bb0dd2952bd2f192af7ff233194a045619
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c0a8cc66609fe542fc7db166cd208cfcedb204b8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="checked-c-compiler-options"></a>/checked (opções do compilador C#)
-A opção **/checked** especifica se uma instrução de aritmética de inteiros que resulta em um valor fora do intervalo do tipo de dados e que não está no escopo de uma palavra-chave [checked](../../../csharp/language-reference/keywords/checked.md) ou [unchecked](../../../csharp/language-reference/keywords/unchecked.md), causará uma exceção de tempo de execução.  
+# <a name="-checked-c-compiler-options"></a>-checked (opções do compilador C#)
+A opção **-checked** especifica se uma instrução de aritmética de inteiros que resulta em um valor fora do intervalo do tipo de dados e que não está no escopo de uma palavra-chave [checked](../../../csharp/language-reference/keywords/checked.md) ou [unchecked](../../../csharp/language-reference/keywords/unchecked.md), causa uma exceção de tempo de execução.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```console  
-/checked[+ | -]  
+-checked[+ | -]  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Uma instrução de aritmética de inteiros que está no escopo de uma palavra-chave `checked` ou `unchecked` não está sujeita ao efeito da opção **/checked**.  
+ Uma instrução de aritmética de inteiros que está no escopo de uma palavra-chave `checked` ou `unchecked` não está sujeita ao efeito da opção **-checked**.  
   
- Se uma instrução de aritmética de inteiros que não está no escopo de uma palavra-chave `checked` ou `unchecked` resultar em um valor fora do intervalo do tipo de dados e **/checked+** (**/checked**) for usado na compilação, a instrução causará uma exceção em tempo de execução. Se **/checked-** for usado na compilação, a instrução não causará uma exceção em tempo de execução.  
+ Se uma instrução de aritmética de inteiros que não está no escopo de uma palavra-chave `checked` ou `unchecked` resultar em um valor fora do intervalo do tipo de dados e **-checked+** (**-checked**) for usado na compilação, a instrução causará uma exceção em tempo de execução. Se **-checked-** for usado na compilação, a instrução não causará uma exceção em tempo de execução.  
   
- O valor padrão desta opção é **/checked-**. Um cenário de uso de **/checked-** é a compilação de aplicativos grandes. Às vezes, ferramentas automatizadas são usadas para compilar esses aplicativos e a ferramenta pode definir automaticamente **/checked** como +. Você pode substituir o padrão global da ferramenta especificando **/checked-**.  
+ O valor padrão desta opção é **-checked-**. Um cenário de uso de **-checked-** é a compilação de aplicativos grandes. Às vezes, ferramentas automatizadas são usadas para compilar esses aplicativos e esse tipo de ferramenta pode definir automaticamente **-checked** como +. Você pode substituir o padrão global da ferramenta especificando **-checked-**.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
@@ -48,10 +48,10 @@ A opção **/checked** especifica se uma instrução de aritmética de inteiros 
  Para acessar programaticamente essa opção do compilador, confira <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>.  
   
 ## <a name="example"></a>Exemplo  
- O comando a seguir compila `t2.cs`. O uso de `/checked` no comando especifica que qualquer instrução de aritmética de inteiros no arquivo que não está no escopo de uma palavra-chave `checked` ou `unchecked` e que resulta em um valor fora do intervalo do tipo de dados, causa uma exceção em tempo de execução.  
+ O comando a seguir compila `t2.cs`. O uso de `-checked` no comando especifica que qualquer instrução de aritmética de inteiros no arquivo que não está no escopo de uma palavra-chave `checked` ou `unchecked` e que resulta em um valor fora do intervalo do tipo de dados, causa uma exceção em tempo de execução.  
   
 ```console  
-csc t2.cs /checked  
+csc t2.cs -checked  
 ```  
   
 ## <a name="see-also"></a>Consulte também  

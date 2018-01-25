@@ -13,19 +13,19 @@ ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
 caps.latest.revision: "46"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5d35a91805f6189f60803056c541ce8344c024f0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6a7a505f955f1faf73198b3670754dbb492ff638
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="platform-c-compiler-options"></a>/platform (opções do compilador C#)
+# <a name="-platform-c-compiler-options"></a>-platform (opções do compilador C#)
 Especifica qual versão do CLR (Common Language Runtime) pode executar o assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```console  
-/platform:string  
+-platform:string  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -48,13 +48,13 @@ Especifica qual versão do CLR (Common Language Runtime) pode executar o assembl
   
  Em um sistema operacional do Windows de 64 bits:  
   
--   Os assemblies compilados com **/platform:x86** são executados no CLR de 32 bits em execução no WOW64.  
+-   Os assemblies compilados com **-platform:x86** são executados no CLR de 32 bits em execução no WOW64.  
   
--   Uma DLL compilada com o **/platform:anycpu** é executada no mesmo CLR que o processo no qual ela é carregada.  
+-   Uma DLL compilada com o **-platform:anycpu** é executada no mesmo CLR que o processo no qual ela é carregada.  
   
--   Os executáveis compilados com **/platform:anycpu** são executados no CLR de 64 bits.  
+-   Os executáveis compilados com **-platform:anycpu** são executados no CLR de 64 bits.  
   
--   Os executáveis compilados com **/platform:anycpu32bitpreferred** são executados no CLR de 32 bits.  
+-   Os executáveis compilados com **-platform:anycpu32bitpreferred** são executados no CLR de 32 bits.  
   
  A configuração **anycpu32bitpreferred** é válida apenas para arquivos .EXE (executáveis) e requer o .NET Framework 4.5.  
   
@@ -68,15 +68,15 @@ Especifica qual versão do CLR (Common Language Runtime) pode executar o assembl
   
 3.  Modifique a propriedade **Destino da plataforma** e, para projetos que definem como destino o .NET Framework 4.5, marque ou desmarque a caixa de seleção **Preferir 32 bits**.  
   
- **Observe que /platform** não está disponível no ambiente de desenvolvimento no Visual C# Express.  
+ **Observe que -platform** não está disponível no ambiente de desenvolvimento no Visual C# Express.  
   
  Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.CSharpProjectConfigurationProperties3.PlatformTarget%2A>.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar a opção **/platform** para especificar que o aplicativo deve ser executado pelo CLR de 64 bits em um sistema de operacional do Windows de 64 bits.  
+ O exemplo a seguir mostra como usar a opção **-platform** para especificar que o aplicativo deve ser executado pelo CLR de 64 bits em um sistema de operacional Windows de 64 bits.  
   
 ```console  
-csc /platform:anycpu filename.cs  
+csc -platform:anycpu filename.cs  
 ```  
   
 ## <a name="see-also"></a>Consulte também  

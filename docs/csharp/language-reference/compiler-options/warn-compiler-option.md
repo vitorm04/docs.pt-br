@@ -17,19 +17,19 @@ ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
 caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ab5748f43777ec545e76100543473785894461cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6a1f2c55aa078adb213a93dc5aff7ced40793bfa
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="warn-c-compiler-options"></a>/warn (opções do compilador C#)
-A opção **/warn** especifica o nível de aviso a ser exibido pelo compilador.  
+# <a name="-warn-c-compiler-options"></a>-warn (opções do compilador C#)
+A opção **-warn** especifica o nível de aviso a ser exibido pelo compilador.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```console  
-/warn:option  
+-warn:option  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -47,9 +47,9 @@ A opção **/warn** especifica o nível de aviso a ser exibido pelo compilador.
 ## <a name="remarks"></a>Comentários  
  Para obter informações sobre um erro ou aviso, você pode procurar o código de erro no Índice da Ajuda. Para outras maneiras de se obter informações sobre um erro ou aviso, consulte [Erros do compilador do C#](../../../csharp/language-reference/compiler-messages/index.md).  
   
- Use [/warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) para tratar todos os avisos como erros. Use [/nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) para desabilitar determinados avisos.  
+ Use [-warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) para tratar todos os avisos como erros. Use [-nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) para desabilitar determinados avisos.  
   
- **/w** é a forma abreviada de **/warn**.  
+ **-w** é a forma abreviada de **-warn**.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
@@ -65,7 +65,7 @@ A opção **/warn** especifica o nível de aviso a ser exibido pelo compilador.
  Compilar `in.cs` e fazer com que o compilador exiba somente avisos de nível 1:  
   
 ```console  
-csc /warn:1 in.cs  
+csc -warn:1 in.cs  
 ```  
   
 ## <a name="see-also"></a>Consulte também  

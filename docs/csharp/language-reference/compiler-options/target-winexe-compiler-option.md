@@ -13,31 +13,31 @@ ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
 caps.latest.revision: "11"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e155c64689f34c89443c7ff0a3dee38d6c190fcc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b13af4e665a2bf5a75472bc8f4a501e90c59281a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="targetwinexe-c-compiler-options"></a>/target:winexe (opções do compilador C#)
-A opção **/target:winexe** faz com que o compilador crie um programa do Windows executável (EXE).  
+# <a name="-targetwinexe-c-compiler-options"></a>-target:winexe (opções do compilador C#)
+A opção **-target:winexe** faz com que o compilador crie um programa do Windows executável (EXE).  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```console  
-/target:winexe  
+-target:winexe  
 ```  
   
 ## <a name="remarks"></a>Comentários  
  O arquivo executável será criado com a extensão .exe. Um programa do Windows é aquele que fornece uma interface do usuário da biblioteca do .NET Framework ou com as APIs do Win32.  
   
- Use [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md) para criar um aplicativo de console.  
+ Use [-target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md) para criar um aplicativo do console.  
   
- A menos que seja especificado de outra forma com a opção [/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md), o nome do arquivo de saída usará o nome do arquivo de entrada que contém o método [Main](../../../csharp/programming-guide/main-and-command-args/index.md).  
+ A menos que seja especificado de outra forma com a opção [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md), o nome do arquivo de saída usará o nome do arquivo de entrada que contém o método [Main](../../../csharp/programming-guide/main-and-command-args/index.md).  
   
- Quando especificado na linha de comando, todos os arquivos até a próxima opção **/out** ou [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) serão usados para criar o programa do Windows.  
+ Quando especificado na linha de comando, todos os arquivos até a próxima opção **-out** ou [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) serão usados para criar o programa do Windows.  
   
- Somente um método **Main** é necessário nos arquivos de código-fonte que são compilados em um arquivo .exe. A opção [/main](../../../csharp/language-reference/compiler-options/main-compiler-option.md) permite especificar qual classe contém o método **Main**, em casos em que o código tem mais de uma classe com um método **Main**.  
+ Somente um método **Main** é necessário nos arquivos de código-fonte que são compilados em um arquivo .exe. A opção [-main](../../../csharp/language-reference/compiler-options/main-compiler-option.md) permite especificar qual classe contém o método **Main**, nos casos em que o código tem mais de uma classe com um método **Main**.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
@@ -53,9 +53,9 @@ A opção **/target:winexe** faz com que o compilador crie um programa do Window
  Compile `in.cs` em um programa do Windows:  
   
 ```console  
-csc /target:winexe in.cs  
+csc -target:winexe in.cs  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [/Target (opções do compilador c#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+ [-target (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
  [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)

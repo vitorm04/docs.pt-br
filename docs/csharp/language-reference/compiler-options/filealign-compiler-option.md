@@ -21,19 +21,19 @@ ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
 caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: fe2d1df6d88baa2957068514abe728f29cb74636
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f00db0cfd191de060b67aee4618d99740cb81248
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="filealign-c-compiler-options"></a>/filealign (opções do compilador C#)
-A opção **/filealign** permite que você especifique o tamanho das seções em seu arquivo de saída.  
+# <a name="-filealign-c-compiler-options"></a>-filealign (opções do compilador C#)
+A opção **-filealign** permite que você especifique o tamanho das seções em seu arquivo de saída.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```console  
-/filealign:number  
+-filealign:number  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -41,7 +41,7 @@ A opção **/filealign** permite que você especifique o tamanho das seções em
  Um valor que especifica o tamanho das seções no arquivo de saída. Os valores válidos são 512, 1024, 2048, 4096 e 8192. Esses valores estão em bytes.  
   
 ## <a name="remarks"></a>Comentários  
- Cada seção será alinhada em um limite que é um múltiplo do valor **/filealign**. Não há nenhum padrão fixo. Se **/filealign** não for especificada, o Common Language Runtime escolhe um padrão em tempo de compilação.  
+ Cada seção será alinhada em um limite que é um múltiplo do valor **-filealign**. Não há nenhum padrão fixo. Se **-filealign** não é especificada, o Common Language Runtime escolhe um padrão em tempo de compilação.  
   
  Ao especificar o tamanho da seção, você afeta o tamanho do arquivo de saída. Modificar o tamanho da seção pode ser útil para programas que serão executados em dispositivos menores.  
   

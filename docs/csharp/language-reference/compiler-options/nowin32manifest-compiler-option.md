@@ -13,19 +13,19 @@ ms.assetid: 6f06365b-b87b-46a2-b187-b3bfeaf4862d
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1e0d4697e0e14c84c4bc642521cf4f9cdf6a4ed6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7682a3e1ecf483b8495d817ef01e57093ae0f987
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="nowin32manifest-c-compiler-options"></a>/nowin32manifest (opções do compilador C#)
-Use a opção **/nowin32manifest** para instruir o compilador a não inserir nenhum manifesto do aplicativo no arquivo executável.  
+# <a name="-nowin32manifest-c-compiler-options"></a>-nowin32manifest (opções do compilador C#)
+Use a opção **-nowin32manifest** para instruir o compilador a não inserir nenhum manifesto do aplicativo no arquivo executável.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```console  
-/nowin32manifest  
+-nowin32manifest  
 ```  
   
 ## <a name="remarks"></a>Comentários  
@@ -33,7 +33,7 @@ Use a opção **/nowin32manifest** para instruir o compilador a não inserir nen
   
  No Visual Studio, defina essa opção na página **Propriedade do Aplicativo** selecionando a opção **Criar aplicativo sem um manifesto** na lista suspensa **Manifesto**. Para obter mais informações, consulte [Página Aplicativo, Designer de Projeto (C#)](/visualstudio/ide/reference/application-page-project-designer-csharp).  
   
- Para obter mais informações sobre a criação do manifesto, consulte [/win32manifest (opções do compilador C#)](../../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).  
+ Para obter mais informações sobre a criação do manifesto, consulte [-win32manifest (Opções do compilador do C#)](../../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  

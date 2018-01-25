@@ -8,29 +8,29 @@ ms.assetid: 1819a045-659d-498a-9457-c466e902986f
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f690591b79159a0196a1637903f2cc53442976e3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 444fcd69db327ea9d9c3dc739b42520bb9472c4d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="targetwinmdobj-c-compiler-options"></a>/target:winmdobj (opções do compilador C#)
-Se você usar a opção do compilador **/target:winmdobj**, o compilador criará um arquivo .winmdobj intermediário que pode ser convertido em um arquivo binário do Windows Runtime (.winmd). O arquivo .winmd pode, então, ser consumido por programas JavaScript e C++, bem como programas de linguagem gerenciada.  
+# <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj (opções do compilador C#)
+Se você usar a opção do compilador **-target:winmdobj**, o compilador criará um arquivo .winmdobj intermediário que pode ser convertido em um arquivo binário do Windows Runtime (.winmd). O arquivo .winmd pode, então, ser consumido por programas JavaScript e C++, bem como programas de linguagem gerenciada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```console  
-/target:winmdobj  
+-target:winmdobj  
 ```  
   
 ## <a name="remarks"></a>Comentários  
  A configuração **winmdobj** indica para o compilador que um módulo intermediário é necessário. Em resposta, o Visual Studio compila a biblioteca de classes do C# como um arquivo .winmdobj. O arquivo .winmdobj pode, então, ser alimentado por meio da ferramenta de exportação <xref:Microsoft.Build.Tasks.WinMDExp> para produzir um arquivo de metadados do Windows (.winmd). O arquivo .winmd contém o código da biblioteca original e os metadados do WinMD que são usados pelo JavaScript ou C++ e pelo Windows Runtime.  
   
- A saída de um arquivo que é compilado usando a opção do compilador **/target:winmdobj** foi criada para ser usada apenas como entrada para a ferramenta de exportação WimMDExp. O arquivo .winmdobj em si não é referenciado diretamente.  
+ A saída de um arquivo que é compilado usando a opção do compilador **-target:winmdobj** foi criada para ser usada apenas como entrada para a ferramenta de exportação WimMDExp. O arquivo .winmdobj em si não é referenciado diretamente.  
   
- A menos que você use a opção [/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md), o nome do arquivo de saída usará o nome do primeiro arquivo de entrada. Um método [Main](../../../csharp/programming-guide/main-and-command-args/index.md) não é necessário.  
+ A menos que você use a opção [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md), o nome do arquivo de saída usará o nome do primeiro arquivo de entrada. Um método [Main](../../../csharp/programming-guide/main-and-command-args/index.md) não é necessário.  
   
- Se você especificar a opção /target:winmdobj em um prompt de comando, todos os arquivos até a próxima opção **/out** ou [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) serão usados para criar o programa do Windows.  
+ Se você especificar a opção -target:winmdobj em um prompt de comando, todos os arquivos até a próxima opção **-out** ou [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) serão usados para criar o programa do Windows.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-ide-for-a-windows-store-app"></a>Para definir esta opção de compilador no IDE do Visual Studio para um aplicativo da Windows Store  
   
@@ -48,9 +48,9 @@ Se você usar a opção do compilador **/target:winmdobj**, o compilador criará
  O comando a seguir compila `filename.cs` em um arquivo .winmdobj intermediário.  
   
 ```console  
-csc /target:winmdobj filename.cs  
+csc -target:winmdobj filename.cs  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [/Target (opções do compilador c#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+ [-target (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
  [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
