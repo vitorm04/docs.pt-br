@@ -1,25 +1,20 @@
 ---
 title: "Objetos extensíveis"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e7d7b5245130a7581efbf9badb0699f57a6743dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a1bb341d9e164b1ce232f238f8ddf4a0cf807363
+ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="extensible-objects"></a>Objetos extensíveis
 O padrão de objeto extensível é usado para estender as classes de tempo de execução existentes com a nova funcionalidade ou para adicionar o novo estado para um objeto. Extensões, anexadas a um dos objetos extensíveis, habilitar comportamentos em diferentes estágios de processamento para acessar o estado compartilhado e anexado a um objeto extensível comum que eles possam acessar a funcionalidade.  
@@ -48,15 +43,15 @@ where T : IExtensibleObject<T>
   
  Quando uma extensão é adicionada à coleção, <xref:System.ServiceModel.IExtension%601.Attach%2A> é chamado antes que ele vai para a coleção. Quando uma extensão é removida da coleção, <xref:System.ServiceModel.IExtension%601.Detach%2A> é chamado depois que ele é removido. Isso significa (supondo que a sincronização apropriado) uma extensão pode contar encontrados somente na coleção enquanto ele está entre <xref:System.ServiceModel.IExtension%601.Attach%2A> e <xref:System.ServiceModel.IExtension%601.Detach%2A>.  
   
- O objeto passado para <xref:System.ServiceModel.IExtensionCollection%601.FindAll%60%601%2A> ou <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A> não precisa ser <xref:System.ServiceModel.IExtension%601> (por exemplo, você pode passar qualquer objeto), mas a extensão retornada é um <xref:System.ServiceModel.IExtension%601>.  
+ O objeto passado para <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> ou <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> não precisa ser <xref:System.ServiceModel.IExtension%601> (por exemplo, você pode passar qualquer objeto), mas a extensão retornada é um <xref:System.ServiceModel.IExtension%601>.  
   
- Se nenhuma extensão na coleção é um <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A> retorna null, e <xref:System.ServiceModel.IExtensionCollection%601.FindAll%60%601%2A> retorna uma coleção vazia. Se implementam várias extensões <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A> retorna um deles. O valor retornado de <xref:System.ServiceModel.IExtensionCollection%601.FindAll%60%601%2A> é um instantâneo.  
+ Se nenhuma extensão na coleção é um <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> retorna null, e <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> retorna uma coleção vazia. Se implementam várias extensões <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> retorna um deles. O valor retornado de <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> é um instantâneo.
   
  Há dois cenários principais. O primeiro cenário usa o <xref:System.ServiceModel.IExtensibleObject%601.Extensions%2A> a propriedade como um dicionário baseada no tipo para inserir o estado em um objeto para outro componente procurá-lo usando o tipo de habilitar.  
   
  O segundo cenário usa o <xref:System.ServiceModel.IExtension%601.Attach%2A> e <xref:System.ServiceModel.IExtension%601.Detach%2A> propriedades para permitir que um objeto participe de comportamento personalizado, como registrar-se para eventos, observar as transições de estado e assim por diante.  
   
- O <xref:System.ServiceModel.IExtensionCollection%601> interface é uma coleção do <xref:System.ServiceModel.IExtension%601> objetos que permitem a recuperação de <xref:System.ServiceModel.IExtension%601> por seu tipo. <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A?displayProperty=nameWithType>Retorna o último adicionado objeto que é um <xref:System.ServiceModel.IExtension%601> desse tipo.  
+ O <xref:System.ServiceModel.IExtensionCollection%601> interface é uma coleção do <xref:System.ServiceModel.IExtension%601> objetos que permitem a recuperação de <xref:System.ServiceModel.IExtension%601> por seu tipo. <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType>Retorna o último adicionado objeto que é um <xref:System.ServiceModel.IExtension%601> desse tipo.  
   
 ### <a name="extensible-objects-in-windows-communication-foundation"></a>Objetos extensíveis no Windows Communication Foundation  
  Há quatro objetos extensíveis em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]:  
