@@ -22,17 +22,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f24be0ce97071905ce53610e5b44db8f92f24e0e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 018d5c39efc1459e8883cf67cfc7992860f45318
+ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a><span data-ttu-id="5dae0-102">Como classificar uma coluna GridView quando um cabeçalho é clicado</span><span class="sxs-lookup"><span data-stu-id="5dae0-102">How to: Sort a GridView Column When a Header Is Clicked</span></span>
-<span data-ttu-id="5dae0-103">Este exemplo mostra como criar um <xref:System.Windows.Controls.ListView> controle que implementa um <xref:System.Windows.Controls.GridView> exibir modo e classifica os dados de conteúdo quando um usuário clica em um cabeçalho de coluna.</span><span class="sxs-lookup"><span data-stu-id="5dae0-103">This example shows how to create a <xref:System.Windows.Controls.ListView> control that implements a <xref:System.Windows.Controls.GridView> view mode and sorts the data content when a user clicks a column header.</span></span>  
+# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a><span data-ttu-id="91a9d-102">Como classificar uma coluna GridView quando um cabeçalho é clicado</span><span class="sxs-lookup"><span data-stu-id="91a9d-102">How to: Sort a GridView Column When a Header Is Clicked</span></span>
+<span data-ttu-id="91a9d-103">Este exemplo mostra como criar um <xref:System.Windows.Controls.ListView> controle que implementa um <xref:System.Windows.Controls.GridView> exibir modo e classifica os dados de conteúdo quando um usuário clica em um cabeçalho de coluna.</span><span class="sxs-lookup"><span data-stu-id="91a9d-103">This example shows how to create a <xref:System.Windows.Controls.ListView> control that implements a <xref:System.Windows.Controls.GridView> view mode and sorts the data content when a user clicks a column header.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5dae0-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="5dae0-104">Example</span></span>  
- <span data-ttu-id="5dae0-105">O exemplo a seguir define uma <xref:System.Windows.Controls.GridView> com três colunas que se vinculam ao <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, e <xref:System.DateTime.Day%2A>, propriedades do <xref:System.DateTime> estrutura.</span><span class="sxs-lookup"><span data-stu-id="5dae0-105">The following example defines a <xref:System.Windows.Controls.GridView> with three columns that bind to the <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, and <xref:System.DateTime.Day%2A>, properties of the <xref:System.DateTime> structure.</span></span>  
+## <a name="example"></a><span data-ttu-id="91a9d-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="91a9d-104">Example</span></span>  
+ <span data-ttu-id="91a9d-105">O exemplo a seguir define uma <xref:System.Windows.Controls.GridView> com três colunas que se vinculam ao <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, e <xref:System.DateTime.Day%2A>, propriedades do <xref:System.DateTime> estrutura.</span><span class="sxs-lookup"><span data-stu-id="91a9d-105">The following example defines a <xref:System.Windows.Controls.GridView> with three columns that bind to the <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, and <xref:System.DateTime.Day%2A>, properties of the <xref:System.DateTime> structure.</span></span>  
   
 ```xaml  
 <GridView>  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 </GridView>  
 ```  
   
- <span data-ttu-id="5dae0-106">O exemplo a seguir mostra os itens de dados que são definidos como um <xref:System.Collections.ArrayList> de <xref:System.DateTime> objetos.</span><span class="sxs-lookup"><span data-stu-id="5dae0-106">The following example shows the data items that are defined as an <xref:System.Collections.ArrayList> of <xref:System.DateTime> objects.</span></span> <span data-ttu-id="5dae0-107">O <xref:System.Collections.ArrayList> é definido como o <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> para o <xref:System.Windows.Controls.ListView> controle.</span><span class="sxs-lookup"><span data-stu-id="5dae0-107">The <xref:System.Collections.ArrayList> is defined as the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> for the <xref:System.Windows.Controls.ListView> control.</span></span>  
+ <span data-ttu-id="91a9d-106">O exemplo a seguir mostra os itens de dados que são definidos como um <xref:System.Collections.ArrayList> de <xref:System.DateTime> objetos.</span><span class="sxs-lookup"><span data-stu-id="91a9d-106">The following example shows the data items that are defined as an <xref:System.Collections.ArrayList> of <xref:System.DateTime> objects.</span></span> <span data-ttu-id="91a9d-107">O <xref:System.Collections.ArrayList> é definido como o <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> para o <xref:System.Windows.Controls.ListView> controle.</span><span class="sxs-lookup"><span data-stu-id="91a9d-107">The <xref:System.Collections.ArrayList> is defined as the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> for the <xref:System.Windows.Controls.ListView> control.</span></span>  
   
 ```xaml  
 <ListView.ItemsSource>  
@@ -69,7 +69,7 @@ ms.lasthandoff: 12/22/2017
 </ListView.ItemsSource>  
 ```  
   
- <span data-ttu-id="5dae0-108">Os identificadores `s` e `p` nas marcas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] se referem a mapeamentos de namespace definidos nos metadados da página [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5dae0-108">The `s` and `p` identifiers in the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tags refer to namespace mappings that are defined in the metadata of the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page.</span></span> <span data-ttu-id="5dae0-109">O exemplo a seguir mostra a definição dos metadados.</span><span class="sxs-lookup"><span data-stu-id="5dae0-109">The following example shows the metadata definition.</span></span>  
+ <span data-ttu-id="91a9d-108">Os identificadores `s` e `p` nas marcas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] se referem a mapeamentos de namespace definidos nos metadados da página [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="91a9d-108">The `s` and `p` identifiers in the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tags refer to namespace mappings that are defined in the metadata of the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page.</span></span> <span data-ttu-id="91a9d-109">O exemplo a seguir mostra a definição dos metadados.</span><span class="sxs-lookup"><span data-stu-id="91a9d-109">The following example shows the metadata definition.</span></span>  
   
 ```xaml  
 <Window        
@@ -80,7 +80,7 @@ ms.lasthandoff: 12/22/2017
     xmlns:p="clr-namespace:System;assembly=mscorlib">  
 ```  
   
- <span data-ttu-id="5dae0-110">Para classificar os dados de acordo com o conteúdo de uma coluna, o exemplo define um manipulador de eventos para lidar com o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento que ocorre quando você pressiona o botão de cabeçalho de coluna.</span><span class="sxs-lookup"><span data-stu-id="5dae0-110">To sort the data according to the contents of a column, the example defines an event handler to handle the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event that occurs when you press the column header button.</span></span> <span data-ttu-id="5dae0-111">O exemplo a seguir mostra como especificar um manipulador de eventos para o <xref:System.Windows.Controls.GridViewColumnHeader> controle.</span><span class="sxs-lookup"><span data-stu-id="5dae0-111">The following example shows how to specify an event handler for the <xref:System.Windows.Controls.GridViewColumnHeader> control.</span></span>  
+ <span data-ttu-id="91a9d-110">Para classificar os dados de acordo com o conteúdo de uma coluna, o exemplo define um manipulador de eventos para lidar com o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento que ocorre quando você pressiona o botão de cabeçalho de coluna.</span><span class="sxs-lookup"><span data-stu-id="91a9d-110">To sort the data according to the contents of a column, the example defines an event handler to handle the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event that occurs when you press the column header button.</span></span> <span data-ttu-id="91a9d-111">O exemplo a seguir mostra como especificar um manipulador de eventos para o <xref:System.Windows.Controls.GridViewColumnHeader> controle.</span><span class="sxs-lookup"><span data-stu-id="91a9d-111">The following example shows how to specify an event handler for the <xref:System.Windows.Controls.GridViewColumnHeader> control.</span></span>  
   
 ```xaml  
 <ListView x:Name='lv' Height="150" HorizontalAlignment="Center"   
@@ -89,7 +89,7 @@ ms.lasthandoff: 12/22/2017
  >  
 ```  
   
- <span data-ttu-id="5dae0-112">O exemplo define o manipulador de eventos para que a direção de classificação mude entre ordem ascendente e decrescente sempre que você pressionar o botão de cabeçalho de coluna.</span><span class="sxs-lookup"><span data-stu-id="5dae0-112">The example defines the event handler so that the sort direction changes between ascending order and descending order each time you press the column header button.</span></span> <span data-ttu-id="5dae0-113">O exemplo a seguir mostra o manipulador de eventos.</span><span class="sxs-lookup"><span data-stu-id="5dae0-113">The following example shows the event handler.</span></span>  
+ <span data-ttu-id="91a9d-112">O exemplo define o manipulador de eventos para que a direção de classificação mude entre ordem ascendente e decrescente sempre que você pressionar o botão de cabeçalho de coluna.</span><span class="sxs-lookup"><span data-stu-id="91a9d-112">The example defines the event handler so that the sort direction changes between ascending order and descending order each time you press the column header button.</span></span> <span data-ttu-id="91a9d-113">O exemplo a seguir mostra o manipulador de eventos.</span><span class="sxs-lookup"><span data-stu-id="91a9d-113">The following example shows the event handler.</span></span>  
   
 ```csharp  
 public partial class Window1 : Window  
@@ -105,8 +105,7 @@ public partial class Window1 : Window
     void GridViewColumnHeaderClickedHandler(object sender,  
                                             RoutedEventArgs e)  
     {  
-        GridViewColumnHeader headerClicked =  
-              e.OriginalSource as GridViewColumnHeader;  
+        var headerClicked = e.OriginalSource as GridViewColumnHeader;  
         ListSortDirection direction;  
   
         if (headerClicked != null)  
@@ -129,8 +128,10 @@ public partial class Window1 : Window
                     }  
                 }  
   
-                string header = headerClicked.Column.Header as string;  
-                Sort(header, direction);  
+                var columnBinding = headerClicked.Column.DisplayMemberBinding as Binding;
+                var sortBy = columnBinding?.Path.Path ?? headerClicked.Column.Header as string;
+
+                Sort(sortBy, direction);
   
                 if (direction == ListSortDirection.Ascending)  
                 {  
@@ -153,57 +154,61 @@ public partial class Window1 : Window
                 _lastDirection = direction;  
             }  
         }  
-    }  
+    }
+}
 ```  
   
 ```vb  
 Partial Public Class Window1  
-        Inherits Window  
-        Public Sub New()  
-            InitializeComponent()  
-        End Sub  
+    Inherits Window
+    Public Sub New()  
+        InitializeComponent()  
+    End Sub  
   
-        Private _lastHeaderClicked As GridViewColumnHeader = Nothing  
-        Private _lastDirection As ListSortDirection = ListSortDirection.Ascending  
+    Private _lastHeaderClicked As GridViewColumnHeader = Nothing  
+    Private _lastDirection As ListSortDirection = ListSortDirection.Ascending  
   
-        Private Sub GridViewColumnHeaderClickedHandler(ByVal sender As Object, ByVal e As RoutedEventArgs)  
-            Dim headerClicked As GridViewColumnHeader = TryCast(e.OriginalSource, GridViewColumnHeader)  
-            Dim direction As ListSortDirection  
+    Private Sub GridViewColumnHeaderClickedHandler(ByVal sender As Object, ByVal e As RoutedEventArgs)  
+        Dim headerClicked = TryCast(e.OriginalSource, GridViewColumnHeader)  
+        Dim direction As ListSortDirection  
   
-            If headerClicked IsNot Nothing Then  
-                If headerClicked.Role <> GridViewColumnHeaderRole.Padding Then  
-                    If headerClicked IsNot _lastHeaderClicked Then  
+        If headerClicked IsNot Nothing Then  
+            If headerClicked.Role <> GridViewColumnHeaderRole.Padding Then  
+                If headerClicked IsNot _lastHeaderClicked Then  
+                    direction = ListSortDirection.Ascending  
+                Else  
+                    If _lastDirection = ListSortDirection.Ascending Then  
+                        direction = ListSortDirection.Descending  
+                    Else  
                         direction = ListSortDirection.Ascending  
-                    Else  
-                        If _lastDirection = ListSortDirection.Ascending Then  
-                            direction = ListSortDirection.Descending  
-                        Else  
-                            direction = ListSortDirection.Ascending  
-                        End If  
                     End If  
-  
-                    Dim header As String = TryCast(headerClicked.Column.Header, String)  
-                    Sort(header, direction)  
-  
-                    If direction = ListSortDirection.Ascending Then  
-                        headerClicked.Column.HeaderTemplate = TryCast(Resources("HeaderTemplateArrowUp"), DataTemplate)  
-                    Else  
-                        headerClicked.Column.HeaderTemplate = TryCast(Resources("HeaderTemplateArrowDown"), DataTemplate)  
-                    End If  
-  
-                    ' Remove arrow from previously sorted header  
-                    If _lastHeaderClicked IsNot Nothing AndAlso _lastHeaderClicked IsNot headerClicked Then  
-                        _lastHeaderClicked.Column.HeaderTemplate = Nothing  
-                    End If  
-  
-                    _lastHeaderClicked = headerClicked  
-                    _lastDirection = direction  
                 End If  
+
+                Dim columnBinding = TryCast(headerClicked.Column.DisplayMemberBinding, Binding)
+                Dim sortBy = If(columnBinding?.Path.Path, TryCast(headerClicked.Column.Header, String))
+
+                Sort(sortBy, direction)  
+
+                If direction = ListSortDirection.Ascending Then
+                    headerClicked.Column.HeaderTemplate = TryCast(Resources("HeaderTemplateArrowUp"), DataTemplate)  
+                Else  
+                    headerClicked.Column.HeaderTemplate = TryCast(Resources("HeaderTemplateArrowDown"), DataTemplate)  
+                End If  
+  
+                ' Remove arrow from previously sorted header  
+                If _lastHeaderClicked IsNot Nothing AndAlso _lastHeaderClicked IsNot headerClicked Then  
+                    _lastHeaderClicked.Column.HeaderTemplate = Nothing  
+                End If  
+  
+                _lastHeaderClicked = headerClicked  
+                _lastDirection = direction  
             End If  
-        End Sub  
+        End If  
+    End Sub
+End Class
 ```  
   
- <span data-ttu-id="5dae0-114">O exemplo a seguir mostra o algoritmo de classificação chamado pelo manipulador de eventos para classificar os dados.</span><span class="sxs-lookup"><span data-stu-id="5dae0-114">The following example shows the sorting algorithm that is called by the event handler to sort the data.</span></span> <span data-ttu-id="5dae0-115">A classificação é executada, criando um novo <xref:System.ComponentModel.SortDescription> estrutura.</span><span class="sxs-lookup"><span data-stu-id="5dae0-115">The sort is performed by creating a new <xref:System.ComponentModel.SortDescription> structure.</span></span>  
+ <span data-ttu-id="91a9d-114">O exemplo a seguir mostra o algoritmo de classificação chamado pelo manipulador de eventos para classificar os dados.</span><span class="sxs-lookup"><span data-stu-id="91a9d-114">The following example shows the sorting algorithm that is called by the event handler to sort the data.</span></span> <span data-ttu-id="91a9d-115">A classificação é executada, criando um novo <xref:System.ComponentModel.SortDescription> estrutura.</span><span class="sxs-lookup"><span data-stu-id="91a9d-115">The sort is performed by creating a new <xref:System.ComponentModel.SortDescription> structure.</span></span>  
   
 ```csharp  
 private void Sort(string sortBy, ListSortDirection direction)  
@@ -220,18 +225,18 @@ private void Sort(string sortBy, ListSortDirection direction)
   
 ```vb  
 Private Sub Sort(ByVal sortBy As String, ByVal direction As ListSortDirection)  
-            Dim dataView As ICollectionView = CollectionViewSource.GetDefaultView(lv.ItemsSource)  
+    Dim dataView As ICollectionView = CollectionViewSource.GetDefaultView(lv.ItemsSource)  
   
-            dataView.SortDescriptions.Clear()  
-            Dim sd As New SortDescription(sortBy, direction)  
-            dataView.SortDescriptions.Add(sd)  
-            dataView.Refresh()  
-        End Sub  
+    dataView.SortDescriptions.Clear()  
+    Dim sd As New SortDescription(sortBy, direction)  
+    dataView.SortDescriptions.Add(sd)  
+    dataView.Refresh()  
+End Sub  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5dae0-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5dae0-116">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="91a9d-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="91a9d-116">See Also</span></span>  
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.GridView>  
- [<span data-ttu-id="5dae0-117">Visão geral de ListView</span><span class="sxs-lookup"><span data-stu-id="5dae0-117">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [<span data-ttu-id="5dae0-118">Visão geral de GridView</span><span class="sxs-lookup"><span data-stu-id="5dae0-118">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [<span data-ttu-id="5dae0-119">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="5dae0-119">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+ [<span data-ttu-id="91a9d-117">Visão geral de ListView</span><span class="sxs-lookup"><span data-stu-id="91a9d-117">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)  
+ [<span data-ttu-id="91a9d-118">Visão geral de GridView</span><span class="sxs-lookup"><span data-stu-id="91a9d-118">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)  
+ [<span data-ttu-id="91a9d-119">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="91a9d-119">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
