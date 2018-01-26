@@ -31,11 +31,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d24ad84c604921e4dd33e818c0b80d8ab315cd58
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce83713d2483320569bde0d5c9a677f0b357ebf2
+ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xaml-overview-wpf"></a>Visão geral de XAML (WPF)
 Este tópico descreve os recursos da linguagem XAML e demonstra como você pode usar o XAML para escrever aplicativos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Este tópico descreve especificamente o XAML como implementado por [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. O XAML em si é um conceito de linguagem maior que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -56,7 +56,7 @@ Este tópico descreve os recursos da linguagem XAML e demonstra como você pode 
 ## <a name="xaml-syntax-in-brief"></a>Resumo sobre sintaxe XAML  
  As seções a seguir explicam as formas básicas de sintaxe XAML e fornecem um exemplo de marcação curta. Essas seções não se destinam a fornecer informações completas sobre cada forma de sintaxe, por exemplo, de como esses itens são representados no sistema de tipos de suporte. Para obter mais informações sobre as características específicas de sintaxe XAML para cada uma das formas de sintaxe apresentadas neste tópico, consulte [Sintaxe XAML em detalhes](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
   
- Grande parte do material nas próximas seções será elementar para você caso você tenha familiaridade anterior com a linguagem XML. Isso é consequência de um dos princípios básicos de design do XAML.  XAML A linguagem XAML define conceitos próprios, mas esses conceitos trabalham dentro do formulário de linguagem e marcação XML.  
+ Grande parte do material nas próximas seções será elementar para você caso você tenha familiaridade anterior com a linguagem XML. Isso é consequência de um dos princípios básicos de design do XAML.  A linguagem XAML define os conceitos de seu próprio, mas esses conceitos de trabalho dentro do formulário de idioma e a marcação XML.  
   
 ### <a name="xaml-object-elements"></a>Elementos de objeto XAML  
  Normalmente, um elemento de objeto declara uma instância de um tipo. Esse tipo é definido em assemblies que fornecem os tipos de suporte para uma tecnologia que usa XAML como uma linguagem.  
