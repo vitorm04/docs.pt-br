@@ -29,7 +29,7 @@ O guia do C# fornece uma grande quantidade de informações sobre a linguagem C#
     - Comece pela nossa seção de [Inícios rápidos](quick-starts/index.md). Eles permitem explorar a linguagem C# interativamente no seu navegador. A partir daí, você pode continuar para a seção dos nossos [tutoriais](tutorials/index.md). Esses tutoriais mostram como criar programas em C# desde o início. Os tutoriais fornecem um processo passo a passo para criar programas. Você aprenderá os conceitos da linguagem e como criar programas em C#. Se você preferir ler primeiro as informações da visão geral, experimente nosso [Tour da linguagem C#](tour-of-csharp/index.md). Ele explica os conceitos da linguagem C#. Depois de ler isso, você terá uma compreensão básica da linguagem e estará pronto para experimentar os tutoriais ou criar algo por conta própria.
 
 * Para os desenvolvedores que não conhecem o C#: 
-    - Se você já tiver trabalhado desenvolvimento antes, mas ainda não conhece o C#, leia o [tour da linguagem C#](tour-of-csharp/index.md). Você aprenderá a sintaxe e a estrutura básicas da linguagem, e poderá usar o tour de linguagem para comparar o C# a outras linguagens que já usou. Também é possível pesquisar nos [tutoriais](tutorials/index.md) para experimentar programas básicos em C#.
+    - Se você já tiver trabalhado com desenvolvimento antes, mas ainda não conhece o C#, leia o [tour da linguagem C#](tour-of-csharp/index.md). Você aprenderá a sintaxe e a estrutura básicas da linguagem, e poderá usar o tour de linguagem para comparar o C# a outras linguagens que já usou. Também é possível pesquisar nos [tutoriais](tutorials/index.md) para experimentar programas básicos em C#.
 
 * Desenvolvedores em C# experientes:
     - Se você já tiver usado o C# antes, comece lendo as novidades da versão mais recente da linguagem. Confira [Novidades no C#](whats-new/index.md) para conhecer os novos recursos da versão atual.
@@ -42,7 +42,7 @@ Há várias seções no Guia do C#. Você pode lê-los em ordem ou ir diretament
     - Esta seção aborda o que você precisa instalar para um ambiente de desenvolvimento em C# em sua plataforma de preferência. Os tópicos diferentes nesta seção explicam como criar seu primeiro programa em C# em diferentes ambientes com suporte.
 
 * [Tutoriais](tutorials/index.md):
-    - Esta seção fornece vários cenários de ponta a ponta, incluindo descrições e código. Você vai aprender por que há preferência por determinadas linguagens, quais recursos do C# funcionam melhor em situações diferentes e poderá conferir implementações de referência para tarefas comuns. Se você aprender melhor analisando o código, comece nesta seção. Você também pode baixar todo o código e testar em seu próprio ambiente.
+    - Esta seção fornece vários cenários de ponta a ponta, incluindo descrições e código. Você vai aprender por que há preferência por determinadas linguagens, quais recursos do C# funcionam melhor em situações diferentes e poderá conferir implementações de referência para tarefas comuns. Se você aprende melhor analisando o código, comece nesta seção. Você também pode baixar todo o código e testar em seu próprio ambiente.
 
 * [Um tour do C#](tour-of-csharp/index.md): 
     - Esta seção fornece uma visão geral da linguagem. Você aprenderá os elementos que compõem os programas em C# e os recursos da linguagem. Você verá pequenos exemplos de todos os elementos da sintaxe do C# e discussões dos principais tópicos de linguagem C#. 
