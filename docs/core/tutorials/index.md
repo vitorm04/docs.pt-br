@@ -34,7 +34,7 @@ Os tutoriais a seguir estão disponíveis para aprender mais sobre o .NET Core.
 
 ## <a name="building-applications-with-visual-studio-code"></a>Criando aplicativos Web com o Visual Studio Code
 
-- [Introdução ao Código do Visual Studio e C#](with-visual-studio-code.md)
+- [Introdução ao Visual Studio Code e C#](with-visual-studio-code.md)
 - [Introdução ao .NET Core no macOS](using-on-macos.md)
 
 ## <a name="building-applications-with-visual-studio-for-mac"></a>Compilar aplicativos com o Visual Studio para Mac
