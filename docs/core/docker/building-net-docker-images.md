@@ -12,12 +12,13 @@ ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.custom: mvc
 manager: wpickett
-ms.workload: dotnetcore
-ms.openlocfilehash: cb438957a6519cf503e5bcaf85f2bc82fa18a047
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 2b1a57fe264eda0a4d3186c7be8b0de01bd5f0a9
+ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>Criando imagens do Docker para .NET Core Applications
 
@@ -101,7 +102,7 @@ Ele usa o [recurso de build de vários estágios do Docker](https://docs.docker.
 * compilar a amostra em um contêiner baseado na imagem base **maior** do Docker do Build do ASP.NET Core 
 * copiar o resultado do build final para uma imagem do Docker baseada na imagem base **menor** do Docker do Tempo de Execução do ASP.NET Core
 
-> [!Note]
+> [!NOTE]
 > A imagem de build contém as ferramentas necessárias para compilar aplicativos, ao contrário da imagem de tempo de execução.
 
 ### <a name="prerequisites"></a>Pré-requisitos
@@ -174,7 +175,8 @@ docker build -t aspnetapp .
 docker run -it --rm -p 5000:80 --name aspnetcore_sample aspnetapp
 ```
 
-> [!Note] O argumento `docker run` '-p' mapeia a porta 5000 no computador local para a porta 80 no contêiner (o formato de mapeamento da porta é `host:container`). Para obter mais informações, consulte a referência [docker run](https://docs.docker.com/engine/reference/commandline/exec/) nos parâmetros de linha de comando.
+> [!NOTE]
+> O argumento `docker run` '-p' mapeia a porta 5000 no computador local para a porta 80 no contêiner (o formato de mapeamento da porta é `host:container`). Para obter mais informações, consulte a referência [docker run](https://docs.docker.com/engine/reference/commandline/exec/) nos parâmetros de linha de comando.
 
 Depois que o aplicativo for iniciado, visite **http://localhost:5000** no navegador da Web.
 
@@ -196,7 +198,7 @@ docker run -it --rm --name aspnetcore_sample aspnetapp
 * Execute `docker exec aspnetcore_sample ipconfig`.
 * Copie o endereço IP do contêiner e cole-o no navegador (por exemplo, 172.29.245.43).
 
-> [!Note]
+> [!NOTE]
 > O docker exec dá suporte à identificação de contêineres com o nome ou hash. O nome (aspnetcore_sample) é usado em nosso exemplo.
 
 Consulte o exemplo a seguir de como obter o endereço IP de um contêiner do Windows em execução.
@@ -215,7 +217,7 @@ Ethernet adapter Ethernet:
    Default Gateway . . . . . . . . . : 172.29.240.1
 ```
 
-> [!Note]
+> [!NOTE]
 > O docker exec executa um novo comando em um contêiner em execução. Para obter mais informações, consulte a [referência de docker exec](https://docs.docker.com/engine/reference/commandline/exec/) nos parâmetros de linha de comando.
 
 Produza um aplicativo que está pronto para ser implantado em produção localmente usando o comando [dotnet publish](../tools/dotnet-publish.md).
@@ -224,7 +226,7 @@ Produza um aplicativo que está pronto para ser implantado em produção localme
 dotnet publish -c release -o published
 ```
 
-> [!Note]
+> [!NOTE]
 > O argumento de versão -c compila o aplicativo no modo de versão (o padrão é o modo de depuração). Para obter mais informações, consulte a referência [dotnet run](../tools/dotnet-run.md) nos parâmetros de linha de comando.
 
 Execute o aplicativo no **Windows** usando o comando a seguir.
@@ -265,5 +267,5 @@ Estas são algumas das próximas etapas que podem ser realizadas:
 * [Prática com o Visual Studio para Mac, contêineres e código sem servidor na nuvem](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments)
 * [Introdução ao Docker e ao Visual Studio para Mac Lab](https://github.com/Microsoft/vs4mac-labs/tree/master/Docker/Getting-Started)
 
-> [!Note]
+> [!NOTE]
 > Se você não tiver uma assinatura do Azure, [inscreva-se hoje](https://azure.microsoft.com/free/?b=16.48) em uma conta gratuita de 30 dias e receba $200 em Créditos do Azure para experimentar qualquer combinação de serviços do Azure.
