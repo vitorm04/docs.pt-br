@@ -1,50 +1,63 @@
 ---
 title: Assinando procedimentos armazenados no SQL Server
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 01/05/2018
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a3f1ed66ed7caf2272ca27097dc9a838bec7d0ae
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 15771cc214ee17bc2c98bab2423013483d1355f1
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Assinando procedimentos armazenados no SQL Server
-Você pode assinar um procedimento armazenado com um certificado ou uma chave assimétrica. Isso é criado para cenários quando as permissões não podem ser herdadas pelo encadeamento de propriedade ou quando a cadeia de propriedade é quebrada, como SQL dinâmico. Você cria um usuário mapeado para o certificado, concedendo permissões de usuário do certificado nos objetos que o procedimento armazenado precisa acessar.  
+ Uma assinatura digital é um resumo dos dados criptografados com a chave privada do assinante. A chave privada garante que a assinatura digital seja exclusiva de seu portador ou proprietário. Você pode assinar assemblies, gatilhos, procedimentos armazenados e funções (exceto funções com valor de tabela embutida).  
   
- Quando o procedimento armazenado é executado, o SQL Server combina as permissões do usuário do certificado com as do chamador. Ao contrário da cláusula EXECUTE AS, ele não altera o contexto de execução do procedimento. As funções internas que retornam o logon e os nomes de usuário retornam o nome do chamador, não o nome do usuário do certificado.  
+ Você pode assinar um procedimento armazenado com um certificado ou uma chave assimétrica. Isso é criado para cenários quando as permissões não podem ser herdadas pelo encadeamento de propriedade ou quando a cadeia de propriedade é quebrada, como SQL dinâmico. Em seguida, você pode criar um usuário mapeado para o certificado, conceder permissões de usuário nos objetos de que procedimento armazenado precisa acessar de certificado.  
+
+ Você também pode criar um logon mapeado para o mesmo certificado e, em seguida, conceder quaisquer permissões de nível de servidor necessárias para que o logon ou adicionar o logon a uma ou mais funções de servidor fixas. Isso é projetado para evitar habilitar o `TRUSTWORTHY` configuração para cenários em que são necessárias permissões de nível superior do banco de dados.  
   
- Uma assinatura digital é um resumo dos dados criptografados com a chave privada do assinante. A chave privada garante que a assinatura digital seja exclusiva de seu portador ou proprietário. Você pode assinar procedimentos armazenados, funções ou gatilhos.  
-  
-> [!NOTE]
->  Você pode criar um certificado no banco de dados mestre para conceder permissões de nível de servidor.  
+ Quando o procedimento armazenado é executado, o SQL Server combina as permissões de usuário do certificado e/ou logon com aquelas do chamador. Ao contrário de `EXECUTE AS` cláusula, ela não altera o contexto de execução do procedimento. As funções internas que retornam o logon e os nomes de usuário retornam o nome do chamador, não o nome do usuário do certificado.  
   
 ## <a name="creating-certificates"></a>Criando certificados  
- Quando você assina um procedimento armazenado com um certificado, um resumo dos dados que consiste em hash criptografado do código do procedimento armazenado é criado usando a chave privada. Em tempo de execução, o resumo dos dados é criptografado com a chave pública e comparado com o valor de hash do procedimento armazenado. Alterar o procedimento armazenado invalida o valor de hash de modo que a assinatura digital não corresponda. Isso impedirá que alguém que não tenha acesso à chave privada altere o código do procedimento armazenado. Portanto, você deve reassinar o procedimento sempre que modificá-lo.  
+ Quando você se inscreve um procedimento armazenado com um certificado ou chave assimétrica, um resumo de dados que consiste o hash criptografado do código de procedimento armazenado, junto com o executar-como usuário, é criado usando a chave privada. Em tempo de execução, o resumo dos dados é criptografado com a chave pública e comparado com o valor de hash do procedimento armazenado. Alterando o executar-como usuário invalida o valor de hash para que a assinatura digital não corresponde. Modificar o procedimento armazenado remove a assinatura totalmente, que impede que alguém que não tem acesso à chave privada de alterar o código do procedimento armazenado. Em ambos os casos, você deve assinar novamente o procedimento sempre que você alterar o código ou o executar-como usuário.  
   
- Há quatro etapas envolvidas na assinatura de um módulo:  
+ Há duas etapas necessárias envolvidas em um módulo de assinatura:  
   
-1.  Criar um certificado usando a instrução Transact-SQL `CREATE CERTIFICATE [certificateName]`. Essa instrução tem várias opções para definir uma data inicial e final e uma senha. A data de validade padrão é um ano  
-  
-2.  Crie um usuário de banco de dados associado ao certificado usando a instrução Transact-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]`. Este usuário somente existe no banco de dados e não está associado a um logon.  
-  
-3.  Conceder ao usuário do certificado as permissões necessárias nos objetos de banco de dados.  
-  
-> [!NOTE]
->  Um certificado não pode conceder permissões a um usuário que tem permissões revogadas usando a instrução DENY. DENY sempre terá precedência sobre GRANT, impedindo que o chamador herde as permissões concedidas ao usuário do certificado.  
+1.  Criar um certificado usando a instrução Transact-SQL `CREATE CERTIFICATE [certificateName]`. Essa instrução tem várias opções para definir uma data inicial e final e uma senha. A data de expiração padrão é um ano.  
   
 1.  Assinar o procedimento armazenado com o certificado usando a instrução Transact-SQL `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]`.  
+
+Depois que o módulo tenha sido assinado, uma ou mais entidades precisa ser criado para manter as permissões adicionais que devem ser associadas ao certificado.  
+
+Se o módulo precisa ter permissões de nível de banco de dados adicionais:  
+  
+1.  Crie um usuário de banco de dados associado ao certificado usando a instrução Transact-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]`. Esse usuário existe no banco de dados somente e não está associado um logon, a menos que também foi criado um logon do mesmo certificado.  
+  
+1.  Conceda ao usuário do certificado as permissões necessárias de nível de banco de dados.  
+  
+Se o módulo precisa ter permissões de nível de servidor adicionais:  
+  
+1.  Copie o certificado para o `master` banco de dados.  
+ 
+1.  Crie um logon associado ao certificado usando o Transact-SQL `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` instrução.  
+  
+1.  Concede ao logon de certificado as permissões necessárias de nível de servidor.  
+  
+> [!NOTE]  
+>  Um certificado não pode conceder permissões a um usuário que tem permissões revogadas usando a instrução DENY. DENY sempre terá precedência sobre GRANT, impedindo que o chamador herde as permissões concedidas ao usuário do certificado.  
   
 ## <a name="external-resources"></a>Recursos externos  
  Para obter mais informações, consulte os seguintes recursos.  
