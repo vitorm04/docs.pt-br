@@ -2,22 +2,24 @@
 title: "-delaysign (opções do compilador C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: /delaysign
+f1_keywords:
+- /delaysign
 helpviewer_keywords:
 - -delaysign compiler option [C#]
 - delaysign compiler option [C#]
 - /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 74cd4caaa134f881297134867018346c323deeab
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a931dccb2aebd2c898b55f0a007d9fac8da42f2e
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="-delaysign-c-compiler-options"></a>-delaysign (opções do compilador C#)
 Essa opção faz com que o compilador reserve espaço no arquivo de saída para que uma assinatura digital possa ser adicionada mais tarde.  
@@ -33,7 +35,7 @@ Essa opção faz com que o compilador reserve espaço no arquivo de saída para 
  Use **-delaysign-** se você quiser um assembly totalmente assinado. Use **-delaysign+** se você apenas desejar colocar a chave pública no assembly. O padrão é **-delaysign-**.  
   
 ## <a name="remarks"></a>Comentários  
- A opção **-delaysign** não tem nenhum efeito a menos que seja usada com [/keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) ou [/keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md).  
+ A opção **-delaysign** não tem nenhum efeito a menos que seja usada com [-keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) ou [-keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md).  
   
  Quando você solicita um assembly totalmente assinado, o compilador usa o hash no arquivo que contém o manifesto (metadados de assembly) e sinaliza esse hash com a chave particular. A assinatura digital resultante é armazenada no arquivo que contém o manifesto. Quando um assembly é assinado com atraso, o compilador não calcula e armazena a assinatura, mas reserva o espaço no arquivo, de forma que a assinatura possa ser adicionada depois.  
   

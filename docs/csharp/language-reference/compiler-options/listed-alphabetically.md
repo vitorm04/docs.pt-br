@@ -2,7 +2,8 @@
 title: "Opções do compilador de C# listadas em ordem alfabética"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - compiler options [C#], listed alpabetically
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 07ca6b9473a4a3401742d05aa7c880da5ac43ad0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f4d7f1b122d3481dc8c3c5256ee361965846a830
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opções do compilador de C# listadas em ordem alfabética
 As opções do compilador a seguir estão em ordem alfabética. Para obter uma lista categórica, consulte [Opções de Compilador de C# Listadas por Categoria](../../../csharp/language-reference/compiler-options/listed-by-category.md).  
@@ -28,10 +29,10 @@ As opções do compilador a seguir estão em ordem alfabética. Para obter uma l
 |[-?](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|Exibe uma mensagem de uso para stdout.|  
 |-additionalfile|Nomeia outros arquivos que não afetam diretamente a geração de código, mas podem ser usados por analisadores para produzir erros ou avisos.|  
 |[-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md)|Vincula os módulos especificados nesse assembly|  
-|-analyzer|Executar os analisadores com basse nesse assembly (forma abreviada: /a)|  
+|-analyzer|Executar os analisadores com basse nesse assembly (forma abreviada: -a)|  
 |[/appconfig](../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)|Especifica o local do app.config em tempo de associação do assembly.|  
 |[-baseaddress](../../../csharp/language-reference/compiler-options/baseaddress-compiler-option.md)|Especifica o endereço básico para a biblioteca a ser criada.|  
-|[-bugreport](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|Cria um arquivo 'Bug Report'. Esse arquivo será enviado junto com informações de falha se for usado com /errorreport:prompt ou /errorreport:send.|  
+|[-bugreport](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|Cria um arquivo 'Bug Report'. Esse arquivo será enviado junto com informações de falha se for usado com -errorreport:prompt ou -errorreport:send.|  
 |[/checked](../../../csharp/language-reference/compiler-options/checked-compiler-option.md)|Faz com que o compilador gere verificações de estouro.|  
 |-checksumalgorithm:\<alg>|Especifique o algoritmo para calcular a soma de verificação do arquivo de origem armazenada no PDB.  Os valores com suporte são: SHA1 (padrão) ou SHA256.|  
 |[-codepage](../../../csharp/language-reference/compiler-options/codepage-compiler-option.md)|Especifica a página de código a ser usada ao abrir arquivos de origem.|  

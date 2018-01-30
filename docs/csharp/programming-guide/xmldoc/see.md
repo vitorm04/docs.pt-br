@@ -2,7 +2,8 @@
 title: "&lt;see&gt; (Guia de Programação em C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - <see>
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 065c85ba411794858c8c4d70de0ac1467da1fe56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 959da56269081ebee036c620e535185609c5bff3
+ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ltseegt-c-programming-guide"></a>&lt;see&gt; (Guia de Programação em C#)
 ## <a name="syntax"></a>Sintaxe  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>Comentários  
  Use a marca \<see> para especificar um link de dentro do texto. Use [\<seealso>](../../../csharp/programming-guide/xmldoc/seealso.md) para indicar que o texto deve ser colocado em uma seção Consulte também. Use o [atributo cref](../../../csharp/programming-guide/xmldoc/cref-attribute.md) para criar hyperlinks internos para páginas de documentação para elementos de código.  
   
- Compile com [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.  
+ Compile com [-doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.  
   
  O exemplo a seguir mostra uma marca \<see> dentro de uma seção de resumo.  
   
