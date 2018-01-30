@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c79326634a24ddcc9aed71fca018c69c36c94db0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 83c3688afb3fe509d9a57eba8765cbd13bf581c8
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>O .NET Framework e lançamentos fora da banda
 O .NET Framework está evoluindo para acomodar diferentes plataformas, como o Windows Phone e a Windows Store, bem como a área de trabalho e aplicativos Web tradicionais, e maximizar a reutilização de código. Além de nossas versões regulares do .NET Framework, lançamos também novos recursos fora de faixa (OOB) para melhorar o desenvolvimento interplataforma ou para introduzir novas funcionalidades. Este tópico discute a direção futura do .NET Framework e suas versões OOB.  
@@ -61,7 +63,7 @@ As versões OOB para os componentes principais do CLR (Common Language Runtime) 
   
  Para encontrar pré-lançamentos e pacotes estáveis, selecione **Incluir Pré-lançamento** no Gerenciador de pacotes NuGet.  
   
- Para receber notificações sobre lançamentos de pacotes estáveis, inscreva-se no [feed do .NET Framework](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/).  
+ Para receber notificações sobre lançamentos de pacotes estáveis, assine o [feed do .NET Framework](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/).  
   
 ## <a name="see-also"></a>Consulte também  
  [Introdução](../../../docs/framework/get-started/index.md)
