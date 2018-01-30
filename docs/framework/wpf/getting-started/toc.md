@@ -1,5 +1,5 @@
 # [Introdução](index.md)
-## [Introdução ao WPF no Visual Studio 2015](introduction-to-wpf-in-vs.md)
+## [Introdução ao WPF no Visual Studio](introduction-to-wpf-in-vs.md)
 ## [Novidades no WPF versão 4.5](whats-new.md)
 ## [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](walkthrough-my-first-wpf-desktop-application.md)
 ## [Explicações passo a passo do WPF](wpf-walkthroughs.md)
