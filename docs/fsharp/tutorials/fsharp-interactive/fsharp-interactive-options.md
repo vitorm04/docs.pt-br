@@ -11,10 +11,10 @@ ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: f9f3e39b-ce6c-41ff-991f-0625f46441ae
 ms.openlocfilehash: a9b36a12aa9ffcfa26ea50d72d018a25f5f65243
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="f-interactive-options"></a>Opções do F# Interativo
 
@@ -40,32 +40,32 @@ Onde listas aparecem em argumentos de opção F # interativo, os elementos da li
 |Opção|Descrição|
 |------|-----------|
 |**--**|Usado para instruir o F # interativo para tratar argumentos restantes como argumentos de linha de comando para o F # programa ou script, o que você pode acessar no código usando a lista **FSI. CommandLineArgs**.|
-|**-check**[**+**&#124; **-**]|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
-|**a página de código –:&lt;int&gt;**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
-|**– crossoptimize**[**+**&#124; **-**]|Habilitar ou desabilitar as otimizações de módulo cruzado.|
-|**-Depurar**[**+**&#124; **-**]<br /><br />**-debug:**[**completo**&#124; **pdbonly**]<br /><br />**-g**[**+**&#124; **-**]<br /><br />**-g**[**completo**&#124; **pdbonly**]|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
-|**-definir:&lt;cadeia de caracteres&gt;**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
-|**-exec**|Instrui o F # interativo seja encerrado depois de carregar os arquivos ou executar o arquivo de script fornecido na linha de comando.|
-|**-fullpaths**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
-|**– gui**[**+**&#124; **-**]|Habilita ou desabilita o loop de eventos do Windows Forms. O padrão é habilitado.|
-|**– Ajuda**<br /><br />**-?**|Usado para exibir a sintaxe de linha de comando e uma breve descrição de cada opção.|
-|**-lib:&lt;lista de pastas&gt;**<br /><br />**-I:&lt;lista de pastas&gt;**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
-|**– carregar:&lt;filename&gt;**|Compila o código de origem especificado na inicialização e carrega as construções de linguagem F # compiladas para a sessão. Se a fonte de destino contém as diretivas de script como **#use** ou **#load**, em seguida, você deve usar **– use** ou **#use** em vez de **– carregar** ou **#load**.|
-|**-mlcompatibility**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
-|**– noframework**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [opções do compilador](../../language-reference/compiler-options.md)|
-|**-nologo**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
-|**-nowarn:&lt;lista de avisos&gt;**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
-|**-otimizar**[**+**&#124; **-**]|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
-|**– silencioso**|Suprimir saída da F # interativo para o **stdout** fluxo.|
-|**– cotações de depuração**|Especifica que as informações de depuração extra devem ser emitida para expressões que são derivadas de literais de cotação F # e refletem definições. As informações de depuração são adicionadas para os atributos personalizados de um nó de árvore de expressão F #. Consulte [citações de código](../../language-reference/code-quotations.md) e [customattributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3).|
-|**– readline**[**+**&#124; **-**]|Habilitar ou desabilitar o preenchimento com tab no modo interativo.|
-|**– referência:&lt;filename&gt;**<br /><br />**-r:&lt;filename&gt;**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
-|**– tailcalls**[**+**&#124; **-**]|Habilitar ou desabilitar o uso da instrução IL final, que faz com que o quadro de pilha ser reutilizado para funções de recursivas final. Essa opção é habilitada por padrão.|
-|**– use:&lt;filename&gt;**|Informa o interpretador para usar o arquivo fornecido na inicialização como entrada inicial.|
-|**-utf8output**|Mesmo que a opção de compilador fsc.exe. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
-|**-Aviso:&lt;nível de aviso&gt;**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
-|**-warnaserror**[**+**&#124; **-**]|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
-|**-warnaserror**[**+**&#124; **-** ]:**&lt;int-list&gt;**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
+|**--checked**[**+**&#124;**-**]|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
+|**--codepage:&lt;int&gt;**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
+|**--crossoptimize**[**+**&#124;**-**]|Habilitar ou desabilitar as otimizações de módulo cruzado.|
+|**--debug**[**+**&#124;**-**]<br /><br />**--debug:**[**full**&#124;**pdbonly**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**full**&#124;**pdbonly**]|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
+|**--define:&lt;string&gt;**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
+|**--exec**|Instrui o F # interativo seja encerrado depois de carregar os arquivos ou executar o arquivo de script fornecido na linha de comando.|
+|**--fullpaths**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
+|**--gui**[**+**&#124;**-**]|Habilita ou desabilita o loop de eventos do Windows Forms. O padrão é habilitado.|
+|**--help**<br /><br />**-?**|Usado para exibir a sintaxe de linha de comando e uma breve descrição de cada opção.|
+|**--lib:&lt;folder-list&gt;**<br /><br />**-I:&lt;folder-list&gt;**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
+|**--load:&lt;filename&gt;**|Compila o código de origem especificado na inicialização e carrega as construções de linguagem F # compiladas para a sessão. Se a fonte de destino contém as diretivas de script como **#use** ou **#load**, em seguida, você deve usar **– use** ou **#use** em vez de **– carregar** ou **#load**.|
+|**--mlcompatibility**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
+|**--noframework**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [opções do compilador](../../language-reference/compiler-options.md)|
+|**--nologo**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
+|**--nowarn:&lt;warning-list&gt;**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
+|**--optimize**[**+**&#124;**-**]|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
+|**--quiet**|Suprimir saída da F # interativo para o **stdout** fluxo.|
+|**--quotations-debug**|Especifica que as informações de depuração extra devem ser emitida para expressões que são derivadas de literais de cotação F # e refletem definições. As informações de depuração são adicionadas para os atributos personalizados de um nó de árvore de expressão F #. Consulte [citações de código](../../language-reference/code-quotations.md) e [customattributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3).|
+|**--readline**[**+**&#124;**-**]|Habilitar ou desabilitar o preenchimento com tab no modo interativo.|
+|**--reference:&lt;filename&gt;**<br /><br />**-r:&lt;filename&gt;**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
+|**--tailcalls**[**+**&#124;**-**]|Habilitar ou desabilitar o uso da instrução IL final, que faz com que o quadro de pilha ser reutilizado para funções de recursivas final. Essa opção é habilitada por padrão.|
+|**--use:&lt;filename&gt;**|Informa o interpretador para usar o arquivo fornecido na inicialização como entrada inicial.|
+|**--utf8output**|Mesmo que a opção de compilador fsc.exe. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
+|**--warn:&lt;warning-level&gt;**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
+|**--warnaserror**[**+**&#124;**-**]|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
+|**--warnaserror**[**+**&#124;**-**]:**&lt;int-list&gt;**|Mesmo que o **fsc.exe** opção de compilador. Para obter mais informações, consulte [Opções do compilador](../../language-reference/compiler-options.md).|
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
