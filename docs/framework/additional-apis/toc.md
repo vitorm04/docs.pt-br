@@ -4,8 +4,12 @@
 #### [Campo m_WriteList](m_writelist.md)
 ### [Classe ConnectionGroup](connectiongroup.md)
 #### [Campo m_ConnectionList](m_connectionlist.md)
+### [Classe CoreResponseData](coreresponsedata.md)
+#### [Campo m_ResponseHeaders](coreresponsedata_m_responseheaders.md)
+#### [Campo m_StatusCode](coreresponsedata_m_statuscode.md)
 ### Classe HttpWebRequest
 #### [Campo _AutoRedirects](_autoredirects.md)
+#### [Campo _CoreResponse](httpwebrequest__coreresponse.md)
 #### [Campo _HttpResponse](_httpresponse.md)
 ### Classe ServicePoint
 #### [Campo m_ConnectionGroupList](m_connectiongrouplist.md)
