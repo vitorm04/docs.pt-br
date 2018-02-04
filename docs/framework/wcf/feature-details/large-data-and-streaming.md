@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 187927a9e75348454f5832c2a34bf780e48e4358
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e9551fcf4f302be899dcee8737b3bcfad15f1210
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="large-data-and-streaming"></a>Dados grandes e streaming
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] é uma infraestrutura de comunicação com base em XML. Porque os dados XML normalmente são codificados no formato de texto padrão definido no [especificação XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838)conectados arquitetos e desenvolvedores de sistemas são normalmente se preocupam com a superfície de transmissão (ou o tamanho) de mensagens enviadas em a rede e a codificação baseada em texto de XML é difícil especiais para a transferência eficiente de dados binários.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] é uma infra-estrutura de comunicação baseada em XML. Porque os dados XML normalmente são codificados no formato de texto padrão definido no [especificação XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838)conectados arquitetos e desenvolvedores de sistemas são normalmente se preocupam com a superfície de transmissão (ou o tamanho) de mensagens enviadas em a rede e a codificação baseada em texto de XML é difícil especiais para a transferência eficiente de dados binários.  
   
 ## <a name="basic-considerations"></a>Considerações básicas  
  Para fornecer informações de contexto sobre as seguintes informações do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], esta seção realça algumas preocupações e considerações gerais sobre codificações, dados binários e streaming que geralmente se aplicam às infraestruturas dos sistemas conectados.  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  Em uma cadeia de caracteres codificados em Base64, cada caractere representa 6 bits dos dados originais de 8 bits, o que resulta em uma taxa de sobrecarga de codificação de 4:3 para Base64, sem contar os caracteres adicionais de formatação (retorno de carro/alimentação de linha) que normalmente são adicionados por convenção. Embora a importância das diferenças entre as codificações XML e binárias normalmente dependa do cenário, um ganho em tamanho de mais de 33% ao transmitir uma carga de 500 MB normalmente não é aceitável.  
   
- Para evitar essa sobrecarga de codificação, o padrão MTOM (Mecanismo de otimização de transmissão de mensagens) permite exteriorizar grandes elementos de dados contidos em uma mensagem e carregá-los com a mensagem como dados binários sem nenhuma codificação especial. Com o MTOM, as mensagens são trocadas de maneira semelhante às mensagens de email SMTP com anexos ou conteúdo inserido (imagens e outro conteúdo inserido). As mensagens MTOM são empacotadas como sequências de várias partes/MIME relacionado com a parte da raiz sendo a mensagem SOAP real.  
+ Para evitar essa sobrecarga de codificação, o padrão MTOM (Mecanismo de otimização de transmissão de mensagens) permite exteriorizar grandes elementos de dados contidos em uma mensagem e carregá-los com a mensagem como dados binários sem nenhuma codificação especial. Com MTOM, as mensagens são trocadas de maneira semelhante às mensagens de email SMTP Simple Mail Transfer Protocol () com anexos ou conteúdo incorporado (imagens e outros conteúdos incorporados); As mensagens MTOM são empacotadas como sequências MIME de várias partes/relacionado com a parte raiz sendo a mensagem SOAP real.  
   
  Uma mensagem SOAP MTOM é modificada de sua versão não codificada de forma que as marcas dos elementos especiais que se referem às respectivas partes MIME tomam o lugar dos elementos originais na mensagem que continha dados binários. Como resultado, a mensagem SOAP faz referência ao conteúdo binário apontando para as partes MIME enviadas com ela, mas por outro lado carrega apenas dados de texto XML. Como esse modelo está bastante alinhado com o bem-estabelecido modelo SMTP, há um amplo suporte de ferramentas para codificar e decodificar mensagens MTOM em muitas plataformas, o que o torna uma escolha extremamente interoperável.  
   
@@ -72,7 +74,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="encodings"></a>Codificações  
  Um *codificação* define um conjunto de regras sobre como apresentar mensagens na conexão. Um *codificador* implementa tal uma codificação e é responsável, no lado do remetente, para ativar um <xref:System.ServiceModel.Channels.Message> mensagem na memória em um fluxo de bytes ou o buffer de bytes que pode ser enviado pela rede. No lado do destinatário, o codificador transforma uma sequência de bytes em uma mensagem na memória.  
   
- O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclui três codificadores e permite que você escreva e conecte seus próprios codificadores, se necessário.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclui três codificadores e permite que você escrever e conectar seus próprios codificadores, se necessário.  
   
  Cada uma das associações padrão inclui um codificador pré-configurado, por meio do qual as associações com o prefixo Net* usam o codificador binário (incluindo a classe <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>) enquanto as classes <xref:System.ServiceModel.BasicHttpBinding> e <xref:System.ServiceModel.WSHttpBinding> usam o codificador de mensagem de texto (por meio da classe <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>) por padrão.  
   

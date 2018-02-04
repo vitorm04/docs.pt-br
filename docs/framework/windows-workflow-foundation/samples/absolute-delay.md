@@ -8,16 +8,17 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b483139a-39bb-4560-8003-8969a8fc2cd1
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f6974c7bb281aa6685725b65edd06bb40a907559
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 60e3b65851dba68b4d01d6e4195b5faf99b583de
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="absolute-delay"></a>Atraso absoluto
 O principal cenário para esse exemplo é atrasar até <xref:System.DateTime> especificado usando temporizadores duráveis em um aplicativo de fluxo de trabalho. Isso é diferente de usar a atividade interno de <xref:System.Activities.Statements.Delay> porque isso permitirá que você atrasar apenas para <xref:System.TimeSpan> determinado (ou o número de minutos/segundos).  
@@ -49,7 +50,7 @@ O principal cenário para esse exemplo é atrasar até <xref:System.DateTime> es
   
  Este exemplo também demonstra como ativar persistência para <xref:System.Activities.WorkflowApplication>. Para esse exemplo específico, nós estaremos usando timers duráveis em que dados de fluxo de trabalho serão descarregados na base de dados de persistência durante o tempo ocioso enquanto aguarda o timer para expirar. Essa implementação também pode ser usada para outras ações de persistência. Este exemplo mostra como configurar a cadeia de conexão de persistência com SQL Server, e como criar o armazenamento de instância para persistir os dados para o fluxo de trabalho instância. A lógica é fornecida em como proceder o fluxo de trabalho depois que um evento é gerado que faz a instância de fluxo de trabalho viável.  
   
- Porque você vai através deste exemplo, você verá a hora em que o atraso interno começa e conclua, que por sua vez que uma mensagem de email seja enviada. A partir de aí, a atividade de AbsoluteDelay paralisará até <xref:System.DateTime> especificado (ou os 0 se <xref:System.DateTime> expirou) que por sua vez eles farão com que um email em cima de expiração. Isso mostrará os dois exemplos diferentes de uso da funcionalidade interna de <xref:System.Activities.Statements.Delay> contra o uso de uma atividade de AbsoluteDelay.  
+ Como você percorrer este exemplo, você verá a hora em que o atraso interno começa e for concluído, que por sua vez fará com que uma mensagem de email a ser enviada. A partir de aí, a atividade de AbsoluteDelay paralisará até <xref:System.DateTime> especificado (ou os 0 se <xref:System.DateTime> expirou) que por sua vez eles farão com que um email em cima de expiração. Isso mostrará os dois exemplos diferentes de uso da funcionalidade interna de <xref:System.Activities.Statements.Delay> contra o uso de uma atividade de AbsoluteDelay.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   

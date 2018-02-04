@@ -1,11 +1,13 @@
 ---
 title: Tipo de dados Long (Visual Basic)
-ms.date: 04/20/2017
+ms.date: 01/31/2018
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.Long
+f1_keywords:
+- vb.Long
 helpviewer_keywords:
 - identifier type characters [Visual Basic], &
 - numbers [Visual Basic], whole
@@ -25,11 +27,11 @@ helpviewer_keywords:
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e21ed43ddc6efb018df0581faed1ebf270ab3ca
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 51cf03afc6b2e77ccca74fc26365fc50110e1f71
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="long-data-type-visual-basic"></a>Tipo de dados Long (Visual Basic)
 
@@ -56,10 +58,18 @@ A partir do Visual Basic de 2017, você também pode usar o caractere de sublinh
 
 [!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
+A partir do Visual Basic 15,5, você também pode usar o caractere de sublinhado (`_`) como um separador à esquerda entre o prefixo e os dígitos hexadecimais, binários ou octais. Por exemplo:
+
+```vb
+Dim number As Long = &H_0FAC_0326_1489_D68C
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
+
 Literais numéricos também podem incluir o `L` [caractere de tipo](../../programming-guide\language-features\data-types/type-characters.md) para denotar o `Long` tipo de dados, como mostra o exemplo a seguir.
 
 ```vb
-Dim number = &H0FAC0326L
+Dim number = &H_0FAC_0326_1489_D68CL
 ```
 
 ## <a name="programming-tips"></a>Dicas de programação

@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -35,16 +36,17 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1f9822c61f454f0dd166cfdad7f26798790a5f23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 594bb21983f51f3c0698c43d0f6ea39594b72705
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="wpf-windows-overview"></a>Visão geral do WPF do Windows
 Os usuários interagem com aplicativos [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] autônomos por meio de janelas. O objetivo principal de uma janela é hospedar conteúdo que visualiza dados e permite aos usuários interagir com os dados. Autônomo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativos fornecem suas próprias janelas usando o <xref:System.Windows.Window> classe. Este tópico apresenta <xref:System.Windows.Window> antes que abrangem os conceitos básicos de criação e gerenciamento de janelas de aplicativos autônomos.  
@@ -120,7 +122,7 @@ Os usuários interagem com aplicativos [!INCLUDE[TLA#tla_wpf](../../../../includ
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Configurar uma definição de janela para MSBuild  
  Como você implementa sua janela determina como ela está configurada para [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]. Para uma janela que é definida usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcação e código:  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]arquivos de marcação são configurados como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` itens.  
+-   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivos de marcação são configurados como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` itens.  
   
 -   Arquivos code-behind são configurados como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` itens.  
   
@@ -193,7 +195,7 @@ Os usuários interagem com aplicativos [!INCLUDE[TLA#tla_wpf](../../../../includ
   
 <a name="Preventing"></a>   
 #### <a name="preventing-window-activation"></a>Impedindo a ativação de janela  
- Existem cenários em que janelas não devem ser ativadas quando mostradas, tais como janelas de conversa de um aplicativo estilo messenger da Internet ou janelas de notificação de um aplicativo de email.  
+ Há cenários em que windows deve ser ativado não quando mostrado, como janelas de conversa de um aplicativo estilo messenger da Internet ou de notificação do windows de um aplicativo de email.  
   
  Se seu aplicativo tem uma janela que não deve ser ativada quando mostrado, você pode definir seu <xref:System.Windows.Window.ShowActivated%2A> propriedade `false` antes de chamar o <xref:System.Windows.Window.Show%2A> método pela primeira vez. Como consequência disso:  
   

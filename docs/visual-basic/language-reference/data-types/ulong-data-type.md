@@ -1,11 +1,13 @@
 ---
 title: Tipo de dados ULong (Visual Basic)
-ms.date: 04/20/2017
+ms.date: 01/31/2018
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.ulong
+f1_keywords:
+- vb.ulong
 helpviewer_keywords:
 - numbers [Visual Basic], whole
 - whole numbers
@@ -19,14 +21,13 @@ helpviewer_keywords:
 - ULong data type
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
-caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: afc52bfd16541feed599d5445adad7aba04f8e9d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 606e0ef87b209bb2e75e28223f27d081713c1b7e
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="ulong-data-type-visual-basic"></a>Tipo de dados ULong (Visual Basic)
 
@@ -53,10 +54,18 @@ A partir do Visual Basic de 2017, você também pode usar o caractere de sublinh
 
 [!code-vb[ULong](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
+A partir do Visual Basic 15,5, você também pode usar o caractere de sublinhado (`_`) como um separador à esquerda entre o prefixo e os dígitos hexadecimais, binários ou octais. Por exemplo:
+
+```vb
+Dim number As ULong = &H_F9AC_0326_1489_D68C
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
+
 Literais numéricos também podem incluir o `UL` ou `ul` [caractere de tipo](../../programming-guide\language-features\data-types/type-characters.md) para denotar o `ULong` tipo de dados, como mostra o exemplo a seguir.
 
 ```vb
-Dim number = &H00_00_0A_96_2F_AC_14_D7ul
+Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
 ```
 
 ## <a name="programming-tips"></a>Dicas de programação

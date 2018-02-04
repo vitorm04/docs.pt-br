@@ -5,28 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f40f6c3d94aeeae41c4cce00bac8de863226f287
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8a4fa1574b8e25a5d98f9547ad916a3c84f10b01
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="deferred-versus-immediate-loading"></a>Adiado contra a carga immediate
 Quando você consulta para um objeto, você só retorna o objeto que você solicitou. O *relacionados* objetos não são buscados automaticamente ao mesmo tempo. (Para obter mais informações, consulte [consulta entre relações](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) Você não pode ver o fato de que os objetos relacionados não são carregados já, porque uma tentativa de acessar gerencia uma solicitação que recupere-os.  
   
- Por exemplo, você pode desejar consultar um determinado conjunto de pedidos e depois envie apenas ocasionalmente um email de notificação para clientes específicos. Você não precisará necessariamente inicialmente de recuperar todos os dados do cliente com cada pedido. Você pode usar o carregamento adiada para adiar a recuperação de informações extras até que você tenha que absolutamente. Considere o exemplo a seguir:  
+ Por exemplo, convém consultar um conjunto específico de pedidos e apenas ocasionalmente enviar uma notificação por email aos clientes específicos. Você não precisará necessariamente inicialmente de recuperar todos os dados do cliente com cada pedido. Você pode usar o carregamento adiada para adiar a recuperação de informações extras até que você tenha que absolutamente. Considere o exemplo a seguir:  
   
  [!code-csharp[DLinqQueryConcepts#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#1)]
  [!code-vb[DLinqQueryConcepts#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#1)]  

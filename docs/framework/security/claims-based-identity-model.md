@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: c205aec714d06b5d2aaf2806867fe51ef508385e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f675f75d6dfd51b5259748316864048562ee0452
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="claims-based-identity-model"></a>Modelo de identidade baseada em declarações
-Quando você cria aplicativos com reconhecimento de declarações, a identidade do usuário é representada em seu aplicativo como um conjunto de declarações. Uma reivindicação pode ser o nome do usuário, outra pode ser um endereço de email. A ideia é que um sistema externo de identidade seja configurado para dar ao seu aplicativo tudo que ele precisa saber sobre o usuário com cada solicitação que ele faz, juntamente com a segurança criptográfica que os dados de identidade você recebe de uma fonte confiável.  
+Quando você cria aplicativos com reconhecimento de declarações, a identidade do usuário é representada em seu aplicativo como um conjunto de declarações. Uma declaração pode ser o nome do usuário, outra pode ser um endereço de email. A ideia é que um sistema externo de identidade seja configurado para dar ao seu aplicativo tudo que ele precisa saber sobre o usuário com cada solicitação que ele faz, juntamente com a segurança criptográfica que os dados de identidade você recebe de uma fonte confiável.  
   
  Nesse modelo, o logon único é muito mais fácil de obter, e seu aplicativo não fica mais responsável pelo seguinte:  
   
@@ -49,7 +51,7 @@ Quando você cria aplicativos com reconhecimento de declarações, a identidade 
  Para descrever o modelo de programação no WIF (Windows Identity Foundation), usaremos o termo “identidade” para representar um conjunto de atributos que descreve um usuário ou outra entidade em um sistema que você deseja proteger.  
   
 ### <a name="claim"></a>Declaração  
- Pense na declaração como uma informação de identidade, como nome, endereço de email, idade, associação na função Vendas. Quanto mais declarações seu aplicativo receber, mais você saberá sobre o usuário. Você pode estar se perguntando por que elas são chamadas de “declarações”, em vez de “atributos”, como é geralmente usado para descrever diretórios corporativos. A razão tem a ver com o método de envio. Nesse modelo, o aplicativo não procura atributos do usuário em um diretório. Em vez disso, o usuário envia as declarações ao aplicativo, e o aplicativo as examina. Cada declaração é feita por um emissor, e você confia na declaração tanto quanto confia no emissor. Por exemplo, você confia em uma declaração feita pelo controlador de domínio de sua empresa mais do que confia em uma declaração feita pelo próprio usuário. O WIF representa declarações com tipo <xref:System.Security.Claims.Claim>, que tem a propriedade <xref:System.Security.Claims.Claim.Issuer%2A> que permite que você descubra quem emitiu a declaração.  
+ Pense em uma declaração como uma parte das informações de identidade, como nome, endereço de email, idade, associação na função de vendas. Quanto mais declarações seu aplicativo receber, mais você saberá sobre o usuário. Você pode estar se perguntando por que elas são chamadas de “declarações”, em vez de “atributos”, como é geralmente usado para descrever diretórios corporativos. A razão tem a ver com o método de envio. Nesse modelo, o aplicativo não procura atributos do usuário em um diretório. Em vez disso, o usuário envia as declarações ao aplicativo, e o aplicativo as examina. Cada declaração é feita por um emissor, e você confia na declaração tanto quanto confia no emissor. Por exemplo, você confia em uma declaração feita pelo controlador de domínio de sua empresa mais do que confia em uma declaração feita pelo próprio usuário. O WIF representa declarações com tipo <xref:System.Security.Claims.Claim>, que tem a propriedade <xref:System.Security.Claims.Claim.Issuer%2A> que permite que você descubra quem emitiu a declaração.  
   
 ### <a name="security-token"></a>Token de segurança  
  O usuário fornece um conjunto de declarações ao seu aplicativo juntamente com uma solicitação. Em um serviço Web, essas declarações são transportadas no cabeçalho de segurança do envelope SOAP. Em um aplicativo Web baseado em navegador, as declarações chegam por meio de um HTTP POST do navegador do usuário e depois podem ser armazenadas em cache, em um cookie, se uma sessão for desejada. Independentemente de como essas declarações chegam, elas devem ser serializadas, e é aí que os tokens de segurança entram. Um token de segurança é um conjunto serializado de declarações que é assinado digitalmente pela autoridade emissora. A assinatura é importante: oferece a garantia de que o usuário não reúna um monte de declarações e as envie para você. Em situações de baixa segurança em que a criptografia não é necessária ou desejada, você pode usar tokens não assinados, mas esse cenário não é descrito neste tópico.  

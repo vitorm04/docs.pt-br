@@ -21,23 +21,24 @@ helpviewer_keywords:
 - receiving data, Secure Sockets Layer
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 77f115afab9c0ad4b53a38d8cdb3683616738b1d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31c8a3d22e6a7fa074eae18de8f9b2a9903457c1
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="using-secure-sockets-layer"></a>Usando o protocolo SSL
 As classes <xref:System.Net> usam o protocolo SSL para criptografar a conexão para vários protocolos de rede.  
   
  Para conexões HTTP, as classes <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> usam o SSL para se comunicarem com hosts Web que dão suporte ao SSL. A decisão de usar o SSL é feita pela classe <xref:System.Net.WebRequest>, com base no URI fornecido. Se o URI começa com “https:”, o SSL é usado; se o URI começa com “http:”, uma conexão não criptografada é usada.  
   
- Para usar o SSL com o protocolo FTP, defina a propriedade <xref:System.Net.FtpWebRequest.EnableSsl> como verdadeiro antes de chamar <xref:System.Net.FtpWebRequest.GetResponse>. Da mesma forma, para usar o SSL com o protocolo SMTP, defina a propriedade <xref:System.Net.Mail.SmtpClient.EnableSsl> como verdadeiro antes de enviar o email.  
+ Para usar o SSL com o protocolo FTP, defina a propriedade <xref:System.Net.FtpWebRequest.EnableSsl> como verdadeiro antes de chamar <xref:System.Net.FtpWebRequest.GetResponse>. Da mesma forma, para usar SSL com o transporte de protocolo SMTP (Simple Mail), defina o <xref:System.Net.Mail.SmtpClient.EnableSsl> propriedade como true antes de enviar o email.  
   
  A classe <xref:System.Net.Security.SslStream> fornece uma abstração baseada em fluxo para o SSL e oferece muitas maneiras de configurar o handshake SSL.  
   

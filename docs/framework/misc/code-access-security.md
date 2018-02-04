@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,21 +23,22 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a28f8994c8cffdad69272322575df37c437b8b6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 04a46e30256b3b6df3de51346924cbb5fa057837
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="code-access-security"></a>Segurança de acesso do código
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Sistemas de computador altamente conectado de hoje com frequência são expostos para codificar provenientes de várias, fontes desconhecidas possivelmente. Código pode ser anexado a um email, contido em documentos ou baixado pela Internet. Infelizmente, muitos usuários de computador tem ficado em primeira mão os efeitos de código móvel mal-intencionado, incluindo vírus e worms, que podem danificar ou destruir dados e tempo e dinheiro.  
+ Sistemas de computador altamente conectado de hoje com frequência são expostos para codificar provenientes de várias, fontes desconhecidas possivelmente. Código pode ser anexado ao email, contido em documentos ou baixado pela Internet. Infelizmente, muitos usuários de computador tem ficado em primeira mão os efeitos de código móvel mal-intencionado, incluindo vírus e worms, que podem danificar ou destruir dados e tempo e dinheiro.  
   
  Mecanismos de segurança mais comuns conceder direitos a usuários com base em suas credenciais de logon (geralmente uma senha) e restringem os recursos (geralmente diretórios e arquivos) que o usuário tem permissão para acessar. No entanto, essa abordagem não consegue resolver vários problemas: os usuários a obter código de várias fontes, alguns dos quais podem não ser confiáveis; código pode conter bugs ou vulnerabilidades que habilitá-lo para ser explorado por códigos mal-intencionados. e o código faz, às vezes, coisas que o usuário não sabe que isso será feito. Como resultado, os sistemas de computador podem estar danificados e dados privados podem vazar quando usuários cuidados e confiáveis executam software mal-intencionado ou preenchidas com erro. A maioria dos mecanismos de segurança do sistema operacional requerem que cada pedaço de código deve ser totalmente confiável para executar, exceto talvez para scripts em uma página da Web. Portanto, ainda há a necessidade de um mecanismo de segurança amplamente aplicável que permite que o código do sistema de um computador para executar com proteção em outro sistema, mesmo quando não há nenhuma relação de confiança entre os sistemas de origem.  
   

@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,21 +21,22 @@ helpviewer_keywords:
 - platform invoke
 - DLL functions
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dd1e5f4fc03da2310022efdeb4530440b5e07f3d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4133cfbdf4c9f164ae9ba42a6bbba94ce019e0be
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Consumindo funções de DLL não gerenciadas
-A invocação de plataforma é um serviço que permite que um código gerenciado chame funções não gerenciadas implementadas em DLLs (bibliotecas de vínculo dinâmico), como aquelas na API do Win32. Ela localiza e invoca uma função exportada e realiza marshaling dos argumentos (inteiros, cadeias de caracteres, matrizes, estruturas e assim por diante) além do limite de interoperação, conforme necessário. Para obter mais informações sobre esse serviço, consulte [Visão aprofundada da invocação de plataforma](http://msdn.microsoft.com/library/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243).  
+A invocação de plataforma é um serviço que permite que um código gerenciado chame funções não gerenciadas implementadas em DLLs (bibliotecas de vínculo dinâmico), como aquelas na API do Win32. Ela localiza e invoca uma função exportada e realiza marshaling dos argumentos (inteiros, cadeias de caracteres, matrizes, estruturas e assim por diante) além do limite de interoperação, conforme necessário.  
   
- Esta seção apresenta várias tarefas associadas ao consumo de funções de DLL não gerenciadas. Além das tarefas a seguir, há considerações gerais e um link que fornece exemplos e informações adicionais.  
+ Esta seção apresenta as tarefas associadas a funções DLL não gerenciadas de consumo e fornece mais informações sobre a plataforma de invocação. Além das tarefas a seguir, há considerações gerais e um link que fornece exemplos e informações adicionais.  
   
 #### <a name="to-consume-exported-dll-functions"></a>Para consumir funções de DLL exportadas  
   
@@ -85,4 +87,3 @@ Uma chamada da invocação de plataforma a uma função de DLL não gerenciada
  [Interoperação com código não gerenciado](../../../docs/framework/interop/index.md)  
  [Exemplos de invocação de plataforma](../../../docs/framework/interop/platform-invoke-examples.md)  
  [Marshaling de interoperabilidade](../../../docs/framework/interop/interop-marshaling.md)  
- [Consumindo funções de DLL não gerenciadas](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)

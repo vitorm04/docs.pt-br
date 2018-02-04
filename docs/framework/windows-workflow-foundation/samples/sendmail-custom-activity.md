@@ -8,19 +8,20 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8a6d0338b7c460d7053af9264527a6cd6d263673
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6086ca0ccb31603874feda6df1384b9346adb49d
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sendmail-custom-activity"></a>Atividade personalizado de SendMail
-Este exemplo demonstra como criar uma atividade personalizada que derive de <xref:System.Activities.AsyncCodeActivity> para enviar email SMTP usando para uso em um aplicativo de fluxo de trabalho. A atividade personalizado usa os recursos de <xref:System.Net.Mail.SmtpClient> de forma assíncrona enviar email e enviar email com autenticação. Também fornece alguns recursos de usuário final como o modo de teste, a substituição de token, os modelos de arquivo, e o caminho da operação de teste.  
+Este exemplo demonstra como criar uma atividade personalizada que derive de <xref:System.Activities.AsyncCodeActivity> para enviar email SMTP usando para uso em um aplicativo de fluxo de trabalho. A atividade personalizada usa os recursos do <xref:System.Net.Mail.SmtpClient> para enviar email de forma assíncrona e enviar mensagens com autenticação. Também fornece alguns recursos de usuário final como o modo de teste, a substituição de token, os modelos de arquivo, e o caminho da operação de teste.  
   
  A tabela a seguir detalha os argumentos para atividades de `SendMail` .  
   
@@ -31,17 +32,17 @@ Este exemplo demonstra como criar uma atividade personalizada que derive de <xre
 |EnableSsl|bool|Especifica se <xref:System.Net.Mail.SmtpClient> usar secure sockets (SSL) para criptografar a conexão.|  
 |UserName|Cadeia de Caracteres|Nome de usuário para configurar as credenciais para autenticar a propriedade de <xref:System.Net.Mail.SmtpClient.Credentials%2A> de retorno.|  
 |Senha|Cadeia de Caracteres|Senha para configurar as credenciais para autenticar a propriedade de <xref:System.Net.Mail.SmtpClient.Credentials%2A> de retorno.|  
-|Assunto|<xref:System.Activities.InArgument%601>\<cadeia de caracteres >|Assunto de mensagem.|  
-|Corpo|<xref:System.Activities.InArgument%601>\<cadeia de caracteres >|Corpo da mensagem.|  
-|Anexos|<xref:System.Activities.InArgument%601>\<cadeia de caracteres >|Coleção de anexo usada para armazenar dados anexados a esta mensagem de email.|  
-|De|<xref:System.Net.Mail.MailAddress>|O endereço para esta mensagem de email.|  
-|Para|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Trata da coleção que contém os destinatários esta mensagem de email.|  
-|CÓPIA CARBONO|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Trata da coleção que contém os destinatários de (CC) de impressão carbono para esta mensagem de email.|  
-|BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Trata da coleção que contém os destinatários de (BCC) de impressão carbono cego para esta mensagem de email.|  
+|Assunto|<xref:System.Activities.InArgument%601>\<string>|Assunto de mensagem.|  
+|Corpo|<xref:System.Activities.InArgument%601>\<string>|Corpo da mensagem.|  
+|Anexos|<xref:System.Activities.InArgument%601>\<string>|Coleção de anexo usada para armazenar os dados anexados a essa mensagem de email.|  
+|De|<xref:System.Net.Mail.MailAddress>|Do endereço para esta mensagem de email.|  
+|Para|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Coleção de endereços que contém os destinatários desta mensagem de email.|  
+|CÓPIA CARBONO|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Tratar a coleção que contém os destinatários de cópia carbono (CC) para essa mensagem de email.|  
+|BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Coleção de endereços que contém os destinatários com cópia oculta (Cco) para essa mensagem de email.|  
 |Tokens|<xref:System.Activities.InArgument%601>< IDictionary\<cadeia de caracteres, cadeia de caracteres >>|Tokens a substituição no corpo. Esse recurso permite que os usuários especifiquem alguns valores no corpo do que pode ser substituído pelos tokens fornecidos posteriormente usando essa propriedade.|  
 |BodyTemplateFilePath|Cadeia de Caracteres|Caminho de um modelo para o corpo. A atividade de `SendMail` copia o conteúdo do arquivo a sua propriedade body.<br /><br /> O modelo pode conter os tokens que são substituídos pelos conteúdos da propriedade tokens.|  
-|TestMailTo|<xref:System.Net.Mail.MailAddress>|Quando essa propriedade é definida, todos os email são enviados para o endereço especificado nele.<br /><br /> Esta propriedade destina-se a ser usada ao testar fluxos de trabalho. Por exemplo, quando você desejar se certificar de que todos os email são enviados sem enviar aos destinatários reais.|  
-|TestDropPath|Cadeia de Caracteres|Quando essa propriedade é definida, todos os email são salvos também no arquivo especificado.<br /><br /> Esta propriedade destina-se a ser usada quando você está testando ou depurando fluxos de trabalho, para certificar-se de que o formato e conteúdo de email de saída são apropriadas.|  
+|TestMailTo|<xref:System.Net.Mail.MailAddress>|Quando essa propriedade for definida, todos os emails são enviados para o endereço especificado nela.<br /><br /> Esta propriedade destina-se a ser usada ao testar fluxos de trabalho. Por exemplo, quando você deseja garantir que todos os emails são enviados sem enviá-los para os destinatários reais.|  
+|TestDropPath|Cadeia de Caracteres|Quando essa propriedade for definida, todos os emails também são salvas no arquivo especificado.<br /><br /> Essa propriedade se destina a ser usado quando você estiver testando ou depuração de fluxos de trabalho, para certificar-se de que o formato e o conteúdo dos emails de saída é apropriada.|  
   
 ## <a name="solution-contents"></a>Conteúdo de solução  
  A solução contém dois projetos.  
@@ -115,7 +116,7 @@ new SendMail
 ## <a name="set-up-instructions"></a>Instruções de configuração  
  O acesso a um servidor SMTP é necessário para esse exemplo.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Configurando um servidor SMTP, consulte os links a seguir.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Configurando um servidor SMTP, consulte os links a seguir.  
   
 -   [Microsoft Technet](http://go.microsoft.com/fwlink/?LinkId=166060)  
   
@@ -133,9 +134,9 @@ new SendMail
   
 2.  Certifique-se de que você tem acesso a um servidor SMTP válido. Consulte as instruções de configuração.  
   
-3.  Configurar o programa com seu endereço do servidor, e e endereços de email.  
+3.  Configure o programa com o endereço do servidor e de e para endereços de email.  
   
-     Para executar corretamente esse exemplo, você pode precisar configurar o valor e endereços de email e o endereço de servidor SMTP em Module.vb e em Sequence.xaml. Você precisará alterar o endereço nos dois lugares como o envia email de programa em duas maneiras diferentes  
+     Para executar corretamente este exemplo, talvez seja necessário configurar o valor de e para endereços de email e o endereço do servidor SMTP em Program.cs em Sequence.xaml. Você precisará alterar o endereço nos dois lugares como o envia email de programa em duas maneiras diferentes  
   
 4.  Para criar a solução, pressione CTRL+SHIFT+B.  
   

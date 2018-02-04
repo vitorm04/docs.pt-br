@@ -30,18 +30,18 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 653ffbf9597be9c82300b2be69ed6a7f9412769d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 941dd9d130a31c997b634bce8059afef04c178d3
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="cryptographic-services"></a>Serviços criptográficos
 <a name="top"></a>Redes públicas, como a Internet não fornecem um meio de comunicação segura entre entidades. Comunicação por essas redes é suscetível a sendo lidas ou modificadas até mesmo por terceiros não autorizados. A criptografia ajuda a proteger os dados sejam exibidos, fornece maneiras para detectar se os dados foram modificados e ajuda a fornecer uma maneira segura de comunicação nos canais de outra forma não seguras. Por exemplo, os dados podem ser criptografados usando um algoritmo de criptografia, transmitidos em um estado criptografado e mais tarde descriptografados pelo parceiro pretendido. Se outra pessoa interceptar os dados criptografados, será difícil decifrar.  
@@ -115,7 +115,7 @@ ms.lasthandoff: 01/19/2018
   
  A desvantagem da criptografia de chave secreta é que ele supõe que duas partes tem estabelecido em uma chave e IV e comunicadas seus valores. O IV não é considerado um segredo e pode ser transmitido em texto não criptografado com a mensagem. No entanto, a chave deve ser mantida em segredo de usuários não autorizados. Devido a esses problemas, a criptografia de chave secreta é frequentemente usada junto com criptografia de chave pública em particular se comuniquem os valores da chave e do IV.  
   
- Supondo que Alice e Bob é duas partes que desejam se comunicar através de um canal inseguro, eles podem usar criptografia de chave secreta da seguinte maneira: Alice e Bob concorda em usar um algoritmo específico (por exemplo, AES) com uma chave particular e o IV. Alice compõe uma mensagem e cria um fluxo de rede (talvez um nomeada pipe email ou de rede) para enviar a mensagem. Em seguida, ela criptografa o texto usando a chave e IV e envia a mensagem criptografada e IV para Bob através da intranet. Bob recebe o texto criptografado e descriptografa-a usando o IV e acordados anteriormente a chave. Se a transmissão é interceptada, o interceptador não é possível recuperar a mensagem original, porque ele não sabe qual é a chave. Nesse cenário, apenas a chave deve permanecer segreda. Em um cenário do mundo real, Alice ou Bob gera uma chave de segredo e usa criptografia de chave pública (assimétrica) para transferir a chave secreta do (simétrica) para outra parte. Para obter mais informações sobre criptografia de chave pública, consulte a próxima seção.  
+ Supondo que Alice e Bob é duas partes que desejam se comunicar através de um canal inseguro, eles podem usar criptografia de chave secreta da seguinte maneira: Alice e Bob concorda em usar um algoritmo específico (por exemplo, AES) com uma chave particular e o IV. Alice compõe uma mensagem e cria um fluxo de rede (talvez um nome pipe ou rede email) para enviar a mensagem. Em seguida, ela criptografa o texto usando a chave e IV e envia a mensagem criptografada e IV para Bob através da intranet. Bob recebe o texto criptografado e descriptografa-a usando o IV e acordados anteriormente a chave. Se a transmissão é interceptada, o interceptador não é possível recuperar a mensagem original, porque ele não sabe qual é a chave. Nesse cenário, apenas a chave deve permanecer segreda. Em um cenário do mundo real, Alice ou Bob gera uma chave de segredo e usa criptografia de chave pública (assimétrica) para transferir a chave secreta do (simétrica) para outra parte. Para obter mais informações sobre criptografia de chave pública, consulte a próxima seção.  
   
  O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornece as seguintes classes que implementam algoritmos de criptografia de chave de segredo:  
   
