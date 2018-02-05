@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9f141c414ef56c591baa882d9495e591e6b08bc8
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 5554b9e923b0cc1da4906cda1b7ca4e6aac75f11
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="expression-trees-c"></a>Árvores de expressão (C#)
 Árvores de expressão representam código em uma estrutura de dados de árvore, onde cada nó é, por exemplo, uma expressão, uma chamada de método ou uma operação binária como `x < y`.  
@@ -99,7 +100,7 @@ Console.WriteLine(factorial);
 // Prints 120.  
 ```
 
-Para saber mais, confira [Gerar métodos dinâmicos com árvores de expressão no Visual Studio 2010](http://go.microsoft.com/fwlink/p/?LinkId=169513), que também se aplica a versões mais recentes do Visual Studio.
+Para saber mais, confira [Gerar métodos dinâmicos com árvores de expressão no Visual Studio 2010](https://blogs.msdn.microsoft.com/csharpfaq/2009/09/14/generating-dynamic-methods-with-expression-trees-in-visual-studio-2010/), que também se aplica a versões mais recentes do Visual Studio.
   
 ## <a name="parsing-expression-trees"></a>Analisando árvores de expressão  
  O exemplo de código a seguir demonstra como a árvore de expressão que representa a expressão lambda `num => num < 5` pode ser decomposta em suas partes.  
