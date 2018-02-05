@@ -17,11 +17,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7c44e350ad4e561f03bf6c598172058a0a9ca41e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8246e825202b3eb02db5d11f1fe55b4a0d14a4ea
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="how-to-determine-if-a-net-standard-object-is-serializable"></a>Como: determinar se um objeto .NET padrão é serializável
 
@@ -42,5 +42,5 @@ Você pode passar qualquer objeto para o método para determinar se ele pode ser
 # <a name="see-also"></a>Consulte também
 
 [Serialização binária](binary-serialization.md)   
-<xref:System.SerializableAttribute?displayProperty=fullName>    
+<xref:System.SerializableAttribute?displayProperty=nameWithType>    
 <xref:System.Type.IsSerializable?displayProperty=nameWithType>   
