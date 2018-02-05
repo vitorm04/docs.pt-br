@@ -8,17 +8,21 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: thread-safe collections, custom blocking collections
+helpviewer_keywords:
+- thread-safe collections, custom blocking collections
 ms.assetid: 4c2492de-3876-4873-b5a1-000bb404d770
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: aeba49c31238c62a12dba96d3dc47c3cc8ef1bcb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7fe57d99382c3472d0af5e5f64f7b237692b921b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-add-bounding-and-blocking-functionality-to-a-collection"></a>Como adicionar a funcionalidade de delimitação e bloqueio a uma coleção
 Este exemplo mostra como adicionar a funcionalidade de delimitação e de bloqueio a uma classe de coleção personalizada por meio da implementação da interface <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType> na classe e do uso de uma instância da classe como o mecanismo de armazenamento interno para um <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>. Para obter mais informações sobre delimitação e bloqueio, veja [Visão geral de BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).  

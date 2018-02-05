@@ -1,13 +1,13 @@
 ---
 layout: HubPage
-hide_bc: True
+hide_bc: 
 title: "Documentação .NET"
 description: "Aprenda a usar o .NET para criar uma variedade de aplicativos em qualquer plataforma usando C#, Visual Basic e F#. Procure referência de API, código de exemplo, tutoriais e muito mais."
-ms.openlocfilehash: 6817628e110d59b3d5b7c8e52fa2d5cc7cac4cd7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: 623f281c3f348c6e3c52f28b263ac06e0e864870
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 02/01/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -111,7 +111,7 @@ ms.lasthandoff: 12/02/2017
                                                 <p><a href="/dotnet/core/tutorials">Tutoriais</a></p>
                                                 <p><a href="/dotnet/core/porting">Portabilidade do .NET Framework</a></p>
                                                 <p><a href="/aspnet/core/getting-started">ASP.NET Core</a></p>
-                                                <p><a href="/ef/core/index">Núcleo EF</a></p>
+                                                <p><a href="/ef/core/index">EF Core</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -168,7 +168,7 @@ ms.lasthandoff: 12/02/2017
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/csharp">Guia do C#</a></h3>
-                                                <p><a href="/dotnet/csharp/quick-starts">Início Rápido</a></p>
+                                                <p><a href="/dotnet/csharp/quick-starts">Guias de início rápido</a></p>
                                                 <p><a href="/dotnet/csharp/getting-started">Introdução</a></p>
                                                 <p><a href="/dotnet/csharp/tour-of-csharp">Tour do C#</a></p>
                                                 <p><a href="/dotnet/csharp/language-reference">Referência da linguagem C#</a></p>

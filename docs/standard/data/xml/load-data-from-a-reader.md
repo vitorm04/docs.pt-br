@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b899ae870fe92b31d7f4fcd088531f63694bd233
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9e9f934d6bff2c9ff3733551bca89b43920f3104
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="load-data-from-a-reader"></a>Carregando dados de um leitor
 Se um documento XML é carregado usando o método <xref:System.Xml.XmlDocument.Load%2A> e um parâmetro de <xref:System.Xml.XmlReader>, existem diferenças no comportamento que ocorre quando comparado ao comportamento de dados de carregamento de outro formata. Se o leitor está no estado inicial, <xref:System.Xml.XmlDocument.Load%2A> consome todo o conteúdo do leitor e compila o modelo de objeto (DOM) de documento de todos os dados no leitor.  
@@ -37,4 +40,4 @@ Se um documento XML é carregado usando o método <xref:System.Xml.XmlDocument.L
  Por padrão, <xref:System.Xml.XmlDocument.Load%2A> não verifica se o XML é válida usando o Document type definition (DTD) ou validação de esquema. Verifica somente se está XML bem formado. Para que a validação ocorre, você precisa criar <xref:System.Xml.XmlReader> usando a classe de <xref:System.Xml.XmlReaderSettings> . A classe <xref:System.Xml.XmlReader> pode impor a validação usando um esquema da linguagem XSD ou DTD. A propriedade de <xref:System.Xml.ValidationType> na classe de <xref:System.Xml.XmlReaderSettings> determina se a instância de <xref:System.Xml.XmlReader> aplica a validação. Para obter mais informações sobre a validação de dados XML, consulte a seção comentários da página de referência <xref:System.Xml.XmlReader>.  
   
 ## <a name="see-also"></a>Consulte também  
- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
