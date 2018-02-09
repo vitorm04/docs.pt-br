@@ -3,11 +3,12 @@ layout: HubPage
 hide_bc: 
 title: "Documentação .NET"
 description: "Aprenda a usar o .NET para criar uma variedade de aplicativos em qualquer plataforma usando C#, Visual Basic e F#. Procure referência de API, código de exemplo, tutoriais e muito mais."
-ms.openlocfilehash: 623f281c3f348c6e3c52f28b263ac06e0e864870
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.custom: updateeachrelease
+ms.openlocfilehash: 9e2ed008752d37d79cabc8c9d341e797a715294c
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -49,7 +50,7 @@ ms.lasthandoff: 02/01/2018
                 </a>
             </li>
             <li>
-                <a href="/dotnet/api/?view=netframework-4.7">
+                <a href="/dotnet/api/?view=netframework-4.7.1">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
