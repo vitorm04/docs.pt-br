@@ -2,21 +2,23 @@
 title: "abstract (Referência de C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - abstract
 - abstract_CSharpKeyword
-helpviewer_keywords: abstract keyword [C#]
+helpviewer_keywords:
+- abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: bd26583c42302d8ce9ba4dd22119713548111236
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9c6dbb03a05ff1c86752983d130691ce23e341d7
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="abstract-c-reference"></a>abstract (Referência de C#)
 O modificador `abstract` indica que o item que está sendo modificado tem uma implementação ausente ou incompleta. O modificador abstrato pode ser usado com classes, métodos, propriedades, indexadores e eventos. Use o modificador `abstract` em uma declaração de classe para indicar que uma classe destina-se apenas a ser uma classe base de outras classes. Membros marcados como abstratos ou incluídos em uma classe abstrata, devem ser implementados por classes que derivam da classe abstrata.  
@@ -50,7 +52,7 @@ O modificador `abstract` indica que o item que está sendo modificado tem uma im
     public abstract void MyMethod();  
     ```  
   
-     A implementação é fornecida por um método de substituição [override](../../../csharp/language-reference/keywords/override.md), que é um membro de uma classe não abstrata.  
+     A implementação é fornecida por um método [override](../../../csharp/language-reference/keywords/override.md), que representa um membro de uma classe não abstrata.  
   
 -   É um erro usar os modificadores [static](../../../csharp/language-reference/keywords/static.md) ou [virtual](../../../csharp/language-reference/keywords/virtual.md) em uma declaração de método abstrato.  
   

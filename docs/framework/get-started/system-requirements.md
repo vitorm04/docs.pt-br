@@ -1,9 +1,11 @@
 ---
 title: Requisitos do sistema do .NET Framework
+description: "Descubra os requisitos de hardware, software e sistema operacional para instalar o .NET Framework 4.5 e versões posteriores."
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
+ms.date: 02/02/2018
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - software requirements
@@ -15,16 +17,31 @@ ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f206dd52f5fd6dc114ea35ce22df05e0fcff956c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a0cfbcbc4c2c0857c1fe4163484a43f4521444a3
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="net-framework-system-requirements"></a>Requisitos do sistema do .NET Framework
 
-As tabelas nesse tópico fornecem o hardware, o sistema operacional e os requisitos de software para o .NET Framework 4.5 e seus lançamentos pontuais (4.5.1 e 4.5.2), e o [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e seus lançamentos pontuais (4.6.1 e 4.6.2) e o .NET Framework 4.7 e seu lançamento pontual (4.7.1). Os ambientes de desenvolvimento que permitem desenvolver aplicativos para o .NET Framework têm um conjunto de requisitos separado.
+As tabelas deste tópico fornecem os requisitos de hardware, software e sistema operacional para as seguintes versões do .NET Framework:
+
+* .NET Framework 4.5 e respectivos pontos de lançamento (4.5.1 e 4.5.2).
+* .NET Framework 4.6 e respectivos pontos de lançamento (4.6.1 e 4.6.2).
+* .NET Framework 4.7 e respectivos pontos de lançamento (4.7.1).
+
+Os ambientes de desenvolvimento que permitem desenvolver aplicativos para o .NET Framework têm um conjunto de requisitos separado.
+
+> [!IMPORTANT]
+> Todas as versões do .NET Framework, desde o .NET Framework 4, são atualizações in-loco. Por esse motivo, apenas uma versão 4.x pode estar presente no sistema.
+> Além disso, determinadas versões do .NET Framework vêm pré-instaladas em algumas versões do sistema operacional Windows. Isso significa que:
+>
+> * Se você instalou uma versão posterior no computador, não é possível instalar uma versão 4.x anterior.
+> * Se o OS vier pré-instalado com uma determinada versão do .NET, não é possível instalar uma versão 4.x anterior no mesmo computador.
+> * Caso instale uma versão posterior, não é necessário desinstalar primeiro a versão anterior.
 
 Para obter informações sobre download e links, consulte [Instalar o .NET Framework para desenvolvedores](../../../docs/framework/install/guide-for-developers.md).
 
@@ -61,7 +78,7 @@ A instalação do .NET Framework exige privilégios de administrador. Se você n
 
  **Observações:**
 
-- Em sistemas com Windows 7, o .NET Framework exige o Windows 7 SP1. Se você estiver no Windows 7 e ainda não tiver instalado o Service Pack 1, precisará fazer isso antes de instalar o .NET Framework.
+- Em sistemas com Windows 7, o .NET Framework exige o Windows 7 SP1. Se você usa o Windows 7 e ainda não instalou o Service Pack 1, faça isso antes de instalar o .NET Framework.
 
 - O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] é compatível no Windows PE (Ambiente de Pré-Instalação do Windows). Nem todos os recursos são compatíveis com o Windows PE.
 
@@ -84,7 +101,7 @@ A instalação do .NET Framework exige privilégios de administrador. Se você n
 
  **Observações:**
 
-- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] inclui o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], para que você não precise instalá-lo separadamente. Da mesma forma, [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] inclui o [!INCLUDE[net_v451](../../../includes/net-v451-md.md)].
+- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] inclui o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], portanto não é necessário instalá-lo separadamente. Da mesma forma, [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] inclui o [!INCLUDE[net_v451](../../../includes/net-v451-md.md)].
 
 - O .NET Framework tem compatibilidade limitada na função Server Core no Windows Server 2008 R2 SP1 ou posterior. Consulte [Server Core .NET Functionality](https://msdn.microsoft.com/library/ee391632.aspx) (Funcionalidade do Server Core .NET) para obter uma lista de APIs incompatíveis.
 
