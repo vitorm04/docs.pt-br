@@ -9,15 +9,15 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-ms.openlocfilehash: 5c8b6e2d14a14724a040bed5cc58c5ffef3ce520
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d800d861f65779a73f83cf44e8884566eb7adee4
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="samples-and-tutorials"></a>Exemplos e tutoriais
 
-A documentação do .NET contém um conjunto de exemplos e tutoriais que ensinam sobre o .NET. Este tópico descreve como localizar, exibir e baixar exemplos e tutoriais do .NET Core, ASP.NET Core e C#. Encontre recursos para aprender sobre a linguagem de programação F# no [site de fundamentos do F#](http://fsharp.org/learn.html). Se estiver interessado em explorar o C# usando um editor de código online, veja esses [tutoriais interativos](http://go.microsoft.com/fwlink/p/?LinkId=817234). Para obter instruções sobre como exibir e baixar o código de exemplo, confira a seção [Exibindo e baixando exemplos](#viewing-and-downloading-samples).
+A documentação do .NET contém um conjunto de exemplos e tutoriais que ensinam sobre o .NET. Este tópico descreve como localizar, exibir e baixar exemplos e tutoriais do .NET Core, ASP.NET Core e C#. Encontre recursos para aprender sobre a linguagem de programação F# no [site de fundamentos do F#](http://fsharp.org/learn.html). Se tiver interesse em explorar o C# usando um editor de códigos online, comece com [este tutorial interativo](https://www.microsoft.com/net/learn/in-browser-tutorial/1) e continue com [inícios rápidos interativos de C#](../csharp/quick-starts/index.md). Para obter instruções sobre como exibir e baixar o código de exemplo, confira a seção [Exibindo e baixando exemplos](#viewing-and-downloading-samples).
 
 ## <a name="net-core"></a>.NET Core
 
