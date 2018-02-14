@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 61f59c1be3376fb76c91994996840b915cd662ae
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 84171c92a56a9970b5ffc16ce8f30c85d61cc678
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>Opções de saída na classe de XslCompiledTransform
 Este tópico discute opções de saída disponíveis XSLT. Você pode especificar opções de saída na folha de estilos, ou o método de <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> .  
@@ -49,7 +52,7 @@ Este tópico discute opções de saída disponíveis XSLT. Você pode especifica
 #### <a name="xmlwriter"></a>XmlWriter  
  A classe de <xref:System.Xml.XmlWriter> gravará fluxos XML ou arquivos. Você pode especificar os recursos para oferecer suporte no objeto de <xref:System.Xml.XmlWriter> , incluindo opções de saída, usando a classe de <xref:System.Xml.XmlWriterSettings> . A classe de <xref:System.Xml.XmlWriter> é uma parte integral de estrutura de <xref:System.Xml> . Use esse tipo de saída para canalizar os resultados de saída em outro processo XML.  
   
-#### <a name="string"></a>Cadeia de caracteres  
+#### <a name="string"></a>Cadeia de Caracteres  
  Use esse tipo de saída para especificar a URL do arquivo de saída.  
   
 #### <a name="stream"></a>Fluxo  

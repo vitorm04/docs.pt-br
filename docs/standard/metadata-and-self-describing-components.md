@@ -21,15 +21,18 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8fcb5ea90cc16d62fee5b8e95b03bfe53c3a6793
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ac08dcf305e8cc0c1a3be3b8300ed9981e7d84d4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="metadata-and-self-describing-components"></a>Metadados e componentes autodescritivos
 No passado, um componente de software (.exe ou .dll) escrito em uma linguagem não podia usar facilmente um componente de software escrito em outra linguagem. COM foi um passo para a solução desse problema. O .NET Framework facilita ainda mais a interoperação entre componentes permitindo que compiladores emitam informações declarativas adicionais sobre todos os módulos e assemblies. Essas informações, chamadas de metadados, ajudam os componentes a interagirem perfeitamente.  
@@ -164,7 +167,7 @@ IL_000d:  call int32 ConsoleApplication.MyApp::Add(int32,int32) /* 06000003 */
 |Row|RVA (endereço virtual relativo)|ImplFlags|Sinalizadores|Nome<br /><br /> (Aponta para o heap da cadeia de caracteres.)|Assinatura (Aponta para o heap de blob.)|  
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|  
 |1|0x00002050|IL<br /><br /> Gerenciado|Público<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (construtor)||  
-|2|0x00002058|IL<br /><br /> Gerenciado|Público<br /><br /> Estático<br /><br /> ReuseSlot|Principal|Cadeia de caracteres|  
+|2|0x00002058|IL<br /><br /> Gerenciado|Público<br /><br /> Estático<br /><br /> ReuseSlot|Principal|Cadeia de Caracteres|  
 |3|0x0000208c|IL<br /><br /> Gerenciado|Público<br /><br /> Estático<br /><br /> ReuseSlot|Adicionar|int, int, int|  
   
  Cada coluna da tabela contém informações importantes sobre seu código. A coluna **RVA** permite que o tempo de execução calcule o endereço de memória inicial do MSIL que define esse método. As colunas **ImplFlags** e **Flags** contêm bitmasks que descrevem o método (por exemplo, se o método é público ou particular). A coluna **Nome** indexa o nome do método com base no heap da cadeia de caracteres. A coluna **Assinatura** indexa a definição da assinatura do método no heap de blob.  

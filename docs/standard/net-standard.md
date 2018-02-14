@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: ccb44b94f1b3ce2fb369de368454679b25ed351f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9c0d375f160b886b104daeb68b88c25264e3e78f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -80,7 +83,7 @@ A especificação do .NET Standard é um conjunto padronizado de APIs. A especif
 
 ### <a name="official-artifacts"></a>Artefatos oficiais
 
-A especificação oficial é um conjunto de arquivos .cs que definem as APIs que fazem parte do padrão. O [diretório ref](https://github.com/dotnet/standard/tree/master/netstandard/ref) em [dotnet/standard repository](https://github.com/dotnet/corefx/tree/master/src) define as APIs do .NET Standard.
+A especificação oficial é um conjunto de arquivos .cs que definem as APIs que fazem parte do padrão. O [diretório ref](https://github.com/dotnet/standard/tree/master/netstandard/ref) em [dotnet/standard repository](https://github.com/dotnet/standard) define as APIs do .NET Standard.
 
 O metapacote [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) ([de origem](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props)) descreve o conjunto de bibliotecas que define (parcialmente) uma ou mais versões do .NET Standard.
 
@@ -98,7 +101,7 @@ Artefatos derivados são fornecidos para habilitar leitura mais conveniente e pe
 
 O meio de distribuição principal dos assemblies de referência do .NET Standard são os [pacotes NuGet](../core/packages.md). As implementações serão entregues de várias formas, apropriadas para cada implementação do .NET.
 
-Pacotes NuGet são direcionados a uma ou mais [estruturas](frameworks.md). Os pacotes do .NET Standard são direcionados à estrutura do ".NET Standard". Você pode direcionar o .NET Standard Framework usando o `netstandard` [ TFM compacto](frameworks.md) (por exemplo, `netstandard1.4`). Bibliotecas destinadas a execução em vários tempos de execução devem ter essa estrutura como alvo. 
+Pacotes NuGet são direcionados a uma ou mais [estruturas](frameworks.md). Os pacotes do .NET Standard são direcionados à estrutura do ".NET Standard". Você pode direcionar o .NET Standard Framework usando o `netstandard` [ TFM compacto](frameworks.md) (por exemplo, `netstandard1.4`). Bibliotecas destinadas à execução em vários tempos de execução devem ter essa estrutura como destino. 
 
 O metapacote `NETStandard.Library` faz referência ao conjunto completo de pacotes NuGet que definem o .NET Standard.  A maneira mais comum de apontar `netstandard` é fazer referência a esse metapacote. Ele descreve e fornece acesso às ~40 bibliotecas .NET e APIs associadas, que definem a .NET Standard. Você pode referenciar pacotes adicionais destinados a `netstandard` para obter acesso a APIs adicionais. 
 
