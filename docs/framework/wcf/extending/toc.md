@@ -1,4 +1,4 @@
-# [Extending WCF](extending-wcf.md) (Estendendo o WCF)
+# [Estendendo o WCF](index.md)
 ## [Estendendo ServiceHost e a camada de modelo de serviço](extending-servicehost-and-the-service-model-layer.md)
 ### [Estendendo clientes](extending-clients.md)
 #### [Como inspecionar ou modificar as mensagens no cliente](how-to-inspect-or-modify-messages-on-the-client.md)
