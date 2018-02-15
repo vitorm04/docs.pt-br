@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 9ff9380b318457a842dec4e41b9b74dcddcda3d3
-ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ecef23870ac547f4b4066628da71f8af98c91b27
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Características de aplicativos Web modernos
 
 > "… com o projeto correto, os recursos vêm barata. Essa abordagem é árdua, mas continua a ter êxito."  
-> _\-Dennis Ritchie_
+> _\- Dennis Ritchie_
 
 ## <a name="summary"></a>Resumo
 
@@ -33,7 +36,7 @@ Este guia inclui um aplicativo de referência, *eShopOnWeb*, que demonstra algun
 
 > ### <a name="reference-application"></a>Aplicativo de referência
 > - **eShopOnWeb**  
-> <https://GitHub.com/dotnet/eShopOnWeb>
+> <https://github.com/dotnet/eShopOnWeb>
 
 ## <a name="cloud-hosted-and-scalable"></a>Hospedado na nuvem e escalonável
 
@@ -41,7 +44,7 @@ ASP.NET Core é otimizada para a nuvem (nuvem pública, nuvem privada, nuvem) po
 
 ## <a name="cross-platform"></a>Plataforma cruzada
 
-ASP.NET Core é entre plataformas e podem ser executados em Linux e MacOS, bem como Windows. Isso abre muitas opções novas para desenvolvimento e implantação de aplicativos criados com o ASP.NET Core. Contêineres do docker, que são normalmente executadas Linux hoje, podem hospedar aplicativos ASP.NET Core, permitindo que eles tirar proveito dos benefícios do [contêineres e microservices](../microservices-architecture).
+ASP.NET Core é entre plataformas e podem ser executados em Linux e MacOS, bem como Windows. Isso abre muitas opções novas para desenvolvimento e implantação de aplicativos criados com o ASP.NET Core. Contêineres do docker, que são normalmente executadas Linux hoje, podem hospedar aplicativos ASP.NET Core, permitindo que eles tirar proveito dos benefícios do [contêineres e microservices](../microservices-architecture/index.md).
 
 ## <a name="modular-and-loosely-coupled"></a>Modulares e flexíveis
 
@@ -71,11 +74,11 @@ Além do ASP.NET Core, tradicional ASP.NET 4. x continua a ter uma plataforma ro
 
 > ### <a name="references--modern-web-applications"></a>Referências – aplicativos Web modernos
 > - **Introdução ao ASP.NET Core**  
-> <https://docs.microsoft.com/ASPNET/Core/>
+> <https://docs.microsoft.com/aspnet/core/>
 > - **Seis chave benefícios do ASP.NET Core que tornam diferentes e melhor**  
-> <https://blog.trigent.com/Six-Key-Benefits-of-ASP-NET-Core-1-0-which-Make-IT-different-Better/>
+> <https://blog.trigent.com/six-key-benefits-of-asp-net-core-1-0-which-make-it-different-better/>
 > - **Teste no núcleo do ASP.NET**  
-> <https://docs.microsoft.com/ASPNET/Core/Testing/>
+> <https://docs.microsoft.com/aspnet/core/testing/>
 
 >[!div class="step-by-step"]
 [Anterior] (index.md) [Avançar] (choose-between-traditional-web-and-single-page-apps.md)

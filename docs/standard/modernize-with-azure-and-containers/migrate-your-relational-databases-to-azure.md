@@ -4,11 +4,14 @@ description: "Modernizar aplicativos existentes do .NET com contêineres do Wind
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 2cd52bff0f4e812b3e701ff61eeb4526b98ec6fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 221d8c2b837fb738425e26f3af4da895e4987212
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Migrar seus bancos de dados relacionais para o azure
 
@@ -107,7 +110,7 @@ Para saber como migrar bancos de dados usando o serviço de migração de banco 
 
 -   **Escolha uma opção do SQL Server de nuvem: banco de dados do SQL do Azure (PaaS) ou o SQL Server na VM do Azure (IaaS)**
 
-    [https://docs.microsoft.com/Azure/SQL-Database/SQL-Database-PaaS-VS-SQL-Server-IaaS](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
+    [https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
 
 -   **Obter para a nuvem mais rápida com o serviço de migração do banco de dados e instância gerenciada do Azure SQL DB**
 
@@ -115,15 +118,15 @@ Para saber como migrar bancos de dados usando o serviço de migração de banco 
 
 -   **Migração de banco de dados do SQL Server para o banco de dados SQL na nuvem**
 
-    [https://docs.microsoft.com/Azure/SQL-Database/SQL-Database-Cloud-Migrate](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate)
+    [https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate)
 
--   **Banco de dados SQL do Azure**
+-   **Banco de Dados SQL do Azure**
 
-    [https://Azure.microsoft.com/Services/SQL-Database/?v=16.50](https://azure.microsoft.com/services/sql-database/?v=16.50)
+    [https://azure.microsoft.com/services/sql-database/?v=16.50](https://azure.microsoft.com/services/sql-database/?v=16.50)
 
 -   **SQL Server em máquinas virtuais**
 
-    [https://Azure.microsoft.com/Services/Virtual-Machines/SQL-Server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
+    [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 
 >[!div class="step-by-step"]
 [Anterior](lift-and-shift-existing-apps-azure-iaas.md)

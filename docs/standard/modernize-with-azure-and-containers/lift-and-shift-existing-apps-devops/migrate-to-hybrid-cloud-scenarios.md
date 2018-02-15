@@ -4,11 +4,14 @@ description: "Arquitetura de Microservices .NET para aplicativos .NET em contêi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/2/2017
-ms.openlocfilehash: 7394d0fd208e131b4e683298f6ca31a9eddade28
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 61b22e48afd543ac077ebb4fe1b7be200f9ec859
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Migrar para cenários de nuvem híbrida
 
@@ -20,7 +23,7 @@ Quando se trata de segurança, você pode centralizar o gerenciamento e seguran�
 
 Por fim, você pode distribuir e analisar dados diretamente, usar as mesmas linguagens de consulta para ativos de nuvem e local e aplicar análises e profundo de aprendizagem no Azure para enriquecer seus dados, independentemente de sua origem.
 
-## <a name="azure-stack"></a>Pilha do Azure
+## <a name="azure-stack"></a>Azure Stack
 
 A pilha do Azure é uma plataforma de nuvem híbrida que lhe permite oferecer serviços do Azure do datacenter de sua organização. A pilha do Azure foi projetada para dar suporte a novas opções para seus aplicativos modernos em cenários mais importantes, como borda e desconectado de ambientes ou requisitos específicos de segurança e conformidade reunião.
 
@@ -48,23 +51,23 @@ Kit de desenvolvimento de pilha do Microsoft Azure é uma implantação de nó �
 
 -   **Nuvem híbrida do Azure**
 
-    [https://www.microsoft.com/Cloud-Platform/Hybrid-Cloud](https://www.microsoft.com/cloud-platform/hybrid-cloud)
+    [https://www.microsoft.com/cloud-platform/hybrid-cloud](https://www.microsoft.com/cloud-platform/hybrid-cloud)
 
--   **Pilha do Azure**
+-   **Azure Stack**
 
-    [https://Azure.microsoft.com/Overview/Azure-Stack/](https://azure.microsoft.com/overview/azure-stack/)
+    [https://azure.microsoft.com/overview/azure-stack/](https://azure.microsoft.com/overview/azure-stack/)
 
 -   **Contas de serviço do Active Directory para contêineres do Windows**
 
-    [https://docs.microsoft.com/Virtualization/windowscontainers/Manage-Containers/Manage-serviceaccounts](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts)
+    [https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts)
 
 -   **Criar um contêiner com o suporte do Active Directory**
 
-    [https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/Create-a-container-with-Active-Directory-Support/](https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/)
+    [https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/](https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/)
 
 -   **Licenciamento de benefício híbrido do Azure**
 
-    [https://Azure.microsoft.com/Pricing/Hybrid-Use-Benefit/](https://azure.microsoft.com/pricing/hybrid-use-benefit/)
+    [https://azure.microsoft.com/pricing/hybrid-use-benefit/](https://azure.microsoft.com/pricing/hybrid-use-benefit/)
 
 >[!div class="step-by-step"]
 [Anterior](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)

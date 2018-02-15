@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 9e5d6cea-a98c-461e-a5cc-75f1d154eafd
-ms.openlocfilehash: bf833a96809768011f26df35332ab2372ced2aaf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e003f537c6f0f85b3b0ba932655ae2a54c980bc5
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-azure-table-storage-using-f"></a>Introdução ao armazenamento de tabela do Azure usando F # #
 
@@ -186,8 +186,8 @@ Você pode excluir uma tabela de uma conta de armazenamento. Uma tabela que foi 
 
 Agora que você aprendeu as Noções básicas de armazenamento de tabela, siga estes links para saber mais sobre as tarefas mais complexas de armazenamento:
 
-- [Biblioteca de cliente de armazenamento para a referência do .NET](http://go.microsoft.com/fwlink/?LinkID=390731&clcid=0x409)
+- [APIs de armazenamento do Azure para .NET](/dotnet/api/overview/azure/storage)
 - [Provedor de tipo de armazenamento do Azure](http://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Blog da equipe do armazenamento do Azure](http://blogs.msdn.com/b/windowsazurestorage/)
-- [Configurando cadeias de caracteres de Conexão](http://msdn.microsoft.com/library/azure/ee758697.aspx)
+- [Configurar cadeias de conexão de armazenamento do Azure](/azure/storage/common/storage-configure-connection-string)
 - [Introdução ao armazenamento de tabela do Azure no .NET](https://azure.microsoft.com/documentation/samples/storage-table-dotnet-getting-started/)

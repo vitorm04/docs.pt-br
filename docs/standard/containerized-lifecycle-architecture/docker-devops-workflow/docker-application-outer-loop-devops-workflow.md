@@ -1,15 +1,18 @@
 ---
 title: Etapas no fluxo de trabalho de DevOps loop externo para um aplicativo de Docker
-description: "Ciclo de vida de aplicativo de Docker em contêineres com ferramentas e plataformas da Microsoft"
+description: "Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)"
 keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 070d174cde9e80f542865f5617b1c702a07a8018
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fe51fc4b5026d17f0f9b93e7fd0dedde93ef4a3c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Etapas no fluxo de trabalho de DevOps loop externo para um aplicativo de Docker
 
@@ -234,4 +237,4 @@ Este tópico também é abordado no próximo capítulo como parte das tarefas qu
 Somente quando o monitoramento e diagnóstico é 100 por cento no território de DevOps são os processos de monitoramento e análise realizada pela equipe de desenvolvimento em ambientes de teste ou beta. Isso é feito executando o teste de carga ou simplesmente monitorando beta ou ambientes de controle de qualidade, onde os testadores beta estão tentando as novas versões.
 
 >[!div class="step-by-step"]
-[Anterior] (index.md) [Avançar] (... /Run-Manage-monitor-docker-Environments/index.MD)
+[Previous] (index.md) [Next] (../run-manage-monitor-docker-environments/index.md)

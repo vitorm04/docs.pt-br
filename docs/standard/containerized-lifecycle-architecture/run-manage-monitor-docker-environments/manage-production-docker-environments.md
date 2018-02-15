@@ -1,15 +1,18 @@
 ---
 title: "Gerenciar ambientes de Docker de produção"
-description: "Ciclo de vida de aplicativo de Docker em contêineres com ferramentas e plataformas da Microsoft"
+description: "Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)"
 keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 5686dcb0932d4a8580fd5ad3daf9e3f5cf52fff8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c962543004c88b0a6413cc22d8bdddf954af66f8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="manage-production-docker-environments"></a>Gerenciar ambientes de Docker de produção
 
@@ -32,7 +35,7 @@ Ferramentas de gerenciamento do Docker tabela 6-1:
 | Plano de controle Universal docker\(local ou nuvem) | [Plano de controle Universal docker](https://docs.docker.com/v1.11/ucp/overview/) é a solução de gerenciamento de cluster de nível empresarial do Docker. Ele ajuda você a gerenciar todo o cluster de um único local. <br /><br /> Plano de controle Universal docker é incluído como parte do produto comercial chamado Datacenter Docker que fornece o Docker Swarm, Docker Universal plano de controle e registro confiável do Docker. <br /><br /> Docker Datacenter pode ser instalado no local ou de uma nuvem pública como o Azure foi provisionado. | Docker Swarm\(suportados pelo serviço de contêiner) |
 | Nuvem de docker\(também conhecido como Tutum; nuvem SaaS) | [Nuvem de docker](https://docs.docker.com/docker-cloud/) é um serviço de gerenciamento hospedado (SaaS) que fornece recursos de orquestração e um registro de Docker build e instalações de teste para as imagens de aplicativo Dockerized, ferramentas para ajudá-lo a configurar e gerenciar sua infraestrutura de host e recursos de implantação para ajudá-lo a automatizar implantar suas imagens à sua infraestrutura concreta. Você pode se conectar a sua conta de SaaS Docker nuvem em sua infraestrutura de serviço de contêiner executando um cluster de Docker Swarm. | Docker Swarm\(suportados pelo serviço de contêiner) |
 | Mesosphere maratona\(local ou nuvem) | [Maratona](https://mesosphere.github.io/marathon/docs/marathon-ui.html) é uma plataforma de orquestração e Agendador de contêiner do nível de produção do Mesosphere controlador de domínio/OS e Apache Mesos. <br /><br /> Ele funciona com Mesos (SO/DC é baseado em Apache Mesos) para controle de longa execução de serviços e fornece um [web da interface do usuário para o gerenciamento de processo e o contêiner](https://mesosphere.github.io/marathon/docs/marathon-ui.html). Ele fornece uma ferramenta de gerenciamento de interface do usuário da web | Mesosphere DC/OS\(com base no Apache Mesos; compatível com o serviço de contêiner) |
-| Kubernetes do Google | [Kubernetes](http://kubernetes.io/docs/user-guide/ui/#dashboard-access) abrange orquestrar, agendamento e infraestrutura de cluster. É uma plataforma de código-fonte aberto para automatizar a implantação, dimensionar e operações de contêineres de aplicativos em clusters de hosts, fornecendo a infra-estrutura centrada no contêiner. | Google Kubernetes\(suportados pelo serviço de contêiner) |
+| Google Kubernetes | [Kubernetes](http://kubernetes.io/docs/user-guide/ui/#dashboard-access) abrange orquestrar, agendamento e infraestrutura de cluster. É uma plataforma de código-fonte aberto para automatizar a implantação, dimensionar e operações de contêineres de aplicativos em clusters de hosts, fornecendo a infra-estrutura centrada no contêiner. | Google Kubernetes\(suportados pelo serviço de contêiner) |
 
 ## <a name="azure-service-fabric"></a>Malha do serviço do Azure
 

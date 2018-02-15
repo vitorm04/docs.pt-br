@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 54e7ed6fff9ac709e411d0ac1e345c63fd753201
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c10bf66dd37f0d99c038db7f95999d84986152fa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desenvolver aplicativos do núcleo do ASP.NET MVC
 
@@ -74,7 +77,7 @@ Para APIs da web, MVC do ASP.NET Core dá suporte a [ *negociação de conteúdo
 > - **Associação de modelo** https://docs.microsoft.com/aspnet/core/mvc/models/model-binding
 > - **Validação de modelo**
 > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
-> - **Filtros** https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
+> - **Filters** https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
 
 ## <a name="working-with-dependencies"></a>Trabalhando com dependências
 
@@ -204,11 +207,11 @@ services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 
 Núcleo do ASP.NET MVC também usa uma convenção para localizar os modos de exibição. Você pode substituí-la com uma convenção personalizada para que os modos de exibição estarão localizados em suas pastas de recurso (usando o nome de recurso fornecido pelo FeatureConvention, acima). Você pode saber mais sobre essa abordagem e baixar um exemplo de funcionamento do artigo do MSDN, [fatias de recurso para o ASP.NET MVC de núcleo](https://msdn.microsoft.com/magazine/mt763233.aspx).
 
-### <a name="cross-cutting-concerns"></a>Resolvem preocupações
+### <a name="cross-cutting-concerns"></a>Interesses paralelos
 
 Conforme os aplicativos crescem, ele se torna cada vez mais importante fatorar resolvem preocupações para eliminar a duplicação e manter a consistência. Alguns exemplos de resolvem preocupações em aplicativos do ASP.NET Core são autenticação, as regras de validação de modelo, o cache de saída e tratamento de erros, embora haja muitos outros. Núcleo do ASP.NET MVC [filtros](https://docs.microsoft.com/aspnet/core/mvc/controllers/filters) permitem executar código antes ou depois de algumas etapas no pipeline de processamento de solicitação. Por exemplo, um filtro pode executar antes e após a associação de modelo, antes e depois de uma ação ou antes e após o resultado de uma ação. Você também pode usar um filtro de autorização para controlar o acesso para o restante do pipeline. Figuras 7-2 mostra como solicitar fluxos de execução por meio de filtros, se configurado.
 
-![A solicitação é processada por meio de filtros de autorização, filtros de recurso, associação de modelo, filtros de ação, ação de execução e conversão do resultado de ação, filtros de exceção, filtros de resultado e resultado da execução. Na saída, a solicitação é processada somente por filtros de resultado e de recurso antes de se tornar uma resposta enviada ao cliente.](./media/image7-2.png)
+![A solicitação é processada por meio de Filtros de autorização, Filtros de recurso, Associação de modelos, Filtros de ação, Execução de ação e Conversão do resultado de ação, Filtros de exceção, Filtros de resultado e Execução de resultado. Na saída, a solicitação é processada somente por Filtros de resultado e Filtros de recurso antes de se tornar uma resposta enviada ao cliente.](./media/image7-2.png)
 
 Figura 7-2 a execução da solicitação por meio de filtros e pipeline de solicitação.
 
@@ -279,11 +282,11 @@ Você pode ler mais sobre a implementação de filtros e baixar um exemplo de fu
 
 > ### <a name="references--structuring-applications"></a>Referências – estruturar aplicativos
 > - **Áreas**  
-> <https://docs.microsoft.com/ASPNET/Core/MVC/Controllers/Areas>
+> <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN-fatias de recurso para o ASP.NET Core MVC**
 >  <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **Filtros**  
-> <https://docs.microsoft.com/ASPNET/Core/MVC/Controllers/Filters>
+> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN – filtros do mundo Real Core ASP.NET MVC**  
 > <https://msdn.microsoft.com/magazine/mt767699.aspx>
 
@@ -385,15 +388,15 @@ A maioria das APIs de web devem implementar um sistema de autenticação baseada
 
 > ### <a name="references--security"></a>Referências – segurança
 > - **Visão geral de documentos de segurança**  
-> https://docs.microsoft.com/ASPNET/Core/Security/
+> https://docs.microsoft.com/aspnet/core/security/
 > - **Imposição de SSL em um aplicativo do ASP.NET Core**  
-> <https://docs.microsoft.com/ASPNET/Core/Security/Enforcing-SSL>
+> <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
 > - **Introdução ao Identity**  
-> <https://docs.microsoft.com/ASPNET/Core/Security/Authentication/Identity>
+> <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
 > - **Introdução à autorização**  
-> <https://docs.microsoft.com/ASPNET/Core/Security/Authorization/Introduction>
+> <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
 > - **Autenticação e autorização para aplicativos de API no serviço de aplicativo do Azure**  
-> <https://docs.microsoft.com/Azure/App-Service-API/App-Service-API-Authentication>
+> <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
 
 ## <a name="client-communication"></a>Comunicação do cliente
 
@@ -452,9 +455,9 @@ Considere a possibilidade de ocorrer de maneiras em que seus aplicativos se comu
 
 > ### <a name="references--client-communication"></a>Referências a comunicação do cliente
 > - **SignalR do ASP.NET Core**  
-> <https://GitHub.com/ASPNET/SignalR>
+> <https://github.com/aspnet/SignalR>
 > - **Gerenciador de WebSocket**  
-> https://GitHub.com/Radu-matei/WebSocket-Manager
+> https://github.com/radu-matei/websocket-manager
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>Design – controlado por domínio deve aplicá-lo?
 
@@ -502,7 +505,7 @@ Uma abordagem híbrida seria usar DDD somente para as áreas de transacionais ou
 
 > ### <a name="references--domain-driven-design"></a>Referências – Design controlado por domínio
 > - **DDD em inglês (StackOverflow resposta)**  
-> <https://StackOverflow.com/Questions/1222392/CAN-someone-Explain-Domain-Driven-design-DDD-in-Plain-English-Please/1222488#1222488>
+> <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
 
 ## <a name="deployment"></a>Implantação
 
@@ -544,13 +547,13 @@ Se você estiver hospedando seu aplicativo no Azure, você pode usar o Gateway d
 
 > ### <a name="references--deployment"></a>Referências – implantação
 > - **Visão geral da implantação e hospedagem**  
-> <https://docs.microsoft.com/ASPNET/Core/Publishing/>
+> <https://docs.microsoft.com/aspnet/core/publishing/>
 > - **Quando usar Kestrel com um proxy reverso**  
-> <https://docs.microsoft.com/ASPNET/Core/Fundamentals/Servers/kestrel#When-to-Use-kestrel-with-a-reverse-proxy>
+> <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
 > - **Hospedar aplicativos do ASP.NET Core no Docker**  
-> <https://docs.microsoft.com/ASPNET/Core/Publishing/docker>
+> <https://docs.microsoft.com/aspnet/core/publishing/docker>
 > - **Introdução ao Gateway de aplicativo do Azure**  
-> <https://docs.microsoft.com/Azure/Application-Gateway/Application-Gateway-Introduction>
+> <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
 [Anterior] (comum-cliente-lado-web-technologies.md) [Avançar] (work-with-data-in-asp-net-core-apps.md)

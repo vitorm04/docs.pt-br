@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 70dc554c-8f4d-42a7-8e2a-6438657d012a
-ms.openlocfilehash: f5ebdb3f3b50996a397c8420b773178493744d70
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8ec4652bab591dedc687d22c617b9466bc351f10
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>Introdução ao armazenamento de fila do Azure usando F # #
 
@@ -142,8 +142,8 @@ Para excluir uma fila e todas as mensagens contidas nela, chame o `Delete` méto
 
 Agora que você aprendeu as Noções básicas de armazenamento de fila, siga estes links para saber mais sobre as tarefas mais complexas de armazenamento.
 
-- [Biblioteca de cliente de armazenamento para a referência do .NET](http://go.microsoft.com/fwlink/?LinkID=390731&clcid=0x409)
+- [APIs de armazenamento do Azure para .NET](/dotnet/api/overview/azure/storage)
 - [Provedor de tipo de armazenamento do Azure](https://github.com/fsprojects/AzureStorageTypeProvider)
 - [Blog da equipe do armazenamento do Azure](http://blogs.msdn.com/b/windowsazurestorage/)
-- [Configurando cadeias de caracteres de Conexão](http://msdn.microsoft.com/library/azure/ee758697.aspx)
-- [Referência da API REST](http://msdn.microsoft.com/library/azure/dd179355)
+- [Configurar cadeias de conexão de armazenamento do Azure](/azure/storage/common/storage-configure-connection-string)
+- [Referência da API REST de serviços de armazenamento do Azure](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)

@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/08/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 4611ffa8334e124946e849306d3281b695830eb1
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d23d0accc33fb8335dff602d6e1d6c8689972906
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testar aplicativos MVC do ASP.NET Core
 
@@ -112,9 +115,9 @@ Você deve nomear os testes de maneira consistente, com nomes que indiquem o que
 
 Uma variação dessa abordagem termina o nome de cada classe de teste com "Deve" e modifica os tempos verbais ligeiramente:
 
--   CatalogControllerGetImage**devem**. **Chamar**ImageServiceWithId
+-   CatalogControllerGetImage**Should**.**Call**ImageServiceWithId
 
--   CatalogControllerGetImage**devem**. **Log**WarningGivenImageMissingException
+-   CatalogControllerGetImage**Should**.**Log**WarningGivenImageMissingException
 
 Algumas equipes localizar a segunda abordagem de nomenclatura mais clara, embora um pouco mais detalhado. Em qualquer caso, tente usar uma convenção de nomenclatura que fornece informações sobre o comportamento de teste, para que quando um ou mais testes falharem, seja óbvio em seus nomes quais casos falharam. Evite nomeando testes vagamente, como ControllerTests.Test1, como eles oferecem nenhum valor quando você vê-los nos resultados de teste.
 
@@ -277,4 +280,4 @@ public class CatalogControllerGetImage : BaseWebTest
 Esse teste funcional emprega a pilha de aplicativo MVC do ASP.NET Core completa, incluindo todos os middleware, filtros, associadores, etc. que pode estar em vigor. Ele verifica se uma determinada rota ("/ pic/catálogo/1") retorna a matriz de bytes esperados para um arquivo em um local conhecido. Ele faz isso sem configurar um servidor web real e portanto evita muito a fragilidade que servidor de teste pode ocorrer (por exemplo, problemas com as configurações de firewall) usando uma web real. Testes funcionais executadas em TestServer são geralmente mais lentas do que a integração e testes de unidade, mas são muito mais rápidos que testes que seriam executado pela rede para um servidor de teste da web.
 
 >[!div class="step-by-step"]
-[Anterior] (work-with-data-in-asp-net-core-apps.md) [Avançar] (desenvolvimento-processo-para-azure.md)
+[Previous] (work-with-data-in-asp-net-core-apps.md) [Next] (development-process-for-azure.md)

@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 1084aee3d81a5df6ac99d6ec0e2ef647b4173c24
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e8e156552fd4aa733594c01845fb7ed1643b4aef
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologias de Web do lado cliente comuns
 
 > "Sites devem aparência de dentro e fora."  
-> _-Paul Cookson_
+> _- Paul Cookson_
 
 ## <a name="summary"></a>Resumo
 
@@ -67,7 +70,7 @@ Por exemplo, imagine que se o valor da caixa de texto exceder 10, um elemento na
 
 ### <a name="jquery-vs-a-spa-framework"></a>jQuery vs uma estrutura SPA
 
-| **Fator** | **jQuery** | **Angular**|
+| **Factor** | **jQuery** | **Angular**|
 |--------------------------|------------|-------------|
 | Abstrai o DOM | **Sim** | **Sim** |
 | Suporte AJAX | **Sim** | **Sim** |
@@ -80,7 +83,7 @@ Maioria dos recursos do jQuery não tem intrinsecamente pode ser adicionadas com
 
 Associação de dados é um ótimo exemplo disso. Em jQuery, geralmente leva apenas uma linha de código para obter o valor de um elemento DOM ou para definir o valor de um elemento. No entanto, você precisa gravar este código sempre que você precisa alterar o valor do elemento e às vezes, isso acontecerá em várias funções em uma página. Outro exemplo comum é a visibilidade do elemento. JQuery, pode haver muitos lugares diferentes em que você escreve código para controlar se determinados elementos eram visíveis. Em cada um desses casos, ao usar a associação de dados, nenhum código precisa ser gravado. Você deve vincular simplesmente o valor ou a visibilidade do (s) em questão para um *viewmodel* na página e as alterações que viewmodel deve ser refletida automaticamente nos elementos associados.
 
-### <a name="angular-spas"></a>SPAs angulares
+### <a name="angular-spas"></a>Angular SPAs
 
 AngularJS rapidamente se tornou uma das estruturas de JavaScript mais populares do mundo. Com Angular 2, a equipe recriado a estrutura de ponta a ponta para cima (usando [TypeScript](https://www.typescriptlang.org/)) e rebatizado do AngularJS para simplesmente Angular. Atualmente em versão 4, Angular continua a ser uma estrutura robusta para a criação de aplicativos de página única.
 
@@ -145,27 +148,27 @@ Estruturas de JavaScript continuam a desenvolver com uma velocidade. Use as cons
 
 > ### <a name="references--client-web-technologies"></a>Referências – tecnologias da Web do cliente
 > - **HTML e CSS**  
-> <https://www.w3.org/Standards/webdesign/htmlcss>
-> - **Sass vs. MENOS**  
-> <https://www.keycdn.com/blog/sass-VS-less/>
+> <https://www.w3.org/standards/webdesign/htmlcss>
+> - **Sass vs. LESS**  
+> <https://www.keycdn.com/blog/sass-vs-less/>
 > - **Aplicativos ASP.NET Core com menos Sass e fonte incrível de estilo**  
-> <https://docs.microsoft.com/ASPNET/Core/Client-Side/Less-sass-FA>
+> <https://docs.microsoft.com/aspnet/core/client-side/less-sass-fa>
 > - **Desenvolvimento do lado do cliente no ASP.NET Core**  
-> <https://docs.microsoft.com/ASPNET/Core/Client-Side/>
+> <https://docs.microsoft.com/aspnet/core/client-side/>
 > - **jQuery**  
-> <https://jQuery.com/>
+> <https://jquery.com/>
 > - **jQuery vs AngularJS**  
-> <https://www.airpair.com/angularjs/posts/jQuery-angularjs-Comparison-Migration-Walkthrough>
+> <https://www.airpair.com/angularjs/posts/jquery-angularjs-comparison-migration-walkthrough>
 > - **Angular**  
-> <https://angular.IO/>
-> - **Reagir**  
-> <https://Facebook.GitHub.IO/React/>
+> <https://angular.io/>
+> - reagir  
+> <https://facebook.github.io/react/>
 > - **Reagir Slingshot**  
-> <https://GitHub.com/coryhouse/React-slingshot>
+> <https://github.com/coryhouse/react-slingshot>
 > - **Reagir vs Angular comparação de 2**  
-> <https://www.codementor.IO/codementorteam/React-VS-angular-2-Comparison-Beginners-Guide-lvz5710ha>
+> <https://www.codementor.io/codementorteam/react-vs-angular-2-comparison-beginners-guide-lvz5710ha>
 > - **5 estruturas JavaScript melhor de 2017**  
-> <https://hackernoon.com/5-Best-JavaScript-frameworks-in-2017-7a63b3870282>
+> <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
 
 >[!div class="step-by-step"]
 [Anterior] (comum-web-aplicativo-architectures.md) [Avançar] (develop-asp-net-core-mvc-apps.md)

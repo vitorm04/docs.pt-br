@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 5bae77fc4e0df9d0bc7fecfad25adfcee2419084
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: eb830ede1b644700a80f0e9fac2f3608deb88276
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Escolha entre aplicativos Web tradicionais e aplicativos de página única (SPAs)
 
 > "Lei do Atwood: qualquer aplicativo que pode ser gravado em JavaScript, eventualmente serão gravados em JavaScript."  
-> _\-Jeff Atwood_
+> _\- Jeff Atwood_
 
 ## <a name="summary"></a>Resumo
 
@@ -75,7 +78,7 @@ Gravar SPAs exige familiaridade com JavaScript e/ou TypeScript e técnicas de pr
 > - **AngularJS**  
 > <https://angularjs.org/>
 > - **Comparação de estruturas de JavaScript populares 4**  
-> <https://www.developereconomics.com/Feature-Comparison-of-4-popular-js-MV-frameworks>
+> <https://www.developereconomics.com/feature-comparison-of-4-popular-js-mv-frameworks>
 
 **O aplicativo já deve expor uma API para outros clientes (públicos ou internos)**
 
@@ -85,12 +88,12 @@ Se você já estiver dando suporte uma API da web para uso por outros clientes, 
 
 A tabela de decisão a seguir resume alguns dos fatores a considerar ao escolher entre um aplicativo da web tradicional e um SPA básico.
 
-  | **Fator** | **Aplicativo da Web tradicional** | **Aplicativo de página única** |
+  | **Factor** | **Aplicativo da Web tradicional** | **Aplicativo de página única** |
   |---|---|---|
-  | Equipe necessária familiaridade com TypeScript/JavaScript | **Mínimo** | **Necessária** |
-  | Oferecer suporte a navegadores sem scripts | **Com suporte** | **Sem suporte** |
-  | Comportamento do aplicativo cliente mínimo | **Apropriados** | **Exagero** |
-  | Requisitos de Interface de usuário avançadas e complexas | **Limitado** | **Apropriados** |
+  | Equipe necessária familiaridade com TypeScript/JavaScript | **Minimal** | **Necessária** |
+  | Oferecer suporte a navegadores sem scripts | **Com suporte** | Sem suporte |
+  | Comportamento do aplicativo cliente mínimo | **Well-Suited** | **Exagero** |
+  | Requisitos de Interface de usuário avançadas e complexas | **Limitado** | **Well-Suited** |
 
 >[!div class="step-by-step"]
 [Anterior] (moderno-web-aplicativos-characteristics.md) [Avançar](architectural-principles.md)

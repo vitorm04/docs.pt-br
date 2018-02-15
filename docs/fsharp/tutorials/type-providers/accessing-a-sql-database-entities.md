@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: dc82a932-5401-4d19-9fb3-92c50d8db514
-ms.openlocfilehash: 770d405921758eeb7e8d7ea98b95c29c99631475
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e0e78e06fa1129ba5eeb73bc36c14343c93d6927
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-accessing-a-sql-database-by-using-type-providers-and-entities"></a>Instruções passo a passo: acessando um banco de dados SQL por meio de provedores de tipos e entidades
 
@@ -66,7 +66,7 @@ Você pode criar o banco de dados escolar em qualquer servidor que esteja execut
 3. Abra o menu de atalho para o novo nó de conexão e, em seguida, escolha **nova consulta**.
 <br />
 
-4. Abra [criando o banco de dados de exemplo School](http://go.microsoft.com/fwlink/?LinkID=237278) no site da Microsoft e, em seguida, copiar e colar o script de banco de dados que cria o banco de dados do aluno na janela do editor.
+4. Abra [criando o banco de dados de exemplo School](https://msdn.microsoft.com/library/bb399731(v=vs.100).aspx) no site da Microsoft e, em seguida, copiar e colar o script de banco de dados que cria o banco de dados School na janela do editor.
 <br />
 
 
@@ -126,7 +126,7 @@ Nesta etapa, você configura um provedor de tipos com uma conexão de dados e ob
 type private EntityConnection = SqlEntityConnection<ConnectionString="Server=SERVER\InstanceName;Initial Catalog=School;Integrated Security=SSPI;MultipleActiveResultSets=true",Pluralize = true>
 ```
 
-  Esta ação configura um provedor de tipos com a conexão de banco de dados que você criou anteriormente. A propriedade `MultipleActiveResultSets` é necessária quando você usa o ADO.NET Entity Framework porque essa propriedade permite que vários comandos sejam executados de modo assíncrono no banco de dados em uma conexão, isso pode ocorrer frequentemente no código do ADO.NET Entity Framework. Para obter mais informações, consulte [vários conjuntos de MARS (resultados ativos)](/sql/relational-databases/native-client/features/using-multiple-active-result-sets-mars).
+  Esta ação configura um provedor de tipos com a conexão de banco de dados que você criou anteriormente. A propriedade `MultipleActiveResultSets` é necessária quando você usa o ADO.NET Entity Framework porque essa propriedade permite que vários comandos sejam executados de modo assíncrono no banco de dados em uma conexão, isso pode ocorrer frequentemente no código do ADO.NET Entity Framework. Para obter mais informações, confira [MARS (Conjunto de Resultados Ativos Múltiplos)](/sql/relational-databases/native-client/features/using-multiple-active-result-sets-mars).
 <br />
 
 2. Obtenha o contexto de dados que é um objeto com tabelas do banco de dados como propriedades e procedimentos armazenados e funções do banco de dados como métodos.
@@ -240,14 +240,9 @@ Explore outras opções de consulta examinando os operadores de consulta dispon�
 
 
 ## <a name="see-also"></a>Consulte também
-[Provedores de Tipos](index.md)
-
-[Tipo SqlEntityConnection](https://msdn.microsoft.com/visualfsharpdocs/conceptual/sqlentityconnection-type-provider-%5bfsharp%5d)
-
-[Passo a passo: Gerando tipos F # de um arquivo de esquema EDMX](generating-fsharp-types-from-edmx.md)
-
-[ADO.NET Entity Framework](https://msdn.microsoft.com/library/bb399572)
-
-[Visão geral do arquivo. edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
-
-[Gerador EDM &#40; EdmGen.exe &#41;](https://msdn.microsoft.com/library/bb387165)
+[Provedores de Tipos](index.md)  
+[Tipo SqlEntityConnection](https://msdn.microsoft.com/visualfsharpdocs/conceptual/sqlentityconnection-type-provider-%5bfsharp%5d)  
+[Passo a passo: Gerando tipos F # de um arquivo de esquema EDMX](generating-fsharp-types-from-edmx.md)  
+[Entity Framework do ADO.NET](https://msdn.microsoft.com/library/bb399572)  
+[Visão geral do arquivo. edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+[Gerador EDM &#40; EdmGen.exe &#41;](https://msdn.microsoft.com/library/bb387165)  

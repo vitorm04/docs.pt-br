@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: c361a28321ec9dcbfee1db8036757632a5d81f7c
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 868f1b7ce452be9e29b921888f90d128e074ba13
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Recomendações para aplicativos Web do ASP.NET Core de hospedagem do Azure
 
 > "Líderes de linha de negócios everywhere estão ignorando os departamentos de TI para obter aplicativos da nuvem (também conhecido como SaaS) e pagar por eles como seriam em uma assinatura de revista. E quando o serviço não é mais necessário, pode cancelar a assinatura com nenhum equipamento deixado no canto."  
-> _\-Daryl Plummer, analista da Gartner_
+> _\- Daryl Plummer, analista da Gartner_
 
 ## <a name="summary"></a>Resumo
 
@@ -115,16 +118,16 @@ Figura 11-2 mostra uma arquitetura de referência de exemplo. Este diagrama desc
 **Referências – recomendações de hospedagem do Azure**
 
 -   Architectures\ de solução do Azure
-    <https://Azure.microsoft.com/Solutions/Architecture/>
+    <https://azure.microsoft.com/solutions/architecture/>
 
 -   Guide\ de desenvolvedores do Azure
-    <https://Azure.microsoft.com/Campaigns/Developer-Guide/>
+    <https://azure.microsoft.com/campaigns/developer-guide/>
 
 -   O que é o serviço de aplicativo do Azure? \
-    <https://docs.microsoft.com/Azure/App-Service/App-Service-Value-prop-What-is>
+    <https://docs.microsoft.com/azure/app-service/app-service-value-prop-what-is>
 
 -   Serviço de aplicativo do Azure, máquinas virtuais, serviço de malha e Comparison\ de serviços de nuvem
-    <https://docs.microsoft.com/Azure/App-Service-Web/Choose-Web-site-Cloud-Service-VM>
+    <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
 
 >[!div class="step-by-step"]
 [Anterior] (desenvolvimento-processo-para-azure.md)

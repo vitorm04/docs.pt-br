@@ -1,15 +1,18 @@
 ---
 title: Organizar microservices e multicontainer aplicativos de alto desempenho e disponibilidade
-description: "Ciclo de vida de aplicativo de Docker em contêineres com ferramentas e plataformas da Microsoft"
+description: "Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)"
 keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
-ms.openlocfilehash: ea492de1c4709eb7bafe65fcf288482da9855240
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4345fe8f36ecc32a7dd8e72fce5338bff308ffdf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>Organizar microservices e multicontainer aplicativos de alto desempenho e disponibilidade
 
@@ -39,10 +42,10 @@ Tabela 4-1: plataformas de Software para o contêiner de clustering, orquestraç
 
 | Plataforma | Descrição |
 |---|---|
-| Por nuvem de docker<br/> ![http://rancher.com/wp-content/Themes/rancher-2016/Assets/images/swarm.PNG?v=2016-07-10-AM](./media/image7.png) | Por docker nuvem fornece a capacidade de cluster e agendar a contêineres do Docker. Usando por nuvem, você pode transformar um pool de hosts de Docker em um único host Docker virtual. Os clientes podem fazer solicitações de API para por nuvem da mesma forma que eles fazem a hosts, o que significa que por nuvem torna mais fácil para os aplicativos a dimensionar para vários hosts. <br /><br /> Por docker nuvem é um produto, a empresa Docker. <br /><br /> V docker 1.12 ou posterior pode executar modo Swarm internos e nativos. |
-| Mesosphere DC/OS<br/>![https://mesosphere.com/wp-content/uploads/2016/04/logo-horizontal-styled.PNG](./media/image8.png) |  Mesosphere Enterprise DC/OS (com base no Apache Mesos) é uma plataforma de pronto para produção para executar contêineres e aplicativos distribuídos. <br /><br /> Controlador de domínio/OS funciona abstração de uma coleção dos recursos disponíveis no cluster e disponibilizar esses recursos para componentes criados sobre ele. Maratona geralmente é usada como um agendador integrado ao controlador de domínio/OS. |
-| Kubernetes do Google<br />![https://PBS.twimg.com/Media/BT\_pEfqCAAAiVyz.png](./media/image9.png) | Kubernetes é um produto de código-fonte aberto que fornece a funcionalidade que varia de infraestrutura de cluster e agendamento para recursos de orquestração do contêiner. Com ele, você pode automatizar a implantação, dimensionar e operações de contêineres de aplicativos em clusters de hosts. <br /><br /> Kubernetes fornece uma infraestrutura centrada no contêiner que agrupa os contêineres de aplicativos em unidades lógicas para facilitar o gerenciamento e descoberta. |
-| Malha do serviço do Azure<br />![https://Azure.microsoft.com/svghandler/Service-Fabric?Width=600&Height=315](./media/image10.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) é uma plataforma de microservices da Microsoft para a criação de aplicativos. É um [orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) de serviços e cria clusters de computadores. Por padrão, o Service Fabric implanta e ativa serviços como processos mas Service Fabric pode implantar os serviços em imagens de contêiner do Docker. O mais importante, é possível combinar serviços em processos com os serviços em contêineres no mesmo aplicativo. <br /><br /> A partir de maio de 2017, o recurso de malha do serviço que dá suporte a serviços de implantação como contêineres do Docker está em estado de visualização. <br /><br /> Você pode desenvolver serviços de malha do serviço de várias maneiras de usar o [modelos de programação do Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) à implantação [convidado executáveis](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-existing-app) , bem como contêineres. Malha do serviço oferece suporte a modelos de aplicativo prescritivas como [services com monitoração de estado](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) e [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
+| Por nuvem de docker<br/> ![http://rancher.com/wp-content/themes/rancher-2016/assets/images/swarm.png?v=2016-07-10-am](./media/image7.png) | Por docker nuvem fornece a capacidade de cluster e agendar a contêineres do Docker. Usando por nuvem, você pode transformar um pool de hosts de Docker em um único host Docker virtual. Os clientes podem fazer solicitações de API para por nuvem da mesma forma que eles fazem a hosts, o que significa que por nuvem torna mais fácil para os aplicativos a dimensionar para vários hosts. <br /><br /> Por docker nuvem é um produto, a empresa Docker. <br /><br /> V docker 1.12 ou posterior pode executar modo Swarm internos e nativos. |
+| Mesosphere DC/OS<br/>![https://mesosphere.com/wp-content/uploads/2016/04/logo-horizontal-styled.png](./media/image8.png) |  Mesosphere Enterprise DC/OS (com base no Apache Mesos) é uma plataforma de pronto para produção para executar contêineres e aplicativos distribuídos. <br /><br /> Controlador de domínio/OS funciona abstração de uma coleção dos recursos disponíveis no cluster e disponibilizar esses recursos para componentes criados sobre ele. Maratona geralmente é usada como um agendador integrado ao controlador de domínio/OS. |
+| Google Kubernetes<br />![https://pbs.twimg.com/media/Bt\_pEfqCAAAiVyz.png](./media/image9.png) | Kubernetes é um produto de código-fonte aberto que fornece a funcionalidade que varia de infraestrutura de cluster e agendamento para recursos de orquestração do contêiner. Com ele, você pode automatizar a implantação, dimensionar e operações de contêineres de aplicativos em clusters de hosts. <br /><br /> Kubernetes fornece uma infraestrutura centrada no contêiner que agrupa os contêineres de aplicativos em unidades lógicas para facilitar o gerenciamento e descoberta. |
+| Malha do serviço do Azure<br />![https://azure.microsoft.com/svghandler/service-fabric?width=600&height=315](./media/image10.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) é uma plataforma de microservices da Microsoft para a criação de aplicativos. É um [orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) de serviços e cria clusters de computadores. Por padrão, o Service Fabric implanta e ativa serviços como processos mas Service Fabric pode implantar os serviços em imagens de contêiner do Docker. O mais importante, é possível combinar serviços em processos com os serviços em contêineres no mesmo aplicativo. <br /><br /> A partir de maio de 2017, o recurso de malha do serviço que dá suporte a serviços de implantação como contêineres do Docker está em estado de visualização. <br /><br /> Você pode desenvolver serviços de malha do serviço de várias maneiras de usar o [modelos de programação do Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) à implantação [convidado executáveis](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-existing-app) , bem como contêineres. Malha do serviço oferece suporte a modelos de aplicativo prescritivas como [services com monitoração de estado](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) e [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
 
 ## <a name="using-container-based-orchestrators-in-azure"></a>Usando com base em contêiner orchestrators no Azure
 
@@ -89,19 +92,19 @@ Serviço de contêiner está disponível atualmente para um padrão, D, DS, G e 
 Estes são os locais onde você pode encontrar informações adicionais:
 
 -   Introdução ao contêiner do Docker hospedagem soluções com o serviço de contêiner:  
-    https://docs.microsoft.com/Azure/container-Service/kubernetes/container-Service-Intro-kubernetes>
+    https://docs.microsoft.com/azure/container-service/kubernetes/container-service-intro-kubernetes>
 
 -   Visão geral do docker por nuvem:  
-    <https://docs.docker.com/swarm/Overview/>
+    <https://docs.docker.com/swarm/overview/>
 
 -   Visão geral do modo por nuvem:  
-    <https://docs.docker.com/Engine/swarm/>
+    <https://docs.docker.com/engine/swarm/>
 
 -   Visão geral do controlador de domínio/OS mesosphere:    
-    <https://docs.mesosphere.com/1.7/Overview/>
+    <https://docs.mesosphere.com/1.7/overview/>
 
 -   Kubernetes (o site oficial):  
-    <http://kubernetes.IO/>
+    <http://kubernetes.io/>
 
 ## <a name="using-service-fabric"></a>Usando o Service Fabric
 

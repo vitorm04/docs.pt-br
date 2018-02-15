@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: bcb8f7bbfa83db9c86cd1278a89750b9f02061d9
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 648e0a4cdd388cf4a322f0fc049d5dcfca53d54b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Trabalhando com dados em aplicativos ASP.NET Core
 
@@ -199,11 +202,11 @@ await strategy.ExecuteAsync(async () =>
 
 > ### <a name="references--entity-framework-core"></a>Referências – Entity Framework Core
 > - **Documentos principais EF**  
-> <https://docs.microsoft.com/EF/>
+> <https://docs.microsoft.com/ef/>
 > - **EF principal: Dados relacionados**  
-> <https://docs.microsoft.com/EF/Core/Querying/Related-Data>
+> <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **Evite entidades de carregamento lento em aplicativos ASPNET**  
-> <http://ardalis.com/Avoid-lazy-Loading-Entities-in-ASP-NET-Applications>
+> <http://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>EF Core ou MICRO-ORM?
 
@@ -269,7 +272,7 @@ Complexidade outra NoSQL bancos de dados devem lidar com é o controle de versã
 
 Bancos de dados NoSQL normalmente não impõem [ACID](http://en.wikipedia.org/wiki/ACID), que significa que eles têm vantagens de desempenho e escalabilidade em bancos de dados relacionais. Eles são ideais para extremamente grandes conjuntos de dados e objetos que não são apropriados para o armazenamento em estruturas de tabela normalizada. Não há nenhum motivo por que um único aplicativo não pode tirar proveito de ambas relacionais e bancos de dados NoSQL, usando cada um em que é melhor adequada.
 
-## <a name="azure-documentdb"></a>Documentos do Azure
+## <a name="azure-documentdb"></a>Azure DocumentDB
 
 Documentos do Azure é um serviço de banco de dados NoSQL totalmente gerenciado que oferece armazenamento baseado em nuvem os dados sem esquema. DocumentDB é criado para desempenho rápido e previsível, alta disponibilidade, dimensionamento Elástico e distribuição global. Apesar de ser um banco de dados NoSQL, os desenvolvedores podem usar familiares e avançados recursos de consulta SQL em dados JSON. Todos os recursos em documentos são armazenados como documentos JSON. Os recursos são gerenciados como *itens*, que são documentos que contém metadados, e *feeds*, que são coleções de itens. Figura 8-2 mostra a relação entre os diferentes recursos de DocumentDB.
 
@@ -283,7 +286,7 @@ A linguagem de consulta do DocumentDB é uma interface simple e poderosas para c
 **Referências a documentos**
 
 -   Documentos Introduction\
-    <https://docs.microsoft.com/Azure/documentdb/documentdb-Introduction>
+    <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
 
 ## <a name="other-persistence-options"></a>Outras opções de persistência
 
@@ -300,7 +303,7 @@ Além relacionais e NoSQL opções de armazenamento, aplicativos do ASP.NET Core
 **Referências – armazenamento do Azure**
 
 -   Introduction\ de armazenamento do Azure
-    <https://docs.microsoft.com/Azure/Storage/Storage-Introduction>
+    <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>Cache
 
