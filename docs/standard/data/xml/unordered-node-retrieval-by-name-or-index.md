@@ -12,18 +12,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a8bea8f373dced08fd7a2a828255a593533df9d7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b80f48d425623c9e6cdf1431ceb4a37efe7f2465
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>Recuperação não ordenada do nó por nome ou índice
-O **XmlNamedNodeMap** é descrito na especificação do World Wide Web Consortium (W3C) como o NamedNodeMap e é necessária para lidar com um conjunto ordenado de nós com a capacidade de nós de referência por seu nome ou índice. A única maneira que você tem acesso a um **XmlNamedNodeMap** é quando um **XmlNamedNodeMap** é retornado por meio de um método ou propriedade. Há três métodos ou propriedades que retornam um **XmlNamedNodeMap**:  
+**XmlNamedNodeMap** é descrito na especificação do W3C (World Wide Web Consortium) como NamedNodeMap e é necessário para tratar um conjunto não ordenado de nós com a capacidade de fazer referência a nós pelos respectivos nome ou índice. A única maneira de ter acesso a um **XmlNamedNodeMap** é quando um **XmlNamedNodeMap** é retornado através de um método ou de uma propriedade. Há três métodos ou propriedades que retornam um **XmlNamedNodeMap**:  
   
 -   XmlElement.Attributes  
   
@@ -31,9 +34,9 @@ O **XmlNamedNodeMap** é descrito na especificação do World Wide Web Consortiu
   
 -   XmlDocumentType.Notations  
   
- Por exemplo, o **XmlDocumentType.Entities** propriedade obtém a coleção de **XmlEntity** nós declarado na declaração de tipo de documento. Essa coleção é retornada como um **XmlNamedNodeMap**, e você pode iterar por meio da coleção com o uso do **contagem** propriedade e exibir informações de entidade. Para obter um exemplo de iteração por meio de um **XmlNamedNodeMap**, consulte <xref:System.Xml.XmlDocumentType.Entities%2A>.  
+ Por exemplo, a propriedade **XmlDocumentType.Entities** obtém a coleção de nós de **XmlEntity** declarados na declaração de tipo de documento. Essa coleção é retornada como **XmlNamedNodeMap**, e você pode fazer iterações através da coleção, usando a propriedade **Count** e as informações da entidade de exibição. Para ver um exemplo de iteração através de um **XmlNamedNodeMap**, confira <xref:System.Xml.XmlDocumentType.Entities%2A>.  
   
- O **XmlAttributeCollection** é derivado de **XmlNamedNodeMap** e apenas atributos são modificáveis, enquanto notações e entidades são somente leitura. Usando o **XmlNamedNodeMap** para os atributos, você pode obter nós para os atributos com base em seus nomes XML. Isso fornece um método fácil para manipular a coleção de atributos em um nó de elemento. Isso pode ser comparado diretamente com **XmlNodeList**, que também implementa o **IEnumerable** interface, mas com um acessador de índice em vez de uma cadeia de caracteres. O **RemoveNamedItem** e **SetNamedItem** métodos são usados apenas em relação a um **XmlAttributeCollection**. Adição ou remoção de uma coleção de atributos, seja usando o **AttributeCollection** ou **XmlNamedNodeMap** implementação, modifica a coleção de atributos no elemento. O exemplo de código a seguir mostra como mover um atributo e criar um novo atributo.  
+ **XmlAttributeCollection** é derivado de **XmlNamedNodeMap** e apenas os atributos são modificáveis, ao passo que as anotações e entidades são destinadas a somente leitura. Quando usa **XmlNamedNodeMap** nos atributos, você pode obter nós para esses atributos com base nos respectivos nomes XML. Isso fornece um método fácil para manipular a coleção de atributos em um nó de elemento. Isso pode ser comparado diretamente com **XmlNodeList**, que também implementa a interface de **IEnumerable**, mas com um acessador de índice em vez de uma cadeia de caracteres. Os métodos **RemoveNamedItem** e **SetNamedItem** são usados somente em **XmlAttributeCollection**. Ao adicionar ou remover de uma coleção de atributos usando a implementação de **AttributeCollection** ou **XmlNamedNodeMap** modificará a coleção de atributos no elemento. O exemplo de código a seguir mostra como mover um atributo e criar um novo atributo.  
   
 ```vb  
 Imports System  
@@ -124,7 +127,7 @@ class test {
 }  
 ```  
   
- Para ver um exemplo de código adicional que mostra um atributo que está sendo removido de uma **AttributeCollection**, consulte [XmlNamedNodeMap.RemoveNamedItem método](Overload:System.Xml.XmlNamedNodeMap.RemoveNamedItem). Para obter mais informações sobre os métodos e propriedades, consulte [XmlNamedNodeMap membros](AllMembers.T:System.Xml.XmlNamedNodeMap).  
+ Para ver um exemplo de código adicional que mostra um atributo que está sendo removido de **AttributeCollection**, confira o [Método XmlNamedNodeMap.RemoveNamedItem](Overload:System.Xml.XmlNamedNodeMap.RemoveNamedItem). Para saber mais sobre métodos e propriedades, confira [Membros XmlNamedNodeMap](AllMembers.T:System.Xml.XmlNamedNodeMap).  
   
 ## <a name="see-also"></a>Consulte também  
- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
