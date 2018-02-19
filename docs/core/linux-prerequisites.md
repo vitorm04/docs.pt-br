@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
-ms.workload: dotnetcore
-ms.openlocfilehash: d3c5dde443f848831f7c0585633339c35213357b
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 913d3869559b10af508e695a06d06021f8f90175
+ms.sourcegitcommit: adcf9bdafeaa6bc243af7bf70b45f3df954f256a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Pré-requisitos para o .NET Core no Linux
 
@@ -242,7 +243,7 @@ Para que o canal do .NET do Red Hat acesse a ajuda de registro, consulte o [Cap�
 4. Instale o .NET Core.
 
    ```bash
-   sudo apt-get install dotnet-sdk-2.1.3
+   sudo apt-get install dotnet-sdk-2.1.4
    ```
 
 4. Execute o comando `dotnet --version` para comprovar que a instalação foi bem-sucedida.
