@@ -1,5 +1,4 @@
 # [Cadeias de Caracteres](index.md)
-## [Como concatenar várias cadeias de caracteres](how-to-concatenate-multiple-strings.md)
 ## [Como modificar o conteúdo de uma cadeia de caracteres](how-to-modify-string-contents.md)
 ## [Como comparar cadeias de caracteres](how-to-compare-strings.md)
 ## [Como pesquisar cadeias de caracteres usando métodos de cadeia de caracteres](how-to-search-strings-using-string-methods.md)
