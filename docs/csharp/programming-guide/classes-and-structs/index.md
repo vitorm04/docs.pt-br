@@ -4,7 +4,8 @@ description: Descreve o uso de classes e estruturas (structs) em C#.
 keywords: "classes (C#), structs (C#), estruturas (structs) (C#), tipos de referência (C#), tipos de valor (C#)"
 ms.date: 01/17/2016
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - structs [C#], about structs
@@ -14,7 +15,7 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 8c4cbbdd0384c0c0e97d6a7c655e798d0562d9a8
