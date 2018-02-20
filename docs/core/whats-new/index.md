@@ -57,7 +57,7 @@ Você também pode redirecionar bibliotecas do .NET Standard para o .NET Standar
 
 Para mais informações sobre como migrar seu projeto para o .NET Core 2.0, confira [Migrar do ASP.NET Core 1.x para o ASP.NET Core 2.0](/aspnet/core/migration/1x-to-2x/index).
 
-## <a name="language-support"></a>Suporte ao idioma
+## <a name="language-support"></a>Suporte a linguagens
 
 Além do suporte a C# e F#, o .NET Core 2.0 também suporta Visual Basic.
 
