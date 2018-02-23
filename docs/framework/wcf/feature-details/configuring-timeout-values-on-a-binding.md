@@ -5,29 +5,31 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 164b4e3bff3e327b82c78c403a0e65ec8db744ff
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ce70b8bca923645ea1e00a55ec4d41903d828a99
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>Configurando valores de tempo limite em uma associação
 Há um número de configurações de tempo limite em associações do WCF. Definir esses tempo limite configurações corretamente podem melhorar não apenas o serviço desempenho, mas também executar uma função na usabilidade e segurança de seu serviço. Limite a seguir estão disponíveis em associações do WCF:  
   
 1.  openTimeout  
   
-2.  closeTimeout  
+2.  CloseTimeout  
   
-3.  sendTimeout  
+3.  SendTimeout  
   
 4.  ReceiveTimeout  
   
@@ -90,15 +92,15 @@ public static void Main()
   
 1.  SendTimeout – usado para inicializar o OperationTimeout, que controla todo o processo de enviar uma mensagem, incluindo recebendo uma mensagem de resposta para uma operação de serviço de solicitação/resposta. Esse tempo limite também se aplica ao enviar mensagens de resposta de um método de contrato de retorno de chamada.  
   
-2.  OpenTimeout – usada ao abrir canais quando nenhum valor de tempo limite explícito for especificado  
+2.  OpenTimeout – usada ao abrir canais quando nenhum valor de tempo limite explícito for especificado.  
   
-3.  CloseTimeout – usado ao fechar canais quando nenhum valor de tempo limite explícito for especificado  
+3.  CloseTimeout – usado ao fechar canais quando nenhum valor de tempo limite explícito for especificado.  
   
 4.  ReceiveTimeout – não é usado.  
   
 ### <a name="service-side-timeouts"></a>Tempos limite do lado do serviço  
  No lado do serviço:  
   
-1.  SendTimeout, OpentTimeout, CloseTimeout são os mesmos que no cliente  
+1.  SendTimeout, OpenTimeout, CloseTimeout são os mesmos que no cliente.  
   
 2.  ReceiveTimeout – usado pela camada de estrutura de serviço para inicializar o tempo limite de ociosidade de sessão, que controla quanto tempo uma sessão pode ficar ociosa antes do tempo limite.

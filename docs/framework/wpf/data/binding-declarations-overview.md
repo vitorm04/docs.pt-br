@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2fc90769b1524ec93fd3df6a9b8be3eb28de8195
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 615b92d264b91ab5b267d5e79ab829b8afa489cd
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="binding-declarations-overview"></a>Visão geral das declarações de associação
 Este tópico discute as diferentes maneiras que você pode declarar uma associação.  
@@ -51,7 +53,7 @@ Este tópico discute as diferentes maneiras que você pode declarar uma associa�
   
  Ao criar cadeias de caracteres de declaração de associação em marcação, elas devem ser anexadas à propriedade de dependência específica de um objeto de destino. O exemplo a seguir mostra como associar o <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> propriedade usando a extensão de associação, especificando o <xref:System.Windows.Data.Binding.Source%2A> e <xref:System.Windows.Data.Binding.Path%2A> propriedades.  
   
- [!code-xaml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
+ [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
   
  Você pode especificar a maioria das propriedades da <xref:System.Windows.Data.Binding> classe dessa maneira. Para obter mais informações sobre as extensões de associação, bem como uma lista de <xref:System.Windows.Data.Binding> propriedades que não podem ser definidas usando a extensão de associação, consulte o [extensão de marcação de associação](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) visão geral.  
   
@@ -69,7 +71,7 @@ Este tópico discute as diferentes maneiras que você pode declarar uma associa�
   
 <a name="MBandPB"></a>   
 ### <a name="multibinding-and-prioritybinding"></a>MultiBinding e PriorityBinding  
- <xref:System.Windows.Data.MultiBinding>e <xref:System.Windows.Data.PriorityBinding> não dão suporte a sintaxe de extensão do XAML. Portanto, você deve usar a sintaxe de elemento de objeto se você está declarando um <xref:System.Windows.Data.MultiBinding> ou um <xref:System.Windows.Data.PriorityBinding> em XAML.  
+ <xref:System.Windows.Data.MultiBinding> e <xref:System.Windows.Data.PriorityBinding> não dão suporte a sintaxe de extensão do XAML. Portanto, você deve usar a sintaxe de elemento de objeto se você está declarando um <xref:System.Windows.Data.MultiBinding> ou um <xref:System.Windows.Data.PriorityBinding> em XAML.  
   
 <a name="BindinginCode"></a>   
 ## <a name="creating-a-binding-in-code"></a>Criar uma associação em código  
@@ -77,8 +79,6 @@ Este tópico discute as diferentes maneiras que você pode declarar uma associa�
   
  [!code-csharp[BindConversion#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
  [!code-vb[BindConversion#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
-[!code-csharp[BindConversion#end1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#end1)]
-[!code-vb[BindConversion#end1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#end1)]  
   
  Se o objeto que você está associando é um <xref:System.Windows.FrameworkElement> ou um <xref:System.Windows.FrameworkContentElement> você pode chamar o `SetBinding` método em seu objeto diretamente em vez de usar <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>. Para obter um exemplo, consulte [Criar uma associação em código](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md).  
   

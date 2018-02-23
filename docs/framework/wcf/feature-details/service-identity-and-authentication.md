@@ -5,29 +5,32 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: authentication [WCF], specifying the identity of a service
+helpviewer_keywords:
+- authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b741e421a8773e1a4b2d2ab7da5e119073e861ed
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 579f41a213564dd18dae719a14170100903efd92
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="service-identity-and-authentication"></a>Identidade e autenticação de serviço
 Um serviço *identidade do ponto de extremidade*é um valor gerado do serviço WSDL Web Services Description Language (). Esse valor, propagada para qualquer cliente, é usado para autenticar o serviço. Depois que o cliente inicia uma comunicação para um ponto de extremidade e o serviço se autentica para o cliente, o cliente compara o valor de identidade do ponto de extremidade com o valor real retornado o processo de autenticação de ponto de extremidade. Se elas corresponderem, o cliente terá certeza que ele contatou o ponto de extremidade de serviço esperada. Isso funciona como uma proteção contra *phishing* , impedindo que um cliente que está sendo redirecionado para um ponto de extremidade hospedado por um serviço mal-intencionado.  
   
- Para um aplicativo de exemplo que mostra a configuração de identidade, consulte [exemplo de identidade de serviço](../../../../docs/framework/wcf/samples/service-identity-sample.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]pontos de extremidade e endereços de ponto de extremidade, consulte [endereços](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md).  
+ Para um aplicativo de exemplo que mostra a configuração de identidade, consulte [exemplo de identidade de serviço](../../../../docs/framework/wcf/samples/service-identity-sample.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] pontos de extremidade e endereços de ponto de extremidade, consulte [endereços](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md).  
   
 > [!NOTE]
 >  Quando você usa LanMan NT (NTLM) para autenticação, a identidade do serviço não está marcada como sob NTLM, o cliente é capaz de autenticar o servidor. NTLM é usado quando os computadores fazem parte de um grupo de trabalho do Windows ou ao executar uma versão mais antiga do Windows que não dá suporte à autenticação de Kerberos.  
@@ -45,22 +48,22 @@ Um serviço *identidade do ponto de extremidade*é um valor gerado do serviço W
  O <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriedade o <xref:System.ServiceModel.EndpointAddress> classe representa a identidade do serviço chamado pelo cliente. O serviço publica o <xref:System.ServiceModel.EndpointAddress.Identity%2A> em seus metadados. Quando o desenvolvedor do cliente é executado o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) contra o ponto de extremidade de serviço, a configuração gerada contém o valor do serviço de <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriedade. O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infraestrutura (se configurado com segurança) verifica se o serviço possui a identidade especificada.  
   
 > [!IMPORTANT]
->  O metadados contém a identidade esperada do serviço, portanto, é recomendável que você exponha os metadados de serviço por meio de forma segura, por exemplo, ao criar um ponto de extremidade HTTPS para o serviço. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Como: proteger pontos de extremidade de metadados](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
+>  O metadados contém a identidade esperada do serviço, portanto, é recomendável que você exponha os metadados de serviço por meio de forma segura, por exemplo, ao criar um ponto de extremidade HTTPS para o serviço. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Como: proteger pontos de extremidade de metadados](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
   
 ## <a name="identity-types"></a>Tipos de identidade  
- Um serviço pode fornecer a cinco tipos de identidades. Cada tipo de identidade corresponde a um elemento que pode ser contido dentro de `<identity>` elemento na configuração. O tipo usado depende do cenário e requisitos de segurança do serviço. A tabela a seguir descreve cada tipo de identidade.  
+ Um serviço pode fornecer seis tipos de identidades. Cada tipo de identidade corresponde a um elemento que pode ser contido dentro de `<identity>` elemento na configuração. O tipo usado depende do cenário e requisitos de segurança do serviço. A tabela a seguir descreve cada tipo de identidade.  
   
 |Tipo de identidade|Descrição|Cenário típico|  
 |-------------------|-----------------|----------------------|  
 |DNS (Sistema de Nomes de Domínio)|Use esse elemento com certificados x. 509 ou contas do Windows. Ele compara o nome DNS especificado na credencial com o valor especificado neste elemento.|Uma verificação DNS permite que você use certificados com o DNS ou nomes de entidade. Se um certificado seja enviado novamente com o mesmo DNS ou o nome da entidade, em seguida, a verificação de identidade ainda é válida. Quando um certificado for reemitido, ele obtém uma nova chave RSA, mas mantém o mesmo DNS ou o nome da entidade. Isso significa que os clientes não precisa atualizar as informações de identidade sobre o serviço.|  
-|Certificado. O padrão quando `ClientCredentialType` está definida como Certificate.|Este elemento Especifica um valor de certificado x. 509 codificado na Base64 para comparar com o cliente.<br /><br /> Use também esse elemento ao usar um [!INCLUDE[infocard](../../../../includes/infocard-md.md)] como uma credencial para autenticar o serviço.|Esse elemento restringe a autenticação para um único certificado com base em seu valor de impressão digital. Isso permite a autenticação mais rígida porque os valores de impressão digital são exclusivos. Isso é fornecido com uma limitação: se o certificado seja enviado novamente com o mesmo nome de entidade, ele também tem uma nova impressão digital. Portanto, os clientes não são capazes de validar o serviço, a menos que a nova impressão digital é conhecida. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Localizando a impressão digital do certificado, consulte [como: recuperar a impressão digital de um certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).|  
+|Certificado. O padrão quando `ClientCredentialType` está definida como Certificate.|Este elemento Especifica um valor de certificado x. 509 codificado na Base64 para comparar com o cliente.<br /><br /> Use também esse elemento ao usar um [!INCLUDE[infocard](../../../../includes/infocard-md.md)] como uma credencial para autenticar o serviço.|Esse elemento restringe a autenticação para um único certificado com base em seu valor de impressão digital. Isso permite a autenticação mais rígida porque os valores de impressão digital são exclusivos. Isso é fornecido com uma limitação: se o certificado seja enviado novamente com o mesmo nome de entidade, ele também tem uma nova impressão digital. Portanto, os clientes não são capazes de validar o serviço, a menos que a nova impressão digital é conhecida. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Localizando a impressão digital do certificado, consulte [como: recuperar a impressão digital de um certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).|  
 |Referência de certificado|Idêntica à opção de certificado descrita anteriormente. No entanto, esse elemento permite que você especifique um nome de certificado e o local do qual recuperar o certificado do repositório.|Mesmo que o cenário de certificado descrito anteriormente.<br /><br /> A vantagem é que o local de armazenamento pode alterar.|  
 |RSA|Este elemento Especifica um valor de chave RSA para comparar com o cliente. Isso é semelhante à opção de certificado, mas em vez de usar a impressão digital do certificado, chave RSA do certificado é usado em vez disso.|Uma verificação RSA permite restringir especificamente a autenticação para um único certificado com base em sua chave RSA. Isso permite a autenticação mais rígida de uma chave RSA específica às custas de serviço, que não funciona com os clientes existentes se altera o valor da chave RSA.|  
 |Nome de usuário principal (UPN). O padrão quando o `ClientCredentialType` é definido para o Windows e o serviço de processo não está em execução em uma das contas do sistema.|Este elemento Especifica o UPN que o serviço está em execução. Consulte a seção de protocolo Kerberos e identidade [substituindo a identidade de um serviço de autenticação](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md).|Isso garante que o serviço está em execução em uma conta de usuário específica do Windows. A conta de usuário pode ser o usuário de logon atual ou o serviço executado sob uma conta de usuário específico.<br /><br /> Essa configuração se beneficia de segurança do Windows Kerberos se o serviço está em execução em uma conta de domínio em um ambiente do Active Directory.|  
 |Nome principal do serviço (SPN). O padrão quando o `ClientCredentialType` é definido para o Windows e o serviço de processo está sendo executado em uma das contas do sistema — LocalService, LocalSystem ou NetworkService.|Este elemento Especifica o SPN associado à conta do serviço. Consulte a seção de protocolo Kerberos e identidade [substituindo a identidade de um serviço de autenticação](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md).|Isso garante que o SPN e a conta do Windows específica associada ao SPN identificam o serviço.<br /><br /> Você pode usar a ferramenta Setspn.exe para associar uma conta de computador para a conta de usuário do serviço.<br /><br /> Essa configuração se beneficia do Kerberos Windows segurança se o serviço está em execução em uma das contas de sistema ou em uma conta de domínio que tenha um nome SPN associado com ele e o computador é um membro de um domínio em um ambiente do Active Directory.|  
   
 ## <a name="specifying-identity-at-the-service"></a>Especificação de identidade de serviço  
- Normalmente, você não precisa definir a identidade de um serviço porque a seleção de um tipo de credencial de cliente determina o tipo de identidade exposto nos metadados do serviço. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]como substituir ou especificar a identidade de serviço, consulte [substituindo a identidade de um serviço de autenticação](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md).  
+ Normalmente, você não precisa definir a identidade de um serviço porque a seleção de um tipo de credencial de cliente determina o tipo de identidade exposto nos metadados do serviço. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] como substituir ou especificar a identidade de serviço, consulte [substituindo a identidade de um serviço de autenticação](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md).  
   
 ## <a name="using-the-identity-element-in-configuration"></a>Usando o \<identidade > elemento na configuração  
  Se você alterar o tipo de credencial de cliente na associação mostrada anteriormente para `Certificate,` , em seguida, o WSDL gerado contém uma Base64 serializado certificado x. 509 para o valor de identidade, conforme mostrado no código a seguir. Esse é o padrão para todos os tipos de credencial de cliente diferentes do Windows.  
@@ -96,7 +99,7 @@ Um serviço *identidade do ponto de extremidade*é um valor gerado do serviço W
   
  Se o canal está configurado para autenticar usando o nível de transporte ou mensagem de protocolo (SSL) com certificados x. 509 para autenticação, os seguintes valores de identidade são válidos:  
   
--   DNS. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]garante que o certificado fornecido durante o handshake SSL contém um DNS ou `CommonName` atributo de (CN) igual ao valor especificado na identidade do DNS no cliente. Observe que essas verificações são feitas Além disso, para determinar a validade do certificado do servidor. Por padrão, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] valida que o certificado do servidor é emitido por uma autoridade raiz confiável.  
+-   DNS. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] garante que o certificado fornecido durante o handshake SSL contém um DNS ou `CommonName` atributo de (CN) igual ao valor especificado na identidade do DNS no cliente. Observe que essas verificações são feitas Além disso, para determinar a validade do certificado do servidor. Por padrão, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] valida que o certificado do servidor é emitido por uma autoridade raiz confiável.  
   
 -   Certificado. Durante o handshake SSL, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] garante que o ponto de extremidade remoto fornece o valor exato do certificado especificado na identidade.  
   
@@ -120,7 +123,7 @@ Um serviço *identidade do ponto de extremidade*é um valor gerado do serviço W
  [!code-csharp[C_Identity#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#8)]
  [!code-vb[C_Identity#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#8)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]como a pilha de elementos corretamente para uma associação personalizada de associação, consulte [Criando associações](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Criando uma associação personalizada com o <xref:System.ServiceModel.Channels.SecurityBindingElement>, consulte [como: criar um SecurityBindingElement para um modo de autenticação especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] como a pilha de elementos corretamente para uma associação personalizada de associação, consulte [Criando associações](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Criando uma associação personalizada com o <xref:System.ServiceModel.Channels.SecurityBindingElement>, consulte [como: criar um SecurityBindingElement para um modo de autenticação especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Como criar uma associação personalizada utilizando o SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  

@@ -2,7 +2,8 @@
 title: "Infelizmente, estamos don &#39; não possui informações específicas sobre este erro c#"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - CS1583
@@ -882,27 +883,28 @@ f1_keywords:
 - CS8168
 - CS8172
 - CS8179
-helpviewer_keywords: errors [C#], additional information
+helpviewer_keywords:
+- errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 312bcc963e2e444bb5125124a0cb690126c0a770
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5f6224f661aff817b4314d832fcc2ff3938644c0
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Infelizmente, estamos don &#39; não possui informações específicas sobre este erro c#
 Infelizmente não temos informações específicas sobre este erro. Você pode procurar o número do erro e o texto da mensagem para localizar informações na web. Ou você pode pedir a outros desenvolvedores usando um desses grupos:  
   
- [Linguagem Visual C#](http://go.microsoft.com/fwlink/?LinkId=146921)  
+ [Linguagem Visual C#](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
  Fornece um fórum para perguntas e discussões gerais sobre a linguagem e o compilador [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
   
- [IDE do Visual C#](http://go.microsoft.com/fwlink/?LinkId=146922)  
+ [IDE do Visual C#](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
  Fornece um fórum para perguntas sobre como trabalhar no ambiente [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
- [Informações gerais do Visual C#](http://go.microsoft.com/fwlink/?LinkId=146920)  
+ [Informações gerais do Visual C#](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
  Fornece um fórum para perguntas sobre, problemas com, o [!INCLUDE[csprcs](~/includes/csprcs-md.md)] que não são discutidas em outros fóruns.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/c%23)  
@@ -915,4 +917,3 @@ Infelizmente não temos informações específicas sobre este erro. Você pode p
  [Guia de Programação em C#](../../csharp/programming-guide/index.md)  
  [Referência de C#](../../csharp/language-reference/index.md)  
  [Fale conosco](/visualstudio/ide/talk-to-us)  
- [Fale conosco](/visualstudio/ide/talk-to-us)

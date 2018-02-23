@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 73ed25406aa398aa35c275b20da1deee48b119ab
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: a595f255b014e08b4b5b2036a7b1940e46df268f
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="how-to-create-a-simple-binding"></a>Como criar uma associação simples
 Este exemplo mostra como criar um simples <xref:System.Windows.Data.Binding>.  
@@ -32,15 +32,11 @@ Este exemplo mostra como criar um simples <xref:System.Windows.Data.Binding>.
 ## <a name="example"></a>Exemplo  
  Neste exemplo, você tem uma `Person` objeto com uma propriedade de cadeia de caracteres denominada `PersonName`. O objeto `Person` é definido no namespace chamado `SDKSample`.  
   
- O exemplo a seguir cria uma instância de `Person` do objeto com um `PersonName` valor da propriedade `Joe`. Isso é feito o `Resources` seção e atribuído um `x:Key`.  
+ A linha realçada que contém o `<src>` elemento no exemplo a seguir cria uma instância de `Person` do objeto com um `PersonName` valor da propriedade `Joe`. Isso é feito o `Resources` seção e atribuído um `x:Key`.  
   
- [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml)]  
+ [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml?highlight=9,37)]  
   
- Para associar o `PersonName` propriedade que você faça o seguinte:  
-  
- [!code-xaml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
-  
- Como resultado, o <xref:System.Windows.Controls.TextBlock> é exibida com o valor "Joe".  
+ A linha realçada que contém o `<TextBlock>` elemento, em seguida, associa a <xref:System.Windows.Controls.TextBlock> o controle para o `PersonName` propriedade. Como resultado, o <xref:System.Windows.Controls.TextBlock> é exibida com o valor "Joe".  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)  

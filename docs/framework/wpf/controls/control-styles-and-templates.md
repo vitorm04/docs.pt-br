@@ -24,11 +24,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 30fff79b163136b4405b8fe7a5dfffeda532525d
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: fc62422125d6a9a17aa353cccec6ab23eca2008b
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="control-styles-and-templates"></a>Estilos e modelos de controle
 Controles em Windows Presentation Foundation (WPF) têm um <xref:System.Windows.Controls.ControlTemplate> que contém a árvore visual do controle. Você pode alterar a estrutura e a aparência de um controle modificando o <xref:System.Windows.Controls.ControlTemplate> desse controle. Não é possível substituir apenas parte da árvore visual de um controle; Para modificar a árvore visual de um controle, você deve definir o <xref:System.Windows.Controls.Control.Template%2A> propriedade do controle como sua nova e completa <xref:System.Windows.Controls.ControlTemplate>.  
@@ -63,18 +63,18 @@ Controles em Windows Presentation Foundation (WPF) têm um <xref:System.Windows.
  [Estilos e modelos ListView](../../../../docs/framework/wpf/controls/listview-styles-and-templates.md)  
  [Estilos e modelos de menu](../../../../docs/framework/wpf/controls/menu-styles-and-templates.md)  
  [Estilos e modelos NavigationWindow](../../../../docs/framework/wpf/controls/navigationwindow-styles-and-templates.md)  
- [Estilos e modelos PasswordBox](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
+ [Modelos e estilos PasswordBox](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
  [Estilos e modelos ProgressBar](../../../../docs/framework/wpf/controls/progressbar-styles-and-templates.md)  
  [Estilos e modelos RadioButton](../../../../docs/framework/wpf/controls/radiobutton-styles-and-templates.md)  
- [Estilos e modelos RepeatButton](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
+ [Modelos e estilos de RepeatButton](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
  [Estilos e modelos ScrollBar](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
  [Estilos e modelos ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)  
  [Estilos e modelos de controle deslizante](../../../../docs/framework/wpf/controls/slider-styles-and-templates.md)  
  [Estilos e modelos StatusBar](../../../../docs/framework/wpf/controls/statusbar-styles-and-templates.md)  
  [Estilos e modelos TabControl](../../../../docs/framework/wpf/controls/tabcontrol-styles-and-templates.md)  
  [Estilos e modelos TextBox](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)  
- [Estilos e modelos de posição](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
- [Estilos e modelos ToggleButton](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
+ [Modelos e estilos de miniatura](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
+ [Modelos e estilos ToggleButton](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
  [Estilos e modelos ToolBar](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
  [Estilos e modelos ToolTip](../../../../docs/framework/wpf/controls/tooltip-styles-and-templates.md)  
  [Estilos e modelos TreeView](../../../../docs/framework/wpf/controls/treeview-styles-and-templates.md)  
