@@ -265,6 +265,7 @@
 ## [Tópicos de instruções de C#](csharp/how-to/index.md)
 ### [Como analisar cadeias de caracteres usando `String.Split`](csharp/how-to/parse-strings-using-split.md)
 ### [Como concatenar cadeias de caracteres](csharp/how-to/concatenate-multiple-strings.md)
+### [Como converter uma cadeia de caracteres em um DateTime](standard/base-types/parsing-datetime.md)
 <!-- End of C# Concepts section -->
 ## [O SDK do .NET Compiler Platform (APIs do Roslyn)](csharp/roslyn-sdk/)
 ## [Guia de Programação em C#](csharp/programming-guide/)
