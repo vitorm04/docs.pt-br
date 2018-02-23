@@ -1,6 +1,6 @@
 ---
 title: Diretrizes gerais
-description: "Arquitetura de Microservices .NET para aplicativos .NET em contêineres | Diretrizes gerais"
+description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Diretrizes gerais"
 keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,46 +8,49 @@ ms.date: 10/18/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 22dea926e77079e4f543934613ced13a28b2dae6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fa58d1d81b2d1523baf123d4963db2ca00fee15d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="general-guidance"></a>Diretrizes gerais
 
-Esta seção fornece um resumo de quando escolher .NET Core ou do .NET Framework. Podemos fornecer mais detalhes sobre essas opções nas seções a seguir.
+Esta seção oferece um resumo de quando escolher o .NET Core ou o .NET Framework. Fornecemos mais detalhes sobre essas opções nas seções a seguir.
 
-Você deve usar o .NET Core com contêineres do Windows, ou Linux para o aplicativo de servidor em contêineres do Docker quando:
+Você deverá usar o .NET Core, com contêineres Linux ou do Windows, para seu aplicativo para servidores do Docker em contêineres quando:
 
--   Você tiver necessidades de plataforma cruzada. Por exemplo, você deseja usar ambos os contêineres do Windows e Linux.
+-   Você tiver necessidades de plataforma cruzada. Por exemplo, você desejar usar contêineres Linux e do Windows.
 
--   A arquitetura do aplicativo é baseada em microservices.
+-   Sua arquitetura de aplicativo for baseada em microsserviços.
 
--   Você precisa iniciar contêineres rápida e desejar uma superfície pequena por contêiner para obter melhor densidade ou mais contêineres por unidade de hardware para reduzir os custos.
+-   For necessário iniciar contêineres rapidamente e você desejar ocupar um espaço menor por contêiner para obter melhor densidade ou mais contêineres por unidade de hardware a fim de reduzir seus custos.
 
-Em resumo, quando você cria novos aplicativos .NET em contêineres, você deve considerar o núcleo do .NET como a opção padrão. Ela tem muitos benefícios e se ajuste melhor com o estilo de trabalho e filosofia de contêineres.
+Em resumo, quando você cria novos aplicativos .NET em contêineres, você deve considerar o .NET Core como a opção padrão. Ela tem muitos benefícios e se ajusta melhor à filosofia e ao estilo de trabalho dos contêineres.
 
-Um benefício adicional de usar o .NET Core é que você pode executar as versões do .NET lado a lado para aplicativos no mesmo computador. Esse benefício é mais importante para servidores ou máquinas virtuais que não usam contêineres, como contêineres isolar as versões do .NET que o aplicativo precisa. (Desde que eles sejam compatíveis com o sistema operacional subjacente.)
+Um benefício adicional de usar o .NET Core é que você pode executar versões do .NET para aplicativos lado a lado dentro do mesmo computador. Esse benefício é mais importante para servidores ou VMs que não usam contêineres, porque os contêineres isolam as versões do .NET de que o aplicativo precisa. (Desde que sejam compatíveis com o sistema operacional subjacente.)
 
-Você deve usar o .NET Framework, com contêineres do Windows para o aplicativo de servidor em contêineres do Docker quando:
+Você deverá usar o .NET Framework, com contêineres do Windows, para seu aplicativo para servidores do Docker em contêineres quando:
 
--   Seu aplicativo usa o .NET Framework e tem dependências fortes no Windows.
+-   No momento, seu aplicativo usar o .NET Framework e tem fortes dependências no Windows.
 
--   Você precisa usar APIs do Windows que não são suportados pelo .NET Core.
+-   For necessário usar APIs do Windows não compatíveis com o .NET Core.
 
--   Você precisa usar bibliotecas .NET de terceiros ou pacotes do NuGet que não estão disponíveis para o .NET Core.
+-   For necessário usar bibliotecas .NET de terceiros ou pacotes NuGet não disponíveis para o .NET Core.
 
-Usando o .NET Framework no Docker pode melhorar sua experiência de implantação, minimizar os problemas de implantação. Isso [ *cenário "comparar e deslocar"* ](https://aka.ms/liftandshiftwithcontainersebook) é importante para aplicativos herdados que foram desenvolvidos originalmente com o .NET Framework tradicionais, como formulários da Web do ASP.NET, MVC web WCF (ou aplicativos de containerizing Serviços do Windows Communication Foundation).
+Usar o .NET Framework no Docker pode melhorar suas experiências de implantação minimizando os problemas de implantação. Este [*cenário de "lift-and-shift"*](https://aka.ms/liftandshiftwithcontainersebook) é importante para colocar aplicativos herdados em contêineres que foram desenvolvidos originalmente com o .NET Framework tradicional, como os serviços ASP.NET WebForms, aplicativos Web MVC ou WCF (Windows Communication Foundation).
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
--   **livro eletrônico: modernizar aplicativos existentes do .NET Framework com o Azure e os contêineres do Windows**
+-   **Livro eletrônico: modernizar aplicativos existentes do .NET Framework com o Azure e os contêineres do Windows**
     [*https://aka.ms/liftandshiftwithcontainersebook*](https://aka.ms/liftandshiftwithcontainersebook)
 
--   **Aplicativos de exemplo: modernização aplicativos herdados de web do ASP.NET usando contêineres do Windows**
+-   **Aplicativos de exemplo: modernização de aplicativos Web ASP.NET herdados usando contêineres do Windows**
     [*https://aka.ms/eshopmodernizing*](https://aka.ms/eshopmodernizing)
 
 
 >[!div class="step-by-step"]
-[Anterior] (index.md) [Avançar] (net-core-contêiner-scenarios.md)
+[Anterior] (index.md) [Próximo] (net-core-container-scenarios.md)

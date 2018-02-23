@@ -1,30 +1,35 @@
 ---
-title: Implementando um barramento de evento com RabbitMQ para o ambiente de desenvolvimento ou teste
-description: "Arquitetura de Microservices .NET para aplicativos .NET em contêineres | Implementando um barramento de evento com RabbitMQ para o ambiente de desenvolvimento ou teste"
+title: Implementando um barramento de eventos com o RabbitMQ para o ambiente de desenvolvimento ou de teste
+description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Implementando um barramento de eventos com RabbitMQ para o ambiente de desenvolvimento ou de teste"
 keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: f58d355b6f5fd31a21791d3b072c77f70f90c387
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3505cb993c736165d4aff4ce8fad38cfa14ed417
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implementando um barramento de evento com RabbitMQ para o ambiente de desenvolvimento ou teste
+# <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implementando um barramento de eventos com o RabbitMQ para o ambiente de desenvolvimento ou de teste
 
-Deve começar dizendo que, se você criar o barramento de evento personalizado com base em RabbitMQ em execução em um contêiner, que o aplicativo eShopOnContainers, ele deve ser usado somente para seus ambientes de desenvolvimento e teste. Você não deve usá-lo para o seu ambiente de produção, a menos que você está criando-o como parte de um barramento de serviço pronto para produção. Barramento de evento personalizado simples talvez não tenha muitos recursos críticos prontos para produção que tem um barramento de serviço comercial.
+Devemos começar dizendo que, se você criar seu barramento de eventos personalizado com base no RabbitMQ em execução em um contêiner, como o aplicativo eShopOnContainers faz, ele deverá ser usado apenas para seus ambientes de desenvolvimento e teste. Você não deve usá-lo para o seu ambiente de produção, a menos que o esteja criando como parte de um barramento de serviço pronto para produção. Um barramento de eventos personalizado simples talvez não tenha muitos recursos críticos prontos para produção que um barramento de serviço comercial tem.
 
-A implementação personalizada de eShopOnContainers de um barramento de evento é basicamente uma biblioteca usando a API RabbitMQ. A implementação permite microservices assinar eventos, publicar eventos e receber eventos, como mostrado na Figura 8-21.
+Uma da implementação personalizada do barramento de eventos no eShopOnContainers é basicamente uma biblioteca que usa a API do RabbitMQ (há outra implementação baseada no Barramento de Serviço do Azure). 
+
+A implementação do barramento de eventos com RabbitMQ permite que os microsserviços assinem, publiquem e recebam eventos, conforme mostrado na Figura 8-21.
 
 ![](./media/image22.png)
 
-**Figura 8-21.** RabbitMQ implementação de um barramento de evento
+**Figura 8-21.** Implementação de um barramento de eventos do RabbitMQ
 
-No código, a classe de EventBusRabbitMQ implementa a interface IEventBus genérica. Isso se baseia na injeção de dependência para que você pode trocar dessa versão de desenvolvimento/teste para uma versão de produção.
+No código, a classe EventBusRabbitMQ implementa a interface IEventBus genérica. Isso se baseia na Injeção de dependência para que você possa trocar dessa versão de Desenvolvimento/Teste para uma versão de produção.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -33,11 +38,11 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
     //...
 ```
 
-A implementação de RabbitMQ do barramento de evento de desenvolvimento/teste de exemplo é código padronizado. Ele tem que lidar com a conexão ao servidor RabbitMQ e fornecer o código para a publicação de um evento de mensagem para filas. Ele também tem que implementar um dicionário de coleções de manipuladores de eventos de integração para cada tipo de evento; Esses tipos de evento podem ter uma instanciação diferente e diferentes assinaturas do microsserviço cada destinatário, conforme mostrado na Figura 8-21.
+A implementação do RabbitMQ de um barramento de eventos de Desenvolvimento/Teste de exemplo é um código clichê. Ele precisa lidar com a conexão com o servidor do RabbitMQ e fornecer o código para a publicação de um evento de mensagem nas filas. Ele também precisa implementar um dicionário de coleções de manipuladores de eventos de integração para cada tipo de evento; esses tipos de evento podem ter uma instanciação diferente e diferentes assinaturas para cada microsserviço receptor, conforme mostrado na Figura 8-21.
 
-## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>Implementando um simples publicar método com RabbitMQ
+## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>Implementando um método de publicação simples com RabbitMQ
 
-O código a seguir é parte da implementação do barramento de evento eShopOnContainers para RabbitMQ, para que você normalmente não precisa codificá-la, a menos que você estiver fazendo aprimoramentos. O código obtém uma conexão e canal para RabbitMQ, cria uma mensagem e, em seguida, publica a mensagem na fila.
+O código a seguir faz parte de uma implementação de barramento de eventos simplificado para RabbitMQ, aprimorado no [código real](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) de eShopOnContainers. Normalmente, não é necessário codificá-lo, a menos que você esteja fazendo aprimoramentos. O código obtém uma conexão e um canal para o RabbitMQ, cria uma mensagem e, em seguida, publica-a na fila.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -65,45 +70,51 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 }
 ```
 
-O [código real](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) de publicar método no aplicativo eShopOnContainers é aprimorado usando um [Polly](https://github.com/App-vNext/Polly) política, que repete a tarefa de um determinado número de vezes que no caso do contêiner de RabbitMQ é de repetição não está pronto. Isso pode ocorrer quando compor docker está iniciando os contêineres; Por exemplo, o contêiner de RabbitMQ pode iniciar mais lentamente do que os outros contêineres.
+O [código real](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) do método de publicação no aplicativo eShopOnContainers é aprimorado usando uma política de repetição [Polly](https://github.com/App-vNext/Polly), que repete a tarefa um determinado número de vezes caso o contêiner do RabbitMQ não esteja pronto. Isso pode ocorrer quando docker-compose está iniciando os contêineres; por exemplo, o contêiner do RabbitMQ pode ser iniciado mais lentamente do que outros contêineres.
 
-Como mencionado anteriormente, há muitas configurações possíveis em RabbitMQ, portanto esse código deve ser usado apenas para ambientes de desenvolvimento e teste.
+Conforme mencionado anteriormente, há muitas configurações possíveis no RabbitMQ. Portanto, esse código deve ser usado apenas para ambientes de Desenvolvimento/Teste.
 
-## <a name="implementing-the-subscription-code-with-the-rabbitmq-api"></a>Implementar o código de assinatura com a API RabbitMQ
+## <a name="implementing-the-subscription-code-with-the-rabbitmq-api"></a>Implementando o código de assinatura com a API do RabbitMQ
 
-Como com o código de publicação, o código a seguir é uma simplificação de parte da implementação do barramento de eventos para RabbitMQ. Novamente, você normalmente não precisa alterá-la, a menos que são melhorá-lo.
+Como acontece com o código de publicação, o código a seguir é uma simplificação de parte da implementação do barramento de eventos para RabbitMQ. Mais uma vez, geralmente não é necessário alterá-lo, a menos que você o esteja aprimorando.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
 {
     // Member objects and other methods ...
     // ...
-    public void Subscribe<T>(IIntegrationEventHandler<T> handler)
+
+    public void Subscribe<T, TH>()
         where T : IntegrationEvent
+        where TH : IIntegrationEventHandler<T>
     {
-        var eventName = typeof(T).Name;
-        if (_handlers.ContainsKey(eventName))
+        var eventName = _subsManager.GetEventKey<T>();
+        
+        var containsKey = _subsManager.HasSubscriptionsForEvent(eventName);
+        if (!containsKey)
         {
-            _handlers[eventName].Add(handler);
+            if (!_persistentConnection.IsConnected)
+            {
+                _persistentConnection.TryConnect();
+            }
+
+            using (var channel = _persistentConnection.CreateModel())
+            {
+                channel.QueueBind(queue: _queueName,
+                                    exchange: BROKER_NAME,
+                                    routingKey: eventName);
+            }
         }
-        else
-        {
-            var channel = GetChannel();
-            channel.QueueBind(queue: _queueName,
-                exchange: _brokerName,
-                routingKey: eventName);
-            _handlers.Add(eventName, new List<IIntegrationEventHandler>());
-            _handlers[eventName].Add(handler);
-            _eventTypes.Add(typeof(T));
-        }
+
+        _subsManager.AddSubscription<T, TH>();
     }
 }
 ```
 
-Cada tipo de evento tem um canal relacionado para obter eventos do RabbitMQ. Em seguida, você pode ter tantos manipuladores de eventos por tipo de canal e de evento conforme necessário.
+Cada tipo de evento tem um canal relacionado para obter eventos do RabbitMQ. Em seguida, é possível ter tantos manipuladores de eventos por tipo de evento e de canal conforme necessário.
 
-O método Subscribe aceita um objeto IIntegrationEventHandler, que é como um método de retorno de chamada no microsserviço atual, além de seu objeto IntegrationEvent relacionado. O código, em seguida, adiciona o manipulador de eventos à lista de manipuladores de eventos que cada tipo de evento de integração pode ter por cliente microsserviço. Se o código do cliente não já inscrito no evento, o código cria um canal para o tipo de evento para que ela possa receber eventos em um estilo de envio de RabbitMQ quando esse evento é publicado a partir de qualquer outro serviço.
+O método Subscribe aceita um objeto IIntegrationEventHandler, que é como um método de retorno de chamada no microsserviço atual, além de seu objeto IntegrationEvent relacionado. O código, então, adiciona o manipulador de eventos à lista de manipuladores de eventos que cada tipo de evento de integração pode ter por microsserviço do cliente. Se o código do cliente ainda não tiver assinado o evento, o código criará um canal para o tipo de evento para que ele possa receber eventos em um estilo de push do RabbitMQ quando esse evento for publicado de qualquer outro serviço.
 
 
 >[!div class="step-by-step"]
-[Anterior] (integração-evento-com base-microsserviço-communications.md) [Avançar] (events.md assinar)
+[Anterior] (integration-event-based-microservice-communications.md) [Próximo] (subscribe-events.md)

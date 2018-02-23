@@ -1,6 +1,6 @@
 ---
-title: "Implementação de tentativas de chamada HTTP personalizadas com retirada exponencial"
-description: "Arquitetura de Microservices .NET para aplicativos .NET em contêineres | Implementação de tentativas de chamada HTTP personalizadas com retirada exponencial"
+title: Implementando novas tentativas de chamadas HTTP personalizadas com retirada exponencial
+description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Implementando novas tentativas de chamadas HTTP personalizadas com retirada exponencial"
 keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,19 +8,22 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 4449e5d7e0ca3c81aead26fac653de3ba2187a92
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 477b77f4c4768ed98f730b0f5360761b0b54b10c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="implementing-custom-http-call-retries-with-exponential-backoff"></a>Implementação de tentativas de chamada HTTP personalizadas com retirada exponencial
+# <a name="implementing-custom-http-call-retries-with-exponential-backoff"></a>Implementando novas tentativas de chamadas HTTP personalizadas com retirada exponencial
 
-Para criar microservices resiliente, você precisa lidar com possíveis cenários de falha HTTP. Para essa finalidade, você pode criar sua própria implementação de novas tentativas com retirada exponencial.
+Para criar microsserviços resilientes, é necessário manipular possíveis cenários de falha HTTP. Para essa finalidade, é possível criar sua própria implementação de novas tentativas com retirada exponencial.
 
-Além de controlar a indisponibilidade do recurso temporal, a retirada exponencial também precisa levar em conta que o provedor de nuvem pode limitar a disponibilidade de recursos para evitar a sobrecarga de uso. Por exemplo, a criação de muitas solicitações de conexão rapidamente pode ser exibido como uma negação de serviço ([DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)) ataque pelo provedor de nuvem. Como resultado, você precisa fornecer um mecanismo para dimensionar as solicitações de conexão back quando um limite de capacidade foi encontrado.
+Além de manipular a indisponibilidade de recursos temporais, a retirada exponencial também precisa levar em conta que o provedor de nuvem pode restringir a disponibilidade de recursos para evitar a sobrecarga de uso. Por exemplo, a criação de muitas solicitações de conexão muito rapidamente pode ser exibida como um ataque [DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack) (Negação de Serviço) pelo provedor de nuvem. Como resultado, será necessário fornecer um mecanismo para dimensionar as solicitações de conexão de retorno quando um limite de capacidade tiver sido encontrado.
 
-Como uma exploração inicial, você pode implementar seu próprio código com uma classe de utilitário para retirada exponencial como em [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), além de código semelhante ao seguinte (que também está disponível em um [repositório GitHub ](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b)).
+Como uma exploração inicial, você poderia implementar seu próprio código com uma classe de utilitário para retirada exponencial como em [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), além de código como o seguinte (que também está disponível em um [repositório GitHub](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b)).
 
 ```csharp
 public sealed class RetryWithExponentialBackoff
@@ -93,7 +96,7 @@ public struct ExponentialBackoff
 }
 ```
 
-Usando esse código em um cliente C\# aplicativo (outro microsserviço de cliente de API da Web, um aplicativo ASP.NET MVC ou até mesmo um C\# aplicativo Xamarin) é simples. A exemplo a seguir mostra como fazer isso, usando a classe HttpClient.
+Usar esse código em um aplicativo C\# cliente (outro microsserviço de cliente da API Web, um aplicativo MVC ASP.NET ou até mesmo um aplicativo Xamarin C\#) é simples. O exemplo a seguir mostra como fazer isso, usando a classe HttpClient.
 
 ```csharp
 public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? type)
@@ -116,8 +119,8 @@ public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? t
 }
 ```
 
-No entanto, esse código é adequado somente como uma prova de conceito. O próximo tópico explica como usar bibliotecas mais sofisticadas e testadas.
+No entanto, esse código é adequado apenas como uma prova de conceito. O próximo tópico explica como usar bibliotecas mais sofisticadas e comprovadas.
 
 
 >[!div class="step-by-step"]
-[Anterior] (implement-resilient-entity-framework-core-sql-connections.md) [Avançar] (implement-http-call-retries-exponential-backoff-polly.md)
+[Anterior] (implement-resilient-entity-framework-core-sql-connections.md) [Próximo] (implement-http-call-retries-exponential-backoff-polly.md)

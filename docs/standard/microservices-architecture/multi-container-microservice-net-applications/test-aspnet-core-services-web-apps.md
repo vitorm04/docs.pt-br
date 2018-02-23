@@ -1,42 +1,45 @@
 ---
-title: "Teste os serviços principais do ASP.NET e aplicativos web"
-description: "Arquitetura de Microservices .NET para aplicativos .NET em contêineres | Teste os serviços principais do ASP.NET e aplicativos web"
+title: "Testar serviços e aplicativos Web do ASP.NET Core"
+description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Testar serviços e aplicativos Web do ASP.NET Core"
 keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: f756a679befee676db2bf6d402fd7e34b1621b9d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 80b7fa75344f8737baacfba6462a03b436fdf6a8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="testing-aspnet-core-services-and-web-apps"></a>Teste os serviços principais do ASP.NET e aplicativos web
+# <a name="testing-aspnet-core-services-and-web-apps"></a>Testar serviços e aplicativos Web do ASP.NET Core
 
-Os controladores são uma parte central de qualquer serviço de API do ASP.NET Core e o aplicativo Web do ASP.NET MVC. Como tal, você deve ter confiança que se comportam conforme o esperado para seu aplicativo. Testes automatizados podem fornecer essa confiança e podem detectar erros antes que elas atinjam a produção.
+Os controladores são uma parte central de qualquer serviço de API do ASP.NET Core e aplicativo Web ASP.NET MVC. Assim, você precisa estar confiante de que eles se comportarão conforme o esperado para o aplicativo. Testes automatizados podem fornecer essa confiança e detectar erros antes que eles atinjam a produção.
 
-Você precisa testar como o controlador se comporta com base nas entradas válidas ou inválidas e respostas de controlador com base no resultado da operação de negócios que ele executa um teste. No entanto, você deve ter esses tipos de teste sua microservices:
+É necessário testar como o controlador se comporta com base em entradas válidas ou inválidas, bem como testar suas respostas com base nos resultados da operação de negócios realizada. No entanto, você precisa ter estes tipos de testes nos seus microsserviços:
 
--   Testes de unidade. Eles garantem que os componentes individuais do aplicativo funcionam como esperado. Asserções testar a API do componente.
+-   Testes de unidade. Eles garantem que os componentes individuais do aplicativo funcionam como esperado. Instruções assert testam a API do componente.
 
--   Testes de integração. Eles garantem que as interações do componente funcionam como esperado em artefatos externos, como bancos de dados. Asserções podem testar a API do componente, interface do usuário ou os efeitos colaterais de ações, como e/s de banco de dados, log, etc.
+-   Testes de integração. Garantem que as interações do componente funcionam como esperado em artefatos externos, como bancos de dados. Instruções assert podem testar a API do componente, a interface do usuário ou os efeitos colaterais de ações, como E/S de banco de dados, registros em log etc.
 
--   Testes funcionais para cada microsserviço. Eles garantem que o aplicativo funciona conforme o esperado da perspectiva do usuário.
+-   Testes funcionais para cada microsserviço. Garantem que o aplicativo funciona conforme o esperado da perspectiva do usuário.
 
--   Testes de serviço. Eles garantem que os casos de uso do serviço de ponta a ponta, incluindo testes de vários serviços ao mesmo tempo, são testados. Para esse tipo de teste, você precisa preparar o ambiente primeiro. Nesse caso, isso significa que iniciar os serviços (por exemplo, usando o docker-compor backup).
+-   Testes de serviço. Garantem que os casos de uso do serviço de ponta a ponta sejam testados, incluindo testes de vários serviços ao mesmo tempo. Para esse tipo de teste, é necessário preparar o ambiente primeiro. Nesse caso, isso significa iniciar os serviços (por exemplo, usando o Docker Compose).
 
-### <a name="implementing-unit-tests-for-aspnet-core-web-apis"></a>Implementação de testes de unidade para APIs de Web do ASP.NET Core
+### <a name="implementing-unit-tests-for-aspnet-core-web-apis"></a>Implementar testes de unidade para APIs Web do ASP.NET Core
 
-Testes de unidade envolve uma parte de um aplicativo de teste em isolamento de sua infraestrutura e as dependências. Quando a lógica do controlador, somente o conteúdo de uma única ação de teste de unidade você ou método é testado, não o comportamento de suas dependências ou a própria estrutura. Testes de unidade não detectam problemas na interação entre componentes, que é o objetivo do teste de integração.
+O teste de unidade envolve o teste de uma parte de um aplicativo em isolamento de sua infraestrutura e suas dependências. Ao executar a lógica do controlador de teste de unidade, somente o conteúdo de uma única ação ou método é testado, e não o comportamento de suas dependências ou da estrutura. Os testes de unidade não detectam problemas na interação entre componentes, o que é a finalidade dos testes de integração.
 
-Como você unidade suas ações do controlador de teste, verifique se que você se concentrar apenas em seus comportamentos. Um teste de unidade do controlador evita coisas como filtros, roteamento ou associação de modelo. Como eles se concentrar no teste apenas uma coisa, testes de unidade geralmente são simples de escrever e rápido executar. Um conjunto bem escrito de testes de unidade pode ser executado com frequência sem muita sobrecarga.
+Ao executar o teste de unidade nas ações do controlador, concentre-se apenas em seu comportamento. Um teste de unidade do controlador evita itens como filtros, roteamento ou associação de modelos. Ao se concentrarem no teste de apenas um item, os testes de unidade geralmente são simples de serem gravados e rápidos de serem executados. Um conjunto bem escrito de testes de unidade pode ser executado com frequência sem muita sobrecarga.
 
-Testes de unidade são implementados com base nas estruturas de teste como xUnit.net, MSTest, Moq ou NUnit. Para o aplicativo de exemplo eShopOnContainers, estamos usando XUnit.
+Testes de unidade são implementados com base em estruturas de teste como xUnit.net, MSTest, Moq ou NUnit. Para o aplicativo de exemplo eShopOnContainers, usamos o XUnit.
 
-Quando você grava um teste de unidade para um controlador de API da Web, você instanciar a classe do controlador diretamente usando a nova palavra-chave C\#, de modo que o teste será executado mais rápido possível. O exemplo a seguir mostra como fazer isso ao usar [XUnit](https://xunit.github.io/) como a estrutura de teste.
+Ao gravar um teste de unidade de um controlador de API Web, você cria instâncias da classe do controlador usando diretamente a nova palavra-chave no C\#, para que o teste seja executado o mais rápido possível. O exemplo a seguir mostra como fazer isso usando o [XUnit](https://xunit.github.io/) como estrutura de teste.
 
 ```csharp
 [Fact]
@@ -56,19 +59,19 @@ public void Add_new_Order_raises_new_event()
 }
 ```
 
-### <a name="implementing-integration-and-functional-tests-for-each-microservice"></a>Implementação de integração e testes funcionais para cada microsserviço
+### <a name="implementing-integration-and-functional-tests-for-each-microservice"></a>Implementar testes funcionais e de integração em cada microsserviço
 
-Conforme observado, testes de integração e testes funcionais têm metas e objetivos diferentes. No entanto, a maneira como você implementa ambos ao testar controladores do ASP.NET Core é semelhante, portanto nesta seção, nos concentraremos em testes de integração.
+Conforme observado, testes funcionais e de integração têm finalidades e objetivos diferentes. No entanto, a maneira de implementar ambos ao testar os controladores do ASP.NET Core é semelhante. Nesta seção, o foco é o teste de integração.
 
-Testes de integração, você garante que componentes de um aplicativo funcionam corretamente quando montado. ASP.NET Core dá suporte a teste de integração usando estruturas de teste de unidade e um host da web internos de teste que pode ser usado para tratar as solicitações sem sobrecarga de rede.
+Testes de integração garantem que os componentes de um aplicativo funcionem corretamente quando montados. O ASP.NET Core é compatível com testes de integração por meio de estruturas de teste de unidade e um host Web de testes interno que pode ser utilizado para lidar com solicitações sem sobrecarga de rede.
 
-Ao contrário de testes de unidade, testes de integração com frequência envolvem preocupações de infraestrutura de aplicativo, como um banco de dados, sistema de arquivos, recursos de rede, ou web solicitações e respostas. Testes de unidade usam fakes ou simular objetos no lugar essas preocupações. Mas a finalidade de testes de integração confirmar se o sistema funciona conforme esperado com esses sistemas, forma para testes de integração não usar fakes ou simular objetos. Em vez disso, você pode incluir a infraestrutura, como a invocação de acesso ou o serviço de banco de dados de outros serviços.
+Ao contrário do teste de unidade, os testes de integração frequentemente envolvem questões relacionadas com a infraestrutura do aplicativo, como banco de dados, sistema de arquivos, recurso de rede ou solicitações e respostas da Web. Testes de unidade usam objetos falsos ou fictícios em vez disso. Porém, a finalidade dos testes de integração é confirmar que o sistema funciona como o esperado com esses sistemas. Então, nos testes de integração não se usam objetos falsos ou fictícios. Em vez disso, você inclui a infraestrutura, como acesso ao banco de dados ou invocação de serviço de outros serviços.
 
-Porque o exercitam de testes de integração maior de segmentos de código que testes de unidade e testes de integração se basear em elementos de infraestrutura, eles tendem a ser ordens de magnitude menor do que testes de unidade. Portanto, é uma boa ideia limitar quantos testes de integração, gravar e executar.
+Como os testes de integração exercitam segmentos de código maiores que os testes de unidade e contam com elementos de infraestrutura, eles tendem a ter ordens de magnitude mais lentas que os testes de unidade. Portanto, é uma boa ideia limitar a quantidade de testes de integração gravados e executados.
 
-ASP.NET Core inclui um teste interno host da web que pode ser usado para tratar as solicitações HTTP sem sobrecarga de rede, que significa que você pode executar esses testes mais rapidamente ao usar um host da web real. O host de teste da web está disponível em um componente do NuGet como Microsoft.AspNetCore.TestHost. Ele pode ser adicionado a projetos de teste de integração e aplicativos usados para hospedar o ASP.NET Core.
+O ASP.NET Core inclui um host Web interno para testes que pode ser usado para lidar com solicitações HTTP sem sobrecarga de rede, o que significa que é possível executar esses testes mais rápido com um host Web real. O host Web de testes está disponível em um componente NuGet como Microsoft.AspNetCore.TestHost. Ele pode ser adicionado a projetos de teste de integração e usados para hospedar aplicativos do ASP.NET Core.
 
-Como você pode ver no código a seguir, quando você cria testes de integração para o ASP.NET Core controladores, você pode instanciar os controladores por meio do host de teste. Isso é equivalente a uma solicitação HTTP, mas ele é executado mais rapidamente.
+Conforme mostrado no código a seguir, ao criar testes de integração para controladores do ASP.NET Core, você cria instâncias para os controladores por meio do host de teste. Isso é equivalente a uma solicitação HTTP, mas ele é executado mais rapidamente.
 
 ```csharp
 public class PrimeWebDefaultRequestShould
@@ -99,32 +102,32 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
--   **Steve Smith. Controladores de teste** (ASP.NET Core) [ *https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
+-   **Steve Smith. Testando os controladores** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
 
--   **Steve Smith. Testes de integração** (ASP.NET Core) [ *https://docs.microsoft.com/aspnet/core/testing/integration-testing*](https://docs.microsoft.com/aspnet/core/testing/integration-testing)
+-   **Steve Smith. Testes de integração** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/testing/integration-testing*](https://docs.microsoft.com/aspnet/core/testing/integration-testing)
 
--   **Teste de unidade no .NET Core usando dotnet teste**
+-   **Teste de unidade no .NET Core usando o teste dotnet**
     [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test)
 
 -   **xUnit.net**. Site oficial.
-    [*https://xUnit.GitHub.IO/*](https://xunit.github.io/)
+    [*https://xunit.github.io/*](https://xunit.github.io/)
 
--   **Noções básicas de teste de unidade. ** 
-     [ *https://msdn.microsoft.com/en-us/library/hh694602.aspx*](https://msdn.microsoft.com/en-us/library/hh694602.aspx)
+-   **Noções básicas de teste de unidade.**
+    [*https://msdn.microsoft.com/library/hh694602.aspx*](https://msdn.microsoft.com/library/hh694602.aspx)
 
 -   **Moq**. Repositório do GitHub.
-    [*https://GitHub.com/moq/moq*](https://github.com/moq/moq)
+    [*https://github.com/moq/moq*](https://github.com/moq/moq)
 
 -   **NUnit**. Site oficial.
-    [*https://www.NUnit.org/*](https://www.nunit.org/)
+    [*https://www.nunit.org/*](https://www.nunit.org/)
 
-### <a name="implementing-service-tests-on-a-multi-container-application"></a>Testes de implementação de serviços em um aplicativo de contêiner de vários 
+### <a name="implementing-service-tests-on-a-multi-container-application"></a>Implementar testes de serviço em um aplicativo com vários contêineres 
 
-Conforme observado anteriormente, quando você testar o contêiner de vários aplicativos, todos os microservices precisa estar executando dentro do cluster de host ou o contêiner do Docker. Testes de serviço de ponta a ponta que incluem várias operações que envolvem várias microservices exigem que você implantar e iniciar o aplicativo inteiro no host do Docker executando docker-compor up (ou um mecanismo comparável se você estiver usando um orchestrator). Quando o aplicativo inteiro e todos os seus serviços estiver em execução, você pode executar testes funcionais e integração de ponta a ponta.
+Conforme mencionado anteriormente, ao testar aplicativos com vários contêineres, todos os microsserviços precisam ser executados no host do Docker ou no cluster do contêiner. Testes de serviço de ponta a ponta que incluem várias operações que envolvem diversos microsserviços exigem a implantação e inicialização do aplicativo inteiro no host do Docker por meio da execução do Docker Compose (ou um mecanismo semelhante se você estiver usando um orquestrador). Quando o aplicativo inteiro e todos os seus serviços estiverem em execução, você pode executar testes funcionais e de integração de ponta a ponta.
 
-Existem algumas abordagens que você pode usar. No arquivo de docker compose.yml que você usa para implantar o aplicativo (ou aquelas semelhantes, como o docker compose.ci.build.yml), no nível da solução você pode expandir o ponto de entrada para usar [dotnet teste](https://docs.microsoft.com/dotnet/core/tools/dotnet-test). Você também pode usar outro arquivo de redação que executará os testes na imagem de que destino. Usando outro arquivo de redação para testes de integração que inclui seu microservices e bancos de dados em contêineres, você pode garantir que os dados relacionados sempre são redefinidos para seu estado original antes de executar os testes.
+Existem algumas abordagens que você pode usar. No arquivo docker-compose.yml utilizado para implantar o aplicativo (ou similares, como o docker-compose.ci.build.yml), é possível expandir o ponto de entrada no nível da solução para utilizar o [teste dotnet](https://docs.microsoft.com/dotnet/core/tools/dotnet-test). Também é possível usar outro arquivo do Compose para executar testes na imagem de destino. Ao utilizar outro arquivo do Compose para testes de integração que inclui microsserviços e bancos de dados em contêineres, você garante que dados relacionados sempre sejam redefinidos para seu estado original antes de executar os testes.
 
-Depois que o aplicativo de redação está em execução, você pode tirar proveito de pontos de interrupção e exceções se você estiver executando o Visual Studio. Ou você pode executar os testes de integração automaticamente em seu pipeline de CI no Visual Studio Team Services ou qualquer outro sistema de CI/CD que dá suporte a contêineres do Docker.
+Se o Visual Studio estiver em execução, será possível aproveitar pontos de interrupção e exceções após o aplicativo do Compose entrar em funcionamento. Outra opção é executar os testes de integração automaticamente no pipeline de CI no Visual Studio Team Services ou em qualquer outro sistema CI/CD compatível com contêineres do Docker.
 
 >[!div class="step-by-step"]
-[Anterior] (assinar-events.md) [Avançar] (... /microservice-DDD-CQRS-Patterns/index.MD)
+[Anterior] (subscribe-events.md) [Próximo] (../microservice-ddd-cqrs-patterns/index.md)

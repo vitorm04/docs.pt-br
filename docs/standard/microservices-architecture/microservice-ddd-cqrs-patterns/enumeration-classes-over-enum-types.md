@@ -1,28 +1,33 @@
 ---
-title: "Usando classes de enumeração em vez de tipos de enumeração"
-description: "Arquitetura de Microservices .NET para aplicativos .NET em contêineres | Usando classes de enumeração em vez de tipos de enumeração"
+title: Usando classes Enumeration em vez de tipos enum
+description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Usando classes Enumeration em vez de tipos enum"
 keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 1745198720fd12a9d26aab2d2afb2c5dd6b6b49d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4b190ee9dde5628bf16fe9c483d3636539c29361
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="using-enumeration-classes-instead-of-enum-types"></a>Usando classes de enumeração em vez de tipos de enumeração
+# <a name="using-enumeration-classes-instead-of-enum-types"></a>Usando classes Enumeration em vez de tipos enum
 
-[Enumerações](https://msdn.microsoft.com/en-us/library/sbbt4032.aspx) (*enums* abreviada) são um wrapper de idioma fino em torno de um tipo integral. Você talvez queira limitar seu uso para quando você estiver armazenando um valor de um conjunto fechado de valores. Classificação com base em gênero (por exemplo, masculino, feminino, desconhecido) ou tamanhos (S, M, L, XL) são bons exemplos. Usar enums de fluxo de controle ou abstrações mais robustas pode ser um [código cheiro](http://deviq.com/code-smells/). Esse tipo de uso levará ao código frágil com muitas instruções de fluxo de controle verificar valores de enum.
+[Enumerations](../../../../docs/csharp/language-reference/keywords/enum.md) (ou *tipos enum*) são um wrapper de idioma fino em torno de um tipo integral. Talvez convenha limitar seu uso para quando você estiver armazenando um valor de um conjunto fechado de valores. Classificação baseada em gênero (por exemplo, masculino, feminino, desconhecido) ou tamanhos (pequeno, médio, grande) são bons exemplos. Usar enumerações para fluxo de controle ou abstrações mais robustas pode ser um [code smell](http://deviq.com/code-smells/). Esse tipo de uso leva a um código frágil com muitas instruções de fluxo de controle que verificam os valores da enumeração.
 
-Em vez disso, você pode criar classes de enumeração que permitem que todos os recursos avançados de uma linguagem orientada a objeto. No entanto, isso não é um problema crítico e, em muitos casos, para simplificar, você ainda pode usar enums normal se você preferir.
+Em vez disso, é possível criar classes Enumeration que habilitam todos os recursos avançados de uma linguagem orientada a objeto.
 
-## <a name="implementing-enumeration-classes"></a>Implementando classes de enumeração
+No entanto, isso não é um tópico crítico e, em muitos casos, para simplificar, ainda será possível usar [tipos enum](../../../../docs/csharp/language-reference/keywords/enum.md) regulares se você preferir.
 
-O ordenação microsserviço em eShopOnContainers fornece uma implementação de classe base de enumeração de exemplo, conforme mostrado no exemplo a seguir:
+## <a name="implementing-an-enumeration-base-class"></a>Implementando uma classe base Enumeration
+
+O microsserviço de ordenação em eShopOnContainers fornece uma implementação de exemplo de classe base Enumeration, conforme mostrado no exemplo a seguir:
 
 ```csharp
 public abstract class Enumeration : IComparable
@@ -83,7 +88,7 @@ public abstract class Enumeration : IComparable
 }
 ```
 
-Você pode usar essa classe como um tipo em qualquer objeto de entidade ou um valor para a seguinte classe de enumeração CardType.
+É possível usar essa classe como um tipo em qualquer entidade ou objeto de valor, como para a seguinte classe Enumeration CardType:
 
 ```csharp
 public class CardType : Enumeration
@@ -99,7 +104,6 @@ public class CardType : Enumeration
     {
     }
 
-
     public static IEnumerable<CardType> List()
     {
         return new[] { Amex, Visa, MasterCard };
@@ -110,23 +114,23 @@ public class CardType : Enumeration
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
--   **Enum é nocivo — atualizar**
+-   **Enumerações são nocivas —atualização**
     [*http://www.planetgeek.ch/2009/07/01/enums-are-evil/*](http://www.planetgeek.ch/2009/07/01/enums-are-evil/)
 
--   **Daniel Hardman. Como os Enums se espalham doença — E a cura-**
+-   **Daniel Hardman. How Enums Spread Disease – And How To Cure It (Como as enumerações disseminam doenças – e como curá-la)**
     [*https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/*](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)
 
--   **Jimmy Bogard. Classes de enumeração**
+-   **Jimmy Bogard. Classes Enumeration**
     [*https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/*](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)
 
--   **Steve Smith. Alternativas de enum no c#**
+-   **Steve Smith. Alternativas de enumeração em C#**
     [*http://ardalis.com/enum-alternatives-in-c*](http://ardalis.com/enum-alternatives-in-c)
 
--   **Enumeration.cs.** Classe de enumeração em eShopOnContainers base [ *https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)
+-   **Enumeration.cs.** Classe base Enumeration em eShopOnContainers [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)
 
 -   **CardType.cs**. Exemplo de classe de enumeração em eShopOnContainers.
-    [*https://GitHub.com/dotnet/eShopOnContainers/blob/Master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)
+    [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)
 
 
 >[!div class="step-by-step"]
-[Anterior] (implementar-valor-objects.md) [Avançar] (domínio-modelo-camada-validations.md)
+[Anterior] (implement-value-objects.md) [Próximo] (domain-model-layer-validations.md)

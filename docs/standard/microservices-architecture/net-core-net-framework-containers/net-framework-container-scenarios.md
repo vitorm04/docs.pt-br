@@ -1,6 +1,6 @@
 ---
-title: "Quando escolher o .NET Framework para contêineres do Docker"
-description: "Arquitetura de Microservices .NET para aplicativos .NET em contêineres | Quando escolher o .NET Framework para contêineres do Docker"
+title: "Quando escolher o .NET Framework para os contêineres do Docker"
+description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Quando escolher o .NET Framework para os contêineres do Docker"
 keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,57 +8,60 @@ ms.date: 10/18/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 1bf1f055f040e7f3dc575b7a04140ebf0c599f98
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fcfb78bf521107b14d7796235f52c836f48f41fe
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="when-to-choose-net-framework-for-docker-containers"></a>Quando escolher o .NET Framework para contêineres do Docker
+# <a name="when-to-choose-net-framework-for-docker-containers"></a>Quando escolher o .NET Framework para os contêineres do Docker
 
-Enquanto o .NET Core oferece benefícios significativos para novos aplicativos e padrões de aplicativo, do .NET Framework continuará a ser uma boa opção para muitos cenários existentes.
+Embora o .NET Core ofereça benefícios significativos para novos aplicativos e padrões de aplicativo, o .NET Framework continuará sendo uma boa escolha para muitos cenários existentes.
 
-## <a name="migrating-existing-applications-directly-to-a-windows-server-container"></a>Migrar aplicativos existentes diretamente para um contêiner do Windows Server
+## <a name="migrating-existing-applications-directly-to-a-windows-server-container"></a>Migrando aplicativos existentes diretamente para um contêiner do Windows Server
 
-Você talvez queira usar contêineres do Docker apenas para simplificar a implantação, mesmo se você não estiver criando microservices. Por exemplo, talvez você queira aumentar seu fluxo de trabalho de DevOps com o Docker, contêineres pode fornecer melhor teste isolada ambientes e também pode eliminar problemas de implantação causados por dependências ausentes, quando você move para um ambiente de produção. Em casos assim, mesmo se você estiver implantando um aplicativo monolítico, faz sentido usar Docker e contêineres do Windows para seus aplicativos do .NET Framework atuais.
+Talvez convenha usar contêineres do Docker apenas para simplificar a implantação, mesmo se você não estiver criando microsserviços. Por exemplo, talvez convenha aprimorar seu fluxo de trabalho DevOps com o Docker — os contêineres podem oferecer ambientes de teste mais bem isolados e também podem eliminar problemas de implantação causados por dependências ausentes quando você muda para um ambiente de produção. Em casos assim, mesmo se você estiver implantando um aplicativo monolítico, faz sentido usar os contêineres do Docker e do Windows para seus aplicativos .NET Framework atuais.
 
-Na maioria dos casos para esse cenário, você não precisará migrar seus aplicativos existentes para o núcleo do .NET; Você pode usar contêineres do Docker que incluem o tradicional do .NET Framework. No entanto, uma abordagem recomendada é usar o .NET Core como estender um aplicativo existente, como gravar um novo serviço no núcleo do ASP.NET.
+Na maioria dos casos desse cenário, não será necessário migrar seus aplicativos existentes para o .NET Core; é possível usar contêineres do Docker que incluem o .NET Framework tradicional. Contudo, uma abordagem recomendada é usar o .NET Core ao estender um aplicativo existente, por exemplo, para gravar um novo serviço no ASP.NET Core.
 
-## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>Usando bibliotecas .NET de terceiros ou pacotes do NuGet não está disponíveis para o .NET Core
+## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>Usando bibliotecas .NET de terceiros ou pacotes NuGet não disponíveis para o .NET Core
 
-Bibliotecas de terceiros estão adotando rapidamente o [.NET padrão](https://docs.microsoft.com/dotnet/standard/net-standard), que permite que o código de compartilhamento em todos os tipos do .NET, incluindo o .NET Core. Com o .NET padrão biblioteca 2.0 e além da superfície da API compatibilidade nas estruturas diferentes se tornou significativamente maior e no .NET Core 2.0 aplicativos podem também fazer referência direta bibliotecas existentes do .NET Framework (consulte [compatível shim](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work)).
+Bibliotecas de terceiros estão rapidamente adotando o [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard), que permite o compartilhamento de código em todas as versões do .NET, incluindo o .NET Core. Com a Biblioteca 2.0 e posterior do .NET Standard, a compatibilidade da superfície de API tornou-se significativamente maior e, nos .NET Core 2.0, os aplicativos também podem referenciar diretamente bibliotecas do .NET Framework existentes (consulte [compat shim](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work)).
 
-No entanto, mesmo com esse progressão excepcional desde padrão do .NET 2.0 e o núcleo do .NET 2.0, pode haver casos em que determinados pacotes do NuGet precisam a execução do Windows e podem não oferecer suporte a .NET Core. Se esses pacotes são essenciais para o seu aplicativo, você precisará usar o .NET Framework em contêineres do Windows.
+No entanto, mesmo com essa progressão excepcional desde o .NET Standard 2.0 e o .NET Core 2.0, pode haver casos em que determinados pacotes NuGet precisam do Windows para serem executados e não dão suporte ao .NET Core. Se esses pacotes forem críticos ao aplicativo, será necessário usar o .NET Framework em contêineres do Windows.
 
-## <a name="usingnet-technologies-not-available-for-net-core"></a>Tecnologias de Using.NET não está disponíveis para o .NET Core 
+## <a name="using-net-technologies-not-available-for-net-core"></a>Usando tecnologias do .NET não disponíveis para .NET Core 
 
-Algumas tecnologias do .NET Framework não estão disponíveis na versão atual do núcleo do .NET (versão 2.0 redação deste artigo). Algumas delas estarão disponíveis em versões posteriores do .NET Core (.NET Core 2. x), mas outras não se aplicam para o novo aplicativo padrões direcionados ao .NET Core e nunca podem estar disponíveis.
+Algumas tecnologias do .NET Framework não estão disponíveis na versão atual do .NET Core (versão 2.0 no momento da redação deste artigo). Algumas delas estarão disponíveis em versões posteriores do .NET Core (.NET Core 2.x), mas outras não se aplicam a novos padrões de aplicativos direcionados ao .NET Core e talvez nunca estejam disponíveis.
 
-A lista a seguir mostra a maioria das tecnologias que não estão disponíveis no núcleo do .NET 2.0:
+A lista a seguir mostra a maioria das tecnologias que não estão disponíveis no .NET Core 2.0:
 
--   Web Forms do ASP.NET. Essa tecnologia só está disponível no .NET Framework. Atualmente, não há planos para trazer os Web Forms do ASP.NET para o .NET Core.
+-   Web Forms do ASP.NET. Esta tecnologia só está disponível no .NET Framework. Atualmente, não há planos para trazer os Web Forms do ASP.NET para o .NET Core.
 
--   Serviços WCF. Mesmo quando um [biblioteca de cliente WCF](https://github.com/dotnet/wcf) está disponível para consumir os serviços WCF do .NET Core. Desde meados de 2017, a implementação do servidor WCF só está disponível no .NET Framework. Esse cenário pode ser considerado para futuras versões do .NET Core.
+-   Serviços WCF. Mesmo quando uma [Biblioteca de clientes WCF](https://github.com/dotnet/wcf) está disponível para consumir os serviços WCF do .NET Core. desde meados de 2017, a implementação do servidor WCF só está disponível no .NET Framework. Este cenário pode ser considerado para versões futuras do .NET Core.
 
--   Serviços relacionados ao fluxo de trabalho. (Anteriormente conhecido como ADO.NET Data Services) do WCF Data Services, serviços de fluxo de trabalho (WCF + WF em um único serviço) e Windows Workflow Foundation (WF) só estão disponíveis no .NET Framework. Atualmente, não há nenhum plano para colocá-los em .NET Core.
+-   Serviços relacionados a fluxo de trabalho. O Windows WF (Workflow Foundation), os Serviços de fluxo de trabalho (WCF + WF em um único serviço) e o WCF Data Services (anteriormente conhecido como Serviços de Dados ADO.NET) só estão disponíveis no .NET Framework. No momento, não há planos para colocá-los no .NET Core.
 
-Além das tecnologias listadas no oficial [roteiro .NET Core](https://github.com/aspnet/Home/wiki/Roadmap), outros recursos podem ser movidos para o .NET Core. Para obter uma lista completa, examine os itens marcados como [porta núcleo](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) no site do CoreFX GitHub. Observe que essa lista não representa um compromisso da Microsoft para trazer esses componentes para .NET Core — os itens simplesmente capturar solicitações da comunidade. Se você gosta qualquer um dos componentes listados acima, considere participar de discussões no GitHub para que sua voz pode ser ouvido. E se você achar que algo está faltando, [envie uma nova questão no repositório do CoreFX](https://github.com/dotnet/corefx/issues/new).
+Além das tecnologias listadas no [roteiro oficial do .NET Core](https://github.com/aspnet/Home/wiki/Roadmap), talvez outros recursos sejam movidos para o .NET Core. Para obter uma lista completa, examine os itens marcados como [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) no site do GitHub do CoreFX. Observe que esta lista não representa um compromisso da Microsoft de colocar esses componentes no .NET Core – os itens simplesmente capturam solicitações da comunidade. Se você se importar com qualquer um dos componentes listados acima, considere a possibilidade de participar de discussões no GitHub para que sua voz seja ouvida. E se você achar que algo está faltando, [envie uma nova questão no repositório do CoreFX](https://github.com/dotnet/corefx/issues/new).
 
-## <a name="using-a-platform-or-api-that-does-not-support-net-core"></a>Usando uma plataforma ou uma API que não oferece suporte a .NET Core
+## <a name="using-a-platform-or-api-that-does-not-support-net-core"></a>Usando uma plataforma ou uma API não compatível com o .NET Core
 
-Algumas plataformas de terceiros ou Microsoft não dão suporte a .NET Core. Por exemplo, alguns serviços do Azure fornecem um SDK que ainda não está disponível para consumo no .NET Core. Isso é temporário, porque todos os serviços do Azure ainda usará .NET Core. Por exemplo, o [SDK do DocumentDB do Azure para .NET Core](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core/1.2.1) foi lançado como uma visualização em 16 de novembro de 2016, mas agora está disponível (GA) como uma versão estável.
+Algumas plataformas de terceiros ou da Microsoft não são compatíveis com o .NET Core. Por exemplo, alguns serviços do Azure oferecem um SDK que ainda não está disponível para consumo no .NET Core. Isso é temporário, porque todos os serviços do Azure eventualmente usarão o .NET Core. Por exemplo, o [SDK do DocumentDB do Azure para .NET Core](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core/1.2.1) foi lançado como uma versão prévia em 16 de novembro de 2016, mas agora está GA (geralmente disponível) como uma versão estável.
 
-Enquanto isso, se qualquer plataforma ou o serviço no Azure ainda não dá suporte .NET Core com seu cliente de API, você pode usar a API REST equivalente do SDK de cliente ou o serviço do Azure no .NET Framework.
+Enquanto isso, se qualquer plataforma ou o serviço no Azure ainda não der suporte ao .NET Core com sua API do cliente, será possível usar a API REST equivalente do serviço do Azure ou o SDK do cliente no .NET Framework.
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
--   **Guia de núcleo do .NET**
+-   **Guia do .NET Core**
     [*https://docs.microsoft.com/dotnet/core/index*](https://docs.microsoft.com/dotnet/core/index)
 
--   **Movimentando do .NET Framework para .NET Core**
+-   **Passando do .NET Framework para o .NET Core**
     [*https://docs.microsoft.com/dotnet/core/porting/index*](https://docs.microsoft.com/dotnet/core/porting/index)
 
--   **.NET framework no guia de Docker**
+-   **Guia do .NET Framework no Docker**
     [*https://docs.microsoft.com/dotnet/framework/docker/*](https://docs.microsoft.com/dotnet/framework/docker/)
 
 -   **Visão geral dos componentes do .NET**
@@ -68,4 +71,4 @@ Enquanto isso, se qualquer plataforma ou o serviço no Azure ainda não dá supo
 
 
 >[!div class="step-by-step"]
-[Anterior] (net-core-contêiner-scenarios.md) [Avançar] (contêiner-estrutura-escolha-factors.md)
+[Anterior] (net-core-container-scenarios.md) [Próximo] (container-framework-choice-factors.md)

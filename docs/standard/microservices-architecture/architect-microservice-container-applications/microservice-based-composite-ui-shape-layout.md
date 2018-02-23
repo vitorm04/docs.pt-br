@@ -1,6 +1,6 @@
 ---
-title: "Criar interface de usuário composta com base em microservices, incluindo layout gerados por vários microservices e forma visual de interface do usuário"
-description: "Arquitetura de Microservices .NET para aplicativos .NET em contêineres | Criar interface de usuário composta com base em microservices, incluindo layout gerados por vários microservices e forma visual de interface do usuário"
+title: "Criando interface do usuário de composição baseada em microsserviços, incluindo forma e layout visuais da interface do usuário gerados por vários microsserviços"
+description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Criando interface do usuário de composição baseada em microsserviços, incluindo forma e layout visuais de interface do usuário gerados por vários microsserviços"
 keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,57 +8,60 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 4b32fed5eb0de02b01665efa4368eb83e3fda08d
-ms.sourcegitcommit: e99dfadbca1992c187179b6a3b42bef44534ebb6
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 12b170e9d4c46fbb697f988596af6566d33099a4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>Criar interface de usuário composta com base em microservices, incluindo layout gerados por vários microservices e forma visual de interface do usuário
+# <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>Criando interface do usuário de composição baseada em microsserviços, incluindo forma e layout visuais da interface do usuário gerados por vários microsserviços
 
-Arquitetura de Microservices geralmente começa com dados e lógica de tratamento de lado do servidor. No entanto, é uma abordagem mais avançada projetar seu aplicativo na que interface do usuário com base em microservices também. Isso significa que ter uma interface de usuário composto produzido por microservices, em vez de ter microservices no servidor e apenas um aplicativo cliente monolítico consumindo o microservices. Com essa abordagem, o microservices que você criar pode ser concluída com lógica e representação visual.
+A arquitetura de microsserviços geralmente começa com a manipulação de dados e de lógica do lado do servidor. No entanto, uma abordagem mais avançada é criar sua interface do usuário de aplicativo com base em microsserviços também. Isso significa ter uma interface do usuário de composição produzida pelos microsserviços, em vez de ter microsserviços no servidor e apenas um aplicativo cliente monolítico consumindo os microsserviços. Com essa abordagem, os microsserviços que você criar poderão estar completos com lógica e representação visual.
 
-Figura 4-20 mostra a abordagem mais simples de consumo apenas microservices de um aplicativo cliente monolítico. Obviamente, você pode ter um serviço ASP.NET MVC entre produzindo o HTML e JavaScript. A figura é uma simplificação que destaca a que você tenha um único cliente (monolítico) da interface do usuário consumindo microservices, que se concentrar apenas em lógica e os dados e não na forma de interface do usuário (HTML e JavaScript).
+A Figura 4-20 mostra a abordagem mais simples de apenas consumir microsserviços de um aplicativo cliente monolítico. Obviamente, é possível ter um serviço MVC ASP.NET no meio termo produzindo o HTML e o JavaScript. A figura é uma simplificação que destaca que você tem uma única interface do usuário do cliente (monolítica) consumindo microsserviços, que se concentram apenas em lógica e nos dados, e não na forma da interface do usuário (HTML e JavaScript).
 
 ![](./media/image20.png)
 
-**Figura 4-20**. Um aplicativo de interface do usuário monolítico consumindo microservices de back-end
+**Figura 4-20**. Um aplicativo de interface do usuário monolítico consumindo microsserviços de back-end
 
-Em contraste, uma interface do usuário composto com precisão é gerado e composto pelo microservices próprios. Alguns do microservices da unidade de forma visual de áreas específicas da interface do usuário. A principal diferença é que você tem componentes de interface do usuário do cliente (classes TS, por exemplo) com base em modelos, e vem de ViewModel UI modelagem de dados para os modelos de cada microsserviço.
+Em contraste, uma interface do usuário de composição é gerada precisamente e composta pelos próprios microsserviços. Alguns do microsserviços promovem a forma visual de áreas específicas da interface do usuário. A principal diferença é que você tem componentes de interface do usuário do cliente (classes TS, por exemplo) com base em modelos, e o ViewModel da interface do usuário de modelagem de dados para esses modelos vem de cada microsserviço.
 
-Em tempo de inicialização do aplicativo cliente, cada um dos componentes de interface do usuário do cliente (classes TypeScript, por exemplo) se registra com um microsserviço de infraestrutura capaz de fornecer ViewModels para um determinado cenário. Se o microsserviço altera a forma, a interface do usuário também será alterada.
+Em tempo de inicialização do aplicativo cliente, cada um dos componentes de interface do usuário do cliente (classes TypeScript, por exemplo) se registra com um microsserviço de infraestrutura capaz de fornecer ViewModels para um determinado cenário. Se o microsserviço alterar a forma, a interface do usuário também será alterada.
 
-Figura 4-21 mostra uma versão dessa abordagem composto de interface do usuário. Isso é simplificado, porque você pode ter outros microservices que são partes granulares com base em diferentes técnicas de agregação — depende se você estiver criando uma abordagem tradicional da web (ASP.NET MVC) ou um SPA (aplicativo de página única).
+A Figura 4-21 mostra uma versão dessa abordagem de interface do usuário de composição. Isso é simplificado, porque você pode ter outros microsserviços que estão agregando partes granulares com base em diferentes técnicas — depende se você está criando uma abordagem da Web tradicional (MVC ASP.NET) ou um SPA (aplicativo de página única).
 
 ![](./media/image21.png)
 
-**Figura 4-21**. Exemplo de um aplicativo de interface do usuário composto formatado por microservices de back-end
+**Figura 4-21**. Exemplo de um aplicativo de interface do usuário de composição formatado por microsserviços de back-end
 
-Cada um desses microservices de composição de interface do usuário seria semelhante a um Gateway de API pequeno. Mas, nesse caso, cada um é responsável por uma pequena área de interface do usuário.
+Cada um desses microsserviços de composição de interface do usuário seria semelhante a um Gateway de API pequeno. Mas, nesse caso, cada um é responsável por uma pequena área da interface do usuário.
 
-Uma abordagem de interface do usuário composta que é controlada pelo microservices pode ser mais difícil ou menos assim, dependendo de quais tecnologias de interface do usuário você está usando. Por exemplo, você não usará as mesmas técnicas para criar um aplicativo da web tradicional que você usa para criar um SPA ou para o aplicativo móvel nativo (como acontece durante o desenvolvimento de aplicativos Xamarin, que podem ser mais difícil para essa abordagem).
+Uma abordagem de interface do usuário de composição controlada por microsserviços pode ser mais desafiadora ou menos, dependendo de quais tecnologias de interface do usuário você está usando. Por exemplo, você não usará as mesmas técnicas para criar um aplicativo Web tradicional que você usa para criar um SPA ou para o aplicativo móvel nativo (como acontece durante o desenvolvimento de aplicativos Xamarin, que podem ser mais desafiadores para essa abordagem).
 
-O [eShopOnContainers](http://aka.ms/MicroservicesArchitecture) aplicativo de exemplo usa o método de interface do usuário monolítico por vários motivos. Primeiro, é uma introdução ao microservices e contêineres. Uma interface do usuário composto é mais avançado, mas também requer mais complexidade ao projetar e desenvolver a interface do usuário. Em segundo lugar, eShopOnContainers também fornece um aplicativo móvel nativo com base em Xamarin, o que seria tornar mais complexo no cliente C\# lado.
+O aplicativo de exemplo [eShopOnContainers](http://aka.ms/MicroservicesArchitecture) usa a abordagem de interface do usuário monolítica por vários motivos. Primeiro, é uma introdução a microsserviços e contêineres. Uma interface do usuário de composição é mais avançada, mas também requer mais complexidade ao criar e desenvolver a interface do usuário. Em segundo lugar, o eShopOnContainers também oferece um aplicativo móvel nativo baseado no Xamarin, que tornaria isso mais complexo no lado C\# do cliente.
 
-No entanto, recomendamos que você use as seguintes referências para saber mais sobre a composição da que interface do usuário com base em microservices.
+No entanto, recomendamos que você use as seguintes referências para saber mais sobre a interface do usuário de composição com base em microsserviços.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
--   **Interface de usuário composta usando o ASP.NET (do específico Workshop)**
+-   **Interface do usuário de composição usando ASP.NET (workshop específico)**
     [*http://go.particular.net/workshop-composite-ui-demo*](http://go.particular.net/workshop-composite-ui-demo)
 
--   **Ruben Oostinga. O front-end monolítico na arquitetura do Microservices**
+-   **Ruben Oostinga. O front-end monolítico na arquitetura de microsserviços**
     [*http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/*](http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/)
 
--   **Mauro Servienti. O segredo de composição de interface de usuário melhor**
+-   **Mauro Servienti. O segredo da melhor composição de interface do usuário**
     [*https://particular.net/blog/secret-of-better-ui-composition*](https://particular.net/blog/secret-of-better-ui-composition)
 
--   **Viktor Farcic. Incluir componentes da Web de front-end em Microservices**
+-   **Viktor Farcic. Incluindo componentes da Web de front-end em microsserviços**
     [*https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/*](https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/)
 
--   **Gerenciando o front-end na arquitetura de Microservices**\
-    [*http://Allegro.Tech/2016/03/Managing-frontend-in-the-microservices-Architecture.HTML*](http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
+-   **Gerenciando o front-end na arquitetura de microsserviços**\
+    [*http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html*](http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
 
 
 >[!div class="step-by-step"]
-[Anterior] (microservices-Endereçabilidade-serviço-registry.md) [Avançar] (resiliente-alta-disponibilidade-microservices.md)
+[Anterior] (microservices-addressability-service-registry.md) [Próximo] (resilient-high-availability-microservices.md)

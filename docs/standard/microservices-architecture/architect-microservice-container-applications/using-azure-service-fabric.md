@@ -1,6 +1,6 @@
 ---
 title: Usando o Azure Service Fabric
-description: "Arquitetura de Microservices .NET para aplicativos .NET em contêineres | Usando o Azure Service Fabric"
+description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Usando o Azure Service Fabric"
 keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,88 +8,91 @@ ms.date: 10/18/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: aa15f9cf9bc60e9e70607da921f2ce2c75e39ec2
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9480a3f67e9d0a61d0669bf34be4b66208f5e9ce
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-azure-service-fabric"></a>Usando o Azure Service Fabric
 
-Azure Service Fabric surgiu de transição da Microsoft do fornecimento de produtos de caixa, que foram normalmente monolíticos em estilo, para o fornecimento de serviços. A experiência de criar e operar a grandes serviços em grande escala, como banco de dados do SQL Azure, o banco de dados do Azure Cosmos, barramento de serviço do Azure ou back-end do Cortana, em forma de malha do serviço. A plataforma desenvolvidos ao longo do tempo conforme mais e mais serviços adotaram. É importante, Service Fabric precisava executar não apenas no Azure, mas também em implantações do Windows Server autônomo.
+O Azure Service Fabric surgiu da transição realizada pela Microsoft do fornecimento de produtos de caixa, que normalmente eram monolíticos em estilo, para o fornecimento de serviços. A experiência de criar e operar grandes serviços em grande escala, como o Banco de Dados SQL do Azure, Azure Cosmos DB, Barramento de Serviço do Microsoft Azure ou o Back-end do Cortana, modelou o Service Fabric. A plataforma evoluiu ao longo do tempo conforme mais serviços a adotaram. Mais importante, o Service Fabric precisava ser executado não apenas no Azure, mas também em implantações autônomas do Windows Server.
 
-É o objetivo de serviço de malha resolver os problemas de disco rígidos de criação e execução de um serviço e utilizando os recursos de infraestrutura com eficiência, para que as equipes podem resolver problemas de negócios usando uma abordagem de microservices.
+O objetivo do Service Fabric é resolver os difíceis problemas de criação e execução de um serviço e de utilização de recursos de infraestrutura com eficiência para que as equipes possam resolver problemas de negócios usando uma abordagem de microsserviços.
 
-Serviço de malha fornece duas áreas amplas para ajudá-lo a criar aplicativos que usam uma abordagem microservices:
+O Service Fabric fornece duas amplas áreas para ajudá-lo a criar aplicativos que usam uma abordagem de microsserviços:
 
--   Uma plataforma que fornece serviços para implantar, dimensionar, atualizar, detectar, reinicie os serviços com falha, descobrir o local do serviço, gerenciar o estado e monitorar a integridade do sistema. Esses serviços de sistema em vigor permitem que muitas das características de microservices descrito anteriormente.
+-   Uma plataforma que fornece serviços de sistema para implantar, dimensionar, atualizar, detectar, reiniciar serviços com falha, descobrir o local do serviço, gerenciar o estado e monitorar a integridade. Esses serviços de sistema em vigor habilitam muitas características de microsserviços descritas anteriormente.
 
--   APIs de programação ou estruturas, para ajudá-lo a criar aplicativos como microservices: [serviços confiáveis e atores confiáveis](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework). Obviamente, você pode escolher qualquer código para criar seu microsserviço, mas essas APIs que o trabalho mais simples e integram-se com a plataforma em um nível mais profundo. Dessa forma, você pode obter a integridade e informações de diagnóstico ou você pode tirar proveito do gerenciamento de estado confiável.
+-   APIs de programação, ou estruturas, para ajudá-lo a criar aplicativos como microsserviços: [Reliable Actors e Reliable Services](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework). Claro, é possível escolher qualquer código para criar seu microsserviço, mas essas APIs simplificam o trabalho e integram-se à plataforma em um nível mais profundo. Dessa forma, é possível obter informações de integridade e de diagnóstico ou aproveitar o gerenciamento de estado confiável.
 
-Service Fabric é agnóstico em relação a como você pode criar seu serviço, e você pode usar qualquer tecnologia. No entanto, ele fornece APIs de programação internos que facilitam a compilação microservices.
+O Service Fabric é independente em relação à maneira como você cria seu serviço, e é possível usar qualquer tecnologia. No entanto, ele fornece APIs de programação internas que facilitam a criação de microsserviços.
 
-Conforme mostrado na Figura 4-26, você pode criar e executar microservices na malha do serviço como processos simples ou como contêineres do Docker. Também é possível misturar com base em contêiner microservices com microservices em processo dentro do mesmo cluster do Service Fabric.
+Conforme mostrado na Figura 4-26, é possível criar e executar microsserviços no Service Fabric como processos simples ou como contêineres do Docker. Também é possível combinar microsserviços baseados em contêineres com microsserviços baseados em processos dentro do mesmo cluster do Service Fabric.
 
 ![](./media/image30.png)
 
-**Figura 4-26**. Implantando microservices como processos ou contêineres no Azure Service Fabric
+**Figura 4-26**. Implantando microsserviços como processos ou como contêineres no Azure Service Fabric
 
-Clusters de malha do serviço com base em hosts Linux e Windows podem executar contêineres do Docker Linux e Windows, respectivamente.
+Os clusters do Service Fabric baseados em hosts Linux e do Windows podem executar contêineres Linux do Docker e contêineres do Windows, respectivamente.
 
-Para obter informações atualizadas sobre o suporte de contêineres no Azure Service Fabric, consulte [Service Fabric e contêineres](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview).
+Para obter informações atualizadas sobre o suporte a contêineres no Azure Service Fabric, consulte [Service Fabric e contêineres](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview).
 
-O Service Fabric é um bom exemplo de uma plataforma em que você pode definir uma arquitetura lógica diferente (microservices de negócios ou contextos limitada) que a implementação física que foram introduzidos no [arquitetura lógica e física arquitetura](#logical-architecture-versus-physical-architecture) seção. Por exemplo, se você implementar [serviços confiáveis com monitoração de estado](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) na [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview), que é introduzido na seção [sem monitoração de estado versus microservices com monitoração de estado](#stateless-versus-stateful-microservices) posteriormente, você pode ter um conceito de microsserviço de negócios com vários serviços físicos.
+O Service Fabric é um bom exemplo de uma plataforma em que é possível definir uma arquitetura lógica diferente (microsserviços de negócios ou Contextos limitados) à da implementação física que foram introduzidos na seção [Arquitetura lógica versus arquitetura física](#logical-architecture-versus-physical-architecture). Por exemplo, se você implementar [Reliable Services com estado](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) no [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview), que serão introduzidos na seção [Microsserviços sem estado versus com estado](#stateless-versus-stateful-microservices) posteriormente, será possível ter um conceito de microsserviço de negócios com vários serviços físicos.
 
-Conforme mostrado na Figura 4-27 e pensar em uma perspectiva de microsserviço de lógica de negócios, ao implementar um serviço confiável do serviço de malha com monitoração de estado, você geralmente precisará implementar duas camadas de serviços. A primeira é o serviço back-end com monitoração de estado confiável, que trata de várias partições (cada partição é um serviço com monitoração de estado). O segundo é o serviço front-end ou o serviço de Gateway, responsável por agregação de roteamento e os dados em várias partições ou instâncias de serviço com monitoração de estado. Esse serviço de Gateway também gerencia a comunicação de cliente com loops de repetição acessando o serviço de back-end.
-Ele é chamado de serviço de Gateway se você implementar seu serviço personalizado ou alternatevely, você também pode usar a malha de serviço fora da caixa [o serviço de Proxy Inverter](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy).
+Conforme mostrado na Figura 4-27, e com base em uma perspectiva de microsserviço lógico/de negócios, ao implementar um serviço confiável com estado do Service Fabric, geralmente será necessário implementar dois níveis de serviços. O primeiro é o serviço confiável com estado de back-end, que manipula várias partições (cada partição é um serviço com estado). O segundo é o serviço de front-end, ou serviço de Gateway, responsável pelo roteamento e agregação de dados entre várias partições ou instâncias de serviço com estado. Esse serviço de Gateway também manipula a comunicação do cliente com loops de repetição que acessam o serviço de back-end.
+Ele será denominado serviço de Gateway se você implementar seu serviço personalizado ou, de maneira alternativa, também é possível usar o [serviço de Proxy reverso](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) do Service Fabric pronto para uso.
 
 ![](./media/image31.png)
 
-**Figura 4-27**. Microsserviço de negócios com várias instâncias de serviço com monitoração de estado e um gateway personalizado front-end
+**Figura 4-27**. Microsserviço de negócios com várias instâncias de serviço com estado e um front-end de gateway personalizado
 
-Em qualquer caso, quando você usa serviços confiáveis do serviço de malha com monitoração de estado, você também tem um lógico ou de negócio microsserviço (contexto limitado) que normalmente é composto de vários serviços físicos. Cada-los, o serviço de Gateway e serviço de partição pode ser implementada como serviços de API da Web ASP.NET, conforme mostrado na Figura 4-26.
+Em qualquer caso, quando você usa os Reliable Services com estado do Service Fabric, você também tem um microsserviço lógico ou de negócios (Contexto limitado) geralmente composto por vários serviços físicos. Cada um deles, o serviço de Gateway e o serviço de Partição, pode ser implementado como serviços da API Web ASP.NET, conforme mostrado na Figura 4-26.
 
-Na malha do serviço, você pode agrupar e implantar grupos de serviços como um [aplicativo do Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-application-model), que é a unidade de empacotamento e implantação do orchestrator ou cluster. Portanto, o aplicativo de malha do serviço pôde ser mapeado para esse empresariais e limites de microsserviço lógico ou contexto limitado, assim, para que você pode implantar esses serviços de forma autônoma.
+No Service Fabric, é possível agrupar e implantar grupos de serviços como um [Aplicativo do Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-application-model), que é a unidade de empacotamento e implantação do orquestrador ou do cluster. Portanto, o aplicativo do Service Fabric poderia ser mapeado para esse limite autônomo de microsserviço lógico e de negócios ou Contexto limitado também para você poder implantar esses serviços de maneira autônoma.
 
-## <a name="service-fabric-and-containers"></a>Serviço de malha e contêineres
+## <a name="service-fabric-and-containers"></a>Service Fabric e contêineres
 
-Em relação a contêineres na malha do serviço, você também pode implantar os serviços em imagens de contêiner em um cluster do Service Fabric. Como mostra a Figura 4-28, na maioria das vezes haverá apenas um contêiner por serviço.
+Com relação a contêineres no Service Fabric, também é possível implantar serviços em imagens de contêiner dentro de um cluster do Service Fabric. Como mostra a Figura 4-28, na maioria das vezes, haverá apenas um contêiner por serviço.
 
 ![](./media/image32.png)
 
 **Figura 4-28**. Microsserviço de negócios com vários serviços (contêineres) no Service Fabric
 
-No entanto, os contêineres chamados "secundário" (dois contêineres que devem ser implantados juntos como parte de um serviço lógico) também são possíveis na malha do serviço. O mais importante é que um microsserviço de negócios é o limite lógico em torno de vários elementos coesos. Em muitos casos, pode ser um único serviço com um único modelo de dados, mas em alguns outros casos, talvez seja necessário físicos vários serviços também.
+No entanto, os contêineres chamados "sidecar" (dois contêineres que devem ser implantados juntos como parte de um serviço lógico) também são possíveis no Service Fabric. O mais importante é que um microsserviço de negócios é o limite lógico em torno de vários elementos coesos. Em muitos casos, pode ser um único serviço com um único modelo de dados, mas, em alguns outros casos, talvez seja necessário ter vários serviços físicos também.
 
-Desde meados de 2017, na malha do serviço não é possível implantar serviços de monitoração de estado confiável SF em contêineres — você pode implantar somente serviços sem monitoração de estado e serviços de ator em contêineres. Mas observe que você pode combinar serviços em processos e serviços em contêineres no mesmo aplicativo de malha do serviço, conforme mostrado na Figura 4-29.
+Desde meados de 2017, no Service Fabric, não é possível implantar Serviços confiáveis com estado do SF em contêineres — é possível apenas implantar serviços sem estado e serviços de ator em contêineres. Mas observe que é possível combinar serviços em processos e serviços em contêineres no mesmo aplicativo do Service Fabric, conforme mostrado na Figura 4-29.
 
 ![](./media/image33.png)
 
-**Figura 4-29**. Mapeado para um aplicativo de malha do serviço com contêineres e serviços com monitoração de estado de microsserviço de negócios
+**Figura 4-29**. Microsserviço de negócios mapeado para um aplicativo do Service Fabric com contêineres e serviços com estado
 
-Para obter mais informações sobre o suporte de contêiner no Azure Service Fabric, consulte [Service Fabric e contêineres](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview).
+Para obter informações sobre o suporte a contêineres no Azure Service Fabric, consulte [Service Fabric e contêineres](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview).
 
-## <a name="stateless-versus-stateful-microservices"></a>Sem monitoração de estado versus microservices com monitoração de estado
+## <a name="stateless-versus-stateful-microservices"></a>Microsserviços com estado versus sem estado
 
-Como mencionado anteriormente, cada microsserviço (contexto lógico limitada) deve ter seu modelo de domínio (dados e lógica). No caso de microservices sem monitoração de estado, os bancos de dados será externos, empregando relacionais opções como o SQL Server ou NoSQL opções como MongoDB ou banco de dados do Azure Cosmos.
+Conforme mencionado anteriormente, cada microsserviço (Contexto limitado lógico) deve ter seu próprio modelo de domínio (dados e lógica). No caso de microsserviços sem estado, os bancos de dados serão externos, empregando opções relacionais, como SQL Server, ou opções NoSQL, como o MongoDB ou o Azure Cosmos DB.
 
-Mas os próprios serviços também podem ser com monitoração de estado na malha do serviço, o que significa que os dados que residem dentro de microsserviço. Esses dados podem existir não apenas no mesmo servidor, mas dentro do processo de microsserviço, na memória e mantidos em discos rígidos e replicadas para outros nós. Figura 4-30 mostra as abordagens diferentes.
+Mas os próprios serviços também podem ter estado no Service Fabric, o que significa que os dados residem dentro do microsserviço. Esses dados podem existir não só no mesmo servidor, como dentro do processo de microsserviço, na memória e persistentes em discos rígidos e replicados em outros nós. A Figura 4-30 mostra as diferentes abordagens.
 
 ![](./media/image34.png)
 
-**Figura 4-30**. Sem monitoração de estado versus microservices com monitoração de estado
+**Figura 4-30**. Microsserviços com estado versus sem estado
 
-Uma abordagem sem monitoração de estado é perfeitamente válida e é mais fácil de implementar do que microservices com monitoração de estado, pois a abordagem é semelhante aos padrões tradicionais e bem conhecidos. Mas sem monitoração de estado microservices impor a latência entre as processo e fontes de dados. Eles também envolvem mais movendo partes quando você está tentando melhorar o desempenho com filas e cache adicional. O resultado é que você pode acabar com arquiteturas complexas que têm muitos níveis.
+Uma abordagem sem estado é perfeitamente válida e mais fácil de ser implementada do que microsserviços com estado, uma vez que ela é semelhante a padrões tradicionais e já conhecidos. Mas microsserviços sem estado impõem latência entre o processo e as fontes de dados. Eles também envolvem mais movimentação de partes quando você está tentando aprimorar o desempenho com cache e filas adicionais. O resultado é que você pode acabar com arquiteturas complexas que têm muitas camadas.
 
-Por outro lado, [microservices com monitoração de estado](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) o excel em cenários avançados, porque não há nenhuma latência entre a lógica do domínio e os dados. Processamento de dados pesado, jogos volta termina, bancos de dados como um serviço, e todos os outros cenários de baixa latência beneficiam services com monitoração de estado, que permitem que o estado local para acesso mais rápido.
+Por outro lado, [microsserviços com estado](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) podem se destacar em cenários avançados, pois não há latência entre a lógica e os dados de domínio. O processamento de dados pesado, os back-ends de jogos, os bancos de dados como serviço e outros cenários de baixa latência se beneficiam de serviços com estado, que usam o estado local para obter um acesso mais rápido.
 
-Serviços com e sem monitoração de estado são complementares. Por exemplo, você pode ver na Figura 4-30, no diagrama à direita, que um serviço com monitoração de estado pode ser dividido em várias partições. Para acessar essas partições, talvez seja necessário um serviço sem monitoração de estado atuando como um serviço de gateway que sabe como tratar cada partição com base nas chaves de partição.
+Serviços sem estado e com estado são complementares. Por exemplo, é possível ver na Figura 4-30, no diagrama à direita, que um serviço com estado pode ser dividido em várias partições. Para acessar essas partições, talvez seja necessário um serviço sem estado que funcione como um serviço de gateway que saiba como tratar cada partição com base nas chaves de partição.
 
-Serviços com monitoração de estado tem desvantagens. Elas impõem um nível de complexidade que permite a expansão. A funcionalidade que normalmente poderia ser implementada por sistemas de banco de dados externo deve ser abordada para tarefas como a replicação de dados em microservices com monitoração de estado e particionamento de dados. No entanto, essa é uma das áreas onde um orquestrador que [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-platform-architecture) com seus [serviços confiáveis com monitoração de estado](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) pode ajudar a maior parte —, simplificando o desenvolvimento e o ciclo de vida de monitoração de estado microservices usando o [API de serviços confiável](https://docs.microsoft.com/azure/service-fabric/service-fabric-work-with-reliable-collections) e [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
+Os serviços com estado têm desvantagens. Elas impõem um nível de complexidade que permite a expansão. A funcionalidade que normalmente seria implementada por sistemas de banco de dados externos deve ser orientada para tarefas como replicação de dados entre microsserviços com estado e particionamento de dados. No entanto, essa é uma das áreas em que um orquestrador como o [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-platform-architecture) com seus [Reliable Services com estado](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) pode ser de maior utilidade – simplificando o desenvolvimento e o ciclo de vida de microsserviços com estado que usam a [API de Reliable Services](https://docs.microsoft.com/azure/service-fabric/service-fabric-work-with-reliable-collections) e [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
 
-Outras estruturas de microsserviço que permitem que os serviços com monitoração de estado, que oferece suporte a padrões de ator e que melhoram a tolerância a falhas e a latência entre a lógica de negócios e os dados são Microsoft [Orleans](https://github.com/dotnet/orleans), da Microsoft Research e [ Akka.NET](http://getakka.net/). Ambas as estruturas atualmente estão aumentando o suporte para Docker.
+Outras estruturas de microsserviço que permitem serviços com estado, que dão suporte a padrão de ator e que melhoram a tolerância a falhas e a latência entre os dados e a lógica de negócios são Microsoft [Orleans](https://github.com/dotnet/orleans), da Microsoft Research e [Akka.NET](http://getakka.net/). No momento, ambas as estruturas estão melhorando o suporte para Docker.
 
-Observe que contêineres do Docker são sem monitoração de estado. Se você quiser implementar um serviço com monitoração de estado, você precisa de um das estruturas de nível mais alto e prescritivas adicionais observadas anteriormente. 
+Observe que os contêineres do Docker são sem estado. Se você desejar implementar um serviço com estado, será necessária uma das estruturas adicionais prescritivas e de nível mais alto descritas anteriormente. 
 
 >[!div class="step-by-step"]
-[Anterior] (scalable-available-multi-container-microservice-applications.md) [Avançar] (... /docker-Application-Development-Process/index.MD)
+[Anterior] (scalable-available-multi-container-microservice-applications.md) [Próximo] (../docker-application-development-process/index.md)

@@ -1,6 +1,6 @@
 ---
-title: "Criando, desenvolvendo e controle de versão de microsserviço APIs e contratos"
-description: "Arquitetura de Microservices .NET para aplicativos .NET em contêineres | Criando, desenvolvendo e controle de versão de microsserviço APIs e contratos"
+title: "Criando, evoluindo e fazendo o controle de versão de APIs e de contratos de microsserviços"
+description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Criando, evoluindo e fazendo o controle de versão de APIs e de contratos de microsserviços"
 keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,37 +8,40 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 433711c3479eafd52bf9f5d53faf8e5707c6c624
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3aaa7eaa8bc535874369cf08414f2211cae1bed9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Criando, desenvolvendo e controle de versão de microsserviço APIs e contratos
+# <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Criando, evoluindo e fazendo o controle de versão de APIs e de contratos de microsserviços
 
-Um API de microsserviço é um contrato entre o serviço e seus clientes. Você poderá desenvolver um microsserviço independentemente somente se você não interromper seu contrato de API, o motivo pelo qual o contrato é tão importante. Se você alterar o contrato, isso afetará os aplicativos cliente ou seu Gateway de API.
+Uma API de microsserviço é um contrato entre o serviço e seus clientes. Você poderá evoluir um microsserviço de forma independente apenas se você não precisar interromper seu contrato de API, que é o motivo pelo qual o contrato é tão importante. Se você alterar o contrato, isso afetará seus aplicativos cliente ou seu Gateway de API.
 
-A natureza da definição de API depende no protocolo que você está usando. Por exemplo, se você estiver usando o sistema de mensagens (como [AMQP](https://www.amqp.org/)), a API consiste em tipos de mensagem. Se você estiver usando HTTP e os serviços RESTful, a API consiste as URLs e os formatos de solicitação e resposta JSON.
+A natureza da definição de API depende do protocolo que você está usando. Por exemplo, se você estiver usando mensagens (como [AMQP](https://www.amqp.org/)), a API consistirá nos tipos de mensagem. Se você estiver usando serviços HTTP e RESTful, a API consistirá nas URLs e nos formatos JSON de solicitação e de resposta.
 
-No entanto, mesmo se você estiver certo sobre o contrato inicial, uma API de serviço precisará alterar ao longo do tempo. Quando isso acontece, e especialmente se a sua API é uma API pública consumida por vários aplicativos cliente — normalmente não pode forçar todos os clientes devem atualizar para o novo contrato de API. Normalmente, você precisa implantar novas versões de um serviço de forma que as versões antigas e novas de um contrato de serviço são executados simultaneamente. Portanto, é importante ter uma estratégia para o controle de versão do serviço.
+No entanto, mesmo se você estiver em dúvida sobre seu contrato inicial, uma API de serviço precisará ser alterada com o tempo. Quando isso acontecer – e, principalmente, se a sua API for uma API pública consumida por vários aplicativos cliente – normalmente não será possível forçar todos os clientes a atualizarem para seu novo contrato de API. Geralmente, é necessário implantar novas versões de um serviço de forma incremental de maneira que versões novas e antigas de um contrato de serviço estejam em execução simultaneamente. Portanto, é importante ter uma estratégia para o controle de versão do serviço.
 
-Quando as alterações de API são pequenas, como se você adicionar atributos ou parâmetros para sua API, os clientes que usam uma API mais antiga devem alternar e trabalhar com a nova versão do serviço. Você poderá fornecer valores padrão para todos os atributos ausentes que são necessários e os clientes poderá ignorar os atributos de resposta extra.
+Quando as alterações na API forem pequenas, como adicionar atributos ou parâmetros à sua API, os clientes que usam uma API mais antiga devem mudar e trabalhar com a nova versão do serviço. Talvez seja possível fornecer valores padrão para quaisquer atributos ausentes que sejam necessários, e os clientes talvez podem ignorar quaisquer atributos de resposta extra.
 
-No entanto, às vezes você precisa fazer alterações principais e incompatíveis para uma API de serviço. Porque você não poderá forçar a aplicativos cliente ou serviços para atualizar imediatamente para a nova versão, um serviço deve dar suporte a versões mais antigas da API para um determinado período. Se você estiver usando um mecanismo baseado em HTTP, como REST, uma abordagem é inserir o número de versão de API na URL ou em um cabeçalho HTTP. Em seguida, você pode decidir entre implementar ambas as versões do serviço simultaneamente na mesma instância do serviço, ou implantar instâncias diferentes que cada lidar com uma versão da API. Uma boa abordagem para isso é o [padrão mediador](https://en.wikipedia.org/wiki/Mediator_pattern) (por exemplo, [MediatR biblioteca](https://github.com/jbogard/MediatR)) para separar as versões diferentes de implementação em manipuladores independentes.
+No entanto, às vezes, é necessário fazer alterações importantes e incompatíveis em uma API de serviço. Como talvez não seja possível forçar serviços ou aplicativos cliente a serem atualizados imediatamente para a nova versão, um serviço deve dar suporte a versões mais antigas da API por algum período. Se você estiver usando um mecanismo baseado em HTTP como REST, uma abordagem deverá inserir o número de versão da API na URL ou no cabeçalho HTTP. Em seguida, é possível decidir entre implementar ambas as versões do serviço simultaneamente dentro da mesma instância de serviço ou implantar instâncias diferentes que lidam com uma versão da API. Uma boa abordagem para isso é o [padrão mediador](https://en.wikipedia.org/wiki/Mediator_pattern) (por exemplo, [biblioteca MediatR](https://github.com/jbogard/MediatR)) para desacoplar as diferentes versões de implementação em manipuladores independentes.
 
-Por fim, se você estiver usando uma arquitetura REST, [hipermídia](https://www.infoq.com/articles/mark-baker-hypermedia) é a melhor solução para controle de versão de seus serviços e permitindo auxiliando APIs.
+Por fim, se você estiver usando uma arquitetura REST, o [Hypermedia](https://www.infoq.com/articles/mark-baker-hypermedia) será a melhor solução para controlar a versão de seus serviços e permitir APIs capazes de evoluir.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
--   **Scott Hanselman. Controle de versão do núcleo da API da Web RESTful ASP.NET facilitado**
+-   **Scott Hanselman. ASP.NET Core RESTful Web API versioning made easy (Controle de versão da API Web RESTful ASP.NET Core facilitado)**
     <http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
--   **Controle de versão de uma API da web RESTful**
+-   **Controle de versão de uma API Web RESTful**
     [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
--   **Roy Fielding. Controle de versão, hipermídia e REST**
+-   **Roy Fielding. Versioning, Hypermedia, and REST (Controle de versão, hipermídia e REST)**
     <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 
 >[!div class="step-by-step"]
-[Anterior] (assíncrona-mensagem-com base-communication.md) [Avançar] (microservices-Endereçabilidade-serviço-registry.md)
+[Anterior] (asynchronous-message-based-communication.md) [Próximo] (microservices-addressability-service-registry.md)

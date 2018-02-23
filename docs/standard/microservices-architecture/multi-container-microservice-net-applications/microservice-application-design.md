@@ -1,6 +1,6 @@
 ---
-title: "Criando um aplicativo orientado por microsserviço"
-description: "Arquitetura de Microservices .NET para aplicativos .NET em contêineres | Criando um aplicativo orientado por microsserviço"
+title: "Projetando um aplicativo orientado a microsserviços"
+description: "Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Projetando um aplicativo orientado a microsserviços"
 keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,194 +8,197 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 1e1dc919c7e35580576c86b4cf9872b4f8cea2c2
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 116ddb44655f0a9708a6496cbe7fb4fbc608300b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="designing-a-microservice-oriented-application"></a>Criando um aplicativo orientado por microsserviço
+# <a name="designing-a-microservice-oriented-application"></a>Projetando um aplicativo orientado a microsserviços
 
 Esta seção se concentra no desenvolvimento de um aplicativo empresarial hipotético do lado do servidor.
 
-## <a name="application-specifications"></a>Especificações de aplicativo
+## <a name="application-specifications"></a>Especificações do aplicativo
 
-O aplicativo hipotético manipula solicitações pela execução de lógica de negócios, acessar bancos de dados e, em seguida, retornar respostas HTML, JSON ou XML. Podemos dirá que o aplicativo deve oferecer suporte a uma variedade de clientes, incluindo navegadores de desktop executando aplicativos de página única (SPAs), aplicativos web tradicionais, aplicativos web móveis e aplicativos móveis nativo. O aplicativo também pode expor uma API de terceiros podem consumir. Ele também deve ser capaz de integrar seu microservices ou aplicativos externos de forma assíncrona, para que a abordagem ajudará a resiliência de microservices no caso de falhas parciais.
+O aplicativo hipotético lida com as solicitações por meio da execução de lógica de negócios, do acesso ao bancos de dados, retornando as respostas em HTML, JSON ou XML. Digamos que o aplicativo deve oferecer suporte a uma variedade de clientes, incluindo navegadores de área de trabalho que executam SPAs (aplicativos de página única), aplicativos Web tradicionais, aplicativos Web móveis e aplicativos móveis nativos. O aplicativo também deve expor uma API para ser consumida por terceiros. Ele também deve ser capaz de integrar seus microsserviços ou aplicativos externos de forma assíncrona, ajudando na resiliência dos microsserviços no caso de falhas parciais.
 
-O aplicativo consistirá esses tipos de componentes:
+O aplicativo consistirá nesses tipos de componentes:
 
--   Componentes de apresentação. Esses são responsáveis por gerenciar a interface do usuário e o consumo de serviços remotos.
+-   Componentes de apresentação. Eles são responsáveis por gerenciar a interface do usuário e o consumo de serviços remotos.
 
--   Lógica de negócios ou de domínio. Isso é a lógica do domínio do aplicativo.
+-   Lógica de negócios ou domínio. Essa é a lógica de domínio do aplicativo.
 
--   Lógica de acesso a banco de dados. Isso consiste em componentes de acesso de dados responsável para acessar bancos de dados (SQL ou NoSQL).
+-   Lógica de acesso a banco de dados. Consiste em componentes de acesso a dados responsáveis por acessar bancos de dados (SQL ou NoSQL).
 
 -   Lógica de integração do aplicativo. Isso inclui um canal de mensagens, principalmente com base em agentes de mensagens.
 
-O aplicativo exigirá alta escalabilidade, permitindo que seus subsistemas verticais de expansão de forma independente, pois determinados subsistemas exigirá mais escalabilidade que outras pessoas.
+O aplicativo exigirá alta escalabilidade, permitindo que seus subsistemas verticais escalem horizontalmente de forma autônoma, pois alguns subsistemas exigirão maior escalabilidade que outros.
 
-O aplicativo deve ser capaz de ser implantado em vários ambientes de infraestrutura (várias nuvens públicas e locais) e idealmente deve ser capaz de mover facilmente do Linux para Windows (ou vice-versa), de plataforma cruzada.
+O aplicativo deverá ter a possibilidade de ser implantado em ambientes de várias infraestruturas (várias nuvens públicas e localmente) e, idealmente, ser multiplataforma, podendo ser mudado facilmente do Linux para o Windows (ou vice-versa).
 
 ## <a name="development-team-context"></a>Contexto da equipe de desenvolvimento
 
-Pressupõe-se também o seguinte sobre o processo de desenvolvimento para o aplicativo:
+Pressupõe-se também o seguinte sobre o processo de desenvolvimento do aplicativo:
 
 -   Você tem várias equipes de desenvolvimento com foco em diferentes áreas de negócios do aplicativo.
 
--   Novos membros da equipe devem se tornarem rapidamente produtivos, e o aplicativo deve ser fácil de entender e modificar.
+-   Os novos membros da equipe devem se tornar produtivos rapidamente, e o aplicativo deve ser fácil de entender e modificar.
 
--   O aplicativo terá uma evolução de longo prazo e constantes de regras de negócio.
+-   O aplicativo terá uma evolução de longo prazo e regras de negócio em constante mudança.
 
--   Você precisa de boa manutenção a longo prazo, que significa ter agilidade ao implementar as novas alterações no futuro e conseguir atualizar vários subsistemas com impacto mínimo sobre os outros subsistemas.
+-   Você precisará de facilidade de manutenção a longo prazo, o significa a agilidade na implementação de novas alterações no futuro possibilitando a atualização de vários subsistemas com impacto mínimo nos outros subsistemas.
 
--   Você deseja integração contínua prática e implantação contínua do aplicativo.
+-   Você deseja a prática de integração contínua e implantação contínua do aplicativo.
 
--   Você deseja tirar proveito das tecnologias emergentes (estruturas, linguagens de programação e etc.) durante a evolução do aplicativo. Você não deseja fazer migrações completas do aplicativo ao mover para novas tecnologias, como o que poderia resultar em custos e afetar a previsibilidade e a estabilidade do aplicativo.
+-   Você deseja aproveitar as tecnologias emergentes (estruturas, linguagens de programação, etc.) durante a evolução do aplicativo. Você não quer fazer migrações completas do aplicativo ao mudar para novas tecnologias, pois isso resultaria em custos altos e afetaria a previsibilidade e a estabilidade do aplicativo.
 
-## <a name="choosing-an-architecture"></a>Escolha uma arquitetura
+## <a name="choosing-an-architecture"></a>Escolhendo uma arquitetura
 
-O que deve ser a arquitetura de implantação de aplicativo? As especificações para o aplicativo, junto com o contexto de desenvolvimento altamente recomendável que você deve projetar o aplicativo decompõe-lo em subsistemas autônomos na forma de colaboração microservices e contêineres, onde um microsserviço é um contêiner.
+Qual deve ser a arquitetura de implantação do aplicativo? As especificações do aplicativo, junto com o contexto de desenvolvimento, sugerem enfaticamente que você deve projetar o aplicativo decompondo-o em subsistemas autônomos, na forma de microsserviços e contêineres de colaboração, em que um microsserviço é um contêiner.
 
-Nessa abordagem, cada serviço (contêiner) implementa um conjunto de funções coesos e restrito relacionados. Por exemplo, um aplicativo pode consistir de serviços como o serviço de catálogo, ordenação service, serviço de carrinho, serviço de perfil de usuário, etc.
+Nessa abordagem, cada serviço (contêiner) implementa um conjunto de funções coesas e estritamente relacionadas. Por exemplo, um aplicativo pode consistir em serviços como: serviço de catálogo, serviço de pedidos, serviço de carrinho de compras, serviço de perfil do usuário, etc.
 
-Microservices se comunicar usando protocolos como HTTP (REST), mas também de forma assíncrona (ou seja, AMQP) sempre que possível, especialmente quando propagar atualizações com eventos de integração.
+Os microsserviços se comunicam usando protocolos como HTTP (REST), mas também de forma assíncrona (usando AMQP, por exemplo) sempre que possível, especialmente ao propagar atualizações com eventos de integração.
 
-Microservices são desenvolvidos e implantados como contêineres independentemente uma da outra. Isso significa que uma equipe de desenvolvimento pode desenvolver e implantar um determinado microsserviço sem afetar outros subsistemas.
+Os microsserviços são desenvolvidos e implantados como contêineres independentes uns dos outros. Isso significa que uma equipe de desenvolvimento pode desenvolver e implantar um determinado microsserviço sem afetar outros subsistemas.
 
-Cada microsserviço tem seu próprio banco de dados, permitindo que ele seja totalmente separada dos outros microservices. Quando necessário, a consistência entre bancos de dados de diferentes microservices é obtida usando eventos de integração do nível do aplicativo (por meio de um barramento de evento lógico) tratados no comando e consulta responsabilidade CQRS (segregação). Por isso, as restrições de negócios devem adotar consistência eventual entre os vários microservices e bancos de dados relacionados.
+Cada microsserviço tem seu próprio banco de dados, permitindo que ele seja totalmente separado dos outros microsserviços. Quando necessário, a consistência entre bancos de dados de diferentes microsserviços é obtida com o uso de eventos de integração no nível do aplicativo (por meio de um barramento de eventos lógico), conforme manipulados na CQRS (segregação de responsabilidade de comando e consulta). Por isso, as restrições de negócios devem adotar consistência eventual entre os vários microsserviços e bancos de dados relacionados.
 
-### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers: um aplicativo de referência para .NET Core e microservices implantados usando contêineres
+### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers: um aplicativo de referência para .NET Core e microsserviços implantados com o uso de contêineres
 
-Para que você possa focalizar a arquitetura e as tecnologias em vez de pensar em um domínio de negócios hypothetic que você talvez não saiba, selecionamos um domínio de negócios conhecido — ou seja, um aplicativo simplificado comércio eletrônico (e-loja) que apresenta um catálogo de produtos, usa pedidos de clientes, verifica o estoque e executa outras funções de negócios. Código-fonte neste aplicativo com base em contêiner está disponível na [eShopOnContainers](http://aka.ms/MicroservicesArchitecture) repositório GitHub.
+Para que você possa se concentrar na arquitetura e nas tecnologias em vez de pensar em um domínio corporativo hipotético desconhecido, selecionamos um domínio corporativo bem conhecido, ou seja, um aplicativo simplificado de comércio eletrônico (loja eletrônica) que apresenta um catálogo de produtos, recebe pedidos de clientes, verifica o estoque e executa outras funções de negócios. O código-fonte desse aplicativo baseado em contêineres está disponível no repositório [eShopOnContainers](http://aka.ms/MicroservicesArchitecture) do GitHub.
 
-O aplicativo consiste em vários subsistemas, incluindo várias repositório da interface do usuário front-ends (um aplicativo Web e um aplicativo móvel nativo), junto com o back-end microservices e contêineres para todas as operações do servidor necessários. Figura 8-1 mostra a arquitetura do aplicativo de referência.
+O aplicativo consiste em vários subsistemas, incluindo vários front-ends de interface do usuário da loja (um aplicativo Web e um aplicativo móvel nativo), juntamente com os microsserviços e contêineres de back-end para todas as operações necessárias do lado do servidor. A figura 8-1 mostra a arquitetura do aplicativo de referência.
 
 ![](./media/image1.png)
 
-**Figura 8-1**. Os eShopOnContainers Referência de aplicativo, mostrando uma comunicação de cliente para microsserviço direta e o barramento de evento
+**Figura 8-1**. O aplicativo de referência eShopOnContainers, mostrando uma comunicação direta entre cliente e microsserviço e o barramento de eventos
 
-**Ambiente de hospedagem**. Na Figura 8-1, você verá vários contêineres implantados em um único host do Docker. Isso seria o caso durante a implantação em um único host do Docker com o docker-compor o comando. No entanto, se você estiver usar um orquestrador ou cluster de contêiner, cada contêiner pode ser executado em um host diferente (nó), e qualquer nó pode estar executando qualquer número de contêineres, como é explicado anteriormente na seção de arquitetura.
+**Ambiente de hospedagem**. Na Figura 8-1, você vê vários contêineres implantados em um único host do Docker. Esse seria o caso ao implantar em um único host do Docker com o comando docker-compose up. No entanto, se você estiver usar um orquestrador ou cluster de contêineres, cada contêiner poderá ser executado em um host (nó) diferente, e qualquer nó poderá ser executado em qualquer número de contêineres, como explicado anteriormente na seção sobre arquitetura.
 
-**Arquitetura de comunicação**. O aplicativo eShopOnContainers usa dois tipos de comunicação, dependendo do tipo da ação funcional (consultas e atualizações e transações):
+**Arquitetura de comunicação**. O aplicativo eShopOnContainers usa dois tipos de comunicação, dependendo do tipo de ação funcional (consultas versus atualizações e transações):
 
--   Comunicação direta do cliente para microsserviço. Isso é usado para consultas e ao aceitar a atualização ou comandos transacionais dos aplicativos cliente.
+-   Comunicação direta entre cliente e microsserviço. Isso é usado para consultas e ao aceitar comandos transacionais ou de atualização dos aplicativos cliente.
 
--   Comunicação assíncrona com base em eventos. Isso ocorre por meio de um barramento de evento para propagar atualizações em microservices ou integrar aplicativos externos. O barramento de evento pode ser implementado com qualquer tecnologia de infraestrutura do agente de mensagens como RabbitMQ ou usando o nível mais alto barramentos de serviço como o Azure Service Bus, NServiceBus, MassTransit ou Brighter.
+-   Comunicação baseada em evento assíncrono. Isso ocorre por meio de um barramento de eventos para propagar atualizações em microsserviços ou integrar com aplicativos externos. O barramento de eventos pode ser implementado com qualquer tecnologia de infraestrutura de agente de mensagens, como RabbitMQ, ou usando barramentos de serviços de nível mais alto, como Barramento de Serviço do Azure, NServiceBus, MassTransit ou Brighter.
 
-O aplicativo é implantado como um conjunto de microservices na forma de contêineres. Aplicativos cliente podem se comunicar com esses contêineres bem como a comunicação entre o microservices. Conforme mencionado, essa arquitetura inicial está usando uma arquitetura de comunicação de cliente para microsserviço direta, o que significa que um aplicativo cliente pode fazer solicitações a cada o microservices diretamente. Cada microsserviço tem um ponto de extremidade público como https://servicename.applicationname.companyname. Se necessário, cada microsserviço pode usar uma porta TCP diferente. Em produção, o que a URL deve mapear para o balanceador de carga dos microservices, que distribui solicitações entre as instâncias de microsserviço disponíveis.
+O aplicativo é implantado como um conjunto de microsserviços na forma de contêineres. Os aplicativos cliente podem se comunicar com esses contêineres e entre os microsserviços. Conforme mencionado, essa arquitetura inicial está usando uma arquitetura de comunicação direta entre cliente e microsserviço, possibilitando que um aplicativo cliente faça solicitações diretamente a cada um dos microsserviços. Cada microsserviço tem um ponto de extremidade público como https://servicename.applicationname.companyname. Se necessário, cada microsserviço pode usar uma porta TCP diferente. Em produção, essa URL deverá mapear para o balanceador de carga dos microsserviços, que distribuirá as solicitações entre as instâncias de microsserviço disponíveis.
 
-**Observação importante sobre API Gateway vs. Comunicação direta no eShopOnContainers.** Conforme explicado na seção deste guia de arquitetura, a arquitetura de comunicação de cliente para microsserviço direta pode ter desvantagens quando você estiver criando um aplicativo baseado em microsserviço grande e complexo. Mas é bom o bastante para um pequeno aplicativo, como no eShopOnContainers iniciar o aplicativo, em que a meta é se concentrar em um guia simples aplicativo baseado no contêiner do Docker e não queremos criar um único API Gateway monolítico que podem afetar o autonomia de desenvolvimento dos microservices.
+**Observação importante sobre Gateway de API vs. Comunicação direta no eShopOnContainers.** Conforme explicado na seção de arquitetura deste guia, a arquitetura de comunicação direta entre cliente e microsserviço poderá apresentar desvantagens quando você estiver criando um aplicativo grande e complexo baseado em microsserviços. Mas ela é boa o suficiente para um aplicativo pequeno, como o aplicativo eShopOnContainers, em que a meta era um aplicativo de introdução simples, baseado em contêiner do Docker, e a ideia não era criar um Gateway de API único e monolítico que poderia afetar a autonomia de desenvolvimento dos microsserviços.
 
-Mas, se você pretende criar um aplicativo baseado em microsserviço grande com dezenas de microservices, é altamente recomendável que você considere o padrão de Gateway de API, como é explicado na seção de arquitetura.
-Essa decisão de arquitetura pode ser refatorado depois de pensar sobre aplicativos prontos para produção e fachadas feitos especialmente para clientes remotos. Ter vários Gateways de API personalizada dependendo do fator de forma de aplicativos cliente pode fornecer benefícios em termos de agregação de dados diferente por aplicativo cliente Além disso, você pode ocultar microservices interno ou APIs para os aplicativos cliente e autorizar nessa camada única. 
+Mas, se você pretende criar um grande aplicativo baseado em microsserviços, com dezenas de microsserviços, é altamente recomendável que você considere o padrão de Gateway de API, como foi explicado na seção de arquitetura.
+Essa decisão de arquitetura poderá ser refatorada depois de pensar sobre aplicativos prontos para produção e fachadas criadas especialmente para clientes remotos. Ter vários Gateways de API personalizados que dependem do fator de forma dos aplicativos cliente poderá proporcionar benefícios em termos da agregação de dados diferenciada por aplicativo cliente e, além disso, você poderá ocultar microsserviços ou APIs internas para os aplicativos cliente e autorizar nessa camada única. 
 
-No entanto e, conforme mencionado, lembre-se em grande e monolítico Gateways de API que pode interromper a autonomia de desenvolvimento dos microservices.
+Entretanto e conforme mencionado, cuidado com os Gateways de API grandes e monolíticos que poderão encerrar a autonomia de desenvolvimento dos seus microsserviços.
 
-### <a name="data-sovereignty-per-microservice"></a>Soberania dados por microsserviço
+### <a name="data-sovereignty-per-microservice"></a>Soberania de dados por microsserviço
 
-O aplicativo de exemplo, cada microsserviço possui seu próprio banco de dados ou fonte de dados e cada banco de dados ou fonte de dados é implantada como outro contêiner. Essa decisão de design foi feita apenas para tornar mais fácil para um desenvolvedor obter o código do GitHub, clone-o e abra-o no Visual Studio ou o código do Visual Studio. Ou, Alternativamente, torna mais fácil compilar imagens Docker personalizadas usando a CLI do .NET Core e a CLI do Docker e, em seguida, implantar e executá-los em um ambiente de desenvolvimento do Docker. De qualquer forma, usar contêineres para dados de fontes permite aos desenvolvedores criarem e implantar em questão de minutos sem a necessidade de provisionar um banco de dados externo ou qualquer outra fonte de dados com o disco rígidas dependências na infraestrutura (nuvem ou local).
+No aplicativo de exemplo, cada microsserviço tem seu próprio banco de dados ou fonte de dados e cada banco de dados ou fonte de dados é implantado como outro contêiner. Essa decisão de design foi tomada apenas para facilitar para um desenvolvedor ao obter o código do GitHub, cloná-lo e abri-lo no Visual Studio ou o Visual Studio Code. Como alternativa, ela facilita para compilar as imagens personalizadas do Docker usando a CLI do .NET Core e a CLI do Docker e, em seguida, facilita para implantá-las e executá-las em um ambiente de desenvolvimento do Docker. De uma forma ou de outra, o uso de contêineres para fontes de dados permite que os desenvolvedores criem e implantem em questão de minutos, sem a necessidade de provisionar um banco de dados externo ou qualquer outra fonte de dados com dependências rígidas na infraestrutura (de nuvem ou local).
 
-Em um ambiente de produção real, de alta disponibilidade e escalabilidade, os bancos de dados devem ser baseados em servidores de banco de dados na nuvem ou local, mas não em contêineres.
+Em um ambiente de produção real, por questões de alta disponibilidade e escalabilidade, os bancos de dados devem ser baseados em servidores de banco de dados na nuvem ou locais, mas não em contêineres.
 
-Portanto, as unidades de implantação microservices (e até mesmo para bancos de dados neste aplicativo) são contêineres do Docker e o aplicativo de referência é um aplicativo de contêiner vários que adote microservices princípios.
+Portanto, as unidades de implantação para os microsserviços (e até mesmo para bancos de dados deste aplicativo) são contêineres do Docker e o aplicativo de referência é um aplicativo de vários contêineres que adota princípios de microsserviços.
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
--   **eShopOnContainers repositório GitHub. Código do aplicativo de referência da fonte**
+-   **repositório GitHub do eShopOnContainers. Código-fonte do aplicativo de referência**
     *https://aka.ms/eShopOnContainers/*
 
-## <a name="benefits-of-a-microservice-based-solution"></a>Benefícios de uma solução baseada em microsserviço
+## <a name="benefits-of-a-microservice-based-solution"></a>Benefícios de uma solução baseada em microsserviços
 
-Uma solução de microsserviço com base em como isso traz muitos benefícios:
+Uma solução de baseada em microsserviços tem muitos benefícios:
 
-**Cada microsserviço for relativamente pequeno, fácil de gerenciar e desenvolver**. Especificamente:
+**Cada microsserviço é relativamente pequeno, fácil de gerenciar e desenvolver**. Especificamente:
 
--   É fácil para um desenvolvedor de entender e se familiarizar rapidamente com boa produtividade.
+-   É fácil para um desenvolvedor entender e se familiarizar rapidamente com boa produtividade.
 
--   Contêineres início rápido, que faz com que os desenvolvedores mais produtivos.
+-   Os contêineres são rapidamente iniciados, tornando os desenvolvedores mais produtivos.
 
--   Um IDE como Visual Studio pode carregar projetos menores rápidos, tornando-os desenvolvedores produtivos.
+-   Um IDE como Visual Studio pode carregar projetos menores rapidamente, fazendo com que os desenvolvedores sejam mais produtivos.
 
--   Cada microsserviço pode ser criado, desenvolvido e implantado independentemente de outros microservices, que fornece a agilidade porque é mais fácil de implantar novas versões do microservices com frequência.
+-   Cada microsserviço pode ser criado, desenvolvido e implantado independentemente de outros microsserviços. Isso proporciona agilidade, porque é mais fácil implantar novas versões dos microsserviços com frequência.
 
-**É possível expandir as áreas individuais do aplicativo**. Por exemplo, o serviço de catálogo ou o carrinho talvez precise ser expandida, mas não o processo de solicitação. Uma infraestrutura de microservices será muito mais eficiente em relação os recursos usados quando o dimensionamento de uma arquitetura monolítica seria.
+**É possível escalar horizontalmente áreas individuais do aplicativo**. Por exemplo, suponha que o serviço de catálogo ou do carrinho de compras tenha que ser expandido, mas não o processo de pedidos. Uma infraestrutura de microsserviços será muito mais eficiente do que uma arquitetura monolítica em relação aos recursos usados ao expandir.
 
-**Você pode dividir o trabalho de desenvolvimento entre várias equipes**. Cada serviço pode ser propriedade de uma equipe de desenvolvimento único. Cada equipe pode gerenciar, desenvolver, implantar e dimensionar seu serviço, independentemente do restante das equipes.
+**Você pode dividir o trabalho de desenvolvimento entre várias equipes**. Cada serviço pode ser de propriedade de única uma equipe de desenvolvimento. Cada equipe pode gerenciar, desenvolver, implantar e dimensionar o serviço de maneira independente das outras equipes.
 
-**Problemas são mais isolados**. Se houver um problema em um serviço, somente esse serviço é inicialmente afetado (exceto quando o design errado é usado, com dependências diretas entre microservices) e outros serviços podem continuar a tratar as solicitações. Por outro lado, um componente com defeito em uma arquitetura de implantação monolítico pode colocar o sistema inteiro, especialmente quando envolve recursos, como um vazamento de memória. Além disso, quando um problema em um microsserviço for resolvido, você pode implantar apenas o microsserviço afetado sem afetar o restante do aplicativo.
+**Os problemas são mais isolados**. Se houver um problema em um serviço, somente esse serviço será inicialmente afetado (exceto quando um design incorreto for usado, com dependências diretas entre microsserviços) e os outros serviços poderão continuar lidando com as solicitações. Por outro lado, um componente com defeito em uma arquitetura de implantação monolítica poderá derrubar todo o sistema, especialmente quando envolver recursos, como uma perda de memória. Além disso, quando um problema em um microsserviço for resolvido, você poderá implantar apenas o microsserviço afetado sem afetar o restante do aplicativo.
 
-**Você pode usar as tecnologias mais recentes**. Como você pode começar a desenvolver serviços de forma independente e executá-los lado a lado (graças contêineres e .NET Core), começar a usar as últimas tecnologias e estruturas expediently em vez de prisão em uma pilha ou a estrutura para todo o mais antigo aplicativo.
+**Você pode usar as tecnologias mais recentes**. Com a possibilidade de começar a desenvolver serviços de forma independente e executá-los lado a lado (graças aos contêineres e ao .NET Core), você pode usar as últimas tecnologias e estruturas de acordo com a conveniência, em vez de ficar preso a uma pilha ou estrutura mais antiga para todo o aplicativo.
 
-## <a name="downsides-of-a-microservice-based-solution"></a>Desvantagens de uma solução baseada em microsserviço
+## <a name="downsides-of-a-microservice-based-solution"></a>Desvantagens de uma solução baseada em microsserviços
 
-Uma solução de microsserviço com base em como isso também apresenta algumas desvantagens:
+Uma solução com base em microsserviços como essa também apresenta algumas desvantagens:
 
-**Aplicativo distribuído**. Distribuir o aplicativo adiciona complexidade para desenvolvedores quando projetar e criar os serviços. Por exemplo, os desenvolvedores devem implementar interservice comunicação usando protocolos como HTTP ou AMPQ, que adiciona complexidade para teste e tratamento de exceção. Ele também adiciona latência ao sistema.
+**Aplicativo distribuído**. A distribuição do aplicativo cria complexidades para os desenvolvedores ao projetar e criar os serviços. Por exemplo, os desenvolvedores devem implementar comunicação entre serviços usando protocolos como HTTP ou AMPQ, o que adiciona complexidade para os testes e o tratamento de exceções. Isso também adiciona latência ao sistema.
 
-**Complexidade de implantação**. Um aplicativo que possui vários tipos de microservices e precisa de alta escalabilidade (ela precisa ser capaz de criar várias instâncias por serviço e equilibrar os serviços em vários hosts) significa um alto grau de complexidade de implantação para o gerenciamento e operações de TI. Se você não estiver usando uma infraestrutura e orientada a microsserviço (como um agendador e o orchestrator), essa complexidade adicional pode exigir que os esforços de desenvolvimento muito mais que o aplicativo de negócios.
+**Complexidade de implantação**. Um aplicativo com vários tipos de microsserviços e que necessite de alta escalabilidade (ele precisa ser capaz de criar várias instâncias por serviço e equilibrar os serviços em vários hosts) gera um alto grau de complexidade de implantação para o gerenciamento e as operações de TI. Se você não estiver usando uma infraestrutura orientada a microsserviços (como um agendador e orquestrador), essa complexidade adicional poderá exigir esforços de desenvolvimento muito maiores que o próprio aplicativo de negócios.
 
-**Transações atômicas**. Transações atômicas entre vários microservices geralmente não são possíveis. Os requisitos de negócios precisam adotar consistência eventual entre vários microservices.
+**Transações atômicas**. Geralmente, as transações atômicas entre vários microsserviços não são possíveis. Os requisitos corporativos precisam adotar a consistência eventual entre vários microsserviços.
 
-**Aumentado necessidades de recursos globais** (total de memória, unidades e recursos de rede para todos os servidores ou hosts). Em muitos casos, quando você substituir um aplicativo monolítico com uma abordagem de microservices, a quantidade de recursos globais necessitados para o novo aplicativo com base em microsserviço será maior do que as necessidades de infraestrutura do aplicativo monolítico original. Isso ocorre porque o mais alto grau de granularidade e serviços distribuídos requer recursos mais globais. No entanto, o aumento do uso de recursos devido a baixo custo de recursos em geral e o benefício de poder expandir apenas determinadas áreas do aplicativo comparada aos custos de longo prazo quando desenvolvendo aplicativos monolíticos, é geralmente um bom equilíbrio para grandes aplicativos de longo prazo.
+**Maiores necessidades de recursos globais** (memória total, unidades e recursos de rede para todos os servidores ou hosts). Em muitos casos, ao substituir um aplicativo monolítico por uma abordagem de microsserviços, a quantidade de recursos globais necessários para o novo aplicativo baseado em microsserviços será maior do que as necessidades de infraestrutura do aplicativo monolítico original. Isso ocorre porque o maior grau de granularidade e serviços distribuídos exige mais recursos globais. No entanto, considerando o baixo custo de recursos em geral e o benefício de expandir apenas determinadas áreas do aplicativo, comparados aos custos de longo prazo relacionados aos desenvolvimento de aplicativos monolíticos, o aumento no uso de recursos geralmente compensa nas grandes aplicações de longo prazo.
 
-**Problemas com a comunicação direta client‑to‑microservice**. Quando o aplicativo é grande, com dezenas de microservices, existem desafios e limitações se o aplicativo exigir comunicações de cliente-para-microsserviço diretas. Um problema é uma potencial incompatibilidade entre as necessidades do cliente e as APIs expostas por cada o microservices. Em alguns casos, o aplicativo cliente precisará fazer muitas solicitações separadas para compor a interface do usuário, que pode ser ineficiente pela Internet e seria impraticável em uma rede móvel. Portanto, as solicitações do aplicativo cliente para o sistema de back-end devem ser minimizadas.
+**Problemas com a comunicação direta entre cliente e microsserviço**. Se o aplicativo for grande, com dezenas de microsserviços, haverá desafios e limitações se houver necessidade de comunicações diretas entre o cliente e o microsserviço. Um problema é uma potencial incompatibilidade entre as necessidades do cliente e as APIs expostas por cada um dos microsserviços. Em alguns casos, o aplicativo cliente precisará fazer muitas solicitações separadas para compor a interface do usuário, tornando-se ineficiente na Internet e impraticável em uma rede móvel. Portanto, as solicitações do aplicativo cliente ao sistema de back-end devem ser minimizadas.
 
-Outro problema com a comunicação de cliente para microsserviço direto é que algumas microservices usando protocolos não são amigável para a Web. Um serviço pode usar um protocolo binário, enquanto outro serviço pode usar o AMQP de mensagens. Esses protocolos não são firewall‑friendly e são melhor usados internamente. Normalmente, um aplicativo deve usar protocolos como HTTP e WebSockets para a comunicação fora do firewall.
+Outro problema com a comunicação direta entre cliente e microsserviço é que alguns microsserviços podem usar protocolos que não sejam compatíveis com a Web. Um serviço pode usar um protocolo binário, enquanto outro pode usar o sistema de mensagens AMQP. Esses protocolos não são compatíveis com firewalls e são melhor usados internamente. Normalmente, um aplicativo deve usar protocolos como HTTP e WebSockets para a comunicação do lado de fora do firewall.
 
-Ainda outra desvantagem dessa abordagem client‑to‑service direto é que ele é difícil refatorar os contratos para os microservices. Ao longo do tempo, os desenvolvedores talvez queira alterar como o sistema está particionado em serviços. Por exemplo, eles podem mesclar dois serviços ou dividir um serviço em dois ou mais serviços. No entanto, se os clientes se comunicam diretamente com os serviços, executar esse tipo de refatoração pode quebrar a compatibilidade com aplicativos cliente.
+Outra desvantagem dessa abordagem direta entre cliente e serviço é que ela dificulta a refatoração dos contratos desses microsserviços. Ao longo do tempo, talvez os desenvolvedores queiram alterar a forma como o sistema está particionado em serviços. Por exemplo, eles podem mesclar dois serviços ou dividir um serviço em dois ou mais serviços. No entanto, se os clientes se comunicarem diretamente com os serviços, esse tipo de refatoração poderá interromper a compatibilidade com aplicativos cliente.
 
-Conforme mencionado na seção de arquitetura, ao projetar e criar um aplicativo complexo com base em microservices, você pode considerar o uso de vários Gateways API refinada em vez da abordagem mais simples de comunicação client‑to‑microservice direto.
+Conforme mencionado na seção de arquitetura, ao projetar e criar um aplicativo complexo baseado em microsserviços, considere o uso de vários Gateways de API refinados em vez da abordagem mais simples de comunicação direta entre cliente e microsserviço.
 
-**Particionamento de microservices**. Por fim, não importa qual abordagem para sua arquitetura de microsserviço, outro desafio é decidir como um aplicativo de ponta a ponta em vários microservices da partição. Conforme observado na seção do guia de arquitetura, há várias técnicas e abordagens que você pode executar. Basicamente, você precisa identificar áreas do aplicativo que é separado das outras áreas e que têm um número baixo de dependências de hardware. Em muitos casos, isso é alinhado ao particionamento de serviços pelo caso de uso. Por exemplo, em nosso aplicativo de loja e, temos um serviço de ordenação que é responsável por toda a lógica de negócios relacionada ao processo de ordem. Temos também o serviço de catálogo e o serviço de compras que implementam a outros recursos. Idealmente, cada serviço deve ter somente um pequeno conjunto de responsabilidades. Isso é semelhante para o princípio da responsabilidade única (SRP) aplicado a classes, que declara que uma classe deve ter somente uma razão para alterar. Mas nesse caso, ele é microservices, para que o escopo seja maior do que uma única classe. A maioria das todos, um microsserviço deve ser completamente autônoma, de ponta a ponta, incluindo a responsabilidade por suas próprias fontes de dados.
+**Particionamento dos microsserviços**. Por fim, independentemente da abordagem escolhida para sua arquitetura de microsserviços, outro desafio é decidir como particionar um aplicativo de ponta a ponta em vários microsserviços. Conforme observado na seção de arquitetura do guia, há várias técnicas e abordagens que você pode escolher. Basicamente, você precisa identificar áreas do aplicativo que sejam separados de outras áreas e que tenham um número baixo de dependências rígidas. Em muitos casos, isso se alinha ao particionamento de serviços de acordo com o caso de uso. Por exemplo, em nosso aplicativo de loja eletrônica, temos um serviço de pedidos que é responsável por toda a lógica de negócios relacionada ao processo de pedido. Também temos o serviço de catálogo e o serviço de carrinho de compras, que implementam outros recursos. Idealmente, cada serviço deveria ter somente um pequeno conjunto de responsabilidades. Isso é semelhante ao princípio SRP (princípio de responsabilidade única) aplicado a classes, que declara que uma classe deve ter somente uma razão para ser alterada. Mas, nesse caso, estamos lidando com microsserviços, portanto o escopo será maior que o de uma única classe. Acima de tudo, um microsserviço deve ser completamente autônomo, de ponta a ponta, incluindo a responsabilidade por suas próprias fontes de dados.
 
-## <a name="external-versus-internal-architecture-and-design-patterns"></a>Externas e internas padrões de arquitetura e design
+## <a name="external-versus-internal-architecture-and-design-patterns"></a>Padrões de arquitetura e design externos versus internos
 
-A arquitetura externa é composta por vários serviços, seguindo os princípios descritos na seção deste guia de arquitetura de arquitetura de microsserviço. No entanto, dependendo da natureza de cada microsserviço e independentemente da arquitetura de alto nível microsserviço você escolher, é comum e, às vezes, convém ter diferentes arquiteturas internas, cada um com base em padrões diferentes para diferentes microservices. O microservices pode até usar tecnologias diferentes e linguagens de programação. Figura 8-2 ilustra essa diversidade.
+A arquitetura externa é a arquitetura de microsserviço composta por vários serviços, de acordo com os princípios descritos na seção de arquitetura deste guia. No entanto, dependendo da natureza de cada microsserviço e, independentemente da arquitetura de microsserviço de alto nível que você escolhe, é comum e muitas vezes aconselhável, ter arquiteturas internas distintas para os diferentes microsserviços, cada qual baseada em padrões diferentes. Os microsserviços podem até usar tecnologias e linguagens de programação diferentes. A figura 8-2 ilustra essa diversidade.
 
 ![](./media/image2.png)
 
-**Figura 8-2**. Externas e interna arquitetura e design
+**Figura 8-2**. Arquitetura e design externos versus internos
 
-Por exemplo, em nosso *eShopOnContainers* microservices de perfil de exemplo, o catálogo, carrinho e usuário são simples (basicamente, subsistemas CRUD). Portanto, sua arquitetura interna e design é simples. No entanto, você pode ter outros microservices, como o ordenação microsserviço, que é mais complexa e representa a constante mudança regras de negócios com um alto grau de complexidade do domínio. Em casos assim, talvez você queira implementar os padrões mais avançados dentro de um microsserviço específico, como as definidas com abordagens de design orientado a domínio (DDD), como estamos o *eShopOnContainers* ordenação microsserviço. (Analisaremos esses padrões DDD na seção posterior que explica a implementação do *eShopOnContainers* ordenação microsserviço.)
+Por exemplo, em nosso *eShopOnContainers* de exemplo, os microsserviços de catálogo, carrinho de compras e de perfil do usuário são simples (basicamente, subsistemas CRUD). Portanto, a arquitetura interna e o design deles são bastante simples. No entanto, você pode ter outros microsserviços, como o microsserviço de pedidos, que é mais complexo e representa regras de negócios em constante mudança, com um alto grau de complexidade de domínio. Nesses casos, pode ser interessante implementar padrões mais avançados em um microsserviço específico, como aqueles definidos nas abordagens de DDD (design controlado por domínio), como estamos fazendo no microsserviço de pedidos do *eShopOnContainers*. (Examinaremos esses padrões de DDD em uma seção posterior que explica a implementação do microsserviço de pedidos do *eShopOnContainers*).
 
-Outra razão para uma tecnologia diferente por microsserviço seria a natureza de cada microsserviço. Por exemplo, talvez seja melhor usar uma linguagem de programação funcional como F\#, ou uma linguagem como R, mesmo se estiver direcionando AI e domínios, em vez de uma linguagem de programação mais orientada a objeto como C de aprendizado de máquina\#.
+Outro motivo para uma tecnologia diferente para cada microsserviço seria a natureza de cada microsserviço. Por exemplo, talvez seja melhor usar uma linguagem de programação funcional, como F\#, ou uma linguagem como a R, se você estiver destinando a domínios de aprendizado de máquina e inteligência artificial, em vez de uma linguagem de programação mais orientada a objeto, como a C\#.
 
-O resultado é que cada microsserviço pode ter uma arquitetura interna diferente com base nos padrões de design diferentes. Microservices todos os não devem ser implementadas usando padrões avançados de DDD, porque que poderia ser excesso de engenharia-los. Da mesma forma, microservices complexas com lógica de negócios constantes não devem ser implementadas como componentes CRUD, ou você pode acabar com o código de baixa qualidade.
+O resultado é que cada microsserviço pode ter uma arquitetura interna diferente com base nos diferentes padrões de design. Nem todos os microsserviços devem ser implementados usando padrões avançados de DDD, porque que isso seria excesso de engenharia. Da mesma forma, microsserviços complexos, com lógica de negócios em constante mudança, não devem ser implementados como componentes de CRUD, ou você poderá ficar com um código de baixa qualidade.
 
 
 
-## <a name="the-new-world-multiple-architectural-patterns-and-polyglot-microservices"></a>O novo mundo: vários padrões de arquitetura e microservices polyglot
+## <a name="the-new-world-multiple-architectural-patterns-and-polyglot-microservices"></a>O novo mundo: vários padrões de arquitetura e microsserviços poliglotas
 
-Há muitos padrões de arquitetura usados por desenvolvedores e arquitetos de software. A seguir estão algumas (combinação de estilos de arquitetura e padrões de arquitetura):
+Há muitos padrões de arquitetura usados por desenvolvedores e arquitetos de software. Veja alguns a seguir (combinando estilos de arquitetura e padrões de arquitetura):
 
--   Simples CRUD, camada única, camada única.
+-   CRUD simples, de camada e nível únicos.
 
--   [Tradicional em camadas N](https://msdn.microsoft.com/en-us/library/ee658109.aspx#Layers).
+-   [Tradicional em N camadas](https://msdn.microsoft.com/library/ee658109.aspx#Layers).
 
--   [Controlado por domínio Design em camadas N](https://blogs.msdn.microsoft.com/cesardelatorre/2011/07/03/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/).
+-   [Design controlado po domínio em N camadas](https://blogs.msdn.microsoft.com/cesardelatorre/2011/07/03/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/).
 
--   [Limpar arquitetura](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) (conforme usado com [eShopOnWeb](http://aka.ms/WebAppArchitecture))
+-   [Arquitetura limpa](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) (com a usada no [eShopOnWeb](http://aka.ms/WebAppArchitecture))
 
--   [Comando e consultar a segregação de responsabilidade](https://martinfowler.com/bliki/CQRS.html) (CQRS).
+-   [CQRS](https://martinfowler.com/bliki/CQRS.html) (Segregação de Responsabilidade de Comando e Consulta).
 
--   [Arquitetura orientada a eventos](https://en.wikipedia.org/wiki/Event-driven_architecture) (EDA).
+-   [EDA](https://en.wikipedia.org/wiki/Event-driven_architecture) (Arquitetura controlada por eventos).
 
-Você também pode criar microservices com várias tecnologias e linguagens, como APIs da Web do ASP.NET Core, NancyFx, ASP.NET Core SignalR (disponível no .NET Core 2), F\#, Node.js, Python, Java, C++, GoLang e muito mais.
+Você também pode criar microsserviços com várias tecnologias e linguagens, como APIs Web do ASP.NET Core, NancyFx, SignalR do ASP.NET Core (disponível no .NET Core 2), F\#, Node.js, Python, Java, C++, GoLang e muito mais.
 
-O ponto importante é que nenhum padrão de arquitetura em particular ou estilo nem qualquer tecnologia em particular, é ideal para todas as situações. A Figura 8-3 mostra algumas abordagens e tecnologias (embora não em nenhuma ordem específica) que pode ser usado em microservices diferentes.
+O ponto importante é que não há um padrão de arquitetura ou estilo específico nem qualquer tecnologia em particular que seja ideal para todas as situações. A figura 8-3 mostra algumas abordagens e tecnologias (embora não estejam em nenhuma ordem específica) que podem ser usadas em microsserviços diferentes.
 
 ![](./media/image3.png)
 
-**Figura 8-3**. Padrões de arquitetura múltiplos e com o mundo microservices polyglot
+**Figura 8-3**. Padrões de várias arquitetura e o mundo de microsserviços poliglotas
 
-Conforme mostrado na Figura 8-3, em aplicativos composta de muitos microservices (limitado contextos na terminologia de design controlado por domínio, ou simplesmente "subsistemas" como microservices autônomo), você pode implementar cada microsserviço de maneira diferente. Cada um pode ter um padrão de arquitetura diferente e usar idiomas diferentes e bancos de dados dependendo da natureza do aplicativo, requisitos de negócios e prioridades. Em alguns casos o microservices pode ser semelhante. Mas isso não é geralmente o caso, porque o limite de contexto e os requisitos de cada subsistema normalmente são diferentes.
+Conforme mostrado na Figura 8-3, em aplicativos compostos de muitos microsserviços (de contextos delimitados, na terminologia de design controlado por domínio, ou simplesmente "subsistemas", como microsserviços autônomos), você pode implementar cada microsserviço de maneira diferente. Cada um pode ter um padrão de arquitetura diferente e usar linguagens e bancos de dados diferentes, dependendo da natureza, dos requisitos de negócios e das prioridades do aplicativo. Em alguns casos, o microsserviços podem ser semelhantes. Mas, geralmente, esse não é o caso, porque o limite de contexto e os requisitos de cada subsistema costumam ser diferentes.
 
-Por exemplo, para um aplicativo simple de manutenção CRUD, ele não pode fazer sentido para projetar e implementar os padrões DDD. Mas, para seu negócio principal ou de domínio principal, você precisará aplicar os padrões mais avançados para lidar com a complexidade de negócios com constantes regras de negócio.
+Por exemplo, em um aplicativo CRUD simples de manutenção, não faz sentido projetar e implementar padrões de DDD. Mas, para seu negócio principal ou domínio principal, é interessante aplicar padrões mais avançados para lidar com a complexidade dos negócios e com as regras de negócio em constante mudança.
 
-Especialmente ao lidar com grandes aplicativos compostos por vários subsistemas, você não deve aplicar uma única arquitetura de alto nível com base em um única arquitetura padrão. Por exemplo, a CQRS não deve ser aplicado como uma arquitetura de nível superior para todo o aplicativo, mas pode ser útil para um conjunto específico de serviços.
+Especialmente ao lidar com grandes aplicativos compostos por vários subsistemas, você não deve aplicar uma única arquitetura de alto nível com base em um único padrão de arquitetura. Por exemplo, a CQRS não deve ser aplicada como uma arquitetura de alto nível para um aplicativo inteiro, mas pode ser útil para um conjunto específico de serviços.
 
-Não há nenhum marcador prata ou um padrão de arquitetura correta para cada caso específico. Você não pode ter "um padrão de arquitetura para eliminá-los." Dependendo de prioridades de cada microsserviço, você deve escolher uma abordagem diferente para cada uma, conforme explicado nas seções a seguir.
+Não há solução definitiva nem um padrão de arquitetura correto para cada caso específico. Você não pode ter "um padrão de arquitetura controlar tudo". Dependendo das prioridades de cada microsserviço, você deverá escolher uma abordagem diferente para cada um deles, conforme explicado nas seções a seguir.
 
 
 >[!div class="step-by-step"]
-[Anterior] (index.md) [Avançar] (dados-controlada por-crud-microservice.md)
+[Anterior] (index.md) [Próximo] (data-driven-crud-microservice.md)

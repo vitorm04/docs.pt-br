@@ -1,6 +1,6 @@
 ---
-title: "A implementação de novas tentativas de chamada HTTP com retirada exponencial com Polly"
-description: "Arquitetura de Microservices .NET para aplicativos .NET em contêineres | A implementação de novas tentativas de chamada HTTP com retirada exponencial com Polly"
+title: Implementando novas tentativas de chamadas HTTP com retirada exponencial com a Polly
+description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Implementando novas tentativas de chamadas HTTP com retirada exponencial com a Polly"
 keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,21 +8,24 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 1ed48142546403ea710f4c132e038521232c20ed
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 122f617874188d3bffe689d6b3cf7d7249c59c3b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="implementing-http-call-retries-with-exponential-backoff-with-polly"></a>A implementação de novas tentativas de chamada HTTP com retirada exponencial com Polly
+# <a name="implementing-http-call-retries-with-exponential-backoff-with-polly"></a>Implementando novas tentativas de chamadas HTTP com retirada exponencial com a Polly
 
-É a abordagem recomendada para repetições com retirada exponencial tirar proveito das bibliotecas mais avançados do .NET como código-fonte aberto [Polly](https://github.com/App-vNext/Polly) biblioteca.
+A abordagem recomendada para novas tentativas com retirada exponencial é aproveitar as bibliotecas .NET mais avançadas como a biblioteca [Polly](https://github.com/App-vNext/Polly) de software livre.
 
-Polly é uma biblioteca .NET que fornece recursos de tratamento de falhas transitórias e resiliência. Você pode implementar esses recursos facilmente Aplicando políticas de Polly como repetição, disjuntor, isolamento Bulkhead, tempo limite e de Fallback. Polly tem como alvo o .NET 4. x e padrão do .NET versão 1.0 (que dá suporte ao .NET Core).
+A Polly é uma biblioteca .NET que fornece resiliência e recursos de tratamento de falhas temporárias. É possível implementar esses recursos facilmente aplicando políticas da Polly como Nova tentativa, Disjuntor, Isolamento bulkhead, Tempo limite e Fallback. A Polly direciona o .NET 4. x e o .NET Standard versão 1.0 (compatível com o .NET Core).
 
-A política de repetição em Polly é a abordagem usada em eShopOnContainers durante a implementação de novas tentativas HTTP. Você pode implementar uma interface para que você pode injetar funcionalidade HttpClient padrão ou uma versão resiliente HttpClient usando Polly, dependendo de qual configuração de política de repetição que deseja usar.
+A política de repetição na Polly é a abordagem usada em eShopOnContainers ao implementar novas tentativas HTTP. É possível implementar uma interface para poder injetar funcionalidade HttpClient padrão ou uma versão resiliente de HttpClient que usa a Polly, dependendo de qual configuração de política de repetição você deseja usar.
 
-O exemplo a seguir mostra a interface implementada no eShopOnContainers.
+O exemplo a seguir mostra a interface implementada em eShopOnContainers.
 
 ```csharp
 public interface IHttpClient
@@ -41,7 +44,7 @@ public interface IHttpClient
 }
 ```
 
-Se você não deseja usar um mecanismo flexível, como quando você estiver desenvolvendo ou abordagens mais simples de teste, você pode usar a implementação padrão. O código a seguir mostra as solicitações de permissão de implementação padrão do HttpClient com tokens de autenticação como um caso opcional.
+Será possível usar a implementação padrão se você não desejar usar um mecanismo resiliente, como quando você está desenvolvendo ou testando abordagens mais simples. O código a seguir mostra a implementação HttpClient padrão que permite solicitações com tokens de autenticação como um caso opcional.
 
 ```csharp
 public class StandardHttpClient : IHttpClient
@@ -76,7 +79,7 @@ public class StandardHttpClient : IHttpClient
         // Rest of the code and other Http methods ...
 ```
 
-A implementação interessante é codificar classe outro, de forma semelhante, mas usando Polly para implementar os mecanismos resilientes que você deseja usar, no exemplo a seguir, novas tentativas com retirada exponencial.
+A implementação interessante é codificar outra classe semelhante, mas usando a Polly para implementar os mecanismos resilientes que você deseja usar — no exemplo a seguir, novas tentativas com retirada exponencial.
 
 ```csharp
 public class ResilientHttpClient : IHttpClient
@@ -118,11 +121,11 @@ public class ResilientHttpClient : IHttpClient
 }
 ```
 
-Com Polly, você deve definir uma política de repetição com o número de repetições, a configuração de retirada exponencial e as ações a serem tomadas quando há uma exceção de HTTP, como registrar em log o erro. Nesse caso, a política é configurada para que ele tentará o número de vezes especificado ao registrar os tipos no contêiner IoC. Por causa da configuração de retirada exponencial, sempre que o código detecta uma exceção de HttpRequest, tentar novamente a solicitação Http após aguardar um período de tempo que aumenta exponencialmente, dependendo de como a política foi configurada.
+Com a Polly, você define uma política de repetição com o número de novas tentativas, a configuração de retirada exponencial e as ações a serem executadas quando há uma exceção de HTTP, como registrar em log o erro. Nesse caso, a política é configurada, portanto, ela tentará o número de vezes especificado ao registrar os tipos no contêiner IoC. Por causa da configuração de retirada exponencial, sempre que o código detecta uma exceção HttpRequest, ele tenta novamente a solicitação Http após aguardar um período de tempo que aumenta exponencialmente dependendo de como a política foi configurada.
 
-O método importante é HttpInvoker, que faz com que as solicitações HTTP em toda esta classe de utilitário. Que método é executado internamente a solicitação HTTP com \_policyWrapper.ExecuteAsync, que leva em conta a política de repetição.
+O método importante é HttpInvoker, que é o que cria solicitações HTTP em toda esta classe de utilitário. Esse método executa internamente a solicitação HTTP com \_policyWrapper.ExecuteAsync, que leva em consideração a política de repetição.
 
-EShopOnContainers você especifica políticas Polly ao registrar os tipos no contêiner IoC, como no código a seguir do [aplicativo da web MVC no startup.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Web/WebMVC/Startup.cs) classe.
+No eShopOnContainers, você especifica políticas Polly ao registrar os tipos no contêiner IoC, como no código a seguir da classe [aplicativo Web MVC no startup.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Web/WebMVC/Startup.cs).
 
 ```csharp
 // Startup.cs class
@@ -141,9 +144,9 @@ else
 }
 ```
 
-Observe que os objetos IHttpClient são instanciados como singleton em vez de como transitório para que as conexões TCP são usadas com eficiência pelo serviço e [um problema com soquetes](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/) não ocorrerá.
+Observe que uma instância dos objetos IHttpClient é criada como singleton, em vez de como temporária para que as conexões TCP sejam usadas com eficiência pelo serviço e [um problema com soquetes](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/) não ocorrerá.
 
-Mas o ponto importante sobre resiliência que você aplique a política Polly WaitAndRetryAsync em ResilientHttpClientFactory no método CreateResilientHttpClient, conforme mostrado no código a seguir:
+Mas o ponto importante sobre a resiliência é que você aplique a política WaitAndRetryAsync da Polly dentro de ResilientHttpClientFactory no método CreateResilientHttpClient, conforme mostrado no código a seguir:
 
 ```csharp
 public ResilientHttpClient CreateResilientHttpClient()
@@ -174,4 +177,4 @@ private Policy[] CreatePolicies()
 
 
 >[!div class="step-by-step"]
-[Anterior] (implement-custom-http-call-retries-exponential-backoff.md) [Avançar] (implementar-circuito-separador-pattern.md)
+[Anterior] (implement-custom-http-call-retries-exponential-backoff.md) [Próximo] (implement-circuit-breaker-pattern.md)

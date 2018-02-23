@@ -1,43 +1,46 @@
 ---
-title: "Seedwork (reutilizáveis classes e interfaces base para o seu modelo de domínio)"
-description: "Arquitetura de Microservices .NET para aplicativos .NET em contêineres | Seedwork (reutilizáveis classes e interfaces base para o seu modelo de domínio)"
+title: "Seedwork (classes e interfaces base reutilizáveis para seu modelo de domínio)"
+description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Seedwork (classes e interfaces base reutilizáveis para seu modelo de domínio)"
 keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 17602d94ea167997389a77f0d2358326258a8219
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: aba336676a558f50a2669eb3ca096effb8387916
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (reutilizáveis classes e interfaces base para o seu modelo de domínio)
+# <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (classes e interfaces base reutilizáveis para seu modelo de domínio)
 
-A pasta de solução contém um *SeedWork* pasta. O *SeedWork* pasta contém classes base personalizadas que você pode usar como base para suas entidades de domínio e os objetos de valor. Use essas classes base para que você não tem código redundante na classe de objeto de cada domínio. A pasta para esses tipos de classes é chamada *SeedWork* e não algo como *Framework*. Ele é chamado *SeedWork* porque a pasta contém apenas um pequeno subconjunto de classes reutilizáveis que realmente não pode ser considerada uma estrutura. *Seedwork* é um termo introduzido por [difusões de Michael](http://www.artima.com/forums/flat.jsp?forum=106&thread=8826) e popularizada por [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html) , mas você também pode nomear essa pasta comum, SharedKernel, ou semelhantes.
+A pasta de solução contém uma pasta *SeedWork*. A pasta *SeedWork* contém classes base personalizadas que podem ser usadas como uma base para suas entidades de domínio e objetos de valor. Use essas classes base para que você não tenha código redundante na classe de objeto de cada domínio. A pasta para esses tipos de classes é chamada *SeedWork* e não algo como *Framework*. Ela é chamada *SeedWork*, porque a pasta contém apenas um pequeno subconjunto de classes reutilizáveis que realmente não podem ser consideradas uma estrutura. *Seedwork* é um termo introduzido por [Michael Feathers](http://www.artima.com/forums/flat.jsp?forum=106&thread=8826) e popularizado por [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html), mas você também pode nomear essa pasta Common, SharedKernel, ou semelhantes.
 
-Figura 9-12 mostra as classes que formam o seedwork do modelo de domínio em microsserviço a ordenação. Ele tem algumas classes de base personalizadas como entidade, ValueObject e a enumeração, além de algumas interfaces. Essas interfaces (IRepository e IUnitOfWork) informam a camada de infraestrutura sobre o que precisa ser implementado. Essas interfaces também são usadas por meio de injeção de dependência de camada de aplicativo.
+A Figura 9-12 mostra as classes que formam o seedwork do modelo de domínio no microsserviço de ordenação. Ele tem algumas classes base personalizadas como Entity, ValueObject e Enumeration, além de algumas interfaces. Essas interfaces (IRepository e IUnitOfWork) informam a camada de infraestrutura sobre o que precisa ser implementado. Essas interfaces também são usadas por meio de Injeção de dependência da camada de aplicativo.
 
 ![](./media/image13.PNG)
 
-**Figura 9-12**. Um exemplo de conjunto de interfaces e classes base do modelo de domínio "seedwork"
+**Figura 9-12**. Um exemplo do conjunto de interfaces e de classes base "seedwork" do modelo de domínio
 
-Esse é o tipo da reutilização de copiar e colar que muitos desenvolvedores compartilham entre projetos, não uma estrutura formal. Você pode ter seedworks em qualquer camada ou na biblioteca. No entanto, se o conjunto de classes e interfaces obtém suficientemente grande, convém criar uma biblioteca de classe individual.
+Esse é o tipo de reutilização de copiar e colar que muitos desenvolvedores compartilham entre projetos, não uma estrutura formal. É possível ter seedworks em qualquer camada ou biblioteca. No entanto, se o conjunto de classes e interfaces ficar grande o bastante, crie uma biblioteca de classes individual.
 
-## <a name="the-custom-entity-base-class"></a>A classe base de entidade personalizada
+## <a name="the-custom-entity-base-class"></a>A classe base Entity personalizada
 
-O código a seguir é um exemplo de uma classe base da entidade em que você pode colocar o código que pode ser usado da mesma forma, qualquer entidade de domínio, como a ID de entidade, [operadores de igualdade](https://msdn.microsoft.com/en-us/library/c35t2ffz.aspx), etc.
+O código a seguir é um exemplo de uma classe base Entity em que é possível inserir o código que pode ser usado da mesma maneira por qualquer entidade de domínio, como a ID da entidade, [operadores de igualdade](/cpp/cpp/equality-operators-equal-equal-and-exclpt-equal), uma lista de eventos de domínio por entidade, etc.
 
 ```csharp
-// ENTITY FRAMEWORK CORE 1.1
+// COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)
 public abstract class Entity
 {
     int? _requestedHashCode;
-    int _Id;
-
-    public virtual int Id
+    int _Id;    
+    private List<INotification> _domainEvents;
+    public virtual int Id 
     {
         get
         {
@@ -47,6 +50,18 @@ public abstract class Entity
         {
             _Id = value;
         }
+    }
+
+    public List<INotification> DomainEvents => _domainEvents;        
+    public void AddDomainEvent(INotification eventItem)
+    {
+        _domainEvents = _domainEvents ?? new List<INotification>();
+        _domainEvents.Add(eventItem);
+    }
+    public void RemoveDomainEvent(INotification eventItem)
+    {
+        if (_domainEvents is null) return;
+        _domainEvents.Remove(eventItem);
     }
 
     public bool IsTransient()
@@ -68,13 +83,13 @@ public abstract class Entity
         else
             return item.Id == this.Id;
     }
-  
+
     public override int GetHashCode()
     {
         if (!IsTransient())
         {
             if (!_requestedHashCode.HasValue)
-                _requestedHashCode = this.Id.GetHashCode() \^ 31;
+                _requestedHashCode = this.Id.GetHashCode() ^ 31; 
             // XOR for random distribution. See:
             // http://blogs.msdn.com/b/ericlippert/archive/2011/02/28/guidelines-and-rules-for-gethashcode.aspx
             return _requestedHashCode.Value;
@@ -82,7 +97,6 @@ public abstract class Entity
         else
             return base.GetHashCode();
     }
-
     public static bool operator ==(Entity left, Entity right)
     {
         if (Object.Equals(left, null))
@@ -90,7 +104,6 @@ public abstract class Entity
         else
             return left.Equals(right);
     }
-
     public static bool operator !=(Entity left, Entity right)
     {
         return !(left == right);
@@ -98,22 +111,32 @@ public abstract class Entity
 }
 ```
 
+O código anterior que usa uma lista de eventos de domínio por entidade será explicado nas próximas seções ao abordar eventos de domínio. 
+
 ## <a name="repository-contracts-interfaces-in-the-domain-model-layer"></a>Contratos de repositório (interfaces) na camada de modelo de domínio
 
-Contratos de repositório são simplesmente interfaces .NET que expressa os requisitos do contrato dos repositórios a ser usado para cada agregação. Os repositórios, com código EF principal ou quaisquer outras dependências de infra-estrutura e código, não devem ser implementados no modelo de domínio. os repositórios só devem implementar as interfaces que você definir.
+Os contratos de repositório são simplesmente interfaces .NET que expressam os requisitos do contrato dos repositórios a serem usados para cada agregação. 
 
-Um padrão relacionado a essa prática (colocando as interfaces do repositório na camada de modelo de domínio) é o padrão de Interface separada. Como [explicado](http://www.martinfowler.com/eaaCatalog/separatedInterface.html) por Martin Fowler "Interface separados de usar para definir uma interface em um pacote, mas implementá-la em outro. Dessa forma um cliente que precisa de dependência para a interface pode ser completamente ciente da implementação."
+Os repositórios em si, com código do EF Core ou quaisquer outras dependências de infraestrutura e código (LINQ, SQL, etc.), não devem ser implementados no modelo de domínio; os repositórios só deverão implementar as interfaces que você definir. 
 
-Seguindo o padrão de Interface separada permite que a camada de aplicativo (nesse caso, o projeto de API da Web para o microsserviço) têm uma dependência nos requisitos definidos no modelo de domínio, mas não uma dependência direta para a infraestrutura/persistência camada. Além disso, você pode usar a injeção de dependência para isolar a implementação, o que é implementada na infraestrutura / camada de persistência usando repositórios.
+Um padrão relacionado a essa prática (inserir as interfaces de repositório na camada do modelo de domínio) é o padrão Interface separada. Como [explicado](http://www.martinfowler.com/eaaCatalog/separatedInterface.html) por Martin Fowler "Use a Interface separada para definir uma interface em um pacote, mas a implemente em outro. Dessa forma, um cliente que precisa da dependência com a interface pode não estar completamente ciente da implementação."
 
-Por exemplo, o exemplo a seguir com a interface IOrderRepository define as operações que a classe OrderRepository precisará implementar na camada de infraestrutura. Na implementação atual do aplicativo, o código precisa apenas adicionar a ordem para o banco de dados, desde que as consultas são divisão seguinte que abordagem CQS e atualizações para pedidos não são implementadas.
+Seguir o padrão Interface separada permite que a camada de aplicativo (nesse caso, o projeto da API Web para o microsserviço) tenha uma dependência nos requisitos definidos no modelo de domínio, mas não uma dependência direta com a camada de infraestrutura/persistência. Além disso, é possível usar a Injeção de dependência para isolar a implementação, o que é implementado na camada de infraestrutura/persistência que usam repositórios.
+
+Por exemplo, o exemplo a seguir com a interface IOrderRepository define quais operações a classe OrderRepository precisará implementar na camada de infraestrutura. Na implementação atual do aplicativo, o código precisa apenas adicionar ou atualizar ordens no banco de dados, uma vez que as consultas são divididas seguindo a abordagem CQRS simplificada.
 
 ```csharp
+// Defined at IOrderRepository.cs
 public interface IOrderRepository : IRepository<Order>
 {
     Order Add(Order order);
+        
+    void Update(Order order);
+
+    Task<Order> GetAsync(int orderId);
 }
 
+// Defined at IRepository.cs (Part of the Domain Seedwork)
 public interface IRepository<T> where T : IAggregateRoot
 {
     IUnitOfWork UnitOfWork { get; }
@@ -122,9 +145,9 @@ public interface IRepository<T> where T : IAggregateRoot
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
--   **Martin Fowler. Interface separada. ** 
-     [ *http://www.martinfowler.com/eaaCatalog/separatedInterface.html*](http://www.martinfowler.com/eaaCatalog/separatedInterface.html%20)
+-   **Martin Fowler. Interface separada.**
+    [*http://www.martinfowler.com/eaaCatalog/separatedInterface.html*](http://www.martinfowler.com/eaaCatalog/separatedInterface.html)
 
 
 >[!div class="step-by-step"]
-[Anterior] (net-core-microsserviço-domínio-model.md) [Avançar] (implementar-valor-objects.md)
+[Anterior] (net-core-microservice-domain-model.md) [Próximo] (implement-value-objects.md)

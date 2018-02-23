@@ -1,6 +1,6 @@
 ---
-title: "Estratégias para lidar com falhas parciais"
-description: "Arquitetura de Microservices .NET para aplicativos .NET em contêineres | Estratégias para lidar com falhas parciais"
+title: "Estratégias para tratar falhas parciais"
+description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Estratégias para tratar falhas parciais"
 keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,40 +8,43 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: ff3bed530b13a9b1822c7cccf5a4d47df6fc6239
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: baeeb47dde77ceaa461214f55482d2312d67ccec
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="strategies-for-handling-partial-failure"></a>Estratégias para lidar com falhas parciais
+# <a name="strategies-for-handling-partial-failure"></a>Estratégias para tratar falhas parciais
 
-Estratégias para lidar com falhas parciais incluem o seguinte.
+As estratégias para lidar com falhas parciais incluem o seguinte.
 
-**Usar a comunicação assíncrona (por exemplo, comunicação baseada em mensagens) em microservices interno**. É altamente recomendável não criar longas cadeias de chamadas síncronas de HTTP entre o microservices interno porque esse design incorreto eventualmente se tornará a principal causa de interrupções incorretas. Ao contrário, exceto para as front-end comunicações entre os aplicativos cliente e o primeiro nível de microservices ou refinada Gateways de API, é recomendável usar apenas (com base em mensagem) comunicação assíncrona uma vez após a solicitação inicial / ciclo de resposta, entre o microservices interno. Consistência eventual e arquiteturas orientadas por eventos ajudarão para minimizar os efeitos em cascata. Essas abordagens impõem um nível mais alto de microsserviço autonomia e, portanto, evitar o problema mencionado aqui.
+**Usar a comunicação assíncrona (por exemplo, comunicação baseada em mensagens) entre microsserviços internos**. É altamente recomendável não criar longas cadeias de chamadas HTTP síncronas entre os microsserviços internos, porque esse design incorreto eventualmente se tornará a principal causa de interrupções incorretas. Pelo contrário, exceto pelas comunicações de front-end entre os aplicativos cliente e o primeiro nível de microsserviços ou Gateways de API refinados, é recomendável usar apenas comunicação assíncrona (com base em mensagem) uma vez após o ciclo de resposta/solicitação inicial, entre os microsserviços internos. Consistência eventual e arquiteturas orientadas a eventos ajudarão a minimizar os efeitos de ondulação. Essas abordagens impõem um nível mais alto de autonomia do microsserviço e, portanto, previnem contra o problema observado aqui.
 
-**Use as repetições com retirada exponencial**. Essa técnica ajuda a evitar curto e tentativas de falhas intermitentes realizando a chamada de um determinado número de vezes, caso o serviço não estava disponível apenas por um curto período. Isso pode ocorrer devido a problemas de rede intermitente ou quando um contêiner de microsserviço/é movido para outro nó em um cluster. No entanto, se essas tentativas não foram projetadas corretamente com disjuntores, ele pode aggravate o efeito de ondulação, causando, por fim, até mesmo um [dos (negação de serviço)](https://en.wikipedia.org/wiki/Denial-of-service_attack).
+**Usar novas tentativas com retirada exponencial**. Essa técnica ajuda a evitar falhas curtas e intermitentes executando novas tentativas de chamada um determinado número de vezes, caso o serviço não tivesse estado disponível apenas por um curto período de tempo. Isso pode ocorrer devido a problemas de rede intermitentes ou quando um microsserviço/contêiner é movido para um nó diferente em um cluster. No entanto, se essas novas tentativas não foram criadas corretamente com disjuntores, os efeitos de ondulação poderão ser agravados e, em último caso, poderá até haver uma [DoS (Negação de Serviço)](https://en.wikipedia.org/wiki/Denial-of-service_attack).
 
-**Solução alternativa tempos limite de rede**. Em geral, os clientes devem ser criados para não ser bloqueado indefinidamente e para sempre usar tempos limite ao aguardar uma resposta. Usando tempos limites garante que recursos nunca são associados indefinidamente.
+**Solução alternativa para tempos limite de rede**. Em geral, os clientes devem ser criados para não serem bloqueados indefinidamente e para sempre usar tempos limite ao aguardar uma resposta. Usar tempos limite garante que os recursos nunca fiquem bloqueados indefinidamente.
 
-**Use o padrão de disjuntor**. Nessa abordagem, o processo de cliente rastreia o número de solicitações com falha. Se a taxa de erros exceder um limite configurado, um viagens "disjuntor" para que outras tentativas falham imediatamente. (Se um grande número de solicitações estiverem falhando, que sugere o serviço está indisponível e enviar solicitações é inútil.) Após um período de tempo limite, o cliente deve tentar novamente e se as novas solicitações forem bem-sucedidas, feche o disjuntor.
+**Usar o padrão de disjuntor**. Nessa abordagem, o processo do cliente rastreia o número de solicitações com falha. Se a taxa de erro exceder um limite configurado, um "disjuntor" viajará para que outras tentativas falhem imediatamente. (Se um alto número de solicitações estão apresentando falha, isso sugere que o serviço não está disponível e que enviar solicitações é inútil.) Após um período de tempo limite, o cliente deverá tentar novamente e, se as novas solicitações forem bem-sucedidas, feche o disjuntor.
 
-**Fornecer fallbacks**. Nessa abordagem, o processo de cliente executa a lógica de fallback quando uma solicitação falhar, como retornar dados armazenados em cache ou um valor padrão. Isso é uma abordagem adequada para consultas e é mais complexo para as atualizações ou comandos.
+**Fornecer fallbacks**. Nessa abordagem, o processo de cliente executa a lógica de fallback quando uma solicitação falha, como retornar dados armazenados em cache ou um valor padrão. Essa é uma abordagem adequada para consultas e é mais complexa para atualizações ou comandos.
 
-**Limitar o número de solicitações em fila**. Os clientes também devem impor um limite superior no número de solicitações pendentes que microsserviço um cliente pode enviar para um serviço específico. Se o limite for atingido, ele provavelmente será ineficaz fazer solicitações adicionais e as tentativas devem falhar imediatamente. Em termos de implementação, a Polly [Bulkhead isolamento](https://github.com/App-vNext/Polly/wiki/Bulkhead) política pode ser usada para atenderem a esse requisito. Essa abordagem é essencialmente um acelerador de paralelização com [SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim?view=netcore-1.1) como a implementação. Ele também permite que uma "fila" fora de bulkhead. Você proativamente pode lançar uma carga excessiva, mesmo antes da execução (por exemplo, porque a capacidade é considerada completa). Isso torna sua resposta a determinados cenários de falha mais rápido do que um disjuntor seria, desde que o disjuntor aguarda até que as falhas. O objeto BulkheadPolicy Polly expõe quanto o bulkhead fila, e são ofertas eventos no estouro assim também podem ser usados para a unidade de escala horizontal automatizada.
+**Limitar o número de solicitações na fila**. Os clientes também devem impor um limite superior no número de solicitações pendentes que um microsserviço cliente pode enviar para um serviço específico. Se o limite tiver sido atingido, provavelmente será ineficaz fazer solicitações adicionais, e essas tentativas devem falhar imediatamente. Em termos de implementação, a política [Isolamento bulkhead](https://github.com/App-vNext/Polly/wiki/Bulkhead) da Polly pode ser usada para atender a esse requisito. Essa abordagem é essencialmente uma restrição de paralelização com [SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim?view=netcore-1.1) como a implementação. Ela também permite uma "fila" fora do bulkhead. É possível lançar proativamente uma carga excessiva mesmo antes da execução (por exemplo, devido à capacidade ser considerada cheia). Isso torna sua resposta a determinados cenários de falha mais rápida do que um disjuntor seria, uma vez que o disjuntor aguarda as falhas. O objeto BulkheadPolicy na Polly expõe o quão cheios o bulkhead e a fila estão e oferece eventos em estouro para que também possam ser usados para promover a colocação em escala horizontal automatizada.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
 -   **Padrões de resiliência**
     [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
 
--   **Adição de resiliência e otimizar o desempenho**
-    [*https://msdn.microsoft.com/en-us/library/jj591574.aspx*](https://msdn.microsoft.com/en-us/library/jj591574.aspx)
+-   **Adicionando resiliência e otimizando o desempenho**
+    [*https://msdn.microsoft.com/library/jj591574.aspx*](https://msdn.microsoft.com/library/jj591574.aspx)
 
--   **Bulkhead.** Repositório do GitHub. Implementação de política Polly. \
-    [*https://GitHub.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
+-   **Bulkhead.** Repositório do GitHub. Implementação com a política Polly.\
+    [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
 
--   **Desenvolvendo aplicativos resilientes do Azure**
+-   **Desenvolvendo aplicativos resilientes para o Azure**
     [*https://docs.microsoft.com/azure/architecture/resiliency/*](https://docs.microsoft.com/azure/architecture/resiliency/)
 
 -   **Tratamento de falhas transitórias**
@@ -49,4 +52,4 @@ Estratégias para lidar com falhas parciais incluem o seguinte.
 
 
 >[!div class="step-by-step"]
-[Anterior] (identificador-parcial-failure.md) [Avançar] (implementar-tentativas-exponencial-backoff.md)
+[Anterior] (handle-partial-failure.md) [Próximo] (implement-retries-exponential-backoff.md)

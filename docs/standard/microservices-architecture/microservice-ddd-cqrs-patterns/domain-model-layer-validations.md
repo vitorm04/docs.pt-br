@@ -1,6 +1,6 @@
 ---
-title: "Criando validações na camada de modelo de domínio"
-description: "Arquitetura de Microservices .NET para aplicativos .NET em contêineres | Criando validações na camada de modelo de domínio"
+title: "Projetando validações na camada de modelo de domínio"
+description: "Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Criando validações na camada de modelo de domínio"
 keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,29 +8,32 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: f4870d0568c3539f296bcb3f577291cb0250cfca
-ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e7a111ce20039f8c87d3c3d63efdeaf38a4e1e96
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="designing-validations-in-the-domain-model-layer"></a>Criando validações na camada de modelo de domínio
+# <a name="designing-validations-in-the-domain-model-layer"></a>Projetando validações na camada de modelo de domínio
 
-No DDD, as regras de validação podem ser consideradas como invariáveis. A principal responsabilidade de uma agregação é impor invariáveis entre as alterações de estado para todas as entidades que agregam.
+Em DDD, as regras de validação podem ser consideradas invariáveis. A principal responsabilidade de uma agregação é impor invariáveis entre as alterações de estado para todas as entidades dentro daquela agregação.
 
-Entidades de domínio devem ser sempre entidades válidas. Há um determinado número de constantes para um objeto que deve ser verdadeiro. Por exemplo, um objeto de item do pedido sempre deve ter uma quantidade que deve ser um inteiro positivo, além de um nome de artigo e o preço. Portanto, a imposição de invariáveis é de responsabilidade das entidades de domínio (especialmente da agregação raiz) e um objeto de entidade não deve ser capaz de existir sem que sejam válidos. Regras invariáveis simplesmente são expressos como contratos e exceções ou notificações são geradas quando eles forem violados.
+Entidades de domínio devem ser sempre entidades válidas. Existe um determinado número de invariáveis para um objeto que devem ser sempre verdadeiras. Por exemplo, um objeto de item do pedido sempre deve ter uma quantidade que deve ser um inteiro positivo, além de um nome de artigo e preço. Portanto, a imposição de invariáveis é de responsabilidade das entidades de domínio (especialmente da raiz de agregação) e um objeto de entidade não deve ser capaz de existir sem ser válido. Regras invariáveis simplesmente são expressas como contratos e exceções ou notificações são geradas quando elas são violadas.
 
-O raciocínio por trás disso é que vários bugs ocorrerem porque os objetos em um estado nunca deveria ter sido incluído. Esta é uma boa explicação de Greg Young em um [discussão on-line](http://jeffreypalermo.com/blog/the-fallacy-of-the-always-valid-entity/):
+O raciocínio por trás disso é que vários bugs ocorrerem porque os objetos estão em um estado em que nunca deveriam ter ficado. A seguir está uma boa explicação de Greg Young em uma [discussão online](http://jeffreypalermo.com/blog/the-fallacy-of-the-always-valid-entity/):
 
-Vamos propor que agora temos uma SendUserCreationEmailService que leva a um perfil de usuário... como pode é racionalizar no serviço que o nome não é nulo? Podemos check-novamente? Ou mais provável... você apenas não se preocupe para verificar e "esperar o melhor" — você espera que alguém se preocupou em validá-lo antes de enviá-lo para você. É claro que, usando TDD dos testes primeiro, deve gravar é que, se enviar um cliente com um nome nulo que deve gerar um erro. Mas, quando começarmos a gravar esses tipos de testes repetidamente sabemos... "aguardar se podemos nunca nome seja nulo não temos todos esses testes"
+Vamos propor que agora temos um SendUserCreationEmailService que usa um UserProfile..., como podemos racionalizar nesse serviço que o Nome não é nulo? Podemos verificar novamente? Ou, mais provável… você apenas não se preocupa em verificar e "espera pelo melhor": você espera que alguém tenha se preocupado em validá-lo antes de enviá-lo a você. É claro que, usando TDD, um dos primeiros testes que devemos escrever é que, se eu enviar um cliente com um nome nulo, isso deverá gerar um erro. Porém, quando começarmos a escrever esses tipos de testes repetidamente, percebemos… "espere, se nunca tivéssemos permitido que o nome se tornasse nulo, não teríamos todos esses testes"
 
 ## <a name="implementing-validations-in-the-domain-model-layer"></a>Implementando validações na camada de modelo de domínio
 
-Validações são normalmente implementadas em construtores de entidade de domínio ou em métodos que podem atualizar a entidade. Há várias maneiras de implementar validações, como verificação de dados e aumentando exceções se a validação falhar. Também há padrões mais avançados, como usando o padrão de especificação para validações e o padrão de notificação para retornar uma coleção de erros em vez de retornar uma exceção para cada validação conforme ela ocorre.
+As validações normalmente são implementadas em construtores de entidade de domínio ou em métodos que podem atualizar a entidade. Existem várias maneiras de implementar validações, como verificar dados e aumentar exceções se a validação falhar. Também há padrões mais avançados, como usar o padrão de Especificação para validações e o padrão de Notificação para retornar uma coleção de erros, em vez de retornar uma exceção para cada validação conforme ela ocorre.
 
-### <a name="validating-conditions-and-throwing-exceptions"></a>Validando condições e lançando exceções
+### <a name="validating-conditions-and-throwing-exceptions"></a>Validando condições e gerando exceções
 
-O exemplo de código a seguir mostra a abordagem mais simples de validação em uma entidade de domínio, gerando uma exceção. A tabela de referências no final desta seção, você encontrará links para implementações mais avançadas com base em padrões que discutimos anteriormente.
+O exemplo de código a seguir mostra a abordagem mais simples de validação em uma entidade de domínio gerando uma exceção. Na tabela de referências no final desta seção, você encontrará links para implementações mais avançadas com base nos padrões que discutimos anteriormente.
 
 ```csharp
 public void SetAddress(Address address)
@@ -39,7 +42,7 @@ public void SetAddress(Address address)
 }
 ```
 
-Um exemplo melhor seria demonstram a necessidade de garantir que o estado interno não foi alterado ou que todas as mutações para um método ocorreram. Por exemplo, a seguinte implementação deixará o objeto em um estado inválido:
+Um exemplo melhor seria demonstrar a necessidade de garantir que o estado interno não tenha mudado ou que todas as mutações para um método ocorreram. Por exemplo, a implementação a seguir deixará o objeto em um estado inválido:
 
 ```csharp
 public void SetAddress(string line1, string line2,
@@ -52,15 +55,15 @@ public void SetAddress(string line1, string line2,
 }
 ```
 
-Se o valor do estado é inválido, a primeira linha de endereço e cidade já tem sido alterados. Que pode tornar o endereço inválido.
+Se o valor do estado for inválido, a primeira linha de endereço e a cidade já terão sido alteradas. Isso pode tornar o endereço inválido.
 
-Uma abordagem semelhante pode ser usada no construtor da entidade, gerando uma exceção para certificar-se de que a entidade é válido quando ele é criado.
+Uma abordagem semelhante pode ser usada no construtor da entidade, gerando uma exceção para garantir que a entidade seja válida quando for criada.
 
 ### <a name="using-validation-attributes-in-the-model-based-on-data-annotations"></a>Usando atributos de validação no modelo com base em anotações de dados
 
-Outra abordagem é usar os atributos de validação com base em anotações de dados. Atributos de validação fornecem uma maneira de configurar a validação do modelo, que é semelhante conceitualmente a validação em campos em tabelas de banco de dados. Isso inclui as restrições, como a atribuição de tipos de dados ou os campos obrigatórios. Outros tipos de validação incluem a aplicação de padrões de dados para impor regras de negócio, como um número de cartão de crédito, número de telefone ou endereço de email. Atributos de validação tornam mais fácil aplicar os requisitos.
+Outra abordagem é usar os atributos de validação com base em anotações de dados. Os atributos de validação oferecem uma maneira de configurar a validação do modelo; isso é conceitualmente semelhante à validação em campos de tabelas de banco de dados. Isso inclui restrições, como atribuição de tipos de dados ou campos obrigatórios. Outros tipos de validação incluem a aplicação de padrões a dados para impor regras de negócio, como um número de cartão de crédito, número de telefone ou endereço de email. Atributos de validação tornam fácil impor os requisitos.
 
-No entanto, conforme mostrado no código a seguir, essa abordagem pode ser muito intrusiva em um modelo DDD, porque ele tem uma dependência ModelState de Microsoft.AspNetCore.Mvc.ModelState, que deve ser chamado de seus controladores MVC. Ocorre a validação do modelo antes de cada ação de controlador que está sendo invocada, e é responsabilidade do método do controlador para inspecionar o resultado da chamada ModelState e reagir de forma adequada. A decisão de usá-lo depende de como acoplado você quer que o modelo com que a infraestrutura.
+No entanto, conforme mostra o código a seguir, essa abordagem pode ser muito invasiva em um modelo DDD, porque tem uma dependência ModelState.IsValid de Microsoft.AspNetCore.Mvc.ModelState, que você deve chamar de seus controladores MVC. A validação do modelo ocorre antes de cada ação de controlador ser invocada, e é responsabilidade do método do controlador inspecionar o resultado da chamada ModelState.IsValid e reagir de maneira adequada. A decisão de usá-lo depende de quão firmemente acoplado você deseja que o modelo esteja àquela infraestrutura.
 
 ```csharp
 using System.ComponentModel.DataAnnotations;
@@ -90,25 +93,25 @@ public class Product : Entity
 }
 ```
 
-No entanto, de um ponto de vista DDD, o modelo de domínio é melhor mantido lean com o uso de exceções em métodos de comportamento da entidade ou por implementar os padrões de notificação e especificações para impor regras de validação. Estruturas de validação como anotações de dados no ASP.NET Core ou quaisquer outras estruturas de validação como FluentValidation realizar um requisito para invocar a estrutura de aplicativo. Por exemplo, ao chamar o método ModelState nas anotações de dados, você precisa chamar controladores do ASP.NET.
+No entanto, de um ponto de vista de DDD, o modelo de domínio é mantido mais enxuto com o uso de exceções em seus métodos de comportamento da entidade ou implementando os padrões de Especificação e Notificação para impor regras de validação. Estruturas de validação como anotações de dados no ASP.NET Core ou quaisquer outras estruturas de validação, como FluentValidation, têm um requisito de invocar a estrutura do aplicativo. Por exemplo, ao chamar o método ModelState.IsValid nas anotações de dados, você precisa invocar controladores do ASP.NET.
 
-Ele pode fazer sentido usar anotações de dados na camada de aplicativo em classes ViewModel (em vez de entidades de domínio) que aceita a entrada, para permitir a validação do modelo dentro da camada de interface do usuário. No entanto, isso não deve ser feito na exclusão de validação dentro do modelo de domínio.
+Pode fazer sentido usar anotações de dados na camada de aplicativo em classes ViewModel (em vez de entidades de domínio) que aceitem a entrada para permitir a validação do modelo na camada da interface do usuário. No entanto, isso não deve ser feito na exclusão de validação dentro do modelo de domínio.
 
-### <a name="validating-entities-by-implementing-the-specification-pattern-and-the-notification-pattern"></a>Validando entidades Implementando o padrão de especificação e o padrão de notificação
+### <a name="validating-entities-by-implementing-the-specification-pattern-and-the-notification-pattern"></a>Validando entidades implementando o padrão de Especificação e o padrão de Notificação
 
-Por fim, uma abordagem mais elaborada para implementar a validação no modelo de domínio está implementando o padrão de especificação em conjunto com o padrão de notificação, conforme explicado em alguns dos recursos adicionais listados posteriormente.
+Por fim, uma abordagem mais elaborada para implementar a validação no modelo de domínio é implementando o padrão de Especificação em conjunto com o padrão de Notificação, conforme explicado em alguns dos recursos adicionais listados posteriormente.
 
-Vale a pena mencionar que você também pode usar apenas um desses padrões — por exemplo, validação manual com instruções de controle, mas usando o padrão de notificação de pilha e retornar uma lista de erros de validação.
+Vale a pena mencionar que você também pode usar apenas um desses padrões — por exemplo, validação manual com instruções de controle, mas usando o padrão de Notificação para empilhar e retornar uma lista de erros de validação.
 
 ### <a name="using-deferred-validation-in-the-domain"></a>Usando a validação adiada no domínio
 
-Há várias abordagens para lidar com validações adiadas no domínio. Em seu livro [Implementing Domain-Driven Design](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577), Vaughn Vernon discute os na seção sobre a validação.
+Existem várias abordagens para lidar com validações adiadas no domínio. Em seu livro [Implementing Domain-Driven Design](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577) (Implementando design controlado por domínio), Vaughn Vernon discute isso na seção sobre a validação.
 
 ### <a name="two-step-validation"></a>Validação de duas etapas
 
-Considere também a validação de duas etapas. Use a validação de nível de campo em seu comando dados transferidos DTOs (objetos) e a validação de nível de domínio dentro de suas entidades. Você pode fazer isso, retornando um objeto de resultado em vez disso, exceções para tornar mais fácil de lidar com os erros de validação.
+Considere também a validação de duas etapas. Use a validação em nível de campo em seu comando de DTOs (Objetos de Transferência de Dados) e a validação em nível de domínio dentro de suas entidades. Você pode fazer isso retornando um objeto de resultado em vez de exceções para tornar mais fácil lidar com os erros de validação.
 
-Usando a validação de campo com anotações de dados, por exemplo, você não duplicar a definição de validação. A execução, no entanto, pode ser do lado do servidor e cliente no caso de DTOs (comandos e ViewModels, por exemplo).
+Usando a validação de campo com anotações de dados, por exemplo, você não duplica a definição de validação. A execução, no entanto, pode estar do lado do servidor e do lado do cliente no caso de DTOs (comandos e ViewModels, por exemplo).
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
@@ -118,21 +121,21 @@ Usando a validação de campo com anotações de dados, por exemplo, você não 
 -   **Rick Anderson. Adicionando validação**
     [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
--   **Martin Fowler. Substituindo Lançando exceções com notificação em validações**
+-   **Martin Fowler. Substituindo a geração de exceções por notificação em validações**
     [*https://martinfowler.com/articles/replaceThrowWithNotification.html*](https://martinfowler.com/articles/replaceThrowWithNotification.html)
 
--   **Especificação e padrões de notificação**
+-   **Specification and Notification Patterns (Padrões de especificação e de notificação)**
     [*https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns*](https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns)
 
--   **Lev Gorodinski. Validação no Design orientado a domínio (DDD)**
+-   **Lev Gorodinski. Validação em DDD (design controlado por domínio)**
     [*http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/*](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
 
--   **Colin tomada. Validação de modelo de domínio**
+-   **Colin Jack. Validação de modelo de domínio**
     [*http://colinjack.blogspot.com/2008/03/domain-model-validation.html*](http://colinjack.blogspot.com/2008/03/domain-model-validation.html)
 
--   **Jimmy Bogard. Validação em um mundo DDD**
+-   **Jimmy Bogard. Validação em um mundo de DDD**
     [*https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/*](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)
 
 
 >[!div class="step-by-step"]
-[Anterior] (enumeração-classes-over-enum-types.md) [Avançar] (validation.md do lado do cliente)
+[Anterior] (enumeration-classes-over-enum-types.md) [Próximo] (client-side-validation.md)

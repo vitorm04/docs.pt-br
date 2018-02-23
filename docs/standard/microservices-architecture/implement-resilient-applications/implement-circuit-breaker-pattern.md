@@ -1,36 +1,39 @@
 ---
 title: "Implementando o padrão de Disjuntor"
-description: "Arquitetura de Microservices .NET para aplicativos .NET em contêineres | Implementando o padrão de Disjuntor"
+description: "Arquitetura de Microsserviços do .NET para aplicativos .NET em contêineres | Implementando o padrão de Disjuntor"
 keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 11/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 2a629e25a7565aaba156f68cf06d9a24b6c2b8b0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5d7db6899068f84f9165022cfbf17767a75e7db9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="implementing-the-circuit-breaker-pattern"></a>Implementando o padrão de Disjuntor
 
-Conforme observado anteriormente, você deve tratar falhas que podem consumir uma quantidade variável de tempo de recuperação, como pode acontecer quando você tentar se conectar a um serviço remoto ou um recurso. Esse tipo de falha de tratamento pode melhorar a estabilidade e a resiliência de um aplicativo.
+Conforme observado anteriormente, você deve tratar falhas que podem consumir uma quantidade variável de tempo de recuperação, como pode acontecer quando você tenta se conectar a um serviço ou um recurso remoto. Lidar com esse tipo de falha pode melhorar a estabilidade e a resiliência de um aplicativo.
 
-Em um ambiente distribuído, chamadas para serviços e recursos remotos pode falhar devido a falhas transitórias, como conexões lentas de rede e o tempo limite, ou se os recursos estão sendo lenta ou estão temporariamente indisponíveis. Essas falhas geralmente corrigidos automaticamente após um curto período de tempo e um aplicativo em nuvem robusto deve estar preparado para lidar com eles por meio de uma estratégia de como o padrão de repetição.
+Em um ambiente distribuído, chamadas para serviços e recursos remotos poderão falhar devido a falhas transitórias, como conexões lentas de rede e tempos limites ou se os recursos estiverem lentos ou temporariamente não disponíveis. Essas falhas geralmente são corrigidas automaticamente após um curto período, e um aplicativo em nuvem robusto deve estar preparado para lidar com elas usando uma estratégia como o padrão de Novas Tentativas.
 
-No entanto, também pode haver situações em que as falhas são devido a eventos inesperados que podem levar muito mais tempo para corrigir. Essas falhas podem variar de severidade de uma perda parcial de conectividade para a falha completa de um serviço. Nessas situações, pode ser sem sentido para um aplicativo tentará continuamente uma operação que é improvável que seja bem-sucedida. Em vez disso, o aplicativo deve ser codificado para aceitar a operação falhou e lidar com falhas adequadamente.
+No entanto, também pode haver situações em que as falhas são devido a eventos inesperados que podem levar muito mais tempo para serem corrigidos. Essas falhas podem variar em termos de gravidade de uma perda parcial de conectividade até a falha completa de um serviço. Nessas situações, pode não ter sentido um aplicativo repetir continuamente uma operação que é improvável que seja bem-sucedida. Em vez disso, o aplicativo deve ser codificado para aceitar que a operação falhou e lidar com falhas adequadamente.
 
-O padrão de disjuntor tem uma finalidade diferente que o padrão de repetição. O padrão de repetição permite que um aplicativo repetir uma operação na expectativa de que a operação eventualmente será bem-sucedida. O padrão de disjuntor impede que um aplicativo executando uma operação que é provavelmente falharão. Um aplicativo pode combinar esses dois padrões usando o padrão de repetição para invocar uma operação por meio de um disjuntor. No entanto, a lógica de repetição deve ser sensível a qualquer exceção retornadas pelo Disjuntor, e ele deve abandonar tentativas de repetição se o disjuntor indica que uma falha não é transitória.
+O padrão de Disjuntor tem uma finalidade diferente que o padrão de Novas Tentativas. O padrão de Novas Tentativas permite que um aplicativo repita uma operação na expectativa de que a ela acabará sendo bem-sucedida. O padrão de Disjuntor impede que um aplicativo execute uma operação que é provavelmente falhará. Um aplicativo pode combinar esses dois padrões usando o padrão de Novas Tentativas para invocar uma operação por meio de um disjuntor. No entanto, a lógica de novas tentativas deve ser sensível a qualquer exceção retornada pelo disjuntor e deve abandonar tentativas de repetição se o disjuntor indica que uma falha não é transitória.
 
-## <a name="implementing-a-circuit-breaker-pattern-with-polly"></a>Implementar um padrão de disjuntor com Polly
+## <a name="implementing-a-circuit-breaker-pattern-with-polly"></a>Implementar um padrão de Disjuntor com Polly
 
-Como durante a implementação de novas tentativas, a abordagem recomendada para disjuntores é tirar proveito das comprovada bibliotecas .NET como Polly.
+Como durante a implementação de novas tentativas, a abordagem recomendada para disjuntores é aproveitar as comprovadas bibliotecas .NET, como Polly.
 
-O aplicativo de eShopOnContainers usa a política de disjuntor Polly durante a implementação de novas tentativas HTTP. Na verdade, o aplicativo se aplica a ambas as políticas para a classe de utilitário ResilientHttpClient. Sempre que você usar um objeto do tipo ResilientHttpClient solicitações HTTP (da eShopOnContainers), você aplicará os dois essas políticas, mas você pode adicionar políticas adicionais, muito.
+O aplicativo eShopOnContainers usa a política de Disjuntor do Polly durante a implementação de novas tentativas HTTP. Na verdade, o aplicativo se aplica a ambas as políticas para a classe de utilitários ResilientHttpClient. Sempre que você usar um objeto do tipo ResilientHttpClient para solicitações HTTP (da eShopOnContainers), estará aplicando essas duas políticas, mas poderá adicionar mais políticas também.
 
-A adição somente para o código usado para novas tentativas de chamada HTTP é o código em que a política de disjuntor é adicionar à lista de políticas para usar, conforme mostrado no final do código a seguir:
+Aqui, a única adição ao código usado para novas tentativas de chamada HTTP é o código em que você adiciona a política de Disjuntor à lista de políticas a usar, conforme mostrado no final do código a seguir:
 
 ```csharp
 public ResilientHttpClient CreateResilientHttpClient()
@@ -75,15 +78,15 @@ private Policy[] CreatePolicies()
 }
 ```
 
-O código adiciona uma política para o wrapper HTTP. Se a diretiva define um disjuntor é aberta quando o código detecta o número especificado de exceções consecutivos (exceções em uma linha), como passado no parâmetro exceptionsAllowedBeforeBreaking (5 neste caso). Quando o circuito está aberto, solicitações HTTP não funcionam, mas uma exceção é gerada.
+O código adiciona uma política ao wrapper HTTP. Essa política define um disjuntor que se abre quando o código detecta o número especificado de exceções consecutivas (exceções em sequência), conforme passado no parâmetro exceptionsAllowedBeforeBreaking (cinco, neste caso). Quando o circuito está aberto, as solicitações HTTP não funcionam, mas uma exceção é gerada.
 
-Disjuntores também deve ser usados para redirecionar solicitações para uma infraestrutura de fallback se você pode ter problemas em um recurso específico que é implantado em um ambiente diferente do que o aplicativo cliente ou serviço que está executando a chamada HTTP. Dessa forma, se houver uma interrupção no datacenter, que afeta apenas o microservices de back-end, mas não seus aplicativos de cliente, os aplicativos cliente podem redirecionar para os serviços de fallbacks. Polly está planejando uma nova política para automatizar esse procedimento [política de failover](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) cenário.
+Disjuntores também deverão ser usados para redirecionar solicitações para uma infraestrutura de fallback se puder ter problemas em um recurso específico implantado em um ambiente diferente do aplicativo cliente ou do serviço que está executando a chamada HTTP. Dessa forma, se houver uma interrupção no datacenter que afete apenas os microsserviços de back-end, mas não os aplicativos cliente, os aplicativos cliente poderão redirecionar para os serviços de fallback. O Polly está planejando uma nova política para automatizar esse cenário de [política de failover](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy).
 
-Obviamente, todos esses recursos são para casos em que você está gerenciando o failover de dentro do código do .NET, em vez de tê-la gerenciadas automaticamente para você pelo Azure, com transparência de local.
+Obviamente, todos esses recursos são para casos em que você está gerenciando o failover de dentro do código .NET, em vez de deixar que o Azure o gerencie automaticamente para você, com transparência de local.
 
 ## <a name="using-the-resilienthttpclient-utility-class-from-eshoponcontainers"></a>Usando a classe de utilitário ResilientHttpClient de eShopOnContainers
 
-Você pode usar a classe de utilitário ResilientHttpClient de forma semelhante de como usar a classe .NET HttpClient. No exemplo a seguir do aplicativo da web do MVC eShopOnContainers (a classe de agente OrderingService usada por OrderController), o objeto ResilientHttpClient é injetado pelo parâmetro httpClient do construtor. Em seguida, o objeto é usado para executar solicitações HTTP.
+Você pode usar a classe de utilitário ResilientHttpClient de modo semelhante a como usa a classe .NET HttpClient. No exemplo a seguir do aplicativo Web do MVC eShopOnContainers (a classe de agente OrderingService usada por OrderController), o objeto ResilientHttpClient é injetado pelo parâmetro httpClient do construtor. Então o objeto é usado para executar solicitações HTTP.
 
 ```csharp
 public class OrderingService : IOrderingService
@@ -134,90 +137,92 @@ public class OrderingService : IOrderingService
 }
 ```
 
-Sempre que o \_apiClient objeto de membro for usado, ele usa internamente a classe de invólucro com Polly policiesؙ — a política de repetição, a política de disjuntor e outra política que talvez você queira aplicar da coleção de políticas Polly.
+Sempre que o membro do objeto \_apiClient é usado, ele usa internamente a classe wrapper com políticas do Polly: a política de repetição, a política de Disjuntor e outra política que talvez você queira aplicar da coleção de políticas do Polly.
 
-## <a name="testing-retries-in-eshoponcontainers"></a>Testando as repetições em eShopOnContainers
+## <a name="testing-retries-in-eshoponcontainers"></a>Testando repetições em eShopOnContainers
 
-Sempre que iniciar a solução de eShopOnContainers em um host do Docker, ela precisa iniciar vários contêineres. Alguns dos contêineres são mais lentos para iniciar e inicializar, como o contêiner do SQL Server. Isso é especialmente verdadeiro na primeira vez que você implantar o aplicativo eShopOnContainers no Docker, porque é necessário configurar as imagens e o banco de dados. O fato de que alguns contêineres mais lenta do que outros podem causar o restante dos serviços inicialmente lançar exceções de HTTP, mesmo se você definir dependências entre contêineres em iniciam a compor docker nível, conforme explicado nas seções anteriores. Os docker-compõem as dependências entre os contêineres são apenas no nível do processo. O processo de ponto de entrada do contêiner pode ser iniciado, mas o SQL Server talvez não esteja pronto para consultas. O resultado pode ser uma cascata de erros e o aplicativo pode obter uma exceção ao tentar consumir esse contêiner específico.
+Sempre que você inicia a solução eShopOnContainers em um host do Docker, ela precisa iniciar vários contêineres. Alguns dos contêineres são mais lentos em iniciar e inicializar, como o contêiner do SQL Server. Isso é especialmente verdadeiro na primeira vez que você implanta o aplicativo eShopOnContainers no Docker, porque é necessário configurar as imagens e o banco de dados. O fato de que alguns contêineres iniciam mais lentamente do que outros pode fazer o restante dos serviços lançarem exceções HTTP, mesmo que você defina dependências entre contêineres no nível do Docker Compose, como explicado nas seções anteriores. Essas dependências do Docker Compose entre os contêineres são apenas no nível do processo. O processo de ponto de entrada do contêiner pode ser iniciado, mas o SQL Server talvez não esteja pronto para consultas. O resultado pode ser uma cascata de erros e o aplicativo pode obter uma exceção ao tentar consumir aquele contêiner específico.
 
-Você também poderá ver esse tipo de erro na inicialização, quando o aplicativo é implantado para a nuvem. Nesse caso, orchestrators pode ser mover contêineres de um nó ou máquina virtual para outro (isto é, começando a novas instâncias) quando o número de contêineres de balanceamento entre nós do cluster.
+Você também pode ver esse tipo de erro na inicialização quando o aplicativo está sendo implantado para a nuvem. Nesse caso, os orquestradores poderão estar movendo contêineres de um nó ou VM para outro (ou seja, começando novas instâncias) ao equilibrar o número de contêineres entre nós do cluster.
 
-É a maneira eShopOnContainers resolve esse problema usando o padrão de repetição que são ilustrados anteriormente. Também é por que, ao iniciar a solução, você poderá obter rastreamentos de log ou avisos semelhante ao seguinte:
+A maneira como o eShopOnContainers resolve esse problema é usando o padrão de Novas Tentativas ilustrado anteriormente. Também é por isso que, ao iniciar a solução, você poderá obter rastreamentos de log ou avisos semelhante ao seguinte:
 
-> "**Repetição 1 implementado com RetryPolicy de Polly**, devido à: System.Net.Http.HttpRequestException: Ocorreu um erro ao enviar a solicitação. ---&gt;System.Net.Http.CurlException: Não foi possível conectar ao servidor\\n em System.Net.Http.CurlHandler.ThrowIfCURLEError (erro CURLcode)\\n em \[... \].
+> "**Nova Tentativa 1 implementada com RetryPolicy do Polly** devido a: System.Net.Http.HttpRequestException: ocorreu um erro ao enviar a solicitação. ---&gt; System.Net.Http.CurlException: não foi possível conectar-se ao servidor\\n em System.Net.Http.CurlHandler.ThrowIfCURLEError (erro CURLcode)\\n em \[…\].
 
 ## <a name="testing-the-circuit-breaker-in-eshoponcontainers"></a>Testando o disjuntor em eShopOnContainers
 
-Há algumas maneiras de abrir o circuito e testá-lo com eShopOnContainers.
+Existem algumas maneiras de abrir o circuito e testá-lo com eShopOnContainers.
 
-Uma opção é reduzir o número permitido de tentativas de 1 na política de disjuntor e reimplantar a solução completa para o Docker. Com uma repetição de único, há uma boa chance de que uma solicitação HTTP falhará durante a implantação, o disjuntor será aberto e você obterá um erro.
+Uma opção é reduzir o número permitido de novas tentativas a 1 na política de disjuntor e reimplantar toda a solução no Docker. Com uma única nova tentativa, há uma boa chance de que uma solicitação HTTP falhe durante a implantação, o disjuntor se abra e você receba um erro.
 
-Outra opção é usar o middleware personalizado que é implementado no microsserviço a ordenação. Quando este middleware estiver habilitado, ele captura todas as solicitações HTTP e retorna o código de status 500. Você pode habilitar o middleware fazendo uma solicitação GET para a falha do URI, como o seguinte:
+Outra opção é usar o middleware personalizado implementado no microsserviço `Basket`. Quando esse middleware é habilitado, ele captura todas as solicitações HTTP e retorna o código de status 500. Você pode habilitar o middleware fazendo uma solicitação GET para o URI de falha, como o seguinte:
 
--   OBTER/falha
+-   GET /failing
 
-Essa solicitação retorna o estado atual do middleware. Se o middleware estiver habilitado, a solicitação retorna o código de status 500. Se o middleware está desativado, não há nenhuma resposta.
+Essa solicitação retorna o estado atual do middleware. Se o middleware estiver habilitado, a solicitação retornará o código de status 500. Se o middleware estiver desabilitado, não haverá nenhuma resposta.
 
--   OBTER/falhando? habilitar
+-   GET /failing?enable
 
-Essa solicitação permite que o middleware.
+Essa solicitação habilita o middleware.
 
--   OBTER/falhando? desabilitar
+-   GET /failing?disable
 
 Essa solicitação desabilita o middleware.
 
-Por exemplo, quando o aplicativo estiver em execução, você pode habilitar o middleware fazendo uma solicitação usando o seguinte URI em qualquer navegador. Observe que a ordenação microsserviço usa a porta 5102.
+Por exemplo, quando o aplicativo estiver em execução, você poderá habilitar o middleware fazendo uma solicitação usando o seguinte URI em qualquer navegador. Observe que o microsserviço de ordenação usa a porta 5103.
 
-http://localhost:5102 / falhando? habilitar
+http://localhost:5103/failing?enable
 
-Em seguida, você pode verificar o status usando o URI de [http://localhost:5102 / falha](http://localhost:5100/failing), conforme mostrado na Figura 10-4.
+Em seguida, você pode verificar o status usando o URI [http://localhost:5103/failing](http://localhost:5103/failing), conforme mostra a Figura 10-4.
 
 ![](./media/image4.png)
 
-**Figura 10-4**. Simulando uma falha com o ASP.NET middleware
+**Figura 10-4**. Verificando o estado do middleware ASP.NET com "Falha" – neste caso, desabilitado. 
 
-Neste ponto, o ordenação responde de microsserviço com código de status 500 sempre que você chamar invocá-lo.
+Neste ponto, o de microsserviço Cesta responde com o código de status 500 sempre que você o chama ou invoca.
 
-Depois que o middleware está em execução, você pode tentar fazer um pedido do aplicativo da web MVC. Como as solicitações falhar, o circuito será aberto.
+Depois que o middleware estiver em execução, você poderá tentar fazer um pedido do aplicativo Web MVC. Como as solicitações falham, o circuito é aberto.
 
-No exemplo a seguir, você pode ver que o aplicativo da web MVC tem um catch bloquear na lógica para fazer um pedido. Se o código de captura uma exceção de circuito aberto, ele mostra o usuário uma mensagem amigável informando de espera.
+No exemplo a seguir, você pode ver que o aplicativo Web MVC tem um bloco catch na lógica para fazer um pedido. Se o código capturar uma exceção de circuito aberto, ele mostrará ao usuário uma mensagem amigável informando-o para esperar.
 
 ```csharp
-[HttpPost]
-public async Task<IActionResult> Create(Order model, string action)
+public class CartController : Controller
 {
-    try
+    //…
+    public async Task<IActionResult> Index()
     {
-        if (ModelState.IsValid)
+        try
         {
-            var user = _appUserParser.Parse(HttpContext.User);
-            await _orderSvc.CreateOrder(model);
-            //Redirect to historic list.
-            return RedirectToAction("Index");
+            //… Other code
         }
-    }
-    catch(BrokenCircuitException ex)
+        catch (BrokenCircuitException)
+        {
+            // Catches error when Basket.api is in circuit-opened mode                 
+            HandleBrokenCircuitException();
+        }
+        return View();
+    }       
+
+    private void HandleBrokenCircuitException()
     {
-        ModelState.AddModelError("Error",
-            "It was not possible to create a new order, please try later on");
+        TempData["BasketInoperativeMsg"] = "Basket Service is inoperative, please try later on. (Business message due to Circuit-Breaker)";
     }
-    return View(model);
 }
 ```
 
-Aqui está um resumo. A política de repetição tenta várias vezes para fazer a solicitação HTTP e obtém os erros HTTP. Quando o número de tentativas atinge o número máximo definido para a política de Disjuntor (nesse caso, 5), o aplicativo gera um BrokenCircuitException. O resultado é uma mensagem amigável, como mostrado na Figura 10-5.
+Segue um resumo. A política de repetição tenta várias vezes fazer a solicitação HTTP e obtém os erros HTTP. Quando o número de novas tentativas atinge o número máximo definido para a política de Disjuntor (neste caso, 5), o aplicativo gera uma BrokenCircuitException. O resultado é uma mensagem amigável, como mostra a Figura 10-5.
 
 ![](./media/image5.png)
 
 **Figura 10-5**. Disjuntor retornando um erro na interface do usuário
 
-Você pode implementar uma lógica diferente de quando o circuito aberto. Ou você pode tentar uma solicitação HTTP em um microsserviço de back-end diferente, se houver um fallback datacenter ou um sistema redundante de back-end.
+Você pode implementar uma lógica diferente de quando abrir o circuito. Ou você poderá tentar uma solicitação HTTP para um microsserviço de back-end diferente se houver um datacenter de fallback ou um sistema redundante de back-end.
 
-Por fim, outra possibilidade do CircuitBreakerPolicy é usar isolam (que força aberto e mantém aberta do circuito) e redefinição (que fecha novamente). Essas páginas podem ser usadas para criar um ponto de extremidade HTTP de utilitário que invoca a isolar e redefina diretamente na política. Tal um ponto de extremidade HTTP também pode ser usado, adequadamente protegidos em produção para isolar temporariamente um sistema downstream, como quando você deseja atualizá-lo. Ou, ele poderia trip circuito manualmente para proteger o sistema downstream que suspeito ser com falha.
+Por fim, outra possibilidade do CircuitBreakerPolicy é usar Isolar (que força a abertura e mantém o circuito aberto) e Reiniciar (que o fecha novamente). Isso pode ser usado para criar um ponto de extremidade HTTP de utilitário que invoque Isolar e Reiniciar diretamente na política. Esse ponto de extremidade HTTP também pode ser usado, adequadamente protegido, em produção para isolar temporariamente um sistema downstream, como quando você deseja atualizá-lo. Ou poderia desarmar o circuito manualmente para proteger o sistema a downstream que você suspeita ter falha.
 
-## <a name="adding-a-jitter-strategy-to-the-retry-policy"></a>Adicionando uma estratégia de variação para a política de repetição
+## <a name="adding-a-jitter-strategy-to-the-retry-policy"></a>Adicionando uma estratégia de tremulação à política de repetição
 
-Uma política de repetição regular pode afetar o sistema em casos de escalabilidade e alta simultaneidade e em alto de contenção. Para superar os picos de repetições semelhantes provenientes de muitos clientes em caso de interrupções parciais, uma boa solução alternativa é adicionar uma estratégia de variação para a algoritmo/política de repetição. Isso pode melhorar o desempenho geral do sistema de ponta a ponta, adicionando aleatoriedade para a retirada exponencial. Isso se espalha os picos quando surgem problemas. Quando você usa Polly, código para implementar a tremulação pode parecer com o exemplo a seguir:
+Uma política de Repetição regular pode afetar o sistema em casos de alta simultaneidade e escalabilidade e sob alta contenção. Para superar os picos de novas tentativas semelhantes provenientes de muitos clientes em caso de interrupções parciais, uma boa solução alternativa é adicionar uma estratégia de variação à política/ao algoritmo de novas tentativas. Isso pode melhorar o desempenho geral do sistema de ponta a ponta, adicionando aleatoriedade à retirada exponencial. Isso espalha os picos quando surgem problemas. Quando você usa o Polly, o código para implementar a variação pode se parecer com o exemplo a seguir:
 
 ```csharp
 Random jitterer = new Random();
@@ -230,18 +235,18 @@ Policy.Handle<HttpResponseException>() // etc
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
--   **Repita padrão**
+-   **Padrão de repetição**
     [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry)
 
 -   **Resiliência de Conexão** (Entity Framework Core) [ *https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
 
--   **Polly** (biblioteca de tratamento de falhas transitórias e resiliência do .NET) [ *https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
+-   **Polly** (biblioteca de tratamento de falhas transitórias e resiliência do .NET) [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
--   **Padrão de disjuntor**
+-   **Padrão de Disjuntor**
     [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
 
--   **Marc Esteves. Variação: Tornar as coisas melhor com aleatoriedade** https://brooker.co.za/blog/2015/03/21/backoff.html
+-   **Marc Brooker. Variação: melhorando as coisas com aleatoriedade** https://brooker.co.za/blog/2015/03/21/backoff.html
 
 
 >[!div class="step-by-step"]
-[Anterior] (implement-http-call-retries-exponential-backoff-polly.md) [Avançar] (monitor-aplicativo-health.md)
+[Anterior] (implement-http-call-retries-exponential-backoff-polly.md) [Próximo] (monitor-app-health.md)

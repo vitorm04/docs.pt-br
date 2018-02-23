@@ -1,6 +1,6 @@
 ---
-title: "Usando o Cofre de chaves do Azure para proteger segredos em tempo de produção"
-description: "Arquitetura de Microservices .NET para aplicativos .NET em contêineres | Usando o Cofre de chaves do Azure para proteger segredos em tempo de produção"
+title: "Usando o Azure Key Vault para proteger segredos no momento da produção"
+description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Usando o Azure Key Vault para proteger segredos no momento da produção"
 keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
 author: mjrousos
 ms.author: wiwagn
@@ -8,32 +8,35 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 7f922997e8d0c63e206cd68f4efda14985c86b72
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cb289c7361362c225eac8b9898bac276c4b623b4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>Usando o Cofre de chaves do Azure para proteger segredos em tempo de produção
+# <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>Usando o Azure Key Vault para proteger segredos no momento da produção
 
-Segredos armazenadas como variáveis de ambiente ou armazenada pela ferramenta Gerenciador de segredo ainda são armazenados localmente e descriptografados no computador. É uma opção mais segura para armazenar segredos [Azure Key Vault](https://azure.microsoft.com/services/key-vault/), que fornece um local central seguro para armazenar chaves e segredos.
+Os segredos armazenados como variáveis de ambiente ou armazenados pela ferramenta Secret Manager ainda são armazenados localmente e descriptografados no computador. Uma opção mais segura para armazenar segredos é o [Azure Key Vault](https://azure.microsoft.com/services/key-vault/), que oferece um local seguro e central para armazenar chaves e segredos.
 
-O pacote de Microsoft.Extensions.Configuration.AzureKeyVault permite que um aplicativo do ASP.NET Core para ler informações de configuração do Cofre de chaves do Azure. Para começar a usar os segredos de um cofre de chaves do Azure, você deve seguir estas etapas:
+O pacote Microsoft.Extensions.Configuration.AzureKeyVault permite que um aplicativo do ASP.NET Core leia informações de configuração do Azure Key Vault. Para começar a usar os segredos de um Azure Key Vault, siga estas etapas:
 
-Primeiro, registre seu aplicativo como um aplicativo do AD do Azure. (Acesso a cofres de chaves é gerenciado pelo AD do Azure). Isso pode ser feito por meio do portal de gerenciamento do Azure.
+Primeiro, registre seu aplicativo como um aplicativo Azure AD. (O acesso a cofres de chaves é gerenciado pelo Azure AD). Isso pode ser feito por meio do Portal de Gerenciamento do Azure.
 
-Como alternativa, se você quiser que seu aplicativo para autenticar usando um certificado em vez de um segredo de cliente ou a senha, você pode usar o [AzureRmADApplication novo](https://docs.microsoft.com/powershell/resourcemanager/azurerm.resources/v3.3.0/new-azurermadapplication) cmdlet do PowerShell. O certificado que você se registrar com o Cofre de chaves do Azure precisa somente sua chave pública. (O aplicativo usará a chave privada).
+Ou, se você desejar que seu aplicativo seja autenticado usando um certificado em vez de um segredo do cliente ou senha, será possível usar o cmdlet do PowerShell [AzureRmADApplication novo](https://docs.microsoft.com/powershell/resourcemanager/azurerm.resources/v3.3.0/new-azurermadapplication). O certificado que você registrar com o Azure Key Vault precisa apenas de sua chave pública. (O aplicativo usará a chave privada.)
 
-Segundo, dê o acesso do aplicativo registrado para o Cofre de chaves ao criar uma nova entidade de serviço. Você pode fazer isso usando os seguintes comandos do PowerShell:
+Segundo, conceda ao aplicativo registrado acesso ao cofre de chaves criando uma nova entidade de serviço. É possível fazer isso usando os seguintes comandos do PowerShell:
 
 ```powershell
 $sp = New-AzureRmADServicePrincipal -ApplicationId "<Application ID guid>"
 Set-AzureRmKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
 ```
 
-Em terceiro lugar, incluem o Cofre de chave como uma fonte de configuração em seu aplicativo chamando o método de extensão IConfigurationBuilder.AddAzureKeyVault quando você cria uma instância de IConfigurationRoot. Observe que a chamada AddAzureKeyVault exigirá a ID do aplicativo que foi registrada e recebe acesso para o Cofre de chaves nas etapas anteriores.
+Em terceiro lugar, inclua o cofre de chaves como uma fonte de configuração em seu aplicativo chamando o método de extensão IConfigurationBuilder.AddAzureKeyVault quando você criar uma instância IConfigurationRoot. Observe que chamar AddAzureKeyVault exigirá a ID do aplicativo que foi registrado e que recebeu acesso ao cofre de chaves nas etapas anteriores.
 
-  Atualmente, padrão do .NET e .NET Core oferecem suporte a obtenção de informações de configuração de um cofre de chaves do Azure usando uma ID de cliente e o segredo do cliente. Aplicativos do .NET framework podem usar uma sobrecarga de IConfigurationBuilder.AddAzureKeyVault que usa um certificado no lugar de segredo do cliente. Redação deste artigo, o trabalho é [em andamento](https://github.com/aspnet/Configuration/issues/605) para disponibilizar essa sobrecarga no .NET Core e .NET padrão. Até que a sobrecarga de AddAzureKeyVault que aceita que um certificado estiver disponível, os aplicativos ASP.NET Core podem acessar um cofre de chaves do Azure com autenticação baseada em certificado criando explicitamente um objeto KeyVaultClient, conforme mostrado no exemplo a seguir:
+  No momento, o .NET Standard e o .NET Core dão suporte à obtenção de informações de configuração de um Azure Key Vault usando uma ID de cliente e o segredo do cliente. Os aplicativos do .NET Framework podem usar uma sobrecarga de IConfigurationBuilder.AddAzureKeyVault que usa um certificado no lugar do segredo do cliente. No momento da redação deste artigo, o trabalho está [em andamento](https://github.com/aspnet/Configuration/issues/605) para disponibilizar essa sobrecarga no .NET Standard e no .NET Core. Até que a sobrecarga AddAzureKeyVault que aceita um certificado esteja disponível, os aplicativos do ASP.NET Core poderão acessar um Azure Key Vault com autenticação baseada em certificado criando explicitamente um objeto KeyVaultClient, conforme mostrado no exemplo a seguir:
 
 ```csharp
 // Configure Key Vault client
@@ -58,11 +61,11 @@ var kvClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(asyn
         new DefaultKeyVaultSecretManager());
 ```
 
-Neste exemplo, a chamada para AddAzureKeyVault é fornecido no final do registro do provedor de configuração. É uma prática recomendada para registrar o Cofre de chaves do Azure como o último provedor de configuração para que ele tenha a oportunidade de substituem os valores de configuração de provedores anteriores, e para que nenhum valor de configuração de outras fontes substituem aquelas do key vault.
+Neste exemplo, a chamada a AddAzureKeyVault vem no final do registro do provedor de configuração. É uma melhor prática registrar o Azure Key Vault como o último provedor de configuração para que ele tenha uma oportunidade de substituir valores de configuração de provedores anteriores, e para que nenhum valor de configuração de outras fontes substituam os do cofre de chaves.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
--   **Usando o Cofre de chaves do Azure para proteger segredos do aplicativo**
+-   **Usando o Azure Key Vault para proteger segredos do aplicativo**
     [*https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault*](https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault)
 
 -   **Armazenamento seguro de segredos do aplicativo durante o desenvolvimento**
@@ -71,11 +74,11 @@ Neste exemplo, a chamada para AddAzureKeyVault é fornecido no final do registro
 -   **Configurando a proteção de dados**
     [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview)
 
--   **Tempo de vida e gerenciamento de chave**
-    [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#proteção de dados-configurações padrão*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
+-   **Tempo de vida e gerenciamento de chaves**
+    [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
 
 -   **Microsoft.Extensions.Configuration.DockerSecrets.** Repositório do GitHub.
-    [*https://GitHub.com/ASPNET/Configuration/Tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets*](https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets)
+    [*https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets*](https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets)
 
 >[!div class="step-by-step"]
-[Anterior] (desenvolvedor-aplicativo-segredos-storage.md) [Avançar] (... / chave takeaways.md)
+[Anterior] (developer-app-secrets-storage.md) [Próximo] (../key-takeaways.md)
