@@ -1,30 +1,35 @@
 ---
-title: Implementando um barramento de evento com RabbitMQ para o ambiente de desenvolvimento ou teste
-description: "Arquitetura de Microservices .NET para aplicativos .NET em contêineres | Implementando um barramento de evento com RabbitMQ para o ambiente de desenvolvimento ou teste"
+title: Implementando um barramento de eventos com o RabbitMQ para o ambiente de desenvolvimento ou de teste
+description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Implementando um barramento de eventos com RabbitMQ para o ambiente de desenvolvimento ou de teste"
 keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: f58d355b6f5fd31a21791d3b072c77f70f90c387
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3505cb993c736165d4aff4ce8fad38cfa14ed417
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a><span data-ttu-id="c872e-104">Implementando um barramento de evento com RabbitMQ para o ambiente de desenvolvimento ou teste</span><span class="sxs-lookup"><span data-stu-id="c872e-104">Implementing an event bus with RabbitMQ for the development or test environment</span></span>
+# <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a><span data-ttu-id="3ef11-104">Implementando um barramento de eventos com o RabbitMQ para o ambiente de desenvolvimento ou de teste</span><span class="sxs-lookup"><span data-stu-id="3ef11-104">Implementing an event bus with RabbitMQ for the development or test environment</span></span>
 
-<span data-ttu-id="c872e-105">Deve começar dizendo que, se você criar o barramento de evento personalizado com base em RabbitMQ em execução em um contêiner, que o aplicativo eShopOnContainers, ele deve ser usado somente para seus ambientes de desenvolvimento e teste.</span><span class="sxs-lookup"><span data-stu-id="c872e-105">We should start by saying that if you create your custom event bus based on RabbitMQ running in a container, as the eShopOnContainers application does, it should be used only for your development and test environments.</span></span> <span data-ttu-id="c872e-106">Você não deve usá-lo para o seu ambiente de produção, a menos que você está criando-o como parte de um barramento de serviço pronto para produção.</span><span class="sxs-lookup"><span data-stu-id="c872e-106">You should not use it for your production environment, unless you are building it as a part of a production-ready service bus.</span></span> <span data-ttu-id="c872e-107">Barramento de evento personalizado simples talvez não tenha muitos recursos críticos prontos para produção que tem um barramento de serviço comercial.</span><span class="sxs-lookup"><span data-stu-id="c872e-107">A simple custom event bus might be missing many production-ready critical features that a commercial service bus has.</span></span>
+<span data-ttu-id="3ef11-105">Devemos começar dizendo que, se você criar seu barramento de eventos personalizado com base no RabbitMQ em execução em um contêiner, como o aplicativo eShopOnContainers faz, ele deverá ser usado apenas para seus ambientes de desenvolvimento e teste.</span><span class="sxs-lookup"><span data-stu-id="3ef11-105">We should start by saying that if you create your custom event bus based on RabbitMQ running in a container, as the eShopOnContainers application does, it should be used only for your development and test environments.</span></span> <span data-ttu-id="3ef11-106">Você não deve usá-lo para o seu ambiente de produção, a menos que o esteja criando como parte de um barramento de serviço pronto para produção.</span><span class="sxs-lookup"><span data-stu-id="3ef11-106">You should not use it for your production environment, unless you are building it as a part of a production-ready service bus.</span></span> <span data-ttu-id="3ef11-107">Um barramento de eventos personalizado simples talvez não tenha muitos recursos críticos prontos para produção que um barramento de serviço comercial tem.</span><span class="sxs-lookup"><span data-stu-id="3ef11-107">A simple custom event bus might be missing many production-ready critical features that a commercial service bus has.</span></span>
 
-<span data-ttu-id="c872e-108">A implementação personalizada de eShopOnContainers de um barramento de evento é basicamente uma biblioteca usando a API RabbitMQ.</span><span class="sxs-lookup"><span data-stu-id="c872e-108">The eShopOnContainers custom implementation of an event bus is basically a library using the RabbitMQ API.</span></span> <span data-ttu-id="c872e-109">A implementação permite microservices assinar eventos, publicar eventos e receber eventos, como mostrado na Figura 8-21.</span><span class="sxs-lookup"><span data-stu-id="c872e-109">The implementation lets microservices subscribe to events, publish events, and receive events, as shown in Figure 8-21.</span></span>
+<span data-ttu-id="3ef11-108">Uma da implementação personalizada do barramento de eventos no eShopOnContainers é basicamente uma biblioteca que usa a API do RabbitMQ (há outra implementação baseada no Barramento de Serviço do Azure).</span><span class="sxs-lookup"><span data-stu-id="3ef11-108">One of the event bus custom implementation in eShopOnContainers is basically a library using the RabbitMQ API (There’s another implementation based on Azure Service Bus).</span></span> 
+
+<span data-ttu-id="3ef11-109">A implementação do barramento de eventos com RabbitMQ permite que os microsserviços assinem, publiquem e recebam eventos, conforme mostrado na Figura 8-21.</span><span class="sxs-lookup"><span data-stu-id="3ef11-109">The event bus implementation with RabbitMQ lets microservices subscribe to events, publish events, and receive events, as shown in Figure 8-21.</span></span>
 
 ![](./media/image22.png)
 
-<span data-ttu-id="c872e-110">**Figura 8-21.**</span><span class="sxs-lookup"><span data-stu-id="c872e-110">**Figure 8-21.**</span></span> <span data-ttu-id="c872e-111">RabbitMQ implementação de um barramento de evento</span><span class="sxs-lookup"><span data-stu-id="c872e-111">RabbitMQ implementation of an event bus</span></span>
+<span data-ttu-id="3ef11-110">**Figura 8-21.**</span><span class="sxs-lookup"><span data-stu-id="3ef11-110">**Figure 8-21.**</span></span> <span data-ttu-id="3ef11-111">Implementação de um barramento de eventos do RabbitMQ</span><span class="sxs-lookup"><span data-stu-id="3ef11-111">RabbitMQ implementation of an event bus</span></span>
 
-<span data-ttu-id="c872e-112">No código, a classe de EventBusRabbitMQ implementa a interface IEventBus genérica.</span><span class="sxs-lookup"><span data-stu-id="c872e-112">In the code, the EventBusRabbitMQ class implements the generic IEventBus interface.</span></span> <span data-ttu-id="c872e-113">Isso se baseia na injeção de dependência para que você pode trocar dessa versão de desenvolvimento/teste para uma versão de produção.</span><span class="sxs-lookup"><span data-stu-id="c872e-113">This is based on Dependency Injection so that you can swap from this dev/test version to a production version.</span></span>
+<span data-ttu-id="3ef11-112">No código, a classe EventBusRabbitMQ implementa a interface IEventBus genérica.</span><span class="sxs-lookup"><span data-stu-id="3ef11-112">In the code, the EventBusRabbitMQ class implements the generic IEventBus interface.</span></span> <span data-ttu-id="3ef11-113">Isso se baseia na Injeção de dependência para que você possa trocar dessa versão de Desenvolvimento/Teste para uma versão de produção.</span><span class="sxs-lookup"><span data-stu-id="3ef11-113">This is based on Dependency Injection so that you can swap from this dev/test version to a production version.</span></span>
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -33,11 +38,11 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
     //...
 ```
 
-<span data-ttu-id="c872e-114">A implementação de RabbitMQ do barramento de evento de desenvolvimento/teste de exemplo é código padronizado.</span><span class="sxs-lookup"><span data-stu-id="c872e-114">The RabbitMQ implementation of a sample dev/test event bus is boilerplate code.</span></span> <span data-ttu-id="c872e-115">Ele tem que lidar com a conexão ao servidor RabbitMQ e fornecer o código para a publicação de um evento de mensagem para filas.</span><span class="sxs-lookup"><span data-stu-id="c872e-115">It has to handle the connection to the RabbitMQ server and provide code for publishing a message event to the queues.</span></span> <span data-ttu-id="c872e-116">Ele também tem que implementar um dicionário de coleções de manipuladores de eventos de integração para cada tipo de evento; Esses tipos de evento podem ter uma instanciação diferente e diferentes assinaturas do microsserviço cada destinatário, conforme mostrado na Figura 8-21.</span><span class="sxs-lookup"><span data-stu-id="c872e-116">It also has to implement a dictionary of collections of integration event handlers for each event type; these event types can have a different instantiation and different subscriptions for each receiver microservice, as shown in Figure 8-21.</span></span>
+<span data-ttu-id="3ef11-114">A implementação do RabbitMQ de um barramento de eventos de Desenvolvimento/Teste de exemplo é um código clichê.</span><span class="sxs-lookup"><span data-stu-id="3ef11-114">The RabbitMQ implementation of a sample dev/test event bus is boilerplate code.</span></span> <span data-ttu-id="3ef11-115">Ele precisa lidar com a conexão com o servidor do RabbitMQ e fornecer o código para a publicação de um evento de mensagem nas filas.</span><span class="sxs-lookup"><span data-stu-id="3ef11-115">It has to handle the connection to the RabbitMQ server and provide code for publishing a message event to the queues.</span></span> <span data-ttu-id="3ef11-116">Ele também precisa implementar um dicionário de coleções de manipuladores de eventos de integração para cada tipo de evento; esses tipos de evento podem ter uma instanciação diferente e diferentes assinaturas para cada microsserviço receptor, conforme mostrado na Figura 8-21.</span><span class="sxs-lookup"><span data-stu-id="3ef11-116">It also has to implement a dictionary of collections of integration event handlers for each event type; these event types can have a different instantiation and different subscriptions for each receiver microservice, as shown in Figure 8-21.</span></span>
 
-## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a><span data-ttu-id="c872e-117">Implementando um simples publicar método com RabbitMQ</span><span class="sxs-lookup"><span data-stu-id="c872e-117">Implementing a simple publish method with RabbitMQ</span></span>
+## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a><span data-ttu-id="3ef11-117">Implementando um método de publicação simples com RabbitMQ</span><span class="sxs-lookup"><span data-stu-id="3ef11-117">Implementing a simple publish method with RabbitMQ</span></span>
 
-<span data-ttu-id="c872e-118">O código a seguir é parte da implementação do barramento de evento eShopOnContainers para RabbitMQ, para que você normalmente não precisa codificá-la, a menos que você estiver fazendo aprimoramentos.</span><span class="sxs-lookup"><span data-stu-id="c872e-118">The following code is part of the eShopOnContainers event bus implementation for RabbitMQ, so you usually do not need to code it unless you are making improvements.</span></span> <span data-ttu-id="c872e-119">O código obtém uma conexão e canal para RabbitMQ, cria uma mensagem e, em seguida, publica a mensagem na fila.</span><span class="sxs-lookup"><span data-stu-id="c872e-119">The code gets a connection and channel to RabbitMQ, creates a message, and then publishes the message into the queue.</span></span>
+<span data-ttu-id="3ef11-118">O código a seguir faz parte de uma implementação de barramento de eventos simplificado para RabbitMQ, aprimorado no [código real](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) de eShopOnContainers.</span><span class="sxs-lookup"><span data-stu-id="3ef11-118">The following code is part is a simplified event bus implementation for RabbitMQ, improved in the [actual code](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) of eShopOnContainers.</span></span> <span data-ttu-id="3ef11-119">Normalmente, não é necessário codificá-lo, a menos que você esteja fazendo aprimoramentos.</span><span class="sxs-lookup"><span data-stu-id="3ef11-119">You usually do not need to code it unless you are making improvements.</span></span> <span data-ttu-id="3ef11-120">O código obtém uma conexão e um canal para o RabbitMQ, cria uma mensagem e, em seguida, publica-a na fila.</span><span class="sxs-lookup"><span data-stu-id="3ef11-120">The code gets a connection and channel to RabbitMQ, creates a message, and then publishes the message into the queue.</span></span>
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -65,45 +70,51 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 }
 ```
 
-<span data-ttu-id="c872e-120">O [código real](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) de publicar método no aplicativo eShopOnContainers é aprimorado usando um [Polly](https://github.com/App-vNext/Polly) política, que repete a tarefa de um determinado número de vezes que no caso do contêiner de RabbitMQ é de repetição não está pronto.</span><span class="sxs-lookup"><span data-stu-id="c872e-120">The [actual code](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) of the Publish method in the eShopOnContainers application is improved by using a [Polly](https://github.com/App-vNext/Polly) retry policy, which retries the task a certain number of times in case the RabbitMQ container is not ready.</span></span> <span data-ttu-id="c872e-121">Isso pode ocorrer quando compor docker está iniciando os contêineres; Por exemplo, o contêiner de RabbitMQ pode iniciar mais lentamente do que os outros contêineres.</span><span class="sxs-lookup"><span data-stu-id="c872e-121">This can occur when docker-compose is starting the containers; for example, the RabbitMQ container might start more slowly than the other containers.</span></span>
+<span data-ttu-id="3ef11-121">O [código real](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) do método de publicação no aplicativo eShopOnContainers é aprimorado usando uma política de repetição [Polly](https://github.com/App-vNext/Polly), que repete a tarefa um determinado número de vezes caso o contêiner do RabbitMQ não esteja pronto.</span><span class="sxs-lookup"><span data-stu-id="3ef11-121">The [actual code](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) of the Publish method in the eShopOnContainers application is improved by using a [Polly](https://github.com/App-vNext/Polly) retry policy, which retries the task a certain number of times in case the RabbitMQ container is not ready.</span></span> <span data-ttu-id="3ef11-122">Isso pode ocorrer quando docker-compose está iniciando os contêineres; por exemplo, o contêiner do RabbitMQ pode ser iniciado mais lentamente do que outros contêineres.</span><span class="sxs-lookup"><span data-stu-id="3ef11-122">This can occur when docker-compose is starting the containers; for example, the RabbitMQ container might start more slowly than the other containers.</span></span>
 
-<span data-ttu-id="c872e-122">Como mencionado anteriormente, há muitas configurações possíveis em RabbitMQ, portanto esse código deve ser usado apenas para ambientes de desenvolvimento e teste.</span><span class="sxs-lookup"><span data-stu-id="c872e-122">As mentioned earlier, there are many possible configurations in RabbitMQ, so this code should be used only for dev/test environments.</span></span>
+<span data-ttu-id="3ef11-123">Conforme mencionado anteriormente, há muitas configurações possíveis no RabbitMQ. Portanto, esse código deve ser usado apenas para ambientes de Desenvolvimento/Teste.</span><span class="sxs-lookup"><span data-stu-id="3ef11-123">As mentioned earlier, there are many possible configurations in RabbitMQ, so this code should be used only for dev/test environments.</span></span>
 
-## <a name="implementing-the-subscription-code-with-the-rabbitmq-api"></a><span data-ttu-id="c872e-123">Implementar o código de assinatura com a API RabbitMQ</span><span class="sxs-lookup"><span data-stu-id="c872e-123">Implementing the subscription code with the RabbitMQ API</span></span>
+## <a name="implementing-the-subscription-code-with-the-rabbitmq-api"></a><span data-ttu-id="3ef11-124">Implementando o código de assinatura com a API do RabbitMQ</span><span class="sxs-lookup"><span data-stu-id="3ef11-124">Implementing the subscription code with the RabbitMQ API</span></span>
 
-<span data-ttu-id="c872e-124">Como com o código de publicação, o código a seguir é uma simplificação de parte da implementação do barramento de eventos para RabbitMQ.</span><span class="sxs-lookup"><span data-stu-id="c872e-124">As with the publish code, the following code is a simplification of part of the event bus implementation for RabbitMQ.</span></span> <span data-ttu-id="c872e-125">Novamente, você normalmente não precisa alterá-la, a menos que são melhorá-lo.</span><span class="sxs-lookup"><span data-stu-id="c872e-125">Again, you usually do not need to change it unless you are improving it.</span></span>
+<span data-ttu-id="3ef11-125">Como acontece com o código de publicação, o código a seguir é uma simplificação de parte da implementação do barramento de eventos para RabbitMQ.</span><span class="sxs-lookup"><span data-stu-id="3ef11-125">As with the publish code, the following code is a simplification of part of the event bus implementation for RabbitMQ.</span></span> <span data-ttu-id="3ef11-126">Mais uma vez, geralmente não é necessário alterá-lo, a menos que você o esteja aprimorando.</span><span class="sxs-lookup"><span data-stu-id="3ef11-126">Again, you usually do not need to change it unless you are improving it.</span></span>
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
 {
     // Member objects and other methods ...
     // ...
-    public void Subscribe<T>(IIntegrationEventHandler<T> handler)
+
+    public void Subscribe<T, TH>()
         where T : IntegrationEvent
+        where TH : IIntegrationEventHandler<T>
     {
-        var eventName = typeof(T).Name;
-        if (_handlers.ContainsKey(eventName))
+        var eventName = _subsManager.GetEventKey<T>();
+        
+        var containsKey = _subsManager.HasSubscriptionsForEvent(eventName);
+        if (!containsKey)
         {
-            _handlers[eventName].Add(handler);
+            if (!_persistentConnection.IsConnected)
+            {
+                _persistentConnection.TryConnect();
+            }
+
+            using (var channel = _persistentConnection.CreateModel())
+            {
+                channel.QueueBind(queue: _queueName,
+                                    exchange: BROKER_NAME,
+                                    routingKey: eventName);
+            }
         }
-        else
-        {
-            var channel = GetChannel();
-            channel.QueueBind(queue: _queueName,
-                exchange: _brokerName,
-                routingKey: eventName);
-            _handlers.Add(eventName, new List<IIntegrationEventHandler>());
-            _handlers[eventName].Add(handler);
-            _eventTypes.Add(typeof(T));
-        }
+
+        _subsManager.AddSubscription<T, TH>();
     }
 }
 ```
 
-<span data-ttu-id="c872e-126">Cada tipo de evento tem um canal relacionado para obter eventos do RabbitMQ.</span><span class="sxs-lookup"><span data-stu-id="c872e-126">Each event type has a related channel to get events from RabbitMQ.</span></span> <span data-ttu-id="c872e-127">Em seguida, você pode ter tantos manipuladores de eventos por tipo de canal e de evento conforme necessário.</span><span class="sxs-lookup"><span data-stu-id="c872e-127">You can then have as many event handlers per channel and event type as needed.</span></span>
+<span data-ttu-id="3ef11-127">Cada tipo de evento tem um canal relacionado para obter eventos do RabbitMQ.</span><span class="sxs-lookup"><span data-stu-id="3ef11-127">Each event type has a related channel to get events from RabbitMQ.</span></span> <span data-ttu-id="3ef11-128">Em seguida, é possível ter tantos manipuladores de eventos por tipo de evento e de canal conforme necessário.</span><span class="sxs-lookup"><span data-stu-id="3ef11-128">You can then have as many event handlers per channel and event type as needed.</span></span>
 
-<span data-ttu-id="c872e-128">O método Subscribe aceita um objeto IIntegrationEventHandler, que é como um método de retorno de chamada no microsserviço atual, além de seu objeto IntegrationEvent relacionado.</span><span class="sxs-lookup"><span data-stu-id="c872e-128">The Subscribe method accepts an IIntegrationEventHandler object, which is like a callback method in the current microservice, plus its related IntegrationEvent object.</span></span> <span data-ttu-id="c872e-129">O código, em seguida, adiciona o manipulador de eventos à lista de manipuladores de eventos que cada tipo de evento de integração pode ter por cliente microsserviço.</span><span class="sxs-lookup"><span data-stu-id="c872e-129">The code then adds that event handler to the list of event handlers that each integration event type can have per client microservice.</span></span> <span data-ttu-id="c872e-130">Se o código do cliente não já inscrito no evento, o código cria um canal para o tipo de evento para que ela possa receber eventos em um estilo de envio de RabbitMQ quando esse evento é publicado a partir de qualquer outro serviço.</span><span class="sxs-lookup"><span data-stu-id="c872e-130">If the client code has not already been subscribed to the event, the code creates a channel for the event type so it can receive events in a push style from RabbitMQ when that event is published from any other service.</span></span>
+<span data-ttu-id="3ef11-129">O método Subscribe aceita um objeto IIntegrationEventHandler, que é como um método de retorno de chamada no microsserviço atual, além de seu objeto IntegrationEvent relacionado.</span><span class="sxs-lookup"><span data-stu-id="3ef11-129">The Subscribe method accepts an IIntegrationEventHandler object, which is like a callback method in the current microservice, plus its related IntegrationEvent object.</span></span> <span data-ttu-id="3ef11-130">O código, então, adiciona o manipulador de eventos à lista de manipuladores de eventos que cada tipo de evento de integração pode ter por microsserviço do cliente.</span><span class="sxs-lookup"><span data-stu-id="3ef11-130">The code then adds that event handler to the list of event handlers that each integration event type can have per client microservice.</span></span> <span data-ttu-id="3ef11-131">Se o código do cliente ainda não tiver assinado o evento, o código criará um canal para o tipo de evento para que ele possa receber eventos em um estilo de push do RabbitMQ quando esse evento for publicado de qualquer outro serviço.</span><span class="sxs-lookup"><span data-stu-id="3ef11-131">If the client code has not already been subscribed to the event, the code creates a channel for the event type so it can receive events in a push style from RabbitMQ when that event is published from any other service.</span></span>
 
 
 >[!div class="step-by-step"]
-<span data-ttu-id="c872e-131">[Anterior] (integração-evento-com base-microsserviço-communications.md) [Avançar] (events.md assinar)</span><span class="sxs-lookup"><span data-stu-id="c872e-131">[Previous] (integration-event-based-microservice-communications.md) [Next] (subscribe-events.md)</span></span>
+<span data-ttu-id="3ef11-132">[Anterior] (integration-event-based-microservice-communications.md) [Próximo] (subscribe-events.md)</span><span class="sxs-lookup"><span data-stu-id="3ef11-132">[Previous] (integration-event-based-microservice-communications.md) [Next] (subscribe-events.md)</span></span>

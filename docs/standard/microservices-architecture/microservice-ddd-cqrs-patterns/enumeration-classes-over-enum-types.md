@@ -1,28 +1,33 @@
 ---
-title: "Usando classes de enumeração em vez de tipos de enumeração"
-description: "Arquitetura de Microservices .NET para aplicativos .NET em contêineres | Usando classes de enumeração em vez de tipos de enumeração"
+title: Usando classes Enumeration em vez de tipos enum
+description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Usando classes Enumeration em vez de tipos enum"
 keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 1745198720fd12a9d26aab2d2afb2c5dd6b6b49d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4b190ee9dde5628bf16fe9c483d3636539c29361
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="using-enumeration-classes-instead-of-enum-types"></a><span data-ttu-id="5b8d4-104">Usando classes de enumeração em vez de tipos de enumeração</span><span class="sxs-lookup"><span data-stu-id="5b8d4-104">Using Enumeration classes instead of enum types</span></span>
+# <a name="using-enumeration-classes-instead-of-enum-types"></a><span data-ttu-id="08de2-104">Usando classes Enumeration em vez de tipos enum</span><span class="sxs-lookup"><span data-stu-id="08de2-104">Using enumeration classes instead of enum types</span></span>
 
-<span data-ttu-id="5b8d4-105">[Enumerações](https://msdn.microsoft.com/en-us/library/sbbt4032.aspx) (*enums* abreviada) são um wrapper de idioma fino em torno de um tipo integral.</span><span class="sxs-lookup"><span data-stu-id="5b8d4-105">[Enumerations](https://msdn.microsoft.com/en-us/library/sbbt4032.aspx) (*enums* for short) are a thin language wrapper around an integral type.</span></span> <span data-ttu-id="5b8d4-106">Você talvez queira limitar seu uso para quando você estiver armazenando um valor de um conjunto fechado de valores.</span><span class="sxs-lookup"><span data-stu-id="5b8d4-106">You might want to limit their use to when you are storing one value from a closed set of values.</span></span> <span data-ttu-id="5b8d4-107">Classificação com base em gênero (por exemplo, masculino, feminino, desconhecido) ou tamanhos (S, M, L, XL) são bons exemplos.</span><span class="sxs-lookup"><span data-stu-id="5b8d4-107">Classification based on gender (for example, male, female, unknown), or sizes (S, M, L, XL) are good examples.</span></span> <span data-ttu-id="5b8d4-108">Usar enums de fluxo de controle ou abstrações mais robustas pode ser um [código cheiro](http://deviq.com/code-smells/).</span><span class="sxs-lookup"><span data-stu-id="5b8d4-108">Using enums for control flow or more robust abstractions can be a [code smell](http://deviq.com/code-smells/).</span></span> <span data-ttu-id="5b8d4-109">Esse tipo de uso levará ao código frágil com muitas instruções de fluxo de controle verificar valores de enum.</span><span class="sxs-lookup"><span data-stu-id="5b8d4-109">This type of usage will lead to fragile code with many control flow statements checking values of the enum.</span></span>
+<span data-ttu-id="08de2-105">[Enumerations](../../../../docs/csharp/language-reference/keywords/enum.md) (ou *tipos enum*) são um wrapper de idioma fino em torno de um tipo integral.</span><span class="sxs-lookup"><span data-stu-id="08de2-105">[Enumerations](../../../../docs/csharp/language-reference/keywords/enum.md) (or *enum types* for short) are a thin language wrapper around an integral type.</span></span> <span data-ttu-id="08de2-106">Talvez convenha limitar seu uso para quando você estiver armazenando um valor de um conjunto fechado de valores.</span><span class="sxs-lookup"><span data-stu-id="08de2-106">You might want to limit their use to when you are storing one value from a closed set of values.</span></span> <span data-ttu-id="08de2-107">Classificação baseada em gênero (por exemplo, masculino, feminino, desconhecido) ou tamanhos (pequeno, médio, grande) são bons exemplos.</span><span class="sxs-lookup"><span data-stu-id="08de2-107">Classification based on gender (for example, male, female, unknown) or sizes (small, medium, large) are good examples.</span></span> <span data-ttu-id="08de2-108">Usar enumerações para fluxo de controle ou abstrações mais robustas pode ser um [code smell](http://deviq.com/code-smells/).</span><span class="sxs-lookup"><span data-stu-id="08de2-108">Using enums for control flow or more robust abstractions can be a [code smell](http://deviq.com/code-smells/).</span></span> <span data-ttu-id="08de2-109">Esse tipo de uso leva a um código frágil com muitas instruções de fluxo de controle que verificam os valores da enumeração.</span><span class="sxs-lookup"><span data-stu-id="08de2-109">This type of usage leads to fragile code with many control flow statements checking values of the enum.</span></span>
 
-<span data-ttu-id="5b8d4-110">Em vez disso, você pode criar classes de enumeração que permitem que todos os recursos avançados de uma linguagem orientada a objeto.</span><span class="sxs-lookup"><span data-stu-id="5b8d4-110">Instead, you can create Enumeration classes that enable all the rich features of an object-oriented language.</span></span> <span data-ttu-id="5b8d4-111">No entanto, isso não é um problema crítico e, em muitos casos, para simplificar, você ainda pode usar enums normal se você preferir.</span><span class="sxs-lookup"><span data-stu-id="5b8d4-111">However, this is not a critical issue and in many cases, for simplicity, you can still use regular enums if that is your preference.</span></span>
+<span data-ttu-id="08de2-110">Em vez disso, é possível criar classes Enumeration que habilitam todos os recursos avançados de uma linguagem orientada a objeto.</span><span class="sxs-lookup"><span data-stu-id="08de2-110">Instead, you can create Enumeration classes that enable all the rich features of an object-oriented language.</span></span>
 
-## <a name="implementing-enumeration-classes"></a><span data-ttu-id="5b8d4-112">Implementando classes de enumeração</span><span class="sxs-lookup"><span data-stu-id="5b8d4-112">Implementing Enumeration classes</span></span>
+<span data-ttu-id="08de2-111">No entanto, isso não é um tópico crítico e, em muitos casos, para simplificar, ainda será possível usar [tipos enum](../../../../docs/csharp/language-reference/keywords/enum.md) regulares se você preferir.</span><span class="sxs-lookup"><span data-stu-id="08de2-111">However, this isn't a critical topic and in many cases, for simplicity, you can still use regular [enum types](../../../../docs/csharp/language-reference/keywords/enum.md) if that's your preference.</span></span>
 
-<span data-ttu-id="5b8d4-113">O ordenação microsserviço em eShopOnContainers fornece uma implementação de classe base de enumeração de exemplo, conforme mostrado no exemplo a seguir:</span><span class="sxs-lookup"><span data-stu-id="5b8d4-113">The ordering microservice in eShopOnContainers provides a sample Enumeration base class implementation, as shown in the following example:</span></span>
+## <a name="implementing-an-enumeration-base-class"></a><span data-ttu-id="08de2-112">Implementando uma classe base Enumeration</span><span class="sxs-lookup"><span data-stu-id="08de2-112">Implementing an Enumeration base class</span></span>
+
+<span data-ttu-id="08de2-113">O microsserviço de ordenação em eShopOnContainers fornece uma implementação de exemplo de classe base Enumeration, conforme mostrado no exemplo a seguir:</span><span class="sxs-lookup"><span data-stu-id="08de2-113">The ordering microservice in eShopOnContainers provides a sample Enumeration base class implementation, as shown in the following example:</span></span>
 
 ```csharp
 public abstract class Enumeration : IComparable
@@ -83,7 +88,7 @@ public abstract class Enumeration : IComparable
 }
 ```
 
-<span data-ttu-id="5b8d4-114">Você pode usar essa classe como um tipo em qualquer objeto de entidade ou um valor para a seguinte classe de enumeração CardType.</span><span class="sxs-lookup"><span data-stu-id="5b8d4-114">You can use this class as a type in any entity or value object, as for the following CardType Enumeration class.</span></span>
+<span data-ttu-id="08de2-114">É possível usar essa classe como um tipo em qualquer entidade ou objeto de valor, como para a seguinte classe Enumeration CardType:</span><span class="sxs-lookup"><span data-stu-id="08de2-114">You can use this class as a type in any entity or value object, as for the following CardType Enumeration class:</span></span>
 
 ```csharp
 public class CardType : Enumeration
@@ -99,7 +104,6 @@ public class CardType : Enumeration
     {
     }
 
-
     public static IEnumerable<CardType> List()
     {
         return new[] { Amex, Visa, MasterCard };
@@ -108,29 +112,29 @@ public class CardType : Enumeration
 }
 ```
 
-## <a name="additional-resources"></a><span data-ttu-id="5b8d4-115">Recursos adicionais</span><span class="sxs-lookup"><span data-stu-id="5b8d4-115">Additional resources</span></span>
+## <a name="additional-resources"></a><span data-ttu-id="08de2-115">Recursos adicionais</span><span class="sxs-lookup"><span data-stu-id="08de2-115">Additional resources</span></span>
 
--   <span data-ttu-id="5b8d4-116">**Enum é nocivo — atualizar**
-    [*http://www.planetgeek.ch/2009/07/01/enums-are-evil/*](http://www.planetgeek.ch/2009/07/01/enums-are-evil/)</span><span class="sxs-lookup"><span data-stu-id="5b8d4-116">**Enum’s are evil—update**
+-   <span data-ttu-id="08de2-116">**Enumerações são nocivas —atualização**
+    [*http://www.planetgeek.ch/2009/07/01/enums-are-evil/*](http://www.planetgeek.ch/2009/07/01/enums-are-evil/)</span><span class="sxs-lookup"><span data-stu-id="08de2-116">**Enum’s are evil—update**
 [*http://www.planetgeek.ch/2009/07/01/enums-are-evil/*](http://www.planetgeek.ch/2009/07/01/enums-are-evil/)</span></span>
 
--   <span data-ttu-id="5b8d4-117">**Daniel Hardman. Como os Enums se espalham doença — E a cura-**
-    [*https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/*](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)</span><span class="sxs-lookup"><span data-stu-id="5b8d4-117">**Daniel Hardman. How Enums Spread Disease — And How To Cure It**
+-   <span data-ttu-id="08de2-117">**Daniel Hardman. How Enums Spread Disease – And How To Cure It (Como as enumerações disseminam doenças – e como curá-la)**
+    [*https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/*](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)</span><span class="sxs-lookup"><span data-stu-id="08de2-117">**Daniel Hardman. How Enums Spread Disease — And How To Cure It**
 [*https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/*](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)</span></span>
 
--   <span data-ttu-id="5b8d4-118">**Jimmy Bogard. Classes de enumeração**
-    [*https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/*](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)</span><span class="sxs-lookup"><span data-stu-id="5b8d4-118">**Jimmy Bogard. Enumeration classes**
+-   <span data-ttu-id="08de2-118">**Jimmy Bogard. Classes Enumeration**
+    [*https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/*](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)</span><span class="sxs-lookup"><span data-stu-id="08de2-118">**Jimmy Bogard. Enumeration classes**
 [*https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/*](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)</span></span>
 
--   <span data-ttu-id="5b8d4-119">**Steve Smith. Alternativas de enum no c#**
-    [*http://ardalis.com/enum-alternatives-in-c*](http://ardalis.com/enum-alternatives-in-c)</span><span class="sxs-lookup"><span data-stu-id="5b8d4-119">**Steve Smith. Enum Alternatives in C#**
+-   <span data-ttu-id="08de2-119">**Steve Smith. Alternativas de enumeração em C#**
+    [*http://ardalis.com/enum-alternatives-in-c*](http://ardalis.com/enum-alternatives-in-c)</span><span class="sxs-lookup"><span data-stu-id="08de2-119">**Steve Smith. Enum Alternatives in C#**
 [*http://ardalis.com/enum-alternatives-in-c*](http://ardalis.com/enum-alternatives-in-c)</span></span>
 
--   <span data-ttu-id="5b8d4-120">**Enumeration.cs.**</span><span class="sxs-lookup"><span data-stu-id="5b8d4-120">**Enumeration.cs.**</span></span> <span data-ttu-id="5b8d4-121">Classe de enumeração em eShopOnContainers base [ *https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)</span><span class="sxs-lookup"><span data-stu-id="5b8d4-121">Base Enumeration class in eShopOnContainers [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)</span></span>
+-   <span data-ttu-id="08de2-120">**Enumeration.cs.**</span><span class="sxs-lookup"><span data-stu-id="08de2-120">**Enumeration.cs.**</span></span> <span data-ttu-id="08de2-121">Classe base Enumeration em eShopOnContainers [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)</span><span class="sxs-lookup"><span data-stu-id="08de2-121">Base Enumeration class in eShopOnContainers [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)</span></span>
 
--   <span data-ttu-id="5b8d4-122">**CardType.cs**.</span><span class="sxs-lookup"><span data-stu-id="5b8d4-122">**CardType.cs**.</span></span> <span data-ttu-id="5b8d4-123">Exemplo de classe de enumeração em eShopOnContainers.</span><span class="sxs-lookup"><span data-stu-id="5b8d4-123">Sample Enumeration class in eShopOnContainers.</span></span>
-    [<span data-ttu-id="5b8d4-124">*https://GitHub.com/dotnet/eShopOnContainers/blob/Master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs*</span><span class="sxs-lookup"><span data-stu-id="5b8d4-124">*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs*</span></span>](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)
+-   <span data-ttu-id="08de2-122">**CardType.cs**.</span><span class="sxs-lookup"><span data-stu-id="08de2-122">**CardType.cs**.</span></span> <span data-ttu-id="08de2-123">Exemplo de classe de enumeração em eShopOnContainers.</span><span class="sxs-lookup"><span data-stu-id="08de2-123">Sample Enumeration class in eShopOnContainers.</span></span>
+    [<span data-ttu-id="08de2-124">*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs*</span><span class="sxs-lookup"><span data-stu-id="08de2-124">*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs*</span></span>](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)
 
 
 >[!div class="step-by-step"]
-<span data-ttu-id="5b8d4-125">[Anterior] (implementar-valor-objects.md) [Avançar] (domínio-modelo-camada-validations.md)</span><span class="sxs-lookup"><span data-stu-id="5b8d4-125">[Previous] (implement-value-objects.md) [Next] (domain-model-layer-validations.md)</span></span>
+<span data-ttu-id="08de2-125">[Anterior] (implement-value-objects.md) [Próximo] (domain-model-layer-validations.md)</span><span class="sxs-lookup"><span data-stu-id="08de2-125">[Previous] (implement-value-objects.md) [Next] (domain-model-layer-validations.md)</span></span>
