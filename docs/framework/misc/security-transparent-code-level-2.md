@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - security-transparent code
 - security-critical code
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba7b6bca4618b8de7c1b5ce2ef45b8455ee71c5c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 66d3611117c02b60bcf4b3713cd2b5bd79856add
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="security-transparent-code-level-2"></a>Código transparente de segurança, nível 2
 <a name="top"></a>
@@ -86,7 +88,7 @@ ms.lasthandoff: 12/22/2017
   
 -   `SecurityCritical`: Todo o código que é apresentado pelo tipos neste assembly é importante; todos os outros códigos é transparente. Este cenário é semelhante à especificação não todos os atributos; No entanto, o common language runtime não determinar automaticamente as regras de transparência. Por exemplo, se você substituir um método virtual ou abstrato ou implementa um método de interface, por padrão, esse método é transparente. Você deve explicitamente anotar o método como `SecurityCritical` ou `SecuritySafeCritical`; caso contrário, um <xref:System.TypeLoadException> será lançada em tempo de carregamento. Esta regra também se aplica quando a classe base e a classe derivada no mesmo assembly.  
   
--   `AllowPartiallyTrustedCallers`(nível 2 somente): todos os padrões para transparente de código. No entanto, membros e tipos individuais podem ter outros atributos.  
+-   `AllowPartiallyTrustedCallers` (nível 2 somente): todos os padrões para transparente de código. No entanto, membros e tipos individuais podem ter outros atributos.  
   
  A tabela a seguir compara o comportamento de nível de assembly para o nível 2 com o nível 1.  
   
