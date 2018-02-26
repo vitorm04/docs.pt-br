@@ -49,7 +49,7 @@ class DerivedClass : BaseClass
   
 -   `bcdc` é do tipo `BaseClass` e seu valor é do tipo `DerivedClass`. Essa é a variável à qual você deve prestar atenção.  
   
- Como `bc` e `bcdc` têm o tipo `BaseClass`, eles podem ter acesso direto a `Method1`, a menos que você usa a conversão. A variável `dc` pode acessar `Method1` e `Method2`. Essas relações são mostradas no código a seguir.  
+ Como `bc` e `bcdc` têm o tipo `BaseClass`, eles podem ter acesso direto a `Method1`, a menos que você use a conversão. A variável `dc` pode acessar `Method1` e `Method2`. Essas relações são mostradas no código a seguir.  
   
 ```csharp  
 class Program  
@@ -168,24 +168,24 @@ namespace OverrideAndNew
             DerivedClass dc = new DerivedClass();  
             BaseClass bcdc = new DerivedClass();  
   
-            // The following two calls do what you would expect. They call  
-            // the methods that are defined in BaseClass.  
+            // As duas chamadas seguintes realizam o que você esperaria. Elas chamam  
+            // os métodos que foram definidos em BaseClass.  
             bc.Method1();  
             bc.Method2();  
             // Output:  
             // Base - Method1  
             // Base - Method2  
   
-            // The following two calls do what you would expect. They call  
-            // the methods that are defined in DerivedClass.  
+            // As duas chamadas seguintes realizam o que você esperaria. Elas chamam  
+            // os métodos que foram definidos em DerivedClass.  
             dc.Method1();  
             dc.Method2();  
             // Output:  
             // Derived - Method1  
             // Derived - Method2  
   
-            // The following two calls produce different results, depending   
-            // on whether override (Method1) or new (Method2) is used.  
+            // As duas chamadas seguintes produzem resultados diferentes, dependendo   
+            // se o modificador override (Method1) ou o modificador new (Method2) é usado.  
             bcdc.Method1();  
             bcdc.Method2();  
             // Output:  
@@ -225,10 +225,10 @@ namespace OverrideAndNew
  O exemplo a seguir ilustra um comportamento semelhante em um contexto diferente. O exemplo define três classes: uma classe base chamada `Car` e duas classes derivadas dela, `ConvertibleCar` e `Minivan`. A classe base contém um método `DescribeCar`. O método exibe uma descrição básica de um carro e, em seguida, chama `ShowDetails` para fornecer mais informações. Cada uma das três classes define um método `ShowDetails`. O modificador `new` é usado para definir `ShowDetails` na classe `ConvertibleCar`. O modificador `override` é usado para definir `ShowDetails` na classe `Minivan`.  
   
 ```csharp  
-// Define the base class, Car. The class defines two methods,  
-// DescribeCar and ShowDetails. DescribeCar calls ShowDetails, and each derived  
-// class also defines a ShowDetails method. The example tests which version of  
-// ShowDetails is selected, the base class method or the derived class method.  
+// Defina a classe base, Car. A classe define dois métodos,  
+// DescribeCar e ShowDetails. DescribeCar chama ShowDetails, e cada classe  
+// derivada também define o método ShowDetails. O exemplo testa qual versão de  
+// ShowDetails é selecionada, o método da classe base ou o método da classe derivada.  
 class Car  
 {  
     public void DescribeCar()  
@@ -243,10 +243,10 @@ class Car
     }  
 }  
   
-// Define the derived classes.  
+// Definição das classes derivadas.  
   
-// Class ConvertibleCar uses the new modifier to acknowledge that ShowDetails  
-// hides the base class method.  
+// Class ConvertibleCar usa o modificador new para autorizar que ShowDetails  
+// oculte o método da classe base.  
 class ConvertibleCar : Car  
 {  
     public new void ShowDetails()  
@@ -255,8 +255,8 @@ class ConvertibleCar : Car
     }  
 }  
   
-// Class Minivan uses the override modifier to specify that ShowDetails  
-// extends the base class method.  
+// Class Minivan usa o modificador override para especificar que ShowDetails  
+// estende o método da classe base.  
 class Minivan : Car  
 {  
     public override void ShowDetails()  
@@ -278,9 +278,8 @@ public static void TestCars1()
     car1.DescribeCar();  
     System.Console.WriteLine("----------");  
   
-    // Notice the output from this test case. The new modifier is  
-    // used in the definition of ShowDetails in the ConvertibleCar  
-    // class.    
+    // Observe o output (saída) deste caso de teste. O modificador new é  
+    // usado na definição de ShowDetails na classe ConvertibleCar.  
   
     ConvertibleCar car2 = new ConvertibleCar();  
     car2.DescribeCar();  
@@ -292,7 +291,7 @@ public static void TestCars1()
 }  
 ```  
   
- `TestCars1` produz a saída a seguir. Observe principalmente os resultados para `car2`, que provavelmente não são o que você espera. O tipo do objeto é `ConvertibleCar`, mas `DescribeCar` não acessa a versão de `ShowDetails` definida na classe `ConvertibleCar`, porque esse método é declarado com o modificador `new`, não o modificador `override`. Em decorrência disso, um objeto `ConvertibleCar` exibe a mesma descrição que um objeto `Car`. Compare os resultados de `car3`, que é um objeto `Minivan`. Nesse caso, o método `ShowDetails` declarado na classe `Minivan` substitui o método `ShowDetails` declarado na classe `Car` e a descrição exibida descreve uma minivan.  
+ `TestCars1` produz a saída a seguir. Observe principalmente os resultados para `car2`, que provavelmente não são o que você espera. O tipo do objeto é `ConvertibleCar`, mas `DescribeCar` não acessa a versão de `ShowDetails` definida na classe `ConvertibleCar`, porque esse método é declarado com o modificador `new`, e não com o modificador `override`. Em decorrência disso, um objeto `ConvertibleCar` exibe a mesma descrição que um objeto `Car`. Compare os resultados de `car3`, que é um objeto `Minivan`. Nesse caso, o método `ShowDetails` declarado na classe `Minivan` substitui o método `ShowDetails` declarado na classe `Car` e a descrição exibida descreve uma minivan.  
   
 ```csharp  
 // TestCars1  
@@ -395,20 +394,20 @@ namespace OverrideAndNew2
     {  
         static void Main(string[] args)  
         {  
-            // Declare objects of the derived classes and test which version  
-            // of ShowDetails is run, base or derived.  
+            // Declara objetos das classes derivadas e testa qual versão 
+            // de ShowDetails é executada, a da classe base ou da classe derivada.  
             TestCars1();  
   
-            // Declare objects of the base class, instantiated with the  
-            // derived classes, and repeat the tests.  
+            // Declara objetos da classe base, instanciados com as 
+            // classes derivadas, e repete os testes.  
             TestCars2();  
   
-            // Declare objects of the derived classes and call ShowDetails  
-            // directly.  
+            // Declara objetos das classes derivadas e chama por ShowDetails  
+            // diretamente.  
             TestCars3();  
   
-            // Declare objects of the base class, instantiated with the  
-            // derived classes, and repeat the tests.  
+            // Declara objetos da classe base, instanciados com as  
+            // classes derivadas, e repete os testes.  
             TestCars4();  
         }  
   
@@ -421,9 +420,9 @@ namespace OverrideAndNew2
             car1.DescribeCar();  
             System.Console.WriteLine("----------");  
   
-            // Notice the output from this test case. The new modifier is  
-            // used in the definition of ShowDetails in the ConvertibleCar  
-            // class.    
+            // Observe o output (saída) deste caso de teste. O modificador new é  
+            // usado na definição de ShowDetails na classe ConvertibleCar.  
+   
             ConvertibleCar car2 = new ConvertibleCar();  
             car2.DescribeCar();  
             System.Console.WriteLine("----------");  
@@ -503,10 +502,10 @@ namespace OverrideAndNew2
         // Carries seven people.  
     }  
   
-    // Define the base class, Car. The class defines two virtual methods,  
-    // DescribeCar and ShowDetails. DescribeCar calls ShowDetails, and each derived  
-    // class also defines a ShowDetails method. The example tests which version of  
-    // ShowDetails is used, the base class method or the derived class method.  
+    // Defina a classe base, Car. Essa classe define dois métodos com o modificador virtual,  
+    // DescribeCar e ShowDetails. DescribeCar chama por ShowDetails, e cada classe  
+    // derivada também define o método ShowDetails. O exemplo testa qual versão de  
+    // ShowDetails é usada, o método da classe base ou da classe derivada.  
     class Car  
     {  
         public virtual void DescribeCar()  
@@ -521,10 +520,10 @@ namespace OverrideAndNew2
         }  
     }  
   
-    // Define the derived classes.  
+    // Defina as classes derivadas.  
   
-    // Class ConvertibleCar uses the new modifier to acknowledge that ShowDetails  
-    // hides the base class method.  
+    // Class ConvertibleCar usa o modificador new para autorizar que ShowDetails  
+    // oculte o método da classe base.  
     class ConvertibleCar : Car  
     {  
         public new void ShowDetails()  
@@ -533,8 +532,8 @@ namespace OverrideAndNew2
         }  
     }  
   
-    // Class Minivan uses the override modifier to specify that ShowDetails  
-    // extends the base class method.  
+    // Class Minivan usa o modificador override para especificar que ShowDetails  
+    // estende o método da classe base.  
     class Minivan : Car  
     {  
         public override void ShowDetails()  
