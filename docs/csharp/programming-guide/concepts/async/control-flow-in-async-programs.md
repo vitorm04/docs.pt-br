@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7a13763b2eeec93e7db7ca770c4d52b4a2ba768c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8b975b75f9ff31f43e722d3ceb28d08ed3b6ce11
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="control-flow-in-async-programs-c"></a>Fluxo de controle em programas assíncronos (C#)
 Você pode escrever e manter programas assíncronos mais facilmente usando as palavras-chave `async` e `await`. No entanto, os resultados podem surpreendê-lo se você não entender o funcionamento do seu programa. Este tópico rastreia o fluxo de controle por meio de um programa assíncrono simples para mostrar quando o controle se move de um método para o outro e quais informações são transferidas a cada vez.  
@@ -105,7 +106,7 @@ Length of the downloaded string: 33946.
 >  Para executar o exemplo, você deve ter o Visual Studio 2012 ou mais recente e o .NET Framework 4.5 ou posterior instalados no seu computador.  
   
 ### <a name="download-the-program"></a>Baixar o Programa  
- Você pode baixar o aplicativo deste tópico em [Exemplo assíncrono: controlar fluxo em programas assíncronos](http://go.microsoft.com/fwlink/?LinkId=255285). As etapas a seguir abrem e executam o programa.  
+ Você pode baixar o aplicativo deste tópico em [Exemplo assíncrono: controlar fluxo em programas assíncronos](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). As etapas a seguir abrem e executam o programa.  
   
 1.  Descompacte o arquivo baixado e, em seguida, inicie o Visual Studio.  
   
@@ -391,4 +392,4 @@ int contentLength = await getLengthTask;
  [Programação assíncrona com async e await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
  [Tipos de retorno assíncronos (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)  
  [Passo a passo: acessando a Web e usando async e await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Exemplo de assíncrono: fluxo de controle em programas assíncronos (C# e Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255285)
+ [Exemplo de assíncrono: fluxo de controle em programas assíncronos (C# e Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

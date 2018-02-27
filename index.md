@@ -4,11 +4,11 @@ hide_bc:
 title: "Documentação .NET"
 description: "Aprenda a usar o .NET para criar uma variedade de aplicativos em qualquer plataforma usando C#, Visual Basic e F#. Procure referência de API, código de exemplo, tutoriais e muito mais."
 ms.custom: updateeachrelease
-ms.openlocfilehash: 9e2ed008752d37d79cabc8c9d341e797a715294c
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: 65d0a7681c8210ee458112a5486f36ceac7f65e4
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/24/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -256,9 +256,9 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/aspnet/core/">
-                                                    <h3>Usando o ASP.NET Core</h3>
-                                                    <p>Aprenda a criar aplicativos Web modernos com o ASP.NET Core.</p>
+                                                <a href="/aspnet/core/tutorials/">
+                                                    <h3>Tutoriais do ASP.NET Core</h3>
+                                                    <p>Descubra os diferentes guias passo a passo disponíveis para aprender a desenvolver aplicativos do ASP.NET Core.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -275,7 +275,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://www.asp.net/learn">
+                                                <a href="/aspnet/overview">
                                                     <h3>O que é ASP.NET?</h3>
                                                     <p>Aprenda a fazer build de aplicativos web ASP.NET.</p>
                                                 </a>
@@ -296,7 +296,7 @@ ms.lasthandoff: 02/09/2018
                                             <div class="cardText">
                                                 <a href="/aspnet/core/tutorials/first-mvc-app/start-mvc">
                                                     <h3>ASP.NET Core no Visual Studio</h3>
-                                                    <p>Aprenda os conceitos básicos da criação de um aplicativo Web MVC do ASP.NET Core usando o Visual Studio 2015.</p>
+                                                    <p>Aprenda os conceitos básicos da criação de um aplicativo Web ASP.NET Core MVC usando o Visual Studio.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -313,9 +313,9 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/dotnet/framework/docker/aspnetmvc">
-                                                    <h3>Aplicativos ASP.NET em contêineres</h3>
-                                                    <p>Aprenda a implantar aplicativos ASP.NET com o Docker.</p>
+                                                <a href="/aspnet/mvc/overview/deployment/docker-aspnetmvc">
+                                                    <h3>Aplicativos ASP.NET MVC em contêineres do Windows</h3>
+                                                    <p>Aprenda a implantar aplicativos ASP.NET MVC com o Docker.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -332,9 +332,9 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/aspnet/core/tutorials/your-first-mac-aspnet">
-                                                    <h3>ASP.NET no macOS e no Visual Studio Code</h3>
-                                                    <p>Aprenda a configurar, compilar e implantar aplicativos ASP.NET Core no macOS com Código do Visual Studio.</p>
+                                                <a href="/aspnet/core/tutorials/xplat">
+                                                    <h3>Tutoriais da plataforma cruzada do ASP.NET Core</h3>
+                                                    <p>Aprenda a criar aplicativos Web ou APIs Web com o ASP.NET Core.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -356,8 +356,8 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://azure.microsoft.com/develop/net">
-                                                    <h3>Documentação .NET do Azure</h3>
+                                                <a href="/dotnet/azure/">
+                                                    <h3>Documentação do Azure para .NET</h3>
                                                     <p>Saiba mais sobre os serviços do Azure, como aplicativos Web, WebJobs, Serviços de Nuvem e VMs.</p>
                                                 </a>
                                             </div>
@@ -413,7 +413,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://docs.microsoft.com/azure/storage/">
+                                                <a href="/azure/storage/">
                                                     <h3>Armazenamento do Azure</h3>
                                                     <p>Saiba mais sobre o Armazenamento do Azure e como criar aplicativos que usam blobs, tabelas, filas e arquivos do Azure.</p>
                                                 </a>
@@ -519,7 +519,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://msdn.microsoft.com/library/ms754130.aspx">
+                                                <a href="/dotnet/framework/wpf/index">
                                                     <h3>Windows Presentation Foundation (WPF)</h3>
                                                     <p>O WPF fornece aos desenvolvedores um modelo baseado em XAML para criar aplicativos de área de trabalho no Windows.</p>
                                                 </a>
@@ -538,7 +538,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://msdn.microsoft.com/library/dd30h2yb.aspx">
+                                                <a href="/dotnet/framework/winforms/index">
                                                     <h3>Windows Forms</h3>
                                                     <p>Desenvolva rapidamente aplicativos de Linha de Negócios para a área de trabalho do Windows.</p>
                                                 </a>
