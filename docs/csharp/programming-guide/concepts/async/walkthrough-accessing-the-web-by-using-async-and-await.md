@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: get-started-article
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 85edc87bc8c5183f85618351034c0b043472b530
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 533cb4b342e3de3eb3143b001f5a26e36e4d79b9
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Passo a passo: acessando a Web usando async e await (C#)
 É possível escrever programas assíncronos de forma mais fácil e intuitiva usando funcionalidades async/await. Você pode escrever código assíncrono que se parece com código síncrono e deixar que o compilador trate das complicadas continuações e funções de retorno de chamada que um código assíncrono normalmente envolve.  
@@ -24,7 +25,7 @@ ms.lasthandoff: 11/21/2017
   
  Este passo a passo começa com um aplicativo WPF (Windows Presentation Foundation) síncrono que soma o número de bytes em uma lista de sites. Em seguida, converte o aplicativo em uma solução assíncrona usando os novos recursos.  
   
- Se não quiser compilar os aplicativos, você poderá baixar "Exemplo de assincronia: acessando o passo a passo da Web (C# e Visual Basic)" nas [Amostras de código do desenvolvedor](http://go.microsoft.com/fwlink/?LinkId=255191).  
+ Se não quiser compilar os aplicativos, você poderá baixar o [Exemplo de assincronia: acessando o passo a passo da Web (C# e Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).  
   
  Neste passo a passo, você realizará as seguintes tarefas:  
   
@@ -52,8 +53,8 @@ ms.lasthandoff: 11/21/2017
   
 -   [Exemplo](#BKMK_CompleteCodeExamples)  
   
-## <a name="prerequisites"></a>Pré-requisitos  
- O Visual Studio 2012 ou posterior deve estar instalado em seu computador. Para obter mais informações, consulte o [site da Microsoft](http://go.microsoft.com/fwlink/?LinkId=235233).  
+> [!NOTE]
+>  Para executar os exemplos, você precisa ter o Visual Studio 2012 ou uma versão mais recente e o .NET Framework 4.5 ou posterior instalados em seu computador.  
   
 ###  <a name="CreateWPFApp"></a> Criar um aplicativo WPF  
   
@@ -732,11 +733,11 @@ namespace AsyncExampleWPF
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplo de assíncrono: Acessando o passo a passo da Web (c# e Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255191)  
+ [Exemplo de assincronia: acessando o passo a passo da Web (C# e Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)  
  [async](../../../../csharp/language-reference/keywords/async.md)  
  [await](../../../../csharp/language-reference/keywords/await.md)  
  [Programação assíncrona com async e await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
  [Tipos de retorno assíncronos (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)  
- [Programação assíncrona com base em tarefa (TAP)](http://go.microsoft.com/fwlink/?LinkId=204847)  
+ [TAP (programação assíncrona baseada em tarefas)](https://www.microsoft.com/en-us/download/details.aspx?id=19957)  
  [Como estender as instruções passo a passo assíncronas usando Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)  
  [Como fazer várias solicitações da Web em paralelo, usando async e await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

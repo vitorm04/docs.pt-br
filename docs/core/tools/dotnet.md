@@ -3,17 +3,17 @@ title: "Comando dotnet – CLI do .NET Core"
 description: "Saiba mais sobre o comando dotnet (o driver genérico para as ferramentas da CLI do .NET Core) e seu uso."
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 11/28/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 2eea7d13994bfddc89d8f3513308a6620c53c88c
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: bed0876645428cdff11fa83a091fc63e64cedc8f
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="dotnet-command"></a>Comando dotnet
 
@@ -200,6 +200,8 @@ Execute um aplicativo dependente do framework chamado `myapp.dll`:
 
 ## <a name="environment-variables"></a>Variáveis de ambiente
 
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
 `DOTNET_PACKAGES`
 
 O cache do pacote principal. Se não estiver definido, o padrão será `$HOME/.nuget/packages` em Unix ou `%HOME%\NuGet\Packages` no Windows.
@@ -211,3 +213,23 @@ Especifica o local do índice de manutenção a ser usado pelo host compartilhad
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
 Especifica se os dados sobre o uso de ferramentas .NET Core são coletados e enviados para a Microsoft. Defina como `true` para cancelar o recurso de telemetria (os valores `true`, `1` ou `yes` são aceitos); caso contrário, defina como `false` para cancelar os recursos de telemetria (os valores `false`, `0` ou `no`são aceitos). Se não estiver definido, o padrão será `false`, e o recurso de telemetria estará ativo.
+
+`DOTNET_MULTILEVEL_LOOKUP`
+
+Especifica se o tempo de execução, a estrutura compartilhada ou o SDK do .NET Core são resolvidos no local global. Se não estiver definida, o padrão será `true`. Definida como `false` para não resolver no local global e ter instalações do NET Core isoladas (os valores `0` ou `false` são aceitos). Para obter mais informações sobre a pesquisa de vários níveis, consulte [Pesquisa SharedFX de vários níveis](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`DOTNET_PACKAGES`
+
+O cache do pacote principal. Se não estiver definido, o padrão será `$HOME/.nuget/packages` em Unix ou `%HOME%\NuGet\Packages` no Windows.
+
+`DOTNET_SERVICING`
+
+Especifica o local do índice de manutenção a ser usado pelo host compartilhado ao carregar o tempo de execução.
+
+`DOTNET_CLI_TELEMETRY_OPTOUT`
+
+Especifica se os dados sobre o uso de ferramentas .NET Core são coletados e enviados para a Microsoft. Defina como `true` para cancelar o recurso de telemetria (os valores `true`, `1` ou `yes` são aceitos); caso contrário, defina como `false` para cancelar os recursos de telemetria (os valores `false`, `0` ou `no`são aceitos). Se não estiver definido, o padrão será `false`, e o recurso de telemetria estará ativo.
+
+---

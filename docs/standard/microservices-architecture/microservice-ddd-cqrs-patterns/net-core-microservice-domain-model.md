@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 07a79f3d52db400d1539fb4172166cccf8905fb8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0b954efffe2ee7e3e2bdaa49bd1057d72d69088c
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="implementing-a-microservice-domain-model-with-net-core"></a>Implementando um modelo de domínio de microsserviço com o .NET Core 
 
@@ -171,7 +171,7 @@ Quando você usa EF Core 1.0, no DbContext, precisa mapear as propriedades defin
 
 Com o recurso no EF Core 1.1 ou posterior para mapear colunas para campos, também é possível não usar propriedades. Em vez disso, você pode apenas mapear as colunas de uma tabela para campos. Um caso de uso comum para isso são campos privados para um estado interno que não precisam ser acessados de fora da entidade.
 
-Por exemplo, no exemplo de código anterior OrderAggregate, há vários campos privados, como o campo `_paymentMethodId`, que não têm nenhuma propriedade relacionada para um setter ou um getter. Esse campo também poderia ser calculado dentro da lógica de negócios da ordem e usado em métodos da ordem, mas precisa ser mantido no banco de dados também. Assim, no EF Core (desde a v1.1), existe uma maneira de mapear um campo sem uma propriedade relacionada a uma coluna no banco de dados. Isso também é explicado na seção [Camada de infraestrutura](#the-infrastructure-layer) deste guia.
+Por exemplo, no exemplo de código anterior, OrderAggregate, há vários campos privados, como o campo `_paymentMethodId`, que não têm nenhuma propriedade relacionada para um setter ou um getter. Esse campo também poderia ser calculado dentro da lógica de negócios da ordem e usado em métodos da ordem, mas precisa ser mantido no banco de dados também. Assim, no EF Core (desde a v1.1), existe uma maneira de mapear um campo sem uma propriedade relacionada a uma coluna no banco de dados. Isso também é explicado na seção [Camada de infraestrutura](#the-infrastructure-layer) deste guia.
 
 ### <a name="additional-resources"></a>Recursos adicionais
 

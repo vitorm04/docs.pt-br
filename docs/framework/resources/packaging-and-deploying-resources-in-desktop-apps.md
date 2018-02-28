@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-bcl
+ms.technology:
+- dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -33,16 +34,17 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f170c3e7174b231153a9e201f617faa786291056
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3ab23b263d572a5573de5fc21f15b56e784a9a94
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Empacotando e implantando recursos em aplicativos de área de trabalho
 Aplicativos se baseiam no Gerenciador de Recursos do .NET Framework, representado pela classe <xref:System.Resources.ResourceManager>, para recuperar os recursos localizados. O Gerenciador de Recursos pressupõe que um modelo de hub e spoke é usado para empacotar e implantar recursos. O hub é o principal assembly que contém o código executável não localizável e os recursos para uma única cultura, chamada de cultura neutra ou padrão. O padrão é a cultura de fallback para o aplicativo; é a cultura que tem os recursos utilizados quando não há recursos localizados disponíveis. Cada spoke conecta-se a um assembly satélite que contém os recursos para uma única cultura, mas não contém nenhum código.  
@@ -129,7 +131,7 @@ Aplicativos se baseiam no Gerenciador de Recursos do .NET Framework, representad
 </configuration>  
 ```  
   
- A investigação otimizada por assemblies satélite é um recurso opcional. Ou seja, o tempo de execução segue as etapas documentadas no [Processo de Fallback do Recurso](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1), a menos que o elemento [\<relativeBindForResources >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) esteja presente no arquivo de configuração do aplicativo e seu atributo `enabled` esteja definido como `true`. Neste caso, o processo de investigação de um assembly satélite é modificado conforme a seguir:  
+ A investigação otimizada por assemblies satélite é um recurso opcional. Ou seja, o tempo de execução segue as etapas documentadas em [O Processo de fallback do recurso](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1), a menos que o elemento [\<relativeBindForResources >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) esteja presente no arquivo de configuração do aplicativo e seu atributo `enabled` esteja definido como `true`. Neste caso, o processo de investigação de um assembly satélite é modificado conforme a seguir:  
   
 -   O tempo de execução usa o local do assembly de código pai para investigar o assembly satélite. Se o assembly pai estiver instalado no cache de assembly global, o tempo de execução investiga o cache, mas não o diretório do aplicativo. Se o assembly pai estiver instalado em um diretório de aplicativo, o tempo de execução investiga o diretório do aplicativo, mas não no cache de assembly global.  
   

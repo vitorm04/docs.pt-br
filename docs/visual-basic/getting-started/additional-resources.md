@@ -1,92 +1,73 @@
 ---
 title: Recursos adicionais para programadores do Visual Basic
-ms.date: 07/20/2015
+description: "Descubra recursos de aprendizado na Web, faça perguntas e obtenha mais informações sobre o Visual Basic."
+ms.date: 02/21/2018
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic, additional resources
-- Help
 - resources [Visual Basic], additional
-- Help, newsgroups
-- Web sites, Visual Studio
-- webcasts
 - Help, Visual Basic Web sites
-- newsgroups, Visual Studio
-- support, Visual Studio sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4f37aaffa33d618a54ea56252b7183f9bce1ed7b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: mairaw
+ms.author: mairaw
+ms.openlocfilehash: 9b2e9718d6f342bdd0865a9593e85683a5bf9a45
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="additional-resources-for-visual-basic-programmers"></a>Recursos adicionais para programadores do Visual Basic
-Os sites a seguir fornecem orientações e podem ajudar a encontrar respostas para problemas comuns.  
-  
-## <a name="microsoft-resources"></a>Recursos da Microsoft  
-  
-### <a name="on-the-web"></a>Na Web  
-  
-|Termo|Definição|  
-|----------|----------------|  
-|[Microsoft Visual Basic Developer Center](http://go.microsoft.com/fwlink/?LinkID=47768)|Fornece exemplos de código, informações sobre atualizações, vídeos, downloads gratuitos e conteúdo técnico.|  
-|[Blog da equipe do Microsoft Visual Basic](http://go.microsoft.com/fwlink/?LinkID=123815)|Fornece acesso ao blog da equipe do Visual Basic.|  
-|[Microsoft ASP.NET](http://go.microsoft.com/fwlink/?LinkID=51657)|Fornece artigos, demonstrações, visualizações de ferramentas e outras informações sobre desenvolvimento para a Web no Visual Basic.|  
-|[MSDN Magazine](http://msdn.microsoft.com/magazine/cc159292.aspx)|Fornece artigos abrangentes sobre Visual Basic.|  
-|[Padrões e práticas da Microsoft](http://msdn.microsoft.com/practices/default.aspx)|Fornece orientação de engenharia aplicada que inclui documentação e código-fonte de qualidade de produção.|  
-  
-### <a name="code-samples"></a>Exemplos de código  
-  
-|Termo|Definição|  
-|----------|----------------|  
-|[Galeria de código](http://code.msdn.microsoft.com/)|Baixe e compartilhe aplicativos de exemplo e outros recursos com a comunidade de desenvolvedores.|  
-|[GitHub](http://www.github.com/)|Hospeda projetos de software livre. Você pode usar o GitHub para localizar o software de código-fonte aberto ou criar novos projetos e compartilhar com o mundo.|  
-|[Exemplos de código do Visual Basic](http://msdn.microsoft.com/vbasic/ms789074)|Fornece exemplos de aplicativo, web e dados no Visual Basic.|  
-  
-### <a name="forums"></a>Fóruns  
-  
-|Termo|Definição|  
-|----------|----------------|  
-|[Linguagem Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145963)|Discute a sintaxe de linguagem e o compilador do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].|  
-|[Interoperabilidade e atualização do Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145966)|Discute a atualização para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] e o trabalho com recursos de interoperabilidade.|  
-|[IDE do Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145971)|Discute o trabalho no ambiente de desenvolvimento integrado do [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].|  
-|[Visual Basic Power Packs](http://social.msdn.microsoft.com/Forums/vbpowerpacks/threads)|Discute os suplementos, controles, componentes, exemplos e as ferramentas que fazem parte do Visual Basic Power Packs.|  
-|[Informações gerais sobre o Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145973)|Discute problemas com o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] que não são discutidos em outros fóruns.|  
-  
-### <a name="chats-and-discussion-groups"></a>Chats e Grupos de Discussão  
-  
-|Termo|Definição|  
-|----------|----------------|  
-|[Grupos de discussão do MSDN](http://go.microsoft.com/fwlink/?LinkId=145961)|Fornece uma experiência de grupos de notícias, permitindo conectar-se como uma comunidade com especialistas do mundo todo.|  
-|[Chats do MSDN](http://go.microsoft.com/fwlink/?LinkId=145962)|Fornece discussões sobre produtos ou tecnologias da Microsoft. Cada chat é hospedado por um ou mais especialistas da Microsoft. Transcrições estão disponíveis para chats concluídos.|  
-  
-### <a name="videos-and-webcasts"></a>Vídeos e Webcasts  
-  
-|Termo|Definição|  
-|----------|----------------|  
-|[Channel9](http://go.microsoft.com/fwlink/?LinkID=123827)|Fornece uma comunidade contínua de vídeos, Wikis, e fóruns.|  
-|[Sou um VB](http://msdn.microsoft.com/vbasic/dd776132)|Assista a essas entrevistas e descubra o que os especialistas amam no Visual Basic e no Visual Studio.|  
-  
-### <a name="support"></a>Suporte  
-  
-|Termo|Definição|  
-|----------|----------------|  
-|[Ajuda e Suporte da Microsoft](http://go.microsoft.com/fwlink/?LinkID=108287)|Fornece acesso a artigos da Base de Dados de Conhecimento (KB), downloads e atualizações, webcasts de suporte e outros serviços.|  
-|[Microsoft Connect](http://connect.microsoft.com/)|Permite arquivar bugs ou fornecer sugestões à Microsoft sobre o Visual Studio. Também é possível relatar um bug escolhendo **Relatar um Bug** no menu **Ajuda**.|  
-  
-## <a name="third-party-resources"></a>Recursos de terceiros  
- O site do MSDN fornece informações sobre sites de terceiros atuais e grupos de notícias de interesse. Para obter a lista de recursos disponíveis mais atual, consulte [Site da comunidade Visual Basic do MSDN](http://go.microsoft.com/fwlink/?LinkID=77372).  
-  
-|Termo|Definição|  
-|----------|----------------|  
-|[Zona do Visual Basic do DevX](http://go.microsoft.com/fwlink/?LinkId=145978)|Fornece artigos técnicos abrangentes para o desenvolvedor moderno do Visual Basic.|  
-|[vb.dotnet.technical](http://go.microsoft.com/fwlink/?LinkId=145986)|Fornece um fórum para discussão de novos recursos no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] nos fóruns DevX.|  
-  
-## <a name="see-also"></a>Consulte também  
- [Introdução](../../visual-basic/getting-started/index.md)  
- [Fale conosco](/visualstudio/ide/talk-to-us)
+# <a name="additional-resources"></a>Recursos adicionais
+
+Os sites a seguir fornecem orientações e podem ajudar a encontrar respostas para problemas comuns.
+
+## <a name="microsoft-resources"></a>Recursos da Microsoft
+
+### <a name="on-the-web"></a>Na Web
+
+|Termo|Definição|
+|----------|----------------|
+|[Design de linguagem Visual Basic .NET](https://github.com/dotnet/vblang)|Repositório oficial no GitHub para design de linguagem Visual Basic .NET.|
+|[Blog da equipe do Microsoft Visual Basic](https://blogs.msdn.microsoft.com/vbteam/)|Fornece acesso ao blog da equipe do Visual Basic.|
+
+### <a name="code-samples"></a>Exemplos de código
+
+|Termo|Definição|
+|----------|----------------|
+|[Galeria de código](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=VB&f%5B0%5D.Text=VB.NET)|Baixe e compartilhe aplicativos de exemplo e outros recursos com a comunidade de desenvolvedores.|
+|[Exemplos de documentação do Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic)|Contém os exemplos usados na documentação do Visual Basic e do .NET.|
+
+### <a name="forums"></a>Fóruns
+
+|Termo|Definição|
+|----------|----------------|
+|[Fóruns do Visual Basic](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)|Discute problemas gerais do Visual Basic.|
+
+### <a name="videos-and-webcasts"></a>Vídeos e webcasts
+
+|Termo|Definição|
+|----------|----------------|
+|[Channel9](https://channel9.msdn.com/)|Fornece uma comunidade contínua de vídeos, Wikis, e fóruns.|
+
+### <a name="support"></a>Suporte
+
+|Termo|Definição|
+|----------|----------------|
+|[Suporte da Microsoft](https://support.microsoft.com)|Fornece acesso a artigos da Base de Dados de Conhecimento (KB), downloads e atualizações, webcasts de suporte e outros serviços.|
+|[Perguntas do Visual Studio](https://developercommunity.visualstudio.com)|Permite arquivar bugs ou fornecer sugestões à Microsoft sobre o .NET e o Visual Studio. Você também pode relatar um bug ao selecionar **Ajuda** > **Enviar Comentários** > **Relatar um Problema** no Visual Studio.|
+
+## <a name="third-party-resources"></a>Recursos de terceiros
+
+|Termo|Definição|
+|----------|----------------|
+|[VBForums](http://www.vbforums.com/)|Fornece um fórum para discussão de Visual Basic, .NET e muito mais.|
+|[vbCity](http://vbcity.com/)|Um site da comunidade para que pessoas aprendam e façam perguntas sobre Visual Basic e .NET.|
+|[Stack Overflow](https://stackoverflow.com/questions/tagged/vb.net)|O Stack Overflow é um site de perguntas e respostas para desenvolvedores.|
+
+## <a name="see-also"></a>Consulte também
+
+[Introdução ao Visual Basic](../../visual-basic/getting-started/index.md)  
+[Fale conosco](/visualstudio/ide/talk-to-us)  

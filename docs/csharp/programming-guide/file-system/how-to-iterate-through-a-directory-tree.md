@@ -2,20 +2,21 @@
 title: "Como iterar em uma árvore de diretório (Guia de Programação em C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c4851938aafefd93aa9189aecbb3f5cdd9a09ea0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7f45bdc4a08922842b079be3ef9d112693ca5d7a
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Como iterar em uma árvore de diretório (Guia de Programação em C#)
 A expressão "iterar uma árvore de diretório" significa acessar cada arquivo em cada subdiretório aninhado em uma pasta raiz especificada, em qualquer profundidade. Você não precisa necessariamente abrir cada arquivo. Você pode recuperar apenas o nome do arquivo ou subdiretório como um `string`, ou então você pode recuperar informações adicionais na forma de um objeto <xref:System.IO.FileInfo?displayProperty=nameWithType> ou <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  
@@ -59,9 +60,9 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  Se você precisar armazenar o conteúdo de uma árvore de diretório, seja na memória ou no disco, a melhor opção é armazenar apenas a propriedade <xref:System.IO.FileSystemInfo.FullName%2A> (do tipo `string`) para cada arquivo. Você pode, então, usar essa cadeia de caracteres para criar um novo objeto <xref:System.IO.FileInfo> ou <xref:System.IO.DirectoryInfo>, conforme necessário ou abra qualquer arquivo que precisar de processamento adicional.  
   
 ## <a name="robust-programming"></a>Programação robusta  
- O código de iteração de arquivo robusto deve levar em conta muitas complexidades do sistema de arquivos. Para obter mais informações, consulte [Referência técnica de NTFS](http://go.microsoft.com/fwlink/?LinkId=79488).  
+ O código de iteração de arquivo robusto deve levar em conta muitas complexidades do sistema de arquivos. Para obter mais informações sobre o sistema de arquivos do Windows, consulte [Referência técnica do NTFS](https://technet.microsoft.com/library/81cc8a8a-bd32-4786-a849-03245d68d8e4).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.IO>  
- [LINQ e Diretórios de Arquivos](http://msdn.microsoft.com/library/5a5d516c-0279-4a84-ac84-b87f54caa808)  
+ [LINQ e Diretórios de Arquivos](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
  [Sistema de arquivos e o Registro (Guia de Programação em C#)](../../../csharp/programming-guide/file-system/index.md)
