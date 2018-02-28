@@ -21,7 +21,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 01/19/2018
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- seu primeiro programa (Guia de Programação em C#)
-O procedimento a seguir cria uma versão de C# do programa tradicional "Hello World!" programa. O programa exibe a cadeia de caracteres `Hello World!`  
+O procedimento a seguir cria uma versão de C# do tradicional programa  "Hello World!". O programa exibe a cadeia de caracteres `Hello World!`  
   
  Para obter mais exemplos de conceitos introdutórios, consulte [Introdução ao Visual C# e ao Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic).  
   
@@ -47,7 +47,7 @@ O procedimento a seguir cria uma versão de C# do programa tradicional "Hello Wo
   
      [!code-csharp[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]  
   
-7.  Escolha a tecla F5 para executar o projeto. Uma janela do Prompt de Comando aparece, contendo a linha `Hello World!`  
+7.  Pressione a tecla F5 para executar o projeto. Uma janela do Prompt de Comando aparece, contendo a linha `Hello World!`  
   
  Em seguida, as partes importantes desse programa são examinadas.  
   
