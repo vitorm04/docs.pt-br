@@ -2,18 +2,19 @@
 title: Visual Basic
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - programming, Visual Basic
 - Visual Basic
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38ccf61b488a40d100895d0dd2bb4bdecca7eba5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 96c7c93056b11c08ccdfa48a0d78f2996c2d86d4
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="visual-basic-guide"></a>Guia do Visual Basic
 
@@ -21,7 +22,7 @@ O Visual Basic foi desenvolvido para compilar aplicativos fortemente tipados e o
   
  Essa geração do Visual Basic dá continuidade à tradição de oferecer a você uma maneira rápida e fácil de criar aplicativos baseados no .NET Framework.  
   
- Se ainda não tem o Visual Basic, você pode adquirir uma versão do Visual Studio que inclui o Visual Basic gratuitamente no site do [Visual Studio](https://www.visualstudio.com/products/downloads).  
+ Se ainda não tem o Visual Basic, você pode adquirir uma versão do Visual Studio que inclui o Visual Basic gratuitamente no site do [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Introdução](../visual-basic/getting-started/index.md)  
