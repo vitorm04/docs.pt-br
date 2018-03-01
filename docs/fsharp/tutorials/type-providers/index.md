@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 25697ef6-465e-4248-9de5-1d199d4a8b59
-ms.openlocfilehash: 68462a24a9fbd1ee671d7e335f2774adf3476750
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f721b5b378bf70fb594cad66bd90bd96a0320ee2
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="type-providers"></a>Provedores de tipos
 
 > [!NOTE]
-Este guia foi escrito para F# 3.0 e será atualizado.  Consulte [FSharp.Data](http://fsharp.github.io/FSharp.Data/) para provedores de tipo de plataforma cruzada atualizados.
+Este guia foi escrito para F# 3.0 e será atualizado.  Consulte [FSharp.Data](https://fsharp.github.io/FSharp.Data/) para provedores de tipo de plataforma cruzada atualizados.
 
 Um provedor de tipos F# é um componente que fornece tipos, propriedades e métodos para uso em seu programa. Provedores de tipos são uma parte significativa do suporte de F# 3.0 para programação rica de informações. A chave para programação rica em informações é eliminar barreiras para trabalhar com várias fontes de informação encontradas na Internet e em ambientes empresariais modernos. Uma barreira significativa para incluir uma fonte de informação em um programa é a necessidade de representar essas informações como tipos, propriedades e métodos para uso em um ambiente da linguagem de programação. Escrever esses tipos manualmente é muito demorado e difícil de manter. Uma alternativa comum é usar um gerador de código que adicione arquivos para seu projeto; no entanto, os tipos convencionais de geração de código não se integram bem nos modos exploratórios de programação com suporte em F# porque o código gerado deve ser substituído sempre que uma referência de serviço é definida.
 

@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c5b74a4f-dcd1-4849-930c-904b6c8a04e1
-ms.openlocfilehash: 9011bdceabd1b5e0541ecb94f3e812871688025b
-ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
+ms.openlocfilehash: 5be948e100c496bc6613f1fdfb826ece5de6df8e
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Introdução ao armazenamento de BLOBs do Azure usando F # #
 
@@ -236,7 +236,7 @@ Para obter detalhes sobre como criptografar dados blob, consulte [guia .NET para
 Agora que você aprendeu as Noções básicas do armazenamento de Blob, siga estes links para obter mais informações.
 
 ### <a name="tools"></a>Ferramentas
-- [F # AzureStorageTypeProvider](http://fsprojects.github.io/AzureStorageTypeProvider/) um F # tipo de provedor que pode ser usado para explorar os ativos de Blob, tabela e fila de armazenamento do Azure e aplicar facilmente operações CRUD neles.
+- [F # AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/) um F # tipo de provedor que pode ser usado para explorar os ativos de Blob, tabela e fila de armazenamento do Azure e aplicar facilmente operações CRUD neles.
 - [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) uma API de F # para usar o serviço de armazenamento de tabela do Microsoft Azure
 - [Microsoft Azure Storage Explorer (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer) é um aplicativo autônomo gratuito da Microsoft que lhe permite trabalhar visualmente com dados de armazenamento do Azure no Windows, OS X e Linux.
 
@@ -251,4 +251,4 @@ Agora que você aprendeu as Noções básicas do armazenamento de Blob, siga est
 - [Transferência de dados com o utilitário de linha de comando AzCopy no Windows](/azure/storage/common/storage-use-azcopy)
 - [Transferência de dados com o utilitário de linha de comando AzCopy no Linux](/azure/storage/common/storage-use-azcopy-linux)
 - [Configurar cadeias de conexão de armazenamento do Azure](/azure/storage/common/storage-configure-connection-string)
-- [Blog da equipe do armazenamento do Azure](http://blogs.msdn.com/b/windowsazurestorage/)
+- [Blog da equipe do armazenamento do Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/)

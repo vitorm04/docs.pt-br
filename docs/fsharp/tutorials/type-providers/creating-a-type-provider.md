@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: 58003c88baf0f8aeea1a511334b99bd0295f8bf1
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: c09f8abe4dd46453cb6cc5ed7dbb6f60dbf0ad98
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="tutorial-creating-a-type-provider"></a>Tutorial: Criando um provedor de tipos
 
@@ -56,7 +56,7 @@ Provedores de tipos são mais adequados para situações em que o esquema é est
 
 
 ## <a name="a-simple-type-provider"></a>Um provedor de tipo simples
-Este exemplo é Samples.HelloWorldTypeProvider no `SampleProviders\Providers` diretório do [pacote de exemplo do F # 3.0](http://fsharp3sample.codeplex.com) no site da Codeplex. O provedor torna disponível um "espaço de tipo" que contém 100 tipos apagados, como mostra o seguinte código usando a sintaxe de assinatura do F # e omitir os detalhes para todos, exceto `Type1`. Para obter mais informações sobre tipos apagados, consulte [detalhes sobre apagados fornecido tipos](#details-about-erased-provided-types) mais adiante neste tópico.
+Este exemplo é Samples.HelloWorldTypeProvider no `SampleProviders\Providers` diretório do [pacote de exemplo do F # 3.0](https://fsharp3sample.codeplex.com) no site da Codeplex. O provedor torna disponível um "espaço de tipo" que contém 100 tipos apagados, como mostra o seguinte código usando a sintaxe de assinatura do F # e omitir os detalhes para todos, exceto `Type1`. Para obter mais informações sobre tipos apagados, consulte [detalhes sobre apagados fornecido tipos](#details-about-erased-provided-types) mais adiante neste tópico.
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -499,7 +499,7 @@ Observe os seguintes pontos:
 - Cada grupo denominado resulta em uma propriedade fornecida e acessar a propriedade resulta em um uso de um indexador em uma correspondência `Groups` coleção.
 <br />
 
-O código a seguir é o núcleo da lógica de implementar esse provedor, e este exemplo omite a adição de todos os membros para o tipo fornecido. Para obter informações sobre cada membro adicionado, consulte a seção apropriada mais adiante neste tópico. Para o código completo, baixe o exemplo da [pacote de exemplo do F # 3.0](http://fsharp3sample.codeplex.com) no site da Codeplex.
+O código a seguir é o núcleo da lógica de implementar esse provedor, e este exemplo omite a adição de todos os membros para o tipo fornecido. Para obter informações sobre cada membro adicionado, consulte a seção apropriada mais adiante neste tópico. Para o código completo, baixe o exemplo da [pacote de exemplo do F # 3.0](https://fsharp3sample.codeplex.com) no site da Codeplex.
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider
@@ -1140,7 +1140,7 @@ Até agora, este documento explicou como fornecer tipos apagados. Você também 
 ```fsharp
 open Microsoft.FSharp.TypeProviders 
 
-type Service = ODataService<" http://services.odata.org/Northwind/Northwind.svc/">
+type Service = ODataService<" https://services.odata.org/Northwind/Northwind.svc/">
 ```
 
 O código auxiliar 0,2 ProvidedTypes que faz parte da versão do F # 3.0 tem somente suporte limitado para fornecer tipos gerados. As instruções a seguir devem ser verdadeiras para uma definição de tipo gerado:
@@ -1196,10 +1196,10 @@ Quando você escreve provedores de tipos, tenha as seguintes regras e limitaçõ
 Você pode encontrar as seguintes dicas úteis durante o processo de desenvolvimento.
 
 
-- `Run Two Instances of Visual Studio.`Você pode desenvolver o provedor de tipo em uma instância e o provedor de teste nos outros porque o IDE de teste tem um bloqueio no arquivo. dll que impede que o provedor de tipo que está sendo recriado. Portanto, você deve fechar a segunda instância do Visual Studio enquanto o provedor é criado na primeira ocorrência e, em seguida, você deverá reabri-la a segunda instância depois que o provedor for criado.
+- `Run Two Instances of Visual Studio.` Você pode desenvolver o provedor de tipo em uma instância e o provedor de teste nos outros porque o IDE de teste tem um bloqueio no arquivo. dll que impede que o provedor de tipo que está sendo recriado. Portanto, você deve fechar a segunda instância do Visual Studio enquanto o provedor é criado na primeira ocorrência e, em seguida, você deverá reabri-la a segunda instância depois que o provedor for criado.
 <br />
 
-- `Debug type providers by using invocations of fsc.exe.`Você pode chamar os provedores de tipos, usando as seguintes ferramentas:
+- `Debug type providers by using invocations of fsc.exe.` Você pode chamar os provedores de tipos, usando as seguintes ferramentas:
 <br />
   - FSC.exe (compilador de linha de comando do F #)
 <br />

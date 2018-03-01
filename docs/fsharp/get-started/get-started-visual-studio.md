@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 8db75596-19a9-4eda-b20d-a12d517c8cc1
-ms.openlocfilehash: 944bbbba6a26634ace269d86cbbdde9ef9de7bcd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 818bf50507a88e1d765da8d0505ed8da4790b71f
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Introdução à linguagem F # no Visual Studio
 
-F # e as ferramentas do Visual F # têm suporte no Visual Studio IDE.  Para começar, você deve [baixar o Visual Studio](https://www.visualstudio.com/downloads/download-visual-studio-vs), se ainda não o fez.  Este artigo usa o Visual Studio 2017 Community Edition, mas você pode usar F # com a versão de sua escolha.
+F # e as ferramentas do Visual F # têm suporte no Visual Studio IDE.  Para começar, você deve [baixar o Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs), se ainda não o fez.  Este artigo usa o Visual Studio 2017 Community Edition, mas você pode usar F # com a versão de sua escolha.
 
 ## <a name="installing-f"></a>Instalando a F # #
 

@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 5c26a0aa-186e-476c-9f87-e0191754579e
-ms.openlocfilehash: 66b2503744e9024deac3d6dabea57da4fd393bd8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5e1f6914acad5ae8c7148a7238e2d1d6a8ca5867
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>Introdução ao armazenamento de arquivo do Azure usando F # #
 
@@ -97,7 +97,7 @@ Aqui você baixar o arquivo que acabou de criar, acrescentando o conteúdo em um
 
 ### <a name="set-the-maximum-size-for-a-file-share"></a>Definir o tamanho máximo para um compartilhamento de arquivos
 
-O exemplo a seguir mostra como verificar o uso atual para um compartilhamento e como definir uma cota para o compartilhamento. `FetchAttributes`deve ser chamado para popular um compartilhamento `Properties`, e `SetProperties` para propagar as alterações locais para o armazenamento de arquivo do Azure.
+O exemplo a seguir mostra como verificar o uso atual para um compartilhamento e como definir uma cota para o compartilhamento. `FetchAttributes` deve ser chamado para popular um compartilhamento `Properties`, e `SetProperties` para propagar as alterações locais para o armazenamento de arquivo do Azure.
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L62-L72)]
 
@@ -161,5 +161,5 @@ Consulte esses links para obter mais informações sobre o armazenamento de arqu
 
 - [Armazenamento de arquivo do Azure agora está disponível](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
 - [Armazenamento de arquivos do Azure dentro](https://azure.microsoft.com/blog/inside-azure-file-storage/) 
-- [Introdução ao serviço de arquivo do Microsoft Azure](http://blogs.msdn.com/b/windowsazurestorage/archive/2014/05/12/introducing-microsoft-azure-file-service.aspx)
-- [Conexões persistentes aos arquivos do Microsoft Azure](http://blogs.msdn.com/b/windowsazurestorage/archive/2014/05/27/persisting-connections-to-microsoft-azure-files.aspx)
+- [Introdução ao serviço de arquivo do Microsoft Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/12/introducing-microsoft-azure-file-service/)
+- [Conexões persistentes aos arquivos do Microsoft Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/26/persisting-connections-to-microsoft-azure-files/)

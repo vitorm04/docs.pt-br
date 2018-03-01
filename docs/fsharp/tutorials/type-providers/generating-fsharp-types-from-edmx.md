@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 81adb2eb-625f-4ad8-aeaa-8f672a6d79a2
-ms.openlocfilehash: 1df0344e8dab2b40d82d1b9c61ccd2f026906243
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 901457dce358f768b4f4c980703e09f6c744918e
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-generating-f-types-from-an-edmx-schema-file"></a>Instruções passo a passo: gerando tipos F# com base em um arquivo de esquema EDMX
 
 > [!NOTE]
-Este guia foi escrito para F # 3.0 e será atualizado.  Consulte [FSharp.Data](http://fsharp.github.io/FSharp.Data/) para provedores de tipo de plataforma cruzada atualizados.
+Este guia foi escrito para F # 3.0 e será atualizado.  Consulte [FSharp.Data](https://fsharp.github.io/FSharp.Data/) para provedores de tipo de plataforma cruzada atualizados.
 
 > [!NOTE]
 Os links de referência de API levará você para o MSDN.  A referência da API docs.microsoft.com não está completa.
@@ -222,7 +222,7 @@ Você deve concluir este procedimento somente se você desejar saber como gerar 
 1. Na barra de menus, escolha **SQL**, **Editor Transact-SQL**, **nova consulta** para criar um banco de dados. Caso sejam solicitados, especifique o servidor e a instância de banco de dados.
 <br />
 
-2. Copie e cole o conteúdo do script de banco de dados que cria o banco de dados do aluno, conforme descrito no [documentação do Entity Framework](http://msdn.microsoft.com/data/JJ614587.aspx) no Centro de desenvolvedores de dados.
+2. Copie e cole o conteúdo do script de banco de dados que cria o banco de dados do aluno, conforme descrito no [documentação do Entity Framework](https://msdn.microsoft.com/data/JJ614587.aspx) no Centro de desenvolvedores de dados.
 <br />
 
 3. Execute o script SQL escolhendo o botão de barra de ferramentas com o símbolo de triângulo ou escolhendo as teclas Ctrl + Q.
@@ -275,7 +275,7 @@ Explore outras consultas, observando os operadores de consulta disponíveis conf
 
 [Instruções passo a passo: acessando um banco de dados SQL por meio de provedores de tipos e entidades](accessing-a-sql-database-entities.md)
 
-[Entity Framework](http://msdn.microsoft.com/data/ef)
+[Entity Framework](https://msdn.microsoft.com/data/ef)
 
 [Visão geral do arquivo. edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
 

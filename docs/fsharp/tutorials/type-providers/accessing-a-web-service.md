@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 63374fa9-8fb8-43ac-bcb9-ef2290d9f851
-ms.openlocfilehash: 06d955033d465cf58af05f483d21175f90d1777a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2929198172a4e9f908daa64af19208e07859263f
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-accessing-a-web-service-by-using-type-providers"></a>Instruções passo a passo: acessando um serviço Web por meio de provedores de tipos
 
 > [!NOTE]
-Este guia foi escrito para F # 3.0 e será atualizado.  Consulte [FSharp.Data](http://fsharp.github.io/FSharp.Data/) para provedores de tipo de plataforma cruzada atualizados.
+Este guia foi escrito para F # 3.0 e será atualizado.  Consulte [FSharp.Data](https://fsharp.github.io/FSharp.Data/) para provedores de tipo de plataforma cruzada atualizados.
 
 > [!NOTE]
 Os links de referência de API levará você para o MSDN.  A referência da API docs.microsoft.com não está completa.
@@ -80,7 +80,7 @@ open Microsoft.FSharp.Data.TypeProviders
 <br />
 
 ```fsharp
-type TerraService = WsdlService<" HYPERLINK "http://terraserver-usa.com/TerraService2.asmx?WSDL" http://msrmaps.com/TerraService2.asmx?WSDL">
+type TerraService = WsdlService<" HYPERLINK "https://terraserver-usa.com/TerraService2.asmx?WSDL" https://msrmaps.com/TerraService2.asmx?WSDL">
 ```
 
   Um rabisco vermelho é exibido sob essa linha de código se o URI do serviço está incorreta ou se o próprio serviço está inativo ou não está executando. Se você apontar para o código, uma mensagem de erro descreve o problema. Você pode encontrar as mesmas informações no **lista de erros** janela ou a **a janela de saída** depois de criar.

@@ -7,11 +7,11 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 918dfeceb0bfd8ee808e5615df014973dedf5cc1
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: 26d4dffa6f6680b193788ee6d90dad01fde7cf51
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="how-to-c"></a>Instruções (C#)
 
@@ -59,8 +59,7 @@ As cadeias de caracteres são o tipo de dados fundamental usado para exibir ou m
 - [Determine se uma cadeia de caracteres representa um número](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
 - [Use `String.Split` para separar as cadeias de caracteres](parse-strings-using-split.md).
 - [Junte várias cadeias de caracteres em uma](concatenate-multiple-strings.md).
-- [Pesquise texto em uma cadeia de caracteres](../programming-guide/strings/how-to-search-strings-using-string-methods.md).
-- [Pesquise cadeias de caracteres usando expressões regulares](../programming-guide/strings/how-to-search-strings-using-regular-expressions.md).
+- [Pesquise texto em uma cadeia de caracteres](search-strings.md).
 
 ## <a name="convert-between-types"></a>Conversão entre tipos
 

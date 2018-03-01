@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 49775139-082e-442f-b5a2-dd402399b5d2
-ms.openlocfilehash: 336316eaf474f4c10d63657f178ce4a336ad7a54
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 83099005074ea273eae5319edacd2e2ee0f7145f
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="getting-started-with-f-in-visual-studio-code-with-ionide"></a>Guia de Introdução com F # em código do Visual Studio com Ionide
 
-Você pode escrever F # em [código do Visual Studio](https://code.visualstudio.com) com o [Ionide plug-in](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp), para obter uma ótima experiência IDE de leve e de plataforma cruzada com o IntelliSense e refatorações código básico.  Visite [Ionide.io](http://ionide.io) para saber mais sobre o conjunto de plug-in.
+Você pode escrever F # em [código do Visual Studio](https://code.visualstudio.com) com o [Ionide plug-in](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp), para obter uma ótima experiência IDE de leve e de plataforma cruzada com o IntelliSense e refatorações código básico.  Visite [Ionide.io](https://ionide.io) para saber mais sobre o conjunto de plug-in.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -39,9 +39,9 @@ Se você preferir não instalar o Visual Studio, use as instruções a seguir:
 2. Instale o SDK do Windows para o seu sistema operacional:
 
     * [Windows 10 SDK](https://dev.windows.com/en-US/downloads/windows-10-sdk)
-    * [Windows 8.1 SDK](http://msdn.microsoft.com/windows/desktop/bg162891)
-    * [Windows 8 SDK](http://msdn.microsoft.com/windows/hardware/hh852363.aspx)
-    * [Windows 7 SDK](http://www.microsoft.com/download/details.aspx?id=8279)
+    * [Windows 8.1 SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)
+    * [Windows 8 SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)
+    * [Windows 7 SDK](https://www.microsoft.com/download/details.aspx?id=8279)
 
 3. Instalar o [Microsoft Build Tools 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48159).  Você também precisa instalar [Microsoft Build Tools 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40760).
 
@@ -67,7 +67,7 @@ Ionide detecta automaticamente o compilador e ferramentas, mas se ele não por a
 
 ### <a name="macos"></a>macOS
 
-Em macOS, usa Ionide [Mono](http://www.mono-project.com).  A maneira mais fácil de instalar Mono em macOS é por meio de Homebrew.  Simplesmente digite o seguinte em seu terminal:
+Em macOS, usa Ionide [Mono](https://www.mono-project.com).  A maneira mais fácil de instalar Mono em macOS é por meio de Homebrew.  Simplesmente digite o seguinte em seu terminal:
 
 ```
 brew install mono
@@ -75,7 +75,7 @@ brew install mono
 
 ### <a name="linux"></a>Linux
 
-No Linux, Ionide também usa [Mono](http://www.mono-project.com).  Se você estiver em Debian ou Ubuntu, você pode usar o seguinte:
+No Linux, Ionide também usa [Mono](https://www.mono-project.com).  Se você estiver em Debian ou Ubuntu, você pode usar o seguinte:
 
 ```
 sudo apt-get update
@@ -96,7 +96,7 @@ Você pode instalar o Visual Studio Code do [code.visualstudio.com](https://code
 
     ![](media/getting-started-vscode/vscode-ext.png)
 
-O plug-in somente necessário para suporte a F # no código do Visual Studio é [Ionide fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp).  No entanto, você também pode instalar [Ionide FAKE](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE) e obter [FORJAR](http://fsharp.github.io/FAKE/) suporte e [Ionide Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket) para obter [Paket](https://fsprojects.github.io/Paket/) suporte.  FORJAR e Paket são ferramentas de comunidade adicionais F # para desenvolver projetos e gerenciar as dependências, respectivamente.
+O plug-in somente necessário para suporte a F # no código do Visual Studio é [Ionide fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp).  No entanto, você também pode instalar [Ionide FAKE](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE) e obter [FORJAR](https://fake.build/) suporte e [Ionide Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket) para obter [Paket](https://fsprojects.github.io/Paket/) suporte.  FORJAR e Paket são ferramentas de comunidade adicionais F # para desenvolver projetos e gerenciar as dependências, respectivamente.
 
 ## <a name="creating-your-first-project-with-ionide"></a>Criando seu primeiro projeto com Ionide
 
@@ -121,7 +121,7 @@ Selecione "F #: novo projeto" acessando **Enter**, que levará você para esta e
 
 ![](media/getting-started-vscode/vscode-proj-type.png)
 
-Isso irá selecionar um modelo para um tipo específico de projeto.  Há algumas opções aqui, como um [FsLab](http://fslab.org) modelo para ciência de dados ou [Suave](https://suave.io) modelo de programação da Web.  Este artigo usa o `classlib` modelo, para realçar que e pressione **Enter**.  Em seguida, você vai chegar a etapa a seguir:
+Isso irá selecionar um modelo para um tipo específico de projeto.  Há algumas opções aqui, como um [FsLab](https://fslab.org) modelo para ciência de dados ou [Suave](https://suave.io) modelo de programação da Web.  Este artigo usa o `classlib` modelo, para realçar que e pressione **Enter**.  Em seguida, você vai chegar a etapa a seguir:
 
 ![](media/getting-started-vscode/vscode-new-dir.png)
 
@@ -138,8 +138,8 @@ Se você seguiu as etapas da etapa anterior, você deve obter o Visual Studio c�
 Esse modelo gera algumas coisas que você encontrará úteis:
 
 1. O F # projeto em si, sob o `ClassLibraryDemo` pasta.
-2. A estrutura de diretório correto para a adição de pacotes por meio de [ `Paket` ](http://fsprojects.github.io/Paket/).
-3. Uma plataforma cruzada criar script com [ `FAKE` ](http://fsharp.github.io/FAKE/).
+2. A estrutura de diretório correto para a adição de pacotes por meio de [ `Paket` ](https://fsprojects.github.io/Paket/).
+3. Uma plataforma cruzada criar script com [ `FAKE` ](https://fake.build/).
 4. O `paket.exe` executável que pode buscar pacotes e resolver as dependências para você.
 5. Um `.gitignore` de arquivo se deseja adicionar este projeto ao controle de origem com base no Git.
 

@@ -9,11 +9,11 @@ ms.technology: dotnet-docker
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 576a717cbdcb8cf465e8cb7b4898df1df7447aa7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 21826e2c90d234d873cc06bfae3bd22ce89a62d2
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="development-process-for-azure"></a>Processo de desenvolvimento do Azure
 
@@ -36,7 +36,7 @@ Se você preferir um IDE avançado e completo ou um editor leve e ágeis, a Micr
 
 **Figura 10-1.** Instalando a carga de trabalho do núcleo do .NET no Visual Studio de 2017.
 
-[Baixe o Visual Studio 2017](https://www.visualstudio.com/downloads/)
+[Baixe o Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
 **O Visual Studio Code e dotnet CLI** (ferramentas de plataforma cruzada para Mac, Linux e Windows). Se você preferir um editor leve e várias plataformas com suporte a qualquer linguagem de desenvolvimento, você pode usar o código do Microsoft Visual Studio e o dotnet CLI. Esses produtos fornecem uma experiência simple, porém robusta que simplifica o fluxo de trabalho do desenvolvedor. Além disso, o código do Visual Studio oferece suporte a extensões para C\# e desenvolvimento da web, fornecendo o intellisense e tarefas de atalho dentro do editor.
 
@@ -56,9 +56,9 @@ Para começar a desenvolver um aplicativo ASP.NET Core usando CI/CD, você pode 
 
 Para criar um pipeline de versão para o seu aplicativo, você precisa ter o código do aplicativo no controle de origem. Configurar um repositório local e conectá-lo em um repositório remoto em um projeto de equipe. Siga estas instruções:
 
--   [Compartilhar seu código com o Visual Studio e o Git](https://www.visualstudio.com/docs/git/share-your-code-in-git-vs) ou
+-   [Compartilhar seu código com o Visual Studio e o Git](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs) ou
 
--   [Compartilhe seu código com TFVC e o Visual Studio](https://www.visualstudio.com/docs/tfvc/share-your-code-in-tfvc-vs)
+-   [Compartilhe seu código com TFVC e o Visual Studio](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
 
 Crie um serviço de aplicativo do Azure onde você implantará o aplicativo. Crie um aplicativo Web, vá para a folha de serviços de aplicativos no portal do Azure. Clique em + Adicionar, selecione o modelo de aplicativo Web, clique em criar e fornecer um nome e outros detalhes. O aplicativo web poderá ser acessado de {name}. azurewebsites.net.
 
@@ -68,13 +68,13 @@ Crie um serviço de aplicativo do Azure onde você implantará o aplicativo. Cri
 
 O processo de compilação de CI realizará uma compilação automatizada sempre que o novo código é confirmado para o repositório de controle de origem do projeto. Isso fornece um feedback imediato que cria o código (e, idealmente, passa testes automatizados) e potencialmente pode ser implantado. Esta compilação de CI produzirá uma web implantar artefato de pacote e publicá-lo para consumo pelo seu processo de CD.
 
-[Definir o processo de compilação de CI](https://www.visualstudio.com/docs/build/apps/aspnet/aspnetcore-to-azure#ci)
+[Definir o processo de compilação de CI](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#ci)
 
 Certifique-se de habilitar a integração contínua para que o sistema irá enfileirar uma compilação sempre que alguém de sua equipe confirma o novo código. Testar a compilação e verificar se ele está produzindo um web implantar o pacote como um de seus artefatos.
 
 Quando uma compilação for bem-sucedida, o processo de CD implantará os resultados de sua compilação de CI ao seu aplicativo web do Azure. Para configurar isso, você pode criar e configurar um *versão*, que será implantado para o serviço de aplicativo do Azure.
 
-[Definir o processo de lançamento do CD](https://www.visualstudio.com/docs/build/apps/aspnet/aspnetcore-to-azure#cd)
+[Definir o processo de lançamento do CD](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#cd)
 
 Depois que o pipeline de CI/CD estiver configurado, você pode simplesmente fazer atualizações em seu aplicativo web e confirmá-las ao controle de origem tê-los implantado.
 
@@ -92,7 +92,7 @@ Desenvolvendo seu aplicativo ASP.NET Core para implantação no Azure não é di
 
 #### <a name="step-2-application-code-repository"></a>Etapa 2. Repositório de código do aplicativo
 
-Sempre que você está pronto para compartilhar seu código com sua equipe, você deve enviar por push as alterações do seu repositório local de origem para o repositório de origem compartilhada da sua equipe. Se você já trabalhou em uma ramificação personalizada, essa etapa geralmente envolve mesclar seu código em uma ramificação compartilhada (talvez por meio de um [solicitação pull](https://www.visualstudio.com/docs/git/pull-requests)).
+Sempre que você está pronto para compartilhar seu código com sua equipe, você deve enviar por push as alterações do seu repositório local de origem para o repositório de origem compartilhada da sua equipe. Se você já trabalhou em uma ramificação personalizada, essa etapa geralmente envolve mesclar seu código em uma ramificação compartilhada (talvez por meio de um [solicitação pull](https://docs.microsoft.com/vsts/git/pull-requests)).
 
 #### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Etapa 3. Servidor de compilação: A integração contínua. Pacote de compilação, teste,
 
@@ -113,7 +113,7 @@ Durante a execução do aplicativo Web, você pode monitorar a integridade do ap
 ## <a name="references"></a>Referências
 
 **Criar e implantar seu aplicativo ASP.NET Core para o Azure**  
-<https://www.visualstudio.com/docs/build/apps/aspnet/aspnetcore-to-azure>
+<https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core>
 
 
 >[!div class="step-by-step"]

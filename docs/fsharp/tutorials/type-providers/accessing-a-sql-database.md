@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 1c413eb0-16a5-4c1a-9a4e-ad6877e645d6
-ms.openlocfilehash: 7177eca33ded712308bbc6198040d833b7364d55
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: dbc5d889fb7883b4327180fdf34accf45bf519e7
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-accessing-a-sql-database-by-using-type-providers"></a>Instruções passo a passo: acessando um banco de dados SQL por meio de provedores de tipos
 
 > [!NOTE]
-Este guia foi escrito para F # 3.0 e será atualizado.  Consulte [FSharp.Data](http://fsharp.github.io/FSharp.Data/) para provedores de tipo de plataforma cruzada atualizados.
+Este guia foi escrito para F # 3.0 e será atualizado.  Consulte [FSharp.Data](https://fsharp.github.io/FSharp.Data/) para provedores de tipo de plataforma cruzada atualizados.
 
 > [!NOTE]
 Os links de referência de API levará você para o MSDN.  A referência da API docs.microsoft.com não está completa.
@@ -96,7 +96,7 @@ Nesta etapa, você pode criar um provedor de tipos para o esquema de banco de da
 
 #### <a name="to-set-up-the-type-provider-from-a-direct-database-connection"></a>Para configurar o provedor de tipo de uma conexão direta do banco de dados
 
-Há duas linhas críticas de código que você precisa para criar os tipos que você pode usar para consultar um banco de dados SQL usando o provedor de tipo. Primeiro, você pode instanciar o provedor de tipos. Para fazer isso, crie a aparência de uma abreviação de tipo de um `SqlDataConnection` com um parâmetro genérico estático. `SqlDataConnection`é um provedor de tipo SQL e não deve ser confundido com `SqlConnection` tipo que é usado na programação do ADO.NET. Se você tiver um banco de dados que você deseja se conectar e ter uma cadeia de caracteres de conexão, use o seguinte código para chamar o provedor de tipo. Substitua por sua própria cadeia de caracteres de conexão para a cadeia de caracteres de exemplo fornecida. Por exemplo, se seu servidor MYSERVER e a instância de banco de dados é a instância, o nome do banco de dados é MyDatabase, e você deseja usar a autenticação do Windows para acessar o banco de dados e, em seguida, a cadeia de caracteres de conexão seria como fornecido no código de exemplo a seguir.
+Há duas linhas críticas de código que você precisa para criar os tipos que você pode usar para consultar um banco de dados SQL usando o provedor de tipo. Primeiro, você pode instanciar o provedor de tipos. Para fazer isso, crie a aparência de uma abreviação de tipo de um `SqlDataConnection` com um parâmetro genérico estático. `SqlDataConnection` é um provedor de tipo SQL e não deve ser confundido com `SqlConnection` tipo que é usado na programação do ADO.NET. Se você tiver um banco de dados que você deseja se conectar e ter uma cadeia de caracteres de conexão, use o seguinte código para chamar o provedor de tipo. Substitua por sua própria cadeia de caracteres de conexão para a cadeia de caracteres de exemplo fornecida. Por exemplo, se seu servidor MYSERVER e a instância de banco de dados é a instância, o nome do banco de dados é MyDatabase, e você deseja usar a autenticação do Windows para acessar o banco de dados e, em seguida, a cadeia de caracteres de conexão seria como fornecido no código de exemplo a seguir.
 
 ```fsharp
 type dbSchema = SqlDataConnection<"Data Source=MYSERVER\INSTANCE;Initial Catalog=MyDatabase;Integrated Security=SSPI;">

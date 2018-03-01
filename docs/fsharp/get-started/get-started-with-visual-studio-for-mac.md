@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 8db75596-19a9-4eda-b20d-a12d517c8cc1
-ms.openlocfilehash: beee874e3a549531b520d4ac2150bc10dcab7725
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 776a2ddf5563a954e462b3888ebf05da90241e4b
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Introdução ao F # no Visual Studio para Mac
 
-F # e as ferramentas do Visual F # têm suporte no Visual Studio para Mac IDE.  Para começar, você deve [baixar o Visual Studio para Mac](https://www.visualstudio.com/downloads/download-visual-studio-vs), se ainda não o fez.  Este artigo usa o Visual Studio de 2017 de comunidade para Mac, mas você pode usar F # com a versão de sua escolha.
+F # e as ferramentas do Visual F # têm suporte no Visual Studio para Mac IDE.  Para começar, você deve [baixar o Visual Studio para Mac](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs), se ainda não o fez.  Este artigo usa o Visual Studio de 2017 de comunidade para Mac, mas você pode usar F # com a versão de sua escolha.
 
 ## <a name="installing-f"></a>Instalando a F # #
 

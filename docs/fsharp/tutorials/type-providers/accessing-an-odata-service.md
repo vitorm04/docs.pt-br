@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 0adae84c-b0fa-455f-994b-274ecdc6df30
-ms.openlocfilehash: 28c2e9a405670f4e5f9512e99e0e6c3e3082856c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 750407c36a989cece30c0c0654ff905c8eee3b33
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-accessing-an-odata-service-by-using-type-providers"></a>Instruções passo a passo: acessando um serviço OData por meio de provedores de tipos
 
 > [!NOTE]
-Este guia foi escrito para F # 3.0 e será atualizado.  Consulte [FSharp.Data](http://fsharp.github.io/FSharp.Data/) para provedores de tipo de plataforma cruzada atualizados.
+Este guia foi escrito para F # 3.0 e será atualizado.  Consulte [FSharp.Data](https://fsharp.github.io/FSharp.Data/) para provedores de tipo de plataforma cruzada atualizados.
 
 > [!NOTE]
 Os links de referência de API levará você para o MSDN.  A referência da API docs.microsoft.com não está completa.
@@ -69,7 +69,7 @@ Nesta etapa, você deve criar um provedor de tipo que fornece acesso para os tip
 open Microsoft.FSharp.Data.TypeProviders
 
 
-type Northwind = ODataService<"http://services.odata.org/Northwind/Northwind.svc/">
+type Northwind = ODataService<"https://services.odata.org/Northwind/Northwind.svc/">
 
 let db = Northwind.GetDataContext()
 let fullContext = Northwind.ServiceTypes.NorthwindEntities()
@@ -100,7 +100,7 @@ Nesta etapa, você pode usar expressões de consulta do F # para consultar o ser
   - ordenação (`orderBy`, `thenBy`)
 <br />
 
-  - `AddQueryOption`e `Expand`, que são operações específicas do OData
+  - `AddQueryOption` e `Expand`, que são operações específicas do OData
 <br />
 
   Para obter mais informações, consulte [considerações sobre o LINQ &#40; WCF Data Services &#41; ](https://msdn.microsoft.com/library/ee622463.aspx).
@@ -242,7 +242,7 @@ db.DataContext.SendingRequest.Add (fun eventArgs -> printfn "Requesting %A" even
 ```
 
 A saída do código anterior é:
-<br />`requesting http://services.odata.org/Northwind/Northwind.svc/Orders()?$orderby=ShippedDate&amp;$select=OrderID,ShippedDate`
+<br />`requesting https://services.odata.org/Northwind/Northwind.svc/Orders()?$orderby=ShippedDate&amp;$select=OrderID,ShippedDate`
 
 
 ## <a name="see-also"></a>Consulte também
