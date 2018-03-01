@@ -5,16 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: hosting services [WCF], WAS
+helpviewer_keywords:
+- hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 40122670c84f87590a31b79f39695e9626ea9883
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -51,7 +54,7 @@ ms.lasthandoff: 12/22/2017
 |--------------|-------------------|----------------------|---------------------------|  
 |<span data-ttu-id="b32bc-129">HTTP apenas</span><span class="sxs-lookup"><span data-stu-id="b32bc-129">HTTP Only</span></span>|<span data-ttu-id="b32bc-130">http: *: 80:\*</span><span class="sxs-lookup"><span data-stu-id="b32bc-130">http: *:80:\*</span></span>|<span data-ttu-id="b32bc-131">/appTwo</span><span class="sxs-lookup"><span data-stu-id="b32bc-131">/appTwo</span></span>|<span data-ttu-id="b32bc-132">http://localhost/appTwo/</span><span class="sxs-lookup"><span data-stu-id="b32bc-132">http://localhost/appTwo/</span></span>|  
 |<span data-ttu-id="b32bc-133">HTTP e não HTTP</span><span class="sxs-lookup"><span data-stu-id="b32bc-133">Both HTTP and Non-HTTP</span></span>|<span data-ttu-id="b32bc-134">http: *: 80:\*</span><span class="sxs-lookup"><span data-stu-id="b32bc-134">http: *:80:\*</span></span><br /><br /> <span data-ttu-id="b32bc-135">NET. TCP: 808:\*</span><span class="sxs-lookup"><span data-stu-id="b32bc-135">net.tcp: 808:\*</span></span>|<span data-ttu-id="b32bc-136">/appTwo</span><span class="sxs-lookup"><span data-stu-id="b32bc-136">/appTwo</span></span>|<span data-ttu-id="b32bc-137">http://localhost/appTwo/</span><span class="sxs-lookup"><span data-stu-id="b32bc-137">http://localhost/appTwo/</span></span><br /><span data-ttu-id="b32bc-138">NET.TCP://localhost/appTwo/</span><span class="sxs-lookup"><span data-stu-id="b32bc-138">net.tcp://localhost/appTwo/</span></span>|  
-|<span data-ttu-id="b32bc-139">Diferente de HTTP apenas</span><span class="sxs-lookup"><span data-stu-id="b32bc-139">Non-HTTP only</span></span>|<span data-ttu-id="b32bc-140">NET. pipe: *</span><span class="sxs-lookup"><span data-stu-id="b32bc-140">net.pipe: *</span></span>|<span data-ttu-id="b32bc-141">/appThree</span><span class="sxs-lookup"><span data-stu-id="b32bc-141">/appThree</span></span>|<span data-ttu-id="b32bc-142">NET.pipe://appThree/</span><span class="sxs-lookup"><span data-stu-id="b32bc-142">net.pipe://appThree/</span></span>|  
+|<span data-ttu-id="b32bc-139">Diferente de HTTP apenas</span><span class="sxs-lookup"><span data-stu-id="b32bc-139">Non-HTTP only</span></span>|<span data-ttu-id="b32bc-140">NET. pipe: \*</span><span class="sxs-lookup"><span data-stu-id="b32bc-140">net.pipe: \*</span></span>|<span data-ttu-id="b32bc-141">/appThree</span><span class="sxs-lookup"><span data-stu-id="b32bc-141">/appThree</span></span>|<span data-ttu-id="b32bc-142">NET.pipe://appThree/</span><span class="sxs-lookup"><span data-stu-id="b32bc-142">net.pipe://appThree/</span></span>|  
   
  <span data-ttu-id="b32bc-143">Serviços e recursos em um aplicativo também podem ser resolvidos.</span><span class="sxs-lookup"><span data-stu-id="b32bc-143">Services and resources within an application can also be addressed.</span></span> <span data-ttu-id="b32bc-144">Dentro de um aplicativo, os recursos de aplicativo são endereçados relativo ao caminho base do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="b32bc-144">Within an application, application resources are addressed relative to the base application path.</span></span> <span data-ttu-id="b32bc-145">Por exemplo, suponha que um site em um nome de máquina contoso.com tem associações de site para protocolos HTTP e Net.TCP.</span><span class="sxs-lookup"><span data-stu-id="b32bc-145">For example, assume that a site on a machine name contoso.com has site bindings for both the HTTP and Net.TCP protocols.</span></span> <span data-ttu-id="b32bc-146">Suponha também que o site contém um aplicativo localizado em /Billing, que expõe um serviço em GetOrders.svc.</span><span class="sxs-lookup"><span data-stu-id="b32bc-146">Also assume that the site contains one application located at /Billing, which exposes a service at GetOrders.svc.</span></span> <span data-ttu-id="b32bc-147">Em seguida, se o serviço GetOrders.svc exposto a um ponto de extremidade com um endereço relativo da SecureEndpoint, o ponto de extremidade de serviço deve ser exposto nos URIs a seguir:</span><span class="sxs-lookup"><span data-stu-id="b32bc-147">Then, if the GetOrders.svc service exposed an endpoint with a relative address of SecureEndpoint, the service endpoint would be exposed at the following two URIs:</span></span>  
   
