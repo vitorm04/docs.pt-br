@@ -5,23 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: reference
-api_name: IMetaDataImport.GetCustomAttributeProps
-api_location: mscoree.dll
-api_type: COM
-f1_keywords: IMetaDataImport::GetCustomAttributeProps
+api_name:
+- IMetaDataImport.GetCustomAttributeProps
+api_location:
+- mscoree.dll
+api_type:
+- COM
+f1_keywords:
+- IMetaDataImport::GetCustomAttributeProps
 helpviewer_keywords:
 - GetCustomAttributeProps method [.NET Framework metadata]
 - IMetaDataImport::GetCustomAttributeProps method [.NET Framework metadata]
 ms.assetid: 6eefb243-a281-41c1-bcdc-7e17513bc446
-topic_type: apiref
-caps.latest.revision: "14"
+topic_type:
+- apiref
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: b1e6ef9443b99b3e6b36154558ce226d421dbc0a
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -57,7 +64,7 @@ HRESULT GetCustomAttributeProps (
  <span data-ttu-id="c37ad-110">[out, opcional] Um ponteiro para uma matriz de dados que é o valor do atributo personalizado.</span><span class="sxs-lookup"><span data-stu-id="c37ad-110">[out, optional] A pointer to an array of data that is the value of the custom attribute.</span></span>  
   
  `pcbSize`  
- <span data-ttu-id="c37ad-111">[out, opcional] O tamanho em bytes dos dados retornados em *`ppBlob`.</span><span class="sxs-lookup"><span data-stu-id="c37ad-111">[out, optional] The size in bytes of the data returned in *`ppBlob`.</span></span>  
+ <span data-ttu-id="c37ad-111">[out, opcional] O tamanho em bytes dos dados retornados em \*`ppBlob`.</span><span class="sxs-lookup"><span data-stu-id="c37ad-111">[out, optional] The size in bytes of the data returned in \*`ppBlob`.</span></span>  
   
 ## <a name="remarks"></a><span data-ttu-id="c37ad-112">Comentários</span><span class="sxs-lookup"><span data-stu-id="c37ad-112">Remarks</span></span>  
  <span data-ttu-id="c37ad-113">Um atributo personalizado é armazenado como uma matriz de dados, o formato que é entendido pelo mecanismo de metadados.</span><span class="sxs-lookup"><span data-stu-id="c37ad-113">A custom attribute is stored as an array of data, the format which is understood by the metadata engine.</span></span>  
