@@ -12,11 +12,11 @@ ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 24a030bb43d49615a7487ce10ad2347fdfd8a290
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 6492edae6e4311252dc664236fb43cd373f7c59f
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="strings-c-programming-guide"></a>Cadeias de caracteres (Guia de Programação em C#)
 Uma cadeia de caracteres é um objeto do tipo <xref:System.String> cujo valor é texto. Internamente, o texto é armazenado como uma coleção sequencial somente leitura de objetos <xref:System.Char>. Não há um caractere de finalização null ao fim de uma cadeia em C#. Portanto, uma cadeia de caracteres em C# pode ter qualquer número de caracteres nulos inseridos ('\0'). A propriedade `Char` de uma cadeia de caracteres representa o número de objetos <xref:System.String.Length%2A> que ela contém e não o número de caracteres Unicode. Para acessar os pontos de código Unicode individuais em uma cadeia de caracteres, use o objeto <xref:System.Globalization.StringInfo>.  
@@ -83,7 +83,7 @@ Uma cadeia de caracteres é um objeto do tipo <xref:System.String> cujo valor é
  Uma sobrecarga do método <xref:System.Console.WriteLine%2A> usa uma cadeia de caracteres de formato como parâmetro. Portanto, você pode inserir apenas uma cadeia de caracteres de formato literal sem uma chamada explícita ao método. No entanto, se usar o método <xref:System.Diagnostics.Trace.WriteLine%2A> para exibir a saída de depuração na janela de **Saída** do Visual Studio, você precisará chamar explicitamente o método <xref:System.String.Format%2A>, uma vez que <xref:System.Diagnostics.Trace.WriteLine%2A> só aceita uma cadeia de caracteres e não uma cadeia de caracteres de formato. Para saber mais sobre cadeias de caracteres de formato, confira [Tipos de formatação](../../../standard/base-types/formatting-types.md).  
   
 ## <a name="substrings"></a>Subcadeias de caracteres  
- Uma subcadeia de caracteres é qualquer sequência de caracteres contida em uma cadeia de caracteres. Use o método <xref:System.String.Substring%2A> para criar uma nova cadeia de caracteres com base em uma parte da cadeia de caracteres original. Você pode pesquisar uma ou mais ocorrências de uma subcadeia de caracteres usando o método <xref:System.String.IndexOf%2A>. Use o método <xref:System.String.Replace%2A> para substituir todas as ocorrências de uma subcadeia de caracteres especificada por uma nova cadeia de caracteres. Como o método <xref:System.String.Substring%2A>, <xref:System.String.Replace%2A> retorna, na verdade, uma nova cadeia de caracteres e não a modifica a cadeia de caracteres original. Para saber mais, confira [Como pesquisar cadeias de caracteres usando métodos de cadeias de caracteres](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md) e [Como modificar o conteúdo da cadeia de caracteres](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md).  
+ Uma subcadeia de caracteres é qualquer sequência de caracteres contida em uma cadeia de caracteres. Use o método <xref:System.String.Substring%2A> para criar uma nova cadeia de caracteres com base em uma parte da cadeia de caracteres original. Você pode pesquisar uma ou mais ocorrências de uma subcadeia de caracteres usando o método <xref:System.String.IndexOf%2A>. Use o método <xref:System.String.Replace%2A> para substituir todas as ocorrências de uma subcadeia de caracteres especificada por uma nova cadeia de caracteres. Como o método <xref:System.String.Substring%2A>, <xref:System.String.Replace%2A> retorna, na verdade, uma nova cadeia de caracteres e não a modifica a cadeia de caracteres original. Saiba mais em [Como pesquisar cadeias de caracteres](../../how-to/search-strings.md) e [Como modificar o conteúdo da cadeia de caracteres](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md).  
   
  [!code-csharp[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
   
@@ -127,8 +127,7 @@ string s = String.Empty;
 |[Como concatenar várias cadeias de caracteres](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|Ilustra como usar o operador `+` e a classe `Stringbuilder` para unir cadeias de caracteres em tempo de compilação e tempo de execução.|  
 |[Como comparar cadeias de caracteres](../../../csharp/programming-guide/strings/how-to-compare-strings.md)|Mostra como executar comparações ordinais de cadeias de caracteres.|  
 |[Como analisar cadeias de caracteres usando String.Split ](../../how-to/parse-strings-using-split.md)|Contém um exemplo que ilustra como usar o método `String.Split` para analisar cadeias de caracteres.|  
-|[Como pesquisar cadeias de caracteres usando métodos de cadeia de caracteres](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md)|Explica como usar métodos específicos para pesquisar cadeias de caracteres.|  
-|[Como pesquisar cadeias de caracteres usando expressões regulares](../../../csharp/programming-guide/strings/how-to-search-strings-using-regular-expressions.md)|Explica como usar expressões regulares para pesquisar cadeias de caracteres.|  
+|[Como pesquisar cadeias de caracteres](../../how-to/search-strings.md)|Explica como usar métodos específicos para pesquisar cadeias de caracteres.|  
 |[Como determinar se uma cadeia de caracteres representa um valor numérico](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Mostra como analisar com segurança uma cadeia de caracteres para ver se ela tem um valor numérico válido.|  
 |[Como converter uma cadeia de caracteres em um DateTime](../../../csharp/programming-guide/strings/how-to-convert-a-string-to-a-datetime.md)|Mostra como converter uma cadeia de caracteres como "24/01/2008" em um objeto <xref:System.DateTime?displayProperty=nameWithType>.|  
 |[Operações básicas de cadeias de caracteres](../../../../docs/standard/base-types/basic-string-operations.md)|Fornece links para tópicos que usam os métodos <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.StringBuilder?displayProperty=nameWithType> para executar operações básicas de cadeia de caracteres.|  
