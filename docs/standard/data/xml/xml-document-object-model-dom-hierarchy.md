@@ -9,23 +9,26 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9d187d4f-c76e-4223-a670-cc290783ce47
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6dec61860fba5815b1dae802d280e8df6628ab91
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4d2ffaa994ce3c9b02ed0937967845be1b803f6d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-document-object-model-dom-hierarchy"></a>Hierarquia DOM (Document Object Model) XML
 A ilustração a seguir mostra a hierarquia de classes para o DOM (Document Object Model) XML, com o nome do World Wide Web Consortium (W3C) entre parênteses junto com o nome da classe onde é relevante.  
   
- ![Modelo de objeto de documento XML &#40; DOM &#41; hierarquia](../../../../docs/standard/data/xml/media/dom-class-hierarchy.gif "Dom_class_hierarchy")  
+ ![Modelo de objeto de documento XML &#40;DOM&#41; hierarquia](../../../../docs/standard/data/xml/media/dom-class-hierarchy.gif "Dom_class_hierarchy")  
 Hierarquia DOM (Document Object Model) XML  
   
- As seguintes classes não herdam a **XmlNode**:  
+ As seguintes classes não herdam de **XmlNode**:  
   
 -   **XmlImplementation**  
   
@@ -35,15 +38,15 @@ Hierarquia DOM (Document Object Model) XML
   
 -   **XmlNodeChangedEventArgs**  
   
- O **XmlImplementation** classe é usada para criar um documento XML. Para obter mais informações, consulte [criação de documentos XML](../../../../docs/standard/data/xml/xml-document-creation.md).  
+ A classe **XmlImplementation** é usada para criar um documento XML. Para saber mais, confira [Criação de documento XML](../../../../docs/standard/data/xml/xml-document-creation.md).  
   
- O **XmlNamedNodeMap** classe manipula um conjunto ordenado de nós. Para obter mais informações, consulte [recuperação não ordenada do nó por nome ou índice](../../../../docs/standard/data/xml/unordered-node-retrieval-by-name-or-index.md).  
+ A classe **XmlNamedNodeMap** manipula um conjunto não ordenado de nós. Para saber mais, confira [Recuperação não ordenada de nós por nome ou índice](../../../../docs/standard/data/xml/unordered-node-retrieval-by-name-or-index.md).  
   
- O **XmlNodeList** classe manipula uma lista ordenada de nós. Para obter mais informações, consulte [recuperação de nó ordenada pelo índice](../../../../docs/standard/data/xml/ordered-node-retrieval-by-index.md).  
+ A classe **XmlNodeList** manipula uma lista ordenada de nós. Para saber mais, confira [Recuperação ordenada de nós por índice](../../../../docs/standard/data/xml/ordered-node-retrieval-by-index.md).  
   
- O **XmlNodeChangedEventArgs** classe manipula os manipuladores de eventos registrados no **XmlDocument**. Para obter mais informações, consulte [manipulação de eventos em um documento XML usando o XmlNodeChangedEventArgs](../../../../docs/standard/data/xml/event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs.md).  
+ A classe **XmlNodeChangedEventArgs** manipula os manipuladores de eventos registrados em **XmlDocument**. Para saber mais, confira [Manipulação de eventos em um documento XML usando XmlNodeChangedEventArgs](../../../../docs/standard/data/xml/event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs.md).  
   
- O **XmlLinkedNode** classe herda de **XmlNode**. Seu objetivo é substituir dois métodos de **XmlNode**: o **PreviousSibling** e **NextSibling** métodos. Esses métodos substituídos são então herdados e usados por **XmlCharacterData**, **XmlDeclaration**, **XmlDocumentType**, **XmlElement**, **XmlEntityReference**, e **XmlProcessingInstruction**, que são classes que possuem irmão anterior e próximo.  
+ A classe **XmlLinkedNode** herda de **XmlNode**. Sua finalidade é substituir dois métodos de **XmlNode**: os métodos **PreviousSibling** e **NextSibling**. Esses métodos substituídos são então herdados e usados por **XmlCharacterData**, **XmlDeclaration**, **XmlDocumentType**, **XmlElement**, **XmlEntityReference** e **XmlProcessingInstruction**, que são classes que têm irmãos anteriores e seguintes.  
   
 ## <a name="see-also"></a>Consulte também  
- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

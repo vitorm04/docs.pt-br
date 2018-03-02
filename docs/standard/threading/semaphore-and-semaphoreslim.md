@@ -16,15 +16,18 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 039dee4df1a6d06fa1833eae077817ff5eca3ea3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3c7d196b54a831c807b7181c1c810c3e78a463a2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore e SemaphoreSlim
 A classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> representa um sinal com nome (em todo o sistema) ou local. É um wrapper fino em torno do objeto de sinal Win32. Sinais do Win32 são contagem de sinais que podem ser usadas para controlar o acesso a um pool de recursos.  
@@ -39,7 +42,7 @@ A classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> represen
 ### <a name="semaphores-and-thread-identity"></a>Sinais e identidade do thread  
  Os dois tipos de sinais não impõem a identidade do thread em chamadas para os métodos <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.SemaphoreSlim.Wait%2A>, <xref:System.Threading.Semaphore.Release%2A> e <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType>. Por exemplo, um cenário de uso comum para sinais envolve um thread de produtor e um thread de consumidor, com um thread sempre incrementando a contagem de sinais e o outro sempre diminuindo-a.  
   
- É responsabilidade do programador garantir que um thread não libere o sinal muitas vezes. Por exemplo, suponha que um sinal tenha uma contagem máxima de dois, e que o thread A e o thread B insiram o sinal. Se um erro de programação no thread B fizer com que ele chame `Release` duas vezes, ambas as chamadas serão bem-sucedidas. A contagem de semáforo está cheio e quando thread um eventualmente chama `Release`, um <xref:System.Threading.SemaphoreFullException> é gerada.  
+ É responsabilidade do programador garantir que um thread não libere o sinal muitas vezes. Por exemplo, suponha que um sinal tenha uma contagem máxima de dois, e que o thread A e o thread B insiram o sinal. Se um erro de programação no thread B fizer com que ele chame `Release` duas vezes, ambas as chamadas serão bem-sucedidas. A contagem no sinal está completa e quando o thread A eventualmente chama `Release`, uma <xref:System.Threading.SemaphoreFullException> é lançada.  
   
 ## <a name="named-semaphores"></a>Sinais com nome  
  O sistema operacional Windows permite que os sinais tenham nomes. Um sinal com nome é para todo o sistema. Ou seja, depois que o sinal com nome for criado, ele ficará visível para todos os threads em todos os processos. Assim, o sinal com nome pode ser usado para sincronizar as atividades de processos, bem como os threads.  

@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: "Números em C#"
 metadata:
-  title: "Números em C#"
+  title: "Tutorial interativo sobre números em C# – guias de início rápido de C#"
   description: "Neste início rápido sobre tipos numéricos, você usará seu navegador para aprender C# interativamente. Você escreverá o código em C# e verá os resultados da compilação e execução de seu código diretamente no navegador."
   audience: Developer
   ms.topic: get-started-article
@@ -13,11 +13,11 @@ metadata:
   interactive: csharp
   ms.prod: .net
   ms.technology: devlang-csharp
-  ms.openlocfilehash: 7d18240b2871b5322c767287a737deda0b2ddefc
-  ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+  ms.openlocfilehash: d611f2796471fbb094020caaa70a754c093a833c
+  ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 01/20/2018
+  ms.lasthandoff: 02/01/2018
 items:
 - durationInMinutes: 1
   content: "Este início rápido ensina de forma interativa sobre os tipos numéricos em C#, usando seu navegador para escrever em C# e ver os resultados da compilação e da execução de seu código. Ele contém uma série de lições que exploram números e operações matemáticas em C#. Estas lições ensinam os princípios básicos da linguagem C#.\n"

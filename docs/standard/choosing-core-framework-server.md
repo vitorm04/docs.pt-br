@@ -6,11 +6,14 @@ ms.author: mairaw
 ms.date: 08/15/2016
 ms.topic: article
 ms.prod: .net
-ms.openlocfilehash: fa001492aa76c4690faca23cb2a1e0467a857a6d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2108125b9c01a2686d66b0ebd4e43e7ac863e223
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor
 
@@ -39,7 +42,7 @@ As seguintes seções oferecem uma explicação mais detalhada sobre os motivos 
 
 Se seu aplicativo (web/serviço) precisa ser executado em várias plataformas (Windows, Linux e macOS), use o .NET Core.
 
-O .NET Core dá suporte aos sistemas operacionais mencionados anteriormente como sua estação de trabalho de desenvolvimento. Visual Studio fornece um ambiente de desenvolvimento integrado (IDE) para o Windows e macOS. Você também pode usar o Visual Studio Code, que é executado no Windows, Linux e macOS. O Visual Studio Code dá suporte ao .NET Core, incluindo IntelliSense e depuração. A maioria dos editores de terceiros, como Sublime, Emacs e VI, trabalham com o .NET Core. Esses editores de terceiros obtém o IntelliSense do editor usando o [Omnisharp](http://www.omnisharp.net/). Também é possível evitar o uso de editores de código e usar diretamente as [ferramentas de CLI do .NET Core](../core/tools/index.md), disponíveis para todas as plataformas com suporte.
+O .NET Core dá suporte aos sistemas operacionais mencionados anteriormente como sua estação de trabalho de desenvolvimento. O Visual Studio fornece um IDE (ambiente de desenvolvimento integrado) para Windows e macOS. Você também pode usar o Visual Studio Code, que é executado no Windows, Linux e macOS. O Visual Studio Code dá suporte ao .NET Core, incluindo IntelliSense e depuração. A maioria dos editores de terceiros, como Sublime, Emacs e VI, trabalham com o .NET Core. Esses editores de terceiros obtém o IntelliSense do editor usando o [Omnisharp](http://www.omnisharp.net/). Também é possível evitar o uso de editores de código e usar diretamente as [ferramentas de CLI do .NET Core](../core/tools/index.md), disponíveis para todas as plataformas com suporte.
 
 ### <a name="microservices-architecture"></a>Arquitetura de microsserviços
 
@@ -106,7 +109,7 @@ Além do roteiro oficial, há outras estruturas a serem transferidas para o .NET
 Algumas plataformas de terceiros ou da Microsoft não oferecem suporte a .NET Core. Por exemplo, alguns serviços do Azure, como Reliable Services de Serviço de Monitoração com Estado de Malha e Reliable Actors da Malha de Serviço requerem o .NET Framework. Alguns outros serviços fornecem uma SDK ainda não estão disponível para consumo no .NET Core. Esta é uma circunstância transitória, pois todos os serviços do Azure usam o .NET Core. Enquanto isso, você sempre pode usar a API REST equivalente em vez do SDK do cliente.
 
 ## <a name="see-also"></a>Consulte também
- [Escolha entre o ASP.NET e ASP.NET Core](/aspnet/core/choose-aspnet-framework)  
+ [Escolher entre o ASP.NET e o ASP.NET Core](/aspnet/core/choose-aspnet-framework)  
  [Guia do .NET Core](../core/index.md)  
  [Portabilidade do .NET Framework para .NET Core](../core/porting/index.md)  
  [.NET Framework no Guia do Docker](../framework/docker/index.md)  

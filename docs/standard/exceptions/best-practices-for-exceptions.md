@@ -12,17 +12,21 @@ dev_langs:
 - csharp
 - vb
 - cpp
-helpviewer_keywords: exceptions, best practices
+helpviewer_keywords:
+- exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 87f9287c3714416ee5d6b63f3c9db311bb97b131
-ms.sourcegitcommit: 5d0e069655439984862a835f400058b7e8bbadc6
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4c5ea19077ff9ce8e36a33601b7e5e87c64afe60
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="best-practices-for-exceptions"></a>Práticas recomendadas para exceções
 
@@ -102,7 +106,7 @@ Para ver um exemplo, veja [Como criar exceções definidas pelo usuário](how-to
 
 Ao criar exceções definidas pelo usuário, assegure que os metadados para as exceções estejam disponíveis para códigos executando remotamente. 
 
-Por exemplo, em implementações de .NET que dão suporte a domínios de aplicativos, exceções podem ocorrer em domínios de aplicativos. Suponha que o Domínio de Aplicativo A crie o Domínio de aplicativo B, o qual executa o código que gera uma exceção. Para que o Domínio de Aplicativo A capture e trate corretamente a exceção, ele deverá ser capaz de localizar o assembly que contém a exceção gerada pelo Domínio de Aplicativo B. Se o Domínio de Aplicativo B gerar uma exceção contida em um assembly em sua base de aplicativo, mas não na base de aplicativo do Domínio de Aplicativo A, o Domínio de Aplicativo A não será capaz de localizar a exceção e o Common Language Runtime gerará uma exceção <xref:System.IO.FileNotFoundException>. Para evitar essa situação, você pode implantar o assembly que contém as informações de exceção de duas maneiras:
+Por exemplo, em implementações do .NET que dão suporte a Domínios de Aplicativo, podem ocorrer exceções entre Domínios de Aplicativo. Suponha que o Domínio de Aplicativo A crie o Domínio de aplicativo B, o qual executa o código que gera uma exceção. Para que o Domínio de Aplicativo A capture e trate corretamente a exceção, ele deverá ser capaz de localizar o assembly que contém a exceção gerada pelo Domínio de Aplicativo B. Se o Domínio de Aplicativo B gerar uma exceção contida em um assembly em sua base de aplicativo, mas não na base de aplicativo do Domínio de Aplicativo A, o Domínio de Aplicativo A não será capaz de localizar a exceção e o Common Language Runtime gerará uma exceção <xref:System.IO.FileNotFoundException>. Para evitar essa situação, você pode implantar o assembly que contém as informações de exceção de duas maneiras:
 
 - Coloque o assembly em uma base de aplicativos comum compartilhada por ambos os domínios de aplicativos.
 
@@ -116,7 +120,7 @@ A mensagem de erro que o usuário recebe é derivada da cadeia de caracteres de 
 
 ## <a name="use-grammatically-correct-error-messages"></a>Usar mensagens de erro gramaticalmente corretas
 
-Escreva frases claras e inclua pontuação final. Cada sentença em uma cadeia de caracteres descrição de uma exceção deve terminar com um ponto final. Por exemplo, "a tabela de log estourou." seria uma cadeia de caracteres de descrição apropriada.
+Escreva frases claras e inclua pontuação final. Cada sentença em uma cadeia de caracteres descrição de uma exceção deve terminar com um ponto final. Por exemplo, "A tabela de log estourou". seria uma cadeia de caracteres de descrição apropriada.
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>Em exceções personalizadas, forneça propriedades adicionais conforme necessário
 

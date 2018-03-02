@@ -1,5 +1,5 @@
 ---
-title: "Implementando um método Dispose"
+title: "Como implementar um método Dispose"
 ms.custom: 
 ms.date: 04/07/2017
 ms.prod: .net
@@ -15,28 +15,31 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b5a304c48a953b172cbcc3aa1c717a660298d36a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 404fdece284accf305ef3cf2324be2e37a8da4b6
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/06/2018
 ---
-# <a name="implementing-a-dispose-method"></a>Implementando um método Dispose
+# <a name="implementing-a-dispose-method"></a>Como implementar um método Dispose
 
-Implementar um <xref:System.IDisposable.Dispose%2A> método para liberar recursos não gerenciados usados pelo seu aplicativo. O coletor de lixo .NET não alocar nem libera memória não gerenciada.  
+Você implementa um método <xref:System.IDisposable.Dispose%2A> para liberar recursos não gerenciados usados pelo seu aplicativo. O coletor de lixo .NET não alocar nem libera memória não gerenciada.  
   
-O padrão para descartar um objeto, conhecido como um [dispose padrão](../../../docs/standard/design-guidelines/dispose-pattern.md), impõe a ordem em que o tempo de vida de um objeto. O padrão de descarte é usado somente para os objetos que acessam recursos não gerenciados, como identificadores de arquivo e pipe, identificadores de Registro, identificadores de espera ou ponteiros para blocos de memória não gerenciada. Isso ocorre porque o coletor de lixo é muito eficiente para recuperar objetos gerenciados não usados, mas não é capaz de recuperar objetos não gerenciados.  
+O padrão para o descarte um objeto, conhecido como [padrão Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md), impõe ordem no tempo de vida de um objeto. O padrão de descarte é usado somente para os objetos que acessam recursos não gerenciados, como identificadores de arquivo e pipe, identificadores de Registro, identificadores de espera ou ponteiros para blocos de memória não gerenciada. Isso ocorre porque o coletor de lixo é muito eficiente para recuperar objetos gerenciados não usados, mas não é capaz de recuperar objetos não gerenciados.  
   
 O padrão de descarte tem duas variações:  
   
 * Você envolve cada recurso não gerenciado usado por um tipo em um identificador seguro (ou seja, em uma classe derivada de <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>). Nesse caso, você implementa a interface <xref:System.IDisposable> e um método `Dispose(Boolean)` adicional. Essa é a variação recomendada e não requer a substituição do método <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.  
   
   > [!NOTE]
-  > O <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType> namespace fornece um conjunto de classes derivadas de <xref:System.Runtime.InteropServices.SafeHandle>, que são listados no [usando identificadores de segurança](#SafeHandles) seção. Se não conseguir encontrar uma classe adequada para liberar seu recurso não gerenciado, você poderá implementar sua própria subclasse de <xref:System.Runtime.InteropServices.SafeHandle>.  
+  > O namespace <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType> fornece um conjunto de classes derivadas de <xref:System.Runtime.InteropServices.SafeHandle>, que são listadas na seção [Usando identificadores seguros](#SafeHandles). Se não conseguir encontrar uma classe adequada para liberar seu recurso não gerenciado, você poderá implementar sua própria subclasse de <xref:System.Runtime.InteropServices.SafeHandle>.  
   
 * Você implementa a interface <xref:System.IDisposable> e um método `Dispose(Boolean)` adicional, além de substituir o método <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. Você deve substituir <xref:System.Object.Finalize%2A> para garantir que os recursos não gerenciados sejam descartados se sua implementação de <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> não for chamada por um consumidor do seu tipo. Se você usar a técnica recomendada discutida no item anterior, a classe <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> fará isso em seu nome.  
   
@@ -67,13 +70,13 @@ O método `Dispose` executa toda a limpeza do objeto, de modo que o coletor de l
   
 ### <a name="the-disposeboolean-overload"></a>A sobrecarga Dispose(Boolean)
 
-Na segunda sobrecarga, o *disposing* parâmetro é um <xref:System.Boolean> que indica se a chamada do método vêm de um <xref:System.IDisposable.Dispose%2A> método (seu valor é `true`) ou de um finalizador (seu valor é `false`).  
+Na segunda sobrecarga, o parâmetro *disposing* é um <xref:System.Boolean> que indica se a chamada do método é proveniente de um método <xref:System.IDisposable.Dispose%2A> (seu valor é `true`) ou de um finalizador (seu valor é `false`).  
   
 O corpo do método consiste em dois blocos de código:  
   
 * Um bloco que libera recursos não gerenciados. Este bloco é executado independentemente do valor do parâmetro `disposing`.  
   
-* Um bloco condicional que libera recursos não gerenciados. Este bloco será executado se o valor de `disposing` for `true`. Os recursos gerenciados que ele libera podem incluir:  
+* Um bloco condicional que libera recursos gerenciados. Este bloco será executado se o valor de `disposing` for `true`. Os recursos gerenciados que ele libera podem incluir:  
   
   **Objetos gerenciados que implementam <xref:System.IDisposable>.** O bloco condicional pode ser usado para chamar sua implementação de <xref:System.IDisposable.Dispose%2A>. Se você usou um indicador seguro para encapsular o recurso não gerenciado, é necessário chamar a implementação de <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=nameWithType> aqui.  
   
@@ -100,21 +103,21 @@ Aqui está o padrão geral para implementar o padrão de descarte para uma class
 [!code-vb[System.IDisposable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base1.vb#3)]  
   
 > [!NOTE]
-> O exemplo anterior usa um <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> para ilustrar o padrão do objeto; qualquer objeto derivado de <xref:System.Runtime.InteropServices.SafeHandle> pode ser usado em vez disso. Observe que o exemplo não instanciar corretamente seu <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> objeto.  
+> O exemplo anterior usa um objeto <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> para ilustrar o padrão; qualquer objeto derivado de <xref:System.Runtime.InteropServices.SafeHandle> poderia ser usado em vez disso. Observe que o exemplo não cria corretamente uma instância de seu objeto <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>.  
   
-Aqui está o padrão geral para implementar o padrão para uma classe base que substitui dispose <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.  
+Aqui está o padrão geral para implementar o padrão de descarte para uma classe base que substitui <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.  
   
 [!code-csharp[System.IDisposable#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.idisposable/cs/base2.cs#5)]
 [!code-vb[System.IDisposable#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base2.vb#5)]  
   
 > [!NOTE]
-> Em c#, você deve substituir <xref:System.Object.Finalize%2A?displayProperty=nameWithType> definindo um [destruidor](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
+> No C#, você deve substituir <xref:System.Object.Finalize%2A?displayProperty=nameWithType> definindo um [destruidor](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
   
 ## <a name="implementing-the-dispose-pattern-for-a-derived-class"></a>Implementando o padrão de descarte para uma classe derivada
 
 Uma classe derivada de uma classe que implementa a interface <xref:System.IDisposable> não deve implementar <xref:System.IDisposable> porque a implementação da classe base <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> é herdada pelas classes derivadas. Em vez disso, para implementar o padrão de descarte para uma classe derivada, você deverá fornecer o seguinte:  
   
-* Um método `protected``Dispose(Boolean)` que substitua o método da classe base e execute o trabalho real de liberar os recursos da classe derivada. Esse método também deve chamar o método `Dispose(Boolean)` da classe base e passar para ele um valor de `true` para o argumento *disposing*.  
+* Um método `protected Dispose(Boolean)` que substitua o método da classe base e execute o trabalho real de liberar os recursos da classe derivada. Esse método também deve chamar o método `Dispose(Boolean)` da classe base e passar para ele um valor de `true` para o argumento *disposing*.  
   
 * Uma classe derivada de <xref:System.Runtime.InteropServices.SafeHandle> que envolva o recurso não gerenciado (recomendado) ou uma substituição para o método <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. A classe <xref:System.Runtime.InteropServices.SafeHandle> fornece um finalizador que o libera de ter que codificar um. Se você fornecer um finalizador, ele deverá chamar a sobrecarga de `Dispose(Boolean)` com um argumento *disposing* de `false`.  
   
@@ -124,7 +127,7 @@ Aqui está o padrão geral para implementar o padrão de descarte para uma class
 [!code-vb[System.IDisposable#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived1.vb#4)]  
   
 > [!NOTE]
-> O exemplo anterior usa um <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> para ilustrar o padrão do objeto; qualquer objeto derivado de <xref:System.Runtime.InteropServices.SafeHandle> pode ser usado em vez disso. Observe que o exemplo não instanciar corretamente seu <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> objeto.  
+> O exemplo anterior usa um objeto <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> para ilustrar o padrão; qualquer objeto derivado de <xref:System.Runtime.InteropServices.SafeHandle> poderia ser usado em vez disso. Observe que o exemplo não cria corretamente uma instância de seu objeto <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>.  
   
 Aqui está o padrão geral para implementar o padrão de descarte para uma classe derivada que substitui <xref:System.Object.Finalize%2A?displayProperty=nameWithType>:  
   
@@ -132,7 +135,7 @@ Aqui está o padrão geral para implementar o padrão de descarte para uma class
 [!code-vb[System.IDisposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived2.vb#6)]  
   
 > [!NOTE]
-> Em c#, você deve substituir <xref:System.Object.Finalize%2A?displayProperty=nameWithType> definindo um [destruidor](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
+> No C#, você deve substituir <xref:System.Object.Finalize%2A?displayProperty=nameWithType> definindo um [destruidor](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
   
 <a name="SafeHandles"></a>   
 ## <a name="using-safe-handles"></a>Usando identificadores seguros
@@ -175,5 +178,5 @@ O exemplo a seguir ilustra o padrão de descarte para uma classe derivada, `Disp
 <xref:Microsoft.Win32.SafeHandles>   
 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>   
 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>   
-[Como: definir e consumir Classes e estruturas (C + + CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)   
-[Padrão de Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md)
+[Como definir e consumir classes e structs (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)   
+[Padrão de descarte](../../../docs/standard/design-guidelines/dispose-pattern.md)

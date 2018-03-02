@@ -18,76 +18,79 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 48de1b736c251a61a2ad34975c77bc2bca139626
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 111aaaa86877368ccbd0c9c11a26dff47b065698
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Decidindo quando implementar o padrão assíncrono baseado em evento
-O padrão assíncrono baseado em evento fornece um padrão para expor o comportamento assíncrono de uma classe. Com a introdução deste padrão, o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] define dois padrões para expor o comportamento assíncrono: o padrão assíncrono baseado no <xref:System.IAsyncResult?displayProperty=nameWithType> interface e o padrão de evento. Este tópico descreve quando é apropriado para implementar ambos os padrões.  
+O Padrão assíncrono baseado em evento oferece um padrão para expor o comportamento assíncrono de uma classe. Com a introdução deste padrão, o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] define dois padrões para expor o comportamento assíncrono: o Padrão assíncrono baseado na interface de <xref:System.IAsyncResult?displayProperty=nameWithType> e o padrão baseado no evento. Este tópico descreve quando é apropriado implementar os dois padrões.  
   
- Para obter mais informações sobre a programação assíncrona com o <xref:System.IAsyncResult> interface, consulte [padrão assíncrono baseado em evento (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
+ Para saber mais sobre a programação assíncrona com a interface de <xref:System.IAsyncResult>, confira [Padrão assíncrono baseado em evento (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
   
-## <a name="general-principles"></a>Princípios gerais  
- Em geral, você deve expor recursos assíncronos usando o padrão de assíncrono baseado em evento sempre que possível. No entanto, há alguns requisitos que o padrão de evento não pode atender. Nesses casos, talvez seja necessário implementar o <xref:System.IAsyncResult> padrão além do padrão baseado em evento.  
+## <a name="general-principles"></a>Noções básicas gerais  
+ Em geral, você deve expor recursos assíncronos usando o Padrão assíncrono baseado em evento sempre que possível. No entanto, há alguns requisitos que o padrão baseado em evento não pode atender. Nesses casos, talvez seja necessário implementar o padrão <xref:System.IAsyncResult> além do padrão baseado em evento.  
   
 > [!NOTE]
->  É raro para o <xref:System.IAsyncResult> padrão a ser implementada sem o padrão de evento também sendo implementado.  
+>  É raro o padrão <xref:System.IAsyncResult> ser implementado sem que o padrão baseado em evento também seja implementado.  
   
 ## <a name="guidelines"></a>Diretrizes  
- A lista a seguir descreve as diretrizes de quando você deve implementar o padrão assíncrono baseado em evento:  
+ A lista a seguir descreve as diretrizes para quando você deve implementar o Padrão Assíncrono baseado em Evento:  
   
--   Use o padrão de evento como a API padrão para expor o comportamento assíncrono para sua classe.  
+-   Use o padrão baseado em evento como a API padrão para expor o comportamento assíncrono para sua classe.  
   
--   Não exponha o <xref:System.IAsyncResult> padrão quando a classe é usada principalmente em um aplicativo cliente, por exemplo, Windows Forms.  
+-   Não exponha o padrão <xref:System.IAsyncResult>, principalmente quando a classe for usada em um aplicativo cliente, por exemplo, o Windows Forms.  
   
--   Apenas expor o <xref:System.IAsyncResult> padrão quando é necessário para atender às suas necessidades. Por exemplo, compatibilidade com uma API existente pode exigir que você exponha o <xref:System.IAsyncResult> padrão.  
+-   Basta expor o padrão <xref:System.IAsyncResult> quando ele for necessário para atender seus requisitos. Por exemplo, a compatibilidade com uma API existente pode exigir que você exponha o padrão <xref:System.IAsyncResult>.  
   
--   Não exponha o <xref:System.IAsyncResult> padrão sem também expor o padrão de evento.  
+-   Não exponha o padrão <xref:System.IAsyncResult> sem também expor o padrão baseado em evento.  
   
--   Se você precisar expor o <xref:System.IAsyncResult> padrão, isso como uma opção avançada. Por exemplo, se você gerar um objeto de proxy, gerar o padrão baseado em evento por padrão, com uma opção para gerar o <xref:System.IAsyncResult> padrão.  
+-   Se você precisar expor o padrão <xref:System.IAsyncResult>, exponha-o como uma opção avançada. Por exemplo, se você gerar um objeto de proxy, gere o padrão baseado em evento por padrão, com uma opção para gerar o padrão <xref:System.IAsyncResult>.  
   
--   Sua implementação do padrão com base em eventos de compilação seu <xref:System.IAsyncResult> implementação do padrão.  
+-   Crie sua implementação do padrão baseado em evento na implementação do padrão <xref:System.IAsyncResult>.  
   
--   Evitar a exposição de ambas as padrão baseado em evento e o <xref:System.IAsyncResult> padrão na mesma classe. Expor o padrão com base em eventos em classes "de nível superior" e o <xref:System.IAsyncResult> padrão classes em "nível inferior". Por exemplo, comparar o padrão baseado em evento no <xref:System.Net.WebClient> componente com o <xref:System.IAsyncResult> padrão no <xref:System.Web.HttpRequest> classe.  
+-   Evitar expor os dois padrões, o padrão baseado em evento e o padrão <xref:System.IAsyncResult>, na mesma classe. Exponha o padrão baseado em evento em classes de "nível superior" e o padrão <xref:System.IAsyncResult> em classes de "nível inferior". Por exemplo, compare o padrão baseado em evento no componente <xref:System.Net.WebClient> com o padrão <xref:System.IAsyncResult> na classe <xref:System.Web.HttpRequest>.  
   
-    -   Expor o padrão de evento e o <xref:System.IAsyncResult> padrão da mesma classe quando compatibilidade exija isso. Por exemplo, se você já lançou uma API que usa o <xref:System.IAsyncResult> padrão, você precisa manter o <xref:System.IAsyncResult> padrão para compatibilidade com versões anteriores.  
+    -   Exponha o padrão baseado em evento e o padrão <xref:System.IAsyncResult> na mesma classe quando a compatibilidade exigir isso. Por exemplo, se já tiver lançado uma API que usa o padrão <xref:System.IAsyncResult>, precisará manter o padrão <xref:System.IAsyncResult> por questões de compatibilidade com versões anteriores.  
   
-    -   Expor o padrão de evento e o <xref:System.IAsyncResult> se a complexidade de modelo de objeto resultante supera o benefício de separar as implementações do padrão da mesma classe. É melhor para expor os dois padrões em uma única classe que ao evitar expor o padrão de evento.  
+    -   Exponha o padrão baseado em evento e o padrão <xref:System.IAsyncResult> na mesma classe se a complexidade do modelo de objeto resultante for maior que o benefício de separar as implementações. É melhor expor os dois padrões em uma única classe para evitar expor o padrão baseado em evento.  
   
-    -   Se você deve expor ambos o padrão com base em eventos e <xref:System.IAsyncResult> padrão em uma única classe, use <xref:System.ComponentModel.EditorBrowsableAttribute> definida como <xref:System.ComponentModel.EditorBrowsableState.Advanced> para marcar o <xref:System.IAsyncResult> implementação do padrão como um recurso avançado. Isso indica a ambientes de design, como [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] IntelliSense, para não exibir o <xref:System.IAsyncResult> propriedades e métodos. Essas propriedades e métodos ainda são totalmente utilizáveis, mas o desenvolvedor trabalhando por meio do IntelliSense tem uma visão clara da API.  
+    -   Se quiser expor o padrão baseado em evento e o padrão <xref:System.IAsyncResult> em uma única classe, use o <xref:System.ComponentModel.EditorBrowsableAttribute> definido como <xref:System.ComponentModel.EditorBrowsableState.Advanced> para marcar a implementação do padrão <xref:System.IAsyncResult> como um recurso avançado. Isso dá a indicação aos ambientes de design, como o [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] IntelliSense, para não exibir as propriedades e os métodos de <xref:System.IAsyncResult>. Essas propriedades e métodos ainda são totalmente utilizáveis, mas, trabalhando com o IntelliSense, o desenvolvedor terá uma visão clara da API.  
   
-## <a name="criteria-for-exposing-the-iasyncresult-pattern-in-addition-to-the-event-based-pattern"></a>Critérios para expor o padrão de IAsyncResult além do padrão baseado em evento  
- Enquanto o padrão assíncrono baseado em evento tem muitas vantagens em cenários de mencionadas anteriormente, ele tem apresenta algumas desvantagens, você deve estar ciente de desempenho é o requisito mais importante.  
+## <a name="criteria-for-exposing-the-iasyncresult-pattern-in-addition-to-the-event-based-pattern"></a>Critérios para expor o Padrão de IAsyncResult além do Padrão baseado em evento  
+ O Padrão Assíncrono Baseado em Evento é muito vantajoso quando aplicado aos cenários mencionados anteriormente. No entanto, ele apresenta algumas desvantagens e você precisa estar atento caso o desempenho for seu requisito mais importante.  
   
- Há três cenários que não lida com o padrão baseado em evento, bem como a <xref:System.IAsyncResult> padrão:  
+ Há três cenários que o padrão baseado em evento não trata e o padrão <xref:System.IAsyncResult> também não:  
   
--   Bloqueio de espera em um<xref:System.IAsyncResult>  
+-   Bloqueio da espera em um <xref:System.IAsyncResult>  
   
--   Bloqueio de espera em muitas <xref:System.IAsyncResult> objetos  
+-   Bloqueio da espera em vários objetos <xref:System.IAsyncResult>  
   
--   Sondagem de conclusão no<xref:System.IAsyncResult>  
+-   Sondagem de conclusão no <xref:System.IAsyncResult>  
   
- Você pode abordar esses cenários usando o padrão baseado em evento, mas isso é mais complicado do que usando o <xref:System.IAsyncResult> padrão.  
+ Você pode lidar com esses cenários usando o padrão baseado em evento, mas isso é mais complicado do que usar o padrão <xref:System.IAsyncResult>.  
   
- Os desenvolvedores geralmente usam o <xref:System.IAsyncResult> padrão para os serviços que normalmente têm requisitos de desempenho muito alto. Por exemplo, a sondagem para o cenário de conclusão é uma técnica de servidor de alto desempenho.  
+ Os desenvolvedores geralmente usam o padrão <xref:System.IAsyncResult> em serviços que normalmente têm requisitos de desempenho muito elevados. Por exemplo, a sondagem do cenário de conclusão é uma técnica de servidor de alto desempenho.  
   
- Além disso, o padrão de evento é menos eficiente do que o <xref:System.IAsyncResult> padrão porque ela cria mais objetos, especialmente <xref:System.EventArgs>, e como elas são sincronizadas entre threads.  
+ Além disso, o padrão baseado em evento é menos eficiente que o padrão <xref:System.IAsyncResult> porque cria mais objetos, especialmente o <xref:System.EventArgs>, e por sincronizar entre threads.  
   
- A lista a seguir mostra algumas recomendações a seguir se você decidir usar o <xref:System.IAsyncResult> padrão:  
+ A lista a seguir mostra algumas recomendações a serem seguidas se você decidir usar o padrão <xref:System.IAsyncResult>:  
   
--   Apenas expor o <xref:System.IAsyncResult> padrão quando você precisar do suporte para especificamente <xref:System.Threading.WaitHandle> ou <xref:System.IAsyncResult> objetos.  
+-   Só exponha o padrão <xref:System.IAsyncResult> quando você precisar de suporte para os objetos <xref:System.Threading.WaitHandle> ou <xref:System.IAsyncResult>.  
   
--   Apenas expor o <xref:System.IAsyncResult> padrão quando você tem uma API existente que usa o <xref:System.IAsyncResult> padrão.  
+-   Só exponha o padrão <xref:System.IAsyncResult> quando você tiver uma API existente que usa o padrão <xref:System.IAsyncResult>.  
   
--   Se você tiver uma API existente com base no <xref:System.IAsyncResult> padrão, considere também expor o padrão baseado em evento em sua próxima versão.  
+-   Se você já tiver uma API baseada no padrão <xref:System.IAsyncResult>, considere também expor o padrão baseado em evento em sua próxima versão.  
   
--   Apenas expor <xref:System.IAsyncResult> padrão se você tiver requisitos de alto desempenho que você verificou se não podem ser atendida pelo padrão baseado em evento, mas podem ser atendida pelo <xref:System.IAsyncResult> padrão.  
+-   Só exponha o padrão <xref:System.IAsyncResult> caso tiver requisitos de alto desempenho que você verificou não poderem ser atendidos pelo padrão baseado em evento, mas que podem ser atendidos pelo padrão <xref:System.IAsyncResult>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Instruções passo a passo: implementando um componente compatível com o Padrão Assíncrono baseado em Evento](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  

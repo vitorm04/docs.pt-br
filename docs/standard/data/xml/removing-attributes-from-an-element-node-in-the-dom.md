@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b4ca08d8080c2116ce05634a544c91780869b165
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 967344db880347bde94330912bc5689c57b29921
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>Removendo os atributos de um nó no elemento DOM
 Há várias maneiras para remover os atributos. Uma técnica é removê-los de coleção de atributo. Para fazer isso, as seguintes etapas são executadas:  
@@ -42,9 +45,9 @@ Há várias maneiras para remover os atributos. Uma técnica é removê-los de c
   
  Uma alternativa é mais obter o elemento, obter o atributo de coleção de atributo, e remova diretamente o nó de atributo. Para obter o atributo de coleção de atributo, você pode usar um nome, `XmlAttribute attr = attrs["attr_name"];`, um índice `XmlAttribute attr = attrs[0];`, ou qualificando totalmente o nome com o namespace `XmlAttribute attr = attrs["attr_localName", "attr_namespace"]`.  
   
- Independentemente do método usado para remover os atributos, há limitações especiais em remover os atributos que são definidos como atributos padrão em Document type definition (DTD). Os atributos padrão não podem ser removidos a menos que o elemento que pertencem a for removido. Os atributos padrão são sempre atual para elementos que têm atributos padrões declarados. Removendo um padrão do atributo <xref:System.Xml.XmlAttributeCollection> ou de resultados de <xref:System.Xml.XmlElement> em um atributo de substituição inserido em <xref:System.Xml.XmlAttributeCollection> do elemento inicializado, o valor padrão que foi declarado. Se você tiver um elemento definido como `<book att1="1" att2="2" att3="3"></book>`, então você tiver um elemento de `book` com os três atributos padrões declarados. A implementação do modelo de objeto de documento (DOM) XML garante que desde que isso `book` existir, ele tem estes atributos padrão de três das `att1`, `att2`, e `att3`.  
+ Independentemente do método usado para remover os atributos, há limitações especiais em remover os atributos que são definidos como atributos padrão em Document type definition (DTD). Os atributos padrão não podem ser removidos a menos que o elemento que pertencem a for removido. Os atributos padrão são sempre atual para elementos que têm atributos padrões declarados. Removendo um padrão do atributo <xref:System.Xml.XmlAttributeCollection> ou de resultados de <xref:System.Xml.XmlElement> em um atributo de substituição inserido em <xref:System.Xml.XmlAttributeCollection> do elemento inicializado, o valor padrão que foi declarado. Se você tiver um elemento definido como `<book att1="1" att2="2" att3="3"></book>`, então você tiver um elemento de `book` com os três atributos padrões declarados. A implementação DOM (Modelo de Objeto de Documento) de XML garante que, contanto que esse elemento `book` exista, ele tenha esses três atributos padrões de `att1`, `att2` e `att3`.  
   
  Quando chamado com <xref:System.Xml.XmlAttribute>, o método de <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> define o valor do atributo para String.Empty, como um atributo não pode existir sem um valor.  
   
 ## <a name="see-also"></a>Consulte também  
- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

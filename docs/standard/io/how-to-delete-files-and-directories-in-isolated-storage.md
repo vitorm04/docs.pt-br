@@ -23,25 +23,28 @@ helpviewer_keywords:
 - storing data using isolated storage, deleting files and directories
 - deleting directories within isolated stage file
 ms.assetid: 8fcc0dea-435b-4d40-ba4d-ba056265c202
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 971f27cd25cbe4be3ca3fad6283ab32d4f6db0ac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cd17b85dbdc9315654d042e18d28fbfd0e2dcc52
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-delete-files-and-directories-in-isolated-storage"></a>Como excluir arquivos e diretórios no armazenamento isolado
-Você pode excluir pastas e arquivos em um arquivo de armazenamento isolado. Em um armazenamento, nomes de arquivo e diretório são dependentes do sistema operacional e são especificados como relacionado à raiz do sistema de arquivos virtual. Eles não diferenciam maiusculas de minúsculas em sistemas operacionais Windows.  
+Você pode excluir pastas e arquivos em um arquivo de armazenamento isolado. Em um repositório, nomes de arquivo e diretório são dependentes do sistema operacional e são especificados como relativos à raiz do sistema de arquivos virtual. Eles não diferenciam maiúsculas de minúsculas em sistemas operacionais Windows.  
   
- O <xref:System.IO.IsolatedStorage.IsolatedStorageFile?displayProperty=nameWithType> classe fornece dois métodos para excluir arquivos e diretórios: <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory%2A> e <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteFile%2A>. Um <xref:System.IO.IsolatedStorage.IsolatedStorageException> exceção é gerada se você tentar excluir um arquivo ou diretório não existe. Se você incluir um caractere curinga no nome do <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory%2A> lança um <xref:System.IO.IsolatedStorage.IsolatedStorageException> exceção, e <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteFile%2A> lança um <xref:System.ArgumentException> exceção.  
+ A classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile?displayProperty=nameWithType> fornece dois métodos para excluir arquivos e diretórios: <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory%2A> e <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteFile%2A>. Uma exceção <xref:System.IO.IsolatedStorage.IsolatedStorageException> será gerada se você tentar excluir um arquivo ou um diretório que não exista. Se você incluir um caractere curinga no nome, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory%2A> gerará uma exceção <xref:System.IO.IsolatedStorage.IsolatedStorageException> e <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteFile%2A> gerará uma exceção <xref:System.ArgumentException>.  
   
- O <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory%2A> método falhará se o diretório contém quaisquer arquivos ou subpastas. Você pode usar o <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A> e <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> métodos para recuperar os arquivos e diretórios existentes. Para obter mais informações sobre o sistema de arquivos virtual de um repositório de pesquisa, consulte [como: localizar arquivos e diretórios existentes no armazenamento isolado](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md).  
+ O método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory%2A> falhará se o diretório contiver arquivos ou subpastas. Você pode usar os métodos <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A> e <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> para recuperar os arquivos e diretórios existentes. Para saber mais sobre o sistema de arquivos virtual de um repositório de pesquisa, confira [Como localizar arquivos e diretórios existentes no armazenamento isolado](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir cria e, em seguida, exclui vários diretórios e arquivos.  
+ O exemplo de código a seguir cria e exclui vários diretórios e arquivos.  
   
  [!code-cpp[Conceptual.IsolatedStorage#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source4.cpp#4)]
  [!code-csharp[Conceptual.IsolatedStorage#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source4.cs#4)]

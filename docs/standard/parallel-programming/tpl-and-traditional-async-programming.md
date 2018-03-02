@@ -11,63 +11,67 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: tasks, with other asynchronous models
+helpviewer_keywords:
+- tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0f29ca819fa7a59edeb105720d74a25512e95bdc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 50c4f9cfeb135f1046fbb427585897ca99248afd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL e programação assíncrona do .NET Framework
-O .NET Framework fornece dois seguintes padrões para executar operações assíncronas vinculada à e/S e vinculada à computação:  
+O .NET Framework fornece os dois padrões a seguir para executar operações assíncronas vinculadas a E/S e a computação:  
   
--   Modelo APM (Asynchronous Programming), no qual as operações assíncronas são representadas por um par de métodos Begin/End como <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> e <xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>.  
+-   Modelo de Programação Assíncrona (APM), em que as operações assíncronas são representadas por um par de métodos de início/fim, como <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> e <xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>.  
   
--   Evento padrão assíncrono baseado (EAP), na qual as operações assíncronas é representada por um par de método/evento que é nomeado *OperationName*Async e *OperationName*concluída, por exemplo, <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> e <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>. (O EAP foi introduzido no .NET Framework versão 2.0.)  
+-   Padrão Assíncrono Baseado em Evento (EAP), no qual as operações assíncronas são representadas por um par de método/evento que são nomeados *OperationName*Async e *OperationName*Completed, por exemplo, <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> e <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>. (O EAP foi introduzido no .NET Framework versão 2.0).  
   
- O biblioteca paralela de tarefas (TPL) pode ser usado de várias maneiras, junto com qualquer um dos padrões assíncronos. Você pode expor operações APM e EAP como tarefas para os consumidores de biblioteca, ou você pode expor os padrões APM mas use objetos de tarefa para implementá-los internamente. Em ambos os cenários, por meio de objetos de tarefa, você pode simplificar o código e aproveitar as seguintes funcionalidades úteis:  
+ A Biblioteca paralela de tarefas (TPL) pode ser usada de várias maneiras, junto com qualquer um dos padrões assíncronos. Você pode expor as operações APM e EAP como Tarefas para consumidores da biblioteca, ou você pode expor os padrões da APM, mas usar objetos de Tarefa para implementá-los internamente. Em ambos os cenários, ao usar os objetos de Tarefa, você pode simplificar o código e tirar proveito da seguinte funcionalidade útil:  
   
--   Registre retornos de chamada, na forma de continuação de tarefas, a qualquer momento depois que a tarefa foi iniciada.  
+-   Registrar chamadas de retorno, sob a forma de continuação de tarefas, a qualquer momento após a tarefa ter começado.  
   
--   Coordenar várias operações executam em resposta a um `Begin_` método usando o <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> e <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> métodos, ou o <xref:System.Threading.Tasks.Task.WaitAll%2A> método ou o <xref:System.Threading.Tasks.Task.WaitAny%2A> método.  
+-   Coordenar várias operações que executam em resposta a um método `Begin_`, usando os métodos <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> e <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A>, ou o método <xref:System.Threading.Tasks.Task.WaitAll%2A> ou o método <xref:System.Threading.Tasks.Task.WaitAny%2A>.  
   
--   Encapsule as operações assíncronas vinculada à e/S e vinculada à computação no mesmo objeto de tarefa.  
+-   Encapsular operações assíncronas de E/S vinculadas e computadas no mesmo objeto Tarefa.  
   
--   Monitore o status do objeto de tarefa.  
+-   Monitorar o status do objeto Tarefa.  
   
--   Empacotar o status de uma operação para um objeto de tarefa usando <xref:System.Threading.Tasks.TaskCompletionSource%601>.  
+-   Realizar marshaling do status de uma operação para um objeto Tarefa usando <xref:System.Threading.Tasks.TaskCompletionSource%601>.  
   
 ## <a name="wrapping-apm-operations-in-a-task"></a>Encapsulando Operações APM em uma Tarefa  
- Tanto o <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType> e <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> classes fornecem várias sobrecargas do <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.TaskFactory%601.FromAsync%2A?displayProperty=nameWithType> métodos que permitem que você encapsulam um par de métodos Begin/End APM em um <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601> instância. Várias sobrecargas acomodam qualquer par de métodos Begin/End que têm de zero a três parâmetros de entrada.  
+ As classes <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType> e <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> fornecem várias sobrecargas dos métodos <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.TaskFactory%601.FromAsync%2A?displayProperty=nameWithType> que permitem encapsular um par de métodos APM de início/fim em uma instância <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601>. As várias sobrecargas acomodam qualquer par de métodos de início/fim que tenham de zero a três parâmetros de entrada.  
   
- Para os pares que têm `End` métodos que retornam um valor (`Function` no Visual Basic), use os métodos em <xref:System.Threading.Tasks.TaskFactory%601> que criar um <xref:System.Threading.Tasks.Task%601>. Para `End` métodos que retornam void (`Sub` no Visual Basic), use os métodos em <xref:System.Threading.Tasks.TaskFactory> que criar um <xref:System.Threading.Tasks.Task>.  
+ Para pares que possuem métodos `End` que retornam um valor (`Function` no Visual Basic), use os métodos em <xref:System.Threading.Tasks.TaskFactory%601> que criam um <xref:System.Threading.Tasks.Task%601>. Para métodos `End` que retornam nulo (`Sub` no Visual Basic), use os métodos em <xref:System.Threading.Tasks.TaskFactory> que criam um <xref:System.Threading.Tasks.Task>.  
   
- Para esses poucos casos em que o `Begin` tem mais de três parâmetros de método ou contém `ref` ou `out` parâmetros adicionais `FromAsync` sobrecargas que encapsulam apenas o `End` método são fornecidos.  
+ Para os poucos casos em que o método `Begin` possui mais de três parâmetros ou contém parâmetros `ref` ou `out`, são fornecidas sobrecargas `FromAsync` adicionais que encapsulam apenas o método `End`.  
   
- O exemplo a seguir mostra a assinatura para o `FromAsync` sobrecarga que corresponde a <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> e <xref:System.IO.FileStream.EndRead%2A?displayProperty=nameWithType> métodos. Essa sobrecarga tem três parâmetros de entrada, da seguinte maneira.  
+ O exemplo a seguir mostra a assinatura para a sobrecarga `FromAsync` que corresponde aos métodos <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> e <xref:System.IO.FileStream.EndRead%2A?displayProperty=nameWithType>. Essa sobrecarga leva três parâmetros de entrada, da seguinte forma.  
   
  [!code-csharp[FromAsync#01](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/fromasync.cs#01)]
  [!code-vb[FromAsync#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#01)]  
   
- O primeiro parâmetro é um <xref:System.Func%606> que corresponde à assinatura do delegado a <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> método. O segundo parâmetro é um <xref:System.Func%602> delegado que utiliza um <xref:System.IAsyncResult> e retorna um `TResult`. Porque <xref:System.IO.FileStream.EndRead%2A> retorna um inteiro, o compilador infere o tipo de `TResult` como <xref:System.Int32> e o tipo de tarefa como <xref:System.Threading.Tasks.Task>. Os últimos quatro parâmetros são idênticos na <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> método:  
+ O primeiro parâmetro é um delegado <xref:System.Func%606> que corresponde à assinatura do método <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType>. O segundo parâmetro é um delegado <xref:System.Func%602> que leva um <xref:System.IAsyncResult> e retorna um `TResult`. Como <xref:System.IO.FileStream.EndRead%2A> retorna um inteiro, o compilador infere o tipo de `TResult` como <xref:System.Int32> e o tipo da tarefa como <xref:System.Threading.Tasks.Task>. Os últimos quatro parâmetros são idênticos aos do método <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType>:  
   
--   O buffer no qual armazenar os dados de arquivo.  
+-   O buffer no qual armazenar os dados do arquivo.  
   
--   O deslocamento do buffer no qual começar a gravar dados.  
+-   O deslocamento no buffer no qual começar a gravar dados.  
   
--   A quantidade máxima de dados para ler o arquivo.  
+-   O volume máximo de dados a serem lidos a partir do arquivo.  
   
--   Um objeto opcional que armazena dados de estado definido pelo usuário para passar para o retorno de chamada.  
+-   Um objeto opcional que armazena dados de estado definidos pelo usuário para passar para o retorno de chamada.  
   
 ### <a name="using-continuewith-for-the-callback-functionality"></a>Usando ContinueWith para a Funcionalidade do Retorno de Chamada  
- Se você precisar de acesso aos dados no arquivo, em vez de apenas o número de bytes, o <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> método não é suficiente. Em vez disso, use <xref:System.Threading.Tasks.Task>, cujo `Result` propriedade contém os dados de arquivo. Você pode fazer isso adicionando uma continuação para a tarefa original. A continuação realiza o trabalho que normalmente seria executado pelo <xref:System.AsyncCallback> delegate. Ele é invocado quando o antecessor for concluída e o buffer de dados tenha sido preenchido. (O <xref:System.IO.FileStream> objeto deve ser fechado antes de retornar.)  
+ Se você precisar acessar os dados no arquivo, em vez de apenas o número de bytes, o método <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> não é suficiente. Em vez disso, use <xref:System.Threading.Tasks.Task>, cuja propriedade `Result` contém os dados do arquivo. Você pode fazer isso adicionando uma continuação à tarefa original. A continuação executa o trabalho que normalmente seria executado pelo delegado <xref:System.AsyncCallback>. É invocada quando o antecedente é concluído e o buffer de dados foi preenchido. (O objeto <xref:System.IO.FileStream> deve ser fechado antes de retornar).  
   
- O exemplo a seguir mostra como retornar um <xref:System.Threading.Tasks.Task> que encapsula o par de BeginRead/EndRead do <xref:System.IO.FileStream> classe.  
+ O exemplo a seguir mostra como retornar um <xref:System.Threading.Tasks.Task> que encapsula o par BeginRead/EndRead da classe <xref:System.IO.FileStream>.  
   
  [!code-csharp[FromAsync#03](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/fromasync.cs#03)]
  [!code-vb[FromAsync#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#03)]  
@@ -78,52 +82,52 @@ O .NET Framework fornece dois seguintes padrões para executar operações assí
  [!code-vb[FromAsync#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#04)]  
   
 ### <a name="providing-custom-state-data"></a>Fornecendo Dados de Estado Personalizados  
- Típicas <xref:System.IAsyncResult> operações, se seu <xref:System.AsyncCallback> delegado requer alguns dados de estado personalizado, você precisa passar no último parâmetro no `Begin` método, para que os dados podem ser empacotados no <xref:System.IAsyncResult> objeto eventualmente passado para o método de retorno de chamada. Isso normalmente não é necessário quando o `FromAsync` métodos são usados. Se os dados personalizados são conhecidos para a continuação, ela poderá ser capturada diretamente no delegado de continuação. O exemplo a seguir é semelhante ao exemplo anterior, mas em vez de examinar o `Result` propriedade o antecessor a continuação examina os dados de estado personalizado que é diretamente acessíveis para o representante de usuário da continuação.  
+ Em operações <xref:System.IAsyncResult> típicas, se o seu delegado <xref:System.AsyncCallback> precisar de alguns dados de estado personalizados, você deve passá-lo através do último parâmetro no método `Begin`, para que os dados possam ser empacotados no objeto <xref:System.IAsyncResult>, que é eventualmente passado para o método de retorno de chamada. Normalmente, isso não é necessário quando os métodos `FromAsync` são usados. Se os dados personalizados forem conhecidos pela continuação, ele poderão ser capturados diretamente no delegado de continuação. O exemplo a seguir se assemelha ao exemplo anterior, mas em vez de examinar a propriedade `Result` do antecedente, a continuação examina os dados de estado personalizados que são diretamente acessíveis ao delegado de usuário da continuação.  
   
  [!code-csharp[FromAsync#05](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/fromasync.cs#05)]
  [!code-vb[FromAsync#05](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#05)]  
   
 ### <a name="synchronizing-multiple-fromasync-tasks"></a>Sincronizando Várias Tarefas FromAsync  
- Estático <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> e <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> métodos fornecem flexibilidade adicional quando usado em conjunto com o `FromAsync` métodos. O exemplo a seguir mostra como iniciar várias operações de e/s assíncronas e aguarde até que todas elas sejam concluídas antes de executar a continuação.  
+ Os métodos estáticos <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> e <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> proporcionam maior flexibilidade quando usados em conjunto com os métodos `FromAsync`. O exemplo a seguir mostra como iniciar várias operações de E/S assíncronas e aguarda que todas elas sejam concluídas antes de executar a continuação.  
   
  [!code-csharp[FromAsync#06](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/fromasync.cs#06)]
  [!code-vb[FromAsync#06](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#06)]  
   
 ### <a name="fromasync-tasks-for-only-the-end-method"></a>Tarefas FromAsync Apenas Para o Método Final  
- Para esses poucos casos em que o `Begin` método requer mais de três parâmetros de entrada ou tem `ref` ou `out` parâmetros, você pode usar o `FromAsync` sobrecargas, por exemplo, <xref:System.Threading.Tasks.TaskFactory%601.FromAsync%28System.IAsyncResult%2CSystem.Func%7BSystem.IAsyncResult%2C%600%7D%29?displayProperty=nameWithType>, que representam apenas o `End`método. Esses métodos também podem ser usados em qualquer cenário em que recebem um <xref:System.IAsyncResult> e deseja encapsulá-lo em uma tarefa.  
+ Para os poucos casos em que o método `Begin` requer mais de três parâmetros de entrada ou tem parâmetros `ref` ou `out`, você pode usar as sobrecargas `FromAsync`, por exemplo, <xref:System.Threading.Tasks.TaskFactory%601.FromAsync%28System.IAsyncResult%2CSystem.Func%7BSystem.IAsyncResult%2C%600%7D%29?displayProperty=nameWithType>, que representam apenas o método `End`. Esses métodos também podem ser usados em qualquer cenário no qual você tenha passado um <xref:System.IAsyncResult> e deseja encapsular isso em uma Tarefa.  
   
  [!code-csharp[FromAsync#07](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/fromasync.cs#07)]
  [!code-vb[FromAsync#07](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#07)]  
   
 ### <a name="starting-and-canceling-fromasync-tasks"></a>Iniciando e Cancelando Tarefas FromAsync  
- A tarefa retornada por um `FromAsync` método tem um status de WaitingForActivation e será iniciado pelo sistema em algum momento depois que a tarefa é criada. Se você tentar chamar início em uma tarefa, será gerada uma exceção.  
+ A tarefa retornada por um método `FromAsync` possui um status de WaitingForActivation e será iniciada pelo sistema em algum momento após a criação da tarefa. Se você tentar chamar Start em tal tarefa, uma exceção será gerada.  
   
- Você não pode cancelar uma `FromAsync` de tarefas, como as APIs do .NET Framework subjacente no momento não oferece suporte ao cancelamento em andamento do arquivo ou e/s de rede. Você pode adicionar a funcionalidade de cancelamento para um método que encapsula uma `FromAsync` chamada, mas você só pode responder ao cancelamento antes `FromAsync` é chamado ou depois dele concluída (por exemplo, em uma tarefa de continuação).  
+ Não é possível cancelar uma tarefa `FromAsync`, pois as APIs .NET Framework subjacentes atualmente não dão suporte ao cancelamento em andamento de E/S de rede ou arquivos. Você pode adicionar funcionalidades de cancelamento a um método que encapsula uma chamada `FromAsync`, mas você só pode responder ao cancelamento antes que `FromAsync` seja chamado ou depois de concluído (por exemplo, em uma tarefa de continuação).  
   
- Algumas classes que oferecem suporte a EAP, por exemplo, <xref:System.Net.WebClient>, suporte ao cancelamento, e você pode integrar essa funcionalidade de cancelamento nativo usando tokens de cancelamento.  
+ Algumas classes que dão suporte ao EAP, por exemplo, <xref:System.Net.WebClient>, dão suporte ao cancelamento e você pode integrar essa funcionalidade de cancelamento nativa usando tokens de cancelamento.  
   
 ## <a name="exposing-complex-eap-operations-as-tasks"></a>Expondo Operações EAP Complexas Como Tarefas  
- A TPL fornece os métodos que são projetados especificamente para encapsular uma operação assíncrona com base em eventos da mesma forma que o `FromAsync` família de métodos wrap o <xref:System.IAsyncResult> padrão. No entanto, a TPL fornecem o <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> classe, que pode ser usado para representar qualquer conjunto arbitrário de operações como um <xref:System.Threading.Tasks.Task%601>. As operações podem ser síncronas ou assíncronas e podem ser vinculados de e/s ou vinculada à computação ou ambos.  
+ O TPL não fornece nenhum método especificamente projetado para encapsular uma operação assíncrona baseada em eventos da mesma maneira que a família de métodos `FromAsync` envolve o padrão <xref:System.IAsyncResult>. No entanto, o TPL fornece a classe <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType>, que pode ser usada para representar qualquer conjunto arbitrário de operações como <xref:System.Threading.Tasks.Task%601>. As operações podem ser síncronas ou assíncronas, e podem estar ligadas à E/S ou computação, ou ambos.  
   
- O exemplo a seguir mostra como usar um <xref:System.Threading.Tasks.TaskCompletionSource%601> para expor um conjunto de assíncrona <xref:System.Net.WebClient> operações ao código do cliente como básico <xref:System.Threading.Tasks.Task%601>. O método permite que você insira uma matriz de URLs da Web e um termo ou nome para pesquisar e, em seguida, retorna o número de vezes que o termo de pesquisa ocorre em cada site.  
+ O exemplo a seguir mostra como usar um <xref:System.Threading.Tasks.TaskCompletionSource%601> para expor um conjunto de operações <xref:System.Net.WebClient> assíncronas ao código do cliente como um <xref:System.Threading.Tasks.Task%601> básico. O método permite que você insira uma série de URLs da Web e um termo ou nome para pesquisar e, em seguida, retorna o número de vezes que o termo de pesquisa ocorre em cada site.  
   
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
   
- Para obter um exemplo mais completo, que inclui a manipulação de exceção adicionais e mostra como chamar o método no código do cliente, consulte [como: encapsular padrões de EAP em uma tarefa](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
+ Para um exemplo mais completo, que inclui a manipulação de exceções adicionais e mostra como chamar o método do código do cliente, confira [Como encapsular padrões de EAP em uma tarefa](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
   
- Lembre-se de que qualquer tarefa que é criada por um <xref:System.Threading.Tasks.TaskCompletionSource%601> será iniciada por esse TaskCompletionSource e, portanto, o código do usuário não deve chamar o método Start nessa tarefa.  
+ Lembre-se de que qualquer tarefa criada por um <xref:System.Threading.Tasks.TaskCompletionSource%601> será iniciada por TaskCompletionSource e, portanto, o código do usuário não deve chamar o método Start nessa tarefa.  
   
 ## <a name="implementing-the-apm-pattern-by-using-tasks"></a>Implementando o Padrão APM Usando Tarefas  
- Em alguns cenários, pode ser desejável para expor diretamente o <xref:System.IAsyncResult> padrão usando pares de métodos Begin/End em uma API. Por exemplo, talvez você queira manter a consistência com APIs existentes, ou você pode ter automatizada ferramentas que exigem esse padrão. Nesses casos, você pode usar tarefas para simplificar como o padrão do APM é implementado internamente.  
+ Em alguns cenários, pode ser desejável expor diretamente o padrão <xref:System.IAsyncResult> usando pares de métodos de início/fim em uma API. Por exemplo, talvez você queira manter a consistência com APIs existentes, ou você pode ter ferramentas automatizadas que exigem esse padrão. Nesses casos, você pode usar Tarefas para simplificar como o padrão APM é implementado internamente.  
   
- O exemplo a seguir mostra como usar tarefas para implementar um par de métodos Begin/End do APM para um método de vinculada à computação de longa execução.  
+ O exemplo a seguir mostra como usar as tarefas para implementar um par de métodos APM de início/fim para um método de computação limitada.  
   
  [!code-csharp[FromAsync#09](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/fromasync.cs#09)]
  [!code-vb[FromAsync#09](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#09)]  
   
 ## <a name="using-the-streamextensions-sample-code"></a>Usando o Código de Exemplo StreamExtensions  
- O Streamextensions.cs de arquivo, em [exemplos de programação paralela com o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=165717) no site do MSDN, contém várias implementações de referência que usam objetos de tarefa de arquivo assíncrono e e/s de rede.  
+ O arquivo Streamextensions.cs, em [Amostras para programação paralela com o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=165717) no site MSDN, contém várias implementações de referência que usam objetos de Tarefa para arquivos assíncronos e E/S de rede.  
   
 ## <a name="see-also"></a>Consulte também  
  [TPL (Biblioteca de Paralelismo de Tarefas)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

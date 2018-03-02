@@ -12,22 +12,25 @@ helpviewer_keywords:
 - user-filtered exceptions
 - exceptions, user-filtered
 ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a71a722063448fb0d568f4bfb4f71d4e01c57454
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1f5eb735262ee7ef69e200b1249c7b1c4a1e2ac2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-user-filtered-exception-handlers"></a>Usando manipuladores de exceções filtrados pelo usuário
-Atualmente, o Visual Basic suporta exceções filtradas pelo usuário. Os manipuladores de exceção filtrados por usuário capturam e tratam exceções com base nos requisitos que você define para a exceção. Esses manipuladores utiliza o **Catch** instrução com o **quando** palavra-chave.  
+Atualmente, o Visual Basic dá suporte a exceções filtradas pelo usuário. Os manipuladores de exceção filtrados por usuário capturam e tratam exceções com base nos requisitos que você define para a exceção. Esses manipuladores usam a instrução **Catch** com a palavra-chave **When**.  
   
- Essa técnica é útil quando um objeto de exceção em particular corresponde a vários erros. Nesse caso, o objeto normalmente tem uma propriedade que contém o código de erro específico associado ao erro. Você pode usar a propriedade do código de erro na expressão para selecionar apenas o erro específico que você deseja manipular no que **Catch** cláusula.  
+ Essa técnica é útil quando um objeto de exceção em particular corresponde a vários erros. Nesse caso, o objeto normalmente tem uma propriedade que contém o código de erro específico associado ao erro. Você pode usar a propriedade do código de erro na expressão para selecionar apenas o erro específico que você deseja manipular na cláusula **Catch**.  
   
- O exemplo de Visual Basic a seguir ilustra o **Catch/quando** instrução.  
+ O exemplo do Visual Basic a seguir ilustra a instrução **Catch/When**.  
   
 ```  
 Try  
@@ -37,12 +40,12 @@ Try
 End Try  
 ```  
   
- A expressão da cláusula de filtro de usuário não é restrita de forma alguma. Se ocorrer uma exceção durante a execução da expressão de filtro de usuário, essa exceção será descartada e a expressão de filtro é considerada a ser avaliada como false. Nesse caso, o common language runtime continua a pesquisa para um manipulador para a exceção atual.  
+ A expressão da cláusula filtrada pelo usuário não é restrita de nenhuma forma. Se ocorrer uma exceção durante a execução da expressão filtrada pelo usuário, essa exceção será descartada e será considerado que a expressão do filtro foi avaliada como falsa. Nesse caso, o Common Language Runtime continua a pesquisar um manipulador para a exceção atual.  
   
-## <a name="combining-the-specific-exception-and-the-user-filtered-clauses"></a>Combinando a exceção específica e as cláusulas de filtro de usuário  
- Uma instrução catch pode conter a exceção específica e as cláusulas de filtro de usuário. O tempo de execução testa a exceção específica pela primeira vez. Se a exceção específica for bem-sucedida, o tempo de execução executa o filtro de usuário. O filtro genérico pode conter uma referência à variável declarada no filtro de classe. Observe que a ordem das duas cláusulas de filtros não pode ser revertida.  
+## <a name="combining-the-specific-exception-and-the-user-filtered-clauses"></a>Combinar a exceção específica e as cláusulas filtradas pelo usuário  
+ Uma instrução catch pode contar a exceção específica e as cláusulas filtradas pelo usuário. O tempo de execução testa primeiro a exceção específica. Se a exceção específica for bem-sucedida, o tempo de execução executará o filtro do usuário. O filtro genérico pode conter uma referência à variável declarada no filtro da classe. Observe que a ordem das duas cláusulas do filtro não pode ser invertida.  
   
- O seguinte exemplo do Visual Basic mostra a exceção específica `ClassLoadException` no **Catch** instrução, bem como a cláusula de filtro de usuário usando o **quando** palavra-chave.  
+ O seguinte exemplo do Visual Basic mostra a exceção específica `ClassLoadException` na instrução **Catch**, além da cláusula filtrada pelo usuário usando a palavra-chave **When**.  
   
 ```  
 Try  

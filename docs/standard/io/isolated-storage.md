@@ -24,25 +24,28 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4279e7933a88a060de52199d9ea0e9f54863fb11
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0048c1946e5df59340bed211c5dbb81075047260
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="isolated-storage"></a>Armazenamentos isolado
-<a name="top"></a>Para [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] aplicativos, o armazenamento isolado é um mecanismo de armazenamento de dados que fornece isolamento e segurança ao definir maneiras padronizadas de associar códigos com dados salvos. A padronização também fornece outros benefícios. Os administradores podem usar as ferramentas desenvolvidas para manipular armazenamentos isolados para configurar espaço de armazenamento de arquivos, definir políticas de segurança e excluir dados não utilizados. Com armazenamentos isolados, seu código não precisa mais de caminhos exclusivos para especificar locais seguros na sistema de arquivos e os dados são protegidos de outros aplicativos que só têm acesso a armazenamentos isolados. Informações embutidas em código que indicam onde a área de armazenamento de um aplicativo se encontra são desnecessárias.  
+<a name="top"></a> Para aplicativos [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)], o armazenamento isolado é um mecanismo de armazenamento de dados que proporciona isolamento e segurança ao definir formas padronizadas de associar código a dados salvos. A padronização também fornece outros benefícios. Os administradores podem usar as ferramentas desenvolvidas para manipular armazenamentos isolados para configurar espaço de armazenamento de arquivos, definir políticas de segurança e excluir dados não utilizados. Com armazenamentos isolados, seu código não precisa mais de caminhos exclusivos para especificar locais seguros na sistema de arquivos e os dados são protegidos de outros aplicativos que só têm acesso a armazenamentos isolados. Informações embutidas em código que indicam onde a área de armazenamento de um aplicativo se encontra são desnecessárias.  
   
 > [!IMPORTANT]
->  O armazenamento isolado não está disponível para aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Em vez disso, use as classes de dados de aplicativos nos namespaces `Windows.Storage` incluídos na API [!INCLUDE[wrt](../../../includes/wrt-md.md)] para armazenar dados e arquivos locais. Para saber mais, confira [Dados de aplicativo](http://go.microsoft.com/fwlink/?LinkId=229175) no Centro de Desenvolvimento do Windows.  
+>  O armazenamento isolado não está disponível para aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Em vez disso, use as classes de dados de aplicativos nos namespaces `Windows.Storage` incluídos na API [!INCLUDE[wrt](../../../includes/wrt-md.md)] para armazenar dados e arquivos locais. Para saber mais, confira [Dados de aplicativo](/previous-versions/windows/apps/hh464917(v=win.10)) no Centro de Desenvolvimento do Windows.  
   
  Esse tópico contém as seguintes seções:  
   
--   [Repositórios e compartimentos de dados](#data_compartments_and_stores)  
+-   [Compartimentos e repositórios de dados](#data_compartments_and_stores)  
   
 -   [Cotas de armazenamento isolado](#quotas)  
   
@@ -50,11 +53,11 @@ ms.lasthandoff: 10/18/2017
   
 -   [Uso permitido e riscos de segurança](#allowed_usage)  
   
--   [Locais de armazenamento isolado](#isolated_storage_locations)  
+-   [Locais de armazenamento isolados](#isolated_storage_locations)  
   
--   [Criar, enumerar e excluir o armazenamento isolado](#isolated_storage_tasks)  
+-   [Criar, enumerar e excluir armazenamento isolado](#isolated_storage_tasks)  
   
--   [Cenários para o armazenamento isolado](#scenarios_for_isolated_storage)  
+-   [Cenários para armazenamento isolado](#scenarios_for_isolated_storage)  
   
 -   [Tópicos relacionados](#related_topics)  
   
@@ -116,10 +119,10 @@ ms.lasthandoff: 10/18/2017
   
 |Sistema operacional|Localização no sistema de arquivos|  
 |----------------------|-----------------------------|  
-|Windows 2000, Windows XP, Windows Server 2003 (atualização do Windows NT 4.0)|Repositórios com suporte a uso móvel =<br /><br /> \<SYSTEMROOT > \Profiles\\< usuário\>\Application dados<br /><br /> Repositórios não móveis =<br /><br /> \<SYSTEMROOT > \Profiles\\< usuário\>\Local dados|  
-|Windows 2000 – Instalação limpa (e atualizações do Windows 98 e Windows NT 3.51)|Repositórios com suporte a uso móvel =<br /><br /> \<SYSTEMDRIVE > \Documents and Settings\\< usuário\>\Application dados<br /><br /> Repositórios não móveis =<br /><br /> \<SYSTEMDRIVE > \Documents and Settings\\< usuário\>\Local dados|  
-|Windows XP, Windows Server 2003 – Instalação limpa (e atualizações do Windows 2000 e Windows 98)|Repositórios com suporte a uso móvel =<br /><br /> \<SYSTEMDRIVE > \Documents and Settings\\< usuário\>\Application dados<br /><br /> Repositórios não móveis =<br /><br /> \<SYSTEMDRIVE > \Documents and Settings\\< usuário\>\Local dados|  
-|[!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7, Windows Server 2008, Windows Vista|Repositórios com suporte a uso móvel =<br /><br /> \<SYSTEMDRIVE > \Users\\< usuário\>\appdata\roaming.<br /><br /> Repositórios não móveis =<br /><br /> \<SYSTEMDRIVE > \Users\\< usuário\>\AppData\Local|  
+|Windows 2000, Windows XP, Windows Server 2003 (atualização do Windows NT 4.0)|Repositórios com suporte a uso móvel =<br /><br /> \<SYSTEMROOT>\Perfis\\<usuário\>\Application Data<br /><br /> Repositórios não móveis =<br /><br /> \<SYSTEMROOT>\Perfis\\<usuário\>\Configurações Locais\Application Data|  
+|Windows 2000 – Instalação limpa (e atualizações do Windows 98 e Windows NT 3.51)|Repositórios com suporte a uso móvel =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<usuário\>\Application Data<br /><br /> Repositórios não móveis =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<usuário\>\Configurações Locais\Application Data|  
+|Windows XP, Windows Server 2003 – Instalação limpa (e atualizações do Windows 2000 e Windows 98)|Repositórios com suporte a uso móvel =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<usuário\>\Application Data<br /><br /> Repositórios não móveis =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<usuário\>\Configurações Locais\Application Data|  
+|[!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7, Windows Server 2008, Windows Vista|Repositórios com suporte a uso móvel =<br /><br /> \<SYSTEMDRIVE>\Users\\<usuário\>\AppData\Roaming<br /><br /> Repositórios não móveis =<br /><br /> \<SYSTEMDRIVE>\Users\\<usuário\>\AppData\Local|  
   
   
 <a name="isolated_storage_tasks"></a>   
@@ -134,7 +137,7 @@ ms.lasthandoff: 10/18/2017
   
  As classes de armazenamento isolado permitem que você crie, enumere e exclua o armazenamento isolado. Os métodos para a execução dessas tarefas estão disponíveis através do objeto <xref:System.IO.IsolatedStorage.IsolatedStorageFile>. Algumas operações exigem que você tenha a permissão <xref:System.Security.Permissions.IsolatedStorageFilePermission> que representa o direito para administrar o armazenamento isolado; você também pode precisar ter direitos do sistema operacional para acessar o arquivo ou diretório.  
   
- Para uma série de exemplos que demonstram as tarefas comuns de armazenamento isolado, consulte os tópicos de instruções listados na [tópicos relacionados](#related_topics).  
+ Para uma série de exemplos que demonstram tarefas de armazenamento isoladas comuns, confira os tópicos listados em [Tópicos relacionados](#related_topics).  
   
   
 <a name="scenarios_for_isolated_storage"></a>   
@@ -145,7 +148,7 @@ ms.lasthandoff: 10/18/2017
   
 -   Armazenamento de componentes compartilhado. Componentes que são compartilhados entre aplicativos podem usar o armazenamento isolado para fornecer acesso controlado a repositórios de dados.  
   
--   Armazenamento de servidor. Aplicativos de servidor podem usar o armazenamento isolado para fornecer armazenamento individual para um grande número de usuários que estão realizando solicitações ao aplicativo. Pelo fato do armazenamento isolado ser sempre segredado por usuário, o servidor deve personificar o usuário que fez a solicitação. Nesse caso, os dados são isolados com base na identidade da entidade de segurança, que é a mesma identidade que o aplicativo usa para fazer a distinção entre os seus usuários.  
+-   Armazenamento de servidor. Aplicativos de servidor podem usar o armazenamento isolado para fornecer armazenamento individual para um grande número de usuários que estão realizando solicitações ao aplicativo. Pelo fato do armazenamento isolado ser sempre segredado por usuário, o servidor deve personificar o usuário que fez a solicitação. Nesse caso, os dados são isolados com base na identidade do principal, que é a mesma identidade que o aplicativo usa para fazer a distinção entre os seus usuários.  
   
 -   Roaming. Os aplicativos também podem usar o armazenamento isolado com perfis de usuários móveis. Isso permite que repositórios isolados de um usuário façam roaming com o perfil.  
   

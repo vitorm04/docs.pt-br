@@ -17,32 +17,35 @@ helpviewer_keywords:
 - .NET Framework regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a884e70f542c2ed7ff63e39cb7eadedf0ef7b4d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2ec92933bdf123412a3d489fc493d76c4a0dc0d0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Construtores de referência inversa em expressões regulares
 As referências inversas fornecem uma maneira conveniente de identificar um caractere ou subcadeia de caracteres repetida em uma cadeia de caracteres. Por exemplo, se a cadeia de caracteres de entrada contiver várias ocorrências de uma subcadeia de caracteres arbitrária, você poderá corresponder a primeira ocorrência a um grupo de captura e, em seguida, usar uma referência inversa para corresponder às ocorrências subsequentes da subcadeia de caracteres.  
   
 > [!NOTE]
->  Uma sintaxe separada é usada para se referir a grupos de captura nomeados e numerados em cadeias de caracteres de substituição. Para obter mais informações, consulte [substituições](substitutions-in-regular-expressions.md).  
+>  Uma sintaxe separada é usada para se referir a grupos de captura nomeados e numerados em cadeias de caracteres de substituição. Para saber mais, confira [Substituições](substitutions-in-regular-expressions.md).  
   
- O .NET define elementos de linguagem separados para se referir a grupos de captura nomeados e numerados. Para obter mais informações sobre grupos de captura, consulte [construções de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ O .NET define elementos de linguagem separados para se referir a grupos de captura nomeados e numerados. Para saber mais sobre captura de grupos, confira [Constructos de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
 ## <a name="numbered-backreferences"></a>Referências inversas numeradas  
  Uma referência inversa numerada usa a seguinte sintaxe:  
   
- `\`*número*  
+ `\` *number*  
   
- em que *number* é a posição ordinal do grupo de captura na expressão regular. Por exemplo, `\4` corresponde ao conteúdo do quarto grupo de captura. Se *número* não é definido no padrão de expressão regular, um erro de análise ocorre e o mecanismo de expressão regular gera um <xref:System.ArgumentException>. Por exemplo, a expressão regular `\b(\w+)\s\1` é válida porque `(\w+)` é o primeiro e único grupo de captura na expressão. Por outro lado, `\b(\w+)\s\2` é inválida e gera uma exceção de argumento porque não há nenhum grupo de captura com o número `\2`.  
+ em que *number* é a posição ordinal do grupo de captura na expressão regular. Por exemplo, `\4` corresponde ao conteúdo do quarto grupo de captura. Se *number* não for definido no padrão da expressão regular, ocorrerá um erro de análise e o mecanismo de expressões regulares gerará um <xref:System.ArgumentException>. Por exemplo, a expressão regular `\b(\w+)\s\1` é válida porque `(\w+)` é o primeiro e único grupo de captura na expressão. Por outro lado, `\b(\w+)\s\2` é inválida e gera uma exceção de argumento porque não há nenhum grupo de captura com o número `\2`.  
   
- Observe a ambiguidade entre códigos de escape octal (como `\16`) e `\` *número* referências inversas que usam a mesma notação. Essa ambiguidade é resolvida da seguinte maneira:  
+ Observe a ambiguidade entre códigos de escape octais (como `\16`) e as referências inversas `\`*number* que usam a mesma notação. Essa ambiguidade é resolvida da seguinte maneira:  
   
 -   As expressões `\1` a `\9` sempre são interpretadas como referências inversas e não como códigos octais.  
   
@@ -50,9 +53,9 @@ As referências inversas fornecem uma maneira conveniente de identificar um cara
   
 -   Expressões de `\10` e maiores serão consideradas referências inversas se houver uma referência inversa correspondente àquele número, caso contrário, elas serão interpretadas como códigos octais.  
   
--   Se uma expressão regular contém uma referência anterior para um número de grupo indefinido, ocorre um erro de análise e o mecanismo de expressão regular gera um <xref:System.ArgumentException>.  
+-   Se uma expressão regular contiver uma referência inversa para um número de grupo indefinido, ocorrerá um erro de análise e o mecanismo de expressões regulares gerará um <xref:System.ArgumentException>.  
   
- Se a ambiguidade for um problema, você pode usar o `\k<` *nome* `>` notação, que é ambíguo e não pode ser confundido com códigos de caracteres octal. Da mesma forma, os códigos hexadecimais como `\xdd` são não ambíguos e não podem ser confundidos com referências inversas.  
+ Se a ambiguidade for um problema, você poderá usar a notação `\k<`*name*`>`, que não é ambígua e não pode ser confundida com códigos de caracteres octais. Da mesma forma, os códigos hexadecimais como `\xdd` são não ambíguos e não podem ser confundidos com referências inversas.  
   
  O exemplo a seguir localiza caracteres de palavra duplicados em uma cadeia de caracteres. Ele define uma expressão regular, `(\w)\1`, que consiste nos elementos a seguir.  
   
@@ -67,20 +70,20 @@ As referências inversas fornecem uma maneira conveniente de identificar um cara
 ## <a name="named-backreferences"></a>Referências inversas nomeadas  
  Uma referência inversa nomeada é definida usando a sintaxe a seguir:  
   
- `\k<`*nome*`>`  
+ `\k<` *name* `>`  
   
  ou:  
   
- `\k'`*nome*`'`  
+ `\k'` *name* `'`  
   
- em que *name* é o nome de um grupo de captura definido no padrão da expressão regular. Se *nome* não é definido no padrão de expressão regular, um erro de análise ocorre e o mecanismo de expressão regular gera um <xref:System.ArgumentException>.  
+ em que *name* é o nome de um grupo de captura definido no padrão da expressão regular. Se *name* não for definido no padrão da expressão regular, ocorrerá um erro de análise e o mecanismo de expressões regulares gerará um <xref:System.ArgumentException>.  
   
  O exemplo a seguir localiza caracteres de palavra duplicados em uma cadeia de caracteres. Ele define uma expressão regular, `(?<char>\w)\k<char>`, que consiste nos elementos a seguir.  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|`(?<char>\w)`|Corresponder um caractere de palavra e atribuí-la a um grupo de captura nomeado `char`.|  
-|`\k<char>`|Corresponde o próximo caractere é o mesmo que o valor da `char` grupo de captura.|  
+|`(?<char>\w)`|Corresponde a um caractere de palavra e o atribui a um grupo de captura chamado `char`.|  
+|`\k<char>`|Corresponde ao próximo caractere que é o mesmo que o valor do grupo de captura `char`.|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference2.cs#2)]
  [!code-vb[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference2.vb#2)]  
@@ -97,15 +100,15 @@ As referências inversas fornecem uma maneira conveniente de identificar um cara
   
 |Padrão|Descrição|  
 |-------------|-----------------|  
-|`(?<1>a)`|Associar o caractere "a" e atribuir o resultado para o grupo de captura nomeado `1`.|  
-|`(?<1>\1b)*`|Ocorrência de correspondência 0 ou 1 do grupo denominado `1` juntamente com um "b" e atribui o resultado para o grupo de captura nomeado `1`.|  
+|`(?<1>a)`|Corresponde ao caractere "a" e atribui o resultado ao grupo de captura chamado `1`.|  
+|`(?<1>\1b)*`|Corresponde à ocorrência 0 ou 1 do grupo chamado `1` junto com "b" e atribui o resultado ao grupo de captura chamado `1`.|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference4.cs#4)]
  [!code-vb[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference4.vb#4)]  
   
  Comparando a expressão regular com a cadeia de caracteres de entrada ("aababb"), o mecanismo de expressões regulares realiza as seguintes operações:  
   
-1.  Ele começa no início da cadeia de caracteres e corresponde com êxito o “a” com a expressão `(?<1>a)`. O valor de `1` grupo agora é "a".  
+1.  Ele começa no início da cadeia de caracteres e corresponde com êxito o “a” com a expressão `(?<1>a)`. O valor do grupo `1` agora é "a".  
   
 2.  Ele avança para o segundo caractere e corresponde com êxito a cadeia de caracteres "ab" com a expressão `\1b`, ou "ab". Em seguida, atribui o resultado, "ab", a `\1`.  
   
@@ -113,7 +116,7 @@ As referências inversas fornecem uma maneira conveniente de identificar um cara
   
  Neste exemplo, `*` é um quantificador looping – ele é avaliado repetidamente até que o mecanismo de expressões regulares não corresponda ao padrão definido. Os quantificadores de looping não limpam definições de grupo.  
   
- Se um grupo não capturou nenhuma subcadeia de caracteres, uma referência inversa a esse grupo é indefinida e nunca corresponde. Isso é ilustrado pelo padrão de expressão regular `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b`, que é definida da seguinte maneira:  
+ Se um grupo não capturou nenhuma subcadeia de caracteres, uma referência inversa a esse grupo é indefinida e nunca corresponde. Isso é ilustrado pelo padrão de expressão regular `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b` que é definido da seguinte maneira:  
   
 |Padrão|Descrição|  
 |-------------|-----------------|  

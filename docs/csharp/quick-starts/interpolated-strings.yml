@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: Cadeias de caracteres interpoladas em C#
 metadata:
-  title: "Cadeias de caracteres interpoladas em C#. Saiba como construir uma cadeia de caracteres que inclui outros valores, como números ou datas."
+  title: "Tutorial interativo sobre cadeias de caracteres interpoladas – guias de início rápido de C#"
   description: "Neste tutorial, você usará o recurso de cadeia de caracteres interpolada do C# de forma interativa em seu navegador. Escreva o código em C# e veja os resultados da compilação e execução de seu código diretamente no navegador."
   audience: Developer
   ms.custom: mvc
@@ -11,11 +11,11 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection
   nextTutorialTitle: "Coleções em C#"
-  ms.openlocfilehash: f54d8e5e3703556b333155fd9541f9d7c7e7fd1b
-  ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+  ms.openlocfilehash: 56c7cf5f6ce0c5db27ba43eeaffd9eb2e08f8c8a
+  ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 01/20/2018
+  ms.lasthandoff: 02/01/2018
 items:
 - durationInMinutes: 2
   content: "Este guia de início rápido ensina como usar cadeias de caracteres interpoladas em C# para inserir valores em uma única cadeia de caracteres de saída de maneira interativa. Você usará seu navegador para escrever código em C# e poderá ver imediatamente os resultados da compilação e da execução de seu código. O início rápido contém uma série de lições que concatenam cadeias de caracteres, inserem valores em cadeias de caracteres e formatam esses valores de diferentes maneiras.\n"
@@ -31,4 +31,4 @@ items:
 - title: "Controlar a largura do campo e o alinhamento de expressões interpoladas"
   durationInMinutes: 6
   content: "Normalmente, quando a cadeia de caracteres retornada por uma expressão interpolada é incluída em uma cadeia de caracteres de resultado, ela não tem espaços à esquerda nem à direita. Especialmente para casos em que você esteja trabalhando com um conjunto de dados, as expressões interpoladas permitem que você especifique uma largura de campo e seu alinhamento. Para ver isso, execute o código a seguir.\n\n```csharp\n  var inventory = new Dictionary<string, int>();\n  inventory.Add(\"hammer, ball pein\", 18);\n  inventory.Add(\"hammer, cross pein\", 5);\n  inventory.Add(\"screwdriver, Phillips #2\", 14);\n\n  Console.WriteLine($\"Inventory on {DateTime.Now:d}\");\n  Console.WriteLine(\" \");\n  Console.WriteLine($\"{\"Item\",-25}    {\"Quantity\",10}\");\n  Console.WriteLine(\" \"); \n  foreach (var item in inventory)\n     Console.WriteLine($\"{item.Key,-25}     {item.Value,10}\");\n```\n\nOs nomes dos item são alinhados à esquerda e suas quantidades são alinhadas à direita. Você especifica o alinhamento adicionando uma vírgula (\",\") após a expressão e designando a largura do campo. Se a largura do campo for um número positivo, o campo será alinhado à direita:\n\n```text\n{expression, width}\n```\n\nSe a largura do campo for um número negativo, o campo será alinhado à esquerda:\n\n```text\n{expression, -width}\n```\nTente remover os sinais negativos das expressões interpoladas `{\"Item\",-25}` e `{item.Key,-25}` e execute o exemplo novamente. Desta vez, o nome do item é alinhado à direita.\n\nVocê pode combinar uma largura de campo e uma cadeia de caracteres de formato em uma única expressão interpolada. A largura do campo vem primeiro, seguida por dois-pontos e a cadeia de caracteres de formato. Teste o seguinte programa simples que exibe três cadeias de caracteres formatadas com larguras de campo definidas.\n\n```csharp\nConsole.WriteLine($\"{DateTime.Now,-20:d} Hour {DateTime.Now,-10:HH} {1063.342,15:N2} feet\");\n```\n\n> [!NOTE]\n> Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).\n"
-- content: "Você concluiu o guia de início rápido de cadeias de caracteres interpoladas. \n\nVocê pode continuar esses inícios rápidos em seu próprio ambiente de desenvolvimento local. Conheça os fundamentos do [desenvolvimento local](local-environment.md) e, em seguida, selecione um início rápido. Você pode experimentar este exercício, ir diretamente ao próximo início rápido ou começar novamente com o início rápido de [números em C#](numbers-in-csharp-local.md).\n\nVocê pode aprender mais sobre como trabalhar com cadeias de caracteres interpoladas no tópico [Cadeias de caracteres interpoladas](../language-reference/keywords/interpolated-strings.md) na referência do C#.\0"
+- content: "Você concluiu o guia de início rápido de cadeias de caracteres interpoladas. \n\nVocê pode continuar esses inícios rápidos em seu próprio ambiente de desenvolvimento local. Conheça os fundamentos do [desenvolvimento local](local-environment.md) e selecione um início rápido. Você pode experimentar este exercício, ir diretamente para o próximo início rápido ou começar novamente com o início rápido de [números em C#](numbers-in-csharp-local.md).\n\nVocê pode aprender mais sobre como trabalhar com cadeias de caracteres interpoladas no tópico [Cadeias de caracteres interpoladas](../language-reference/keywords/interpolated-strings.md) na referência do C#.\0"

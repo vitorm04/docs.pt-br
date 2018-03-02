@@ -19,45 +19,48 @@ helpviewer_keywords:
 - data stores, obtaining
 - data storage using isolated storage, obtaining stores
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: bb0b877aa0f4cee36bd1f8c1cea624cf9368fbaa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 61f183398c3f8c93ead965036e1edeb200dd8cb1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>Como obter repositórios para o armazenamento isolado
-Um armazenamento isolado expõe um sistema de arquivos virtual dentro de um compartimento de dados. O <xref:System.IO.IsolatedStorage.IsolatedStorageFile> classe fornece vários métodos para interagir com um armazenamento isolado. Para criar e recuperar os repositórios, <xref:System.IO.IsolatedStorage.IsolatedStorageFile> fornece três métodos estáticos:  
+Um repositório isolado expõe um sistema de arquivos virtual dentro de um compartimento de dados. A classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> fornece vários métodos para interagir com um repositório isolado. Para criar e recuperar repositórios, o <xref:System.IO.IsolatedStorage.IsolatedStorageFile> fornece três métodos estáticos:  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>Retorna o armazenamento é isolado por usuário e assembly.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> retorna o armazenamento que é isolado pelo usuário e pelo assembly.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A>Retorna o armazenamento é isolado por domínio e assembly.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> retorna o armazenamento que é isolado pelo domínio e pelo assembly.  
   
-     Ambos os métodos de recuperar um armazenamento que pertence ao código do qual eles são chamados.  
+     Os dois métodos recuperam um repositório que pertence ao código do qual eles são chamados.  
   
--   O método estático <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> retorna um armazenamento isolado que é especificado pela passagem de uma combinação de parâmetros de escopo.  
+-   O método estático <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> retorna um repositório isolado que é especificado passando uma combinação de parâmetros de escopo.  
   
- O código a seguir retorna um repositório que é isolado por usuário, o assembly e o domínio.  
+ O exemplo de código a seguir retorna um repositório que é isolado pelo usuário, pelo assembly e pelo domínio.  
   
  [!code-cpp[Conceptual.IsolatedStorage#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source6.cpp#6)]
  [!code-csharp[Conceptual.IsolatedStorage#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source6.cs#6)]
  [!code-vb[Conceptual.IsolatedStorage#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source6.vb#6)]  
   
- Você pode usar o <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> método para especificar que um armazenamento deve transitar com um perfil de usuário móvel. Para obter detalhes sobre como configurar isso, consulte [tipos de isolamento](../../../docs/standard/io/types-of-isolation.md).  
+ Você pode usar o método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> para especificar se um repositório deve ser usado com um perfil de usuário móvel. Para obter detalhes sobre como configurar isso, confira [Tipos de isolamento](../../../docs/standard/io/types-of-isolation.md).  
   
- Armazenamentos isolados obtidos em diferentes assemblies são, por padrão, os repositórios diferentes. Você pode acessar o armazenamento de um assembly diferente ou um domínio, passando o evidências de assembly ou domínio nos parâmetros do <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> método. Isso exige a permissão para acessar o armazenamento isolado por identidade do domínio de aplicativo. Para obter mais informações, consulte o <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> sobrecargas do método.  
+ Os repositórios isolados obtidos em diferentes assemblies são, por padrão, os repositórios diferentes. Você pode acessar o repositório de um assembly ou de um domínio diferente passando a evidência de assembly ou domínio nos parâmetros do método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>. Isso exige uma permissão para acessar o armazenamento isolado pela identidade do domínio do aplicativo. Para obter mais informações, confira as sobrecargas do método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>.  
   
- O <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A>, e <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> métodos retornam um <xref:System.IO.IsolatedStorage.IsolatedStorageFile> objeto. Para ajudá-lo a decidir qual tipo de isolamento é mais apropriado para sua situação, consulte [tipos de isolamento](../../../docs/standard/io/types-of-isolation.md). Quando você tiver um objeto de arquivo de armazenamento isolado, você pode usar os métodos de armazenamento isolado para ler, gravar, criar e excluir arquivos e diretórios.  
+ Os métodos <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> e <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> retornam um objeto <xref:System.IO.IsolatedStorage.IsolatedStorageFile>. Para ajudá-lo a decidir qual tipo de isolamento é mais apropriado para sua situação, confira [Tipos de isolamento](../../../docs/standard/io/types-of-isolation.md). Quando você tem um objeto de arquivo de armazenamento isolado, você pode usar os métodos de armazenamento isolado para ler, gravar, criar e excluir arquivos e diretórios.  
   
- Não há nenhum mecanismo que evita que o código passando um <xref:System.IO.IsolatedStorage.IsolatedStorageFile> objeto para o código que não tem acesso suficiente para obter o armazenamento em si. Identidades de domínio e assembly e permissões de armazenamento isolado são verificadas apenas quando uma referência a um <xref:System.IO.IsolatedStorage.IsolatedStorage> objeto é obtido, normalmente no <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A>, ou <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> método. Proteger referências a <xref:System.IO.IsolatedStorage.IsolatedStorageFile> objetos é, portanto, a responsabilidade do código que usa essas referências.  
+ Não há mecanismos que impeçam o código de passar um objeto <xref:System.IO.IsolatedStorage.IsolatedStorageFile> para o código que não tem acesso suficiente para obter o próprio repositório. As identidades de domínio e de assembly e as permissões de armazenamento isolado são verificadas apenas quando uma referência a um objeto <xref:System.IO.IsolatedStorage.IsolatedStorage> é obtida, normalmente no método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> ou <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>. Proteger referências a objetos <xref:System.IO.IsolatedStorage.IsolatedStorageFile> é, portanto, a responsabilidade do código que usa essas referências.  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir fornece um exemplo simples de uma classe obtendo um armazenamento que é isolado por usuário e assembly. O código pode ser alterado para recuperar um armazenamento que é isolado por usuário, domínio e assembly adicionando <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Domain?displayProperty=nameWithType> aos argumentos que o <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> passa de método.  
+ O código a seguir fornece um exemplo simples de uma classe obtendo um repositório que é isolado pelo usuário e pelo assembly. O código pode ser alterado para recuperar um repositório que é isolado pelo usuário, domínio e assembly adicionando <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Domain?displayProperty=nameWithType> aos argumentos que o método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> passa.  
   
- Depois de executar o código, você pode confirmar que um armazenamento foi criado digitando **StoreAdm /LIST** na linha de comando. Isso executará o [ferramenta de armazenamento isolado (Storeadm.exe)](../../../docs/framework/tools/storeadm-exe-isolated-storage-tool.md) e lista todos os armazenamentos isolados atualmente para o usuário.  
+ Depois de executar o código, você pode confirmar se um repositório foi criado digitando **StoreAdm /LIST** na linha de comando. Essa ação executa a [Ferramenta de armazenamento isolado (Storeadm.exe)](../../../docs/framework/tools/storeadm-exe-isolated-storage-tool.md) e lista todos os atuais repositórios isolados para o usuário.  
   
  [!code-cpp[Conceptual.IsolatedStorage#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source6.cpp#7)]
  [!code-csharp[Conceptual.IsolatedStorage#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source6.cs#7)]

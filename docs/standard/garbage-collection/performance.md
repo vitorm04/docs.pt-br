@@ -12,15 +12,18 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 13f89749a4df3496b8c169e67c2f221a940568bf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e1cf3475ded3582cdf0754e68d13c97bd87b06a8
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="garbage-collection-and-performance"></a>Coleta de lixo e desempenho
 <a name="top"></a> Este tópico descreve problemas relacionados ao uso de memória e coleta de lixo. Ele aborda problemas relacionados a heap gerenciado e explica como minimizar o efeito da coleta de lixo em seus aplicativos. Cada problema tem links para procedimentos que podem ser usados para investigar problemas.  
@@ -45,7 +48,7 @@ ms.lasthandoff: 10/18/2017
   
 <a name="sos"></a>   
 ### <a name="debugging-with-sos"></a>Depuração com SOS  
- Você pode usar o [Depurador do Windows (WinDbg)](http://go.microsoft.com/fwlink/?LinkId=186482) para inspecionar objetos no heap gerenciado.  
+ Você pode usar o [Depurador do Windows (WinDbg)](/windows-hardware/drivers/debugger/index) para inspecionar objetos no heap gerenciado.  
   
  Para instalar o WinDbg, instale as Ferramentas de Depuração para Windows do [site WDK e Ferramentas de Desenvolvedor](http://go.microsoft.com/fwlink/?LinkID=103787).  
   
@@ -92,7 +95,7 @@ ms.lasthandoff: 10/18/2017
   
 <a name="Issue_OOM"></a>   
 ### <a name="issue-an-out-of-memory-exception-is-thrown"></a>Problema: uma exceção de falta de memória é lançada  
- Há dois casos legítimos para um gerenciado <xref:System.OutOfMemoryException> seja lançada:  
+ Há dois casos legítimos para um <xref:System.OutOfMemoryException> gerenciado ser lançado:  
   
 -   Falta de memória virtual.  
   
@@ -289,7 +292,7 @@ ms.lasthandoff: 10/18/2017
   
      **!pe**  
   
-     Se a exceção for gerenciada, <xref:System.OutOfMemoryException> é exibido como o tipo de exceção, conforme mostrado no exemplo a seguir.  
+     Se a exceção for gerenciada, <xref:System.OutOfMemoryException> será exibido como o tipo de exceção, conforme mostrado no exemplo a seguir.  
   
     ```  
     Exception object: 39594518  
@@ -450,7 +453,7 @@ ms.lasthandoff: 10/18/2017
     …  
     ```  
   
-     Para uma ID, usar um número inteiro em vez de uma cadeia de caracteres pode ser mais eficiente. Se a mesma cadeia de caracteres está sendo repetida milhares de vezes, considere a centralização da cadeia de caracteres. Para obter mais informações sobre a cadeia de caracteres como internos, consulte o tópico de referência para o <xref:System.String.Intern%2A?displayProperty=nameWithType> método.  
+     Para uma ID, usar um número inteiro em vez de uma cadeia de caracteres pode ser mais eficiente. Se a mesma cadeia de caracteres está sendo repetida milhares de vezes, considere a centralização da cadeia de caracteres. Confira mais informações sobre a centralização da cadeia de caracteres no tópico de referência para o método <xref:System.String.Intern%2A?displayProperty=nameWithType>.  
   
 <a name="ObjRef"></a>   
 ##### <a name="to-determine-references-to-objects"></a>Para determinar referências a objetos  
@@ -496,7 +499,7 @@ ms.lasthandoff: 10/18/2017
     GC.Collect();  
     ```  
   
-     Se o teste resolve o problema, isso significa que o coletor de lixo não estava recuperando objetos, pois os finalizadores desses objetos tinham sido suspensos. O <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> método permite que os finalizadores concluir suas tarefas e corrige o problema.  
+     Se o teste resolve o problema, isso significa que o coletor de lixo não estava recuperando objetos, pois os finalizadores desses objetos tinham sido suspensos. O método <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> permite que os finalizadores concluam suas tarefas e corrige o problema.  
   
 <a name="Finalize"></a>   
 ##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>Para determinar se há objetos aguardando a finalização  

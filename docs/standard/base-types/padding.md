@@ -1,5 +1,5 @@
 ---
-title: Preenchendo cadeias de caracteres no .NET
+title: Como preencher cadeias de caracteres no .NET
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -19,18 +19,21 @@ helpviewer_keywords:
 - PadLeft method
 - padding strings
 ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 29cd40645cf06ac9babb4738259938a3da04a155
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ea903c1f950e7c226e043c1fa7276a66126b2512
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="padding-strings-in-net"></a>Preenchendo cadeias de caracteres no .NET
-Use um dos seguintes <xref:System.String> métodos para criar uma nova cadeia de caracteres que consiste em uma cadeia de caracteres original que é preenchida com à esquerda ou à direita de caracteres para um tamanho total especificado. O caractere de preenchimento pode ser espaços ou um caractere especificado e, consequentemente, parece estar alinhado à direita ou à esquerda.  
+# <a name="padding-strings-in-net"></a>Como preencher cadeias de caracteres no .NET
+Use um dos métodos <xref:System.String> a seguir para criar uma nova cadeia de caracteres que consista em uma cadeia de caracteres original preenchida com caracteres à esquerda ou à direita até um comprimento total especificado. O caractere de preenchimento pode ser espaços ou um caractere especificado e, consequentemente, parece estar alinhado à direita ou à esquerda.  
   
 |Nome do método|Use|  
 |-----------------|---------|  
@@ -38,18 +41,18 @@ Use um dos seguintes <xref:System.String> métodos para criar uma nova cadeia de
 |<xref:System.String.PadRight%2A?displayProperty=nameWithType>|Acrescenta uma cadeia de caracteres com caracteres à direita até um comprimento total especificado.|  
   
 ## <a name="padleft"></a>PadLeft  
- O <xref:System.String.PadLeft%2A?displayProperty=nameWithType> método cria uma nova cadeia de caracteres concatenando caracteres suficientes preenchimento à esquerda para uma cadeia de caracteres original para atingir um tamanho total especificado. O <xref:System.String.PadLeft%28System.Int32%29?displayProperty=nameWithType> método usa o espaço em branco como o caractere de preenchimento e o <xref:System.String.PadLeft%28System.Int32%2CSystem.Char%29?displayProperty=nameWithType> método permite que você especifique seus próprios caracteres de preenchimento.  
+ O método <xref:System.String.PadLeft%2A?displayProperty=nameWithType> cria uma nova cadeia de caracteres concatenando caracteres de preenchimento à esquerda suficientes para uma cadeia de caracteres original atingir um comprimento total especificado. O método <xref:System.String.PadLeft%28System.Int32%29?displayProperty=nameWithType> usa o espaço em branco como o caractere de preenchimento, e o método <xref:System.String.PadLeft%28System.Int32%2CSystem.Char%29?displayProperty=nameWithType> permite que você especifique seus próprios caracteres de preenchimento.  
   
- O seguinte exemplo de código usa o <xref:System.String.PadLeft%2A> método para criar uma nova cadeia de caracteres que tem vinte caracteres. O exemplo exibe “`--------Hello World!`” no console.  
+ O exemplo de código a seguir usa o método <xref:System.String.PadLeft%2A> para criar uma nova cadeia de caracteres com vinte caracteres de comprimento. O exemplo exibe “`--------Hello World!`” no console.  
   
  [!code-cpp[Conceptual.String.BasicOps#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/padding.cpp#3)]
  [!code-csharp[Conceptual.String.BasicOps#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/padding.cs#3)]
  [!code-vb[Conceptual.String.BasicOps#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/padding.vb#3)]  
   
 ## <a name="padright"></a>PadRight  
- O <xref:System.String.PadRight%2A?displayProperty=nameWithType> método cria uma nova cadeia de caracteres concatenando caracteres de preenchimento suficientes para uma cadeia de caracteres original para atingir um tamanho total especificado. O <xref:System.String.PadRight%28System.Int32%29?displayProperty=nameWithType> método usa o espaço em branco como o caractere de preenchimento e o <xref:System.String.PadRight%28System.Int32%2CSystem.Char%29?displayProperty=nameWithType> método permite que você especifique seus próprios caracteres de preenchimento.  
+ O método <xref:System.String.PadRight%2A?displayProperty=nameWithType> cria uma nova cadeia de caracteres concatenando caracteres de preenchimento à esquerda suficientes para uma cadeia de caracteres original atingir um comprimento total especificado. O método <xref:System.String.PadRight%28System.Int32%29?displayProperty=nameWithType> usa o espaço em branco como o caractere de preenchimento, e o método <xref:System.String.PadRight%28System.Int32%2CSystem.Char%29?displayProperty=nameWithType> permite que você especifique seus próprios caracteres de preenchimento.  
   
- O seguinte exemplo de código usa o <xref:System.String.PadRight%2A> método para criar uma nova cadeia de caracteres que tem vinte caracteres. O exemplo exibe “`Hello World!--------`” no console.  
+ O exemplo de código a seguir usa o método <xref:System.String.PadRight%2A> para criar uma nova cadeia de caracteres com vinte caracteres de comprimento. O exemplo exibe “`Hello World!--------`” no console.  
   
  [!code-cpp[Conceptual.String.BasicOps#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/padding.cpp#4)]
  [!code-csharp[Conceptual.String.BasicOps#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/padding.cs#4)]

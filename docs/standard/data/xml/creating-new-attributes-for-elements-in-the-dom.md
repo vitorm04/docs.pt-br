@@ -12,24 +12,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6970ffc38e900c9b47c58c8ae4b81b9551f5589b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4f3ae0c3db65fe7bda1bcc5bd247fea80a2a9c4e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>Criando novos atributos para elementos no DOM
-Criar novos atributos é diferente de criar outros tipos de nó, porque os atributos não são nós, mas são propriedades de um nó de elemento e estão contidos em um **XmlAttributeCollection** associada ao elemento. Há várias maneiras de criar um atributo e anexá-lo a um elemento:  
+Criar novos atributos é diferente de criar outros tipos de nó, pois os atributos não são nós, mas propriedades de um nó de elemento e estão contidos em um **XmlAttributeCollection** associado ao elemento. Há várias maneiras de criar um atributo e anexá-lo a um elemento:  
   
--   Obter o nó de elemento e use **SetAttribute** para adicionar um atributo à coleção de atributos desse elemento.  
+-   Obter o nó de elemento e usar **SetAttribute** para adicionar um atributo à coleção de atributos do elemento.  
   
--   Criar um **XmlAttribute** nó usando o **CreateAttribute** método, obter o nó de elemento, em seguida, usar **SetAttributeNode** para adicionar o nó para a coleção de atributos que elemento.  
+-   Criar um nó **XmlAttribute** usando o método **CreateAttribute**, obter o nó do elemento e usar **SetAttributeNode** para adicionar o nó à coleção de atributos desse elemento.  
   
- O exemplo a seguir mostra como adicionar um atributo a um elemento usando o **SetAttribute** método.  
+ O exemplo a seguir mostra como adicionar um atributo a um elemento usando o método **SetAttribute**.  
   
 ```vb  
 Imports System  
@@ -79,7 +82,7 @@ public class Sample
   }  
 ```  
   
- O exemplo a seguir mostra um novo atributo que está sendo criado usando o **CreateAttribute** método. Mostra o atributo adicionado à coleção de atributos, em seguida, o **catálogo** elemento usando o **SetAttributeNode** método.  
+ O exemplo a seguir mostra um novo atributo criado usando o método **CreateAttribute**. Em seguida, ele mostra o atributo adicionado à coleção de atributos do elemento **book** usando o método **SetAttributeNode**.  
   
  Com o seguinte XML:  
   
@@ -121,15 +124,15 @@ doc.DocumentElement.SetAttributeNode(attr);
   
  O exemplo de código completo pode ser encontrado em <xref:System.Xml.XmlDocument.CreateAttribute%2A>.  
   
- Você também pode criar um **XmlAttribute** nó e use o **InsertBefore** ou **InsertAfter** métodos para colocá-lo na posição apropriada na coleção. Se um atributo com o mesmo nome já está presente na coleção de atributos, existente **XmlAttribute** nó for removido da coleção e o novo **XmlAttribute** nó é inserido. Isso executa da mesma forma que o **SetAttribute** método. Esses métodos tomar, como um parâmetro, um nó existente como um ponto de referência para fazer o **InsertBefore** e **InsertAfter**. Se você não fornecer um nó de referência que indica onde inserir o novo nó, o padrão para o **InsertAfter** método é inserir o novo nó no início da coleção. A posição padrão para o **InsertBefore**, se nenhum nó de referência for fornecido, o final da coleção.  
+ Você também pode criar um nó **XmlAttribute** e usar o método **InsertBefore** ou **InsertAfter** para colocá-lo na posição apropriada na coleção. Se um atributo com o mesmo nome já estiver presente na coleção de atributos, o nó **XmlAttribute** existente será removido da coleção, e o novo nó **XmlAttribute** será inserido. Isso é executado da mesma forma que o método **SetAttribute**. Esses métodos usam, como parâmetro, um nó existente como um ponto de referência para fazer **InsertBefore** e **InsertAfter**. Se você não fornecer um nó de referência indicando onde inserir o novo nó, o padrão para o método **InsertAfter** será inserir o novo nó no início da coleção. A posição padrão de **InsertBefore**, se nenhum nó de referência for fornecido, será no final da coleção.  
   
- Se você tiver criado um **XmlNamedNodeMap** de atributos, você pode adicionar um atributo por nome usando o <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>. Para obter mais informações, consulte [coleções de nó em NamedNodeMaps e em NodeLists](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md).  
+ Se você criou um **XmlNamedNodeMap** de atributos, poderá adicionar um atributo pelo nome usando <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>. Para saber mais, confira [Coleções de nó em NamedNodeMaps e em NodeLists](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md).  
   
 ## <a name="default-attributes"></a>Atributos padrão  
  Se você criar um elemento que está declarado para ter um atributo padrão, um novo atributo padrão com seu valor padrão será criado pelo DOM (Document Object Model) XML e anexado ao elemento. Os nós filhos do atributo padrão também são criados neste momento.  
   
 ## <a name="attribute-child-nodes"></a>Nós filhos do atributo  
- O valor de um nó de atributo se torna os seus nós filhos. Há apenas dois tipos de nós filho válido: **XmlText** nós, e **XmlEntityReference** nós. Esses são nós filho no sentido de que os métodos como **FirstChild** e **LastChild** processá-los como nós filho. Essa distinção de um atributo que possui nós filhos é importante ao tentar remover atributos ou nós filhos do atributo. Para obter mais informações, consulte [remover atributos de um nó de elemento no DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).  
+ O valor de um nó de atributo se torna os seus nós filhos. Há apenas dois tipos de nós filhos válidos: nós **XmlText** e nós **XmlEntityReference**. Esses são nós filhos no sentido de que métodos como **FirstChild** e **LastChild** os processam como nós filhos. Essa distinção de um atributo que possui nós filhos é importante ao tentar remover atributos ou nós filhos do atributo. Para saber mais, confira [Removendo atributos de um nó de elemento no DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

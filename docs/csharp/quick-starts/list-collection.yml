@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: "Coleções em C#"
 metadata:
-  title: "Coleções em C#. Aprenda a usar sequências e coleções em C#."
+  title: "Tutorial interativo sobre coleções – guias de início rápido do C#"
   description: "Neste tutorial, você usará seu navegador para aprender C# interativamente. Escreva o código em C# e veja os resultados da compilação e execução de seu código diretamente no navegador."
   audience: Developer
   ms.topic: get-started-article
@@ -11,14 +11,14 @@ metadata:
   interactive: csharp
   ms.prod: .net
   ms.technology: devlang-csharp
-  ms.openlocfilehash: 57cdf4e5c82c0e50de5422051df251db8ddb5d83
-  ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+  ms.openlocfilehash: 483b403b35eef4405b1c7debc52678aef19cb9b6
+  ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 01/20/2018
+  ms.lasthandoff: 02/01/2018
 items:
 - durationInMinutes: 1
-  content: "Este início rápido ensina C# de forma interativa, usando seu navegador para escrever código em C# e ver os resultados da compilação e da execução de seu código. Ele contém uma série de lições que criam, modificam e exploram coleções e matrizes.\n"
+  content: "Este início rápido ensina C# de forma interativa, usando o navegador para escrever código em C# e ver os resultados da compilação e da execução do código. Ele contém uma série de lições que criam, modificam e exploram coleções e matrizes.\n"
 - title: Criar listas
   durationInMinutes: 2
   content: "Execute o seguinte código na janela interativa. Para fazer isso, digite o bloco de código a seguir na janela interativa (substitua \"<name>\" pelo seu nome) e clique no botão **Executar**:\n\n```csharp\nvar names = new List<string> { \"<name>\", \"Ana\", \"Felipe\" };\nforeach (var name in names)\n{\n  Console.WriteLine($\"Hello {name.ToUpper()}!\");\n}\n```\n\nVocê criou uma lista de cadeias de caracteres, adicionou três nomes a essa lista e imprimiu os nomes em MAIÚSCULAS. Você está usando conceitos que aprendeu em inícios rápidos anteriores para executar um loop pela lista.\n\nO código para exibir nomes usa **cadeias de caracteres interpoladas**.  Quando você precede um `string` com o caractere `$`, pode inserir o código C# na declaração da cadeia de caracteres. A cadeia de caracteres real substitui esse código C# pelo valor gerado. Neste exemplo, ela substitui o `{name.ToUpper()}` por cada nome, convertido em letras maiúsculas, pois você chamou o método <xref:System.String.ToUpper%2A>.\n\nVamos continuar explorando.\n\n> [!NOTE]\n> Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).\n"
@@ -37,4 +37,4 @@ items:
 - title: "Desafio concluído"
   durationInMinutes: 3
   content: "Você conseguiu algo semelhante a isto?\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nCom cada iteração do loop, você está pegando os últimos dois inteiros na lista, somando-os e adicionando esse valor à lista. O loop será repetido até que você tenha adicionado 20 itens à lista.\n\n> [!NOTE]\n> Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).\n"
-- content: "Você concluiu o início rápido da lista. Este início rápido é o último início rápido interativo. Você pode continuar esses inícios rápidos em seu próprio ambiente de desenvolvimento. Conheça os fundamentos do [desenvolvimento local](local-environment.md) e, em seguida, selecione um início rápido. Você pode experimentar este exercício, ir diretamente ao próximo início rápido ou começar novamente no início rápido de [números em C#](numbers-in-csharp-local.md).\n\nSaiba mais sobre como trabalhar com o tipo `List` no tópico [Guia de .NET](../../standard/index.md) em [coleções](../../standard/collections/index.md). Você também aprenderá muitos outros tipos de coleção.\0"
+- content: "Você concluiu o início rápido da lista. Este início rápido é o último início rápido interativo. Você pode continuar esses inícios rápidos em seu próprio ambiente de desenvolvimento. Conheça os fundamentos do [desenvolvimento local](local-environment.md) e selecione um início rápido. Você pode experimentar este exercício, ir diretamente ao próximo início rápido ou começar novamente no início rápido de [números em C#](numbers-in-csharp-local.md).\n\nSaiba mais sobre como trabalhar com o tipo `List` no tópico [Guia de .NET](../../standard/index.md) em [coleções](../../standard/collections/index.md). Você também aprenderá muitos outros tipos de coleção.\0"

@@ -20,27 +20,30 @@ helpviewer_keywords:
 - stores, creating files and directories
 - storing data using isolated storage, creating files and directories
 ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8b8a48473bf9ac91b89657d00d27031255491353
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cf6295e7d58d03e7b4bf4e0a00cfc509d289e071
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>Como criar arquivos e diretórios no armazenamento isolado
-Depois de obter um armazenamento isolado, você pode criar pastas e arquivos para armazenar dados. Em um repositório, nomes de arquivo e diretório são especificados em relação à raiz do sistema de arquivos virtual.  
+Depois de obter um repositório isolado, você pode criar diretórios e arquivos para armazenar dados. Em um repositório, nomes de arquivo e diretório são especificados com relação à raiz do sistema de arquivos virtual.  
   
- Para criar um diretório, use o <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A?displayProperty=nameWithType> método de instância. Se você especificar um subdiretório de um diretório que não existe, ambos os diretórios serão criados. Se você especificar um diretório que já existe, o método retorna sem criar um diretório, e nenhuma exceção é lançada. No entanto, se você especificar um nome de diretório que contém caracteres inválidos, uma <xref:System.IO.IsolatedStorage.IsolatedStorageException> exceção será lançada.  
+ Para criar um diretório, use o método de instância <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A?displayProperty=nameWithType>. Se você especificar um subdiretório de um diretório que não existe, os dois diretórios serão criados. Se você especificar um diretório que já existe, o método retornará sem criar um diretório, e nenhuma exceção será lançada. No entanto, se você especificar um nome de diretório que contém caracteres inválidos, uma exceção <xref:System.IO.IsolatedStorage.IsolatedStorageException> será lançada.  
   
- Para criar um arquivo, use o <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateFile%2A?displayProperty=nameWithType> método.  
+ Para criar um arquivo, use o método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateFile%2A?displayProperty=nameWithType>.  
   
- No sistema operacional Windows, arquivo de armazenamento isolado e diretório nomes diferenciam maiusculas de minúsculas. Ou seja, se você criar um arquivo chamado `ThisFile.txt`e, em seguida, criar outro arquivo chamado `THISFILE.TXT`, somente um arquivo é criado. O nome do arquivo mantém seu capitalização original para fins de exibição.  
+ No sistema operacional Windows, nomes de arquivo de armazenamento isolado e de diretório diferenciam maiúsculas de minúsculas. Ou seja, se você criar um arquivo chamado `ThisFile.txt`, depois criar outro arquivo chamado `THISFILE.TXT`, somente um arquivo será criado. O nome do arquivo mantém sua capitalização original para fins de exibição.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir ilustra como criar arquivos e diretórios em um armazenamento isolado.  
+ O exemplo de código a seguir ilustra como criar arquivos e diretórios em um repositório isolado.  
   
  [!code-csharp[Conceptual.IsolatedStorage#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source.cs#1)]
  [!code-vb[Conceptual.IsolatedStorage#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source.vb#1)]  

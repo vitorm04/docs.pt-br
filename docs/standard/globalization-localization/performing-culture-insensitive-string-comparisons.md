@@ -19,15 +19,18 @@ helpviewer_keywords:
 - culture-insensitive string operations, comparisons
 - culture parameter
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 980b4ac515deaaedb1ab7e240e8f110a5fd0d51c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fa689a685a58868ccd34b8bcbc4a779b9f826473
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Executando comparações de cadeias de caracteres que não levam em conta a cultura
 Por padrão, o método <xref:System.String.Compare%2A?displayProperty=nameWithType> executa comparações sensíveis à cultura e com diferenciação de maiúsculas e minúsculas. Esse método também inclui várias sobrecargas que fornecem um parâmetro `culture` que permite especificar a cultura a ser usada e um parâmetro `comparisonType` que permite especificar as regras de comparação que serão usadas. Chamar esses métodos em vez da sobrecarga padrão remove qualquer ambiguidade sobre as regras usadas em uma chamada de método específico e a torna claro se uma comparação é sensível à cultura ou não.  
@@ -35,7 +38,7 @@ Por padrão, o método <xref:System.String.Compare%2A?displayProperty=nameWithTy
 > [!NOTE]
 >  Ambas as sobrecargas do método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> executam comparações sensíveis à cultura e comparações com diferenciação de maiúsculas e minúsculas. você não pode usar esse método para executar comparações insensíveis à cultura. Para fins de clareza de código, recomenda-se usar o método <xref:System.String.Compare%2A?displayProperty=nameWithType> em vez disso.  
   
- Para operações sensíveis à cultura, especifique o valor da enumeração <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> ou <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> como o parâmetro de `comparisonType`. Se você quiser realizar uma comparação sensíveis à cultura usando uma cultura designada, que não seja a cultura atual, especifique o <xref:System.Globalization.CultureInfo> objeto que representa essa cultura como o `culture` parâmetro.  
+ Para operações sensíveis à cultura, especifique o valor da enumeração <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> ou <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> como o parâmetro de `comparisonType`. Se você desejar executar uma comparação sensível à cultura usando uma cultura específica diferente da cultura atual, especifique o objeto <xref:System.Globalization.CultureInfo> que representa a cultura como o parâmetro `culture`.  
   
  As comparações de cadeias de caracteres insensíveis à cultura suportadas pelo método <xref:System.String.Compare%2A?displayProperty=nameWithType> são linguísticas (com base nas convenções de classificação de cultura invariável) ou não linguísticas (com base no valor ordinal dos caracteres na cadeia de caracteres). A maioria das comparações de cadeias de caracteres insensíveis cultura são não linguísticas. Para essas comparações, especifique o valor da enumeração <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> ou <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> como o parâmetro de `comparisonType`. Por exemplo, se uma decisão de segurança (como uma comparação de nome de usuário ou senha) baseia-se no resultado de uma comparação de cadeia de caracteres, a operação deve ser insensível à cultura e não linguística para garantir que o resultado não seja afetado pelas convenções de uma cultura ou de um idioma específico.  
   

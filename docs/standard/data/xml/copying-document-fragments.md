@@ -9,18 +9,21 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf424bbe-81b7-40d2-9978-9b727da94d80
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 22d6f70b3317b67255d51690a6c4e262e29d23f9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e90af026db0fc190b2c93e4c751de6600e8fd27a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="copying-document-fragments"></a>Copiando partes do documento
-Você pode criar um **XmlDocumentFragment** nó e, em seguida, adicionar nós sob ele. Quando o **XmlDocumentFragment** é inserida com o **InsertNode** método, o **XmlDocumentFragment** nó não é copiado, mas seus nós filho são inseridos no XML Modelo de objeto de documento (DOM).  
+Você pode criar um nó de **XmlDocumentFragment** e adicionar nós nele. Quando **XmlDocumentFragment** é inserido com o método **InsertNode**, o nó **XmlDocumentFragment** não é copiado, mas os nós filhos são inseridos no DOM (Modelo de Objeto do Documento) XML.  
   
 ## <a name="see-also"></a>Consulte também  
- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -30,30 +30,33 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 20b137e5df2fb6ebc62d0a64c1a93b53ded2e191
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 643a1c7d8dd141a8d898af61ba8302f46207321b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Conversão de tipos no .NET Framework
-<a name="top"></a>Cada valor possui um tipo associado, que define os atributos como a quantidade de espaço alocado para o valor, o intervalo de valores possíveis, que ele pode ter, e os membros que ele disponibiliza. Muitos valores podem ser expressos por mais de um tipo. Por exemplo, o valor 4 pode ser expresso como um número inteiro ou como um valor de ponto flutuante. A conversão de tipo cria um valor em um novo tipo que é equivalente ao valor de um tipo antigo, mas que não necessariamente preserva a identidade (ou o valor exato) do objeto original.  
+<a name="top"></a> Cada valor tem um tipo associado, o qual define atributos como a quantidade de espaço alocado para o valor, o intervalo de valores possíveis que ele pode assumir e os membros que ele disponibiliza. Muitos valores podem ser expressos por mais de um tipo. Por exemplo, o valor 4 pode ser expresso como um número inteiro ou como um valor de ponto flutuante. A conversão de tipo cria um valor em um novo tipo que é equivalente ao valor de um tipo antigo, mas que não necessariamente preserva a identidade (ou o valor exato) do objeto original.  
   
- O .NET Framework suporta automaticamente as conversões a seguir:  
+ O .NET Framework dá suporte automaticamente às seguintes conversões:  
   
--   Conversão de uma classe derivada em uma classe base. Isso significa, por exemplo, se uma instância de qualquer classe ou estrutura pode ser convertida em um <xref:System.Object> instância.  Essa conversão requer um operador de conversão ou não.  
+-   Conversão de uma classe derivada em uma classe base. Isso significa, por exemplo, que uma instância de qualquer classe ou estrutura pode ser convertida em uma instância de <xref:System.Object>.  Essa conversão não exige um operador de conversão.  
   
 -   Conversão de uma classe base para a classe derivada original. No C#, essa conversão exige um operador de conversão. No Visual Basic, ela exige o operador `CType` quando a `Option Strict` está ativada.  
   
--   Conversão de um tipo que implementa uma interface para um objeto de interface que representa essa interface. Essa conversão requer um operador de conversão ou não.  
+-   Conversão de um tipo que implementa uma interface para um objeto de interface que representa essa interface. Essa conversão não exige um operador de conversão.  
   
 -   Conversão de um objeto de interface de volta para o tipo original que implementa essa interface.  No C#, essa conversão exige um operador de conversão. No Visual Basic, ela exige o operador `CType` quando a `Option Strict` está ativada.  
   
- Além dessas conversões automática, o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornece vários recursos que oferecem suporte à conversão de tipo personalizado. Eles incluem o seguinte:  
+ Além dessas conversões automáticas, o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornece várias funcionalidades que oferecem suporte à conversão personalizada de tipo. Eles incluem o seguinte:  
   
 -   O operador `Implicit`, que define as conversões de ampliação disponíveis entre tipos. Para obter mais informações, consulte a seção [Conversão implícita com o operador implícito](#implicit_conversion_with_the_implicit_operator).  
   
@@ -61,7 +64,7 @@ ms.lasthandoff: 11/21/2017
   
 -   A interface <xref:System.IConvertible>, que define conversões para cada um dos tipos de dados base do .NET Framework. Para obter mais informações, consulte a seção [A interface IConvertible](#the_iconvertible_interface).  
   
--   A classe <xref:System.Convert>, que fornece um conjunto de métodos que implementam os métodos da interface <xref:System.IConvertible>. Para obter mais informações, consulte o[a classe converter](#Convert) seção.  
+-   A classe <xref:System.Convert>, que fornece um conjunto de métodos que implementam os métodos da interface <xref:System.IConvertible>. Para saber mais, confira a seção [A classe Convert](#Convert).  
   
 -   A classe <xref:System.ComponentModel.TypeConverter>, que é uma classe base que pode ser estendida para oferecer suporte à conversão de um tipo especificado para qualquer outro tipo. Para obter mais informações, consulte a seção [A classe TypeConverter](#the_typeconverter_class).  
   
@@ -104,7 +107,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType> é maior que <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
 |<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType> é maior que <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
   
- Para tratar essas conversões de redução, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] permite que os tipos definam um operador `Explicit`. Compiladores de idiomas individuais, em seguida, podem implementar esse operador usando seu próprios sintaxe, ou um membro do <xref:System.Convert> classe pode ser chamada para executar a conversão. (Para obter mais informações sobre a classe <xref:System.Convert>, consulte [A classe Convert](#Convert) mais adiante neste tópico.) O exemplo a seguir ilustra o uso de recursos de linguagem para lidar com a conversão explícita desses valores potencialmente fora do intervalo inteiro para <xref:System.Int32> valores.  
+ Para tratar essas conversões de redução, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] permite que os tipos definam um operador `Explicit`. Os compiladores de linguagens individuais podem então implementar esse operador que usa sua própria sintaxe, ou um membro da classe <xref:System.Convert> pode ser chamado para executar a conversão. (Para obter mais informações sobre a classe <xref:System.Convert>, consulte [A classe Convert](#Convert) mais adiante neste tópico.) O exemplo a seguir ilustra o uso das funcionalidades de linguagem para lidar com a conversão explícita destes valores inteiros que podem estar fora do intervalo em valores <xref:System.Int32>.  
   
  [!code-csharp[Conceptual.Conversion#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#4)]
  [!code-vb[Conceptual.Conversion#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#4)]  
@@ -114,7 +117,7 @@ ms.lasthandoff: 11/21/2017
  A maioria dos compiladores permite que as conversões explícitas sejam executadas de forma verificada ou não verificada. Quando uma conversão verificada é executada, uma <xref:System.OverflowException> é gerada quando o valor do tipo a ser convertido está fora do intervalo do tipo de destino. Quando uma conversão não verificada é executada nas mesmas condições, a conversão pode não gerar uma exceção, mas o comportamento exato se tornará indefinido e um valor incorreto poderá ser produzido.  
   
 > [!NOTE]
->  No C#, as conversões verificadas podem ser executadas usando a palavra-chave `checked` juntamente com um operador de conversão ou por meio da especificação da opção do compilador `/checked+`. Por outro lado, as conversões não verificadas podem ser executadas usando a palavra-chave `unchecked` juntamente com o operador de conversão ou especificando a opção do compilador `/checked-`. Por padrão, as conversões explícitas são do tipo não verificadas. No Visual Basic, marcada conversões que podem ser executadas desmarcando o **remover verificações de estouro de inteiro** caixa de seleção do projeto **configurações avançadas do compilador** caixa de diálogo, ou especificando o `/removeintchecks-`opção de compilador. Por outro lado, as conversões desmarcadas podem ser executadas selecionando o **remover verificações de estouro de inteiro** caixa de seleção do projeto **configurações avançadas do compilador** caixa de diálogo ou especificando o `/removeintchecks+`opção de compilador. Por padrão, as conversões explícitas são do tipo verificadas.  
+>  No C#, as conversões verificadas podem ser executadas usando a palavra-chave `checked` juntamente com um operador de conversão ou por meio da especificação da opção do compilador `/checked+`. Por outro lado, as conversões não verificadas podem ser executadas usando a palavra-chave `unchecked` juntamente com o operador de conversão ou especificando a opção do compilador `/checked-`. Por padrão, as conversões explícitas são do tipo não verificadas. No Visual Basic, as conversões verificadas podem ser executadas desmarcando-se a caixa de seleção **Remover Verificação de Estouro de Inteiro** na caixa de diálogo **Configurações Avançadas do Compilador** do projeto ou ao especificar a opção `/removeintchecks-` do compilador. Do mesmo modo, as conversões não verificadas podem ser executadas desmarcando-se a caixa de seleção **Remover Verificação de Estouro de Inteiro** na caixa de diálogo **Configurações Avançadas do Compilador** do projeto ou ao especificar a opção `/removeintchecks+` do compilador. Por padrão, as conversões explícitas são do tipo verificadas.  
   
  O exemplo em C# a seguir usa as palavras-chave `checked` e de `unchecked` para ilustrar a diferença no comportamento quando um valor fora do intervalo de <xref:System.Byte> é convertido em <xref:System.Byte>. A conversão verificada gera uma exceção, mas a conversão não verificada atribui <xref:System.Byte.MaxValue?displayProperty=nameWithType> à variável <xref:System.Byte>.  
   
@@ -176,7 +179,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.Conversion#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/convert1.cs#9)]
  [!code-vb[Conceptual.Conversion#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/convert1.vb#9)]  
   
- Para uma tabela que lista os de widening e narrowing conversões com suporte a <xref:System.Convert> de classe, consulte [tabelas de conversão de tipo](../../../docs/standard/base-types/conversion-tables.md).  
+ Para uma tabela que lista as conversões de ampliação e redução aceitas pela classe <xref:System.Convert>, confira [Tabelas de conversão de tipos](../../../docs/standard/base-types/conversion-tables.md).  
   
 <a name="ChangeType"></a>   
 ### <a name="custom-conversions-with-the-changetype-method"></a>Conversões personalizadas com o método ChangeType  

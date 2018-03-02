@@ -12,22 +12,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 09f89708607ada18181bc6605994c7908e1dd14b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c492d470fe29041f32039d98ecb854e18f40423c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xpathnavigator-in-transformations"></a>XPathNavigator nas transformações
 A classe de <xref:System.Xml.XPath.XPathNavigator> fornece de acesso aleatório somente leitura a dados e é criada para uso como uma entrada ao idioma extensível de folha de estilos para transformações (XSLT). É implementada em <xref:System.Xml.XPath.XPathDocument>, em <xref:System.Xml.XmlDataDocument>, e em <xref:System.Xml.XmlDocument>. <xref:System.Xml.XPath.XPathNavigator> é baseado no modelo de dados do World Wide Web Consortium (W3C) como descrito na seção 5 de recomendação de idioma do caminho de XML (XPath).  
   
  <xref:System.Xml.XPath.XPathNavigator> define um modelo de cursor sobre qualquer armazenamento e fornece consultas XPath rápidas, somente leitura sobre qualquer armazenamento de dados. <xref:System.Xml.XPath.XPathNavigator> também é a classe usar para iterar sobre partes da árvore de resultado.  
   
- API permite que você obtenha informações do nó atual no armazenamento e para mover a nós conectados. O <xref:System.Xml.XPath.XPathNavigator> é um modelo de estilo de cursor que executa a passagem por um repositório usando um conjunto de **mover** métodos. <xref:System.Xml.XPath.XPathNavigator> sempre é posicionado em um nó. Qualquer **mover** método falha deixa o <xref:System.Xml.XPath.XPathNavigator> inalterado.  
+ API permite que você obtenha informações do nó atual no armazenamento e para mover a nós conectados. O <xref:System.Xml.XPath.XPathNavigator> é um modelo de estilo do cursor que executa a passagem sobre um armazenamento usando um conjunto de métodos **Mover**. <xref:System.Xml.XPath.XPathNavigator> sempre é posicionado em um nó. Qualquer método **Mover** que falhar as folhas <xref:System.Xml.XPath.XPathNavigator> inalterado.  
   
  <xref:System.Xml.XPath.XPathNavigator> é a classe usar para iterar sobre partes da árvore de resultado. O exemplo de código a seguir cria um fragmento da árvore de resultado em uma folha de estilos chamar a função com o parâmetro, `fragment`, que contém XML.  
   
@@ -70,7 +73,7 @@ A classe de <xref:System.Xml.XPath.XPathNavigator> fornece de acesso aleatório 
 <root>Some text</root>  
 ```  
   
- O código a seguir usa o **test.xsl** folha de estilo e **test.xml** dados de entrada.  
+ O código a seguir usa os dados de folha de estilos de **test.xsl** e de entrada de **test.xml**.  
   
 ```vb  
 Imports System  
@@ -117,11 +120,11 @@ public class sample
 ```  
   
 ## <a name="output"></a>Saída  
- O resultado da transformação foi encontrado no arquivo **out.xml**:  
+ O efeito da transformação for encontrado no arquivo **out.xml**:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>Joe  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Classe XslTransform implementa do processador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+ [A classe XslTransform implementa o processador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

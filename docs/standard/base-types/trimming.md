@@ -1,5 +1,5 @@
 ---
-title: Cortando e removendo caracteres de cadeias de caracteres no .NET
+title: Como cortar e remover caracteres das cadeias de caracteres no .NET
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -21,17 +21,20 @@ helpviewer_keywords:
 - TrimStart method
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fde24a97234d275d3d599f13bfc4063af939507b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dac047c7efefcacb959401aedcb96080810f2278
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="trimming-and-removing-characters-from-strings-in-net"></a>Cortando e removendo caracteres de cadeias de caracteres no .NET
+# <a name="trimming-and-removing-characters-from-strings-in-net"></a>Como cortar e remover caracteres das cadeias de caracteres no .NET
 Se estiver analisando as palavras individuais de uma sentença, você poderá encontrar palavras com espaços em branco em ambas as extremidades da palavra. Nessa situação, você pode usar um dos métodos de corte na classe **System.String** para remover qualquer número de espaços ou de outros caracteres de uma posição especificada na cadeia de caracteres. A tabela a seguir descreve os métodos de corte disponíveis.  
   
 |Nome do método|Use|  
@@ -42,7 +45,7 @@ Se estiver analisando as palavras individuais de uma sentença, você poderá en
 |<xref:System.String.Remove%2A?displayProperty=nameWithType>|Remove um número especificado de caracteres de uma posição de índice especificada em uma cadeia de caracteres.|  
   
 ## <a name="trim"></a>Trim  
- Você pode facilmente remover espaços em branco de ambas as extremidades de uma cadeia de caracteres usando o <xref:System.String.Trim%2A?displayProperty=nameWithType> método, conforme mostrado no exemplo a seguir.  
+ Você pode remover espaços em branco com facilidade de ambas as extremidades de uma cadeia de caracteres usando o método <xref:System.String.Trim%2A?displayProperty=nameWithType>, conforme é mostrado no exemplo a seguir.  
   
  [!code-cpp[Conceptual.String.BasicOps#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#17)]
  [!code-csharp[Conceptual.String.BasicOps#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#17)]
@@ -56,7 +59,7 @@ Se estiver analisando as palavras individuais de uma sentença, você poderá en
 ## <a name="trimend"></a>TrimEnd  
  O método **String.TrimEnd** remove os caracteres do final de uma cadeia de caracteres, criando um novo objeto de cadeia de caracteres. Uma matriz de caracteres é passada para este método para especificar os caracteres a seres removidos. A ordem dos elementos na matriz de caracteres não afeta a operação de corte. O corte é interrompido quando um caractere não especificado na matriz é encontrado.  
   
- O exemplo a seguir remove as últimas letras de uma cadeia de caracteres usando o **TrimEnd** método. Neste exemplo, as posições do caractere `'r'` e do caractere `'W'` estão invertidas para ilustrar que a ordem dos caracteres na matriz não importa. Observe que este código remove a última palavra de `MyString` mais uma parte da primeira.  
+ O exemplo a seguir remove as últimas letras de uma cadeia de caracteres usando o método **TrimEnd**. Neste exemplo, as posições do caractere `'r'` e do caractere `'W'` estão invertidas para ilustrar que a ordem dos caracteres na matriz não importa. Observe que este código remove a última palavra de `MyString` mais uma parte da primeira.  
   
  [!code-cpp[Conceptual.String.BasicOps#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#18)]
  [!code-csharp[Conceptual.String.BasicOps#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#18)]
@@ -84,7 +87,7 @@ Se estiver analisando as palavras individuais de uma sentença, você poderá en
  Esse código exibe `World!` no console.  
   
 ## <a name="remove"></a>Remover  
- O <xref:System.String.Remove%2A?displayProperty=nameWithType> método Remove um número especificado de caracteres que começam com uma posição especificada em uma cadeia de caracteres existente. Este método assume um índice baseado em zero.  
+ O método <xref:System.String.Remove%2A?displayProperty=nameWithType> remove um número especificado de caracteres que começam em uma posição especificada em uma cadeia de caracteres existente. Este método assume um índice baseado em zero.  
   
  O exemplo a seguir remove dez caracteres de uma cadeia de caracteres começando na posição cinco de um índice baseado em zero da cadeia de caracteres.  
   
@@ -92,7 +95,7 @@ Se estiver analisando as palavras individuais de uma sentença, você poderá en
  [!code-csharp[Conceptual.String.BasicOps#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#21)]
  [!code-vb[Conceptual.String.BasicOps#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#21)]  
   
- Você também pode remover um caractere especificado ou uma subcadeia de caracteres de uma cadeia de caracteres chamando o <xref:System.String.Replace%28System.String%2CSystem.String%29?displayProperty=nameWithType> método e especificando uma cadeia de caracteres vazia (<xref:System.String.Empty?displayProperty=nameWithType>) como a substituição. O exemplo a seguir remove todas as vírgulas de uma cadeia de caracteres.  
+ Você também pode remover um caractere ou uma subcadeia de caracteres especificada de uma cadeia de caracteres chamando o método <xref:System.String.Replace%28System.String%2CSystem.String%29?displayProperty=nameWithType> e especificando uma cadeia de caracteres vazia (<xref:System.String.Empty?displayProperty=nameWithType>) como a substituição. O exemplo a seguir remove todas as vírgulas de uma cadeia de caracteres.  
   
  [!code-csharp[Conceptual.String.BasicOps#23](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/replace1.cs#23)]
  [!code-vb[Conceptual.String.BasicOps#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/replace1.vb#23)]  

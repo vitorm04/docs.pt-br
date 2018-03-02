@@ -13,21 +13,24 @@ helpviewer_keywords:
 - asynchronous programming, design patterns
 - asynchronous programming
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0b5f242b9586c4ea3b045daf8f10b84127b81085
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2a83d638255d27317ba5d566ab46b83526659365
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>Padrão assíncrono baseado em evento (EAP)
 Há várias maneiras de expor recursos assíncronos para o código cliente. O Padrão Assíncrono baseado em evento prescreve uma maneira de as classes apresentarem comportamento assíncrono.  
   
 > [!NOTE]
->  Começando com o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], a biblioteca paralela de tarefas fornece um novo modelo de programação assíncrona e paralela. Para obter mais informações, consulte [Programação paralela](../../../docs/standard/parallel-programming/index.md).  
+>  Começando com o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], a Biblioteca de Paralelismo de Tarefas fornece um novo modelo de programação paralela e assíncrona. Para obter mais informações, consulte [Programação paralela](../../../docs/standard/parallel-programming/index.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão Geral do Padrão Assíncrono Baseado em Evento](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
@@ -72,4 +75,4 @@ Há várias maneiras de expor recursos assíncronos para o código cliente. O Pa
  [Práticas recomendadas de threading gerenciado](../../../docs/standard/threading/managed-threading-best-practices.md)  
  [Eventos](../../../docs/standard/events/index.md)  
  [Multithreading em componentes](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
- [Padrões de Design de programação assíncrona](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+ [Padrões de design de programação assíncrona](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

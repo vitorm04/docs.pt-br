@@ -16,25 +16,28 @@ helpviewer_keywords:
 - threading [.NET Framework], timers
 - timers, about timers
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fca27cf5261e253c2bb3d3a10fa3db31f28a2415
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 80b4cee03e934d3aec98ca323aac43f934c56455
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="timers"></a>Temporizadores
-Temporizadores são objetos simples que permitem que você especifique um delegado a ser chamado em um horário especificado. Um thread no pool de threads executa a operação de espera.  
+Os temporizadores são objetos leves que permitem especificar um representante que será chamado em um horário especificado. Um thread no pool de threads executa a operação de espera.  
   
- Usando o <xref:System.Threading.Timer?displayProperty=nameWithType> classe é simples. Você cria um **Timer**, passando um <xref:System.Threading.TimerCallback> delegado para o método de retorno de chamada, um objeto que representa o estado que será passado para o retorno de chamada e uma hora inicial acionar uma hora que representa o período entre as chamadas de retorno de chamada. Para cancelar um timer pendentes, chame o **Timer.Dispose** função.  
+ Com a classe <xref:System.Threading.Timer?displayProperty=nameWithType>, o processo é simples. Você cria um **Temporizador** passando um representante <xref:System.Threading.TimerCallback> para o método de retorno de chamada, um objeto que representa o estado que será passado para o retorno de chamada, um tempo de aumento inicial e um tempo que representa o período entre invocações do retorno de chamada. Para cancelar um temporizador pendente, chame a função **Timer.Dispose**.  
   
 > [!NOTE]
->  Há duas outras classes de temporizador. O <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> classe é um controle que funciona com designers visuais e se destina a ser usado em contextos de interface do usuário; ela gera eventos no thread de interface do usuário. O <xref:System.Timers.Timer?displayProperty=nameWithType> classe derivada de <xref:System.ComponentModel.Component>, portanto ele pode ser usado com designers visuais; ela também gera eventos, mas aumenta em um <xref:System.Threading.ThreadPool> thread. O <xref:System.Threading.Timer?displayProperty=nameWithType> classe torna retornos de chamada em um <xref:System.Threading.ThreadPool> de thread e não usa o modelo de evento. Ele também fornece um objeto de estado para o método de retorno de chamada, que não os outros timers. É extremamente leve.  
+>  Há duas outras classes de temporizador. A classe <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> é um controle que funciona com designers visuais e deve ser usada em contextos de interface do usuário. Ela gera eventos no thread da interface do usuário. A classe <xref:System.Timers.Timer?displayProperty=nameWithType> é derivada de <xref:System.ComponentModel.Component>, portanto, pode ser usada com designers visuais. Ela também gera eventos, mas gera-os em um thread <xref:System.Threading.ThreadPool>. A classe <xref:System.Threading.Timer?displayProperty=nameWithType> faz retornos de chamada em um thread <xref:System.Threading.ThreadPool> e não usa o modelo de evento. Ela também fornece um objeto de estado ao método de retorno de chamada que outros temporizadores não fornecem. A classe é extremamente leve.  
   
- O exemplo de código a seguir inicia um temporizador que é iniciado depois de um segundo (1000 milissegundos) e escalas cada segundo até que você pressiona o **Enter** chave. A variável que contém a referência para o timer é um campo de nível de classe, para garantir que o timer não está sujeita à coleta de lixo enquanto ele ainda está em execução. Para obter mais informações sobre a coleta de lixo agressiva, consulte <xref:System.GC.KeepAlive%2A>.  
+ O exemplo de código a seguir inicia um temporizador que é iniciado após um segundo (1.000 milissegundos) e marca cada segundo até você pressionar a tecla **Enter**. A variável que contém a referência do temporizador é um campo de nível de classe para garantir que o temporizador não esteja sujeito à coleta de lixo enquanto ele ainda estiver em execução. Para saber mais sobre a coleta de lixo agressiva, confira <xref:System.GC.KeepAlive%2A>.  
   
  [!code-cpp[System.Threading.Timer#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Timer/CPP/source2.cpp#2)]
  [!code-csharp[System.Threading.Timer#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Timer/CS/source2.cs#2)]

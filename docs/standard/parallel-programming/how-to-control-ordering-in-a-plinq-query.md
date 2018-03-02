@@ -11,45 +11,49 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: PLINQ queries, how to control ordering
+helpviewer_keywords:
+- PLINQ queries, how to control ordering
 ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b9e29aa825a68154e32a34a23ca170258092b88a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3aef90c1a1160905662f93a83d6536f6d804b179
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-control-ordering-in-a-plinq-query"></a>Como controlar a ordem em uma consulta PLINQ
-Estes exemplos mostram como controlar a ordem em uma consulta PLINQ usando o <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> método de extensão.  
+Estes exemplos mostram como controlar a ordem em uma consulta PLINQ usando o método de extensão <xref:System.Linq.ParallelEnumerable.AsOrdered%2A>.  
   
 > [!WARNING]
->  Esses exemplos destinam-se principalmente para demonstrar o uso e podem ou não podem ser executada mais rápido do que o LINQ sequencial equivalente para consultas de objetos.  
+>  Esses exemplos têm como objetivo principal demonstrar o uso, e talvez não executem tão rápido quanto a consulta LINQ to Objects sequencial equivalente.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir preserva a ordenação da sequência de origem. Isso às vezes é necessário; Por exemplo, alguns operadores de consulta exigem uma sequência ordenada de origem para produzir resultados corretos.  
+ O exemplo a seguir preserva a ordem da sequência de origem. Às vezes, isso é necessário; por exemplo, alguns operadores de consulta exigem uma sequência de origem ordenada para produzir resultados corretos.  
   
  [!code-csharp[PLINQ#12](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#12)]
  [!code-vb[PLINQ#12](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#12)]  
   
 ## <a name="example"></a>Exemplo  
- A exemplo a seguir mostra alguns operadores sequência cuja origem provavelmente deve ser ordenados de consulta. Esses operadores funcionará em sequências não ordenadas, mas eles podem produzir resultados inesperados.  
+ A exemplo a seguir mostra alguns operadores de consulta cuja sequência de origem provavelmente deve ser ordenada. Esses operadores funcionarão em sequências não ordenadas, mas podem produzir resultados inesperados.  
   
  [!code-csharp[PLINQ#14](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#14)]
  [!code-vb[PLINQ#14](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#14)]  
   
- Para executar esse método, cole-a classe de PLINQDataSample o [exemplo de dados PLINQ](../../../docs/standard/parallel-programming/plinq-data-sample.md) do projeto e pressione F5.  
+ Para executar esse método, cole-o na classe PLINQDataSample no projeto [Exemplo de dados PLINQ](../../../docs/standard/parallel-programming/plinq-data-sample.md) e pressione F5.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como preservar a ordenação para a primeira parte de uma consulta, em seguida, remover a ordenação para aumentar o desempenho de uma cláusula join e reaplique pedidos à sequência de resultados final.  
+ O exemplo a seguir mostra como preservar a ordem da primeira parte de uma consulta e, depois, remover a ordem para aumentar o desempenho de uma cláusula join. Em seguida, reaplicar a ordem à sequência final de resultados.  
   
  [!code-csharp[PLINQ#15](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#15)]
  [!code-vb[PLINQ#15](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#15)]  
   
- Para executar esse método, cole-a classe de PLINQDataSample o [exemplo de dados PLINQ](../../../docs/standard/parallel-programming/plinq-data-sample.md) do projeto e pressione F5.  
+ Para executar esse método, cole-o na classe PLINQDataSample no projeto [Exemplo de dados PLINQ](../../../docs/standard/parallel-programming/plinq-data-sample.md) e pressione F5.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Linq.ParallelEnumerable>  

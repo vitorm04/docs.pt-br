@@ -12,21 +12,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d4741551b1e6dd2694a0bd65e65a15953f808e59
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b14365266d5a477b32dbbe177d9644596b9e3b38
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>XsltArgumentList para parâmetros de folha de estilos e objetos de extensão
 A classe de <xref:System.Xml.Xsl.XsltArgumentList> contém o idioma extensível de folha de estilos para objetos de parâmetros de transformações (XSLT) e a extensão XSLT. Quando passados para o método de <xref:System.Xml.Xsl.XslTransform.Transform%2A> , esses parâmetros e objetos de extensão podem ser chamados de folhas de estilos.  
   
 > [!NOTE]
->  As classes de <xref:System.Xml.Xsl.XslTransform> e de <xref:System.Xml.Xsl.XsltArgumentList> são obsoletas em [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Você pode realizar transformações XSLT usando a classe de <xref:System.Xml.Xsl.XslCompiledTransform> . Consulte [usando a classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) e [migrar da classe de XslTransform o](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) para obter mais informações.  
+>  As classes de <xref:System.Xml.Xsl.XslTransform> e de <xref:System.Xml.Xsl.XsltArgumentList> são obsoletas em [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Você pode realizar transformações XSLT usando a classe de <xref:System.Xml.Xsl.XslCompiledTransform> . Confira [Usar a classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) e [Migrar da classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) para saber mais.  
   
  A classe de <xref:System.Xml.Xsl.XsltArgumentList> contém objetos de parâmetros XSLT e de extensão XSLT. Quando passados para o método de <xref:System.Xml.Xsl.XslTransform.Transform%2A> , esses parâmetros e objetos de extensão podem ser chamados de folhas de estilos.  
   
@@ -45,9 +48,9 @@ A classe de <xref:System.Xml.Xsl.XsltArgumentList> contém o idioma extensível 
   
  O objeto de parâmetro deve corresponder a um tipo de World Wide Web Consortium (W3C). A tabela seguinte mostra tipos correspondentes W3C, as classes equivalentes de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (tipo), e se o tipo W3C é um tipo de idioma do caminho de XML (XPath) ou tipo de fonte.  
   
-|Tipo W3C|Classe do .NET Framework equivalente (tipo)|Tipo XPath ou XSLT|  
+|Tipo W3C|Classe equivalente do .NET Framework (tipo)|Tipo XPath ou XSLT|  
 |--------------|----------------------------------------------|-----------------------------|  
-|Cadeia de caracteres|System.String|XPath|  
+|Cadeia de Caracteres|System.String|XPath|  
 |Boolean|System.Boolean|XPath|  
 |Número|System.Double|XPath|  
 |Fragmento da árvore de resultado|System.Xml.XPath.XPathNavigator|XSLT|  
@@ -372,4 +375,4 @@ public class Sample
  `</circles>`  
   
 ## <a name="see-also"></a>Consulte também  
- [Classe XslTransform implementa do processador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+ [A classe XslTransform implementa o processador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

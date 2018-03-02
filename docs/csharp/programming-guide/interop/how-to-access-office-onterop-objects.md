@@ -2,7 +2,8 @@
 title: "Como acessar objetos de interoperabilidade do Office usando funcionalidades do Visual C# (Guia de Programação em C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - optional parameters [C#], Office programming
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 25e83195d5f0d8a49e402a5a32e61940960b052a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 751e8240c9385f516315ff3b53221d1e1348ae58
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Como acessar objetos de interoperabilidade do Office usando funcionalidades do Visual C# (Guia de Programação em C#)
 O Visual C# tem funcionalidades que simplificam o acesso a objetos de API do Office. Os novos recursos incluem argumentos nomeados e opcionais, um novo tipo chamado `dynamic` e a capacidade de passar argumentos para parâmetros de referência em métodos COM como se fossem parâmetros de valor.  
@@ -80,7 +81,7 @@ O Visual C# tem funcionalidades que simplificam o acesso a objetos de API do Off
   
 1.  Adicione o método a seguir à classe `Program` para configurar uma planilha do Excel.  
   
-     O método [Add](http://go.microsoft.com/fwlink/?LinkId=210910) tem um parâmetro opcional para especificar um modelo específico. Parâmetros opcionais, novos no [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], permitem omitir o argumento para esse parâmetro, se você deseja usar o valor padrão do parâmetro. Como nenhum argumento é enviado no código a seguir, `Add` usa o modelo padrão e cria uma nova pasta de trabalho. A instrução equivalente em versões anteriores do C# requer um argumento de espaço reservado: `ExcelApp.Workbooks.Add(Type.Missing)`.  
+     O método [Add](https://msdn.microsoft.com/library/microsoft.office.interop.excel.workbooks.add.aspx) tem um parâmetro opcional para especificar um modelo específico. Parâmetros opcionais, novos no [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], permitem omitir o argumento para esse parâmetro, se você deseja usar o valor padrão do parâmetro. Como nenhum argumento é enviado no código a seguir, `Add` usa o modelo padrão e cria uma nova pasta de trabalho. A instrução equivalente em versões anteriores do C# requer um argumento de espaço reservado: `ExcelApp.Workbooks.Add(Type.Missing)`.  
   
      [!code-csharp[csProgGuideOfficeHowTo#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_4.cs)]  
   
@@ -96,11 +97,11 @@ O Visual C# tem funcionalidades que simplificam o acesso a objetos de API do Off
   
      [!code-csharp[csProgGuideOfficeHowTo#13](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_7.cs)]  
   
-     As versões anteriores do C# exigem a conversão explícita para essas operações porque `ExcelApp.Columns[1]` retorna um `Object` e `AutoFit` é um método [Range](http://go.microsoft.com/fwlink/?LinkId=210911) do Excel. As linhas a seguir mostram a conversão.  
+     As versões anteriores do C# exigem a conversão explícita para essas operações porque `ExcelApp.Columns[1]` retorna um `Object` e `AutoFit` é um método [Range](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.aspx) do Excel. As linhas a seguir mostram a conversão.  
   
      [!code-csharp[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
   
-     O [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] e versões posteriores, converterá o `Object` retornado em `dynamic` automaticamente se o assembly for referenciado pela opção do compilador [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) ou, de forma equivalente, se a propriedade **Inserir Tipos Interop** do Excel estiver definida como true. True é o valor padrão para essa propriedade.  
+     [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]e versões posteriores converterão o `Object` retornado em `dynamic` automaticamente se o assembly for referenciado pela opção do compilador [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) ou, de forma equivalente, se a propriedade **Embed Interop Types** estiver definida como true. True é o valor padrão para essa propriedade.  
   
 ### <a name="to-run-the-project"></a>Para executar o projeto  
   
@@ -116,7 +117,7 @@ O Visual C# tem funcionalidades que simplificam o acesso a objetos de API do Off
   
 1.  Para ilustrar maneiras adicionais na quais [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], e versões posteriores, aprimora a programação do Office, o código a seguir abre um aplicativo Word e cria um ícone vinculado à planilha do Excel.  
   
-     Cole o método `CreateIconInWordDoc`, fornecido posteriormente nesta etapa, na classe `Program`. O `CreateIconInWordDoc` usa argumentos nomeados e opcionais para reduzir a complexidade das chamadas de método a [Add](http://go.microsoft.com/fwlink/?LinkId=210937) e [PasteSpecial](http://go.microsoft.com/fwlink/?LinkId=147099). Essas chamadas incorporam dois novos recursos apresentados em [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] que simplificam as chamadas para métodos COM que possuem parâmetros de referência. Primeiro, você pode enviar argumentos para os parâmetros de referência como se fossem parâmetros de valor. Ou seja, você pode enviar valores diretamente, sem criar uma variável para cada parâmetro de referência. O compilador gera variáveis temporárias para conter os valores de argumento e descarta as variáveis quando você retornar da chamada. Em segundo lugar, você pode omitir a palavra-chave `ref` na lista de argumentos.  
+     Cole o método `CreateIconInWordDoc`, fornecido posteriormente nesta etapa, na classe `Program`. O `CreateIconInWordDoc` usa argumentos nomeados e opcionais para reduzir a complexidade das chamadas de método a [Add](https://msdn.microsoft.com/library/microsoft.office.interop.word.documents.add.aspx) e [PasteSpecial](https://msdn.microsoft.com/library/microsoft.office.interop.word.selection.pastespecial.aspx). Essas chamadas incorporam dois novos recursos apresentados em [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] que simplificam as chamadas para métodos COM que possuem parâmetros de referência. Primeiro, você pode enviar argumentos para os parâmetros de referência como se fossem parâmetros de valor. Ou seja, você pode enviar valores diretamente, sem criar uma variável para cada parâmetro de referência. O compilador gera variáveis temporárias para conter os valores de argumento e descarta as variáveis quando você retornar da chamada. Em segundo lugar, você pode omitir a palavra-chave `ref` na lista de argumentos.  
   
      O método `Add` tem quatro parâmetros de referência que são opcionais. No [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], ou versões posteriores, você poderá omitir argumentos para alguns ou todos os parâmetros se desejar usar os valores padrão. Em [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] e versões anteriores, um argumento deve ser fornecido para cada parâmetro e o argumento deve ser uma variável, pois os parâmetros são parâmetros de referência.  
   
@@ -162,11 +163,11 @@ O Visual C# tem funcionalidades que simplificam o acesso a objetos de API do Off
   
      [!code-csharp[csProgGuideOfficeHowTo#15](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_14.cs)]  
   
-     O método [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=210948) tem sete parâmetros de valor, que são opcionais. Argumentos nomeados e opcionais permitem que você forneça argumentos para nenhum, alguns ou todos eles. Na instrução anterior, um argumento é fornecido para apenas um dos parâmetros, `Format`. Como `Format` é o primeiro parâmetro na lista de parâmetros, você não precisará fornecer o nome do parâmetro. No entanto, poderá ser mais fácil entender a instrução se o nome do parâmetro estiver incluído, conforme mostrado no código a seguir.  
+     O método [AutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat.aspx) tem sete parâmetros de valor, que são opcionais. Argumentos nomeados e opcionais permitem que você forneça argumentos para nenhum, alguns ou todos eles. Na instrução anterior, um argumento é fornecido para apenas um dos parâmetros, `Format`. Como `Format` é o primeiro parâmetro na lista de parâmetros, você não precisará fornecer o nome do parâmetro. No entanto, poderá ser mais fácil entender a instrução se o nome do parâmetro estiver incluído, conforme mostrado no código a seguir.  
   
      [!code-csharp[csProgGuideOfficeHowTo#16](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_15.cs)]  
   
-2.  Pressione CTRL + F5 para ver o resultado. Outros formatos estão listados na enumeração [XlRangeAutoFormat](http://go.microsoft.com/fwlink/?LinkId=210967).  
+2.  Pressione CTRL + F5 para ver o resultado. Outros formatos estão listados na enumeração [XlRangeAutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.xlrangeautoformat.aspx).  
   
 3.  Compare a instrução na etapa 1 com o código a seguir, que mostra os argumentos que são necessários em [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] ou versões anteriores.  
   

@@ -20,24 +20,27 @@ helpviewer_keywords:
 - localization [.NET Framework], about localization
 - localizing resources
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4aaf2da77a1fab55cbebd6bfa05a2b1c74e5cbbd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 952696cf813a4bd0915f85a02946489d389d23e7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="localization"></a>Localização
-A localização é o processo de converter os recursos do aplicativo em versões localizadas para cada cultura que o aplicativo oferecerá suporte. Você deve prosseguir para a etapa de localização somente após concluir o [revisão de localização](../../../docs/standard/globalization-localization/localizability-review.md) etapa para verificar se o aplicativo globalizado está pronto para a localização.  
+Localização é o processo de traduzir os recursos do aplicativo em versões localizadas para cada cultura à qual o aplicativo dará suporte. Você deve prosseguir para a etapa de localização somente após concluir a etapa de [Revisão de Capacidade de Localização](../../../docs/standard/globalization-localization/localizability-review.md) para verificar se o aplicativo globalizado está pronto para a localização.  
   
- Um aplicativo que está pronto para a localização é separado em dois blocos conceituais, um bloco que contém todos os elementos de interface de usuário e um bloco que contém o código executável. O bloco de interface do usuário contém apenas os elementos de interface de usuário localizáveis, como cadeias de caracteres, mensagens de erro, caixas de diálogo, menus, recursos do objeto inserido, e assim por diante para a cultura neutra. O bloco de código contém apenas o código do aplicativo a ser usado por todas as culturas com suporte. O common language runtime oferece suporte a um modelo de recurso de assembly satélite que separa o código executável do aplicativo de seus recursos. Para obter mais informações sobre como implementar esse modelo, consulte [recursos em aplicativos de área de trabalho](../../../docs/framework/resources/index.md).  
+ Um aplicativo que está pronto para a localização é separado em dois blocos conceituais: um bloco que contém todos os elementos de interface de usuário e um bloco que contém o código executável. O bloco de interface do usuário contém apenas os elementos de interface de usuário localizáveis, como cadeias de caracteres, mensagens de erro, caixas de diálogo, menus, recursos de objetos inseridos e assim por diante para a cultura neutra. O bloco de código contém apenas o código do aplicativo a ser usado por todas as culturas com suporte. O common language runtime dá suporte a um modelo de recurso de assembly satélite que separa o código executável do aplicativo de seus recursos. Para saber mais sobre como implementar esse modelo, confira [Recursos em aplicativos da área de trabalho](../../../docs/framework/resources/index.md).  
   
- Para cada versão localizada do seu aplicativo, adicione um novo assembly satélite que contém o bloco de interface do usuário localizada traduzido para o idioma apropriado para a cultura de destino. O bloco de código para todas as culturas deve permanecer o mesmo. A combinação de uma versão localizada do bloco de interface de usuário com o bloco de código produz uma versão localizada do seu aplicativo.  
+ Para cada versão localizada do aplicativo, adicione um novo assembly satélite que contenha o bloco de interface do usuário localizada traduzido para o idioma apropriado para a cultura de destino. O bloco de código para todas as culturas deve permanecer o mesmo. A combinação de uma versão localizada do bloco de interface de usuário com o bloco de código produz uma versão localizada do aplicativo.  
   
- O [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] fornece um Editor de recursos do Windows Forms (Winres.exe) que permite que você localize rapidamente formulários do Windows para culturas de destino. Para obter informações sobre como usar essa ferramenta, consulte [Winres.exe (Editor de recursos do Windows Forms)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md).  
+ O [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] fornece o Windows Forms Resource Editor (Winres.exe), que permite que você localize rapidamente Windows Forms para culturas de destino. Para saber mais sobre como usar essa ferramenta, confira [Winres.exe (Windows Forms Resource Editor)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Globalização e localização](../../../docs/standard/globalization-localization/index.md)  

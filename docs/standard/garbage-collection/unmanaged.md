@@ -18,22 +18,25 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c94a449edbbe38c4028e27fd946b66a054badf51
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fea76042bb603889764a9d42b5a7836d704fcd48
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Limpando recursos não gerenciados
-Para a maioria dos objetos que seu aplicativo cria, você pode depender. Coletor de lixo do NET para lidar com o gerenciamento de memória. No entanto, ao criar objetos que incluem recursos não gerenciados, você deverá liberar os recursos explicitamente assim que terminar de usá-los no aplicativo. Os tipos mais comuns de recursos não gerenciados são objetos que encapsulam recursos do sistema operacional, como arquivos, janelas, conexões de rede ou conexões de bancos de dados. Embora o coletor de lixo consiga controlar o tempo de vida de um objeto que encapsula um recurso não gerenciado, ele não sabe como liberar e limpar o recurso não gerenciado.  
+Para a maioria dos objetos criados pelo aplicativo, você pode contar com o coletor de lixo do .NET Framework para lidar com o gerenciamento de memória. No entanto, ao criar objetos que incluem recursos não gerenciados, você deverá liberar os recursos explicitamente assim que terminar de usá-los no aplicativo. Os tipos mais comuns de recursos não gerenciados são objetos que encapsulam recursos do sistema operacional, como arquivos, janelas, conexões de rede ou conexões de bancos de dados. Embora o coletor de lixo consiga controlar o tempo de vida de um objeto que encapsula um recurso não gerenciado, ele não sabe como liberar e limpar o recurso não gerenciado.  
   
  Se seus tipos usam recursos não gerenciados, você deve fazer o seguinte:  
   
--   Implementar o [dispose padrão](../../../docs/standard/design-guidelines/dispose-pattern.md). Isso exige que você forneça uma implementação de <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> para habilitar a liberação determinística dos recursos não gerenciados. Um consumidor do seu tipo chama <xref:System.IDisposable.Dispose%2A> quando o objeto (e os recursos que ele usa) não são mais necessários. O método <xref:System.IDisposable.Dispose%2A> libera imediatamente os recursos não gerenciados.  
+-   Implementar o [padrão de descarte](../../../docs/standard/design-guidelines/dispose-pattern.md). Isso exige que você forneça uma implementação de <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> para habilitar a liberação determinística dos recursos não gerenciados. Um consumidor do seu tipo chama <xref:System.IDisposable.Dispose%2A> quando o objeto (e os recursos que ele usa) não são mais necessários. O método <xref:System.IDisposable.Dispose%2A> libera imediatamente os recursos não gerenciados.  
   
 -   Fazer com que seus recursos não gerenciados sejam liberados se um consumidor do seu tipo esquecer chamar <xref:System.IDisposable.Dispose%2A>. Há duas formas de fazer isso:  
   
@@ -47,7 +50,7 @@ Para a maioria dos objetos que seu aplicativo cria, você pode depender. Coletor
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Implementando um método dispose](../../../docs/standard/garbage-collection/implementing-dispose.md)  
- Descreve como implementar o [dispose padrão](../../../docs/standard/design-guidelines/dispose-pattern.md) para liberar recursos não gerenciados.  
+ Descreve como implementar o [padrão de descarte](../../../docs/standard/design-guidelines/dispose-pattern.md) para liberar recursos não gerenciados.  
   
  [Usando objetos que implementam IDisposable](../../../docs/standard/garbage-collection/using-objects.md)  
  Descreve como os consumidores de um tipo garantem que sua implementação de <xref:System.IDisposable.Dispose%2A> seja chamada. Recomendamos usar a instrução `using` do C# ou a instrução `Using` do Visual Basic para fazer isso.  

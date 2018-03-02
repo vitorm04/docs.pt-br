@@ -12,29 +12,32 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: fab67e10aa0562b59f8c7704a5ca1feeb66d6208
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f875169d43a2f733050b46c76cea0891b4cfabf7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>Validação de XDR com XmlSchemaCollection
-Se o esquema XML-Data Reduced (XDR) você está validando contra é armazenado na **XmlSchemaCollection**, ele está associado com o namespace URI especificado quando o esquema foi adicionado à coleção. **XmlValidatingReader** mapeia o URI de namespace no documento XML para o esquema que corresponde a esse URI na coleção.  
+Se o Esquema Reduzido de Dados XML (XDR) com o qual você está validando estiver armazenado em **XmlSchemaCollection**, ele terá sido associado ao URI do namespace especificado quando o esquema foi adicionado à coleção. **XmlValidatingReader** mapeia o URI de namespace no documento XML para esquema que corresponde ao URI na coleção.  
   
 > [!IMPORTANT]
->  A classe <xref:System.Xml.Schema.XmlSchemaCollection> agora está obsoleta e foi substituída pela classe <xref:System.Xml.Schema.XmlSchemaSet>. Para obter mais informações sobre o <xref:System.Xml.Schema.XmlSchemaSet> , consulte classe [XmlSchemaSet para compilação de esquema](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
+>  A classe <xref:System.Xml.Schema.XmlSchemaCollection> agora está obsoleta e foi substituída pela classe <xref:System.Xml.Schema.XmlSchemaSet>. Para saber mais sobre a classe <xref:System.Xml.Schema.XmlSchemaSet>, veja [XmlSchemaSet para compilação de esquema](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
   
- Por exemplo, se o elemento raiz do documento XML é `<bookstore xmlns="urn:newbooks-schema">`, quando o esquema é adicionado para o **XmlSchemaCollection** faz referência o mesmo namespace, da seguinte maneira:  
+ Por exemplo, se o elemento raiz do documento XML é `<bookstore xmlns="urn:newbooks-schema">`, quando o esquema é adicionado a **XmlSchemaCollection** referencia a mesma namespace, como segue:  
   
 ```  
 xsc.Add("urn:newbooks-schema", "newbooks.xdr")  
 ```  
   
- O exemplo de código a seguir cria um **XmlValidatingReader** que leva um **XmlTextReader** e adiciona um esquema XDR, HeadCount.xdr, como o **XmlSchemaCollection**.  
+ O exemplo de código a seguir cria **XmlValidatingReader** que leva **XmlTextReader** e adiciona um esquema XDR, HeadCount.xdr, a **XmlSchemaCollection**.  
   
 ```vb  
 Imports System  

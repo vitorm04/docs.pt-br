@@ -16,15 +16,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions, miscellaneous constructs
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9b33d196a7af9bc5a1f81c1624bbd98fea074319
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7a7c577c617ca8f40d64548f9f0f2d103c5887e1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Construtores diversos em expressões regulares
 As expressões regulares em .NET incluem três constructos diversos de linguagem. Um deles permite habilitar ou desabilitar opções específicas de correspondência no meio de um padrão de expressão regular. Os dois restantes permitem incluir comentários em uma expressão regular.  
@@ -46,12 +49,12 @@ As expressões regulares em .NET incluem três constructos diversos de linguagem
 |`s`|Modo de linha única.|  
 |`x`|Ignorar espaço em branco sem escape e permitir comentários no modo x.|  
   
- Qualquer alteração nas opções de expressão regular definida pelo `(?imnsx-imnsx)` construir permanece em vigor até o fim do grupo delimitador.  
+ Qualquer alteração nas opções de expressões regulares definida pelo constructo `(?imnsx-imnsx)` permanece em vigor até o fim do grupo delimitador.  
   
 > [!NOTE]
->  O `(?imnsx-imnsx:` *subexpressão* `)` agrupamento fornece uma funcionalidade idêntica de uma subexpressão. Para obter mais informações, consulte [construções de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+>  O constructo de agrupamento `(?imnsx-imnsx:`*subexpression*`)` oferece uma funcionalidade idêntica para uma subexpressão. Para saber mais, confira [Constructos de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
- O exemplo a seguir usa o `i`, `n`, e `x` opções para habilitar a diferenciação de maiusculas e captura explícita e ignorar espaço em branco no padrão de expressão regular no meio de uma expressão regular.  
+ O exemplo a seguir usa as opções `i`, `n` e `x` para desabilitar a diferenciação entre maiúsculas e minúsculas e habilitar e capturas explícitas, bem como ignorar o espaço em branco no padrão de expressão regular no meio de uma expressão regular.  
   
  [!code-csharp[RegularExpressions.Language.Miscellaneous#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.miscellaneous/cs/miscellaneous1.cs#1)]
  [!code-vb[RegularExpressions.Language.Miscellaneous#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous1.vb#1)]  
@@ -64,11 +67,11 @@ As expressões regulares em .NET incluem três constructos diversos de linguagem
 |`(D\w+)`|Corresponder a um “D” maiúsculo seguido por um ou mais caracteres de palavra. Este é o primeiro grupo de captura.|  
 |`(?ixn)`|Desse ponto em diante, faça comparações sem distinção de maiúsculas e minúsculas, faça apenas capturas explícitas e ignore o espaço em branco no padrão de expressão regular.|  
 |`\s`|Corresponde a um caractere de espaço em branco.|  
-|`(d\w+)`|Corresponder a um “d” maiúsculo ou minúsculo seguido por um ou mais caracteres de palavra. Esse grupo não é capturado porque o `n` (captura explícita) opção foi habilitada.|  
+|`(d\w+)`|Corresponder a um “d” maiúsculo ou minúsculo seguido por um ou mais caracteres de palavra. Este grupo não foi capturado porque a opção `n` (captura explícita) estava habilitada.|  
 |`\b`|Corresponder a um limite de palavra.|  
   
 ## <a name="inline-comment"></a>Comentário embutido  
- O `(?#` *comentário* `)` construção permite que você inclua um comentário embutido em uma expressão regular. O mecanismo de expressão regular não usa qualquer parte do comentário na correspondência de padrões, embora o comentário é incluído na cadeia de caracteres que é retornada pelo <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> método. O comentário é encerrado no primeiro caractere de fechar parênteses.  
+ O constructo `(?#` *comment*`)` permite incluir um comentário embutido em uma expressão regular. O mecanismo de expressões regulares não usa nenhuma parte do comentário na correspondência de padrão, apesar de o comentário estar incluído na cadeia de caracteres que é retornada pelo método <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType>. O comentário é encerrado no primeiro caractere de fechar parênteses.  
   
  O exemplo a seguir repete o primeiro padrão de expressão regular do exemplo na seção anterior. Ele adiciona dois comentários embutidos na expressão regular para indicar se a comparação diferencia maiúsculas de minúsculas. O padrão de expressão regular, `\b((?# case-sensitive comparison)D\w+)\s((?#case-insensitive comparison)d\w+)\b`, é definido da seguinte forma.  
   
@@ -87,7 +90,7 @@ As expressões regulares em .NET incluem três constructos diversos de linguagem
  [!code-vb[RegularExpressions.Language.Miscellaneous#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous2.vb#2)]  
   
 ## <a name="end-of-line-comment"></a>Comentário de final de linha  
- Um sinal de número (`#`) marca um modo de comentário x, que começa com o caractere # sem escape no final do padrão de expressão regular e continua até o final da linha. Para usar esta construção, você deve ativar o `x` opção (por meio de opções de embutidos) ou fornecer o <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> o valor para o `option` parâmetro ao instanciar o <xref:System.Text.RegularExpressions.Regex> objeto ou chamar estático <xref:System.Text.RegularExpressions.Regex> método.  
+ Um sinal numérico (`#`) marca um comentário do modo x, que começa com o caractere # sem escape no final do padrão de expressão regular e continua até o final da linha. Para usar este constructo, você deve habilitar a opção `x` (por meio de opções embutidas) ou fornecer o valor <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> ao parâmetro `option` ao instanciar o objeto <xref:System.Text.RegularExpressions.Regex> ou chamar um método estático <xref:System.Text.RegularExpressions.Regex>.  
   
  O exemplo a seguir ilustra o constructo do comentário de final de linha. Ele determina se uma cadeia de caracteres é uma cadeia de caracteres de formato de composição que inclui pelo menos um item de formato. A tabela a seguir descreve os constructos no padrão de expressão regular:  
   
@@ -107,7 +110,7 @@ As expressões regulares em .NET incluem três constructos diversos de linguagem
  [!code-csharp[RegularExpressions.Language.Miscellaneous#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.miscellaneous/cs/miscellaneous3.cs#3)]
  [!code-vb[RegularExpressions.Language.Miscellaneous#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous3.vb#3)]  
   
- Observe que, em vez de fornecer o `(?x)` construir na expressão regular, o comentário pode também foram reconhecido chamando o <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> método e passá-lo a <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> valor de enumeração.  
+ Observe que, em vez de fornecer o constructo `(?x)` na expressão regular, o comentário pode também poderia ter sido reconhecido chamando o método <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> e passando-o para o valor de enumeração <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

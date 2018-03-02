@@ -1,5 +1,5 @@
 ---
-title: "Inícios rápidos – Introdução às classes – Guia de C#"
+title: "Tutorial de introdução a classes ‒ guias de início rápido locais de C#"
 description: Crie seu primeiro programa em C# e explore os conceitos de orientado a objeto
 author: billwagner
 ms.author: wiwagn
@@ -9,15 +9,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 4e15b1b12b9420ca1781eca3f2578fa24c9ec82a
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 97c1de562c86ea04153ec09bb0e813565523a3ba
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="introduction-to-classes"></a>Introdução às classes
 
-Este início rápido espera que você tenha uma máquina que possa usar para desenvolvimento. O tópico do .NET [Familiarize-se em 10 minutos](https://www.microsoft.com/net/core) tem instruções para configurar o ambiente de desenvolvimento local no Mac, PC ou Linux. Confira uma visão geral dos comandos que você usará na [introdução aos inícios rápidos locais](local-environment.md) com links para obter mais detalhes.
+Este início rápido espera que você tenha um computador que possa usar para desenvolvimento. O tópico do .NET [Familiarize-se em 10 minutos](https://www.microsoft.com/net/core) tem instruções para configurar o ambiente de desenvolvimento local no Mac, PC ou Linux. Confira uma visão geral dos comandos que você usará na [introdução aos inícios rápidos locais](local-environment.md) com links para obter mais detalhes.
 
 ## <a name="create-your-application"></a>Criar seu aplicativo
 
@@ -217,4 +217,4 @@ Digite `dotnet run` para ver os resultados.
 
 Se você não conseguir avançar, veja a origem deste início rápido [em nosso repositório do GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/classes-quickstart/)
 
-Parabéns, você concluiu todos os nossos Inícios Rápido. Se você quiser saber mais, experimente nossos [tutoriais](../tutorials/index.md)
+Parabéns, você concluiu todos os nossos Inícios Rápidos. Se você quiser saber mais, experimente nossos [tutoriais](../tutorials/index.md)

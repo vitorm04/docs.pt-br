@@ -19,20 +19,23 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a60284bf2db8f47dd17c04fad5cbd6db4970a8a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 357d18843af0af2869d0ec98def6c733e51f9a4c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="globalization"></a>Globalização
 A globalização envolve projetar e desenvolver um aplicativo preparado para o mundo que dá suporte a interfaces localizadas e dados regionais para usuários em várias culturas. Antes de iniciar a fase de design, você deve determinar a quais culturas seu aplicativo dará suporte. Embora um aplicativo seja direcionado para uma única cultura ou região por padrão, você pode projetá-lo e gravá-lo para que ele possa ser facilmente estendido para usuários em outras culturas ou regiões.  
   
- Como desenvolvedores, todos nós temos suposições sobre as interfaces do usuário e dados que são formados pelas nossas culturas. Por exemplo, para um desenvolvedor falante de inglês nos Estados Unidos, a serialização de dados de data e hora como uma cadeia de caracteres no formato `MM/dd/yyyy hh:mm:ss` parece perfeitamente razoável. No entanto, a desserialização essa cadeia de caracteres em um sistema em uma cultura diferente é provavelmente lançará um <xref:System.FormatException> exceção ou produzir dados imprecisos. A globalização nos permite identificar essas suposições específicas de culturas e nos certificarmos de que elas não afetem o design ou código de nosso aplicativo.  
+ Como desenvolvedores, todos nós temos suposições sobre as interfaces do usuário e dados que são formados pelas nossas culturas. Por exemplo, para um desenvolvedor falante de inglês nos Estados Unidos, a serialização de dados de data e hora como uma cadeia de caracteres no formato `MM/dd/yyyy hh:mm:ss` parece perfeitamente razoável. No entanto, desserializar essa cadeia de caracteres em um sistema em uma cultura diferente é provavelmente lançará uma exceção <xref:System.FormatException> ou produzirá dados imprecisos. A globalização nos permite identificar essas suposições específicas de culturas e nos certificarmos de que elas não afetem o design ou código de nosso aplicativo.  
   
  As seções a seguir discutem os principais problemas que você deve considerar e as práticas recomendadas que você pode seguir ao manipular cadeias de caracteres, valores de data/hora e valores numéricos em um aplicativo globalizado.  
   
@@ -74,7 +77,7 @@ A globalização envolve projetar e desenvolver um aplicativo preparado para o m
   
 <a name="Strings_Unicode"></a>   
 ### <a name="use-unicode-internally"></a>Usar Unicode Internamente  
- Por padrão, o .NET Framework usa cadeias de caracteres Unicode. Uma cadeia de caracteres Unicode consiste em zero, um ou mais <xref:System.Char> objetos, cada um deles representa uma unidade de código UTF-16. Há uma representação Unicode para quase todos os caracteres em cada conjunto de caracteres no uso em todo o mundo.  
+ Por padrão, o .NET Framework usa cadeias de caracteres Unicode. Uma cadeia de caracteres do Unicode consiste em zero e um ou mais objetos <xref:System.Char>, cada um dos quais representa uma unidade de código UTF-16. Há uma representação Unicode para quase todos os caracteres em cada conjunto de caracteres no uso em todo o mundo.  
   
  Muitos aplicativos e sistemas operacionais, incluindo o sistema operacional Windows, também podem usar as páginas de código para representar conjuntos de caracteres. Páginas de código geralmente contêm valores ASCII padrão de 0x00 a 0x7F e mapeiam outros caracteres para os valores restantes de 0x80 a 0xFF. A interpretação dos valores de 0x80 a 0xFF depende da página de código específica. Por isso, se possível, evite usar as páginas de código em um aplicativo globalizado.  
   
@@ -95,7 +98,7 @@ A globalização envolve projetar e desenvolver um aplicativo preparado para o m
   
 -   Você pode incluir recursos que não sejam cadeia de caracteres tais como imagens ou dados binários no arquivo de recurso, em vez de armazená-los em um arquivo autônomo separado, para que eles possam ser recuperados facilmente.  
   
- Usar arquivos de recurso tem vantagens específicas se você está criando um aplicativo localizado. Quando você implanta recursos em assemblies de satélite, o common language runtime seleciona automaticamente um recurso apropriado com base na cultura da interface do usuário atual, conforme definido pelo <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> propriedade. Desde que você fornece um recurso de específicos de cultura apropriado e instanciar corretamente um <xref:System.Resources.ResourceManager> de objeto ou usar uma classe de recursos fortemente tipados, o tempo de execução trata os detalhes de recuperar os recursos apropriados.  
+ Usar arquivos de recurso tem vantagens específicas se você está criando um aplicativo localizado. Quando você implanta recursos em assemblies satélite, o Common Language Runtime seleciona automaticamente um recurso apropriado com base na cultura da interface do usuário atual, conforme definido pela propriedade <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>. Desde que você forneça um recurso específico de cultura apropriado e instancie corretamente um objeto <xref:System.Resources.ResourceManager> ou então use uma classe de recurso fortemente tipada, o tempo de execução cuidará dos detalhes para recuperar os recursos apropriados.  
   
  Para obter mais informações sobre como criar arquivos de recursos, consulte [Criar arquivos de recurso](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md). Para obter informações sobre como criar e implantar assemblies satélite, consulte [Criar assemblies satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md) e [Empacotar e implantar recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
   
@@ -104,24 +107,24 @@ A globalização envolve projetar e desenvolver um aplicativo preparado para o m
  Sempre que possível, você deve tratar cadeias de caracteres como cadeias de caracteres inteiras em vez de tratá-las como uma série de caracteres individuais. Isso é especialmente importante quando você classifica ou pesquisa subcadeias de caracteres, para evitar problemas associados à análise de caracteres combinados.  
   
 > [!TIP]
->  Você pode usar o <xref:System.Globalization.StringInfo> classe para trabalhar com os elementos de texto, em vez de caracteres individuais em uma cadeia de caracteres.  
+>  Você pode usar a classe <xref:System.Globalization.StringInfo> para trabalhar com os elementos de texto em vez dos caracteres individuais em uma cadeia de caracteres.  
   
- Em comparações e pesquisas de cadeia de caracteres, um erro comum é tratar a cadeia de caracteres como um conjunto de caracteres, cada um dos quais é representada por um <xref:System.Char> objeto. Na verdade, um único caractere pode ser formado por uma, duas ou mais <xref:System.Char> objetos. Esses caracteres são encontrados com mais frequência em cadeias de caracteres de culturas cujos alfabetos consistem em caracteres fora do intervalo de caracteres do Latim Básico Unicode (U+0021 até U+007E). O exemplo a seguir tenta localizar o índice do caractere LETRA A MAIÚSCULA COM ACENTO GRAVE LATINA (U+00C0) em uma cadeia de caracteres. No entanto, esse caractere pode ser representado de duas maneiras diferentes: como uma única unidade de código (U+00C0) ou como um caractere composto (duas unidades de código: U+0021 e U+007E). Nesse caso, o caractere é representado na instância de cadeia de caracteres por dois <xref:System.Char> objetos, U + 0021 e U + 007E. O código de exemplo chama o <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> e <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> sobrecargas para localizar a posição desse caractere na instância de cadeia de caracteres, mas elas retornam resultados diferentes. A primeira chamada do método tem um <xref:System.Char> argumento; ele executa uma comparação ordinal e, portanto, não é possível encontrar uma correspondência. A segunda chamada tem um <xref:System.String> argumento; ele executa uma comparação sensíveis à cultura e, portanto, localiza uma correspondência.  
+ Em comparações e pesquisas de cadeia de caracteres, um erro comum é tratar a cadeia de caracteres como uma coleção de caracteres, cada um dos quais é representado por um objeto <xref:System.Char>. Na verdade, um único caractere pode ser formado por um, dois ou mais objetos <xref:System.Char>. Esses caracteres são encontrados com mais frequência em cadeias de caracteres de culturas cujos alfabetos consistem em caracteres fora do intervalo de caracteres do Latim Básico Unicode (U+0021 até U+007E). O exemplo a seguir tenta localizar o índice do caractere LETRA A MAIÚSCULA COM ACENTO GRAVE LATINA (U+00C0) em uma cadeia de caracteres. No entanto, esse caractere pode ser representado de duas maneiras diferentes: como uma única unidade de código (U+00C0) ou como um caractere composto (duas unidades de código: U+0021 e U+007E). Nesse caso, o caractere é representado na instância de cadeia de caracteres por dois objetos <xref:System.Char>, U+0021 e U+007E. O código de exemplo chama as sobrecargas <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> e <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> para localizar a posição desse caractere na instância de cadeia de caracteres, mas elas retornam resultados diferentes. A primeira chamada de método tem um argumento <xref:System.Char>; ele executa uma comparação ordinal e, portanto, não é capaz de encontrar uma correspondência. A segunda chamada tem um argumento <xref:System.String>; ele executa uma comparação com diferenciação entre culturas e, portanto, encontra uma correspondência.  
   
  [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
  [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]  
   
- Você pode evitar alguns ambiguidade deste exemplo (chamadas de duas sobrecargas semelhantes de um método que retornar resultados diferentes), chamando uma sobrecarga que inclui um <xref:System.StringComparison> parâmetro, como o <xref:System.String.IndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> ou <xref:System.String.LastIndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> método.  
+ Você pode evitar alguma ambiguidade deste exemplo (chamadas para duas sobrecargas semelhantes de um método que retorna resultados diferentes) chamando uma sobrecarga que inclui um parâmetro <xref:System.StringComparison>, como o método <xref:System.String.IndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> ou <xref:System.String.LastIndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType>.  
   
  No entanto, pesquisas nem sempre são com diferenciação entre culturas. Se a finalidade da pesquisa é tomar uma decisão de segurança ou permitir ou não o acesso a alguns recursos, a comparação deve ser ordinal, conforme discutido na próxima seção.  
   
 <a name="Strings_Equality"></a>   
 ### <a name="testing-strings-for-equality"></a>Testando Igualdade das Cadeias de Caracteres  
- Se você quiser testar duas cadeias de caracteres de igualdade em vez de determinar como eles se comparam na ordem de classificação, use o <xref:System.String.Equals%2A?displayProperty=nameWithType> método em vez de um método de comparação de cadeia de caracteres como <xref:System.String.Compare%2A?displayProperty=nameWithType> ou <xref:System.Globalization.CompareInfo.Compare%2A?displayProperty=nameWithType>.  
+ Se você quiser testar a igualdade de duas cadeias de caracteres em vez de determinar a comparação delas na ordem de classificação, use o método <xref:System.String.Equals%2A?displayProperty=nameWithType> em vez de um método de comparação de cadeia de caracteres, como <xref:System.String.Compare%2A?displayProperty=nameWithType> ou <xref:System.Globalization.CompareInfo.Compare%2A?displayProperty=nameWithType>.  
   
- Comparações de igualdade normalmente são executadas para acessar algum recurso de modo condicional. Por exemplo, você pode executar uma comparação de igualdade para verificar uma senha ou confirmar a existência de um arquivo. Essas comparações não linguísticas devem sempre ser de tipo ordinal, em vez de com diferenciação entre culturas. Em geral, você deve chamar a instância <xref:System.String.Equals%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> estático ou método <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> método com um valor de <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> para cadeias de caracteres, como senhas e um valor de <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> para cadeias de caracteres, como nomes de arquivo ou URIs.  
+ Comparações de igualdade normalmente são executadas para acessar algum recurso de modo condicional. Por exemplo, você pode executar uma comparação de igualdade para verificar uma senha ou confirmar a existência de um arquivo. Essas comparações não linguísticas devem sempre ser de tipo ordinal, em vez de com diferenciação entre culturas. Em geral, você deve chamar o método <xref:System.String.Equals%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> da instância ou o método estático <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> com um valor de <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> para cadeias de caracteres como senhas, e um valor de <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> para cadeias de caracteres como nomes de arquivo ou URIs.  
   
- Algumas vezes, as comparações de igualdade envolvem pesquisas ou comparações de subcadeia de caracteres em vez de chamadas para o <xref:System.String.Equals%2A?displayProperty=nameWithType> método. Em alguns casos, você pode usar uma subsequência de pesquisa para determinar se aquela subcadeia de caracteres é igual a uma outra cadeia de caracteres. Se a finalidade desta comparação é não linguística, a pesquisa também deve ser ordinal em vez de com diferenciação entre culturas.  
+ Algumas vezes, as comparações de igualdade envolvem pesquisas ou comparações de subcadeias de caracteres em vez de chamadas para o método <xref:System.String.Equals%2A?displayProperty=nameWithType>. Em alguns casos, você pode usar uma subsequência de pesquisa para determinar se aquela subcadeia de caracteres é igual a uma outra cadeia de caracteres. Se a finalidade desta comparação é não linguística, a pesquisa também deve ser ordinal em vez de com diferenciação entre culturas.  
   
  O exemplo a seguir ilustra o perigo de uma pesquisa com diferenciação entre culturas em dados não linguísticos. O método `AccessesFileSystem` é projetado para proibir o acesso de URIs que começam com a subcadeia de caracteres "FILE" ao sistema de arquivos. Para fazer isso, ele executa uma comparação com diferenciação entre culturas mas sem diferenciação de maiúsculas e minúsculas do início da URI com a cadeia de caracteres "FILE". Já que um URI que acessa o sistema de arquivos pode começar com "FILE:" ou "file:", a suposição implícita é que esse "i" (U+0069) é sempre o equivalente em minúsculas de "I" (U+0049). No entanto, em turco e azerbaidjano, a versão maiúscula de "i" é "İ" (U+0130). Devido a essa discrepância, a comparação com diferenciação entre culturas permite o acesso ao sistema de arquivos quando ele deve ser proibido.  
   
@@ -140,9 +143,9 @@ A globalização envolve projetar e desenvolver um aplicativo preparado para o m
  [!code-csharp[Conceptual.Globalization#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/sort1.cs#14)]
  [!code-vb[Conceptual.Globalization#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/sort1.vb#14)]  
   
- Comparação de cadeia de caracteres sensíveis à cultura é definida pelo <xref:System.Globalization.CompareInfo> objeto, que é retornado por cada cultura <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> propriedade. Comparações de cadeia de caracteres sensíveis à cultura que usam o <xref:System.String.Compare%2A?displayProperty=nameWithType> sobrecargas do método também use o <xref:System.Globalization.CompareInfo> objeto.  
+ A comparação de cadeia de caracteres sensíveis à cultura é definida pelo objeto <xref:System.Globalization.CompareInfo>, que é retornado pela propriedade <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> de cada cultura. Comparações de cadeia de caracteres sensíveis à cultura que usam sobrecargas do método <xref:System.String.Compare%2A?displayProperty=nameWithType> também usam o objeto <xref:System.Globalization.CompareInfo>.  
   
- O .NET Framework usa tabelas para realizar classificações com diferenciação de cultura em dados de cadeia de caracteres. O conteúdo dessas tabelas, que contêm dados sobre os pesos de classificação e normalização de cadeias de caracteres, é determinado pela versão do padrão Unicode implementada por uma versão específica do .NET Framework. A tabela a seguir lista as versões do Unicode implementadas pelas versões especificadas do .NET Framework. Observe que essa lista de versões com suporte do Unicode aplica-se somente à comparação e classificação de caracteres. ela não se aplica à classificação de caracteres Unicode por categoria. Para obter mais informações, consulte a seção "Cadeias de caracteres e o Unicode padrão" o <xref:System.String> artigo.  
+ O .NET Framework usa tabelas para realizar classificações com diferenciação de cultura em dados de cadeia de caracteres. O conteúdo dessas tabelas, que contêm dados sobre os pesos de classificação e normalização de cadeias de caracteres, é determinado pela versão do padrão Unicode implementada por uma versão específica do .NET Framework. A tabela a seguir lista as versões do Unicode implementadas pelas versões especificadas do .NET Framework. Observe que essa lista de versões com suporte do Unicode aplica-se somente à comparação e classificação de caracteres. ela não se aplica à classificação de caracteres Unicode por categoria. Para saber mais, confira a seção "Cadeias de caracteres e o padrão Unicode" no artigo <xref:System.String>.  
   
 |Versão do .NET Framework|Sistema operacional|Versão Unicode|  
 |----------------------------|----------------------|---------------------|  
@@ -153,11 +156,11 @@ A globalização envolve projetar e desenvolver um aplicativo preparado para o m
 |.NET Framework 4.5|[!INCLUDE[win7](../../../includes/win7-md.md)]|Unicode 5.0|  
 |.NET Framework 4.5|[!INCLUDE[win8](../../../includes/win8-md.md)]|Unicode 6.0|  
   
- No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], a comparação e classificação de cadeias de caracteres depende do sistema operacional. O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] em execução no [!INCLUDE[win7](../../../includes/win7-md.md)] recupera dados de suas próprias tabelas, que implementam o Unicode 5.0. O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] em execução no [!INCLUDE[win8](../../../includes/win8-md.md)] recupera dados de tabelas do sistema operacional, que implementam o Unicode 6.0. Se você serializar dados classificados sensíveis à cultura, você pode usar o <xref:System.Globalization.SortVersion> classe para determinar quando os dados serializados precisam ser classificada para que seja consistente com o .NET Framework e ordem de classificação do sistema operacional. Para obter um exemplo, consulte o <xref:System.Globalization.SortVersion> tópico sobre a classe.  
+ No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], a comparação e classificação de cadeias de caracteres depende do sistema operacional. O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] em execução no [!INCLUDE[win7](../../../includes/win7-md.md)] recupera dados de suas próprias tabelas, que implementam o Unicode 5.0. O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] em execução no [!INCLUDE[win8](../../../includes/win8-md.md)] recupera dados de tabelas do sistema operacional, que implementam o Unicode 6.0. Se você serializar dados classificados com diferenciação de cultura, você poderá usar a classe <xref:System.Globalization.SortVersion> para determinar quando os dados serializados precisam ser classificados de modo que ele fiquem consistentes com o .NET Framework e a ordem de classificação do sistema operacional. Para obter um exemplo, consulte o tópico da classe <xref:System.Globalization.SortVersion>.  
   
- Se seu aplicativo executa amplos tipos específicos de cultura de dados de cadeia de caracteres, você pode trabalhar com o <xref:System.Globalization.SortKey> classe para comparar cadeias de caracteres. Uma chave de classificação reflete os pesos de classificação específicos de uma determinada cultura, incluindo os pesos alfabético, de maiúsculas e minúsculas e de diacríticos de uma determinada cadeia de caracteres. Como comparações usando chaves de classificação são binárias, eles são mais rápidos do que comparações que usam um <xref:System.Globalization.CompareInfo> de objeto implicitamente ou explicitamente. Criar uma chave de classificação específicas de cultura para uma determinada cadeia de caracteres, passando a cadeia de caracteres para o <xref:System.Globalization.CompareInfo.GetSortKey%2A?displayProperty=nameWithType> método.  
+ Se seu aplicativo executa classificações específicas de cultura abrangentes de dados de cadeia de caracteres, você pode trabalhar com a classe <xref:System.Globalization.SortKey> para comparar cadeias de caracteres. Uma chave de classificação reflete os pesos de classificação específicos de uma determinada cultura, incluindo os pesos alfabético, de maiúsculas e minúsculas e de diacríticos de uma determinada cadeia de caracteres. Já que as comparações usando chaves de classificação são binárias, elas são mais rápidas que comparações que usam um objeto <xref:System.Globalization.CompareInfo> implícita ou explicitamente. Crie uma chave de classificação específica à cultura para uma determinada cadeia de caracteres passando a cadeia de caracteres para o método <xref:System.Globalization.CompareInfo.GetSortKey%2A?displayProperty=nameWithType>.  
   
- O exemplo a seguir é semelhante ao exemplo anterior. No entanto, em vez de chamar o <xref:System.Array.Sort%28System.Array%29?displayProperty=nameWithType> método, que chama implicitamente o <xref:System.Globalization.CompareInfo.Compare%2A?displayProperty=nameWithType> método, ele define um <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> implementação que compara as chaves de classificação, que ele cria e passa para o <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Collections.Generic.IComparer%7B%60%600%7D%29?displayProperty=nameWithType> método.  
+ O exemplo a seguir é semelhante ao exemplo anterior. No entanto, em vez de chamar o método <xref:System.Array.Sort%28System.Array%29?displayProperty=nameWithType>, que chama implicitamente o método <xref:System.Globalization.CompareInfo.Compare%2A?displayProperty=nameWithType>, ele define uma implementação <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> que compara as chaves de classificação, que ele instancia e passa para o método <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Collections.Generic.IComparer%7B%60%600%7D%29?displayProperty=nameWithType>.  
   
  [!code-csharp[Conceptual.Globalization#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/sortkey1.cs#15)]
  [!code-vb[Conceptual.Globalization#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/sortkey1.vb#15)]  
@@ -172,13 +175,13 @@ A globalização envolve projetar e desenvolver um aplicativo preparado para o m
   
 <a name="DatesAndTimes_Display"></a>   
 ### <a name="displaying-dates-and-times"></a>Exibindo Datas e Horas  
- Normalmente, quando as datas e horas são exibidas na interface do usuário, você deve usar as convenções de formatação da cultura do usuário, que é definido pelo <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> propriedade e o <xref:System.Globalization.DateTimeFormatInfo> objeto retornado pelo `CultureInfo.CurrentCulture.DateTimeFormat` propriedade. As convenções de formatação da cultura atual são usadas automaticamente quando você formata uma data usando qualquer um dos seguintes métodos:  
+ Normalmente, quando as datas e horas são exibidas na interface do usuário, você deve usar as convenções de formatação da cultura do usuário, definidas pela propriedade <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> e pelo objeto <xref:System.Globalization.DateTimeFormatInfo> retornado pela propriedade `CultureInfo.CurrentCulture.DateTimeFormat`. As convenções de formatação da cultura atual são usadas automaticamente quando você formata uma data usando qualquer um dos seguintes métodos:  
   
--   Sem o parâmetro <xref:System.DateTime.ToString?displayProperty=nameWithType> método  
+-   O método <xref:System.DateTime.ToString?displayProperty=nameWithType> sem parâmetro  
   
--   O <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> método, que inclui uma cadeia de caracteres de formato  
+-   O método <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>, que inclui uma cadeia de caracteres de formato  
   
--   Sem o parâmetro <xref:System.DateTimeOffset.ToString?displayProperty=nameWithType> método  
+-   O método <xref:System.DateTimeOffset.ToString?displayProperty=nameWithType> sem parâmetro  
   
 -   O <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType>, que inclui uma cadeia de caracteres de formato  
   
@@ -204,7 +207,7 @@ A globalização envolve projetar e desenvolver um aplicativo preparado para o m
   
 -   Salve a cadeia de caracteres usando as convenções de formatação da cultura invariável.  
   
- O exemplo a seguir ilustra a última abordagem. Ele usa as convenções de formatação da cultura invariável retornada por estático <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> propriedade.  
+ O exemplo a seguir ilustra a última abordagem. Ele usa as convenções de formatação da cultura invariável retornada pela propriedade estática <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
   
  [!code-csharp[Conceptual.Globalization#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates3.cs#4)]
  [!code-vb[Conceptual.Globalization#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates3.vb#4)]  
@@ -267,7 +270,7 @@ A globalização envolve projetar e desenvolver um aplicativo preparado para o m
   
 <a name="DatesAndTimes_Arithmetic"></a>   
 ### <a name="performing-date-and-time-arithmetic"></a>Realizando Aritmética de Data e Hora  
- Tanto o <xref:System.DateTime> e <xref:System.DateTimeOffset> tipos dão suporte a operações aritméticas. Você pode calcular a diferença entre dois valores de data ou então você pode adicionar ou subtrair intervalos de tempo específicos para ou de um valor de data. No entanto, operações aritméticas em valores de data/hora não levam em consideração fusos horários e regras de ajuste de fuso horário. Por isso, data e hora em valores que representam pontos no tempo podem retornar resultados imprecisos.  
+ Tanto os tipos <xref:System.DateTime> e <xref:System.DateTimeOffset> dão suporte a operações aritméticas. Você pode calcular a diferença entre dois valores de data ou então você pode adicionar ou subtrair intervalos de tempo específicos para ou de um valor de data. No entanto, operações aritméticas em valores de data/hora não levam em consideração fusos horários e regras de ajuste de fuso horário. Por isso, data e hora em valores que representam pontos no tempo podem retornar resultados imprecisos.  
   
  Por exemplo, ocorre a transição da hora padrão do Pacífico para o horário de verão do Pacífico no segundo domingo de março, que é de 10 de março do ano de 2013. Conforme demonstrado pelo exemplo a seguir, se você calcular a data e hora, o resultado será 48 horas após 9 de março de 2013 às 10:30 da manhã. Em um sistema no fuso horário padrão do Pacífico, o resultado, 11 de março de 2013 às 10:30 da manhã, não leva em consideração o ajuste de horário que ocorre nesse intermédio.  
   
@@ -297,7 +300,7 @@ A globalização envolve projetar e desenvolver um aplicativo preparado para o m
   
  No entanto, esse código sempre retorna os nomes dos dias da semana em inglês. O código que extrai o nome do mês é muitas vezes ainda mais inflexível. Com frequência, ele assume um calendário de doze meses com nomes dos meses em um idioma específico.  
   
- Usando [cadeias de caracteres de formato de data e hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) ou as propriedades da <xref:System.Globalization.DateTimeFormatInfo> do objeto, é fácil extrair as cadeias de caracteres que refletem os nomes dos dias da semana ou meses na cultura do usuário, como mostra o exemplo a seguir. Altera a cultura atual para o francês (França) e exibe o nome do dia da semana e o nome do mês para 1º de julho de 2013.  
+ Usando [cadeias de caracteres com formato de data e hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) ou as propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo>, é fácil extrair cadeias de caracteres que refletem os nomes dos dias da semana ou meses na cultura do usuário, conforme ilustrado pelo exemplo a seguir. Altera a cultura atual para o francês (França) e exibe o nome do dia da semana e o nome do mês para 1º de julho de 2013.  
   
  [!code-csharp[Conceptual.Globalization#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/monthname2.cs#20)]
  [!code-vb[Conceptual.Globalization#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/monthname2.vb#20)]  
@@ -311,7 +314,7 @@ A globalização envolve projetar e desenvolver um aplicativo preparado para o m
   
 <a name="Numbers_Display"></a>   
 ### <a name="displaying-numeric-values"></a>Exibindo Valores Numéricos  
- Normalmente, quando os números são exibidos na interface do usuário, você deve usar as convenções de formatação da cultura do usuário, que é definido pelo <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> propriedade e o <xref:System.Globalization.NumberFormatInfo> objeto retornado pelo `CultureInfo.CurrentCulture.NumberFormat` propriedade. As convenções de formatação da cultura atual são usadas automaticamente quando você formata uma data usando qualquer um dos seguintes métodos:  
+ Normalmente, quando os números são exibidos na interface do usuário, você deve usar as convenções de formatação da cultura do usuário, definidas pela propriedade <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> e pelo objeto <xref:System.Globalization.NumberFormatInfo> retornado pela propriedade `CultureInfo.CurrentCulture.NumberFormat`. As convenções de formatação da cultura atual são usadas automaticamente quando você formata uma data usando qualquer um dos seguintes métodos:  
   
 -   O método sem parâmetro `ToString` de qualquer tipo numérico  
   
@@ -319,7 +322,7 @@ A globalização envolve projetar e desenvolver um aplicativo preparado para o m
   
 -   O recurso de [formatação de composição](../../../docs/standard/base-types/composite-formatting.md), quando ele é usado com valores numéricos  
   
- O exemplo a seguir exibe a temperatura média por mês em Paris, na França. Ele primeiro define a cultura atual para Francês (França) antes de exibir os dados e, em seguida, define-a como Inglês (Estados Unidos). Em cada caso, as temperaturas e os nomes dos meses são exibidos no formato apropriado para aquela cultura. Observe que as duas culturas usam separadores decimais diferentes no valor da temperatura. Observe também que o exemplo usa "MMMM" data e hora de cadeia de caracteres de formato personalizado para exibir o nome completo do mês, e que aloca a quantidade apropriada de espaço para o nome do mês na cadeia de caracteres de resultado, determinando o comprimento do nome do mês mais longo de <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType></C0>matriz.  
+ O exemplo a seguir exibe a temperatura média por mês em Paris, na França. Ele primeiro define a cultura atual para Francês (França) antes de exibir os dados e, em seguida, define-a como Inglês (Estados Unidos). Em cada caso, as temperaturas e os nomes dos meses são exibidos no formato apropriado para aquela cultura. Observe que as duas culturas usam separadores decimais diferentes no valor da temperatura. Observe também que o exemplo usa a cadeia de caracteres de formato personalizado de data e hora "MMMM" para exibir o nome completo do mês e que aloca a quantidade apropriada de espaço para o nome do mês na cadeia de caracteres de resultado, determinando o comprimento do nome do mês mais longo na matriz <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType>.  
   
  [!code-csharp[Conceptual.Globalization#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/numbers1.cs#5)]
  [!code-vb[Conceptual.Globalization#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/numbers1.vb#5)]  
@@ -335,11 +338,11 @@ A globalização envolve projetar e desenvolver um aplicativo preparado para o m
   
 -   Salve e analise a representação do número usando uma cadeia de caracteres de formato personalizado, que é a mesma independentemente da cultura do usuário.  
   
--   Salve o número como uma cadeia de caracteres usando as convenções de formatação da cultura invariável, que é retornado pelo <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> propriedade.  
+-   Salve o número como uma cadeia de caracteres usando as convenções de formatação da cultura invariável, retornadas pela propriedade <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
   
 -   Serialize o número em formato binário em vez do formato de cadeia de caracteres.  
   
- O exemplo a seguir ilustra a última abordagem. Ele serializa a matriz de <xref:System.Double> valores e, em seguida, desserializa e exibe-los usando as convenções de formatação do inglês (Estados Unidos) e culturas francês (França).  
+ O exemplo a seguir ilustra a última abordagem. Ele serializa a matriz de valores <xref:System.Double> e, em seguida, as desserializa e exibe usando as convenções de formatação das culturas Inglês (Estados Unidos) e Francês (França).  
   
  [!code-csharp[Conceptual.Globalization#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/numbers3.cs#7)]
  [!code-vb[Conceptual.Globalization#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/numbers3.vb#7)]  
@@ -349,24 +352,24 @@ A globalização envolve projetar e desenvolver um aplicativo preparado para o m
  [!code-csharp[Conceptual.Globalization#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/currency1.cs#16)]
  [!code-vb[Conceptual.Globalization#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/currency1.vb#16)]  
   
- Em vez disso, você deve serializar o valor numérico juntamente com algumas informações culturais como o nome da cultura, para que o valor e o símbolo de moeda possam ser desserializados independentemente da cultura atual. O exemplo a seguir faz isso definindo uma `CurrencyValue` estrutura com dois membros: o <xref:System.Decimal> valor e o nome da cultura à qual pertence o valor.  
+ Em vez disso, você deve serializar o valor numérico juntamente com algumas informações culturais como o nome da cultura, para que o valor e o símbolo de moeda possam ser desserializados independentemente da cultura atual. O exemplo a seguir faz isso definindo uma estrutura `CurrencyValue` com dois membros: o valor de <xref:System.Decimal> e o nome da cultura à qual o valor pertence.  
   
  [!code-csharp[Conceptual.Globalization#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/currency2.cs#17)]
  [!code-vb[Conceptual.Globalization#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/currency2.vb#17)]  
   
 <a name="Cultures"></a>   
 ## <a name="working-with-culture-specific-settings"></a>Trabalhando com Configurações Específicas da Cultura  
- No .NET Framework, o <xref:System.Globalization.CultureInfo> classe representa uma cultura específica ou região. Algumas de suas propriedades retornam objetos que fornecem informações específicas sobre alguns aspectos de uma cultura:  
+ No .NET Framework, a classe <xref:System.Globalization.CultureInfo> representa uma cultura ou região específica. Algumas de suas propriedades retornam objetos que fornecem informações específicas sobre alguns aspectos de uma cultura:  
   
--   O <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> propriedade retorna um <xref:System.Globalization.CompareInfo> objeto que contém informações sobre como a cultura compara e ordena as cadeias de caracteres.  
+-   A propriedade <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> retorna um objeto <xref:System.Globalization.CompareInfo> que contém informações sobre como a cultura compara e ordena as cadeias de caracteres.  
   
--   O <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> propriedade retorna um <xref:System.Globalization.DateTimeFormatInfo> objeto que fornece informações específicas da cultura usadas na formatação de data e hora.  
+-   A propriedade <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> retorna um objeto <xref:System.Globalization.DateTimeFormatInfo> que fornece informações específicas à cultura usadas na formatação dos dados de data e hora.  
   
--   O <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType> propriedade retorna um <xref:System.Globalization.NumberFormatInfo> objeto que fornece informações específicas da cultura usadas na formatação de dados numéricos.  
+-   A propriedade <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType> retorna um objeto <xref:System.Globalization.NumberFormatInfo> que fornece informações específicas à cultura usadas na formatação de dados numéricos.  
   
--   O <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=nameWithType> propriedade retorna um <xref:System.Globalization.TextInfo> objeto que fornece informações sobre a cultura de gravação do sistema.  
+-   A propriedade <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=nameWithType> retorna um objeto <xref:System.Globalization.TextInfo> que fornece informações sobre o sistema de gravação da cultura.  
   
- Em geral, não faça suposições sobre os valores de específicos <xref:System.Globalization.CultureInfo> propriedades e seus objetos relacionados. Em vez disso, você deve exibir os dados específicos da cultura como sujeitos a alterações, por estes motivos:  
+ Em geral, não faça suposições sobre os valores de propriedades <xref:System.Globalization.CultureInfo> específicas e seus objetos relacionados. Em vez disso, você deve exibir os dados específicos da cultura como sujeitos a alterações, por estes motivos:  
   
 -   Valores de propriedade individuais estão sujeitos a alteração e revisão ao longo do tempo; conforme os dados são corrigidos, dados melhores ficam disponíveis, ou então as convenções específicas da cultura são alteradas.  
   
@@ -374,7 +377,7 @@ A globalização envolve projetar e desenvolver um aplicativo preparado para o m
   
 -   O .NET Framework dá suporte a culturas de substituição. Isso torna possível definir uma nova cultura personalizada que complementa as culturas padrão existentes ou substitui completamente uma cultura padrão existente.  
   
--   O usuário pode personalizar configurações específicas da cultura usando o aplicativo **Região e Idioma** no Painel de Controle. Quando você instancia um <xref:System.Globalization.CultureInfo> do objeto, você pode determinar se ele reflete essas personalizações do usuário chamando o <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> construtor. Normalmente, para aplicativos de usuário final, você deve respeitar as preferências do usuário para que sejam apresentados ao usuário dados em um formato que ele espera.  
+-   O usuário pode personalizar configurações específicas da cultura usando o aplicativo **Região e Idioma** no Painel de Controle. Quando você instancia um objeto <xref:System.Globalization.CultureInfo>, é possível determinar se ele reflete as personalizações desse usuário chamando o construtor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>. Normalmente, para aplicativos de usuário final, você deve respeitar as preferências do usuário para que sejam apresentados ao usuário dados em um formato que ele espera.  
   
 ## <a name="see-also"></a>Consulte também  
  [Globalização e localização](../../../docs/standard/globalization-localization/index.md)  

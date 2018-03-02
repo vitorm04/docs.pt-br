@@ -18,20 +18,23 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET Framework], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 026f6ae4dd9aee340d6a9ffb931d0525ae75654a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6fbf9c910847986af1c02b5848c81266009e2e07
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-read-text-from-a-file"></a>Como ler texto de um arquivo
 Os exemplos a seguir mostram como ler de forma síncrona e assíncrona o texto de um arquivo de texto usando o .NET para aplicativos de área de trabalho. Nos dois exemplos, ao criar uma instância da classe <xref:System.IO.StreamReader>, você fornece o caminho relativo ou absoluto para o arquivo. Os exemplos a seguir supõem que o arquivo denominado TestFile.txt está na mesma pasta que o aplicativo.  
   
- Esses exemplos de código não se aplicam a aplicativos da Windows Store porque o Tempo de Execução do Windows fornece tipos diferentes de fluxos lendo e gravando em arquivos. Para obter um exemplo que mostra como ler texto de um arquivo dentro do contexto de um aplicativo da Windows Store, consulte [início rápido: lendo e gravando arquivos](http://msdn.microsoft.com/library/windows/apps/hh758325.aspx). Para obter exemplos que mostram como converter entre fluxos do .NET Framework e tempo de execução do Windows, consulte [como: converter entre fluxos do .NET Framework e do Windows Runtime](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
+ Esses exemplos de código não se aplicam a aplicativos da Windows Store porque o Tempo de Execução do Windows fornece tipos diferentes de fluxos lendo e gravando em arquivos. Para obter um exemplo que mostra como ler o texto de um arquivo no contexto de um aplicativo da Windows Store, consulte [Início rápido: ler e gravar arquivos](http://msdn.microsoft.com/library/windows/apps/hh758325.aspx). Para obter exemplos que mostram como converter entre fluxos do .NET Framework e fluxos do Windows Runtime, confira [Como converter entre fluxos do .NET Framework e do Windows Runtime](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
   
 ## <a name="example"></a>Exemplo  
  O primeiro exemplo mostra uma operação de leitura síncrona em um aplicativo de console. Neste exemplo, o arquivo de texto é aberto usando um leitor de fluxo, o conteúdo é copiado para uma cadeia de caracteres e cadeia de caracteres é a saída do console.  
@@ -50,8 +53,8 @@ Os exemplos a seguir mostram como ler de forma síncrona e assíncrona o texto d
  <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>  
  <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
  [E/S de arquivo assíncrona](../../../docs/standard/io/asynchronous-file-i-o.md)  
- [NIB: Como: criar uma listagem de diretório](http://msdn.microsoft.com/en-us/4d2772b1-b991-4532-a8a6-6ef733277e69)  
- [Início rápido: Lendo e gravando arquivos](http://msdn.microsoft.com/library/windows/apps/hh758325.aspx)  
+ [NIB: Como criar uma listagem de diretório](http://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
+ [Início rápido: ler e gravar arquivos](http://msdn.microsoft.com/library/windows/apps/hh758325.aspx)  
  [Como converter entre fluxos do .NET Framework e do Tempo de Execução do Windows](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)  
  [Como ler e gravar em um arquivo de dados recém-criado](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
  [Como abrir e acrescentar a um arquivo de log](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  

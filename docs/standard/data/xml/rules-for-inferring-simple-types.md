@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9a74d111720eb9436f0cd71fd5acef7ea10939c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c3e6c24fafdd79676e68fa9dd06cf399fc09d5ea
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="rules-for-inferring-simple-types"></a>Regras para inferir tipos simples
 Descreve como a classe de <xref:System.Xml.Schema.XmlSchemaInference> infere o tipo de dados para atributos e elementos.  
@@ -35,11 +38,11 @@ Descreve como a classe de <xref:System.Xml.Schema.XmlSchemaInference> infere o t
 |-----------------|-----------------|  
 |boolean|True, false, 0, 1.|  
 |byte|Inteiros no intervalo de – 128 a 127.|  
-|unsignedByte|Números inteiros no intervalo de 0 a 255.|  
+|unsignedByte|Inteiros no intervalo de 0 a 255.|  
 |short|Inteiros no intervalo de – 32768 a 32767.|  
-|unsignedShort|Números inteiros no intervalo de 0 a 65535.|  
+|unsignedShort|Inteiros no intervalo de 0 a 65535.|  
 |int|Inteiros no intervalo de – 2147483648 a 2147483647.|  
-|unsignedInt|Números inteiros no intervalo de 0 a 4294967295.|  
+|unsignedInt|Inteiros no intervalo de 0 a 4294967295.|  
 |long|Inteiros no intervalo de – 9223372036854775808 a 9223372036854775807.|  
 |unsignedLong|Inteiros no intervalo de 0 a 18446744073709551615.|  
 |inteiro|Um número de dígitos finito prefixados possivelmente com “-”.|  
@@ -85,4 +88,4 @@ Descreve como a classe de <xref:System.Xml.Schema.XmlSchemaInference> infere o t
 ## <a name="see-also"></a>Consulte também  
  [XML Schema Object Model (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md) [SOM (Modelo de Objeto de Esquema) XML]  
  [Inferindo esquemas de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
- [Regras para inferir tipos de nó do esquema e estrutura](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
+ [Regras para inferir tipos de nó e estrutura de esquema](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

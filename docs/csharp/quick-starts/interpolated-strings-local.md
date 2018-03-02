@@ -1,6 +1,6 @@
 ---
-title: "Início Rápido – cadeias de caracteres interpoladas – guia de linguagem C#"
-description: "Neste guia de início rápido sobre cadeias de caracteres interpoladas, você escreve um código em C# para incluir o resultado de uma expressão em uma cadeia de caracteres maior."
+title: "Tutorial sobre cadeias de caracteres interpoladas – guias de início rápido de C#"
+description: "Neste guia de início rápido sobre cadeias de caracteres interpoladas, você escreve código em C# para incluir o resultado de uma expressão em uma cadeia de caracteres maior."
 author: rpetrusha
 ms.author: ronpet
 ms.date: 01/11/2018
@@ -9,17 +9,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 14185dd4e364f12756541ac6401d1c6ff3206fe9
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 3cd9fc23dba104f92255b031eef32f80cca915b0
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="interpolated-strings"></a>Cadeias de caracteres interpoladas
 
 Este guia de início rápido ensina como usar cadeias de caracteres interpoladas em C# para inserir valores em uma única cadeia de caracteres de saída. Escreva o código em C# e veja os resultados da compilação e da execução. O início rápido contém uma série de lições que inserem valores em cadeias de caracteres e formatam esses valores de diferentes maneiras.
 
-Este início rápido espera que você tenha uma máquina que possa usar para desenvolvimento. O tópico do .NET [Familiarize-se em 10 minutos](https://www.microsoft.com/net/core) tem instruções para configurar o ambiente de desenvolvimento local no Mac, PC ou Linux. Confira uma visão geral dos comandos que você usará na [introdução aos inícios rápidos locais](local-environment.md) com links para obter mais detalhes. 
+Este início rápido espera que você tenha um computador que possa usar para desenvolvimento. O tópico do .NET [Familiarize-se em 10 minutos](https://www.microsoft.com/net/core) tem instruções para configurar o ambiente de desenvolvimento local no Mac, PC ou Linux. Confira uma visão geral dos comandos que você usará na [introdução aos inícios rápidos locais](local-environment.md) com links para obter mais detalhes. 
 
 ## <a name="create-an-interpolated-string"></a>Criar uma cadeia de caracteres interpolada
 

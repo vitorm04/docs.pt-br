@@ -1,7 +1,6 @@
 ---
-title: "Início Rápido – Coleções – Guia de C#"
-description: "Aprenda C# explorando a Coleção de lista neste início rápido."
-keywords: "C#, Introdução, tutorial, coleções, Lista"
+title: "Tutorial de coleções ‒ guias de início rápido locais de C#"
+description: "Aprenda C# explorando a Coleção de lista neste tutorial."
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/13/2017
@@ -10,25 +9,25 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 44e79432c0a1970313cba21778e2bf439f8a4388
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 76b3baf0525c81e5b3058aa2ab6fd4ccd97d1916
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="c-quick-start-collections"></a>Início Rápido de C# – Coleções #
+# <a name="c-quickstart-collections"></a>Início rápido do C#: coleções
 
-Este início rápido fornece uma introdução à linguagem C# e os conceitos básicos da classe <xref:System.Collections.Generic.List%601>.
+Este início rápido fornece uma introdução à linguagem C# e aos conceitos básicos da classe <xref:System.Collections.Generic.List%601>.
 
-Este início rápido espera que você tenha uma máquina que possa usar para desenvolvimento. O tópico do .NET [Familiarize-se em 10 minutos](https://www.microsoft.com/net/core) tem instruções para configurar o ambiente de desenvolvimento local no Mac, PC ou Linux. Confira uma visão geral dos comandos que você usará na [introdução aos inícios rápidos locais](local-environment.md) com links para obter mais detalhes.
+Este início rápido espera que você tenha um computador que possa usar para desenvolvimento. O tópico do .NET [Familiarize-se em 10 minutos](https://www.microsoft.com/net/core) tem instruções para configurar o ambiente de desenvolvimento local no Mac, PC ou Linux. Confira uma visão geral dos comandos que você usará na [introdução aos inícios rápidos locais](local-environment.md) com links para obter mais detalhes.
 
-## <a name="a-basic-list-example"></a>Um exemplo de lista básica.
+## <a name="a-basic-list-example"></a>Um exemplo de lista básica
 
 Crie um diretório denominado **list-quickstart**. Torne-o o diretório atual e execute `dotnet new console`.
 
 > [!NOTE]
 > Se você acabou de concluir [Introdução ao .NET em 10 minutos](https://www.microsoft.com/net), continue usando o aplicativo myApp que você acabou de criar.
- 
+
 Abra **Program.cs** em seu editor favorito e substitua o código existente pelo seguinte:
 
 ```csharp
@@ -58,11 +57,11 @@ Você criou uma lista de cadeias de caracteres, adicionou três nomes a essa lis
 O código para exibir nomes usa **cadeias de caracteres interpoladas**.  Quando você precede um `string` com o caractere `$`, pode inserir o código C# na declaração da cadeia de caracteres. A cadeia de caracteres real substitui esse código C# pelo valor gerado. Neste exemplo, ela substitui o `{name.ToUpper()}` por cada nome, convertido em letras maiúsculas, pois você chamou o método <xref:System.String.ToUpper%2A>.
 
 Vamos continuar explorando.
-    
+
 ## <a name="modify-list-contents"></a>Modificar conteúdo da lista
 
 A coleção que você criou usa o tipo <xref:System.Collections.Generic.List%601>. Esse tipo armazena sequências de elementos. Especifique o tipo dos elementos entre os colchetes.
-    
+
 Um aspecto importante desse tipo <xref:System.Collections.Generic.List%601> é que ele pode aumentar ou diminuir, permitindo que você adicione ou remova elementos. Adicione este código antes do `}` de fechamento no método `Main`:
 
 ```csharp
@@ -77,7 +76,7 @@ foreach (var name in names)
 ```
 
 Você adicionou mais dois nomes ao final da lista. Também removeu um. Salve o arquivo e digite `dotnet run` para testá-lo.
-    
+
 O <xref:System.Collections.Generic.List%601> também permite fazer referência a itens individuais por **índice**. Coloque o índice entre os tokens `[` e `]` após o nome da lista. C# usa 0 para o primeiro índice. Adicione este código diretamente abaixo do código que você acabou de adicionar e teste-o:
 
 ```csharp
@@ -91,9 +90,10 @@ Você não pode acessar um índice além do fim da lista. Lembre-se de que os í
 Console.WriteLine($"The list has {names.Count} people in it");
  ```
 
-Salve o arquivo e digite `dotnet run` novamente para ver os resultados.    
+Salve o arquivo e digite `dotnet run` novamente para ver os resultados.
 
 ## <a name="search-and-sort-lists"></a>Pesquisar e classificar listas
+
 Nossos exemplos usam listas relativamente pequenas, mas seus aplicativos podem criar listas com muitos outros elementos, chegando, às vezes, a milhares. Para localizar elementos nessas coleções maiores, pesquise por itens diferentes na lista. O método <xref:System.Collections.Generic.List%601.IndexOf%2A> procura um item e retorna o índice do item. Adicione este código à parte inferior de seu método `Main`:
 
 ```csharp
@@ -113,7 +113,7 @@ if (index == -1)
 } else
 {
     Console.WriteLine($"The name {names[index]} is at index {index}");
-    
+
 }
 ```
 
@@ -184,7 +184,7 @@ namespace list_quickstart
 
 ## <a name="lists-of-other-types"></a>Listas de outros tipos
 
-Você usou o tipo `string` nas listas até o momento. Vamos fazer <xref:System.Collections.Generic.List%601> usar um tipo diferente. Vamos compilar um conjunto de números. 
+Você usou o tipo `string` nas listas até o momento. Vamos fazer <xref:System.Collections.Generic.List%601> usar um tipo diferente. Vamos compilar um conjunto de números.
 
 Adicione o seguinte à parte inferior do novo método `Main`:
 
@@ -204,12 +204,13 @@ foreach(var item in fibonacciNumbers)
     Console.WriteLine(item);
 ```
 
-Salve o arquivo e digite `dotnet run` para ver os resultados. 
+Salve o arquivo e digite `dotnet run` para ver os resultados.
 
 > [!TIP]
-> Para se concentrar apenas nesta seção, comente o código que chama `WorkingWithStrings();`. Coloque apenas dois caracteres `/` na frente da chamada, desta forma: `// WorkingWithStrings();`. 
+> Para se concentrar apenas nesta seção, comente o código que chama `WorkingWithStrings();`. Coloque apenas dois caracteres `/` na frente da chamada, desta forma: `// WorkingWithStrings();`.
 
 ## <a name="challenge"></a>Desafio
+
 Veja se você consegue combinar alguns dos conceitos desta lição e de lições anteriores. Expanda o que você compilou até o momento com números Fibonacci. Tente escrever o código para gerar os 20 primeiros números na sequência. (Como uma dica, o vigésimo número Fibonacci é 6765.)
 
 ## <a name="complete-challenge"></a>Desafio concluído

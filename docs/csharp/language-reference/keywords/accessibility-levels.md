@@ -2,7 +2,8 @@
 title: "Níveis de acessibilidade (Referência de C#)"
 ms.date: 12/06/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - access modifiers [C#], accessibility levels
@@ -10,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 816ee0fab3fae21bff2ffbfcbfe39d04dcf95025
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: fed7d6d0eb3eda4d8d2e1847259dd8d23700d3e7
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="accessibility-levels-c-reference"></a>Níveis de acessibilidade (Referência de C#)
 
-Use os modificadores de acesso, [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) ou [private](../../../csharp/language-reference/keywords/private.md), para especificar um dos seguintes níveis de acessibilidade declarada de membros.  
+Use os modificadores de acesso, `public`, `protected`, `internal` ou `private`, para especificar um dos níveis de acessibilidade declarada a seguir para membros.  
   
 |Acessibilidade declarada|Significado|  
 |----------------------------|-------------|  
-|`public`|O acesso não é restrito.|  
-|`protected`|O acesso é limitado à classe que os contém ou aos tipos derivados da classe que os contém.|  
-|`internal`|O acesso é limitado ao assembly atual.|  
-|`protected internal`|O acesso é limitado ao assembly atual ou aos tipos derivados da classe que os contém.|  
-|`private`|O acesso é limitado ao tipo recipiente.|  
-|`private protected`|O acesso é limitado à classe que o contém ou a tipos derivados da classe que o contém no assembly atual. Disponível desde o C# 7.2. |  
+|[`public`](public.md)|O acesso não é restrito.|  
+|[`protected`](protected.md)|O acesso é limitado à classe que os contém ou aos tipos derivados da classe que os contém.|  
+|[`internal`](internal.md)|O acesso é limitado ao assembly atual.|  
+|[`protected internal`](protected-internal.md)|O acesso é limitado ao assembly atual ou aos tipos derivados da classe que os contém.|  
+|[`private`](private.md)|O acesso é limitado ao tipo recipiente.|  
+|[`private protected`](private-protected.md)|O acesso é limitado à classe que o contém ou a tipos derivados da classe que o contém no assembly atual. Disponível desde o C# 7.2. |  
   
  Apenas um modificador de acesso é permitido para um membro ou tipo, exceto quando você usa as combinações `protected internal` e `private protected`.  
   

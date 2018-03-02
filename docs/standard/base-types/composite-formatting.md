@@ -19,15 +19,18 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1f4b311d6e933f6c653fd7ab189c2e644021970d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dae73a7ace3aac4e7d89ccba186fceacfe9898ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="composite-formatting"></a>Formatação composta
 O recurso de formatação composta do .NET Framework utiliza uma lista de objetos e uma cadeia de caracteres de formato composto como entrada. Uma cadeia de formato de composição consiste em um texto fixo intercalado com espaços reservados indexados, chamados de itens de formato, que correspondem aos objetos na lista. A operação de formatação produz uma cadeia de caracteres de resultado que consiste no texto fixo original intercalado com a representação de cadeia de caracteres dos objetos na lista.  
@@ -61,12 +64,12 @@ O recurso de formatação composta do .NET Framework utiliza uma lista de objeto
 ## <a name="format-item-syntax"></a>Sintaxe do item de formato  
  Cada item de formato assume a forma a seguir e consiste nos seguintes componentes:  
   
- `{`*índice*[`,`*alinhamento*] [`:`*formatString*]`}`  
+ `{` *index*[`,`*alignment*][`:`*formatString*]`}`  
   
  As chaves correspondentes ("{" e "}") são necessárias.  
   
 ### <a name="index-component"></a>Componente de índice  
- O componente obrigatório *index*, também chamado de especificador de parâmetro, é um número iniciado por 0 que identifica um item correspondente na lista de objetos. Ou seja, o item de formato cujo especificador de parâmetro é 0 formata o primeiro objeto na lista, o item de formato cujo especificador de parâmetro é 1 formata o segundo objeto na lista e assim por diante. O exemplo a seguir inclui quatro especificadores de parâmetros, numerados de zero a três, para representar números primos menos de dez:  
+ O componente obrigatório *index*, também chamado de especificador de parâmetro, é um número iniciado por 0 que identifica um item correspondente na lista de objetos. Ou seja, o item de formato cujo especificador de parâmetro é 0 formata o primeiro objeto na lista, o item de formato cujo especificador de parâmetro é 1 formata o segundo objeto na lista e assim por diante. O exemplo a seguir inclui quatro especificadores de parâmetros, numerados de zero a três, para representar números primos menores que dez:  
   
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
@@ -76,7 +79,7 @@ O recurso de formatação composta do .NET Framework utiliza uma lista de objeto
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
   
- Cada item de formato pode fazer referência a qualquer objeto na lista. Por exemplo, se houver três objetos, você poderá formatar o segundo, o primeiro e o terceiro objetos especificando uma cadeia de formato de composição como esta: "{1} {0} {2}". Um objeto que não é referenciado por um item de formato é ignorado. Um <xref:System.FormatException> é gerada em tempo de execução se um especificador de parâmetro designa um item fora dos limites da lista de objetos.  
+ Cada item de formato pode fazer referência a qualquer objeto na lista. Por exemplo, se houver três objetos, você poderá formatar o segundo, o primeiro e o terceiro objetos especificando uma cadeia de formato de composição como esta: "{1} {0} {2}". Um objeto que não é referenciado por um item de formato é ignorado. Uma <xref:System.FormatException> será lançada no tempo de execução se um especificador de parâmetro designar um item fora dos limites da lista de objetos.  
   
 ### <a name="alignment-component"></a>Componente de alinhamento  
  O componente opcional *alignment* é um inteiro com sinal que indica a largura preferencial do campo formatado. Se o valor de *alignment* for menor que o comprimento da cadeia de caracteres formatada, *alignment* será ignorado e o comprimento da cadeia de caracteres formatada será usado como a largura do campo. Os dados formatados no campo serão alinhados à direita se *alignment* for positivo e serão alinhados à esquerda se *alignment* for negativo. Se for necessário preenchimento, espaços em branco serão usados. A vírgula é necessária se *alignment* for especificado.  
@@ -87,9 +90,9 @@ O recurso de formatação composta do .NET Framework utiliza uma lista de objeto
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
 ### <a name="format-string-component"></a>Componente da cadeia de caracteres de formato  
- O componente opcional *formatString* é uma cadeia de caracteres de formato que é apropriada para o tipo de objeto que está sendo formatado. Especifique uma cadeia de caracteres de formato numérico personalizado ou padrão se o objeto correspondente é um valor numérico, personalizada ou padrão de data e hora cadeia de formato se o objeto correspondente for um <xref:System.DateTime> objeto, ou um [cadeia de caracteres de formato de enumeração](../../../docs/standard/base-types/enumeration-format-strings.md)se o objeto correspondente é um valor de enumeração. Se *formatString* não for especificado, o especificador de formato geral ("G") para um tipo numérico, de data e hora ou enumeração será usado. Os dois-pontos são necessários quando *formatString* é especificado.  
+ O componente opcional *formatString* é uma cadeia de caracteres de formato que é apropriada para o tipo de objeto que está sendo formatado. Especifique uma cadeia de caracteres de formato numérico padrão ou personalizado se o objeto correspondente é um valor numérico, uma cadeia de caracteres de formato de data e hora padrão ou personalizado, se o objeto é um objeto <xref:System.DateTime> ou uma [cadeia de caracteres de formato de enumeração](../../../docs/standard/base-types/enumeration-format-strings.md) se o objeto correspondente é um valor de enumeração. Se *formatString* não for especificado, o especificador de formato geral ("G") para um tipo numérico, de data e hora ou enumeração será usado. Os dois-pontos são necessários quando *formatString* é especificado.  
   
- A tabela a seguir lista tipos ou categorias de tipos na biblioteca de classes do .NET Framework que dão suporte a um conjunto predefinido de cadeias de caracteres de formato e fornece links para tópicos que relacionam as cadeias de caracteres de formato com suporte. Observe que a formatação de cadeias de caracteres é um mecanismo extensível que possibilita definir novas cadeias de caracteres de formato para todos os tipos existentes, bem como definir um conjunto de cadeias de caracteres de formato com suporte por um tipo definido por aplicativo. Para obter mais informações, consulte o <xref:System.IFormattable> e <xref:System.ICustomFormatter> tópicos de interface.  
+ A tabela a seguir lista tipos ou categorias de tipos na biblioteca de classes do .NET Framework que dão suporte a um conjunto predefinido de cadeias de caracteres de formato e fornece links para tópicos que relacionam as cadeias de caracteres de formato com suporte. Observe que a formatação de cadeias de caracteres é um mecanismo extensível que possibilita definir novas cadeias de caracteres de formato para todos os tipos existentes, bem como definir um conjunto de cadeias de caracteres de formato com suporte por um tipo definido por aplicativo. Para saber mais, veja os tópicos de interface <xref:System.IFormattable> e <xref:System.ICustomFormatter>.  
   
 |Tipo ou categoria de tipo|Consulte|  
 |---------------------------|---------|  
@@ -126,7 +129,7 @@ O recurso de formatação composta do .NET Framework utiliza uma lista de objeto
   
 1.  Se o valor a ser formatado for `null`, uma cadeia de caracteres vazia ("") será retornada.  
   
-2.  Se uma implementação de <xref:System.ICustomFormatter> estiver disponível, o tempo de execução chamará seu método <xref:System.ICustomFormatter.Format%2A>. Ele passa ao método o item de formato *formatString* valor, se houver, ou `null` se não estiver, juntamente com o <xref:System.IFormatProvider> implementação.  
+2.  Se uma implementação de <xref:System.ICustomFormatter> estiver disponível, o tempo de execução chamará seu método <xref:System.ICustomFormatter.Format%2A>. Passa ao método o valor *formatString* do item de formato, se há algum presente, ou `null` quando não há, junto com a implementação de <xref:System.IFormatProvider>.  
   
 3.  Se o valor implementa a interface <xref:System.IFormattable>, o método <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> da interface é chamado. O método recebe o valor *formatString*, se houver um presente no item de formato ou `null`, se não houver. O argumento <xref:System.IFormatProvider> é determinado da seguinte forma:  
   
@@ -158,7 +161,7 @@ O recurso de formatação composta do .NET Framework utiliza uma lista de objeto
  [!code-csharp[Formatting.Composite#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#5)]
  [!code-vb[Formatting.Composite#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#5)]  
   
- O exemplo a seguir demonstra o uso de alinhamento na formatação. Os argumentos que são formatados são colocados entre a barra vertical caracteres (&#124;) para realçar o alinhamento resultante.  
+ O exemplo a seguir demonstra o uso de alinhamento na formatação. Os argumentos formatados são colocados entre caracteres de barra vertical (&#124;) para realçar o alinhamento resultante.  
   
  [!code-csharp[Formatting.Composite#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#6)]
  [!code-vb[Formatting.Composite#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#6)]  

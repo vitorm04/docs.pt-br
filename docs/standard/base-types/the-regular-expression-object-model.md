@@ -41,44 +41,47 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e8784ed31de4a511f9eee361a4becee3d080298a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4f1918788a571e9626554eaeec9fdd3f1686d4cc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="the-regular-expression-object-model"></a>O modelo de objeto de expressão regular
-<a name="introduction"></a>Este tópico descreve o modelo de objeto usado no trabalho com expressões regulares do .NET. Ele contém as seguintes seções:  
+<a name="introduction"></a> Este tópico descreve o modelo do objeto usado ao trabalhar com expressões regulares do .NET. Ele contém as seguintes seções:  
   
--   [O mecanismo de expressão Regular](#Engine)  
+-   [O mecanismo de expressões regulares](#Engine)  
   
--   [Os objetos de correspondência e MatchCollection](#Match_and_MCollection)  
+-   [Os objetos MatchCollection e Match](#Match_and_MCollection)  
   
--   [A coleção de grupo](#GroupCollection)  
+-   [A coleta de Grupo](#GroupCollection)  
   
 -   [O grupo capturado](#the_captured_group)  
   
--   [A coleção de captura](#CaptureCollection)  
+-   [A coleta de captura](#CaptureCollection)  
   
--   [A captura Individual](#the_individual_capture)  
+-   [A captura individual](#the_individual_capture)  
   
 <a name="Engine"></a>   
 ## <a name="the-regular-expression-engine"></a>O mecanismo de expressões regulares  
- O mecanismo de expressões regulares no .NET é representado pela <xref:System.Text.RegularExpressions.Regex> classe. O mecanismo de expressões regulares é responsável por analisar e compilar uma expressão regular e realizar operações que correspondem ao padrão da expressão regular com uma cadeia de caracteres de entrada. O mecanismo é o componente central no modelo de objeto de expressão regular do .NET.  
+ O mecanismo de expressões regulares no .NET é representada pela classe <xref:System.Text.RegularExpressions.Regex>. O mecanismo de expressões regulares é responsável por analisar e compilar uma expressão regular e realizar operações que correspondem ao padrão da expressão regular com uma cadeia de caracteres de entrada. O mecanismo é o componente central no modelo do objeto da expressão regular do .NET.  
   
  Você pode usar o mecanismo de expressões regulares de duas maneiras:  
   
--   Ao calcular os métodos estáticos da classe <xref:System.Text.RegularExpressions.Regex>. Os parâmetros do método incluem a cadeia de caracteres de entrada e o padrão da expressão regular. O mecanismo da expressão regular armazena em cache expressões regulares que são usadas em chamadas de método estático, por isso, chamadas repetidas a métodos de expressão regular estáticos que usam a mesma expressão regular oferecem um desempenho relativamente bom.  
+-   Ao calcular os métodos estáticos da classe <xref:System.Text.RegularExpressions.Regex>. Os parâmetros do método incluem a cadeia de caracteres de entrada e o padrão da expressão regular. O mecanismo de expressões regulares armazena em cache expressões regulares que são usadas em chamadas de método estático; por isso, chamadas repetidas a métodos de expressão regular estáticos que usam a mesma expressão regular oferecem um desempenho relativamente bom.  
   
 -   Ao instanciar um objeto <xref:System.Text.RegularExpressions.Regex>, transmitindo uma expressão regular ao construtor da classe. Nesse caso, o objeto <xref:System.Text.RegularExpressions.Regex> é imutável (somente leitura) e representa um mecanismo de expressão regular que está ligado rigorosamente a uma única expressão regular. Como as expressões regulares usadas por instâncias <xref:System.Text.RegularExpressions.Regex> não são armazenadas em cache, você não deve instanciar um objeto <xref:System.Text.RegularExpressions.Regex> várias vezes com a mesma expressão regular.  
   
  Você pode chamar os métodos da classe <xref:System.Text.RegularExpressions.Regex> para realizar as seguintes operações:  
   
--   Determinar se uma cadeia de caracteres corresponde a uma padrão de expressão regular.  
+-   Determinar se uma cadeia de caracteres corresponde a um padrão de expressão regular.  
   
 -   Extrair uma única correspondência ou a primeira correspondência.  
   
@@ -114,12 +117,12 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/match1.cs#2)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/match1.vb#2)]  
   
- O padrão da expressão regular `\b(\w+)\W+(\1)\b` é interpretado conforme a tabela a seguir.  
+ O padrão da expressão regular `\b(\w+)\W+(\1)\b` é interpretado conforme mostrado na tabela a seguir.  
   
 |Padrão|Descrição|  
 |-------------|-----------------|  
 |`\b`|Começa a correspondência em um limite de palavra.|  
-|`(\w+)`|Fazer a correspondência a um ou mais caracteres de palavra. Este é o primeiro grupo de captura.|  
+|`(\w+)`|Corresponde a um ou mais caracteres de palavra. Este é o primeiro grupo de captura.|  
 |`\W+`|Estabeleça a correspondência com um ou mais caracteres que não compõem palavras.|  
 |`(\1)`|Corresponder à primeira cadeia capturada. Este é o segundo grupo de captura.|  
 |`\b`|Termina a correspondência em um limite de palavra.|  
@@ -140,7 +143,7 @@ ms.lasthandoff: 11/21/2017
   
 |Padrão|Descrição|  
 |-------------|-----------------|  
-|`\b`|Começar a correspondência em um limite de palavra.|  
+|`\b`|Começa a correspondência em um limite de palavra.|  
 |`\d+`|Corresponde a um ou mais dígitos decimais.|  
 |`\.`|Corresponde a um ponto final.|  
 |`\d{2}`|Corresponde a dois dígitos decimais.|  
@@ -163,20 +166,20 @@ ms.lasthandoff: 11/21/2017
   
 |Padrão|Descrição|  
 |-------------|-----------------|  
-|`\b`|Começar a correspondência em um limite de palavra.|  
+|`\b`|Começa a correspondência em um limite de palavra.|  
 |`\d{1,2}`|Corresponder a um ou dois dígitos decimais.|  
 |`\.`|Corresponde a um ponto final.|  
 |`\s`|Corresponde a um caractere de espaço em branco.|  
   
 <a name="Match_and_MCollection"></a>   
-## <a name="the-matchcollection-and-match-objects"></a>A coleção de correspondência e os objetos de correspondência  
+## <a name="the-matchcollection-and-match-objects"></a>Os objetos MatchCollection e Match  
  Métodos regex retornam dois objetos que fazem parte do modelos de objeto de expressão regular: os objetos <xref:System.Text.RegularExpressions.MatchCollection> e <xref:System.Text.RegularExpressions.Match>.  
   
 <a name="the_match_collection"></a>   
 ### <a name="the-match-collection"></a>A coleção de correspondência  
- O método <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> retorna um objeto <xref:System.Text.RegularExpressions.MatchCollection> que contém objetos <xref:System.Text.RegularExpressions.Match> que representam todas as correspondências localizadas pelo mecanismo de expressão regular na ordem em que elas ocorrem na cadeia de caracteres de entrada. Se não houver correspondências, o método retorna um objeto <xref:System.Text.RegularExpressions.MatchCollection> sem membros. A propriedade <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> permite que você acesse membros individuais da coleção por índice, de zero a um valor uma vez menor do que o valor da propriedade <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType>. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A>é o indexador (em c#) e a propriedade padrão (no Visual Basic) da coleção.  
+ O método <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> retorna um objeto <xref:System.Text.RegularExpressions.MatchCollection> que contém objetos <xref:System.Text.RegularExpressions.Match> que representam todas as correspondências localizadas pelo mecanismo de expressão regular na ordem em que elas ocorrem na cadeia de caracteres de entrada. Se não houver correspondências, o método retorna um objeto <xref:System.Text.RegularExpressions.MatchCollection> sem membros. A propriedade <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> permite que você acesse membros individuais da coleção por índice, de zero a um valor uma vez menor do que o valor da propriedade <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType>. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A> é o indexador da coleção (no C#) e a propriedade padrão (no Visual Basic).  
   
- Por padrão, a chamada para o método <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> usa a avaliação lenta para preencher o objeto <xref:System.Text.RegularExpressions.MatchCollection>. O acesso a propriedades que requerem uma coleção completamente preenchida, como as propriedades <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> e <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType>, pode envolver uma penalização de desempenho. Como resultado, recomendamos que você acesse a coleção usando o objeto <xref:System.Collections.IEnumerator> retornado pelo método <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType>. Idiomas individuais fornecem construções, como `For``Each` no Visual Basic e `foreach` em c#, que encapsular a coleção <xref:System.Collections.IEnumerator> interface.  
+ Por padrão, a chamada para o método <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> usa a avaliação lenta para preencher o objeto <xref:System.Text.RegularExpressions.MatchCollection>. O acesso a propriedades que requerem uma coleção completamente preenchida, como as propriedades <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> e <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType>, pode envolver uma penalização de desempenho. Como resultado, recomendamos que você acesse a coleção usando o objeto <xref:System.Collections.IEnumerator> retornado pelo método <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType>. Linguagens individuais oferecem constructos, como `For``Each` no Visual Basic e `foreach` no C#, que encapsulam a interface <xref:System.Collections.IEnumerator> da coleção.  
   
  O exemplo a seguir usa o método <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%29?displayProperty=nameWithType> para preencher um objeto <xref:System.Text.RegularExpressions.MatchCollection> com todas as correspondências localizadas em uma cadeia de caracteres de entrada. O exemplo enumera a coleção, copia as correspondência para uma matriz de cadeia de caracteres e registra as posições dos caracteres em uma matriz de inteiros.  
   
@@ -187,9 +190,9 @@ ms.lasthandoff: 11/21/2017
 ### <a name="the-match"></a>A correspondência  
  A classe <xref:System.Text.RegularExpressions.Match> representa o resultado de uma única correspondência de expressão regular. É possível acessar objetos <xref:System.Text.RegularExpressions.Match> de duas formas:  
   
--   Recuperando-os do objeto <xref:System.Text.RegularExpressions.MatchCollection> que é retornado pelo método <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>. Para recuperar individuais <xref:System.Text.RegularExpressions.Match> objetos, iterar a coleção usando um `foreach` (em c#) ou `For Each`... `Next` (no Visual Basic) construir ou use o <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> propriedade para recuperar um determinado <xref:System.Text.RegularExpressions.Match> por índice ou pelo nome de objeto. Também é possível recuperar objetos <xref:System.Text.RegularExpressions.Match> individuais da coleção iterando a coleção por índice, de zero a um valor uma vez menor do que o número de objetos na coleção de dados. Entretanto, esse método não utiliza a avaliação lenta, pois ele acessa a propriedade <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType>.  
+-   Recuperando-os do objeto <xref:System.Text.RegularExpressions.MatchCollection> que é retornado pelo método <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>. Para recuperar objetos <xref:System.Text.RegularExpressions.Match> individuais, itere a coleção usando um constructo `foreach` (no C#) ou `For Each`...`Next` (no Visual Basic) ou use a propriedade <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> para recuperar um objeto <xref:System.Text.RegularExpressions.Match> específico por índice ou por nome. Também é possível recuperar objetos <xref:System.Text.RegularExpressions.Match> individuais da coleção iterando a coleção por índice, de zero a um valor uma vez menor do que o número de objetos na coleção de dados. Entretanto, esse método não utiliza a avaliação lenta, pois ele acessa a propriedade <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType>.  
   
-     O exemplo a seguir recupera objetos <xref:System.Text.RegularExpressions.Match> individuais de um objeto <xref:System.Text.RegularExpressions.MatchCollection> iterando a coleção usando o constructo `foreach` ou `For Each`...`Next`. A expressão regular simplesmente corresponde a cadeia de caracteres "abc" na cadeia de caracteres de entrada.  
+     O exemplo a seguir recupera objetos <xref:System.Text.RegularExpressions.Match> individuais de um objeto <xref:System.Text.RegularExpressions.MatchCollection> iterando a coleção usando o constructo `foreach` ou `For Each`...`Next`. A expressão regular simplesmente corresponde a cadeia de caracteres “abc” na cadeia de caracteres de entrada.  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/match2.cs#7)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/match2.vb#7)]  
@@ -209,7 +212,7 @@ ms.lasthandoff: 11/21/2017
   
  Para obter mais informações sobre esses objetos, consulte as seções [A coleção de grupo](#GroupCollection) e [A coleção de captura](#CaptureCollection) posteriormente, neste tópico.  
   
- Duas propriedades adicionais da classe <xref:System.Text.RegularExpressions.Match> oferecem informações sobre a correspondência. A propriedade `Match.Value` retorna a subcadeia na cadeia de caracteres de entrada que corresponde a padrão de expressão regular. A propriedade `Match.Index` retorna a posição inicial baseada em zero da cadeia correspondida na cadeia de caracteres de entrada.  
+ Duas propriedades adicionais da classe <xref:System.Text.RegularExpressions.Match> oferecem informações sobre a correspondência. A propriedade `Match.Value` retorna a subcadeia na cadeia de caracteres de entrada que corresponde ao padrão de expressão regular. A propriedade `Match.Index` retorna a posição inicial baseada em zero da cadeia correspondida na cadeia de caracteres de entrada.  
   
  A classe <xref:System.Text.RegularExpressions.Match> também tem dois métodos de correspondência de padrões:  
   
@@ -222,14 +225,14 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/result1.cs#9)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/result1.vb#9)]  
   
- O padrão de expressão regular `\b\d+(,\d{3})*\.\d{2}\b` é definido como mostrado na tabela a seguir.  
+ O padrão de expressão regular `\b\d+(,\d{3})*\.\d{2}\b` é definido conforme mostrado na tabela a seguir.  
   
 |Padrão|Descrição|  
 |-------------|-----------------|  
-|`\b`|Começar a correspondência em um limite de palavra.|  
+|`\b`|Começa a correspondência em um limite de palavra.|  
 |`\d+`|Corresponde a um ou mais dígitos decimais.|  
 |`(,\d{3})*`|Corresponder a zero ou mais ocorrências de uma vírgula seguida por três dígitos decimais.|  
-|`\.`|Corresponde ao caractere de vírgula decimal.|  
+|`\.`|Corresponder ao caractere de vírgula decimal.|  
 |`\d{2}`|Corresponde a dois dígitos decimais.|  
 |`\b`|Termina a correspondência em um limite de palavra.|  
   
@@ -239,7 +242,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="GroupCollection"></a>   
 ## <a name="the-group-collection"></a>A coleção de grupo  
- A propriedade <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> retorna um objeto <xref:System.Text.RegularExpressions.GroupCollection> que contém <xref:System.Text.RegularExpressions.Group> objetos que representam grupos capturados em uma única correspondência. O primeiro objeto <xref:System.Text.RegularExpressions.Group> na coleção (no índice 0) representa a correspondência inteira. Cada objeto que se segue representa os resultados de uma único grupo de captura.  
+ A propriedade <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> retorna um objeto <xref:System.Text.RegularExpressions.GroupCollection> que contém <xref:System.Text.RegularExpressions.Group> objetos que representam grupos capturados em uma única correspondência. O primeiro objeto <xref:System.Text.RegularExpressions.Group> na coleção (no índice 0) representa a correspondência inteira. Cada objeto que se segue representa os resultados de um único grupo de captura.  
   
  É possível recuperar objetos <xref:System.Text.RegularExpressions.Group> individuais na coleção usando a propriedade <xref:System.Text.RegularExpressions.GroupCollection.Item%2A?displayProperty=nameWithType>. É possível recuperar grupos não nomeados por sua posição ordinal na coleção e recuperar grupos nomeados por nome ou posição ordinal. Capturas não nomeadas aparecem primeiro na coleção e são indexadas da esquerda para a direita na ordem na qual aparecem no padrão de expressão regular. Capturas nomeadas são indexadas após as capturas não nomeadas, da esquerda para a direita, na ordem em que aparecem no padrão de expressão regular. Para determinar quais grupos numerados estão disponíveis na coleção retornada para um método específico de correspondência de expressão regular, você pode chamar o método da instância <xref:System.Text.RegularExpressions.Regex.GetGroupNumbers%2A?displayProperty=nameWithType>. Para determinar quais grupos nomeados estão disponíveis na coleção, você pode chamar o método da instância <xref:System.Text.RegularExpressions.Regex.GetGroupNames%2A?displayProperty=nameWithType>. Os dois métodos são especificamente úteis em rotinas gerais que analisam as correspondências encontradas por qualquer expressão regular.  
   
@@ -270,7 +273,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="the_captured_group"></a>   
 ## <a name="the-captured-group"></a>O grupo capturado  
- A classe <xref:System.Text.RegularExpressions.Group> representa o resultado de um único grupo de captura. Objetos de grupo que representam os grupos de captura definidos em uma expressão regular são retornados pela propriedade <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> do objeto <xref:System.Text.RegularExpressions.GroupCollection> retornado pela propriedade <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. A propriedade <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> é o indexador (no C#) e a propriedade padrão (no Visual Basic) da classe <xref:System.Text.RegularExpressions.Group>. Você também pode recuperar membros individuais pela iteração na coleção usando o `foreach` ou `For``Each` construir. Para ver um exemplo, consulte a seção anterior.  
+ A classe <xref:System.Text.RegularExpressions.Group> representa o resultado de um único grupo de captura. Objetos de grupo que representam os grupos de captura definidos em uma expressão regular são retornados pela propriedade <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> do objeto <xref:System.Text.RegularExpressions.GroupCollection> retornado pela propriedade <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. A propriedade <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> é o indexador (no C#) e a propriedade padrão (no Visual Basic) da classe <xref:System.Text.RegularExpressions.Group>. Você também pode recuperar membros individuais iterando a coleção usando o constructo `foreach` ou `For``Each`. Para ver um exemplo, consulte a seção anterior.  
   
  O exemplo a seguir usa constructos de agrupamento aninhados para capturar subcadeias de caracteres em grupos. O padrão de expressão regular `(a(b))c` corresponde à cadeia de caracteres “abc”. Ele atribui a subcadeia “ab” ao primeiro grupo de captura e a subcadeia de caracteres “b” ao segundo grupo de captura.  
   
@@ -291,9 +294,9 @@ ms.lasthandoff: 11/21/2017
 |`:`|Corresponde a dois pontos.|  
 |`(?<value>\w+)`|Corresponde a um ou mais caracteres de palavra. O nome deste grupo de captura é `value`.|  
   
- As propriedades do <xref:System.Text.RegularExpressions.Group> classe fornecem informações sobre o grupo capturado: O `Group.Value` propriedade contém a subcadeia de caracteres capturada, os `Group.Index` propriedade indica a posição inicial do grupo capturado no texto de entrada, o `Group.Length` propriedade contém o comprimento do texto capturado e o `Group.Success` propriedade indica se uma subcadeia de caracteres correspondida padrão definido pelo grupo de captura.  
+ As propriedades da classe <xref:System.Text.RegularExpressions.Group> fornecem informações sobre o grupo capturado: a propriedade `Group.Value` contém a subcadeia de caracteres capturada, a propriedade `Group.Index` indica a posição inicial do grupo capturado no texto de entrada, a propriedade `Group.Length` contém o comprimento do texto capturado e a propriedade `Group.Success` indica se uma subcadeia de caracteres corresponde ao padrão definido pelo grupo de captura.  
   
- Aplicando quantificadores a um grupo (para obter mais informações, consulte [quantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) modifica o relacionamento de uma captura por grupo de duas maneiras de captura:  
+ Aplicar quantificadores a um grupo (para obter mais informações, confira [Quantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) modifica a relação de uma captura por grupo de captura de duas formas:  
   
 -   Se o quantificador `*` ou `*?` (que especifica zero ou mais correspondências) for aplicado a um grupo, um grupo de captura pode não ter uma correspondência na cadeia de caracteres de entrada. Quando não há texto capturado, as propriedades do objeto <xref:System.Text.RegularExpressions.Group> são definidas como mostrado na tabela a seguir.  
   
@@ -350,7 +353,7 @@ ms.lasthandoff: 11/21/2017
   
 |Padrão|Descrição|  
 |-------------|-----------------|  
-|`\w+`|Fazer a correspondência a um ou mais caracteres de palavra.|  
+|`\w+`|Corresponde a um ou mais caracteres de palavra.|  
 |`(\s\w+)*`|Corresponder a zero ou mais ocorrências de um caractere de espaço em branco seguido por um ou mais caracteres de palavra. Este padrão corresponde a nomes de cidade com várias palavras. Este é o terceiro grupo de captura.|  
 |`(\w+(\s\w+)*)`|Corresponder a um ou mais caracteres de palavra seguido por zero ou mais ocorrências de um caractere de espaço em branco e um ou mais caracteres de palavra. Este é o segundo grupo de captura.|  
 |`,`|Corresponde a uma vírgula.|  

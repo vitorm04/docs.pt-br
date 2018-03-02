@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8f7b812d5d6f75e39e9eebcc003686ff88d009e9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e6ff5661a7e78f9b37f16acc86834561fc697bcc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="compiled-xpath-expressions"></a>Expressões XPath compilados
 Um objeto de <xref:System.Xml.XPath.XPathExpression> representa uma consulta XPath compilado retornada do método estático de <xref:System.Xml.XPath.XPathExpression.Compile%2A> da classe de <xref:System.Xml.XPath.XPathExpression> ou método de <xref:System.Xml.XPath.XPathNavigator.Compile%2A> da classe de <xref:System.Xml.XPath.XPathNavigator> .  
@@ -47,7 +50,7 @@ Um objeto de <xref:System.Xml.XPath.XPathExpression> representa uma consulta XPa
 |Tipo de retorno XPath W3C|tipo equivalente do .NET Framework|Descrição|Métodos|  
 |---------------------------|------------------------------------|-----------------|-------------|  
 |`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|Uma coleção não ordenada de nós sem duplicatas criadas na ordem de documento.|<xref:System.Xml.XPath.XPathNavigator.Select%2A> ou <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
-|`Boolean`|<xref:System.Boolean>|Um valor de `true` ou de `false` .|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>ou<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
+|`Boolean`|<xref:System.Boolean>|Um valor de `true` ou de `false` .|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> ou<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
 |`Number`|<xref:System.Double>|Um número de ponto flutuante.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
 |`String`|<xref:System.String>|Uma sequência de caracteres de UCS.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
   
@@ -124,7 +127,7 @@ Console.WriteLine(nodes.Current.Value);
   
  Além disso, usar os métodos definidos de navegação do nó fornecidos pela classe de <xref:System.Xml.XPath.XPathNavigator> pode resultar em melhor desempenho sobre os métodos de seleção fornecidos pela classe de <xref:System.Xml.XPath.XPathNavigator> em casos onde seus critérios de seleção são simples. Por exemplo, se você precisar selecione o primeiro filho do nó atual, é mais rápido usar o método de <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A> de usas a expressão XPath de `child::*[1]` e o método de <xref:System.Xml.XPath.XPathNavigator.Select%2A> .  
   
- Para obter mais informações sobre o nó definir métodos de navegação do <xref:System.Xml.XPath.XPathNavigator> de classe, consulte [nó definido navegação usando XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md).  
+ Para saber mais sobre os métodos de navegação de conjunto de nós da classe <xref:System.Xml.XPath.XPathNavigator>, confira [Navegação de conjunto de nós usando XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Xml.XmlDocument>  
@@ -132,7 +135,7 @@ Console.WriteLine(nodes.Current.Value);
  <xref:System.Xml.XPath.XPathNavigator>  
  [Processar dados XML usando o modelo de dados XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
  [Selecionar dados XML usando XPathNavigator](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
- [Avalia as expressões XPath usando XPathNavigator](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
- [Nós compatíveis usando XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
+ [Avaliar as expressões XPath usando XPathNavigator](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
+ [Correspondência de nós usando XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
  [Tipos de nós reconhecidos com consultas XPath](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
- [Consultas XPath e namespaces](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)
+ [Consultas e Namespaces de XPath](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)

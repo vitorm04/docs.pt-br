@@ -11,55 +11,59 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: tasks, exceptions
+helpviewer_keywords:
+- tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e62498376d321d8ff22a53315b9d5f18a8865056
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 86b4d105b7d79abbd25b342774705866119ada68
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exception-handling-task-parallel-library"></a>Tratamento de exceções (biblioteca de tarefas paralelas)
-Exceções sem tratamento que são geradas pelo código do usuário que está em execução dentro de uma tarefa são propagadas de volta para o thread de chamada, exceto em determinados cenários descritos neste tópico. Exceções sejam propagadas ao usar um estático ou instância <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> ou <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` métodos e tratá-los, colocando a chamada em um `try` / `catch` instrução. Se uma tarefa é o pai do tarefas filho anexado, ou se você estiver esperando em várias tarefas, várias exceções foi geradas.  
+As exceções sem tratamento que são lançadas pelo código de usuário que está sendo executado dentro de uma tarefa são propagadas de volta para o thread de chamada, exceto em certos cenários que são descritos mais adiante neste tópico. As exceções são propagadas quando você usa um dos métodos estáticos ou de instância de <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> ou <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait`, e você lida com eles ao incluir a chamada em uma instrução `try` / `catch`. Se uma tarefa é o pai das tarefas filho anexadas, ou se você está esperando várias tarefas, várias exceções podem ser lançadas.  
   
- Para propagar todas as exceções de volta para o thread de chamada, a infraestrutura de tarefa encapsula-los em um <xref:System.AggregateException> instância. O <xref:System.AggregateException> exceção tem um <xref:System.AggregateException.InnerExceptions%2A> propriedade que pode ser enumerada para examinar todas as exceções originais que foram lançadas e lidar com (ou não tratar) cada um deles individualmente. Você também pode manipular as exceções originais usando o <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> método.  
+ Para propagar todas as exceções de volta ao thread de chamada, a infraestrutura da Tarefa envolve-as em uma instância de <xref:System.AggregateException>. A exceção <xref:System.AggregateException> tem uma propriedade <xref:System.AggregateException.InnerExceptions%2A> que pode ser enumerada para examinar todas as exceções originais que foram lançadas e manipular (ou não manipular) cada uma individualmente. Você também pode manipular as exceções originais usando o método <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType>.  
   
- Mesmo que apenas uma exceção for lançada, ainda é encapsulado em um <xref:System.AggregateException> exceção, como mostra o exemplo a seguir.  
+ Mesmo que apenas uma exceção seja lançada, ela ainda está envolvida em uma exceção <xref:System.AggregateException>, como mostra o exemplo a seguir.  
   
  [!code-csharp[TPL_Exceptions#21](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/handling21.cs#21)]
  [!code-vb[TPL_Exceptions#21](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/handling21.vb#21)]  
   
- Você pode evitar uma exceção sem tratamento capturando apenas o <xref:System.AggregateException> e não observando qualquer uma das exceções internas. No entanto, recomendamos que você não faça isso porque ele é semelhante a captura de base de <xref:System.Exception> tipo em cenários de não paralelas. Para capturar uma exceção sem executar ações específicas para recuperá-lo pode deixar o programa em um estado indeterminado.  
+ Você poderia evitar uma exceção sem tratamento apenas pegando o <xref:System.AggregateException> e não observando nenhuma das exceções internas. No entanto, recomendamos que você não faça isso, pois é análogo o capturar o tipo base <xref:System.Exception> em cenários não paralelos. Capturar uma exceção sem tomar medidas específicas para se recuperar pode deixar seu programa em um estado indeterminado.  
   
- Se você não deseja chamar o <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> ou <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` método para aguardar a conclusão da tarefa, você também pode recuperar o <xref:System.AggregateException> exceção a partir da tarefa <xref:System.Threading.Tasks.Task.Exception%2A> propriedade, como mostra o exemplo a seguir. Para obter mais informações, consulte o [observando exceções usando a propriedade Task.Exception](#ExceptionProp) neste tópico.  
+ Se você não quiser chamar o método <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> ou <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` para aguardar a conclusão de uma tarefa, você também pode recuperar a exceção <xref:System.AggregateException> da propriedade <xref:System.Threading.Tasks.Task.Exception%2A> da tarefa, conforme mostra o exemplo a seguir. Para obter mais informações, confira a seção [Observar exceções usando a propriedade Task.Exception](#ExceptionProp) neste tópico.  
   
  [!code-csharp[TPL_Exceptions#29](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/handling22.cs#29)]
  [!code-vb[TPL_Exceptions#29](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/handling22.vb#29)]  
   
- Se você não espera uma tarefa que propaga uma exceção ou acesso seu <xref:System.Threading.Tasks.Task.Exception%2A> propriedade, a exceção é escalada de acordo com a política de exceção do .NET quando a tarefa é coletado como lixo.  
+ Se você não aguardar uma tarefa que propaga uma exceção ou acessar sua propriedade <xref:System.Threading.Tasks.Task.Exception%2A>, a exceção será escalada de acordo com a política de exceção .NET quando a tarefa for coletada como lixo.  
   
- Quando as exceções são permitidos para voltar para o thread de junção de bolhas, é possível que uma tarefa pode continuar a processar alguns itens depois que a exceção é gerada.  
+ Quando as exceções tiverem permissão de emergirem novamente para o thread de associação, será possível que uma tarefa continue a processar alguns itens após a geração da exceção.  
   
 > [!NOTE]
->  Quando "Apenas meu código" estiver habilitado, o Visual Studio, em alguns casos quebrar a linha que lança a exceção e exibir uma mensagem de erro que diz "exceção não tratada pelo código do usuário". Esse erro é benigno. Você pode pressionar F5 para continuar e ver o comportamento de tratamento de exceção que é demonstrado nesses exemplos. Para impedir que o Visual Studio quebra no primeiro erro, simplesmente desmarque o **habilitar apenas meu código** caixa de seleção em **ferramentas, opções, depuração, geral**.  
+>  Se a opção "Apenas Meu Código" estiver habilitada, o Visual Studio em alguns casos interromperá na linha que lança a exceção e exibirá uma mensagem de erro que diz "exceção não tratada pelo código do usuário". Esse erro é benigno. Você pode pressionar F5 para continuar e ver o comportamento de tratamento de exceção, demonstrado nos exemplos a seguir. Para impedir que o Visual Studio seja interrompido no primeiro erro, basta desmarcar a caixa de seleção **Habilitar Apenas Meu Código** em **Ferramentas, Opções, Depuração, Geral**.  
   
-## <a name="attached-child-tasks-and-nested-aggregateexceptions"></a>Tarefas filho anexado e AggregateExceptions aninhados  
- Se uma tarefa tem uma tarefa filho anexado que lança uma exceção, essa exceção é encapsulada em um <xref:System.AggregateException> antes que ela é propagada para a tarefa pai, que encapsula a essa exceção em seu próprio <xref:System.AggregateException> antes de ele propaga volta para o thread de chamada. Nesses casos, o <xref:System.AggregateException.InnerExceptions%2A> propriedade o <xref:System.AggregateException> exceção detectada no <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> ou <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` ou <xref:System.Threading.Tasks.Task.WaitAny%2A> ou <xref:System.Threading.Tasks.Task.WaitAll%2A> método contém um ou mais <xref:System.AggregateException> instâncias, não o exceções originais que causou a falha. Para evitar a iteração aninhada <xref:System.AggregateException> exceções, você pode usar o <xref:System.AggregateException.Flatten%2A> método para remover todos os aninhada <xref:System.AggregateException> exceções, para que o <xref:System.AggregateException.InnerExceptions%2A?displayProperty=nameWithType> propriedade contém as exceções originais. No exemplo a seguir, aninhados <xref:System.AggregateException> instâncias são mescladas e tratadas em um loop.  
+## <a name="attached-child-tasks-and-nested-aggregateexceptions"></a>Tarefas filho anexadas e AggregateExceptions aninhadas  
+ Se uma tarefa tiver uma tarefa filho anexada que lança uma exceção, essa exceção é enrolada em um <xref:System.AggregateException> antes de se propagar para a tarefa pai, que envolve essa exceção em sua própria <xref:System.AggregateException> antes de propagá-la de volta ao thread de chamada. Nesses casos, a propriedade <xref:System.AggregateException.InnerExceptions%2A> da exceção <xref:System.AggregateException> que é captada nos métodos <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> ou <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` ou <xref:System.Threading.Tasks.Task.WaitAny%2A> ou <xref:System.Threading.Tasks.Task.WaitAll%2A> contém uma ou mais instâncias de <xref:System.AggregateException>, e não as exceções originais que causaram a falha. Para evitar ter que iterar sobre exceções aninhadas <xref:System.AggregateException>, você pode usar o método <xref:System.AggregateException.Flatten%2A> para remover todas as exceções aninhadas <xref:System.AggregateException>, de modo que a propriedade <xref:System.AggregateException.InnerExceptions%2A?displayProperty=nameWithType> contenha as exceções originais. No exemplo a seguir, as instâncias de <xref:System.AggregateException> aninhadas são achatadas e manipuladas em apenas um loop.  
   
  [!code-csharp[TPL_Exceptions#22](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/flatten2.cs#22)]
  [!code-vb[TPL_Exceptions#22](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/flatten2.vb#22)]  
   
- Você também pode usar o <xref:System.AggregateException.Flatten%2A?displayProperty=nameWithType> método relançar as exceções internas de vários <xref:System.AggregateException> instâncias geradas por várias tarefas em um único <xref:System.AggregateException> instância, como mostra o exemplo a seguir.  
+ Você também pode usar o método <xref:System.AggregateException.Flatten%2A?displayProperty=nameWithType> para relançar as exceções internas de múltiplas instâncias de <xref:System.AggregateException> lançadas por várias tarefas em uma única instância <xref:System.AggregateException>, como mostra o exemplo a seguir.  
   
  [!code-csharp[TPL_Exceptions#13](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/taskexceptions2.cs#13)]
  [!code-vb[TPL_Exceptions#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/taskexceptions2.vb#13)]  
   
-## <a name="exceptions-from-detached-child-tasks"></a>Exceções de tarefas desanexadas filho  
- Por padrão, as tarefas filho são criadas como desanexado. Exceções geradas por tarefas desanexadas devem ser manipuladas ou lançada novamente na tarefa pai imediato; eles não serão propagados para o thread de chamada nas mesmas tarefas filho forma como anexados propagada de volta. O pai mais alto pode rethrow manualmente uma exceção desanexado filho para fazer com que ele seja encapsulada em um <xref:System.AggregateException> e propagadas de volta para o thread de chamada.  
+## <a name="exceptions-from-detached-child-tasks"></a>Exceções de tarefas filho desanexadas  
+ Por padrão, as tarefas filho são criadas como desanexadas. As exceções lançadas a partir de tarefas separadas devem ser tratadas ou revogadas na tarefa pai imediata; elas não são propagadas de volta para o tópico de chamada da mesma maneira que as tarefas filho anexadas são propagadas de volta. O pai mais alto pode relançar manualmente uma exceção de uma tarefa filho separada para fazer com que ela seja encapsulada em um <xref:System.AggregateException> e propagada de volta para o thread de chamada.  
   
  [!code-csharp[TPL_Exceptions#23](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/detached21.cs#23)]
  [!code-vb[TPL_Exceptions#23](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/detached21.vb#23)]  
@@ -67,35 +71,35 @@ Exceções sem tratamento que são geradas pelo código do usuário que está em
  Mesmo que você use uma continuação para observar uma exceção em uma tarefa filho, a exceção ainda deve ser observada pela tarefa pai.  
   
 ## <a name="exceptions-that-indicate-cooperative-cancellation"></a>Exceções que indicam o cancelamento cooperativo  
- Quando o código do usuário em uma tarefa responde a uma solicitação de cancelamento, o procedimento correto é gerar um <xref:System.OperationCanceledException> passando o token de cancelamento no qual a solicitação foi comunicada. Antes de tentar propagar a exceção, a instância da tarefa compara o token na exceção ao que foi passado a ele quando ele foi criado. Se eles forem iguais, a tarefa propaga um <xref:System.Threading.Tasks.TaskCanceledException> encapsulado no <xref:System.AggregateException>, e pode ser visto quando as exceções internas são examinadas. No entanto, se a tarefa não está aguardando o thread de chamada, essa exceção específica não será propagada. Para obter mais informações, consulte [Cancelamento de tarefas](../../../docs/standard/parallel-programming/task-cancellation.md).  
+ Quando o código do usuário em uma tarefa responde a uma solicitação de cancelamento, o procedimento correto é lançar um <xref:System.OperationCanceledException> no token de cancelamento no qual a solicitação foi comunicada. Antes de tentar propagar a exceção, a instância da tarefa compara o token na exceção ao que foi passado para ela quando foi criada. Se eles são iguais, a tarefa propaga um <xref:System.Threading.Tasks.TaskCanceledException> encapsulado no <xref:System.AggregateException>, e pode ser visto quando as exceções internas são examinadas. No entanto, se o thread de chamada não estiver aguardando a tarefa, essa exceção específica não será propagada. Para obter mais informações, consulte [Cancelamento de tarefas](../../../docs/standard/parallel-programming/task-cancellation.md).  
   
  [!code-csharp[TPL_Exceptions#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/exceptions.cs#4)]
  [!code-vb[TPL_Exceptions#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/tpl_exceptions.vb#4)]  
   
-## <a name="using-the-handle-method-to-filter-inner-exceptions"></a>Usando o método de identificador para filtrar exceções internas  
- Você pode usar o <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> método para filtrar as exceções que podem ser tratados como "manipulado" sem usar nenhuma lógica adicional. O delegado de usuário que é fornecida para o <xref:System.AggregateException.Handle%28System.Func%7BSystem.Exception%2CSystem.Boolean%7D%29?displayProperty=nameWithType> método, você pode examinar o tipo de exceção, seu <xref:System.Exception.Message%2A> propriedade ou outras informações sobre ela que permitirá que você determine se ele é benigno. Todas as exceções para o qual o delegado retorna `false` são lançada novamente em uma nova <xref:System.AggregateException> instância imediatamente após o <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> método retorna.  
+## <a name="using-the-handle-method-to-filter-inner-exceptions"></a>Usar o método Handle para filtrar exceções internas  
+ Você pode usar o método <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> para filtrar exceções que você pode tratar como "manipuladas" sem usar qualquer lógica adicional. No delegado de usuário que é fornecido ao método <xref:System.AggregateException.Handle%28System.Func%7BSystem.Exception%2CSystem.Boolean%7D%29?displayProperty=nameWithType>, você pode examinar o tipo de exceção, sua propriedade <xref:System.Exception.Message%2A> ou qualquer outra informação sobre isso que permitirá determinar se é benigno. Quaisquer exceções para as quais o delegado retorna `false` são relançadas em uma nova instância do <xref:System.AggregateException> imediatamente após o retorno do método <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType>.  
   
- O exemplo a seguir é funcionalmente equivalente ao primeiro exemplo neste tópico, que examina cada exceção no <xref:System.AggregateException.InnerExceptions%2A?displayProperty=nameWithType> coleção.  Em vez disso, esse manipulador de exceção chama o <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> o método objeto para cada exceção e as únicas exceções relança que não são `CustomException` instâncias.  
+ O exemplo a seguir é funcionalmente equivalente ao primeiro exemplo neste tópico, que examina cada exceção na coleção <xref:System.AggregateException.InnerExceptions%2A?displayProperty=nameWithType>.  Em vez disso, esse manipulador de exceção chama o objeto de método <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> para cada exceção, e lança novamente apenas exceções que não são instâncias de `CustomException`.  
   
  [!code-csharp[TPL_Exceptions#26](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/handlemethod21.cs#26)]
  [!code-vb[TPL_Exceptions#26](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/handlemethod21.vb#26)]  
   
- A seguir está um exemplo mais completo que usa o <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> método para fornecer um tratamento especial para um <xref:System.UnauthorizedAccessException> exceção ao enumerar arquivos.  
+ O seguinte é um exemplo mais completo que usa o método <xref:System.AggregateException.Handle%2A?displayProperty=nameWithType> para fornecer tratamento especial para uma exceção <xref:System.UnauthorizedAccessException> ao enumerar arquivos.  
   
  [!code-csharp[TPL_Exceptions#12](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/taskexceptions.cs#12)]
  [!code-vb[TPL_Exceptions#12](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/taskexceptions.vb#12)]  
   
 <a name="ExceptionProp"></a>   
-## <a name="observing-exceptions-by-using-the-taskexception-property"></a>Observando exceções usando a propriedade Task.Exception  
- Se uma tarefa é concluída no <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> estado, seu <xref:System.Threading.Tasks.Task.Exception%2A> propriedade pode ser examinada para descobrir qual exceção específica causou a falha. Uma boa maneira de observar o <xref:System.Threading.Tasks.Task.Exception%2A> propriedade é usar uma continuação que é executado somente se a tarefa antecedente falhas, conforme mostrado no exemplo a seguir.  
+## <a name="observing-exceptions-by-using-the-taskexception-property"></a>Observar exceções usando a propriedade Task.Exception  
+ Se uma tarefa for concluída no estado <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType>, sua propriedade <xref:System.Threading.Tasks.Task.Exception%2A> pode ser examinada para descobrir qual exceção específica causou a falha. Uma boa forma de observar a propriedade <xref:System.Threading.Tasks.Task.Exception%2A> é usar uma continuação que seja executada somente se a tarefa anterior falhar, como mostrado no exemplo a seguir.  
   
  [!code-csharp[TPL_Exceptions#27](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/exceptionprop21.cs#27)]
  [!code-vb[TPL_Exceptions#27](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/exceptionprop21.vb#27)]  
   
- Em um aplicativo real, o delegado de continuação foi possível registrar informações detalhadas sobre a exceção e possivelmente gerar novas tarefas para recuperar da exceção.  
+ Em um aplicativo real, o delegado de continuação poderia registrar informações detalhadas sobre a exceção e possivelmente gerar novas tarefas para se recuperar da exceção.  
   
 ## <a name="unobservedtaskexception-event"></a>Evento UnobservedTaskException  
- Em alguns cenários, como ao hospedar plug-ins não confiáveis, exceções benignas podem ser comuns, e pode ser muito difícil manualmente observe todos eles. Nesses casos, você pode manipular o <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException?displayProperty=nameWithType> evento. O <xref:System.Threading.Tasks.UnobservedTaskExceptionEventArgs?displayProperty=nameWithType> instância que é passada para o manipulador pode ser usada para impedir que a exceção não observada sejam propagadas de volta para o thread de junção.  
+ Em alguns cenários, como ao hospedar plug-ins não confiáveis, exceções benignas podem ser comuns, e pode ser muito difícil observar todas manualmente. Nesses casos, você pode lidar com o evento <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException?displayProperty=nameWithType>. A instância do <xref:System.Threading.Tasks.UnobservedTaskExceptionEventArgs?displayProperty=nameWithType> que é passada para seu manipulador pode ser usada para evitar que a exceção não observada seja propagada de volta para o thread de junção.  
   
 ## <a name="see-also"></a>Consulte também  
  [TPL (Biblioteca de Paralelismo de Tarefas)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

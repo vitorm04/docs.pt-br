@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 19820cd20ea87720968298aad8edef69d2bd1603
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.openlocfilehash: ee03c9cd64c3c3b251049be0826c7b29abe80bfa
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>Formato de documentos de WordprocessingML (C#)
 Este tópico apresenta a forma XML de um documento WordprocessingML.  
@@ -96,11 +97,11 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
 ```  
   
 ## <a name="external-resources"></a>Recursos externos  
- [Apresentando os formatos de arquivo do Office (2007) Open XML](http://go.microsoft.com/fwlink/?LinkId=98093)  
-  
- [Visão geral de WordprocessingML](http://go.microsoft.com/fwlink/?LinkId=98094)  
-  
- [Office 2003: página de download de esquemas de referência XML](http://go.microsoft.com/fwlink/?LinkId=98095)  
+ [Apresentando os formatos de arquivo do Office (2007) Open XML](https://msdn.microsoft.com/library/ms406049.aspx)  
+ [Visão geral de WordprocessingML](https://msdn.microsoft.com/library/aa212812(office.11).aspx)  
+ [Anatomia de um arquivo de WordProcessingML](http://officeopenxml.com/anatomyofOOXML.php)  
+ [Introdução a WordprocessingML](http://ericwhite.com/blog/introduction-to-wordprocessingml-series/)  
+ [Office 2003: página de download de esquemas de referência XML](https://www.microsoft.com/en-us/download/details.aspx?id=101)  
   
 ## <a name="see-also"></a>Consulte também  
  [Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

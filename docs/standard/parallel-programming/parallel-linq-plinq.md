@@ -8,22 +8,26 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: PLINQ, overview
+helpviewer_keywords:
+- PLINQ, overview
 ms.assetid: 3d4d0cd3-bde4-490b-99e7-f4e41be96455
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c0028d3d8c30bbc7f0592a4462ca1eeb80c8b1f9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 94eeeda4666a4e6c1cb8729d6563ffcc4aa479c4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="parallel-linq-plinq"></a>LINQ paralelo (PLINQ)
-LINQ paralelo (PLINQ) é uma implementação paralela de objetos LINQ to. PLINQ implementa o conjunto completo de operadores de consulta padrão LINQ como métodos de extensão para o <xref:System.Linq> namespace e tem operadores adicionais para operações paralelas. PLINQ combina a simplicidade e a legibilidade de sintaxe LINQ com o poder da programação paralela. Assim como código que tem como destino a biblioteca paralela de tarefas, consultas PLINQ ampliar o grau de simultaneidade com base nos recursos do computador host.  
+PLINQ (Parallel LINQ) é uma implementação paralela da LINQ to Objects. O PLINQ implementa o conjunto completo de operadores de consulta padrão LINQ como métodos de extensão para o namespace <xref:System.Linq> e tem operadores adicionais para operações paralelas. O PLINQ combina a simplicidade e a legibilidade da sintaxe LINQ com o poder da programação paralela. Assim como código que tem como destino a Biblioteca de Paralelismo de Tarefas, as consultas PLINQ reduzem horizontalmente o grau de simultaneidade com base nos recursos do computador host.  
   
- Em muitos cenários, PLINQ pode aumentar significativamente a velocidade de LINQ para consultas de objetos usando todos os núcleos disponíveis no computador host com mais eficiência. Esse aumento do desempenho traz a potência de computação de alto desempenho para a área de trabalho.  
+ Em muitos cenários, o PLINQ pode aumentar significativamente a velocidade das consultas LINQ to Objects usando todos os núcleos disponíveis no computador host com mais eficiência. Esse aumento do desempenho traz a potência da computação de alto desempenho para a área de trabalho.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Introdução ao PLINQ](../../../docs/standard/parallel-programming/introduction-to-plinq.md)  

@@ -12,18 +12,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b91c49be9268d8dc967daeac116cf67b2ed7d742
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 06cac8d76b17f3ef32931ea21d0556085f05d7b1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="extending-the-dom"></a>Estendendo os DOM
-O Microsoft .NET Framework inclui um conjunto base de classes que fornece uma implementação do XML DOM Document Object Model (). <xref:System.Xml.XmlNode>, e suas classes derivadas, fornecem métodos e propriedades que permitem que você navega, consulte, e o conteúdo e a estrutura de um documento XML.  
+O Microsoft .NET Framework inclui um conjunto básico de classes que fornece uma implementação de DOM (XML Document Object Model). <xref:System.Xml.XmlNode>, e suas classes derivadas, fornecem métodos e propriedades que permitem que você navega, consulte, e o conteúdo e a estrutura de um documento XML.  
   
  Quando o conteúdo XML é carregado na memória usando os DOM, os nós criados contêm informações como o nome de nó, tipo de nó, e assim por diante. Pode haver ocasiões as onde você requer informações específicas do nó que classes base não fornecem. Por exemplo, você pode desejar consultar o número da linha e posição do nó. Nesse caso, você pode derivar novas classes de classes DOM existentes e adicionar funcionalidade adicional.  
   
@@ -250,10 +253,10 @@ Number of elements in book.xml: 3
   
  Os trabalhos de processo de manipulação de eventos exatamente em classes derivadas como em DOM original de classe.  
   
- Para obter mais informações sobre a manipulação de eventos do nó, consulte [eventos](../../../../docs/standard/events/index.md) e <xref:System.Xml.XmlNodeChangedEventHandler>.  
+ Para saber mais sobre a manipulação de eventos do nó, confira [Eventos](../../../../docs/standard/events/index.md) e <xref:System.Xml.XmlNodeChangedEventHandler>.  
   
 ## <a name="default-attributes-and-the-createelement-method"></a>Atributos padrões e o método de CreateElement  
- Se você está substituindo o método de <xref:System.Xml.XmlDocument.CreateElement%2A> em uma classe derivada, os atributos padrão não são adicionados quando você está criando novos elementos ao editar o documento. Este é apenas um problema ao editar. Porque o método de <xref:System.Xml.XmlDocument.CreateElement%2A> é responsável para adicionar atributos padrão para <xref:System.Xml.XmlDocument>, você deve codificar essa funcionalidade no método de <xref:System.Xml.XmlDocument.CreateElement%2A> . Se você está carregando <xref:System.Xml.XmlDocument> que inclui atributos padrão, serão tratados corretamente. Para obter mais informações sobre atributos padrão, consulte [criando novos atributos para elementos no DOM](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md).  
+ Se você está substituindo o método de <xref:System.Xml.XmlDocument.CreateElement%2A> em uma classe derivada, os atributos padrão não são adicionados quando você está criando novos elementos ao editar o documento. Este é apenas um problema ao editar. Porque o método de <xref:System.Xml.XmlDocument.CreateElement%2A> é responsável para adicionar atributos padrão para <xref:System.Xml.XmlDocument>, você deve codificar essa funcionalidade no método de <xref:System.Xml.XmlDocument.CreateElement%2A> . Se você está carregando <xref:System.Xml.XmlDocument> que inclui atributos padrão, serão tratados corretamente. Para saber mais sobre os atributos padrão, confira [Criando novos atributos para os elementos em DOM](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

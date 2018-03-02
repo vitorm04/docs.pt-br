@@ -14,15 +14,18 @@ helpviewer_keywords:
 - weak references, long
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 906c23caa7065486bb094ad2475ed9e7e24b3d9c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3ca1331cc45f437882d38adba241e2767821de36
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="weak-references"></a>Referências fracas
 O coletor de lixo não pode coletar um objeto em uso por um aplicativo enquanto o código do aplicativo pode acessar esse objeto. O aplicativo tem uma referência forte para o objeto.  
@@ -31,11 +34,11 @@ O coletor de lixo não pode coletar um objeto em uso por um aplicativo enquanto 
   
  As referências fracas são úteis para objetos que usam muita memória, mas podem ser facilmente recriados se forem recuperados pela coleta de lixo.  
   
- Suponha que uma exibição de árvore em um aplicativo Windows Forms exibe uma opção complexa hierárquica das opções para o usuário. Se os dados subjacentes forem grandes, manter a árvore na memória é ineficiente quando o usuário está envolvido com outra coisa no aplicativo.  
+ Suponha que um modo de exibição de árvore em um aplicativo do Windows Forms exiba uma escolha hierárquica complexa de opções para o usuário. Se os dados subjacentes forem grandes, manter a árvore na memória é ineficiente quando o usuário está envolvido com outra coisa no aplicativo.  
   
- Quando o usuário alterna imediatamente para outra parte do aplicativo, você pode usar o <xref:System.WeakReference> classe para criar uma referência fraca a árvore e destruir todas as referências de alta seguras. Quando o usuário alterna de volta para a árvore, o aplicativo tenta obter uma referência forte para a árvore e, se tiver êxito, evita a reconstrução da árvore.  
+ Quando o usuário alterna para outra parte do aplicativo, você pode usar a classe <xref:System.WeakReference> para criar uma referência fraca para a árvore e destruir todas as referências fortes. Quando o usuário alterna de volta para a árvore, o aplicativo tenta obter uma referência forte para a árvore e, se tiver êxito, evita a reconstrução da árvore.  
   
- Para estabelecer uma referência fraca com um objeto, você cria um <xref:System.WeakReference> usando a instância do objeto a ser rastreada. Você definir o <xref:System.WeakReference.Target%2A> propriedade para esse objeto e o conjunto original de referência para o objeto a ser `null`. Para obter um exemplo de código, consulte <xref:System.WeakReference> na biblioteca de classes.  
+ Para estabelecer uma referência fraca com um objeto, você cria uma <xref:System.WeakReference> usando a instância do objeto a ser rastreada. Em seguida, você deve define a propriedade <xref:System.WeakReference.Target%2A> para aquele objeto e define a referência original para o objeto como `null`. Para obter um exemplo de código, consulte <xref:System.WeakReference> na biblioteca de classes.  
   
 ## <a name="short-and-long-weak-references"></a>Referências fracas curtas e longas  
  Você pode criar uma referência fraca curta ou uma referência fraca longa:  
@@ -46,11 +49,11 @@ O coletor de lixo não pode coletar um objeto em uso por um aplicativo enquanto 
   
 -   Long  
   
-     Uma referência fraca longa é mantida após o objeto <xref:System.Object.Finalize%2A> método foi chamado. Isso permite que o objeto seja recriado, mas o estado do objeto permanece imprevisível. Para usar uma referência de tempo, especifique `true` no <xref:System.WeakReference> construtor.  
+     Uma referência fraca longa é mantida após o método <xref:System.Object.Finalize%2A> do objeto ter sido chamado. Isso permite que o objeto seja recriado, mas o estado do objeto permanece imprevisível. Para usar uma referência longa, especifique `true` no construtor <xref:System.WeakReference>.  
   
-     Se o tipo de objeto não tem um <xref:System.Object.Finalize%2A> aplica-se do método, a funcionalidade de referência fraca curto e a referência fraca é válida somente até que o destino é coletado, que podem ocorrer a qualquer momento após o finalizador é executado.  
+     Se o tipo de objeto não tiver um método <xref:System.Object.Finalize%2A>, a funcionalidade de referência fraca curta é aplicada e a referência fraca é válida apenas até o destino ser coletado, o que pode ocorrer a qualquer momento após o finalizador ser executado.  
   
- Para estabelecer uma referência forte e usar o objeto novamente, converter o <xref:System.WeakReference.Target%2A> propriedade de um <xref:System.WeakReference> para o tipo do objeto. Se o <xref:System.WeakReference.Target%2A> propriedade retorna `null`, o objeto foi coletado; caso contrário, você pode continuar a usar o objeto porque o aplicativo foi recuperado uma referência forte para ele.  
+ Para estabelecer uma referência forte e usar o objeto novamente, converta a propriedade <xref:System.WeakReference.Target%2A> de um <xref:System.WeakReference> para o tipo do objeto. Se a propriedade <xref:System.WeakReference.Target%2A> retornar `null`, o objeto terá sido coletado, caso contrário, continue usando o objeto, pois o aplicativo recuperou uma referência forte para ele.  
   
 ## <a name="guidelines-for-using-weak-references"></a>Diretrizes para usar referências fracas  
  Use referências fracas longas somente quando necessário, uma vez que o estado do objeto é imprevisível após a finalização.  

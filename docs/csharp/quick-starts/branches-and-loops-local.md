@@ -1,5 +1,5 @@
 ---
-title: "Início rápido - Branches e loops - Guia de C#"
+title: "Tutorial de loops e branches – guias de início rápido locais de C#"
 description: "Neste início rápido sobre branches e loops, você escreve código em C# para explorar a sintaxe de linguagem que dá suporte a branches e loops condicionais para execução repetida de instruções."
 author: billwagner
 ms.author: wiwagn
@@ -9,21 +9,21 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 609c8625b19025a20c1da1e767870eafbab4c4a0
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 7d69b2b9bb02e2999bcd785da653bd4a13ed947c
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="branches-and-loops"></a>Loops e branches
 
-Este início rápido ensina a escrever códigos que examinam variáveis e mudam o caminho de execução com base nessas variáveis. Escreva o código em C# e veja os resultados da compilação e da execução. O início rápido contém uma série de lições que exploram construções de ramificação e loop em C#. Estas lições ensinam os princípios básicos da linguagem C#.
+Este início rápido ensina a escrever códigos que examinam variáveis e mudam o caminho de execução com base nessas variáveis. Escreva o código em C# e veja os resultados da compilação e da execução. O início rápido contém uma série de lições que exploram construções de branch e loop em C#. Estas lições ensinam os princípios básicos da linguagem C#.
 
-Este início rápido espera que você tenha uma máquina que possa usar para desenvolvimento. O tópico do .NET [Familiarize-se em 10 minutos](https://www.microsoft.com/net/core) tem instruções para configurar o ambiente de desenvolvimento local no Mac, PC ou Linux. Confira uma visão geral dos comandos que você usará na [introdução aos inícios rápidos locais](local-environment.md) com links para obter mais detalhes.
+Este início rápido espera que você tenha um computador que possa usar para desenvolvimento. O tópico do .NET [Familiarize-se em 10 minutos](https://www.microsoft.com/net/core) tem instruções para configurar o ambiente de desenvolvimento local no Mac, PC ou Linux. Confira uma visão geral dos comandos que você usará na [introdução aos inícios rápidos locais](local-environment.md) com links para obter mais detalhes.
 
 ## <a name="make-decisions-using-the-if-statement"></a>Tome decisões usando a instrução `if`
 
-Crie um diretório chamado **branches-quickstart**. Torne-o o diretório atual e execute `dotnet new console -n BranchesAndLoops -o .`. Esse comando cria um novo aplicativo de console .NET Core no diretório atual. 
+Crie um diretório chamado **branches-quickstart**. Torne-o o diretório atual e execute `dotnet new console -n BranchesAndLoops -o .`. Esse comando cria um novo aplicativo de console .NET Core no diretório atual.
 
 Abra **Program.cs** em seu editor favorito e substitua a linha `Console.Writeline("Hello World!");` pelo seguinte código:
 
@@ -45,12 +45,11 @@ int b = 3;
 Digite `dotnet run` novamente. Como a resposta é inferior a 10, nada é impresso. A **condição** que você está testando é falsa. Não há qualquer código para execução, porque você escreveu apenas uma das ramificações possíveis para uma instrução `if`: a ramificação verdadeira.
 
 > [!TIP]
-> À medida que explora C# (ou qualquer linguagem de programação), você cometerá erros ao escrever o código. O compilador encontrará e reportará esses erros. Verifique atentamente a saída do erro e o código que gerou o erro. Normalmente, o erro do compilador pode ajudar você a localizar o problema. 
+> À medida que explora C# (ou qualquer linguagem de programação), você cometerá erros ao escrever o código. O compilador encontrará e reportará esses erros. Verifique atentamente a saída do erro e o código que gerou o erro. Normalmente, o erro do compilador pode ajudar você a localizar o problema.
 
-Este primeiro exemplo mostra o poder dos tipos `if` e Booliano. Um *Booliano* é uma variável que pode ter um dos dois valores: `true` ou `false`. C# define um tipo especial, `bool` para variáveis Boolianas. A instrução `if` verifica o valor de um `bool`. Quando o valor é `true`, a instrução após `if` é executada. Caso contrário, é ignorada. 
+Este primeiro exemplo mostra o poder dos tipos `if` e Booliano. Um *Booliano* é uma variável que pode ter um dos dois valores: `true` ou `false`. C# define um tipo especial, `bool` para variáveis Boolianas. A instrução `if` verifica o valor de um `bool`. Quando o valor é `true`, a instrução após `if` é executada. Caso contrário, é ignorada.
 
 Esse processo de verificação de condições e execução de instruções com base nessas condições é muito eficiente.
-
 
 ## <a name="make-if-and-else-work-together"></a>Faça if e else funcionam juntas
 
@@ -227,7 +226,7 @@ for(int index = 0; index < 10; index++)
 } 
 ```
 
-Ele faz o mesmo trabalho que o loop `while` e o loop `do` que você já usou. A instrução `for` tem três partes que controlam o modo como ela funciona. 
+Ele faz o mesmo trabalho que o loop `while` e o loop `do` que você já usou. A instrução `for` tem três partes que controlam o modo como ela funciona.
 
 A primeira parte é o **inicializador for**: `for index = 0;` declara que `index` é a variável do loop, e define seu valor inicial como `0`.
 
@@ -258,7 +257,7 @@ Continue com o início rápido [Cadeias de caracteres interpoladas](interpolated
 
 Saiba mais sobre esses conceitos nestes tópicos:
 
-[Instrução If e else](../language-reference/keywords/if-else.md)   
-[Instrução while](../language-reference/keywords/while.md)   
-[Instrução Do](../language-reference/keywords/do.md)   
-[Instrução for](../language-reference/keywords/for.md)   
+[Instrução If e else](../language-reference/keywords/if-else.md)  
+[Instrução while](../language-reference/keywords/while.md)  
+[Instrução Do](../language-reference/keywords/do.md)  
+[Instrução for](../language-reference/keywords/for.md)  

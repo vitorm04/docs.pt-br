@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ad656e2db17e44733b5718fe2e3a2a48afcb1381
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2138b9c47c6e41cd94e775eaed005d8a6fd976c9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="saving-and-writing-a-document"></a>Salvando e escrevendo um documento
 Quando você carrega e salvar <xref:System.Xml.XmlDocument>, o documento salvo pode diferir do original das seguintes maneiras:  
@@ -29,7 +32,7 @@ Quando você carrega e salvar <xref:System.Xml.XmlDocument>, o documento salvo p
   
 -   Todos os espaços em branco entre atributos são reduzidos a um único caractere de espaço.  
   
--   O espaço em branco entre elementos é alterado. O espaço em branco significativo é preservado e o espaço em branco insignificante não é. Mas quando o documento é salvo, ele usará o <xref:System.Xml.XmlTextWriter> **recuo** modo por padrão se imprimir a saída para torná-lo mais legível.  
+-   O espaço em branco entre elementos é alterado. O espaço em branco significativo é preservado e o espaço em branco insignificante não é. Mas quando o documento é salvo, ele usará o modo <xref:System.Xml.XmlTextWriter> **Recuo** por padrão para imprimir ordenadamente a saída e torná-la mais legível.  
   
 -   O caractere de aspas usado ao redor de valores de atributo é alterado para aspas duplas por padrão. Você pode usar a propriedade <xref:System.Xml.XmlTextReader.QuoteChar%2A> em <xref:System.Xml.XmlTextWriter> para definir o caractere de aspas para aspas duplas ou aspas simples.  
   
@@ -98,4 +101,4 @@ string xml = mydoc.DocumentElement.OuterXml;
  Ao contrário, você pode usar a propriedade <xref:System.Xml.XmlNode.InnerText%2A> se quiser o conteúdo dos nós filho.  
   
 ## <a name="see-also"></a>Consulte também  
- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

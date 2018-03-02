@@ -28,25 +28,28 @@ helpviewer_keywords:
 - isolated storage, out of space conditions
 - data storage using isolated storage, out of space conditions
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d813522d0aeb9bf37582c167760d44268df27039
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e04b4b85b9a14e842c94226017fcd903ad1cbb40
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Como antecipar condições de espaço insuficiente com o armazenamento isolado
-O código que usa armazenamento isolado é restrito por um [cota](../../../docs/standard/io/isolated-storage.md#quotas) que especifica o tamanho máximo para o compartimento de dados no qual isolar arquivos de armazenamento e diretórios existem. A cota é definida pela política de segurança e é configurável por administradores. Se o máximo permitido de tamanho foi excedido ao tentar gravar dados, um <xref:System.IO.IsolatedStorage.IsolatedStorageException> exceção será lançada e a operação falhará. Isso ajuda a evitar ataques de negação de serviço que podem fazer com que o aplicativo recuse solicitações porque o armazenamento de dados é preenchido.  
+O código que usa armazenamento isolado é restrito por uma [cota](../../../docs/standard/io/isolated-storage.md#quotas) que especifica o tamanho máximo do compartimento de dados no qual arquivos de armazenamento e diretórios isolados existem. A cota é definida pela política de segurança e é configurável por administradores. Se o tamanho máximo permitido for ultrapassado ao tentar gravar dados, uma exceção <xref:System.IO.IsolatedStorage.IsolatedStorageException> será lançada e a operação falhará. Isso ajuda a evitar ataques de negação de serviço que podem fazer com que o aplicativo recuse solicitações porque o armazenamento de dados está cheio.  
   
- Para ajudá-lo a determinar se uma determinada tentativa de gravação provavelmente falhará por esse motivo, o <xref:System.IO.IsolatedStorage.IsolatedStorage> classe fornece três propriedades somente leitura: <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorage.UsedSize%2A>, e <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A>. Você pode usar essas propriedades para determinar se a gravação no armazenamento fará com que o tamanho máximo permitido de armazenamento seja excedido. Tenha em mente que o armazenamento isolado pode ser acessada simultaneamente; Portanto, quando você calcular a quantidade de armazenamento restante, o espaço de armazenamento foi consumido quando que você tenta gravar no repositório. No entanto, você pode usar o tamanho máximo do repositório para ajudar a determinar se o limite superior no armazenamento disponível está prestes a ser atingido.  
+ Para ajudar você a determinar se uma determinada tentativa de gravação provavelmente falhará por esse motivo, a classe <xref:System.IO.IsolatedStorage.IsolatedStorage> fornece três propriedades somente leitura: <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorage.UsedSize%2A> e <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A>. Você pode usar essas propriedades para determinar se a gravação no armazenamento fará com que o tamanho máximo permitido de armazenamento seja ultrapassado. Lembre-se de que o armazenamento isolado pode ser acessado simultaneamente; portanto, ao calcular a quantidade de armazenamento restante, o espaço de armazenamento poderá ser consumido até você tentar gravar no armazenamento. No entanto, você pode usar o tamanho máximo do armazenamento para ajudar a determinar se o limite superior no armazenamento disponível está prestes a ser alcançado.  
   
- O <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A> propriedade depende da evidência do assembly funcione corretamente. Por esse motivo, você deve recuperar esta propriedade somente em <xref:System.IO.IsolatedStorage.IsolatedStorageFile> objetos que foram criados usando o <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A>, ou <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> método. <xref:System.IO.IsolatedStorage.IsolatedStorageFile>objetos que foram criados de qualquer outra forma (por exemplo, os objetos que foram retornados do <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> método) não retornará um tamanho máximo preciso.  
+ A propriedade <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A> depende da evidência do funcionamento correto do assembly. Por esse motivo, você deve recuperar essa propriedade somente em objetos <xref:System.IO.IsolatedStorage.IsolatedStorageFile> que foram criados usando o método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> ou <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>. Os objetos <xref:System.IO.IsolatedStorage.IsolatedStorageFile> que foram criados de qualquer outra forma (por exemplo, objetos retornados do método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A>) não retornarão um tamanho máximo preciso.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir obtém um armazenamento isolado, cria alguns arquivos e recupera o <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A> propriedade. O espaço restante é reportado em bytes.  
+ O exemplo de código a seguir obtém um armazenamento isolado, cria alguns arquivos e recupera a propriedade <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A>. O espaço restante é relatado em bytes.  
   
  [!code-cpp[Conceptual.IsolatedStorage#8](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source7.cpp#8)]
  [!code-csharp[Conceptual.IsolatedStorage#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source7.cs#8)]

@@ -13,15 +13,18 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b9505f60b2000ef227463404dab051ecb7fa3cc5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dd2c5a0e4625a348daad9eccb7bae0e4788cab71
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="editing-xml-schemas"></a>Esquemas XML de edição
 Editar um esquema XML é um dos recursos mais importantes do modelo de objeto (SOM) de esquema. Todas as propriedades de pre-esquema- compilação de SOM podem ser usadas para alterar os valores existentes em um esquema XML. O esquema XML pode então ser recompilado para refletir as alterações.  
@@ -29,7 +32,7 @@ Editar um esquema XML é um dos recursos mais importantes do modelo de objeto (S
  A primeira etapa em editar um esquema carregado no SOM é passar pelo esquema. Você deve estar familiarizado com o atravessamento de um esquema usando o SOM API antes de tentar editar um esquema. Você também deve estar familiarizado com as propriedades pré-compilação e de POST-esquema- compilação de POST-Esquema- compilação - Infoset (PSCI).  
   
 ## <a name="editing-an-xml-schema"></a>Editando um esquema XML  
- Nesta seção, são fornecidos dois exemplos de código, que editar o esquema do cliente criado no [compilando esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md) tópico. O primeiro exemplo de código a seguir adiciona um novo elemento de `PhoneNumber` para o elemento de `Customer` e o segundo exemplo de código a seguir adiciona um novo atributo de `Title` para o elemento de `FirstName` . O primeiro exemplo também usa a coleção de <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> de POST-esquema- compilação como os meios para percorrer o esquema de cliente quando o segundo exemplo de código usar a coleção de <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> de pre-esquema- compilação.  
+ Nesta seção, dois exemplos de código são fornecidos, ambos editar o esquema de cliente criado no tópico [Compilar esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md). O primeiro exemplo de código a seguir adiciona um novo elemento de `PhoneNumber` para o elemento de `Customer` e o segundo exemplo de código a seguir adiciona um novo atributo de `Title` para o elemento de `FirstName` . O primeiro exemplo também usa a coleção de <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> de POST-esquema- compilação como os meios para percorrer o esquema de cliente quando o segundo exemplo de código usar a coleção de <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> de pre-esquema- compilação.  
   
 ### <a name="phonenumber-element-example"></a>Exemplo do elemento de PhoneNumber  
  Isso primeiro exemplo de código a seguir adiciona um novo elemento de `PhoneNumber` para o elemento de `Customer` do cliente. O exemplo de código editar o esquema de cliente nas seguintes etapas.  
@@ -54,7 +57,7 @@ Editar um esquema XML é um dos recursos mais importantes do modelo de objeto (S
  [!code-csharp[XmlSchemaEditExample1#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample1/CS/XmlSchemaEditExample1.cs#1)]
  [!code-vb[XmlSchemaEditExample1#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample1/VB/XmlSchemaEditExample1.vb#1)]  
   
- A seguir está o esquema do cliente modificadas criado no [compilando esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md) tópico.  
+ A seguir, o esquema modificado de cliente criado no tópico [Compilar esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -118,7 +121,7 @@ Editar um esquema XML é um dos recursos mais importantes do modelo de objeto (S
  [!code-csharp[XmlSchemaEditExample2#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample2/CS/XmlSchemaEditExample2.cs#1)]
  [!code-vb[XmlSchemaEditExample2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample2/VB/XmlSchemaEditExample2.vb#1)]  
   
- A seguir está o esquema do cliente modificadas criado no [compilando esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md) tópico.  
+ A seguir, o esquema modificado de cliente criado no tópico [Compilar esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md).  
   
 ```xml  
 <?xml version="1.0" encoding=" utf-8"?>  
@@ -149,4 +152,4 @@ Editar um esquema XML é um dos recursos mais importantes do modelo de objeto (S
  [Percorrer esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
  [Incluindo ou importando esquemas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
  [XmlSchemaSet para compilação de esquema](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Pós-esquema de compilação Infoset](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+ [Infoset de compilação pós-esquema](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

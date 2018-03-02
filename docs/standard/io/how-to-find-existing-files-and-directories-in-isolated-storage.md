@@ -23,25 +23,28 @@ helpviewer_keywords:
 - locating directories in isolated storage file
 - storing data using isolated storage, finding files and directories
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 656c390358b6f6a671cf3ef11ea7be75f897d21c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8d460f07e7558fdf9190561b1cac4307767ff245
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Como localizar arquivos e diretórios existentes no armazenamento isolado
-Para procurar um diretório no armazenamento isolado, use o <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> método. Esse método usa uma cadeia de caracteres que representa um padrão de pesquisa. Você pode usar o caractere único (?) e vários caracteres (*) caracteres curinga no padrão de pesquisa, mas os caracteres curinga devem aparecer na parte final do nome. Por exemplo, `directory1/*ect*` é uma cadeia de caracteres de pesquisa válida, mas `*ect*/directory2` não é.  
+Para procurar um diretório no armazenamento isolado, use o método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType>. Esse método usa uma cadeia de caracteres que representa um padrão de pesquisa. Você pode usar o caractere único (?) e vários caracteres (*) caracteres curinga no padrão de pesquisa, mas os caracteres curinga devem aparecer na parte final do nome. Por exemplo, `directory1/*ect*` é uma cadeia de caracteres de pesquisa válida, mas `*ect*/directory2` não é.  
   
- Para procurar um arquivo, use o <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A?displayProperty=nameWithType> método. A restrição para caracteres curinga em cadeias de caracteres de pesquisa que se aplica a <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> também se aplica a <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A>.  
+ Para procurar um arquivo, use o método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A?displayProperty=nameWithType>. A restrição para caracteres curinga em cadeias de caracteres de pesquisa que se aplica a <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> também se aplica a <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A>.  
   
- Nenhum desses métodos é recursiva; o <xref:System.IO.IsolatedStorage.IsolatedStorageFile> classe fornece métodos para listar todos os diretórios ou arquivos no seu armazenamento. No entanto, os métodos de recursiva são mostrados no exemplo de código a seguir.  
+ Nenhum desses métodos é recursivo; a classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> fornece métodos para listar todos os diretórios ou arquivos no repositório. No entanto, os métodos recursivos são mostrados no exemplo de código a seguir.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir ilustra como criar arquivos e diretórios em um armazenamento isolado. Primeiro, um armazenamento isolado para usuário, domínio e assembly é recuperado e colocado no `isoStore` variável. O <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A> método é usado para configurar algumas pastas diferentes e o <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.%23ctor%28System.String%2CSystem.IO.FileMode%2CSystem.IO.IsolatedStorage.IsolatedStorageFile%29> construtor cria alguns arquivos nesses diretórios. O código, em seguida, executa um loop através dos resultados do `GetAllDirectories` método. Esse método usa <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> para localizar todos os nomes de diretório no diretório atual. Esses nomes são armazenados em uma matriz e, em seguida, `GetAllDirectories` chama a mesmo, passando em cada diretório encontrado. Como resultado, todos os nomes de diretório são retornados em uma matriz. Em seguida, o código chama o `GetAllFiles` método. Este método chama `GetAllDirectories` para descobrir os nomes de todos os diretórios e, em seguida, ele verifica cada diretório de arquivos usando o <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A> método. O resultado é retornado em uma matriz para exibição.  
+ O exemplo de código a seguir ilustra como criar arquivos e diretórios em um repositório isolado. Primeiro, um repositório isolado para usuário, domínio e assembly é recuperado e colocado na variável `isoStore`. O método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A> é usado para configurar algumas pastas diferentes, e o construtor <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.%23ctor%28System.String%2CSystem.IO.FileMode%2CSystem.IO.IsolatedStorage.IsolatedStorageFile%29> cria alguns arquivos nesses diretórios. O código executa um loop através dos resultados do método `GetAllDirectories`. Esse método usa <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> para localizar todos os nomes de diretório no diretório atual. Esses nomes são armazenados em uma matriz, e `GetAllDirectories` chama a si mesmo, passando cada diretório encontrado. Como resultado, todos os nomes de diretório são retornados em uma matriz. Em seguida, o código chama o método `GetAllFiles`. Este método chama `GetAllDirectories` para descobrir os nomes de todos os diretórios e verifica cada diretório de arquivos usando o método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A>. O resultado é retornado em uma matriz para exibição.  
   
  [!code-cpp[Conceptual.IsolatedStorage#9](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source8.cpp#9)]
  [!code-csharp[Conceptual.IsolatedStorage#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source8.cs#9)]

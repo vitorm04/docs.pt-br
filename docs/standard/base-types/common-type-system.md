@@ -21,15 +21,18 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9f9952cfd6ed2d5bac66d1cd5e3c8eed7506cd5c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 26ee5cffd5e04a8c78cf5913b286fadfaab03c7c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-type-system"></a>Common Type System
 O Common Type System define como os tipos são declarados, usados e gerenciados no Common Language Runtime e também é uma parte importante do suporte do tempo de execução para a integração entre linguagens. O Common Type System executa as seguintes funções:  
@@ -95,7 +98,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
 <a name="Structures"></a>   
 ### <a name="structures"></a>Estruturas  
- Uma estrutura é um tipo de valor que é derivado implicitamente do <xref:System.ValueType?displayProperty=nameWithType> que, por sua vez, é derivado de <xref:System.Object?displayProperty=nameWithType>. Uma estrutura é muito útil para representar valores cujos requisitos de memória são pequenos e passar valores como parâmetros por valor para os métodos que tenham parâmetros fortemente tipados. No .NET, todos os tipos de dados primitivos (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, e <xref:System.UInt64>) são definidos como estruturas.  
+ Uma estrutura é um tipo de valor que é derivado implicitamente do <xref:System.ValueType?displayProperty=nameWithType> que, por sua vez, é derivado de <xref:System.Object?displayProperty=nameWithType>. Uma estrutura é muito útil para representar valores cujos requisitos de memória são pequenos e passar valores como parâmetros por valor para os métodos que tenham parâmetros fortemente tipados. No .NET Framework, todos os tipos de dados primitivos (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32> e <xref:System.UInt64>) são definidos como estruturas.  
   
  Assim como as classes, as estruturas definem os dados (os campos da estrutura) e as operações que podem ser executadas nesses dados (os métodos da estrutura). Isso significa que você pode chamar métodos em estruturas, incluindo os métodos virtuais definidos nas classes <xref:System.Object?displayProperty=nameWithType> e <xref:System.ValueType?displayProperty=nameWithType> e todos os métodos definidos no próprio tipo de valor. Em outras palavras, as estruturas podem ter campos, propriedades e eventos, bem como métodos estáticos e não estáticos. É possível criar instâncias de estruturas, passá-las como parâmetros, armazená-las como variáveis locais ou armazená-las em um campo de outro tipo de valor ou tipo de referência. As estruturas também podem implementar interfaces.  
   
@@ -166,7 +169,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
  Em muitos casos, como acontece com métodos de retorno de chamada, um delegado representa apenas um método e as únicas ações que você precisa realizar são criar e invocar o delegado.  
   
- Para delegados que representam vários métodos, o .NET fornece métodos do <xref:System.Delegate> e <xref:System.MulticastDelegate> delegar classes para dar suporte a operações como adicionar um método à lista de invocação do delegado (o <xref:System.Delegate.Combine%2A?displayProperty=nameWithType> método), a remoção de um método (o <xref:System.Delegate.Remove%2A?displayProperty=nameWithType> método) e obter a lista de invocação (o <xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType> método).  
+ Para representantes que representam vários métodos, o .NET fornece métodos das classes de representante <xref:System.Delegate> e <xref:System.MulticastDelegate> para dar suporte a operações como adicionar um método à lista de invocação de um representante (o método <xref:System.Delegate.Combine%2A?displayProperty=nameWithType>), remover um método (o método <xref:System.Delegate.Remove%2A?displayProperty=nameWithType>) e obter a lista de invocação (o método <xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType>).  
   
 > [!NOTE]
 >  Não é necessário usar esses métodos para representantes de manipuladores de eventos em C#, C++ e Visual Basic, porque essas linguagens fornecem sintaxe para adicionar e remover manipuladores de eventos.  
@@ -270,7 +273,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
  [!code-csharp[Conceptual.Types.Members.Properties#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.members.properties/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Members.Properties#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.members.properties/vb/example.vb#1)]  
   
- Além de incluir a propriedade em si, o idioma intermediário Microsoft (MSIL) para um tipo que contém uma propriedade de leitura inclui um `get_` *propertyname* método e o MSIL para um tipo que contém um gravável propriedade inclui um `set_` *propertyname* método.  
+ Além de incluir a própria propriedade, a MSIL (Microsoft Intermediate Language) para um tipo que contém uma propriedade legível inclui um método `get_`*propertyname* e a MSIL para um tipo que contém uma propriedade gravável inclui um método `set_`*propertyname*.  
   
 <a name="Methods"></a>   
 ### <a name="methods"></a>Métodos  
@@ -328,6 +331,6 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 -   Um tipo derivado pode substituir um método virtual herdado. O método de substituição fornece uma nova definição do método que será invocado com base no tipo do valor no tempo de execução em vez do tipo de variável conhecido no tempo de compilação. Um método poderá substituir um método virtual somente se o método virtual não estiver marcado como `final` e o novo método for tão acessível quanto o método virtual.  
   
 ## <a name="see-also"></a>Consulte também  
- [Biblioteca de classes do .NET](http://go.microsoft.com/fwlink/?LinkID=217856)  
+ [Biblioteca de Classes do .NET](http://go.microsoft.com/fwlink/?LinkID=217856)  
  [Common Language Runtime](../../../docs/standard/clr.md)  
  [Conversão de tipo no .NET](../../../docs/standard/base-types/type-conversion.md)

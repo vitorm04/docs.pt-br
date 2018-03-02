@@ -15,18 +15,21 @@ helpviewer_keywords:
 - task parallelism in .NET
 - parallel programming, task parallelism
 ms.assetid: 6b3ecd79-dec9-4ce1-abf4-62e5392a59c6
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8a51f180a394c1baa2ecb0620279ea15c62e1edc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 942ba120fa5273f84ac3d0a51e276223de5f5484
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Como usar Parallel.Invoke para executar operações em paralelo
-Este exemplo mostra como a paralelização de operações usando <xref:System.Threading.Tasks.Parallel.Invoke%2A> na biblioteca de tarefas paralelas. Três operações são executadas em uma fonte de dados compartilhada. Como nenhuma das operações de modificar a fonte, eles podem ser executados em paralelo de uma maneira simples.  
+Este exemplo mostra como paralelizar operações usando <xref:System.Threading.Tasks.Parallel.Invoke%2A> na Biblioteca de paralelismo de tarefas. Três operações são executadas em uma fonte de dados compartilhada. Como nenhuma das operações modifica a fonte, elas podem ser executadas em paralelo de uma maneira simples.  
   
 > [!NOTE]
 >  Esta documentação usa expressões lambda para definir delegados na TLP. Se você não estiver familiarizado com expressões lambda no C# ou no Visual Basic, veja [Expressões lambda em PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
@@ -35,9 +38,9 @@ Este exemplo mostra como a paralelização de operações usando <xref:System.Th
  [!code-csharp[TPL_Parallel#06](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/parallelinvoke.cs#06)]
  [!code-vb[TPL_Parallel#06](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/parallelinvoke.vb#06)]  
   
- Observe que, com <xref:System.Threading.Tasks.Parallel.Invoke%2A>, você simplesmente expressar quais ações você deseja executar simultaneamente e o tempo de execução trata todos os threads agendamento detalhes, incluindo dimensionamento automaticamente para o número de núcleos no computador host.  
+ Observe que, com <xref:System.Threading.Tasks.Parallel.Invoke%2A>, você simplesmente expressa quais ações quer executar simultaneamente, e o tempo de execução trata todos os detalhes de agendamento do thread, incluindo o dimensionamento automaticamente para o número de núcleos no computador host.  
   
- Este exemplo parallelizes as operações, não os dados. Como uma abordagem alternativa, você pode paralelizar consultas LINQ usando PLINQ e executar as consultas em sequência. Como alternativa, você poderia paralelizar os dados usando o PLINQ. Outra opção é paralelizar as consultas e as tarefas. Embora resultante sobrecarga pode degradar o desempenho em computadores de host com processadores relativamente poucas, ele será dimensionado muito melhor em computadores com vários processadores.  
+ Este exemplo paraleliza as operações, não os dados. Como uma abordagem alternativa, você pode paralelizar as consultas do LINQ usando PLINQ e executar as consultas em sequência. Como alternativa, você poderia paralelizar os dados usando o PLINQ. Outra opção é paralelizar as consultas e as tarefas. Embora a sobrecarga resultante possa degradar o desempenho em computadores de host com poucos processadores, ela será dimensionada muito melhor em computadores com vários processadores.  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   

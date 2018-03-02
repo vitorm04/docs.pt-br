@@ -12,95 +12,99 @@ dev_langs:
 - csharp
 - vb
 - cpp
-helpviewer_keywords: garbage collection, notifications
+helpviewer_keywords:
+- garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 41a2ed9c5d239f1570955e87bb5b749e29830bc3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ac951ad1f89d058b06280bc176ca7928a1dc65bf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="garbage-collection-notifications"></a>Notificações sobre a coleta de lixo
-Há situações em que uma coleta de lixo completa (ou seja, uma coleção de geração 2) o common language runtime pode afetar o desempenho. Isso pode ser um problema particularmente com servidores que processam grandes volumes de pedidos; Nesse caso, uma coleta de lixo longa pode causar um tempo limite da solicitação. Para impedir que uma coleção completa de segundo que ocorrem durante um período crítico, você pode ser notificado de que uma coleta de lixo completa está se aproximando e, em seguida, execute a ação para redirecionar a carga de trabalho para outra instância do servidor. Você pode também induzir uma coleção por conta própria, desde que a instância do servidor atual não é necessário processar solicitações.  
+Há situações em que uma coleta de lixo completa (ou seja, uma coleta de geração 2) pelo common language runtime pode afetar negativamente o desempenho. Isso pode ser um problema, especialmente com servidores que processam grandes volumes de solicitações. Nesse caso, uma coleta de lixo longa pode fazer com que o tempo limite de uma solicitação seja atingido. Para impedir que uma coleta completa ocorra durante um período crítico, você pode ser notificado que uma coleta de lixo completa está se aproximando e, em seguida, tomar medidas para redirecionar a carga de trabalho para outra instância do servidor. Você também pode induzir uma coleta por conta própria, desde que a instância atual do servidor não precise processar solicitações.  
   
- O <xref:System.GC.RegisterForFullGCNotification%2A> método registra uma notificação ser gerado quando o tempo de execução detecta que está se aproximando de uma coleta de lixo completa. Há duas partes para esta notificação: quando a coleta de lixo completa está se aproximando e quando a coleta de lixo completa foi concluída.  
+ O método <xref:System.GC.RegisterForFullGCNotification%2A> registra uma notificação para ser gerado quando o tempo de execução detectar que uma coleta de lixo completa está se aproximando. Essa notificação é composta por duas partes: quando a coleta de lixo completa está se aproximando e quando a coleta de lixo completa for concluída.  
   
 > [!WARNING]
->  Coletas de lixo de bloqueio somente geram notificações. Quando o [ \<gcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) elemento de configuração estiver habilitado, coletas de lixo em segundo plano não vai disparar notificações.  
+>  Apenas o bloqueio de coletas de lixo geram notificações. Quando o elemento de configuração [\<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) estiver habilitado, as coletas de lixo em segundo plano não gerarão notificações.  
   
- Para determinar quando uma notificação foi ativada, use o <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A> métodos. Normalmente, você pode usar esses métodos em um `while` loop continuamente obter um <xref:System.GCNotificationStatus> enumeração que mostra o status da notificação. Se esse valor for <xref:System.GCNotificationStatus.Succeeded>, você pode fazer o seguinte:  
+ Para determinar quando uma notificação foi gerada, use os métodos <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A>. Normalmente, você pode usar esses métodos em um loop `while` para obter continuamente uma enumeração <xref:System.GCNotificationStatus> que mostra o status da notificação. Se esse valor for <xref:System.GCNotificationStatus.Succeeded>, você pode fazer o seguinte:  
   
--   Em resposta a uma notificação obtida com o <xref:System.GC.WaitForFullGCApproach%2A> método, você pode redirecionar a carga de trabalho e possivelmente induzir uma coleção por conta própria.  
+-   Em resposta a uma notificação obtida com o método <xref:System.GC.WaitForFullGCApproach%2A>, você pode redirecionar a carga de trabalho e, possivelmente, induzir uma coleção por conta própria.  
   
--   Em resposta a uma notificação obtida com o <xref:System.GC.WaitForFullGCComplete%2A> método, você pode tornar disponíveis para processar solicitações novamente a instância do servidor atual. Você também pode coletar informações. Por exemplo, você pode usar o <xref:System.GC.CollectionCount%2A> método para registrar o número de coleções.  
+-   Em resposta a uma notificação obtida com o método <xref:System.GC.WaitForFullGCComplete%2A>, você pode tornar a instância atual do servidor disponível para processar solicitações novamente. Você também pode coletar informações. Por exemplo, você pode usar o método <xref:System.GC.CollectionCount%2A> para registrar o número de coleções.  
   
- O <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A> métodos são projetados para trabalhar juntos. Usando um sem o outro pode produzir resultados indeterminados.  
+ Os métodos <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A> são projetados para trabalhar juntos. Usar um sem o outro pode produzir resultados indeterminados.  
   
 ## <a name="full-garbage-collection"></a>Coleta de lixo completa  
- O tempo de execução faz com que uma coleta de lixo completa quando qualquer uma das seguintes situações for verdadeira:  
+ O tempo de execução resultará em uma coleta de lixo completa quando qualquer um dos cenários a seguir for verdadeiro:  
   
--   Memória insuficiente foi promovida na geração 2 para fazer com que a próxima coleta de geração 2.  
+-   Foi promovida memória suficiente para a geração 2 para gerar a próxima coleta de geração 2.  
   
--   Memória insuficiente foi promovida para o heap de objeto grande para fazer com que a próxima coleta de geração 2.  
+-   Foi promovida memória suficiente para o heap de objeto grande para gerar a próxima coleta de geração 2.  
   
--   Uma coleção de geração 1 é escalada para uma coleção de geração 2 devido a outros fatores.  
+-   Outros fatores escalam uma coleta de geração 1 para uma coleta de geração 2.  
   
- Os limites que você especificar o <xref:System.GC.RegisterForFullGCNotification%2A> método aplicar para os primeiros dois cenários. No entanto, o primeiro cenário você não sempre receberão a notificação ao tempo proporcional para os valores de limite especificados por dois motivos:  
+ Os limites que você especificar no método <xref:System.GC.RegisterForFullGCNotification%2A> serão aplicados aos primeiros dois cenários. No entanto, no primeiro cenário, você nem sempre receberá a notificação no momento proporcional aos valores de limite que você especificar por dois motivos:  
   
--   O tempo de execução não verifica cada alocação de objeto pequeno (por motivos de desempenho).  
+-   O tempo de execução não verifica todas as alocações de objeto pequeno (por motivos de desempenho).  
   
--   Somente geração 1 coleções promovem memória em geração 2.  
+-   Somente as coletas da geração 1 promovem a memória na geração 2.  
   
- O terceiro cenário também contribui para a incerteza de quando você recebe a notificação. Embora isso não é uma garantia, ele mostrará como uma maneira útil para reduzir os efeitos de uma coleta de lixo completa inoportunos redirecionar as solicitações durante esse tempo ou induzindo coleção por conta própria quando pode ser acomodada melhor.  
+ O terceiro cenário também contribui para a incerteza de quando você receberá a notificação. Embora não seja uma garantia, essa é uma maneira útil de reduzir os efeitos de uma coleta de lixo completa inoportuna ao redirecionar as solicitações durante esse período ou você mesmo induzir a coleta para quando ela puder ser melhor hospedada.  
   
 ## <a name="notification-threshold-parameters"></a>Parâmetros de limite de notificação  
- O <xref:System.GC.RegisterForFullGCNotification%2A> método tem dois parâmetros para especificar os valores de limite de objetos da geração 2 e o heap de objeto grande. Quando esses valores forem atendidas, uma notificação de coleta de lixo deve ser gerada. A tabela a seguir descreve esses parâmetros.  
+ O método <xref:System.GC.RegisterForFullGCNotification%2A> tem dois parâmetros para especificar os valores de limite do heap de objeto grande e dos objetos de geração 2. Quando esses valores forem atendidos, uma notificação de coleta de lixo deverá ser gerada. A tabela a seguir descreve esses parâmetros.  
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
 |`maxGenerationThreshold`|Um número entre 1 e 99 que especifica quando a notificação deve ser gerada com base nos objetos promovidos na geração 2.|  
-|`largeObjectHeapThreshold`|Um número entre 1 e 99 que especifica quando a notificação deve ser gerada com base nos objetos que são alocados no heap de objeto grande.|  
+|`largeObjectHeapThreshold`|Um número entre 1 e 99 que especifica quando a notificação deve ser gerada com base nos objetos alocados no heap de objetos grandes.|  
   
- Se você especificar um valor que é muito alto, há uma alta probabilidade de que você receberá uma notificação, mas pode ser muito um período de espera antes que o tempo de execução faz com que uma coleção. Se você mesmo induzir uma coleção, você pode recuperar mais objetos que seriam recuperados se o tempo de execução faz com que a coleção.  
+ Se você especificar um valor muito alto, a probabilidade de receber uma notificação será muito elevada. No entanto, pode demorar muito até que o tempo de execução gere uma coleta. Se você mesmo induzir uma coleta, poderá recuperar mais objetos que seriam recuperados se o tempo de execução gerasse a coleta.  
   
- Se você especificar um valor muito baixo, o tempo de execução pode causar a coleção antes de você ter tido tempo suficiente para ser notificado.  
+ Se você especificar um valor muito baixo, o tempo de execução poderá gerar a coleta antes de você ter tido tempo suficiente para ser notificado.  
   
 ## <a name="example"></a>Exemplo  
   
 ### <a name="description"></a>Descrição  
- No exemplo a seguir, um grupo de servidores de serviço as solicitações da Web. Para simular a carga de trabalho de processamento de solicitações, matrizes de bytes são adicionados a um <xref:System.Collections.Generic.List%601> coleção. Cada servidor registra uma notificação de coleta de lixo e, em seguida, inicia um thread no `WaitForFullGCProc` método de usuário para monitorar continuamente o <xref:System.GCNotificationStatus> enumeração que é retornada pelo <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A> métodos.  
+ No exemplo a seguir, um grupo de serviço de servidores controla as solicitações da Web recebidas. Para simular a carga de trabalho de processamento de solicitações, matrizes de bytes são adicionadas a uma coleta <xref:System.Collections.Generic.List%601>. Cada servidor registra uma notificação de coleta de lixo e, em seguida, inicia um thread no método de usuário `WaitForFullGCProc` para monitorar continuamente a enumeração <xref:System.GCNotificationStatus> que é retornada pelos métodos <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A>.  
   
- O <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A> métodos chamam seus respectivos métodos de usuário de manipulação de eventos quando uma notificação é gerada:  
+ Os métodos <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A> chamam seus respectivos métodos de usuário de manipulação de eventos quando uma notificação é gerada:  
   
 -   `OnFullGCApproachNotify`  
   
-     Este método chama o `RedirectRequests` método de usuário, que instrui o servidor de enfileiramento de mensagens de solicitação para suspender a enviar solicitações ao servidor. Isso é simulado, definindo a variável de nível de classe `bAllocate` para `false` para que nenhum outro objeto é alocado.  
+     Este método chama o método de usuário `RedirectRequests` que instrui o servidor de enfileiramento de solicitações a suspender o envio de solicitações ao servidor. Isso é simulado definindo a variável de nível de classe `bAllocate` como `false` para que nenhum outro objeto seja alocado.  
   
-     Em seguida, o `FinishExistingRequests` usuário método é chamado para concluir o processamento das solicitações pendentes do servidor. Isso é simulado desmarcando a <xref:System.Collections.Generic.List%601> coleção.  
+     Em seguida, o método de usuário `FinishExistingRequests` é chamado para concluir o processamento das solicitações pendentes do servidor. Isso é simulado desmarcando a coleta <xref:System.Collections.Generic.List%601>.  
   
-     Por fim, uma coleta de lixo seja induzida porque a carga de trabalho é claro.  
+     Por fim, como a carga de trabalho é leve, uma coleta de lixo é induzida.  
   
 -   `OnFullGCCompleteNotify`  
   
-     Este método chama o método de usuário `AcceptRequests` para retomar a aceitar solicitações porque o servidor não está mais suscetível a coleta de lixo completa. Essa ação é simulada, definindo o `bAllocate` variável para `true` para que objetos podem continuar sendo adicionado ao <xref:System.Collections.Generic.List%601> coleção.  
+     Este método chama o método de usuário `AcceptRequests` para retomar a aceitar de solicitações já que o servidor não está mais suscetível à coleta de lixo completa. Essa ação é simulada através da definição da variável `bAllocate` como `true` para que objetos possam continuar sendo adicionados à coleta <xref:System.Collections.Generic.List%601>.  
   
- O código a seguir contém o `Main` método do exemplo.  
+ O código a seguir contém o método `Main` do exemplo.  
   
  [!code-cpp[GCNotification#2](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#2)]
  [!code-csharp[GCNotification#2](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#2)]
  [!code-vb[GCNotification#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#2)]  
   
- O código a seguir contém o `WaitForFullGCProc` método de usuário, que contém um contínua ao loop para verificar se há notificações de coleta de lixo.  
+ O código a seguir contém o método de usuário `WaitForFullGCProc` que contém um loop while contínuo para verificar se há notificações de coleta de lixo.  
   
  [!code-cpp[GCNotification#8](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#8)]
  [!code-csharp[GCNotification#8](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#8)]
  [!code-vb[GCNotification#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#8)]  
   
- O código a seguir contém o `OnFullGCApproachNotify` método conforme chamado a partir de  
+ O código a seguir contém o método `OnFullGCApproachNotify` como chamado no  
   
  Método `WaitForFullGCProc`.  
   
@@ -108,7 +112,7 @@ Há situações em que uma coleta de lixo completa (ou seja, uma coleção de ge
  [!code-csharp[GCNotification#5](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#5)]
  [!code-vb[GCNotification#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#5)]  
   
- O código a seguir contém o `OnFullGCApproachComplete` método conforme chamado a partir de  
+ O código a seguir contém o método `OnFullGCApproachComplete` como chamado no  
   
  Método `WaitForFullGCProc`.  
   
@@ -116,13 +120,13 @@ Há situações em que uma coleta de lixo completa (ou seja, uma coleção de ge
  [!code-csharp[GCNotification#6](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#6)]
  [!code-vb[GCNotification#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#6)]  
   
- O código a seguir contém os métodos de usuário que são chamados do `OnFullGCApproachNotify` e `OnFullGCCompleteNotify` métodos. Os métodos de usuário redirecionam as solicitações, concluir as solicitações existentes e, em seguida, continuar solicitações após a coleta de lixo completa.  
+ O código a seguir contém os métodos de usuário que são chamados nos métodos `OnFullGCApproachNotify` e `OnFullGCCompleteNotify`. Os métodos de usuário redirecionam as solicitações, concluem as solicitações existentes e, em seguida, retomam solicitações após a conclusão da coleta de lixo completa.  
   
  [!code-cpp[GCNotification#9](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#9)]
  [!code-csharp[GCNotification#9](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#9)]
  [!code-vb[GCNotification#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#9)]  
   
- O exemplo de código inteira é o seguinte:  
+ O exemplo de código completo é o seguinte:  
   
  [!code-cpp[GCNotification#1](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#1)]
  [!code-csharp[GCNotification#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#1)]

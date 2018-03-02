@@ -11,33 +11,37 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: PLINQ queries, sample data
+helpviewer_keywords:
+- PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f0e94fec1d1390c68808c06a8ff23f52556c6f74
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4b1aaa6f3027283ff20088d6122f9b4ec4bb1111
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="plinq-data-sample"></a>Exemplo de dados PLINQ
-Este exemplo contém dados de exemplo no formato. csv, junto com os métodos que transformá-los em coleções na memória de clientes, produtos, pedidos e detalhes do pedido. Para ter experiência adicional com PLINQ, cole os exemplos de código de determinados outros tópicos no código neste tópico e invoca o `Main` método. Você também pode usar esses dados com suas próprias consultas PLINQ.  
+Este exemplo contém dados de exemplo no formato .csv e os métodos que os transformam em coleções na memória de Customers, Products, Orders e Order Details. Para fazer novas experiências com PLINQ, cole os exemplos de código de outros tópicos no código deste tópico e invoque o método `Main`. Você também pode usar esses dados com suas próprias consultas PLINQ.  
   
- Os dados representam um subconjunto do banco de dados Northwind. Os registros de cliente cinquenta (50) são incluídos, mas nem todos os campos. Um subconjunto de linhas do dados Order_Detail correspondentes para todos os clientes e pedidos é incluído. Todos os produtos são incluídos.  
+ Os dados representam um subconjunto do banco de dados da Northwind. São incluídos cinquenta (50) registros de clientes, mas não todos os campos. É incluído um subconjunto das linhas dos dados de Orders e os dados de Order_Detail correspondentes para todos os clientes (Customers). Todos os produtos estão incluídos.  
   
 > [!NOTE]
->  O conjunto de dados não é grande o suficiente para demonstrar que PLINQ é mais rápido do que objetos LINQ to para consultas que contêm apenas básico `where` e `select` cláusulas. Para observar aumenta a velocidade para pequenos conjuntos de dados, como isso, use as consultas que contêm operações de computação dispendiosas em todos os elementos no conjunto de dados.  
+>  O conjunto de dados não é grande o suficiente para demonstrar que o PLINQ é mais rápido do que o LINQ to Objects em consultas que contêm apenas as cláusulas `where` e `select` básicas. Para observar os aumentos na velocidade de pequenos conjuntos de dados como esses, use as consultas que contêm operações de computação dispendiosas em todos os elementos do conjunto de dados.  
   
 ### <a name="to-set-up-this-sample"></a>Para configurar este exemplo  
   
-1.  Crie um projeto de aplicativo de console do Visual Basic ou Visual c#.  
+1.  Crie um novo projeto de aplicativo de console do Visual Basic ou do Visual C#.  
   
-2.  Substitua o conteúdo do Module1. vb ou Program.cs, usando o código que segue estas etapas.  
+2.  Substitua o conteúdo de Module1.vb ou de Program.cs usando o código que segue estas etapas.  
   
-3.  No menu **Projeto**, clique em **Adicionar Novo Item**. Selecione **arquivo de texto** e, em seguida, clique em **Okey**. Copie os dados neste tópico e, em seguida, cole-o no novo arquivo de texto. Sobre o **arquivo** menu, clique em **salvar**, nomeie o arquivo Plinqdata.csv e, em seguida, salve-o na pasta que contém os arquivos de código fonte.  
+3.  No menu **Projeto**, clique em **Adicionar Novo Item**. Escolha **Arquivo de Texto** e, em seguida, clique em **OK**. Copie os dados neste tópico e então cole-os no novo arquivo de texto. No menu **Arquivo**, clique em **Salvar**, nomeie o arquivo Plinqdata.csv e salve-o na pasta que contém os arquivos de código-fonte.  
   
 4.  Pressione F5 para verificar se o projeto compila e executa corretamente. A saída a seguir deve ser exibida na janela do console.  
   

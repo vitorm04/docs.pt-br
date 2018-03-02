@@ -13,22 +13,25 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ec2846dcac6bfe14746e038d592b7dfe49374993
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cc46aeda6efe9f21bc094a4bc9d211fc282e9b65
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>Modificar dados XML usando XPathNavigator
 A classe <xref:System.Xml.XPath.XPathNavigator> fornece um conjunto de métodos usados para modificar nós e valores em um documento XML. Para usar esses métodos, o objeto <xref:System.Xml.XPath.XPathNavigator> deve ser editável, ou seja, sua propriedade <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> deve ser `true`.  
   
  Os objetos <xref:System.Xml.XPath.XPathNavigator> que podem editar um documento XML são criados pelo método <xref:System.Xml.XmlDocument.CreateNavigator%2A> da classe <xref:System.Xml.XmlDocument>. Os objetos <xref:System.Xml.XPath.XPathNavigator> criados pela classe <xref:System.Xml.XPath.XPathDocument> são somente leitura e qualquer tentativa de usar os métodos de um objeto <xref:System.Xml.XPath.XPathNavigator> criado por um objeto <xref:System.Xml.XPath.XPathDocument> resultará em <xref:System.NotSupportedException>.  
   
- Para obter mais informações sobre como criar editável <xref:System.Xml.XPath.XPathNavigator> objetos, consulte [leitura de dados XML usando XPathDocument e XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md).  
+ Para saber mais sobre como criar objetos <xref:System.Xml.XPath.XPathNavigator> editáveis, confira [Leitura de dados XML usando XPathDocument e XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md).  
   
 ## <a name="modifying-nodes"></a>Modificando nós  
  Uma técnica simples para alterar o valor de um nó é usar os métodos <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> e <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> da classe <xref:System.Xml.XPath.XPathNavigator>.  
@@ -37,7 +40,7 @@ A classe <xref:System.Xml.XPath.XPathNavigator> fornece um conjunto de métodos 
   
 |<xref:System.Xml.XPath.XPathNodeType>|Dados alterados|  
 |---------------------------------------------------------------------------------------------------------------------------------------------|------------------|  
-|<xref:System.Xml.XPath.XPathNodeType.Root>|Não há suporte.|  
+|<xref:System.Xml.XPath.XPathNodeType.Root>|Sem suporte.|  
 |<xref:System.Xml.XPath.XPathNodeType.Element>|O conteúdo do elemento.|  
 |<xref:System.Xml.XPath.XPathNodeType.Attribute>|O valor do atributo.|  
 |<xref:System.Xml.XPath.XPathNodeType.Text>|O conteúdo do texto.|  
@@ -48,7 +51,7 @@ A classe <xref:System.Xml.XPath.XPathNavigator> fornece um conjunto de métodos 
 > [!NOTE]
 >  Não há suporte para a edição de nós <xref:System.Xml.XPath.XPathNodeType.Namespace> ou o nó <xref:System.Xml.XPath.XPathNodeType.Root>.  
   
- A classe <xref:System.Xml.XPath.XPathNavigator> também fornece um conjunto de métodos usados para inserir e remover nós. Para obter mais informações sobre como inserir e remover nós de um documento XML, consulte o [inserir dados XML usando XPathNavigator](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md) e [remover dados XML usando XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md) tópicos.  
+ A classe <xref:System.Xml.XPath.XPathNavigator> também fornece um conjunto de métodos usados para inserir e remover nós. Para saber mais sobre como inserir e remover nós de um documento XML, consulte os tópicos [Inserir dados XML usando XPathNavigator](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md) e [Remover dados XML usando XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md).  
   
 ### <a name="modifying-untyped-values"></a>Modificando valores sem tipo  
  O método <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> simplesmente insere o valor sem tipo de `string` passado como um parâmetro como o valor do nó no qual o objeto <xref:System.Xml.XPath.XPathNavigator> está posicionado no momento. O valor é inserido sem nenhum tipo ou sem verificar se o novo valor é válido de acordo com o tipo de nó se as informações do esquema estiverem disponíveis.  
@@ -122,7 +125,7 @@ navigator.SetTypedValue(DateTime.Now);
   
  Considerando que a validade de um elemento depende da validade de seus elementos filho e atributos, as alterações em algum deles resultará em alteração da validade do elemento se tiver sido válido anteriormente. Especificamente, se os elementos filho ou atributos de um elemento forem inseridos, atualizados ou excluídos, a validade do elemento se tornará desconhecida. Isso é representado pela propriedade <xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> da propriedade <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> do elemento que está sendo definida como <xref:System.Xml.Schema.XmlSchemaValidity.NotKnown>. Além disso, este efeito propaga-se para cima recursivamente no documento XML, porque a validade do elemento pai do elemento (e seu elemento pai, e assim por diante) também se tornará desconhecida.  
   
- Para obter mais informações sobre a validação de esquema e o <xref:System.Xml.XPath.XPathNavigator> de classe, consulte [validação de esquema usando XPathNavigator](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md).  
+ Para saber mais sobre validação do esquema e sobre a classe <xref:System.Xml.XPath.XPathNavigator>, consulte [Validação de esquema usando XPathNavigator](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md).  
   
 ### <a name="modifying-attributes"></a>Modificando atributos  
  Os métodos <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> e <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> podem ser usados para modificar nós de atributo sem tipo e tipados bem como outros tipos de nós listados na seção “Modificando nós”.  
@@ -253,7 +256,7 @@ Console.WriteLine(navigator.OuterXml);
 >  Se o conteúdo de um elemento com um atributo `xsi:nil` definido como `false` for excluído, o valor do atributo não será alterado para `true`.  
   
 ## <a name="saving-an-xml-document"></a>Salvando um documento XML  
- Salvar as alterações feitas em um objeto <xref:System.Xml.XmlDocument> como resultado dos métodos de edição descritos neste tópico é realizado usando os métodos da classe <xref:System.Xml.XmlDocument>. Para obter mais informações sobre como salvar as alterações feitas em um <xref:System.Xml.XmlDocument> de objeto, consulte [salvando e escrevendo um documento](../../../../docs/standard/data/xml/saving-and-writing-a-document.md).  
+ Salvar as alterações feitas em um objeto <xref:System.Xml.XmlDocument> como resultado dos métodos de edição descritos neste tópico é realizado usando os métodos da classe <xref:System.Xml.XmlDocument>. Para saber mais sobre como salvar as alterações feitas em um objeto <xref:System.Xml.XmlDocument>, confira [Salvar e gravar um documento](../../../../docs/standard/data/xml/saving-and-writing-a-document.md).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Xml.XmlDocument>  
@@ -261,4 +264,4 @@ Console.WriteLine(navigator.OuterXml);
  <xref:System.Xml.XPath.XPathNavigator>  
  [Processar dados XML usando o modelo de dados XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
  [Inserir dados XML usando XPathNavigator](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)  
- [Remova os dados XML usando XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)
+ [Remover os dados XML usando XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)

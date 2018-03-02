@@ -14,34 +14,37 @@ helpviewer_keywords:
 - interprocess communication [.NET Framework], pipes
 - I/O [.NET Framework], pipes
 ms.assetid: 7b964ebd-7a4f-4d28-8194-7841f9e4c702
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 879e5a73417f9347224bc22b397814b83972751c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 68c1ad34952ee4d20dbf56aa8ca437a3f99db751
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="pipe-operations-in-the-net-framework"></a>Operações de pipe no .NET Framework
-Pipes fornecem um meio de comunicação entre processos. Há dois tipos de pipes:  
+Os pipes fornecem um meio de comunicação entre processos. Existem dois tipos de pipes:  
   
 -   Pipes anônimos.  
   
-     Pipes anônimos fornecem comunicação entre processos em um computador local. Pipes anônimos exigem menos sobrecarga do que pipes nomeados mas oferecem serviços limitados. Pipes anônimos são unidirecionais e não podem ser usados em uma rede. Eles oferecem suporte a apenas uma única instância de servidor. Pipes anônimos são úteis para a comunicação entre threads ou processos pai e filho onde os identificadores do pipe podem ser facilmente passados para o processo filho quando ele é criado.  
+     Os pipes anônimos fornecem comunicação entre processos em um computador local. Os pipes anônimos exigem menos sobrecarga do que os pipes nomeados mas oferecem serviços limitados. Os pipes anônimos são unidirecionais e não podem ser usados em uma rede. Eles oferecem suporte a apenas uma única instância de servidor. Os pipes anônimos são úteis para a comunicação entre threads ou entre processos pai e filho em que os identificadores de pipe podem ser facilmente passados para o processo filho quando ele é criado.  
   
-     No .NET Framework, você implementa pipes anônimos usando o <xref:System.IO.Pipes.AnonymousPipeServerStream> e <xref:System.IO.Pipes.AnonymousPipeClientStream> classes.  
+     No .NET Framework, você implementa pipes anônimos usando as classes <xref:System.IO.Pipes.AnonymousPipeServerStream> e <xref:System.IO.Pipes.AnonymousPipeClientStream>.  
   
-     Consulte [como: usar Pipes anônimos para comunicação entre processos locais](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md).  
+     Veja [Como usar pipes anônimos para a comunicação entre processos locais](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md).  
   
 -   Pipes nomeados.  
   
-     Pipes nomeados fornecem comunicação entre processos entre um servidor de pipe e um ou mais clientes pipe. Pipes nomeados podem ser unidirecionais ou bidirecionais. Eles oferecem suporte à comunicação baseada em mensagens e permitir que vários clientes para se conectar simultaneamente ao servidor de processo usando o mesmo nome de pipe. Pipes nomeados também oferecem suporte a representação, que permite que processos de conexão usar suas próprias permissões em servidores remotos.  
+     Os pipes nomeados fornecem a comunicação entre processos entre um servidor de pipe e um ou mais clientes pipe. Os pipes nomeados podem ser unidirecionais ou bidirecionais. Eles oferecem suporte à comunicação baseada em mensagens e permitem que vários clientes se conectem simultaneamente ao processo do servidor usando o mesmo nome de pipe. Os pipes nomeados também oferecem suporte à representação, que permite aos processos de conexão usar suas próprias permissões em servidores remotos.  
   
-     No .NET Framework, você implementa pipes nomeados usando o <xref:System.IO.Pipes.NamedPipeServerStream> e <xref:System.IO.Pipes.NamedPipeClientStream> classes.  
+     No .NET Framework, você implementa pipes nomeados usando as classes <xref:System.IO.Pipes.NamedPipeServerStream> e <xref:System.IO.Pipes.NamedPipeClientStream>.  
   
-     Consulte [como: usar Pipes nomeados para comunicação entre processos de rede](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md).  
+     Veja [Como usar pipes nomeados para comunicação entre processos na rede](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de arquivo e de fluxo](../../../docs/standard/io/index.md)  

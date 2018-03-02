@@ -15,23 +15,26 @@ helpviewer_keywords:
 - threading [.NET Framework], garbage collection
 - garbage collection, threads
 ms.assetid: e8f58e17-2714-4821-802a-f8eb3b2baa62
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e47674ef8d1b1a7487e42765bcbce4b33cf98769
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fdd56763712dee9c6fa1f292eb3bbb2f0ccbf505
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="threadsuspend-garbage-collection-and-safe-points"></a>Thread.Suspend, coleta de lixo e pontos seguros
-Quando você chama <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> em um thread, o sistema observa que a suspensão de um thread foi solicitada e permite a execução até que ele atingiu um ponto de segurança antes de realmente suspender o thread do thread. Um ponto de segurança para um thread é um ponto em sua execução de coleta de lixo pode ser executada.  
+Quando você chama <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> em um thread, o sistema observa que uma suspensão de thread foi solicitada e permite que o thread seja executado até atingir um ponto seguro antes de realmente suspendê-lo. Um ponto seguro de um thread é um ponto da execução em que a coleta de lixo pode ser executada.  
   
- Quando um ponto de segurança é atingido, o tempo de execução garante que o thread suspenso não fará qualquer progresso adicional em código gerenciado. Um thread de execução fora do código gerenciado é sempre seguro para coleta de lixo e a execução continua até que ele tentará retomar a execução de código gerenciado.  
+ Quando um ponto seguro é alcançado, o tempo de execução garante que o thread suspenso não fará mais progresso no código gerenciado. Um thread que é executado fora do código gerenciado está sempre seguro para a coleta de lixo e sua execução continua até que ele tente retomar a execução do código gerenciado.  
   
 > [!NOTE]
->  Para executar uma coleta de lixo, tempo de execução deve suspender todos os threads exceto o thread de execução de coleta. Cada segmento deve ser colocado em um ponto de segurança antes de poder ser suspenso.  
+>  Para executar uma coleta de lixo, o tempo de execução deve suspender todos os threads exceto o thread que executa a coleta. Cada thread deve ser colocado em um ponto seguro antes de poder ser suspenso.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Threading.Thread>  

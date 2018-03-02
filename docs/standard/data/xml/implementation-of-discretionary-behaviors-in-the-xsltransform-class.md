@@ -9,19 +9,22 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7b6c81a5737b879b7c1356c4b9c2ab68fbbc4688
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 98ad31039b5351a7dc4aa3cf033ae8cd0f896b7b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>Implementação de comportamentos arbitrários na classe XslTransform
 > [!NOTE]
->  A classe <xref:System.Xml.Xsl.XslTransform> está obsoleta no [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Você pode executar a linguagem XSL Transformations (XSLT) usando a classe <xref:System.Xml.Xsl.XslCompiledTransform>. Consulte [usando a classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) e [migrar da classe de XslTransform o](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) para obter mais informações.  
+>  A classe <xref:System.Xml.Xsl.XslTransform> está obsoleta no [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Você pode executar a linguagem XSL Transformations (XSLT) usando a classe <xref:System.Xml.Xsl.XslCompiledTransform>. Confira [Usar a classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) e [Migrar da classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) para saber mais.  
   
  Os comportamentos arbitrários são descritos como os comportamentos listados na recomendação de versão 1,0 de transformações do World Wide Web Consortium (W3C) XSL (XSLT) (www.w3.org/TR/xslt), no qual o provedor de implementação escolher uma das várias opções possíveis como uma maneira de manipular uma situação. Por exemplo, em instruções de processamento criadoras da seção 7,3, a recomendação W3C informa que é um erro se criar uma instância do conteúdo de `xsl:processing-instruction` cria nós diferentes de nós de texto. Para alguns problemas, W3C informa o que a decisão deve ser feita se o processador decidir recuperar de erro. Para o problema da seção 7,3, o W3C com a implementação pode recuperar esse erro ignorando os nós e seu conteúdo.  
   
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 |o atributo de nome de`xsl:processing-instruction` não produz um nome de sem dois-pontos (NCName) e um destino de instrução de processamento.|Recupere|7.3|  
 |Criar uma instância do conteúdo de `xsl:processing-instruction` cria nós diferentes de nós de texto.|Recupere|7.3|  
 |Os resultados de criar uma instância do conteúdo de `xsl:processing-instruction` contêm a cadeia de caracteres “`?>`”.|Recupere|7.3|  
-|Resultados de instanciar o conteúdo do `xsl:comment` contém a cadeia de caracteres "-", ou termina com "-".|Recupere|7.4|  
+|Os resultados de instanciar o conteúdo de `xsl:comment` contêm a cadeia de caracteres "--" ou terminam com "-".|Recupere|7.4|  
 |Os resultados de criar uma instância do conteúdo de `xsl:comment` criar nós diferentes de nós de texto.|Recupere|7.4|  
 |O modelo dentro de um elemento de variável associação retorna um nó de atributo ou um nó de namespace.|Recupere|11.2|  
 |Há um erro que recupera o recurso URI passado na função do documento.|Exceção lançada|12.1|  
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Em relação aos processadores, linguagens diferentes podem variar em sua classificação em um idioma específico não especificado em `xsl:sort.`  
   
- A tabela a seguir mostra o comportamento de classificação implementado para cada tipo de dados na implementação do .NET Framework de uma transformação usando <xref:System.Xml.Xsl.XslTransform>.  
+ A tabela a seguir mostra o comportamento de classificação implantado para todos os tipos de dados na implantação de uma transformação do .NET Framework usando <xref:System.Xml.Xsl.XslTransform>.  
   
 |Tipo de dados|Comportamento de classificação|  
 |---------------|----------------------|  
@@ -84,10 +87,10 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Xml.Xsl.XslTransform>  
- [Classe XslTransform implementa do processador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
+ [A classe XslTransform implementa o processador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
  [Transformações XSLT com a classe XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
- [XPathNavigator nas transformações](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
- [XPathNodeIterator nas transformações](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
- [Entrada XPathDocument inseriu a XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
- [Entrada de XmlDataDocument inseriu a XslTransform](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
- [Entrada de XmlDocument inseriu a XslTransform](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)
+ [XPathNavigator em transformações](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
+ [XPathNodeIterator em transformações](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
+ [Entrada de XPathDocument para XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
+ [Entrada de XmlDataDocument para XslTransform](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
+ [Entrada de XmlDocument para XslTransform](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)

@@ -1,0 +1,2 @@
+> [!NOTE]
+> A Biblioteca de Fluxo de Dados TPL (o namespace <xref:System.Threading.Tasks.Dataflow>) não é distribuída com o .NET. Para instalar o namespace <xref:System.Threading.Tasks.Dataflow> no Visual Studio, abra o projeto, escolha **Gerenciar Pacotes NuGet** no menu **Projeto** e pesquise online o pacote `System.Threading.Tasks.Dataflow`. Como alternativa, instale-o usando a [CLI do .Net Core](~/docs/core/tools/index.md) e execute `dotnet add package System.Threading.Tasks.Dataflow`.

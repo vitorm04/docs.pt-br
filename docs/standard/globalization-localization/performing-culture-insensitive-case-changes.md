@@ -21,25 +21,28 @@ helpviewer_keywords:
 - String.ToUpper method
 - culture parameter
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c500b882c335572b8b458ba515b282e9f5362b85
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e65eb85e1355d3aa98e04e7bd73f0194243dcdb1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Executando alterações de maiúsculas e minúsculas que não levam em conta a cultura
-O <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>, e <xref:System.Char.ToLower%2A?displayProperty=nameWithType> métodos fornecem sobrecargas que não aceitam quaisquer parâmetros. Por padrão, essas sobrecargas sem parâmetros realizar alterações com base no valor da <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>. Isso produz resultados diferencia maiusculas de minúsculas podem variar de acordo com a cultura. Para tornar claro se você quer que as alterações casos ser sensíveis à cultura ou não levam em conta a cultura, você deve usar as sobrecargas desses métodos que exigem que você especificar explicitamente um `culture` parâmetro. Alterações de maiusculas sensíveis à cultura, especifique `CultureInfo.CurrentCulture` para o `culture` parâmetro. Alterações de maiusculas não levam em conta a cultura, especifique `CultureInfo.InvariantCulture` para o `culture` parâmetro.  
+Os métodos <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType> e <xref:System.Char.ToLower%2A?displayProperty=nameWithType> fornecem sobrecargas que não aceitam quaisquer parâmetros. Por padrão, essas sobrecargas sem parâmetros executam alterações de maiúsculas e minúsculas com base no valor do <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>. Isso produz resultados sensíveis a maiúsculas e minúsculas que podem variar de acordo com a cultura. Para deixar claro se você deseja que as mudanças de maiúsculas e minúsculas sejam sensíveis à cultura ou não sejam insensíveis à cultura, você deve usar as sobrecargas desses métodos que exigem que você especifique explicitamente um parâmetro `culture`. Para mudanças de maiúsculas e minúsculas sensíveis à cultura, especifique `CultureInfo.CurrentCulture` para o parâmetro `culture`. Para mudanças de maiúsculas e minúsculas insensíveis à cultura, especifique `CultureInfo.InvariantCulture` para o parâmetro `culture`.  
   
- Em geral, cadeias de caracteres são convertidas em um caso padrão para habilitar a pesquisa mais fácil mais tarde. Quando cadeias de caracteres são usadas dessa maneira, você deve especificar `CultureInfo.InvariantCulture` para o `culture` parâmetro, porque o valor de <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> poderá alterar entre a hora em que o caso é alterado e a hora em que a pesquisa ocorre.  
+ Muitas vezes, as cadeias de caracteres são convertidas em um formato padrão para permitir uma pesquisa mais fácil. Quando as cadeias de caracteres são usadas dessa maneira, você deve especificar `CultureInfo.InvariantCulture` para o parâmetro `culture`, pois o valor de <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> pode mudar potencialmente entre o tempo que o formato é alterado e o tempo que a pesquisa ocorre.  
   
- Se uma decisão de segurança é baseada em uma operação de alteração, a operação deve ser sem diferenciação de cultura para garantir que o resultado não é afetado pelo valor da `CultureInfo.CurrentCulture`. Consulte a seção "Cadeia de caracteres comparações que Use a cultura atual" o [práticas recomendadas para usar cadeias de caracteres](../../../docs/standard/base-types/best-practices-strings.md) artigo para um exemplo que demonstra as operações de cadeia de caracteres como sensíveis à cultura pode produzir resultados inconsistentes.  
+ Se uma decisão de segurança é baseada em uma operação de modificação de maiúsculas e minúsculas, a operação deve ser insensível à cultura para garantir que o resultado não seja afetado pelo valor de `CultureInfo.CurrentCulture`. Confira a seção "Comparações de cadeia de caracteres que usam a cultura atual" [Práticas recomendadas para usar cadeias de caracteres](../../../docs/standard/base-types/best-practices-strings.md) para obter um exemplo que demonstra como as operações de cadeias de caracteres que diferenciam a cultura podem produzir resultados inconsistentes.  
   
 ## <a name="using-the-stringtoupper-and-stringtolower-methods"></a>Usando os Métodos String.ToUpper e String.ToLower  
- Para maior clareza do código, é recomendável que você sempre use sobrecargas do `String.ToUpper` e `String.ToLower` métodos que permitem que você especifique um `culture` parâmetro explicitamente. Por exemplo, o código a seguir realiza uma pesquisa de identificador. O `key.ToLower` operação sensíveis à cultura por padrão, mas esse comportamento não está claro de ler o código.  
+ Para clareza de código, recomenda-se que você sempre use sobrecargas dos métodos `String.ToUpper` e `String.ToLower` que permitem especificar um parâmetro `culture` explicitamente. Por exemplo, o código a seguir realiza uma pesquisa de identificador. A operação `key.ToLower` é sensível à cultura por padrão, mas esse comportamento não fica claro ao ler o código.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -56,7 +59,7 @@ static object LookupKey(string key)
 }  
 ```  
   
- Se você quiser que o `key.ToLower` operação sem diferenciação de cultura, você deve alterar o exemplo anterior da seguinte forma para usar explicitamente o `CultureInfo.InvariantCulture` ao alterar o caso.  
+ Se você quiser que a operação `key.ToLower` seja insensível à cultura, você deve alterar o exemplo anterior da seguinte forma para usar explicitamente o `CultureInfo.InvariantCulture` ao mudar a caixa.  
   
 ```vb  
 Shared Function LookupKey(key As String) As Object  
@@ -72,7 +75,7 @@ static object LookupKey(string key)
 ```  
   
 ## <a name="using-the-chartoupper-and-chartolower-methods"></a>Usando os Métodos Char.ToUpper e Char.ToLower  
- Embora o `Char.ToUpper` e `Char.ToLower` métodos têm as mesmas características como o `String.ToUpper` e `String.ToLower` métodos, somente culturas afetados são turco (Turquia) e Azerbaidjano (Azerbaijão, latino). Essas são apenas duas culturas com diferenças de maiusculas e minúsculas do caractere único. Para obter mais detalhes sobre esse mapeamento de maiusculas exclusivo, consulte a seção "Maiusculas e minúsculas" a <xref:System.String> tópico sobre a classe. Para maior clareza do código e garantir resultados consistentes, é recomendável que você sempre use as sobrecargas desses métodos que permitem que você especifique explicitamente um `culture` parâmetro.  
+ Embora os métodos `Char.ToUpper` e `Char.ToLower` tenham as mesmas características que os métodos `String.ToUpper` e `String.ToLower`, as únicas culturas afetadas são turca (Turquia) e azerbaijana (Latino, Azerbaijão). Essas são apenas duas culturas com diferenças de maiúsculas e minúsculas de um único caractere. Para obter mais detalhes sobre este mapeamento de maiúsculas e minúsculas único, confira a seção "Maiúsculas e minúsculas" no tópico da classe <xref:System.String>. Para clareza de código e para garantir resultados consistentes, recomenda-se que você sempre use as sobrecargas desses métodos que permitem que você especifique explicitamente um parâmetro `culture`.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.String.ToUpper%2A?displayProperty=nameWithType>  

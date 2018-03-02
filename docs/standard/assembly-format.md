@@ -10,15 +10,18 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: 797bd4a7c160feda69a3190d9e364b166a51c703
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cdd76558852992a5c2f6b7def83e30fb004f93b6
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="net-assembly-file-format"></a>Formato de arquivo do Assembly .NET
 
-O .NET define um formato de arquivo binário – "assembly" – que é usado para descrever completamente e conter programas .NET. Os assemblies são usados para os programas em si, bem como todas as bibliotecas dependentes. Um programa .NET pode ser executado como um dentre outros assemblies, sem a necessidade de nenhum outro artefato, além da implementação do .NET apropriada. As dependências nativas, incluindo APIs do sistema operacional, são uma preocupação separada e não estão contidas no formato de assembly do .NET, embora, às vezes, sejam descritas com esse formato (por exemplo, WinRT).
+O .NET define um formato de arquivo binário – "assembly" – que é usado para descrever completamente e conter programas .NET. Os assemblies são usados para os programas em si, bem como todas as bibliotecas dependentes. Um programa .NET pode ser executado como um ou mais assemblies, sem a necessidade de nenhum outro artefato, além da implementação do .NET apropriado. As dependências nativas, incluindo APIs do sistema operacional, são uma preocupação separada e não estão contidas no formato de assembly do .NET, embora, às vezes, sejam descritas com esse formato (por exemplo, WinRT).
 
 > Cada componente de CLI carrega os metadados para declarações, implementações e referências específicas para esse componente. Portanto, os metadados específicos do componente são conhecidos como metadados de componente e o componente resultante deve ser autodescritivo – do ECMA 335 I.9.1, Componentes e assemblies.
 

@@ -18,40 +18,43 @@ helpviewer_keywords:
 - event handling [.NET Framework], with multiple events
 - events [.NET Framework], multiple
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c16918e715a93de8fdf164e75ce7be81511b71b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f0069c827bbc88b5ec5184f491b811a66955adbb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>Como manipular vários eventos usando propriedades de evento
-Para usar as propriedades de evento, você define as propriedades de evento na classe que gera os eventos e, em seguida, definir os representantes para as propriedades de evento nas classes que tratam os eventos. Para implementar várias propriedades de evento em uma classe, a classe deve armazenar internamente e manter o representante definido para cada evento. Uma abordagem típica é implementar uma coleção representante que é indexada por uma chave de evento.  
+Para usar as propriedades de evento, defina as propriedades de evento na classe que gera os eventos e, em seguida, defina os representantes das propriedades de evento nas classes que tratam dos eventos. Para implementar várias propriedades de evento em uma classe, a classe deve armazenar e manter internamente o representante definido para cada evento. Uma abordagem típica é implementar uma coleção de representantes indexada por uma chave de evento.  
   
- Para armazenar os representantes para cada evento, você pode usar o <xref:System.ComponentModel.EventHandlerList> de classe ou implementar sua própria coleção. A classe de coleção deve fornecer métodos de configuração, acessando e recuperar o delegado do manipulador de eventos com base na chave de evento. Por exemplo, você pode usar um <xref:System.Collections.Hashtable> classe ou derivar uma classe personalizada do <xref:System.Collections.DictionaryBase> classe. Os detalhes da implementação da coleção representante não precise ser exposto fora de sua classe.  
+ Para armazenar os representantes para cada evento, você pode usar a classe <xref:System.ComponentModel.EventHandlerList> ou implementar sua própria coleção. A classe da coleção deve fornecer métodos para configurar, acessar e recuperar o representante do manipulador de eventos com base na chave de evento. Por exemplo, você poderia usar uma classe <xref:System.Collections.Hashtable> ou derivar uma classe personalizada da classe <xref:System.Collections.DictionaryBase>. Os detalhes da implementação da coleção de representantes não precisam ser expostos fora de sua classe.  
   
- Cada propriedade de evento dentro da classe define um método de acessador add e um método de acessador remove. O acessador de adicionar uma propriedade de evento adiciona a instância representante de entrada à coleção representante. O acessador de remover uma propriedade de evento remove a instância representante de entrada da coleção representante. Acessadores de propriedade de evento usam a chave predefinida para a propriedade de evento para adicionar e remover instâncias da coleção representante.  
+ Cada propriedade de evento dentro da classe define um método adicionar acessador e um método remover acessador. O método adicionar acessador de uma propriedade de eventos adiciona a instância do representante de entrada à coleção de representantes. O acessador de remoção de uma propriedade de evento remove a instância do representante de entrada da coleção de representantes. Os acessadores de propriedades de evento usam a chave predefinida na propriedade de evento para adicionar e remover instâncias da coleção de representantes.  
   
-### <a name="to-handle-multiple-events-using-event-properties"></a>Como manipular vários eventos usando propriedades de evento  
+### <a name="to-handle-multiple-events-using-event-properties"></a>Para manipular vários eventos usando propriedades de evento  
   
-1.  Defina uma coleção representante dentro da classe que gera os eventos.  
+1.  Defina a coleção de representantes na classe que gera os eventos.  
   
 2.  Defina uma chave para cada evento.  
   
 3.  Defina as propriedades de evento na classe que gera os eventos.  
   
-4.  Use a coleção de representante para implementar a adicionar e remover os métodos acessadores para as propriedades do evento.  
+4.  Use a coleção de representantes para implementar os métodos adicionar e remover acessador nas propriedades de evento.  
   
-5.  Use as propriedades de evento público para adicionar e remover delegados de manipulador de eventos em classes que tratam os eventos.  
+5.  Use as propriedades de evento públicas para adicionar e remover representantes do manipulador de eventos nas classes que tratam dos eventos.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo c# a seguir implementa as propriedades do evento `MouseDown` e `MouseUp`usando um <xref:System.ComponentModel.EventHandlerList> para armazenar representante cada evento. As palavras-chave das construções de propriedade de evento estão em negrito.  
+ O exemplo de C# a seguir implementa as propriedades de evento `MouseDown` e `MouseUp` usando uma <xref:System.ComponentModel.EventHandlerList> para armazenar o representante de cada evento. As palavras-chave dos constructos de propriedade de evento estão em negrito.  
   
 > [!NOTE]
->  Não há suporte para propriedades de evento em [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)].  
+>  Não há suporte a propriedades do evento em [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)].  
   
  [!code-cpp[Conceptual.Events.Other#31](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.events.other/cpp/example3.cpp#31)]
  [!code-csharp[Conceptual.Events.Other#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.events.other/cs/example3.cs#31)]

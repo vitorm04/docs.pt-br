@@ -9,25 +9,28 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a42f81b3-0403-4e34-b346-7d2129804e54
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 22e9b66f58275141cf9da154573ca43a0b90affc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 76093fbe7095c2aae7caa69147f6181c292ca734
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="creating-new-entity-references"></a>Criando novos referências a entidades
-O **CreateEntityReference** método cria um novo **XmlEntityReference** nó. O modelo de objeto de documento XML (DOM) parece para ver se o nome de entidade que está sendo referenciado foi declarado. Em caso afirmativo, os nós filho de **XmlEntityReference** nó são copiados a partir do nó de declaração de entidade. Se não houver nenhuma declaração de entidade que corresponde, um nó vazia de texto é anexado como o único filho do nó de referência de entidade. Porque os nós filho do **XmlEntityReference** nó são cópias de outros nós, esses nós filho são somente leitura e não podem ser modificados.  
+O método **CreateEntityReference** cria um novo nó **XmlEntityReference**. O modelo de objeto de documento XML (DOM) parece para ver se o nome de entidade que está sendo referenciado foi declarado. Se ele tiver sido, os nós filho do nó **XmlEntityReference** serão copiados do nó de declaração de entidade. Se não houver nenhuma declaração de entidade que corresponde, um nó vazia de texto é anexado como o único filho do nó de referência de entidade. Como os nós filho do nó **XmlEntityReference** são cópias de outros nós, esses nós filhos são somente leitura e não podem ser modificados.  
   
  Quando os nós são copiados, pode haver namespace no escopo na referência de entidade. Este namespace afeta a configuração de qualquer elemento ou nós de atributo gerado.  
   
 > [!NOTE]
->  O DOM adiciona nós filho para o **EntityReference** somente quando você insere o **EntityReference** nó no documento. Recém-criado **EntityReference** nós ter nenhum nó filho.  
+>  O DOM adiciona nós filho a **EntityReference** somente quando você insere o nó **EntityReference** no documento. Os nós **EntityReference** recém-criados não têm nós filhos.  
   
- Embora o **XmlDataDocument** é uma classe derivada do **XmlDocument**, o **XmlDataDocument** não oferece suporte à criação de referências de entidade. Isso ocorre porque **EntityReference** filhos são somente leitura. Os filhos de um **EntityReference** nó pode abranger mais de uma região. Nesse caso, parte de uma linha associada com a região que contém uma parte de um **EntityReference** serão somente leitura.  
+ Embora **XmlDataDocument** seja uma classe derivada de **XmlDocument**, **XmlDataDocument** não dá suporte à criação de referências de entidade. Isso ocorre porque os filhos de **EntityReference** são somente leitura. Os filhos de um nó **EntityReference** podem abranger mais de uma região. Nesse caso, a parte de uma linha associada à região que contém uma parte de **EntityReference** será somente leitura.  
   
 ## <a name="see-also"></a>Consulte também  
- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

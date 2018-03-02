@@ -9,11 +9,14 @@ ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
-ms.openlocfilehash: a6546818eaeac3c32a6a9ddd7e64b1b0e0ea170f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 33123732514a53574036f6f8e948b2cf9acb9229
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="net-glossary"></a>Glossário .NET
 
@@ -29,21 +32,21 @@ Semelhante ao [JIT](#jit), esse compilador também converte [IL](#il) em código
 
 A implementação do ASP.NET original que é fornecida com o .NET Framework.
 
-Às vezes, o ASP.NET é um termo abrangente que se refere a ambas as implementações de ASP.NET, incluindo o ASP.NET Core. O significado que o termo carrega em uma determinada instância é determinado pelo contexto. Consulte para ASP.NET 4. x para tornar claro que você não estiver usando ASP.NET significa ambas as implementações. 
+Às vezes, o ASP.NET é um termo abrangente que se refere a ambas as implementações de ASP.NET, incluindo o ASP.NET Core. O significado que o termo carrega em uma determinada instância é determinado pelo contexto. Consulte ASP.NET 4.x quando quiser esclarecer que você não está usando ASP.NET para as duas implementações. 
 
-Consulte [ASP.NET documentação](/aspnet/#pivot=aspnet).
+Confira [Documentação do ASP.NET](/aspnet/#pivot=aspnet).
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
 Uma implementação multiplataforma de alto desempenho e software livre do ASP.NET com base no .NET Core.
 
-Consulte [documentação do ASP.NET Core](/aspnet/#pivot=core).
+Confira [Documentação do ASP.NET Core](/aspnet/#pivot=core).
 
 ## <a name="assembly"></a>assembly
 
-Um arquivo *.dll* que contém uma coleção de APIs que podem ser chamadas por aplicativos ou outros assemblies.
+Um arquivo *.dll*/*.exe* que contém uma coleção de APIs que podem ser chamadas por aplicativos ou outros assemblies.
 
-Um assembly .NET é uma coleção de tipos. Um assembly inclui interfaces, classes, estruturas, enumerações e delegados.  Às vezes, os assemblies em uma pasta *bin* de projeto são chamados de *binários*. Consulte também [biblioteca](#library).
+Um assembly pode incluir tipos como interfaces, classes, estruturas, enumerações e delegados. Às vezes, os assemblies em uma pasta *bin* de projeto são chamados de *binários*. Consulte também [biblioteca](#library).
 
 ## <a name="clr"></a>CLR
 
@@ -207,7 +210,7 @@ Você pode pensar nessa tecnologia como um compilador JIT persistente. Ela geral
 
 Um pacote NuGet &mdash; ou apenas um pacote &mdash; é um arquivo *.zip* com um ou mais assemblies de mesmo nome, junto com metadados adicionais, como o nome do autor.
 
-O arquivo *.zip* tem uma extensão *.nupkg* e pode conter ativos, como arquivos *.dll* e arquivos *.xml*, para uso com várias versões e estruturas. Quando instalado em um aplicativo ou uma biblioteca, os ativos apropriados são selecionados com base na estrutura de destino especificada pelo aplicativo ou pela biblioteca. Os ativos que definem a interface estão na pasta *ref* e os ativos que definem a implementação estão na pasta *lib*.
+O arquivo *.zip* tem uma extensão *.nupkg* e pode conter ativos, como arquivos *.dll* e arquivos *.xml*, para uso com várias versões e estruturas de destino. Quando instalado em um aplicativo ou uma biblioteca, os ativos apropriados são selecionados com base na estrutura de destino especificada pelo aplicativo ou pela biblioteca. Os ativos que definem a interface estão na pasta *ref* e os ativos que definem a implementação estão na pasta *lib*.
 
 ## <a name="platform"></a>platform
 

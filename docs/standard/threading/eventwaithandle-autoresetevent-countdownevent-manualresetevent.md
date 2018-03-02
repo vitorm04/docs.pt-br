@@ -13,37 +13,40 @@ helpviewer_keywords:
 - threading [.NET Framework], EventWaitHandle class
 - event wait handles [.NET Framework]
 ms.assetid: cd94fc34-ac15-427f-b723-a1240a4fab7d
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5c0bcb27ed9c8981665a50c129dfbd824c9612f5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6c545f9ebc924c0a12ee2e76fdb6c725c25e2353
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="eventwaithandle-autoresetevent-countdownevent-manualresetevent"></a>EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent
-Identificadores de espera de eventos permitem que os threads para sincronizar as atividades de sinalização entre si e aguardando sinais uns dos outros. Esses eventos de sincronização são baseados em identificadores de espera do Win32 e podem ser divididos em dois tipos: aqueles que redefinir automaticamente quando sinalizado e aqueles que são redefinidos manualmente.  
+Os identificadores de espera de evento permitem que os threads sincronizem atividades sinalizando uns aos outros e aguardando sinais uns dos outros. Esses eventos de sincronização baseiam-se em identificadores de espera do Win32 e podem ser divididos em dois tipos: aqueles que são redefinidos automaticamente quando sinalizados e aqueles que são redefinidos manualmente.  
   
- Identificadores de espera de eventos são úteis para muitos dos cenários de sincronização mesmo como o <xref:System.Threading.Monitor> classe. Identificadores de espera de eventos geralmente são mais fáceis de usar do que o <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> e <xref:System.Threading.Monitor.Pulse%2A?displayProperty=nameWithType> métodos e oferecem mais controle sobre a sinalização. Identificadores de espera de evento nomeado também podem ser usados para sincronizar as atividades em domínios de aplicativos e processos, enquanto que os monitores são locais para um domínio de aplicativo.  
+ Os identificadores de espera de evento são úteis em muitos dos mesmos cenários de sincronização que a classe <xref:System.Threading.Monitor>. Os identificadores de espera de evento geralmente são mais fáceis de usar do que os métodos <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> e <xref:System.Threading.Monitor.Pulse%2A?displayProperty=nameWithType>, e oferecem mais controle sobre a sinalização. Os identificadores de espera de evento nomeado também podem ser usados para sincronizar as atividades em domínios de aplicativos e processos, enquanto que os monitores são locais a um domínio de aplicativo.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md)  
- O <xref:System.Threading.EventWaitHandle> classe pode representar qualquer automático ou manual redefinir os eventos e o local ou chamada de eventos do sistema.  
+ A classe <xref:System.Threading.EventWaitHandle> pode representar eventos de redefinição automáticos ou manuais, bem como eventos locais ou eventos de sistema nomeado.  
   
  [AutoResetEvent](../../../docs/standard/threading/autoresetevent.md)  
- O <xref:System.Threading.AutoResetEvent> classe derivada de <xref:System.Threading.EventWaitHandle> e representa um evento local redefine automaticamente.  
+ A classe <xref:System.Threading.AutoResetEvent> deriva de <xref:System.Threading.EventWaitHandle> e representa um evento local que é redefinido automaticamente.  
   
  [ManualResetEvent e ManualResetEventSlim](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md)  
- O <xref:System.Threading.ManualResetEvent> classe derivada de <xref:System.Threading.EventWaitHandle> e representa um evento local deverá ser redefinido manualmente. O <xref:System.Threading.ManualResetEventSlim> classe é uma versão leve e mais rápida, que pode ser usada para eventos dentro do mesmo processo.  
+ A classe <xref:System.Threading.ManualResetEvent> deriva de <xref:System.Threading.EventWaitHandle> e representa um evento local que deve ser redefinido manualmente. A classe <xref:System.Threading.ManualResetEventSlim> é uma versão leve e mais rápida, que pode ser usada para eventos dentro do mesmo processo.  
   
  [CountdownEvent](../../../docs/standard/threading/countdownevent.md)  
- O <xref:System.Threading.CountdownEvent> classe fornece uma maneira simplificada para implementar os padrões de paralelismo de bifurcação/junção no código que usa identificadores de espera.  
+ A classe <xref:System.Threading.CountdownEvent> fornece uma maneira simplificada de implementar os padrões de paralelismo de bifurcação/junção no código que usa identificadores de espera.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Identificadores de espera](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
- O <xref:System.Threading.WaitHandle> classe é a classe base para o <xref:System.Threading.EventWaitHandle>, <xref:System.Threading.Semaphore>, e <xref:System.Threading.Mutex> classes. Contém métodos estáticos como <xref:System.Threading.WaitHandle.SignalAndWait%2A> e <xref:System.Threading.WaitHandle.WaitAll%2A> que são úteis ao trabalhar com todos os tipos de identificadores de espera.  
+ A classe <xref:System.Threading.WaitHandle> é a classe base para as classes <xref:System.Threading.EventWaitHandle>, <xref:System.Threading.Semaphore> e <xref:System.Threading.Mutex>. Contém métodos estáticos como <xref:System.Threading.WaitHandle.SignalAndWait%2A> e <xref:System.Threading.WaitHandle.WaitAll%2A> que são úteis quando se trabalha com todos os tipos de identificadores de espera.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Threading.EventWaitHandle>  

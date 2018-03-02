@@ -15,27 +15,30 @@ helpviewer_keywords:
 - exceptions, COM interop
 - COM interop, exceptions
 ms.assetid: e6104aa8-8e5f-4069-b864-def85579c96c
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: bc3e01bc8ca463460ede9544d1d5c095c39a59d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e894d07e77b929b1ea22df2d34e542544ec3b1f3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="handling-com-interop-exceptions"></a>Manipulando exceções de interoperabilidade COM
-Gerenciado e o código não gerenciado pode trabalhar juntos para lidar com exceções. Se um método lança uma exceção no código gerenciado, o common language runtime pode passar um HRESULT para um objeto COM. Se um método falhar no código não gerenciado retornando uma HRESULT de falha, o tempo de execução gera uma exceção que pode ser detectada pelo código gerenciado.  
+Os códigos gerenciado e não gerenciado podem trabalhar juntos para tratar de exceções. Se um método lança uma exceção no código gerenciado, o common language runtime pode passar um HRESULT para um objeto COM. Se um método falhar no código não gerenciado, retornando um HRESULT de falha, o tempo de execução lançará uma exceção que pode ser detectada pelo código gerenciado.  
   
- O tempo de execução automaticamente mapeia o HRESULT de interoperabilidade COM para exceções mais específicas. Por exemplo, E_ACCESSDENIED se torna <xref:System.UnauthorizedAccessException>, E_OUTOFMEMORY se torna <xref:System.OutOfMemoryException>, e assim por diante.  
+ O tempo de execução mapeia automaticamente o HRESULT da interoperabilidade COM para exceções mais específicas. Por exemplo, E_ACCESSDENIED se torna <xref:System.UnauthorizedAccessException>, E_OUTOFMEMORY se torna <xref:System.OutOfMemoryException> e assim por diante.  
   
- Se o HRESULT for um resultado personalizado ou for desconhecido para o tempo de execução, o tempo de execução passa um genérico <xref:System.Runtime.InteropServices.COMException> ao cliente. O **ErrorCode** propriedade o **COMException** contém o valor HRESULT.  
+ Se o HRESULT for um resultado personalizado, ou se for desconhecido para o tempo de execução, o tempo de execução passará um <xref:System.Runtime.InteropServices.COMException> genérico ao cliente. A propriedade **ErrorCode** do **COMException** contém o valor de HRESULT.  
   
-## <a name="working-with-ierrorinfo"></a>Trabalhando com IErrorInfo  
- Quando um erro é passado de COM para código gerenciado, o tempo de execução preenche o objeto de exceção com informações de erro. Objetos COM que suportam IErrorInfo e retornam HRESULTS fornecem essas informações para exceções de código gerenciado. Por exemplo, o tempo de execução mapeia a descrição do erro COM a exceção <xref:System.Exception.Message%2A> propriedade. Se o HRESULT não fornece nenhuma informação de erro adicional, o tempo de execução preenche muitas das propriedades da exceção com valores padrão.  
+## <a name="working-with-ierrorinfo"></a>Trabalhar com IErrorInfo  
+ Quando um erro é passado do COM para o código gerenciado, o tempo de execução preenche o objeto de exceção com informações do erro. Objetos COM que dão suporte a IErrorInfo e retornam HRESULTS fornecem essas informações para exceções de código gerenciado. Por exemplo, o tempo de execução mapeia a Descrição do erro COM para a propriedade <xref:System.Exception.Message%2A> da exceção. Se o HRESULT não fornecer mais informações sobre o erro, o tempo de execução preencherá muitas das propriedades da exceção com valores padrão.  
   
- Se um método falhar no código não gerenciado, uma exceção pode ser passada para um segmento de código gerenciado. O tópico [HRESULTS e exceções](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md) contém uma tabela mostrando como HRESULTS mapeiam para objetos de exceção de tempo de execução.  
+ Se um método falhar no código não gerenciado, uma exceção poderá ser passada para um segmento de código gerenciado. O tópico [HRESULTS e exceções](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md) contém uma tabela que mostra como HRESULTS mapeia para objetos de exceção de tempo de execução.  
 
 ## <a name="see-also"></a>Consulte também
 [Exceções](index.md) 

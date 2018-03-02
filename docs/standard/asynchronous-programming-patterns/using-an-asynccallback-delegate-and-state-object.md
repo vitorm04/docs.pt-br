@@ -17,21 +17,24 @@ helpviewer_keywords:
 - asynchronous programming, state objects
 - IAsyncResult interface, samples
 ms.assetid: e3e5475d-c5e9-43f0-928e-d18df8ca1f1d
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e8793a78289e9b58407038f41cc9d403ff9f9940
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cb0cdc9e98dcaf3c9f9879359eff0b31c8435773
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-an-asynccallback-delegate-and-state-object"></a>Usando um delegado AsyncCallback e um objeto de estado
-Quando você usa um <xref:System.AsyncCallback> delegar para processar os resultados da operação assíncrona em um thread separado, você pode usar um objeto de estado para transmitir informações entre os retornos de chamada e recuperar o resultado final. Este tópico demonstra essa prática expandindo o exemplo [usando um delegado AsyncCallback para finalizar uma operação assíncrona](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
+Ao usar um representante <xref:System.AsyncCallback> para processar os resultados da operação assíncrona em um thread separado, você pode usar um objeto de estado para passar informações entre os retornos de chamada e recuperar um resultado final. Este tópico demonstra essa prática expandindo o exemplo em [Usando um representante AsyncCallback para finalizar uma operação assíncrona](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir demonstra como usar métodos assíncronos no <xref:System.Net.Dns> classe para recuperar informações do sistema de nome de domínio (DNS) de computadores especificado pelo usuário. Este exemplo define e usa o `HostRequest` classe para armazenar informações de estado. Um `HostRequest` objeto é criado para cada nome de computador inserido pelo usuário. Este objeto é passado para o <xref:System.Net.Dns.BeginGetHostByName%2A> método. O `ProcessDnsInformation` método é chamado sempre que uma solicitação é concluída. O `HostRequest` objeto é recuperado usando o <xref:System.IAsyncResult.AsyncState%2A> propriedade. O `ProcessDnsInformation` método usa o `HostRequest` objeto para armazenar o <xref:System.Net.IPHostEntry> retornado pela solicitação ou um <xref:System.Net.Sockets.SocketException> gerada pela solicitação. Quando todas as solicitações estiverem concluídas, o aplicativo itera através de `HostRequest` objetos e exibe as informações de DNS ou <xref:System.Net.Sockets.SocketException> mensagem de erro.  
+ O exemplo de código a seguir demonstra como usar métodos assíncronos na classe <xref:System.Net.Dns> para recuperar informações do DNS (Sistema de Nomes de Domínio) de computadores especificados pelo usuário. Este exemplo define e usa a classe `HostRequest` para armazenar informações de estado. Um objeto `HostRequest` é criado para cada nome de computador inserido pelo usuário. Este objeto é passado para o método <xref:System.Net.Dns.BeginGetHostByName%2A>. O método `ProcessDnsInformation` é chamado sempre que uma solicitação é concluída. O objeto `HostRequest` é recuperado usando a propriedade <xref:System.IAsyncResult.AsyncState%2A>. O método `ProcessDnsInformation` usa o objeto `HostRequest` para armazenar o retornado <xref:System.Net.IPHostEntry> pela solicitação ou um <xref:System.Net.Sockets.SocketException> lançado pela solicitação. Quando todas as solicitações são concluídas, o aplicativo faz a iteração pelos objetos `HostRequest` e exibe as informações de DNS ou a mensagem de erro <xref:System.Net.Sockets.SocketException>.  
   
  [!code-csharp[AsyncDesignPattern#5](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/AsyncDelegateWithStateObject.cs#5)]
  [!code-vb[AsyncDesignPattern#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDesignPattern/VB/AsyncDelegateWithStateObject.vb#5)]  

@@ -11,27 +11,31 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: SpinLock, how to enable thread-tracking
+helpviewer_keywords:
+- SpinLock, how to enable thread-tracking
 ms.assetid: 62ee2e68-0bdd-4869-afc9-f0a57a11ae01
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ca5f1b6eace7a24a6bbb7fd541858246828fa757
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f3d5b40f1f7b4b7534a44f4f7ab542d33d373702
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-enable-thread-tracking-mode-in-spinlock"></a>Como habilitar o modo de controle de thread em SpinLock
-<xref:System.Threading.SpinLock?displayProperty=nameWithType>é um bloqueio de exclusão mútua de baixo nível que você pode usar para cenários que têm tempos de espera muito curto. <xref:System.Threading.SpinLock>não é de reinserção. Depois que um thread entra no bloqueio, ele deve fechar o bloqueio corretamente antes de ela pode entrar novamente. Em geral, qualquer tentativa de inserir novamente o bloqueio poderia causar bloqueio e deadlocks podem ser muito difícil de depurar. Como um auxílio para desenvolvimento e <xref:System.Threading.SpinLock?displayProperty=nameWithType> oferece suporte a um modo de controle de thread que gera uma exceção seja lançada quando um thread tenta inserir novamente um bloqueio que ela já contém. Isso permite que mais fácil localizam o ponto em que o bloqueio não foi encerrado corretamente. Você pode ativar o modo de controle de thread usando o <xref:System.Threading.SpinLock> construtor que usa um valor booleano de entrada e passando um argumento de `true`. Depois de concluir as fases de desenvolvimento e teste, desative o modo de controle de thread para melhorar o desempenho.  
+<xref:System.Threading.SpinLock?displayProperty=nameWithType> é um bloqueio de exclusão mútua de baixo nível que você pode usar para cenários com tempos de espera muito curtos. O <xref:System.Threading.SpinLock> não oferece reinserção. Depois que um thread entra no bloqueio, ele deve sair do bloqueio corretamente antes de poder entrar novamente. Normalmente, qualquer tentativa de reintroduzir o bloqueio causaria um deadlock, e os deadlocks podem ser muito difíceis de depurar. Como um auxílio ao desenvolvimento, o <xref:System.Threading.SpinLock?displayProperty=nameWithType> suporta um modo de controle de thread que faz com que uma exceção seja acionada quando um thread tenta reintroduzir um bloqueio que ele já possui. Isso permite que você localize mais facilmente o ponto em que o bloqueio não foi encerrado corretamente. Você pode ativar o modo de controle de thread usando o construtor <xref:System.Threading.SpinLock> que leva um parâmetro de entrada booleano e passando um argumento de `true`. Depois de concluir as fases de desenvolvimento e teste, desative o modo de controle de thread para um melhor desempenho.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra o modo de controle de thread. As linhas que sair corretamente o bloqueio são comentadas para simular um erro de código que faz com que um dos seguintes resultados:  
+ O exemplo a seguir demonstra o modo de controle de thread. As linhas que saem corretamente do bloqueio são comentadas para simular um erro de codificação que causa um dos seguintes resultados:  
   
 -   Uma exceção será lançada se o <xref:System.Threading.SpinLock> foi criado usando um argumento de `true` (`True` no Visual Basic).  
   
--   Se um deadlock de <xref:System.Threading.SpinLock> foi criado usando um argumento de `false` (`False` no Visual Basic).  
+-   Um deadlock se o <xref:System.Threading.SpinLock> foi criado usando um argumento de `false` (`False` no Visual Basic).  
   
  [!code-csharp[CDS_SpinLock#01](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinlock/cs/spinlockdemo.cs#01)]
  [!code-vb[CDS_SpinLock#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinlock/vb/spinlock_threadtracking.vb#01)]  

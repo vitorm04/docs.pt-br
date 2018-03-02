@@ -1,31 +1,29 @@
 ---
 title: "Introdução ao C# e Visual Studio Code – Guia do C#"
 description: Saiba como criar e depurar seu primeiro aplicativo .NET Core no C# usando o Visual Studio Code.
-keywords: "C#, Introdução, Aquisição, Instalação, Visual Studio Code, Plataforma Cruzada"
 author: kendrahavens
 ms.author: mairaw
 ms.date: 09/27/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
-ms.devlang: csharp
-ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
-ms.workload: dotnetcore
-ms.openlocfilehash: 95052da1688ec1026f11ff679dda6aad50a340fa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 0c37040220bb7f38cdd75176bb9ed2a2199b7096
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introdução ao Visual Studio Code e C#
 
-O .NET Core oferece uma plataforma modular e rápida para a criação de aplicativos que são executados no Windows, Linux e macOS. Use o Visual Studio Code com a extensão do C# para obter uma excelente experiência de edição com suporte completo para IntelliSense em C# (preenchimento de código inteligente) e depuração.
+O .NET Core oferece uma plataforma modular e rápida para a criação de aplicativos que são executados no Windows, Linux e macOS. Use o Visual Studio Code com a extensão do C# para obter uma excelente experiência de edição com suporte completo para IntelliSense em C# (conclusão de código inteligente) e depuração.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 1. Instalar o [Visual Studio Code](https://code.visualstudio.com/).
 2. Instalar o [SDK do .NET Core](https://www.microsoft.com/net/download/core).
-3. Instalar a [extensão C#](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) do Visual Studio Code Marketplace.
+3. Instale a [extensão de C#](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) para o Visual Studio Code. Para saber mais sobre como instalar extensões no Visual Studio Code, confira [Marketplace de extensão de código do VS](https://code.visualstudio.com/docs/editor/extension-gallery).
 
 ## <a name="hello-world"></a>Hello World
 
@@ -33,7 +31,7 @@ Vamos começar com um simples programa "Olá, Mundo" no .NET Core:
 
 1. Abra um projeto:
 
-    * Abra o Visual Studio Code.
+    * Abra o Visual Studio Core.
     * Clique no ícone do Explorer no menu à esquerda e, em seguida, clique em **Abrir Pasta**; ou.
     * Selecione **Arquivo** > **Abrir Pasta** no menu principal para abrir a pasta em que você deseja armazenar seu projeto C# e clique em **Selecionar Pasta**. Para nosso exemplo, estamos criando uma pasta para nosso projeto chamado *HelloWorld*.
 
@@ -54,9 +52,9 @@ Vamos começar com um simples programa "Olá, Mundo" no .NET Core:
 
       [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-4. Execute o programa "Hello, World":
+4. Execute o programa "Olá, Mundo":
 
-    * Digite `dotnet run` no terminal integrado. 
+    * Digite `dotnet run`. 
 
       ![O comando de execução dotnet](media/with-visual-studio-code/dotnetrun.png)
 
@@ -72,11 +70,11 @@ Você também pode assistir a um tutorial breve em vídeo para obter ajuda na in
 
     ![Prompt para ativos ausentes](media/with-visual-studio-code/missing-assets.png)
 
-3. Para exibir as ferramentas de Depuração, clique no ícone de depuração no menu do lado esquerdo.
+3. Para abrir e exibição Depuração, clique no ícone Depuração no menu do lado esquerdo.
 
     ![Abra a guia Depurar](media/with-visual-studio-code/opendebug.png)
 
-4. Localize a seta verde na parte superior do painel. Certifique-se de selecionar `.NET Core Launch (console)` na lista suspensa ao lado.
+4. Localize a seta verde na parte superior do painel. Certifique-se que a lista suspensa ao lado tenha `.NET Core Launch (console)` selecionado.
 
     ![Seleção do .NET Core](media/with-visual-studio-code/selectcore.png)
 
