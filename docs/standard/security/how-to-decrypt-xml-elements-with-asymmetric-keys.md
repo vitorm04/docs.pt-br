@@ -18,21 +18,21 @@ helpviewer_keywords:
 - XML encryption
 - decryption
 ms.assetid: dd5de491-dafe-4b94-966d-99714b2e754a
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 099937fe113c39c717b4c9fcba2042115b9105e6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 698a542765cf8599a2f07e747669893502b75045
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a>Como descriptografar elementos XML com chaves assimétricas
-Você pode usar as classes de <xref:System.Security.Cryptography.Xml> namespace para criptografar e descriptografar um elemento em um documento XML.  Criptografia XML é uma maneira padrão para trocar ou armazenar dados criptografados do XML, sem se preocupar com os dados que estão sendo lidos facilmente.  Para obter mais informações sobre o padrão de criptografia XML, consulte a recomendação do World Wide Web Consortium (W3C) [sintaxe de assinatura XML e processamento](http://go.microsoft.com/fwlink/?LinkID=136777).  
+Você pode usar as classes de <xref:System.Security.Cryptography.Xml> namespace para criptografar e descriptografar um elemento em um documento XML.  Criptografia XML é uma maneira padrão para trocar ou armazenar dados criptografados do XML, sem se preocupar com os dados que estão sendo lidos facilmente.  Para obter mais informações sobre o padrão de criptografia XML, consulte a recomendação do World Wide Web Consortium (W3C) [sintaxe de assinatura XML e processamento](https://www.w3.org/TR/xmldsig-core/).  
   
  O exemplo neste procedimento descriptografa um elemento XML que foi criptografado usando os métodos descritos no [como: criptografar elementos XML com chaves assimétricas](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md).  Encontrar um <`EncryptedData`> elemento, descriptografa o elemento e, em seguida, substitui o elemento com o elemento XML de texto sem formatação original.  
   

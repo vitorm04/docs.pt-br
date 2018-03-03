@@ -20,21 +20,21 @@ helpviewer_keywords:
 - XML signing
 - signing XML
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 95f610922126074017802ef53670b26b3596e17c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8835bd09e041ce8bb36c09951ea5526d42ff0c3c
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Como assinar documento XML com assinaturas digitais
-Você pode usar as classes de <xref:System.Security.Cryptography.Xml> namespace para assinar um documento XML ou parte de um documento XML com uma assinatura digital.  Assinaturas digitais XML (XMLDSIG) permitem que você verificar que os dados não foi alterados depois de ser assinado.  Para obter mais informações sobre o padrão XMLDSIG, consulte a recomendação do World Wide Web Consortium (W3C) [sintaxe de assinatura XML e processamento](http://go.microsoft.com/fwlink/?LinkID=136777).  
+Você pode usar as classes de <xref:System.Security.Cryptography.Xml> namespace para assinar um documento XML ou parte de um documento XML com uma assinatura digital.  Assinaturas digitais XML (XMLDSIG) permitem que você verificar que os dados não foi alterados depois de ser assinado.  Para obter mais informações sobre o padrão XMLDSIG, consulte a recomendação do World Wide Web Consortium (W3C) [sintaxe de assinatura XML e processamento](https://www.w3.org/TR/xmldsig-core/).  
   
  O exemplo de código neste procedimento demonstra como assinar um documento XML inteiro digitalmente e anexar a assinatura para o documento em um <`Signature`> elemento.  O exemplo cria uma chave de assinatura RSA, adiciona a chave para um contêiner de chave seguro e, em seguida, usa a chave para assinar digitalmente um documento XML.  A chave pode ser recuperada para verificar a assinatura digital XML, ou pode ser usada para assinar outro documento XML.  
   
