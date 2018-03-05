@@ -39,9 +39,9 @@ No exemplo a seguir, inteiros iguais a 1.034 representados como literais decimai
 > [!NOTE] 
 > Use o prefixo `0x` ou `0X` para indicar um literal hexadecimal e o prefixo `0b` ou `0B` para indicar um literal binário. Literais decimais não têm nenhum prefixo.
 
-Iniciando com o c# 7, alguns recursos foram adicionados melhorar a legibilidade. 
+Iniciando com o C# 7, alguns recursos foram adicionados melhorar a legibilidade. 
  - C# 7.0 permite o uso do caractere de sublinhado, `_`, como um separador de dígito.
- - 7.2 c# permite `_` a ser usado como separador de dígito de um literal binário ou hexadecimal, após o prefixo. Um literal decimal não pode ter um sublinhado à esquerda.
+ - C# 7.2 permite `_` ser usado como separador de dígito de um literal binário ou hexadecimal, após o prefixo. Um literal decimal não pode ter um sublinhado à esquerda.
 
 Alguns exemplos são mostrados abaixo.
 
@@ -65,7 +65,7 @@ SampleMethod((short)5);  // Calling the method with the short parameter
   
 ## <a name="conversions"></a>Conversões  
 
- Há uma conversão implícita predefinida de `short` em [int](../../../csharp/language-reference/keywords/int.md), [longo](../../../csharp/language-reference/keywords/long.md), [float](../../../csharp/language-reference/keywords/float.md), [duplo](../../../csharp/language-reference/keywords/double.md) ou [decimal](../../../csharp/language-reference/keywords/decimal.md).  
+ Há uma conversão implícita predefinida de `short` em [int](../../../csharp/language-reference/keywords/int.md), [long](../../../csharp/language-reference/keywords/long.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) ou [decimal](../../../csharp/language-reference/keywords/decimal.md).  
   
  Não é possível converter implicitamente tipos numéricos não literais com tamanho de armazenamento maior em `short` (consulte a [Tabela de tipos integrais](../../../csharp/language-reference/keywords/integral-types-table.md) para ver os tamanhos de armazenamento de tipos integrais). Considere, por exemplo, as duas variáveis `short` `x` e `y` a seguir:  
   
