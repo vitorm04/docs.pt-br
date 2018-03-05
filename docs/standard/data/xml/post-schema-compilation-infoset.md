@@ -20,14 +20,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4b59b2b59852190bd19a3c1c9536fadb7b40603e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5b55271306abdca95694bd8fb2ebb6e538d060ae
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="post-schema-compilation-infoset"></a>Compilação Infoset de pré esquema
-A [Recomendação de esquema XML World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/?linkid=45242) discute as informações definidas (infoset) que devem ser expostas para a validação de pré-esquema e a compilação de pré-esquema. O modelo de objeto (SOM) de esquema XML exibe essa exposição antes e após o método de <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de <xref:System.Xml.Schema.XmlSchemaSet> é chamado.  
+A [Recomendação de esquema XML World Wide Web Consortium (W3C)](https://www.w3.org/XML/Schema) discute as informações definidas (infoset) que devem ser expostas para a validação de pré-esquema e a compilação de pré-esquema. O modelo de objeto (SOM) de esquema XML exibe essa exposição antes e após o método de <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de <xref:System.Xml.Schema.XmlSchemaSet> é chamado.  
   
  O infoset de validação de pré-compilação esquema é compilado durante a edição do esquema. O infoset de compilação de pré esquema é gerado após o método de <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de <xref:System.Xml.Schema.XmlSchemaSet> é chamado, durante a compilação do esquema, e expostas como propriedades.  
   

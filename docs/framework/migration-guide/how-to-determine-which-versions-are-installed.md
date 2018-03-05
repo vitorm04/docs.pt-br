@@ -18,11 +18,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: dd257e7d481a12389f8a47921ab985ca82a157fc
-ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
+ms.openlocfilehash: 0a25ba2d72588dddf0ac1f88d4de59c623e31ff6
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Como determinar quais versões do .NET Framework estão instaladas
 Você pode instalar e executar várias versões do .NET Framework em seus computadores. Quando você desenvolve ou implanta um aplicativo, é necessário saber qual versão do .NET Framework está instalada no computador do usuário. Observe que o .NET Framework consiste em dois componentes, que são versões separadas:  
@@ -133,7 +133,7 @@ Você pode instalar e executar várias versões do .NET Framework em seus comput
 
 2. Verifique o valor da palavra-chave `Release` para determinar a versão instalada. Para ser compatível direto, você pode verificar se há um valor maior ou igual aos valores listados na tabela. Veja a seguir as versões e palavras-chave `Release` associadas do .NET Framework.
 
-    [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+    [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
 
     |Versão|Valor da liberação de DWORD|
     |-------------|--------------------------------|

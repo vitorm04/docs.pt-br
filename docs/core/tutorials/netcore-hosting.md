@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
-ms.workload: dotnetcore
-ms.openlocfilehash: 2f421c72e8099a328fbc255d51f77a9cd0724e58
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 3c358ab9173032b1f76d30b756ee6290233b2702
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="hosting-net-core"></a>Hospedando o .NET Core
 
@@ -26,7 +27,7 @@ Este artigo fornece uma visão geral das etapas necessárias para iniciar o temp
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Como os hosts são aplicativos nativos, este tutorial abordará a construção de um aplicativo C++ para hospedar o .NET Core. Você precisará de um ambiente de desenvolvimento do C++ (como aquele fornecido pelo [Visual Studio](https://www.visualstudio.com/downloads/)).
+Como os hosts são aplicativos nativos, este tutorial abordará a construção de um aplicativo C++ para hospedar o .NET Core. Você precisará de um ambiente de desenvolvimento do C++ (como aquele fornecido pelo [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)).
 
 Você também desejará ter um aplicativo .NET Core simples com o qual testará o host e, portanto, deverá instalar o [SDK do .NET Core](https://www.microsoft.com/net/core) e [compilar um aplicativo .NET Core de teste pequeno](../../core/tutorials/with-visual-studio.md) (como um aplicativo “Olá, Mundo”). O aplicativo “Olá, Mundo” criado pelo novo modelo de projeto de console do .NET Core é suficiente.
 

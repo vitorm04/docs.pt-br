@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
-ms.workload: dotnetcore
-ms.openlocfilehash: a38c2e5ff5e11cecaa75b8cd678c362a857d7ebc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 0428f93d4044fa0dd65a6f48ee425948fe052697
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-net-core"></a>Introdução ao .NET Core
 
@@ -30,8 +31,8 @@ Você pode começar a desenvolver aplicativos .NET Core seguindo estes tutoriais
 * [Criar uma biblioteca de classes com C# e .NET Core no Visual Studio 2017](./tutorials/library-with-visual-studio.md) – saiba como criar uma biblioteca de classes escrita em C# usando o Visual Studio 2017.
 * [Compilar um aplicativo Olá, Mundo em Visual Basic com o .NET Core no Visual Studio 2017](./tutorials/vb-with-visual-studio.md) – saiba como compilar, depurar e publicar um aplicativo de console simples do .NET Core usando Visual Basic e o Visual Studio 2017. 
 * [Compilar uma biblioteca de classes com Visual Basic e .NET Core no Visual Studio 2017](./tutorials/vb-library-with-visual-studio.md) – saiba como compilar uma biblioteca de classes escrita em Visual Basic usando o Visual Studio 2017.
-* [Introdução ao Visual Studio Code usando o C# e .NET Core no Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core) – esse vídeo do [Channel9](https://channel9.msdn.com) mostra como instalar e usar o [Visual Studio Code](https://www.visualstudio.com/products/code-vs), o editor de código leve de plataforma cruzada da Microsoft, para criar seu primeiro aplicativo de console no .NET Core.
-* [Introdução ao .NET Core e Visual Studio 2017](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017) - Este vídeo do [Channel9](https://channel9.msdn.com) mostra como instalar e usar o [Visual Studio 2017](https://www.visualstudio.com/), o IDE completo da Microsoft, a fim de criar seu primeiro aplicativo de console multiplataforma em .NET Core.
+* [Introdução ao Visual Studio Code usando o C# e .NET Core no Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core) – esse vídeo do [Channel9](https://channel9.msdn.com) mostra como instalar e usar o [Visual Studio Code](https://code.visualstudio.com/), o editor de código leve de plataforma cruzada da Microsoft, para criar seu primeiro aplicativo de console no .NET Core.
+* [Introdução ao .NET Core e Visual Studio 2017](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017) - Este vídeo do [Channel9](https://channel9.msdn.com) mostra como instalar e usar o [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs), o IDE completo da Microsoft, a fim de criar seu primeiro aplicativo de console multiplataforma em .NET Core.
 * [Introdução ao .NET Core usando a linha de comando](tutorials/using-with-xplat-cli.md) -Use qualquer editor de código com a [CLI (Interface de Linha de Comando) de plataforma cruzada do .NET Core](tools/index.md).
 
 Consulte o tópico de [Desenvolvimento de pré-requisitos para o Windows](windows-prerequisites.md) para ver uma lista das versões do Windows com suporte.

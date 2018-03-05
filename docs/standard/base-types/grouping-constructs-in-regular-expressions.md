@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b6e0b9d3482bbfc3dabeee1f6b7fce7a93364dfb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9b9e54d8bbc9ca7cc9172fd83bd15968b3cef8e1
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Agrupando construtores em expressões regulares
 As construções de agrupamento delineiam as subexpressões de uma expressão regular e capturam a subcadeia de caracteres de uma cadeia de caracteres de entrada. Você pode usar construções de agrupamento para fazer isto:  
@@ -421,7 +421,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
 |`\w+`|Corresponde a um ou mais caracteres de palavra seguido por um espaço em branco.|  
 |`\d{1,2},`|Corresponde a um ou dois dígitos decimais seguidos por uma caractere de espaço em branco e uma vírgula.|  
 |`\d{4}\b`|Corresponde a quatro dígitos decimais e encerra a correspondência em um limite de palavra.|  
-|`(?<!(Saturday&#124;Sunday) )`|Se a correspondência for precedida por algo que não seja as cadeias de caracteres "Sábado" ou "Domingo" seguidas por um espaço, a correspondência é realizada com êxito.|  
+|<code>(?<!(Saturday&#124;Sunday) )</code>|Se a correspondência for precedida por algo que não seja as cadeias de caracteres "Sábado" ou "Domingo" seguidas por um espaço, a correspondência é realizada com êxito.|  
   
 <a name="nonbacktracking_subexpression"></a>   
 ## <a name="nonbacktracking-subexpressions"></a>Subexpressões sem retrocesso  

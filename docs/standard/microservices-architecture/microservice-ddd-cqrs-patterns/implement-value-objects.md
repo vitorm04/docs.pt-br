@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2b7b85d2aa3c563fbd4c7cf89336827d25f22c0e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e6ac6f2d316a94e69c2599acf07aaaf6361b3e5a
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="implementing-value-objects"></a>Implementando objetos de valor
 
@@ -136,7 +136,7 @@ Você acabou de ver como definir um objeto de valor em seu modelo de domínio. P
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>Tela de fundo e abordagens mais antigas usando EF Core 1.1
 
-Como contexto, uma limitação ao usar EF Core 1.0 e 1.1 era que você não podia usar [tipos complexos](https://docs.microsoft.com/dotnet/api/system.componentmodel.dataannotations.schema.complextypeattribute?view=netframework-4.7) conforme definido no EF 6. x no .NET Framework tradicional. Portanto, se estiver usando EF Core 1.0 ou 1.1, precisará armazenar seu objeto de valor como uma entidade EF com um campo de ID. Então, para que se pareça mais com um objeto de valor sem nenhuma identidade, você pode ocultar a ID para deixar claro que a identidade de um objeto de valor não é importante no modelo de domínio. Você pode ocultar essa ID usando a ID como um [propriedade de sombra](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Uma vez que a configuração para ocultar a ID do modelo é configurada no nível de infraestrutura do EF, seria transparente para o seu modelo de domínio.
+Como contexto, uma limitação ao usar EF Core 1.0 e 1.1 era que você não podia usar [tipos complexos](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute) conforme definido no EF 6. x no .NET Framework tradicional. Portanto, se estiver usando EF Core 1.0 ou 1.1, precisará armazenar seu objeto de valor como uma entidade EF com um campo de ID. Então, para que se pareça mais com um objeto de valor sem nenhuma identidade, você pode ocultar a ID para deixar claro que a identidade de um objeto de valor não é importante no modelo de domínio. Você pode ocultar essa ID usando a ID como um [propriedade de sombra](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Uma vez que a configuração para ocultar a ID do modelo é configurada no nível de infraestrutura do EF, seria transparente para o seu modelo de domínio.
 
 Na versão inicial do eShopOnContainers (.NET Core 1.1), a ID oculta necessária para a infraestrutura do EF Core foi implementada da seguinte maneira no nível de DbContext, usando a API Fluente no projeto de infraestrutura. Portanto, a ID foi oculta do ponto de vista do domínio modelo de domínio, mas ainda está na infraestrutura.
 
@@ -168,7 +168,7 @@ Um tipo de entidade própria permite mapear tipos que não têm a própria ident
 Apenas observando o modelo de domínio, um tipo de propriedade parece não ter identidade alguma.
 No entanto, nos bastidores, tipos próprios têm identidade, mas a propriedade de navegação do proprietário faz parte dessa identidade.
 
-A identidade de instâncias de tipos próprios não é completamente própria. Consiste em três componentes: 
+A identidade de instâncias de tipos próprios não é completamente própria. Consiste em três componentes:
 
 - A identidade do proprietário
 
@@ -252,8 +252,8 @@ public class Order
 
 public class OrderDetails
 {
-    public StreetAddress BillingAddress { get; set; }
-    public StreetAddress ShippingAddress { get; set; }
+    public Address BillingAddress { get; set; }
+    public Address ShippingAddress { get; set; }
 }
 
 public class Address

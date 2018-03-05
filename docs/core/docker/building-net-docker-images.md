@@ -14,11 +14,11 @@ ms.custom: mvc
 manager: wpickett
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 2b1a57fe264eda0a4d3186c7be8b0de01bd5f0a9
-ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
+ms.openlocfilehash: d5631bdbc0334640b290c08df17cba0bfe99fe85
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>Criando imagens do Docker para .NET Core Applications
 
@@ -76,7 +76,7 @@ Para atingir as metas descritas acima, fornecemos variantes de imagem em [`micro
 
 Além dos cenários otimizados de desenvolvimento, build e produção, fornecemos imagens adicionais:
 
-* `microsoft/dotnet:<version>-runtime-deps`: a imagem **runtime-deps** contém o sistema operacional com todas as dependências nativas exigidas pelo .NET Core. Essa imagem destina-se a [aplicativos autossuficientes](https://docs.microsoft.com/dotnet/core/deploying/index).
+* `microsoft/dotnet:<version>-runtime-deps`: a imagem **runtime-deps** contém o sistema operacional com todas as dependências nativas exigidas pelo .NET Core. Essa imagem destina-se a [aplicativos autossuficientes](../deploying/index.md).
 
 Versões mais recentes de cada variante:
 

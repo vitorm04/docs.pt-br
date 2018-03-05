@@ -2,20 +2,21 @@
 title: "Como pesquisar cadeias de caracteres usando expressões regulares (Guia de Programação em C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - searching strings [C#]
 - strings [C#], searching with RegEx
 ms.assetid: dcab2150-a4a2-4fe4-87e3-83b83b58d84a
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: c851c57b44f1343816b905db002e530121fb6c0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="how-to-search-strings-using-regular-expressions-c-programming-guide"></a>Como pesquisar cadeias de caracteres usando expressões regulares (Guia de Programação em C#)
 A classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> pode ser usada para pesquisar cadeias de caracteres. Essas pesquisas podem variar em complexidade, de muito simples a uso pleno de expressões regulares. A seguir estão dois exemplos de pesquisa de cadeia de caracteres usando a classe <xref:System.Text.RegularExpressions.Regex>. Para obter mais informações, consulte [Expressões regulares do .NET Framework](https://msdn.microsoft.com/library/hs600312).  

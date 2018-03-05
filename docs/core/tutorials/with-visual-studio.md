@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
-ms.workload: dotnetcore
-ms.openlocfilehash: 06fea0118d70079a34a6954eae49ace344262ea5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 21b36bfa355bbea1b078c4bd29afdf5afeb61453
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Compilar um aplicativo Olá, Mundo em C# com o .NET Core no Visual Studio 2017
 
@@ -23,7 +24,7 @@ Este tópico fornece uma introdução passo a passo para compilação, depuraç�
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-O [Visual Studio 2017](https://www.visualstudio.com/downloads/) com a carga de trabalho "Desenvolvimento de plataforma cruzada do .NET Core" instalada. É possível desenvolver seu aplicativo com o .NET Core 1.1 ou com o .NET Core 2.0.
+O [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) com a carga de trabalho "Desenvolvimento de plataforma cruzada do .NET Core" instalada. É possível desenvolver seu aplicativo com o .NET Core 1.1 ou com o .NET Core 2.0.
 
 Para obter mais informações, consulte o tópico [Pré-requisitos para .NET Core no Windows](../../core/windows-prerequisites.md).
 

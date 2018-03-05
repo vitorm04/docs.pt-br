@@ -28,11 +28,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 648c86c71de3c92825af3cfdd4ac2ca023f5e027
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e328c294a9b4ca3047c4ad1750ddedf64bac2218
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="anchors-in-regular-expressions"></a>Âncoras em expressões regulares
 <a name="top"></a> Âncoras ou asserções atômicas de largura zero, especificam uma posição na cadeia de caracteres em que uma correspondência deve ocorrer. Quando você usa uma âncora na sua expressão de pesquisa, o mecanismo de expressões regulares não avança pela cadeia de caracteres ou consome caracteres, ele procura uma correspondência apenas na posição especificada. Por exemplo, `^` Especifica que a correspondência deve começar no início de uma linha ou cadeia de caracteres. Portanto, a expressão regular `^http:` corresponde a "http:" apenas quando ele ocorre no início de uma linha. A tabela a seguir lista as âncoras com suporte pelas expressões regulares no .NET.  
@@ -71,9 +71,9 @@ ms.lasthandoff: 12/23/2017
 |`(\w+\s\w+)`|Corresponde a um ou mais caracteres de palavra seguidos por um espaço, seguido por um ou mais caracteres de palavra. Este é o quarto grupo de captura.|  
 |`,`|Corresponde a uma vírgula.|  
 |`\s\d{4}`|Corresponde a um espaço seguido por quatro dígitos decimais.|  
-|(-`(\d{4}&#124;present))?`|Corresponde a zero ou uma ocorrência de um hífen seguido por quatro dígitos decimais ou a cadeia de caracteres "present". Este é o sexto grupo de captura. Ele também inclui um sétimo grupo de captura.|  
+|<code>(-(\d{4}&#124;present))?</code>|Corresponde a zero ou uma ocorrência de um hífen seguido por quatro dígitos decimais ou a cadeia de caracteres "present". Este é o sexto grupo de captura. Ele também inclui um sétimo grupo de captura.|  
 |`,?`|Corresponde a zero ou uma ocorrência de uma vírgula.|  
-|`(\s\d{4}(-(\d{4}&#124;present))?,?)+`|Corresponde a uma ou mais ocorrências do seguinte: um espaço, quatro dígitos decimais, zero ou uma ocorrência de um hífen seguido por quatro dígitos decimais ou a cadeia de caracteres "present" e zero ou uma vírgula. Este é o quinto grupo de captura.|  
+|<code>(\s\d{4}(-(\d{4}&#124;present))?,?)+</code>|Corresponde a uma ou mais ocorrências do seguinte: um espaço, quatro dígitos decimais, zero ou uma ocorrência de um hífen seguido por quatro dígitos decimais ou a cadeia de caracteres "present" e zero ou uma vírgula. Este é o quinto grupo de captura.|  
   
  [Voltar ao início](#top)  
   

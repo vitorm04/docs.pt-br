@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
-ms.workload: dotnetcore
-ms.openlocfilehash: f64bc6463c455a288a374604e42e6747f701b0e7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 0db67593340ea3bae00a45b845a0effe0c1fcab1
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Compilar uma solução completa do .NET Core no macOS usando o Visual Studio para Mac
 
@@ -33,7 +34,7 @@ Este tutorial mostra como criar um aplicativo que aceita uma palavra de pesquisa
 - [SDK 1.1 ou posterior do .NET Core](https://www.microsoft.com/net/core#macos)
 - [Visual Studio 2017 para Mac](https://www.visualstudio.com/vs/visual-studio-mac/)
 
-Para saber mais sobre pré-requisitos, confira os [Pré-requisitos para .NET Core no Mac](../../core/macos-prerequisites.md). Para conferir os requisitos de sistema completos do Visual Studio 2017 para Mac, veja [Requisitos de sistema da família de produtos do Visual Studio 2017 para Mac](https://www.visualstudio.com/productinfo/vs2017-system-requirements-mac).
+Para saber mais sobre pré-requisitos, confira os [Pré-requisitos para .NET Core no Mac](../../core/macos-prerequisites.md). Para conferir os requisitos de sistema completos do Visual Studio 2017 para Mac, veja [Requisitos de sistema da família de produtos do Visual Studio 2017 para Mac](/visualstudio/productinfo/vs2017-system-requirements-mac).
 
 ## <a name="building-a-library"></a>Compilar uma biblioteca
 
@@ -197,4 +198,4 @@ As unidade de teste fornecem testes de software automatizados durante o desenvol
 
 ## <a name="see-also"></a>Consulte também
 
-[Notas de versão do Visual Studio 2017 para Mac](https://www.visualstudio.com/news/releasenotes/vs2017-mac-relnotes)
+[Notas de versão do Visual Studio 2017 para Mac](/visualstudio/releasenotes/vs2017-mac-relnotes)

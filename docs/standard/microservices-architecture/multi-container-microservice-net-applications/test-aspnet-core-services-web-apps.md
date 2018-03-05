@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 80b7fa75344f8737baacfba6462a03b436fdf6a8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 596f588aae8c0814e5b40d29c4bf5723f944c5ac
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testar serviços e aplicativos Web do ASP.NET Core
 
@@ -102,12 +102,12 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
--   **Steve Smith. Testando os controladores** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
+-   **Steve Smith. Testando os controladores** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](/aspnet/core/mvc/controllers/testing)
 
--   **Steve Smith. Testes de integração** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/testing/integration-testing*](https://docs.microsoft.com/aspnet/core/testing/integration-testing)
+-   **Steve Smith. Testes de integração** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/testing/integration-testing*](/aspnet/core/testing/integration-testing)
 
 -   **Teste de unidade no .NET Core usando o teste dotnet**
-    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test)
+    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 -   **xUnit.net**. Site oficial.
     [*https://xunit.github.io/*](https://xunit.github.io/)
@@ -125,7 +125,7 @@ public class PrimeWebDefaultRequestShould
 
 Conforme mencionado anteriormente, ao testar aplicativos com vários contêineres, todos os microsserviços precisam ser executados no host do Docker ou no cluster do contêiner. Testes de serviço de ponta a ponta que incluem várias operações que envolvem diversos microsserviços exigem a implantação e inicialização do aplicativo inteiro no host do Docker por meio da execução do Docker Compose (ou um mecanismo semelhante se você estiver usando um orquestrador). Quando o aplicativo inteiro e todos os seus serviços estiverem em execução, você pode executar testes funcionais e de integração de ponta a ponta.
 
-Existem algumas abordagens que você pode usar. No arquivo docker-compose.yml utilizado para implantar o aplicativo (ou similares, como o docker-compose.ci.build.yml), é possível expandir o ponto de entrada no nível da solução para utilizar o [teste dotnet](https://docs.microsoft.com/dotnet/core/tools/dotnet-test). Também é possível usar outro arquivo do Compose para executar testes na imagem de destino. Ao utilizar outro arquivo do Compose para testes de integração que inclui microsserviços e bancos de dados em contêineres, você garante que dados relacionados sempre sejam redefinidos para seu estado original antes de executar os testes.
+Existem algumas abordagens que você pode usar. No arquivo docker-compose.yml utilizado para implantar o aplicativo (ou similares, como o docker-compose.ci.build.yml), é possível expandir o ponto de entrada no nível da solução para utilizar o [teste dotnet](../../../core/tools/dotnet-test.md). Também é possível usar outro arquivo do Compose para executar testes na imagem de destino. Ao utilizar outro arquivo do Compose para testes de integração que inclui microsserviços e bancos de dados em contêineres, você garante que dados relacionados sempre sejam redefinidos para seu estado original antes de executar os testes.
 
 Se o Visual Studio estiver em execução, será possível aproveitar pontos de interrupção e exceções após o aplicativo do Compose entrar em funcionamento. Outra opção é executar os testes de integração automaticamente no pipeline de CI no Visual Studio Team Services ou em qualquer outro sistema CI/CD compatível com contêineres do Docker.
 

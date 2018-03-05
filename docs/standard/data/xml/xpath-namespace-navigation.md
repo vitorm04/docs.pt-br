@@ -16,16 +16,16 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cae3fa68d3820e98bee333d0252aeb74b15fe2a7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8cc8d1f031b3f00cdf2b698514220c25c9fec7be
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="xpath-namespace-navigation"></a>Navegação do namespace XPath
 Para usar consultas XPath com documentos XML, você precisará endereçar corretamente namespaces XML e os elementos contidos por espaços. Namespaces impedem ambiguidades que podem ocorrer quando os nomes são usados em mais de um contexto; por exemplo, o nome `ID` pode referir-se a mais de um identificador associado com os diferentes elementos de um documento XML. A sintaxe do namespace especifica URIs, nomes, e prefixos que distinguiem os elementos de um documento XML.  
   
- O exemplo neste tópico demonstra o uso dos prefixos em navegar em um documento XML com <xref:System.Xml.XPath.XPathNavigator>. Para saber mais sobre namespaces e sintaxe, confira [Noções básicas sobre namespaces XML](http://go.microsoft.com/fwlink/?linkid=140245).  
+ O exemplo neste tópico demonstra o uso dos prefixos em navegar em um documento XML com <xref:System.Xml.XPath.XPathNavigator>. Para saber mais sobre namespaces e sintaxe, confira [Noções básicas sobre namespaces XML](https://msdn.microsoft.com/library/aa468565.aspx).  
   
 ## <a name="namespace-declarations"></a>Declarações de namespace  
  As declarações namespace tornam os elementos de um documento XML distinguíveis e endereçáveis ao usar uma instância de <xref:System.Xml.XPath.XPathNavigator>. Prefixos de namespace fornece uma breve sintaxe para namespaces de resolução.  
