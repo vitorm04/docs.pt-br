@@ -17,24 +17,27 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-caps.latest.revision: "58"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 603633e1a0f385c061fe0928ea7361490d61fa3e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dfcb0d0ace4bd42d89fe7b4c2dc04098858c2945
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classes de caracteres em expressões regulares
-<a name="Top"></a>Uma classe de caractere define um conjunto de caracteres, qualquer um deles pode ocorrer em uma cadeia de caracteres de entrada para uma correspondência seja bem-sucedida. A linguagem de expressões regulares no .NET dá suporte às seguintes classes de caracteres:  
+<a name="Top"></a> Uma classe de caracteres define um conjunto de caracteres, qualquer dos quais pode ocorrer em uma cadeia de caracteres de entrada para que uma correspondência seja bem-sucedida. A linguagem de expressões regulares no .NET dá suporte às seguintes classes de caracteres:  
   
 -   Grupos de caracteres positivos. Um caractere na cadeia de caracteres de entrada deve corresponder a um de um conjunto especificado de caracteres. Para obter mais informações, consulte [Positive Character Group (Grupo de caracteres positivos)](#PositiveGroup).  
   
 -   Grupo de caracteres negativos. Um caractere na cadeia de caracteres de entrada não deve corresponder a um de um conjunto especificado de caracteres. Para obter mais informações, consulte [Negative Character Group (Grupo de caracteres negativos)](#NegativeGroup).  
   
--   Caractere qualquer. O `.` (ponto ou período) caractere em uma expressão regular é um caractere curinga que corresponde a qualquer caractere exceto `\n`. Para obter mais informações, consulte [Qualquer caractere](#AnyCharacter).  
+-   Caractere qualquer. O `.` (ponto) em uma expressão regular é um caractere curinga que corresponde a qualquer caractere, exceto `\n`. Para obter mais informações, consulte [Qualquer caractere](#AnyCharacter).  
   
 -   Uma categoria geral de Unicode ou bloco nomeado. Um caractere na cadeia de caracteres de entrada deve ser um membro de uma categoria de Unicode específica ou deve estar dentro de um intervalo contíguo de caracteres Unicode para que uma correspondência seja bem-sucedida. Para obter mais informações, consulte [Unicode Category or Unicode Block](#CategoryOrBlock) (Bloco de Unicode ou Categoria de Unicode).  
   
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/21/2017
  O .NET dá suporte a expressões de subtração de classes de caracteres, o que permite a você definir um conjunto de caracteres como resultado da exclusão de uma classe de caracteres de outra classe de caracteres. Para obter mais informações, consulte [Subtração de classe de caracteres](#CharacterClassSubtraction).  
   
 > [!NOTE]
->  Que coincidem com caracteres por categoria, como classes de caracteres [\w](#WordCharacter) para fazer a correspondência de caracteres de texto ou [{\p](#CategoryOrBlock) para corresponder a uma categoria de Unicode, dependem de <xref:System.Globalization.CharUnicodeInfo> classe para fornecer informações sobre caracteres categorias.  Começando com o [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], categorias de caracteres se baseiam em [The Unicode Standard, versão 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/). No [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] por meio de [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], eles se baseiam em [The Unicode Standard, versão 6.3.0](http://www.unicode.org/versions/Unicode6.3.0/).  
+>  Classes de caractere que reúnem caracteres por categoria, como [\w](#WordCharacter) para caracteres de texto, ou [\p{}](#CategoryOrBlock) para uma categoria de Unicode, dependem da classe <xref:System.Globalization.CharUnicodeInfo> para fornecer informações sobre categorias de caractere.  A partir do [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], as categorias de caracteres se baseiam no [Padrão Unicode, versão 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/). No [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] até o [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], eles se baseiam no [Padrão Unicode, versão 6.3.0](http://www.unicode.org/versions/Unicode6.3.0/).  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>Grupo de Caracteres Positivo: [ ]  
@@ -63,9 +66,9 @@ ms.lasthandoff: 11/21/2017
   
  A sintaxe para especificar uma lista de caracteres individuais é a seguinte:  
   
- [*grupo caractere*]  
+ [*character_group*]  
   
- em que *character_group* é uma lista dos caracteres individuais que podem aparecer na cadeia de caracteres de entrada para que uma correspondência seja bem-sucedida. *grupo caractere* pode consistir em qualquer combinação de um ou mais caracteres literais, [caracteres de escape](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md), ou classes de caracteres.  
+ em que *character_group* é uma lista dos caracteres individuais que podem aparecer na cadeia de caracteres de entrada para que uma correspondência seja bem-sucedida. *character_group* pode ser composto por qualquer combinação de um ou mais caracteres literais, [caracteres de escape](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) ou classes de caracteres.  
   
  A sintaxe para especificar um intervalo de caracteres é a seguinte:  
   
@@ -120,9 +123,9 @@ ms.lasthandoff: 11/21/2017
   
  A sintaxe para especificar uma lista de caracteres individuais é a seguinte:  
   
- [*^ grupo caractere*]  
+ [*^character_group*]  
   
- em que *character_group* é uma lista dos caracteres individuais que não podem aparecer na cadeia de caracteres de entrada para que uma correspondência seja bem-sucedida. *grupo caractere* pode consistir em qualquer combinação de um ou mais caracteres literais, [caracteres de escape](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md), ou classes de caracteres.  
+ em que *character_group* é uma lista dos caracteres individuais que não podem aparecer na cadeia de caracteres de entrada para que uma correspondência seja bem-sucedida. *character_group* pode ser composto por qualquer combinação de um ou mais caracteres literais, [caracteres de escape](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) ou classes de caracteres.  
   
  A sintaxe para especificar um intervalo de caracteres é a seguinte:  
   
@@ -156,14 +159,14 @@ ms.lasthandoff: 11/21/2017
 |`\b`|Iniciar em um limite de palavra.|  
 |`th`|Corresponder aos caracteres literais “th”.|  
 |`[^o]`|Corresponder a qualquer caractere que não seja um “o”.|  
-|`\w+`|Fazer a correspondência a um ou mais caracteres de palavra.|  
+|`\w+`|Corresponde a um ou mais caracteres de palavra.|  
 |`\b`|Terminar em um limite de palavra.|  
   
  [Voltar ao início](#Top)  
   
 <a name="AnyCharacter"></a>   
 ## <a name="any-character-"></a>Caractere qualquer: .  
- O caractere de ponto (.) corresponde a qualquer caractere, exceto `\n` (o caractere de nova linha, \u000A.), com as qualificações a seguir:  
+ O caractere de ponto (.) corresponde a qualquer caractere, exceto `\n` (o caractere de nova linha, \u000A), com estas duas qualificações:  
   
 -   Se um padrão de expressão regular é modificado pela opção <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>, ou se a parte do padrão que contém a classe de caracteres `.` é modificada pela opção `s`, `.` corresponde a qualquer caractere. Para obter mais informações, consulte [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md).  
   
@@ -173,15 +176,15 @@ ms.lasthandoff: 11/21/2017
      [!code-vb[Conceptual.Regex.Language.CharacterClasses#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any2.vb#5)]  
   
 > [!NOTE]
->  Porque ele corresponde a qualquer caractere, exceto `\n`, o `.` também corresponde a classe de caractere `\r` (o caractere de retorno de carro, \u000D.).  
+>  Como ela corresponde a qualquer caractere, exceto `\n`, a classe de caracteres `.` também corresponde a `\r` (o caractere de retorno de carro, \u000D).  
   
--   Em um grupo de caracteres positivos ou negativos, um ponto é tratado como um caractere de ponto literal e não como uma classe de caracteres. Para obter mais informações, consulte [caractere grupo positivo](#PositiveGroup) e [caractere grupo negativo](#NegativeGroup) anteriormente neste tópico. O exemplo a seguir fornece uma ilustração ao definir uma expressão regular que inclui o caractere de ponto (`.`) como uma classe de caracteres e como um membro de um grupo de caracteres positivos. A expressão regular `\b.*[.?!;:](\s|\z)` começa em um limite de palavra, corresponde a qualquer caractere até encontrar um de quatro sinais de pontuação, incluindo um ponto e corresponde a um caractere de espaço em branco ou ao final da cadeia de caracteres.  
+-   Em um grupo de caracteres positivos ou negativos, um ponto é tratado como um caractere de ponto literal e não como uma classe de caracteres. Para saber mais, confira [Grupo de caracteres positivos](#PositiveGroup) e [Grupo de caracteres negativos](#NegativeGroup) anteriormente neste tópico. O exemplo a seguir fornece uma ilustração ao definir uma expressão regular que inclui o caractere de ponto (`.`) como uma classe de caracteres e como um membro de um grupo de caracteres positivos. A expressão regular `\b.*[.?!;:](\s|\z)` começa em um limite de palavra, corresponde a qualquer caractere até encontrar um de quatro sinais de pontuação, incluindo um ponto e corresponde a um caractere de espaço em branco ou ao final da cadeia de caracteres.  
   
      [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any1.cs#4)]
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
->  Como ele corresponde a qualquer caractere, o elemento de linguagem `.` é frequentemente usado com um quantificador lento se um padrão de expressão regular tenta corresponder a qualquer caractere várias vezes. Para obter mais informações, consulte [quantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  Como ele corresponde a qualquer caractere, o elemento de linguagem `.` é frequentemente usado com um quantificador lento se um padrão de expressão regular tenta corresponder a qualquer caractere várias vezes. Para saber mais, confira [Quantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  [Voltar ao início](#Top)  
   
@@ -191,11 +194,11 @@ ms.lasthandoff: 11/21/2017
   
  A constructo da expressão regular  
   
- `\p{`*nome*`}`  
+ `\p{` *name* `}`  
   
- corresponde a qualquer caractere que pertence a uma categoria geral Unicode ou bloco nomeado, onde *nome* é a abreviação de categoria ou o nome do bloco nomeado. Para obter uma lista de abreviações de categoria, consulte a seção [Categorias gerais Unicode com suporte](#SupportedUnicodeGeneralCategories) posteriormente neste tópico. Para obter uma lista dos blocos nomeados, consulte a seção [Blocos nomeados com suporte](#SupportedNamedBlocks) posteriormente neste tópico.  
+ corresponde a qualquer caractere que pertence a uma categoria geral de Unicode ou a um bloco nomeado, em que *name* é a abreviação da categoria ou o nome do bloco nomeado. Para obter uma lista de abreviações de categoria, consulte a seção [Categorias gerais Unicode com suporte](#SupportedUnicodeGeneralCategories) posteriormente neste tópico. Para obter uma lista dos blocos nomeados, consulte a seção [Blocos nomeados com suporte](#SupportedNamedBlocks) posteriormente neste tópico.  
   
- O exemplo a seguir usa o `\p{` *nome* `}` construção para corresponder a ambos os uma categoria geral do Unicode (nesse caso, o `Pd`, ou pontuação, categoria de traço) e um bloco nomeado (o `IsGreek` e `IsBasicLatin` chamado blocos).  
+ O exemplo a seguir usa o constructo `\p{`*name*`}` para corresponder a uma categoria de Unicode geral (nesse caso, a categoria `Pd`, ou Pontuação, Traço) e um bloco nomeado (os blocos nomeados `IsGreek` e `IsBasicLatin`).  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/category1.cs#6)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/category1.vb#6)]  
@@ -222,11 +225,11 @@ ms.lasthandoff: 11/21/2017
   
  A constructo da expressão regular  
   
- `\P{`*nome*`}`  
+ `\P{` *name* `}`  
   
- corresponde a qualquer caractere que não pertence a uma categoria geral Unicode ou bloco nomeado, onde *nome* é a abreviação de categoria ou o nome do bloco nomeado. Para obter uma lista de abreviações de categoria, consulte a seção [Categorias gerais Unicode com suporte](#SupportedUnicodeGeneralCategories) posteriormente neste tópico. Para obter uma lista dos blocos nomeados, consulte a seção [Blocos nomeados com suporte](#SupportedNamedBlocks) posteriormente neste tópico.  
+ corresponde a qualquer caractere que não pertença a uma categoria geral de Unicode ou a um bloco nomeado, em que *name* é a abreviação da categoria ou o nome do bloco nomeado. Para obter uma lista de abreviações de categoria, consulte a seção [Categorias gerais Unicode com suporte](#SupportedUnicodeGeneralCategories) posteriormente neste tópico. Para obter uma lista dos blocos nomeados, consulte a seção [Blocos nomeados com suporte](#SupportedNamedBlocks) posteriormente neste tópico.  
   
- O exemplo a seguir usa o `\P{` *nome* `}` construção para remover qualquer símbolos de moeda (nesse caso, o `Sc`, ou símbolo, categoria de moeda) de cadeias de caracteres numéricas.  
+ O exemplo a seguir usa o constructo `\P{`*name*`}` para remover quaisquer símbolos de moeda (nesse caso, categoria `Sc`, ou Símbolo, Moeda) de cadeias de caracteres numéricas.  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/notcategory1.cs#7)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/notcategory1.vb#7)]  
@@ -237,7 +240,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="WordCharacter"></a>   
 ## <a name="word-character-w"></a>Caractere de Palavra: \w  
- `\w`corresponde a qualquer caractere. Um caractere de palavra é um membro de qualquer uma das categorias Unicode listadas na tabela a seguir.  
+ `\w` corresponde a qualquer caractere de palavra. Um caractere de palavra é um membro de qualquer uma das categorias Unicode listadas na tabela a seguir.  
   
 |Categoria|Descrição|  
 |--------------|-----------------|  
@@ -250,12 +253,12 @@ ms.lasthandoff: 11/21/2017
 |Nd|Número, dígito decimal|  
 |Pc|Pontuação, conector. Essa categoria inclui dez caracteres, o mais comumente usado deles é o LOWLINE (_), u+005F.|  
   
- Se o comportamento compatível com ECMAScript for especificado, `\w` é equivalente a `[a-zA-Z_0-9]`. Para obter informações sobre expressões regulares ECMAScript, consulte a seção “Comportamento de correspondência ECMAScript" em [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md).  
+ Se o comportamento compatível com ECMAScript for especificado, `\w` será equivalente a `[a-zA-Z_0-9]`. Para obter informações sobre expressões regulares ECMAScript, consulte a seção “Comportamento de correspondência ECMAScript" em [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
->  Porque ele corresponde a qualquer caractere, o `\w` elemento de linguagem é frequentemente usado com um quantificador lazy se um padrão de expressão regular tenta corresponder qualquer caractere de palavra várias vezes, seguido por um caractere de palavra específica. Para obter mais informações, consulte [quantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  Como ele corresponde a qualquer caractere de palavra, o elemento de linguagem `\w` é frequentemente usado com um quantificador lento se um padrão de expressão regular tenta corresponder a qualquer caractere de palavra várias vezes, seguido por um caractere de palavra específico. Para saber mais, confira [Quantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
- O exemplo a seguir usa o `\w` elemento de linguagem para fazer a correspondência de caracteres duplicadas de uma palavra. O exemplo define um padrão de expressão regular, `(\w)\1`, que pode ser interpretado da seguinte maneira.  
+ O exemplo a seguir usa o elemento de linguagem `\w` para corresponder a caracteres duplicados em uma palavra. O exemplo define um padrão de expressão regular, `(\w)\1`, que pode ser interpretado como a seguir.  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
@@ -269,7 +272,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="NonWordCharacter"></a>   
 ## <a name="non-word-character-w"></a>Caractere não pertencente a palavras: \W  
- `\W`corresponde a qualquer caractere de palavra. O elemento de linguagem \W é equivalente à seguinte classe de caracteres:  
+ `\W` corresponde a qualquer caractere que não seja uma palavra. O elemento de linguagem \W é equivalente à seguinte classe de caracteres:  
   
 ```  
 [^\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]  
@@ -288,17 +291,17 @@ ms.lasthandoff: 11/21/2017
 |Nd|Número, dígito decimal|  
 |Pc|Pontuação, conector. Essa categoria inclui dez caracteres, o mais comumente usado deles é o LOWLINE (_), u+005F.|  
   
- Se o comportamento compatível com ECMAScript for especificado, `\W` é equivalente a `[^a-zA-Z_0-9]`. Para obter informações sobre expressões regulares ECMAScript, consulte a seção “Comportamento de correspondência ECMAScript" em [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md).  
+ Se o comportamento compatível com ECMAScript for especificado, `\W` será equivalente a `[^a-zA-Z_0-9]`. Para obter informações sobre expressões regulares ECMAScript, consulte a seção “Comportamento de correspondência ECMAScript" em [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
->  Porque ele corresponde a qualquer caractere de palavra, o `\W` elemento de linguagem é frequentemente usado com um quantificador lazy se um padrão de expressão regular tenta corresponder qualquer caractere de palavra várias vezes seguido por um caractere de palavra específico. Para obter mais informações, consulte [quantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  Como ele corresponde a qualquer caractere não pertencente a palavras, o elemento de linguagem `\W` é frequentemente usado com um quantificador lento se um padrão de expressão regular tenta corresponder a qualquer caractere não pertencente a palavras várias vezes, seguido por um caractere não pertencente a palavras específico. Para saber mais, confira [Quantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
- O exemplo a seguir ilustra o `\W` classe de caracteres.  Ele define um padrão de expressão regular, `\b(\w+)(\W){1,2}`, que corresponde a uma palavra seguida por um ou dois caracteres não pertencentes a palavras, como espaço em branco ou pontuação. A expressão regular é interpretada conforme mostrado na tabela a seguir.  
+ O exemplo a seguir ilustra a classe de caracteres `\W`.  Ele define um padrão de expressão regular, `\b(\w+)(\W){1,2}`, que corresponde a uma palavra seguida por um ou dois caracteres não pertencentes a palavras, como espaço em branco ou pontuação. A expressão regular é interpretada conforme mostrado na tabela a seguir.  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|\b|Começar a correspondência em um limite de palavra.|  
-|(\w+)|Fazer a correspondência a um ou mais caracteres de palavra. Este é o primeiro grupo de captura.|  
+|\b|Começa a correspondência em um limite de palavra.|  
+|(\w+)|Corresponde a um ou mais caracteres de palavra. Este é o primeiro grupo de captura.|  
 |(\W){1,2}|Corresponde a um caractere não pertencente a palavras uma ou duas vezes. Este é o segundo grupo de captura.|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nonwordchar1.cs#9)]
@@ -322,14 +325,14 @@ ms.lasthandoff: 11/21/2017
 |`\x85`|A elipse ou o caractere NEXT LINE (NEL) (...), \u0085.|  
 |`\p{Z}`|Corresponde a qualquer caractere separador.|  
   
- Se o comportamento compatível com ECMAScript for especificado, `\s` é equivalente a `[ \f\n\r\t\v]`. Para obter informações sobre expressões regulares ECMAScript, consulte a seção “Comportamento de correspondência ECMAScript" em [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md).  
+ Se o comportamento compatível com ECMAScript for especificado, `\s` será equivalente a `[ \f\n\r\t\v]`. Para obter informações sobre expressões regulares ECMAScript, consulte a seção “Comportamento de correspondência ECMAScript" em [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md).  
   
- O exemplo a seguir ilustra o `\s` classe de caracteres. Ele define um padrão de expressão regular, `\b\w+(e)?s(\s|$)`, que corresponde a uma palavra que termina em “s” ou em “es” seguida por um caractere de espaço em branco ou pelo final da cadeia de caracteres de entrada. A expressão regular é interpretada conforme mostrado na tabela a seguir.  
+ O exemplo a seguir ilustra a classe de caracteres `\s`. Ele define um padrão de expressão regular, `\b\w+(e)?s(\s|$)`, que corresponde a uma palavra que termina em “s” ou em “es” seguida por um caractere de espaço em branco ou pelo final da cadeia de caracteres de entrada. A expressão regular é interpretada conforme mostrado na tabela a seguir.  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|\b|Começar a correspondência em um limite de palavra.|  
-|\w+|Fazer a correspondência a um ou mais caracteres de palavra.|  
+|\b|Começa a correspondência em um limite de palavra.|  
+|\w+|Corresponde a um ou mais caracteres de palavra.|  
 |(e)?|Corresponder a um “e” zero ou uma vez.|  
 |s|Corresponder a um “s”.|  
 |(\s&#124;$)|Corresponder a um caractere de espaço em branco ou ao final da cadeia de caracteres de entrada.|  
@@ -341,15 +344,15 @@ ms.lasthandoff: 11/21/2017
   
 <a name="NonWhitespaceCharacter"></a>   
 ## <a name="non-white-space-character-s"></a>Caractere diferente de espaço em branco: \S  
- `\S`corresponde a qualquer caractere de espaço não em branco. É equivalente a `[^\f\n\r\t\v\x85\p{Z}]` padrão de expressão regular ou o oposto do padrão de expressão regular que é equivalente a `\s`, que faz a correspondência de caracteres de espaço em branco. Para obter mais informações, consulte [caractere de espaço em branco: \s](#WhitespaceCharacter).  
+ `\S` corresponde a qualquer caractere que não seja um caractere de espaço em branco. Ele é equivalente ao padrão de expressão regular `[^\f\n\r\t\v\x85\p{Z}]` ou o oposto do padrão de expressão regular equivalente a `\s`, o qual corresponde a caracteres de espaço em branco. Para saber mais, confira [Caractere de espaço em branco: \s](#WhitespaceCharacter).  
   
- Se o comportamento compatível com ECMAScript for especificado, `\S` é equivalente a `[^ \f\n\r\t\v]`. Para obter informações sobre expressões regulares ECMAScript, consulte a seção “Comportamento de correspondência ECMAScript" em [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md).  
+ Se o comportamento compatível com ECMAScript for especificado, `\S` será equivalente a `[^ \f\n\r\t\v]`. Para obter informações sobre expressões regulares ECMAScript, consulte a seção “Comportamento de correspondência ECMAScript" em [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md).  
   
- O exemplo a seguir ilustra o `\S` elemento de linguagem. O padrão de expressão regular `\b(\S+)\s?` corresponde a cadeias de caracteres que são delimitadas por caracteres de espaço em branco. O segundo elemento no objeto <xref:System.Text.RegularExpressions.GroupCollection> da correspondência contém a cadeia de caracteres correspondida. A expressão regular pode ser interpretada conforme mostrado na tabela a seguir.  
+ O exemplo a seguir ilustra o elemento de linguagem `\S`. O padrão de expressão regular `\b(\S+)\s?` corresponde a cadeias de caracteres que são delimitadas por caracteres de espaço em branco. O segundo elemento no objeto <xref:System.Text.RegularExpressions.GroupCollection> da correspondência contém a cadeia de caracteres correspondida. A expressão regular pode ser interpretada conforme mostrado na tabela a seguir.  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|`\b`|Começar a correspondência em um limite de palavra.|  
+|`\b`|Começa a correspondência em um limite de palavra.|  
 |`(\S+)`|Corresponder a um ou mais caracteres diferentes de espaço em branco. Este é o primeiro grupo de captura.|  
 |`\s?`|Corresponder a zero ou a um caractere de espaço em branco.|  
   
@@ -360,11 +363,11 @@ ms.lasthandoff: 11/21/2017
   
 <a name="DigitCharacter"></a>   
 ## <a name="decimal-digit-character-d"></a>Caractere de dígito decimal: \d  
- `\d`corresponde a qualquer dígito decimal. É equivalente ao padrão de expressão regular `\p{Nd}`, o qual inclui os dígitos decimais padrão 0-9, bem como os dígitos decimais de vários outros conjuntos de caracteres.  
+ `\d` corresponde a qualquer dígito decimal. É equivalente ao padrão de expressão regular `\p{Nd}`, o qual inclui os dígitos decimais padrão 0-9, bem como os dígitos decimais de vários outros conjuntos de caracteres.  
   
- Se o comportamento compatível com ECMAScript for especificado, `\d` é equivalente a `[0-9]`. Para obter informações sobre expressões regulares ECMAScript, consulte a seção “Comportamento de correspondência ECMAScript" em [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md).  
+ Se o comportamento compatível com ECMAScript for especificado, `\d` será equivalente a `[0-9]`. Para obter informações sobre expressões regulares ECMAScript, consulte a seção “Comportamento de correspondência ECMAScript" em [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md).  
   
- O exemplo a seguir ilustra o `\d` elemento de linguagem. Ele testa se uma cadeia de caracteres de entrada representa um número de telefone válido nos Estados Unidos e no Canadá. O padrão de expressão regular `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` é definido conforme mostrado na tabela a seguir.  
+ O exemplo a seguir ilustra o elemento de linguagem `\d`. Ele testa se uma cadeia de caracteres de entrada representa um número de telefone válido nos Estados Unidos e no Canadá. O padrão de expressão regular `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` é definido conforme mostrado na tabela a seguir.  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
@@ -384,9 +387,9 @@ ms.lasthandoff: 11/21/2017
   
 <a name="NonDigitCharacter"></a>   
 ## <a name="non-digit-character-d"></a>Caractere que não seja dígito: \D  
- `\D`corresponde a qualquer caractere não dígito. É equivalente ao padrão de expressão regular `\P{Nd}`.  
+ `\D` corresponde a qualquer caractere que não seja um dígito. É equivalente ao padrão de expressão regular `\P{Nd}`.  
   
- Se o comportamento compatível com ECMAScript for especificado, `\D` é equivalente a `[^0-9]`. Para obter informações sobre expressões regulares ECMAScript, consulte a seção “Comportamento de correspondência ECMAScript" em [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md).  
+ Se o comportamento compatível com ECMAScript for especificado, `\D` será equivalente a `[^0-9]`. Para obter informações sobre expressões regulares ECMAScript, consulte a seção “Comportamento de correspondência ECMAScript" em [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md).  
   
  O exemplo a seguir ilustra o elemento de linguagem \D. Ele testa se uma cadeia de caracteres, como um número de peça, consiste na combinação apropriada de caracteres decimais e não decimais. O padrão de expressão regular `^\D\d{1,5}\D*$` é definido conforme mostrado na tabela a seguir.  
   
@@ -405,7 +408,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="SupportedUnicodeGeneralCategories"></a>   
 ## <a name="supported-unicode-general-categories"></a>Categorias gerais Unicode com suporte  
- O Unicode define as categorias gerais listadas na tabela a seguir. Para obter mais informações, consulte os subtópicos "Formato de arquivo UCD" e "Valores de categoria geral" no [Banco de dados de caractere Unicode](http://go.microsoft.com/fwlink/?LinkId=57650).  
+ O Unicode define as categorias gerais listadas na tabela a seguir. Para obter mais informações, consulte os subtópicos "Formato de arquivo UCD" e "Valores de categoria geral" no [Banco de dados de caractere Unicode](http://www.unicode.org/reports/tr44/).  
   
 |Categoria|Descrição|  
 |--------------|-----------------|  
@@ -574,17 +577,17 @@ ms.lasthandoff: 11/21/2017
   
  A expressão de subtração de classes de caracteres tem a seguinte forma:  
   
- `[`*grupo_base* `-[` *grupo_excluído*`]]`  
+ `[` *base_group* `-[` *excluded_group* `]]`  
   
- Os colchetes (`[]`) e hífen (`-`) são obrigatórios. O *grupo_base* é um [caractere grupo positivo](#PositiveGroup) ou um [caractere grupo negativo](#NegativeGroup). O componente *excluded_group* é outro grupo de caracteres positivos ou negativos ou outra expressão de subtração de classes de caracteres (ou seja, você pode aninhar expressões de subtração de classes de caracteres).  
+ Os colchetes (`[]`) e hífen (`-`) são obrigatórios. O *base_group* é um [grupo de caracteres positivos](#PositiveGroup) ou um [grupo de caracteres negativos](#NegativeGroup). O componente *excluded_group* é outro grupo de caracteres positivos ou negativos ou outra expressão de subtração de classes de caracteres (ou seja, você pode aninhar expressões de subtração de classes de caracteres).  
   
  Por exemplo, suponha que você tenha um grupo base que consiste no intervalo de caracteres de "a" a "z". Para definir o conjunto de caracteres que consiste no grupo base, exceto pelo caractere "m", use `[a-z-[m]]`. Para definir o conjunto de caracteres que consiste no grupo base, exceto pelo conjunto de caracteres "d", "j" e "p", use `[a-z-[djp]]`. Para definir o conjunto de caracteres que consiste no base consiste, exceto pelo intervalo de "m" a "p", use `[a-z-[m-p]]`.  
   
  Considere a expressão de subtração de classes de caracteres aninhada, `[a-z-[d-w-[m-o]]]`. A expressão é calculada do intervalo de caracteres mais interno para fora. Primeiro, o intervalo de caracteres de "m" a "o" é subtraído do intervalo de caractere de "d" a "w", o que produz o conjunto de caracteres de "d" a "l" e "p" a "w". Esse conjunto é subtraído do intervalo de caracteres de "a" a "z", o que produz o conjunto de caracteres `[abcmnoxyz]`.  
   
- Você pode usar qualquer classe de caracteres com a subtração de classes de caracteres. Para definir o conjunto de caracteres que consiste em todos os caracteres Unicode de \u0000 por meio de \uFFFF exceto caracteres de espaço em branco (`\s`), os caracteres na categoria geral de pontuação (`\p{P}`), os caracteres no `IsGreek` chamado bloco (`\p{IsGreek}`), e o caractere de controle Unicode próxima linha (\x85), use `[\u0000-\uFFFF-[\s\p{P}\p{IsGreek}\x85]]`.  
+ Você pode usar qualquer classe de caracteres com a subtração de classes de caracteres. Para definir o conjunto de caracteres que consiste em todos os caracteres Unicode de \u0000 a \uFFFF, exceto caracteres de espaço em branco (`\s`), os caracteres na categoria geral de pontuação (`\p{P}`), os caracteres no bloco nomeado `IsGreek` (`\p{IsGreek}`) e o caractere de controle Unicode NEXT LINE (\x85), utilize `[\u0000-\uFFFF-[\s\p{P}\p{IsGreek}\x85]]`.  
   
- Escolha classes de caracteres para uma expressão de subtração de classes de caracteres que produza resultados úteis. Evite uma expressão que gere um conjunto de caracteres vazio, que não podem corresponder a nada ou uma expressão equivalente ao grupo base original. Por exemplo, o conjunto vazio é o resultado da expressão `[\p{IsBasicLatin}-[\x00-\x7F]]`, que subtrai todos os caracteres a `IsBasicLatin` caracteres variam da `IsBasicLatin` categoria geral. Da mesma forma, o grupo base original é o resultado da expressão `[a-z-[0-9]]`.  Isso ocorre, porque o grupo base, que é o intervalo de caracteres de letras de "a" a "z", não contém quaisquer caracteres no grupo excluído, que é o intervalo de caracteres de dígitos decimais de "0" a "9".  
+ Escolha classes de caracteres para uma expressão de subtração de classes de caracteres que produza resultados úteis. Evite uma expressão que gere um conjunto de caracteres vazio, que não podem corresponder a nada ou uma expressão equivalente ao grupo base original. Por exemplo, o conjunto vazio é o resultado da expressão `[\p{IsBasicLatin}-[\x00-\x7F]]`, que subtrai todos os caracteres do intervalo de caracteres `IsBasicLatin` da categoria geral `IsBasicLatin`. Da mesma forma, o grupo base original é o resultado da expressão `[a-z-[0-9]]`.  Isso ocorre, porque o grupo base, que é o intervalo de caracteres de letras de "a" a "z", não contém quaisquer caracteres no grupo excluído, que é o intervalo de caracteres de dígitos decimais de "0" a "9".  
   
  O exemplo a seguir define uma expressão regular, `^[0-9-[2468]]+$`, que corresponde aos dígitos zero e ímpares em uma cadeia de caracteres de entrada.  A expressão regular é interpretada conforme mostrado na tabela a seguir.  
   
