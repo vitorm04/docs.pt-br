@@ -27,11 +27,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: db1c3af1bb3ad207278eed64a8fb2ef8ed6dc465
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ad4e8ab527ca59c21bf4771ca9d386866d9919f7
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Quantificadores em expressões regulares
 Os quantificadores especificam quantas instâncias de um caractere, grupo ou classe de caracteres devem estar presentes na entrada para encontrar uma correspondência.  A tabela a seguir lista os quantificadores tem suporte no .NET.  
@@ -273,7 +273,7 @@ Os quantificadores especificam quantas instâncias de um caractere, grupo ou cla
 |Padrão|Descrição|  
 |-------------|-----------------|  
 |`(a\1`|Faça qualquer correspondência a “a” juntamente com o valor do primeiro grupo capturado…|  
-|`&#124;(?(1)`|… ou teste se o primeiro grupo capturado foi definido. (Observe que o constructo `(?(1)` não define um grupo de captura).|  
+|<code>&#124;(?(1)</code>|… ou teste se o primeiro grupo capturado foi definido. (Observe que o constructo `(?(1)` não define um grupo de captura).|  
 |`\1))`|Se o primeiro grupo capturado existir, faça uma correspondência ao valor. Se o grupo não existir, será correspondente a <xref:System.String.Empty?displayProperty=nameWithType>.|  
   
  A primeira expressão regular tenta corresponder a esse padrão entre zero e duas vezes; a segunda, exatamente duas vezes. Como o primeiro padrão atinge o número mínimo de capturas com a primeira captura de <xref:System.String.Empty?displayProperty=nameWithType>, ele nunca se repete para tentar corresponder a `a\1`; o quantificador `{0,2}` permite apenas correspondências vazias na última iteração. Por outro lado, a segunda expressão regular corresponde a “a” porque avalia `a\1` uma segunda vez; o número mínimo de iterações, 2, força o mecanismo a se repetir após uma correspondência vazia.  

@@ -31,11 +31,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: fdbb64cac1f1d4043b8b935fcad32aec88b7bb7a
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 0400fba20e614b441eb549f39d8e831811c55e5e
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Como verificar se cadeias de caracteres estão em um formato de email válido
 O exemplo a seguir usa uma expressão regular para verificar se uma cadeia de caracteres está no formato de email válido.  
@@ -67,15 +67,15 @@ O exemplo a seguir usa uma expressão regular para verificar se uma cadeia de ca
 |`^`|Comece a correspondência no início da cadeia de caracteres.|  
 |`(?(")`|Determine se o primeiro caractere é aspas. `(?(")` é o início de um construtor de alternância.|  
 |`(?("")("".+?(?<!\\)""@)`|Se o primeiro caractere for aspas, coincida as aspas iniciais seguidas de pelo menos uma ocorrência de qualquer caractere, seguido de uma marca de aspas finais. As aspas finais não devem ser precedidas por um caractere de barra invertida (\\). `(?<!` é o início de uma asserção lookbehind negativa de largura zero. A cadeia de caracteres deve terminar com um sinal de arroba (@).|  
-|`&#124;(([0-9a-z]`|Se o primeiro caractere não for aspas, coincida qualquer caractere alfabético de a até z ou de A até Z (a comparação não diferencia maiúsculas de minúsculas) ou qualquer caractere numérico entre 0 e 9.|  
+|<code>&#124;(([0-9a-z]</code>|Se o primeiro caractere não for aspas, coincida qualquer caractere alfabético de a até z ou de A até Z (a comparação não diferencia maiúsculas de minúsculas) ou qualquer caractere numérico entre 0 e 9.|  
 |`(\.(?!\.))`|Se o próximo caractere for um ponto final, coincida com ele. Se ele não for um ponto final, observe o próximo caractere e continue a correspondência. `(?!\.)` é uma asserção lookahead negativa de largura zero que impede dois pontos finais consecutivos de serem exibidos na parte local de um endereço de email.|  
-|``&#124;[-!#\$%&'\*\+/=\?\^`{}\&#124;~\w]``|Se o próximo caractere não for um ponto final, corresponda qualquer caractere da palavra ou um dos seguintes caracteres: -!#$%'*+=?^`{}&#124;~.|  
-|``((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^`{}\&#124;~\w])*``|Coincida o padrão de alternância (um ponto final seguido de um não ponto final ou um de um número de caracteres) zero ou mais vezes.|  
+|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}\&#124;~\w]</code>|Se o próximo caractere não for um ponto final, corresponda qualquer caractere da palavra ou um dos seguintes caracteres: -!#$%'*+=?^\`{}&#124;~.|  
+|<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}\&#124;~\w])*</code>|Coincida o padrão de alternância (um ponto final seguido de um não ponto final ou um de um número de caracteres) zero ou mais vezes.|  
 |`@`|Coincida o caractere @.|  
 |`(?<=[0-9a-z])`|Continue a correspondência se o caractere que precede o caractere @ for de A a Z, de a até z ou de 0 a 9. O constructo `(?<=[0-9a-z])` define uma asserção lookbehind positiva de largura zero.|  
 |`(?(\[)`|Verifique se o caractere que segue @ é um colchete de abertura.|  
 |`(\[(\d{1,3}\.){3}\d{1,3}\])`|Se ele for um colchete de abertura, coincida o colchete de abertura seguido de um endereço IP (quatro conjuntos de um a três dígitos, com cada conjunto separado por um ponto final) e um colchete de fechamento.|  
-|`&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+`|Se o caractere depois de @ não for um colchete de abertura, coincida um caractere alfanumérico com um valor de A até Z, de a até z ou entre 0 e 9, seguido de zero ou mais ocorrências de um hífen, seguido de zero ou um caractere alfanumérico com um valor de A até Z, de a até z ou entre 0 e 9, seguido de um ponto final. Esse padrão pode ser repetido uma ou mais vezes e deve ser seguido pelo nome de domínio primário.|  
+|<code>&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+</code>|Se o caractere depois de @ não for um colchete de abertura, coincida um caractere alfanumérico com um valor de A até Z, de a até z ou entre 0 e 9, seguido de zero ou mais ocorrências de um hífen, seguido de zero ou um caractere alfanumérico com um valor de A até Z, de a até z ou entre 0 e 9, seguido de um ponto final. Esse padrão pode ser repetido uma ou mais vezes e deve ser seguido pelo nome de domínio primário.|  
 |`[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))`|O nome de domínio primário deve começar e terminar com um caractere alfanumérico (a-z, A-Z e 0-9). Ele também pode incluir de zero a 22 caracteres ASCII que são alfanuméricos ou hifens.|  
 |`$`|Encerre a correspondência ao final da cadeia de caracteres.|  
   

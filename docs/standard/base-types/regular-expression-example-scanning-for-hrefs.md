@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c6da140ea82fc3c6d3f5f3001f37711ffe861370
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6592647ab3ff133bceb05b9ee84ce794e41aaf13
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Exemplo de expressão regular: Verificação de HREFs
 O exemplo a seguir procura uma cadeia de caracteres de entrada e exibe todos os valores href="…" e suas localizações na cadeia de caracteres.  
@@ -54,7 +54,7 @@ O exemplo a seguir procura uma cadeia de caracteres de entrada e exibe todos os 
 |`\s*`|Corresponder a zero ou mais caracteres de espaço em branco.|  
 |`=`|Corresponder ao sinal de igual.|  
 |`\s*`|Corresponder a zero ou mais caracteres de espaço em branco.|  
-|`(?:["'](?<1>[^"']*)"&#124;(?<1>\S+))`|Corresponde a um dos seguintes itens, sem atribuir o resultado a um grupo capturado:<br /><br /> - Um sinal de aspas ou apóstrofo, seguido por zero ou mais ocorrências de qualquer caractere que não seja um sinal de aspas ou apóstrofo, seguido por um sinal de aspas ou apóstrofo. O grupo chamado `1` está incluído nesse padrão.<br />- Um ou mais caracteres diferentes de espaço em branco. O grupo chamado `1` está incluído nesse padrão.|  
+|<code>(?:\["'\](?<1>\[^"'\]*)"&#124;(?<1>\S+))</code>|Corresponde a um dos seguintes itens, sem atribuir o resultado a um grupo capturado:<br /> <ul><li><p>Um sinal de aspas ou apóstrofo, seguido por zero ou mais ocorrências de qualquer caractere que não seja um sinal de aspas ou apóstrofo, seguido por um sinal de aspas ou apóstrofo. O grupo chamado `1` está incluído nesse padrão.</p></li><li><p>Um ou mais caracteres diferentes de espaço em branco. O grupo chamado `1` está incluído nesse padrão.</p></li></ul>|  
 |`(?<1>[^"']*)`|Atribuir zero ou mais ocorrências de qualquer caractere diferente de aspas simples ou apóstrofe ao grupo de captura chamado `1`.|  
 |`"(?<1>\S+)`|Atribuir um ou mais caracteres diferentes de espaço em branco ao grupo de captura chamado `1`.|  
   
