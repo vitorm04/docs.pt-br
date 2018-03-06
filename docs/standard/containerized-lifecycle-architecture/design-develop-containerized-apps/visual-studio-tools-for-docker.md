@@ -8,11 +8,11 @@ ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 717675170f19f18fb48c4cea3ddd15bcd9648d71
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0525633b23625d915fd447d438c6281fb14b3b46
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Usando ferramentas do Visual Studio para Docker (Visual Studio no Windows)
 
@@ -22,13 +22,13 @@ O fluxo de trabalho do desenvolvedor ao usar o Visual Studio Tools para o Docker
 
 Com as versões mais recentes do Docker para Windows, é mais fácil do que nunca para desenvolver aplicativos de Docker porque a instalação é simples, conforme explicado nas seguintes referências.
 
-**Obter mais informações:** para saber mais sobre como instalar o Docker para Windows, vá para <https://docs.docker.com/docker-for-windows/>.
+**Obter mais informações:** para saber mais sobre como instalar o Docker para Windows, acesse <https://docs.docker.com/docker-for-windows/>.
 
 Se você estiver usando o Visual Studio 2015, você deve ter a atualização 3 ou uma versão posterior e o Visual Studio Tools para o Docker.
 
 **Obter mais informações:** para obter instruções sobre como instalar o Visual Studio, vá para [https://www.visualstudio.com/ \ produtos/vs-2015-produto-edições](https://www.visualstudio.com/products/vs-2015-product-editions).
 
-Para obter mais informações sobre como instalar o Visual Studio Tools para o Docker, vá para <http://aka.ms/vstoolsfordocker> e <https://docs.microsoft.com/dotnet/articles/core/docker/visual-studio-tools-for-docker>.
+Para obter mais informações sobre como instalar o Visual Studio Tools para o Docker, vá para <http://aka.ms/vstoolsfordocker> e <https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker>.
 
 Se você estiver usando o Visual Studio de 2017, o suporte de Docker já está incluído.
 

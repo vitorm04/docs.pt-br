@@ -7,11 +7,11 @@ ms.date: 10/26/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4cb85c9dbcc7586510db9947d0151e3856964ef4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: adcb9d2352022cc94238296562b3eb7677bdf20b
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="what-about-cloud-optimized-applications"></a>E aplicativos otimizada para a nuvem?
 
@@ -41,7 +41,7 @@ A diferença fundamental em aplicativos no nível de otimização de nuvem é na
 
 Criar novos aplicativos que não usam microservices também faz sentido. Há muitos cenários de novos e modernos ainda no qual uma abordagem baseada em microservices pode exceder suas necessidades. Em alguns casos, você apenas deseja criar um aplicativo web monolítico mais simples, ou adicionar serviços de alta granularidade para um aplicativo de N camadas. Nesses casos, você ainda pode fazer uso total da nuvem de recursos de PaaS, como aquelas oferecidas pelo serviço de aplicativo do Azure. Você ainda pode reduzir o trabalho de manutenção para o limite.
 
-Além disso, porque você desenvolver o novo código otimizada para a nuvem cenários (para um aplicativo completo ou parciais subsistemas), quando você cria o novo código, você deve usar as versões mais recentes do .NET ([.NET Core](https://docs.microsoft.com/dotnet/core/) e [ASP.NET Core](https://docs.microsoft.com/aspnet/core/), em particular). Isso é especialmente verdadeiro se você criar microservices e contêineres como .NET Core é uma estrutura lean e rápida. Você terá um espaço de memória pequenos e início rápido em contêineres e os aplicativos serão alto desempenho. Essa abordagem se ajusta perfeitamente com os requisitos de microservices e contêineres e obter os benefícios de uma plataforma cruzada do framework-sendo capazes de executar o mesmo aplicativo em Mac (Mac para ambientes de desenvolvimento), Windows Server e Linux.
+Além disso, porque você desenvolver o novo código otimizada para a nuvem cenários (para um aplicativo completo ou parciais subsistemas), quando você cria o novo código, você deve usar as versões mais recentes do .NET ([.NET Core](../../../core/index.md) e [ASP.NET Core](/aspnet/core/), em particular). Isso é especialmente verdadeiro se você criar microservices e contêineres como .NET Core é uma estrutura lean e rápida. Você terá um espaço de memória pequenos e início rápido em contêineres e os aplicativos serão alto desempenho. Essa abordagem se ajusta perfeitamente com os requisitos de microservices e contêineres e obter os benefícios de uma plataforma cruzada do framework-sendo capazes de executar o mesmo aplicativo em Mac (Mac para ambientes de desenvolvimento), Windows Server e Linux.
 
 ## <a name="cloud-native-applications-with-cloud-optimized-applications"></a>Aplicativos de nuvem nativo com otimização de nuvem
 
@@ -65,7 +65,7 @@ No entanto, microservices não são obrigatórios para qualquer aplicativo novo 
 
 A arquitetura microservices está se tornando a abordagem preferencial para aplicativos de missão crítica distribuídos e grandes ou complexas com base em vários subsistemas independentes na forma de serviços autônomos. Em uma arquitetura baseada em microservices, um aplicativo é criado como uma coleção de serviços que podem ser desenvolvidos de forma independente, testada e com controle de versão, implantado e expandida. Isso pode incluir qualquer banco de dados relacionado, autônomo por microsserviço.
 
-Para obter uma visão detalhada de uma arquitetura de microservices que você pode implementar usando .NET Core, consulte para download PDF livro eletrônico [microservices .NET: arquitetura de aplicativos .NET em contêineres](https://aka.ms/microservicesebook). O guia também está disponível [online](https://docs.microsoft.com/dotnet/standard/microservices-architecture/).
+Para obter uma visão detalhada de uma arquitetura de microservices que você pode implementar usando .NET Core, consulte para download PDF livro eletrônico [microservices .NET: arquitetura de aplicativos .NET em contêineres](https://aka.ms/microservicesebook). O guia também está disponível [online](../../microservices-architecture/index.md).
 
 Mas, mesmo em cenários em que microservices oferecem implantação de independente de recursos avançada, limites de subsistema de alta segurança e diversidade de tecnologia-elas também geram muitos novos desafios. Os desafios relacionados ao desenvolvimento de aplicativos distribuídos, como modelos de dados fragmentados e independente. Obtendo resiliente comunicação entre microservices; a necessidade de consistência eventual. e a complexidade operacional. Microservices introduzir um nível mais alto de complexidade em comparação comparada aplicativos monolíticos tradicionais.
 

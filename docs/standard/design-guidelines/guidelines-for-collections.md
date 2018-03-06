@@ -9,18 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 62205e6bea39214383f6a653d719c0285f374a9f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 09a2a075e21de6968989575385db07ab39eb627f
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="guidelines-for-collections"></a>Diretrizes para coleções
 Qualquer tipo projetado especificamente para manipular um grupo de objetos que têm algumas características comuns pode ser considerado uma coleção. Quase sempre é apropriado para esses tipos implementar <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601>, portanto, nesta seção só consideramos tipos que implementam uma ou ambas as interfaces para coleções de ser.  
@@ -31,7 +31,7 @@ Qualquer tipo projetado especificamente para manipular um grupo de objetos que t
   
  **X não** usar <xref:System.Collections.ArrayList> ou <xref:System.Collections.Generic.List%601> em APIs públicas.  
   
- Esses tipos são projetadas para serem usados na implementação interna, não em APIs públicas de estruturas de dados. `List<T>`é otimizado para desempenho e a potência à custa cleanness das APIs do e flexibilidade. Por exemplo, se você retornar `List<T>`, você não será capaz de receber notificações quando o código de cliente modificar a coleção. Além disso, `List<T>` expõe a muitos membros, como <xref:System.Collections.Generic.List%601.BinarySearch%2A>, que não são úteis ou aplicável em muitos cenários. As seções a seguir descrevem tipos (abstrações) projetados especificamente para ser usado em APIs públicas.  
+ Esses tipos são projetadas para serem usados na implementação interna, não em APIs públicas de estruturas de dados. `List<T>` é otimizado para desempenho e a potência à custa cleanness das APIs do e flexibilidade. Por exemplo, se você retornar `List<T>`, você não será capaz de receber notificações quando o código de cliente modificar a coleção. Além disso, `List<T>` expõe a muitos membros, como <xref:System.Collections.Generic.List%601.BinarySearch%2A>, que não são úteis ou aplicável em muitos cenários. As seções a seguir descrevem tipos (abstrações) projetados especificamente para ser usado em APIs públicas.  
   
  **X não** usar `Hashtable` ou `Dictionary<TKey,TValue>` em APIs públicas.  
   
@@ -61,7 +61,7 @@ Qualquer tipo projetado especificamente para manipular um grupo de objetos que t
   
  **FAZER ✓** usar <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, uma subclasse de `ReadOnlyCollection<T>`, ou em casos raros `IEnumerable<T>` para propriedades ou retorno de valores que representam coleções somente leitura.  
   
- Em geral, prefira `ReadOnlyCollection<T>`. Se ele não atender a algum requisito (por exemplo, a coleção deve implementar não `IList`), use uma coleção personalizada implementando `IEnumerable<T>`, `ICollection<T>`, ou `IList<T>`. Se você implementar um conjunto personalizado de somente leitura, implementar `ICollection<T>.ReadOnly` retornar false.  
+ Em geral, prefira `ReadOnlyCollection<T>`. Se ele não atender a algum requisito (por exemplo, a coleção deve implementar não `IList`), use uma coleção personalizada implementando `IEnumerable<T>`, `ICollection<T>`, ou `IList<T>`. Se você implementar um conjunto personalizado de somente leitura, implementar `ICollection<T>.IsReadOnly` para retornar `true`.  
   
  Em casos onde você tiver certeza de que o único cenário em que você nunca deseja dar suporte a iteração de somente avanço, você pode simplesmente usar `IEnumerable<T>`.  
   
@@ -135,7 +135,7 @@ Qualquer tipo projetado especificamente para manipular um grupo de objetos que t
   
  Por exemplo, uma coleção somente leitura de cadeias de caracteres deve ser chamada `ReadOnlyStringCollection`.  
   
- *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
+ *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
  *Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   

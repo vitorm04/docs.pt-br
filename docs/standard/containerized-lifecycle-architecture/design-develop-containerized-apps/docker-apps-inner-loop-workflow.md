@@ -8,11 +8,11 @@ ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3605a6cd53db695de3af015a777e3c1a0e92af58
-ms.sourcegitcommit: 672c9cd122c13c9813f57f022c86ebdf6dd69b4f
+ms.openlocfilehash: 632c04507c1478238a5dc2573542f8c88bae2a51
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Fluxo de trabalho de desenvolvimento do loop interno para aplicativos de Docker
 
@@ -123,7 +123,7 @@ No DockerFile, você também precisa instruem o Docker para escutar na porta TCP
 
 Há outras linhas de configuração que você pode adicionar o DockerFile dependendo da linguagem/estrutura que você está usando, para que Docker Saiba como executar o aplicativo. Por exemplo, é necessário que a linha do ponto de entrada com \["dotnet", "MyCustomMicroservice.dll"\] para executar um aplicativo .NET Core, embora você possa ter várias variantes dependendo da abordagem para compilar e executar seu serviço. Se você estiver usando o SDK e dotnet CLI para compilar e executar o aplicativo .NET, poderá ser ligeiramente diferente. O resultado final é que a linha do ponto de entrada mais linhas adicionais serão diferentes dependendo da linguagem/plataforma que você escolhe para seu aplicativo.
 
-**Obter mais informações** para obter informações sobre como criar imagens do Docker para aplicativos .NET Core, vá para <https://docs.microsoft.com/dotnet/articles/core/docker/building-net-docker-images>.
+**Obter mais informações** para obter informações sobre como criar imagens do Docker para aplicativos .NET Core, vá para <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>.
 
 Para saber mais sobre como criar suas próprias imagens, vá para [https://docs.docker.com/engine/ \tutoriais/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
 
@@ -258,7 +258,7 @@ Código do Visual Studio oferece suporte à depuração Docker se você estiver 
 
 Você também pode depurar recipientes de núcleo do .NET do Docker ao usar o Visual Studio, conforme descrito na próxima seção.
 
-**Obter mais informações:** para saber mais sobre a depuração de contêineres do Docker Node. js, vá para <https://blog.docker.com/2016/07/live-debugging-docker/> e [https://blogs.msdn.microsoft.com/ \ usuário\_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/).
+**Obter mais informações:** para saber mais sobre a depuração de contêineres do Docker Node. js, vá para <https://blog.docker.com/2016/07/live-debugging-docker/> e [https://blogs.msdn.microsoft.com/ \ usuário\_ed/2016/02/27 / Visual-Studio-Code-New-Features-13-big-Debugging-Updates-Rich-Object-hover-Conditional-Breakpoints-Node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/).
 
 
 >[!div class="step-by-step"]

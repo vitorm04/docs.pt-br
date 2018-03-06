@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a146cf50639351479d42bff684ea7db21ecf5d3b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 904b941a274cdd31485d35cf2d025f869638d448
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="date-and-time-data"></a>Dados de data e hora
 O SQL Server 2008 apresenta novos tipos de dados para manipular as informações de data e hora. Os novos tipos de dados incluem tipos separados para data e hora, e tipos de dados expandidos com maior intervalo, precisão e reconhecimento de fuso horário. A partir do .NET Framework versão 3.5 Service Pack (SP) 1, o Provedor de Dados .NET Framework para SQL Server (<xref:System.Data.SqlClient>) oferece suporte completo para todos os novos recursos do Mecanismo de Banco de Dados do SQL Server 2008. Você deve instalar o .NET Framework 3.5 SP1 (ou posterior) para usar esses novos recursos com o SqlClient.  
@@ -60,7 +62,7 @@ O SQL Server 2008 apresenta novos tipos de dados para manipular as informações
  Para obter mais informações sobre como o SQL Server interpreta os dados de data e hora, consulte [usando dados de data e hora](http://go.microsoft.com/fwlink/?LinkID=98361) nos Manuais Online do SQL Server 2008.  
   
 ## <a name="datetime-data-types-and-parameters"></a>Parâmetros e tipos de dados de data/hora  
- Você pode especificar o tipo de dados de um <xref:System.Data.SqlClient.SqlParameter> usando uma das enumerações <xref:System.Data.SqlDbType>. As seguintes enumerações foram adicionadas ao <xref:System.Data.SqlDbType> para oferecer suporte aos novos tipos de dados de data e hora.  
+ As seguintes enumerações foram adicionadas ao <xref:System.Data.SqlDbType> para oferecer suporte aos novos tipos de dados de data e hora.  
   
 -   `SqlDbType.Date`  
   
@@ -69,7 +71,12 @@ O SQL Server 2008 apresenta novos tipos de dados para manipular as informações
 -   `SqlDbType.DateTime2`  
   
 -   `SqlDbType.DateTimeOffSet`  
-  
+
+Você pode especificar o tipo de dados de um <xref:System.Data.SqlClient.SqlParameter> usando um dos anteriores <xref:System.Data.SqlDbType> enumerações. 
+
+> [!NOTE]
+> Não é possível definir o `DbType` propriedade de um `SqlParameter` para `SqlDbType.Date`.
+
  Você também pode especificar o tipo de um <xref:System.Data.SqlClient.SqlParameter> genericamente definindo a propriedade <xref:System.Data.SqlClient.SqlParameter.DbType%2A> de um objeto `SqlParameter` para um valor de enumeração específico de <xref:System.Data.DbType>. Os seguintes valores de enumeração foram adicionados ao <xref:System.Data.DbType> para dar suporte aos tipos de dados `datetime2` e `datetimeoffset`:  
   
 -   DbType.DateTime2  

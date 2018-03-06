@@ -7,11 +7,11 @@ ms.date: 10/26/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ead28fe1ffe1e002af73642a1c3b2e72479520f4
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.openlocfilehash: bced3bed84d138dbda4f322322213b47c0159016
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Explicações passo a passo e technical obter a visão geral de Introdução 
 
@@ -47,7 +47,7 @@ Passo a passo completo técnica está disponível no wiki de repositório do Git
 
 Neste passo a passo, você pode explorar a implementação inicial dos dois aplicativos herdados de exemplo. Os dois aplicativos de exemplo tem uma arquitetura monolítica e foram criados usando o ASP.NET clássico. Um aplicativo é baseado no ASP.NET 4. x MVC; o segundo aplicativo é baseado em Web Forms do ASP.NET 4. x. Ambos os aplicativos estão no [eShopModernizing do repositório GitHub](https://github.com/dotnet-architecture/eShopModernizing).
 
-Você pode coloca os dois aplicativos de exemplo, semelhante ao modo coloca um clássico [Windows Communication Foundation](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) aplicativo (WCF) a serem consumidos como um aplicativo de área de trabalho. Para obter um exemplo, consulte [eShopModernizingWCFWinForms](https://github.com/dotnet-architecture/eShopModernizingWCFWinForms).
+Você pode coloca os dois aplicativos de exemplo, semelhante ao modo coloca um clássico [Windows Communication Foundation](../../framework/wcf/whats-wcf.md) aplicativo (WCF) a serem consumidos como um aplicativo de área de trabalho. Para obter um exemplo, consulte [eShopModernizingWCFWinForms](https://github.com/dotnet-architecture/eShopModernizingWCFWinForms).
 
 ### <a name="goals"></a>Objetivos
 
@@ -97,7 +97,7 @@ Use contêineres do Windows para melhorar a implantação de aplicativos .NET ex
 
 O objetivo deste passo a passo é mostrar a você diversas opções para containerizing um aplicativo existente do .NET Framework. Você pode:
 
--   Coloca o seu aplicativo usando [ferramentas do Visual Studio 2017 para Docker](https://docs.microsoft.com/dotnet/core/docker/visual-studio-tools-for-docker) (2017 do Visual Studio ou versões posteriores).
+-   Coloca o seu aplicativo usando [ferramentas do Visual Studio 2017 para Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (2017 do Visual Studio ou versões posteriores).
 
 -   Coloca o seu aplicativo manualmente adicionando um [Dockerfile](https://docs.docker.com/engine/reference/builder/)e, em seguida, usando o [CLI do Docker](https://docs.docker.com/engine/reference/commandline/cli/).
 

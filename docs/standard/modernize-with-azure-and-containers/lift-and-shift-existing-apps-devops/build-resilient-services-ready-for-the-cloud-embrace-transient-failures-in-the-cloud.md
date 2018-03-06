@@ -7,11 +7,11 @@ ms.date: 10/26/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: aaf1ef968600a56d91267c6c12efa90d99446dd7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: eef0197edb3aba555da63f1ea0b75726a826bd32
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Criar serviços resilientes prontos para a nuvem: adotar falhas transitórias na nuvem 
 
@@ -19,7 +19,7 @@ A resiliência é a capacidade de recuperar de falhas e continuar a funcionar. R
 
 O aplicativo está pronto para a nuvem quando, no mínimo, ele implementa um modelo baseado em software de resiliência, em vez de um modelo baseado em hardware. Seu aplicativo de nuvem deve compreender as falhas parciais que certamente ocorrerá. Você precisa criar ou parcialmente refatorar seu aplicativo, se você quiser obter resiliência a falhas parciais esperadas. Deve ser projetado para lidar com falhas parciais, como interrupções de rede transitório e nós ou VMs falhas na nuvem. Contêineres mesmo sendo movidos para outro nó em um cluster do orchestrator podem causar falhas intermitentes de curtas dentro do aplicativo.
 
-## <a name="handling-partial-failure"></a>Tratamento de falha parcial
+## <a name="handling-partial-failure"></a>Tratando falha parcial
 
 Em um aplicativo baseado em nuvem, há um risco de falha parcial de sempre presente. Por exemplo, uma instância de site único ou um contêiner pode falhar, ou ele pode estar indisponível ou não responder por um curto período. Ou, um único servidor ou VM pode falhar.
 
@@ -47,15 +47,13 @@ Para saber como implementar estratégias para lidar com falhas parciais na nuvem
 
 -   **Implementar a comunicação flexível para lidar com falhas parciais**
 
-    [https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies](https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies)
+    [https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies](../../microservices-architecture/implement-resilient-applications/partial-failure-strategies.md)
 
 -   **Entity Framework conexão resiliência lógica e repetição (versão 6 e posterior)**
 
     [https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)
 
 -   **O Transient Fault Handling Application Block**
-
-<!-- -->
 
 -   [https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx)
 
