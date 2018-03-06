@@ -11,11 +11,11 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection
   nextTutorialTitle: "Coleções em C#"
-  ms.openlocfilehash: 56c7cf5f6ce0c5db27ba43eeaffd9eb2e08f8c8a
-  ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+  ms.openlocfilehash: 6f2bb18298ec41c8ccf634035059940342cbc82c
+  ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 02/01/2018
+  ms.lasthandoff: 02/19/2018
 items:
 - durationInMinutes: 2
   content: "Este guia de início rápido ensina como usar cadeias de caracteres interpoladas em C# para inserir valores em uma única cadeia de caracteres de saída de maneira interativa. Você usará seu navegador para escrever código em C# e poderá ver imediatamente os resultados da compilação e da execução de seu código. O início rápido contém uma série de lições que concatenam cadeias de caracteres, inserem valores em cadeias de caracteres e formatam esses valores de diferentes maneiras.\n"

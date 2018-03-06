@@ -9,11 +9,11 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 6822143df2d02c284d7506d180139c18cfbaf370
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 501a11f1bc6118e647cc414f4b83a14f6b41a37d
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Programação assíncrona com async e await (C#)
 É possível evitar gargalos de desempenho e aprimorar a resposta geral do seu aplicativo usando a programação assíncrona. No entanto, as técnicas tradicionais para escrever aplicativos assíncronos podem ser complicadas, dificultando sua escrita, depuração e manutenção.  
@@ -146,7 +146,7 @@ Para obter mais informações sobre o fluxo de controle, consulte [Fluxo de cont
 ##  <a name="BKMK_APIAsyncMethods"></a> Métodos de assíncronos da API  
  Você pode estar curioso para saber onde encontrar métodos como `GetStringAsync` que oferecem suporte à programação assíncrona. O .NET Framework 4.5 ou superior e o .NET Core contêm muitos membros que funcionam com `async` e com `await`. É possível reconhecê-los pelo sufixo “Async” que é acrescentado ao nome do membro e pelo tipo de retorno de <xref:System.Threading.Tasks.Task> ou de <xref:System.Threading.Tasks.Task%601>. Por exemplo, a classe `System.IO.Stream` contém métodos como <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> e <xref:System.IO.Stream.WriteAsync%2A>, juntamente com os métodos síncronos <xref:System.IO.Stream.CopyTo%2A>, <xref:System.IO.Stream.Read%2A> e <xref:System.IO.Stream.Write%2A>.  
   
- O Windows Runtime também contém vários métodos que você pode usar com `async` e `await` em aplicativos do Windows. Veja mais informações em [Threading e programação assíncrona](/windows/uwp/threading-async/) para o desenvolvimento da UWP e [Programação assíncrona (aplicativos da Windows Store)](/previous-versions/windows/apps/hh464924(v=win.10)) e [Início Rápido: usando o operador await para a programação assíncrona](/previous-versions/windows/apps/hh452713(v=win.10)) se você usar versões anteriores do Windows Runtime.  
+ O Windows Runtime também contém vários métodos que você pode usar com `async` e `await` em aplicativos do Windows. Para obter mais informações, veja [Threading e programação assíncrona](/windows/uwp/threading-async/) para o desenvolvimento da UWP e [Programação assíncrona (aplicativos da Windows Store)](/previous-versions/windows/apps/hh464924(v=win.10)) e [Início Rápido: chamando APIs assíncronas em C# ou Visual Basic](/previous-versions/windows/apps/hh452713(v=win.10)) se você usa versões anteriores do Windows Runtime.  
   
 ##  <a name="BKMK_Threads"></a> Threads  
 Os métodos assíncronos destinam-se a ser operações não causadoras de bloqueios. Uma expressão `await` em um método assíncrono não bloqueia o thread atual enquanto a tarefa aguardada está em execução. Em vez disso, a expressão anterior assina o restante do método como uma continuação e retorna o controle para o chamador do método assíncrono.  

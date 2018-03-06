@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 3cd9fc23dba104f92255b031eef32f80cca915b0
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: b6089b69eb350fce29f86f19f5abeb44acb4b6b4
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="interpolated-strings"></a>Cadeias de caracteres interpoladas
 
@@ -100,7 +100,7 @@ Você especifica uma cadeia de caracteres de formato colocando dois-pontos e a c
 
 Diversos tipos nas bibliotecas do .NET Standard são compatíveis com um conjunto predefinido de cadeias de caracteres de formato. Isso inclui todos os tipos numéricos e os tipos de data e hora. Para obter uma lista completa dos tipos que são compatíveis com as cadeias de caracteres de formato, consulte [Cadeias de caracteres de formato e tipos da biblioteca de classes do .NET](../../standard/base-types/formatting-types.md#stringRef) no artigo [Tipos de formatação no .NET](../../standard/base-types/formatting-types.md). Qualquer tipo pode ser compatível com um conjunto de cadeias de caracteres de formato, e você também pode desenvolver extensões de formatação personalizadas que fornecem formatação personalizada para os tipos existentes. Para obter informações sobre formatação personalizada com o fornecimento de uma implementação de <xref:System.ICustomFormatter>, consulte [Formatação personalizada com ICustomFormatter](../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter) no artigo [Tipos de formatação no .NET](../../standard/base-types/formatting-types.md).
 
-Tente modificar as cadeias de caracteres de formato em seu editor de texto e, sempre que fizer uma alteração, execute novamente o programa para ver como as alterações afetam a formatação da data e a hora e do valor numérico. Altere o "d" em `{date:d}` para "t" (para exibir o formato de hora abreviada), para "y" (para exibir o ano e o mês) e para "yyyy" (para exibir o ano como um número de quatro dígitos). Altere o "C2" em `{price:C2}` para "e" (para obter notação exponencial) e para "F3" (para um valor numérico com três dígitos após o ponto decimal).
+Tente modificar as cadeias de caracteres de formato em seu editor de texto e, sempre que fizer uma alteração, execute novamente o programa para ver como as alterações afetam a formatação da data e hora e do valor numérico. Altere o "d" em `{date:d}` para "t" (para exibir o formato de hora abreviada), para "y" (para exibir o ano e o mês) e para "yyyy" (para exibir o ano como um número de quatro dígitos). Altere o "C2" em `{price:C2}` para "e" (para obter notação exponencial) e para "F3" (para um valor numérico com três dígitos após o ponto decimal).
 
 Além de controlar a formatação, você também pode controlar a largura do campo e o alinhamento das cadeias de caracteres retornadas por uma expressão interpolada. Na próxima seção, você aprenderá como fazer isso.
 
@@ -144,9 +144,9 @@ Se a largura do campo for um número negativo, o campo será alinhado à esquerd
 Tente remover os sinais negativos das expressões interpoladas `{"Author",-25}` e `{title.Key,-25}` e execute o exemplo novamente, como feito no código a seguir:
 
 ```csharp
-Console.WriteLine($"\n{"Author",-25}    {"Title",30}\n");
+Console.WriteLine($"\n{"Author",25}    {"Title",30}\n");
 foreach (var title in titles)
-   Console.WriteLine($"{title.Key,-25}     {title.Value,30}");
+   Console.WriteLine($"{title.Key,25}     {title.Value,30}");
 ```
 
 Desta vez, as informações sobre o autor são alinhadas à direita.

@@ -1,7 +1,7 @@
 ---
-title: "Coleções genéricas no .NET Framework"
+title: "Coleções genéricas no .NET"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 02/15/2018
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
@@ -13,27 +13,25 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- generics [.NET Framework], collections
-- generic collections [.NET Framework]
+- generics [.NET], collections
+- generic collections [.NET]
+- generic types [.NET]
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d7e7d11446c14cffbef1e5cade5f082874187636
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 827d5a7edd335769ec5497518cbdf71181aacc2c
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
-# <a name="generic-collections-in-the-net-framework"></a>Coleções genéricas no .NET Framework
-Este tópico fornece uma visão geral das classes de coleção genéricas e outros tipos genéricos no .NET Framework.  
-  
-## <a name="generic-collections-in-the-net-framework"></a>Coleções genéricas no .NET Framework  
- A biblioteca de classes .NET Framework fornece várias classes de coleção genérica nos namespaces <xref:System.Collections.Generic> e <xref:System.Collections.ObjectModel>. Para saber mais sobre essas classes, confira [Tipos de coleção comumente usados](../../../docs/standard/collections/commonly-used-collection-types.md).  
+# <a name="generic-collections-in-net"></a>Coleções genéricas no .NET
+
+ A biblioteca de classes do .NET fornece várias classes de coleção genérica nos namespaces <xref:System.Collections.Generic> e <xref:System.Collections.ObjectModel>. Para obter informações detalhadas sobre essas classes, consulte [Tipos de coleção comumente usados](../../../docs/standard/collections/commonly-used-collection-types.md).  
   
 ### <a name="systemcollectionsgeneric"></a>System.Collections.Generic  
  Muitos dos tipos de coleção genéricos são diretamente análogos aos tipos não genéricos. <xref:System.Collections.Generic.Dictionary%602> é uma versão genérica de <xref:System.Collections.Hashtable>; ele usa a estrutura genérica <xref:System.Collections.Generic.KeyValuePair%602> para enumeração em vez de <xref:System.Collections.DictionaryEntry>.  
@@ -51,7 +49,7 @@ Este tópico fornece uma visão geral das classes de coleção genéricas e outr
  A estrutura genérica <xref:System.Nullable%601> permite que você use tipos de valor como se eles pudessem ser atribuídos `null`. Isso pode ser útil ao trabalhar com consultas de banco de dados, nas quais os campos que contêm tipos de valor podem estar ausentes. O parâmetro de tipo genérico pode ser qualquer tipo de valor.  
   
 > [!NOTE]
->  No C#, não é necessário usar <xref:System.Nullable%601> explicitamente, pois a linguagem possui sintaxe para tipos anuláveis.  
+>  No C# e Visual Basic não é necessário usar <xref:System.Nullable%601> explicitamente, pois a linguagem tem sintaxe para tipos que permitem valor nulo. Consulte [Tipos que permitem valor nulo (Guia de programação em C#)](../../csharp/programming-guide/nullable-types/index.md) e [Tipos de valor que permitem valor nulo (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md). 
   
  A estrutura genérica <xref:System.ArraySegment%601> fornece uma maneira de delimitar um intervalo de elementos dentro de uma matriz unidimensional baseada em zero de qualquer tipo. O parâmetro de tipo genérico é o tipo dos elementos da matriz.  
   

@@ -37,11 +37,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 643a1c7d8dd141a8d898af61ba8302f46207321b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d8bbf57625e1d944ab4e97235e718eef7b61a3a4
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Conversão de tipos no .NET Framework
 <a name="top"></a> Cada valor tem um tipo associado, o qual define atributos como a quantidade de espaço alocado para o valor, o intervalo de valores possíveis que ele pode assumir e os membros que ele disponibiliza. Muitos valores podem ser expressos por mais de um tipo. Por exemplo, o valor 4 pode ser expresso como um número inteiro ou como um valor de ponto flutuante. A conversão de tipo cria um valor em um novo tipo que é equivalente ao valor de um tipo antigo, mas que não necessariamente preserva a identidade (ou o valor exato) do objeto original.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/23/2017
   
 -   A interface <xref:System.IConvertible>, que define conversões para cada um dos tipos de dados base do .NET Framework. Para obter mais informações, consulte a seção [A interface IConvertible](#the_iconvertible_interface).  
   
--   A classe <xref:System.Convert>, que fornece um conjunto de métodos que implementam os métodos da interface <xref:System.IConvertible>. Para saber mais, confira a seção [A classe Convert](#Convert).  
+-   A classe <xref:System.Convert>, que fornece um conjunto de métodos que implementam os métodos da interface <xref:System.IConvertible>. Para obter mais informações, consulte a seção [A classe Convert](#Convert).  
   
 -   A classe <xref:System.ComponentModel.TypeConverter>, que é uma classe base que pode ser estendida para oferecer suporte à conversão de um tipo especificado para qualquer outro tipo. Para obter mais informações, consulte a seção [A classe TypeConverter](#the_typeconverter_class).  
   
