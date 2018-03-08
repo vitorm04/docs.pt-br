@@ -39,9 +39,9 @@ No exemplo a seguir, inteiros iguais a 1.034 representados como literais decimai
 > [!NOTE] 
 > Use o prefixo `0x` ou `0X` para indicar um literal hexadecimal e o prefixo `0b` ou `0B` para indicar um literal binário. Literais decimais não têm nenhum prefixo.
 
-Iniciando com o C# 7, alguns recursos foram adicionados melhorar a legibilidade. 
+A partir do C# 7, alguns recursos foram adicionados para melhorar a legibilidade. 
  - C# 7.0 permite o uso do caractere de sublinhado, `_`, como um separador de dígito.
- - C# 7.2 permite `_` ser usado como separador de dígito de um literal binário ou hexadecimal, após o prefixo. Um literal decimal não pode ter um sublinhado à esquerda.
+ - O C# 7.2 permite que `_` seja usado como separador de dígito de um literal binário ou hexadecimal, após o prefixo. Um literal decimal não pode ter um sublinhado à esquerda.
 
 Alguns exemplos são mostrados abaixo.
 
