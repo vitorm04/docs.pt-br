@@ -7,11 +7,11 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 26d4dffa6f6680b193788ee6d90dad01fde7cf51
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 591996c02c55c1f54af94280940e41720684251a
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-c"></a>Instruções (C#)
 
@@ -55,7 +55,7 @@ Esses artigos ajudam você a trabalhar com coleções de dados.
 As cadeias de caracteres são o tipo de dados fundamental usado para exibir ou manipular texto. Esses artigos demonstram práticas comuns com cadeias de caracteres.
 
 - [Compare cadeias de caracteres](../programming-guide/strings/how-to-compare-strings.md).
-- [Modifique o conteúdo da cadeia de caracteres](../programming-guide/strings/how-to-modify-string-contents.md).
+- [Modifique o conteúdo da cadeia de caracteres](modify-string-contents.md).
 - [Determine se uma cadeia de caracteres representa um número](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
 - [Use `String.Split` para separar as cadeias de caracteres](parse-strings-using-split.md).
 - [Junte várias cadeias de caracteres em uma](concatenate-multiple-strings.md).

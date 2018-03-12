@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9b9e54d8bbc9ca7cc9172fd83bd15968b3cef8e1
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 107e935f3fd4fd38b4393d09e46c03c0c51c4d79
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Agrupando construtores em expressões regulares
 As construções de agrupamento delineiam as subexpressões de uma expressão regular e capturam a subcadeia de caracteres de uma cadeia de caracteres de entrada. Você pode usar construções de agrupamento para fazer isto:  
@@ -393,7 +393,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
 |Padrão|Descrição|  
 |-------------|-----------------|  
 |`\d{2}`|Corresponde a dois dígitos decimais.|  
-|`{?<=\b20)`|Continua a estabelecer a correspondência se os dois dígitos decimais forem precedidos por dígitos decimais "20" em um limite de palavra.|  
+|`(?<=\b20)`|Continua a estabelecer a correspondência se os dois dígitos decimais forem precedidos por dígitos decimais "20" em um limite de palavra.|  
 |`\b`|Termina a correspondência em um limite de palavra.|  
   
  As asserções lookbehind positivas de largura zero também são usadas para limitar o retrocesso quando o último caractere de um grupo capturado precisar ser um subconjunto de caracteres que corresponde ao padrão de expressão regular desse grupo. Por exemplo, se um grupo captura todos os caracteres de palavras em sequência, você pode usar uma asserção lookbehind positivas de largura zero tipo para que o primeiro caractere seja uma letra.  
