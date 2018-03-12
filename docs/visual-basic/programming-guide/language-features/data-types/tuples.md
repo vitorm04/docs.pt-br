@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2653b9dc8a6ecbcb718c20be8bd6275edf4cfb6e
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: bf26b7ce58c1e20fbbe5043cbd2acfd5712837fa
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="tuples-visual-basic"></a>Tuplas (Visual Basic)
 
@@ -64,69 +64,70 @@ Para habilitar os nomes de elemento de tupla interred, você deve definir a vers
 <PropertyGroup> 
   <LangVersion>15.3</LangVersion> 
 </PropertyGroup> 
+```
 
-The version number can be any version of the Visual Basic compiler starting with 15.3. Rather than hard-coding a specific compiler version, you can also specify "Latest" as the value of `LangVersion` to compile with the most recent version of the Visual Basic compiler installed on your system.
+O número de versão pode ser qualquer versão do compilador do Visual Basic, começando com 15,3. Em vez de codificar uma versão específica do compilador, você também pode especificar "Mais recente" como o valor de `LangVersion` para compilar com a versão mais recente do compilador do Visual Basic instalado no seu sistema.
 
-In some cases, the Visual Basic compiler cannot infer the tuple element name from the candidate name, and the tuple field can only be referenced using its default name, such as `Item1`, `Item2`, etc. These include:
+Em alguns casos, o compilador do Visual Basic não é possível inferir o nome do elemento de tupla do nome do candidato, e o campo de tupla só pode ser referenciado usando seu nome padrão, como `Item1`, `Item2`, etc. Elas incluem:
 
-- The candidate name is the same as the name of a tuple member, such as `Item3`, `Rest`, or `ToString`.
+- O nome do candidato é igual ao nome de um membro de tupla, como `Item3`, `Rest`, ou `ToString`.
 
-- The candidate name is duplicated in the tuple.
+- O nome do candidato é duplicado na tupla.
  
-When field name inference fails, Visual Basic does not generate a compiler error, nor is an exception thrown at runtime. Instead, tuple fields must be referenced by their predefined names, such as `Item1` and `Item2`. 
+Quando a falha de inferência de nome de campo, o Visual Basic não gera um erro do compilador, nem é uma exceção lançada em tempo de execução. Em vez disso, os campos de tupla devem ser referenciados por seus nomes predefinidos, como `Item1` e `Item2`. 
   
-## Tuples versus structures
+## <a name="tuples-versus-structures"></a>Tuplas versus estruturas
 
-A Visual Basic tuple is a value type that is an instance of one of the a **System.ValueTuple** generic types. For example, the `holiday` tuple defined in the previous example is an instance of the <xref:System.ValueTuple%603> structure. It is designed to be a lightweight container for data. Since the tuple aims to make it easy to create an object with multiple data items, it lacks some of the features that a custom structure might have. These include:
+Uma coleção de itens do Visual Basic é um tipo de valor que é uma instância de um a um **System.ValueTuple** tipos genéricos. Por exemplo, o `holiday` tupla definida no exemplo anterior é uma ocorrência da <xref:System.ValueTuple%603> estrutura. Ele é projetado para ser um contêiner leve para dados. Desde que a tupla vise para tornar mais fácil criar um objeto com vários itens de dados, ele não tem alguns dos recursos que pode ter uma estrutura personalizada. Elas incluem:
 
-- Customer members. You cannot define your own properties, methods, or events for a tuple.
+- Membros de cliente. Você não pode definir suas próprias propriedades, métodos ou eventos de uma tupla.
 
-- Validation. You cannot validate the data assigned to fields.
+- Validação. Não é possível validar os dados atribuídos aos campos.
 
-- Immutability. Visual Basic tuples are mutable. In contrast, a custom structure allows you to control whether an instance is mutable or immutable.
+- Imutabilidade. Visual Basic tuplas serão mutáveis. Em contraste, uma estrutura personalizada permite controlar se uma instância é mutável ou imutável.
 
-If custom members, property and field validation, or immutability are important, you should use the Visual Basic [Structure](../../../language-reference/statements/structure-statement.md) statement to define a custom value type.
+Se membros personalizados, a propriedade e a validação de campo ou a imutabilidade forem importante, você deve usar o Visual Basic [estrutura](../../../language-reference/statements/structure-statement.md) instrução para definir um tipo de valor personalizado.
 
-A Visual Basic tuple does inherit the members of its **ValueTuple** type. In addition to its fields, these include the following methods:
+Uma tupla de Visual Basic herdam os membros de sua **ValueTuple** tipo. Além de seus campos, eles incluem os seguintes métodos:
 
-| Member | Description |
+| Membro | Descrição |
 | ---|---|
-| CompareTo | Compares the current tuple to another tuple with the same number of elements. |
-| Equals | Determines whether the current tuple is equal to another tuple or object. |
-| GetHashCode | Calculates the hash code for the current instance. |
-| ToString | Returns the string representation of this tuple, which takes the form `(Item1, Item2...)`, where `Item1` and `Item2` represent the values of the tuple's fields. |
+| CompareTo | Compara a tupla atual para outra tupla com o mesmo número de elementos. |
+| Igual a | Determina se a tupla atual é igual a outro objeto ou tupla. |
+| GetHashCode | Calcula o código hash para a instância atual. |
+| ToString | Retorna a representação de cadeia de caracteres dessa tupla, que utiliza o formato `(Item1, Item2...)`, onde `Item1` e `Item2` representam os valores dos campos da tupla. |
 
-In addition, the **ValueTuple** types implement <xref:System.Collections.IStructuralComparable> and <xref:System.Collections.IStructuralEquatable> interfaces, which allow you to define customer comparers.
+Além disso, o **ValueTuple** tipos implementam <xref:System.Collections.IStructuralComparable> e <xref:System.Collections.IStructuralEquatable> interfaces, que permitem que você defina comparadores de cliente.
 
-## Assignment and tuples
+## <a name="assignment-and-tuples"></a>Atribuição e tuplas
 
-Visual Basic supports assignment between tuple types that have the same number of fields. The field types can be converted if one of the following is true:
+Visual Basic oferece suporte à atribuição entre tipos de coleção de itens que têm o mesmo número de campos. Os tipos de campo podem ser convertidos se uma das seguintes opções for verdadeira:
 
-- The source and target field are of the same type.
+- O campo de origem e destino são do mesmo tipo.
 
-- A widening (or implicit) conversion of the source type to the target type is defined. 
+- Uma conversão de ampliação (ou implícita) do tipo de origem para o tipo de destino é definida. 
 
-- `Option Strict` is `On`, and a narrowing (or explicit) conversion of the source type to the target type is defined. This conversion can throw an exception if the source value is outside the range of the target type.
+- `Option Strict` é `On`, e uma conversão de estreitamento (ou explícita) do tipo de origem para o tipo de destino é definida. Esta conversão pode lançar uma exceção se o valor de origem está fora do intervalo do tipo de destino.
 
-Other conversions are not considered for assignments. Let's look at the kinds of assignments that are allowed between tuple types.
+Outras conversões não são consideradas para atribuições. Vamos examinar os tipos de atribuições que são permitidos entre tipos de tupla.
 
-Consider these variables used in the following examples:
+Considere estas variáveis usadas nos exemplos a seguir:
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#1)]
 
-The first two variables, `unnamed` and `anonymous`, do not have semantic names provided for the fields. Their field names are the default `Item1` and `Item2`. The last two variables, `named` and `differentName` have semantic field names. Note that these two tuples have different names for the fields.
+As primeiras duas variáveis, `unnamed` e `anonymous`, não tem semânticos nomes fornecidos para os campos. Seus nomes de campo são o padrão `Item1` e `Item2`. As duas últimas variáveis, `named` e `differentName` têm nomes de campo semântica. Observe que essas duas tuplas têm nomes diferentes para os campos.
 
-All four of these tuples have the same number of fields (referred to as 'arity'), and the types of those fields are identical. Therefore, all of these assignments work:
+Todos os quatro essas tuplas têm o mesmo número de campos (conhecido como 'arity') e os tipos desses campos são idênticos. Portanto, todas essas atribuições funcionam:
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#2)]
 
-Notice that the names of the tuples are not assigned. The values of the fields are assigned following the order of the fields in the tuple.
+Observe que os nomes das tuplas não são atribuídos. Os valores dos campos são atribuídos na ordem dos campos na tupla.
 
-Finally, notice that we can assign the `named` tuple to the `conversion` tuple, even though the first field of `named` is an `Integer`, and the first field of `conversion` is a `Long`. This assignment succeeds because converting an `Integer` to a `Long` is a widening conversion.
+Finalmente, observe que podemos atribuir a `named` tupla para o `conversion` tupla, mesmo que o primeiro campo de `named` é um `Integer`e o primeiro campo de `conversion` é um `Long`. Essa atribuição é bem-sucedido porque convertendo um `Integer` para um `Long` é uma conversão de ampliação.
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#3)]
 
-Tuples with different numbers of fields are not assignable:
+Tuplas com diferentes números de campos não são atribuíveis:
 
 ```vb
 ' Does not compile.

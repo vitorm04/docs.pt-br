@@ -267,6 +267,7 @@
 ### [Como concatenar cadeias de caracteres](csharp/how-to/concatenate-multiple-strings.md)
 ### [Como converter uma cadeia de caracteres em um DateTime](standard/base-types/parsing-datetime.md)
 ### [Como pesquisar cadeias de caracteres](csharp/how-to/search-strings.md)
+### [Como modificar o conteúdo de uma cadeia de caracteres](csharp/how-to/modify-string-contents.md)
 <!-- End of C# Concepts section -->
 ## [O SDK do .NET Compiler Platform (APIs do Roslyn)](csharp/roslyn-sdk/)
 ## [Guia de Programação em C#](csharp/programming-guide/)

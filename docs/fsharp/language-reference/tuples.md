@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 35069073-9a82-410f-8dea-912e2a152e6d
-ms.openlocfilehash: c6a0565ac7022928f5c2bdad5387d896c6c3d387
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 996566f2baaea8ab01e5c80e53caea82e9684714
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="tuples"></a>Tuplas
 
@@ -89,7 +89,7 @@ int * float * string
 
 ## <a name="interoperation-with-c-tuples"></a>Interoperação com c# tuplas
 
-C# 7 introduzidos tuplas para o idioma.  Tuplas em c# e são estruturas e são equivalentes a struct tuplas em F #.  Se você precisa interoperar com c# usa tuplas, você deve usar struct tuplas.
+C# 7 introduzidos tuplas para o idioma.  Tuplas em c# são estruturas e são equivalentes a struct tuplas em F #.  Se você precisa interoperar com c#, você deve usar struct tuplas.
 
 Isso é fácil.  Por exemplo, imagine que você precisa passar uma tupla a uma classe do c# e, em seguida, consumam seu resultado, o que também é uma coleção de itens:
 

@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - registering primary interop assemblies
 - primary interop assemblies, registering
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 40414f39a1b84e7d07086d0634898de5171db590
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 26455be1d6d5879041b9ccb397bfc94a04390a64
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Como registrar assemblies de interoperabilidade primários
 As classes podem ter o marshaling realizado somente pela interoperabilidade COM e sempre têm o marshaling realizado como interfaces. Em alguns casos, a interface usada para realizar marshaling da classe é conhecida como a interface de classe. Para obter informações sobre como substituir a interface de classe por uma interface de sua preferência, consulte [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md).  
@@ -53,11 +55,11 @@ As classes podem ter o marshaling realizado somente pela interoperabilidade COM 
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir registra o assembly de interoperabilidade primário `CompanyA.UtilLib.dll`.  
   
-```  
+```console  
 regasm CompanyA.UtilLib.dll  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Programando com assemblies de interoperabilidade primários](http://msdn.microsoft.com/library/306fa1d6-0703-4004-9e93-d0a57f1be81e)  
- [Localizando os Assemblies de interoperabilidade primários](http://msdn.microsoft.com/library/d6768e4b-cd80-414d-a4f8-05d979eb393b)  
- [Redistribuindo assemblies de interoperabilidade primários](http://msdn.microsoft.com/library/e76384f0-d631-474c-bdbd-13884cba0265)
+ [Programando com assemblies de interoperabilidade primários](https://msdn.microsoft.com/library/306fa1d6-0703-4004-9e93-d0a57f1be81e(v=vs.100))  
+ [Localizando os Assemblies de interoperabilidade primários](https://msdn.microsoft.com/library/d6768e4b-cd80-414d-a4f8-05d979eb393b(v=vs.100))  
+ [Redistribuindo assemblies de interoperabilidade primários](https://msdn.microsoft.com/library/e76384f0-d631-474c-bdbd-13884cba0265(v=vs.100))

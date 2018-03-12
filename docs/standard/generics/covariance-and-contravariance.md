@@ -24,14 +24,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2abd4c772c02c431ecb73139be7f620fe04d5d82
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7536d06c971251fb857fabefc95a50ae4389f785
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covariância e contravariância em genéricos
-<a name="top"></a> Covariância e contravariância são termos que fazem referência à capacidade de usar um tipo menos derivado (menos específico) ou mais derivado (mais específico) do que o especificado originalmente. Os parâmetros de tipo genéricos oferecem suporte a covariância e contravariância para fornecer maior flexibilidade na atribuição e no uso de tipos genéricos. Quando você se refere a um sistema de tipos, a covariância, contravariância e invariância possuem as definições a seguir. Os exemplos assumem uma classe base chamada `Base` e uma classe derivada chamada `Derived`.  
+<a name="top"></a> Covariância e contravariância são termos que fazem referência à capacidade de usar um tipo mais derivado (mais específico) ou menos derivado (menos específico) do que o especificado originalmente. Os parâmetros de tipo genéricos oferecem suporte a covariância e contravariância para fornecer maior flexibilidade na atribuição e no uso de tipos genéricos. Quando você se refere a um sistema de tipos, a covariância, contravariância e invariância possuem as definições a seguir. Os exemplos assumem uma classe base chamada `Base` e uma classe derivada chamada `Derived`.  
   
 -   `Covariance`  
   

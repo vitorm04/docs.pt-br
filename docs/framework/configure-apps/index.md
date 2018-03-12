@@ -38,11 +38,11 @@ ms.author: markl
 manager: markl
 ms.workload:
 - dotnet
-ms.openlocfilehash: 74b5bce3191b2d40e5b37d64b3d1eee24395ce4c
-ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
+ms.openlocfilehash: a28e97c48561a01b6324af6d723ea5c9f7d48165
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configurando aplicativos usando arquivos de configuração 
 O .NET Framework, por meio de arquivos de configuração, fornece aos desenvolvedores e administradores controle e flexibilidade sobre a maneira de executar aplicativos. Os arquivos de configuração são arquivos XML que podem ser alterados quando necessário. Um administrador pode controlar quais recursos protegidos um aplicativo pode acessar, quais versões de assemblies um aplicativo usará e onde os aplicativos e objetos remotos são localizados. Os desenvolvedores podem colocar definições em arquivos de configuração, eliminando a necessidade de recompilar um aplicativo sempre que uma configuração é alterada. Esta seção descreve o que pode ser configurado e por que a configuração de um aplicativo pode ser útil.  
@@ -89,7 +89,7 @@ O .NET Framework, por meio de arquivos de configuração, fornece aos desenvolve
   
 -   Aplicativo hospedado no ASP.NET.  
   
-     Para obter mais informações sobre arquivos de configuração do ASP.NET, consulte [Definições de configuração do ASP.NET](http://msdn.microsoft.com/library/116608f3-c03d-4413-9fc7-978703e18b0f)  
+     Para obter mais informações sobre arquivos de configuração do ASP.NET, consulte [Definições de configuração do ASP.NET](https://msdn.microsoft.com/library/116608f3-c03d-4413-9fc7-978703e18b0f(v=vs.100))  
   
 -   Aplicativo hospedado no Internet Explorer.  
   

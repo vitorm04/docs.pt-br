@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - interop marshaling, blittable types
 - blittable types, interop marshaling
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 10e9f4be3d02ac24c70c4a370ed96ff0dada130a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c61fe689a2a708b10fdf21e3638b1fc6ff117d25
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="blittable-and-non-blittable-types"></a>Tipos blittable e não blittable
 A maioria dos tipos de dados tem uma representação comum na memória gerenciada e não gerenciada e não exige manipulação especial pelo marshaler de interoperabilidade. Esses tipos são chamados *tipos blittable* porque não exigem conversão quando são passados entre o código gerenciado e não gerenciado.  
@@ -58,7 +60,7 @@ A maioria dos tipos de dados tem uma representação comum na memória gerenciad
   
 -   Matrizes unidimensionais de tipos blittable, como uma matriz de inteiros. No entanto, um tipo que contém uma matriz variável de tipos blittable não é blittable em si.  
   
--   Tipos de valor formatados que contêm somente tipos blittable (e classes, se elas tiverem o marshaling realizado como tipos formatados). Para obter mais informações sobre os tipos de valor formatados, consulte [Marshaling padrão para tipos de valor](http://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a).  
+-   Tipos de valor formatados que contêm somente tipos blittable (e classes, se elas tiverem o marshaling realizado como tipos formatados). Para obter mais informações sobre os tipos de valor formatados, consulte [Marshaling padrão para tipos de valor](https://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a(v=vs.100)).  
   
  Referências de objeto não são blittable. Isso inclui uma matriz de referências a objetos que são blittable por si mesmos. Por exemplo, é possível definir uma estrutura blittable, mas não é possível definir um tipo blittable que contém uma matriz de referências a essas estruturas.  
   
@@ -66,18 +68,18 @@ A maioria dos tipos de dados tem uma representação comum na memória gerenciad
   
  Alguns tipos de dados gerenciados exigem uma representação diferente em um ambiente não gerenciado. Esses tipos de dados não blittable devem ser convertidos em um formato que pode ter o marshaling realizado. Por exemplo, cadeias de caracteres gerenciadas não são tipos blittable porque devem ser convertidas em objetos de cadeia de caracteres antes que possam ter o marshaling realizado.  
   
- A tabela a seguir lista tipos não blittable do namespace <xref:System>. [Representantes](http://msdn.microsoft.com/library/d176ee76-f982-494b-b03d-92e4118896e2), que são estruturas de dados que se referem a um método estático ou a uma instância de classe, também não são blittable.  
+ A tabela a seguir lista tipos não blittable do namespace <xref:System>. [Representantes](https://msdn.microsoft.com/library/d176ee76-f982-494b-b03d-92e4118896e2(v=vs.100)), que são estruturas de dados que se referem a um método estático ou a uma instância de classe, também não são blittable.  
   
 |Tipo não bittable|Descrição|  
 |-------------------------|-----------------|  
 |[System.Array](../../../docs/framework/interop/default-marshaling-for-arrays.md)|Converte em uma matriz C-style ou em um `SAFEARRAY`.|  
-|[System.Boolean](http://msdn.microsoft.com/library/d4c00537-70f7-4ca6-8197-bfc1ec037ff9)|Converte em um valor de 1, 2 ou 4 bytes com `true` como 1 ou -1.|  
-|[System.Char](http://msdn.microsoft.com/library/cecc87c1-075e-4cde-aa56-33d189f66feb)|Converte em um caractere Unicode ou ANSI.|  
-|[System.Class](http://msdn.microsoft.com/library/fe334af5-0123-43d8-be84-26f6f023ddb6)|Converte em uma interface de classe.|  
+|[System.Boolean](https://msdn.microsoft.com/library/d4c00537-70f7-4ca6-8197-bfc1ec037ff9(v=vs.100))|Converte em um valor de 1, 2 ou 4 bytes com `true` como 1 ou -1.|  
+|[System.Char](https://msdn.microsoft.com/library/cecc87c1-075e-4cde-aa56-33d189f66feb(v=vs.100))|Converte em um caractere Unicode ou ANSI.|  
+|[System.Class](https://msdn.microsoft.com/library/fe334af5-0123-43d8-be84-26f6f023ddb6(v=vs.100))|Converte em uma interface de classe.|  
 |[System.Object](../../../docs/framework/interop/default-marshaling-for-objects.md)|Converte em uma variante ou uma interface.|  
 |[System.Mdarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|Converte em uma matriz C-style ou em um `SAFEARRAY`.|  
 |[System.String](../../../docs/framework/interop/default-marshaling-for-strings.md)|Converte em uma cadeia de caracteres que termina em uma referência nula ou em um BSTR.|  
-|[System.Valuetype](http://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a)|Converte em uma estrutura com um layout de memória fixo.|  
+|[System.Valuetype](https://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a(v=vs.100))|Converte em uma estrutura com um layout de memória fixo.|  
 |[System.Szarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|Converte em uma matriz C-style ou em um `SAFEARRAY`.|  
   
  Há suporte para tipos de objeto e de classe apenas na interoperabilidade COM. Para tipos correspondentes no [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# e C++, consulte a [Visão geral da biblioteca de classes](../../../docs/standard/class-library-overview.md).  
