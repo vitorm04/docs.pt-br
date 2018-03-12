@@ -16,16 +16,16 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1148af537ef9b502c6f3a9a3cc0588eaed39ac2f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 36696617d1e28a370f6b15f15fb39bc816973f15
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="xslt-compiler-xsltcexe"></a>Compilador de XSLT (xsltc.exe)
 O compilador XSLT (xsltc.exe) compila folhas de estilos XSLT e gera um assembly. A folha de estilos compilada pode ser passada diretamente para o método <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>. Você não pode gerar assemblies assinados com xsltc.exe.  
   
- A ferramenta xsltc.exe está incluída no Visual Studio 2008. Para saber mais, confira o [Centro de Download da Microsoft](http://go.microsoft.com/fwlink/?LinkId=89463).  
+ A ferramenta xsltc.exe está incluída no Visual Studio. para obter mais informações, consulte os [Downloads do Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |`/debug[`+&#124;-`]`|Especifica se informações de depuração devem ser geradas.<br /><br /> Especificar `+` ou `/debug` faz o compilador gerar informações de depuração e colocá-lo em um arquivo de banco de dados do programa (PDB). O nome do arquivo PDB gerado é `assemblyName`.pdb.<br /><br /> Especificar `-`, que é aplicado se você não especificar `/debug`, não cria nenhuma informação de depuração. Um assembly comercial é gerado. **Observação:** a compilação no modo de depuração pode afetar o desempenho do XSLT significativamente.|  
 |`/help`|Exibe sintaxe de comando e opções para a ferramenta.|  
 |`/nologo`|Suprime a notificação de direitos autorais do compilador da exibição.|  
-|`/platform:` `string`|Especifica as plataformas nas quais o assembly pode ser executado. O exemplo a seguir descreve os valores válidos da plataforma:<br /><br /> O `x86` compila o assembly para ser executado pelo Common Language Runtime compatível com x86, de 32 bits<br /><br /> O `x64` compila o assembly para ser executado pelo Common Language Runtime de 64 bits em um computador que oferece suporte ao conjunto de instruções de AMD64 ou EM64T.<br /><br /> O [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] compila o assembly para ser executado pelo Common Language Runtime de 64 bits em um computador que tem um processador [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)].<br /><br /> O `anycpu` compila o assembly para ser executado em qualquer plataforma. Esse é o padrão.|  
+|`/platform:` `string`|Especifica as plataformas nas quais o assembly pode ser executado. O exemplo a seguir descreve os valores válidos da plataforma:<br /><br /> O `x86` compila o assembly para ser executado pelo Common Language Runtime compatível com x86, de 32 bits<br /><br /> O `x64` compila o assembly para ser executado pelo Common Language Runtime de 64 bits em um computador que oferece suporte ao conjunto de instruções de AMD64 ou EM64T.<br /><br /> [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] compila o assembly para ser executado pelo Common Language Runtime de 64 bits em um computador que tem um processador [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)].<br /><br /> O `anycpu` compila o assembly para ser executado em qualquer plataforma. Esse é o padrão.|  
 |`/out:` `assemblyName`|Especifica o nome do assembly que é a saída. O nome do assembly tem como padrão o nome da folha de estilos principal ou a primeira folha de estilos se várias folhas de estilos estiverem presentes.<br /><br /> Se a folha de estilos contiver scripts, os scripts serão salvos em um assembly separado. Nomes assembly de script são gerados do nome do assembly principal. Por exemplo, se você especificou CustOrders.dll para o nome do assembly, o primeiro assembly de script será chamado CustOrders_Script1.dll.|  
 |`/settings:` `document+-, script+-, DTD+-,`|Especifica se deve permitir funções `document()`, script XSLT ou definição de tipo de documento (DTD) na folha de estilos.<br /><br /> O comportamento padrão desabilita o suporte para DTD, a função `document()` e script.|  
 |`@` `file`|Permite que você especifique um arquivo que contém as opções do compilador.|  

@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c574ab8ddf506802fb42f53b5212dcb4a3bd9d34
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 5b471cd8e934880fc8095fbad68b460174ec338c
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="details-of-regular-expression-behavior"></a>Detalhes do comportamento de expressões regulares
 O mecanismo de expressões regulares do .NET Framework é um correspondente de expressão regular de retrocesso que incorpora um mecanismo de NFA (Automação Finita Não Determinística) tradicional, como o usado pelo Perl, Python, Emacs e Tcl. Isso o distingue de mecanismos de DFA (Autômato finito determinístico) de expressões regulares puras mais rápidos, porém mais limitados, como os encontrados em awk, egrep ou lex. Também o distingue de NFAs POSIX padronizados, porém mais lentos. A seção a seguir descreve os três tipos de mecanismos de expressões regulares e explica por que as expressões regulares no .NET Framework são implementadas usando um mecanismo de NFA tradicional.  
@@ -108,7 +108,7 @@ O mecanismo de expressões regulares do .NET Framework é um correspondente de e
     |`^`|Começar a correspondência no início de uma linha.|  
     |`(?<Pvt>\<PRIVATE\>\s)?`|Corresponder a zero ou uma ocorrência da cadeia de caracteres `<PRIVATE>` seguida para um caractere de espaço em branco. Atribuir a correspondência a um grupo de captura chamado `Pvt`.|  
     |`(?(Pvt)((\w+\p{P}?\s)+)`|Se o grupo de captura `Pvt` existir, corresponder a uma ou mais ocorrências de um ou mais caracteres de palavra seguidos por zero ou um separador de pontuação, seguido por um caractere de espaço em branco. Atribuir a subcadeia de caracteres ao primeiro grupo de captura.|  
-    |`&#124;((\w+\p{P}?\s)+))`|Se o grupo de captura `Pvt` não existir, corresponder a uma ou mais ocorrências de um ou mais caracteres de palavra seguidos por zero ou um separador de pontuação, seguido por um caractere de espaço em branco. Atribuir a subcadeia de caracteres ao terceiro grupo de captura.|  
+    |<code>&#124;((\w+\p{P}?\s)+))<code>|Se o grupo de captura `Pvt` não existir, corresponder a uma ou mais ocorrências de um ou mais caracteres de palavra seguidos por zero ou um separador de pontuação, seguido por um caractere de espaço em branco. Atribuir a subcadeia de caracteres ao terceiro grupo de captura.|  
     |`\r?$`|Corresponder ao final de uma linha ou ao final da cadeia de caracteres.|  
   
      Para obter mais informações sobre a avaliação condicional, consulte [Constructos de alternância](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md).  
@@ -145,7 +145,7 @@ O mecanismo de expressões regulares do .NET Framework é um correspondente de e
     |-------------|-----------------|  
     |`^`|Começar a correspondência no início da cadeia de caracteres.|  
     |`[A-Z0-9]`|Corresponder a qualquer caractere numérico ou alfanumérico. (A comparação não diferencia maiúsculas de minúsculas.)|  
-    |`([-!#$%&'.*+/=?^`{}&#124;~\w])*`|Corresponder a zero ou mais ocorrências de qualquer caractere de palavra ou qualquer um destes caracteres: -, !, #, $, %, &, ', ., *, +, /, =, ?, ^, `, {, }, &#124; ou ~.|  
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])*<code>|Corresponder a zero ou mais ocorrências de qualquer caractere de palavra ou qualquer um destes caracteres: -, !, #, $, %, &, ', ., *, +, /, =, ?, ^, \`, {, }, &#124; ou ~.|  
     |`(?<=[A-Z0-9])`|Olhar para o caractere anterior, que precisa ser numérico ou alfanumérico. (A comparação não diferencia maiúsculas de minúsculas.)|  
     |`$`|Encerrar a correspondência ao final da cadeia de caracteres.|  
   

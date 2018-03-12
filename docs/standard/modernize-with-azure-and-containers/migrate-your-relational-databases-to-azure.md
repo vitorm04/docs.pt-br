@@ -4,14 +4,15 @@ description: "Modernizar aplicativos existentes do .NET com contêineres do Wind
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 221d8c2b837fb738425e26f3af4da895e4987212
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9189de8d083c8f9dea8c53b428e6cd34ae6dad15
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Migrar seus bancos de dados relacionais para o azure
 
@@ -35,27 +36,27 @@ Uma organização que opera em um setor altamente regulamentado e que precisam m
 
 Instância gerenciada no banco de dados SQL tem as seguintes características:
 
--   Isolamento de segurança por meio da rede Virtual do Azure
+- Isolamento de segurança por meio da rede Virtual do Azure
 
--   Superfície compatibilidade de aplicativos, com estes recursos:
+- Superfície compatibilidade de aplicativos, com estes recursos:
 
-    -   SQL Server Agent e o SQL Server Profiler
+  - SQL Server Agent e o SQL Server Profiler
 
-    -   Replicação de referências e consultas de SQL CLR, bancos de dados, change data capture (CDC) e do Service Broker
+  - Replicação de referências e consultas de SQL CLR, bancos de dados, change data capture (CDC) e do Service Broker
 
--   Até 35 TB de tamanho de banco de dados
+- Até 35 TB de tamanho de banco de dados
 
--   Migração de tempo de inatividade mínimo, com estes recursos:
+- Migração de tempo de inatividade mínimo, com estes recursos:
 
-    -   Serviço de migração do banco de dados do Azure
+  - Serviço de migração do banco de dados do Azure
 
-    -   Envio de logs, restauração e backup nativo
+  - Envio de logs, restauração e backup nativo
 
 Com esses recursos, ao migrar bancos de dados de aplicativo existentes para o banco de dados SQL Azure, o modelo de instância gerenciada oferece quase 100% dos benefícios de Paas para o SQL Server. Instância gerenciada é um ambiente de SQL Server onde você continuar a usar os recursos de nível de instância sem alterar o design do aplicativo.
 
 Instância gerenciada provavelmente é a melhor opção para empresas que atualmente estão usando o SQL Server e que necessitam de flexibilidade a segurança de rede na nuvem. É como ter uma rede virtual privada para bancos de dados SQL.
 
-## <a name="when-to-migrate-to-azure-sql-database"></a>Quando a migração para o banco de dados do SQL Azure 
+## <a name="when-to-migrate-to-azure-sql-database"></a>Quando a migração para o banco de dados do SQL Azure
 
 Conforme mencionado, o banco de dados padrão do SQL Azure é um DBaaS totalmente gerenciado, relacionais. Banco de dados SQL no momento gerencia milhões de bancos de dados de produção, em data 38 centers, em todo o mundo. Ele dá suporte a uma ampla gama de aplicativos e cargas de trabalho do gerenciamento de dados transacionais simples, para direcionar os aplicativos com uso intensivo de dados de missão crítica que exigem processamento avançado de dados em uma escala global.
 
@@ -65,19 +66,19 @@ Banco de dados do SQL Azure é o serviço de banco de dados de nuvem apenas inte
 
 Banco de dados do SQL Azure oferece os seguintes benefícios:
 
--   Inteligência interna (aprendizado de máquina) que aprende e se adapta ao seu aplicativo
+- Inteligência interna (aprendizado de máquina) que aprende e se adapta ao seu aplicativo
 
--   Provisionamento do banco de dados sob demanda
+- Provisionamento do banco de dados sob demanda
 
--   Um intervalo de ofertas para todas as cargas de trabalho
+- Um intervalo de ofertas para todas as cargas de trabalho
 
--   disponibilidade de 99,99% SLA, zero manutenção
+- disponibilidade de 99,99% SLA, zero manutenção
 
--   Serviços de replicação geográfica e restauração para proteção de dados
+- Serviços de replicação geográfica e restauração para proteção de dados
 
--   Ponto de banco de dados do SQL Azure no recurso de restauração pontual
+- Ponto de banco de dados do SQL Azure no recurso de restauração pontual
 
--   Compatibilidade com o SQL Server 2016, incluindo híbrida e migração
+- Compatibilidade com o SQL Server 2016, incluindo híbrida e migração
 
 Banco de dados padrão do SQL Azure está mais próximo PaaS de gerenciado instância do banco de dados do SQL Azure. Você deve tentar usá-la, se possível, porque você terá mais benefícios de uma nuvem gerenciada. No entanto, o banco de dados do Azure SQL tem algumas das principais diferenças de regular e instâncias do SQL Server local. Dependendo de requisitos de banco de dados do seu aplicativo existente e seus requisitos de empresa e políticas, talvez não seja a melhor opção quando você estiver planejando a migração para a nuvem.
 
@@ -108,23 +109,23 @@ Para saber como migrar bancos de dados usando o serviço de migração de banco 
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
--   **Escolha uma opção do SQL Server de nuvem: banco de dados do SQL do Azure (PaaS) ou o SQL Server na VM do Azure (IaaS)**
+- **Escolha uma opção do SQL Server de nuvem: banco de dados do SQL do Azure (PaaS) ou o SQL Server na VM do Azure (IaaS)**
 
     [https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
 
--   **Obter para a nuvem mais rápida com o serviço de migração do banco de dados e instância gerenciada do Azure SQL DB**
+- **Obter para a nuvem mais rápida com o serviço de migração do banco de dados e instância gerenciada do Azure SQL DB**
 
     [https://channel9.msdn.com/Events/Build/2017/P4008](https://channel9.msdn.com/Events/Build/2017/P4008)
 
--   **Migração de banco de dados do SQL Server para o banco de dados SQL na nuvem**
+- **Migração de banco de dados do SQL Server para o banco de dados SQL na nuvem**
 
     [https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate)
 
--   **Banco de Dados SQL do Azure**
+- **Banco de Dados SQL do Azure**
 
     [https://azure.microsoft.com/services/sql-database/?v=16.50](https://azure.microsoft.com/services/sql-database/?v=16.50)
 
--   **SQL Server em máquinas virtuais**
+- **SQL Server em máquinas virtuais**
 
     [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 

@@ -4,16 +4,17 @@ description: "Arquitetura de Microservices .NET para aplicativos .NET em contêi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: eef0197edb3aba555da63f1ea0b75726a826bd32
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: df452c9fbf1c16603efcec40844b55810bd5d2d4
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Criar serviços resilientes prontos para a nuvem: adotar falhas transitórias na nuvem 
+# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Criar serviços resilientes prontos para a nuvem: adotar falhas transitórias na nuvem
 
 A resiliência é a capacidade de recuperar de falhas e continuar a funcionar. Resiliência não é sobre como evitar falhas, mas aceitando o fato de que as falhas ocorrerão e, em seguida, responder a eles de maneira que evita o tempo de inatividade ou perda de dados. A meta de resiliência é retornar o aplicativo para um estado totalmente funcional após uma falha.
 

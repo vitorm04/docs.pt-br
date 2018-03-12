@@ -4,16 +4,18 @@ description: "Modernizar aplicativos .NET existentes com contêineres do Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 08bf7da36714b2c18d96659814bb11df6d9b26fc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: af9457552a71e4cb5cffe95ce1f33ccfa227268a
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="lift-and-shift-existing-apps-devops"></a>Migração lift-and-shift de DevOps de aplicativos existentes
+
 > Visão: fazer migração lift-and-shift de aplicativos .NET Framework existentes para aplicativos prontos para DevOps na Nuvem a fim de melhorar drasticamente a agilidade da implantação, assim você poderá entregar mais rapidamente e reduzir os custos de entrega do aplicativo.
 
 Para aproveitar as vantagens da nuvem e novas tecnologias como contêineres, você deve modernizar seus aplicativos existentes do .NET pelo menos parcialmente. Por fim, modernizar os aplicativos corporativos reduzirá o custo total de propriedade.

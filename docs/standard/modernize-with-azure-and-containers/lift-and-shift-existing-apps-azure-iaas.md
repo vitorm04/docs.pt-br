@@ -4,14 +4,15 @@ description: "Modernize aplicativos existentes do .NET com contêineres do Windo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: eed17ad06c138c3a4eb85f5e023427b681488784
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6811da4b59531e27f2d832c102d37ba1383b15ab
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="lift-and-shift-existing-apps-azure-iaas"></a>Comparar e deslocar aplicativos existentes do Azure IaaS
 
@@ -27,7 +28,7 @@ Figura 2-1 posiciona aplicativos prontos para nuvem infraestrutura nos níveis d
 
 > **Figura 2-1.** Aplicativos prontos para nuvem infra-estrutura de posicionamento
 
-## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>Por que migrar aplicativos de web existentes do .NET para Azure IaaS 
+## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>Por que migrar aplicativos de web existentes do .NET para Azure IaaS
 
 É o principal motivo para migrar para a nuvem, mesmo em um nível de IaaS inicial reduzir os custos. Usando mais serviços de infraestrutura gerenciada, sua organização pode reduzir o investimento em manutenção de hardware, servidor ou VM provisionamento e implantação e gerenciamento da infraestrutura.
 
@@ -39,7 +40,7 @@ Ele também se tornou evidente que os aplicativos são mais fáceis de moderniza
 
 ## <a name="when-to-migrate-to-iaas-instead-of-to-paas"></a>Quando a migração para o IaaS, em vez de para PaaS
 
-Nas próximas seções, discutiremos aplicativos prontos para nuvem DevOps principalmente com base nas plataformas de PaaS e serviços. Esses aplicativos oferecem os maioria dos benefícios da migração para a nuvem.
+As seções a seguir discutem aplicativos prontos para nuvem DevOps principalmente com base nas plataformas de PaaS e serviços. Esses aplicativos oferecem os maioria dos benefícios da migração para a nuvem.
 
 Se seu objetivo é simplesmente mover os aplicativos existentes para a nuvem, primeiro, identifique os aplicativos existentes que exigirão modificação significativa para serem executados no serviço de aplicativo do Azure. Esses aplicativos devem ser as primeiras candidatas.
 
@@ -53,15 +54,15 @@ Migrar para a nuvem não tem que ser difícil. Mas, muitas organizações têm d
 
 [Migrar do Azure](https://aka.ms/azuremigrate) é um novo serviço que fornece a orientação, insights e mecanismos necessários para ajudá-lo a migrar para o Azure. Migrar do Azure fornece:
 
--   Descoberta e avaliação de máquinas virtuais de local
+- Descoberta e avaliação de máquinas virtuais de local
 
--   Mapeamento de dependência embutidas para descoberta de alta confiabilidade dos aplicativos de várias camadas
+- Mapeamento de dependência embutidas para descoberta de alta confiabilidade dos aplicativos de várias camadas
 
--   Rightsizing inteligente para máquinas virtuais do Azure
+- Rightsizing inteligente para máquinas virtuais do Azure
 
--   Relatórios com diretrizes para correção de problemas de compatibilidade
+- Relatórios com diretrizes para correção de problemas de compatibilidade
 
--   Integração com o serviço de gerenciamento de banco de dados do Azure para a migração e descoberta de banco de dados
+- Integração com o serviço de gerenciamento de banco de dados do Azure para a migração e descoberta de banco de dados
 
 Migrar do Azure proporciona confiança que suas cargas de trabalho podem migrar com mínimo impacto nos negócios e executados conforme esperado no Azure. Orientações e ferramentas, você pode obter o máximo de retorno sobre o investimento, assegurando que críticos de desempenho e confiabilidade necessidades.
 
@@ -85,23 +86,23 @@ Figura 2-3 mostra a execução de várias migrações de máquina virtual usando
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
--   **Folha de dados de migração do Azure**
+- **Folha de dados de migração do Azure**
 
     [https://aka.ms/azuremigration\_datasheet](https://aka.ms/azuremigration\_datasheet)
 
--   Migrar do Azure
+- **Migrar do Azure**
 
     [http://azuremigrationcenter.com/](http://azuremigrationcenter.com/)
 
--   **Migrar para o Azure com a recuperação de Site**
+- **Migrar para o Azure com a recuperação de Site**
 
     [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure)
 
--   **Visão geral de serviços de recuperação de Site do Azure**
+- **Visão geral de serviços de recuperação de Site do Azure**
 
     [https://docs.microsoft.com/azure/site-recovery/site-recovery-overview](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)
 
--   **Migração de VMs em AWS em VMs do Azure**
+- **Migração de VMs em AWS em VMs do Azure**
 
     [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure)
 

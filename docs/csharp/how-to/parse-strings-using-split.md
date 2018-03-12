@@ -15,11 +15,11 @@ ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 author: BillWagner
 ms.author: wiwagn
 ms.custom: mvc
-ms.openlocfilehash: 5143fed04148fb17697bd5d040ad23b762505db4
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.openlocfilehash: afaff6f81a1a4240214f738d0fc9f3bafdaf868c
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Como analisar cadeias de caracteres usando String.Split (Guia do C#)
 
@@ -51,9 +51,9 @@ O <xref:System.String.Split%2A?displayProperty=nameWithType> pode receber uma ma
   
 [!code-csharp-interactive[split strings using strings as separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#5)]
 
-Você pode experimentar estes exemplos examinando o código em nosso [repositório GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)
+Você pode experimentar estes exemplos examinando o código em nosso [repositório GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings). Ou então, você pode baixar os exemplos [como um arquivo zip](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings.zip).
 
 ## <a name="see-also"></a>Consulte também  
  [Guia de Programação em C#](../programming-guide/index.md)  
  [Cadeias de Caracteres](../programming-guide/strings/index.md)  
- [Expressões regulares do .NET Framework](https://msdn.microsoft.com/library/hs600312)
+ [Expressões regulares do .NET](../../standard/base-types/regular-expressions.md)

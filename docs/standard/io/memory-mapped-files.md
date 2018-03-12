@@ -22,14 +22,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 23755f7b76e8cc050df8529852af9bf151472f72
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 99aefdaf3d38dc5506bf785c8ba4a9b457cc7bf7
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="memory-mapped-files"></a>Arquivos mapeados na memória
-Um arquivo mapeado na memória tem o conteúdo de um arquivo em memória virtual. Esse mapeamento entre um espaço de arquivo e a memória permite que um aplicativo, inclusive vários processos, modifique o arquivo ao ler e gravar diretamente na memória. Começando com o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], é possível usar o código gerenciado para acessar arquivos mapeados na memória da mesma maneira que funções nativas do Windows acessam arquivos mapeados na memória, conforme descrito em [Gerenciamento de arquivos mapeados na memória no Win32](http://go.microsoft.com/fwlink/?linkid=180801).  
+Um arquivo mapeado pela memória tem o conteúdo de um arquivo em memória virtual. Esse mapeamento entre um espaço de arquivo e a memória permite que um aplicativo, inclusive vários processos, modifique o arquivo ao ler e gravar diretamente na memória. Começando com o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], é possível usar o código gerenciado para acessar arquivos mapeados na memória da mesma maneira que funções nativas do Windows acessam arquivos mapeados na memória, conforme descrito em [Gerenciamento de arquivos mapeados na memória](https://msdn.microsoft.com/library/ms810613.aspx).  
   
  Há dois tipos de arquivos mapeados na memória:  
   

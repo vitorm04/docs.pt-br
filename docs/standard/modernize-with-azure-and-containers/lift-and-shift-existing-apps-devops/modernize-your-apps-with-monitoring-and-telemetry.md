@@ -4,14 +4,15 @@ description: "Arquitetura de Microservices .NET para aplicativos .NET em contêi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1535951eb648deab17cf8c2fe64db6ddf7df4cb5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3caeb60cf0107aaf5413d935f3bde11863561c7d
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Modernizar seus aplicativos com o monitoramento e telemetria
 
@@ -37,13 +38,13 @@ Você pode acessar a análise de Log por meio do portal do OMS ou o portal do Az
 
 O [solução de monitoramento de contêiner](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers) na análise de Log ajuda você exibir e gerenciar seus hosts de Docker e o contêiner do Windows em um único local. A solução mostra quais contêineres estão em execução, qual imagem de contêiner que está sendo executado e onde contêineres estão em execução. Você pode exibir informações detalhadas de auditoria, incluindo comandos que estão sendo usados com contêineres. Você também pode solucionar contêineres exibindo e pesquisando logs centralizados, sem a necessidade de exibir remotamente os hosts de Docker ou do Windows. Você pode encontrar os contêineres que podem ser ruídos e consumo de recursos em excesso em um host. Além disso, você pode exibir centralizado de CPU, memória, armazenamento e uso de rede e informações de desempenho, para contêineres. Em computadores que executam o Windows, você pode centralizar e comparar os logs do Windows Server, Hyper-V e contêineres do Docker. A solução oferece suporte as seguir orchestrators de contêiner:
 
--   Por nuvem de docker
+-   Docker Swarm
 
 -   DC/OS
 
 -   Kubernetes
 
--   Malha do serviço
+-   Service Fabric
 
 -   Red Hat OpenShift
 

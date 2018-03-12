@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: b6b3ce53a08cfacfacb19266b0be216a40633352
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: db062ed2f832ae933941da1c49e84303090f4390
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="string-interpolation-in-c"></a>Interpolação de cadeia de caracteres no C# #
 
-A interpolação de cadeia de caracteres é a maneira que os espaços reservados em uma cadeia de caracteres são substituídos pelo valor de uma variável de cadeia de caracteres. Antes do C# 6, a maneira de fazer isso era com `System.String.Format`. Isso funciona, mas como ele usa espaços reservados numerados, pode ser mais difícil de ler e ser mais detalhado.
+A interpolação de cadeia de caracteres é a maneira que os espaços reservados em uma cadeia de caracteres são substituídos pelo valor de uma variável de cadeia de caracteres. Antes do C# 6, a maneira de fazer isso era com <xref:System.String.Format%2A?displayProperty=nameWithType>. Isso funciona, mas como ele usa espaços reservados numerados, pode ser mais difícil de ler e ser mais detalhado.
 
 Outras linguagens de programação tiveram interpolação de cadeia de caracteres integradas à linguagem por algum tempo. Por exemplo, em PHP:
 
@@ -42,7 +42,7 @@ Agora que você instalou todas as ferramentas, crie um novo aplicativo do .NET C
 dotnet new console
 ```
 
-Esse comando criará um projeto do .NET Core barebones com um arquivo de projeto, *interpolated.csproj*, e um arquivo de código-fonte, *Program.cs*. Você precisará executar `dotnet restore` para restaurar as dependências necessárias para compilar esse projeto.
+Esse comando cria um projeto do .NET Core barebones com um arquivo de projeto, *interpolated.csproj*, e um arquivo de código-fonte, *Program.cs*. Você precisará executar `dotnet restore` para restaurar as dependências necessárias para compilar esse projeto.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -52,7 +52,7 @@ Para executar o programa, use `dotnet run`. Você deve ver a saída do "Olá, Mu
 
 ## <a name="intro-to-string-interpolation"></a>Introdução à interpolação de cadeia de caracteres
 
-Com `System.String.Format`, especifique "espaços reservados" em uma cadeia de caracteres que são substituídos pelos parâmetros na cadeia de caracteres a seguir. Por exemplo:
+Com <xref:System.String.Format%2A?displayProperty=nameWithType>, especifique "espaços reservados" em uma cadeia de caracteres que são substituídos pelos argumentos após a cadeia de caracteres. Por exemplo:
 
 [!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
 
@@ -78,7 +78,7 @@ This is line number 5
 
 ## <a name="how-string-interpolation-works"></a>Como funciona o interpolação de cadeia de caracteres
 
-Nos bastidores, essa sintaxe de interpolação de cadeia de caracteres é convertida em String.Format pelo compilador. Portanto, você pode fazer o [mesmo que já fez antes com String.Format](https://msdn.microsoft.com/library/dwhawy9k(v=vs.110).aspx).
+Nos bastidores, essa sintaxe de interpolação de cadeia de caracteres é convertida em `String.Format` pelo compilador. Portanto, você pode fazer o [mesmo que já fez antes com `String.Format`](../../standard/base-types/formatting-types.md).
 
 Por exemplo, você pode adicionar preenchimento e formatação numérica:
 
@@ -96,7 +96,7 @@ O item acima resultaria em:
 1004       6,227.77
 ```
 
-Se um nome de variável não for encontrado, será gerado um erro em tempo de compilação.
+Quando um nome de variável não é encontrado, gera-se um erro em tempo de compilação.
 
 Por exemplo:
 
@@ -114,14 +114,12 @@ Se compilar isso, você obterá erros:
 
 ## <a name="localization-and-internationalization"></a>Internacionalização e localização
 
-Uma cadeia de caracteres interpolada dá suporte a `IFormattable` e `FormattableString`, o que pode ser útil para internacionalização.
+Uma cadeia de caracteres interpolada dá suporte a <xref:System.IFormattable?displayProperty=nameWithType> e <xref:System.FormattableString?displayProperty=nameWithType>, o que pode ser útil para internacionalização.
 
-Por padrão, uma cadeia de caracteres interpolada usa a cultura atual. Para usar uma cultura diferente, você pode convertê-la como `IFormattable`
-
-Por exemplo:
+Por padrão, uma cadeia de caracteres interpolada usa a cultura atual. Para usar uma cultura diferente, converta uma cadeia de caracteres interpolada como `IFormattable`. Por exemplo:
 
 [!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
 
 ## <a name="conclusion"></a>Conclusão 
 
-Neste tutorial, você aprendeu como usar recursos de interpolação de cadeia de caracteres de C# 6. Ele é basicamente uma maneira mais concisa de gravar instruções `String.Format` simples, com algumas restrições para usos mais avançados.
+Neste tutorial, você aprendeu como usar recursos de interpolação de cadeia de caracteres de C# 6. Ele é basicamente uma maneira mais concisa de gravar instruções `String.Format` simples, com algumas restrições para usos mais avançados. Para obter mais informações, consulte o tópico [Cadeias de caracteres interpoladas](../../csharp//language-reference/keywords/interpolated-strings.md).

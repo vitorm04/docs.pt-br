@@ -42,11 +42,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 594bb21983f51f3c0698c43d0f6ea39594b72705
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: c176f08904bac8e9c3877977c1e52afb57d5daca
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="wpf-windows-overview"></a>Visão geral do WPF do Windows
 Os usuários interagem com aplicativos [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] autônomos por meio de janelas. O objetivo principal de uma janela é hospedar conteúdo que visualiza dados e permite aos usuários interagir com os dados. Autônomo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativos fornecem suas próprias janelas usando o <xref:System.Windows.Window> classe. Este tópico apresenta <xref:System.Windows.Window> antes que abrangem os conceitos básicos de criação e gerenciamento de janelas de aplicativos autônomos.  
@@ -106,7 +106,7 @@ Os usuários interagem com aplicativos [!INCLUDE[TLA#tla_wpf](../../../../includ
   
 -   No code-behind, a classe deve ser um `partial` classe com o mesmo nome que é especificado pelo `x:Class` atributo na marcação e deve ser derivado de <xref:System.Windows.Window>. Isso permite que o arquivo de code-behind deve ser associado a `partial` classe gerada para o arquivo de marcação quando o aplicativo é compilado (consulte [criando um aplicativo WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)).  
   
--   No code-behind, o <xref:System.Windows.Window> classe deve implementar um construtor que chama o `InitializeComponent` método. `InitializeComponent`é implementado pela marcação gerada do arquivo `partial` classe para registrar eventos e definir propriedades que são definidas na marcação.  
+-   No code-behind, o <xref:System.Windows.Window> classe deve implementar um construtor que chama o `InitializeComponent` método. `InitializeComponent` é implementado pela marcação gerada do arquivo `partial` classe para registrar eventos e definir propriedades que são definidas na marcação.  
   
 > [!NOTE]
 >  Quando você adiciona um novo <xref:System.Windows.Window> ao seu projeto usando [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], o <xref:System.Windows.Window> é implementada usando marcação e o code-behind e inclui a configuração necessária para criar a associação entre os arquivos de marcação e code-behind como descritos aqui.  
@@ -164,7 +164,7 @@ Os usuários interagem com aplicativos [!INCLUDE[TLA#tla_wpf](../../../../includ
  Uma janela que é aberta, chamando <xref:System.Windows.Window.Show%2A> é uma janela não restrita, o que significa que o aplicativo opera em um modo que permite aos usuários ativar outras janelas no mesmo aplicativo.  
   
 > [!NOTE]
->  <xref:System.Windows.Window.ShowDialog%2A>é chamado para abrir o windows, como caixas de diálogo modalmente. Consulte [visão geral de caixas de diálogo](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md) para obter mais informações.  
+>  <xref:System.Windows.Window.ShowDialog%2A> é chamado para abrir o windows, como caixas de diálogo modalmente. Consulte [visão geral de caixas de diálogo](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md) para obter mais informações.  
   
  Quando <xref:System.Windows.Window.Show%2A> é chamado, uma janela executa o trabalho de inicialização antes de ser mostrada para estabelecer a infraestrutura que permite receber entrada do usuário. Quando a janela é inicializada, o <xref:System.Windows.Window.SourceInitialized> é gerado e a janela é mostrada.  
   
@@ -267,7 +267,7 @@ Os usuários interagem com aplicativos [!INCLUDE[TLA#tla_wpf](../../../../includ
   
  Quando uma janela fecha, ela gera dois eventos: <xref:System.Windows.Window.Closing> e <xref:System.Windows.Window.Closed>.  
   
- <xref:System.Windows.Window.Closing>é gerado antes que a janela será fechada e fornece um mecanismo pelo qual janela fechamento pode ser impedido. Uma razão comum para evitar o fechamento da janela é caso o conteúdo da janela contenha dados modificados. Nessa situação, o <xref:System.Windows.Window.Closing> evento pode ser tratado para determinar se a dados foi alterados e, em caso afirmativo, pergunte ao usuário se continua o fechamento da janela sem salvar os dados ou cancela o fechamento da janela. O exemplo a seguir mostra os principais aspectos da manipulação <xref:System.Windows.Window.Closing>.  
+ <xref:System.Windows.Window.Closing> é gerado antes que a janela será fechada e fornece um mecanismo pelo qual janela fechamento pode ser impedido. Uma razão comum para evitar o fechamento da janela é caso o conteúdo da janela contenha dados modificados. Nessa situação, o <xref:System.Windows.Window.Closing> evento pode ser tratado para determinar se a dados foi alterados e, em caso afirmativo, pergunte ao usuário se continua o fechamento da janela sem salvar os dados ou cancela o fechamento da janela. O exemplo a seguir mostra os principais aspectos da manipulação <xref:System.Windows.Window.Closing>.  
   
  [!code-csharp[WindowClosingSnippets](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
@@ -322,7 +322,6 @@ Os usuários interagem com aplicativos [!INCLUDE[TLA#tla_wpf](../../../../includ
  Além de ter uma localização x e y, uma janela também tem uma localização na dimensão z, que determina a posição vertical em relação a outras janelas. Isso é conhecido como a ordem z da janela, e há dois tipos: ordem z normal e ordem z superior. O local de uma janela no *ordem z normal* é determinado pelo se ele está ativo no momento ou não. Por padrão, uma janela está localizada na ordem z normal. O local de uma janela no *ordem z superior* também é determinada pelo se ele está ativo no momento ou não. Além disso, janelas na ordem z superior sempre estão localizadas acima das janelas na ordem z normal. Uma janela está localizada na ordem z superior definindo seu <xref:System.Windows.Window.Topmost%2A> propriedade `true`.  
   
  [!code-xaml[WindowsOverviewSnippets#TopmostWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TopmostWindow.xaml#topmostwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#TopmostWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TopmostWindow.xaml#topmostwindowmarkup2)]  
   
  Dentro de cada ordem z, a janela ativa no momento aparece acima de todas as outras janelas na mesma ordem z.  
   
@@ -333,12 +332,10 @@ Os usuários interagem com aplicativos [!INCLUDE[TLA#tla_wpf](../../../../includ
  <xref:System.Windows.FrameworkElement.MinWidth%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, e <xref:System.Windows.FrameworkElement.MaxWidth%2A> são usados para gerenciar o intervalo de largura que uma janela pode ter durante seu ciclo de vida e são configurados como mostrado no exemplo a seguir.  
   
  [!code-xaml[WindowsOverviewSnippets#WidthWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WidthWindow.xaml#widthwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#WidthWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WidthWindow.xaml#widthwindowmarkup2)]  
   
  Altura da janela é gerenciada pelo <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, e <xref:System.Windows.FrameworkElement.MaxHeight%2A>e são configurados como mostrado no exemplo a seguir.  
   
  [!code-xaml[WindowsOverviewSnippets#HeightWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/HeightWindow.xaml#heightwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#HeightWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/HeightWindow.xaml#heightwindowmarkup2)]  
   
  Já que os diversos valores de largura e de altura especificam um intervalo, é possível que a largura e altura de uma janela redimensionável estejam em qualquer lugar dentro do intervalo especificado para a respectiva dimensão. Para detectar sua altura e largura atual, inspecione <xref:System.Windows.FrameworkElement.ActualWidth%2A> e <xref:System.Windows.FrameworkElement.ActualHeight%2A>, respectivamente.  
   
@@ -355,7 +352,6 @@ Os usuários interagem com aplicativos [!INCLUDE[TLA#tla_wpf](../../../../includ
  O exemplo a seguir mostra uma janela que se dimensiona automaticamente para ajustar-se ao próprio conteúdo, verticalmente e horizontalmente, quando mostrada pela primeira vez.  
   
  [!code-xaml[WindowsOverviewSnippets#SizeToContentWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/SizeToContentWindow.xaml#sizetocontentwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#SizeToContentWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/SizeToContentWindow.xaml#sizetocontentwindowmarkup2)]  
   
  O exemplo a seguir mostra como definir o <xref:System.Windows.Window.SizeToContent%2A> propriedade no código para especificar como uma janela é redimensionada para ajustar seu conteúdo.
   
@@ -410,7 +406,6 @@ Os usuários interagem com aplicativos [!INCLUDE[TLA#tla_wpf](../../../../includ
  O exemplo a seguir mostra como criar uma janela que é mostrada como maximizada quando é aberta.  
   
  [!code-xaml[WindowsOverviewSnippets#WindowStateWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStateWindow.xaml#windowstatewindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#WindowStateWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStateWindow.xaml#windowstatewindowmarkup2)]  
   
  Em geral, você deve definir <xref:System.Windows.Window.WindowState%2A> para configurar o estado inicial de uma janela. Assim que uma janela redimensionável é exibida, os usuários podem pressionar os botões minimizar, maximizar e restaurar na barra de título da janela para alterar o estado desta.  
   
@@ -438,7 +433,6 @@ Os usuários interagem com aplicativos [!INCLUDE[TLA#tla_wpf](../../../../includ
  Assim como acontece com <xref:System.Windows.Window.WindowStyle%2A>, o modo de redimensionamento de uma janela é improvável de ser alterado durante seu ciclo de vida, o que significa que você vai provavelmente defini-lo de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcação.  
   
  [!code-xaml[WindowsOverviewSnippets#ResizeModeWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#ResizeModeWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup2)]  
   
  Observe que você pode detectar se uma janela é maximizada, minimizada ou restaurada inspecionando o <xref:System.Windows.Window.WindowState%2A> propriedade.  
   
@@ -463,7 +457,6 @@ Os usuários interagem com aplicativos [!INCLUDE[TLA#tla_wpf](../../../../includ
  Você pode definir <xref:System.Windows.Window.WindowStyle%2A> usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcação ou código; porque ele é improvável de ser alterado durante o tempo de vida de uma janela, você provavelmente irá configurar usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcação.  
   
  [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup2)]  
   
 #### <a name="non-rectangular-window-style"></a>Estilo de janela não retangular  
  Também há situações em que a borda estilos que <xref:System.Windows.Window.WindowStyle%2A> permite que você tenha não forem suficientes. Por exemplo, você talvez queira criar um aplicativo com uma borda não retangular, como [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] usa.  
@@ -475,7 +468,6 @@ Os usuários interagem com aplicativos [!INCLUDE[TLA#tla_wpf](../../../../includ
  Esse tipo de janela pode ser criado, definindo o <xref:System.Windows.Window.WindowStyle%2A> propriedade <xref:System.Windows.WindowStyle.None>e usando suporte especial que <xref:System.Windows.Window> tem para transparência.  
   
  [!code-xaml[WindowsOverviewSnippets#TransparentWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TransparentWindow.xaml#transparentwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#TransparentWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TransparentWindow.xaml#transparentwindowmarkup2)]  
   
  Essa combinação de valores instrui a janela a ser renderizada completamente transparente. Nesse estado, os adornos da área de não cliente da janela (o menu Fechar, botões Minimizar, Maximizar e Restaurar e assim por diante) não podem ser usados. Consequentemente, você precisa fornecer os seus próprios.  
   
@@ -488,11 +480,10 @@ Os usuários interagem com aplicativos [!INCLUDE[TLA#tla_wpf](../../../../includ
  Alguns tipos de janelas não tem um botão de barra de tarefas, como caixas de mensagem e caixas de diálogo (consulte [visão geral de caixas de diálogo](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)). Você pode controlar se o botão de barra de tarefas para uma janela é mostrado, definindo a <xref:System.Windows.Window.ShowInTaskbar%2A> propriedade (`true` por padrão).  
   
  [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup2)]  
   
 <a name="SecurityConsiderations"></a>   
 ## <a name="security-considerations"></a>Considerações sobre segurança  
- <xref:System.Windows.Window>requer `UnmanagedCode` permissão de segurança a ser instanciado. Para aplicativos instalados e iniciados no computador local, isso se encaixa no conjunto de permissões concedidas ao aplicativo.  
+ <xref:System.Windows.Window> requer `UnmanagedCode` permissão de segurança a ser instanciado. Para aplicativos instalados e iniciados no computador local, isso se encaixa no conjunto de permissões concedidas ao aplicativo.  
   
  No entanto, isso está fora do conjunto de permissões concedidas para aplicativos que são iniciados a partir de Internet ou o Local da intranet zona usando [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]. Consequentemente, os usuários receberão um [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] aviso de segurança e será preciso elevar o conjunto de permissões para o aplicativo para confiança total.  
   
@@ -500,7 +491,7 @@ Os usuários interagem com aplicativos [!INCLUDE[TLA#tla_wpf](../../../../includ
   
 <a name="Other_Types_of_Windows"></a>   
 ## <a name="other-types-of-windows"></a>Outros tipos de janelas  
- <xref:System.Windows.Navigation.NavigationWindow>é uma janela que é projetada para hospedar conteúdo navegável. Para obter mais informações, consulte [visão geral de navegação](../../../../docs/framework/wpf/app-development/navigation-overview.md)).  
+ <xref:System.Windows.Navigation.NavigationWindow> é uma janela que é projetada para hospedar conteúdo navegável. Para obter mais informações, consulte [visão geral de navegação](../../../../docs/framework/wpf/app-development/navigation-overview.md)).  
   
  Caixas de diálogo são janelas que geralmente são usadas para coletar informações de um usuário para concluir uma função. Por exemplo, quando um usuário deseja abrir um arquivo, o **abrir arquivo** caixa de diálogo normalmente é exibida por um aplicativo para obter o nome do arquivo do usuário. Para obter mais informações, consulte [Visão geral das caixas de diálogo](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md).  
   

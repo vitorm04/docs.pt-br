@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - animation [WPF], gradient brush colors
 - brushes [WPF], animating colors of
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c977e8a4a23f9739541cf28d9e34ad9e8db1daf0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 74227ebe815e971087569ff39ac0a3479c1b0d14
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="getting-started-with-ink"></a>Introdução à tinta
 Incorporar tinta digital a seus aplicativos ficou ainda mais fácil. A tinta evolui de ser corolário para os métodos de programação de COM e os Windows Forms para atingir integração total com o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Você não precisa instalar SDKs nem bibliotecas de tempo de execução separados.  
@@ -40,7 +42,7 @@ Incorporar tinta digital a seus aplicativos ficou ainda mais fácil. A tinta evo
   
  Se você ainda não tiver feito isso, instale o Microsoft Visual Studio 2005 e o [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]. Os aplicativos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geralmente devem ser compilados antes que você possa exibi-los, mesmo que consistem inteiramente em [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. No entanto, o [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] inclui um aplicativo, XamlPad, projetado para acelerar o processo de implementar uma interface do usuário baseada em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Você pode usar esse aplicativo para exibir e ajustar os primeiros exemplos neste documento. O processo de criação de aplicativos compilados com base em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é abordado mais adiante neste documento.  
   
- Para inicializar XAMLPad, clique no menu **Iniciar**, aponte para **Todos os Programas**, para **SDK do Microsoft Windows** e para **Ferramentas** e clique em **XAMLPad**. No painel de renderização, XAMLPad processa o código XAML escrito no painel de código. Você pode editar o código XAML e as alterações imediatamente aparecerão no painel de renderização.  
+ Para iniciar XAMLPad, clique o **iniciar** , aponte para **todos os programas**, aponte para **SDK do Microsoft Windows**, aponte para **ferramentas**e clique em **XAMLPad**. No painel de renderização, XAMLPad processa o código XAML escrito no painel de código. Você pode editar o código XAML e as alterações imediatamente aparecerão no painel de renderização.  
   
 #### <a name="got-ink"></a>Tem tinta?  
  Para iniciar seu primeiro aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que dê suporte a tinta:  

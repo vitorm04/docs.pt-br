@@ -9,11 +9,11 @@ ms.assetid: 324f267e-1c61-431a-97ed-852c1530742d
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0569636bde875d2d0d8921a544273f3214d05188
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 03315a2d9a44405ff520a1c333f56311e2657df6
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="interpolated-strings-c-reference"></a>Cadeias de caracteres interpoladas (Referência de C#)
 
@@ -43,11 +43,11 @@ em que:
 - *format-string* é uma cadeia de caracteres de formato apropriada para o tipo do objeto que está sendo formatado. Por exemplo, para um valor <xref:System.DateTime>, pode ser uma cadeia de caracteres de formato de data e hora padrão, como "D" ou "d".
 
 > [!IMPORTANT]
-> Você não pode ter nenhum espaço em branco entre o `$` e `"` que iniciam a cadeia de caracteres. Isso causa um erro de tempo de compilação.
+> Você não pode ter nenhum espaço em branco entre o `$` e `"` que iniciam a cadeia de caracteres. Fazer isso causa um erro em tempo de compilação.
 
  Você pode usar uma cadeia de caracteres interpolada em qualquer lugar em que pode usar um literal de cadeia de caracteres.  A cadeia de caracteres interpolada é avaliada sempre que o código com a cadeia de caracteres interpolada for executado. Isso permite que você separe a definição e a avaliação de uma cadeia de caracteres interpolada.  
   
- Para incluir uma chave ("{" ou "}") em uma cadeia de caracteres interpolada, use duas chaves, "{{" ou "}}".  Consulte a seção sobre Conversões implícitas para obter mais detalhes.  
+ Para incluir uma chave ("{" ou "}") em uma cadeia de caracteres interpolada, use duas chaves, "{{" ou "}}".  Consulte a seção sobre [Conversões Implícitas](#implicit-conversions) para obter mais detalhes.  
 
 Se a cadeia de caracteres interpolada contiver outros caracteres com significado especial em uma cadeia de caracteres interpolada, como aspas ("), dois-pontos (:) ou vírgulas (,), eles devem ser substituídos se ocorrerem no texto literal ou devem ser incluídos em uma expressão delimitada por parênteses se forem elementos de linguagem incluídos em uma expressão interpolada. O exemplo a seguir ignora as aspas para incluí-las na cadeia de caracteres de resultado e usa parênteses para delimitar a expressão `(age == 1 ? "" : "s")`, de modo que os dois-pontos não sejam interpretados como o início de uma cadeia de caracteres de formato.
 
@@ -73,7 +73,7 @@ Há três conversões de tipo implícitas de uma cadeia de caracteres interpolad
 
    Esse é o resultado final de uma interpretação de cadeia de caracteres. Todas as ocorrências de chaves duplas ("{{" e "}}") serão convertidas em uma chave única. 
 
-2. Conversão de uma cadeia de caracteres interpolada em uma variável <xref:System.IFormattable> que permite criar várias cadeias de caracteres de resultado com conteúdo específico da cultura de uma única instância <xref:System.IFormattable>. Isso é útil para incluir itens como os formatos de número e data corretos para culturas individuais.  Todas as ocorrências de chaves duplas ("{{" e "}}") permanecem como chaves duplas até que você formate a cadeia de caracteres explícita ou implicitamente chamando o método <xref:System.Object.ToString>.  Todas as expressões de interpolação contidas são convertidas em {0}, {1} e assim por diante.  
+2. Conversão de uma cadeia de caracteres interpolada em uma variável <xref:System.IFormattable>, que permite criar várias cadeias de caracteres de resultado com conteúdo específico da cultura de uma única instância <xref:System.IFormattable>. Isso é útil para incluir itens como os formatos de número e data corretos para culturas individuais.  Todas as ocorrências de chaves duplas ("{{" e "}}") permanecem como chaves duplas até que você formate a cadeia de caracteres explícita ou implicitamente chamando o método <xref:System.Object.ToString>.  Todas as expressões de interpolação contidas são convertidas em {0}, {1} e assim por diante.  
 
    O exemplo a seguir usa reflexão para exibir os membros, bem como os valores de campo e propriedade de uma variável <xref:System.IFormattable> criada de uma cadeia de caracteres interpolada. Ele também passa a variável <xref:System.IFormattable> para o método <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>.
 
@@ -91,5 +91,8 @@ Há três conversões de tipo implícitas de uma cadeia de caracteres interpolad
 ## <a name="see-also"></a>Consulte também  
  <xref:System.IFormattable?displayProperty=nameWithType>  
  <xref:System.FormattableString?displayProperty=nameWithType>  
+ <xref:System.String.Format%2A?displayProperty=nameWithType>  
+ [Interpolação de cadeia de caracteres no C#](../../../csharp/tutorials/string-interpolation.md)  
+ [Cadeias de caracteres interpoladas em C#](../../../csharp/quick-starts/interpolated-strings.yml)  
  [Referência de C#](../../../csharp/language-reference/index.md)  
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)

@@ -4,36 +4,37 @@ description: "Modernizar aplicativos existentes do .NET com contêineres do Wind
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bced3bed84d138dbda4f322322213b47c0159016
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 6a2abda3949c1fffc4d731b01e35e58e7c56dac0
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="walkthroughs-and-technical-get-started-overview"></a>Explicações passo a passo e technical obter a visão geral de Introdução 
+# <a name="walkthroughs-and-technical-get-started-overview"></a>Explicações passo a passo e technical obter a visão geral de Introdução
 
-Para limitar o tamanho deste livro eletrônico, fizemos documentação técnica adicional e explicações passo a passo completa disponível em um repositório do GitHub. A série online de instruções passo a passo é descrita neste capítulo aborda a instalação passo a passo de vários ambientes baseados em contêineres do Windows e a implantação no Azure.
+Para limitar o tamanho deste livro eletrônico, documentação técnica adicional e explicações passo a passo completa foram disponibilizada em um repositório do GitHub. A série online de instruções passo a passo é descrita neste capítulo aborda a instalação passo a passo de vários ambientes baseados em contêineres do Windows e a implantação no Azure.
 
-As seções a seguir explicam cada passo a passo novidades sobre seus objetivos, sua visão de alto nível- e fornece um diagrama das tarefas que estão envolvidos. Você pode obter instruções passo a passo em si no *eShopModernizing* aplicativos wiki de repositório do GitHub em [https://github.com/dotnet-architecture/eShopModernizing/wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki).
+As seções a seguir explicam o que cada passo a passo é sobre seus objetivos e visão de alto nível e fornece um diagrama das tarefas que estão envolvidos. Você pode obter instruções passo a passo em si no *eShopModernizing* aplicativos wiki de repositório do GitHub em [https://github.com/dotnet-architecture/eShopModernizing/wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki).
 
-# <a name="technical-walkthrough-list"></a>Lista de instruções passo a passo técnico
+## <a name="technical-walkthrough-list"></a>Lista de instruções passo a passo técnico
 
 Orientações iniciada por get a seguir fornecem orientação técnica abrangente e consistente para os aplicativos de exemplo de comparação de precisão e shift usando os contêineres e, em seguida, mover, usando várias opções de implantação no Azure.
 
 Cada as instruções a seguir usa os novo eShopLegacy e eShopModernizing aplicativos de amostra, que estão disponíveis no GitHub em [https://github.com/dotnet-architecture/eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing).
 
--   **Tour de aplicativos herdados eShop**
+- **Tour de aplicativos herdados eShop**
 
--   **Coloca seus aplicativos existentes do .NET com contêineres do Windows**
+- **Coloca seus aplicativos existentes do .NET com contêineres do Windows**
 
--   **Implantar seu aplicativo com base em contêineres do Windows para as VMs do Azure**
+- **Implantar seu aplicativo com base em contêineres do Windows para as VMs do Azure**
 
--   **Implantar seus aplicativos com base em contêineres do Windows para Kubernetes no serviço de contêiner do Azure**
+- **Implantar seus aplicativos com base em contêineres do Windows para Kubernetes no serviço de contêiner do Azure**
 
--   **Implantar seus aplicativos com base em contêineres do Windows Azure Service Fabric**
+- **Implantar seus aplicativos com base em contêineres do Windows Azure Service Fabric**
 
 ## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>Passo a passo 1: Tour aplicativos herdados eShop
 
@@ -97,13 +98,13 @@ Use contêineres do Windows para melhorar a implantação de aplicativos .NET ex
 
 O objetivo deste passo a passo é mostrar a você diversas opções para containerizing um aplicativo existente do .NET Framework. Você pode:
 
--   Coloca o seu aplicativo usando [ferramentas do Visual Studio 2017 para Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (2017 do Visual Studio ou versões posteriores).
+- Coloca o seu aplicativo usando [ferramentas do Visual Studio 2017 para Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (2017 do Visual Studio ou versões posteriores).
 
--   Coloca o seu aplicativo manualmente adicionando um [Dockerfile](https://docs.docker.com/engine/reference/builder/)e, em seguida, usando o [CLI do Docker](https://docs.docker.com/engine/reference/commandline/cli/).
+- Coloca o seu aplicativo manualmente adicionando um [Dockerfile](https://docs.docker.com/engine/reference/builder/)e, em seguida, usando o [CLI do Docker](https://docs.docker.com/engine/reference/commandline/cli/).
 
--   Coloca o seu aplicativo usando o [Img2Docker](https://github.com/docker/communitytools-image2docker-win) ferramenta (um código-fonte aberto do Docker).
+- Coloca o seu aplicativo usando o [Img2Docker](https://github.com/docker/communitytools-image2docker-win) ferramenta (um código-fonte aberto do Docker).
 
-Este passo a passo enfoca o Visual Studio Tools 2017 abordagem Docker, mas as duas abordagens são bastante semelhantes no que diz respeito ao uso de Dockerfiles.
+Este passo a passo enfoca o Visual Studio Tools 2017 abordagem Docker, mas as duas abordagens são bastante semelhantes em termos de uso Dockerfiles.
 
 ### <a name="scenario"></a>Cenário
 
@@ -137,7 +138,7 @@ Passo a passo completo técnica está disponível no wiki de repositório do Git
 
 ### <a name="overview"></a>Visão geral
 
-A implantação para um host Docker em uma VM do Windows Server 2016 no Azure permite configurar rapidamente ambientes de teste/desenvolvimento/teste. Ele também fornece um local comum para testadores ou usuários de negócios validar o aplicativo. Máquinas virtuais também podem ser válidos ambientes de produção de IaaS.
+A implantação para um host Docker em um Windows Server 2016 Máquina Virtual (VM) no Azure permite configurar rapidamente ambientes de teste/desenvolvimento/teste. Ele também fornece um local comum para testadores ou usuários de negócios validar o aplicativo. Máquinas virtuais também podem ser infra-estrutura válida como ambientes de produção de serviço (IaaS).
 
 ### <a name="goals"></a>Objetivos
 
@@ -167,13 +168,13 @@ Vários cenários são abordados neste passo a passo.
 
 ### <a name="azure-vms-for-windows-containers"></a>Máquinas virtuais do Azure para contêineres do Windows
 
-Máquinas virtuais do Azure para contêineres do Windows são simplesmente VMs que são baseados no Windows Server 2016, o Windows 10, ou versões posteriores, ambos com o mecanismo do Docker é configurado. Na maioria dos casos, você usará o Windows Server 2016 nas VMs do Azure.
+Máquinas virtuais do Azure para contêineres do Windows são VMs com base no Windows Server 2016, o Windows 10 ou versões posteriores, ambos com o mecanismo do Docker configurado. Na maioria dos casos, o Windows Server 2016 é usado em VMs do Azure.
 
 Atualmente, o Azure fornece uma VM denominada **Windows Server 2016 com contêineres**. Você pode usar essa VM para experimentar o novo recurso de contêiner do Windows Server, com o Windows Server Core ou Nano Server do Windows. Imagens de contêiner do sistema operacional estão instaladas e, em seguida, a máquina virtual está pronta para uso com o Docker.
 
 ### <a name="benefits"></a>Benefícios
 
-Embora os contêineres do Windows podem ser implantados em VMs do local no Windows Server 2016, quando você implanta no Azure, você obterá uma maneira fácil de começar, prontos para uso VMs de contêiner do Windows Server. Você também pode obter um local comum online que seja acessível para testadores e escalabilidade automática por meio de conjuntos de escala de VM do Azure.
+Embora os contêineres do Windows podem ser implantados em VMs do local no Windows Server 2016, quando você implanta no Azure, você obterá uma maneira fácil de começar, prontos para uso VMs de contêiner do Windows Server. Você também pode obter um local comum online que seja acessível para testadores e escalabilidade automática por meio de conjuntos de escala de máquina virtual do Azure.
 
 ### <a name="next-steps"></a>Próximas etapas
 
@@ -217,25 +218,25 @@ O objetivo deste passo a passo é aprender como implantar um aplicativo baseado 
 
 ### <a name="benefits"></a>Benefícios
 
-Há muitos benefícios à implantação em um cluster em Kubernetes. O maior benefício é que você obtenha um ambiente pronto para produção no qual você pode expansão o aplicativo com base no número de instâncias de contêiner, você deseja usar (interna escalabilidade em nós existentes) e com base no número de nós ou VMs no (cluster escalabilidade global do cluster).
+Há muitos benefícios à implantação em um cluster em Kubernetes. O maior benefício é que você obtenha um ambiente pronto para produção no qual você pode expandir o aplicativo com base no número de instâncias de contêiner, você deseja usar (interna escalabilidade em nós existentes) e com base no número de nós ou VMs no (cluster escalabilidade global do cluster).
 
 Serviço de contêiner do Azure otimiza tecnologias e ferramentas de código aberto populares especificamente para o Azure. Você obtém uma solução aberta que oferece portabilidade, para os contêineres e sua configuração de aplicativo. Selecione o tamanho, o número de hosts, e o contêiner de ferramentas orchestrator serviço controla todo o resto.
 
 Kubernetes, os desenvolvedores podem passam da ideia sobre máquinas físicas e virtuais, para o planejamento de uma infra-estrutura centrada no contêiner que facilita os seguintes recursos, entre outros:
 
--   Aplicativos com base em vários contêineres
+- Aplicativos com base em vários contêineres
 
--   Replicação de instâncias de contêiner e o dimensionamento automático horizontal
+- Replicação de instâncias de contêiner e o dimensionamento automático horizontal
 
--   Nomenclatura e descobrir (por exemplo, DNS interno)
+- Nomenclatura e descobrir (por exemplo, DNS interno)
 
--   Balanceamento de carga
+- Balanceamento de carga
 
--   Atualizações móveis
+- Atualizações móveis
 
--   Distribuindo segredos
+- Distribuindo segredos
 
--   Verificações de integridade do aplicativo
+- Verificações de integridade do aplicativo
 
 ## <a name="next-steps"></a>Próximas etapas
 
@@ -251,7 +252,7 @@ Passo a passo completo técnica está disponível no wiki de repositório do Git
 
 ### <a name="overview"></a>Visão geral
 
-Um aplicativo baseado em contêineres do Windows precisará rapidamente usam as plataformas, ainda mais se afastando de VMs de IaaS. Isso é necessário para obter facilmente alta escalabilidade e melhor automatizada escalabilidade e para uma melhoria significativa em automatizada implantações e controle de versão. Você pode alcançar essas metas usando o orchestrator Service Fabric do Azure, que está disponível na nuvem do Azure, mas também disponível para uso local, ou até mesmo em uma nuvem pública diferente.
+Um aplicativo baseado em contêineres do Windows rapidamente precisa usam as plataformas, ainda mais se afastando de VMs de IaaS. Isso é necessário para obter facilmente alta escalabilidade e melhor automatizada escalabilidade e para uma melhoria significativa em automatizada implantações e controle de versão. Você pode alcançar essas metas usando o orchestrator Service Fabric do Azure, que está disponível na nuvem do Azure, mas também disponível para uso local, ou até mesmo em uma nuvem pública diferente.
 
 ### <a name="goals"></a>Objetivos
 
@@ -277,37 +278,37 @@ Um aplicativo baseado em contêineres do Windows precisará rapidamente usam as 
 
 ## <a name="benefits"></a>Benefícios
 
-Os benefícios da implantação em um cluster de malha do serviço são semelhantes aos benefícios de usar Kubernetes. Uma diferença, no entanto, é que o Service Fabric é um ambiente de produção maduro para aplicativos do Windows em comparação comparada Kubernetes, que estava no modo de visualização para contêineres do Windows até logo se enquadram de 2017. (Kubernetes é um ambiente mais maduro para Linux). 
+Os benefícios da implantação em um cluster de malha do serviço são semelhantes aos benefícios de usar Kubernetes. Uma diferença, no entanto, é que o Service Fabric é um ambiente de produção mais maduro para aplicativos do Windows em comparação comparada Kubernetes, que é uma fase de beta para contêineres do Windows em Kubernetes versão 1.9 (de 2017 dezembro). Kubernetes é um ambiente mais maduro para Linux.
 
-O principal benefício do uso do Azure Service Fabric é que você obtenha um ambiente de produção no qual você pode expansão o aplicativo com base no número de instâncias de contêiner, você deseja usar (interna escalabilidade em nós existentes) e, com base no número de nós ou VMs no cluster (escalabilidade global do cluster).
+O principal benefício do uso do Azure Service Fabric é que você obtenha um ambiente de produção no qual você pode expandir o aplicativo com base no número de instâncias de contêiner, você deseja usar (interna escalabilidade em nós existentes) e, com base no número de nós ou VMs no cluster (escalabilidade global do cluster).
 
 Malha do serviço do Azure oferece portabilidade para seus contêineres e sua configuração de aplicativo. Você pode ter uma malha do serviço de cluster no Azure, ou instale-o no local em seu próprio data center. Até você pode instalar um cluster do Service Fabric em uma nuvem diferente, como [AWS Amazon](https://blogs.msdn.microsoft.com/azureservicefabric/2017/05/18/tutorial-how-to-create-a-service-fabric-standalone-cluster-with-aws-ec2-instances/).
 
 Com o Service Fabric, os desenvolvedores podem progresso da ideia sobre máquinas físicas e virtuais para o planejamento de uma infra-estrutura centrada no contêiner que facilita os seguintes recursos, entre outros:
 
--   Aplicativos com base em vários contêineres.
+- Aplicativos com base em vários contêineres.
 
--   Replicação de instâncias de contêiner e dimensionamento automático horizontal.
+- Replicação de instâncias de contêiner e dimensionamento automático horizontal.
 
--   Nomenclatura e descoberta (por exemplo, DNS interno).
+- Nomenclatura e descoberta (por exemplo, DNS interno).
 
--   Balanceamento de carga.
+- Balanceamento de carga.
 
--   Implantar atualizações.
+- Implantar atualizações.
 
--   Distribuindo segredos.
+- Distribuindo segredos.
 
--   Verifica a integridade do aplicativo.
+- Verifica a integridade do aplicativo.
 
 Os seguintes recursos são exclusivos na malha do serviço (em comparação com outras orchestrators):
 
--   Recurso de serviços com monitoração de estado, por meio do modelo de aplicativo de serviços confiáveis.
+- Recurso de serviços com monitoração de estado, por meio do modelo de aplicativo de serviços confiáveis.
 
--   Padrão de atores, por meio do modelo de aplicativo de atores confiável.
+- Padrão de atores, por meio do modelo de aplicativo de atores confiável.
 
--   Implante bare bone processos, além de contêineres do Windows ou Linux.
+- Implante bare bone processos, além de contêineres do Windows ou Linux.
 
--   Atualizações e verificações de integridade avançadas.
+- Atualizações e verificações de integridade avançadas.
 
 ### <a name="next-steps"></a>Próximas etapas
 

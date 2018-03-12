@@ -4,20 +4,21 @@ description: "Arquitetura de Microservices .NET para aplicativos .NET em contêi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f9a30605313c06542fabf9689f700ed726445f57
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bab6e275c93d2cedddf010ab20f98cb8392fa9fa
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Implantar aplicativos .NET existentes como contêineres do Windows
 
 As implantações com base em contêineres do Windows são aplicáveis a aplicativos com otimização de nuvem, aplicativos de nuvem nativo e aplicativos prontos para nuvem DevOps.
 
-Neste guia e nas seções a seguir, vamos nos concentrar em usar contêineres do Windows para *pronta para a nuvem DevOps* aplicativos, quando você comparar e deslocar aplicativos .NET existentes.
+O foco deste guia e nas seções a seguir é usar contêineres do Windows para *pronta para a nuvem DevOps* aplicativos, quando você comparar e deslocar aplicativos .NET existentes.
 
 ## <a name="what-are-containers-linux-or-windows"></a>O que são contêineres? (Linux ou Windows)
 
@@ -57,7 +58,7 @@ Melhorias significativas no controle, portabilidade e agilidade gerar reduções
 
 ![](./media/image6.png)
 
-> **Figura 4 a 6.** Docker implanta contêineres em todas as camadas da nuvem híbrida
+> **Figura 4 a 6.** O Docker implanta contêineres em todas as camadas da nuvem híbrida
 
 A outra familiarizado com máquinas virtuais, contêineres podem parecer ser bastante semelhante. Um contêiner executa um sistema operacional, tem um sistema de arquivos e pode ser acessado por meio de uma rede, assim como um sistema de computador físico ou virtual. No entanto, a tecnologia e os conceitos por trás de contêineres são muito diferentes das máquinas virtuais. Do ponto de vista do desenvolvedor, um contêiner deve ser tratado mais como um único processo. Na verdade, um contêiner tem um único ponto de entrada para um processo.
 
@@ -81,9 +82,9 @@ Portanto, um dos principais benefícios dos contêineres do Windows é que eles 
 
 Dada a diversidade de sistemas operacionais que são suportados pelo Docker, bem como as diferenças entre o .NET Framework e o .NET Core, você deve ter como destino um sistema operacional específico e versões específicas com base na estrutura que você está usando.
 
-Para Windows, você pode usar o Windows Server Core ou Nano Server do Windows. Essas versões do Windows fornecem características diferentes (como o IIS em vez de um servidor web auto-hospedado como Kestrel) que podem ser necessários para aplicativos do .NET Framework ou no .NET Core.
+Para o Windows, é possível usar o Windows Server Core ou o Windows Nano Server. Essas versões do Windows fornecem características diferentes (como o IIS em vez de um servidor web auto-hospedado como Kestrel) que podem ser necessários para aplicativos do .NET Framework ou no .NET Core.
 
-Para o Linux, várias distribuições estão disponíveis e com suporte oficial imagens Docker .NET (como Debian).
+Para Linux, várias distribuições estão disponíveis e há compatibilidade com elas nas imagens oficiais do .NET Docker (como Debian).
 
 Figura 4-7 mostra as versões do sistema operacional que você pode direcionar, dependendo da versão do aplicativo do .NET Framework.
 

@@ -2,7 +2,8 @@
 title: "ref (Referência de C#)"
 ms.date: 05/30/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - ref_CSharpKeyword
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
 ms.assetid: b8a5e59c-907d-4065-b41d-95bf4273c0bd
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0be0eee67b507e2a209c9caaa3eb14cc60e8a763
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9b1e926bd1d9c3a8e0525ed02d102f26e6ec9abd
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="ref-c-reference"></a>ref (Referência de C#)
 
@@ -82,19 +83,19 @@ Um valor retornado por referência é definido usando a palavra-chave `ref`:
    ```csharp
    public ref decimal GetCurrentValue()
    ``` 
-- Antes de cada instrução `return` no método. Por exemplo:
+- Entre o token `return` e a variável retornada em uma instrução `return` no método. Por exemplo:
  
    ```csharp
-   ref return Decimal.Zero;
+   return ref DecimalArray[0];
    ``` 
 
-Em ordem para o chamador modificar o estado do objeto, a referência retornar valor deve ser armazenado em uma variável que é definida explicitamente como um [referência local](#ref-locals). 
+Para que o chamador modifique o estado do objeto, o valor retornado de referência deve ser armazenado em uma variável que é definida explicitamente como um [ref local](#ref-locals). 
 
 Para obter um exemplo, consulte [Um exemplo de ref returns e ref locals](#a-ref-returns-and-ref-locals-example)
 
 ## <a name="ref-locals"></a>Ref locals
 
-Uma variável de ref local é usada para fazer referência a valores retornados usando `ref return`.  Uma variável de ref local deve ser inicializada e atribuída a um valor retornado ref local. Todas as modificações ao valor do ref local são refletidas no estado do objeto cujo método retornou o valor por referência.
+Uma variável de ref local é usada para fazer referência a valores retornados usando `return ref`.  Uma variável de ref local deve ser inicializada e atribuída a um valor retornado ref local. Todas as modificações ao valor do ref local são refletidas no estado do objeto cujo método retornou o valor por referência.
 
 Você define um ref local usando a palavra-chave `ref` antes da declaração de variável, bem como imediatamente antes da chamada para o método que retorna o valor por referência. 
 

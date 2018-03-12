@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 791c86b8f833c6b1a8acb6da3b03cfccdafca0e5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: f5641eba212cfdeb95c0a52a82a28b5c2d3e9aee
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>Criando meu primeiro serviço WCF baseado em declarações
 ## <a name="applies-to"></a>Aplica-se a  
@@ -48,7 +50,7 @@ ms.lasthandoff: 01/19/2018
   
  O AD FS 2.0 faz parte do Windows Server R2 e pode ser usado como um STS para cenários locais. O Controle de Acesso do Azure Active Directory (também conhecido como Serviço de Controle de Acesso ou ACS) é um serviço de nuvem, oferecido como parte do Microsoft Azure. Para fins de testes ou educativos, você também pode usar outros STSs para criar seus aplicativos com reconhecimento de reivindicações. Por exemplo, você pode usar o STS de Desenvolvimento Local que faz parte da [Ferramenta de Identidade e Acesso para o Visual Studio](http://go.microsoft.com/fwlink/?LinkID=245849) (http://go.microsoft.com/fwlink/?LinkID=245849), que está disponível online gratuitamente.  
   
- Para criar seu primeiro serviço WCF baseado em declarações usando o WIF, consulte [Como criar um serviço WCF baseado em declarações usando o WIF](http://msdn.microsoft.com/library/431e6415-62ed-4a9f-af03-f14d2b4dfe6d).  
+ Para criar seu primeiro serviço WCF com reconhecimento de declaração usando o WIF, consulte [como: habilitar o WIF para um aplicativo de serviço Web WCF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md).
   
 ## <a name="see-also"></a>Consulte também  
  [Introdução ao WIF](../../../docs/framework/security/getting-started-with-wif.md)
