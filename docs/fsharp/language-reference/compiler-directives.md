@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 93aef07a-6747-4ce4-a10f-a05168978af6
-ms.openlocfilehash: b4305d24163f9b23631d5efb6e838f55127cd9f5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c7ec056f407f3af34528205a5abb1cdef7d43fef
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="compiler-directives"></a>Diretivas de compilador
 
@@ -29,11 +29,11 @@ A tabela a seguir lista as diretivas de pré-processador que estão disponíveis
 
 |Diretiva|Descrição|
 |---------|-----------|
-|`#if`*símbolo*|Dá suporte à compilação condicional. Código na seção após o `#if` é incluído se o *símbolo* está definido.|
+|`#if` *symbol*|Dá suporte à compilação condicional. Código na seção após o `#if` é incluído se o *símbolo* está definido.|
 |`#else`|Dá suporte à compilação condicional. Marca uma seção de código para incluir se o símbolo usado com anterior `#if` não está definido.|
 |`#endif`|Dá suporte à compilação condicional. Marca o final de uma seção condicional de código.|
-|`#`[linha] *int*,<br/>`#`[linha] *int* *cadeia de caracteres*,<br/>`#`[linha] *int* *cadeia de caracteres textuais*|Indica o nome original da fonte código linha e arquivo, para depuração. Esse recurso é fornecido para as ferramentas que geram um código de origem F #.|
-|`#nowarn`*warningcode*|Desabilita um aviso do compilador ou avisos. Para desabilitar um aviso, localize o número da saída do compilador e incluí-lo entre aspas. Omita o prefixo "FS". Para desabilitar vários números de aviso na mesma linha, incluir cada número de aspas e separe cada cadeia de caracteres por um espaço. Por exemplo:
+|`#`[linha] *int*,<br/>`#`[linha] *int* *cadeia de caracteres*,<br/>`#`[line] *int* *verbatim-string*|Indica o nome original da fonte código linha e arquivo, para depuração. Esse recurso é fornecido para as ferramentas que geram um código de origem F #.|
+|`#nowarn` *warningcode*|Desabilita um aviso do compilador ou avisos. Para desabilitar um aviso, localize o número da saída do compilador e incluí-lo entre aspas. Omita o prefixo "FS". Para desabilitar vários números de aviso na mesma linha, incluir cada número de aspas e separe cada cadeia de caracteres por um espaço. Por exemplo:
 
 `#nowarn "9" "40"`
 
@@ -75,7 +75,7 @@ A tabela a seguir lista a diretiva de compilador que está disponível em F #.
 
 |Diretiva|Descrição|
 |---------|-----------|
-|`#light`["on"|"off"]|Habilita ou desabilita a sintaxe leve, para compatibilidade com outras versões do ML. Por padrão, a sintaxe leve está habilitado. Sintaxe detalhada está sempre habilitado. Portanto, você pode usar a sintaxe leve e sintaxe detalhada. A diretiva `#light` por si só é equivalente a `#light "on"`. Se você especificar `#light "off"`, você deve usar a sintaxe detalhada para todas as construções de linguagem. Sintaxe na documentação do F # é apresentado com a suposição de que você está usando a sintaxe leve. Para obter mais informações, consulte [sintaxe detalhada](verbose-syntax.md).|
+|`#light` ["on"&#124;"off"]|Habilita ou desabilita a sintaxe leve, para compatibilidade com outras versões do ML. Por padrão, a sintaxe leve está habilitado. Sintaxe detalhada está sempre habilitado. Portanto, você pode usar a sintaxe leve e sintaxe detalhada. A diretiva `#light` por si só é equivalente a `#light "on"`. Se você especificar `#light "off"`, você deve usar a sintaxe detalhada para todas as construções de linguagem. Sintaxe na documentação do F # é apresentado com a suposição de que você está usando a sintaxe leve. Para obter mais informações, consulte [sintaxe detalhada](verbose-syntax.md).|
 Para diretivas do interpretador (fsi.exe), consulte [de programação com F # interativo](../tutorials/fsharp-interactive/index.md).
 
 
