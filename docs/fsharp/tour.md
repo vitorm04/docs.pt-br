@@ -4,17 +4,17 @@ description: "Examine alguns dos principais recursos do F # linguagem em que est
 keywords: "o Visual f #, f #, funcional programação .NET, tour"
 author: cartermp
 ms.author: phcart
-ms.date: 01/24/2017
+ms.date: 02/28/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 49775139-082e-442f-b5a2-dd402399b5d2
-ms.openlocfilehash: c027e6b71f35fc3b58750eb164124de145244825
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7327573a25aa62af28570b4a8662235f3e41a972
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="tour-of-f"></a>Tour do F # #
 
@@ -22,20 +22,13 @@ ms.lasthandoff: 10/18/2017
 
 Há dois principais conceitos em F #: tipos e funções.  Este tour concentrar recursos da linguagem que se enquadram nesses dois conceitos.
 
-## <a name="how-to-run-the-code-samples"></a>Como executar os exemplos de código
-
->[!NOTE]
-Duas opções para executar os exemplos de código são [tente F #](http://www.tryfsharp.org/Create) (requer o Silverlight) e [F # para blocos de anotações do Azure](https://notebooks.azure.com/Microsoft/libraries/fsharp/html/FSharp%20for%20Azure%20Notebooks.ipynb) no Microsoft Azure.
-
-A maneira mais rápida para executar esses exemplos de código é usar [F # interativo](tutorials/fsharp-interactive/index.md).  Basta copiar/colar os exemplos de código e executá-los lá.  Como alternativa, você pode configurar um projeto para compilar e executar o código como um aplicativo de Console.  Consulte o [começar](./get-started/index.md) seção para saber mais.
-
 ## <a name="functions-and-modules"></a>Módulos e funções
 
 As partes mais fundamentais de qualquer programa do F # são ***funções*** organizados em ***módulos***.  [Funções](language-reference/functions/index.md) realizar o trabalho em entradas para produzir saídas, e eles estão organizados sob [módulos](language-reference/modules.md), que são a principal maneira de agrupar itens em F #.  Eles são definidos usando o [ `let` associação](language-reference/functions/let-bindings.md), que dê um nome de função e definir seus argumentos.
 
 [!code-fsharp[BasicFunctions](../../samples/snippets/fsharp/tour.fs#L101-L133)]
 
-`let`as associações são também como associar um valor para um nome semelhante a uma variável em outros idiomas.  `let`as associações são ***imutável*** por padrão, que significa que quando um valor ou uma função é associada a um nome, não pode ser alterado no local.  Isso é diferente de variáveis em outros idiomas, que são ***mutável***, que significa que seus valores pode ser alterada em qualquer ponto no tempo.  Se você precisar de uma associação mutável, você pode usar `let mutable ...` sintaxe.
+`let` as associações são também como associar um valor para um nome semelhante a uma variável em outros idiomas.  `let` as associações são ***imutável*** por padrão, que significa que quando um valor ou uma função é associada a um nome, não pode ser alterado no local.  Isso é diferente de variáveis em outros idiomas, que são ***mutável***, que significa que seus valores pode ser alterada em qualquer ponto no tempo.  Se você precisar de uma associação mutável, você pode usar `let mutable ...` sintaxe.
 
 [!code-fsharp[Immutability](../../samples/snippets/fsharp/tour.fs#L75-L94)]
 
