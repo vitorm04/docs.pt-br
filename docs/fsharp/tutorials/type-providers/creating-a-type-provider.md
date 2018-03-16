@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: a2db07c4f5688aece212681af40d69c377f6fa4a
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: 30d1c20d66fd0a193c05c97ee726a886f98356ad
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tutorial-creating-a-type-provider"></a>Tutorial: Criando um provedor de tipos
 
@@ -22,11 +22,11 @@ O mecanismo de provedor de tipo em F # é uma parte significativa de seu suporte
 
 O ecossistema de F # contém uma variedade de provedores de tipos para serviços de dados usados na Internet e enterprise. Por exemplo:
 
-- [FSharp.Data](https://fsharp.github.io/FSharp.Data/) inclui provedores de tipos de formatos de documentos JSON, XML, CSV e HTML
+- [FSharp.Data](https://fsharp.github.io/FSharp.Data/) inclui provedores de tipos de formatos de documentos JSON, XML, CSV e HTML.
 
 - [SQLProvider](https://fsprojects.github.io/SQLProvider/) fornece acesso fortemente tipado para bancos de dados SQL por meio de um mapeamento de objeto e F # LINQ consultas em relação a essas fontes de dados.
 
-- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) tem um conjunto de provedores de tipos de com, a hora de pilha verificada a incorporação de T-SQL em F #
+- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) tem um conjunto de provedores de tipo de tempo de compilação verificada incorporação de T-SQL em F #.
 
 - [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/) é um conjunto mais antigo de provedores de tipos para uso apenas com a programação do .NET Framework para acessar os serviços de dados SQL, Entity Framework, OData e WSDL.
 
@@ -62,7 +62,7 @@ Provedores de tipos são mais adequados para situações em que o esquema é est
 
 ## <a name="a-simple-type-provider"></a>Um provedor de tipo simples
 
-Este exemplo é Samples.HelloWorldTypeProvider semelhante aos exemplos no `examples` diretório do [o SDK de provedor do tipo F #](https://github.com/fsprojects/FSharp.TypeProviders.SDK/). O provedor torna disponível um "espaço de tipo" que contém 100 tipos apagados, como mostra o seguinte código usando a sintaxe de assinatura do F # e omitir os detalhes para todos, exceto `Type1`. Para obter mais informações sobre tipos apagados, consulte [detalhes sobre apagados fornecido tipos](#details-about-erased-provided-types) mais adiante neste tópico.
+Este exemplo é Samples.HelloWorldTypeProvider, semelhante aos exemplos no `examples` diretório do [o SDK de provedor do tipo F #](https://github.com/fsprojects/FSharp.TypeProviders.SDK/). O provedor torna disponível um "espaço de tipo" que contém 100 tipos apagados, como mostra o seguinte código usando a sintaxe de assinatura do F # e omitir os detalhes para todos, exceto `Type1`. Para obter mais informações sobre tipos apagados, consulte [detalhes sobre apagados fornecido tipos](#details-about-erased-provided-types) mais adiante neste tópico.
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -135,11 +135,11 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
   // And add them to the namespace
   do this.AddNamespace(namespaceName, types)
 
-  [<assembly:TypeProviderAssembly>] 
-  do()
+[<assembly:TypeProviderAssembly>] 
+do()
 ```
 
-Para usar esse provedor, abra uma instância separada do Visual Studio 2012, criar um script de F # e, em seguida, adicione uma referência para o provedor do seu script usando #r como o código a seguir mostra:
+Para usar esse provedor, abra uma instância separada do Visual Studio, crie um script de F # e, em seguida, adicione uma referência para o provedor do seu script usando #r como o código a seguir mostra:
 
 ```fsharp
 #r @".\bin\Debug\Samples.HelloWorldTypeProvider.dll"
@@ -451,13 +451,13 @@ A capacidade de parametrizar os provedores de tipos por dados estáticos permite
 
 ### <a name="type-checked-regex-provider"></a>Tipo verificado provedor Regex
 
-Imagine que você deseja implementar um provedor de tipos de expressões regulares que encapsula o .NET `System.Text.RegularExpressions.Regex` bibliotecas em uma interface que fornece as seguintes garantias do tempo de compilação:
+Imagine que você deseja implementar um provedor de tipos de expressões regulares que encapsula o .NET <xref:System.Text.RegularExpressions.Regex> bibliotecas em uma interface que fornece as seguintes garantias do tempo de compilação:
 
 - Verificando se uma expressão regular é válida.
 
 - Fornecendo propriedades nomeadas em correspondências com base em quaisquer nomes de grupo na expressão regular.
 
-Esta seção mostra como usar provedores de tipos para criar um `RegExProviderType` tipo que o padrão de expressão regular parametriza para fornecer esses benefícios. O compilador relatará um erro se o padrão fornecido não é válido, e o provedor de tipo pode extrair os grupos do padrão para que você pode acessá-los usando propriedades de correspondências nomeados. Quando você cria um provedor de tipos, você deve considerar deve ser a aparência de sua API exposto aos usuários finais e como esse design se traduzirá em código .NET. O exemplo a seguir mostra como usar esse uma API para obter os componentes do código de área:
+Esta seção mostra como usar provedores de tipos para criar um `RegexTyped` tipo que o padrão de expressão regular parametriza para fornecer esses benefícios. O compilador relatará um erro se o padrão fornecido não é válido, e o provedor de tipo pode extrair os grupos do padrão para que você pode acessá-los usando propriedades de correspondências nomeados. Quando você cria um provedor de tipos, você deve considerar deve ser a aparência de sua API exposto aos usuários finais e como esse design se traduzirá em código .NET. O exemplo a seguir mostra como usar esse uma API para obter os componentes do código de área:
 
 ```fsharp
 type T = RegexTyped< @"(?<AreaCode>^\d{3})-(?<PhoneNumber>\d{3}-\d{4}$)">
@@ -480,7 +480,7 @@ Observe os seguintes pontos:
 
 - O `RegexTyped` construtor resulta em uma chamada para o construtor de Regex, passando o argumento de tipo estático para o padrão.
 
-- Os resultados de `Match` método são representados pelo padrão `System.Text.RegularExpressions.Match` tipo.
+- Os resultados de `Match` método são representados pelo padrão <xref:System.Text.RegularExpressions.Match> tipo.
 
 - Cada grupo denominado resulta em uma propriedade fornecida e acessar a propriedade resulta em um uso de um indexador em uma correspondência `Groups` coleção.
 
@@ -552,7 +552,7 @@ Observe os seguintes pontos:
 
 - Você usa `obj` como o tipo base do método, mas você usará uma `Regex` objeto como a representação de tempo de execução desse tipo, como mostra o exemplo seguinte.
 
-- A chamada para o `Regex` construtor lança um `System.ArgumentException` quando uma expressão regular não é válida. O compilador captura essa exceção e reportará uma mensagem de erro para o usuário em tempo de compilação ou no editor do Visual Studio. Essa exceção permite que as expressões regulares a ser validado sem executar um aplicativo.
+- A chamada para o `Regex` construtor lança um <xref:System.ArgumentException> quando uma expressão regular não é válida. O compilador captura essa exceção e reportará uma mensagem de erro para o usuário em tempo de compilação ou no editor do Visual Studio. Essa exceção permite que as expressões regulares a ser validado sem executar um aplicativo.
 
 O tipo definido acima ainda não está útil porque ele não contém quaisquer propriedades ou métodos significativos. Primeiro, adicione um estático `IsMatch` método:
 
@@ -583,7 +583,7 @@ let matchTy =
 ty.AddMember matchTy
 ```
 
-Você, em seguida, adicionar uma propriedade para o tipo de correspondência para cada grupo. Em tempo de execução, uma correspondência é representada como um `System.Text.RegularExpressions.Match` valor, portanto, as aspas que define a propriedade devem usar o `System.Text.RegularExpressions.Match.Groups` propriedade para o grupo relevantes indexada.
+Você, em seguida, adicionar uma propriedade para o tipo de correspondência para cada grupo. Em tempo de execução, uma correspondência é representada como um <xref:System.Text.RegularExpressions.Match> valor, portanto, as aspas que define a propriedade devem usar o <xref:System.Text.RegularExpressions.Match.Groups> propriedade para o grupo relevantes indexada.
 
 ```fsharp
 for group in r.GetGroupNames() do
@@ -756,13 +756,11 @@ Com frequência, convém provedores de tipo para apresentar as APIs com base em 
 Como um exemplo simples, considere um provedor de tipo para acessar dados científicos no formato de valor separado por vírgula (CSV). Esta seção pressupõe que os arquivos CSV contém uma linha de cabeçalho seguida pelos dados de ponto flutuante, como mostra a tabela a seguir:
 
 
-```
-|Distance (meter)|Time (second)|
+|Distância (medidor)|Hora (segundos)|
 |----------------|-------------|
 |50.0|3.7|
 |100.0|5.2|
 |150.0|6.4|
-```
 
 Esta seção mostra como fornecer um tipo que você pode usar para obter as linhas com um `Distance` propriedade do tipo `float<meter>` e um `Time` propriedade do tipo `float<second>`. Para simplificar, as seguintes suposições são feitas:
 
@@ -788,7 +786,7 @@ printfn "%f" (float time)
 Nesse caso, o compilador deve converter essas chamadas em algo parecido com o exemplo a seguir:
 
 ```fsharp
-let info = new MiniCsvFile("info.csv")
+let info = new CsvFile("info.csv")
 for row in info.Data do
 let (time:float) = row.[1]
 printfn "%f" (float time)
@@ -1045,9 +1043,10 @@ Essas versões são usadas para criar espaços de sob demanda de tipos.
 
 ### <a name="providing-array-types-and-generic-type-instantiations"></a>Fornece tipos de matriz e instâncias de tipo genérico
 
-Tornar membros fornecidos (cujas assinaturas incluem tipos de matriz byref tipos e instâncias de tipos genéricos) usando o normal `MakeArrayType`, `MakePointerType`, e `MakeGenericType` em qualquer instância de System. Type, incluindo `ProvidedTypeDefinitions`.
+Tornar membros fornecidos (cujas assinaturas incluem tipos de matriz byref tipos e instâncias de tipos genéricos) usando o normal `MakeArrayType`, `MakePointerType`, e `MakeGenericType` em qualquer instância do <xref:System.Type>, incluindo `ProvidedTypeDefinitions`.
 
-Observação: Em alguns casos você talvez precise usar o auxiliar `ProvidedTypeBuilder.MakeGenericType`.  Consulte a documentação do SDK do provedor de tipo para obter mais detalhes.
+> [!NOTE]
+> Em alguns casos você talvez precise usar o auxiliar `ProvidedTypeBuilder.MakeGenericType`.  Consulte o [documentação do SDK do provedor de tipo](https://github.com/fsprojects/FSharp.TypeProviders.SDK/blob/master/README.md#explicit-construction-of-code-makegenerictype-makegenericmethod-and-uncheckedquotations) para obter mais detalhes.
 
 ### <a name="providing-unit-of-measure-annotations"></a>Fornecendo a unidade de medida anotações
 
@@ -1101,7 +1100,7 @@ Até agora, este documento explicou como fornecer tipos apagados. Você também 
 ```fsharp
 open Microsoft.FSharp.TypeProviders 
 
-type Service = ODataService<" https://services.odata.org/Northwind/Northwind.svc/">
+type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/">
 ```
 
 O código auxiliar 0,2 ProvidedTypes que faz parte da versão do F # 3.0 tem somente suporte limitado para fornecer tipos gerados. As instruções a seguir devem ser verdadeiras para uma definição de tipo gerado:
