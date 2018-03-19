@@ -66,6 +66,7 @@
 #### [Como personalizar uma política de cache baseada em tempo](how-to-customize-a-time-based-cache-policy.md)
 #### [Como definir uma política de cache para uma solicitação](how-to-set-cache-policy-for-a-request.md)
 ## [Segurança na programação de rede](security-in-network-programming.md)
+### [Melhores práticas do TLS (protocolo TLS)](tls.md)
 ### [Usando o protocolo SSL](using-secure-sockets-layer.md)
 #### [Seleção e validação de certificado](certificate-selection-and-validation.md)
 ### [Autenticação da Internet](internet-authentication.md)
