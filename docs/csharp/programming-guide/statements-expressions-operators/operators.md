@@ -2,21 +2,22 @@
 title: "Operadores (Guia de Programação em C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - operators [C#]
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8e270b683862502c218ff248de76819ecea83dc8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 267022b8c6b7f8faf301cae1a62f4dfaa8249f96
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="operators-c-programming-guide"></a>Operadores (Guia de Programação em C#)
 Em C#, um *operador* é um elemento de programa aplicado a um ou mais *operandos* em uma expressão ou instrução. Os operadores que usam um operando, como o operador de incremento (`++`) ou `new`, são referidos como operadores *unários*. Os operadores que usam dois operandos, como operadores aritméticos (`+`,`-`,`*`,`/`), são referidos como operadores *binários*. Um operador, o operador condicional (`?:`), usa três operandos e é o único operador ternário em C#.  
@@ -65,7 +66,7 @@ Em C#, um *operador* é um elemento de programa aplicado a um ou mais *operandos
 |----------------|-----------------|  
 |[+](../../../csharp/language-reference/operators/addition-operator.md)x|Identidade|  
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|Negação|  
-|[!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|Negação lógica|  
+|[\!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|Negação lógica|  
 |[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|Negação bit a bit|  
 |[++](../../../csharp/language-reference/operators/increment-operator.md)x|Pré-incremento|  
 |[--](../../../csharp/language-reference/operators/decrement-operator.md)x|Pré-decremento|  

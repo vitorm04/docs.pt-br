@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 3f3598fce5abeb67b772f51ed6f93e6ada4c92d0
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 374ac9917464a7e83566440abab10eda8a9c8683
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="whats-new-in-c-7"></a>Novidades no C# 7
 
@@ -157,7 +157,7 @@ Os descartes são compatíveis com os seguintes cenários:
 
 * Ao desconstruir tuplas ou tipos definidos pelo usuário.
 
-* Ao chamar métodos com parâmetros [out](../language-reference/keywords/out.md).
+* Ao chamar métodos com parâmetros [out](../language-reference/keywords/out-parameter-modifier.md).
 
 * Em uma operação de correspondência de padrões com as instruções [is](../language-reference/keywords/is.md) e [switch](../language-reference/keywords/switch.md).
 
@@ -359,7 +359,7 @@ Anteriormente, essas inicializações precisavam estar em um construtor, com as 
 
 ## <a name="generalized-async-return-types"></a>Tipos de retorno assíncrono generalizado
 
-Retornar um objeto `Task` de métodos assíncronos pode introduzir afunilamentos de desempenho em determinados caminhos. `Task` é um tipo de referência, portanto, usá-lo significa alocar um objeto. Em casos em que um método declarado com o modificador `async` retorna um resultado armazenado em cache ou é concluído de forma síncrona, as alocações extras podem se tornar um custo de tempo significativo em seções críticas de desempenho de código. Ele poderá se tornar muito caro se essas alocações ocorrerem em loops rígidos.
+Retornar um objeto `Task` de métodos assíncronos pode introduzir gargalos de desempenho em determinados caminhos. `Task` é um tipo de referência, portanto, usá-lo significa alocar um objeto. Em casos em que um método declarado com o modificador `async` retorna um resultado armazenado em cache ou é concluído de forma síncrona, as alocações extras podem se tornar um custo de tempo significativo em seções críticas de desempenho de código. Ele poderá se tornar muito caro se essas alocações ocorrerem em loops rígidos.
 
 O novo recurso de linguagem significa que os métodos assíncronos podem retornar outros tipos além de `Task`, `Task<T>` e `void`. O tipo retornado ainda deve satisfazer o padrão assíncrono, o que significa que um método `GetAwaiter` deve ser acessível. Como um exemplo concreto, o tipo `ValueTask` foi adicionado ao .NET Framework para usar esse novo recurso de linguagem: 
 
