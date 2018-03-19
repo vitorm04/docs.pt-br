@@ -17,10 +17,10 @@ manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 75a39fa1d0301a48cec7ad61c968ee3fc82d189c
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="messaging-protocols"></a>Protocolos de mensagens
 O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pilha de canais emprega canais de codificação e transporte para transformar a representação interna de mensagem em seu formato de transmissão e enviá-lo usando um transporte particular. O transporte mais comuns usado para interoperabilidade de serviços da Web é HTTP e as codificações mais comuns usadas pelos serviços da Web são baseadas em XML SOAP 1.1, SOAP 1.2 e mecanismo de otimização de transmissão mensagem (MTOM).  
@@ -30,8 +30,8 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pilha de canais empreg
 |Documento de especificação /|Link|  
 |-----------------------------|----------|  
 |HTTP 1.1|http://www.ietf.org/rfc/rfc2616.txt|  
-|Ligação de SOAP 1.1 HTTP|http://www.w3.org/TR/2000/NOTE-SOAP-20000508/, Section 7|  
-|SOAP 1.2 associação de HTTP|http://www.w3.org/TR/soap12-part2/, Section 7|  
+|Ligação de SOAP 1.1 HTTP|http://www.w3.org/TR/2000/NOTE-SOAP-20000508/, Seção 7|  
+|SOAP 1.2 associação de HTTP|http://www.w3.org/TR/soap12-part2/, Seção 7|  
   
  Este tópico aborda [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] detalhes de implementação para os seguintes protocolos que <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> e <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> empregar.  
   
@@ -90,7 +90,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
      O `mustUnderstand` difere do valor do cabeçalho entre SOAP 1.1 e SOAP 1.2. Basic Profile 1.1 requer que o `mustUnderstand` valor ser 0 ou 1 para mensagens SOAP 1.1. SOAP 1.2 permite 0, 1, `false`, e `true` como valores, mas recomenda emitindo uma representação canônica `xs:boolean` valores (`false`, `true`).  
   
--   B1112: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] emite `mustUnderstand` valores 0 e 1 para versões de SOAP 1.1 e SOAP 1.2 do envelope SOAP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]aceita o espaço de valor inteiro de `xs:boolean` para o `mustUnderstand` cabeçalho (0, 1, `false`, `true`)  
+-   B1112: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] emite `mustUnderstand` valores 0 e 1 para versões de SOAP 1.1 e SOAP 1.2 do envelope SOAP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aceita o espaço de valor inteiro de `xs:boolean` para o `mustUnderstand` cabeçalho (0, 1, `false`, `true`)  
   
 #### <a name="soap-faults"></a>Falhas de SOAP  
  A seguir está uma lista de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-implementações específicas de falhas SOAP.  
@@ -132,7 +132,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  Todas as versões do WS-Addressing que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa usa referências de ponto de extremidade para descrever os pontos de extremidade.  
   
 #### <a name="endpoint-references-and-ws-addressing-versions"></a>Referências de ponto de extremidade e WS-Addressing versões  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa vários dos protocolos de infraestrutura que usam o WS-Addressing e, em particular a `EndpointReference` elemento e `W3C.WsAddressing.EndpointReferenceType` classe (por exemplo, WS-ReliableMessaging, WS-SecureConversation e WS-Trust). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oferece suporte ao uso de qualquer versão do WS-Addressing com outros protocolos de infraestrutura. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]suportam a pontos de extremidade de uma versão do WS-Addressing por ponto de extremidade.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa vários dos protocolos de infraestrutura que usam o WS-Addressing e, em particular a `EndpointReference` elemento e `W3C.WsAddressing.EndpointReferenceType` classe (por exemplo, WS-ReliableMessaging, WS-SecureConversation e WS-Trust). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oferece suporte ao uso de qualquer versão do WS-Addressing com outros protocolos de infraestrutura. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] suportam a pontos de extremidade de uma versão do WS-Addressing por ponto de extremidade.  
   
  Para R3111, o namespace para o `EndpointReference` elemento ou tipo usado em mensagens trocadas com um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ponto de extremidade deve corresponder à versão do WS-Addressing implementada por este ponto de extremidade.  
   
@@ -183,7 +183,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  B3221: Quando estiver configurado para usar 08/2004 do WS-Addressing, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pontos de extremidade não fazem distinção entre propriedades de referência e parâmetros de referência de processamento.  
   
 ### <a name="message-exchange-patterns"></a>Padrões de troca de mensagem  
- A sequência de mensagens envolvidas na invocação de operação de serviço da Web é conhecida como o *padrão de troca de mensagem*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]padrões de troca unidirecional dá suporte à solicitação-resposta e mensagens duplex. Esta seção explica WS-Addressing requisitos na mensagem de processamento dependendo do padrão de troca de mensagem que está sendo usado.  
+ A sequência de mensagens envolvidas na invocação de operação de serviço da Web é conhecida como o *padrão de troca de mensagem*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] padrões de troca unidirecional dá suporte à solicitação-resposta e mensagens duplex. Esta seção explica WS-Addressing requisitos na mensagem de processamento dependendo do padrão de troca de mensagem que está sendo usado.  
   
  Ao longo desta seção, o solicitante envia a primeira mensagem e o respondedor recebe a primeira mensagem.  
   
@@ -207,7 +207,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
 -   R3322: Quando 08/2004 do WS-Addressing é usado, `ReplyTo` também deve ser incluído na solicitação.  
   
--   R3323: Quando WS-Addressing 1.0 é usada e `ReplyTo` é não está presente na solicitação, uma referência de ponto de extremidade padrão com a propriedade [address] igual a "http://www.w3.org/2005/08/addressing/anonymous" é usada.  
+-   R3323: Quando o WS-Addressing 1.0 é usado e `ReplyTo` não está presente na solicitação, uma referência de ponto de extremidade padrão com a propriedade [address] igual a "http://www.w3.org/2005/08/addressing/anonymous" é usado.  
   
 -   R3324: O solicitante deve incluir `wsa:To`, `wsa:Action`, e `wsa:RelatesTo` cabeçalhos na mensagem de resposta, bem como os cabeçalhos para todos os parâmetros de referência ou referência propriedades (ou ambos) especificado pelo `ReplyTo` referência de ponto de extremidade do solicitação.  
   
@@ -304,11 +304,11 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  A instrução anterior gera os seguintes requisitos `wsa:ReplyTo` cabeçalho para mensagens de solicitação:  
   
--   R3514: Solicitar mensagens enviadas para um ponto de extremidade devem ter um `ReplyTo` cabeçalho com o `[address]` propriedade não é igual a "http://www.w3.org/2005/08/addressing/anonymous" se o ponto de extremidade usa uma associação de 1. x HTTP WSDL 1.1 SOAP e tem uma alternativa de política com um `wsap10:UsingAddressing` ou `wsap:UsingAddressing` associado a asserção `cdp:CompositeDuplex` anexado.  
+-   R3514: Solicitar mensagens enviadas para um ponto de extremidade devem ter um `ReplyTo` cabeçalho com o `[address]` propriedade não é igual a "http://www.w3.org/2005/08/addressing/anonymous" se o ponto de extremidade usa uma associação de 1. x HTTP WSDL 1.1 SOAP e tem uma alternativa de política com um `wsap10:UsingAddressing` ou `wsap:UsingAddressing` asserção juntamente com `cdp:CompositeDuplex` anexado.  
   
--   R3515: Solicitar mensagens enviadas para um ponto de extremidade devem ter um `ReplyTo` cabeçalho com o `[address]` propriedade igual a "http://www.w3.org/2005/08/addressing/anonymous" ou não tem um `ReplyTo` cabeçalho todos, se o ponto de extremidade usa um WSDL 1.1 SOAP HTTP de 1. x associação e tem uma alternativa de política com `wsap10:UsingAddressing` asserção e nenhum `cdp:CompositeDuplex` asserção anexada.  
+-   R3515: Solicitar mensagens enviadas para um ponto de extremidade devem ter um `ReplyTo` cabeçalho com o `[address]` propriedade igual a "http://www.w3.org/2005/08/addressing/anonymous", ou não tem um `ReplyTo` cabeçalho todos, se o ponto de extremidade usa uma associação de 1. x HTTP WSDL 1.1 SOAP e tem uma alternativa de política com `wsap10:UsingAddressing` asserção e nenhum `cdp:CompositeDuplex` asserção anexada.  
   
--   R3516: Solicitar mensagens enviadas para um ponto de extremidade devem ter um `ReplyTo` cabeçalho com um `[address]` propriedade igual a "http://www.w3.org/2005/08/addressing/anonymous" se o ponto de extremidade usa uma associação de 1. x HTTP WSDL 1.1 SOAP e tem uma alternativa de política com `wsap:UsingAddressing` asserção e nenhum `cdp:CompositeDuplex` asserção anexada.  
+-   R3516: Solicitar mensagens enviadas para um ponto de extremidade devem ter um `ReplyTo` cabeçalho com um `[address]` propriedade igual a "http://www.w3.org/2005/08/addressing/anonymous" se o ponto de extremidade usa uma associação de 1. x HTTP WSDL 1.1 SOAP e tem uma alternativa de política com `wsap:UsingAddressing` asserção e nenhum `cdp:CompositeDuplex`asserção anexada.  
   
  A especificação WS-addressing WSDL tenta descrever associações de protocolo semelhante com a introdução de um elemento `<wsaw:Anonymous/>` com três valores textuais (obrigatórios, opcionais e proibidos) para indicar requisitos sobre o `wsa:ReplyTo` cabeçalho (seção 3.2). Infelizmente, essa definição de elemento não é particularmente útil como uma declaração no contexto do WS-Policy, porque ele requer extensões específicas de domínio para dar suporte a interseção de alternativas usando esse elemento como uma declaração. Essa definição de elemento também indica o valor da `ReplyTo` cabeçalho em vez do comportamento de ponto de extremidade na conexão, que é específico para o transporte HTTP.  
   
@@ -324,7 +324,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  B3521: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa o `wsaw10:Action` atributo no `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` elementos conforme definido em WS-ADDR10-WSDL para determinar o `Action` URI para as mensagens correspondentes independentemente da versão do WS-Addressing usado pelo ponto de extremidade.  
   
 #### <a name="use-endpoint-reference-inside-wsdl-port"></a>Use ponto de extremidade de referência interna WSDL porta  
- WS-ADDR10-WSDL seção 4.1 estende o `wsdl:port` elemento para incluir o `<wsa10:EndpointReference…/>` elemento filho para descrever o ponto de extremidade em termos de WS-Addressing. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]expande esse utilitário em 08/2004 do WS-Addressing, permitindo que `<wsa:EndpointReference…/>` apareça como um elemento filho do `wsdl:port`.  
+ WS-ADDR10-WSDL seção 4.1 estende o `wsdl:port` elemento para incluir o `<wsa10:EndpointReference…/>` elemento filho para descrever o ponto de extremidade em termos de WS-Addressing. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] expande esse utilitário em 08/2004 do WS-Addressing, permitindo que `<wsa:EndpointReference…/>` apareça como um elemento filho do `wsdl:port`.  
   
 -   R3531: Se um ponto de extremidade tem uma alternativa de política anexada com um `<wsaw10:UsingAddressing/>` declaração de política correspondente `wsdl:port` elemento pode conter um elemento filho `<wsa10:EndpointReference …/>`.  
   

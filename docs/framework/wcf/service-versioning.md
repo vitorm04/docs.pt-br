@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 791e201907f72f9d590f6d835fd6ec1bfc25633f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="service-versioning"></a>Controle de versão de serviço
 Após a implantação inicial e potencialmente várias vezes durante a vida útil, serviços (e os pontos de extremidade expõem) podem precisar ser alterada para uma variedade de motivos, como alterar as necessidades de negócios, requisitos de tecnologia da informação, ou aborda outros problemas. Cada alteração introduz uma nova versão do serviço. Este tópico explica como considerar o controle de versão no [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
@@ -110,7 +112,7 @@ Após a implantação inicial e potencialmente várias vezes durante a vida úti
  Semelhante ao controle de versão de contrato de dados, controle de versão de contrato de serviço também envolve adicionando, alterando e removendo operações.  
   
 ### <a name="specifying-name-namespace-and-action"></a>Especificar o nome, Namespace e ação  
- Por padrão, o nome do contrato de serviço é o nome da interface. Seu namespace padrão é "http://tempuri.org", e a ação de cada operação é "http://tempuri.org/contractname/methodname". É recomendável que você especifique um nome e o namespace do contrato de serviço e uma ação para cada operação para evitar o uso de "http://tempuri.org" e para impedir que os nomes de interface e método seja exposto no contrato de serviço.  
+ Por padrão, o nome do contrato de serviço é o nome da interface. Seu namespace padrão é "http://tempuri.org", e ação da cada operação é "http://tempuri.org/contractname/methodname". É recomendável que você especifique um nome e o namespace do contrato de serviço e uma ação para cada operação evitar o uso de "http://tempuri.org" e para impedir que os nomes de interface e método seja exposto no contrato de serviço.  
   
 ### <a name="adding-parameters-and-operations"></a>Adicionando parâmetros e operações  
  Adicionando expostas pelo serviço de operações de serviço é uma alteração incondicional porque os clientes existentes não precisam se preocupar sobre essas novas operações.  
@@ -130,13 +132,13 @@ Após a implantação inicial e potencialmente várias vezes durante a vida úti
  Na lista de falhas descrito no contrato de serviço não é exaustiva. A qualquer momento, uma operação pode retornar falhas que não são descritas no seu contrato. Alterando, portanto, o conjunto de falhas descrita no contrato não é considerado recentes. Por exemplo, adicionando uma nova falha para o contrato usando o <xref:System.ServiceModel.FaultContractAttribute> ou remoção de uma falha existente do contrato.  
   
 ### <a name="service-contract-libraries"></a>Bibliotecas de contrato de serviço  
- As organizações podem ter bibliotecas de contratos onde um contrato é publicado em um repositório central e implementadores de serviço implementam contratos desse repositório. Nesse caso, quando você publica um contrato de serviço para o repositório é não têm controle sobre quem cria serviços que implementação-la. Portanto, você não pode modificar o contrato de serviço, uma vez publicado, renderizá-lo efetivamente imutável. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]oferece suporte ao contrato de herança, que pode ser usada para criar um novo contrato que estende os contratos existentes. Para usar esse recurso, defina uma nova interface de contrato de serviço que herda da interface de contrato de serviço antiga e adicionar métodos para a nova interface. Você, em seguida, alterar o serviço que implementa o contrato antigo para implementar o novo contrato e altere a definição de ponto de extremidade de "versionOld" para usar o novo contrato. Para clientes de "versionOld", que o ponto de extremidade continuarão a aparecer como expondo o contrato de "versionOld"; para clientes de "versionNew", o ponto de extremidade será exibido para expor o contrato "versionNew".  
+ As organizações podem ter bibliotecas de contratos onde um contrato é publicado em um repositório central e implementadores de serviço implementam contratos desse repositório. Nesse caso, quando você publica um contrato de serviço para o repositório é não têm controle sobre quem cria serviços que implementação-la. Portanto, você não pode modificar o contrato de serviço, uma vez publicado, renderizá-lo efetivamente imutável. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] oferece suporte ao contrato de herança, que pode ser usada para criar um novo contrato que estende os contratos existentes. Para usar esse recurso, defina uma nova interface de contrato de serviço que herda da interface de contrato de serviço antiga e adicionar métodos para a nova interface. Você, em seguida, alterar o serviço que implementa o contrato antigo para implementar o novo contrato e altere a definição de ponto de extremidade de "versionOld" para usar o novo contrato. Para clientes de "versionOld", que o ponto de extremidade continuarão a aparecer como expondo o contrato de "versionOld"; para clientes de "versionNew", o ponto de extremidade será exibido para expor o contrato "versionNew".  
   
 ## <a name="address-and-binding-versioning"></a>Endereço e associação de controle de versão  
  As alterações para o endereço de ponto de extremidade e associação são as alterações recentes, a menos que os clientes são capazes de descobrir dinamicamente o novo endereço de ponto de extremidade ou associação. É um mecanismo para implementar essa funcionalidade usando um registro de descrição de descoberta Universal e integração (UDDI) e o padrão de invocação UDDI onde um cliente tenta se comunicar com um ponto de extremidade e, em caso de falha, consulta um UDDI conhecido Registro para os metadados do ponto de extremidade atual. O cliente usa o endereço e associação de metadados para se comunicar com o ponto de extremidade. Se essa comunicação for bem-sucedida, o cliente armazena em cache as informações de endereço e associação para uso futuro.  
   
 ## <a name="routing-service-and-versioning"></a>Controle de versão e o serviço de roteamento  
- Se as alterações feitas a um serviço são as recentes alterações e você precisa ter duas ou mais versões diferentes de um serviço em execução simultaneamente você pode usar o serviço de roteamento do WCF para rotear mensagens para a instância de serviço apropriado. O serviço de roteamento do WCF usa roteamento baseado em conteúdo, em outras palavras, ele usa informações dentro da mensagem para determinar onde rotear a mensagem. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Consulte o serviço de roteamento de WCF [serviço de roteamento](../../../docs/framework/wcf/feature-details/routing-service.md). Para obter um exemplo de como usar o serviço de roteamento do WCF para controle de versão de serviço, consulte [como: controle de versão do serviço](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
+ Se as alterações feitas a um serviço são as recentes alterações e você precisa ter duas ou mais versões diferentes de um serviço em execução simultaneamente você pode usar o serviço de roteamento do WCF para rotear mensagens para a instância de serviço apropriado. O serviço de roteamento do WCF usa roteamento baseado em conteúdo, em outras palavras, ele usa informações dentro da mensagem para determinar onde rotear a mensagem. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Consulte o serviço de roteamento de WCF [serviço de roteamento](../../../docs/framework/wcf/feature-details/routing-service.md). Para obter um exemplo de como usar o serviço de roteamento do WCF para controle de versão de serviço, consulte [como: controle de versão do serviço](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
   
 ## <a name="appendix"></a>Anexo  
  As diretrizes de controle de versão do contrato dados gerais quando for necessário estrito controle de versão são tratar os contratos de dados como imutável e criar novos quando são necessárias alterações. Uma nova classe precisa ser criado para cada novo contrato de dados, portanto, um mecanismo é necessária para evitar ter de levar o código existente que foi escrito em termos de dados antigos de contrato de classe e reescrevê-la em termos da nova classe de contrato de dados.  

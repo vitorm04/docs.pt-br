@@ -5,26 +5,28 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 42e74148-223d-4888-a8ed-1d928527eb09
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 69fbce3f312833c374a4c2615a15359d9c2db3a7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="ltcomcontractsgt"></a>&lt;comContracts&gt;
 O `comContracts` seção de configuração contém elementos que permitem que você especificar várias propriedades de um contrato de serviço de integração COM+.  
   
 ## <a name="specifying-namespace-and-contract"></a>Especificando o Namespace e um contrato  
- Contratos de serviço COM+ integration estão restritos atualmente para o namespace "http://tempuri.org" e nome de contrato é derivado da interface COM suporte. No entanto, você pode especificar alternativas usando o `comContracts` seção no arquivo de configuração.  
+ Contratos de serviço COM+ integration estão restritos atualmente para o "http://tempuri.org" namespace e nome de contrato é derivado da interface COM suporte. No entanto, você pode especificar alternativas usando o `comContracts` seção no arquivo de configuração.  
   
  Por exemplo, você pode usar a configuração a seguir para especificar o nome do contrato e do namespace do contrato de serviço, bem como uma opção para impor o uso de associações de sessão.  
   
@@ -48,9 +50,9 @@ O `comContracts` seção de configuração contém elementos que permitem que vo
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Configuration.ComContractElementCollection>  
  <xref:System.ServiceModel.Configuration.ComContractElement>  
- [\<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)  
- [\<persistableTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)  
- [\<userDefinedType >](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md)  
- [\<comContract >](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontract.md)  
+ [\<exposedMethod>](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)  
+ [\<persistableTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)  
+ [\<userDefinedType>](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md)  
+ [\<comContract>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontract.md)  
  [Integração de aplicativos COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
  [Como definir configurações de serviço COM+](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

@@ -8,7 +8,7 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -16,10 +16,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 0e6407fc8da8695da47165ae0ea2c2c6d863ec23
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>Ferramenta de Definição de Esquema XML (Xsd.exe)
 A Ferramenta de Definição de Esquema XML (Xsd.exe) gera um esquema XML ou classes de common language runtime de arquivos XDR, XML e XSD files, ou de classes em um assembly de tempo de execução.  
@@ -98,7 +98,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
  Classes para XSD  
  Gera um esquema XML de um tipo ou tipos em um arquivo de assembly de tempo de execução. O esquema gerado define o formato XML usado pelo `System.Xml.Serialization.XmlSerializer`.  
   
- O Xsd.exe somente permite que você manipule esquemas de XML que seguem a linguagem XSD (linguagem de definição de esquema XML) proposta pelo World Wide Web Consortium (W3C). Para obter mais informações sobre a proposta de definição do Esquema XML ou o padrão XML, consulte http://w3.org.  
+ O Xsd.exe somente permite que você manipule esquemas de XML que seguem a linguagem XSD (linguagem de definição de esquema XML) proposta pelo World Wide Web Consortium (W3C). Para obter mais informações sobre a proposta de definição de esquema XML ou o padrão XML, consulte http://w3.org.  
   
 ## <a name="setting-options-with-an-xml-file"></a>Configurando opções com um arquivo XML  
  Ao usar a opção `/parameters`, você pode especificar um único arquivo XML que define várias opções. As opções que você define dependem de como você está usando a ferramenta XSD.exe. As escolhas incluem gerar esquemas, arquivos de código ou arquivos de código que incluem recursos de `DataSet`. Por exemplo, você pode definir o elemento `<assembly\>` para o nome de um executável (.exe) ou arquivo de biblioteca de tipos (.dll) ao gerar um esquema, mas não ao gerar um arquivo de código. O XML a seguir mostra como usar o elemento `<generateSchemas\>` com um executável especificado:  

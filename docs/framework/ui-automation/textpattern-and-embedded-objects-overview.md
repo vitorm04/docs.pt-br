@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-bcl
+ms.technology:
+- dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 97f2f03cd55512c29c686759e756a1941f472157
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern Visão geral de objetos inseridos
 > [!NOTE]
@@ -54,7 +56,7 @@ Exemplo de um fluxo de texto com objetos inseridos e seus intervalos abrangentes
   
  Quando for necessário atravessar o conteúdo de um intervalo de texto, uma série de etapas envolvidas em segundo plano para que o <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> método seja executado com êxito.  
   
-1.  O intervalo de texto é normalizado; ou seja, o intervalo de texto é recolhido para um intervalo degenerado no <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> ponto de extremidade, o que torna o <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> supérfluo de ponto de extremidade. Essa etapa é necessária para remover ambiguidade em situações nas quais um intervalo de texto abrange <xref:System.Windows.Automation.Text.TextUnit> limites: por exemplo, "{a U} RL [http://www.microsoft.com](http://www.microsoft.com) é inserido no texto" onde "{" e "}" é pontos de extremidade do intervalo de texto.  
+1.  O intervalo de texto é normalizado; ou seja, o intervalo de texto é recolhido para um intervalo degenerado no <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> ponto de extremidade, o que torna o <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> supérfluo de ponto de extremidade. Essa etapa é necessária para remover ambiguidade em situações nas quais um intervalo de texto abrange <xref:System.Windows.Automation.Text.TextUnit> limites: por exemplo, "{a U} RL [ http://www.microsoft.com ](http://www.microsoft.com) é inserido no texto" onde "{" e "}" é pontos de extremidade do intervalo de texto.  
   
 2.  O intervalo resultante é movido para trás no <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> para o início da solicitados <xref:System.Windows.Automation.Text.TextUnit> limite.  
   
@@ -79,14 +81,14 @@ Exemplos de como um intervalo de texto é ajustado para Move () e ExpandToEnclos
 ### <a name="hyperlink"></a>Hiperlink  
  **Exemplo 1 - um intervalo de texto que contém um hiperlink de texto inserido**  
   
- {A URL [http://www.microsoft.com](http://www.microsoft.com) é inserida em texto}.  
+ {A URL [ http://www.microsoft.com ](http://www.microsoft.com) é inserida em texto}.  
   
 |Método chamado|Resultado|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Retorna a cadeia de caracteres "a URL http://www.microsoft.com é inserida em texto".|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Retorna a cadeia de caracteres "a URL http://www.microsoft.com é inserido no texto".|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Retorna o mais interno <xref:System.Windows.Automation.AutomationElement> que inclui o intervalo de texto; nesse caso, o <xref:System.Windows.Automation.AutomationElement> que representa o provedor de texto.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Retorna um <xref:System.Windows.Automation.AutomationElement> que representa o controle de hiperlink.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A>onde <xref:System.Windows.Automation.AutomationElement> é o objeto retornado por anterior `GetChildren` método.|Retorna o intervalo que representa "http://www.microsoft.com".|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> onde <xref:System.Windows.Automation.AutomationElement> é o objeto retornado por anterior `GetChildren` método.|Retorna o intervalo que representa "http://www.microsoft.com".|  
   
  **Exemplo 2 - um intervalo de texto que abrange parcialmente um hiperlink de texto inserido**  
   
@@ -100,13 +102,13 @@ Exemplos de como um intervalo de texto é ajustado para Move () e ExpandToEnclos
   
  **Exemplo 3 - um intervalo de texto que abrange parcialmente o conteúdo de um recipiente de texto. O contêiner de texto tem um hiperlink de texto inserido que não faz parte do intervalo de texto.**  
   
- {URL} [http://www.microsoft.com](http://www.microsoft.com) é inserida em texto.  
+ {URL} [ http://www.microsoft.com ](http://www.microsoft.com) é inserida em texto.  
   
 |Método chamado|Resultado|  
 |-------------------|------------|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Retorna a cadeia de caracteres "A URL".|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Retorna o mais interno <xref:System.Windows.Automation.AutomationElement> que inclui o intervalo de texto; nesse caso, o <xref:System.Windows.Automation.AutomationElement> que representa o provedor de texto.|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A>com parâmetros de (TextUnit, 1).|Move o intervalo de texto para "http", desde que o texto do hiperlink é composto de palavras individuais. Nesse caso, o hiperlink não é tratado como um único objeto.<br /><br /> A URL {[http]} é inserida em texto.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> com parâmetros de (TextUnit, 1).|Move o intervalo de texto para "http", desde que o texto do hiperlink é composto de palavras individuais. Nesse caso, o hiperlink não é tratado como um único objeto.<br /><br /> A URL {[http]} é inserida em texto.|  
   
 <a name="Image"></a>   
 ### <a name="image"></a>Image  
@@ -119,7 +121,7 @@ Exemplos de como um intervalo de texto é ajustado para Move () e ExpandToEnclos
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Retorna a cadeia de caracteres "a é inserida em texto". Qualquer texto alternativo associado com a imagem não pode ser esperado a serem incluídos no fluxo de texto.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Retorna o mais interno <xref:System.Windows.Automation.AutomationElement> que inclui o intervalo de texto; nesse caso, o <xref:System.Windows.Automation.AutomationElement> que representa o provedor de texto.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Retorna um <xref:System.Windows.Automation.AutomationElement> que representa o controle de imagem.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A>onde <xref:System.Windows.Automation.AutomationElement> é o objeto retornado por anterior <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> método.|Retorna o intervalo degenerado representando "![exemplo de imagem inserida](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")".|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> onde <xref:System.Windows.Automation.AutomationElement> é o objeto retornado por anterior <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> método.|Retorna o intervalo degenerado representando "![exemplo de imagem inserida](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")".|  
   
  **Exemplo 2 - um intervalo de texto que abrange parcialmente o conteúdo de um recipiente de texto. O contêiner de texto tem uma imagem inserida que não faz parte do intervalo de texto.**  
   
@@ -129,7 +131,7 @@ Exemplos de como um intervalo de texto é ajustado para Move () e ExpandToEnclos
 |-------------------|------------|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Retorna a cadeia de caracteres "A imagem".|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Retorna o mais interno <xref:System.Windows.Automation.AutomationElement> que inclui o intervalo de texto; nesse caso, o <xref:System.Windows.Automation.AutomationElement> que representa o provedor de texto.|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A>com parâmetros de (TextUnit, 1).|Move o intervalo de texto para "é". Como apenas objetos inseridos com base em texto são considerados parte do fluxo de texto, a imagem neste exemplo não afeta Move ou seu valor de retorno (1 neste caso).|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> com parâmetros de (TextUnit, 1).|Move o intervalo de texto para "é". Como apenas objetos inseridos com base em texto são considerados parte do fluxo de texto, a imagem neste exemplo não afeta Move ou seu valor de retorno (1 neste caso).|  
   
 <a name="Table"></a>   
 ### <a name="table"></a>Tabela  
@@ -146,18 +148,18 @@ Exemplos de como um intervalo de texto é ajustado para Move () e ExpandToEnclos
   
 |Método chamado|Resultado|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.GridPattern.GetItem%2A>com os parâmetros (0,0)|Retorna o <xref:System.Windows.Automation.AutomationElement> que representa o conteúdo da célula da tabela; nesse caso, o elemento é um controle de texto.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A>onde <xref:System.Windows.Automation.AutomationElement> é o objeto retornado por anterior `GetItem` método.|Retorna o intervalo que abrange a imagem ![exemplo de imagem inserida](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample").|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>para o objeto retornado por anterior `RangeFromChild` método.|Retorna o <xref:System.Windows.Automation.AutomationElement> que representa a célula de tabela; nesse caso, o elemento é um controle de texto que suporta TableItemPattern.|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>para o objeto retornado por anterior `GetEnclosingElement` método.|Retorna o <xref:System.Windows.Automation.AutomationElement> que representa a tabela.|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>para o objeto retornado por anterior `GetEnclosingElement` método.|Retorna o <xref:System.Windows.Automation.AutomationElement> que representa o provedor de texto.|  
+|<xref:System.Windows.Automation.GridPattern.GetItem%2A> com os parâmetros (0,0)|Retorna o <xref:System.Windows.Automation.AutomationElement> que representa o conteúdo da célula da tabela; nesse caso, o elemento é um controle de texto.|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> onde <xref:System.Windows.Automation.AutomationElement> é o objeto retornado por anterior `GetItem` método.|Retorna o intervalo que abrange a imagem ![exemplo de imagem inserida](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample").|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> para o objeto retornado por anterior `RangeFromChild` método.|Retorna o <xref:System.Windows.Automation.AutomationElement> que representa a célula de tabela; nesse caso, o elemento é um controle de texto que suporta TableItemPattern.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> para o objeto retornado por anterior `GetEnclosingElement` método.|Retorna o <xref:System.Windows.Automation.AutomationElement> que representa a tabela.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> para o objeto retornado por anterior `GetEnclosingElement` método.|Retorna o <xref:System.Windows.Automation.AutomationElement> que representa o provedor de texto.|  
   
  **Exemplo 2: obter o conteúdo do texto de uma célula.**  
   
 |Método chamado|Resultado|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.GridPattern.GetItem%2A>com parâmetros de (1,1).|Retorna o <xref:System.Windows.Automation.AutomationElement> que representa o conteúdo da célula da tabela; nesse caso, o elemento é um controle de texto.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A>onde <xref:System.Windows.Automation.AutomationElement> é o objeto retornado por anterior `GetItem` método.|Retorna "Y".|  
+|<xref:System.Windows.Automation.GridPattern.GetItem%2A> com parâmetros de (1,1).|Retorna o <xref:System.Windows.Automation.AutomationElement> que representa o conteúdo da célula da tabela; nesse caso, o elemento é um controle de texto.|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> onde <xref:System.Windows.Automation.AutomationElement> é o objeto retornado por anterior `GetItem` método.|Retorna "Y".|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Automation.TextPattern>  

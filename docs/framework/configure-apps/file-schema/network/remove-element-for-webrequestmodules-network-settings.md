@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,24 +18,25 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 391e5f2a7d9d8076ba9e9a3057e3d8899e2ce672
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;remover&gt; elemento webRequestModules (configurações de rede)
 Remove um módulo personalizado de solicitação da Web do aplicativo.  
   
  \<configuration>  
-\<System.NET >  
-\<webRequestModules >  
-\<Remover >  
+\<system.net>  
+\<webRequestModules>  
+\<remove>  
   
 ## <a name="syntax"></a>Sintaxe  
   

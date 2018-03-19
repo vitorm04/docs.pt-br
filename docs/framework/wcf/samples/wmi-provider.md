@@ -5,27 +5,29 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: c1b1f923b6673ead42c7c702bd50d253ea06c765
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wmi-provider"></a>Provedor de WMI
 Este exemplo demonstra como coletar dados de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviços em tempo de execução usando o provedor do Windows Management Instrumentation (WMI) que é criado em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Além disso, este exemplo demonstra como adicionar um objeto WMI definido pelo usuário a um serviço. O exemplo ativa o provedor WMI para o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) e demonstra como coletar dados do `ICalculator` serviço em tempo de execução.  
   
  O WMI é a implementação da Microsoft a Web-Based Enterprise Management (WBEM) padrão. Para obter mais informações sobre o SDK do WMI, consulte [Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx). O WBEM é um padrão da indústria para como aplicativos expõem instrumentação de gerenciamento para as ferramentas de gerenciamento externo.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]implementa um provedor WMI, um componente que expõe instrumentação em tempo de execução por meio de uma interface compatível com o WBEM. Ferramentas de gerenciamento podem se conectar aos serviços por meio da interface em tempo de execução. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]expõe os atributos de serviços, como endereços, associações, comportamentos e ouvintes.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa um provedor WMI, um componente que expõe instrumentação em tempo de execução por meio de uma interface compatível com o WBEM. Ferramentas de gerenciamento podem se conectar aos serviços por meio da interface em tempo de execução. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] expõe os atributos de serviços, como endereços, associações, comportamentos e ouvintes.  
   
  O provedor WMI interno está ativado no arquivo de configuração do aplicativo. Isso é feito por meio de `wmiProviderEnabled` atributo do [ \<diagnóstico >](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) no [ \<System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) seção, conforme mostrado no exemplo a seguir configuração:  
   

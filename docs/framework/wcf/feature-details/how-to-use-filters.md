@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 94d45537ca3edd5f31f1ed31898857f002312a0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="how-to-use-filters"></a>Como usar filtros
 Este tópico descreve as etapas básicas necessárias para criar uma configuração de roteamento que usa vários filtros. Neste exemplo, as mensagens são roteadas para duas implementações de um serviço de cálculo, regularCalc e roundingCalc. Suportam a ambas as implementações as mesmas operações; No entanto, um serviço Arredonda todos os cálculos para o valor inteiro mais próximo antes de retornar. Um aplicativo cliente deve ser capaz de indicar se deseja usar a versão de arredondamento do serviço; Se nenhuma preferência de serviço é expresso em seguida, a mensagem é carga balanceada entre os dois serviços. As operações expostas por ambos os serviços são:  

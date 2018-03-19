@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,22 +14,23 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="endpoint-addresses"></a>Endereços do ponto de extremidade
 Cada ponto de extremidade tem um endereço associado a ele, que é usado para localizar e identificar o ponto de extremidade. Esse endereço consiste principalmente de um URI Uniform Resource Identifier (), que especifica o local do ponto de extremidade. O endereço do ponto de extremidade é representado no [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] modelo de programação com o <xref:System.ServiceModel.EndpointAddress> classe, que contém um recurso opcional <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriedade que permite a autenticação do ponto de extremidade por outros pontos de extremidade que trocam mensagens com ele e um conjunto de opcional <xref:System.ServiceModel.EndpointAddress.Headers%2A> propriedades que definem outros cabeçalhos SOAP necessários para acessar o serviço. Os cabeçalhos opcionais fornecem adicionais e informações de endereçamento para identificar ou interagir com o ponto de extremidade de serviço mais detalhadas. O endereço de um ponto de extremidade é representado na transmissão como uma referência de ponto de extremidade WS-Addressing (EPR).  
   
 ## <a name="uri-structure-of-an-address"></a>Estrutura de um endereço de URI  
- O endereço de URI para a maioria dos transportes tem quatro partes. Por exemplo, as quatro partes do URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint podem ser especificadas da seguinte maneira:  
+ O endereço de URI para a maioria dos transportes tem quatro partes. Por exemplo, as quatro partes do URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint podem ser especificados da seguinte maneira:  
   
 -   Esquema: http:  
   

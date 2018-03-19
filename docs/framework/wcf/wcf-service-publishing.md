@@ -5,28 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 823edadf7d387d1a509edbdf839ac6eeece5d41f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wcf-service-publishing"></a>Publicação de serviço do WCF
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Serviço de publicação ajuda em andamento no ambiente de desenvolvimento iniciais fornecido pelo [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host de serviço e [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] cliente de teste para realmente implantar o aplicativo em um ambiente de produção para fins de teste. Antes de confirmar a um plano de implantação final, você pode usar [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] serviço de publicação para verificar se seu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviço executa corretamente e está pronto para ser publicado. Você também pode optar por implantar seu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bibliotecas em vários locais de destino para teste de serviço.  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Serviço de publicação ajuda em andamento no ambiente de desenvolvimento iniciais fornecido pelo [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host de serviço e [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] cliente de teste para realmente implantar o aplicativo em um ambiente de produção para fins de teste. Antes de confirmar a um plano de implantação final, você pode usar [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] serviço de publicação para verificar se seu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviço executa corretamente e está pronto para ser publicado. Você também pode optar por implantar seu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bibliotecas em vários locais de destino para teste de serviço.  
   
 ## <a name="supported-services-and-target-locations"></a>Serviços com suporte e locais de destino  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Serviço de publicação oferece suporte à publicação [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviços criados do conjunto de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] modelos de biblioteca de serviço e seus modelos de item correspondente, que incluem o seguinte:  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Serviço de publicação oferece suporte à publicação [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviços criados do conjunto de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] modelos de biblioteca de serviço e seus modelos de item correspondente, que incluem o seguinte:  
   
--   [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Modelo de biblioteca de serviço com o modelo de item.  
+-   [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Modelo de biblioteca de serviço com o modelo de item.  
   
 -   Biblioteca de serviço de distribuição.  
   

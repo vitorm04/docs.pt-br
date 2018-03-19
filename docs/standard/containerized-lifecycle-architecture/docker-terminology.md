@@ -1,5 +1,5 @@
 ---
-title: Terminologia de docker
+title: Terminologia do Docker
 description: "Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)"
 keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
 author: CESARDELATORRE
@@ -9,14 +9,14 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: a622b2949c1d2277bb3e82617a5bc2d8cb432263
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
-# <a name="docker-terminology"></a>Terminologia de docker
+# <a name="docker-terminology"></a>Terminologia do Docker
 
-Esta seção lista os termos e definições com a qual você deve se familiarizar antes de investigar mais profunda Docker (para obter mais definições, consulte o amplo [glossário](https://docs.docker.com/glossary/) fornecida pelo Docker em <https:// docs.docker.com/glossary/>:
+Esta seção lista os termos e definições com a qual você deve se familiarizar antes de investigar mais profunda Docker (para obter mais definições, consulte o amplo [glossário](https://docs.docker.com/glossary/) fornecida pelo Docker em <https://docs.docker.com/glossary/>:
 
 -   **Imagem de contêiner** um pacote com todas as dependências e as informações necessárias para criar um contêiner. Uma imagem inclui todas as dependências (como estruturas) além de implantação e configuração a ser usada por um tempo de execução do contêiner. Geralmente, uma imagem deriva de várias imagens de base que são camadas empilhadas um sobre o outro para formar o sistema de arquivos do contêiner. Uma imagem é imutável depois que ela foi criada.
 
@@ -30,23 +30,23 @@ Esta seção lista os termos e definições com a qual você deve se familiariza
 
 -   **Repositório (também conhecido como repositório)** uma coleção de imagens do Docker relacionadas rotulado com uma marca que indica a versão da imagem. Alguns repositórios contêm várias variantes de uma imagem específica, como uma imagem que contém o SDKs (mais), uma imagem que contém somente tempos de execução (mais leves), e assim por diante. Essas variantes podem ser marcadas com marcas. Um único repositório pode conter variantes de plataforma, como uma imagem do Linux e uma imagem do Windows.
 
--   **Registro** um serviço que fornece acesso aos repositórios. O registro padrão para as imagens mais públicas está [Docker Hub](https://hub.docker.com/) (propriedade Docker como uma organização). Um registro geralmente contém repositórios de várias equipes. As empresas geralmente têm registros privados para armazenar e gerenciar imagens que criaram. *Registro de contêiner do Azure* é outro exemplo.
+-   **Registro** um serviço que fornece acesso aos repositórios. O registro padrão para as imagens mais públicas é o [Docker Hub](https://hub.docker.com/) (propriedade da Docker como uma organização). Um registro geralmente contém repositórios de várias equipes. As empresas geralmente têm registros privados para armazenar e gerenciar imagens que criaram. *Registro de contêiner do Azure* é outro exemplo.
 
--   **Hub do docker** um registro público para carregar imagens e trabalhar com eles. Hub do docker fornece Docker hospedagem de imagem, registros públicos ou privados, gatilhos de compilação e ganchos web e integração com o GitHub, Bitbucket.
+-   **Hub do docker** um registro público para carregar imagens e trabalhar com eles. O Docker Hub hospeda imagens do Docker, registros públicos ou privados, cria gatilhos e ganchos da Web e integra-se com o GitHub e o Bitbucket.
 
--   **Registro de contêiner do Azure** um recurso público para trabalhar com imagens do Docker e seus componentes no Azure. Isso fornece um registro que está perto de suas implantações no Azure e que fornece a você controle sobre o acesso, tornando possível usar suas permissões e grupos do Active Directory do Azure.
+-   **Registro de contêiner do Azure** um recurso público para trabalhar com imagens do Docker e seus componentes no Azure. Fornece um registro que está perto de suas implantações no Azure e que permite controlar o acesso, tornando possível usar as permissões e os grupos do Azure Active Directory.
 
--   **Docker confiáveis do registro (DTR)** serviço de registro de Docker de um (a partir do Docker) que podem ser instalados no local para que ela reside no datacenter e a rede da organização. É conveniente para imagens privadas que devem ser gerenciadas dentro da empresa. Registro confiável do docker é incluído como parte do produto Docker Datacenter. Para obter mais informações, vá para [https://docs.docker.com/docker-trusted-registry/overview/](https://docs.docker.com/docker-trusted-registry/overview/).
+-   **Docker confiáveis do registro (DTR)** serviço de registro de Docker de um (a partir do Docker) que podem ser instalados no local para que ela reside no datacenter e a rede da organização. É conveniente para imagens privadas que devem ser gerenciadas dentro da empresa. O Docker Trusted Registry é parte do produto Docker Datacenter. Para obter mais informações, vá para [ https://docs.docker.com/docker-trusted-registry/overview/ ](https://docs.docker.com/docker-trusted-registry/overview/).
 
--   **Docker Community Edition (CE)** ferramentas de desenvolvimento para Windows e macOS para compilar, executar e testar contêineres localmente. CE do docker para Windows fornece os ambientes de desenvolvimento para Linux e contêineres do Windows. O host do Docker do Linux no Windows é baseado em um [Hyper-V](https://www.microsoft.com/en-us/server-cloud/solutions/virtualization.aspx) VM. O host para contêineres do Windows baseia-se diretamente no Windows. Docker CE para Mac baseia-se na estrutura do hipervisor da Apple e a [xhyve hipervisor](https://github.com/mist64/xhyve), que fornece uma VM do host do Linux Docker no Mac OS X. Docker CE para Windows e Mac substitui a caixa de ferramentas do Docker, que é baseado em VirtualBox Oracle.
+-   **Docker Community Edition (CE)** ferramentas de desenvolvimento para Windows e macOS para compilar, executar e testar contêineres localmente. O Docker CE para Windows fornece os ambientes de desenvolvimento para Linux e contêineres do Windows. O host do Docker do Linux no Windows é baseado em um [Hyper-V](https://www.microsoft.com/en-us/server-cloud/solutions/virtualization.aspx) VM. O host para contêineres do Windows se baseia diretamente no Windows. Docker CE para Mac baseia-se na estrutura do hipervisor da Apple e a [xhyve hipervisor](https://github.com/mist64/xhyve), que fornece uma VM do host do Linux Docker no Mac OS X. Docker CE para Windows e Mac substitui a caixa de ferramentas do Docker, que é baseado em VirtualBox Oracle.
 
 -   **Docker Enterprise Edition (EE)** uma versão de grande porte das ferramentas do Docker para desenvolvimento Linux e Windows.
 
--   **Compor** uma ferramenta de linha de comando e YAML formato com metadados para definir e executar aplicativos multicontainer de arquivo. Você define um único aplicativo com base em várias imagens com um ou mais arquivos de .yml que podem substituir valores dependendo do ambiente. Depois que você criou as definições, você pode implantar o aplicativo multicontainer inteiro usando um único comando (docker-compor backup) que cria um contêiner por imagem no host do Docker.
+-   **Compor** uma ferramenta de linha de comando e YAML formato com metadados para definir e executar aplicativos multicontainer de arquivo. Você define um único aplicativo com base em várias imagens com um ou mais arquivos .yml que podem substituir valores dependendo do ambiente. Depois que você criou as definições, você pode implantar o aplicativo multicontainer inteiro usando um único comando (docker-compor backup) que cria um contêiner por imagem no host do Docker.
 
--   **Cluster** uma coleção de hosts de Docker expostas como se fossem um único host virtual do Docker para que o aplicativo pode ser dimensionado para várias instâncias dos serviços distribuídos em vários hosts do cluster. Você pode criar clusters do Docker usando o Docker Swarm, Mesosphere DC/OS, Kubernetes e Azure Service Fabric. (Se você usar o Docker Swarm para gerenciar um cluster, você normalmente se referir ao cluster como um *swarm* em vez de um cluster.)
+-   **Cluster** uma coleção de hosts de Docker expostas como se fossem um único host virtual do Docker para que o aplicativo pode ser dimensionado para várias instâncias dos serviços distribuídos em vários hosts do cluster. Você pode criar clusters do Docker usando o Docker Swarm, Mesosphere DC/OS, Kubernetes e Azure Service Fabric. (Ao usar o Docker Swarm para gerenciar um cluster, você normalmente se referirá ao cluster como um *swarm* em vez de um cluster.)
 
--   **Orchestrator** uma ferramenta que simplifica o gerenciamento de clusters e hosts de Docker. Usando orchestrators, você pode gerenciar suas imagens, contêineres e hosts por meio de uma CLI ou uma interface gráfica do usuário. Você pode gerenciar a rede de contêiner, configurações, balanceamento de carga, descoberta de serviço, alta disponibilidade, configuração de host do Docker e muito mais. Um orquestrador é responsável por executar, distribuir, escala e reparo de cargas de trabalho em uma coleção de nós. Normalmente, orchestrator produtos são o mesmo que fornecem infraestrutura de cluster, como Mesosphere DC/OS, Kubernetes, Docker Swarm e Azure Service Fabric.
+-   **Orchestrator** uma ferramenta que simplifica o gerenciamento de clusters e hosts de Docker. Usando orchestrators, você pode gerenciar suas imagens, contêineres e hosts por meio de uma CLI ou uma interface gráfica do usuário. É possível gerenciar a rede de contêiner, configurações, balanceamento de carga, descoberta de serviço, alta disponibilidade, configuração de host do Docker e muito mais. Um orquestrador é responsável por executar, distribuir, dimensionar e reparar de cargas de trabalho em uma coleção de nós. Normalmente, produtos de orquestrador são os mesmos que fornecem infraestrutura de cluster, como Mesosphere DC/OS, Kubernetes, Docker Swarm e Azure Service Fabric.
 
 
 >[!div class="step-by-step"]

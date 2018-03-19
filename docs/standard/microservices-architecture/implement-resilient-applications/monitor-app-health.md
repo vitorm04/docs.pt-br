@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 76821e27613335609527b867a6b94dac551f6235
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="health-monitoring"></a>Monitoramento de integridade
 
@@ -37,7 +37,7 @@ Para usar essa biblioteca, você precisa primeiro usar a biblioteca em seus micr
 
 Você pode ver como a biblioteca HealthChecks é usada no aplicativo de exemplo eShopOnContainers. Para começar, você precisa definir o que constitui o status íntegro para cada microsserviço. No aplicativo de exemplo, os microsserviços estão íntegros se a API de microsserviços está acessível por meio de HTTP e se o banco de dados do SQL Server relacionado também está disponível.
 
-No futuro, você poderá instalar a biblioteca de HealthChecks como um pacote do NuGet. Porém, no momento da redação deste artigo, você precisa baixar e compilar o código como parte da sua solução. Clone o código disponível em https://github.com/dotnet-architecture/HealthChecks e copie as seguintes pastas para a sua solução:
+No futuro, você poderá instalar a biblioteca de HealthChecks como um pacote do NuGet. Porém, no momento da redação deste artigo, você precisa baixar e compilar o código como parte da sua solução. Clone de código disponível em https://github.com/dotnet-architecture/HealthChecks e copie as seguintes pastas para sua solução:
 
   - src/common
   - src/Microsoft.AspNetCore.HealthChecks
@@ -192,10 +192,10 @@ Por fim, se você estava armazenando todos os fluxos de eventos, pode usar Micro
 
 -   **ASP.NET Core HealthChecks** (versão inicial) [*https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
 
--   **Introdução ao monitoramento de integridade do Service Fabric**
+-   **Introdução ao monitoramento de integridade da malha do serviço**
     [*https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction*](https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction)
 
--   **Azure Application Insights**
+-   **Aplicativo do Azure Insights**
     [*https://azure.microsoft.com/services/application-insights/*](https://azure.microsoft.com/services/application-insights/)
 
 -   **Microsoft Operations Management Suite**
