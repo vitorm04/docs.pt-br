@@ -2,20 +2,21 @@
 title: "Tipos de ponteiro (Guia de Programação em C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
 ms.assetid: 3319faf9-336d-4148-9af2-1da2579cdd1e
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0699793e91199cc623c0d13e42937c8b919e992a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe7b926bdf9f662d25f2fe960b51fc8254b7aa3a
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipos de ponteiro (Guia de Programação em C#)
 Em um contexto inseguro, um tipo pode ser de ponteiro, valor ou referência. Uma declaração de tipo de ponteiro usa uma das seguintes formas:  
@@ -113,7 +114,7 @@ Console.ReadLine();
   
  Um ponteiro pode ser `null`. Aplicar o operador de indireção a um ponteiro nulo causa um comportamento definido por implementação.  
   
- Lembre-se de que transmitir ponteiros entre métodos pode causar comportamento indefinido. Exemplos estão retornando um ponteiro para uma variável local através de um parâmetro Out ou Ref ou como o resultado da função. Se o ponteiro foi definido em um bloco fixo, a variável à qual ele aponta não pode mais ser corrigida.  
+ Lembre-se de que transmitir ponteiros entre métodos pode causar comportamento indefinido. Considere usar um método que retorne um ponteiro para uma variável local por meio de um parâmetro `in`, `out` ou `ref`, ou como o resultado da função. Se o ponteiro foi definido em um bloco fixo, a variável à qual ele aponta não pode mais ser corrigida.  
   
  A tabela a seguir lista os operadores e as instruções que podem operar em ponteiros em um contexto inseguro:  
   

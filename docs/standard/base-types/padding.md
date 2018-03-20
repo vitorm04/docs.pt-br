@@ -1,9 +1,8 @@
 ---
 title: Como preencher cadeias de caracteres no .NET
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 03/15/2018
 ms.prod: .net
-ms.reviewer: 
 ms.suite: 
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
@@ -19,21 +18,21 @@ helpviewer_keywords:
 - PadLeft method
 - padding strings
 ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ea903c1f950e7c226e043c1fa7276a66126b2512
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bf90c841c8fff21dd423fcd19613b5eb46a2c80c
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="padding-strings-in-net"></a>Como preencher cadeias de caracteres no .NET
-Use um dos métodos <xref:System.String> a seguir para criar uma nova cadeia de caracteres que consista em uma cadeia de caracteres original preenchida com caracteres à esquerda ou à direita até um comprimento total especificado. O caractere de preenchimento pode ser espaços ou um caractere especificado e, consequentemente, parece estar alinhado à direita ou à esquerda.  
+
+Use um dos métodos <xref:System.String> a seguir para criar uma nova cadeia de caracteres que consista em uma cadeia de caracteres original preenchida com caracteres à esquerda ou à direita até um comprimento total especificado. O caractere de preenchimento pode ser um espaço ou um caractere especificado. A cadeia de caracteres resultante parece estar alinhada à direita ou à esquerda. Se o tamanho da cadeia de caracteres original já for igual ou maior que o tamanho total desejado, os métodos de preenchimento retornarão a cadeia de caracteres original inalterada. Para obter mais informações, confira as seções **Retornos** das duas sobrecargas dos métodos <xref:System.String.PadLeft%2A?displayProperty=nameWithType> e <xref:System.String.PadRight%2A?displayProperty=nameWithType>.
   
 |Nome do método|Use|  
 |-----------------|---------|  

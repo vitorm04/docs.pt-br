@@ -2,22 +2,24 @@
 title: "async (Referência de C#)"
 ms.date: 05/22/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: async_CSharpKeyword
+f1_keywords:
+- async_CSharpKeyword
 helpviewer_keywords:
 - async keyword [C#]
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c4a89736822342a9d9a24db6d43435f9795b81b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2ddbd0f7268dd5dae4095d661cf800b5b481cbbd
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="async-c-reference"></a>async (Referência de C#)
 Use o modificador `async` para especificar que um método, uma [expressão lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) ou um [método anônimo](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) é assíncrono. Se você usar esse modificador em um método ou expressão, ele será referido como um *método assíncrono*. O exemplo a seguir define um método assíncrono chamado `ExampleMethodAsync`: 
@@ -76,7 +78,7 @@ Um método assíncrono pode conter os seguintes tipos de retorno:
 - [void](../../../csharp/language-reference/keywords/void.md), que só deve ser usado para manipuladores de eventos.
 - Começando com o C# 7, qualquer tipo que tem um método `GetAwaiter` acessível. O tipo `System.Threading.Tasks.ValueTask<TResult>` é um exemplo de uma implementação assim. Ele está disponível ao adicionar o pacote NuGet `System.Threading.Tasks.Extensions`. 
 
-O método assíncrono não pode declarar nenhum parâmetro [ref](../../../csharp/language-reference/keywords/ref.md) ou [out](../../../csharp/language-reference/keywords/out.md), nem sequer pode ter um <!-- [reference return value](../../programming-guide/classes-and-structs/ref-returns.md) -->valor retornado por referência, mas pode chamar métodos que têm tais parâmetros.  
+O método assíncrono não pode declarar os parâmetros [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../csharp/language-reference/keywords/ref.md) nem [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) e também não pode ter um [valor retornado por referência](../../programming-guide/classes-and-structs/ref-returns.md), mas pode chamar métodos que tenham esses parâmetros.  
   
 Você especificará `Task<TResult>` como o tipo de retorno de um método assíncrono se a instrução [return](../../../csharp/language-reference/keywords/return.md) do método especificar um operando do tipo `TResult`. Você usará `Task` se nenhum valor significativo for retornado quando o método for concluído. Isto é, uma chamada ao método retorna uma `Task`, mas quando a `Task` for concluída, qualquer expressão `await` que esteja aguardando a `Task` será avaliada como `void`.  
   

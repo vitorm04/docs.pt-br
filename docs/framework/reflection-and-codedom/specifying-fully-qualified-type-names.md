@@ -1,11 +1,12 @@
 ---
 title: Especificando nomes de tipo totalmente qualificados
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 03/14/2018
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,48 +16,108 @@ helpviewer_keywords:
 - tokens
 - BNF
 - assemblies [.NET Framework], names
-- Backus-Naur form
-- languages, BNF grammar
+- languages, grammar
 - fully qualified type names
 - type names
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e19aebbeee7fd65e27704af49185a1b8d48b9639
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e31e6e0284de44768b2faad7bcf84d5be343e479
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Especificando nomes de tipo totalmente qualificados
 Você deve especificar nomes de tipo para ter uma entrada válida para várias operações de reflexão. Um nome de tipo totalmente qualificado consiste em uma especificação de nome de assembly, uma especificação de namespace e um nome de tipo. Especificações de nome de tipo são usadas por métodos como <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> e <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.  
   
-## <a name="backus-naur-form-grammar-for-type-names"></a>Gramática da forma de Backus-Naur para nomes de tipo  
- A BNF (forma de Backus-Naur) define a sintaxe das linguagens formais. A tabela a seguir lista regras lexicais BNF que descrevem como reconhecer uma entrada válida. Terminais (elementos que não poder ser mais reduzidos) são mostrados em letras maiúsculas. Não terminais (elementos que ainda podem ser reduzidos) são mostrados em cadeias de caracteres combinando maiúsculas e minúsculas ou entre aspas simples, porém a aspa simples (') não faz parte da sintaxe em si. O caractere de barra vertical (&#124;) indica que as regras que têm sub-regras.  
-  
-|Gramática BNF ou nomes de tipo totalmente qualificados|  
-|-----------------------------------------------|  
-|TypeSpec                          :=   ReferenceTypeSpec<br /><br /> &#124;     SimpleTypeSpec|  
-|ReferenceTypeSpec            :=   SimpleTypeSpec '&'|  
-|SimpleTypeSpec                :=   PointerTypeSpec<br /><br /> &#124;     ArrayTypeSpec<br /><br /> &#124;     TypeName|  
-|PointerTypeSpec                :=   SimpleTypeSpec '*'|  
-|ArrayTypeSpec                  :=   SimpleTypeSpec '[ReflectionDimension]'<br /><br /> &#124;     SimpleTypeSpec '[ReflectionEmitDimension]'|  
-|ReflectionDimension           :=   '*'<br /><br /> &#124;     ReflectionDimension ',' ReflectionDimension<br /><br /> &#124;     NOTOKEN|  
-|ReflectionEmitDimension    :=   '*'<br /><br /> &#124;     Number '..' Número<br /><br /> &#124;     Number '…'<br /><br /> &#124;     ReflectionDimension ',' ReflectionDimension<br /><br /> &#124;     NOTOKEN|  
-|Number                            :=   [0-9]+|  
-|TypeName                         :=   NamespaceTypeName<br /><br /> &#124;     NamespaceTypeName ',' AssemblyNameSpec|  
-|NamespaceTypeName        :=   NestedTypeName<br /><br /> &#124;     NamespaceSpec '.' NestedTypeName|  
-|NestedTypeName               :=   IDENTIFIER<br /><br /> &#124;     NestedTypeName '+' IDENTIFIER|  
-|NamespaceSpec                 :=   IDENTIFIER<br /><br /> &#124;     NamespaceSpec '.' IDENTIFICADOR|  
-|AssemblyNameSpec           :=   IDENTIFIER<br /><br /> &#124;     IDENTIFIER ',' AssemblyProperties|  
-|AssemblyProperties            :=   AssemblyProperty<br /><br /> &#124;     AssemblyProperties ',' AssemblyProperty|  
-|AssemblyProperty              :=   AssemblyPropertyName '=' AssemblyPropertyValue|  
-  
+## <a name="grammar-for-type-names"></a>Gramática para nomes de tipo  
+ A gramática define a sintaxe de linguagens formais. A tabela a seguir lista as regras lexicais que descrevem como reconhecer uma entrada válida. Terminais (elementos que não poder ser mais reduzidos) são mostrados em letras maiúsculas. Não terminais (elementos que ainda podem ser reduzidos) são mostrados em cadeias de caracteres combinando maiúsculas e minúsculas ou entre aspas simples, porém a aspa simples (') não faz parte da sintaxe em si. O caractere de barra vertical (&#124;) indica que as regras que têm sub-regras.  
+
+```antlr
+TypeSpec
+    : ReferenceTypeSpec
+    | SimpleTypeSpec
+    ;
+
+ReferenceTypeSpec
+    : SimpleTypeSpec '&'
+    ;
+
+SimpleTypeSpec
+    : PointerTypeSpec
+    | ArrayTypeSpec
+    | TypeName
+    ;
+
+PointerTypeSpec
+    : SimpleTypeSpec '*'
+    ;
+
+ArrayTypeSpec
+    : SimpleTypeSpec '[ReflectionDimension]'
+    | SimpleTypeSpec '[ReflectionEmitDimension]'
+    ;
+
+ReflectionDimension
+    : '*'
+    | ReflectionDimension ',' ReflectionDimension
+    | NOTOKEN
+    ;
+
+ReflectionEmitDimension
+    : '*'
+    | Number '..' Number
+    | Number '…'
+    | ReflectionDimension ',' ReflectionDimension
+    | NOTOKEN
+    ;
+
+Number
+    : [0-9]+
+    ;
+
+TypeName
+    : NamespaceTypeName
+    | NamespaceTypeName ',' AssemblyNameSpec
+    ;
+
+NamespaceTypeName
+    : NestedTypeName
+    | NamespaceSpec '.' NestedTypeName
+    ;
+
+NestedTypeName
+    : IDENTIFIER
+    | NestedTypeName '+' IDENTIFIER
+    ;
+
+NamespaceSpec
+    : IDENTIFIER
+    | NamespaceSpec '.' IDENTIFIER
+    ;
+
+AssemblyNameSpec
+    : IDENTIFIER
+    | IDENTIFIER ',' AssemblyProperties
+    ;
+
+AssemblyProperties
+    : AssemblyProperty
+    | AssemblyProperties ',' AssemblyProperty
+    ;
+
+AssemblyProperty
+    : AssemblyPropertyName '=' AssemblyPropertyValue
+    ;
+```
+
 ## <a name="specifying-special-characters"></a>Especificando caracteres especiais  
  Em um nome de tipo, IDENTIFIER é qualquer nome válido determinado pelas regras de uma linguagem.  
   
@@ -71,7 +132,7 @@ Você deve especificar nomes de tipo para ter uma entrada válida para várias o
 |\\[|Delimitador de dimensão da matriz.|  
 |\\]|Delimitador de dimensão da matriz.|  
 |\\.|Use a barra invertida antes de um ponto somente se ele for usado em uma especificação de matriz. Os pontos em NamespaceSpec não usam a barra invertida.|  
-|\\\|Barra invertida quando necessário como uma cadeia de caracteres literal.|  
+|\\\|Barra invertida quando for necessária como uma cadeia de caracteres literal.|  
   
  Observe que, em todos os componentes de TypeSpec, exceto AssemblyNameSpec, os espaços são relevantes. No AssemblyNameSpec, os espaços antes do separador ',' são relevantes, mas espaços depois do separador ',' são ignorados.  
   

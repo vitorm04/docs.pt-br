@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: fd599118165dcb087f046a307a3f7aeef0cf7078
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.openlocfilehash: d230d334eba4e438635a4c70e8c1b5fc5075b065
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Entender o modelo do SDK do .NET Compiler Platform
 
@@ -24,7 +24,7 @@ O SDK do .NET Compiler Platform expõe a análise de código dos compiladores C#
 
 ![etapas de processamento do pipeline do compilador do código-fonte para o código de objeto](media/compiler-pipeline.png)
 
-Cada fase desse pipeline é um componente separado. Primeiro, a fase de análise cria tokens do texto de origem e o analisa na sintaxe que segue a gramática da linguagem. Em segundo lugar, a fase de declaração analisa a fonte e os metadados importados para formar símbolos nomeados. Em seguida, a fase de associação faz a correspondência de identificadores no código a símbolos. Por fim, a fase de emissão, emite um assembly com todas as informações criadas pelo compilador.
+Cada fase desse pipeline é um componente separado. Primeiro, a fase de análise cria tokens do texto de origem e o analisa na sintaxe que segue a gramática da linguagem. Depois, a fase de declaração analisa os metadados de origem e importados para formar símbolos nomeados. Em seguida, a fase de associação corresponde os identificadores no código aos símbolos. Por fim, a fase de emissão emite um assembly com todas as informações criadas pelo compilador.
 
 ![API do pipeline do compilador fornece acesso a cada etapa que faz parte do pipeline do compilador](media/compiler-pipeline-api.png)
 
@@ -48,7 +48,7 @@ A camada do compilador contém os modelos de objeto que correspondem às informa
 
 ### <a name="diagnostic-apis"></a>APIs de diagnóstico
 
-Como parte de sua análise, o compilador pode produzir um conjunto de diagnósticos que abrangem tudo, desde a sintaxe, semântica e erros de atribuição definitiva a vários diagnósticos de avisos e informativos. A camada de API do Compilador expõe o diagnóstico por meio de uma API extensível que permite aos analisadores definidos pelo usuário serem conectados ao processo de compilação. Ela possibilita que o diagnóstico definido pelo usuário, como aqueles gerados por ferramentas como o StyleCop ou FxCop, seja produzido junto com o diagnóstico definido pelo compilador. A produção de diagnóstico dessa maneira tem o benefício da integração natural a ferramentas como o MSBuild e Visual Studio, que dependem do diagnóstico para experiências como interrupção de um build com base na política, exibição de rabiscos em tempo real no editor e sugestão de correções de código.
+Como parte de sua análise, o compilador pode produzir um conjunto de diagnósticos que abrangem tudo, desde a sintaxe, semântica e erros de atribuição definitiva a vários diagnósticos de avisos e informativos. A camada de API do Compilador expõe o diagnóstico por meio de uma API extensível que permite que os analisadores definidos pelo usuário sejam conectados ao processo de compilação. Ela possibilita que o diagnóstico definido pelo usuário, como aqueles gerados por ferramentas como o StyleCop ou FxCop, seja produzido junto com o diagnóstico definido pelo compilador. A produção de diagnóstico dessa maneira tem o benefício da integração natural a ferramentas como o MSBuild e Visual Studio, que dependem do diagnóstico para experiências como interrupção de um build com base na política, exibição de rabiscos em tempo real no editor e sugestão de correções de código.
 
 ### <a name="scripting-apis"></a>APIs de script
 

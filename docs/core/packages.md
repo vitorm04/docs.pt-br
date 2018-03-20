@@ -1,5 +1,5 @@
 ---
-title: Pacotes, Metapacotes e Estruturas
+title: Pacotes, metapacotes e estruturas
 description: Aprenda a terminologia para pacotes, metapacotes e estruturas.
 keywords: .NET, .NET Core
 author: richlander
@@ -9,14 +9,15 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
-ms.workload: dotnetcore
-ms.openlocfilehash: 599f46253a29db5dfd21d0d44ecf67654b6d2eb3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 85f20594844025655bbfb590364324631bd8e695
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/16/2018
 ---
-# <a name="packages-metapackages-and-frameworks"></a>Pacotes, Metapacotes e Estruturas
+# <a name="packages-metapackages-and-frameworks"></a>Pacotes, metapacotes e estruturas
 
 O .NET Core é uma plataforma composta por pacotes NuGet. Algumas experiências de produtos aproveitam melhor a definição refinada de pacotes, enquanto para outros a alta granularidade é melhor. Para acomodar esse dualidade, o produto é distribuído como um conjunto refinado de pacotes, sendo então descrito como blocos mais volumosos com um tipo de pacote chamado informalmente de “metapacote”.
 
@@ -76,7 +77,7 @@ O metapacote da .NET Standard é:
 
 Os principais metapacotes do .NET Core são:
 
-- [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) – Descreve as bibliotecas que fazem parte da distribuição do .NET Core. Estabelece a estrutura [`.NETCoreApp`](https://github.com/dotnet/core-setup/blob/master/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). Conta com o `NETStandard.Library` menor.
+- [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) – Descreve as bibliotecas que fazem parte da distribuição do .NET Core. Estabelece a estrutura [`.NETCoreApp`](https://github.com/dotnet/core-setup/blob/release/1.1.0/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). Conta com o `NETStandard.Library` menor.
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) – Um conjunto de fachadas de compatibilidade que permitem que PCLs (Bibliotecas de Classes Portáteis) baseadas em mscorlib sejam executadas no .NET Core.
 
 ## <a name="frameworks"></a>Estruturas
@@ -139,7 +140,7 @@ Pode parecer estranho apontar para `netstandard1.3`, mas use a versão 1.6.0 do 
 
 O inverso não seria válido: direcionar `netstandard1.6` com a versão 1.3.0 do `NETStandard.Library`. Você não pode direcionar uma estrutura mais elevada com um metapacote menos elevado, visto que a versão do metapacote inferior não exporá os ativos para essa estrutura superior. O esquema de controle de versão para metapacotes declara que os metapacotes correspondem à versão mais alta da estrutura descrita por eles. Devido a esse esquema de controle de versão, a primeira versão do `NETStandard.Library` é v1.6.0, já que ele contém ativos `netstandard1.6`. A versão 1.3.0 é usada no exemplo acima para fins de simetria, mas não existe na verdade.
 
-### <a name="net-core-application"></a>.NET Core Application
+### <a name="net-core-application"></a>Aplicativo .NET Core
 
 A estrutura .NET Core Application (TFM: `netcoreapp`) representa os pacotes e APIs associadas que são fornecidos com a distribuição do .NET Core e o modelo de aplicativo de console que ela fornece. Aplicativos .NET Core devem usar essa estrutura, devido ao direcionamento do modelo de aplicativo de console, assim como as bibliotecas que devem ser executados apenas em .NET Core. Usar essa estrutura restringe a bibliotecas à execução apenas no .NET Core. 
 

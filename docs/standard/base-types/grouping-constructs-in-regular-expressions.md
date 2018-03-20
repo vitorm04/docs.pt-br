@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 107e935f3fd4fd38b4393d09e46c03c0c51c4d79
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 766f20f92cd4ac2d987137f86616a69df9f53600
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Agrupando construtores em expressões regulares
 As construções de agrupamento delineiam as subexpressões de uma expressão regular e capturam a subcadeia de caracteres de uma cadeia de caracteres de entrada. Você pode usar construções de agrupamento para fazer isto:  
@@ -301,7 +301,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
   
  O constructo de opções de grupo não é um grupo de captura. Ou seja, embora todas as porções de uma cadeia de caracteres que são capturadas pela *subexpressão* sejam incluídas na correspondência, elas não são incluídas em grupos capturados, nem usadas para preencher o objeto <xref:System.Text.RegularExpressions.GroupCollection>.  
   
- Por exemplo, a expressão regular `\b(?ix: d \w+)\s` do exemplo a seguir usa opções embutidas em uma construção de agrupamento para habilitar a correspondência com diferenciação de letras maiúsculas e minúsculas, e ignora espaços em branco ao identificar palavras que começam com a letra "d". A expressão regular é definida como mostrado na tabela a seguir.  
+ Por exemplo, a expressão regular `\b(?ix: d \w+)\s` no exemplo a seguir usa opções embutidas em um constructo de agrupamento para habilitar a correspondência sem diferenciação de maiúsculas e minúsculas e ignorar os espaços em branco do padrão, ao identificar todas as palavras que começam com a letra "d". A expressão regular é definida como mostrado na tabela a seguir.  
   
 |Padrão|Descrição|  
 |-------------|-----------------|  

@@ -25,11 +25,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a4a1513840d17f2e7b02acf821b5032eaac6e6fc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cc32a98930c4c1243f53fc9c5d2a10f339b4de11
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="regular-expression-options"></a>Opções de expressões regulares
 <a name="Top"></a> Por padrão, a comparação de uma cadeia de caracteres de entrada com quaisquer caracteres literais em um padrão de expressão regular diferencia maiúsculas e minúsculas; o espaço em branco em um padrão de expressão regular é interpretado como caracteres de espaço em branco literais e os grupos de captura em uma expressão regular são nomeados implícita e explicitamente. É possível modificar esses e vários outros aspectos do comportamento de expressão regular especificando opções de expressões regulares. Essas opções, que estão listadas na tabela a seguir, podem ser incluídas embutidas como parte do padrão de expressão regular, ou podem ser fornecidas a um construtor de classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> ou método de correspondência padrão estático como um valor de enumeração <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/23/2017
 |<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|Use o modo de linha única, em que o ponto (.) corresponde com todos os caracteres (em vez de todos os caracteres, exceto `\n`). Para obter mais informações, consulte [Modo de linha única](#Singleline).|  
 |<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|Não capture grupos sem nome. As únicas capturas válidas são grupos explicitamente nomeados ou numerados na forma `(?<`*name*`>` *subexpression*`)`. Para obter mais informações, consulte [Apenas capturas explícitas](#Explicit).|  
 |<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|Não disponível|Compile a expressão regular para um assembly. Para obter mais informações, consulte [Expressões regulares compiladas](#Compiled).|  
-|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|Exclua um espaço em branco sem escape do padrão e habilite comentários após uma tecla de cerquilha (`#`). Para obter mais informações, consulte [Ignorar espaço em branco](#Whitespace).|  
+|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|Exclua um espaço em branco sem escape do padrão e habilite comentários após uma tecla de cerquilha (`#`). Para obter mais informações, confira [Ignorar espaço em branco](#Whitespace).|  
 |<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|Não disponível|Altera a direção da pesquisa. A pesquisa se move da direita para a esquerda, em vez de da esquerda para a direita. Para obter mais informações, consulte [Modo da direita para a esquerda](#RightToLeft).|  
 |<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|Não disponível|Habilite o comportamento compatível com ECMAScript para a expressão. Para obter mais informações, consulte [Comportamento de correspondência de ECMAScript](#ECMAScript).|  
 |<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant>|Não disponível|Ignorar diferenças culturais no idioma. Para obter mais informações, consulte [Comparação usando cultura invariável](#Invariant).|  
@@ -281,7 +281,7 @@ ms.lasthandoff: 12/23/2017
   
 -   A tecla de cerquilha (#) é interpretada como o início de um comentário, em vez de um caractere literal. Todo o texto no padrão de expressão regular do caractere # até o fim da cadeia de caracteres é interpretado como comentário.  
   
- Porém, nos seguintes casos, os caracteres de espaço em branco em uma expressão regular não são ignorados, mesmo que você use a opção <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType>:  
+ No entanto, nos casos a seguir, os caracteres de espaço em branco em uma expressão regular não serão ignorados, mesmo se você usar a opção <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType>:  
   
 -   O espaço em branco dentro de uma classe de caractere sempre é interpretado literalmente. Por exemplo, o padrão da expressão regular `[ .,;:]` corresponde a qualquer caractere de espaço em branco, ponto, vírgula, dois pontos ou ponto e vírgula único.  
   

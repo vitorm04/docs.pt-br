@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 0c6e44a3e1a1458f4211b66b6d1ef5b4b30cd7c1
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.openlocfilehash: 6e40907cab2aabcf8c8321819c99298314bcfbc5
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="reference-semantics-with-value-types"></a>Semântica de referência com tipos de valores
 
@@ -46,7 +46,7 @@ Ao adicionar o modificador `in` para transmitir um argumento por referência, vo
 
 Os argumentos são duas estruturas que contêm três duplas. Uma dupla tem 8 bytes. Então, cada argumento tem 24 bytes. Ao especificar o modificador `in`, você transmite a referência de 4 ou 8 bytes para esses argumentos, dependendo da arquitetura do computador. A diferença no tamanho é pequena, mas ela pode aumentar rapidamente quando o aplicativo chama esse método em um loop estreito, usando muitos valores diferentes.
  
-O modificador `in` complementa `out` e `ref` de outras formas também. Não é possível criar sobrecargas de um método que difere somente na presença de `in`, `out` ou `ref`. Essas novas regras apresentam o mesmo comportamento que sempre foi definido para os parâmetros `out` e `ref`.
+O modificador `in` complementa `out` e `ref` de outras formas também. Não é possível criar sobrecargas de um método que diferem somente na presença de `in`, `out` ou `ref`. Essas novas regras apresentam o mesmo comportamento que sempre foi definido para os parâmetros `out` e `ref`.
 
 O modificador `in` pode ser aplicado a qualquer membro que usa os seguintes parâmetros: métodos, delegados, lambdas, funções locais, indexadores e operadores.
 

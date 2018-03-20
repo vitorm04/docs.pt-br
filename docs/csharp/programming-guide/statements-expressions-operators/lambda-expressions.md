@@ -15,11 +15,11 @@ ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: df59647b803bff448a801374a325f07e4903a160
-ms.sourcegitcommit: 22a48b64a0150a60b00b4fc4d8c62cde7f1670c4
+ms.openlocfilehash: 14bb60a5009f9a1ae59ed9846ebc868cfdcc05c6
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Expressões lambda (Guia de Programação em C#)
 Uma expressão lambda é uma [função anônima](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) que você pode usar para criar [delegados](../../../csharp/programming-guide/delegates/using-delegates.md) ou tipos de [árvore de expressão](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b). Ao usar expressões lambda, você pode escrever funções locais que podem ser passadas como argumentos ou retornadas como o valor de chamadas de função. Expressões lambda são particularmente úteis para escrever expressões de consulta LINQ.  
@@ -265,7 +265,7 @@ class Test
   
 -   As variáveis introduzidas em uma expressão lambda não são visíveis no método externo.  
   
--   Uma expressão lambda não pode capturar diretamente um parâmetro `ref` ou `out` de um método delimitador.  
+-   Uma expressão lambda não pode capturar um parâmetro `in`, `ref` ou `out` diretamente de um método delimitador.  
   
 -   Uma instrução return em uma expressão lambda não faz com que o método delimitador retorne.  
   

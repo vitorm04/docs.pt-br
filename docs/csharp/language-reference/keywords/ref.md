@@ -1,6 +1,6 @@
 ---
 title: "ref (Referência de C#)"
-ms.date: 05/30/2017
+ms.date: 03/06/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -11,15 +11,13 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.assetid: b8a5e59c-907d-4065-b41d-95bf4273c0bd
-caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9b1e926bd1d9c3a8e0525ed02d102f26e6ec9abd
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 427045317e9d7d0fe3435a486b9f761908ab5e78
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="ref-c-reference"></a>ref (Referência de C#)
 
@@ -40,35 +38,41 @@ Quando usado na lista de parâmetros do método, a palavra-chave `ref` indica qu
 
 Para usar um parâmetro `ref`, a definição do método e o método de chamada devem usar explicitamente a palavra-chave `ref`, como mostrado no exemplo a seguir.  
 
-[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-1.cs)]
+[!code-csharp-interactive[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#1)]
 
-Um argumento que é passado para um parâmetro `ref` deve ser inicializado antes de ser passado. Isso é diferente dos parâmetros [out](out.md), cujos argumentos não precisam ser inicializados explicitamente antes de serem passados.
+Um argumento passado para um parâmetro `ref` ou `in` precisa ser inicializado antes de ser passado. Isso é diferente dos parâmetros [out](out-parameter-modifier.md), cujos argumentos não precisam ser inicializados explicitamente antes de serem passados.
 
-Os membros de uma classe não podem ter assinaturas que diferem somente por `ref` e `out`. Ocorrerá um erro de compilador se a única diferença entre os dois membros de um tipo for que um deles possui um parâmetro `ref` e o outro possui um parâmetro `out`. O código a seguir, por exemplo, não é compilado.  
+Os membros de uma classe não podem ter assinaturas que se diferem somente por `ref`, `in` ou `out`. Ocorrerá um erro de compilador se a única diferença entre os dois membros de um tipo for que um deles tem um parâmetro `ref` e o outro tem um parâmetro `out` ou `in`. O código a seguir, por exemplo, não é compilado.  
+
+```csharp
+class CS0663_Example
+{
+    // Compiler error CS0663: "Cannot define overloaded 
+    // methods that differ only on ref and out".
+    public void SampleMethod(out int i) { }
+    public void SampleMethod(ref int i) { }
+}
+```
+No entanto, os métodos podem ser sobrecarregados quando um método tem um parâmetro `ref`, `in` ou `out` e o outro tem um parâmetro de valor, conforme é mostrado no exemplo a seguir.
   
- [!code-csharp[csrefKeywordsMethodParams#2](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-2.cs)]
+[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#2)]
   
- No entanto, pode haver sobrecarga quando um método tiver um parâmetro `ref` ou `out` e o outro tiver um parâmetro de valor, conforme mostrado no exemplo a seguir.
-  
- [!code-csharp[ref-and-overloads](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-3.cs)]
-  
- Em outras situações que exigem correspondência de assinatura, como ocultar ou substituir, `ref` e `out` fazem parte da assinatura e não são correspondentes.  
+ Em outras situações que exigem correspondência de assinatura, como ocultar ou substituir, `in`, `ref` e `out` fazem parte da assinatura e não são correspondentes.  
   
  Propriedades não são variáveis. Elas são métodos e não podem ser passadas para parâmetros `ref`.  
   
  Para obter informações sobre como passar matrizes, consulte [Passando matrizes com o uso de ref e out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md).  
   
- Não é possível usar as palavras-chave `ref` e `out` para os seguintes tipos de métodos:  
+ Não é possível usar as palavras-chave `ref`, `in` e `out` para os seguintes tipos de métodos:  
   
--   Métodos assíncronos, que você define usando o modificador [async](../../../csharp/language-reference/keywords/async.md).  
-  
--   Métodos de iterador, que incluem uma instrução [yield return](../../../csharp/language-reference/keywords/yield.md) ou `yield break`.  
-  
+- Métodos assíncronos, que você define usando o modificador [async](../../../csharp/language-reference/keywords/async.md).  
+- Métodos de iterador, que incluem uma instrução [yield return](../../../csharp/language-reference/keywords/yield.md) ou `yield break`.  
+
 ## <a name="passing-an-argument-by-reference-an-example"></a>Passando um argumento por referência: um exemplo
 
 Os exemplos anteriores passam tipos de valor por referência. Você também pode usar a palavra-chave `ref` para passar tipos de referência por referência. Passar um tipo de referência por referência permite que o método chamado substitua o objeto ao qual se refere o parâmetro de referência no chamador. O local de armazenamento do objeto é passado para o método como o valor do parâmetro de referência. Se você alterar o valor no local de armazenamento do parâmetro (para apontar para um novo objeto), irá alterar também o local de armazenamento ao qual se refere o chamador. O exemplo a seguir passa uma instância de um tipo de referência como um parâmetro `ref`.   
   
- [!code-csharp[ReferencesByRef](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-4.cs)]  
+[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#3)]
 
 Para obter mais informações sobre como passar tipos de referência por valor e por referência, consulte [Passando parâmetros de tipo de referência](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md).
   
@@ -111,11 +115,11 @@ Observe que a palavra-chave `ref` deve ser usada em ambos os locais ou o compila
 
 O exemplo a seguir define uma classe `Book` que tem dois campos <xref:System.String>, `Title` e `Author`. Ele também define uma classe `BookCollection` que inclui uma matriz privada de objetos `Book`. Objetos de catálogo individuais são retornados por referência chamando o respectivo método `GetBookByTitle`.
 
-[!code-csharp[csrefreturns](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-5.cs#1)]  
+[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#4)]
 
 Quando o chamador armazena o valor retornado pelo método `GetBookByTitle` como um ref local, as alterações que o chamador faz ao valor retornado são refletidas no objeto `BookCollection`, conforme mostra o exemplo a seguir.
 
-[!code-csharp[csrefreturns](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-5.cs#2)]  
+[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
 
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

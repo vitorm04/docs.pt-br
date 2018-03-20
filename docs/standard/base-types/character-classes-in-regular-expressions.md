@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: dfcb0d0ace4bd42d89fe7b4c2dc04098858c2945
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 98aaa5c7bbd28facf9cc06fd0d0898b72ea7dbc2
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classes de caracteres em expressões regulares
 <a name="Top"></a> Uma classe de caracteres define um conjunto de caracteres, qualquer dos quais pode ocorrer em uma cadeia de caracteres de entrada para que uma correspondência seja bem-sucedida. A linguagem de expressões regulares no .NET dá suporte às seguintes classes de caracteres:  
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/09/2018
 |-------------|-----------------|  
 |`[aeiou]`|Corresponder a todas as vogais.|  
 |`[\p{P}\d]`|Corresponder a todos os caracteres de pontuação e dígitos decimais.|  
-|`[\s\p{P}]`|Corresponder a todos os caracteres de pontuação e espaços em branco.|  
+|`[\s\p{P}]`|Corresponder a todos os espaços em branco e à pontuação.|  
   
  O exemplo a seguir define um grupo de caracteres positivos que contém os caracteres “a” e “e” para que a cadeia de caracteres de entrada contenha as palavras “grey” ou “gray” seguida de outra palavra para que uma correspondência ocorra.  
   
@@ -335,7 +335,7 @@ ms.lasthandoff: 01/09/2018
 |\w+|Corresponde a um ou mais caracteres de palavra.|  
 |(e)?|Corresponder a um “e” zero ou uma vez.|  
 |s|Corresponder a um “s”.|  
-|(\s&#124;$)|Corresponder a um caractere de espaço em branco ou ao final da cadeia de caracteres de entrada.|  
+|(\s&#124;$)|Corresponder a um caractere de espaço em branco ou ao fim da cadeia de caracteres de entrada.|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/whitespace1.cs#10)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/whitespace1.vb#10)]  
