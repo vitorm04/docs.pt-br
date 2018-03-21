@@ -12,16 +12,16 @@ caps.latest.revision:
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 8b8de5fb85a839d52ad00ad552ef823d9817e9b7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="how-to-initialize-a-dictionary-with-a-collection-initializer-c-programming-guide"></a>Como inicializar um dicionário com um inicializador de coleção (Guia de Programação em C#)
-Um método <xref:System.Collections.Generic.Dictionary`2> contains a collection of key/value pairs. Its <xref:System.Collections.Generic.Dictionary`2.Add*> utiliza dois parâmetros, um para a chave e um para o valor. Para inicializar um método <xref:System.Collections.Generic.Dictionary`2>, or any collection whose `Add`, use vários parâmetros, coloque cada conjunto de parâmetros entre chaves conforme mostrado no exemplo a seguir.  
+Um <xref:System.Collections.Generic.Dictionary`2> contém uma coleção de pares de chave-valor. Seu método <xref:System.Collections.Generic.Dictionary`2.Add*> recebe dois parâmetros, um para a chave e outro para o valor. Para inicializar um <xref:System.Collections.Generic.Dictionary`2> ou qualquer coleção cujo método `Add` receba vários parâmetros, coloque cada conjunto de parâmetros entre chaves, conforme mostrado no exemplo a seguir.  
   
 ## <a name="example"></a>Exemplo  
- No exemplo de código a seguir, um <xref:System.Collections.Generic.Dictionary`2> is initialized with instances of type `StudentName`.  
+ No exemplo de código a seguir, um <xref:System.Collections.Generic.Dictionary`2> é inicializado com instâncias do tipo `StudentName`.  
   
  [!code-csharp[csProgGuideLINQ#34](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-a-dictionary-with-a-collection-initializer_1.cs)]  
   
