@@ -1,7 +1,7 @@
 ---
-title: "Microsserviços do .NET. Arquitetura de aplicativos .NET em contêineres"
-description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Parte inicial"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Microsserviços do .NET. Arquitetura de aplicativos .NET em contêineres
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Parte inicial
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -127,11 +127,11 @@ Depois de estudar este guia, a próxima etapa será saber mais sobre os microsse
 
 ## <a name="what-this-guide-does-not-cover"></a>O que este guia não cobre
 
-Este guia não se concentra no ciclo de vida do aplicativo, em DevOps, nos pipelines de CI/CD nem no trabalho da equipe. O guia complementar [Containerized Docker Application Lifecycle with Microsoft Platform and Tools](https://aka.ms/dockerlifecycleebook) (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft) trata desse assunto. O guia atual também não fornece detalhes de implementação na infraestrutura do Azure, como informações sobre orquestradores específicos.
+Este guia não se concentra no ciclo de vida do aplicativo, em DevOps, nos pipelines de CI/CD nem no trabalho da equipe. O guia complementar [Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft](https://aka.ms/dockerlifecycleebook) trata desse assunto. O guia atual também não fornece detalhes de implementação na infraestrutura do Azure, como informações sobre orquestradores específicos.
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
--   **Containerized Docker Application Lifecycle with Microsoft Platform and Tools** (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft) (livro eletrônico para baixar) [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+-   **Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft** (livro eletrônico para baixar) [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
 
 ## <a name="who-should-use-this-guide"></a>Quem deve usar este guia
 
