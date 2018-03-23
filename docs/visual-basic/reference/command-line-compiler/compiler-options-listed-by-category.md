@@ -12,14 +12,16 @@ helpviewer_keywords:
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc14d090951f12fd322b90fababa064d1f5b4e80
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: e66ec709a32b39e2e7427d6ce165f62212dac543
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Opções de compilador do Visual Basic listadas por categoria
-O [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador de linha de comando é fornecido como uma alternativa para compilar programas de dentro do [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] ambiente de desenvolvimento integrado (IDE). A seguir está uma lista da [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] classificadas por categoria funcional de opções do compilador de linha de comando.  
+O compilador de linha de comando do Visual Basic é fornecido como uma alternativa para compilar programas de dentro do [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] ambiente de desenvolvimento integrado (IDE). A seguir está uma lista de opções de compilador de linha de comando do Visual Basic classificadas por categoria funcional.  
+
+[!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
 ## <a name="compiler-output"></a>Saída do compilador  
   
@@ -45,6 +47,8 @@ O [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador de linha de comando é 
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Processa comentários de documentação em um arquivo XML.|  
 |[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Define o compilador como destino o [!INCLUDE[Compact](~/includes/compact-md.md)].|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Especifica um arquivo de saída.|  
+|[/refonly](refonly-compiler-option.md)|Produz uma referência de assembly.|
+|[/refout](refout-compiler-option.md)|Especifica o caminho de saída de um assembly de referência.|
 |[-target](../../../visual-basic/reference/command-line-compiler/target.md)|Especifica o formato da saída.|  
   
 ## <a name="net-assemblies"></a>Assemblies do .NET  
@@ -113,7 +117,7 @@ O [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador de linha de comando é 
 |[Em (Especificar arquivo de resposta)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|Especifica um arquivo de resposta.|  
 |[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|Especifica o endereço base de uma DLL.|  
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|Especifica a página de código a ser usada para todos os arquivos de código-fonte na compilação.|  
-|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Especifica como o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador deve relatar erros do compilador interno.|  
+|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Especifica como o compilador do Visual Basic deve relatar erros do compilador interno.|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Informa o kernel do Windows se um executável específico dá suporte à alta entropia endereço espaço Layout aleatória (ASLR).|  
 |[-main](../../../visual-basic/reference/command-line-compiler/main.md)|Especifica a classe que contém o `Sub Main` procedimento a ser usado na inicialização.|  
 |[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Não compilar com Vbc|  
@@ -130,6 +134,6 @@ O [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador de linha de comando é 
   
 ## <a name="see-also"></a>Consulte também  
  [Opções do compilador do Visual Basic listadas em ordem alfabética](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
- [Introdução ao Designer de Projeto](http://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
+ [Introdução ao Designer de Projeto](https://msdn.microsoft.com/en-us/library/898dd854-c98d-430c-ba1b-a913ce3c73d7(v=vs.100))  
  [Opções do compilador de C# listadas em ordem alfabética](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
  [Opções do compilador de C# listadas por categoria](../../../csharp/language-reference/compiler-options/listed-by-category.md)
