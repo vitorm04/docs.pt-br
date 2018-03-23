@@ -1,8 +1,9 @@
 ---
 title: 'Como: criar um aplicativo Windows Forms a partir da linha de comando'
-ms.date: 03/30/2017
+ms.date: 03/14/2018
 ms.prod: .net-framework
-ms.technology: dotnet-winforms
+ms.technology:
+- dotnet-winforms
 ms.topic: article
 dev_langs:
 - csharp
@@ -12,16 +13,15 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating basic form
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22acab6ea3912488ae1382ffb42ca5383a7311af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+author: rpetrusha
+ms.author: ronpet
+ms.workload:
+- dotnet
+ms.openlocfilehash: 79fda0f5f455cbac50c0c1b51f0cd3bef4c5bfbc
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Como: criar um aplicativo Windows Forms a partir da linha de comando
 Os procedimentos a seguir descrevem as etapas básicas que devem ser concluídas para criar e executar um aplicativo do Windows Forms na linha de comando. Há um suporte abrangente para esses procedimentos no Visual Studio.  Consulte também as [Instruções Passo a Passo: Criando um Formulários Simples do Windows Form](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
@@ -49,9 +49,9 @@ Os procedimentos a seguir descrevem as etapas básicas que devem ser concluídas
   
 4.  Adicione o método `Main` à classe.  
   
-    1.  Aplicar o <xref:System.STAThreadAttribute> para o `Main` método para especificar o aplicativo de formulários do Windows é um compartimento de thread único.  
+    1.  Aplicar o <xref:System.STAThreadAttribute> para c# `Main` método para especificar o aplicativo de formulários do Windows é um single-threaded apartment. (O atributo não é necessário no Visual Basic, como aplicativos de formulários do Windows desenvolvido com o uso do Visual Basic um modelo de single-threaded apartment por padrão.)  
   
-    2.  Chamar <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> para dar uma aparência do Windows XP para o seu aplicativo.  
+    2.  Chamar <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> para aplicar estilos de sistema operacional para o seu aplicativo.  
   
     3.  Crie uma instância do formulário e execute-o.  
   
@@ -68,7 +68,7 @@ Os procedimentos a seguir descrevem as etapas básicas que devem ser concluídas
   
          `-or-`  
   
-    -   Se estiver usando Visual Basic, digite: `vbc form1.vb /r:system.dll,system.drawing.dll,system.windows.forms.dll`  
+    -   Se estiver usando Visual Basic, digite: `vbc form1.vb`  
   
 3.  No prompt de comando, digite: `Form1.exe`  
   

@@ -1,12 +1,13 @@
 ---
 title: Como compilar condicionalmente com Trace e Debug
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - trace compiler options
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-caps.latest.revision: "11"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ccdadc22728c28c8dea80f168a98cb985b2572a7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5e590888a56ed4c325e89eb828349f4f289815cd
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Como compilar condicionalmente com Trace e Debug
 Enquanto você estiver depurando um aplicativo durante o desenvolvimento, a saída de rastreamento e de depuração é enviada para a janela de Saída no Visual Studio. No entanto, para incluir recursos de rastreamento em um aplicativo implantado, compile os aplicativos instrumentados com a diretiva do compilador **TRACE** habilitada. Isso permite que o código de rastreamento seja compilado na versão de lançamento do aplicativo. Se você não habilitar a diretiva **TRACE**, todo o código de rastreamento será ignorado durante a compilação e não será incluído no código executável que será implantado.  
@@ -59,9 +61,9 @@ Enquanto você estiver depurando um aplicativo durante o desenvolvimento, a saí
   
      Por exemplo, a seguinte instrução do compilador inserida na linha de comando incluirá o código de rastreamento em um executável compilado:  
   
-     Para o Visual Basic: **vbc /r:System.dll /d:TRACE=TRUE /d:DEBUG=FALSE MyApplication.vb**  
+     Para o Visual Basic: **vbc-r:System.dll -d: rastreamento = TRUE -d: depurar = FALSE MyApplication.vb**  
   
-     Para o C#: **csc /r:System.dll /d:TRACE /d:DEBUG=FALSE MyApplication.cs**  
+     Para c#: **csc-r:System.dll -d: rastreamento -d: depurar = FALSE MyApplication.cs**  
   
     > [!TIP]
     >  Para compilar mais de um arquivo de aplicativo, deixe um espaço em branco entre os nomes de arquivo, por exemplo, **MyApplication1.vb MyApplication2.vb MyApplication3.vb** ou **MyApplication1.cs MyApplication2.cs MyApplication3.cs**.  
@@ -72,8 +74,8 @@ Enquanto você estiver depurando um aplicativo durante o desenvolvimento, a saí
     |---------------|-------------|  
     |`vbc`|compilador do Visual Basic|  
     |`csc`|Compilador C#|  
-    |`/r:`|Referencia um assembly externo (EXE ou DLL)|  
-    |`/d:`|Define um símbolo de compilação condicional|  
+    |`-r:`|Referencia um assembly externo (EXE ou DLL)|  
+    |`-d:`|Define um símbolo de compilação condicional|  
   
     > [!NOTE]
     >  É necessário escrever TRACE ou DEBUG com letras maiúsculas. Para obter mais informações sobre os comandos de compilação condicional, insira `vbc /?` (para o Visual Basic) ou `csc /?` (para o C#) no prompt de comando. Para obter mais informações, consulte [Compilando por meio da linha de comando](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (C#) ou [Invocando o compilador de linha de comando](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Visual Basic).  
@@ -95,14 +97,14 @@ Enquanto você estiver depurando um aplicativo durante o desenvolvimento, a saí
   
 ### <a name="to-disable-tracing-or-debugging"></a>Para desabilitar o rastreamento ou a depuração  
   
-1.  Exclua a diretiva do compilador do código-fonte.  
+Exclua a diretiva do compilador do código-fonte.  
   
-     \- ou -  
+\- ou -  
   
-2.  Comente a diretiva do compilador.  
+Comente a diretiva do compilador.  
   
-    > [!NOTE]
-    >  Quando você estiver pronto para compilar, escolha **Compilar** no menu **Compilar** ou use o método de linha de comando, mas sem digitar o **d:** para definir símbolos de compilação condicional.  
+> [!NOTE]
+>  Quando você estiver pronto para compilar, escolha **Compilar** no menu **Compilar** ou use o método de linha de comando, mas sem digitar o **d:** para definir símbolos de compilação condicional.  
   
 ## <a name="see-also"></a>Consulte também  
  [Rastreando e instrumentando aplicativos](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
