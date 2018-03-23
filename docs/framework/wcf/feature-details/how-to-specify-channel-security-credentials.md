@@ -1,30 +1,32 @@
 ---
-title: "Como especificar credenciais de segurança de canal"
-ms.custom: 
+title: Como especificar credenciais de segurança de canal
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e2aedb06ec694f6c7dfb12b70ab919ae23eed17e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Como especificar credenciais de segurança de canal
 O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Moniker de serviço permite que aplicativos de COM chamar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços. A maioria dos [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services requer que o cliente especificar credenciais para autenticação e autorização. Ao chamar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente, você pode especificar essas credenciais no código gerenciado ou em um arquivo de configuração do aplicativo. Ao chamar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço de um aplicativo COM, você pode usar o <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interface para especificar as credenciais. Este tópico ilustrará várias maneiras de especificar credenciais usando o <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interface.  
   
 > [!NOTE]
->  <xref:System.ServiceModel.ComIntegration.IChannelCredentials>é uma interface baseada em IDispatch e você não terá a funcionalidade do IntelliSense no ambiente do Visual Studio.  
+>  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> é uma interface baseada em IDispatch e você não terá a funcionalidade do IntelliSense no ambiente do Visual Studio.  
   
  Este artigo usará o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço definido no [exemplo de segurança de mensagem](../../../../docs/framework/wcf/samples/message-security-sample.md).  
   
@@ -61,7 +63,7 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Moniker de serviço pe
   
 7.  Execute o aplicativo do Visual Basic e verificar os resultados.  
   
-     O aplicativo do Visual Basic exibirá uma caixa de mensagem com o resultado de chamar o método Add (3, 4). <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29>ou <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> também pode ser usado no lugar de <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> para definir o certificado de cliente:  
+     O aplicativo do Visual Basic exibirá uma caixa de mensagem com o resultado de chamar o método Add (3, 4). <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> ou <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> também pode ser usado no lugar de <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> para definir o certificado de cliente:  
   
     ```  
     monikerProxy.ChannelCredentials.SetClientCertificateFromFile "C:\MyClientCert.pfx", "password", "DefaultKeySet"  

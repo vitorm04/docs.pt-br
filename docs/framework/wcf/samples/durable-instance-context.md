@@ -1,24 +1,26 @@
 ---
-title: "Contexto de instância durável"
-ms.custom: 
+title: Contexto de instância durável
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e4f1f3f9e840ba422e327792ec2b0554fad45902
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="durable-instance-context"></a>Contexto de instância durável
 Este exemplo demonstra como personalizar o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] tempo de execução para permitir que os contextos de instância durável. Ele usa o SQL Server 2005 como seu armazenamento de backup (SQL Server 2005 Express neste caso). No entanto, ele também fornece uma maneira de acessar os mecanismos de armazenamento personalizado.  
@@ -242,7 +244,7 @@ else
   
  Como a primeira etapa desse processo, precisamos salvar a identificação de contexto fornecido por meio da camada do canal para o InstanceContext atual. InstanceContext é um componente de tempo de execução que atua como o link entre a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dispatcher e a instância do serviço. Ele pode ser usado para fornecer estado adicionais e o comportamento para a instância do serviço. Isso é essencial porque na comunicação da sessão, a ID do contexto é enviada somente com a primeira mensagem.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]permite estender seu componente de tempo de execução InstanceContext adicionando um novo estado e o comportamento usando o padrão de objeto extensível. O padrão de objeto extensível é usado em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para estender as classes de tempo de execução existentes com a nova funcionalidade ou para adicionar novos recursos de estado para um objeto. Existem três interfaces no padrão de objeto extensível - IExtensibleObject\<T >, IExtension\<T > e IExtensionCollection\<T >:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permite estender seu componente de tempo de execução InstanceContext adicionando um novo estado e o comportamento usando o padrão de objeto extensível. O padrão de objeto extensível é usado em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para estender as classes de tempo de execução existentes com a nova funcionalidade ou para adicionar novos recursos de estado para um objeto. Existem três interfaces no padrão de objeto extensível - IExtensibleObject\<T >, IExtension\<T > e IExtensionCollection\<T >:  
   
 -   O IExtensibleObject\<T > interface é implementada por objetos que permitem a extensões que personalizar sua funcionalidade.  
   
@@ -290,7 +292,7 @@ public void Initialize(InstanceContext instanceContext, Message message)
   
  Conforme descrito anteriormente a ID de contexto é lido a partir de `Properties` coleção do `Message` classe e transmitido ao construtor da classe de extensão. Isso demonstra como as informações podem ser trocadas entre as camadas de maneira consistente.  
   
- A próxima etapa importante está substituindo o processo de criação de instância de serviço. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]permite a implementação de comportamentos personalizados instanciação e capturando-los até o tempo de execução usando a interface IInstanceProvider. O novo `InstanceProvider` classe é implementada para fazer esse trabalho. No construtor no tipo de serviço esperado do provedor de instância é aceita. Posteriormente, isso é usado para criar novas instâncias. No `GetInstance` implementação de uma instância de um Gerenciador de armazenamento é criada procurando uma instância persistente. Se ele retorna `null` , em seguida, uma nova instância do tipo de serviço é instanciada e retornada ao chamador.  
+ A próxima etapa importante está substituindo o processo de criação de instância de serviço. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permite a implementação de comportamentos personalizados instanciação e capturando-los até o tempo de execução usando a interface IInstanceProvider. O novo `InstanceProvider` classe é implementada para fazer esse trabalho. No construtor no tipo de serviço esperado do provedor de instância é aceita. Posteriormente, isso é usado para criar novas instâncias. No `GetInstance` implementação de uma instância de um Gerenciador de armazenamento é criada procurando uma instância persistente. Se ele retorna `null` , em seguida, uma nova instância do tipo de serviço é instanciada e retornada ao chamador.  
   
 ```  
 public object GetInstance(InstanceContext instanceContext, Message message)  

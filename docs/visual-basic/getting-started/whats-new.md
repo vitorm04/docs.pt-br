@@ -12,14 +12,14 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4df9a34e078de9daeff85c894afbbf4d60501f6b
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
-ms.translationtype: HT
+ms.openlocfilehash: c0452a5dde3a266f5d50f69016eac8144bab9ba6
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Novidades do Visual Basic
 
@@ -34,6 +34,9 @@ Para as novas funcionalidades, consulte [Visual Basic 15.5](#visual-basic-155)
 
 Visual Basic 15.3   
 Para as novas funcionalidades, consulte [Visual Basic 15.3](#visual-basic-153)
+
+Visual Basic 2017   
+Para as novas funcionalidades, consulte [Visual Basic 2017](#visual-basic-2017)
 
 Visual Basic / Visual Studio .NET 2015   
 Para as novas funcionalidades, consulte [Visual Basic 14](#visual-basic-14)
@@ -78,7 +81,7 @@ O Visual Basic 2017 agora tem suporte para o caractere de sublinhado (`_`) como 
 ```vb
 Dim number As Integer = &H_C305_F860
 ``` 
-Para usar o caractere de sublinhado como um separador à esquerda, você deve adicionar o seguinte elemento ao arquivo de projeto (*.vbproj) do Visual Basic:
+Para usar o caractere de sublinhado como separador à esquerda, você deve adicionar o elemento a seguir ao seu projeto do Visual Basic (\*. vbproj) arquivo:
 
 ```xml
 <PropertyGroup>
@@ -88,15 +91,19 @@ Para usar o caractere de sublinhado como um separador à esquerda, você deve ad
 
 ## <a name="visual-basic-153"></a>Visual Basic 15.3
 
-[Inferência de tupla nomeada](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
+[**Inferência de tupla nomeada**](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
 
 Quando você atribui o valor de elementos de tupla com base em variáveis, o Visual Basic infere o nome dos elementos de tupla dos nomes de variável correspondentes; não é necessário nomear explicitamente um elemento de tupla. O exemplo a seguir usa a inferência para criar uma tupla com três elementos nomeados, `state`, `stateName` e `capital`.
 
 [!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
+**Opções adicionais do compilador**  
+
+O compilador de linha de comando agora oferece suporte do Visual Basic a [ **- refout** ](../reference/command-line-compiler/refout-compiler-option.md) e [ **- refonly** ](../reference/command-line-compiler/refonly-compiler-option.md) opções do compilador para controlar a saída de assemblies de referência. **-refout** define o diretório de saída do assembly de referência, e **- refonly** Especifica que somente uma referência de assembly para a saída pela compilação.
+
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
-[Tuplas](../programming-guide/language-features/data-types/tuples.md)
+[**Tuplas**](../programming-guide/language-features/data-types/tuples.md)
 
 As tuplas são uma estrutura de dados leve que é mais comumente usada para retornar vários valores de uma única chamada de método. Normalmente, para retornar vários valores de um método, você precisa realizar uma das seguintes ações:
 

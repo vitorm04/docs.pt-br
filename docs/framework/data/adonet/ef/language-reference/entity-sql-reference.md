@@ -1,24 +1,26 @@
 ---
-title: "Referência de Entity SQL"
-ms.custom: 
+title: Referência de Entity SQL
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ac05ec8a8732da383a4e33e84c669aa29660a0da
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="entity-sql-reference"></a>Referência de Entity SQL
 Esta seção contém [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tópicos de referência. Este tópico resume e agrupa os [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operadores por categoria.  
@@ -71,7 +73,7 @@ Esta seção contém [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tó
 |--------------|-----------------|  
 |[& & (AND lógico)](../../../../../../docs/framework/data/adonet/ef/language-reference/and-entity-sql.md)|AND lógico.|  
 |[Operador (Não lógico)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|NOT lógico.|  
-|[&#124; &#124; (OR lógico)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|OR lógico.|  
+|[&#124;&#124;(OR lógico)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|OR lógico.|  
 |[CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|Avalia um conjunto de expressões boolianas para determinar o resultado.|  
 |[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|O resultado de uma [quando](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) cláusula quando ela é avaliada como true.|  
   
@@ -92,7 +94,7 @@ Esta seção contém [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tó
 |[WHERE](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md)|Filtra condicionalmente os dados que são retornados por uma consulta.|  
   
 ## <a name="reference-operators"></a>Operadores de referência  
- Uma referência é um ponteiro lógico (chave estrangeira) para uma entidade específica em um conjunto de entidades específico. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]suporta os seguintes operadores para construir, decompor e navegar por meio de referências.  
+ Uma referência é um ponteiro lógico (chave estrangeira) para uma entidade específica em um conjunto de entidades específico. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] suporta os seguintes operadores para construir, decompor e navegar por meio de referências.  
   
 |Operador|Use|  
 |--------------|---------|  
@@ -118,13 +120,13 @@ Esta seção contém [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tó
 |[UNION](../../../../../../docs/framework/data/adonet/ef/language-reference/union-entity-sql.md)|Combina os resultados de duas ou mais consultas em uma única coleção.|  
   
 ## <a name="type-operators"></a>Operadores de tipo  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]Fornece operações que permitem que o tipo de uma expressão (valor) a ser construído, consultados e manipulados. A tabela a seguir lista os operadores que são usados para trabalhar com tipos.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Fornece operações que permitem que o tipo de uma expressão (valor) a ser construído, consultados e manipulados. A tabela a seguir lista os operadores que são usados para trabalhar com tipos.  
   
 |Operador|Use|  
 |--------------|---------|  
 |[CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)|Converte uma expressão de um tipo de dados para outro.|  
 |[COLLECTION](../../../../../../docs/framework/data/adonet/ef/language-reference/collection-entity-sql.md)|Usado em uma [função](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) operação para declarar uma coleção de tipos de entidade ou tipos complexos.|  
-|[FOR &#91; NÃO &#93; DE](../../../../../../docs/framework/data/adonet/ef/language-reference/isof-entity-sql.md)|Determina se o tipo de uma expressão é do tipo especificado ou um de seus subtipos.|  
+|[É &AMP;#91;NÃO&AMP;#93; OF](../../../../../../docs/framework/data/adonet/ef/language-reference/isof-entity-sql.md)|Determina se o tipo de uma expressão é do tipo especificado ou um de seus subtipos.|  
 |[OFTYPE](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md)|Retorna uma coleção de objetos de uma expressão de consulta que é de um tipo específico.|  
 |[Construtor de tipo nomeado](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)|Usado para criar instâncias de tipos de entidade ou tipos complexos.|  
 |[MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)|Cria uma instância de um multiset de uma lista de valores.|  

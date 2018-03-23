@@ -1,24 +1,26 @@
 ---
-title: "Gerando um cliente do WCF de metadados de serviço"
-ms.custom: 
+title: Gerando um cliente do WCF de metadados de serviço
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-caps.latest.revision: "9"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 9eedf84d1dccb8bc2540aca7e6bd338b4e58326d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Gerando um cliente do WCF de metadados de serviço
 Este tópico descreve como usar as várias opções no Svcutil.exe para gerar os clientes de documentos de metadados.  
@@ -42,29 +44,29 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
 |Opção|Descrição|  
 |------------|-----------------|  
 |**/Reference:\<caminho do arquivo >**|Os tipos de referência no assembly especificado. Ao gerar clientes, use esta opção para especificar os assemblies que podem conter tipos que representam os metadados que estão sendo importados.<br /><br /> Forma abreviada: `/r`|  
-|**/excludeType:\<tipo >**|Especifica um nome de tipo totalmente qualificado ou qualificado do assembly a ser excluído dos tipos de contrato referenciados.<br /><br /> Forma abreviada: `/et`|  
+|**/excludeType:\<type>**|Especifica um nome de tipo totalmente qualificado ou qualificado do assembly a ser excluído dos tipos de contrato referenciados.<br /><br /> Forma abreviada: `/et`|  
   
 ## <a name="choosing-a-serializer"></a>Escolhendo um serializador  
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|**/Serializer:auto**|Seleciona automaticamente o serializador. Isso usa o `DataContract` serializador. Se isso falhar, o `XmlSerializer` é usado.<br /><br /> Forma abreviada: `/ser:Auto`|  
-|**/Serializer:DataContractSerializer**|Gera os tipos de dados que usam o `DataContract` serializador para serialização e desserialização.<br /><br /> Forma abreviada: `/ser:DataContractSerializer`|  
-|**/Serializer:XmlSerializer**|Gera os tipos de dados que usam o `XmlSerializer` para serialização e desserialização.<br /><br /> Forma abreviada: `/ser:XmlSerializer`|  
+|**/serializer:Auto**|Seleciona automaticamente o serializador. Isso usa o `DataContract` serializador. Se isso falhar, o `XmlSerializer` é usado.<br /><br /> Forma abreviada: `/ser:Auto`|  
+|**/serializer:DataContractSerializer**|Gera os tipos de dados que usam o `DataContract` serializador para serialização e desserialização.<br /><br /> Forma abreviada: `/ser:DataContractSerializer`|  
+|**/serializer:XmlSerializer**|Gera os tipos de dados que usam o `XmlSerializer` para serialização e desserialização.<br /><br /> Forma abreviada: `/ser:XmlSerializer`|  
 |**/importXmlTypes**|Configura o `DataContract` serializador para importar não`DataContract` tipos como `IXmlSerializable` tipos.<br /><br /> Forma abreviada: `/ixt`|  
-|**/dataContractOnly**|Gera código para `DataContract` tipos somente. `ServiceContract`tipos são gerados.<br /><br /> Você deve especificar somente os arquivos de metadados local para essa opção.<br /><br /> Forma abreviada: `/dconly`|  
+|**/dataContractOnly**|Gera código para `DataContract` tipos somente. `ServiceContract` tipos são gerados.<br /><br /> Você deve especificar somente os arquivos de metadados local para essa opção.<br /><br /> Forma abreviada: `/dconly`|  
   
 ## <a name="choosing-a-language-for-the-client"></a>Escolher um idioma para o cliente  
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|**/idioma:\<idioma >**|Especifica a linguagem de programação a ser usada para gerar o código. Forneça um nome de idioma registrado no arquivo Machine. config ou o nome totalmente qualificado de uma classe que herda de <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Valores: c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c + +, mc, cpp<br /><br /> Padrão: csharp<br /><br /> Forma abreviada: `/l`<br /><br /> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Classe CodeDomProvider](http://go.microsoft.com/fwlink/?LinkId=94778).|  
+|**/language:\<language>**|Especifica a linguagem de programação a ser usada para gerar o código. Forneça um nome de idioma registrado no arquivo Machine. config ou o nome totalmente qualificado de uma classe que herda de <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Valores: c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c + +, mc, cpp<br /><br /> Padrão: csharp<br /><br /> Forma abreviada: `/l`<br /><br /> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Classe CodeDomProvider](http://go.microsoft.com/fwlink/?LinkId=94778).|  
   
 ## <a name="choosing-a-namespace-for-the-client"></a>Escolhendo um Namespace para o cliente  
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|**/namespace:\<cadeia de caracteres, cadeia de caracteres >**|Especifica um mapeamento de um esquema XML ou de WSDL `targetNamespace` para um namespace de tempo de execução (CLR) de linguagem comum. Usando um caractere curinga (*) para o `targetNamespace` mapeia todos os `targetNamespaces` sem um mapeamento explícito esse namespace CLR.<br /><br /> Para certificar-se de que o nome do contrato de mensagem não entrarem em conflito com o nome da operação, qualifique a referência de tipo com dois-pontos duplo (`::`) ou verifique se os nomes são exclusivos.<br /><br /> Padrão: Derivado do namespace de destino do documento do esquema para `DataContracts`. O namespace padrão é usado para todos os outros tipos gerados.<br /><br /> Forma abreviada: `/n`|  
+|**/namespace:\<string,string>**|Especifica um mapeamento de um esquema XML ou de WSDL `targetNamespace` para um namespace de tempo de execução (CLR) de linguagem comum. Usando um caractere curinga (*) para o `targetNamespace` mapeia todos os `targetNamespaces` sem um mapeamento explícito esse namespace CLR.<br /><br /> Para certificar-se de que o nome do contrato de mensagem não entrarem em conflito com o nome da operação, qualifique a referência de tipo com dois-pontos duplo (`::`) ou verifique se os nomes são exclusivos.<br /><br /> Padrão: Derivado do namespace de destino do documento do esquema para `DataContracts`. O namespace padrão é usado para todos os outros tipos gerados.<br /><br /> Forma abreviada: `/n`|  
   
 ## <a name="choosing-a-data-binding"></a>Escolhendo uma associação de dados  
   
@@ -76,7 +78,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|**/config:\<configFile >**|Especifica o nome do arquivo para o arquivo de configuração gerada.<br /><br /> Padrão: output.config|  
+|**/config:\<configFile>**|Especifica o nome do arquivo para o arquivo de configuração gerada.<br /><br /> Padrão: output.config|  
 |**/mergeConfig**|Mescla a configuração gerada em um arquivo existente, em vez de substituir o arquivo existente.|  
 |**/noConfig**|Não gera arquivos de configuração.|  
   
