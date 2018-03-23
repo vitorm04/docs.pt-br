@@ -1,4 +1,5 @@
 # [Especificação de rascunho do C# 6.0](index.md)
+## [Introdução](../../../../_csharplang/spec/introduction.md)
 ## [Estrutura lexical](../../../../_csharplang/spec/lexical-structure.md)
 ## [Conceitos básicos](../../../../_csharplang/spec/basic-concepts.md)
 ## [Tipos](../../../../_csharplang/spec/types.md)
