@@ -1,8 +1,9 @@
 ---
-title: "Hello World -- seu primeiro programa (Guia de Programação em C#)"
+title: Hello World -- seu primeiro programa (Guia de Programação em C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: get-started-article
 f1_keywords:
 - cs.program
@@ -11,7 +12,7 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-caps.latest.revision: "39"
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 1b6511394e69edd344c4f4a1bbc9da549a1a2a17
@@ -21,7 +22,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 01/19/2018
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- seu primeiro programa (Guia de Programação em C#)
-O procedimento a seguir cria uma versão de C# do tradicional programa  "Hello World!". O programa exibe a cadeia de caracteres `Hello World!`  
+O procedimento a seguir cria uma versão de C# do tradicional programa "Hello World!".  program. O programa exibe a cadeia de caracteres `Hello World!`  
   
  Para obter mais exemplos de conceitos introdutórios, consulte [Introdução ao Visual C# e ao Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic).  
   
