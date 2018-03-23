@@ -1,63 +1,62 @@
 ---
-title: /win32manifest (Visual Basic)
-ms.date: 07/20/2015
+title: -win32manifest (Visual Basic)
+ms.date: 03/13/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - /win32manifest compiler option [Visual Basic]
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a46641181c3ff66882468f8372bb97c3a49a8462
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 79b51117197f28cec21671eea4dd7b7f2f1cc306
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="win32manifest-visual-basic"></a><span data-ttu-id="0fd71-102">/win32manifest (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0fd71-102">/win32manifest (Visual Basic)</span></span>
-<span data-ttu-id="0fd71-103">Identifica um definido pelo usuário aplicativo arquivo manifesto Win32 a ser inserido no arquivo de PE (executável portátil) do projeto.</span><span class="sxs-lookup"><span data-stu-id="0fd71-103">Identifies a user-defined Win32 application manifest file to be embedded into a project's portable executable (PE) file.</span></span>  
+# <a name="-win32manifest-visual-basic"></a><span data-ttu-id="e25cf-102">-win32manifest (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e25cf-102">-win32manifest (Visual Basic)</span></span>
+<span data-ttu-id="e25cf-103">Identifica um definido pelo usuário aplicativo arquivo manifesto Win32 a ser inserido no arquivo de PE (executável portátil) do projeto.</span><span class="sxs-lookup"><span data-stu-id="e25cf-103">Identifies a user-defined Win32 application manifest file to be embedded into a project's portable executable (PE) file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0fd71-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="0fd71-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e25cf-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e25cf-104">Syntax</span></span>  
   
 ```  
-/win32manifest: fileName  
+-win32manifest: fileName  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="0fd71-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="0fd71-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="e25cf-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="e25cf-105">Arguments</span></span>  
   
-|<span data-ttu-id="0fd71-106">Termo</span><span class="sxs-lookup"><span data-stu-id="0fd71-106">Term</span></span>|<span data-ttu-id="0fd71-107">Definição</span><span class="sxs-lookup"><span data-stu-id="0fd71-107">Definition</span></span>|  
+|<span data-ttu-id="e25cf-106">Termo</span><span class="sxs-lookup"><span data-stu-id="e25cf-106">Term</span></span>|<span data-ttu-id="e25cf-107">Definição</span><span class="sxs-lookup"><span data-stu-id="e25cf-107">Definition</span></span>|  
 |---|---|  
-|`fileName`|<span data-ttu-id="0fd71-108">O caminho do arquivo de manifesto personalizado.</span><span class="sxs-lookup"><span data-stu-id="0fd71-108">The path of the custom manifest file.</span></span>|  
+|`fileName`|<span data-ttu-id="e25cf-108">O caminho do arquivo de manifesto personalizado.</span><span class="sxs-lookup"><span data-stu-id="e25cf-108">The path of the custom manifest file.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0fd71-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="0fd71-109">Remarks</span></span>  
- <span data-ttu-id="0fd71-110">Por padrão, o compilador do Visual Basic incorpora um manifesto de aplicativo que especifica um nível de execução solicitado de asInvoker.</span><span class="sxs-lookup"><span data-stu-id="0fd71-110">By default, the Visual Basic compiler embeds an application manifest that specifies a requested execution level of asInvoker.</span></span> <span data-ttu-id="0fd71-111">Cria o manifesto na mesma pasta em que o arquivo executável é criado, normalmente a pasta bin\Debug ou bin\Release quando você usa o Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="0fd71-111">It creates the manifest in the same folder in which the executable file is built, typically the bin\Debug or bin\Release folder when you use Visual Studio.</span></span> <span data-ttu-id="0fd71-112">Se você quiser fornecer um manifesto personalizado, por exemplo, para especificar um nível de execução solicitado de highestAvailable ou requireAdministrator, use essa opção para especificar o nome do arquivo.</span><span class="sxs-lookup"><span data-stu-id="0fd71-112">If you want to supply a custom manifest, for example to specify a requested execution level of highestAvailable or requireAdministrator, use this option to specify the name of the file.</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="0fd71-113">Essa opção e o [/win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) opção são mutuamente exclusivos.</span><span class="sxs-lookup"><span data-stu-id="0fd71-113">This option and the [/win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) option are mutually exclusive.</span></span> <span data-ttu-id="0fd71-114">Se você tentar usar ambas as opções na mesma linha de comando, você obterá um erro de compilação.</span><span class="sxs-lookup"><span data-stu-id="0fd71-114">If you try to use both options in the same command line, you will get a build error.</span></span>  
-  
- <span data-ttu-id="0fd71-115">Um aplicativo que não tem nenhum manifesto do aplicativo que especifica que um nível de execução solicitado estará sujeito à virtualização de arquivos/Registro sob o recurso de Controle de Conta de Usuário no Windows Vista.</span><span class="sxs-lookup"><span data-stu-id="0fd71-115">An application that has no application manifest that specifies a requested execution level will be subject to file/registry virtualization under the User Account Control feature in Windows Vista.</span></span> <span data-ttu-id="0fd71-116">Para obter mais informações sobre a virtualização, consulte [a implantação do ClickOnce no Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).</span><span class="sxs-lookup"><span data-stu-id="0fd71-116">For more information about virtualization, see [ClickOnce Deployment on Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).</span></span>  
-  
- <span data-ttu-id="0fd71-117">Seu aplicativo estará sujeito a virtualização se alguma das seguintes condições for verdadeira:</span><span class="sxs-lookup"><span data-stu-id="0fd71-117">Your application will be subject to virtualization if either of the following conditions is true:</span></span>  
-  
-1.  <span data-ttu-id="0fd71-118">Você usa o `/nowin32manifest` opção e você não fornecer um manifesto em uma etapa de compilação posterior ou como parte de um arquivo de recurso do Windows (. res), usando o `/win32resource` opção.</span><span class="sxs-lookup"><span data-stu-id="0fd71-118">You use the `/nowin32manifest` option and you do not provide a manifest in a later build step or as part of a Windows Resource (.res) file by using the `/win32resource` option.</span></span>  
-  
-2.  <span data-ttu-id="0fd71-119">Você fornece um manifesto personalizado que não especifica um nível de execução solicitado.</span><span class="sxs-lookup"><span data-stu-id="0fd71-119">You provide a custom manifest that does not specify a requested execution level.</span></span>  
-  
- [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]<span data-ttu-id="0fd71-120"> cria um arquivo .manifest padrão e o armazena nos diretórios de depuração e liberação juntamente com o arquivo executável.</span><span class="sxs-lookup"><span data-stu-id="0fd71-120"> creates a default .manifest file and stores it in the debug and release directories alongside the executable file.</span></span> <span data-ttu-id="0fd71-121">Você pode exibir ou editar o arquivo App. manifest padrão clicando **exibir configurações de UAC** no **aplicativo** guia no Designer de projeto.</span><span class="sxs-lookup"><span data-stu-id="0fd71-121">You can view or edit the default app.manifest file by clicking **View UAC Settings** on the **Application** tab in the Project Designer.</span></span> <span data-ttu-id="0fd71-122">Para obter mais informações, consulte [Página de aplicativo, Designer de Projeto (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="0fd71-122">For more information, see [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).</span></span>  
-  
- <span data-ttu-id="0fd71-123">Você pode fornecer o manifesto do aplicativo como uma etapa de pós-compilação personalizada, ou como parte de um arquivo de recurso Win32 usando o `/nowin32manifest` opção.</span><span class="sxs-lookup"><span data-stu-id="0fd71-123">You can provide the application manifest as a custom post-build step or as part of a Win32 resource file by using the `/nowin32manifest` option.</span></span> <span data-ttu-id="0fd71-124">Use essa mesma opção se quiser que o aplicativo seja sujeito à virtualização de arquivo ou Registro no Windows Vista.</span><span class="sxs-lookup"><span data-stu-id="0fd71-124">Use that same option if you want your application to be subject to file or registry virtualization on Windows Vista.</span></span> <span data-ttu-id="0fd71-125">Isso impedirá que o compilador de criar e inserir um manifesto padrão no arquivo PE.</span><span class="sxs-lookup"><span data-stu-id="0fd71-125">This will prevent the compiler from creating and embedding a default manifest in the PE file.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="0fd71-126">Exemplo</span><span class="sxs-lookup"><span data-stu-id="0fd71-126">Example</span></span>  
- <span data-ttu-id="0fd71-127">O exemplo a seguir mostra o manifesto padrão que o compilador do Visual Basic insere em um PE.</span><span class="sxs-lookup"><span data-stu-id="0fd71-127">The following example shows the default manifest that the Visual Basic compiler inserts into a PE.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e25cf-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="e25cf-109">Remarks</span></span>  
+ <span data-ttu-id="e25cf-110">Por padrão, o compilador do Visual Basic incorpora um manifesto de aplicativo que especifica um nível de execução solicitado de asInvoker.</span><span class="sxs-lookup"><span data-stu-id="e25cf-110">By default, the Visual Basic compiler embeds an application manifest that specifies a requested execution level of asInvoker.</span></span> <span data-ttu-id="e25cf-111">Cria o manifesto na mesma pasta em que o arquivo executável é criado, normalmente a pasta bin\Debug ou bin\Release quando você usa o Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="e25cf-111">It creates the manifest in the same folder in which the executable file is built, typically the bin\Debug or bin\Release folder when you use Visual Studio.</span></span> <span data-ttu-id="e25cf-112">Se você quiser fornecer um manifesto personalizado, por exemplo, para especificar um nível de execução solicitado de highestAvailable ou requireAdministrator, use essa opção para especificar o nome do arquivo.</span><span class="sxs-lookup"><span data-stu-id="e25cf-112">If you want to supply a custom manifest, for example to specify a requested execution level of highestAvailable or requireAdministrator, use this option to specify the name of the file.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="0fd71-128">O compilador insere um nome padrão de aplicativo MyApplication no manifesto XML.</span><span class="sxs-lookup"><span data-stu-id="0fd71-128">The compiler inserts a standard application name MyApplication.app into the manifest XML.</span></span> <span data-ttu-id="0fd71-129">Essa é uma solução alternativa para habilitar os aplicativos para serem executados no Windows Server 2003 Service Pack 3.</span><span class="sxs-lookup"><span data-stu-id="0fd71-129">This is a workaround to enable applications to run on Windows Server 2003 Service Pack 3.</span></span>  
+>  <span data-ttu-id="e25cf-113">Essa opção e o [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) opção são mutuamente exclusivos.</span><span class="sxs-lookup"><span data-stu-id="e25cf-113">This option and the [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) option are mutually exclusive.</span></span> <span data-ttu-id="e25cf-114">Se você tentar usar ambas as opções na mesma linha de comando, você obterá um erro de compilação.</span><span class="sxs-lookup"><span data-stu-id="e25cf-114">If you try to use both options in the same command line, you will get a build error.</span></span>  
+  
+ <span data-ttu-id="e25cf-115">Um aplicativo que não tem nenhum manifesto do aplicativo que especifica que um nível de execução solicitado estará sujeito à virtualização de arquivos/Registro sob o recurso de Controle de Conta de Usuário no Windows Vista.</span><span class="sxs-lookup"><span data-stu-id="e25cf-115">An application that has no application manifest that specifies a requested execution level will be subject to file/registry virtualization under the User Account Control feature in Windows Vista.</span></span> <span data-ttu-id="e25cf-116">Para obter mais informações sobre a virtualização, consulte [a implantação do ClickOnce no Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).</span><span class="sxs-lookup"><span data-stu-id="e25cf-116">For more information about virtualization, see [ClickOnce Deployment on Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).</span></span>  
+  
+ <span data-ttu-id="e25cf-117">Seu aplicativo estará sujeito a virtualização se alguma das seguintes condições for verdadeira:</span><span class="sxs-lookup"><span data-stu-id="e25cf-117">Your application will be subject to virtualization if either of the following conditions is true:</span></span>  
+  
+1.  <span data-ttu-id="e25cf-118">Você usa o `-nowin32manifest` opção e você não fornecer um manifesto em uma etapa de compilação posterior ou como parte de um arquivo de recurso do Windows (. res), usando o `-win32resource` opção.</span><span class="sxs-lookup"><span data-stu-id="e25cf-118">You use the `-nowin32manifest` option and you do not provide a manifest in a later build step or as part of a Windows Resource (.res) file by using the `-win32resource` option.</span></span>  
+  
+2.  <span data-ttu-id="e25cf-119">Você fornece um manifesto personalizado que não especifica um nível de execução solicitado.</span><span class="sxs-lookup"><span data-stu-id="e25cf-119">You provide a custom manifest that does not specify a requested execution level.</span></span>  
+  
+ [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]<span data-ttu-id="e25cf-120"> cria um arquivo .manifest padrão e o armazena nos diretórios de depuração e liberação juntamente com o arquivo executável.</span><span class="sxs-lookup"><span data-stu-id="e25cf-120"> creates a default .manifest file and stores it in the debug and release directories alongside the executable file.</span></span> <span data-ttu-id="e25cf-121">Você pode exibir ou editar o arquivo App. manifest padrão clicando **exibir configurações de UAC** no **aplicativo** guia no Designer de projeto.</span><span class="sxs-lookup"><span data-stu-id="e25cf-121">You can view or edit the default app.manifest file by clicking **View UAC Settings** on the **Application** tab in the Project Designer.</span></span> <span data-ttu-id="e25cf-122">Para obter mais informações, consulte [Página de aplicativo, Designer de Projeto (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="e25cf-122">For more information, see [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).</span></span>  
+  
+ <span data-ttu-id="e25cf-123">Você pode fornecer o manifesto do aplicativo como uma etapa de pós-compilação personalizada, ou como parte de um arquivo de recurso Win32 usando o `-nowin32manifest` opção.</span><span class="sxs-lookup"><span data-stu-id="e25cf-123">You can provide the application manifest as a custom post-build step or as part of a Win32 resource file by using the `-nowin32manifest` option.</span></span> <span data-ttu-id="e25cf-124">Use essa mesma opção se quiser que o aplicativo seja sujeito à virtualização de arquivo ou Registro no Windows Vista.</span><span class="sxs-lookup"><span data-stu-id="e25cf-124">Use that same option if you want your application to be subject to file or registry virtualization on Windows Vista.</span></span> <span data-ttu-id="e25cf-125">Isso impedirá que o compilador de criar e inserir um manifesto padrão no arquivo PE.</span><span class="sxs-lookup"><span data-stu-id="e25cf-125">This will prevent the compiler from creating and embedding a default manifest in the PE file.</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="e25cf-126">Exemplo</span><span class="sxs-lookup"><span data-stu-id="e25cf-126">Example</span></span>  
+ <span data-ttu-id="e25cf-127">O exemplo a seguir mostra o manifesto padrão que o compilador do Visual Basic insere em um PE.</span><span class="sxs-lookup"><span data-stu-id="e25cf-127">The following example shows the default manifest that the Visual Basic compiler inserts into a PE.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="e25cf-128">O compilador insere um nome padrão de aplicativo MyApplication no manifesto XML.</span><span class="sxs-lookup"><span data-stu-id="e25cf-128">The compiler inserts a standard application name MyApplication.app into the manifest XML.</span></span> <span data-ttu-id="e25cf-129">Essa é uma solução alternativa para habilitar os aplicativos para serem executados no Windows Server 2003 Service Pack 3.</span><span class="sxs-lookup"><span data-stu-id="e25cf-129">This is a workaround to enable applications to run on Windows Server 2003 Service Pack 3.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -73,6 +72,6 @@ ms.lasthandoff: 11/21/2017
 </assembly>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0fd71-130">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0fd71-130">See Also</span></span>  
- [<span data-ttu-id="0fd71-131">Compilador de linha de comando do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="0fd71-131">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
- [<span data-ttu-id="0fd71-132">/nowin32manifest (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0fd71-132">/nowin32manifest (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)
+## <a name="see-also"></a><span data-ttu-id="e25cf-130">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e25cf-130">See Also</span></span>  
+ [<span data-ttu-id="e25cf-131">Compilador de linha de comando do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e25cf-131">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="e25cf-132">-nowin32manifest (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e25cf-132">-nowin32manifest (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)
