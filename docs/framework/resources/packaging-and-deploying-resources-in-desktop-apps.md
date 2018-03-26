@@ -1,13 +1,13 @@
 ---
-title: "Empacotando e implantando recursos em aplicativos de área de trabalho"
-ms.custom: 
+title: Empacotando e implantando recursos em aplicativos de área de trabalho
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-bcl
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -34,17 +34,17 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3ab23b263d572a5573de5fc21f15b56e784a9a94
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 479ab530ddf02fa3701a7f6f3699258d0eab727e
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Empacotando e implantando recursos em aplicativos de área de trabalho
 Aplicativos se baseiam no Gerenciador de Recursos do .NET Framework, representado pela classe <xref:System.Resources.ResourceManager>, para recuperar os recursos localizados. O Gerenciador de Recursos pressupõe que um modelo de hub e spoke é usado para empacotar e implantar recursos. O hub é o principal assembly que contém o código executável não localizável e os recursos para uma única cultura, chamada de cultura neutra ou padrão. O padrão é a cultura de fallback para o aplicativo; é a cultura que tem os recursos utilizados quando não há recursos localizados disponíveis. Cada spoke conecta-se a um assembly satélite que contém os recursos para uma única cultura, mas não contém nenhum código.  
@@ -177,11 +177,15 @@ Greeting=Добрый день
   
  Em seguida, você pode compilar o código-fonte C# na linha de comando da seguinte maneira:  
   
- **csc Example1.cs**  
+```console 
+csc Example1.cs
+```
   
  A linha de comando para o compilador do Visual Basic é bastante semelhante:  
   
- **vbc Example1.vb**  
+```console
+vbc Example1.vb
+```  
   
  Como não há recursos incorporados no assembly principal, você não precisa compilar usando o comutador `/resource`.  
   
