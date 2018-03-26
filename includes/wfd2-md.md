@@ -1,1 +1,1 @@
-<span data-ttu-id="7f48f-101">Designer de Fluxo de Trabalho</span><span class="sxs-lookup"><span data-stu-id="7f48f-101">Workflow Designer</span></span>
+<span data-ttu-id="365b0-101">Designer de Fluxo de Trabalho</span><span class="sxs-lookup"><span data-stu-id="365b0-101">Workflow Designer</span></span>
