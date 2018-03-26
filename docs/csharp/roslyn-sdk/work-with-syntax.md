@@ -1,6 +1,6 @@
 ---
 title: Usar o modelo de sintaxe do SDK do .NET Compiler Platform
-description: "Esta visão geral fornece uma compreensão dos tipos usados para entender e manipular nós de sintaxe."
+description: Esta visão geral fornece uma compreensão dos tipos usados para entender e manipular nós de sintaxe.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/15/2017
@@ -9,10 +9,10 @@ ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
 ms.openlocfilehash: 09d07e6257ad7d32d75328a8c1850888b4d0b937
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="work-with-syntax"></a>Trabalhar com sintaxe
 
@@ -69,7 +69,7 @@ Ao contrário dos nós e tokens de sintaxe, os desafios de sintaxe não têm pai
 
 Cada nó, token ou desafio conhece sua posição dentro do texto de origem e o número de caracteres no qual ele consiste. Uma posição de texto é representada como um inteiro de 32 bits, que é um índice `char` baseado em zero. Um objeto <xref:Microsoft.CodeAnalysis.Text.TextSpan> é a posição inicial e uma contagem de caracteres, ambas representadas como inteiros. Se <xref:Microsoft.CodeAnalysis.Text.TextSpan> tem comprimento zero, ele se refere a um local entre dois caracteres.
 
-Cada nó tem duas propriedades <xref:Microsoft.CodeAnalysis.Text.TextSpan>: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> e <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>. 
+Cada nó tem duas <xref:Microsoft.CodeAnalysis.Text.TextSpan> propriedades: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> e <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>. 
 
 A propriedade <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> é o intervalo de texto do início do primeiro token na subárvore do nó ao final do último token. Esse intervalo não inclui nenhum desafio à esquerda ou à direita.
 
@@ -89,7 +89,7 @@ O nó de instrução dentro do bloco tem um intervalo indicado pelas barras vert
 
 ## <a name="kinds"></a>Variantes
 
-Cada nó, token ou desafio tem uma propriedade <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType>, do tipo <xref:System.Int32?displayProperty=nameWithType>, que identifica o elemento de sintaxe exato representado. Esse valor pode ser convertido em uma enumeração específica a uma linguagem; cada linguagem, C# ou VB, tem uma única enumeração `SyntaxKind` (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> e <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>, respectivamente) que lista todos os possíveis elementos de nós, tokens e desafios na gramática. Essa conversão pode ser feita automaticamente acessando os métodos de extensão <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> ou <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>.
+Cada nó, token ou desafio tem uma propriedade <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType>, do tipo <xref:System.Int32?displayProperty=nameWithType>, que identifica o elemento de sintaxe exato representado. Esse valor pode ser convertido em uma enumeração específica a uma linguagem; cada linguagem, C# ou VB, tem uma única enumeração `SyntaxKind` (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> e <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>, respectivamente) que lista todos os possíveis elementos de nós, tokens e desafios na gramática. Esta conversão pode ser feita automaticamente acessando o <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> ou <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> métodos de extensão.
 
 A propriedade <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> permite a desambiguidade fácil de tipos de nó de sintaxe que compartilham a mesma classe de nó. Para tokens e desafios, essa propriedade é a única maneira de diferenciar um tipo de elemento de outro. 
 

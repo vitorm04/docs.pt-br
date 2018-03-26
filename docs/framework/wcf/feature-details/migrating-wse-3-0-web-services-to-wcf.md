@@ -1,24 +1,26 @@
 ---
-title: "Migrando serviços Web de WSE 3.0 para o WCF"
-ms.custom: 
+title: Migrando serviços Web de WSE 3.0 para o WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: a7e7187eb6ed444ba2c28aa301ce4b3b16129030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>Migrando serviços Web de WSE 3.0 para o WCF
 Os benefícios da migração de serviços Web do WSE 3.0 para [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] incluem melhor desempenho e suporte a transportes adicionais, cenários de segurança adicional e WS-* especificações. Um serviço Web que é migrado de WSE 3.0 para [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pode ter até uma melhoria de desempenho de 200 a 400%. Para obter mais informações sobre os transportes suportados pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consulte [selecionando um transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Para obter uma lista dos cenários com suporte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consulte [cenários comuns de segurança](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Para obter uma lista das especificações que são suportados pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consulte [guia de interoperabilidade de protocolos de serviços Web](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md).  
@@ -36,7 +38,7 @@ Os benefícios da migração de serviços Web do WSE 3.0 para [!INCLUDE[indigo1]
 ## <a name="security"></a>Segurança  
   
 ### <a name="wse-30-web-services-that-are-secured-using-a-policy-file"></a>Serviços Web do WSE 3.0 que são protegidos usando um arquivo de política  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]serviços podem usar um arquivo de configuração para proteger um serviço e esse mecanismo é semelhante a um arquivo de política de WSE 3.0. WSE 3.0 ao proteger um serviço Web usando um arquivo de política, você pode usar uma asserção de segurança completa ou uma declaração de política personalizada. As declarações de segurança completa mapeiam com precisão até o modo de autenticação de um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] elemento de associação de segurança. Não apenas o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modos de autenticação e declarações de segurança completa de WSE 3.0 o mesmo nome ou da mesma forma, proteger as mensagens usando os mesmos tipos de credencial. Por exemplo, o `usernameForCertificate` asserção de segurança completa WSE 3.0 é mapeado para o `UsernameForCertificate` modo de autenticação no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Os exemplos de código a seguir demonstram como uma política mínimo que usa o `usernameForCertificate` asserção de segurança completa WSE 3.0 é mapeado para um `UsernameForCertificate` modo de autenticação no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] em uma associação personalizada.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviços podem usar um arquivo de configuração para proteger um serviço e esse mecanismo é semelhante a um arquivo de política de WSE 3.0. WSE 3.0 ao proteger um serviço Web usando um arquivo de política, você pode usar uma asserção de segurança completa ou uma declaração de política personalizada. As declarações de segurança completa mapeiam com precisão até o modo de autenticação de um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] elemento de associação de segurança. Não apenas o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modos de autenticação e declarações de segurança completa de WSE 3.0 o mesmo nome ou da mesma forma, proteger as mensagens usando os mesmos tipos de credencial. Por exemplo, o `usernameForCertificate` asserção de segurança completa WSE 3.0 é mapeado para o `UsernameForCertificate` modo de autenticação no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Os exemplos de código a seguir demonstram como uma política mínimo que usa o `usernameForCertificate` asserção de segurança completa WSE 3.0 é mapeado para um `UsernameForCertificate` modo de autenticação no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] em uma associação personalizada.  
   
  **WSE 3.0**  
   
@@ -67,10 +69,10 @@ Os benefícios da migração de serviços Web do WSE 3.0 para [!INCLUDE[indigo1]
   
 |Asserção do WSE 3.0 segurança completa|Configuração de associação personalizada do WCF|  
 |----------------------------------------|--------------------------------------|  
-|\<usernameOverTransportSecurity / >|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="UserNameOverTransport" />     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<usernameOverTransportSecurity />|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="UserNameOverTransport" />     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
 |\<mutualCertificate10Security / >|`<customBinding>   <binding name="MyBinding">     <security messageSecurityVersion="WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10" authenticationMode="MutualCertificate" />     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
-|\<usernameForCertificateSecurity / >|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="UsernameForCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
-|\<anonymousForCertificateSecurity / >|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="AnonymousForCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<usernameForCertificateSecurity />|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="UsernameForCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<anonymousForCertificateSecurity />|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="AnonymousForCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
 |\<kerberosSecurity / >|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="Kerberos"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
 |\<mutualCertificate11Security / >|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="MutualCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
   
@@ -82,7 +84,7 @@ Os benefícios da migração de serviços Web do WSE 3.0 para [!INCLUDE[indigo1]
 ### <a name="wse-30-custom-policy-assertion"></a>Asserção do WSE 3.0 política personalizada  
  Há dois tipos de declarações de política personalizada do WSE 3.0: aqueles que proteger uma mensagem SOAP e aqueles que não proteger uma mensagem SOAP. Declarações de política que proteger mensagens SOAP derivam WSE 3.0 `SecurityPolicyAssertion` classe e o equivalente conceitual em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] é o <xref:System.ServiceModel.Channels.SecurityBindingElement> classe.  
   
- Um ponto importante a observar é que as declarações de segurança completa de WSE 3.0 são um subconjunto do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modos de autenticação. Se você tiver criado uma declaração de política personalizada do WSE 3.0, pode haver um equivalente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modo de autenticação. Por exemplo, WSE 3.0 não fornecer uma asserção de segurança de CertificateOverTransport equivale a `UsernameOverTransport` asserção de segurança completa, mas usa um certificado x. 509 para fins de autenticação de cliente. Se você tiver definido sua própria declaração de política personalizada para este cenário, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] facilita a migração. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]define um modo de autenticação para esse cenário, portanto, você pode tirar proveito da autenticação estático métodos auxiliares de modo para configurar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
+ Um ponto importante a observar é que as declarações de segurança completa de WSE 3.0 são um subconjunto do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modos de autenticação. Se você tiver criado uma declaração de política personalizada do WSE 3.0, pode haver um equivalente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modo de autenticação. Por exemplo, WSE 3.0 não fornecer uma asserção de segurança de CertificateOverTransport equivale a `UsernameOverTransport` asserção de segurança completa, mas usa um certificado x. 509 para fins de autenticação de cliente. Se você tiver definido sua própria declaração de política personalizada para este cenário, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] facilita a migração. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] define um modo de autenticação para esse cenário, portanto, você pode tirar proveito da autenticação estático métodos auxiliares de modo para configurar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
   
  Quando não há um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modo de autenticação que é equivalente a uma declaração de política personalizada que protege mensagens SOAP, derive uma classe de <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ou <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] classes e especificar a associação equivalente elemento. Para obter mais detalhes, consulte [como: criar um personalizado de associação usando o SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   

@@ -1,28 +1,28 @@
 ---
 title: '&lt;wsDualHttpBinding&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - wsDualHttpBinding Element
 ms.assetid: fd8ac4e2-5641-473b-9115-73f14ab1c065
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: a49b534ba22f4ac422eb26885388e24594b49afd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltwsdualhttpbindinggt"></a>&lt;wsDualHttpBinding&gt;
 Define uma associação segura, confiável e interoperável adequada para contratos de serviço duplex ou comunicação através de intermediários SOAP.  
@@ -100,7 +100,7 @@ textEncoding="Unicode/BigEndianUnicode/UTF8"
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
- O `WSDualHttpBinding` fornece o mesmo suporte para protocolos de serviço da Web como o `WSHttpBinding`, mas para uso com contratos duplex. `WSDualHttpBinding`só dá suporte à segurança SOAP e requer o sistema de mensagens confiável. Essa associação requer que o cliente tem um URI público que fornece um ponto de extremidade de retorno de chamada para o serviço. Isso é fornecido pelo `clientBaseAddress` atributo. Uma associação dupla expõe o endereço IP do cliente para o serviço. O cliente deve usar a segurança para garantir que ele só se conecta aos serviços-relações de confiança.  
+ O `WSDualHttpBinding` fornece o mesmo suporte para protocolos de serviço da Web como o `WSHttpBinding`, mas para uso com contratos duplex. `WSDualHttpBinding` só dá suporte à segurança SOAP e requer o sistema de mensagens confiável. Essa associação requer que o cliente tem um URI público que fornece um ponto de extremidade de retorno de chamada para o serviço. Isso é fornecido pelo `clientBaseAddress` atributo. Uma associação dupla expõe o endereço IP do cliente para o serviço. O cliente deve usar a segurança para garantir que ele só se conecta aos serviços-relações de confiança.  
   
  Essa associação pode ser usada para se comunicar com segurança por meio de um ou mais intermediários SOAP.  
   

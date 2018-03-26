@@ -1,24 +1,26 @@
 ---
 title: Manuseio de mensagem suspeita
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: "29"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 8202c9f715944c6d556c0023444475838cfd5eab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="poison-message-handling"></a>Manuseio de mensagem suspeita
 Um *mensagem suspeita* é uma mensagem que excedeu o número máximo de tentativas de entrega para o aplicativo. Essa situação pode ocorrer quando um aplicativo baseado em fila não é possível processar uma mensagem devido a erros. Para atender às demandas de confiabilidade, um aplicativo em fila recebe mensagens em uma transação. Anulando a transação na qual foi recebida uma mensagem na fila deixa a mensagem na fila para que a mensagem é repetida em uma nova transação. Se o problema que causou a anulação da transação não for corrigido, o aplicativo receptor pode preso em um loop de recebimento e anule a mesma mensagem até que o número máximo de tentativas de entrega foi excedido e resultados de uma mensagem suspeita.  
@@ -32,15 +34,15 @@ Um *mensagem suspeita* é uma mensagem que excedeu o número máximo de tentativ
   
 -   `ReceiveRetryCount`. Um valor inteiro que indica o número máximo de tentativas de entrega de uma mensagem da fila de aplicativos para o aplicativo. O valor padrão é 5. Isso é suficiente para casos em que uma repetição imediatas corrige o problema, como com um deadlock temporário em um banco de dados.  
   
--   `MaxRetryCycles`. Um valor inteiro que indica o número máximo de ciclos de repetição. Consiste em um ciclo de repetição de transferência para a subfila de nova tentativa e, após um intervalo configurável, da subfila de nova tentativa de volta para a fila de aplicativo, tente novamente a entrega de uma mensagem da fila de aplicativos. O valor padrão é 2. Em [!INCLUDE[wv](../../../../includes/wv-md.md)], a mensagem é tentada máximo (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) vezes. `MaxRetryCycles`é ignorado em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+-   `MaxRetryCycles`. Um valor inteiro que indica o número máximo de ciclos de repetição. Consiste em um ciclo de repetição de transferência para a subfila de nova tentativa e, após um intervalo configurável, da subfila de nova tentativa de volta para a fila de aplicativo, tente novamente a entrega de uma mensagem da fila de aplicativos. O valor padrão é 2. Em [!INCLUDE[wv](../../../../includes/wv-md.md)], a mensagem é tentada máximo (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) vezes. `MaxRetryCycles` é ignorado em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   `RetryCycleDelay`. O tempo de espera entre os ciclos de repetição. O valor padrão é 30 minutos. `MaxRetryCycles`e `RetryCycleDelay` juntos fornecem um mecanismo para resolver o problema em que uma repetição após um intervalo periódico corrige o problema. Por exemplo, isso controla uma linha bloqueada definida no SQL Server pendentes de confirmação de transação.  
+-   `RetryCycleDelay`. O tempo de espera entre os ciclos de repetição. O valor padrão é 30 minutos. `MaxRetryCycles` e `RetryCycleDelay` juntos fornecem um mecanismo para resolver o problema em que uma repetição após um intervalo periódico corrige o problema. Por exemplo, isso controla uma linha bloqueada definida no SQL Server pendentes de confirmação de transação.  
   
 -   `ReceiveErrorHandling`. Uma enumeração que indica a ação a ser tomada para uma mensagem de falha na entrega depois que o número máximo de novas tentativas foi tentado. Os valores podem ser Fault, Drop, rejeitar e mover. A opção padrão é falha.  
   
 -   Falha. Essa opção envia uma falha para o ouvinte que causou o `ServiceHost` à falha. A mensagem deve ser removida da fila de aplicativos por algum mecanismo externo antes que o aplicativo possa continuar a processar mensagens da fila.  
   
--   Descarte. Essa opção remove a mensagem suspeita e a mensagem nunca é enviada para o aplicativo. Se a mensagem `TimeToLive` propriedade expirou neste ponto, em seguida, a mensagem pode aparecer na fila de mensagens mortas do remetente. Caso contrário, a mensagem não aparece em qualquer lugar. Esta opção indica que o usuário não tiver especificado o que fazer se a mensagem for perdida.  
+-   Descarte. Essa opção remove a mensagem suspeita e a mensagem nunca é enviada para o aplicativo. Se a mensagem `TimeToLive` propriedade expirou neste ponto, em seguida, a mensagem pode aparecer na fila de mensagens mortas do remetente. Caso contrário, a mensagem não aparecerá em lugar nenhum. Esta opção indica que o usuário não tiver especificado o que fazer se a mensagem for perdida.  
   
 -   Rejeite. Essa opção está disponível apenas em [!INCLUDE[wv](../../../../includes/wv-md.md)]. Isso instrui o enfileiramento de mensagens (MSMQ) para enviar uma mensagem de confirmação negativa para o Gerenciador de fila de envio que o aplicativo não pode receber a mensagem. A mensagem é colocada na fila de mensagens mortas do Gerenciador de fila envio.  
   
@@ -61,7 +63,7 @@ Um *mensagem suspeita* é uma mensagem que excedeu o número máximo de tentativ
   
  [!code-csharp[S_UE_MSMQ_Poison#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/service.cs#1)]  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]fornece duas associações na fila padrão:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornece duas associações na fila padrão:  
   
 -   <xref:System.ServiceModel.NetMsmqBinding>. Um [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] associação adequada para a execução de comunicação baseada em fila com outros [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pontos de extremidade.  
   
@@ -73,7 +75,7 @@ Um *mensagem suspeita* é uma mensagem que excedeu o número máximo de tentativ
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>Prática recomendada: Manipulação MsmqPoisonMessageException  
  Quando o serviço determina que uma mensagem é suspeita, transporte em fila lança um <xref:System.ServiceModel.MsmqPoisonMessageException> que contém o `LookupId` da mensagem suspeita.  
   
- Um aplicativo pode implementar o <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface para tratar os erros que o aplicativo requer. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Controle estendido através de relatórios e tratamento de erro](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md).  
+ Um aplicativo pode implementar o <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface para tratar os erros que o aplicativo requer. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Estendendo o controle sobre o tratamento de erros e emissão de relatórios](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md).  
   
  O aplicativo pode exigir algum tipo de tratamento de mensagens suspeitas automatizado que move as mensagens suspeitas para uma fila de mensagens suspeitas para que o serviço pode acessar o restante das mensagens na fila. O único cenário para usar o mecanismo de manipulação de erros para escutar mensagens suspeitas exceções é quando o <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> configuração é definida como <xref:System.ServiceModel.ReceiveErrorHandling.Fault>. O exemplo de mensagem de inviabilização do Message Queuing 3.0 demonstra esse comportamento. O exemplo a seguir descreve as etapas necessárias para tratar mensagens suspeitas, incluindo práticas recomendadas:  
   
@@ -102,10 +104,10 @@ Um *mensagem suspeita* é uma mensagem que excedeu o número máximo de tentativ
  Uma sessão é submetido a repetição do mesmo e os procedimentos de tratamento de mensagens suspeitas como uma única mensagem. As propriedades listadas anteriormente para mensagens suspeitas se aplicam a toda a sessão. Isso significa que toda a sessão é repetida e vai para uma fila de mensagens suspeitas final ou fila de mensagens mortas do remetente se a mensagem foi rejeitada.  
   
 ## <a name="batching-and-poison-messages"></a>Mensagens suspeitas e envio em lote  
- Se uma mensagem se torna uma mensagem suspeita e é parte de um lote, em seguida, o lote inteiro será revertido e o canal retorna ao ler uma mensagem por vez. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]envio em lote, consulte [mensagens de envio em lote em uma transação](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ Se uma mensagem se torna uma mensagem suspeita e é parte de um lote, em seguida, o lote inteiro será revertido e o canal retorna ao ler uma mensagem por vez. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] envio em lote, consulte [mensagens de envio em lote em uma transação](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>Manipulação de mensagens em uma fila suspeita de mensagens suspeitas  
- Tratamento de mensagens suspeitas não termina quando uma mensagem é colocada na fila de mensagens suspeitas. Mensagens na fila de mensagens suspeitas ainda devem ser lidos e manipuladas. Você pode usar um subconjunto das configurações de manipulação de mensagens suspeitas durante a leitura de mensagens da subfila de inviabilização final. As configurações aplicáveis são `ReceiveRetryCount` e `ReceiveErrorHandling`. Você pode definir `ReceiveErrorHandling` Cancelar, rejeitar, ou de falha. `MaxRetryCycles`é ignorado e uma exceção será lançada se `ReceiveErrorHandling` está definido como Move.  
+ Tratamento de mensagens suspeitas não termina quando uma mensagem é colocada na fila de mensagens suspeitas. Mensagens na fila de mensagens suspeitas ainda devem ser lidos e manipuladas. Você pode usar um subconjunto das configurações de manipulação de mensagens suspeitas durante a leitura de mensagens da subfila de inviabilização final. As configurações aplicáveis são `ReceiveRetryCount` e `ReceiveErrorHandling`. Você pode definir `ReceiveErrorHandling` Cancelar, rejeitar, ou de falha. `MaxRetryCycles` é ignorado e uma exceção será lançada se `ReceiveErrorHandling` está definido como Move.  
   
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Windows Vista, Windows Server 2003 e Windows XP diferenças  
  Conforme observado anteriormente, nem todas as configurações de manipulação de mensagens suspeitas se aplicam a [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Os seguintes principais diferenças entre o enfileiramento de mensagens em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], [!INCLUDE[wxp](../../../../includes/wxp-md.md)], e [!INCLUDE[wv](../../../../includes/wv-md.md)] são relevantes para a manipulação de mensagens suspeitas:  
@@ -114,7 +116,7 @@ Um *mensagem suspeita* é uma mensagem que excedeu o número máximo de tentativ
   
 -   Mensagens do enfileiramento de mensagens em [!INCLUDE[wv](../../../../includes/wv-md.md)] suporta negativo confirmação, enquanto [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] não. Uma confirmação negativa do Gerenciador de fila de recebimento faz com que o Gerenciador de fila de envio colocar a mensagem rejeitada na fila de mensagens mortas. Como tal, `ReceiveErrorHandling.Reject` não é permitido com [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   Mensagens do enfileiramento de mensagens em [!INCLUDE[wv](../../../../includes/wv-md.md)] dá suporte a uma propriedade de mensagem que mantém uma contagem do número de tempos de entrega de mensagens é tentada. Essa propriedade de contagem de anulação não está disponível em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]mantém a contagem de anulação na memória, portanto, é possível que essa propriedade não pode conter um valor exato quando a mesma mensagem é lida por mais de um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço em um farm.  
+-   Mensagens do enfileiramento de mensagens em [!INCLUDE[wv](../../../../includes/wv-md.md)] dá suporte a uma propriedade de mensagem que mantém uma contagem do número de tempos de entrega de mensagens é tentada. Essa propriedade de contagem de anulação não está disponível em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mantém a contagem de anulação na memória, portanto, é possível que essa propriedade não pode conter um valor exato quando a mesma mensagem é lida por mais de um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço em um farm.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral de filas](../../../../docs/framework/wcf/feature-details/queues-overview.md)  

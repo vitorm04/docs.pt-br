@@ -1,12 +1,13 @@
 ---
-title: "Visão geral de arrastar e soltar"
-ms.custom: 
+title: Visão geral de arrastar e soltar
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-caps.latest.revision: "31"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: b7a69a4dcd5fc39b700bf9c3404e70d581509ebc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="drag-and-drop-overview"></a>Visão geral de arrastar e soltar
 Este tópico fornece uma visão geral do suporte ao recurso do tipo "arrastar e soltar" em aplicativos do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Normalmente, o recurso do tipo "arrastar e soltar" se refere a um método de transferência de dados que envolve o uso de um mouse (ou algum outro dispositivo apontador) para selecionar um ou mais objetos, arrastá-los sobre um destino de soltar desejado na [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] e soltá-los.  
@@ -66,7 +68,7 @@ Este tópico fornece uma visão geral do suporte ao recurso do tipo "arrastar e 
  A origem e o destino de uma operação do tipo "arrastar e soltar" são elementos de interface do usuário; no entanto, os dados que realmente são transferidos, normalmente, não têm uma representação visual. É possível escrever um código para fornecer uma representação visual dos dados que são arrastados, assim como ocorre ao arrastar arquivos no Windows Explorer. Por padrão, comentários são fornecidos ao usuário com a alteração do cursor para representar o efeito que a operação do tipo "arrastar e soltar" terá sobre os dados, por exemplo, se os dados serão movidos ou copiados.  
   
 ### <a name="drag-and-drop-effects"></a>Efeitos das operações do tipo "arrastar e soltar"  
- Operações do tipo "arrastar e soltar" podem ter efeitos diferentes nos dados transferidos. Por exemplo, é possível copiar os dados ou movê-los. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]define um <xref:System.Windows.DragDropEffects> enumeração que você pode usar para especificar o efeito de uma operação de arrastar e soltar. A fonte, você pode especificar os efeitos que permitirá a fonte de <xref:System.Windows.DragDrop.DoDragDrop%2A> método. No destino, você pode especificar o efeito que o destino pretenda no <xref:System.Windows.DragEventArgs.Effects%2A> propriedade o <xref:System.Windows.DragEventArgs> classe. Quando o destino de soltar Especifica o efeito desejado no <xref:System.Windows.DragDrop.DragOver> evento, que informações são passadas para a origem de arrastar no <xref:System.Windows.DragDrop.GiveFeedback> evento. A origem do arrasto usa essas informações para informar ao usuário o efeito que o destino de soltar pretende ter sobre os dados. Quando os dados são descartados, o destino de soltar especifica seu efeito real no <xref:System.Windows.DragDrop.Drop> evento. Que informações são passadas novamente para a fonte como o valor de retorno de <xref:System.Windows.DragDrop.DoDragDrop%2A> método. Se o destino de soltar retornar um efeito que não está na lista `allowedEffects` da origem do arrasto, a operação do tipo "arrastar e soltar" será cancelada sem nenhuma transferência de dados.  
+ Operações do tipo "arrastar e soltar" podem ter efeitos diferentes nos dados transferidos. Por exemplo, é possível copiar os dados ou movê-los. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] define um <xref:System.Windows.DragDropEffects> enumeração que você pode usar para especificar o efeito de uma operação de arrastar e soltar. A fonte, você pode especificar os efeitos que permitirá a fonte de <xref:System.Windows.DragDrop.DoDragDrop%2A> método. No destino, você pode especificar o efeito que o destino pretenda no <xref:System.Windows.DragEventArgs.Effects%2A> propriedade o <xref:System.Windows.DragEventArgs> classe. Quando o destino de soltar Especifica o efeito desejado no <xref:System.Windows.DragDrop.DragOver> evento, que informações são passadas para a origem de arrastar no <xref:System.Windows.DragDrop.GiveFeedback> evento. A origem do arrasto usa essas informações para informar ao usuário o efeito que o destino de soltar pretende ter sobre os dados. Quando os dados são descartados, o destino de soltar especifica seu efeito real no <xref:System.Windows.DragDrop.Drop> evento. Que informações são passadas novamente para a fonte como o valor de retorno de <xref:System.Windows.DragDrop.DoDragDrop%2A> método. Se o destino de soltar retornar um efeito que não está na lista `allowedEffects` da origem do arrasto, a operação do tipo "arrastar e soltar" será cancelada sem nenhuma transferência de dados.  
   
  É importante lembrar que em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], o <xref:System.Windows.DragDropEffects> valores só são usados para fornecer comunicação entre a origem de arrastar e soltar sobre os efeitos da operação de arrastar e soltar. O efeito real da operação do tipo "arrastar e soltar" depende da escrita do código apropriado no aplicativo.  
   
@@ -158,11 +160,11 @@ Este tópico fornece uma visão geral do suporte ao recurso do tipo "arrastar e 
   
  Dentro do <xref:System.Windows.UIElement.MouseMove> manipulador de eventos, chame o <xref:System.Windows.DragDrop.DoDragDrop%2A> método para iniciar a operação de arrastar e soltar. O <xref:System.Windows.DragDrop.DoDragDrop%2A> método usa três parâmetros:  
   
--   `dragSource`– Uma referência para o objeto de dependência que é a origem dos dados transferidos; Isso geralmente é a origem do <xref:System.Windows.UIElement.MouseMove> evento.  
+-   `dragSource` – Uma referência para o objeto de dependência que é a origem dos dados transferidos; Isso geralmente é a origem do <xref:System.Windows.UIElement.MouseMove> evento.  
   
--   `data`-Um objeto que contém os dados transferidos, encapsulados em um <xref:System.Windows.DataObject>.  
+-   `data` -Um objeto que contém os dados transferidos, encapsulados em um <xref:System.Windows.DataObject>.  
   
--   `allowedEffects`-Pode ser o <xref:System.Windows.DragDropEffects> valores de enumeração que especifica os efeitos permitidos da operação de arrastar e soltar.  
+-   `allowedEffects` -Pode ser o <xref:System.Windows.DragDropEffects> valores de enumeração que especifica os efeitos permitidos da operação de arrastar e soltar.  
   
  Qualquer objeto serializável pode ser passado no parâmetro `data`. Se os dados já não são empacotados em um <xref:System.Windows.DataObject>, ele será ajustado automaticamente em uma nova <xref:System.Windows.DataObject>. Para passar vários itens de dados, você deve criar o <xref:System.Windows.DataObject> por conta própria e passá-lo para o <xref:System.Windows.DragDrop.DoDragDrop%2A> método. Para obter mais informações, consulte [Dados e objetos de dados](../../../../docs/framework/wpf/advanced/data-and-data-objects.md).  
   

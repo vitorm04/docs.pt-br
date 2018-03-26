@@ -1,12 +1,13 @@
 ---
-title: "Associações e segurança"
-ms.custom: 
+title: Associações e segurança
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], security
@@ -14,28 +15,29 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-caps.latest.revision: "42"
+caps.latest.revision: ''
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 9e44db963a696f22f91569eb3d7c2956289a9c76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="bindings-and-security"></a>Associações e segurança
 As associações fornecidas pelo sistema acompanha [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] oferecem uma maneira rápida de programa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicativos. Com uma exceção, todas as associações de tem um esquema de segurança padrão habilitado. Este tópico ajuda você a selecionar a associação certa para suas necessidades de segurança.  
   
- Para obter uma visão geral de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança, consulte [visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]programação [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usando associações, consulte [de programação WCF segurança](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
+ Para obter uma visão geral de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] segurança, consulte [visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] programação [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usando associações, consulte [de programação WCF segurança](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
   
  Se você já tiver selecionado uma associação, você pode encontrar mais informações sobre os comportamentos de tempo de execução que estão associados com a segurança em [comportamentos de segurança](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
  Algumas funções de segurança não são programáveis usando as associações fornecidas pelo sistema. Para obter mais controle utilizando uma associação personalizada, consulte [recursos de segurança com associações personalizadas](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="security-functions-of-bindings"></a>Funções de segurança de associações  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]inclui um número de associações fornecidas pelo sistema que atendem a maioria das necessidades. Se uma associação específica não é suficiente, você também pode criar uma associação personalizada. Para obter uma lista de associações fornecidas pelo sistema, consulte [System-Provided associações](../../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]associações personalizadas, consulte [associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclui um número de associações fornecidas pelo sistema que atendem a maioria das necessidades. Se uma associação específica não é suficiente, você também pode criar uma associação personalizada. Para obter uma lista de associações fornecidas pelo sistema, consulte [System-Provided associações](../../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] associações personalizadas, consulte [associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
  Todas as associações de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tem duas formas: como uma API e um elemento XML usados em um arquivo de configuração. Por exemplo, o `WSHttpBinding` (API) tem um equivalente [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
@@ -54,7 +56,7 @@ As associações fornecidas pelo sistema acompanha [!INCLUDE[indigo1](../../../.
   
 -   Perfil de segurança básicas, conforme definido no WS-I.  
   
- Por padrão, essa associação não é segura. Ele é projetado para interoperar com serviços ASMX. Quando a segurança está habilitada, a associação foi projetada para interoperação perfeita com mecanismos de segurança do Internet Information Services (IIS), como autenticação básica, digest e segurança integrada do Windows. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Visão geral de segurança de transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md). Essa associação suporta o seguinte:  
+ Por padrão, essa associação não é segura. Ele é projetado para interoperar com serviços ASMX. Quando a segurança está habilitada, a associação foi projetada para interoperação perfeita com mecanismos de segurança do Internet Information Services (IIS), como autenticação básica, digest e segurança integrada do Windows. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Visão geral de segurança de transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md). Essa associação suporta o seguinte:  
   
 -   Segurança de transporte HTTPS.  
   
@@ -62,7 +64,7 @@ As associações fornecidas pelo sistema acompanha [!INCLUDE[indigo1](../../../.
   
 -   O WS-Security.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType>, e <xref:System.ServiceModel.BasicHttpSecurityMode>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType>, e <xref:System.ServiceModel.BasicHttpSecurityMode>.  
   
 ### <a name="wshttpbinding"></a>WSHttpBinding  
  No código, use o <xref:System.ServiceModel.WSHttpBinding> classe; na configuração, use o [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
@@ -75,7 +77,7 @@ As associações fornecidas pelo sistema acompanha [!INCLUDE[indigo1](../../../.
   
 -   Proteção de transporte com segurança de credencial de mensagem SOAP para autenticar o chamador de HTTPS.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>, <xref:System.ServiceModel.HttpClientCredentialType>, e <xref:System.ServiceModel.HttpProxyCredentialType>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>, <xref:System.ServiceModel.HttpClientCredentialType>, e <xref:System.ServiceModel.HttpProxyCredentialType>.  
   
 ### <a name="wsdualhttpbinding"></a>WSDualHttpBinding  
  No código, use o <xref:System.ServiceModel.WSDualHttpBinding> classe; na configuração, use o [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).  
@@ -100,7 +102,7 @@ As associações fornecidas pelo sistema acompanha [!INCLUDE[indigo1](../../../.
   
     -   Fornecer credenciais de serviço negociado do serviço como parte da instalação do canal.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.WSDualHttpSecurity> and <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.WSDualHttpSecurity> e <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
   
 ### <a name="nettcpbinding"></a>NetTcpBinding  
  No código, use o <xref:System.ServiceModel.NetTcpBinding> classe; na configuração, use o [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -123,7 +125,7 @@ As associações fornecidas pelo sistema acompanha [!INCLUDE[indigo1](../../../.
   
 -   Segurança com credencial de mensagem de transporte — fornecida por segurança de camada de transporte (TLS) sobre TCP e as credenciais de autorização fornecida pelo WS-Security de integridade e confidencialidade.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>, <xref:System.ServiceModel.TcpClientCredentialType>, <xref:System.ServiceModel.MessageSecurityOverTcp>, e <xref:System.ServiceModel.MessageCredentialType>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>, <xref:System.ServiceModel.TcpClientCredentialType>, <xref:System.ServiceModel.MessageSecurityOverTcp>, e <xref:System.ServiceModel.MessageCredentialType>.  
   
 ### <a name="netnamedpipebinding"></a>NetNamedPipeBinding  
  No código, use o <xref:System.ServiceModel.NetNamedPipeBinding> classe; na configuração, use o [ \<netNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).  
@@ -142,7 +144,7 @@ As associações fornecidas pelo sistema acompanha [!INCLUDE[indigo1](../../../.
   
 -   Autenticação usando a segurança do Windows.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode>, e <xref:System.ServiceModel.NamedPipeTransportSecurity>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode>, e <xref:System.ServiceModel.NamedPipeTransportSecurity>.  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  No código, use o <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> classe; na configuração, use o [ \<msmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).  
@@ -155,7 +157,7 @@ As associações fornecidas pelo sistema acompanha [!INCLUDE[indigo1](../../../.
   
 -   Segurança de transporte MSMQ (transporte).  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.NetMsmqSecurity> and <xref:System.ServiceModel.NetMsmqSecurityMode>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetMsmqSecurity> e <xref:System.ServiceModel.NetMsmqSecurityMode>.  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  No código, use o <xref:System.ServiceModel.NetMsmqBinding> classe; na configuração, use o [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).  
@@ -176,17 +178,17 @@ As associações fornecidas pelo sistema acompanha [!INCLUDE[indigo1](../../../.
   
  O <xref:System.ServiceModel.MessageCredentialType.Certificate> credencial é suportada apenas quando o modo de segurança é definido como <xref:System.ServiceModel.NetMsmqSecurityMode.Both> ou <xref:System.ServiceModel.NetMsmqSecurityMode.Message>.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.MessageSecurityOverMsmq> and <xref:System.ServiceModel.MsmqTransportSecurity>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.MessageSecurityOverMsmq> e <xref:System.ServiceModel.MsmqTransportSecurity>.  
   
 ### <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
  No código, use o <xref:System.ServiceModel.WSFederationHttpBinding> classe; na configuração, use o [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
  Por padrão, esta associação usa WS-Security (segurança de camada de mensagem).  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Federação](../../../../docs/framework/wcf/feature-details/federation.md), <xref:System.ServiceModel.WSFederationHttpSecurity>, e <xref:System.ServiceModel.WSFederationHttpSecurityMode>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Federação](../../../../docs/framework/wcf/feature-details/federation.md), <xref:System.ServiceModel.WSFederationHttpSecurity>, e <xref:System.ServiceModel.WSFederationHttpSecurityMode>.  
   
 ## <a name="custom-bindings"></a>Associações personalizadas  
- Se nenhuma das associações fornecidas pelo sistema atende aos requisitos, você pode criar uma associação personalizada com um elemento de associação de segurança personalizada. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Recursos de segurança com associações personalizadas](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
+ Se nenhuma das associações fornecidas pelo sistema atende aos requisitos, você pode criar uma associação personalizada com um elemento de associação de segurança personalizada. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Recursos de segurança com associações personalizadas](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="binding-choices"></a>Opções de ligação  
  A tabela a seguir resume os recursos oferecidos na configuração de modo de segurança, ou seja, ela lista os recursos disponíveis quando o modo de segurança é definido como `Transport`, `Message`, ou `TransportWithMessageCredential`. Use esta tabela para ajudá-lo a localizar os recursos de segurança que requer que seu aplicativo.  
@@ -216,12 +218,12 @@ As associações fornecidas pelo sistema acompanha [!INCLUDE[indigo1](../../../.
 |Tipo|Descrição|  
 |----------|-----------------|  
 |Nenhum|Especifica que o cliente não precisa apresentar credenciais. Isso se traduz em um cliente anônimo.|  
-|Basic|Autenticação básica. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]RFC 2617 – autenticação HTTP: Basic e a autenticação Digest, disponível em [http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023).|  
-|Digest|Autenticação Digest. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]RFC 2617 – autenticação HTTP: Basic e a autenticação Digest, disponível em [http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Basic|Autenticação básica. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] RFC 2617 – autenticação HTTP: Basic e a autenticação Digest, disponível em [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Digest|Autenticação Digest. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] RFC 2617 – autenticação HTTP: Basic e a autenticação Digest, disponível em [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
 |NTLM|Autenticação NT LAN Manager (NTLM).|  
 |Windows|Autenticação do Windows.|  
 |certificado|Autenticação executada usando um certificado.|  
-|IssuedToken|Permite que o serviço exigir que o cliente seja autenticado usando um token emitido por um serviço de token de segurança ou por [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Federação e Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|IssuedToken|Permite que o serviço exigir que o cliente seja autenticado usando um token emitido por um serviço de token de segurança ou por [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Federação e Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="message-client-credentials-in-bindings"></a>Credenciais do cliente de mensagem em associações  
  A tabela a seguir lista os tipos de credencial de cliente disponíveis ao usar uma associação no modo de segurança de mensagem.  

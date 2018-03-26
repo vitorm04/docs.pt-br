@@ -1,24 +1,26 @@
 ---
 title: ServiceDescription and WSDL Reference
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-caps.latest.revision: "15"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 7eadfaaae920071092f569fe2b8882875ed9497f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription and WSDL Reference
 Este tópico descreve como [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] documentos WSDL Web Services Description Language () é mapeado para e de <xref:System.ServiceModel.Description.ServiceDescription> instâncias.  
@@ -70,10 +72,10 @@ Este tópico descreve como [!INCLUDE[indigo1](../../../../includes/indigo1-md.md
  O <xref:System.ServiceModel.Channels.TransportBindingElement> para a associação determina o transporte de identificador de recurso uniforme (URI) para uma associação SOAP.  
   
 #### <a name="addressingversion"></a>AddressingVersion  
- O `AddressingVersion` em uma associação é mapeado para a versão de endereçamento usados no `wsd:port`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oferece suporte a SOAP 1.1 e SOAP 1.2 endereços e WS-Addressing 08/2004 e referências de ponto de extremidade do WS-Addressing 1.0.  
+ O `AddressingVersion` em uma associação é mapeado para a versão de endereçamento usados no `wsd:port`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oferece suporte a SOAP 1.1 e SOAP 1.2 endereços e WS-Addressing 08/2004 e referências de ponto de extremidade do WS-Addressing 1.0.  
   
 #### <a name="envelopeversion"></a>EnvelopeVersion  
- O `EnvelopeVersion` em uma associação é mapeado para a versão do SOAP é usado no `wsdl:binding`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oferece suporte a associações SOAP 1.1 e SOAP 1.2.  
+ O `EnvelopeVersion` em uma associação é mapeado para a versão do SOAP é usado no `wsdl:binding`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oferece suporte a associações SOAP 1.1 e SOAP 1.2.  
   
 ### <a name="contracts"></a>Contratos  
  O <xref:System.ServiceModel.Description.ContractDescription> instância para uma `ServiceEndpoint` instância é mapeado para um `wsdl:portType`. Um `ContractDescription` instância descreve todas as operações para um dado contrato.  
@@ -120,7 +122,7 @@ Este tópico descreve como [!INCLUDE[indigo1](../../../../includes/indigo1-md.md
 |Propriedades|Mapeamento de WSDL|  
 |----------------|------------------|  
 |`Action`|A ação para a mensagem SOAP ou WS-Addressing.<br /><br /> Observe que as operações que usam a cadeia de caracteres de ação "*" não são representados em WSDL.|  
-|`Direction`|`MessageDirection.Input`mapeia para `wsdl:input`.<br /><br /> `MessageDirection.Output`mapeia para `wsdl:output`.|  
+|`Direction`|`MessageDirection.Input` mapeia para `wsdl:input`.<br /><br /> `MessageDirection.Output` mapeia para `wsdl:output`.|  
 |`ProtectionLevel`|Declarações de proteção na política de segurança anexado para o `wsdl:message` definição para esta mensagem.|  
 |`Body`|O corpo da mensagem para a mensagem.|  
 |`Headers`|Os cabeçalhos da mensagem.|  

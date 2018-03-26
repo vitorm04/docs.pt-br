@@ -1,24 +1,26 @@
 ---
 title: Ferramentas
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 5badbb9142261fc1dc6c2b2d5af3c89c7af776b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="tools"></a>Ferramentas
 Este tópico lista todas as exceções geradas pelo [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] ferramentas.  
@@ -27,8 +29,8 @@ Este tópico lista todas as exceções geradas pelo [!INCLUDE[indigo1](../../../
   
 |Código do recurso|Cadeia de caracteres de recurso|  
 |-------------------|---------------------|  
-|ParametersTarget|\<enum >|  
-|ParametersToolConfig|\<configFile >|  
+|ParametersTarget|\<enum>|  
+|ParametersToolConfig|\<configFile>|  
 |ErrInvalidPath|Especificado é um caminho inválido. Verifique se o argumento especificado.|  
 |ParametersReference|\<caminho do arquivo >|  
 |WrnCannotLoadConfigFileForValidation|Erro ao processar o arquivo de configuração carregados do local especificado. Serviços que estão definidos no arquivo de configuração não podem ser validados.|  
@@ -62,7 +64,7 @@ Este tópico lista todas as exceções geradas pelo [!INCLUDE[indigo1](../../../
 |ErrCannotCreateDirectory|Não é possível criar o diretório especificado.|  
 |ErrCouldNotLoadTypesFromAssemblyAt|Não é possível carregar todos os tipos no assembly especificado.|  
 |ErrUnknownSwitch|A chave especificada é uma opção reconhecida.|  
-|logotipo|O logotipo da ferramenta é "Ferramenta de metadados do Microsoft® serviço modelo" com a versão.|  
+|Logo|O logotipo da ferramenta é "Ferramenta de metadados do Microsoft® serviço modelo" com a versão.|  
 |NoCodeWasGenerated|Nenhum código foi gerado.<br /><br /> Se você tentar gerar um cliente, isso pode ocorrer porque os documentos de metadados não continha nenhum contrato válido ou os serviços<br /><br /> ou, porque todos os contratos/serviços foram descobertos existam em assemblies de referência. Verifique se que todos os documentos de metadados é passado para a ferramenta.|  
 |WrnUnableToLoadContractForSGen|Ocorreu um erro ao carregar um tipo de contrato. Não é possível gerar o tipo de XmlSerializer para este contrato. O tipo e os detalhes são especificados.|  
 |WrnOptionConflictsWithInput|A opção especificada não pode ser usada com vários assemblies de entrada. A opção especificada é ignorada.|  
@@ -79,7 +81,7 @@ Este tópico lista todas as exceções geradas pelo [!INCLUDE[indigo1](../../../
 |HelpCodeGenerationCategory|-= GERAÇÃO DE CÓDIGO =-|  
 |RetreivingMetadataWithMexAndDisco|Tentativa de fazer o download de metadados especificado usando o WS-Metadata Exchange ou DISCO.|  
 |ErrGeneralSchemaValidation|Ocorreu um erro ao verificar se os esquemas XML que foram gerados durante a exportação.|  
-|ParametersDirectory|\<diretório >|  
+|ParametersDirectory|\<directory>|  
 |ErrCannotLoadSpecifiedType|Nenhum tipo pode ser carregado para o valor especificado foi passado para a opção especificada. Certifique-se de que o assembly que pertence este tipo é especificado usando a opção especificada.|  
 |ErrOptionModeConflict|A opção especificada não pode ser usada com a opção especificada porque eles implicam tipos de saída diferente.|  
 |ErrIsNotAnAssembly|Não é possível carregar especificado como um assembly. Verifique se esse arquivo é um assembly .NET.|  
@@ -98,7 +100,7 @@ Este tópico lista todas as exceções geradas pelo [!INCLUDE[indigo1](../../../
 |ErrDirectoryNotFound|O diretório especificado não foi encontrado. Verifique se o diretório existe e se você tem as permissões apropriadas para lê-lo.|  
 |ErrUnableToLoadFile|Não é possível ler o arquivo especificado.|  
 |ErrNoFilesFound|O caminho de entrada especificado não parece se referir a arquivos existentes.|  
-|ParametersConfig|\<configFile >|  
+|ParametersConfig|\<configFile>|  
 |ErrDirectoryInsteadOfFile|O caminho de entrada especificado parece ser um diretório. Entrada deve ser URLs ou caminhos de arquivo.|  
 |HelpConfig|Instrui as ferramentas para gerar um arquivo de configuração com o nome fornecido. Padrão: Output.|  
 |ErrSingleUseSwitch|A opção especificada não pode ser especificada várias vezes.|  
@@ -123,9 +125,9 @@ Este tópico lista todas as exceções geradas pelo [!INCLUDE[indigo1](../../../
 |ErrInvalidTarget|O destino especificado é inválido quando especificado usando a opção especificada. Os destinos com suporte são especificados.|  
 |ErrPathTooLong|O caminho resultante é muito longo. Examine os argumentos especificados.|  
 |HelpCommonOptionsCategory|-= OPÇÕES COMUNS =-|  
-|ParametersServiceName|\<serviceConfigName >|  
+|ParametersServiceName|\<serviceConfigName>|  
 |ErrNoValidInputFilesSpecified|Nenhum arquivo de entrada válido especificado. Especifique documentos de metadados ou arquivos de assembly.|  
-|ParametersLanguage|\<idioma >|  
+|ParametersLanguage|\<language>|  
 |ErrUnableToLoadMetadataDocument|Ocorreu um erro ao ler os metadados de um dos documentos carregados. O identificador do documento é especificado.|  
 |ErrConflictingInputs|Os conflitos de argumento de entrada especificado com especificado porque eles implicam diferentes modos de operação da ferramenta.|  
 |WrnUnableToLoadContractForValidation|Ocorreu um erro ao carregar um tipo de contrato. O tipo e os detalhes são especificados.|  
@@ -136,7 +138,7 @@ Este tópico lista todas as exceções geradas pelo [!INCLUDE[indigo1](../../../
 |GeneratingFiles|Gerando arquivos...|  
 |ErrCannotSpecifyMultipleMappingsForNamespace|Um valor inválido foi passado para a opção especificada. O namespace de destino especificado não pode ser mapeado para vários namespaces CLR, conforme especificado.|  
 |ErrCouldNotLoadReferenceAssemblyAt|Não é possível carregar o assembly de referência especificado.|  
-|ParametersOut|\<arquivo >|  
+|ParametersOut|\<file>|  
 |NoCodeWasGeneratedSuggestDCOnly|Para gerar contratos de esquemas, use a opção especificada.|  
 |ErrUnableToLoadInputConfig|Não é possível carregar o arquivo de configuração especificado.|  
 |ErrUnexpectedDelimiter|Um delimitador de argumento inválido (': ' ou '=') não é possível iniciar a opção.|  

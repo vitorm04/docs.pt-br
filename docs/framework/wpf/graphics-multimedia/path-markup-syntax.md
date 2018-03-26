@@ -1,12 +1,13 @@
 ---
-title: "Sintaxe de marcação do caminho"
-ms.custom: 
+title: Sintaxe de marcação do caminho
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - attribute usage in XAML [WPF]
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-caps.latest.revision: "22"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 9cd8f9b14f114060ebec8e336c1212d61fa19c83
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="path-markup-syntax"></a>Sintaxe de marcação do caminho
 Caminhos são discutidos em [formas e desenho básico no WPF Overview](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) e [visão geral de geometria](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), no entanto, este tópico descreve detalhadamente poderoso e complexo minivocê idioma pode usar para especificar o caminho geometrias mais eficiência usando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -34,7 +36,7 @@ Caminhos são discutidos em [formas e desenho básico no WPF Overview](../../../
   
 <a name="abouthisdocument"></a>   
 ## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>Mini-linguagens de PathFigureCollection e StreamGeometry  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]fornece classes que fornecem a mini-idiomas para descrever os caminhos geométricos: <xref:System.Windows.Media.StreamGeometry> e <xref:System.Windows.Media.PathFigureCollection>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece classes que fornecem a mini-idiomas para descrever os caminhos geométricos: <xref:System.Windows.Media.StreamGeometry> e <xref:System.Windows.Media.PathFigureCollection>.  
   
 -   Usar o <xref:System.Windows.Media.StreamGeometry> miniao idioma definir uma propriedade do tipo <xref:System.Windows.Media.Geometry>, como o <xref:System.Windows.UIElement.Clip%2A> propriedade de um <xref:System.Windows.UIElement> ou o <xref:System.Windows.Shapes.Path.Data%2A> propriedade de um <xref:System.Windows.Shapes.Path> elemento. O exemplo a seguir usa a sintaxe de atributo para criar um <xref:System.Windows.Media.StreamGeometry>.  
   
@@ -58,17 +60,17 @@ Caminhos são discutidos em [formas e desenho básico no WPF Overview](../../../
   
 |Uso do atributo StreamGeometry XAML|  
 |-----------------------------------------|  
-|`<`*objeto* *propriedade* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] *`" ... />`|  
+|`<` *objeto* *propriedade* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] * `" ... />`|  
   
  O [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] atributo sintaxe de uso para um <xref:System.Windows.Media.PathFigureCollection> é composto de uma ou mais descrições de figura.  
   
 |Uso do atributo PathFigureCollection XAML|  
 |-----------------------------------------------|  
-|`<`*objeto* *propriedade* `="` `figureDescription`[ `figureDescription`] *`" ... />`|  
+|`<` *object* *property* `="` `figureDescription`[ `figureDescription`]* `" ... />`|  
   
 |Termo|Descrição|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Especifica se o <xref:System.Windows.Media.StreamGeometry> usa o <xref:System.Windows.Media.FillRule.EvenOdd> ou <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0`Especifica o <xref:System.Windows.Media.FillRule.EvenOdd> regra de preenchimento.<br />-   `F1`Especifica o <xref:System.Windows.Media.FillRule.Nonzero> regra de preenchimento.<br /><br /> Se você omitir este comando, o sub caminho usa o comportamento padrão, que é <xref:System.Windows.Media.FillRule.EvenOdd>. Se você especificar este comando, coloque-o primeiro.|  
+|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Especifica se o <xref:System.Windows.Media.StreamGeometry> usa o <xref:System.Windows.Media.FillRule.EvenOdd> ou <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Especifica o <xref:System.Windows.Media.FillRule.EvenOdd> regra de preenchimento.<br />-   `F1` Especifica o <xref:System.Windows.Media.FillRule.Nonzero> regra de preenchimento.<br /><br /> Se você omitir este comando, o sub caminho usa o comportamento padrão, que é <xref:System.Windows.Media.FillRule.EvenOdd>. Se você especificar este comando, coloque-o primeiro.|  
 |*figureDescription*|Uma figura é composta de um comando mover, desenhar e um comando opcional para fechar.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
 |*moveCommand*|Um comando de mover que especifica o ponto inicial da figura. Consulte o [comando Mover](#themovecommand) seção.|  
 |*drawCommands*|Um ou mais comandos de desenho que descrevem o conteúdo da figura. Consulte o [comandos desenhar](#drawcommands) seção.|  
@@ -95,7 +97,7 @@ Caminhos são discutidos em [formas e desenho básico no WPF Overview](../../../
  Insira cada comando usando uma letra maiúscula ou uma letra minúscula: letras maiúsculas denotam valores absolutos e letras minúsculas denotam valores relativos: os pontos de controle para aquele segmento são relativos ao ponto final do exemplo anterior. Ao inserir sequencialmente mais de um comando do mesmo tipo, você pode omitir a entrada duplicada de comando; Por exemplo, `L 100,200 300,400` é equivalente a `L 100,200 L 300,400`. A tabela a seguir descreve o **mover** e **desenhar** comandos.  
   
 ### <a name="line-command"></a>Comando de Linha  
- Cria uma linha reta entre o ponto atual e o ponto final especificado. `l 20 30`e `L 20,30` são exemplos de válido **linha** comandos.  
+ Cria uma linha reta entre o ponto atual e o ponto final especificado. `l 20 30` e `L 20,30` são exemplos de válido **linha** comandos.  
   
 |Sintaxe|  
 |------------|  

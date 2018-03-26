@@ -1,32 +1,34 @@
 ---
-title: "Cache com suporte para serviços HTTP Web do WCF"
-ms.custom: 
+title: Cache com suporte para serviços HTTP Web do WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-caps.latest.revision: "11"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 723f485ab45cbe127bfd337c2d428d38d5f27232
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Cache com suporte para serviços HTTP Web do WCF
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]permite que você use o mecanismo de cache declarativo já disponível em ASP.NET em seus serviços WCF Web HTTP. Isso permite que você para respostas de cache de suas operações de serviço WCF Web HTTP. Quando um usuário envia um HTTP GET para o serviço que está configurado para armazenar em cache, ASP.NET envia a resposta armazenada em cache e o método de serviço não for chamado. Quando o cache expira, na próxima vez que um usuário envia um HTTP GET é chamado o método de serviço e uma vez é armazenado em cache a resposta. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ASP.NET armazenar em cache, consulte [visão geral de cache do ASP.NET](http://go.microsoft.com/fwlink/?LinkId=152534)  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] permite que você use o mecanismo de cache declarativo já disponível em ASP.NET em seus serviços WCF Web HTTP. Isso permite que você para respostas de cache de suas operações de serviço WCF Web HTTP. Quando um usuário envia um HTTP GET para o serviço que está configurado para armazenar em cache, ASP.NET envia a resposta armazenada em cache e o método de serviço não for chamado. Quando o cache expira, na próxima vez que um usuário envia um HTTP GET é chamado o método de serviço e uma vez é armazenado em cache a resposta. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ASP.NET armazenar em cache, consulte [visão geral de cache do ASP.NET](http://go.microsoft.com/fwlink/?LinkId=152534)  
   
 ## <a name="basic-web-http-service-caching"></a>Cache de serviço do Web básico HTTP  
  Para habilitar o HTTP WEB do serviço de cache, você deve primeiro habilitar compatibilidade com ASP.NET aplicando o <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> à configuração de serviço <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> para <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> ou <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>.  
   
- [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]apresenta um novo atributo chamado <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> que permite que você especifique um nome de perfil de cache. Esse atributo é aplicado a uma operação de serviço. O exemplo a seguir se aplica a <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> a um serviço para habilitar a compatibilidade com ASP.NET e configura o `GetCustomer` operação para armazenar em cache. O <!--zz<xref:System.ServiceModel.Activation.AspNetCacheProfileAttribute>--> `System.ServiceModel.Activation.AspNetCacheProfileAttribute` atributo especifica um perfil de cache que contém as configurações de cache a ser usado.  
+ [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] apresenta um novo atributo chamado <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> que permite que você especifique um nome de perfil de cache. Esse atributo é aplicado a uma operação de serviço. O exemplo a seguir se aplica a <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> a um serviço para habilitar a compatibilidade com ASP.NET e configura o `GetCustomer` operação para armazenar em cache. O <!--zz<xref:System.ServiceModel.Activation.AspNetCacheProfileAttribute>--> `System.ServiceModel.Activation.AspNetCacheProfileAttribute` atributo especifica um perfil de cache que contém as configurações de cache a ser usado.  
   
 ```csharp
 [ServiceContract] 
@@ -69,7 +71,7 @@ public class Service
 </system.web>  
 ```  
   
- Este é o mesmo elemento de configuração que está disponível para aplicativos ASP.NET. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Perfis de cache do ASP.NET, consulte <xref:System.Web.Configuration.OutputCacheProfile>. Para serviços da Web HTTP, os atributos mais importantes no perfil de cache são: `cacheDuration` e `varyByParam`. Ambos os atributos são necessários. `cacheDuration`Define a quantidade de tempo que uma resposta deve ser armazenada em cache em segundos. `varyByParam`permite que você especifique um parâmetro de cadeia de caracteres de consulta que é usada para respostas de cache. Todas as solicitações feitas com valores de parâmetro de cadeia de caracteres de consulta diferentes são armazenadas em cache separadamente. Por exemplo, depois que uma solicitação inicial é feita para http://MyServer/MyHttpService/MyOperation?param=10 todas as solicitações subsequentes feitas com o mesmo URI deve ser retornadas a resposta armazenada em cache (desde que a duração do cache não tiver decorrido). As respostas para uma solicitação semelhante que é o mesmo, mas tem um valor diferente para o parâmetro de cadeia de caracteres de consulta de parâmetro são armazenadas separadamente. Se você não quiser que esse comportamento de cache separado, defina `varyByParam` para "none".  
+ Este é o mesmo elemento de configuração que está disponível para aplicativos ASP.NET. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Perfis de cache do ASP.NET, consulte <xref:System.Web.Configuration.OutputCacheProfile>. Para serviços da Web HTTP, os atributos mais importantes no perfil de cache são: `cacheDuration` e `varyByParam`. Ambos os atributos são necessários. `cacheDuration` Define a quantidade de tempo que uma resposta deve ser armazenada em cache em segundos. `varyByParam` permite que você especifique um parâmetro de cadeia de caracteres de consulta que é usada para respostas de cache. Todas as solicitações feitas com valores de parâmetro de cadeia de caracteres de consulta diferentes são armazenadas em cache separadamente. Por exemplo, depois que uma solicitação inicial é feita para http://MyServer/MyHttpService/MyOperation?param=10 todas as solicitações subsequentes feitas com o mesmo URI deve ser retornadas a resposta armazenada em cache (desde que a duração do cache não tiver decorrido). As respostas para uma solicitação semelhante que é o mesmo, mas tem um valor diferente para o parâmetro de cadeia de caracteres de consulta de parâmetro são armazenadas separadamente. Se você não quiser que esse comportamento de cache separado, defina `varyByParam` para "none".  
   
 ## <a name="sql-cache-dependency"></a>Dependência de Cache do SQL  
  Respostas de serviço da Web HTTP podem também ser armazenados em cache com uma dependência de cache SQL. Se seu serviço WCF Web HTTP depende de dados armazenados em um banco de dados SQL, convém resposta do serviço de cache e invalidar a resposta em cache quando as alterações da tabela de banco de dados de dados no SQL. Esse comportamento é totalmente configurado no arquivo Web. config. Você deve primeiro definir uma cadeia de caracteres de conexão no <`connectionStrings`> elemento.  
@@ -133,7 +135,7 @@ public class Service
  Aqui a duração do cache é definida como 60 segundos, `varyByParam` está definida como none e `sqlDependency` é definido como uma lista delimitada por ponto e vírgula de pares de nome/tabela de banco de dados separados por vírgulas. Quando dados em `MyTable` é alterado a resposta armazenada em cache para a operação de serviço é removida e quando a operação é chamada uma nova resposta é gerada (chamando a operação de serviço), armazenados em cache e retornada ao cliente.  
   
 > [!IMPORTANT]
->  Para o ASP.NET acessar um banco de dados SQL, você deve usar o [ferramenta de registro do ASP.NET SQL Server](http://go.microsoft.com/fwlink/?LinkId=152536). Além disso, você deve permitir o acesso de conta de usuário apropriado para o banco de dados e a tabela. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Acessar o SQL Server de um aplicativo Web](http://go.microsoft.com/fwlink/?LinkId=178988).  
+>  Para o ASP.NET acessar um banco de dados SQL, você deve usar o [ferramenta de registro do ASP.NET SQL Server](http://go.microsoft.com/fwlink/?LinkId=152536). Além disso, você deve permitir o acesso de conta de usuário apropriado para o banco de dados e a tabela. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Acessando o SQL Server de um aplicativo Web](http://go.microsoft.com/fwlink/?LinkId=178988).  
   
 ## <a name="conditional-http-get-based-caching"></a>HTTP condicional obter com base em cache  
  Em cenários de Web HTTP um HTTP GET condicional é geralmente usado pelos serviços para implementar cache inteligente de HTTP conforme descrito no [especificação HTTP](http://go.microsoft.com/fwlink/?LinkId=165800). Para fazer isso o serviço deve definir o valor de cabeçalho ETag na resposta HTTP. Ele também deve verificar o cabeçalho If-None-Match na solicitação HTTP para ver se qualquer uma da ETag especificado corresponde o ETag atual.  

@@ -1,23 +1,24 @@
 ---
 title: 'Tarefa 2: Hospedar Designer de Fluxo de Trabalho'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-caps.latest.revision: "19"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 991f3d25a81e90ab779936c993ec7dd09a71b794
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Tarefa 2: Hospedar Designer de Fluxo de Trabalho
 Este tópico descreve o procedimento para hospedar uma instância de [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] em um aplicativo de [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] .  
@@ -107,7 +108,7 @@ Este tópico descreve o procedimento para hospedar uma instância de [!INCLUDE[w
         }  
         ```  
   
-         [!INCLUDE[crabout](../../../includes/crabout-md.md)]registrar os designers de atividade, consulte [como: criar um Designer de atividade personalizada](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md).  
+         [!INCLUDE[crabout](../../../includes/crabout-md.md)] registrar os designers de atividade, consulte [como: criar um Designer de atividade personalizada](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md).  
   
     5.  No construtor da classe de `MainWindow` , adicione chamadas para métodos previamente declaradas para registrar os metadados para o suporte de designer e criar <xref:System.Activities.Presentation.WorkflowDesigner>.  
   

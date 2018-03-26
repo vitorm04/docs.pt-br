@@ -1,12 +1,13 @@
 ---
-title: "Extensões de marcação e XAML WPF"
-ms.custom: 
+title: Extensões de marcação e XAML WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - brace character [WPF]
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-caps.latest.revision: "26"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 5e6dec42d40039f9cc23ba976ecf421f6471888e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Extensões de marcação e XAML WPF
 Este tópico apresenta o conceito de extensões de marcação para XAML, incluindo regras de sintaxe, finalidade e o modelo de objeto de classe subjacente. As extensões de marcação são um recurso geral da linguagem XAML e da implementação .NET de serviços XAML. Este tópico detalha, especificamente, as extensões de marcação para uso em XAML do WPF.  
@@ -53,7 +55,7 @@ Este tópico apresenta o conceito de extensões de marcação para XAML, incluin
 ## <a name="xaml-defined-markup-extensions"></a>Extensões de marcação definidas de XAML  
  Existem várias extensões de marcação que não são específicas à implementação de XAML do WPF, mas que são implementações de intrínsecos ou recursos de XAML como linguagem. Essas extensões de marcação são implementadas no assembly System.Xaml como parte dos serviços de XAML gerais do .NET Framework XAML e ficam dentro do namespace de XAML de linguagem XAML. Em termos de uso de marcação comum, essas extensões de marcação normalmente podem ser identificadas pelo prefixo `x:` no uso. O <xref:System.Windows.Markup.MarkupExtension> classe base (também definida em System. XAML) fornece o padrão de todas as extensões de marcação devem usar para ter suporte em leitores XAML e gravadores XAML, incluindo em WPF XAML.  
   
--   `x:Type`fornece o <xref:System.Type> objeto para o tipo nomeado. Esse recurso é usado com mais frequência em estilos e modelos. Para ver os detalhes, consulte [Extensão de marcação x:Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md).  
+-   `x:Type` fornece o <xref:System.Type> objeto para o tipo nomeado. Esse recurso é usado com mais frequência em estilos e modelos. Para ver os detalhes, consulte [Extensão de marcação x:Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md).  
   
 -   O `x:Static` produz valores estáticos. Os valores vêm de entidades de código de tipo de valor que não são, diretamente, o tipo de valor de uma propriedade de destino, mas podem ser avaliados para esse tipo. Para ver os detalhes, consulte [Extensão de marcação x:Static](../../../../docs/framework/xaml-services/x-static-markup-extension.md).  
   
@@ -74,7 +76,7 @@ Este tópico apresenta o conceito de extensões de marcação para XAML, incluin
   
 -   O `Binding` fornece um valor associado a dados para uma propriedade, usando o contexto de dados que se aplica ao objeto pai no tempo de execução. Essa extensão de marcação é relativamente complexa, porque possibilita uma sintaxe substancial embutida para especificar uma vinculação de dados. Para ver os detalhes, consulte [Extensão de marcação Binding](../../../../docs/framework/wpf/advanced/binding-markup-extension.md).  
   
--   `RelativeSource`Fornece informações de origem para um <xref:System.Windows.Data.Binding> que pode navegar várias relações possíveis na árvore de objetos de tempo de execução. São oferecidas fontes especializadas para associações criadas em modelos multiuso ou criadas em código sem conhecimento completo da árvore de objetos adjacente. Para ver os detalhes, consulte [RelativeSource MarkupExtension](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md).  
+-   `RelativeSource` Fornece informações de origem para um <xref:System.Windows.Data.Binding> que pode navegar várias relações possíveis na árvore de objetos de tempo de execução. São oferecidas fontes especializadas para associações criadas em modelos multiuso ou criadas em código sem conhecimento completo da árvore de objetos adjacente. Para ver os detalhes, consulte [RelativeSource MarkupExtension](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md).  
   
 -   O `TemplateBinding` permite que um modelo de controle use valores para propriedades modeladas que vêm de propriedades definidas pelo modelo de objeto da classe que usará o modelo. Em outras palavras, a propriedade dentro da definição de modelo pode acessar um contexto que existe somente depois que o modelo é aplicado. Para ver os detalhes, consulte [Extensão de marcação TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md). Para obter mais informações sobre o uso prático de `TemplateBinding`, consulte [Estilos com a amostra ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).  
   

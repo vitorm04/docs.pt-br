@@ -1,19 +1,21 @@
 ---
-title: "Passo a passo: Geração SQL"
-ms.custom: 
+title: 'Passo a passo: Geração SQL'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-caps.latest.revision: "3"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 272d0b8bc58094737d157abfff9f3f026a0f5953
 ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
@@ -161,7 +163,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  Considere como “Var (Join2). Extent4.OrderID” é visitado. Primeiro, a propriedade “Var de instância (Join2). Extent4” é visitado, que é um outro DbPropertyExpression e está visitando seu instância Var Join2 (“”). Na parte superior a maioria de escopo na tabela de símbolo, “Join2” resolve <a joinSymbol_join2>. No método de visita para o processamento “Var de DbPropertyExpression (Join2). ” Aviso Extent4 que um símbolo do join foi retornada a visitar a instância e para ajuste é necessário.  
   
- Desde que está aninhado joins, nós pesquisamos a propriedade “Extent4” no dicionário de NameToExtent de símbolo de adição, resolvê-lo <a> symbol_Extent4 e retornar um novo SymbolPair (<joinSymbol_join2>, <symbol_Extent4>). Como um par de símbolo é retornado de processamento de instância de “Var (Join2). Extent4.OrderID”, a propriedade “OrderID” é resolvido de ColumnPart do controle do símbolo (<symbol_Extent4>), que tenha uma lista de colunas de extensão que representa. Assim, “Var (Join2). Extent4.OrderID” é resolvido { <joinSymbol_Join2>, “. ”, <symbol_OrderID>}.  
+ Desde que está aninhado joins, nós pesquisamos a propriedade “Extent4” no dicionário de NameToExtent de símbolo de adição, resolvê-lo a <symbol_Extent4> e retornar um novo SymbolPair(<joinSymbol_join2>, <symbol_Extent4>). Como um par de símbolo é retornado de processamento de instância de “Var (Join2). Extent4.OrderID”, a propriedade “OrderID” é resolvido de ColumnPart do controle do símbolo (<symbol_Extent4>), que tenha uma lista de colunas de extensão que representa. Assim, “Var (Join2). Extent4.OrderID” é resolvido { <joinSymbol_Join2>, “. ”, <symbol_OrderID>}.  
   
  A condição de adição de Join4 é processada da mesma forma. O controle retorna para o método de VisitInputExpression que processou a parte superior a maioria de projeto. Examinando o FromExtents de SelectStatement0 retornado, a entrada é identificada como uma união, e remove as extensões originais e substituir-las com uma nova extensão com apenas o símbolo do join. A tabela de símbolo é atualizada e também a parte da projeção de Projeto é processada em seguida. Resolver propriedades e ajuste das extensões do join são como descrito anteriormente.  
   

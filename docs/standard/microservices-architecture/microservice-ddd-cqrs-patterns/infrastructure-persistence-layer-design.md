@@ -1,7 +1,7 @@
 ---
-title: "Projetando a camada de persistência da infraestrutura"
-description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Projetando a camada de persistência da infraestrutura"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Projetando a camada de persistência da infraestrutura
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Projetando a camada de persistência da infraestrutura
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/08/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>Projetando a camada de persistência da infraestrutura
 
@@ -138,30 +138,30 @@ Nas próximas seções, é explicado como implementar o padrão de especificaç�
 
 ### <a name="the-repository-pattern"></a>O padrão de repositório
 
--   **Edward Hieatt e Rob Mee. Repository pattern (Padrão de repositório).**
+-   **Edward Hieatt e Rob Mee. Padrão de repositório.**
     [*http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
 
--   **The Repository pattern (O padrão de repositório)**
+-   **O padrão de repositório**
     [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
 
--   **Repository Pattern: A data persistence abstraction (Padrão de repositório: uma abstração da persistência de dados)**
+-   **Repositório padrão: Uma persistência abstração de dados**
     [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/)
 
 -   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Design orientado por domínio: lidando com a complexidade no núcleo do software).** (Livro; inclui uma discussão sobre o padrão de repositório) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="unit-of-work-pattern"></a>Padrão de unidade de trabalho
 
--   **Martin Fowler. Unit of Work pattern (Padrão de unidade de trabalho).**
+-   **Martin Fowler. Unidade de padrão de trabalho.**
     [*http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 <!-- -->
 
--   **Implementando os padrões de repositório e de unidade de trabalho em um aplicativo MVC do ASP.NET**
+-   **Implementando os padrões de repositório e de unidade de trabalho em um aplicativo ASP.NET MVC**
     [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
 ### <a name="the-specification-pattern"></a>O padrão de especificação
 
--   **The Specification pattern (O padrão de especificação).**
+-   **O padrão de especificação.**
     [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
 
 -   **Evans, Eric (2004). Domain Driven Design (Design orientado por domínio). Addison-Wesley. pág. 224.**

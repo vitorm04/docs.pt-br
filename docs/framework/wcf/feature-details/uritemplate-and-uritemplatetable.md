@@ -1,27 +1,29 @@
 ---
 title: UriTemplate and UriTemplateTable
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate and UriTemplateTable
-Os desenvolvedores da Web exigem a capacidade para descrever a forma e o layout dos seus serviços de responder às URIs. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]adicionadas duas novas classes para oferecer aos desenvolvedores controle sobre suas URIs. <xref:System.UriTemplate>e <xref:System.UriTemplateTable> formam a base do mecanismo de expedição baseada em URI em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Essas classes também podem ser usadas em seus próprios, permitindo que desenvolvedores para tirar proveito dos modelos e o mecanismo de mapeamento de URI sem implementar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço.  
+Os desenvolvedores da Web exigem a capacidade para descrever a forma e o layout dos seus serviços de responder às URIs. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] adicionadas duas novas classes para oferecer aos desenvolvedores controle sobre suas URIs. <xref:System.UriTemplate> e <xref:System.UriTemplateTable> formam a base do mecanismo de expedição baseada em URI em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Essas classes também podem ser usadas em seus próprios, permitindo que desenvolvedores para tirar proveito dos modelos e o mecanismo de mapeamento de URI sem implementar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço.  
   
 ## <a name="templates"></a>Modelos  
  Um modelo é uma maneira de descrever um conjunto de URIs relativos. O conjunto de modelos URI na tabela a seguir mostra como um sistema que recupera os vários tipos de informações de tempo pode ser definido.  
@@ -30,38 +32,38 @@ Os desenvolvedores da Web exigem a capacidade para descrever a forma e o layout 
 |----------|--------------|  
 |Previsão nacional|clima/nacionais|  
 |Previsão de estado|clima / {estado}|  
-|Previsão de cidade|clima / {estado} / {cidade}|  
-|Previsão de atividade|clima / {estado} / {cidade} / {atividade}|  
+|Previsão de cidade|weather/{state}/{city}|  
+|Previsão de atividade|weather/{state}/{city}/{activity}|  
   
  Esta tabela descreve um conjunto de URIs estruturalmente semelhantes. Cada entrada é um modelo de URI. Os segmentos entre chaves descrevem variáveis. Os segmentos não entre chaves descrevem cadeias de caracteres literais. O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] classes de modelo permitir que os desenvolvedores levar um URI de entrada, por exemplo, "/ clima/wa/seattle/ciclo" e a correspondência em um modelo que descreve, "/weather/ {estado} / {cidade} / {atividade}".  
   
 ## <a name="uritemplate"></a>UriTemplate  
- <xref:System.UriTemplate>é uma classe que encapsula um modelo de URI. O construtor aceita um parâmetro de cadeia de caracteres que define o modelo. Essa cadeia de caracteres contém o modelo no formato descrito na próxima seção. O <xref:System.UriTemplate> classe fornece métodos que permitem correspondem um URI de entrada para um modelo, gerar um URI de um modelo, recuperar uma coleção de nomes de variáveis usadas no modelo, determinar se dois modelos são equivalentes e retornam o modelo cadeia de caracteres.  
+ <xref:System.UriTemplate> é uma classe que encapsula um modelo de URI. O construtor aceita um parâmetro de cadeia de caracteres que define o modelo. Essa cadeia de caracteres contém o modelo no formato descrito na próxima seção. O <xref:System.UriTemplate> classe fornece métodos que permitem correspondem um URI de entrada para um modelo, gerar um URI de um modelo, recuperar uma coleção de nomes de variáveis usadas no modelo, determinar se dois modelos são equivalentes e retornam o modelo cadeia de caracteres.  
   
- <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29>usa um endereço base e um candidato URI e tenta corresponder o URI para o modelo. Se a correspondência for bem-sucedida, um <xref:System.UriTemplateMatch> instância será retornada. O <xref:System.UriTemplateMatch> objeto contém um URI de base, o URI, uma coleção de nome/valor dos parâmetros de consulta, uma matriz dos segmentos de caminho relativo, uma coleção de nome/valor das variáveis que foram comparados, candidato a <xref:System.UriTemplate> instância usada para executar a correspondência , uma cadeia de caracteres que contém qualquer parte não correspondente de candidato URI (usado quando o modelo tem um caractere curinga) e um objeto que está associado com o modelo.  
+ <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> usa um endereço base e um candidato URI e tenta corresponder o URI para o modelo. Se a correspondência for bem-sucedida, um <xref:System.UriTemplateMatch> instância será retornada. O <xref:System.UriTemplateMatch> objeto contém um URI de base, o URI, uma coleção de nome/valor dos parâmetros de consulta, uma matriz dos segmentos de caminho relativo, uma coleção de nome/valor das variáveis que foram comparados, candidato a <xref:System.UriTemplate> instância usada para executar a correspondência , uma cadeia de caracteres que contém qualquer parte não correspondente de candidato URI (usado quando o modelo tem um caractere curinga) e um objeto que está associado com o modelo.  
   
 > [!NOTE]
 >  O <xref:System.UriTemplate> classe ignora o número de porta e o esquema durante a correspondência de um URI de candidato a um modelo.  
   
- Há dois métodos que permitem que você gerar um URI de um modelo, <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> e <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>. <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29>usa um endereço base e uma coleção de nome/valor de parâmetros. Esses parâmetros são substituídos por variáveis quando o modelo está associado. <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>usa os pares nome/valor e substitui-los à esquerda para a direita.  
+ Há dois métodos que permitem que você gerar um URI de um modelo, <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> e <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>. <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> usa um endereço base e uma coleção de nome/valor de parâmetros. Esses parâmetros são substituídos por variáveis quando o modelo está associado. <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> usa os pares nome/valor e substitui-los à esquerda para a direita.  
   
- <xref:System.UriTemplate.ToString>Retorna a cadeia de caracteres de modelo.  
+ <xref:System.UriTemplate.ToString> Retorna a cadeia de caracteres de modelo.  
   
  O <xref:System.UriTemplate.PathSegmentVariableNames%2A> propriedade contém uma coleção de nomes das variáveis usadas em segmentos de caminho na cadeia de caracteres de modelo.  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29>leva um <xref:System.UriTemplate> como um parâmetro e retorna um valor booleano que especifica se os dois modelos são equivalentes. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]Equivalência de modelo seção mais adiante neste tópico.  
+ <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> leva um <xref:System.UriTemplate> como um parâmetro e retorna um valor booleano que especifica se os dois modelos são equivalentes. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] Equivalência de modelo seção mais adiante neste tópico.  
   
- <xref:System.UriTemplate>foi projetado para trabalhar com qualquer esquema URI que siga a gramática do URI de HTTP. A seguir estão exemplos de esquemas URI com suporte.  
+ <xref:System.UriTemplate> foi projetado para trabalhar com qualquer esquema URI que siga a gramática do URI de HTTP. A seguir estão exemplos de esquemas URI com suporte.  
   
 -   http://  
   
 -   https://  
   
--   NET.TCP://  
+-   net.tcp://  
   
--   NET.pipe://  
+-   net.pipe://  
   
--   SB: / /  
+-   sb://  
   
  Esquemas como file:// e urn: / / não está de acordo com a gramática do URI de HTTP e causar resultados imprevisíveis quando usada com modelos de URI.  
   
@@ -86,27 +88,27 @@ Os desenvolvedores da Web exigem a capacidade para descrever a forma e o layout 
   
 -   ""  
   
--   "/ sapato"  
+-   "/shoe"  
   
 -   "sapato / *"  
   
--   "{sapato} / barco"  
+-   "{shoe}/boat"  
   
--   "{sapato} / {barco} /bed/ {quilt}"  
+-   "{shoe}/{boat}/bed/{quilt}"  
   
 -   "sapato / {barco}"  
   
--   "sapato / {barco} / *"  
+-   "shoe/{boat}/*"  
   
--   "sapato/barco? x = 2"  
+-   "shoe/boat?x=2"  
   
--   "sapato / {barco}? x = {cama}"  
+-   "shoe/{boat}?x={bed}"  
   
--   "sapato / {barco}? x = {cama} & y = banda"  
+-   "shoe/{boat}?x={bed}&y=band"  
   
--   "? x = {sapato}"  
+-   "?x={shoe}"  
   
--   "sapato? x = y &3;= {var}  
+-   "shoe?x=3&y={var}  
   
  Exemplos de cadeias de caracteres de modelo inválido:  
   
@@ -125,13 +127,13 @@ Os desenvolvedores da Web exigem a capacidade para descrever a forma e o layout 
 ### <a name="compound-path-segments"></a>Composto de segmentos de caminho  
  Segmentos de caminho composto permitem que um único segmento de caminho URI conter várias variáveis, bem como variáveis combinados com literais. A seguir estão exemplos de segmentos de caminho composto válido.  
   
--   /filename. {ext} /  
+-   /filename.{ext}/  
   
 -   /{filename}.jpg/  
   
--   / {filename}. {ext} /  
+-   /{filename}.{ext}/  
   
--   / {a}. {b}someLiteral{c}({d}) /  
+-   /{a}.{b}someLiteral{c}({d})/  
   
  A seguir estão exemplos de segmentos de caminho inválido.  
   
@@ -140,7 +142,7 @@ Os desenvolvedores da Web exigem a capacidade para descrever a forma e o layout 
 -   / {sapato} {barco} - variáveis devem ser separadas por um literal.  
   
 ### <a name="matching-and-compound-path-segments"></a>Segmentos de caminho composto e correspondentes  
- Segmentos de caminho composto permitem que você defina um UriTemplate que tem diversas variáveis em um segmento de caminho único. Por exemplo, na cadeia de modelo a seguir: "endereços / {estado}. {Cidade} "duas variáveis (estado e cidade) são definidos no mesmo segmento. Este modelo corresponderia a uma URL, como "http://example.com/Washington.Redmond", mas também serão compatíveis com uma URL como "http://example.com/Washington.Redmond.Microsoft". No último caso, a variável de estado conterá "Washington" e a variável de cidade conterá "Redmond.Microsoft". Nesse caso, qualquer texto (exceto '/') corresponderá a variável {cidade}. Se você usar um modelo que não corresponde o texto "extra", coloca a variável em um segmento separado de modelo, por exemplo: "endereços / {estado} / {cidade}.  
+ Segmentos de caminho composto permitem que você defina um UriTemplate que tem diversas variáveis em um segmento de caminho único. Por exemplo, na cadeia de modelo a seguir: "endereços / {estado}. {Cidade} "duas variáveis (estado e cidade) são definidos no mesmo segmento. Este modelo corresponderia a uma URL, como "http://example.com/Washington.Redmond", mas também serão compatíveis com uma URL como"http://example.com/Washington.Redmond.Microsoft". No último caso, a variável de estado conterá "Washington" e a variável de cidade conterá "Redmond.Microsoft". Nesse caso, qualquer texto (exceto '/') corresponderá a variável {cidade}. Se você usar um modelo que não corresponde o texto "extra", coloca a variável em um segmento separado de modelo, por exemplo: "endereços / {estado} / {cidade}.  
   
 ### <a name="named-wildcard-segments"></a>Segmentos de curinga nomeada  
  Um segmento de curinga nomeada é qualquer segmento do caminho variável cujo nome de variável começa com o caractere curinga ' *'. A seguinte cadeia de caracteres de modelo contém um segmento de curinga nomeado chamado "sapato".  
@@ -257,11 +259,11 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 ### <a name="template-equivalence"></a>Equivalência de modelo  
  Dois modelos são considerados *estruturalmente equivalente* quando todos os literais os modelos correspondem e tiverem variáveis nos mesmos segmentos. Por exemplo, os seguintes modelos são estruturalmente equivalentes:  
   
--   /a/ {var1} / b b / {var2}? x = 1 & y = 2  
+-   /a/{var1}/b b/{var2}?x=1&y=2  
   
--   a/{x}/b%20b/{var1}?y=2 & x = 1  
+-   a/{x}/b%20b/{var1}?y=2&x=1  
   
--   a/{y}/B%20B/{z}/?y=2 & x = 1  
+-   a/{y}/B%20B/{z}/?y=2&x=1  
   
  Algumas coisas a observar:  
   
@@ -288,57 +290,57 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
  Os seguintes conjuntos de cadeias de caracteres de consulta são sejam ambíguos em si:  
   
--   ? x = 1  
+-   ?x=1  
   
--   ? x = 2  
+-   ?x=2  
   
--   ? x = 3  
+-   ?x=3  
   
--   ? x = 1 & y = {var}  
+-   ?x=1&y={var}  
   
--   ? x = 2 & z = {var}  
+-   ?x=2&z={var}  
   
--   ? x = 3  
+-   ?x=3  
   
--   ? x = 1  
-  
--   ?  
-  
--   ? x = {var}  
+-   ?x=1  
   
 -   ?  
   
--   ? m = get & c = rss  
+-   ? x={var}  
   
--   ? m = put & c = rss  
+-   ?  
   
--   ? m = get & c = atom  
+-   ?m=get&c=rss  
   
--   ? m = put & c = atom  
+-   ?m=put&c=rss  
+  
+-   ?m=get&c=atom  
+  
+-   ?m=put&c=atom  
   
  Os seguintes conjuntos de modelos de cadeia de caracteres de consulta são ambíguos em si:  
   
--   ? x = 1  
+-   ?x=1  
   
--   ? x = {var}  
+-   ?x={var}  
   
  "x = 1"-coincide com os dois modelos.  
   
--   ? x = 1  
+-   ?x=1  
   
--   ? s = 2  
+-   ?y=2  
   
  "x = 1 & y = 2" corresponde a ambos os modelos. Isso ocorre porque uma cadeia de caracteres de consulta pode conter variáveis de cadeia de caracteres de consulta mais e em seguida, o modelo que ela corresponde.  
   
--   ? x = 1  
+-   ?x=1  
   
--   ? x = 1 & y = {var}  
+-   ?x=1&y={var}  
   
  "x = 1 & y = 3" corresponde a ambos os modelos.  
   
 -   ? x = y &3;= 4  
   
--   ? x = 3 & z = 5  
+-   ?x=3&z=5  
   
 > [!NOTE]
 >  Os caracteres á e Á são considerados caracteres diferentes quando eles aparecem como parte de um caminho de URI ou <xref:System.UriTemplate> literal do segmento de caminho (mas a caracteres e um são considerados o mesmo). Os caracteres á e Á são considerados os mesmos caracteres quando eles aparecem como parte de um <xref:System.UriTemplate> {variableName} ou uma cadeia de caracteres de consulta (e a e também são consideradas como os mesmos caracteres).  

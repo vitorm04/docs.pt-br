@@ -1,7 +1,7 @@
 ---
-title: "Implementando a camada de aplicativos de microsserviço usando a API Web"
-description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Implementando a camada de aplicativos de microsserviço usando a API Web"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Implementando a camada de aplicativos de microsserviço usando a API Web
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Implementando a camada de aplicativos de microsserviço usando a API Web
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: cfca93dca0ec9d05936f4be676e27135c581de94
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>Implementando a camada de aplicativos de microsserviço usando a API Web
 
@@ -117,7 +117,7 @@ Ao usar a DI no .NET Core, talvez seja interessante verificar um assembly e regi
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
--   **Matthew King. Registering services with Scrutor (Registrando serviços com o Scrutor)**
+-   **Matthew King. Registrando serviços Scrutor**
     [*https://mking.io/blog/registering-services-with-scrutor*](https://mking.io/blog/registering-services-with-scrutor)
 
 <!-- -->
@@ -172,13 +172,13 @@ O tipo de escopo da instância determina como uma instância é compartilhada en
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
--   **Introdução à injeção de dependência no ASP.NET Core**
+-   **Introdução a injeção de dependência no núcleo do ASP.NET**
     [*https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection*](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)
 
 -   **Autofac.** Documentação oficial.
     [*http://docs.autofac.org/en/latest/*](http://docs.autofac.org/en/latest/)
 
--   **Comparing ASP.NET Core IoC container service lifetimes with Autofac IoC container instance scopes (Comparando os tempos de vida do serviço de contêiner de IoC do ASP.NET Core com escopos de instância de contêiner de IoC do Autofac) – Cesar de la Torre.**
+-   **Comparando tempos de vida do serviço de contêiner de ASP.NET Core IoC com escopos de instância de contêiner IoC Autofac - Cesar de la Torre.**
     [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
 ## <a name="implementing-the-command-and-command-handler-patterns"></a>Implementar os padrões de Comando e Manipulador de Comandos
@@ -398,19 +398,19 @@ Aqui estão etapas adicionais que um manipulador de comandos deve realizar:
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
--   **Mark Seemann. At the Boundaries, Applications are Not Object-Oriented (Nos limites, os aplicativos não são orientados a objeto)**
-    [*http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
+-   **Mark Seemann. Em limites, os aplicativos são orientados a objeto não**
+    [*http://blog.ploeh.dk/2011/05/31/AttheBoundariesorientado a ApplicationsareNotObject /*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
 
 -   **Comandos e eventos**
     [*http://cqrs.nu/Faq/commands-and-events*](http://cqrs.nu/Faq/commands-and-events)
 
--   **O que um manipulador de comandos faz?**
+-   **O que faz um manipulador de comando?**
     [*http://cqrs.nu/Faq/command-handlers*](http://cqrs.nu/Faq/command-handlers)
 
--   **Jimmy Bogard. Domain Command Patterns – Handlers (Padrões de comando de domínio – manipuladores)**
+-   **Jimmy Bogard. Padrões de comando do domínio – manipuladores**
     [*https://jimmybogard.com/domain-command-patterns-handlers/*](https://jimmybogard.com/domain-command-patterns-handlers/)
 
--   **Jimmy Bogard. Domain Command Patterns – Validation (Padrões de comando de domínio – validação)**
+-   **Jimmy Bogard. Padrões de comando do domínio – validação**
     [*https://jimmybogard.com/domain-command-patterns-validation/*](https://jimmybogard.com/domain-command-patterns-validation/)
 
 ## <a name="the-command-process-pipeline-how-to-trigger-a-command-handler"></a>O pipeline de processo Comando: como disparar um manipulador de comandos
@@ -833,38 +833,38 @@ De maneira semelhante, você pode implementar outros comportamentos para aspecto
 
 ##### <a name="the-mediator-pattern"></a>O padrão mediador
 
--   **Padrão Mediador**
-    [*https://en.wikipedia.org/wiki/Mediator\_pattern*](https://en.wikipedia.org/wiki/Mediator_pattern)
+-   **Padrão de mediador**
+    [*https://en.wikipedia.org/wiki/Mediator\_padrão*](https://en.wikipedia.org/wiki/Mediator_pattern)
 
 ##### <a name="the-decorator-pattern"></a>O padrão decorador
 
--   **Padrão Decorador**
-    [*https://en.wikipedia.org/wiki/Decorator\_pattern*](https://en.wikipedia.org/wiki/Decorator_pattern)
+-   **Padrão de decorador**
+    [*https://en.wikipedia.org/wiki/Decorator\_padrão*](https://en.wikipedia.org/wiki/Decorator_pattern)
 
 ##### <a name="mediatr-jimmy-bogard"></a>MediatR (Jimmy Bogard)
 
 -   **MediatR.** Repositório do GitHub.
     [*https://github.com/jbogard/MediatR*](https://github.com/jbogard/MediatR)
 
--   **CQRS with MediatR and AutoMapper (CQRS com MediatR e AutoMapper)**
+-   **CQRS com MediatR e AutoMapper**
     [*https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/*](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
 
--   **Put your controllers on a diet: POSTs and commands (Faça uma dieta dos seus controladores: POSTs e comandos).**
+-   **Coloque os controladores em uma dieta: postagens e comandos.**
     [*https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/*](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
 
--   **Tackling cross-cutting concerns with a mediator pipeline (Lidando com interesses transversais com um pipeline mediador)**
+-   **Lidando com resolvem preocupações com um pipeline mediador**
     [*https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/*](https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/)
 
--   **CQRS and REST: the perfect match (CQRS e REST: a combinação perfeita)**
+-   **CQRS e REST: a correspondência perfeita**
     [*https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/*](https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/)
 
--   **MediatR Pipeline Examples (Exemplos de pipeline de MediatR)**
+-   **Exemplos de Pipeline de MediatR**
     [*https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/*](https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/)
 
--   **Vertical Slice Test Fixtures for MediatR and ASP.NET Core (Acessórios de teste de fatia vertical para MediatR e ASP.NET Core)**
+-   **Acessórios de teste de fatia vertical para MediatR e ASP.NET Core**
     *<https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/> *
 
--   **MediatR Extensions for Microsoft Dependency Injection Released (Extensões liberadas do MediatR para injeção de dependência da Microsoft)**
+-   **Extensões de MediatR Microsoft para injeção de dependência lançado**
     [*https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/*](https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/)
 
 ##### <a name="fluent-validation"></a>Validação fluente

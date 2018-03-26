@@ -1,7 +1,7 @@
 ---
-title: "Validação do lado do cliente (validação nas camadas de apresentação)"
-description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Validação do lado do cliente (validação nas camadas de apresentação)"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Validação do lado do cliente (validação nas camadas de apresentação)
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Validação do lado do cliente (validação nas camadas de apresentação)
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 273aa0a8ceb7f683999f1074faae0a6aa303f9be
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Validação do lado do cliente (validação nas camadas de apresentação)
 
@@ -48,10 +48,10 @@ A implementação de validação do lado do cliente depende de qual tipo de apli
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Validação em aplicativos Web SPA (Angular 2, TypeScript, JavaScript)
 
--   **Ado Kukic. Validação de formulário Angular 2** **
+-   **Ado Kukic. Validação de formulário 2 angular** **
     **[*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
--   **Validação de formulário**
+-   **Validação do formulário**
     [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
 -   **Validação.** Documentação da Breeze.

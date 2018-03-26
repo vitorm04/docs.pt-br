@@ -20,7 +20,7 @@ ms.openlocfilehash: 823edadf7d387d1a509edbdf839ac6eeece5d41f
 ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="wcf-service-publishing"></a>Publicação de serviço do WCF
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Serviço de publicação ajuda em andamento no ambiente de desenvolvimento iniciais fornecido pelo [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host de serviço e [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] cliente de teste para realmente implantar o aplicativo em um ambiente de produção para fins de teste. Antes de confirmar a um plano de implantação final, você pode usar [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] serviço de publicação para verificar se seu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviço executa corretamente e está pronto para ser publicado. Você também pode optar por implantar seu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bibliotecas em vários locais de destino para teste de serviço.  

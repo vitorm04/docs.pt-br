@@ -1,24 +1,26 @@
 ---
-title: "Comparando os serviços Web ASP.NET com o WCF baseado em desenvolvimento"
-ms.custom: 
+title: Comparando os serviços Web ASP.NET com o WCF baseado em desenvolvimento
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: c12bd11cee62cd769f7dffc142806fa5ab1b0137
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>Comparando os serviços Web ASP.NET com o WCF baseado em desenvolvimento
 O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] tem uma opção de modo de compatibilidade com o ASP.NET que permite que os aplicativos do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sejam programados e configurados como serviços Web ASP.NET, e simulam seu comportamento. As seções a seguir comparam os serviços Web ASP.NET e o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] com base no que é necessário para desenvolver aplicativos usando as duas tecnologias.  
@@ -380,7 +382,7 @@ typeof(Service), //"Service" is the name of the service type baseAdresses))
   
  Este exemplo mostra como os endereços de um ou mais protocolos de transporte são especificados na construção de um <xref:System.ServiceModel.ServiceHost>. Esses endereços são chamados de endereços básicos.  
   
- O endereço fornecido para qualquer ponto de extremidade de um serviço do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] é um endereço relativo a um endereço básico do host do ponto de extremidade. O host pode ter um endereço básico para cada protocolo de transporte de comunicação. Na configuração de exemplo do arquivo de configuração anterior, o <xref:System.ServiceModel.BasicHttpBinding> selecionado para o ponto de extremidade usa o HTTP como protocolo de transporte; portanto, o endereço do ponto de extremidade, `EchoService`, é relativo ao endereço básico HTTP do host. No caso de host do exemplo anterior, o endereço básico HTTP é http://www.contoso.com:8000/. Para um serviço hospedado no IIS ou no WAS, o endereço básico é a URL do arquivo do serviço.  
+ O endereço fornecido para qualquer ponto de extremidade de um serviço do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] é um endereço relativo a um endereço básico do host do ponto de extremidade. O host pode ter um endereço básico para cada protocolo de transporte de comunicação. Na configuração de exemplo do arquivo de configuração anterior, o <xref:System.ServiceModel.BasicHttpBinding> selecionado para o ponto de extremidade usa o HTTP como protocolo de transporte; portanto, o endereço do ponto de extremidade, `EchoService`, é relativo ao endereço básico HTTP do host. No caso do host no exemplo anterior, o endereço base HTTP é http://www.contoso.com:8000/. Para um serviço hospedado no IIS ou no WAS, o endereço básico é a URL do arquivo do serviço.  
   
  Somente os serviços hospedados no IIS ou no WAS, e que são configurados com o HTTP como protocolo de transporte exclusivamente, podem usar a opção de modo de compatibilidade com o ASP.NET do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. A ativação dessa opção exige as seguintes etapas.  
   

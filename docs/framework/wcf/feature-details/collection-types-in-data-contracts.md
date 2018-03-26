@@ -1,12 +1,13 @@
 ---
-title: "Tipos de coleção em contratos de dados"
-ms.custom: 
+title: Tipos de coleção em contratos de dados
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: "19"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e74bd7d90d5653890fd5cf48e76c81d0227c6172
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>Tipos de coleção em contratos de dados
 Um *coleção* é uma lista de itens de um determinado tipo. No [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], essas listas podem ser representadas usando matrizes ou em uma variedade de outros tipos (lista genérica, genérico <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>, ou <xref:System.Collections.ArrayList>). Por exemplo, uma coleção pode conter uma lista de endereços para um cliente específico. Essas coleções são chamadas *liste coleções*, independentemente de seu tipo real.  
@@ -38,9 +40,9 @@ Um *coleção* é uma lista de itens de um determinado tipo. No [!INCLUDE[dnprdn
   
  Requisitos adicionais em tipos de coleção, como ter um método chamado `Add` e um construtor padrão, são discutidos em detalhes nas seções a seguir. Isso garante que os tipos de coleção podem ser serializados e desserializados. Isso significa que algumas coleções não são diretamente suportadas, como genérica <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> (porque ele não possui construtor padrão). No entanto, para obter informações sobre como contornar essas restrições, consulte a seção "Usando coleção Interface tipos e coleções somente leitura", mais adiante neste tópico.  
   
- Os tipos contidos em coleções devem ser tipos de contrato de dados ou ser serializável. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Tipos com suporte pelo serializador de contrato de dados](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Os tipos contidos em coleções devem ser tipos de contrato de dados ou ser serializável. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Tipos com suporte pelo serializador de contrato de dados](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]o que é e o que não é considerado uma coleção válida, bem como sobre como as coleções são serializadas, consulte as informações sobre serializando coleções na seção "Regras de coleta avançados" deste tópico.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] o que é e o que não é considerado uma coleção válida, bem como sobre como as coleções são serializadas, consulte as informações sobre serializando coleções na seção "Regras de coleta avançados" deste tópico.  
   
 ## <a name="interchangeable-collections"></a>Coleções intercambiáveis  
  Todas as coleções de lista do mesmo tipo são consideradas como tendo os mesmos dados contrato (a menos que eles estão personalizados usando o <xref:System.Runtime.Serialization.CollectionDataContractAttribute> de atributo, conforme discutido posteriormente neste tópico). Assim, por exemplo, os contratos de dados a seguir são equivalentes.  
@@ -89,7 +91,7 @@ Um *coleção* é uma lista de itens de um determinado tipo. No [!INCLUDE[dnprdn
 ## <a name="customizing-collection-types"></a>Personalizando tipos de coleção  
  Você pode personalizar os tipos de coleção usando o <xref:System.Runtime.Serialization.CollectionDataContractAttribute> atributo, que tem vários usos.  
   
- Observe que personalizando coleta tipos comprometimentos coleção obrigatórios, portanto, geralmente é recomendável para evitar aplicar esse atributo sempre que possível. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Esse problema, consulte a seção "Regras de coleta avançados" mais adiante neste tópico.  
+ Observe que personalizando coleta tipos comprometimentos coleção obrigatórios, portanto, geralmente é recomendável para evitar aplicar esse atributo sempre que possível. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Esse problema, consulte a seção "Regras de coleta avançados" mais adiante neste tópico.  
   
 ### <a name="collection-data-contract-naming"></a>Contrato de dados de coleção de nomenclatura  
  As regras de nomeação de tipos de coleção são semelhantes às para nomear tipos de contrato de dados regulares, conforme descrito em [nomes de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-names.md), embora existam algumas diferenças importantes:  
@@ -150,7 +152,7 @@ Um *coleção* é uma lista de itens de um determinado tipo. No [!INCLUDE[dnprdn
 </cust_list>  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]a seção "Regras de coleta avançada" neste tópico.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] a seção "Regras de coleta avançada" neste tópico.  
   
 ### <a name="customizing-the-repeating-element-name-in-list-collections"></a>Personalizando o nome de elemento de repetição em coleções de lista  
  Lista de coleções contêm as entradas repetidas. Normalmente, cada entrada de repetição é representada como um elemento nomeado de acordo com o nome do contrato de dados do tipo contido na coleção.  
@@ -201,7 +203,7 @@ Um *coleção* é uma lista de itens de um determinado tipo. No [!INCLUDE[dnprdn
 </CountriesOrRegionsWithCapitals>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]coleções de dicionário, consulte a seção "Regras de coleta avançados" mais adiante neste tópico.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] coleções de dicionário, consulte a seção "Regras de coleta avançados" mais adiante neste tópico.  
   
 ## <a name="collections-and-known-types"></a>Coleções e tipos conhecidos  
  Você não precisa adicionar tipos de coleção de tipos conhecidos quando polimorficamente usado no lugar de outras coleções ou interfaces de coleção. Por exemplo, se você declarar um membro de dados do tipo <xref:System.Collections.IEnumerable> e usá-lo para enviar uma instância do <xref:System.Collections.ArrayList>, você não precisa adicionar <xref:System.Collections.ArrayList> para tipos conhecidos.  
@@ -282,8 +284,8 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 |Tipo referenciado|Interface implementada pelo tipo referenciado|Exemplo|Tipo é tratado como:|  
 |---------------------|----------------------------------------------|-------------|----------------------|  
-|Não genérico ou fechado genérico (qualquer número de parâmetros)|Não genérico|`MyType : IList`<br /><br /> ou<br /><br /> `MyType<T> : IList`<br /><br /> onde T =`int`|Fechado genérico de `Object` (por exemplo, `IList<object>`)|  
-|Não genérico ou fechado genérico (qualquer número de parâmetros que não necessariamente correspondem ao tipo de coleção)|Fechado genérico|`MyType : IList<string>`<br /><br /> ou<br /><br /> `MyType<T> : IList<string>`onde T =`int`|Genérico fechado (por exemplo, `IList<string>`)|  
+|Não genérico ou fechado genérico (qualquer número de parâmetros)|Não genérico|`MyType : IList`<br /><br /> ou<br /><br /> `MyType<T> : IList`<br /><br /> onde T = `int`|Fechado genérico de `Object` (por exemplo, `IList<object>`)|  
+|Não genérico ou fechado genérico (qualquer número de parâmetros que não necessariamente correspondem ao tipo de coleção)|Fechado genérico|`MyType : IList<string>`<br /><br /> ou<br /><br /> `MyType<T> : IList<string>` onde T =`int`|Genérico fechado (por exemplo, `IList<string>`)|  
 |Fechado genérico com qualquer número de parâmetros|Abra genérico usando qualquer um dos parâmetros do tipo|`MyType<T,U,V> : IList<U>`<br /><br /> onde T =`int`, U =`string`, V =`bool`|Genérico fechado (por exemplo, `IList<string>`)|  
 |Genérico aberto com um parâmetro|Genérico aberto usando o parâmetro do tipo|`MyType<T> : IList<T>`, T é aberto|Genérico aberto (por exemplo, `IList<T>`)|  
   
@@ -297,10 +299,10 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 |Tipo referenciado|Interface implementada pelo tipo referenciado|Exemplo|Tipo tratado como|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
-|Não genérico ou fechado genérico (qualquer número de parâmetros)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> ou<br /><br /> `MyType<T> : IDictionary`onde T =`int`|Fechado genérico`IDictionary<object,object>`|  
-|Genérico fechado (qualquer número de parâmetros)|<xref:System.Collections.Generic.IDictionary%602>, fechado|`MyType<T> : IDictionary<string, bool>`onde T =`int`|Genérico fechado (por exemplo, `IDIctionary<string,bool>`)|  
-|Genérico fechado (qualquer número de parâmetros)|Genérica <xref:System.Collections.Generic.IDictionary%602>, chave ou valor é fechado, o outro está aberto e usa um dos parâmetros do tipo|`MyType<T,U,V> : IDictionary<string,V>`onde T =`int`, U =`float`, V =`bool`<br /><br /> ou<br /><br /> `MyType<Z> : IDictionary<Z,bool>`onde Z =`string`|Genérico fechado (por exemplo, `IDictionary<string,bool>`)|  
-|Genérico fechado (qualquer número de parâmetros)|Genérica <xref:System.Collections.Generic.IDictionary%602>, chave e valor são abertos e cada uma usa um dos parâmetros do tipo|`MyType<T,U,V> : IDictionary<V,U>`onde T =`int`, U =`bool`, V =`string`|Genérico fechado (por exemplo, `IDictionary<string,bool>`)|  
+|Não genérico ou fechado genérico (qualquer número de parâmetros)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> ou<br /><br /> `MyType<T> : IDictionary` onde T =`int`|Fechado genérico `IDictionary<object,object>`|  
+|Genérico fechado (qualquer número de parâmetros)|<xref:System.Collections.Generic.IDictionary%602>, fechado|`MyType<T> : IDictionary<string, bool>` onde T =`int`|Genérico fechado (por exemplo, `IDIctionary<string,bool>`)|  
+|Genérico fechado (qualquer número de parâmetros)|Genérica <xref:System.Collections.Generic.IDictionary%602>, chave ou valor é fechado, o outro está aberto e usa um dos parâmetros do tipo|`MyType<T,U,V> : IDictionary<string,V>` onde T =`int`, U =`float`, V =`bool`<br /><br /> ou<br /><br /> `MyType<Z> : IDictionary<Z,bool>` onde Z =`string`|Genérico fechado (por exemplo, `IDictionary<string,bool>`)|  
+|Genérico fechado (qualquer número de parâmetros)|Genérica <xref:System.Collections.Generic.IDictionary%602>, chave e valor são abertos e cada uma usa um dos parâmetros do tipo|`MyType<T,U,V> : IDictionary<V,U>` onde T =`int`, U =`bool`, V =`string`|Genérico fechado (por exemplo, `IDictionary<string,bool>`)|  
 |Abra genérico (dois parâmetros)|Genérica <xref:System.Collections.Generic.IDictionary%602>, abrir, que usa dois parâmetros genéricos do tipo na ordem em que aparecem|`MyType<K,V> : IDictionary<K,V>`, K e V abertos|Genérico aberto (por exemplo, `IDictionary<K,V>`)|  
   
  Se o tipo implementa ambos <xref:System.Collections.IDictionary> e genérica <xref:System.Collections.Generic.IDictionary%602>somente genérica <xref:System.Collections.Generic.IDictionary%602> é considerada.  
@@ -316,7 +318,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 -   A combinação de tipos de coleção (com coleções de coleções) é permitida. Matrizes denteadas são tratados como coleções de coleções. Não há suporte para matrizes multidimensionais.  
   
--   Matrizes de bytes e matrizes de <xref:System.Xml.XmlNode> são tipos especiais de matriz são tratados como tipos primitivos, coleções não. Serialização de uma matriz de bytes de resultados em um único elemento XML que contém um bloco de dados codificados na Base64, em vez de um elemento separado para cada byte. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]como uma matriz de <xref:System.Xml.XmlNode> é tratado, consulte [XML e tipos de ADO.NET em contratos de dados](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). Obviamente, esses tipos especiais próprios participem de coleções: uma matriz de conjunto de resultados de bytes em vários elementos XML, com cada um contendo uma parte dos dados codificados na Base64.  
+-   Matrizes de bytes e matrizes de <xref:System.Xml.XmlNode> são tipos especiais de matriz são tratados como tipos primitivos, coleções não. Serialização de uma matriz de bytes de resultados em um único elemento XML que contém um bloco de dados codificados na Base64, em vez de um elemento separado para cada byte. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] como uma matriz de <xref:System.Xml.XmlNode> é tratado, consulte [XML e tipos de ADO.NET em contratos de dados](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). Obviamente, esses tipos especiais próprios participem de coleções: uma matriz de conjunto de resultados de bytes em vários elementos XML, com cada um contendo uma parte dos dados codificados na Base64.  
   
 -   Se o <xref:System.Runtime.Serialization.DataContractAttribute> atributo é aplicado a um tipo de coleção, o tipo é tratado como um tipo de contrato de dados regular, não como uma coleção.  
   
@@ -336,9 +338,9 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |<xref:System.Collections.IDictionary>|`get_Keys`, `get_Values`|`Add`|  
 |<xref:System.Collections.Generic.IList%601>genérico|Genérica <xref:System.Collections.Generic.IList%601> indexador|Adicionar genérico|  
 |<xref:System.Collections.Generic.ICollection%601>genérico|Enumerador|Adicionar genérico|  
-|<xref:System.Collections.IList>|<xref:System.Collections.IList>Indexador|`Add`|  
+|<xref:System.Collections.IList>|<xref:System.Collections.IList> indexador|`Add`|  
 |<xref:System.Collections.Generic.IEnumerable%601>genérico|`GetEnumerator`|Um método não estático chamado `Add` que recebe um parâmetro do tipo apropriado (o tipo do parâmetro genérico) ou um de seus tipos base. Esse método um deve existir para o serializador tratar um tipo de coleção como uma coleção durante a serialização e desserialização.|  
-|<xref:System.Collections.IEnumerable>(e, portanto, <xref:System.Collections.ICollection>, que é derivado dele)|`GetEnumerator`|Um método não estático chamado `Add` que recebe um parâmetro do tipo `Object`. Esse método um deve existir para o serializador tratar um tipo de coleção como uma coleção durante a serialização e desserialização.|  
+|<xref:System.Collections.IEnumerable> (e, portanto, <xref:System.Collections.ICollection>, que é derivado dele)|`GetEnumerator`|Um método não estático chamado `Add` que recebe um parâmetro do tipo `Object`. Esse método um deve existir para o serializador tratar um tipo de coleção como uma coleção durante a serialização e desserialização.|  
   
  A tabela anterior lista interfaces de coleção em ordem decrescente de precedência. Isso significa que, por exemplo, que se um tipo implementa ambos <xref:System.Collections.IList> e genérica <xref:System.Collections.Generic.IEnumerable%601>, a coleção é serializada e desserializada de acordo com o <xref:System.Collections.IList> regras:  
   
@@ -359,7 +361,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 -   O nome padrão para contratos de dados de coleção de lista, a menos que substituído usando o nome, é a cadeia de caracteres "ArrayOf" combinado com o nome de contrato de dados do tipo contido na coleção. Por exemplo, o nome de contrato de dados para uma lista de inteiros genérico é "ArrayOfint". Tenha em mente que o contrato de dados nome do `Object` é "anyType", portanto, como o nome de contrato de dados de listas não genérico <xref:System.Collections.ArrayList> é "ArrayOfanyType".  
   
- O nome padrão para dados de coleção de dicionário de contratos, a menos que substituído usando `Name`, é a cadeia de caracteres "ArrayOfKeyValueOf" combinado com o nome de contrato de dados do tipo de chave, seguido do nome de contrato de dados do tipo de valor. Por exemplo, os dados de nome de contrato para um dicionário de cadeia de caracteres genérica e inteiro é "ArrayOfKeyValueOfstringint". Além disso, se os tipos de valor ou a chave não são tipos primitivos, um hash de namespace dos namespaces de contrato de dados dos tipos de chave e o valor é anexado ao nome. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]hashes de namespace, consulte [nomes de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ O nome padrão para dados de coleção de dicionário de contratos, a menos que substituído usando `Name`, é a cadeia de caracteres "ArrayOfKeyValueOf" combinado com o nome de contrato de dados do tipo de chave, seguido do nome de contrato de dados do tipo de valor. Por exemplo, os dados de nome de contrato para um dicionário de cadeia de caracteres genérica e inteiro é "ArrayOfKeyValueOfstringint". Além disso, se os tipos de valor ou a chave não são tipos primitivos, um hash de namespace dos namespaces de contrato de dados dos tipos de chave e o valor é anexado ao nome. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] hashes de namespace, consulte [nomes de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
  Cada contrato de dados de coleção de dicionário tem um contrato de dados complementares que representa uma entrada no dicionário. Seu nome é o mesmo para o contrato de dados do dicionário, exceto para o prefixo "ArrayOf", e seu namespace é o mesmo contrato de dados de dicionário. Por exemplo, para o contrato de dados de dicionário "ArrayOfKeyValueOfstringint", o contrato de dados "KeyValueofstringint" representa uma entrada no dicionário. Você pode personalizar o nome do contrato de dados usando o `ItemName` propriedade, conforme descrito na próxima seção.  
   

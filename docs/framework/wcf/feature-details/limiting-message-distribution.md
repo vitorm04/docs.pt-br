@@ -1,24 +1,26 @@
 ---
-title: "Limitando a distribuição de mensagens"
-ms.custom: 
+title: Limitando a distribuição de mensagens
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: b4d81583a8dfc2c48fb9b7533f071495b562615e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="limiting-message-distribution"></a>Limitando a distribuição de mensagens
 Canal par ocorre por design, uma malha de difusão. Seu modelo básico de inundação envolve a distribuição de cada mensagem enviada por qualquer membro de uma malha para todos os outros membros dessa malha. Isso é ideal em situações em que cada mensagem gerada por um membro é relevantes e úteis para todos os outros membros (por exemplo, uma sala de bate-papo). No entanto, muitos aplicativos têm uma necessidade ocasional de limitando a distribuição de mensagem. Por exemplo, se um novo membro une uma malha e deseja recuperar a última mensagem enviada por meio da malha, esta solicitação não precisa ser inundados para todos os membros da malha. A solicitação pode ser limitada a perto vizinhos ou mensagens geradas localmente podem ser filtradas. As mensagens também podem ser enviadas a um nó individual na malha. Este tópico discute o uso de contagem de salto, um filtro de propagação de mensagem, um filtro local ou uma conexão direta para controlar como as mensagens são encaminhadas em toda a malha e fornece diretrizes gerais para escolher uma abordagem.  
@@ -31,9 +33,9 @@ Canal par ocorre por design, uma malha de difusão. Seu modelo básico de inunda
 -   Para trechos de código e informações relacionadas, consulte o [blog de canal par](http://go.microsoft.com/fwlink/?LinkID=114531) (http://go.microsoft.com/fwlink/?LinkID=114531).  
   
 ## <a name="message-propagation-filter"></a>Filtro de propagação de mensagem  
- `MessagePropagationFilter`pode ser usado para o controle personalizado de inundação de mensagens, especialmente quando a propagação de determinar o conteúdo da mensagem ou outros cenários específicos. O filtro toma decisões de propagação para cada mensagem que passa através do nó. Isso é verdadeiro para as mensagens originadas em outro lugar na malha que seu nó tenha recebido, bem como mensagens criadas pelo seu aplicativo. O filtro tem acesso à mensagem e sua origem, para que decisões sobre encaminhamento ou descartar a mensagem podem ser baseadas nas informações completas disponíveis.  
+ `MessagePropagationFilter` pode ser usado para o controle personalizado de inundação de mensagens, especialmente quando a propagação de determinar o conteúdo da mensagem ou outros cenários específicos. O filtro toma decisões de propagação para cada mensagem que passa através do nó. Isso é verdadeiro para as mensagens originadas em outro lugar na malha que seu nó tenha recebido, bem como mensagens criadas pelo seu aplicativo. O filtro tem acesso à mensagem e sua origem, para que decisões sobre encaminhamento ou descartar a mensagem podem ser baseadas nas informações completas disponíveis.  
   
- <xref:System.ServiceModel.PeerMessagePropagationFilter>é uma classe base abstrata com uma única função, <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>. O primeiro argumento da chamada de método passa em uma cópia completa da mensagem. Todas as alterações feitas a mensagem não afetam a mensagem real. O último argumento da chamada de método identifica a origem da mensagem (`PeerMessageOrigination.Local` ou `PeerMessageOrigination.Remote`). Implementações concretas desse método devem retornar uma constante do <xref:System.ServiceModel.PeerMessagePropagation> enumeração que indica que a mensagem será encaminhado para o aplicativo local (`Local`), encaminhado para clientes remotos (`Remote`), ambos (`LocalAndRemote`), ou nenhum deles (`None`). Esse filtro pode ser aplicado, acessando correspondente `PeerNode` objeto e especificando uma instância da propagação derivada filtram classe o `PeerNode.MessagePropagationFilter` propriedade. Certifique-se de que o filtro de propagação está conectado antes de abrir o canal par.  
+ <xref:System.ServiceModel.PeerMessagePropagationFilter> é uma classe base abstrata com uma única função, <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>. O primeiro argumento da chamada de método passa em uma cópia completa da mensagem. Todas as alterações feitas a mensagem não afetam a mensagem real. O último argumento da chamada de método identifica a origem da mensagem (`PeerMessageOrigination.Local` ou `PeerMessageOrigination.Remote`). Implementações concretas desse método devem retornar uma constante do <xref:System.ServiceModel.PeerMessagePropagation> enumeração que indica que a mensagem será encaminhado para o aplicativo local (`Local`), encaminhado para clientes remotos (`Remote`), ambos (`LocalAndRemote`), ou nenhum deles (`None`). Esse filtro pode ser aplicado, acessando correspondente `PeerNode` objeto e especificando uma instância da propagação derivada filtram classe o `PeerNode.MessagePropagationFilter` propriedade. Certifique-se de que o filtro de propagação está conectado antes de abrir o canal par.  
   
 -   Para trechos de código e informações relacionadas, consulte o [blog de canal par](http://go.microsoft.com/fwlink/?LinkID=114532) (http://go.microsoft.com/fwlink/?LinkID=114532).  
   

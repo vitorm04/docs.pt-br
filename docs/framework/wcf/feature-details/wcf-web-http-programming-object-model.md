@@ -1,24 +1,26 @@
 ---
-title: "Modelo de objeto de programação HTTP Web do WCF"
-ms.custom: 
+title: Modelo de objeto de programação HTTP Web do WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-caps.latest.revision: "40"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: d71a373d3410c90f405a37e104e7d1b440a7aa14
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Modelo de objeto de programação HTTP Web do WCF
 O modelo de programação WCF WEB HTTP permite aos desenvolvedores expor [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web services por meio de solicitações HTTP básicas sem a necessidade de SOAP. O modelo de programação WCF WEB HTTP é criado sobre existente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de extensibilidade. Define as classes a seguir:  
@@ -79,13 +81,13 @@ O modelo de programação WCF WEB HTTP permite aos desenvolvedores expor [!INCLU
 |`UriTemplate`|Especifica o modelo URI que controla quais solicitações GET são mapeadas para o atributo é aplicado para a operação de serviço.|  
   
 ## <a name="uritemplate"></a>UriTemplate  
- O <xref:System.UriTemplate> classe permite que você defina um conjunto de URIs estruturalmente semelhantes. Modelos são compostos de duas partes, um caminho e uma consulta. Um caminho consiste em uma série de segmentos delimitadas por uma barra (/). Cada segmento pode ter um valor literal, um valor de variável (gravado em chaves [{}], restrita para corresponder ao conteúdo de exatamente um segmento) ou um caractere curinga (gravado como um asterisco [\*], que corresponde a "o restante do caminho"), que deve aparecer no o final do caminho. A expressão de consulta pode ser totalmente omitida. Se estiver presente, especifica uma série não ordenada de pares nome/valor. Elementos da expressão de consulta podem ser qualquer um dos pares literal (? x = 2) ou pares de variável (? x = {*valor*}). Não são permitidos valores ímpares. <xref:System.UriTemplate>é usado internamente pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação HTTP WEB mapear específico URIs ou grupos de URIs para operações de serviço.  
+ O <xref:System.UriTemplate> classe permite que você defina um conjunto de URIs estruturalmente semelhantes. Modelos são compostos de duas partes, um caminho e uma consulta. Um caminho consiste em uma série de segmentos delimitadas por uma barra (/). Cada segmento pode ter um valor literal, um valor de variável (gravado em chaves [{}], restrita para corresponder ao conteúdo de exatamente um segmento) ou um caractere curinga (gravado como um asterisco [\*], que corresponde a "o restante do caminho"), que deve aparecer no o final do caminho. A expressão de consulta pode ser totalmente omitida. Se estiver presente, especifica uma série não ordenada de pares nome/valor. Elementos da expressão de consulta podem ser qualquer um dos pares literal (? x = 2) ou pares de variável (? x = {*valor*}). Não são permitidos valores ímpares. <xref:System.UriTemplate> é usado internamente pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação HTTP WEB mapear específico URIs ou grupos de URIs para operações de serviço.  
   
 ## <a name="uritemplatetable"></a>UriTemplateTable  
- O <xref:System.UriTemplateTable> classe representa um conjunto de associação de <xref:System.UriTemplate> objetos associados a um objeto do desenvolvedor da escolha. Ele permite a correspondência candidato URIs Uniform Resource Identifier () com os modelos no conjunto e recuperar os dados associados com os modelos correspondentes. <xref:System.UriTemplateTable>é usado internamente pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação HTTP WEB mapear específico URIs ou grupos de URIs para operações de serviço.  
+ O <xref:System.UriTemplateTable> classe representa um conjunto de associação de <xref:System.UriTemplate> objetos associados a um objeto do desenvolvedor da escolha. Ele permite a correspondência candidato URIs Uniform Resource Identifier () com os modelos no conjunto e recuperar os dados associados com os modelos correspondentes. <xref:System.UriTemplateTable> é usado internamente pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação HTTP WEB mapear específico URIs ou grupos de URIs para operações de serviço.  
   
 ## <a name="webservicehost"></a>WebServiceHost  
- <xref:System.ServiceModel.Web.WebServiceHost>estende o <xref:System.ServiceModel.ServiceHost> para tornar mais fácil hospedar um serviço da Web estilo não SOAP. Se <xref:System.ServiceModel.Web.WebServiceHost> não encontra nenhum ponto de extremidade na descrição do serviço, ele cria automaticamente um ponto de extremidade padrão no endereço base do serviço. Ao criar um ponto de extremidade HTTP padrão, o <xref:System.ServiceModel.Web.WebServiceHost> também desabilita a página de ajuda HTTP e a funcionalidade GET de WSDL Web Services Description Language () para o ponto de extremidade de metadados não interfere com o ponto de extremidade HTTP padrão. <xref:System.ServiceModel.Web.WebServiceHost>também garante que todos os pontos de extremidade que usam <xref:System.ServiceModel.WebHttpBinding> ter necessários <xref:System.ServiceModel.Description.WebHttpBehavior> anexado. Por fim, <xref:System.ServiceModel.Web.WebServiceHost> configura automaticamente a associação do ponto de extremidade para trabalhar com as configurações de segurança do Internet Information Services (IIS) associado quando usado em um diretório virtual seguro.  
+ <xref:System.ServiceModel.Web.WebServiceHost> estende o <xref:System.ServiceModel.ServiceHost> para tornar mais fácil hospedar um serviço da Web estilo não SOAP. Se <xref:System.ServiceModel.Web.WebServiceHost> não encontra nenhum ponto de extremidade na descrição do serviço, ele cria automaticamente um ponto de extremidade padrão no endereço base do serviço. Ao criar um ponto de extremidade HTTP padrão, o <xref:System.ServiceModel.Web.WebServiceHost> também desabilita a página de ajuda HTTP e a funcionalidade GET de WSDL Web Services Description Language () para o ponto de extremidade de metadados não interfere com o ponto de extremidade HTTP padrão. <xref:System.ServiceModel.Web.WebServiceHost> também garante que todos os pontos de extremidade que usam <xref:System.ServiceModel.WebHttpBinding> ter necessários <xref:System.ServiceModel.Description.WebHttpBehavior> anexado. Por fim, <xref:System.ServiceModel.Web.WebServiceHost> configura automaticamente a associação do ponto de extremidade para trabalhar com as configurações de segurança do Internet Information Services (IIS) associado quando usado em um diretório virtual seguro.  
   
 ## <a name="webservicehostfactory"></a>WebServiceHostFactory  
  O <xref:System.ServiceModel.Activation.WebServiceHostFactory> classe é usada para criar dinamicamente uma <xref:System.ServiceModel.Web.WebServiceHost> quando um serviço é hospedado no Internet Information Services (IIS) ou o serviço de ativação de processos do Windows (WAS). Ao contrário de um serviço auto-hospedado onde o aplicativo de hospedagem instancia o <xref:System.ServiceModel.Web.WebServiceHost>, serviços hospedados em IIS ou foi usar essa classe para criar o <xref:System.ServiceModel.Web.WebServiceHost> para o serviço. O <xref:System.ServiceModel.Activation.WebServiceHostFactory.CreateServiceHost%28System.Type%2CSystem.Uri%5B%5D%29> método é chamado quando uma solicitação de entrada para o serviço é recebida.  
@@ -94,9 +96,9 @@ O modelo de programação WCF WEB HTTP permite aos desenvolvedores expor [!INCLU
  O <xref:System.ServiceModel.Description.WebHttpBehavior> classe fornece a formatadores necessárias, os seletores de operação e assim por diante, é necessário para suporte do serviço Web estilo na camada de modelo de serviço. Isso é implementado como um comportamento de ponto de extremidade (usado em conjunto com o <xref:System.ServiceModel.WebHttpBinding>) e permite que os formatadores e seletores de operação deve ser especificado para cada ponto de extremidade, o que permite a implementação do serviço para expor pontos de extremidade SOAP e POX.  
   
 ### <a name="extending-webhttpbehavior"></a>Estendendo WebHttpBehavior  
- <xref:System.ServiceModel.Description.WebHttpBehavior>é extensível, usando um número de métodos virtuais: <xref:System.ServiceModel.Description.WebHttpBehavior.GetOperationSelector%28System.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, e <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>. Os desenvolvedores podem derivar uma classe de <xref:System.ServiceModel.Description.WebHttpBehavior> e substituir estes métodos para personalizar o comportamento padrão.  
+ <xref:System.ServiceModel.Description.WebHttpBehavior> é extensível, usando um número de métodos virtuais: <xref:System.ServiceModel.Description.WebHttpBehavior.GetOperationSelector%28System.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, e <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>. Os desenvolvedores podem derivar uma classe de <xref:System.ServiceModel.Description.WebHttpBehavior> e substituir estes métodos para personalizar o comportamento padrão.  
   
- O <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> é um exemplo de extensão <xref:System.ServiceModel.Description.WebHttpBehavior>. <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>permite [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pontos de extremidade para receber solicitações HTTP de um cliente do ASP.NET AJAX com base em navegador. O [AJAX Service usando HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) é um exemplo de como usar esse ponto de extensibilidade.  
+ O <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> é um exemplo de extensão <xref:System.ServiceModel.Description.WebHttpBehavior>. <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> permite [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pontos de extremidade para receber solicitações HTTP de um cliente do ASP.NET AJAX com base em navegador. O [AJAX Service usando HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) é um exemplo de como usar esse ponto de extensibilidade.  
   
 > [!WARNING]
 >  Ao usar o <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>, <xref:System.UriTemplate> não têm suporte em <xref:System.ServiceModel.Web.WebGetAttribute> ou <xref:System.ServiceModel.Web.WebInvokeAttribute> atributos.  
@@ -108,7 +110,7 @@ O modelo de programação WCF WEB HTTP permite aos desenvolvedores expor [!INCLU
  O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação HTTP WEB não usa mensagens de baseado em SOAP e, portanto, não suporta o WS-* protocolos. No entanto, você pode expor o mesmo contrato pelo ponto de extremidade duas diferentes: uma usando SOAP e outros não usando SOAP. Consulte [como: expor um contrato para clientes SOAP e Web](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) para obter um exemplo.  
   
 ## <a name="security"></a>Segurança  
- Porque o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não oferece suporte a modelo de programação HTTP WEB WS-* protocolos a única maneira de proteger um serviço Web criado no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação HTTP WEB é expor seu serviço usando SSL. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Configurar o SSL com [!INCLUDE[iisver](../../../../includes/iisver-md.md)] consulte [como implementar o SSL no IIS](http://go.microsoft.com/fwlink/?LinkId=131613)  
+ Porque o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não oferece suporte a modelo de programação HTTP WEB WS-* protocolos a única maneira de proteger um serviço Web criado no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação HTTP WEB é expor seu serviço usando SSL. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Configurar o SSL com [!INCLUDE[iisver](../../../../includes/iisver-md.md)] consulte [como implementar o SSL no IIS](http://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.WebHttpBinding>  
