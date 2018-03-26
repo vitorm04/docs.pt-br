@@ -1,11 +1,11 @@
 ---
-title: "Programação de rede no .NET Framework"
-ms.custom: 
+title: Programação de rede no .NET Framework
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Networking
@@ -13,21 +13,23 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d702e7c910536566aabfaa7948afb24ae94d2cb1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.workload:
+- dotnet
+ms.openlocfilehash: e51f4464eb39dc12ea50f4a94e55030895866f08
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="network-programming-in-the-net-framework"></a>Programação de rede no .NET Framework
 O Microsoft .NET Framework fornece uma implementação dos serviços de Internet em camadas, extensível e gerenciada que pode ser rápida e facilmente integrada aos aplicativos. Os aplicativos de rede podem compilar em protocolos conectáveis para usufruir automaticamente de novos protocolos da Internet ou podem usar uma implementação gerenciada da interface de soquete do Windows para trabalhar com a rede a nível de soquete.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Apresentando protocolos conectáveis](../../../docs/framework/network-programming/introducing-pluggable-protocols.md)  
  Descreve como acessar um recurso da Internet sem considerar o protocolo de acesso necessário.  
   
@@ -144,6 +146,8 @@ O Microsoft .NET Framework fornece uma implementação dos serviços de Internet
  Fornece suporte à configuração da autenticação usando proteção estendida para aplicativos.  
   
 ## <a name="see-also"></a>Consulte também  
+
+ [Práticas recomendadas do protocolo TLS com o .NET Framework](../../../docs/framework/network-programming/tls.md)  
  [Tópicos de instruções de programação de rede](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
  [Amostras de programação de rede](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Exemplos de rede do .NET na Galeria de Códigos do MSDN](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)  

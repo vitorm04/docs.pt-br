@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 8b1e80023139a4ebc3c961c47c06b9afd0370014
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 267cac338263f964006b424bb855d1022990498c
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="net-core-tutorials"></a>Tutoriais do .NET Core
 
@@ -31,11 +31,11 @@ Os tutoriais a seguir estão disponíveis para aprender mais sobre o .NET Core.
 - [Testing a class library](testing-library-with-visual-studio.md) (Testando uma biblioteca de classes)
 - [Consuming a class library](consuming-library-with-visual-studio.md) (Consumindo uma biblioteca de classes)
 - [Compilando uma solução completa do .NET Core no Windows](using-on-windows-full-solution.md)
-- [Tutorial de NoSQL: compilar um aplicativo de console em C# do DocumentDB no .NET Core](/azure/documentdb/documentdb-dotnetcore-get-started)
+- [Azure Cosmos DB: Introdução ao .NET Core e à API do SQL](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Criando aplicativos Web com o Visual Studio Code
 
-- [Introdução ao Visual Studio Code e C#](with-visual-studio-code.md)
+- [Introdução ao Código do Visual Studio e C#](with-visual-studio-code.md)
 - [Introdução ao .NET Core no macOS](using-on-macos.md)
 
 ## <a name="building-applications-with-visual-studio-for-mac"></a>Compilar aplicativos com o Visual Studio para Mac
