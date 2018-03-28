@@ -1,7 +1,7 @@
 ---
-title: "Projetando a camada de aplicativos de microsserviço e a API Web"
-description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Projetando a camada de aplicativos de microsserviço e a API Web"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Projetando a camada de aplicativos de microsserviço e a API Web
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Projetando a camada de aplicativos de microsserviço e a API Web
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c166e0286d0769e24a6361037eb6c4694fb821ae
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 87b48624fde8c7cdab097289f1cf56ab56e1173f
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="designing-the-microservice-application-layer-and-web-api"></a>Projetando a camada de aplicativos de microsserviço e a API Web
 
@@ -29,7 +29,7 @@ Os princípios SOLID são técnicas críticas para serem usadas em qualquer apli
 
 -   Princípio da Substituição de Liskov
 
--   Princípio da Segregação de inversão
+-   Princípio da Segregação de interface
 
 -   Princípio da Inversão de dependência
 
@@ -46,10 +46,10 @@ Seria preciso outro guia para abordar o SOLID em detalhes. Portanto, este guia e
 -   **SOLID: princípios OOP fundamentais**
     [*http://deviq.com/solid/*](http://deviq.com/solid/%20)
 
--   **Inversion of Control Containers and the Dependency Injection pattern (Inversão de Contêineres de controle e o padrão de Injeção de dependência)**
+-   **Inversão de Contêineres de Controle e o padrão de Injeção de Dependência**
     [*https://martinfowler.com/articles/injection.html*](https://martinfowler.com/articles/injection.html)
 
--   **Steve Smith. New is Glue**
+-   **Steve Smith. New is Glue (New é como cola)**
     [*http://ardalis.com/new-is-glue*](http://ardalis.com/new-is-glue)
 
 

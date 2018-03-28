@@ -1,6 +1,6 @@
 ---
-title: Testar aplicativos MVC do ASP.NET Core
-description: Projetar aplicativos Web modernos com ASP.NET Core e o Azure | Testar aplicativos MVC do ASP.NET Core
+title: Testar aplicativos ASP.NET Core MVC
+description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Testar aplicativos ASP.NET Core MVC
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/08/2017
@@ -11,36 +11,36 @@ ms.workload:
 - dotnetcore
 ms.openlocfilehash: d23d0accc33fb8335dff602d6e1d6c8689972906
 ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/23/2017
 ---
-# <a name="test-aspnet-core-mvc-apps"></a>Testar aplicativos MVC do ASP.NET Core
+# <a name="test-aspnet-core-mvc-apps"></a>Testar aplicativos ASP.NET Core MVC
 
-> _"Se você não deseja que seu produto de teste de unidade, provavelmente os clientes não gostam de testá-lo, ou."_
-> _ - Anônimo -
+> _"Se você não gostar de realizar o teste de unidade em seu produto, provavelmente, seus clientes não vão gostar de testá-lo também."_
+> - Anônimo -
 
 ## <a name="summary"></a>Resumo
 
-Software de qualquer complexidade pode falhar de maneiras inesperadas em resposta a alterações. Assim, são necessário para todos os aplicativos mais simples (ou menos críticos), exceto testes depois de fazer alterações. Teste manual é o mais lento, menos confiável de maneira mais cara para testar o software. Infelizmente, se os aplicativos não são projetados para ser testável, pode ser o único meio disponível. Aplicativos escritos os princípios de arquitetura apresentados a seguir no capítulo X devem ser um teste de unidade e integração automatizada e testes funcionais também dar suporte a aplicativos ASP.NET Core.
+Um software de qualquer complexidade pode falhar de maneiras inesperadas em resposta a alterações. Portanto, depois de fazer alterações, é necessário realizar um teste em todos os aplicativos, exceto os mais triviais (ou menos críticos). O teste manual é a maneira mais lenta, menos confiável e mais cara de testar um software. Infelizmente, se os aplicativos não forem projetados para serem testáveis, esse poderá ser o único meio disponível. Os aplicativos codificados de acordo com os princípios de arquitetura apresentados no capítulo X devem podem ser submetidos a um teste de unidade, além disso os aplicativos ASP.NET Core são compatíveis com testes funcionais e de integração automatizados.
 
 ## <a name="kinds-of-automated-tests"></a>Tipos de testes automatizados
 
-Há muitos tipos de testes automatizados para aplicativos de software. A forma mais simples, teste de nível mais baixo é o teste de unidade. Em um nível superior ligeiramente há testes de integração e testes funcionais. Outros tipos de testes, como testes de interface do usuário, testes de carga, testes de estresse e testes smoke, estão além do escopo deste documento.
+Há muitos tipos de testes automatizados para aplicativos de software. O teste mais simples de nível mais baixo é o teste de unidade. Em um nível ligeiramente superior, há testes de integração e testes funcionais. Outros tipos de testes, como testes de interface do usuário, testes de carga, testes de estresse e smoke tests, estão além do escopo deste documento.
 
 ### <a name="unit-tests"></a>Testes de Unidade
 
-Um teste de unidade testa uma única parte da lógica do aplicativo. Ainda mais um pode descrevê-lo por meio da lista algumas das coisas que não é. Um teste de unidade não testa como a código funciona com dependências ou infraestrutura – que é o que a integração de testes destinam-se. Um teste de unidade não testa a estrutura de em que seu código é escrito – você deve pressupor que ele funciona ou se achar que não, registrar um bug e uma solução alternativa de código. Um teste de unidade é executado completamente na memória e no processo. Ele não se comunicar com o sistema de arquivos, rede ou um banco de dados. Testes de unidade só devem testar seu código.
+Um teste de unidade testa uma única parte da lógica do aplicativo. Ainda podemos descrevê-lo listando algumas das coisas que ele não é. Um teste de unidade não testa como o código funciona com as dependências ou a infraestrutura – é para isso que servem os testes de integração. Um teste de unidade não testa a estrutura na qual o código foi escrito – você deve pressupor que ela funciona ou, se achar que não, registre um bug e codifique uma solução alternativa. Um teste de unidade é executado completamente na memória e no processo. Ele não se comunica com o sistema de arquivos, a rede ou um banco de dados. Os testes de unidade devem testar apenas o código.
 
-Testes de unidade, devido ao fato de que eles testar apenas uma única unidade de seu código, sem dependências externas, devem ser executado muito rapidamente. Assim, você deve ser capaz de executar os pacotes de testes de centenas de testes de unidade em alguns segundos. Executá-los com frequência, idealmente antes de cada envio por push para um repositório de controle do código-fonte compartilhado e certamente com cada compilação automatizada em seu servidor de compilação.
+Os testes de unidade, devido ao fato de testarem apenas uma única unidade do código, sem dependências externas, devem ser executados muito rapidamente. Portanto, você deve conseguir executar conjuntos de testes de centenas de testes de unidade em alguns segundos. Execute-os com frequência, de preferência, antes de cada push para um repositório de controle do código-fonte compartilhado e, certamente, a cada build automatizado no servidor de build.
 
 ### <a name="integration-tests"></a>Testes de integração
 
-Embora seja uma boa ideia para encapsular o código que interage com a infraestrutura, como bancos de dados e sistemas de arquivos, você ainda terá algumas que o código e você provavelmente desejará testá-lo. Além disso, você deve verificar que camadas do seu código interagem conforme o esperado quando dependências do aplicativo são totalmente resolvidas. Isso é responsabilidade de testes de integração. Testes de integração tendem a ser mais lento e mais difícil de configurar que testes de unidade, porque eles geralmente dependem de infraestrutura e as dependências externas. Portanto, você deve evitar coisas que podem ser testes com testes de unidade em testes de integração de teste. Se você pode testar um determinado cenário com um teste de unidade, você deve testá-lo com um teste de unidade. Se não for possível, considere usar um teste de integração.
+Embora seja uma boa ideia encapsular o código que interage com a infraestrutura, como bancos de dados e sistemas de arquivos, você ainda terá uma parte do código e, provavelmente, desejará testá-lo. Além disso, você deve verificar se as camadas do código interagem conforme esperado quando as dependências do aplicativo são totalmente resolvidas. Essa é a responsabilidade dos testes de integração. Os testes de integração tendem a ser mais lentos e mais difíceis de serem configurados do que os testes de unidade, porque geralmente dependem de infraestrutura e dependências externas. Portanto, você deve evitar testar coisas que podem ser testadas com testes de unidade em testes de integração. Se puder testar determinado cenário com um teste de unidade, você deverá testá-lo com um teste de unidade. Caso contrário, considere o uso de um teste de integração.
 
-Testes de integração geralmente terá uma configuração mais complexa e procedimentos de desmontagem de testes de unidade. Por exemplo, um teste de integração que vai em relação a um banco de dados real precisará de uma maneira de retornar o banco de dados para um estado conhecido antes de cada execução de teste. Conforme novos testes são adicionados e o esquema de banco de dados de produção evolui, esses scripts tendem a aumentar em tamanho e complexidade de teste. Em muitos sistemas grandes, não é prático para executar pacotes completos de testes de integração em estações de trabalho do desenvolvedor antes de verificar as alterações ao controle do código-fonte compartilhado. Nesses casos, os testes de integração podem ser executados em um servidor de compilação.
+Os testes de integração costumam ter procedimentos de instalação e de desinstalação mais complexos em comparação com os testes de unidade. Por exemplo, um teste de integração feito em um banco de dados real precisará de uma maneira de retornar o banco de dados para um estado conhecido antes de cada execução de teste. Conforme novos testes forem adicionados e o esquema de banco de dados de produção evoluir, esses scripts de teste tenderão a aumentar em tamanho e complexidade. Em muitos sistemas grandes, não é prático executar conjuntos completos de testes de integração em estações de trabalho do desenvolvedor antes de fazer check-in das alterações no controle do código-fonte compartilhado. Nesses casos, os testes de integração podem ser executados em um servidor de build.
 
-A classe de implementação LocalFileImageService implementa a lógica para buscar e retornando os bytes de um arquivo de imagem de uma pasta específica recebe uma id:
+A classe de implementação LocalFileImageService implementa a lógica para buscar e retornar os bytes de um arquivo de imagem de uma pasta específica, considerando uma ID:
 
 ```cs
 public class LocalFileImageService : IImageService
@@ -61,49 +61,49 @@ public class LocalFileImageService : IImageService
 
 ### <a name="functional-tests"></a>Testes funcionais
 
-Testes de integração são gravados do ponto de vista do desenvolvedor, verifique se que alguns componentes do sistema funcionem corretamente. Testes funcionais são escritos da perspectiva do usuário e verificar a integridade do sistema com base em seus requisitos. O trecho a seguir oferece uma analogia útil para pensar sobre testes funcionais, em comparação comparadas testes de unidade como:
+Os testes de integração são escritos da perspectiva do desenvolvedor, para verificar se alguns componentes do sistema funcionam corretamente juntos. Os testes funcionais são escritos da perspectiva do usuário e verificam a correção do sistema com base em seus requisitos. O trecho a seguir oferece uma analogia útil de como considerar os testes funcionais, em comparação com os testes de unidade:
 
-> "Muitas vezes o desenvolvimento de um sistema é comparado a construção de uma casa. Embora essa analogia não seja bastante correta, podemos poderá estendê-lo para fins de compreender a diferença entre unidade e testes funcionais. Testes de unidade é análoga a um Inspetor de construção, visite o site de construção de uma casa. Ele destina-se em vários sistemas internos de casa, a base de enquadramento, elétrica, encanamento e assim por diante. Ele garante (testes) que as partes da casa funcionarão corretamente e com segurança, ou seja, atender o código de construção. Testes funcionais neste cenário são análogos ao imóvel visitar esse mesmo site de construção. Ele pressupõe que os sistemas internos irão se comportar adequadamente, que o Inspetor de construção está executando suas tarefas. O proprietário é focado em que será como vida essa casa. Ele está preocupada com a aparência da casa, são as várias rooms um tamanho confortável, é a casa atender às necessidades da família, são as janelas um bom ponto para capturar o sun da manhã. O proprietário está executando testes funcionais em casa. Ele tem um ponto de vista do usuário. O Inspetor de construção está executando testes de unidade em casa. Ele tem perspectiva do construtor."
+> "Muitas vezes, o desenvolvimento de um sistema é comparado à construção de uma casa. Embora essa analogia não seja muito correta, podemos estendê-la para compreender a diferença entre os testes de unidade e os testes funcionais. O teste de unidade se assemelha a um inspetor de construção visitando o canteiro de obras de uma casa. Ele está concentrado nos vários sistemas internos da casa, na base, na estrutura, na parte elétrica, no encanamento e assim por diante. Ele garante (testa) que as partes da casa funcionarão corretamente e com segurança, ou seja, seguirão o código de construção. Os testes funcionais, neste cenário, se assemelham ao proprietário da casa visitando esse mesmo canteiro de obras. Ele pressupõe que os sistemas internos se comportarão corretamente e que o inspetor de construção está realizando sua tarefa. O proprietário da casa está voltado para a ideia de como será morar nessa casa. Ele está preocupado com a aparência da casa, se os vários quartos têm um tamanho confortável, se a casa atende às necessidades da família, se as janelas estão em um bom lugar para capturar o sol da manhã. O proprietário da casa está realizando testes funcionais na casa. Ele tem a perspectiva do usuário. O inspetor de construção está realizando testes de unidade na casa. Ele tem a perspectiva do construtor."
 
-Fonte: [versus testes funcionais de teste de unidade](http://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html)
+Fonte: [Teste de unidade versus testes funcionais](http://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html)
 
-Estou de jogos de dizer "como os desenvolvedores, podemos falha de duas maneiras: criamos a coisa errada ou criamos a coisa errada." Testes de unidade, verifique se que você está criando o direito de coisa; testes funcionais Verifique se que você está criando o certo.
+Gosto de dizer que "como desenvolvedores, falhamos de duas maneiras: criamos a coisa da maneira errada ou criamos a coisa errada". Os testes de unidade garantem que você está criando a coisa da maneira certa; os testes funcionais garantem que você está criando a coisa certa.
 
-Desde que os testes funcionais operam no nível do sistema, eles podem exigir um certo grau de automação de interface do usuário. Como testes de integração, elas geralmente funcionam com algum tipo de infraestrutura de teste também. Isso os torna mais lento e mais frágil que testes de unidade e a integração. Você deve ter somente quantos testes funcionais conforme necessário garantir que o sistema está se comportando conforme esperam de usuários.
+Como os testes funcionais operam no nível do sistema, eles podem exigir um certo grau de automação da interface do usuário. Assim como os testes de integração, elas geralmente funcionam com algum tipo de infraestrutura de teste também. Isso faz com que eles fiquem mais lentos e mais frágeis do que os testes de unidade e de integração. Você deve ter somente a quantidade de testes funcionais de que precisa para ter certeza de que o sistema está se comportando conforme esperado pelos usuários.
 
-### <a name="testing-pyramid"></a>Teste de pirâmide
+### <a name="testing-pyramid"></a>Pirâmide de testes
 
-Martin Fowler gravou sobre a teste pirâmide, um exemplo é mostrado na Figura 9-1.
+Martin Fowler escreveu sobre a pirâmide de testes, cujo exemplo é mostrado na Figura 9-1.
 
 ![](./media/image9-1.png)
 
-Figura 9-1 teste pirâmide
+Figura 9-1 Pirâmide de testes
 
-As diferentes camadas de pirâmide e seus tamanhos relativos, representam tipos diferentes de testes e quantos você deve escrever para seu aplicativo. Como você pode ver, a recomendação é ter uma grande base de testes de unidade, suportados por uma camada menor de testes de integração, com uma camada ainda menor de testes funcionais. Cada camada idealmente deve ter somente testes que não pode ser executada de forma adequada em uma camada inferior. Lembre-se da pirâmide teste quando você estiver tentando decidir qual tipo de teste para um cenário específico.
+As diferentes camadas da pirâmide e seus tamanhos relativos representam tipos diferentes de testes e quantos você deve gravar para seu aplicativo. Como você pode ver, a recomendação é ter uma grande base de testes de unidade, apoiada por uma camada menor de testes de integração, com uma camada ainda menor de testes funcionais. O ideal é que cada camada tenha somente testes que não podem ser realizados de forma adequada em uma camada inferior. Lembre-se da pirâmide de testes quando estiver tentando decidir qual tipo de teste é necessário para um cenário específico.
 
 ### <a name="what-to-test"></a>O que testar
 
-Um problema comum para os desenvolvedores que não tiver experiência com a criação de testes automatizados está chegando com o teste. É um bom ponto de partida testar a lógica condicional. Onde quer que tenha um método com o comportamento que as alterações com base em uma instrução condicional (if-else, alternar, etc.), você poderá criar pelo menos dois testes que confirmam se o comportamento correto para determinadas condições. Se seu código tem condições de erro, é melhor criar pelo menos um teste para o "caminho feliz" através do código (com sem erros) e pelo menos um teste para o "caminho sad" (com erros ou resultados atípicos) para confirmar que seu aplicativo se comporta como esperado no caso de erros. Por fim, tente se concentrar no teste de coisas que podem falhar, em vez de nos concentrarmos no métricas como cobertura de código. Cobertura de código mais geralmente é melhor do que o menor. No entanto, gravar alguns testes mais de um método muito complexo e críticos para os negócios é normalmente um melhor uso de tempo que escrever testes para autopropriedades apenas para melhorar as métricas de cobertura de código de teste.
+Um problema comum para os desenvolvedores que não têm experiência com a criação de testes automatizados é decidir o que testar. Um bom ponto de partida é testar a lógica condicional do teste. Sempre que você tiver um método com um comportamento que é alterado de acordo com uma instrução condicional (if-else, alternância, etc.), você deverá pensar em, pelo menos, dois testes que confirmem esse comportamento correto em determinadas condições. Se o código apresentar condições de erro, será melhor gravar, pelo menos, um teste para o "caminho certo" pelo código (sem erros) e, pelo menos, um teste para o "caminho errado" (com erros ou resultados atípicos) para confirmar que o aplicativo se comporta conforme esperado em caso de erros. Por fim, tente se concentrar no teste de coisas que podem falhar, em vez de se concentrar em métricas como cobertura de código. Em geral, mais cobertura de código é melhor do que menos. No entanto, é melhor utilizar o tempo criando mais alguns testes de um método muito complexo e comercialmente crítico do que criando testes para propriedades automáticas, apenas para melhorar as métricas de cobertura de código de teste.
 
-## <a name="organizing-test-projects"></a>Organizar projetos de teste
+## <a name="organizing-test-projects"></a>Organizando projetos de teste
 
-Projetos de teste podem ser organizados, mas funciona melhor para você. É uma boa ideia separe os testes por tipo (teste de unidade, teste de integração) e o estão sendo testado (por projeto, namespace). Se essa separação consistirá de pastas dentro de um projeto de teste único ou vários projetos de teste, é uma decisão de design. Um projeto é mais simples, mas para projetos grandes, com muitos testes ou para executar mais facilmente os diferentes conjuntos de testes, você talvez queira ter vários projetos de teste diferente. Muitas equipes organizam projetos de teste baseados no projeto que estão testando, que pode resultar em um grande número de projetos de teste, especialmente se você ainda dividir essas acordo com os tipo de testes que estão em cada projeto para aplicativos com mais de alguns projetos. Uma abordagem de comprometimento é ter um projeto por tipo de teste, por aplicativo, com pastas dentro de projetos de teste para indicar o projeto (e a classe) que está sendo testado.
+Os projetos de teste podem ser organizados da maneira mais adequada à sua situação. É uma boa ideia separar os testes por tipo (teste de unidade, teste de integração) e pelo que eles estão testando (por projeto, por namespace). Indicar se essa separação consiste em pastas dentro de um único projeto de teste ou de vários projetos de teste é uma decisão de design. Um projeto é o mais simples, mas para projetos grandes com muitos testes ou para executar diferentes conjuntos de testes com mais facilidade, talvez você deseje ter vários projetos de teste diferentes. Muitas equipes organizam projetos de teste com base no projeto que estão testando, o que, para aplicativos com mais de alguns projetos, pode resultar em um grande número de projetos de teste, especialmente se você ainda divide-os de acordo com o tipo de testes existente em cada projeto. Uma abordagem de meio-termo é ter um projeto por tipo de teste, por aplicativo, com pastas dentro dos projetos de teste para indicar o projeto (e a classe) que está sendo testado.
 
-Uma abordagem comum é organizar os projetos de aplicativo em uma pasta de 'src' e projetos de teste do aplicativo em uma pasta de 'teste' paralelos. Você pode criar pastas de solução correspondente no Visual Studio, se você encontrar esta organização útil.
+Uma abordagem comum é organizar os projetos de aplicativo em uma pasta 'src' e os projetos de teste do aplicativo em uma pasta 'tests' paralela. Crie pastas de solução correspondentes no Visual Studio se achar esta organização útil.
 
 ![](./media/image9-2.png)
 
-Figura 9-2 organização de teste em sua solução
+Figura 9-2 Organização de testes na solução
 
-Você pode usar qualquer estrutura de teste que você preferir. A estrutura xUnit funciona bem e que todos os testes do ASP.NET Core e EF principal são gravados. Você pode adicionar um projeto de teste xUnit no Visual Studio usando o modelo mostrado na Figura 9-3 ou da CLI usando dotnet xunit de novo.
+Você pode usar qualquer estrutura de teste que preferir. A estrutura xUnit funciona bem e é nela em que todos os testes do ASP.NET Core e do EF Core são criados. Você pode adicionar um projeto de teste do xUnit no Visual Studio usando o modelo mostrado na Figura 9-3 ou por meio da CLI usando o comando dotnet new xunit.
 
 ![](./media/image9-3.png)
 
-Figura 9-3 adicionar um projeto de teste xUnit no Visual Studio
+Figura 9-3 Adicionar um projeto de teste do xUnit no Visual Studio
 
-### <a name="test-naming"></a>Teste de nomenclatura
+### <a name="test-naming"></a>Nomenclatura de testes
 
-Você deve nomear os testes de maneira consistente, com nomes que indiquem o que faz cada teste. É uma abordagem com que tive grande sucesso classes de nome de teste de acordo com a classe e o método que estão sendo testado. Isso resulta em várias classes de teste pequena, mas ele torna extremamente limpar o que é responsável por cada teste. Com o nome de classe de teste configurado para identificar a classe e o método a ser testada, o nome do método de teste pode ser usado para especificar o comportamento que está sendo testado. Isso deve incluir o comportamento esperado e qualquer entrada ou suposições que devem gerar esse comportamento. Alguns exemplos de nomes de teste:
+Você deve nomear os testes de maneira consistente, com nomes que indicam o que cada teste faz. Uma abordagem na qual tive grande sucesso é nomear as classes de teste de acordo com a classe e o método que elas estão testando. Isso resulta em muitas classes de teste pequenas, mas deixa extremamente claro pelo que é responsável cada teste. Com o nome da classe de teste configurado para identificar a classe e o método a serem testados, o nome do método de teste pode ser usado para especificar o comportamento que está sendo testado. Isso deve incluir o comportamento esperado e as entradas ou suposições que devem gerar esse comportamento. Alguns nomes de teste de exemplo:
 
 -   CatalogControllerGetImage.CallsImageServiceWithId
 
@@ -113,27 +113,27 @@ Você deve nomear os testes de maneira consistente, com nomes que indiquem o que
 
 -   CatalogControllerGetImage.ReturnsNotFoundResultGivenImageMissingException
 
-Uma variação dessa abordagem termina o nome de cada classe de teste com "Deve" e modifica os tempos verbais ligeiramente:
+Uma variação dessa abordagem termina o nome de cada classe de teste com "Should" e modifica ligeiramente os tempos verbais:
 
 -   CatalogControllerGetImage**Should**.**Call**ImageServiceWithId
 
 -   CatalogControllerGetImage**Should**.**Log**WarningGivenImageMissingException
 
-Algumas equipes localizar a segunda abordagem de nomenclatura mais clara, embora um pouco mais detalhado. Em qualquer caso, tente usar uma convenção de nomenclatura que fornece informações sobre o comportamento de teste, para que quando um ou mais testes falharem, seja óbvio em seus nomes quais casos falharam. Evite nomeando testes vagamente, como ControllerTests.Test1, como eles oferecem nenhum valor quando você vê-los nos resultados de teste.
+Algumas equipes consideram a segunda abordagem de nomenclatura mais clara, embora um pouco mais detalhada. De qualquer forma, tente usar uma convenção de nomenclatura que fornece informações sobre o comportamento de teste, de modo que quando um ou mais testes falharem, seja óbvio descobrir, com base nos nomes, quais casos falharam. Evite nomear os testes de modo vago, como ControllerTests.Test1, pois essa nomenclatura não oferece nenhum valor quando você vê esses nomes em resultados de teste.
 
-Se você seguir uma convenção de nomenclatura, como mostrado acima que produz muitas classes de teste pequena, é uma boa ideia para organizar ainda mais seus testes usando pastas e namespaces. Figura 9-4 mostra uma abordagem para organizar testes por pasta em vários projetos de teste.
+Se você segue uma convenção de nomenclatura como a mostrada acima, que produz muitas classes de teste pequenas, é uma boa ideia organizar ainda mais os testes usando pastas e namespaces. A Figura 9-4 mostra uma abordagem para organizar os testes por pasta dentro de vários projetos de teste.
 
 ![](./media/image9-4.png)
 
-**Figura 9-4.** Organizando classes de teste por pasta com base na classe que está sendo testado.
+**Figura 9-4.** Organizando classes de teste por pasta com base na classe que está sendo testada.
 
-É claro que, se uma classe específica do aplicativo tem muitos métodos que está sendo testados (e, portanto, muitas classes de teste), talvez faça sentido para colocá-los em uma pasta correspondente para a classe do aplicativo. Esta organização não é diferente de como você pode organizar arquivos em pastas em outro lugar. Se você tiver mais de três ou quatro arquivos em uma pasta que contém muitos outros arquivos relacionados a, geralmente é útil para movê-los em sua própria subpasta.
+É claro que, se uma classe de aplicativo específica tiver muitos métodos que estão sendo testados (e, portanto, muitas classes de teste), talvez faça sentido colocá-los em uma pasta correspondente à classe de aplicativo. Essa organização não é diferente da forma como você pode organizar arquivos em pastas em outro lugar. Caso você tenha mais de três ou quatro arquivos relacionados em uma pasta que contém muitos outros arquivos, geralmente, é útil movê-los para sua própria subpasta.
 
-## <a name="unit-testing-aspnet-core-apps"></a>Aplicativos de ASP.NET Core de teste de unidade
+## <a name="unit-testing-aspnet-core-apps"></a>Realizando o teste de unidade em aplicativos ASP.NET Core
 
-Em um aplicativo bem projetado do ASP.NET Core, a maioria da complexidade e lógica de negócios será encapsulada em entidades de negócios e uma variedade de serviços. O aplicativo ASP.NET MVC de núcleo em si, com seus controladores, filtros, viewmodels e modos de exibição, deve exigir muito poucos testes de unidade. Muitas das funcionalidades de uma determinada ação está fora do método de ação. Teste se o roteamento funciona corretamente ou o tratamento de erro global, não pode ser feito efetivamente com um teste de unidade. Da mesma forma, quaisquer filtros, incluindo autenticação e validação de modelo e filtros de autorização, não pode ser teste de unidade. Sem essas fontes de comportamento, a maioria dos métodos de ação deve ser muito pequeno, a maior parte do seu trabalho para serviços que pode ser testado independentemente do controlador que usa a delegação.
+Em um aplicativo ASP.NET Core bem projetado, a maior parte da complexidade e da lógica de negócios será encapsulada em entidades de negócios e uma variedade de serviços. O aplicativo ASP.NET Core MVC em si, com seus controladores, filtros, modelos de exibição e exibições, deve exigir muito poucos testes de unidade. Grande parte da funcionalidade de determinada ação se encontra fora do próprio método de ação. O teste para saber se o roteamento funciona corretamente, ou o tratamento de erro global, não pode ser feito efetivamente com um teste de unidade. Da mesma forma, os filtros, incluindo filtros de validação de modelo e autenticação e autorização, não podem ser testados com testes de unidade. Sem essas fontes de comportamento, a maioria dos métodos de ação deve ser insignificantemente pequena, com a delegação da maior parte de seu trabalho para serviços que podem ser testados sem depender do controlador que os usa.
 
-Às vezes, você precisará refatorar o código de pedido para teste de unidade. Com frequência, isso envolve identificando abstrações e usando a injeção de dependência para acessar a abstração no código que você deseja testar, em vez de codificar diretamente na infraestrutura. Por exemplo, considere este método de ação simples para exibir imagens:
+Às vezes, você precisará refatorar o código para submetê-lo ao teste de unidade. Com frequência, isso envolve a identificação de abstrações e o uso da injeção de dependência para acessar a abstração no código que você deseja testar, em vez da codificação direta na infraestrutura. Por exemplo, considere este método de ação simples para a exibição de imagens:
 
 ```cs
 [HttpGet("[controller]/pic/{id}")]
@@ -146,9 +146,9 @@ public IActionResult GetImage(int id)
 }
 ```
 
-Esse método de teste de unidade torna difícil por sua dependência direta System.IO, que ele usa para ler do sistema de arquivos. Você pode testar esse comportamento para garantir que ele funciona conforme o esperado, mas fazer isso com arquivos reais é um teste de integração. Vale a pena observar não é possível testar rota desse método – você verá como fazer isso com um teste funcional em breve.
+Submeter esse método ao teste de unidade é dificultado por sua dependência direta de System.IO.File, que ele usa para ler o sistema de arquivos. Você pode testar esse comportamento para garantir que ele funciona conforme esperado, mas fazer isso com arquivos reais é um teste de integração. Vale a pena observar que não é possível testar a rota desse método – você verá como fazer isso com um teste funcional em breve.
 
-Se você não é o comportamento do sistema de arquivos de teste de unidade diretamente e não é possível testar a rota, o que há testar? Bem, depois de refatoração para possibilitar o teste de unidade, você pode descobrir alguns casos de teste e comportamento ausente, como o tratamento de erros. O que o método faz quando não for encontrado um arquivo? O que ele deve fazer? Neste exemplo, o método refatorado tem esta aparência:
+Se você não pode realizar o teste de unidade no comportamento do sistema de arquivos diretamente e não pode testar a rota, o que há para testar? Bem, depois de fazer a refatoração para possibilitar o teste de unidade, talvez você descubra alguns casos de teste e um comportamento ausente, como o tratamento de erro. O que o método faz quando um arquivo não é encontrado? O que ele deve fazer? Neste exemplo, o método refatorado tem esta aparência:
 
 ```cs
 [HttpGet("[controller]/pic/{id}")\]
@@ -168,9 +168,9 @@ public IActionResult GetImage(int id)
 }
 ```
 
-O \_agente e \_imageService são injetadas como dependências. Agora você pode testar se a mesma id que é passada para o método de ação é passada para o \_imageService, e que os bytes resultantes serão retornados como parte do FileResult. Você também pode testar que o log de erros está ocorrendo conforme o esperado, e que um resultado encontrado será retornado se a imagem estiver ausente, supondo que esse é o comportamento de aplicativo importantes (ou seja, não apenas código temporário o desenvolvedor adicionado para diagnosticar um problema). A lógica real do arquivo foi movido para um serviço de implementação separada e foi aumentada para retornar uma exceção específica do aplicativo para o caso de um arquivo ausente. Você pode testar essa implementação de forma independente, usando um teste de integração.
+O \_agente e o \_imageService são injetados como dependências. Agora você pode testar se a mesma ID passada para o método de ação é passada para o \_imageService, e se os bytes resultantes são retornados como parte do FileResult. Você também pode testar se o log de erros ocorre conforme esperado e se um resultado NotFound é retornado caso a imagem esteja ausente, supondo que esse seja um comportamento importante do aplicativo (ou seja, não apenas um código temporário adicionado pelo desenvolvedor para diagnosticar um problema). A lógica real do arquivo foi movida para um serviço de implementação separado e foi aumentada para retornar uma exceção específica do aplicativo para o caso de um arquivo ausente. Você pode testar essa implementação de forma independente, usando um teste de integração.
 
-## <a name="integration-testing-aspnet-core-apps"></a>Integração de teste ASP.NET Core aplicativos
+## <a name="integration-testing-aspnet-core-apps"></a>Realizando o teste de integração em aplicativos ASP.NET Core
 
 ```cs
     }
@@ -182,9 +182,9 @@ O \_agente e \_imageService são injetadas como dependências. Agora você pode 
 }
 ```
 
-Esse serviço usa IHostingEnvironment, assim como o CatalogController código foi antes que ele foi refatorado em um serviço separado. Já que esse foi o código somente no controlador que usado IHostingEnvironment, essa dependência foi removida do construtor do CatalogController.
+Esse serviço usa o IHostingEnvironment, assim como o código do CatalogController usava antes de ser refatorado em um serviço separado. Já que esse era o único código no controlador que usava o IHostingEnvironment, essa dependência foi removida do construtor do CatalogController.
 
-Para testar a que este serviço está funcionando corretamente, você precisa criar um arquivo de imagem de teste conhecido e verificar que o serviço retorna uma entrada específica. Você deve ter cuidado para não usar objetos fictícios o comportamento que você realmente deseja testar (nesse caso, o sistema de arquivos de leitura). No entanto, os objetos fictícios ainda podem ser útil para configurar testes de integração. Nesse caso, você pode simular IHostingEnvironment para que seu ContentRootPath aponta para a pasta que você pretende usar para a imagem de teste. A classe de teste de integração completa do trabalho é mostrada aqui:
+Para testar se esse serviço está funcionando corretamente, você precisa criar um arquivo de imagem de teste conhecido e verificar se o serviço retorna uma entrada específica. Você deve ter cuidado para não usar objetos fictícios no comportamento que você realmente deseja testar (nesse caso, a leitura do sistema de arquivos). No entanto, os objetos fictícios ainda podem ser úteis para configurar testes de integração. Nesse caso, você pode simular o IHostingEnvironment, de modo que seu ContentRootPath aponte para a pasta que você pretende usar para a imagem de teste. A classe de teste de integração funcional completa é mostrada aqui:
 
 ```cs
 public class LocalFileImageServiceGetImageBytesById
@@ -222,11 +222,11 @@ public class LocalFileImageServiceGetImageBytesById
 ```
 
 > [!NOTE]
-> a maior parte do código que o teste é muito simple, é necessária para configurar o sistema e criar a infraestrutura de teste (no caso, um arquivo real ser lidas do disco). Isso é típico para testes de integração, que geralmente exigem o trabalho de configuração mais complexo que testes de unidade.
+> Observe que o teste em si é muito simples – a maior parte do código é necessária para configurar o sistema e criar a infraestrutura de teste (nesse caso, um arquivo real a ser lido do disco). Isso é típico dos testes de integração, que geralmente exigem um trabalho de instalação mais complexo do que os testes de unidade.
 
-## <a name="functional-testing-aspnet-core-apps"></a>Testando aplicativos do ASP.NET Core funcional
+## <a name="functional-testing-aspnet-core-apps"></a>Realizando o teste funcional em aplicativos ASP.NET Core
 
-Para aplicativos do ASP.NET Core, a classe TestServer faz testes funcionais relativamente fáceis de escrever. Você configurar um TestServer usando um WebHostBuilder, assim como faria normalmente para seu aplicativo. Este WebHostBuilder deve ser configurado como host real do seu aplicativo, mas você pode modificar qualquer aspectos que facilitar os testes. Na maioria das vezes, você vai utilizar o mesmo TestServer em muitos casos de teste, para que você pode encapsulá-lo em um método reutilizável (talvez em uma classe base):
+Para aplicativos ASP.NET Core, a classe TestServer facilita muito a gravação de testes funcionais. Você configura um TestServer usando um WebHostBuilder, assim como faria normalmente para seu aplicativo. Este WebHostBuilder deve ser configurado da mesma forma que o host real do aplicativo, mas você pode modificar aspectos dele que facilitam os testes. Na maioria das vezes, você reutilizará o mesmo TestServer para muitos casos de teste, de modo que você possa encapsulá-lo em um método reutilizável (talvez em uma classe base):
 
 ```cs
 public abstract class BaseWebTest
@@ -253,7 +253,7 @@ public abstract class BaseWebTest
 }
 ```
 
-O método GetProjectPath simplesmente retorna o caminho físico para o projeto da web (solução de exemplo de download). O WebHostBuilder nesse caso simplesmente especifica onde o conteúdo raiz para o aplicativo web e referencia a mesma classe de inicialização que usa o aplicativo web real. Para trabalhar com o TestServer, você pode usar o tipo de System.Net.HttpClient para fazer solicitações a ele. TestServer expõe um método de CreateClient útil que fornece um cliente pré-configurado que está pronto para fazer solicitações para o aplicativo em execução no TestServer. Use este cliente (definido como protegido \_membro do cliente no teste de base acima) ao escrever testes funcionais para seu aplicativo ASP.NET Core:
+O método GetProjectPath simplesmente retorna o caminho físico para o projeto Web (download da solução de exemplo). Nesse caso, o WebHostBuilder apenas especifica o local em que se encontra a raiz do conteúdo do aplicativo Web e referencia a mesma classe Startup usada pelo aplicativo Web real. Para trabalhar com o TestServer, use o tipo System.Net.HttpClient padrão para fazer solicitações a ele. O TestServer expõe um método CreateClient útil que fornece um cliente pré-configurado que está pronto para fazer solicitações ao aplicativo em execução no TestServer. Use esse cliente (definido como o membro \_client protegido no teste base acima) ao escrever testes funcionais para seu aplicativo ASP.NET Core:
 
 ```cs
 public class CatalogControllerGetImage : BaseWebTest
@@ -277,7 +277,7 @@ public class CatalogControllerGetImage : BaseWebTest
 }
 ```
 
-Esse teste funcional emprega a pilha de aplicativo MVC do ASP.NET Core completa, incluindo todos os middleware, filtros, associadores, etc. que pode estar em vigor. Ele verifica se uma determinada rota ("/ pic/catálogo/1") retorna a matriz de bytes esperados para um arquivo em um local conhecido. Ele faz isso sem configurar um servidor web real e portanto evita muito a fragilidade que servidor de teste pode ocorrer (por exemplo, problemas com as configurações de firewall) usando uma web real. Testes funcionais executadas em TestServer são geralmente mais lentas do que a integração e testes de unidade, mas são muito mais rápidos que testes que seriam executado pela rede para um servidor de teste da web.
+Esse teste funcional emprega a pilha completa do aplicativo ASP.NET Core MVC, incluindo todo o middleware, filtros, associadores, etc. que podem estar em vigor. Ele verifica se determinada rota ("/catalog/pic/1") retorna a matriz de bytes esperada para um arquivo em um local conhecido. Ele faz isso sem configurar um servidor Web real e, portanto, evita grande parte da fragilidade decorrente do uso de um servidor Web real (por exemplo, problemas com as configurações de firewall). Em geral, os testes funcionais executados no TestServer são mais lentos do que os testes de integração e de unidade, mas são muito mais rápidos do que os testes que seriam executados na rede em um servidor Web de teste.
 
 >[!div class="step-by-step"]
-[Previous] (work-with-data-in-asp-net-core-apps.md) [Next] (development-process-for-azure.md)
+[Anterior] (work-with-data-in-asp-net-core-apps.md) [Próximo] (development-process-for-azure.md)

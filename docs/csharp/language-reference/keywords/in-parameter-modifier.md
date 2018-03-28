@@ -1,5 +1,5 @@
 ---
-title: "Modificador de parâmetro in (referência do C#)"
+title: Modificador de parâmetro in (referência do C#)
 ms.date: 03/06/2018
 ms.prod: .net
 ms.technology:
@@ -10,11 +10,11 @@ helpviewer_keywords:
 - in parameters [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 035aac3e6b902f607e533b709713eb1d07c9774a
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 9b8b21e2bdc95829c831ee71f24b47986321b7d0
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="in-parameter-modifier-c-reference"></a>Modificador de parâmetro in (referência do C#)
 
@@ -60,7 +60,10 @@ Não é possível usar as palavras-chave `in`, `ref` e `out` para os seguintes t
   
 - Métodos de iterador, que incluem uma instrução [yield return](../../../csharp/language-reference/keywords/yield.md) ou `yield break`.  
 
-Normalmente, os argumentos `in` são declarados para evitar as operações de cópia necessárias para passar argumentos por valor. Isso é mais útil quando os argumentos são estruturas ou matrizes de estruturas.
+Normalmente, os argumentos `in` são declarados para evitar as operações de cópia necessárias para passar argumentos por valor. Isso é mais útil quando os argumentos são tipos de valor, como estruturas, em que as operações de cópia são mais dispendiosas do que a passagem por referência.
+
+> [!WARNING]
+>  Os parâmetros `in` podem ser ainda mais dispendiosos se usados de forma incorreta. O compilador pode não saber se os métodos do membro modificam o estado do struct. Quando o compilador não pode garantir que o objeto não será modificado, ele cria uma cópia defensivamente e chama as referências de membro usando essa cópia. Todas as modificações possíveis são feitas nessa cópia de defesa. As duas maneiras de evitar essas cópias são passar parâmetros `in` como argumentos `in` ou definir estruturas como `readonly struct`.
 
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -69,4 +72,5 @@ Normalmente, os argumentos `in` são declarados para evitar as operações de c�
  [Referência de C#](../../../csharp/language-reference/index.md)  
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
  [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
- [Parâmetros de método](../../../csharp/language-reference/keywords/method-parameters.md)
+ [Parâmetros de método](../../../csharp/language-reference/keywords/method-parameters.md)  
+ [Semântica de referência com Tipos de valor](../../../csharp/reference-semantics-with-value-types.md)

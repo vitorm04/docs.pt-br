@@ -1,12 +1,13 @@
 ---
-title: "Criando assemblies satélite para aplicativos de área de trabalho"
-ms.custom: 
+title: Criando assemblies satélite para aplicativos de área de trabalho
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -30,16 +31,17 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-caps.latest.revision: "11"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0d360dc5b95c1cdb8de54bcbd723d0056c81c9c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2f75da3332c8172a6a888e6f40c66383866799ea
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Criando assemblies satélite para aplicativos de área de trabalho
 Arquivos de recurso desempenham um papel central em aplicativos localizados. Eles permitem que um aplicativo exiba cadeias de caracteres, imagens e outros dados no idioma e na cultura do usuário e forneça dados alternativos se esses recursos não estiverem disponíveis. O .NET Framework usa um modelo de hub e spoke para localizar e recuperar os recursos localizados. O hub é o principal assembly que contém o código executável não localizável e os recursos para uma única cultura, que é chamada de cultura neutra ou padrão. O padrão é a cultura de fallback para o aplicativo; ela é usada quando não há recursos localizados disponíveis. Você usa o atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> para designar a cultura da cultura padrão do aplicativo. Cada spoke conecta-se a um assembly satélite que contém os recursos para uma única cultura localizada, mas não contém nenhum código. Como os assemblies satélite não fazem parte do assembly principal, você pode facilmente atualizar ou substituir recursos que correspondem a uma cultura específica sem substituir o assembly principal do aplicativo.  
@@ -71,25 +73,25 @@ Diretório do assembly satélite
   
  O comando a seguir Al.exe cria um assembly satélite para o aplicativo `Example` usando o arquivo de recursos alemão strings.de.resources.  
   
-```  
-al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dll  
+```console
+al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll  
 ```  
   
  O comando a seguir Al.exe cria um assembly satélite para o aplicativo `Example` usando o arquivo strings.de.resources. A opção **/template** faz com que o assembly satélite herde todos os metadados de assembly, exceto as informações de cultura do assembly pai (Example. dll).  
   
-```  
-al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dll /template:Example.dll  
+```console
+al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll -template:Example.dll  
 ```  
   
  A tabela a seguir descreve em detalhes as opções de Al.exe usadas nesses comandos.  
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|**/target:**lib|Especifica que o seu assembly satélite é compilado em um arquivo de biblioteca (. dll). Como um assembly satélite não contém código executável e não é um assembly principal do aplicativo, você deve salvar assemblies satélites como DLLs.|  
-|**/embed:**strings.de.resources|Especifica o nome do arquivo de recurso incorporado quando o Al.exe compila o assembly. Você pode incorporar vários arquivos .resources em um assembly satélite, mas se estiver seguindo o modelo hub e spoke, compile um assembly satélite para cada cultura. No entanto, você pode criar arquivos .resources separados para cadeias de caracteres e objetos.|  
-|**/cultura:**de|Especifica a cultura do recurso para compilar. O Common Language Runtime usa essas informações ao procurar os recursos de uma cultura específica. Se você omitir esta opção, o Al.exe ainda compilará o recurso, mas o tempo de execução não será capaz de localizá-lo quando um usuário solicitá-lo.|  
-|**/out:**Example.resources.dll|Especifica o nome do arquivo de saída. O nome deve seguir o padrão de nomeação *baseName*.resources. *extensão*, onde *baseName* é o nome do assembly principal, e *extension* é uma extensão de nome de arquivo válido (como .dll). Observe que o tempo de execução não é capaz de determinar a cultura de um assembly satélite com base em seu nome de arquivo de saída; você deve usar a opção **/culture** para especificá-lo.|  
-|**/template:**Example.dll|Especifica o assembly do qual todos os metadados de assembly devem ser herdados, exceto o campo de cultura. Esta opção afetará assemblies satélites somente se você especificar um assembly com um [nome forte](../../../docs/framework/app-domains/strong-named-assemblies.md).|  
+|**-target:**lib|Especifica que o seu assembly satélite é compilado em um arquivo de biblioteca (. dll). Como um assembly satélite não contém código executável e não é um assembly principal do aplicativo, você deve salvar assemblies satélites como DLLs.|  
+|**-embed:**strings.de.resources|Especifica o nome do arquivo de recurso incorporado quando o Al.exe compila o assembly. Você pode incorporar vários arquivos .resources em um assembly satélite, mas se estiver seguindo o modelo hub e spoke, compile um assembly satélite para cada cultura. No entanto, você pode criar arquivos .resources separados para cadeias de caracteres e objetos.|  
+|**-culture:**de|Especifica a cultura do recurso para compilar. O Common Language Runtime usa essas informações ao procurar os recursos de uma cultura específica. Se você omitir esta opção, o Al.exe ainda compilará o recurso, mas o tempo de execução não será capaz de localizá-lo quando um usuário solicitá-lo.|  
+|**-out:**Example.resources.dll|Especifica o nome do arquivo de saída. O nome deve seguir o padrão de nomeação *baseName*.resources. *extensão*, onde *baseName* é o nome do assembly principal, e *extension* é uma extensão de nome de arquivo válido (como .dll). Observe que o tempo de execução não é capaz de determinar a cultura de um assembly satélite com base em seu nome de arquivo de saída; você deve usar a opção **/culture** para especificá-lo.|  
+|**-template:**Example.dll|Especifica o assembly do qual todos os metadados de assembly devem ser herdados, exceto o campo de cultura. Esta opção afetará assemblies satélites somente se você especificar um assembly com um [nome forte](../../../docs/framework/app-domains/strong-named-assemblies.md).|  
   
  Para obter uma lista completa das opções disponíveis com Al.exe, consulte [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md).  
   
@@ -113,7 +115,7 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
 4.  Use [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) para compilar cada texto ou um arquivo de recursos XML em um arquivo binário .resources. A saída é um conjunto de arquivos que têm o mesmo nome de arquivo raiz que os arquivos. resx ou. txt, mas uma extensão .resources. Se você criar o exemplo com o Visual Studio, o processo de compilação será manipulado automaticamente. Se você não estiver usando o Visual Studio, execute os seguintes comandos para compilar os arquivos .resx em arquivos .resources:  
   
-    ```  
+    ```console
     resgen Greeting.resx  
     resgen Greeting.en-us.resx  
     resgen Greeting.fr-FR.resx  
@@ -132,22 +134,22 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
      Se o aplicativo for chamado de Example e você estiver compilando na linha de comando, o comando para o compilador C# será:  
   
-    ```  
-    csc Example.cs /res:Greeting.resources  
+    ```console  
+    csc Example.cs -res:Greeting.resources  
     ```  
   
      O comando do compilador Visual Basic correspondente é:  
   
-    ```  
-    vbc Example.vb /res:Greeting.resources  
+    ```console  
+    vbc Example.vb -res:Greeting.resources  
     ```  
   
 6.  Crie um subdiretório no diretório do aplicativo principal para cada cultura localizada com suporte do aplicativo. Você deve criar um subdiretório ru-RU, um fr-FR e um en-US. O Visual Studio cria esses subdiretórios automaticamente como parte do processo de compilação.  
   
 7.  Incorpore os arquivos individuais de culturas específicas .resources a assemblies satélites e os salve no diretório apropriado. O comando para fazer isso para cada arquivo .resources é:  
   
-    ```  
-    al /target:lib /embed:Greeting.culture.resources /culture:culture /out:culture\Example.resources.dll  
+    ```console
+    al -target:lib -embed:Greeting.culture.resources -culture:culture -out:culture\Example.resources.dll  
     ```  
   
      onde *cultura* é o nome da cultura cujos recursos o assembly satélite contém. O Visual Studio trata esse processo automaticamente.  
@@ -167,13 +169,13 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
  O comando a seguir Sn.exe cria um par de chaves públicas/privadas de teste. A opção **– k** especifica que Sn.exe deve criar um novo par de chaves e salvá-lo em um arquivo chamado TestKeyPair.snk.  
   
-```  
+```console
 sn –k TestKeyPair.snk   
 ```  
   
  Você pode extrair a chave pública do arquivo que contém o par de chaves de teste. O comando a seguir extrai a chave pública de TestKeyPair.snk e a salva no PublicKey.snk:  
   
-```  
+```console
 sn –p TestKeyPair.snk PublicKey.snk  
 ```  
   
@@ -182,18 +184,18 @@ sn –p TestKeyPair.snk PublicKey.snk
   
  O comando a seguir Al.exe cria um assembly satélite com nome forte para o aplicativo StringLibrary usando o arquivo strings.ja.resources:  
   
-```  
-al /target:lib /embed:strings.ja.resources /culture:ja /out:StringLibrary.resources.dll /delay+ /keyfile:PublicKey.snk  
+```console 
+al -target:lib -embed:strings.ja.resources -culture:ja -out:StringLibrary.resources.dll -delay+ -keyfile:PublicKey.snk  
 ```  
   
- A opção **/delay+** especifica que o Assembly Linker deve atrasar assinatura do assembly. A opção **/keyfile** especifica o nome do arquivo da chave que contém a chave pública a ser usada para atrasar a assinatura do assembly.  
+ A opção **-delay+** especifica que o Assembly Linker deve atrasar a assinatura do assembly. A opção **-keyfile** especifica o nome do arquivo da chave que contém a chave pública a ser usada para atrasar a assinatura do assembly.  
   
 ### <a name="re-signing-an-assembly"></a>Nova assinatura de um assembly com atraso  
  Antes de implantar seu aplicativo, você deve reassinar o assembly satélite com atraso com o par de chaves real. Você pode fazer isso usando Sn.exe.  
   
  O comando a seguir Sn.exe assina StringLibrary.resources.dll com o par de chaves armazenado no arquivo RealKeyPair.snk. A opção **– R** especifica que um assembly assinado anteriormente ou assinado com atraso deve ser assinado novamente.  
   
-```  
+```console
 sn –R StringLibrary.resources.dll RealKeyPair.snk   
 ```  
   
@@ -202,8 +204,8 @@ sn –R StringLibrary.resources.dll RealKeyPair.snk
   
  O comando a seguir Gacutil.exe instala o StringLibrary.resources.dll no cache de assembly global:  
   
-```  
-gacutil /i:StringLibrary.resources.dll  
+```console
+gacutil -i:StringLibrary.resources.dll  
 ```  
   
  A opção **/i** especifica que Gacutil.exe deve instalar o assembly especificado no cache de assembly global. Após o satélite assembly ser instalado no cache, os recursos que ele contém ficam disponíveis para todos os aplicativos que são projetados para usar o assembly satélite.  
@@ -213,7 +215,7 @@ gacutil /i:StringLibrary.resources.dll
   
 1.  Se você não estiver usando o Visual Studio, use o seguinte comando [Ferramenta de Nome Forte (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) para criar um par de chaves públicas/privadas denominado ResKey.snk:  
   
-    ```  
+    ```console
     sn –k ResKey.snk  
     ```  
   
@@ -221,7 +223,7 @@ gacutil /i:StringLibrary.resources.dll
   
 2.  Use o seguinte comando [Ferramenta de Nome Forte (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) para criar um arquivo de chave pública denominado PublicKey.snk:  
   
-    ```  
+    ```console
     sn –p ResKey.snk PublicKey.snk  
     ```  
   
@@ -242,7 +244,7 @@ gacutil /i:StringLibrary.resources.dll
   
 6.  Use [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) para compilar cada texto ou um arquivo de recursos XML em um arquivo binário .resources. A saída é um conjunto de arquivos que têm o mesmo nome de arquivo raiz que os arquivos. resx ou. txt, mas uma extensão .resources. Se você criar o exemplo com o Visual Studio, o processo de compilação será manipulado automaticamente. Se você não estiver usando o Visual Studio, execute o seguinte comando para compilar os arquivos .resx em arquivos .resources:  
   
-    ```  
+    ```console
     resgen filename  
     ```  
   
@@ -258,42 +260,42 @@ gacutil /i:StringLibrary.resources.dll
   
      O comando para o compilador do C# é:  
   
-    ```  
-    csc /t:library /resource:Strings.resources /delaysign+ /keyfile:publickey.snk StringLibrary.cs  
+    ```console
+    csc -t:library -resource:Strings.resources -delaysign+ -keyfile:publickey.snk StringLibrary.cs  
     ```  
   
      O comando do compilador Visual Basic correspondente é:  
   
-    ```  
-    vbc /t:library /resource:Strings.resources /delaysign+ /keyfile:publickey.snk StringLibrary.vb  
+    ```console  
+    vbc -t:library -resource:Strings.resources -delaysign+ -keyfile:publickey.snk StringLibrary.vb  
     ```  
   
 8.  Crie um subdiretório no diretório do aplicativo principal para cada cultura localizada com suporte do aplicativo. Você deve criar um subdiretório ru-RU, um fr-FR e um en-US. O Visual Studio cria esses subdiretórios automaticamente como parte do processo de compilação. Como todos os assemblies satélite têm o mesmo nome de arquivo, os subdiretórios são usados para armazenar assemblies satélite de cultura específica individuais até que eles sejam assinados com um par de chaves públicas/privadas.  
   
 9. Incorpore os arquivos individuais de culturas específicas .resources a assemblies satélites assinados com atraso e os salve no diretório apropriado. O comando para fazer isso para cada arquivo .resources é:  
   
-    ```  
-    al /target:lib /embed:Strings.culture.resources /culture:culture /out:culture\StringLibrary.resources.dll /delay+ /keyfile:publickey.snk  
+    ```console
+    al -target:lib -embed:Strings.culture.resources -culture:culture -out:culture\StringLibrary.resources.dll -delay+ -keyfile:publickey.snk  
     ```  
   
      onde *culture* é o nome de uma cultura. Neste exemplo, os nomes de cultura são ru-RU, en-US e fr-FR.  
   
 10. Assine novamente a StringLibrary.dll usando a [Ferramenta de Nome Forte (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) da seguinte maneira:  
   
-    ```  
+    ```console
     sn –R StringLibrary.dll RealKeyPair.snk  
     ```  
   
 11. Assine novamente os assemblies satélite individuais. Para fazer isso, use a [Ferramenta de Nome Forte (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) da seguinte forma para cada assembly satélite:  
   
-    ```  
+    ```console
     sn –R StringLibrary.resources.dll RealKeyPair.snk  
     ```  
   
 12. Registre a StringLibrary.dll e cada um dos seus assemblies satélites no cache de assembly global usando o comando a seguir:  
   
-    ```  
-    gacutil /i filename  
+    ```console
+    gacutil -i filename  
     ```  
   
      onde *filename* é o nome do arquivo para registrar.  
@@ -305,14 +307,14 @@ gacutil /i:StringLibrary.resources.dll
   
      Para compilar da linha de comando, use o seguinte comando para o compilador do C#:  
   
-    ```  
-    csc Example.cs /r:StringLibrary.dll   
+    ```console
+    csc Example.cs -r:StringLibrary.dll   
     ```  
   
      A linha de comando para o compilador do Visual Basic é:  
   
-    ```  
-    vbc Example.vb /r:StringLibrary.dll   
+    ```console
+    vbc Example.vb -r:StringLibrary.dll   
     ```  
   
 14. Execute Example.exe.  

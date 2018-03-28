@@ -1,18 +1,19 @@
 ---
-title: "Programação orientada a objeto (C#)"
+title: Programação orientada a objeto (C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a7f30293bb2d50981353badfb7e373b60dcfeec
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 6da28e97a33e962d4926a3b65d0fdf388c252d9a
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="object-oriented-programming-c"></a>Programação orientada a objeto (C#)
 O C# dá suporte completo à programação orientada a objeto, incluindo encapsulamento, herança e polimorfismo.  
@@ -95,7 +96,7 @@ struct SampleStruct
  Para definir um campo:  
   
 ```csharp  
-Class SampleClass  
+class SampleClass  
 {  
     public string sampleField;  
 }  
@@ -233,8 +234,8 @@ Container.Nested nestedInstance = new Container.Nested()
 |[private](../../../csharp/language-reference/keywords/private.md)|O tipo ou membro pode ser acessado somente pelo código na mesma classe.|  
 |[protected](../../../csharp/language-reference/keywords/protected.md)|O tipo ou membro pode ser acessado somente pelo código na mesma classe ou em uma classe derivada.|  
 |[internal](../../../csharp/language-reference/keywords/internal.md)|O tipo ou membro pode ser acessado por qualquer código no mesmo assembly, mas não de outro assembly.|  
-|[protegidos internos](../../../csharp/language-reference/keywords/protected-internal.md)|O tipo ou membro pode ser acessado por qualquer código no mesmo assembly ou por qualquer classe derivada em outro assembly.|  
-|[privado protegido](../../../csharp/language-reference/keywords/private-protected.md)|O tipo ou membro pode ser acessado pelo código na mesma classe ou em uma classe derivada dentro do assembly da classe base.|  
+|[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)|O tipo ou membro pode ser acessado por qualquer código no mesmo assembly ou por qualquer classe derivada em outro assembly.|  
+|[private protected](../../../csharp/language-reference/keywords/private-protected.md)|O tipo ou membro pode ser acessado pelo código na mesma classe ou em uma classe derivada no assembly da classe base.|  
   
  Para obter mais informações, consulte [Modificadores de Acesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
@@ -383,7 +384,7 @@ class SampleClass : ISampleInterface
  Para definir uma classe genérica:  
   
 ```csharp  
-Public class SampleGeneric<T>   
+public class SampleGeneric<T>   
 {  
     public T Field;  
 }  

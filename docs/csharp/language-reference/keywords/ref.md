@@ -1,5 +1,5 @@
 ---
-title: "ref (Referência de C#)"
+title: ref (Referência de C#)
 ms.date: 03/06/2018
 ms.prod: .net
 ms.technology:
@@ -13,11 +13,11 @@ helpviewer_keywords:
 - ref keyword [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 427045317e9d7d0fe3435a486b9f761908ab5e78
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 63f984f4004cfce9694e7e7405ec2477bc370731
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="ref-c-reference"></a>ref (Referência de C#)
 
@@ -27,7 +27,7 @@ A palavra-chave `ref` indica um valor que é passado por referência. Ele é usa
 
 - Em uma assinatura de método para retornar um valor para o chamador por referência. Para obter mais informações, consulte [Valores retornados por referência](#reference-return-values).
 
-- Em um corpo de membro, para indicar que um valor retornado por referência é armazenado localmente como uma referência que o chamador pretende modificar. Consulte [Ref locals](#ref-locals) para obter mais informações.
+- Em um corpo de membro, para indicar que um valor retornado por referência é armazenado localmente como uma referência que o chamador pretende modificar ou, em geral, uma variável local acessa outro valor por referência. Consulte [Ref locals](#ref-locals) para obter mais informações.
 
 ## <a name="passing-an-argument-by-reference"></a>Passando um argumento por referência
 
@@ -109,7 +109,13 @@ Por exemplo, a instrução a seguir define um valor de ref local que é retornad
 ref decimal estValue = ref Building.GetEstimatedValue();
 ```
 
-Observe que a palavra-chave `ref` deve ser usada em ambos os locais ou o compilador gera o erro CS8172, "Não é possível inicializar uma variável por referência com um valor". 
+Você pode acessar um valor por referência da mesma maneira. Em alguns casos, acessar um valor por referência aumenta o desempenho, evitando uma operação de cópia potencialmente dispendiosa. Por exemplo, a instrução a seguir mostra como é possível definir um valor de local de ref que é usado para fazer referência a um valor.
+
+```csharp
+ref VeryLargeStruct reflocal = ref veryLargeStruct;
+```
+
+Observe que, nos dois exemplos, a palavra-chave `ref` deve ser usada em ambos os locais ou o compilador gera o erro CS8172, "Não é possível inicializar uma variável por referência com um valor". 
  
 ## <a name="a-ref-returns-and-ref-locals-example"></a>Um exemplo de ref returns e ref locals
 

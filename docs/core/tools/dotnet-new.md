@@ -1,22 +1,19 @@
 ---
-title: "Comando dotnet new – CLI do .NET Core"
+title: Comando dotnet new – CLI do .NET Core
 description: O comando dotnet new cria novos projetos .NET Core com base no modelo especificado.
-keywords: dotnet-new, CLI, comando da CLI, .NET Core
 author: mairaw
 ms.author: mairaw
-ms.date: 08/13/2017
+ms.date: 03/21/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: ea94c875ae6fe82d0e5d35ba8ca3fd47971fbbe6
-ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
+ms.openlocfilehash: 2cbd42195d0ec713d2ccb4af823075ece950ceff
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -28,7 +25,7 @@ ms.lasthandoff: 02/13/2018
 
 ## <a name="synopsis"></a>Sinopse
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 ```
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [-o|--output] [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
@@ -55,7 +52,7 @@ O comando chama o [mecanismo de modelo](https://github.com/dotnet/templating) pa
 
 O modelo para o qual criar uma instância quando o comando é invocado. Cada modelo pode ter opções específicas que podem ser passadas. Para obter mais informações, consulte [Opções de modelo](#template-options).
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 
 O comando contém uma lista padrão de modelos. Use `dotnet new -l` para obter uma lista dos modelos disponíveis. A tabela a seguir mostra os modelos que vêm pré-instalados com o SDK do .NET Core 2.0. O idioma padrão do modelo é mostrado entre parênteses.
 
@@ -101,7 +98,7 @@ O comando contém uma lista padrão de modelos. Use `dotnet new -all` para obter
 
 ## <a name="options"></a>Opções
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 
 `--force`
 
@@ -113,7 +110,9 @@ Imprime uma ajuda para o comando. Ele pode ser invocado para o próprio comando 
 
 `-i|--install <PATH|NUGET_ID>`
 
-Instala um pacote de origem ou de modelo do `PATH` ou `NUGET_ID` fornecido. Para obter informações sobre a criação de modelos personalizados, consulte [Custom templates for dotnet new](custom-templates.md) (Modelos personalizados para dotnet new).
+Instala um pacote de origem ou de modelo do `PATH` ou `NUGET_ID` fornecido. Se você deseja instalar uma versão de pré-lançamento de um pacote de modelo, é necessário especificar a versão no formato `<package-name>::<package-version>`. Por padrão, `dotnet new` passa \* para a versão, o que representa a última versão estável do pacote. Veja um exemplo na seção [Exemplos](#examples).
+
+Para obter informações sobre a criação de modelos personalizados, consulte [Custom templates for dotnet new](custom-templates.md) (Modelos personalizados para dotnet new).
 
 `-l|--list`
 
@@ -175,11 +174,11 @@ Local para colocar a saída gerada. O padrão é o diretório atual.
 
 Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais modelos têm as seguintes opções adicionais:
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 
 **console, angular, react, reactredux**
 
-`--no-restore` – Não executa uma restauração implícita durante a criação do projeto.
+  `--no-restore` – Não executa uma restauração implícita durante a criação do projeto.
 
 **classlib**
 
@@ -322,6 +321,10 @@ Crie um novo aplicativo xUnit direcionando o .NET Core 2.0:
 Lista todos os modelos disponíveis para o MVC:
 
 `dotnet new mvc -l`
+
+Instale a versão 2.0 dos modelos de aplicativo de página única do ASP.NET Core (opção de comando disponível somente para o SDK do .NET Core 1.1 e versões posteriores):
+
+`dotnet new -i Microsoft.DotNet.Web.Spa.ProjectTemplates::2.0.0`
 
 ## <a name="see-also"></a>Consulte também
 

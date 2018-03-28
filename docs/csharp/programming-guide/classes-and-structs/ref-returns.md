@@ -8,11 +8,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: a74563c0d24b6cd2a2fa8534787f078f3cc92674
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: c37c6dd61ae02813bcc467982f3b175da9136e4a
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref returns e ref locals
 
@@ -85,7 +85,15 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 
 O uso subsequente de `p` é o mesmo que usar a variável retornada pelo `GetContactInformation` porque `p` é um alias dessa variável. As alterações em `p` também alteram a variável retornada de `GetContactInformation`.
 
-Observe que a palavra-chave `ref` é usada antes da declaração de variável local *e* antes da chamada de método. Falha ao incluir palavras-chave `ref` na declaração da variável e resultados de atribuição no erro do compilador CS8172, "Não é possível inicializar uma variável por referência com um valor." 
+Observe que a palavra-chave `ref` é usada antes da declaração de variável local *e* antes da chamada de método. 
+
+Você pode acessar um valor por referência da mesma maneira. Em alguns casos, acessar um valor por referência aumenta o desempenho, evitando uma operação de cópia potencialmente dispendiosa. Por exemplo, a instrução a seguir mostra como é possível definir um valor de local de ref que é usado para fazer referência a um valor.
+
+```csharp
+ref VeryLargeStruct reflocal = ref veryLargeStruct;
+```
+
+Observe que a palavra-chave `ref` é usada antes da declaração da variável local *e* antes do valor, no segundo exemplo. A falha ao incluir as palavras-chave `ref` na declaração e na atribuição da variável nos dois exemplos resulta no erro do compilador CS8172, "Não é possível inicializar uma variável por referência com um valor." 
  
 ## <a name="ref-returns-and-ref-locals-an-example"></a>Ref returns e ref locals: um exemplo
 
@@ -101,4 +109,5 @@ Sem suporte para valores retornados por referência, essa operação normalmente
  
 ## <a name="see-also"></a>Consulte também
 
-[ref keyword](../../language-reference/keywords/ref.md)
+[ref keyword](../../language-reference/keywords/ref.md)  
+[Semântica de referência com Tipos de valor](../../../csharp/reference-semantics-with-value-types.md)

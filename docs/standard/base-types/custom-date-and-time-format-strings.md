@@ -1,12 +1,8 @@
 ---
 title: Cadeias de caracteres de formato de data e hora personalizado
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,18 +16,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 503f9d593235cc81c6e2ecf43b93abb2105e0adf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c54a5ec9cdbfd73bccd8f70befcfcff7cf8aac2d
+ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="custom-date-and-time-format-strings"></a>Cadeias de caracteres de formato de data e hora personalizado
 Uma cadeia de caracteres de formato de data e hora define a representação de texto de um valor <xref:System.DateTime> ou <xref:System.DateTimeOffset> que é resultante de uma operação de formatação. Ela também pode definir a representação de um valor de data e hora necessário em uma operação de análise para converter com êxito a cadeia de caracteres para uma data e hora. Uma cadeia de caracteres de formato personalizado consiste em um ou mais especificadores de formato de data e hora personalizado. Qualquer cadeia de caracteres que não é uma [cadeia de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) é interpretada como uma cadeia de caracteres de formato de data e hora personalizado.  
@@ -614,7 +610,7 @@ Uma cadeia de caracteres de formato de data e hora define a representação de t
  O especificador de formato personalizado ":" representa o separador de hora, o qual é usado para diferenciar horas, minutos e segundos. O separador de hora localizado apropriado é recuperado da propriedade <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> da cultura atual ou especificada.  
   
 > [!NOTE]
->  Para alterar o separador de hora de uma sequência de data e hora específica, especifique o caractere separador dentro de um delimitador de cadeia de caracteres literal. Por exemplo, a sequência de formato personalizado `hh'_'dd'_'ss` produz uma cadeia de caracteres de resultado em que "_" (um sublinhado) é sempre usado como o separador de hora. Para alterar o separador de hora de todas as datas de uma cultura, seja para alterar o valor da propriedade <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> da cultura atual ou para instanciar um objeto <xref:System.Globalization.DateTimeFormatInfo>, atribua o caractere à sua propriedade <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A> e chame uma sobrecarga do método de formatação que inclua um parâmetro <xref:System.IFormatProvider>.  
+>  Para alterar o separador de hora de uma sequência de data e hora específica, especifique o caractere separador dentro de um delimitador de cadeia de caracteres literal. Por exemplo, a cadeia de caracteres de formato personalizada `hh'_'dd'_'ss` produz uma cadeia de caracteres de resultado em que "\_" (um sublinhado) é sempre usado como o separador de hora. Para alterar o separador de hora de todas as datas de uma cultura, seja para alterar o valor da propriedade <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> da cultura atual ou para instanciar um objeto <xref:System.Globalization.DateTimeFormatInfo>, atribua o caractere à sua propriedade <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A> e chame uma sobrecarga do método de formatação que inclua um parâmetro <xref:System.IFormatProvider>.  
   
  Se o especificador de formato ":" for usado sem outros especificadores de formato personalizado, ele será interpretado como um especificador de formato de data e hora padrão e gerará uma <xref:System.FormatException>. Para obter mais informações sobre como usar um especificador de formato simples, consulte [Usando especificadores de formato único personalizados](#UsingSingleSpecifiers) posteriormente nesse tópico.  
   

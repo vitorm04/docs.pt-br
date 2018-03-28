@@ -33,7 +33,7 @@ Este tópico descreve como usar as várias opções no Svcutil.exe para gerar os
   
 -   Solicitação DISCO (usando o [DiscoveryClientProtocol](http://go.microsoft.com/fwlink/?LinkId=94777) de serviços Web do ASP.NET) para o endereço fornecido.  
   
- Svcutil.exe gera o cliente com base no arquivo WSDL Web Services Description Language () ou diretiva recebido do serviço. O nome de usuário principal (UPN) é gerado pela concatenação do nome de usuário com "@" e, em seguida, adicionar um nome de domínio totalmente qualificado (FQDN). No entanto, para os usuários registrados no Active Directory, esse formato não é válido e o UPN que a ferramenta gera causa uma falha na autenticação Kerberos com a seguinte mensagem de erro: **Falha na tentativa de logon.** Para resolver esse problema, corrija o arquivo de cliente que gerou a ferramenta manualmente.  
+ Svcutil.exe gera o cliente com base no arquivo WSDL Web Services Description Language () ou diretiva recebido do serviço. O nome de usuário principal (UPN) é gerado pela concatenação do nome de usuário com "\@" e, em seguida, adicionar um nome de domínio totalmente qualificado (FQDN). No entanto, para os usuários registrados no Active Directory, esse formato não é válido e o UPN que a ferramenta gera causa uma falha na autenticação Kerberos com a seguinte mensagem de erro: **Falha na tentativa de logon.** Para resolver esse problema, corrija o arquivo de cliente que gerou a ferramenta manualmente.  
   
 ```  
 svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>  
