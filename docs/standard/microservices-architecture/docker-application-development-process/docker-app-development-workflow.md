@@ -1,7 +1,7 @@
 ---
 title: Fluxo de trabalho de desenvolvimento para aplicativos do Docker
-description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Fluxo de trabalho de desenvolvimento para aplicativos do Docker"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Fluxo de trabalho de desenvolvimento para aplicativos do Docker
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8537b1db27f512ec0bfc2f23589efe8199ca3287
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 9c3df50430117936fd0b9d4390cb84e02085e48d
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="development-workflow-for-docker-apps"></a>Fluxo de trabalho de desenvolvimento para aplicativos do Docker
 
@@ -127,7 +127,7 @@ Você pode especificar mais configurações no Dockerfile, dependendo da linguag
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
--   **Criação de imagens do Docker para aplicativos do .NET Core**
+-   **Compilar Imagens do Docker para Aplicativos .NET Core**
     [*https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
 
 -   **Criar sua própria imagem**. Na documentação oficial do Docker.
@@ -398,7 +398,7 @@ Além disso, será necessário executar a etapa 2 (adicionar suporte do Docker a
 -   **Steve Lasker. Desenvolvimento de Docker no .NET com o Visual Studio 2017**
     [*https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111*](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111)
 
--   **Jeffrey T. Fritz. Colocar um aplicativo do .NET Core em um contêiner com as novas Ferramentas do Docker para Visual Studio**
+-   **Jeffrey T. Fritz. Colocar um aplicativo .NET Core em um contêiner com as novas Ferramentas do Docker para Visual Studio**
     [*https://blogs.msdn.microsoft.com/webdev/2016/11/16/new-docker-tools-for-visual-studio/*](https://blogs.msdn.microsoft.com/webdev/2016/11/16/new-docker-tools-for-visual-studio/)
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Usando comandos do PowerShell em um DockerFile para configurar contêineres do Windows 

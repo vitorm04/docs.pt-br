@@ -1,12 +1,13 @@
 ---
-title: "Como compilar um assembly de arquivo único"
-ms.custom: 
+title: Como compilar um assembly de arquivo único
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,16 +21,17 @@ helpviewer_keywords:
 - code modules
 - single-file assemblies
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bd9f2bab23fff1bbc4ebb521b167ac8031af3bc7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 80fa584a21a3bdfb9392021959d777139daafd04
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>Como compilar um assembly de arquivo único
 Um assembly de arquivo único, que é o tipo mais simples de assembly, contém informações sobre o tipo e a implementação, bem como o [manifesto do assembly](../../../docs/framework/app-domains/assembly-manifest.md). Você pode usar compiladores de linha de comando ou [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] para criar um assembly de arquivo único. Por padrão, o compilador cria um arquivo do assembly com uma extensão de .exe.  
@@ -49,11 +51,11 @@ Um assembly de arquivo único, que é o tipo mais simples de assembly, contém i
   
  O exemplo a seguir cria um assembly chamado `myCode.exe` de um módulo de código chamado `myCode`.  
   
-```csharp  
+```console
 csc myCode.cs  
 ```  
-  
-```vb  
+
+```console
 vbc myCode.vb  
 ```  
   
@@ -67,12 +69,12 @@ vbc myCode.vb
   
  O exemplo a seguir cria um assembly chamado `myAssembly.exe` de um módulo de código chamado `myCode`.  
   
-```csharp  
-csc /out:myAssembly.exe myCode.cs  
+```console  
+csc -out:myAssembly.exe myCode.cs  
 ```  
   
-```vb  
-vbc /out:myAssembly.exe myCode.vb  
+```console
+vbc -out:myAssembly.exe myCode.vb  
 ```  
   
 ## <a name="creating-library-assemblies"></a>Criando assemblies de biblioteca  
@@ -82,18 +84,18 @@ vbc /out:myAssembly.exe myCode.vb
   
 1.  No prompt de comando, digite o seguinte comando:  
   
-     \<*comando do compilador*> **/t:library** \<*nome do módulo*>  
+     \<*compiler command*> **-t:library** \<*module name*>  
   
-     Neste comando, *comando do compilador* é o comando do compilador para a linguagem usada no módulo do código e *nome do módulo* é o nome do módulo do código a ser compilado no assembly. Você também pode usar outras opções do compilador, como a opção **/out:**.  
+     Neste comando, *comando do compilador* é o comando do compilador para a linguagem usada no módulo do código e *nome do módulo* é o nome do módulo do código a ser compilado no assembly. Você também pode usar outras opções do compilador, como a opção **-out:**.  
   
  O exemplo a seguir cria um assembly de biblioteca chamado `myCodeAssembly.dll` de um módulo de código chamado `myCode`.  
   
-```csharp  
-csc /out:myCodeLibrary.dll /t:library myCode.cs  
+```console  
+csc -out:myCodeLibrary.dll -t:library myCode.cs  
 ```  
   
-```vb  
-vbc /out:myCodeLibrary.dll /t:library myCode.vb  
+```console
+vbc -out:myCodeLibrary.dll -t:library myCode.vb  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
