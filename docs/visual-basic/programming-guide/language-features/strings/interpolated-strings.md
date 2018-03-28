@@ -2,15 +2,16 @@
 title: Cadeias de caracteres interpoladas (Visual Basic)
 ms.date: 10/31/2017
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f865d5a7167847bf869d70a39570413dac271a2c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9501c052f387a522226e957193a8866083aa4233
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>Cadeias de caracteres interpoladas (referência do Visual Basic)
 
@@ -40,7 +41,7 @@ em que:
 - *format-string* é uma cadeia de caracteres de formato apropriada para o tipo do objeto que está sendo formatado. Por exemplo, para um <xref:System.DateTime> valor, ele pode ser um [cadeia de caracteres de formato de data e hora padrão](~/docs/standard/base-types/standard-date-and-time-format-strings.md) como "D" ou "d".
 
 > [!IMPORTANT]
-> Você não pode ter qualquer espaço em branco entre a `$` e `"` que inicia a cadeia de caracteres. Isso faz com que um erro do compilador.
+> Você não pode ter nenhum espaço em branco entre o `$` e `"` que iniciam a cadeia de caracteres. Isso faz com que um erro do compilador.
 
  Você pode usar uma cadeia de caracteres interpolada em qualquer lugar em que pode usar um literal de cadeia de caracteres.  A cadeia de caracteres interpolada é avaliada sempre que o código com a cadeia de caracteres interpolada for executado. Isso permite que você separe a definição e a avaliação de uma cadeia de caracteres interpolada.  
   
@@ -62,11 +63,11 @@ Há três conversões de tipo implícitas de uma cadeia de caracteres interpolad
 
 2. Conversão de uma cadeia de caracteres interpolada em uma variável <xref:System.IFormattable> que permite criar várias cadeias de caracteres de resultado com conteúdo específico da cultura de uma única instância <xref:System.IFormattable>. Isso é útil para incluir itens como os formatos de número e data corretos para culturas individuais.  Todas as ocorrências de chaves duplas ("{{" e "}}") permanecem como chaves duplas até que você formate a cadeia de caracteres explícita ou implicitamente chamando o método <xref:System.Object.ToString>.  Todas as expressões de interpolação contidas são convertidas em {0}, {1} e assim por diante.  
 
-   O exemplo a seguir usa reflexão para exibir os membros, bem como os valores de campo e propriedade de uma variável <xref:System.IFormattable> criada de uma cadeia de caracteres interpolada. Ele também passa o <xref:System.IFormattable> variável para o <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> método.
+   O exemplo a seguir usa reflexão para exibir os membros, bem como os valores de campo e propriedade de uma variável <xref:System.IFormattable> criada de uma cadeia de caracteres interpolada. Ele também passa a variável <xref:System.IFormattable> para o método <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>.
 
    [!code-vb[interpolated-strings2](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings2.vb)]  
 
-   Observe que a cadeia de caracteres interpolada pode ser inspecionada somente usando a reflexão. Se ele é passado para uma cadeia de caracteres de formatação, como o método, <xref:System.Console.WriteLine(System.String)>, seus itens de formato são resolvidos e a cadeia de caracteres de resultado retornado. 
+   Observe que a cadeia de caracteres interpolada pode ser inspecionada somente usando a reflexão. Se ela for passada para um método de formatação de cadeia de caracteres, como <xref:System.Console.WriteLine(System.String)>, seus itens de formato serão resolvidos e a cadeia de caracteres de resultado será retornada. 
 
 3. Conversão de uma cadeia de caracteres interpolada um <xref:System.FormattableString> variável que representa uma cadeia de caracteres de formato composto. Inspecionar a cadeia de caracteres de formato composto e como ela é renderizada como uma cadeia de caracteres de resultado pode, por exemplo, ajudar a proteger contra um ataque de injeção se você estiver criando uma consulta. Um <xref:System.FormattableString> também inclui:
 
@@ -81,7 +82,7 @@ Há três conversões de tipo implícitas de uma cadeia de caracteres interpolad
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]  
 
 ## <a name="see-also"></a>Consulte também  
-f<xref:System.IFormattable?displayProperty=nameWithType>   
+ <xref:System.IFormattable?displayProperty=nameWithType>  
  <xref:System.FormattableString?displayProperty=nameWithType>  
  [Referência da linguagem Visual Basic](index.md)  
  
