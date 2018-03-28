@@ -1,5 +1,5 @@
 ---
-title: "short (Referência de C#)"
+title: short (Referência de C#)
 ms.date: 03/14/2017
 ms.prod: .net
 ms.technology:
@@ -11,7 +11,7 @@ f1_keywords:
 helpviewer_keywords:
 - short keyword [C#]
 ms.assetid: 04c10688-e51a-4a87-bfec-83f7fb42ff11
-caps.latest.revision: 
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 8ca3c5444c4fa7a49b7169be3e2a5b15d1a72207
