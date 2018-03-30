@@ -1,9 +1,9 @@
 ---
 layout: HubPage
 ms.topic: hub-page
-hide_bc: 
-title: "Documentação .NET"
-description: "Aprenda a usar o .NET para criar uma variedade de aplicativos em qualquer plataforma usando C#, Visual Basic e F#. Procure referência de API, código de exemplo, tutoriais e muito mais."
+hide_bc: true
+title: Documentação .NET
+description: Aprenda a usar o .NET para criar uma variedade de aplicativos em qualquer plataforma usando C#, Visual Basic e F#. Procure referência de API, código de exemplo, tutoriais e muito mais.
 ms.custom: updateeachrelease
 ms.openlocfilehash: f3a044df40a5508f62b5b441965c4ce16e998428
 ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
