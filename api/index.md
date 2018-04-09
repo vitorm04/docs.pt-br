@@ -1,6 +1,6 @@
 ---
 layout: ApiBrowserPage
-hide_bc: 
+hide_bc: true
 title: Navegador de API .NET
 quickFilterColumn1: netframework-4.7.1,netcore-2.0,netstandard-2.0
 quickFilterColumn2: xamarinios-10.8,xamarinandroid-7.1,xamarinmac-3.0
