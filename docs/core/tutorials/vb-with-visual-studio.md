@@ -1,5 +1,5 @@
 ---
-title: "Compilação de um aplicativo Olá, Mundo com o .NET Core e com Visual Basic no Visual Studio 2017"
+title: Compilação de um aplicativo Olá, Mundo com o .NET Core e com Visual Basic no Visual Studio 2017
 description: Saiba como compilar um aplicativo de console simples do .NET Core com o Visual Basic usando o Visual Studio 2017.
 keywords: .NET Core, aplicativo do console do .NET Core, Visual Studio 2017
 author: rpetrusha
@@ -12,11 +12,11 @@ dev_langs:
 - vb
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 0e3dbdb5df72963980f459643fcb5f4588e0029f
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: c3775fccf8d6e7c544cbd0b05df7043752e8bef9
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-net-core-in-visual-studio-2017"></a>Compilar um aplicativo Olá, Mundo em Visual Basic com o .NET Core no Visual Studio 2017
 
@@ -70,7 +70,7 @@ Aprimore seu aplicativo para solicitar o nome do usuário e exibi-lo juntamente 
 
    ![Arquivo do programa do Visual Studio com o método Main atualizado](./media/vb-with-visual-studio/codewindow.png)
 
-   Esse código exibe "Qual é o seu nome?" na janela do console e aguarda até que o usuário insira uma cadeia de caracteres seguida da tecla Enter. Ele armazena essa cadeia de caracteres a uma variável chamada `name`. Ele também recupera o valor da propriedade <xref:System.DateTime.Now?displayProperty=nameWithType>, que contém a hora local atual e o atribui a uma variável chamada `currentDate`. Por fim, ele usa uma [cadeia de caracteres interpolada](../../csharp/language-reference/keywords/interpolated-strings.md) para exibir esses valores na janela do console.
+   Esse código exibe "Qual é o seu nome?" na janela do console e aguarda até que o usuário insira uma cadeia de caracteres seguida da tecla Enter. Ele armazena essa cadeia de caracteres a uma variável chamada `name`. Ele também recupera o valor da propriedade <xref:System.DateTime.Now?displayProperty=nameWithType>, que contém a hora local atual e o atribui a uma variável chamada `currentDate`. Por fim, ele usa uma [cadeia de caracteres interpolada](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) para exibir esses valores na janela do console.
 
 1. Compile o programa selecionando **Compilar** > **Compilar Solução**.
 

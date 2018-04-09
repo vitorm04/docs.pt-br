@@ -9,18 +9,18 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 8a0cfe83200d50eefa9b01ab51591a5fe0703ec0
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 778897dc92f8a94178ebbbed7704c0dfe2397729
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="reference-semantics-with-value-types"></a>Semântica de referência com tipos de valores
 
 Uma vantagem de usar os tipos de valor é que eles normalmente evitam alocações de heap.
-A desvantagem correspondente é que eles são copiados por valor. Essa compensação dificulta a otimização de algoritmos que operam em grandes quantidades de dados. Os novos recursos de linguagem em C# 7.2 fornecem mecanismos que habilitam a semântica de transmissão por referência com tipos de valor. Se usar esses recursos criteriosamente, você poderá minimizar tanto as alocações quanto as operações de cópia. Este artigo explora esses novos recursos.
+A desvantagem é que eles são copiados por valor. Essa compensação dificulta a otimização de algoritmos que operam em grandes quantidades de dados. Os novos recursos de linguagem em C# 7.2 fornecem mecanismos que habilitam a semântica de transmissão por referência com tipos de valor. Use esses recursos criteriosamente para minimizar tanto as alocações quanto as operações de cópia. Este artigo explora esses novos recursos.
 
-Grande parte do código de exemplo neste artigo demonstra os recursos adicionados em C# 7.2. Para usar esses recursos, você precisa configurar seu projeto para usar o C# 7.2 ou posterior em seu projeto. Você pode usar o Visual Studio para selecioná-lo. Para cada projeto, selecione **Projeto** no menu e, em seguida, **Propriedades**. Selecione a guia **Compilar** e clique em **Avançado**. A partir daí, você pode configurar a versão da linguagem. Escolha “7.2” ou “mais recente”.  Ou você pode editar o arquivo *csproj* e adicionar o seguinte nó:
+Grande parte do código de exemplo neste artigo demonstra os recursos adicionados em C# 7.2. Para usar esses recursos, você deve configurar seu projeto para usar o C# 7.2 ou posterior. Você pode usar o Visual Studio para selecioná-lo. Para cada projeto, selecione **Projeto** no menu e, em seguida, **Propriedades**. Selecione a guia **Compilar** e clique em **Avançado**. Nesse local, configure a versão da linguagem. Escolha “7.2” ou “mais recente”.  Ou você pode editar o arquivo *csproj* e adicionar o seguinte nó:
 
 ```XML
   <PropertyGroup>
@@ -30,21 +30,21 @@ Grande parte do código de exemplo neste artigo demonstra os recursos adicionado
 
 Você pode usar “7.2” ou “mais recente” para o valor.
 
-## <a name="specifying-in-parameters"></a>Especificando os parâmetros `in`
+## <a name="passing-arguments-by-readonly-reference"></a>Passando argumentos por referência readonly
 
-A linguagem C# 7.2 adiciona a palavra-chave `in` para complementar as palavras-chave `ref` e `out` existentes quando você grava um método que transmite os argumentos por referência. A palavra-chave `in` especifica que você está transmitindo o parâmetro por referência e o método chamado não modifica o valor transmitido para ele. 
+O C# 7.2 adiciona a palavra-chave `in` para complementar as palavras-chave `ref` e `out` existente a fim de passar argumentos por referência. A palavra-chave `in` especifica ao passar o argumento por referência, mas o método chamado não modifica o valor. 
 
-Essa adição fornece um vocabulário completo para expressar sua intenção de design. Os tipos de valor são copiados no momento em que são transmitidos para um método chamado quando você não especifica nenhum dos modificadores a seguir. Cada um desses modificadores especifica que um tipo de valor é transmitido por referência, evitando a cópia. Cada modificador expressa uma intenção diferente:
+Essa adição fornece um vocabulário completo para expressar sua intenção de design. Os tipos de valor são copiados no momento em que são passados para um método chamado quando você não especifica nenhum dos modificadores a seguir na assinatura do método. Cada um desses modificadores especifica que um tipo de valor é transmitido por referência, evitando a cópia. Cada modificador expressa uma intenção diferente:
 
 - `out`: esse método define o valor do argumento usado como este parâmetro.
 - `ref`: esse método pode definir o valor do argumento usado como este parâmetro.
 - `in`: esse método não modifica o valor do argumento usado como este parâmetro.
 
-Ao adicionar o modificador `in` para transmitir um argumento por referência, você declara que sua intenção de design é transmitir argumentos por referência para evitar cópias desnecessárias. Você não pretende modificar o objeto utilizado como aquele argumento. O código a seguir mostra um exemplo de um método que calcula a distância entre dois pontos no espaço 3D. 
+Adicione o modificador `in` para passar um argumento por referência e declare que sua intenção de design é passar argumentos por referência para evitar cópias desnecessárias. Você não pretende modificar o objeto utilizado como aquele argumento. O código a seguir mostra um exemplo de um método que calcula a distância entre dois pontos no espaço 3D. 
 
 [!code-csharp[InArgument](../../samples/csharp/reference-semantics/Program.cs#InArgument "Specifying an In argument")]
 
-Os argumentos são duas estruturas que contêm três duplas. Uma dupla tem 8 bytes. Então, cada argumento tem 24 bytes. Ao especificar o modificador `in`, você transmite a referência de 4 ou 8 bytes para esses argumentos, dependendo da arquitetura do computador. A diferença no tamanho é pequena, mas ela pode aumentar rapidamente quando o aplicativo chama esse método em um loop estreito, usando muitos valores diferentes.
+Os argumentos são duas estruturas que contêm três duplas. Uma dupla tem 8 bytes. Então, cada argumento tem 24 bytes. Ao especificar o modificador `in`, você passa uma referência de 4 ou 8 bytes para esses argumentos, dependendo da arquitetura do computador. A diferença no tamanho é pequena, mas ela pode aumentar rapidamente quando o aplicativo chama esse método em um loop estreito, usando muitos valores diferentes.
  
 O modificador `in` complementa `out` e `ref` de outras formas também. Não é possível criar sobrecargas de um método que diferem somente na presença de `in`, `out` ou `ref`. Essas novas regras apresentam o mesmo comportamento que sempre foi definido para os parâmetros `out` e `ref`.
 
@@ -54,18 +54,32 @@ Ao contrário dos argumentos `ref` e `out`, você pode usar valores literais ou 
 
 [!code-csharp[UseInArgument](../../samples/csharp/reference-semantics/Program.cs#UseInArgument "Specifying an In argument")]
 
-Há várias maneiras pelas quais o compilador garante que a natureza somente leitura de um argumento `in` será aplicada.  Em primeiro lugar, o método chamado não pode ser atribuído diretamente a um parâmetro `in`. Não é possível atribuí-lo diretamente a nenhum campo de um parâmetro `in`. Além disso, você não pode transmitir um parâmetro `in` para nenhum método que exige o modificador `ref` ou `out`.
-O compilador impõe que o argumento `in` seja uma variável somente leitura. Você pode chamar qualquer método de instância que usa a semântica de passagens por valor. Nessas instâncias, uma cópia do parâmetro `in` é criada. Uma vez que o compilador pode criar uma variável temporária para qualquer parâmetro `in`, você também pode especificar valores padrão para qualquer parâmetro `in`. O código a seguir o utiliza para especificar a origem (ponto 0,0) como o valor padrão para o segundo ponto:
+Há várias maneiras pelas quais o compilador garante que a natureza somente leitura de um argumento `in` será aplicada.  Em primeiro lugar, o método chamado não pode ser atribuído diretamente a um parâmetro `in`. Não é possível atribuí-lo diretamente a nenhum campo de um parâmetro `in` quando esse valor é um tipo `struct`. Além disso, você não pode passar um parâmetro `in` para nenhum método usando o modificador `ref` ou `out`.
+Essas regras se aplicam a qualquer campo de um parâmetro `in`, considerando que o campo seja um tipo `struct` e o parâmetro também seja um tipo `struct`. Na verdade, essas regras são aplicadas a várias camadas de acesso de membro, considerando que os tipos, em todos os níveis de acesso de membro, sejam `structs`. O compilador impõe que os tipos `struct` passados como argumentos `in` e seus membros `struct` sejam variáveis somente leitura quando usados como argumentos para outros métodos.
+
+O uso de parâmetros `in` evita os possíveis custos de desempenho com a realização de cópias. Isso não altera a semântica de nenhuma chamada de método. Portanto, você não precisa especificar o modificador `in` no site de chamada. No entanto, a omissão do modificador `in` no site de chamada informa ao compilador que ele tem permissão para fazer uma cópia do argumento pelos seguintes motivos:
+
+- Há uma conversão implícita, mas não uma conversão de identidade do tipo de argumento para o tipo de parâmetro.
+- O argumento é uma expressão, mas não tem uma variável de armazenamento conhecida.
+- Há uma sobrecarga que é distinguível pela presença ou ausência de `in`. Nesse caso, a sobrecarga pelo valor é uma correspondência melhor.
+
+Essas regras são úteis conforme você atualiza o código existente para usar argumentos de referência somente leitura. Dentro do método chamado, você pode chamar qualquer método de instância que use parâmetros por valor. Nessas instâncias, uma cópia do parâmetro `in` é criada. Uma vez que o compilador pode criar uma variável temporária para qualquer parâmetro `in`, você também pode especificar valores padrão para qualquer parâmetro `in`. O código a seguir especifica a origem (ponto 0,0) como o valor padrão para o segundo ponto:
 
 [!code-csharp[InArgumentDefault](../../samples/csharp/reference-semantics/Program.cs#InArgumentDefault "Specifying defaults for an in parameter")]
 
-O parâmetro de designação `in` também pode ser usado com tipos de referência ou compilado em valores numéricos. No entanto, os benefícios em ambos os casos serão mínimos, se houver.
+Para forçar o compilador a passar argumentos somente leitura por referência, especifique o modificador `in` nos argumentos no site de chamada, conforme mostrado no código a seguir:
+
+[!code-csharp[UseInArgument](../../samples/csharp/reference-semantics/Program.cs#ExplicitInArgument "Specifying an In argument")]
+
+Esse comportamento facilita a adoção de parâmetros `in` ao longo do tempo nas grandes bases de código em que os ganhos de desempenho são possíveis. Primeiro você adiciona o modificador `in` às assinaturas de método. Em seguida, você adiciona o modificador `in` em sites de chamada e cria tipos `readonly struct` para evitar que o compilador crie cópias de defesa de parâmetros `in` em mais locais.
+
+A designação do parâmetro `in` também pode ser usada com tipos de referência ou valores numéricos. No entanto, os benefícios em ambos os casos serão mínimos, se houver.
 
 ## <a name="ref-readonly-returns"></a>Retornos de `ref readonly`
 
 Talvez você queira retornar um tipo de valor por referência, mas impedir o autor da chamada de modificar esse valor. Use o modificador `ref readonly` para expressar essa intenção de design. Ela notifica os leitores que você está retornando uma referência aos dados existentes, mas não está permitindo a modificação. 
 
-O compilador impõe que o autor da chamada não pode modificar a referência. As tentativas de atribuir diretamente ao valor geram um erro de tempo de compilação. No entanto, o compilador não pode saber se algum método de membro modifica o estado da estrutura.
+O compilador impõe que o autor da chamada não pode modificar a referência. As tentativas de atribuir o valor diretamente geram um erro em tempo de compilação. No entanto, o compilador não pode saber se algum método de membro modifica o estado da estrutura.
 Para garantir que o objeto não será modificado, o compilador cria uma cópia e chama as referências de membro usando essa cópia. Todas as modificações são para essa cópia de defesa. 
 
 É provável que a biblioteca que utiliza o `Point3D` normalmente usaria a origem em todo o código. Cada instância cria um novo objeto na pilha. Pode ser vantajoso criar uma constante e retorná-la por referência. Mas, se retornar uma referência ao armazenamento interno, talvez você queira impor que o autor da chamada não poderá modificar o armazenamento referenciado. O código a seguir define uma propriedade somente leitura que retorna um `readonly ref` para um `Point3D` que especifica a origem.
@@ -83,7 +97,7 @@ A primeira atribuição no código anterior faz uma cópia da constante `Origin`
 ## <a name="readonly-struct-type"></a>Tipo `readonly struct`
 
 A aplicação do `ref readonly` para usos de tráfego intenso de um struct pode ser suficiente.
-Em outros momentos, talvez você queira criar um struct imutável. Então, você sempre poderá transmitir pela referência somente leitura. Essa prática remove a cópia de defesa que é feita quando você acessa os métodos de um struct usado como um parâmetro `in`.
+Em outros momentos, talvez você queira criar um struct imutável. Então, você sempre poderá passar pela referência somente leitura. Essa prática remove a cópia de defesa que é feita quando você acessa os métodos de um struct usado como um parâmetro `in`.
 
 Você pode fazer isso criando um tipo `readonly struct`. Você pode adicionar o modificador `readonly` em uma declaração de struct. O compilador impõe que todos os membros de instância do struct são `readonly`; o `struct` deve ser imutável.
 
@@ -95,11 +109,11 @@ Por fim, o compilador gera um código mais eficiente quando você chama membros 
 
 ## <a name="ref-struct-type"></a>Tipo `ref struct`
 
-Outro recurso de linguagem relacionado é a capacidade de declarar um tipo de valor que deve ser alocado por pilha. Em outras palavras, esses tipos nunca podem ser criados no heap como um membro de outra classe. A principal motivação para esse recurso foi <xref:System.Span%601> e as estruturas relacionadas. O <xref:System.Span%601> pode conter um ponteiro gerenciado como um de seus membros, sendo o outro o comprimento da extensão. Na verdade, ele é implementado de modo um pouco diferente porque o C# não é compatível com a memória gerenciada fora de um contexto sem segurança. Qualquer gravação que altere o ponteiro e o comprimento não é atômica. Isso significa que um <xref:System.Span%601> estaria sujeito a erros fora do intervalo ou a outras violações de segurança do tipo se não fosse restrito a um único registro de ativação. Além disso, colocar um ponteiro gerenciado no heap de GC normalmente ocasiona uma falha no tempo de JIT.
+Outro recurso de linguagem relacionado é a capacidade de declarar um tipo de valor que deve ser alocado por pilha. Em outras palavras, esses tipos nunca podem ser criados no heap como um membro de outra classe. A principal motivação para esse recurso foi <xref:System.Span%601> e as estruturas relacionadas. O <xref:System.Span%601> pode conter um ponteiro gerenciado como um de seus membros, sendo o outro o comprimento da extensão. Ele é implementado de modo um pouco diferente porque o C# não é compatível com ponteiros para memória gerenciada fora de um contexto sem segurança. Qualquer gravação que altere o ponteiro e o comprimento não é atômica. Isso significa que um <xref:System.Span%601> estaria sujeito a erros fora do intervalo ou a outras violações de segurança do tipo se não fosse restrito a um único registro de ativação. Além disso, colocar um ponteiro gerenciado no heap de GC normalmente ocasiona uma falha no tempo de JIT.
 
 Você pode ter requisitos semelhantes funcionando com a memória criada usando [`stackalloc`](language-reference/keywords/stackalloc.md) ou ao usar a memória das APIs de interoperabilidade. Você pode definir seus próprios tipos `ref struct` para essas necessidades. Neste artigo, você verá exemplos que usam `Span<T>` para manter a simplicidade.
 
-A declaração `ref struct` afirma que um struct desse tipo deve estar na pilha. As regras da linguagem garantem o uso seguro desses tipos. Outros tipos declarados como `ref struct` incluem <xref:System.ReadOnlySpan%601>. 
+A declaração `ref struct` declara que um struct desse tipo deve estar na pilha. As regras da linguagem garantem o uso seguro desses tipos. Outros tipos declarados como `ref struct` incluem <xref:System.ReadOnlySpan%601>. 
 
 A meta de manter um tipo `ref struct` como uma variável alocada na pilha apresenta várias regras que o compilador aplica para todos os tipos `ref struct`.
 
@@ -123,7 +137,7 @@ readonly ref struct ReadOnlyRefPoint2D
     public int X { get; }
     public int Y { get; }
     
-    ReadOnlyRefPoint2D(int x, int y) => (X, Y) = (x, y);
+    public ReadOnlyRefPoint2D(int x, int y) => (X, Y) = (x, y);
 }
 ```
 

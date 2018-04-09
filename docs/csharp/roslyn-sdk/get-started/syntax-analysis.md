@@ -1,6 +1,6 @@
 ---
-title: "Introdução à análise de sintaxe (APIs Roslyn)"
-description: "Uma introdução pela travessia, consulta e percurso por árvores de sintaxe."
+title: Introdução à análise de sintaxe (APIs Roslyn)
+description: Uma introdução pela travessia, consulta e percurso por árvores de sintaxe.
 author: billwagner
 ms.author: wiwagn
 ms.date: 02/05/2018
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 52f66782086af651517d54105fea6f5533ea05a2
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 90d6542122dd8c579c63f5f003441ce63a7ca5e9
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>Introdução à análise de sintaxe
 
@@ -43,6 +43,10 @@ A API de sintaxe cria uma estrutura de árvore com a raiz que representa a unida
 
 Essa breve descrição fornece uma visão geral do tipo de informações acessíveis usando a API de sintaxe. A API de sintaxe não é nada mais de uma API formal que descreve os constructos de código familiares que você conhece do C#. As funcionalidades completas incluem informações sobre como o código é formatado, incluindo quebras de linha, espaço em branco e recuo. Usando essas informações, você pode representar totalmente o código como escrito e lido por programadores humanos ou pelo compilador. Usar essa estrutura permite que você interaja com o código-fonte em um nível muito significativo. Não se trata mais de cadeias de caracteres de texto, mas de dados que representam a estrutura de um programa C#.
 
+Para começar, será necessário instalar o **SDK do .NET Compiler Platform**:
+
+[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
+
 ## <a name="understanding-syntax-trees"></a>Noções básicas sobre árvores de sintaxe
 
 Você pode usar a API de sintaxe para uma análise da estrutura do código C#. A **API de sintaxe** expõe os analisadores, as árvores de sintaxe e os utilitários para analisar e criar árvores de sintaxe. Trata-se do modo como você pesquisa o código em busca de elementos de sintaxe específicos ou lê o código para um programa.
@@ -67,9 +71,6 @@ Embora você possa encontrar tudo em um arquivo de código usando as APIs de sin
 ## <a name="traversing-trees"></a>Percorrendo árvores
 
 Você pode examinar os nós em uma árvore de sintaxe de duas maneiras. Você pode percorrer a árvore para examinar cada nó, ou então consultar elementos ou nós específicos.
-
-> [!IMPORTANT]
-> As amostras a seguir exigem que o **SDK do .NET Compiler Platform** esteja instalado como parte do Visual Studio 2017. Você pode encontrar o SDK do .NET Compiler como o último componente opcional listado sob a carga de trabalho do **Desenvolvimento de extensão do Visual Studio**. Os modelos não são instalados sem esse componente.
 
 ### <a name="manual-traversal"></a>Passagem manual
 

@@ -1,6 +1,6 @@
 ---
-title: "O que há de novo no c# 6 - guia c#"
-description: "Aprenda os novos recursos da versão 6 do C#"
+title: Novidades no C# 6 – Guia do C#
+description: Aprenda os novos recursos da versão 6 do C#
 keywords: .NET, .NET Core
 author: BillWagner
 ms.date: 09/22/2016
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: f3e7a515b1dde52461ab6abf8a9adbe84d27b7c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ea54e9a05120134eea8e1bc9d82302a7513b43e7
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-in-c-6"></a>Novidades no C# 6
 
@@ -56,7 +56,7 @@ A sintaxe para propriedades implementadas automaticamente (geralmente conhecidas
 
 No entanto, essa sintaxe simplificada limitava os tipos de design que tinham suporte com o uso de propriedades automáticas. O C# 6 aprimora os recursos das propriedades automáticas para que você possa usá-las em mais cenários. Você não precisará voltar à sintaxe mais detalhada de declaração e manipulação do campo de suporte manualmente com tanta frequência.
 
-A nova sintaxe abrange cenários para propriedades somente leitura e para inicializar o armazenamento de variável por trás de uma auto propriedade.
+A nova sintaxe aborda cenários para propriedades somente leitura e para inicializar o armazenamento de variável atrás de uma propriedade automática.
 
 ### <a name="read-only-auto-properties"></a>Propriedades automáticas somente leitura
 
@@ -105,17 +105,17 @@ O C# 6 permite que você atribua um valor inicial para o armazenamento usado por
 
 O membro `Grades` é inicializado no local em que é declarado. Isso facilita realizar a inicialização exatamente uma vez. A inicialização faz parte da declaração de propriedade, tornando mais fácil igualar a alocação de armazenamento com a interface pública para objetos `Student`.
 
-Inicializadores de propriedade podem ser usados com propriedades de leitura/gravação, bem como propriedades somente leitura, conforme mostrado aqui.
+Os inicializadores de propriedade podem ser usados com propriedades de leitura/gravação bem como com as propriedades de somente leitura, conforme mostrado aqui.
 
 [!code-csharp[ReadWriteInitialization](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadWriteInitialization)]
 
 ## <a name="expression-bodied-function-members"></a>Membros de função aptos para expressão
 
-O corpo de muitos membros que escrevemos consiste em apenas uma instrução, que pode ser representada como uma expressão. Você pode reduzir essa sintaxe, escrevendo um membro apto para expressão. Ele funciona para métodos e propriedades somente leitura. Por exemplo, uma substituição de `ToString()` é, geralmente, uma ótima candidata:
+O corpo de muitos membros que escrevemos consiste em apenas uma instrução, que pode ser representada como uma expressão. Você pode reduzir essa sintaxe, escrevendo um membro apto para expressão. Isso funciona para métodos e propriedades somente leitura. Por exemplo, uma substituição de `ToString()` é, geralmente, uma ótima candidata:
 
 [!code-csharp[ToStringExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#ToStringExpressionMember)]
 
-Você também pode usar membros bodied expressão nas propriedades somente leitura também:
+Você também pode usar membros aptos para expressão em propriedades somente leitura:
 
 [!code-csharp[FullNameExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
@@ -209,17 +209,17 @@ Garantir que o lado esquerdo seja avaliado apenas uma vez também habilita você
 
 ## <a name="string-interpolation"></a>Interpolação de cadeia de caracteres
 
-O C# 6 contém uma nova sintaxe para compor cadeias de caracteres de uma cadeia de caracteres de formato e de expressões que podem ser avaliadas para produzir outros valores de cadeia de caracteres.
+O C# 6 contém uma nova sintaxe para compor cadeias de caracteres com base em uma cadeia de caracteres de formato e de expressões que são avaliadas para produzir outros valores de cadeia de caracteres.
 
 Tradicionalmente, você precisava usar parâmetros posicionais em um método como `string.Format`:
 
 [!code-csharp[stringFormat](../../../samples/snippets/csharp/new-in-6/oldcode.cs#stringFormat)]
 
-Com o C# 6, o novo recurso de interpolação de cadeia de caracteres permite que você insira as expressões na cadeia de caracteres de formato. Basta preceder a cadeia de caracteres com `$`:
+Com o C# 6, o novo recurso de [interpolação de cadeia de caracteres](../language-reference/tokens/interpolated.md) permite que você insira as expressões na cadeia de caracteres de formato. Basta preceder a cadeia de caracteres com `$`:
 
 [!code-csharp[stringInterpolation](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
-Este exemplo inicial usou expressões variáveis para as expressões substituídas. Você pode expandir esta sintaxe para usar qualquer expressão. Por exemplo, você pode calcular a média do aluno como parte da interpolação:
+Este exemplo inicial usou expressões de propriedade para as expressões substituídas. Você pode expandir esta sintaxe para usar qualquer expressão. Por exemplo, você pode calcular a média do aluno como parte da interpolação:
 
 [!code-csharp[stringInterpolationExpression](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationExpression)]
 
@@ -227,7 +227,7 @@ Ao executar o exemplo anterior, você veria que a saída de `Grades.Average()` p
 
 [!code-csharp[stringInterpolationFormat](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationFormat)]
 
-A linha de código anterior formatará o valor de `Grades.Average()` como um número de ponto flutuante com duas casas decimais.
+A linha de código anterior formata o valor de `Grades.Average()` como um número de ponto flutuante com duas casas decimais.
 
 O `:` é sempre interpretado como o separador entre a expressão que está sendo formatada e a cadeia de caracteres de formato. Isso pode causar problemas quando a expressão usa um `:` de outra forma, como um operador condicional:
 
@@ -249,22 +249,17 @@ No entanto, ele serve para ilustrar abrangência do recurso. Qualquer expressão
 
 ### <a name="string-interpolation-and-specific-cultures"></a>Interpolação de cadeia de caracteres e culturas específicas
 
-Todos os exemplos mostrados na seção anterior formatarão as cadeias de caracteres usando a cultura e o idioma atuais do computador em que o código é executado. Com frequência, talvez seja necessário formatar a cadeia de caracteres gerada, usando uma cultura específica.
-O objeto produzido de uma interpolação de cadeia de caracteres é um tipo que tem uma conversão implícita para <xref:System.String> ou <xref:System.FormattableString>.
+Todos os exemplos mostrados na seção anterior formatam as cadeias de caracteres usando a cultura e o idioma atuais do computador em que o código é executado. Com frequência, talvez seja necessário formatar a cadeia de caracteres gerada, usando uma cultura específica.
+Para fazer isso, aproveite o fato de que o objeto produzido por uma interpolação de cadeia de caracteres pode ser convertido implicitamente em <xref:System.FormattableString>.
 
-O tipo <xref:System.FormattableString> contém a cadeia de caracteres de formato e os resultados da avaliação de argumentos antes de convertê-los em cadeias de caracteres. Você pode usar métodos públicos de <xref:System.FormattableString> para especificar a cultura ao formatar uma cadeia de caracteres. O exemplo a seguir produzirá uma cadeia de caracteres usando o alemão como o idioma e a cultura. (Ele usará o caractere ',' para o separador decimal e o caractere '.' como separador de milhares).
+A instância <xref:System.FormattableString> contém a cadeia de caracteres de formato e os resultados da avaliação de expressões antes de convertê-los em cadeias de caracteres. Você pode usar métodos públicos de <xref:System.FormattableString> para especificar a cultura ao formatar uma cadeia de caracteres. Por exemplo, o exemplo a seguir produz uma cadeia de caracteres usando a cultura alemã. (ele usa o caractere ',' como o separador decimal e o caractere '.' como separador de milhares).
 
 ```csharp
 FormattableString str = $"Average grade is {s.Grades.Average()}";
-var gradeStr = string.Format(null, 
-    System.Globalization.CultureInfo.CreateSpecificCulture("de-de"),
-    str.GetFormat(), str.GetArguments());
+var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-> [!NOTE]
-> Não há suporte para o exemplo anterior na versão 1.0.1 do .NET Core. Somente há suporte no .NET Framework.
-
-Em geral, as expressões de interpolação de cadeia de caracteres geram cadeias de caracteres como saída. No entanto, quando você deseja maior controle sobre a cultura usada para formatar a cadeia de caracteres, você pode determinar uma saída específica.  Se essa é uma capacidade que é geralmente necessário, você pode criar métodos de conveniência, como métodos de extensão, para habilitar a formatação fácil com culturas específicas.
+Para obter mais informações, consulte o tópico [Interpolação de cadeia de caracteres](../language-reference/tokens/interpolated.md).
 
 ## <a name="exception-filters"></a>Filtros de exceção
 

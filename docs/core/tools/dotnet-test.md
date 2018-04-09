@@ -1,18 +1,19 @@
 ---
-title: "Comando dotnet test – CLI do .NET Core"
-description: "O comando dotnet test é usado para executar testes de unidade em um determinado projeto."
+title: Comando dotnet test – CLI do .NET Core
+description: O comando dotnet test é usado para executar testes de unidade em um determinado projeto.
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: fac5e3cb602f6dc5c06b1b29e9924ce4be7ae273
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 6102281c4daf149f31e65ef8360831fe9e0ef4f6
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -42,9 +43,9 @@ dotnet test [-h|--help]
 
 ## <a name="description"></a>Descrição
 
-O comando `dotnet test` é usado para executar testes de unidade em um determinado projeto. Testes de unidade são projetos de aplicativo de console que têm dependências na estrutura de teste da unidade (por exemplo, MSTest, NUnit ou xUnit) e no executor de teste dotnet da estrutura de teste de unidade. Eles são empacotados como pacotes NuGet e são restaurados como dependências comuns para o projeto.
+O comando `dotnet test` é usado para executar testes de unidade em um determinado projeto. O comando `dotnet test` inicia o aplicativo de console executor de teste especificado para um projeto. O executor de teste realiza os testes definidos para uma estrutura de teste de unidade (por exemplo, MSTest, NUnit ou xUnit) e relata o êxito ou a falha de cada teste. O executor de teste e a biblioteca de teste de unidade são empacotados como pacotes NuGet e são restaurados como dependências comuns para o projeto.
 
-Projetos de teste também precisam especificar o executor de teste. Isso é especificado usando um elemento comum `<PackageReference>`, conforme mostrado no exemplo de arquivo de projeto a seguir:
+Os projetos de teste especificam o executor de teste usando um elemento comum `<PackageReference>`, conforme mostrado no exemplo de arquivo de projeto a seguir:
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 

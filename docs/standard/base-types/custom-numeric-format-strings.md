@@ -1,12 +1,12 @@
 ---
-title: "Cadeias de caracteres de formato numérico personalizado"
-ms.custom: 
+title: Cadeias de caracteres de formato numérico personalizado
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,23 +22,23 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-caps.latest.revision: 
+caps.latest.revision: 54
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ec33a093e4f7f8ccda1992f26563bcd63853e634
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b33acfef1cabd3aa53fbe8947bd7adbe52d3b7a4
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="custom-numeric-format-strings"></a>Cadeias de caracteres de formato numérico personalizado
 Você pode criar uma cadeia de caracteres de formato numérico personalizado, que consiste em um ou mais especificadores numéricos personalizados, para definir a formatação de dados numéricos. Uma cadeia de caracteres de formato numérico personalizado é qualquer cadeia de caracteres que é não uma [cadeia de caracteres de formato numérico padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
   
- As cadeias de caracteres de formato numérico personalizado têm suporte de algumas sobrecargas do método `ToString` de todos os tipos numéricos. Por exemplo, você pode fornecer uma cadeia de caracteres de formato numérico para os métodos <xref:System.Int32.ToString%28System.String%29> e <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> do tipo <xref:System.Int32>. Cadeias de caracteres de formato numérico personalizado também têm suporte no [recurso de formatação composta](../../../docs/standard/base-types/composite-formatting.md) do .NET Framework, o qual é usado por alguns métodos `Write` e `WriteLine` das classes <xref:System.Console> e <xref:System.IO.StreamWriter>, o método <xref:System.String.Format%2A?displayProperty=nameWithType> e o método <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>.  
+ As cadeias de caracteres de formato numérico personalizado têm suporte de algumas sobrecargas do método `ToString` de todos os tipos numéricos. Por exemplo, você pode fornecer uma cadeia de caracteres de formato numérico para os métodos <xref:System.Int32.ToString%28System.String%29> e <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> do tipo <xref:System.Int32>. Cadeias de caracteres de formato numérico personalizado também têm suporte no [recurso de formatação composta](../../../docs/standard/base-types/composite-formatting.md) do .NET Framework, o qual é usado por alguns métodos `Write` e `WriteLine` das classes <xref:System.Console> e <xref:System.IO.StreamWriter>, o método <xref:System.String.Format%2A?displayProperty=nameWithType> e o método <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. O recurso de [Interpolação de cadeia de caracteres](../../csharp/language-reference/tokens/interpolated.md) também é compatível com cadeias de caracteres de formato numérico personalizado.  
   
 > [!TIP]
 >  É possível baixar o [Utilitário de Formatação](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), um aplicativo que permite aplicar cadeias de caracteres de formato a valores numéricos ou de data e hora e exibir a cadeia de caracteres de resultado.  

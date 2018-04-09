@@ -1,6 +1,6 @@
 ---
 title: Propriedades
-description: "Saiba mais sobre propriedades C#, que incluem recursos de validação, valores computados, avaliação lenta e notificações de alteração de propriedade."
+description: Saiba mais sobre propriedades C#, que incluem recursos de validação, valores computados, avaliação lenta e notificações de alteração de propriedade.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 6950d25a-bba1-4744-b7c7-a3cc90438c55
-ms.openlocfilehash: 1ffacd52df89a955ebfa72dc58836211c7a58640
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 2a25919048f94211b1696ac8c8471a14ce6e15c5
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="properties"></a>Propriedades
 
@@ -76,7 +76,7 @@ public class Person
 }
 ```
 
-Quando uma implementação de propriedade é uma única expressão, você pode usar *membros aptos para expressão* para getter ou setter:
+Quando uma implementação de propriedade é uma única expressão, você pode usar *membros aptos para expressão* para o getter ou setter:
 
 ```csharp
 public class Person
@@ -149,7 +149,7 @@ public class Person
 
 Agora, a propriedade `FirstName` pode ser acessada de qualquer código, mas só pode ser atribuída de outro código na classe `Person`.
 
-Você pode adicionar qualquer modificador de acesso restritivo aos acessadores get ou set. Nenhum modificador de acesso que você colocar no acessador individual deve ser mais limitado que o modificador de acesso da definição de propriedade. O que está acima é válido porque a propriedade `FirstName` é `public`, mas o acessador set é `private`. Você não pode declarar uma propriedade `private` com um acessador `public`. Declarações de propriedade também podem ser declaradas `protected`, `internal`, `protected internal`, `private protected` ou até mesmo `private`.   
+Você pode adicionar qualquer modificador de acesso restritivo aos acessadores get ou set. Nenhum modificador de acesso que você colocar no acessador individual deve ser mais limitado que o modificador de acesso da definição de propriedade. O que está acima é válido porque a propriedade `FirstName` é `public`, mas o acessador set é `private`. Você não pode declarar uma propriedade `private` com um acessador `public`. As declarações de propriedade também podem ser declaradas `protected`, `internal`, `protected internal`, `private protected` ou até mesmo `private`.   
 
 Também é válido colocar o modificador mais restritivo no acessador `get`. Por exemplo, você poderia ter uma propriedade `public`, mas restringir o acessador `get` como `private`. Esse cenário raramente acontece na prática.
 
@@ -193,9 +193,9 @@ public class Person
 }
 ```
 
-O exemplo acima usa a sintaxe de *interpolação de cadeia de caracteres* para criar a cadeia de caracteres formatada para o nome completo.
+O exemplo acima usa o recurso de [interpolação de cadeia de caracteres](../csharp/language-reference/tokens/interpolated.md) para criar a cadeia de caracteres formatada do nome completo.
 
-Você também pode usar *membros aptos para expressão*, que fornecem uma maneira mais sucinta para criar a propriedade `FullName` computada:
+Você também pode usar *membros aptos para expressão*, que fornecem uma maneira mais sucinta de criar a propriedade `FullName` computada:
 
 ```csharp
 public class Person

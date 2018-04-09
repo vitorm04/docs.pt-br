@@ -1,7 +1,7 @@
 ---
 title: O SDK do .NET Compiler Platform (APIs do Roslyn)
-description: "Aprenda a usar o SDK do .NET Compiler Platform (também chamado de APIs do Roslyn) para entender o código .NET, identificar os erros e corrigi-los."
-keywords: "roslyn, analisador, correção de código"
+description: Aprenda a usar o SDK do .NET Compiler Platform (também chamado de APIs do Roslyn) para entender o código .NET, identificar os erros e corrigi-los.
+keywords: roslyn, analisador, correção de código
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/10/2017
@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 260efa9810e6587224bddb196b4a746d15f785e2
-ms.sourcegitcommit: 3fd4e718d1bac9769fe0c1dd08ca1b2323ae272b
+ms.openlocfilehash: c627903743f8867e05bac9ce835659fc7270b94e
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="the-net-compiler-platform-sdk"></a>O SDK do .NET Compiler Platform
 
@@ -67,10 +67,15 @@ O SDK do .NET Compiler Platform inclui os modelos de objeto de linguagem mais re
 
 Você pode saber mais sobre os conceitos no SDK do .NET Compiler Platform nestes quatro tópicos:
 
+ - [Explorar código com o visualizador de sintaxe](syntax-visualizer.md)
  - [Entender o modelo de API do compilador](compiler-api-model.md)
  - [Trabalhar com sintaxe](work-with-syntax.md)
  - [Trabalhar com semântica](work-with-semantics.md)
  - [Trabalhar com um espaço de trabalho](work-with-workspace.md)
+ 
+Para começar, será necessário instalar o **SDK do .NET Compiler Platform**:
+
+[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
 <!--
 

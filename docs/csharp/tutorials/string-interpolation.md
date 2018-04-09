@@ -1,6 +1,6 @@
 ---
-title: "Interpolação de cadeia de caracteres - C#"
-description: "Saiba como funciona o interpolação de cadeia de caracteres no C# 6"
+title: Interpolação de cadeia de caracteres - C#
+description: Saiba como funciona o interpolação de cadeia de caracteres no C# 6
 keywords: .NET, .NET Core, C#, cadeia de caracteres
 author: mgroves
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: db062ed2f832ae933941da1c49e84303090f4390
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: a9578d006861b987871071961437345c378a5b58
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="string-interpolation-in-c"></a>Interpolação de cadeia de caracteres no C# #
 
@@ -122,4 +122,4 @@ Por padrão, uma cadeia de caracteres interpolada usa a cultura atual. Para usar
 
 ## <a name="conclusion"></a>Conclusão 
 
-Neste tutorial, você aprendeu como usar recursos de interpolação de cadeia de caracteres de C# 6. Ele é basicamente uma maneira mais concisa de gravar instruções `String.Format` simples, com algumas restrições para usos mais avançados. Para obter mais informações, consulte o tópico [Cadeias de caracteres interpoladas](../../csharp//language-reference/keywords/interpolated-strings.md).
+Neste tutorial, você aprendeu como usar recursos de interpolação de cadeia de caracteres de C# 6. Ele é basicamente uma maneira mais concisa de gravar instruções `String.Format` simples, com algumas restrições para usos mais avançados. Para obter mais informações, consulte o tópico [Interpolação de cadeia de caracteres](../../csharp//language-reference/tokens/interpolated.md).

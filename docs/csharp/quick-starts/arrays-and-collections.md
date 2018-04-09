@@ -1,6 +1,6 @@
 ---
-title: "Tutorial de coleções ‒ guias de início rápido locais de C#"
-description: "Aprenda C# explorando a Coleção de lista neste tutorial."
+title: Tutorial de coleções ‒ guias de início rápido locais de C#
+description: Aprenda C# explorando a Coleção de lista neste tutorial.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/13/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 76b3baf0525c81e5b3058aa2ab6fd4ccd97d1916
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 88471c5fc60178c058f121ba5e5703999ad61030
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="c-quickstart-collections"></a>Início rápido do C#: coleções
 
@@ -54,7 +54,7 @@ Substitua `<name>` pelo seu nome. Salve **Program.cs**. Digite `dotnet run` na j
 
 Você criou uma lista de cadeias de caracteres, adicionou três nomes a essa lista e imprimiu os nomes em MAIÚSCULAS. Você está usando conceitos que aprendeu em inícios rápidos anteriores para executar um loop pela lista.
 
-O código para exibir nomes usa **cadeias de caracteres interpoladas**.  Quando você precede um `string` com o caractere `$`, pode inserir o código C# na declaração da cadeia de caracteres. A cadeia de caracteres real substitui esse código C# pelo valor gerado. Neste exemplo, ela substitui o `{name.ToUpper()}` por cada nome, convertido em letras maiúsculas, pois você chamou o método <xref:System.String.ToUpper%2A>.
+O código para exibir nomes utiliza o recurso de [interpolação de cadeia de caracteres](../language-reference/tokens/interpolated.md).  Quando você precede um `string` com o caractere `$`, pode inserir o código C# na declaração da cadeia de caracteres. A cadeia de caracteres real substitui esse código C# pelo valor gerado. Neste exemplo, ela substitui o `{name.ToUpper()}` por cada nome, convertido em letras maiúsculas, pois você chamou o método <xref:System.String.ToUpper%2A>.
 
 Vamos continuar explorando.
 

@@ -1,8 +1,10 @@
 ---
-title: "$ (Referência de C#)"
-ms.date: 02/09/2017
+title: $ – interpolação de cadeia de caracteres (Referência de C#)
+description: A interpolação de cadeia de caracteres oferece uma sintaxe mais legível e conveniente para formatar a saída de cadeia de caracteres de formatação do que a tradicional formatação composta da cadeia de caracteres.
+ms.date: 03/26/2018
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - $_CSharpKeyword
@@ -10,26 +12,86 @@ f1_keywords:
 helpviewer_keywords:
 - $ special character [C#]
 - $ language element [C#]
-ms.assetid: 7d9e21b5-eac3-4878-9530-50e4da578acd
+- string interpolation [C#]
+- interpolated string [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d245bab063721abdb930aae113aab2094553b9bb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b6873c3b419323fa9f5523143ad607289b6fd6e2
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="-c-reference"></a>$ (Referência de C#)
+# <a name="---string-interpolation-c-reference"></a>$ – interpolação de cadeia de caracteres (Referência de C#)
 
-Identifica um literal de cadeia de caracteres como uma [cadeia de caracteres interpolada](../keywords/interpolated-strings.md). Uma cadeia de caracteres interpolada é uma cadeia de caracteres semelhante ao modelo que contém texto literal juntamente com *expressões interpoladas*. Quando a cadeia de caracteres interpolada é resolvida, por exemplo em uma instrução de atribuição ou uma chamada de método, suas expressões interpoladas são substituídas por suas representações de cadeia de caracteres na cadeia de caracteres resultante. As cadeias de caracteres interpoladas são substituições para as [cadeias de caracteres de formato de composição](../../../standard/base-types/composite-format.md) com suporte pelo .NET Framework.
+O caractere especial `$` identifica um literal de cadeia de caracteres como uma *cadeia de caracteres interpolada*. Uma cadeia de caracteres interpolada é semelhante a uma cadeia de caracteres de modelo que contém *expressões interpoladas*. Quando a cadeia de caracteres interpolada é resolvida, por exemplo em uma instrução de atribuição ou uma chamada de método, as expressões interpoladas são substituídas pelas representações de cadeia de caracteres dos resultados a fim de produzir a cadeia de caracteres resultante. Este recurso está disponível no C# 6 e versões posteriores.
 
-O exemplo a seguir usa o caractere `$` para definir uma cadeia de caracteres interpolada.
+A interpolação de cadeia de caracteres é uma maneira mais legível e conveniente de criar cadeias de caracteres formatadas do que o recurso de [formatação composta de cadeia de caracteres](../../../standard/base-types/composite-formatting.md). O exemplo a seguir usa os dois recursos para produzir o mesmo resultado:
 
-[!code-csharp[interpolated-string-symbol](../../../../samples/snippets/csharp/language-reference/keywords/dollar-sign1.cs#1)]
+[!code-csharp-interactive[compare with composite formatting](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#1)]
 
-Para obter mais informações sobre cadeias de caracteres interpoladas, consulte o tópico [Cadeias de caracteres interpoladas](../keywords/interpolated-strings.md).
+> [!NOTE]
+> Você não pode ter nenhum espaço em branco entre o `$` e `"` que iniciam a cadeia de caracteres. Fazer isso causa um erro em tempo de compilação.
+
+A estrutura de um item com uma expressão interpolada é da seguinte maneira:
+
+```
+{<interpolatedExpression>[,<alignment>][:<formatString>]}
+```
+
+Os elementos entre colchetes são opcionais. A tabela a seguir descreve cada elemento.
+
+|Elemento|Descrição|
+|-------------|-----------------|
+|`interpolatedExpression`|A expressão a ser avaliada para obter um resultado a ser formatado. A representação de cadeia de caracteres do resultado `null` é <xref:System.String.Empty?displayProperty=nameWithType>.|
+|`alignment`|A expressão de constante cujo valor define o número mínimo de caracteres da representação de cadeia de caracteres do resultado da expressão interpolada. Se for positiva, a representação de cadeia de caracteres é alinhada à direita; se for negativa, será alinhada à esquerda. Para obter mais informações, consulte [Componente de alinhamento](../../../standard/base-types/composite-formatting.md#alignment-component).|
+|`formatString`|Uma cadeia de caracteres de formato, personalizada ou padrão, que seja compatível com o tipo de resultado da expressão. Para obter mais informações, consulte [Componente da cadeia de caracteres de formato](../../../standard/base-types/composite-formatting.md#format-string-component).|
+
+O exemplo a seguir usa os componentes opcionais de formatação descritos na tabela acima:
+
+[!code-csharp-interactive[specify alignment and format string](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#2)]
+
+Para incluir uma chave ("{" ou "}") no texto produzido por uma cadeia de caracteres interpolada, use duas chaves, "{{" ou "}}". Para obter mais informações, consulte [Chaves de escape](../../../standard/base-types/composite-formatting.md#escaping-braces).
+
+Como os dois-pontos (:) têm um significado especial em um item de expressão interpolada, para usar um [operador condicional](../operators/conditional-operator.md) em uma expressão interpolada, coloque essa expressão entre parênteses.
+
+O exemplo a seguir mostra como incluir uma chave na cadeia de caracteres de resultado e como usar um operador condicional em uma expressão interpolada:
+
+[!code-csharp-interactive[example with ternary conditional operator](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
+
+As cadeias de caracteres textuais interpoladas usam o caractere `$` seguido pelo caractere `@`. Para obter mais informações sobre cadeias de caracteres textuais, consulte o tópico [cadeia de caracteres](../keywords/string.md).
+
+> [!NOTE]
+> O token `$` deve aparecer antes do token `@` em uma cadeia de caracteres textual interpolada.
+
+## <a name="implicit-conversions"></a>Conversões implícitas
+
+Há três conversões de tipo implícitas de uma cadeia de caracteres interpolada:
+
+1. Conversão de uma cadeia de caracteres interpolada uma instância <xref:System.String>, que é a resolução da cadeia de caracteres interpolada com os itens da expressão interpolada que estão sendo substituídos pelas representações de seus resultados da cadeia de caracteres corretamente formatada. Essa conversão usa a cultura atual.
+
+1. Conversão de uma cadeia de caracteres interpolada em uma variável <xref:System.FormattableString>, que representa uma cadeia de caracteres de formato composto, juntamente com os resultados da expressão a ser formatada. Isso permite criar várias cadeias de caracteres de resultado com conteúdo específico da cultura com base em uma única instância <xref:System.FormattableString>. Para fazer isso, chame um dos seguintes métodos:
+
+      - Uma sobrecarga <xref:System.FormattableString.ToString> que produza uma cadeia de caracteres de resultado para a <xref:System.Globalization.CultureInfo.CurrentCulture>.
+      - Um método <xref:System.FormattableString.Invariant%2A> que produza uma cadeia de caracteres de resultado para a <xref:System.Globalization.CultureInfo.InvariantCulture>.
+      - Um método <xref:System.FormattableString.ToString(System.IFormatProvider)> que produza uma cadeia de caracteres de resultado para uma cultura específica.
+
+1. Conversão de uma cadeia de caracteres interpolada em uma variável <xref:System.IFormattable>, que também permite criar várias cadeias de caracteres de resultado com conteúdo específico da cultura com base em uma única instância <xref:System.IFormattable>.
+
+O exemplo a seguir usa a conversão implícita em <xref:System.FormattableString> para a criação de cadeias de caracteres de resultado específicas de cultura:
+
+[!code-csharp-interactive[create culture-specific result strings](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#4)]
+
+## <a name="additional-reading"></a>Leitura adicional
+
+Se você não estiver familiarizado com a interpolação de cadeia de caracteres, consulte o [guia de início rápido sobre cadeias de caracteres interpoladas](../../quick-starts//interpolated-strings.yml). Para obter mais exemplos, consulte o [tutorial de interpolação de cadeia de caracteres](../../tutorials/string-interpolation.md).
 
 ## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)  
+ <xref:System.String.Format%2A?displayProperty=nameWithType>  
+ <xref:System.FormattableString?displayProperty=nameWithType>  
+ <xref:System.IFormattable?displayProperty=nameWithType>  
+ [Formatação de composição](../../../standard/base-types/composite-formatting.md)  
+ [Cadeias de Caracteres](../../../csharp/programming-guide/strings/index.md)  
+ [Caracteres especiais de C#](../../../csharp/language-reference/tokens/index.md)  
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Caracteres especiais de C#](../../../csharp/language-reference/tokens/index.md)
+ [Referência de C#](../../../csharp/language-reference/index.md)  

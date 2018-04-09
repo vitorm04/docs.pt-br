@@ -1,5 +1,5 @@
 ---
-title: "Cadeias de caracteres de formato numérico padrão"
+title: Cadeias de caracteres de formato numérico padrão
 ms.date: 09/10/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9416bff21607d8e37f9e7dbc270477539043fe8b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f042d72c76ddbf3b5eaf8923fc747325b701c9a6
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="standard-numeric-format-strings"></a>Cadeias de caracteres de formato numérico padrão
 As cadeias de caracteres de formato numérico padrão são usadas para formatar tipos numéricos comuns. Uma cadeia de caracteres de formato numérico padrão assume o formato `Axx`, em que:  
@@ -48,7 +48,7 @@ As cadeias de caractere de formato numérico padrão têm suporte de:
  
 - O [recurso de formatação composta](../../../docs/standard/base-types/composite-formatting.md) do .NET, o qual é usado por alguns métodos `Write` e `WriteLine` das classes <xref:System.Console> e <xref:System.IO.StreamWriter>, pelo método <xref:System.String.Format%2A?displayProperty=nameWithType> e pelo método <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. O recurso de formato de composição permite a inclusão da representação da cadeia de caracteres de vários itens de dados em uma única cadeia de caracteres, para especificar a largura do campo e alinhar os números em um campo. Para obter mais informações, veja [Formatação de composição](../../../docs/standard/base-types/composite-formatting.md).  
 
-- [Cadeias de caracteres interpoladas](../../csharp/language-reference/keywords/interpolated-strings.md) em C# e Visual Basic, que fornecem uma sintaxe simplificada quando comparada a cadeias de caracteres de formato composto.
+- [Cadeias de caracteres interpoladas](../../csharp/language-reference/tokens/interpolated.md) em C# e Visual Basic, que fornecem uma sintaxe simplificada quando comparada a cadeias de caracteres de formato composto.
  
 > [!TIP]
 >  É possível baixar o [Utilitário de Formatação](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), um aplicativo que permite aplicar cadeias de caracteres de formato a valores numéricos ou de data e hora e exibir a cadeia de caracteres de resultado.  
@@ -89,6 +89,8 @@ As cadeias de caractere de formato numérico padrão têm suporte de:
      [!code-cpp[Formatting.Numeric.Standard#12](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#12)]
      [!code-csharp[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
+  
+-   Ele pode ser fornecido como o argumento `formatString` em um item de expressão interpolada de uma cadeia de caracteres interpolada. Para obter mais informações, consulte o tópico [Interpolação de cadeia de caracteres](../../csharp/language-reference/tokens/interpolated.md) na referência do C# ou o tópico [Cadeias de caracteres interpoladas](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) na referência do Visual Basic.  
   
  As seções a seguir fornecem informações detalhadas sobre cada uma das cadeias de caracteres de formato numérico padrão.  
   

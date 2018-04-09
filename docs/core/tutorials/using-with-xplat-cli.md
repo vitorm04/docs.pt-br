@@ -1,6 +1,6 @@
 ---
-title: "Introdução ao .NET Core usando a CLI"
-description: "Um tutorial passo a passo que mostra como começar a usar o .NET Core no Windows, Linux ou macOS com a CLI (interface de linha de comando) do .NET Core."
+title: Introdução ao .NET Core usando a CLI
+description: Um tutorial passo a passo que mostra como começar a usar o .NET Core no Windows, Linux ou macOS com a CLI (interface de linha de comando) do .NET Core.
 keywords: .NET Core, CLI
 author: cartermp
 ms.author: mairaw
@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
-ms.workload: dotnetcore
-ms.openlocfilehash: 544274783e8a77f55c8ec7e1da0069bf8bdf7b0b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 8587857ef0d0f48f88331d9588e7e97e3290d34c
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Introdução ao .NET Core no Windows/Linux/macOS usando a linha de comando
 
@@ -53,7 +54,7 @@ Vejamos um breve passo a passo:
    O arquivo de projeto especifica tudo o que é necessário para restaurar as dependências e compilar o programa.
 
    * A marca `OutputType` especifica que estamos copilando um executável, em outras palavras, um aplicativo de console.
-   * A marca `TargetFramework` especifica qual implementação do .NET estamos direcionando. Em um cenário avançado, você pode especificar várias estruturas de destino e compilar todos eles em uma única operação. Neste tutorial, veremos apenas a compilação para .NET Core 1.0.
+   * A marca `TargetFramework` especifica qual implementação do .NET estamos direcionando. Em um cenário avançado, você pode especificar várias estruturas de destino e compilar para todas elas em uma única operação. Neste tutorial, veremos apenas a compilação para .NET Core 1.0.
 
    `Program.cs`:
 

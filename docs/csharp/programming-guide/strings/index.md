@@ -1,5 +1,5 @@
 ---
-title: "Cadeias de caracteres (Guia de Programação em C#)"
+title: Cadeias de caracteres (Guia de Programação em C#)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-caps.latest.revision: 
+caps.latest.revision: 41
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 24b3db01047a9f9a47182e0e1ac105f69562c316
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 9478900be008588597c1dd9e75f704c751ebe344
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="strings-c-programming-guide"></a>Cadeias de caracteres (Guia de Programação em C#)
 Uma cadeia de caracteres é um objeto do tipo <xref:System.String> cujo valor é texto. Internamente, o texto é armazenado como uma coleção sequencial somente leitura de objetos <xref:System.Char>. Não há um caractere de finalização null ao fim de uma cadeia em C#. Portanto, uma cadeia de caracteres em C# pode ter qualquer número de caracteres nulos inseridos ('\0'). A propriedade `Char` de uma cadeia de caracteres representa o número de objetos <xref:System.String.Length%2A> que ela contém e não o número de caracteres Unicode. Para acessar os pontos de código Unicode individuais em uma cadeia de caracteres, use o objeto <xref:System.Globalization.StringInfo>.  
@@ -124,8 +124,7 @@ string s = String.Empty;
 |Tópico|Descrição|  
 |-----------|-----------------|  
 |[Como modificar o conteúdo de uma cadeia de caracteres](../../how-to/modify-string-contents.md)|Ilustra as técnicas para transformar cadeias de caracteres e modificar o conteúdo delas.|  
-|[Como concatenar várias cadeias de caracteres](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|Ilustra as técnicas para combinar várias cadeias de caracteres em uma única, em tempo de compilação e em tempo de execução.|  
-|[Como comparar cadeias de caracteres](../../../csharp/programming-guide/strings/how-to-compare-strings.md)|Mostra como executar comparações ordinais de cadeias de caracteres.|  
+|[Como comparar cadeias de caracteres](../../how-to/compare-strings.md)|Mostra como executar comparações ordinais e específicas da cultura de cadeias de caracteres.|  
 |[Como analisar cadeias de caracteres usando String.Split ](../../how-to/parse-strings-using-split.md)|Contém um exemplo que ilustra como usar o método `String.Split` para analisar cadeias de caracteres.|  
 |[Como pesquisar cadeias de caracteres](../../how-to/search-strings.md)|Explica como usar a pesquisa para texto específico ou padrões em cadeias de caracteres.|  
 |[Como determinar se uma cadeia de caracteres representa um valor numérico](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Mostra como analisar com segurança uma cadeia de caracteres para ver se ela tem um valor numérico válido.|  

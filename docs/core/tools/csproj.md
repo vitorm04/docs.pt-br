@@ -1,7 +1,7 @@
 ---
-title: "Adições ao formato csproj para .NET Core"
-description: "Saiba mais sobre as diferenças entre arquivos existentes e de csproj do .NET Core"
-keywords: "referência, csproj, .NET Core"
+title: Adições ao formato csproj para .NET Core
+description: Saiba mais sobre as diferenças entre arquivos existentes e de csproj do .NET Core
+keywords: referência, csproj, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: d2a318f099eaa67912c2cecd1c67ceebaee8629e
-ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
+ms.openlocfilehash: fdf91bdb24819c2d92b708e5937980ac2fb0d5fc
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adições ao formato csproj para .NET Core
 
@@ -255,7 +255,7 @@ Esses valores boolianos especificam se os assemblies de saída do build devem se
 Esse valor booliano especifica se todos os itens que têm um tipo `Content` serão incluídos automaticamente no pacote resultante. O padrão é `true`. 
 
 ### <a name="buildoutputtargetfolder"></a>BuildOutputTargetFolder
-Especifica a pasta na qual os assemblies de saída serão colocados. Os assemblies de saída (e outros arquivos de saída) são copiados para suas respectivas pastas de estrutura.
+Especifica a pasta para colocar os assemblies de saída. Os assemblies de saída (e outros arquivos de saída) são copiados para suas respectivas pastas de estrutura.
 
 ### <a name="contenttargetfolders"></a>ContentTargetFolders
 Essa propriedade especifica o local padrão para o qual todos os arquivos de conteúdo deverão ir se `PackagePath` não for especificado para eles. O valor padrão é “content;contentFiles”.

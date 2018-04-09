@@ -1,8 +1,9 @@
 ---
-title: "Tabela de formatação de resultados numéricos (Referência de C#)"
+title: Tabela de formatação de resultados numéricos (Referência de C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - formatting [C#]
@@ -10,19 +11,19 @@ helpviewer_keywords:
 - String.Format method
 - Console.Write method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: cce14d5124ffdf030701ae0fc769278da51f86cc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d389703c2d82d74760b99059201cb634849aa433
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Tabela de formatação de resultados numéricos (Referência de C#)
-Você pode formatar resultados numéricos usando o método <xref:System.String.Format%2A?displayProperty=nameWithType>, ou pelo método <xref:System.Console.Write%2A?displayProperty=nameWithType> ou <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, que chama `String.Format`. O formato é especificado usando cadeias de caracteres de formato. A tabela a seguir contém as cadeias de caracteres de formato padrão com suporte. A cadeia de caracteres de formato usa o seguinte formato: `Axx`, em que `A` é o especificador de formato e `xx` é o especificador de precisão. O especificador de formato controla o tipo de formatação aplicada ao valor numérico e o especificador de precisão controla o número de dígitos significativos ou casas decimais do resultado formatado. O valor do especificador de precisão varia de 0 a 99.  
+Você pode formatar resultados numéricos usando o método <xref:System.String.Format%2A?displayProperty=nameWithType>, por meio dos métodos <xref:System.Console.Write%2A?displayProperty=nameWithType> ou <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> que chamam `String.Format`, ou usando a [interpolação de cadeia de caracteres](../tokens/interpolated.md). O formato é especificado usando cadeias de caracteres de formato. A tabela a seguir contém as cadeias de caracteres de formato padrão com suporte. A cadeia de caracteres de formato usa o seguinte formato: `Axx`, em que `A` é o especificador de formato e `xx` é o especificador de precisão. O especificador de formato controla o tipo de formatação aplicada ao valor numérico e o especificador de precisão controla o número de dígitos significativos ou casas decimais do resultado formatado. O valor do especificador de precisão varia de 0 a 99.  
   
- Para obter mais informações sobre cadeias de caracteres de formatação padrão e personalizadas, consulte [Tipos de Formatação](../../../standard/base-types/formatting-types.md). Para obter mais informações sobre o método `String.Format`, consulte <xref:System.String.Format%2A?displayProperty=nameWithType>.  
+ Para obter mais informações sobre cadeias de caracteres de formatação padrão e personalizadas, consulte [Tipos de Formatação](../../../standard/base-types/formatting-types.md).
   
 |Especificador de Formato|Descrição|Exemplos|Saída|  
 |----------------------|-----------------|--------------|------------|  

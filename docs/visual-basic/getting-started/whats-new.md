@@ -12,14 +12,14 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: ''
+caps.latest.revision: 145
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0452a5dde3a266f5d50f69016eac8144bab9ba6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 4641041657e99fa64bf1b7eb5317a43660ac7e2b
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Novidades do Visual Basic
 
@@ -81,7 +81,7 @@ O Visual Basic 2017 agora tem suporte para o caractere de sublinhado (`_`) como 
 ```vb
 Dim number As Integer = &H_C305_F860
 ``` 
-Para usar o caractere de sublinhado como separador à esquerda, você deve adicionar o elemento a seguir ao seu projeto do Visual Basic (\*. vbproj) arquivo:
+Para usar o caractere de sublinhado como um separador à esquerda, você deve adicionar o seguinte elemento ao arquivo de projeto (\*.vbproj) do Visual Basic:
 
 ```xml
 <PropertyGroup>
@@ -99,7 +99,7 @@ Quando você atribui o valor de elementos de tupla com base em variáveis, o Vis
 
 **Opções adicionais do compilador**  
 
-O compilador de linha de comando agora oferece suporte do Visual Basic a [ **- refout** ](../reference/command-line-compiler/refout-compiler-option.md) e [ **- refonly** ](../reference/command-line-compiler/refonly-compiler-option.md) opções do compilador para controlar a saída de assemblies de referência. **-refout** define o diretório de saída do assembly de referência, e **- refonly** Especifica que somente uma referência de assembly para a saída pela compilação.
+O compilador de linha de comando do Visual Basic agora é compatível com as opções do compilador [**-refout**](../reference/command-line-compiler/refout-compiler-option.md) e [**-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) para controlar a saída de assemblies de referência. A **-refout** define o diretório de saída do assembly de referência e a **-refonly** especifica que somente um assembly de referência deve ser produzido pela compilação.
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
@@ -154,7 +154,7 @@ Para obter mais informações, consulte [Reference return values](../programming
 [Nameof](../../csharp/language-reference/keywords/nameof.md)  
  Você pode obter o nome da cadeia de caracteres não qualificada de um tipo ou de um membro para uso em uma mensagem de erro sem realizar hard-coding de uma cadeia de caracteres.  Isso permite que seu código permaneça correto ao refatorar.  Esse recurso também é útil para conectar links MVC do tipo modelo-exibição-controlador e acionar eventos de alteração de propriedade.  
   
-[Interpolação de cadeia de caracteres](../../csharp/language-reference/keywords/interpolated-strings.md)  
+[Interpolação de cadeia de caracteres](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  Você pode usar expressões de interpolação de cadeia de caracteres para construir cadeias de caracteres.  Uma expressão de cadeia de caracteres interpolada é semelhante a uma cadeia de caracteres de modelo que contém expressões.  Uma cadeia de caracteres interpolada é mais fácil de entender, em relação aos argumentos, do que a [formatação de composição](../../standard/base-types/composite-format.md).  
   
 [Acesso de membro nulo condicional e indexação](../../csharp/language-reference/operators/null-conditional-operators.md)  

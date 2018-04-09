@@ -1,12 +1,13 @@
 ---
-title: "Como o tempo de execução localiza assemblies"
-ms.custom: 
+title: Como o tempo de execução localiza assemblies
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - app.config files, assembly locations
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 97a56a095c1b0c080cd3df329fce0085dd01af23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6e154e0658534018ccd1086631cad6d350528b5d
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Como o tempo de execução localiza assemblies
 Para implantar seu aplicativo .NET Framework com êxito, você deve entender como o Common Language Runtime localiza e associa aos assemblies que compõem seu aplicativo. Por padrão, o tempo de execução tenta associar com a versão exata de um assembly com o qual o aplicativo foi criado. Esse comportamento padrão pode ser substituído pelas configurações do arquivo de configuração.  
@@ -187,7 +189,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   Nome, que é o nome do assembly referenciado.  
   
--   O atributo `privatePath` do elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), que é a lista de subdiretórios definidos pelo usuário no local raiz. Esse local pode ser especificado no arquivo de configuração de aplicativo e no código gerenciado usando a propriedade <xref:System.AppDomain.AppendPrivatePath%2A> para um domínio do aplicativo. Quando especificado no código gerenciado, o código gerenciado `privatePath` é analisado primeiro, seguido pelo caminho especificado no arquivo de configuração de aplicativo.  
+-   O atributo `privatePath` do elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), que é a lista de subdiretórios definidos pelo usuário no local raiz. Esse local pode ser especificado no arquivo de configuração de aplicativo e no código gerenciado usando a propriedade <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> para um domínio do aplicativo. Quando especificado no código gerenciado, o código gerenciado `privatePath` é analisado primeiro, seguido pelo caminho especificado no arquivo de configuração de aplicativo.  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>Investigando a base de aplicativo e os diretórios de cultura  
  O tempo de execução sempre começa investigando a base do aplicativo, que pode ser uma URL ou diretório da raiz do aplicativo em um computador. Se o assembly referenciado não for encontrado na base de aplicativo e nenhuma informação de cultura for fornecida, o tempo de execução pesquisará todos os subdiretórios com o nome do assembly. Os diretórios investigados incluem:  
@@ -254,7 +256,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="other-locations-probed"></a>Outros locais investigados  
  O local do assembly também pode ser determinado usando o contexto de associação atual. Isso normalmente ocorre quando o método <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> é usado e em cenários de interoperabilidade COM. Se um assembly usa o método <xref:System.Reflection.Assembly.LoadFrom%2A> para referenciar outro assembly, o local do assembly de chamada é considerado uma dica de onde encontrar o assembly referenciado. Se uma correspondência for encontrada, esse assembly será carregado. Se nenhuma correspondência for encontrada, o tempo de execução continuará com sua semântica de pesquisa e, em seguida, consultará o Windows Installer para fornecer o assembly. Se não for fornecido nenhum assembly correspondente à solicitação de associação, uma exceção será gerada. Essa exceção será uma <xref:System.TypeLoadException> no código gerenciado se um tipo tiver sido referenciado ou uma <xref:System.IO.FileNotFoundException> se um assembly sendo carregado não tiver sido encontrado.  
   
- Por exemplo, se Assembly1 fizer referência a Assembly2 e Assembly1 tiver sido baixado de http://www.code.microsoft.com/utils, esse local será considerado uma dica sobre onde encontrar o Assembly2.dll. O tempo de execução investiga o assembly em http://www.code.microsoft.com/utils/Assembly2.dll e http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll. Se Assembly2 não for encontrado em um desses locais, o tempo de execução de consultará o Windows Installer.  
+ Por exemplo, se o Assembly1 fizer referência ao Assembly2 e o Assembly1 tiver sido baixado de http://www.code.microsoft.com/utils, esse local será considerado uma dica sobre onde encontrar o Assembly2.dll. Em seguida, o tempo de execução procura pelo assembly em http://www.code.microsoft.com/utils/Assembly2.dll e http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll. Se Assembly2 não for encontrado em um desses locais, o tempo de execução de consultará o Windows Installer.  
   
 ## <a name="see-also"></a>Consulte também  
  [Práticas recomendadas para carregamento de assemblies](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  

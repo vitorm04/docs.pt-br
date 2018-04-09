@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5840c2f7692d81f193c7d659aea6eb42a431369e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: af6a6b73c790577cebf301075f2ff7e90960ea62
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventos de domínio: design e implementação
 
@@ -76,7 +76,7 @@ Conforme mostrado na Figura 9-15, começando pelo mesmo evento de domínio, voc�
 
 **Figura 9-15**. Manipulando várias ações por domínio
 
-Os manipuladores de eventos normalmente ficam na camada de aplicativo, porque você usará objetos de infraestrutura, como repositórios, ou uma API de aplicativo para o comportamento do microsserviço. Nesse sentido, os manipuladores de eventos são semelhantes aos manipuladores de comandos, portanto, ambos fazem parte da camada de aplicativo. A diferença importante é que um comando deve ser processado apenas uma vez. Um evento de domínio pode ser processada zero ou *n* vezes, porque se pode ser recebido por vários receptores ou manipuladores de eventos com uma finalidade diferente para cada manipulador.
+Os manipuladores de eventos normalmente ficam na camada de aplicativo, porque você usará objetos de infraestrutura, como repositórios, ou uma API de aplicativo para o comportamento do microsserviço. Nesse sentido, os manipuladores de eventos são semelhantes aos manipuladores de comandos, portanto, ambos fazem parte da camada de aplicativo. A diferença importante é que um comando deve ser processado apenas uma vez. Um evento de domínio pode ser processado zero ou *n* vezes, porque ele pode ser recebido por vários destinatários ou manipuladores de eventos, com uma finalidade diferente para cada manipulador.
 
 A possibilidade de um número indefinido de manipuladores por evento de domínio permite que você adicione muitas outras regras de domínio sem afetar seu código atual. Por exemplo, a implementação da seguinte regra de negócios, que deve ocorrer logo após um evento, poderá ser tão fácil quanto adicionar alguns manipuladores de eventos (ou apenas um):
 
@@ -89,13 +89,13 @@ No C#, um evento de domínio é simplesmente uma classe ou estrutura de retenç�
 ```csharp
 public class OrderStartedDomainEvent : INotification
 {
-    public string UserId { get; private set; }
-    public int CardTypeId { get; private set; }
-    public string CardNumber { get; private set; }
-    public string CardSecurityNumber { get; private set; }
-    public string CardHolderName { get; private set; }
-    public DateTime CardExpiration { get; private set; }
-    public Order Order { get; private set; }
+    public string UserId { get; }
+    public int CardTypeId { get; }
+    public string CardNumber { get; }
+    public string CardSecurityNumber { get; }
+    public string CardHolderName { get; }
+    public DateTime CardExpiration { get; }
+    public Order Order { get; }
 
     public OrderStartedDomainEvent(Order order,
                                    int cardTypeId, string cardNumber,
@@ -337,37 +337,37 @@ Conforme mencionado, use eventos de domínio para implementar explicitamente os 
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
--   **Greg Young. O que é um evento de domínio?**
+-   **Greg Young. O que é um Evento de domínio?**
     [*http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/*](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)
 
--   **Jan Stenberg. Eventos de domínio e a consistência Eventual**
+-   **Jan Stenberg. Eventos de domínio e Consistência eventual**
     [*https://www.infoq.com/news/2015/09/domain-events-consistency*](https://www.infoq.com/news/2015/09/domain-events-consistency)
 
 -   **Jimmy Bogard. Um padrão de eventos de domínio melhor**
     [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
--   **Vaughn Vernon. Efetivo agregação Design parte II: Fazendo agregações trabalho juntos**
-    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_artigos/Vernon\_2011\_2. pdf*](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
+-   **Vaughn Vernon. Design de agregação efetivo parte II: fazendo agregações trabalharem juntas**
+    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
--   **Jimmy Bogard. Reforçar a seu domínio: eventos de domínio**
+-   **Jimmy Bogard. Reforçando seu domínio: eventos de domínio**
     *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/> *
 
 -   **Tony Truong. Exemplo de padrão de eventos de domínio**
     [*http://www.tonytruong.net/domain-events-pattern-example/*](http://www.tonytruong.net/domain-events-pattern-example/)
 
--   **Udi Dahan. Como criar totalmente encapsulado modelos de domínio**
+-   **Udi Dahan. Como criar modelos de domínio totalmente encapsulados**
     [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
 
--   **Udi Dahan. Eventos de domínio – demorar 2**
+-   **Udi Dahan. Eventos de domínio – 2º ato**
     [*http://udidahan.com/2008/08/25/domain-events-take-2/*](http://udidahan.com/2008/08/25/domain-events-take-2/%20)
 
 -   **Udi Dahan. Eventos de domínio – salvação**
     [*http://udidahan.com/2009/06/14/domain-events-salvation/*](http://udidahan.com/2009/06/14/domain-events-salvation/)
 
--   **Jan Kronquist. Não publicar eventos de domínio, retorne-as!**
+-   **Jan Kronquist. Não publique eventos de domínio, devolva-os!**
     [*https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/*](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)
 
--   **Cesar de la Torre. Domain Events vs. Eventos de integração em arquiteturas DDD e microservices**
+-   **Cesar de la Torre. Domain Events vs. Eventos de integração em DDD e arquiteturas de microsserviços**
     [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/)
 
 

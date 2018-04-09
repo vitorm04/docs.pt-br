@@ -1,6 +1,6 @@
 ---
-title: "Tutorial sobre cadeias de caracteres interpoladas – guias de início rápido de C#"
-description: "Neste guia de início rápido sobre cadeias de caracteres interpoladas, você escreve código em C# para incluir o resultado de uma expressão em uma cadeia de caracteres maior."
+title: Tutorial sobre cadeias de caracteres interpoladas – guias de início rápido de C#
+description: Neste guia de início rápido sobre cadeias de caracteres interpoladas, você escreve código em C# para incluir o resultado de uma expressão em uma cadeia de caracteres maior.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 01/11/2018
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: b6089b69eb350fce29f86f19f5abeb44acb4b6b4
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 1edd2b9f59d1933547c4152343f226a86ad90216
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="interpolated-strings"></a>Cadeias de caracteres interpoladas
 
@@ -166,5 +166,4 @@ Você concluiu o guia de início rápido de cadeias de caracteres interpoladas.
     
 Continue com o início rápido [Matrizes e coleções](arrays-and-collections.md) em seu próprio ambiente de desenvolvimento.
 
-Você pode aprender mais sobre como trabalhar com cadeias de caracteres interpoladas no tópico [Cadeias de caracteres interpoladas](../language-reference/keywords/interpolated-strings.md) na referência do C#.
-
+Saiba mais sobre cadeias de caracteres interpoladas no tópico [Interpolação de cadeia de caracteres](../language-reference/tokens/interpolated.md) na Referência do C#.
