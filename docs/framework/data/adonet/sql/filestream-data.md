@@ -1,24 +1,26 @@
 ---
 title: Dados FILESTREAM
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 898fb6072742c745e7e86d2ea543803dc65ae014
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: e25f6dceb6018b719a0a8a07822b20d85a08a012
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="filestream-data"></a>Dados FILESTREAM
 O atributo de armazenamento FILESTREAM é usado para dados binários BLOB armazenados em uma coluna varbinary(max). Antes do FILESTREAM, armazenar dados binários exigia procedimentos especiais. Os dados não estruturados, como documentos de texto, imagens e vídeo, geralmente são armazenados fora do banco de dados, o que os torna difíceis de serem gerenciados.  
@@ -160,7 +162,7 @@ namespace FileStreamTest
                         string path = reader.GetString(0);  
                         byte[] transactionContext = reader.GetSqlBytes(1).Buffer;  
   
-                        using (Stream fileStream = new SqlFileStream(path, transactionContext, FileAccess.Write, FileOptions.SequentialScan, allocationSize: 0))  
+                        using (Stream fileStream = new SqlFileStream(path, transactionContext, FileAccess.ReadWrite, FileOptions.SequentialScan, allocationSize: 0))  
                         {  
                             // Seek to the end of the file  
                             fileStream.Seek(0, SeekOrigin.End);  
@@ -175,42 +177,7 @@ namespace FileStreamTest
   
         }  
     }  
-} using (SqlConnection connection = new SqlConnection(  
-    connStringBuilder.ToString()))  
-{  
-    connection.Open();  
-  
-    SqlCommand command = new SqlCommand("", connection);  
-    command.CommandText = "select Top(1) Photo.PathName(), "  
-    + "GET_FILESTREAM_TRANSACTION_CONTEXT () from employees";  
-  
-    SqlTransaction tran = connection.BeginTransaction(  
-        System.Data.IsolationLevel.ReadCommitted);  
-    command.Transaction = tran;  
-  
-    using (SqlDataReader reader = command.ExecuteReader())  
-    {  
-        while (reader.Read())  
-        {  
-            // Get the pointer for file  
-            string path = reader.GetString(0);  
-            byte[] transactionContext = reader.GetSqlBytes(1).Buffer;  
-  
-            FileStream fileStream = new SqlFileStream(path,  
-                (byte[])reader.GetValue(1),  
-                FileAccess.ReadWrite,  
-                FileOptions.SequentialScan, 0);  
-  
-            // Seek to the end of the file  
-            fs.Seek(0, SeekOrigin.End);  
-  
-            // Append a single byte   
-            fileStream.WriteByte(0x01);  
-            fileStream.Close();  
-        }  
-    }  
-    tran.Commit();  
-}  
+}
 ```  
   
  Para obter outro exemplo, consulte [como armazenar e buscar os dados binários em uma coluna de fluxo de arquivo](http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).  

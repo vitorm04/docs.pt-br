@@ -1,7 +1,7 @@
 ---
-title: "Lidando com a complexidade de negócios em um microsserviço com padrões DDD e CQRS"
-description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Lidando com a complexidade de negócios em um microsserviço com padrões DDD e CQRS"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Lidando com a complexidade de negócios em um microsserviço com padrões DDD e CQRS
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Lidando com a complexidade de negócios em um microsserviço com padrões DDD e CQRS
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

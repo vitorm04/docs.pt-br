@@ -1,7 +1,7 @@
 ---
-title: "Tratamento de exceções (F#)"
-description: "Conheça os fundamentos da manipulação de exceção no F # e encontrar links para expressões e funções de manipulação de exceção."
-keywords: "visual f#, f#, programação funcional"
+title: Tratamento de exceções (F#)
+description: 'Conheça os fundamentos da manipulação de exceção no F # e encontrar links para expressões e funções de manipulação de exceção.'
+keywords: visual f#, f#, programação funcional
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

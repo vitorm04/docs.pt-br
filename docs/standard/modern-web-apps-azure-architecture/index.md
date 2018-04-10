@@ -1,6 +1,6 @@
 ---
 title: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure
-description: "Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | Introdução"
+description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | Introdução
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017

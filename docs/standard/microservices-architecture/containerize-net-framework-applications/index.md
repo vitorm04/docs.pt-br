@@ -1,7 +1,7 @@
 ---
-title: "Migrando aplicativos monolíticos herdados do Framework .NET para contêineres do Windows"
-description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Migrando aplicativos monolíticos herdados do Framework .NET para contêineres do Windows"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Migrando aplicativos monolíticos herdados do Framework .NET para contêineres do Windows
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Migrando aplicativos monolíticos herdados do Framework .NET para contêineres do Windows
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

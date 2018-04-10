@@ -1,12 +1,13 @@
 ---
-title: '&lt;legacyImpersonationPolicy&gt; elemento'
-ms.custom: 
+title: '&lt;legacyImpersonationPolicy&gt; Element'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#legacyImpersonationPolicy
@@ -15,23 +16,24 @@ helpviewer_keywords:
 - <legacyImpersonationPolicy> element
 - legacyImpersonationPolicy element
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: caeede11d8128af00beb5b1b3426e8c4a5406520
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9a50ad06026b6ef2f819abefc22016aee29f8ab5
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="ltlegacyimpersonationpolicygt-element"></a>&lt;legacyImpersonationPolicy&gt; elemento
+# <a name="ltlegacyimpersonationpolicygt-element"></a>&lt;legacyImpersonationPolicy&gt; Element
 Especifica que a identidade do Windows não flua entre pontos assíncronos, independentemente das configurações de fluxo para o contexto de execução no thread atual.  
   
  \<configuration>  
-\<tempo de execução >  
-\<legacyImpersonationPolicy >  
+\<runtime>  
+\<legacyImpersonationPolicy>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,8 +55,8 @@ Especifica que a identidade do Windows não flua entre pontos assíncronos, inde
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`false`|<xref:System.Security.Principal.WindowsIdentity>fluxos pelos pontos assíncronos, dependendo do modo de <xref:System.Threading.ExecutionContext> fluxo configurações para o thread atual. Esse é o padrão.|  
-|`true`|<xref:System.Security.Principal.WindowsIdentity>fluxo não pelos pontos assíncronos, independentemente do <xref:System.Threading.ExecutionContext> fluxo configurações no thread atual.|  
+|`false`|<xref:System.Security.Principal.WindowsIdentity> fluxos pelos pontos assíncronos, dependendo do modo de <xref:System.Threading.ExecutionContext> fluxo configurações para o thread atual. Esse é o padrão.|  
+|`true`|<xref:System.Security.Principal.WindowsIdentity> fluxo não pelos pontos assíncronos, independentemente do <xref:System.Threading.ExecutionContext> fluxo configurações no thread atual.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -93,8 +95,8 @@ Especifica que a identidade do Windows não flua entre pontos assíncronos, inde
   
  ASP.NET por padrão desabilita o fluxo de representação no arquivo ASPNET usando as seguintes configurações:  
   
-```  
-configuration>  
+``` xml
+<configuration>  
    <runtime>  
       <legacyImpersonationPolicy enabled="true"/>  
       <alwaysFlowImpersonationPolicy enabled="false"/>  
@@ -127,4 +129,4 @@ configuration>
 ## <a name="see-also"></a>Consulte também  
  [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<alwaysFlowImpersonationPolicy > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)
+ [\<alwaysFlowImpersonationPolicy> Element](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)

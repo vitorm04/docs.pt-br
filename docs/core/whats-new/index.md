@@ -1,6 +1,6 @@
 ---
 title: Novidades do .NET Core 2.0
-description: "Conheça os novos recursos encontrados no .NET Core."
+description: Conheça os novos recursos encontrados no .NET Core.
 keywords: .NET, .NET Core
 author: rpetrusha
 ms.author: ronpet

@@ -1,7 +1,7 @@
 ---
 title: Processo de desenvolvimento de aplicativos baseados no Docker
-description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Processo de desenvolvimento de aplicativos baseados no Docker"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Processo de desenvolvimento de aplicativos baseados no Docker
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017

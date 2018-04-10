@@ -1,7 +1,7 @@
 ---
-title: "Escolhendo entre o .NET Core e do .NET Framework para contêineres do Docker"
-description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Escolhendo entre o .NET Core e do .NET Framework para contêineres do Docker"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Escolhendo entre o .NET Core e do .NET Framework para contêineres do Docker
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Escolhendo entre o .NET Core e do .NET Framework para contêineres do Docker
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

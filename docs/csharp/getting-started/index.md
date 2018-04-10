@@ -1,7 +1,7 @@
 ---
-title: "Guia de introdução – Guia do C#"
-description: "Localize tutoriais curtos e simples que permitem que você aprenda rapidamente os conceitos básicos de C# e como escrever aplicativos .NET Core."
-keywords: "C#, Introdução, Aquisição, Instalação"
+title: Guia de introdução – Guia do C#
+description: Localize tutoriais curtos e simples que permitem que você aprenda rapidamente os conceitos básicos de C# e como escrever aplicativos .NET Core.
+keywords: C#, Introdução, Aquisição, Instalação
 helpviewer_keywords:
 - Visual C#, getting started
 - getting started, Visual C#
@@ -12,11 +12,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 002c0e35bc8dfb54fc081fcb70000c9c61eb5fcc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f335ee1412932043b175aa49b29ecd360d447eb9
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-started-with-c"></a>Introdução ao C# #
 
@@ -43,10 +43,6 @@ Os seguintes tópicos estão disponíveis:
    O Visual Studio Code é um editor de código gratuito e otimizado para compilação e depuração de aplicativos Web e de nuvem modernos. Ele dá suporte ao IntelliSense e está disponível para Windows, Linux e macOS.
 
    Este tópico mostra como criar e executar um aplicativo Olá, Mundo simples com o código do Visual Studio e do .NET Core.
-
-* [Recursos adicionais para programadores de Visual C#](additional-resources.md)
-
-   Fornece links para sites e grupos de notícias que podem ajudá-lo a encontrar respostas para problemas comuns.
 
 ## <a name="related-sections"></a>Seções relacionadas
 

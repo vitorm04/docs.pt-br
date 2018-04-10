@@ -1,7 +1,7 @@
 ---
-title: "Referência da linguagem F#"
-description: "Encontre F # informações de recurso idioma dessa referência para tokens de linguagem, conceitos, tipos, expressões e tópicos de suporte para compilador construção."
-keywords: "visual f#, f#, programação funcional"
+title: Referência da linguagem F#
+description: 'Encontre F # informações de recurso idioma dessa referência para tokens de linguagem, conceitos, tipos, expressões e tópicos de suporte para compilador construção.'
+keywords: visual f#, f#, programação funcional
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

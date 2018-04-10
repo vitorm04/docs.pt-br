@@ -1,20 +1,20 @@
 ---
-title: "Operadores aritméticos (F#)"
-description: "Saiba mais sobre os operadores aritméticos que estão disponíveis no F # linguagem de programação."
-keywords: "visual f#, f#, programação funcional"
+title: Operadores aritméticos (F#)
+description: 'Saiba mais sobre os operadores aritméticos que estão disponíveis no F # linguagem de programação.'
+keywords: visual f#, f#, programação funcional
 author: cartermp
 ms.author: phcart
-ms.date: 05/16/2016
+ms.date: 04/04/2018
 ms.topic: language-reference
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 75ddcfa3-564e-4382-80a3-f9da73d0f0ea
-ms.openlocfilehash: 237b97c24f207b3a9b4661d66f029f1b18b8fec7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8f11e77457bed40cff081a73181689610871e654
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="arithmetic-operators"></a>Operadores aritméticos
 
@@ -25,12 +25,12 @@ A tabela a seguir resume os operadores aritméticos binários que estão dispon�
 
 |Operador binário|Observações|
 |---------------|-----|
-|`+`(adição, além de)|Não verificado. Possível condição de estouro quando os números são adicionados juntos e a soma excede o valor absoluto máximo suportado pelo tipo.|
-|`-`(subtração, sinal de subtração)|Não verificado. Quando são subtraídos tipos não assinados, ou quando valores de ponto flutuante são muito pequenos para ser representado pelo tipo de condição possível estouro.|
-|`*`(multiplicação, horas)|Não verificado. Possível condição de estouro quando os números forem multiplicados e o produto excede o valor absoluto máximo suportado pelo tipo.|
-|`/`(divisão, dividido pelo)|Divisão por zero faz com que um <xref:System.DivideByZeroException> para tipos integrais. Para tipos de ponto flutuantes, divisão por zero fornece os valores de ponto flutuantes especiais `+Infinity` ou `-Infinity`. Também há uma condição de estouro negativo possível quando um número de ponto flutuante é muito pequeno para ser representado pelo tipo.|
-|`%`(módulo, mod)|Retorna o resto de uma operação de divisão. O sinal do resultado é o mesmo que a entrada do primeiro operando.|
-|`**`(exponenciação, a potência de)|Possível condição de estouro quando o resultado excede o máximo valor absoluto para o tipo.<br /><br />O operador de exponenciação só funciona com tipos de ponto flutuante.|
+|`+` (adição, além de)|Não verificado. Possível condição de estouro quando os números são adicionados juntos e a soma excede o valor absoluto máximo suportado pelo tipo.|
+|`-` (subtração, sinal de subtração)|Não verificado. Quando são subtraídos tipos não assinados, ou quando valores de ponto flutuante são muito pequenos para ser representado pelo tipo de condição possível estouro.|
+|`*` (multiplicação, horas)|Não verificado. Possível condição de estouro quando os números forem multiplicados e o produto excede o valor absoluto máximo suportado pelo tipo.|
+|`/` (divisão, dividido pelo)|Divisão por zero faz com que um <xref:System.DivideByZeroException> para tipos integrais. Para tipos de ponto flutuantes, divisão por zero fornece os valores de ponto flutuantes especiais `+Infinity` ou `-Infinity`. Também há uma condição de estouro negativo possível quando um número de ponto flutuante é muito pequeno para ser representado pelo tipo.|
+|`%` (restante, rem)|Retorna o resto de uma operação de divisão. O sinal do resultado é o mesmo que a entrada do primeiro operando.|
+|`**` (exponenciação, a potência de)|Possível condição de estouro quando o resultado excede o máximo valor absoluto para o tipo.<br /><br />O operador de exponenciação só funciona com tipos de ponto flutuante.|
 
 ## <a name="summary-of-unary-arithmetic-operators"></a>Resumo de operadores aritméticos unários
 A tabela a seguir resume os operadores aritméticos unários que estão disponíveis para tipos integrais e de ponto flutuantes.
@@ -38,8 +38,8 @@ A tabela a seguir resume os operadores aritméticos unários que estão disponí
 
 |Operador unário|Observações|
 |--------------|-----|
-|`+`(positivo)|Podem ser aplicadas a qualquer expressão aritmética. Não alterar o sinal do valor.|
-|`-`(negação, negativa)|Podem ser aplicadas a qualquer expressão aritmética. Altera o sinal do valor.|
+|`+` (positivo)|Podem ser aplicadas a qualquer expressão aritmética. Não alterar o sinal do valor.|
+|`-` (negação, negativa)|Podem ser aplicadas a qualquer expressão aritmética. Altera o sinal do valor.|
 É o comportamento no estouro ou estouro negativo para tipos integrais ao redor. Isso faz com que um resultado incorreto. Estouro de inteiro é um problema potencialmente grave que pode contribuir para problemas de segurança quando o software não é gravado para a conta para ele. Se isso for uma preocupação para seu aplicativo, considere o uso de operadores de verificação no `Microsoft.FSharp.Core.Operators.Checked`.
 
 
@@ -52,12 +52,12 @@ Números de ponto flutuante nunca devem ser comparados diretamente de igualdade,
 
 |Operador|Observações|
 |--------|-----|
-|`=`(igualdade, igual a)|Isso não é um operador de atribuição. Ele é usado apenas para comparação. Este é um operador genérico.|
-|`>`(maior que)|Este é um operador genérico.|
-|`<`(menor que)|Este é um operador genérico.|
-|`>=`(maior que ou igual a)|Este é um operador genérico.|
-|`<=`(menor que ou igual a)|Este é um operador genérico.|
-|`<>`(não igual)|Este é um operador genérico.|
+|`=` (igualdade, igual a)|Isso não é um operador de atribuição. Ele é usado apenas para comparação. Este é um operador genérico.|
+|`>` (maior que)|Este é um operador genérico.|
+|`<` (menor que)|Este é um operador genérico.|
+|`>=` (maior que ou igual a)|Este é um operador genérico.|
+|`<=` (menor que ou igual a)|Este é um operador genérico.|
+|`<>` (não igual)|Este é um operador genérico.|
 
 ## <a name="overloaded-and-generic-operators"></a>Operadores sobrecarregados e genéricos
 Todos os operadores discutidos neste tópico são definidos no **Microsoft.FSharp.Core.Operators** namespace. Alguns dos operadores são definidas usando os parâmetros de tipo resolvidos estaticamente. Isso significa que há definições individuais para cada tipo específico que funcione com esse operador. Todos os operadores aritméticos e bit a bit binários e unário estão nessa categoria. Os operadores de comparação são genéricos e, portanto, trabalhar com qualquer tipo, não apenas aritméticos primitivos. União discriminada e tipos de registro tem suas próprias implementações personalizadas que são geradas pelo compilador F #. Tipos de classe usam o método <xref:System.Object.Equals%2A>.

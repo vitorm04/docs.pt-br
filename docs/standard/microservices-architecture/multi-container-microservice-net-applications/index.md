@@ -1,7 +1,7 @@
 ---
-title: "Projetando e desenvolvendo aplicativos .NET baseados em microsserviço e em vários contêineres"
-description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Projetando e desenvolvendo aplicativos .NET baseados em microsserviço e em vários contêineres"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Projetando e desenvolvendo aplicativos .NET baseados em microsserviço e em vários contêineres
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Projetando e desenvolvendo aplicativos .NET baseados em microsserviço e em vários contêineres
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

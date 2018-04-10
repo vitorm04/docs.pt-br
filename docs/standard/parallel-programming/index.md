@@ -1,28 +1,28 @@
 ---
-title: "Parallel Programming in .NET (Programação paralela no .NET)"
-ms.custom: 
+title: Parallel Programming in .NET (Programação paralela no .NET)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
-caps.latest.revision: 
+caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 554de5d65929afc03b57bdc604ceeb6ac35362d4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c0ea65b0a61719c85ab1da53bcc99f5d43a3210b
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="parallel-programming-in-net"></a>Parallel Programming in .NET (Programação paralela no .NET)
 Muitos computadores pessoais e estações de trabalho possuem dois ou quatro núcleos (ou seja, CPUs) que permite a execução de vários threads ao mesmo tempo. Em um futuro próximo, espera-se que os computadores possuam um número de núcleos significativamente maior. Para tirar proveito do hardware de hoje e do futuro, você pode paralelizar seu código para distribuir o trabalho entre vários processadores. No passado, a paralelização exigia a manipulação em baixo nível de threads e de bloqueios. O [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] e o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] aprimoram o suporte à programação paralela fornecendo um novo tempo de execução, novos tipos de biblioteca de classes e novas ferramentas de diagnóstico. Esses recursos simplificam o desenvolvimento paralelo para que você possa escrever código paralelo eficiente, refinado e dimensionável em uma linguagem natural sem precisar trabalhar diretamente com threads ou o pool de threads. A ilustração a seguir oferece uma visão geral de alto nível da arquitetura de programação em paralelo do [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
@@ -43,5 +43,5 @@ Muitos computadores pessoais e estações de trabalho possuem dois ou quatro nú
 |[Para leitura adicional](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|Fornece links para documentação adicional e recursos de exemplo para a programação paralela no .NET Framework.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Padrões para programação paralela: noções básicas e aplicação de padrões paralelos com o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=185142)  
+ [Padrões para programação paralela: noções básicas e aplicação de padrões paralelos com o .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)  
  [Amostras de programação paralela com o .NET Framework](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

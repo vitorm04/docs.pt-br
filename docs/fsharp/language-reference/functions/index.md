@@ -1,7 +1,7 @@
 ---
-title: "Funções (F#)"
-description: "Saiba mais sobre funções em F # e como F # oferece suporte a construções de programação funcionais comuns."
-keywords: "visual f#, f#, programação funcional"
+title: Funções (F#)
+description: 'Saiba mais sobre funções em F # e como F # oferece suporte a construções de programação funcionais comuns.'
+keywords: visual f#, f#, programação funcional
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

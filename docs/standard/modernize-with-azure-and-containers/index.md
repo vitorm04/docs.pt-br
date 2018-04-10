@@ -1,6 +1,6 @@
 ---
-title: "Modernizar os aplicativos existentes do .NET com a nuvem do Azure e Contêineres do Windows"
-description: "Saiba como comparar e deslocar aplicativos existentes para a nuvem do Azure e os contêineres com este livro eletrônico."
+title: Modernizar os aplicativos existentes do .NET com a nuvem do Azure e Contêineres do Windows
+description: Saiba como comparar e deslocar aplicativos existentes para a nuvem do Azure e os contêineres com este livro eletrônico.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017

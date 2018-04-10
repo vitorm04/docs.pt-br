@@ -1,7 +1,7 @@
 ---
-title: "Introdução à plataforma e ferramentas da Microsoft para aplicativos em contêineres"
-description: "Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Introdução à plataforma e ferramentas da Microsoft para aplicativos em contêineres
+description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017

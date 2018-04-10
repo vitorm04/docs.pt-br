@@ -1,10 +1,8 @@
 ---
 title: '&lt;AppContextSwitchOverrides&gt; elemento'
 ms.custom: ''
-ms.date: 01/08/2018
+ms.date: 03/28/2018
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-bcl
 - dotnet-clr
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71888febdc42f0ee65bdcd55a761700eda065bc1
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a17d67a1c6143897802bb15b983a9a909fd5949c
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; elemento
 Define uma ou mais opções usadas pela classe <xref:System.AppContext> para fornecer um mecanismo de recusa de uma nova funcionalidade.  
@@ -94,6 +91,7 @@ Define uma ou mais opções usadas pela classe <xref:System.AppContext> para for
 |`Switch.System.Net.`<br/>`DontEnableSystemDefaultTlsVersions`|Desabilita versões SystemDefault TLS reverter para um padrão de Tls12, Tls11, Tls.|.NET Framework 4.7|
 |`Switch.System.Net.`<br/>`DontEnableTlsAlerts`|Desabilita os alertas do SslStream TLS do lado do servidor.|.NET Framework 4.7|
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |Controla se o [DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer) serializa alguns caracteres de controle com base nos padrões do ECMAScript V6 e V8. Para obter mais informações, consulte [Mitigação: serialização de caracteres de controle com o DataContractJsonSerializer](Mitigation:%20Serialization%20of%20Control%20Characters%20with%20the%20DataContractJsonSerializer.md)| .NET Framework 4.7 |
+|`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|Controla se o <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> suporta vários ajustes ou apenas um único ajuste para um fuso horário. Se `true`, ele usa o <xref:System.TimeZoneInfo> tipo para serializar e desserializar dados de data e hora; caso contrário, ele usa o <xref:System.TimeZone> tipo, que não dá suporte a várias regras de ajuste.|.NET Framework 4.6.2|
 |`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|Controla se o <xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> construtor define o novo objeto <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> propriedade com uma referência de objeto existente. Para saber mais, confira [Mitigation: ClaimsIdentity Constructor](~/docs/framework/migration-guide/mitigation-claimsidentity-constructor.md) (Mitigação: construtor ClaimsIdentity).|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|Controla se a tentativa de reutilizar um <xref:System.Security.Cryptography.AesCryptoServiceProvider> descriptografador gera um <xref:System.Security.Cryptography.CryptographicException>. Para obter mais informações, consulte AesCryptoServiceProvider descriptografador fornece um transform](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform) reutilizável.|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Controla se o valor da [CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) propriedade é um [IntPtr](xref:System.IntPtr) que representa o local de memória de uma janela de manipular ou se é um identificador de janela (HWND). Para obter mais informações, consulte [Mitigação: CspParameters.ParentWindowHandle espera um HWND](Mitigation:%20CspParameters.ParentWindowHandle%20Expects%20an%20HWND.md). |.NET Framework 4.7|   
@@ -109,6 +107,7 @@ Define uma ou mais opções usadas pela classe <xref:System.AppContext> para for
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|Controla se exceções geradas durante a inicialização do serviço são propagadas para o chamador de <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> método.|.NET Framework 4.7.1|
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |Determina se o Windows Presentation Foundation se aplica um algoritmo antigo (`true`) ou um novo algoritmo (`false`) ao alocar espaço para \*-colunas. Para obter mais informações, consulte [Mitigação: alocação de espaço do controle de grade para colunas de estrela](Mitigation:%20Grid%20Control's%20Space%20Allocation%20to%20Star-columns.md). |.NET Framework 4.7 |
 |`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|Controla se um seletor ou uma guia controle sempre atualiza o valor de sua propriedade de valor selecionado antes de acionar a seleção de evento alterado.|.NET Framework 4.7.1|
+|`Switch.System.Windows.DoNotScaleForDpiChanges`|Determina se as alterações DPI ocorrerem por sistema (um valor de `false`) ou -monitor (um valor de `true`).|.NET Framework 4.6.2|
 |`Switch.System.Windows.Forms.`<br />`DontSupportReentrantFilterMessage`|Significa recusar o código que permite que um personalizado <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> implementação com segurança filtrar mensagens sem gerar uma exceção quando o <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> método é chamado. Para saber mais, confira [Mitigation: Custom IMessageFilter.PreFilterMessage Implementations](~/docs/framework/migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md) (Mitigação: implementações personalizadas de IMessageFilter.PreFilterMessage).|.NET Framework 4.6.1|  
 |`Switch.System.Windows.Input.Stylus.`<br/>`EnablePointerSupport`|Determina se um recurso opcional `WM_POINTER`-pilha de toque com base/caneta está habilitado em aplicativos WPF. Para obter mais informações, consulte [atenuação: baseada em ponteiro de toque e suporte de caneta](Mitigation:%20Pointer-based%20Touch%20and%20Stylus%20Support.md) | 
 |`Switch.System.Windows.Media.ImageSourceConverter.`<br/>`OverrideExceptionWithNullReferenceException`|Controla se um herdado [NullReferenceException](xref:System.NullReferenceException) é gerada em vez da exceção que indica mais especificamente a causa da exceção (como uma [DirectoryNotFoundException](xref:System.IO.DirectoryNotFoundException) ou um [ FileNotFoundException](xref:System.IO.FileNotFoundException). Ele é destinado ao uso pelo código que depende de tratamento de [NullReferenceException](xref:System.NullReferenceException). | .NET Framework 4.7 |

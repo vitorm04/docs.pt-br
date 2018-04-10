@@ -1,6 +1,6 @@
 ---
-title: "WMI e contadores de desempenho (referência de API não gerenciada)"
-description: "Resume o Framework .NET API não gerenciada para informações do contador de desempenho e de WMI."
+title: WMI e contadores de desempenho (referência de API não gerenciada)
+description: Resume o Framework .NET API não gerenciada para informações do contador de desempenho e de WMI.
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

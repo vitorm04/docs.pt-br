@@ -1,6 +1,6 @@
 ---
-title: "LINQ (Consulta Integrada à Linguagem)"
-description: "Introduz a LINQ (Consulta Integrada à Linguagem) em C#"
+title: LINQ (Consulta Integrada à Linguagem)
+description: Introduz a LINQ (Consulta Integrada à Linguagem) em C#
 keywords: .NET, .NET Core, LINQ, C#
 author: BillWagner
 ms.author: wiwagn

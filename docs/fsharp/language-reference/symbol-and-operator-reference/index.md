@@ -1,20 +1,20 @@
 ---
-title: "Referência de símbolos e operadores (F#)"
-description: "Saiba mais sobre os símbolos e operadores que são usados em F # linguagem de programação."
-keywords: "visual f#, f#, programação funcional"
+title: Referência de símbolos e operadores (F#)
+description: 'Saiba mais sobre os símbolos e operadores que são usados em F # linguagem de programação.'
+keywords: visual f#, f#, programação funcional
 author: cartermp
 ms.author: phcart
-ms.date: 05/16/2016
+ms.date: 04/04/2018
 ms.topic: language-reference
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ab453800-d4d0-4a11-9d55-2b358d56af27
-ms.openlocfilehash: cb21ef7385cb679f9d445f8ee419db3d727fa057
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 2fa4504c7059b4559b364d4000fe4ec6131430e5
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="symbol-and-operator-reference"></a>Referência de símbolos e operadores
 
@@ -34,9 +34,9 @@ A tabela a seguir descreve os símbolos usados na linguagem F#, fornece links pa
 |`"""`|[Cadeias de Caracteres](../strings.md)|Delimita uma cadeia de caracteres textuais. Difere de `@"..."` em que você pode indicar um caractere de aspas usando aspas simples na cadeia de caracteres.|
 |`#`|[Diretivas de Compilador](../compiler-directives.md)<br /><br />[Tipos Flexíveis](../flexible-types.md)|<ul><li>Prefixos de uma diretiva de pré-processador ou compilador, tal como `#light`.<br /></li><li>Quando usado com um tipo, indica um *tipo flexível*, que se refere a um tipo ou a qualquer um de seus tipos derivados.<br /></li><ul/>|
 |`$`|Não há mais informações disponíveis.|<ul><li>Usado internamente para determinados nomes de variáveis e de funções gerados pelo compilador.<br /></li><ul/>|
-|`%`|[Operadores Aritméticos](arithmetic-operators.md)<br /><br />[Citações de Código](../code-quotations.md)|<ul><li>Calcula o módulo de inteiro.<br /></li><li>Usado para união de expressões em cotações de códigos digitados.<br /></li><ul/>|
+|`%`|[Operadores Aritméticos](arithmetic-operators.md)<br /><br />[Citações de Código](../code-quotations.md)|<ul><li>Calcula o resto inteiro.<br /></li><li>Usado para união de expressões em cotações de códigos digitados.<br /></li><ul/>|
 |`%%`|[Citações de Código](../code-quotations.md)|<ul><li>Usado para união de expressões em cotações de códigos não digitados.<br /></li><ul/>|
-|`%?`|[Operadores Anuláveis](nullable-operators.md)|<ul><li>Calcula o módulo de inteiro, quando o lado direito for um tipo que permite valor nulo.<br /></li><ul/>|
+|`%?`|[Operadores Anuláveis](nullable-operators.md)|<ul><li>Calcula o resto inteiro, quando o lado direito é um tipo anulável.<br /></li><ul/>|
 |`&`|[Expressões Match](../match-expressions.md)|<ul><li>Calcula o endereço de um valor mutável, para uso ao interoperar com outros idiomas.<br /></li><li>Usado em padrões AND.<br /></li><ul/>|
 |`&&`|[Operadores Boolianos](boolean-operators.md)|<ul><li>Calcula a operação AND booleana.<br /></li><ul/>|
 |`&&&`|[Operadores Bit a Bit](bitwise-operators.md)|<ul><li>Calcula a operação AND bit a bit.<br /></li><ul/>|
@@ -127,7 +127,7 @@ A tabela a seguir mostra a ordem de precedência de operadores e outras palavras
 |--------|-------------|
 |`as`|Direita|
 |`when`|Direita|
-|<code>&#124;</code>(barra vertical)|Esquerda|
+|<code>&#124;</code> (barra vertical)|Esquerda|
 |`;`|Direita|
 |`let`|Não associativo|
 |`function`, `fun`, `match`, `try`|Não associativo|
@@ -138,7 +138,7 @@ A tabela a seguir mostra a ordem de precedência de operadores e outras palavras
 |`or`, <code>&#124;&#124;</code>|Esquerda|
 |`&`, `&&`|Esquerda|
 |`:>`, `:?>`|Direita|
-|`!=`*operações*, `<` *op*, `>` *op*, `=`, <code>&#124;</code> *op*, `&`  *operações*,`&`<br /><br />(incluindo `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Esquerda|
+|`!=`*op*, `<`*op*, `>`*op*, `=`, <code>&#124;</code>*op*, `&`*op*, `&`<br /><br />(incluindo `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Esquerda|
 |`^`*op*<br /><br />(incluindo `^^^`)|Direita|
 |`::`|Direita|
 |`:?`|Não associativo|
@@ -146,7 +146,7 @@ A tabela a seguir mostra a ordem de precedência de operadores e outras palavras
 |`*`*op*, `/`*op*, `%`*op*|Esquerda|
 |`**`*op*|Direita|
 |`f x` (aplicativo de função)|Esquerda|
-|<code>&#124;</code>(correspondência de padrão)|Direita|
+|<code>&#124;</code> (correspondência de padrão)|Direita|
 |operadores de prefixo (`+`*op*, `-`*op*, `%`, `%%`, `&`, `&&`, `!`*op*, `~`*op*)|Esquerda|
 |`.`|Esquerda |
 |`f(x)`|Esquerda|

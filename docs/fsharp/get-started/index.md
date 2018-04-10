@@ -1,7 +1,7 @@
 ---
-title: "Guia de Introdução com F #"
-description: "Saiba como começar com a programação F # linguagem .NET."
-keywords: "visual f#, f#, programação funcional, .NET, .NET Core"
+title: 'Guia de Introdução com F #'
+description: 'Saiba como começar com a programação F # linguagem .NET.'
+keywords: visual f#, f#, programação funcional, .NET, .NET Core
 author: cartermp
 ms.author: phcart
 ms.date: 09/06/2016
