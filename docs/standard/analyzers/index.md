@@ -1,6 +1,6 @@
 ---
 title: 'Os analisadores do Roslyn: .NET'
-description: "Saiba mais sobre os analisadores do Roslyn que localizam problemas e sugerem correções."
+description: Saiba mais sobre os analisadores do Roslyn que localizam problemas e sugerem correções.
 keywords: .NET, .NET Core
 author: billwagner
 ms.author: billwagner

@@ -1,7 +1,7 @@
 ---
-title: "Referência do F# Interativo (fsi.exe)"
-description: "Saiba como F # interativo (fsi.exe) é usado para executar código F # interativamente no console ou para executar scripts do F #."
-keywords: "visual f#, f#, programação funcional"
+title: Referência do F# Interativo (fsi.exe)
+description: 'Saiba como F # interativo (fsi.exe) é usado para executar código F # interativamente no console ou para executar scripts do F #.'
+keywords: visual f#, f#, programação funcional
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

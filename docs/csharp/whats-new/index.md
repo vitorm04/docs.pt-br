@@ -1,6 +1,6 @@
 ---
-title: "Novidades no C# – Guia do C#"
-description: "Como a linguagem C# está evoluindo"
+title: Novidades no C# – Guia do C#
+description: Como a linguagem C# está evoluindo
 keywords: C#, recursos mais recentes, novidades, Roslyn
 author: BillWagner
 ms.author: wiwagn

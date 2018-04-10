@@ -1,6 +1,6 @@
 ---
 title: Ferramentas da CLI (Interface de Linha de Comando) do .NET Core
-description: "Uma visão geral das ferramentas e recursos da CLI (Interface de linha de comando) do .NET Core."
+description: Uma visão geral das ferramentas e recursos da CLI (Interface de linha de comando) do .NET Core.
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017

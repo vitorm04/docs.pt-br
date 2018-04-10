@@ -1,7 +1,7 @@
 ---
 title: Membros (F#)
-description: "Saiba mais sobre os membros de objeto em F # linguagem de programação."
-keywords: "visual f#, f#, programação funcional"
+description: 'Saiba mais sobre os membros de objeto em F # linguagem de programação.'
+keywords: visual f#, f#, programação funcional
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

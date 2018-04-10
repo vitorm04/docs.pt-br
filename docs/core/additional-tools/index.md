@@ -1,6 +1,6 @@
 ---
 title: Ferramentas adicionais do .NET Core
-description: "Uma visão geral das ferramentas adicionais que oferecem suporte e estendem a funcionalidade do .NET Core."
+description: Uma visão geral das ferramentas adicionais que oferecem suporte e estendem a funcionalidade do .NET Core.
 author: mlacouture
 manager: wpickett
 ms.author: johalex

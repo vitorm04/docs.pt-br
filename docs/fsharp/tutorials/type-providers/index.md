@@ -1,7 +1,7 @@
 ---
 title: Provedores de tipos
-description: "Saiba como um provedor de tipos F # é um componente que fornece tipos, propriedades e métodos para uso em seus programas."
-keywords: "visual f#, f#, programação funcional"
+description: 'Saiba como um provedor de tipos F # é um componente que fornece tipos, propriedades e métodos para uso em seus programas.'
+keywords: visual f#, f#, programação funcional
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

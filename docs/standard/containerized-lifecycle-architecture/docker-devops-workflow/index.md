@@ -1,7 +1,7 @@
 ---
 title: Fluxo de trabalho de DevOps de aplicativos do Docker com as ferramentas da Microsoft
-description: "Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft, fluxo de trabalho de DevOps e ferramentas da Microsoft"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+description: Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft, fluxo de trabalho de DevOps e ferramentas da Microsoft
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017

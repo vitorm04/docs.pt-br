@@ -1,7 +1,7 @@
 ---
-title: "Tutoriais interativos do C# – Guias de início rápido do C#"
-description: "Aprenda C# em seu navegador e comece a trabalhar com seu próprio ambiente de desenvolvimento"
-keywords: "C#, Introdução, Lições, Interativo"
+title: Tutoriais interativos do C# – Guias de início rápido do C#
+description: Aprenda C# em seu navegador e comece a trabalhar com seu próprio ambiente de desenvolvimento
+keywords: C#, Introdução, Lições, Interativo
 author: billwagner
 ms.author: wiwagn
 ms.date: 01/30/2018

@@ -1,7 +1,7 @@
 ---
 title: Implementando aplicativos resilientes
-description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Implementando aplicativos resilientes"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Implementando aplicativos resilientes
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

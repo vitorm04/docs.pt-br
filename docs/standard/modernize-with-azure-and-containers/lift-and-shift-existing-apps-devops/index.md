@@ -1,6 +1,6 @@
 ---
-title: "Migração lift-and-shift de DevOps de aplicativos existentes"
-description: "Modernizar aplicativos .NET existentes com contêineres do Windows e da Nuvem do Azure."
+title: Migração lift-and-shift de DevOps de aplicativos existentes
+description: Modernizar aplicativos .NET existentes com contêineres do Windows e da Nuvem do Azure.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017

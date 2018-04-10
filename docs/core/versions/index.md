@@ -1,6 +1,6 @@
 ---
-title: "Controle de versão do .NET Core"
-description: "Compreenda como o controle de versão do .NET Core funciona."
+title: Controle de versão do .NET Core
+description: Compreenda como o controle de versão do .NET Core funciona.
 author: bleroy
 ms.author: mairaw
 ms.date: 02/13/2018

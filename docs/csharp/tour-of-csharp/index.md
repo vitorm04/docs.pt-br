@@ -1,6 +1,6 @@
 ---
-title: "Um tour pelo C# – Guia do C#"
-description: "Novato em C#? Conheça os fundamentos da linguagem."
+title: Um tour pelo C# – Guia do C#
+description: Novato em C#? Conheça os fundamentos da linguagem.
 keywords: .NET, .NET Core, C#, C# Primer, Guia do C#
 author: BillWagner
 ms.author: wiwagn

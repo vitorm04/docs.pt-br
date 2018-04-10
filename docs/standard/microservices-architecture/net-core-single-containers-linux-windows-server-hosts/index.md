@@ -1,7 +1,7 @@
 ---
-title: "Implantando aplicativos Web .NET Core baseados em um único contêiner em hosts do Linux ou do Windows Nano Server"
-description: "Arquitetura de microsserviços do .NET para aplicativos do .NET em contêineres | Implantando aplicativos Web .NET Core baseados em um único contêiner em hosts do Linux ou do Windows Nano Server"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Implantando aplicativos Web .NET Core baseados em um único contêiner em hosts do Linux ou do Windows Nano Server
+description: Arquitetura de microsserviços do .NET para aplicativos do .NET em contêineres | Implantando aplicativos Web .NET Core baseados em um único contêiner em hosts do Linux ou do Windows Nano Server
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

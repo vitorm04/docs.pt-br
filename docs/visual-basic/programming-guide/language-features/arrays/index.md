@@ -1,6 +1,6 @@
 ---
 title: Matrizes no Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 12/06/2017
 ms.prod: .net
 ms.technology:

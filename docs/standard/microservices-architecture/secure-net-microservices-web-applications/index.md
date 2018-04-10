@@ -1,7 +1,7 @@
 ---
-title: "Protegendo microsserviços e aplicativos Web .NET"
-description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Protegendo microsserviços e aplicativos Web .NET"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Protegendo microsserviços e aplicativos Web .NET
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Protegendo microsserviços e aplicativos Web .NET
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017

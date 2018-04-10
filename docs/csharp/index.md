@@ -1,6 +1,6 @@
 ---
 title: Guia de C#
-description: "Saiba como o Guia do C# pode ajudá-lo a obter um extenso conhecimento sobre C#, seja você um desenvolvedor novo ou um especialista experiente."
+description: Saiba como o Guia do C# pode ajudá-lo a obter um extenso conhecimento sobre C#, seja você um desenvolvedor novo ou um especialista experiente.
 author: BillWagner
 ms.date: 01/30/2018
 ms.topic: article
