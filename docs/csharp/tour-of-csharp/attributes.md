@@ -1,6 +1,6 @@
 ---
 title: Atributos em C# - um tour pela linguagem C#
-description: "Saiba mais sobre a programação declarativa usando atributos no C#"
+description: Saiba mais sobre a programação declarativa usando atributos no C#
 keywords: .NET, csharp
 author: BillWagner
 ms.author: wiwagn
