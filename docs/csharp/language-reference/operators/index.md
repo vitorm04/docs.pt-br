@@ -1,6 +1,6 @@
 ---
 title: Operadores em C#
-ms.date: 03/09/2017
+ms.date: 04/04/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -25,11 +25,11 @@ ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 40
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 14ebd489c48f53c8618cadf91f9744bb30f582d3
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: c62a168c845575e4fd3df212db379548926d2fab
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="c-operators"></a>Operadores em C#
 O C# fornece muitos operadores, que são símbolos que especificam as operações (matemática, indexação, chamada de função, etc.) para executar em uma expressão. Você pode [sobrecarregar](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) muitos operadores para alterar seu significado quando aplicados a um tipo definido pelo usuário.  
@@ -101,7 +101,7 @@ O C# fornece muitos operadores, que são símbolos que especificam as operaçõe
   
  [x / y](../../../csharp/language-reference/operators/division-operator.md) – divisão. Se os operandos forem inteiros, o resultado será um inteiro truncado para zero (por exemplo, `-7 / 2 is -3`).  
   
- [x % y](../../../csharp/language-reference/operators/modulus-operator.md) – módulo. Se os operandos forem inteiros, isso retornará o resto da divisão de x por y.  Se `q = x / y` e `r = x % y`, então `x = q * y + r`.  
+ [x % y](../../../csharp/language-reference/operators/remainder-operator.md) – restante. Se os operandos forem inteiros, isso retornará o resto da divisão de x por y.  Se `q = x / y` e `r = x % y`, então `x = q * y + r`.  
   
 ## <a name="additive-operators"></a>Operadores aditivos  
  Esses operadores têm precedência maior do que a próxima seção e precedência menor que a seção anterior.  
@@ -187,7 +187,7 @@ O C# fornece muitos operadores, que são símbolos que especificam as operaçõe
   
  [x /= y](../../../csharp/language-reference/operators/division-assignment-operator.md) – atribuição de divisão. Divida o valor de `x` pelo valor de `y`, armazene o resultado em `x` e retorne o novo valor.  
   
- [x %= y](../../../csharp/language-reference/operators/modulus-assignment-operator.md) – atribuição de módulo. Divida o valor de `x` pelo valor de `y`, armazene o resto em `x` e retorne o novo valor.  
+ [x %= y](../../../csharp/language-reference/operators/remainder-assignment-operator.md) – atribuição restante. Divida o valor de `x` pelo valor de `y`, armazene o resto em `x` e retorne o novo valor.  
   
  [x &= y](../../../csharp/language-reference/operators/and-assignment-operator.md) – atribuição AND. AND o valor de `y` com o valor de `x`, armazene o resultado em `x` e retorne o novo valor.  
   
