@@ -1,6 +1,6 @@
 ---
-title: "Programação assíncrona em F #"
-description: "Saiba como programação assíncrona em F # é realizada por meio de um modelo de programação de nível de linguagem natural para a linguagem e fácil de usar."
+title: 'Programação assíncrona em F #'
+description: 'Saiba como programação assíncrona em F # é realizada por meio de um modelo de programação de nível de linguagem natural para a linguagem e fácil de usar.'
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: phcart

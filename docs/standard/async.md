@@ -1,6 +1,6 @@
 ---
-title: "Visão geral da assincronia"
-description: "Saiba como a programação assíncrona é uma técnica chave que torna fácil lidar com o bloqueio de E/S e operações simultâneas em vários núcleos."
+title: Visão geral da assincronia
+description: Saiba como a programação assíncrona é uma técnica chave que torna fácil lidar com o bloqueio de E/S e operações simultâneas em vários núcleos.
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn

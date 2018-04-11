@@ -1,7 +1,7 @@
 ---
 title: Atributos (F#)
-description: "Saiba como habilitar o F # atributos metadados a ser aplicado a uma construção de programação."
-keywords: "visual f#, f#, programação funcional"
+description: 'Saiba como habilitar o F # atributos metadados a ser aplicado a uma construção de programação.'
+keywords: visual f#, f#, programação funcional
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
