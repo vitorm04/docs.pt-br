@@ -2,19 +2,21 @@
 title: Componente PrintForm (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-helpviewer_keywords: PrintForm component [Visual Basic]
+helpviewer_keywords:
+- PrintForm component [Visual Basic]
 ms.assetid: 03de98b8-b54c-4764-91d7-83c64e974750
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 890d5a3a3f9c3a737a59e17fef0d4ac0407e9924
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="printform-component-visual-basic"></a>Componente PrintForm (Visual Basic)
 O <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> componente para [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] permite imprimir uma imagem de um formulário do Windows em tempo de execução. Substitui o seu comportamento do `PrintForm` método em versões anteriores do Visual Basic.  
@@ -35,9 +37,9 @@ O <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> componente para [!I
 ### <a name="key-methods-properties-and-events"></a>Métodos, propriedades e eventos de chave  
  O método de chave de <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> componente é o <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> método, que imprime uma imagem do formulário para uma impressora, a janela de visualização de impressão ou o arquivo. Há duas versões do <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> método:  
   
--   Uma versão básica sem parâmetros:`Print()`  
+-   Uma versão básica sem parâmetros: `Print()`  
   
--   Uma versão sobrecarregada com parâmetros que especificam o comportamento de impressão:`Print(printForm As Form, printFormOption As PrintOption)`  
+-   Uma versão sobrecarregada com parâmetros que especificam o comportamento de impressão: `Print(printForm As Form, printFormOption As PrintOption)`  
   
      O `PrintOption` parâmetro do método sobrecarregado determina a implementação base usada para imprimir o formulário, se a barra de título do formulário, barras de rolagem e borda são impressas e se rolável partes do formulário são impressas.  
   
@@ -49,11 +51,11 @@ O <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> componente para [!I
   
  Chave de eventos para o <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> componente incluem o seguinte:  
   
--   <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.BeginPrint>evento. Ocorre quando o método <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> é chamado antes da impressão da primeira página do documento.  
+-   <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.BeginPrint> evento. Ocorre quando o método <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> é chamado antes da impressão da primeira página do documento.  
   
--   <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.EndPrint>evento. Ocorre depois que a última página é impresso.  
+-   <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.EndPrint> evento. Ocorre depois que a última página é impresso.  
   
--   <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.QueryPageSettings>evento. Ocorre imediatamente antes de cada página ser impressa.  
+-   <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.QueryPageSettings> evento. Ocorre imediatamente antes de cada página ser impressa.  
   
 ### <a name="remarks"></a>Comentários  
  Se um formulário contiver texto ou gráfico desenhado pelo <xref:System.Drawing.Graphics> métodos, use o basic <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> (`Print()`) método imprimi-lo. Elementos gráficos talvez não sejam renderizadas em alguns sistemas operacionais quando sobrecarregados <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> método é usado.  

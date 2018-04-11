@@ -11,10 +11,10 @@ ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c797cf0b-5953-4053-8626-0558e9eaf10f
 ms.openlocfilehash: 23731832141bc2f74a04c5f4027fc210b5589537
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="compiler-options"></a>Opção de compilador
 

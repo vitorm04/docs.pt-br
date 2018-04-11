@@ -1,13 +1,13 @@
 ---
-title: "Método IHostMemoryManager::VirtualFree"
-ms.custom: 
+title: Método IHostMemoryManager::VirtualFree
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IHostMemoryManager.VirtualFree
@@ -23,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: 1a436e89-eb28-4d15-bcf1-a072f86dbd99
 topic_type:
 - apiref
-caps.latest.revision: 
+caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 663c01d7e4b551ecf18bdd85a63aefc43f9750e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="ihostmemorymanagervirtualfree-method"></a>Método IHostMemoryManager::VirtualFree
 Serve como um wrapper lógico para a função Win32 correspondente. A implementação do Win32 de `VirtualFree` libera, decommits, ou libera e decommits uma região de páginas no espaço de endereço virtual do processo de chamada.  
@@ -62,7 +62,7 @@ HRESULT VirtualFree (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`VirtualFree`retornou com êxito.|  
+|S_OK|`VirtualFree` retornou com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada foi atingido.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -71,7 +71,7 @@ HRESULT VirtualFree (
 |HOST_E_INVALIDOPERATION|Foi feita uma tentativa para liberar a memória que não foi alocada por meio do host.|  
   
 ## <a name="remarks"></a>Comentários  
- `VirtualFree`libera páginas de memória virtual associadas a `lpAddress` parâmetro por meio de uma chamada anterior para o [Ihostmemorymanager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualalloc-method.md) função. Tentativas para liberar a memória que não foi alocada por meio do host devem retornar HOST_E_INVALIDOPERATION.  
+ `VirtualFree` libera páginas de memória virtual associadas a `lpAddress` parâmetro por meio de uma chamada anterior para o [Ihostmemorymanager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualalloc-method.md) função. Tentativas para liberar a memória que não foi alocada por meio do host devem retornar HOST_E_INVALIDOPERATION.  
   
  A semântica é idêntica da implementação do Win32 `VirtualFree`. Para obter mais informações, consulte a documentação da plataforma Windows.  
   
@@ -82,7 +82,7 @@ HRESULT VirtualFree (
   
  **Biblioteca:** incluído como um recurso no MSCOREE  
   
- **Versões do .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
