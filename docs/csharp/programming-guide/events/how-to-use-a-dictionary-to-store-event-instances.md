@@ -1,12 +1,14 @@
 ---
-title: "Como usar um dicionário para armazenar instâncias de eventos (Guia de Programação em C#)"
+title: Como usar um dicionário para armazenar instâncias de eventos (Guia de Programação em C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: events [C#], storing instances in a Dictionary
+helpviewer_keywords:
+- events [C#], storing instances in a Dictionary
 ms.assetid: 9512c64d-5aaf-40cd-b941-ca2a592f0064
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 0304f04233151d35c8ee18fe09feac91fbd0879b
