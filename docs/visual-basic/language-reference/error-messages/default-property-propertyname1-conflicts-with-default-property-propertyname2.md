@@ -1,17 +1,19 @@
 ---
-title: "Propriedade padrão &#39; &lt;propertyname1&gt;&#39; está em conflito com a propriedade padrão &#39;&lt; propertyName2&gt;&#39; no &#39;&lt; nome da classe&gt;&#39; e, portanto, deve ser declarado como &#39; Sombras &#39;"
+title: Propriedade padrão &#39; &lt;propertyname1&gt;&#39; está em conflito com a propriedade padrão &#39;&lt; propertyName2&gt;&#39; no &#39;&lt; nome da classe&gt;&#39; e, portanto, deve ser declarado como &#39; Sombras &#39;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc40007
 - bc40007
-helpviewer_keywords: BC40007
+helpviewer_keywords:
+- BC40007
 ms.assetid: 692ccf76-5715-4f11-a972-84cf9de30bc1
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: af92c06f6d07b6ea64a05b9043547a46e3679111

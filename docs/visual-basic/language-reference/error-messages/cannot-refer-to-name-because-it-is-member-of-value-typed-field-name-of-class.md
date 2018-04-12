@@ -1,17 +1,19 @@
 ---
-title: "Não é possível referenciar &#39; &lt;nome&gt;&#39; porque ele é um membro do campo de tipo de valor &#39;&lt; nome&gt;&#39; de classe &#39;&lt; nome da classe&gt;&#39; que tem &#39; MarshalByRefObject &#39; como uma classe base"
+title: Não é possível referenciar &#39; &lt;nome&gt;&#39; porque ele é um membro do campo de tipo de valor &#39;&lt; nome&gt;&#39; de classe &#39;&lt; nome da classe&gt;&#39; que tem &#39; MarshalByRefObject &#39; como uma classe base
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30310
 - bc30310
-helpviewer_keywords: BC30310
+helpviewer_keywords:
+- BC30310
 ms.assetid: 2aeb8872-7c87-4f01-98ef-9714ba3eebbe
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 7a84811b9f0e706cf3ebede09e07c03bd7e4cea4

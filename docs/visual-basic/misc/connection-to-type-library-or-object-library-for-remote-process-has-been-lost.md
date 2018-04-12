@@ -1,12 +1,14 @@
 ---
-title: "Conexão para o tipo de biblioteca de objetos para processo remoto foi perdida"
+title: Conexão para o tipo de biblioteca de objetos para processo remoto foi perdida
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrID442
+f1_keywords:
+- vbrID442
 ms.assetid: 9e3544e2-cfc9-463a-8c0c-ed82e5e6462f
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 41fe6cf0ecec2de4745ffdd156891077c1e2788b

@@ -1,17 +1,19 @@
 ---
-title: "Expressões lambda não são válidas na primeira expressão de uma &#39; Selecione caso &#39; instrução"
+title: Expressões lambda não são válidas na primeira expressão de uma &#39; Selecione caso &#39; instrução
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc36635
 - vbc36635
-helpviewer_keywords: BC36635
+helpviewer_keywords:
+- BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: e91401d6891d4e38014bb716a337560885cf73a2

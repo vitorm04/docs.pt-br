@@ -1,17 +1,19 @@
 ---
-title: "Tipo de &#39; &lt;variablename&gt;&#39; não pode ser inferido porque os limites do loop e a variável step não se estendem ao mesmo tipo"
+title: Tipo de &#39; &lt;variablename&gt;&#39; não pode ser inferido porque os limites do loop e a variável step não se estendem ao mesmo tipo
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc30982
 - vbc30982
-helpviewer_keywords: BC30982
+helpviewer_keywords:
+- BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 022e29e38a93d2880bbfa250e65a8b95b39ff140

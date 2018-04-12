@@ -1,17 +1,19 @@
 ---
-title: "O primeiro operando em um binário &#39; se &#39; a expressão deve ser nulo ou uma referência de tipo"
+title: O primeiro operando em um binário &#39; se &#39; a expressão deve ser nulo ou uma referência de tipo
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc33107
 - vbc33107
-helpviewer_keywords: BC33107
+helpviewer_keywords:
+- BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: f66b110c02076120c55a3bff28c3d7614bf8be26
