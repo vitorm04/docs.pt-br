@@ -1,12 +1,14 @@
 ---
-title: "Linha &lt;número&gt; não pode ser lido porque ele excede o tamanho máximo da linha."
+title: Linha &lt;número&gt; não pode ser lido porque ele excede o tamanho máximo da linha.
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrTextFieldParser_MaxLineSizeExceeded
+f1_keywords:
+- vbrTextFieldParser_MaxLineSizeExceeded
 ms.assetid: c59116d9-9856-47af-b32d-616d8f2d10d3
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: d57d1991c3d3ea7f02c7d08cda38fa630393ac8b
