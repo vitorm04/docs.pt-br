@@ -1,12 +1,14 @@
 ---
-title: "Membro público &#39; &lt;membername&gt;&#39; no tipo &#39;&lt; TypeName&gt;&#39; não encontrado"
+title: Membro público &#39; &lt;membername&gt;&#39; no tipo &#39;&lt; TypeName&gt;&#39; não encontrado
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrMissingMember_MemberNotFoundOnType2
+f1_keywords:
+- vbrMissingMember_MemberNotFoundOnType2
 ms.assetid: 6300feb8-78ac-4dd0-9653-1d03e1f5bc20
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: ca0ac50c9834bcf051d4e0f15409dd26a99046ae
