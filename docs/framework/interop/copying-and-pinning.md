@@ -1,12 +1,9 @@
 ---
 title: Copiando e fixando
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - pinning, interop marshaling
@@ -14,38 +11,38 @@ helpviewer_keywords:
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 11739d35d3a6d845feb1f6d9544f6ea347a9942d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c785c7bc9160cb252aad61fea00cce0d9a7eacdf
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="copying-and-pinning"></a>Copiando e fixando
 Ao realizar marshaling dos dados, o marshaler de interoperabilidade pode copiar ou fixar os dados com marshaling. A cópia dos dados coloca uma cópia dos dados de um local de memória em outro local de memória. A ilustração a seguir mostra as diferenças entre a cópia de um tipo de valor e a cópia de um tipo passado por referência da memória gerenciada para a não gerenciada.  
   
- ![Tipos de valor passados por valor e por referência](../../../docs/framework/interop/media/interopmarshalcopy.gif "interopmarshalcopy")  
+ ![Tipos de valor passados por valor e por referência](./media/interopmarshalcopy.gif "interopmarshalcopy")  
 Tipos de valor passados por valor e por referência  
   
  Os argumentos de método passados por valor têm o marshaling realizado para o código não gerenciado como valores na pilha. O processo de cópia é direto. Os argumentos passados por referência são passados como ponteiros na pilha. Tipos de referência também são passados por valor e por referência. Como mostra a ilustração a seguir, os tipos de referência passados por valor são copiados ou fixados.  
   
- ![Interoperabilidade COM](../../../docs/framework/interop/media/interopmarshalpin.gif "interopmarshalpin")  
+ ![Interoperabilidade COM](./media/interopmarshalpin.gif "interopmarshalpin")  
 Tipos de referência passados por valor e por referência  
   
  A anexação temporária bloqueia os dados em seu local atual de memória, impedindo, portanto, que eles sejam relocados pelo coletor de lixo do Common Language Runtime. O marshaler fixa os dados para reduzir a sobrecarga da cópia e melhorar o desempenho. O tipo dos dados determina se eles são copiados ou fixados durante o processo de marshaling.  A anexação é executada automaticamente durante o marshaling de objetos, como <xref:System.String>. No entanto, também é possível fixar a memória manualmente usando a classe <xref:System.Runtime.InteropServices.GCHandle>.  
   
 ## <a name="formatted-blittable-classes"></a>Classes blittable formatadas  
- As classes [blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md) formatadas têm o layout fixo (formatado) e uma representação de dados comum na memória gerenciada e não gerenciada. Quando esses tipos exigem o marshaling, um ponteiro para o objeto no heap é passado diretamente para o receptor. O receptor pode alterar o conteúdo do local de memória que está sendo referenciado pelo ponteiro.  
+ As classes [blittable](blittable-and-non-blittable-types.md) formatadas têm o layout fixo (formatado) e uma representação de dados comum na memória gerenciada e não gerenciada. Quando esses tipos exigem o marshaling, um ponteiro para o objeto no heap é passado diretamente para o receptor. O receptor pode alterar o conteúdo do local de memória que está sendo referenciado pelo ponteiro.  
   
 > [!NOTE]
 >  O receptor pode alterar o conteúdo da memória se o parâmetro estiver marcado como Saída ou Entrada/Saída. Por outro lado, o receptor deve evitar alterar o conteúdo quando o parâmetro é definido para ter o marshaling realizado como Entrada, que é o padrão para tipos blittable formatados. A modificação de um objeto de Entrada gera problemas quando a mesma classe é exportada para uma biblioteca de tipos e usada para fazer chamadas entre apartments.  
   
 ## <a name="formatted-non-blittable-classes"></a>Classes não blittable formatadas  
- As classes [não blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md) formatadas têm o layout fixo (formatado), mas a representação de dados é diferente na memória gerenciada e não gerenciada. Os dados podem exigir transformação nas seguintes condições:  
+ As classes [não blittable](blittable-and-non-blittable-types.md) formatadas têm o layout fixo (formatado), mas a representação de dados é diferente na memória gerenciada e não gerenciada. Os dados podem exigir transformação nas seguintes condições:  
   
 -   Se uma classe não blittable tem o marshaling realizado por valor, o receptor recebe um ponteiro para uma cópia da estrutura de dados.  
   
@@ -87,7 +84,7 @@ Tipos de referência passados por valor e por referência
  Quando um <xref:System.Text.StringBuilder?displayProperty=nameWithType> é passado por valor, o marshaler passa uma referência ao buffer interno do **StringBuilder** diretamente para o chamador. O chamador e o receptor devem concordar com o tamanho do buffer. O chamador é responsável pela criação de um **StringBuilder** de tamanho adequado. O receptor deve tomar as precauções necessárias para garantir que o buffer não tenha estouro. **StringBuilder** é uma exceção à regra em que os tipos de referência passados por valor são passados como parâmetros de Entrada por padrão. Ele é sempre passado como Entrada/Saída.  
   
 ## <a name="see-also"></a>Consulte também  
- [Comportamento de marshaling padrão](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Gerenciamento de memória com o empacotador de interoperabilidade](http://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee)  
- [Atributos direcionais](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [Marshaling de interoperabilidade](../../../docs/framework/interop/interop-marshaling.md)
+ [Comportamento de marshaling padrão](default-marshaling-behavior.md)  
+ [Gerenciamento de memória com o empacotador de interoperabilidade](https://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee(v=vs.100))  
+ [Atributos direcionais](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [Marshaling de interoperabilidade](interop-marshaling.md)

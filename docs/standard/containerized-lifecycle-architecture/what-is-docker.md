@@ -1,18 +1,18 @@
 ---
-title: "O que é o Docker?"
-description: "Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: O que é o Docker?
+description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c75b2fa87e5aad93693c76c3bbd135044b36525f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c471c4bc1588aaa6c0e145ede0b67ab5340f254a
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-is-docker"></a>O que é o Docker?
 
@@ -32,9 +32,9 @@ Para executar [contêineres do Windows](https://msdn.microsoft.com/virtualizatio
 
 -   **Contêiner do Windows Server** esse tempo de execução fornece isolamento de aplicativos por meio da tecnologia de isolamento de processo e de namespace. Um contêiner do Windows Server compartilha um kernel com o host do contêiner e todos os contêineres em execução no host.
 
--   **Contêiner do Hyper-V** isso expande o isolamento fornecido pelos contêineres do Windows Server, executando cada contêiner em uma máquina virtual altamente otimizada. Nessa configuração, o kernel do host do contêiner não é compartilhado com os contêineres do Hyper-V, fornece melhor isolamento.
+-   **Contêiner do Hyper-V** isso expande o isolamento fornecido pelos contêineres do Windows Server, executando cada contêiner em uma máquina virtual altamente otimizada. Nessa configuração, o kernel do host do contêiner não é compartilhado com os contêineres do Hyper-V, fornecendo melhor isolamento.
 
-As imagens para esses contêineres são criadas da mesma forma e funcionam da mesma. A diferença é como o contêiner é criado por meio da imagem, a execução de um contêiner do Hyper-V exige um parâmetro extra. Para obter detalhes, consulte [contêineres do Hyper-V](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview).
+As imagens para esses contêineres são criadas da mesma forma e funcionam da mesma. A diferença é como o contêiner é criado por meio da imagem, a execução de um contêiner do Hyper-V exige um parâmetro extra. Para obter detalhes, consulte [Contêineres do Hyper-V](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview).
 
 ## <a name="comparing-docker-containers-with-vms"></a>Comparando os contêineres do Docker com máquinas virtuais
 
@@ -44,7 +44,7 @@ Como contêineres exigem muito menos recursos (por exemplo, eles não é necess�
 
 Como um efeito colateral da execução no mesmo kernel, você obtém menos isolamento de máquinas virtuais.
 
-O objetivo principal de uma imagem é que ele faz o ambiente (dependências) os mesmos entre diferentes implantações. Isso significa que você pode depurá-lo em seu computador e, em seguida, implantá-lo para outro computador com o mesmo ambiente de garantia.
+A meta principal de uma imagem é que ela torne o ambiente (dependências) o mesmo entre diferentes implantações. Isso significa que é possível depurá-la em seu computador e, em seguida, implantá-la em outro computador com o mesmo ambiente garantido.
 
 Uma imagem de contêiner é uma maneira para empacotar um aplicativo ou serviço e implantá-lo de uma maneira confiável e reproduzível. Nesse sentido, o Docker não é apenas uma tecnologia, também é uma filosofia e um processo.
 
@@ -56,4 +56,4 @@ Figura 1-3: comparação das VMs tradicionais para contêineres do Docker
 
 
 >[!div class="step-by-step"]
-[Anterior] (index.md) [Avançar] (docker-terminology.md)
+[Anterior] (index.md) [Próximo] (docker-terminology.md)

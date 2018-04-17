@@ -1,12 +1,9 @@
 ---
-title: "Criando protótipos em código gerenciado"
-ms.custom: 
+title: Criando protótipos em código gerenciado
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -24,19 +21,20 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d1006f59f9841a10066c83a8f0800d3a7c17500a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c59a05c5f6abfa30a71ccf7608f8a84738f99c3a
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Criando protótipos em código gerenciado
-Este tópico descreve como acessar funções não gerenciadas e apresenta vários campos de atributo que anotam a definição de método no código gerenciado. Para obter exemplos que demonstram como construir declarações baseadas no .NET a serem usadas com a invocação de plataforma, consulte [Realizando marshaling de dados com a invocação de plataforma](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+Este tópico descreve como acessar funções não gerenciadas e apresenta vários campos de atributo que anotam a definição de método no código gerenciado. Para obter exemplos que demonstram como construir declarações baseadas no .NET a serem usadas com a invocação de plataforma, consulte [Realizando marshaling de dados com a invocação de plataforma](marshaling-data-with-platform-invoke.md).  
   
  Antes de poder acessar uma função de DLL não gerenciada no código gerenciado, você precisa saber o nome da função e o nome da DLL que a exporta. Com essas informações, você pode começar a escrever a definição gerenciada para uma função não gerenciada que é implementada em uma DLL. Além disso, você pode ajustar a maneira como essa invocação de plataforma cria a função e realiza marshaling dos dados bidirecionalmente na função.  
   
@@ -44,7 +42,7 @@ Este tópico descreve como acessar funções não gerenciadas e apresenta vário
 >  As funções de API do Win32 que alocam uma cadeia de caracteres permitem liberar a cadeia de caracteres usando um método como `LocalFree`. A invocação de plataforma manipula esses parâmetros de maneira diferente. Para chamadas de invocação de plataforma, torne o parâmetro um tipo `IntPtr`, em vez de um tipo `String`. Use métodos que são fornecidos pela classe <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> para converter o tipo em uma cadeia de caracteres manualmente e libere-a manualmente.  
   
 ## <a name="declaration-basics"></a>Noções básicas sobre a declaração  
- As definições gerenciadas para funções não gerenciadas são dependentes de idioma, como é possível ver nos exemplos a seguir. Para obter exemplos de código mais completos, consulte [Exemplos de invocação de plataforma](../../../docs/framework/interop/platform-invoke-examples.md).  
+ As definições gerenciadas para funções não gerenciadas são dependentes de idioma, como é possível ver nos exemplos a seguir. Para obter exemplos de código mais completos, consulte [Exemplos de invocação de plataforma](platform-invoke-examples.md).  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -231,11 +229,11 @@ interface IDemandStubsItf
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Consumindo funções de DLL não gerenciadas](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
- [Especificando um ponto de entrada](../../../docs/framework/interop/specifying-an-entry-point.md)  
- [Especificando um conjunto de caracteres](../../../docs/framework/interop/specifying-a-character-set.md)  
- [Exemplos de invocação de plataforma](../../../docs/framework/interop/platform-invoke-examples.md)  
- [Considerações de segurança de invocação de plataforma](http://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb)  
- [Identificando funções em DLLs](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
- [Criando uma classe para conter funções de DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  
- [Chamando uma função de DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+ [Consumindo funções de DLL não gerenciadas](consuming-unmanaged-dll-functions.md)  
+ [Especificando um ponto de entrada](specifying-an-entry-point.md)  
+ [Especificando um conjunto de caracteres](specifying-a-character-set.md)  
+ [Exemplos de invocação de plataforma](platform-invoke-examples.md)  
+ [Considerações de segurança de invocação de plataforma](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))  
+ [Identificando funções em DLLs](identifying-functions-in-dlls.md)  
+ [Criando uma classe para conter funções de DLL](creating-a-class-to-hold-dll-functions.md)  
+ [Chamando uma função de DLL](calling-a-dll-function.md)

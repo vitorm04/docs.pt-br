@@ -1,49 +1,57 @@
 ---
-title: "&lt;diagnóstico&gt;"
-ms.custom: 
+title: '&lt;diagnóstico&gt;'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5c7997b3ffc1a1c3a16372398f43e8f0d06aadee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bb5506fd72745f32194b2e3cc409ff848fd1c270
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltdiagnosticsgt"></a>&lt;diagnóstico&gt;
 O `diagnostics` elemento define configurações que podem ser usadas por um administrador para inspeção de tempo de execução e o controle.  
   
- \<sistema. ServiceModel >  
+ \<system.ServiceModel>  
 \<diagnóstico >  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
 <system.serviceModel>  
-   <diagnostics etwProviderId="String"       performanceCounters="Off/ServiceOnly/All/Default"              wmiProviderEnabled="Boolean" >       <endToEndTracing activityTracing="Boolean"  
-          messageFlowTracing="Boolean"  
-          propagateActivity="Boolean" />  
-       <messageLogging logEntireMessage="Boolean"  
-          logMalformedMessages="Boolean"  
-          logMessagesAtServiceLevel="Boolean"  
-          logMessagesAtTransportLevel="Boolean"  
-          maxMessagesToLog="Integer"  
-          maxSizeOfMessageToLog="Integer" >  
-          <filters>  
-             <clear />  
-          </filters>  
-       </messageLogging>  
-   </diagnostics>  
+  <diagnostics 
+      etwProviderId="String"       
+      performanceCounters="Off/ServiceOnly/All/Default"              
+      wmiProviderEnabled="Boolean" >       
+    <endToEndTracing 
+        activityTracing="Boolean"  
+        messageFlowTracing="Boolean"  
+        propagateActivity="Boolean" />  
+    <messageLogging 
+        logEntireMessage="Boolean"  
+        logMalformedMessages="Boolean"  
+        logMessagesAtServiceLevel="Boolean"  
+        logMessagesAtTransportLevel="Boolean"  
+        maxMessagesToLog="Integer"  
+        maxSizeOfMessageToLog="Integer" >  
+      <filters>  
+        <clear />  
+      </filters>  
+    </messageLogging>  
+  </diagnostics>  
 </system.serviceModel>  
 ```  
   
@@ -55,7 +63,7 @@ O `diagnostics` elemento define configurações que podem ser usadas por um admi
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |etwProviderId|Uma cadeia de caracteres que especifica o identificador para o provedor de rastreamento de eventos, que grava eventos em sessões ETW.|  
-|performanceCounters|Especifica se os contadores de desempenho para o assembly estão habilitados. Os valores válidos são<br /><br /> -Off: Os contadores de desempenho estão desabilitados.<br />-ServiceOnly: Somente contadores de desempenho relevantes para esse serviço está habilitado.<br />-Todos os: Desempenho contadores podem ser visualizados em tempo de execução.<br />-Padrão: Um _WCF_Admin de instância do contador de desempenho é criada. Esta instância é usada para habilitar a coleta de dados SQM usado pela infraestrutura. Nenhum dos valores de contador para esta instância são atualizadas e, portanto, permanecerão em zero. Este é o valor padrão se nenhuma configuração estiver presente para o WCF.|  
+|performanceCounters|Especifica se contadores de desempenho para o assembly estão habilitados. Os valores válidos são<br /><br /> -Off: Os contadores de desempenho estão desabilitados.<br />-ServiceOnly: Somente contadores de desempenho relevantes para esse serviço está habilitado.<br />-Todos os: Desempenho contadores podem ser visualizados em tempo de execução.<br />-Padrão: Um _WCF_Admin de instância do contador de desempenho é criada. Esta instância é usada para habilitar a coleta de dados SQM usados pela infraestrutura. Nenhum dos valores de contador para esta instância estão atualizados e, portanto, permanecerão em zero. Este é o valor padrão se nenhuma configuração estiver presente para o WCF.|  
 |wmiProviderEnabled|Um valor booleano que especifica se o provedor WMI para o assembly está habilitado. O provedor WMI é necessário para o usuário acessar o tempo de execução para os recursos de inspeção e controle do Windows Communication Foundation (WCF). O padrão é `false`.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -77,18 +85,20 @@ O `diagnostics` elemento define configurações que podem ser usadas por um admi
 ## <a name="example"></a>Exemplo  
   
 ```xml  
-<diagnostics wmiProviderEnabled="false"  
-       performanceCounters="all">  
-       <messageLogging logEntireMessage="true"  
-          logMalformedMessages="true"  
-          logMessagesAtServiceLevel="true"  
-          logMessagesAtTransportLevel="true"  
-          maxMessagesToLog="42"  
-          maxSizeOfMessageToLog="42">  
-         <filters>  
-         <clear />  
+<diagnostics
+    wmiProviderEnabled="false"  
+    performanceCounters="all">  
+  <messageLogging 
+      logEntireMessage="true"  
+      logMalformedMessages="true"  
+      logMessagesAtServiceLevel="true"  
+      logMessagesAtTransportLevel="true"  
+      maxMessagesToLog="42"  
+      maxSizeOfMessageToLog="42">  
+    <filters>  
+      <clear />  
     </filters>  
-       </messageLogging>  
+  </messageLogging>  
 </diagnostics>  
 ```  
   

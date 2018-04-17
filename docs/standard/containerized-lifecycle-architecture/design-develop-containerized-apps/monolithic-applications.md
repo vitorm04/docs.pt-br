@@ -1,24 +1,24 @@
 ---
-title: "Aplicativos monolíticos"
-description: "Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Aplicativos monolíticos
+description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 95561aaa8ffccb8eae3fe276192c6648c0819685
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9be0ac088a90bd34bb93550925d2e0aee5b91a21
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monolithic-applications"></a>Aplicativos monolíticos
 
 Nesse cenário, você está criando um aplicativo da web simples e monolítico ou serviço e implantá-lo como um contêiner. Dentro do aplicativo, a estrutura pode não ser monolítica; ele pode abranger vários componentes, bibliotecas ou até mesmo camadas (camada de aplicativo, camada de domínio, camada de acesso a dados, etc.). Externamente, é um único contêiner, como um único processo, um único aplicativo web ou um único serviço.
 
-Para gerenciar esse modelo, você deve implantar um único contêiner para representar o aplicativo. Para dimensioná-lo, basta Adicione algumas cópias mais com um balanceador de carga na frente. A simplicidade é proveniente do gerenciamento de uma única implantação em um único contêiner ou a máquina virtual (VM).
+Para gerenciar esse modelo, implante um contêiner único para representar o aplicativo. Para dimensioná-lo, basta Adicione algumas cópias mais com um balanceador de carga na frente. A simplicidade é proveniente do gerenciamento de uma única implantação em um único contêiner ou a máquina virtual (VM).
 
 A entidade de segurança que um contêiner não apenas uma coisa e faz isso em um processo, a seguir o padrão monolítico está em conflito. Você pode incluir vários componentes/bibliotecas ou camadas internas dentro de cada contêiner, conforme ilustrado na Figura 4-1.
 
@@ -26,9 +26,9 @@ A entidade de segurança que um contêiner não apenas uma coisa e faz isso em u
 
 Figura 4-1: um exemplo de arquitetura do aplicativo monolítico
 
-A desvantagem dessa abordagem é fornecido se ou quando o aplicativo cresce, solicitá-la para dimensionar. Se o aplicativo inteiro em escala, não é realmente um problema. No entanto, na maioria dos casos, algumas partes do aplicativo são os pontos de restrição que exigem o dimensionamento, enquanto que outros componentes são usados com menor.
+A desvantagem dessa abordagem é fornecido se ou quando o aplicativo cresce, solicitá-la para dimensionar. Se o aplicativo inteiro for dimensionado, isso não será realmente um problema. No entanto, na maioria dos casos, algumas partes do aplicativo são os pontos de restrição que exigem o dimensionamento, enquanto que outros componentes são usados com menor.
 
-Usando o exemplo de comércio eletrônico típico, você provavelmente precisa é de dimensionar o componente de informações do produto. Muitos clientes mais procurem produtos de comprá-las. Mais clientes usam seu carrinho de usar o pipeline de pagamento. Os clientes menos adicionem comentários ou exibam seu histórico de compra. E você provavelmente tem apenas uma série de funcionários, em uma única região, o que precisa para gerenciar o conteúdo e campanhas de marketing. Dimensionando o design monolítico, todo o código é implantado várias vezes.
+Usando o exemplo de comércio eletrônico típico, você provavelmente precisa é de dimensionar o componente de informações do produto. Uma quantidade muito maior de clientes procura produtos em vez de comprá-los. Mais clientes usam o carrinho em vez do pipeline de pagamento. Menos clientes fazem comentários ou exibem o histórico de compras. E você provavelmente tem apenas uma série de funcionários, em uma única região, o que precisa para gerenciar o conteúdo e campanhas de marketing. Dimensionando o design monolítico, todo o código é implantado várias vezes.
 
 Além de "escala-tudo" problema, alterações em um único componente exigem que o teste completo de todo o aplicativo, bem como uma reimplantação completa de todas as instâncias.
 
@@ -40,7 +40,7 @@ De uma perspectiva de infraestrutura, cada servidor pode executar muitos aplicat
 
 Figura 4-2: um host executando vários aplicativos/contêineres
 
-Você pode implantar aplicativos monolíticos no Azure usando VMs dedicadas para cada instância. Usando [conjuntos de escala de VM do Azure](https://docs.microsoft.com/azure/virtual-machine-scale-sets/), você pode dimensionar as VMs facilmente. [Serviços de aplicativo do Azure](https://azure.microsoft.com/en-us/services/app-service/) pode executar aplicativos monolíticos e expandir facilmente instâncias sem a necessidade de gerenciar as VMs. Desde 2016, serviços de aplicativo do Azure pode executar instâncias únicas de contêineres do Docker, também, simplificando a implantação. E, usando o Docker, você pode implantar uma única VM como um host Docker e executar várias instâncias. Usando o balanceador do Azure, conforme ilustrado na Figura 4-3, você pode gerenciar a escala.
+Você pode implantar aplicativos monolíticos no Azure usando VMs dedicadas para cada instância. Usando [conjuntos de escala de VM do Azure](https://docs.microsoft.com/azure/virtual-machine-scale-sets/), você pode dimensionar as VMs facilmente. Os [Serviços de Aplicativos do Azure](https://azure.microsoft.com/en-us/services/app-service/) podem executar aplicativos monolíticos e dimensionar instâncias com facilidade, sem a necessidade de gerenciar as VMs. Desde 2016, serviços de aplicativo do Azure pode executar instâncias únicas de contêineres do Docker, também, simplificando a implantação. E, usando o Docker, você pode implantar uma única VM como um host Docker e executar várias instâncias. Usando o balanceador do Azure, conforme ilustrado na Figura 4-3, você pode gerenciar a escala.
 
 ![](./media/image3.png)
 
@@ -50,13 +50,13 @@ Você pode gerenciar a implantação em vários hosts por meio de técnicas trad
 
 ## <a name="monolithic-application-deployed-as-a-container"></a>Aplicativo monolítico implantado como um contêiner
 
-Há benefícios de usar contêineres para gerenciar implantações monolíticos. Dimensionamento de instâncias de contêineres é muito mais rápido e mais fácil do que a implantação de VMs adicionais. Embora os conjuntos de escala de VM são um ótimo recurso para dimensionar VMs, que são necessários para hospedar seus contêineres do Docker, eles têm tempo para configurar. Quando implantado como instâncias de aplicativo, a configuração do aplicativo é gerenciada como parte da VM.
+Há benefícios de usar contêineres para gerenciar implantações monolíticos. O dimensionamento das instâncias de contêineres é muito mais rápido e fácil do que a implantação de VMs adicionais. Embora os conjuntos de escala de VM são um ótimo recurso para dimensionar VMs, que são necessários para hospedar seus contêineres do Docker, eles têm tempo para configurar. Quando implantada como instâncias de aplicativo, a configuração do aplicativo é gerenciada como parte da VM.
 
-Implantando atualizações como imagens do Docker é muito mais rápida e eficiente de rede. As instâncias de Vn podem ser configuradas nos mesmos hosts que suas instâncias Vn-1, eliminando custos adicionais resultantes de VMs adicionais. Imagens do docker geralmente iniciam em segundos, acelerando distribuições. Subdividir uma instância de Docker é tão fácil quanto invocando o `docker stop` comando, normalmente Concluindo em menos de um segundo.
+Implantar atualizações como imagens do Docker é muito mais rápido e eficiente em termos de rede. As instâncias de Vn podem ser configuradas nos mesmos hosts que suas instâncias Vn-1, eliminando custos adicionais resultantes de VMs adicionais. Imagens do docker geralmente iniciam em segundos, acelerando distribuições. Subdividir uma instância de Docker é tão fácil quanto invocando o `docker stop` comando, normalmente Concluindo em menos de um segundo.
 
 Como os contêineres são inerentemente imutáveis, por design, você nunca precisa se preocupar sobre VMs corrompidas porque esqueceu de um script de atualização de conta para alguma configuração específica ou o arquivo deixado no disco.
 
-Embora monolíticos aplicativos podem se beneficiar do Docker, estejamos tocando em apenas as dicas de benefícios. Os maiores benefícios de gerenciar contêineres vem da implantação de orchestrators de contêiner que gerenciam a várias instâncias e ciclo de vida de cada instância de contêiner. Dividir o aplicativo monolítico em subsistemas que pode ser dimensionado, desenvolvidos e implantados individualmente é o ponto de entrada para o território de microservices.
+Embora monolíticos aplicativos podem se beneficiar do Docker, estejamos tocando em apenas as dicas de benefícios. Os maiores benefícios de gerenciar contêineres vem da implantação de orchestrators de contêiner que gerenciam a várias instâncias e ciclo de vida de cada instância de contêiner. Dividir o aplicativo monolítico em subsistemas que podem ser dimensionados, desenvolvidos e implantados individualmente é o ponto de entrada no universo dos microsserviços.
 
 ## <a name="publishing-a-single-docker-container-app-to-azure-app-service"></a>Publicar um único aplicativo de contêiner do Docker do serviço de aplicativo do Azure
 

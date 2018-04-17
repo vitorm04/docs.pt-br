@@ -1,18 +1,18 @@
 ---
 title: Etapas no fluxo de trabalho de DevOps loop externo para um aplicativo de Docker
-description: "Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: fe51fc4b5026d17f0f9b93e7fd0dedde93ef4a3c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a03a9d153793b30ca9276b64a0a33e3de26f8f6e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Etapas no fluxo de trabalho de DevOps loop externo para um aplicativo de Docker
 
@@ -110,13 +110,13 @@ Uma maneira fácil de criar um desses é usar o Docker para executar um contêin
 
 **Obter mais informações** para ler mais sobre como montar um CI de Docker de serviços do Visual Studio Team pipeline e para exibir explicações passo a passo, consulte os seguintes sites:
 
-Executando um agente do Visual Studio Team Services como um contêiner do Docker: [https://hub.docker.com/r/ \ vsts/microsoft-agente /](https://hub.docker.com/r/microsoft/vsts-agent/)
+Executando um agente do Visual Studio Team Services como um contêiner do Docker: [ https://hub.docker.com/r/\ vsts/microsoft-agente /](https://hub.docker.com/r/microsoft/vsts-agent/)
 
 Extensão de Docker VSTS: <https://aka.ms/vstsdockerextension>
 
-Criação de imagens do Docker do .NET Core Linux com o Visual Studio Team Services: <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
+Criando imagens de .NET Core Linux Docker com o Visual Studio Team Services: <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
 
-Criando um serviço de equipe com base em Linux Visual Studio crie máquina com suporte de Docker: <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
+Criando uma máquina de compilação com base em Linux o serviço do Visual Studio Team com suporte de Docker: <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
 
 ### <a name="integrate-test-and-validate-multicontainer-docker-applications"></a>Integrar, testar e validar multicontainer aplicativos de Docker
 
@@ -220,11 +220,11 @@ Implantação da definição de tarefa do Figura 5-11: implantar Docker para ser
 
 **Obter mais informações** para saber mais sobre o pipeline do CD com o Visual Studio Team Services e o Docker, visite os seguintes sites:
 
-Extensão do Visual Studio Team Services para o Docker e o serviço de contêiner do Azure: [https://aka.ms/ \ vstsdockerextension](https://aka.ms/vstsdockerextension)
+Extensão do Visual Studio Team Services para o Docker e o serviço de contêiner do Azure: [ https://aka.ms/\ vstsdockerextension](https://aka.ms/vstsdockerextension)
 
 Serviço de contêiner do Azure: <https://aka.ms/azurecontainerservice>
 
-Mesosphere DC/SO: <https://mesosphere.com/product/>
+Mesosphere DC/sistema operacional: <https://mesosphere.com/product/>
 
 ## <a name="step-5-run-and-manage"></a>Etapa 5: Executar e gerenciar
 
@@ -237,4 +237,4 @@ Este tópico também é abordado no próximo capítulo como parte das tarefas qu
 Somente quando o monitoramento e diagnóstico é 100 por cento no território de DevOps são os processos de monitoramento e análise realizada pela equipe de desenvolvimento em ambientes de teste ou beta. Isso é feito executando o teste de carga ou simplesmente monitorando beta ou ambientes de controle de qualidade, onde os testadores beta estão tentando as novas versões.
 
 >[!div class="step-by-step"]
-[Previous] (index.md) [Next] (../run-manage-monitor-docker-environments/index.md)
+[Anterior] (index.md) [Avançar] (... /Run-Manage-monitor-docker-Environments/index.MD)

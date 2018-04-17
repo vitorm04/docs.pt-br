@@ -1,18 +1,18 @@
 ---
 title: Principais aspectos a serem lembrados
 description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (e-book)_v1.1 [Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft]
-keywords: Docker, Microsserviços, ASP.NET, Contêiner
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2ad2e0171b8deaead6d0b28a9da67fec245a405a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5bda215f895fd0e3a66e10c2d85a431314d737fc
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="key-takeaways"></a>Principais aspectos a serem lembrados
 

@@ -1,13 +1,9 @@
 ---
 title: Implantando um aplicativo de interoperabilidade
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - deploying applications [.NET Framework], interop
@@ -22,20 +18,19 @@ helpviewer_keywords:
 - signed assemblies
 - COM interop, exposing COM components
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a3d8f9b7a1eae07eb26397f0664ab575165a35d9
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 8271a30d2258214defd5a15816813875cf594c8b
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploying-an-interop-application"></a>Implantando um aplicativo de interoperabilidade
-Um aplicativo de interoperabilidade geralmente inclui um assembly de cliente do .NET, um ou mais assemblies de interoperabilidade que representam diferentes bibliotecas de tipos COM e um ou mais componentes COM registrados. O Visual Studio e o [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] fornecem ferramentas para importar e converter uma biblioteca de tipos em um assembly de interoperabilidade, conforme abordado em [Importando uma biblioteca de tipos como um assembly](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md). Há duas maneiras de implantar um aplicativo de interoperabilidade:  
+Um aplicativo de interoperabilidade geralmente inclui um assembly de cliente do .NET, um ou mais assemblies de interoperabilidade que representam diferentes bibliotecas de tipos COM e um ou mais componentes COM registrados. O Visual Studio e o [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] fornecem ferramentas para importar e converter uma biblioteca de tipos em um assembly de interoperabilidade, conforme abordado em [Importando uma biblioteca de tipos como um assembly](importing-a-type-library-as-an-assembly.md). Há duas maneiras de implantar um aplicativo de interoperabilidade:  
   
 -   Usando tipos de interoperabilidade inseridos: a partir do [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], é possível instruir o compilador a inserir informações de tipo de um assembly de interoperabilidade no executável. O compilador insere apenas as informações de tipo usadas pelo aplicativo. Não é necessário implantar o assembly de interoperabilidade com o aplicativo. Esta é a técnica recomendada.  
   
@@ -44,21 +39,21 @@ Um aplicativo de interoperabilidade geralmente inclui um assembly de cliente do 
  Se você usar tipos de interoperabilidade inseridos, a implantação será simples. Não há nada especial que precisa ser feito. O restante deste artigo descreve os cenários de implantação de assemblies de interoperabilidade com o aplicativo.  
   
 ## <a name="deploying-interop-assemblies"></a>Implantando assemblies de interoperabilidade  
- Os assemblies pode ter nomes fortes. Um assembly de nome forte inclui a chave pública do fornecedor, que fornece uma identidade exclusiva. Assemblies que são produzidos pelo [Importador da Biblioteca de Tipos (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) podem ser assinados pelo fornecedor usando a opção **/keyfile**. É possível instalar assemblies assinados no cache de assembly global. Assemblies não assinados devem ser instalados no computador do usuário como assemblies particulares.  
+ Os assemblies pode ter nomes fortes. Um assembly de nome forte inclui a chave pública do fornecedor, que fornece uma identidade exclusiva. Assemblies que são produzidos pelo [Importador da Biblioteca de Tipos (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) podem ser assinados pelo fornecedor usando a opção **/keyfile**. É possível instalar assemblies assinados no cache de assembly global. Assemblies não assinados devem ser instalados no computador do usuário como assemblies particulares.  
   
 ### <a name="private-assemblies"></a>Assemblies particulares  
  Para instalar um assembly a ser usado de forma particular, o executável do aplicativo e o assembly de interoperabilidade que contém tipos COM importados devem ser instalados na mesma estrutura de diretório. A ilustração a seguir mostra um assembly de interoperabilidade não assinado a ser usado de forma particular por Client1.exe e Client2.exe, que residem em diretórios de aplicativo separados. O assembly de interoperabilidade, que é chamado LOANLib.dll neste exemplo, é instalado duas vezes.  
   
- ![Estrutura de diretório e Registro do Windows](../../../docs/framework/interop/media/comdeployprivate.gif "comdeployprivate")  
+ ![Estrutura de diretório e Registro do Windows](media/comdeployprivate.gif "comdeployprivate")  
 Estrutura do diretório e entradas do Registro de uma implantação particular  
   
  Todos os componentes COM associados ao aplicativo devem ser instalados no Registro do Windows. Se Client1.exe e Client2.exe na ilustração forem instalados em computadores diferentes, você deverá registrar esses componentes COM em ambos os computadores.  
   
 ### <a name="shared-assemblies"></a>Assemblies compartilhados  
- Assemblies que são compartilhados por vários aplicativos devem ser instalados em um repositório centralizado chamado cache de assembly global. Os clientes do .NET podem acessar a mesma cópia do assembly de interoperabilidade, que é assinada e instalada no cache de assembly global. Para obter mais informações sobre como produzir e usar assemblies de interoperabilidade primários, consulte [Assemblies de interoperabilidade primários](http://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080).  
+ Assemblies que são compartilhados por vários aplicativos devem ser instalados em um repositório centralizado chamado cache de assembly global. Os clientes do .NET podem acessar a mesma cópia do assembly de interoperabilidade, que é assinada e instalada no cache de assembly global. Para obter mais informações sobre como produzir e usar assemblies de interoperabilidade primários, consulte [Assemblies de interoperabilidade primários](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100)).  
   
 ## <a name="see-also"></a>Consulte também  
- [Expondo componentes do COM ao .NET Framework](../../../docs/framework/interop/exposing-com-components.md)  
- [Importando uma biblioteca de tipos como um assembly](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)  
+ [Expondo componentes do COM ao .NET Framework](exposing-com-components.md)  
+ [Importando uma biblioteca de tipos como um assembly](importing-a-type-library-as-an-assembly.md)  
  [Usando tipos COM em código gerenciado](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
- [Compilando um projeto de interoperabilidade](../../../docs/framework/interop/compiling-an-interop-project.md)
+ [Compilando um projeto de interoperabilidade](compiling-an-interop-project.md)

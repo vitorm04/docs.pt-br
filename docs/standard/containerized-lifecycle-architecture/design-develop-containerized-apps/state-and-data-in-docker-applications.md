@@ -1,20 +1,20 @@
 ---
-title: Estado e os dados em aplicativos de Docker
+title: Estado e dados em aplicativos do Docker
 description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
-keywords: Docker, Microsserviços, ASP.NET, Contêiner
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d4b75faffd76a85f9ca1c779ed58bfa37625cff3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 83094cd9a13d77f489df639096bb42b23ce152e7
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="state-and-data-in-docker-applications"></a>Estado e os dados em aplicativos de Docker
+# <a name="state-and-data-in-docker-applications"></a>Estado e dados em aplicativos do Docker
 
 Um primitivo de contêineres é imutabilidade. Quando comparado a uma máquina virtual, os contêineres não desapareceram como uma ocorrência comum. Uma VM pode falhar em várias formas de processos inativos, sobrecarga da CPU ou um disco cheio ou com falha. Ainda, esperamos que a VM esteja disponível e unidades RAID são comuns para assegurar a mantêm os dados de falhas no disco.
 
@@ -36,7 +36,7 @@ Para gerenciar dados persistentes em aplicativos de Docker, há soluções comun
 
 Volumes de dados são designados especialmente diretórios dentro de um ou mais contêineres que ignoram o [sistema de arquivos de união](https://docs.docker.com/v1.8/reference/glossary#union-file-system). Volumes de dados são projetados para manter os dados, independentes do ciclo de vida do contêiner. Docker, portanto, nunca exclui automaticamente os volumes quando você remove um contêiner, nem o ele volumes "coleta de lixo" que não são mais referenciados por um contêiner. O sistema operacional do host pode navegar e editar os dados em qualquer volume livremente, que é apenas outra razão para usar os volumes de dados com moderação.
 
-Um [contêiner de volume de dados](https://docs.docker.com/v1.8/userguide/dockervolumes/) é um aprimoramento volumes de dados regulares. É essencialmente um contêiner inativo que tem um ou mais volumes de dados criados nele (conforme descrito anteriormente). O contêiner de volume de dados fornece acesso aos contêineres de um ponto de montagem central. A vantagem desse método de acesso é que ele abstrai o local dos dados originais, tornando o contêiner de dados um ponto de montagem lógico. Ele também permite acessar os volumes de contêiner de dados para serem criados e destruídos mantendo os dados persistentes em um contêiner dedicado de contêineres de "aplicativo".
+Um [contêiner de volume de dados](https://docs.docker.com/v1.8/userguide/dockervolumes/) é um aprimoramento volumes de dados regulares. É essencialmente um contêiner inativo que tem um ou mais volumes de dados criados nele (conforme descrito anteriormente). O contêiner de volume de dados dá acesso aos contêineres de um ponto de montagem central. A vantagem desse método de acesso é que ele abstrai o local dos dados originais, tornando o contêiner de dados um ponto de montagem lógico. Ele também permite acessar os volumes de contêiner de dados para serem criados e destruídos mantendo os dados persistentes em um contêiner dedicado de contêineres de "aplicativo".
 
 Figura 4-5 mostra que volumes de Docker regulares podem ser colocados em armazenamento fora os contêineres de si, mas dentro dos limites físicos do host VM do servidor. *Volumes docker não tem a capacidade de usar um volume de um host VM server para outro*.
 

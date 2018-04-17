@@ -1,28 +1,28 @@
 ---
-title: "Registros, imagens e contêineres do docker"
-description: "Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Registros, imagens e contêineres do Docker
+description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0cccead8833c63f19b359f830f555e7ff31daa1a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9de37f9ee3a8fe7ce4a337fc548030b2aeadba55
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="docker-containers-images-and-registries"></a>Registros, imagens e contêineres do docker
+# <a name="docker-containers-images-and-registries"></a>Registros, imagens e contêineres do Docker
 
-Ao usar o Docker, você cria um aplicativo ou serviço e pacote ele e suas dependências em uma imagem de contêiner. Uma imagem é uma representação estática do aplicativo ou serviço e a configuração e as dependências.
+Ao usar o Docker, você cria um aplicativo ou serviço e pacote ele e suas dependências em uma imagem de contêiner. Uma imagem é uma representação estática do aplicativo ou do serviço e de sua configuração e dependências.
 
-Para executar o aplicativo ou serviço, a imagem do aplicativo é instanciada para criar um contêiner, que serão executados no host do Docker. Inicialmente, contêineres são testados em um ambiente de desenvolvimento ou de um computador.
+Para executar o aplicativo ou serviço, a imagem do aplicativo é instanciada para criar um contêiner, que serão executados no host do Docker. Inicialmente, os contêineres são testados em um ambiente de desenvolvimento ou em um computador.
 
-Você pode armazenar imagens em um registro, que atua como uma biblioteca de imagens. Ao implantar o orchestrators de produção, é necessário um registro. Docker mantém um registro público via [Docker Hub](https://hub.docker.com/); outros fornecedores fornecem os registros para diferentes coleções de imagens. Como alternativa, as empresas podem ter um registro privado no local para suas próprias imagens do Docker.
+Você pode armazenar imagens em um registro, que atua como uma biblioteca de imagens. Ao implantar o orchestrators de produção, é necessário um registro. O Docker mantém um Registro público por meio do [Hub do Docker](https://hub.docker.com/); outros fornecedores fornecem os Registros para diferentes coleções de imagens. Como alternativa, as empresas podem ter um Registro privado local para suas próprias imagens do Docker.
 
-Figura 1-4 mostra como imagens e registros no Docker se relacionam com outros componentes. Ele também mostra as várias ofertas de registro de fornecedores.
+Figura 1-4 mostra como imagens e registros no Docker se relacionam com outros componentes. Ela também mostra as várias ofertas de Registro dos fornecedores.
 
 ![](./media/image4.png)
 
@@ -32,9 +32,9 @@ Ao colocar imagens em um registro, você pode armazenar bits de aplicativo está
 
 Registros de imagem privada, hospedado no local ou na nuvem, são recomendados para as seguintes situações:
 
--   As imagens não devem ser compartilhadas publicamente devido a confidencialidade.
+-   Suas imagens não devem ser compartilhadas publicamente devido à confidencialidade.
 
--   Você deseja ter a latência de rede mínima entre as imagens e o ambiente de implantação escolhida. Por exemplo, se seu ambiente de produção é o Azure, você provavelmente desejará armazenar as imagens no registro de contêiner do Azure para que a latência de rede será mínima. De maneira semelhante, se seu ambiente de produção for local, convém ter um local registro confiável do Docker disponíveis na mesma rede local.
+-   Você deseja ter latência de rede mínima entre suas imagens e o ambiente de implantação escolhido. Por exemplo, se seu ambiente de produção é o Azure, você provavelmente desejará armazenar as imagens no registro de contêiner do Azure para que a latência de rede será mínima. De maneira semelhante, se seu ambiente de produção for local, tenha um Registro Confiável do Docker local disponível na mesma rede local.
 
 >[!div class="step-by-step"]
 [Anterior] (docker-terminology.md) [Avançar] (Docker-aplicativo-ciclo de vida/index.md)

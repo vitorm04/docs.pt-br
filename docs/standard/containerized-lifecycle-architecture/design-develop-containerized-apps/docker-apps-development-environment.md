@@ -1,18 +1,18 @@
 ---
 title: Ambiente de desenvolvimento para aplicativos do Docker
-description: "Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ad1a6e4cb0974ebb067cf1a7be987d696e8bc82a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c164b94572a8fde58124acaa14d47da574a19383
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="development-environment-for-docker-apps"></a>Ambiente de desenvolvimento para aplicativos do Docker
 
@@ -27,7 +27,7 @@ Se você preferir um editor leve, de plataforma cruzada com suporte a qualquer l
 > [!NOTE]
 > Para baixar o código do Visual Studio, vá para <https://code.visualstudio.com/download>.
 
-Para baixar o Docker para Mac e Windows, vá para <http://www.docker.com/products/docker>.
+Para baixar o Docker para Mac e Windows, acesse <http://www.docker.com/products/docker>.
 
 ### <a name="visual-studio-with-docker-tools"></a>Visual Studio com ferramentas do Docker
 

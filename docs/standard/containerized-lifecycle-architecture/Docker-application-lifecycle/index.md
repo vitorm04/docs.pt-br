@@ -1,18 +1,18 @@
 ---
 title: Introdução ao ciclo de vida do aplicativo Docker
 description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
-keywords: Docker, Microsserviços, ASP.NET, Contêiner
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0c044b3d1f52143ba7e9eb06507a81a8ad56d081
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 2d3a2c656009384fcefebf81b0a69976c6a6de7e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-the-docker-application-life-cycle"></a>Introdução ao ciclo de vida do aplicativo Docker
  

@@ -1,13 +1,9 @@
 ---
-title: "Como mapear HRESULTs e exceções"
-ms.custom: 
+title: Como mapear HRESULTs e exceções
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - cpp
@@ -19,17 +15,17 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-caps.latest.revision: 
+caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 736e86e3013f34997be7ecf73ff4436675d4c05f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a79cae30237fb631728bf036d9bf8d7679179d3f
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Como mapear HRESULTs e exceções
 Métodos COM relatam erros retornando HRESULTs; métodos .NET os relatam gerando exceções. O tempo de execução manipula a transição entre os dois. Cada classe de exceção do .NET Framework mapeia para um HRESULT.  
@@ -154,5 +150,5 @@ CMyClass::MethodThatThrows
  Campos de exceção, tais como **Message**, **Source** e **StackTrace**, não estão disponíveis para o **StackOverflowException**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Interoperabilidade COM avançada](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
- [Exceções](../../../docs/standard/exceptions/index.md)
+ [Interoperabilidade COM avançada](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb(v=vs.100))  
+ [Exceções](../../standard/exceptions/index.md)

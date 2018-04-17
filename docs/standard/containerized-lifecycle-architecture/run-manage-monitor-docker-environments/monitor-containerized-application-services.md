@@ -1,18 +1,18 @@
 ---
-title: "Monitorar serviços de aplicativos em contêineres"
-description: "Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Monitorar serviços de aplicativos em contêineres
+description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 58bf96dfa06a78892563698200e6f4df5f371346
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b3ffa6c230176e1de6269ed0b30d05711ff78704
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-containerized-application-services"></a>Monitorar serviços de aplicativos em contêineres
 
@@ -42,10 +42,10 @@ Quando você executa o [imagem Application Insights Docker](https://hub.docker.c
 
 Para criar um recurso do Application Insights, siga as instruções nos artigos apresentados na lista a seguir. Portal do Azure criará o script necessário para você.
 
--   **Monitorar aplicativos de Docker no Application Insights:**[https://docs.microsoft.com/azure/application-insights/app-insights-docker](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
+-   **Monitore aplicativos de Docker no Application Insights:**  [https://docs.microsoft.com/azure/application-insights/app-insights-docker](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
 
 -   **Imagem de Docker Insights do aplicativo no Hub do Docker e Github:**  
-[https://hub.docker.com/r/Microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) e <https://github.com/Microsoft/ApplicationInsights-Docker>
+[https://hub.docker.com/r/microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) e <https://github.com/Microsoft/ApplicationInsights-Docker>
 
 -   **Configure o Application Insights para ASP.NET:**  
 [https://docs.microsoft.com/azure/application-insights/app-insights-asp-net](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)
@@ -97,7 +97,7 @@ Figura 6-3: métricas de desempenho dos hosts de Docker mostrados pelo Operation
 
 Salvar consultas também é um recurso padrão do Operations Management Suite e pode ajudar a manter as consultas que você tenha achado útil e descobre tendências em seu sistema.
 
-**Obter mais informações** para encontrar informações sobre como instalar e configurar o Docker solução contêiner [Operations Management Suite](http://microsoft.com/oms), vá para <https://docs.microsoft.com/azure/log-analytics /log-Analytics-Containers>.
+**Obter mais informações** para encontrar informações sobre como instalar e configurar o Docker solução contêiner [Operations Management Suite](http://microsoft.com/oms), vá para <https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>.
 
 >[!div class="step-by-step"]
-[Previous] (manage-production-docker-environments.md) [Next] (../key-takeaways/index.md)
+[Anterior] (gerenciar-produção-docker-environments.md) [Avançar] (... /Key-takeaways/index.MD)

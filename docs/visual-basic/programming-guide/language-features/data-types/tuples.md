@@ -1,10 +1,10 @@
 ---
 title: Tuplas no Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 04/23/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf26b7ce58c1e20fbbe5043cbd2acfd5712837fa
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 68c82e75ce4a438381bc9c60ce8c992565eb31cb
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tuples-visual-basic"></a>Tuplas (Visual Basic)
 
@@ -80,7 +80,7 @@ Quando a falha de inferência de nome de campo, o Visual Basic não gera um erro
 
 Uma coleção de itens do Visual Basic é um tipo de valor que é uma instância de um a um **System.ValueTuple** tipos genéricos. Por exemplo, o `holiday` tupla definida no exemplo anterior é uma ocorrência da <xref:System.ValueTuple%603> estrutura. Ele é projetado para ser um contêiner leve para dados. Desde que a tupla vise para tornar mais fácil criar um objeto com vários itens de dados, ele não tem alguns dos recursos que pode ter uma estrutura personalizada. Elas incluem:
 
-- Membros de cliente. Você não pode definir suas próprias propriedades, métodos ou eventos de uma tupla.
+- Membros personalizados. Você não pode definir suas próprias propriedades, métodos ou eventos de uma tupla.
 
 - Validação. Não é possível validar os dados atribuídos aos campos.
 

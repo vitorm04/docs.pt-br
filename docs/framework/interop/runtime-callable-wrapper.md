@@ -1,12 +1,9 @@
 ---
 title: RCW (Runtime Callable Wrapper)
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - COM interop, COM wrappers
@@ -15,23 +12,23 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8fed5ff57a4674f9b7723b1b850e972316fa94fb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: bc92f169851680465f33170290d865be8426a53d
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="runtime-callable-wrapper"></a>RCW (Runtime Callable Wrapper)
 O common language runtime expõe objetos COM através de um proxy chamado RCW (Runtime Callable Wrapper). Embora o RCW pareça ser um objeto comum para clientes .NET, a função principal dele é realizar marshaling de chamadas entre um cliente .NET e um objeto COM.  
   
  O tempo de execução cria exatamente um RCW para cada objeto COM, independentemente do número de referências que existem nesse objeto. O tempo de execução mantém um único RCW por processo para cada objeto.  Se você criar um RCW em um domínio de aplicativo ou apartment e, em seguida, passar uma referência a outro domínio de aplicativo ou apartment, um proxy para o primeiro objeto será usado.  Conforme mostra a ilustração a seguir, qualquer número de clientes pode conter uma referência a objetos COM que expõem interfaces INew e INewer.  
   
- ![RCW](../../../docs/framework/interop/media/rcw.gif "rcw")  
+ ![RCW](./media/rcw.gif "rcw")  
 Acessando objetos COM através do runtime callable wrapper  
   
  Usando metadados derivados de uma biblioteca de tipos, o tempo de execução cria o objeto COM que está sendo chamado e um wrapper para esse objeto. Cada RCW mantém um cache de ponteiros de interface no objeto COM que ele encapsula e, além disso, libera sua referência no objeto COM quando o RCW não é mais necessário. O tempo de execução executa a coleta de lixo no RCW.  
@@ -41,9 +38,9 @@ Acessando objetos COM através do runtime callable wrapper
  O wrapper padrão impõe regras de marshaling internas. Por exemplo, quando um cliente .NET passa um tipo de cadeia de caracteres como parte de um argumento para um objeto não gerenciado, o wrapper converte a cadeia de caracteres em um tipo BSTR. Se o objeto COM retornar um BSTR ao chamador gerenciado, o chamador receberá uma cadeia de caracteres. Tanto o cliente quanto o servidor enviam e recebem dados com os quais estão familiarizados. Outros tipos não exigem conversão. Por exemplo, um wrapper padrão sempre passará um inteiro de 4 bytes entre código gerenciado e não gerenciado sem converter o tipo.  
   
 ## <a name="marshaling-selected-interfaces"></a>Marshaling de interfaces selecionadas  
- A meta principal do [RCW](../../../docs/framework/interop/runtime-callable-wrapper.md) (Runtime Callable Wrapper) é ocultar as diferenças entre os modelos de programação gerenciado e não gerenciado. Para criar uma transição suave, o RCW consome interfaces COM selecionadas sem expô-las ao cliente .NET, conforme mostrado na ilustração a seguir.  
+ A meta principal do [RCW](runtime-callable-wrapper.md) (Runtime Callable Wrapper) é ocultar as diferenças entre os modelos de programação gerenciado e não gerenciado. Para criar uma transição suave, o RCW consome interfaces COM selecionadas sem expô-las ao cliente .NET, conforme mostrado na ilustração a seguir.  
   
- ![RCW com interfaces](../../../docs/framework/interop/media/rcwwithinterfaces.gif "rcwwithinterfaces")  
+ ![RCW com interfaces](./media/rcwwithinterfaces.gif "rcwwithinterfaces")  
 Interfaces COM e o Runtime Callable Wrapper  
   
  Quando criado como um objeto associado precocemente, o RCW é um tipo específico. Ele implementa as interfaces que o objeto COM implementa e expõe os métodos, propriedades e eventos das interfaces do objeto. Na ilustração, o RCW expõe a interface INew mas consome as interfaces **IUnknown** e **IDispatch**. Além disso, o RCW expõe todos os membros da interface INew para o cliente .NET.  
@@ -66,8 +63,8 @@ Interfaces COM e o Runtime Callable Wrapper
 |**IEnumVARIANT**|Permite que os tipos COM que dão suporte a enumerações sejam tratados como coleções.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Wrappers COM](../../../docs/framework/interop/com-wrappers.md)  
- [Marshaling de Interfaces selecionadas](http://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840)  
- [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md)  
- [Resumo da conversão de bibliotecas de tipos em assemblies](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
- [Importando uma biblioteca de tipos como um assembly](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)
+ [Wrappers COM](com-wrappers.md)  
+ [Marshaling de Interfaces selecionadas](https://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840(v=vs.100))  
+ [COM Callable Wrapper](com-callable-wrapper.md)  
+ [Resumo da conversão de bibliotecas de tipos em assemblies](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
+ [Importando uma biblioteca de tipos como um assembly](importing-a-type-library-as-an-assembly.md)

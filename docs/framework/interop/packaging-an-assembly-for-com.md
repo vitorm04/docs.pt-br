@@ -1,12 +1,9 @@
 ---
 title: Empacotando um assembly para o COM
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -23,16 +20,16 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - Reqasm.exe
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 79c0d8ff3d6f66ad3abf23cd371f86bb74edf78e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5c1e3ee38f98eae46c09ec2175f3c9af01288bd2
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="packaging-an-assembly-for-com"></a>Empacotando um assembly para o COM
 Desenvolvedores COM podem aproveitar as informações a seguir sobre os tipos gerenciados que pretendem incorporar em seus aplicativos:  
@@ -41,19 +38,19 @@ Desenvolvedores COM podem aproveitar as informações a seguir sobre os tipos ge
   
      Alguns tipos gerenciados são visíveis para COM; alguns são visíveis, mas não instanciável; e alguns são visíveis e instanciáveis. Um assembly pode incluir qualquer combinação de tipos invisíveis, visíveis, não instanciáveis e instanciáveis. Para fins de integridade, identifique os tipos em um assembly que você pretende expor ao COM, especialmente quando esses tipos são um subconjunto dos tipos expostos ao .NET Framework.  
   
-     Para obter mais informações, consulte [Qualificando tipos do .NET para interoperação](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md).  
+     Para obter mais informações, consulte [Qualificando tipos do .NET para interoperação](qualifying-net-types-for-interoperation.md).  
   
 -   Instruções de controle de versão  
   
      Classes gerenciadas que implementam a interface de classe (uma interface gerada por interoperabilidade COM) estão sujeitas a restrições de controle de versão.  
   
-     Para obter diretrizes sobre como usar a interface de classe, consulte [Introdução à interface de classe](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
+     Para obter diretrizes sobre como usar a interface de classe, consulte [introduzindo a interface de classe](com-callable-wrapper.md#introducing-the-class-interface).  
   
 -   Instruções de implantação  
   
      Assemblies de nome forte que são assinados por um editor podem ser instalados no cache de assembly global. Assemblies não assinados devem ser instalados no computador do usuário como assemblies particulares.  
   
-     Para obter mais informações, consulte [Considerações sobre segurança de assembly](../../../docs/framework/app-domains/assembly-security-considerations.md).  
+     Para obter mais informações, consulte [Considerações sobre segurança de assembly](../app-domains/assembly-security-considerations.md).  
   
 -   Inclusão de biblioteca de tipos  
   
@@ -69,11 +66,11 @@ Desenvolvedores COM podem aproveitar as informações a seguir sobre os tipos ge
   
      Independentemente do mecanismo escolhido, somente os tipos públicos definidos no assembly que você fornecer são incluídos na biblioteca de tipos gerada.  
   
-     Você pode empacotar uma biblioteca de tipos como um arquivo separado ou inseri-la como arquivo de recurso Win32 dentro de um aplicativo baseado em .NET. Microsoft Visual Basic 6.0 executou essa tarefa para você automaticamente. No entanto, ao usar [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], você deve inserir manualmente sua biblioteca de tipos. Para obter instruções, consulte [Como inserir bibliotecas de tipos como recursos do Win32 em aplicativos baseados em .NET](http://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44).  
+     Você pode empacotar uma biblioteca de tipos como um arquivo separado ou inseri-la como arquivo de recurso Win32 dentro de um aplicativo baseado em .NET. Microsoft Visual Basic 6.0 executou essa tarefa para você automaticamente. No entanto, ao usar [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], você deve inserir manualmente sua biblioteca de tipos. Para obter instruções, consulte [Como inserir bibliotecas de tipos como recursos do Win32 em aplicativos baseados em .NET](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100)).  
   
 <a name="cpconpackagingassemblyforcomanchor1"></a>   
 ## <a name="type-library-exporter"></a>Exportador da Biblioteca de Tipos  
- O [Exportador da Biblioteca de Tipos (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) é uma ferramenta de linha de comando que converte as classes e interfaces contidas em um assembly em uma biblioteca de tipos COM. Quando as informações de tipo da classe estão disponíveis, os clientes COM podem criar uma instância da classe do .NET e chamar os métodos da instância, como se fosse um objeto COM. Tlbexp.exe converte um assembly inteiro de uma vez. Não é possível usar Tlbexp.exe para gerar informações de tipo para um subconjunto dos tipos definidos em um assembly.  
+ O [Exportador da Biblioteca de Tipos (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md) é uma ferramenta de linha de comando que converte as classes e interfaces contidas em um assembly em uma biblioteca de tipos COM. Quando as informações de tipo da classe estão disponíveis, os clientes COM podem criar uma instância da classe do .NET e chamar os métodos da instância, como se fosse um objeto COM. Tlbexp.exe converte um assembly inteiro de uma vez. Não é possível usar Tlbexp.exe para gerar informações de tipo para um subconjunto dos tipos definidos em um assembly.  
   
 <a name="cpconpackagingassemblyforcomanchor2"></a>   
 ## <a name="typelibconverter-class"></a>Classe TypeLibConverter  
@@ -83,19 +80,19 @@ Desenvolvedores COM podem aproveitar as informações a seguir sobre os tipos ge
   
 <a name="cpconpackagingassemblyforcomanchor3"></a>   
 ## <a name="assembly-registration-tool"></a>Ferramenta de Registro de Assembly  
- A [Ferramenta de Registro de Assembly (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) pode gerar e registrar uma biblioteca de tipos quando você aplica a opção **/tlb:**. Clientes COM exigem que as bibliotecas de tipos sejam instaladas no Registro do Windows. Sem essa opção, o Regasm.exe registra somente os tipos em um assembly, mas não a biblioteca de tipos. Registrar os tipos em um assembly e registrando a biblioteca de tipos são atividades distintas.  
+ A [Ferramenta de Registro de Assembly (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) pode gerar e registrar uma biblioteca de tipos quando você aplica a opção **/tlb:**. Clientes COM exigem que as bibliotecas de tipos sejam instaladas no Registro do Windows. Sem essa opção, o Regasm.exe registra somente os tipos em um assembly, mas não a biblioteca de tipos. Registrar os tipos em um assembly e registrando a biblioteca de tipos são atividades distintas.  
   
 <a name="cpconpackagingassemblyforcomanchor4"></a>   
 ## <a name="net-services-installation-tool"></a>Ferramenta de Instalação de Serviços .NET  
- A [ferramenta de instalação de serviços .NET (Regsvcs.exe)](../../../docs/framework/tools/regsvcs-exe-net-services-installation-tool.md) adiciona classes gerenciadas para Serviços do Componente do Windows 2000 e combina várias tarefas em uma única ferramenta. Além de carregar e registrar um assembly, Regsvcs.exe pode gerar, registrar e instalar a biblioteca de tipos em um aplicativo COM+ 1.0 existente.  
+ A [ferramenta de instalação de serviços .NET (Regsvcs.exe)](../tools/regsvcs-exe-net-services-installation-tool.md) adiciona classes gerenciadas para Serviços do Componente do Windows 2000 e combina várias tarefas em uma única ferramenta. Além de carregar e registrar um assembly, Regsvcs.exe pode gerar, registrar e instalar a biblioteca de tipos em um aplicativo COM+ 1.0 existente.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Runtime.InteropServices.TypeLibConverter>  
  <xref:System.Runtime.InteropServices.ITypeLibConverter>  
- [Expondo componentes do .NET Framework ao COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Qualificando tipos .NET para interoperação](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
- [Introduzindo a Interface de classe](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
- [Considerações sobre segurança de assembly](../../../docs/framework/app-domains/assembly-security-considerations.md)  
- [Tlbexp.exe (Exportador de Biblioteca de Tipos)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
- [Registrando assemblies usando COM](../../../docs/framework/interop/registering-assemblies-with-com.md)  
- [Como inserir bibliotecas de tipo como recursos do Win32 em aplicativos](http://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44)
+ [Expondo componentes do .NET Framework ao COM](exposing-dotnet-components-to-com.md)  
+ [Qualificando tipos .NET para interoperação](qualifying-net-types-for-interoperation.md)  
+ [Introduzindo a interface de classe](com-callable-wrapper.md#introducing-the-class-interface)  
+ [Considerações sobre segurança de assembly](../app-domains/assembly-security-considerations.md)  
+ [Tlbexp.exe (Exportador de Biblioteca de Tipos)](../tools/tlbexp-exe-type-library-exporter.md)  
+ [Registrando assemblies usando COM](registering-assemblies-with-com.md)  
+ [Como inserir bibliotecas de tipo como recursos do Win32 em aplicativos](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100))
