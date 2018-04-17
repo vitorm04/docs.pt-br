@@ -11,11 +11,11 @@
   },
   "branch_target_mapping": {
     "live": [
-      "Publish"
-    ],
-     "live-sxs": [
       "Publish",
       "Pdf"
+    ],
+     "live-sxs": [
+      "Publish"
     ],
     "master": [
       "Publish",
