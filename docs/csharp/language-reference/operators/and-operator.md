@@ -1,34 +1,36 @@
 ---
-title: "Operador &amp; (Referência de C#)"
-ms.date: 07/20/2015
+title: Operador &amp; (Referência de C#)
+ms.date: 04/04/2018
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: '&_CSharpKeyword'
+f1_keywords:
+- '&_CSharpKeyword'
 helpviewer_keywords:
 - bitwise AND operator [C#]
 - ampersand operator (&) [C#]
 - '& operator [C#]'
 - AND operator (&) [C#]
 ms.assetid: afa346d5-90ec-4b1f-a2c8-3881f018741d
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: eceee8e01ba46f65c6b182a40d14e62aaba5dd53
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f26305bfa1e8c9ba45493ad2ab4937d554590911
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="amp-operator-c-reference"></a>Operador &amp; (Referência de C#)
-O operador & pode funcionar como um operador unário ou binário.  
+O operador `&` pode funcionar como um operador unário ou binário.  
   
 ## <a name="remarks"></a>Comentários  
- O operador unário & retorna o endereço de seu operando (requer um contexto [unsafe](../../../csharp/language-reference/keywords/unsafe.md)).  
+ O operador unário `&` retorna o endereço de seu operando (requer um contexto [desprotegido](../../../csharp/language-reference/keywords/unsafe.md)).  
   
- Os operadores binários & são predefinidos para os tipos integrais e `bool`. Para os tipos integrais, o & computa o AND lógico bit a bit de seus operandos. Para operandos `bool`, o & computa o AND lógico de seus operandos; ou seja, o resultado será `true` se e somente se ambos seus operandos forem `true`.  
+ Os operadores binários `&` são predefinidos para os tipos integrais e `bool`. Para os tipos integrais, o & computa o AND lógico bit a bit de seus operandos. Para operandos `bool`, o & computa o AND lógico de seus operandos; ou seja, o resultado será `true` se e somente se ambos seus operandos forem `true`.  
   
- O operador `&` avalia os dois operadores independentemente do valor do primeiro. Por exemplo:  
+ O operador binário `&` avalia os dois operadores, independentemente do valor do primeiro, ao contrário do [operador E condicional](../../../csharp/language-reference/operators/conditional-and-operator.md) `&&`. Por exemplo:  
   
  [!code-csharp[csRefOperators#37](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_1.cs)]  
   
