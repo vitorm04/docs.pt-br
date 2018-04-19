@@ -1,4 +1,4 @@
----
+﻿---
 title: "Introdução ao C# e Visual Studio Code – Guia do C#"
 description: Saiba como criar e depurar seu primeiro aplicativo .NET Core no C# usando o Visual Studio Code.
 author: kendrahavens
@@ -17,7 +17,7 @@ ms.lasthandoff: 02/05/2018
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introdução ao Visual Studio Code e C#
 
-O .NET Core oferece uma plataforma modular e rápida para a criação de aplicativos que são executados no Windows, Linux e macOS. Use o Visual Studio Code com a extensão do C# para obter uma excelente experiência de edição com suporte completo para IntelliSense em C# (conclusão de código inteligente) e depuração.
+O .NET Core oferece uma plataforma modular e rápida para a criação de aplicativos que são executados no Windows, Linux e macOS. Use o Visual Studio Code com a extensão do C# para obter uma excelente experiência de edição com suporte completo para IntelliSense em C# (preenchimento de código inteligente) e depuração.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -31,7 +31,7 @@ Vamos começar com um simples programa "Olá, Mundo" no .NET Core:
 
 1. Abra um projeto:
 
-    * Abra o Visual Studio Core.
+    * Abra o Visual Studio Code.
     * Clique no ícone do Explorer no menu à esquerda e, em seguida, clique em **Abrir Pasta**; ou.
     * Selecione **Arquivo** > **Abrir Pasta** no menu principal para abrir a pasta em que você deseja armazenar seu projeto C# e clique em **Selecionar Pasta**. Para nosso exemplo, estamos criando uma pasta para nosso projeto chamado *HelloWorld*.
 
@@ -52,9 +52,9 @@ Vamos começar com um simples programa "Olá, Mundo" no .NET Core:
 
       [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-4. Execute o programa "Olá, Mundo":
+4. Execute o programa "Hello, World":
 
-    * Digite `dotnet run`. 
+    * Digite `dotnet run` no terminal integrado. 
 
       ![O comando de execução dotnet](media/with-visual-studio-code/dotnetrun.png)
 
@@ -70,11 +70,11 @@ Você também pode assistir a um tutorial breve em vídeo para obter ajuda na in
 
     ![Prompt para ativos ausentes](media/with-visual-studio-code/missing-assets.png)
 
-3. Para abrir e exibição Depuração, clique no ícone Depuração no menu do lado esquerdo.
+3. Para exibir as ferramentas de Depuração, clique no ícone de depuração no menu do lado esquerdo.
 
     ![Abra a guia Depurar](media/with-visual-studio-code/opendebug.png)
 
-4. Localize a seta verde na parte superior do painel. Certifique-se que a lista suspensa ao lado tenha `.NET Core Launch (console)` selecionado.
+4. Localize a seta verde na parte superior do painel. Certifique-se de selecionar `.NET Core Launch (console)` na lista suspensa ao lado.
 
     ![Seleção do .NET Core](media/with-visual-studio-code/selectcore.png)
 
