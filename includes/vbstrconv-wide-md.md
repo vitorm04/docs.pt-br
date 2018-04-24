@@ -1,0 +1,1 @@
+A conversão poderá usar o Formulário de Normalização C mesmo se um caractere de entrada já for de largura inteira. Por exemplo, a cadeia de caracteres "は゛" (que já é de largura inteira) é normalizada para "ば". Consulte [Formato de normalização Unicode](http://unicode.org/reports/tr15).

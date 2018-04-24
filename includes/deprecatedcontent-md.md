@@ -1,0 +1,1 @@
+Este material discute tipos e namespaces obsoletos. Para obter mais informações, consulte [Deprecated Types in Windows Workflow Foundation 4.5](http://aka.ms/wfdeprecatedtypes) (Tipos preteridos no Windows Workflow Foundation 4.5).
