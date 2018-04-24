@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6281442f42b511170f83eaeb1c940a35a566e519
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0ca69ada16fbb5a6757da96a7ea64d2113c15b6f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="securing-net-microservices-and-web-applications"></a>Protegendo microsserviços e aplicativos Web .NET
 
@@ -136,7 +136,7 @@ Além dos provedores de autenticação externos listados anteriormente, estão d
 
 Autenticar com o ASP.NET Core Identity (ou com Identity e também com provedores de autenticação externos) funciona bem para vários cenários de aplicativo Web nos quais é apropriado armazenar informações do usuário em um cookie. Em outros cenários, no entanto, os cookies não são uma maneira natural de persistir e transmitir dados.
 
-Por exemplo, em uma API Web do ASP.NET Core que expõe pontos de extremidade RESTful que podem ser acessados por SPAs (Aplicativos de Única Página), por clientes nativos ou até mesmo por outras APIs Web, geralmente é melhor usar a autenticação de token de portador. Esses tipos de aplicativos não funcionam com cookies, mas podem facilmente recuperar um token de portador e incluí-lo no cabeçalho de autorização das próximas solicitações. Para habilitar a autenticação de token, o ASP.NET Core dá suporte a várias opções para usar [OAuth 2.0](https://oauth.net/2/) e [OpenID Connect](http://openid.net/connect/).
+Por exemplo, em uma API Web do ASP.NET Core que expõe pontos de extremidade RESTful que podem ser acessados por SPAs (Aplicativos de Única Página), por clientes nativos ou até mesmo por outras APIs Web, geralmente é melhor usar a autenticação de token de portador. Esses tipos de aplicativos não funcionam com cookies, mas podem facilmente recuperar um token de portador e incluí-lo no cabeçalho de autorização das próximas solicitações. Para habilitar a autenticação de token, o ASP.NET Core dá suporte a várias opções para usar [OAuth 2.0](https://oauth.net/2/) e [OpenID Connect](https://openid.net/connect/).
 
 ## <a name="authenticating-with-an-openid-connect-or-oauth-20-identity-provider"></a>Autenticando com um provedor de identidade OAuth 2.0 ou OpenID Connect
 
@@ -230,28 +230,28 @@ O middleware de autenticação de portador do JWT também pode dar suporte a cen
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
--   **Sharing cookies between applications** (Compartilhando cookies entre aplicativos) 
+-   **Compartilhamento de cookies entre aplicativos**
     [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\#sharing-authentication-cookies-between-applications*](https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
 
--   **Introduction to Identity** (Introdução ao Identity) 
+-   **Introdução ao Identity**
     [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](https://docs.microsoft.com/aspnet/core/security/authentication/identity)
 
--   **Rick Anderson. Two-factor authentication with SMS** (Autenticação de dois fatores com SMS) 
+-   **Rick Anderson. Autenticação de dois fatores com SMS**
     [*https://docs.microsoft.com/aspnet/core/security/authentication/2fa*](https://docs.microsoft.com/aspnet/core/security/authentication/2fa)
 
--   **Enabling authentication using Facebook, Google and other external providers** (Habilitando a autenticação usando Facebook, Google e outros provedores externos) 
+-   **Habilitando a autenticação usando o Facebook, o Google e outros provedores externos**
     [*https://docs.microsoft.com/aspnet/core/security/authentication/social/*](https://docs.microsoft.com/aspnet/core/security/authentication/social/)
 
--   **Michell Anicas. An Introduction to OAuth 2** (Uma introdução ao OAuth 2) 
+-   **Michell Anicas. Uma introdução ao OAuth 2**
     [*https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2*](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
 
 -   **AspNet.Security.OAuth.Providers** (repositório do GitHub para provedores do ASP.NET OAuth.)
     [*https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src*](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)
 
--   **Danny Strockis. Integrating Azure AD into an ASP.NET Core web app** (Integrando o Azure AD em um aplicativo Web do ASP.NET Core) 
+-   **Danny Strockis. Integrando o Azure AD em um aplicativo Web ASP.NET Core**
     [*https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/*](https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/)
 
--   **IdentityServer4. Official documentation** (IdentityServer4. Documentação oficial) 
+-   **IdentityServer4. Documentação oficial**
     [*https://identityserver4.readthedocs.io/en/release/*](https://identityserver4.readthedocs.io/en/release/)
 
 
