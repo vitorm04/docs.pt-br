@@ -1,1 +1,0 @@
-GUID (identificador global exclusivo)

@@ -1,1 +1,0 @@
-unidade independente de dispositivo (1/96 polegada)

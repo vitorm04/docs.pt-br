@@ -1,1 +1,0 @@
-XBAP (aplicativo de navegação XAML)
