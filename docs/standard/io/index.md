@@ -23,11 +23,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e9ebd1a11684afaa143d1f016f31e0a29a3478db
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: b420859380d7c3c39a7d85f94df1708d9f26bebc
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="file-and-stream-io"></a>E/S de arquivo e de fluxo
 E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados de ou para uma mídia de armazenamento. No .NET Framework, os namespaces `System.IO` contêm tipos que permitem a leitura e a gravação, de forma síncrona e assíncrona, em fluxos de dados e arquivos. Esses namespaces também contêm tipos que executam compactação e descompactação em arquivos e tipos que possibilitam a comunicação por meio de pipes e portas seriais.  
@@ -51,7 +51,7 @@ E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados d
   
  Além de usar essas classes, os usuários do Visual Basic podem usar os métodos e as propriedades fornecidas pela classe <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> para E/S de arquivo.  
   
- Confira [Como copiar diretórios](../../../docs/standard/io/how-to-copy-directories.md), [Como criar uma listagem de diretórios](http://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69) e [Como enumerar diretórios e arquivos](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
+ Confira [Como copiar diretórios](../../../docs/standard/io/how-to-copy-directories.md), [Como criar uma listagem de diretórios](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69) e [Como enumerar diretórios e arquivos](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
   
 ## <a name="streams"></a>Fluxos  
  A classe base abstrata <xref:System.IO.Stream> oferece suporte a leitura e gravação de bytes. Todas as classes que representam fluxos herdam da classe <xref:System.IO.Stream>. A classe <xref:System.IO.Stream> e suas classes derivadas fornecem uma visão comum de fontes e repositórios de dados, isolando o programador de detalhes específicos do sistema operacional e dispositivos subjacentes.  

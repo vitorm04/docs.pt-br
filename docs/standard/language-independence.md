@@ -1,6 +1,6 @@
 ---
-title: "Componentes de independência de linguagem e componentes independentes da linguagem"
-description: "Saiba como você pode desenvolver em uma das muitas linguagens com suporte no .NET, como C#, C++/CLI, F#, IronPython, VB, Visual COBOL e PowerShell."
+title: Componentes de independência de linguagem e componentes independentes da linguagem
+description: Saiba como você pode desenvolver em uma das muitas linguagens com suporte no .NET, como C#, C++/CLI, F#, IronPython, VB, Visual COBOL e PowerShell.
 keywords: .NET, .NET Core
 author: dotnet-bot
 ms.author: dotnetcontent
@@ -16,11 +16,11 @@ ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0a7a37b1c8eed81866035dc6fb55db89391f25aa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2745bc67c926f50c28f5fdfb122ee94a85f020ec
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="language-independence-and-language-independent-components"></a>Componentes de independência de linguagem e componentes independentes da linguagem
 
@@ -29,7 +29,7 @@ O .NET é independente de linguagem. Isso significa que, como desenvolvedor, voc
 > [!NOTE]
 > A primeira parte deste artigo descreve como criar componentes independentes de linguagem, ou seja, componentes que podem ser consumidos por aplicativos gravados em qualquer linguagem. Você também pode criar um único componente ou aplicativo de código-fonte gravado em várias linguagens; consulte [Interoperabilidade em qualquer idioma](#cross-language-interoperability) na segunda parte deste artigo. 
 
-Para interagir completamente com outros objetos gravados em qualquer linguagem, os objetos devem expor aos chamadores somente os recursos comuns a todas as linguagens. Esse conjunto comum de recursos é definido pela CLS (Common Language Specification), que é um conjunto de regras que se aplicam aos assemblies gerados. A Common Language Specification é definida na Partição I, cláusulas 7 a 11 do [Padrão ECMA-335: Common Language Infrastructure](http://www.ecma-international.org/publications/standards/Ecma-335.htm). 
+Para interagir completamente com outros objetos gravados em qualquer linguagem, os objetos devem expor aos chamadores somente os recursos comuns a todas as linguagens. Esse conjunto comum de recursos é definido pela CLS (Common Language Specification), que é um conjunto de regras que se aplicam aos assemblies gerados. A Common Language Specification é definida na Partição I, cláusulas 7 a 11 do [Padrão ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm). 
 
 Se o componente estiver de acordo com a Common Language Specification, ele será compatível com a CLS e poderá ser acessado pelo código em assemblies gravados em qualquer linguagem de programação que dê suporte a CLS. É possível determinar se o componente está de acordo com a Common Language Specification no tempo de compilação aplicando o atributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) ao código-fonte. Para obter mais informações, consulte o atributo [CLSCompliantAttribute](#the-clscompliantattribute-attribute).
 
@@ -73,7 +73,7 @@ Neste artigo:
 
 ## <a name="cls-compliance-rules"></a>Regras de conformidade com CLS
 
-Esta seção discute as regras para criar um componente compatível com CLS. Para obter uma lista completa de regras, consulte Partição I, Cláusula 11 do [Padrão ECMA-335: Common Language Infrastructure](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
+Esta seção discute as regras para criar um componente compatível com CLS. Para obter uma lista completa de regras, consulte Partição I, Cláusula 11 do [Padrão ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
 > [!NOTE]
 > A Common Language Specification aborda cada regra de conformidade com CLS à medida que se aplica a consumidores (desenvolvedores que estão acessando programaticamente um componente compatível com CLS), estruturas (desenvolvedores que estão usando um compilador de linguagem para criar bibliotecas compatíveis com CLS) e extensores (desenvolvedores que estão criando uma ferramenta, como um compilador de linguagem ou um analisador de código que cria componentes compatíveis com CLS). Este artigo enfoca as regras que se aplicam às estruturas. Entretanto, algumas das regras que se aplicam a extensores também podem ser aplicadas a assemblies criados usando [Reflection.Emit](xref:System.Reflection.Emit). 
@@ -158,7 +158,7 @@ A interface pública de uma biblioteca consiste no seguinte:
 
 * Parâmetros e tipos de retorno de métodos públicos de classes públicas e parâmetros e tipos de retorno de métodos acessíveis para classes derivadas. 
 
-As regras de conformidade com CLS estão listadas na tabela a seguir. O texto das regras é tirado literalmente do [Padrão ECMA-335: Common Language Infrastructure](http://www.ecma-international.org/publications/standards/Ecma-335.htm), com direitos autorais de 2012 da Ecma International. Informações mais detalhadas sobre essas regras são encontradas nas seções a seguir. 
+As regras de conformidade com CLS estão listadas na tabela a seguir. O texto das regras é tirado literalmente do [Padrão ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), com direitos autorais de 2012 da Ecma International. Informações mais detalhadas sobre essas regras são encontradas nas seções a seguir. 
 
 Categoria | Consulte | Regra | Número da regra
 -------- | --- | ---- | -----------
@@ -617,7 +617,7 @@ public class person
 //    Naming1.cs(6,14): (Location of symbol related to previous warning)
 ```
 
-Identificadores de linguagem de programação, como nomes de namespaces, tipos e membros, devem estar de acordo com o [Padrão Unicode 3.0, Relatório Técnico 15, Anexo 7](http://www.unicode.org/reports/tr15/tr15-18.html). Isso significa que:
+Identificadores de linguagem de programação, como nomes de namespaces, tipos e membros, devem estar de acordo com o [Padrão Unicode 3.0, Relatório Técnico 15, Anexo 7](https://www.unicode.org/reports/tr15/tr15-18.html). Isso significa que:
 
 * O primeiro caractere de um identificador pode ser qualquer letra maiúscula Unicode, letra minúscula, letra maiúscula do título, letra modificadora, outra letra ou o número da letra. Para obter informações sobre categorias de caractere Unicode, consulte a enumeração [System.Globalization.UnicodeCategory](xref:System.Globalization.UnicodeCategory). 
 

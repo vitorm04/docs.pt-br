@@ -1,7 +1,7 @@
 ---
-title: "Implementando a camada de persistência da infraestrutura com o Entity Framework Core"
-description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Implementando a camada de persistência da infraestrutura com o Entity Framework Core"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Implementando a camada de persistência da infraestrutura com o Entity Framework Core
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Implementando a camada de persistência da infraestrutura com o Entity Framework Core
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4acdbde6405af7eb78a8c605562fdb1795fedf4d
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 49bd528db50397ea896b7251ea60d18b90fea30c
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementando a camada de persistência da infraestrutura com o Entity Framework Core
 
@@ -342,7 +342,7 @@ O algoritmo Hi/Lo descreve um mecanismo para gerar IDs seguras no lado do client
 
 -   Ele gera um identificador legível por pessoas, ao contrário das técnicas que usam GUIDs.
 
-O EF Core é compatível com o [HiLo](http://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) com o método ForSqlServerUseSequenceHiLo, conforme foi mostrado no exemplo anterior.
+O EF Core é compatível com o [HiLo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) com o método ForSqlServerUseSequenceHiLo, conforme foi mostrado no exemplo anterior.
 
 ### <a name="mapping-fields-instead-of-properties"></a>Mapeamento de campos em vez de propriedades
 
@@ -467,7 +467,7 @@ Embora não seja recomendado retornar IQueryable de um repositório, é perfeita
     [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)
 
 -   **Steve Smith. Encapsulated Collections in Entity Framework Core**
-    [*http://ardalis.com/encapsulated-collections-in-entity-framework-core*](http://ardalis.com/encapsulated-collections-in-entity-framework-core) (Coleções encapsuladas no Entity Framework Core)
+    [*https://ardalis.com/encapsulated-collections-in-entity-framework-core*](https://ardalis.com/encapsulated-collections-in-entity-framework-core) (Coleções encapsuladas no Entity Framework Core)
 
 -   **Propriedades de sombra**
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)

@@ -16,18 +16,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-caps.latest.revision: ''
+caps.latest.revision: 79
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c54a5ec9cdbfd73bccd8f70befcfcff7cf8aac2d
-ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
+ms.openlocfilehash: 51c16e8c1cd031e4f2b8a207c8d288b7691e7a84
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="custom-date-and-time-format-strings"></a>Cadeias de caracteres de formato de data e hora personalizado
 Uma cadeia de caracteres de formato de data e hora define a representação de texto de um valor <xref:System.DateTime> ou <xref:System.DateTimeOffset> que é resultante de uma operação de formatação. Ela também pode definir a representação de um valor de data e hora necessário em uma operação de análise para converter com êxito a cadeia de caracteres para uma data e hora. Uma cadeia de caracteres de formato personalizado consiste em um ou mais especificadores de formato de data e hora personalizado. Qualquer cadeia de caracteres que não é uma [cadeia de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) é interpretada como uma cadeia de caracteres de formato de data e hora personalizado.  
@@ -35,7 +35,7 @@ Uma cadeia de caracteres de formato de data e hora define a representação de t
  As cadeias de caracteres de formato de data e hora personalizado podem ser usadas tanto com valores <xref:System.DateTime> quanto <xref:System.DateTimeOffset>.  
   
 > [!TIP]
->  É possível baixar o [Utilitário de formatação](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), um aplicativo que permite aplicar cadeias de caracteres de formato a valores de data e hora ou numéricos e exibir a cadeia de caracteres de resultado.  
+>  É possível baixar o [Utilitário de formatação](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), um aplicativo que permite aplicar cadeias de caracteres de formato a valores de data e hora ou numéricos e exibir a cadeia de caracteres de resultado.  
   
 <a name="table"></a> Nas operações de formatação, as cadeias de caracteres de formato de data e hora personalizado podem ser usadas com o método `ToString` de uma instância de data e hora ou com um método que ofereça suporte a formatação de composição. O exemplo a seguir ilustra ambos os usos.  
   
@@ -702,4 +702,4 @@ Uma cadeia de caracteres de formato de data e hora define a representação de t
  <xref:System.IFormatProvider?displayProperty=nameWithType>  
  [Formatando Tipos](../../../docs/standard/base-types/formatting-types.md)  
  [Cadeias de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
- [Exemplo: Utilitário de Formatação do .NET Framework 4](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+ [Exemplo: Utilitário de Formatação do .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

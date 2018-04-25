@@ -1,6 +1,6 @@
 ---
-title: "Criando árvores de expressão"
-description: "Saiba mais sobre técnicas de criação de árvores de expressão."
+title: Criando árvores de expressão
+description: Saiba mais sobre técnicas de criação de árvores de expressão.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: c0d7bcf6e07f4a49e15e6f6f4e028eebfe82d8bf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7e45f566f66c129111c65a1166a6c71ff518dfc7
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="building-expression-trees"></a>Criando árvores de expressão
 
@@ -169,7 +169,7 @@ BlockExpression body = Expression.Block(
 
 O código para criar a árvore de expressão para a função fatorial é bem mais longo, mais complicado e está cheio de rótulos e instruções de interrupção, bem como outros elementos que gostamos de evitar em nossas tarefas de codificação cotidianas. 
 
-Para esta seção, também atualizei o código de visitante para visitar cada nó nessa árvore de expressão e gravar informações sobre os nós que são criados neste exemplo. Você pode [exibir ou baixar o código de exemplo](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees) no repositório dotnet/docs do GitHub. Experimente por conta própria criando e executando os exemplos. Para obter instruções de download, consulte [Exemplos e tutoriais](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Para esta seção, também atualizei o código de visitante para visitar cada nó nessa árvore de expressão e gravar informações sobre os nós que são criados neste exemplo. Você pode [exibir ou baixar o código de exemplo](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) no repositório dotnet/docs do GitHub. Experimente por conta própria criando e executando os exemplos. Para obter instruções de download, consulte [Exemplos e tutoriais](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="examining-the-apis"></a>Examinando as APIs
 

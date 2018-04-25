@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: ec9d9fcdcaf2c018762542f6dc403e2a4f89376b
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 04452159c759a0c7236c1b93dc966e5e9c54574a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Explorar código com o visualizador de sintaxe Roslyn no Visual Studio
 
@@ -28,16 +28,17 @@ O **Visualizador de sintaxe** permite a inspeção da árvore de sintaxe de arqu
 
 Este comando abre o Visualizador de sintaxe como uma janela de ferramentas flutuante. Se você não tiver uma janela de editor de código aberta, a exibição ficará em branco, conforme mostrado na figura a seguir. 
 
-![A janela de ferramentas do Visualizador de sintaxe](media/syntax-visualizer.png)
+![A janela de ferramentas do Visualizador de sintaxe](media/syntax-visualizer/syntax-visualizer.png)
 
 Encaixe esta janela de ferramentas em um local conveniente dentro do Visual Studio, como o lado esquerdo. O Visualizador mostra informações sobre o arquivo de código atual.
 
 Crie um novo projeto usando o comando **Arquivo** > **Novo Projeto**. Você pode criar um projeto do VB ou C#. Quando o Visual Studio abre o arquivo de código principal deste projeto, o visualizador exibe a árvore de sintaxe dele. Você pode abrir qualquer arquivo de C# ou VB existente nesta instância do Visual Studio e o visualizador exibirá a árvore de sintaxe do arquivo correspondente. Se você tiver vários arquivos de código abertos no Visual Studio, o visualizador exibirá a árvore de sintaxe do arquivo de código atualmente ativo, (o arquivo de código que tem o foco do teclado).
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
-![Visualizando uma árvore de sintaxe de C#](media/visualize-csharp.png)
+![Visualizando uma árvore de sintaxe de C#](media/syntax-visualizer/visualize-csharp.png)
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-<a name="visualizing-a-vb-syntax-treemediavisualize-visual-basicpng"></a>![Visualizando uma árvore de sintaxe do VB](media/visualize-visual-basic.png)
+![Visualizando uma árvore de sintaxe do VB](media/syntax-visualizer/visualize-visual-basic.png)
+
 ---
 
 Conforme mostrado nas imagens acima, a janela de ferramentas do visualizador exibe a árvore de sintaxe na parte superior e uma grade de propriedade na parte inferior. A grade de propriedade exibe as propriedades do item atualmente selecionado na árvore, incluindo *Type* e *Kind* (SyntaxKind) do .NET do item.
@@ -60,13 +61,18 @@ Pare de digitar quando já tiver digitado `Console.`. A árvore tem alguns itens
 
 Clique com o botão direito do mouse em qualquer item da árvore e clique em **Exibir gráfico de sintaxe direcionado**. 
 
+# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 O visualizador exibe uma representação gráfica da subárvore com raiz no item selecionado. Repita essas etapas para o nó **MethodDeclaration** correspondente ao método `Main()` no exemplo de C#. O visualizador exibe um gráfico de sintaxe que tem a seguinte aparência:
 
-![Exibindo um gráfico de sintaxe de C#](media/csharp-syntax-graph.png)
+![Exibindo um gráfico de sintaxe de C#](media/syntax-visualizer/csharp-syntax-graph.png)
+# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
 
 Repita o mesmo para o nó **SubBlock** correspondente ao método `Main()` no exemplo anterior do VB. O visualizador exibe um gráfico de sintaxe que tem a seguinte aparência:
 
-![Exibindo um gráfico de sintaxe do VB](media/visual-basic-syntax-graph.png)
+![Exibindo um gráfico de sintaxe do VB](media/syntax-visualizer/visual-basic-syntax-graph.png)
+
+---
 
 O visualizador de gráfico de sintaxe tem uma opção para exibir uma legenda de seu esquema de cores. Você também pode passar o mouse sobre itens específicos no gráfico de sintaxe para exibir as respectivas propriedades.
 
@@ -74,7 +80,7 @@ Você pode exibir gráficos de sintaxe de itens diferentes da árvore repetidame
 
 Veja o layout de encaixe para usar com a janela de ferramentas do visualizador e a janela do gráfico de sintaxe:
 
-![Um layout de encaixe para a janela de gráfico de sintaxe e o visualizador](media/docking-layout.png)
+![Um layout de encaixe para a janela de gráfico de sintaxe e o visualizador](media/syntax-visualizer/docking-layout.png)
 
 Outra opção é colocar a janela de gráfico de sintaxe em um segundo monitor, em uma configuração de dois monitores.
 
@@ -84,19 +90,19 @@ O Visualizador de sintaxe possibilita uma inspeção rudimentar de símbolos e i
 
 A grade de propriedade do visualizador é atualizada conforme mostrado na figura a seguir: o símbolo da expressão é um **SynthesizedIntrinsicOperatorSymbol** com **Kind = Method**.
 
-![Propriedades Symbol](media/symbol-properties.png)
+![Propriedades Symbol](media/syntax-visualizer/symbol-properties.png)
 
 Experimente **Exibir TypeSymbol (se houver)** para o mesmo nó **AddExpression**. A grade de propriedade no visualizador é atualizada, conforme mostrado na figura a seguir, indicando que o tipo da expressão selecionada é `Int32`.
 
-![Propriedades TypeSymbol](media/type-symbol-properties.png)
+![Propriedades TypeSymbol](media/syntax-visualizer/type-symbol-properties.png)
 
 Experimente **Exibir TypeSymbol Convertido (se houver)** para o mesmo nó **AddExpression**. A grade de propriedade é atualizada, indicando que, embora o tipo da expressão seja `Int32`, o tipo convertido da expressão é `Double`, conforme mostrado na figura a seguir. Esse nó inclui informações de símbolo de tipo convertido porque a expressão `Int32` ocorre em um contexto em que deve ser convertida em um `Double`. Essa conversão satisfaz o tipo `Double` especificado para a variável `x` no lado esquerdo do operador de atribuição.
 
-![Propriedades TypeSymbol convertidas](media/converted-type-symbol-properties.png)
+![Propriedades TypeSymbol convertidas](media/syntax-visualizer/converted-type-symbol-properties.png)
 
 Por fim, experimente **Exibir Valor Constante (se houver)** para o mesmo nó **AddExpression**. A grade de propriedade mostra que o valor da expressão é uma constante de tempo de compilação com o valor `2`.
 
-![Um valor constante](media/constant-value.png)
+![Um valor constante](media/syntax-visualizer/constant-value.png)
 
 O exemplo anterior também pode ser replicado no VB. Digite `Dim x As Double = 1 + 1` em um arquivo do VB. Selecione a expressão `1 + 1` na janela do editor de código. O visualizador realça o nó **AddExpression** correspondente no visualizador. Repita as etapas anteriores para esta **AddExpression** e você verá resultados idênticos.
 
@@ -114,15 +120,15 @@ End Module
 
 Esse código introduz um alias chamado `C` que mapeia para o tipo `System.Console` na parte superior do arquivo e usa esse alias em `Main()`. Selecione o uso desse alias, o `C` em `C.WriteLine()`, dentro do método `Main()`. O visualizador seleciona o nó **IdentifierName** correspondente no visualizador. Clique com botão direito do mouse nesse nó e clique em **Exibir Symbol (se houver)**. A grade de propriedade mostra que esse identificador é associado com o tipo `System.Console`, conforme mostrado na figura a seguir:
 
-![Propriedades Symbol](media/symbol-visual-basic.png)
+![Propriedades Symbol](media/syntax-visualizer/symbol-visual-basic.png)
 
 Experimente **Exibir AliasSymbol (se houver)** para o mesmo nó **IdentifierName**. A grade de propriedade mostra que o identificador é um alias com nome `C`, que é associado com o destino `System.Console`. Em outras palavras, a grade de propriedade fornece informações sobre o **AliasSymbol** correspondente ao identificador `C`.
 
-![Propriedades AliasSymbol](media/alias-symbol.png)
+![Propriedades AliasSymbol](media/syntax-visualizer/alias-symbol.png)
 
 Inspecione o símbolo correspondente a qualquer tipo, método e propriedade declarados. Selecione o nó correspondente no visualizador e clique em **Exibir Symbol (se houver)**. Selecione o método `Sub Main()`, incluindo o corpo do método. Clique em **Exibir Symbol (se houver)** para o nó **SubBlock** correspondente no visualizador. A grade de propriedade mostra que o **MethodSymbol** deste **SubBlock** tem nome `Main` com o tipo de retorno `Void`.
 
-![Exibindo o símbolo de uma declaração de método](media/method-symbol.png)
+![Exibindo o símbolo de uma declaração de método](media/syntax-visualizer/method-symbol.png)
 
 Os exemplos de VB acima podem ser facilmente replicados em C#. Digite `using C = System.Console;` no lugar de `Imports C = System.Console` para o alias. As etapas anteriores em C# geram resultados idênticos na janela do visualizador.
 

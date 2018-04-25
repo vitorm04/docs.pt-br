@@ -1,12 +1,12 @@
 ---
-title: "Covariância e contravariância em genéricos"
-ms.custom: 
+title: Covariância e contravariância em genéricos
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-caps.latest.revision: 
+caps.latest.revision: 24
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7536d06c971251fb857fabefc95a50ae4389f785
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 595b637ac12b6ecd8633bb8f48a54d722bc84f49
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covariância e contravariância em genéricos
 <a name="top"></a> Covariância e contravariância são termos que fazem referência à capacidade de usar um tipo mais derivado (mais específico) ou menos derivado (menos específico) do que o especificado originalmente. Os parâmetros de tipo genéricos oferecem suporte a covariância e contravariância para fornecer maior flexibilidade na atribuição e no uso de tipos genéricos. Quando você se refere a um sistema de tipos, a covariância, contravariância e invariância possuem as definições a seguir. Os exemplos assumem uma classe base chamada `Base` e uma classe derivada chamada `Derived`.  
@@ -145,7 +145,7 @@ ms.lasthandoff: 03/12/2018
 ### <a name="variance-in-generic-and-non-generic-delegates"></a>Variação em delegados genéricos e não genéricos  
  No código anterior, a assinatura de `MyMethod` corresponde exatamente à assinatura do delegado genérico construído: `Func<Base, Derived>` (`Func(Of Base, Derived)` no Visual Basic). O exemplo mostra que esse delegado genérico pode ser armazenado em variáveis ou parâmetros do método que têm tipos de parâmetro mais derivados e tipos de retorno menos derivados, desde que todos os tipos de delegados sejam construídos do tipo de delegado genérico <xref:System.Func%602>.  
   
- Este é um aspecto importante. Os efeitos da covariância e da contravariância nos parâmetros de tipo de delegados genéricos são semelhantes aos efeitos da covariância e da contravariância na associação comum de delegação (consulte [Variância em delegados](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)). No entanto, a variância na associação de delegados funciona com todos os tipos de delegados, e não apenas com tipos de delegados genéricos com parâmetros de tipo variantes. Além disso, a variância na associação de delegados possibilita a um método a ser associado a qualquer delegado que tenha os tipos de parâmetro mais restritivos e um tipo de retorno menos restritivo, enquanto que a atribuição de delegados genéricos só funciona quando ambos os tipos de delegados são construídos da mesma definição de tipo genérico.  
+ Este é um aspecto importante. Os efeitos da covariância e da contravariância nos parâmetros de tipo de delegados genéricos são semelhantes aos efeitos da covariância e da contravariância na associação comum de delegação (consulte [Variância em delegados](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)). No entanto, a variância na associação de delegados funciona com todos os tipos de delegados, e não apenas com tipos de delegados genéricos com parâmetros de tipo variantes. Além disso, a variância na associação de delegados possibilita a um método a ser associado a qualquer delegado que tenha os tipos de parâmetro mais restritivos e um tipo de retorno menos restritivo, enquanto que a atribuição de delegados genéricos só funciona quando ambos os tipos de delegados são construídos da mesma definição de tipo genérico.  
   
  O exemplo a seguir mostra os efeitos combinados da variância na associação de delegados e a variância em parâmetros de tipo genéricos. O exemplo define uma hierarquia de tipo que inclui três tipos, do menos derivado (`Type1`) para o mais derivado (`Type3`). A variância na associação comum de delegados é usada para associar um método a um tipo de parâmetro `Type1` e um tipo de retorno `Type3` a um representante genérico com um tipo de parâmetro `Type2` e um tipo de retorno `Type2`. O delegado genérico resultante é então atribuído a outra variável cujo tipo de delegado genérico possui um parâmetro de tipo `Type3` e tipo de retorno `Type1`, usando a covariância e a contravariância de parâmetros de tipo genéricos. A segunda atribuição requer que o tipo de variável e o tipo de delegado sejam construídos a partir da mesma definição de tipo genérico, nesse caso, <xref:System.Func%602>.  
   
@@ -172,7 +172,7 @@ ms.lasthandoff: 03/12/2018
   
  O Visual Basic e o C# e não permitem que você viole as regras de uso de parâmetros de tipo covariantes e contravariantes nem adicionar anotações de covariância e de contravariância aos parâmetros de tipo de tipos que não sejam interfaces e delegados. O [Assembler de MSIL](../../../docs/framework/tools/ilasm-exe-il-assembler.md) não executa essas verificações, mas uma <xref:System.TypeLoadException> é gerada quando você tenta carregar um tipo que viola as regras.  
   
- Para saber mais e obter um exemplo de código, consulte [Variação em interfaces genéricas](http://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a).  
+ Para saber mais e obter um exemplo de código, consulte [Variação em interfaces genéricas](https://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a).  
   
  [Voltar ao início](#top)  
   
@@ -201,4 +201,4 @@ ms.lasthandoff: 03/12/2018
 ## <a name="see-also"></a>Consulte também  
  [Covariância e contravariância (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
  [Covariância e contravariância (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
- [Variação em Delegações](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)
+ [Variação em Delegações](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)

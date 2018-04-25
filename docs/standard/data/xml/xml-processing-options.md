@@ -1,26 +1,26 @@
 ---
-title: "Opções de processamento XML"
-ms.custom: 
+title: Opções de processamento XML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
-caps.latest.revision: 
+caps.latest.revision: 5
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2f270b58d20b3fe9dbc514657def90776bdfe2b5
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: cabe640aa555400228acb572315a43b6ca9265bb
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xml-processing-options"></a>Opções de processamento XML
 Veja nas tabelas a seguir uma lista das tecnologias da Microsoft que você pode usar para processar dados XML.  
@@ -29,10 +29,10 @@ Veja nas tabelas a seguir uma lista das tecnologias da Microsoft que você pode 
   
 |**Opção**|**Tipo de processamento**|**Descrição**|  
 |----------------|-------------------------|---------------------|  
-|[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) <br />(namespace <xref:System.Xml.Linq>)|Na memória|-   Com base na tecnologia LINQ (Consulta Integrada à Linguagem) do .NET Framework.<br />-   Fornece a experiência de consulta que é semelhante ao SQL para objetos, dados relacionais e dados XML.<br />-   Fornece recursos intuitivos de criação e transformação de documentos.<br />-   Use esta opção se estiver escrevendo um novo código.|  
+|[LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) <br />(namespace <xref:System.Xml.Linq>)|Na memória|-   Com base na tecnologia LINQ (Consulta Integrada à Linguagem) do .NET Framework.<br />-   Fornece a experiência de consulta que é semelhante ao SQL para objetos, dados relacionais e dados XML.<br />-   Fornece recursos intuitivos de criação e transformação de documentos.<br />-   Use esta opção se estiver escrevendo um novo código.|  
 |<xref:System.Xml.XmlReader?displayProperty=nameWithType>|Com base em fluxo|-   Fornece uma maneira rápida, não armazenado em cache, somente de encaminhamento, de acessar dados XML.<br />-   Você pode criar objetos usando o método <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> e especificar o conjunto de recursos para habilitar no objeto usando a classe <xref:System.Xml.XmlReaderSettings>.|  
 |<xref:System.Xml.XmlWriter?displayProperty=nameWithType>|Com base em fluxo|-   Fornece uma maneira rápida, não armazenado em cache, somente de encaminhamento, de gerar dados XML.<br />-   Você pode criar objetos usando o método <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> e especificar o conjunto de recursos para habilitar no objeto usando a classe <xref:System.Xml.XmlWriterSettings>.|  
-|<xref:System.Xml.XmlDocument?displayProperty=nameWithType>|Na memória|-   Implementa as recomendações do [DOM (Modelo de Objeto do Documento) Core do W3C nível 1](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) e do [DOM Core nível 2](http://www.w3.org/TR/DOM-Level-2-Core/).<br />-   Os nós podem ser criados, inseridos, removidos e alterados usando os métodos e propriedades com base no modelo DOM familiar.<br />-   Use esta opção se você estiver modificando um código existente que utiliza o DOM do W3C.|  
+|<xref:System.Xml.XmlDocument?displayProperty=nameWithType>|Na memória|-   Implementa as recomendações do [DOM (Modelo de Objeto do Documento) Core do W3C nível 1](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) e do [DOM Core nível 2](https://www.w3.org/TR/DOM-Level-2-Core/).<br />-   Os nós podem ser criados, inseridos, removidos e alterados usando os métodos e propriedades com base no modelo DOM familiar.<br />-   Use esta opção se você estiver modificando um código existente que utiliza o DOM do W3C.|  
 |<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|Na memória|-   Oferece várias opções de edição e recursos de navegação usando um modelo do cursor.<br />-   Os documentos XML podem estar contidos em um objeto <xref:System.Xml.XPath.XPathDocument> ou objeto <xref:System.Xml.XmlDocument>.<br />-   Oferece um desempenho excelente para o processamento somente leitura do XML.<br />-   Use esta opção se você estiver modificando o código existente com consultas XPath ou transformações XSLT.|  
 |<xref:System.Xml.Xsl.XslCompiledTransform>|Na memória|-   Fornece opções para transformar os dados XML usando transformações XSL.<br />-   O [Compilador de XSLT (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md) permite que você faça referência a transformações pré-compiladas em seu aplicativo.|  
   

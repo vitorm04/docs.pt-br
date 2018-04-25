@@ -1,6 +1,6 @@
 ---
 title: Componentes de arquitetura do .NET
-description: "Descreve os componentes de arquitetura do .NET, como o .NET Standard, as implementações do .NET, os tempos de execução do .NET e as ferramentas."
+description: Descreve os componentes de arquitetura do .NET, como o .NET Standard, as implementações do .NET, os tempos de execução do .NET e as ferramentas.
 author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
@@ -10,11 +10,11 @@ ms.technology: dotnet-standard
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8a17d4c36d9c1942166b9ad889103a7942f1813d
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 51e6779d63cdaccc5633c9e81f97471d71099653
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-architectural-components"></a>Componentes de arquitetura do .NET
 
@@ -61,7 +61,7 @@ Historicamente, o Mono implementava a maior API do .NET Framework e emulava algu
 
 O Mono normalmente é usado com um compilador Just-In-Time, mas ele também apresenta um compilador estático completo (compilação Ahead Of Time) que é usado em plataformas como iOS.
 
-Para saber mais sobre o Mono, consulte a [Documentação do Mono](http://www.mono-project.com/docs/).
+Para saber mais sobre o Mono, consulte a [Documentação do Mono](https://www.mono-project.com/docs/).
 
 ### <a name="universal-windows-platform-uwp"></a>UWP (Plataforma Universal do Windows)
 
@@ -86,7 +86,7 @@ Você tem acesso a um amplo conjunto de ferramentas e componentes de infraestrut
 - O sistema de projetos do .NET (com base em arquivos *.csproj*, *.vbproj* e *.fsproj*)
 - [MSBuild](/visualstudio/msbuild/msbuild), o mecanismo de build usado para compilar projetos
 - [NuGet](/nuget/), o gerenciador de pacotes da Microsoft para o .NET
-- Ferramentas de orquestração de build em software livre, como [CAKE](http://cakebuild.net/) e [FAKE](https://fake.build/)
+- Ferramentas de orquestração de build em software livre, como [CAKE](https://cakebuild.net/) e [FAKE](https://fake.build/)
 
 ## <a name="see-also"></a>Consulte também
 [Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor](choosing-core-framework-server.md)   

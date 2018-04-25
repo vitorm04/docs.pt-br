@@ -1,26 +1,26 @@
 ---
-title: "Erros recuperáveis XSLT"
-ms.custom: 
+title: Erros recuperáveis XSLT
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-caps.latest.revision: 
+caps.latest.revision: 2
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4564530cd173793519471c78105d0394595f6d5c
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 70491e86697356766b64a98201b2969883ab7ee4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="recoverable-xslt-errors"></a>Erros recuperáveis XSLT
 A recomendação de versão 1,0 do W3C de transformações XSL (XSLT) inclui as áreas no qual o provedor de implementação pode decidir como manipular uma situação. Essas áreas são consideradas como comportamento arbitrário. Por exemplo, em instruções de processamento criadoras da seção 7,3, XSLT 1,0 estados de recomendação que é um erro se criar uma instância do conteúdo de `xsl:processing-instruction` cria nós diferentes de nós de texto. Para alguns problemas, a recomendação XSLT 1,0 indica o que a decisão deve ser feita se o processador decidir recuperar de erro. Para o problema da seção 7,3, o W3C com a implementação pode recuperar esse erro ignorando os nós e seu conteúdo.  
@@ -32,7 +32,7 @@ A recomendação de versão 1,0 do W3C de transformações XSL (XSLT) inclui as 
   
 -   O erro indica que uma exceção é gerada para essa condição.  
   
--   As referências da seção podem ser encontradas em [Recomendação de transformações XSL (XSLT) de W3C da versão 1.0](http://www.w3.org/TR/xslt) e a [Errata da especificação de transformações XSL (XSLT) de W3C da versão 1.0](http://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
+-   As referências da seção podem ser encontradas em [Recomendação de transformações XSL (XSLT) de W3C da versão 1.0](http://www.w3.org/TR/xslt) e a [Errata da especificação de transformações XSL (XSLT) de W3C da versão 1.0](https://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
   
 |Condição XSLT|Seção|Comportamento de XslCompiledTransform|  
 |--------------------|-------------|-----------------------------------|  

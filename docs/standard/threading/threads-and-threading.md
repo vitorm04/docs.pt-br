@@ -1,30 +1,30 @@
 ---
 title: Threads e threading
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - multiple threads
 - threading [.NET Framework]
 - threading [.NET Framework], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-caps.latest.revision: 
+caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 114fb704a622d92ab8e92fa866fa0fc9bebf4e58
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 02c676e3bb6c0dcc9e65858367d13f41adc797e8
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="threads-and-threading"></a>Threads e threading
 Os sistemas operacionais usam processos para separar os diferentes aplicativos que eles estão executando. Os threads são a unidade básica à qual um sistema operacional aloca tempo de processador, e mais de um thread pode estar executando código dentro desse processo. Cada thread mantém manipuladores de exceção, uma prioridade de agendamento e um conjunto de estruturas que o sistema usa para salvar o contexto do thread até que ele seja agendado. O contexto de thread inclui todas as informações que o thread precisa para continuar a execução perfeitamente, incluindo o conjunto de registros de CPU e pilha do thread, no espaço de endereço do processo de host do thread.  
@@ -36,7 +36,7 @@ Os sistemas operacionais usam processos para separar os diferentes aplicativos q
  A duração da fração de tempo depende do sistema operacional e do processador. Como cada fração de tempo é pequena, vários threads parecem estar em execução ao mesmo tempo, mesmo se houver apenas um processador. É esse o caso em sistemas de multiprocessador, em que os threads executáveis são distribuídos entre os processadores disponíveis.  
   
 ## <a name="when-to-use-multiple-threads"></a>Quando usar vários threads  
- Os softwares que requerem interação do usuário devem reagir às atividades do usuário o mais rápido possível para fornecer uma rica experiência ao usuário. No entanto, ao mesmo tempo, ele deve fazer os cálculos necessários para apresentar os dados ao usuário o mais rápido possível. Caso seu aplicativo só use um thread de execução, você poderá combinar a [programação assíncrona](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) com a[comunicação remota do .NET Framework](http://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462) ou os [serviços Web XML](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c) criados com o ASP.NET para usar o tempo de processamento de outros computadores, além do tempo do seu próprio computador, para aumentar a capacidade de resposta ao usuário e diminuir o tempo de processamento de dados do seu aplicativo. Se você estiver fazendo um trabalho de entrada/saída intensivo, também poderá usar as portas de conclusão de E/S para aumentar a capacidade de resposta do seu aplicativo.  
+ Os softwares que requerem interação do usuário devem reagir às atividades do usuário o mais rápido possível para fornecer uma rica experiência ao usuário. No entanto, ao mesmo tempo, ele deve fazer os cálculos necessários para apresentar os dados ao usuário o mais rápido possível. Caso seu aplicativo só use um thread de execução, você poderá combinar a [programação assíncrona](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) com a[comunicação remota do .NET Framework](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462) ou os [serviços Web XML](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c) criados com o ASP.NET para usar o tempo de processamento de outros computadores, além do tempo do seu próprio computador, para aumentar a capacidade de resposta ao usuário e diminuir o tempo de processamento de dados do seu aplicativo. Se você estiver fazendo um trabalho de entrada/saída intensivo, também poderá usar as portas de conclusão de E/S para aumentar a capacidade de resposta do seu aplicativo.  
   
 ### <a name="advantages-of-multiple-threads"></a>Vantagens dos vários threads  
  No entanto, usar mais de um thread é a técnica mais avançada disponível para aumentar a capacidade de resposta ao usuário e processar os dados necessários para realizar o trabalho quase simultaneamente. Em um computador com um processador, vários threads podem criar esse efeito, aproveitando os pequenos períodos de tempo entre os eventos de usuário para processar os dados em segundo plano. Por exemplo, um usuário pode editar uma planilha enquanto outro thread está recalculando outras partes da planilha dentro do mesmo aplicativo.  
