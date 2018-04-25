@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4aa9a6d37a52d5f15643e9179060450a2d7a34c4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2993fbcdc1caf73147c252a0d501e65478a3d08d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="common-language-runtime-clr"></a>CLR (Common Language Runtime)
 O .NET Framework fornece um ambiente de tempo de execução chamado Common Language Runtime, que executa o código e fornece serviços que facilitam o processo de desenvolvimento.  
@@ -87,7 +87,7 @@ O .NET Framework fornece um ambiente de tempo de execução chamado Common Langu
 |-----------|-----------------|  
 |[Processo de execução gerenciada](../../docs/standard/managed-execution-process.md)|Descreve as etapas obrigatórias para usufruir o Common Language Runtime.|  
 |[Gerenciamento Automático de Memória](../../docs/standard/automatic-memory-management.md)|Descreve como o coletor de lixo aloca e libera memória.|  
-|[NIB: Visão geral do .NET Framework](http://msdn.microsoft.com/library/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|Descreve os conceitos-chave do .NET Framework, como Common Type System, interoperabilidade entre linguagens, execução gerenciada, domínios de aplicativos e assemblies.|  
+|[NIB: Visão geral do .NET Framework](https://msdn.microsoft.com/library/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|Descreve os conceitos-chave do .NET Framework, como Common Type System, interoperabilidade entre linguagens, execução gerenciada, domínios de aplicativos e assemblies.|  
 |[Common Type System](../../docs/standard/base-types/common-type-system.md)|Descreve como os tipos são declarados, usados e gerenciados no tempo de execução para dar suporte à integração entre linguagens.|  
   
 ## <a name="see-also"></a>Consulte também  

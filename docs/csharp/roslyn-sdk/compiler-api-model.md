@@ -1,6 +1,6 @@
 ---
 title: Conceitos e modelo de objeto do SDK do .NET Compiler Platform
-description: "Esta visão geral fornece o contexto necessário para trabalhar efetivamente com o SDK do .NET Compiler. Você aprenderá sobre as camadas de API, os principais tipos envolvidos e o modelo de objeto geral."
+description: Esta visão geral fornece o contexto necessário para trabalhar efetivamente com o SDK do .NET Compiler. Você aprenderá sobre as camadas de API, os principais tipos envolvidos e o modelo de objeto geral.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/10/2017
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: d230d334eba4e438635a4c70e8c1b5fc5075b065
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 17a7884518f71d7df1f4a9fe8c91da87d7335e0d
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Entender o modelo do SDK do .NET Compiler Platform
 
@@ -22,15 +22,15 @@ Os compiladores processam o código escrito seguindo regras estruturadas que ger
 
 O SDK do .NET Compiler Platform expõe a análise de código dos compiladores C# e Visual Basic para você como um consumidor, fornecendo uma camada de API que espelha um pipeline de compilador tradicional.
 
-![etapas de processamento do pipeline do compilador do código-fonte para o código de objeto](media/compiler-pipeline.png)
+![etapas de processamento do pipeline do compilador do código-fonte para o código de objeto](media/compiler-api-model/compiler-pipeline.png)
 
 Cada fase desse pipeline é um componente separado. Primeiro, a fase de análise cria tokens do texto de origem e o analisa na sintaxe que segue a gramática da linguagem. Depois, a fase de declaração analisa os metadados de origem e importados para formar símbolos nomeados. Em seguida, a fase de associação corresponde os identificadores no código aos símbolos. Por fim, a fase de emissão emite um assembly com todas as informações criadas pelo compilador.
 
-![API do pipeline do compilador fornece acesso a cada etapa que faz parte do pipeline do compilador](media/compiler-pipeline-api.png)
+![API do pipeline do compilador fornece acesso a cada etapa que faz parte do pipeline do compilador](media/compiler-api-model/compiler-pipeline-api.png)
 
 Correspondente a cada uma dessas fases, o SDK do .NET Compiler Platform expõe um modelo de objeto que permite o acesso às informações da fase. A fase de análise expõe uma árvore de sintaxe, a fase de declaração expõe uma tabela de símbolos hierárquica, a fase de associação expõe o resultado da análise semântica do compilador e a fase de emissão é uma API que gera códigos de bytes de IL.
 
-![os serviço de linguagem disponíveis na API do compilador em cada etapa do pipeline do compilador](media/compiler-pipeline-lang-svc.png)
+![os serviço de linguagem disponíveis na API do compilador em cada etapa do pipeline do compilador](media/compiler-api-model/compiler-pipeline-lang-svc.png)
 
 Cada compilador combina esses componentes como um único inteiro de ponta a ponta.
 
@@ -40,7 +40,7 @@ Essas APIs são as mesmas usadas pelo Visual Studio. Por exemplo, os recursos de
 
 O SDK do .NET Compiler consiste em duas camadas principais de APIs: APIs do compilador e APIs dos espaços de trabalho.
 
-![as camadas de API representadas pelas APIs do pipeline do compilador](media/api-layers.png)
+![as camadas de API representadas pelas APIs do pipeline do compilador](media/compiler-api-model/api-layers.png)
 
 ### <a name="compiler-apis"></a>APIs do compilador
 

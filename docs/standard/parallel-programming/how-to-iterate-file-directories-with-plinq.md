@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ddd3b509b7c0c35f1c4edea99cb5a4ec6c1ac18e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 523db9d356954a4a397b63d836018070effa9e5b
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>Como: Fazer iterações de diretórios de arquivos com PLINQ
 Este exemplo mostra duas maneiras simples de paralelizar operações em diretórios de arquivos. A primeira consulta usa o método <xref:System.IO.Directory.GetFiles%2A> para preencher uma matriz de nomes de arquivo em um diretório e em todos os subdiretórios. Este método não retorna até que toda a matriz esteja preenchida e, portanto, pode apresentar latência no início da operação. No entanto, após o preenchimento da matriz, PLINQ pode processá-la em paralelo rapidamente.  
@@ -44,7 +44,7 @@ Este exemplo mostra duas maneiras simples de paralelizar operações em diretór
   
  Ao usar <xref:System.IO.Directory.GetFiles%2A>, verifique se você tem permissões suficientes em todos os diretórios na árvore. Caso contrário, uma exceção será lançada e nenhum resultado retornará. Ao usar o <xref:System.IO.Directory.EnumerateDirectories%2A> em uma consulta PLINQ, é problemático tratar as exceções de E/S de uma maneira que permita que você continue a iteração. Se o seu código precisar manipular exceções de acesso não autorizado ou de E/S, considere a abordagem descrita em [Como iterar diretórios de arquivos com a classe paralela](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-the-parallel-class.md).  
   
- Se a latência de E/S for um problema, por exemplo com E/S de arquivo em uma rede, considere o uso de uma das técnicas de E/S assíncronas descritas em [TPL e programação assíncrona de TPL e .NET Framework](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md) e nesta [postagem de blog ](http://go.microsoft.com/fwlink/?LinkID=186458).  
+ Se a latência de E/S for um problema, por exemplo com E/S de arquivo em uma rede, considere o uso de uma das técnicas de E/S assíncronas descritas em [TPL e programação assíncrona de TPL e .NET Framework](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md) e nesta [postagem de blog ](https://blogs.msdn.microsoft.com/pfxteam/2009/08/04/parallel-extensions-and-io/).  
   
 ## <a name="see-also"></a>Consulte também  
  [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

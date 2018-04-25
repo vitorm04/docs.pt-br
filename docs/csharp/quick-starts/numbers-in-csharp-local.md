@@ -1,6 +1,6 @@
 ---
-title: "Tutorial sobre números em C# ‒ guias de início rápido locais de C#"
-description: "Aprenda C# explorando tipos numéricos, suas propriedades e métodos."
+title: Tutorial sobre números em C# ‒ guias de início rápido locais de C#
+description: Aprenda C# explorando tipos numéricos, suas propriedades e métodos.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 99c2f8e4807c4d18c0c798e3a737f4a88d6e62d6
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 6570693ea09ca2b548615291ba4f2b69f6d92482
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="numbers-in-c-quickstart"></a>Início rápido de números em C#
 
@@ -315,7 +315,7 @@ Observe que o cálculo usando o tipo decimal tem mais dígitos à direita da ví
 Agora que você viu os diferentes tipos numéricos, escreva um código que calcula a área de um círculo cujo raio é de 2,50 centímetros. Lembre-se de que a área de um círculo é o quadrado do raio multiplicado por PI. Uma dica: o .NET contém uma constante para PI, <xref:System.Math.PI?displayProperty=nameWithType>, que você pode usar para esse valor. 
 
 Você deve obter uma resposta entre 19 e 20.
-Confira sua resposta [analisando o código de exemplo finalizado no GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/numbers-quickstart/Program.cs#L104-L106)
+Confira sua resposta [analisando o código de exemplo finalizado no GitHub](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106)
 
 Experimente outras fórmulas, se quiser. 
 

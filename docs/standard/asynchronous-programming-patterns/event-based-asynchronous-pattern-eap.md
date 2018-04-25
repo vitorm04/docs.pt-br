@@ -1,30 +1,30 @@
 ---
-title: "Padrão assíncrono baseado em evento (EAP)"
-ms.custom: 
+title: Padrão assíncrono baseado em evento (EAP)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - asynchronous calls
 - asynchronous programming, design patterns
 - asynchronous programming
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
-caps.latest.revision: 
+caps.latest.revision: 20
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2a83d638255d27317ba5d566ab46b83526659365
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: fecd71355d53f1e3937d3724569b10fa0c8e50da
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>Padrão assíncrono baseado em evento (EAP)
 Há várias maneiras de expor recursos assíncronos para o código cliente. O Padrão Assíncrono baseado em evento prescreve uma maneira de as classes apresentarem comportamento assíncrono.  
@@ -68,11 +68,11 @@ Há várias maneiras de expor recursos assíncronos para o código cliente. O Pa
  [Threading](../../../docs/standard/threading/index.md)  
  Descreve recursos de multithreading no .NET Framework.  
   
- [Threading](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)  
+ [Threading](https://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)  
  Descreve recursos de multithreading nas linguagens C# e Visual Basic.  
   
 ## <a name="see-also"></a>Consulte também  
  [Práticas recomendadas de threading gerenciado](../../../docs/standard/threading/managed-threading-best-practices.md)  
  [Eventos](../../../docs/standard/events/index.md)  
- [Multithreading em componentes](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
+ [Multithreading em componentes](https://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
  [Padrões de design de programação assíncrona](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

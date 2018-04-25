@@ -1,12 +1,12 @@
 ---
-title: "Práticas recomendadas para o desenvolvimento de aplicativos prontos para internacionalização"
-ms.custom: 
+title: Práticas recomendadas para o desenvolvimento de aplicativos prontos para internacionalização
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - global applications, best practices
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - globalization [.NET Framework], best practices
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-caps.latest.revision: 
+caps.latest.revision: 20
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1fbdbe2596f44a6efda35b8c3e3aace303d79364
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 65566d54c97db7592fdd38178d88fe2963e637bf
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Práticas recomendadas para o desenvolvimento de aplicativos prontos para internacionalização
 Essa seção descreve as práticas recomendadas a serem seguidas no desenvolvimento de aplicativos prontos para o mundo.  
@@ -102,7 +102,7 @@ Essa seção descreve as práticas recomendadas a serem seguidas no desenvolvime
   
 4.  Especifique os valores dos atributos requestEncoding, responseEncoding, fileEncoding, culture e uiCulture nos três locais a seguir em um aplicativo ASP.NET:  
   
-    -   Na seção de globalização de um arquivo Web.config. Este arquivo é externo no aplicativo ASP.NET. Para saber mais, confira [\<Elemento globalization>](http://msdn.microsoft.com/library/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7).  
+    -   Na seção de globalização de um arquivo Web.config. Este arquivo é externo no aplicativo ASP.NET. Para saber mais, confira [\<Elemento globalization>](https://msdn.microsoft.com/library/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7).  
   
     -   Em uma diretiva de página. Observe que, quando um aplicativo está em uma página, isso significa que o arquivo já foi lido. Portanto, já não é possível especificar fileEncoding e requestEncoding. Somente uiCulture, Culture e responseEncoding podem ser especificados em uma diretiva de página.  
   

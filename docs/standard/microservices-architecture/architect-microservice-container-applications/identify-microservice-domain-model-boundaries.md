@@ -1,7 +1,7 @@
 ---
-title: "Identificando os limites de modelo de domínio de cada microsserviço"
-description: "Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Identificando os limites de modelo de domínio para cada microsserviço"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Identificando os limites de modelo de domínio de cada microsserviço
+description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Identificando os limites de modelo de domínio para cada microsserviço
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,17 +11,17 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 830dd48a420a462842de57e436323a5a930c195d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 23b5ebafc5ea037568f168426d76b3ec9839040e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>Identificar os limites de modelo de domínio de cada microsserviço
 
 A meta de identificar os limites do modelo e o tamanho de cada microsserviço não é obter a separação mais granular possível, embora você deva tender a usar microsserviços pequenos, se possível. Em vez disso, sua meta deve ser obter a separação mais significativa orientada pelo seu conhecimento do domínio. A ênfase não está no tamanho, mas em funcionalidades de negócios. Além disso, se for necessária uma clara coesão para uma determinada área do aplicativo com base em um grande número de dependências, isso será a indicação da necessidade de um único microsserviço também. A coesão é uma maneira de identificar como separar ou agrupar microsserviços. Por fim, enquanto você obtém mais conhecimento sobre o domínio, deve adaptar o tamanho do seu microsserviço iterativamente. Localizar o tamanho correto não é um processo único.
 
-[SAM Newman](http://samnewman.io/), um conhecido promotor de microsserviços e autor do livro [Building microservices](http://samnewman.io/books/building_microservices/) (Criando microsserviços), realça o que você deve projetar seus microsserviços com base no padrão de BC (Contexto Limitado) (parte do controlado por domínio design), conforme apresentado anteriormente. Às vezes, um BC poderia ser composto por vários serviços físicos, mas não vice-versa.
+[SAM Newman](https://samnewman.io/), um conhecido promotor de microsserviços e autor do livro [Building microservices](https://samnewman.io/books/building_microservices/) (Criando microsserviços), realça o que você deve projetar seus microsserviços com base no padrão de BC (Contexto Limitado) (parte do controlado por domínio design), conforme apresentado anteriormente. Às vezes, um BC poderia ser composto por vários serviços físicos, mas não vice-versa.
 
 Um modelo de domínio com entidades de domínio específicas dentro de um BC ou microsserviço concreto. Um BC delimita a aplicabilidade de um modelo de domínio e dá aos membros da equipe do desenvolvedor uma compreensão clara e compartilhada sobre o que deve ser coeso e o que pode ser desenvolvido de modo independente. Essas são as mesmas metas de microsserviços.
 

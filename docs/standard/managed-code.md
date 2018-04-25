@@ -1,6 +1,6 @@
 ---
-title: "O que é código gerenciado?"
-description: "Saiba como o código gerenciado é o código cuja execução é gerenciada por um tempo de execução, o CLR (Common Language Runtime)."
+title: O que é código gerenciado?
+description: Saiba como o código gerenciado é o código cuja execução é gerenciada por um tempo de execução, o CLR (Common Language Runtime).
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -13,17 +13,17 @@ ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ca2ae076229a1726d3a25a84e358f9cfb623a297
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 46bbe30f216ba9b0a3bc7f88267c428ec56de614
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="what-is-managed-code"></a>O que é “código gerenciado”?
 
 Ao trabalhar com o .NET Framework, geralmente você encontrará o termo "código gerenciado". Este documento explicará o que esse termo significa e obterá informações adicionais sobre ele.
 
-Em resumo, código gerenciado é exatamente isso: código cuja execução é gerenciada por um tempo de execução. Nesse caso, o tempo de execução em questão é chamado de **Common Language Runtime** ou CLR, independentemente da implementação ([Mono](http://www.mono-project.com/) ou do .NET Framework ou .NET Core). CLR é responsável por pegar o código gerenciado, compilá-lo em código de computador e, em seguida, executá-lo. Além disso, o tempo de execução fornece vários serviços importantes, como gerenciamento automático de memória, limites de segurança, segurança de digitação etc.
+Em resumo, código gerenciado é exatamente isso: código cuja execução é gerenciada por um tempo de execução. Nesse caso, o tempo de execução em questão é chamado de **Common Language Runtime** ou CLR, independentemente da implementação ([Mono](https://www.mono-project.com/) ou do .NET Framework ou .NET Core). CLR é responsável por pegar o código gerenciado, compilá-lo em código de computador e, em seguida, executá-lo. Além disso, o tempo de execução fornece vários serviços importantes, como gerenciamento automático de memória, limites de segurança, segurança de digitação etc.
 
 Compare isso à maneira pela qual você executaria um programa C/C++, também chamado de "código não gerenciado". No mundo não gerenciado, o programador é responsável por quase tudo. O programa real é, essencialmente, um binário que o sistema operacional (SO) carrega na memória e inicia. Tudo, desde o gerenciamento da memória até as considerações de segurança, é responsabilidade do programador.
 

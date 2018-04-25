@@ -1,7 +1,7 @@
 ---
-title: "Comunicação em uma arquitetura de microsserviço"
-description: "Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Comunicação em uma arquitetura de microsserviço"
-keywords: "Docker, Microsserviços, ASP.NET, Contêiner"
+title: Comunicação em uma arquitetura de microsserviço
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Comunicação em uma arquitetura de microsserviço
+keywords: Docker, Microsserviços, ASP.NET, Contêiner
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3c80ce8e3c4ccdc7e53634f54dd998581758ab07
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 6bf4de57d3431577e6c770a5a83b911f41e5a4fe
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Comunicação em uma arquitetura de microsserviço
 
@@ -25,7 +25,7 @@ Não há apenas uma solução, mas várias. Uma das soluções envolve isolar os
 
 Um aplicativo baseado em microsserviços é um sistema distribuído em execução em vários processos ou serviços, geralmente, até mesmo em vários servidores ou hosts. Cada instância de serviço geralmente é um processo. Portanto, os serviços devem interagir usando um protocolo de comunicação entre processos, como HTTP, AMQP ou um protocolo binário, como TCP, dependendo da natureza de cada serviço.
 
-A comunidade de microsserviços promove a filosofia de "[pontos de extremidade inteligentes e pipes tolos](http://simplicable.com/new/smart-endpoints-and-dumb-pipes)". Este slogan incentiva um design o mais desacoplado possível entre os microsserviços e o mais coeso possível dentro de um único microsserviço. Conforme explicado anteriormente, cada microsserviço tem seus próprios dados e sua própria lógica do domínio. Mas os microsserviços que compõem um aplicativo de ponta a ponta geralmente são coreografados simplesmente usando comunicações REST em vez de protocolos complexos, como WS-\*, e comunicações flexíveis controladas por evento, em vez de orquestradores de negócios e processos centralizados.
+A comunidade de microsserviços promove a filosofia de "[pontos de extremidade inteligentes e pipes tolos](https://simplicable.com/new/smart-endpoints-and-dumb-pipes)". Este slogan incentiva um design o mais desacoplado possível entre os microsserviços e o mais coeso possível dentro de um único microsserviço. Conforme explicado anteriormente, cada microsserviço tem seus próprios dados e sua própria lógica do domínio. Mas os microsserviços que compõem um aplicativo de ponta a ponta geralmente são coreografados simplesmente usando comunicações REST em vez de protocolos complexos, como WS-\*, e comunicações flexíveis controladas por evento, em vez de orquestradores de negócios e processos centralizados.
 
 Os dois protocolos mais usados são solicitação/resposta HTTP com APIs de recurso (principalmente em consultas) e mensagens assíncronas leves, ao comunicar atualizações entre vários microsserviços. Isso será mais bem explicado nas seções a seguir.
 
@@ -43,7 +43,7 @@ O segundo eixo é definir se a comunicação tem um único destinatário ou vár
 
 -   Único destinatário. Cada solicitação deve ser processada por exatamente um destinatário ou serviço. Um exemplo dessa comunicação é o [Padrão de comando](https://en.wikipedia.org/wiki/Command_pattern).
 
--   Vários destinatários. Cada solicitação pode ser processada por nenhum destinatário, por um ou por vários destinatários. Esse tipo de comunicação precisa ser assíncrono. Um exemplo é o mecanismo [de publicação/assinatura](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) usado em padrões como a [Arquitetura orientada por eventos](http://microservices.io/patterns/data/event-driven-architecture.html). Ele se baseia em um agente de mensagem ou em uma interface de barramento de evento ao propagar atualizações de dados entre vários microsserviços por meio de eventos. Ele geralmente é implementado por meio de um barramento de serviço ou artefato semelhante, como o [Barramento de Serviço do Azure](https://azure.microsoft.com/services/service-bus/), usando [tópicos e assinaturas](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions).
+-   Vários destinatários. Cada solicitação pode ser processada por nenhum destinatário, por um ou por vários destinatários. Esse tipo de comunicação precisa ser assíncrono. Um exemplo é o mecanismo [de publicação/assinatura](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) usado em padrões como a [Arquitetura orientada por eventos](https://microservices.io/patterns/data/event-driven-architecture.html). Ele se baseia em um agente de mensagem ou em uma interface de barramento de evento ao propagar atualizações de dados entre vários microsserviços por meio de eventos. Ele geralmente é implementado por meio de um barramento de serviço ou artefato semelhante, como o [Barramento de Serviço do Azure](https://azure.microsoft.com/services/service-bus/), usando [tópicos e assinaturas](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions).
 
 Um aplicativo baseado em microsserviço geralmente usará uma combinação desses estilos de comunicação. O tipo mais comum é a comunicação de único destinatário com um protocolo síncrono como HTTP/HTTPS ao invocar um serviço HTTP de API Web regular. Geralmente os microsserviços também usam protocolos de mensagens para a comunicação assíncrona entre eles.
 
@@ -91,15 +91,15 @@ Quando um cliente usa a comunicação de solicitação/resposta, ele considera q
 
 Um estilo popular de arquitetura para comunicação de solicitação/resposta é o [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) (Transferência de Estado Representacional). Essa abordagem é baseada e fortemente vinculada ao protocolo [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol), adotando verbos HTTP como GET, POST e PUT. O REST é a abordagem de comunicação de arquitetura mais comum usada na criação de serviços. Você pode implementar serviços REST ao desenvolver serviços de API Web ASP.NET Core.
 
-Há um valor adicional ao usar serviços REST de HTTP como sua linguagem IDL. Por exemplo, ao usar [metadados do Swagger](http://swagger.io/) para descrever sua API de serviço, você poderá usar ferramentas que geram stubs de cliente para descobrir e consumir seus serviços diretamente.
+Há um valor adicional ao usar serviços REST de HTTP como sua linguagem IDL. Por exemplo, ao usar [metadados do Swagger](https://swagger.io/) para descrever sua API de serviço, você poderá usar ferramentas que geram stubs de cliente para descobrir e consumir seus serviços diretamente.
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
 -   **Martin Fowler. Richardson Maturity Model.** A description of the REST model (Modelo de maturidade Richardson. Uma descrição do modelo REST).
-    [*http://martinfowler.com/articles/richardsonMaturityModel.html*](http://martinfowler.com/articles/richardsonMaturityModel.html)
+    [*https://martinfowler.com/articles/richardsonMaturityModel.html*](https://martinfowler.com/articles/richardsonMaturityModel.html)
 
 -   **Swagger.** O site oficial.
-    [*http://swagger.io/*](http://swagger.io/)
+    [*https://swagger.io/*](https://swagger.io/)
 
 ### <a name="push-and-real-time-communication-based-on-http"></a>Comunicação por push e em tempo real baseada em HTTP
 

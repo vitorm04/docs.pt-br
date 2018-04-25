@@ -1,12 +1,12 @@
 ---
-title: "Numéricos no  .NET Framework"
-ms.custom: 
+title: Numéricos no  .NET Framework
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SIMD
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-caps.latest.revision: 
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bd55b127f73fe1cefce9724f3a74400b5fe7488f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 074ed60a3cbc1949eea4a8d866cdb3bba7c0f196
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="numerics-in-the-net-framework"></a>Numéricos no  .NET Framework
 O .NET Core dá suporte aos integrais numéricos padrão e aos primitivos de ponto flutuante, bem como <xref:System.Numerics.BigInteger>, um tipo integral sem limite teórico superior ou inferior <xref:System.Numerics.Complex>, um tipo que representa números complexos e um conjunto de tipos de vetores habilitados por SIMD no namespace <xref:System.Numerics>.  
@@ -85,7 +85,7 @@ O .NET Core dá suporte aos integrais numéricos padrão e aos primitivos de pon
   
  Os tipos de vetor habilitados para SimD são implementados em IL, o que permite que sejam utilizados em hardware não habilitados para SimD e compiladores JIT. Para tirar proveito das instruções SIMD, seus aplicativos de 64 bits devem ser compilados pelo novo compilador JIT de 64 bits para código gerenciado, que é incluído com o .NET Framework 4.6; ele adiciona suporte a SIMD ao direcionar para processadores x64.  
   
- O SIMD também pode ser baixado como um [pacote do NuGet](http://www.nuget.org/packages/System.Numerics.Vectors).  O pacote NutGET também inclui uma estrutura <xref:System.Numerics.Vector%601> genérica que permite a criação de um vetor de qualquer tipo numérico primitivo. (Os tipos numéricos primitivos incluem todos os tipos numéricos no namespace <xref:System>, exceto para <xref:System.Decimal>.) Além disso, a estrutura <xref:System.Numerics.Vector%601> fornece uma biblioteca de métodos de conveniência que você pode chamar ao trabalhar com vetores.  
+ O SIMD também pode ser baixado como um [pacote do NuGet](https://www.nuget.org/packages/System.Numerics.Vectors).  O pacote NutGET também inclui uma estrutura <xref:System.Numerics.Vector%601> genérica que permite a criação de um vetor de qualquer tipo numérico primitivo. (Os tipos numéricos primitivos incluem todos os tipos numéricos no namespace <xref:System>, exceto para <xref:System.Decimal>.) Além disso, a estrutura <xref:System.Numerics.Vector%601> fornece uma biblioteca de métodos de conveniência que você pode chamar ao trabalhar com vetores.  
   
 ## <a name="see-also"></a>Consulte também  
  [Fundamentos do aplicativo](../../docs/standard/application-essentials.md)

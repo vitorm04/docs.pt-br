@@ -13,11 +13,11 @@ ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 11a93f4014734130f7c4e33cf215c6d49d2554c5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d9b0fa5ebe37e51c45a8a5d8a42ce9b9688cc7c1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="native-interoperability"></a>Interoperabilidade nativa
 
@@ -26,7 +26,7 @@ Neste documento, encontraremos mais detalhes sobre as três maneiras de fazer "i
 Existem alguns motivos para chamar em código nativo:
 
 *   Os sistemas operacionais vêm com um grande volume de APIs que não estão presentes nas bibliotecas de classes gerenciadas. Um exemplo perfeito para isso seria o acesso a funções de gerenciamento de hardware ou do sistema operacional.
-*   Comunicação com outros componentes que têm ou podem produzir ABIs de estilo C (ABIs nativas). Isso abrange, por exemplo, código Java que é exposto por meio da [JNI (Interface Nativa do Java)](http://docs.oracle.com/javase/8/docs/technotes/guides/jni/) ou qualquer outra linguagem gerenciada que possa produzir um componente nativo.
+*   Comunicação com outros componentes que têm ou podem produzir ABIs de estilo C (ABIs nativas). Isso abrange, por exemplo, código Java que é exposto por meio da [JNI (Interface Nativa do Java)](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/) ou qualquer outra linguagem gerenciada que possa produzir um componente nativo.
 *   No Windows, a maioria dos softwares que são instalados, como o pacote Microsoft Office, registra os componentes que representam seus programas e permitem que sejam automatizados ou usados pelos desenvolvedores. Isso também requer interoperabilidade nativa.
 
 Evidentemente, a lista acima não abrange todas as possíveis situações e cenários em que o desenvolvedor desejaria/gostaria de/precisaria fazer interface com componentes nativos. A biblioteca de classes do .NET, por exemplo, usa o suporte para interoperabilidade nativa para implementar um número razoável de APIs, como suporte ao console e manipulação, acesso ao sistema de arquivos e outras. No entanto, é importante observar que há uma opção, se necessário.
@@ -340,6 +340,6 @@ A classe `StatClass` representa uma estrutura que é retornada pela chamada do s
 
 ## <a name="more-resources"></a>Mais recursos
 
-*   [PInvoke.net wiki](http://www.pinvoke.net) uma wiki excelente com informações sobre as APIs comuns do Win32 e como chamá-las.
+*   [PInvoke.net wiki](https://www.pinvoke.net/) uma wiki excelente com informações sobre as APIs comuns do Win32 e como chamá-las.
 *   [P/Invoke no MSDN](https://msdn.microsoft.com/library/zbz07712.aspx)
-*   [Documentação do Mono no P/Invoke](http://www.mono-project.com/docs/advanced/pinvoke/)
+*   [Documentação do Mono no P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/)

@@ -1,30 +1,30 @@
 ---
-title: "Threading gerenciado e não gerenciado no Windows"
-ms.custom: 
+title: Threading gerenciado e não gerenciado no Windows
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - threading [.NET Framework], unmanaged
 - threading [.NET Framework], managed
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-caps.latest.revision: 
+caps.latest.revision: 17
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2ce17ef15a5b582a9df0f16d7e0ac82df626579d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 66bf8458a3f4f9dd622129e82acb659dddf8467a
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Threading gerenciado e não gerenciado no Windows
 O gerenciamento de todos os threads, inclusive de threads criados pelo Common Language Runtime e fora do tempo de execução que ingressam no ambiente gerenciado para executar o código, é feito pela classe <xref:System.Threading.Thread>. O tempo de execução monitora todos os threads de seu processo que já executaram o código no ambiente de execução gerenciado. Ele não rastreia nenhum outro thread. Os threads podem ingressar no ambiente de execução gerenciado por meio da interoperabilidade COM (porque o tempo de execução expõe os objetos gerenciados como objetos COM ao mundo não gerenciado), da função COM [DllGetClassObject](https://msdn.microsoft.com/library/ms680760.aspx) e da invocação de plataforma.  
@@ -55,7 +55,7 @@ O gerenciamento de todos os threads, inclusive de threads criados pelo Common La
 |Próximo a **CoInitializeEx** (OLE32.DLL)|<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>|  
   
 ## <a name="managed-threads-and-com-apartments"></a>Threads gerenciados e apartments COM  
- Um thread gerenciado pode ser marcado para indicar que ele irá hospedar um [single-threaded apartament](http://msdn.microsoft.com/library/windows/desktop/ms680112.aspx) ou um [multithread apartament](http://msdn.microsoft.com/library/windows/desktop/ms693421.aspx). (Para obter mais informações sobre a arquitetura de threading COM, confira [Processos, threads e apartments](http://msdn.microsoft.com/library/windows/desktop/ms693344.aspx).) Os métodos <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A> e <xref:System.Threading.Thread.TrySetApartmentState%2A> da classe <xref:System.Threading.Thread> retornam e atribuem o estado de apartment de um thread. Se o estado não tiver sido definido, <xref:System.Threading.Thread.GetApartmentState%2A> retorna <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
+ Um thread gerenciado pode ser marcado para indicar que ele irá hospedar um [single-threaded apartament](https://msdn.microsoft.com/library/windows/desktop/ms680112.aspx) ou um [multithread apartament](https://msdn.microsoft.com/library/windows/desktop/ms693421.aspx). (Para obter mais informações sobre a arquitetura de threading COM, confira [Processos, threads e apartments](https://msdn.microsoft.com/library/windows/desktop/ms693344.aspx).) Os métodos <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A> e <xref:System.Threading.Thread.TrySetApartmentState%2A> da classe <xref:System.Threading.Thread> retornam e atribuem o estado de apartment de um thread. Se o estado não tiver sido definido, <xref:System.Threading.Thread.GetApartmentState%2A> retorna <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
   
  Você só pode definir uma propriedade quando o thread estiver no estado <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType>; ela só pode ser definida uma vez por thread.  
   
