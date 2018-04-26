@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
-ms.openlocfilehash: 719fbe826b0b115b19067dbaf0d04f14e6534890
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.openlocfilehash: d66f835d57f43d2016d3b20e2205e0052d064acb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-in-c"></a>Novidades no C# #
 
@@ -30,8 +30,8 @@ Esta página fornece um roteiro de novos recursos em cada versão principal da l
 * [C# 7.1](csharp-7-1.md):
     - Esta página descreve os recursos no C# 7.1. Esses recursos foram adicionados no [Visual Studio 2017 versão 15.3](https://www.visualstudio.com/vs/whatsnew/) e no [SDK do .NET Core 2.0](../../core/whats-new/index.md).
 
-* [C# 7](csharp-7.md):
-    - Esta página descreve os recursos adicionados ao C# 7. Esses recursos foram adicionados ao [Visual Studio 2017](https://www.visualstudio.com/vs/whatsnew/) e ao [.NET Core 1.0](../../core/whats-new/index.md) e posterior
+* [C# 7.0](csharp-7.md):
+    - Esta página descreve os recursos adicionados ao C# 7.0. Esses recursos foram adicionados ao [Visual Studio 2017](https://www.visualstudio.com/vs/whatsnew/) e ao [.NET Core 1.0](../../core/whats-new/index.md) e posterior
      
 * [C# 6](csharp-6.md):
     - Esta página descreve os recursos que foram adicionados no C# 6. Esses recursos estão disponíveis no Visual Studio 2015 para desenvolvedores do Windows e no .NET Core 1.0 para desenvolvedores explorando o C# no macOS e Linux.

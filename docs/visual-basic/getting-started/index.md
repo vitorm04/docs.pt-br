@@ -12,11 +12,11 @@ ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e53ba3e1134b09edcc87a0421b7699bcf3bb1d39
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 58e63d95c2f10329f85d6150b58f196294de38d1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-with-visual-basic"></a>Introdução ao Visual Basic
 Esta seção da documentação ajuda você a começar o desenvolvimento de aplicativos do Visual Basic.  
@@ -55,10 +55,10 @@ Fornece uma lista de sites e grupos de notícias que podem ajudá-lo a encontrar
  Fornece links para páginas que apresentam a programação orientada a objeto e descrevem como criar seus próprios objetos e usar objetos para simplificar a codificação.  
   
  [Amostras](../../visual-basic/sample-applications.md)  
- Fornece links para código de exemplo no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Fornece links para código de exemplo no Visual Basic.  
   
  [Explicações Passo a Passo](../../visual-basic/walkthroughs.md)  
- Fornece uma lista de páginas da Ajuda que demonstram aspectos da linguagem [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Fornece uma lista de páginas de Ajuda que demonstram aspectos da linguagem do Visual Basic.  
   
  [Fale conosco](/visualstudio/ide/talk-to-us)  
  Aborda como receber suporte e fornecer comentários.  
@@ -66,7 +66,7 @@ Fornece uma lista de sites e grupos de notícias que podem ajudá-lo a encontrar
  [Visual Studio](/visualstudio/)  
  Fornece links para a documentação do [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
- [C#](../../csharp/index.md) Fornece links para a documentação sobre desenvolvimento de aplicativos com o [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
+ [C#](../../csharp/index.md) Fornece links para a documentação sobre desenvolvimento de aplicativos com o Visual C#.  
   
  [Visual C++](/cpp/)  
  Fornece links para a documentação do Visual C++.  

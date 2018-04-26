@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: c627903743f8867e05bac9ce835659fc7270b94e
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: aad6b06748b02e2ea3003ca339d8a5a0b15583f8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-net-compiler-platform-sdk"></a>O SDK do .NET Compiler Platform
 
@@ -40,9 +40,9 @@ Há três cenários principais para escrever analisadores e correções de códi
 
 ## <a name="enforce-team-coding-standards"></a>Impor padrões de codificação à equipe
 
-Muitas equipes têm padrões de codificação aplicados por meio de revisões de código feitas com outros membros da equipe. Os analisadores e as correções de código podem tornar esse processo muito mais eficiente. As revisões de código ocorrem quando um desenvolvedor compartilha seu trabalho com outras pessoas da equipe. Ele terá investido todo o tempo necessário para concluir um novo recurso antes de obter algum comentário. Semanas podem passar enquanto ele reforça hábitos que não correspondem às práticas da equipe.
+Muitas equipes têm padrões de codificação aplicados por meio de revisões de código feitas com outros membros da equipe. Os analisadores e as correções de código podem tornar esse processo muito mais eficiente. As revisões de código ocorrem quando um desenvolvedor compartilha seu trabalho com outras pessoas da equipe. O desenvolvedor terá investido todo o tempo necessário para concluir um novo recurso antes de obter algum comentário. Semanas podem passar enquanto o desenvolvedor reforça hábitos que não correspondem às práticas da equipe.
 
-Os analisadores são executados à medida que um desenvolvedor escreve o código. Ele obtém comentários imediatos que o incentivam a seguir as diretrizes imediatamente. Ele cria hábitos para escrever códigos compatíveis assim que começa a criar protótipos. Quando o recurso está pronto para que outras pessoas o examinem, todas as diretrizes padrão já terão sido impostas.
+Os analisadores são executados à medida que um desenvolvedor escreve o código. O desenvolvedor obtém comentários imediatos que o incentiva a seguir as diretrizes no mesmo instante. O desenvolvedor cria hábitos para gravar códigos compatíveis assim que começa a criar protótipos. Quando o recurso está pronto para que outras pessoas o examinem, todas as diretrizes padrão já terão sido impostas.
 
 As equipes podem criar analisadores e correções de código que procurem as práticas mais comuns que violem as práticas de codificação em equipe. Eles podem ser instalados nos computadores de cada desenvolvedor para impor os padrões.
 
