@@ -1,36 +1,37 @@
 ---
-title: "Emulação quebrando em um tempo a atividade"
-ms.custom: 
+title: Emulação quebrando em um tempo a atividade
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ddff715d-d623-4b54-b841-60bacbc3ca21
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22a03c2e7dcc8d024ed407e7df24a4e9db4e2bf6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 27264832dd82719d7ccb81e1398df343653515b1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="emulating-breaking-in-a-while-activity"></a><span data-ttu-id="a2b16-102">Emulação quebrando em um tempo a atividade</span><span class="sxs-lookup"><span data-stu-id="a2b16-102">Emulating breaking in a While activity</span></span>
-<span data-ttu-id="a2b16-103">Este exemplo demonstra como dividir o mecanismo de loop das seguintes atividades: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While>, e <xref:System.Activities.Statements.ParallelForEach%601>.</span><span class="sxs-lookup"><span data-stu-id="a2b16-103">This sample demonstrates how to break the looping mechanism of the following activities: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While>, and <xref:System.Activities.Statements.ParallelForEach%601>.</span></span>  
+# <a name="emulating-breaking-in-a-while-activity"></a><span data-ttu-id="2ea60-102">Emulação quebrando em um tempo a atividade</span><span class="sxs-lookup"><span data-stu-id="2ea60-102">Emulating breaking in a While activity</span></span>
+<span data-ttu-id="2ea60-103">Este exemplo demonstra como dividir o mecanismo de loop das seguintes atividades: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While>, e <xref:System.Activities.Statements.ParallelForEach%601>.</span><span class="sxs-lookup"><span data-stu-id="2ea60-103">This sample demonstrates how to break the looping mechanism of the following activities: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While>, and <xref:System.Activities.Statements.ParallelForEach%601>.</span></span>  
   
- <span data-ttu-id="a2b16-104">Isso é útil porque [!INCLUDE[wf](../../../../includes/wf-md.md)] não inclui nenhum atividade para interromper a execução desses loop.</span><span class="sxs-lookup"><span data-stu-id="a2b16-104">This is useful because [!INCLUDE[wf](../../../../includes/wf-md.md)] does not include any activity to break the execution of these loops.</span></span>  
+ <span data-ttu-id="2ea60-104">Isso é útil porque o Windows Workflow Foundation (WF) não inclui nenhuma atividade para interromper a execução desses loops.</span><span class="sxs-lookup"><span data-stu-id="2ea60-104">This is useful because Windows Workflow Foundation (WF) does not include any activity to break the execution of these loops.</span></span>  
   
-## <a name="scenario"></a><span data-ttu-id="a2b16-105">Cenário</span><span class="sxs-lookup"><span data-stu-id="a2b16-105">Scenario</span></span>  
- <span data-ttu-id="a2b16-106">O exemplo localiza o primeiro fornecedor confiável de uma lista de fornecedores (instâncias da classe `Vendor` ).</span><span class="sxs-lookup"><span data-stu-id="a2b16-106">The sample finds the first reliable vendor from a list of vendors (instances of the `Vendor` class).</span></span> <span data-ttu-id="a2b16-107">Cada fornecedor tem `ID`, `Name` e um valor numérico de confiabilidade que determina como o fornecedor é seguro.</span><span class="sxs-lookup"><span data-stu-id="a2b16-107">Each vendor has an `ID`, a `Name` and a numeric reliability value that determines how dependable the vendor is.</span></span> <span data-ttu-id="a2b16-108">O exemplo cria uma atividade personalizado chamada `FindReliableVendor` que recebe dois parâmetros de entrada (uma lista de fornecedores e um valor mínimo de confiabilidade) e retorna o primeiro fornecedor de lista que corresponde aos critérios fornecidos.</span><span class="sxs-lookup"><span data-stu-id="a2b16-108">The sample creates a custom activity called `FindReliableVendor` that receives two input parameters (a list of vendors and a minimum reliability value) and returns the first vendor of the list that matches the supplied criteria.</span></span>  
+## <a name="scenario"></a><span data-ttu-id="2ea60-105">Cenário</span><span class="sxs-lookup"><span data-stu-id="2ea60-105">Scenario</span></span>  
+ <span data-ttu-id="2ea60-106">O exemplo localiza o primeiro fornecedor confiável de uma lista de fornecedores (instâncias da classe `Vendor` ).</span><span class="sxs-lookup"><span data-stu-id="2ea60-106">The sample finds the first reliable vendor from a list of vendors (instances of the `Vendor` class).</span></span> <span data-ttu-id="2ea60-107">Cada fornecedor tem `ID`, `Name` e um valor numérico de confiabilidade que determina como o fornecedor é seguro.</span><span class="sxs-lookup"><span data-stu-id="2ea60-107">Each vendor has an `ID`, a `Name` and a numeric reliability value that determines how dependable the vendor is.</span></span> <span data-ttu-id="2ea60-108">O exemplo cria uma atividade personalizado chamada `FindReliableVendor` que recebe dois parâmetros de entrada (uma lista de fornecedores e um valor mínimo de confiabilidade) e retorna o primeiro fornecedor de lista que corresponde aos critérios fornecidos.</span><span class="sxs-lookup"><span data-stu-id="2ea60-108">The sample creates a custom activity called `FindReliableVendor` that receives two input parameters (a list of vendors and a minimum reliability value) and returns the first vendor of the list that matches the supplied criteria.</span></span>  
   
-## <a name="breaking-a-loop"></a><span data-ttu-id="a2b16-109">Quebrando um loop</span><span class="sxs-lookup"><span data-stu-id="a2b16-109">Breaking a Loop</span></span>  
- [!INCLUDE[wf](../../../../includes/wf-md.md)]<span data-ttu-id="a2b16-110"> não inclui uma atividade para interromper um loop.</span><span class="sxs-lookup"><span data-stu-id="a2b16-110"> does not include an activity to break a loop.</span></span> <span data-ttu-id="a2b16-111">O exemplo de código a seguir realiza quebrar um loop usando uma atividade de <xref:System.Activities.Statements.If> e diversas variáveis.</span><span class="sxs-lookup"><span data-stu-id="a2b16-111">The code sample accomplishes breaking a loop by using an <xref:System.Activities.Statements.If> activity and several variables.</span></span> <span data-ttu-id="a2b16-112">No exemplo, a atividade de <xref:System.Activities.Statements.While> é interrompida uma vez que a variável de `reliableVendor` é atribuído um valor diferente `null`.</span><span class="sxs-lookup"><span data-stu-id="a2b16-112">In the sample, the <xref:System.Activities.Statements.While> activity is broken once the `reliableVendor` variable is assigned a value other than `null`.</span></span>  
+## <a name="breaking-a-loop"></a><span data-ttu-id="2ea60-109">Quebrando um loop</span><span class="sxs-lookup"><span data-stu-id="2ea60-109">Breaking a Loop</span></span>  
+ <span data-ttu-id="2ea60-110">Windows Workflow Foundation (WF) não inclui uma atividade para interromper um loop.</span><span class="sxs-lookup"><span data-stu-id="2ea60-110">Windows Workflow Foundation (WF) does not include an activity to break a loop.</span></span> <span data-ttu-id="2ea60-111">O exemplo de código a seguir realiza quebrar um loop usando uma atividade de <xref:System.Activities.Statements.If> e diversas variáveis.</span><span class="sxs-lookup"><span data-stu-id="2ea60-111">The code sample accomplishes breaking a loop by using an <xref:System.Activities.Statements.If> activity and several variables.</span></span> <span data-ttu-id="2ea60-112">No exemplo, a atividade de <xref:System.Activities.Statements.While> é interrompida uma vez que a variável de `reliableVendor` é atribuído um valor diferente `null`.</span><span class="sxs-lookup"><span data-stu-id="2ea60-112">In the sample, the <xref:System.Activities.Statements.While> activity is broken once the `reliableVendor` variable is assigned a value other than `null`.</span></span>  
   
- <span data-ttu-id="a2b16-113">O exemplo de código a seguir demonstra como dividir o exemplo um loop de quando.</span><span class="sxs-lookup"><span data-stu-id="a2b16-113">The following code example demonstrates how the sample breaks a while loop.</span></span>  
+ <span data-ttu-id="2ea60-113">O exemplo de código a seguir demonstra como dividir o exemplo um loop de quando.</span><span class="sxs-lookup"><span data-stu-id="2ea60-113">The following code example demonstrates how the sample breaks a while loop.</span></span>  
   
 ```csharp  
 // Iterates while the "i" variable is lower than the size of the list   
@@ -74,19 +75,19 @@ new While(env => i.Get(env) < this.Vendors.Get(env).Count && reliableVendor.Get(
 }  
 ```  
   
-#### <a name="to-use-this-sample"></a><span data-ttu-id="a2b16-114">Para usar este exemplo</span><span class="sxs-lookup"><span data-stu-id="a2b16-114">To use this sample</span></span>  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="2ea60-114">Para usar este exemplo</span><span class="sxs-lookup"><span data-stu-id="2ea60-114">To use this sample</span></span>  
   
-1.  <span data-ttu-id="a2b16-115">Usando [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], abra o arquivo de solução de EmulatingBreakInWhile.sln.</span><span class="sxs-lookup"><span data-stu-id="a2b16-115">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the EmulatingBreakInWhile.sln solution file.</span></span>  
+1.  <span data-ttu-id="2ea60-115">Usando [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], abra o arquivo de solução de EmulatingBreakInWhile.sln.</span><span class="sxs-lookup"><span data-stu-id="2ea60-115">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the EmulatingBreakInWhile.sln solution file.</span></span>  
   
-2.  <span data-ttu-id="a2b16-116">Para criar a solução, pressione CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="a2b16-116">To build the solution, press CTRL+SHIFT+B.</span></span>  
+2.  <span data-ttu-id="2ea60-116">Para criar a solução, pressione CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="2ea60-116">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  <span data-ttu-id="a2b16-117">Para executar a solução, pressione CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="a2b16-117">To run the solution, press CTRL+F5.</span></span>  
+3.  <span data-ttu-id="2ea60-117">Para executar a solução, pressione CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="2ea60-117">To run the solution, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="a2b16-118">Os exemplos podem já estar instalados no seu computador.</span><span class="sxs-lookup"><span data-stu-id="a2b16-118">The samples may already be installed on your machine.</span></span> <span data-ttu-id="a2b16-119">Verifique o seguinte diretório (padrão) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="a2b16-119">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="2ea60-118">Os exemplos podem já estar instalados no seu computador.</span><span class="sxs-lookup"><span data-stu-id="2ea60-118">The samples may already be installed on your machine.</span></span> <span data-ttu-id="2ea60-119">Verifique o seguinte diretório (padrão) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="2ea60-119">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="a2b16-120">Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos.</span><span class="sxs-lookup"><span data-stu-id="a2b16-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="a2b16-121">Este exemplo está localizado no seguinte diretório.</span><span class="sxs-lookup"><span data-stu-id="a2b16-121">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="2ea60-120">Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos.</span><span class="sxs-lookup"><span data-stu-id="2ea60-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="2ea60-121">Este exemplo está localizado no seguinte diretório.</span><span class="sxs-lookup"><span data-stu-id="2ea60-121">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\EmulatingBreakInWhile`
