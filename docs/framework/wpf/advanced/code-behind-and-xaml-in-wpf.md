@@ -1,27 +1,29 @@
 ---
 title: Code-behind e XAML no WPF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 19c7c2cdd49663a57a4184027fd7d6ad8fcd7656
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c28a501996e4f2cc25e9e280b2f63e1c0c67051
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Code-behind e XAML no WPF
 <a name="introduction"></a> Code-behind é um termo usado para descrever o código unido a objetos definidos com marcação quando uma página [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é compilada com marcação. Este tópico descreve os requisitos para code-behind, bem como um mecanismo de código embutido alternativo para o código em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
@@ -57,11 +59,11 @@ ms.lasthandoff: 12/22/2017
   
 -   O manipulador deve corresponder ao delegado para o evento apropriado no sistema de tipo de suporte.  
   
--   Para o idioma [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] especificamente, você pode usar a palavra-chave `Handles` específico a um idioma para associar manipuladores com instâncias e eventos na declaração do manipulador, em vez de anexar manipuladores com atributos em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. No entanto, essa técnica tem algumas limitações, uma vez que a palavra-chave `Handles` não pode dar suporte a todos os recursos específicos do sistema de eventos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], como determinados cenários de evento roteado ou eventos anexados. Para obter detalhes, consulte [Visual Basic e manipulação de eventos WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
+-   Para o idioma do Microsoft Visual Basic especificamente, você pode usar o idioma específico `Handles` palavra-chave para associar manipuladores com instância e eventos na declaração do manipulador, em vez de anexar manipuladores a atributos em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. No entanto, essa técnica tem algumas limitações, uma vez que a palavra-chave `Handles` não pode dar suporte a todos os recursos específicos do sistema de eventos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], como determinados cenários de evento roteado ou eventos anexados. Para obter detalhes, consulte [Visual Basic e manipulação de eventos WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x:Code  
- [X:Code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md) é um elemento de diretiva definido em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Um elemento de diretiva `x:Code` pode conter um código de programação embutido. O código que é definido como embutido pode interagir com o [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] na mesma página. O exemplo a seguir ilustra o código [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] embutido. Observe que o código está dentro do elemento `x:Code` e que ele deve ser cercado por `<CDATA[`... `]]>` para liberar o conteúdo de [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], de modo que um processador [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (interpretando o esquema [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ou o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]) não tentará interpretar o conteúdo literalmente como [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)].  
+ [X:Code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md) é um elemento de diretiva definido em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Um elemento de diretiva `x:Code` pode conter um código de programação embutido. O código que é definido como embutido pode interagir com o [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] na mesma página. O exemplo a seguir ilustra o código c# embutido. Observe que o código está dentro do elemento `x:Code` e que ele deve ser cercado por `<CDATA[`... `]]>` para liberar o conteúdo de [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], de modo que um processador [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (interpretando o esquema [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ou o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]) não tentará interpretar o conteúdo literalmente como [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)].  
   
  [!code-xaml[XAMLOvwSupport#ButtonWithInlineCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
   

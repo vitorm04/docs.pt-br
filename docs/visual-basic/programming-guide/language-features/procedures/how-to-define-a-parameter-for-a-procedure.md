@@ -1,11 +1,12 @@
 ---
-title: "Como definir um parâmetro para um procedimento (Visual Basic)"
-ms.custom: 
+title: Como definir um parâmetro para um procedimento (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedure parameters [Visual Basic], defining data types for
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3c909cfe1b45a42aae91948917f310474575f225
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eb4bac9208c03fd18e1904f58b247824d2c215da
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Como definir um parâmetro para um procedimento (Visual Basic)
 Um *parâmetro* permite que o código de chamada passar um valor para o procedimento quando ele chama. Você declara cada parâmetro para um procedimento da mesma maneira que você declarar uma variável, especificando seu nome e tipo de dados. Você também especificar o mecanismo de passagem, e se o parâmetro é opcional.  
@@ -48,19 +49,20 @@ Um *parâmetro* permite que o código de chamada passar um valor para o procedim
   
      O primeiro parâmetro aceita um `customer` objeto, e `updateCustomer` pode atualizar diretamente a variável passada para `c` porque o argumento é passado [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). O procedimento não pode alterar os valores dos dois últimos argumentos porque eles são passados [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
   
-     Se o código de chamada não fornecer um valor para o `level` parâmetro [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] define como o valor padrão de 0.  
+     Se o código de chamada não fornecer um valor para o `level` parâmetro, Visual Basic define como o valor padrão de 0.  
   
      Se a verificação de tipo muda ([instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) é `Off`, o `As` cláusula é opcional quando você define um parâmetro. No entanto, se qualquer outro parâmetro usa um `As` cláusula, todos eles devem usá-la. Se a opção de verificação de tipo é `On`, o `As` cláusula é necessária para cada definição de parâmetro.  
   
-     Especificar tipos de dados para todos os elementos de programação é conhecido como *tipagem forte*. Quando você define `Option Strict On`, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] impõe tipagem forte. Isso é altamente recomendável, pelos seguintes motivos:  
+     Especificar tipos de dados para todos os elementos de programação é conhecido como *tipagem forte*. Quando você define `Option Strict On`, Visual Basic impõe tipagem forte. Isso é altamente recomendável, pelos seguintes motivos:  
   
     -   Ele permite o suporte ao IntelliSense para suas variáveis e parâmetros. Isso permite que você veja suas propriedades e outros membros conforme você digita no seu código.  
   
     -   Isso permite que o compilador realizar a verificação de tipo. Isso ajuda a obter declarações que podem falhar em tempo de execução devido a erros, como o estouro. Também captura chamadas para métodos em objetos que não dão suporte a eles.  
   
-    -   Isso resulta em execução mais rápida do seu código. Uma razão para isso é que, se você não especificar um tipo de dados para um elemento de programação, o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador atribui o `Object` tipo. Seu código compilado pode precisar converter entre `Object` e outros tipos de dados, o que reduz o desempenho.  
+    -   Isso resulta em execução mais rápida do seu código. Uma razão para isso é que se você não especificar um tipo de dados para um elemento de programação, o compilador do Visual Basic atribui o `Object` tipo. Seu código compilado pode precisar converter entre `Object` e outros tipos de dados, o que reduz o desempenho.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte também
+
  [Procedimentos](./index.md)  
  [Subprocedimentos](./sub-procedures.md)  
  [Procedimentos de Função](./function-procedures.md)  
@@ -69,4 +71,4 @@ Um *parâmetro* permite que o código de chamada passar um valor para o procedim
  [Procedimentos Recursivos](./recursive-procedures.md)  
  [Sobrecarga de Procedimento](./procedure-overloading.md)  
  [Objetos e Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Programação Orientada a Objeto](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)
+ [Programação orientada a objeto (Visual Basic)](../../concepts/object-oriented-programming.md)  

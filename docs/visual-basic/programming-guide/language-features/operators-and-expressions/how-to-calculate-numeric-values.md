@@ -1,11 +1,12 @@
 ---
-title: "Como calcular valores numéricos (Visual Basic)"
-ms.custom: 
+title: Como calcular valores numéricos (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operator precedence
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 65cd446b99018d029e8a18d69ed33d8b8ac28f8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 322e2c9fe7f668e08a42cd707c5d81090aca627c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Como calcular valores numéricos (Visual Basic)
 Você pode calcular valores numéricos com o uso de expressões numéricas. Um *expressão numérica* é uma expressão que contém literais, constantes e variáveis que representam valores numéricos e operadores que atuam sobre esses valores.  
@@ -45,7 +46,7 @@ Você pode calcular valores numéricos com o uso de expressões numéricas. Um *
   
      As três primeiras linhas mostram um literal, uma constante e uma variável. Cada uma forma de uma expressão numérica válida por si só. A linha final exibe uma combinação de uma variável com dois literais.  
   
-     Observe que uma expressão numérica não formam uma completa [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] instrução por si só. Você deve usar a expressão como parte de uma instrução completa.  
+     Observe que uma expressão numérica não formam uma instrução completa do Visual Basic, por si só. Você deve usar a expressão como parte de uma instrução completa.  
   
 #### <a name="to-store-a-numeric-value"></a>Para armazenar um valor numérico  
   

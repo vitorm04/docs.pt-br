@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], what's new
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
-caps.latest.revision: ''
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9c5026c7c3e90afa843b819fb51d7a4a7c8249a0
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 93915e8eeb46d91140198c2d51f88535a93a28cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>O que&#39;novo no Windows Workflow Foundation
 O [!INCLUDE[wf](../../../includes/wf-md.md)] no [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] altera vários paradigma de desenvolvimento de versões anteriores. Fluxos de trabalho agora são mais fáceis de criar, executar e manter, e implementam um host da nova funcionalidade. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Migrando .NET 3.0 e 3.5 do .NET aplicativos de fluxo de trabalho para usar a versão mais recente, consulte [orientação de migração](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
@@ -66,4 +66,4 @@ O [!INCLUDE[wf](../../../includes/wf-md.md)] no [!INCLUDE[netfx40_long](../../..
 -   Retomar um fluxo de trabalho pendente é agora gerenciado usando um objeto <xref:System.Activities.Bookmark>.  
   
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>Maior capacidade de estender a experiência do WF Designer  
- O novo WF Designer é compilado no [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] e fornece um modelo mais fácil de ser usado quando hospeda novamente o WF Designer fora do Visual Studio e também fornece mecanismos mais fáceis para criar designer personalizados da atividade. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Personalizando a experiência de Design de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).
+ O novo Designer de WF é criado no Windows Presentation Foundation (WPF) e fornece um modelo mais fácil de usar quando a nova hospedagem de Designer do WF fora do Visual Studio e também oferece mecanismos mais fácil para criação de designers de atividade personalizada. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Personalizando a experiência de Design de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).

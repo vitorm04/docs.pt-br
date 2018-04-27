@@ -1,24 +1,26 @@
 ---
 title: 'Compilando os exemplos do Windows Communication Foundation '
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d5de916aa5825625f29efe316571ad5085afb431
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d40b59faa4d0f50e59daaa71da6127da367f008b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Compilando os exemplos do Windows Communication Foundation 
 O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemplos podem ser criados usando o Visual Studio 2010 ou usando o **msbuild** comando da linha de comando. Ambos os procedimentos são descritos neste tópico.  
@@ -39,7 +41,7 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemplos podem ser cri
   
 1.  Se você estiver usando [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 ou Windows Server 2008 R2 e execução [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], você deve executar [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] com permissão elevada. Para fazer isso, clique no ícone do menu Iniciar e, em seguida, clique em **executar como administrador**.  
   
-2.  Do **arquivo** menu no [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], clique em **abrir**, em seguida, clique em **projeto/solução**. Navegue até o subdiretório específico do idioma sob o diretório no qual você instalou o exemplo e clique duas vezes no ícone do arquivo. sln para abrir a solução em [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+2.  Do **arquivo** no Visual Studio, clique em **abrir**, em seguida, clique em **projeto/solução**. Navegue até o subdiretório específico do idioma sob o diretório no qual você instalou o exemplo e clique duas vezes no ícone do arquivo. sln para abrir a solução em [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
   
 3.  No **criar** menu, selecione **recompilar solução**. Os arquivos de programa do cliente são criados para client\bin e os arquivos de programa de serviço são criados para service\bin. Se o serviço está hospedado no IIS, os arquivos de programa de serviço também são copiados para o diretório servicemodelsamples e seu subdiretório \bin.  
   
@@ -50,10 +52,10 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemplos podem ser cri
  Scripts e arquivos de lote de Setup.exe e Cleanup.exe devem ser executados em um prompt de comando do Visual Studio. Vários conjunto de backup e limpar arquivos executam tarefas que exigem privilégios administrativos e devem ser iniciadas com privilégios de administrador.  
   
 ## <a name="important-security-information-about-metadata-endpoints"></a>Informações de segurança importantes sobre pontos de extremidade de metadados  
- Para evitar a divulgação acidental de metadados de serviço potencialmente confidenciais, a configuração padrão para [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviços desabilita a publicação de metadados. Esse comportamento é seguro por padrão, mas também significa que você não pode usar metadados importa ferramenta (como Svcutil.exe) para gerar o código de cliente necessário para chamar o serviço, a menos que o comportamento de publicação de metadados do serviço é explicitamente habilitado na configuração. Para fazer experiências com os exemplos mais fácil, quase todos os exemplos de expõem um ponto de extremidade de publicação de metadados não segura. Esses pontos de extremidade são potencialmente disponíveis para consumidores não autenticados anônimos e deve ter cuidado antes de implantar esses pontos de extremidade para garantir que publicamente destinatária metadados do serviço são apropriado. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]publicação de metadados de serviço, consulte o [comportamento de publicação de metadados](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) exemplo. Consulte o [personalizado proteger metadados de ponto de extremidade](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) exemplo para obter um exemplo de proteção de um ponto de extremidade de metadados.  
+ Para evitar a divulgação acidental de metadados de serviço potencialmente confidenciais, a configuração padrão para [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviços desabilita a publicação de metadados. Esse comportamento é seguro por padrão, mas também significa que você não pode usar metadados importa ferramenta (como Svcutil.exe) para gerar o código de cliente necessário para chamar o serviço, a menos que o comportamento de publicação de metadados do serviço é explicitamente habilitado na configuração. Para fazer experiências com os exemplos mais fácil, quase todos os exemplos de expõem um ponto de extremidade de publicação de metadados não segura. Esses pontos de extremidade são potencialmente disponíveis para consumidores não autenticados anônimos e deve ter cuidado antes de implantar esses pontos de extremidade para garantir que publicamente destinatária metadados do serviço são apropriado. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] publicação de metadados de serviço, consulte o [comportamento de publicação de metadados](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) exemplo. Consulte o [personalizado proteger metadados de ponto de extremidade](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) exemplo para obter um exemplo de proteção de um ponto de extremidade de metadados.  
   
 ## <a name="exception-handling"></a>Tratamento de Exceção  
- Em termos gerais esses exemplos não incluem o tratamento de exceções para manter o foco no assunto do exemplo de código. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]tratamento de exceção, consulte o [esperado exceções](../../../../docs/framework/wcf/samples/expected-exceptions.md) exemplo.  
+ Em termos gerais esses exemplos não incluem o tratamento de exceções para manter o foco no assunto do exemplo de código. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] tratamento de exceção, consulte o [esperado exceções](../../../../docs/framework/wcf/samples/expected-exceptions.md) exemplo.  
   
 ## <a name="regenerating-clients-and-configuration-with-svcutil"></a>Regenerando os clientes e a configuração com Svcutil  
  Você pode usar o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para gerar novamente o código de cliente e de configuração para a maioria dos exemplos. Alguns exemplos exigem configuração editada manualmente. Por exemplo, se você usar o Svcutil.exe para gerar novamente a configuração para obter um exemplo que usa credenciais de certificado de cliente, você deve especificar manualmente as credenciais configuradas anteriormente. Alguns exemplos usam opções específicas do Svcutil.exe para afetar o código gerado, essas opções são especificadas nos tópicos de exemplo específico.  
@@ -74,7 +76,7 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemplos podem ser cri
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost:8000/servicemodelsamples/service.svc/mex /out:generatedClient.cs  
     ```  
   
-     Substitua http://localhost:8000/ServiceModelSamples/service.svc/mex com o endereço do ponto de extremidade do serviço auto-hospedado mex.  
+     Substituir http://localhost:8000/ServiceModelSamples/service.svc/mex com o endereço do ponto de extremidade do serviço auto-hospedado mex.  
   
      Para gerar o cliente em um tipo de Visual Basic, use o comando a seguir.  
   

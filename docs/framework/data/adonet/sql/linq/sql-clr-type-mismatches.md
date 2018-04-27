@@ -1,27 +1,29 @@
 ---
 title: Incompatibilidade de SQL-CLR
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6a027bd898409708dd6800908a6736f5853058df
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6006bb8fd1f6b49382c89acc2b55efcb035ffbf5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-clr-type-mismatches"></a>Incompatibilidade de SQL-CLR
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] automatiza muitas de conversão entre o modelo de objeto e o SQL Server. Entretanto, algumas situações impedem a conversão exata. Essas chaves incompatibilidades entre os tipos do common language runtime (CLR) e os tipos de banco de dados do SQL Server são resumidas nas seções a seguir. Você pode encontrar mais detalhes sobre mapeamentos de tipo específico e conversão de função em [mapeamento de tipo CLR SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) e [tipos de dados e funções](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
@@ -53,9 +55,9 @@ Select DateOfBirth From Customer Where CustomerId = @id
   
     -   **Tipos de caracteres de comprimento fixo**. Transact-SQL faz distinção entre categorias Unicode e não Unicode e tem três tipos diferentes em cada categoria: comprimento fixo `nchar` / `char`, comprimento variável `nvarchar` / `varchar`, e tamanho maior `ntext` / `text`. Os tipos de caracteres de comprimento fixo podem ser mapeado para o tipo de CLR <xref:System.Char?displayProperty=nameWithType> para recuperar caracteres, mas não correspondem realmente o mesmo tipo em conversões e comportamento.  
   
-    -   **Bit**. Embora o domínio de `bit` tem o mesmo número de valores que `Nullable<Boolean>`, os dois tipos são diferentes. `Bit`usa os valores `1` e `0` em vez de `true` / `false`e não pode ser usado como um equivalente para expressões Boolianas.  
+    -   **Bit**. Embora o domínio de `bit` tem o mesmo número de valores que `Nullable<Boolean>`, os dois tipos são diferentes. `Bit` usa os valores `1` e `0` em vez de `true` / `false`e não pode ser usado como um equivalente para expressões Boolianas.  
   
-    -   **Timestamp**. Ao contrário do tipo de CLR <xref:System.TimeSpan?displayProperty=nameWithType> , o tipo do SQL Server `TIMESTAMP` representa um número de 8 bytes gerado pelo base de dados que é exclusivo para cada atualização e não é baseado na diferença entre valores de <xref:System.DateTime> .  
+    -   **Carimbo de hora**. Ao contrário do tipo de CLR <xref:System.TimeSpan?displayProperty=nameWithType> , o tipo do SQL Server `TIMESTAMP` representa um número de 8 bytes gerado pelo base de dados que é exclusivo para cada atualização e não é baseado na diferença entre valores de <xref:System.DateTime> .  
   
     -   **Money** e **SmallMoney**. Esses tipos podem ser mapeados para <xref:System.Decimal> mas são basicamente tipos diferentes e são tratados como esta'n por funções e conversões pelo base.  
   
@@ -118,7 +120,7 @@ or col1 != col2
   
  Em casos anteriores, você pode obter o comportamento equivalente em gerar o SQL, mas a conversão não pode exatamente refletir sua intenção.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]não impõe c# `null` ou [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] `nothing` semântica de comparação no SQL. Os operadores de comparação são convertidos sintaticamente para seus equivalentes SQL. Semânticas reflete a semântica do SQL como definida pelas configurações do servidor ou de conexão. Dois valores nulos são considerados configurações padrão inferiores desiguais SQL Server (embora você possa alterar as configurações para alterar a semântica). De qualquer forma, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não considera configurações de servidor para a tradução de consulta.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não impõe c# `null` ou Visual Basic `nothing` semântica de comparação no SQL. Os operadores de comparação são convertidos sintaticamente para seus equivalentes SQL. Semânticas reflete a semântica do SQL como definida pelas configurações do servidor ou de conexão. Dois valores nulos são considerados configurações padrão inferiores desiguais SQL Server (embora você possa alterar as configurações para alterar a semântica). De qualquer forma, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não considera configurações de servidor para a tradução de consulta.  
   
  Uma comparação com `null` literal (`nothing`) é convertido para a versão apropriada do SQL (`is null` ou `is not null`).  
   
@@ -179,7 +181,7 @@ Where Col1 = Col2
     > [!NOTE]
     >  Este comportamento do operador de `Like` se aplica a C# somente; a palavra-chave do Visual Basic `Like` é inalterado.  
   
--   Overflow é sempre SQL fazer check-in mas tem que ser explicitamente especificado em C# (não em [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) para evitar o wraparound. Colunas disponíveis C1, C2 e C3 inteiro, se C1+C2 é armazenado em C3 (atualização T ajustada C3 = C1 + C2).  
+-   Estouro sempre é verificado no SQL, mas ele deve ser especificado explicitamente em c# (não no Visual Basic) para evitar o retorno. Colunas disponíveis C1, C2 e C3 inteiro, se C1+C2 é armazenado em C3 (atualização T ajustada C3 = C1 + C2).  
   
     ```  
     create table T3 (  
@@ -197,7 +199,7 @@ Where Col1 = Col2
   
 -   O SQL arredondamento executa aritmética simétrico quando usar [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] de arredondamento bancário. Consulte o artigo 196652 da knowledgebase para obter detalhes adicionais.  
   
--   Por padrão, para localidades comuns, as comparações de cadeia de caracteres não diferenciam maiúsculas de minúsculas no SQL. No Visual Basic e C#, diferenciam maiúsculas de minúsculas. Por exemplo, `s == "Food"` (`s = "Food"` em [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) e `s == "Food"` podem produzir resultados diferentes se `s` é `food`.  
+-   Por padrão, para localidades comuns, as comparações de cadeia de caracteres não diferenciam maiúsculas de minúsculas no SQL. No Visual Basic e C#, diferenciam maiúsculas de minúsculas. Por exemplo, `s == "Food"` (`s = "Food"` no Visual Basic) e `s == "Food"` pode produzir resultados diferentes se `s` é `food`.  
   
     ```  
     -- Assume default US-English locale (case insensitive).  

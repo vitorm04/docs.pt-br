@@ -1,12 +1,13 @@
 ---
 title: Provedor de streaming (WCF Data Services)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f965bc46c62742c0e2ffb0a7f8ae2e09eca5dc1c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: bc66d4154f60e46e53de8ca72596e133dc84eb97
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provedor de streaming (WCF Data Services)
 Um serviço de dados pode expor dados de objeto binário grande. Esses dados binários podem representar fluxos de vídeo e áudio, imagens, arquivos de documento ou outros tipos de mídia binária. Quando uma entidade no modelo de dados inclui uma ou mais propriedades binárias, o serviço de dados retorna esses dados binários codificados como base 64 no feed de resposta. Como carregar e serializar os dados binários longos dessa maneira podem afetar o desempenho, o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define um mecanismo para recuperar dados binários independentes da entidade à qual ela pertence. Isso é feito separando os dados binários da entidade em um ou mais fluxos de dados.  
@@ -61,7 +63,7 @@ Um serviço de dados pode expor dados de objeto binário grande. Esses dados bin
   
  Você também deve adicionar o namespace `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` à entidade ou à raiz do arquivo .edmx ou .csdl que define o modelo de dados.  
   
- [!INCLUDE[crexample](../../../../includes/crexample-md.md)]um serviço de dados que usa o [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] provedor e expõe um recurso de mídia, consulte a postagem [Streaming série de provedor de serviços de dados: Implementando um provedor de Streaming (parte 1)](http://go.microsoft.com/fwlink/?LinkID=198989).  
+ Para obter um exemplo de um serviço de dados que usa o [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] provedor e expõe um recurso de mídia, consulte a postagem [Streaming série de provedor de serviços de dados: Implementando um provedor de Streaming (parte 1)](http://go.microsoft.com/fwlink/?LinkID=198989).  
   
  **Provedor de reflexão**  
  Para indicar que uma entidade é uma entrada de link de mídia, adicione o <xref:System.Data.Services.Common.HasStreamAttribute> à classe que define o tipo de entidade no provedor de reflexão.  
@@ -122,7 +124,7 @@ Um serviço de dados pode expor dados de objeto binário grande. Esses dados bin
   
     -   Uma propriedade binária que é um recurso de mídia não deve ser incluída no modelo de dados. Todas as propriedades expostas em um modelo de dados são retornadas na entrada em um feed de resposta.  
   
-    -   Para melhorar o desempenho com um fluxo binário grande, é recomendável que você crie uma classe de fluxo personalizada para armazenar dados binários no banco de dados. Essa classe é retornado pela implementação do <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> e envia os dados binários ao banco de dados em partes. Para um [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] banco de dados, é recomendável que você use um FILESTREAM para o fluxo de dados no banco de dados quando os dados binários são maiores que 1 MB.  
+    -   Para melhorar o desempenho com um fluxo binário grande, é recomendável que você crie uma classe de fluxo personalizada para armazenar dados binários no banco de dados. Essa classe é retornado pela implementação do <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> e envia os dados binários ao banco de dados em partes. Para um banco de dados do SQL Server, recomendamos que você use um FILESTREAM para o fluxo de dados no banco de dados quando os dados binários são maiores que 1MB.  
   
     -   Verifique se o banco de dados foi projetado para armazenar os fluxos binários grandes que serão recebidos pelo serviço de dados.  
   

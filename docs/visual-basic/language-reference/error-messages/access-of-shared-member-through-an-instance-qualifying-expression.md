@@ -15,18 +15,18 @@ ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
 caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bcf3c37852e73464eec612e9e1d458ca707342e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9bbec233435ab728657c1b99e26ab157d4657093
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>Acesso de membro compartilhado por meio de uma instância; a expressão de qualificação não será avaliada
 Uma variável de instância de uma classe ou estrutura é usada para acessar um `Shared` variável, propriedade, procedimento ou evento definido na classe ou estrutura. Esse aviso também pode ocorrer se uma variável de instância é usada para acessar um membro implicitamente compartilhado de uma classe ou estrutura, como uma constante de enumeração, ou uma classe aninhada ou estrutura.  
   
  A finalidade de compartilhar um membro é criar uma única cópia do membro e disponibilizar essa cópia única para cada instância da classe ou estrutura na qual ela é declarada. É consistente com essa finalidade para acessar um `Shared` membro por meio do nome de sua classe ou estrutura, em vez de por meio de uma variável que contém uma instância individual de classe ou estrutura.  
   
- Acessando um `Shared` membro por meio de uma variável de instância pode tornar seu código mais difícil de entender, ocultando o fato de que o membro é `Shared`. Além disso, se tal acesso for parte de uma expressão que executa outras ações, como um `Function` procedimento que retorna uma instância de membro compartilhado, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ignora a expressão e quaisquer outras ações executaria caso contrário.  
+ Acessando um `Shared` membro por meio de uma variável de instância pode tornar seu código mais difícil de entender, ocultando o fato de que o membro é `Shared`. Além disso, se tal acesso for parte de uma expressão que executa outras ações, como uma `Function` procedimento que retorna uma instância do membro compartilhado, o Visual Basic ignora a expressão e quaisquer outras ações executaria caso contrário.  
   
  Para obter mais informações e um exemplo, consulte [compartilhado](../../../visual-basic/language-reference/modifiers/shared.md).  
   

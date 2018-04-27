@@ -1,11 +1,12 @@
 ---
-title: "Como declarar e chamar uma propriedade padrão no Visual Basic"
-ms.custom: 
+title: Como declarar e chamar uma propriedade padrão no Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - defaults [Visual Basic], properties
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8baa03e37325a6ad7065ec1a60052b3ea6a46c6f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9c4f471eba42e47d6bef45a4d38abc0cbd2d32bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Como declarar e chamar uma propriedade padrão no Visual Basic
-Um *propriedade padrão* é uma propriedade de classe ou estrutura que seu código pode acessar sem especificá-la. Quando a chamada do código nomeia uma classe ou estrutura, mas não uma propriedade e o contexto permite o acesso a uma propriedade [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] decide o acesso à propriedade dessa classe ou estrutura padrão, se houver.  
+Um *propriedade padrão* é uma propriedade de classe ou estrutura que seu código pode acessar sem especificá-la. Ao chamar nomes de código de uma classe ou estrutura, mas não uma propriedade e o contexto permite o acesso a uma propriedade, Visual Basic decide o acesso à propriedade dessa classe ou estrutura padrão, se houver.  
   
  Uma classe ou estrutura pode ter no máximo uma propriedade padrão. No entanto, você pode sobrecarregar uma propriedade padrão e ter mais de uma versão dele.  
   

@@ -1,24 +1,26 @@
 ---
-title: "Informações gerais"
-ms.custom: 
+title: Informações gerais
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7adb74578bcab646744ea674bd6a07017101896e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 10e0facae7856db2f169503ca89facb0194e9237
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="background-information"></a>Informações gerais
 Os tópicos nesta seção são pertinentes aos conceitos e procedimentos que estendem além dos fundamentos sobre o uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -29,7 +31,7 @@ Os tópicos nesta seção são pertinentes aos conceitos e procedimentos que est
   
 -   Participar do [Fórum do LINQ](http://go.microsoft.com/fwlink/?LinkId=76488), onde você pode abordar tópicos mais complexos detalhadamente com especialistas.  
   
--   Estude o artigo que detalha a tecnologia de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , fazer com [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] e exemplos de código em c. Para obter mais informações, consulte [LINQ to SQL: consulta integrada para dados relacionais](http://go.microsoft.com/fwlink/?LinkId=93205).  
+-   Estude o white paper que fornece detalhes sobre [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnologia, com exemplos de código do Visual Basic e c#. Para obter mais informações, consulte [LINQ to SQL: consulta integrada para dados relacionais](http://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [ADO.NET e LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  

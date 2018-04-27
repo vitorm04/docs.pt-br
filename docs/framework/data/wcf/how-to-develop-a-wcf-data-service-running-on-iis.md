@@ -1,12 +1,13 @@
 ---
-title: "Como: Desenvolver um WCF Data Service em execução no IIS"
-ms.custom: 
+title: 'Como: Desenvolver um WCF Data Service em execução no IIS'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b93b6e8b6e687f2e39fd5792aba08eaa47fa29fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f9df38d200be864ab24efdb0d002fe7b75cfc3e4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Como: Desenvolver um WCF Data Service em execução no IIS
 Este tópico mostra como usar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para criar um serviço de dados se baseia em dados de exemplo Northwind que é hospedado por um aplicativo Web ASP.NET que está em execução nos serviços de informações da Internet (IIS). Para obter um exemplo de como criar o mesmo serviço de dados Northwind como um aplicativo Web ASP.NET que é executado no servidor de desenvolvimento ASP.NET, consulte o [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
@@ -142,7 +144,7 @@ Este tópico mostra como usar [!INCLUDE[ssAstoria](../../../../includes/ssastori
   
 5.  Conecte o modelo de dados para o banco de dados seguindo um destes procedimentos e, em seguida, clique em **próximo**:  
   
-    -   Se você não tiver uma conexão de banco de dados já configurado, clique em **nova Conexão** e criar uma nova conexão. Para obter mais informações, consulte [como: criar conexões com bancos de dados do SQL Server](http://go.microsoft.com/fwlink/?LinkId=123631). Essa instância do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] deve ter o banco de dados de exemplo Northwind anexado.  
+    -   Se você não tiver uma conexão de banco de dados já configurado, clique em **nova Conexão** e criar uma nova conexão. Para obter mais informações, consulte [como: criar conexões com bancos de dados do SQL Server](http://go.microsoft.com/fwlink/?LinkId=123631). Esta instância do SQL Server deve ter o banco de dados de exemplo e anexado.  
   
          \- ou -  
   

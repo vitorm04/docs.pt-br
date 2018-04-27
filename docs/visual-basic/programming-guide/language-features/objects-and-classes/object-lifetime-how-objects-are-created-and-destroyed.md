@@ -32,11 +32,11 @@ ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
 caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f985d6bf7b26ec22d6e533eae1f1d7ea0682e56c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d93d0c94bdbeb93e0527ef6b5c6248b3b580599f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Tempo de vida do objeto: como os objetos são criados e destruídos (Visual Basic)
 Uma instância de uma classe, um objeto, é criada usando a palavra-chave `New`. Tarefas de inicialização geralmente devem ser executadas em novos objetos antes de serem usadas. Tarefas comuns de inicialização incluem abrir arquivos, conectar-se aos bancos de dados e ler os valores das chaves do registro. Visual Basic controla a inicialização de novos objetos usando procedimentos chamados *construtores* (métodos especiais que permitem o controle sobre inicialização).  
@@ -44,10 +44,10 @@ Uma instância de uma classe, um objeto, é criada usando a palavra-chave `New`.
  Depois que um objeto sai do escopo, ele é liberado pelo common language runtime (CLR). Visual Basic controla a versão de recursos do sistema usando os procedimentos chamados *destruidores*. Juntos, os construtores e os destruidores oferecem suporte à criação de bibliotecas de classe robusta e previsível.  
   
 ## <a name="using-constructors-and-destructors"></a>Usando construtores e destruidores  
- Os construtores e os destruidores controlam a criação e a destruição de objetos. Os procedimentos `Sub New` e `Sub Finalize` no Visual Basic inicializam e destroem objetos; eles substituem os métodos `Class_Initialize` e `Class_Terminate` usados no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 e em versões anteriores.  
+ Os construtores e os destruidores controlam a criação e a destruição de objetos. O `Sub New` e `Sub Finalize` procedimentos no Visual Basic inicializam em destruir objetos; eles substituem o `Class_Initialize` e `Class_Terminate` métodos usados no Visual Basic 6.0 e versões anteriores.  
   
 ### <a name="sub-new"></a>Sub New  
- O construtor `Sub New` pode ser executado apenas uma vez quando uma classe é criada. Não pode ser chamado explicitamente em qualquer lugar que não seja na primeira linha do código de outro construtor da mesma classe ou de uma classe derivada. Além disso, o código no método `Sub New` sempre é executado antes de qualquer outro código em uma classe. [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]e versões posteriores implicitamente criam um `Sub New` construtor em tempo de execução se você não definir explicitamente uma `Sub New` procedimento para uma classe.  
+ O construtor `Sub New` pode ser executado apenas uma vez quando uma classe é criada. Não pode ser chamado explicitamente em qualquer lugar que não seja na primeira linha do código de outro construtor da mesma classe ou de uma classe derivada. Além disso, o código no método `Sub New` sempre é executado antes de qualquer outro código em uma classe. [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] e versões posteriores implicitamente criam um `Sub New` construtor em tempo de execução se você não definir explicitamente uma `Sub New` procedimento para uma classe.  
   
  Para criar um construtor para uma classe, crie um procedimento denominado `Sub New` em qualquer lugar na definição de classe. Para criar um construtor com parâmetros, especifique os nomes e tipos de dados dos argumentos para `Sub New` exatamente como você faria para qualquer outro procedimento, como no seguinte código:  
   
@@ -57,7 +57,7 @@ Uma instância de uma classe, um objeto, é criada usando a palavra-chave `New`.
   
  [!code-vb[VbVbalrOOP#116](../../../../visual-basic/misc/codesnippet/VisualBasic/object-lifetime-how-objects-are-created-and-destroyed_2.vb)]  
   
- Quando você define uma classe derivada de outra classe, a primeira linha do construtor deve ser uma chamada para o construtor da classe base, a menos que a classe base tenha um construtor acessível que não utiliza parâmetros. Uma chamada para a classe base que contém o construtor acima, por exemplo, seria `MyBase.New(s)`. Caso contrário, o `MyBase.New` é opcional e o tempo de execução [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] o chama implicitamente.  
+ Quando você define uma classe derivada de outra classe, a primeira linha do construtor deve ser uma chamada para o construtor da classe base, a menos que a classe base tenha um construtor acessível que não utiliza parâmetros. Uma chamada para a classe base que contém o construtor acima, por exemplo, seria `MyBase.New(s)`. Caso contrário, `MyBase.New` é opcional, e o tempo de execução do Visual Basic chama implicitamente.  
   
  Depois de escrever o código para chamar o construtor do objeto pai, você pode adicionar qualquer código de inicialização adicional para o procedimento `Sub New`. `Sub New` pode aceitar argumentos quando chamado como um construtor com parâmetros. Esses parâmetros são passados do procedimento que está chamando o construtor, por exemplo, `Dim AnObject As New ThisClass(X)`.  
   

@@ -1,18 +1,19 @@
 ---
 title: Modernizar seus aplicativos com o monitoramento e telemetria
-description: "Arquitetura de Microservices .NET para aplicativos .NET em contêineres | Modernizar seus aplicativos com o monitoramento e telemetria"
+description: Arquitetura de Microservices .NET para aplicativos .NET em contêineres | Modernizar seus aplicativos com o monitoramento e telemetria
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3caeb60cf0107aaf5413d935f3bde11863561c7d
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 539e7d48b6115dbd77a78ba3e06914196826c344
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Modernizar seus aplicativos com o monitoramento e telemetria
 
@@ -40,7 +41,7 @@ O [solução de monitoramento de contêiner](https://docs.microsoft.com/azure/lo
 
 -   Docker Swarm
 
--   DC/OS
+-   CONTROLADOR DE DOMÍNIO/OS
 
 -   Kubernetes
 

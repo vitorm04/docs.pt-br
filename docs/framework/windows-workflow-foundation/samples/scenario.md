@@ -1,23 +1,24 @@
 ---
 title: Scenario1
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cb678fda-79aa-4495-833b-ef570539d4c3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 50efd36e1d54bd456e184c42d62aded14e510947
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 60f6571d7702236ee24c0cb9da2aa4121feddcf0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="scenario"></a>Cenário
 Esta seção contém exemplos de cenários de [!INCLUDE[wf](../../../../includes/wf-md.md)] .  
@@ -39,7 +40,7 @@ Esta seção contém exemplos de cenários de [!INCLUDE[wf](../../../../includes
  Demonstra como implementar um cenário simples de cronômetro usando uma combinação de atividades de <xref:System.Activities.Statements.Flowchart> e de <xref:System.Activities.Statements.Pick> .  
   
  [Integração de WF e WPF em XAML](../../../../docs/framework/windows-workflow-foundation/samples/wpf-and-wf-integration-in-xaml.md)  
- Demonstra como criar um aplicativo que usa [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] e recursos de [!INCLUDE[wf](../../../../includes/wf-md.md)] em um único documento XAML. Para fazer isso, o exemplo usa [!INCLUDE[wf](../../../../includes/wf-md.md)] e extensibilidade XAML.  
+ Demonstra como criar um aplicativo que usa o Windows Presentation Foundation (WPF) e [!INCLUDE[wf](../../../../includes/wf-md.md)] recursos em um único documento XAML. Para fazer isso, o exemplo usa [!INCLUDE[wf](../../../../includes/wf-md.md)] e extensibilidade XAML.  
   
  [Kit de ferramentas de Ruleset externo](../../../../docs/framework/windows-workflow-foundation/samples/external-ruleset-toolkit.md)  
  Demonstra como gerenciar e editar RuleSets em uma base de dados e acessar o RuleSets de um fluxo de trabalho em tempo de execução.

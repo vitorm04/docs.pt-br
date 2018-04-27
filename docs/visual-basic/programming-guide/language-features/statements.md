@@ -1,11 +1,12 @@
 ---
-title: "Instruções no Visual Basic"
-ms.custom: 
+title: Instruções no Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], declaring
@@ -21,17 +22,17 @@ helpviewer_keywords:
 - variables [Visual Basic], defining
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 210637105e54244ba829dabd73feab0b43ec7c6c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: beb33b8f2c30723158e41244cbb5c9cfca108a53
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="statements-in-visual-basic"></a>Instruções no Visual Basic
-Uma instrução em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] é uma instrução completa. Ele pode conter as palavras-chave, operadores, variáveis, constantes e expressões. Cada instrução pertence a uma das seguintes categorias:  
+Uma instrução no Visual Basic é uma instrução completa. Ele pode conter as palavras-chave, operadores, variáveis, constantes e expressões. Cada instrução pertence a uma das seguintes categorias:  
   
 -   **Instruções de declaração**, que o nome de uma variável, uma constante ou um procedimento e também pode especificar um tipo de dados.  
   
@@ -53,7 +54,7 @@ Uma instrução em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] é uma instruçã
  A terceira declaração é a `Dim` instrução que declara a variável `thisWidget`. O tipo de dados é um objeto específico, ou seja, um objeto criado a partir de `Widget` classe. Você pode declarar uma variável de qualquer tipo de dados elementar ou de qualquer tipo de objeto que é exposto no aplicativo que você está usando.  
   
 ### <a name="initial-values"></a>Valores iniciais  
- Quando o código que contém uma instrução de declaração é executado, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] reserva de memória exigida para o elemento declarado. Se o elemento contém um valor [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] inicializa para o valor padrão para seu tipo de dados. Para obter mais informações, consulte "Comportamento" em [instrução Dim](../../../visual-basic/language-reference/statements/dim-statement.md).  
+ Quando o código que contém uma instrução de declaração é executado, o Visual Basic reserva de memória exigida para o elemento declarado. Se o elemento contém um valor, o Visual Basic o inicializa com o valor padrão para seu tipo de dados. Para obter mais informações, consulte "Comportamento" em [instrução Dim](../../../visual-basic/language-reference/statements/dim-statement.md).  
   
  Você pode atribuir um valor inicial para uma variável como parte de sua declaração, como mostra o exemplo a seguir.  
   
@@ -121,7 +122,7 @@ Uma instrução em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] é uma instruçã
 ### <a name="type-conversions-in-assignment-statements"></a>Conversões de tipo em instruções de atribuição  
  O valor que você atribui a uma variável, propriedade ou elemento de matriz deve ser de um tipo de dados apropriado para o elemento de destino. Em geral, você deve tentar gerar um valor do mesmo tipo de dados que o elemento de destino. No entanto, alguns tipos podem ser convertidos em outros tipos durante a atribuição.  
   
- Para obter informações sobre como converter entre tipos de dados, consulte [conversões de tipo no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md). Em suma, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automaticamente converte um valor de um determinado tipo em qualquer outro tipo ao qual será ampliada. Um *conversões ampliadoras* é um em que sempre terá êxito em tempo de execução e não perderá os dados. Por exemplo, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] converte um `Integer` valor `Double` quando apropriado, como `Integer` amplia a `Double`. Para obter mais informações, consulte [Ampliando e restringindo conversões](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Para obter informações sobre como converter entre tipos de dados, consulte [conversões de tipo no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md). Em suma, Visual Basic automaticamente converte um valor de um determinado tipo em qualquer outro tipo ao qual será ampliada. Um *conversões ampliadoras* é um em que sempre terá êxito em tempo de execução e não perderá os dados. Por exemplo, o Visual Basic converte um `Integer` valor `Double` quando apropriado, como `Integer` amplia a `Double`. Para obter mais informações, consulte [Ampliando e restringindo conversões](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
  *Conversões de estreitamento* (aquelas que não são de ampliação) realizar um risco de falha em tempo de execução ou de perda de dados. Você pode executar uma conversão de restrição explicitamente usando uma função de conversão de tipo, ou você pode instruir o compilador para executar todas as conversões implicitamente pela configuração `Option Strict Off`. Para obter mais informações, consulte [conversões explícitas e implícitas](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md).  
   
@@ -158,7 +159,7 @@ Uma instrução em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] é uma instruçã
 |Após o `From` palavra-chave em um inicializador de coleção.|[!code-vb[VbVbalrLineContinuation#13](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_27.vb)]<br /><br /> Para obter mais informações, consulte [Inicializadores de coleção](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).|  
   
 ## <a name="adding-comments"></a>Adicionando comentários  
- Código-fonte não é sempre auto-explicativos, até mesmo para o programador quem a escreveu. Para ajudar a documentar seu código, portanto, a maioria dos programadores usar livre de comentários inseridos. Comentários no código podem explicar um procedimento ou uma instrução específica para qualquer pessoa que ler ou trabalhar com ela mais tarde. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]ignora os comentários durante a compilação, e elas não afetam o código compilado.  
+ Código-fonte não é sempre auto-explicativos, até mesmo para o programador quem a escreveu. Para ajudar a documentar seu código, portanto, a maioria dos programadores usar livre de comentários inseridos. Comentários no código podem explicar um procedimento ou uma instrução específica para qualquer pessoa que ler ou trabalhar com ela mais tarde. Visual Basic ignora comentários durante a compilação, e elas não afetam o código compilado.  
   
  As linhas de comentário começam com um apóstrofo (`'`) ou `REM` seguido por um espaço. Eles podem ser adicionados em qualquer lugar no código, exceto em uma cadeia de caracteres. Para acrescentar um comentário em uma instrução, insira um apóstrofo ou `REM` depois da instrução, seguida de comentário. Comentários também podem entrar em sua própria linha separada. O exemplo a seguir demonstra essas possibilidades.  
   

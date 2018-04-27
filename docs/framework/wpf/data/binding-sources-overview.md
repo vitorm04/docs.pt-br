@@ -1,28 +1,30 @@
 ---
-title: "Visão geral das fontes de associação"
-ms.custom: 
+title: Visão geral das fontes de associação
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding data [WPF], binding sources
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6b603599232a5cb4d33e2b7c9ad00e7ab3a24649
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.workload:
+- dotnet
+ms.openlocfilehash: 94238ba34976ad5971e7181aa3377e38ab0e4659
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="binding-sources-overview"></a>Visão geral das fontes de associação
 Na associação de dados, o objeto de origem da associação refere-se ao objeto do qual você obtém dados. Este tópico discute os tipos de objetos que você pode usar como a origem da associação.  
@@ -55,7 +57,7 @@ Na associação de dados, o objeto de origem da associação refere-se ao objeto
 ### <a name="other-characteristics"></a>Outras características  
  A lista a seguir fornece outros pontos importantes a serem observados:  
   
--   Se você deseja criar o objeto no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], a classe deve ter um construtor padrão. Em algumas linguagens [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)], como a [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)], o construtor padrão pode ser criado para você.  
+-   Se você deseja criar o objeto no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], a classe deve ter um construtor padrão. Em alguns [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] linguagens, como c#, o construtor padrão pode ser criado para você.  
   
 -   As propriedades que você usa como propriedades de origem da associação para uma associação devem ser propriedades públicas da sua classe. As propriedades de interface definidas explicitamente não podem ser acessadas para fins de associação, nem podem ser propriedades protegidas, particulares, internas ou virtuais que não têm implementação de base.  
   
@@ -79,7 +81,7 @@ Na associação de dados, o objeto de origem da associação refere-se ao objeto
   
  O WPF nunca se associa diretamente a uma coleção. Se você especificar uma coleção como uma origem da associação, o WPF, na verdade, associará ao modo de exibição padrão da coleção. Para obter informações sobre os modos de exibição padrão, consulte [Visão geral de associação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
- Se você tiver um cenário avançado e você deseja implementar sua própria coleção, considere usar o <xref:System.Collections.IList> interface. <xref:System.Collections.IList>Fornece uma coleção não genérica de objetos que podem ser acessados separadamente por índice, o que pode melhorar o desempenho.  
+ Se você tiver um cenário avançado e você deseja implementar sua própria coleção, considere usar o <xref:System.Collections.IList> interface. <xref:System.Collections.IList> Fornece uma coleção não genérica de objetos que podem ser acessados separadamente por índice, o que pode melhorar o desempenho.  
   
 <a name="permissions"></a>   
 ## <a name="permission-requirements-in-data-binding"></a>Requisitos de permissão na associação de dados  

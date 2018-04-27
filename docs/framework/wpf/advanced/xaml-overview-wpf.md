@@ -1,12 +1,13 @@
 ---
-title: "Visão geral de XAML (WPF)"
-ms.custom: 
+title: Visão geral de XAML (WPF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -26,16 +27,17 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-caps.latest.revision: "57"
+caps.latest.revision: 57
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce83713d2483320569bde0d5c9a677f0b357ebf2
-ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
+ms.workload:
+- dotnet
+ms.openlocfilehash: 87785d6bba58442a1a5ad27f5304aa63e16c1aa9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xaml-overview-wpf"></a>Visão geral de XAML (WPF)
 Este tópico descreve os recursos da linguagem XAML e demonstra como você pode usar o XAML para escrever aplicativos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Este tópico descreve especificamente o XAML como implementado por [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. O XAML em si é um conceito de linguagem maior que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -146,7 +148,7 @@ Este tópico descreve os recursos da linguagem XAML e demonstra como você pode 
   
  Aqui, cada <xref:System.Windows.Controls.Button> é um elemento filho de <xref:System.Windows.Controls.StackPanel>. Isso é uma marcação otimizada e intuitiva que omite duas marcas por dois motivos diferentes.  
   
--   **Elemento de propriedade StackPanel omitido:** <xref:System.Windows.Controls.StackPanel> deriva de <xref:System.Windows.Controls.Panel>. <xref:System.Windows.Controls.Panel>define <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> como seu XAML propriedade de conteúdo.  
+-   **Elemento de propriedade StackPanel omitido:** <xref:System.Windows.Controls.StackPanel> deriva de <xref:System.Windows.Controls.Panel>. <xref:System.Windows.Controls.Panel> define <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> como seu XAML propriedade de conteúdo.  
   
 -   **Elemento de objeto UIElementCollection omitido:** o <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> propriedade tem o tipo <xref:System.Windows.Controls.UIElementCollection>, que implementa <xref:System.Collections.IList>. A marca de elemento da coleção pode ser omitida, com base nas regras do XAML para processamento de coleções, como <xref:System.Collections.IList>. (Nesse caso, <xref:System.Windows.Controls.UIElementCollection> não pode ser instanciado porque ele não expõe um construtor padrão e é por isso que o <xref:System.Windows.Controls.UIElementCollection> elemento de objeto é mostrado comentado).  
   
@@ -192,7 +194,7 @@ Este tópico descreve os recursos da linguagem XAML e demonstra como você pode 
 ## <a name="type-converters"></a>Conversores de tipo  
  Na seção [Resumo sobre sintaxe XAML](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md#xaml_syntax_in_brief), foi mencionado que o valor do atributo deve poder ser definido por uma cadeia de caracteres. O tratamento básico, nativo de como cadeias de caracteres são convertidas em outros tipos de objeto ou valores primitivos se baseia o <xref:System.String> digite em si, além para o nativo o processamento de determinados tipos, como <xref:System.DateTime> ou <xref:System.Uri>. Mas muitos tipos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ou membros desses tipos estendem o comportamento de processamento de atributos de cadeias de caracteres básicos, de modo que instâncias de tipos de objeto mais complexos podem ser especificadas como cadeias de caracteres e atributos.  
   
- O <xref:System.Windows.Thickness> estrutura é um exemplo de um tipo que tem uma conversão de tipo habilitada para usos XAML. <xref:System.Windows.Thickness>indica as medidas dentro de um retângulo aninhado e é usado como o valor para propriedades como <xref:System.Windows.FrameworkElement.Margin%2A>. Colocando um conversor de tipo em <xref:System.Windows.Thickness>, todas as propriedades que usam um <xref:System.Windows.Thickness> são mais fáceis especificar em XAML, pois elas podem ser especificadas como atributos. O exemplo a seguir usa uma sintaxe de conversão e o atributo de tipo para fornecer um valor para um <xref:System.Windows.FrameworkElement.Margin%2A>:  
+ O <xref:System.Windows.Thickness> estrutura é um exemplo de um tipo que tem uma conversão de tipo habilitada para usos XAML. <xref:System.Windows.Thickness> indica as medidas dentro de um retângulo aninhado e é usado como o valor para propriedades como <xref:System.Windows.FrameworkElement.Margin%2A>. Colocando um conversor de tipo em <xref:System.Windows.Thickness>, todas as propriedades que usam um <xref:System.Windows.Thickness> são mais fáceis especificar em XAML, pois elas podem ser especificadas como atributos. O exemplo a seguir usa uma sintaxe de conversão e o atributo de tipo para fornecer um valor para um <xref:System.Windows.FrameworkElement.Margin%2A>:  
   
  [!code-xaml[XAMLOvwSupport#MarginTCE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#margintce)]  
   
@@ -260,7 +262,7 @@ Este tópico descreve os recursos da linguagem XAML e demonstra como você pode 
   
 <a name="events_and_xaml_codebehind"></a>   
 ## <a name="events-and-xaml-code-behind"></a>Eventos e XAML code-behind  
- A maioria dos aplicativos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consistem em ambos marcação XAML e code-behind. Em um projeto, o XAML é gravado como um arquivo `.xaml` e uma linguagem [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] como [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] ou [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] é usada para gravar um arquivo code-behind. Quando um arquivo XAML é compilado com marcação como parte dos modelos de aplicativos e programação WPF, o local do arquivo XAML code-behind para um arquivo XAML é identificado por meio da especificação de um namespace e classe como o atributo `x:Class` do elemento raiz do XAML.  
+ A maioria dos aplicativos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consistem em ambos marcação XAML e code-behind. Em um projeto, o XAML é gravado como um `.xaml` arquivo e um [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] linguagem, como o Microsoft Visual Basic ou c# é usada para gravar um arquivo code-behind. Quando um arquivo XAML é compilado com marcação como parte dos modelos de aplicativos e programação WPF, o local do arquivo XAML code-behind para um arquivo XAML é identificado por meio da especificação de um namespace e classe como o atributo `x:Class` do elemento raiz do XAML.  
   
  Nos exemplos até agora você viu vários botões, mas nenhum deles tinha ainda qualquer comportamento lógico associado. O mecanismo de nível de aplicativo primário para adicionar um comportamento para um elemento de objeto é usar um evento existente da classe de elemento e escrever um manipulador específico para o evento que é invocado quando esse evento é acionado em tempo de execução. O nome do evento e o nome do manipulador a usar são especificados na marcação, enquanto o código que implementa o manipulador é definido no code-behind.  
   
@@ -314,7 +316,7 @@ Este tópico descreve os recursos da linguagem XAML e demonstra como você pode 
   
 <a name="base_classes_and_xaml"></a>   
 ## <a name="base-types-and-xaml"></a>Tipos base e XAML  
- XAML WPF subjacente e seu namespace XAML é uma coleção de tipos que correspondem aos objetos [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], somando-se aos elementos de marcação para XAML. No entanto, nem todas as classes podem ser mapeadas para elementos. Classes abstratas, como <xref:System.Windows.Controls.Primitives.ButtonBase>, e certas classes base não-abstratas são usadas para herança no [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] modelo de objetos. Classes base, incluindo aquelas abstratas, são importantes para o desenvolvimento de XAML, porque cada um dos elementos XAML concretos herda os membros de alguma classe base na sua hierarquia. Frequentemente esses membros incluem propriedades que podem ser definidas como atributos no elemento ou eventos que podem ser manipulados. <xref:System.Windows.FrameworkElement>é a base concreta [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] classe de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no nível de framework do WPF. Durante a criação de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], você usará várias formas, painel, decorator ou derivam de classes de controle, que todos <xref:System.Windows.FrameworkElement>. Uma classe base relacionada, <xref:System.Windows.FrameworkContentElement>, oferece suporte a elementos orientados a documento que funcionam bem para uma apresentação de layout de fluxo, usando [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] que deliberadamente espelham a [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] em <xref:System.Windows.FrameworkElement>. A combinação de atributos no nível do elemento e um modelo de objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] fornece um conjunto de propriedades comuns que são configuráveis na maioria dos elementos XAML concretos, independentemente do elemento XAML específico e do seu tipo subjacente.  
+ XAML WPF subjacente e seu namespace XAML é uma coleção de tipos que correspondem aos objetos [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], somando-se aos elementos de marcação para XAML. No entanto, nem todas as classes podem ser mapeadas para elementos. Classes abstratas, como <xref:System.Windows.Controls.Primitives.ButtonBase>, e certas classes base não-abstratas são usadas para herança no [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] modelo de objetos. Classes base, incluindo aquelas abstratas, são importantes para o desenvolvimento de XAML, porque cada um dos elementos XAML concretos herda os membros de alguma classe base na sua hierarquia. Frequentemente esses membros incluem propriedades que podem ser definidas como atributos no elemento ou eventos que podem ser manipulados. <xref:System.Windows.FrameworkElement> é a base concreta [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] classe de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no nível de framework do WPF. Durante a criação de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], você usará várias formas, painel, decorator ou derivam de classes de controle, que todos <xref:System.Windows.FrameworkElement>. Uma classe base relacionada, <xref:System.Windows.FrameworkContentElement>, oferece suporte a elementos orientados a documento que funcionam bem para uma apresentação de layout de fluxo, usando [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] que deliberadamente espelham a [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] em <xref:System.Windows.FrameworkElement>. A combinação de atributos no nível do elemento e um modelo de objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] fornece um conjunto de propriedades comuns que são configuráveis na maioria dos elementos XAML concretos, independentemente do elemento XAML específico e do seu tipo subjacente.  
   
 <a name="xaml_security"></a>   
 ## <a name="xaml-security"></a>Segurança XAML  
@@ -332,7 +334,7 @@ Este tópico descreve os recursos da linguagem XAML e demonstra como você pode 
   
  Se você ainda não fez isso, tente os exercícios do tópico tutorial [passo a passo: meu primeiro aplicativo de área de trabalho do WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md). Quando você criar o aplicativo centrado em marcação descrito pelo tutorial, o exercício ajudará a reforçar muitos dos conceitos descritos neste tópico.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]usa um modelo de aplicativo específico que se baseia o <xref:System.Windows.Application> classe. Para obter detalhes, consulte [Visão geral do gerenciamento de aplicativo](../../../../docs/framework/wpf/app-development/application-management-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa um modelo de aplicativo específico que se baseia o <xref:System.Windows.Application> classe. Para obter detalhes, consulte [Visão geral do gerenciamento de aplicativo](../../../../docs/framework/wpf/app-development/application-management-overview.md).  
   
  [Criando um aplicativo WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md) fornece mais detalhes sobre como criar aplicativos que incluem XAML da linha de comando e com [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)].  
   

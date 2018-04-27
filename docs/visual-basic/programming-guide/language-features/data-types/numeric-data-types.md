@@ -1,11 +1,12 @@
 ---
-title: "Tipos de dados numéricos (Visual Basic)"
-ms.custom: 
+title: Tipos de dados numéricos (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - integral types [Visual Basic], Visual Basic
@@ -29,19 +30,19 @@ helpviewer_keywords:
 - Single data type [Visual Basic], numeric types
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9c185b7c04d589bfe74d1cca0c60df3e81ab80d3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c5e7a5340f9b0d103acc14350f30f17d8d709de3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="numeric-data-types-visual-basic"></a>Tipos de dados numéricos (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]fornece várias *tipos de dados numéricos* para tratar números em diversas representações. *Integral* tipos representam apenas números inteiros (positivo, negativo e zero), e *nonintegral* tipos representam números com partes inteira e fracionárias.  
+O Visual Basic fornece vários *tipos de dados numéricos* para tratar números em diversas representações. *Integral* tipos representam apenas números inteiros (positivo, negativo e zero), e *nonintegral* tipos representam números com partes inteira e fracionárias.  
   
- Para uma tabela que mostra uma comparação lado a lado do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] tipos de dados, consulte [tipos de dados](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+ Para uma tabela que mostra uma comparação lado a lado dos tipos de dados do Visual Basic, consulte [tipos de dados](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
   
 ## <a name="integral-numeric-types"></a>Tipos numéricos integrais  
  *Tipos de dados integrais* são aqueles que representam apenas números sem partes fracionários.  
@@ -51,10 +52,10 @@ ms.lasthandoff: 11/21/2017
  O *sem sinal* são de tipos integrais [tipo de dados Byte](../../../../visual-basic/language-reference/data-types/byte-data-type.md) (8 bits), [tipo de dados UShort](../../../../visual-basic/language-reference/data-types/ushort-data-type.md) (16 bits), [tipo de dados UInteger](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md) (32 bits) e [ Tipo de dados ULong](../../../../visual-basic/language-reference/data-types/ulong-data-type.md) (64 bits). Se uma variável contiver dados binários, ou natureza desconhecida, declare-o como um desses tipos.  
   
 ### <a name="performance"></a>Desempenho  
- Operações aritméticas são mais rápidas com tipos integrais do que com outros tipos de dados. Eles são mais rápidos com o `Integer` e `UInteger` tipos no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Operações aritméticas são mais rápidas com tipos integrais do que com outros tipos de dados. Eles são mais rápidos com o `Integer` e `UInteger` tipos no Visual Basic.  
   
 ### <a name="large-integers"></a>Inteiros grandes  
- Se você precisar armazenar um número inteiro maior do que o `Integer` pode conter o tipo de dados, você pode usar o `Long` em vez disso, o tipo de dados. `Long`variáveis podem conter números de -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807. Operações com `Long` são um pouco mais lentas do que com `Integer`.  
+ Se você precisar armazenar um número inteiro maior do que o `Integer` pode conter o tipo de dados, você pode usar o `Long` em vez disso, o tipo de dados. `Long` variáveis podem conter números de -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807. Operações com `Long` são um pouco mais lentas do que com `Integer`.  
   
  Se você precisar de valores ainda maiores, você pode usar o [tipo de dados Decimal](../../../../visual-basic/language-reference/data-types/decimal-data-type.md). Você pode armazenar números de-79.228.162.514.264.337.593.543.950.335 até 79.228.162.514.264.337.593.543.950.335 em um `Decimal` variável se você não usar casas decimais. No entanto, as operações com `Decimal` números são consideravelmente mais lentos do que com qualquer outro tipo de dados numéricos.  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/21/2017
   
  Os tipos de dados numérico não integral são `Decimal` (128 bits fixo ponto), [único tipo de dados](../../../../visual-basic/language-reference/data-types/single-data-type.md) (32-bit ponto flutuante), e [tipo de dados Double](../../../../visual-basic/language-reference/data-types/double-data-type.md) (ponto flutuante de 64 bits). Eles são tipos tudo assinados. Se uma variável pode conter uma fração, declare-o como um desses tipos.  
   
- `Decimal`não é um tipo de dados de ponto flutuante. `Decimal`números têm um valor inteiro binário e um fator de escala de número inteiro que especifica qual parte do valor é uma fração decimal.  
+ `Decimal` não é um tipo de dados de ponto flutuante. `Decimal` números têm um valor inteiro binário e um fator de escala de número inteiro que especifica qual parte do valor é uma fração decimal.  
   
  Você pode usar `Decimal` variáveis para valores monetários. A vantagem é que a precisão dos valores. O `Double` tipo de dados é mais rápido e requer menos memória, mas ele está sujeito a erros de arredondamento. O `Decimal` tipo de dados retém precisão completa para 28 casas decimais.  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/21/2017
  Valores numéricos não integral podem ser expresso como mmmEeee, em que é mmm o *mantissa* (os dígitos significativos) e eee é o *expoente* (uma potência de 10). Os valores positivos mais altos dos tipos não integral são 7.9228162514264337593543950335 e + 28 para `Decimal`, 3, 4028235E + 38 para `Single`, e 1.79769313486231570 e + 308 para `Double`.  
   
 ### <a name="performance"></a>Desempenho  
- `Double`é o mais eficiente de tipos de dados fracionários, porque os processadores em plataformas atuais executam operações de ponto flutuante de precisão dupla. No entanto, as operações com `Double` não são tão rápidas como com os tipos integrais como `Integer`.  
+ `Double` é o mais eficiente de tipos de dados fracionários, porque os processadores em plataformas atuais executam operações de ponto flutuante de precisão dupla. No entanto, as operações com `Double` não são tão rápidas como com os tipos integrais como `Integer`.  
   
 ### <a name="small-magnitudes"></a>Magnitudes pequenas  
  Para números com o menor magnitude possível (próximo a 0), `Double` variáveis podem conter números tão pequenas quanto - 4.94065645841246544 e-324 para valores negativos e 4.94065645841246544 e -324 para valores positivos.  

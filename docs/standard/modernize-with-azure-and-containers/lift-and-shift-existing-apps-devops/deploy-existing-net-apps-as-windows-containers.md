@@ -1,18 +1,19 @@
 ---
-title: "Implantar aplicativos .NET existentes como contêineres do Windows"
-description: "Arquitetura de Microservices .NET para aplicativos .NET em contêineres | Implantar aplicativos .NET existentes como contêineres do Windows"
+title: Implantar aplicativos .NET existentes como contêineres do Windows
+description: Arquitetura de Microservices .NET para aplicativos .NET em contêineres | Implantar aplicativos .NET existentes como contêineres do Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bab6e275c93d2cedddf010ab20f98cb8392fa9fa
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 6c70e30c10674c086e6ad880b97151ae1918ed87
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Implantar aplicativos .NET existentes como contêineres do Windows
 
@@ -96,14 +97,14 @@ Em cenários de migração para aplicativos existentes ou herdados que são base
 
 Quando você adiciona o nome da imagem ao seu arquivo de Dockerfile, você pode selecionar o sistema operacional e versão por meio de uma marca, como nos exemplos a seguir para imagens de contêiner do Windows com base em .NET Framework:
 
-> | **Tag** | **Versão e sistema** |
+> | **Marca** | **Versão e sistema** |
 > |---|---|
 > | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4. x no Windows Server Core |
 > | **microsoft/aspnet:4.x-windowsservercore** | .NET framework 4. x com personalização adicional do ASP.NET, no Windows Server Core |
 
 .NET Core (plataforma cruzada para Linux e Windows), as marcas teria esta aparência:
 
-> | **Tag** | **Versão e sistema**
+> | **Marca** | **Versão e sistema**
 > |---|---|
 > | **microsoft/dotnet:2.0.0-runtime** | Núcleo do .NET 2.0 somente em tempo de execução no Linux |
 > | **microsoft/dotnet:2.0.0-runtime-nanoserver** | Núcleo do .NET 2.0 somente em tempo de execução no Windows Nano Server |

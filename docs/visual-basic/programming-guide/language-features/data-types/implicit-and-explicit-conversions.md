@@ -1,11 +1,12 @@
 ---
-title: "Conversões implícitas e explícitas (Visual Basic)"
-ms.custom: 
+title: Conversões implícitas e explícitas (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - conversions [Visual Basic], type
@@ -26,17 +27,17 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], implicit
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6e9dd698e1cc84464cd12d33767feec960c511ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9827cecce0a15d37d2ffe3ccf691404149b156fb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>Conversões implícitas e explícitas (Visual Basic)
-Um *conversão implícita* não requer nenhuma sintaxe especial no código-fonte. No exemplo a seguir, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] implicitamente converte o valor de `k` para um valor de ponto flutuante de precisão única antes de atribuí-lo para `q`.  
+Um *conversão implícita* não requer nenhuma sintaxe especial no código-fonte. No exemplo a seguir, o Visual Basic converte implicitamente o valor de `k` para um valor de ponto flutuante de precisão única antes de atribuí-lo para `q`.  
   
 ```  
 Dim k As Integer  
@@ -46,7 +47,7 @@ k = 432
 q = k  
 ```  
   
- Um *conversão explícita* usa uma palavra-chave de conversão de tipo. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]fornece várias palavras-chave tais, que força uma expressão entre parênteses ao tipo de dados desejado. Essas palavras-chave atuam como funções, mas o compilador gera o código embutido, portanto execução é ligeiramente mais rapidamente do que uma chamada de função.  
+ Um *conversão explícita* usa uma palavra-chave de conversão de tipo. Visual Basic fornece várias palavras-chave tais, que força uma expressão entre parênteses ao tipo de dados desejado. Essas palavras-chave atuam como funções, mas o compilador gera o código embutido, portanto execução é ligeiramente mais rapidamente do que uma chamada de função.  
   
  Na seguinte extensão do exemplo anterior, o `CInt` palavra-chave converte o valor de `q` para um número inteiro antes de atribuí-lo para `k`.  
   
@@ -62,28 +63,28 @@ k = CInt(q)
   
 |Palavra-chave de conversão de tipo|Converte uma expressão em tipo de dados|Tipos de dados permitido de expressão a ser convertido|  
 |---|---|---|  
-|`CBool`|[Tipo de Dados Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `String`,`Object`|  
-|`CByte`|[Tipo de Dados Byte](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|Qualquer tipo numérico (incluindo `SByte` e os tipos enumerados), `Boolean`, `String`,`Object`|  
+|`CBool`|[Tipo de Dados Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `String`, `Object`|  
+|`CByte`|[Tipo de Dados Byte](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|Qualquer tipo numérico (incluindo `SByte` e os tipos enumerados), `Boolean`, `String`, `Object`|  
 |`CChar`|[Tipo de Dados de Caractere](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`String`, `Object`|  
 |`CDate`|[Tipo de Dados de Data](../../../../visual-basic/language-reference/data-types/date-data-type.md)|`String`, `Object`|  
-|`CDbl`|[Tipo de Dados Duplo](../../../../visual-basic/language-reference/data-types/double-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `String`,`Object`|  
-|`CDec`|[Tipo de Dados Decimal](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `String`,`Object`|  
-|`CInt`|[Tipo de Dados Integer](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `String`,`Object`|  
-|`CLng`|[Tipo de Dados Long](../../../../visual-basic/language-reference/data-types/long-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `String`,`Object`|  
+|`CDbl`|[Tipo de Dados Duplo](../../../../visual-basic/language-reference/data-types/double-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `String`, `Object`|  
+|`CDec`|[Tipo de Dados Decimal](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `String`, `Object`|  
+|`CInt`|[Tipo de Dados Integer](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `String`, `Object`|  
+|`CLng`|[Tipo de Dados Long](../../../../visual-basic/language-reference/data-types/long-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `String`, `Object`|  
 |`CObj`|[Tipo de Dados Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)|Qualquer tipo|  
-|`CSByte`|[Tipo de Dados SByte](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|Qualquer tipo numérico (incluindo `Byte` e os tipos enumerados), `Boolean`, `String`,`Object`|  
-|`CShort`|[Tipo de Dados Short](../../../../visual-basic/language-reference/data-types/short-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `String`,`Object`|  
-|`CSng`|[Tipo de Dados Simples](../../../../visual-basic/language-reference/data-types/single-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `String`,`Object`|  
-|`CStr`|[Tipo de Dados String](../../../../visual-basic/language-reference/data-types/string-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `Char`, `Char` matriz, `Date`,`Object`|  
+|`CSByte`|[Tipo de Dados SByte](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|Qualquer tipo numérico (incluindo `Byte` e os tipos enumerados), `Boolean`, `String`, `Object`|  
+|`CShort`|[Tipo de Dados Short](../../../../visual-basic/language-reference/data-types/short-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `String`, `Object`|  
+|`CSng`|[Tipo de Dados Simples](../../../../visual-basic/language-reference/data-types/single-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `String`, `Object`|  
+|`CStr`|[Tipo de Dados String](../../../../visual-basic/language-reference/data-types/string-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `Char`, `Char` matriz, `Date`, `Object`|  
 |`CType`|Tipo especificado após a vírgula (`,`)|Ao converter para um *tipo de dados elementares* (incluindo uma matriz de um tipo elementar), os mesmos tipos como permitido para a palavra-chave conversão correspondente<br /><br /> Ao converter para um *tipo de dados composto*, ele implementa as interfaces e as classes da qual ela herda<br /><br /> Ao converter em uma classe ou estrutura na qual você tenha sobrecarregado `CType`, classe ou estrutura|  
-|`CUInt`|[Tipo de Dados UInteger](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `String`,`Object`|  
-|`CULng`|[Tipo de Dados ULong](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `String`,`Object`|  
-|`CUShort`|[Tipo de Dados UShort](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `String`,`Object`|  
+|`CUInt`|[Tipo de Dados UInteger](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `String`, `Object`|  
+|`CULng`|[Tipo de Dados ULong](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `String`, `Object`|  
+|`CUShort`|[Tipo de Dados UShort](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)|Qualquer tipo numérico (incluindo `Byte`, `SByte`e os tipos enumerados), `Boolean`, `String`, `Object`|  
   
 ## <a name="the-ctype-function"></a>A função CType  
  O [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md) opera em dois argumentos. A primeira é a expressão a ser convertida e a segunda é a classe de objeto ou tipo de dados do destino. Observe que o primeiro argumento deve ser uma expressão, não é um tipo.  
   
- `CType`é um *função embutida*, o que significa que o código compilado faz a conversão, frequentemente sem gerar uma função chamada. Isso melhora o desempenho.  
+ `CType` é um *função embutida*, o que significa que o código compilado faz a conversão, frequentemente sem gerar uma função chamada. Isso melhora o desempenho.  
   
  Para obter uma comparação de `CType` com as outras keywords de conversão de tipo, consulte [operador DirectCast](../../../../visual-basic/language-reference/operators/directcast-operator.md) e [operador TryCast](../../../../visual-basic/language-reference/operators/trycast-operator.md).  
   
@@ -109,7 +110,7 @@ h = CType(cZ, iZone)
 ```  
   
 ### <a name="array-types"></a>Tipos de matriz  
- `CType`também pode converter tipos de dados de matriz, como no exemplo a seguir.  
+ `CType` também pode converter tipos de dados de matriz, como no exemplo a seguir.  
   
 ```  
 Dim v() As classV  

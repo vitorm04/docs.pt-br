@@ -1,12 +1,13 @@
 ---
-title: "Visão geral de eventos roteados"
-ms.custom: 
+title: Visão geral de eventos roteados
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22ce2611afa2a3b2b06b7d378479e5ffd2f744f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 896f3b852c00b9c7cd031710dbdaa00974428344
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="routed-events-overview"></a>Visão geral de eventos roteados
 Este tópico descreve o conceito de eventos roteados no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. O tópico define a terminologia de eventos roteados, descreve como eventos roteados são roteados por uma árvore de elementos, resume como manipular eventos roteados e apresenta como criar seus próprios eventos roteados personalizados.
@@ -127,12 +129,12 @@ Este tópico descreve o conceito de eventos roteados no [!INCLUDE[TLA#tla_wincli
   
  [!code-xaml[EventOvwSupport#SimplestSyntax](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
   
- `b1SetColor`é o nome do manipulador implementado que contém o código que manipula o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento. `b1SetColor`deve ter a mesma assinatura que o <xref:System.Windows.RoutedEventHandler> delegado, que é o delegado do manipulador de eventos para o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento. O primeiro parâmetro de todos os representantes de manipulador de eventos roteados especifica o elemento ao qual o manipulador de eventos é adicionado, enquanto o segundo parâmetro especifica os dados do evento.  
+ `b1SetColor` é o nome do manipulador implementado que contém o código que manipula o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento. `b1SetColor` deve ter a mesma assinatura que o <xref:System.Windows.RoutedEventHandler> delegado, que é o delegado do manipulador de eventos para o <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento. O primeiro parâmetro de todos os representantes de manipulador de eventos roteados especifica o elemento ao qual o manipulador de eventos é adicionado, enquanto o segundo parâmetro especifica os dados do evento.  
   
 [!code-csharp[EventOvwSupport#SimpleHandlerA](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#simplehandlera)]
 [!code-vb[EventOvwSupport#SimpleHandlerA](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#simplehandlera)]  
   
- <xref:System.Windows.RoutedEventHandler>é o delegado do manipulador de eventos roteados básico. Para eventos roteados que são especializados para certos controles ou cenários, os delegados a usar para os manipuladores de eventos roteados também podem se tornar mais especializados, de modo que eles possam transmitir dados do evento especializados. Por exemplo, em um cenário comum de entrada, você pode manipular uma <xref:System.Windows.UIElement.DragEnter> eventos roteados. O manipulador deve implementar o <xref:System.Windows.DragEventHandler> delegate. Usando o delegado mais específico, você pode processar o <xref:System.Windows.DragEventArgs> no manipulador e ler o <xref:System.Windows.DragEventArgs.Data%2A> propriedade, que contém a carga da área de transferência da operação de arrastar.  
+ <xref:System.Windows.RoutedEventHandler> é o delegado do manipulador de eventos roteados básico. Para eventos roteados que são especializados para certos controles ou cenários, os delegados a usar para os manipuladores de eventos roteados também podem se tornar mais especializados, de modo que eles possam transmitir dados do evento especializados. Por exemplo, em um cenário comum de entrada, você pode manipular uma <xref:System.Windows.UIElement.DragEnter> eventos roteados. O manipulador deve implementar o <xref:System.Windows.DragEventHandler> delegate. Usando o delegado mais específico, você pode processar o <xref:System.Windows.DragEventArgs> no manipulador e ler o <xref:System.Windows.DragEventArgs.Data%2A> propriedade, que contém a carga da área de transferência da operação de arrastar.  
   
  Para obter um exemplo completo de como adicionar um manipulador de eventos a um elemento usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], consulte [Manipular um evento roteado](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md).  
   
@@ -141,18 +143,18 @@ Este tópico descreve o conceito de eventos roteados no [!INCLUDE[TLA#tla_wincli
  [!code-csharp[EventOvwSupport#AddHandlerCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlercode)]
  [!code-vb[EventOvwSupport#AddHandlerCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlercode)]  
   
- O exemplo a seguir mostra a sintaxe de operador do [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] (o [!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)] tem sintaxe de operador ligeiramente diferente devido à sua manipulação dos cancelamentos de referências):  
+ A próximo exemplo mostra o c# sintaxe do operador (Visual Basic tem uma sintaxe de operadores ligeiramente diferente devido a seu tratamento de referências):  
   
  [!code-csharp[EventOvwSupport#AddHandlerPlusEquals](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlerplusequals)]
  [!code-vb[EventOvwSupport#AddHandlerPlusEquals](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlerplusequals)]  
   
  Para obter um exemplo de como adicionar um manipulador de eventos no código, consulte [Adicionar um manipulador de eventos usando código](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md).  
   
- Se você estiver usando [!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)], você também poderá usar a palavra-chave `Handles` para adicionar manipuladores como parte das declarações do manipulador. Para obter mais informações, consulte [Manipulação de eventos WPF e do Visual Basic](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
+ Se você estiver usando o Visual Basic, você também pode usar o `Handles` palavra-chave para adicionar manipuladores como parte das declarações do manipulador. Para obter mais informações, consulte [Manipulação de eventos WPF e do Visual Basic](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
   
 <a name="concept_handled"></a>   
 ### <a name="the-concept-of-handled"></a>O conceito de manipulado  
- Todos os eventos roteados compartilham uma evento dados classe base comum, <xref:System.Windows.RoutedEventArgs>. <xref:System.Windows.RoutedEventArgs>Define o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade, que tem um valor booleano. O objetivo do <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade é permitir que qualquer manipulador de eventos ao longo da rota marque o evento roteado como *tratados*, definindo o valor de <xref:System.Windows.RoutedEventArgs.Handled%2A> para `true`. Depois de serem processados pelo manipulador em um elemento ao longo da rota, os dados do evento compartilhado são relatados novamente para cada ouvinte na rota.  
+ Todos os eventos roteados compartilham uma evento dados classe base comum, <xref:System.Windows.RoutedEventArgs>. <xref:System.Windows.RoutedEventArgs> Define o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade, que tem um valor booleano. O objetivo do <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade é permitir que qualquer manipulador de eventos ao longo da rota marque o evento roteado como *tratados*, definindo o valor de <xref:System.Windows.RoutedEventArgs.Handled%2A> para `true`. Depois de serem processados pelo manipulador em um elemento ao longo da rota, os dados do evento compartilhado são relatados novamente para cada ouvinte na rota.  
   
  O valor de <xref:System.Windows.RoutedEventArgs.Handled%2A> afeta como um evento roteado é relatado ou processado enquanto trafegam adicional na rota. Se <xref:System.Windows.RoutedEventArgs.Handled%2A> é `true` no evento dados para um evento roteado, então os manipuladores que escutam por esse evento roteado em outros elementos geralmente são não serão chamados para essa instância específica do evento. Isso é verdade tanto para os manipuladores anexados em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] quanto para manipuladores adicionados por sintaxes de anexação de manipuladores de eventos específicas a um idioma como `+=` ou `Handles`. Para cenários mais comuns de manipuladores, marcar um evento como tratado definindo <xref:System.Windows.RoutedEventArgs.Handled%2A> para `true` irá "parar" roteamento para uma rota de túnel ou bolha e também para qualquer evento que é tratado em um ponto na rota por um manipulador de classe.  
   
@@ -200,7 +202,7 @@ Este tópico descreve o conceito de eventos roteados no [!INCLUDE[TLA#tla_wincli
   
  [!code-xaml[EventOvwSupport#GroupButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
   
- Aqui, o ouvinte do elemento pai onde o manipulador é adicionado é um <xref:System.Windows.Controls.StackPanel>. No entanto, ela está adicionando um manipulador para um evento roteado que foi declarado e será gerado pelo <xref:System.Windows.Controls.Button> classe (<xref:System.Windows.Controls.Primitives.ButtonBase> na verdade, mas estará disponível para <xref:System.Windows.Controls.Button> por meio da herança). <xref:System.Windows.Controls.Button>é "dono" do evento, mas os manipuladores de permite do sistema de eventos roteados para qualquer evento roteado ser anexado a qualquer <xref:System.Windows.UIElement> ou <xref:System.Windows.ContentElement> ouvinte da instância que caso contrário, pode anexar ouvintes para um [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] eventos. O namespace xmlns padrão para esses nomes de atributo de evento qualificado geralmente é o namespace xmlns [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] padrão, mas você também pode especificar namespaces prefixados para eventos roteados personalizados. Para obter mais informações sobre xmlns, consulte [Namespaces XAML e mapeamento de namespace para XAML WPF](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ Aqui, o ouvinte do elemento pai onde o manipulador é adicionado é um <xref:System.Windows.Controls.StackPanel>. No entanto, ela está adicionando um manipulador para um evento roteado que foi declarado e será gerado pelo <xref:System.Windows.Controls.Button> classe (<xref:System.Windows.Controls.Primitives.ButtonBase> na verdade, mas estará disponível para <xref:System.Windows.Controls.Button> por meio da herança). <xref:System.Windows.Controls.Button> é "dono" do evento, mas os manipuladores de permite do sistema de eventos roteados para qualquer evento roteado ser anexado a qualquer <xref:System.Windows.UIElement> ou <xref:System.Windows.ContentElement> ouvinte da instância que caso contrário, pode anexar ouvintes para um [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] eventos. O namespace xmlns padrão para esses nomes de atributo de evento qualificado geralmente é o namespace xmlns [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] padrão, mas você também pode especificar namespaces prefixados para eventos roteados personalizados. Para obter mais informações sobre xmlns, consulte [Namespaces XAML e mapeamento de namespace para XAML WPF](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 <a name="how_event_processing_works"></a>   
 ## <a name="wpf-input-events"></a>Eventos de entrada WPF  

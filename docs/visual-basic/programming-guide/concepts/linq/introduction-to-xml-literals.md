@@ -1,29 +1,30 @@
 ---
-title: "Introdução a literais XML no Visual Basic2"
-ms.custom: 
+title: Introdução a literais XML no Visual Basic2
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7ac96691b5b9274f67039f36bbdbfaf8abd03705
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 112c1d898c3cdf14b52d843dee8f5a51002be858
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Introdução a literais XML no Visual Basic
-Esta seção fornece informações sobre a criação de árvores XML em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+Esta seção fornece informações sobre como criar árvores XML no Visual Basic.  
   
  Para obter informações sobre como usar os resultados de consultas LINQ como o conteúdo de uma árvore XML, consulte [construção funcional (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
   
- Para obter mais informações sobre literais XML no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], consulte [visão geral de LINQ to XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
+ Para obter mais informações sobre literais XML no Visual Basic, consulte [visão geral de LINQ to XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
   
 ## <a name="creating-xml-trees"></a>Criando árvores XML  
  O exemplo a seguir mostra como criar <xref:System.Xml.Linq.XElement>, nesse caso `contacts`:  

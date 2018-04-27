@@ -1,26 +1,27 @@
 ---
 title: Atividades de fluxo de controle em WF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6892885b-f7c5-4aea-8f5e-28863fb4ae75
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1e8520e34cf9bd9d31e9b877849e7c9611d6d989
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 91fb4e18d753709ab973730300ffef5a952c56d6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="control-flow-activities-in-wf"></a>Atividades de fluxo de controle em WF
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] fornece várias atividades para o fluxo de controle de execução dentro de um fluxo de trabalho. Algumas dessas atividades (como `Switch` e `If`) implementam as estruturas de controle de fluxo semelhantes àquelas em ambientes de programação como [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], quando outro (como `Pick`) modelarem novos estruturas de programação.  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] fornece várias atividades para o fluxo de controle de execução dentro de um fluxo de trabalho. Algumas dessas atividades (como `Switch` e `If`) implementar estruturas semelhantes aos ambientes, como o Visual c#, enquanto outros de programação de controle de fluxo (como `Pick`) novas estruturas de programação de modelo.  
   
  Observe que quando atividades como `Parallel` e atividades filhos de cronograma de atividades de `ParallelForEach` várias para a execução simultaneamente, somente um único segmento é usado para um fluxo de trabalho. Cada atividade filho dessas atividades executa seqüencialmente e as atividades sucessivas não executam até atividades anteriores completa ou vão ociosa. Como resultado, essas atividades são mais úteis para aplicativos que potencialmente em vários bloquear atividades deve executar em uma forma intercalada. Se nenhuma das atividades filhos dessas atividades vão ociosa, uma atividade de `Parallel` apenas executa como uma atividade de `Sequence` , e uma atividade de `ParallelForEach` apenas executa como uma atividade de `ForEach` . Se, no entanto, as atividades assíncronos (como atividades que derivam de <xref:System.Activities.AsyncCodeActivity>) ou as atividades de mensagem são usadas, o controle irá passar a ramificação seguir quando as espera por filhos de atividade para que a mensagem a ser recebidos ou seu trabalho assíncrono está concluído.  
   

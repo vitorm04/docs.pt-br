@@ -1,24 +1,26 @@
 ---
 title: Etapas comuns de uso do LINQ to SQL
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3aedef610d8ad3f743b346a46059b15d917cf7ca
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31daf8ee10334327070cb5bfc4068bc80e1d7ea4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>Etapas comuns de uso do LINQ to SQL
 Para implementar um aplicativo [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], siga as etapas descritas mais adiante neste tópico. Observe que várias etapas são opcionais. É muito provável que você possa usar o modelo de objeto em seu estado padrão.  
@@ -33,7 +35,7 @@ Para implementar um aplicativo [!INCLUDE[vbtecdlinq](../../../../../../includes/
   
 -   O [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
   
-     Esse designer fornece uma interface de usuário perfeita para criar um modelo de objeto a partir de um banco de dados existente. Essa ferramenta é parte do [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] IDE e é ideal para bancos de dados pequenos ou médios.  
+     Esse designer fornece uma interface de usuário perfeita para criar um modelo de objeto a partir de um banco de dados existente. Essa ferramenta é parte do IDE do Visual Studio e é ideal para bancos de dados pequenos ou médios.  
   
 -   A ferramenta de geração de código SQLMetal  
   
@@ -41,13 +43,13 @@ Para implementar um aplicativo [!INCLUDE[vbtecdlinq](../../../../../../includes/
   
 -   Um editor de código  
   
-     Você pode escrever seu próprio código usando o editor de códigos [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] ou outro editor. Não recomendamos essa abordagem, que pode gerar erros, quando você tem um banco de dados e pode usar o [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] ou a ferramenta SQLMetal. Entretanto, o editor de códigos pode ser útil para refinar ou modificar o código que você já gerou usando outras ferramentas. Para obter mais informações, consulte [como: Personalizar Classes de entidade usando o Editor de código](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
+     Você pode escrever seu próprio código, usando o editor de código do Visual Studio ou outro editor. Não recomendamos essa abordagem, que pode gerar erros, quando você tem um banco de dados e pode usar o [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] ou a ferramenta SQLMetal. Entretanto, o editor de códigos pode ser útil para refinar ou modificar o código que você já gerou usando outras ferramentas. Para obter mais informações, consulte [como: Personalizar Classes de entidade usando o Editor de código](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
   
 ### <a name="2-select-the-kind-of-code-you-want-to-generate"></a>2. Selecione o tipo de código que você deseja gerar.  
   
--   Um arquivo de código-fonte C# ou [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] para mapeamento baseado em atributos.  
+-   Um c# ou Visual Basic arquivo de código fonte para o mapeamento de atributo.  
   
-     Você incluir esse arquivo de código no seu [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] projeto. Para obter mais informações, consulte [mapeamento baseado no atributo](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+     Incluir arquivo de código em seu projeto do Visual Studio. Para obter mais informações, consulte [mapeamento baseado no atributo](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
 -   Um arquivo XML para mapeamento externo.  
   

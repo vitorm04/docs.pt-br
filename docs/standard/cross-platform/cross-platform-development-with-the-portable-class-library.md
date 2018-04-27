@@ -1,30 +1,30 @@
 ---
-title: "Desenvolvimento entre plataformas com a Biblioteca de Classes Portátil"
-ms.custom: 
+title: Desenvolvimento entre plataformas com a Biblioteca de Classes Portátil
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Portable Class Library [.NET Framework]
 - targeting multiple platforms
 - multiple platforms, targeting
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
-caps.latest.revision: "95"
+caps.latest.revision: 95
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ea0a111727093cb65a98e48255b06b3c4516d258
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 4e6b853c3548f27bbb4056f7d59d51a6964e0d91
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Desenvolvimento entre plataformas com a Biblioteca de Classes Portátil
 O tipo de projeto de Biblioteca de Classes Portátil .NET Framework no Visual Studio ajuda a criar de maneira rápida e fácil aplicativos e bibliotecas de plataforma cruzada para plataformas Microsoft.  
@@ -38,7 +38,7 @@ O tipo de projeto de Biblioteca de Classes Portátil .NET Framework no Visual St
  O Visual Studio fornece modelos que ajudam a desenvolver com a Biblioteca de Classes Portátil. Dependendo da versão do Visual Studio que você está usando, os modelos e menus disponíveis podem ser diferentes dos descritos neste artigo.  
   
 > [!WARNING]
->  [Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658) inclui atualizações para os modelos de biblioteca de classes portátil. Se você tiver uma versão anterior do Visual Studio e o Visual Studio 2013 instalado no mesmo computador e, em seguida, instalar 2, as alterações para o **Framework de destino** opções serão aplicadas a ambas as versões do Visual Studio.  
+>  Visual Studio 2013 atualização 2 inclui atualizações para os modelos de biblioteca de classes portátil. Se você tiver uma versão anterior do Visual Studio e o Visual Studio 2013 instalado no mesmo computador e, em seguida, instalar 2, as alterações para o **Framework de destino** opções serão aplicadas a ambas as versões do Visual Studio.  
   
  Neste tópico:  
   
@@ -59,10 +59,10 @@ O tipo de projeto de Biblioteca de Classes Portátil .NET Framework no Visual St
 |-----------------------|---------------------------------------------------|  
 |Visual Studio 2010, Professional, Premium ou Ultimate|Sim, quando você instala o [ferramentas de biblioteca portátil](https://marketplace.visualstudio.com/items?itemName=BCLTeam.PortableLibraryTools2).|  
 |Versões do Visual Studio Express 2010|Não.|  
-|Visual Studio 2012 Professional, Premium ou Ultimate|Sim. Para suporte por telefone, instale o [Windows Phone SDK 8.0](http://go.microsoft.com/fwlink/?LinkId=265772).|  
+|Visual Studio 2012 Professional, Premium ou Ultimate|Sim. Para obter suporte do Windows Phone 8.0, instale o [Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471).|  
 |Versões do Visual Studio Express 2012|Não.|  
-|Visual Studio 2013 Professional, Premium ou Ultimate|Sim. Para obter suporte do Windows Phone 8.1, instale [Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658).|  
-|Visual Studio Express 2013 para Windows|Sim, quando você instala o [versão mais recente do Visual Studio Express](http://go.microsoft.com/fwlink/p/?LinkId=394629), que inclui a atualização 2 ou adicionar [Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658).|  
+|Visual Studio 2013 Professional, Premium ou Ultimate|Sim. Para obter suporte do Windows Phone 8.1, instale o [versão mais recente do Visual Studio 2013](https://www.visualstudio.com/vs/older-downloads/).|  
+|Comunidade do Visual Studio 2013 para Windows|Sim, quando você instala o [versão mais recente do Visual Studio Community 2013](https://www.visualstudio.com/vs/older-downloads/), que inclui a atualização 2.|  
   
 <a name="create_pcl"></a>   
 ## <a name="creating-a-portable-class-library-project"></a>Criando um projeto de Biblioteca de Classes Portátil  
@@ -152,10 +152,10 @@ Caixa de diálogo Alterar Destinos no Visual Studio 2012
   
  Requer ➊ [Microsoft Async](https://www.nuget.org/packages/Microsoft.Bcl.Async/) pacote  
  Requer ➋ [Compression Microsoft](https://www.nuget.org/packages/Microsoft.Bcl.Compression) pacote  
- Requer ➌ [bibliotecas de cliente HTTP Microsoft](http://www.nuget.org/packages/Microsoft.Net.Http) pacote  
+ Requer ➌ [bibliotecas de cliente HTTP Microsoft](https://www.nuget.org/packages/Microsoft.Net.Http) pacote  
   
 > [!WARNING]
->  Você pode encontrar erros ao fazer referência a [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) e [bibliotecas de cliente HTTP Microsoft](http://www.nuget.org/packages/Microsoft.Net.Http) pacotes de biblioteca portátil usado por um aplicativo do Windows Phone Silverlight 8.1. Para obter mais informações, consulte [compatibilidade de plataforma e as alterações para aplicativos do Windows Phone Silverlight 8.1](http://go.microsoft.com/fwlink/p/?LinkId=394744).  
+>  Você pode encontrar erros ao fazer referência a [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) e [bibliotecas de cliente HTTP Microsoft](https://www.nuget.org/packages/Microsoft.Net.Http) pacotes de biblioteca portátil usado por um aplicativo do Windows Phone Silverlight 8.1. Para obter mais informações, consulte [compatibilidade de plataforma e as alterações para aplicativos do Windows Phone Silverlight 8.1](/previous-versions/windows/apps/dn642084(v=vs.105)).  
   
 <a name="members"></a>   
 ## <a name="supported-types-and-members"></a>Tipos e membros com suporte  
@@ -197,7 +197,7 @@ Exemplo de informações de versão
  Ao criar um aplicativo da Windows Store ou do Windows Phone que faça referência a um assembly da Biblioteca de Classes Portátil, tudo o que é necessário para implantar o aplicativo está incluído no pacote do aplicativo e mais nenhuma etapa é necessária.  
   
 ### <a name="deploying-a-net-framework-app"></a>Implantando um aplicativo do .NET Framework  
- Ao implantar o aplicativo do .NET Framework que faça referência a um assembly da Biblioteca de Classes Portátil, você deve especificar uma dependência na versão correta do .NET Framework. Ao especificar essa dependência, você garante que a versão requisitada seja instalada com seu aplicativo. Se você direcionar o .NET Framework 4 ou posterior, o computador deve ter o .NET Framework 4 com uma [atualizar](http://go.microsoft.com/fwlink/?LinkId=210824), atualização 4.0.3 para o .NET Framework 4 ou o .NET Framework 4.5 instalado.  
+ Ao implantar o aplicativo do .NET Framework que faça referência a um assembly da Biblioteca de Classes Portátil, você deve especificar uma dependência na versão correta do .NET Framework. Ao especificar essa dependência, você garante que a versão requisitada seja instalada com seu aplicativo. Se você direcionar o .NET Framework 4 ou posterior, o computador deve ter o .NET Framework 4 com uma [atualizar](https://www.microsoft.com/download/details.aspx?id=3556), atualização 4.0.3 para o .NET Framework 4 ou o .NET Framework 4.5 instalado.  
   
 -   Para criar uma dependência com a implantação do ClickOnce: em **Solution Explorer**, escolha o nó do projeto para o projeto que você deseja publicar. (Esse projeto faz referência ao projeto da Biblioteca de Classes Portátil.) Na barra de menus, escolha **projeto**, **propriedades**e, em seguida, escolha o **publicar** guia. Sobre o **publicar** página, escolha **pré-requisitos**. Selecione a versão necessária do .NET Framework (ou a atualização do .NET Framework 4) como um pré-requisito.  
   
@@ -217,9 +217,9 @@ Exemplo de informações de versão
     <param name="background" value="white" />  
     <param name="minRuntimeVersion" value="4.0.60129.0" />  
     <param name="autoUpgrade" value="true" />  
-    <a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=4.0.50826.0"   
+    <a href="https://www.microsoft.com/getsilverlight/get-started/install/"   
              style="text-decoration:none">  
-      <img src=http://go.microsoft.com/fwlink/?LinkId=161376  
+      <img src=http://download.microsoft.com/download/5/1/6/5165823D-1D79-4871-8AC2-42DDDB94A5C2/PNGs/SLMedallion_ENU.png  
              alt="Get Microsoft Silverlight" style="border-style:none"/>  
     </a>  
   </object>  

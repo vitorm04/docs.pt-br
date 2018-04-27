@@ -1,7 +1,7 @@
 ---
 title: Tuplas (F#)
 description: 'Saiba mais sobre F # tupla, um agrupamento de valores sem nome mas ordenados, possivelmente de tipos diferentes.'
-keywords: "visual f#, f#, programação funcional"
+keywords: visual f#, f#, programação funcional
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 35069073-9a82-410f-8dea-912e2a152e6d
-ms.openlocfilehash: 996566f2baaea8ab01e5c80e53caea82e9684714
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: e0a5e5eb08e13bd5cbe9f88a47d4cf4bba19ea22
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tuples"></a>Tuplas
 
@@ -89,7 +89,7 @@ int * float * string
 
 ## <a name="interoperation-with-c-tuples"></a>Interoperação com c# tuplas
 
-C# 7 introduzidos tuplas para o idioma.  Tuplas em c# são estruturas e são equivalentes a struct tuplas em F #.  Se você precisa interoperar com c#, você deve usar struct tuplas.
+C# 7.0 introduzidos tuplas para o idioma.  Tuplas em c# são estruturas e são equivalentes a struct tuplas em F #.  Se você precisa interoperar com c#, você deve usar struct tuplas.
 
 Isso é fácil.  Por exemplo, imagine que você precisa passar uma tupla a uma classe do c# e, em seguida, consumam seu resultado, o que também é uma coleção de itens:
 
@@ -130,7 +130,7 @@ Tuplas são compiladas em objetos de um dos vários tipos genéricos, todos os `
 
 ### <a name="compiled-form-of-struct-tuples"></a>Forma compilada do Struct tuplas
 
-Struct tuplas (por exemplo, `struct (x, y)`), são fundamentalmente diferente da referência tuplas.  Eles são compilados no <xref:System.ValueTuple> tipo, sobrecarregado por arity ou o número de parâmetros de tipo.  Elas são equivalentes a [C# 7 tuplas](../../csharp/tuples.md) e [Visual Basic 2017 tuplas](../../visual-basic/programming-guide/language-features/data-types/tuples.md)e interoperem bidirecionalmente.
+Struct tuplas (por exemplo, `struct (x, y)`), são fundamentalmente diferente da referência tuplas.  Eles são compilados no <xref:System.ValueTuple> tipo, sobrecarregado por arity ou o número de parâmetros de tipo.  Elas são equivalentes a [c# 7.0 tuplas](../../csharp/tuples.md) e [Visual Basic 2017 tuplas](../../visual-basic/programming-guide/language-features/data-types/tuples.md)e interoperem bidirecionalmente.
 
 ## <a name="see-also"></a>Consulte também
 [Referência da Linguagem F#](index.md)

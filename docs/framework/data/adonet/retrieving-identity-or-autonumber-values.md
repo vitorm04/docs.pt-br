@@ -13,17 +13,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
-caps.latest.revision: ''
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 15c435d46d3695f78db27801f54ec9de475b2989
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: ef070c737f6a108aa9c9285d2cc8e0a1144479bd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>Recuperando identidade ou valores de Autonumber
 Uma chave primária em um banco de dados relacional é uma coluna ou uma combinação de colunas que sempre contém valores exclusivos. Saber o valor da chave primária permite que você localize a linha que o contém. Os mecanismos de bancos de dados relacionais, como o SQL Server, o Oracle e o Microsoft Access/Jet dão suporte à criação de colunas de incremento automático, que podem ser designadas como chaves primárias. Esses valores gerados pelo servidor como linhas são adicionados a uma tabela. No SQL Server, você define a propriedade de identidade de uma coluna, no Oracle você cria uma Sequência e no Microsoft Access você cria uma coluna AutoNumber.  
@@ -35,7 +35,7 @@ Uma chave primária em um banco de dados relacional é uma coluna ou uma combina
  Alguns mecanismos de banco de dados, como o mecanismo de banco de dados Microsoft Access Jet, não dão suporte a parâmetros de saída e não podem processar várias instruções em um único lote. Ao trabalhar com o mecanismo de banco de dados do Jet, você pode recuperar o novo valor de AutoNumber gerado para uma linha inserida executando um comando S SELECT separado em um manipulador de eventos para o evento `RowUpdated` do `DataAdapter`.  
   
 > [!NOTE]
->  Uma alternativa ao uso de um valor incrementado automaticamente é usar o método <xref:System.Guid.NewGuid%2A> de um objeto <xref:System.Guid> para gerar um GUID, ou identificador exclusivo, no computador cliente que pode ser copiado para o servidor à medida que cada nova linha é inserida. O método `NewGuid` gera um valor binário de 16 bytes que é criado usando um algoritmo que fornece uma alta probabilidade de que nenhum valor será duplicado. Em um banco de dados SQL Server, um GUID é armazenado em uma coluna `uniqueidentifier`, que o SQL Server pode gerar automaticamente usando a função Transact-SQL `NEWID()`. Usar um GUID como uma chave primária pode afetar negativamente o desempenho. O [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] fornece suporte para a função `NEWSEQUENTIALID()`, que gera um GUID sequencial que não é garantido ser globalmente exclusivo, mas que pode ser indexado de maneira mais eficiente.  
+>  Uma alternativa ao uso de um valor incrementado automaticamente é usar o método <xref:System.Guid.NewGuid%2A> de um objeto <xref:System.Guid> para gerar um GUID, ou identificador exclusivo, no computador cliente que pode ser copiado para o servidor à medida que cada nova linha é inserida. O método `NewGuid` gera um valor binário de 16 bytes que é criado usando um algoritmo que fornece uma alta probabilidade de que nenhum valor será duplicado. Em um banco de dados SQL Server, um GUID é armazenado em uma coluna `uniqueidentifier`, que o SQL Server pode gerar automaticamente usando a função Transact-SQL `NEWID()`. Usar um GUID como uma chave primária pode afetar negativamente o desempenho. O SQL Server fornece suporte para o `NEWSEQUENTIALID()` função, que gera um GUID sequencial que não é garantido para ser globalmente exclusivos, mas que podem ser indexados com mais eficiência.  
   
 ## <a name="retrieving-sql-server-identity-column-values"></a>Recuperando valores de colunas de identidade do SQL Server  
  Ao trabalhar com o Microsoft SQL Server, você pode criar um procedimento armazenado com um parâmetro de saída para retornar o valor da identidade de uma linha inserida. A tabela a seguir descreve as três funções Transact-SQL no SQL Server que podem ser usadas para recuperar valores de colunas de identidade.  

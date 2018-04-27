@@ -1,31 +1,32 @@
 ---
-title: "Como determinar se dois objetos são idênticos (Visual Basic)"
-ms.custom: 
+title: Como determinar se dois objetos são idênticos (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - testing [Visual Basic], objects
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 02083a93e63fe799f529776f777ca877d2d138b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 266e878e7f5fa8deb1c8cd91795af8d63ded0177
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Como determinar se dois objetos são idênticos (Visual Basic)
-Em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], duas referências variáveis serão consideradas idênticas se os ponteiros são os mesmos, ou seja, se as duas variáveis apontam para a mesma instância de classe na memória. Por exemplo, em um aplicativo do Windows Forms, convém fazer uma comparação para determinar se a instância atual (`Me`) é o mesmo que uma determinada instância, como `Form2`.  
+No Visual Basic, duas referências variáveis serão consideradas idênticas se os ponteiros são os mesmos, ou seja, se as duas variáveis apontam para a mesma instância de classe na memória. Por exemplo, em um aplicativo do Windows Forms, convém fazer uma comparação para determinar se a instância atual (`Me`) é o mesmo que uma determinada instância, como `Form2`.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]fornece dois operadores para comparar ponteiros. O [operador Is](../../../../visual-basic/language-reference/operators/is-operator.md) retorna `True` se os objetos são idênticos e o [operador IsNot](../../../../visual-basic/language-reference/operators/isnot-operator.md) retorna `True` se não forem.  
+ Visual Basic fornece dois operadores para comparar ponteiros. O [operador Is](../../../../visual-basic/language-reference/operators/is-operator.md) retorna `True` se os objetos são idênticos e o [operador IsNot](../../../../visual-basic/language-reference/operators/isnot-operator.md) retorna `True` se não forem.  
   
 ## <a name="determining-if-two-objects-are-identical"></a>Determinando se dois objetos são idênticos  
   
@@ -35,7 +36,7 @@ Em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], duas referências variáveis ser
   
 2.  Na sua expressão de teste, use o `Is` operador com os dois objetos como operandos.  
   
-     `Is`Retorna `True` se os objetos apontam para a mesma instância de classe.  
+     `Is` Retorna `True` se os objetos apontam para a mesma instância de classe.  
   
 ## <a name="determining-if-two-objects-are-not-identical"></a>Determinando se dois objetos não são idênticos  
  Às vezes você deseja executar uma ação se dois objetos não são idênticos, e pode ser complicado combinar `Not` e `Is`, por exemplo `If Not obj1 Is obj2`. Nesse caso, você pode usar o `IsNot` operador.  
@@ -46,7 +47,7 @@ Em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], duas referências variáveis ser
   
 2.  Na sua expressão de teste, use o `IsNot` operador com os dois objetos como operandos.  
   
-     `IsNot`Retorna `True` se os objetos não apontam para a mesma instância de classe.  
+     `IsNot` Retorna `True` se os objetos não apontam para a mesma instância de classe.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir testa pares de `Object` variáveis para ver se eles apontam para a mesma instância de classe.  

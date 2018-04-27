@@ -1,12 +1,13 @@
 ---
-title: "Valores de variável de objeto (Visual Basic)"
-ms.custom: 
+title: Valores de variável de objeto (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - object variables [Visual Basic], values
@@ -14,27 +15,27 @@ helpviewer_keywords:
 - data types [Visual Basic], object variable
 - variables [Visual Basic], object
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ccab22920923500a2332db2372e52813c890e5e8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 28307cc477f661c3046e125f297c1519485ad797
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="object-variable-values-visual-basic"></a>Valores de variável de objeto (Visual Basic)
 Uma variável do [tipo de dados de objeto](../../../../visual-basic/language-reference/data-types/object-data-type.md) pode se referir a qualquer tipo de dados. O valor que você armazene em um `Object` variável é mantida em outro lugar na memória, enquanto a variável contém um ponteiro para os dados.  
   
 ## <a name="object-classifier-functions"></a>Funções de classificação de objeto  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]fornece funções que retornam informações sobre o que um `Object` variável refere-se a, conforme mostrado na tabela a seguir.  
+ Visual Basic fornece funções que retornam informações sobre o que um `Object` variável refere-se a, conforme mostrado na tabela a seguir.  
   
 |Função|Retorna VERDADEIRO se a variável de objeto se refere|  
 |--------------|---------------------------------------------------|  
 |<xref:Microsoft.VisualBasic.Information.IsArray%2A>|Uma matriz de valores, em vez de um único valor|  
 |<xref:Microsoft.VisualBasic.Information.IsDate%2A>|Um [tipo de dados data](../../../../visual-basic/language-reference/data-types/date-data-type.md) valor ou uma cadeia de caracteres que pode ser interpretada como um valor de data e hora|  
 |<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|Um objeto do tipo <xref:System.DBNull>, que representa dados ausentes ou inexistentes|  
-|<xref:Microsoft.VisualBasic.Information.IsError%2A>|Um objeto de exceção, que é derivado de<xref:System.Exception>|  
+|<xref:Microsoft.VisualBasic.Information.IsError%2A>|Um objeto de exceção, que é derivado de <xref:System.Exception>|  
 |<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[Nada](../../../../visual-basic/language-reference/nothing.md), ou seja, nenhum objeto atualmente atribuído à variável|  
 |<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|Um número ou uma cadeia de caracteres que pode ser interpretada como um número|  
 |<xref:Microsoft.VisualBasic.Information.IsReference%2A>|Um tipo de referência (como uma cadeia de caracteres, matriz, representante ou tipo de classe)|  

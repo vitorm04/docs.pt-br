@@ -1,12 +1,13 @@
 ---
-title: "Consultando o serviço de dados (WCF Data Services)"
-ms.custom: 
+title: Consultando o serviço de dados (WCF Data Services)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 976f1e4d8a149f8104325fd5d006d245afee04a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 35370b5d4757d16c766499c1f3ea8254c2d90116
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Consultando o serviço de dados (WCF Data Services)
 A biblioteca de cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite executar consultas em um serviço de dados usando os padrões familiares de programação [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], incluindo LINK (consulta integrada à linguagem). A biblioteca de cliente converte uma consulta, que é definida no cliente como uma instância da classe <xref:System.Data.Services.Client.DataServiceQuery%601>, em uma mensagem de solicitação HTTP GET. A biblioteca recebe a mensagem de resposta e as converte em instâncias de classes de serviço de dados do cliente. Essas classes são rastreadas pelo <xref:System.Data.Services.Client.DataServiceContext> ao qual o <xref:System.Data.Services.Client.DataServiceQuery%601> pertence.  
@@ -39,7 +41,7 @@ A biblioteca de cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.m
   
 -   Quando os resultados são enumerados implicitamente, como:  
   
-    -   Quando uma propriedade da classe <xref:System.Data.Services.Client.DataServiceContext> que representa o conjunto de entidades é enumerada, como durante um loop de `foreach` (C#) ou de `For Each` ([!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]).  
+    -   Quando uma propriedade no <xref:System.Data.Services.Client.DataServiceContext> que representa e conjunto de entidades é enumerado, como durante um `foreach` (c#) ou `For Each` loop (Visual Basic).  
   
     -   Quando a consulta é atribuída a uma coleção `List`.  
   

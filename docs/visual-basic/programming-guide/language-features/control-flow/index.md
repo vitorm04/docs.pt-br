@@ -18,16 +18,16 @@ ms.assetid: 5623ef47-52b1-4202-befd-9af36422ec6f
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6ce0cb7cba8f05b488d47f99da51b0b5de75eb15
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 4ec3ab191942e47d5025a0e641085b0f507088c7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="control-flow-in-visual-basic"></a>Fluxo de controle no Visual Basic
 Se deixado sem regulagem, um programa passa por suas instruções do início ao fim. Alguns programas muito simples podem ser escritos com apenas esse fluxo unidirecional. No entanto, muito da eficiência e da utilidade de qualquer linguagem de programação é derivada da capacidade de alterar a ordem de execução com instruções de controle e loops.  
   
- As estruturas de controle permitem regular o fluxo de execução do programa. Ao usar as estruturas de controle, é possível escrever código para [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] que toma decisões ou repete ações. Outras estruturas de controle permitem assegurar disponibilidade de um recurso ou executar uma série de instruções na mesma referência de objeto.  
+ As estruturas de controle permitem regular o fluxo de execução do programa. Usando estruturas de controle, você pode escrever o código do Visual Basic que toma decisões ou que repete ações. Outras estruturas de controle permitem assegurar disponibilidade de um recurso ou executar uma série de instruções na mesma referência de objeto.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Estruturas de Decisão](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  

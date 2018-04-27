@@ -1,30 +1,32 @@
 ---
-title: "Visual Basic e manipulação de eventos WPF"
-ms.custom: 
+title: Visual Basic e manipulação de eventos WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed10e52c59112714a500fe52ccf5b398c14a97b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f61b63e7f80ec779d03c230bd4f24eed00098242
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic e manipulação de eventos WPF
-Para o [!INCLUDE[TLA#tla_visualbnet](../../../../includes/tlasharptla-visualbnet-md.md)] idioma especificamente, você pode usar o idioma específico `Handles` palavra-chave para associar manipuladores de eventos com instâncias, em vez de anexar os manipuladores de eventos com atributos ou usando o <xref:System.Windows.UIElement.AddHandler%2A> método. No entanto, a técnica `Handles` para anexar manipuladores às instâncias tem algumas limitações, uma vez que a sintaxe `Handles` não dá suporte a alguns dos recursos específicos de evento roteado do sistema de eventos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+Para o idioma do Microsoft Visual Basic .NET especificamente, você pode usar o idioma específico `Handles` palavra-chave para associar manipuladores de eventos com instâncias, em vez de anexar os manipuladores de eventos com atributos ou usando o <xref:System.Windows.UIElement.AddHandler%2A> método. No entanto, a técnica `Handles` para anexar manipuladores às instâncias tem algumas limitações, uma vez que a sintaxe `Handles` não dá suporte a alguns dos recursos específicos de evento roteado do sistema de eventos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 ## <a name="using-handles-in-a-wpf-application"></a>Usando "manipuladores" em um aplicativo WPF  
  Os manipuladores de eventos que estão conectados às instâncias e aos eventos com `Handles` devem ser definidos na declaração de classe parcial da instância, que também é um requisito para os manipuladores de eventos que são atribuídos por meio de valores de atributos nos elementos. Você só pode especificar `Handles` para um elemento na página que tem um <xref:System.Windows.FrameworkContentElement.Name%2A> o valor da propriedade (ou [diretiva X:Name](../../../../docs/framework/xaml-services/x-name-directive.md) declarado). Isso ocorre porque o <xref:System.Windows.FrameworkContentElement.Name%2A> na [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] cria a referência de instância é necessária para dar suporte a *Instance* formato de referência necessário para o `Handles` sintaxe. O único elemento que pode ser usado para `Handles` sem um <xref:System.Windows.FrameworkContentElement.Name%2A> referência é a instância do elemento raiz que define a classe parcial.  
@@ -45,7 +47,7 @@ Para o [!INCLUDE[TLA#tla_visualbnet](../../../../includes/tlasharptla-visualbnet
  Os `Handles` não podem anexar manipuladores que são invocados para eventos que já estão marcados como manipulados. Em vez disso, você deve usar código e chamar o `handledEventsToo` de sobrecarga de <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>.  
   
 > [!NOTE]
->  Não use a sintaxe `Handles` no código [!INCLUDE[vb_current_short](../../../../includes/vb-current-short-md.md)] quando você especificar um manipulador de eventos para o mesmo evento na linguagem XAML. Nesse caso, o manipulador de eventos é chamado duas vezes.  
+>  Não use o `Handles` sintaxe no código do Visual Basic quando você especificar um manipulador de eventos para o mesmo evento em XAML. Nesse caso, o manipulador de eventos é chamado duas vezes.  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>Como o WPF implementa a funcionalidade "Identificadores"  
  Quando um [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] página é compilada, o arquivo intermediário declara `Friend` `WithEvents` referências para cada elemento na página que possui um <xref:System.Windows.FrameworkContentElement.Name%2A> conjunto de propriedades (ou [diretiva X:Name](../../../../docs/framework/xaml-services/x-name-directive.md) declarado). Cada instância nomeada é potencialmente um elemento que pode ser atribuído a um manipulador por meio de `Handles`.  

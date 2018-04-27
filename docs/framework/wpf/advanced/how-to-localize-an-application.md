@@ -2,8 +2,9 @@
 title: Como localizar um aplicativo
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,12 +17,13 @@ ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83ed8ee8b8bfd9c3d6dadfedad8889af10a86466
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3c5621de2a2d10e67f45fa2d6980cb84c388630f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-localize-an-application"></a>Como localizar um aplicativo
 Esse tutorial explica como criar um aplicativo localizado usando a ferramenta LocBaml.  
@@ -88,7 +90,7 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>Compilar a ferramenta LocBaml  
   
-1.  Todos os arquivos necessários para compilar LocBaml estão localizados no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] exemplos. Baixe o [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)] arquivos do [LocBaml Tool Sample](http://go.microsoft.com/fwlink/?LinkID=160016).  
+1.  Todos os arquivos necessários para compilar LocBaml estão localizados no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] exemplos. Baixar os arquivos do c# o [LocBaml Tool Sample](http://go.microsoft.com/fwlink/?LinkID=160016).  
   
 2.  Na linha de comando, execute o arquivo de projeto (locbaml.csproj) para compilar a ferramenta:  
   
@@ -158,7 +160,7 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
   
    |Nome BAML|Chave de recurso|Categoria|Legibilidade|Modificabilidade|Comentários|Valor|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
-   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignorar|FALSE|FALSE||Texto&#1; # Texto2|
+   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignorar|FALSE|FALSE||Texto1 #; # Texto2|
    |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Nenhum|TRUE|TRUE||Hello World|
    |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|Nenhum|TRUE|TRUE||Goodbye World|
   
@@ -195,7 +197,7 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
   
 7.  Para testar o novo assembly satélite, você precisa alterar a cultura na qual o aplicativo será executado. Você pode fazer isso de duas maneiras:  
   
-    -   Alterar as configurações regionais do seu sistema operacional (**iniciar** &#124; **Painel de controle** &#124; **Opções regionais e idiomas**).  
+    -   Alterar as configurações regionais do seu sistema operacional (**iniciar** &#124; **painel de controle** &#124; **opções regionais e idiomas**).  
   
     -   Em seu aplicativo, adicione o seguinte código em App.xaml.cs:  
   

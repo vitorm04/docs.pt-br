@@ -1,27 +1,29 @@
 ---
-title: "Operações de cópia em massa único"
-ms.custom: 
+title: Operações de cópia em massa único
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 961981fcdf9709a336d76df99c8f65448e76b98a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 37402672a6df808cb5e1c2424817fd9ce749cc82
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="single-bulk-copy-operations"></a>Operações de cópia em massa único
 A abordagem mais simples para a execução de uma operação de cópia em massa do SQL Server é executar uma única operação em um banco de dados. Por padrão, uma operação de cópia em massa é executada como uma operação isolada: a operação de cópia ocorre de forma não transacionada, sem a oportunidade de disponibilizá-la de volta.  
@@ -51,7 +53,7 @@ A abordagem mais simples para a execução de uma operação de cópia em massa 
 >  É recomendável que correspondem os tipos de dados de coluna de origem e destino. Se os tipos de dados não coincidirem, **SqlBulkCopy** tenta converter cada valor de origem para o tipo de dados de destino, usando as regras empregadas pelo <xref:System.Data.SqlClient.SqlParameter.Value%2A>. Conversões podem afetar o desempenho e também podem resultar em erros inesperados. Por exemplo, um `Double` tipo de dados pode ser convertido em um `Decimal` maioria de tipo de dados de tempo, mas não sempre.  
   
 ## <a name="example"></a>Exemplo  
- O aplicativo de console a seguir demonstra como carregar dados usando o <xref:System.Data.SqlClient.SqlBulkCopy> classe. Neste exemplo, um <xref:System.Data.SqlClient.SqlDataReader> é usado para copiar dados do **Production. Product** tabela o [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] **AdventureWorks** banco de dados para uma tabela semelhante no mesmo banco de dados.  
+ O aplicativo de console a seguir demonstra como carregar dados usando o <xref:System.Data.SqlClient.SqlBulkCopy> classe. Neste exemplo, um <xref:System.Data.SqlClient.SqlDataReader> é usado para copiar dados do **Production. Product** tabela no SQL Server**AdventureWorks** banco de dados para uma tabela semelhante no mesmo banco de dados.  
   
 > [!IMPORTANT]
 >  Este exemplo não funcionará a menos que você criou as tabelas de trabalho conforme descrito em [configuração de exemplo de cópia em massa](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Esse código é fornecido para demonstrar a sintaxe para usar **SqlBulkCopy** somente. Se as tabelas de origem e destino estão localizadas na mesma instância do SQL Server, é mais fácil e rápido para usar um Transact-SQL `INSERT … SELECT` instrução para copiar os dados.  

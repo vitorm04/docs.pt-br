@@ -1,11 +1,12 @@
 ---
 title: Como obter um valor a partir de uma propriedade (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - property values [Visual Basic]
@@ -14,19 +15,19 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6cde5408ea09398a79a3da01ae9b2d0202c58eaf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7161052b9d9b388d8da8bd421c3b220f15037805
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>Como obter um valor a partir de uma propriedade (Visual Basic)
 Para recuperar um valor de propriedade, incluindo o nome da propriedade em uma expressão.  
   
- A propriedade `Get` procedimento recupera o valor, mas você não o chama explicitamente por nome. Você usa a propriedade exatamente como você usaria uma variável. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]faz as chamadas aos procedimentos da propriedade.  
+ A propriedade `Get` procedimento recupera o valor, mas você não o chama explicitamente por nome. Você usa a propriedade exatamente como você usaria uma variável. Visual Basic faz as chamadas aos procedimentos da propriedade.  
   
 ### <a name="to-retrieve-a-value-from-a-property"></a>Para recuperar um valor de uma propriedade  
   
@@ -36,7 +37,7 @@ Para recuperar um valor de propriedade, incluindo o nome da propriedade em uma e
   
      Use o nome de propriedade seguido de igual (`=`) entrar em uma instrução de atribuição.  
   
-     O exemplo a seguir lê o valor de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] `Now` property, implicitamente chamando seu `Get` procedimento.  
+     O exemplo a seguir lê o valor do Visual Basic `Now` property, implicitamente chamando seu `Get` procedimento.  
   
      [!code-vb[VbVbalrDateProperties#4](./codesnippet/VisualBasic/how-to-get-a-value-from-a-property_1.vb)]  
   

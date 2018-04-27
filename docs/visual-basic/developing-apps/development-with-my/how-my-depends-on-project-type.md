@@ -12,17 +12,17 @@ ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
 caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4a37bf43096931597278974099becb9be6ae133d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d931a2034d681c4e14cc35ecfbd9ad7accf5afaa
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>Como My depende do tipo de projeto (Visual Basic)
-`My`expõe apenas os objetos exigidos por um tipo de projeto específico. Por exemplo, o `My.Forms` objeto está disponível em um aplicativo de formulários do Windows, mas não está disponível em um aplicativo de console. Este tópico descreve quais `My` objetos estão disponíveis em diferentes tipos de projeto.  
+`My` expõe apenas os objetos exigidos por um tipo de projeto específico. Por exemplo, o `My.Forms` objeto está disponível em um aplicativo de formulários do Windows, mas não está disponível em um aplicativo de console. Este tópico descreve quais `My` objetos estão disponíveis em diferentes tipos de projeto.  
   
 ## <a name="my-in-windows-applications-and-web-sites"></a>O Windows em Sites e aplicativos Web  
- `My`expõe somente objetos que são úteis para o tipo de projeto atual; suprime objetos que não são aplicáveis. Por exemplo, a imagem a seguir mostra o `My` modelo de objeto em um projeto de formulários do Windows.  
+ `My` expõe somente objetos que são úteis para o tipo de projeto atual; suprime objetos que não são aplicáveis. Por exemplo, a imagem a seguir mostra o `My` modelo de objeto em um projeto de formulários do Windows.  
   
  ![Forma do meu em um aplicativo Windows Forms](../../../visual-basic/developing-apps/development-with-my/media/myinwinform.png "MyInWinForm")  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/21/2017
 |`My.User`|**Sim** <sup>6</sup>|**Sim** <sup>6</sup>|**Sim** <sup>6</sup>|**Sim** <sup>6</sup>|**Sim** <sup>7</sup>|**Sim** <sup>6</sup>|Não|**Sim** <sup>7</sup>|  
 |`My.WebServices`|**Sim**|**Sim**|**Sim**|**Sim**|**Sim**|**Sim**|Não|Não|  
   
- <sup>1</sup> versão de Windows Forms de `My.Application`. Deriva da versão do console (veja a Observação 3); Adiciona suporte para interação com janelas do aplicativo e fornece o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] modelo de aplicativo.  
+ <sup>1</sup> versão de Windows Forms de `My.Application`. Deriva da versão do console (veja a Observação 3); Adiciona suporte para interação com janelas do aplicativo e fornece o modelo de aplicativo do Visual Basic.  
   
  <sup>2</sup> versão da biblioteca de `My.Application`. Fornece a funcionalidade básica necessitada para um aplicativo: fornece membros para gravar no log de aplicativo e acessar informações do aplicativo.  
   

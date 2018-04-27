@@ -1,24 +1,26 @@
 ---
-title: "Filtros avançados"
-ms.custom: 
+title: Filtros avançados
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d81590f-e036-4f96-824a-4a187f462764
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 357b57bb39ca31b48d21cb83209a72d0b3d12a62
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a374765317751a5adc241941a0c0dc613a3ea2cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="advanced-filters"></a>Filtros avançados
 Este exemplo demonstra um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] o serviço de roteamento. O serviço de roteamento é um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] componente que torna mais fácil incluir um roteador baseado em conteúdo em seu aplicativo. Este exemplo se adapta o padrão [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] exemplo de cálculo para se comunicar usando o serviço de roteamento. Este exemplo mostra como definir a lógica de roteamento baseado em conteúdo com o uso de filtros de mensagem e tabelas de filtro de mensagem.  
@@ -60,7 +62,7 @@ XPathMessageFilter xpathFilter = new XPathMessageFilter("/s12:Envelope/s12:Heade
 EndpointNameMessageFilter endpointNameFilter = new EndpointNameMessageFilter("calculatorEndpoint");  
 ```  
   
- O terceiro filtro é um <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. Isso corresponde a qualquer mensagem que aparecem em um ponto de extremidade com um endereço que corresponde ao prefixo do endereço (ou a parte frontal) fornecido. Neste exemplo, o prefixo de endereço é definido como "http://localhost/routingservice/router/rounding/". Isso significa que as mensagens de entrada que são endereçadas para "http://localhost/routingservice/router/rounding/ *" correspondem a este filtro. Nesse caso, é mensagens que aparecem no ponto de extremidade de arredondamento cálculo, que tem o endereço de "http://localhost/routingservice/router/rounding/calculator".  
+ O terceiro filtro é um <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. Isso corresponde a qualquer mensagem que aparecem em um ponto de extremidade com um endereço que corresponde ao prefixo do endereço (ou a parte frontal) fornecido. Neste exemplo, o prefixo de endereço é definido como "http://localhost/routingservice/router/rounding/". Isso significa que as mensagens de entrada que são endereçadas a "http://localhost/routingservice/router/rounding/*" correspondem a este filtro. Nesse caso, é mensagens que aparecem no ponto de extremidade de arredondamento cálculo, que tem o endereço de "http://localhost/routingservice/router/rounding/calculator".  
   
 ```  
 PrefixEndpointAddressMessageFilter prefixAddressFilter = new PrefixEndpointAddressMessageFilter(new EndpointAddress("http://localhost/routingservice/router/rounding/"));  
@@ -91,7 +93,7 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
   
 2.  Para abrir **Solution Explorer**, selecione **Solution Explorer** do **exibição** menu.  
   
-3.  Pressione F5 ou CTRL + SHIFT + B no [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+3.  No Visual Studio, pressione F5 ou CTRL + SHIFT + B.  
   
     1.  Se você quiser iniciar os projetos necessários quando você pressionar F5, a solução e selecione **propriedades**. Selecione o **projeto de inicialização** nó **propriedades comuns** no painel esquerdo. Selecione o **vários projetos de inicialização** botão de opção e defina todos os projetos para que o **iniciar** ação.  
   

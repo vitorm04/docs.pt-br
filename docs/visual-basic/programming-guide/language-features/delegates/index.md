@@ -15,19 +15,19 @@ ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fe21d8c0dcefaea35d9f96cd2ecbff92a1c83d36
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6c83667534dcf69ea0ec1106bb3a02d2c9accd87
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="delegates-visual-basic"></a>Delegados (Visual Basic)
-Os delegados são objetos que se referem aos métodos. Às vezes, eles são descritos como *ponteiros de função fortemente tipados* porque eles são semelhante aos ponteiros de função usados em outras linguagens de programação. Mas ao contrário dos ponteiros de função, os delegados do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] são um tipo de referência baseado na classe <xref:System.Delegate?displayProperty=nameWithType>. Os delegados podem fazer referência a ambos os métodos compartilhados: os métodos que podem ser chamados sem uma instância específica de uma classe e os métodos de instância.  
+Os delegados são objetos que se referem aos métodos. Às vezes, eles são descritos como *ponteiros de função fortemente tipados* porque eles são semelhante aos ponteiros de função usados em outras linguagens de programação. Mas diferentemente ponteiros de função, Visual Basic delegados são um tipo de referência com base na classe <xref:System.Delegate?displayProperty=nameWithType>. Os delegados podem fazer referência a ambos os métodos compartilhados: os métodos que podem ser chamados sem uma instância específica de uma classe e os métodos de instância.  
   
 ## <a name="delegates-and-events"></a>Representantes e eventos  
- Os delegados são úteis em situações em que é necessário um intermediário entre um procedimento de chamada e o procedimento sendo chamado. Por exemplo, você pode desejar que um objeto que aciona eventos possa chamar manipuladores de eventos diferentes em diferentes circunstâncias. Infelizmente, o objeto que aciona os eventos não pode saber de antemão quais manipulador de eventos estarão tratando um evento específico. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] permite que você associe dinamicamente os manipuladores de eventos a eventos criando um delegado para você quando você usa a instrução `AddHandler`. No tempo de execução, o delegado encaminha chamadas para o manipulador de eventos apropriado.  
+ Os delegados são úteis em situações em que é necessário um intermediário entre um procedimento de chamada e o procedimento sendo chamado. Por exemplo, você pode desejar que um objeto que aciona eventos possa chamar manipuladores de eventos diferentes em diferentes circunstâncias. Infelizmente, o objeto que aciona os eventos não pode saber de antemão quais manipulador de eventos estarão tratando um evento específico. Visual Basic permite manipuladores de eventos dinamicamente associar eventos criando um representante para você quando você usa o `AddHandler` instrução. No tempo de execução, o delegado encaminha chamadas para o manipulador de eventos apropriado.  
   
- Embora você possa criar seus próprios delegados, na maioria dos casos [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] cria o delegado e cuida dos detalhes para você. Por exemplo, uma instrução `Event` define implicitamente uma classe delegada chamada `<EventName>EventHandler` como uma classe aninhada da classe que contém a instrução `Event` e com a mesma assinatura que o evento. A instrução `AddressOf` cria implicitamente uma instância de um delegado que se refere a um procedimento específico. As duas linhas de código a seguir são equivalentes. Na primeira linha, você vê a criação explícita de uma instância do `Eventhandler`, com uma referência ao método `Button1_Click` enviado como o argumento. A segunda linha é uma maneira mais conveniente de fazer a mesma coisa.  
+ Embora você possa criar seus próprios delegados, na maioria dos casos, o Visual Basic cria o representante e cuida dos detalhes para você. Por exemplo, uma instrução `Event` define implicitamente uma classe delegada chamada `<EventName>EventHandler` como uma classe aninhada da classe que contém a instrução `Event` e com a mesma assinatura que o evento. A instrução `AddressOf` cria implicitamente uma instância de um delegado que se refere a um procedimento específico. As duas linhas de código a seguir são equivalentes. Na primeira linha, você vê a criação explícita de uma instância do `Eventhandler`, com uma referência ao método `Button1_Click` enviado como o argumento. A segunda linha é uma maneira mais conveniente de fazer a mesma coisa.  
   
  [!code-vb[VbVbalrDelegates#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegates_1.vb)]  
   

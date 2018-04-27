@@ -1,38 +1,40 @@
 ---
 title: Problemas conhecidos em SqlClient para Entity Framework
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3fb62e266ee6f0ca7957667d7c41fbd90dd34d32
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8d5363ede9735ea805284638f795af67f2415ad0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Problemas conhecidos em SqlClient para Entity Framework
 Esta seção descreve os problemas conhecidos relacionados ao provedor de dados. NET Framework para SQL Server (SqlClient).  
   
 ## <a name="trailing-spaces-in-string-functions"></a>Espaço à direita em funções de cadeia de caracteres  
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] ignora espaço à direita nos valores de cadeia de caracteres. Portanto, passar os espaços à direita na cadeia de caracteres pode levar a resultados imprevisíveis, mesmo de falhas.  
+ SQL Server ignora os espaços à direita em valores de cadeia de caracteres. Portanto, passar os espaços à direita na cadeia de caracteres pode levar a resultados imprevisíveis, mesmo de falhas.  
   
- Se você precisa ter espaço para a direita na cadeia de caracteres, você deve considerar acrescentar um caractere de espaço em branco no final, de modo que [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] não apare a cadeia de caracteres. Se o espaço à direita não são necessários, devem ser quebrados antes de serem passados abaixo do pipeline de consulta.  
+ Se você precisa ter espaços à direita em sua cadeia de caracteres, você deve considerar o acréscimo de um caractere de espaço em branco no final, para que o SQL Server não cortar a cadeia de caracteres. Se o espaço à direita não são necessários, devem ser quebrados antes de serem passados abaixo do pipeline de consulta.  
   
 ## <a name="right-function"></a>Função DIREITA  
  Se um valor de`null` não é passado como um argumento e primeiros 0 são passados como um segundo argumento para `RIGHT(nvarchar(max)`, 0`)` ou `RIGHT(varchar(max)`, 0`)`, um valor de `NULL` serão retornados em vez de uma cadeia de caracteres de `empty` .  
   
 ## <a name="cross-and-outer-apply-operators"></a>A CRUZ e EXTERIORES APLICAM operadores  
- A CRUZ e EXTERIORES APLICAM operadores foram introduzidos em [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]. Em alguns casos, o pipeline de consulta pode produzir uma instrução Transact-SQL que contém operadores CROSS APPLY e/ou OUTER APPLY. Porque alguns provedores backend, incluindo versões de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] anteriores de [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)], não suportam esses operadores, essas consultas podem não ser executadas nesses provedores backend.  
+ A CRUZ e EXTERIORES APLICAM operadores foram introduzidos em [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]. Em alguns casos, o pipeline de consulta pode produzir uma instrução Transact-SQL que contém operadores CROSS APPLY e/ou OUTER APPLY. Como alguns provedores de back-end, incluindo versões do SQL Server anteriores ao [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)], não oferecem suporte a esses operadores, tais consultas não podem ser executadas nesses provedores de back-end.  
   
  A seguir estão alguns cenários típicos que podem resultar na presença de CRUZ SE APLICAM e/ou OUTER APPLY operadores na consulta de saída:  
   
@@ -68,7 +70,7 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ```  
   
 ## <a name="server-generated-guid-identity-values"></a>Valores gerados a identidade do GUID de servidor  
- Valores gerados o a identidade do tipo de GUID de suporte de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] , mas o provedor devem oferecer suporte ao retornar o valor gerado de identidade depois que uma linha foi inserida. Começando com [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2005, você pode retornar o tipo GUID gerado pelo servidor em um [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] de banco de dados por meio de [cláusula OUTPUT](http://go.microsoft.com/fwlink/?LinkId=169400) .  
+ Valores gerados o a identidade do tipo de GUID de suporte de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] , mas o provedor devem oferecer suporte ao retornar o valor gerado de identidade depois que uma linha foi inserida. A partir do SQL Server 2005, você poderá retornar o tipo GUID gerado pelo servidor em um banco de dados do SQL Server por meio de [cláusula OUTPUT](http://go.microsoft.com/fwlink/?LinkId=169400) .  
   
 ## <a name="see-also"></a>Consulte também  
  [SqlClient para Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  

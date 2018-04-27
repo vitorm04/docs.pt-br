@@ -1,27 +1,28 @@
 ---
 title: Como a cultura afeta cadeias de caracteres no Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b61f008edc446445fd5873b6138b64f29e0b8b8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c95dcc8d04725f7a072e8c8bc7fe058e53a95c05
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Como a cultura afeta cadeias de caracteres no Visual Basic
-Esta página de Ajuda discute como [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] usa informações de cultura para realizar conversões de cadeia de caracteres e comparações.  
+Esta página de Ajuda discute como o Visual Basic usa informações de cultura para executar comparações e conversões de cadeia de caracteres.  
   
 ## <a name="when-to-use-culture-specific-strings"></a>Quando usar cadeias de caracteres específicas da cultura  
  Normalmente, você deve usar cadeias de caracteres específicas da cultura para todos os dados apresentados para leitura dos usuários e usar cadeias de caracteres de cultura invariável de dados interno do aplicativo.  
@@ -31,7 +32,7 @@ Esta página de Ajuda discute como [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] u
  No entanto, se o aplicativo carrega a data em um servidor central, ele deve formatar a cadeia de caracteres de acordo com uma cultura específica, para evitar confusão entre formatos de data potencialmente diferentes.  
   
 ## <a name="culture-sensitive-functions"></a>Funções de cultura  
- Todos os [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] funções de conversão de cadeia de caracteres (exceto para o `Str` e `Val` funções) usar informações de cultura do aplicativo para certificar-se de que as conversões e comparações são apropriadas para a cultura do usuário do aplicativo.  
+ Todas as funções de conversão de cadeia de caracteres do Visual Basic (exceto para o `Str` e `Val` funções) usar informações de cultura do aplicativo para certificar-se de que as conversões e comparações são apropriadas para a cultura do aplicativo usuário.  
   
  A chave para com êxito usando funções de conversão de cadeia de caracteres em aplicativos que são executados em computadores com configurações de cultura diferente é entender quais funções usam uma configuração de cultura específica e que usam a configuração de cultura atual. Observe que as configurações de cultura do aplicativo são, por padrão, herdadas das configurações de cultura do sistema operacional. Para obter mais informações, consulte <xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>, <xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>, <xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A>, e [funções de conversão de tipo](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
   
@@ -64,7 +65,7 @@ Esta página de Ajuda discute como [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] u
   
 -   **Determinar se duas cadeias de caracteres de aplicativo interno corresponderem exatamente (normalmente por motivos de segurança).** Use operações que desconsiderar a cultura atual.  
   
- Você pode executar os dois tipos de comparações com o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Strings.StrComp%2A> função. Especifique o valor opcional `Compare` argumento para controlar o tipo de comparação: `Text` para a maioria das entradas e saídas `Binary` para determinar correspondências exatas.  
+ Você pode executar os dois tipos de comparações com o Visual Basic <xref:Microsoft.VisualBasic.Strings.StrComp%2A> função. Especifique o valor opcional `Compare` argumento para controlar o tipo de comparação: `Text` para a maioria das entradas e saídas `Binary` para determinar correspondências exatas.  
   
  O `StrComp` função retorna um inteiro que indica a relação entre as duas cadeias de caracteres em comparação com base na ordem de classificação. Um valor positivo para o resultado indica que a primeira cadeia de caracteres é maior que a segunda cadeia de caracteres. Um resultado negativo indica a primeira cadeia de caracteres é menor, e zero indica a igualdade entre cadeias de caracteres.  
   
@@ -79,7 +80,7 @@ Esta página de Ajuda discute como [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] u
 |O valor para `comparisonType` argumento|Tipo de comparação|Quando usar|  
 |---|---|---|  
 |`Ordinal`|Comparação com base nos bytes de componente de cadeias de caracteres.|Use esse valor ao comparar: identificadores diferencia maiusculas de minúsculas, as configurações relacionadas à segurança ou outros identificadores não linguística em que os bytes devem corresponder exatamente.|  
-|`OrdinalIgnoreCase`|Comparação com base nos bytes de componente de cadeias de caracteres.<br /><br /> `OrdinalIgnoreCase`usa as informações de cultura invariável para determinar quando dois caracteres diferem apenas em maiusculas e minúsculas.|Use esse valor ao comparar: identificadores de maiusculas e minúsculas, as configurações relacionadas à segurança e dados armazenados no Windows.|  
+|`OrdinalIgnoreCase`|Comparação com base nos bytes de componente de cadeias de caracteres.<br /><br /> `OrdinalIgnoreCase` usa as informações de cultura invariável para determinar quando dois caracteres diferem apenas em maiusculas e minúsculas.|Use esse valor ao comparar: identificadores de maiusculas e minúsculas, as configurações relacionadas à segurança e dados armazenados no Windows.|  
 |`CurrentCulture` ou `CurrentCultureIgnoreCase`|Comparação com base na interpretação de cadeias de caracteres da cultura atual.|Use esses valores ao comparar: dados que são exibidos para o usuário, a maioria das entradas do usuário e outros dados que requer linguística interpretação.|  
 |`InvariantCulture` ou `InvariantCultureIgnoreCase`|Comparação com base na interpretação de cadeias de caracteres da cultura invariável.<br /><br /> Isso é diferente de `Ordinal` e `OrdinalIgnoreCase`, como a cultura invariável trata caracteres fora de seu intervalo aceito como caracteres invariáveis equivalentes.|Use esses valores somente ao comparar dados persistentes ou exibindo linguisticamente relevantes que requer uma ordem de classificação fixa.|  
   

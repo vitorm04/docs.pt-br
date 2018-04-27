@@ -1,9 +1,9 @@
 ---
-title: "Não é possível vincular ao arquivo de recursos &#39; &lt;filename&gt;&#39;: &lt;mensagem de erro&gt;"
+title: 'Não é possível vincular ao arquivo de recurso &#39; &lt;filename&gt;&#39;: &lt;mensagem de erro&gt;'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC30144
 ms.assetid: 67ae276e-80d4-4162-ba00-e546c9294340
-caps.latest.revision: 
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4cb6cad67514678c4006221ba41dd69d2452340b
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: f3ba2b4ebe8bea851776d21b7752434b9db84b62
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="unable-to-link-to-resource-file-39ltfilenamegt39-lterror-messagegt"></a>Não é possível vincular ao arquivo de recursos &#39; &lt;filename&gt;&#39;: &lt;mensagem de erro&gt;
-O compilador [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] chama o Assembly Linker (Al.exe, também conhecido como Alink) para gerar um assembly com um manifesto. O vinculador relatou um erro ao vincular a um arquivo de recurso COM+ nativo do assembly.  
+# <a name="unable-to-link-to-resource-file-39ltfilenamegt39-lterror-messagegt"></a>Não é possível vincular ao arquivo de recurso &#39; &lt;filename&gt;&#39;: &lt;mensagem de erro&gt;
+O compilador do Visual Basic chama o vinculador de Assembly (Al.exe, também conhecido como Alink) para gerar um assembly com um manifesto. O vinculador relatou um erro ao vincular a um arquivo de recurso COM+ nativo do assembly.  
   
  **ID do erro:** BC30144  
   

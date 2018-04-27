@@ -1,24 +1,26 @@
 ---
-title: "Segurança em LINQ to SQL"
-ms.custom: 
+title: Segurança em LINQ to SQL
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0ee361c27bd14f0266b2b86f315f9c091e049c12
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 96951b3b3c8a6ee93a83ba24f6c6a19c3e36381c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="security-in-linq-to-sql"></a>Segurança em LINQ to SQL
 Os riscos de segurança são sempre presentes em que você se conecta a um base de dados. Embora LINQ to SQL pode incluir algumas novas maneiras de trabalhar com dados no SQL Server, não fornece os mecanismos de segurança adicionais.  
@@ -32,7 +34,7 @@ Os riscos de segurança são sempre presentes em que você se conecta a um base 
 ## <a name="connection-strings"></a>Cadeias de caracteres de conexão  
  Usar senhas em cadeias de conexão deve ser impedida sempre que possível. Não é apenas uma cadeia de conexão um risco para a segurança em próprio, mas a cadeia de conexão também pode ser adicionada em texto não criptografado para o modelo de objeto ou arquivo de mapeamento externo ao usar a ferramenta de linha de comando Object Relational Designer ou de SQLMetal. Qualquer pessoa com acesso ao modelo de objeto ou arquivo de mapeamento externo através do sistema de arquivos pode ver a senha de conexão (se é incluído na cadeia de conexão).  
   
- Para minimizar como riscos, use segurança integrada para fazer uma conexão confiável com [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)]. Usando essa abordagem, você não tiver que armazenar uma senha na cadeia de conexão. Para obter mais informações, consulte [segurança do SQL Server](../../../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
+ Para reduzir esses riscos, use a segurança integrada para fazer uma conexão confiável com o SQL Server. Usando essa abordagem, você não tiver que armazenar uma senha na cadeia de conexão. Para obter mais informações, consulte [segurança do SQL Server](../../../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
   
  Na ausência de segurança integrado, uma senha de texto não será necessária na cadeia de conexão. A melhor maneira para ajudar a proteger a cadeia de conexão, na ordem crescente de risco, é a seguinte:  
   

@@ -1,11 +1,12 @@
 ---
-title: "Diferenças entre passar um argumento por valor e por referência (Visual Basic)"
-ms.custom: 
+title: Diferenças entre passar um argumento por valor e por referência (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - ByRef keyword [Visual Basic], passing arguments by reference
@@ -14,26 +15,26 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], passing arguments by value
 - arguments [Visual Basic], passing by value or by reference
 ms.assetid: 5f5c38fe-3e2d-494c-8fff-f4025b55ec93
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3efd4f41184287cdcd3d499712a857bee997c1a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8f733b4fd50612292c0c4ac7195304d99ae2dbea
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>Diferenças entre passar um argumento por valor e por referência (Visual Basic)
 Quando você passar um ou mais argumentos para um procedimento, cada argumento corresponde a um elemento de programação subjacente no código de chamada. Você pode passar o valor desse elemento ou uma referência a ele. Isso é conhecido como o *mecanismo de passagem*.  
   
 ## <a name="passing-by-value"></a>passagem por valor  
- Passar um argumento *pelo valor* especificando o [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) palavra-chave para o parâmetro correspondente na definição do procedimento. Quando você usa este mecanismo de passagem, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] copia o valor do elemento de programação subjacente em uma variável local no procedimento. O código do procedimento não tem nenhum acesso ao elemento subjacente no código de chamada.  
+ Passar um argumento *pelo valor* especificando o [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) palavra-chave para o parâmetro correspondente na definição do procedimento. Quando você usa este mecanismo de passagem, o Visual Basic copia o valor do elemento de programação subjacente em uma variável local no procedimento. O código do procedimento não tem nenhum acesso ao elemento subjacente no código de chamada.  
   
 ## <a name="passing-by-reference"></a>Passagem por referência  
- Passar um argumento *por referência* especificando o [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) palavra-chave para o parâmetro correspondente na definição do procedimento. Quando você usa este mecanismo de passagem, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] fornece o procedimento uma referência direta para o elemento de programação subjacente no código de chamada.  
+ Passar um argumento *por referência* especificando o [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) palavra-chave para o parâmetro correspondente na definição do procedimento. Quando você usa este mecanismo de passagem, o Visual Basic fornece o procedimento uma referência direta para o elemento de programação subjacente no código de chamada.  
   
 ## <a name="passing-mechanism-and-element-type"></a>Mecanismo de passagem e tipo de elemento  
- A escolha do mecanismo de passagem não é o mesmo que a classificação de tipo do elemento. Passagem por valor ou referência se refere ao que [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] fornece ao código do procedimento. Um tipo de valor ou tipo de referência se refere a como um elemento de programação é armazenado na memória.  
+ A escolha do mecanismo de passagem não é o mesmo que a classificação de tipo do elemento. Passagem por valor ou referência se refere a que o Visual Basic fornece ao código do procedimento. Um tipo de valor ou tipo de referência se refere a como um elemento de programação é armazenado na memória.  
   
  No entanto, o mecanismo de passagem e o tipo de elemento são correlacionados. O valor de um tipo de referência é um ponteiro para os dados em outro lugar na memória. Isso significa que, quando você passar um tipo de referência por valor, o código do procedimento tem um ponteiro para os dados do elemento, mesmo que ele não pode acessar o elemento subjacente. Por exemplo, se o elemento é uma variável de matriz, o código do procedimento não tem acesso à variável em si, mas ele pode acessar os membros da matriz.  
   
@@ -42,7 +43,7 @@ Quando você passar um ou mais argumentos para um procedimento, cada argumento c
   
  Para um elemento modificável, a tabela a seguir resume a interação entre o tipo de elemento e o mecanismo de passagem.  
   
-|Tipo de elemento|Passado`ByVal`|Passado`ByRef`|  
+|Tipo de elemento|Passado `ByVal`|Passado `ByRef`|  
 |------------------|--------------------|--------------------|  
 |Tipo de valor (contém apenas um valor)|O procedimento não é possível alterar a variável ou qualquer um de seus membros.|O procedimento pode alterar a variável e seus membros.|  
 |Tipo de referência (contém um ponteiro para uma instância de classe ou estrutura)|O procedimento não é possível alterar a variável, mas pode alterar os membros da instância para a qual ele aponta.|O procedimento pode alterar a variável e os membros da instância para a qual ele aponta.|  

@@ -13,11 +13,11 @@ ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3959c24aa4e95204e156a9863ef0ce237af1fcda
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ec839d1f0ad1931ed4229e898a900c3210d813ed
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Sem espaço na pilha (Visual Basic)
 A pilha é uma área de trabalho de memória aumenta e diminui dinamicamente com as demandas do seu programa em execução. Os limites foram excedidos.  
@@ -34,7 +34,7 @@ A pilha é uma área de trabalho de memória aumenta e diminui dinamicamente com
   
 5.  Verifique o número de aninhada `DoEvents` chamadas de função, usando o `Calls` caixa de diálogo exibe quais procedimentos estão ativos na pilha.  
   
-6.  Certifique-se de que não causava uma cascata"evento" Disparando um evento que chama um procedimento de evento já na pilha. Cascata de eventos é semelhante a uma chamada de procedimento não finalizada recursiva, mas é menos óbvio, desde que a chamada é feita por [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] em vez de uma chamada explícita no código. Use o `Calls` caixa de diálogo exibe quais procedimentos estão ativos na pilha.  
+6.  Certifique-se de que não causava uma cascata"evento" Disparando um evento que chama um procedimento de evento já na pilha. Cascata de eventos é semelhante a uma chamada de procedimento não finalizada recursiva, mas é menos óbvio, desde que a chamada é feita pelo Visual Basic, em vez de uma chamada explícita no código. Use o `Calls` caixa de diálogo exibe quais procedimentos estão ativos na pilha.  
   
 ## <a name="see-also"></a>Consulte também  
  [Janelas de Memória](/visualstudio/debugger/memory-windows)

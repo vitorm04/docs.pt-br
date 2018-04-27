@@ -17,11 +17,11 @@ ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
 caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: de5825a6af1dd1b93c3c85651125cf817dc564f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 58b11c61253b199bdeeb2f373eed5f6a358b9e0e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-element-literal-visual-basic"></a>Literal do elemento XML (Visual Basic)
 
@@ -111,18 +111,18 @@ Um literal que representa um <xref:System.Xml.Linq.XElement> objeto.
  Você pode usar a sintaxe de literais de elemento XML para criar <xref:System.Xml.Linq.XElement> objetos no seu código.  
   
 > [!NOTE]
->  Um literal XML pode abranger várias linhas sem usar caracteres de continuação de linha. Esse recurso permite que você copiar o conteúdo de um documento XML e cole-o diretamente em um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programa.  
+>  Um literal XML pode abranger várias linhas sem usar caracteres de continuação de linha. Esse recurso permite que você copie o conteúdo de um documento XML e cole-o diretamente em um programa Visual Basic.  
   
  Expressões inseridas do formulário `<%= exp %>` permitem que você adicione informações dinâmicas a um literal de elemento XML. Para obter mais informações, consulte [expressões inseridas no XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   
- O [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador converte o literal de elemento XML em chamadas para o <xref:System.Xml.Linq.XElement.%23ctor%2A> construtor e, se necessário, o <xref:System.Xml.Linq.XAttribute.%23ctor%2A> construtor.  
+ O compilador do Visual Basic converte o literal de elemento XML em chamadas para o <xref:System.Xml.Linq.XElement.%23ctor%2A> construtor e, se necessário, o <xref:System.Xml.Linq.XAttribute.%23ctor%2A> construtor.  
   
 ## <a name="xml-namespaces"></a>Namespaces XML  
  Prefixos de namespace XML são úteis quando você tem que criar literais XML com elementos do mesmo namespace muitas vezes no código. Você pode usar prefixos de namespace XML global, que você define usando a `Imports` instrução ou prefixos locais, que você define usando a `xmlns:xmlPrefix="xmlNamespace"` sintaxe de atributo. Para obter mais informações, consulte [instrução Imports (Namespace XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
   
  Conformidade com as regras de escopo para namespaces XML, prefixos locais têm precedência sobre prefixos globais. No entanto, se um literal XML define um namespace XML, esse namespace não está disponível para expressões que aparecem em uma expressão inserida. A expressão inserida pode acessar somente o namespace XML global.  
   
- O [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador converte cada namespace XML global que é usado por um XML literal em uma definição de namespace local no código gerado. Namespaces XML globais que não são usados não aparecem no código gerado.  
+ O compilador do Visual Basic converte cada namespace XML global que é usado por um XML literal em uma definição de namespace local no código gerado. Namespaces XML globais que não são usados não aparecem no código gerado.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como criar um elemento XML simples que tem dois elementos aninhados vazios.  

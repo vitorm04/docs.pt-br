@@ -1,12 +1,13 @@
 ---
-title: "Valores de retorno de referência (Visual Basic)"
-ms.custom: 
+title: Valores de retorno de referência (Visual Basic)
+ms.custom: ''
 ms.date: 04/28/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic]
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5ef0cc69-eb3a-4a67-92a2-78585f223cb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 560607f7aa304b25314daabeef3952e6bbef7426
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 6055028ac92016cbc4b6f7bffa7f483e5ea76608
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="support-for-reference-return-values-visual-basic"></a>Suporte para valores de retorno de referência (Visual Basic)
 
-Começando com o c# 7, oferece suporte a linguagem c# *fazer referência a valores de retorno*. Uma maneira de entender os valores de retorno de referência é que eles são o oposto de argumentos que são transmitidos por referência a um método. Quando um argumento passado por referência é modificado, as alterações são refletidas no valor da variável no chamador. Quando um método fornece um valor de retorno de referência para um chamador, as modificações feitas para o valor de retorno de referência pelo chamador são refletidas nos dados de chamada do método.
+Começando com o c# 7.0, a linguagem c# suporta *fazer referência a valores de retorno*. Uma maneira de entender os valores de retorno de referência é que eles são o oposto de argumentos que são transmitidos por referência a um método. Quando um argumento passado por referência é modificado, as alterações são refletidas no valor da variável no chamador. Quando um método fornece um valor de retorno de referência para um chamador, as modificações feitas para o valor de retorno de referência pelo chamador são refletidas nos dados de chamada do método.
 
 Visual Basic não permite a você criar métodos com referência retorna valores, mas permite a você consumir os valores de retorno de referência. Em outras palavras, você pode chamar um método com um valor de retorno de referência e modificar esse valor de retorno, e as alterações para o valor de retorno de referência são refletidas nos dados de chamada do método.
 

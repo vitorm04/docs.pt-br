@@ -1,11 +1,12 @@
 ---
 title: Estrutura de um programa Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - conditional compilation [Visual Basic], Visual Basic
@@ -13,35 +14,35 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 136be5e2eab3ed0226e0ca471ee1d84cdc7a52d1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5def0de1e22af39eb16489a2d4d27bdbd1853f2b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Estrutura de um programa Visual Basic
-Um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programa é criado de blocos de construção padrão. Um *solução* consiste em um ou mais projetos. Um *projeto* por sua vez, pode conter um ou mais assemblies. Cada *assembly* é compilada a partir de um ou mais arquivos de origem. Um *arquivo de origem* fornece a definição e a implementação de classes, estruturas, módulos e interfaces, que contêm, por fim, todo o seu código.  
+Um programa do Visual Basic é criado de blocos de construção padrão. Um *solução* consiste em um ou mais projetos. Um *projeto* por sua vez, pode conter um ou mais assemblies. Cada *assembly* é compilada a partir de um ou mais arquivos de origem. Um *arquivo de origem* fornece a definição e a implementação de classes, estruturas, módulos e interfaces, que contêm, por fim, todo o seu código.  
   
- Para obter mais informações sobre esses blocos de construção de uma [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] de programa, consulte [soluções e projetos](/visualstudio/ide/solutions-and-projects-in-visual-studio) e [Assemblies e Cache de Assembly Global](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).  
+ Para obter mais informações sobre esses blocos de construção de um programa do Visual Basic, consulte [soluções e projetos](/visualstudio/ide/solutions-and-projects-in-visual-studio) e [Assemblies e Cache de Assembly Global](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).  
   
 ## <a name="file-level-programming-elements"></a>Elementos de programação de nível de arquivo  
  Quando você iniciar um projeto ou arquivo e abra o editor de código, você verá algum código já em vigor e na ordem correta. Qualquer código que você escreve deve seguir a sequência a seguir:  
   
-1.  `Option`instruções  
+1.  `Option` Instruções  
   
-2.  `Imports`instruções  
+2.  `Imports` Instruções  
   
-3.  `Namespace`instruções e os elementos de nível de namespace  
+3.  `Namespace` instruções e os elementos de nível de namespace  
   
  Se você inserir instruções em uma ordem diferente, erros de compilação podem ocorrer.  
   
  Um programa também pode conter instruções de compilação condicional. Você pode intercalar no arquivo de origem entre as instruções da sequência anterior.  
   
 ### <a name="option-statements"></a>Instruções de opção  
- `Option`instruções estabelecem regras básicas para código subsequente, ajudando a evitar erros de sintaxe e lógica. O [instrução Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md) garante que todas as variáveis são declaradas e escritas corretamente, o que reduz o tempo de depuração. O [instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) ajuda a minimizar a perda de dados e erros de lógica que pode ocorrer quando você trabalha entre variáveis de tipos de dados diferentes. O [Option Compare Statement](../../../visual-basic/language-reference/statements/option-compare-statement.md) Especifica as cadeias de caracteres de forma são comparadas entre si, com base nas suas `Binary` ou `Text` valores.  
+ `Option` instruções estabelecem regras básicas para código subsequente, ajudando a evitar erros de sintaxe e lógica. O [instrução Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md) garante que todas as variáveis são declaradas e escritas corretamente, o que reduz o tempo de depuração. O [instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) ajuda a minimizar a perda de dados e erros de lógica que pode ocorrer quando você trabalha entre variáveis de tipos de dados diferentes. O [Option Compare Statement](../../../visual-basic/language-reference/statements/option-compare-statement.md) Especifica as cadeias de caracteres de forma são comparadas entre si, com base nas suas `Binary` ou `Text` valores.  
   
 ### <a name="imports-statements"></a>Instruções Imports  
  Você pode incluir um [instrução Imports (tipo e Namespace .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para importar os nomes definidos fora do projeto. Um `Imports` instrução permite que seu código para se referir a classes e outros tipos definidos no namespace importado, sem precisar qualificá-los. Você pode usar como muitos `Imports` instruções conforme apropriado. Para obter mais informações, consulte [referências e a instrução Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md).  
@@ -88,7 +89,7 @@ Um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programa é criado de blocos de c
  Elementos de dados no nível de procedimento são limitados a constantes e variáveis locais.  
   
 ## <a name="the-main-procedure"></a>O procedimento principal  
- O `Main` procedimento é o primeiro código ao seu aplicativo tenha sido carregado. `Main`serve como o ponto de partida e controle geral para seu aplicativo. Existem quatro variedades de `Main`:  
+ O `Main` procedimento é o primeiro código ao seu aplicativo tenha sido carregado. `Main` serve como o ponto de partida e controle geral para seu aplicativo. Existem quatro variedades de `Main`:  
   
 -   `Sub Main()`  
   

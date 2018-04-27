@@ -1,25 +1,26 @@
 ---
-title: "Noções básicas de Aplicativo do Windows Forms (Visual Basic)"
+title: Noções básicas de Aplicativo do Windows Forms (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7872d3c7b19ec9cd7059cccf41e5fab50d85123b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: aaa7fbd679eceea53a673646173dc14dc4f209bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Noções básicas de Aplicativo do Windows Forms (Visual Basic)
-Uma parte importante da [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] é a capacidade de criar aplicativos do Windows Forms executados localmente nos computadores dos usuários. Você pode usar o Visual Studio para criar o aplicativo e interface do usuário usando Windows Forms. Um aplicativo Windows Forms baseia-se nas classes do <xref:System.Windows.Forms> namespace.  
+Uma parte importante do Visual Basic é a capacidade de criar aplicativos do Windows Forms executados localmente nos computadores dos usuários. Você pode usar o Visual Studio para criar o aplicativo e interface do usuário usando Windows Forms. Um aplicativo Windows Forms baseia-se nas classes do <xref:System.Windows.Forms> namespace.  
   
 ## <a name="designing-windows-forms-applications"></a>Aplicativos de formulários do Windows de criação  
  Você pode criar formulários do Windows e aplicativos de serviço do Windows com [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Para mais informações, consulte os seguintes tópicos:  
@@ -52,9 +53,9 @@ Uma parte importante da [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] é a capacid
   
 |Para|Consulte|  
 |--------|---------|  
-|Criar um novo aplicativo Windows Forms com[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[Passo a passo: Criando um formulário do Windows simples](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Criar um novo aplicativo Windows Forms com [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[Passo a passo: Criando um formulário do Windows simples](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |Usar controles em formulários|[Como Adicionar Controles ao Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
-|Criar gráficos com<xref:System.Drawing>|[Introdução à Programação de Elementos Gráficos](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
+|Criar gráficos com <xref:System.Drawing>|[Introdução à Programação de Elementos Gráficos](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Criar controles personalizados|[Como herdar da classe UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
   
 ## <a name="displaying-and-manipulating-data"></a>Exibindo e manipulando dados  
@@ -77,19 +78,19 @@ Uma parte importante da [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] é a capacid
 |Use a janela fontes de dados|[Passo a passo: exibindo dados em um Windows Form](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>Implantando aplicativos em computadores cliente  
- Depois de escrever seu aplicativo, você deve enviá-lo para seus usuários para que possam instalar e executá-lo em seus próprios computadores cliente. Usando o [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] tecnologia, você pode implantar seus aplicativos a partir de [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] usando apenas alguns cliques e fornece aos usuários uma URL apontando para seu aplicativo na Web. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]gerencia todos os elementos e dependências em seu aplicativo e garante que o aplicativo está instalado corretamente no computador cliente.  
+ Depois de escrever seu aplicativo, você deve enviá-lo para seus usuários para que possam instalar e executá-lo em seus próprios computadores cliente. Usando o [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] tecnologia, você pode implantar seus aplicativos a partir de [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] usando apenas alguns cliques e fornece aos usuários uma URL apontando para seu aplicativo na Web. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] gerencia todos os elementos e dependências em seu aplicativo e garante que o aplicativo está instalado corretamente no computador cliente.  
   
  Os aplicativos [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] podem ser configurados para serem executados somente quando o usuário estiver conectado à rede ou para execução online e offline. Quando você especifica que um aplicativo deve oferecer suporte a operação offline, [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] adiciona um link para seu aplicativo, o usuário **iniciar** menu, para que o usuário pode abri-lo sem usar a URL.  
   
- Quando você atualiza o seu aplicativo, publica um novo manifesto de implantação e uma nova cópia do seu aplicativo em seu servidor Web. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]detecta que há uma atualização disponível e atualiza a instalação do usuário; nenhuma programação personalizada é necessária para atualizar montagens antigas.  
+ Quando você atualiza o seu aplicativo, publica um novo manifesto de implantação e uma nova cópia do seu aplicativo em seu servidor Web. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] detecta que há uma atualização disponível e atualiza a instalação do usuário; nenhuma programação personalizada é necessária para atualizar montagens antigas.  
   
  Para obter uma introdução completa [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)], consulte [Implantação e segurança do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Para obter informações passo a passo sobre como usar esses recursos, consulte os seguintes tópicos:  
   
 |Para|Consulte|  
 |--------|---------|  
-|Implantar um aplicativo com[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Como publicar um aplicativo ClickOnce usando o Assistente de Publicação](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Passo a passo: implantando um aplicativo ClickOnce manualmente](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|Implantar um aplicativo com [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Como publicar um aplicativo ClickOnce usando o Assistente de Publicação](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Passo a passo: implantando um aplicativo ClickOnce manualmente](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
 |Atualizar um [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] implantação|[Como gerenciar atualizações para um aplicativo ClickOnce](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
-|Gerenciar a segurança com[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Como habilitar configurações de segurança do ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
+|Gerenciar a segurança com [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Como habilitar configurações de segurança do ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>Outros controles e recursos  
  Existem muitos outros recursos dos Windows Forms que tornam as tarefas comuns de implementação mais fáceis e rápidas, como o suporte à criação de caixas de diálogo, impressão, adição da Ajuda e de documentação e localização do seu aplicativo para diversos idiomas. Além disso, o Windows Forms depende do sistema de segurança robusto o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], permitindo que você libere aplicativos mais seguros a seus clientes.  

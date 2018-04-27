@@ -1,11 +1,12 @@
 ---
-title: "Como chamar uma função do Windows que use tipos não assinados (Visual Basic)"
-ms.custom: 
+title: Como chamar uma função do Windows que use tipos não assinados (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -20,21 +21,21 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 78e6789e7def5deeb8394e3aefecfdc187ec6ef6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: dd0738300ec846041e78f19836f29e7adff1c821
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Como chamar uma função do Windows que use tipos não assinados (Visual Basic)
-Se você está consumindo uma classe, módulo ou estrutura que tem membros de tipos de inteiro sem sinal, você pode acessar esses membros com [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+Se você está consumindo uma classe, módulo ou estrutura que tem membros de tipos de inteiro sem sinal, você pode acessar esses membros com o Visual Basic.  
   
 ### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Para chamar uma função do Windows que usa um tipo não assinado  
   
-1.  Use um [instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md) para informar [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] qual biblioteca contém a função, o que é o nome nessa biblioteca, o que é a sequência de chamada e como converter cadeias de caracteres quando chamá-lo.  
+1.  Use um [instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md) para instruir o Visual Basic qual biblioteca contém a função, o que é o nome nessa biblioteca, o que é a sequência de chamada e como converter cadeias de caracteres quando chamá-lo.  
   
 2.  No `Declare` instrução, use `UInteger`, `ULong`, `UShort`, ou `Byte` conforme apropriado para cada parâmetro com um tipo não assinado.  
   

@@ -1,11 +1,12 @@
 ---
 title: Estruturas e classes (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], vs. structures
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 08e31481feac7a6184c6b29269d193c749f440ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cf72fb0a7a34d45774cb9a58c037ebcb1c05288f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="structures-and-classes-visual-basic"></a>Estruturas e classes (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]unifica a sintaxe para estruturas e classes, com o resultado que ambas as entidades suportam a maioria dos mesmos recursos. No entanto, também há diferenças importantes entre as estruturas e classes.  
+Visual Basic unifica a sintaxe para estruturas e classes, com o resultado que ambas as entidades suportam a maioria dos mesmos recursos. No entanto, também há diferenças importantes entre as estruturas e classes.  
   
  As classes têm a vantagem de ser tipos de referência — passar uma referência é mais eficiente do que passar uma variável de estrutura com todos os seus dados. Por outro lado, as estruturas não requerem alocação de memória na pilha global.  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="instances-and-variables"></a>Instâncias e variáveis  
  Como estruturas são tipos de valor, cada variável de estrutura é permanentemente associada a uma instância de estrutura individual. Mas classes são tipos de referência e uma variável de objeto pode fazer referência a várias instâncias de classe em momentos diferentes. Essa distinção afeta o uso de classes e estruturas das seguintes maneiras:  
   
--   **Inicialização.** Uma variável de estrutura implicitamente inclui uma inicialização dos elementos usando o construtor sem parâmetros da estrutura. Portanto, `Dim s As struct1` é equivalente a `Dim s As struct1 = New struct1()`.  
+-   **inicialização.** Uma variável de estrutura implicitamente inclui uma inicialização dos elementos usando o construtor sem parâmetros da estrutura. Portanto, `Dim s As struct1` é equivalente a `Dim s As struct1 = New struct1()`.  
   
 -   **Atribuir variáveis.** Quando você atribui uma variável de estrutura para outro ou passa uma instância de estrutura para um argumento de procedimento, os valores atuais de todos os elementos de variável são copiados para a nova estrutura. Quando você atribui uma variável de objeto para outro ou passa uma variável de objeto para um procedimento, o ponteiro de referência é copiado.  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 11/21/2017
   
      Elementos de estrutura, no entanto, são isolados em sua própria instância. Alterações em seus valores não serão refletidas em qualquer outra variável de estrutura, mesmo em outras instâncias do mesmo `Structure` declaração.  
   
--   **Igualdade.** Teste de igualdade de duas estruturas deve ser executada com um elemento pelo teste. Duas variáveis de objeto podem ser comparados usando o <xref:System.Object.Equals%2A> método. <xref:System.Object.Equals%2A>Indica se as duas variáveis apontam para a mesma instância.  
+-   **Igualdade.** Teste de igualdade de duas estruturas deve ser executada com um elemento pelo teste. Duas variáveis de objeto podem ser comparados usando o <xref:System.Object.Equals%2A> método. <xref:System.Object.Equals%2A> Indica se as duas variáveis apontam para a mesma instância.  
   
 ## <a name="see-also"></a>Consulte também  
  [Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  

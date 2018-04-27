@@ -1,24 +1,26 @@
 ---
-title: "Funções canônicas de cadeias de caracteres"
-ms.custom: 
+title: Funções canônicas de cadeias de caracteres
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5e2cbebd-5df3-47c7-b0e2-49a17ab22bfb
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2eef6928098f762274ecd19272b34cce6ab41920
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8bead8bc61c06a2daf4dd95dca8808caf823f245
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="string-canonical-functions"></a>Funções canônicas de cadeias de caracteres
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] inclui funções canônicas de cadeia de caracteres.  
@@ -30,7 +32,7 @@ ms.lasthandoff: 01/17/2018
 |--------------|-----------------|  
 |`Concat (` `string1`, `string2``)`|Retorna uma cadeia de caracteres que contém `string2` acrescentado a `string1`.<br /><br /> **Argumentos**<br /><br /> `string1`: A cadeia de caracteres a `string2` que é acrescentado.<br /><br /> `string2`: A cadeia de caracteres que é acrescentada a `string1`.<br /><br /> **Valor retornado**<br /><br /> Um `String`. Um erro ocorrerá se o comprimento da cadeia de caracteres do valor de retorno é maior do que o comprimento máximo permitido.<br /><br /> **Exemplo**<br /><br /> `-- The following example returns abcxyz.`<br /><br /> `Concat('abc', 'xyz')`|  
 |`Contains (` `string`, `target``)`|Retorna `true` se `target` está contido em `string`.<br /><br /> **Argumentos**<br /><br /> `string`: A cadeia de caracteres que é pesquisada.<br /><br /> `target`: A cadeia de caracteres de destino por que é procurada.<br /><br /> **Valor retornado**<br /><br /> `true` se `target` está contido em `string`; se não `false`.<br /><br /> **Exemplo**<br /><br /> `-- The following example returns true.`<br /><br /> `Contains('abc', 'bc')`|  
-|`EndsWith (` `string`, `target``)`|Retorna `true` se `target` termina com `string`.<br /><br /> **Argumentos**<br /><br /> `string`: A cadeia de caracteres que é pesquisada.<br /><br /> `target`: A cadeia de caracteres de destino procurarou no final de `string`.<br /><br /> **Valor retornado**<br /><br /> `True` se `string` termina com `target`; se não `false`.<br /><br /> **Exemplo**<br /><br /> `-- The following example returns true.`<br /><br /> `EndsWith('abc', 'bc')`**Observação:** se você estiver usando o [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] provedor de dados, essa função retorna `false` se a cadeia de caracteres é armazenada em uma coluna de cadeia de caracteres de comprimento fixo e `target` é uma constante. Nesse caso, a cadeia de caracteres inteira é pesquisada, incluindo todos os espaço à direita de preenchimento. Uma solução alternativa é possível quebrar dados a cadeia de caracteres fixa comprimento, como no exemplo a seguir: `EndsWith(TRIM(string), target)`|  
+|`EndsWith (` `string`, `target``)`|Retorna `true` se `target` termina com `string`.<br /><br /> **Argumentos**<br /><br /> `string`: A cadeia de caracteres que é pesquisada.<br /><br /> `target`: A cadeia de caracteres de destino procurarou no final de `string`.<br /><br /> **Valor retornado**<br /><br /> `True` se `string` termina com `target`; se não `false`.<br /><br /> **Exemplo**<br /><br /> `-- The following example returns true.`<br /><br /> `EndsWith('abc', 'bc')` **Observação:** se você estiver usando o provedor de dados do SQL Server, essa função retorna `false` se a cadeia de caracteres é armazenada em uma coluna de cadeia de caracteres de comprimento fixo e `target` é uma constante. Nesse caso, a cadeia de caracteres inteira é pesquisada, incluindo todos os espaço à direita de preenchimento. Uma solução alternativa é possível quebrar dados a cadeia de caracteres fixa comprimento, como no exemplo a seguir: `EndsWith(TRIM(string), target)`|  
 |`IndexOf(` `target`, `string``)`|Retorna a posição de `target` dentro de `string`0, ou se não foi encontrado. Retorna 1 para indicar o início de `string`. A numeração de índice parte de 1.<br /><br /> **Argumentos**<br /><br /> `target`: A cadeia de caracteres por que é procurada.<br /><br /> `string`: A cadeia de caracteres que é pesquisada.<br /><br /> **Valor retornado**<br /><br /> Um `Int32`.<br /><br /> **Exemplo**<br /><br /> `-- The following example returns 4.`<br /><br /> `IndexOf('xyz', 'abcxyz')`|  
 |`Left (` `string`, `length``)`|Retorna o primeiro caracteres de `length` do lado esquerdo de `string`. Se o comprimento de `string` é menor que `length`, a cadeia de caracteres inteira é retornada.<br /><br /> **Argumentos**<br /><br /> `string`: `String`.<br /><br /> `length`: Uma `Int16`, `Int32`, `Int64`, ou `Byte`. `length` não pode ser menor que zero.<br /><br /> **Valor retornado**<br /><br /> Um `String`.<br /><br /> **Exemplo**<br /><br /> `-- The following example returns abc.`<br /><br /> `Left('abcxyz', 3)`|  
 |`Length (``string``)`|Retorna o tamanho (de`Int32`), em caracteres, a cadeia de caracteres.<br /><br /> **Argumentos**<br /><br /> `string`: `String`.<br /><br /> **Valor retornado**<br /><br /> Um `Int32`.<br /><br /> **Exemplo**<br /><br /> `-- The following example returns 6.`<br /><br /> `Legth('abcxyz')`|  

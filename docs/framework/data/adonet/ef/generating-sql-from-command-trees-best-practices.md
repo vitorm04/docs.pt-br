@@ -1,24 +1,26 @@
 ---
-title: "Gerando SQL das árvores de comando - práticas recomendadas"
-ms.custom: 
+title: Gerando SQL das árvores de comando - práticas recomendadas
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d68194ab83a6606337a33668470411ed8b1c6957
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 037d1eaa8d781d012cde7a1bd3b08aa7003edd77
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Gerando SQL das árvores de comando - práticas recomendadas
 O modelo das árvores de comando de consulta de saída a consulta expressável no SQL. No entanto, há determinados desafios comum para criadores de provedor para gerar o SQL de uma árvore de comando de saída. Este tópico discute esses desafios. No próximo tópico, o provedor exemplo mostra como resolver esses desafios.  
@@ -147,7 +149,7 @@ ON b.y = d.z
  Expressões podem ser reutilizadas na árvore de comando de consulta passado pelo [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Não suponha que cada expressão aparece apenas uma vez na árvore de comando de consulta.  
   
 ## <a name="mapping-primitive-types"></a>Tipos primitivos de mapeamento  
- Quando mapear conceitual (EDM) tipos para tipos de provedor, você deve mapear para o tipo o maior (Int32) para que todos os possíveis valores caber. Além disso, evite mapear para tipos que não podem ser usados para muitas operações, como BLOB tipos (por exemplo, `ntext` em [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]).  
+ Quando mapear conceitual (EDM) tipos para tipos de provedor, você deve mapear para o tipo o maior (Int32) para que todos os possíveis valores caber. Além disso, evite o mapeamento para tipos que não pode ser usado para várias operações, como tipos BLOB (por exemplo, `ntext` no SQL Server).  
   
 ## <a name="see-also"></a>Consulte também  
  [Geração de SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

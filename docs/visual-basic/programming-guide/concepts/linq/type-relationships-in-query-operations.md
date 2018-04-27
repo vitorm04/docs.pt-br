@@ -1,12 +1,13 @@
 ---
-title: "Relacionamentos de tipo em operações de consulta (Visual Basic)"
-ms.custom: 
+title: Relacionamentos de tipo em operações de consulta (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - variable relationships [LINQ in Visual Basic]
@@ -18,14 +19,14 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1b93188475dd2bb00aea044ff178028eb87e00d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e38f51d77869dcca8a81fdcbc70aed32c4146935
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relacionamentos de tipo em operações de consulta (Visual Basic)
 Variáveis usadas em [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] consulta operações são fortemente tipadas e devem ser compatíveis entre si. Tipagem forte é usada na fonte de dados, a consulta em si e a execução da consulta. A ilustração a seguir identifica os termos usados para descrever um [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] consulta. Para obter mais informações sobre as partes de uma consulta, consulte [operações básicas de consulta (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
@@ -35,7 +36,7 @@ Partes de uma consulta LINQ
   
  O tipo da variável de intervalo na consulta deve ser compatível com o tipo dos elementos na fonte de dados. O tipo da variável de consulta deve ser compatível com o elemento de sequência definido no `Select` cláusula. Por fim, o tipo dos elementos da sequência também deve ser compatível com o tipo da variável de controle de loop é usado no `For Each` instrução que executa a consulta. Este tipagem forte facilita a identificação de erros de tipo em tempo de compilação.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]conveniente forte digitando implementando inferência de tipo local, também conhecido como *implícita digitando*. Que o recurso é usado no exemplo anterior, e você verá que ele usado em todo o [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] amostras e documentação. No Visual Basic, a inferência de tipo local é realizada simplesmente usando um `Dim` instrução sem um `As` cláusula. No exemplo a seguir, `city` é fortemente tipada como uma cadeia de caracteres.  
+ Visual Basic conveniente forte digitando implementando inferência de tipo local, também conhecido como *implícita digitando*. Que o recurso é usado no exemplo anterior, e você verá que ele usado em todo o [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] amostras e documentação. No Visual Basic, a inferência de tipo local é realizada simplesmente usando um `Dim` instrução sem um `As` cláusula. No exemplo a seguir, `city` é fortemente tipada como uma cadeia de caracteres.  
   
  [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
   

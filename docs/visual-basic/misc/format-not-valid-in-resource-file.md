@@ -11,14 +11,14 @@ ms.assetid: e986ab45-e3ce-430e-8704-5882e5da1104
 caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ab126e3ac030e855659d5e4a02e523eefb7860e7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b36b533e889135d03dd7f17d01000c7e00c57790
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="format-not-valid-in-resource-file"></a>Formato inválido no arquivo de recurso
-Um arquivo de recurso em seu projeto não segue o formato padrão para um arquivo de recurso do Windows ou há uma incompatibilidade entre o arquivo de recurso e o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] projeto.  
+Um arquivo de recurso em seu projeto não segue o formato padrão para um arquivo de recurso do Windows ou há uma incompatibilidade entre o arquivo de recurso e o projeto do Visual Basic.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   

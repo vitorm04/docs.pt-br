@@ -1,12 +1,13 @@
 ---
-title: "Como obter e definir a célula atual no controle DataGridView dos Windows Forms"
-ms.custom: 
+title: Como obter e definir a célula atual no controle DataGridView dos Windows Forms
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], setting current cell
 - cells [Windows Forms], getting and setting current
 ms.assetid: b0e41e57-493a-4bd0-9376-a6f76723540c
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 75f8a96b77ffcd40a51cf484f50032f7f2e44309
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b53d135a1d019ce20dfc8c5c2c1ba59e5968306e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-get-and-set-the-current-cell-in-the-windows-forms-datagridview-control"></a>Como obter e definir a célula atual no controle DataGridView dos Windows Forms
 Interação com o <xref:System.Windows.Forms.DataGridView> geralmente requer que você descobre programaticamente célula que está ativa no momento. Talvez você precise alterar a célula atual. Você pode executar essas tarefas com o <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> propriedade.  
@@ -52,9 +54,9 @@ Interação com o <xref:System.Windows.Forms.DataGridView> geralmente requer que
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
--   <xref:System.Windows.Forms.Button>controles denominados `getCurrentCellButton` e `setCurrentCellButton`. Em [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], você deve anexar o <xref:System.Windows.Forms.Control.Click> eventos para cada botão ao manipulador de eventos associados no código de exemplo.  
+-   <xref:System.Windows.Forms.Button> controles denominados `getCurrentCellButton` e `setCurrentCellButton`. No Visual c#, você deve anexar o <xref:System.Windows.Forms.Control.Click> eventos para cada botão ao manipulador de eventos associados no código de exemplo.  
   
--   Um <xref:System.Windows.Forms.DataGridView> controle chamado `dataGridView1`.  
+-   Um controle <xref:System.Windows.Forms.DataGridView> chamado `dataGridView1`.  
   
 -   Referências aos assemblies <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   

@@ -1,30 +1,31 @@
 ---
-title: "Visão geral do modelo de aplicativo do Visual Basic"
+title: Visão geral do modelo de aplicativo do Visual Basic
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 33b0e01317a6dab18ea03047c146def32b5675ad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 74a8fcfe3f49ab042b3bb4775f9f6e84374db0ae
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Visão geral do modelo de aplicativo do Visual Basic
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Fornece um modelo bem definido para controlar o comportamento de aplicativos Windows Forms: o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] modelo de aplicativo. Esse modelo inclui eventos para lidar com o aplicativo inicialização e desligamento, bem como dos eventos para capturar exceções não manipuladas. Ele também fornece suporte para desenvolver aplicativos de instância única. O modelo de aplicativo é extensível, para que os desenvolvedores que precisam de mais controle podem personalizar seus métodos substituíveis.  
+Visual Basic fornece um modelo bem definido para controlar o comportamento de aplicativos Windows Forms: o modelo de aplicativo do Visual Basic. Esse modelo inclui eventos para lidar com o aplicativo inicialização e desligamento, bem como dos eventos para capturar exceções não manipuladas. Ele também fornece suporte para desenvolver aplicativos de instância única. O modelo de aplicativo é extensível, para que os desenvolvedores que precisam de mais controle podem personalizar seus métodos substituíveis.  
   
 ## <a name="uses-for-the-application-model"></a>Usos para o modelo de aplicativo  
  Precisa de um aplicativo típico para executar tarefas quando ele é iniciado e desligado. Por exemplo, quando ele é iniciado, o aplicativo pode exibir uma tela inicial, estabelecer conexões de banco de dados, carregar um estado salvo e assim por diante. Quando o aplicativo é desligado, ele pode fechar conexões de banco de dados, salvar o estado atual e assim por diante. Além disso, o aplicativo pode executar código específico quando o aplicativo for suspenso inesperadamente, tais como durante uma exceção sem tratamento.  
   
- O [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Application model torna fácil criar um *instância única* aplicativo. Um aplicativo de instância única difere de um aplicativo normal em que apenas uma instância do aplicativo pode ser executado em um momento. Uma tentativa de iniciar outra instância de um aplicativo de instância única resulta na instância original ser notificada — por meio do `StartupNextInstance` evento — que outra tentativa de lançamento foi feita. A notificação inclui argumentos de linha de comando da instância subsequente. A instância subsequente do aplicativo é fechada antes que qualquer inicialização possa ocorrer.  
+ O modelo de aplicativo do Visual Basic torna fácil criar um *instância única* aplicativo. Um aplicativo de instância única difere de um aplicativo normal em que apenas uma instância do aplicativo pode ser executado em um momento. Uma tentativa de iniciar outra instância de um aplicativo de instância única resulta na instância original ser notificada — por meio do `StartupNextInstance` evento — que outra tentativa de lançamento foi feita. A notificação inclui argumentos de linha de comando da instância subsequente. A instância subsequente do aplicativo é fechada antes que qualquer inicialização possa ocorrer.  
   
  Um aplicativo de instância única inicia e verifica se ele é a primeira instância ou uma instância subsequente do aplicativo:  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
 -   **Aplicativo encerrado**. O aplicativo fornece o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> evento para sinalizar quando ele está prestes a desligar. Nesse evento manipulador, você pode ter certeza de que as operações que seu aplicativo precisa para executar — fechar e salvar, por exemplo — são concluídas. Você pode configurar seu aplicativo para desligado quando fecha o formulário principal ou para desligado somente quando todos os formulários fecham.  
   
 ## <a name="availability"></a>Disponibilidade  
- Por padrão, o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] modelo de aplicativo está disponível para projetos de formulários do Windows. Se você configurar o aplicativo para usar um objeto diferente de inicialização, ou o código do aplicativo com um personalizado `Sub Main`, então esse objeto ou classe talvez precise fornecer uma implementação de <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe para usar o modelo de aplicativo. Para obter informações sobre como alterar o objeto de inicialização, consulte [página de aplicativo, Designer de projeto (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+ Por padrão, o modelo de aplicativo do Visual Basic está disponível para projetos de formulários do Windows. Se você configurar o aplicativo para usar um objeto diferente de inicialização, ou o código do aplicativo com um personalizado `Sub Main`, então esse objeto ou classe talvez precise fornecer uma implementação de <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe para usar o modelo de aplicativo. Para obter informações sobre como alterar o objeto de inicialização, consulte [página de aplicativo, Designer de projeto (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  

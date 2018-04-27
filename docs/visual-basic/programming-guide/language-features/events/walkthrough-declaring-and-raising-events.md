@@ -1,11 +1,12 @@
 ---
 title: Declarando e gerando eventos (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declarations [Visual Basic], events
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0bf75cfba5102be5d837af385e2d3578f78a03c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 27db585084703607a7389f5a0aa3eba6f70dd793
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Instruções passo a passo: declarando e acionando eventos (Visual Basic)
 Este passo a passo demonstra como declarar e disparar eventos de uma classe denominada `Widget`. Depois de concluir as etapas, talvez você queira ler o tópico [passo a passo: Manipulando eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), que mostra como usar eventos de `Widget` objetos para fornecer informações de status em um aplicativo.  
@@ -36,7 +37,7 @@ Este passo a passo demonstra como declarar e disparar eventos de uma classe deno
   
 #### <a name="to-build-the-code-example-for-this-topic"></a>Para criar o exemplo de código neste tópico  
   
-1.  Abra uma nova [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] aplicativo do Windows do projeto e criar um formulário denominado `Form1`.  
+1.  Abra um novo projeto de aplicativo do Windows Visual Basic e crie um formulário denominado `Form1`.  
   
 2.  Adicione dois botões e um rótulo para `Form1`.  
   
@@ -61,7 +62,7 @@ Este passo a passo demonstra como declarar e disparar eventos de uma classe deno
 > [!NOTE]
 >  Você pode declarar argumentos de evento exatamente como você faria argumentos de procedimentos, com as seguintes exceções: eventos não podem ter `Optional` ou `ParamArray` argumentos e eventos não têm valores de retorno.  
   
- O `PercentDone` é gerado pelo `LongTask` método o `Widget` classe. `LongTask`leva dois argumentos: o período de tempo que o método estaria para trabalho e o intervalo de tempo mínimo antes de fazer `LongTask` pare de gerar o `PercentDone` evento.  
+ O `PercentDone` é gerado pelo `LongTask` método o `Widget` classe. `LongTask` leva dois argumentos: o período de tempo que o método estaria para trabalho e o intervalo de tempo mínimo antes de fazer `LongTask` pare de gerar o `PercentDone` evento.  
   
 #### <a name="to-raise-the-percentdone-event"></a>Para gerar o evento PercentDone  
   

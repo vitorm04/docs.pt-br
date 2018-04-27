@@ -1,11 +1,12 @@
 ---
-title: "Caracteres especiais no código (Visual Basic)"
-ms.custom: 
+title: Caracteres especiais no código (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.)
@@ -36,17 +37,17 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 11c5ef9ad41fc2362d9ba4f2cb5eb5b63a9ca31c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b724c48320f74045d7192be6d6e269c00511ffc9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Caracteres especiais no código (Visual Basic)
-Às vezes, você precisa usar caracteres especiais em seu código, ou seja, caracteres não alfabéticos ou numéricos. A pontuação e caracteres especiais no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] conjunto de caracteres têm vários usos, da organização de texto de programa para definir as tarefas que executa o compilador ou o programa compilado. Eles não especificam uma operação a ser executada.  
+Às vezes, você precisa usar caracteres especiais em seu código, ou seja, caracteres não alfabéticos ou numéricos. A pontuação e caracteres especiais no conjunto de caracteres do Visual Basic tem vários usos da organização de texto de programa para definir as tarefas que executa o compilador ou o programa compilado. Eles não especificam uma operação a ser executada.  
   
 ## <a name="parentheses"></a>Parênteses  
  Use parênteses quando você define um procedimento, como um `Sub` ou `Function`. Você deve colocar todas as listas de argumentos de procedimento entre parênteses. Você também usar parênteses para colocar as variáveis ou argumentos em grupos lógicos, especialmente para substituir a ordem padrão de precedência de operador em uma expressão complexa. O exemplo a seguir ilustra essa situação.  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/21/2017
  Após a execução do código anterior, o valor de `d` é 8.225 e o valor de `e` é 3. O cálculo de `d` usa a prioridade padrão de `/` sobre `+` e é equivalente a `d = b + (c / a)`. Os parênteses no cálculo de `e` anular a precedência padrão.  
   
 ## <a name="separators"></a>Separadores  
- Separadores fazem o que seu nome sugere: separar seções de código. Em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], o caractere separador é dois-pontos (`:`). Use separadores quando você deseja incluir várias instruções em uma única linha, em vez de linhas separadas. Isso economiza espaço e melhora a legibilidade do seu código. O exemplo a seguir mostra três instruções separadas por vírgulas.  
+ Separadores fazem o que seu nome sugere: separar seções de código. No Visual Basic, o caractere separador é dois-pontos (`:`). Use separadores quando você deseja incluir várias instruções em uma única linha, em vez de linhas separadas. Isso economiza espaço e melhora a legibilidade do seu código. O exemplo a seguir mostra três instruções separadas por vírgulas.  
   
  [!code-vb[VbVbcnConventions#12](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_2.vb)]  
   

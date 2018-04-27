@@ -1,28 +1,29 @@
 ---
 title: Hospedando novamente o designer de fluxo de trabalho
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bec1fc28-f902-4edb-86c5-436cec802c2b
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba0308505f54b7c96259af5d797dd7c1957e6a92
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a37c37aa34db8f04a354d3b6e323c414b4c0ee07
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="rehosting-the-workflow-designer"></a>Hospedando novamente o designer de fluxo de trabalho
 O [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] pode ser hospedado novamente em ambientes fora do [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] para criar, modificar e monitorar fluxos de trabalho.  
   
- O tipo <xref:System.Activities.Presentation.WorkflowDesigner> é um wrapper da tela, da grade de propriedades e de outros elementos, e expõe um modelo de programação básico para manipular a maioria dos cenários nova hospedagem do designer. Hospedar o <xref:System.Activities.Presentation.WorkflowDesigner> dentro de um aplicativo do [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] é um cenário comum de nova hospedagem para [!INCLUDE[wfd2](../../../includes/wfd2-md.md)].  
+ O tipo <xref:System.Activities.Presentation.WorkflowDesigner> é um wrapper da tela, da grade de propriedades e de outros elementos, e expõe um modelo de programação básico para manipular a maioria dos cenários nova hospedagem do designer. Hospedando o <xref:System.Activities.Presentation.WorkflowDesigner> dentro de um Windows Presentation Foundation (WPF) o aplicativo é um cenário comum rehosting para [!INCLUDE[wfd2](../../../includes/wfd2-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Tarefa 1: Criar um novo aplicativo do Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  

@@ -1,11 +1,12 @@
 ---
-title: "Constantes definidas pelo usuário (Visual Basic)"
-ms.custom: 
+title: Constantes definidas pelo usuário (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - constants [Visual Basic], circular references
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ce839c3e843a52b31e40c13cb765f8eaf9959ea4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9f4210193aeb386d3a4a76794cc9329cb24b2317
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="user-defined-constants-visual-basic"></a>Constantes definidas pelo usuário (Visual Basic)
 Uma constante é um nome significativo que toma o lugar de um número ou uma cadeia de caracteres que não é alterado. Constantes armazenam valores que, como o nome implica, permanecem constantes durante a execução de um aplicativo. Você pode usar constantes definidas por controles ou componentes que você trabalha com, ou você pode criar seus próprios. Constantes que você mesmo cria são descritas como *definida pelo usuário*.  
@@ -61,7 +62,7 @@ Uma constante é um nome significativo que toma o lugar de um número ou uma cad
  [!code-vb[VbEnumsTask#16](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_4.vb)]  
 [!code-vb[VbEnumsTask#17](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_5.vb)]  
   
- Se ocorrer um ciclo, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] gera um erro do compilador.  
+ Se ocorrer um ciclo, Visual Basic gera um erro do compilador.  
   
 ## <a name="see-also"></a>Consulte também  
  [Instrução Const](../../../../visual-basic/language-reference/statements/const-statement.md)  

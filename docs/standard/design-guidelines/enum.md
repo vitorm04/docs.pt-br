@@ -1,12 +1,12 @@
 ---
 title: Design de enum
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - type design guidelines, enumerations
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3ee73e8677ca3fd48f4bb3c94bd4e15c49a564c7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c3e89567761367ddcd67078b138c15b982a0d666
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="enum-design"></a>Design de enum
 Enumerações são um tipo especial de tipo de valor. Há dois tipos de enums: enums enums e o sinalizador simples.  
@@ -77,7 +77,7 @@ Enumerações são um tipo especial de tipo de valor. Há dois tipos de enums: e
   
  **X não** estender <xref:System.Enum?displayProperty=nameWithType> diretamente.  
   
- <xref:System.Enum?displayProperty=nameWithType>é um tipo especial usado pelo CLR para criar enumerações definidas pelo usuário. A maioria das linguagens de programação fornecem um elemento de programação que fornece acesso a essa funcionalidade. Por exemplo, no c# o `enum` palavra-chave é usada para definir uma enumeração.  
+ <xref:System.Enum?displayProperty=nameWithType> é um tipo especial usado pelo CLR para criar enumerações definidas pelo usuário. A maioria das linguagens de programação fornecem um elemento de programação que fornece acesso a essa funcionalidade. Por exemplo, no c# o `enum` palavra-chave é usada para definir uma enumeração.  
   
 <a name="design"></a>   
 ### <a name="designing-flag-enums"></a>Projetando Enums de sinalizador  
@@ -87,7 +87,7 @@ Enumerações são um tipo especial de tipo de valor. Há dois tipos de enums: e
   
  **✓ CONSIDERE** fornecer valores de enum especial para comumente usadas combinações de sinalizadores.  
   
- Operações bit a bit são um conceito avançado e não será necessárias para tarefas simples. <xref:System.IO.FileAccess.ReadWrite>é um exemplo de tal um valor especial.  
+ Operações bit a bit são um conceito avançado e não será necessárias para tarefas simples. <xref:System.IO.FileAccess.ReadWrite> é um exemplo de tal um valor especial.  
   
  **X Evite** criando enums sinalizador onde algumas combinações de valores são inválidas.  
   
@@ -103,9 +103,9 @@ Enumerações são um tipo especial de tipo de valor. Há dois tipos de enums: e
   
  Se você tiver dados reais sobre incompatibilidades entre aplicativos causados por adições para um enum, considere adicionar uma nova API que retorna os valores novos e antigos e substituir a antiga API, o que deve continuar a retornar apenas os valores antigos. Isso irá garantir que seus aplicativos existentes permanecem compatíveis.  
   
- *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
+ *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
- *Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
+ *Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
 ## <a name="see-also"></a>Consulte também  
  [Diretrizes de Design de tipo](../../../docs/standard/design-guidelines/type.md)  

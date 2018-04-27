@@ -1,12 +1,13 @@
 ---
-title: "Operações síncronas e assíncronas"
-ms.custom: 
+title: Operações síncronas e assíncronas
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3d108c8c84af2563e48a9f339df2a96f8218c742
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 123186dd5f0d63693c04c0857709292ce122f918
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Operações síncronas e assíncronas
 Este tópico discute como implementar e chamar as operações de serviço assíncronas.  
@@ -53,7 +55,7 @@ Este tópico discute como implementar e chamar as operações de serviço assín
   
 -   Se você estiver chamando operações em uma página do ASP.NET, use páginas assíncronas.  
   
--   Se você estiver chamando operações em qualquer aplicativo que seja single-threaded, como o Windows Forms ou o [!INCLUDE[avalon1](../../../includes/avalon1-md.md)]. Ao usar o modelo de chamada assíncrona com base em eventos, o evento resultante é gerado no thread da interface do usuário, adicionando capacidade de resposta ao aplicativo sem exigir que você mesmo manipule vários threads.  
+-   Se você estiver chamando as operações de qualquer aplicativo que é um único thread, como formulários do Windows ou Windows Presentation Foundation (WPF). Ao usar o modelo de chamada assíncrona com base em eventos, o evento resultante é gerado no thread da interface do usuário, adicionando capacidade de resposta ao aplicativo sem exigir que você mesmo manipule vários threads.  
   
 -   Em geral, se você puder escolher entre uma chamada síncrona e uma chamada assíncrona, escolha a chamada assíncrona.  
   

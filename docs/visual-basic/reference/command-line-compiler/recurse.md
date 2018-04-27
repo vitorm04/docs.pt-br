@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 84a0b670-33ae-44c4-a46a-b90388809317
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb1cc114c2882aa82787f94a271dd7684c716b01
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 195d4b8f8e88d22e63c29ab9152399eb5c4a19df
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-recurse"></a>-recurse
 Compila arquivos de código-fonte em todos os diretórios filhos do diretório do projeto ou o diretório especificado.  
@@ -42,13 +42,13 @@ Compila arquivos de código-fonte em todos os diretórios filhos do diretório d
 >  O `-recurse` opção não está disponível no ambiente de desenvolvimento do Visual Studio; está disponível somente quando estiver compilando na linha de comando.  
   
 ## <a name="example"></a>Exemplo  
- O comando a seguir compila todos os [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] arquivos no diretório atual.  
+ O comando a seguir compila todos os arquivos do Visual Basic no diretório atual.  
   
 ```console
 vbc *.vb  
 ```  
   
- O comando a seguir compila todos os [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] arquivos de `Test\ABC` diretório e quaisquer diretórios abaixo dela e, em seguida, gera `Test.ABC.dll`.  
+ O comando a seguir compila todos os arquivos do Visual Basic no `Test\ABC` diretório e quaisquer diretórios abaixo dela e, em seguida, gera `Test.ABC.dll`.  
   
 ```console
 vbc -target:library -out:Test.ABC.dll -recurse:Test\ABC\*.vb  

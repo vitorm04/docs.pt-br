@@ -1,12 +1,13 @@
 ---
 title: Nomes de elementos e atributos XML declarados (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - declarations [XML in Visual Basic]
@@ -15,20 +16,20 @@ helpviewer_keywords:
 - attribute names [XML in Visual Basic]
 - XML literals [Visual Basic], element names
 ms.assetid: cc110118-b6cf-4ff9-a4e4-6233c90c9fbf
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 846a028e076873d1978f751fdb70e93c7c6a81af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 07666ead0770c8055a62f75cb481648b0c72ef8b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>Nomes de elementos e atributos XML declarados (Visual Basic)
-Este tópico fornece [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] diretrizes para nomes de elementos XML e atributos em literais XML.  Em um literal XML, você pode especificar um nome local ou um nome qualificado. Um nome qualificado consiste de um prefixo de namespace XML, dois-pontos e um nome local. Para obter mais informações sobre prefixos de namespace XML, consulte [o Literal de elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+Este tópico fornece diretrizes de Visual Basic para nomes de elementos XML e atributos em literais XML.  Em um literal XML, você pode especificar um nome local ou um nome qualificado. Um nome qualificado consiste de um prefixo de namespace XML, dois-pontos e um nome local. Para obter mais informações sobre prefixos de namespace XML, consulte [o Literal de elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="rules"></a>Regras  
- Um nome de local de um elemento ou atributo em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] devem seguir as regras a seguir.  
+ Um nome de local de um elemento ou atributo no Visual Basic deve seguir as regras a seguir.  
   
 -   Ele pode começar com um namespace. Ele deve começar com um caractere alfabético ou sublinhado (`_`).  
   
@@ -48,7 +49,7 @@ Este tópico fornece [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] diretrizes para
  No entanto, o nome não deve ser tão curto que ele não descreve adequadamente o elemento ou como seu código usa. Isso é importante para a legibilidade do código. Se alguém está tentando compreendê-la, ou se você mesmo o está examinando muito tempo depois que você o escreveu, nomes de elemento apropriado podem economizar tempo.  
   
 ## <a name="case-sensitivity-in-names"></a>Diferenciação de maiusculas e minúsculas em nomes  
- Nomes de elemento XML diferenciam maiusculas de minúsculas. Isso significa que, quando o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador compara dois nomes que diferem apenas caso alfabética, ele interpreta como diferentes nomes. Por exemplo, ele interpreta `ABC` e `abc` como referência para separar elementos.  
+ Nomes de elemento XML diferenciam maiusculas de minúsculas. Isso significa que quando o compilador do Visual Basic compara dois nomes que diferem apenas caso alfabética, ele interpreta como nomes diferentes. Por exemplo, ele interpreta `ABC` e `abc` como referência para separar elementos.  
   
 ## <a name="xml-namespaces"></a>Namespaces XML  
  Ao criar um elemento XML literal, você pode especificar o prefixo de namespace XML para o nome do elemento. Para obter mais informações, consulte [o Literal de elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  

@@ -15,18 +15,18 @@ ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
 caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f7074206baa51259592cca3fdc224d99438791f9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 620453d140e3d4ba2ee468e5bf087df6deb9aad4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-language-features"></a>Funcionalidades da linguagem do Visual Basic
-Os tópicos a seguir apresentam e discutem os componentes essenciais do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], uma linguagem de programação orientada a objeto. Depois de criar a interface do usuário para o seu aplicativo usando formulários e controles, você precisa escrever o código que define o comportamento do aplicativo. Como acontece com qualquer linguagem de programação moderna, o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] dá suporte a muitos constructos de programação e elementos de linguagem comuns.  
+Os tópicos a seguir apresentam e discutem os componentes essenciais do Visual Basic, uma linguagem de programação orientada a objeto. Depois de criar a interface do usuário para o seu aplicativo usando formulários e controles, você precisa escrever o código que define o comportamento do aplicativo. Assim como acontece com qualquer linguagem de programação moderna, Visual Basic oferece suporte a um número de construções de programação comuns e elementos de linguagem.  
   
- Se você já programou em outras linguagens, grande parte do material abordado nesta seção poderá parecer familiar. Embora a maioria dos constructos seja semelhante a de outras linguagens, a natureza orientada a eventos do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] apresenta algumas diferenças sutis.  
+ Se você já programou em outras linguagens, grande parte do material abordado nesta seção poderá parecer familiar. Embora a maioria das construções é semelhante de outras linguagens, a natureza orientada a eventos do Visual Basic apresenta algumas diferenças sutis.  
   
- Se você for novo em programação, o material desta seção servirá como uma introdução aos blocos de compilação básicos para escrever código. Depois de compreender os conceitos básicos, você pode criar aplicativos avançados usando [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Se você for novo em programação, o material desta seção servirá como uma introdução aos blocos de compilação básicos para escrever código. Depois de compreender os conceitos básicos, você pode criar aplicativos avançados usando o Visual Basic.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Matrizes](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
@@ -91,4 +91,4 @@ Os tópicos a seguir apresentam e discutem os componentes essenciais do [!INCLUD
  Descreve alguns dos tipos de coleções fornecidas pelo .NET Framework. Demonstra como usar coleções simples e coleções de pares chave/valor.  
   
  [Referência da linguagem Visual Basic](../../../visual-basic/language-reference/index.md)  
- Fornece informações de referência sobre vários aspectos da programação do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].
+ Fornece informações de referência sobre vários aspectos da programação do Visual Basic.

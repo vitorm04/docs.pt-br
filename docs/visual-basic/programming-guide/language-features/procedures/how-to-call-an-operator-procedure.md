@@ -1,11 +1,12 @@
 ---
 title: Como chamar um procedimento de operador (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0abff0a81ebcdacb59b69d0c307bb4aa219906c3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 21545f2488bfabd0abc9c6e316d21bbc4d5aeb91
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Como chamar um procedimento de operador (Visual Basic)
 Você pode chamar um procedimento de operador usando o símbolo do operador em uma expressão. No caso de um operador de conversão, você chama o [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md) para converter um valor de um tipo de dados para outro.  
   
- Você não pode chamar procedimentos de operador explicitamente. Você apenas usa o operador, ou o `CType` função em uma instrução de atribuição ou uma expressão, da mesma maneira que você normalmente usa um operador. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]faz a chamada para o procedimento de operador.  
+ Você não pode chamar procedimentos de operador explicitamente. Você apenas usa o operador, ou o `CType` função em uma instrução de atribuição ou uma expressão, da mesma maneira que você normalmente usa um operador. Visual Basic faz a chamada para o procedimento de operador.  
   
  Definir um operador em uma classe ou estrutura também é chamado *sobrecarga* o operador.  
   
@@ -47,7 +48,7 @@ Você pode chamar um procedimento de operador usando o símbolo do operador em u
   
 2.  Certifique-se de que os tipos de dados dos operandos são apropriados para a conversão e na ordem correta.  
   
-3.  `CType`chama o procedimento de operador de conversão e retorna o valor convertido.  
+3.  `CType` chama o procedimento de operador de conversão e retorna o valor convertido.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir cria dois <xref:System.TimeSpan> estruturas, adiciona-as e armazena o resultado em uma terceira <xref:System.TimeSpan> estrutura. O <xref:System.TimeSpan> estrutura define procedimentos de operador para sobrecarregar vários operadores padrão.  

@@ -1,12 +1,12 @@
 ---
-title: "Design de parâmetro"
-ms.custom: 
+title: Design de parâmetro
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - member design guidelines [.NET Framework], parameters
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f95301bab57e8bdb6b22c54140a4c02ed208b8d3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0d89ed81c06558a6bc101864a7fef3173f019fd0
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parameter-design"></a>Design de parâmetro
 Esta seção fornece diretrizes gerais sobre o design de parâmetro, incluindo seções com as diretrizes para a verificação de argumentos. Além disso, consulte as diretrizes descritas em [parâmetros de nomeação de](../../../docs/standard/design-guidelines/naming-parameters.md).  
@@ -82,9 +82,9 @@ Esta seção fornece diretrizes gerais sobre o design de parâmetro, incluindo s
   
  Quando um argumento é passado por meio de um parâmetro por valor, o membro recebe uma cópia do argumento real passado. Se o argumento for um tipo de valor, uma cópia do argumento é colocada na pilha. Se o argumento for um tipo de referência, uma cópia da referência é colocada na pilha. Idiomas mais populares de CLR, como c#, VB.NET e C++, padrão para passar parâmetros por valor.  
   
- Quando um argumento é passado por meio de um `ref` parâmetro, o membro recebe uma referência para o argumento passado. Se o argumento for um tipo de valor, uma referência para o argumento é colocada na pilha. Se o argumento for um tipo de referência, uma referência para a referência é colocada na pilha. `Ref`parâmetros podem ser usados para permitir que o membro modificar os argumentos passados pelo chamador.  
+ Quando um argumento é passado por meio de um `ref` parâmetro, o membro recebe uma referência para o argumento passado. Se o argumento for um tipo de valor, uma referência para o argumento é colocada na pilha. Se o argumento for um tipo de referência, uma referência para a referência é colocada na pilha. `Ref` parâmetros podem ser usados para permitir que o membro modificar os argumentos passados pelo chamador.  
   
- `Out`parâmetros são semelhantes às `ref` parâmetros, com algumas pequenas diferenças. O parâmetro é considerado inicialmente não atribuídos e não pode ser lido no corpo do membro antes de ser atribuído um valor. Além disso, o parâmetro deve ser atribuído um valor antes de retorna o membro.  
+ `Out` parâmetros são semelhantes às `ref` parâmetros, com algumas pequenas diferenças. O parâmetro é considerado inicialmente não atribuídos e não pode ser lido no corpo do membro antes de ser atribuído um valor. Além disso, o parâmetro deve ser atribuído um valor antes de retorna o membro.  
   
  **X Evite** usando `out` ou `ref` parâmetros.  
   
@@ -162,9 +162,9 @@ public class String {
   
  Por exemplo, não há nenhuma necessidade de passar o índice inicial, porque aritmética de ponteiro simple pode ser usada para obter o mesmo resultado.  
   
- *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
+ *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
- *Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
+ *Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
 ## <a name="see-also"></a>Consulte também  
  [Diretrizes de design de membro](../../../docs/standard/design-guidelines/member.md)  

@@ -1,5 +1,5 @@
 ---
-title: 'Não é possível gravar arquivo de saída &#39; &lt;filename&gt;&#39;: &lt;erro&gt;'
+title: 'Não é possível gravar no arquivo de saída &#39; &lt;filename&gt;&#39;: &lt;erro&gt;'
 ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: ''
@@ -16,13 +16,13 @@ ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d142a8c741a9f0e25b8ac3c0002d04f437bf0ca9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a183f81a73c3c8034d9ba7366be8b36d425263da
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>Não é possível gravar arquivo de saída &#39; &lt;filename&gt;&#39;: &lt;erro&gt;
+# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>Não é possível gravar no arquivo de saída &#39; &lt;filename&gt;&#39;: &lt;erro&gt;
 Ocorreu um problema na criação do arquivo.  
   
  Não foi possível abrir um arquivo de saída para gravação. O arquivo (ou a pasta que contém o arquivo) pode estar aberto para uso exclusivo por outro processo ou pode ter seu atributo definido como somente leitura.  
@@ -45,7 +45,7 @@ Ocorreu um problema na criação do arquivo.
   
 3.  Se o erro persistir, reinicie o computador.  
   
-4.  Se o erro persistir, reinstale o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+4.  Se o erro persistir, reinstale o Visual Basic.  
   
 5.  Se o erro persistir após a reinstalação, notifique o Microsoft Product Support Services.  
   

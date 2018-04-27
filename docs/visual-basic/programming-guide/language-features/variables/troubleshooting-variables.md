@@ -1,28 +1,29 @@
 ---
-title: "Solucionando problemas de variáveis no Visual Basic"
-ms.custom: 
+title: Solucionando problemas de variáveis no Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bf6d2a0c7318c12b3001a92a8aa06625b4edabb6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6b14b3f48dbe9e74879d232966a07fa29bb1102c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Solucionando problemas de variáveis no Visual Basic
-Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com variáveis em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com variáveis no Visual Basic.  
   
 ## <a name="unable-to-access-members-of-an-object"></a>Não é possível acessar membros de um objeto  
  Se seu código tentar acessar uma propriedade ou método em um objeto, há dois resultados possíveis de erro:  
@@ -41,7 +42,7 @@ Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com va
  Para poder acessar todos os membros de um objeto de uma determinada classe, declare a variável de objeto para ser do tipo de classe quando possível. Se você não pode fazer isso, por exemplo, se você não souber o objeto de tipo em tempo de compilação, você deve definir `Option Strict` para `Off` e declarar a variável para ser o [tipo de dados do objeto](../../../../visual-basic/language-reference/data-types/object-data-type.md). Isso permite que os objetos de qualquer tipo a ser atribuído à variável, e você deve tomar medidas para garantir que o objeto atualmente atribuído seja de um tipo aceitável. Você pode usar o [operador TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md) para tomar essa decisão.  
   
 ## <a name="other-components-cannot-access-your-variable"></a>Outros componentes não é possível acessar a variável  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]os nomes são *maiusculas de minúsculas*. Se dois nomes diferem somente no caso alfabético, o compilador interpreta como o mesmo nome. Por exemplo, ele considera `ABC` e `abc` para se referir ao mesmo elemento declarado.  
+ Nomes de Visual Basic são *maiusculas de minúsculas*. Se dois nomes diferem somente no caso alfabético, o compilador interpreta como o mesmo nome. Por exemplo, ele considera `ABC` e `abc` para se referir ao mesmo elemento declarado.  
   
  No entanto, o common language runtime (CLR) usa *diferencia maiusculas de minúsculas* associação. Portanto, quando você produzir um assembly ou uma DLL e disponibilizá-lo para outros assemblies, seus nomes não diferenciam maiusculas de minúsculas. Por exemplo, se você definir uma classe com um elemento chamado `ABC`, e outros assemblies fazer uso de sua classe por meio do common language runtime, eles devem se referir ao elemento como `ABC`. Se você posteriormente recompilar sua classe e alterar o nome do elemento para `abc`, os outros assemblies usando a classe não podem mais acessar esse elemento. Portanto, quando você solta uma versão atualizada de um assembly, você não deve alterar maiusculas e minúsculas em quaisquer elementos públicos.  
   
@@ -51,7 +52,7 @@ Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com va
  Para permitir que outros componentes acessem as variáveis, trate seus nomes como se fossem diferencia maiusculas de minúsculas. Quando você estiver testando sua classe ou um módulo, certifique-se de que outros assemblies são associados às variáveis esperadas. Depois de publicar um componente, não faz nenhuma modificação para nomes de variáveis existentes, incluindo alterar seus casos.  
   
 ## <a name="wrong-variable-being-used"></a>Variável errada sendo usado  
- Quando você tiver mais de uma variável com o mesmo nome, o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador tenta resolver cada referência a esse nome. Se as variáveis têm escopo diferente, o compilador resolve uma referência para a declaração com o escopo mais restrito. Se eles tiverem o mesmo escopo, a resolução falhará e o compilador sinaliza um erro. Para obter mais informações, consulte [referências a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+ Quando você tiver mais de uma variável com o mesmo nome, o compilador do Visual Basic tenta resolver cada referência a esse nome. Se as variáveis têm escopo diferente, o compilador resolve uma referência para a declaração com o escopo mais restrito. Se eles tiverem o mesmo escopo, a resolução falhará e o compilador sinaliza um erro. Para obter mais informações, consulte [referências a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 ### <a name="correct-approach"></a>Abordagem correta  
  Evite usar variáveis com o mesmo nome mas escopo diferente. Se você estiver usando outros assemblies ou projetos, evite usar qualquer nomes definidos nesses componentes externos tanto quanto possível. Se você tiver mais de uma variável com o mesmo nome, certifique-se de que qualificar cada referência a ela. Para obter mais informações, consulte [referências a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  

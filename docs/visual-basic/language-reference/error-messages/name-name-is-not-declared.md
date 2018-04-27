@@ -1,5 +1,5 @@
 ---
-title: Nome &#39; &lt;nome&gt;&#39; não é declarada
+title: Nome &#39; &lt;nome&gt; &#39; não é declarada
 ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: ''
@@ -16,20 +16,20 @@ ms.assetid: 765f099b-e21e-47c6-a906-a065444e56b3
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7a63ae74c7179d71756e2b9b4bf6b41a71ce12a6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 26245952a2dc5341dedba6c497c47773b882b49b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="name-39ltnamegt39-is-not-declared"></a>Nome &#39; &lt;nome&gt;&#39; não é declarada
+# <a name="name-39ltnamegt39-is-not-declared"></a>Nome &#39; &lt;nome&gt; &#39; não é declarada
 Uma instrução faz referência a um elemento de programação, mas o compilador não pode localizar um elemento com esse nome exato.  
   
  **ID do erro:** BC30451  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Verifique a ortografia do nome na declaração de referência. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]diferencia maiusculas de minúsculas, mas qualquer outra variação de grafia é considerada como um nome completamente diferente. Observe que o caractere de sublinhado (`_`) é parte do nome e, portanto, parte da ortografia.  
+1.  Verifique a ortografia do nome na declaração de referência. Visual Basic diferencia maiusculas de minúsculas, mas qualquer outra variação de grafia é considerada como um nome completamente diferente. Observe que o caractere de sublinhado (`_`) é parte do nome e, portanto, parte da ortografia.  
   
 2.  Verifique se você tem o operador de acesso de membro (`.`) entre um objeto e seus membros. Por exemplo, se você tiver um <xref:System.Windows.Forms.TextBox> controle chamado `TextBox1`, para acessar seu <xref:System.Windows.Forms.TextBoxBase.Text%2A> propriedade, você deve digitar `TextBox1.Text`. Se, em vez disso, você digita `TextBox1Text`, você criou um nome diferente.  
   

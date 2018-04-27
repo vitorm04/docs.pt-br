@@ -1,27 +1,29 @@
 ---
 title: Contadores de desempenho no ADO.NET
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9843d5c5edfc5ea590e4e6d0e5474a7d817e0ba6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: a36e552392f887cd4e0f6dfac822c87f08a90af7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="performance-counters-in-adonet"></a>Contadores de desempenho no ADO.NET
 O ADO.NET 2.0 introduziu suporte expandido para contadores de desempenho que inclui suporte para ambos <xref:System.Data.SqlClient> e <xref:System.Data.OracleClient>. O <xref:System.Data.SqlClient> contadores de desempenho disponíveis em versões anteriores do ADO.NET foram preteridos e substituídos por novos contadores de desempenho discutidos neste tópico. Você pode usar o ADO.NET contadores de desempenho para monitorar o status de seu aplicativo e os recursos de conexão que ele usa. Contadores de desempenho podem ser monitorados usando o Monitor de desempenho do Windows ou podem ser acessados programaticamente usando o <xref:System.Diagnostics.PerformanceCounter> classe no <xref:System.Diagnostics> namespace.  
@@ -66,7 +68,7 @@ O ADO.NET 2.0 introduziu suporte expandido para contadores de desempenho que inc
  O aplicativo de console a seguir mostra como recuperar valores de contador de desempenho em seu aplicativo. Conexões devem ser aberto e ativo para obter informações a serem retornadas para todos os contadores de desempenho do ADO.NET.  
   
 > [!NOTE]
->  Este exemplo usa o exemplo **AdventureWorks** banco de dados incluído com [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. As cadeias de caracteres de conexão fornecidas no código de exemplo pressupõem que o banco de dados está instalado e disponível no computador local com um nome de instância de SqlExpress, e que você criou os logons do SQL Server que correspondam aos fornecidos nas cadeias de conexão. Talvez seja necessário habilitar os logons do SQL Server se o servidor é configurado usando as configurações de segurança padrão que permite que somente a autenticação do Windows. Modificar as cadeias de caracteres de conexão conforme necessário para adequar ao seu ambiente.  
+>  Este exemplo usa o exemplo **AdventureWorks** incluído com o SQL Server do banco de dados. As cadeias de caracteres de conexão fornecidas no código de exemplo pressupõem que o banco de dados está instalado e disponível no computador local com um nome de instância de SqlExpress, e que você criou os logons do SQL Server que correspondam aos fornecidos nas cadeias de conexão. Talvez seja necessário habilitar os logons do SQL Server se o servidor é configurado usando as configurações de segurança padrão que permite que somente a autenticação do Windows. Modificar as cadeias de caracteres de conexão conforme necessário para adequar ao seu ambiente.  
   
 ### <a name="example"></a>Exemplo  
   

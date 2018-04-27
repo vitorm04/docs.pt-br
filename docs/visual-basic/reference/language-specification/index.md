@@ -13,14 +13,14 @@ ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 16079ad7854630f68ecb6fd9fb3b640a440fe69b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a4bfab2f6f06cbe1ac971fc21d53a7336ad03c58
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-language-specification"></a>Especificação da linguagem Visual Basic
-A Especificação de linguagem de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] é a origem autoritativa de respostas para todas as perguntas sobre sintaxe e gramática do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Ela contém informações detalhadas sobre a linguagem, incluindo vários pontos não abordados na documentação de referência do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+A especificação da linguagem Visual Basic é a origem autoritativa de respostas para todas as perguntas sobre a sintaxe e gramática do Visual Basic. Ele contém informações detalhadas sobre a linguagem, incluindo vários pontos não abordados na documentação de referência do Visual Basic.  
   
  A especificação está disponível na [Centro de Download da Microsoft](http://go.microsoft.com/fwlink/?LinkId=188623).  
   

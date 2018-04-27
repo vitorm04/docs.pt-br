@@ -1,11 +1,12 @@
 ---
 title: Como passar argumentos para um procedimento (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - arguments [Visual Basic], passing to procedures
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3debb4fa6e7b15f9c321ef207d0cc04181a98da2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e8f8e438dc749e7f5f0d33aeaa26dfbcf4c29f3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Como passar argumentos para um procedimento (Visual Basic)
 Quando você chama um procedimento, você pode seguir o nome do procedimento com uma lista de argumentos entre parênteses. Forneça um argumento correspondente a cada parâmetro necessário que o procedimento define, e, opcionalmente, você pode fornecer argumentos para o `Optional` parâmetros. Se você não fornecer um `Optional` parâmetro na chamada, você deve incluir uma vírgula para marcar seu lugar na lista de argumentos, se você estiver fornecendo argumentos subsequentes.  
@@ -45,7 +46,7 @@ Quando você chama um procedimento, você pode seguir o nome do procedimento com
   
 5.  Se você omitir um argumento para um `Optional` parâmetro e houver outro parâmetro depois, na lista de parâmetros, você pode marcar o local do argumento omitido por uma vírgula extra na lista de argumentos.  
   
-     A exemplo a seguir chama o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> função.  
+     O exemplo a seguir chama o Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> função.  
   
      [!code-vb[VbVbcnProcedures#34](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
   
@@ -53,7 +54,8 @@ Quando você chama um procedimento, você pode seguir o nome do procedimento com
   
      A segunda vírgula na lista de argumentos marca o local do segundo argumento omitido, e a última cadeia de caracteres é passada para o terceiro parâmetro opcional de `MsgBox`, que é o texto a ser exibido na barra de título.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte também
+
  [Subprocedimentos](./sub-procedures.md)  
  [Procedimentos de Função](./function-procedures.md)  
  [Procedimentos de Propriedade](./property-procedures.md)  
@@ -63,4 +65,4 @@ Quando você chama um procedimento, você pode seguir o nome do procedimento com
  [Procedimentos Recursivos](./recursive-procedures.md)  
  [Sobrecarga de Procedimento](./procedure-overloading.md)  
  [Objetos e Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Programação Orientada a Objeto](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)
+ [Programação orientada a objeto (Visual Basic)](../../concepts/object-oriented-programming.md)  

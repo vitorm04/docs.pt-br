@@ -1,11 +1,12 @@
 ---
 title: Procedimentos do operador (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -17,22 +18,22 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 865695731dd591b0c48f4416814fa97edf4ea42e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8fba5180da6498d280fa4192937c39d3e33168e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operator-procedures-visual-basic"></a>Procedimentos do operador (Visual Basic)
-Um procedimento de operador é uma série de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] instruções que definem o comportamento de um operador padrão (como `*`, `<>`, ou `And`) em uma classe ou estrutura que você definiu. Isso também é chamado de *sobrecarga de operador*.  
+Um procedimento de operador é uma série de instruções do Visual Basic que definem o comportamento de um operador padrão (como `*`, `<>`, ou `And`) em uma classe ou estrutura que você definiu. Isso também é chamado de *sobrecarga de operador*.  
   
 ## <a name="when-to-define-operator-procedures"></a>Quando definir procedimentos de operador  
  Quando você tiver definido uma classe ou estrutura, você pode declarar variáveis sejam do tipo de classe ou estrutura. Às vezes, tal variável precisa participar de uma operação como parte de uma expressão. Para fazer isso, ele deve ser um operando de um operador.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]define operadores somente em seu tipo de dados básico. Você pode definir o comportamento de um operador quando um ou ambos os operandos são do tipo de sua classe ou estrutura.  
+ Visual Basic define operadores somente em seu tipo de dados básico. Você pode definir o comportamento de um operador quando um ou ambos os operandos são do tipo de sua classe ou estrutura.  
   
  Para obter mais informações, consulte [instrução Operator](../../../../visual-basic/language-reference/statements/operator-statement.md).  
   

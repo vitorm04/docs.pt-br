@@ -1,11 +1,12 @@
 ---
 title: Nomes de elemento declarados (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic], case sensitivity
@@ -29,20 +30,20 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 22595eff2509d3954b3ce9d5038b19a681fbfbbe
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: ad883dd8e1de419c74b5bcdb8762994e762b4cf7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="declared-element-names-visual-basic"></a>Nomes de elemento declarados (Visual Basic)
 Cada elemento declarado tem um nome, também chamado de um *identificador*, que é o código que se usa para se referir a ele.  
   
 ## <a name="rules"></a>Regras  
- Um nome de elemento em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] deve observar as regras a seguir:  
+ Um nome de elemento no Visual Basic deve observar as regras a seguir:  
   
 -   Ele deve começar com um caractere alfabético ou sublinhado (`_`).  
   
@@ -79,18 +80,18 @@ Cada elemento declarado tem um nome, também chamado de um *identificador*, que 
  Por outro lado, o nome não deve ser tão curto que ele não descreve adequadamente o elemento que representa e como seu código usa. Isso é importante para a legibilidade do código. Se alguém está tentando compreendê-la, ou se você mesmo o está examinando muito tempo depois que você o escreveu, nomes de elementos adequados podem salvar uma quantidade considerável de tempo.  
   
 ## <a name="escaped-names"></a>Nomes de escape  
- Geralmente, um nome de elemento não deve conter qualquer uma das palavras-chave reservadas pelo [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], como `Case` ou `Friend`. No entanto, você pode definir um *nome escapado*, que é colocado entre colchetes (`[ ]`). Um nome escapado pode conter qualquer [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] palavra-chave, pois os colchetes removem qualquer ambiguidade. Você também usa os colchetes quando você se referir ao nome posteriormente no seu código.  
+ Geralmente, um nome de elemento não deve conter qualquer uma das palavras-chave reservadas pelo Visual Basic, como `Case` ou `Friend`. No entanto, você pode definir um *nome escapado*, que é colocado entre colchetes (`[ ]`). Um nome escapado pode corresponder a qualquer palavra-chave do Visual Basic, pois os colchetes removem qualquer ambiguidade. Você também usa os colchetes quando você se referir ao nome posteriormente no seu código.  
   
  Em geral, você deve usar nomes escapados apenas quando:  
   
--   O código foi migrado de uma versão anterior do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] que não reservar a palavra-chave que está sendo usada como um nome; ou  
+-   O código foi migrado de uma versão anterior do Visual Basic que não reservar a palavra-chave que está sendo usada como um nome; ou  
   
 -   Você está trabalhando com código escrito em outra linguagem na qual a palavra-chave fornecida não está reservada.  
   
  Caso contrário, considere renomear o elemento se seu nome está em conflito com uma palavra-chave. O ambiente de desenvolvimento integrado (IDE) fornece uma maneira fácil de fazer isso. Para obter mais informações, consulte [refatoração](/visualstudio/vb-ide/refactoring-vb).  
   
 ## <a name="case-sensitivity-in-names"></a>Diferenciação de maiusculas e minúsculas em nomes  
- Nomes de elementos em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] diferenciam maiusculas de minúsculas. Isso significa que quando o compilador compara dois nomes que diferem somente no caso alfabético, ele interpreta como o mesmo nome. Por exemplo, ele considera `ABC` e `abc` para se referir ao mesmo elemento declarado.  
+ Nomes de elementos no Visual Basic diferenciam maiusculas de minúsculas. Isso significa que quando o compilador compara dois nomes que diferem somente no caso alfabético, ele interpreta como o mesmo nome. Por exemplo, ele considera `ABC` e `abc` para se referir ao mesmo elemento declarado.  
   
  No entanto, o common language runtime (CLR) usa associação diferencia maiusculas de minúsculas. Portanto, quando você produzir um assembly ou uma DLL e disponibilizá-lo para outros assemblies, seus nomes não diferenciam maiusculas de minúsculas. Por exemplo, se você definir uma classe com um elemento chamado `ABC`, e outros assemblies fazer uso de sua classe por meio do common language runtime, eles devem se referir ao elemento como `ABC`. Se você posteriormente recompilar sua classe e alterar o nome do elemento para `abc`, os outros assemblies usando a classe não podem acessar esse elemento. Portanto, quando você solta uma versão atualizada de um assembly, você não deve alterar maiusculas e minúsculas em quaisquer elementos públicos.  
   

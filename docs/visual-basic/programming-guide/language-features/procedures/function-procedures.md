@@ -1,11 +1,12 @@
 ---
-title: "Procedimentos de função (Visual Basic)"
-ms.custom: 
+title: Procedimentos de função (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Function procedures
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9520a6555e65fd801a5c40d40748028e04a10739
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ad4f55a9dd9fbd68c36dd53a01f97ddb03c2bb9b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="function-procedures-visual-basic"></a>Procedimentos de função (Visual Basic)
-Um `Function` procedimento é uma série de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] instruções delimitados pelo `Function` e `End Function` instruções. O `Function` procedimento executa uma tarefa e, em seguida, retorna o controle para o código de chamada. Quando ele retorna o controle, ele também retorna um valor para o código de chamada.  
+Um `Function` procedimento é uma série de instruções do Visual Basic entre o `Function` e `End Function` instruções. O `Function` procedimento executa uma tarefa e, em seguida, retorna o controle para o código de chamada. Quando ele retorna o controle, ele também retorna um valor para o código de chamada.  
   
  Cada vez que o procedimento é chamado, suas declarações são executadas, começando com a primeira instrução executável após o `Function` instrução e terminando com o primeiro `End Function`, `Exit Function`, ou `Return` instrução encontrado.  
   
@@ -91,11 +92,11 @@ End Function
   
  A sintaxe para chamar um `Function` procedimento é o seguinte:  
   
- *lvalue*`=`*functionname* `[(` *argumentlist*    `)]`  
+ *lvalue*`=`*functionname* `[(` *argumentlist*  `)]`  
   
- `If ((`*functionname* `[(` *argumentlist* `)] / 3) <=` *expressão*  `) Then`  
+ `If ((` *nomedafunção* `[(` *argumentlist* `)] / 3) <=` *expressão*  `) Then`  
   
- Quando você chama um `Function` procedimento, você não precisa usar o valor de retorno. Se você não fizer isso, todas as ações da função são executadas, mas o valor de retorno será ignorado. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>é geralmente chamado dessa maneira.  
+ Quando você chama um `Function` procedimento, você não precisa usar o valor de retorno. Se você não fizer isso, todas as ações da função são executadas, mas o valor de retorno será ignorado. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> é geralmente chamado dessa maneira.  
   
 ### <a name="illustration-of-declaration-and-call"></a>Ilustração da declaração e chamada  
  O seguinte `Function` procedimento calcula o maior lado, ou hipotenusa, de um triângulo retângulo, dado os valores dos outros dois lados.  

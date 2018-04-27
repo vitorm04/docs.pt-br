@@ -1,24 +1,26 @@
 ---
-title: "Geração de código em LINQ para SQL"
-ms.custom: 
+title: Geração de código em LINQ para SQL
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0d1c80817bb1126d8e9828171c2a2aeee52eb672
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: ff543efecb65e61fecef0056650b35735bef83c0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="code-generation-in-linq-to-sql"></a>Geração de código em LINQ para SQL
 Você pode gerar código para representar um banco de dados usando [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] ou a ferramenta de linha de comando SQLMetal. Em ambos os casos, a geração de código ponta a ponta ocorre em três estágios:  
@@ -29,13 +31,13 @@ Você pode gerar código para representar um banco de dados usando [!INCLUDE[vs_
   
 3.  Se nenhum erro de validação aparecer, o arquivo será passado para o Gerador de Código.  
   
- Para obter mais informações, consulte [SqlMetal.exe (ferramenta de geração de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Os desenvolvedores que usam [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] também pode usar o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para gerar código. Consulte [LINQ to SQL Tools no Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Para obter mais informações, consulte [SqlMetal.exe (ferramenta de geração de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Os desenvolvedores usando o Visual Studio também podem usar o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para gerar código. Consulte [LINQ to SQL Tools no Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="dbml-extractor"></a>Extrator de DBML  
  O Extrator DBML é um [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] componente que usa metadados do banco de dados como entrada e produz um arquivo DBML como saída.  
   
 ## <a name="code-generator"></a>Gerador de Código  
- O Gerador de Código é um componente de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] que converte arquivos DBML em [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)], C# ou arquivos de mapeamento XML.  
+ O gerador de código é um [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] componente que converte DBML arquivos para arquivos de mapeamento do Visual Basic, c# ou XML.  
   
 ## <a name="xml-schema-definition-file"></a>Arquivo de Definição de Esquema XML  
  O arquivo DBML deve ser válido em relação à seguinte definição de esquema como um arquivo XSD.  
@@ -43,7 +45,7 @@ Você pode gerar código para representar um banco de dados usando [!INCLUDE[vs_
  Diferencie este arquivo de definição do esquema do arquivo de definição do esquema que é usado para validar um arquivo de mapeamento externo. Para obter mais informações, consulte [mapeamento externo](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)).  
   
 > [!NOTE]
->  Os usuários do [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] também encontrarão esse arquivo XSD na caixa de diálogo Esquemas XML como “DbmlSchema.xsd”. Para usar corretamente o arquivo XSD para validar um arquivo DBML, consulte [como: validar DBML e arquivos de mapeamento externos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+>  Usuários do Visual Studio também encontrará esse arquivo XSD na caixa de diálogo de esquemas XML como "DbmlSchema.xsd". Para usar corretamente o arquivo XSD para validar um arquivo DBML, consulte [como: validar DBML e arquivos de mapeamento externos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  

@@ -1,11 +1,12 @@
 ---
-title: "Instrução If...Then... (Visual Basic)"
-ms.date: 07/20/2015
+title: Instrução If...Then... (Visual Basic)
+ms.date: 04/16/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.topic: conceptual
 f1_keywords:
 - vb.ElseIf
 - vb.Then
@@ -26,14 +27,14 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 898b72055345e88ca35f805de211c0c57cd74200
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1080a17cfcc493175c1e2f3527837030b4254bc2
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>Instrução If...Then... (Visual Basic)
 Execute um grupo de instruções condicionalmente, dependendo do valor de uma expressão.  
@@ -41,7 +42,7 @@ Execute um grupo de instruções condicionalmente, dependendo do valor de uma ex
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-' Multiple-line syntax:  
+' Multiline syntax:  
 If condition [ Then ]  
     [ statements ]  
 [ ElseIf elseifcondition [ Then ]  
@@ -53,12 +54,20 @@ End If
 ' Single-line syntax:  
 If condition Then [ statements ] [ Else [ elsestatements ] ]  
 ```  
-  
+
+## <a name="quick-links-to-example-code"></a>Links rápidos para código de exemplo
+
+Este artigo inclui vários exemplos que ilustram usos do `If`... `Then`... `Else` instrução:
+
+* [Exemplo de sintaxe de várias linhas](#multi-line)
+* [Exemplo de sintaxe aninhada](#nested)
+* [Exemplo de sintaxe de linha única](#single-line)
+
 ## <a name="parts"></a>Partes  
  `condition`  
  Necessário. Expressão. Deve ser avaliada como `True` ou `False`, ou para um tipo de dados que é implicitamente conversível em `Boolean`.  
   
- Se a expressão for um [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` variável que é avaliada como [nada](../../../visual-basic/language-reference/nothing.md), a condição é tratada como se a expressão não é `True`e o `Else` é de bloco executado.  
+ Se a expressão for um [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` variável que é avaliada como [nada](../../../visual-basic/language-reference/nothing.md), a condição é tratada como se a expressão `False` e `Else` bloco é executado.  
   
  `Then`  
  Obrigatório na sintaxe de linha; opcional na sintaxe de várias linhas.  
@@ -76,12 +85,12 @@ If condition Then [ statements ] [ Else [ elsestatements ] ]
  Opcional. Uma ou mais instruções que são executadas se anterior não `condition` ou `elseifcondition` expressão é avaliada como `True`.  
   
  `End If`  
- Encerra o `If`... `Then`... `Else` bloco.  
+ Finaliza a versão de várias linhas de `If`... `Then`... `Else` bloco.  
   
 ## <a name="remarks"></a>Comentários  
   
-## <a name="multiple-line-syntax"></a>Sintaxe de várias linhas  
- Quando um `If`... `Then`... `Else` instrução for encontrada, `condition` é testada. Se `condition` é `True`, as instruções a seguir `Then` são executados. Se `condition` é `False`, cada `ElseIf` instrução (se houver) é avaliada na ordem. Quando um `True``elseifcondition` for encontrada, as declarações seguindo imediatamente associado `ElseIf` são executados. Se nenhum `elseifcondition` é avaliada como `True`, ou se não houver nenhum `ElseIf` instruções, as instruções a seguir `Else` são executados. Depois de executar as seguintes instruções `Then`, `ElseIf`, ou `Else`, a execução continua com o seguinte instrução `End If`.  
+### <a name="multiline-syntax"></a>Sintaxe de várias linhas  
+ Quando um `If`... `Then`... `Else` instrução for encontrada, `condition` é testada. Se `condition` é `True`, as instruções a seguir `Then` são executados. Se `condition` é `False`, cada `ElseIf` instrução (se houver) é avaliada na ordem. Quando um `True` `elseifcondition` for encontrada, as declarações seguindo imediatamente associado `ElseIf` são executados. Se nenhum `elseifcondition` é avaliada como `True`, ou se não houver nenhum `ElseIf` instruções, as instruções a seguir `Else` são executados. Depois de executar as seguintes instruções `Then`, `ElseIf`, ou `Else`, a execução continua com o seguinte instrução `End If`.  
   
  O `ElseIf` e `Else` cláusulas são opcionais. Você pode ter tantos `ElseIf` cláusulas como você deseja um `If`... `Then`... `Else` instrução, mas não `ElseIf` cláusula pode aparecer após uma `Else` cláusula. `If`... `Then`... `Else` instruções podem ser aninhadas dentro do outro.  
   
@@ -90,27 +99,34 @@ If condition Then [ statements ] [ Else [ elsestatements ] ]
 > [!TIP]
 >  O [selecione... Caso a instrução](../../../visual-basic/language-reference/statements/select-case-statement.md) pode ser mais útil quando você avalia uma única expressão que possui vários valores possíveis.  
   
-## <a name="single-line-syntax"></a>Sintaxe de linha única  
- Você pode usar a sintaxe de linha única para testes curtos, simples. No entanto, a sintaxe de várias linhas fornece mais estrutura e flexibilidade e é normalmente mais fácil de ler, manter e depurar.  
+### <a name="single-line-syntax"></a>Sintaxe de linha única  
+ Você pode usar a sintaxe de linha única para uma única condição com o código a ser executado se for verdadeiro. No entanto, a sintaxe de várias linhas fornece mais estrutura e flexibilidade e é mais fácil de ler, manter e depurar.  
   
  O que segue o `Then` palavra-chave é examinada para determinar se uma instrução é uma única linha `If`. Se algo diferente de um comentário aparece depois `Then` na mesma linha, a instrução é tratada como uma única linha `If` instrução. Se `Then` estiver ausente, ele deve ser o início de uma linha de vários `If`... `Then`... `Else`.  
   
  Na sintaxe de linha única, você pode ter várias declarações executadas como o resultado de uma `If`... `Then` decisão. Todas as instruções devem estar na mesma linha e ser separadas por vírgulas.  
-  
-## <a name="example"></a>Exemplo  
+
+## <a name="multiline-syntax-example"></a>Exemplo de sintaxe de várias linhas
+
+<a name="multi-line"></a>
+ 
  O exemplo a seguir ilustra o uso da sintaxe de várias linhas de `If`... `Then`... `Else` instrução.  
   
- [!code-vb[VbVbalrStatements#101](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_1.vb)]  
-  
-## <a name="example"></a>Exemplo  
+ [!code-vb[VbVbalrStatements#101](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_1.vb?highlight=11,14,17,19)]
+
+## <a name="nested-syntax-example"></a>Exemplo de sintaxe aninhada
+
+<a name="nested"></a>
+
  O exemplo a seguir contém aninhada `If`... `Then`... `Else` instruções.  
   
- [!code-vb[VbVbalrStatements#102](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#102](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_2.vb?highlight=14,15,17,19,20,21,23,25,26,28)]
+
+## <a name="single-line-syntax-example"></a>Exemplo de sintaxe de linha única
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir ilustra o uso da sintaxe de linha única.  
+<a name="single-line"></a> O exemplo a seguir ilustra o uso da sintaxe de linha única.  
   
- [!code-vb[VbVbalrStatements#103](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#103](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_3.vb?highlight=18)]
   
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.VisualBasic.Interaction.Choose%2A>  

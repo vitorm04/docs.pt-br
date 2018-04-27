@@ -2,9 +2,10 @@
 title: Como invocar o compilador de linha de comando (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - command-line arguments
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5c69860ede5620272e67bde435e6e6fa08cc81bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f1ccf08ba58fa6af60bd8ffd7cba79b205dc0f3d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Como invocar o compilador de linha de comando (Visual Basic)
 Você pode chamar o compilador de linha de comando digitando o nome do seu arquivo executável na linha de comando, também conhecido como o prompt do MS-DOS. Se você compilar a partir do Prompt de comando padrão, você deve digitar o caminho totalmente qualificado para o arquivo executável. Para substituir esse comportamento padrão, você pode usar o [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Prompt de comando ou modificar a variável de ambiente PATH. Permitem que você compile a partir de qualquer diretório simplesmente digitando o nome do compilador.  
@@ -54,7 +55,7 @@ Você pode chamar o compilador de linha de comando digitando o nome do seu arqui
   
 6.  Clique em **Okey** para confirmar suas alterações e fechar as caixas de diálogo.  
   
-     Depois de alterar a variável de ambiente PATH, você pode executar o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador no Prompt de comando do Windows de qualquer diretório no computador.  
+     Depois de alterar a variável de ambiente PATH, você pode executar o compilador do Visual Basic no Prompt de comando do Windows de qualquer diretório no computador.  
   
 ### <a name="to-invoke-the-compiler-using-the-windows-command-prompt"></a>Para chamar o compilador usando o Prompt de comando do Windows  
   

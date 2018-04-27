@@ -17,11 +17,11 @@ ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
 caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2cf51e1f6292a61c071fe6d92f5fcbce4be84ff4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ea802572a59a3b94508558cee97290cac67e1ac
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="development-with-my-visual-basic"></a>Desenvolvimento com My (Visual Basic)
 O Visual Basic apresenta novos recursos para o método RAD que aumentam a produtividade, facilitam o uso e dão mais robustez. Um desses recursos, chamado `My`, oferece acesso a informações e a instâncias de objeto padrão relacionadas ao aplicativo e ao seu ambiente de tempo de execução. Essas informações são organizadas em um formato que pode ser descoberto por meio do IntelliSense e que é logicamente delineado de acordo com o uso.  
@@ -43,7 +43,7 @@ O Visual Basic apresenta novos recursos para o método RAD que aumentam a produt
  Descreve os objetos `My.Resources` e `My.Settings`, que fornecem acesso a recursos e configurações de um aplicativo.  
   
  [Visão geral do modelo de aplicativo do Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- Descreve o modelo [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] de inicialização/desligamento do aplicativo.  
+ Descreve o modelo de inicialização/desligamento do aplicativo do Visual Basic.  
   
  [Como My depende do tipo de projeto](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  Fornece detalhes sobre quais os recursos `My` que estão disponíveis em diferentes tipos de projeto.  

@@ -1,11 +1,12 @@
 ---
-title: "Como definir várias versões de um procedimento (Visual Basic)"
-ms.custom: 
+title: Como definir várias versões de um procedimento (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1abeaa6806252005dd3abfab3ff60bafa0c0cef1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e6db075e9b31355d4a0a593040b1fe7c96a0c730
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Como definir várias versões de um procedimento (Visual Basic)
 Você pode definir um procedimento em várias versões por *sobrecarga* -la, usando o mesmo nome mas uma lista de parâmetros diferentes para cada versão. O objetivo de sobrecarga é definir várias versões intimamente relacionadas de um procedimento sem diferenciá-los por nome.  
@@ -34,7 +35,7 @@ Você pode definir um procedimento em várias versões por *sobrecarga* -la, usa
   
 2.  Preceder o `Sub` ou `Function` palavra-chave em cada declaração com o [sobrecargas](../../../../visual-basic/language-reference/modifiers/overloads.md) palavra-chave. Opcionalmente, você pode omitir `Overloads` em declarações, mas se você incluir em qualquer uma das declarações, você deve incluí-lo em cada declaração.  
   
-3.  Após cada instrução de declaração, grave o código de procedimento para manipular o caso específico em que o código de chamada fornece argumentos correspondentes a lista de parâmetros desta versão. Você não precisa testar para quais parâmetros forneceu o código de chamada. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]passa o controle para a versão correspondente do seu procedimento.  
+3.  Após cada instrução de declaração, grave o código de procedimento para manipular o caso específico em que o código de chamada fornece argumentos correspondentes a lista de parâmetros desta versão. Você não precisa testar para quais parâmetros forneceu o código de chamada. Visual Basic passa o controle para a versão correspondente do seu procedimento.  
   
 4.  Cada versão do procedimento com o `End Sub` ou `End Function` instrução conforme apropriado.  
   

@@ -1,10 +1,11 @@
 ---
-title: "Instrução Dim (Visual Basic)"
+title: Instrução Dim (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Dim
@@ -34,14 +35,14 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-caps.latest.revision: "72"
+caps.latest.revision: 72
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a428f8be7b62600ca8fffd3160039c1de911e34e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 36e2d416e4653bfa6fe212b75b92ae2d90775d53
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dim-statement-visual-basic"></a>Instrução Dim (Visual Basic)
 Declara e aloca espaço de armazenamento para uma ou mais variáveis.  
@@ -251,7 +252,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
  Para obter mais informações sobre literais de matriz, consulte [matrizes](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-##  <a name="default"></a>Tipos de dados padrão e valores  
+##  <a name="default"></a> Tipos de dados padrão e valores  
  A tabela a seguir descreve os resultados de várias combinações de especificar o tipo de dados e o inicializador em uma instrução `Dim`.  
   
 |Tipo de dados especificado?|Inicializador especificado?|Exemplo|Resultado|  
@@ -261,7 +262,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 |Sim|Não|`Dim qty As Integer`|A variável é inicializada para o valor padrão para o tipo de dados. Consulte a tabela mais adiante nesta seção.|  
 |Sim|Sim|`Dim qty  As Integer = 5`|Se o tipo de dados do inicializador não for conversível para o tipo de dados especificado, ocorrerá um erro de tempo de compilação.|  
   
- Se você especificar um tipo de dados, mas não especificar um inicializador [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] inicializa a variável para o valor padrão para seu tipo de dados. A tabela a seguir mostra o padrão de valores de inicialização.  
+ Se você especificar um tipo de dados, mas não especificar um inicializador, Visual Basic inicializa a variável para o valor padrão para seu tipo de dados. A tabela a seguir mostra o padrão de valores de inicialização.  
   
 |Tipo de dados|Valor padrão|  
 |---|---|  
@@ -279,8 +280,8 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 |Declaração de procedimento|Variável inicializada|Variável interrompe existente|  
 |---|---|---|  
 |Em um módulo|Na primeira vez em que o procedimento é chamado.|Quando o programa para a execução|  
-|Em uma classe ou estrutura, o procedimento é`Shared`|Na primeira vez que o procedimento é chamado em uma instância específica ou na classe ou estrutura em si|Quando o programa para a execução|  
-|Em uma classe ou estrutura, o procedimento não é`Shared`|Na primeira vez em que o procedimento é chamado em uma instância específica|Quando a instância é liberada para coleta de lixo (GC)|  
+|Em uma classe ou estrutura, o procedimento é `Shared`|Na primeira vez que o procedimento é chamado em uma instância específica ou na classe ou estrutura em si|Quando o programa para a execução|  
+|Em uma classe ou estrutura, o procedimento não é `Shared`|Na primeira vez em que o procedimento é chamado em uma instância específica|Quando a instância é liberada para coleta de lixo (GC)|  
   
 ## <a name="attributes-and-modifiers"></a>Modificadores e atributos  
  Você pode aplicar atributos apenas para variáveis de membro, não para variáveis locais. Um atributo contribui com informações para metadados do assembly, que não é significativo para armazenamento temporário, como variáveis locais.  

@@ -19,11 +19,11 @@ ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
 caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a286c70f57128d0406b3a300610fea5e1c44b32d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9968e5de0f8cb45fb896ba43c80d9c9a3ab8ef08
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>Propriedade de eixo do atributo XML (Visual Basic)
 Fornece acesso ao valor de um atributo para um <xref:System.Xml.Linq.XElement> objeto ou para o primeiro elemento em uma coleção de <xref:System.Xml.Linq.XElement> objetos.  
@@ -44,7 +44,7 @@ object.@<attribute>
  Necessário. Indica o início de uma propriedade de eixo de atributo.  
   
  <  
- Opcional. Indica o início do nome do atributo quando `attribute` não é um identificador válido no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Opcional. Indica o início do nome do atributo quando `attribute` não é um identificador válido no Visual Basic.  
   
  `attribute`  
  Necessário. Nome do atributo para acessar, no formato [`prefix`:]`name`.  
@@ -55,7 +55,7 @@ object.@<attribute>
 |`name`|Necessário. Nome do atributo local. Consulte [nomes de elementos e atributos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
   
  \>  
- Opcional. Indica o início do nome do atributo quando `attribute` não é um identificador válido no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Opcional. Indica o início do nome do atributo quando `attribute` não é um identificador válido no Visual Basic.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Uma cadeia de caracteres que contém o valor de `attribute`. Se não existir, o nome do atributo `Nothing` é retornado.  
@@ -65,7 +65,7 @@ object.@<attribute>
   
  Quando você se referir a um atributo XML usando o @ identificador, o valor do atributo é retornado como uma cadeia de caracteres e você não precisa especificar explicitamente o <xref:System.Xml.Linq.XAttribute.Value%2A> propriedade.  
   
- As regras de nomenclatura para atributos XML são diferentes das regras de nomeação para [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] identificadores. Para acessar um atributo XML que tem um nome que não é um identificador válido do Visual Basic, coloque o nome entre colchetes angulares (\< e >).  
+ As regras de nomenclatura para atributos XML são diferentes das regras de nomeação para identificadores do Visual Basic. Para acessar um atributo XML que tem um nome que não é um identificador válido do Visual Basic, coloque o nome entre colchetes angulares (\< e >).  
   
 ## <a name="xml-namespaces"></a>Namespaces XML  
  O nome em uma propriedade de eixo de atributo pode usar somente prefixos de namespace XML declarados globalmente usando o `Imports` instrução. Ele não é possível usar prefixos de namespace XML declarados localmente em literais de elemento XML. Para obter mais informações, consulte [instrução Imports (Namespace XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
@@ -97,7 +97,7 @@ object.@<attribute>
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa a sintaxe colchete angular para obter o valor do atributo XML chamado `number-type`, que não é um identificador válido no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ O exemplo a seguir usa a sintaxe colchete angular para obter o valor do atributo XML chamado `number-type`, que não é um identificador válido no Visual Basic.  
   
  [!code-vb[VbXMLSamples#13](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_3.vb)]  
   

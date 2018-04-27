@@ -1,32 +1,33 @@
 ---
-title: "Referências a elementos declarados (Visual Basic)"
-ms.custom: 
+title: Referências a elementos declarados (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic]
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9b3847164b4e577a9265a746b9329218b4af928b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 86d25d42688cffbf4076c4fb42eccc3b917d1dc1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Referências a elementos declarados (Visual Basic)
-Quando o código se refere a um elemento declarado, o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador corresponde ao nome na sua referência com a declaração adequada daquele nome. Se mais de um elemento é declarado com o mesmo nome, você pode controlar qual desses elementos para ser referenciado por *qualificação* seu nome.  
+Quando seu código se refere a um elemento declarado, o compilador do Visual Basic corresponde ao nome na sua referência com a declaração adequada daquele nome. Se mais de um elemento é declarado com o mesmo nome, você pode controlar qual desses elementos para ser referenciado por *qualificação* seu nome.  
   
  O compilador tenta fazer a correspondência de uma referência de nome a uma declaração de nome com o *escopo mais restrito*. Isso significa que ela começa com o código fazendo a referência e trabalha externamente através de níveis sucessivos do que contém elementos.  
   
- O exemplo a seguir mostra as referências a duas variáveis com o mesmo nome. O exemplo declara duas variáveis, cada uma nomeada `totalCount`, em diferentes níveis de escopo no módulo `container`. Quando o procedimento `showCount` exibe `totalCount` sem qualificação, o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador resolve a referência para a declaração com o escopo mais restrito, ou seja, a declaração dentro de `showCount`. Quando ela se qualificar `totalCount` com o módulo contendo `container`, o compilador resolve a referência para a declaração com o escopo mais amplo.  
+ O exemplo a seguir mostra as referências a duas variáveis com o mesmo nome. O exemplo declara duas variáveis, cada uma nomeada `totalCount`, em diferentes níveis de escopo no módulo `container`. Quando o procedimento `showCount` exibe `totalCount` sem qualificação, o compilador do Visual Basic resolve a referência para a declaração com o escopo mais restrito, ou seja, a declaração dentro de `showCount`. Quando ela se qualificar `totalCount` com o módulo contendo `container`, o compilador resolve a referência para a declaração com o escopo mais amplo.  
   
 ```vb  
 ' Assume these two modules are both in the same assembly.  
@@ -199,7 +200,7 @@ Dim xDoc As xD.XmlDocument
  Você pode evitar ambiguidade de nomes fornecendo nomes exclusivos a todos os seus elementos. Em seguida, você pode fazer referência a qualquer elemento sem ter que qualificar o nome com um namespace, módulo ou classe. Você também pode reduzir as chances de acidentalmente se referir ao elemento errado.  
   
 ## <a name="shadowing"></a>Sombreamento  
- Quando dois elementos de programação compartilham o mesmo nome, um deles pode ocultar, ou *sombra*, outro. Um elemento sombreado não está disponível para referência; em vez disso, quando seu código usa o nome de elemento sombreado, o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador resolve para o elemento de sombreamento. Para obter uma explicação mais detalhada com exemplos, consulte [sombreamento no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ Quando dois elementos de programação compartilham o mesmo nome, um deles pode ocultar, ou *sombra*, outro. Um elemento sombreado não está disponível para referência; em vez disso, quando seu código usa o nome do elemento sombreado, o compilador do Visual Basic resolve para o elemento de sombreamento. Para obter uma explicação mais detalhada com exemplos, consulte [sombreamento no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Nomes de Elementos Declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  

@@ -16,11 +16,11 @@ ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
 caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f7f5138d430e6737a4a8a47d4a800905dedff660
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: de52d95cfbc8135db1dc9434860f02b8992db0b4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="error-messages-visual-basic"></a>Mensagens de erro (Visual Basic)
 Quando você escreve, compila ou executa um aplicativo do Visual Basic, os seguintes tipos de erros podem ocorrer:  
@@ -34,7 +34,7 @@ Quando você escreve, compila ou executa um aplicativo do Visual Basic, os segui
  Para obter informações sobre como solucionar um erro específico, consulte [Recursos adicionais para programadores do Visual Basic](../../../visual-basic/getting-started/additional-resources.md).  
   
 ## <a name="run-time-errors"></a>Erros em tempo de execução  
- Se um aplicativo do Visual Basic tenta executar uma ação que o sistema não pode executar, ocorrerá um erro em tempo de execução, e [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] lançará um objeto `Exception`. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] pode gerar erros personalizados de qualquer tipo de dados, incluindo objetos `Exception` usando a instrução `Throw`. Um aplicativo pode identificar o erro exibindo o número do erro e a mensagem de uma exceção capturada. Se não for detectado um erro, o aplicativo será encerrado.  
+ Se um aplicativo Visual Basic tenta executar uma ação que o sistema não pode executar, ocorre um erro de tempo de execução e Visual Basic gera um `Exception` objeto. Visual Basic pode gerar erros personalizados de todos os dados de tipo, incluindo `Exception` objetos usando o `Throw` instrução. Um aplicativo pode identificar o erro exibindo o número do erro e a mensagem de uma exceção capturada. Se não for detectado um erro, o aplicativo será encerrado.  
   
  O código pode interceptar e examine os erros em tempo de execução. Se você colocar o código que produz o erro em um bloco `Try`, você poderá capturar qualquer erro gerado em um bloco `Catch` correspondente. Para obter informações sobre como interceptar erros em tempo de execução e responder a eles em seu código, consulte [Instrução Try... Catch... Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   

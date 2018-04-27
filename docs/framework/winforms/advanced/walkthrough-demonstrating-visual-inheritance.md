@@ -1,12 +1,13 @@
 ---
-title: "Instruções passo a passo: demonstrando herança visual"
-ms.custom: 
+title: 'Instruções passo a passo: demonstrando herança visual'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7c5ef33be9841b5c74b6ae2448daf56079489b61
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: e76ddcb33980db1a6d1b6e602c1b71da60b53381
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Instruções passo a passo: demonstrando herança visual
 A herança visual permite que você veja os controles no formulário de base e adicione novos controles. Neste passo a passo, você criará um formulário de base e o compilará em uma biblioteca de classes. Você importará esta biblioteca de classes em outro projeto e criará um novo formulário que herda do formulário de base. Durante este passo a passo, você aprenderá a:  
@@ -157,7 +159,7 @@ A herança visual permite que você veja os controles no formulário de base e a
   
 7.  Selecione o botão particular **Say Goodbye** e observe que ele não tem alças de redimensionamento. Além disso, na janela **Propriedades**, as propriedades deste botão ficam cinza para indicar que não podem ser modificadas.  
   
-8.  Se você estiver usando [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]:  
+8.  Se você estiver usando o Visual c#:  
   
     1.  No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Form1** no projeto **InheritanceTest** e selecione **Excluir**. Na caixa de mensagem que aparece, clique em **OK** para confirmar a exclusão.  
   
@@ -172,7 +174,7 @@ A herança visual permite que você veja os controles no formulário de base e a
 12. Pressione F5 para executar o aplicativo e observe o comportamento do formulário herdado.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- A herança para controles de usuário funciona basicamente da mesma forma. Abra um novo projeto de biblioteca de classes e adicione um controle de usuário. Coloque os controles constituintes nele e compile o projeto. Abra outro novo projeto de biblioteca de classes e adicione uma referência à biblioteca de classes compilada. Além disso, tente adicionar um controle herdado (por meio da caixa de diálogo **Adicionar Novos Itens**) ao projeto e usar o **Selecionador de Herança**. Adicione um controle de usuário e alterar a instrução `Inherits` (`:` em [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]). Para mais informações, consulte [Como herdar Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).  
+ A herança para controles de usuário funciona basicamente da mesma forma. Abra um novo projeto de biblioteca de classes e adicione um controle de usuário. Coloque os controles constituintes nele e compile o projeto. Abra outro novo projeto de biblioteca de classes e adicione uma referência à biblioteca de classes compilada. Além disso, tente adicionar um controle herdado (por meio da caixa de diálogo **Adicionar Novos Itens**) ao projeto e usar o **Selecionador de Herança**. Adicionar um controle de usuário e alterar o `Inherits` (`:` no Visual c#) instrução. Para mais informações, consulte [Como herdar Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Como Herdar Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  

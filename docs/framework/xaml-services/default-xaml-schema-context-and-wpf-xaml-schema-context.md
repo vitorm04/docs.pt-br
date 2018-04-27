@@ -1,24 +1,26 @@
 ---
-title: "Contexto do esquema XML padrão e contexto do esquema XAML WPF"
-ms.custom: 
+title: Contexto do esquema XML padrão e contexto do esquema XAML WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9ee7c83868934f1a524bb0068ea5e749e6cbfab4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ec5e29ae9022470f8b583dc1b673a0b93040c862
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Contexto do esquema XML padrão e contexto do esquema XAML WPF
 Um contexto de esquema XAML é uma entidade conceitual que qualifica como uma produção de XAML que usa um vocabulário específico do XAML interage com o objeto de comportamento, incluindo como resolve o mapeamento de tipo, como os assemblies são carregados, como determinados leitor e gravador de gravação as configurações são interpretadas. Este tópico descreve os recursos de serviços de XAML do .NET Framework e o contexto do esquema XAML padrão associado, que é baseado no sistema de tipos CLR. Este tópico também descreve o contexto do esquema XAML que é usado para WPF.  
@@ -35,7 +37,7 @@ Um contexto de esquema XAML é uma entidade conceitual que qualifica como uma pr
 ## <a name="wpf-xaml-schema-context"></a>Contexto do esquema XAML WPF  
  O contexto do esquema XAML WPF é descrito neste tópico porque a implementação do WPF fornece uma ilustração interessante dos tipos de recursos que podem ser introduzidos com a implementação de um contexto de esquema XAML não padrão. Além disso, o conceito de contexto do esquema XAML não é discutido muito na documentação do WPF que aborda WPF XAML; o comportamento que permite que o contexto do esquema XAML só pode ser totalmente compreensível se integrado com uma discussão de como funciona o contexto do esquema XAML padrão. O contexto do esquema XAML WPF implementa o comportamento a seguir.  
   
- **Substituições de pesquisa:** WPF tem alguns modelos de conteúdo para XAML em que não há propriedades de conteúdo XAML que funcionam sem sendo <xref:System.Windows.Markup.ContentPropertyAttribute> atribuído. <xref:System.Xaml.XamlType.LookupContentProperty%2A>substituições para WPF implementam esse comportamento.  
+ **Substituições de pesquisa:** WPF tem alguns modelos de conteúdo para XAML em que não há propriedades de conteúdo XAML que funcionam sem sendo <xref:System.Windows.Markup.ContentPropertyAttribute> atribuído. <xref:System.Xaml.XamlType.LookupContentProperty%2A> substituições para WPF implementam esse comportamento.  
   
  **Adiamento de expressões de WPF:** WPF apresenta várias classes de expressão que adiar um valor até que um contexto de tempo de execução está disponível. Além disso, a expansão do modelo é um comportamento de tempo de execução que se baseia em técnicas de adiamento.  
   
@@ -68,7 +70,7 @@ Um contexto de esquema XAML é uma entidade conceitual que qualifica como uma pr
     -   Se o nome não qualificado no mapeamento, chame <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
 #### <a name="xamlbuildtask"></a>XamlBuildTask  
- `XamlBuildTask`é usado para [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)] e [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)].  
+ `XamlBuildTask` é usado para [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)] e Windows Workflow Foundation.  
   
  Observe que as referências a assembly por meio de `XamlBuildTask` são sempre totalmente qualificado.  
   

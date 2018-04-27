@@ -1,10 +1,11 @@
 ---
-title: "Instrução Try...Catch...Finally (Visual Basic)"
+title: Instrução Try...Catch...Finally (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Try...Catch...Finally
@@ -24,14 +25,14 @@ helpviewer_keywords:
 - Visual Basic code, handling errors while running
 - structured exception handling, Try...Catch...Finally statements
 ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
-caps.latest.revision: "69"
+caps.latest.revision: 69
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c297a84b37b455a4b30b1848aa9bdd30dc567ec1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 701475d41d24ad89e6c83796f7cc5cd4b7802a32
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Instrução Try...Catch...Finally (Visual Basic)
 Fornece uma maneira de lidar com alguns ou todos os erros possíveis que podem ocorrer em um determinado bloco de código, ainda assim, executar código.  
@@ -70,17 +71,17 @@ End Try
 ## <a name="remarks"></a>Comentários  
  Se você espera que uma exceção específica pode ocorrer durante uma determinada seção de código, coloque o código em um `Try` bloquear e usar um `Catch` bloco para manter o controle e lidar com a exceção se ele ocorre.  
   
- Um `Try…Catch` consiste em uma `Try` bloco seguido por um ou mais `Catch` cláusulas, que especificam os manipuladores para diversas exceções. Quando uma exceção será lançada uma `Try` bloco, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] procura o `Catch` instrução que manipula a exceção. Se uma correspondência `Catch` instrução não for encontrada, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] examina o método que chamou o método atual, e assim por diante para cima a pilha de chamadas. Se nenhum `Catch` bloco for encontrado, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] exibirá uma mensagem de exceção sem tratamento ao usuário e interrompe a execução do programa.  
+ Um `Try…Catch` consiste em uma `Try` bloco seguido por um ou mais `Catch` cláusulas, que especificam os manipuladores para diversas exceções. Quando uma exceção será lançada uma `Try` bloco, Visual Basic procura o `Catch` instrução que manipula a exceção. Se uma correspondência `Catch` instrução não for encontrada, Visual Basic examina o método que chamou o método atual, e assim por diante para cima a pilha de chamadas. Se nenhum `Catch` bloco for encontrado, o Visual Basic exibe uma mensagem de exceção sem tratamento ao usuário e interrompe a execução do programa.  
   
  Você pode usar mais de um `Catch` instrução em um `Try…Catch` instrução. Se você fizer isso, a ordem dos `Catch` cláusulas é significativo porque eles são examinados em ordem. Capture as exceções mais específicas antes das menos específicas.  
   
  O seguinte `Catch` condições de instrução são menos específico e irá capturar todos exceções que derivam de <xref:System.Exception> classe. Você normalmente deve usar uma dessas variações como a última `Catch` bloco no `Try...Catch...Finally` estrutura, depois de capturar todas as exceções específicas que você espera. Fluxo de controle nunca pode alcançar um `Catch` bloco que segue uma dessas variações.  
   
--   O `type` é `Exception`, por exemplo:`Catch ex As Exception`  
+-   O `type` é `Exception`, por exemplo: `Catch ex As Exception`  
   
--   A instrução não tiver nenhuma `exception` variável, por exemplo:`Catch`  
+-   A instrução não tiver nenhuma `exception` variável, por exemplo: `Catch`  
   
- Quando um `Try…Catch…Finally` instrução está aninhada em outro `Try` bloco, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] primeiro examina cada `Catch` instrução em mais interno `Try` bloco. Se nenhuma correspondência `Catch` instrução for encontrada, a pesquisa passa para o `Catch` instruções de externa `Try…Catch…Finally` bloco.  
+ Quando um `Try…Catch…Finally` instrução está aninhada em outro `Try` bloco, Visual Basic primeiro examina cada `Catch` instrução em mais interno `Try` bloco. Se nenhuma correspondência `Catch` instrução for encontrada, a pesquisa passa para o `Catch` instruções de externa `Try…Catch…Finally` bloco.  
   
  Variáveis locais de um `Try` bloco não estão disponíveis em um `Catch` bloquear porque eles são os blocos separados. Se você quiser usar uma variável em mais de um bloco, declare a variável de fora de `Try...Catch...Finally` estrutura.  
   
@@ -108,7 +109,7 @@ End Try
 ## <a name="exception-argument"></a>Argumento de exceção  
  O `Catch` bloco `exception` argumento é uma instância do <xref:System.Exception> classe ou uma classe que deriva de `Exception` classe. O `Exception` instância da classe corresponde ao erro que ocorreu no `Try` bloco.  
   
- As propriedades do `Exception` ajuda a identificar a causa e o local de uma exceção do objeto. Por exemplo, o <xref:System.Exception.StackTrace%2A> propriedade lista os métodos chamados que conduziram à exceção, ajudando você a identificar onde o erro ocorreu no código. <xref:System.Exception.Message%2A>Retorna uma mensagem que descreve a exceção. <xref:System.Exception.HelpLink%2A>Retorna um link para um arquivo de ajuda associado. <xref:System.Exception.InnerException%2A>Retorna o `Exception` objeto que causou a exceção atual ou retorna `Nothing` se não houver nenhum original `Exception`.  
+ As propriedades do `Exception` ajuda a identificar a causa e o local de uma exceção do objeto. Por exemplo, o <xref:System.Exception.StackTrace%2A> propriedade lista os métodos chamados que conduziram à exceção, ajudando você a identificar onde o erro ocorreu no código. <xref:System.Exception.Message%2A> Retorna uma mensagem que descreve a exceção. <xref:System.Exception.HelpLink%2A> Retorna um link para um arquivo de ajuda associado. <xref:System.Exception.InnerException%2A> Retorna o `Exception` objeto que causou a exceção atual ou retorna `Nothing` se não houver nenhum original `Exception`.  
   
 ## <a name="considerations-when-using-a-trycatch-statement"></a>Considerações ao usar um bloco Try... Instrução catch  
  Use um `Try…Catch` instrução somente para indicar a ocorrência de eventos de programa incomuns ou inesperados. Razões para isso incluem o seguinte:  

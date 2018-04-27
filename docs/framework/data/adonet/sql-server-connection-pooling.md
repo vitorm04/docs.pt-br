@@ -1,27 +1,29 @@
 ---
-title: "Pool de conexões do SQL Server (ADO.NET)"
-ms.custom: 
+title: Pool de conexões do SQL Server (ADO.NET)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 497ebbd573ea05568010485f04f08cdeddbf6041
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: c0be63e767255508ac93555a503980f3798e70c0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Pool de conexões do SQL Server (ADO.NET)
 Para se conectar a um servidor de banco de dados, existem, normalmente, várias etapas demoradas. Um canal físico, como um soquete ou um pipe nomeado, deve ser estabelecido, o handshake inicial com o servidor deve ocorrer, informações de cadeia de conexão devem ser analisadas, a conexão deve ser autenticada pelo servidor, verificações devem ser realizadas para a inscrição na transação atual e assim por diante.  
@@ -78,13 +80,13 @@ using (SqlConnection connection = new SqlConnection(
  O pool de conexões atende às solicitações de conexões realocando-as à medida que são retornadas ao pool. Se o tamanho máximo de pool for atingido e nenhuma conexão útil estiver disponível, a solicitação será colocada na fila. Em seguida, o pooler tentará recuperar conexões até que o tempo limite seja esgotado (o padrão é de 15 segundos). Se o pooler não puder atender à solicitação antes que se esgote o tempo limite de conexão, uma exceção será gerada.  
   
 > [!CAUTION]
->  É altamente recomendável sempre fechar a conexão quando você terminar de usá-la para que a conexão seja retornada ao pool. Você pode fazer isso usando os métodos `Close` ou `Dispose` do objeto `Connection` ou abrindo todas as conexões em uma instrução `using` em C# ou uma instrução `Using` em [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]. As conexões que não são fechadas explicitamente não podem ser adicionadas nem retornadas ao pool. Para obter mais informações, consulte [usando a instrução](~/docs/csharp/language-reference/keywords/using-statement.md) ou [como: descartar um recurso de sistema](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) para [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)].  
+>  É altamente recomendável sempre fechar a conexão quando você terminar de usá-la para que a conexão seja retornada ao pool. Você pode fazer isso usando o `Close` ou `Dispose` métodos do `Connection` de objeto ou abrindo por todas as conexões dentro de um `using` instrução em c#, ou um `Using` instrução no Visual Basic. As conexões que não são fechadas explicitamente não podem ser adicionadas nem retornadas ao pool. Para obter mais informações, consulte [usando a instrução](~/docs/csharp/language-reference/keywords/using-statement.md) ou [como: descartar um recurso de sistema](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) do Visual Basic.  
   
 > [!NOTE]
 >  Não chame `Close` nem `Dispose` em um objeto `Connection`, em um `DataReader` nem em nenhum outro objeto gerenciado no método `Finalize` de sua classe. Em um finalizador, libere somente recursos não gerenciados que sua classe possui diretamente. Se a classe não tiver nenhum recurso não gerenciado, não inclua um método `Finalize` em sua definição de classe. Para obter mais informações, consulte [coleta de lixo](../../../../docs/standard/garbage-collection/index.md).  
   
 > [!NOTE]
->  Os eventos de login e logout não são gerados no servidor quando uma conexão é obtida do pool de conexões ou retornada para ele. Isso ocorre porque a conexão não é realmente fechada quando retornada para o pool de conexões. Para obter mais informações, consulte [classe de evento de logon de auditoria](http://msdn2.microsoft.com/library/ms190260.aspx) e [classe de evento Audit Logout](http://msdn2.microsoft.com/library/ms175827.aspx) na [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Manuais Online.  
+>  Os eventos de login e logout não são gerados no servidor quando uma conexão é obtida do pool de conexões ou retornada para ele. Isso ocorre porque a conexão não é realmente fechada quando retornada para o pool de conexões. Para obter mais informações, consulte [classe de evento de logon de auditoria](http://msdn2.microsoft.com/library/ms190260.aspx) e [classe de evento Audit Logout](http://msdn2.microsoft.com/library/ms175827.aspx) nos Manuais Online do SQL Server.  
   
 ## <a name="removing-connections"></a>Removendo conexões  
  Pooler de conexão remove uma conexão do pool depois de ficar ocioso por aproximadamente 4 a 8 minutos, ou se pooler de detectar que a conexão com o servidor foi removida. Observe que uma conexão interrompida pode ser detectada somente após uma tentativa de comunicação com o servidor. Se for encontrada uma conexão que não esteja mais conectada ao servidor, ela será marcada como inválida. As conexões inválidas são removidas de pool de conexões somente quando são fechadas ou recuperadas.  
@@ -111,7 +113,7 @@ using (SqlConnection connection = new SqlConnection(
 ### <a name="pool-fragmentation-due-to-many-databases"></a>Fragmentação de pool devido a vários bancos de dados  
  Vários provedores de serviços de Internet hospedam vários sites em um único servidor. Eles podem usar um único banco de dados para confirmar um logon de autenticação de formulários e para abrir uma conexão com um banco de dados específico desse usuário ou grupo de usuários. A conexão com o banco de dados de autenticação é agrupada e usada por todos. Entretanto, há um pool de conexões separado para cada banco de dados, que aumenta o número de conexões com o servidor.  
   
- Trata-se também de um efeito colateral de projeto do aplicativo. Existe uma forma relativamente simples de evitar esse efeito colateral sem comprometer a segurança quando você se conectar ao [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Em vez de se conectar a um banco de dados separado para cada usuário ou grupo, conecte-se ao mesmo banco de dados no servidor e execute a instrução [!INCLUDE[tsql](../../../../includes/tsql-md.md)] USE para alternar para o banco de dados desejado. O fragmento de código a seguir demonstra como criar uma conexão inicial com o banco de dados `master` e depois alternar para o banco de dados desejado especificado na variável da cadeia de caracteres `databaseName`.  
+ Trata-se também de um efeito colateral de projeto do aplicativo. Existe uma forma relativamente simples de evitar esse efeito colateral sem comprometer a segurança quando você se conectar ao SQL Server. Em vez de se conectar a um banco de dados separado para cada usuário ou grupo, conecte-se ao mesmo banco de dados no servidor e execute a instrução [!INCLUDE[tsql](../../../../includes/tsql-md.md)] USE para alternar para o banco de dados desejado. O fragmento de código a seguir demonstra como criar uma conexão inicial com o banco de dados `master` e depois alternar para o banco de dados desejado especificado na variável da cadeia de caracteres `databaseName`.  
   
 ```vb  
 ' Assumes that command is a valid SqlCommand object and that  
@@ -136,7 +138,7 @@ using (SqlConnection connection = new SqlConnection(
 ```  
   
 ## <a name="application-roles-and-connection-pooling"></a>Funções de aplicativo e pool de conexões  
- Depois de ativada uma função de aplicativo do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] ao chamar o procedimento armazenado do sistema `sp_setapprole`, o contexto de segurança dessa conexão não pode ser redefinido. Entretanto, se o pool estiver habilitado, a conexão será retornada a ele e ocorrerá um erro quando a conexão agrupada for reutilizada. Para obter mais informações, consulte o artigo da Base de dados de Conhecimento, "[erros de função de aplicativo do SQL com o pool de recursos do OLE DB](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)."  
+ Depois de ativada uma função de aplicativo do SQL Server ao chamar o procedimento armazenado do sistema `sp_setapprole`, o contexto de segurança dessa conexão não pode ser redefinido. Entretanto, se o pool estiver habilitado, a conexão será retornada a ele e ocorrerá um erro quando a conexão agrupada for reutilizada. Para obter mais informações, consulte o artigo da Base de dados de Conhecimento, "[erros de função de aplicativo do SQL com o pool de recursos do OLE DB](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)."  
   
 ### <a name="application-role-alternatives"></a>Alternativas a funções de aplicativo  
  Recomendamos que você aproveite todas as vantagens dos mecanismos de segurança que podem ser usados no lugar de funções de aplicativo. Para obter mais informações, consulte [criando funções de aplicativo no SQL Server](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  

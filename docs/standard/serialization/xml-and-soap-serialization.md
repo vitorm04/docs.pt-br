@@ -1,11 +1,11 @@
 ---
-title: "Serialização XML e SOAP"
-ms.custom: 
+title: Serialização XML e SOAP
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SOAP, XML serialization
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - XML serialization
 - serialization
 ms.assetid: 832ac524-21bc-419a-a27b-ca8bfc45840f
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1ac5e83d6daf9654c541dcd8a748717be3ed05d0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 8895a3ca460034cd963bc43e1f27535a51cf9356
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xml-and-soap-serialization"></a>Serialização XML e SOAP
 A serialização XML converte (serializa) as propriedades e os campos públicos de um objeto (ou os parâmetros e valores de retorno de métodos) em um fluxo XML que esteja de acordo com um documento XSD (linguagem de definição de esquema XML) específico. A serialização XML resulta em classes fortemente tipadas com propriedades e campos públicos que são convertidos em um formato serial (neste caso, em XML) para armazenamento ou transporte.  
@@ -93,10 +93,10 @@ A serialização XML converte (serializa) as propriedades e os campos públicos 
  Adiciona tipos que são usados pela classe <xref:System.Xml.Serialization.XmlSchemaImporter>.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Tecnologias de desenvolvimento avançadas](http://msdn.microsoft.com/library/c4a7e341-f0c6-4df4-a74f-223387ac6e4e)  
+ [Tecnologias de desenvolvimento avançadas](https://msdn.microsoft.com/library/c4a7e341-f0c6-4df4-a74f-223387ac6e4e)  
  Fornece links para obter mais informações sobre tarefas e técnicas sofisticadas de desenvolvimento no .NET Framework.  
   
- [Serviços Web XML criados com o ASP.NET e clientes de serviços Web XML](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
+ [Serviços Web XML criados com o ASP.NET e clientes de serviços Web XML](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
  Fornece tópicos que descrevem e explicam como programar serviços Web XML usando ASP.NET.  
   
 ## <a name="see-also"></a>Consulte também  

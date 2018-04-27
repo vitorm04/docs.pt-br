@@ -1,12 +1,13 @@
 ---
-title: "Delegação e representação com o WCF"
-ms.custom: 
+title: Delegação e representação com o WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6319a9793698e12a984c875670d71b2cbb0b00ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5c1acfdfdbac2660fd4de7ec391c94b39890f669
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegação e representação com o WCF
 *Representação* é uma técnica comum que os serviços usam para restringir o acesso de cliente aos recursos de um domínio serviço. Recursos de domínio de serviço podem ser recursos do computador, como arquivos locais (representação), ou um recurso em outro computador, como um compartilhamento de arquivo (delegação). Para um aplicativo de exemplo, consulte [representar o cliente](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Para obter um exemplo de como usar a representação, consulte [como: representar um cliente em um serviço](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -38,19 +40,19 @@ ms.lasthandoff: 12/22/2017
  Representação e delegação exigem que o cliente tenha uma identidade do Windows. Se um cliente não possui uma identidade do Windows, a única opção disponível é a identidade do cliente para o segundo serviço de fluxo.  
   
 ## <a name="impersonation-basics"></a>Noções básicas de representação  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]dá suporte à representação para uma variedade de credenciais de cliente. Este tópico descreve o suporte de modelo de serviço para representar o chamador durante a implementação de um método de serviço. Também são abordadas cenários comuns de implantação que envolve a representação e segurança de SOAP e [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] opções nesses cenários.  
+ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dá suporte à representação para uma variedade de credenciais de cliente. Este tópico descreve o suporte de modelo de serviço para representar o chamador durante a implementação de um método de serviço. Também são abordadas cenários comuns de implantação que envolve a representação e segurança de SOAP e [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] opções nesses cenários.  
   
  Este tópico enfoca a representação e delegação em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ao usar a segurança SOAP. Você também pode usar a representação e delegação com [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ao usar a segurança de transporte, conforme descrito em [usando representação com segurança de transporte](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md).  
   
 ## <a name="two-methods"></a>Dois métodos  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Segurança SOAP tem dois métodos distintos para executar representação. O método usado depende da associação. Uma é a representação de um token do Windows obtido com a autenticação Kerberos ou de Interface de provedor de suporte de segurança (SSPI), que é armazenado em cache, em seguida, no serviço. A segunda é a representação de um token do Windows obtido extensões Kerberos, coletivamente chamadas *Service-for-User* (S4U).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Segurança SOAP tem dois métodos distintos para executar representação. O método usado depende da associação. Uma é a representação de um token do Windows obtido com a autenticação Kerberos ou de Interface de provedor de suporte de segurança (SSPI), que é armazenado em cache, em seguida, no serviço. A segunda é a representação de um token do Windows obtido extensões Kerberos, coletivamente chamadas *Service-for-User* (S4U).  
   
 ### <a name="cached-token-impersonation"></a>Representação de Token em cache  
  Você pode executar a representação de token armazenado em cache com o seguinte:  
   
 -   <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>, e <xref:System.ServiceModel.NetTcpBinding> com uma credencial de cliente do Windows.  
   
--   <xref:System.ServiceModel.BasicHttpBinding>com um <xref:System.ServiceModel.BasicHttpSecurityMode> definido como o <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> credencial ou qualquer outra associação padrão em que o cliente apresenta uma credencial de nome de usuário que o serviço pode ser mapeados para uma conta válida do Windows.  
+-   <xref:System.ServiceModel.BasicHttpBinding> com um <xref:System.ServiceModel.BasicHttpSecurityMode> definido como o <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> credencial ou qualquer outra associação padrão em que o cliente apresenta uma credencial de nome de usuário que o serviço pode ser mapeados para uma conta válida do Windows.  
   
 -   Qualquer <xref:System.ServiceModel.Channels.CustomBinding> que usa uma credencial de cliente do Windows com o `requireCancellation` definido como `true`. (A propriedade está disponível nas seguintes classes: <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>, <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters>, e <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>.) Se uma conversa segura é usada na associação, ela também deve ter o `requireCancellation` propriedade definida como `true`.  
   
@@ -68,10 +70,10 @@ ms.lasthandoff: 12/22/2017
  A extensão à qual o serviço pode representar o cliente depende dos privilégios que a conta de serviço mantém quando ele tenta representação, o tipo de representação usada e possivelmente a extensão de representação que permite que o cliente.  
   
 > [!NOTE]
->  Quando o cliente e o serviço estiverem em execução no mesmo computador e o cliente é executado sob uma conta de sistema (por exemplo, `Local System` ou `Network Service`), o cliente não pode ser representado quando uma sessão segura é estabelecida com o contexto de segurança com monitoração de estado tokens. Um aplicativo Windows Form ou console normalmente é executado sob a conta conectado no momento, para que a conta pode ser representada por padrão. No entanto, quando o cliente é um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] página e que é hospedado no [!INCLUDE[iis601](../../../../includes/iis601-md.md)] ou [!INCLUDE[iisver](../../../../includes/iisver-md.md)], em seguida, execute o cliente no `Network Service` por padrão. Todas as associações fornecidas pelo sistema que oferecem suporte a sessões seguras usam um token de contexto de segurança sem monitoração de estado (SCT) por padrão. No entanto, se o cliente é um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] página e sessões seguras com monitoração de estado SCTs forem usados, o cliente não pode ser representado. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]usando SCTs com monitoração de estado em uma sessão segura, consulte [como: criar um Token de contexto de segurança para uma sessão segura](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Quando o cliente e o serviço estiverem em execução no mesmo computador e o cliente é executado sob uma conta de sistema (por exemplo, `Local System` ou `Network Service`), o cliente não pode ser representado quando uma sessão segura é estabelecida com o contexto de segurança com monitoração de estado tokens. Um aplicativo Windows Form ou console normalmente é executado sob a conta conectado no momento, para que a conta pode ser representada por padrão. No entanto, quando o cliente é um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] página e que é hospedado no [!INCLUDE[iis601](../../../../includes/iis601-md.md)] ou [!INCLUDE[iisver](../../../../includes/iisver-md.md)], em seguida, execute o cliente no `Network Service` por padrão. Todas as associações fornecidas pelo sistema que oferecem suporte a sessões seguras usam um token de contexto de segurança sem monitoração de estado (SCT) por padrão. No entanto, se o cliente é um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] página e sessões seguras com monitoração de estado SCTs forem usados, o cliente não pode ser representado. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] usando SCTs com monitoração de estado em uma sessão segura, consulte [como: criar um Token de contexto de segurança para uma sessão segura](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
 ## <a name="impersonation-in-a-service-method-declarative-model"></a>Representação em um método de serviço: modelo declarativo  
- A maioria dos cenários de representação envolvem a execução do método de serviço no contexto do chamador. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Fornece um recurso de representação que torna isso fácil de fazer, permitindo que o usuário especifique o requisito de representação no <xref:System.ServiceModel.OperationBehaviorAttribute> atributo. Por exemplo, no código a seguir, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infraestrutura representará o chamador antes de executar o `Hello` método. Qualquer tentativa de acessar recursos nativos dentro de `Hello` método só terá êxito se a lista de controle de acesso (ACL) do recurso permite que o chamador de privilégios de acesso. Para habilitar a representação, defina o <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> propriedade para um do <xref:System.ServiceModel.ImpersonationOption> valores de enumeração, ou <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> ou <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>, conforme mostrado no exemplo a seguir.  
+ A maioria dos cenários de representação envolvem a execução do método de serviço no contexto do chamador. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Fornece um recurso de representação que torna isso fácil de fazer, permitindo que o usuário especifique o requisito de representação no <xref:System.ServiceModel.OperationBehaviorAttribute> atributo. Por exemplo, no código a seguir, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infraestrutura representará o chamador antes de executar o `Hello` método. Qualquer tentativa de acessar recursos nativos dentro de `Hello` método só terá êxito se a lista de controle de acesso (ACL) do recurso permite que o chamador de privilégios de acesso. Para habilitar a representação, defina o <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> propriedade para um do <xref:System.ServiceModel.ImpersonationOption> valores de enumeração, ou <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> ou <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>, conforme mostrado no exemplo a seguir.  
   
 > [!NOTE]
 >  Quando um serviço possui credenciais mais alto que o cliente remoto, as credenciais do serviço são usadas se o <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> está definida como <xref:System.ServiceModel.ImpersonationOption.Allowed>. Ou seja, se um usuário de baixo privilégio fornecer suas credenciais, um serviço de privilégios mais altos executa o método com as credenciais do serviço e pode usar recursos que o usuário de baixo privilégio caso contrário, não seria capaz de usar.  
@@ -82,13 +84,13 @@ ms.lasthandoff: 12/22/2017
  O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infraestrutura pode representar o chamador somente se o chamador é autenticado com as credenciais que podem ser mapeadas para uma conta de usuário do Windows. Se o serviço está configurado para se autenticar usando uma credencial que não pode ser mapeada para uma conta do Windows, o método de serviço não será executado.  
   
 > [!NOTE]
->  Em [!INCLUDE[wxp](../../../../includes/wxp-md.md)], representação falhará se um stateful SCT é criado, resultando em um <xref:System.InvalidOperationException>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Cenários sem suporte](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
+>  Em [!INCLUDE[wxp](../../../../includes/wxp-md.md)], representação falhará se um stateful SCT é criado, resultando em um <xref:System.InvalidOperationException>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Cenários sem suporte](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
   
 ## <a name="impersonation-in-a-service-method-imperative-model"></a>Representação em um método de serviço: modelo obrigatório  
  Às vezes, um chamador não precisa representar o método de todo o serviço de função, mas para apenas uma parte dele. Nesse caso, obtenha a identidade do Windows do chamador dentro do método de serviço e executar imperativa a representação. Fazer isso usando o <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> propriedade o <xref:System.ServiceModel.ServiceSecurityContext> para retornar uma instância do <xref:System.Security.Principal.WindowsIdentity> classe e chamar o <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> método antes de usar a instância.  
   
 > [!NOTE]
->  Certifique-se de usar o [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] `Using` instrução ou c# `using` instrução automaticamente reverter a ação de representação. Se você não usar a instrução, ou se você usar uma linguagem de programação que [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] ou c#, certifique-se de reverter o nível de representação. Falha ao fazer isso pode formar a base para a negação de serviço e elevação de ataques de privilégio.  
+>  Certifique-se de usar o Visual Basic`Using` instrução ou c# `using` instrução automaticamente reverter a ação de representação. Se você não usar a instrução, ou se você usar uma linguagem de programação que não seja do Visual Basic ou c#, certifique-se de reverter o nível de representação. Falha ao fazer isso pode formar a base para a negação de serviço e elevação de ataques de privilégio.  
   
  [!code-csharp[c_ImpersonationAndDelegation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_impersonationanddelegation/cs/source.cs#2)]
  [!code-vb[c_ImpersonationAndDelegation#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_impersonationanddelegation/vb/source.vb#2)]  
@@ -103,10 +105,10 @@ ms.lasthandoff: 12/22/2017
   
 |`ImpersonationOption`|`ImpersonateCallerForAllServiceOperations`|Comportamento|  
 |---------------------------|------------------------------------------------|--------------|  
-|Necessária|N/D|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]representa o chamador|  
-|Permitido|false|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]não representar o chamador|  
-|Permitido|true|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]representa o chamador|  
-|Não permitido|false|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]não representar o chamador|  
+|Necessária|N/D|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] representa o chamador|  
+|Permitido|false|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não representar o chamador|  
+|Permitido|true|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] representa o chamador|  
+|Não permitido|false|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] não representar o chamador|  
 |Não permitido|true|Não permitido. (Um <xref:System.InvalidOperationException> é gerada.)|  
   
 ## <a name="impersonation-level-obtained-from-windows-credentials-and-cached-token-impersonation"></a>Nível de representação obtidas as credenciais do Windows e armazenado em cache o Token de representação  
@@ -122,7 +124,7 @@ ms.lasthandoff: 12/22/2017
   
  A tabela a seguir especifica o nível de representação que o serviço obtém a representação de um token em cache.  
   
-|Valor `AllowedImpersonationLevel`|Serviço tem`SeImpersonatePrivilege`|Cliente e serviço são capazes de delegação|Token de cache`ImpersonationLevel`|  
+|Valor `AllowedImpersonationLevel`|Serviço tem `SeImpersonatePrivilege`|Cliente e serviço são capazes de delegação|Token de cache `ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |Anônimo|Sim|N/D|Representação|  
 |Anônimo|Não|N/D|Identificação|  
@@ -136,7 +138,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>Nível de representação obtidos de credenciais de nome de usuário e armazenados em cache o Token de representação  
  Passando o serviço de seu nome de usuário e senha, permite que um cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para fazer logon como esse usuário, que é equivalente à configuração de `AllowedImpersonationLevel` propriedade <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>. (O `AllowedImpersonationLevel` está disponível na <xref:System.ServiceModel.Security.WindowsClientCredential> e <xref:System.ServiceModel.Security.HttpDigestClientCredential> classes.) A tabela a seguir fornece a representação de nível obtida quando o serviço recebe as credenciais de nome de usuário.  
   
-|`AllowedImpersonationLevel`|Serviço tem`SeImpersonatePrivilege`|Cliente e serviço são capazes de delegação|Token de cache`ImpersonationLevel`|  
+|`AllowedImpersonationLevel`|Serviço tem `SeImpersonatePrivilege`|Cliente e serviço são capazes de delegação|Token de cache `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |N/D|Sim|Sim|Delegação|  
 |N/D|Sim|Não|Representação|  
@@ -144,7 +146,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>Obtido com base em S4U representação de nível de representação  
   
-|Serviço tem`SeTcbPrivilege`|Serviço tem`SeImpersonatePrivilege`|Cliente e serviço são capazes de delegação|Token de cache`ImpersonationLevel`|  
+|Serviço tem `SeTcbPrivilege`|Serviço tem `SeImpersonatePrivilege`|Cliente e serviço são capazes de delegação|Token de cache `ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |Sim|Sim|N/D|Representação|  
 |Sim|Não|N/D|Identificação|  

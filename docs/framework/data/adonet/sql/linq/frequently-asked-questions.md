@@ -1,27 +1,29 @@
 ---
 title: Perguntas frequentes
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e09dd7cb3fc979a9be0165705247cc5a63a6b328
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: caccbb76f32c38f29fa4f49adc9b7b1c8fe4045d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="frequently-asked-questions"></a>Perguntas frequentes
 As seções a seguir respondem a alguns problemas comuns que você pode encontrar ao implementar o [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -31,7 +33,7 @@ As seções a seguir respondem a alguns problemas comuns que você pode encontra
 ## <a name="cannot-connect"></a>Não é possível conectar  
  P. Não consigo me conectar a meu banco de dados.  
   
- R. Verifique se sua cadeia de conexão está correta e se sua instância do [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] está sendo executada. Observe também que o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] exige que o protocolo de pipes nomeados esteja ativado. Para obter mais informações, consulte [aprendendo com explicações passo a passo](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
+ R. Verifique se a cadeia de conexão está correta e se a instância do SQL Server está em execução. Observe também que o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] exige que o protocolo de pipes nomeados esteja ativado. Para obter mais informações, consulte [aprendendo com explicações passo a passo](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
   
 ## <a name="changes-to-database-lost"></a>Alterações perdidas do banco de dados  
  P. Fiz uma alteração nos dados no banco de dados, mas, quando executei o aplicativo, a alteração não estava mais lá.  
@@ -155,7 +157,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="provider-model"></a>Modelo do provedor  
  P. Um modelo de provedor público está disponível?  
   
- R. Nenhum modelo de provedor público está disponível. No momento, o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suporte somente ao [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] e ao [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)].  
+ R. Nenhum modelo de provedor público está disponível. Neste momento, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suporte ao SQL Server e [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] apenas.  
   
 ## <a name="sql-injection-attacks"></a>Ataques de injeção de SQL  
  P. Como o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] é protegido contra ataques de injeção de SQL?  
@@ -174,7 +176,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 3.  Examine o valor padrão <xref:System.Data.Linq.Mapping.UpdateCheck> (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) para determinar se este é o valor correto para seu aplicativo.  
   
     > [!CAUTION]
-    >  Se você estiver usando o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] no [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], suas alterações poderão ser substituídas.  
+    >  Se você estiver usando o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] no Visual Studio, as alterações poderão ser substituídas.  
   
 ## <a name="aptca"></a>APTCA  
  P. O System.Data.Linq está marcado para ser usado pelo código parcialmente confiável?  
@@ -196,7 +198,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  R. Não tente reutilizar instâncias do <xref:System.Data.Linq.DataContext>. Cada <xref:System.Data.Linq.DataContext> mantém o estado (incluindo um cache de identidade) para uma determinada sessão de edição/consulta. Para obter as novas instâncias com base no estado atual do banco de dados, use um novo <xref:System.Data.Linq.DataContext>.  
   
- Você ainda pode usar o pool de conexões do [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] subjacente. Para obter mais informações, consulte [Pooling de Conexão do SQL Server (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ Você ainda pode usar o pool de conexões do [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] subjacente. Para obter mais informações, confira [Pooling de conexão do SQL Server (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
   
 ## <a name="second-datacontext-is-not-updated"></a>O segundo DataContext não é atualizado  
  P. Eu usei uma instância do <xref:System.Data.Linq.DataContext> para armazenar valores no banco de dados. No entanto, um segundo <xref:System.Data.Linq.DataContext> no mesmo banco de dados não reflete os valores atualizados. A segunda instância do <xref:System.Data.Linq.DataContext> parece retornar os valores armazenados em cache.  

@@ -1,18 +1,19 @@
 ---
 title: E aplicativos otimizada para a nuvem?
-description: "Arquitetura de Microservices .NET para aplicativos .NET em contêineres | E aplicativos otimizada para a nuvem?"
+description: Arquitetura de Microservices .NET para aplicativos .NET em contêineres | E aplicativos otimizada para a nuvem?
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 249da9ecbac90514647f4fdc926928ac7ad4648e
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 63eb80dc43e174f4c803f772f09f6e72d8c8e7c2
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="what-about-cloud-optimized-applications"></a>E aplicativos otimizada para a nuvem?
 
@@ -72,7 +73,7 @@ Mas, mesmo em cenários em que microservices oferecem implantação de independe
 
 Devido à complexidade de uma arquitetura de microservices, somente determinados tipos de aplicativos e cenários específicos são adequados para aplicativos baseados em microsserviço. Isso inclui aplicativos grandes e complexos que têm várias surgimento de subsistemas. Nesses casos, vale a pena investir em uma arquitetura de software mais complexa, para maior agilidade de longo prazo e manutenção de aplicativos mais eficiente. Mas para cenários menos complexos, talvez seja melhor continuar com uma abordagem de aplicativo monolítico ou abordagens mais simples de N camadas.
 
-Uma observação final, mesmo com o risco de ser repetitiva sobre esse conceito, você não deve ver usando microservices em seus aplicativos como "completo ou nada mesmo*.*" Você pode estender e desenvolver aplicativos monolíticos existentes adicionando novos e cenários pequenos com base em microservices. Você não precisa começar do zero para começar a trabalhar com uma abordagem de arquitetura microservices. Na verdade, é recomendável que você evoluir do uso de um aplicativo monolítico ou de N camadas existente adicionando novos cenários. Por fim, você pode dividir o aplicativo em componentes autônomos ou microservices. Você pode iniciar o surgimento de seus aplicativos monolíticos em direção microservices, passo a passo.
+Uma observação final, mesmo com o risco de ser repetitiva sobre esse conceito, você não deve ver usando microservices em seus aplicativos como "completo ou nada mesmo *.*" Você pode estender e desenvolver aplicativos monolíticos existentes adicionando novos e cenários pequenos com base em microservices. Você não precisa começar do zero para começar a trabalhar com uma abordagem de arquitetura microservices. Na verdade, é recomendável que você evoluir do uso de um aplicativo monolítico ou de N camadas existente adicionando novos cenários. Por fim, você pode dividir o aplicativo em componentes autônomos ou microservices. Você pode iniciar o surgimento de seus aplicativos monolíticos em direção microservices, passo a passo.
 
 ## <a name="when-to-use-azure-app-service-for-modernizing-existing-net-apps"></a>Quando usar o serviço de aplicativo do Azure para modernizar aplicativos existentes do .NET
 

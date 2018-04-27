@@ -1,24 +1,26 @@
 ---
 title: Exemplo de Streaming Feeds
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e3d2de4dd5510b212e030ea537cea0be3dce24f0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 24dfd6c7eb2c1df6605d03bfb99cc82c0a489377
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="streaming-feeds-sample"></a>Exemplo de Streaming Feeds
 Este exemplo demonstra como gerenciar feeds de agregação que contêm um grande número de itens. No servidor, o exemplo demonstra como atrasar a criação de um indivíduo <xref:System.ServiceModel.Syndication.SyndicationItem> objetos dentro do feed até imediatamente antes do item é gravado para o fluxo de rede.  
@@ -27,7 +29,7 @@ Este exemplo demonstra como gerenciar feeds de agregação que contêm um grande
   
  Para melhor demonstrar o recurso de streaming da API de distribuição, este exemplo usa um cenário improvável em que o servidor expõe um feed que contém um número infinito de itens. Nesse caso, o servidor continua a gerar novos itens no feed, até que ele determina que o cliente tem lê um número especificado de itens do feed (por padrão, 10). Para simplificar, o cliente e o servidor são implementadas no mesmo processo e usar compartilhado `ItemCounter` produziu um objeto para controlar quantos itens de cliente. O `ItemCounter` tipo existe somente para fins de permitir que o cenário de exemplo encerrar corretamente e não é um elemento de núcleo do padrão demonstrado.  
   
- A demonstração usa [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] iteradores (usando o `yield``return` construção de palavra-chave). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]iteradores, consulte o tópico "Usando iteradores" no MSDN.  
+ A demonstração faz uso do Visual C# iteradores (usando o `yield``return` construção de palavra-chave). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] iteradores, consulte o tópico "Usando iteradores" no MSDN.  
   
 ## <a name="service"></a>Serviço  
  O serviço implementa básico <xref:System.ServiceModel.Web.WebGetAttribute> contrato que consiste em uma única operação, conforme mostrado no código a seguir.  

@@ -16,19 +16,19 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0862f747cb969a6aa2e63d86e842097260e95b56
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3df15e80a550857adbfbf30ebf8b6ef902426a1a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Usando Windows Management Instrumentation para diagnóstico
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]expõe dados de inspeção de um serviço em tempo de execução por meio de um [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] provedor do Windows Management Instrumentation (WMI).  
+[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] expõe dados de inspeção de um serviço em tempo de execução por meio de um [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] provedor do Windows Management Instrumentation (WMI).  
   
 ## <a name="enabling-wmi"></a>Habilitando o WMI  
- O WMI é a implementação da Microsoft a Web-Based Enterprise Management (WBEM) padrão. [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]o SDK do WMI, consulte [Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx). O WBEM é um padrão da indústria para como aplicativos expõem instrumentação de gerenciamento para as ferramentas de gerenciamento externo.  
+ O WMI é a implementação da Microsoft a Web-Based Enterprise Management (WBEM) padrão. [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] o SDK do WMI, consulte [Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx). O WBEM é um padrão da indústria para como aplicativos expõem instrumentação de gerenciamento para as ferramentas de gerenciamento externo.  
   
- Um provedor WMI é um componente que expõe instrumentação em tempo de execução por meio de uma interface compatível com o WBEM. Ele consiste em um conjunto de objetos WMI com pares de atributo/valor. Pares de podem ser de um número de tipos simples. Ferramentas de gerenciamento podem se conectar aos serviços por meio da interface em tempo de execução. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]expõe os atributos de serviços, como endereços, associações, comportamentos e ouvintes.  
+ Um provedor WMI é um componente que expõe instrumentação em tempo de execução por meio de uma interface compatível com o WBEM. Ele consiste em um conjunto de objetos WMI com pares de atributo/valor. Pares de podem ser de um número de tipos simples. Ferramentas de gerenciamento podem se conectar aos serviços por meio da interface em tempo de execução. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] expõe os atributos de serviços, como endereços, associações, comportamentos e ouvintes.  
   
  O provedor WMI interno pode ser ativado no arquivo de configuração do aplicativo. Isso é feito por meio de `wmiProviderEnabled` atributo do [ \<diagnóstico >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) no [ \<System. ServiceModel >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) seção, conforme mostrado no exemplo a seguir configuração.  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/22/2017
  Essa entrada de configuração expõe uma interface WMI. Aplicativos de gerenciamento podem se conectar por meio dessa interface e acessar a instrumentação de gerenciamento do aplicativo.  
   
 ## <a name="accessing-wmi-data"></a>Acessando dados do WMI  
- Dados do WMI podem ser acessados de várias maneiras diferentes. A Microsoft fornece as APIs do WMI para scripts, [!INCLUDE[vbprvb](../../../../../includes/vbprvb-md.md)] aplicativos, aplicativos C++ e o [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Para obter mais informações, consulte [WMI usando](http://go.microsoft.com/fwlink/?LinkId=95183).  
+ Dados do WMI podem ser acessados de várias maneiras diferentes. A Microsoft fornece as APIs do WMI para scripts, aplicativos do Visual Basic, aplicativos C++ e o [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Para obter mais informações, consulte [WMI usando](http://go.microsoft.com/fwlink/?LinkId=95183).  
   
 > [!CAUTION]
 >  Se você usar o .NET Framework ofereceu métodos para acessar programaticamente os dados do WMI, você deve estar ciente de que esses métodos podem lançar exceções quando a conexão é estabelecida. A conexão não for estabelecida durante a construção do <xref:System.Management.ManagementObject> instância, mas, na primeira solicitação que envolvem a troca de dados real. Portanto, você deve usar um `try..catch` bloco catch possíveis exceções.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
  Você deve estar ciente de que, se nenhum registro de mensagem rastreamento ouvintes para mensagens em log ou não `System.ServiceModel` ouvintes de rastreamento para rastreamento são especificados no arquivo de configuração, nenhuma de suas alterações são levadas em vigor, mesmo que as alterações são aceitas pelo WMI. Para obter mais informações sobre como configurar corretamente os respectivos ouvintes, consulte [Configurando o log de mensagens](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) e [Configurando rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). O nível de rastreamento de todas as outras fontes de rastreamento especificado pela configuração é eficaz quando o aplicativo for iniciado e não pode ser alterado.  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]expõe um `GetOperationCounterInstanceName` método para script. Esse método retorna um nome de instância do contador de desempenho se fornecê-la com um nome de operação. No entanto, ele não valida sua entrada. Portanto, se você fornecer um nome de operação incorreta, um nome de contador incorreto é retornado.  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] expõe um `GetOperationCounterInstanceName` método para script. Esse método retorna um nome de instância do contador de desempenho se fornecê-la com um nome de operação. No entanto, ele não valida sua entrada. Portanto, se você fornecer um nome de operação incorreta, um nome de contador incorreto é retornado.  
   
  O `OutgoingChannel` propriedade do `Service` instância não conta canais abertos por um serviço para se conectar a outro serviço, se o [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] cliente para o serviço de destino não é criada dentro de `Service` método.  
   
@@ -160,7 +160,7 @@ ms.lasthandoff: 12/22/2017
 Whoami /user  
 ```  
   
- Isso fornece o SID do usuário atual, mas esse método não pode ser usado para obter o SID em qualquer usuário arbitrário. Outro método para obter o SID é usar o [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) ferramenta do [ferramentas para tarefas administrativas do Windows 2000 Resource Kit](http://go.microsoft.com/fwlink/?LinkId=178660). Essa ferramenta compara o SID de dois usuários (local ou domínio), e como efeito imprime os SIDs dois à linha de comando. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Conhecidos SIDs](http://go.microsoft.com/fwlink/?LinkId=186468).  
+ Isso fornece o SID do usuário atual, mas esse método não pode ser usado para obter o SID em qualquer usuário arbitrário. Outro método para obter o SID é usar o [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) ferramenta do [ferramentas para tarefas administrativas do Windows 2000 Resource Kit](http://go.microsoft.com/fwlink/?LinkId=178660). Essa ferramenta compara o SID de dois usuários (local ou domínio), e como efeito imprime os SIDs dois à linha de comando. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [SIDs conhecidos](http://go.microsoft.com/fwlink/?LinkId=186468).  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>Acessando instâncias de objeto WMI remoto  
  Se você precisar acessar [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] instâncias de WMI em um computador remoto, você deve habilitar privacidade de pacotes de ferramentas que você usa para acessar. A seção a seguir descreve como conseguir isto usando o WMI CIM Studio, o Testador de instrumentação de gerenciamento do Windows, bem como os .NET SDK 2.0.  

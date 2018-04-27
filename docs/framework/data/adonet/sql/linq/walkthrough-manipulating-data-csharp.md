@@ -1,24 +1,26 @@
 ---
 title: 'Passo a passo: manipulando dados (C#)'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 60724967cccd1209aeec1bf53b4e6d4fa5051996
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: d1851bd4c358b96cc9b49f274b31f5f69d9b8d7b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-manipulating-data-c"></a>Passo a passo: manipulando dados (C#)
 Essa explicação passo a passo fornece um cenário completo fundamental do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para adicionar, modificar e excluir dados em um banco de dados. Você usará uma cópia do banco de dados de exemplo Northwind para adicionar um cliente, alterar o nome de um cliente e excluir um pedido.  
@@ -47,7 +49,7 @@ Essa explicação passo a passo fornece um cenário completo fundamental do [!IN
 ## <a name="overview"></a>Visão geral  
  Este passo a passo consiste em seis tarefas principais:  
   
--   Criar a solução de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].  
+-   Criando o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solução no Visual Studio.  
   
 -   Adicionar o arquivo do código de banco de dados ao projeto.  
   
@@ -60,11 +62,11 @@ Essa explicação passo a passo fornece um cenário completo fundamental do [!IN
 -   Enviar essas alterações para o banco de dados Northwind.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Criando uma solução LINQ to SQL  
- Nesta primeira tarefa, você cria uma solução do [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] que contém as referências necessárias para criar e executar um projeto do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ Na primeira tarefa, você cria uma solução do Visual Studio que contém as referências necessárias para compilar e executar um [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projeto.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Para criar uma solução LINQ to SQL  
   
-1.  Sobre o [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] **arquivo** , aponte para **novo**e, em seguida, clique em **projeto**.  
+1.  No Visual Studio **arquivo** , aponte para **novo**e, em seguida, clique em **projeto**.  
   
 2.  No **tipos de projeto** painel o **novo projeto** caixa de diálogo, clique em **Visual C#**.  
   
@@ -115,7 +117,7 @@ Essa explicação passo a passo fornece um cenário completo fundamental do [!IN
   
      Um **Console** janela será aberta.  
   
-     Você pode fechar o aplicativo pressionando Enter no **Console** janela, ou clicando em **parar depuração** no [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] **depurar** menu.  
+     Você pode fechar o aplicativo pressionando Enter no **Console** janela, ou clicando em **parar depuração** no Visual Studio **depurar** menu.  
   
 ## <a name="creating-a-new-entity"></a>Criando uma nova entidade  
  Criar uma nova entidade é simples. Você pode criar objetos (como `Customer`) usando a palavra-chave `new`.  

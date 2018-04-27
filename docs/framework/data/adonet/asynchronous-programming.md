@@ -1,24 +1,26 @@
 ---
-title: "Programação assíncrona"
+title: Programação assíncrona
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.topic: article
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 20e40a6705ad77dc42a70739e75abdbb058465e6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7dbc106b96e4e695108b6178951e3d43078467bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="asynchronous-programming"></a>Programação assíncrona
 
-Este tópico discute o suporte à programação assíncrona no provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] (SqlClient) incluindo os aprimoramentos feitos para dar suporte à funcionalidade de programação assíncrona que foi introduzida no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+Este tópico aborda o suporte para programação assíncrona no [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] provedor de dados do SQL Server (SqlClient) incluindo melhorias feitas para dar suporte à funcionalidade de programação assíncrona que foi introduzida no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
 ## <a name="legacy-asynchronous-programming"></a>Programação assíncrona herdada  
  Antes do [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], a programação assíncrona com SqlClient foi feita com os seguintes métodos e a propriedade de conexão de `Asynchronous Processing=true`:  
@@ -637,7 +639,7 @@ namespace SqlBulkCopyAsyncCodeSample {
  O exemplo abre uma conexão única para o **AdventureWorks** banco de dados. Usando um objeto <xref:System.Data.SqlClient.SqlCommand>, um <xref:System.Data.SqlClient.SqlDataReader> é criado. À medida que o leitor é usado, um segundo <xref:System.Data.SqlClient.SqlDataReader> é aberto, usando dados do primeiro <xref:System.Data.SqlClient.SqlDataReader> como entrada para a cláusula WHERE para o segundo leitor.  
   
 > [!NOTE]
->  O exemplo a seguir usa o exemplo **AdventureWorks** banco de dados incluído com [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. A cadeia de conexão fornecida no código de exemplo presume que o banco de dados esteja instalado e disponível no computador local. Modifique a cadeia de conexão conforme o necessário para seu ambiente.  
+>  O exemplo a seguir usa o exemplo **AdventureWorks** incluído com o SQL Server do banco de dados. A cadeia de conexão fornecida no código de exemplo presume que o banco de dados esteja instalado e disponível no computador local. Modifique a cadeia de conexão conforme o necessário para seu ambiente.  
   
 ```csharp
 using System;  
@@ -709,7 +711,7 @@ class Class1 {
  O aplicativo de console a seguir demonstra como usar dois objetos <xref:System.Data.SqlClient.SqlDataReader> com três objetos <xref:System.Data.SqlClient.SqlCommand> e um único objeto <xref:System.Data.SqlClient.SqlConnection> com o MARS ativado. O primeiro objeto de comando recupera uma lista de fornecedores cuja avaliação de crédito é 5. O segundo objeto de comando usa a ID do fornecedor fornecido de um <xref:System.Data.SqlClient.SqlDataReader> para carregar o segundo <xref:System.Data.SqlClient.SqlDataReader> com todos os produtos para o fornecedor específico. Cada registro de produto é visitado pelo segundo <xref:System.Data.SqlClient.SqlDataReader>. Um cálculo é executado para determinar qual o novo **OnOrderQty** deve ser. O terceiro objeto de comando, em seguida, é usado para atualizar o **ProductVendor** tabela com o novo valor. Este processo inteiro ocorre em uma única transação, que é revertida no final.  
   
 > [!NOTE]
->  O exemplo a seguir usa o exemplo **AdventureWorks** banco de dados incluído com [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. A cadeia de conexão fornecida no código de exemplo presume que o banco de dados esteja instalado e disponível no computador local. Modifique a cadeia de conexão conforme o necessário para seu ambiente.  
+>  O exemplo a seguir usa o exemplo **AdventureWorks** incluído com o SQL Server do banco de dados. A cadeia de conexão fornecida no código de exemplo presume que o banco de dados esteja instalado e disponível no computador local. Modifique a cadeia de conexão conforme o necessário para seu ambiente.  
   
 ```csharp
 using System;  

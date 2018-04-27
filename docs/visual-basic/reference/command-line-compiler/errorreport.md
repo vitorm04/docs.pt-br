@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: a7fe83a2-a6d8-460c-8dad-79a8f433f501
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59dc833299161eac7b119e654c94534f202b1cb7
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 5dc321f7f927d68a9f270076640cbc6d31d2f6d5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-errorreport"></a>-errorreport
-Especifica como o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador deve relatar erros do compilador interno.  
+Especifica como o compilador do Visual Basic deve relatar erros do compilador interno.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -29,7 +29,7 @@ Especifica como o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador deve re
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Essa opção fornece uma maneira conveniente para relatar um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] erro interno do compilador (ICE) para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] equipe da Microsoft. Por padrão, o compilador não envia nenhuma informação à Microsoft. No entanto, se você encontrar um erro interno do compilador, esta opção permite que você relate o erro à Microsoft. Essas informações ajudam os engenheiros da Microsoft a identificar a causa e podem ajudar a melhorar a próxima versão do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Essa opção fornece uma maneira conveniente para relatar um erro interno do compilador do Visual Basic (ICE) para a equipe do Visual Basic na Microsoft. Por padrão, o compilador não envia nenhuma informação à Microsoft. No entanto, se você encontrar um erro interno do compilador, esta opção permite que você relate o erro à Microsoft. Essas informações ajudam os engenheiros da Microsoft a identificar a causa e podem ajudar a melhorar a próxima versão do Visual Basic.  
   
  Capacidade de um usuário para enviar relatórios depende de permissões de política de computador e de usuário.  
   

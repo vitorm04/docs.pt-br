@@ -1,27 +1,29 @@
 ---
 title: 'Como: Validar DBML e arquivos de mapeamento externos'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7724586c33c19654c3657a5a4604a3c74f2c8756
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d3fc297078c9f6c1ac8b2d8a498050f294a5437
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Como: Validar DBML e arquivos de mapeamento externos
-Os arquivos de mapeamento externos e os arquivos .dbml que você altera devem ser validadas contra suas respectivas definições de esquema. Este tópico fornece os usuários de [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] com as etapas para implementar o processo de validação.  
+Os arquivos de mapeamento externos e os arquivos .dbml que você altera devem ser validadas contra suas respectivas definições de esquema. Este tópico fornece aos usuários do Visual Studio com as etapas para implementar o processo de validação.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -56,7 +58,7 @@ Os arquivos de mapeamento externos e os arquivos .dbml que você altera devem se
      Determine se os erros, avisos, ou mensagens foram gerados. Caso contrário, o arquivo XML é válido na definição de esquema.  
   
 ## <a name="alternate-method-for-supplying-schema-definition"></a>Método alternativo para fornecer a definição de esquema  
- Se por alguma razão. o XSD apropriado arquivo não aparecer a **esquemas XML** caixa de diálogo, você pode baixar o arquivo. xsd de um tópico da Ajuda. As etapas a seguir ajudam você a salvar o arquivo baixado no formato Unicode exigido pelo editor de [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] .  
+ Se por alguma razão. o XSD apropriado arquivo não aparecer a **esquemas XML** caixa de diálogo, você pode baixar o arquivo. xsd de um tópico da Ajuda. As etapas a seguir o ajudarão a salvar o arquivo baixado no formato Unicode necessário pelo Editor de XML do Visual Studio.  
   
 #### <a name="to-copy-a-schema-definition-file-from-a-help-topic"></a>Para copiar uma definição de esquema partir de um tópico da Ajuda  
   

@@ -1,13 +1,13 @@
 ---
-title: "Visão geral de gerenciamento do aplicativo"
-ms.custom: 
+title: Visão geral de gerenciamento do aplicativo
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-caps.latest.revision: 
+caps.latest.revision: 56
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a881793c50a4ce506e752774e70e0904e30525c1
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 96a1ae8dce80588b296d9ab7fc9dff60fb7a04f0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="application-management-overview"></a>Visão geral de gerenciamento do aplicativo
 Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades que se aplicam à implementação e ao gerenciamento do aplicativo. Este tópico fornece uma visão geral da funcionalidade do <xref:System.Windows.Application> classe para criar e gerenciar aplicativos.  
@@ -128,7 +128,7 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
  [!code-csharp[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getcurrentappcode)]
  [!code-vb[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getcurrentappcode)]  
   
- <xref:System.Windows.Application.Current%2A>Retorna uma referência a uma instância do <xref:System.Windows.Application> classe. Se você quiser que uma referência a seu <xref:System.Windows.Application> você deve converter o valor de classe derivada de <xref:System.Windows.Application.Current%2A> propriedade, conforme mostrado no exemplo a seguir.  
+ <xref:System.Windows.Application.Current%2A> Retorna uma referência a uma instância do <xref:System.Windows.Application> classe. Se você quiser que uma referência a seu <xref:System.Windows.Application> você deve converter o valor de classe derivada de <xref:System.Windows.Application.Current%2A> propriedade, conforme mostrado no exemplo a seguir.  
   
  [!code-csharp[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getstcurrentappcode)]
  [!code-vb[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getstcurrentappcode)]  
@@ -159,7 +159,7 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
   
 <a name="Showing_a_User_Interface"></a>   
 ### <a name="showing-a-user-interface"></a>Mostrando uma interface do usuário  
- Autônomo a maioria dos [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] aplicativos abrem um <xref:System.Windows.Window> quando eles começam em execução. O <xref:System.Windows.Application.Startup> manipulador de eventos é um local de onde você pode fazer isso, como demonstrado pelo código a seguir.  
+ A maioria dos aplicativos do Windows autônoma abrem um <xref:System.Windows.Window> quando eles começam em execução. O <xref:System.Windows.Application.Startup> manipulador de eventos é um local de onde você pode fazer isso, como demonstrado pelo código a seguir.  
   
  [!code-xaml[AppShowWindowHardSnippets#StartupEventMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml#startupeventmarkup)]  
   
@@ -195,7 +195,7 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
   
 <a name="Processing_Command_Line_Arguments"></a>   
 ### <a name="processing-command-line-arguments"></a>Processando argumentos de linha de comando  
- Em [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)], aplicativos autônomos podem ser iniciados a partir de um prompt de comando ou a área de trabalho. Em ambos os casos, os argumentos de linha de comando podem ser passados para o aplicativo. O exemplo a seguir mostra um aplicativo iniciado com um único argumento de linha de comando “/StartMinimized”:  
+ No Windows, aplicativos autônomos podem ser iniciados a partir de um prompt de comando ou a área de trabalho. Em ambos os casos, os argumentos de linha de comando podem ser passados para o aplicativo. O exemplo a seguir mostra um aplicativo iniciado com um único argumento de linha de comando “/StartMinimized”:  
   
  `wpfapplication.exe /StartMinimized`  
   
@@ -208,11 +208,11 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
   
  O código trata <xref:System.Windows.Application.Startup> para verificar se o **/StartMinimized** argumento de linha de comando foi fornecido; nesse caso, ele abre a janela principal com um <xref:System.Windows.WindowState> de <xref:System.Windows.WindowState.Minimized>. Observe que, como o <xref:System.Windows.Window.WindowState%2A> propriedade deve ser definida por meio de programação, o principal <xref:System.Windows.Window> deve ser aberta explicitamente no código.  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]não é possível recuperar e processar argumentos de linha de comando porque eles são iniciados usando [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] implantação (consulte [Implantando um aplicativo do WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)). No entanto, eles podem recuperar e processar parâmetros de cadeia de caracteres de consulta de URLs usadas para iniciá-los.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] não é possível recuperar e processar argumentos de linha de comando porque eles são iniciados usando [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] implantação (consulte [Implantando um aplicativo do WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)). No entanto, eles podem recuperar e processar parâmetros de cadeia de caracteres de consulta de URLs usadas para iniciá-los.  
   
 <a name="Application_Activation_and_Deactivation"></a>   
 ### <a name="application-activation-and-deactivation"></a>Ativação e desativação de aplicativos  
- O [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] permite aos usuários mudar de aplicativos. A maneira mais comum é usar a combinação de teclas ALT+TAB. Um aplicativo só pode ser alternado para se ele tiver um visível <xref:System.Windows.Window> que um usuário pode selecionar. Selecionado no momento <xref:System.Windows.Window> é o *janela ativa* (também conhecido como o *janela em primeiro plano*) e é o <xref:System.Windows.Window> que recebe entrada do usuário. O aplicativo com a janela ativa é o *aplicativo ativo* (ou *aplicativo de primeiro plano*). Um aplicativo se torna o aplicativo ativo nas seguintes circunstâncias:  
+ Windows permite que os usuários alternar entre aplicativos. A maneira mais comum é usar a combinação de teclas ALT+TAB. Um aplicativo só pode ser alternado para se ele tiver um visível <xref:System.Windows.Window> que um usuário pode selecionar. Selecionado no momento <xref:System.Windows.Window> é o *janela ativa* (também conhecido como o *janela em primeiro plano*) e é o <xref:System.Windows.Window> que recebe entrada do usuário. O aplicativo com a janela ativa é o *aplicativo ativo* (ou *aplicativo de primeiro plano*). Um aplicativo se torna o aplicativo ativo nas seguintes circunstâncias:  
   
 -   Ele é iniciado e exibe um <xref:System.Windows.Window>.  
   
@@ -248,14 +248,14 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
   
 -   Um usuário fecha o principal <xref:System.Windows.Window>.  
   
--   Um usuário encerra a [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] sessão por logoff ou desligamento.  
+-   Um usuário encerra a sessão do Windows por logoff ou desligamento.  
   
 -   Uma condição específica ao aplicativo foi atendida.  
   
  Para ajudá-lo a gerenciar o encerramento do aplicativo, <xref:System.Windows.Application> fornece o <xref:System.Windows.Application.Shutdown%2A> método, o <xref:System.Windows.Application.ShutdownMode%2A> propriedade e o <xref:System.Windows.Application.SessionEnding> e <xref:System.Windows.Application.Exit> eventos.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.Shutdown%2A>só pode ser chamado de aplicativos que possuem <xref:System.Security.Permissions.UIPermission>. Autônomo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativos sempre têm essa permissão. No entanto, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] em execução no modo de confiança parcial de zona de Internet não.  
+>  <xref:System.Windows.Application.Shutdown%2A> só pode ser chamado de aplicativos que possuem <xref:System.Security.Permissions.UIPermission>. Autônomo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativos sempre têm essa permissão. No entanto, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] em execução no modo de confiança parcial de zona de Internet não.  
   
 #### <a name="shutdown-mode"></a>Modo de desligamento  
  A maioria dos aplicativos é desligada quando todas as janelas são fechadas ou quando a janela principal é fechada. No entanto, às vezes, outras condições específicas ao aplicativo podem determinar quando um aplicativo é desligado. Você pode especificar as condições sob as quais seu aplicativo será desligado definindo <xref:System.Windows.Application.ShutdownMode%2A> com um dos seguintes <xref:System.Windows.ShutdownMode> valores de enumeração:  
@@ -273,10 +273,10 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
  Quando você tiver condições de finalização específicas do aplicativo, você definir <xref:System.Windows.Application.ShutdownMode%2A> para <xref:System.Windows.ShutdownMode.OnExplicitShutdown>. Nesse caso, é sua responsabilidade finalizar um aplicativo chamando explicitamente o <xref:System.Windows.Application.Shutdown%2A> método; caso contrário, o aplicativo continuará a executar mesmo se todas as janelas são fechadas. Observe que <xref:System.Windows.Application.Shutdown%2A> é chamado implicitamente quando o <xref:System.Windows.Application.ShutdownMode%2A> é <xref:System.Windows.ShutdownMode.OnLastWindowClose> ou <xref:System.Windows.ShutdownMode.OnMainWindowClose>.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.ShutdownMode%2A>pode ser definido de um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], mas é ignorado; [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] sempre encerra quando ele é navegado para fora em um navegador ou quando o navegador que hospeda o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] está fechado. Para obter mais informações, consulte [Visão geral de navegação](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+>  <xref:System.Windows.Application.ShutdownMode%2A> pode ser definido de um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], mas é ignorado; [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] sempre encerra quando ele é navegado para fora em um navegador ou quando o navegador que hospeda o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] está fechado. Para obter mais informações, consulte [Visão geral de navegação](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
   
 #### <a name="session-ending"></a>Encerramento da sessão  
- As condições de finalização descritas pelo <xref:System.Windows.Application.ShutdownMode%2A> propriedade são específicas para um aplicativo. No entanto, em alguns casos, um aplicativo pode ser desligado como resultado de uma condição externa. A condição externa mais comum ocorre quando um usuário encerra a [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] sessão pelas seguintes ações:  
+ As condições de finalização descritas pelo <xref:System.Windows.Application.ShutdownMode%2A> propriedade são específicas para um aplicativo. No entanto, em alguns casos, um aplicativo pode ser desligado como resultado de uma condição externa. A condição externa mais comum ocorre quando um usuário encerra a sessão do Windows, as seguintes ações:  
   
 -   Logoff  
   
@@ -286,17 +286,17 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
   
 -   Hibernação  
   
- Detectar quando um [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] término da sessão, você pode manipular o <xref:System.Windows.Application.SessionEnding> evento, conforme ilustrado no exemplo a seguir.  
+ Para detectar quando termina de uma sessão do Windows, você pode manipular o <xref:System.Windows.Application.SessionEnding> evento, conforme ilustrado no exemplo a seguir.  
   
  [!code-xaml[ApplicationSessionEndingSnippets#HandlingSessionEndingXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml#handlingsessionendingxaml)]  
   
  [!code-csharp[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml.cs#handlingsessionendingcodebehind)]
  [!code-vb[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/visualbasic/application.xaml.vb#handlingsessionendingcodebehind)]  
   
- Neste exemplo, o código inspeciona o <xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A> propriedade para determinar como o [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] sessão está terminando. Ele usa esse valor para exibir uma mensagem de confirmação para o usuário. Se o usuário não quiser que a sessão ao fim, o código define <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> para `true` para impedir que o [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] sessão encerre.  
+ Neste exemplo, o código inspeciona o <xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A> propriedade para determinar como a sessão do Windows está terminando. Ele usa esse valor para exibir uma mensagem de confirmação para o usuário. Se o usuário não quiser que a sessão ao fim, o código define <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> para `true` para impedir que a sessão do Windows final.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.SessionEnding>não é gerado para [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].  
+>  <xref:System.Windows.Application.SessionEnding> não é gerado para [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].  
   
 #### <a name="exit"></a>Sair  
  Quando um aplicativo é desligado, ele pode precisar executar algum processamento final, como persistir o estado do aplicativo. Nessas situações, você pode manipular o <xref:System.Windows.Application.Exit> evento.  
@@ -311,7 +311,7 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
   
  Para o exemplo completo, consulte [persistir e restaurar propriedades de escopo de aplicativo em sessões de aplicativos](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md).  
   
- <xref:System.Windows.Application.Exit>pode ser tratado por ambos os aplicativos autônomos e [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Para [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], <xref:System.Windows.Application.Exit> é disparada nas seguintes circunstâncias:  
+ <xref:System.Windows.Application.Exit> pode ser tratado por ambos os aplicativos autônomos e [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Para [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], <xref:System.Windows.Application.Exit> é disparada nas seguintes circunstâncias:  
   
 -   Um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] é navegado para fora.  
   
@@ -320,7 +320,7 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
 -   Quando o navegador é fechado.  
   
 #### <a name="exit-code"></a>Código de Saída  
- Na maioria das vezes, os aplicativos são iniciados pelo sistema operacional em resposta a uma solicitação do usuário. No entanto, um aplicativo pode ser iniciado por outro aplicativo para executar uma tarefa específica. Quando o aplicativo iniciado é desligado, o aplicativo que o iniciou talvez deseje saber a condição na qual o aplicativo iniciado foi desligado. Nessas situações, [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] permite aos aplicativos retornar um código de saída do aplicativo durante o desligamento. Por padrão, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativos retornam um valor de código de saída igual a 0.  
+ Na maioria das vezes, os aplicativos são iniciados pelo sistema operacional em resposta a uma solicitação do usuário. No entanto, um aplicativo pode ser iniciado por outro aplicativo para executar uma tarefa específica. Quando o aplicativo iniciado é desligado, o aplicativo que o iniciou talvez deseje saber a condição na qual o aplicativo iniciado foi desligado. Nessas situações, o Windows permite aos aplicativos retornar um código de saída do aplicativo durante o desligamento. Por padrão, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativos retornam um valor de código de saída igual a 0.  
   
 > [!NOTE]
 >  Quando você depurar de [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], o código de saída do aplicativo é exibido no **saída** janela quando o aplicativo é desligado, em uma mensagem semelhante ao seguinte:  
@@ -351,7 +351,7 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
   
 -   Tentativa de manter um aplicativo em execução.  
   
--   Gravando informações detalhadas, amigável para desenvolvedores, exceções de [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] log de eventos.  
+-   Gravação, amigável para desenvolvedores, exceção informações detalhadas no log de eventos do Windows.  
   
  Implementar esse suporte depende em ser capaz de detectar exceções não tratadas, que é o que o <xref:System.Windows.Application.DispatcherUnhandledException> é gerado para.  
   

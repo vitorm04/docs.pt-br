@@ -1,31 +1,33 @@
 ---
-title: "Serialização e armazenamento do documento"
-ms.custom: 
+title: Serialização e armazenamento do documento
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - 'serialization of documents [WPF], , '
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9a232e1e2557bf1ecc6bb5f27f941e03a204aec6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e65a20323e3797d6d56ac7941e4ac9aeeb0ed473
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="document-serialization-and-storage"></a>Serialização e armazenamento do documento
-[!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] fornece um ambiente excelente para criar e exibir documentos de alta qualidade.  Os recursos avançados que dão suporte a documentos fixos e documentos de fluxo, controles de exibição avançados, combinados com recursos gráficos 2D e 3D avançados levam os aplicativos [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] a um novo nível de qualidade e experiência do usuário.  Ser capaz de gerenciar com flexibilidade uma representação na memória de um documento é um recurso chave do [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] e ser capaz de salvar e carregar documentos de um armazenamento de dados de forma eficiente é uma necessidade de quase todos os aplicativos.  O processo de conversão de um documento de uma representação na memória interna em um armazenamento de dados externo é chamado de serialização.  O processo inverso de ler um armazenamento de dados e recriar a instância original na memória é chamado desserialização.  
+Microsoft .NET Framework fornece um ambiente poderoso para criar e exibir documentos de alta qualidade.  Os recursos avançados que dão suporte a documentos fixos e documentos de fluxo, controles de exibição avançados, combinados com recursos gráficos 2D e 3D avançados levam os aplicativos [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] a um novo nível de qualidade e experiência do usuário.  Ser capaz de gerenciar com flexibilidade uma representação na memória de um documento é um recurso chave do [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] e ser capaz de salvar e carregar documentos de um armazenamento de dados de forma eficiente é uma necessidade de quase todos os aplicativos.  O processo de conversão de um documento de uma representação na memória interna em um armazenamento de dados externo é chamado de serialização.  O processo inverso de ler um armazenamento de dados e recriar a instância original na memória é chamado desserialização.  
   
  
   
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/22/2017
     -   Suporte à interface do usuário para opções e configurações personalizadas de tempo de execução.  
   
 ### <a name="xps-print-path"></a>Caminho de impressão XPS  
- O caminho de impressão [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] também fornece um mecanismo extensível para gravar documentos por meio da saída de impressão.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] serve como formato de arquivo de documento e é o formato de spool de impressão nativo para [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  Os documentos [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] podem ser enviados diretamente para impressoras compatíveis com [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] sem a necessidade de conversão para um formato intermediário.  Consulte a [Visão geral sobre impressão](../../../../docs/framework/wpf/advanced/printing-overview.md) para obter informações adicionais sobre as opções de saída de caminho de impressão e recursos.  
+ O Microsoft .NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] caminho de impressão também fornece um mecanismo extensível para escrever documentos por meio de saída de impressão.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] serve como formato de arquivo de documento e é o formato de spool de impressão nativo para [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  Os documentos [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] podem ser enviados diretamente para impressoras compatíveis com [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] sem a necessidade de conversão para um formato intermediário.  Consulte a [Visão geral sobre impressão](../../../../docs/framework/wpf/advanced/printing-overview.md) para obter informações adicionais sobre as opções de saída de caminho de impressão e recursos.  
   
 <a name="PluginSerializers"></a>   
 ## <a name="plug-in-serializers"></a>Plug-ins serializadores  
@@ -61,7 +63,7 @@ ms.lasthandoff: 12/22/2017
  Os serializadores de plug-in ajudam os desenvolvedores de aplicativos fornecendo extensibilidade para novos projetos de armazenamento e formatos de arquivo sem a necessidade de código diretamente para cada formato em potencial no momento de build.  Os serializadores de plug-in também beneficiam os desenvolvedores de terceiros, fornecendo um meio padronizado para implantar, instalar e atualizar plug-ins acessíveis pelo sistema para formatos de arquivo personalizados ou proprietários.  
   
 ### <a name="using-a-plug-in-serializer"></a>Usando um serializador de plug-in  
- Os serializadores de plug-in são simples de usar.  O <xref:System.Windows.Documents.Serialization.SerializerProvider> classe enumera um <xref:System.Windows.Documents.Serialization.SerializerDescriptor> do objeto para cada plug-in instalado no sistema.  O <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> propriedade filtra os plug-ins instalados com base na configuração atual e verifica se o serializador pode ser carregado e usado pelo aplicativo.  O <xref:System.Windows.Documents.Serialization.SerializerDescriptor> também oferece outras propriedades, como <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> e <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>, que o aplicativo pode usar para solicitar que o usuário selecione um serializador para um formato de saída disponível.  Um serializador de plug-in padrão para [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] é fornecido com [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] e é sempre enumerado.  Depois que o usuário seleciona um formato de saída, o <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> método é usado para criar um <xref:System.Windows.Documents.Serialization.SerializerWriter> para o formato específico.  O <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> , em seguida, pode ser chamado para o fluxo de documento para o repositório de dados de saída do método.  
+ Os serializadores de plug-in são simples de usar.  O <xref:System.Windows.Documents.Serialization.SerializerProvider> classe enumera um <xref:System.Windows.Documents.Serialization.SerializerDescriptor> do objeto para cada plug-in instalado no sistema.  O <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> propriedade filtra os plug-ins instalados com base na configuração atual e verifica se o serializador pode ser carregado e usado pelo aplicativo.  O <xref:System.Windows.Documents.Serialization.SerializerDescriptor> também oferece outras propriedades, como <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> e <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>, que o aplicativo pode usar para solicitar que o usuário selecione um serializador para um formato de saída disponível.  Um serializador de plug-in padrão para [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] é fornecido com [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] e é sempre enumerado.  Depois que o usuário seleciona um formato de saída, o <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> método é usado para criar um <xref:System.Windows.Documents.Serialization.SerializerWriter> para o formato específico.  O elemento de linguagem <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> método pode ser chamado para o fluxo de documento para o repositório de dados de saída.  
   
  O exemplo a seguir ilustra um aplicativo que usa o <xref:System.Windows.Documents.Serialization.SerializerProvider> método em uma propriedade "PlugInFileFilter".  PlugInFileFilter enumera os plug-ins instalados e cria uma cadeia de caracteres de filtro com as opções de arquivo disponíveis para um <xref:Microsoft.Win32.SaveFileDialog>.  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="InstallingPluginSerializers"></a>   
 ### <a name="installing-plug-in-serializers"></a>Instalando serializadores de plug-in  
- O <xref:System.Windows.Documents.Serialization.SerializerProvider> classe fornece a interface de aplicativo de nível superior para a descoberta do serializador de plug-in e acesso.  <xref:System.Windows.Documents.Serialization.SerializerProvider>Localiza e fornece uma lista dos serializadores que estão instalados e acessíveis no sistema de aplicativo.  As especificidades dos serializadores instalados são definidas nas configurações do Registro.  Plug-ins serializadores podem ser adicionados ao registro usando o <xref:System.Windows.Documents.Serialization.SerializerProvider.RegisterSerializer%2A> método; ou se [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] ainda não estiver instalado, a instalação do plug-in script pode diretamente o registro do conjunto de valores em si.  O <xref:System.Windows.Documents.Serialization.SerializerProvider.UnregisterSerializer%2A> método pode ser usado para remover um instalado anteriormente plug-in, ou as configurações do Registro podem ser redefinidas da mesma forma por um script de desinstalação.  
+ O <xref:System.Windows.Documents.Serialization.SerializerProvider> classe fornece a interface de aplicativo de nível superior para a descoberta do serializador de plug-in e acesso.  <xref:System.Windows.Documents.Serialization.SerializerProvider> Localiza e fornece uma lista dos serializadores que estão instalados e acessíveis no sistema de aplicativo.  As especificidades dos serializadores instalados são definidas nas configurações do Registro.  Plug-ins serializadores podem ser adicionados ao registro usando o <xref:System.Windows.Documents.Serialization.SerializerProvider.RegisterSerializer%2A> método; ou se [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] ainda não estiver instalado, a instalação do plug-in script pode diretamente o registro do conjunto de valores em si.  O <xref:System.Windows.Documents.Serialization.SerializerProvider.UnregisterSerializer%2A> método pode ser usado para remover um instalado anteriormente plug-in, ou as configurações do Registro podem ser redefinidas da mesma forma por um script de desinstalação.  
   
 ### <a name="creating-a-plug-in-serializer"></a>Criando um serializador de plug-in  
  Os serializadores de plug-in e os serializadores vinculados usam os mesmos eventos e métodos públicos expostos e, da mesma forma, podem ser projetados para operar de forma síncrona ou assíncrona.  Há três etapas básicas normalmente seguidas para criar um serializador de plug-in:  

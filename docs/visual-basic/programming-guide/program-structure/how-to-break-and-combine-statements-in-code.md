@@ -31,11 +31,11 @@ ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cf6b3ce7e5f9549ca04c4980bd3c91513b343ff6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 06702cdc9073065a418b17d198dbb43be4aefca1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Como quebrar e combinar instruções no código (Visual Basic)
 Ao escrever seu código, às vezes você pode criar instruções longas que necessitam de rolagem horizontal no Editor de códigos. Embora isso não afeta a maneira como o código é executado, ele torna difícil para você ou outra pessoa para ler o código como ele aparece no monitor. Nesses casos, você deve considerar a única instrução longo de quebra em várias linhas.  
@@ -59,7 +59,7 @@ Ao escrever seu código, às vezes você pode criar instruções longas que nece
   
      Você não pode continuar um comentário usando um caractere de continuação de linha. O compilador não examina os caracteres em um comentário para um significado especial. Para um comentário de várias linhas, repita o símbolo de comentário (`'`) em cada linha.  
   
- Embora a colocação de cada instrução em uma linha separada é o método recomendado, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] também permite que você coloque várias instruções na mesma linha.  
+ Embora a colocação de cada instrução em uma linha separada é o método recomendado, o Visual Basic também permite que você coloque várias instruções na mesma linha.  
   
 ### <a name="to-place-multiple-statements-on-the-same-line"></a>Para colocar várias instruções na mesma linha  
   

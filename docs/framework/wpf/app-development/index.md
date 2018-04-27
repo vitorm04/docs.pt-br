@@ -19,15 +19,15 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1d2a79a05f18fecf4e008aa6a95d359c719e854b
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: 00161608997abc14202775c06ecfb283d8d67013
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="application-development"></a>Desenvolvimento do aplicativo
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]é uma estrutura de apresentação que pode ser usada para desenvolver os seguintes tipos de aplicativos:  
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] é uma estrutura de apresentação que pode ser usada para desenvolver os seguintes tipos de aplicativos:  
   
 -   Aplicativos autônomos (aplicativos [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] de estilo tradicional criados como assemblies executáveis que são instalados e executados do computador cliente).  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 01/29/2018
   
 <a name="WPF_Application_Resource__Content__and_Data_Files"></a>   
 ## <a name="wpf-application-resource-content-and-data-files"></a>Arquivos de recurso, conteúdo e dados do aplicativo WPF  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] estende o suporte central no [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] para recursos inseridos, com suporte para três tipos de arquivos de dados não executáveis: recurso, conteúdo e dados. Para mais informações, consulte [Arquivos de recurso, conteúdo e dados do aplicativo WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] estende o suporte central no Microsoft .NET Framework para recursos inseridos com suporte para três tipos de arquivos de dados não executáveis: recurso, conteúdo e dados. Para mais informações, consulte [Arquivos de recurso, conteúdo e dados do aplicativo WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).  
   
  Um componente chave do suporte para arquivos de dados não executáveis do WPF é a capacidade de identificar e carregá-los usando um único [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]. Para obter mais informações, consulte [URIs "pack://" no WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md).  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 01/29/2018
   
  <xref:System.Windows.Window> é compatível com a criação de um tipo especial de janela conhecido como caixa de diálogo. Tipos modais e sem janela restrita de caixas de diálogo podem ser criados.  
   
- Por conveniência e pelos benefícios de proporcionar reutilização e uma experiência de usuário consistente entre aplicativos, o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] exibe três caixas de diálogo comuns do [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog> e <xref:System.Windows.Controls.PrintDialog>.  
+ Para sua conveniência, os benefícios de reutilização e uma experiência de usuário consistente em todos os aplicativos, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] expõe três caixas de diálogo comuns do Windows: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>, e <xref:System.Windows.Controls.PrintDialog>.  
   
  Uma caixa de mensagem é um tipo especial de caixa de diálogo para mostrar informações textuais importantes para os usuários e para fazer perguntas simples como Sim/Não/OK/Cancelar. Use a classe <xref:System.Windows.MessageBox> para criar e exibir caixas de mensagem.  
   

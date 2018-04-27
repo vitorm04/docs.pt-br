@@ -1,24 +1,26 @@
 ---
-title: "Aprendendo com explicações passo a passo"
-ms.custom: 
+title: Aprendendo com explicações passo a passo
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c49ecfec032a20090e8eca1c94efe9e1f35cce7d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 98373ccee7f9fde178f26c62cd77acb17676c6cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="learning-by-walkthroughs"></a>Aprendendo com explicações passo a passo
 O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentação fornece várias instruções passo a passo. Este tópico aborda alguns problemas gerais da explicação passo a passo (incluindo solução de problemas) e fornece links para várias explicações passo a passo para iniciantes aprenderem sobre o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -41,20 +43,20 @@ O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta�
 ## <a name="general"></a>Geral  
  Em geral, as seguintes informações aplicam-se a essas explicações passo a passo:  
   
--   Ambiente: cada passo a passo do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usa o [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] como seu IDE (ambiente de desenvolvimento integrado).  
+-   Ambiente: Cada [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] passo a passo usa o Visual Studio como seu ambiente de desenvolvimento integrado (IDE).  
   
 -   Mecanismos SQL: essas explicações passo a passo são escritos para serem implementados usando o SQL Server Express. Se você não tiver o SQL Server Express, poderá baixá-lo gratuitamente. Para obter mais informações, consulte [baixando bancos de dados de exemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
     > [!NOTE]
     >  As explicações passo a passo do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usam um nome de arquivo como uma cadeia de conexão. Simplesmente especificar um nome de arquivo é uma conveniência que o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornece para usuários do SQL Server Express. Sempre preste atenção aos problemas de segurança. Para obter mais informações, consulte [segurança em LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]explicações passo a passo geralmente requerem o banco de dados de exemplo Northwind. Para obter mais informações, consulte [baixando bancos de dados de exemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] explicações passo a passo geralmente requerem o banco de dados de exemplo Northwind. Para obter mais informações, consulte [baixando bancos de dados de exemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
--   As caixas de diálogo e os comandos de menu que você vê nas explicações passo a passo podem diferir dos descritos na Ajuda, dependendo de suas configurações ativas ou da edição do [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]. Para alterar as configurações, clique em **Importar e exportar configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+-   As caixas de diálogo e comandos de menu que você vê no passo a passo podem diferir daqueles descritos na Ajuda, dependendo de suas configurações ativas ou edição do Visual Studio. Para alterar as configurações, clique em **Importar e exportar configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 -   Para as explicações passo a passo que abordam cenários de várias camadas, um servidor deve estar localizado em um computador que seja diferente do computador de desenvolvimento, e você deve ter as permissões apropriadas para acessar o servidor.  
   
--   O nome da classe que normalmente representa a tabela Orders no banco de dados de exemplo Northwind é `[Order]`. O escape é necessário porque `Order` é uma palavra-chave no [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)].  
+-   O nome da classe que normalmente representa a tabela Orders no banco de dados de exemplo Northwind é `[Order]`. A saída é necessário porque `Order` é uma palavra-chave no Visual Basic.  
   
 ## <a name="troubleshooting"></a>Solução de problemas  
  Erros em tempo de execução podem ocorrer porque você não tem permissões suficientes para acessar os bancos de dados usados nessas explicações passo a passo. Consulte as seguintes etapas para ajudar a resolver os problemas mais comuns.  
@@ -68,7 +70,7 @@ O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta�
   
 2.  No painel esquerdo do **SQL Server Configuration Manager**, clique em **serviços do SQL Server 2005**.  
   
-3.  No painel direito, clique com botão direito **SQL Server (SQLEXPRESS)**e, em seguida, clique em **propriedades**.  
+3.  No painel direito, clique com botão direito **SQL Server (SQLEXPRESS)** e, em seguida, clique em **propriedades**.  
   
 4.  Clique o **logon** guia e verificar como você está tentando fazer logon servidor.  
   
@@ -94,9 +96,9 @@ O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta�
   
 1.  No painel esquerdo do **SQL Server Configuration Manager**, clique em **serviços do SQL Server 2005**.  
   
-2.  No painel direito, clique com botão direito **SQL Server (SQLEXPRESS)**e, em seguida, clique em **parar**.  
+2.  No painel direito, clique com botão direito **SQL Server (SQLEXPRESS)** e, em seguida, clique em **parar**.  
   
-3.  Clique com botão direito **SQL Server (SQLEXPRESS)**e, em seguida, clique em **reiniciar**.  
+3.  Clique com botão direito **SQL Server (SQLEXPRESS)** e, em seguida, clique em **reiniciar**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Introdução](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

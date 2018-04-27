@@ -1,11 +1,12 @@
 ---
 title: Estruturas de controle aninhadas (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, control flow
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 22adf4086cd494202a540b2ec16310072329b6ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f2c91bcdd741ef75417fe50b0c08bd0f9bd5ff80
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="nested-control-structures-visual-basic"></a>Estruturas de controle aninhadas (Visual Basic)
 Você pode colocar instruções de controle dentro de outras instruções de controle, por exemplo um `If...Then...Else` bloquear dentro de um `For...Next` loop. Uma instrução de controle colocada dentro de outra instrução de controle é considerada *aninhada*.  
   
 ## <a name="nesting-levels"></a>Níveis de aninhamento  
- Controlar estruturas em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] podem ser aninhados até quantos níveis desejado. É uma prática comum para facilitar a leitura das estruturas aninhadas Recuando o corpo de cada um deles. O editor de desenvolvimento integrado (IDE) do ambiente faz isso automaticamente.  
+ Estruturas de controle no Visual Basic podem ser aninhadas até quantos níveis desejado. É uma prática comum para facilitar a leitura das estruturas aninhadas Recuando o corpo de cada um deles. O editor de desenvolvimento integrado (IDE) do ambiente faz isso automaticamente.  
   
  No exemplo a seguir, o procedimento `sumRows` juntos adiciona os elementos positivos de cada linha da matriz.  
   
@@ -78,7 +79,7 @@ Next ctl
  ![Diagrama gráfico de aninhamento inválido](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")  
 Aninhamento de inválido para e com estruturas  
   
- O [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador detecta esse controle sobreposto estruturas e sinaliza um erro de tempo de compilação.  
+ O compilador do Visual Basic detecta essas estruturas de controle sobrepostos e sinaliza um erro de tempo de compilação.  
   
 ## <a name="see-also"></a>Consulte também  
  [Fluxo de Controle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  

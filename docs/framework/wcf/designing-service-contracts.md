@@ -1,13 +1,13 @@
 ---
-title: "Criando contratos de serviço"
-ms.custom: 
+title: Criando contratos de serviço
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-caps.latest.revision: 
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 293d7f8502b39eac6508ba10b2fac128c6aa4879
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94ff361e89693f53c8d1baedcac749cf5178086e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="designing-service-contracts"></a>Criando contratos de serviço
 Este tópico descreve qual serviço os contratos são, como elas são definidas, as operações que estão disponíveis (e as implicações para as trocas de mensagens subjacente), quais tipos de dados são usados e outros problemas que ajudarão a criar operações que atendem a requisitos do seu cenário.  
@@ -63,9 +63,9 @@ Este tópico descreve qual serviço os contratos são, como elas são definidas,
 > [!NOTE]
 >  Ao herdar de outras interfaces de contrato de serviço, você não pode substituir as propriedades de operação, como o nome ou namespace. Se você tentar fazer isso, você cria uma nova operação no contrato de serviço atual.  
   
- [!INCLUDE[crexample](../../../includes/crexample-md.md)]usando uma interface para criar um contrato de serviço, consulte [como: criar um serviço com uma Interface de contrato](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md).  
+ Para obter um exemplo do uso de uma interface para criar um contrato de serviço, consulte [como: criar um serviço com uma Interface de contrato](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md).  
   
- No entanto, você pode usar uma classe para definir um contrato de serviço e implementar o contrato ao mesmo tempo. A vantagem de criar seus serviços aplicando <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.OperationContractAttribute> diretamente para a classe e os métodos na classe, respectivamente, é velocidade e simplicidade. As desvantagens são que classes gerenciadas não oferecem suporte a várias heranças, e assim eles somente podem implementar um contrato de serviço por vez. Além disso, qualquer modificação para as assinaturas de método ou classe modifica o contrato público para esse serviço, o que pode impedir que clientes sem modificações usando seu serviço. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Implementando contratos de serviço](../../../docs/framework/wcf/implementing-service-contracts.md).  
+ No entanto, você pode usar uma classe para definir um contrato de serviço e implementar o contrato ao mesmo tempo. A vantagem de criar seus serviços aplicando <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.OperationContractAttribute> diretamente para a classe e os métodos na classe, respectivamente, é velocidade e simplicidade. As desvantagens são que classes gerenciadas não oferecem suporte a várias heranças, e assim eles somente podem implementar um contrato de serviço por vez. Além disso, qualquer modificação para as assinaturas de método ou classe modifica o contrato público para esse serviço, o que pode impedir que clientes sem modificações usando seu serviço. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Implementando contratos de serviço](../../../docs/framework/wcf/implementing-service-contracts.md).  
   
  Para obter um exemplo que usa uma classe para criar um contrato de serviço e implementa ao mesmo tempo, consulte [como: criar um serviço com uma classe de contrato](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md).  
   
@@ -86,7 +86,7 @@ Este tópico descreve qual serviço os contratos são, como elas são definidas,
   
  Contratos de dados são contratos de estilo de aceitar: nenhum tipo ou membro de dados é serializado, a menos que você explicitamente aplique o atributo de contrato de dados. Contratos de dados não estão relacionados ao escopo de acesso do código gerenciado: membros de dados particular podem ser serializados e enviados em qualquer lugar para ser acessados publicamente. (Para obter um exemplo básico de um contrato de dados, consulte [como: criar um contrato de dados básico para uma classe ou estrutura](../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md).) [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] lida com a definição das mensagens SOAP subjacentes que habilitar a funcionalidade da operação, bem como a serialização dos seus tipos de dados dentro e fora do corpo das mensagens. Como seus tipos de dados são serializáveis, você não precisa pensar sobre a infraestrutura de troca de mensagem subjacente ao projetar suas operações.  
   
- Embora o típico [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativo usa o <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute> atributos para criar contratos de dados para operações, você pode usar outros mecanismos de serialização. O padrão <xref:System.Runtime.Serialization.ISerializable>, <xref:System.SerializableAttribute> e <xref:System.Xml.Serialization.IXmlSerializable> todos os mecanismos de trabalham para lidar com a serialização dos seus tipos de dados para as mensagens SOAP subjacentes que executá-las a partir de um aplicativo para outro. Se os tipos de dados requerem suporte especial, você pode usar mais estratégias de serialização. [!INCLUDE[crabout](../../../includes/crabout-md.md)]as opções para a serialização de tipos de dados em [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativos, consulte [especificando a transferência de dados em contratos de serviço](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
+ Embora o típico [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativo usa o <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute> atributos para criar contratos de dados para operações, você pode usar outros mecanismos de serialização. O padrão <xref:System.Runtime.Serialization.ISerializable>, <xref:System.SerializableAttribute> e <xref:System.Xml.Serialization.IXmlSerializable> todos os mecanismos de trabalham para lidar com a serialização dos seus tipos de dados para as mensagens SOAP subjacentes que executá-las a partir de um aplicativo para outro. Se os tipos de dados requerem suporte especial, você pode usar mais estratégias de serialização. [!INCLUDE[crabout](../../../includes/crabout-md.md)] as opções para a serialização de tipos de dados em [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativos, consulte [especificando a transferência de dados em contratos de serviço](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
   
 #### <a name="mapping-parameters-and-return-values-to-message-exchanges"></a>Mapeando parâmetros e valores de retorno para as trocas de mensagens  
  Operações de serviço são suportadas por uma troca de base de mensagens SOAP que transferem dados de aplicativo e para trás, além dos dados requeridos pelo aplicativo para oferecer suporte a determinados segurança padrão, transações e recursos relacionados à sessão. Como esse é o caso, a assinatura de uma operação de serviço determina um determinado subjacente *padrão de troca de mensagem* (MEPS) que pode dar suporte a transferência de dados e os recursos que requer uma operação. Você pode especificar três padrões no [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] modelo de programação: solicitação/resposta, unidirecional e padrões de mensagens duplex.  
@@ -108,7 +108,7 @@ Function Hello (ByVal greeting As String) As String
   
  Essa assinatura de operação determina a forma de troca de mensagens subjacente. Se nenhuma correlação existia, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] não é possível determinar qual operação destina-se o valor de retorno.  
   
- Observe que, a menos que você especificar um padrão de mensagem subjacente diferente, até mesmo as operações de serviço que retornam `void` (`Nothing` em [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) são trocas de mensagens de solicitação/resposta. O resultado para a operação é que, a menos que um cliente invoca a operação de forma assíncrona, o cliente para o processamento até que a mensagem de retorno é recebida, mesmo que essa mensagem está vazia no caso normal. O seguinte exemplo de código em c# mostra uma operação que não retorna até que o cliente recebeu uma mensagem vazia em resposta.  
+ Observe que, a menos que você especificar um padrão de mensagem subjacente diferente, até mesmo as operações de serviço que retornam `void` (`Nothing` no Visual Basic) são trocas de mensagens de solicitação/resposta. O resultado para a operação é que, a menos que um cliente invoca a operação de forma assíncrona, o cliente para o processamento até que a mensagem de retorno é recebida, mesmo que essa mensagem está vazia no caso normal. O seguinte exemplo de código em c# mostra uma operação que não retorna até que o cliente recebeu uma mensagem vazia em resposta.  
   
 ```csharp  
 [OperationContractAttribute]  
@@ -122,7 +122,7 @@ void Hello(string greeting);
 Sub Hello (ByVal greeting As String)  
 ```  
   
- O exemplo anterior pode diminuir o desempenho de cliente e a capacidade de resposta se a operação leva muito tempo para executar, mas há vantagens em operações de solicitação/resposta mesmo quando eles retornarem `void`. O mais óbvio é que as falhas de SOAP podem ser retornadas na mensagem de resposta, que indica que alguma condição de erro relacionados ao serviço ocorreu na comunicação ou processamento. Falhas de SOAP que são especificadas em um contrato de serviço são passadas para o aplicativo cliente como um <xref:System.ServiceModel.FaultException%601> objeto, onde o parâmetro de tipo é o tipo especificado no contrato de serviço. Isso faz com que os clientes de notificação sobre condições de erro no [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] fácil de serviços. [!INCLUDE[crabout](../../../includes/crabout-md.md)]exceções, falhas de SOAP e tratamento de erros, consulte [especificando e tratamento de falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). Para ver um exemplo de um serviço de solicitação/resposta e um cliente, consulte [como: criar um contrato de solicitação-resposta](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]problemas com o padrão de solicitação-resposta, consulte [serviços de solicitação-resposta](../../../docs/framework/wcf/feature-details/request-reply-services.md).  
+ O exemplo anterior pode diminuir o desempenho de cliente e a capacidade de resposta se a operação leva muito tempo para executar, mas há vantagens em operações de solicitação/resposta mesmo quando eles retornarem `void`. O mais óbvio é que as falhas de SOAP podem ser retornadas na mensagem de resposta, que indica que alguma condição de erro relacionados ao serviço ocorreu na comunicação ou processamento. Falhas de SOAP que são especificadas em um contrato de serviço são passadas para o aplicativo cliente como um <xref:System.ServiceModel.FaultException%601> objeto, onde o parâmetro de tipo é o tipo especificado no contrato de serviço. Isso faz com que os clientes de notificação sobre condições de erro no [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] fácil de serviços. [!INCLUDE[crabout](../../../includes/crabout-md.md)] exceções, falhas de SOAP e tratamento de erros, consulte [especificando e tratamento de falhas em contratos e serviços](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). Para ver um exemplo de um serviço de solicitação/resposta e um cliente, consulte [como: criar um contrato de solicitação-resposta](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] problemas com o padrão de solicitação-resposta, consulte [serviços de solicitação-resposta](../../../docs/framework/wcf/feature-details/request-reply-services.md).  
   
 ##### <a name="one-way"></a>Unidirecional  
  Se o cliente de um [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicativo de serviço não deve aguardar a conclusão da operação e não processa falhas de SOAP, a operação pode especificar um padrão de mensagem unidirecional. Uma operação unidirecional é um no qual um cliente invoca uma operação e continua o processamento após [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] grava a mensagem para a rede. Normalmente, isso significa que, a menos que os dados que está sendo enviados na mensagem de saída são muito grandes o cliente continua executando quase imediatamente (a menos que haja um erro ao enviar os dados). Esse tipo de padrão de troca de mensagens dá suporte ao comportamento do tipo de evento de um cliente para um aplicativo de serviço.  
@@ -145,7 +145,7 @@ void Hello(string greeting);
 Sub Hello (ByVal greeting As String)  
 ```  
   
- Este método é idêntico para exemplo de solicitação/resposta anterior, mas configuração o <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> propriedade `true` significa que, embora o método é idêntico, a operação de serviço não envia uma mensagem de retorno e os clientes retornarão imediatamente quando o mensagem de saída foi passada para a camada do canal. Para obter um exemplo, consulte [como: criar um contrato unidirecional](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]o padrão unidirecional, consulte [unidirecional serviços](../../../docs/framework/wcf/feature-details/one-way-services.md).  
+ Este método é idêntico para exemplo de solicitação/resposta anterior, mas configuração o <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> propriedade `true` significa que, embora o método é idêntico, a operação de serviço não envia uma mensagem de retorno e os clientes retornarão imediatamente quando o mensagem de saída foi passada para a camada do canal. Para obter um exemplo, consulte [como: criar um contrato unidirecional](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] o padrão unidirecional, consulte [unidirecional serviços](../../../docs/framework/wcf/feature-details/one-way-services.md).  
   
 ##### <a name="duplex"></a>Duplex  
  Um padrão de duplex é caracterizada pela capacidade do serviço e o cliente para enviar mensagens ao outro independentemente se usando unidirecional ou mensagens de solicitação/resposta. Essa forma de comunicação bidirecional é útil para os serviços que devem se comunicar diretamente com o cliente ou para fornecer uma experiência assíncrona para nenhum dos lados de uma troca de mensagens, incluindo o comportamento do tipo de evento.  
@@ -156,13 +156,13 @@ Sub Hello (ByVal greeting As String)
   
  Para implementar um padrão de duplex, você deve criar uma segunda interface que contém as declarações de método são chamadas no cliente.  
   
- [!INCLUDE[crexample](../../../includes/crexample-md.md)]criar um serviço e um cliente que acessa o serviço, consulte [como: criar um contrato Duplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md) e [como: serviços do Access com um contrato Duplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md). Para obter um exemplo de funcionamento, consulte [Duplex](../../../docs/framework/wcf/samples/duplex.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]problemas usando contratos duplex, consulte [serviços Duplex](../../../docs/framework/wcf/feature-details/duplex-services.md).  
+ Para obter um exemplo de criação de um serviço e um cliente que acessa o serviço, consulte [como: criar um contrato Duplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md) e [como: serviços do Access com um contrato Duplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md). Para obter um exemplo de funcionamento, consulte [Duplex](../../../docs/framework/wcf/samples/duplex.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] problemas usando contratos duplex, consulte [serviços Duplex](../../../docs/framework/wcf/feature-details/duplex-services.md).  
   
 > [!CAUTION]
 >  Quando um serviço recebe uma mensagem duplex, ele examina o `ReplyTo` elemento nessa mensagem de entrada para determinar para onde enviar a resposta. Se o canal que é usado para receber a mensagem não for protegido, um cliente não confiável pode enviar uma mensagem mal-intencionado com um computador de destino `ReplyTo`, causando uma negação de serviço (DOS) da máquina de destino.  
   
 ##### <a name="out-and-ref-parameters"></a>Parâmetros de Ref e out  
- Na maioria dos casos, você pode usar `in` parâmetros (`ByVal` na [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) e `out` e `ref` parâmetros (`ByRef` em [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]). Porque ambos `out` e `ref` parâmetros indicam que dados são retornados de uma operação, uma assinatura de operação, como a seguir especifica que uma operação de solicitação/resposta for necessária, embora a assinatura da operação retorna `void`.  
+ Na maioria dos casos, você pode usar `in` parâmetros (`ByVal` no Visual Basic) e `out` e `ref` parâmetros (`ByRef` no Visual Basic). Porque ambos `out` e `ref` parâmetros indicam que dados são retornados de uma operação, uma assinatura de operação, como a seguir especifica que uma operação de solicitação/resposta for necessária, embora a assinatura da operação retorna `void`.  
   
 ```csharp  
 [ServiceContractAttribute]  
@@ -193,7 +193,7 @@ End Interface
  O nível de proteção é um valor que especifica se as mensagens (ou partes da mensagem) que dão suporte a um serviço são assinados, assinado e criptografado ou enviados sem criptografia ou assinaturas. O nível de proteção pode ser definido em vários escopos: no nível de serviço, para uma operação específica, para uma mensagem em que a operação ou uma parte da mensagem. Os valores definidos em um escopo tornam-se o valor padrão para escopos menores, a menos que explicitamente substituído. Se uma configuração de associação não pode fornecer o nível de proteção mínima necessária para o contrato, uma exceção será lançada. E, quando nenhum valor de nível de proteção é definidos explicitamente o contrato, a configuração de associação controla o nível de proteção para todas as mensagens se a associação de segurança de mensagem. Este é o comportamento padrão.  
   
 > [!IMPORTANT]
->  Decidir se deseja definir explicitamente vários escopos de um contrato para menor que o nível de proteção completa de <xref:System.Net.Security.ProtectionLevel.EncryptAndSign?displayProperty=nameWithType> geralmente é uma decisão que lida com algum nível de segurança para melhorar o desempenho. Nesses casos, as decisões devem giram em torno de suas operações e o valor dos dados que eles do exchange. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Protegendo serviços](../../../docs/framework/wcf/securing-services.md).  
+>  Decidir se deseja definir explicitamente vários escopos de um contrato para menor que o nível de proteção completa de <xref:System.Net.Security.ProtectionLevel.EncryptAndSign?displayProperty=nameWithType> geralmente é uma decisão que lida com algum nível de segurança para melhorar o desempenho. Nesses casos, as decisões devem giram em torno de suas operações e o valor dos dados que eles do exchange. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Protegendo serviços](../../../docs/framework/wcf/securing-services.md).  
   
  Por exemplo, o exemplo de código a seguir não definido o <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> ou <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel%2A> propriedade no contrato.  
   
@@ -270,12 +270,12 @@ End Interface
   
 -   O `GetGuid` operação <xref:System.Guid?displayProperty=nameWithType> é retornado em uma mensagem que é criptografada e assinada.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]níveis de proteção e como usá-los, consulte [Noções básicas sobre nível de proteção](../../../docs/framework/wcf/understanding-protection-level.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]segurança, consulte [protegendo serviços](../../../docs/framework/wcf/securing-services.md).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] níveis de proteção e como usá-los, consulte [Noções básicas sobre nível de proteção](../../../docs/framework/wcf/understanding-protection-level.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] segurança, consulte [protegendo serviços](../../../docs/framework/wcf/securing-services.md).  
   
 ##### <a name="other-operation-signature-requirements"></a>Outros requisitos de assinatura de operação  
  Alguns recursos de aplicativo exigir um determinado tipo de assinatura da operação. Por exemplo, o <xref:System.ServiceModel.NetMsmqBinding> associação oferece suporte a clientes, em que um aplicativo pode reiniciar no meio de comunicação e continuar onde ela parou sem perder todas as mensagens e serviços duráveis. ([!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Filas no WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).) No entanto, operações duráveis devem levar apenas um `in` parâmetro e não têm nenhum valor de retorno.  
   
- Outro exemplo é o uso de <xref:System.IO.Stream> tipos de operações. Porque o <xref:System.IO.Stream> parâmetro inclui o corpo da mensagem inteira, se uma entrada ou uma saída (ou seja, `ref` parâmetro `out` parâmetro ou valor de retorno) é do tipo <xref:System.IO.Stream>, em seguida, ele deve ser a única entrada ou saída especificada no seu operação. Além disso, o tipo de retorno ou parâmetro deve ser <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType>, ou <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>. [!INCLUDE[crabout](../../../includes/crabout-md.md)]fluxos, consulte [dados grandes e Streaming](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
+ Outro exemplo é o uso de <xref:System.IO.Stream> tipos de operações. Porque o <xref:System.IO.Stream> parâmetro inclui o corpo da mensagem inteira, se uma entrada ou uma saída (ou seja, `ref` parâmetro `out` parâmetro ou valor de retorno) é do tipo <xref:System.IO.Stream>, em seguida, ele deve ser a única entrada ou saída especificada no seu operação. Além disso, o tipo de retorno ou parâmetro deve ser <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType>, ou <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] fluxos, consulte [dados grandes e Streaming](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   
 ##### <a name="names-namespaces-and-obfuscation"></a>Nomes de Namespaces e ofuscação  
  Os nomes e os namespaces, os tipos do .NET na definição de contratos e operações são significativos quando contratos são convertidos em WSDL e quando as mensagens de contrato são criadas e enviadas. Portanto, é altamente recomendável que os nomes de contrato de serviço e namespaces são definidos explicitamente usando o `Name` e `Namespace` propriedades de dar suporte a todos os atributos de contrato, como o <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute>, <xref:System.Runtime.Serialization.DataContractAttribute>,  <xref:System.Runtime.Serialization.DataMemberAttribute>e outros atributos do contrato.  

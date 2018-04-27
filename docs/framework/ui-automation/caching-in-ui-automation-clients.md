@@ -1,27 +1,29 @@
 ---
-title: "Armazenando em cache em clientes de automação de interface do usuário"
-ms.custom: 
+title: Armazenando em cache em clientes de automação de interface do usuário
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: cce1890357f5781f1772b6a0aa583e493e2cfa8b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5bbd54d4e1e8a6a1eae52f50696aecddd1f8bd8a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="caching-in-ui-automation-clients"></a>Armazenando em cache em clientes de automação de interface do usuário
 > [!NOTE]
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="activating-the-cacherequest"></a>Ativando o CacheRequest  
  Armazenamento em cache é executado somente quando <xref:System.Windows.Automation.AutomationElement> objetos são recuperados enquanto um <xref:System.Windows.Automation.CacheRequest> está ativo para o thread atual. Há duas maneiras de ativar um <xref:System.Windows.Automation.CacheRequest>.  
   
- A maneira usual é chamar <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Este método retorna um objeto que implementa <xref:System.IDisposable>. A solicitação permanece ativa enquanto o <xref:System.IDisposable> objeto existe. A maneira mais fácil de controlar o tempo de vida do objeto é colocar a chamada dentro de um `using` ([!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)]) ou `Using` ([!INCLUDE[TLA2#tla_visualb](../../../includes/tla2sharptla-visualb-md.md)]) bloco. Isso garante que a solicitação vai ser ser removida da pilha mesmo se uma exceção é gerada.  
+ A maneira usual é chamar <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Este método retorna um objeto que implementa <xref:System.IDisposable>. A solicitação permanece ativa enquanto o <xref:System.IDisposable> objeto existe. A maneira mais fácil de controlar o tempo de vida do objeto é colocar a chamada dentro de um `using` (c#) ou `Using` bloco (Visual Basic). Isso garante que a solicitação vai ser ser removida da pilha mesmo se uma exceção é gerada.  
   
  Outra maneira, que é útil quando você deseja aninhar solicitações de cache, é chamar <xref:System.Windows.Automation.CacheRequest.Push%2A>. Isso coloca a solicitação em uma pilha e ativa. A solicitação permanece ativa até ser removida da pilha por <xref:System.Windows.Automation.CacheRequest.Pop%2A>. A solicitação fica temporariamente inativa se outra solicitação é enviada para a pilha; somente a solicitação superior na pilha está ativa.  
   

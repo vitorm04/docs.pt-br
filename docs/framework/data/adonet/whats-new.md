@@ -10,37 +10,37 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-caps.latest.revision: ''
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: fb23f329906e21f3d8558139075c5f575f2f13bd
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a636734958cd73a2f158d3f25cbbe448ff703612
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="what39s-new-in-adonet"></a>O que&#39;novo no ADO.NET
 Os recursos a seguir são novos no [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
 ## <a name="sqlclient-data-provider"></a>Provedor de Dados SqlClient  
- Os seguintes recursos são novos no provedor de dados [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para o [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:  
+ Os recursos a seguir são novos no [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider para SQL Server no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:  
   
 -   As palavras-chaves de cadeia de caracteres de conexão ConnectRetryCount e ConnectRetryInterval (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) permitem controlar o recurso de resiliência de conexão ociosa.  
   
--   O suporte a streaming do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] para um aplicativo oferece suporte a cenários em que os dados do servidor não são estruturados.  Consulte [suporte de Streaming do SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md) para obter mais informações.  
+-   Suporte do SQL Server para um aplicativo de streaming dá suporte a cenários em que os dados no servidor são não estruturados.  Consulte [suporte de Streaming do SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md) para obter mais informações.  
   
 -   O suporte foi adicionado para programação assíncrona.  Consulte [programação assíncrona](../../../../docs/framework/data/adonet/asynchronous-programming.md) para obter mais informações.  
   
 -   As falhas de conexão não serão registradas no log de eventos estendido. Para obter mais informações, consulte [Rastreamento de dados no ADO.NET](../../../../docs/framework/data/adonet/data-tracing.md).  
   
--   O SqlClient agora tem suporte para alta disponibilidade do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], recurso de recuperação de desastre, AlwaysOn. Para obter mais informações, consulte [SqlClient suporte para alta disponibilidade, recuperação de desastres](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).  
+-   SqlClient agora tem suporte alta disponibilidade do SQL Server, recurso de recuperação de desastre AlwaysOn. Para obter mais informações, consulte [SqlClient suporte para alta disponibilidade, recuperação de desastres](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).  
   
--   Uma senha pode ser passada como um <xref:System.Security.SecureString> ao usar a autenticação do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Consulte <xref:System.Data.SqlClient.SqlCredential> para obter mais informações.  
+-   Uma senha pode ser passada como um <xref:System.Security.SecureString> ao usar a autenticação do SQL Server. Consulte <xref:System.Data.SqlClient.SqlCredential> para obter mais informações.  
   
--   Quando o `TrustServerCertificate` é falso e `Encrypt` é verdadeiro, o nome do servidor (ou endereço IP) em um certificado SSL do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] deve corresponder exatamente ao nome de servidor (ou endereço IP) especificado na cadeia de conexão. Caso contrário, a tentativa de conexão falhará. Para obter mais informações, consulte a descrição da opção de conexão de `Encrypt` em <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
+-   Quando `TrustServerCertificate` é falso e `Encrypt` for true, o nome do servidor (ou endereço IP) em um certificado SSL do SQL Server deve corresponder exatamente a server nome (ou endereço IP) especificado na cadeia de conexão. Caso contrário, a tentativa de conexão falhará. Para obter mais informações, consulte a descrição da opção de conexão de `Encrypt` em <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
      Se esta alteração fizer um aplicativo existente não se conectar mais, você poderá corrigir o aplicativo usando um desses procedimentos:  
   

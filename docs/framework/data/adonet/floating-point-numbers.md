@@ -1,31 +1,33 @@
 ---
-title: "Números de ponto flutuante"
-ms.custom: 
+title: Números de ponto flutuante
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9a090d02b9c2ce63bd265996d237aab5c30f61bf
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 08062e7c41a6173093db577bb52ea4fa3c7e0746
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="floating-point-numbers"></a>Números de ponto flutuante
 Este tópico descreve alguns dos problemas que os desenvolvedores enfrentam com frequência quando elas funcionam com números de ponto flutuante em [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Esses problemas são causados pela maneira que computadores armazenam números de ponto flutuante e não são específicas para um provedor específico, como <xref:System.Data.SqlClient> ou <xref:System.Data.OracleClient>.  
   
  Números de ponto flutuante geralmente não têm uma representação binária exata. Em vez disso, o computador armazena uma aproximação do número. Em momentos diferentes, diferentes números de dígitos binários podem ser usados para representar o número. Quando um flutuante número é convertido de uma representação para outra representação, os dígitos menos significantes desse número de ponto pode variar um pouco. Normalmente, a conversão ocorre quando o número é convertido de um tipo em outro tipo. A variação ocorre se a conversão ocorre dentro de um banco de dados entre tipos que representam os valores de banco de dados ou tipos. Devido a essas alterações, números logicamente seria iguais podem ter alterações em seus dígitos menos significativo que fazer com que eles têm valores diferentes. O número de dígitos de precisão no número pode ser maior ou menor que o esperado. Quando formatado como uma cadeia de caracteres, o número não pode mostrar o valor esperado.  
   
- Para minimizar os efeitos, você deve usar a correspondência mais próxima entre tipos numéricos que estão disponíveis para você. Por exemplo, se você estiver trabalhando com [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], o valor numérico exato pode mudar se você converter um valor de Transact-SQL de tipo real para um valor do tipo float. No [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], converter um <xref:System.Single> para um <xref:System.Double> também pode produzir resultados inesperados. Em ambos os casos, uma boa estratégia é fazer todos os valores no uso de aplicativo o mesmo tipo numérico. Você também pode usar um tipo decimal de precisão fixa ou converter números de ponto flutuante para um tipo decimal de precisão fixa antes de trabalhar com eles.  
+ Para minimizar os efeitos, você deve usar a correspondência mais próxima entre tipos numéricos que estão disponíveis para você. Por exemplo, se você estiver trabalhando com o SQL Server, o valor numérico exato pode alterar se você converter um valor de Transact-SQL de tipo real para um valor do tipo float. No [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], converter um <xref:System.Single> para um <xref:System.Double> também pode produzir resultados inesperados. Em ambos os casos, uma boa estratégia é fazer todos os valores no uso de aplicativo o mesmo tipo numérico. Você também pode usar um tipo decimal de precisão fixa ou converter números de ponto flutuante para um tipo decimal de precisão fixa antes de trabalhar com eles.  
   
  Para solucionar problemas com a comparação de igualdade, considere a possibilidade de codificar seu aplicativo, de forma que as variações de dígitos menos significantes são ignoradas. Por exemplo, em vez de comparar para ver se os dois números são iguais, subtrai um número das outras. Se a diferença estiver dentro de uma margem aceitável de arredondamento, seu aplicativo pode tratar os números como se eles são os mesmos.  
   

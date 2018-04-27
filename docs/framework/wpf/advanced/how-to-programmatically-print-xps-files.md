@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 55a9a50527df0605cb9699622a165147597a500a
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 9e461a847e36277cb7d70534249a926693584b1f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Como imprimir arquivos XPS de forma programática
 Você pode usar uma sobrecarga do <xref:System.Printing.PrintQueue.AddJob%2A> método imprimir [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] arquivos sem abrir uma <xref:System.Windows.Controls.PrintDialog> ou, no princípio, qualquer [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] em todos os.  
@@ -56,9 +56,9 @@ Você pode usar uma sobrecarga do <xref:System.Printing.PrintQueue.AddJob%2A> m�
   
  Se estiver usando uma impressora XPSDrv, você poderá definir o parâmetro final como `true`. Nesse caso, como [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] é a linguagem de descrição de página da impressora, o método enviará o arquivo para a impressora sem validá-lo ou convertê-lo para outra linguagem de descrição de página. Se você não tiver certeza em tempo de design se o aplicativo usará uma impressora XPSDrv, você pode modificar o aplicativo para que ele leia o <xref:System.Printing.PrintQueue.IsXpsDevice%2A> propriedade e ramificação de acordo com o que encontrar.  
   
- Como inicialmente haverá poucas impressoras XPSDrv disponíveis logo após o lançamento de [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] e [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], talvez você precise disfarçar uma impressora não XPSDrv como uma impressora XPSDrv. Para fazer isso, adicione Pipelineconfig.xml à lista de arquivos na seguinte chave do Registro do computador que executa o aplicativo:  
+ Como inicialmente haverá poucas impressoras XPSDrv disponíveis imediatamente após o lançamento do [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] e Microsoft .NET Framework, você talvez precise disfarce uma impressora não-XPSDrv como uma impressora XPSDrv. Para fazer isso, adicione Pipelineconfig.xml à lista de arquivos na seguinte chave do Registro do computador que executa o aplicativo:  
   
- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3\\*\<PseudoXPSPrinter>*\DependentFiles  
+ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3\\*\<PseudoXPSPrinter>* \DependentFiles  
   
  em que *\<PseudoXPSPrinter>* é qualquer fila de impressão. O computador, então, deve ser reinicializado.  
   

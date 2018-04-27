@@ -18,11 +18,11 @@ ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
 caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 36be34ac22cfe926a2eea946f5e4c4eb534de696
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d5bb8c10c28a4ab864220c1b4ce4702622e55c92
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-comment-literal-visual-basic"></a>Literal de comentário XML (Visual Basic)
 Um valor literal que representa um <xref:System.Xml.Linq.XComment> objeto.  
@@ -54,9 +54,9 @@ Um valor literal que representa um <xref:System.Xml.Linq.XComment> objeto.
  Você pode atribuir um literal de comentário XML para uma variável ou incluí-lo em um literal de elemento XML.  
   
 > [!NOTE]
->  Um literal XML pode abranger várias linhas sem usar caracteres de continuação de linha. Esse recurso permite que você copiar o conteúdo de um documento XML e cole-o diretamente em um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programa.  
+>  Um literal XML pode abranger várias linhas sem usar caracteres de continuação de linha. Esse recurso permite que você copie o conteúdo de um documento XML e cole-o diretamente em um programa Visual Basic.  
   
- O [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador converte o literal de comentário XML para uma chamada para o <xref:System.Xml.Linq.XComment.%23ctor%2A> construtor.  
+ O compilador do Visual Basic converte o literal de comentário XML para uma chamada para o <xref:System.Xml.Linq.XComment.%23ctor%2A> construtor.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir cria um comentário XML que contém o texto "Este é um comentário".  

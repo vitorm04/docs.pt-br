@@ -1,23 +1,24 @@
 ---
 title: Processo de aluguer
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 30cad662a9cca679f7e8ce720cfde3d369b9ba60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8cfa23ab5f36b3a40de107a546dd4700a4523595
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hiring-process"></a>Processo de aluguer
 Este exemplo demonstra como implementar um processo enterprise usando as atividades de mensagem e os dois fluxos de trabalho hospedados como serviços de fluxo de trabalho. Esses fluxos de trabalho são parte da infraestrutura de TI de uma empresa fictícia chamada Contoso, Inc.  
@@ -129,7 +130,7 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
 |Rastreamento personalizada|O exemplo inclui um participante personalizado de rastreamento que salva o histórico de `HiringRequestProcess` (esse registro que ação foi feita, por quem, e quando). O código-fonte está na pasta de rastreamento de HiringRequestService.|HiringRequestService|  
 |Rastreamento de ETW|Sistema forneceu o rastreamento de ETW é configurado no arquivo App.config no serviço de HiringRequestService.|HiringRequestService|  
 |Composição de atividades|A definição de processo usa a composição livre de <xref:System.Activities.Activity>. O fluxograma contém vários a sequência e as atividades paralelas que contêm ao mesmo tempo outras atividades (e assim por diante).|HiringRequestService|  
-|Atividades paralelas|-   <xref:System.Activities.Statements.ParallelForEach%601>é usado para registrar-se na caixa de entrada do CEO e gerentes de RH em paralelo (aguardando a etapa de aprovação de gerentes de RH duas).<br />-   <xref:System.Activities.Statements.Parallel>é usado para realizar algumas tarefas de limpeza nas etapas concluídas e rejeitados|HiringRequestService|  
+|Atividades paralelas|-   <xref:System.Activities.Statements.ParallelForEach%601> é usado para registrar-se na caixa de entrada do CEO e gerentes de RH em paralelo (aguardando a etapa de aprovação de gerentes de RH duas).<br />-   <xref:System.Activities.Statements.Parallel> é usado para realizar algumas tarefas de limpeza nas etapas concluídas e rejeitados|HiringRequestService|  
 |Cancelar modelo|O fluxograma usa <xref:System.Activities.Statements.CancellationScope> para criar o comportamento de cancelamento (neste caso faz qualquer limpeza.)|HiringRequestService|  
 |Participante de persistência do cliente|`HiringRequestPersistenceParticipant` salva dados de uma variável de fluxo de trabalho a uma tabela armazenada na base de dados de Contoso hora.|HiringRequestService|  
 |Serviços de fluxo de trabalho|`ResumeRequestService` é implementado usando serviços de fluxo de trabalho. A definição de fluxo de trabalho e informações de serviço estão contidas em ResumeRequestService.xamlx. O serviço está configurado para usar a persistência e o rastreamento.|ResumeRequestService|  
@@ -141,13 +142,13 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
 ## <a name="data-storage"></a>Armazenamento de dados  
  Os dados são armazenados em uma base de dados SQL Server (chamado `ContosoHR` script para criar este base de dados está localizado na pasta de `DbSetup` ). As instâncias de fluxo de trabalho são armazenadas em uma base de dados SQL Server (chamado `InstanceStore` os scripts para criar o armazenamento de instância são parte de distribuição de [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] ).  
   
- Ambas as bases de dados são criadas executando o script de Setup.cmd de um prompt de comando [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] .  
+ Os bancos de dados são criados ao executar o script de Setup.cmd em um prompt de comando do Visual Studio.  
   
 ## <a name="running-the-sample"></a>Executando o exemplo  
   
 #### <a name="to-create-the-databases"></a>Para criar os bases de dados  
   
-1.  Abra um prompt de comando do [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+1.  Abra um prompt de comando do Visual Studio.  
   
 2.  Navegue até a pasta de exemplo.  
   
@@ -157,7 +158,7 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
   
 #### <a name="to-set-up-the-solution-for-execution"></a>Para configurar a solução para a execução  
   
-1.  Execução [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] como um administrador. HiringRequest.sln aberto.  
+1.  Execute o Visual Studio como um administrador. HiringRequest.sln aberto.  
   
 2.  Com o botão direito na solução **Solution Explorer** e selecione **propriedades**.  
   
@@ -221,7 +222,7 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
   
 ## <a name="troubleshooting"></a>Solução de problemas  
   
-1.  Certifique-se de que você está executando [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] com privilégios de administrador.  
+1.  Certifique-se de que você está executando o Visual Studio com privilégios de administrador.  
   
 2.  Se a solução não compilar, verifique o seguinte:  
   
@@ -237,7 +238,7 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
   
         2.  Clique com botão direito **Contoso** e selecione **referências de Web/serviço de atualização**.  
   
-        3.  Recriar a solução pressionando CTRL+SHIFT+B em [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+        3.  Recompile a solução pressionando CTRL + SHIFT + B no Visual Studio.  
   
 ## <a name="uninstalling"></a>Desinstalando  
   

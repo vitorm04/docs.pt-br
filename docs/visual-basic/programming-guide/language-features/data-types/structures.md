@@ -1,11 +1,12 @@
 ---
 title: Estruturas (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - structures [Visual Basic]
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - user-defined data types [Visual Basic], about user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: 55e86462-5e99-4d33-8018-6d097ca491b2
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: de99d67ee31d8fb8e92e0a351142b30f622bf5f0
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: d1f537b25a405548816ab3d356a18f693a5d0006
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="structures-visual-basic"></a>Estruturas (Visual Basic)
-Um *estrutura* é uma generalização do que o tipo definido pelo usuário (UDT) suportado por versões anteriores do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Além de campos, estruturas podem expor propriedades, métodos e eventos. Uma estrutura pode implementar uma ou mais interfaces, e você pode declarar níveis de acesso individuais para cada campo.  
+Um *estrutura* é uma generalização do que o tipo definido pelo usuário (UDT) suportado por versões anteriores do Visual Basic. Além de campos, estruturas podem expor propriedades, métodos e eventos. Uma estrutura pode implementar uma ou mais interfaces, e você pode declarar níveis de acesso individuais para cada campo.  
   
  Você pode combinar itens de tipos diferentes para criar uma estrutura de dados. Uma estrutura associa um ou mais *elementos* entre si e com a estrutura em si. Quando você declara uma estrutura, ele se torna um *tipo de dados composto*, e você pode declarar variáveis desse tipo.  
   
@@ -46,7 +47,7 @@ Um *estrutura* é uma generalização do que o tipo definido pelo usuário (UDT)
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Apresenta o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] tipos de dados e descreve como usá-los.  
+ Apresenta os tipos de dados do Visual Basic e descreve como usá-los.  
   
  [Tipos de Dados](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- Lista os tipos de dados elementares fornecidos pelo [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].
+ Lista os tipos de dados elementares fornecidos pelo Visual Basic.

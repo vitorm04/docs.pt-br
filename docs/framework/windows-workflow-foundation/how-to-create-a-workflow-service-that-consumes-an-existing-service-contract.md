@@ -1,33 +1,34 @@
 ---
-title: "Como criar um serviço de fluxo de trabalho que consome um contrato de serviço existente"
-ms.custom: 
+title: Como criar um serviço de fluxo de trabalho que consome um contrato de serviço existente
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a754875dc3f7968086f4f92044205b8ebceb01e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 09c3f7656284dd73dd5f50c4ef9f77cd5adcbfe7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>Como criar um serviço de fluxo de trabalho que consome um contrato de serviço existente
 O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] apresenta uma melhor integração entre serviços Web e fluxos de trabalho na forma de desenvolvimento de fluxo de trabalho de primeiro contrato. A ferramenta de desenvolvimento de fluxo de trabalho de primeiro contrato permite que você crie o contrato no código primeiro. A ferramenta em seguida gera automaticamente um modelo de atividade na caixa de ferramentas para as operações no contrato.  
   
 > [!NOTE]
->  Este tópico fornece orientação passo a passo sobre como criar um serviço de fluxo de trabalho de primeiro contrato. [!INCLUDE[crabout](../../../includes/crabout-md.md)]desenvolvimento de serviço de fluxo de trabalho do contrato, primeiro, consulte [desenvolvimento de serviço de fluxo de trabalho primeiro contrato](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md).  
+>  Este tópico fornece orientação passo a passo sobre como criar um serviço de fluxo de trabalho de primeiro contrato. [!INCLUDE[crabout](../../../includes/crabout-md.md)] desenvolvimento de serviço de fluxo de trabalho do contrato, primeiro, consulte [desenvolvimento de serviço de fluxo de trabalho primeiro contrato](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md).  
   
 ### <a name="creating-the-workflow-project"></a>Criando o projeto de fluxo de trabalho  
   
-1.  Em [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)], selecione **arquivo**, **novo projeto**. Selecione o **WCF** nó sob o **c#** nó o **modelos** de árvore e selecione o **aplicativo de serviço de fluxo de trabalho WCF** modelo.  
+1.  No Visual Studio, selecione **arquivo**, **novo projeto**. Selecione o **WCF** nó sob o **c#** nó o **modelos** de árvore e selecione o **aplicativo de serviço de fluxo de trabalho WCF** modelo.  
   
 2.  Nomeie o novo projeto `ContractFirst` e clique em **Okey**.  
   

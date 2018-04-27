@@ -1,28 +1,29 @@
 ---
-title: "Noções básicas de cadeias de caracteres no Visual Basic"
-ms.custom: 
+title: Noções básicas de cadeias de caracteres no Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], Like operator
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8881ad6ab7f28689019463abdab3b867e010d51e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4a40435b76b0eee4f4eca15d5ba1a31cc58698ab
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="string-basics-in-visual-basic"></a>Noções básicas de cadeias de caracteres no Visual Basic
-O `String` tipo de dados representa uma série de caracteres (cada uma instância de uma vez representando o `Char` tipo de dados). Este tópico apresenta os conceitos básicos de cadeias de caracteres em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+O `String` tipo de dados representa uma série de caracteres (cada uma instância de uma vez representando o `Char` tipo de dados). Este tópico apresenta os conceitos básicos de cadeias de caracteres no Visual Basic.  
   
 ## <a name="string-variables"></a>Variáveis de cadeia de caracteres  
  Um valor literal que representa uma série de caracteres pode ser atribuída a uma instância de uma cadeia de caracteres. Por exemplo:  
@@ -37,7 +38,7 @@ O `String` tipo de dados representa uma série de caracteres (cada uma instânci
   
  [!code-vb[VbVbalrStrings#65](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_3.vb)]  
   
- Este código faz com que um erro porque o compilador termina a string após a segunda aspas, e o restante da cadeia de caracteres é interpretado como código. Para resolver esse problema, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] interpreta duas aspas em uma cadeia de caracteres literal como uma aspas na cadeia de caracteres. O exemplo a seguir demonstra a maneira correta de incluir aspas em uma cadeia de caracteres:  
+ Este código faz com que um erro porque o compilador termina a string após a segunda aspas, e o restante da cadeia de caracteres é interpretado como código. Para resolver esse problema, o Visual Basic interpreta duas aspas em uma cadeia de caracteres literal como uma aspas na cadeia de caracteres. O exemplo a seguir demonstra a maneira correta de incluir aspas em uma cadeia de caracteres:  
   
  [!code-vb[VbVbalrStrings#66](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_4.vb)]  
   

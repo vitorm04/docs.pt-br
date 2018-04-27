@@ -1,12 +1,12 @@
 ---
-title: "Serviços criptográficos"
-ms.custom: 
+title: Serviços criptográficos
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - cryptography [.NET Framework]
@@ -30,21 +30,21 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-caps.latest.revision: 
+caps.latest.revision: 34
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 941dd9d130a31c997b634bce8059afef04c178d3
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 02d399d85c53cd296fc5f49ca0ec4b51b14ad677
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cryptographic-services"></a>Serviços criptográficos
-<a name="top"></a>Redes públicas, como a Internet não fornecem um meio de comunicação segura entre entidades. Comunicação por essas redes é suscetível a sendo lidas ou modificadas até mesmo por terceiros não autorizados. A criptografia ajuda a proteger os dados sejam exibidos, fornece maneiras para detectar se os dados foram modificados e ajuda a fornecer uma maneira segura de comunicação nos canais de outra forma não seguras. Por exemplo, os dados podem ser criptografados usando um algoritmo de criptografia, transmitidos em um estado criptografado e mais tarde descriptografados pelo parceiro pretendido. Se outra pessoa interceptar os dados criptografados, será difícil decifrar.  
+<a name="top"></a> Redes públicas, como a Internet não fornecem um meio de comunicação segura entre entidades. Comunicação por essas redes é suscetível a sendo lidas ou modificadas até mesmo por terceiros não autorizados. A criptografia ajuda a proteger os dados sejam exibidos, fornece maneiras para detectar se os dados foram modificados e ajuda a fornecer uma maneira segura de comunicação nos canais de outra forma não seguras. Por exemplo, os dados podem ser criptografados usando um algoritmo de criptografia, transmitidos em um estado criptografado e mais tarde descriptografados pelo parceiro pretendido. Se outra pessoa interceptar os dados criptografados, será difícil decifrar.  
   
  No .NET Framework, as classes de <xref:System.Security.Cryptography?displayProperty=nameWithType> namespace gerenciar muitos detalhes de criptografia para você. Alguns são wrappers para a API de criptografia da Microsoft não gerenciado (CryptoAPI), enquanto outras são implementações totalmente gerenciadas. Você não precisa ser um especialista em criptografia para usar essas classes. Quando você cria uma nova instância de um a criptografia de classes do algoritmo, as chaves são geradas para facilidade de uso e propriedades padrão são tão seguros e protegidos possível.  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 02/01/2018
   
  Criptografia de chave secreta também é conhecida como criptografia simétrica porque a mesma chave é usada para criptografia e descriptografia. Algoritmos de criptografia de chave secreta são muito rápidos (em comparação com algoritmos de chave pública) e são adequados para executar transformações de criptografia em grandes fluxos de dados. Algoritmos de criptografia assimétrica como RSA são limitados matematicamente em quantos dados eles podem criptografar. Algoritmos de criptografia simétrica geralmente não têm esses problemas.  
   
- Um tipo de algoritmo de chave de segredo chamado uma codificação de bloco é usado para criptografar um bloco de dados por vez. Codificações em bloco, como criptografia de dados padrão (DES), TripleDES, e o padrão de criptografia avançada (AES) criptograficamente transformar um bloco de entrada de  *n*  bytes em um bloco de saída de bytes criptografados. Se você deseja criptografar ou descriptografar uma sequência de bytes, você precisa fazer isso bloco por bloco. Porque  *n*  é pequeno (8 bytes para DES e TripleDES; 32 bytes para AES, 24 bytes ou 16 bytes [padrão]), valores de dados que são maiores do que  *n*  precisa ser criptografado de um bloco cada vez. Valores de dados que são menores que  *n*  precisa ser expandido para  *n*  para ser processado.  
+ Um tipo de algoritmo de chave de segredo chamado uma codificação de bloco é usado para criptografar um bloco de dados por vez. Codificações em bloco, como criptografia de dados padrão (DES), TripleDES, e o padrão de criptografia avançada (AES) criptograficamente transformar um bloco de entrada de *n* bytes em um bloco de saída de bytes criptografados. Se você deseja criptografar ou descriptografar uma sequência de bytes, você precisa fazer isso bloco por bloco. Porque *n* é pequeno (8 bytes para DES e TripleDES; 32 bytes para AES, 24 bytes ou 16 bytes [padrão]), valores de dados que são maiores do que *n* precisa ser criptografado um bloco por vez. Valores de dados que são menores que *n* precisa ser expandido para *n* para ser processado.  
   
  Uma forma simple de codificação de bloco é chamada de modo eletrônica livro de códigos (ECB). Modo ECB não é considerado seguro, porque ele não usa um vetor de inicialização para inicializar o primeiro bloco de texto sem formatação. Para uma determinada chave secreta *k*, uma codificação de bloco simples que não usa um vetor de inicialização criptografará o mesmo bloco de entrada de texto sem formatação no mesmo bloco de saída de texto cifrado. Portanto, se você tiver blocos em seu fluxo de entrada de texto sem formatação, você terá de blocos no seu fluxo de texto cifrado de saída. Esses blocos de saída duplicado alertar os usuários não autorizados para a criptografia fraca usaram os algoritmos que já foram empregados e os modos possíveis de ataque. O modo de criptografia ECB, portanto, é bastante vulnerável a análise e, por fim, a descoberta de chave.  
   
@@ -119,11 +119,11 @@ ms.lasthandoff: 02/01/2018
   
  O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornece as seguintes classes que implementam algoritmos de criptografia de chave de segredo:  
   
--   <xref:System.Security.Cryptography.AesManaged>(introduzido no [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]).  
+-   <xref:System.Security.Cryptography.AesManaged> (introduzido no [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]).  
   
 -   <xref:System.Security.Cryptography.DESCryptoServiceProvider>.  
   
--   <xref:System.Security.Cryptography.HMACSHA1>(Isso é tecnicamente um algoritmo de chave de segredo porque ela representa o código de autenticação de mensagem que é calculado usando uma função de hash criptográfico combinada com uma chave secreta. Consulte [valores de Hash](#hash_values), mais adiante neste tópico.)  
+-   <xref:System.Security.Cryptography.HMACSHA1> (Isso é tecnicamente um algoritmo de chave de segredo porque ela representa o código de autenticação de mensagem que é calculado usando uma função de hash criptográfico combinada com uma chave secreta. Consulte [valores de Hash](#hash_values), mais adiante neste tópico.)  
   
 -   <xref:System.Security.Cryptography.RC2CryptoServiceProvider>.  
   
@@ -163,13 +163,13 @@ ms.lasthandoff: 02/01/2018
   
 -   <xref:System.Security.Cryptography.RSACryptoServiceProvider>  
   
--   <xref:System.Security.Cryptography.ECDiffieHellman>(classe base)  
+-   <xref:System.Security.Cryptography.ECDiffieHellman> (classe base)  
   
 -   <xref:System.Security.Cryptography.ECDiffieHellmanCng>  
   
--   <xref:System.Security.Cryptography.ECDiffieHellmanCngPublicKey>(classe base)  
+-   <xref:System.Security.Cryptography.ECDiffieHellmanCngPublicKey> (classe base)  
   
--   <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction>(classe base)  
+-   <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction> (classe base)  
   
 -   <xref:System.Security.Cryptography.ECDsaCng>  
   
@@ -192,7 +192,7 @@ ms.lasthandoff: 02/01/2018
   
 -   <xref:System.Security.Cryptography.RSACryptoServiceProvider>  
   
--   <xref:System.Security.Cryptography.ECDsa>(classe base)  
+-   <xref:System.Security.Cryptography.ECDsa> (classe base)  
   
 -   <xref:System.Security.Cryptography.ECDsaCng>  
   
@@ -206,7 +206,7 @@ ms.lasthandoff: 02/01/2018
   
 -   Alice envia a mensagem de texto sem formatação e a mensagem de hash (assinatura digital) para Bob. Bob recebe e hashes de mensagem e compara o valor de hash para o valor de hash que recebeu de Alice. Se os valores de hash forem idênticos, a mensagem não foi alterada. Se os valores não forem idênticos, a mensagem foi alterada depois de Alice escreveu.  
   
-     Infelizmente, esse método não estabelecer a autenticidade do remetente. Qualquer pessoa pode representar Alice e enviar uma mensagem para Bob. Eles podem usar o mesmo algoritmo de hash para assinar sua mensagem, e tudo Bob pode determinar é que a mensagem corresponde a sua assinatura. Isso é uma forma de um ataque man-in-the-middle. Consulte [NIB: exemplo de comunicação seguro geração CNG (Cryptography Next)](http://msdn.microsoft.com/library/8048e94e-054a-417b-87c6-4f5e26710e6e) para obter mais informações.  
+     Infelizmente, esse método não estabelecer a autenticidade do remetente. Qualquer pessoa pode representar Alice e enviar uma mensagem para Bob. Eles podem usar o mesmo algoritmo de hash para assinar sua mensagem, e tudo Bob pode determinar é que a mensagem corresponde a sua assinatura. Isso é uma forma de um ataque man-in-the-middle. Consulte [NIB: exemplo de comunicação seguro geração CNG (Cryptography Next)](https://msdn.microsoft.com/library/8048e94e-054a-417b-87c6-4f5e26710e6e) para obter mais informações.  
   
 -   Alice envia a mensagem de texto sem formatação para Bob através de um canal de público não seguro. Envia a mensagem de hash para Bob por um canal seguro de particular. Bob recebe a mensagem de texto sem formatação, coloca em hash e compara o hash com o hash troca em particular. Se os hashes corresponderem, Bob saberá duas coisas:  
   
@@ -260,7 +260,7 @@ ms.lasthandoff: 02/01/2018
  [Voltar ao início](#top)  
   
 <a name="clickonce"></a>   
-## <a name="clickonce-manifests"></a>ClickOnce Manifests  
+## <a name="clickonce-manifests"></a>Manifestos ClickOnce  
  No [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)], as seguintes classes de criptografia permitem que você obtenha e verifique as informações sobre assinaturas de manifesto para aplicativos que são implantados usando [a tecnologia ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment):  
   
 -   O <xref:System.Security.Cryptography.ManifestSignatureInformation> classe obtém informações sobre uma assinatura de manifesto quando você usar seu <xref:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature%2A> sobrecargas do método.  
@@ -271,13 +271,13 @@ ms.lasthandoff: 02/01/2018
   
  Além disso, as classes a seguir fornecem informações específicas de assinatura:  
   
--   <xref:System.Security.Cryptography.StrongNameSignatureInformation>contém as informações de assinatura de nome forte de um manifesto.  
+-   <xref:System.Security.Cryptography.StrongNameSignatureInformation> Contém as informações de assinatura de nome forte de um manifesto.  
   
--   <xref:System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation>representa as informações de assinatura Authenticode de um manifesto.  
+-   <xref:System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation> representa as informações de assinatura Authenticode de um manifesto.  
   
--   <xref:System.Security.Cryptography.X509Certificates.TimestampInformation>contém informações sobre o carimbo de hora em uma assinatura Authenticode.  
+-   <xref:System.Security.Cryptography.X509Certificates.TimestampInformation> contém informações sobre o carimbo de hora em uma assinatura Authenticode.  
   
--   <xref:System.Security.Cryptography.X509Certificates.TrustStatus>Fornece uma maneira simple para verificar se uma assinatura Authenticode é confiável.  
+-   <xref:System.Security.Cryptography.X509Certificates.TrustStatus> Fornece uma maneira simple para verificar se uma assinatura Authenticode é confiável.  
   
  [Voltar ao início](#top)  
   
@@ -307,11 +307,11 @@ ms.lasthandoff: 02/01/2018
   
  O [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] também inclui uma variedade de classes CNG auxiliares, como o seguinte:  
   
--   <xref:System.Security.Cryptography.CngProvider>mantém um provedor de armazenamento de chaves.  
+-   <xref:System.Security.Cryptography.CngProvider> mantém um provedor de armazenamento de chaves.  
   
--   <xref:System.Security.Cryptography.CngAlgorithm>mantém um algoritmo CNG.  
+-   <xref:System.Security.Cryptography.CngAlgorithm> mantém um algoritmo CNG.  
   
--   <xref:System.Security.Cryptography.CngProperty>mantém as propriedades de chave usadas com frequência.  
+-   <xref:System.Security.Cryptography.CngProperty> mantém as propriedades de chave usadas com frequência.  
   
  [Voltar ao início](#top)  
   

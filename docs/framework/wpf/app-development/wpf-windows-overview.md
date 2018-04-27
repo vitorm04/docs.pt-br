@@ -1,13 +1,13 @@
 ---
-title: "Visão geral do WPF do Windows"
-ms.custom: 
+title: Visão geral do WPF do Windows
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -36,17 +36,17 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-caps.latest.revision: 
+caps.latest.revision: 65
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c176f08904bac8e9c3877977c1e52afb57d5daca
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: ae454e54abc2c8200f33bdb0bc5537806c824074
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wpf-windows-overview"></a>Visão geral do WPF do Windows
 Os usuários interagem com aplicativos [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] autônomos por meio de janelas. O objetivo principal de uma janela é hospedar conteúdo que visualiza dados e permite aos usuários interagir com os dados. Autônomo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativos fornecem suas próprias janelas usando o <xref:System.Windows.Window> classe. Este tópico apresenta <xref:System.Windows.Window> antes que abrangem os conceitos básicos de criação e gerenciamento de janelas de aplicativos autônomos.  
@@ -282,7 +282,7 @@ Os usuários interagem com aplicativos [!INCLUDE[TLA#tla_wpf](../../../../includ
   
  Enquanto uma janela pode ser fechada explicitamente através de mecanismos fornecidos nas áreas não-cliente e cliente, uma janela pode também ser implicitamente fechada como resultado de comportamento em outras partes do aplicativo ou [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], incluindo o seguinte:  
   
--   Um usuário efetua logoff ou desliga [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)].  
+-   Um usuário efetua logoff ou desliga o Windows.  
   
 -   Proprietário de uma janela fecha (consulte <xref:System.Windows.Window.Owner%2A>).  
   
@@ -315,7 +315,7 @@ Os usuários interagem com aplicativos [!INCLUDE[TLA#tla_wpf](../../../../includ
   
 -   <xref:System.Windows.WindowStartupLocation.Manual>  
   
- Se o local de inicialização é especificado como <xref:System.Windows.WindowStartupLocation.Manual>e o <xref:System.Windows.Window.Left%2A> e <xref:System.Windows.Window.Top%2A> propriedades não foram definidas, <xref:System.Windows.Window> pedirá [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] para um local a ser exibido no.  
+ Se o local de inicialização é especificado como <xref:System.Windows.WindowStartupLocation.Manual>e o <xref:System.Windows.Window.Left%2A> e <xref:System.Windows.Window.Top%2A> propriedades não foram definidas, <xref:System.Windows.Window> pedirá Windows para um local sejam exibidos no.  
   
 <a name="Topmost_Windows_and_Z_Order"></a>   
 ### <a name="topmost-windows-and-z-order"></a>Janela superior e ordem Z  

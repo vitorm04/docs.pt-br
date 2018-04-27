@@ -1,12 +1,13 @@
 ---
-title: "Visão geral da impressão"
-ms.custom: 
+title: Visão geral da impressão
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 91ccf1f98d9e1e2f5784246cf30995b689a0b94b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9a36589ca670892398b4d6bb171e79a07060d458
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="printing-overview"></a>Visão geral da impressão
-Com o [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], os desenvolvedores de aplicativos que usam o [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] têm um novo conjunto avançado de [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] de gerenciamento de sistema de impressão e de impressão. Com o [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], alguns desses aprimoramentos do sistema de impressão também estão disponíveis para os desenvolvedores que criam aplicativos do [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e desenvolvedores que usam código não gerenciado. No núcleo dessa nova funcionalidade está o novo formato de arquivo [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] e o caminho de impressão [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
+Com o Microsoft .NET Framework, os desenvolvedores de aplicativos usando [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] tem um novo conjunto avançado de gerenciamento de sistema de impressão e imprimir [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Com o [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], alguns desses aprimoramentos do sistema de impressão também estão disponíveis para os desenvolvedores que criam aplicativos do [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e desenvolvedores que usam código não gerenciado. No núcleo dessa nova funcionalidade está o novo formato de arquivo [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] e o caminho de impressão [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
   
  Este tópico contém as seções a seguir.  
   
@@ -42,15 +44,15 @@ Com o [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], o
 ## <a name="about-xps"></a>Sobre XPS  
  O [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] é um formato de documento eletrônico, um formato de arquivo de spool e uma linguagem de descrição de página. É um formato de documento aberto que usa [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)] e outros padrões do setor para criar documentos multiplataforma. O [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] simplifica o processo pelo qual os documentos digitais são criados, compartilhados, impressos, exibidos e arquivados. Para obter informações adicionais sobre [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], consulte o [Site da Web do XPS](http://www.microsoft.com/xps).  
   
- Várias técnicas para impressão de conteúdo com base em [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] usando o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] são demonstradas em [Imprimir arquivos XPS de forma programática](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md). Talvez seja útil consultar esses exemplos durante o exame do conteúdo contido neste tópico. (Os desenvolvedores de código não gerenciado devem ver a documentação para o [função MXDC_ESCAPE](https://msdn.microsoft.com/library/windows/desktop/dd162739.aspx). [!INCLUDE[TLA2#tla_winforms#initcap](../../../../includes/tla2sharptla-winformssharpinitcap-md.md)]os desenvolvedores devem usar o [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] no <xref:System.Drawing.Printing> namespace que não dá suporte completo [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] caminho de impressão, mas oferece suporte a um caminho de impressão híbrida GDI para XPS. Consulte **Arquitetura de caminho de impressão** abaixo).  
+ Várias técnicas para impressão de conteúdo com base em [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] usando o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] são demonstradas em [Imprimir arquivos XPS de forma programática](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md). Talvez seja útil consultar esses exemplos durante o exame do conteúdo contido neste tópico. (Os desenvolvedores de código não gerenciado devem ver a documentação para o [função MXDC_ESCAPE](https://msdn.microsoft.com/library/windows/desktop/dd162739.aspx). [!INCLUDE[TLA2#tla_winforms#initcap](../../../../includes/tla2sharptla-winformssharpinitcap-md.md)] os desenvolvedores devem usar o [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] no <xref:System.Drawing.Printing> namespace que não dá suporte completo [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] caminho de impressão, mas oferece suporte a um caminho de impressão híbrida GDI para XPS. Consulte **Arquitetura de caminho de impressão** abaixo).  
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>Caminho de impressão XPS  
- O caminho de impressão [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] é um novo recurso do [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] que redefine como a impressão é tratada nos aplicativos do [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]. Como o [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] pode substituir uma linguagem de apresentação de documento (como RTF), um formato de spooler de impressão (como WMF) e uma linguagem de descrição de página (como PCL ou Postscript), o novo caminho de impressão mantém o formato [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] da publicação do aplicativo até o processamento final no dispositivo ou no driver de impressão.  
+ O [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] caminho de impressão é um novo [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] recurso que redefine como a impressão é tratada em aplicativos do Windows. Como o [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] pode substituir uma linguagem de apresentação de documento (como RTF), um formato de spooler de impressão (como WMF) e uma linguagem de descrição de página (como PCL ou Postscript), o novo caminho de impressão mantém o formato [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] da publicação do aplicativo até o processamento final no dispositivo ou no driver de impressão.  
   
  O caminho de impressão do [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] é construído com base no modelo de driver de impressora [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] (XPSDrv), que oferece vários benefícios para os desenvolvedores, como impressão [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)], melhor suporte a cores e desempenho de impressão significativamente aprimorado. (Para obter mais informações sobre XPSDrv, consulte o [Kit de desenvolvimento de Driver Windows](https://msdn.microsoft.com/library/windows/hardware/ff557573.aspx)).  
   
- A operação do spooler de impressão para documentos [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] é essencialmente a mesma que nas versões anteriores do [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]. No entanto, ela foi aprimorada para dar suporte ao caminho de impressão do [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] além do caminho de impressão [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] existente. O novo caminho de impressão consome nativamente um arquivo de spool [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]. Enquanto os drivers de impressora do modo de usuário desenvolvidos para versões anteriores do [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] continuarão a funcionar, um driver de impressora [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] (XPSDrv) será necessário para usar o caminho de impressão [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)].  
+ A operação do spooler de impressão para [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] documentos é basicamente a mesma nas versões anteriores do Windows. No entanto, ela foi aprimorada para dar suporte ao caminho de impressão do [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] além do caminho de impressão [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] existente. O novo caminho de impressão consome nativamente um arquivo de spool [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]. Enquanto os drivers de impressora do modo de usuário desenvolvidos para versões anteriores do [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] continuarão a funcionar, um driver de impressora [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] (XPSDrv) será necessário para usar o caminho de impressão [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)].  
   
  Os benefícios do caminho de impressão [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] são significativos e incluem:  
   

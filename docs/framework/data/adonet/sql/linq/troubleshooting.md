@@ -1,24 +1,26 @@
 ---
-title: "Solução de problemas"
-ms.custom: 
+title: Solução de problemas
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 56d06fa7adf2690a2cb9194342071c7814a4ec4a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5544540c6a27975a885bf4cd8b2e0a26183e192b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting"></a>Solução de problemas
 As seguintes informações expostas alguns problemas que você pode encontrar em seus aplicativos de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , e oferece sugestões para evitar ou reduzir de outra maneira o efeito desses problemas.  
@@ -40,7 +42,7 @@ As seguintes informações expostas alguns problemas que você pode encontrar em
  [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] cria uma cadeia de conexão no arquivo de `app.config` do projeto. Em projetos de biblioteca de classes, o arquivo de `app.config` não é usado. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usa a cadeia de conexão fornecida em arquivos em tempo de design. Altere o valor em `app.config` não altera a base de dados que conecta seu aplicativo.  
   
 ## <a name="cascade-delete"></a>Excluir em cascata  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]não dá suporte ou reconhece as operações de exclusão em cascata. Se você deseja excluir uma linha em uma tabela que possui restrições nele, você deve fazer:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não dá suporte ou reconhece as operações de exclusão em cascata. Se você deseja excluir uma linha em uma tabela que possui restrições nele, você deve fazer:  
   
 -   Defina a regra `ON DELETE CASCADE` na restrição de chave estrangeira no banco de dados.  
   
@@ -57,7 +59,7 @@ As seguintes informações expostas alguns problemas que você pode encontrar em
   
 -   Você tem uma referência a `System.Core.dll` e a `System.Data.Linq.dll`.  
   
--   Você tem uma política de `Imports` ([!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) ou de `using` (C#) para <xref:System.Linq> e <xref:System.Data.Linq>.  
+-   Você tem uma `Imports` (Visual Basic) ou `using` diretiva (c#) para <xref:System.Linq> e <xref:System.Data.Linq>.  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
  Durante a depuração de um [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projeto, você pode percorrer relações da entidade. Isso coloca esses itens no cache, e [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] torna-se atento a sua presença. Se você tentar então executar <xref:System.Data.Linq.Table%601.Attach%2A> ou <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> ou método semelhante que gerencia as várias linhas que têm a mesma chave, <xref:System.Data.Linq.DuplicateKeyException> é lançada.  

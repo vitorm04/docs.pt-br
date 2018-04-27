@@ -1,11 +1,12 @@
 ---
 title: Tipos de dados compostos (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 04/25/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -17,17 +18,17 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e9adb407757dbee2f7ac5a94118623a62212faec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: caa832fc191ad925674e21b1237ac98328ce0bd7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="composite-data-types-visual-basic"></a>Tipos de dados compostos (Visual Basic)
-Além dos tipos de dados elementares [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] fontes, você também pode montar itens de tipos diferentes de criar *tipos de dados compostos* como classes, matrizes e estruturas. Você pode criar tipos de dados compostos de tipos elementares e de outros tipos compostos. Por exemplo, você pode definir uma matriz de elementos de estrutura, ou uma estrutura com membros de matriz.  
+Além das fontes de Visual Basic de tipos de dados elementares, você também pode montar itens de tipos diferentes de criar *tipos de dados compostos* como classes, matrizes e estruturas. Você pode criar tipos de dados compostos de tipos elementares e de outros tipos compostos. Por exemplo, você pode definir uma matriz de elementos de estrutura, ou uma estrutura com membros de matriz.  
   
 ## <a name="data-types"></a>Tipos de Dados  
  Um tipo composto é diferente do tipo de dados de qualquer um de seus componentes. Por exemplo, uma matriz de `Integer` elementos não tem o `Integer` tipo de dados.  
@@ -35,7 +36,7 @@ Além dos tipos de dados elementares [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]
  Um tipo de dados de matriz normalmente é representado usando o tipo de elemento, parênteses e vírgulas conforme necessário. Por exemplo, uma matriz unidimensional de `String` elementos é representado como `String()`e uma matriz bidimensional de `Boolean` elementos é representado como `Boolean(,)`.  
   
 ## <a name="structure-types"></a>Tipos de estrutura  
- Não há nenhum tipo de dados único contendo todas as estruturas. Em vez disso, cada definição de uma estrutura representa um tipo de dados exclusivos, mesmo se duas estruturas definem elementos idênticos na mesma ordem. No entanto, se você criar duas ou mais instâncias da mesma estrutura, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] considera o mesmo tipo de dados.  
+ Não há nenhum tipo de dados único contendo todas as estruturas. Em vez disso, cada definição de uma estrutura representa um tipo de dados exclusivos, mesmo se duas estruturas definem elementos idênticos na mesma ordem. No entanto, se você criar duas ou mais instâncias da mesma estrutura, Visual Basic considera que eles sejam do mesmo tipo de dados.  
   
 ## <a name="tuples"></a>Tuplas
 

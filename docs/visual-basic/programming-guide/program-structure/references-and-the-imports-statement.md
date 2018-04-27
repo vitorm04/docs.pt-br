@@ -1,11 +1,12 @@
 ---
-title: "Referências e a instrução Imports (Visual Basic)"
-ms.custom: 
+title: Referências e a instrução Imports (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - assemblies [Visual Basic], namespaces
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - Imports statement [Visual Basic], referencing assemblies
 - assemblies [Visual Basic], references
 ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 60c62eae57ae127fcbb860fe72853604802cccd9
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 051351c2fa0648de54bbfd36b1630ec1cd49d6f0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>Referências e a instrução Imports (Visual Basic)
-Você pode disponibilizar objetos externos ao seu projeto, escolhendo o **adicionar referência** comando o **projeto** menu. Referências no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] pode apontar para assemblies, que são como bibliotecas mas contêm mais informações.  
+Você pode disponibilizar objetos externos ao seu projeto, escolhendo o **adicionar referência** comando o **projeto** menu. Referências no Visual Basic poderá apontar para assemblies, que são como bibliotecas mas contêm mais informações.  
   
 ## <a name="the-imports-statement"></a>A instrução Imports  
  Assemblies de incluem um ou mais namespaces. Quando você adiciona uma referência a um assembly, você também pode adicionar um `Imports` instrução em um módulo que controla a visibilidade dos namespaces daquele assembly dentro do módulo. O `Imports` instrução fornece um contexto de escopo que permite que você use apenas a parte do namespace necessária para fornecer uma referência única.  
@@ -34,19 +35,19 @@ Você pode disponibilizar objetos externos ao seu projeto, escolhendo o **adicio
   
  `Imports` [`|``Aliasname` =] `Namespace`  
   
- `Aliasname`se refere a um nome curto, que você pode usar para se referir a um namespace importado no código. `Namespace`é uma referência de projeto, por meio de uma definição de dentro do projeto ou anterior de um namespace disponível através de `Imports` instrução.  
+ `Aliasname` se refere a um nome curto, que você pode usar para se referir a um namespace importado no código. `Namespace` é uma referência de projeto, por meio de uma definição de dentro do projeto ou anterior de um namespace disponível através de `Imports` instrução.  
   
  Um módulo pode conter qualquer número de `Imports` instruções. Elas devem aparecer após qualquer `Option` instruções, se presente, mas antes de qualquer outro código.  
   
 > [!NOTE]
->  Não confunda referências de projeto com o `Imports` instrução ou o `Declare` instrução. Referências de projeto disponibilizar para objetos externos, como objetos em assemblies, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] projetos. O `Imports` instrução é usada para simplificar o acesso às referências do projeto, mas não fornece acesso a esses objetos. O `Declare` instrução é usada para declarar uma referência a um procedimento externo em uma biblioteca de vínculo dinâmico (DLL).  
+>  Não confunda referências de projeto com o `Imports` instrução ou o `Declare` instrução. Referências de projeto tornam objetos externos, como objetos em assemblies, disponíveis para projetos do Visual Basic. O `Imports` instrução é usada para simplificar o acesso às referências do projeto, mas não fornece acesso a esses objetos. O `Declare` instrução é usada para declarar uma referência a um procedimento externo em uma biblioteca de vínculo dinâmico (DLL).  
   
 ## <a name="using-aliases-with-the-imports-statement"></a>Usando Aliases com a instrução Imports  
  O `Imports` instrução torna mais fácil para os métodos de acesso de classes, eliminando a necessidade de digitar explicitamente os nomes totalmente qualificados de referências. Os aliases permitem que você atribua um nome amigável para apenas uma parte de um namespace. Por exemplo, o retorno de carro/linha de feed de sequência que faz com que uma única parte do texto a ser exibido em várias linhas é parte do <xref:Microsoft.VisualBasic.ControlChars> módulo o <xref:Microsoft.VisualBasic?displayProperty=nameWithType> namespace. Para usar esta constante em um programa sem um alias, você precisa digitar o código a seguir:  
   
  [!code-vb[VbVbalrApplication#3](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_1.vb)]  
   
- `Imports`instruções devem sempre ser as primeiras linhas imediatamente após qualquer `Option` instruções em um módulo. O fragmento de código a seguir mostra como importar e atribuir um alias para o <xref:Microsoft.VisualBasic.ControlChars?displayProperty=nameWithType> módulo:  
+ `Imports` instruções devem sempre ser as primeiras linhas imediatamente após qualquer `Option` instruções em um módulo. O fragmento de código a seguir mostra como importar e atribuir um alias para o <xref:Microsoft.VisualBasic.ControlChars?displayProperty=nameWithType> módulo:  
   
  [!code-vb[VbVbalrApplication#4](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_2.vb)]  
   

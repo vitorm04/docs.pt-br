@@ -1,11 +1,12 @@
 ---
-title: "Instruções passo a passo: implementando a herança com objetos COM (Visual Basic)"
-ms.custom: 
+title: 'Instruções passo a passo: implementando a herança com objetos COM (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - inheritance [Visual Basic], COM reusability
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8d6906c58431a0e844e8f430ade10ae819e77ff2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 10c6bdf46e351b23705107da3b693531718cfd37
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Instruções passo a passo: implementando a herança com objetos COM (Visual Basic)
-Você pode derivar de classes do Visual Basic para `Public` classes de objetos COM, mesmo aqueles criados em versões anteriores do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. As propriedades e métodos de classes herdadas de objetos podem ser substituídos ou sobrecarregados apenas como propriedades e métodos de qualquer outra classe base podem ser substituídos ou sobrecarregados. Herança de objetos é útil quando você tiver uma biblioteca de classe existente que você não deseja recompilar.  
+Você pode derivar de classes do Visual Basic para `Public` classes de objetos COM, mesmo aqueles criados em versões anteriores do Visual Basic. As propriedades e métodos de classes herdadas de objetos podem ser substituídos ou sobrecarregados apenas como propriedades e métodos de qualquer outra classe base podem ser substituídos ou sobrecarregados. Herança de objetos é útil quando você tiver uma biblioteca de classe existente que você não deseja recompilar.  
   
  O procedimento a seguir mostra como usar o Visual Basic 6.0 para criar um objeto COM que contém uma classe e, em seguida, usá-lo como uma classe base.  
   
@@ -77,18 +78,18 @@ Você pode derivar de classes do Visual Basic para `Public` classes de objetos C
 10. Criar e registrar o objeto COM clicando **fazer ComObject1.dll** no **arquivo** menu.  
   
     > [!NOTE]
-    >  Embora você também pode expor uma classe criada com [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] como um objeto COM, não é um objeto COM true e não pode ser usado neste passo a passo. Para obter detalhes, consulte [interoperabilidade COM em aplicativos do .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+    >  Embora você também pode expor uma classe criada com o Visual Basic como um objeto COM, ele não é um objeto COM true e não pode ser usado neste passo a passo. Para obter detalhes, consulte [interoperabilidade COM em aplicativos do .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 ## <a name="interop-assemblies"></a>Assemblies de interoperabilidade  
- O procedimento a seguir, você criará um assembly de interoperabilidade, que atua como uma ponte entre o código não gerenciado (como um objeto COM) e o código gerenciado [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] usa. O assembly de interoperabilidade que [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] cria identificadores de muitos dos detalhes do trabalho com objetos, como *marshaling de interoperabilidade*, o processo de compactação parâmetros e valores de retorno em dados equivalentes tipos conforme elas são movidas para e do COM objetos. A referência a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] aplicativo apontar para o assembly de interoperabilidade, não o objeto COM real.  
+ O procedimento a seguir, você criará um assembly de interoperabilidade, que atua como uma ponte entre o código não gerenciado (como um objeto COM) e o código gerenciado [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] usa. O assembly de interoperabilidade do Visual Basic cria lida com muitos detalhes de como trabalhar com objetos COM, como *marshaling de interoperabilidade*, o processo de compactação parâmetros e valores de retorno em dados equivalentes tipos conforme elas são movidas para e dos objetos COM. A referência do aplicativo do Visual Basic aponta para o assembly de interoperabilidade, não o objeto COM real.  
   
 #### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Para usar um objeto COM o Visual Basic 2005 e versões posteriores  
   
-1.  Abra um novo projeto de aplicativos do Windows [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+1.  Abra um novo projeto de aplicativo do Windows Visual Basic.  
   
 2.  No menu **Projeto**, clique em **Adicionar Referência**.  
   
-     O **adicionar referência** caixa de diálogo é exibida.  
+     A caixa de diálogo **Adicionar Referência** é exibida.  
   
 3.  Sobre o **COM** guia, clique duas vezes `ComObject1` no **nome do componente** lista e clique em **Okey**.  
   
@@ -124,7 +125,7 @@ Você pode derivar de classes do Visual Basic para `Public` classes de objetos C
   
 3.  Execute o projeto, pressionando F5.  
   
- Quando você clica no botão no formulário, o `AddNumbers` método é chamado pela primeira vez com `Short` números, tipo de dados e [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] escolhe o método apropriado da classe base. A segunda chamada para `AddNumbers` é direcionada para o método de sobrecarga de `MathClass`. A terceira chamada chama o `SubtractNumbers` método, que estende a classe. A propriedade na classe base é definida e o valor é exibido.  
+ Quando você clica no botão no formulário, o `AddNumbers` método é chamado pela primeira vez com `Short` números, tipo de dados e Visual Basic escolhe o método apropriado da classe base. A segunda chamada para `AddNumbers` é direcionada para o método de sobrecarga de `MathClass`. A terceira chamada chama o `SubtractNumbers` método, que estende a classe. A propriedade na classe base é definida e o valor é exibido.  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Você pode ter observado que sobrecarregados `AddNumbers` função parece ter os mesmos dados de tipo que o método herdado da classe base do objeto COM. Isso ocorre porque os argumentos e parâmetros do método da classe base são definidos como inteiros de 16 bits no Visual Basic 6.0, mas eles são expostos como inteiros de 16 bits de tipo `Short` em versões posteriores do Visual Basic. A nova função aceita inteiros de 32 bits e sobrecargas de função de classe base.  

@@ -1,27 +1,29 @@
 ---
-title: "Configurando parâmetros e tipos de dados de parâmetro"
-ms.custom: 
+title: Configurando parâmetros e tipos de dados de parâmetro
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a71ba7ed12196184b7e826ed70c92a9873efdb0c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: cdb6efb428f5c096178895f95fe1256846e9c1e5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Configurando parâmetros e tipos de dados de parâmetro
 Objetos de comando usam parâmetros para passar valores para instruções SQL ou procedimentos armazenados, fornecendo verificação de tipo e validação. Diferentemente do texto de comando, o parâmetro de entrada é tratado como um valor literal, não como código executável. Isso ajuda a proteger contra ataques de "Injeção de SQL", em que um invasor insere um comando que compromete a segurança no servidor em uma instrução SQL.  
@@ -90,7 +92,7 @@ Objetos de comando usam parâmetros para passar valores para instruções SQL ou
 >  Conversões de decimal para outros tipos são conversões de limitação que arredondam o valor decimal para o valor inteiro mais próximo de zero. Se o resultado da conversão não for representável no tipo de destino, um <xref:System.OverflowException> será gerado.  
   
 > [!NOTE]
->  Quando você envia um valor do parâmetro nulo para o servidor, deve especificar <xref:System.DBNull>, não `null` (`Nothing` no [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]). O valor nulo no sistema é um objeto vazio que não tem nenhum valor. <xref:System.DBNull> é usado para representar valores nulos. Para obter mais informações sobre valores nulos de banco de dados, consulte [tratar valores nulos](../../../../docs/framework/data/adonet/sql/handling-null-values.md).  
+>  Quando você envia um valor de parâmetro nulo para o servidor, você deve especificar <xref:System.DBNull>, não `null` (`Nothing` no Visual Basic). O valor nulo no sistema é um objeto vazio que não tem nenhum valor. <xref:System.DBNull> é usado para representar valores nulos. Para obter mais informações sobre valores nulos de banco de dados, consulte [tratar valores nulos](../../../../docs/framework/data/adonet/sql/handling-null-values.md).  
   
 ## <a name="deriving-parameter-information"></a>Derivando informações de parâmetro  
  Os parâmetros também podem ser derivados de um procedimento armazenado usando a classe `DbCommandBuilder`. As classes `SqlCommandBuilder` e `OleDbCommandBuilder` fornecem um método estático, `DeriveParameters`, que preenche automaticamente a coleção de parâmetros de um objeto de comando que usa informações de parâmetro de um procedimento armazenado. Observe que `DeriveParameters` substitui quaisquer informações de parâmetro existente para o comando.  

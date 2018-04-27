@@ -1,29 +1,31 @@
 ---
 title: Suporte de streaming do SqlClient
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f870bab357db7a425378afcfb0bedd19b0359ce1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: cfa672908248afa951ab3a429e437e0e2c0607c5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlclient-streaming-support"></a>Suporte de streaming do SqlClient
-O suporte a streaming entre o [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] e um novo aplicativo (novo no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) oferece suporte a dados não estruturados no servidor (documentos, imagens e arquivos de mídia). Um banco de dados do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] pode armazenar BLOBs (objetos binários grandes), mas recuperar BLOBS pode usar muita memória.  
+Suporte entre o SQL Server e um aplicativo de streaming (novo no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) dá suporte a dados não estruturados no servidor (documentos, imagens e arquivos de mídia). Um banco de dados do SQL Server pode armazenar objetos binários grandes (BLOBs), mas recuperando BLOBS pode usar muita memória.  
   
- O suporte a streaming para e do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] simplifica a criação de aplicativos que fazem streaming de dados, sem ter que carregar completamente os dados na memória, resultando em menos exceções de estouro de memória.  
+ Suporte para e do SQL Server de streaming simplifica a gravação de aplicativos em que dados de fluxo, sem a necessidade de carregar completamente os dados na memória, resultando em menos exceções de estouro de memória.  
   
  O suporte a streaming também habilitará aplicativos da camada intermediária para dimensionar melhor, especialmente em cenários onde os objetos comerciais se conectam ao SQL Azure para enviar, recuperar e manipular BLOBs grandes.  
   
@@ -32,10 +34,10 @@ O suporte a streaming entre o [!INCLUDE[ssNoVersion](../../../../includes/ssnove
 >   
 >  Os membros adicionados para dar suporte a streaming são usados para recuperar dados de consultas e passar parâmetros para consultas e procedimentos armazenados. O recurso de streaming aborda cenários básicos de migração de dados e de OLTP e é aplicável ambientes de migrações de dados locais e externos.  
   
-## <a name="streaming-support-from-includessnoversionincludesssnoversion-mdmd"></a>Suporte a streaming do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- O suporte a streaming do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] introduz uma nova funcionalidade no <xref:System.Data.Common.DbDataReader> e nas classes de <xref:System.Data.SqlClient.SqlDataReader> para obter os objetos <xref:System.IO.Stream>, <xref:System.Xml.XmlReader> e <xref:System.IO.TextReader> e reagir com eles.  Essas classes são usadas para recuperar dados de consultas. Como resultado, o suporte a streaming do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] aborda cenários de OLTP e aplica-se a ambientes locais e externos.  
+## <a name="streaming-support-from-sql-server"></a>Suporte a streaming do SQL Server  
+ Suporte do SQL Server de streaming introduz novas funcionalidades no <xref:System.Data.Common.DbDataReader> e no <xref:System.Data.SqlClient.SqlDataReader> classes para obter <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, e <xref:System.IO.TextReader> objetos e reagir a elas.  Essas classes são usadas para recuperar dados de consultas. Como resultado, o suporte de Streaming do SQL Server abrange cenários de OLTP e aplica-se para o local e ambientes fora do local.  
   
- Os seguintes membros foram adicionados a <xref:System.Data.SqlClient.SqlDataReader> para habilitar o suporte a streaming do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]:  
+ Os seguintes membros foram adicionados ao <xref:System.Data.SqlClient.SqlDataReader> para habilitar o suporte a streaming do SQL Server:  
   
 1.  <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>  
   
@@ -49,7 +51,7 @@ O suporte a streaming entre o [!INCLUDE[ssNoVersion](../../../../includes/ssnove
   
 6.  <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A>  
   
- Os seguintes membros foram adicionados a <xref:System.Data.Common.DbDataReader> para habilitar o suporte a streaming do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]:  
+ Os seguintes membros foram adicionados ao <xref:System.Data.Common.DbDataReader> para habilitar o suporte a streaming do SQL Server:  
   
 1.  <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>  
   
@@ -57,8 +59,8 @@ O suporte a streaming entre o [!INCLUDE[ssNoVersion](../../../../includes/ssnove
   
 3.  <xref:System.Data.Common.DbDataReader.GetTextReader%2A>  
   
-## <a name="streaming-support-to-includessnoversionincludesssnoversion-mdmd"></a>Suporte a streaming para [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- O suporte a streaming do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] introduz uma nova funcionalidade na classe <xref:System.Data.SqlClient.SqlParameter> para poder aceitar e reagir com objetos <xref:System.Xml.XmlReader>, <xref:System.IO.Stream> e <xref:System.IO.TextReader>. <xref:System.Data.SqlClient.SqlParameter> é usado para transmitir parâmetros para consultas e procedimentos armazenados.  
+## <a name="streaming-support-to-sql-server"></a>Suporte de streaming para o SQL Server  
+ Suporte para o SQL Server de streaming introduz novas funcionalidades no <xref:System.Data.SqlClient.SqlParameter> de classe para que possa aceitar e reagir a <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, e <xref:System.IO.TextReader> objetos. <xref:System.Data.SqlClient.SqlParameter> é usado para transmitir parâmetros para consultas e procedimentos armazenados.  
   
  Descartar um objeto <xref:System.Data.SqlClient.SqlCommand> ou chamar <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> deve cancelar qualquer operação de streaming. Se um aplicativo enviar <xref:System.Threading.CancellationToken>, o cancelamento não será garantido.  
   
@@ -84,7 +86,7 @@ O suporte a streaming entre o [!INCLUDE[ssNoVersion](../../../../includes/ssnove
   
  O objeto <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> e <xref:System.IO.Stream> serão transferidos até atingir o valor definido pelo <xref:System.Data.SqlClient.SqlParameter.Size%2A>.  
   
-## <a name="sample----streaming-from-includessnoversionincludesssnoversion-mdmd"></a>Exemplo -- streaming de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
+## <a name="sample----streaming-from-sql-server"></a>Exemplo – Streaming do SQL Server  
  Use o seguinte [!INCLUDE[tsql](../../../../includes/tsql-md.md)] para criar o banco de dados de exemplo:  
   
 ```  
@@ -108,13 +110,13 @@ GO
   
 -   Evite fechar um thread da interface do usuário fornecendo uma maneira assíncrona de recuperar arquivos grandes.  
   
--   Transfira um arquivo grande de texto do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   Transferência de um arquivo de texto grande do SQL Server em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
--   Transfira um arquivo grande XML do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   Transferência de um arquivo XML grande do SQL Server em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
--   Recuperar dados de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
+-   Recupere dados do SQL Server.  
   
--   Transfira arquivos grandes (BLOBs) de um banco de dados do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] para outro sem ficar sem memória.  
+-   Transferir arquivos grandes (BLOBs) de um banco de dados do SQL Server para outro sem ficar sem memória.  
   
 ```  
 using System;  
@@ -305,7 +307,7 @@ namespace StreamingFromServer {
 }  
 ```  
   
-## <a name="sample----streaming-to-includessnoversionincludesssnoversion-mdmd"></a>Exemplo -- streaming para [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
+## <a name="sample----streaming-to-sql-server"></a>Exemplo – Streaming para o SQL Server  
  Use o seguinte [!INCLUDE[tsql](../../../../includes/tsql-md.md)] para criar o banco de dados de exemplo:  
   
 ```  
@@ -329,9 +331,9 @@ GO
   
  O exemplo a seguir mostra como fazer o seguinte:  
   
--   Transferindo um grande BLOB para [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   Transferência de um BLOB grande no SQL Server em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
--   Transferindo um arquivo grande de texto para [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   Transferência de um arquivo de texto grande no SQL Server em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
 -   Usando o novo recurso assíncrono para transferir um BLOB grande.  
   
@@ -339,7 +341,7 @@ GO
   
 -   Cancelando a transferência de um BLOB grande.  
   
--   Streaming de um [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] para outro usando o novo recurso assíncrono.  
+-   Streaming de um SQL Server para outro usando o novo recurso assíncrono.  
   
 ```  
 using System;  
@@ -461,8 +463,8 @@ namespace StreamingToServer {
 }  
 ```  
   
-## <a name="sample----streaming-from-one-includessnoversionincludesssnoversion-mdmd-to-another-includessnoversionincludesssnoversion-mdmd"></a>Exemplo -- streaming de um [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] para outro [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- Este exemplo demonstra como passar de forma assíncrona um BLOB grande de um [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] para outro, com suporte para cancelamento.  
+## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>Exemplo – Streaming de um SQL Server para outro SQL Server  
+ Este exemplo demonstra como um BLOB grande de um SQL Server para outra, com suporte para cancelamento de fluxo de forma assíncrona.  
   
 ```  
 using System;  

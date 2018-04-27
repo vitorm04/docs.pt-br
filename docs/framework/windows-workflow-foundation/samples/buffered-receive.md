@@ -1,23 +1,24 @@
 ---
 title: Armazenados em buffer receber
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9d46d9b9-96c9-4531-9695-ab526b4d704a
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7a486d3fbfb520ffe3b32c392566e5147c5dfcc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9cd4dfcbfc9d417766615c624905f8bce2c10e54
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="buffered-receive"></a>Armazenados em buffer receber
 Este exemplo demonstra como configurar e configurar o armazenados em buffer recebe o recurso em [!INCLUDE[wf](../../../../includes/wf-md.md)]. Armazenados em buffer receber permite que o autor de fluxo de trabalho crie um fluxo de trabalho sem ter que se preocupar na ordem em que as mensagens são recebidas. O armazenados em buffer recebe mensagens de buffers de recurso localmente e entrega-as quando o fluxo de trabalho está pronto para as receber.  
@@ -47,7 +48,7 @@ Este exemplo demonstra como configurar e configurar o armazenados em buffer rece
   
  O serviço também expõe metadados para o serviço usando <xref:System.ServiceModel.Description.ServiceMetadataBehavior>.  
   
- Da mesma forma, o ponto final do cliente é configurado usando <xref:System.ServiceModel.NetMsmqBinding>. O código do cliente e a configuração é gerado usando o **adicionar referência de serviço** recurso de [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. O exemplo a seguir é o ponto final de cliente gerado no arquivo App.config.  
+ Da mesma forma, o ponto final do cliente é configurado usando <xref:System.ServiceModel.NetMsmqBinding>. O código do cliente e a configuração é gerado usando o **adicionar referência de serviço** recurso do Visual Studio. O exemplo a seguir é o ponto final de cliente gerado no arquivo App.config.  
   
 ```xml  
 <endpoint address="net.msmq://localhost/private/LoanService/Service1.xamlx"  
@@ -95,7 +96,7 @@ Este exemplo demonstra como configurar e configurar o armazenados em buffer rece
   
 #### <a name="to-run-the-sample"></a>Para executar a amostra  
   
-1.  Navegue para http://localhost/private/loanservice/service1.xamlx para garantir que o serviço está sendo executado.  
+1.  Navegue até http://localhost/private/loanservice/service1.xamlx para garantir que o serviço está em execução.  
   
 2.  Pressione F5 para executar o aplicativo de LoanClient. Uma vez que o fluxo de trabalho estiver concluída, um arquivo de out.txt deve ser salvo a C:\Inbox que contém o resultado de troca de mensagem.  
   

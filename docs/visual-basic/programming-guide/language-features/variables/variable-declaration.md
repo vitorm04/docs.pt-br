@@ -1,12 +1,13 @@
 ---
-title: "Declaração de variável no Visual Basic"
-ms.custom: 
+title: Declaração de variável no Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], declaring
@@ -24,14 +25,14 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7f7b924aed1da7db816aa5c11239e301428770b7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8edd0b65b08efd437cc35e8f58ed7ed423736920
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Declaração de variável no Visual Basic
 Você declara uma variável para especificar o nome e características. A instrução de declaração para variáveis é o [instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Sua localização e conteúdo determinam as características da variável.  
@@ -41,7 +42,7 @@ Você declara uma variável para especificar o nome e características. A instru
 ## <a name="declaration-levels"></a>Níveis de declaração  
   
 ### <a name="local-and-member-variables"></a>Local e variáveis de membro  
- Um *variável local* é aquele que é declarada dentro de um procedimento. Um *variável membro* é um membro de um [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] digite; ele é declarado no nível de módulo, dentro de uma classe, estrutura ou módulo, mas não dentro de qualquer procedimento interno para essa classe, estrutura ou módulo.  
+ Um *variável local* é aquele que é declarada dentro de um procedimento. Um *variável membro* é um membro de um tipo de Visual Basic; ele é declarado no nível de módulo, dentro de uma classe, estrutura ou módulo, mas não dentro de qualquer procedimento interno para essa classe, estrutura ou módulo.  
   
 ### <a name="shared-and-instance-variables"></a>Compartilhado e variáveis de instância  
  Em uma classe ou estrutura, a categoria de uma variável de membro depende se ela é compartilhada. Se ela é declarada com o [compartilhado](../../../../visual-basic/language-reference/modifiers/shared.md) palavra-chave, é um *variável compartilhada*, e ela existe em uma única cópia compartilhada entre todas as instâncias da classe ou estrutura.  
@@ -51,15 +52,15 @@ Você declara uma variável para especificar o nome e características. A instru
 ## <a name="declaring-data-type"></a>Declarar o tipo de dados  
  O [como](../../../../visual-basic/language-reference/statements/as-clause.md) cláusula na instrução de declaração permite que você defina o tipo de dados ou tipo de objeto da variável que você está declarando. Você pode especificar qualquer um dos seguintes tipos de uma variável:  
   
--   Digite um dados elementares, como `Boolean`, `Long`, ou`Decimal`  
+-   Digite um dados elementares, como `Boolean`, `Long`, ou `Decimal`  
   
 -   Um tipo de dados compostos, como uma matriz ou estrutura  
   
 -   Um tipo de objeto ou classe definida em seu aplicativo ou em outro aplicativo  
   
--   Um [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] classe, como <xref:System.Windows.Forms.Label> ou<xref:System.Windows.Forms.TextBox>  
+-   Um [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] classe, como <xref:System.Windows.Forms.Label> ou <xref:System.Windows.Forms.TextBox>  
   
--   Tipo de uma interface, como <xref:System.IComparable> ou<xref:System.IDisposable>  
+-   Tipo de uma interface, como <xref:System.IComparable> ou <xref:System.IDisposable>  
   
  Você pode declarar diversas variáveis em uma instrução sem a necessidade de repetir o tipo de dados. Nas instruções a seguir, as variáveis `i`, `j`, e `k` são declaradas como tipo `Integer`, `l` e `m` como `Long`, e `x` e `y` como `Single`:  
   

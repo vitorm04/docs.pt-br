@@ -15,11 +15,11 @@ ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5a1edd7976f1e22117e1f4f31354388d5257ffc1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: c18c1ea645c9f144e2c2043af5460d6fb03f13a1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="events-visual-basic"></a>Eventos (Visual Basic)
 Enquanto você visualiza um projeto [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] como uma série de procedimentos que executam em uma sequência, na realidade, a maioria dos programas é orientada a eventos, o que significa que o fluxo de execução é determinado pelas ocorrências externas chamadas *eventos*.  
@@ -27,7 +27,7 @@ Enquanto você visualiza um projeto [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 
  Um evento é um sinal que informa a um aplicativo que algo importante ocorreu. Por exemplo, quando um usuário clica em um controle em um formulário, o formulário pode lançar um evento `Click` e chamar um procedimento que manipula o evento. Os eventos também permitem que tarefas separadas se comuniquem. Por exemplo, digamos que seu aplicativo executa uma tarefa de classificação separadamente do aplicativo principal. Se um usuário cancelar a classificação, seu aplicativo poderá enviar um evento de cancelamento instruindo o processo de classificação para parar.  
   
 ## <a name="event-terms-and-concepts"></a>Conceitos e termos de evento  
- Esta seção descreve os termos e os conceitos usados com eventos em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Esta seção descreve os termos e conceitos usados com eventos no Visual Basic.  
   
 ### <a name="declaring-events"></a>Declarando eventos  
  Você declara eventos dentro de classes, estruturas, módulos e interfaces usando a palavra-chave `Event`, como no exemplo a seguir:  
@@ -35,7 +35,7 @@ Enquanto você visualiza um projeto [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 
  [!code-vb[VbVbalrEvents#24](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_1.vb)]  
   
 ### <a name="raising-events"></a>Acionando eventos  
- Um evento é como uma mensagem anunciando que algo importante ocorreu. O ato de transmitir a mensagem é chamado para *acionar* o evento. Em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], você aciona eventos com a instrução `RaiseEvent`, como no exemplo a seguir:  
+ Um evento é como uma mensagem anunciando que algo importante ocorreu. O ato de transmitir a mensagem é chamado para *acionar* o evento. No Visual Basic, você dispara eventos com a `RaiseEvent` instrução, como no exemplo a seguir:  
   
  [!code-vb[VbVbalrEvents#25](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_2.vb)]  
   
@@ -47,7 +47,7 @@ Enquanto você visualiza um projeto [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 
 ### <a name="event-handlers"></a>Manipuladores de Eventos  
  *Manipuladores de eventos* são procedimentos que são chamados quando ocorre um evento correspondente. Você pode usar qualquer sub-rotina válida com uma assinatura correspondente como um manipulador de eventos. Você não pode usar uma função como um manipulador de eventos, porque ela não retorna um valor para a origem do evento.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] usa uma convenção de nomenclatura padrão para manipuladores de eventos que combina o nome do remetente do evento, um sublinhado e o nome do evento. Por exemplo, o evento `Click` de um botão chamado `button1` seria nomeado `Sub button1_Click`.  
+ Visual Basic usa uma convenção de nomenclatura padrão para manipuladores de eventos que combina o nome do emissor do evento, um sublinhado e o nome do evento. Por exemplo, o evento `Click` de um botão chamado `button1` seria nomeado `Sub button1_Click`.  
   
 > [!NOTE]
 >  É recomendável que você use esta convenção de nomenclatura ao definir manipuladores de eventos para seus próprios eventos, mas não é necessário. Você pode usar qualquer nome de sub-rotina válido.  
@@ -72,7 +72,7 @@ Enquanto você visualiza um projeto [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 
   
  Embora a cláusula `Handles` seja a maneira padrão de associar um evento a um manipulador de eventos, ela é limitada a associar eventos a manipuladores de eventos em tempo de compilação.  
   
- Em alguns casos, como com os eventos associados a formulários ou controles, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automaticamente extingue um manipulador de eventos vazio e o associa a um evento. Por exemplo, quando você clica duas vezes em um formulário no modo de design, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] cria um manipulador de eventos vazio e uma variável `WithEvents` para o botão de comando, como no seguinte código:  
+ Em alguns casos, como com os eventos associados a formulários ou controles, Visual Basic automaticamente extingue um manipulador de eventos em branco e o associa com um evento. Por exemplo, quando você clicar duas vezes um botão de comando em um formulário no modo de design, o Visual Basic cria um manipulador de eventos em branco e um `WithEvents` variável para o botão de comando, como no código a seguir:  
   
  [!code-vb[VbVbalrEvents#26](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_4.vb)]  
   

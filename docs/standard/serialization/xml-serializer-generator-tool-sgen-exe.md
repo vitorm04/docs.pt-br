@@ -1,25 +1,25 @@
 ---
 title: Ferramenta geradora de serializador de XML (Sgen.exe)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 10914281632a6651b3872485b795d9a636dc6bd0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 90b9a4fdbf5c341d128f768ed6825d1e2e465a82
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Ferramenta geradora de serializador de XML (Sgen.exe)
 O Gerador de Serializador de XML cria um assembly de serialização de XML para tipos em um assembly especificado para aprimorar o desempenho de inicialização de um <xref:System.Xml.Serialization.XmlSerializer> quando ele serializa ou desserializa objetos dos tipos especificados.  
@@ -41,11 +41,11 @@ sgen [options]
 |**/help ou /?**|Exibe sintaxe de comando e opções para a ferramenta.|  
 |**/k**[**eep**]|Suprime a exclusão dos arquivos de origem gerados e outros arquivos temporários depois que tiverem sido compilados no assembly de serialização. Isso pode ser usado para determinar se a ferramenta está gerando o código de serialização para um tipo específico.|  
 |**/n**[**ologo**]|Suprime a exibição do banner de inicialização da Microsoft.|  
-|**/o**[**ut**]**:***path*|Especifica o diretório no qual salvar o assembly gerado. **Observação:** o nome do assembly gerado é composto pelo nome do assembly de entrada mais “xmlSerializers.dll”.|  
+|**/o**[**ut**] **: * caminho*|Especifica o diretório no qual salvar o assembly gerado. **Observação:** o nome do assembly gerado é composto pelo nome do assembly de entrada mais “xmlSerializers.dll”.|  
 |**/p**[**roxytypes**]|Gera o código de serialização somente para os tipos de proxy de serviço Web XML.|  
 |**/r**[**eference**] **: * assemblyfiles*|Especifica os assemblies que são referenciados pelos tipos que exigem a serialização de XML. Aceita vários arquivos de assembly separados por vírgulas.|  
 |**/s**[**ilent**]|Suprime a exibição de mensagens de sucesso.|  
-|**/t**[**ype**]**:***type*|Gera o código de serialização somente para o tipo especificado.|  
+|**/t**[**IPO**] **: * tipo*|Gera o código de serialização somente para o tipo especificado.|  
 |**/v**[**erbose**]|Exibe a saída detalhada para depuração. Lista os tipos do assembly de destino que não podem ser serializados com o <xref:System.Xml.Serialization.XmlSerializer>.|  
 |**/?**|Exibe sintaxe de comando e opções para a ferramenta.|  
   
@@ -69,5 +69,5 @@ sgen Data.dll
   
 ## <a name="see-also"></a>Consulte também  
  [Ferramentas](../../../docs/framework/tools/index.md)  
- [Visão geral do XML Web Services](http://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
+ [Visão geral do XML Web Services](https://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
  [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

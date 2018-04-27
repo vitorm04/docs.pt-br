@@ -1,11 +1,12 @@
 ---
-title: "Conversões de Widening e Narrowing (Visual Basic)"
-ms.custom: 
+title: Conversões de Widening e Narrowing (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - widening conversions [Visual Basic]
@@ -25,14 +26,14 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2cf1f8d956935a9a363211abf94b4f1c2f538074
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 960b4e4c7184309b6a84247d86fb94ccb2faf877
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Conversões de Widening e Narrowing (Visual Basic)
 Uma consideração importante com uma conversão de tipo é se o resultado da conversão está dentro do intervalo do tipo de dados de destino.  
@@ -59,7 +60,7 @@ Uma consideração importante com uma conversão de tipo é se o resultado da co
 |[Duplo](../../../../visual-basic/language-reference/data-types/double-data-type.md)|`Double`|  
 |Qualquer tipo enumerado ([Enum](../../../../visual-basic/language-reference/statements/enum-statement.md))|Seu tipo integral subjacente e qualquer tipo ao qual o tipo subjacente será ampliada.|  
 |[Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`Char`, `String`|  
-|Matriz `Char`|`Char`matriz,`String`|  
+|Matriz `Char`|`Char` matriz, `String`|  
 |Qualquer tipo|[Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)|  
 |Qualquer tipo derivado|Qualquer tipo do qual ele é derivado de base <sup>3</sup>.|  
 |Qualquer tipo|Qualquer interface que ele implementa.|  
@@ -97,11 +98,11 @@ Uma consideração importante com uma conversão de tipo é se o resultado da co
 ## <a name="exceptions-during-conversion"></a>Exceções durante conversão  
  Como conversões ampliadoras sempre são bem-sucedida, elas não lançam exceções. Conversões de restrição, quando elas falham, mais comumente lançam as seguintes exceções:  
   
--   <xref:System.InvalidCastException>— Se nenhuma conversão é definida entre os dois tipos  
+-   <xref:System.InvalidCastException> — Se nenhuma conversão é definida entre os dois tipos  
   
--   <xref:System.OverflowException>— (tipos integral somente) se o valor convertido é muito grande para o tipo de destino  
+-   <xref:System.OverflowException> — (tipos integral somente) se o valor convertido é muito grande para o tipo de destino  
   
- Se uma classe ou estrutura define um [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md) para servir como um operador de conversão para ou de classe ou estrutura, que `CType` pode acionar qualquer exceção que achar apropriada. Além disso, que `CType` pode chamar [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] funções ou [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] métodos, que por sua vez, podem acionar uma variedade de exceções.  
+ Se uma classe ou estrutura define um [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md) para servir como um operador de conversão para ou de classe ou estrutura, que `CType` pode acionar qualquer exceção que achar apropriada. Além disso, que `CType` pode chamar funções do Visual Basic ou [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] métodos, que por sua vez, podem acionar uma variedade de exceções.  
   
 ## <a name="changes-during-reference-type-conversions"></a>Alterações durante conversões de tipo de referência  
  Uma conversão de um *fazem referência a tipo* copia apenas o ponteiro para o valor. O valor em si não é copiado nem alterado de alguma forma. A única coisa que pode mudar é o tipo de dados da variável que contém o ponteiro. No exemplo a seguir, o tipo de dados é convertido da classe derivada para sua classe base, mas o objeto que ambas as variáveis apontam está inalterado.  

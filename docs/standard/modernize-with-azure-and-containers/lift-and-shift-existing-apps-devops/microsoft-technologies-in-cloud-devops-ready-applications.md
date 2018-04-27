@@ -1,18 +1,19 @@
 ---
 title: Tecnologias da Microsoft em aplicativos em nuvem devops pronto
-description: "Arquitetura de Microservices .NET para aplicativos .NET em contêineres | Tecnologias da Microsoft em aplicativos prontos para nuvem DevOps"
+description: Arquitetura de Microservices .NET para aplicativos .NET em contêineres | Tecnologias da Microsoft em aplicativos prontos para nuvem DevOps
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 66579905ad2694cf08950d0c0a69e2405ab2c1ee
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: d3a0572b833a4ca3be1db3b3b531a76ca34fe4ab
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-technologies-in-cloud-devops-ready-applications"></a>Tecnologias da Microsoft em aplicativos em nuvem devops pronto
 

@@ -13,28 +13,28 @@ ms.assetid: 640e5796-2796-433c-af37-4d2a2334895b
 caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 72234f4707e891abd00744db8cebe04114865522
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5f71267bb1bcbe5b3e3e47cea193488ac4e1596d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-programming-guide"></a>Guia de programação do Visual Basic
-Como acontece com qualquer linguagem de programação moderna, o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] é compatível com muitos constructos de programação e elementos de linguagem comuns. Este guia descreve os principais elementos de programação do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+Assim como acontece com qualquer linguagem de programação moderna, o Visual Basic oferece suporte a muitas construções de programação comuns e elementos de linguagem. Este guia descreve todos os principais elementos de programação com o Visual Basic.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Estrutura do Programa e Convenções de Código](../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- Ela contém a documentação sobre as convenções básicas de estrutura e código do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], como convenções de nomenclatura, comentários no código e limitações do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Contém a documentação sobre as convenções básicas de estrutura e o código do Visual Basic, como convenções de nomenclatura, comentários no código e limitações do Visual Basic.  
   
  [Recursos da linguagem do Visual Basic](../../visual-basic/programming-guide/language-features/index.md)  
- Fornece links para tópicos que apresentam e discutem aspectos importantes do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], como literais LINQ e XML.  
+ Fornece links para tópicos que apresentam e discutem aspectos importantes do Visual Basic, como literais LINQ e XML.  
   
  [Interoperabilidade COM](../../visual-basic/programming-guide/com-interop/index.md)  
- Explica os problemas de interoperabilidade associados à criação e uso de objetos COM (component object model) com o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Explica os problemas de interoperabilidade associados à criação e ao uso de objetos COM (Component Object Model) com o Visual Basic.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Referência da linguagem Visual Basic](../../visual-basic/language-reference/index.md)  
- Fornece informações de referência sobre vários aspectos da programação do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Fornece informações de referência sobre vários aspectos da programação Visual Basic.  
   
  [Compilador de linha de comando do Visual Basic](../../visual-basic/reference/command-line-compiler/index.md)  
- Oferece informações sobre como usar o compilador [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] de linha de comando, as opções de compilador e a ferramenta de atualização de palavras-chave.
+ Oferece informações sobre como usar o compilador de linha de comando do Visual Basic, as opções do compilador e a ferramenta de atualização de palavra-chave.

@@ -1,28 +1,28 @@
 ---
-title: "Exemplo de tecnologia de serialização básica tolerante a versões"
-ms.custom: 
+title: Exemplo de tecnologia de serialização básica tolerante a versões
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2a183664-bfbf-4ff0-96f6-c836284ea916
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9517abe23dba1b1b4b198fb8375e1ae35d8a2ca4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ddeea50bafe250addad33a024c563258ede357c4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="version-tolerant-serialization-technology-sample"></a>Exemplo de tecnologia de serialização básica tolerante a versões
-[Baixar Exemplo](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
+[Baixar Exemplo](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
   
  Esse exemplo demonstra os recursos de tolerância de versão da Serialização .NET. O exemplo cria aplicativos que usam versões diferentes de um <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> para serializar e desserializar dados. Apesar da presença de diferentes versões de tipo, os aplicativos se comunicam de maneira simplificada. Para obter mais informações, consulte [Serialização tolerante a versão](../../../docs/standard/serialization/version-tolerant-serialization.md).  
   

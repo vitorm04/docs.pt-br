@@ -1,56 +1,58 @@
 ---
-title: "Formular junções e consultas entre produtos"
-ms.custom: 
+title: Formular junções e consultas entre produtos
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d8072ede-0521-4670-9bec-1778ceeb875b
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5f652f25d04480afb3df1f623347eee23d3ed258
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 468ee54b0936afcbb548249bc714ea4b04abd3de
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="formulate-joins-and-cross-product-queries"></a>Formular junções e consultas entre produtos
 Os exemplos a seguir mostram como combinar resultados de várias tabelas.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa a navegação de chave estrangeira no `From` cláusula [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`from` cláusula em c#) para selecionar todos os pedidos de clientes em Londres.  
+ O exemplo a seguir usa a navegação de chave estrangeira no `From` cláusula no Visual Basic (`from` cláusula em c#) para selecionar todos os pedidos de clientes em Londres.  
   
  [!code-csharp[DLinqQueryExamples#47](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#47)]
  [!code-vb[DLinqQueryExamples#47](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#47)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa a navegação de chave estrangeira no `Where` cláusula [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`where` cláusula em c#) para filtrar a saída de estoque `Products` cujo `Supplier` nos Estados Unidos.  
+ O exemplo a seguir usa a navegação de chave estrangeira no `Where` cláusula no Visual Basic (`where` cláusula em c#) para filtrar a saída de estoque `Products` cujo `Supplier` nos Estados Unidos.  
   
  [!code-csharp[DLinqQueryExamples#48](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#48)]
  [!code-vb[DLinqQueryExamples#48](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#48)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa a navegação de chave estrangeira na cláusula `From` no [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (cláusula `from` no C#) para filtrar funcionários em Seattle e para listar seus territórios.  
+ O exemplo a seguir usa a navegação de chave estrangeira no `From` cláusula no Visual Basic (`from` cláusula em c#) para filtrar os funcionários em Seattle e listar seus territórios.  
   
  [!code-csharp[DLinqQueryExamples#49](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#49)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa a navegação de chave estrangeira no `Select` cláusula [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`select` cláusula em c#) para filtrar para pares de funcionários em que um funcionário relata para o outro e em que ambos os funcionários são da mesma `City`.  
+ O exemplo a seguir usa a navegação de chave estrangeira no `Select` cláusula no Visual Basic (`select` cláusula em c#) para filtrar para pares de funcionários em que um funcionário relata para o outro e em que ambos os funcionários são da mesma `City`.  
   
  [!code-csharp[DLinqQueryExamples#50](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#50)]
  [!code-vb[DLinqQueryExamples#50](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50)]  
   
 ## <a name="example"></a>Exemplo  
- O seguinte [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] exemplo procura todos os clientes e pedidos, certifica-se de que as ordens sejam correspondidas aos clientes e garante que, para cada cliente na lista, é fornecido um nome de contato.  
+ O seguinte exemplo do Visual Basic procura todos os clientes e pedidos, certifica-se de que as ordens sejam correspondidas aos clientes e garante que, para cada cliente na lista, é fornecido um nome de contato.  
   
  [!code-vb[DLinqQueryExamples#50v](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50v)]  
   

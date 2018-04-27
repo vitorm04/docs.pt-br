@@ -11,14 +11,14 @@ ms.assetid: 370bfc90-e8f2-4942-bdec-9897ce605d31
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 62fba60aa6a9f95057010997d5f427f2c66ec178
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cd92be378894235f4753cfc52e8382a1960bd37b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="modules-visual-basic"></a>Módulos (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]fornece vários módulos que permitem que você simplifique as tarefas comuns no seu código, incluindo manipulação de cadeias de caracteres, executar cálculos matemáticos, obtendo informações do sistema, executar operações de arquivo e diretório e assim por diante. A tabela a seguir lista os módulos fornecidos pelo [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+Visual Basic fornece vários módulos que permitem que você simplifique as tarefas comuns no seu código, incluindo manipulação de cadeias de caracteres, executar cálculos matemáticos, obtendo informações do sistema, executar operações de arquivo e diretório e assim por diante. A tabela a seguir lista os módulos fornecidos pelo Visual Basic.  
   
 |||  
 |---|---|  

@@ -1,11 +1,12 @@
 ---
 title: Tipos de erro (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - exceptions, types
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e01ed588d284a475a537a5fcf5ca506d25ca69f1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2b3cf1307f54a5c902bf8e6379c8760c735a45e4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="error-types-visual-basic"></a>Tipos de erro (Visual Basic)
-Em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], erros (também chamado de *exceções*) se enquadram em três categorias: erros de sintaxe, erros de tempo de execução e erros lógicos.  
+No Visual Basic, erros (também chamado de *exceções*) se enquadram em três categorias: erros de sintaxe, erros de tempo de execução e erros lógicos.  
   
 ## <a name="syntax-errors"></a>Erros de sintaxe  
- *Erros de sintaxe* são aqueles que aparecem enquanto você escreve código. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]verifica seu código conforme você digita o **Editor de códigos** janela e o alerta se você cometer um erro, como digitar incorretamente uma palavra ou usar um elemento de linguagem incorretamente. Erros de sintaxe são o tipo mais comum de erros. Você pode corrigi-los facilmente no ambiente de codificação assim que eles ocorrem.  
+ *Erros de sintaxe* são aqueles que aparecem enquanto você escreve código. Visual Basic verifica seu código conforme você digita o **Editor de códigos** janela e o alerta se você cometer um erro, como digitar incorretamente uma palavra ou usar um elemento de linguagem incorretamente. Erros de sintaxe são o tipo mais comum de erros. Você pode corrigi-los facilmente no ambiente de codificação assim que eles ocorrem.  
   
 > [!NOTE]
 >  O `Option Explicit` instrução é um meio de evitar erros de sintaxe. Força a declare, com antecedência, todas as variáveis a ser usado no aplicativo. Portanto, quando essas variáveis são usadas no código, qualquer erro tipográfico é detectado imediatamente e pode ser corrigido.  

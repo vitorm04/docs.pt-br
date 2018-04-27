@@ -1,11 +1,12 @@
 ---
-title: "Considerações sobre procedimentos de sobrecarga (Visual Basic)"
-ms.custom: 
+title: Considerações sobre procedimentos de sobrecarga (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - signatures [Visual Basic], ParamArray arguments
@@ -31,14 +32,14 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3c9a9a4759d4ec2dd87778c49c4fd82a08c081a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ac4bc47f9e781f83c7930efffedd40d9c25c2ec2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Considerações sobre procedimentos de sobrecarga (Visual Basic)
 Ao sobrecarregar um procedimento, você deve usar outro *assinatura* para cada versão sobrecarregada. Geralmente, isso significa que cada versão deve especificar uma lista de parâmetros diferentes. Para obter mais informações, consulte "Assinatura diferente" em [sobrecarga de procedimento](./procedure-overloading.md).  
@@ -50,7 +51,7 @@ Ao sobrecarregar um procedimento, você deve usar outro *assinatura* para cada v
 ## <a name="alternatives-to-overloaded-versions"></a>Alternativas para versões sobrecarregadas  
  Às vezes, você tem alternativas para versões sobrecarregadas, particularmente quando a presença de argumentos é opcional ou seu número é variável.  
   
- Tenha em mente que argumentos opcionais não são necessariamente suportados por todos os idiomas e matrizes de parâmetros são limitadas a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Se você estiver escrevendo um procedimento que pode ser chamado de código escrito em qualquer um dos vários idiomas diferentes, versões sobrecarregadas oferecem maior flexibilidade.  
+ Tenha em mente que argumentos opcionais não são necessariamente suportados por todos os idiomas e matrizes de parâmetros são limitadas ao Visual Basic. Se você estiver escrevendo um procedimento que pode ser chamado de código escrito em qualquer um dos vários idiomas diferentes, versões sobrecarregadas oferecem maior flexibilidade.  
   
 ### <a name="overloads-and-optional-arguments"></a>Sobrecargas e argumentos opcionais  
  Quando o código de chamada pode opcionalmente fornecer ou omitir um ou mais argumentos, você pode definir várias versões sobrecarregados ou usar parâmetros opcionais.  
@@ -104,7 +105,7 @@ Ao sobrecarregar um procedimento, você deve usar outro *assinatura* para cada v
 ## <a name="implicit-overloads-for-a-paramarray-parameter"></a>Sobrecargas implícitas para um parâmetro ParamArray  
  O compilador considera um procedimento com um [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parâmetro deverá ter um número infinito de sobrecargas, com diferenças no que o código de chamada passa para a matriz de parâmetros, da seguinte maneira:  
   
--   Uma sobrecarga para quando o código de chamada não fornece um argumento para o`ParamArray`  
+-   Uma sobrecarga para quando o código de chamada não fornece um argumento para o `ParamArray`  
   
 -   Uma sobrecarga para quando o código de chamada fornece uma matriz unidimensional do `ParamArray` tipo de elemento  
   

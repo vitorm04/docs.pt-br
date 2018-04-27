@@ -23,17 +23,17 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-caps.latest.revision: ''
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5e6dec42d40039f9cc23ba976ecf421f6471888e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: cf1d7fda58c3bca0f9d76c3c4d3b8d22545a9912
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Extensões de marcação e XAML WPF
 Este tópico apresenta o conceito de extensões de marcação para XAML, incluindo regras de sintaxe, finalidade e o modelo de objeto de classe subjacente. As extensões de marcação são um recurso geral da linguagem XAML e da implementação .NET de serviços XAML. Este tópico detalha, especificamente, as extensões de marcação para uso em XAML do WPF.  
@@ -64,7 +64,7 @@ Este tópico apresenta o conceito de extensões de marcação para XAML, incluin
 -   O `x:Array` fornece suporte para a criação de matrizes gerais na sintaxe XAML, para casos em que o suporte da coleção oferecido por modelos de controle e elementos base do WPF não é usado deliberadamente. Para ver os detalhes, consulte [Extensão de marcação x:Array](../../../../docs/framework/xaml-services/x-array-markup-extension.md).  
   
 > [!NOTE]
->  O prefixo `x:` é utilizado para o mapeamento típico do namespace de XAML dos intrínsecos da linguagem XAML, no elemento raiz de uma produção ou arquivo XAML. Por exemplo, os modelos do [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] para aplicativos do WPF iniciam um arquivo XAML usando esse mapeamento do `x:`. Você poderia escolher um token de prefixo diferente no seu próprio mapeamento do namespace de XAML; porém, essa documentação assumirá o mapeamento padrão do `x:` como meio para identificar as entidades que são uma parte definida do namespace de XAML para a linguagem XAML, ao contrário do namespace padrão do WPF ou de outros namespaces XAML não relacionados a uma estrutura específica.  
+>  O prefixo `x:` é utilizado para o mapeamento típico do namespace de XAML dos intrínsecos da linguagem XAML, no elemento raiz de uma produção ou arquivo XAML. Por exemplo, os modelos do Visual Studio para aplicativos do WPF iniciam um arquivo XAML usando esse `x:` mapeamento. Você poderia escolher um token de prefixo diferente no seu próprio mapeamento do namespace de XAML; porém, essa documentação assumirá o mapeamento padrão do `x:` como meio para identificar as entidades que são uma parte definida do namespace de XAML para a linguagem XAML, ao contrário do namespace padrão do WPF ou de outros namespaces XAML não relacionados a uma estrutura específica.  
   
 <a name="WPF_Specific_Markup_Extensions"></a>   
 ## <a name="wpf-specific-markup-extensions"></a>Extensões de marcação específicas do WPF  
@@ -112,7 +112,7 @@ Este tópico apresenta o conceito de extensões de marcação para XAML, incluin
   
 <a name="EscapeSequences"></a>   
 ## <a name="escape-sequences-and-markup-extensions"></a>Sequências de escape e extensões de marcação  
- A manipulação de atributos em um processador XAML utiliza as chaves como indicadores de uma sequência de extensão de marcação. Também é possível produzir um valor de atributo de caracteres de chave literais, se necessário, digitando uma sequência de escape usando um par de chaves vazias seguido da chave literal. Consulte [sequência de Escape {} - extensão de marcação](../../xaml-services/escape-sequence-markup-extension.md).  
+ A manipulação de atributos em um processador XAML utiliza as chaves como indicadores de uma sequência de extensão de marcação. Também é possível produzir um valor de atributo de caracteres de chave literais, se necessário, digitando uma sequência de escape usando um par de chaves vazias seguido da chave literal. Consulte [ {} sequência - extensão de marcação de Escape](../../xaml-services/escape-sequence-markup-extension.md).  
   
 <a name="Nesting"></a>   
 ## <a name="nesting-markup-extensions-in-xaml-usage"></a>Aninhamento de extensões de marcação no uso do XAML  

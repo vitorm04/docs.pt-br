@@ -1,11 +1,12 @@
 ---
-title: "Conversões entre cadeias de caracteres e outros tipos (Visual Basic)"
-ms.custom: 
+title: Conversões entre cadeias de caracteres e outros tipos (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - data type conversion [Visual Basic], string
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - type conversion [Visual Basic], string
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 71ece18d4ce33b7b637410110e825b389affcd67
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 82473d59d6b6aac21f2d7f2a0c9748217a61985f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>Conversões entre cadeias de caracteres e outros tipos (Visual Basic)
 Você pode converter um numérico `Boolean`, ou valor de data/hora um `String`. Você também pode converter na direção inversa — de um valor de cadeia de caracteres para numérico, `Boolean`, ou `Date` — desde que o conteúdo da cadeia de caracteres pode ser interpretado como um valor válido do tipo de dados de destino. Se não puderem, ocorrerá um erro de tempo de execução.  
@@ -32,7 +33,7 @@ Você pode converter um numérico `Boolean`, ou valor de data/hora um `String`. 
  Se você tiver definido uma classe ou estrutura, você pode definir operadores de conversão de tipo entre `String` e o tipo de sua classe ou estrutura. Para obter mais informações, consulte [como: definir um operador de conversão](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
 ## <a name="conversion-of-numbers-to-strings"></a>Conversão de números em cadeias de caracteres  
- Você pode usar o `Format` função para converter um número em uma cadeia de caracteres formatada, o que pode incluir não apenas os dígitos apropriados, mas também a formatação de símbolos, como um símbolo de moeda (como `$`), milhares separadores ou *agrupamento de dígitos símbolos* (como `,`) e um separador decimal (como `.`). `Format`usa automaticamente os símbolos apropriados de acordo com o **opções regionais** configurações especificadas nas janelas **painel de controle**.  
+ Você pode usar o `Format` função para converter um número em uma cadeia de caracteres formatada, o que pode incluir não apenas os dígitos apropriados, mas também a formatação de símbolos, como um símbolo de moeda (como `$`), milhares separadores ou *agrupamento de dígitos símbolos* (como `,`) e um separador decimal (como `.`). `Format` usa automaticamente os símbolos apropriados de acordo com o **opções regionais** configurações especificadas nas janelas **painel de controle**.  
   
  Observe que a concatenação (`&`) operador pode converter um número em uma cadeia de caracteres implicitamente, como mostra o exemplo a seguir.  
   
@@ -42,11 +43,11 @@ Str = "The total count is " & count
 ```  
   
 ## <a name="conversion-of-strings-to-numbers"></a>Conversão de cadeias de caracteres em números  
- Você pode usar o `Val` function para converter explicitamente os dígitos em uma cadeia de caracteres para um número. `Val`lê a cadeia de caracteres até encontrar um caractere diferente de dígito, espaço, tabulação, alimentação de linha ou período. As sequências de "& S" e "& H" alterar a base do sistema de número e finalizar a verificação. Até que ela pare de leitura, `Val` converte todos os caracteres apropriados para um valor numérico. Por exemplo, a instrução a seguir retorna o valor `141.825`.  
+ Você pode usar o `Val` function para converter explicitamente os dígitos em uma cadeia de caracteres para um número. `Val` lê a cadeia de caracteres até encontrar um caractere diferente de dígito, espaço, tabulação, alimentação de linha ou período. As sequências de "& S" e "& H" alterar a base do sistema de número e finalizar a verificação. Até que ela pare de leitura, `Val` converte todos os caracteres apropriados para um valor numérico. Por exemplo, a instrução a seguir retorna o valor `141.825`.  
   
  `Val("   14   1.825 miles")`  
   
- Quando [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] converte uma cadeia de caracteres para um valor numérico, ele usa o **opções regionais** configurações especificadas nas janelas **painel de controle** interpretar milhares separador, o separador decimal, e símbolo de moeda. Isso significa que uma conversão pode ter êxito em uma configuração, mas não em outra. Por exemplo, `"$14.20"` é aceitável na localidade inglês (Estados Unidos), mas não em qualquer idioma francês.  
+ Quando o Visual Basic converte uma cadeia de caracteres para um valor numérico, ele usa o **opções regionais** configurações especificadas nas janelas **painel de controle** interpretar milhares separador, o separador decimal, e símbolo de moeda. Isso significa que uma conversão pode ter êxito em uma configuração, mas não em outra. Por exemplo, `"$14.20"` é aceitável na localidade inglês (Estados Unidos), mas não em qualquer idioma francês.  
   
 ## <a name="see-also"></a>Consulte também  
  [Conversões de tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  

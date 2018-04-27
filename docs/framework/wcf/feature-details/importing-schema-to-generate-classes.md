@@ -1,12 +1,13 @@
 ---
 title: Importando esquema para gerar classes
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a872fbd5be56fed3d01481d1740c70932fd60c06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7fc755ff7f1b6c583a1e9aa1bc209495563812f0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importando esquema para gerar classes
 Para gerar classes de esquemas que podem ser usados com [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], use o <xref:System.Runtime.Serialization.XsdDataContractImporter> classe. Este tópico descreve o processo e variações.  
@@ -63,7 +65,7 @@ Para gerar classes de esquemas que podem ser usados com [!INCLUDE[indigo1](../..
   
  Normalmente, os tipos públicos são gerados de esquema, com campos particulares e propriedades de membro de dados públicos correspondente. Para gerar tipos internos em vez disso, defina o <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> propriedade `true`.  
   
- O exemplo a seguir mostra um esquema transformado em interno quando o <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> estiver definida como`true.`  
+ O exemplo a seguir mostra um esquema transformado em interno quando o <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> estiver definida como `true.`  
   
  [!code-csharp[c_SchemaImportExport#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#2)]
  [!code-vb[c_SchemaImportExport#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#2)]  
@@ -77,7 +79,7 @@ Para gerar classes de esquemas que podem ser usados com [!INCLUDE[indigo1](../..
   
  [!code-xml[c_SchemaImportExport#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#10)]  
   
- O exemplo a seguir usa o `Namespaces` propriedade para mapear o namespace "http://schemas.contoso.com/carSchema" para "Contoso.Cars".  
+ O exemplo a seguir usa o `Namespaces` propriedade para mapear o "http://schemas.contoso.com/carSchema" namespace "Contoso.Cars".  
   
  [!code-csharp[c_SchemaImportExport#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#8)]
  [!code-vb[c_SchemaImportExport#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#8)]  
@@ -95,7 +97,7 @@ Para gerar classes de esquemas que podem ser usados com [!INCLUDE[indigo1](../..
 #### <a name="adding-data-binding-support-enabledatabinding-or-the-enabledatabinding-switch"></a>Adicionando suporte a associação de dados (EnableDataBinding ou a opção /enableDataBinding)  
  Isso corresponde do **/enableDataBinding** ativar a ferramenta Svcutil.exe.  
   
- Às vezes, você talvez queira associar os tipos gerados do esquema de componentes da interface gráfica do usuário para que qualquer atualização instâncias desses tipos atualizará automaticamente a interface do usuário. O `XsdDataContractImporter` pode gerar tipos que implementam o <xref:System.ComponentModel.INotifyPropertyChanged> interface de forma que qualquer alteração de propriedade dispara um evento. Se você estiver gerando tipos para uso com um ambiente de programação de interface do usuário de cliente que dá suporte a essa interface (como [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)]), defina o <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> propriedade `true` para habilitar esse recurso.  
+ Às vezes, você talvez queira associar os tipos gerados do esquema de componentes da interface gráfica do usuário para que qualquer atualização instâncias desses tipos atualizará automaticamente a interface do usuário. O `XsdDataContractImporter` pode gerar tipos que implementam o <xref:System.ComponentModel.INotifyPropertyChanged> interface de forma que qualquer alteração de propriedade dispara um evento. Se você estiver gerando tipos para uso com um ambiente de programação de interface do usuário de cliente que dá suporte a essa interface (como Windows Presentation Foundation (WPF)), defina o <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> propriedade `true` para habilitar esse recurso.  
   
  A exemplo a seguir mostra o `Vehicle` classe gerada com o <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> definido como `true`.  
   
@@ -112,7 +114,7 @@ Para gerar classes de esquemas que podem ser usados com [!INCLUDE[indigo1](../..
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  Qualquer associação também pode ser considerada uma lista. Por exemplo, você pode exibir a associação anterior como uma lista de complexo `city` objetos que têm dois campos (um campo de cadeia de caracteres e um campo de número inteiro). Ambos os padrões são uma representação no esquema XSD. Não é possível diferenciar entre uma lista e uma associação para tais padrões sempre são tratados como listas, a menos que uma anotação especial específica para [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] está presente no esquema. A anotação indica que um determinado padrão representa uma associação. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Contrato de dados de referência de esquema](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+>  Qualquer associação também pode ser considerada uma lista. Por exemplo, você pode exibir a associação anterior como uma lista de complexo `city` objetos que têm dois campos (um campo de cadeia de caracteres e um campo de número inteiro). Ambos os padrões são uma representação no esquema XSD. Não é possível diferenciar entre uma lista e uma associação para tais padrões sempre são tratados como listas, a menos que uma anotação especial específica para [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] está presente no esquema. A anotação indica que um determinado padrão representa uma associação. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Referência de esquema de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
  Normalmente, uma lista é importada como um contrato de dados de coleção que é derivada de uma lista genérica ou como um [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] matriz, dependendo se o esquema segue o padrão de nomenclatura padrão para coleções. Isso é descrito mais detalhadamente na [tipos de coleção em contratos de dados](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). As associações são normalmente importadas como um <xref:System.Collections.Generic.Dictionary%602> ou um contrato de dados de coleção que é derivado do objeto de dicionário. Por exemplo, considere o esquema a seguir.  
   
@@ -159,7 +161,7 @@ Para gerar classes de esquemas que podem ser usados com [!INCLUDE[indigo1](../..
   
 ##### <a name="design-considerations"></a>Considerações de design  
   
--   Pode ser difícil trabalhar diretamente com a representação XML sem rigidez de tipos. Considere o uso de um mecanismo de serialização alternativo, como o <xref:System.Xml.Serialization.XmlSerializer>, para trabalhar com o esquema não é compatível com dados contratos de maneira fortemente tipada. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Usando a classe XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+-   Pode ser difícil trabalhar diretamente com a representação XML sem rigidez de tipos. Considere o uso de um mecanismo de serialização alternativo, como o <xref:System.Xml.Serialization.XmlSerializer>, para trabalhar com o esquema não é compatível com dados contratos de maneira fortemente tipada. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Usando a classe XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
   
 -   Algumas construções de esquema não podem ser importadas pelo <xref:System.Runtime.Serialization.XsdDataContractImporter> mesmo quando o <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> está definida como `true`. Novamente, considere usar o <xref:System.Xml.Serialization.XmlSerializer> para esses casos.  
   
@@ -186,9 +188,9 @@ Para gerar classes de esquemas que podem ser usados com [!INCLUDE[indigo1](../..
 #### <a name="import-options-advanced-options"></a>Opções de importação: Opções avançadas  
  A seguir é opções avançado de importação:  
   
--   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>propriedade. Especifique o <xref:System.CodeDom.Compiler.CodeDomProvider> a ser usado para gerar o código para as classes geradas. O mecanismo de importação tenta evitar recursos que o <xref:System.CodeDom.Compiler.CodeDomProvider> não oferece suporte. Se o <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> não estiver definida, o conjunto completo de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] recursos é usado sem restrições.  
+-   Propriedade <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>. Especifique o <xref:System.CodeDom.Compiler.CodeDomProvider> a ser usado para gerar o código para as classes geradas. O mecanismo de importação tenta evitar recursos que o <xref:System.CodeDom.Compiler.CodeDomProvider> não oferece suporte. Se o <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> não estiver definida, o conjunto completo de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] recursos é usado sem restrições.  
   
--   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>propriedade. Um <xref:System.Runtime.Serialization.IDataContractSurrogate> implementação pode ser especificada com essa propriedade. O <xref:System.Runtime.Serialization.IDataContractSurrogate> personaliza o processo de importação. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Substitutos de contrato de dados](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Por padrão, não há substituto é usado.  
+-   Propriedade <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>. Um <xref:System.Runtime.Serialization.IDataContractSurrogate> implementação pode ser especificada com essa propriedade. O <xref:System.Runtime.Serialization.IDataContractSurrogate> personaliza o processo de importação. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Substitutos de contrato de dados](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Por padrão, não há substituto é usado.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

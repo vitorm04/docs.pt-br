@@ -13,14 +13,14 @@ ms.assetid: d1fb027c-872b-4ccc-afc8-2380e3f65d4a
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: de65fdd3a71c87199127b9013a6e89e0528be18e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a41089514bb4f38ef981b4fe014b249f0d7ee6da
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operators-listed-by-functionality-visual-basic"></a>Operadores listados por funcionalidade (Visual Basic)
-Consulte uma das categorias listadas abaixo, ou abra essa parte da tabela de ajuda de conteúdo para ver uma lista alfabética de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] operadores.  
+Consulte uma das categorias listadas abaixo, ou abra essa parte da tabela de ajuda de conteúdo para ver uma lista alfabética de operadores do Visual Basic.  
   
 ## <a name="categories-of-operators"></a>Categorias de operadores  
   

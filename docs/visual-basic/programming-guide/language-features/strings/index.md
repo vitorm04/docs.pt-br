@@ -15,18 +15,18 @@ ms.assetid: 7e4c777c-ad69-46e2-8b9e-9be4033b1c96
 caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ffa6e015339387746b0cc1c4e5d3c2b84f84720e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: eae0bec98d960dd8d6cbe5859599a3758bdbfe56
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="strings-in-visual-basic"></a>Cadeias de caracteres no Visual Basic
-Esta seção descreve os conceitos básicos do uso de cadeias de caracteres no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+Esta seção descreve os conceitos básicos por trás do uso de cadeias de caracteres no Visual Basic.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Introdução às cadeias de caracteres no Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- Lista os tópicos que descrevem os conceitos básicos do uso de cadeias de caracteres no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Lista os tópicos que descrevem os conceitos básicos por trás do uso de cadeias de caracteres no Visual Basic.  
   
  [Como criar cadeias de caracteres usando StringBuilder no Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-strings-using-a-stringbuilder.md)  
  Demonstra como criar de maneira eficiente uma cadeia de caracteres longa com base em várias cadeias menores.  

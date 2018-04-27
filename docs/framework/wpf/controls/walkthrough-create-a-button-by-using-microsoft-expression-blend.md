@@ -1,34 +1,36 @@
 ---
-title: "Instruções passo a passo: criar um botão usando o Microsoft Expression Blend"
-ms.custom: 
+title: 'Instruções passo a passo: criar um botão usando o Microsoft Expression Blend'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - buttons [WPF]
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76025da208cc0929a20c379f76106d7e101c3358
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e029537466e836cfc103bad64d4102652162c465
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Instruções passo a passo: criar um botão usando o Microsoft Expression Blend
 Estas instruções passo a passo demonstram o processo de criação de um botão personalizado [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] usando o Microsoft Expression Blend.  
   
 > [!IMPORTANT]
->  O Microsoft Expression Blend gera um [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], que é compilada para tornar o programa executável. Caso você prefira trabalhar diretamente com o [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], há outro passo a passo que cria um aplicativo igual a este usando o [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] com [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], em vez do Blend. Consulte [Criar um botão usando XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md) para obter mais informações.  
+>  O Microsoft Expression Blend gera um [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], que é compilada para tornar o programa executável. Se você preferir trabalhar com [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] diretamente, há outra passo a passo que cria o mesmo aplicativo como isso usando um [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] com Visual Studio, em vez de mesclagem. Consulte [Criar um botão usando XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md) para obter mais informações.  
   
  A ilustração a seguir mostra o botão personalizado que você criará.  
   

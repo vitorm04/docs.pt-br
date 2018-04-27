@@ -1,10 +1,11 @@
 ---
-title: "Instrução For Each...Next (Visual Basic)"
+title: Instrução For Each...Next (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.ForEach
@@ -27,14 +28,14 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-caps.latest.revision: "56"
+caps.latest.revision: 56
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 11601eb1caad1c6cc6d9898f590436a977a78fa1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: b1593d279d4338ebadca803fe757a201cbcd654b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>Instrução For Each...Next (Visual Basic)
 Repete um grupo de instruções para cada elemento em uma coleção.  
@@ -97,7 +98,7 @@ Next [ element ]
   
  Você pode colocar qualquer número de `Exit For` instruções em um `For Each` loop. Quando usado dentro aninhados `For Each` loops, `Exit For` faz com que o controle de loop for e transfere interno de saída para o próximo nível mais alto de aninhamento da execução.  
   
- `Exit For`é frequentemente usado após uma avaliação de algumas condições, por exemplo, em um `If`... `Then`... `Else` estrutura. Talvez você queira usar `Exit For` para as seguintes condições:  
+ `Exit For` é frequentemente usado após uma avaliação de algumas condições, por exemplo, em um `If`... `Then`... `Else` estrutura. Talvez você queira usar `Exit For` para as seguintes condições:  
   
 -   Continuando a iteração é desnecessária ou impossível. Isso pode ser causado por um valor errado ou uma solicitação de encerramento.  
   
@@ -133,7 +134,7 @@ Next [ element ]
   
  O tipo de dados `element` deve ser, de modo que o tipo de dados dos elementos de `group` podem ser convertidos para ele.  
   
- O tipo de dados `group` deve ser um tipo de referência se refere a uma coleção ou uma matriz que é enumerável. Geralmente isso significa que `group` refere-se a um objeto que implementa o <xref:System.Collections.IEnumerable> interface do `System.Collections` namespace ou o <xref:System.Collections.Generic.IEnumerable%601> interface do `System.Collections.Generic` namespace. `System.Collections.IEnumerable`Define o <xref:System.Collections.IEnumerable.GetEnumerator%2A> método, que retorna um objeto enumerador para a coleção. Implementa o objeto de enumerador de `System.Collections.IEnumerator` interface do `System.Collections` namespace e expõe o <xref:System.Collections.IEnumerator.Current%2A> propriedade e o <xref:System.Collections.IEnumerator.Reset%2A> e <xref:System.Collections.IEnumerator.MoveNext%2A> métodos. Visual Basic usa para percorrer a coleção.  
+ O tipo de dados `group` deve ser um tipo de referência se refere a uma coleção ou uma matriz que é enumerável. Geralmente isso significa que `group` refere-se a um objeto que implementa o <xref:System.Collections.IEnumerable> interface do `System.Collections` namespace ou o <xref:System.Collections.Generic.IEnumerable%601> interface do `System.Collections.Generic` namespace. `System.Collections.IEnumerable` Define o <xref:System.Collections.IEnumerable.GetEnumerator%2A> método, que retorna um objeto enumerador para a coleção. Implementa o objeto de enumerador de `System.Collections.IEnumerator` interface do `System.Collections` namespace e expõe o <xref:System.Collections.IEnumerator.Current%2A> propriedade e o <xref:System.Collections.IEnumerator.Reset%2A> e <xref:System.Collections.IEnumerator.MoveNext%2A> métodos. Visual Basic usa para percorrer a coleção.  
   
 ### <a name="narrowing-conversions"></a>Conversões de redução  
  Quando `Option Strict` é definido como `On`, conversões de estreitamento normalmente causar erros de compilador. Em um `For Each` instrução, no entanto, as conversões de elementos no `group` para `element` são avaliadas e executada em tempo de execução e erros do compilador devidos a conversões de estreitamento são suprimidos.  
@@ -149,7 +150,7 @@ Next [ element ]
   
  **Modificar a coleção.** O objeto de enumerador retornado pelo <xref:System.Collections.IEnumerable.GetEnumerator%2A> normalmente não permitem que você altere a coleção, adicionar, excluir, substituindo ou reordenar os elementos. Se você alterar a coleção depois que você inicia um `For Each`... `Next` loop, o objeto de enumerador se torna inválido e faz com que a próxima tentativa de acessar um elemento de uma <xref:System.InvalidOperationException> exceção.  
   
- No entanto, esse bloqueio de modificação não é determinado pelo [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], mas em vez disso, a implementação do <xref:System.Collections.IEnumerable> interface. É possível implementar `IEnumerable` de forma que permite a modificação durante a iteração. Se você pretende fazer tal modificação dinâmica, certifique-se de que você entenda as características do `IEnumerable` implementação na coleção que você está usando.  
+ No entanto, esse bloqueio de modificação não é determinado pelo Visual Basic, mas a implementação de <xref:System.Collections.IEnumerable> interface. É possível implementar `IEnumerable` de forma que permite a modificação durante a iteração. Se você pretende fazer tal modificação dinâmica, certifique-se de que você entenda as características do `IEnumerable` implementação na coleção que você está usando.  
   
  **Modificando elementos da coleção.** O <xref:System.Collections.IEnumerator.Current%2A> é de propriedade do objeto enumerador [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md), e retorna uma cópia local de cada elemento da coleção. Isso significa que você não pode modificar os próprios elementos em um `For Each`... `Next` loop. Qualquer alteração que você fizer afeta somente a cópia local do `Current` e não será refletida de volta para a coleção subjacente. No entanto, se um elemento é um tipo de referência, você pode modificar os membros da instância para a qual ele aponta. O exemplo a seguir modifica o `BackColor` membro de cada `thisControl` elemento. No entanto, você não pode modificar `thisControl` em si.  
   

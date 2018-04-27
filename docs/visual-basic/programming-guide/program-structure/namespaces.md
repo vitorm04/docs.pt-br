@@ -26,11 +26,11 @@ ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
 caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c18d0a9abb1d8b9e3e22f3b81bf605fb8ed75cfa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0ec038a17b4a6b10dbe339fe33969c4ade57e2a7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="namespaces-in-visual-basic"></a>Namespaces no Visual Basic
 Namespaces organizar os objetos definidos em um assembly. Os assemblies podem conter vários namespaces, que por sua vez pode conter outros namespaces. Namespaces evitar a ambiguidade e simplificar as referências ao usar grandes grupos de objetos, como bibliotecas de classe.  
@@ -40,9 +40,9 @@ Namespaces organizar os objetos definidos em um assembly. Os assemblies podem co
  [!code-vb[VbVbalrApplication#6](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_1.vb)]  
   
 ## <a name="avoiding-name-collisions"></a>Evitando conflitos de nome  
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]namespaces solucionar um problema que às vezes chamado de *poluição de namespace*, em que o desenvolvedor de uma biblioteca de classe é reduzido pelo uso de nomes semelhantes em outra biblioteca. Esses conflitos com os componentes existentes são chamados de *nome colisões*.  
+ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] namespaces solucionar um problema que às vezes chamado de *poluição de namespace*, em que o desenvolvedor de uma biblioteca de classe é reduzido pelo uso de nomes semelhantes em outra biblioteca. Esses conflitos com os componentes existentes são chamados de *nome colisões*.  
   
- Por exemplo, se você criar uma nova classe chamada `ListBox`, você pode usá-lo em seu projeto sem qualificação. No entanto, se você quiser usar o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> classe no mesmo projeto, você deve usar uma referência totalmente qualificada para tornar a referência exclusiva. Se a referência não for exclusiva, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] produz um erro informando que o nome é ambíguo. O exemplo de código a seguir demonstra como declarar esses objetos:  
+ Por exemplo, se você criar uma nova classe chamada `ListBox`, você pode usá-lo em seu projeto sem qualificação. No entanto, se você quiser usar o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> classe no mesmo projeto, você deve usar uma referência totalmente qualificada para tornar a referência exclusiva. Se a referência não for exclusiva, Visual Basic gera um erro informando que o nome é ambíguo. O exemplo de código a seguir demonstra como declarar esses objetos:  
   
  [!code-vb[VbVbalrApplication#7](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_2.vb)]  
   
@@ -50,9 +50,9 @@ Namespaces organizar os objetos definidos em um assembly. Os assemblies podem co
   
  ![Hierarquia de Namespace](../../../visual-basic/programming-guide/program-structure/media/vanamespacehierarchy.gif "vaNamespaceHierarchy")  
   
- Por padrão, cada arquivo executável que você criar com [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] contém um namespace com o mesmo nome de seu projeto. Por exemplo, se você definir um objeto em um projeto chamado `ListBoxProject`, o arquivo executável ListBoxProject.exe contém um namespace chamado `ListBoxProject`.  
+ Por padrão, cada arquivo executável que você criar com o Visual Basic contém um namespace com o mesmo nome de seu projeto. Por exemplo, se você definir um objeto em um projeto chamado `ListBoxProject`, o arquivo executável ListBoxProject.exe contém um namespace chamado `ListBoxProject`.  
   
- Vários assemblies podem usar o mesmo namespace. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]trata-los como um único conjunto de nomes. Por exemplo, você pode definir classes para um namespace chamado `SomeNameSpace` em um assembly nomeado `Assemb1`e definir classes adicionais para o mesmo namespace de um assembly chamado `Assemb2`.  
+ Vários assemblies podem usar o mesmo namespace. Visual Basic trata como um único conjunto de nomes. Por exemplo, você pode definir classes para um namespace chamado `SomeNameSpace` em um assembly nomeado `Assemb1`e definir classes adicionais para o mesmo namespace de um assembly chamado `Assemb2`.  
   
 ## <a name="fully-qualified-names"></a>Nomes totalmente qualificados  
  Nomes totalmente qualificados são referências a objetos que são prefixadas com o nome do namespace no qual o objeto é definido. Você pode usar objetos definidos em outros projetos, se você criar uma referência à classe (escolhendo **adicionar referência** do **projeto** menu) e, em seguida, usar o nome totalmente qualificado para o objeto em seu código. O fragmento de código a seguir mostra como usar o nome totalmente qualificado de um objeto de namespace outro projeto do:  
@@ -69,7 +69,7 @@ Namespaces organizar os objetos definidos em um assembly. Os assemblies podem co
   
  [!code-vb[VbVbalrApplication#11](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_6.vb)]  
   
- Se você tentar usar `Class1` sem qualificar totalmente, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] produz um erro informando que o nome `Class1` é ambíguo.  
+ Se você tentar usar `Class1` sem qualificar totalmente-lo, Visual Basic gera um erro informando que o nome `Class1` é ambíguo.  
   
 ## <a name="namespace-level-statements"></a>Instruções de nível de Namespace  
  Dentro de um namespace, você pode definir itens como módulos, interfaces, classes, delegados, enumerações, estruturas e outros namespaces. Não é possível definir itens como propriedades, procedimentos, variáveis e eventos em nível de namespace. Esses itens devem ser declarados em contêineres, como classes, estruturas ou módulos.  

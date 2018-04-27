@@ -1,11 +1,12 @@
 ---
 title: Como chamar um procedimento de propriedade (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -14,19 +15,19 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cf9080e3c2b23302257499f13e734231f3614495
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 38b3704328916a487f94879ea0096ae923f19082
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>Como chamar um procedimento de propriedade (Visual Basic)
 Para chamar um procedimento de propriedade, armazenar um valor na propriedade ou recuperar seu valor. Você acessa uma propriedade da mesma maneira que você acessa uma variável.  
   
- A propriedade `Set` procedimento armazena um valor e seu `Get` procedimento recupera o valor. No entanto, você não explicitamente chamar esses procedimentos por nome. Você usar a propriedade em uma instrução de atribuição ou uma expressão, exatamente como você poderia armazenar ou recuperar o valor de uma variável. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]faz as chamadas aos procedimentos da propriedade.  
+ A propriedade `Set` procedimento armazena um valor e seu `Get` procedimento recupera o valor. No entanto, você não explicitamente chamar esses procedimentos por nome. Você usar a propriedade em uma instrução de atribuição ou uma expressão, exatamente como você poderia armazenar ou recuperar o valor de uma variável. Visual Basic faz as chamadas aos procedimentos da propriedade.  
   
 ### <a name="to-call-a-propertys-get-procedure"></a>Para chamar um procedimento da propriedade Get  
   

@@ -1,11 +1,12 @@
 ---
 title: Como inserir um valor em uma propriedade (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - property values [Visual Basic]
@@ -14,25 +15,25 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 44e7c4a92ea3d087c12e74aa2ede33a52c8730cf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0f00303b290e324612ad3ac7af673690b4cf4e15
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>Como inserir um valor em uma propriedade (Visual Basic)
 Você pode armazenar um valor em uma propriedade, colocando o nome da propriedade no lado esquerdo de uma instrução de atribuição.  
   
- A propriedade `Set` procedimento armazena um valor, mas você não o chama explicitamente por nome. Você usa a propriedade exatamente como você usaria uma variável. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]faz as chamadas aos procedimentos da propriedade.  
+ A propriedade `Set` procedimento armazena um valor, mas você não o chama explicitamente por nome. Você usa a propriedade exatamente como você usaria uma variável. Visual Basic faz as chamadas aos procedimentos da propriedade.  
   
 ### <a name="to-store-a-value-in-a-property"></a>Para armazenar um valor em uma propriedade  
   
 1.  Use o nome da propriedade no lado esquerdo de uma instrução de atribuição.  
   
-     O exemplo a seguir define o valor da [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] `TimeOfDay` propriedade ao meio-dia, implicitamente chamando seu `Set` procedimento.  
+     O exemplo a seguir define o valor do Visual Basic `TimeOfDay` propriedade ao meio-dia, implicitamente chamando seu `Set` procedimento.  
   
      [!code-vb[VbVbcnProcedures#11](./codesnippet/VisualBasic/how-to-put-a-value-in-a-property_1.vb)]  
   

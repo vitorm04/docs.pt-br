@@ -1,11 +1,12 @@
 ---
 title: Solucionando problemas de tipos de dados (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Char data type [Visual Basic], converting
@@ -25,14 +26,14 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4d2fb1cd1be9c88ad0dd413eedb8a226fe59f41e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f34e7bc50a51032387cf01db3fae17ef44b8b4d9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>Solucionando problemas de tipos de dados (Visual Basic)
 Esta página lista alguns problemas comuns que podem ocorrer quando você executa operações em tipos de dados intrínseco.  
@@ -74,7 +75,7 @@ Esta página lista alguns problemas comuns que podem ocorrer quando você execut
  Observe que não é suficiente declarar `decimalRemainder` como `Decimal`. Você também deve forçar os literais para `Decimal`, ou eles usam `Double` por padrão e `decimalRemainder` recebe o mesmo valor como `doubleRemainder`.  
   
 ## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>Tipo booleano não converte para tipo numérico com precisão  
- [Tipo de dados Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) valores não são armazenados como números, e os valores armazenados não devem ser equivalentes a números. Para compatibilidade com versões anteriores, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] fornece palavras-chave de conversão ([função CType](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`, e assim por diante) para converter entre `Boolean` e tipos numéricos. No entanto, outras linguagens, às vezes, executam essas conversões diferente, como o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] métodos.  
+ [Tipo de dados Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) valores não são armazenados como números, e os valores armazenados não devem ser equivalentes a números. Para compatibilidade com versões anteriores, o Visual Basic fornece palavras-chave de conversão ([função CType](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`, e assim por diante) para converter entre `Boolean` e tipos numéricos. No entanto, outras linguagens, às vezes, executam essas conversões diferente, como o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] métodos.  
   
  Você nunca deve gravar códigos que contem com valores numéricos equivalentes para `True` e `False`. Sempre que possível, você deve restringir o uso de `Boolean` variáveis para os valores lógicos para os quais eles são criados. Se você deve combinar `Boolean` e valores numéricos, certifique-se de que você entende o método de conversão que você selecionar.  
   
@@ -87,7 +88,7 @@ Esta página lista alguns problemas comuns que podem ocorrer quando você execut
  Se você deve converter um `Boolean` valor para um tipo de dados numéricos, tenha cuidado sobre qual método de conversão usar.  
   
 ## <a name="character-literal-generates-compiler-error"></a>Caractere Literal gera erro do compilador  
- Na ausência de qualquer caractere de tipo, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] assume o padrão a tipos de dados para literais. O tipo de padrão de um caractere literal — entre aspas (`" "`) — é `String`.  
+ Na ausência de qualquer caractere de tipo, Visual Basic assume o padrão tipos de dados para literais. O tipo de padrão de um caractere literal — entre aspas (`" "`) — é `String`.  
   
  O `String` tipo de dados não se estendem ao [tipo de dados Char](../../../../visual-basic/language-reference/data-types/char-data-type.md). Isso significa que, se você deseja atribuir um literal para um `Char` variável, você deve fazer uma conversão de restrição ou forçar o literal para o `Char` tipo.  
 
@@ -102,7 +103,7 @@ Esta página lista alguns problemas comuns que podem ocorrer quando você execut
  Sempre há um risco usando conversões de estreitamento, pois elas podem falhar em tempo de execução. Por exemplo, uma conversão de `String` para `Char` pode falhar se o `String` valor contém mais de um caractere. Portanto, é melhor programação para usar o `C` caractere de tipo.  
   
 ## <a name="string-conversion-fails-at-run-time"></a>Falha na conversão de cadeia de caracteres em tempo de execução  
- O [tipo de dados de cadeia de caracteres](../../../../visual-basic/language-reference/data-types/string-data-type.md) participa de poucas conversões ampliadoras. `String`amplia somente a mesmo e `Object`e apenas `Char` e `Char()` (uma `Char` matriz) se estendem ao `String`. Isso ocorre porque `String` constantes e variáveis podem conter valores que outros tipos de dados não podem conter.  
+ O [tipo de dados de cadeia de caracteres](../../../../visual-basic/language-reference/data-types/string-data-type.md) participa de poucas conversões ampliadoras. `String` amplia somente a mesmo e `Object`e apenas `Char` e `Char()` (uma `Char` matriz) se estendem ao `String`. Isso ocorre porque `String` constantes e variáveis podem conter valores que outros tipos de dados não podem conter.  
   
  Quando a verificação de tipo muda ([instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) é `On`, o compilador proíbe todos as conversões de estreitamento implícitas. Isso inclui aquelas que envolvem `String`. Seu código ainda pode usar palavras-chave de conversão, como `CStr` e [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md), quais direta a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] a tentar a conversão.  
   

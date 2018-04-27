@@ -18,11 +18,11 @@ ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
 caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 99d14b6e54a59ffc904a9e786c22498d23ee8ab6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6bcb19388a9449a76eed5689b12fb95c5a4fb8de
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extension-indexer-property-visual-basic"></a>Propriedade do indexador de extensão (Visual Basic)
 Fornece acesso aos elementos individuais em uma coleção.  
@@ -48,7 +48,7 @@ object(index)
 ## <a name="remarks"></a>Comentários  
  Você pode usar a propriedade do indexador de extensão para acessar elementos individuais em uma coleção. Esta propriedade do indexador normalmente é usada na saída das propriedades do eixo XML. O filho do XML e propriedades de eixo descendente XML retornam coleções de <xref:System.Xml.Linq.XElement> objetos ou um valor de atributo.  
   
- O [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador converte propriedades do indexador de extensão para chamadas para o `ElementAtOrDefault` método. Ao contrário de um indexador de matriz, o `ElementAtOrDefault` método retorna `Nothing` se o índice está fora do intervalo. Esse comportamento é útil quando você não consegue determinar o número de elementos em uma coleção.  
+ O compilador do Visual Basic converte propriedades do indexador de extensão para chamadas para o `ElementAtOrDefault` método. Ao contrário de um indexador de matriz, o `ElementAtOrDefault` método retorna `Nothing` se o índice está fora do intervalo. Esse comportamento é útil quando você não consegue determinar o número de elementos em uma coleção.  
   
  Esta propriedade do indexador é como uma propriedade de extensão para coleções que implementam <xref:System.Collections.Generic.IEnumerable%601> ou <xref:System.Linq.IQueryable%601>: ele é usado somente se a coleção não possui um indexador ou uma propriedade padrão.  
   

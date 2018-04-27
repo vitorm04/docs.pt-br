@@ -1,12 +1,13 @@
 ---
-title: "Como criar uma interface do usuário multipainel com Windows Forms"
-ms.custom: 
+title: Como criar uma interface do usuário multipainel com Windows Forms
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f29fb5fc4f873431471cd1c037446a5157d5f07c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6011eb2d49e537a2f5dfc540611af40a30b3e721
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Como criar uma interface do usuário multipainel com Windows Forms
 No procedimento a seguir, você vai criar uma interface do usuário com vários painéis semelhante à que é usada no Microsoft Outlook, com uma lista **Pasta**, um painel **Mensagens** e um painel **Visualização**. Essa organização é obtida principalmente por meio de controles de encaixe com o formulário.  
@@ -175,7 +177,7 @@ No procedimento a seguir, você vai criar uma interface do usuário com vários 
     }  
     ```  
   
-3.  No [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], adicione uma chamada para o procedimento que você acabou de criar no procedimento `New()`. No [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], adicione esta linha de código ao construtor da classe de formulário.  
+3.  No Visual Basic, adicione uma chamada para o procedimento que você acabou de criar no `New()` procedimento. No Visual c#, adicione esta linha de código para o construtor para a classe de formulário.  
   
     ```vb  
     ' Add this to the New procedure.  

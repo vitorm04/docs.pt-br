@@ -8,21 +8,21 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cdc15ea4-f678-4729-8ebe-188ae720bef7
-caps.latest.revision: ''
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0c29e6778cc0749620a7e38d51303356c2e99436
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: aa4e54a1085e3e5713004c489051e54b0fc8ee9d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Exemplo de tecnologia de serialização genérica de serviços Web
-[Baixar Exemplo](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
+[Baixar Exemplo](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
   
  Esse exemplo mostra como usar e controlar a serialização de genéricos em Serviços Web ASP.NET.  
   
@@ -70,14 +70,14 @@ ms.lasthandoff: 03/23/2018
   
 1.  Abra uma janela do navegador e selecione sua barra de endereços.  
   
-2.  Digite **http://localhost/[virtual directory]/Service.asmx**, em que [virtual directory] representa o diretório virtual que você criou ao criar a amostra.  
+2.  Tipo  **http://localhost/[directory]/Service.asmx virtual**, onde [diretório] representa o diretório virtual é criado quando você criou o exemplo.  
   
 ## <a name="remarks"></a>Comentários  
- O exemplo exibe uma página ASP.NET padrão que contém links para a definição do Serviço Web. Você pode personalizar a exibição além de modificar o código de origem para o serviço Web. Para obter mais informações, consulte [Criando clientes de serviço Web XML](http://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c).  
+ O exemplo exibe uma página ASP.NET padrão que contém links para a definição do Serviço Web. Você pode personalizar a exibição além de modificar o código de origem para o serviço Web. Para obter mais informações, consulte [Criando clientes de serviço Web XML](https://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Collections.Generic>  
  <xref:System.Web.Services>  
  <xref:System.Xml.Serialization>  
  [Serialização](../../../docs/standard/serialization/index.md)  
- [Serviços Web XML criados com o ASP.NET e clientes de serviços Web XML](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)
+ [Serviços Web XML criados com o ASP.NET e clientes de serviços Web XML](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)

@@ -1,31 +1,33 @@
 ---
-title: "Controle de versão de serviço de dados (WCF Data Services)"
-ms.custom: 
+title: Controle de versão de serviço de dados (WCF Data Services)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - versioning, WCF Data Services
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 73e394c4d0a7f78fca7c8c70f68bfc16da556d8d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: d795008e014deaa126dac1bb978ac825f2536208
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Controle de versão de serviço de dados (WCF Data Services)
-O [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] permite criar serviços de dados para que os clientes possam acessar dados como usando URIs de recursos com base em um modelo de dados. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]também suporta a definição de operações de serviço. Após a implantação inicial e potencialmente várias vezes durante a vida útil, esses serviços de dados podem precisar ser alterada para uma variedade de motivos, como alterar as necessidades de negócios, requisitos de tecnologia da informação, ou para solucionar outros problemas. Quando você faz alterações a um serviço de dados existente, você deve considerar se deseja definir uma nova versão de seus dados de serviço e a melhor maneira de minimizar o impacto nos aplicativos cliente existentes. Este tópico fornece orientações sobre quando e como criar uma nova versão de um serviço de dados. Ele também descreve como [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] manipula uma troca entre clientes e serviços de dados que oferecem suporte a versões diferentes do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protocolo.  
+O [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] permite criar serviços de dados para que os clientes possam acessar dados como usando URIs de recursos com base em um modelo de dados. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] também suporta a definição de operações de serviço. Após a implantação inicial e potencialmente várias vezes durante a vida útil, esses serviços de dados podem precisar ser alterada para uma variedade de motivos, como alterar as necessidades de negócios, requisitos de tecnologia da informação, ou para solucionar outros problemas. Quando você faz alterações a um serviço de dados existente, você deve considerar se deseja definir uma nova versão de seus dados de serviço e a melhor maneira de minimizar o impacto nos aplicativos cliente existentes. Este tópico fornece orientações sobre quando e como criar uma nova versão de um serviço de dados. Ele também descreve como [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] manipula uma troca entre clientes e serviços de dados que oferecem suporte a versões diferentes do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protocolo.  
   
 ## <a name="versioning-a-wcf-data-service"></a>Controle de versão de um WCF Data Services  
  Depois que um serviço de dados é implantado e os dados que está sendo consumidos, as alterações no serviço de dados tem o potencial de causar problemas de compatibilidade com aplicativos existentes do cliente. No entanto, como alterações geralmente são necessárias pelas necessidades de negócios em geral do serviço, você deve considerar quando e como criar uma nova versão do seu serviço de dados com o menor impacto no cliente de aplicativos.  
@@ -55,16 +57,16 @@ O [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] permite criar 
 ### <a name="how-to-version-a-data-service"></a>A versão de um serviço de dados  
  Quando necessário, uma nova versão do serviço de dados é definida ao criar uma nova instância do serviço com um modelo de dados ou contrato de serviço atualizado. Esse novo serviço, em seguida, é exposto por meio de um ponto de extremidade URI novo, que diferencia da versão anterior. Por exemplo:  
   
--   Versão antiga:`http://services.odata.org/Northwind/v1/Northwind.svc/`  
+-   Versão antiga: `http://services.odata.org/Northwind/v1/Northwind.svc/`  
   
--   Nova versão:`http://services.odata.org/Northwind/v2/Northwind.svc/`  
+-   Nova versão: `http://services.odata.org/Northwind/v2/Northwind.svc/`  
   
  Ao atualizar um serviço de dados, os clientes precisará também seja atualizado com base nos metadados do serviço de dados novo e usar o novo URI de raiz. Quando possível, você deve manter a versão anterior do serviço de dados para dar suporte a clientes que ainda não foram atualizados para usar a nova versão. Versões mais antigas de um serviço de dados podem ser removidas quando eles não são mais necessários. Considere a possibilidade de manter o ponto de extremidade de serviço de dados URI em um arquivo de configuração externo.  
   
 ## <a name="odata-protocol-versions"></a>Versões de protocolo OData  
  Como novas versões de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] são lançadas, os aplicativos cliente podem não estar usando a mesma versão do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protocolo com suporte pelo serviço de dados. Um aplicativo cliente mais antigo pode acessar um serviço de dados que oferece suporte a uma versão mais recente do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Um aplicativo cliente também pode estar usando uma versão mais recente do [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente, que oferece suporte a uma versão mais recente do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] que o serviço de dados que está sendo acessado.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]aproveita o suporte fornecido por [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] para lidar com esses cenários de controle de versão. Também há suporte para gerar e usar os metadados do modelo de dados para criar classes de serviço de dados de cliente quando o cliente usa uma versão diferente do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] que o serviço de dados usa. Para obter mais informações, consulte [OData: controle de versão de protocolo](http://go.microsoft.com/fwlink/?LinkId=186071).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] aproveita o suporte fornecido por [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] para lidar com esses cenários de controle de versão. Também há suporte para gerar e usar os metadados do modelo de dados para criar classes de serviço de dados de cliente quando o cliente usa uma versão diferente do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] que o serviço de dados usa. Para obter mais informações, consulte [OData: controle de versão de protocolo](http://go.microsoft.com/fwlink/?LinkId=186071).  
   
 ### <a name="version-negotiation"></a>Negociação de versão  
  O serviço de dados pode ser configurado para definir a versão mais recente do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protocolo que será usado pelo serviço, independentemente da versão solicitada pelo cliente. Você pode fazer isso especificando uma <xref:System.Data.Services.Common.DataServiceProtocolVersion> valor para o <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> propriedade o <xref:System.Data.Services.DataServiceBehavior> usado pelo serviço de dados. Para obter mais informações, consulte [Configurando o serviço de dados](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
@@ -73,16 +75,16 @@ O [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] permite criar 
   
  A tabela a seguir fornece detalhes sobre as versões do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] que incluem [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] suporte para versões específicas do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protocolo.  
   
-|[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Versão de protocolo|Suporte introduzido em...|  
+|[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Versão de protocolo|Suporte introduzido em...|  
 |-----------------------------------------------------------------------------------|----------------------------|  
-|Versão 1|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]Service Pack 1 (SP1)<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)]versão 3|  
-|Versão 2|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-Uma atualização [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] SP1. Você pode baixar e instalar a atualização a partir de [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=158125).<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)]versão 4|  
+|Versão 1|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Service Pack 1 (SP1)<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] Versão 3|  
+|Versão 2|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-Uma atualização [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] SP1. Você pode baixar e instalar a atualização a partir de [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=158125).<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] versão 4|  
 |Versão 3|-Você pode baixar e instalar uma versão de pré-lançamento que dá suporte a [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] versão 3 do [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=203885).|  
   
 ### <a name="metadata-versions"></a>Versões de metadados  
- Por padrão, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa a versão 1.1 do CSDL para representar um modelo de dados. Isso é sempre o caso para modelos de dados se baseiam em um provedor de reflexão ou um provedor de serviços de dados personalizados. No entanto, quando o modelo de dados é definido usando o [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], a versão de CSDL retornado é o mesmo que a versão que é usada pelo [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]. A versão de CSDL é determinada pelo namespace do [elemento Schema](http://msdn.microsoft.com/library/396074d8-f99c-4f50-a073-68bce848224f). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]a especificação de [ \[MC CSDL\]: formato de arquivo de definição de esquema conceitual](http://go.microsoft.com/fwlink/?LinkId=159072).  
+ Por padrão, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa a versão 1.1 do CSDL para representar um modelo de dados. Isso é sempre o caso para modelos de dados se baseiam em um provedor de reflexão ou um provedor de serviços de dados personalizados. No entanto, quando o modelo de dados é definido usando o [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], a versão de CSDL retornado é o mesmo que a versão que é usada pelo [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]. A versão de CSDL é determinada pelo namespace do [elemento Schema](http://msdn.microsoft.com/library/396074d8-f99c-4f50-a073-68bce848224f). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] a especificação de [ \[MC CSDL\]: formato de arquivo de definição de esquema conceitual](http://go.microsoft.com/fwlink/?LinkId=159072).  
   
- O `DataServices` elemento de metadados retornados também contém um `DataServiceVersion` atributo, que é o mesmo valor como o `DataServiceVersion` cabeçalho na mensagem de resposta. Aplicativos cliente, como o **adicionar referência de serviço** da caixa de diálogo [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], use essas informações para gerar classes de serviço de dados do cliente que funcionam corretamente com a versão do [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] que hospedam o serviço de dados. Para obter mais informações, consulte [OData: controle de versão de protocolo](http://go.microsoft.com/fwlink/?LinkId=186071).  
+ O `DataServices` elemento de metadados retornados também contém um `DataServiceVersion` atributo, que é o mesmo valor como o `DataServiceVersion` cabeçalho na mensagem de resposta. Aplicativos cliente, como o **adicionar referência de serviço** caixa de diálogo no Visual Studio, use essas informações para o serviço de dados do cliente de gerar classes que funcionam corretamente com a versão do [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] que hospedam o serviço de dados. Para obter mais informações, consulte [OData: controle de versão de protocolo](http://go.microsoft.com/fwlink/?LinkId=186071).  
   
 ## <a name="see-also"></a>Consulte também  
  [Provedores de Serviços de Dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  

@@ -14,17 +14,17 @@ ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e6526f7270602b3e1a4e8d953732c393ff252b2c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 40330e8c2c60c866200e009a8280c7ec9c855435
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="constants-overview-visual-basic"></a>Visão geral de constantes (Visual Basic)
 Uma constante é um nome significativo que toma o lugar de um número ou uma cadeia de caracteres que não é alterado. Constantes armazenam valores que, como o nome implica, permanecem os mesmos durante a execução de um aplicativo. Muito pode melhorar a legibilidade do código e facilitar a manutenção usando constantes. Usá-los no código que contém valores que reaparecem ou dependem de certos números que são difíceis de lembrar ou não tem significado óbvio.  
   
 ## <a name="how-to-create-and-use-constants"></a>Como criar e usar constantes  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]contém um número de constantes pré-definidas, usadas principalmente para impressão e exibição. Você também pode criar suas próprias constantes com o `Const` instrução, usando as mesmas diretrizes que você faria para criar um nome de variável. Se `Option Strict` é `On`, você deve declarar explicitamente o tipo de constante.  
+ Visual Basic contém um número de constantes predefinidas, usando principalmente para impressão e exibição. Você também pode criar suas próprias constantes com o `Const` instrução, usando as mesmas diretrizes que você faria para criar um nome de variável. Se `Option Strict` é `On`, você deve declarar explicitamente o tipo de constante.  
   
  Escopo de uma constante, que é o conjunto de todo o código que pode fazer referência a ele sem qualificar seu nome, é o mesmo de uma variável declarada no mesmo local. Para criar uma constante que existe dentro do escopo de um determinado procedimento, declare-o dentro do procedimento. Para criar uma constante que está disponível em um aplicativo, declare-o usando o `Public` palavra-chave na seção de declarações da classe.  
   
@@ -42,14 +42,14 @@ Uma constante é um nome significativo que toma o lugar de um número ou uma cad
 |---|---|  
 |[Como declarar uma constante](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|Explica como usar o `Const` instrução para declarar uma constante e definir seu valor; declarando uma constante, você atribuir um nome significativo para o valor.|  
 |[Constantes Definidas pelo Usuário](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|Descreve como criar suas próprias constantes, incluindo informações sobre o escopo e como evitar referências circulares.|  
-|[Tipos de Dados Constante e Literal](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|Fornece informações sobre como o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador inicializa constantes quando `Option Explicit` está desativado.|  
+|[Tipos de Dados Constante e Literal](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|Fornece informações sobre como o compilador do Visual Basic inicializa constantes quando `Option Explicit` está desativado.|  
 |[Como agrupar valores constantes relacionados](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|Demonstra como agrupar valores constantes que estão relacionados.|  
   
 ## <a name="reference"></a>Referência  
   
 |Definição|Termo|  
 |---|---|  
-|[Constantes e Enumerações](../../../../visual-basic/language-reference/constants-and-enumerations.md)|Lista as constantes predefinidas pelo [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].|  
+|[Constantes e Enumerações](../../../../visual-basic/language-reference/constants-and-enumerations.md)|Lista as constantes predefinidas pelo Visual Basic.|  
 |[Instrução Const](../../../../visual-basic/language-reference/statements/const-statement.md)|Descreve o `Const` instrução e seu uso.|  
 |[Instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Descreve o `Option Strict` instrução e seu uso.|  
   

@@ -1,32 +1,34 @@
 ---
-title: "Visão geral dos recursos bidirecionais no WPF"
-ms.custom: 
+title: Visão geral dos recursos bidirecionais no WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b50d98d5f02a59a013d7577f0e312e6ffde35690
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: fa2349bca86676f4dc3e1703216a2b0dc50ccd59
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Visão geral dos recursos bidirecionais no WPF
 Ao contrário de qualquer outra plataforma de desenvolvimento, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tem muitos recursos que dão suporte ao desenvolvimento rápido de conteúdo bidirecional, por exemplo, mista esquerda para a direita e direita para esquerda dados no mesmo documento. Ao mesmo tempo, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] cria uma excelente experiência para usuários que necessitam de recursos bidirecionais, como árabe e hebraico falando de usuários.  
   
- As próximas seções explicam vários recursos bidirecionais junto com exemplos que ilustram como obter a melhor exibição do conteúdo bidirecional. A maioria dos exemplos usa [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], embora você pode aplicar facilmente os conceitos para [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] ou [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] código.  
+ As próximas seções explicam vários recursos bidirecionais junto com exemplos que ilustram como obter a melhor exibição do conteúdo bidirecional. A maioria dos exemplos usa [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], embora você pode aplicar facilmente os conceitos ao código c# ou Microsoft Visual Basic.  
   
 
   
@@ -70,7 +72,7 @@ Ao contrário de qualquer outra plataforma de desenvolvimento, [!INCLUDE[TLA2#tl
   
  Em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], um <xref:System.Windows.Documents.FlowDocument> é um versátil [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elemento que pode hospedar uma combinação de texto, tabelas, imagens e outros elementos. As amostras das próximas seções usam esse elemento.  
   
- Adicionar texto a um <xref:System.Windows.Documents.FlowDocument> pode ser feito de mais que uma forma. É uma maneira simples de fazer isso por meio de um <xref:System.Windows.Documents.Paragraph> que é um elemento de nível de bloco usado para agrupar o conteúdo, como texto. Para adicionar texto ao usam os exemplos de elementos de nível incorporado <xref:System.Windows.Documents.Span> e <xref:System.Windows.Documents.Run>. <xref:System.Windows.Documents.Span>é um elemento de conteúdo de nível interno usado para agrupar outros elementos embutidos, enquanto um <xref:System.Windows.Documents.Run> é um fluxo de nível embutido conteúdo de elemento deve conter uma execução de texto sem formatação. Um <xref:System.Windows.Documents.Span> pode conter vários <xref:System.Windows.Documents.Run> elementos.  
+ Adicionar texto a um <xref:System.Windows.Documents.FlowDocument> pode ser feito de mais que uma forma. É uma maneira simples de fazer isso por meio de um <xref:System.Windows.Documents.Paragraph> que é um elemento de nível de bloco usado para agrupar o conteúdo, como texto. Para adicionar texto ao usam os exemplos de elementos de nível incorporado <xref:System.Windows.Documents.Span> e <xref:System.Windows.Documents.Run>. <xref:System.Windows.Documents.Span> é um elemento de conteúdo de nível interno usado para agrupar outros elementos embutidos, enquanto um <xref:System.Windows.Documents.Run> é um fluxo de nível embutido conteúdo de elemento deve conter uma execução de texto sem formatação. Um <xref:System.Windows.Documents.Span> pode conter vários <xref:System.Windows.Documents.Run> elementos.  
   
  O primeiro exemplo de documento contém um documento que tem um número de rede a compartilhar nomes; Por exemplo `\\server1\folder\file.ext`. Se você tiver esse link de rede em um documento em árabe ou em inglês, você sempre desejará que ele seja exibido da mesma maneira. O gráfico a seguir mostra o link em um árabe <xref:System.Windows.FlowDirection.RightToLeft> documento.  
   
@@ -131,7 +133,7 @@ Ao contrário de qualquer outra plataforma de desenvolvimento, [!INCLUDE[TLA2#tl
   
 <a name="FlowDirectionNontext"></a>   
 ## <a name="flowdirection-with-non-text-elements"></a>FlowDirection com elementos não texto  
- <xref:System.Windows.FlowDirection>Define não apenas como texto flui em um elemento de texto, mas também a direção do fluxo de quase todos os outros [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elemento. A gráfico a seguir mostra um <xref:System.Windows.Controls.ToolBar> que usa um horizontal <xref:System.Windows.Media.LinearGradientBrush> para desenhar o plano de fundo.  
+ <xref:System.Windows.FlowDirection> Define não apenas como texto flui em um elemento de texto, mas também a direção do fluxo de quase todos os outros [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elemento. A gráfico a seguir mostra um <xref:System.Windows.Controls.ToolBar> que usa um horizontal <xref:System.Windows.Media.LinearGradientBrush> para desenhar o plano de fundo.  
   
  **Gráfico que mostra uma barra de ferramentas com um gradiente da esquerda para a direita**  
   
@@ -251,7 +253,7 @@ Ao contrário de qualquer outra plataforma de desenvolvimento, [!INCLUDE[TLA2#tl
 |-|  
 |`<TextBlock`<br /><br /> `Name="text1" NumberSubstitution.CultureSource="Text">`<br /><br /> `1234+5679=6913`<br /><br /> `</TextBlock>`|  
   
- No correspondente [!INCLUDE[TLA2#tla_lhcshrp](../../../../includes/tla2sharptla-lhcshrp-md.md)] de código, defina o `Language` propriedade, por exemplo, para `"ar-SA"`.  
+ No correspondente código c#, defina o `Language` propriedade, por exemplo, para `"ar-SA"`.  
   
 ||  
 |-|  
@@ -263,13 +265,13 @@ Ao contrário de qualquer outra plataforma de desenvolvimento, [!INCLUDE[TLA2#tl
 |-|  
 |`text1.Language =`<br /><br /> `System.Windows.Markup.XmlLanguage.GetLanguage(`<br /><br /> `System.Globalization.CultureInfo.CurrentUICulture.IetfLanguageTag);`|  
   
- <xref:System.Globalization.CultureInfo.CurrentCulture%2A>representa a cultura atual usada pelo thread atual em tempo de execução.  
+ <xref:System.Globalization.CultureInfo.CurrentCulture%2A> representa a cultura atual usada pelo thread atual em tempo de execução.  
   
  O final [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] exemplo deve ser semelhante ao exemplo a seguir.  
   
  [!code-xaml[Numbers2#Numbers2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Numbers2/CS/Window1.xaml#numbers2)]  
   
- O final [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] exemplo deve ser semelhante à seguinte.  
+ O exemplo c# final deve ser semelhante ao seguinte.  
   
  [!code-csharp[NumbersCSharp#NumbersCSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NumbersCSharp/CSharp/Window1.xaml.cs#numberscsharp)]  
   

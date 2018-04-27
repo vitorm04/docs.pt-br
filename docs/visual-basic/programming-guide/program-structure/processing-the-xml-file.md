@@ -14,11 +14,11 @@ ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d44f58951d99f1b4b551af75dc0a0e895e337e2c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 86dae99f2d17a506a27cf491a76083df618ba27b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>Processando o arquivo XML (Visual Basic)
 O compilador gera uma cadeia de identificação para cada constructo no seu código marcado para gerar a documentação. (Para obter informações sobre como marcar seu código, consulte [marcas de comentário XML](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md).) A cadeia de identificação identifica exclusivamente o constructo. Programas que processam o arquivo XML podem usar a cadeia de caracteres de ID para identificar correspondente [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] item metadados/reflexão.  
@@ -34,12 +34,12 @@ O compilador gera uma cadeia de identificação para cada constructo no seu cód
 |Caractere|Descrição|  
 |---|---|  
 |N|namespace<br /><br /> Você não pode adicionar comentários de documentação para um namespace, mas você pode fazer referências CREF a eles, onde houver suporte.|  
-|T|tipo: `Class`, `Module`, `Interface`, `Structure`, `Enum`,`Delegate`|  
-|F|campo:`Dim`|  
+|T|tipo: `Class`, `Module`, `Interface`, `Structure`, `Enum`, `Delegate`|  
+|F|campo: `Dim`|  
 |P|propriedade: `Property` (incluindo propriedades padrão)|  
-|M|método: `Sub`, `Function`, `Declare`,`Operator`|  
-|E|evento:`Event`|  
-|!|cadeia de caracteres de erro<br /><br /> O restante da cadeia de caracteres fornece informações sobre o erro. O [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador gera informações de erro para links que não pode ser resolvido.|  
+|M|método: `Sub`, `Function`, `Declare`, `Operator`|  
+|E|Evento: `Event`|  
+|!|cadeia de caracteres de erro<br /><br /> O restante da cadeia de caracteres fornece informações sobre o erro. O compilador do Visual Basic gera informações de erro para links que não podem ser resolvidos.|  
   
 -   A segunda parte do `String` é o nome totalmente qualificado do item, começando na raiz do namespace. O nome do item, seu tipo delimitador (s) e o namespace são separados por pontos. Se o nome do próprio item contiver períodos, eles são substituídos pelo sinal numérico (#). Presume-se que nenhum item possui um sinal de número diretamente em seu nome. Por exemplo, o nome totalmente qualificado do `String` construtor seria `System.String.#ctor`.  
   

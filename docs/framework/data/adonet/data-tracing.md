@@ -1,27 +1,29 @@
 ---
 title: Rastreamento de dados no ADO.NET
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: df958982739c7ab2fd7aba42918b919c25d86829
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 377c69feda356aee9e11720cf12c9c97158d45a7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-tracing-in-adonet"></a>Rastreamento de dados no ADO.NET
-Funcionalidade de rastreamento de dados interna que é compatível com os provedores de dados .NET para recursos do ADO.NET [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], Oracle, OLE DB e ODBC, bem como o ADO.NET <xref:System.Data.DataSet>e o [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] protocolos de rede.  
+ADO.NET apresenta funcionalidade de rastreamento de dados interna que tem suporte pelo provedor de dados .NET para SQL Server, Oracle, OLE DB e ODBC, bem como o ADO.NET <xref:System.Data.DataSet>e os protocolos de rede do SQL Server.  
   
  Rastreamento de dados chamadas de API de acesso podem ajudar a diagnosticar os problemas a seguir:  
   
@@ -40,7 +42,7 @@ Funcionalidade de rastreamento de dados interna que é compatível com os proved
  Para obter mais informações sobre a configuração e configurando o rastreamento gerenciado no ADO.NET, consulte [acesso aos dados de rastreamento](http://msdn.microsoft.com/library/hh880086.aspx).  
   
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Acessar informações de diagnóstico no Log de eventos estendidos  
- No [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] provedor de dados para [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], rastreamento de acesso a dados ([rastreamento de acesso a dados](http://msdn.microsoft.com/library/hh880086.aspx)) foi atualizado para facilitar para correlacionar eventos do cliente com informações de diagnóstico, tais como falhas de conexão, de anéis de conectividade de buffer e aplicativo desempenho informações do servidor no log de eventos estendidos. Para obter informações sobre como ler o log de eventos estendidos, consulte [exibir dados de sessão de evento](http://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx).  
+ No [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] provedor de dados do SQL Server, rastreamento de acesso a dados ([rastreamento de acesso a dados](http://msdn.microsoft.com/library/hh880086.aspx)) foi atualizado para facilitar para correlacionar eventos do cliente com informações de diagnóstico, tais como falhas de conexão, do informações de desempenho de aplicativo e o buffer no log de eventos estendidos do anel de conectividade do servidor. Para obter informações sobre como ler o log de eventos estendidos, consulte [exibir dados de sessão de evento](http://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx).  
   
  Para operações de conexão ADO.NET enviará um cliente ID de conexão. Se a conexão falhar, você pode acessar o buffer de anéis de conectividade ([solução de problemas de conectividade no SQL Server 2008 com o Buffer de anéis de conectividade](http://go.microsoft.com/fwlink/?LinkId=207752)) e localize o `ClientConnectionID` campo e obter informações de diagnóstico o Falha na conexão. As IDs de conexão de cliente são registradas no buffer de anéis se ocorrer um erro. (Se uma conexão falhar antes de enviar o pacote anterior ao logon, uma ID de conexão do cliente não será gerada.) A ID de conexão do cliente é um GUID de 16 bytes. Você também pode encontrar a conexão de cliente ID na saída de destino de eventos estendidos, se o `client_connection_id` ação for adicionada aos eventos em uma sessão de eventos estendidos. Você pode habilitar o rastreamento de acesso de dados e execute novamente o comando de conexão e observar o `ClientConnectionID` campo no rastreamento de acesso a dados, se você precisar de mais assistência de diagnóstico de driver do cliente.  
   

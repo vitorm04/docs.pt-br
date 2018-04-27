@@ -1,30 +1,32 @@
 ---
-title: "Visão geral de TextBox"
-ms.custom: 
+title: Visão geral de TextBox
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], about TextBox control
 ms.assetid: 1ba6dc5b-11a7-4247-9213-36c6729ee35f
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 50e36192198c172843d79a4195e894b848f84c90
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 02e7a5046dec689b1088585d58e4e424751ac512
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="textbox-overview"></a>Visão geral de TextBox
-O <xref:System.Windows.Controls.TextBox> classe permite que você exiba ou edite o texto não formatado. Um uso comum de um <xref:System.Windows.Controls.TextBox> está editando o texto não formatado em um formulário. Por exemplo, um formulário solicitando o nome do usuário, número de telefone, etc. usaria <xref:System.Windows.Controls.TextBox> controles de entrada de texto. Este tópico apresenta o <xref:System.Windows.Controls.TextBox> classe e fornece exemplos de como usá-lo em ambos os [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)].  
+O <xref:System.Windows.Controls.TextBox> classe permite que você exiba ou edite o texto não formatado. Um uso comum de um <xref:System.Windows.Controls.TextBox> está editando o texto não formatado em um formulário. Por exemplo, um formulário solicitando o nome do usuário, número de telefone, etc. usaria <xref:System.Windows.Controls.TextBox> controles de entrada de texto. Este tópico apresenta o <xref:System.Windows.Controls.TextBox> classe e fornece exemplos de como usá-lo no [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e c#.  
   
  
   
@@ -32,7 +34,7 @@ O <xref:System.Windows.Controls.TextBox> classe permite que você exiba ou edite
 ## <a name="textbox-or-richtextbox"></a>TextBox ou RichTextBox?  
  Ambos <xref:System.Windows.Controls.TextBox> e <xref:System.Windows.Controls.RichTextBox> permitem que os usuários para texto de entrada, mas os dois controles são usados para cenários diferentes. Um <xref:System.Windows.Controls.TextBox> requer menos recursos do sistema, um <xref:System.Windows.Controls.RichTextBox> então é o ideal quando apenas texto sem formatação precisa ser editado (isto é, uso em um formulário). A <xref:System.Windows.Controls.RichTextBox> é uma opção melhor quando é necessário que o usuário edite texto formatado, imagens, tabelas ou outras suporte para conteúdo. Por exemplo, a edição de um documento, artigo ou blog que requer formatação, imagens, etc. é melhor realizada usando um <xref:System.Windows.Controls.RichTextBox>. A tabela a seguir resume os principais recursos de <xref:System.Windows.Controls.TextBox> e <xref:System.Windows.Controls.TextBox>.  
   
-|Controle|Correção ortográfica em tempo real|O menu de contexto|Os comandos de formatação <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (Ctr + B)|<xref:System.Windows.Documents.FlowDocument>conteúdo, como imagens, parágrafos, tabelas, etc.|  
+|Controle|Correção ortográfica em tempo real|O menu de contexto|Os comandos de formatação <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (Ctr + B)|<xref:System.Windows.Documents.FlowDocument> conteúdo, como imagens, parágrafos, tabelas, etc.|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Windows.Controls.TextBox>|Sim|Sim|Não|Nº|  
 |<xref:System.Windows.Controls.RichTextBox>|Sim|Sim|Sim (consulte [Visão geral de RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md))|Sim (consulte [Visão geral de RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md))|  

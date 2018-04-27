@@ -1,22 +1,20 @@
 ---
-title: "Expressões match (F#)"
-description: "Saiba como a expressão de correspondência do F # fornece controle ramificação com base na comparação de uma expressão com um conjunto de padrões."
-keywords: "visual f#, f#, programação funcional"
+title: 'Expressões Match (F #)'
+description: 'Saiba como a expressão de correspondência do F # fornece controle ramificação com base na comparação de uma expressão com um conjunto de padrões.'
 author: cartermp
 ms.author: phcart
-ms.date: 05/16/2016
+ms.date: 04/19/2018
 ms.topic: language-reference
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
-ms.assetid: 8854b713-255a-408d-942a-e80ab52fd2a4
-ms.openlocfilehash: c8b9be744cfa7bc76f0d663b12abd66f8757fc56
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f843e6fde98eae8a10235dd5cae38ffc10a4fb9f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="match-expressions"></a>Expressões match
+# <a name="match-expressions"></a>Expressões Match
 
 O `match` expressão fornece controle ramificação com base na comparação de uma expressão com um conjunto de padrões.
 
@@ -48,7 +46,7 @@ fun arg ->
     | pattern1 [ when condition ] -> result-expression1
     | pattern2 [ when condition ] -> result-expression2
     | ...
-```    
+```
 
 Para obter mais informações sobre expressões lambda, consulte [expressões Lambda: A `fun` palavra-chave](functions/lambda-expressions-the-fun-keyword.md).
 
@@ -66,14 +64,29 @@ O exemplo a seguir ilustra o uso de uma proteção para especificar um intervalo
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4602.fs)]
 
-Observe que como valores diferentes de literais não podem ser usados no padrão, você deve usar um `when` cláusula se você tiver alguma parte da entrada em relação a um valor de comparar. Isso será mostrado no código a seguir.
+Observe que como valores diferentes de literais não podem ser usados no padrão, você deve usar um `when` cláusula se você tiver alguma parte da entrada em relação a um valor de comparar. Isso é mostrado no código a seguir:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4603.fs)]
 
+Observe que, quando um padrão de união é coberto por um protetor, a proteção se aplica a **todos os** de padrões, não apenas o último deles. Por exemplo, considerando o código a seguir, a proteção de `when a > 12` se aplica às `A a` e `B a`:
+
+```fsharp
+type Union =
+    | A of int
+    | B of int
+
+let foo() =
+    let test = A 42
+    match test with
+    | A a
+    | B a when a > 41 -> a // the guard applies to both patterns
+    | _ -> 1
+
+foo() // returns 42
+```
+
 ## <a name="see-also"></a>Consulte também
 
-[Referência da Linguagem F#](index.md)
-
-[Padrões Ativos](active-patterns.md)
-
-[Correspondência Padrão](pattern-matching.md)
+[Referência da Linguagem F#](index.md)  
+[Padrões Ativos](active-patterns.md)  
+[Correspondência Padrão](pattern-matching.md)  

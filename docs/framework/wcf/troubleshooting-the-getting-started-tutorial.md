@@ -1,24 +1,26 @@
 ---
-title: "Solução de problemas do tutorial de introdução"
-ms.custom: 
+title: Solução de problemas do tutorial de introdução
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55288074b35bcb00d6c6b453f1320ad40d26a5f7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d8bc077b1ef24ecfcb4d37a9ddb8389dc705f68e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-the-getting-started-tutorial"></a>Solução de problemas do tutorial de introdução
 Este tópico lista os problemas mais comuns encontrados ao trabalhar com o Tutorial de Introdução e como resolvê-los.  
@@ -35,11 +37,11 @@ Este tópico lista os problemas mais comuns encontrados ao trabalhar com o Tutor
   
 6.  [Compilar o aplicativo cliente: O nome do namespace ou tipo 'CalculatorClient' não pôde ser encontrado (está faltando um usando diretiva ou uma referência de assembly?)](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q6)  
   
-7.  [Executando o cliente: exceção sem tratamento: System.ServiceModel.EndpointNotFoundException: não foi possível conectar ao http://localhost:8000/ServiceModelSamples/serviço/CalculatorService. Código de erro TCP 10061: nenhuma conexão pôde ser feita porque a máquina de destino recusou ativamente.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q7)  
+7.  [Executando o cliente: exceção sem tratamento: System.ServiceModel.EndpointNotFoundException: não foi possível conectar ao http://localhost:8000/ServiceModelSamples/Service/CalculatorService. Código de erro TCP 10061: nenhuma conexão pôde ser feita porque a máquina de destino recusou ativamente.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q7)  
   
 <a name="BKMK_q1"></a>   
 ## <a name="i-am-unable-to-find-the-project-files-on-my-hard-drive"></a>Não é possível localizar os arquivos de projeto no disco rígido.  
- [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]salva projeto arquivos c:\Users\\< usuário name\Documents\\< versão do Visual Studio\>\Projects na [!INCLUDE[wv](../../../includes/wv-md.md)] e [!INCLUDE[win7_client_secondref](../../../includes/win7-client-secondref-md.md)]e c:\Documents and Settings\\< nome de usuário\>Documentos \My\\< versão do Visual Studio\>\Projects em versões anteriores do Windows.  
+ O Visual Studio salva arquivos de projeto c:\Users\\< usuário name\Documents\\< versão do Visual Studio\>\Projects na [!INCLUDE[wv](../../../includes/wv-md.md)] e [!INCLUDE[win7_client_secondref](../../../includes/win7-client-secondref-md.md)]e c:\Documents and Settings\\< nome de usuário \>Documentos \My\\< versão do Visual Studio\>\Projects em versões anteriores do Windows.  
   
 <a name="BKMK_q2"></a>   
 ## <a name="attempting-to-run-the-service-application-http-could-not-register-url-http8000servicemodelsamplesservice-your-process-does-not-have-access-rights-to-this-namespace"></a>Ao tentar executar o aplicativo de serviço: HTTP não pôde registrar a URL http://+:8000/ServiceModelSamples/Service/. O processo não tem direitos de acesso a esse namespace.  
@@ -62,11 +64,11 @@ Este tópico lista os problemas mais comuns encontrados ao trabalhar com o Tutor
  Você receberá esse erro se você não adicionar o arquivo Proxy.cs ou Proxy.vb ao seu projeto de cliente.  
   
 <a name="BKMK_q7"></a>   
-## <a name="running-the-client-unhandled-exception-systemservicemodelendpointnotfoundexception-could-not-connect-to-httplocalhost8000servicemodelsamplesservicecalculatorservice-tcp-error-code-10061-no-connection-could-be-made-because-the-target-machine-actively-refused-it"></a>Executando o cliente: exceção sem tratamento: System.ServiceModel.EndpointNotFoundException: não foi possível conectar ao http://localhost:8000/ServiceModelSamples/serviço/CalculatorService. Código de erro TCP 10061: nenhuma conexão pôde ser feita porque a máquina de destino recusou ativamente.  
+## <a name="running-the-client-unhandled-exception-systemservicemodelendpointnotfoundexception-could-not-connect-to-httplocalhost8000servicemodelsamplesservicecalculatorservice-tcp-error-code-10061-no-connection-could-be-made-because-the-target-machine-actively-refused-it"></a>Executando o cliente: exceção sem tratamento: System.ServiceModel.EndpointNotFoundException: não foi possível conectar ao http://localhost:8000/ServiceModelSamples/Service/CalculatorService. Código de erro TCP 10061: nenhuma conexão pôde ser feita porque a máquina de destino recusou ativamente.  
  Esse erro ocorre se você executar o aplicativo cliente sem executar o serviço.  
   
 <a name="BKMK_q8"></a>   
-## <a name="unhandled-exception-systemservicemodelsecuritysecuritynegotiationexception-soap-security-negotiation-with-httplocalhost8000servicemodelsamplesservicecalculatorservice-for-target-httplocalhost8000servicemodelsamplesservicecalculatorservice-failed"></a>Exceção sem tratamento: System.ServiceModel.Security.SecurityNegotiationException: negociação de segurança SOAP com 'http://localhost:8000/ServiceModelSamples/serviço/CalculatorService' para o destino ' http://localhost:8000/ServiceModelSamples/serviço/CalculatorService' falhou  
+## <a name="unhandled-exception-systemservicemodelsecuritysecuritynegotiationexception-soap-security-negotiation-with-httplocalhost8000servicemodelsamplesservicecalculatorservice-for-target-httplocalhost8000servicemodelsamplesservicecalculatorservice-failed"></a>Exceção sem tratamento: System.ServiceModel.Security.SecurityNegotiationException: negociação de segurança SOAP com 'http://localhost:8000/ServiceModelSamples/Service/CalculatorService'para o destino de'http://localhost:8000/ServiceModelSamples/Service/CalculatorService' falhou  
  Esse erro ocorre em um computador ingressado no domínio que não tenha conectividade de rede. Conectar o computador à rede ou desativar a segurança para o cliente e o serviço. Para o serviço, modifique o código que cria o WSHttpBinding ao seguinte.  
   
 ```  

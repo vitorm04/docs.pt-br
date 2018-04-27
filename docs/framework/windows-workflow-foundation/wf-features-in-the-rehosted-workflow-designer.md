@@ -1,23 +1,24 @@
 ---
 title: Suporte para novas Funcionalidades do Workflow Foundation 4.5 no Designer de Fluxo de Trabalho hospedado novamente
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee8467eaeaef490f4c7a8bfbcb204506d71f5500
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 999c18f20264a71cf73bbd5afd352ad3104a03e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Suporte para novas Funcionalidades do Workflow Foundation 4.5 no Designer de Fluxo de Trabalho hospedado novamente
 O [!INCLUDE[wf](../../../includes/wf-md.md)] no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] introduziu muitos novos recursos, incluindo vários aprimoramentos à experiência do designer de fluxo de trabalho. Este tópico detalha quais desses recursos têm suporte no designer hospedado novamente e que não têm suporte no momento.  
@@ -54,7 +55,7 @@ O [!INCLUDE[wf](../../../includes/wf-md.md)] no [!INCLUDE[net_v45](../../../incl
   
  A captura de tela a seguir mostra uma atividade de `WriteLine` no `Body` de um `NoPersistScope`.  
   
- ![Auto &#45; surround drop local](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
+ ![Auto&#45;envolvem o local de destino](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
   
  A captura de tela a seguir mostra a atividade de `Sequence` criada automaticamente no `Body` quando um segundo `WriteLine` é solto abaixo do primeiro.  
   
@@ -75,7 +76,7 @@ O [!INCLUDE[wf](../../../includes/wf-md.md)] no [!INCLUDE[net_v45](../../../incl
  Várias seleções de atividade também podem ser arrastadas e soltadas dentro do designer, e também podem ser interagidas usando o menu de contexto.  
   
 ### <a name="outline-view-of-workflow-items"></a>Exibição de destaque de itens de fluxo de trabalho  
- Para facilitar a navegação de fluxos de trabalho hierárquicos, os componentes de um fluxo de trabalho são mostrados em uma exibição de destaque em estilo de árvore. O modo de exibição de estrutura de tópicos é exibido no **esboço de documento** exibição. Para abrir este modo de exibição [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)], no menu superior, selecione **exibição**, **outras janelas**, **esboço de documento**, ou pressione Ctrl W, U. Clicar em um nó na exibição de destaque navegará para a atividade correspondente no designer de fluxo de trabalho, e a exibição da estrutura será atualizada para mostrar as atividades que estão selecionadas no designer. Esse recurso tem suporte no designer hospedado novamente.  
+ Para facilitar a navegação de fluxos de trabalho hierárquicos, os componentes de um fluxo de trabalho são mostrados em uma exibição de destaque em estilo de árvore. O modo de exibição de estrutura de tópicos é exibido no **esboço de documento** exibição. Para abrir este modo de exibição no Visual Studio, no menu superior, selecione **exibição**, **outras janelas**, **esboço de documento**, ou pressione Ctrl W, U. Clicar em um nó na exibição de destaque navegará para a atividade correspondente no designer de fluxo de trabalho, e a exibição da estrutura será atualizada para mostrar as atividades que estão selecionadas no designer. Esse recurso tem suporte no designer hospedado novamente.  
   
  A seguinte captura de tela do fluxo de trabalho concluído do [Tutorial de Introdução](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) mostra a exibição de estrutura de tópicos com um fluxo de trabalho sequencial.  
   
@@ -93,7 +94,7 @@ O [!INCLUDE[wf](../../../includes/wf-md.md)] no [!INCLUDE[net_v45](../../../incl
   
  As atividades também podem ser arrastadas em conexões entre nós de fluxograma e estados para inserção automática do nó entre dois outros nós. A captura de tela a seguir mostra a linha de conexão realçada em que as atividades podem ser arrastadas da caixa de ferramentas e soltas.  
   
- ![Auto &#45; identificador para remover atividades de inserção](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")  
+ ![Auto&#45;inserir alça para descartar atividades](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")  
   
  A conexão automática e a inserção automática têm suporte no designer hospedado novamente.  
   
@@ -149,7 +150,7 @@ O [!INCLUDE[wf](../../../includes/wf-md.md)] no [!INCLUDE[net_v45](../../../incl
  Para obter mais informações sobre a criação de fluxos de trabalho de máquina de estado, consulte [fluxos de trabalho de máquina de estado](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md). Os fluxos de trabalho da máquina de estado têm suporte no designer hospedado novamente.  
   
 ### <a name="contract-first-workflow-development"></a>Desenvolvimento de fluxo de trabalho de primeiro contrato  
- A ferramenta de desenvolvimento de fluxo de trabalho de primeiro contrato permite que o desenvolvedor crie um contrato no código primeiro e, em seguida, com alguns cliques no [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)], gere automaticamente um modelo de atividade na caixa de ferramentas representando cada operação. Essas atividades são então usadas para criar um fluxo de trabalho que implementa as operações definidas pelo contrato. O designer de fluxo de trabalho validará o serviço de fluxo de trabalho para assegurar que essas operações sejam implementadas e a assinatura do fluxo de trabalho corresponda à assinatura do contrato. O desenvolvedor também pode associar um serviço de fluxo de trabalho a uma coleção de contratos implementados. Para obter mais informações sobre o desenvolvimento de serviço de fluxo de trabalho do contrato, primeiro, consulte [como: criar um serviço de fluxo de trabalho que consome um contrato de serviço existente](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
+ A ferramenta de desenvolvimento de fluxo de trabalho de primeiro contrato permite ao desenvolvedor criar um contrato no código primeiro e, com alguns cliques no Visual Studio, gerar automaticamente um modelo de atividade na caixa de ferramentas que representa cada operação. Essas atividades são então usadas para criar um fluxo de trabalho que implementa as operações definidas pelo contrato. O designer de fluxo de trabalho validará o serviço de fluxo de trabalho para assegurar que essas operações sejam implementadas e a assinatura do fluxo de trabalho corresponda à assinatura do contrato. O desenvolvedor também pode associar um serviço de fluxo de trabalho a uma coleção de contratos implementados. Para obter mais informações sobre o desenvolvimento de serviço de fluxo de trabalho do contrato, primeiro, consulte [como: criar um serviço de fluxo de trabalho que consome um contrato de serviço existente](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 > [!WARNING]
 >  O desenvolvimento de fluxo de trabalho de primeiro contrato não tem suporte no designer de fluxo de trabalho.

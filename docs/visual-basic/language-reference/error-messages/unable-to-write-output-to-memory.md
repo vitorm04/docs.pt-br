@@ -16,11 +16,11 @@ ms.assetid: 23996dca-250f-4320-8211-1560e90172df
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 878ace4767bbf357a00a54bc2f7049e7097b7e17
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3f27fcf3bd1f80b5daf501609c2cd157c209924a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="unable-to-write-output-to-memory"></a>Não foi possível gravar a saída na memória
 Houve um problema ao gravar a saída na memória.  
@@ -33,7 +33,7 @@ Houve um problema ao gravar a saída na memória.
   
 2.  Se o erro persistir, salve seu trabalho e reinicie o [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
-3.  Se o erro persistir, reinstale o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+3.  Se o erro persistir, reinstale o Visual Basic.  
   
 4.  Se o erro persistir após a reinstalação, notifique o Microsoft Product Support Services.  
   

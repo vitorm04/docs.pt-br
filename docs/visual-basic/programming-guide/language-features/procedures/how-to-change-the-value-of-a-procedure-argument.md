@@ -1,11 +1,12 @@
 ---
 title: Como alterar o valor de um argumento de procedimento (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ba23c8f0b4b0b6e751546019af902a6305b9ef53
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 93d9cc11e919e45fdd3b48dd2731b165f3466640
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Como alterar o valor de um argumento de procedimento (Visual Basic)
 Quando você chama um procedimento, cada argumento que você fornecer corresponde a um dos parâmetros definidos no procedimento. Em alguns casos, o código do procedimento pode alterar o valor subjacente um argumento no código de chamada. Em outros casos, o procedimento pode alterar apenas sua cópia local de um argumento.  
   
- Quando você chamar o procedimento [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] faz uma cópia local de cada argumento que é passado [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Para cada argumento passado [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] fornece o código do procedimento uma referência direta para o elemento de programação subjacente do argumento no código de chamada.  
+ Quando você chamar o procedimento, o Visual Basic faz uma cópia local de cada argumento que é passado [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Para cada argumento passado [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic fornece o código do procedimento uma referência direta para o elemento de programação subjacente do argumento no código de chamada.  
   
  Se o elemento base no código de chamada é um elemento modificável e o argumento é passado `ByRef`, o código do procedimento pode usar a referência direta para alterar o valor do elemento no código de chamada.  
   
@@ -58,7 +59,7 @@ Quando você chama um procedimento, cada argumento que você fornecer correspond
   
      -ou-  
   
-     No código de chamada, coloque o argumento entre parênteses na lista de argumentos. Isso força [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] para passar o argumento por valor, mesmo se o parâmetro correspondente especifica `ByRef`.  
+     No código de chamada, coloque o argumento entre parênteses na lista de argumentos. Isso força o Visual Basic para passar o argumento por valor, mesmo se o parâmetro correspondente especifica `ByRef`.  
   
 2.  No código do procedimento, use o nome do parâmetro para atribuir um valor para a cópia local do argumento. O valor subjacente no código de chamada não é alterado.  
   
@@ -80,7 +81,7 @@ Quando você chama um procedimento, cada argumento que você fornecer correspond
 ## <a name="compiling-the-code"></a>Compilando o código  
  Quando uma variável é passada por referência, você deve usar o `ByRef` palavra-chave para especificar esse mecanismo.  
   
- O padrão no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] é passar argumentos por valor. No entanto, é uma boa prática para incluir qualquer um de programação de [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) ou [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) palavra-chave com cada parâmetro declarado. Isso facilita a leitura do seu código.  
+ O padrão no Visual Basic é passar argumentos por valor. No entanto, é uma boa prática para incluir qualquer um de programação de [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) ou [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) palavra-chave com cada parâmetro declarado. Isso facilita a leitura do seu código.  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  Sempre há um risco potencial em permitir que um procedimento alterar o valor subjacente um argumento no código de chamada. Verifique se você espera que esse valor a ser alterado e esteja preparado para verificá-lo para validade antes de usá-lo.  

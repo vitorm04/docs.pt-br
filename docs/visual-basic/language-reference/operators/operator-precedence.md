@@ -1,10 +1,11 @@
 ---
-title: "Precedência do operador no Visual Basic"
+title: Precedência do operador no Visual Basic
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - arithmetic operators [Visual Basic], precedence
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6c0fb466b404cafdd4b91d061971fd683375c715
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2d8de9deea84c7f0c11c91b55951cdfc200b017f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Precedência do operador no Visual Basic
 Quando várias operações ocorrem em uma expressão, cada parte é avaliado e resolvido em uma ordem predeterminada chamada *precedência do operador*.  
@@ -95,10 +96,10 @@ Dim n3 As Integer = 96 / (8 / 4)
   
  A primeira expressão é avaliada a divisão de 96 / 8 (o que resulta em 12) e, em seguida, a divisão de 12 / 4, o que resulta em três. Porque o compilador avalia as operações para `n1` da esquerda para a direita, a avaliação é o mesmo quando a ordem é explicitamente indicado para `n2`. Ambos `n1` e `n2` tem um resultado de três. Por outro lado, `n3` possui um resultado de 48, porque os parênteses forçam o compilador para avaliar 8 / 4 primeiro.  
   
- Devido a esse comportamento, operadores são considerados *deixado associativa* em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Devido a esse comportamento, operadores são considerados *deixado associativa* no Visual Basic.  
   
 ## <a name="overriding-precedence-and-associativity"></a>Substituição de precedência e associatividade  
- Você pode usar parênteses para forçar algumas partes de uma expressão a ser avaliada antes de outros. Isso pode substituir a ordem de precedência e a capacidade de associação à esquerda. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]sempre executa operações que estão entre parênteses antes de pessoas de fora. No entanto, dentro dos parênteses, ele mantém comum precedência e a associação, a menos que você use parênteses entre parênteses. O exemplo a seguir ilustra essa situação.  
+ Você pode usar parênteses para forçar algumas partes de uma expressão a ser avaliada antes de outros. Isso pode substituir a ordem de precedência e a capacidade de associação à esquerda. Visual Basic sempre executa operações que estão entre parênteses antes de pessoas de fora. No entanto, dentro dos parênteses, ele mantém comum precedência e a associação, a menos que você use parênteses entre parênteses. O exemplo a seguir ilustra essa situação.  
   
 ```  
 Dim a, b, c, d, e, f, g As Double  

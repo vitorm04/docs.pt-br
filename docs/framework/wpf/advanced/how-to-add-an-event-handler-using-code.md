@@ -1,12 +1,13 @@
 ---
-title: "Como adicionar um manipulador de eventos usando código"
-ms.custom: 
+title: Como adicionar um manipulador de eventos usando código
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3abcd441219e58df2e5a0d4b66447e255c6aabd4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4e7627589ff7e422c4ad3cd7a37fdc14c8a9c9f4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>Como adicionar um manipulador de eventos usando código
 Esse exemplo mostra como adicionar um manipulador de eventos a um elemento usando código.  
@@ -34,7 +36,7 @@ Esse exemplo mostra como adicionar um manipulador de eventos a um elemento usand
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir adiciona um novo <xref:System.Windows.Controls.Button> para uma página existente que está inicialmente definida em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Um arquivo code-behind implementa um método de manipulador de eventos e então adiciona esse método como um novo manipulador de eventos sobre o <xref:System.Windows.Controls.Button>.  
   
- O exemplo [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] usa o operador `+=` para atribuir um manipulador a um evento. Este é o mesmo operador que é usado para atribuir um manipulador no modelo de manipulação de eventos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] não dá suporte a esse operador como forma de adicionar manipuladores de eventos. Em vez disso, ele requer uma de duas técnicas:  
+ O exemplo c# usa o `+=` operador para atribuir um manipulador para um evento. Este é o mesmo operador que é usado para atribuir um manipulador no modelo de manipulação de eventos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. Microsoft Visual Basic não oferece suporte a esse operador como um meio de adicionar manipuladores de eventos. Em vez disso, ele requer uma de duas técnicas:  
   
 -   Use o <xref:System.Windows.UIElement.AddHandler%2A> método, junto com um `AddressOf` operador, para fazer referência a implementação do manipulador de eventos.  
   

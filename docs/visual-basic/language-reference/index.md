@@ -17,18 +17,18 @@ ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
 caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2524df987bfea25b294c6e24abe5a6d8ff548df1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f65df8469ecfbc1296963f95eefbb29068f1cb57
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-language-reference"></a>Referência da linguagem Visual Basic
-Esta seção fornece informações de referência para vários aspectos da linguagem [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+Esta seção fornece informações de referência para vários aspectos da linguagem do Visual Basic.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Convenções Tipográficas e de Código](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
- Resume como palavras-chave, espaços reservados e outros elementos da linguagem são formatados na documentação do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Resume a maneira que as palavras-chave, espaços reservados e outros elementos da linguagem são formatados na documentação do Visual Basic.  
   
  [Membros da Biblioteca em Tempo de Execução do Visual Basic](../../visual-basic/language-reference/runtime-library-members.md)  
  Lista as classes e os módulos do namespace <xref:Microsoft.VisualBasic?displayProperty=nameWithType>, com links para as funções, os métodos, as propriedades, as constantes e as enumerações dos seus membros.  
@@ -37,46 +37,46 @@ Esta seção fornece informações de referência para vários aspectos da lingu
  Lista todas as palavras-chave do Visual Basic e fornece links para mais informações.  
   
  [Atributos (Visual Basic)](../../visual-basic/language-reference/attributes.md)  
- Documenta os atributos disponíveis no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Documenta os atributos disponíveis no Visual Basic.  
   
  [Constantes e Enumerações](../../visual-basic/language-reference/constants-and-enumerations.md)  
- Documenta as constantes e as enumerações disponíveis no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Documenta as constantes e enumerações disponíveis no Visual Basic.  
   
  [Tipos de Dados](../../visual-basic/language-reference/data-types/data-type-summary.md)  
- Documenta os tipos de dados disponíveis no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Documenta os tipos de dados disponíveis no Visual Basic.  
   
  [Diretivas](../../visual-basic/language-reference/directives/directives.md)  
- Documenta as diretivas de compilador disponíveis no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Documenta as diretivas de compilador disponíveis no Visual Basic.  
   
  [Funções](../../visual-basic/language-reference/functions/index.md)  
- Documenta as funções de tempo de execução disponíveis no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Documenta as funções de tempo de execução disponíveis no Visual Basic.  
   
  [Modificadores](../../visual-basic/language-reference/modifiers/index.md)  
  Lista os modificadores de tempo de execução do Visual Basic e fornece links para mais informações.  
   
  [Módulos](../../visual-basic/language-reference/modules.md)  
- Documenta os módulos disponíveis no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] e seus membros.  
+ Documenta os módulos disponíveis no Visual Basic e seus membros.  
   
  [Nothing](../../visual-basic/language-reference/nothing.md)  
  Descreve o valor padrão de qualquer tipo de dados.  
   
  [Objetos](../../visual-basic/language-reference/objects/index.md)  
- Documenta os objetos disponíveis no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] e seus membros.  
+ Documenta os objetos disponíveis no Visual Basic e seus membros.  
   
  [Operadores](../../visual-basic/language-reference/operators/index.md)  
- Documenta os operadores disponíveis no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Documenta os operadores disponíveis no Visual Basic.  
   
  [Propriedades](../../visual-basic/language-reference/properties.md)  
- Documenta as propriedades disponíveis no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Documenta as propriedades disponíveis no Visual Basic.  
   
  [Consultas](../../visual-basic/language-reference/queries/queries.md)  
  Fornece informações de referência sobre como usar as expressões do [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] no código.  
   
  [Instruções](../../visual-basic/language-reference/statements/index.md)  
- Documenta as instruções executáveis e de declaração disponíveis no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Documenta as instruções de declaração e executável disponíveis no Visual Basic.  
   
  [Marcações de Comentário XML](../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)  
- Descreve os comentários da documentação para os quais o IntelliSense é fornecido no Editor de Códigos do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Descreve os comentários de documentação para os quais o IntelliSense é fornecido no Editor de código do Visual Basic.  
   
  [Propriedades do Eixo XML](../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
  Fornece links para informações sobre como usar propriedades do eixo XML para acessar XML diretamente no código.  
@@ -85,11 +85,11 @@ Esta seção fornece informações de referência para vários aspectos da lingu
  Fornece links para informações sobre como usar literais do XML para incorporar XML diretamente ao código.  
   
  [Mensagens de Erro](../../visual-basic/language-reference/error-messages/index.md)  
- Fornece uma lista de mensagens de erro em tempo de execução e do compilador do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] e ajuda a tratá-los.  
+ Fornece uma lista de mensagens de erro de compilador e o tempo de execução do Visual Basic e ajuda sobre como lidar com eles.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Visual Basic](../../visual-basic/index.md)  
- Fornece ajuda abrangente sobre todas as áreas da linguagem [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Fornece uma ajuda sobre todas as áreas da linguagem do Visual Basic.  
   
  [Compilador de linha de comando do Visual Basic](../../visual-basic/reference/command-line-compiler/index.md)  
  Descreve como usar o compilador de linha de comando como alternativa para compilar programas no IDE (ambiente de desenvolvimento integrado) do [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].

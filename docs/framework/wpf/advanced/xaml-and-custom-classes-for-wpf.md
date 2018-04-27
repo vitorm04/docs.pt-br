@@ -1,28 +1,30 @@
 ---
 title: XAML e classes personalizadas para WPF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - custom classes in XAML [WPF]
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da599afc94fba617d4df17c57679d8ee4bb05c61
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a7aa7ffe38f1fbd7de71dbc95ae12b8faca6e356
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>XAML e classes personalizadas para WPF
 Tal como implementado nas estruturas do [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)], o XAML dá suporte à capacidade de definir uma classe ou estrutura personalizada em qualquer linguagem do [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e, em seguida, acessar essa classe usando a marcação de XAML. É possível usar uma mistura de tipos definidos do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e tipos personalizados dentro do mesmo arquivo de marcação, normalmente mapeando os tipos personalizados até um prefixo de namespace de XAML. Este tópico aborda as exigências que uma classe personalizada deve cumprir para que possa ser usada como um elemento XAML.  
@@ -70,7 +72,7 @@ Tal como implementado nas estruturas do [!INCLUDE[TLA#tla_clr](../../../../inclu
  Exemplos de propriedades onde a sintaxe de atributo é permitida mas a sintaxe de elemento de propriedade que contém um elemento de objeto não é permitido por meio de XAML são várias propriedades que tomam a <xref:System.Windows.Input.Cursor> tipo. O <xref:System.Windows.Input.Cursor> classe possui um conversor de tipo dedicado <xref:System.Windows.Input.CursorConverter>, mas não expõe um construtor padrão, portanto, o <xref:System.Windows.FrameworkElement.Cursor%2A> propriedade só pode ser definida por meio da sintaxe de atributo, embora o real <xref:System.Windows.Input.Cursor> é um tipo de referência.  
   
 ### <a name="per-property-type-converters"></a>Conversores de tipo por propriedade  
- Como alternativa, a própria propriedade poderá declarar um conversor de tipos no nível de propriedade. Isso permite uma "mini linguagem" que instancia objetos do tipo de propriedade em linha, pelo processamento de valores de cadeia de caracteres de entrada do atributo como entrada para um <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> operação com base no tipo apropriado. Normalmente, isso é feito para fornecer um acessador de conveniência, mas não como meio exclusivo para configurar uma propriedade em XAML. No entanto, também é possível usar conversores de tipos para atributos em que você deseja usar [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] tipos existentes que não fornecem um construtor padrão ou um conversor de tipos atribuído. Exemplos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API são determinadas propriedades que usam o <xref:System.Globalization.CultureInfo> tipo. Nesse caso, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usado existente [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] <xref:System.Globalization.CultureInfo> tipo para lidar melhor com compatibilidade e cenários de migração que foram usados nas versões anteriores de estruturas, mas o <xref:System.Globalization.CultureInfo> tipo não oferecia suporte os construtores necessários ou conversão de tipo para ser usado como um valor de propriedade XAML diretamente no nível do tipo.  
+ Como alternativa, a própria propriedade poderá declarar um conversor de tipos no nível de propriedade. Isso permite uma "mini linguagem" que instancia objetos do tipo de propriedade em linha, pelo processamento de valores de cadeia de caracteres de entrada do atributo como entrada para um <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> operação com base no tipo apropriado. Normalmente, isso é feito para fornecer um acessador de conveniência, mas não como meio exclusivo para configurar uma propriedade em XAML. No entanto, também é possível usar conversores de tipos para atributos em que você deseja usar [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] tipos existentes que não fornecem um construtor padrão ou um conversor de tipos atribuído. Exemplos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API são determinadas propriedades que usam o <xref:System.Globalization.CultureInfo> tipo. Nesse caso, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usado o Microsoft .NET Framework existente <xref:System.Globalization.CultureInfo> tipo para lidar melhor com compatibilidade e cenários de migração que foram usados nas versões anteriores de estruturas, mas o <xref:System.Globalization.CultureInfo> tipo não oferecia suporte a necessária construtores ou conversão de tipo de nível de tipo para ser usado como um valor de propriedade XAML diretamente.  
   
  Sempre que você expõe uma propriedade que tem uma utilização de XAML, especialmente se for um autor de controle, considere a possibilidade de dar suporte a essa propriedade com uma propriedade de dependência. Isso é especialmente verdadeiro se você usar a existente [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] implementação do processador XAML, porque você pode melhorar o desempenho usando <xref:System.Windows.DependencyProperty> fazendo. Uma propriedade de dependência vai expor recursos do sistema de propriedades para a propriedade que os usuários virão a esperar de uma propriedade acessível do XAML. Isso inclui recursos como animação, vinculação de dados e suporte de estilo. Para obter mais informações, consulte [Propriedades de dependência personalizada](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) e [Carregamento de XAML e propriedades de dependência](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md).  
   

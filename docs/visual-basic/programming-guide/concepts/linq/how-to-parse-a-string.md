@@ -1,30 +1,31 @@
 ---
 title: 'Como: analisar uma cadeia de caracteres (Visual Basic)'
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 10b80c72cae70437ff812c4b67b2532d708f1e69
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d0fd7c7adcfbd7e2136d1a652017d470634016b9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-parse-a-string-visual-basic"></a>Como: analisar uma cadeia de caracteres (Visual Basic)
 Este tópico mostra como criar uma árvore XML em c#.  
   
 ## <a name="example"></a>Exemplo  
- Você pode analisar uma cadeia de caracteres em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] usando o `XElement.Parse` método. No entanto, é mais eficiente usar literais XML, conforme mostrado no código a seguir, porque literais XML não tem as mesmo penalidades de desempenho como análise de XML de uma cadeia de caracteres.  
+ Você pode analisar uma cadeia de caracteres no Visual Basic usando o `XElement.Parse` método. No entanto, é mais eficiente usar literais XML, conforme mostrado no código a seguir, porque literais XML não tem as mesmo penalidades de desempenho como análise de XML de uma cadeia de caracteres.  
   
- Usando literais XML, você pode simplesmente copiar e colar o XML no seu programa [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Usando literais XML, você pode apenas copiar e colar o XML em seu programa Visual Basic.  
   
 > [!NOTE]
 >  Analisar texto ou carregar um documento XML de um arquivo de texto é menos eficiente do que a construção funcional. Se você estiver inicializando uma árvore XML de código, o tempo do processador é menor para usar a construção funcional do que para analisar texto.  

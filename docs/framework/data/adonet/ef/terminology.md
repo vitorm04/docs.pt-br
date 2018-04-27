@@ -1,24 +1,26 @@
 ---
 title: Terminologia do Entity Framework
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a2d55319b5463b2c9624fe22e7a16235c3d57614
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cd85760e219e810c089ebe88c8295d79ebaf0944
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="entity-framework-terminology"></a>Terminologia do Entity Framework
 Este tópico define condições frequentemente referenciadas em [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] documentação. Os links são fornecidos para tópicos relevantes em que há informações adicionais disponíveis.  
@@ -55,7 +57,7 @@ Este tópico define condições frequentemente referenciadas em [!INCLUDE[adonet
 |associação independente|Uma associação entre entidades que é representada e controlada por um objeto independente.|  
 |key|O atributo de um tipo de entidade que especifica qual propriedade ou conjunto de propriedades será usado para identificar instâncias exclusivas do tipo de entidade. Representado na camada de objeto pela classe <xref:System.Data.EntityKey>.<br /><br /> Para obter mais informações, consulte [chave de elemento (CSDL)](http://msdn.microsoft.com/library/0cdb1402-dbc7-4a04-a11e-5729cdf7431b) e [chave da entidade](../../../../../docs/framework/data/adonet/entity-key.md).|  
 |carregamento diferido|Quando os objetos são retornados por uma consulta, os objetos relacionados não são carregados ao mesmo tempo. Em vez disso, eles são carregados automaticamente quando a propriedade de navegação é acessada.|  
-|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Uma sintaxe de consulta que define um conjunto de operadores de consulta que permite operações de passagem, de filtro e de projeção a serem expressas de forma direta e declarativa no [!INCLUDE[csprcs](../../../../../includes/csprcs-md.md)] e no [!INCLUDE[vbprvb](../../../../../includes/vbprvb-md.md)].<br /><br /> Para obter mais informações, consulte [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
+|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Sintaxe de consulta que define um conjunto de operadores de consulta que permitem operações de passagem, filtrar e projeção a ser expressa em um modo direto, declarativo em Visual c# e Visual Basic.<br /><br /> Para obter mais informações, consulte [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
 |mapeamento|Uma especificação das correspondências entre itens de um modelo conceitual e itens de um modelo de armazenamento.<br /><br /> Para obter mais informações, consulte [especificação de MSL](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
 |arquivo .msl|Um arquivo XML que contém o mapeamento entre o modelo conceitual e o modelo de armazenamento, expresso em MSL.|  
 |MSL (linguagem de especificação de mapeamento)|Uma linguagem baseada em XML usada para mapear itens definidos em um modelo conceitual para itens de um modelo de armazenamento.<br /><br /> Para obter mais informações, consulte [especificação de MSL](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
@@ -64,7 +66,7 @@ Este tópico define condições frequentemente referenciadas em [!INCLUDE[adonet
 |vários conjuntos de entidades por tipo|A capacidade de um tipo de entidade a ser definido em mais de um conjunto de entidades.<br /><br /> Para obter mais informações, consulte [elemento EntitySet (CSDL)](http://msdn.microsoft.com/library/ec56db77-718d-4c0e-adc9-f1d33c896287) e [como: definir um modelo com vários conjuntos de entidades por tipo](http://msdn.microsoft.com/library/61aa4fca-5ac0-4f47-9bc8-46e8c2965ef7).|  
 |propriedade de navegação|A propriedade de um tipo de entidade que representa uma relação com outro tipo de entidade, conforme definido por uma associação. As propriedades de navegação são usadas para retornar objetos relacionados como <xref:System.Data.Objects.DataClasses.EntityCollection%601> ou <xref:System.Data.Objects.DataClasses.EntityReference%601>, dependendo da multiplicidade na outra extremidade da associação.<br /><br /> Para obter mais informações, consulte [elemento NavigationProperty (CSDL)](http://msdn.microsoft.com/library/5829a238-a50e-4c81-901d-7b54fc00f27e) e [propriedade de navegação](../../../../../docs/framework/data/adonet/navigation-property.md).|  
 |caminhos de consulta|A representação de cadeia de caracteres de um caminho que especifica quais objetos serão retornados quando uma consulta de objeto for executada. Um caminho de consulta é definido chamando o método <xref:System.Data.Objects.ObjectQuery%601.Include%2A> em <xref:System.Data.Objects.ObjectQuery%601>.<br /><br /> Para obter mais informações, consulte [objetos relacionados ao carregar](http://msdn.microsoft.com/library/452347d2-7b3b-44cd-9001-231299a28cb1).|  
-|contexto de objeto|Representa o contêiner de entidade definido no modelo conceitual. Ele contém uma conexão com a fonte de dados subjacente e fornece serviços como controle de alterações e resolução de identidade. Um contexto de objeto é representado por uma instância da classe <xref:System.Data.Objects.ObjectContext> ou `DbContext`.<br /><br /> `DbContext`é parte do [Entity Framework 5.0](http://go.microsoft.com/fwlink/?LinkId=234900). O Entity Framework 5.0 não faz parte do .NET Framework, mas é criado no .NET Framework 4.5. O Entity Framework 5.0 está disponível como a ['Do Entity Framework'](http://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](http://go.microsoft.com/fwlink/?LinkId=232488) pacote. Para obter mais informações, consulte [versões do Entity Framework e controle de versão](http://go.microsoft.com/fwlink/?LinkId=234899).|  
+|contexto de objeto|Representa o contêiner de entidade definido no modelo conceitual. Ele contém uma conexão com a fonte de dados subjacente e fornece serviços como controle de alterações e resolução de identidade. Um contexto de objeto é representado por uma instância da classe <xref:System.Data.Objects.ObjectContext> ou `DbContext`.<br /><br /> `DbContext` é parte do [Entity Framework 5.0](http://go.microsoft.com/fwlink/?LinkId=234900). O Entity Framework 5.0 não faz parte do .NET Framework, mas é criado no .NET Framework 4.5. O Entity Framework 5.0 está disponível como a ['Do Entity Framework'](http://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](http://go.microsoft.com/fwlink/?LinkId=232488) pacote. Para obter mais informações, consulte [versões do Entity Framework e controle de versão](http://go.microsoft.com/fwlink/?LinkId=234899).|  
 |camada de objeto|Os tipos de entidade e as definições de contexto de objeto usados pelo Entity Framework.|  
 |consulta de objeto|Uma consulta executada em um contexto de objeto em um modelo conceitual que retorna dados como objetos.<br /><br /> Para obter mais informações, consulte [consultas de objeto](http://msdn.microsoft.com/library/0768033c-876f-471d-85d5-264884349276).|  
 |mapeamento relacional de objeto|Uma técnica para transformar dados de um banco de dados relacional em tipos de dados que podem ser usados em aplicativos de software orientados a objeto.<br /><br /> O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] fornece serviços de mapeamento relacional de objeto mapeando dados relacionais, conforme definido no modelo de armazenamento, para tipos de dados, conforme definido no modelo conceitual.<br /><br /> Para obter mais informações, consulte [de modelagem e mapeamento](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md).|  

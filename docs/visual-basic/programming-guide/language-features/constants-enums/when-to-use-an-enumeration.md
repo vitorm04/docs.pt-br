@@ -14,11 +14,11 @@ ms.assetid: e6e47b5b-3ed9-452d-a481-9c3fed88519a
 caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a3b2937cc71c0c31bd8dce3d77fb33f48e1b5750
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ab152687f4f9e4ba6bd032ae7c1352f65af715f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>Quando usar uma enumeração (Visual Basic)
 Enumerações oferecem uma maneira fácil de trabalhar com conjuntos de constantes relacionadas. Uma enumeração, ou `Enum`, é um nome simbólico para um conjunto de valores. Enumerações são tratadas como tipos de dados, e você pode usá-los para criar conjuntos de constantes para uso com variáveis e propriedades.  
@@ -37,12 +37,12 @@ Enumerações oferecem uma maneira fácil de trabalhar com conjuntos de constant
 -   Garante a compatibilidade com versões posteriores. Com enumerações, seu código tem menos probabilidade de falhar se futuramente alguém altera os valores correspondentes aos nomes de membros.  
   
 ## <a name="naming-enumerations"></a>Enumerações de nomenclatura  
- Use uma convenção de nomenclatura para os membros da enumeração. Quando [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] encontra um nome de membro de enumeração, uma exceção pode ser acionada se outras bibliotecas de tipo referenciado com o mesmo nome. Use um prefixo exclusivo que identifica os valores do seu aplicativo ou componente.  
+ Use uma convenção de nomenclatura para os membros da enumeração. Quando o Visual Basic encontre um nome de membro de enumeração, uma exceção pode ser acionada se outras bibliotecas de tipo referenciado com o mesmo nome. Use um prefixo exclusivo que identifica os valores do seu aplicativo ou componente.  
   
  Ao fazer referência a um membro de uma enumeração, você deve qualificar o nome do membro com o nome de enumeração ou então usar o `Imports` instrução. Para obter mais informações, consulte [enumerações e qualificação de nome](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).  
   
 ## <a name="predefined-enumerations"></a>Enumerações predefinidas  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Fornece um número de enumerações predefinidos, como `FirstDayOfWeek` e `MsgBoxResult`, para facilitar o seu código. Para obter uma lista delas, consulte [constantes e enumerações](../../../../visual-basic/language-reference/constants-and-enumerations.md).  
+ Visual Basic oferece um número de enumerações predefinidos, como `FirstDayOfWeek` e `MsgBoxResult`, para facilitar o seu código. Para obter uma lista delas, consulte [constantes e enumerações](../../../../visual-basic/language-reference/constants-and-enumerations.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Como: declarar uma enumeração](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)  

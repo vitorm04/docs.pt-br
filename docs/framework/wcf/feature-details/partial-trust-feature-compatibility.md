@@ -1,30 +1,32 @@
 ---
-title: "Compatibilidade da funcionalidade de confiança parcial"
-ms.custom: 
+title: Compatibilidade da funcionalidade de confiança parcial
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-caps.latest.revision: "75"
+caps.latest.revision: 75
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1950a0c4015658affb0b9fa0d7c87a062865144b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 72282c62ad23ec825eab7054ab1909d07a062b45
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="partial-trust-feature-compatibility"></a>Compatibilidade da funcionalidade de confiança parcial
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]oferece suporte a um subconjunto limitado de funcionalidade quando executados em um ambiente parcialmente confiável. Os recursos com suporte em confiança parcial são projetados para um conjunto de cenários específicos, conforme descrito no [suporte para cenários de implantação](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) tópico.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] oferece suporte a um subconjunto limitado de funcionalidade quando executados em um ambiente parcialmente confiável. Os recursos com suporte em confiança parcial são projetados para um conjunto de cenários específicos, conforme descrito no [suporte para cenários de implantação](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) tópico.  
   
 ## <a name="minimum-permission-requirements"></a>Requisitos de permissão mínima  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]dá suporte a um subconjunto de recursos em aplicativos em execução em qualquer um dos seguintes conjuntos de permissões nomeadas padrão:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dá suporte a um subconjunto de recursos em aplicativos em execução em qualquer um dos seguintes conjuntos de permissões nomeadas padrão:  
   
 -   Permissões de confiança médio  
   
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Ao usar o `[ServiceKnownType]` atributo, o método especificado deve ser `public`.  
   
--   `[MessageContract]`classes e seus membros podem ser `public`. Se o `[MessageContract]` classe é definida no assembly do aplicativo pode ser `internal` e ter `internal` membros.  
+-   `[MessageContract]` classes e seus membros podem ser `public`. Se o `[MessageContract]` classe é definida no assembly do aplicativo pode ser `internal` e ter `internal` membros.  
   
 ## <a name="system-provided-bindings"></a>Associações fornecidas pelo sistema  
  O <xref:System.ServiceModel.BasicHttpBinding> e <xref:System.ServiceModel.WebHttpBinding> têm suporte total em um ambiente de confiança parcial. O <xref:System.ServiceModel.WSHttpBinding> tem suporte para somente modo de segurança de transporte.  
@@ -103,7 +105,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Verifique se o aplicativo é implantado como um aplicativo totalmente confiável que os usuários não podem modificar as configurações de segurança de acesso do código para executar o aplicativo em um ambiente de confiança parcial. Se eles podem fazer isso, o comportamento não é executado e nenhuma exceção é lançada. Para verificar isso, consulte o **levelfinal** usando a opção [Caspol.exe (ferramenta de política de segurança de acesso do código)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
- [!INCLUDE[crexample](../../../../includes/crexample-md.md)]um comportamento comum, consulte [como: bloqueio para pontos de extremidade na empresa](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
+ Para obter um exemplo de um comportamento comum, consulte [como: bloqueio para pontos de extremidade na empresa](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
 ## <a name="configuration"></a>Configuração  
  Com uma exceção, o código parcialmente confiável somente pode carregar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seções de configuração no local `app.config` arquivo. Para carregar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seções de configuração que fazem referência [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seções em Machine. config ou em um arquivo Web. config de raiz requer ConfigurationPermission(Unrestricted). Sem essa permissão, as referências a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seções de configuração (comportamentos, associações) fora os resultados do arquivo de configuração local em uma exceção quando a configuração é carregada.  
@@ -152,10 +154,10 @@ ms.lasthandoff: 12/22/2017
 >  Para evitar a saturação com erros duplicados, os arquivos de rastreamento [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] desabilita o rastreamento do recurso ou ação após a primeira falha de segurança. Há um rastreamento de exceção para cada acesso a recursos com falha, a primeira vez que é feita uma tentativa de acessar o recurso ou executar a ação.  
   
 ## <a name="wcf-service-host"></a>Host de serviço do WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]host de serviço não dá suporte a confiança parcial. Se você quiser usar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de serviço em confiança parcial, não use o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de projeto de biblioteca de serviço em [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] para criar o serviço. Em vez disso, crie um novo site no [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] escolhendo o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de site da Web do serviço, que pode hospedar o serviço em um servidor Web no qual [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] há suporte para a relação de confiança parcial.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] host de serviço não dá suporte a confiança parcial. Se você quiser usar um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de serviço em confiança parcial, não use o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de projeto de biblioteca de serviço em [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] para criar o serviço. Em vez disso, crie um novo site no [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] escolhendo o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de site da Web do serviço, que pode hospedar o serviço em um servidor Web no qual [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] há suporte para a relação de confiança parcial.  
   
 ## <a name="other-limitations"></a>Outras limitações  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]é geralmente limitado para as considerações de segurança que imponham pelo aplicativo host. Por exemplo, se [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] está hospedado em um aplicativo de navegador de XAML (XBAP), ele está sujeito a limitações XBAP, conforme descrito na [Windows Presentation Foundation Partial Trust Security](http://go.microsoft.com/fwlink/?LinkId=89138).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] é geralmente limitado para as considerações de segurança que imponham pelo aplicativo host. Por exemplo, se [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] está hospedado em um aplicativo de navegador de XAML (XBAP), ele está sujeito a limitações XBAP, conforme descrito na [Windows Presentation Foundation Partial Trust Security](http://go.microsoft.com/fwlink/?LinkId=89138).  
   
  Os seguintes recursos adicionais não são habilitados quando executar indigo2 em um ambiente de confiança parcial:  
   

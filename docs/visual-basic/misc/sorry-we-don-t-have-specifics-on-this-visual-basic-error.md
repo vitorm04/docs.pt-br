@@ -1,9 +1,10 @@
 ---
-title: "Infelizmente, estamos don &#39; não possui informações específicas sobre este erro do Visual Basic"
+title: Desculpe, estamos don&#39;t há informações específicas sobre este erro do Visual Basic
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vbc30234
@@ -3048,32 +3049,32 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 132bb3f93ae5084df73aed56b6d1483830984928
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4ab447c06504d6c3bb7c51107e422b2cba1f45e3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Infelizmente, estamos don &#39; não possui informações específicas sobre este erro do Visual Basic
+# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Desculpe, estamos don&#39;t há informações específicas sobre este erro do Visual Basic
 Infelizmente não temos informações específicas sobre este erro. Você pode procurar o número do erro e o texto da mensagem para localizar informações na web. Ou pode perguntar a outros desenvolvedores usando um destes fóruns:  
   
  [Linguagem Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145963)  
- Fornece um fórum para perguntas e discussões gerais sobre a linguagem e o compilador [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Fornece um fórum para perguntas discussões sobre e gerais da sintaxe de linguagem do Visual Basic e compilador.  
   
  [Interoperabilidade e atualização do Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145966)  
- Fornece um fórum para perguntas sobre problemas com a atualização para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] e o trabalho com recursos de interoperabilidade.  
+ Fornece um fórum para perguntas sobre e problemas com a atualização para o Visual Basic e trabalhar com recursos de interoperabilidade.  
   
  [IDE do Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145971)  
  Fornece um fórum para perguntas sobre como trabalhar no ambiente [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
  [Informações gerais sobre o Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145973)  
- Fornece um fórum para perguntas sobre, problemas com, o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] que não são discutidas em outros fóruns.  
+ Fornece um fórum para perguntas sobre e problemas com o Visual Basic não são abordados em outros fóruns.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
- Fornece um fórum para perguntas sobre e problemas com o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Fornece um fórum para perguntas sobre e problemas com o Visual Basic.  
   
  Consulte também:  
  [Recursos Adicionais para Programadores do Visual Basic](../../visual-basic/getting-started/additional-resources.md)  

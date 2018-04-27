@@ -1,11 +1,12 @@
 ---
-title: "Tipos de valor e referência"
-ms.custom: 
+title: Tipos de valor e referência
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - reference data types [Visual Basic]
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2b54945d27d186771e8b5353e753afd74c56d71b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9cbab25e4af6b96ae22fe18d0b8a8fdbc7a7c7a7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="value-types-and-reference-types"></a>Tipos de valor e referência
-No Visual Basic, os tipos de dados são implementados com base em sua classificação. O [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] tipos de dados podem ser classificados de acordo com se uma variável de um determinado tipo armazena seus próprios dados ou um ponteiro para os dados. Se ela armazena seus próprios dados é um *tipo de valor*; se ele contém um ponteiro para dados em outro lugar na memória é um *fazem referência a tipo*.  
+No Visual Basic, os tipos de dados são implementados com base em sua classificação. Os tipos de dados do Visual Basic podem ser classificados de acordo com se uma variável de um determinado tipo armazena seus próprios dados ou um ponteiro para os dados. Se ela armazena seus próprios dados é um *tipo de valor*; se ele contém um ponteiro para dados em outro lugar na memória é um *fazem referência a tipo*.  
   
 ## <a name="value-types"></a>Tipos de valor  
  Um tipo de dados é um *tipo de valor* se ele mantém os dados dentro de sua própria alocação de memória. Tipos de valor incluem o seguinte:  
@@ -37,7 +38,7 @@ No Visual Basic, os tipos de dados são implementados com base em sua classifica
   
 -   Todas as estruturas, mesmo se seus membros são tipos de referência  
   
--   Enumerações, pois seu tipo base é sempre `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, ou`ULong`  
+-   Enumerações, pois seu tipo base é sempre `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, ou `ULong`  
   
  Cada estrutura é um tipo de valor, mesmo se ele contém membros de tipo de referência. Por esse motivo, tipos, como `Char` e `Integer` são implementados por estruturas do .NET Framework.  
   
@@ -50,7 +51,7 @@ No Visual Basic, os tipos de dados são implementados com base em sua classifica
   
 -   Todas as matrizes, mesmo se seus elementos são tipos de valor  
   
--   Tipos de classe, como<xref:System.Windows.Forms.Form>  
+-   Tipos de classe, como <xref:System.Windows.Forms.Form>  
   
 -   Delegados  
   
@@ -78,7 +79,7 @@ Dim totals() As Single = New Single(8) {}
 ## <a name="working-with-the-object-data-type"></a>Trabalhando com o tipo de dados de objeto  
  Você pode atribuir um tipo de referência ou um tipo de valor a uma variável do `Object` tipo de dados. Um `Object` variável sempre contém um ponteiro para os dados, e nunca os dados em si. No entanto, se você atribuir um tipo de valor para um `Object` variável, ele se comporta como se ele contém seus próprios dados. Para obter mais informações, consulte [tipo de dados do objeto](../../../../visual-basic/language-reference/data-types/object-data-type.md).  
   
- Você pode descobrir se um `Object` variável está atuando como um tipo de referência ou um tipo de valor, passando-o para o <xref:Microsoft.VisualBasic.Information.IsReference%2A> método o <xref:Microsoft.VisualBasic.Information> classe do <xref:Microsoft.VisualBasic?displayProperty=nameWithType> namespace. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType>Retorna `True` se o conteúdo de `Object` variável representa um tipo de referência.  
+ Você pode descobrir se um `Object` variável está atuando como um tipo de referência ou um tipo de valor, passando-o para o <xref:Microsoft.VisualBasic.Information.IsReference%2A> método o <xref:Microsoft.VisualBasic.Information> classe do <xref:Microsoft.VisualBasic?displayProperty=nameWithType> namespace. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> Retorna `True` se o conteúdo de `Object` variável representa um tipo de referência.  
   
 ## <a name="see-also"></a>Consulte também  
  [Tipos de Valor Anulável](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  

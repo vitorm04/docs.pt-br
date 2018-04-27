@@ -1,30 +1,31 @@
 ---
-title: "Usando um editor de expressão personalizado"
-ms.custom: 
+title: Usando um editor de expressão personalizado
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5ae60b8267e60d880ccdc156566b489163d2e686
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5388ed3f55d97f3282a710ac59fe36cfb32fa49c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-a-custom-expression-editor"></a>Usando um editor de expressão personalizado
 Um editor de expressão personalizado pode ser implementada para fornecer uma experiência de edição de uma expressão mais rica ou mais simples. Há várias situações em que você talvez queira usar um editor de expressão personalizado:  
   
 -   Para fornecer suporte para o IntelliSense e outros recursos ricos que editam em um designer rehosted de fluxo de trabalho. Essa funcionalidade deve ser fornecida como o editor de expressão padrão de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] não pode ser usado em aplicativos rehosted.  
   
--   Para simplificar a experiência de edição de expressão para os usuários comerciais de analista, para que, por exemplo, não são necessários aprender [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] ou manipular as expressões de [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .  
+-   Para simplificar a expressão editando experiência para os usuários do analista de negócios, para que eles não, por exemplo, são necessários para aprender Visual Basic ou lidar com expressões do Visual Basic.  
   
  Três etapas básicas são necessárias para implementar um editor de expressão personalizado:  
   

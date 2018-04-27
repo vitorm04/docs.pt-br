@@ -1,31 +1,32 @@
 ---
-title: "Usando expressões regulares com o controle MaskedTextBox no Visual Basic"
-ms.custom: 
+title: Usando expressões regulares com o controle MaskedTextBox no Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2638ed804593dd52481bd3865e1c67c5fdb2dcf9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c72542c05123ef62a8f95afbe1bb19cb823d1f21
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Usando expressões regulares com o controle MaskedTextBox no Visual Basic
 Este exemplo demonstra como converter expressões regulares simples para trabalhar com o <xref:System.Windows.Forms.MaskedTextBox> controle.  
   
 ## <a name="description-of-the-masking-language"></a>Descrição da linguagem máscara  
- O padrão <xref:System.Windows.Forms.MaskedTextBox> linguagem máscara baseia usada pelo `Masked Edit` controle [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 e deve ser familiar aos usuários migrando essa plataforma.  
+ O padrão <xref:System.Windows.Forms.MaskedTextBox> linguagem máscara baseia usada pelo `Masked Edit` controle no Visual Basic 6.0 e deve ser familiar aos usuários migrando desta plataforma.  
   
  O <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> propriedade o <xref:System.Windows.Forms.MaskedTextBox> controle especifica qual máscara de entrada usar. A máscara deve ser uma cadeia de caracteres composta de um ou mais elementos de máscara da seguinte tabela.  
   

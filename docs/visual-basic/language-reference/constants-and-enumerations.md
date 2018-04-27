@@ -1,25 +1,26 @@
 ---
-title: "Constantes e enumerações (Visual Basic)"
+title: Constantes e enumerações (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - enumerations [Visual Basic]
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9fd298cc504f9e4faf5205e53ebbf2ee355a21b3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: da42d58190e8069154cd8383cf0a87e0b19f5ae4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Constantes e enumerações (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Fornece um número de enumerações e constantes predefinidas para desenvolvedores. Constantes armazenam valores que permanecem constantes durante a execução de um aplicativo. Enumerações fornecem uma maneira conveniente para trabalhar com conjuntos de constantes relacionadas e para associar valores de constante a nomes.  
+Visual Basic fornece um número de enumerações e constantes predefinidas para desenvolvedores. Constantes armazenam valores que permanecem constantes durante a execução de um aplicativo. Enumerações fornecem uma maneira conveniente para trabalhar com conjuntos de constantes relacionadas e para associar valores de constante a nomes.  
   
 ## <a name="constants"></a>Constantes  
   
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
 |`DEBUG`|Um `Boolean` valor que pode ser definido na **propriedades do projeto** caixa de diálogo. Por padrão, a configuração de depuração para um projeto define `DEBUG`. Quando `DEBUG` for definida, <xref:System.Diagnostics.Debug> métodos da classe geram a saída para o **saída** janela. Quando ele não está definido, <xref:System.Diagnostics.Debug> métodos de classe não são compilados e nenhuma saída de depuração é gerada.|  
 |`TARGET`|Uma cadeia de caracteres que representa o tipo de saída para o projeto ou a configuração da linha de comando **/destino** opção. Os valores possíveis de `TARGET` são:<br /><br /> -"winexe" para um aplicativo do Windows.<br />-"exe" para um aplicativo de console.<br />-"library" para uma biblioteca de classe.<br />-"módulo" para um módulo.<br />-A **/destino** opção pode ser definida no [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] ambiente de desenvolvimento integrado. Para obter mais informações, consulte [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
 |`TRACE`|Um `Boolean` valor que pode ser definido na **propriedades do projeto** caixa de diálogo. Por padrão, todas as configurações para um projeto de definem `TRACE`. Quando `TRACE` for definida, <xref:System.Diagnostics.Trace> métodos da classe geram a saída para o **saída** janela. Quando ele não está definido, <xref:System.Diagnostics.Trace> classe métodos não são compilados e nenhum `Trace` saída é gerada.|  
-|`VBC_VER`|Um número que representa o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] versão, na *principais*. *pequenas* formato. O número de versão [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] é 8.0.|  
+|`VBC_VER`|Um número que representa a versão do Visual Basic, *principais*. *pequenas* formato. O número de versão [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] é 8.0.|  
   
 ### <a name="print-and-display-constants"></a>Imprimir e exibir constantes  
  Quando você chamar impressão e exibe as funções, você pode usar as seguintes constantes em seu código no lugar dos valores reais.  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
 |`vbVerticalTab`|Não é útil no Microsoft Windows.|  
   
 ## <a name="enumerations"></a>Enumerações  
- A tabela a seguir lista e descreve enumerações fornecidas por [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ A tabela a seguir lista e descreve as enumerações fornecidas pelo Visual Basic.  
   
 |Enumeração|Descrição|  
 |---|---|  
