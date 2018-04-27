@@ -1,12 +1,13 @@
 ---
-title: "Como acionar notificações de alteração usando o método BindingSource ResetItem"
-ms.custom: 
+title: Como acionar notificações de alteração usando o método BindingSource ResetItem
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,37 +20,38 @@ helpviewer_keywords:
 - data sources [Windows Forms], detecting changes
 - change notifications
 ms.assetid: ab8b4096-37ff-4e30-aabc-de79a2f2e972
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 39bc221528b238af058e25bacfb4c570956be009
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 81acd82a1cdec41744c60e6ffb0548bd83f7b953
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-raise-change-notifications-using-the-bindingsource-resetitem-method"></a><span data-ttu-id="d3baf-102">Como acionar notificações de alteração usando o método BindingSource ResetItem</span><span class="sxs-lookup"><span data-stu-id="d3baf-102">How to: Raise Change Notifications Using the BindingSource ResetItem Method</span></span>
-<span data-ttu-id="d3baf-103">Algumas fontes de dados para os controles não acionar notificações de alteração quando itens são alterados, adicionados ou excluídos.</span><span class="sxs-lookup"><span data-stu-id="d3baf-103">Some data sources for your controls do not raise change notifications when items are changed, added, or deleted.</span></span> <span data-ttu-id="d3baf-104">Com o <xref:System.Windows.Forms.BindingSource> componente, você pode associar a essas fontes de dados e gerar uma notificação de alteração de seu código.</span><span class="sxs-lookup"><span data-stu-id="d3baf-104">With the <xref:System.Windows.Forms.BindingSource> component, you can bind to such data sources and raise a change notification from your code.</span></span>  
+# <a name="how-to-raise-change-notifications-using-the-bindingsource-resetitem-method"></a><span data-ttu-id="9bc32-102">Como acionar notificações de alteração usando o método BindingSource ResetItem</span><span class="sxs-lookup"><span data-stu-id="9bc32-102">How to: Raise Change Notifications Using the BindingSource ResetItem Method</span></span>
+<span data-ttu-id="9bc32-103">Algumas fontes de dados para os controles não acionar notificações de alteração quando itens são alterados, adicionados ou excluídos.</span><span class="sxs-lookup"><span data-stu-id="9bc32-103">Some data sources for your controls do not raise change notifications when items are changed, added, or deleted.</span></span> <span data-ttu-id="9bc32-104">Com o <xref:System.Windows.Forms.BindingSource> componente, você pode associar a essas fontes de dados e gerar uma notificação de alteração de seu código.</span><span class="sxs-lookup"><span data-stu-id="9bc32-104">With the <xref:System.Windows.Forms.BindingSource> component, you can bind to such data sources and raise a change notification from your code.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d3baf-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="d3baf-105">Example</span></span>  
- <span data-ttu-id="d3baf-106">Este formulário demonstra como usar um <xref:System.Windows.Forms.BindingSource> componente para associar uma lista para um <xref:System.Windows.Forms.DataGridView> controle.</span><span class="sxs-lookup"><span data-stu-id="d3baf-106">This form demonstrates using a <xref:System.Windows.Forms.BindingSource> component to bind a list to a <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="d3baf-107">A lista não gera notificações de alteração, portanto, o <xref:System.Windows.Forms.BindingSource.ResetItem%2A> método no <xref:System.Windows.Forms.BindingSource> é chamado quando um item na lista é alterado.</span><span class="sxs-lookup"><span data-stu-id="d3baf-107">The list does not raise change notifications, so the <xref:System.Windows.Forms.BindingSource.ResetItem%2A> method on the <xref:System.Windows.Forms.BindingSource> is called when an item in the list is changed.</span></span> <span data-ttu-id="d3baf-108">.</span><span class="sxs-lookup"><span data-stu-id="d3baf-108">.</span></span>  
+## <a name="example"></a><span data-ttu-id="9bc32-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="9bc32-105">Example</span></span>  
+ <span data-ttu-id="9bc32-106">Este formulário demonstra como usar um <xref:System.Windows.Forms.BindingSource> componente para associar uma lista para um <xref:System.Windows.Forms.DataGridView> controle.</span><span class="sxs-lookup"><span data-stu-id="9bc32-106">This form demonstrates using a <xref:System.Windows.Forms.BindingSource> component to bind a list to a <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="9bc32-107">A lista não gera notificações de alteração, portanto, o <xref:System.Windows.Forms.BindingSource.ResetItem%2A> método no <xref:System.Windows.Forms.BindingSource> é chamado quando um item na lista é alterado.</span><span class="sxs-lookup"><span data-stu-id="9bc32-107">The list does not raise change notifications, so the <xref:System.Windows.Forms.BindingSource.ResetItem%2A> method on the <xref:System.Windows.Forms.BindingSource> is called when an item in the list is changed.</span></span> <span data-ttu-id="9bc32-108">.</span><span class="sxs-lookup"><span data-stu-id="9bc32-108">.</span></span>  
   
  [!code-cpp[System.Windows.Forms.DataConnector.ResetItem#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.ResetItem/CPP/form1.cpp#1)]
  [!code-csharp[System.Windows.Forms.DataConnector.ResetItem#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.ResetItem/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.DataConnector.ResetItem#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.ResetItem/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="d3baf-109">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="d3baf-109">Compiling the Code</span></span>  
- <span data-ttu-id="d3baf-110">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="d3baf-110">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="9bc32-109">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="9bc32-109">Compiling the Code</span></span>  
+ <span data-ttu-id="9bc32-110">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="9bc32-110">This example requires:</span></span>  
   
--   <span data-ttu-id="d3baf-111">Referências aos assemblies System, System.Data, System.Drawing e System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="d3baf-111">References to the System, System.Data, System.Drawing and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="9bc32-111">Referências aos assemblies System, System.Data, System.Drawing e System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="9bc32-111">References to the System, System.Data, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="d3baf-112">Para obter informações sobre como compilar este exemplo na linha de comando para [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] ou [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], consulte [Building from the Command Line (Compilando na linha de comando)](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [Compilando pela linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="d3baf-112">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="d3baf-113">Também é possível compilar este exemplo em [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] colando o código em um novo projeto.</span><span class="sxs-lookup"><span data-stu-id="d3baf-113">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="d3baf-114">Consulte também [Como compilar e executar um exemplo completo de código do Windows Forms usando o Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="d3baf-114">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
+ <span data-ttu-id="9bc32-112">Para obter informações sobre como criar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [Compilando a partir da linha de comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="9bc32-112">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="9bc32-113">Também é possível compilar este exemplo em [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] colando o código em um novo projeto.</span><span class="sxs-lookup"><span data-stu-id="9bc32-113">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="9bc32-114">Consulte também [Como compilar e executar um exemplo completo de código do Windows Forms usando o Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="9bc32-114">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d3baf-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d3baf-115">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="9bc32-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9bc32-115">See Also</span></span>  
  <xref:System.Windows.Forms.BindingNavigator>  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.BindingSource>  
- [<span data-ttu-id="d3baf-116">Componente BindingSource</span><span class="sxs-lookup"><span data-stu-id="d3baf-116">BindingSource Component</span></span>](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [<span data-ttu-id="d3baf-117">Como associar um controle do Windows Forms a um tipo</span><span class="sxs-lookup"><span data-stu-id="d3baf-117">How to: Bind a Windows Forms Control to a Type</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
+ [<span data-ttu-id="9bc32-116">Componente BindingSource</span><span class="sxs-lookup"><span data-stu-id="9bc32-116">BindingSource Component</span></span>](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ [<span data-ttu-id="9bc32-117">Como associar um controle do Windows Forms a um tipo</span><span class="sxs-lookup"><span data-stu-id="9bc32-117">How to: Bind a Windows Forms Control to a Type</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)

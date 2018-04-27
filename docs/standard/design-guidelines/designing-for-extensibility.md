@@ -1,12 +1,12 @@
 ---
-title: "Criação de extensibilidade"
-ms.custom: 
+title: Criação de extensibilidade
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - extending class libraries
@@ -14,35 +14,35 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], extensibility
 - class library extensibility [.NET Framework]
 ms.assetid: 1cdb8740-871a-456c-9bd9-db96ca8d79b3
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f21e9239199ecd36432ed8f14adb896f1799506b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b643c33a1418839c8aabf06d681083232e61553a
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="designing-for-extensibility"></a><span data-ttu-id="c8800-102">Criação de extensibilidade</span><span class="sxs-lookup"><span data-stu-id="c8800-102">Designing for Extensibility</span></span>
-<span data-ttu-id="c8800-103">Um aspecto importante da criação de uma estrutura é verificar se que a extensibilidade do framework foram considerada com cuidado.</span><span class="sxs-lookup"><span data-stu-id="c8800-103">One important aspect of designing a framework is making sure the extensibility of the framework has been carefully considered.</span></span> <span data-ttu-id="c8800-104">Isso requer que você entenda os custos e os benefícios associados a vários mecanismos de extensibilidade.</span><span class="sxs-lookup"><span data-stu-id="c8800-104">This requires that you understand the costs and benefits associated with various extensibility mechanisms.</span></span> <span data-ttu-id="c8800-105">Este capítulo ajuda você a decidir qual dos mecanismos de extensibilidade — subclassificação, eventos, membros virtuais, retornos de chamada e assim por diante — melhor pode atender aos requisitos da sua estrutura.</span><span class="sxs-lookup"><span data-stu-id="c8800-105">This chapter helps you decide which of the extensibility mechanisms—subclassing, events, virtual members, callbacks, and so on—can best meet the requirements of your framework.</span></span>  
+# <a name="designing-for-extensibility"></a><span data-ttu-id="0f801-102">Criação de extensibilidade</span><span class="sxs-lookup"><span data-stu-id="0f801-102">Designing for Extensibility</span></span>
+<span data-ttu-id="0f801-103">Um aspecto importante da criação de uma estrutura é verificar se que a extensibilidade do framework foram considerada com cuidado.</span><span class="sxs-lookup"><span data-stu-id="0f801-103">One important aspect of designing a framework is making sure the extensibility of the framework has been carefully considered.</span></span> <span data-ttu-id="0f801-104">Isso requer que você entenda os custos e os benefícios associados a vários mecanismos de extensibilidade.</span><span class="sxs-lookup"><span data-stu-id="0f801-104">This requires that you understand the costs and benefits associated with various extensibility mechanisms.</span></span> <span data-ttu-id="0f801-105">Este capítulo ajuda você a decidir qual dos mecanismos de extensibilidade — subclassificação, eventos, membros virtuais, retornos de chamada e assim por diante — melhor pode atender aos requisitos da sua estrutura.</span><span class="sxs-lookup"><span data-stu-id="0f801-105">This chapter helps you decide which of the extensibility mechanisms—subclassing, events, virtual members, callbacks, and so on—can best meet the requirements of your framework.</span></span>  
   
- <span data-ttu-id="c8800-106">Há várias maneiras para permitir a extensibilidade em estruturas.</span><span class="sxs-lookup"><span data-stu-id="c8800-106">There are many ways to allow extensibility in frameworks.</span></span> <span data-ttu-id="c8800-107">Elas variam de menos eficiente, mas menos dispendiosa para muito eficientes, mas caros.</span><span class="sxs-lookup"><span data-stu-id="c8800-107">They range from less powerful but less costly to very powerful but expensive.</span></span> <span data-ttu-id="c8800-108">Para qualquer requisito de extensibilidade de determinado, você deve escolher o mecanismo de extensibilidade menos dispendioso que atenda aos requisitos.</span><span class="sxs-lookup"><span data-stu-id="c8800-108">For any given extensibility requirement, you should choose the least costly extensibility mechanism that meets the requirements.</span></span> <span data-ttu-id="c8800-109">Tenha em mente que é possível adicionar mais extensibilidade posteriormente, mas você pode nunca tirá-lo sem introduzir alterações significativas.</span><span class="sxs-lookup"><span data-stu-id="c8800-109">Keep in mind that it’s usually possible to add more extensibility later, but you can never take it away without introducing breaking changes.</span></span>  
+ <span data-ttu-id="0f801-106">Há várias maneiras para permitir a extensibilidade em estruturas.</span><span class="sxs-lookup"><span data-stu-id="0f801-106">There are many ways to allow extensibility in frameworks.</span></span> <span data-ttu-id="0f801-107">Elas variam de menos eficiente, mas menos dispendiosa para muito eficientes, mas caros.</span><span class="sxs-lookup"><span data-stu-id="0f801-107">They range from less powerful but less costly to very powerful but expensive.</span></span> <span data-ttu-id="0f801-108">Para qualquer requisito de extensibilidade de determinado, você deve escolher o mecanismo de extensibilidade menos dispendioso que atenda aos requisitos.</span><span class="sxs-lookup"><span data-stu-id="0f801-108">For any given extensibility requirement, you should choose the least costly extensibility mechanism that meets the requirements.</span></span> <span data-ttu-id="0f801-109">Tenha em mente que é possível adicionar mais extensibilidade posteriormente, mas você pode nunca tirá-lo sem introduzir alterações significativas.</span><span class="sxs-lookup"><span data-stu-id="0f801-109">Keep in mind that it’s usually possible to add more extensibility later, but you can never take it away without introducing breaking changes.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c8800-110">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="c8800-110">In This Section</span></span>  
- [<span data-ttu-id="c8800-111">Classes não seladas</span><span class="sxs-lookup"><span data-stu-id="c8800-111">Unsealed Classes</span></span>](../../../docs/standard/design-guidelines/unsealed-classes.md)  
- [<span data-ttu-id="c8800-112">Membros protegidos</span><span class="sxs-lookup"><span data-stu-id="c8800-112">Protected Members</span></span>](../../../docs/standard/design-guidelines/protected-members.md)  
- [<span data-ttu-id="c8800-113">Eventos e retornos de chamada</span><span class="sxs-lookup"><span data-stu-id="c8800-113">Events and Callbacks</span></span>](../../../docs/standard/design-guidelines/events-and-callbacks.md)  
- [<span data-ttu-id="c8800-114">Membros virtuais</span><span class="sxs-lookup"><span data-stu-id="c8800-114">Virtual Members</span></span>](../../../docs/standard/design-guidelines/virtual-members.md)  
- [<span data-ttu-id="c8800-115">Abstrações (tipos e interfaces abstratos)</span><span class="sxs-lookup"><span data-stu-id="c8800-115">Abstractions (Abstract Types and Interfaces)</span></span>](../../../docs/standard/design-guidelines/abstractions-abstract-types-and-interfaces.md)  
- [<span data-ttu-id="c8800-116">Classes base para implementar abstrações</span><span class="sxs-lookup"><span data-stu-id="c8800-116">Base Classes for Implementing Abstractions</span></span>](../../../docs/standard/design-guidelines/base-classes-for-implementing-abstractions.md)  
- [<span data-ttu-id="c8800-117">Selar</span><span class="sxs-lookup"><span data-stu-id="c8800-117">Sealing</span></span>](../../../docs/standard/design-guidelines/sealing.md)  
- <span data-ttu-id="c8800-118">*Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*</span><span class="sxs-lookup"><span data-stu-id="c8800-118">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="0f801-110">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="0f801-110">In This Section</span></span>  
+ [<span data-ttu-id="0f801-111">Classes não seladas</span><span class="sxs-lookup"><span data-stu-id="0f801-111">Unsealed Classes</span></span>](../../../docs/standard/design-guidelines/unsealed-classes.md)  
+ [<span data-ttu-id="0f801-112">Membros protegidos</span><span class="sxs-lookup"><span data-stu-id="0f801-112">Protected Members</span></span>](../../../docs/standard/design-guidelines/protected-members.md)  
+ [<span data-ttu-id="0f801-113">Eventos e retornos de chamada</span><span class="sxs-lookup"><span data-stu-id="0f801-113">Events and Callbacks</span></span>](../../../docs/standard/design-guidelines/events-and-callbacks.md)  
+ [<span data-ttu-id="0f801-114">Membros virtuais</span><span class="sxs-lookup"><span data-stu-id="0f801-114">Virtual Members</span></span>](../../../docs/standard/design-guidelines/virtual-members.md)  
+ [<span data-ttu-id="0f801-115">Abstrações (tipos e interfaces abstratos)</span><span class="sxs-lookup"><span data-stu-id="0f801-115">Abstractions (Abstract Types and Interfaces)</span></span>](../../../docs/standard/design-guidelines/abstractions-abstract-types-and-interfaces.md)  
+ [<span data-ttu-id="0f801-116">Classes base para implementar abstrações</span><span class="sxs-lookup"><span data-stu-id="0f801-116">Base Classes for Implementing Abstractions</span></span>](../../../docs/standard/design-guidelines/base-classes-for-implementing-abstractions.md)  
+ [<span data-ttu-id="0f801-117">Selar</span><span class="sxs-lookup"><span data-stu-id="0f801-117">Sealing</span></span>](../../../docs/standard/design-guidelines/sealing.md)  
+ <span data-ttu-id="0f801-118">*Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*</span><span class="sxs-lookup"><span data-stu-id="0f801-118">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- <span data-ttu-id="c8800-119">*Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="c8800-119">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
+ <span data-ttu-id="0f801-119">*Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="0f801-119">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c8800-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c8800-120">See Also</span></span>  
- [<span data-ttu-id="c8800-121">Diretrizes de design do Framework</span><span class="sxs-lookup"><span data-stu-id="c8800-121">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a><span data-ttu-id="0f801-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0f801-120">See Also</span></span>  
+ [<span data-ttu-id="0f801-121">Diretrizes de design do Framework</span><span class="sxs-lookup"><span data-stu-id="0f801-121">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

@@ -16,22 +16,22 @@ ms.assetid: 3b77b7e3-8b17-40de-b4e1-05e4b9b325ad
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: be5576c56c2c6b2b1021c98e1e48314beaac4cbd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 298faf593dc15d6ede5fbb4238599373f3a49a82
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="unable-to-write-temporary-file-because-temporary-path-is-not-available"></a><span data-ttu-id="4bca5-102">Não foi possível gravar o arquivo temporário porque o demarcador temporário não está disponível</span><span class="sxs-lookup"><span data-stu-id="4bca5-102">Unable to write temporary file because temporary path is not available</span></span>
-<span data-ttu-id="4bca5-103">O [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] não pôde determinar o caminho onde os arquivos temporários são armazenados.</span><span class="sxs-lookup"><span data-stu-id="4bca5-103">[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] could not determine the path where temporary files are stored.</span></span>  
+# <a name="unable-to-write-temporary-file-because-temporary-path-is-not-available"></a><span data-ttu-id="f55e7-102">Não foi possível gravar o arquivo temporário porque o demarcador temporário não está disponível</span><span class="sxs-lookup"><span data-stu-id="f55e7-102">Unable to write temporary file because temporary path is not available</span></span>
+<span data-ttu-id="f55e7-103">Visual Basic não foi possível determinar o caminho onde os arquivos temporários são armazenados.</span><span class="sxs-lookup"><span data-stu-id="f55e7-103">Visual Basic could not determine the path where temporary files are stored.</span></span>  
   
- <span data-ttu-id="4bca5-104">**ID do erro:** BC30698</span><span class="sxs-lookup"><span data-stu-id="4bca5-104">**Error ID:** BC30698</span></span>  
+ <span data-ttu-id="f55e7-104">**ID do erro:** BC30698</span><span class="sxs-lookup"><span data-stu-id="f55e7-104">**Error ID:** BC30698</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="4bca5-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="4bca5-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f55e7-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="f55e7-105">To correct this error</span></span>  
   
-1.  <span data-ttu-id="4bca5-106">Reinicie o [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4bca5-106">Restart [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span></span>  
+1.  <span data-ttu-id="f55e7-106">Reinicie o [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f55e7-106">Restart [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span></span>  
   
-2.  <span data-ttu-id="4bca5-107">Se o problema persistir, reinstale o [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4bca5-107">If the problem persists, reinstall [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span></span>  
+2.  <span data-ttu-id="f55e7-107">Se o problema persistir, reinstale o [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f55e7-107">If the problem persists, reinstall [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4bca5-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4bca5-108">See Also</span></span>  
- [<span data-ttu-id="4bca5-109">Fale conosco</span><span class="sxs-lookup"><span data-stu-id="4bca5-109">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a><span data-ttu-id="f55e7-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f55e7-108">See Also</span></span>  
+ [<span data-ttu-id="f55e7-109">Fale conosco</span><span class="sxs-lookup"><span data-stu-id="f55e7-109">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
