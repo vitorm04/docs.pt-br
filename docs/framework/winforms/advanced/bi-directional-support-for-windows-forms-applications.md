@@ -2,7 +2,8 @@
 title: Suporte bidirecional para aplicativos do Windows Forms
 ms.date: 09/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-winforms
+ms.technology:
+- dotnet-winforms
 ms.topic: article
 helpviewer_keywords:
 - globalization [Windows Forms], bi-directional support in Windows
@@ -13,15 +14,16 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a8ae0e958c842c2f3cf3fbb788cad1cde6e6cc2b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d670fedb2fe693a871de8f0147b81b97b4958853
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Suporte bidirecional para aplicativos do Windows Forms
-Você pode usar [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] para criar aplicativos baseados no Windows que oferecem suporte a espelhamento bidirecional (direita para esquerda) idiomas como árabe e hebraico. Isso inclui formulários padrão, caixas de diálogo, formulários MDI e todos os controles que você pode trabalhar com esses formulários — ou seja, todos os objetos de <xref:System.Windows.Forms.Control> namespace.  
+Você pode usar o Visual Studio para criar aplicativos do Windows que dão suporte ao espelhamento bidirecional (direita para esquerda) idiomas como árabe e hebraico. Isso inclui formulários padrão, caixas de diálogo, formulários MDI e todos os controles que você pode trabalhar com esses formulários — ou seja, todos os objetos de <xref:System.Windows.Forms.Control> namespace.  
   
 ## <a name="culture-support"></a>Suporte a cultura  
  Configurações de cultura e da interface do usuário determinam como um aplicativo funciona com datas, horas, moeda e outras informações. Suporte para a cultura e cultura da interface do usuário é o mesmo para idiomas bidirecionais, assim como para outros idiomas.   Consulte também [Classes específicas de cultura para Global Windows Forms e Web Forms](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) ou [Classes específicas de cultura para Global Windows Forms e Web Forms](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
@@ -33,7 +35,7 @@ Você pode usar [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] para criar
   
 |Controle/componente|Propriedade RightToLeft|Efeito da propriedade RightToLeftLayout|Exige espelhamento?|  
 |------------------------|------------------------------------|------------------------------------------|-------------------------|  
-|<xref:System.Windows.Forms.Button>|Define o sentido da leitura RTL. Inverte <xref:System.Windows.Forms.ButtonBase.TextAlign%2A>, <xref:System.Windows.Forms.ButtonBase.ImageAlign%2A>, e<xref:System.Windows.Forms.ButtonBase.TextImageRelation%2A>|Sem efeito|Não|  
+|<xref:System.Windows.Forms.Button>|Define o sentido da leitura RTL. Inverte <xref:System.Windows.Forms.ButtonBase.TextAlign%2A>, <xref:System.Windows.Forms.ButtonBase.ImageAlign%2A>, e <xref:System.Windows.Forms.ButtonBase.TextImageRelation%2A>|Sem efeito|Não|  
 |<xref:System.Windows.Forms.CheckBox>|A caixa de seleção é exibida à direita do texto|Sem efeito|Não|  
 |<xref:System.Windows.Forms.CheckedListBox>|Todas as caixas de seleção são exibidas à direita do texto|Sem efeito|Não|  
 |<xref:System.Windows.Forms.ColorDialog>|Não é afetado; depende do idioma do sistema operacional|Sem efeito|Não|  
@@ -49,8 +51,8 @@ Você pode usar [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] para criar
 |<xref:System.Windows.Forms.GroupBox>|A legenda é exibida alinhada à direita. Controles filho podem herdar esta propriedade.|Use um <xref:System.Windows.Forms.TableLayoutPanel> dentro do controle para a direita para esquerda espelhamento suporte|Não|  
 |<xref:System.Windows.Forms.HScrollBar>|Começa com a caixa de rolagem (thumb) alinhada à direita|Sem efeito|Não|  
 |<xref:System.Windows.Forms.ImageList>|Não necessário|Sem efeito|Não|  
-|<xref:System.Windows.Forms.Label>|Exibido alinhado à direita. Inverte <xref:System.Windows.Forms.Label.TextAlign%2A> e<xref:System.Windows.Forms.Label.ImageAlign%2A>|Sem efeito|Não|  
-|<xref:System.Windows.Forms.LinkLabel>|Exibido alinhado à direita. Inverte <xref:System.Windows.Forms.Label.TextAlign%2A> e<xref:System.Windows.Forms.Label.ImageAlign%2A>|Sem efeito|Não|  
+|<xref:System.Windows.Forms.Label>|Exibido alinhado à direita. Inverte <xref:System.Windows.Forms.Label.TextAlign%2A> e <xref:System.Windows.Forms.Label.ImageAlign%2A>|Sem efeito|Não|  
+|<xref:System.Windows.Forms.LinkLabel>|Exibido alinhado à direita. Inverte <xref:System.Windows.Forms.Label.TextAlign%2A> e <xref:System.Windows.Forms.Label.ImageAlign%2A>|Sem efeito|Não|  
 |<xref:System.Windows.Forms.ListBox>|Itens são alinhados à direita|Sem efeito|Não|  
 |<xref:System.Windows.Forms.ListView>|Define o sentido da leitura RTL; elementos permanecem alinhados à esquerda|Espelha o controle|Sim|  
 |<xref:System.Windows.Forms.MainMenu>|Exibido alinhado à direita com sentido da leitura RTL em tempo de execução (não em tempo de design)|Sem efeito|Não|  
@@ -79,7 +81,7 @@ Você pode usar [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] para criar
 |<xref:System.Windows.Forms.ToolTip>|Define o sentido da leitura RTL|Sem efeito|Não|  
 |<xref:System.Windows.Forms.TrackBar>|A rolagem ou rastreamento começa da direita; Quando <xref:System.Windows.Forms.TrackBar.Orientation%2A> é vertical, a marcação ocorre da direita|Sem efeito|Não|  
 |<xref:System.Windows.Forms.TreeView>|Define somente sentido da leitura RTL|Espelha o controle|Sim|  
-|<xref:System.Windows.Forms.UserControl>|Barra de rolagem vertical aparece à esquerda; barra de rolagem horizontal tem o ícone à direita|Não há suporte direto; Use um<xref:System.Windows.Forms.TableLayoutPanel>|Não|  
+|<xref:System.Windows.Forms.UserControl>|Barra de rolagem vertical aparece à esquerda; barra de rolagem horizontal tem o ícone à direita|Não há suporte direto; Use um <xref:System.Windows.Forms.TableLayoutPanel>|Não|  
 |<xref:System.Windows.Forms.VScrollBar>|Exibido no lado esquerdo em vez do lado direito de controles roláveis|Sem efeito|Não|  
   
 ## <a name="encoding"></a>Codificando  
@@ -122,5 +124,5 @@ Você pode usar [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] para criar
  Alguns controles são lacrados. Portanto, você não pode derivar um novo controle deles. Isso inclui o <xref:System.Windows.Forms.ImageList> e <xref:System.Windows.Forms.ProgressBar> controles.  
   
 ## <a name="see-also"></a>Consulte também  
- [Suporte bidirecional para aplicativos da Web ASP.NET](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
+ [Suporte bidirecional para aplicativos Web ASP.NET](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
  [Globalizando o Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)

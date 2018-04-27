@@ -1,23 +1,24 @@
 ---
 title: InvokeMethod
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04988eb3-65f8-456d-b1bd-509f5d05a57c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b90ebec929b310442cde2be8d96386e016a9bbb4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f988f206fbd84b7b7d47fb3bd540420601ba30c9
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="invokemethod"></a>InvokeMethod
 Este exemplo mostra as diferentes maneiras de usar a atividade de <xref:System.Activities.Statements.InvokeMethod> para chamar métodos de uma classe.  
@@ -52,7 +53,7 @@ Este exemplo mostra as diferentes maneiras de usar a atividade de <xref:System.A
 12. Recuperar um valor de uma instância de um objeto.  
   
 ## <a name="to-use-this-sample"></a>Para usar este exemplo  
- Este exemplo é fornecido em duas versões. A primeira versão este exemplo demonstra o uso de <xref:System.Activities.Statements.InvokeMethod> com o código em c usando a programação de [!INCLUDE[wf](../../../../includes/wf-md.md)] modelo e pode ser encontrada na pasta de CodedWorkflow \ CS. A segunda versão demonstra o uso de <xref:System.Activities.Statements.InvokeMethod> usando XAML e pode ser encontrada na pasta de DesignerWorkflow \ CS.  
+ Este exemplo é fornecido em duas versões. A primeira versão deste exemplo demonstra o uso de <xref:System.Activities.Statements.InvokeMethod> por meio do c# de código usando o modelo de programação do Windows Workflow Foundation (WF) e pode ser encontrado na pasta CodedWorkflow\CS. A segunda versão demonstra o uso de <xref:System.Activities.Statements.InvokeMethod> usando XAML e pode ser encontrada na pasta de DesignerWorkflow \ CS.  
   
 #### <a name="to-run-the-coded-workflow-sample"></a>Para executar o exemplo codificado de fluxo de trabalho  
   

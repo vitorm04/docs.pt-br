@@ -1,24 +1,26 @@
 ---
-title: "Evitando problemas com a instrução Using"
-ms.custom: 
+title: Evitando problemas com a instrução Using
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 202bf02f017857a354a6f23270e49571c6240b26
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dd3065a21c1714b0643bfb87b731193d3367352f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="avoiding-problems-with-the-using-statement"></a>Evitando problemas com a instrução Using
 Este exemplo demonstra como você não deve usar o c# "using" instrução para limpar automaticamente os recursos ao usar um cliente tipado. Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de cálculo. Neste exemplo, o cliente é um aplicativo de console (.exe) e o serviço é hospedado por serviços de informações da Internet (IIS).  
@@ -32,7 +34,7 @@ Este exemplo demonstra como você não deve usar o c# "using" instrução para l
   
  O primeiro problema ilustrado no `DemonstrateProblemUsingCanThrow` método, é que a chave de fechamento lança uma exceção e o código depois que a chave de fechamento não são executadas:  
   
-```  
+```csharp   
 using (CalculatorClient client = new CalculatorClient())  
 {  
     ...  
@@ -44,7 +46,7 @@ Console.WriteLine("Hope this code wasn't important, because it might not happen.
   
  O segundo problema ilustrado no `DemonstrateProblemUsingCanThrowAndMask` , é outra implicação a chave de fechamento lançar uma exceção:  
   
-```  
+```csharp   
 using (CalculatorClient client = new CalculatorClient())  
 {  
     ...  
@@ -57,7 +59,7 @@ using (CalculatorClient client = new CalculatorClient())
   
  Por fim, o exemplo demonstra como limpar corretamente quando as exceções ocorrem em `DemonstrateCleanupWithExceptions`. Isso usa um bloco try/catch para relatar erros e chamada `Abort`. Consulte o [esperado exceções](../../../../docs/framework/wcf/samples/expected-exceptions.md) exemplo para obter mais detalhes sobre como capturar exceções de chamadas do cliente.  
   
-```  
+```csharp   
 try  
 {  
     ...  

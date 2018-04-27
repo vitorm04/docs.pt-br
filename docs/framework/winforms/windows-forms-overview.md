@@ -1,27 +1,29 @@
 ---
-title: "Visão geral dos Windows Forms"
-ms.custom: 
+title: Visão geral dos Windows Forms
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bc9ff97583566bd950486d96bd100f05ef651c7e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2620d8314a11e0a90864120c40dbc3935cce75fe
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-forms-overview"></a>Visão geral dos Windows Forms
 A visão geral a seguir descreve as vantagens dos aplicativos cliente inteligentes, os principais recursos de programação dos Windows Forms e como você pode usar o Windows Forms para criar clientes inteligentes que atendem às necessidades de empresas e usuários finais de hoje.  
@@ -30,7 +32,7 @@ A visão geral a seguir descreve as vantagens dos aplicativos cliente inteligent
  Com o Windows Forms, você desenvolve clientes inteligentes. *Clientes inteligentes* são aplicativos graficamente ricos que são fáceis de implantar e atualizar, podem funcionar quando eles estão conectados ou desconectados da Internet e podem acessar recursos no computador local de maneira mais segura do que os aplicativos tradicionais baseados no Windows.  
   
 ### <a name="building-rich-interactive-user-interfaces"></a>Compilando interfaces do usuário sofisticadas e interativas  
- O Windows Forms é uma tecnologia de cliente inteligente para o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], um conjunto de bibliotecas gerenciadas que simplificam tarefas comuns de aplicativos como leitura e gravação para o sistema de arquivos. Ao usar um ambiente de desenvolvimento como [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], você pode criar aplicativos de cliente inteligente dos Windows Forms que exibem informações, solicitam entrada de usuários e se comunicam com computadores remotos em uma rede.  
+ O Windows Forms é uma tecnologia de cliente inteligente para o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], um conjunto de bibliotecas gerenciadas que simplificam tarefas comuns de aplicativos como leitura e gravação para o sistema de arquivos. Quando você usa um ambiente de desenvolvimento como o Visual Studio, você pode criar aplicativos de Windows Forms que exibem informações, solicitam entrada de usuários e se comunicar com computadores remotos em uma rede.  
   
  nos Windows Forms, um *formulário* é uma superfície visual na qual são exibidas informações para o usuário. Normalmente, os aplicativos dos Windows Forms são compilados com o acréscimo de controles a formulários e de respostas de desenvolvimento a ações do usuário, como cliques do mouse ou pressionamentos de teclas. Um *controle* é um elemento discreto de interface do usuário que exibe dados ou aceita a entrada de dados.  
   
@@ -40,7 +42,7 @@ A visão geral a seguir descreve as vantagens dos aplicativos cliente inteligent
   
  O Windows Forms tem controles avançados de interface do usuário que emulam recursos em aplicativos de alta tecnologia, como o Microsoft Office. Quando você usa o <xref:System.Windows.Forms.ToolStrip> e <xref:System.Windows.Forms.MenuStrip> controle, você pode criar barras de ferramentas e menus que contêm texto e imagens, exibem submenus e hospedam outros controles, como caixas de texto e caixas de combinação.  
   
- Com o Designer de Formulários do Windows com recursos do tipo "arrastar e soltar" do [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], você pode criar aplicativos Windows Forms com facilidade. Basta selecionar os controles com o seu cursor e adicioná-los no local do formulário desejado. O designer oferece ferramentas como linhas de grade e linhas de alinhamento para facilitar o alinhamento dos controles. E se você usar [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou compilar na linha de comando, você pode usar o <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> e <xref:System.Windows.Forms.SplitContainer> controles para criar avançados layouts de formulários em menos tempo.  
+ Com o Designer de formulários do Windows do Visual Studio arrastar e soltar, você pode facilmente criar aplicativos de formulários do Windows. Basta selecionar os controles com o seu cursor e adicioná-los no local do formulário desejado. O designer oferece ferramentas como linhas de grade e linhas de alinhamento para facilitar o alinhamento dos controles. E se você usa o Visual Studio ou compilar na linha de comando, você pode usar o <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> e <xref:System.Windows.Forms.SplitContainer> controles para criar avançados layouts de formulários em menos tempo.  
   
  Finalmente, se for necessário criar seus próprios elementos personalizados de interface do usuário, o <xref:System.Drawing> namespace contém uma grande seleção de classes para processar linhas, círculos e outras formas diretamente em um formulário.  
   
@@ -54,7 +56,7 @@ A visão geral a seguir descreve as vantagens dos aplicativos cliente inteligent
 |-----------------|----------------|  
 |Usando controles em formulários|[Como Adicionar Controles ao Windows Forms](../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|  
 |Usando o <xref:System.Windows.Forms.ToolStrip> controle|[Como criar um ToolStrip básico com itens padrão usando o designer](../../../docs/framework/winforms/controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|  
-|Criando gráficos com<xref:System.Drawing>|[Introdução à Programação de Elementos Gráficos](../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
+|Criando gráficos com <xref:System.Drawing>|[Introdução à Programação de Elementos Gráficos](../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Criando controles personalizados|[Como herdar da classe UserControl](../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
   
 ### <a name="displaying-and-manipulating-data"></a>Exibindo e manipulando dados  
@@ -64,7 +66,7 @@ A visão geral a seguir descreve as vantagens dos aplicativos cliente inteligent
   
  É possível criar facilmente controles de associação de dados usando a janela Fontes de Dados. A janela exibe fontes de dados como bancos de dados, serviços Web e objetos em seu projeto. Você pode criar controles de associação de dados ao arrastar itens dessa janela para os formulários do seu projeto. Você também pode associar controles existentes a dados ao arrastar objetos da janela Fontes de Dados para eles.  
   
- Outro tipo de vinculação de dados que você pode gerenciar nos Windows Forms é chamado de *configurações*. A maioria dos aplicativos de cliente inteligente deve manter algumas informações sobre seu estado de tempo de execução, como o último tamanho de formulário conhecido e reter dados de preferência do usuário, como os locais padrão para os arquivos salvos. O recurso de configuração de aplicativo lida com esses requisitos ao oferecer uma forma fácil de armazenar ambos os tipos de configuração no computador cliente. Após configurar essas configurações usando o [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou em um editor de código, essas configurações são mantidas como XML e automaticamente lidas para a memória em tempo de execução.  
+ Outro tipo de vinculação de dados que você pode gerenciar nos Windows Forms é chamado de *configurações*. A maioria dos aplicativos de cliente inteligente deve manter algumas informações sobre seu estado de tempo de execução, como o último tamanho de formulário conhecido e reter dados de preferência do usuário, como os locais padrão para os arquivos salvos. O recurso de configuração de aplicativo lida com esses requisitos ao oferecer uma forma fácil de armazenar ambos os tipos de configuração no computador cliente. Depois de definir essas configurações usando o Visual Studio ou um editor de código, as configurações são mantidas como XML e lidas automaticamente de volta na memória em tempo de execução.  
   
 #### <a name="help-displaying-and-manipulating-data"></a>Ajuda para exibir e manipular dados  
  Para obter informações passo a passo sobre como usar esses recursos, consulte os seguintes tópicos da Ajuda.  
@@ -77,7 +79,7 @@ A visão geral a seguir descreve as vantagens dos aplicativos cliente inteligent
 |Usando configurações de aplicativo|[Como criar configurações de aplicativo](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|  
   
 ### <a name="deploying-applications-to-client-computers"></a>Implantando aplicativos em computadores cliente  
- Depois de escrever o seu aplicativo, você precisa enviá-lo para seus usuários para que eles possam instalá-lo e executá-lo em seus próprios computadores cliente. Ao usar a tecnologia [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], você pode implantar seus aplicativos no [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] usando somente alguns cliques e oferecer aos usuários uma URL que aponta para o seu aplicativo na Web. O [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] gerencia todos os elementos e as dependências do seu aplicativo e garante que ele seja instalado adequadamente no computador cliente.  
+ Depois de escrever o seu aplicativo, você precisa enviá-lo para seus usuários para que eles possam instalá-lo e executá-lo em seus próprios computadores cliente. Quando você usa o [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] tecnologia, você pode implantar seus aplicativos de dentro do Visual Studio usando apenas alguns cliques e fornecer aos usuários uma URL apontando para seu aplicativo na Web. O [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] gerencia todos os elementos e as dependências do seu aplicativo e garante que ele seja instalado adequadamente no computador cliente.  
   
  Os aplicativos [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] podem ser configurados para serem executados somente quando o usuário estiver conectado à rede ou para execução online e offline. Quando você especifica que um aplicativo deve dar suporte à operação offline, o [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] adiciona um link ao seu aplicativo no menu **Iniciar** do usuário. O usuário pode, em seguida, abrir o aplicativo sem usar a URL.  
   

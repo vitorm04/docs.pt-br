@@ -1,26 +1,27 @@
 ---
 title: Services1
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 521cdb66-98cb-4ad1-b706-370788a43485
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 924368f5de4c5698c439a6c8744a15babd62d762
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f53c3ee686c4117a621eac43ede1035a83a08e46
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="services"></a>Serviços
-Esta seção contém links para exemplos que demonstram a funcionalidade de serviço de [!INCLUDE[wf](../../../../includes/wf-md.md)] .  
+Esta seção contém links para exemplos que demonstram a funcionalidade do serviço Windows Workflow Foundation (WF).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Atraso absoluto](../../../../docs/framework/windows-workflow-foundation/samples/absolute-delay.md)  
@@ -42,7 +43,7 @@ Esta seção contém links para exemplos que demonstram a funcionalidade de serv
  Demonstra como os tipos de usuário diferentes podem ser usados em atividades de mensagem (de serviços WCF). O serviço de exemplo é um serviço simples de aprovação de despesas e expõe três operações.  
   
  [Duplex durável](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)  
- Demonstra como configurar e configurar a troca de dois lados durável de mensagem usando as atividades de mensagem em [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+ Demonstra como instalar e configurar o exchange mensagem duplex durável usando as atividades de mensagens no Windows Workflow Foundation (WF).  
   
  [Correlação baseada em conteúdo](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
  Demonstra como as atividades de mensagens (<xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, e <xref:System.ServiceModel.Activities.ReceiveReply>) podem ser usadas com vários correlações conteudo com base e correlação conteudo base.  
@@ -54,7 +55,7 @@ Esta seção contém links para exemplos que demonstram a funcionalidade de serv
  Demonstra como usar um atraso durável, que é um atraso que persiste o fluxo de trabalho para um dispositivo durável durante o atraso.  
   
  [Buffer de recebimento](../../../../docs/framework/windows-workflow-foundation/samples/buffered-receive.md)  
- Demonstra como configurar e configurar o armazenados em buffer recebe o recurso em [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+ Demonstra como instalar e configurar o recurso de buffer de recebimento no Windows Workflow Foundation (WF).  
   
  [Ativação XAML](../../../../docs/framework/windows-workflow-foundation/samples/xaml-activation.md)  
  Demonstra como hospedar um fluxo de trabalho declarativo em [!INCLUDE[iisver](../../../../includes/iisver-md.md)]  

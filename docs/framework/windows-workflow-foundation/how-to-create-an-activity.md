@@ -1,26 +1,27 @@
 ---
 title: Como criar uma atividade
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4a3b9698d6a060120addff52e6600916a2de19fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0d0d48d1e78efb3484f521958edf22d97ca8053d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-an-activity"></a>Como criar uma atividade
 As atividades são a unidade principal de comportamento no [!INCLUDE[wf1](../../../includes/wf1-md.md)]. A lógica de execução de uma atividade pode ser implementada em código gerenciado ou pode ser implementada usando outras atividades. Este tópico demonstra como criar duas atividades. A primeira atividade é uma atividade simples que usa o código para implementar a sua lógica de execução. A implementação da segunda atividade é definida usando outras atividades. Essas atividades são usadas nas seguintes etapas no tutorial.  
@@ -44,7 +45,7 @@ As atividades são a unidade principal de comportamento no [!INCLUDE[wf1](../../
 5.  No **instalado** nó, selecione **Visual C#**, **fluxo de trabalho** (ou **Visual Basic**, **fluxo de trabalho**). Certifique-se de que **.NET Framework 4.5** está selecionado no [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] lista suspensa de versão. Selecione **biblioteca de atividades** do **fluxo de trabalho** lista. Tipo `NumberGuessWorkflowActivities` no **nome** caixa e, em seguida, clique em **Okey**.  
   
     > [!NOTE]
-    >  Dependendo da linguagem de programação que é configurada como linguagem primária no [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], o **Visual C#** ou **Visual Basic** nó pode estar sob o **outras linguagens**nó o **instalado** nó.  
+    >  Dependendo da linguagem de programação que é configurada como linguagem primária no Visual Studio, o **Visual C#** ou **Visual Basic** nó pode estar sob o **outras linguagens** nó de **instalado** nó.  
   
 6.  Clique com botão direito **activity1** na **Solution Explorer** e escolha **excluir**. Clique em **Okey** para confirmar.  
   

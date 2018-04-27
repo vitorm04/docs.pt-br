@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d40b59faa4d0f50e59daaa71da6127da367f008b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b8b3e3006072855673c37786ffb763fcd610e40c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Compilando os exemplos do Windows Communication Foundation 
 O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemplos podem ser criados usando o Visual Studio 2010 ou usando o **msbuild** comando da linha de comando. Ambos os procedimentos são descritos neste tópico.  
@@ -39,9 +39,9 @@ O [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemplos podem ser cri
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Para criar o exemplo usando Visual Studio  
   
-1.  Se você estiver usando [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 ou Windows Server 2008 R2 e execução [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], você deve executar [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] com permissão elevada. Para fazer isso, clique no ícone do menu Iniciar e, em seguida, clique em **executar como administrador**.  
+1.  Se você estiver usando [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 ou Windows Server 2008 R2 e execução [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], você deve executar o Visual Studio com permissões elevadas. Para fazer isso, clique no ícone do menu Iniciar e, em seguida, clique em **executar como administrador**.  
   
-2.  Do **arquivo** no Visual Studio, clique em **abrir**, em seguida, clique em **projeto/solução**. Navegue até o subdiretório específico do idioma sob o diretório no qual você instalou o exemplo e clique duas vezes no ícone do arquivo. sln para abrir a solução em [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+2.  Do **arquivo** no Visual Studio, clique em **abrir**, em seguida, clique em **projeto/solução**. Navegue até o subdiretório específico do idioma sob o diretório no qual você instalou o exemplo e clique duas vezes no ícone do arquivo. sln para abrir a solução no Visual Studio.  
   
 3.  No **criar** menu, selecione **recompilar solução**. Os arquivos de programa do cliente são criados para client\bin e os arquivos de programa de serviço são criados para service\bin. Se o serviço está hospedado no IIS, os arquivos de programa de serviço também são copiados para o diretório servicemodelsamples e seu subdiretório \bin.  
   

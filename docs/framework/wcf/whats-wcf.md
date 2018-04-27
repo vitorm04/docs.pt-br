@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e194a0784eb27043bbd0c127cde6883b4fafb2e
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 2fa6efdc61620647d5c6318746e61e09cdde7a46
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>O que é o Windows Communication Foundation
 O [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] é uma estrutura para criar aplicativos orientados a serviços. Usando o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], você poderá enviar dados como mensagens assíncronas de um ponto de extremidade de serviço para outro. Um ponto de extremidade de serviço pode ser parte de um serviço disponível continuamente hospedado pelo IIS, ou pode ser um serviço hospedado em um aplicativo. Um ponto de extremidade pode ser um cliente de um serviço que solicita dados de um ponto de extremidade de serviço. As mensagens podem ser simples como um único caractere ou uma palavra enviada como XML ou complexo como um fluxo de dados binários. Alguns cenários de exemplo incluem:  
@@ -80,7 +80,7 @@ O [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] é uma estrutura para cri
   
 -   **Mensagens duráveis**  
   
-     Uma mensagem é durável porque nunca é perdida devido a um rompimento na comunicação. As mensagens em um padrão durável são sempre salvas em um banco de dados. Se um rompimento ocorrer, o banco de dados permitirá que você retome a troca de mensagens quando a conexão for restaurada. Você também pode criar uma mensagem durável usando o [!INCLUDE[wf](../../../includes/wf-md.md)]. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Serviços de fluxo de trabalho](../../../docs/framework/wcf/feature-details/workflow-services.md).  
+     Uma mensagem é durável porque nunca é perdida devido a um rompimento na comunicação. As mensagens em um padrão durável são sempre salvas em um banco de dados. Se um rompimento ocorrer, o banco de dados permitirá que você retome a troca de mensagens quando a conexão for restaurada. Você também pode criar uma mensagem durável usando o Windows Workflow Foundation (WF). [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Serviços de fluxo de trabalho](../../../docs/framework/wcf/feature-details/workflow-services.md).  
   
 -   **Transações**  
   
@@ -97,7 +97,7 @@ O [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] é uma estrutura para cri
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>Integração WCF com outras tecnologias da Microsoft  
  O [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] é uma plataforma flexível. Devido a essa flexibilidade extrema, o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] também é usado em vários outros produtos da Microsoft. Ao entender os conceitos básicos do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], você terá uma vantagem imediata se também usar esses produtos.  
   
- A primeira tecnologia a emparelhar-se com o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] foi o Windows Workflow Foundation (WF). Fluxos de trabalho simplificam o desenvolvimento de aplicativo encapsular as etapas no fluxo de trabalho como "atividades". Na primeira versão do [!INCLUDE[wf2](../../../includes/wf2-md.md)], um desenvolvedor precisava criar um host para o fluxo de trabalho. A versão seguinte do [!INCLUDE[wf2](../../../includes/wf2-md.md)] foi integrada com o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Isso permitiu que qualquer fluxo de trabalho fosse facilmente hospedado em um serviço do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]; você pode fazer isso automaticamente escolhendo o tipo de projeto do WF/WCF no [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
+ A primeira tecnologia a emparelhar-se com o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] foi o Windows Workflow Foundation (WF). Fluxos de trabalho simplificam o desenvolvimento de aplicativo encapsular as etapas no fluxo de trabalho como "atividades". Na primeira versão do Windows Workflow Foundation, um desenvolvedor precisava criar um host para o fluxo de trabalho. A próxima versão do Windows Workflow Foundation foi integrada ao [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Isso permitiu que qualquer fluxo de trabalho fosse facilmente hospedado em um serviço do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]; você pode fazer isso automaticamente escolhendo o tipo de projeto do WF/WCF no [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
   
  O Microsoft BizTalk Server R2 também utiliza o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] como uma tecnologia de comunicação. O BizTalk é criado para receber e transformar dados de um formato padronizado para outro. As mensagens devem ser entregues a sua caixa de mensagens central onde a mensagem pode ser transformada usando um mapeamento restrito ou usando um dos recursos de BizTalk como o mecanismo de fluxo de trabalho. O BizTalk agora pode usar o adaptador de LOB (linha de negócios) do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] para enviar mensagens à caixa de mensagens.  
   

@@ -15,14 +15,14 @@ ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c18c1ea645c9f144e2c2043af5460d6fb03f13a1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6a303b0bc9a51ec5566be5cf6db40ff9b9de4c9c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="events-visual-basic"></a>Eventos (Visual Basic)
-Enquanto você visualiza um projeto [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] como uma série de procedimentos que executam em uma sequência, na realidade, a maioria dos programas é orientada a eventos, o que significa que o fluxo de execução é determinado pelas ocorrências externas chamadas *eventos*.  
+Enquanto você pode visualizar um projeto do Visual Studio como uma série de procedimentos que executam em uma sequência, na realidade, a maioria dos programas são orientados a eventos, que significa que o fluxo de execução é determinado pelas externas ocorrências chamadas *eventos*.  
   
  Um evento é um sinal que informa a um aplicativo que algo importante ocorreu. Por exemplo, quando um usuário clica em um controle em um formulário, o formulário pode lançar um evento `Click` e chamar um procedimento que manipula o evento. Os eventos também permitem que tarefas separadas se comuniquem. Por exemplo, digamos que seu aplicativo executa uma tarefa de classificação separadamente do aplicativo principal. Se um usuário cancelar a classificação, seu aplicativo poderá enviar um evento de cancelamento instruindo o processo de classificação para parar.  
   

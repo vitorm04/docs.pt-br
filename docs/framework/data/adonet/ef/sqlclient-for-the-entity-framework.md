@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2801ad445be073f2cd4725d04a0c731e8bfcdd1b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5949ee1931b9ab9adf1f14b921432cae531cebd5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>SqlClient para Entity Framework
 Esta seção descreve o provedor de dados. NET Framework para SQL Server (SqlClient), que permite Entity Framework para trabalhar sobre o Microsoft SQL Server.  
@@ -42,7 +42,7 @@ Esta seção descreve o provedor de dados. NET Framework para SQL Server (SqlCli
 |2000|2005|2008|  
   
 > [!NOTE]
->  Começando com [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] 2010, o [ferramentas de modelo de dados de entidade ADO.NET](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) não oferecem suporte a SQL Server 2000.  
+>  Começando com o Visual Studio 2010, o [ferramentas de modelo de dados de entidade ADO.NET](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) não oferecem suporte a SQL Server 2000.  
   
 ## <a name="provider-namespace-name"></a>Nome do namespace do provedor  
  Todos os provedores devem especificar um namespace. Essa propriedade informa a Entity Framework que prefixo é usado pelo provedor para compilações específicas, como tipos e funções. O namespace para manifestos de provedor SqlClient é `SqlServer`. Para obter mais informações sobre namespaces, consulte [Namespaces](../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md).  

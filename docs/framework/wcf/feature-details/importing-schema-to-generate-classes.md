@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7fc755ff7f1b6c583a1e9aa1bc209495563812f0
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 43eaa4ffe562cf1dde5abd7e7540125dcf383732
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importando esquema para gerar classes
 Para gerar classes de esquemas que podem ser usados com [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], use o <xref:System.Runtime.Serialization.XsdDataContractImporter> classe. Este tópico descreve o processo e variações.  
@@ -154,7 +154,7 @@ Para gerar classes de esquemas que podem ser usados com [!INCLUDE[indigo1](../..
  O `ReferencedTypes` propriedade corresponde do **/Reference** alternar em certos modos de operação da ferramenta Svcutil.exe.  
   
 > [!NOTE]
->  Ao usar o Svcutil.exe ou (no [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]) o **adicionar referência de serviço** ferramentas, todos os tipos de mscorlib. dll serão automaticamente referenciadas.  
+>  Ao usar o Svcutil.exe ou (no Visual Studio) a **adicionar referência de serviço** ferramentas, todos os tipos de mscorlib. dll serão automaticamente referenciadas.  
   
 #### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>Opções de importação: Importando esquema não DataContract como IXmlSerializable tipos  
  O <xref:System.Runtime.Serialization.XsdDataContractImporter> oferece suporte a um subconjunto limitado do esquema. Se houver construções de esquema sem suporte (por exemplo, os atributos XML), a tentativa de importação falhará com uma exceção. No entanto, definindo o <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> propriedade `true` estende o intervalo de esquema com suporte. Quando definido como `true`, o <xref:System.Runtime.Serialization.XsdDataContractImporter> gera tipos que implementam o <xref:System.Xml.Serialization.IXmlSerializable> interface. Isso permite o acesso direto a representação XML desses tipos.  

@@ -1,26 +1,27 @@
 ---
 title: Rastreamento de SQL
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6bd8fbe1a29793778d93eeca64b185079d706f3e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2eeb5cf57e6efac77de4a76fe8131189273d5438
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sql-tracking"></a>Rastreamento de SQL
-Este exemplo demonstra como escrever um participante de rastreamento SQL personalizado, que grava registros de rastreamento em uma base de dados SQL. [!INCLUDE[wf](../../../../includes/wf-md.md)] fornece o rastreamento de fluxo de trabalho a visibilidade de ganho em execução de uma instância de fluxo de trabalho. O tempo de execução de rastreamento emite-se registros de acompanhamento de fluxo de trabalho durante a execução de fluxo de trabalho. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]fluxo de trabalho de controle de alterações, consulte [fluxo de trabalho de rastreamento e rastreamento](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
+Este exemplo demonstra como escrever um participante de rastreamento SQL personalizado, que grava registros de rastreamento em uma base de dados SQL. Windows Workflow Foundation (WF) fornece o fluxo de trabalho de rastreamento para obter visibilidade a execução de uma instância de fluxo de trabalho. O tempo de execução de rastreamento emite-se registros de acompanhamento de fluxo de trabalho durante a execução de fluxo de trabalho. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] fluxo de trabalho de controle de alterações, consulte [fluxo de trabalho de rastreamento e rastreamento](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
   
 #### <a name="to-use-this-sample"></a>Para usar este exemplo  
   
@@ -43,7 +44,7 @@ Este exemplo demonstra como escrever um participante de rastreamento SQL persona
   
 7.  O navegador exibe a página de StockPriceService, que contém o endereço de WSDL de serviço local. Copie este endereço.  
   
-     Um exemplo de endereço de WSDL de serviço local é http://localhost:65193/StockPriceService.xamlx?wsdl.  
+     Um exemplo do endereço local de serviço WSDL é http://localhost:65193/StockPriceService.xamlx?wsdl.  
   
 8.  Usando [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], execute o cliente de teste de WCF (WcfTestClient.exe). Está localizado no Microsoft Visual Studio 10.0 diretório \ Common7 \ IDE.  
   
@@ -51,7 +52,7 @@ Este exemplo demonstra como escrever um participante de rastreamento SQL persona
   
 10. O cliente de teste do WCF, clique duas vezes em **GetStockPrice**. Isso abre o `GetStockPrice` operação que usa um parâmetro, digite o valor `Contoso` e clique em **Invoke**.  
   
-11. Os registros emissores de rastreamento são gravados em uma base de dados SQL. Para exibir os registros de rastreamento, abra o base de dados de TrackingSample em SQL Management Studio e navegar para tabelas. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]SQL Server Management Studio, consulte [apresentando o SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645). SQL Server 2008 Management Studio Express pode ser baixado [aqui](http://go.microsoft.com/fwlink/?LinkId=180520). Executar uma consulta selecionar as tabelas exibe os dados dentro dos registros de rastreamento armazenados nas tabelas respectivas.  
+11. Os registros emissores de rastreamento são gravados em uma base de dados SQL. Para exibir os registros de rastreamento, abra o base de dados de TrackingSample em SQL Management Studio e navegar para tabelas. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] SQL Server Management Studio, consulte [apresentando o SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645). SQL Server 2008 Management Studio Express pode ser baixado [aqui](http://go.microsoft.com/fwlink/?LinkId=180520). Executar uma consulta selecionar as tabelas exibe os dados dentro dos registros de rastreamento armazenados nas tabelas respectivas.  
   
 #### <a name="to-uninstall-the-sample"></a>Para desinstalar o exemplo  
   

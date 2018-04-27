@@ -1,12 +1,13 @@
 ---
-title: "Considerações sobre o layout do elemento WindowsFormsHost"
-ms.custom: 
+title: Considerações sobre o layout do elemento WindowsFormsHost
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Forms [WPF], interoperability with
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 895185797ebdef2145caec4c1c5ac26e3688c463
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b915d3cdaebc862534c2ba6bd006d3b447e2a651
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Considerações sobre o layout do elemento WindowsFormsHost
 Este tópico descreve como o <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento interage com o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de layout.  
@@ -74,7 +76,7 @@ Este tópico descreve como o <xref:System.Windows.Forms.Integration.WindowsForms
   
  Todos os outros casos requerem o dimensionamento do sistema de coordenadas. O controle hospedado não é redimensionado. Em vez disso, o <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento tenta redimensionar o controle hospedado e todos os seus controles filhos. Porque [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] não suporte completo a escala, o <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento pode ser expandido para o grau suportado pelos controles específicos.  
   
- Substituir o <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A> método para fornecer o comportamento de dimensionamento personalizado hospedado [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] controle.  
+ Substituir o <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A> método para fornecer o comportamento de dimensionamento personalizado para o controle de formulários do Windows hospedado.  
   
  Além de dimensionar, o <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento trata casos de arredondamento e de estouro conforme descrito na tabela a seguir.  
   

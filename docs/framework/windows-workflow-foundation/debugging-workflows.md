@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 788cc6b25e4faa8a680f5ec23d88a5d18d0a7c87
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 866fe3ebcec295b57444f937b3b6fd6677bfe0f4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="debugging-workflows"></a>Depurando fluxos de trabalho
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] oferece várias opções para depurar fluxos de trabalho em execução do ambiente de desenvolvimento. Fluxos de trabalho podem ser depurado no designer, em XAML, e no código.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/26/2018
  Fluxo de trabalho que depurar também suporta usando a infraestrutura do Visual Studio para anexar a um processo. Isso permite que o autor de fluxo de trabalho para depurar um execução de fluxo de trabalho em um ambiente diferente de host como Serviços de Informações da Internet (IIS) 7,0.  
   
 ## <a name="remote-debugging"></a>Depuração remota  
- [!INCLUDE[wf](../../../includes/wf-md.md)] depuração remota funciona como a depuração remota para outros componentes do Visual Studio. Para obter informações sobre como usar a depuração remota, consulte [como: Ativar depuração remota](http://go.microsoft.com/fwlink/?LinkId=196257).  
+ Depuração remota do Windows Workflow Foundation (WF) funciona da mesma forma a depuração remota para outros componentes do Visual Studio. Para obter informações sobre como usar a depuração remota, consulte [como: Ativar depuração remota](http://go.microsoft.com/fwlink/?LinkId=196257).  
   
 > [!NOTE]
 >  Se o aplicativo de fluxo de trabalho tem como alvo o x86 arquitetura e está hospedado em um computador executando um sistema operacional de 64 bits, a depuração remota não funcionará a menos que o Visual Studio está instalado no computador remoto ou o destino para o aplicativo de fluxo de trabalho é alterado para **Qualquer CPU**.  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-caps.latest.revision: ''
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e04c63754960dca44558d888b8ce357220562ea7
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 11a4b1d6665e0198f8c9afc0209e9fb09cc599ad
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="migration-guidance"></a>Orientação de migração
-No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], a Microsoft está liberando a segunda versão principal do [!INCLUDE[wf](../../../includes/wf-md.md)]. O [!INCLUDE[wf1](../../../includes/wf1-md.md)] foi liberado no [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (isso inclui os tipos nos namespaces System.Workflow.*; agora referido como WF3) e aprimorado no [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 também é parte do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], mas ele não houver junto com a nova tecnologia de fluxo de trabalho (os tipos em System. Activities.\* namespaces; conhecido como WF4). Ao considerar quando adotar o WF4, é importante primeiro reconhecer que você controla o tempo.  
+No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], a Microsoft lançou a segunda versão principal do Windows Workflow Foundation (WF). O [!INCLUDE[wf1](../../../includes/wf1-md.md)] foi liberado no [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (isso inclui os tipos nos namespaces System.Workflow.*; agora referido como WF3) e aprimorado no [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 também é parte do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], mas ele não houver junto com a nova tecnologia de fluxo de trabalho (os tipos em System. Activities.\* namespaces; conhecido como WF4). Ao considerar quando adotar o WF4, é importante primeiro reconhecer que você controla o tempo.  
   
 -   O WF3 tem suporte completo do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].  
   

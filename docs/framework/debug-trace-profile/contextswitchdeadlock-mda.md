@@ -1,12 +1,13 @@
 ---
 title: MDA contextSwitchDeadlock
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deadlocks [.NET Framework]
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - message pumping
 - context switching deadlocks
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 816afbae0cca18de24c11152541a509b54c119b8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2f3ee9aef3bc824ee25e577a5dbd14aeaa210be3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="contextswitchdeadlock-mda"></a>MDA contextSwitchDeadlock
 O MDA (assistente para depuração gerenciada) `contextSwitchDeadlock` é ativado quando um deadlock é detectado durante uma tentativa de transição de contexto COM.  
@@ -54,7 +56,7 @@ O MDA (assistente para depuração gerenciada) `contextSwitchDeadlock` é ativad
  Para determinar se o MDA está sendo ativado erroneamente, desabilite todos os pontos de interrupção, reinicie o aplicativo e permita que ele seja executado sem parar. Se o MDA não for ativado, é provável que a ativação inicial era falsa. Nesse caso, desabilite o MDA para evitar interferências na sessão de depuração.  
   
 > [!NOTE]
->  Esse MDA está no conjunto padrão para o [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] e versões mais recentes. Quando o processo de hospedagem é habilitado em [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], não é possível desabilitar MDAs que estão no conjunto padrão. Como é habilitado por padrão, o processo de hospedagem deve ser desabilitado explicitamente. Para obter informações sobre como desabilitar os MDAs, consulte “Habilitando e desabilitando os MDAs” em [Diagnosticando erros com assistentes para depuração gerenciada](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
+>  Esse MDA está no conjunto padrão para o [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] e versões mais recentes. Quando o processo de hospedagem está habilitado no Visual Studio, você não pode desabilitar MDAs no padrão definidas. Como é habilitado por padrão, o processo de hospedagem deve ser desabilitado explicitamente. Para obter informações sobre como desabilitar os MDAs, consulte “Habilitando e desabilitando os MDAs” em [Diagnosticando erros com assistentes para depuração gerenciada](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   
 ## <a name="resolution"></a>Resolução  
  Siga as regras de COM em relação ao bombeamento das mensagens de STA.  

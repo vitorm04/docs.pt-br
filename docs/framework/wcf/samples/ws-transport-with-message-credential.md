@@ -1,29 +1,31 @@
 ---
 title: Transporte de WS com credencial de mensagem
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f782ac12c92755eb26eddd30c5d8c15168c35858
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7b954e2d19f601476876beef6482ca10eb3f113b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ws-transport-with-message-credential"></a>Transporte de WS com credencial de mensagem
 Este exemplo demonstra o uso da segurança de transporte SSL em combinação com a credencial de cliente que está sendo executada na mensagem. Este exemplo usa o `wsHttpBinding` associação.  
   
- Por padrão, o `wsHttpBinding` associação fornece comunicação HTTP. Quando configurado para segurança de transporte, a associação oferece suporte à comunicação de HTTPS. O HTTPS oferece confidencialidade e proteção de integridade para as mensagens que são transmitidas eletronicamente. Porém, o conjunto de mecanismos de autenticação que pode ser usado para autenticar o cliente para o serviço é limitado à dá suporte a transporte HTTPS. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]oferece um `TransportWithMessageCredential` modo de segurança que foi projetado para superar essa limitação. Quando esse modo de segurança está configurado, a segurança de transporte é usada para fornecer confidencialidade e a integridade das mensagens transmitidas e para executar a autenticação de serviço. No entanto, a autenticação do cliente é executada, colocando a credencial do cliente diretamente na mensagem. Isso permite que você use qualquer tipo de credencial que é compatível com o modo de segurança de mensagem para a autenticação do cliente, mantendo o benefício de desempenho do modo de segurança de transporte.  
+ Por padrão, o `wsHttpBinding` associação fornece comunicação HTTP. Quando configurado para segurança de transporte, a associação oferece suporte à comunicação de HTTPS. O HTTPS oferece confidencialidade e proteção de integridade para as mensagens que são transmitidas eletronicamente. Porém, o conjunto de mecanismos de autenticação que pode ser usado para autenticar o cliente para o serviço é limitado à dá suporte a transporte HTTPS. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] oferece um `TransportWithMessageCredential` modo de segurança que foi projetado para superar essa limitação. Quando esse modo de segurança está configurado, a segurança de transporte é usada para fornecer confidencialidade e a integridade das mensagens transmitidas e para executar a autenticação de serviço. No entanto, a autenticação do cliente é executada, colocando a credencial do cliente diretamente na mensagem. Isso permite que você use qualquer tipo de credencial que é compatível com o modo de segurança de mensagem para a autenticação do cliente, mantendo o benefício de desempenho do modo de segurança de transporte.  
   
  Neste exemplo, um `UserName` tipo de credencial é usado para autenticar o cliente para o serviço.  
   
@@ -33,15 +35,15 @@ Este exemplo demonstra o uso da segurança de transporte SSL em combinação com
 >  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
  O código do programa no exemplo é quase idêntico do [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) serviço. Há uma operação adicional fornecida pelo contrato de serviço - `GetCallerIdentity`. Essa operação retorna o nome da identidade do chamador ao chamador.  
-  
-```  
+
+```csharp
 public string GetCallerIdentity()  
 {  
     // Use ServiceSecurityContext.WindowsIdentity to get the name of the caller.  
     return ServiceSecurityContext.Current.WindowsIdentity.Name;  
 }  
-```  
-  
+```
+
  Você deve criar um certificado e atribuí-lo usando o Assistente de certificado de servidor da Web antes de criar e executar o exemplo. A definição de ponto de extremidade e a definição de associação na configuração do arquivo de configurações permitem `TransportWithMessageCredential` modo de segurança, conforme mostrado no seguinte exemplo de configuração para o cliente.  
   
 ```xml  
@@ -72,13 +74,13 @@ public string GetCallerIdentity()
   
  O endereço especificado usa o esquema de https://. A configuração de associação define o modo de segurança `TransportWithMessageCredential`. O mesmo modo de segurança deve ser especificado no arquivo de Web. config do serviço.  
   
- Como o certificado usado neste exemplo é um certificado de teste criado com o Makecert.exe, um alerta de segurança é exibida quando você tentar acessar um https: endereço, como https://localhost/servicemodelsamples/service.svc do seu navegador. Para permitir que o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente para trabalhar com um certificado de teste no lugar, foi adicionado um código adicional para o cliente para suprimir o alerta de segurança. Esse código e a classe que o acompanha, não é necessário ao usar certificados de produção.  
-  
-```  
+ Como o certificado usado neste exemplo é um certificado de teste criado com o Makecert.exe, um alerta de segurança é exibida quando você tentar acessar um https: endereço, como https://localhost/servicemodelsamples/service.svc, no seu navegador. Para permitir que o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente para trabalhar com um certificado de teste no lugar, foi adicionado um código adicional para o cliente para suprimir o alerta de segurança. Esse código e a classe que o acompanha, não é necessário ao usar certificados de produção.  
+
+```csharp
 // WARNING: This code is only needed for test certificates such as those created by makecert. It is   
 // not recommended for production code.  
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
-```  
+```
   
  Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   

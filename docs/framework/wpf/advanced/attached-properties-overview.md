@@ -1,13 +1,13 @@
 ---
-title: "Visão geral das propriedades anexadas"
-ms.custom: 
+title: Visão geral das propriedades anexadas
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-caps.latest.revision: 
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2d1d0eb55e75cd450d55b69aadca9c60e157eb09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ceba94d80ca66ab228804ffff2a5b8f89a68d7c4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="attached-properties-overview"></a>Visão geral das propriedades anexadas
 Uma propriedade anexada é um conceito definido por XAML. Uma propriedade anexada deve ser utilizada como um tipo de propriedade global configurável em qualquer objeto. No [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], as propriedades anexadas normalmente são definidas como uma forma especializada de propriedade de dependência que não tem a propriedade “wrapper” convencional.  
@@ -67,7 +67,7 @@ Uma propriedade anexada é um conceito definido por XAML. Uma propriedade anexad
 ### <a name="an-example-of-a-parent-defined-attached-property"></a>Um exemplo de propriedade anexada definida pelo pai  
  O cenário mais comum em que o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] define uma propriedade anexada é quando um elemento pai dá suporte a uma coleção de elementos filho e também implementa um comportamento em que as especificidades do comportamento são reportadas individualmente para cada elemento filho.  
   
- <xref:System.Windows.Controls.DockPanel>Define o <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> propriedade, anexada e <xref:System.Windows.Controls.DockPanel> tem código no nível de classe como parte de sua lógica de renderização (especificamente, <xref:System.Windows.Controls.DockPanel.MeasureOverride%2A> e <xref:System.Windows.Controls.DockPanel.ArrangeOverride%2A>). Um <xref:System.Windows.Controls.DockPanel> instância sempre verificará se qualquer um de seus elementos filho imediatos tiver definido um valor para <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>. Nesse caso, tais valores se tornam uma entrada para a lógica de renderização aplicada ao elemento filho em questão. Aninhados <xref:System.Windows.Controls.DockPanel> instâncias cada tratam suas próprias coleções de elementos filho imediatos, mas esse comportamento é específico da implementação como <xref:System.Windows.Controls.DockPanel> processos <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> valores. Teoricamente, é possível ter propriedades anexadas que influenciam elementos além do pai imediato. Se o <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> propriedade anexada é definida em um elemento que não tem nenhum <xref:System.Windows.Controls.DockPanel> elemento pai para agir sobre ela, nenhum erro ou exceção é gerado. Isso simplesmente significa que um valor de propriedade global foi definido, mas ele tem não atual <xref:System.Windows.Controls.DockPanel> pai que possa consumir as informações.  
+ <xref:System.Windows.Controls.DockPanel> Define o <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> propriedade, anexada e <xref:System.Windows.Controls.DockPanel> tem código no nível de classe como parte de sua lógica de renderização (especificamente, <xref:System.Windows.Controls.DockPanel.MeasureOverride%2A> e <xref:System.Windows.Controls.DockPanel.ArrangeOverride%2A>). Um <xref:System.Windows.Controls.DockPanel> instância sempre verificará se qualquer um de seus elementos filho imediatos tiver definido um valor para <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>. Nesse caso, tais valores se tornam uma entrada para a lógica de renderização aplicada ao elemento filho em questão. Aninhados <xref:System.Windows.Controls.DockPanel> instâncias cada tratam suas próprias coleções de elementos filho imediatos, mas esse comportamento é específico da implementação como <xref:System.Windows.Controls.DockPanel> processos <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> valores. Teoricamente, é possível ter propriedades anexadas que influenciam elementos além do pai imediato. Se o <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> propriedade anexada é definida em um elemento que não tem nenhum <xref:System.Windows.Controls.DockPanel> elemento pai para agir sobre ela, nenhum erro ou exceção é gerado. Isso simplesmente significa que um valor de propriedade global foi definido, mas ele tem não atual <xref:System.Windows.Controls.DockPanel> pai que possa consumir as informações.  
   
 <a name="attached_properties_code"></a>   
 ## <a name="attached-properties-in-code"></a>Propriedades anexadas em código  
@@ -106,7 +106,7 @@ Uma propriedade anexada é um conceito definido por XAML. Uma propriedade anexad
  Defina sua propriedade anexada como uma propriedade de dependência, declarando um `public` `static` `readonly` campo do tipo <xref:System.Windows.DependencyProperty>. Você define este campo usando o valor de retorno de <xref:System.Windows.DependencyProperty.RegisterAttached%2A> método. O nome do campo deve corresponder ao nome da propriedade anexada, concatenado com a cadeia de caracteres `Property`, para seguir o padrão [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] estabelecido de nomenclatura dos campos de identificação em oposição às propriedades representadas. O provedor de propriedade anexada também deve fornecer estático `Get` *PropertyName* e `Set` *PropertyName* métodos como acessadores para a propriedade anexada; Falha ao fazer isso resultará no sistema de propriedade que não conseguem usar sua propriedade anexada.  
   
 > [!NOTE]
->  Se o acessador get da propriedade anexada for omitido, a associação de dados na propriedade não funcionará nas ferramentas de design, como [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] e Expression Blend.  
+>  Se você omitir o acessador get da propriedade anexada, associação de dados na propriedade não funcionará nas ferramentas de design, como o Visual Studio e o Expression Blend.  
   
 #### <a name="the-get-accessor"></a>O acessador get  
  A assinatura para o acessador `Get`*PropertyName* deve ser:  

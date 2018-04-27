@@ -1,24 +1,26 @@
 ---
 title: Envio em lote transacionado
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ecd328ed-332e-479c-a894-489609bcddd2
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 87d8e3e09618b214dcafb7afd82970dde54fc4fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 50596aaf5290146148ecb9636b78f7f9180c0b79
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-batching"></a>Envio em lote transacionado
 Este exemplo demonstra como lote transacionadas leituras usando o serviço de enfileiramento de mensagens (MSMQ). Envio em lote transacionado é um recurso de otimização de desempenho para leituras transacionadas na comunicação em fila.  
@@ -142,8 +144,8 @@ Este exemplo demonstra como lote transacionadas leituras usando o serviço de en
  O comportamento de serviço define um comportamento de operação com `TransactionScopeRequired` definido como `true`. Isso garante que o mesmo escopo de transação que é usado para recuperar a mensagem da fila é usado por qualquer gerenciadores de recursos acessados pelo método. Neste exemplo, usamos um banco de dados básico para armazenar as informações de ordem de compra contidas na mensagem. O escopo da transação também garante que, se o método gera uma exceção, a mensagem é retornada para a fila. Sem configurar esse comportamento de operação, um canal em fila cria uma transação para ler a mensagem da fila e é confirmada automaticamente antes que ele é enviado para que se a operação falhar, a mensagem será perdida. O cenário mais comum é para operações de serviço para se inscrever na transação que é usada para ler a mensagem da fila, conforme demonstrado no código a seguir.  
   
  Observe que `ReleaseServiceInstanceOnTransactionComplete` é definido como `false`. Esse é um requisito importante para envio em lote. A propriedade `ReleaseServiceInstanceOnTransactionComplete` em `ServiceBehaviorAttribute` indica o que fazer com a instância do serviço depois que a transação é concluída. Por padrão, a instância do serviço é liberada após a conclusão da transação. A proporção de núcleo para envio em lote é o uso de uma única transação para leitura e expedir muitas mensagens na fila. Liberar, portanto, a instância do serviço acaba de completar a transação prematuramente, eliminando o uso muito do envio em lote. Se essa propriedade é definida como `true` e o comportamento do lote transacionado é adicionado ao ponto de extremidade, o comportamento de validação de envio em lote gera uma exceção.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(ReleaseServiceInstanceOnTransactionComplete=false,   
@@ -160,11 +162,11 @@ public class OrderProcessorService : IOrderProcessor
     }  
     …  
 }  
-```  
-  
+```
+
  O `Orders` classe encapsula o processamento do pedido. No exemplo, ele atualiza o banco de dados com informações de ordem de compra.  
-  
-```  
+
+```csharp
 // Order Processing Logic  
 public class Orders  
 {  
@@ -234,8 +236,8 @@ public class Orders
                                      {1} ", rowsAffected, po.PONumber);  
     }  
 }  
-```  
-  
+```
+
  O comportamento de envio em lote e suas configurações são especificadas na configuração do aplicativo de serviço.  
   
 ```xml  
@@ -292,8 +294,8 @@ public class Orders
 >  A escolha do tamanho do lote é dependente de seu aplicativo. Se o tamanho do lote for muito pequeno, você não pode obter o desempenho desejado. Por outro lado se o tamanho do lote for muito grande, ele pode diminuir o desempenho. Por exemplo, a transação pode durar mais e mantenha os bloqueios em seu banco de dados ou a transação foi dead bloqueada, que poderia fazer com que o lote para obter revertida e o trabalho de restauração.  
   
  O cliente cria um escopo de transação. Comunicação com a fila ocorre dentro do escopo da transação, fazendo com que ele será tratado como uma unidade atômica, onde todas as mensagens são enviadas para a fila ou nenhuma das mensagens são enviadas para a fila. A transação é confirmada chamando <xref:System.Transactions.TransactionScope.Complete%2A> no escopo de transação.  
-  
-```  
+
+```csharp
 //Client implementation code.  
 class Client  
 {  
@@ -340,8 +342,8 @@ class Client
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  Quando você executar o exemplo, as atividades do cliente e de serviço são exibidas em janelas do console de serviço e o cliente. Você pode ver as mensagens de recebimento de serviço do cliente. Pressione ENTER em cada janela de console para desligar o serviço e o cliente. Observe que como enfileiramento de mensagens está em uso, o cliente e o serviço não precisa estar em execução ao mesmo tempo. Execute o cliente, desligá-lo e, em seguida, inicie o serviço e ainda receber suas mensagens. Você pode ver uma saída sem interrupção, como as mensagens são lidas em um lote e processadas.  
   
 ```  

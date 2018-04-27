@@ -1,37 +1,38 @@
 ---
-title: "Programação do Windows Workflow Foundation"
-ms.custom: 
+title: Programação do Windows Workflow Foundation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Workflow Foundation [WF], programming
 - programming [WF]
 - WF [WF], programming
 ms.assetid: f62354e2-6a2b-4e8c-a4bc-533fb96267a4
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7ad763512a4f39f2d0b2e2f03b052de5b8dcc031
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0b704357d914f72049d0639c402bf2ae64975d00
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-workflow-foundation-programming"></a>Programação do Windows Workflow Foundation
-Esta seção contém um conjunto de tópicos de instruções que você deve compreender para se tornar um programador proficiente de [!INCLUDE[wf](../../../includes/wf-md.md)].  
+Esta seção contém um conjunto de tópicos do livro de instruções que você deve compreender para se tornar um programador proficientes do Windows Workflow Foundation (WF).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Criando fluxos de trabalho](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
  Os tópicos que descrevem os paradigma de controle de fluxo usados no desenvolvimento de fluxo de trabalho.  
   
  [Usando e criando atividades](../../../docs/framework/windows-workflow-foundation/using-and-creating-activities.md)  
- Os tópicos que descrevem as atividades fornecidas pelo sistema disponíveis no [!INCLUDE[wf](../../../includes/wf-md.md)].  
+ Tópicos que descreve as atividades fornecidas pelo sistema disponíveis no Windows Workflow Foundation (WF).  
   
  [Modelo de dados do Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/data-model.md)  
  Os tópicos que descrevem variáveis, argumentos e expressões no [!INCLUDE[wf1](../../../includes/wf1-md.md)].  
@@ -55,7 +56,7 @@ Esta seção contém um conjunto de tópicos de instruções que você deve comp
  Os tópicos que descrevem as opções para persistir dados de fluxo de trabalho de maneira automática ou manual e descarregar fluxos de trabalho da memória.  
   
  [Orientação de migração](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)  
- Os tópicos que descrevem como migrar fluxos de trabalho de versões anteriores do [!INCLUDE[wf](../../../includes/wf-md.md)].  
+ Tópicos que descrevem como migrar os fluxos de trabalho de versões anteriores do Windows Workflow Foundation (WF).  
   
  [Acompanhamento e rastreamento de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
  Os tópicos que descrevem o rastreamento de fluxo de trabalho e como esses recursos são usados para monitorar aplicativos de fluxo de trabalho.  
@@ -64,4 +65,4 @@ Esta seção contém um conjunto de tópicos de instruções que você deve comp
  Discute como manter seu fluxo de trabalho seguro ao usar o SQL e o [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
   
  [Desempenho do Windows Workflow Foundation 4](../../../docs/framework/windows-workflow-foundation/performance.md)  
- Discute o desempenho do [!INCLUDE[wf2](../../../includes/wf2-md.md)] 4 e o compara com a versão anterior do WF.
+ Discute o desempenho do Windows Workflow Foundation 4 e o compara a versão anterior do WF.

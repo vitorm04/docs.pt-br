@@ -1,27 +1,29 @@
 ---
-title: "Otimizando desempenho: vinculação de dados"
-ms.custom: 
+title: 'Otimizando desempenho: vinculação de dados'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c420748a9361655eeb2df33ce8426d9f167d3414
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b21089ea3f3aef8a934c78187b30f2576b8d39b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="optimizing-performance-data-binding"></a>Otimizando desempenho: vinculação de dados
 A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece aos aplicativos uma maneira simples e consistente para apresentar e interagir com os dados. Os elementos podem ser associados aos dados de uma variedade de fontes de dados na forma de objetos [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] e [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
@@ -34,7 +36,7 @@ A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
 ## <a name="how-data-binding-references-are-resolved"></a>Como as referências de vinculação de dados são resolvidas  
  Antes de discutir os problemas de desempenho da vinculação de dados, vale a pena explorar como o mecanismo de vinculação de dados [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] resolve referências de objeto para associação.  
   
- A origem de uma vinculação de dados [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pode ser qualquer objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Você pode associar a propriedades, subpropriedades ou indexadores de um objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. As referências de associação são resolvidas usando [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] reflexão ou um <xref:System.ComponentModel.ICustomTypeDescriptor>. Aqui estão três métodos para resolver referências de objeto para associação.  
+ A origem de uma vinculação de dados [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pode ser qualquer objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Você pode associar a propriedades, subpropriedades ou indexadores de um objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. As referências de associação são resolvidas usando a reflexão do Microsoft .NET Framework ou um <xref:System.ComponentModel.ICustomTypeDescriptor>. Aqui estão três métodos para resolver referências de objeto para associação.  
   
  O primeiro método envolve o uso de reflexão. Nesse caso, o <xref:System.Reflection.PropertyInfo> objeto é usado para descobrir os atributos da propriedade e fornece acesso aos metadados de propriedade. Ao usar o <xref:System.ComponentModel.ICustomTypeDescriptor> interface, o mecanismo de associação de dados usa esta interface para acessar os valores de propriedade. O <xref:System.ComponentModel.ICustomTypeDescriptor> interface é especialmente útil em casos onde o objeto não tem um conjunto estático de propriedades.  
   
@@ -51,7 +53,7 @@ A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
 |**Associando a propriedade Text de um TextBlock**|**Tempo de associação (ms)**|**Tempo de renderização – inclui associação (ms)**|  
 |--------------------------------------------------|-----------------------------|--------------------------------------------------|  
 |Para uma propriedade de um objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]|115|314|  
-|Para uma propriedade de um [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] objeto que implementa<xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
+|Para uma propriedade de um [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] objeto que implementa <xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
 |Para uma <xref:System.Windows.DependencyProperty> de um <xref:System.Windows.DependencyObject>.|90|263|  
   
 <a name="Binding_to_Large_CLR_Objects"></a>   
@@ -74,7 +76,7 @@ A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
 |**Vinculação de dados de ItemsSource**|**Atualizar tempo para 1 item (ms)**|  
 |--------------------------------------|---------------------------------------|  
 |Para uma [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> objeto|1656|  
-|Para um<xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
+|Para um <xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
   
 <a name="Binding_IList_to_ItemsControl_not_IEnumerable"></a>   
 ## <a name="bind-ilist-to-itemscontrol-not-ienumerable"></a>Associar IList a ItemsControl não IEnumerable  

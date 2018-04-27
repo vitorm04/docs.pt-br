@@ -1,24 +1,26 @@
 ---
-title: "Serviço AJAX sem configuração"
-ms.custom: 
+title: Serviço AJAX sem configuração
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13f74a69e05c419cc76cc8df8f58d3e3385ab35f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: ae16dc38c5508eac4a94d464e818f0b97d3b9e3b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ajax-service-without-configuration"></a>Serviço AJAX sem configuração
 Este exemplo demonstra como usar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para criar um básico ASP.NET Asynchronous JavaScript e XML (AJAX) serviço (um serviço que você pode acessar por meio de código JavaScript de um cliente de navegador da Web) sem usar as definições de configuração. O serviço usa a sintaxe especial no arquivo. svc para ativar automaticamente um ponto de extremidade AJAX.  
@@ -29,17 +31,17 @@ Este exemplo demonstra como usar [!INCLUDE[indigo1](../../../../includes/indigo1
 >  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
  Este exemplo tem como base o AJAX Service usando HTTP POST. Conforme descrito no [serviço AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md) exemplo, <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> é usado para hospedar o serviço.  
-  
-```  
+
+```svc
 <%ServiceHost  
     language=c#  
     Debug="true"  
     Service="Microsoft.Ajax.Samples.CalculatorService  
     Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory"  
 %>  
-```  
-  
- <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>adiciona automaticamente um <xref:System.ServiceModel.Description.WebScriptEndpoint> para o serviço. Se nenhuma alteração na configuração precisa ser feitas para o ponto de extremidade, o \<sistema. ServiceModel > seção pode ser completamente removida do arquivo Web. config para o serviço. O arquivo Web. config contém algumas configurações do ASP.NET, que são usadas pelo ConfigFreeClientPage.aspx. Se não fosse esse o caso, todo o arquivo Web. config foi removido.  
+```
+
+ <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> adiciona automaticamente um <xref:System.ServiceModel.Description.WebScriptEndpoint> para o serviço. Se nenhuma alteração na configuração precisa ser feitas para o ponto de extremidade, o `<system.ServiceModel>` seção pode ser completamente removida do arquivo Web. config para o serviço. O arquivo Web. config contém algumas configurações do ASP.NET, que são usadas pelo ConfigFreeClientPage.aspx. Se não fosse esse o caso, todo o arquivo Web. config foi removido.  
   
 > [!IMPORTANT]
 >  Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
