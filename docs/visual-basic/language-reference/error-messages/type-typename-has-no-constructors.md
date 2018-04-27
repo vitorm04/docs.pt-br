@@ -1,5 +1,5 @@
 ---
-title: Tipo de &#39; &lt;typename&gt;&#39; não possui construtores
+title: Tipo &#39; &lt;typename&gt; &#39; não tem nenhum construtor
 ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: ''
@@ -16,13 +16,13 @@ ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
 caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d2c1bfcc4af928fff6a10ca3d97957e75cbd7355
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 03f8c0d958696abdb6043b65f8f1359897dcf5fd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="type-39lttypenamegt39-has-no-constructors"></a>Tipo de &#39; &lt;typename&gt;&#39; não possui construtores
+# <a name="type-39lttypenamegt39-has-no-constructors"></a>Tipo &#39; &lt;typename&gt; &#39; não tem nenhum construtor
 Um tipo não suporta uma chamada para `Sub New()`. Uma possível causa é um compilador corrompido ou arquivo binário.  
   
  **ID do erro:** BC30251  
@@ -33,7 +33,7 @@ Um tipo não suporta uma chamada para `Sub New()`. Uma possível causa é um com
   
 2.  Se o tipo estiver no mesmo projeto, recompile o assembly que contém o tipo.  
   
-3.  Se o erro persistir, reinstale o compilador [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+3.  Se o erro persistir, reinstale o compilador do Visual Basic.  
   
 4.  Se o erro persistir, reúna informações sobre as circunstâncias e notifique o Microsoft Product Support Services.  
   
