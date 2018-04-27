@@ -1,24 +1,26 @@
 ---
-title: "Sessões e filas"
-ms.custom: 
+title: Sessões e filas
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0de2668eb03a658632bb8a18c711f780b333e86b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f1aeaa72937d23a321eb615ad8b1eb4ec1e7b48e
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sessions-and-queues"></a>Sessões e filas
 Este exemplo demonstra como enviar e receber um conjunto de mensagens relacionadas na comunicação em fila por meio do transporte de enfileiramento de mensagens (MSMQ). Este exemplo usa o `netMsmqBinding` associação. O serviço é um aplicativo de console auto-hospedado para que você possa observar o serviço de recebimento de mensagens na fila.  
@@ -42,8 +44,8 @@ Este exemplo demonstra como enviar e receber um conjunto de mensagens relacionad
  No exemplo, o cliente envia um número de mensagens para o serviço como parte de uma sessão dentro do escopo de uma única transação.  
   
  O contrato de serviço é `IOrderTaker`, que define um serviço unidirecional que é adequado para uso com filas. O <xref:System.ServiceModel.SessionMode> usado no contrato mostrado no seguinte código de exemplo indica que as mensagens são parte da sessão.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples", SessionMode=SessionMode.Required)]  
 public interface IOrderTaker  
 {  
@@ -56,11 +58,11 @@ public interface IOrderTaker
     [OperationContract(IsOneWay = true)]  
     void EndPurchaseOrder();  
 }  
-```  
-  
+```
+
  O serviço define as operações de serviço de forma que a primeira operação inscreve em uma transação, mas não conclui automaticamente a transação. Operações subsequentes também se inscrever na mesma transação, mas não concluída automaticamente. A última operação na sessão preenche automaticamente a transação. Portanto, a mesma transação é usada para várias chamadas de operação no contrato de serviço. Se qualquer uma das operações lançar uma exceção, em seguida, a transação será revertida e a sessão é colocada de volta para a fila. Após a conclusão bem-sucedida da última operação, a transação é confirmada. O serviço usa `PerSession` como o <xref:System.ServiceModel.InstanceContextMode> para receber todas as mensagens em uma sessão na mesma instância do serviço.  
-  
-```  
+
+```csharp
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
 public class OrderTakerService : IOrderTaker  
 {  
@@ -92,11 +94,11 @@ public class OrderTakerService : IOrderTaker
        Console.WriteLine(po.ToString());  
     }  
 }  
-```  
-  
+```
+
  O serviço é auto-hospedado. Ao usar o transporte MSMQ, a fila usada deve ser criada com antecedência. Isso pode ser feito manualmente ou por meio de código. Neste exemplo, o serviço contém <xref:System.Messaging> código para verificar a existência da fila e cria, se necessário. O nome da fila é lido do arquivo de configuração usando o <xref:System.Configuration.ConfigurationManager.AppSettings%2A> classe.  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -123,8 +125,8 @@ public static void Main()
         serviceHost.Close();   
     }  
 }  
-```  
-  
+```
+
  O nome da fila MSMQ é especificado em uma seção appSettings do arquivo de configuração. O ponto de extremidade para o serviço é definido na seção System. ServiceModel do arquivo de configuração e especifica a `netMsmqBinding` associação.  
   
 ```xml  
@@ -150,8 +152,8 @@ public static void Main()
 ```  
   
  O cliente cria um escopo de transação. Todas as mensagens na sessão são enviadas para a fila dentro do escopo da transação, fazendo com que ele será tratado como uma unidade atômica, onde todas as mensagens de êxito ou falha. A transação é confirmada chamando <xref:System.Transactions.TransactionScope.Complete%2A>.  
-  
-```  
+
+```csharp
 //Create a transaction scope.  
 using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))  
 {  
@@ -178,8 +180,8 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Requ
     // Complete the transaction.  
     scope.Complete();  
 }  
-```  
-  
+```
+
 > [!NOTE]
 >  Você pode usar somente uma única transação para todas as mensagens na sessão e todas as mensagens na sessão devem ser enviadas antes de confirmar a transação. Fechar o cliente fecha a sessão. Portanto, o cliente precisa ser fechada antes que a transação seja concluída para enviar todas as mensagens na sessão para a fila.  
   

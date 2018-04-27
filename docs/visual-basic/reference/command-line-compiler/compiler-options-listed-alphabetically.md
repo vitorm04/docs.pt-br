@@ -1,6 +1,6 @@
 ---
 title: Opções de compilador do Visual Basic listadas em ordem alfabética
-ms.date: 03/09/2018
+ms.date: 04/12/2018
 ms.prod: .net
 ms.reviewer: ''
 ms.suite: ''
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c78246a1e9fe14b0ba64ac447293d02e8416079
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a6e95c52c708128267ab6dc79a1b37d21b30bac2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Opções de compilador do Visual Basic listadas em ordem alfabética
-O compilador de linha de comando do Visual Basic é fornecido como uma alternativa para compilar programas a partir de [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] ambiente de desenvolvimento integrado (IDE). A seguir está uma lista de opções de compilador de linha de comando do Visual Basic em ordem alfabética.  
+O compilador de linha de comando do Visual Basic é fornecido como uma alternativa para compilar programas de ambiente de desenvolvimento integrado (IDE) do Visual Studio. A seguir está uma lista de opções de compilador de linha de comando do Visual Basic em ordem alfabética.  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
@@ -37,6 +37,7 @@ O compilador de linha de comando do Visual Basic é fornecido como uma alternati
 |[-debug](../../../visual-basic/reference/command-line-compiler/debug.md)|Gera informações de depuração.|  
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|Define símbolos de compilação condicional.|  
 |[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|Especifica se o assembly será assinado total ou parcialmente.|  
+|[-determinística](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Faz com que o compilador gerar um assembly cujo conteúdo binário é idêntico em compilações se as entradas são idênticas.|
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Processa comentários de documentação para um arquivo XML.|  
 |[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Especifica como o compilador do Visual Basic deve relatar erros do compilador interno.|  
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Especifica onde a alinhar as seções do arquivo de saída.|  

@@ -1,29 +1,30 @@
 ---
 title: Dados de extrair WF usando o rastreamento
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e30c68f5-8c6a-495a-bd20-667a4364c68e
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4d6c269dc9c8b5a0050cfc3ffcefc3160b07c897
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 44e49aa0c9b3b9b53b921fe90838875ab34b7772
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="extract-wf-data-using-tracking"></a>Dados de extrair WF usando o rastreamento
 Este exemplo demonstra como usar o rastreamento de fluxo de trabalho para extrair variáveis e argumentos de fluxo de trabalho de atividades. Ele também mostra a adição de anotações a acompanhar registros e a extração de carregamento útil dos dados dentro dos registros personalizados de rastreamento. O exemplo usa o rastreamento de evento para o Windows (ETW) que controla o participante para extrair dados de fluxo de trabalho.  
   
 ## <a name="sample-details"></a>Detalhes de exemplo  
- [!INCLUDE[wf](../../../../includes/wf-md.md)] fornece o rastreamento para a visibilidade de ganho em execução de uma instância de fluxo de trabalho. O tempo de execução de rastreamento emite-se registros de acompanhamento de fluxo de trabalho durante a execução de fluxo de trabalho. Juntamente com os registros de acompanhamento de fluxo de trabalho, os dados dentro de instância de fluxo de trabalho podem ser extraídos de fluxo de trabalho. A lista a seguir detalha os tipos de dados que podem ser extraídos de registros de acompanhamento:  
+ Windows Workflow Foundation (WF) fornece controle para obter visibilidade a execução de uma instância de fluxo de trabalho. O tempo de execução de rastreamento emite-se registros de acompanhamento de fluxo de trabalho durante a execução de fluxo de trabalho. Juntamente com os registros de acompanhamento de fluxo de trabalho, os dados dentro de instância de fluxo de trabalho podem ser extraídos de fluxo de trabalho. A lista a seguir detalha os tipos de dados que podem ser extraídos de registros de acompanhamento:  
   
 1.  Variáveis de fluxo de trabalho em uma atividade e registros de rastreamento durante a execução da atividade.  
   

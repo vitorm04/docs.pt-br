@@ -1,23 +1,24 @@
 ---
 title: Kit de ferramentas de Ruleset externo
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7fbac6bf8be169aca8ad61c69b8d024f44928d8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 40e28bb2b17e511a1b8953ccc8ff9bdf4f0f7392
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="external-ruleset-toolkit"></a>Kit de ferramentas de Ruleset externo
 Normalmente quando as regras são usadas em um aplicativo de fluxo de trabalho, as regras são parte do assembly. Em algumas situações, convém manter o RuleSets separada do assembly de modo que eles possam ser atualizados sem recriar e implantar o assembly de fluxo de trabalho. Este exemplo permite que você gerencie e edite RuleSets em uma base de dados e acesse o RuleSets de um fluxo de trabalho em tempo de execução. Isso permite que instâncias em execução de fluxo de trabalho para inserir automaticamente alterações de RuleSet.  
@@ -67,9 +68,9 @@ Normalmente quando as regras são usadas em um aplicativo de fluxo de trabalho, 
   
  Figure 3: Editor de RuleSet  
   
- Este é novamente hospedar da caixa de diálogo de editor que é parte de suplementos do Windows Workflow Foundation [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] . Fornece a mesma funcionalidade, incluindo suporte Intellisense. As regras são criadas em relação a um tipo de destino (como um fluxo de trabalho) que está associado com o conjunto de regras na ferramenta. Quando você clica em **procurar** na caixa de diálogo ferramentas principal, o **seletor de tipo de fluxo detrabalho/** caixa de diálogo for exibida, conforme mostrado na Figura 4.  
+ Este é um re-hospedagem da caixa de diálogo editor que faz parte do suplemento do Visual Studio do Windows Workflow Foundation. Fornece a mesma funcionalidade, incluindo suporte Intellisense. As regras são criadas em relação a um tipo de destino (como um fluxo de trabalho) que está associado com o conjunto de regras na ferramenta. Quando você clica em **procurar** na caixa de diálogo ferramentas principal, o **seletor de tipo de fluxo detrabalho/** caixa de diálogo for exibida, conforme mostrado na Figura 4.  
   
- ![Fluxo de trabalho &#47; Seleção de tipo](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")  
+ ![Fluxo de trabalho &#47;seleção de tipo](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")  
   
  Figure 4: Seletor de fluxo de trabalho/tipo  
   
@@ -83,7 +84,7 @@ Normalmente quando as regras são usadas em um aplicativo de fluxo de trabalho, 
   
  Figure 5: Erros de validação  
   
- Do **dados** menu na ferramenta, você pode importar e exportar conjuntos de regras. Quando você clica em **importação**, aparece uma caixa de diálogo Seletor de arquivos, na qual você pode selecionar um arquivo. rules. Isso pode ou não um arquivo criado inicialmente em [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]. O arquivo de .rules deve conter uma instância serializada de `RuleDefinitions` que contém uma coleção de condições e uma coleção de RuleSets. A ferramenta não usar a coleção das circunstâncias, mas usa o formato de `RuleDefinitions` .rules para permitir a interação com o ambiente de [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] .  
+ Do **dados** menu na ferramenta, você pode importar e exportar conjuntos de regras. Quando você clica em **importação**, aparece uma caixa de diálogo Seletor de arquivos, na qual você pode selecionar um arquivo. rules. Isso pode ou não ser um arquivo criado inicialmente no Visual Studio. O arquivo de .rules deve conter uma instância serializada de `RuleDefinitions` que contém uma coleção de condições e uma coleção de RuleSets. A ferramenta não usa a coleção de condições, mas usar o `RuleDefinitions` . Rules formato para permitir a interação com o ambiente do Visual Studio.  
   
  Depois de selecionar um arquivo. Rules, um **seletor de RuleSet** caixa de diálogo é exibida (consulte a Figura 6). Você pode usar a caixa de diálogo para selecionar o RuleSets do arquivo que você deseja importar (a opção especificar qualquer RuleSets). RuleSets no arquivo de .rules não tem números de versão, porque o controle de versão em um projeto de WF é o mesmo que a versão do assembly. Durante o processo de importação, a ferramenta atribui automaticamente o próximo número de versão primária (que pode ser alterada depois de importar); Você pode ver os números de versão atribuído a **seletor de RuleSet** lista.  
   
@@ -141,7 +142,7 @@ Normalmente quando as regras são usadas em um aplicativo de fluxo de trabalho, 
   
 9. Um arquivo de configuração do aplicativo é adicionado ao projeto de fluxo de trabalho especificar a cadeia de conexão para o base de dados é usado pelo serviço. Isso deve ser a mesma cadeia de conexão usada pela ferramenta de RuleSet, apontando para a base de dados que contém a tabela de RuleSet.  
   
-10. Agora você pode executar o projeto de `RuleSetToolkitUsageSample` como você faria qualquer outro aplicativo de console do fluxo de trabalho. Pressione F5 ou Ctrl+F5 dentro de [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] ou execute o arquivo de RuleSetToolkitUsageSample.exe diretamente.  
+10. Agora você pode executar o projeto de `RuleSetToolkitUsageSample` como você faria qualquer outro aplicativo de console do fluxo de trabalho. Pressione F5 ou Ctrl + F5 no Visual Studio ou executar o arquivo RuleSetToolkitUsageSample.exe diretamente.  
   
     > [!NOTE]
     >  Você deve fechar a ferramenta de RuleSet para recompilar o exemplo de uso, porque a ferramenta carrega o assembly de exemplo de uso.

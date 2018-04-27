@@ -26,14 +26,14 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4d288d321063512f91ad94b417bb1a6bf38c9ef9
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 2e31605f428f4e1dc58ee3332977f14dfd394489
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="add-ins-and-extensibility"></a>Suplementos e extensibilidade
-<a name="top"></a>Os suplementos fornecem recursos estendidos ou serviços para um aplicativo host. O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornece um modelo de programação que os desenvolvedores podem usar para desenvolver os complementos e ativá-los em seus aplicativos de host. O modelo realiza isso criando um pipeline de comunicação entre o host e o suplemento. O modelo é implementado usando os tipos no <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>, e <xref:System.AddIn.Contract> namespaces.  
+<a name="top"></a> Os suplementos fornecem recursos estendidos ou serviços para um aplicativo host. O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornece um modelo de programação que os desenvolvedores podem usar para desenvolver os complementos e ativá-los em seus aplicativos de host. O modelo realiza isso criando um pipeline de comunicação entre o host e o suplemento. O modelo é implementado usando os tipos no <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>, e <xref:System.AddIn.Contract> namespaces.  
   
  Esta visão geral contém as seguintes seções:  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/01/2018
   
  A ilustração a seguir mostra o pipeline.  
   
- ![Adicionar &#45; no modelo de pipeline. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![Adicionar&#45;no modelo de pipeline. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 Pipeline de suplemento  
   
  Os assemblies para esses segmentos não são necessários para estar no mesmo domínio do aplicativo. Você pode carregar um suplemento em seu próprio domínio de aplicativo nova, em um domínio de aplicativo existente ou até mesmo para o domínio de aplicativo do host. Você pode carregar vários suplementos no mesmo domínio do aplicativo, que permite que os suplementos compartilhar recursos e contextos de segurança.  
@@ -116,7 +116,7 @@ Pipeline de suplemento
   
 |Título|Descrição|  
 |-----------|-----------------|  
-|[Desenvolvimento de pipeline](../../../docs/framework/add-ins/pipeline-development.md)|Descreve o canal de comunicação de segmentos do aplicativo host para o suplemento. Fornece exemplos de código nos tópicos de instruções passo a passo que descrevem como construir o pipeline e como implantar segmentos para o pipeline em [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
+|[Desenvolvimento de pipeline](../../../docs/framework/add-ins/pipeline-development.md)|Descreve o canal de comunicação de segmentos do aplicativo host para o suplemento. Fornece exemplos de código nos tópicos de instruções passo a passo que descrevem como construir o pipeline e como implantar segmentos de pipeline no Visual Studio.|  
 |[Domínios do aplicativo e assemblies](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|Descreve a relação entre os domínios de aplicativo, que fornecem um limite de isolamento de segurança, confiabilidade e controle de versão e assemblies.|  
   
  [Voltar ao início](#top)  

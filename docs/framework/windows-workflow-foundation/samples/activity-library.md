@@ -1,30 +1,13 @@
----
-title: Biblioteca de Atividades
-ms.custom: 
-ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 99d8fba848129156d94e54d1da7d08122ccfa735
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ ---
+título: "Biblioteca de atividades" Custom: "" MS. Date: "30/03/2017" MS. prod: Reviewer ".net framework": "" MS. Suite: "" tgt_pltfrm: "" MS. Topic: "artigo" MS. AssetID: 5323e9d4-71d6-47eb-bfa6-31feac62044d caps.latest.revision: autor 7: "bot dotnet "Author: Gerenciador de"dotnetcontent":"wpickett"Workload: 
+  - "dotnet"
 ---
 # <a name="activity-library"></a>Biblioteca de Atividades
-Esta seção contém exemplos que demonstram atividades personalizados avançados em [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+Esta seção contém exemplos que demonstram as atividades personalizadas avançadas no Windows Workflow Foundation (WF).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Atividade de política no .NET Framework 4.5](../../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md)  
- Demonstra como a atividade Policy4 permite que [!INCLUDE[wf2](../../../../includes/wf2-md.md)] em objetos de [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] WF (3,5) <xref:System.Workflow.Activities.Rules.RuleSet> é usado em [!INCLUDE[wf2](../../../../includes/wf2-md.md)]em [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 4,5 (WCF) diretamente usando o mecanismo de regras que é enviado em WF 3,5.  
+ Demonstra como a atividade Policy4 permite que o Windows Workflow Foundation no [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> objetos para serem usados no Windows Workflow Foundation no [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) usando o mecanismo de regras que é enviado em WF 3.5.  
   
  [Atividade personalizada para alternar em um intervalo de valores](../../../../docs/framework/windows-workflow-foundation/samples/custom-activity-to-switch-on-a-range-of-values.md)  
  Demonstra como criar uma atividade personalizado que estende o uso de <xref:System.Activities.Statements.Switch%601>.  
@@ -57,7 +40,7 @@ Esta seção contém exemplos que demonstram atividades personalizados avançado
  Demonstra como atividade de `ThrottleParallelForEach` é semelhante à atividade de <xref:System.Activities.Statements.ParallelForEach%601> com uma exceção que permite que define um fator de simultaneidade para restringir o número de ramificações simultâneas para executar.  
   
  [Atividades de entidade](../../../../docs/framework/windows-workflow-foundation/samples/entity-activities.md)  
- Demonstra como usar o ADO.NET Entity Framework com [!INCLUDE[wf2](../../../../includes/wf2-md.md)] para simplificar o acesso a dados.  
+ Demonstra como usar o ADO.NET Entity Framework com o Windows Workflow Foundation para simplificar o acesso a dados.  
   
  [Atividades de acesso de banco de dados](../../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md)  
  Demonstra como criar atividades que permitem acessar bancos de dados para recuperar ou modificar as informações e usar [ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081) para acessar o banco de dados.  
@@ -66,7 +49,7 @@ Esta seção contém exemplos que demonstram atividades personalizados avançado
  Demonstra como escrever uma atividade personalizado que remove outras atividades do caminho de execução, comentando efetivamente eles para fora.  
   
  [Atividade de política exteriorizada no .NET Framework 4.5](../../../../docs/framework/windows-workflow-foundation/samples/externalized-policy-activity-in-net-framework-4-5.md)  
- Demonstra como a atividade ExternalizedPolicy4 permite executar [!INCLUDE[wf2](../../../../includes/wf2-md.md)] existente em objetos de [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] WF (3,5) <xref:System.Workflow.Activities.Rules.RuleSet> em [!INCLUDE[wf2](../../../../includes/wf2-md.md)] em [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 4,5 (WCF) diretamente usando o mecanismo de regras que é enviado em WF 3,5.  
+ Demonstra como a atividade ExternalizedPolicy4 permite executar o Windows Workflow Foundation existente no [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> objetos no Windows Workflow Foundation no [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) diretamente usando as mecanismo de regras que é enviado em WF 3.5.  
   
  [Atividade de NoPersistScope](../../../../docs/framework/windows-workflow-foundation/samples/nopersistscope-activity.md)  
  Demonstra como manipular um estado não-serializáveis e descartável em um fluxo de trabalho.  

@@ -20,14 +20,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4b38cbe1bab4c3d2bf0c6ee518dd26df4ff440dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5949bebe91767539c230ba166f9389f09dc2392b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-forms"></a>Windows Forms
-Como os formulários são a unidade base do seu aplicativo, é essencial dedicar certo planejamento às suas funções e design. Um formulário é basicamente uma tela em branco que você, como desenvolvedor, aprimora com controles para criar uma interface do usuário e com código para manipular os dados. Com essa finalidade, o [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] fornece um IDE (ambiente de desenvolvimento integrado) para ajudar a escrever código, bem como um conjunto de controles avançado escrito com o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Complementando a funcionalidade desses controles com seu código, você poderá desenvolver as soluções que precisa com rapidez e facilidade.  
+Como os formulários são a unidade base do seu aplicativo, é essencial dedicar certo planejamento às suas funções e design. Um formulário é basicamente uma tela em branco que você, como desenvolvedor, aprimora com controles para criar uma interface do usuário e com código para manipular os dados. Para esse fim, o Visual Studio fornece um ambiente de desenvolvimento integrado (IDE) para ajudar a escrever código, bem como um controle rico conjunto escrito com o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Complementando a funcionalidade desses controles com seu código, você poderá desenvolver as soluções que precisa com rapidez e facilidade.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Guia de introdução ao Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  

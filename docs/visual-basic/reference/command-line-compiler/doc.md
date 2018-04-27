@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0948b9ef0675541ca595bb297e01e62c9d79a181
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: e7dc75a0600c9694c4a20f028c810c6aca54eeb6
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-doc"></a>-doc
 Processa comentários de documentação para um arquivo XML.  
@@ -46,7 +46,7 @@ Processa comentários de documentação para um arquivo XML.
   
 -   Membros, como um campo, [evento](../../../visual-basic/language-reference/statements/event-statement.md), [propriedade](../../../visual-basic/language-reference/statements/property-statement.md), [função](../../../visual-basic/language-reference/statements/function-statement.md), ou [sub-rotina](../../../visual-basic/language-reference/statements/sub-statement.md).  
   
- Para usar o arquivo XML gerado com o [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] [IntelliSense](/visualstudio/ide/using-intellisense) recurso, deixe o nome do arquivo do arquivo XML ser o mesmo que o assembly que você deseja dar suporte. Verifique se o arquivo XML está no mesmo diretório que o assembly para que quando o assembly é referenciado no [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] projeto, o arquivo. XML seja encontrado também. Arquivos de documentação XML não são necessários para IntelliSense para funcionar com o código dentro de um projeto ou em projetos referenciados por um projeto.  
+ Para usar o arquivo XML gerado com o Visual Studio [IntelliSense](/visualstudio/ide/using-intellisense) recurso, deixe o nome do arquivo do arquivo XML ser o mesmo que o assembly que você deseja dar suporte. Verifique se que o arquivo XML está no mesmo diretório que o assembly para que quando o assembly for referenciado no projeto do Visual Studio, o arquivo. XML seja encontrado também. Arquivos de documentação XML não são necessários para IntelliSense para funcionar com o código dentro de um projeto ou em projetos referenciados por um projeto.  
   
  A menos que você compile com `/target:module`, o arquivo XML contém as marcas `<assembly></assembly>`. Essas marcas especificam o nome do arquivo que contém o manifesto do assembly para o arquivo de saída da compilação.  
   

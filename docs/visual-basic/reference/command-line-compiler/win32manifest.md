@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79b51117197f28cec21671eea4dd7b7f2f1cc306
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 901ea984a8e8e90329953a8936e68f2fc07f8847
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 Identifica um definido pelo usuário aplicativo arquivo manifesto Win32 a ser inserido no arquivo de PE (executável portátil) do projeto.  
@@ -48,7 +48,7 @@ Identifica um definido pelo usuário aplicativo arquivo manifesto Win32 a ser in
   
 2.  Você fornece um manifesto personalizado que não especifica um nível de execução solicitado.  
   
- [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] cria um arquivo .manifest padrão e o armazena nos diretórios de depuração e liberação juntamente com o arquivo executável. Você pode exibir ou editar o arquivo App. manifest padrão clicando **exibir configurações de UAC** no **aplicativo** guia no Designer de projeto. Para obter mais informações, consulte [Página de aplicativo, Designer de Projeto (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+ Visual Studio cria um arquivo de manifesto padrão e armazena em diretórios de depuração e versão junto do arquivo executável. Você pode exibir ou editar o arquivo App. manifest padrão clicando **exibir configurações de UAC** no **aplicativo** guia no Designer de projeto. Para obter mais informações, consulte [Página de aplicativo, Designer de Projeto (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
  Você pode fornecer o manifesto do aplicativo como uma etapa de pós-compilação personalizada, ou como parte de um arquivo de recurso Win32 usando o `-nowin32manifest` opção. Use essa mesma opção se quiser que o aplicativo seja sujeito à virtualização de arquivo ou Registro no Windows Vista. Isso impedirá que o compilador de criar e inserir um manifesto padrão no arquivo PE.  
   

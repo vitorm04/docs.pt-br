@@ -1,26 +1,27 @@
 ---
-title: "Opções de hospedagem de fluxo de trabalho"
-ms.custom: 
+title: Opções de hospedagem de fluxo de trabalho
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: be885a964ad7e8d63045febfa279b23d0d85ab1f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3f022a5162ab8624d0c696efde6416484e77e874
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="workflow-hosting-options"></a>Opções de hospedagem de fluxo de trabalho
-A maioria dos exemplos de [!INCLUDE[wf](../../../includes/wf-md.md)] usam os fluxos de trabalho que são hospedados em um aplicativo de console, mas isso não é um cenário realista para fluxos de trabalho do mundo real. Os fluxos de trabalho em aplicativos comerciais reais serão hospedados em processos persistentes: um serviço do Windows criado pelo desenvolvedor ou um aplicativo de servidor como [!INCLUDE[iisver](../../../includes/iisver-md.md)] ou AppFabric. As diferenças entre essas abordagens são as seguintes.  
+A maioria dos exemplos do Windows Workflow Foundation (WF) usa fluxos de trabalho que são hospedados em um aplicativo de console, mas isso não é um cenário realista para fluxos de trabalho do mundo real. Os fluxos de trabalho em aplicativos comerciais reais serão hospedados em processos persistentes: um serviço do Windows criado pelo desenvolvedor ou um aplicativo de servidor como [!INCLUDE[iisver](../../../includes/iisver-md.md)] ou AppFabric. As diferenças entre essas abordagens são as seguintes.  
   
 ## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a>Fluxos de trabalho de hospedagem no IIS com o Windows AppFabric  
  Usar o IIS com AppFabric é o host preferido para fluxos de trabalho. O aplicativo de host para fluxos de trabalho que usam AppFabric é o WAS (Serviços de Ativação do Windows), que remove a dependência de HTTP em IIS somente.  

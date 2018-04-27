@@ -1,30 +1,32 @@
 ---
 title: Modelos do Visual Studio do WCF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2bb195af180ab9d840f91fe82f9f643119663374
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9626905dbcec6bd40570e4188e9a188fca164144
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wcf-visual-studio-templates"></a>Modelos do Visual Studio do WCF
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] modelos são modelos predefinidos de projeto e item, você pode usar em [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] para criar rapidamente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ao redor de aplicativos e serviços.  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Modelos do Visual Studio são modelos predefinidos de projeto e item, você pode usar no Visual Studio para criar rapidamente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ao redor de aplicativos e serviços.  
   
 ## <a name="using-the-wcf-templates"></a>Usando os modelos do WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] modelos fornecem uma estrutura de classe básica para desenvolvimento de serviço. Especificamente, esses modelos fornecem as definições básicas para o contrato de serviço, contrato de dados, a implementação de serviço e configuração. Você pode usar esses modelos para criar um serviço simple com interação com o mínimo de código, bem como um bloco de construção para serviços mais avançados.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Modelos do Visual Studio fornecem uma estrutura de classe básica para desenvolvimento de serviço. Especificamente, esses modelos fornecem as definições básicas para o contrato de serviço, contrato de dados, a implementação de serviço e configuração. Você pode usar esses modelos para criar um serviço simple com interação com o mínimo de código, bem como um bloco de construção para serviços mais avançados.  
   
 ### <a name="wcf-service-library-project-template"></a>Modelo de projeto de biblioteca de serviço do WCF  
  O [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] modelo de projeto de biblioteca de serviço está disponível na caixa de diálogo Novo projeto em **Visual C# \WCF** e **Basic\WCF Visual**.  
@@ -38,7 +40,7 @@ ms.lasthandoff: 01/19/2018
 -   Arquivo de configuração de aplicativo (App. config). O arquivo de configuração fornece os elementos básicos de um [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] modelo de serviço com uma associação HTTP seguro. Ele também inclui um ponto de extremidade para o serviço e permite a troca de metadados.  
   
 > [!NOTE]
->  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]é configurada para reconhecer o arquivo App. config como arquivo de configuração para o projeto quando ele é executado usando o [Host de serviço do WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), que é a configuração padrão. Se você hospedar a biblioteca de serviço em um executável, você precisa mover o código de configuração para o arquivo de configuração do executável, como arquivos de configuração para DLLs não são válidos.  
+>  O Visual Studio está configurado para reconhecer o arquivo App. config como arquivo de configuração para o projeto quando ele é executado usando o [Host de serviço do WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), que é a configuração padrão. Se você hospedar a biblioteca de serviço em um executável, você precisa mover o código de configuração para o arquivo de configuração do executável, como arquivos de configuração para DLLs não são válidos.  
   
 ### <a name="wcf-service-application-template"></a>Modelo de aplicativo de serviço do WCF  
  O [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] modelo de aplicativo de serviço está disponível na caixa de diálogo Novo projeto em **Visual C# \WCF** e **Basic\WCF Visual**.  
@@ -59,7 +61,7 @@ ms.lasthandoff: 01/19/2018
  O [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] modelo de Site está disponível na caixa de diálogo Novo projeto em **Visual C# \Web Site\WCF Service** e **Visual Basic\Web Site\WCF Service**. Isso cria os mesmos arquivos como o modelo de aplicativo de serviço WCF, mas organiza como se fosse um site ASP.NET. App_Code e App_Data pastas são criadas.  
   
 ### <a name="wcf-service-item-template"></a>Modelo de Item de serviço do WCF  
- O [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] modelo de Item de serviço é um modelo personalizado que fornece uma maneira rápida de adicionar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services existente [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] projetos.  
+ O [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] modelo de Item de serviço é um modelo personalizado que fornece uma maneira rápida de adicionar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviços para seus projetos do Visual Studio existentes.  
   
  Para usar esse modelo, vá para o **Solution Explorer** painel, clique o nome do projeto, aponte para **adicionar**e, em seguida, clique em **Novo Item** para iniciar o **adicionar novo Item** caixa de diálogo.  
   
@@ -70,15 +72,15 @@ ms.lasthandoff: 01/19/2018
  Um arquivo de host de serviço (service1.svc) também é criado se o projeto existente for um projeto da Web.  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>Projeto de serviço do WF WCF e o modelo de Item.  
- Esses modelos criam [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services que hospeda um serviço de fluxo de trabalho, que é um fluxo de trabalho que pode ser acessado como um serviço web. Modelos separados existem para modelos de programação imperativos ou XAML. Usar os modelos, você pode criar o fluxo de trabalho de máquina de estado ou sequencial. Para obter mais informações sobre esses tipos de fluxo de trabalho, consulte [Windows Workflow Foundation tutoriais](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)]criar projetos de fluxo de trabalho, consulte [criar projetos de fluxo de trabalho herdado](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Esses modelos criam [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services que hospeda um serviço de fluxo de trabalho, que é um fluxo de trabalho que pode ser acessado como um serviço web. Modelos separados existem para modelos de programação imperativos ou XAML. Usar os modelos, você pode criar o fluxo de trabalho de máquina de estado ou sequencial. Para obter mais informações sobre esses tipos de fluxo de trabalho, consulte [Windows Workflow Foundation tutoriais](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)] criar projetos de fluxo de trabalho, consulte [criar projetos de fluxo de trabalho herdado](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
   
- [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]Designer é mais ágil nas respostas quando tipo XOML fluxos de trabalho são usados em vez disso, de código com base em aqueles. Fluxo de trabalho XOML é o tipo de fluxo de trabalho padrão a ser criado.  
+ Designer do Visual Studio é mais ágil nas respostas quando tipo XOML fluxos de trabalho são usados em vez disso, de código com base em aqueles. Fluxo de trabalho XOML é o tipo de fluxo de trabalho padrão a ser criado.  
   
 ### <a name="wcf-syndication-service-library-template"></a>Modelo de biblioteca de serviço do WCF de distribuição  
  Este modelo permite que você exponha o feed no formato RSS ou ATOM como uma [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] serviço. Para obter mais informações, consulte [Sindicalização do WCF](../../../docs/framework/wcf/feature-details/wcf-syndication.md).  
   
 #### <a name="changing-the-address-of-the-feed"></a>Alterar o endereço do Feed  
- O modelo de distribuição usa o Internet Explorer durante a execução. Quando você clica seu projeto no **Gerenciador de soluções** na [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], selecione **propriedades**, em seguida, selecione o **depurar** guia e você pode ver o endereço padrão do o modelo. Internet Explorer tenta abrir o feed no endereço.  
+ O modelo de distribuição usa o Internet Explorer durante a execução. Quando você clica seu projeto no **Gerenciador de soluções** no Visual Studio, selecione **propriedades**, em seguida, selecione o **depurar** guia e você pode ver o endereço padrão das modelo. Internet Explorer tenta abrir o feed no endereço.  
   
  Se você alterar o endereço do seu feed, você deve também alterar o endereço de **depurar** guia. Se você não fizer isso, o Internet Explorer tenta abrir o feed no endereço padrão e falhar.  
   

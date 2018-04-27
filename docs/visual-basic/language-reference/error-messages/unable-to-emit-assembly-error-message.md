@@ -16,11 +16,11 @@ ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 61a5c6b753b8aa70905027bc1449739769cd8da5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 59288ba7b4cec34cd2266d66aa931e92598e819a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="unable-to-emit-assembly-lterror-messagegt"></a>Não é possível emitir o assembly: &lt;mensagem de erro&gt;
 O compilador do Visual Basic chama o Assembly Linker (Al.exe, também conhecido como Alink) para gerar um assembly com um manifesto, com o vinculador relatar um erro no estágio de emissão de criar o assembly.  
@@ -61,7 +61,7 @@ O compilador do Visual Basic chama o Assembly Linker (Al.exe, também conhecido 
   
      Use aspas duplas (") se um caminho ou arquivo contiver espaços.  
   
-6.  Em [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], inclua uma referência .NET Assembly para o arquivo que acabou de ser criado.  
+6.  No Visual Studio, adicione uma referência de Assembly do .NET para o arquivo que você acabou de criar.  
   
 ## <a name="see-also"></a>Consulte também  
  

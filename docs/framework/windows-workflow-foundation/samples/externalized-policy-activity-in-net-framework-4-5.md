@@ -1,26 +1,27 @@
 ---
-title: "Atividade exteriorizada de política no .NET Framework 4.5"
-ms.custom: 
+title: Atividade exteriorizada de política no .NET Framework 4.5
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9dc86cd8ff3cce31e67c146e099f70181ad1e33a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7085b9069235de7cd8754937f9f6facdf60cd5b3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Atividade exteriorizada de política no .NET Framework 4.5
-Este exemplo demonstra como a atividade ExternalizedPolicy4 permite executar existente [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] [!INCLUDE[wf2](../../../../includes/wf2-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> objetos no [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] [!INCLUDE[wf2](../../../../includes/wf2-md.md)] (WF 4.5) usando o mecanismo de regras que é enviado em WF 3.5. Usando esta atividade, você pode abrir e executar qualquer WF existente <xref:System.Workflow.Activities.Rules.RuleSet>3,5. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Leia do mecanismo de regras incluídos como parte do Windows Workflow Foundation, WF 3.5 [introdução para o mecanismo de regras do Windows Workflow Foundation](http://go.microsoft.com/fwlink/?LinkId=166079). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]regras de migração para [!INCLUDE[wf1](../../../../includes/wf1-md.md)] na [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], leia as diretrizes de migração em [orientação de migração](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
+Este exemplo demonstra como a atividade ExternalizedPolicy4 permite executar existente [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> objetos no [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] diretamente por meio do mecanismo de regras do Windows Workflow Foundation (WF 4.5) que é fornecido no WF 3.5. Usando esta atividade, você pode abrir e executar qualquer WF existente <xref:System.Workflow.Activities.Rules.RuleSet>3,5. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Leia do mecanismo de regras incluídos como parte do Windows Workflow Foundation, WF 3.5 [introdução para o mecanismo de regras do Windows Workflow Foundation](http://go.microsoft.com/fwlink/?LinkId=166079). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] regras de migração para [!INCLUDE[wf1](../../../../includes/wf1-md.md)] na [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], leia as diretrizes de migração em [orientação de migração](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
   
 ## <a name="projects-in-this-sample"></a>Projetos nisso exemplo  
   

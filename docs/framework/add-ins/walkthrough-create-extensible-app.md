@@ -1,12 +1,13 @@
 ---
-title: "Instruções passo a passo: criando um aplicativo extensível"
-ms.custom: 
+title: 'Instruções passo a passo: criando um aplicativo extensível'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - add-in-side adapter [.NET Framework]
 - contracts for add-in pipelines [.NET Framework]
 ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5cee99346d19c632739bcc6540c43f1a35217a2f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8946e30ac9d7a224af7801bc721e7d9cf6e1fab0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>Instruções passo a passo: criando um aplicativo extensível
 Este passo a passo descreve como criar um pipeline para um suplemento que executa funções de cálculo simples. Não demonstra um cenário do mundo real; em vez disso, ele demonstra a funcionalidade básica de um pipeline e como um suplemento pode fornecer serviços para um host.  
@@ -61,14 +63,14 @@ Este passo a passo descreve como criar um pipeline para um suplemento que execut
 ## <a name="prerequisites"></a>Pré-requisitos  
  Você precisa dos seguintes itens para concluir esta explicação:  
   
--   [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+-   Visual Studio.  
   
 ## <a name="creating-a-visual-studio-solution"></a>Criando uma solução do Visual Studio  
- Usar uma solução em [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] para conter os projetos dos segmentos de pipeline.  
+ Use uma solução no Visual Studio para conter os projetos dos segmentos de pipeline.  
   
 #### <a name="to-create-the-pipeline-solution"></a>Para criar a solução de pipeline  
   
-1.  Em [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], crie um novo projeto denominado `Calc1Contract`. Baseá-la no **biblioteca de classes** modelo.  
+1.  No Visual Studio, crie um novo projeto denominado `Calc1Contract`. Baseá-la no **biblioteca de classes** modelo.  
   
 2.  Nome da solução `CalculatorV1`.  
   

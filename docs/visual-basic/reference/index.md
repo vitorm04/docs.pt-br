@@ -12,11 +12,11 @@ ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 26cb885187cff31a085e34c60c820fe7c0bdc787
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 15d71f039223b464a3b5affb9ba7b37886b93200
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="reference-visual-basic"></a>Referência (Visual Basic)
 Esta seção fornece links para informações de referência sobre vários aspectos da programação Visual Basic.  
@@ -43,10 +43,10 @@ Esta seção fornece links para informações de referência sobre vários aspec
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Elementos gerais de interface do usuário (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
- Contém tópicos para caixas de diálogo e janelas usadas no [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Contém tópicos para caixas de diálogo e janelas usadas no Visual Studio.  
   
  [Ferramentas XML no Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
- Fornece links para tópicos em várias ferramentas XML disponíveis em [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Fornece links para tópicos sobre várias ferramentas XML disponíveis no Visual Studio.  
   
  [Referência de automação e extensibilidade](http://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
- Fornece links para tópicos abrangendo automação e extensibilidade no [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], para componentes compartilhados e de idioma específico.
+ Fornece links para tópicos que abrangem a automação e extensibilidade do Visual Studio, para componentes compartilhados e específicos de linguagem.

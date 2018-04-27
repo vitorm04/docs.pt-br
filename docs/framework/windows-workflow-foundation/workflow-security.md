@@ -1,29 +1,29 @@
 ---
-title: "Segurança de fluxo de trabalho"
-ms.custom: 
+title: Segurança de fluxo de trabalho
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-caps.latest.revision: 
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: dbb1d1efc0758410f12f2c669cca85b9f0e38406
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 90e9d5f3a2cff454ff7892877f012f8679b9ccac
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="workflow-security"></a>Segurança de fluxo de trabalho
-[!INCLUDE[wf](../../../includes/wf-md.md)] está integrado com várias tecnologias diferentes, como o Microsoft SQL Server e [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Interagir com essas tecnologias pode gerar problemas de segurança no fluxo de trabalho se feito de modo inadequado.  
+Windows Workflow Foundation (WF) é integrado com diversas tecnologias diferentes, como o Microsoft SQL Server e [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Interagir com essas tecnologias pode gerar problemas de segurança no fluxo de trabalho se feito de modo inadequado.  
   
 ## <a name="persistence-security-concerns"></a>Problemas de segurança de persistência  
   
@@ -41,15 +41,15 @@ ms.lasthandoff: 12/22/2017
   
 -   Quando um grande número de atividades filhos, locais, indexadores, hospedam extensões, ou os escopos são usados, ou quando os indicadores com as carrega úteis muito grandes são usados, a memória pode ser esgotada, ou as quantidades inadequadas do espaço de base de dados podem ser atribuídas durante a persistência. Isso pode ser abrandado utilizando em nível de objeto e a segurança de base de dados - nível.  
   
--   Ao usar <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, o armazenamento de instância deve ser protegido. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Práticas recomendadas do SQL Server](http://go.microsoft.com/fwlink/?LinkId=164972).  
+-   Ao usar <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, o armazenamento de instância deve ser protegido. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Práticas recomendadas do SQL Server](http://go.microsoft.com/fwlink/?LinkId=164972).  
   
--   Dados confidenciais no armazenamento de instância devem ser criptografados. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Criptografia de segurança do SQL](http://go.microsoft.com/fwlink/?LinkId=164976).  
+-   Dados confidenciais no armazenamento de instância devem ser criptografados. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Criptografia de segurança do SQL](http://go.microsoft.com/fwlink/?LinkId=164976).  
   
 -   Desde que a cadeia de conexão caracteres de base de dados é incluída com frequência em um arquivo de configuração, a segurança do windows nível (ACL) deve ser usada para garantir que o arquivo de configuração (Web.Config) geralmente é seguro, e que o logon e informações de senha não estão incluídos na cadeia de conexão. A autenticação do Windows deve ser usada entre o base de dados e o servidor web em vez disso.  
   
 ## <a name="considerations-for-workflowservicehost"></a>Considerações para WorkflowServiceHost  
   
--   os pontos de extremidade de[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usados em fluxos de trabalho devem ser protegidos. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Visão geral de segurança do WCF](http://go.microsoft.com/fwlink/?LinkID=164975).  
+-   os pontos de extremidade de[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usados em fluxos de trabalho devem ser protegidos. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Visão geral de segurança do WCF](http://go.microsoft.com/fwlink/?LinkID=164975).  
   
 -   Autorização do nível pode ser implementada usando <xref:System.ServiceModel.ServiceAuthorizationManager>. Consulte [como: criar um Gerenciador de autorização personalizada para um serviço](http://go.microsoft.com/fwlink/?LinkId=192228) para obter detalhes. Isso também é demonstrado no exemplo a seguir: [protegendo serviços de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md).  
   

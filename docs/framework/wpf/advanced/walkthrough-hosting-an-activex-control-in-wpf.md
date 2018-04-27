@@ -1,12 +1,13 @@
 ---
-title: "Instruções passo a passo: hospedando um controle ActiveX no WPF"
-ms.custom: 
+title: 'Instruções passo a passo: hospedando um controle ActiveX no WPF'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b0e85c715db30c6e577980376d25d56238e2835a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: fc4f577da04fb8ed15bae3c0497b35803a46f08f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>Instruções passo a passo: hospedando um controle ActiveX no WPF
 Para permitir uma melhor interação com navegadores, você pode usar controles [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] nos seus aplicativos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Essa instrução passo a passo demonstra como você pode hospedar o [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] como um controle em uma página [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -42,7 +44,7 @@ Para permitir uma melhor interação com navegadores, você pode usar controles 
 ## <a name="prerequisites"></a>Pré-requisitos  
  Você precisa dos seguintes componentes para concluir esta instrução passo a passo:  
   
--   [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] instalado no computador no qual [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] está instalado.  
+-   [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] instalado no computador onde o Visual Studio está instalado.  
   
 -   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
   
@@ -71,7 +73,7 @@ Para permitir uma melhor interação com navegadores, você pode usar controles 
 9. Se for solicitado que você renomeie todas as referências, clique em **Sim**.  
   
 ## <a name="creating-the-activex-control"></a>Criando o controle ActiveX  
- [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]gera automaticamente um <xref:System.Windows.Forms.AxHost> classe wrapper para um [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] controlar quando o controle é adicionado a uma superfície de design. O procedimento a seguir cria um assembly gerenciado chamado AxInterop.WMPLib.dll.  
+ [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] gera automaticamente um <xref:System.Windows.Forms.AxHost> classe wrapper para um [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] controlar quando o controle é adicionado a uma superfície de design. O procedimento a seguir cria um assembly gerenciado chamado AxInterop.WMPLib.dll.  
   
 #### <a name="to-create-the-activex-control"></a>Criar o controle ActiveX  
   

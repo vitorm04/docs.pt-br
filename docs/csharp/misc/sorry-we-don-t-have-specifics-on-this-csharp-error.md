@@ -889,11 +889,11 @@ ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
 caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4aeea86778b44cbe8e71ed64ee5a3a3a1618cccd
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c6cabc4c619e6ace4c376fd125e7531f10bf9b88
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Desculpe, estamos don&#39;t há informações específicas sobre este erro c#
 Infelizmente não temos informações específicas sobre este erro. Você pode procurar o número do erro e o texto da mensagem para localizar informações na web. Ou você pode pedir a outros desenvolvedores usando um desses grupos:  
@@ -902,7 +902,7 @@ Infelizmente não temos informações específicas sobre este erro. Você pode p
  Fornece um fórum para perguntas sobre e discussões gerais sobre a sintaxe de linguagem do Visual c# e o compilador.  
   
  [IDE do Visual C#](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
- Fornece um fórum para perguntas sobre como trabalhar no ambiente [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Fornece um fórum para perguntas sobre como trabalhar no ambiente do Visual Studio.  
   
  [Informações gerais do Visual C#](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
  Fornece um fórum para perguntas sobre e problemas com o Visual c# que não são abordados em outros fóruns.  

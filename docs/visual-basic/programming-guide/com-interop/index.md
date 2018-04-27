@@ -15,11 +15,11 @@ ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f3f9d7fb51198041356cfc68d49cc703dfdf78b5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a2c418855cd2e79c31301705706ff1b98f119a97
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="com-interop-visual-basic"></a>Interoperabilidade COM (Visual Basic)
 O COM (Component Object Model) permite que um objeto exponha sua funcionalidade a outros componentes e aplicativos host. Atualmente, a maioria dos softwares incluem objetos COM. Embora os assemblies .NET sejam a melhor opção para novos aplicativos, algumas vezes será preciso empregar objetos COM. Esta seção aborda alguns dos problemas associados ao criar e usar objetos COM o Visual Basic.  
@@ -32,7 +32,7 @@ O COM (Component Object Model) permite que um objeto exponha sua funcionalidade 
  Aborda como adicionar referências a objetos COM que têm bibliotecas de tipos.  
   
  [Como trabalhar com controles ActiveX](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Demonstra como usar controles ActiveX existentes para adicionar funcionalidades à Caixa de Ferramentas do [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Demonstra como usar controles ActiveX existente para adicionar recursos para ferramentas do Visual Studio.  
   
  [Instruções passo a passo: chamando APIs do Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  Orienta o processo de chamada às APIs que fazem parte do sistema operacional Windows.  

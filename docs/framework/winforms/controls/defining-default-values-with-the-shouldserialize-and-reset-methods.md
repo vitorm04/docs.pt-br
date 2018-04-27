@@ -1,12 +1,13 @@
 ---
-title: "Definindo valores padrão com o ShouldSerialize e os métodos de redefinição"
-ms.custom: 
+title: Definindo valores padrão com o ShouldSerialize e os métodos de redefinição
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a654fef461d92c4b93db131e303bb07a1e839d34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a28cd84c88cd7434eaca3fdaa7b4406006c44dad
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Definindo valores padrão com o ShouldSerialize e os métodos de redefinição
 `ShouldSerialize` e `Reset` são métodos opcionais que você pode fornecer para uma propriedade, caso ela não tenha um valor padrão simples. Se a propriedade tem um valor padrão simples, você deve aplicar o <xref:System.ComponentModel.DefaultValueAttribute> e forneça o valor padrão para o construtor de classe de atributo em vez disso. Qualquer um desses mecanismos habilita os recursos a seguir no designer:  
@@ -53,9 +55,9 @@ public void ResetMyFont() {
 ```  
   
 > [!NOTE]
->  Se uma propriedade não tem um `Reset` método, não é marcado com um <xref:System.ComponentModel.DefaultValueAttribute>e não tem um valor padrão fornecido na sua declaração, o `Reset` opção para essa propriedade está desabilitada no menu de atalho a **propriedades** janela do Designer de formulários do Windows em [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+>  Se uma propriedade não tem um `Reset` método, não é marcado com um <xref:System.ComponentModel.DefaultValueAttribute>e não tem um valor padrão fornecido na sua declaração, o `Reset` opção para essa propriedade está desabilitada no menu de atalho a **propriedades** janela do Designer de formulários do Windows no Visual Studio.  
   
- Designers como [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] usarão o método `ShouldSerialize`*PropertyName* para verificar se uma propriedade foi alterada do seu valor padrão e escrever código no formulário apenas se uma propriedade tiver sido alterada, permitindo uma geração de código mais eficiente. Por exemplo:  
+ Os designers de como o Visual Studio usam o `ShouldSerialize` *PropertyName* método para verificar se uma propriedade foi alterado do valor padrão e escrever código em somente-se o formulário uma propriedade é alterado, permitindo, assim, um código mais eficiente geração. Por exemplo:  
   
 ```vb  
 'Returns true if the font has changed; otherwise, returns false.  

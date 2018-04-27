@@ -1,12 +1,13 @@
 ---
-title: "Instruções passo a passo: armazenando dados de aplicativo em cache em um aplicativo WPF"
-ms.custom: 
+title: 'Instruções passo a passo: armazenando dados de aplicativo em cache em um aplicativo WPF'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 81d808b982852d5cc6dc187a3c8389748a0dc0bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a8d3fe2dbfe0b4b5fb9081d71cec080dfa54add8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Instruções passo a passo: armazenando dados de aplicativo em cache em um aplicativo WPF
 O cache permite que você armazene dados na memória para acesso rápido. Quando os dados são acessados novamente, os aplicativos podem obter os dados do cache em vez de recuperá-los da fonte original. Isso pode melhorar o desempenho e a escalabilidade. Além disso, o cache torna os dados disponíveis quando a fonte de dados está temporariamente indisponível.  
@@ -67,7 +69,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
   
 #### <a name="to-create-a-wpf-application"></a>Para criar um aplicativo do WPF  
   
-1.  Inicie o [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+1.  Inicie o Visual Studio.  
   
 2.  No menu **Arquivo**, clique em **Novo** e, em seguida, clique em **Novo Projeto**.  
   
@@ -86,7 +88,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
   
 7.  Clique em **OK**.  
   
-     O WPF Designer é aberto modo de exibição de **Design** e exibe o arquivo MainWindow.xaml. O [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] cria a pasta **Meu Projeto**, o arquivo Application.xaml e o arquivo MainWindow.xaml.  
+     O WPF Designer é aberto modo de exibição de **Design** e exibe o arquivo MainWindow.xaml. O Visual Studio cria o **meu projeto** pasta, o arquivo Application e o arquivo MainWindow. XAML.  
   
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>Direcionamento ao .NET Framework e adição de uma referência aos assemblies de cache  
  Por padrão, os aplicativos do WPF se destinam ao [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Para usar o <xref:System.Runtime.Caching> namespace em um aplicativo WPF, o aplicativo deve se destinar a [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (não o [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) e deve incluir uma referência ao namespace.  
@@ -307,7 +309,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
   
      O conteúdo em cache do arquivo de texto é exibido em uma caixa de mensagem. Observe o carimbo de data/hora no arquivo.  
   
-3.  Feche a caixa de mensagem e, em seguida, clique em **Obter Cache** novamente**.**  
+3.  Feche a caixa de mensagem e, em seguida, clique em **Obter Cache** novamente **.**  
   
      O carimbo de data/hora está inalterado. Isso indica que o conteúdo em cache está exibido.  
   
@@ -317,7 +319,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
   
 5.  Em um editor de texto, abra o arquivo de texto que você criou. Não faça nenhuma alteração ainda.  
   
-6.  Feche a caixa de mensagem e, em seguida, clique em **Obter Cache** novamente**.**  
+6.  Feche a caixa de mensagem e, em seguida, clique em **Obter Cache** novamente **.**  
   
      Observe o carimbo de data/hora novamente.  
   

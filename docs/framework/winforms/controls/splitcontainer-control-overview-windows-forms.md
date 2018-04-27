@@ -1,36 +1,36 @@
 ---
-title: "Visão geral do controle SplitContainer (Windows Forms)"
-ms.custom: 
+title: Visão geral do controle SplitContainer (Windows Forms)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - SplitContainer
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-caps.latest.revision: 
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7d2e538241cca8288158628df777895fae9aa756
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a553ea1b6dae24b4a0c3bd169edccbd9b52c5203
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>Visão geral do controle SplitContainer (Windows Forms)
 O controle <xref:System.Windows.Forms.SplitContainer> dos Windows Forms pode ser considerado uma composição; são dois painéis separados por uma barra móvel. Quando o ponteiro do mouse passa sobre a barra, ele muda de forma para mostrar que a barra é móvel.  
   
 > [!IMPORTANT]
->  No **caixa de ferramentas**, <xref:System.Windows.Forms.SplitContainer> controlar substitui o <xref:System.Windows.Forms.Splitter> controle que existia na versão anterior do [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]. O <xref:System.Windows.Forms.SplitContainer> controle é preferido sobre o <xref:System.Windows.Forms.Splitter> controle. O <xref:System.Windows.Forms.Splitter> classe ainda está incluída no [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para compatibilidade com aplicativos existentes, mas recomendamos que você use o <xref:System.Windows.Forms.SplitContainer> controle para novos projetos.  
+>  No **caixa de ferramentas**, <xref:System.Windows.Forms.SplitContainer> controlar substitui o <xref:System.Windows.Forms.Splitter> controle que existia na versão anterior do Visual Studio. O <xref:System.Windows.Forms.SplitContainer> controle é preferido sobre o <xref:System.Windows.Forms.Splitter> controle. O <xref:System.Windows.Forms.Splitter> classe ainda está incluída no [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para compatibilidade com aplicativos existentes, mas recomendamos que você use o <xref:System.Windows.Forms.SplitContainer> controle para novos projetos.  
   
  Com o <xref:System.Windows.Forms.SplitContainer> controle, você pode criar interfaces de usuário complexas; frequentemente, uma seleção em um painel determina quais objetos são mostrados no painel de. Essa disposição é muito eficiente para exibir e procurar informações. Ter dois painéis permite agregar as informações em áreas e a barra, ou “divisor”, tornando mais fácil para os usuários redimensionar os painéis.  
   

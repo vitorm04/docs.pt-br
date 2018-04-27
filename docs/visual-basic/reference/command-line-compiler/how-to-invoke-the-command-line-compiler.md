@@ -16,14 +16,14 @@ ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
 caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f1ccf08ba58fa6af60bd8ffd7cba79b205dc0f3d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 20239045426e466ba58427bb9794ea7e55b3aa4c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Como invocar o compilador de linha de comando (Visual Basic)
-Você pode chamar o compilador de linha de comando digitando o nome do seu arquivo executável na linha de comando, também conhecido como o prompt do MS-DOS. Se você compilar a partir do Prompt de comando padrão, você deve digitar o caminho totalmente qualificado para o arquivo executável. Para substituir esse comportamento padrão, você pode usar o [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Prompt de comando ou modificar a variável de ambiente PATH. Permitem que você compile a partir de qualquer diretório simplesmente digitando o nome do compilador.  
+Você pode chamar o compilador de linha de comando digitando o nome do seu arquivo executável na linha de comando, também conhecido como o prompt do MS-DOS. Se você compilar a partir do Prompt de comando padrão, você deve digitar o caminho totalmente qualificado para o arquivo executável. Para substituir esse comportamento padrão, você pode usar o Prompt de comando do Visual Studio, ou modificar a variável de ambiente PATH. Permitem que você compile a partir de qualquer diretório simplesmente digitando o nome do compilador.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -31,9 +31,9 @@ Você pode chamar o compilador de linha de comando digitando o nome do seu arqui
   
 1.  Abra a pasta de programa ferramentas do Visual Studio no grupo de programas do Microsoft Visual Studio.  
   
-2.  Você pode usar o [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Prompt de comando para acessar o compilador de qualquer diretório em seu computador, se o Visual Studio está instalado.  
+2.  Você pode usar o Prompt de comando do Visual Studio para acessar o compilador de qualquer diretório em seu computador, se o Visual Studio está instalado.  
   
-3.  Invocar o [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Prompt de comando.  
+3.  Invoque o Prompt de comando do Visual Studio.  
   
 4.  Na linha de comando, digite `vbc.exe` *sourceFileName* e pressione ENTER.  
   

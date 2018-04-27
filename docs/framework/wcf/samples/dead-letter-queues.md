@@ -1,24 +1,26 @@
 ---
 title: Filas de mensagens de inatividade
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 09a41abc8bc9fc3469ba35d7c7cfbe85d05ca174
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9892579633103f1e7a6612c09865c91c559df34c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="dead-letter-queues"></a>Filas de mensagens de inatividade
 Este exemplo demonstra como manipular e processar mensagens com falha na entrega. Ele se baseia o [transacionado associação de MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) exemplo. Este exemplo usa o `netMsmqBinding` associação. O serviço é um aplicativo de console auto-hospedado para que você possa observar o serviço de recebimento de mensagens na fila.  
@@ -35,7 +37,7 @@ Este exemplo demonstra como manipular e processar mensagens com falha na entrega
   
  Fila de mensagens mortas no `NetMsmqBinding` associação é expresso nas seguintes propriedades:  
   
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>propriedade para expressar o tipo de fila de mensagens mortas exigido pelo cliente. Esta enumeração tem os seguintes valores:  
+-   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> propriedade para expressar o tipo de fila de mensagens mortas exigido pelo cliente. Esta enumeração tem os seguintes valores:  
   
 -   `None`: Nenhuma fila de mensagens mortas é exigida pelo cliente.  
   
@@ -43,28 +45,28 @@ Este exemplo demonstra como manipular e processar mensagens com falha na entrega
   
 -   `Custom`: Uma fila de mensagens mortas personalizada especificada usando o <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> propriedade é usada para armazenar mensagens mortas. Este recurso só está disponível em [!INCLUDE[wv](../../../../includes/wv-md.md)]. Isso é usado quando o aplicativo deve usar sua própria fila de mensagens mortas em vez de compartilhá-lo com outros aplicativos em execução no mesmo computador.  
   
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>propriedade expressar a fila especificada para usar como uma fila de mensagens mortas. Isso está disponível apenas no [!INCLUDE[wv](../../../../includes/wv-md.md)].  
+-   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> propriedade expressar a fila especificada para usar como uma fila de mensagens mortas. Isso está disponível apenas no [!INCLUDE[wv](../../../../includes/wv-md.md)].  
   
  Neste exemplo, o cliente envia um lote de mensagens para o serviço de dentro do escopo de uma transação e especifica um valor baixo arbitrariamente para "time-to-live" para essas mensagens (cerca de 2 segundos). O cliente também especifica uma fila de mensagens mortas personalizada para usar para enfileirar as mensagens que expiraram.  
   
  O aplicativo cliente pode ler as mensagens na fila de mensagens mortas e ou enviar a mensagem de repetição ou corrija o erro que causou a mensagem original ser colocado na fila de mensagens mortas e enviar a mensagem. No exemplo, o cliente exibirá uma mensagem de erro.  
   
  O contrato de serviço é `IOrderProcessor`, conforme mostrado no código de exemplo a seguir.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  O código de serviço no exemplo é do [transacionado associação de MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
   
  Comunicação com o serviço ocorre dentro do escopo de uma transação. O serviço lê mensagens da fila, executa a operação e, em seguida, exibe os resultados da operação. O aplicativo também cria uma fila de mensagens mortas para mensagens mortas.  
-  
-```  
+
+```csharp
 //The service contract is defined in generatedClient.cs, generated from the service by the svcutil tool.  
   
 //Client implementation code.  
@@ -117,8 +119,8 @@ class Client
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  A configuração do cliente especifica uma duração curta da mensagem acessar o serviço. Se a mensagem não pode ser transmitida dentro da duração especificada, a mensagem expira e é movida para a fila de mensagens mortas.  
   
 > [!NOTE]
@@ -163,8 +165,8 @@ class Client
 >  A fila de mensagens mortas é uma fila do cliente e é local para o Gerenciador de fila do cliente.  
   
  A implementação do serviço de mensagens mortas verifica o motivo pelo qual que uma mensagem de falha na entrega e medidas corretivas usa. O motivo da falha de uma mensagem é capturado em duas enumerações, <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> e <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>. Você pode recuperar o <xref:System.ServiceModel.Channels.MsmqMessageProperty> do <xref:System.ServiceModel.OperationContext> conforme mostrado no código de exemplo a seguir:  
-  
-```  
+
+```csharp
 public void SubmitPurchaseOrder(PurchaseOrder po)  
 {  
     Console.WriteLine("Submitting purchase order did not succed ", po);  
@@ -176,15 +178,15 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
     Console.WriteLine("Message Delivery Failure: {0}",   
                                                mqProp.DeliveryFailure);  
     Console.WriteLine();  
-    ….  
-}  
-```  
-  
+    …  
+}
+```
+
  Mensagens na fila de mensagens mortas são mensagens que são endereçadas para o serviço que está processando a mensagem. Portanto, quando o serviço de mensagens mortas lê mensagens da fila, o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] camada do canal localiza a incompatibilidade nos pontos de extremidade e não enviar a mensagem. Nesse caso, a mensagem é endereçada ao serviço de processamento de pedidos, mas é recebida pelo serviço de mensagens mortas. Para receber uma mensagem que é endereçada a um ponto de extremidade diferente, um filtro de endereço para corresponder a qualquer endereço for especificado no `ServiceBehavior`. Isso é necessário para processar mensagens que são lidas da fila de mensagens mortas.  
   
  Neste exemplo, o serviço de mensagens mortas reenvia a mensagem se o motivo da falha é que a mensagem expirou. Para todos os outros motivos, ele exibe a falha de entrega, conforme mostrado no código de exemplo a seguir:  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.Single, ConcurrencyMode=ConcurrencyMode.Single, AddressFilterMode=AddressFilterMode.Any)]  
@@ -237,8 +239,8 @@ public class PurchaseOrderDLQService : IOrderProcessor
         }  
     }  
 }   
-```  
-  
+```
+
  O exemplo a seguir mostra a configuração de uma mensagem de mensagens mortas:  
   
 ```xml  

@@ -1,35 +1,36 @@
 ---
 title: Atividades de entidade
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c04f7413-7fb8-40c6-819e-dc92b145b62e
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c507c3da7f4583bf6ffb7b869cecbf0bfd305077
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 81f8b1852b939d7ceb8b9afae4435ca12239b880
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="entity-activities"></a>Atividades de entidade
-Este exemplo mostra como usar o ADO.NET Entity Framework com [!INCLUDE[wf2](../../../../includes/wf2-md.md)] para simplificar o acesso a dados.  
+Este exemplo mostra como usar o ADO.NET Entity Framework com o Windows Workflow Foundation para simplificar o acesso a dados.  
   
- O ADO.NET Entity Framework permite aos desenvolvedores para trabalhar com dados na forma de objetos, propriedades e relações domínio específicos como clientes, pedidos, detalhes do pedido e relacionamentos entre essas entidades. O ADO.NET Entity Framework faz isto fornecendo um nível de abstração que permite a programação em um modelo conceitual do aplicativo em vez de programação diretamente em um esquema relacional de armazenamento. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Consulte o ADO.NET Entity Framework [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).  
+ O ADO.NET Entity Framework permite aos desenvolvedores para trabalhar com dados na forma de objetos, propriedades e relações domínio específicos como clientes, pedidos, detalhes do pedido e relacionamentos entre essas entidades. O ADO.NET Entity Framework faz isto fornecendo um nível de abstração que permite a programação em um modelo conceitual do aplicativo em vez de programação diretamente em um esquema relacional de armazenamento. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Consulte o ADO.NET Entity Framework [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).  
   
 ## <a name="sample-details"></a>Detalhes de exemplo  
  Este exemplo usa o base de dados de `Northwind` e incluem scripts para criar e remova a base de dados de `Northwind` (Setup.cmd e Cleanup.cmd). Os projetos nesse exemplo incluem Modelo de Dados de Entidade baseado na base de dados de `Northwind` . Você pode localizar o modelo abrindo o arquivo de `Northwind.edmx` que está incluído no projeto. Esse é o modelo que define a forma de objetos que podem ser acessados usando ADO.NET Entity Framework.  
   
  As seguintes atividades são incluídas neste exemplo:  
   
--   `EntitySQLQuery`: A atividade de `EntitySQLQuery` permite que você recupere objetos de base de dados com base em uma cadeia de caracteres Entity de consulta SQL. Entity SQL é uma linguagem independente de armazenamento que é semelhante ao SQL e permite que você especifique consultas com base no modelo conceitual e as entidades que são uma parte do modelo ou domínio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Linguagem Entity SQL, consulte [linguagem Entity SQL](http://go.microsoft.com/fwlink/?LinkId=165646).  
+-   `EntitySQLQuery`: A atividade de `EntitySQLQuery` permite que você recupere objetos de base de dados com base em uma cadeia de caracteres Entity de consulta SQL. Entity SQL é uma linguagem independente de armazenamento que é semelhante ao SQL e permite que você especifique consultas com base no modelo conceitual e as entidades que são uma parte do modelo ou domínio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Linguagem Entity SQL, consulte [linguagem Entity SQL](http://go.microsoft.com/fwlink/?LinkId=165646).  
   
 -   `EntityLinqQuery`: Esta atividade permite que você recupere objetos de base de dados com base em uma consulta ou em um predicado LINQ.  
   

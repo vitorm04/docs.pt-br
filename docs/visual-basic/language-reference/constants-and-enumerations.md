@@ -13,11 +13,11 @@ ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
 caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: da42d58190e8069154cd8383cf0a87e0b19f5ae4
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: bffbb8dabdd2463633c9d2ca8de3ef120850be3f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Constantes e enumerações (Visual Basic)
 Visual Basic fornece um número de enumerações e constantes predefinidas para desenvolvedores. Constantes armazenam valores que permanecem constantes durante a execução de um aplicativo. Enumerações fornecem uma maneira conveniente para trabalhar com conjuntos de constantes relacionadas e para associar valores de constante a nomes.  
@@ -31,7 +31,7 @@ Visual Basic fornece um número de enumerações e constantes predefinidas para 
 |---|---|  
 |`CONFIG`|Uma cadeia de caracteres que corresponde à configuração atual do **configuração de solução ativa** caixa o **do Configuration Manager**.|  
 |`DEBUG`|Um `Boolean` valor que pode ser definido na **propriedades do projeto** caixa de diálogo. Por padrão, a configuração de depuração para um projeto define `DEBUG`. Quando `DEBUG` for definida, <xref:System.Diagnostics.Debug> métodos da classe geram a saída para o **saída** janela. Quando ele não está definido, <xref:System.Diagnostics.Debug> métodos de classe não são compilados e nenhuma saída de depuração é gerada.|  
-|`TARGET`|Uma cadeia de caracteres que representa o tipo de saída para o projeto ou a configuração da linha de comando **/destino** opção. Os valores possíveis de `TARGET` são:<br /><br /> -"winexe" para um aplicativo do Windows.<br />-"exe" para um aplicativo de console.<br />-"library" para uma biblioteca de classe.<br />-"módulo" para um módulo.<br />-A **/destino** opção pode ser definida no [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] ambiente de desenvolvimento integrado. Para obter mais informações, consulte [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
+|`TARGET`|Uma cadeia de caracteres que representa o tipo de saída para o projeto ou a configuração da linha de comando **/destino** opção. Os valores possíveis de `TARGET` são:<br /><br /> -"winexe" para um aplicativo do Windows.<br />-"exe" para um aplicativo de console.<br />-"library" para uma biblioteca de classe.<br />-"módulo" para um módulo.<br />-A **/destino** opção pode ser definida no ambiente de desenvolvimento integrado do Visual Studio. Para obter mais informações, consulte [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
 |`TRACE`|Um `Boolean` valor que pode ser definido na **propriedades do projeto** caixa de diálogo. Por padrão, todas as configurações para um projeto de definem `TRACE`. Quando `TRACE` for definida, <xref:System.Diagnostics.Trace> métodos da classe geram a saída para o **saída** janela. Quando ele não está definido, <xref:System.Diagnostics.Trace> classe métodos não são compilados e nenhum `Trace` saída é gerada.|  
 |`VBC_VER`|Um número que representa a versão do Visual Basic, *principais*. *pequenas* formato. O número de versão [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] é 8.0.|  
   

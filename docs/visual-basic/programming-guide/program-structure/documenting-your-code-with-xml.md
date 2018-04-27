@@ -16,11 +16,11 @@ ms.assetid: a0d35dc7-c5f9-4d74-92ff-a1c6f28d5235
 caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 645dd4a8a9d1c78fd54f0f31ad0efd772b671d39
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d132fa514008d072158a0e6bedaff511c55b18c0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>Documentando o código com XML (Visual Basic)
 No Visual Basic, você pode documentar seu código usando XML  
@@ -40,7 +40,7 @@ No Visual Basic, você pode documentar seu código usando XML
   
     -   O atributo `cref` pode ser anexado a qualquer marca para fornecer uma referência a um elemento de código. O compilador verifica se este elemento de código existe. Se a verificação falhar, o compilador emite um aviso. O compilador também respeita quaisquer `Imports` instruções ao procurar por um tipo descrito no `cref` atributo.  
   
-    -   O \<resumo > marca é usada pelo IntelliSense no [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] para exibir informações adicionais sobre um tipo ou membro.  
+    -   O \<resumo > marca é usada pelo IntelliSense no Visual Studio para exibir informações adicionais sobre um tipo ou membro.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  Para obter detalhes sobre como criar um arquivo XML com comentários de documentação, consulte os tópicos a seguir:  

@@ -1,0 +1,2 @@
+> [!NOTE]
+>  Este exemplo de código usa uma sobrecarga desse método sobrecarregado que é diferente da sobrecarga específica descrita neste tópico. Para estender o exemplo a este tópico, altere o corpo da função `selector`.

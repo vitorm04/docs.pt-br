@@ -1,27 +1,29 @@
 ---
 title: Planejando-se para desempenho do aplicativo
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6bdb140d90de02fa817c55a05f40e57fcd0d636c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 15130ac57b0df2ab1632ad8ec31ae5e350afdfec
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="planning-for-application-performance"></a>Planejando-se para desempenho do aplicativo
 O sucesso de alcançar suas metas de desempenho depende de quão bem você desenvolve sua estratégia de desempenho. O planejamento é o primeiro estágio no desenvolvimento de qualquer produto. Este tópico descreve algumas regras bastante simples para desenvolver uma boa estratégia de desempenho.  
@@ -36,7 +38,7 @@ O sucesso de alcançar suas metas de desempenho depende de quão bem você desen
  Sempre mantenha o ciclo de medir, investigar, refinar/corrigir durante seu ciclo de desenvolvimento de aplicativos. Do início até o fim do ciclo de desenvolvimento, você precisa avaliar o desempenho do seu aplicativo em um ambiente confiável e estável. Você deve evitar variabilidade causada por fatores externos. Por exemplo, ao testar o desempenho, desabilite programas antivírus ou qualquer atualização automática, como o SMS, para que não afetem os resultados de teste de desempenho. Depois de ter medido o desempenho do aplicativo, é preciso identificar as alterações que resultarão nos maiores aperfeiçoamentos. Depois de modificar seu aplicativo, inicie o ciclo novamente.  
   
 ## <a name="make-performance-tuning-an-iterative-process"></a>Tornar o ajuste de desempenho um processo iterativo  
- Você deve saber o custo relativo de cada recurso que usará. Por exemplo, a reflexão em [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] geralmente faz uso intenso de desempenho em termos de recursos de computação, portanto use-o criteriosamente. Isso não significa evitar o uso da reflexão, apenas que você deve ter cuidado para equilibrar os requisitos de desempenho do aplicativo com as demandas de desempenho dos recursos que você usa.  
+ Você deve saber o custo relativo de cada recurso que usará. Por exemplo, o uso da reflexão no Microsoft .NET Framework é geralmente intensiva em termos de recursos de computação, portanto você queira usá-lo criteriosamente. Isso não significa evitar o uso da reflexão, apenas que você deve ter cuidado para equilibrar os requisitos de desempenho do aplicativo com as demandas de desempenho dos recursos que você usa.  
   
 ## <a name="build-towards-graphical-richness"></a>Compilando com foco em riqueza gráfica  
  Uma técnica-chave para criar uma abordagem escalonável para atingir desempenho do aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é criar pensando em riqueza e complexidade gráficas. Sempre comece usando os recursos com uso menos intenso de desempenho para atingir suas metas de cenário. Depois que você atingir essas metas, compile para obter riqueza gráfica usando recursos com uso mais intenso de desempenho, sempre mantendo suas metas de cenário em mente. Lembre-se de que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é uma plataforma muito sofisticada e oferece recursos gráficos muito ricos. Utilizar recursos com uso intenso de desempenho sem pensar pode afetar negativamente o desempenho geral do aplicativo.  

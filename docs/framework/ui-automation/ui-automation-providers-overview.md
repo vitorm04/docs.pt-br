@@ -1,27 +1,29 @@
 ---
-title: "Visão Geral dos Provedores de Automação de Interface do Usuário"
-ms.custom: 
+title: Visão Geral dos Provedores de Automação de Interface do Usuário
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: dc5cb5749bbfe06fd3a1bbe3537b28c7bbfa295d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a8279b8c2c39ce37fa9e3af55a6b079e8202b3ff
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ui-automation-providers-overview"></a>Visão Geral dos Provedores de Automação de Interface do Usuário
 > [!NOTE]
@@ -38,12 +40,12 @@ ms.lasthandoff: 12/22/2017
  Provedores de automação de interface do usuário se enquadram em duas categorias: provedores do lado do cliente e provedores do lado do servidor.  
   
 ### <a name="client-side-providers"></a>Provedores do lado do cliente  
- Provedores do lado do cliente são implementados por clientes de automação de interface do usuário para se comunicar com um aplicativo que não dá suporte ou não suporta completamente, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Provedores do lado do cliente normalmente se comunicam com o servidor através do limite de processo, enviando e recebendo [!INCLUDE[TLA2#tla_win](../../../includes/tla2sharptla-win-md.md)] mensagens.  
+ Provedores do lado do cliente são implementados por clientes de automação de interface do usuário para se comunicar com um aplicativo que não dá suporte ou não suporta completamente, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Provedores do lado do cliente geralmente se comunicam com o servidor através do limite de processo, enviando e recebendo mensagens do Windows.  
   
- Como provedores de automação de interface do usuário para controles em [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)], ou [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] aplicativos são fornecidos como parte do sistema operacional, os aplicativos cliente raramente têm que implementar seus próprios provedores e esta visão geral não trata deles Além disso.  
+ Como provedores de automação de interface do usuário para controles em [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], formulários do Windows, ou [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] aplicativos são fornecidos como parte do sistema operacional, os aplicativos cliente raramente têm que implementar seus próprios provedores e esta visão geral não trata deles Além disso.  
   
 ### <a name="server-side-providers"></a>Provedores do lado do servidor  
- Provedores do lado do servidor são implementados por controles personalizados ou aplicativos que se baseiam em uma estrutura de interface do usuário que [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)], ou [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+ Provedores do lado do servidor são implementados por controles personalizados ou aplicativos que se baseiam em uma estrutura de interface do usuário que [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], formulários do Windows, ou [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
  Provedores do lado do servidor se comunicar com aplicativos cliente através do limite de processo ao expor interfaces para o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] principais do sistema, que por sua vez serve solicitações de clientes.  
   
@@ -52,10 +54,10 @@ ms.lasthandoff: 12/22/2017
  Esta seção fornece breves explicações sobre alguns dos principais conceitos que você precisa entender para implementar provedores de automação de interface do usuário.  
   
 ### <a name="elements"></a>Elementos  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]elementos são partes de [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] que são visíveis para os clientes de automação de interface do usuário. Exemplos incluem janelas de aplicativo, painéis, botões, dicas de ferramentas, caixas de listagem e itens de lista.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elementos são partes de [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] que são visíveis para os clientes de automação de interface do usuário. Exemplos incluem janelas de aplicativo, painéis, botões, dicas de ferramentas, caixas de listagem e itens de lista.  
   
 ### <a name="navigation"></a>Navegação  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]elementos são expostos aos clientes como uma [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] árvore. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]constrói a árvore ao navegar de um elemento para outro. Navegação é ativada pelos provedores para cada elemento, cada um deles pode apontar para um pai, irmãos e filhos.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elementos são expostos aos clientes como uma [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] árvore. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] constrói a árvore ao navegar de um elemento para outro. Navegação é ativada pelos provedores para cada elemento, cada um deles pode apontar para um pai, irmãos e filhos.  
   
  Para obter mais informações sobre o modo de exibição do cliente a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] de árvore, consulte [visão geral de árvore de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
   
@@ -75,11 +77,11 @@ ms.lasthandoff: 12/22/2017
 ### <a name="frameworks"></a>Estruturas  
  Uma estrutura é um componente que gerencia controles de filho, testes e renderização em uma área da tela. Por exemplo, um [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] janela, conhecida como um HWND, pode servir como uma estrutura que contém várias [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elementos, como uma barra de menus, uma barra de status e botões.  
   
- [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]controles de contêiner, como caixas de listagem e modos de exibição de árvore são considerados frameworks, porque eles contêm seu próprio código para renderizar itens filhos e executar testes de clique neles. Por outro lado, uma [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] caixa de listagem não é um framework, porque a renderização e teste de clique estão sendo tratados pelo que o contém [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] janela.  
+ [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controles de contêiner, como caixas de listagem e modos de exibição de árvore são considerados frameworks, porque eles contêm seu próprio código para renderizar itens filhos e executar testes de clique neles. Por outro lado, uma [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] caixa de listagem não é um framework, porque a renderização e teste de clique estão sendo tratados pelo que o contém [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] janela.  
   
  O [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] em um aplicativo pode ser constituído de diferentes frameworks. Por exemplo, uma janela do aplicativo HWND pode conter [!INCLUDE[TLA#tla_dhtml](../../../includes/tlasharptla-dhtml-md.md)] que por sua vez contém um componente como uma caixa de combinação em um HWND.  
   
-### <a name="fragments"></a>fragmentos  
+### <a name="fragments"></a>Fragmentos  
  Um fragmento é uma subárvore completa dos elementos de uma estrutura específica. O elemento no nó raiz da subárvore é chamado uma raiz de fragmento. Uma raiz de fragmento não tem um pai, mas é hospedada em algum outro framework, geralmente uma [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] janela (HWND).  
   
 ### <a name="hosts"></a>Hosts  

@@ -14,17 +14,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 999c18f20264a71cf73bbd5afd352ad3104a03e8
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a11a1cddbb5b65bf174cabe7774ad62791657f54
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Suporte para novas Funcionalidades do Workflow Foundation 4.5 no Designer de Fluxo de Trabalho hospedado novamente
-O [!INCLUDE[wf](../../../includes/wf-md.md)] no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] introduziu muitos novos recursos, incluindo vários aprimoramentos à experiência do designer de fluxo de trabalho. Este tópico detalha quais desses recursos têm suporte no designer hospedado novamente e que não têm suporte no momento.  
+Windows Workflow Foundation (WF) no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] introduziu muitos recursos novos, incluindo vários aprimoramentos à experiência de designer de fluxo de trabalho. Este tópico detalha quais desses recursos têm suporte no designer hospedado novamente e que não têm suporte no momento.  
   
 > [!NOTE]
->  Para obter uma lista de todos os novos [!INCLUDE[wf](../../../includes/wf-md.md)] recursos introduzidos no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], incluindo aqueles que estão relacionados a nova hospedagem de designer, consulte [o que há de novo no Windows Workflow Foundation no .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
+>  Para obter uma lista de todos os novos recursos do Windows Workflow Foundation (WF) introduzidos no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], incluindo aqueles que estão relacionados a nova hospedagem de designer, consulte [o que há de novo no Windows Workflow Foundation no .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
   
 ## <a name="activities"></a>Atividades  
  A biblioteca de atividades embutida contém novas atividades e novos recursos para atividades existentes. Todas essas novas atividades têm suporte no designer hospedado novamente. Para obter mais informações sobre essas novas atividades, consulte o [atividades](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) seção [o que há de novo no Windows Workflow Foundation no .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  

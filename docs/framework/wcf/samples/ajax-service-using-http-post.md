@@ -1,24 +1,26 @@
 ---
-title: "Serviço AJAX utilizando HTTP POST"
-ms.custom: 
+title: Serviço AJAX utilizando HTTP POST
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c2447f641748cdcc3419fda2a6ae8f02d68ed98e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1446fadeb249d91f0eb3e65b1155f00090441a5a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ajax-service-using-http-post"></a>Serviço AJAX utilizando HTTP POST
 Este exemplo demonstra como usar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para criar um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] serviço JavaScript assíncrono e XML (AJAX) que usa o HTTP POST. Um serviço de AJAX é aquele que você pode acessar usando o código JavaScript básico de um cliente de navegador da Web. Este exemplo se baseia o [serviço AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md) exemplo; a única diferença entre os dois exemplos é o uso de HTTP POST em vez de HTTP GET.  
@@ -31,19 +33,20 @@ Este exemplo demonstra como usar [!INCLUDE[indigo1](../../../../includes/indigo1
  O serviço no exemplo a seguir está uma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço sem nenhum código específico do AJAX.  
   
  Se o <xref:System.ServiceModel.Web.WebInvokeAttribute> atributo é aplicado em uma operação, ou o <xref:System.ServiceModel.Web.WebGetAttribute> atributo não é aplicado, o verbo HTTP padrão ("POST") é usado. As solicitações POST são mais difíceis de construir que as solicitações GET, mas eles não estão em cache; Use solicitações POST para todas as operações em que o cache não é apropriado.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "PostAjaxService")]  
-    public interface ICalculator  
-    {        [WebInvoke]  
-        double Add(double n1, double n2);  
-        //Other operations omitted…  
-    }  
-```  
-  
+public interface ICalculator  
+{
+    [WebInvoke]  
+    double Add(double n1, double n2);  
+    //Other operations omitted…  
+}
+```
+
  Crie um ponto de extremidade do AJAX no serviço usando o <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>, assim como o exemplo de serviço AJAX básico.  
   
- Ao contrário das solicitações GET, você não pode invocar serviços POST do navegador. Por exemplo, navegando para http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200 resulta em um erro, porque o serviço de POSTAGEM espera o `n1` e `n2` parâmetros para ser enviados no corpo da mensagem, no formato JSON — e não na URL.  
+ Ao contrário das solicitações GET, você não pode invocar serviços POST do navegador. Por exemplo, navegando para http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200 resulta em um erro, porque o serviço de POSTAGEM espera o `n1` e `n2` parâmetros para ser enviados no corpo da mensagem — no formato JSON — e não na URL.  
   
  O cliente PostAjaxClientPage.aspx de página da Web contém código para chamar o serviço sempre que o usuário clica em um dos botões de operação na página do ASP.NET. O serviço responde da mesma maneira como no [serviço AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md) exemplo, com a solicitação de obtenção.  
   

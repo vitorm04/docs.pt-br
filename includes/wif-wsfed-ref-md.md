@@ -1,0 +1,1 @@
+Para saber mais sobre a mensagem que essa classe representa, consulte a seção 13 da seguinte especificação: [Linguagem WS-Federation (especificação Web Services Federation) Versão 1.2](http://docs.oasis-open.org/wsfed/federation/v1.2/os/ws-federation-1.2-spec-os.html) (http://docs.oasis-open.org/wsfed/federation/v1.2/os/ws-federation-1.2-spec-os.html)).

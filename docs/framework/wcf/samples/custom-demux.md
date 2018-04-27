@@ -1,24 +1,26 @@
 ---
 title: Demux personalizado
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 540469571f06f9c2ab38f9754a40aae5a3c3b267
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 45184c2d884347baef4090ed496e22e77aab5423
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="custom-demux"></a>Demux personalizado
 Este exemplo demonstra como cabeçalhos de mensagens MSMQ podem ser mapeados para operações de serviço diferentes para que [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviços que usam <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> não está limitado a usar uma operação de serviço, conforme demonstrado no [enfileiramento O Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) e [Windows Communication Foundation para enfileiramento](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) exemplos.  
@@ -26,8 +28,8 @@ Este exemplo demonstra como cabeçalhos de mensagens MSMQ podem ser mapeados par
  O serviço neste exemplo é um aplicativo de console auto-hospedado para que você possa observar o serviço que recebe as mensagens em fila.  
   
  O contrato de serviço é `IOrderProcessor`e define um serviço unidirecional que é adequado para uso com filas.  
-  
-```  
+
+```csharp
 [ServiceContract]  
 [KnownType(typeof(PurchaseOrder))]  
 [KnownType(typeof(String))]  
@@ -39,11 +41,11 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true, Name = "CancelPurchaseOrder")]  
     void CancelPurchaseOrder(MsmqMessage<string> ponumber);  
 }  
-```  
-  
+```
+
  Uma mensagem MSMQ não tem um cabeçalho de ação. Não é possível mapear mensagens MSMQ diferentes para contratos de operação automaticamente. Portanto, pode haver apenas um contrato de operação. Para superar essa limitação, o serviço implementa o <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> método o <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> interface. O <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> método permite que o serviço mapear um determinado cabeçalho da mensagem para uma operação de serviço específico. Neste exemplo, o cabeçalho do rótulo da mensagem é mapeado para as operações de serviço. O `Name` parâmetro do contrato da operação determina qual operação de serviço deve ser distribuída para um rótulo de determinada mensagem. Por exemplo, se o cabeçalho do rótulo da mensagem contém "SubmitPurchaseOrder", a operação de serviço "SubmitPurchaseOrder" é invocada.  
-  
-```  
+
+```csharp
 public class OperationSelector : IDispatchOperationSelector  
 {  
     public string SelectOperation(ref System.ServiceModel.Channels.Message message)  
@@ -52,29 +54,29 @@ public class OperationSelector : IDispatchOperationSelector
         return property.Label;  
     }  
 }  
-```  
-  
+```
+
  O serviço deve implementar o <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.ContractDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.DispatchRuntime%29> método o <xref:System.ServiceModel.Description.IContractBehavior> interface conforme mostrado no código de exemplo a seguir. Isso se aplica a custom `OperationSelector` no tempo de execução de expedição do serviço do framework.  
-  
-```  
+
+```csharp
 void IContractBehavior.ApplyDispatchBehavior(ContractDescription description, ServiceEndpoint endpoint, DispatchRuntime dispatch)  
 {  
     dispatch.OperationSelector = new OperationSelector();  
 }  
-```  
-  
+```
+
  Uma mensagem deve passar pelo dispatcher <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> antes de obter a OperationSelector. Por padrão uma mensagem será rejeitada se a ação não pode ser encontrada em qualquer contrato implementado pelo serviço. Para evitar essa verificação, implementamos um <xref:System.ServiceModel.Description.IEndpointBehavior> chamado `MatchAllFilterBehavior`, que permite que qualquer mensagem para passar o `ContractFilter` aplicando o <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> da seguinte maneira.  
-  
-```  
+
+```csharp
 public void ApplyDispatchBehavior(ServiceEndpoint serviceEndpoint, EndpointDispatcher endpointDispatcher)  
 {  
     endpointDispatcher.ContractFilter = new MatchAllMessageFilter();  
 }  
-```  
+```
   
  Quando uma mensagem é recebida pelo serviço, a operação de serviço apropriado é enviada usando as informações fornecidas pelo cabeçalho de rótulo. O corpo da mensagem é desserializado em um `PurchaseOrder` do objeto, como mostrado no código de exemplo a seguir.  
-  
-```  
+
+```csharp
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
 public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)  
 {  
@@ -83,11 +85,11 @@ public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)
     po.Status = (OrderStates)statusIndexer.Next(3);  
     Console.WriteLine("Processing {0} ", po);  
 }  
-```  
-  
+```
+
  O serviço é hospedado automaticamente. Ao usar o MSMQ, a fila que é usada deve ser criada com antecedência. Isso pode ser feito manualmente ou por meio de código. Neste exemplo, o serviço contém código para verificar a existência da fila e cria-se a fila não existe. O nome da fila é lida do arquivo de configuração.  
-  
-```  
+
+```csharp
 public static void Main()  
 {  
     // Get MSMQ queue name from app settings in configuration  
@@ -115,8 +117,8 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-```  
-  
+```
+
  O nome da fila MSMQ é especificado em uma seção appSettings do arquivo de configuração.  
   
 > [!NOTE]

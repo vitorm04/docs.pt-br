@@ -1,26 +1,27 @@
 ---
 title: Filas transacionadas
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b1b011dd-5e0b-482c-9bb0-9d8727038f14
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa475ac31287cebe173df255380b1f34d9af2567
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 628e91589ad32a2646316401c7b2ddb31b13eace
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-queues"></a>Filas transacionadas
-Este exemplo mostra como integrar filas e transações em [!INCLUDE[wf](../../../../includes/wf-md.md)] para criar serviços confiáveis e escalonáveis. Um <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` é usado no fluxo de trabalho cliente para enviar a mensagem para uma fila em uma transação usando o <xref:System.ServiceModel.NetMsmqBinding>. <xref:System.ServiceModel.Activities.TransactedReceiveScope> é usado no servidor para receber mensagens de fila e para atualizar o estado de fluxo de trabalho na mesma transação.  
+Este exemplo mostra como integrar a filas e transações no Windows Workflow Foundation (WF) para criar serviços escalonáveis e confiáveis. Um <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` é usado no fluxo de trabalho cliente para enviar a mensagem para uma fila em uma transação usando o <xref:System.ServiceModel.NetMsmqBinding>. <xref:System.ServiceModel.Activities.TransactedReceiveScope> é usado no servidor para receber mensagens de fila e para atualizar o estado de fluxo de trabalho na mesma transação.  
   
 ## <a name="demonstrates"></a>Demonstra  
  <xref:System.Activities.Statements.TransactionScope>, <xref:System.ServiceModel.Activities.TransactedReceiveScope>, <xref:System.ServiceModel.NetMsmqBinding>, <xref:System.ServiceModel.Activities.Receive>, e correlação conteudo base.  

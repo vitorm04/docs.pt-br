@@ -1,13 +1,13 @@
 ---
-title: "Visão geral do controle DataGrid (Windows Forms)"
-ms.custom: 
+title: Visão geral do controle DataGrid (Windows Forms)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - DataGrid
@@ -28,17 +28,17 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 10220efc0bb77ddcc7f0f9fa0e3f2793a032a1bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd74ed0e31fff211f0197ad27f297f9fbecf5cab
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Visão geral do controle DataGrid (Windows Forms)
 > [!NOTE]
@@ -103,7 +103,7 @@ Um DataGrid associado a dados com várias tabelas
 |Várias tabelas relacionadas.|A grade pode exibir um modo de exibição de árvore para selecionar tabelas ou é possível especificar para a grade exibir a tabela pai. Os registros na tabela pai permitem que os usuários naveguem até linhas filho relacionadas.|  
   
 > [!NOTE]
->  Tabelas em um conjunto de dados relacionadas usando um <xref:System.Data.DataRelation>.  Consulte também [HYPERLINK "http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)" Relacionamentos em conjuntos de dados](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) ou [Relacionamentos em conjuntos de dados](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\)).  
+>  Tabelas em um conjunto de dados relacionadas usando um <xref:System.Data.DataRelation>.  Consulte também [HYPERLINK "http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)" relacionamentos em conjuntos de dados](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) ou [relacionamentos em conjuntos de dados](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\)).  
   
  Quando o <xref:System.Windows.Forms.DataGrid> controle está exibindo uma tabela e o <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> está definida como `true`, dados podem ser classificados clicando-se os cabeçalhos de coluna. O usuário também pode adicionar linhas e editar células.  
   
@@ -117,7 +117,7 @@ Um DataGrid associado a dados com várias tabelas
  ![Objetos incluídos no controle DataGrid](../../../../docs/framework/winforms/controls/media/vbcolumns1.gif "vbColumns1")  
 A ilustração a seguir mostra os objetos incluídos no controle DataGrid.  
   
- Estilos de tabela e coluna são sincronizados com <xref:System.Data.DataTable> objetos e <xref:System.Data.DataColumn> objetos definindo suas `MappingName` propriedades ao apropriado <xref:System.Data.DataTable.TableName%2A> e <xref:System.Data.DataColumn.ColumnName%2A> propriedades. Quando um <xref:System.Windows.Forms.DataGridTableStyle> que não possui nenhuma coluna estilos é adicionado a um <xref:System.Windows.Forms.DataGrid> controle associado a uma fonte de dados válidos e o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> propriedade desse estilo de tabela está definida como uma opção válida <xref:System.Data.DataTable.TableName%2A> propriedade, uma coleção de <xref:System.Windows.Forms.DataGridColumnStyle> objetos é criado para que estilo de tabela. Para cada <xref:System.Data.DataColumn> encontrado no <xref:System.Data.DataTable.Columns%2A> coleção do <xref:System.Data.DataTable>, correspondente <xref:System.Windows.Forms.DataGridColumnStyle> é adicionada para o <xref:System.Windows.Forms.GridColumnStylesCollection>. <xref:System.Windows.Forms.GridColumnStylesCollection>é acessada por meio de <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> propriedade o <xref:System.Windows.Forms.DataGridTableStyle>. Colunas podem ser adicionadas ou excluídas da grade usando o <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> ou <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> método sobre o <xref:System.Windows.Forms.GridColumnStylesCollection>. Para obter mais informações, consulte [Como adicionar tabelas e colunas ao controle DataGrid dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md) e [Como excluir ou ocultar colunas no controle DataGrid dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md).  
+ Estilos de tabela e coluna são sincronizados com <xref:System.Data.DataTable> objetos e <xref:System.Data.DataColumn> objetos definindo suas `MappingName` propriedades ao apropriado <xref:System.Data.DataTable.TableName%2A> e <xref:System.Data.DataColumn.ColumnName%2A> propriedades. Quando um <xref:System.Windows.Forms.DataGridTableStyle> que não possui nenhuma coluna estilos é adicionado a um <xref:System.Windows.Forms.DataGrid> controle associado a uma fonte de dados válidos e o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> propriedade desse estilo de tabela está definida como uma opção válida <xref:System.Data.DataTable.TableName%2A> propriedade, uma coleção de <xref:System.Windows.Forms.DataGridColumnStyle> objetos é criado para que estilo de tabela. Para cada <xref:System.Data.DataColumn> encontrado no <xref:System.Data.DataTable.Columns%2A> coleção do <xref:System.Data.DataTable>, correspondente <xref:System.Windows.Forms.DataGridColumnStyle> é adicionada para o <xref:System.Windows.Forms.GridColumnStylesCollection>. <xref:System.Windows.Forms.GridColumnStylesCollection> é acessada por meio de <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> propriedade o <xref:System.Windows.Forms.DataGridTableStyle>. Colunas podem ser adicionadas ou excluídas da grade usando o <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> ou <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> método sobre o <xref:System.Windows.Forms.GridColumnStylesCollection>. Para obter mais informações, consulte [Como adicionar tabelas e colunas ao controle DataGrid dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md) e [Como excluir ou ocultar colunas no controle DataGrid dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md).  
   
  Uma coleção de tipos de coluna estende o <xref:System.Windows.Forms.DataGridColumnStyle> classe com formatação sofisticada e recursos de edição. Todos os tipos de coluna herdam o <xref:System.Windows.Forms.DataGridColumnStyle> classe base. A classe que é criada depende o <xref:System.Data.DataColumn.DataType%2A> propriedade do <xref:System.Data.DataColumn> do qual o <xref:System.Web.UI.WebControls.DataGridColumn> baseia-se. Por exemplo, um <xref:System.Data.DataColumn> com seus <xref:System.Data.DataColumn.DataType%2A> propriedade definida como <xref:System.Boolean> será associado a <xref:System.Windows.Forms.DataGridBoolColumn>. A tabela a seguir descreve cada um desses tipos de coluna.  
   
@@ -137,7 +137,7 @@ A ilustração a seguir mostra os objetos incluídos no controle DataGrid.
   
  Os estilos de coluna estão relacionados às colunas em um conjunto de dados, assim como os estilos de tabelas estão relacionados às tabelas de dados. Assim como cada tabela poderá ter apenas um estilo de tabela definido para ela por vez, cada coluna poderá ter apenas um estilo de coluna definido para ela, em um estilo de tabela específico. Essa relação é definida na coluna de <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> propriedade.  
   
- Se você tiver criado um estilo de tabela sem estilos de coluna adicionados a ele, [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] adicionará estilos de coluna padrão quando a forma e a grade forem criadas no tempo de execução. No entanto, caso tenha criado um estilo de tabela e adicionado estilos de coluna a ele, [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] não criará nenhum estilo de coluna. Além disso, será necessário definir estilos de coluna e atribuí-los com o nome de mapeamento para que as colunas desejadas sejam exibidas na grade.  
+ Se você tiver criado um estilo de tabela sem estilos de coluna adicionados a ele, o Visual Studio adicionará estilos de coluna padrão quando o formulário e a grade são criados em tempo de execução. No entanto, se você tiver criado um estilo de tabela e adicionado os estilos de coluna, o Visual Studio não criará os estilos de coluna. Além disso, será necessário definir estilos de coluna e atribuí-los com o nome de mapeamento para que as colunas desejadas sejam exibidas na grade.  
   
  Como as colunas que serão incluídas na grade de dados são especificadas por meio da atribuição de um estilo de coluna e como nenhum estilo de coluna foi atribuído às colunas, é possível incluir colunas de dados no conjunto de dados que não são exibidas na grade. Porém, já que a coluna de dados está incluída no conjunto de dados, os dados não exibidos podem ser editados programaticamente.  
   

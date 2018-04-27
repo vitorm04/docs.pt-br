@@ -20,17 +20,17 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-caps.latest.revision: ''
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b7a69a4dcd5fc39b700bf9c3404e70d581509ebc
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: fe34933c19e7f8a50d144cad99b99decbd501965
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="drag-and-drop-overview"></a>Visão geral de arrastar e soltar
 Este tópico fornece uma visão geral do suporte ao recurso do tipo "arrastar e soltar" em aplicativos do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Normalmente, o recurso do tipo "arrastar e soltar" se refere a um método de transferência de dados que envolve o uso de um mouse (ou algum outro dispositivo apontador) para selecionar um ou mais objetos, arrastá-los sobre um destino de soltar desejado na [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] e soltá-los.  
@@ -44,9 +44,9 @@ Este tópico fornece uma visão geral do suporte ao recurso do tipo "arrastar e 
   
  As ações específicas realizadas durante uma operação do tipo "arrastar e soltar" são específicas ao aplicativo e, frequentemente, determinadas pelo contexto.  Por exemplo, arrastar uma seleção de arquivos de uma pasta para outra no mesmo dispositivo de armazenamento move os arquivos por padrão, enquanto arrastar arquivos de um compartilhamento do [!INCLUDE[TLA#tla_unc](../../../../includes/tlasharptla-unc-md.md)] para uma pasta local copia os arquivos por padrão.  
   
- As funcionalidades do tipo "arrastar e soltar" fornecidas pelo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] foram projetadas para serem altamente flexíveis e personalizáveis, a fim de dar suporte a uma ampla variedade de cenários de operações do tipo "arrastar e soltar".  As operações do tipo "arrastar e soltar" dão suporte à manipulação de objetos em um único aplicativo ou entre diferentes aplicativos. Também há suporte completo para operações de arrastar e soltar entre aplicativos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e outros aplicativos do [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)].  
+ As funcionalidades do tipo "arrastar e soltar" fornecidas pelo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] foram projetadas para serem altamente flexíveis e personalizáveis, a fim de dar suporte a uma ampla variedade de cenários de operações do tipo "arrastar e soltar".  As operações do tipo "arrastar e soltar" dão suporte à manipulação de objetos em um único aplicativo ou entre diferentes aplicativos. Arrastar e soltar entre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos e outros aplicativos do Windows também é totalmente suportado.  
   
- Em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], qualquer <xref:System.Windows.UIElement> ou <xref:System.Windows.ContentElement> pode participar de arrastar e soltar. Os eventos e os métodos necessários para as operações de arrastar e soltar são definidas no <xref:System.Windows.DragDrop> classe. O <xref:System.Windows.UIElement> e <xref:System.Windows.ContentElement> classes conter aliases para o <xref:System.Windows.DragDrop> eventos anexados para que os eventos são exibidos na classe quando a lista de membros um <xref:System.Windows.UIElement> ou <xref:System.Windows.ContentElement> é herdada como um elemento base. Manipuladores de eventos associados a esses eventos são anexados ao subjacente <xref:System.Windows.DragDrop> evento anexado e receber a mesma instância de dados de evento. Para obter mais informações, consulte o <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType> evento.  
+ Em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], qualquer <xref:System.Windows.UIElement> ou <xref:System.Windows.ContentElement> pode participar de arrastar e soltar. Os eventos e os métodos necessários para as operações de arrastar e soltar são definidas no <xref:System.Windows.DragDrop> classe. O <xref:System.Windows.UIElement> e <xref:System.Windows.ContentElement> classes conter aliases para o <xref:System.Windows.DragDrop> eventos anexados para que os eventos são exibidos na classe quando a lista de membros um <xref:System.Windows.UIElement> ou <xref:System.Windows.ContentElement> é herdada como um elemento base. Manipuladores de eventos associados a esses eventos são anexados ao subjacente <xref:System.Windows.DragDrop> evento anexado e receber a mesma instância de dados de evento. Para saber mais, confira o evento <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType>.  
   
 > [!IMPORTANT]
 >  Operações do tipo "arrastar e soltar" OLE não funcionarão se você estiver na zona da Internet.  

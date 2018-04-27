@@ -1,24 +1,26 @@
 ---
 title: Tratamento de mensagens suspeitas no MSMQ 4.0
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 32d7c7a93636cbe0086cfbcb5fd1e401a2f013fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6f2361ed862986d2490968ae422b9b1313eedea3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Tratamento de mensagens suspeitas no MSMQ 4.0
 Este exemplo demonstra como executar manipulação em um serviço de mensagens suspeitas. Este exemplo se baseia o [transacionado associação de MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) exemplo. Este exemplo usa `netMsmqBinding`. O serviço é um aplicativo de console auto-hospedado para que você possa observar o serviço de recebimento de mensagens na fila.  
@@ -34,7 +36,7 @@ Este exemplo demonstra como executar manipulação em um serviço de mensagens s
 ## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v 4.0 suspeitas exemplo de tratamento  
  Em [!INCLUDE[wv](../../../../includes/wv-md.md)], MSMQ fornece um recurso de fila de subseção suspeita que pode ser usado para armazenar mensagens suspeitas. Este exemplo demonstra a prática recomendada de lidar com mensagens suspeitas usando [!INCLUDE[wv](../../../../includes/wv-md.md)].  
   
- A detecção de mensagens suspeitas em [!INCLUDE[wv](../../../../includes/wv-md.md)] é bastante sofisticado. Há 3 propriedades que ajudam a detecção. O <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> é expedida para o aplicativo para processamento e número de vezes que uma determinada mensagem é novamente leitura da fila. Uma mensagem é lida novamente na fila quando ela é colocada de volta na fila porque a mensagem não pode ser distribuída para o aplicativo ou o aplicativo reverterá a transação na operação de serviço. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>é o número de vezes que a mensagem será movida para a fila de repetição. Quando <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> é atingido, a mensagem será movida para a fila de repetição. A propriedade <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> é o atraso de tempo após o qual a mensagem é movida da fila de repetição para a fila principal. O <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> é redefinido para 0. A mensagem é tentada novamente. Se todas as tentativas de ler a mensagem de falha, a mensagem é marcada como adulterados.  
+ A detecção de mensagens suspeitas em [!INCLUDE[wv](../../../../includes/wv-md.md)] é bastante sofisticado. Há 3 propriedades que ajudam a detecção. O <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> é expedida para o aplicativo para processamento e número de vezes que uma determinada mensagem é novamente leitura da fila. Uma mensagem é lida novamente na fila quando ela é colocada de volta na fila porque a mensagem não pode ser distribuída para o aplicativo ou o aplicativo reverterá a transação na operação de serviço. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> é o número de vezes que a mensagem será movida para a fila de repetição. Quando <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> é atingido, a mensagem será movida para a fila de repetição. A propriedade <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> é o atraso de tempo após o qual a mensagem é movida da fila de repetição para a fila principal. O <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> é redefinido para 0. A mensagem é tentada novamente. Se todas as tentativas de ler a mensagem de falha, a mensagem é marcada como adulterados.  
   
  Depois que a mensagem é marcada como adulterados, a mensagem é tratada de acordo com as configurações de <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> enumeração. Para repetir os valores possíveis:  
   
@@ -46,22 +48,22 @@ Este exemplo demonstra como executar manipulação em um serviço de mensagens s
   
 -   Rejeitar: Para rejeitar a mensagem, enviar a mensagem de volta ao remetente de mensagens mortas fila. Esse valor só está disponível na [!INCLUDE[wv](../../../../includes/wv-md.md)].  
   
- O exemplo demonstra como usar o `Move` disposição para a mensagem suspeita. `Move`faz com que a mensagem Mover para a fila sub suspeita.  
+ O exemplo demonstra como usar o `Move` disposição para a mensagem suspeita. `Move` faz com que a mensagem Mover para a fila sub suspeita.  
   
  O contrato de serviço é `IOrderProcessor`, que define um serviço unidirecional que é adequado para uso com filas.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  A operação de serviço exibe uma mensagem informando que a ordem de processamento. Para demonstrar a funcionalidade de mensagens suspeitas, o `SubmitPurchaseOrder` operação de serviço gera uma exceção ao reverter a transação em uma invocação aleatória do serviço. Isso faz com que a mensagem a ser colocado de volta na fila. Eventualmente, a mensagem é marcada como suspeitas. A configuração é definida para mover a mensagem suspeita para a fila de subseção suspeita.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 public class OrderProcessorService : IOrderProcessor  
@@ -127,8 +129,8 @@ public class OrderProcessorService : IOrderProcessor
   
     }  
 }  
-```  
-  
+```
+
  A configuração de serviço inclui as seguintes propriedades de mensagem suspeita: `receiveRetryCount`, `maxRetryCycles`, `retryCycleDelay`, e `receiveErrorHandling` conforme mostrado no seguinte arquivo de configuração.  
   
 ```xml  
@@ -171,8 +173,8 @@ public class OrderProcessorService : IOrderProcessor
  Mensagens na fila de mensagens suspeitas são mensagens que são endereçadas para o serviço que está processando a mensagem, o que pode ser diferente do ponto de extremidade de serviço de mensagens suspeitas. Portanto, quando o serviço de mensagens suspeitas lê mensagens da fila, o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] camada do canal localiza a incompatibilidade nos pontos de extremidade e não enviar a mensagem. Nesse caso, a mensagem é endereçada ao serviço de processamento de pedidos, mas está sendo recebida pelo serviço de mensagens suspeitas. Para continuar a receber a mensagem, mesmo se a mensagem é resolvida para um ponto de extremidade diferente, devemos adicionar um `ServiceBehavior` para endereços de filtro em que o critério de correspondência é para corresponder a qualquer ponto de extremidade de serviço a mensagem está endereçada. Isso é necessário para processar mensagens ler da fila de mensagens suspeitas.  
   
  A implementação do serviço de mensagens suspeitas em si é muito semelhante para a implementação do serviço. Ele implementa o contrato e processa os pedidos. O exemplo de código é o seguinte.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(AddressFilterMode=AddressFilterMode.Any)]  
@@ -215,8 +217,8 @@ public class OrderProcessorService : IOrderProcessor
             serviceHost.Close();  
         }  
     }  
-```  
-  
+```
+
  Ao contrário do serviço que lê mensagens da fila de ordem de processamento de pedidos, o serviço de mensagens suspeitas lê mensagens da fila sub suspeita. A fila de suspeita é uma subtipo fila da fila principal, chamada "suspeitas" e é automaticamente gerada pelo MSMQ. Para acessá-lo, forneça o nome de fila principal, seguido por um ";" e o subtipo nome da fila, nesse caso-"suspeita", conforme mostrado no exemplo de configuração.  
   
 > [!NOTE]
