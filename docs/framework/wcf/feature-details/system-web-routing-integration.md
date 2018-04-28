@@ -1,30 +1,32 @@
 ---
-title: "Integração de System.Web.Routing"
-ms.custom: 
+title: Integração de System.Web.Routing
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8f74a0f9d7a39d7d5ccb97d7f4ef022b32bbf4fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c3a5b9965f63a9fc501025493b3a323013ea2a4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="systemwebrouting-integration"></a><span data-ttu-id="83c95-102">Integração de System.Web.Routing</span><span class="sxs-lookup"><span data-stu-id="83c95-102">System.Web.Routing Integration</span></span>
-<span data-ttu-id="83c95-103">Ao hospedar um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço no serviço de informações da Internet (IIS), você coloca um arquivo. svc no diretório virtual.</span><span class="sxs-lookup"><span data-stu-id="83c95-103">When hosting a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service in Internet Information Service (IIS) you place a .svc file in the virtual directory.</span></span> <span data-ttu-id="83c95-104">Esse arquivo. svc Especifica a fábrica do host de serviço a ser usado, bem como a classe que implementa o serviço.</span><span class="sxs-lookup"><span data-stu-id="83c95-104">This .svc file specifies the service host factory to use as well as the class that implements the service.</span></span> <span data-ttu-id="83c95-105">Ao fazer solicitações para o serviço de você especificar o arquivo. svc no URI, por exemplo: http://contoso.com/EmployeeServce.svc.</span><span class="sxs-lookup"><span data-stu-id="83c95-105">When making requests to the service you specify the .svc file in the URI, for example: http://contoso.com/EmployeeServce.svc.</span></span> <span data-ttu-id="83c95-106">Esse tipo de URI não é ideal para programadores que criam serviços REST.</span><span class="sxs-lookup"><span data-stu-id="83c95-106">For programmers writing REST services this type of URI is not optimal.</span></span> <span data-ttu-id="83c95-107">URIs para serviços REST especifique um recurso específico e normalmente não têm extensões.</span><span class="sxs-lookup"><span data-stu-id="83c95-107">URIs for REST services specify a specific resource and normally do not have any extensions.</span></span> <span data-ttu-id="83c95-108">O <xref:System.Web.Routing> recurso de integração permite que você hospede um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço REST que responde às URIs sem uma extensão.</span><span class="sxs-lookup"><span data-stu-id="83c95-108">The <xref:System.Web.Routing> integration feature allows you to host a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST service that responds to URIs without an extension.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="83c95-109">Consulte roteamento [roteamento ASP.NET](http://go.microsoft.com/fwlink/?LinkId=184660) e [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md) exemplo.</span><span class="sxs-lookup"><span data-stu-id="83c95-109"> routing see [ASP.NET Routing](http://go.microsoft.com/fwlink/?LinkId=184660) and the [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md) sample.</span></span>  
+# <a name="systemwebrouting-integration"></a><span data-ttu-id="94224-102">Integração de System.Web.Routing</span><span class="sxs-lookup"><span data-stu-id="94224-102">System.Web.Routing Integration</span></span>
+<span data-ttu-id="94224-103">Ao hospedar um [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] serviço no serviço de informações da Internet (IIS), você coloca um arquivo. svc no diretório virtual.</span><span class="sxs-lookup"><span data-stu-id="94224-103">When hosting a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service in Internet Information Service (IIS) you place a .svc file in the virtual directory.</span></span> <span data-ttu-id="94224-104">Esse arquivo. svc Especifica a fábrica do host de serviço a ser usado, bem como a classe que implementa o serviço.</span><span class="sxs-lookup"><span data-stu-id="94224-104">This .svc file specifies the service host factory to use as well as the class that implements the service.</span></span> <span data-ttu-id="94224-105">Ao fazer solicitações para o serviço de você especificar o arquivo. svc no URI, por exemplo: http://contoso.com/EmployeeServce.svc.</span><span class="sxs-lookup"><span data-stu-id="94224-105">When making requests to the service you specify the .svc file in the URI, for example: http://contoso.com/EmployeeServce.svc.</span></span> <span data-ttu-id="94224-106">Esse tipo de URI não é ideal para programadores que criam serviços REST.</span><span class="sxs-lookup"><span data-stu-id="94224-106">For programmers writing REST services this type of URI is not optimal.</span></span> <span data-ttu-id="94224-107">URIs para serviços REST especifique um recurso específico e normalmente não têm extensões.</span><span class="sxs-lookup"><span data-stu-id="94224-107">URIs for REST services specify a specific resource and normally do not have any extensions.</span></span> <span data-ttu-id="94224-108">O <xref:System.Web.Routing> recurso de integração permite que você hospede um [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serviço REST que responde às URIs sem uma extensão.</span><span class="sxs-lookup"><span data-stu-id="94224-108">The <xref:System.Web.Routing> integration feature allows you to host a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST service that responds to URIs without an extension.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="94224-109"> Consulte roteamento [roteamento ASP.NET](http://go.microsoft.com/fwlink/?LinkId=184660) e [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md) exemplo.</span><span class="sxs-lookup"><span data-stu-id="94224-109"> routing see [ASP.NET Routing](http://go.microsoft.com/fwlink/?LinkId=184660) and the [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md) sample.</span></span>  
   
-## <a name="using-systemwebrouting-integration"></a><span data-ttu-id="83c95-110">Usando a integração de Routing</span><span class="sxs-lookup"><span data-stu-id="83c95-110">Using System.Web.Routing Integration</span></span>  
- <span data-ttu-id="83c95-111">Para usar o <xref:System.Web.Routing> recurso de integração, você usa o <xref:System.ServiceModel.Activation.ServiceRoute> classe para criar uma ou mais rotas e adicioná-los para o <xref:System.Web.Routing.RouteTable> em um arquivo global. asax.</span><span class="sxs-lookup"><span data-stu-id="83c95-111">To use the <xref:System.Web.Routing> integration feature, you use the <xref:System.ServiceModel.Activation.ServiceRoute> class to create one or more routes and add them to the <xref:System.Web.Routing.RouteTable> in a Global.asax file.</span></span> <span data-ttu-id="83c95-112">Essas rotas especificam URIs que o serviço responde a relativa.</span><span class="sxs-lookup"><span data-stu-id="83c95-112">These routes specify the relative URIs that the service responds to.</span></span> <span data-ttu-id="83c95-113">O exemplo a seguir mostra como fazer isso.</span><span class="sxs-lookup"><span data-stu-id="83c95-113">The following example shows how to do this.</span></span>  
+## <a name="using-systemwebrouting-integration"></a><span data-ttu-id="94224-110">Usando a integração de Routing</span><span class="sxs-lookup"><span data-stu-id="94224-110">Using System.Web.Routing Integration</span></span>  
+ <span data-ttu-id="94224-111">Para usar o <xref:System.Web.Routing> recurso de integração, você usa o <xref:System.ServiceModel.Activation.ServiceRoute> classe para criar uma ou mais rotas e adicioná-los para o <xref:System.Web.Routing.RouteTable> em um arquivo global. asax.</span><span class="sxs-lookup"><span data-stu-id="94224-111">To use the <xref:System.Web.Routing> integration feature, you use the <xref:System.ServiceModel.Activation.ServiceRoute> class to create one or more routes and add them to the <xref:System.Web.Routing.RouteTable> in a Global.asax file.</span></span> <span data-ttu-id="94224-112">Essas rotas especificam URIs que o serviço responde a relativa.</span><span class="sxs-lookup"><span data-stu-id="94224-112">These routes specify the relative URIs that the service responds to.</span></span> <span data-ttu-id="94224-113">O exemplo a seguir mostra como fazer isso.</span><span class="sxs-lookup"><span data-stu-id="94224-113">The following example shows how to do this.</span></span>  
   
 ```  
 <%@ Application Language="C#" %>  
@@ -45,9 +47,9 @@ ms.lasthandoff: 12/22/2017
 </script>  
 ```  
   
- <span data-ttu-id="83c95-114">Isso encaminha todas as solicitações com um URI relativo que comece com os clientes a `Service` serviço.</span><span class="sxs-lookup"><span data-stu-id="83c95-114">This routes all requests with a relative URI that begins with Customers to the `Service` service.</span></span>  
+ <span data-ttu-id="94224-114">Isso encaminha todas as solicitações com um URI relativo que comece com os clientes a `Service` serviço.</span><span class="sxs-lookup"><span data-stu-id="94224-114">This routes all requests with a relative URI that begins with Customers to the `Service` service.</span></span>  
   
- <span data-ttu-id="83c95-115">Em seu arquivo Web. config, você deve adicionar o `System.Web.Routing.UrlRoutingModule` módulo, defina o `runAllManagedModulesForAllRequests` atributo `true`e adicione o `UrlRoutingHandler` manipulador para o `<system.webServer>` elemento conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="83c95-115">In your Web.config file you must add the `System.Web.Routing.UrlRoutingModule` module, set the `runAllManagedModulesForAllRequests` attribute to `true`, and add the `UrlRoutingHandler` handler to the `<system.webServer>` element as shown in the following example.</span></span>  
+ <span data-ttu-id="94224-115">Em seu arquivo Web. config, você deve adicionar o `System.Web.Routing.UrlRoutingModule` módulo, defina o `runAllManagedModulesForAllRequests` atributo `true`e adicione o `UrlRoutingHandler` manipulador para o `<system.webServer>` elemento conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="94224-115">In your Web.config file you must add the `System.Web.Routing.UrlRoutingModule` module, set the `runAllManagedModulesForAllRequests` attribute to `true`, and add the `UrlRoutingHandler` handler to the `<system.webServer>` element as shown in the following example.</span></span>  
   
 ```xml  
 <system.webServer>  
@@ -60,7 +62,7 @@ ms.lasthandoff: 12/22/2017
     </system.webServer>  
 ```  
   
- <span data-ttu-id="83c95-116">Isso carrega um módulo e o manipulador necessários para roteamento.</span><span class="sxs-lookup"><span data-stu-id="83c95-116">This loads a module and handler required for routing.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="83c95-117">[Roteamento](../../../../docs/framework/wcf/feature-details/routing.md).</span><span class="sxs-lookup"><span data-stu-id="83c95-117"> [Routing](../../../../docs/framework/wcf/feature-details/routing.md).</span></span> <span data-ttu-id="83c95-118">Você também deve definir o `aspNetCompatibilityEnabled` atributo `true` no `<serviceHostingEnvironment>` elemento conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="83c95-118">You must also set the `aspNetCompatibilityEnabled` attribute to `true` in the `<serviceHostingEnvironment>` element as shown in the following example.</span></span>  
+ <span data-ttu-id="94224-116">Isso carrega um módulo e o manipulador necessários para roteamento.</span><span class="sxs-lookup"><span data-stu-id="94224-116">This loads a module and handler required for routing.</span></span> <span data-ttu-id="94224-117">Para obter mais informações, consulte [Roteamento](../../../../docs/framework/wcf/feature-details/routing.md).</span><span class="sxs-lookup"><span data-stu-id="94224-117">For more information, see [Routing](../../../../docs/framework/wcf/feature-details/routing.md).</span></span> <span data-ttu-id="94224-118">Você também deve definir o `aspNetCompatibilityEnabled` atributo `true` no `<serviceHostingEnvironment>` elemento conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="94224-118">You must also set the `aspNetCompatibilityEnabled` attribute to `true` in the `<serviceHostingEnvironment>` element as shown in the following example.</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -69,7 +71,7 @@ ms.lasthandoff: 12/22/2017
     </system.serviceModel>  
 ```  
   
- <span data-ttu-id="83c95-119">A classe que implementa o serviço deve habilitar os requisitos de compatibilidade do ASP.NET, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="83c95-119">The class that implements the service must enable ASP.NET compatibility requirements as shown in the following example.</span></span>  
+ <span data-ttu-id="94224-119">A classe que implementa o serviço deve habilitar os requisitos de compatibilidade do ASP.NET, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="94224-119">The class that implements the service must enable ASP.NET compatibility requirements as shown in the following example.</span></span>  
   
 ```  
 [ServiceContract]  
@@ -80,6 +82,6 @@ ms.lasthandoff: 12/22/2017
     }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="83c95-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="83c95-120">See Also</span></span>  
- [<span data-ttu-id="83c95-121">Modelo de programação HTTP Web do WCF</span><span class="sxs-lookup"><span data-stu-id="83c95-121">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [<span data-ttu-id="83c95-122">Roteamento do ASP.NET</span><span class="sxs-lookup"><span data-stu-id="83c95-122">ASP.NET Routing</span></span>](http://go.microsoft.com/fwlink/?LinkId=184660)
+## <a name="see-also"></a><span data-ttu-id="94224-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="94224-120">See Also</span></span>  
+ [<span data-ttu-id="94224-121">Modelo de programação HTTP Web do WCF</span><span class="sxs-lookup"><span data-stu-id="94224-121">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [<span data-ttu-id="94224-122">Roteamento do ASP.NET</span><span class="sxs-lookup"><span data-stu-id="94224-122">ASP.NET Routing</span></span>](http://go.microsoft.com/fwlink/?LinkId=184660)
