@@ -1,24 +1,26 @@
 ---
-title: "Publicando e recuperando metadados através de uma associação personalizada"
-ms.custom: 
+title: Publicando e recuperando metadados através de uma associação personalizada
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 88495e42a57790b75c096235cda65cbedbf86a23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f6226f01a284a9a24593c1be4fed2f96f3eae730
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>Publicando e recuperando metadados através de uma associação personalizada
 O <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> fornece suporte para adicionar o ponto de extremidade de metadados para um serviço. Esses pontos de extremidade de metadados podem responder a solicitações HTTP GET em uma URL que tenha um `?wsdl` querystring e solicitações GET do WS-transferência conforme definido na especificação WS-MetadataExchange (MEX). Pontos de extremidade MEX implementam o <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> contrato.  
@@ -31,7 +33,7 @@ O <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=
 ## <a name="retrieving-metadata-over-a-custom-binding"></a>Recuperando metadados através de uma associação personalizada  
  Metadados podem ser recuperados de pontos de extremidade de metadados Get do HTTP e HTTPS Get usando solicitações de HTTP ou HTTPS GET padrão.  
   
- Para recuperar metadados de um ponto de extremidade de metadados MEX geralmente não é pode usar uma das ligações de MEX padrão suportadas pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>. O <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> tipo e a ferramenta Svcutil.exe selecionar automaticamente um essas associações MEX padrão com base no endereço do ponto de extremidade de metadados especificado.  
+ Para recuperar metadados de um ponto de extremidade de metadados MEX geralmente não é pode usar uma das ligações de MEX padrão suportadas pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Para obter mais informações, consulte <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>. O <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> tipo e a ferramenta Svcutil.exe selecionar automaticamente um essas associações MEX padrão com base no endereço do ponto de extremidade de metadados especificado.  
   
  Se um ponto de extremidade de metadados MEX usa outra associação de uma das ligações de MEX padrão, você pode configurar a associação usada pelo <xref:System.ServiceModel.Description.MetadataExchangeClient> usando código ou oferecendo um <xref:System.ServiceModel.Description.IMetadataExchange> configuração de ponto de extremidade do cliente. A ferramenta Svcutil.exe carrega automaticamente do seu arquivo de configuração de um <xref:System.ServiceModel.Description.IMetadataExchange> configuração de ponto de extremidade do cliente que tenha o mesmo nome que o esquema de URI para o endereço de ponto de extremidade de metadados.  
   

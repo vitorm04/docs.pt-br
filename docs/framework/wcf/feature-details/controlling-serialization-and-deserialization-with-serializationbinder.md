@@ -1,27 +1,29 @@
 ---
-title: "Controlando a serialização e a desserialização sem SerializationBinder"
-ms.custom: 
+title: Controlando a serialização e a desserialização sem SerializationBinder
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ba8dcecf-acc7-467c-939d-021bbac797d4
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba2140459c0b571e9b35824d3dba274e8447ac40
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e41308de617fc02471ac2cb9769ec6e90e665e0b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="controlling-serialization-and-deserialization-with-serializationbinder"></a>Controlando a serialização e a desserialização sem SerializationBinder
-Durante a serialização, um formatador transmite as informações necessárias para criar uma instância de um objeto do tipo correto e a versão. Geralmente, essas informações incluem o nome de tipo completo e o nome de assembly do objeto. Por padrão, a desserialização usa essas informações para criar uma instância de um objeto idêntico. Alguns usuários poderão precisar controlar qual classe para serializar e desserializar, ou porque a classe original pode não existir no computador que está executando a desserialização, a classe original foi movido entre assemblies ou uma versão diferente da classe é necessária do servidor e cliente. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Uso do associador de serialização](../../../../docs/framework/wcf/samples/usage-of-serialization-binder.md).  
+Durante a serialização, um formatador transmite as informações necessárias para criar uma instância de um objeto do tipo correto e a versão. Geralmente, essas informações incluem o nome de tipo completo e o nome de assembly do objeto. Por padrão, a desserialização usa essas informações para criar uma instância de um objeto idêntico. Alguns usuários poderão precisar controlar qual classe para serializar e desserializar, ou porque a classe original pode não existir no computador que está executando a desserialização, a classe original foi movido entre assemblies ou uma versão diferente da classe é necessária do servidor e cliente. Para obter mais informações, consulte [uso de associador de serialização](../../../../docs/framework/wcf/samples/usage-of-serialization-binder.md).  
   
 > [!WARNING]
 >  Essa funcionalidade está disponível somente ao usar o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ou <xref:System.Runtime.Serialization.NetDataContractSerializer>.  

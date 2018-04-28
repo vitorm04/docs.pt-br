@@ -1,20 +1,17 @@
 ---
 title: 'Configurando projetos (F #)'
-description: "Saiba como usar o Designer de projeto quando você trabalha com projetos F # no Visual Studio."
-keywords: "visual f#, f#, programação funcional"
+description: 'Saiba como usar o Designer de projeto quando você trabalha com projetos F # no Visual Studio.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 8b2ed206-34e4-4256-a6ce-0c2499561165
-ms.openlocfilehash: f56fed1e16b4de1d97766f37cb1c72297d5502d5
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: eac5b61d6b61d2aa1cb7b1606d60995a0355e975
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-projects-in-visual-studio"></a>Configurando projetos no Visual Studio
 
@@ -28,9 +25,9 @@ O **Project Designer** e o uso geral são descritos completamente no tópico [In
 
 |Página do Designer de projeto|Links relacionados|Descrição|
 |---------------------|-------------|-----------|
-|`Application`|[Página de aplicativo, Designer de projeto &#40; C &#35; &#41;](https://msdn.microsoft.com/library/ms247046.aspx)|Permite que você especifique configurações de nível de aplicativo e as propriedades, como se você estiver criando uma biblioteca ou um arquivo executável, qual versão do .NET Framework que o aplicativo está direcionando e obter informações sobre onde o arquivo de recursos que o aplicativo usa é armazenado.|
-|`Build`|[Criar &#40; página, Designer de projeto C &#35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Permite que você controle como o código é compilado.|
-|`Build Events`|[Criar página de eventos, Designer de projeto &#40; C &#35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Permite que você especifique comandos para execução antes ou depois de uma compilação.|
+|`Application`|[Página de aplicativo, Designer de projeto &#40;C&#35;&#41;](https://msdn.microsoft.com/library/ms247046.aspx)|Permite que você especifique configurações de nível de aplicativo e as propriedades, como se você estiver criando uma biblioteca ou um arquivo executável, qual versão do .NET Framework que o aplicativo está direcionando e obter informações sobre onde o arquivo de recursos que o aplicativo usa é armazenado.|
+|`Build`|[Página de compilação, Designer de projeto &#40;C&#35;&#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Permite que você controle como o código é compilado.|
+|`Build Events`|[Página eventos de build, Designer de projeto &#40;C&#35;&#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Permite que você especifique comandos para execução antes ou depois de uma compilação.|
 |`Debug`|[Página de Depuração, Designer de Projeto](https://msdn.microsoft.com/library/2wcdezs5.aspx)|Permite que você controle como o aplicativo é executado durante a depuração. Isso inclui o especiais modos que você deseja ativar, como SQL e de código nativo de depuração e linha de comando para uso e o que é o diretório inicial do aplicativo.|
 |`Reference Paths`|[Gerenciando referências em um projeto](/visualstudio/ide/managing-references-in-a-project)|Permite que você especifique onde pesquisar para assemblies que depende do código.|
 

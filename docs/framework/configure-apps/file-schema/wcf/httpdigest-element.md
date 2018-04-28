@@ -1,33 +1,35 @@
 ---
 title: '&lt;httpDigest&gt; Element'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 95e6a7d31949bd7a6badb029e3f768a63fbaf924
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 75579a583b774896f43099d3cc30f1679b10a889
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="lthttpdigestgt-element"></a>&lt;httpDigest&gt; Element
 Especifica um resumo de tipo de credencial usada na autenticação do cliente para um serviço.  
   
- \<sistema. ServiceModel >  
+ \<system.ServiceModel>  
 \<comportamentos >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<comportamento >  
-\<clientCredentials >  
+\<clientCredentials>  
 \<httpDigest >  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -52,12 +54,12 @@ Especifica um resumo de tipo de credencial usada na autenticação do cliente pa
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Especifica as credenciais usadas para autenticar um cliente para um serviço.|  
+|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Especifica as credenciais usadas para autenticar um cliente para um serviço.|  
   
 ## <a name="remarks"></a>Comentários  
  Um resumo é um hash determinado por meio de um algoritmo e um conjunto de entradas. O autenticador e o autenticado concorde com um algoritmo e os dados usados como entradas do exchange. O cliente pode calcular o hash e enviá-lo para o serviço. O serviço também calcula o hash e compara os valores. Uma correspondência valida o cliente.  
   
- Esse recurso deve ser habilitado com o Active Directory no Windows e serviços de informações da Internet (IIS). [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Autenticação no IIS 6.0 digest](http://go.microsoft.com/fwlink/?LinkId=88443).  
+ Esse recurso deve ser habilitado com o Active Directory no Windows e serviços de informações da Internet (IIS). Para obter mais informações, consulte [a autenticação Digest no IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88443).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  

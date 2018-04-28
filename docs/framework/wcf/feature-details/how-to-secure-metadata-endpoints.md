@@ -1,32 +1,34 @@
 ---
 title: Como proteger pontos de extremidade de metadados
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 6923703230d6792d8938de149f64c41a3bf95699
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 50a62366063123de9e1773b2926f79b76a1b1c3b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>Como proteger pontos de extremidade de metadados
 Metadados para um serviço podem conter informações confidenciais sobre seu aplicativo que um usuário mal-intencionado pode aproveitar. Os consumidores de serviço também podem exigir um mecanismo seguro para obtenção de metadados sobre o serviço. Portanto, às vezes, é necessário publicar seus metadados usando um ponto de extremidade seguro.  
   
- Pontos de extremidade de metadados geralmente são protegidos por meio de mecanismos de segurança padrão definidos em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para proteger pontos de extremidade do aplicativo. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
+ Pontos de extremidade de metadados geralmente são protegidos por meio de mecanismos de segurança padrão definidos em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para proteger pontos de extremidade do aplicativo. (Para obter mais informações, consulte [visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
   
  Este tópico explica as etapas para criar um ponto de extremidade protegido por um certificado Secure Sockets Layer (SSL) ou, em outras palavras, um ponto de extremidade HTTPS.  
   

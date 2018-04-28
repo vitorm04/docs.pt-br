@@ -1,9 +1,7 @@
 ---
 title: Operador Mod (Visual Basic)
-ms.date: 07/20/2015
+ms.date: 04/24/2018
 ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -18,14 +16,13 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5464b57c993e5703c09529b527a7bc714e045870
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: cf0889cbea609b4555581fbf67cd0cba1ea889d0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="mod-operator-visual-basic"></a>Operador Mod (Visual Basic)
 Divide dois números e retorna somente o resto.  
@@ -46,9 +43,31 @@ number1 Mod number2
 ## <a name="supported-types"></a>Tipos com suporte  
  Todos os tipos numéricos. Isso inclui os tipos de ponto flutuantes e não assinados e `Decimal`.  
   
-## <a name="result"></a>Resultado  
- O resultado é o resto após `number1` é dividida por `number2`. Por exemplo, a expressão `14 Mod 4` for avaliada como 2.  
-  
+## <a name="result"></a>Resultado
+
+O resultado é o resto após `number1` é dividida por `number2`. Por exemplo, a expressão `14 Mod 4` for avaliada como 2.  
+
+> [!NOTE]
+> Há uma diferença entre *restante* e *módulo* em matemática, com resultados diferentes para números negativos. O `Mod` operador no Visual Basic, o .NET Framework `op_Modulus` operador e subjacente [rem]<xref:System.Reflection.Emit.OpCodes.Rem> instrução IL realizam uma operação restante.
+
+O resultado de uma `Mod` operação retém o sinal do dividendo `number1`, e, portanto, pode ser positivo ou negativo. O resultado é sempre no intervalo (-`number2`, `number2`), exclusivo. Por exemplo:
+
+```vb
+Public Module Example
+   Public Sub Main()
+      Console.WriteLine($" 8 Mod  3 = {8 Mod 3}")
+      Console.WriteLine($"-8 Mod  3 = {-8 Mod 3}")
+      Console.WriteLine($" 8 Mod -3 = {8 Mod -3}")
+      Console.WriteLine($"-8 Mod -3 = {-8 Mod -3}")
+   End Sub
+End Module
+' The example displays the following output:
+'       8 Mod  3 = 2
+'      -8 Mod  3 = -2
+'       8 Mod -3 = 2
+'      -8 Mod -3 = -2
+```
+
 ## <a name="remarks"></a>Comentários  
  Se qualquer um dos `number1` ou `number2` é um valor de ponto flutuante, o restante da divisão de ponto flutuante é retornado. O tipo de dados do resultado é o menor tipo de dados que pode conter todos os possíveis valores resultantes da divisão com os tipos de dados de `number1` e `number2`.  
   
@@ -60,7 +79,7 @@ number1 Mod number2
   
 -   O [/ operador (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) retorna o quociente completo, incluindo o restante, como um número de ponto flutuante. Por exemplo, a expressão `14 / 4` avaliará como 3.5.  
   
-## <a name="attempted-division-by-zero"></a>Tentativa de divisão por Zero  
+## <a name="attempted-division-by-zero"></a>Tentativa de divisão por zero  
  Se `number2` for avaliada como zero, o comportamento do `Mod` operador depende do tipo de dados dos operandos. Uma divisão integral gera um <xref:System.DivideByZeroException> exceção. Retorna uma divisão de ponto flutuante <xref:System.Double.NaN>.  
   
 ## <a name="equivalent-formula"></a>Fórmula equivalente  
@@ -71,7 +90,7 @@ number1 Mod number2
  `a - (b * Fix(a / b))`  
   
 ## <a name="floating-point-imprecision"></a>Ponto flutuante imprecisão  
- Quando você trabalha com números de ponto flutuante, lembre-se de que eles nem sempre têm uma representação precisa na memória. Isso pode levar a resultados inesperados em certas operações, como comparação de valor e o `Mod` operador. Para obter mais informações, consulte [Solucionando problemas de tipos de dados](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+ Quando você trabalha com números de ponto flutuante, lembre-se de que eles nem sempre têm uma representação decimal precisa na memória. Isso pode levar a resultados inesperados em certas operações, como comparação de valor e o `Mod` operador. Para obter mais informações, consulte [Solucionando problemas de tipos de dados](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
 ## <a name="overloading"></a>Sobrecarga  
  O `Mod` operador pode ser *sobrecarregado*, o que significa que uma classe ou estrutura pode redefinir seu comportamento. Se seu código se aplica `Mod` para uma instância de uma classe ou estrutura que inclua tal uma sobrecarga, certifique-se que você entende seu comportamento redefinido. Para obter mais informações, consulte [procedimentos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  

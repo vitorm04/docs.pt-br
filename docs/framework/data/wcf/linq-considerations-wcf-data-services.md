@@ -23,11 +23,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: df596093333aa35b89f8d7ed36f817a457e48fda
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c20817e791ae95efecd00a41a44c14eedec017d4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Considerações sobre o LINQ (WCF Data Services)
 Este tópico fornece informações sobre a maneira como as consultas LINQ são compostas e executadas quando você está usando o cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] e as limitações de uso do LINQ para consultar um serviço de dados que implementa o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Criando e executando consultas em um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-com base em serviço de dados, consulte [consultando o Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
@@ -36,7 +36,7 @@ Este tópico fornece informações sobre a maneira como as consultas LINQ são c
  O LINQ permite compor consultas em uma coleção de objetos que implementam o <xref:System.Collections.Generic.IEnumerable%601>. Ambos os o **adicionar referência de serviço** caixa de diálogo no Visual Studio e a ferramenta DataSvcUtil.exe são usados para gerar uma representação de um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] serviço como uma classe de contêiner de entidade que herda de <xref:System.Data.Services.Client.DataServiceContext>, bem como objetos que representam as entidades retornadas em feeds. Essas ferramentas também geram propriedades na classe do contêiner de entidade para as coleções expostas como feeds pelo serviço. Cada uma dessas propriedades da classe que encapsula o retorno do serviço de dados retorna um <xref:System.Data.Services.Client.DataServiceQuery%601>. Como a classe <xref:System.Data.Services.Client.DataServiceQuery%601> implementa a interface do <xref:System.Linq.IQueryable%601> definida pelo LINQ, você pode compor uma consulta LINQ com os feeds expostos pelo serviço de dados, que são traduzidos pela biblioteca de cliente em um URI de solicitação de consulta que é enviado para o serviço de dados em execução.  
   
 > [!IMPORTANT]
->  O conjunto de consultas que podem ser expressadas na sintaxe LINQ é mais ampla do que as ativadas na sintaxe URI que é usada pelos serviços de dados do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Uma classe <xref:System.NotSupportedException> é gerada quando a consulta não pode ser mapeada para um URI no serviço de dados de destino. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] o [métodos LINQ](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods) neste tópico.  
+>  O conjunto de consultas que podem ser expressadas na sintaxe LINQ é mais ampla do que as ativadas na sintaxe URI que é usada pelos serviços de dados do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Uma classe <xref:System.NotSupportedException> é gerada quando a consulta não pode ser mapeada para um URI no serviço de dados de destino. Para obter mais informações, consulte o [métodos LINQ](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods) neste tópico.  
   
  O exemplo a seguir é uma consulta LINQ que retorna `Orders` que têm um custo de frete mais que US$ 30 e classifica os resultados por data de envio, começando com a data de envio mais recente:  
   

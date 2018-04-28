@@ -1,29 +1,31 @@
 ---
 title: Como bloquear pontos de extremidade na empresa
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5b6fa36a269dec4a191417813ec9c4ee26b699ee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e5b10665e9a820c7057231c684769bddf9cb0c79
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Como bloquear pontos de extremidade na empresa
 Grandes empresas geralmente exigem que os aplicativos são desenvolvidos em conformidade com políticas de segurança corporativas. O tópico a seguir descreve como desenvolver e instalar um validador de ponto de extremidade do cliente que pode ser usado para validar todos [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplicativos cliente instalados nos computadores.  
   
- Nesse caso, o validador é um validador de cliente, porque esse comportamento de ponto de extremidade é adicionado ao cliente [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) seção no arquivo Machine. config. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]carrega os comportamentos de ponto de extremidade comuns somente para aplicativos cliente e carrega comportamentos comuns de serviço somente para aplicativos de serviço. Para instalar este validador mesmo para aplicativos de serviço, a validação deve ser um comportamento de serviço. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]o [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) seção.  
+ Nesse caso, o validador é um validador de cliente, porque esse comportamento de ponto de extremidade é adicionado ao cliente [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) seção no arquivo Machine. config. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] carrega os comportamentos de ponto de extremidade comuns somente para aplicativos cliente e carrega comportamentos comuns de serviço somente para aplicativos de serviço. Para instalar este validador mesmo para aplicativos de serviço, a validação deve ser um comportamento de serviço. Para obter mais informações, consulte o [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) seção.  
   
 > [!IMPORTANT]
 >  Comportamentos de serviço ou o ponto de extremidade não marcado com o <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributo (APTCA) que são adicionados para o [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) seção de um arquivo de configuração não são executados quando o aplicativo é executado em uma relação de confiança parcial ambiente e nenhuma exceção é lançada quando isso ocorre. Para impor a execução de comportamentos comuns como validadores, você deve:  

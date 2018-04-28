@@ -1,24 +1,26 @@
 ---
-title: "Arquitetura de sindicalização"
-ms.custom: 
+title: Arquitetura de sindicalização
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22df793bd5873d6f69c3a2e86e96d4a1cefcff0d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bcb64a4e03cae5e6186754dacb87e17a22d13001
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="architecture-of-syndication"></a>Arquitetura de sindicalização
 A API de distribuição foi projetada para fornecer um modelo de programação do formato neutro que permite que o conteúdo distribuído ser gravados em transmissão em uma variedade de formatos. O modelo de dados abstrato consiste das seguintes classes:  
@@ -41,7 +43,7 @@ A API de distribuição foi projetada para fornecer um modelo de programação d
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- Suporte a distribuição baseia-se na parte superior do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação REST que define o <xref:System.ServiceModel.WebHttpBinding> associação, que é usada em conjunto com <xref:System.ServiceModel.Description.WebHttpBehavior> para disponibilizar feeds como serviços. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação REST, consulte [WCF Web HTTP de programação visão geral do modelo](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
+ Suporte a distribuição baseia-se na parte superior do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação REST que define o <xref:System.ServiceModel.WebHttpBinding> associação, que é usada em conjunto com <xref:System.ServiceModel.Description.WebHttpBehavior> para disponibilizar feeds como serviços. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação REST, consulte [WCF Web HTTP de programação visão geral do modelo](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
   
 > [!NOTE]
 >  Permite a especificação Atom 1.0 para frações de segundos ser especificado em qualquer um dos seus construtores de data. Ao serializar e desserializar o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementação ignora as frações de segundo.  
@@ -66,9 +68,9 @@ A API de distribuição foi projetada para fornecer um modelo de programação d
   
 |Classe|Descrição|  
 |-----------|-----------------|  
-|<xref:System.ServiceModel.Syndication.SyndicationCategory>|Uma classe que representa a categoria de um feed de distribuição.|  
+|<xref:System.ServiceModel.Syndication.SyndicationCategory>|Uma classe que representa a categoria de um feed de sindicalização.|  
 |<xref:System.ServiceModel.Syndication.SyndicationContent>|Uma classe base que representa o conteúdo de sindicalização.|  
-|<xref:System.ServiceModel.Syndication.SyndicationElementExtension>|Uma classe que representa uma extensão de elemento de distribuição.|  
+|<xref:System.ServiceModel.Syndication.SyndicationElementExtension>|Uma classe que representa uma extensão do elemento de sindicalização.|  
 |<xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection>|Uma coleção de objetos <xref:System.ServiceModel.Syndication.SyndicationElementExtension> .|  
 |<xref:System.ServiceModel.Syndication.SyndicationFeed>|Uma classe que representa um objeto de feed de nível superior.|  
 |<xref:System.ServiceModel.Syndication.SyndicationItem>|Uma classe que representa um item do feed.|  
@@ -86,7 +88,7 @@ A API de distribuição foi projetada para fornecer um modelo de programação d
   
 ## <a name="extensibility"></a>Extensibilidade  
   
--   Um recurso importante de protocolos de distribuição é extensibilidade. Atom 1.0 e RSS 2.0 permitem que você adicione elementos e atributos para feeds de agregação que não estão definidos nas especificações. O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação de distribuição fornece duas maneiras de trabalhar com os atributos personalizados e extensões: derivar uma nova classe e tipadas vagamente acesso. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Extensibilidade de sindicalização](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
+-   Um recurso importante de protocolos de distribuição é extensibilidade. Atom 1.0 e RSS 2.0 permitem que você adicione elementos e atributos para feeds de agregação que não estão definidos nas especificações. O [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programação de distribuição fornece duas maneiras de trabalhar com os atributos personalizados e extensões: derivar uma nova classe e tipadas vagamente acesso. Para obter mais informações, consulte [extensibilidade de Sindicalização](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral de sindicalização do WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  

@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3834f48c407f799fc5fede17182f47652f49747f
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 082fa083dbba601cefc00e40bad7b91e14a45d44
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="best-practices-for-queued-communication"></a>Práticas recomendadas para comunicação em fila
 Este tópico fornece as práticas recomendadas para comunicação em fila em [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. As seções a seguir discutem práticas recomendadas de uma perspectiva de cenário.  
@@ -33,7 +33,7 @@ Este tópico fornece as práticas recomendadas para comunicação em fila em [!I
   
  Além disso, você pode optar por não incorrer em custos de gravações de disco, definindo o <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> propriedade `false`.  
   
- Segurança tem implicações no desempenho. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Considerações sobre desempenho](../../../../docs/framework/wcf/feature-details/performance-considerations.md).  
+ Segurança tem implicações no desempenho. Para obter mais informações, consulte [considerações sobre desempenho](../../../../docs/framework/wcf/feature-details/performance-considerations.md).  
   
 ## <a name="reliable-end-to-end-queued-messaging"></a>Ponta a ponta confiável na fila de mensagens  
  As seções a seguir descrevem as práticas recomendadas para cenários que exigem o sistema de mensagens confiável de ponta a ponta.  
@@ -49,21 +49,21 @@ Este tópico fornece as práticas recomendadas para comunicação em fila em [!I
   
  Não é recomendável desativar filas de mensagens mortas para comunicação confiável de ponta a ponta.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Usando filas de mensagens mortas para lidar com falhas de transferência de mensagem](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md).  
+ Para obter mais informações, consulte [usando filas de mensagens mortas para lidar com falhas de transferência de mensagem](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md).  
   
 ### <a name="use-of-poison-message-handling"></a>Uso da manipulação de mensagens suspeitas  
  Tratamento de mensagens suspeitas fornece a capacidade de se recuperar da falha para processar mensagens.  
   
  Ao usar o recurso de manipulação de mensagens suspeitas, certifique-se de que o <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> propriedade é definida como o valor apropriado. Definindo-a como <xref:System.ServiceModel.ReceiveErrorHandling.Drop> significa que os dados serão perdidos. Por outro lado, definindo-a como <xref:System.ServiceModel.ReceiveErrorHandling.Fault> falhas de host do serviço quando ele detecta uma mensagem suspeita. Usando o MSMQ 3.0, <xref:System.ServiceModel.ReceiveErrorHandling.Fault> é a melhor opção para evitar a perda de dados e mover a mensagem suspeita do caminho. Usando o MSMQ 4.0, <xref:System.ServiceModel.ReceiveErrorHandling.Move> é a abordagem recomendada. <xref:System.ServiceModel.ReceiveErrorHandling.Move> Move uma mensagem inviabilizada fora da fila para que o serviço possa continuar a processar novas mensagens. O serviço de mensagens suspeitas pode processar a mensagem suspeita separadamente.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Manuseio de mensagem suspeita](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
+ Para obter mais informações, consulte [manipulação de mensagens suspeitas](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
 ## <a name="achieving-high-throughput"></a>Para alcançar alta taxa de transferência  
  Para obter alta taxa de transferência em um único ponto de extremidade, use o seguinte:  
   
--   Envio em lote transacionado. O lote transacionado garante que muitas mensagens podem ser lidas em uma única transação. Isso otimiza a transação é confirmada, aumentando o desempenho geral. O custo de processamento em lotes é que, se ocorrer uma falha em uma única mensagem em um lote, o lote inteiro será revertido e as mensagens devem ser processados um de cada vez até que seja seguro para o lote novamente. Na maioria dos casos, as mensagens suspeitas são raras, para que envio em lote é a melhor maneira de aumentar o desempenho, especialmente quando você tem outros gerenciadores de recursos que participam da transação. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Mensagens em uma transação de lote](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
+-   Envio em lote transacionado. O lote transacionado garante que muitas mensagens podem ser lidas em uma única transação. Isso otimiza a transação é confirmada, aumentando o desempenho geral. O custo de processamento em lotes é que, se ocorrer uma falha em uma única mensagem em um lote, o lote inteiro será revertido e as mensagens devem ser processados um de cada vez até que seja seguro para o lote novamente. Na maioria dos casos, as mensagens suspeitas são raras, para que envio em lote é a melhor maneira de aumentar o desempenho, especialmente quando você tem outros gerenciadores de recursos que participam da transação. Para obter mais informações, consulte [mensagens de envio em lote em uma transação](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
   
--   Simultaneidade. Simultaneidade aumenta a taxa de transferência, mas simultaneidade também afeta a contenção para recursos compartilhados. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Simultaneidade](../../../../docs/framework/wcf/samples/concurrency.md).  
+-   Simultaneidade. Simultaneidade aumenta a taxa de transferência, mas simultaneidade também afeta a contenção para recursos compartilhados. Para obter mais informações, consulte [simultaneidade](../../../../docs/framework/wcf/samples/concurrency.md).  
   
 -   Limitação. Para otimizar o desempenho, limitar o número de mensagens no pipeline dispatcher. Para obter um exemplo de como fazer isso, consulte [limitação](../../../../docs/framework/wcf/samples/throttling.md).  
   
@@ -73,12 +73,12 @@ Este tópico fornece as práticas recomendadas para comunicação em fila em [!I
   
  Ao usar farms de servidores, lembre-se de que o MSMQ 3.0 não oferece suporte remotas leituras transacionadas. MSMQ 4.0 oferece suporte remotas leituras transacionadas.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Mensagens de lote em uma transação](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md) e [diferenças nos recursos de enfileiramento de mensagens no Windows Vista, Windows Server 2003 e Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
+ Para obter mais informações, consulte [mensagens de envio em lote em uma transação](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md) e [diferenças nos recursos de enfileiramento de mensagens no Windows Vista, Windows Server 2003 e Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
   
 ## <a name="queuing-with-unit-of-work-semantics"></a>Enfileiramento de mensagens com a unidade de trabalho semântica  
  Em alguns cenários de um grupo de mensagens em uma fila pode estar relacionado e, portanto, a ordem dessas mensagens é significativa. Nesses cenários, processar um grupo de mensagens relacionadas juntos como uma única unidade: todas as mensagens são processadas com êxito ou nenhuma está. Para implementar esse comportamento, use sessões com filas.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Agrupamento de mensagens em fila em uma sessão](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).  
+ Para obter mais informações, consulte [mensagens na fila de agrupamento em uma sessão](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).  
   
 ## <a name="correlating-request-reply-messages"></a>Correlação de mensagens de solicitação-resposta  
  Embora as filas são normalmente unidirecionais, em alguns cenários, que talvez você queira correlacionar uma resposta recebida para uma solicitação enviada anteriormente. Se você precisar de correlação, é recomendável que você aplique seu próprio cabeçalho de mensagem SOAP que contém informações de correlação com a mensagem. Normalmente, o remetente anexa esse cabeçalho com a mensagem e o destinatário, ao processar a mensagem e resposta com uma nova mensagem em uma fila de resposta, anexa o cabeçalho da mensagem do remetente que contém as informações de correlação para que o remetente pode identificar a mensagem de resposta com a mensagem de solicitação.  

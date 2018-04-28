@@ -1,34 +1,34 @@
 ---
 title: Configurando registros de mensagens em log
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-caps.latest.revision: 
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a867d5f85177ad9a19a5766c65a8f1f98c04cd17
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 63bdbc68851ace71b3afef30e274b9821ed1ad5f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-message-logging"></a>Configurando registros de mensagens em log
 Este tópico descreve como você pode configurar o log de mensagens para diferentes cenários.  
   
 ## <a name="enabling-message-logging"></a>Habilitar o log de mensagem  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]não registra mensagens por padrão. Para ativar o log de mensagens, você deve adicionar um ouvinte de rastreamento para o `System.ServiceModel.MessageLogging` origem do rastreamento e definir atributos para o `<messagelogging>` elemento no arquivo de configuração.  
+ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] não registra mensagens por padrão. Para ativar o log de mensagens, você deve adicionar um ouvinte de rastreamento para o `System.ServiceModel.MessageLogging` origem do rastreamento e definir atributos para o `<messagelogging>` elemento no arquivo de configuração.  
   
  O exemplo a seguir mostra como habilitar o registro em log e especifique opções adicionais.  
   
@@ -58,7 +58,7 @@ Este tópico descreve como você pode configurar o log de mensagens para diferen
 </system.serviceModel>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]as configurações de log de mensagens, consulte [configurações recomendadas para rastreamento e registro em log de mensagem](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] as configurações de log de mensagens, consulte [configurações recomendadas para rastreamento e registro em log de mensagem](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
   
  Você pode usar `add` para especificar o nome e o tipo do ouvinte que você deseja usar. Na configuração de exemplo, o ouvinte é denominado "messages" e adiciona o ouvinte de rastreamento padrão do .NET Framework (`System.Diagnostics.XmlWriterTraceListener`) como o tipo a ser usado. Se você usar `System.Diagnostics.XmlWriterTraceListener`, você deve especificar o local do arquivo de saída e o nome no arquivo de configuração. Isso é feito definindo `initializeData` com o nome do arquivo de log. Caso contrário, o sistema gerará uma exceção. Você também pode implementar um ouvinte personalizado que emite os logs para um arquivo padrão.  
   
@@ -73,14 +73,14 @@ Este tópico descreve como você pode configurar o log de mensagens para diferen
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">  
 ```  
   
- Se você quiser desabilitar a origem de rastreamento, você deve usar o `logMessagesAtServiceLevel`, `logMalformedMessages`, e `logMessagesAtTransportLevel` atributos do `messageLogging` elemento em vez disso. Você deve definir todos esses atributos para `false`. Isso pode ser feito usando o arquivo de configuração no exemplo de código anterior, por meio da interface do Editor de configuração UI, ou usando o WMI. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]a ferramenta Editor de configuração, consulte [ferramenta Configuration Editor (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WMI, consulte [usando o Windows Management Instrumentation para diagnóstico](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Se você quiser desabilitar a origem de rastreamento, você deve usar o `logMessagesAtServiceLevel`, `logMalformedMessages`, e `logMessagesAtTransportLevel` atributos do `messageLogging` elemento em vez disso. Você deve definir todos esses atributos para `false`. Isso pode ser feito usando o arquivo de configuração no exemplo de código anterior, por meio da interface do Editor de configuração UI, ou usando o WMI. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] a ferramenta Editor de configuração, consulte [ferramenta Configuration Editor (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WMI, consulte [usando o Windows Management Instrumentation para diagnóstico](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
 ## <a name="logging-levels-and-options"></a>Níveis de log e opções  
  Para mensagens de entrada, registro em log ocorre imediatamente depois que a mensagem é formada, imediatamente antes da mensagem obtém ao código do usuário no nível de serviço e quando as mensagens malformadas são detectadas.  
   
  Mensagens de saída, log ocorre imediatamente após a mensagem sair do código do usuário e imediatamente antes que a mensagem entre na conexão.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]registra mensagens em dois níveis diferentes, serviço e transporte. As mensagens malformadas também são registradas. As três categorias são independentes umas das outras e podem ser ativadas separadamente na configuração.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] registra mensagens em dois níveis diferentes, serviço e transporte. As mensagens malformadas também são registradas. As três categorias são independentes umas das outras e podem ser ativadas separadamente na configuração.  
   
  Você pode controlar o nível de log definindo o `logMessagesAtServiceLevel`, `logMalformedMessages`, e `logMessagesAtTransportLevel` atributos do `messageLogging` elemento.  
   
@@ -91,7 +91,7 @@ Este tópico descreve como você pode configurar o log de mensagens para diferen
  As mensagens registradas nesta camada estão prontas para ser codificada ou decodificada para ou depois de transporte na conexão. Se os filtros tiverem sido definidos, apenas as mensagens que correspondem aos filtros são registradas. Caso contrário, todas as mensagens na camada de transporte são registradas. Todas as mensagens de infraestrutura são registradas nesta camada, incluindo mensagens confiáveis. Em mensagens em fluxo, somente os cabeçalhos são registrados. Além disso, mensagens seguras são registradas como criptografados nesse nível, exceto se um transporte seguro, como HTTPS é usado.  
   
 ### <a name="malformed-level"></a>Nível malformado  
- As mensagens malformadas são mensagens que foram rejeitadas pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pilha em qualquer estágio do processamento. As mensagens malformadas são registradas como-é: criptografados se eles são, com o próprio não XML e assim por diante. `maxSizeOfMessageToLog`definido o tamanho da mensagem a ser registrado como CDATA. Por padrão, `maxSizeOfMessageToLog` é igual a 256 K. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Esse atributo, consulte a seção de outras opções.  
+ As mensagens malformadas são mensagens que foram rejeitadas pelo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pilha em qualquer estágio do processamento. As mensagens malformadas são registradas como-é: criptografados se eles são, com o próprio não XML e assim por diante. `maxSizeOfMessageToLog` definido o tamanho da mensagem a ser registrado como CDATA. Por padrão, `maxSizeOfMessageToLog` é igual a 256 K. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Esse atributo, consulte a seção de outras opções.  
   
 ### <a name="other-options"></a>Outras opções  
  Além dos níveis de log, o usuário pode especificar as seguintes opções:  
@@ -107,7 +107,7 @@ Este tópico descreve como você pode configurar o log de mensagens para diferen
   
  Se nenhum ouvinte de rastreamento é definido no arquivo de configuração, nenhuma saída de log será gerada, independentemente do nível de log especificado.  
   
- Opções de log de mensagem, como os atributos descritos nesta seção, podem ser alteradas em tempo de execução usando o Windows Management Instrumentation (WMI). Isso pode ser feito, acessando o [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) instância, que expõe essas propriedades Boolianas: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`, e `LogMalformedMessages`. Portanto, se você configura um ouvinte de rastreamento para o log de mensagens, mas definir essas opções para `false` na configuração, você pode posteriormente alterá-los para `true` quando o aplicativo está sendo executado. Isso efetivamente habilita o log de mensagem em tempo de execução. Da mesma forma, se você habilitar o registro em log no arquivo de configuração de mensagem, você pode desabilitá-lo em tempo de execução usando a WMI. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Usando o Windows Management Instrumentation para diagnóstico](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Opções de log de mensagem, como os atributos descritos nesta seção, podem ser alteradas em tempo de execução usando o Windows Management Instrumentation (WMI). Isso pode ser feito, acessando o [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) instância, que expõe essas propriedades Boolianas: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`, e `LogMalformedMessages`. Portanto, se você configura um ouvinte de rastreamento para o log de mensagens, mas definir essas opções para `false` na configuração, você pode posteriormente alterá-los para `true` quando o aplicativo está sendo executado. Isso efetivamente habilita o log de mensagem em tempo de execução. Da mesma forma, se você habilitar o registro em log no arquivo de configuração de mensagem, você pode desabilitá-lo em tempo de execução usando a WMI. Para obter mais informações, consulte [usando o Windows Management Instrumentation para diagnóstico](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
  O `source` campo em um log de mensagem especifica em qual contexto a mensagem é registrada: no envio/recebimento de uma mensagem de solicitação para uma solicitação-resposta ou solicitação de maneira 1, na camada de transporte ou modelo de serviço ou, no caso de uma mensagem malformada.  
   

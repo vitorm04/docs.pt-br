@@ -1,18 +1,18 @@
 ---
-title: "Portando para o .NET Core – usando o Pacote de Compatibilidade do Windows"
-description: "Saiba mais sobre o Pacote de Compatibilidade do Windows e como você pode usá-lo para portar um código existente do .NET Framework para o .NET Core"
-keywords: .NET, .NET Core, Windows, Compatibilidade
+title: Portando para o .NET Core – usando o Pacote de Compatibilidade do Windows
+description: Saiba mais sobre o Pacote de Compatibilidade do Windows e como você pode usá-lo para portar um código existente do .NET Framework para o .NET Core
 author: terrajobst
 ms.author: mairaw
 ms.date: 11/13/2017
-ms.topic: article
-ms.prod: .net-core
-ms.workload: dotnetcore
-ms.openlocfilehash: 3b1fe02aad4f78499158ecb7fa9b8521cb7d992e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.topic: conceptual
+ms.prod: dotnet-core
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 4ef7d9c847d48ae7bbb2d553b1c05cb90a1c5a7a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-windows-compatibility-pack"></a>Usando o Pacote de Compatibilidade do Windows
 

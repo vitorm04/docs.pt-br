@@ -16,16 +16,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e81a8eb27725edeccf3e5c7489109ba47b70dec
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4e2afa9e868c1f561aed699a2bdf7d09c17898b3
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="hosting-in-a-managed-application"></a>Hospedagem em um aplicativo gerenciado
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] os serviços podem ser hospedados em qualquer [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplicativo. Os serviços de hospedagem é a opção de hospedagem mais flexível porque ela exige a menor infra-estrutura para implantar. No entanto, também é a opção de hospedagem menos eficiente, porque os aplicativos gerenciados não fornecem recursos avançados de hospedagem e gerenciamento de outras opções de hospedagem em [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como serviços de informações da Internet (IIS) e serviços do Windows.  
   
- Para criar um serviço auto-hospedado, crie e abra uma instância do <xref:System.ServiceModel.ServiceHost>, que inicia um serviço de escuta de mensagens. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Como: hospedar um serviço WCF em um aplicativo gerenciado](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
+ Para criar um serviço auto-hospedado, crie e abra uma instância do <xref:System.ServiceModel.ServiceHost>, que inicia um serviço de escuta de mensagens. Para obter mais informações, consulte [como: hospedar um serviço WCF em um aplicativo gerenciado](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
   
  Para obter um exemplo completo sobre como definir um contrato, implemente o contrato e hospedar um serviço dentro de um aplicativo gerenciado, consulte o [Tutorial de Introdução](../../../../docs/framework/wcf/getting-started-tutorial.md) e [auto-host](../../../../docs/framework/wcf/samples/self-host.md).  
   

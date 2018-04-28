@@ -1,35 +1,35 @@
 ---
-title: "Visão geral de rastreamento analítico"
-ms.custom: 
+title: Visão geral de rastreamento analítico
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3492821d56f7089c2aa53bba566690ded02f8a5b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c29065ebe03617e288d7ebde3dc6b42cbfcf6061
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="analytic-tracing-overview"></a>Visão geral de rastreamento analítico
 Rastreamento analítico em [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] é um alto desempenho e o recurso de rastreamento de verbosidade baixa conjunto sobre o evento de rastreamento para Windows (ETW). ETW é executado no nível do kernel para reduzir significativamente a sobrecarga de operações de rastreamento. Ele com eficiência armazena em buffer os eventos de modo de usuário e do kernel e permite habilitar dinâmico de log sem a necessidade de serviço será reiniciado. Os dados de rastreamento estão disponíveis no caso de logs depois que ele foi emitido e recebidas.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]ETW, consulte [melhorar a depuração e ajuste de desempenho com o ETW](http://go.microsoft.com/fwlink/?LinkId=164781).  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] ETW, consulte [melhorar a depuração e ajuste de desempenho com o ETW](http://go.microsoft.com/fwlink/?LinkId=164781).  
   
- Além de usar os logs de eventos do sistema Windows, segurança e aplicativo para analisar o aplicativo, [!INCLUDE[wv](../../../../../includes/wv-md.md)] e [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] introduzida logs adicionais sob o nó de nível superior de Logs de aplicativos e serviços. É a finalidade desses novos logs armazenar eventos para um determinado aplicativo ou componente específico em vez de eventos globais que têm um impacto de todo o sistema (como o tipo de evento que pode gravar no log de eventos de segurança). [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)]unifica e correlaciona o log de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] eventos de rastreamento, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Logs de mensagens e [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] registros de rastreamento para os Logs de aplicativos e serviços.  
+ Além de usar os logs de eventos do sistema Windows, segurança e aplicativo para analisar o aplicativo, [!INCLUDE[wv](../../../../../includes/wv-md.md)] e [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] introduzida logs adicionais sob o nó de nível superior de Logs de aplicativos e serviços. É a finalidade desses novos logs armazenar eventos para um determinado aplicativo ou componente específico em vez de eventos globais que têm um impacto de todo o sistema (como o tipo de evento que pode gravar no log de eventos de segurança). [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] unifica e correlaciona o log de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] eventos de rastreamento, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Logs de mensagens e [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] registros de rastreamento para os Logs de aplicativos e serviços.  
   
 ## <a name="concepts-and-capabilities"></a>Conceitos e recursos  
  Os conceitos e recursos a seguir se aplicam a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] rastreamento analítico.  
@@ -54,10 +54,10 @@ Rastreamento analítico em [!INCLUDE[netfx_current_long](../../../../../includes
  `ServiceModelReg.exe -i -c:etw`  
   
 ### <a name="dynamic-configuration"></a>Configuração dinâmica  
- A infraestrutura ETW permite que o rastreamento para ser habilitado e configurado dinamicamente usando ferramentas padrão do Windows. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Rastreamento analítico habilitado dinamicamente](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).  
+ A infraestrutura ETW permite que o rastreamento para ser habilitado e configurado dinamicamente usando ferramentas padrão do Windows. Para obter mais informações, consulte [dinamicamente habilitando analíticos rastreamento](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).  
   
 ### <a name="message-flow-tracing"></a>Rastreamento de fluxo de mensagem  
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]como habilitar o rastreamento de fluxo de mensagem, consulte [Configurando o rastreamento de fluxo de mensagem](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md).  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] como habilitar o rastreamento de fluxo de mensagem, consulte [Configurando o rastreamento de fluxo de mensagem](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md).  
   
 ### <a name="keywords"></a>Palavras-chave  
- Palavras-chave são usadas para filtrar as mensagens de rastreamento e definir qual componente do [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] emitido o evento. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Rastreamento analítico habilitado dinamicamente](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).
+ Palavras-chave são usadas para filtrar as mensagens de rastreamento e definir qual componente do [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] emitido o evento. Para obter mais informações, consulte [dinamicamente habilitando analíticos rastreamento](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).

@@ -18,18 +18,18 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5f1c7449372ad012280b360c09017a15733fb95b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 46bafbb0063f72b56f647caaa9dd0fa2944f3298
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configurando serviços usando arquivos de configuração
 Configurar um serviço [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] com um arquivo de configuração oferece flexibilidade para fornecer dados do comportamento do ponto de extremidade e do serviço na hora da implantação em vez de em tempo de design. Este tópico descreve as principais técnicas disponíveis.  
   
  Um serviço [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] é configurável usando a tecnologia de configuração do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Mais comumente, os elementos XML são adicionados ao arquivo Web.config para um site do IIS (Serviços de Informações da Internet) que hospeda um serviço [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Os elementos permitem que você altere detalhes, como os endereços de ponto de extremidade (endereços reais usados para comunicação com o serviço) de cada computador. Além disso, o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] inclui vários elementos fornecidos pelo sistema que permitem selecionar rapidamente os recursos mais básicos para um serviço. A partir do [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] é fornecido com um novo modelo de configuração padrão que simplifica os requisitos de configuração do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Se você não fornecer nenhuma configuração do [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] para um determinado serviço, o tempo de execução configurará seu serviço automaticamente com alguns pontos de extremidade e associação/comportamento padrão. Na prática, gravar a configuração é a maior parte da programação de aplicativos [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Configurando associações para serviços](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Para uma lista dos mais comumente usadas elementos, consulte [System-Provided associações](../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] pontos de extremidade padrão, associações e comportamentos, consulte [configuração simplificada](../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Para obter mais informações, consulte [configurando associações para serviços](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Para uma lista dos mais comumente usadas elementos, consulte [System-Provided associações](../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] pontos de extremidade padrão, associações e comportamentos, consulte [configuração simplificada](../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 > [!IMPORTANT]
 >  Ao implantar os cenários lado a lado onde duas versões diferentes de um serviço são implantadas, é necessário especificar nomes parciais de assemblies referenciados em arquivos de configuração. Isso ocorre porque o arquivo de configuração é compartilhado entre todas as versões de um serviço e pode estar em execução em versões diferentes do .NET Framework.  
