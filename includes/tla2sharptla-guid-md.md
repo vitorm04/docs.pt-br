@@ -1,1 +1,1 @@
- GUID 
+ <span data-ttu-id="96e43-101">GUID</span><span class="sxs-lookup"><span data-stu-id="96e43-101">GUID</span></span> 

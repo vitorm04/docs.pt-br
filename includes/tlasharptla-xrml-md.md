@@ -1,1 +1,1 @@
-XrML (linguagem XrML)
+<span data-ttu-id="1b208-101">XrML (linguagem XrML)</span><span class="sxs-lookup"><span data-stu-id="1b208-101">Extensible Rights Markup Language (XrML)</span></span>
